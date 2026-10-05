@@ -903,6 +903,9 @@ const DeckPlayer: React.FC<{
   });
   const [panelOpen, setPanelOpen] = useState(() => typeof window !== 'undefined' && window.innerWidth >= 1100);
   const [tab, setTab] = useState<PanelTab>('questions');
+  // Mobil çekmece: sürükle-kapat
+  const [sheetDrag, setSheetDrag] = useState(0);
+  const sheetStartY = useRef<number | null>(null);
   const [isFs, setIsFs] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   // Tasarımdaki sol içindekiler: geniş ekranda açık başlar, tercih hatırlanır
@@ -1010,11 +1013,19 @@ const DeckPlayer: React.FC<{
     document.addEventListener('fullscreenchange', onFs);
     return () => document.removeEventListener('fullscreenchange', onFs);
   }, []);
-  const canFullscreen = typeof document !== 'undefined' && !!document.fullscreenEnabled;
+  // Tarayıcı tam ekranı yoksa (iPhone Safari) ya da reddedilirse "odak" moduna geçilir:
+  // üst araç çubuğu gizlenir, yalnızca küçük bir çıkış düğmesi kalır.
+  const [immersive, setImmersive] = useState(false);
+  const canFullscreen = true;
   const toggleFullscreen = () => {
     if (!rootRef.current) return;
-    if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
-    else rootRef.current.requestFullscreen?.().catch(() => {});
+    if (immersive) { setImmersive(false); return; }
+    if (document.fullscreenElement) { document.exitFullscreen().catch(() => {}); return; }
+    if (document.fullscreenEnabled && rootRef.current.requestFullscreen) {
+      rootRef.current.requestFullscreen().catch(() => setImmersive(true));
+    } else {
+      setImmersive(true);
+    }
   };
 
   const goTo = useCallback(
@@ -1144,7 +1155,17 @@ const DeckPlayer: React.FC<{
       }}
     >
       {/* Top bar */}
-      <header className="shrink-0 h-14 bg-white border-b border-line px-1.5 sm:px-3 flex items-center gap-1 sm:gap-1.5 min-w-0 overflow-x-auto no-scrollbar">
+      {immersive && (
+        <button
+          type="button"
+          onClick={() => setImmersive(false)}
+          aria-label="Tam ekrandan çık"
+          className="fixed z-[70] right-3 top-[max(12px,env(safe-area-inset-top))] w-10 h-10 rounded-full bg-ink/70 text-white backdrop-blur flex items-center justify-center shadow-md cursor-pointer"
+        >
+          <Minimize2 className="w-5 h-5" />
+        </button>
+      )}
+      <header className={`ms-reader-bar shrink-0 min-h-14 bg-white border-b border-line px-1.5 sm:px-3 flex flex-wrap sm:flex-nowrap items-center gap-1 sm:gap-1.5 min-w-0 sm:overflow-x-auto no-scrollbar ${immersive ? 'hidden' : ''}`}>
         <button type="button" onClick={onClose} aria-label="Sunumu kapat" title="Kapat (Esc)" className={iconBtn}>
           <X className="w-5 h-5" />
         </button>
@@ -1322,8 +1343,8 @@ const DeckPlayer: React.FC<{
           {panelOpen ? <PanelRightClose className="w-5 h-5" /> : <PanelRightOpen className="w-5 h-5" />}
         </button>
         {canFullscreen && (
-          <button type="button" onClick={toggleFullscreen} aria-label={isFs ? 'Tam ekrandan çık' : 'Tam ekran'} title="Tam ekran (F)" className={`${iconBtn} hidden md:flex`}>
-            {isFs ? <Minimize2 className="w-5 h-5" /> : <Maximize2 className="w-5 h-5" />}
+          <button type="button" onClick={toggleFullscreen} aria-label={isFs ? 'Tam ekrandan çık' : 'Tam ekran'} title="Tam ekran (F)" className={iconBtn}>
+            {isFs || immersive ? <Minimize2 className="w-5 h-5" /> : <Maximize2 className="w-5 h-5" />}
           </button>
         )}
       </header>
@@ -1515,9 +1536,22 @@ const DeckPlayer: React.FC<{
             <aside
               aria-label="Etkileşim paneli"
               className="ms-sheet-up lg:animate-none fixed lg:static z-[62] left-0 right-0 bottom-0 max-h-[78dvh] lg:max-h-none lg:h-full rounded-t-2xl lg:rounded-none bg-white border-t lg:border-t-0 lg:border-l border-line flex flex-col min-h-0 shadow-lg lg:shadow-none"
+              style={sheetDrag > 0 ? { transform: `translateY(${sheetDrag}px)`, transition: 'none' } : { transition: 'transform .22s var(--ease-out-soft)' }}
             >
-              <div className="lg:hidden flex justify-center pt-2" aria-hidden="true">
-                <span className="w-10 h-1 rounded-full bg-line-2" />
+              {/* Tutamaç: aşağı sürükleyince çekmece parmağı izler; yeterince çekilirse kapanır */}
+              <div
+                className="lg:hidden flex justify-center pt-2.5 pb-2 cursor-grab touch-none select-none"
+                aria-hidden="true"
+                onPointerDown={(e) => { sheetStartY.current = e.clientY; (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); }}
+                onPointerMove={(e) => { if (sheetStartY.current != null) setSheetDrag(Math.max(0, e.clientY - sheetStartY.current)); }}
+                onPointerUp={() => {
+                  if (sheetDrag > 90) setPanelOpen(false);
+                  sheetStartY.current = null;
+                  setSheetDrag(0);
+                }}
+                onPointerCancel={() => { sheetStartY.current = null; setSheetDrag(0); }}
+              >
+                <span className="w-12 h-1.5 rounded-full bg-line-2" />
               </div>
               <InteractionPanel deck={deck} slide={slide} tab={tab} setTab={setTab} />
             </aside>
@@ -2103,6 +2137,8 @@ const SlideCanvas: React.FC<{
       ref={containerRef}
       className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-2xl shadow-md flex flex-col min-h-0 custom-scrollbar relative ms-slide`}
     >
+      {/* Çizim katmanı içeriğin tamamını kaplar (kaydırılan kutunun yalnız ilk ekranını değil) */}
+      <div className="relative min-w-0">
       <SlideDrawingCanvas scope={highlightScope || `slide:${slide.slideNumber}`} />
       <Highlightable
         scope={highlightScope || `slide:${slide.slideNumber}:${slide.title}`}
@@ -2134,6 +2170,11 @@ const SlideCanvas: React.FC<{
             </button>
           </div>
 
+          {/* Köken açıklaması: hangi bölüm hocanın, hangisi yapay zekânın */}
+          <div className="ms-origin-legend" aria-label="İçerik kaynağı">
+            <span data-o="hoca">Hoca / ders notu</span>
+            <span data-o="ai">Yapay zekâ özeti</span>
+          </div>
           {/* Büyük Ana Başlık */}
           <h2 className="ms-slide-title m-0 font-display font-extrabold tracking-[-0.025em] leading-[1.18] text-[20px] sm:text-[24px] lg:text-[27px] text-ink">
             {slide.title}
@@ -2155,7 +2196,7 @@ const SlideCanvas: React.FC<{
 
         {/* 1. Clinical & Exam Critical Pearl */}
         {hl && emph && (
-          <figure className="ms-slide-pearl m-0 rounded-2xl border-2 border-accent/20 bg-canvas p-3.5 sm:p-4.5 flex flex-col gap-2 shadow-xs">
+          <figure data-origin="hoca" className="ms-slide-pearl m-0 rounded-2xl border-2 border-accent/20 bg-canvas p-3.5 sm:p-4.5 flex flex-col gap-2 shadow-xs">
             <figcaption className="flex items-center gap-2">
               <span
                 className="h-6 px-2.5 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1.5 shadow-2xs"
@@ -2190,7 +2231,7 @@ const SlideCanvas: React.FC<{
 
         {/* 2. Fluid Synthesized Narrative (Kapsamlı Ders Notu Sentezi) */}
         {narrative && (
-          <section className="ms-slide-narr rounded-2xl border border-line bg-canvas p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
+          <section data-origin="ai" className="ms-slide-narr rounded-2xl border border-line bg-canvas p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line pb-2.5">
               <div className="flex items-center gap-2.5 min-w-[min(100%,220px)] flex-1">
                 <span className="ms-slide-badgeicon w-7 h-7 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-xs">
@@ -2255,7 +2296,7 @@ const SlideCanvas: React.FC<{
 
         {/* 3. Interactive 3D Flashcards (Akıl Kartları Atölyesi) */}
         {flashcards.length > 0 && (
-          <section className="flex flex-col gap-2.5 pt-1">
+          <section data-origin="ai" className="flex flex-col gap-2.5 pt-1">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2.5 min-w-0">
                 <span className="w-7 h-7 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0">
@@ -2295,7 +2336,7 @@ const SlideCanvas: React.FC<{
         )}
 
         {/* 4. Interactive Questions (Doğrudan Slayt Üzerinde Çözülebilir Sorular) */}
-        {(slide.relatedQuestions || []).length > 0 && (
+        {(slide.relatedQuestions || []).some((q: any) => String(q?.stem || q?.question || '').trim().length > 10) && (
           <section id={`slide-questions-${slide.slideNumber}`} className="flex flex-col gap-2.5 pt-1 scroll-mt-6">
             <div className="flex items-center justify-between gap-2 border-b border-line-soft pb-2">
               <div className="flex items-center gap-2 min-w-0">
@@ -2338,8 +2379,8 @@ const SlideCanvas: React.FC<{
 
         {/* 6. Core content: formulas, tables, bullets, infographics */}
         <div className={`grid grid-cols-1 ${c.table && c.table.headers?.length > 0 ? '' : 'lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]'} gap-4 sm:gap-5 lg:gap-7 items-start`}>
-          {/* Main content */}
-          <div className="flex flex-col gap-4 min-w-0">
+          {/* Main content: slayt/PDF'ten gelen ders içeriği (hocanın materyali) */}
+          <div data-origin="ders" className="flex flex-col gap-4 min-w-0">
             {c.keyBullets && c.keyBullets.length > 0 && (
               <KeyBulletsRenderer bullets={c.keyBullets} />
             )}
@@ -2374,8 +2415,8 @@ const SlideCanvas: React.FC<{
             )}
           </div>
 
-          {/* Side: spot pearls */}
-          <div className="flex flex-col gap-3 min-w-0">
+          {/* Side: spot pearls (yapay zekâ özeti) */}
+          <div data-origin="ai" className="flex flex-col gap-3 min-w-0">
             {spots.length > 0 && <SpotList items={spots} />}
           </div>
         </div>
@@ -2393,6 +2434,7 @@ const SlideCanvas: React.FC<{
           </div>
         )}
       </Highlightable>
+      </div>
     </article>
   );
 };
@@ -2539,23 +2581,28 @@ const InteractionPanel: React.FC<{
   tab: PanelTab;
   setTab: (t: PanelTab) => void;
 }> = ({ deck, slide, tab, setTab }) => {
-  const qs = (slide.relatedQuestions && slide.relatedQuestions.length > 0)
+  // Kökü ya da şıkları boş "soru" kayıtları gösterilmez (boş çıkmış soru kartı oluşuyordu)
+  const usable = (q: any) => !!q && String(q.stem || q.question || '').trim().length > 10 && Array.isArray(q.options) && q.options.length >= 2;
+  const qs = ((slide.relatedQuestions && slide.relatedQuestions.length > 0)
     ? slide.relatedQuestions
-    : ((slide as any).practiceQuestion ? [(slide as any).practiceQuestion] : []);
+    : ((slide as any).practiceQuestion ? [(slide as any).practiceQuestion] : [])
+  ).filter(usable);
   const cards = slide.flashcards || [];
 
   // Sade panel: 4 sekme. PDF üst çubuktaki görünüm seçicide; spotlar notların altında.
+  // Boş sekmeler (sorusu ya da kartı olmayan slayt) gösterilmez; seçili sekme boşsa ilk doluya geçilir
   const tabs: { id: PanelTab; label: string; count?: number }[] = [
-    { id: 'questions', label: 'Kendini sına', count: qs.length },
-    { id: 'flashcards', label: 'Kartlar', count: cards.length },
+    ...(qs.length ? [{ id: 'questions' as PanelTab, label: 'Kendini sına', count: qs.length }] : []),
+    ...(cards.length ? [{ id: 'flashcards' as PanelTab, label: 'Kartlar', count: cards.length }] : []),
     { id: 'notes', label: 'Notlar' },
     { id: 'ai', label: 'Sor' },
   ];
-  const active: PanelTab = tab === 'pdf' ? 'questions' : tab === 'pearls' ? 'notes' : tab;
+  const wanted: PanelTab = tab === 'pdf' ? 'questions' : tab === 'pearls' ? 'notes' : tab;
+  const active: PanelTab = tabs.some((t) => t.id === wanted) ? wanted : tabs[0].id;
 
   return (
     <>
-      <div role="tablist" aria-label="Etkileşim" className="shrink-0 grid grid-cols-4 gap-1 m-3 mb-0 bg-canvas rounded-xl p-1">
+      <div role="tablist" aria-label="Etkileşim" className="shrink-0 grid gap-1 m-3 mb-0 bg-canvas rounded-xl p-1" style={{ gridTemplateColumns: `repeat(${tabs.length}, minmax(0, 1fr))` }}>
         {tabs.map((t) => (
           <button
             key={t.id}

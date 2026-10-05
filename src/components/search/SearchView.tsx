@@ -178,15 +178,15 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
                   </button>
                   <div className="ms-collapsible-body">
                     <div className="min-h-0 overflow-hidden">
-                      <div className="ms-hit-full"><Highlight text={r.content} query={query} /></div>
                       {SOURCE_ACTION[r.documentType] && (
-                        <div className="px-4 pb-4">
+                        <div className="ms-hit-actions">
                           <button type="button" onClick={() => openSource(r)} disabled={openingId === r.id} className="h-10 px-4 rounded-full bg-accent-soft text-accent text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer hover:bg-accent hover:text-white transition-colors disabled:opacity-60">
                             {openingId === r.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <ArrowUpRight className="w-4 h-4" />}
                             {SOURCE_ACTION[r.documentType]}
                           </button>
                         </div>
                       )}
+                      <div className="ms-hit-full"><Highlight text={r.content} query={query} /></div>
                     </div>
                   </div>
                 </li>

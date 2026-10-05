@@ -760,7 +760,9 @@ html.ui-v3 main button.bg-white.border:hover { background: var(--color-line); }
 /* Ana eylem: hap biçimli */
 html.ui-v3 :is(button, a).bg-accent { border-radius: 999px; }
 html.ui-v3 main :is(input, select, textarea).bg-white { background: var(--color-field); border-color: transparent; }
-html.ui-v3 main :is(input, select, textarea):focus { background: var(--color-white); }
+/* Yalnızca kendi zemini olan alanlar odakta beyazlar; çerçevesi dış kapsayıcıda olan (şeffaf/çıplak)
+   alanlar boyanmaz, yoksa beyaz dikdörtgen kapsayıcının kenar çizgisinin üstüne biniyordu */
+html.ui-v3 main :is(input, select, textarea):not(.bg-transparent):not(.ms-bare-input):not([type="checkbox"]):not([type="radio"]):focus { background: var(--color-white); }
 
 /* Sayfa başlığı: yalnız başlık ve eylem */
 html.ui-v3 .ms-eyebrow, html.ui-v3 .ms-stats { display: none; }
@@ -787,7 +789,7 @@ html.ui-v3 header.sticky nav a { border-radius: 999px; }
 .ms-console-body :is(button, a).border:not(.bg-accent):hover { background-color: var(--color-line); }
 .ms-console-body :is(button, a):is(.rounded-\[10px\], .rounded-lg, .rounded-xl) { border-radius: 999px; }
 .ms-console-body :is(input, select, textarea).border { background-color: var(--color-field); border-color: transparent; }
-.ms-console-body :is(input, select, textarea):focus { background-color: var(--color-white); border-color: var(--color-accent); }
+.ms-console-body :is(input, select, textarea):not(.bg-transparent):not(.ms-bare-input):focus { background-color: var(--color-white); border-color: var(--color-accent); }
 .ms-console-body table { border-radius: 16px; }
 
 /* Tarayıcı ayrıntıları da tasarımın parçası: imleç vurgu renginde, sayılar hizalı */
@@ -1085,7 +1087,7 @@ html.kb-open .ms-onboard-nav, html.kb-open .ms-onboard-text { display: none; }
 .ms-composer:focus-within { background: var(--color-white); border-color: var(--color-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 14%, transparent); }
 .ms-meta {
   display: flex; align-items: center; gap: 6px; min-width: 0; padding: 8px 10px 10px;
-  border-top: 1px dashed var(--color-line); animation: ms-meta-in .26s var(--ease-out-soft) both;
+  border-top: 1px dashed var(--color-line); animation: ms-meta-in .26s var(--ease-out-soft) backwards;
 }
 @keyframes ms-meta-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 .ms-meta-token {
@@ -1201,3 +1203,58 @@ aside > .ms-f-seg, .flex-col > .ms-f-seg { flex: none; }
 html.theme-dark .ms-tooltip { background: rgb(230 235 243 / .95); color: #0E1726; }
 @keyframes ms-tip-in { from { opacity: 0; scale: .92; } to { opacity: 1; scale: 1; } }
 @media (prefers-reduced-motion: reduce) { .ms-tooltip { animation: none; } }
+
+/* Ders menüsü: masaüstünde etiketin altında, telefonda alttan açılan sayfa (alttaki listelerle çakışmaz) */
+.ms-meta-scrim { position: fixed; inset: 0; z-index: 85; cursor: default; background: transparent; }
+.ms-meta-menu { z-index: 86; }
+@media (max-width: 639px) {
+  .ms-meta-scrim { background: rgb(14 23 38 / .35); animation: ms-fade-in .15s ease both; }
+  .ms-meta-menu {
+    position: fixed; left: 0; right: 0; top: auto; bottom: 0; width: auto; max-height: min(70vh, calc(var(--vvh, 100dvh) - 80px));
+    border-radius: 20px 20px 0 0; padding: 10px 10px max(12px, env(safe-area-inset-bottom)); animation: ms-sheet-up .24s var(--ease-out-soft) both;
+  }
+  .ms-meta-menu > button { min-height: 46px; font-size: 15px; }
+}
+
+/* İç içe alanlar: kapsayıcı odak halkasını çizer, iç alan şeffaf kalır */
+:is(.ms-search-field, .ms-select-chip, .ms-composer, .ms-meta-token, label:has(> svg + input), label:has(> svg + span + input)) :is(input, textarea, select) { background: transparent !important; }
+
+:is(input, textarea).bg-transparent:focus-visible { outline: none; }
+/* Arama sonucu açılınca eylem düğmesi metnin üstünde; uzun metin kendi alanında kayar */
+.ms-hit-actions { padding: 0 16px 10px; display: flex; gap: 8px; }
+.ms-hit-full { max-height: min(50vh, 420px); overscroll-behavior: contain; }
+/* Okuyucu araç çubuğu (mobil): sığmayan araçlar ikinci satıra iner, hiçbiri ekran dışında kalmaz */
+@media (max-width: 639px) {
+  .ms-reader-bar { padding-top: 6px; padding-bottom: 6px; row-gap: 6px; }
+  .ms-reader-bar > *:not(.min-w-0):not(.flex-1) { flex-shrink: 0; }
+}
+/* Fosforlu kalem dokunmatikte: uzun basınca sistem seçimi/kopyalama menüsü açılmasın; dikey kaydırma sürer,
+   yatay sürükleme işaretler (Highlightable). Fareyle seçim masaüstünde aynen çalışır. */
+@media (pointer: coarse) {
+  .ms-pen, .ms-pen-eraser { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; touch-action: pan-y; }
+}
+
+/* Gece modu: koyu temada sarı/turuncu zeminler açık tona döner; üstündeki beyaz yazı okunmuyordu */
+html.theme-dark :is(.bg-amber-300, .bg-amber-400, .bg-amber-500, .bg-amber-600, .bg-yellow-300, .bg-yellow-400, .bg-yellow-500, .bg-orange-400, .bg-orange-500, .bg-lime-400, .bg-lime-500):is(.text-white, [class*="text-white"]),
+html.theme-dark :is(.bg-amber-300, .bg-amber-400, .bg-amber-500, .bg-amber-600, .bg-yellow-300, .bg-yellow-400, .bg-yellow-500, .bg-orange-400, .bg-orange-500) :is(.text-white, svg) {
+  color: #1f1300 !important;
+}
+
+/* --- Öğrenme ekranı: içerik kökeni (hoca / ders materyali ↔ yapay zekâ) — yan şerit yok, köşe etiketi + hafif ton --- */
+.ms-slide [data-origin] { position: relative; }
+html .ms-slide [data-origin="ai"] { background-color: color-mix(in srgb, #7c3aed 4%, var(--color-white)); }
+.ms-slide :is(figure, section)[data-origin]::before {
+  position: absolute; top: 8px; right: 10px; z-index: 1; padding: 1px 8px; border-radius: 999px;
+  font-size: 10.5px; font-weight: 600; letter-spacing: .01em; pointer-events: none;
+}
+.ms-slide :is(figure, section)[data-origin="hoca"]::before { content: "Hoca"; color: #0f766e; background: color-mix(in srgb, #0f766e 12%, transparent); }
+.ms-slide :is(figure, section)[data-origin="ai"]::before { content: "AI"; color: #6d28d9; background: color-mix(in srgb, #7c3aed 12%, transparent); }
+.ms-slide div[data-origin="ai"] { border-radius: 16px; padding: 8px; }
+.ms-origin-legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 11.5px; color: var(--color-ink-3); }
+.ms-origin-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.ms-origin-legend span::before { content: ""; width: 8px; height: 8px; border-radius: 999px; }
+.ms-origin-legend [data-o="hoca"]::before { background: #0f766e; }
+.ms-origin-legend [data-o="ai"]::before { background: #7c3aed; }
+html.theme-dark .ms-slide [data-origin="ai"] { background-color: color-mix(in srgb, #a78bfa 7%, var(--color-white)); }
+html.theme-dark .ms-slide :is(figure, section)[data-origin="hoca"]::before { color: #5eead4; }
+html.theme-dark .ms-slide :is(figure, section)[data-origin="ai"]::before { color: #c4b5fd; }

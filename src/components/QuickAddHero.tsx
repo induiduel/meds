@@ -320,11 +320,20 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     });
   }, [questions]);
 
+  // Taslak aramasına şıklar da katılır: öğrenci yalnızca şık hatırlıyor olabilir
+  const optionsText = KEYS.map((k) => options[k].trim()).filter(Boolean).join(' ');
+  // Ders, eşleştirmeye ref ile verilir: ders değişince arama yeniden tetiklenmesin (aksi halde
+  // eşleşme dersi değiştiriyor → arama yeniden çalışıyor → tahmin dersi geri çeviriyordu: yanıp sönme)
+  const disciplineRef = React.useRef(discipline);
+  disciplineRef.current = discipline;
+  const matchedDiscRef = React.useRef(false);
+
   // 3. Anlık taslak eşleme ve Kurul/Ders tahmin asistanı:
   // debouncedText üzerinden, requestAnimationFrame veya setTimeout chunking ile non-blocking çalışır.
   useEffect(() => {
-    const q = debouncedText;
-    if (mode === 'option' || q.length < 8 || !committee?.id) {
+    const q = `${mode === 'option' ? texts.stem.trim() : debouncedText} ${optionsText}`.trim();
+    if (q.length < 8 || !committee?.id) {
+      if (!q) matchedDiscRef.current = false; // yeni soru: eşleşme önceliği sıfırlanır
       setRealtimeMatches([]);
       setSelectedMatchIds(new Set());
       setSmartAssistant(null);
@@ -348,9 +357,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         setSmartAssistant(assistantRes);
 
         // Kullanıcı elle ders seçmediyse ve tahmin edilen ders bu kurula aitse otomatik uygula
-        if (!userManualDiscipline && assistantRes.predictedDiscipline) {
+        // (eşleşen taslaktan gelen ders önceliklidir; tahmin onu ezmez)
+        if (!userManualDiscipline && !matchedDiscRef.current && assistantRes.predictedDiscipline) {
           const predDisc = assistantRes.predictedDiscipline.discipline;
-          if (disciplines.includes(predDisc)) {
+          if (disciplines.includes(predDisc) && predDisc !== disciplineRef.current) {
             setDiscipline(predDisc);
             setAutoDisc(true);
           }
@@ -373,8 +383,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         const matches = findRealtimeMatchingDrafts(
           {
             committeeId: committee.id,
-            discipline,
-            topic: `${discipline} Hatırlanan Soru`,
+            discipline: disciplineRef.current,
+            topic: `${disciplineRef.current} Hatırlanan Soru`,
             text: q,
             options: optionsList.length > 0 ? optionsList : undefined,
           },
@@ -407,7 +417,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       isCancelled = true;
       window.clearTimeout(chunkTimer);
     };
-  }, [debouncedText, mode, committee?.id, discipline, options, questions, indexedPool]);
+  }, [debouncedText, mode, committee?.id, optionsText, questions, indexedPool]);
 
   const toggleSelectMatch = (id: string) => {
     setSelectedMatchIds((prev) => {
@@ -728,7 +738,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     if (!top || top.isCrossCommittee || top.compatibility.score < 60) return;
     if (!userManualNumber && top.question.questionNumber) { setQuestionNumber(String(top.question.questionNumber)); setAutoNum(true); }
     if (!userManualDiscipline && top.question.discipline && disciplines.includes(top.question.discipline)) {
-      setDiscipline(top.question.discipline);
+      matchedDiscRef.current = true;
+      if (top.question.discipline !== disciplineRef.current) setDiscipline(top.question.discipline);
       setAutoDisc(true);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -839,7 +850,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       </button>
                       {discMenu && (
                         <>
-                          <button type="button" aria-label="Kapat" className="fixed inset-0 z-20 cursor-default" onClick={() => setDiscMenu(false)} />
+                          <button type="button" aria-label="Kapat" className="ms-meta-scrim" onClick={() => setDiscMenu(false)} />
                           <div className="ms-meta-menu" role="listbox" aria-label="Ders">
                             {disciplines.length > 6 && (
                               <input

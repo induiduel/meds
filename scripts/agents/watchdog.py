@@ -96,8 +96,40 @@ def check_ollama_health():
         log(f"Ollama yanıt vermiyor ({e}). Servis bekleniyor...")
         time.sleep(5)
 
+
+def systemd_user_active(unit: str) -> bool:
+    """systemd --user servisi etkin/çalışıyor mu (servis varsa yeniden başlatmayı systemd'ye bırak)."""
+    try:
+        r = subprocess.run(["systemctl", "--user", "is-active", unit], capture_output=True, text=True, timeout=3)
+        state = r.stdout.strip()
+        if state in ("active", "activating", "reloading"):
+            return True
+        r = subprocess.run(["systemctl", "--user", "is-enabled", unit], capture_output=True, text=True, timeout=3)
+        return r.stdout.strip() == "enabled"
+    except Exception:
+        return False
+
+
+def port_in_use(port: int) -> bool:
+    import socket
+    try:
+        with socket.create_connection(("127.0.0.1", port), timeout=1):
+            return True
+    except OSError:
+        return False
+
+
+_web_failures = 0
+# Çıkış yapan faz betikleri hemen yeniden doğmasın: betik adı -> son başlatma zamanı
+_last_phase_launch: dict = {}
+PHASE_RELAUNCH_COOLDOWN_SEC = 600
+
 def check_pipeline_runner_alive():
     """Eğer pipeline_runner tamamen kapandıysa otonom olarak tekrar ayağa kaldırır"""
+    # meds-pipeline systemd servisi varsa yeniden başlatma onun işi (Restart=always). İkinci bir
+    # kopya kilidi tutup servisin kendi örneğini her 30 sn'de çıkışa zorluyordu.
+    if systemd_user_active("meds-pipeline.service"):
+        return
     res = subprocess.run(["pgrep", "-f", "pipeline_runner.py"], capture_output=True, text=True)
     if not res.stdout.strip():
         log("UYARI: pipeline_runner.py çalışmıyor! Otomatik olarak başlatılıyor...")
@@ -152,14 +184,30 @@ def check_dashboard_alive():
         log("dashboard_server.py yeniden başlatıldı ✓")
 
 def check_web_server_alive():
-    """Web sunucusunun (server.ts / Port 3000) canlı kalmasını sağlar"""
+    """Web sunucusunun (server.ts / Port 3000) canlı kalmasını sağlar.
+
+    Sunucu açılırken RAG indeksini kurduğu için ~1 dk yanıt vermeyebilir. Eskiden 3 sn'lik tek
+    hatada yeni kopya başlatılıyor, port dolu olduğundan bu kopyalar bellekte birikiyordu. Artık:
+    meds-web servisi varsa ona bırakılır; port doluysa ya da server.ts süreci varsa dokunulmaz;
+    yalnızca art arda 3 başarısız denetimden sonra başlatılır.
+    """
+    global _web_failures
     try:
-        r = requests.get("http://127.0.0.1:3000/api/health", timeout=3)
+        r = requests.get("http://127.0.0.1:3000/api/health", timeout=10)
         if r.ok:
+            _web_failures = 0
             return
     except Exception:
         pass
-    log("UYARI: Web sunucusu (Port 3000) kapalı! Otomatik olarak başlatılıyor...")
+    if systemd_user_active("meds-web.service") or port_in_use(3000):
+        return
+    if subprocess.run(["pgrep", "-f", "tsx.*server\\.ts"], capture_output=True, text=True).stdout.strip():
+        return
+    _web_failures += 1
+    if _web_failures < 3:
+        return
+    _web_failures = 0
+    log("UYARI: Web sunucusu (Port 3000) art arda 3 denetimde kapalı! Otomatik olarak başlatılıyor...")
     npx_bin = shutil.which("npx") or "/home/indu/.nvm/versions/node/v24.21.0/bin/npx"
     cmd = [npx_bin, "tsx", "server.ts"]
     subprocess.Popen(cmd, cwd=str(ROOT), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
@@ -268,42 +316,49 @@ def main():
         time.sleep(10)
 
 
+def _phase_cooldown_ok(name: str) -> bool:
+    """Aynı faz betiği son 10 dk içinde başlatıldıysa (ve çıktıysa) tekrar başlatma."""
+    now = time.time()
+    if now - _last_phase_launch.get(name, 0) < PHASE_RELAUNCH_COOLDOWN_SEC:
+        return False
+    _last_phase_launch[name] = now
+    return True
+
+
+# Faz motorları GPU'yu paylaşır; aynı anda çalışınca laptop GPU'su 89 °C'ye çıkıyordu.
+# Artık sırayla çalışırlar: biri bitmeden sıradaki başlamaz (5 → 6 → 7 → 7.5 → 5 ...).
+PHASE_SEQUENCE = [
+    ("multi_ai_consensus_phase5.py", "Faz 5 Çoklu AI Konsensüsü"),
+    ("deep_metadata_generator_phase6.py", "Faz 6 Hiper-Metadata Motoru"),
+    ("microagent_storyteller_phase7.py", "Faz 7 Mikro-Ajans Hikaye Motoru"),
+    ("reconstruct_slides_phase7_5.py", "Faz 7.5 Müfredat Slayt Motoru"),
+]
+_next_phase_index = 0
+
+
 def check_phase5_and_phase6_workers():
-    """Faz 5 (Çoklu AI Konsensüs) ve Faz 6 (Derin Tıbbi Metadata) motorlarının arka planda çalışmasını sağlar"""
+    """Faz 5, 6, 7 ve 7.5 motorlarını SIRAYLA çalıştırır (aynı anda en fazla bir tane)."""
+    global _next_phase_index
+    running = [
+        name for name, _ in PHASE_SEQUENCE
+        if subprocess.run(["pgrep", "-f", name], capture_output=True, text=True).stdout.strip()
+    ]
+    if running:
+        # Çalışan fazdan (watchdog ya da boru hattı başlatmış olabilir) sonraki faz sıradadır
+        names = [n for n, _ in PHASE_SEQUENCE]
+        _next_phase_index = (names.index(running[0]) + 1) % len(PHASE_SEQUENCE)
+        return  # bitmesini bekle
+
     venv_py = ROOT / ".venv-ocr" / "bin" / "python"
     py_bin = str(venv_py) if venv_py.exists() else sys.executable
-
-    # Faz 5 Konsensüs Motoru Denetimi
-    res_p5 = subprocess.run(["pgrep", "-f", "multi_ai_consensus_phase5.py"], capture_output=True, text=True)
-    if not res_p5.stdout.strip():
-        p5_script = ROOT / "scripts" / "advanced_ai" / "multi_ai_consensus_phase5.py"
-        if p5_script.exists():
-            subprocess.Popen([py_bin, str(p5_script)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
-            log("multi_ai_consensus_phase5.py (Faz 5 Çoklu AI Konsensüsü) arka planda başlatıldı ✓")
-
-    # Faz 6 Derin Metadata Motoru Denetimi
-    res_p6 = subprocess.run(["pgrep", "-f", "deep_metadata_generator_phase6.py"], capture_output=True, text=True)
-    if not res_p6.stdout.strip():
-        p6_script = ROOT / "scripts" / "advanced_ai" / "deep_metadata_generator_phase6.py"
-        if p6_script.exists():
-            subprocess.Popen([py_bin, str(p6_script)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
-            log("deep_metadata_generator_phase6.py (Faz 6 Hiper-Metadata Motoru) arka planda başlatıldı ✓")
-
-    # Faz 7 5-Adımlı Mikro-Ajans Modelleme & Hikaye Motoru Denetimi
-    res_p7 = subprocess.run(["pgrep", "-f", "microagent_storyteller_phase7.py"], capture_output=True, text=True)
-    if not res_p7.stdout.strip():
-        p7_script = ROOT / "scripts" / "advanced_ai" / "microagent_storyteller_phase7.py"
-        if p7_script.exists():
-            subprocess.Popen([py_bin, str(p7_script)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
-            log("microagent_storyteller_phase7.py (Faz 7 Mikro-Ajans Hikaye Motoru) arka planda başlatıldı ✓")
-
-    # Faz 7.5 Amfi Ders Slaytlarını Düzenleme Motoru Denetimi
-    res_p75 = subprocess.run(["pgrep", "-f", "reconstruct_slides_phase7_5.py"], capture_output=True, text=True)
-    if not res_p75.stdout.strip():
-        p75_script = ROOT / "scripts" / "advanced_ai" / "reconstruct_slides_phase7_5.py"
-        if p75_script.exists():
-            subprocess.Popen([py_bin, str(p75_script)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
-            log("reconstruct_slides_phase7_5.py (Faz 7.5 Müfredat Slayt Motoru) arka planda başlatıldı ✓")
+    for _ in range(len(PHASE_SEQUENCE)):
+        name, label = PHASE_SEQUENCE[_next_phase_index]
+        _next_phase_index = (_next_phase_index + 1) % len(PHASE_SEQUENCE)
+        script = ROOT / "scripts" / "advanced_ai" / name
+        if script.exists() and _phase_cooldown_ok(name):
+            subprocess.Popen([py_bin, str(script)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+            log(f"{name} ({label}) sırası geldi, başlatıldı ✓")
+            return
 
 if __name__ == "__main__":
     main()

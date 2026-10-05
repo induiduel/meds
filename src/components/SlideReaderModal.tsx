@@ -121,7 +121,7 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
         {/* Toolbar & Page Navigation */}
         <div className="bg-slate-50 border-b border-slate-200 p-3 flex flex-wrap items-center justify-between gap-3 shrink-0">
           {/* Page Switcher */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 w-full sm:w-auto min-w-0">
             <button
               onClick={() => setCurrentPageIndex((prev) => Math.max(0, prev - 1))}
               disabled={safeIndex === 0}
@@ -131,8 +131,8 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
               <ChevronLeft className="w-4 h-4" />
             </button>
 
-            <span className="text-xs font-bold text-slate-800 px-2 py-1 bg-white rounded-md border border-slate-200">
-              Sayfa / Bölüm {safeIndex + 1} / {totalPages}
+            <span className="shrink-0 whitespace-nowrap text-xs font-bold text-slate-800 px-2 py-1 bg-white rounded-md border border-slate-200 tabular-nums">
+              <span className="hidden sm:inline">Sayfa / Bölüm </span>{safeIndex + 1} / {totalPages}
             </span>
 
             <button
@@ -148,7 +148,8 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
             <select
               value={safeIndex}
               onChange={(e) => setCurrentPageIndex(Number(e.target.value))}
-              className="text-xs font-semibold px-2 py-1 bg-white border border-slate-300 rounded-lg text-slate-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-teal-500"
+              aria-label="Bölüme git"
+              className="min-w-0 flex-1 sm:flex-none sm:max-w-[260px] truncate text-xs font-semibold px-2 py-1 bg-white border border-slate-300 rounded-lg text-slate-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-teal-500"
             >
               {note.pages.map((p, idx) => (
                 <option key={idx} value={idx}>

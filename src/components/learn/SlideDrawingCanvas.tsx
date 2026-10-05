@@ -245,7 +245,8 @@ export const SlideDrawingCanvas: React.FC<{
     activePointerRef.current = e.pointerId;
 
     // Capture pointer to guarantee pointerup/move even outside element
-    canvas.setPointerCapture(e.pointerId);
+    try { canvas.setPointerCapture(e.pointerId); } catch { /* bazı tarayıcılar sentetik/iptal edilmiş işaretçide hata verir */ }
+    e.preventDefault();
     isDrawingRef.current = true;
 
     const rect = canvas.getBoundingClientRect();
@@ -357,7 +358,7 @@ export const SlideDrawingCanvas: React.FC<{
 
       {/* Floating Canvas Action Controls when drawings exist */}
       {isInteractive && (
-        <div className="absolute top-2 right-2 flex items-center gap-1.5 z-30 pointer-events-auto bg-white/90 dark:bg-panel/90 backdrop-blur-md p-1 rounded-xl border border-line shadow-md animate-in fade-in duration-150">
+        <div className="fixed left-1/2 -translate-x-1/2 bottom-[max(16px,env(safe-area-inset-bottom))] flex items-center gap-1.5 z-[66] pointer-events-auto bg-white/95 dark:bg-panel/90 backdrop-blur-md p-1 rounded-xl border border-line shadow-lg animate-in fade-in duration-150">
           <button
             type="button"
             onClick={undo}
@@ -422,14 +423,14 @@ export const DrawingModeToolbarTrigger: React.FC<{ className?: string }> = ({ cl
   };
 
   return (
-    <div className={`flex items-center gap-1 ${className}`}>
+    <div className={`flex items-center gap-1 shrink-0 ${className}`}>
       {/* Main Pen Mode Button */}
       <button
         type="button"
         onClick={togglePen}
         aria-pressed={activeMode === 'pen'}
         title={activeMode === 'pen' ? 'Kalemi Kapat' : 'Kalem Modu (Üzerine Yazıp Çiz)'}
-        className={`h-9 px-2.5 rounded-[10px] flex items-center gap-1.5 cursor-pointer transition-all ${
+        className={`h-9 min-w-9 px-2.5 shrink-0 rounded-[10px] flex items-center justify-center gap-1.5 cursor-pointer transition-all ${
           activeMode === 'pen'
             ? 'bg-rose-500 text-white font-semibold shadow-xs ring-2 ring-rose-500/30'
             : activeMode !== 'none'

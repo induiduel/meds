@@ -273,10 +273,49 @@ export const Highlightable: React.FC<{ scope: string; className?: string; style?
     };
   }, [scope, apply, commit]);
 
+  // Dokunmatik/kalem: işletim sisteminin uzun-basma seçimine güvenmeden, parmağın
+  // başladığı ve bittiği noktalar arasındaki metni işaretle (yatay sürükleme = aralık)
+  const touchStart = useRef<{ pos: number; x: number; y: number } | null>(null);
+  const caretOffset = (x: number, y: number): number | null => {
+    const root = ref.current;
+    const doc: any = document;
+    const caret = doc.caretPositionFromPoint ? doc.caretPositionFromPoint(x, y) : doc.caretRangeFromPoint?.(x, y);
+    if (!root || !caret) return null;
+    const node = caret.offsetNode || caret.startContainer;
+    const off = caret.offset ?? caret.startOffset;
+    if (!node || !root.contains(node)) return null;
+    return offsetOf(root, node, off);
+  };
+  const onPointerDown = (e: React.PointerEvent) => {
+    if (!t.active || e.pointerType === 'mouse') return;
+    const pos = caretOffset(e.clientX, e.clientY);
+    touchStart.current = pos == null ? null : { pos, x: e.clientX, y: e.clientY };
+  };
+
   const onPointerUp = (e: React.PointerEvent) => {
     if (!t.active) return;
     const root = ref.current;
     if (!root) return;
+    const start0 = touchStart.current;
+    touchStart.current = null;
+    if (start0 && e.pointerType !== 'mouse' && Math.abs(e.clientX - start0.x) > 12 && Math.abs(e.clientX - start0.x) > Math.abs(e.clientY - start0.y) * 0.6) {
+      const endPos = caretOffset(e.clientX, e.clientY);
+      if (endPos != null) {
+        const text = root.textContent || '';
+        let start = Math.min(start0.pos, endPos);
+        let end = Math.max(start0.pos, endPos);
+        // Kelime sınırlarına genişlet
+        while (start > 0 && /[\p{L}\p{N}]/u.test(text[start - 1])) start--;
+        while (end < text.length && /[\p{L}\p{N}]/u.test(text[end])) end++;
+        if (end > start) {
+          const overlapping = (m: Mark) => m.start < end && m.end > start;
+          if (t.eraser) commit(marks.current.filter((m) => !overlapping(m)));
+          else commit([...marks.current.filter((m) => !overlapping(m)), { id: `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`, color: t.color, start, end, text: text.slice(start, end) }]);
+          window.getSelection()?.removeAllRanges();
+        }
+        return;
+      }
+    }
     // Let the browser finish updating the selection first
     window.setTimeout(() => {
       const sel = window.getSelection();
@@ -346,7 +385,10 @@ export const Highlightable: React.FC<{ scope: string; className?: string; style?
   return (
     <div
       ref={ref}
+      onPointerDown={onPointerDown}
       onPointerUp={onPointerUp}
+      onPointerCancel={() => (touchStart.current = null)}
+      onContextMenu={(e) => { if (t.active) e.preventDefault(); }}
       className={`${className} ${t.active ? (t.eraser ? 'ms-pen-eraser' : `ms-pen ms-pen-${t.color}`) : ''}`}
       style={style}
     >

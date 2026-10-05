@@ -437,6 +437,62 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
     }
   };
 
+  // ---------------------------------------------------------------- Grubu birleştirip AI ile dönüştür
+  // Tek aday dönüştürülünce AI gruptaki diğer parçaları görmüyordu. Bu işlem konudaki (alt konular
+  // dahil) tüm açık adayların köklerini, şıklarını ve parçalarını tek adayda toplar, sonra AI'ya verir.
+  // Geri al (Ctrl+Z) ile birleştirme öncesine dönülebilir.
+  const mergeGroupForAi = (gid: string) => {
+    const descend = (id: string): string[] => [id, ...state.groups.filter((x) => x.parentId === id).flatMap((x) => descend(x.id))];
+    const gids = new Set(descend(gid));
+    const members = state.candidates.filter((c) => c.groupId && gids.has(c.groupId) && c.status !== 'done');
+    if (members.length === 0) {
+      notify('Bu konuda dönüştürülecek açık aday yok.');
+      return;
+    }
+    if (members.length === 1) {
+      void openAi(members[0]);
+      return;
+    }
+    const g = groupById.get(gid);
+    const fragmentIds = Array.from(new Set(members.flatMap((c) => c.fragmentIds)));
+    const stems = Array.from(new Set(members.map((c) => c.stem.trim()).filter(Boolean)));
+    const options = { A: '', B: '', C: '', D: '', E: '' } as StudioCandidate['options'];
+    const extraOptions: string[] = [];
+    members.forEach((c) =>
+      OPT_KEYS.forEach((k) => {
+        const t = (c.options[k] || '').trim();
+        if (!t) return;
+        if (!options[k]) options[k] = t;
+        else if (options[k] !== t) extraOptions.push(`${k}) ${t}`);
+      })
+    );
+    const answerVotes: Record<string, number> = {};
+    members.forEach((c) => c.answer && (answerVotes[c.answer] = (answerVotes[c.answer] || 0) + 1));
+    const answer = (Object.entries(answerVotes).sort((a, b) => b[1] - a[1])[0]?.[0] as StudioCandidate['answer']) || undefined;
+    const notes = [
+      stems.length > 1 ? `Diğer kök adayları:\n${stems.slice(1).map((x) => `- ${x}`).join('\n')}` : '',
+      extraOptions.length ? `Farklı yazılmış şıklar:\n${extraOptions.map((x) => `- ${x}`).join('\n')}` : '',
+      ...members.map((c) => c.notes.trim()).filter(Boolean),
+    ].filter(Boolean).join('\n\n');
+    const merged = newCandidate({
+      groupId: gid,
+      title: `Birleşik · ${g?.label || 'grup'}`,
+      stem: stems[0] || '',
+      options,
+      answer,
+      fragmentIds,
+      optionSources: Object.assign({}, ...members.map((c) => c.optionSources)),
+      terms: Array.from(new Set(members.flatMap((c) => c.terms))),
+      notes,
+      questionNumber: members.find((c) => c.questionNumber)?.questionNumber,
+    });
+    const memberIds = new Set(members.map((c) => c.id));
+    commit((st) => ({ ...st, candidates: [merged, ...st.candidates.filter((c) => !memberIds.has(c.id))] }));
+    setSel({ t: 'cand', id: merged.id });
+    notify(`${members.length} aday tek adayda birleştirildi; AI tüm parçaları birlikte görecek. Geri al ile ayırabilirsin.`);
+    void openAi(merged);
+  };
+
   // ---------------------------------------------------------------- AI ile dönüştür
   const openAi = async (c: StudioCandidate) => {
     setAiFor(c.id);
@@ -993,6 +1049,15 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
               </button>
               <button type="button" title="Bu konuda aday aç" aria-label="Aday ekle" onClick={() => createCandidate([], g.id)} className="w-7 h-7 rounded-lg flex items-center justify-center text-ink-3 hover:text-ink hover:bg-white">
                 <Plus className="w-4 h-4" />
+              </button>
+              <button
+                type="button"
+                title="Gruptaki tüm adayları (kök, şık, parça) birleştir ve AI ile tek soruya dönüştür"
+                aria-label="Grubu AI ile dönüştür"
+                onClick={() => mergeGroupForAi(g.id)}
+                className="h-7 px-2 rounded-lg flex items-center gap-1 text-[12px] font-semibold text-accent hover:bg-white"
+              >
+                <Bot className="w-4 h-4" /> <span className="hidden xl:inline">Grubu dönüştür</span>
               </button>
             </span>
           )}
