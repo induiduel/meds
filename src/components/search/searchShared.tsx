@@ -3,7 +3,8 @@ import { safeJsonFetch } from '../../services/api';
 
 export type SearchDocType =
   | 'past_question' | 'active_question' | 'lecture_slide' | 'summary' | 'transcript'
-  | 'user_contribution' | 'ai_refinement' | 'ai_qa' | 'deepseek_contribution';
+  | 'user_contribution' | 'ai_refinement' | 'ai_qa' | 'deepseek_contribution'
+  | 'gemini_v3_question' | 'gemini_v3_lecture' | 'gemini_v3_term';
 
 export interface SearchHit {
   id: string;
@@ -36,11 +37,14 @@ export const TYPE_META: Record<SearchDocType, { label: string; dot: string }> = 
   user_contribution: { label: 'Katkı', dot: 'bg-sky-500' },
   ai_refinement: { label: 'AI düzeltme', dot: 'bg-slate-400' },
   ai_qa: { label: 'AI yanıtı', dot: 'bg-slate-400' },
+  gemini_v3_question: { label: 'Gemini v3 soru', dot: 'bg-fuchsia-500' },
+  gemini_v3_lecture: { label: 'Gemini v3 ders notu', dot: 'bg-fuchsia-500' },
+  gemini_v3_term: { label: 'Gemini v3 terim', dot: 'bg-fuchsia-500' },
 };
 
 export const TYPE_ORDER: SearchDocType[] = [
   'past_question', 'deepseek_contribution', 'lecture_slide', 'summary', 'transcript',
-  'active_question', 'user_contribution',
+  'active_question', 'user_contribution', 'gemini_v3_question', 'gemini_v3_lecture', 'gemini_v3_term',
 ];
 
 export async function fetchSearch(
@@ -52,7 +56,38 @@ export async function fetchSearch(
   if (opts.types?.length) params.set('types', opts.types.join(','));
   if (opts.committeeId) params.set('committeeId', opts.committeeId);
   const res = await safeJsonFetch<SearchResponse & { success: boolean }>(`/api/search/all?${params}`, { signal });
-  return res.ok && res.data?.success ? res.data : null;
+  if (!res.ok || !res.data?.success) return null;
+  const includeV3 = !opts.types?.length || opts.types.some((type) => type.startsWith('gemini_v3_'));
+  if (!includeV3 || !q.trim()) return res.data;
+  const v3Params = new URLSearchParams({ q, limit: String(Math.max(opts.limit || 5, 20)) });
+  if (opts.committeeId) v3Params.set('committeeId', opts.committeeId);
+  const [questions, lectures, terms] = await Promise.all([
+    safeJsonFetch<any>(`/api/gemini-v3/questions?${v3Params}`, { signal }),
+    safeJsonFetch<any>(`/api/gemini-v3/lecture-notes?${v3Params}`, { signal }),
+    safeJsonFetch<any>(`/api/gemini-v3/thesaurus?q=${encodeURIComponent(q)}`, { signal }),
+  ]);
+  const v3Hits: SearchHit[] = [];
+  if (questions.ok && questions.data?.items) for (const item of questions.data.items) v3Hits.push({
+    id: `gemini-v3-question-${item.question_id}`, documentId: item.question_id, documentType: 'gemini_v3_question',
+    committeeId: item.kurul ? `kurul-${item.kurul}` : undefined, discipline: item.ders,
+    title: item.stem || 'Gemini v3 sorusu', snippet: item.konu || item.taxonomy_metadata?.ne_sormus || '',
+    content: [item.stem, ...Object.values(item.options || {})].join(' '), score: item.medical_accuracy_score || 0,
+  });
+  if (lectures.ok && lectures.data?.items) for (const item of lectures.data.items) v3Hits.push({
+    id: `gemini-v3-lecture-${item.source_id}`, documentId: item.source_id, documentType: 'gemini_v3_lecture',
+    committeeId: item.kurul ? `kurul-${item.kurul}` : undefined, discipline: item.ders,
+    title: item.title || 'Gemini v3 ders notu', snippet: `${item.pages || 0} sayfa · kaynaklı yeniden yapılandırılmış not`,
+    content: item.title || '', score: 0,
+  });
+  if (terms.ok && terms.data?.items) for (const item of terms.data.items) v3Hits.push({
+    id: `gemini-v3-term-${item.key}`, documentId: item.key, documentType: 'gemini_v3_term',
+    title: item.turkce || item.key, snippet: item.latin || item.anahtar_bilesenler?.join(', ') || 'Tıbbi terim',
+    content: JSON.stringify(item), score: 0,
+  });
+  const filteredV3 = opts.types?.length ? v3Hits.filter((hit) => opts.types!.includes(hit.documentType)) : v3Hits;
+  const merged = [...res.data.results, ...filteredV3].slice(0, opts.offset ? (opts.offset + (opts.limit || 5)) : (opts.limit || 5));
+  return { ...res.data, total: res.data.total + filteredV3.length, capped: res.data.capped, results: merged,
+    byType: { ...res.data.byType, ...Object.fromEntries(filteredV3.reduce((map, hit) => map.set(hit.documentType, (map.get(hit.documentType) || 0) + 1), new Map<SearchDocType, number>())) } };
 }
 
 /* Türkçe duyarlı vurgulama: aranan sözcüklerin ilk 5 harfi (kök) eşleşir */

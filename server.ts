@@ -74,6 +74,14 @@ import {
   getTieredGroqKeys,
 } from './src/services/aiProvider.ts';
 
+import {
+  getGeminiV3Questions,
+  getGeminiV3Lectures,
+  getGeminiV3Thesaurus,
+  getGeminiV3Status,
+  getGeminiV3LectureMarkdown,
+} from './src/services/geminiV3DataService.ts';
+
 // @ts-ignore - dynamic ES module runner
 import {
   getAllScripts,
@@ -4848,6 +4856,39 @@ app.get('/api/lecture-notes/:id', (req, res) => {
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notu alınamadı: ' + err.message });
   }
+});
+
+// Gemini v3 export: additive, immutable, explicitly source-tagged data layer.
+app.get('/api/gemini-v3/status', (_req, res) => {
+  try { res.json({ success: true, ...getGeminiV3Status() }); }
+  catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
+});
+
+app.get('/api/gemini-v3/questions', (req, res) => {
+  try {
+    res.json({ success: true, ...getGeminiV3Questions({
+      q: String(req.query.q || ''), committeeId: String(req.query.committeeId || ''),
+      limit: Number(req.query.limit || 20), offset: Number(req.query.offset || 0),
+    }) });
+  } catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
+});
+
+app.get('/api/gemini-v3/lecture-notes', (req, res) => {
+  try { res.json({ success: true, ...getGeminiV3Lectures({ q: String(req.query.q || ''), committeeId: String(req.query.committeeId || ''), limit: Number(req.query.limit || 50) }) }); }
+  catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
+});
+
+app.get('/api/gemini-v3/lecture-notes/:sourceId', (req, res) => {
+  try {
+    const note = getGeminiV3LectureMarkdown(req.params.sourceId);
+    if (!note) return res.status(404).json({ success: false, error: 'Gemini v3 ders notu bulunamadı veya doğrulanmış değil.' });
+    res.json({ success: true, ...note });
+  } catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
+});
+
+app.get('/api/gemini-v3/thesaurus', (req, res) => {
+  try { res.json({ success: true, ...getGeminiV3Thesaurus(String(req.query.q || '')) }); }
+  catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
 });
 
 // --- RAG System Endpoints (pgvector + Hybrid Search + AI Workflows) ---

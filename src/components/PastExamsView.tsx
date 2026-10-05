@@ -43,7 +43,7 @@ import { ReportQuestionModal } from './ReportQuestionModal';
 import { SectionLoader } from './ui/Animations';
 import { QuestionItem, LectureNote, LectureNotePage, QuestionLectureMatch } from '../types';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
-import { ApiService } from '../services/api';
+import { ApiService, safeJsonFetch } from '../services/api';
 import { pastQuestionsCache, CacheSyncStatus } from '../services/pastQuestionsCache';
 import { AdminCustomRedactModal } from './AdminCustomRedactModal';
 import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
@@ -67,6 +67,9 @@ export const isDeepSeekQuestion = (q: any): boolean => {
   if (typeof q.sourceFile === 'string' && q.sourceFile.toLowerCase().includes('deepseek')) return true;
   return false;
 };
+
+export const isGeminiV3Question = (q: any): boolean =>
+  Array.isArray(q?.tags) && q.tags.includes('gemini_v3');
 
 interface PastExamsViewProps {
   currentUser: AppUser | null;
@@ -95,6 +98,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [selectedYear, setSelectedYear] = useState<string>('all');
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
   const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
+  const [sourceFilter, setSourceFilter] = useState<'all' | 'gemini_v3' | 'existing'>('all');
   const [newnessFilter, setNewnessFilter] = useState<'all' | 'new_only' | 'archived_only'>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -165,7 +169,46 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           const normDisc = normalizeDonem3Discipline(q.discipline);
           return normDisc ? { ...q, discipline: normDisc } : q;
         });
-      setQuestions(donem3Data);
+      const v3Response = await safeJsonFetch<{ items?: any[] }>('/api/gemini-v3/questions?limit=3000');
+      const v3Questions: QuestionItem[] = (v3Response?.data?.items || []).map((item: any, index: number) => {
+        const options = Object.entries(item.options || {})
+          .filter(([, text]) => typeof text === 'string' && text.trim())
+          .slice(0, 5)
+          .map(([key, text]) => ({ key: key.toUpperCase() as any, text: String(text), upvotes: 0 }));
+        const answer = typeof item.answer === 'string' && /^[A-E]$/i.test(item.answer) ? item.answer.toUpperCase() as any : undefined;
+        const stem = String(item.stem || '').trim();
+        return {
+          id: `gemini-v3-${item.question_id || index}`,
+          committeeId: `donem3-kurul${item.kurul || 1}`,
+          questionNumber: Number(item.question_no || index + 1),
+          discipline: String(item.ders || 'Tıp'),
+          topic: String(item.konu || ''),
+          status: 'completed',
+          fragments: [],
+          options,
+          claimedAnswer: answer,
+          correctAnswer: answer,
+          reconstruction: {
+            stem,
+            options: options.map((option) => ({ ...option, isCorrect: option.key === answer })),
+            correctAnswer: answer || 'A',
+            explanation: String(item.explanation || ''),
+            confidenceScore: 100,
+            lastUpdated: item.curation_provenance?.curation_date || new Date().toISOString(),
+            reconstructionQuality: 'gemini_v3_curated',
+          },
+          tags: ['gemini_v3', 'aistudio_curated_20261005'],
+          examYear: 'Gemini v3',
+          sourceFile: String(item.source_file || 'Gemini v3'),
+          sourceNote: 'Gemini v3 · AI Studio küratörlü veri',
+          isPastExam: true,
+          isAmbiguous: options.length < 4 || !stem,
+          explanation: String(item.explanation || ''),
+          createdAt: item.curation_provenance?.curation_date || new Date().toISOString(),
+          updatedAt: item.curation_provenance?.curation_date || new Date().toISOString(),
+        } as QuestionItem;
+      });
+      setQuestions([...donem3Data, ...v3Questions]);
     } catch (e) {
       console.warn('Could not load past questions:', e);
     } finally {
@@ -505,13 +548,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     const ambiguousCount = questions.filter(q => q.isAmbiguous).length;
     const reportedCount = questions.filter(q => q.reports && q.reports.length > 0).length;
     const deepseekCount = questions.filter(isDeepSeekQuestion).length;
+    const geminiV3Count = questions.filter(isGeminiV3Question).length;
     const isNew = (q: QuestionItem) => Boolean(
       q.isNewQuestion ||
       (q.examYear ? q.examYear.includes('2026') || q.examYear.includes('2027') : false) ||
       (q.createdAt ? new Date(q.createdAt).getTime() > Date.now() - 30 * 86400000 : false)
     );
     const newCount = questions.filter(isNew).length;
-    return { validCount, ambiguousCount, reportedCount, deepseekCount, newCount, totalCount: questions.length };
+    return { validCount, ambiguousCount, reportedCount, deepseekCount, geminiV3Count, newCount, totalCount: questions.length };
   }, [questions]);
 
   // Filtered Questions
@@ -567,6 +611,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       // 6. DeepSeek Filter
       if (deepseekFilter === 'deepseek_only' && !isDeepSeekQuestion(q)) return false;
       if (deepseekFilter === 'standard_only' && isDeepSeekQuestion(q)) return false;
+      if (sourceFilter === 'gemini_v3' && !isGeminiV3Question(q)) return false;
+      if (sourceFilter === 'existing' && isGeminiV3Question(q)) return false;
 
       // 7. New vs Archived Question Filter
       const isNew = Boolean(
@@ -596,7 +642,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     if (sortOrder === 'oldest') sorted.sort((a, b) => (yearOf(a) || 9999) - (yearOf(b) || 9999));
     if (sortOrder === 'number') sorted.sort((a, b) => (a.questionNumber || 9999) - (b.questionNumber || 9999));
     return sorted;
-  }, [questions, ambiguityTab, searchQuery, selectedCommittee, selectedYear, selectedDiscipline, deepseekFilter, newnessFilter, answerFilter, explanationFilter, sortOrder]);
+  }, [questions, ambiguityTab, searchQuery, selectedCommittee, selectedYear, selectedDiscipline, deepseekFilter, sourceFilter, newnessFilter, answerFilter, explanationFilter, sortOrder]);
 
   // Paginated list
   const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / itemsPerPage));
@@ -626,6 +672,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ...(deepseekFilter !== 'all'
       ? [{ label: deepseekFilter === 'deepseek_only' ? 'Yalnızca DeepSeek' : 'Standart sorular', clear: () => setDeepseekFilter('all') }]
       : []),
+    ...(sourceFilter !== 'all'
+      ? [{ label: sourceFilter === 'gemini_v3' ? 'Gemini v3' : 'Mevcut veriler', clear: () => setSourceFilter('all') }]
+      : []),
     ...(answerFilter !== 'all'
       ? [{ label: answerFilter === 'with' ? 'Cevaplı' : 'Cevapsız', clear: () => setAnswerFilter('all') }]
       : []),
@@ -651,6 +700,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     setSearchQuery('');
     setAmbiguityTab('valid');
     setDeepseekFilter('all');
+    setSourceFilter('all');
     setNewnessFilter('all');
     setSelectedCommittee('all');
     setSelectedYear('all');
@@ -739,6 +789,27 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             }`}
           >
             {tabCounts.deepseekCount.toLocaleString('tr-TR')}
+          </span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            setSourceFilter((prev) => (prev === 'gemini_v3' ? 'all' : 'gemini_v3'));
+            setCurrentPage(1);
+          }}
+          className={`h-11 px-3 sm:px-3.5 rounded-xl border text-[13.5px] font-semibold flex items-center gap-1.5 cursor-pointer shrink-0 transition-all ${
+            sourceFilter === 'gemini_v3'
+              ? 'bg-violet-600 text-white border-violet-700 shadow-sm ring-2 ring-violet-200'
+              : 'bg-white border-line text-ink hover:border-violet-300 hover:text-violet-700'
+          }`}
+          title="Yalnızca Gemini v3 kaynaklı soruları göster"
+          aria-pressed={sourceFilter === 'gemini_v3'}
+        >
+          <Database className="w-4 h-4" />
+          <span className="hidden xs:inline">Gemini v3</span>
+          <span className={`text-[11.5px] px-1.5 py-0.5 rounded-full font-mono ${sourceFilter === 'gemini_v3' ? 'bg-white/20 text-white' : 'bg-violet-50 text-violet-700'}`}>
+            {tabCounts.geminiV3Count.toLocaleString('tr-TR')}
           </span>
         </button>
 
@@ -890,6 +961,20 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     ] as const
                   ).map(([id, label]) => (
                     <button key={id} type="button" role="radio" aria-checked={deepseekFilter === id} onClick={() => { setDeepseekFilter(id as any); setCurrentPage(1); }} className={deepseekFilter === id ? 'is-on' : ''}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="ms-f-row">
+                <span className="ms-f-label">Kaynak</span>
+                <div className="ms-f-seg" role="radiogroup" aria-label="Soru kaynağı">
+                  {([
+                    ['all', `Tümü ${tabCounts.totalCount}`],
+                    ['gemini_v3', `Gemini v3 ${tabCounts.geminiV3Count}`],
+                    ['existing', `Mevcut ${tabCounts.totalCount - tabCounts.geminiV3Count}`],
+                  ] as const).map(([id, label]) => (
+                    <button key={id} type="button" role="radio" aria-checked={sourceFilter === id} onClick={() => { setSourceFilter(id); setCurrentPage(1); }} className={sourceFilter === id ? 'is-on' : ''}>
                       {label}
                     </button>
                   ))}
@@ -1059,6 +1144,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   ) : (
                     <span className="h-[20px] px-2 rounded-full bg-slate-100 text-slate-600 text-[11px] font-medium inline-flex items-center shrink-0">
                       Geçmiş Yıl
+                    </span>
+                  )}
+                  {isGeminiV3Question(q) && (
+                    <span className="h-[20px] px-2 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-[11px] font-bold inline-flex items-center shrink-0">
+                      Gemini v3
                     </span>
                   )}
                   <span className="text-[13px] text-ink-3 truncate min-w-0" title={formatCommitteeName(q.committeeId)}>

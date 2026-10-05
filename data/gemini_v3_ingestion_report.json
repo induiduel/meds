@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-10-05T19:19:19.259678+00:00",
+  "source_root": "/home/indu/Masaüstü/MedSoru Project/meds_database_v3_export",
+  "source_tag": "aistudio_curated_20261005",
+  "immutable_existing_database": true,
+  "files": {
+    "questions_curated.jsonl": {
+      "exists": true,
+      "bytes": 3697781
+    },
+    "lecture_notes_master_curated.jsonl": {
+      "exists": true,
+      "bytes": 100438
+    },
+    "medical_thesaurus_expanded.json": {
+      "exists": true,
+      "bytes": 400401
+    },
+    "audit_rejected_questions.jsonl": {
+      "exists": true,
+      "bytes": 19092
+    }
+  },
+  "accepted": {
+    "questions": 2659,
+    "lecture_notes": 413,
+    "thesaurus_terms": 892
+  },
+  "excluded": {
+    "untagged_questions": 0,
+    "untagged_lecture_notes": 0,
+    "rejected_questions": 76,
+    "rejected_with_tag": 0,
+    "parse_errors": 0
+  },
+  "exclusion_reasons": {
+    "untagged": "Zorunlu Gemini provenance tag yok.",
+    "rejected": "Audit tarafından reddedilmiş; uygulamaya dahil edilmez.",
+    "parse_error": "Geçerli JSON/JSONL kaydı değil."
+  },
+  "checks": {
+    "question_ids_unique": true,
+    "question_tags_present": true,
+    "lecture_tags_present": true,
+    "thesaurus_file_readable": true
+  },
+  "fingerprint": "b2f5bda22f8e9519a2191fc70c9df2f13ee81839322a59e6439830c88e084fc7",
+  "parse_errors": []
+}
