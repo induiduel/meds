@@ -21,7 +21,8 @@ import {
   X,
   Check,
   FileText,
-  History
+  History,
+  Trash2
 } from 'lucide-react';
 import { ApiService } from '../services/api';
 import { PageHeader } from './ui/PageHeader';
@@ -42,21 +43,66 @@ interface LocalAiChatViewProps {
   onNavigateToQuestion?: (questionId: string) => void;
 }
 
+const DEFAULT_WELCOME_MESSAGE: ChatMessage = {
+  id: 'msg-welcome',
+  role: 'assistant',
+  content: `Merhaba! Ben **MedSoru AI Tıp Asistanı**.\n\nBilgisayarındaki yerel donanımı (**RTX 4060 GPU / Ollama**) ve ücretsiz internet yapay zekalarını kullanarak sana kurul sınavlarında rehberlik etmek için buradayım.\n\nNeler yapabilirim:\n- 🔍 **"Soru Dedektifi"**: Sınavda çıkmış ama tam hatırlayamadığın bir sorunun aklında kalan kısımlarını (hasta yaşı, ilaç, semptom) anlat, veri tabanımızdan bulup çıkarayım.\n- 💡 **"Anahtardan Soru Türetme"**: Aklındaki tıbbi terimleri ver, hangi kurul ve ders olduğunu söyleyip 5 şıklı orijinal kurul soruları yazayım.\n- 🧬 **"Mekanizma & Patofizyoloji"**: Anlamadığın tıbbi konuları ve şıkların elenme nedenlerini Robbins/Guyton derinliğinde açıklayayım.`,
+  timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }),
+  providerUsed: 'MedSoru AI Motoru'
+};
+
 export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
   currentUser,
   onNavigateToQuestion
 }) => {
+  const userStorageKey = `medsoru_ai_chat_history_${currentUser?.uid || currentUser?.email || 'guest_user'}`;
+
   const [messages, setMessages] = useState<ChatMessage[]>(() => {
-    return [
-      {
-        id: 'msg-welcome',
-        role: 'assistant',
-        content: `Merhaba! Ben **MedSoru AI Tıp Asistanı**.\n\nBilgisayarındaki yerel donanımı (**RTX 4060 GPU / Ollama**) ve ücretsiz internet yapay zekalarını kullanarak sana kurul sınavlarında rehberlik etmek için buradayım.\n\nNeler yapabilirim:\n- 🔍 **"Soru Dedektifi"**: Sınavda çıkmış ama tam hatırlayamadığın bir sorunun aklında kalan kısımlarını (hasta yaşı, ilaç, semptom) anlat, veri tabanımızdan bulup çıkarayım.\n- 💡 **"Anahtardan Soru Türetme"**: Aklındaki tıbbi terimleri ver, hangi kurul ve ders olduğunu söyleyip 5 şıklı orijinal kurul soruları yazayım.\n- 🧬 **"Mekanizma & Patofizyoloji"**: Anlamadığın tıbbi konuları ve şıkların elenme nedenlerini Robbins/Guyton derinliğinde açıklayayım.`,
-        timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }),
-        providerUsed: 'MedSoru AI Motoru'
+    try {
+      const saved = localStorage.getItem(userStorageKey);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          return parsed;
+        }
       }
-    ];
+    } catch (_) {}
+    return [DEFAULT_WELCOME_MESSAGE];
   });
+
+  // Kullanıcı değiştiğinde veya oturum açıldığında o kullanıcının geçmişini yükle
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(userStorageKey);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setMessages(parsed);
+          return;
+        }
+      }
+    } catch (_) {}
+    setMessages([DEFAULT_WELCOME_MESSAGE]);
+  }, [userStorageKey]);
+
+  // Her mesaj değişiminde kullanıcının geçmişini kaydet
+  useEffect(() => {
+    try {
+      if (messages.length > 0) {
+        localStorage.setItem(userStorageKey, JSON.stringify(messages));
+      }
+    } catch (_) {}
+  }, [messages, userStorageKey]);
+
+  const handleClearHistory = () => {
+    if (window.confirm('Sohbet geçmişinizi temizlemek istediğinize emin misiniz?')) {
+      const fresh = [{ ...DEFAULT_WELCOME_MESSAGE, timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }) }];
+      setMessages(fresh);
+      try {
+        localStorage.removeItem(userStorageKey);
+      } catch (_) {}
+    }
+  };
 
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -435,6 +481,19 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
               </span>
             )}
           </button>
+
+          {/* Clear History Button */}
+          {messages.length > 1 && (
+            <button
+              type="button"
+              onClick={handleClearHistory}
+              className="h-8 px-2.5 rounded-xl border border-line bg-white hover:bg-rose-50 hover:text-rose-700 hover:border-rose-200 text-ink-3 text-[12px] font-medium flex items-center gap-1.5 transition-colors cursor-pointer"
+              title="Sohbet geçmişini sıfırla"
+            >
+              <Trash2 className="w-3.5 h-3.5 text-rose-500" />
+              <span>Temizle</span>
+            </button>
+          )}
         </div>
 
         {/* Mode Selector */}

@@ -143,6 +143,7 @@ export default function App() {
     }
   });
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [pastExamsSearchQuery, setPastExamsSearchQuery] = useState<string>('');
   const [filterMyQuestionsOnly, setFilterMyQuestionsOnly] = useState<boolean>(false);
 
   // Modals state
@@ -1329,6 +1330,7 @@ export default function App() {
           <Suspense fallback={<ViewFallback />}>
             <PastExamsView
               currentUser={currentUser}
+              initialSearchQuery={pastExamsSearchQuery}
               onOpenNote={(noteId, pageNumber) => {
                 setActiveTab('notes');
               }}
@@ -1429,8 +1431,8 @@ export default function App() {
             <LocalAiChatView
               currentUser={currentUser}
               onNavigateToQuestion={(qId) => {
+                setPastExamsSearchQuery(qId);
                 setActiveTab('past_exams');
-                setSearchQuery(qId);
               }}
             />
           </Suspense>

@@ -71,6 +71,7 @@ export const isDeepSeekQuestion = (q: any): boolean => {
 interface PastExamsViewProps {
   currentUser: AppUser | null;
   lectureNotes?: LectureNote[];
+  initialSearchQuery?: string;
   onOpenNote?: (noteId: string, pageNumber?: number) => void;
   onUpdateQuestionReference?: (questionId: string, match: QuestionLectureMatch) => Promise<void>;
   onNavigateToLearn?: (deckId?: string, slideNumber?: number) => void;
@@ -79,6 +80,7 @@ interface PastExamsViewProps {
 export const PastExamsView: React.FC<PastExamsViewProps> = ({
   currentUser,
   lectureNotes = [],
+  initialSearchQuery = '',
   onOpenNote,
   onUpdateQuestionReference,
   onNavigateToLearn,
@@ -86,7 +88,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [questions, setQuestions] = useState<QuestionItem[]>([]);
   const [internalNotes, setInternalNotes] = useState<LectureNote[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(initialSearchQuery);
   
   // Filter States
   const [selectedCommittee, setSelectedCommittee] = useState<string>('all');
@@ -236,6 +238,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       setIsGeneratingSimilar(null);
     }
   };
+
+  useEffect(() => {
+    if (initialSearchQuery) {
+      setSearchQuery(initialSearchQuery);
+      setCurrentPage(1);
+    }
+  }, [initialSearchQuery]);
 
   useEffect(() => {
     loadPastQuestions();
@@ -498,6 +507,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       // 2. Search
       if (searchQuery.trim()) {
         const query = searchQuery.toLowerCase();
+        const inId = (q.id || '').toLowerCase().includes(query);
         const inTopic = (q.topic || '').toLowerCase().includes(query);
         const inDiscipline = (q.discipline || '').toLowerCase().includes(query);
         const inStem = (q.reconstruction?.stem || '').toLowerCase().includes(query);
@@ -507,7 +517,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         const inYear = (q.examYear || '').toLowerCase().includes(query);
         const inFile = (q.sourceFile || '').toLowerCase().includes(query);
 
-        if (!inTopic && !inDiscipline && !inStem && !inFragments && !inOptions && !inNumber && !inYear && !inFile) {
+        if (!inId && !inTopic && !inDiscipline && !inStem && !inFragments && !inOptions && !inNumber && !inYear && !inFile) {
           return false;
         }
       }
