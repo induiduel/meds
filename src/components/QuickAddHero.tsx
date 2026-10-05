@@ -34,6 +34,7 @@ import { findRealtimeMatchingDrafts, RealtimeMatchItem, DraftCompatibilityResult
 import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
 import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
+import { LoveNote } from './home/LoveNote';
 
 // Benzerlik puanı kademesine göre renk ve stil haritası
 export const getScoreTier = (score: number) => {
@@ -768,6 +769,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   if (isV3) {
     return (
       <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8">
+        <LoveNote />
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-2">
           <label className="relative inline-flex items-center text-[13px] text-ink-3">
             <span className="sr-only">Kurul seç</span>
