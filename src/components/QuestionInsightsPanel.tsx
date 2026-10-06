@@ -52,7 +52,9 @@ export function QuestionInsightsPanel({ questionId }: { questionId: string }) {
   const f5 = data.faz5;
   const f65 = data.faz6_5;
   const k = (data.mufredat || data.faz8)?.kazanimlar?.[0]; // mufredat: Faz 9 birleşik (Faz 8 öncelikli)
-  const terms: string[] = Array.from(new Set<string>([...(f65?.terimler || []), ...(f5?.terimler || [])])).slice(0, 12);
+  const ents: { ad: string }[] = data.varliklar || [];
+  // Faz 13 kimlikli varlıklar önce; sonra Faz 6.5 / Faz 5 terimleri
+  const terms: string[] = Array.from(new Set<string>([...ents.map((e) => e.ad), ...(f65?.terimler || []), ...(f5?.terimler || [])])).slice(0, 14);
   const synonyms = Object.entries((f65?.esanlamlilar || {}) as Record<string, string[]>).filter(([, v]) => v?.length);
   if (!k && !terms.length && !synonyms.length) return null;
   const baslik = k ? [k.ders, k.konu].filter(Boolean).join(' · ') : 'Terimler';
