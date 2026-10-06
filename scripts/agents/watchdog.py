@@ -170,10 +170,28 @@ def check_supabase_health():
             pass
 
 def check_dashboard_alive():
-    """Dashboard izleme sunucusunun (8085) çökmesini engeller"""
-    res = subprocess.run(["pgrep", "-f", "dashboard_server.py"], capture_output=True, text=True)
-    if not res.stdout.strip():
-        log("UYARI: dashboard_server.py (Port 8085) durmuş! Otomatik yeniden başlatılıyor...")
+    """Dashboard izleme sunucusunun (8085) çökmesini veya asılı kalmasını engeller"""
+    dash_alive = False
+    try:
+        r = requests.get("http://127.0.0.1:8085", timeout=3)
+        if r.status_code in [200, 301, 302, 404]:
+            dash_alive = True
+    except Exception:
+        dash_alive = False
+
+    if not dash_alive:
+        # Asılı kalmış süreç varsa temizle
+        res = subprocess.run(["pgrep", "-f", "dashboard_server.py"], capture_output=True, text=True)
+        if res.stdout.strip():
+            log("UYARI: dashboard_server.py (Port 8085) yanıt vermiyor/kilitlenmiş! Sonlandırılıyor...")
+            for pid in res.stdout.strip().split():
+                try:
+                    os.kill(int(pid), 9)
+                except Exception:
+                    pass
+            time.sleep(1)
+
+        log("UYARI: dashboard_server.py (Port 8085) başlatılıyor...")
         venv_py = ROOT / ".venv-ocr" / "bin" / "python"
         py_bin = str(venv_py) if venv_py.exists() else sys.executable
         dash_script = ROOT / "dashboard_server.py"
@@ -182,6 +200,7 @@ def check_dashboard_alive():
         cmd = [py_bin, str(dash_script)]
         subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
         log("dashboard_server.py yeniden başlatıldı ✓")
+
 
 def check_web_server_alive():
     """Web sunucusunun (server.ts / Port 3000) canlı kalmasını sağlar.

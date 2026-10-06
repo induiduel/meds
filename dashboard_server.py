@@ -1219,9 +1219,10 @@ HTML_PAGE = """<!DOCTYPE html>
                 updatePhase45Page();
             } else if (tabId === 'master') {
                 updateMasterStatus();
+                updateMasterPhases();
             }
 
-            // Otomatik polling: Görüntülenen sayfa her 5 saniyede bir güncellensin
+            // Otomatik polling: Görüntülenen sayfa her 2-5 saniyede bir güncellensin
             if (tabIntervalId) clearInterval(tabIntervalId);
             const refreshTime = (tabId === 'overview' || tabId === 'stages' || tabId === 'master') ? 2000 : 5000;
             tabIntervalId = setInterval(() => {
@@ -1229,7 +1230,10 @@ HTML_PAGE = """<!DOCTYPE html>
                 else if (currentTab === 'stages') updateStagesPage();
                 else if (currentTab === 'rejected') updateRejectedPage();
                 else if (currentTab === 'phase45') updatePhase45Page();
-                else if (currentTab === 'master') updateMasterStatus();
+                else if (currentTab === 'master') {
+                    updateMasterStatus();
+                    updateMasterPhases();
+                }
             }, refreshTime);
         }
 
@@ -2722,7 +2726,10 @@ def get_stats():
     chk_cnt = len(list((t3 / "chunks").glob("*.jsonl"))) if (t3 / "chunks").exists() else 0
     vec_cnt = len(list((t3 / "vectors").glob("*.npy"))) if (t3 / "vectors").exists() else 0
     q_file = t3 / "questions.jsonl"
-    q_processed_cnt = sum(1 for _ in open(q_file, "r", encoding="utf-8")) if q_file.exists() else 0
+    q_rq_file = t3 / "review_queue.jsonl"
+    q_verified_cnt = sum(1 for _ in open(q_file, "r", encoding="utf-8")) if q_file.exists() else 0
+    q_rq_cnt = sum(1 for _ in open(q_rq_file, "r", encoding="utf-8")) if q_rq_file.exists() else 0
+    q_processed_cnt = q_verified_cnt + q_rq_cnt
 
     # temp3'te işlenmiş olan ders slayt yollarını tara
     t3_processed_paths = set()
