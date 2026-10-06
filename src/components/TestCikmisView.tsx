@@ -285,7 +285,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 </span>
               {liveStatus?.isRunning && (
                 <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">
-                  ● {liveStatus.activeMode === 'cloud' ? 'Google Gemini 3.8 Flash (Bulut)' : 'Gemma 3 (Yerel RTX 4060 GPU)'} Çalışıyor
+                  ● {liveStatus.activeMode === 'cloud' ? 'Google Gemini Flash-Lite / Flash (En Düşük Maliyet)' : 'Gemma 3 (Yerel RTX 4060 GPU)'} Çalışıyor
                 </span>
               )}
             </div>

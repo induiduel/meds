@@ -121,9 +121,16 @@ def load_curriculum_summary() -> str:
         return ""
 
 
-def call_gemini_json(prompt_text: str) -> dict | None:
-    """Doğrudan HTTP REST API ile Gemini Flash modelini çağırır."""
-    models = ["gemini-3.8-flash", "gemini-2.5-flash", "gemini-2.0-flash"]
+def call_gemini_json(prompt_text: str) -> tuple[dict | None, str]:
+    """Doğrudan HTTP REST API ile en düşük maliyetli ve aktif Gemini Flash-Lite/Flash modellerini çağırır."""
+    # En düşük maliyetli, yüksek kotalı ve aktif resmi modeller sırasıyla denenir
+    models = [
+        "gemini-flash-lite-latest",
+        "gemini-3.5-flash-lite",
+        "gemini-3.1-flash-lite",
+        "gemini-3.8-flash",
+        "gemini-flash-latest",
+    ]
     payload = {
         "contents": [{"parts": [{"text": prompt_text}]}],
         "generationConfig": {
@@ -159,29 +166,32 @@ def call_gemini_json(prompt_text: str) -> dict | None:
                         if lines and lines[-1].startswith("```"):
                             lines = lines[:-1]
                         text = "\n".join(lines).strip()
-                    return json.loads(text)
+                    return json.loads(text), model
             except urllib.error.HTTPError as e:
                 err_text = e.read().decode("utf-8", errors="ignore")
                 if e.code == 429:
-                    logging.warning(f"Gemini {model} rate limit (429), diğer anahtar veya model deneniyor...")
-                    time.sleep(2)
+                    logging.warning(f"Gemini {model} rate limit (429), sonraki düşük maliyetli modele geçiliyor...")
+                    time.sleep(1)
                     continue
-                logging.error(f"Gemini HTTP {e.code} hatası: {err_text[:200]}")
+                elif e.code in (404, 503):
+                    logging.warning(f"Gemini {model} kullanılamıyor ({e.code}), alternatif model deneniyor...")
+                    continue
+                logging.error(f"Gemini HTTP {e.code} hatası ({model}): {err_text[:200]}")
             except Exception as e:
                 logging.warning(f"Gemini çağrı hatası ({model}): {e}")
                 continue
 
-    # Bulut anahtarları yetersizse yerel model fallback
+    # Bulut anahtarları veya kotaları yetersizse yerel sıfır maliyetli model fallback
     if lib:
         try:
-            logging.info("Gemini kotası nedeniyle yerel model fallback devreye giriyor...")
+            logging.info("Gemini kotaları nedeniyle yerel model fallback devreye giriyor (Gemma 3)...")
             res = lib.chat(lib.MODEL_TEXT, prompt_text, as_json=True, timeout=120)
             if isinstance(res, dict):
-                return res
+                return res, f"local-{lib.MODEL_TEXT}"
         except Exception as e:
             logging.error(f"Yerel model fallback hatası: {e}")
 
-    return None
+    return None, "none"
 
 
 def canonical_options(question: dict) -> dict[str, str]:
@@ -341,7 +351,7 @@ def main() -> int:
                 continue
 
             logging.info(f"Soru #{s_id} Google Gemini ile inceleniyor...")
-            ai_sonuc = ai_ile_soruyu_duzelt(src, curriculum_summary)
+            ai_sonuc, model_used = ai_ile_soruyu_duzelt(src, curriculum_summary)
 
             if not ai_sonuc or not isinstance(ai_sonuc, dict):
                 logging.warning(f"Soru #{s_id} için AI yanıtı alınamadı.")
@@ -358,7 +368,7 @@ def main() -> int:
                 "question_id": s_id,
                 "source_hash": hashlib.sha256(json.dumps(src, ensure_ascii=False, sort_keys=True).encode()).hexdigest(),
                 "processed_at": datetime.utcnow().isoformat() + "Z",
-                "model": "gemini-2.5-flash",
+                "model": model_used or "gemini-flash-lite-latest",
                 "source": src,
                 "proposal": ai_sonuc,
                 "support_ratio": ratio,
