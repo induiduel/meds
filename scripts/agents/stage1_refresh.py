@@ -47,7 +47,9 @@ def log(msg: str):
 
 def run(cmd: list[str], timeout: int, cwd: Path = ROOT) -> tuple[int, str]:
     try:
-        r = subprocess.run(cmd, cwd=str(cwd), capture_output=True, text=True, timeout=timeout)
+        # docling yerleşim modelleri CPU'da: GPU'da Ollama ile aynı anda CUDA işi Xid 79'a yol açtı
+        env = {**os.environ, "CUDA_VISIBLE_DEVICES": ""}
+        r = subprocess.run(cmd, cwd=str(cwd), capture_output=True, text=True, timeout=timeout, env=env)
         return r.returncode, (r.stdout + r.stderr)[-1500:]
     except subprocess.TimeoutExpired:
         return 124, "zaman aşımı"
