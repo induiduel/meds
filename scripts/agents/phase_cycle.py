@@ -28,6 +28,9 @@ TEMP = Path(os.environ.get("MEDS_TEMP_DIR") or PROJECT / "meds_temp")
 STATE = TEMP / "state" / "phase_cycle_state.json"
 LOG = TEMP / "logs" / "phase_cycle.log"
 LOCK = TEMP / "state" / "phase_cycle.lock"
+# Elle başlatma kuyruğu: panel (localhost:8085) adım anahtarlarını buraya ekler; zincir sıradaki adımdan önce bunları çalıştırır
+QUEUE = TEMP / "state" / "phase_queue.json"
+QUEUE_LOCK = TEMP / "state" / "phase_queue.lock"
 PY = str(ROOT / ".venv-ocr" / "bin" / "python") if (ROOT / ".venv-ocr" / "bin" / "python").exists() else sys.executable
 AI = ROOT / "scripts" / "advanced_ai"
 AGENTS = ROOT / "scripts" / "agents"
@@ -89,6 +92,39 @@ def wait_cool():
         time.sleep(30)
         waited += 30
         t = gpu_temp()
+
+
+def pop_queue() -> str | None:
+    """Kuyruğun başındaki geçerli adımı al (kilitli okuma-yazma; panel aynı kilidi kullanır)."""
+    if not QUEUE.exists():
+        return None
+    with open(QUEUE_LOCK, "w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        try:
+            q = json.load(open(QUEUE, encoding="utf-8"))
+        except Exception:
+            q = []
+        key = None
+        while q and key is None:
+            k = q.pop(0)
+            key = k if any(k == s[0] for s in STEPS) else None
+        tmp = QUEUE.with_suffix(".tmp")
+        json.dump(q, open(tmp, "w", encoding="utf-8"))
+        tmp.replace(QUEUE)
+    return key
+
+
+def run_queued(state: dict):
+    """Elle istenen adımlar: tur sırasını bozmaz, tamamlanan listesine eklenmez."""
+    while (key := pop_queue()):
+        _, name, cmd, timeout = next(s for s in STEPS if s[0] == key)
+        log(f"elle istendi: {name}")
+        state["aktif"] = key
+        save_state(state)
+        state.setdefault("adimlar", {})[key] = run_step(key, name, cmd, timeout)
+        state["adimlar"][key]["elle"] = True
+        state["aktif"] = None
+        save_state(state)
 
 
 def save_state(state: dict):
@@ -185,6 +221,7 @@ def main():
                 log("phase_cycle.py değişti → yeni kodla yeniden yükleniyor (kaldığı adımdan sürer)")
                 lock.close()
                 os.execv(sys.executable, [sys.executable] + sys.argv)
+            run_queued(state)
             if not Path(cmd[1]).exists():
                 log(f"atlandı (betik yok): {cmd[1]}")
                 continue
@@ -201,7 +238,10 @@ def main():
         log(f"===== Tur {state['tur']} bitti; {PAUSE_BETWEEN_CYCLES // 60} dk sonra Faz 5'ten yeniden =====")
         if once:
             return 0
-        time.sleep(PAUSE_BETWEEN_CYCLES)
+        end = time.time() + PAUSE_BETWEEN_CYCLES
+        while time.time() < end:          # tur arasında da elle istenen adımlar beklemeden çalışır
+            run_queued(state)
+            time.sleep(30)
 
 
 if __name__ == "__main__":

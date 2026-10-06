@@ -574,8 +574,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       }
 
       // 6. DeepSeek Filter
-      if (deepseekFilter === 'deepseek_only' && !isDeepSeekQuestion(q)) return false;
-      if (deepseekFilter === 'standard_only' && isDeepSeekQuestion(q)) return false;
       if (sourceFilter === 'gemini_v3' && !isGeminiV3Question(q)) return false;
       if (sourceFilter === 'existing' && isGeminiV3Question(q)) return false;
 
@@ -732,30 +730,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             </button>
           )}
         </label>
-        {/* Quick DeepSeek Filter Toggle Button */}
-        <button
-          type="button"
-          onClick={() => {
-            setDeepseekFilter((prev) => (prev === 'deepseek_only' ? 'all' : 'deepseek_only'));
-            setCurrentPage(1);
-          }}
-          className={`h-11 px-3 sm:px-3.5 rounded-xl border text-[13.5px] font-semibold flex items-center gap-1.5 cursor-pointer shrink-0 transition-all ${
-            deepseekFilter === 'deepseek_only'
-              ? 'bg-accent text-white border-indigo-600 shadow-sm ring-2 ring-indigo-200'
-              : 'bg-white border-line text-ink hover:border-indigo-300 hover:text-indigo-600'
-          }`}
-          title="Yalnızca DeepSeek doğrulanmış soruları filtrele"
-        >
-          <Sparkles className={`w-4 h-4 ${deepseekFilter === 'deepseek_only' ? 'text-amber-300 fill-amber-300' : 'text-indigo-500'}`} />
-          <span className="hidden xs:inline">DeepSeek</span>
-          <span
-            className={`text-[11.5px] px-1.5 py-0.5 rounded-full font-mono ${
-              deepseekFilter === 'deepseek_only' ? 'bg-white/20 text-white' : 'bg-indigo-50 text-indigo-700 font-semibold'
-            }`}
-          >
-            {tabCounts.deepseekCount.toLocaleString('tr-TR')}
-          </span>
-        </button>
 
         <button
           type="button"
@@ -910,22 +884,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     ] as const
                   ).map(([id, label]) => (
                     <button key={id} type="button" role="radio" aria-checked={explanationFilter === id} onClick={() => { setExplanationFilter(id as any); setCurrentPage(1); }} className={explanationFilter === id ? 'is-on' : ''}>
-                      {label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <div className="ms-f-row">
-                <span className="ms-f-label">Doğrulama</span>
-                <div className="ms-f-seg" role="radiogroup" aria-label="Doğrulama">
-                  {(
-                    [
-                      ['all', 'Tümü'],
-                      ['deepseek_only', `Doğrulanmış ${tabCounts.deepseekCount}`],
-                      ['standard_only', 'Standart'],
-                    ] as const
-                  ).map(([id, label]) => (
-                    <button key={id} type="button" role="radio" aria-checked={deepseekFilter === id} onClick={() => { setDeepseekFilter(id as any); setCurrentPage(1); }} className={deepseekFilter === id ? 'is-on' : ''}>
                       {label}
                     </button>
                   ))}
@@ -1124,16 +1082,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   </span>
                   {q.isAmbiguous ? (
                     <span className="h-[22px] px-2 rounded-full bg-warn-soft text-warn text-[12px] font-semibold inline-flex items-center shrink-0">Eksik</span>
-                  ) : isDeepSeekQuestion(q) ? (
-                    <span className="inline-flex h-[24px] px-2.5 rounded-full bg-canvas border border-indigo-200 text-indigo-700 text-[11.5px] font-bold items-center gap-1.5 shrink-0 shadow-2xs">
-                      <Sparkles className="w-3.5 h-3.5 text-indigo-600 fill-indigo-100" />
-                      <span>DeepSeek Doğrulanmış</span>
-                      {q.verification?.qualityScore && (
-                        <span className="text-[11px] px-1.5 py-0.2 rounded bg-indigo-100 text-indigo-800 font-mono">
-                          %{q.verification.qualityScore}
-                        </span>
-                      )}
-                    </span>
                   ) : q.reconstruction && (q as any).answerStatus !== 'dogrulanmadi' ? (
                     <span className="hidden sm:inline-flex h-[22px] px-2 rounded-full bg-ok-soft text-ok text-[12px] font-semibold items-center shrink-0">Doğrulandı</span>
                   ) : null}
@@ -1254,7 +1202,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                             {isDeepSeekQuestion(q) ? (
                               <>
                                 <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-                                <span className="text-indigo-900 font-semibold">DeepSeek Tıbbi Analizi & Çözümü</span>
+                                <span className="text-indigo-900 font-semibold">Açıklama & Çözüm Analizi</span>
                               </>
                             ) : (
                               <span>Açıklama & Çözüm Analizi</span>
@@ -1274,7 +1222,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                                 <div className="flex items-center justify-between">
                                   <span className={`font-bold flex items-center gap-1.5 ${isDeepSeekQuestion(q) ? 'text-indigo-900' : 'text-amber-900'}`}>
                                     <BookOpen className={`w-3.5 h-3.5 ${isDeepSeekQuestion(q) ? 'text-indigo-700' : 'text-amber-700'}`} />
-                                    {isDeepSeekQuestion(q) ? 'Ders Notu & Slayt Kanıtı (DeepSeek Doğrulaması):' : 'Ders Notu & Amfi Kanıtı:'}
+                                    {isDeepSeekQuestion(q) ? 'Ders Notu & Slayt Kanıtı:' : 'Ders Notu & Amfi Kanıtı:'}
                                   </span>
                                   {q.verification?.evidenceStatus && (
                                     <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800">
