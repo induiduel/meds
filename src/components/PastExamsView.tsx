@@ -61,6 +61,7 @@ import {
 
 export const isDeepSeekQuestion = (q: any): boolean => {
   if (!q) return false;
+  if (q.answerStatus === 'dogrulanmadi') return false;
   if (q.deepseekEnriched) return true;
   if (q.reconstruction?.reconstructionQuality === 'deepseek_verified') return true;
   if (Array.isArray(q.tags) && (q.tags.includes('deepseek_verified') || q.tags.includes('deepseek') || q.tags.includes('dogrulanmis_soru'))) return true;
@@ -1062,7 +1063,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             const explanation = q.reconstruction?.explanation || q.explanation;
             const commentsCount = (q as any).comments?.length || 0;
             const expOpen = !!openExplanations[q.id];
-            const meta = [q.discipline || 'Tıp', (formatCommitteeName(q.committeeId) || '').split(':')[0], q.examYear].filter(Boolean).join(' · ');
+            const meta = ((q as any).committeeUncertain
+              ? [(q as any).contentCommitteeId ? (formatCommitteeName((q as any).contentCommitteeId) || '').split(':')[0] : 'Kurul belirsiz', q.examYear]
+              : [q.discipline || 'Tıp', (formatCommitteeName((q as any).contentCommitteeId || q.committeeId) || '').split(':')[0], q.examYear]
+            ).filter(Boolean).join(' · ');
             const setCardMode = (m: 'redacted' | 'raw' | 'split') => setCardViewOverrides((prev) => ({ ...prev, [q.id]: m }));
 
             const actions: ActionItem[] = [
@@ -1130,7 +1134,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         </span>
                       )}
                     </span>
-                  ) : q.reconstruction ? (
+                  ) : q.reconstruction && (q as any).answerStatus !== 'dogrulanmadi' ? (
                     <span className="hidden sm:inline-flex h-[22px] px-2 rounded-full bg-ok-soft text-ok text-[12px] font-semibold items-center shrink-0">Doğrulandı</span>
                   ) : null}
                   {q.reports && q.reports.length > 0 && (

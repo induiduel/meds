@@ -52,7 +52,7 @@ def build_terminology() -> dict:
             code, names = line.rstrip("\n").split("\t", 1)
             for nm in names.split(" | "):
                 f = P8.fold(nm)
-                if len(f) >= 5 and f not in term:
+                if (len(f) >= 8 or " " in f) and f not in term:   # tek kelimelik kısa ad ("düşük" = abortus) genel kelimeyle çakışır
                     term[f] = {"kavram": f"icd:{code}", "ad": nm, "kimlik": {"icd10": [code]}, "kaynak": "icd10_who"}
     ev = V2 / "evidence_thesaurus" / "kanitli_sozluk.json"
     if ev.exists():
@@ -63,7 +63,9 @@ def build_terminology() -> dict:
             if not syns:
                 continue
             cid = (term.get(base) or {}).get("kavram") or f"sozluk:{base}"
-            for f in [base] + [P8.fold(s) for s in syns]:
+            # yalnız kısaltma/varyant biçimleri; taban kelime ("periferal") tek başına terim sayılmaz
+            forms = [P8.fold(s) for s in syns] + ([base] if base in term or " " in base else [])
+            for f in forms:
                 if len(f.replace(" ", "")) >= 3 and f not in term:
                     term[f] = {"kavram": cid, "ad": e.get("turkce") or k, "kimlik": {}, "kaynak": "kanitli_sozluk"}
     return term
@@ -94,7 +96,7 @@ def main():
             done.add(r["soru_id"])
     st = collections.Counter()
     mode = "w" if full else "a"
-    with open(outp, mode, encoding="utf-8") as f:
+    with open(outp, mode, encoding="utf-8") as fo:
         for n, q in enumerate(pq):
             qid = str(q.get("id"))
             if qid in done:
@@ -134,10 +136,10 @@ def main():
                     st["gliner_kimliksiz"] += 1
             st["soru"] += 1
             st["kimlikli_varlik"] += sum(1 for v in ents.values() if v.get("kavram"))
-            f.write(json.dumps({"soru_id": qid, "varliklar": list(ents.values())}, ensure_ascii=False) + "\n")
+            fo.write(json.dumps({"soru_id": qid, "varliklar": list(ents.values())}, ensure_ascii=False) + "\n")
             if st["soru"] % 250 == 0:
                 print(f"[{time.strftime('%H:%M:%S')}] [faz13] {st['soru']} soru", flush=True)
-                f.flush()
+                fo.flush()
     rep = {"zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), "terminoloji_ifade": len(term), **dict(st),
            "model": GLINER_MODEL, "sure_sn": round(time.time() - t0)}
     json.dump(rep, open(OUT / "rapor.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)

@@ -119,6 +119,11 @@ def main():
                            "kanitli_sozluk": "kısaltma ~%96, yazım varyantı ~%93",
                            "kavramlar": "Wikidata birebir ad eşleşmesi + filtre, ~26/30"}},
               open(tmp / "manifest.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    # başka betiklerin bu klasöre yazdığı dosyalar (ör. curriculum_resolve → soru_mufredat.json) kaybolmasın
+    if OUT.exists():
+        for extra in OUT.iterdir():
+            if extra.is_file() and not (tmp / extra.name).exists():
+                shutil.copy2(extra, tmp / extra.name)
     old = OUT.with_name("curriculum_links.prev")
     shutil.rmtree(old, ignore_errors=True)
     if OUT.exists():
