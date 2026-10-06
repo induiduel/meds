@@ -53,6 +53,7 @@ STEPS = [
     ("veritabani", "Veritabanına güvenli yükleme (derived/curriculum_links)", [PY, str(AI / "publish_to_database.py")], 900),
     ("yayin", "Site · Faz 5/6/6.5/8 analizlerini yayınla", [PY, str(AI / "export_phase_insights.py")], 900),
     ("asama1", "Aşama 1 · İndirme ve hatalı OCR yenileme", [PY, str(AGENTS / "stage1_refresh.py")], 6 * 3600),
+    ("faz12", "Faz 12 · Ders notu temizleme (glif/OCR çöpü/üst-alt bilgi)", [PY, str(AI / "phase12_clean_notes.py")], 1800),
     ("hakem", "Hakem kuyruğu (alıntı doğrulamalı konu/slayt denetimi)", [PY, str(AI / "referee_queue.py"), "--max", "200"], 2 * 3600),
 ]
 
@@ -115,6 +116,9 @@ def run_step(key: str, name: str, cmd: list[str], timeout: int) -> dict:
     return {"rc": rc, "sure_sn": sec, "bitis": time.strftime("%Y-%m-%dT%H:%M:%S")}
 
 
+_START_MTIME = Path(__file__).stat().st_mtime
+
+
 def main():
     LOCK.parent.mkdir(parents=True, exist_ok=True)
     lock = open(LOCK, "w")
@@ -140,6 +144,11 @@ def main():
         for key, name, cmd, timeout in STEPS:
             if key in done:
                 continue
+            # Betik değiştiyse (yeni adım/ayar) adım aralarında kendini yeniden yükle; durum dosyası korunur
+            if Path(__file__).stat().st_mtime > _START_MTIME:
+                log("phase_cycle.py değişti → yeni kodla yeniden yükleniyor (kaldığı adımdan sürer)")
+                lock.close()
+                os.execv(sys.executable, [sys.executable] + sys.argv)
             if not Path(cmd[1]).exists():
                 log(f"atlandı (betik yok): {cmd[1]}")
                 continue

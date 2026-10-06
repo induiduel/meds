@@ -47,7 +47,7 @@ CYCLE_STATE_FILE = TEMP_DIR / "state" / "phase_cycle_state.json"
 CYCLE_LOG_FILE = TEMP_DIR / "logs" / "phase_cycle.log"
 STAGE1_REPORT_FILE = TEMP_DIR / "state" / "stage1_refresh_report.json"
 SERVICES = ["meds-web", "meds-pipeline", "meds-phases", "meds-dashboard", "meds-downloads-watcher"]
-CYCLE_NAMES = {"yayin": "Site yayını", "veritabani": "Veritabanı yüklemesi", "faz5": "Faz 5", "faz6": "Faz 6", "faz6_dogrulama": "Faz 6 doğrulama", "faz6_5": "Faz 6.5", "faz7_5": "Faz 7.5", "faz8": "Faz 8", "sozluk": "Kanıtlı sözlük", "faz9": "Faz 9", "faz10": "Faz 10", "faz11": "Faz 11", "hakem": "Hakem kuyruğu",
+CYCLE_NAMES = {"yayin": "Site yayını", "veritabani": "Veritabanı yüklemesi", "faz5": "Faz 5", "faz6": "Faz 6", "faz6_dogrulama": "Faz 6 doğrulama", "faz6_5": "Faz 6.5", "faz7_5": "Faz 7.5", "faz8": "Faz 8", "sozluk": "Kanıtlı sözlük", "faz9": "Faz 9", "faz10": "Faz 10", "faz11": "Faz 11", "faz12": "Faz 12", "hakem": "Hakem kuyruğu",
                "asama1": "Aşama 1"}
 
 
@@ -241,6 +241,7 @@ PHASE_ROWS = [
     ("veritabani", "Veritabanı yüklemesi", "kayıt", lambda: read_json_safe(DB_DIR / "derived" / "curriculum_links" / "manifest.json").get("sayilar", {}).get("soru_slayt", 0)),
     ("yayin", "Site yayını", "soru", lambda: _json_len(DB_DIR / "derived" / "phase_insights" / "insights.json", "items")),
     ("asama1", "Aşama 1 İndirme & OCR", "kaynak", lambda: len(read_json_safe(STAGE1_REPORT_FILE).get("yeniden_ocr") or [])),
+    ("faz12", "Faz 12 Ders notu temizleme", "chunk", lambda: read_json_safe(DB_DIR / "derived" / "clean_notes" / "rapor.json").get("degisen", 0)),
     ("hakem", "Hakem kuyruğu", "karar", lambda: _lines(TEMP_DIR / "hakem" / "kararlar.jsonl")),
 ]
 

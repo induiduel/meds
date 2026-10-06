@@ -28,6 +28,9 @@ import tempfile
 import time
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import lib  # noqa: E402  (OCR çöp tespiti, kalite puanı, hafif model) — eksikti: "name 'lib' is not defined"
+
 PROJECT_ROOT = Path(__file__).resolve().parents[3]  # .../MedSoru Project
 DEFAULT_DOWNLOADS = Path(os.environ.get("MEDS_DOWNLOADS_DIR") or PROJECT_ROOT / "meds_downloads")
 DEFAULT_TEMP1 = Path(os.environ.get("MEDS_TEMP_DIR") or PROJECT_ROOT / "meds_temp") / "temp1"

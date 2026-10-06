@@ -51,6 +51,7 @@ import {
   DEEPSEEK_DATA_DIR
 } from './src/services/deepseekDataService.ts';
 import { getQuestionInsights, getInsightsSummary } from './src/services/phaseInsightsService.ts';
+import { applyCleanOverlay } from './src/services/lectureCleanOverlay.ts';
 
 import {
   getAllTranscriptionsMeta,
@@ -4868,7 +4869,8 @@ app.get('/api/lecture-notes/:id', (req, res) => {
     if (!note) {
       return res.status(404).json({ error: 'Ders notu bulunamadı' });
     }
-    res.json(note);
+    // Faz 12 temizlik katmanı (özgün dosya değişmez); ?raw=1 ile özgün metin
+    res.json(req.query.raw === '1' ? note : applyCleanOverlay(note));
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notu alınamadı: ' + err.message });
   }
