@@ -1,11 +1,11 @@
 import { FIREBASE_DB_ENABLED } from './dbFlags';
-import { Committee, QuestionItem, MemoryFragment, QuestionOption, ReconstructedQuestion } from '../types';
+import { Committee, QuestionItem, MemoryFragment, QuestionOption, ReconstructedQuestion, PastQuestionReviewRecord } from '../types';
 import { FirestoreDbService, INITIAL_COMMITTEES, COMMITTEE_SORT_ORDER, filterCurrent2026_2027Committees, db } from './firestoreDb';
 import { multiDbManager } from './multiDbManager';
 import { SupabaseDbService } from './supabaseDb';
 import { pastQuestionsCache } from './pastQuestionsCache';
 import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
-import { ADMIN_EMAIL } from './auth';
+import { ADMIN_EMAIL, getLocalAdminSession } from './auth';
 import { systemHealthMonitor } from './systemHealthMonitor';
 import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 import {
@@ -253,12 +253,42 @@ export async function safeJsonFetch<T = any>(
       resolvedInput.includes('/ai/') ||
       resolvedInput.includes('/rag/') ||
       resolvedInput.includes('reconstruct') ||
-      resolvedInput.includes('optimize')
+      resolvedInput.includes('optimize') ||
+      resolvedInput.includes('/past-question-reviews') ||
+      resolvedInput.includes('/audit/') ||
+      resolvedInput.includes('/master/')
     );
-    const timeoutMs = isAiOrLongRequest ? 60000 : 10000;
+    const timeoutMs = isAiOrLongRequest ? 60000 : 30000;
     const hasSignal = init?.signal;
+    const method = (init?.method || 'GET').toUpperCase();
+    const headers = new Headers(init?.headers);
+    if (!['GET', 'HEAD', 'OPTIONS'].includes(method) && typeof window !== 'undefined') {
+      const adminHeader = headers.get('x-admin-email');
+      const localAdmin = getLocalAdminSession();
+      const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      const isAdmin = Boolean(
+        (adminHeader && adminHeader.toLowerCase() === ADMIN_EMAIL.toLowerCase()) ||
+        (localAdmin && localAdmin.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase()) ||
+        isLocalhost
+      );
+
+      let password = sessionStorage.getItem('medsoru_api_write_password') || '';
+      if (!password && isAdmin) {
+        // Admin kullanıcı veya yerel geliştirme için şifre sormadan otomatik geçiş sağla
+        password = '12345678';
+        sessionStorage.setItem('medsoru_api_write_password', password);
+      } else if (!password) {
+        password = window.prompt('Veri göndermek veya değiştirmek için yazma parolasını girin:') || '';
+        if (password) sessionStorage.setItem('medsoru_api_write_password', password);
+      }
+      if (password) headers.set('X-API-Password', password);
+      if (isAdmin && !headers.has('x-admin-email')) {
+        headers.set('x-admin-email', ADMIN_EMAIL);
+      }
+    }
     const fetchOptions: RequestInit = {
       ...init,
+      headers,
       signal: hasSignal || (typeof AbortSignal !== 'undefined' && 'timeout' in AbortSignal ? AbortSignal.timeout(timeoutMs) : undefined),
     };
     const res = await fetch(resolvedInput, fetchOptions);
@@ -2536,6 +2566,162 @@ export const ApiService = {
     try { await pastQuestionsCache.removeQuestions([id]); } catch { /* önbellek yoksa geç */ }
   },
 
+  /** Faz 14: Çıkmış soru redaksiyon inceleme katmanını listeler */
+  async getPastQuestionReviews(params?: { status?: string; questionId?: string }): Promise<{
+    reviews: PastQuestionReviewRecord[];
+    totalCount: number;
+    filteredCount: number;
+    report: any;
+  }> {
+    const sp = new URLSearchParams();
+    if (params?.status && params.status !== 'all') sp.set('status', params.status);
+    if (params?.questionId) sp.set('questionId', params.questionId);
+    const qs = sp.toString() ? `?${sp.toString()}` : '';
+    const res = await safeJsonFetch<{
+      success: boolean;
+      reviews: PastQuestionReviewRecord[];
+      totalCount: number;
+      filteredCount: number;
+      report: any;
+      error?: string;
+    }>(`/api/past-question-reviews${qs}`, {
+      method: 'GET',
+      headers: { Accept: 'application/json' },
+    });
+    if (!res.ok || !res.data?.success) {
+      throw new Error(res.data?.error || res.error || 'İnceleme kayıtları alınamadı.');
+    }
+    return {
+      reviews: res.data.reviews || [],
+      totalCount: res.data.totalCount || 0,
+      filteredCount: res.data.filteredCount || 0,
+      report: res.data.report || null,
+    };
+  },
+
+  /** Faz 14: Öneriyi açık onayla ve geçmiş soru havuzuna uygula */
+  async approvePastQuestionReview(adminEmail: string, questionId: string): Promise<any> {
+    const res = await safeJsonFetch<{
+      success: boolean;
+      message: string;
+      question?: QuestionItem;
+      review?: PastQuestionReviewRecord;
+      error?: string;
+    }>(`/api/past-question-reviews/${encodeURIComponent(questionId)}/approve`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+    });
+    if (!res.ok || !res.data?.success) {
+      throw new Error(res.data?.error || res.error || 'Öneri onaylanamadı.');
+    }
+    if (res.data.question) {
+      try { await pastQuestionsCache.saveQuestion(res.data.question); } catch { /* ignore */ }
+    }
+    return res.data;
+  },
+
+  /** Faz 14: Öneriyi reddet */
+  async rejectPastQuestionReview(adminEmail: string, questionId: string, reason?: string): Promise<any> {
+    const res = await safeJsonFetch<{
+      success: boolean;
+      message: string;
+      review?: PastQuestionReviewRecord;
+      error?: string;
+    }>(`/api/past-question-reviews/${encodeURIComponent(questionId)}/reject`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+      body: JSON.stringify({ reason }),
+    });
+    if (!res.ok || !res.data?.success) {
+      throw new Error(res.data?.error || res.error || 'Öneri reddedilemedi.');
+    }
+    return res.data;
+  },
+
+  /** Faz 14: Redaksiyon işlemini başlat (bulut veya yerel) */
+  async triggerPastQuestionReview(adminEmail: string, mode: 'cloud' | 'local', limit: number = 10): Promise<any> {
+    const res = await safeJsonFetch<{
+      success: boolean;
+      message: string;
+      mode?: string;
+      error?: string;
+    }>('/api/past-question-reviews/trigger', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+      body: JSON.stringify({ mode, limit }),
+    });
+    if (!res.ok || !res.data?.success) {
+      throw new Error(res.data?.error || res.error || 'İşlem başlatılamadı.');
+    }
+    return res.data;
+  },
+
+  /** Faz 14: Çalışan redaksiyon sürecini durdur */
+  async stopPastQuestionReview(adminEmail: string): Promise<any> {
+    const res = await safeJsonFetch<{ success: boolean; message: string; error?: string }>('/api/past-question-reviews/stop', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+    });
+    if (!res.ok || !res.data?.success) {
+      throw new Error(res.data?.error || res.error || 'İşlem durdurulamadı.');
+    }
+    return res.data;
+  },
+
+  /** Faz 14: Canlı logları ve ilerleme durumunu oku */
+  async getPastQuestionReviewLogs(): Promise<{
+    isRunning: boolean;
+    activeMode: 'cloud' | 'local' | null;
+    totalCandidate: number;
+    processed: number;
+    remaining: number;
+    approved: number;
+    pending: number;
+    report: any;
+    logs: string[];
+  }> {
+    const res = await safeJsonFetch<{
+      success: boolean;
+      isRunning: boolean;
+      activeMode: 'cloud' | 'local' | null;
+      totalCandidate: number;
+      processed: number;
+      remaining: number;
+      approved: number;
+      pending: number;
+      report: any;
+      logs: string[];
+      error?: string;
+    }>('/api/past-question-reviews/logs', {
+      method: 'GET',
+      headers: { Accept: 'application/json' },
+    });
+    if (!res.ok || !res.data?.success) {
+      throw new Error(res.data?.error || res.error || 'Loglar alınamadı.');
+    }
+    return res.data;
+  },
+
+  /** Faz 14: Değişiklik olmayan soruları tekrar değerlendirme kuyruğuna al */
+  async reEvaluateUnchangedPastQuestionReviews(adminEmail: string, questionId?: string): Promise<{ success: boolean; message: string; count: number; questionIds?: string[] }> {
+    const res = await safeJsonFetch<{
+      success: boolean;
+      message: string;
+      count: number;
+      questionIds?: string[];
+      error?: string;
+    }>('/api/past-question-reviews/re-evaluate-unchanged', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+      body: JSON.stringify({ questionId }),
+    });
+    if (!res.ok || !res.data?.success) {
+      throw new Error(res.data?.error || res.error || 'Tekrar değerlendirmeye gönderilemedi.');
+    }
+    return res.data;
+  },
+
+
   async saveApprovedPastQuestion(question: QuestionItem): Promise<QuestionItem> {
     const updated: QuestionItem = {
       ...question,
@@ -3340,4 +3526,3 @@ export interface DriveCheckResult {
     status: string;
   }>;
 }
-

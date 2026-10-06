@@ -2,7 +2,7 @@
 """
 Faz zinciri orkestratörü (meds-phases servisi olarak sürekli çalışır).
 
-Bir tur:  Faz 5 → Faz 6 → Faz 6.5 → Faz 7.5 → Faz 8 → kanıtlı sözlük → Faz 9 → Faz 10 → Faz 11 → site yayını → Aşama 1 yenileme → (bekle) → yeni tur
+Bir tur: Faz 5 → Faz 6 → Faz 6.5 → Faz 7.5 → Faz 8 → kanıtlı sözlük → Faz 9 → Faz 10 → Faz 11 → Faz 14 → site yayını → Aşama 1 yenileme → (bekle) → yeni tur
   * Fazlar SIRAYLA çalışır; aynı anda yalnızca biri GPU/AI kullanır.
   * Her adımdan önce GPU soğuması beklenir (varsayılan < 90 °C).
   * Her adımın zaman aşımı vardır; hata zinciri durdurmaz, rapora yazılır ve sıradakine geçilir.
@@ -61,6 +61,7 @@ STEPS = [
     ("asama1", "Aşama 1 · İndirme ve hatalı OCR yenileme", [PY, str(AGENTS / "stage1_refresh.py")], 6 * 3600),
     ("faz12", "Faz 12 · Ders notu temizleme (glif/OCR çöpü/üst-alt bilgi)", [PY, str(AI / "phase12_clean_notes.py")], 1800),
     ("faz13", "Faz 13 · Tıbbi varlıklar (GLiNER + terminoloji)", [PY, str(AI / "phase13_entities.py")], 4 * 3600),
+    ("faz14", "Faz 14 · Çıkmış soru redaksiyon önerileri (yerel model, inceleme kuyruğu)", [PY, str(AI / "phase14_past_question_editor.py"), "--limit", "10"], 2 * 3600),
     ("ortak", "Ortak veri deposu + RAG parçaları", [PY, str(AI / "build_unified_store.py")], 1800),
     ("hakem", "Hakem kuyruğu (alıntı doğrulamalı konu/slayt denetimi)", [PY, str(AI / "referee_queue.py"), "--max", "200"], 2 * 3600),
 ]

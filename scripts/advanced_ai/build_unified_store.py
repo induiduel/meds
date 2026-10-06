@@ -40,6 +40,7 @@ DATASETS = [
     ("soru_karantinasi", DB / "derived" / "quarantine", "dizin", "Bozuk/birleşik soru karantinası ve onarımlar", "kural", "quarantine_questions.py"),
     ("yeniden_bolunmus_sorular", DB / "derived" / "resplit", "dizin", "Sınav çıktısının kuralla yeniden bölünmesi", "orta", "resplit_exam_printout.py"),
     ("tibbi_varliklar", DB / "derived" / "entities", "dizin", "Faz 13 GLiNER + terminoloji varlıkları", "orta", "phase13_entities.py"),
+    ("faz14_soru_redaksiyonlari", V2 / "phase14_past_question_editor", "dizin", "Faz 14 çıkmış soru redaksiyon önerileri (inceleme gerekli)", "orta", "phase14_past_question_editor.py"),
     ("kavram_kimlikleri", V2 / "concept_ids", "dizin", "Faz 10 Wikidata/UMLS kavramları", "yuksek", "phase10_concept_ids.py"),
     ("kanitli_sozluk", V2 / "evidence_thesaurus", "dizin", "Ders materyalinden kısaltma/yazım varyantı sözlüğü", "yuksek", "build_evidence_thesaurus.py"),
     ("icd10_referans", V2 / "reference", "dizin", "WHO ICD-10 (Wikidata P494, kısmi)", "referans", "wikidata"),

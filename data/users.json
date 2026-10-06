@@ -1,12 +1,50 @@
 [
   {
+    "uid": "std-12e920v-muxawzlv",
+    "email": "deneme@gmail.com",
+    "displayName": "Deneme",
+    "studentNumber": "11111111111",
+    "role": "student",
+    "createdAt": "2026-10-06T23:19:59.541Z",
+    "lastLoginAt": "2026-10-06T23:19:59.541Z",
+    "welcomeEmailSent": false,
+    "photoURL": null,
+    "congratsSentCommittees": []
+  },
+  {
+    "uid": "std-gcdo0r-muvm9owv",
+    "email": "drarzuturk@gmail.com",
+    "displayName": "Dr.HouseGül",
+    "studentNumber": "2411101098",
+    "role": "student",
+    "createdAt": "2026-10-05T19:02:15.682Z",
+    "lastLoginAt": "2026-10-05T19:02:48.892Z",
+    "welcomeEmailSent": false,
+    "photoURL": null,
+    "congratsSentCommittees": [
+      "donem3-kurul1"
+    ]
+  },
+  {
+    "uid": "std-wuqv1o-muvjqpmd",
+    "email": "kdjdjfj@gmail.com",
+    "displayName": "Tahir Kahrama",
+    "studentNumber": "265686464",
+    "role": "student",
+    "createdAt": "2026-10-05T17:51:30.982Z",
+    "lastLoginAt": "2026-10-05T17:51:30.982Z",
+    "welcomeEmailSent": false,
+    "photoURL": null,
+    "congratsSentCommittees": []
+  },
+  {
     "uid": "admin-nofrostlife",
     "email": "nofrostlife@gmail.com",
     "displayName": "Dr House",
     "studentNumber": null,
     "role": "admin",
     "createdAt": "2026-09-01T08:00:00.000Z",
-    "lastLoginAt": "2026-10-05T04:27:42.599Z",
+    "lastLoginAt": "2026-10-06T18:30:28.089Z",
     "welcomeEmailSent": true,
     "welcomeEmailSentAt": "2026-10-01T23:01:46.683Z",
     "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocLnT25rFo2jkinP_P83HzS-POGLA-9Z4R6qLUJyv-yPULOzcACznQ=s96-c",

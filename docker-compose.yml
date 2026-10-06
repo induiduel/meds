@@ -1,0 +1,68 @@
+version: '3.8'
+
+# ==============================================================================
+# MedSoru AI: Uçtan Uca Otonom Docker Ekosistemi
+# ------------------------------------------------------------------------------
+# Hiçbir manuel komuta gerek kalmadan:
+# 'docker compose up -d' komutu verildiğinde:
+# 1. Ollama GPU servisi (bge-m3, gemma3, qwen modelleriyle) ayağa kalkar.
+# 2. MedSoru AI Ajan ve Otomasyon Orkestratörü başlar.
+# 3. Watchdog denetmeni arka planda Faz 5 ve Faz 6 motorlarını otonom yürütür.
+# 4. Web Arayüzü (Port 3000) ve Analiz Kokpiti (Port 8085) anında yayına geçer.
+# ==============================================================================
+
+services:
+  # 1. Yerel GPU AI Modelleri (Ollama)
+  ollama:
+    image: ollama/ollama:latest
+    container_name: meds-ollama
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    environment:
+      OLLAMA_KEEP_ALIVE: 24h
+      OLLAMA_FLASH_ATTENTION: "0"
+      OLLAMA_KV_CACHE_TYPE: f16
+      OLLAMA_NUM_PARALLEL: "2"
+      OLLAMA_MAX_LOADED_MODELS: "1"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  # 2. MedSoru Otonom Ajanlar, Web Kokpiti & Otomasyonlar
+  meds-ai-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: meds-ai-engine
+    restart: unless-stopped
+    depends_on:
+      - ollama
+    ports:
+      - "3000:3000"
+      - "8085:8085"
+    volumes:
+      - .:/app
+      - ../meds_temp:/app/meds_temp
+      - ../meds_database:/app/meds_database
+      - ../meds_database_v2:/app/meds_database_v2
+    environment:
+      - NODE_ENV=production
+      - OLLAMA_HOST=http://ollama:11434
+      - LOCAL_SUPABASE_URL=http://supabase-envoy:8000
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  ollama_models:

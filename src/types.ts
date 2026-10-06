@@ -229,6 +229,43 @@ export interface AdminNotification {
   isRead: boolean;
 }
 
+export interface PastQuestionReviewRecord {
+  question_id: string;
+  source_hash: string;
+  processed_at: string;
+  model: string;
+  source: {
+    id: string;
+    soru_koku: string;
+    secenekler: Record<string, string>;
+    dogru_secenek: string;
+    aciklama: string;
+    kurul_adi: string;
+    ders_adi: string;
+    konu_adi: string;
+  };
+  proposal: {
+    soru_koku?: string;
+    secenekler?: Record<string, string>;
+    dogru_secenek?: string;
+    aciklama?: string;
+    kurul_adi?: string;
+    ders_adi?: string;
+    konu_adi?: string;
+    degisen_alanlar?: string[];
+    degisiklik_ozeti?: string;
+    review_required?: boolean;
+    [key: string]: any;
+  };
+  support_ratio: number;
+  status: 'review_required' | 'approved' | 'rejected' | 'unchanged' | string;
+  approved_at?: string;
+  approved_by?: string;
+  rejected_at?: string;
+  rejected_by?: string;
+  reject_reason?: string;
+}
+
 export interface Committee {
   id: string;
   name: string;

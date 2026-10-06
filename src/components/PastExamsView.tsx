@@ -52,6 +52,7 @@ import { AdvancedQuestionUpgradeModal } from './AdvancedQuestionUpgradeModal';
 import { renderHighlightedSnippet } from './QuestionCard';
 import { learnMatcher, QuestionLearnMatch } from '../services/learnMatcher';
 import { FlashcardComponent } from './learn/InteractiveDeckView';
+import { pathFor, linkClick } from '../router';
 import {
   OFFICIAL_CURRICULUM_COMMITTEES,
   DONEM3_CURRICULUM_DISCIPLINES,
@@ -695,17 +696,27 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             : []),
         ]}
         actions={
-          <button
-            type="button"
-            onClick={handleManualSync}
-            disabled={cacheStatus.isSyncing}
-            aria-label="Güncellemeleri denetle"
-            title={`Cihazda ${questions.length.toLocaleString('tr-TR')} soru · güncellemeleri denetle`}
-            className="h-10 px-3 rounded-[10px] border border-line bg-white text-ink-2 inline-flex items-center gap-2 text-[13px] font-semibold cursor-pointer hover:border-line-2 disabled:opacity-60 shrink-0"
-          >
-            <RefreshCw className={`w-4 h-4 ${cacheStatus.isSyncing ? 'animate-spin' : ''}`} />
-            <span className="hidden sm:inline">Güncelle</span>
-          </button>
+          <div className="flex items-center gap-2">
+            <a
+              href={pathFor('test_cikmis')}
+              className="h-10 px-3.5 rounded-[10px] bg-accent-soft text-accent hover:bg-accent hover:text-white border border-accent/20 inline-flex items-center gap-2 text-[13px] font-semibold cursor-pointer transition-colors shrink-0"
+              title="Faz 14 yerel model redaksiyon inceleme katmanını ve test edilen verileri görüntüle"
+            >
+              <Sparkles className="w-4 h-4" />
+              <span>Test Edilen Veriler (Faz 14)</span>
+            </a>
+            <button
+              type="button"
+              onClick={handleManualSync}
+              disabled={cacheStatus.isSyncing}
+              aria-label="Güncellemeleri denetle"
+              title={`Cihazda ${questions.length.toLocaleString('tr-TR')} soru · güncellemeleri denetle`}
+              className="h-10 px-3 rounded-[10px] border border-line bg-white text-ink-2 inline-flex items-center gap-2 text-[13px] font-semibold cursor-pointer hover:border-line-2 disabled:opacity-60 shrink-0"
+            >
+              <RefreshCw className={`w-4 h-4 ${cacheStatus.isSyncing ? 'animate-spin' : ''}`} />
+              <span className="hidden sm:inline">Güncelle</span>
+            </button>
+          </div>
         }
       />
 

@@ -5,6 +5,12 @@ hatırladıkları parçaları girer ("ACE inhibitörü kuru öksürük sorusu ç
 kendi ders materyallerinde (slayt, PDF, özet, amfi kaydı) ve çıkmış sorularda ilgili yeri bulur,
 soruyu bu kaynaklara dayanarak yeniden kurar.
 
+## Açık veri API'si
+
+Giriş gerektirmeyen, salt okunur veri API'si `/v1/` altında sunulur. Kurullar, güncel ve
+çıkmış sorular, ders notları, özetler, öğrenme bağlantıları ve arama için tüm yollar, filtreler
+ve örnekler [API kataloğunda](docs/API_KATALOG.md) yer alır.
+
 ## Nasıl çalışır
 
 ```

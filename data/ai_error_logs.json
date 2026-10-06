@@ -1,0 +1,68 @@
+[
+  {
+    "id": "err-log-1791179654222-3qwl",
+    "timestamp": "2026-10-05T05:54:14.222Z",
+    "provider": "muse-spark",
+    "model": "muse-spark-1.3-contributor-free",
+    "promptSnippet": "\n\n<VERİTABANI_EŞLEŞEN_SORULAR>\n[Soru 1] (Çocuk Sağlığı ve Hastalıkları · GİS Konjenital Anomalileri – Duplikasyon Kistlerinin En Sık Yerleşimi · 2021-2026)\nSoru: Çocuklarda görülen gastrointestinal sistem konjenital anomalileri ile ilgili aşağıdaki i",
+    "errorMessage": "Muse Spark Hatası (401): {\"error\":{\"code\":\"invalid_api_key\",\"message\":\"Unauthorized\",\"param\":null,\"type\":\"authentication_error\"}}",
+    "errorStack": "Error: Muse Spark Hatası (401): {\"error\":{\"code\":\"invalid_api_key\",\"message\":\"Unauthorized\",\"param\":null,\"type\":\"authentication_error\"}}\n    at callMuseSpark (file:///home/indu/Masa%C3%BCst%C3%BC/MedSoru%20Project/meds/src/services/aiProvider.ts:1:14833)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async generateResilientMedicalAi (file:///home/indu/Masa%C3%BCst%C3%BC/MedSoru%20Project/meds/src/services/aiProvider.ts:1:17325)\n    at async <anonymous> ",
+    "isTimeout": false,
+    "status": "unresolved"
+  },
+  {
+    "id": "err-log-1791179482377-a6f1",
+    "timestamp": "2026-10-05T05:51:22.377Z",
+    "provider": "ollama",
+    "model": "qwen3:1.7b-q8_0",
+    "promptSnippet": "\n\n<AMFİ_DERS_NOTU_KANITLARI>\n[Slayt 1] (Tıbbi Patoloji - Tıbbi Patoloji Kurul Sorusu (2023-2024)): [ÇIKMIŞ SINAV SORUSU]\nDers / Branş: Tıbbi Patoloji\nKurul: donem3-kurul1\nSınav Yılı: 2023-2024\nKonu: Tıbbi Patoloji Kurul Sorusu\nSoru Kökü:\nAlerjik rini",
+    "errorMessage": "Ollama Hatası (500): {\"error\":\"llama-server process has terminated: exit status 1: cudaMalloc failed: out of memory\\nalloc_tensor_range: failed to allocate CUDA0 buffer of size 939524096\\nllama_init_from_model: failed to initialize the context: failed to allocate buffer for kv cache\"}",
+    "errorStack": "Error: Ollama Hatası (500): {\"error\":\"llama-server process has terminated: exit status 1: cudaMalloc failed: out of memory\\nalloc_tensor_range: failed to allocate CUDA0 buffer of size 939524096\\nllama_init_from_model: failed to initialize the context: failed to allocate buffer for kv cache\"}\n    at callLocalOllama (file:///home/indu/Masa%C3%BCst%C3%BC/MedSoru%20Project/meds/src/services/aiProvider.ts:1:5683)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    a",
+    "isTimeout": false,
+    "status": "unresolved"
+  },
+  {
+    "id": "err-log-1791176812353-7iwj",
+    "timestamp": "2026-10-05T05:06:52.353Z",
+    "provider": "ollama",
+    "model": "qwen3:1.7b-q8_0",
+    "promptSnippet": "\n\nÖğrencinin Talebi/Sorusu: \"merhaba\"",
+    "errorMessage": "Ollama Hatası (500): {\"error\":\"llama-server process has terminated: exit status 1: cudaMalloc failed: out of memory\\nalloc_tensor_range: failed to allocate CUDA0 buffer of size 939524096\\nllama_init_from_model: failed to initialize the context: failed to allocate buffer for kv cache\"}",
+    "errorStack": "Error: Ollama Hatası (500): {\"error\":\"llama-server process has terminated: exit status 1: cudaMalloc failed: out of memory\\nalloc_tensor_range: failed to allocate CUDA0 buffer of size 939524096\\nllama_init_from_model: failed to initialize the context: failed to allocate buffer for kv cache\"}\n    at callLocalOllama (file:///home/indu/Masa%C3%BCst%C3%BC/MedSoru%20Project/meds/src/services/aiProvider.ts:1:5683)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    a",
+    "isTimeout": false,
+    "status": "unresolved"
+  },
+  {
+    "id": "err-log-1791176570467-pu44",
+    "timestamp": "2026-10-05T05:02:50.467Z",
+    "provider": "muse-spark",
+    "model": "muse-spark-1.3-contributor-free",
+    "promptSnippet": "\n\nÖğrencinin Talebi/Sorusu: \"merhaba\"",
+    "errorMessage": "Muse Spark Hatası (401): {\"error\":{\"code\":\"invalid_api_key\",\"message\":\"Unauthorized\",\"param\":null,\"type\":\"authentication_error\"}}",
+    "errorStack": "Error: Muse Spark Hatası (401): {\"error\":{\"code\":\"invalid_api_key\",\"message\":\"Unauthorized\",\"param\":null,\"type\":\"authentication_error\"}}\n    at callMuseSpark (file:///home/indu/Masa%C3%BCst%C3%BC/MedSoru%20Project/meds/src/services/aiProvider.ts:1:14833)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async generateResilientMedicalAi (file:///home/indu/Masa%C3%BCst%C3%BC/MedSoru%20Project/meds/src/services/aiProvider.ts:1:17325)\n    at async <anonymous> ",
+    "isTimeout": false,
+    "status": "unresolved"
+  },
+  {
+    "id": "err-log-1791176526098-7tf9",
+    "timestamp": "2026-10-05T05:02:06.098Z",
+    "provider": "ollama",
+    "model": "medgemma1.5:4b",
+    "promptSnippet": "\n\nÖğrencinin Talebi/Sorusu: \"merhaba\"",
+    "errorMessage": "Ollama Hatası (500): {\"error\":\"llama-server startup failed after projector CPU offload retry: llama-server process has terminated: exit status 1: cudaMalloc failed: out of memory\\nalloc_tensor_range: failed to allocate CUDA0 buffer of size 167772160\\nllama_init_from_model: failed to initialize the context: failed to allocate buffer for kv cache\"}",
+    "errorStack": "Error: Ollama Hatası (500): {\"error\":\"llama-server startup failed after projector CPU offload retry: llama-server process has terminated: exit status 1: cudaMalloc failed: out of memory\\nalloc_tensor_range: failed to allocate CUDA0 buffer of size 167772160\\nllama_init_from_model: failed to initialize the context: failed to allocate buffer for kv cache\"}\n    at callLocalOllama (file:///home/indu/Masa%C3%BCst%C3%BC/MedSoru%20Project/meds/src/services/aiProvider.ts:1:5683)\n    at process.processTic",
+    "isTimeout": false,
+    "status": "unresolved"
+  },
+  {
+    "id": "err-log-1791176400070-dmhw",
+    "timestamp": "2026-10-05T05:00:00.070Z",
+    "provider": "ollama",
+    "model": "qwen3:1.7b-q8_0",
+    "promptSnippet": "\n\n<VERİTABANI_EŞLEŞEN_SORULAR>\n[Soru 1] (Anatomi · Merkezi Sinir Sistemi ve Nöroanatomi · Kategorisiz)\nSoru: \nŞıklar: E) coli 5 B.cereus Shigatoksin üreten E) coli 27 İç Hastalıkları Aşağıdakilerden hangisi kardiyak Sıra No Cevap Trikuspit yetmezliği",
+    "errorMessage": "Ollama Hatası (500): {\"error\":\"llama-server process has terminated: exit status 1: cudaMalloc failed: out of memory\\nalloc_tensor_range: failed to allocate CUDA0 buffer of size 939524096\\nllama_init_from_model: failed to initialize the context: failed to allocate buffer for kv cache\"}",
+    "errorStack": "Error: Ollama Hatası (500): {\"error\":\"llama-server process has terminated: exit status 1: cudaMalloc failed: out of memory\\nalloc_tensor_range: failed to allocate CUDA0 buffer of size 939524096\\nllama_init_from_model: failed to initialize the context: failed to allocate buffer for kv cache\"}\n    at callLocalOllama (file:///home/indu/Masa%C3%BCst%C3%BC/MedSoru%20Project/meds/src/services/aiProvider.ts:1:5683)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    a",
+    "isTimeout": false,
+    "status": "unresolved"
+  }
+]

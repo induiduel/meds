@@ -130,6 +130,7 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 | **Faz 6.5 (Aşama 6.5)** | `thesaurus_anchor_phase6_5.py` | Tıbbi Terimler Sözlüğü (Thesaurus) & Co-occurrence Kanıt Motoru | `pipeline_runner` + `watchdog` |
 | **Faz 7 (Aşama 7)** | `microagent_storyteller_phase7.py` | 5 Adımlı Mikro-Ajans Soru Modelleme & Hikaye Motoru | `pipeline_runner` + `watchdog` |
 | **Faz 7.5 (Aşama 7.5)** | `reconstruct_slides_phase7_5.py` | Amfi Ders Slaytlarını Resmi Müfredat Standartlarında Düzenleme | `pipeline_runner` + `watchdog` |
+| **Faz 14** | `phase14_past_question_editor.py` | Çıkmış sorular için yerel modelle OCR/biçim redaksiyon önerileri; her öneri inceleme kuyruğuna yazılır | `phase_cycle` + `gpu_guard` |
 
 ---
 
@@ -186,6 +187,12 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 - **Müfredat Sınırları ve İzolasyon:**
   - Yapay zeka ve orkestratörler müfredat dışına çıkamaz; slayt düzenleme ve soru eşleştirme işlemlerinde yalnızca bu resmi ders başlıkları referans alınır.
   - Slaytlar resmi konu başlığı, öğrenim hedefleri (tanım, patogenez, ayırıcı tanı, tedavi), anahtar kavramlar ve kancalanan çıkmış sorularla zenginleştirilmiş ders kartlarına dönüştürülüp `meds_database_v2/slide_reconstructed/` dizinine JSON olarak yazılır.
+
+### Faz 14: Çıkmış Soru Redaksiyon Önerileri (`phase14_past_question_editor.py` & `phase14_cloud_question_editor.py`)
+- Çıkmış soru arşivini yerel (`gemma3:4b`) ve bulut AI (`gemini-2.5/3.8-flash`) ile partiler halinde inceler.
+- **Yazım, Harf Eksikliği ve Fazlalığı Tespiti:** Soru kökündeki ve şıklardaki açık OCR bozulmaları, fazla/tekrar eden harfler, eksik heceler, harf/rakam karışıklıkları (0->O, 1->I) ve tıbbi Latince/Türkçe terminoloji imla hataları hassas olarak düzeltilir.
+- Kaynak soru, cevap anahtarı ve açıklama doğrudan ezilmez. Sonuçlar kaynak özeti, öneri, kaynak metinle token desteği (`support_ratio`) ve `review_required` durumu ile `meds_database_v2/phase14_past_question_editor/reviews.jsonl` dosyasına yazılır.
+- Kaynak desteği `%80` altındaki veya modelin belirsiz bulduğu her öneri insan incelemesi gerektirir. Tıbbi bilgi uydurulmaz.
 
 ---
 
@@ -287,6 +294,5 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 ### 10.2. Web Otomasyon Kokpiti & Dashboard Entegrasyonu
 - **Merkezi Runner:** [`scripts/automation-runner.mjs`](file:///home/indu/Masaüstü/MedSoru%20Project/meds/scripts/automation-runner.mjs) içine `phase5-multi-ai-consensus` ve `phase6-deep-metadata-generator` boru hatları eklenmiştir; web UI üzerinden tek tıkla tetiklenebilir ve logları izlenebilir.
 - **Canlı Telemetri:** [`dashboard_server.py`](file:///home/indu/Masaüstü/MedSoru%20Project/meds/dashboard_server.py) Port 8085 üzerinde Aşama 6 (Konsensüs) ve Aşama 7 (Hiper-Metadata) ilerlemelerini, günlük kota durumunu ve karantinaya alınan soruları canlı olarak gösterir.
-
 
 

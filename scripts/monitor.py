@@ -47,7 +47,7 @@ CYCLE_STATE_FILE = TEMP_DIR / "state" / "phase_cycle_state.json"
 CYCLE_LOG_FILE = TEMP_DIR / "logs" / "phase_cycle.log"
 STAGE1_REPORT_FILE = TEMP_DIR / "state" / "stage1_refresh_report.json"
 SERVICES = ["meds-web", "meds-pipeline", "meds-phases", "meds-dashboard", "meds-downloads-watcher"]
-CYCLE_NAMES = {"yayin": "Site yayını", "yeniden_bolme": "Yeniden bölme", "karantina": "Karantina", "veritabani": "Veritabanı yüklemesi", "faz5": "Faz 5", "faz6": "Faz 6", "faz6_dogrulama": "Faz 6 doğrulama", "faz6_5": "Faz 6.5", "faz7_5": "Faz 7.5", "faz8": "Faz 8", "sozluk": "Kanıtlı sözlük", "faz9": "Faz 9", "faz10": "Faz 10", "faz11": "Faz 11", "faz12": "Faz 12", "ogren": "Öğren bağlantıları", "faz13": "Faz 13", "ortak": "Ortak depo", "hakem": "Hakem kuyruğu",
+CYCLE_NAMES = {"yayin": "Site yayını", "yeniden_bolme": "Yeniden bölme", "karantina": "Karantina", "veritabani": "Veritabanı yüklemesi", "faz5": "Faz 5", "faz6": "Faz 6", "faz6_dogrulama": "Faz 6 doğrulama", "faz6_5": "Faz 6.5", "faz7_5": "Faz 7.5", "faz8": "Faz 8", "sozluk": "Kanıtlı sözlük", "faz9": "Faz 9", "faz10": "Faz 10", "faz11": "Faz 11", "faz12": "Faz 12", "ogren": "Öğren bağlantıları", "faz13": "Faz 13", "faz14": "Faz 14", "ortak": "Ortak depo", "hakem": "Hakem kuyruğu",
                "asama1": "Aşama 1"}
 
 
@@ -208,6 +208,10 @@ def get_process_statuses():
                 found["active_stage"] = "Faz 8 (Kazanım Ağacı)"
             elif "stage1_refresh.py" in cmd or "read_document.py" in cmd:
                 found["active_stage"] = "Aşama 1 (İndirme / OCR)"
+            elif "phase14_cloud_question_editor.py" in cmd:
+                found["active_stage"] = "Faz 14 (Bulut Redaksiyon)"
+            elif "phase14_past_question_editor.py" in cmd:
+                found["active_stage"] = "Faz 14 (Yerel Redaksiyon)"
             elif "phase7_question_metadata_v2.py" in cmd:
                 found["active_stage"] = "Faz 7 v2 (elle, metadata)"
     except Exception:
@@ -245,6 +249,7 @@ PHASE_ROWS = [
     ("faz12", "Faz 12 Ders notu temizleme", "chunk", lambda: read_json_safe(DB_DIR / "derived" / "clean_notes" / "rapor.json").get("degisen", 0)),
     ("ogren", "Öğren bağlantıları", "soru", lambda: _json_len(DB_DIR / "derived" / "learn_links.json", "baglantilar")),
     ("faz13", "Faz 13 Tıbbi varlıklar", "soru", lambda: _lines(DB_DIR / "derived" / "entities" / "soru_varliklar.jsonl")),
+    ("faz14", "Faz 14 Çıkmış soru redaksiyonu", "soru", lambda: _lines(DB_V2_DIR / "phase14_past_question_editor" / "reviews.jsonl")),
     ("ortak", "Ortak RAG deposu", "parça", lambda: _lines(DB_DIR / "ortak" / "rag" / "ders_materyali.jsonl")),
     ("hakem", "Hakem kuyruğu", "karar", lambda: _lines(TEMP_DIR / "hakem" / "kararlar.jsonl")),
 ]

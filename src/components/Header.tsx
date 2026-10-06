@@ -460,6 +460,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <>
                   <MenuLabel>Yönetim</MenuLabel>
                   <MenuItem icon={ShieldCheck} label="Yönetim" onClick={openAdmin} />
+                  <MenuItem icon={Activity} label="Test Edilen Çıkmışlar (Faz 14)" onClick={() => setActiveTab('test_cikmis')} />
                   {onOpenDiagnostics && <MenuItem icon={Activity} label="Veritabanı & limit takibi" onClick={onOpenDiagnostics} />}
                   {onOpenPastExamModal && <MenuItem icon={FileUp} label="Çıkmış soru yükle" onClick={onOpenPastExamModal} />}
                   {onOpenNotebookLMModal && <MenuItem icon={NotebookPen} label="NotebookLM / Gemini" onClick={onOpenNotebookLMModal} />}

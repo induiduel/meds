@@ -42,6 +42,7 @@ const LectureNotesView = React.lazy(() => import('./components/LectureNotesView'
 const PastExamsView = React.lazy(() => import('./components/PastExamsView').then(m => ({ default: m.PastExamsView })));
 const QuestionMatrix = React.lazy(() => import('./components/QuestionMatrix').then(m => ({ default: m.QuestionMatrix })));
 const LocalAiChatView = React.lazy(() => import('./components/LocalAiChatView').then(m => ({ default: m.LocalAiChatView })));
+const TestCikmisView = React.lazy(() => import('./components/TestCikmisView').then(m => ({ default: m.TestCikmisView })));
 
 // Lazy-loaded Modals (Only downloaded when opened)
 const AdminPanelModal = React.lazy(() => import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal })));
@@ -1423,6 +1424,17 @@ export default function App() {
                 setSelectedLearnSlideNumber(slideNumber);
                 setActiveTab('learn');
               }}
+            />
+          </Suspense>
+        )}
+
+        {/* TAB: /test/cikmis — Faz 14 Çıkmış Soru İnceleme & Canlı Test Katmanı */}
+        {activeTab === 'test_cikmis' && (
+          <Suspense fallback={<ViewFallback />}>
+            <TestCikmisView
+              currentUser={currentUser}
+              isAdmin={isAdmin}
+              onBackToPastExams={() => setActiveTab('past_exams')}
             />
           </Suspense>
         )}

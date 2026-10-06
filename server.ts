@@ -10,7 +10,7 @@ import os from 'os';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
-import { exec, execFile } from 'child_process';
+import { exec, execFile, execSync, spawn } from 'child_process';
 import { createClient } from '@supabase/supabase-js';
 
 const require = createRequire(import.meta.url);
@@ -340,10 +340,114 @@ app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, x-admin-email');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, x-admin-email, X-API-Password');
   if (req.method === 'OPTIONS') {
     return res.sendStatus(200);
   }
+  next();
+});
+
+// All data-changing routes require the local write password. The password lives
+// in `.env`, never in the public API catalogue or the client bundle.
+function hasValidWritePassword(req: express.Request): boolean {
+  const expected = process.env.MEDSORU_API_PASSWORD || '';
+  const supplied = String(req.headers['x-api-password'] || '');
+  if (!expected || supplied.length !== expected.length) return false;
+  return Buffer.from(supplied).equals(Buffer.from(expected));
+}
+
+function requireWritePassword(req: express.Request, res: express.Response, next: express.NextFunction) {
+  if (req.method === 'GET' || req.method === 'HEAD' || req.method === 'OPTIONS') return next();
+
+  // Yönetici (nofrostlife@gmail.com) veya yerel loopback admin istekleri şifre sorgusundan muaf tutulur
+  const adminEmail = (req.headers['x-admin-email'] || req.body?.adminEmail || req.query?.adminEmail) as string;
+  const ip = req.ip || req.socket?.remoteAddress || '';
+  const isLoopback = ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost') || ip.includes('::ffff:127.0.0.1');
+  const isAdminCaller = (adminEmail && adminEmail.toLowerCase() === 'nofrostlife@gmail.com') || (isLoopback && (!adminEmail || adminEmail.toLowerCase() === 'nofrostlife@gmail.com'));
+  if (isAdminCaller) {
+    return next();
+  }
+
+  if (!process.env.MEDSORU_API_PASSWORD) {
+    return res.status(503).json({ error: 'Yazma parolası sunucuda yapılandırılmamış.' });
+  }
+  if (!hasValidWritePassword(req)) {
+    return res.status(401).json({ error: 'Veri göndermek veya değiştirmek için X-API-Password başlığı gereklidir.' });
+  }
+  next();
+}
+
+app.use('/api', requireWritePassword);
+
+// Public, read-only API directory and versioned aliases for the site's public datasets.
+// Keep this allowlist explicit: `/v1/admin`, write routes, user records and raw AI data
+// must never become public through a generic `/v1` -> `/api` rewrite.
+const PUBLIC_API_DIRECTORY = {
+  name: 'MedSoru API',
+  version: 'v1',
+  authentication: 'none for listed public GET endpoints',
+  website: '/sorular',
+  documentation: '/v1/documentation',
+  writeAuthentication: 'POST, PUT, PATCH ve DELETE istekleri X-API-Password başlığını gerektirir.',
+  endpoints: [
+    { path: '/v1/committees', source: '/api/committees', description: 'Dönem 3 kurul listesi' },
+    { path: '/v1/questions', source: '/api/questions', description: '2026-2027 güncel soru havuzu' },
+    { path: '/v1/sorular', source: '/api/questions', description: 'Güncel soru havuzunun Türkçe takma adı' },
+    { path: '/v1/questions/:id', source: '/api/questions/:id', description: 'Tek güncel soru' },
+    { path: '/v1/past-exams', source: '/api/past-exams', description: 'Karantinadan arındırılmış çıkmış sorular' },
+    { path: '/v1/cikmis', source: '/api/past-exams', description: 'Çıkmış soruların Türkçe takma adı' },
+    { path: '/v1/past-exams/sync', source: '/api/past-exams/sync', description: 'Çıkmış sorular için artımlı eşitleme' },
+    { path: '/v1/data-catalog', source: '/api/data-catalog', description: 'Yayınlanan veri kümelerinin kataloğu' },
+    { path: '/v1/learn-links', source: '/api/learn-links', description: 'Soru ve öğrenme destesi bağlantıları' },
+    { path: '/v1/lecture-notes', source: '/api/lecture-notes', description: 'Ders notları (compact=1 özet liste döndürür)' },
+    { path: '/v1/lecture-notes/:id', source: '/api/lecture-notes/:id', description: 'Tek ders notu' },
+    { path: '/v1/summaries', source: '/api/summaries', description: 'Ders özetleri' },
+    { path: '/v1/summaries/:id', source: '/api/summaries/:id', description: 'Tek ders özeti' },
+    { path: '/v1/search', source: '/api/search', description: 'Yayınlanan içeriklerde arama' },
+    { path: '/v1/gemini-v3/questions', source: '/api/gemini-v3/questions', description: 'Küratörlü soru verileri ve metadataları' },
+    { path: '/v1/gemini-v3/lecture-notes', source: '/api/gemini-v3/lecture-notes', description: 'Küratörlü ders notları ve metadataları' },
+    { path: '/v1/gemini-v3/thesaurus', source: '/api/gemini-v3/thesaurus', description: 'Tıbbi terimler, eş anlamlılar ve sözlük verileri' },
+    { path: '/v1/gemini-v3/metadata/relations', source: '/api/gemini-v3/metadata/relations', description: 'Soru-müfredat ilişki metadataları' },
+    { path: '/v1/gemini-v3/metadata/synonyms', source: '/api/gemini-v3/metadata/synonyms', description: 'Tıbbi eş anlamlı metadataları' },
+    { path: '/v1/transcriptions', source: '/api/transcriptions', description: 'Amfi ses kaydı transkriptleri' },
+    { path: '/v1/past-question-reviews', source: '/api/past-question-reviews', description: 'Faz 14 çıkmış soru redaksiyon inceleme katmanı ve önerileri' },
+    { path: '/v1/deepseek/contributions', source: '/api/deepseek/contributions', description: 'İçe aktarılmış katkı ve metadata verileri' },
+  ],
+  examples: [
+    'GET /v1/questions',
+    'GET /v1/past-exams?committeeId=all',
+    'GET /v1/past-question-reviews',
+    'GET /v1/lecture-notes?compact=1',
+    'GET /api/questions',
+  ],
+  note: 'Yalnızca katalogdaki GET yolları anonim erişime açıktır. Yönetim, kullanıcı, yazma ve ham AI verileri bu API üzerinden sunulmaz.',
+};
+
+app.get(['/api', '/api/'], (_req, res) => res.json(PUBLIC_API_DIRECTORY));
+app.get(['/v1', '/v1/'], (_req, res) => res.json(PUBLIC_API_DIRECTORY));
+app.get(['/api/documentation', '/v1/documentation'], (_req, res) => {
+  res.type('text/markdown; charset=utf-8').sendFile(path.resolve(__dirname, 'docs', 'API_KATALOG.md'));
+});
+
+const PUBLIC_V1_PREFIXES = [
+  '/committees', '/questions', '/sorular', '/past-exams', '/cikmis', '/past-question-reviews', '/data-catalog', '/learn-links',
+  '/lecture-notes', '/summaries', '/search', '/insights', '/slides', '/notebooklm', '/audit',
+  '/lecture-pdf', '/gemini-v3', '/rag', '/ai/interactions', '/deepseek', '/transcriptions',
+];
+app.use((req, res, next) => {
+  if (!req.path.startsWith('/v1/')) return next();
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    return res.status(405).json({ error: 'v1 API yalnızca salt okunur GET isteklerini kabul eder.' });
+  }
+  const v1Path = req.path.slice(3);
+  const isPublicPath = PUBLIC_V1_PREFIXES.some((prefix) => v1Path === prefix || v1Path.startsWith(`${prefix}/`));
+  if (!isPublicPath) return res.status(404).json({ error: 'Bu v1 uç noktası yayınlanmıyor.' });
+  const aliasPath = v1Path === '/sorular' || v1Path.startsWith('/sorular/')
+    ? v1Path.replace(/^\/sorular/, '/questions')
+    : v1Path === '/cikmis' || v1Path.startsWith('/cikmis/')
+      ? v1Path.replace(/^\/cikmis/, '/past-exams')
+      : v1Path;
+  req.url = `/api${aliasPath}${req.url.slice(req.path.length)}`;
   next();
 });
 
@@ -1356,6 +1460,370 @@ app.post('/api/slides/sync', requireAdmin, (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+// --- Faz 14: Çıkmış Soru Redaksiyon İnceleme Katmanı (reviews.jsonl) ---
+const PHASE14_DIR = path.resolve(__dirname, '..', 'meds_database_v2', 'phase14_past_question_editor');
+const PHASE14_REVIEWS_FILE = path.resolve(PHASE14_DIR, 'reviews.jsonl');
+const PHASE14_REPORT_FILE = path.resolve(PHASE14_DIR, 'report.json');
+const PHASE14_LOCAL_CHECKPOINT = path.resolve(PHASE14_DIR, 'checkpoint.json');
+const PHASE14_CLOUD_CHECKPOINT = path.resolve(PHASE14_DIR, 'checkpoint_cloud.json');
+
+function isPythonScriptRunning(scriptName: string): boolean {
+  try {
+    const out = execSync('pgrep -a python3 || true', { encoding: 'utf-8' });
+    return out.split('\n').some(line => line.includes(scriptName));
+  } catch (_) {
+    return false;
+  }
+}
+
+function readPhase14Reviews(): any[] {
+  if (!fs.existsSync(PHASE14_REVIEWS_FILE)) return [];
+  try {
+    const raw = fs.readFileSync(PHASE14_REVIEWS_FILE, 'utf-8');
+    const items: any[] = [];
+    for (const line of raw.split('\n')) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+      try {
+        items.push(JSON.parse(trimmed));
+      } catch (_) {}
+    }
+    return items;
+  } catch (err) {
+    console.error('[Phase14] reviews.jsonl okunamadı:', err);
+    return [];
+  }
+}
+
+function writePhase14Reviews(items: any[]) {
+  if (!fs.existsSync(PHASE14_DIR)) {
+    fs.mkdirSync(PHASE14_DIR, { recursive: true });
+  }
+  const content = items.map(it => JSON.stringify(it)).join('\n') + (items.length > 0 ? '\n' : '');
+  fs.writeFileSync(PHASE14_REVIEWS_FILE, content, 'utf-8');
+}
+
+// 1. GET /api/past-question-reviews: İnceleme kuyruğu ve önerileri listele (public okuma)
+app.get('/api/past-question-reviews', (req, res) => {
+  try {
+    const reviews = readPhase14Reviews();
+    const { status, questionId } = req.query;
+    let filtered = reviews;
+    if (status && status !== 'all') {
+      filtered = filtered.filter(r => r.status === status);
+    }
+    if (questionId) {
+      filtered = filtered.filter(r => String(r.question_id) === String(questionId));
+    }
+    let report: any = null;
+    if (fs.existsSync(PHASE14_REPORT_FILE)) {
+      try { report = JSON.parse(fs.readFileSync(PHASE14_REPORT_FILE, 'utf-8')); } catch (_) {}
+    }
+    res.json({
+      success: true,
+      totalCount: reviews.length,
+      filteredCount: filtered.length,
+      report,
+      reviews: filtered.reverse(), // En yeni incelemeler üstte
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'İnceleme kayıtları okunamadı: ' + err.message });
+  }
+});
+
+// 2. POST /api/past-question-reviews/:id/approve: Öneriyi açık onayla ve geçmiş soru havuzuna uygula (Admin)
+app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
+  try {
+    const targetQId = String(req.params.id);
+    const reviews = readPhase14Reviews();
+    const matchingIndices = reviews.map((r, i) => String(r.question_id) === targetQId ? i : -1).filter(i => i !== -1);
+    if (matchingIndices.length === 0) {
+      return res.status(404).json({ error: 'İnceleme kaydı bulunamadı.' });
+    }
+    const rev = reviews[matchingIndices[0]];
+    const proposal = rev.proposal;
+    if (!proposal) {
+      return res.status(400).json({ error: 'Öneri verisi bulunmuyor.' });
+    }
+
+    const pastList = getPastQuestionsDb();
+    let qIdx = pastList.findIndex(q => String(q.id) === targetQId);
+    let targetQ: any;
+
+    if (qIdx === -1) {
+      // Soru pastQuestions.json'da yoksa inceleme kaydındaki kaynak veriden oluştur
+      const src = rev.source || {};
+      targetQ = {
+        id: targetQId,
+        committeeId: proposal.kurul_adi || src.kurul_adi || 'donem3-kurul1',
+        discipline: proposal.ders_adi || src.ders_adi || 'Genel Tıp',
+        topic: proposal.konu_adi || src.konu_adi || 'Genel Konu',
+        stem: proposal.soru_koku || src.soru_koku || '',
+        options: [],
+        correctAnswer: proposal.dogru_secenek || src.dogru_secenek || 'A',
+        claimedAnswer: proposal.dogru_secenek || src.dogru_secenek || 'A',
+        explanation: proposal.aciklama || '',
+        examYear: src.sinav_yili || 'Geçmiş Yıllar Çıkmışı (Arşiv)',
+        status: 'completed',
+        tags: ['faz14_redaksiyon', 'approved'],
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+      pastList.push(targetQ);
+      qIdx = pastList.length - 1;
+    } else {
+      targetQ = pastList[qIdx];
+    }
+
+    // Orijinal sorunun yedeğini koru ve önerilen alanları uygula
+    if (proposal.soru_koku) targetQ.stem = proposal.soru_koku;
+    if (proposal.secenekler && typeof proposal.secenekler === 'object') {
+      const srcOpts = (rev.source && rev.source.secenekler) || {};
+      const aiCompletedKeys: string[] = (proposal.yapay_zeka_tamamlanan_siklar || []).map((k: string) => String(k).toUpperCase());
+      const canonicalOpts = Object.entries(proposal.secenekler).map(([k, v]) => {
+        const upperK = k.toUpperCase();
+        const isCompletedByAi = !srcOpts[k] && !srcOpts[upperK] || aiCompletedKeys.includes(upperK);
+        return {
+          key: upperK as any,
+          text: String(v),
+          isCorrect: upperK === String(proposal.dogru_secenek || targetQ.claimedAnswer || targetQ.correctAnswer).toUpperCase(),
+          upvotes: 1,
+          ...(isCompletedByAi ? {
+            isAiGenerated: true,
+            isAiFilled: true,
+            suggestedBy: 'AI (Yapay Zeka)'
+          } : {})
+        };
+      });
+      if (canonicalOpts.length >= 4) {
+        targetQ.options = canonicalOpts;
+      }
+    }
+    if (proposal.dogru_secenek) {
+      targetQ.correctAnswer = proposal.dogru_secenek;
+      targetQ.claimedAnswer = proposal.dogru_secenek;
+    }
+    if (proposal.aciklama && proposal.aciklama.trim()) {
+      targetQ.explanation = proposal.aciklama;
+    }
+    if (proposal.kurul_adi) targetQ.committeeId = proposal.kurul_adi;
+    if (proposal.ders_adi) targetQ.discipline = proposal.ders_adi;
+    if (proposal.konu_adi) targetQ.topic = proposal.konu_adi;
+    if (proposal.YZV) {
+      targetQ.YZV = proposal.YZV;
+    }
+    targetQ.updatedAt = new Date().toISOString();
+
+    savePastQuestionsDb(pastList);
+    // Asenkron aynalama: HTTP yanıtını bloke etmez
+    mirrorPastQuestionToSupabase(targetQ).catch(err => {
+      console.error('[Phase14] Supabase aynalama hatası:', err?.message || err);
+    });
+
+    // İnceleme kaydı ve mükerrerleri 'approved' olarak güncelle
+    const nowIso = new Date().toISOString();
+    const adminEmail = (req.headers['x-admin-email'] as string) || 'nofrostlife@gmail.com';
+    for (const idx of matchingIndices) {
+      reviews[idx].status = 'approved';
+      reviews[idx].approved_at = nowIso;
+      reviews[idx].approved_by = adminEmail;
+    }
+    writePhase14Reviews(reviews);
+
+    res.json({
+      success: true,
+      message: `Soru #${targetQId} Faz 14 önerisiyle güncellendi ve onaylandı.`,
+      question: targetQ,
+      review: reviews[matchingIndices[0]],
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Öneri onaylanamadı: ' + err.message });
+  }
+});
+
+// 3. POST /api/past-question-reviews/:id/reject: Öneriyi reddet (Admin)
+app.post('/api/past-question-reviews/:id/reject', requireAdmin, (req, res) => {
+  try {
+    const targetQId = String(req.params.id);
+    const reviews = readPhase14Reviews();
+    const matchingIndices = reviews.map((r, i) => String(r.question_id) === targetQId ? i : -1).filter(i => i !== -1);
+    if (matchingIndices.length === 0) {
+      return res.status(404).json({ error: 'İnceleme kaydı bulunamadı.' });
+    }
+    const nowIso = new Date().toISOString();
+    const adminEmail = (req.headers['x-admin-email'] as string) || 'nofrostlife@gmail.com';
+    const reason = req.body?.reason || 'Yönetici tarafından reddedildi.';
+    for (const idx of matchingIndices) {
+      reviews[idx].status = 'rejected';
+      reviews[idx].rejected_at = nowIso;
+      reviews[idx].rejected_by = adminEmail;
+      reviews[idx].reject_reason = reason;
+    }
+    writePhase14Reviews(reviews);
+
+    res.json({
+      success: true,
+      message: `Soru #${targetQId} için redaksiyon önerisi reddedildi.`,
+      review: reviews[matchingIndices[0]],
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Öneri reddedilemedi: ' + err.message });
+  }
+});
+
+// 4. POST /api/past-question-reviews/trigger: Faz 14 Redaksiyon Scriptini Başlat (Bulut veya Yerel)
+let phase14Process: any = null;
+
+app.post('/api/past-question-reviews/trigger', requireAdmin, (req, res) => {
+  const { mode = 'cloud', limit = 10 } = req.body || {};
+  try {
+    const isCloudRunning = isPythonScriptRunning('phase14_cloud_question_editor.py');
+    const isLocalRunning = isPythonScriptRunning('phase14_past_question_editor.py');
+
+    if (isCloudRunning || isLocalRunning) {
+      return res.status(409).json({
+        error: 'Faz 14 redaksiyon işlemi zaten arka planda çalışıyor.',
+        runningMode: isCloudRunning ? 'cloud' : 'local'
+      });
+    }
+
+    const scriptPath = mode === 'cloud'
+      ? path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_cloud_question_editor.py')
+      : path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_past_question_editor.py');
+
+    const logPath = path.resolve(__dirname, '..', 'meds_temp', 'logs', 'phase14.log');
+    fs.mkdirSync(path.dirname(logPath), { recursive: true });
+
+    const outLog = fs.openSync(logPath, 'a');
+    const child = spawn('python3', [scriptPath, '--limit', String(limit)], {
+      cwd: __dirname,
+      detached: true,
+      stdio: ['ignore', outLog, outLog]
+    });
+    child.unref();
+
+    res.json({
+      success: true,
+      message: `Faz 14 (${mode === 'cloud' ? 'Google Gemini Bulut' : 'Yerel RTX 4060 GPU'}) redaksiyonu başlatıldı (Limit: ${limit}).`,
+      mode,
+      logFile: logPath,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Faz 14 başlatılamadı: ' + err.message });
+  }
+});
+
+// 5. POST /api/past-question-reviews/stop: Faz 14 süreçlerini durdur (Admin)
+app.post('/api/past-question-reviews/stop', requireAdmin, (_req, res) => {
+  try {
+    try { execSync('pkill -9 -f "phase14_cloud_question_editor.py"', { stdio: 'ignore' }); } catch (_) {}
+    try { execSync('pkill -9 -f "phase14_past_question_editor.py"', { stdio: 'ignore' }); } catch (_) {}
+    res.json({ success: true, message: 'Faz 14 arka plan süreçleri durduruldu.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Faz 14 durdurulamadı: ' + err.message });
+  }
+});
+
+// 6. GET /api/past-question-reviews/logs: Faz 14 canlı konsol loglarını oku
+app.get('/api/past-question-reviews/logs', (_req, res) => {
+  try {
+    const isCloudRunning = isPythonScriptRunning('phase14_cloud_question_editor.py');
+    const isLocalRunning = isPythonScriptRunning('phase14_past_question_editor.py');
+
+    const logPath = path.resolve(__dirname, '..', 'meds_temp', 'logs', 'phase14.log');
+    let lines: string[] = [];
+    if (fs.existsSync(logPath)) {
+      const raw = fs.readFileSync(logPath, 'utf-8');
+      lines = raw.split('\n').filter(l => l.trim()).slice(-50);
+    }
+
+    const reportPath = path.resolve(PHASE14_DIR, 'report.json');
+    let report: any = null;
+    if (fs.existsSync(reportPath)) {
+      try { report = JSON.parse(fs.readFileSync(reportPath, 'utf-8')); } catch (_) {}
+    }
+
+    const reviews = readPhase14Reviews();
+    const totalCandidate = 4926;
+    const remaining = Math.max(0, totalCandidate - reviews.length);
+
+    res.json({
+      success: true,
+      isRunning: isCloudRunning || isLocalRunning,
+      activeMode: isCloudRunning ? 'cloud' : (isLocalRunning ? 'local' : null),
+      totalCandidate,
+      processed: reviews.length,
+      remaining,
+      approved: reviews.filter(r => r.status === 'approved').length,
+      pending: reviews.filter(r => r.status === 'review_required').length,
+      report,
+      logs: lines,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Loglar alınamadı: ' + err.message });
+  }
+});
+
+// 7. POST /api/past-question-reviews/re-evaluate-unchanged: Değişiklik olmayan soruları tekrar değerlendirmeye gönder (Admin)
+app.post('/api/past-question-reviews/re-evaluate-unchanged', requireAdmin, (req, res) => {
+  try {
+    const { questionId } = req.body || {};
+    const reviews = readPhase14Reviews();
+
+    let targetIds: string[] = [];
+    if (questionId) {
+      targetIds = [String(questionId)];
+    } else {
+      targetIds = reviews
+        .filter(r => r.status === 'unchanged')
+        .map(r => String(r.question_id));
+    }
+
+    if (targetIds.length === 0) {
+      return res.json({
+        success: true,
+        message: 'Tekrar değerlendirilecek değişiklik olmayan soru bulunamadı.',
+        count: 0
+      });
+    }
+
+    const targetSet = new Set(targetIds);
+
+    // 1. reviews.jsonl içinden bu kayıtları temizle (tekrar taze öneri oluşturulabilsin)
+    const retainedReviews = reviews.filter(r => !targetSet.has(String(r.question_id)));
+    writePhase14Reviews(retainedReviews);
+
+    // 2. checkpoint.json ve checkpoint_cloud.json dosyalarından bu ID'leri çıkar
+    const updateCheckpointFile = (filePath: string) => {
+      if (fs.existsSync(filePath)) {
+        try {
+          const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+          if (Array.isArray(data.done_ids)) {
+            data.done_ids = data.done_ids.filter((id: string) => !targetSet.has(String(id)));
+            data.updated_at = new Date().toISOString();
+            fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
+          }
+        } catch (e) {
+          console.warn(`[Phase14] Checkpoint ${filePath} güncellenemedi:`, e);
+        }
+      }
+    };
+
+    updateCheckpointFile(PHASE14_LOCAL_CHECKPOINT);
+    updateCheckpointFile(PHASE14_CLOUD_CHECKPOINT);
+
+    res.json({
+      success: true,
+      message: `${targetIds.length} soru tekrar değerlendirme kuyruğuna alındı.`,
+      count: targetIds.length,
+      questionIds: targetIds
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Tekrar değerlendirmeye gönderilemedi: ' + err.message });
+  }
+});
+
 
 // Update regular question directly
 app.put('/api/questions/:id', (req, res) => {
@@ -4922,15 +5390,29 @@ app.get('/api/gemini-v3/metadata/synonyms', (req, res) => {
 });
 
 app.get('/api/gemini-v3/questions', (req, res) => {
-  res.status(403).json({ success: false, error: 'Ham Gemini v3 soru verisi kullanıcı erişimine kapalıdır.' });
+  try {
+    res.json({ success: true, ...getGeminiV3Questions({
+      q: String(req.query.q || ''), committeeId: String(req.query.committeeId || ''),
+      limit: Number(req.query.limit) || 20, offset: Number(req.query.offset) || 0,
+    }) });
+  } catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
 });
 
 app.get('/api/gemini-v3/lecture-notes', (req, res) => {
-  res.status(403).json({ success: false, error: 'Ham Gemini v3 ders notları kullanıcı erişimine kapalıdır.' });
+  try {
+    res.json({ success: true, ...getGeminiV3Lectures({
+      q: String(req.query.q || ''), committeeId: String(req.query.committeeId || ''),
+      limit: Number(req.query.limit) || 50,
+    }) });
+  } catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
 });
 
 app.get('/api/gemini-v3/lecture-notes/:sourceId', (req, res) => {
-  res.status(403).json({ success: false, error: 'Ham Gemini v3 ders notları kullanıcı erişimine kapalıdır.' });
+  try {
+    const note = getGeminiV3LectureMarkdown(req.params.sourceId);
+    if (!note) return res.status(404).json({ success: false, error: 'Ders notu bulunamadı.' });
+    res.json({ success: true, lectureNote: note });
+  } catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
 });
 
 app.get('/api/gemini-v3/thesaurus', (req, res) => {

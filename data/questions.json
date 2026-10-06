@@ -1988,6 +1988,127 @@
         "matchedSnippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Biyoloji ve Genetik Kurul: donem3-kurul1 Sınav Yılı: 2025-2026 Konu: Dismorfolojide Genetik Terminoloji – Deformasyon, Disrupsiyon ve Malformasyon Ayrımı Soru Kökü: Aşağıdaki kon",
         "confidenceScore": 100
       }
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1791226968277",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "isUnassignedNumber": true,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Down",
+      "status": "gathering",
+      "fragments": [
+        {
+          "id": "f-1791226968277-7kxd",
+          "text": "Down",
+          "type": "stem",
+          "author": "Dr.HouseGül",
+          "upvotes": 1,
+          "authorUid": "std-gcdo0r-muvm9owv",
+          "timestamp": "2026-10-05T19:02:48.277Z",
+          "authorStudentNumber": "2411101098"
+        },
+        {
+          "id": "f-1791226979879-0203",
+          "text": "Sendrom",
+          "type": "stem",
+          "author": "Dr.HouseGül",
+          "upvotes": 1,
+          "authorUid": "std-gcdo0r-muvm9owv",
+          "timestamp": "2026-10-05T19:02:59.879Z",
+          "authorStudentNumber": "2411101098"
+        }
+      ],
+      "options": [],
+      "tags": [
+        "down",
+        "sendrom"
+      ],
+      "contributedByUid": "std-gcdo0r-muvm9owv",
+      "contributedByName": "Dr.HouseGül",
+      "contributedByStudentNumber": "2411101098",
+      "revisions": [
+        {
+          "id": "rev-1791226968277",
+          "stem": "Down",
+          "topic": "Tıbbi Patoloji Hatırlanan Soru",
+          "options": [],
+          "version": 1,
+          "editedAt": "2026-10-05T19:02:48.277Z",
+          "editorUid": "std-gcdo0r-muvm9owv",
+          "discipline": "Tıbbi Patoloji",
+          "editorName": "Dr.HouseGül",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)",
+          "editorStudentNumber": "2411101098"
+        },
+        {
+          "id": "rev-merge-1791234724965",
+          "version": 2,
+          "editedAt": "2026-10-05T21:12:04.965Z",
+          "editorName": "Taslak stüdyosu",
+          "changeSummary": "1 adet benzer taslak bu ana soru altında birleştirildi."
+        }
+      ],
+      "createdAt": "2026-10-05T19:02:48.52917+00:00",
+      "updatedAt": "2026-10-05T21:12:06.180Z",
+      "upvotes": 0,
+      "reconstruction": null,
+      "mergedSatellites": [
+        {
+          "id": "q-donem3-kurul1-unassigned-1791226980000",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan",
+            "taslak-eslesme-adayi"
+          ],
+          "topic": "Tıbbi Patoloji Hatırlanan Soru",
+          "status": "gathering",
+          "options": [],
+          "createdAt": "2026-10-05T19:03:00.132622+00:00",
+          "fragments": [
+            {
+              "id": "f-1791226979879-0203",
+              "text": "Sendrom",
+              "type": "stem",
+              "author": "Dr.HouseGül",
+              "upvotes": 1,
+              "authorUid": "std-gcdo0r-muvm9owv",
+              "timestamp": "2026-10-05T19:02:59.879Z",
+              "authorStudentNumber": "2411101098"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1791226980000",
+              "stem": "Sendrom",
+              "topic": "Tıbbi Patoloji Hatırlanan Soru",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-05T19:03:00.000Z",
+              "editorUid": "std-gcdo0r-muvm9owv",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr.HouseGül",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)",
+              "editorStudentNumber": "2411101098"
+            }
+          ],
+          "updatedAt": "2026-10-05T19:03:00.128+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "placementNotes": "Olası Taslak Eşleşmesi: Soru #Belirsiz ile %49 benzerlik.",
+          "questionNumber": 0,
+          "contributedByUid": "std-gcdo0r-muvm9owv",
+          "contributedByName": "Dr.HouseGül",
+          "isUnassignedNumber": true,
+          "contributedByStudentNumber": "2411101098",
+          "upvotes": 0,
+          "reconstruction": null
+        }
+      ],
+      "isMerged": true,
+      "placementNotes": "[06.10.2026]: 1 taslak ile iç içe geçirildi.",
+      "examYear": "2026-2027",
+      "rawStem": "Down"
     }
   ]
 }

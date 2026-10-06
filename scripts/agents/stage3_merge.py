@@ -552,12 +552,9 @@ def build_questions(sources: list[dict], use_llm: bool, do_enrich: bool, state: 
     idx = Index(sources)
     log.info("indeks: %d chunk, %d kaynak", len(idx.chunks), len(idx.src))
     out, review = [], []
-    if uniq and len(idx.chunks) and lib.ollama_up():
-        QV = embed_cached([qtext(u) for u in uniq])
-    else:
-        QV = None
     ch_by_id = {c["chunk_id"]: c for c in idx.chunks}
     total_u = len(uniq)
+
     # ---------------- Checkpoint & Kaldığı Yerden Devam Etme (Zero-Data-Loss) ----------------
     checkpoint_q_path = lib.TEMP3 / "questions.jsonl"
     checkpoint_r_path = lib.TEMP3 / "review_queue.jsonl"
@@ -586,8 +583,29 @@ def build_questions(sources: list[dict], use_llm: bool, do_enrich: bool, state: 
         except Exception as e:
             log.warning("Önceki review_queue.jsonl okunurken hata: %s", e)
 
-    if processed_qids:
-        log.info("Checkpoint bulundu: %d soru zaten işlenmiş, doğrudan kaldığı yerden devam ediliyor ✓", len(processed_qids))
+    # Yalnızca işlenmemiş yeni veya değişmiş soruları filtrele (Artımlı / Incremental İşleme)
+    unprocessed_indices = []
+    unprocessed_qs = []
+    for i, u in enumerate(uniq):
+        qid = hashlib.sha1(qkey(u).encode()).hexdigest()[:12]
+        if qid not in processed_qids:
+            unprocessed_indices.append(i)
+            unprocessed_qs.append(u)
+
+    if not unprocessed_qs and (lib.TEMP3 / "report.json").exists():
+        log.info("Aşama 3 Soru Zenginleştirme: İşlenecek yeni soru yok (Tüm %d tekil soru zaten işlenmiş) ✓", total_u)
+        rep = lib.read_json(lib.TEMP3 / "report.json", {})
+        return rep
+
+    log.info("Aşama 3 Artımlı Denetim: %d soru önceden işlenmiş, %d YENİ/İŞLENMEMİŞ soru işleme alınıyor",
+             len(processed_qids), len(unprocessed_qs))
+
+    # Yalnızca işlenecek yeni sorular için embedding al (Ollama ve GPU tasarrufu)
+    QV_map = {}
+    if unprocessed_qs and len(idx.chunks) and lib.ollama_up():
+        unproc_vecs = embed_cached([qtext(u) for u in unprocessed_qs])
+        for idx_pos, orig_idx in enumerate(unprocessed_indices):
+            QV_map[orig_idx] = unproc_vecs[idx_pos]
 
     q_file_append = open(checkpoint_q_path, "a", encoding="utf-8")
     r_file_append = open(checkpoint_r_path, "a", encoding="utf-8")
@@ -676,12 +694,13 @@ def build_questions(sources: list[dict], use_llm: bool, do_enrich: bool, state: 
                 base.update(status="rejected", issues=base["issues"] + ["yapı yetersiz"])
                 write_record(base)
                 continue
-            if QV is None:
+            q_vec = QV_map.get(i)
+            if q_vec is None:
                 base["status"] = "needs_fix"
                 base["issues"].append("anlamsal eşleştirme yapılamadı (Ollama/embedding yok)")
                 write_record(base)
                 continue
-            hits = idx.query(u, QV[i], u["kurul_hint"])
+            hits = idx.query(u, q_vec, u["kurul_hint"])
             dec = decide(u, hits, idx)
             base["match"] = dec
             base["entities"] = dec.get("ortak_terimler", [])

@@ -33,7 +33,8 @@ export type AppRoute =
   | 'ai_chat'
   | 'admin'
   | 'manage'
-  | 'search';
+  | 'search'
+  | 'test_cikmis';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -44,6 +45,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   past_exams: '/cikmis',
   study: '/calis',
   practice: '/test',
+  test_cikmis: '/test/cikmis',
   leaderboard: '/siralama',
   notes: '/notlar',
   summaries: '/ozetler',
@@ -65,6 +67,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   past_exams: 'Çıkmış sorular',
   study: 'Çalış',
   practice: 'Test çöz',
+  test_cikmis: 'Test Edilen Çıkmış Sorular (Faz 14 İnceleme)',
   leaderboard: 'Sıralama',
   notes: 'Ders notları',
   summaries: 'Ders özetleri',
@@ -79,7 +82,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
   (Object.entries(ROUTE_PATHS) as [AppRoute, string][])
-    .filter(([, p]) => p !== '/')
+    .filter(([, p]) => p !== '/' && !p.slice(1).includes('/'))
     .map(([r, p]) => [p.slice(1), r])
 );
 
@@ -128,12 +131,21 @@ const stripBase = (pathname: string) => pathname.replace(/^\/meds(?=\/|$)/, '') 
 
 export const parseLocation = (loc: Pick<Location, 'pathname' | 'hash'> = window.location): ParsedRoute => {
   const hash = decodeURIComponent(loc.hash.replace(/^#\/?/, ''));
-  const segs = stripBase(loc.pathname).split('/').filter(Boolean).map(decodeURIComponent);
+  const cleanPath = stripBase(loc.pathname);
+
+  // Exact multi-segment route matching
+  if (cleanPath === '/test/cikmis' || cleanPath.startsWith('/test/cikmis/')) {
+    const extra = cleanPath.replace(/^\/test\/cikmis\/?/, '');
+    return { route: 'test_cikmis', param: extra || undefined };
+  }
+
+  const segs = cleanPath.split('/').filter(Boolean).map(decodeURIComponent);
   if (segs.length > 0) {
     const route = BY_SEGMENT[segs[0]] || ALIASES[segs[0]];
     if (route) return { route, param: segs[1] };
   }
   // Legacy #tab links (only on the root path)
+  if (hash === 'test/cikmis' || hash === 'test_cikmis') return { route: 'test_cikmis' };
   if (hash && (ALIASES[hash] || BY_SEGMENT[hash])) return { route: ALIASES[hash] || BY_SEGMENT[hash] };
   return { route: 'quick_add' };
 };

@@ -60,6 +60,24 @@ export const BUNDLED_PIPELINES: AdminPipelineItem[] = [
 
 export const BUNDLED_SCRIPTS: AdminScriptItem[] = [
   {
+    name: 'phase14_cloud_question_editor.py',
+    title: '☁️ Faz 14: Çıkmış Soru İyileştirme & YZV Pipeline (Gemini Flash Bulut)',
+    category: 'AI & Doğrulama',
+    description: 'Soruları Google Gemini Flash ile inceler; Robbins/Guyton tıp literatürüne göre kök, şık ve açıklamayı düzeltir, YZV bloğu üretir ve /test/cikmis katmanına aktarır.',
+    defaultArgs: '--limit 15',
+    tags: ['faz14', 'bulut-ai', 'gemini-flash', 'yzv', 'literatür-kanıtı', 'çıkmış-soru', 'python'],
+    runtime: 'python',
+  },
+  {
+    name: 'phase14_past_question_editor.py',
+    title: '🧠 Faz 14: Çıkmış Soru Redaksiyon & İnceleme Katmanı (Yerel AI)',
+    category: 'AI & Doğrulama',
+    description: 'Çıkmış soruları yerel modelle (gemma3:4b) inceler; OCR/imla ve müfredat redaksiyon önerilerini canlı havuzu bozmadan ayrı inceleme katmanına (reviews.jsonl) yazar.',
+    defaultArgs: '--limit 10',
+    tags: ['faz14', 'çıkmış-soru', 'redaksiyon', 'yerel-model', 'inceleme-katmanı', 'python'],
+    runtime: 'python',
+  },
+  {
     name: 'transcribe-drive-audio.mjs',
     title: '🎙️ Tıbbi Amfi Ses Kayıtları Transkripsiyon & Ders Tespiti',
     category: 'Yapay Zeka & Transkripsiyon',

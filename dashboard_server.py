@@ -9,7 +9,9 @@ import os
 import re
 import socketserver
 import subprocess
+import sys
 import time
+import fcntl
 from pathlib import Path
 
 try:
@@ -19,6 +21,13 @@ except ImportError:
 
 PORT = 8085
 BASE_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = BASE_DIR.parent if BASE_DIR.name == "meds" else BASE_DIR
+MEDS_DIR = (BASE_DIR if BASE_DIR.name == "meds" else BASE_DIR / "meds")
+TEMP_DIR = PROJECT_ROOT / "meds_temp"
+PHASE_QUEUE_FILE = TEMP_DIR / "state" / "phase_queue.json"
+PHASE_QUEUE_LOCK = TEMP_DIR / "state" / "phase_queue.lock"
+PHASE_CYCLE_STATE = TEMP_DIR / "state" / "phase_cycle_state.json"
+
 
 HTML_PAGE = """<!DOCTYPE html>
 <html lang="tr">
@@ -921,6 +930,8 @@ HTML_PAGE = """<!DOCTYPE html>
                     </div>
                 </div>
             </div>
+        </div>
+
         <!-- SEKME 4: MASTER SÜREÇ & MOD YÖNETİCİSİ -->
         <div id="tab-master" class="tab-content hidden space-y-6">
             <!-- Mod Seçim Bannerı -->
@@ -1013,6 +1024,72 @@ HTML_PAGE = """<!DOCTYPE html>
                         </div>
                         <span id="sched-status-badge" class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300">Çalışma Saati İçi</span>
                     </div>
+                </div>
+            </div>
+
+            <!-- Faz Zinciri & Sıralı Otomasyon Orkestratörü -->
+            <div class="glass p-6 rounded-2xl space-y-5 border border-indigo-500/30">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-700/50 pb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Otonom Döngü & Faz Orkestrasyonu</span>
+                            <span id="cycle-turn-badge" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Tur: -</span>
+                            <span id="cycle-active-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">Aktif: -</span>
+                            <button id="btn-stop-active-phase" onclick="stopActivePhase()" class="hidden px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-600 hover:bg-rose-500 text-white border border-rose-400 shadow-sm transition items-center gap-1 cursor-pointer">
+                                <i class="fa-solid fa-stop text-[10px]"></i> Aktif Fazı Durdur
+                            </button>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mt-1.5 flex items-center gap-2">
+                            <i class="fa-solid fa-arrows-spin text-indigo-400"></i> Faz Zinciri, İlerleme & Çalıştırma Sırası Yönetimi
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-1 max-w-2xl">
+                            Her fazın üzerine tıklayarak canlı konsol loglarını açabilir, tamamlanan/kalan çıktıları ve işlem hızlarını izleyebilir, fazların çalışma sırasını kuyruğa alıp manuel tetikleyebilirsiniz.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 self-end md:self-auto">
+                        <button onclick="updateMasterPhases()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 rounded-lg border border-slate-700 flex items-center gap-1.5 transition">
+                            <i class="fa-solid fa-rotate text-cyan-400"></i> Fazları Yenile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Özel Faz 7 v2 ve Çelişki Durum Bilgi Kartı -->
+                <div id="p7v2-notice-box" class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs">
+                    <div class="flex items-center gap-2.5 text-slate-300 font-mono">
+                        <i class="fa-solid fa-microchip text-indigo-400"></i>
+                        <span>Faz 7 v2 (elle, zincir dışı): işlenen <strong id="p7v2-processed" class="text-emerald-400 font-bold">0</strong> | anahtar çelişkisi <strong id="p7v2-celiski" class="text-rose-400 font-bold">0</strong></span>
+                        <span class="text-slate-600">·</span>
+                        <span class="text-slate-400">Faz 7 (eski): <span class="text-amber-400">karantinada</span></span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[11px] text-slate-400">Canlı Sıra Kuyruğu:</span>
+                        <div id="phase-queue-tags" class="flex flex-wrap items-center gap-1">
+                            <span class="text-slate-500 font-mono text-[10px]">Kuyruk boş</span>
+                        </div>
+                        <button onclick="clearPhaseQueue()" id="btn-clear-queue" class="hidden px-2 py-0.5 rounded text-[10px] bg-rose-950/80 text-rose-300 border border-rose-800/60 hover:bg-rose-900 transition">
+                            Kuyruğu Temizle
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 20 Faz İnteraktif Tablo -->
+                <div class="overflow-x-auto rounded-xl border border-slate-800">
+                    <table class="w-full text-left text-xs">
+                        <thead class="bg-slate-800/80 text-slate-400 uppercase text-[10px] tracking-wider border-b border-slate-700/50 font-mono">
+                            <tr>
+                                <th class="p-3 w-72">Faz Adı & Görevi</th>
+                                <th class="p-3 w-32">Durum</th>
+                                <th class="p-3 w-24">Son Süre</th>
+                                <th class="p-3 w-36">Çıktı / İlerleme</th>
+                                <th class="p-3 w-36">Hız</th>
+                                <th class="p-3 w-28">Son Bitiş</th>
+                                <th class="p-3 text-right w-44">Sıralama & Eylemler</th>
+                            </tr>
+                        </thead>
+                        <tbody id="master-phases-table-body" class="divide-y divide-slate-800/60 font-sans text-slate-300">
+                            <tr><td colspan="7" class="p-4 text-center text-slate-500">Faz bilgileri yükleniyor...</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -1897,6 +1974,36 @@ HTML_PAGE = """<!DOCTYPE html>
                                 <span class="font-bold ${isDone ? 'text-emerald-400' : (isRunning ? 'text-cyan-300' : 'text-slate-500')} ml-2">${st.eta}</span>
                             </div>
                         </div>
+
+                        ${st.id === 14 ? `
+                        <!-- Faz 14 Özel Manuel Çalıştırma Kontrol Paneli -->
+                        <div class="pt-3 border-t border-slate-800/60 flex flex-wrap items-center justify-between gap-3">
+                            <div class="flex items-center gap-2 text-xs text-slate-400">
+                                <i class="fa-solid fa-bolt text-amber-400"></i>
+                                <span>Manuel Tetikleme (Bulut veya Yerel GPU):</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button onclick="runPhase14('cloud')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${st.is_running_cloud ? 'bg-amber-600 text-white animate-pulse' : 'bg-indigo-600 hover:bg-indigo-500 text-white'}">
+                                    <i class="fa-solid fa-cloud"></i>
+                                    <span>${st.is_running_cloud ? 'Bulut Çalışıyor...' : 'Bulut Başlat (Gemini)'}</span>
+                                </button>
+                                <button onclick="runPhase14('local')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${st.is_running_local ? 'bg-emerald-600 text-white animate-pulse' : 'bg-slate-700 hover:bg-slate-600 text-slate-200'}">
+                                    <i class="fa-solid fa-microchip"></i>
+                                    <span>${st.is_running_local ? 'Yerel GPU Çalışıyor...' : 'Yerel Başlat (RTX 4060)'}</span>
+                                </button>
+                                ${(st.is_running_cloud || st.is_running_local) ? `
+                                <button onclick="stopPhase14()" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-rose-600/80 hover:bg-rose-600 text-white transition flex items-center gap-1.5">
+                                    <i class="fa-solid fa-stop"></i>
+                                    <span>Durdur</span>
+                                </button>
+                                ` : ''}
+                                <a href="http://localhost:3000/test/cikmis" target="_blank" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-950/60 hover:bg-cyan-900/60 border border-cyan-800/50 text-cyan-300 transition flex items-center gap-1.5">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>/test/cikmis İncele</span>
+                                </a>
+                            </div>
+                        </div>
+                        ` : ''}
                     `;
                     container.appendChild(card);
                 });
@@ -2010,6 +2117,47 @@ HTML_PAGE = """<!DOCTYPE html>
             }
         }
 
+        async function runPhase14(mode) {
+            const scriptKey = mode === 'cloud' ? 'phase14_cloud' : 'phase14_local';
+            try {
+                const res = await fetch('/api/master/action', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'start', script: scriptKey })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    alert(`✓ Faz 14 (${mode === 'cloud' ? 'Gemini Bulut' : 'Gemma 3 Yerel GPU'}) arka planda başlatıldı!`);
+                } else {
+                    alert(`Başlatılamadı: ${data.error || 'Bilinmeyen hata'}`);
+                }
+                updateStagesPage();
+                updateMasterStatus();
+            } catch (err) {
+                alert('Faz 14 başlatma hatası: ' + err);
+            }
+        }
+
+        async function stopPhase14() {
+            try {
+                await fetch('/api/master/action', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'stop', script: 'phase14_cloud' })
+                });
+                await fetch('/api/master/action', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'stop', script: 'phase14_local' })
+                });
+                alert('✓ Faz 14 süreçleri durduruldu.');
+                updateStagesPage();
+                updateMasterStatus();
+            } catch (err) {
+                alert('Durdurma hatası: ' + err);
+            }
+        }
+
         async function toggleScriptAction(scriptKey, currentlyRunning) {
             const act = currentlyRunning ? 'stop' : 'start';
             try {
@@ -2023,6 +2171,7 @@ HTML_PAGE = """<!DOCTYPE html>
                 alert('İşlem başarısız: ' + e);
             }
         }
+
 
         async function updateScheduleSettings() {
             const en = document.getElementById('sched-enabled')?.checked || false;
@@ -2040,21 +2189,399 @@ HTML_PAGE = """<!DOCTYPE html>
             }
         }
 
+        // ==========================================
+        // FAZ ZİNCİRİ & ORKESTRASYON JS (MASTER PANEL)
+        // ==========================================
+        let activeExpandedPhase = null;
+        let masterPhasesData = null;
+
+        async function updateMasterPhases() {
+            try {
+                const res = await fetch('/api/master/phases');
+                const d = await res.json();
+                masterPhasesData = d;
+
+                // 1. Tur ve Aktif Rozetleri
+                const turnBadge = document.getElementById('cycle-turn-badge');
+                const activeBadge = document.getElementById('cycle-active-badge');
+                const stopActiveBtn = document.getElementById('btn-stop-active-phase');
+                if (turnBadge) turnBadge.innerText = `Tur: ${d.tur ?? '-'}`;
+                if (activeBadge) {
+                    if (d.aktif) {
+                        activeBadge.innerText = `● Aktif: ${d.aktif}`;
+                        activeBadge.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 animate-pulse";
+                        if (stopActiveBtn) {
+                            stopActiveBtn.classList.remove('hidden');
+                            stopActiveBtn.classList.add('inline-flex');
+                            stopActiveBtn.setAttribute('title', `'${d.aktif}' sürecini durdur`);
+                        }
+                    } else {
+                        activeBadge.innerText = `○ Boşta (Hazır)`;
+                        activeBadge.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-slate-800 text-slate-400 border border-slate-700";
+                        if (stopActiveBtn) {
+                            stopActiveBtn.classList.remove('inline-flex');
+                            stopActiveBtn.classList.add('hidden');
+                        }
+                    }
+                }
+
+                // 2. Faz 7 v2 İstatistiği
+                const p7 = d.p7v2 || {};
+                const elP7Proc = document.getElementById('p7v2-processed');
+                const elP7Cel = document.getElementById('p7v2-celiski');
+                if (elP7Proc) elP7Proc.innerText = p7.n || 0;
+                if (elP7Cel) elP7Cel.innerText = p7.celiski || 0;
+
+                // 3. Kuyruk Etiketleri
+                const qContainer = document.getElementById('phase-queue-tags');
+                const clearBtn = document.getElementById('btn-clear-queue');
+                const qList = d.queue || [];
+                if (qContainer) {
+                    if (qList.length === 0) {
+                        qContainer.innerHTML = '<span class="text-slate-500 font-mono text-[10px]">Kuyruk boş</span>';
+                        if (clearBtn) clearBtn.classList.add('hidden');
+                    } else {
+                        if (clearBtn) clearBtn.classList.remove('hidden');
+                        qContainer.innerHTML = qList.map((qk, idx) => `
+                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] font-mono font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                                <span class="w-3.5 h-3.5 rounded-full bg-indigo-500 text-slate-950 flex items-center justify-center text-[9px] font-bold">${idx + 1}</span>
+                                <span>${qk}</span>
+                                <button onclick="event.stopPropagation(); removePhaseFromQueue('${qk}')" class="text-rose-400 hover:text-rose-200 ml-0.5" title="Kuyruktan Çıkar">×</button>
+                            </span>
+                        `).join('');
+                    }
+                }
+
+                // 4. Fazlar Tablosunu Çiz
+                renderMasterPhasesTable(d.phases || []);
+
+                // Eğer bir faz açık ise logunu tazele
+                if (activeExpandedPhase) {
+                    loadPhaseLog(activeExpandedPhase, false);
+                }
+            } catch (err) {
+                console.error("Faz verisi çekilemedi:", err);
+            }
+        }
+
+        function renderMasterPhasesTable(phases) {
+            const tbody = document.getElementById('master-phases-table-body');
+            if (!tbody) return;
+
+            tbody.innerHTML = '';
+            phases.forEach(p => {
+                const tr = document.createElement('tr');
+                const isExpanded = activeExpandedPhase === p.key;
+                tr.id = `phase-row-${p.key}`;
+                tr.className = `cursor-pointer transition border-b border-slate-800/60 ${isExpanded ? 'bg-indigo-950/30' : 'hover:bg-slate-800/40'}`;
+                tr.onclick = (e) => {
+                    // Buton tıklamalarını ayıkla
+                    if (e.target.closest('button')) return;
+                    togglePhaseLog(p.key);
+                };
+
+                // Durum Rozetleri
+                let badgeClass = "bg-slate-800 text-slate-400 border border-slate-700";
+                if (p.status_code === 'running') {
+                    badgeClass = "bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold animate-pulse";
+                } else if (p.status_code === 'completed_this') {
+                    badgeClass = "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold";
+                } else if (p.status_code === 'completed_prev') {
+                    badgeClass = "bg-blue-500/20 text-blue-300 border border-blue-500/30";
+                } else if (p.status_code === 'error') {
+                    badgeClass = "bg-rose-500/20 text-rose-300 border border-rose-500/40 font-bold";
+                }
+
+                // Kuyruk Sıra Göstergesi
+                let queueBadge = '';
+                if (p.in_queue) {
+                    queueBadge = `<span class="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-indigo-500/30 text-indigo-300 border border-indigo-400/40">Sıra: #${p.queue_pos}</span>`;
+                }
+
+                tr.innerHTML = `
+                    <td class="p-3">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-chevron-${isExpanded ? 'down' : 'right'} text-indigo-400 text-xs w-3 transition-transform"></i>
+                            <div>
+                                <div class="font-bold text-white flex items-center gap-1.5">
+                                    <span>${p.name}</span>
+                                    ${queueBadge}
+                                </div>
+                                <div class="text-[11px] text-slate-400 truncate max-w-sm" title="${p.desc}">${p.desc}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="p-3 whitespace-nowrap">
+                        <span class="px-2.5 py-1 rounded-md text-xs inline-block ${badgeClass}">
+                            ${p.status_tr}
+                        </span>
+                    </td>
+                    <td class="p-3 font-mono text-xs whitespace-nowrap text-slate-300">
+                        ${p.duration}
+                    </td>
+                    <td class="p-3 whitespace-nowrap font-mono text-xs">
+                        <div class="flex items-center gap-1.5">
+                            <span class="font-bold text-white">${p.output_count.toLocaleString('tr-TR')}</span>
+                            <span class="text-slate-400 text-[10px]">${p.unit}</span>
+                        </div>
+                        <div class="w-24 bg-slate-800 h-1.5 rounded-full mt-1 overflow-hidden">
+                            <div class="bg-indigo-500 h-full rounded-full" style="width: ${p.pct}%"></div>
+                        </div>
+                    </td>
+                    <td class="p-3 font-mono text-xs whitespace-nowrap ${p.status_code === 'running' ? 'text-amber-300 font-bold' : 'text-slate-300'}">
+                        ${p.speed}
+                    </td>
+                    <td class="p-3 font-mono text-[11px] whitespace-nowrap text-slate-400">
+                        ${p.last_end}
+                    </td>
+                    <td class="p-3 text-right whitespace-nowrap space-x-1">
+                        ${p.status_code === 'running' ? `
+                            <button onclick="stopSpecificPhase('${p.key}')" class="px-2.5 py-1 rounded text-xs font-bold transition shadow-sm bg-rose-600 hover:bg-rose-500 text-white" title="Bu fazın sürecini durdur">
+                                <i class="fa-solid fa-stop text-[10px]"></i> Durdur
+                            </button>
+                        ` : `
+                            <button onclick="runMasterPhase('${p.key}')" class="px-2.5 py-1 rounded text-xs font-bold transition shadow-sm bg-indigo-600 hover:bg-indigo-500 text-white" title="Öncelikli olarak hemen çalıştır">
+                                <i class="fa-solid fa-play text-[10px]"></i> Çalıştır
+                            </button>
+                        `}
+                        ${p.in_queue ? `
+                            <button onclick="removePhaseFromQueue('${p.key}')" class="px-2 py-1 rounded text-xs font-semibold bg-slate-800 text-rose-300 hover:bg-rose-950/60 border border-slate-700 transition" title="Kuyruktan Çıkar">
+                                Kaldır
+                            </button>
+                        ` : `
+                            <button onclick="enqueuePhase('${p.key}')" class="px-2 py-1 rounded text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700 transition" title="Kuyruğun sonuna ekle">
+                                + Sıraya Al
+                            </button>
+                        `}
+                    </td>
+                `;
+                tbody.appendChild(tr);
+
+                // Eğer bu satır tıklandıysa altına log akordiyon panelini aç
+                if (isExpanded) {
+                    const logTr = document.createElement('tr');
+                    logTr.id = `phase-log-drawer-${p.key}`;
+                    logTr.className = "bg-slate-950/90 border-b border-indigo-900/40 text-slate-200";
+                    logTr.innerHTML = `
+                        <td colspan="7" class="p-4 bg-slate-950/80 border-x border-slate-800 space-y-3">
+                            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-slate-800 pb-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full ${p.status_code === 'running' ? 'bg-amber-400 pulse-dot' : 'bg-emerald-400'}"></span>
+                                    <span class="font-bold text-white text-xs">${p.name} &mdash; Canlı Konsol Günlüğü & Ayrıntılar</span>
+                                    <span class="text-slate-500 text-[11px] font-mono">(${p.script})</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs">
+                                    <button onclick="loadPhaseLog('${p.key}', true)" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] font-mono flex items-center gap-1 border border-slate-700 transition">
+                                        <i class="fa-solid fa-arrows-rotate text-cyan-400"></i> Logu Tazele
+                                    </button>
+                                    <button onclick="togglePhaseLog('${p.key}')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white text-[11px] transition">
+                                        Kapat ✕
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Bilgi Metrik Şeridi -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-mono">
+                                <div class="p-2 rounded bg-slate-900 border border-slate-800">
+                                    <div class="text-[10px] text-slate-500">Mevcut Çıktı</div>
+                                    <div class="font-bold text-emerald-400">${p.output_count.toLocaleString('tr-TR')} ${p.unit}</div>
+                                </div>
+                                <div class="p-2 rounded bg-slate-900 border border-slate-800">
+                                    <div class="text-[10px] text-slate-500">Hedef / Toplam</div>
+                                    <div class="font-bold text-white">${p.target.toLocaleString('tr-TR')} ${p.unit}</div>
+                                </div>
+                                <div class="p-2 rounded bg-slate-900 border border-slate-800">
+                                    <div class="text-[10px] text-slate-500">Kalan Miktar</div>
+                                    <div class="font-bold text-amber-400">${p.kalan.toLocaleString('tr-TR')} ${p.unit}</div>
+                                </div>
+                                <div class="p-2 rounded bg-slate-900 border border-slate-800">
+                                    <div class="text-[10px] text-slate-500">İşlem Hızı</div>
+                                    <div class="font-bold text-cyan-400">${p.speed}</div>
+                                </div>
+                            </div>
+
+                            <!-- Konsol Terminal Penceresi -->
+                            <div class="space-y-1">
+                                <div class="flex justify-between items-center text-[10px] font-mono text-slate-400">
+                                    <span>Son Log Satırları (Canlı Akış)</span>
+                                    <span id="log-file-name-${p.key}" class="text-slate-500 truncate">phase_cycle_${p.key}.log</span>
+                                </div>
+                                <div id="log-content-${p.key}" class="font-mono text-xs leading-relaxed text-slate-300 bg-black/60 p-3 rounded-lg border border-slate-800 max-h-72 overflow-y-auto whitespace-pre-wrap select-text">
+                                    <div class="text-slate-500 italic">Log yükleniyor...</div>
+                                </div>
+                            </div>
+                        </td>
+                    `;
+                    tbody.appendChild(logTr);
+                }
+            });
+        }
+
+        async function togglePhaseLog(phaseKey) {
+            if (activeExpandedPhase === phaseKey) {
+                activeExpandedPhase = null;
+            } else {
+                activeExpandedPhase = phaseKey;
+            }
+            if (masterPhasesData) {
+                renderMasterPhasesTable(masterPhasesData.phases || []);
+            }
+            if (activeExpandedPhase) {
+                loadPhaseLog(activeExpandedPhase, true);
+            }
+        }
+
+        async function loadPhaseLog(key, scrollToBottom) {
+            const container = document.getElementById(`log-content-${key}`);
+            const fileNameEl = document.getElementById(`log-file-name-${key}`);
+            if (!container) return;
+
+            try {
+                const res = await fetch(`/api/master/phase_log?key=${encodeURIComponent(key)}`);
+                const data = await res.json();
+                if (fileNameEl && data.file) fileNameEl.innerText = data.file;
+
+                const lines = data.lines || [];
+                if (lines.length === 0) {
+                    container.innerHTML = '<div class="text-slate-500 italic">Log içeriği boş.</div>';
+                    return;
+                }
+
+                container.innerHTML = '';
+                lines.forEach(l => {
+                    const row = document.createElement('div');
+                    if (l.includes('ERROR') || l.includes('✗') || l.includes('Traceback') || l.includes('HATA')) {
+                        row.className = "text-rose-400";
+                    } else if (l.includes('WARNING') || l.includes('bekleniyor') || l.includes('sürüyor')) {
+                        row.className = "text-amber-300";
+                    } else if (l.includes('✓') || l.includes('tamamlandı') || l.includes('100%')) {
+                        row.className = "text-emerald-300";
+                    } else {
+                        row.className = "text-slate-300";
+                    }
+                    row.innerText = l;
+                    container.appendChild(row);
+                });
+
+                if (scrollToBottom) {
+                    container.scrollTop = container.scrollHeight;
+                }
+            } catch (err) {
+                container.innerHTML = `<div class="text-rose-400">Log okunamadı: ${err}</div>`;
+            }
+        }
+
+        async function runMasterPhase(key) {
+            try {
+                const res = await fetch('/api/master/phase_action', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'run_now', key: key })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    // Kullanıcıya hissettir
+                    updateMasterPhases();
+                } else {
+                    alert('Çalıştırma hatası: ' + (data.error || 'Bilinmeyen hata'));
+                }
+            } catch (err) {
+                alert('İstek başarısız: ' + err);
+            }
+        }
+
+        async function enqueuePhase(key) {
+            try {
+                const res = await fetch('/api/master/phase_action', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'enqueue', key: key })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    updateMasterPhases();
+                }
+            } catch (err) {
+                alert('Kuyruğa eklenemedi: ' + err);
+            }
+        }
+
+        async function removePhaseFromQueue(key) {
+            try {
+                const res = await fetch('/api/master/phase_action', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'remove', key: key })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    updateMasterPhases();
+                }
+            } catch (err) {
+                alert('Kuyruktan çıkarılamadı: ' + err);
+            }
+        }
+
+        async function stopActivePhase() {
+            if (!confirm('Şu an aktif çalışan faz sürecini sonlandırmak istiyor musunuz?')) return;
+            try {
+                const res = await fetch('/api/master/phase_action', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'stop_active' })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    alert('✓ ' + (data.message || 'Aktif faz durduruldu.'));
+                    updateMasterPhases();
+                } else {
+                    alert('Durdurulamadı: ' + (data.error || 'Bilinmeyen hata'));
+                }
+            } catch (err) {
+                alert('Durdurma isteği başarısız: ' + err);
+            }
+        }
+
+        async function stopSpecificPhase(key) {
+            if (!confirm(`'${key}' fazı sürecini durdurmak istediğinize emin misiniz?`)) return;
+            try {
+                const res = await fetch('/api/master/phase_action', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'stop_phase', key: key })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    alert('✓ ' + (data.message || 'Faz süreci durduruldu.'));
+                    updateMasterPhases();
+                } else {
+                    alert('Durdurulamadı: ' + (data.error || 'Bilinmeyen hata'));
+                }
+            } catch (err) {
+                alert('İstek başarısız: ' + err);
+            }
+        }
+
         // Başlangıç: İlk yüklemede ve 2 saniyede bir overview çek
         updateDashboard();
         updateRejectedPage(); // rozet sayısını almak için arka planda çağır
         updateMasterStatus(); // Master durumunu ilk anda al
+        updateMasterPhases(); // Faz zincirini ilk anda al
         tabIntervalId = setInterval(() => {
             if (currentTab === 'overview') updateDashboard();
             else if (currentTab === 'stages') updateStagesPage();
             else if (currentTab === 'rejected') updateRejectedPage();
             else if (currentTab === 'phase45') updatePhase45Page();
-            else if (currentTab === 'master') updateMasterStatus();
+            else if (currentTab === 'master') {
+                updateMasterStatus();
+                updateMasterPhases();
+            }
         }, 2000);
     </script>
 </body>
 </html>
 """
+
 
 def get_stats():
     # 1. Sistem Kaynakları (psutil)
@@ -2151,12 +2678,12 @@ def get_stats():
         if ext: return sum(1 for _ in p.rglob(f"*.{ext}"))
         return sum(1 for x in p.rglob("*") if x.is_file())
 
-    td = BASE_DIR / "meds_downloads"
-    t1 = BASE_DIR / "meds_temp" / "temp1"
-    t2 = BASE_DIR / "meds_temp" / "temp2"
-    t3 = BASE_DIR / "meds_temp" / "temp3"
-    db = BASE_DIR / "meds_database"
-    phase65_dir = BASE_DIR / "meds_database_v2" / "medical_thesaurus"
+    td = PROJECT_ROOT / "meds_downloads"
+    t1 = PROJECT_ROOT / "meds_temp" / "temp1"
+    t2 = PROJECT_ROOT / "meds_temp" / "temp2"
+    t3 = PROJECT_ROOT / "meds_temp" / "temp3"
+    db = PROJECT_ROOT / "meds_database"
+    phase65_dir = PROJECT_ROOT / "meds_database_v2" / "medical_thesaurus"
     phase65_state = {}
     try:
         phase65_state = json.loads((phase65_dir / "phase6_5_state.json").read_text())
@@ -2218,7 +2745,7 @@ def get_stats():
         "stage_info": "Aşama 3: RAG Vektörleme & Soru Eşleştirme"
     }
     try:
-        state_file = BASE_DIR / "meds_temp" / "state" / "pipeline_state.json"
+        state_file = PROJECT_ROOT / "meds_temp" / "state" / "pipeline_state.json"
         state = json.loads(state_file.read_text(encoding="utf-8")) if state_file.exists() else {}
         current_progress = state.get("current_progress")
 
@@ -2269,7 +2796,7 @@ def get_stats():
         pass
 
     # 7. Son Loglar & Aktif İş
-    log_file = BASE_DIR / "meds_temp" / "logs" / "pipeline.log"
+    log_file = PROJECT_ROOT / "meds_temp" / "logs" / "pipeline.log"
     logs = []
     current_task = "Beklemede veya planlanan görev yok."
     if log_file.exists():
@@ -2375,10 +2902,38 @@ def get_stats():
     if graph_file.exists():
         try:
             g_data = json.loads(graph_file.read_text(encoding="utf-8"))
-            graph_nodes = len(g_data.get("nodes", []))
-            graph_edges = len(g_data.get("edges", []))
         except Exception:
             pass
+
+    # Faz 14 Redaksiyon & İnceleme Metrikleri
+    phase14_reviews_file = PROJECT_ROOT / "meds_database_v2" / "phase14_past_question_editor" / "reviews.jsonl"
+    phase14_reviews_cnt = 0
+    phase14_approved_cnt = 0
+    phase14_pending_cnt = 0
+    if phase14_reviews_file.exists():
+        try:
+            for l in phase14_reviews_file.read_text(encoding="utf-8").splitlines():
+                if not l.strip():
+                    continue
+                phase14_reviews_cnt += 1
+                try:
+                    r_obj = json.loads(l)
+                    st_val = r_obj.get("status")
+                    if st_val == "approved":
+                        phase14_approved_cnt += 1
+                    elif st_val == "review_required":
+                        phase14_pending_cnt += 1
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
+    phase14_total_q = 4926
+    phase14_remaining = max(0, phase14_total_q - phase14_reviews_cnt)
+    phase14_pct = round((phase14_reviews_cnt / max(1, phase14_total_q)) * 100, 1)
+
+    phase14_is_cloud_running = bool(subprocess.run(["pgrep", "-f", "phase14_cloud_question_editor.py"], capture_output=True).stdout.strip())
+    phase14_is_local_running = bool(subprocess.run(["pgrep", "-f", "phase14_past_question_editor.py"], capture_output=True).stdout.strip())
 
     stages_progress = [
         {
@@ -2450,10 +3005,10 @@ def get_stats():
             "phase": "Faz 5",
             "name": "Faz 5 (Aşama 5): Çoklu AI Konsensüsü & Slayt İğne-Delik Tespiti",
             "desc": "Yerel RTX 4060 GPU ve Bulut AI (Groq/Gemini) eşzamanlı konsensüsü, pedagojik analiz, tıbbi varlık çıkarımı ve slayt chunk eşleştirme",
-            "status": "completed" if c(Path("/home/indu/Masaüstü/MedSoru Project/meds_database_v2/questions"), "jsonl") > 0 else "running",
-            "status_tr": "Tamamlandı ✓" if c(Path("/home/indu/Masaüstü/MedSoru Project/meds_database_v2/questions"), "jsonl") > 0 else "Konsensüs Analizinde",
-            "progress_pct": 100 if c(Path("/home/indu/Masaüstü/MedSoru Project/meds_database_v2/questions"), "jsonl") > 0 else 80,
-            "processed": f"{c(Path('/home/indu/Masaüstü/MedSoru Project/meds_database_v2/questions'), 'jsonl')} Soru Dosyası",
+            "status": "completed" if c(PROJECT_ROOT / "meds_database_v2" / "questions", "jsonl") > 0 else "running",
+            "status_tr": "Tamamlandı ✓" if c(PROJECT_ROOT / "meds_database_v2" / "questions", "jsonl") > 0 else "Konsensüs Analizinde",
+            "progress_pct": 100 if c(PROJECT_ROOT / "meds_database_v2" / "questions", "jsonl") > 0 else 80,
+            "processed": f"{c(PROJECT_ROOT / 'meds_database_v2' / 'questions', 'jsonl')} Soru Dosyası",
             "total": "Tüm Çıkmış Sorular & Slaytlar",
             "unit": "Konsensüs Havuzu",
             "created_files": "meds_database_v2/questions/*.jsonl + Karantina",
@@ -2501,7 +3056,7 @@ def get_stats():
             "status": "completed",
             "status_tr": "Tamamlandı ✓ (100 Altın Soru Modeli)",
             "progress_pct": 100,
-            "processed": f"{c(Path('/home/indu/Masaüstü/MedSoru Project/meds_database_v2/phase7_stories'), 'json')} Hikaye Üretildi",
+            "processed": f"{c(PROJECT_ROOT / 'meds_database_v2' / 'phase7_stories', 'json')} Hikaye Üretildi",
             "total": "100 Altın Modelleme / Tüm Sorular",
             "unit": "Klinik Hikaye Havuzu",
             "created_files": "meds_database_v2/phase7_stories/*.json",
@@ -2517,13 +3072,32 @@ def get_stats():
             "status": "completed",
             "status_tr": "Tamamlandı ✓ (410 Slayt Müfredatla Eşlendi)",
             "progress_pct": 100,
-            "processed": f"{c(Path('/home/indu/Masaüstü/MedSoru Project/meds_database_v2/slide_reconstructed'), 'json')} Slayt Düzenlendi",
+            "processed": f"{c(PROJECT_ROOT / 'meds_database_v2' / 'slide_reconstructed', 'json')} Slayt Düzenlendi",
             "total": "410 Amfi Dersi",
             "unit": "Müfredat Slayt Kartı",
             "created_files": "meds_database_v2/slide_reconstructed/*.json",
             "pending": 0,
             "eta": "Bitti ✓",
             "order": 7.5
+        },
+        {
+            "id": 14,
+            "phase": "Faz 14",
+            "name": "Faz 14: Çıkmış Soru Redaksiyonu & YZV Doğrulama",
+            "desc": "Çıkmış soruların Gemini Flash (Bulut) ve Gemma 3 (Yerel GPU) ile incelenerek OCR/imla onarımı, YZV bloğu ve literatür referanslarının üretilmesi",
+            "status": "running" if (phase14_is_cloud_running or phase14_is_local_running) else ("completed" if phase14_reviews_cnt > 0 else "queued"),
+            "status_tr": "Şu An Çalışıyor (" + ("Bulut AI" if phase14_is_cloud_running else "Yerel GPU") + ")" if (phase14_is_cloud_running or phase14_is_local_running) else (f"Hazır ({phase14_reviews_cnt} Soru İncelendi)" if phase14_reviews_cnt > 0 else "Bekliyor"),
+            "progress_pct": phase14_pct,
+            "processed": f"{phase14_reviews_cnt} İnceleme ({phase14_approved_cnt} Onaylı, {phase14_pending_cnt} İnceleme Bekleyen)",
+            "total": f"{phase14_total_q} Soru",
+            "unit": "Soru",
+            "created_files": f"reviews.jsonl ({phase14_reviews_cnt} Kayıt)",
+            "pending": f"{phase14_remaining} Soru",
+            "eta": "Canlı İncelemede" if (phase14_is_cloud_running or phase14_is_local_running) else f"{phase14_approved_cnt} onaylandı",
+            "order": 14,
+            "is_running_cloud": phase14_is_cloud_running,
+            "is_running_local": phase14_is_local_running,
+            "actions": ["run_phase14_cloud", "run_phase14_local", "stop_phase14"]
         }
     ]
 
@@ -2671,6 +3245,23 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
             self.wfile.write(json.dumps(get_master_status(), ensure_ascii=False).encode("utf-8"))
+        elif self.path == "/api/master/phases":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(json.dumps(get_master_phases(), ensure_ascii=False).encode("utf-8"))
+        elif self.path.startswith("/api/master/phase_log"):
+            import urllib.parse
+            parsed = urllib.parse.urlparse(self.path)
+            params = urllib.parse.parse_qs(parsed.query)
+            key = params.get("key", [""])[0]
+            log_data = get_phase_log(key)
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(json.dumps(log_data, ensure_ascii=False).encode("utf-8"))
         else:
             self.send_error(404)
 
@@ -2703,12 +3294,23 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
             self.wfile.write(json.dumps(res, ensure_ascii=False).encode("utf-8"))
+        elif self.path == "/api/master/phase_action":
+            action = payload.get("action", "")
+            key = payload.get("key", "")
+            queue_order = payload.get("queue", [])
+            res = handle_master_phase_action(action, key, queue_order)
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(json.dumps(res, ensure_ascii=False).encode("utf-8"))
         else:
             self.send_error(404)
 
+
 def get_rejected_data():
-    t2 = BASE_DIR / "meds_temp" / "temp2"
-    t3 = BASE_DIR / "meds_temp" / "temp3"
+    t2 = PROJECT_ROOT / "meds_temp" / "temp2"
+    t3 = PROJECT_ROOT / "meds_temp" / "temp3"
 
     items = []
     low_q_count = 0
@@ -2787,7 +3389,7 @@ def get_rejected_data():
     }
 
 def get_master_status():
-    master_state_file = BASE_DIR.parent / "meds_temp" / "state" / "master_controller_state.json"
+    master_state_file = PROJECT_ROOT / "meds_temp" / "state" / "master_controller_state.json"
     if master_state_file.exists():
         try:
             return json.loads(master_state_file.read_text(encoding="utf-8"))
@@ -2796,7 +3398,7 @@ def get_master_status():
 
     # Eğer master state dosyası henüz yoksa doğrudan master_controller'dan derle
     try:
-        sys.path.insert(0, str(BASE_DIR / "scripts"))
+        sys.path.insert(0, str(MEDS_DIR / "scripts"))
         import master_controller
         ctrl = master_controller.MasterController()
         return ctrl.get_all_status()
@@ -2805,7 +3407,7 @@ def get_master_status():
 
 def handle_master_mode(mode_key: str):
     try:
-        sys.path.insert(0, str(BASE_DIR / "scripts"))
+        sys.path.insert(0, str(MEDS_DIR / "scripts"))
         import master_controller
         ctrl = master_controller.MasterController()
         ctrl.set_mode(mode_key)
@@ -2816,7 +3418,7 @@ def handle_master_mode(mode_key: str):
 
 def handle_master_action(action: str, script_key: str):
     try:
-        sys.path.insert(0, str(BASE_DIR / "scripts"))
+        sys.path.insert(0, str(MEDS_DIR / "scripts"))
         import master_controller
         ctrl = master_controller.MasterController()
         if action == "start":
@@ -2830,9 +3432,365 @@ def handle_master_action(action: str, script_key: str):
     except Exception as e:
         return {"success": False, "error": str(e)}
 
+_MASTER_PHASES_CACHE = {"data": None, "ts": 0}
+
+def get_master_phases():
+    """Tüm fazların sıralama, telemetri, hız, son bitiş ve çıktı bilgilerini döner (3s TTL önbellekli)."""
+    now = time.time()
+    if _MASTER_PHASES_CACHE["data"] and (now - _MASTER_PHASES_CACHE["ts"] < 3.0):
+        return _MASTER_PHASES_CACHE["data"]
+
+    db_dir = PROJECT_ROOT / "meds_database"
+    db_v2_dir = PROJECT_ROOT / "meds_database_v2"
+    temp_dir = PROJECT_ROOT / "meds_temp"
+
+    def _fast_lines(p):
+        if not p.exists(): return 0
+        try:
+            with open(p, "rb") as f: return sum(1 for _ in f)
+        except Exception: return 0
+
+    def _safe_json(p):
+        if not p.exists(): return {}
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except Exception: return {}
+
+    def _json_count(p, key=None):
+        d = _safe_json(p)
+        if key: d = d.get(key) or {}
+        return len(d) if isinstance(d, (dict, list)) else 0
+
+    def _fmt_dur(sec):
+        if sec is None: return "-"
+        sec = int(sec)
+        return f"{sec}s" if sec < 60 else (f"{sec // 60}dk{sec % 60:02d}" if sec < 3600 else f"{sec // 3600}sa{(sec % 3600) // 60:02d}")
+
+    # Faz tanımları ve sayaçları
+    rows_def = [
+        ("faz5", "Faz 5 · Çoklu AI konsensüs", "soru", "Çıkmış soruların yerel/bulut modellerle taranması ve doğrulanması", "scripts/advanced_ai/multi_ai_consensus_phase5.py",
+         lambda: sum(_fast_lines(f) for f in (db_v2_dir / "questions").glob("*.jsonl")), 7219),
+        ("faz6", "Faz 6 · Derin metadata", "soru", "Tıbbi hiper-metadata, ICD-10 kodları ve ayırıcı tanı entegrasyonu", "scripts/advanced_ai/deep_metadata_generator_phase6.py",
+         lambda: _safe_json(db_v2_dir / "deep_metadata" / "phase6_metadata_state.json").get("total_questions_processed", 0), 7219),
+        ("faz6_dogrulama", "Faz 6 doğrulama (CPU)", "soru", "Üretilen derin metadatanın CPU üzerinde sentaktik ve şema denetimi", "scripts/advanced_ai/validate_phase6_metadata.py",
+         lambda: _fast_lines(db_v2_dir / "deep_metadata_validated" / "dogrulama.jsonl"), 7219),
+        ("faz6_5", "Faz 6.5 · Sözlük & çapa", "çapa", "Tıbbi terimler ontolojisi ve soru-slayt kanıt çapalaması", "scripts/advanced_ai/thesaurus_anchor_phase6_5.py",
+         lambda: _fast_lines(db_v2_dir / "medical_thesaurus" / "phase6_5_question_slide_anchors.jsonl"), 4926),
+        ("faz7_5", "Faz 7.5 · Müfredat slaytları", "ders", "Ders slaytlarının resmi KBÜ Dönem 3 müfredat kartlarına dönüştürülmesi", "scripts/advanced_ai/reconstruct_slides_phase7_5.py",
+         lambda: len(list((db_v2_dir / "slide_reconstructed").glob("*.json"))), 415),
+        ("faz8", "Faz 8 · Kazanım ağacı", "soru", "Soru-kazanım-konu-ders-kurul hiyerarşik graf ağacı inşası", "scripts/advanced_ai/phase8_curriculum_graph.py",
+         lambda: _fast_lines(temp_dir / "phase8" / "soru_kazanim.jsonl"), 7219),
+        ("sozluk", "Kanıtlı sözlük", "terim", "Amfi ders slaytlarından kısaltma ve yazım varyantı sözlüğü", "scripts/advanced_ai/build_evidence_thesaurus.py",
+         lambda: _json_count(db_v2_dir / "evidence_thesaurus" / "kanitli_sozluk.json"), 3000),
+        ("faz9", "Faz 9 · Sözlüklü ağaç", "soru", "Kanıtlı sözlük destekli tıbbi müfredat ağacı", "scripts/advanced_ai/phase9_thesaurus_graph.py",
+         lambda: _fast_lines(temp_dir / "phase9" / "soru_kazanim.jsonl"), 7219),
+        ("faz10", "Faz 10 · Kavram kimlikleri", "kavram", "Wikidata ve UMLS kavram kimlik eşleştirmesi", "scripts/advanced_ai/phase10_concept_ids.py",
+         lambda: _json_count(db_v2_dir / "concept_ids" / "kavramlar.json"), 2500),
+        ("faz11", "Faz 11 · Soru–slayt eşleşmesi", "soru", "BM25, E5 vektör ve cross-encoder ile soru-slayt kanıt eşleme", "scripts/advanced_ai/phase11_question_slide.py",
+         lambda: _fast_lines(temp_dir / "phase11" / "soru_slayt.jsonl"), 2839),
+        ("ogren", "Öğren bağlantıları", "soru", "Öğrenci çalışma portalı için soru-slayt navigasyon bağları", "scripts/advanced_ai/learn_links.py",
+         lambda: _json_count(db_dir / "derived" / "learn_links.json", "baglantilar"), 7219),
+        ("yeniden_bolme", "Sınav çıktısını yeniden bölme", "adım", "Sınav dökümlerinin kurallı bloklara yeniden ayrıştırılması", "scripts/advanced_ai/resplit_exam_printout.py",
+         lambda: 1 if (temp_dir / "logs" / "phase_cycle_yeniden_bolme.log").exists() else 0, 1),
+        ("karantina", "Soru karantinası", "soru", "Hatalı şıklı veya desteklenmeyen soruların izole edilmesi ve onarımı", "scripts/advanced_ai/quarantine_questions.py",
+         lambda: len((_safe_json(db_dir / "derived" / "quarantine" / "karantina.json").get("sorular") or {})), 1000),
+        ("veritabani", "Veritabanı yüklemesi", "kayıt", "Doğrulanmış müfredat bağlarının güvenli veritabanına yüklenmesi", "scripts/advanced_ai/publish_to_database.py",
+         lambda: _safe_json(db_dir / "derived" / "curriculum_links" / "manifest.json").get("sayilar", {}).get("soru_slayt", 0), 2839),
+        ("yayin", "Site yayını", "soru", "Faz 5, 6, 6.5 ve 8 analizlerinin web sitesine aktarılması", "scripts/advanced_ai/export_phase_insights.py",
+         lambda: _json_count(db_dir / "derived" / "phase_insights" / "insights.json", "items"), 7219),
+        ("asama1", "Aşama 1 · İndirme & OCR", "kaynak", "Yeni veya yenilenen PDF/PPTX dosyalarının OCR ile taranması", "scripts/agents/stage1_refresh.py",
+         lambda: len(_safe_json(temp_dir / "state" / "stage1_refresh_report.json").get("yeniden_ocr") or []), 10),
+        ("faz12", "Faz 12 · Ders notu temizleme", "chunk", "Glif, OCR çöpü, üst/alt bilgi filtreleme", "scripts/advanced_ai/phase12_clean_notes.py",
+         lambda: _safe_json(db_dir / "derived" / "clean_notes" / "rapor.json").get("degisen", 0), 5000),
+        ("faz13", "Faz 13 · Tıbbi varlıklar", "soru", "GLiNER ve medikal terminolojiyle varlık tanıma", "scripts/advanced_ai/phase13_entities.py",
+         lambda: _fast_lines(db_dir / "derived" / "entities" / "soru_varliklar.jsonl"), 7219),
+        ("faz14", "Faz 14 · Çıkmış soru redaksiyonu", "soru", "Yerel/bulut modellerle inceleme kuyruğuna redaksiyon önerisi", "scripts/advanced_ai/phase14_past_question_editor.py",
+         lambda: _fast_lines(db_v2_dir / "phase14_past_question_editor" / "reviews.jsonl"), 4926),
+        ("ortak", "Ortak RAG deposu", "parça", "Birleştirilmiş ortak ders materyali ve RAG veri havuzu", "scripts/advanced_ai/build_unified_store.py",
+         lambda: _fast_lines(db_dir / "ortak" / "rag" / "ders_materyali.jsonl"), 25000),
+        ("hakem", "Hakem kuyruğu", "karar", "Alıntı doğrulamalı konu ve slayt hakem değerlendirmesi", "scripts/advanced_ai/referee_queue.py",
+         lambda: _fast_lines(temp_dir / "hakem" / "kararlar.jsonl"), 1000),
+    ]
+
+    cyc = _safe_json(PHASE_CYCLE_STATE)
+    steps = cyc.get("adimlar") or {}
+    aktif = cyc.get("aktif")
+    tur = cyc.get("tur", 1)
+    done_now = set(cyc.get("tur_tamamlanan") or [])
+
+    # Kuyruk bilgisi
+    queue_list = []
+    if PHASE_QUEUE_FILE.exists():
+        try:
+            with open(PHASE_QUEUE_LOCK, "w") as lk:
+                fcntl.flock(lk, fcntl.LOCK_SH)
+                try:
+                    queue_list = json.load(open(PHASE_QUEUE_FILE, encoding="utf-8"))
+                finally:
+                    fcntl.flock(lk, fcntl.LOCK_UN)
+        except Exception:
+            try:
+                queue_list = json.loads(PHASE_QUEUE_FILE.read_text(encoding="utf-8"))
+            except Exception:
+                queue_list = []
+
+    phases_out = []
+    for key, name, unit, desc, script_path, fn, target in rows_def:
+        try:
+            cnt = int(fn() or 0)
+        except Exception:
+            cnt = 0
+
+        st = steps.get(key) or {}
+        rc = st.get("rc")
+        sure_sec = st.get("sure_sn")
+        bitis_raw = st.get("bitis") or "-"
+        bitis = bitis_raw.replace("T", " ")[5:16] if bitis_raw != "-" else "-"
+
+        # Durum tespiti
+        if key == aktif:
+            status_code = "running"
+            durum_tr = "● çalışıyor"
+            sure_str = "sürüyor"
+            hiz = "ölçülüyor…"
+        elif rc not in (None, 0):
+            status_code = "error"
+            durum_tr = f"✗ hata rc={rc}"
+            sure_str = _fmt_dur(sure_sec)
+            hiz = "-"
+        elif st:
+            status_code = "completed_this" if key in done_now else "completed_prev"
+            durum_tr = "✓ bu turda" if key in done_now else "✓ önceki tur"
+            sure_str = _fmt_dur(sure_sec)
+            s_ = sure_sec or 0
+            hiz = f"{cnt / (s_ / 60):.0f} {unit}/dk (son tur)" if s_ >= 5 and cnt else ("anında" if cnt else "-")
+        else:
+            status_code = "none"
+            durum_tr = "○ henüz yok"
+            sure_str = "-"
+            hiz = "-"
+
+        # Kalan ve yüzde
+        if target > 0:
+            pct = min(100.0, round((cnt / target) * 100, 1))
+            kalan = max(0, target - cnt)
+        else:
+            pct = 100.0
+            kalan = 0
+
+        in_queue = key in queue_list
+        queue_pos = queue_list.index(key) + 1 if in_queue else None
+
+        phases_out.append({
+            "key": key,
+            "name": name,
+            "unit": unit,
+            "desc": desc,
+            "script": script_path,
+            "status_code": status_code,
+            "status_tr": durum_tr,
+            "output_count": cnt,
+            "target": target,
+            "kalan": kalan,
+            "pct": pct,
+            "duration": sure_str,
+            "duration_sec": sure_sec,
+            "speed": hiz,
+            "last_end": bitis,
+            "in_queue": in_queue,
+            "queue_pos": queue_pos
+        })
+
+    # Faz 7 v2 özel istatistiği
+    p7v2_file = db_v2_dir / "phase7_v2" / "soru_metadata.jsonl"
+    p7v2_stats = {"n": 0, "celiski": 0}
+    if p7v2_file.exists():
+        try:
+            for l in p7v2_file.read_text(encoding="utf-8").splitlines():
+                if not l.strip(): continue
+                o = json.loads(l)
+                p7v2_stats["n"] += 1
+                if (o.get("cevap_denetimi") or {}).get("sonuc") == "anahtar_celiskisi":
+                    p7v2_stats["celiski"] += 1
+        except Exception:
+            pass
+
+    res = {
+        "tur": tur,
+        "aktif": aktif,
+        "queue": queue_list,
+        "phases": phases_out,
+        "p7v2": p7v2_stats
+    }
+    _MASTER_PHASES_CACHE["data"] = res
+    _MASTER_PHASES_CACHE["ts"] = time.time()
+    return res
+
+def get_phase_log(key: str, lines_limit: int = 150):
+    """Belirtilen fazın veya ana döngünün log dosyasından son satırları döner."""
+    temp_dir = PROJECT_ROOT / "meds_temp"
+    log_file = temp_dir / "logs" / f"phase_cycle_{key}.log"
+    
+    # Hakem fazı için özel log ve durum desteği
+    if key == "hakem":
+        hakem_lines = []
+        if log_file.exists():
+            try:
+                raw = log_file.read_text(encoding="utf-8", errors="replace").strip()
+                if raw: hakem_lines.extend(raw.splitlines())
+            except Exception: pass
+        # En son kararlardan canlı akış satırları ekle
+        kararlar_file = temp_dir / "hakem" / "kararlar.jsonl"
+        if kararlar_file.exists():
+            try:
+                with open(kararlar_file, "rb") as fh:
+                    fh.seek(0, 2)
+                    fsize = fh.tell()
+                    fh.seek(max(0, fsize - 30000))
+                    for line in fh.read().decode("utf-8", errors="replace").splitlines():
+                        if not line.strip(): continue
+                        try:
+                            item = json.loads(line)
+                            k_tur = item.get("tur", "")
+                            k_qid = item.get("soru_id", "")
+                            k_karar = item.get("karar", "")
+                            k_alinti = (item.get("alinti") or item.get("neden") or "")[:70]
+                            k_time = item.get("zaman", "")[11:19]
+                            hakem_lines.append(f"[{k_time}] [hakem] {k_tur.upper()} #{k_qid}: karar={k_karar} -> {k_alinti}")
+                        except Exception: pass
+            except Exception: pass
+        if hakem_lines:
+            return {"key": key, "file": "phase_cycle_hakem.log + kararlar.jsonl", "lines": hakem_lines[-lines_limit:]}
+
+    if not log_file.exists() or (log_file.stat().st_size == 0):
+        # Fallback: ana phase_cycle.log veya pipeline.log
+        if key == "cycle":
+            log_file = temp_dir / "logs" / "phase_cycle.log"
+        else:
+            log_file = temp_dir / "logs" / "phase_cycle.log"
+
+    if not log_file.exists():
+        return {"key": key, "lines": ["Henüz log kaydı oluşturulmadı."]}
+
+    try:
+        with open(log_file, "rb") as fh:
+            fh.seek(0, 2)
+            fsize = fh.tell()
+            fh.seek(max(0, fsize - 50000))
+            text = fh.read().decode("utf-8", errors="replace")
+            lines = [l for l in text.splitlines() if l.strip()]
+            return {"key": key, "file": log_file.name, "lines": lines[-lines_limit:]}
+    except Exception as e:
+        return {"key": key, "error": str(e), "lines": [f"Log okuma hatası: {e}"]}
+
+def handle_master_phase_action(action: str, key: str, queue_order: list):
+    """Faz kuyruk yönetim işlemlerini (run_now, enqueue, remove, reorder, stop_active, stop_phase) kilitli uygular."""
+    PHASE_QUEUE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(PHASE_QUEUE_LOCK, "w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        try:
+            try:
+                q = json.load(open(PHASE_QUEUE_FILE, encoding="utf-8")) if PHASE_QUEUE_FILE.exists() else []
+            except Exception:
+                q = []
+
+            # 1. Aktif fazı durdurma işlemi
+            if action in ("stop_active", "stop_phase"):
+                cyc_file = PROJECT_ROOT / "meds_temp" / "state" / "phase_cycle_state.json"
+                aktif_phase = None
+                if cyc_file.exists():
+                    try:
+                        cdata = json.loads(cyc_file.read_text(encoding="utf-8"))
+                        aktif_phase = cdata.get("aktif")
+                    except Exception:
+                        pass
+                
+                target_key = key if (action == "stop_phase" and key) else aktif_phase
+                if not target_key:
+                    return {"success": False, "error": "Şu anda çalışan aktif bir faz bulunmuyor."}
+
+                # Script adına göre çalışan Python alt süreçlerini bul ve sonlandır
+                script_map = {
+                    "faz5": "multi_ai_consensus_phase5.py",
+                    "faz6": "deep_metadata_generator_phase6.py",
+                    "faz6_dogrulama": "validate_phase6_metadata.py",
+                    "faz6_5": "thesaurus_anchor_phase6_5.py",
+                    "faz7_5": "reconstruct_slides_phase7_5.py",
+                    "faz8": "phase8_curriculum_graph.py",
+                    "sozluk": "build_evidence_thesaurus.py",
+                    "faz9": "phase9_thesaurus_graph.py",
+                    "faz10": "phase10_concept_ids.py",
+                    "faz11": "phase11_question_slide.py",
+                    "ogren": "learn_links.py",
+                    "yeniden_bolme": "resplit_exam_printout.py",
+                    "karantina": "quarantine_questions.py",
+                    "veritabani": "publish_to_database.py",
+                    "yayin": "export_phase_insights.py",
+                    "asama1": "stage1_refresh.py",
+                    "faz12": "phase12_clean_notes.py",
+                    "faz13": "phase13_entities.py",
+                    "faz14": "phase14_past_question_editor.py",
+                    "ortak": "build_unified_store.py",
+                    "hakem": "referee_queue.py",
+                }
+                scr_name = script_map.get(target_key)
+                if scr_name:
+                    try:
+                        subprocess.run(["pkill", "-15", "-f", scr_name], capture_output=True, timeout=5)
+                        time.sleep(0.5)
+                        subprocess.run(["pkill", "-9", "-f", scr_name], capture_output=True, timeout=5)
+                    except Exception as kerr:
+                        print(f"[Master Stop] Process kill warning: {kerr}")
+
+                # phase_cycle_state.json dosyasında aktif durumu temizle
+                if cyc_file.exists():
+                    try:
+                        cdata = json.loads(cyc_file.read_text(encoding="utf-8"))
+                        if cdata.get("aktif") == target_key:
+                            cdata["aktif"] = None
+                            cdata.setdefault("adimlar", {})[target_key] = {
+                                "rc": 137,
+                                "sure_sn": 0,
+                                "bitis": time.strftime("%Y-%m-%dT%H:%M:%S")
+                            }
+                            cyc_file.write_text(json.dumps(cdata, ensure_ascii=False, indent=2), encoding="utf-8")
+                    except Exception:
+                        pass
+
+                return {"success": True, "action": action, "key": target_key, "message": f"'{target_key}' süreci başarıyla durduruldu."}
+
+            if action == "run_now":
+                # Hemen çalıştır: Kuyruğun en başına ekle (varsa eski yerinden çıkar)
+                if key in q:
+                    q.remove(key)
+                q.insert(0, key)
+            elif action == "enqueue":
+                # Kuyruğa ekle: Sona ekle
+                if key not in q:
+                    q.append(key)
+            elif action == "remove":
+                # Kuyruktan kaldır
+                if key in q:
+                    q.remove(key)
+            elif action == "reorder":
+                # Tüm sıralamayı güncelle
+                if isinstance(queue_order, list):
+                    q = [str(k) for k in queue_order]
+            elif action == "clear":
+                q = []
+
+            tmp = PHASE_QUEUE_FILE.with_suffix(".tmp")
+            json.dump(q, open(tmp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+            tmp.replace(PHASE_QUEUE_FILE)
+            return {"success": True, "action": action, "key": key, "queue": q}
+        except Exception as e:
+            return {"success": False, "error": str(e)}
+        finally:
+            fcntl.flock(lk, fcntl.LOCK_UN)
+
 def handle_master_schedule(payload: dict):
     try:
-        sys.path.insert(0, str(BASE_DIR / "scripts"))
+        sys.path.insert(0, str(MEDS_DIR / "scripts"))
         import master_controller
         ctrl = master_controller.MasterController()
         ctrl.schedule_config["enabled"] = bool(payload.get("enabled", False))
@@ -2851,3 +3809,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+

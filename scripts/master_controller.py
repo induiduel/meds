@@ -134,6 +134,24 @@ MANAGED_SCRIPTS = {
         "default_enabled": False,
         "supports_gpu": True
     },
+    "phase14_cloud": {
+        "name": "Faz 14: Çıkmış Soru İyileştirme (Gemini Flash Bulut)",
+        "script": "scripts/advanced_ai/phase14_cloud_question_editor.py",
+        "cwd": ROOT_DIR,
+        "category": "advanced_ai",
+        "desc": "Gemini 3.8 Flash bulut modeliyle Robbins/Guyton tıp literatürüne dayalı kök/şık onarımı ve YZV üretimi.",
+        "default_enabled": False,
+        "supports_gpu": False
+    },
+    "phase14_local": {
+        "name": "Faz 14: Çıkmış Soru Redaksiyonu (Gemma 3:4b Yerel GPU)",
+        "script": "scripts/advanced_ai/phase14_past_question_editor.py",
+        "cwd": ROOT_DIR,
+        "category": "advanced_ai",
+        "desc": "Yerel RTX 4060 GPU Gemma 3 modeliyle OCR/imla ve müfredat redaksiyonu üretimi.",
+        "default_enabled": False,
+        "supports_gpu": True
+    },
     "terminal_monitor": {
         "name": "Terminal Curses Monitörü (monitor.py)",
         "script": "scripts/monitor.py",

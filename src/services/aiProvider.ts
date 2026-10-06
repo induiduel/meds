@@ -128,9 +128,10 @@ export function getFreeGeminiKeys(customKey?: string): KeyInfo[] {
 
   // 1. Custom key passed by user/admin (their own key, sent per request)
   add(customKey, 'Kullanıcı Özel Anahtarı');
-  // 2-3. Free tier keys from .env
+  // 2-4. Free tier keys from .env
   add(process.env.GEMINI_API_KEY, 'Ücretsiz Plan 1 (Gemini)');
   add(process.env.GEMINI_FREE_KEY_2, 'Ücretsiz Plan 2 (Gemini)');
+  add(process.env.GEMINI_BACKUP_KEY, 'Yedek Anahtar (Gemini Backup)');
 
   return list;
 }

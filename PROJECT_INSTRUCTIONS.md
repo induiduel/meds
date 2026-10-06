@@ -131,3 +131,17 @@ Projeye yeni bir algoritma, model veya script eklendiğinde şu protokol uygulan
 2. **Bellek Güvenliği:** Veriler RAM'de biriktirilmemeli, `diskcache` SQLite veya disk dosyalarına yazılmalıdır.
 3. **Watchdog Listesi:** Yeni eklenen Docker konteyneri veya kritik servisler `scripts/agents/watchdog.py` içindeki denetim döngüsüne eklenmelidir.
 4. **Belgelendirme:** Değişiklikler hem bu `PROJECT_INSTRUCTIONS.md` dosyasına hem de `AGENTS.md` dosyasına işlenerek Git'e pushlanmalıdır.
+
+## Faz 14: Çıkmış Soru Redaksiyon Kuyruğu
+
+`scripts/advanced_ai/phase14_past_question_editor.py`, çıkmış soru arşivinden her çalıştırmada en fazla
+10 soruyu yerel modelle inceler. Sadece kaynak metinden doğrulanabilen OCR, imla ve biçim düzeltmeleri
+önerir; mevcut soru kaydını değiştirmez. Öneriler ve destek oranları
+`meds_database_v2/phase14_past_question_editor/reviews.jsonl` içinde inceleme için tutulur.
+
+```bash
+python scripts/advanced_ai/phase14_past_question_editor.py --limit 10
+```
+
+Faz, `phase_cycle.py` içinde otomatik sıraya eklenmiştir. Tüm kayıtların yeniden değerlendirilmesi için
+`--full` kullanılabilir.
