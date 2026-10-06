@@ -197,13 +197,14 @@ def main():
     # ---- Müfredat bağlantısı: Faz 9 birleşik çıktısı (Faz 8 öncelikli), yoksa Faz 8
     # Yalnızca Faz 8 yüksek güvenli kayıtlar yayınlanır. Faz 9'un tek başına "yüksek" dediği eşleşmeler elle denetimde
     # ~%45 doğru çıktı → yayınlanmaz. Faz 9 aynı konuyu bulduysa "iki_yontem" olarak işaretlenir.
-    src, use9 = (P9, True) if P9.exists() else (P8, False)
+    clk = DB / "derived" / "curriculum_links" / "soru_kazanim.jsonl"
+    src, use9 = (clk, True) if clk.exists() else ((P9, True) if P9.exists() else (P8, False))
     if src.exists():
         for r in jsonl(src):
-            if r.get("guven") != "yuksek":
+            if r.get("guven") not in ("yuksek", "hakem"):
                 continue
             karar = r.get("karar") if use9 else "faz8"
-            if use9 and karar not in ("faz8_faz9_ayni", "faz8_onceligi"):
+            if use9 and karar not in ("faz8_faz9_ayni", "faz8_onceligi", "hakem"):
                 continue
             qid = r.get("soru_id")
             ks = []
@@ -221,10 +222,11 @@ def main():
                 cnt["iki_yontem"] = cnt.get("iki_yontem", 0) + (karar == "faz8_faz9_ayni")
 
     # ---- Faz 11: soru ↔ ders slaytı (yalnızca yüksek/orta güven; elle denetim ~%78 doğru, düşükler hakem kuyruğunda)
-    p11 = P8.parent.parent / "phase11" / "soru_slayt.jsonl"
+    cl = DB / "derived" / "curriculum_links" / "soru_slayt.jsonl"   # hakem kararları uygulanmış birleşik veri
+    p11 = cl if cl.exists() else P8.parent.parent / "phase11" / "soru_slayt.jsonl"
     if p11.exists():
         for r in jsonl(p11):
-            if r.get("guven") not in ("yuksek", "orta") or not r.get("slaytlar"):
+            if r.get("guven") not in ("yuksek", "orta", "hakem") or not r.get("slaytlar"):
                 continue
             items.setdefault(r["soru_id"], {})["slayt"] = {
                 "guven": r["guven"],
