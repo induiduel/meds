@@ -25,7 +25,8 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 // 1. Firebase Bağlantısı
 const cfgPath = path.join(ROOT_DIR, 'firebase-applet-config.json');
 let firestoreDb = null;
-if (fs.existsSync(cfgPath)) {
+// Firebase veritabanı devre dışı (src/services/dbFlags.ts): yalnızca MEDS_FIREBASE_ENABLED=1 ise bağlanılır/yazılır
+if (process.env.MEDS_FIREBASE_ENABLED === '1' && fs.existsSync(cfgPath)) {
   try {
     const cfg = JSON.parse(fs.readFileSync(cfgPath, 'utf8'));
     const app = initializeApp(cfg, 'hybrid-tunnel-worker');

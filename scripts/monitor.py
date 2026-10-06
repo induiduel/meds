@@ -47,7 +47,7 @@ CYCLE_STATE_FILE = TEMP_DIR / "state" / "phase_cycle_state.json"
 CYCLE_LOG_FILE = TEMP_DIR / "logs" / "phase_cycle.log"
 STAGE1_REPORT_FILE = TEMP_DIR / "state" / "stage1_refresh_report.json"
 SERVICES = ["meds-web", "meds-pipeline", "meds-phases", "meds-dashboard", "meds-downloads-watcher"]
-CYCLE_NAMES = {"yayin": "Site yayını", "yeniden_bolme": "Yeniden bölme", "karantina": "Karantina", "veritabani": "Veritabanı yüklemesi", "faz5": "Faz 5", "faz6": "Faz 6", "faz6_dogrulama": "Faz 6 doğrulama", "faz6_5": "Faz 6.5", "faz7_5": "Faz 7.5", "faz8": "Faz 8", "sozluk": "Kanıtlı sözlük", "faz9": "Faz 9", "faz10": "Faz 10", "faz11": "Faz 11", "faz12": "Faz 12", "hakem": "Hakem kuyruğu",
+CYCLE_NAMES = {"yayin": "Site yayını", "yeniden_bolme": "Yeniden bölme", "karantina": "Karantina", "veritabani": "Veritabanı yüklemesi", "faz5": "Faz 5", "faz6": "Faz 6", "faz6_dogrulama": "Faz 6 doğrulama", "faz6_5": "Faz 6.5", "faz7_5": "Faz 7.5", "faz8": "Faz 8", "sozluk": "Kanıtlı sözlük", "faz9": "Faz 9", "faz10": "Faz 10", "faz11": "Faz 11", "faz12": "Faz 12", "ogren": "Öğren bağlantıları", "faz13": "Faz 13", "ortak": "Ortak depo", "hakem": "Hakem kuyruğu",
                "asama1": "Aşama 1"}
 
 
@@ -243,6 +243,9 @@ PHASE_ROWS = [
     ("yayin", "Site yayını", "soru", lambda: _json_len(DB_DIR / "derived" / "phase_insights" / "insights.json", "items")),
     ("asama1", "Aşama 1 İndirme & OCR", "kaynak", lambda: len(read_json_safe(STAGE1_REPORT_FILE).get("yeniden_ocr") or [])),
     ("faz12", "Faz 12 Ders notu temizleme", "chunk", lambda: read_json_safe(DB_DIR / "derived" / "clean_notes" / "rapor.json").get("degisen", 0)),
+    ("ogren", "Öğren bağlantıları", "soru", lambda: _json_len(DB_DIR / "derived" / "learn_links.json", "baglantilar")),
+    ("faz13", "Faz 13 Tıbbi varlıklar", "soru", lambda: _lines(DB_DIR / "derived" / "entities" / "soru_varliklar.jsonl")),
+    ("ortak", "Ortak RAG deposu", "parça", lambda: _lines(DB_DIR / "ortak" / "rag" / "ders_materyali.jsonl")),
     ("hakem", "Hakem kuyruğu", "karar", lambda: _lines(TEMP_DIR / "hakem" / "kararlar.jsonl")),
 ]
 
@@ -270,6 +273,18 @@ def recent_errors(limit=8):
         for l in lines[-400:]:
             if ERROR_PAT.search(l) and "hata: 0" not in l and "rc=0" not in l:
                 out.append((f.stat().st_mtime, f.name, l.strip()))
+    # Sonradan başarıyla çalışan adımın eski "✗" kaydı gösterilmez (ör. düzeltilmiş .env hatası)
+    import re as _re2
+    last_ok, last_fail = {}, {}
+    if CYCLE_LOG_FILE.exists():
+        for l in open(CYCLE_LOG_FILE, encoding="utf-8", errors="replace"):
+            m = _re2.search(r"\[(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)\] \[phase_cycle\] ([✓✗]) (.+?) — rc=", l)
+            if m:
+                (last_ok if m.group(2) == "✓" else last_fail)[m.group(3)] = m.group(1)
+    def _stale(line):
+        m = _re2.search(r"\[(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)\] \[phase_cycle\] ✗ (.+?) — rc=", line)
+        return bool(m and last_ok.get(m.group(2), "") > m.group(1))
+    out = [o for o in out if not _stale(o[2])]
     out.sort(key=lambda x: x[0])
     seen, res = set(), []
     for _, name, l in reversed(out):

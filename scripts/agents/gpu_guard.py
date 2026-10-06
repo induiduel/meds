@@ -35,7 +35,7 @@ MAX_UTIL = int(os.environ.get("MEDS_GPU_MAX_UTIL", "92"))
 EMERGENCY = int(os.environ.get("MEDS_GPU_EMERGENCY", "95"))
 POLL = 2.0
 # GPU'ya iş gönderen (Ollama / CUDA) istemci betikleri
-CLIENTS = ("deep_metadata_generator_phase6.py", "multi_ai_consensus_phase5.py", "phase10_concept_ids.py", "phase7_question_metadata_v2.py", "read_document.py", "thesaurus_anchor_phase6_5.py",
+CLIENTS = ("deep_metadata_generator_phase6.py", "multi_ai_consensus_phase5.py", "phase10_concept_ids.py", "phase11_question_slide.py", "learn_links.py", "phase13_entities.py", "phase7_question_metadata_v2.py", "read_document.py", "thesaurus_anchor_phase6_5.py",
            "reconstruct_slides_phase7_5.py", "stage3_merge.py", "stage5_advanced_ai.py", "train_lora.py")
 
 paused: set[int] = set()

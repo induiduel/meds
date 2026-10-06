@@ -1,4 +1,5 @@
 import { loadAllDecks } from '../data/deckStore';
+import { safeJsonFetch } from './api';
 import { QuestionItem } from '../types';
 import { SlideFlashcard } from '../components/learn/InteractiveDeckView';
 
@@ -85,10 +86,13 @@ function isDisciplineCompatible(qDisc: string, deckDisc: string): boolean {
 class LearnMatcherService {
   private directIdMap = new Map<string, QuestionLearnMatch>();
   private directStemMap = new Map<string, QuestionLearnMatch>();
+  private slideByKey = new Map<string, QuestionLearnMatch>();
   private slideIndex: Array<QuestionLearnMatch & { keywords: string[]; normDiscipline: string; rawDiscipline: string }> = [];
   private cache = new Map<string, QuestionLearnMatch | null>();
 
   private loading: Promise<void> | null = null;
+  /** Sunucuda önceden hesaplanan bağlantılar (scripts/advanced_ai/learn_links.py: BM25+e5+cross-encoder, eşikli). */
+  private computed: Map<string, { deckId: string; slideNumber: number }> | null = null;
 
   /**
    * Slayt indeksini arka planda kurar (desteler parça parça yüklenir). Hazır olana kadar
@@ -96,7 +100,12 @@ class LearnMatcherService {
    */
   public ensureLoaded(): Promise<void> {
     if (!this.loading) {
-      this.loading = loadAllDecks<any>().then((decks) => {
+      const links = safeJsonFetch<{ baglantilar: Record<string, { deckId: string; slideNumber: number }> }>('/api/learn-links')
+        .then((r) => {
+          if (r.ok && r.data?.baglantilar) this.computed = new Map(Object.entries(r.data.baglantilar));
+        })
+        .catch(() => {});
+      this.loading = Promise.all([loadAllDecks<any>(), links]).then(([decks]) => {
         this.init(decks);
         this.cache.clear();
       });
@@ -127,6 +136,8 @@ class LearnMatcherService {
           matchType: 'direct',
           matchScore: 100
         };
+
+        this.slideByKey.set(`${d.id}#${Number(s.slideNumber || 1)}`, slideMatchBase as QuestionLearnMatch);
 
         // 1. Direct question matches inside deck
         for (const rq of (s.relatedQuestions || [])) {
@@ -167,6 +178,18 @@ class LearnMatcherService {
       return this.cache.get(q.id)!;
     }
 
+    // 0. Önceden hesaplanmış bağlantı (güvenilir). Harita yüklendiyse ve bu soru için bağlantı yoksa
+    //    tahmin edilmez: yanlış slayta göndermek yerine "Öğren" gösterilmez.
+    if (this.computed) {
+      const c = this.computed.get(String(q.id));
+      const hit = c ? this.slideByKey.get(`${c.deckId}#${c.slideNumber}`) : undefined;
+      if (hit) {
+        const res = { ...hit, matchType: 'computed' as any, matchScore: 90 };
+        this.cache.set(q.id, res);
+        return res;
+      }
+    }
+
     // 1. Exact ID match
     if (this.directIdMap.has(q.id)) {
       const match = this.directIdMap.get(q.id)!;
@@ -185,7 +208,12 @@ class LearnMatcherService {
       }
     }
 
-    // 3. Keyword / Topic match with strict discipline & multi-keyword requirement
+    // 3. Anahtar kelime tahmini: genel kelimesi bol giriş/özet slaytlarına yanlış yönlendiriyordu (denetim 2026-10-06).
+    //    Sunucu bağlantıları yüklendiyse kullanılmaz; yalnızca sunucuya erişilemezse son çare.
+    if (this.computed) {
+      this.cache.set(q.id, null);
+      return null;
+    }
     const qDiscipline = q.discipline || '';
     if (!qDiscipline) {
       this.cache.set(q.id, null);

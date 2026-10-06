@@ -528,8 +528,19 @@ def main():
         except (IndexError, ValueError):
             max_cycles = 5
     cycles_done = 0
+    # Süre bütçesi (faz zinciri 2 sa zaman aşımından önce temiz çıkılsın; kalan sonraki tura): --max-seconds N
+    budget = None
+    if "--max-seconds" in sys.argv:
+        try:
+            budget = int(sys.argv[sys.argv.index("--max-seconds") + 1])
+        except (IndexError, ValueError):
+            budget = None
+    started = time.time()
 
     while True:
+        if budget and time.time() - started > budget:
+            print(f"[Faz 6] Süre bütçesi ({budget} sn) doldu; kalan sorular sonraki turda.")
+            break
         # 1. Ders Notu Zamanlaması Kontrolü (Her 2 saatte bir)
         if scheduler.should_process_lecture():
             process_single_lecture(scheduler)

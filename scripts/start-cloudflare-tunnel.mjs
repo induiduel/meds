@@ -25,7 +25,8 @@ let tunnelProcess = null;
 // Firebase Bağlantısı (Varsa Firestore'a tünel adresini otomatik kaydeder)
 const cfgPath = path.join(ROOT_DIR, 'firebase-applet-config.json');
 let firestoreDb = null;
-if (fs.existsSync(cfgPath)) {
+// Firebase veritabanı devre dışı (src/services/dbFlags.ts): yalnızca MEDS_FIREBASE_ENABLED=1 ise bağlanılır/yazılır
+if (process.env.MEDS_FIREBASE_ENABLED === '1' && fs.existsSync(cfgPath)) {
   try {
     const cfg = JSON.parse(fs.readFileSync(cfgPath, 'utf8'));
     const app = initializeApp(cfg, 'cloudflare-tunnel-worker');

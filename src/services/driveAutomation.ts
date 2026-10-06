@@ -1,3 +1,4 @@
+import { FIREBASE_DB_ENABLED } from './dbFlags';
 import { LectureNote, QuestionItem, QuestionLectureMatch } from '../types';
 import { db, cleanForFirestore } from './firestoreDb';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
@@ -84,7 +85,7 @@ export async function renderSingleDriveSlide(
   }
 
   // 2. Firestore fallback
-  if (!note) {
+  if (!note && FIREBASE_DB_ENABLED) {
     try {
       const snap = await getDoc(doc(db, 'lecture_notes', meta.id));
       if (snap.exists()) {
@@ -127,7 +128,7 @@ export async function renderSingleDriveSlide(
   }
 
   // 5. Save to Firestore (client copy)
-  try {
+  if (FIREBASE_DB_ENABLED) try {
     await setDoc(doc(db, 'lecture_notes', note.id), cleanForFirestore(note));
   } catch (err) {}
 

@@ -1,3 +1,4 @@
+import { FIREBASE_DB_ENABLED } from './dbFlags';
 import { Committee, QuestionItem, MemoryFragment, QuestionOption, ReconstructedQuestion } from '../types';
 import { FirestoreDbService, INITIAL_COMMITTEES, COMMITTEE_SORT_ORDER, filterCurrent2026_2027Committees, db } from './firestoreDb';
 import { multiDbManager } from './multiDbManager';
@@ -2333,6 +2334,7 @@ export const ApiService = {
         createdAt: new Date().toISOString(),
         upvotes: 0
       };
+      if (!FIREBASE_DB_ENABLED) throw new Error('Firebase veritabanı devre dışı');
       await addDoc(collection(db, 'past_question_comments'), {
         ...commentObj,
         questionId
@@ -2415,7 +2417,7 @@ export const ApiService = {
     } catch (_) {}
 
     // 4. Firestore Dual Cloud Fallback (Firebase Spark/Cloud kesintisiz yedek)
-    try {
+    if (FIREBASE_DB_ENABLED) try {
       await addDoc(collection(db, 'past_question_reports'), reportObj);
     } catch (err: any) {
       console.warn('[reportPastQuestion] Firestore kaydı yapılamadı:', err.message);

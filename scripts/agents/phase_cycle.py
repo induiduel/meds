@@ -38,7 +38,7 @@ PAUSE_BETWEEN_CYCLES = int(os.environ.get("MEDS_PHASE_PAUSE_SEC", str(20 * 60)))
 # (anahtar, ad, komut, zaman aşımı sn)
 STEPS = [
     ("faz5", "Faz 5 · Çoklu AI konsensüs", [PY, str(AI / "multi_ai_consensus_phase5.py")], 3 * 3600),
-    ("faz6", "Faz 6 · Derin metadata (en çok 40 parti, kaldığı yerden)", [PY, str(AI / "deep_metadata_generator_phase6.py"), "--cycles", "40"], 2 * 3600),
+    ("faz6", "Faz 6 · Derin metadata (en çok 40 parti, kaldığı yerden)", [PY, str(AI / "deep_metadata_generator_phase6.py"), "--cycles", "40", "--max-seconds", "6000"], 2 * 3600),
     ("faz6_dogrulama", "Faz 6 doğrulama (CPU, modelsiz)", [PY, str(AI / "validate_phase6_metadata.py")], 900),
     ("faz6_5", "Faz 6.5 · Terim sözlüğü ve soru–slayt çapaları", [PY, str(AI / "thesaurus_anchor_phase6_5.py")], 3600),
     # Faz 7 (mikro-ajan hikâye) DEVRE DIŞI — 2026-10-05 denetimi: "hangisi yanlıştır" sorularında yanlış ifadeyi
@@ -49,13 +49,16 @@ STEPS = [
     ("sozluk", "Kanıtlı sözlük (ders materyalinden kısaltma/yazım varyantı)", [PY, str(AI / "build_evidence_thesaurus.py")], 1800),
     ("faz9", "Faz 9 · Sözlük destekli müfredat ağacı", [PY, str(AI / "phase9_thesaurus_graph.py")], 3600),
     ("faz10", "Faz 10 · Kavram kimlikleri (Wikidata/UMLS) + kimlikli ağaç", [PY, str(AI / "phase10_concept_ids.py")], 3 * 3600),
-    ("faz11", "Faz 11 · Soru–slayt eşleşmesi (BM25+kavram+e5+cross-encoder)", [PY, str(AI / "phase11_question_slide.py")], 3 * 3600),
+    ("faz11", "Faz 11 · Soru–slayt eşleşmesi (BM25+kavram+e5+cross-encoder)", [PY, str(AI / "phase11_question_slide.py")], 4 * 3600),
+    ("ogren", "Öğren bağlantıları (soru → Öğren slaytı, eşikli)", [PY, str(AI / "learn_links.py")], 3 * 3600),
     ("yeniden_bolme", "Sınav çıktısını kuralla yeniden bölme", [PY, str(AI / "resplit_exam_printout.py")], 600),
     ("karantina", "Soru karantinası + onarım", [PY, str(AI / "quarantine_questions.py")], 600),
     ("veritabani", "Veritabanına güvenli yükleme (derived/curriculum_links)", [PY, str(AI / "publish_to_database.py")], 900),
     ("yayin", "Site · Faz 5/6/6.5/8 analizlerini yayınla", [PY, str(AI / "export_phase_insights.py")], 900),
     ("asama1", "Aşama 1 · İndirme ve hatalı OCR yenileme", [PY, str(AGENTS / "stage1_refresh.py")], 6 * 3600),
     ("faz12", "Faz 12 · Ders notu temizleme (glif/OCR çöpü/üst-alt bilgi)", [PY, str(AI / "phase12_clean_notes.py")], 1800),
+    ("faz13", "Faz 13 · Tıbbi varlıklar (GLiNER + terminoloji)", [PY, str(AI / "phase13_entities.py")], 4 * 3600),
+    ("ortak", "Ortak veri deposu + RAG parçaları", [PY, str(AI / "build_unified_store.py")], 1800),
     ("hakem", "Hakem kuyruğu (alıntı doğrulamalı konu/slayt denetimi)", [PY, str(AI / "referee_queue.py"), "--max", "200"], 2 * 3600),
 ]
 
@@ -93,14 +96,45 @@ def save_state(state: dict):
     json.dump(state, open(STATE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 
+# GPU'yu tek başına kullanabilecek adımlar: başlamadan önce Ollama modeli GPU belleğinden boşaltılır (aynı anda iki CUDA
+# işi 2026-10-06'da "GPU fallen off the bus" hatasına yol açtı). GPU koruyucu (meds-gpuguard) bu adımları da izler.
+# 2026-10-06 16:5x: Ollama boşaltılmış, GPU'da TEK BAŞINA çalışan PyTorch işi (learn_links, e5/cross-encoder) yine
+# "GPU fallen off the bus" (Xid 79) verdi → sorun eşzamanlılık değil, bu kartta PyTorch CUDA işi. PyTorch adımları CPU'da.
+GPU_STEPS: set = set()
+OLLAMA = os.environ.get("OLLAMA_URL") or "http://127.0.0.1:11434"
+
+
+def unload_ollama() -> bool:
+    import urllib.request
+    try:
+        ps = json.loads(urllib.request.urlopen(f"{OLLAMA}/api/ps", timeout=10).read()).get("models") or []
+        for m in ps:
+            body = json.dumps({"model": m.get("name"), "keep_alive": 0}).encode()
+            urllib.request.urlopen(urllib.request.Request(f"{OLLAMA}/api/generate", data=body,
+                                                          headers={"Content-Type": "application/json"}), timeout=60).read()
+        time.sleep(3)
+        apps = subprocess.run(["nvidia-smi", "--query-compute-apps=pid", "--format=csv,noheader"], capture_output=True, text=True, timeout=10)
+        return apps.returncode == 0 and not apps.stdout.strip()
+    except Exception:
+        return False
+
+
 def run_step(key: str, name: str, cmd: list[str], timeout: int) -> dict:
     wait_cool()
+    gpu_free = False
+    if key in GPU_STEPS and gpu_temp() is not None:
+        gpu_free = unload_ollama()
+        log(f"  GPU {'boş — adım GPU kullanacak' if gpu_free else 'boşaltılamadı — adım CPU kullanacak'}")
     log(f"▶ {name}")
     t0 = time.time()
     out_path = TEMP / "logs" / f"phase_cycle_{key}.log"
     with open(out_path, "w", encoding="utf-8") as out:
         try:
             env = {**os.environ, "PYTHONUNBUFFERED": "1"}
+            if key in GPU_STEPS:
+                env.update({"MEDS_FAZ11_DEVICE": "auto" if gpu_free else "cpu", "MEDS_GPU_OK": "1" if gpu_free else "0"})
+                if not gpu_free:
+                    env["CUDA_VISIBLE_DEVICES"] = ""
             p = subprocess.Popen(cmd, env=env, cwd=str(ROOT), stdout=out, stderr=subprocess.STDOUT, start_new_session=True)
             rc = p.wait(timeout=timeout)
         except subprocess.TimeoutExpired:

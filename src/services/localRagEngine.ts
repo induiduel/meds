@@ -20,6 +20,7 @@
  */
 
 import fs from 'fs';
+import { applyCleanOverlay } from './lectureCleanOverlay.ts';
 import path from 'path';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
@@ -539,7 +540,8 @@ ${expl ? `\nÖğrenci & AI Açıklaması:\n${expl}` : ''}`.trim();
 export function chunkLectureNotes(): RagChunk[] {
   const lnPath = path.resolve(DATA_DIR, 'lecture_notes.json');
   if (!fs.existsSync(lnPath)) return [];
-  const list = JSON.parse(fs.readFileSync(lnPath, 'utf-8'));
+  // Faz 12 temizlik katmanı (glif/OCR çöpü/üst-alt bilgi) sayfa metnine uygulanır
+  const list = JSON.parse(fs.readFileSync(lnPath, 'utf-8')).map((n: any) => applyCleanOverlay(n));
   const chunks: RagChunk[] = [];
   const now = new Date().toISOString();
 
@@ -582,6 +584,43 @@ ${pageText}`.trim();
         updatedAt: note.updatedAt || now
       });
     }
+  }
+  return chunks;
+}
+
+// 3b. Ortak RAG ders materyali deposu (meds_database/ortak/rag/ders_materyali.jsonl — build_unified_store.py):
+//     yeni hattın tüm ders slaytları, Faz 12 temiz metin, sınav dökümleri hariç; kurul/ders/konu ve kavram kimlikli.
+export function chunkUnifiedMaterial(): RagChunk[] {
+  const f = path.join(DESKTOP_DATABASE_DIR, 'ortak', 'rag', 'ders_materyali.jsonl');
+  if (!fs.existsSync(f)) return [];
+  const chunks: RagChunk[] = [];
+  const now = new Date().toISOString();
+  for (const line of fs.readFileSync(f, 'utf-8').split('\n')) {
+    if (!line.trim()) continue;
+    let r: any;
+    try { r = JSON.parse(line); } catch { continue; }
+    const text = String(r.metin || '').trim();
+    if (text.length < 40) continue;
+    const committeeId = r.kurul ? `donem3-kurul${r.kurul}` : 'donem3';
+    const content = `[DERS SLAYTI]
+Ders: ${r.ders || 'Tıp'}${r.konu ? `\nKonu: ${r.konu}` : ''}
+Kaynak: ${r.kaynak} · Sayfa ${r.sayfa ?? '-'}
+İçerik:
+${text}`;
+    chunks.push({
+      id: `chunk-ortak-${r.id}`,
+      documentId: String(r.kaynak_id),
+      documentType: 'lecture_slide',
+      committeeId,
+      discipline: r.ders || 'Tıp',
+      title: `${r.kaynak} (Sayfa ${r.sayfa ?? '-'})`,
+      pageNumber: typeof r.sayfa === 'number' ? r.sayfa : undefined,
+      content,
+      metadata: { sourceId: r.kaynak_id, chunkId: r.id, topic: r.konu, concepts: r.kavramlar || [], clean: !!r.temiz, origin: 'ortak_rag' },
+      hash: hashContent(content),
+      createdAt: now,
+      updatedAt: now,
+    });
   }
   return chunks;
 }
@@ -1114,6 +1153,11 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
     const ls = chunkLectureNotes();
     console.log(`✓ 3/8 Ders Slaytları: ${ls.length} sayfa/parça`);
     allChunks.push(...ls);
+
+    // 3b. Ortak RAG deposu (yeni hat ders materyali, temiz metin)
+    const um = chunkUnifiedMaterial();
+    console.log(`✓ 3b Ortak Ders Materyali (yeni hat): ${um.length} parça`);
+    allChunks.push(...um);
 
     // 4. Summaries & spots
     const sm = chunkLectureSummaries();

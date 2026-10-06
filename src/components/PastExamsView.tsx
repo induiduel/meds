@@ -534,7 +534,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         const inId = (q.id || '').toLowerCase().includes(query);
         const inTopic = (q.topic || '').toLowerCase().includes(query);
         const inDiscipline = (q.discipline || '').toLowerCase().includes(query);
-        const inStem = (q.reconstruction?.stem || '').toLowerCase().includes(query);
+        const inStem = (q.reconstruction?.stem || q.stem || '').toLowerCase().includes(query);
         const inFragments = (q.fragments || []).some(f => f.text.toLowerCase().includes(query));
         const inOptions = (q.options || []).some(o => o.text.toLowerCase().includes(query));
         const inNumber = (q.questionNumber?.toString() || '').includes(query);
@@ -548,7 +548,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
       // 3. Committee filter
       if (selectedCommittee !== 'all') {
-        if (q.committeeId !== selectedCommittee) {
+        // içerik kurulu (faz verisi) da eşleşir: final/bütünleme soruları konusunun kurulunda da listelenir
+        if ((q as any).committeeUncertain && (q as any).contentCommitteeId !== selectedCommittee) return false;
+        if (q.committeeId !== selectedCommittee && (q as any).contentCommitteeId !== selectedCommittee) {
           return false;
         }
       }

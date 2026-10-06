@@ -55,7 +55,7 @@ export function QuestionInsightsPanel({ questionId }: { questionId: string }) {
   const terms: string[] = Array.from(new Set<string>([...(f65?.terimler || []), ...(f5?.terimler || [])])).slice(0, 12);
   const synonyms = Object.entries((f65?.esanlamlilar || {}) as Record<string, string[]>).filter(([, v]) => v?.length);
   if (!k && !terms.length && !synonyms.length) return null;
-  const baslik = k ? `${k.ders} · ${k.konu}` : 'Terimler';
+  const baslik = k ? [k.ders, k.konu].filter(Boolean).join(' · ') : 'Terimler';
 
   return (
     <div className="rounded-xl bg-field">
@@ -75,10 +75,10 @@ export function QuestionInsightsPanel({ questionId }: { questionId: string }) {
         <div className="px-3.5 pb-3.5 flex flex-col gap-3 text-[13.5px] text-ink-2">
           {k && (
             <section className="flex flex-col gap-1">
-              <h4 className="m-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3">Kazanım</h4>
-              <p className="m-0 text-ink">{k.kazanim}</p>
+              <h4 className="m-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3">{k.kazanim ? 'Kazanım' : 'Müfredat'}</h4>
+              {k.kazanim && <p className="m-0 text-ink">{k.kazanim}</p>}
               <p className="m-0 text-[12px] text-ink-3">
-                Kurul {k.kurul} · {k.ders} · {k.konu}
+                {['Kurul ' + k.kurul, k.ders, k.konu].filter(Boolean).join(' · ')}
               </p>
             </section>
           )}

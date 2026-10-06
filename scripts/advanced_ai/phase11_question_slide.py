@@ -45,7 +45,7 @@ TREE = [TEMP / "phase10" / "soru_kazanim.jsonl", TEMP / "phase9" / "soru_kazanim
 KONULAR = TEMP / "phase8" / "konular.jsonl"
 EMB_MODEL = "intfloat/multilingual-e5-small"
 CE_MODEL = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
-K_CAND = 30
+K_CAND = 20  # 30 → 20: en iyi adaylar zaten ilk sıralarda; CPU süresi ~%35 kısalır
 
 
 def log(m):

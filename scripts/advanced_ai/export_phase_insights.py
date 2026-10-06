@@ -235,6 +235,20 @@ def main():
             }
             cnt["slayt"] = cnt.get("slayt", 0) + 1
 
+    # ---- Kesin müfredat ataması (curriculum_resolve.py) Faz 8'den önceliklidir: konu farklıysa Faz 8 kazanımı gösterilmez
+    rp = DB / "derived" / "curriculum_links" / "soru_mufredat.json"
+    if rp.exists():
+        for qid, v in (json.load(open(rp, encoding="utf-8")).get("sorular") or {}).items():
+            cur = items.setdefault(qid, {}).get("mufredat")
+            k0 = ((cur or {}).get("kazanimlar") or [{}])[0]
+            same = bool(cur) and k0.get("konu") == v.get("konu") and k0.get("ders") == v.get("ders")
+            if not same:
+                items[qid]["mufredat"] = {"guven": "kesin" if v.get("kaynak") == "sinav_basligi" else "orta",
+                                          "dogrulama": v.get("kaynak"),
+                                          "kazanimlar": [{"kurul": v.get("kurul"), "ders": v.get("ders"), "konu": v.get("konu"),
+                                                          "kazanim": v.get("kazanim"), "kanit": None}]}
+                cnt["mufredat_kesin_atama"] = cnt.get("mufredat_kesin_atama", 0) + 1
+
     # ---- Kanıtlı sözlük: soruda geçen kısaltmaların açılımı (ders materyalinden, kaynaklı)
     if EVID.exists():
         abbr = {}  # katlanmış kısaltma → (kısaltma, açılım)

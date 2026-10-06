@@ -759,6 +759,32 @@ app.get('/api/questions', (req, res) => {
 });
 
 // Faz 5/6/6.5/8 analizleri (müfredat kazanımı, slayt kanıtı, terimler). Faz 6 doğrulanmamış AI çıktısıdır.
+// Ortak veri kataloğu: tüm veri kümeleri tek yerden (meds_database/ortak/KATALOG.json — build_unified_store.py)
+app.get('/api/data-catalog', (_req, res) => {
+  try {
+    const f = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'ortak', 'KATALOG.json');
+    if (!fs.existsSync(f)) return res.json({ veri_kumeleri: [] });
+    const cat = JSON.parse(fs.readFileSync(f, 'utf-8'));
+    // yerel dosya yolları istemciye gönderilmez
+    cat.veri_kumeleri = (cat.veri_kumeleri || []).map(({ yol, ortak_yol, ...rest }: any) => rest);
+    res.json(cat);
+  } catch (err: any) {
+    res.status(500).json({ error: 'Veri kataloğu okunamadı: ' + err.message });
+  }
+});
+
+// Öğren bağlantıları (learn_links.py): soru → Öğren destesi slaytı, eşik altı bağlantı yok
+app.get('/api/learn-links', (_req, res) => {
+  try {
+    const f = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'derived', 'learn_links.json');
+    if (!fs.existsSync(f)) return res.json({ baglantilar: {} });
+    res.setHeader('Cache-Control', 'public, max-age=300');
+    res.type('application/json').send(fs.readFileSync(f, 'utf-8'));
+  } catch (err: any) {
+    res.status(500).json({ error: 'Öğren bağlantıları okunamadı: ' + err.message });
+  }
+});
+
 app.get('/api/insights/summary', (_req, res) => {
   res.json(getInsightsSummary());
 });
