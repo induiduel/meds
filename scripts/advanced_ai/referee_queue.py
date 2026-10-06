@@ -156,7 +156,73 @@ def slayt_items(done):
             yield key, r
 
 
+COMBINE_SRC = "c4259dc9087e"   # sınav sitesi çıktısı: kayıtlı "cevap" öğrencinin işaretlediği şık (doğrulanmamış)
+QUAR = Path(os.environ.get("MEDS_DATABASE_DIR") or P8.PROJECT / "meds_database") / "derived" / "quarantine" / "karantina.json"
+
+
+def anahtar_items(done, qs_raw):
+    """Cevap anahtarı doğrulanmamış (combinepdf) ve karantinada olmayan sorular; kanıt: Faz 11 ilk 3 slayt."""
+    quar = set((json.load(open(QUAR, encoding="utf-8")).get("sorular") or {}).keys()) if QUAR.exists() else set()
+    sl = {r["soru_id"]: r for r in P8.read_jsonl(SLIDES)} if SLIDES.exists() else {}
+    for qid, src in qs_raw.items():
+        key = f"anahtar:{qid}"
+        if src != COMBINE_SRC or key in done or qid in quar or qid not in sl:
+            continue
+        yield key, {"soru_id": qid, "slaytlar": sl[qid].get("slaytlar") or []}
+
+
+_chunk_text: dict = {}
+
+
+def chunk_text(cid: str) -> str:
+    if not _chunk_text:
+        for p in (P8.DB / "derived" / "clean_notes").glob("*.jsonl"):      # Faz 12 temiz metin (varsa)
+            for r in P8.read_jsonl(p):
+                _chunk_text[r["chunk_id"]] = r.get("metin") or ""
+        if not _chunk_text:
+            for p in (P8.DB / "chunks").glob("*.jsonl"):
+                for c in P8.read_jsonl(p):
+                    _chunk_text[c.get("chunk_id")] = c.get("text") or ""
+    return _chunk_text.get(cid, "")
+
+
+def judge_key(r, q):
+    evs = [(i, f"{s.get('kaynak')} s.{s.get('sayfa')}", chunk_text(s.get("chunk_id")) or s.get("alinti") or "")
+           for i, s in enumerate(r["slaytlar"][:3], 1)]
+    evs = [e for e in evs if e[2].strip()]
+    if not evs:
+        return {"karar": "hicbiri", "neden": "kanıt slaytı yok"}
+    opts = "\n".join(f"{k}) {v}" for k, v in q["options"].items())
+    tip = "OLUMSUZ KÖK (doğru cevap kanıta göre yanlış/uymayan ifadedir)" if NEG.search(q["stem"]) else "olumlu kök"
+    body = "\n\n".join(f"[KANIT {i}] {t}\n{e[:1200]}" for i, t, e in evs)
+    prompt = (f"SORU ({tip}): {q['stem']}\n{opts}\n\nDERS SLAYTLARI:\n{body}\n\n"
+              f"Görev: Yalnızca ders slaytlarına dayanarak doğru şıkkı bul. Slaytlar soruyu yanıtlamıyorsa 'belirsiz' de. "
+              f"'emin' yalnızca slayt metni cevabı açıkça içeriyorsa.\n"
+              f"JSON: {{\"cevap\": \"A|B|C|D|E|belirsiz\", \"emin\": \"emin|orta|zayif\", \"kanit_no\": 1, "
+              f"\"alinti\": \"kanıt metninden birebir, en az 5 kelime\", \"gerekce\": \"tek cümle\"}}")
+    d = llm(prompt)
+    if d is None:
+        return None
+    emin = str(d.get("emin") or "zayif").lower()
+    cev = str(d.get("cevap") or "").strip().upper()[:1]
+    if cev not in q["options"]:
+        return {"karar": "hicbiri", "emin": emin, "gerekce": d.get("gerekce")}
+    al = (d.get("alinti") or "").strip()
+    try:
+        ev = next(e for i, _, e in evs if i == int(d.get("kanit_no") or 1))
+    except (StopIteration, ValueError):
+        ev = " ".join(e for _, _, e in evs)
+    if len(al.split()) < 5 or not (quote_ok(al, ev) or quote_ok(al, " ".join(e for _, _, e in evs))):
+        return {"karar": "reddedildi", "neden": "alıntı kanıtta yok/kısa", "emin": emin, "alinti": al[:200]}
+    return {"karar": "kabul", "uygulanir": emin == "emin", "emin": emin, "alinti": al[:300], "gerekce": d.get("gerekce"),
+            "secilen": f"{cev}) {q['options'][cev]}",
+            "hedef": {"cevap": cev, "cevap_metni": q["options"][cev], "kayitli_cevap": q["answer"],
+                      "kayitlidan_farkli": cev != q["answer"]}}
+
+
 def judge(kind, r, q):
+    if kind == "anahtar":
+        return judge_key(r, q)
     if kind == "konu":
         cands = []
         for i, k in enumerate(r["kazanimlar"][:3], 1):
@@ -213,16 +279,24 @@ def main():
             if r.get("karar") in ("kabul", "hicbiri", "reddedildi", "soru_bozuk") and r.get("surum") == 2:
                 done.add(r["anahtar"])
     qs = questions()
+    qsrc = {}
+    for p in sorted((P8.DB / "questions").glob("*.jsonl")):
+        for qq in P8.read_jsonl(p):
+            qsrc[qq["question_id"]] = qq.get("source_id")
     st = collections.Counter()
     # sırayla: önce slayt (Faz 11 düşük), sonra konu; iki kuyruk dengeli paylaşır
     queue = []
     sl, ko = list(slayt_items(done)), list(konu_items(done))
-    for i in range(max(len(sl), len(ko))):
+    an = list(anahtar_items(done, qsrc))
+    # öncelik: cevap anahtarı (öğrenci cevabı olan sorular) → slayt → konu, dönüşümlü
+    for i in range(max(len(sl), len(ko), len(an))):
+        if i < len(an):
+            queue.append(("anahtar",) + an[i])
         if i < len(sl):
             queue.append(("slayt",) + sl[i])
         if i < len(ko):
             queue.append(("konu",) + ko[i])
-    log(f"bekleyen: slayt {len(sl)}, konu {len(ko)}; bu tur en çok {a.max}")
+    log(f"bekleyen: anahtar {len(an)}, slayt {len(sl)}, konu {len(ko)}; bu tur en çok {a.max}")
     with open(path, "a", encoding="utf-8") as f:
         for kind, key, r in queue[: a.max]:
             q = qs.get(r["soru_id"])
@@ -245,7 +319,8 @@ def main():
                                 "zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), **res}, ensure_ascii=False) + "\n")
             f.flush()
             time.sleep(4)               # dakikalık token kotalarını aşmamak için tempo
-    rep = {"zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), "bekleyen_slayt": len(sl), "bekleyen_konu": len(ko), **dict(st)}
+    rep = {"zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), "bekleyen_anahtar": len(an), "bekleyen_slayt": len(sl),
+           "bekleyen_konu": len(ko), **dict(st)}
     json.dump(rep, open(OUT / "rapor.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps(rep, ensure_ascii=False, indent=1))
     return 0

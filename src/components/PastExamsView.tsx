@@ -1225,6 +1225,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         })}
                       </ol>
                     )}
+                    {(q as any).answerStatus === 'dogrulanmadi' && (
+                      <p className="m-0 text-[12.5px] text-amber-700 dark:text-amber-300">
+                        Cevap anahtarı doğrulanmadı — bu sorunun kaynağındaki işaretli şık bir öğrencinin cevabıydı.
+                      </p>
+                    )}
+                    {(q as any).answerStatus === 'dogrulandi' && (
+                      <p className="m-0 text-[12.5px] text-emerald-700 dark:text-emerald-300">
+                        Cevap ders slaytı kanıtıyla doğrulandı.
+                      </p>
+                    )}
                     <QuestionInsightsPanel questionId={q.id} />
                     {explanation && (
                       <div className="rounded-xl bg-field">

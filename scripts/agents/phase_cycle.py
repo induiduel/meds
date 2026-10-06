@@ -50,6 +50,8 @@ STEPS = [
     ("faz9", "Faz 9 · Sözlük destekli müfredat ağacı", [PY, str(AI / "phase9_thesaurus_graph.py")], 3600),
     ("faz10", "Faz 10 · Kavram kimlikleri (Wikidata/UMLS) + kimlikli ağaç", [PY, str(AI / "phase10_concept_ids.py")], 3 * 3600),
     ("faz11", "Faz 11 · Soru–slayt eşleşmesi (BM25+kavram+e5+cross-encoder)", [PY, str(AI / "phase11_question_slide.py")], 3 * 3600),
+    ("yeniden_bolme", "Sınav çıktısını kuralla yeniden bölme", [PY, str(AI / "resplit_exam_printout.py")], 600),
+    ("karantina", "Soru karantinası + onarım", [PY, str(AI / "quarantine_questions.py")], 600),
     ("veritabani", "Veritabanına güvenli yükleme (derived/curriculum_links)", [PY, str(AI / "publish_to_database.py")], 900),
     ("yayin", "Site · Faz 5/6/6.5/8 analizlerini yayınla", [PY, str(AI / "export_phase_insights.py")], 900),
     ("asama1", "Aşama 1 · İndirme ve hatalı OCR yenileme", [PY, str(AGENTS / "stage1_refresh.py")], 6 * 3600),

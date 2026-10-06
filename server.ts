@@ -52,6 +52,7 @@ import {
 } from './src/services/deepseekDataService.ts';
 import { getQuestionInsights, getInsightsSummary } from './src/services/phaseInsightsService.ts';
 import { applyCleanOverlay } from './src/services/lectureCleanOverlay.ts';
+import { applyQuarantine, quarantineMtime } from './src/services/questionQuarantine.ts';
 
 import {
   getAllTranscriptionsMeta,
@@ -820,7 +821,8 @@ function savePastQuestionsDb(list: any[]) {
 // Incremental Delta-Sync endpoint: checks if client cache is up to date and returns only modified questions
 app.get('/api/past-exams/sync', (req, res) => {
   try {
-    const list = getPastQuestionsDb();
+    // Karantina uygulanmış liste: sayı değişince istemci allIds ile karantinadakileri önbelleğinden siler
+    const list = applyQuarantine(getPastQuestionsDb());
     const since = req.query.since as string;
     const clientCount = req.query.count ? parseInt(req.query.count as string, 10) : undefined;
 
@@ -881,12 +883,13 @@ app.get('/api/past-exams/sync', (req, res) => {
 // Get all past exam questions strictly separated from the 2026-2027 active pool
 app.get('/api/past-exams', (req, res) => {
   try {
-    const list = getPastQuestionsDb();
+    // Karantina: birleşik/bozuk sorular gösterilmez, onarılanlar temiz döner (yalnız okuma yanıtı)
+    const list = applyQuarantine(getPastQuestionsDb());
     const { committeeId, discipline, year, query } = req.query;
 
     // Fast HTTP Cache validator (304 Not Modified)
     if (!committeeId && !discipline && !year && !query && fs.existsSync(PAST_QUESTIONS_FILE)) {
-      const mtime = fs.statSync(PAST_QUESTIONS_FILE).mtime;
+      const mtime = new Date(Math.max(fs.statSync(PAST_QUESTIONS_FILE).mtimeMs, quarantineMtime()));
       const ifModifiedSince = req.headers['if-modified-since'];
       if (ifModifiedSince && new Date(ifModifiedSince).getTime() >= mtime.getTime()) {
         return res.status(304).end();

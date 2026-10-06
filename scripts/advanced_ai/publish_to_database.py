@@ -71,6 +71,12 @@ def main():
                                         "kanit": {"metin": r.get("alinti")}}], "hakem_modeli": r.get("model")})
             n_kz += 1
     sl = list(sl_by.values())
+    # Cevap anahtarı: combinepdf'teki kayıtlı cevap öğrencinin işaretlediği şıktı; hakemin slayt alıntısıyla
+    # doğruladığı ("emin") cevaplar yazılır. Site bu dosyadakileri doğru cevap olarak gösterir.
+    keys = [{"soru_id": qid, "cevap": (r.get("hedef") or {}).get("cevap"), "cevap_metni": (r.get("hedef") or {}).get("cevap_metni"),
+             "kayitli_cevap": (r.get("hedef") or {}).get("kayitli_cevap"), "alinti": r.get("alinti"), "model": r.get("model"),
+             "zaman": r.get("zaman")}
+            for (tur, qid), r in apply.items() if tur == "anahtar" and (r.get("hedef") or {}).get("cevap")]
     known = {}
     for r in kaz:          # aynı soruda Faz 8 yüksek varsa o önceliklidir
         if r["soru_id"] not in known or known[r["soru_id"]].get("karar") == "hakem":
@@ -86,7 +92,7 @@ def main():
             if keep:
                 sz[k] = {**e, "esanlamlilar": keep, "kanit": {s: e["kanit"][s] for s in keep}, "guven": {s: e["guven"][s] for s in keep}}
     agac = TEMP / "phase8" / "agac.json"
-    counts = {"hakem_uygulanan_slayt": n_sl, "hakem_uygulanan_konu": n_kz, "soru_kazanim": len(kaz), "soru_slayt": len(sl), "kavramlar": len(kav), "kanitli_sozluk": len(sz), "hakem_kabul": len(hk)}
+    counts = {"cevap_anahtari_dogrulanan": len(keys), "hakem_uygulanan_slayt": n_sl, "hakem_uygulanan_konu": n_kz, "soru_kazanim": len(kaz), "soru_slayt": len(sl), "kavramlar": len(kav), "kanitli_sozluk": len(sz), "hakem_kabul": len(hk)}
 
     prev = json.load(open(OUT / "manifest.json", encoding="utf-8")).get("sayilar", {}) if (OUT / "manifest.json").exists() else {}
     for k in ("soru_kazanim", "soru_slayt", "kavramlar"):
@@ -98,7 +104,7 @@ def main():
     tmp = OUT.with_name("curriculum_links.tmp")
     shutil.rmtree(tmp, ignore_errors=True)
     tmp.mkdir(parents=True)
-    for name, rows in (("soru_kazanim.jsonl", kaz), ("soru_slayt.jsonl", sl), ("hakem_kabul.jsonl", hk)):
+    for name, rows in (("cevap_anahtari.jsonl", keys), ("soru_kazanim.jsonl", kaz), ("soru_slayt.jsonl", sl), ("hakem_kabul.jsonl", hk)):
         with open(tmp / name, "w", encoding="utf-8") as f:
             for r in rows:
                 f.write(json.dumps(r, ensure_ascii=False) + "\n")

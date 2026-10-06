@@ -498,6 +498,12 @@ class PastQuestionsCacheService {
 
           if (res.ok) {
             const data = await res.json();
+            // Sunucuda artık olmayan (ör. karantinaya alınan) soruları cihaz önbelleğinden kaldır
+            if (Array.isArray(data.allIds) && data.allIds.length > 0) {
+              const keep = new Set<string>(data.allIds.map(String));
+              const stale = Array.from(this.memoryMap.keys()).filter((id) => !keep.has(String(id)));
+              if (stale.length) await this.removeQuestions(stale);
+            }
             if (data.upToDate) {
               this.syncInProgress = false;
               this.currentStatus.isSyncing = false;
