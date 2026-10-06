@@ -2678,6 +2678,16 @@ export const ApiService = {
     approved: number;
     pending: number;
     report: any;
+    costTracking?: {
+      month: string;
+      total_requests: number;
+      input_tokens: number;
+      output_tokens: number;
+      cost_usd: number;
+      cost_tl: number;
+      max_budget_tl: number;
+      last_updated: string;
+    } | null;
     logs: string[];
   }> {
     const res = await safeJsonFetch<{
@@ -2690,6 +2700,7 @@ export const ApiService = {
       approved: number;
       pending: number;
       report: any;
+      costTracking?: any;
       logs: string[];
       error?: string;
     }>('/api/past-question-reviews/logs', {
@@ -2698,6 +2709,37 @@ export const ApiService = {
     });
     if (!res.ok || !res.data?.success) {
       throw new Error(res.data?.error || res.error || 'Loglar alınamadı.');
+    }
+    return res.data;
+  },
+
+  /** Faz 14: Beğenilmeyen/değiştirilmek istenen soru önerisini manuel düzenle */
+  async updatePastQuestionReviewProposal(
+    adminEmail: string,
+    questionId: string,
+    proposalData: {
+      soru_koku?: string;
+      secenekler?: Record<string, string>;
+      dogru_secenek?: string;
+      aciklama?: string;
+      kurul_adi?: string;
+      ders_adi?: string;
+      konu_adi?: string;
+      degisiklik_ozeti?: string;
+    }
+  ): Promise<{ success: boolean; message: string; review: PastQuestionReviewRecord }> {
+    const res = await safeJsonFetch<{
+      success: boolean;
+      message: string;
+      review: PastQuestionReviewRecord;
+      error?: string;
+    }>(`/api/past-question-reviews/${encodeURIComponent(questionId)}/proposal`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+      body: JSON.stringify(proposalData),
+    });
+    if (!res.ok || !res.data?.success) {
+      throw new Error(res.data?.error || res.error || 'Öneri güncellenemedi.');
     }
     return res.data;
   },

@@ -1467,6 +1467,7 @@ const PHASE14_REVIEWS_FILE = path.resolve(PHASE14_DIR, 'reviews.jsonl');
 const PHASE14_REPORT_FILE = path.resolve(PHASE14_DIR, 'report.json');
 const PHASE14_LOCAL_CHECKPOINT = path.resolve(PHASE14_DIR, 'checkpoint.json');
 const PHASE14_CLOUD_CHECKPOINT = path.resolve(PHASE14_DIR, 'checkpoint_cloud.json');
+const PHASE14_COST_FILE = path.resolve(PHASE14_DIR, 'cost_tracking.json');
 
 function isPythonScriptRunning(scriptName: string): boolean {
   try {
@@ -1672,6 +1673,67 @@ app.post('/api/past-question-reviews/:id/reject', requireAdmin, (req, res) => {
   }
 });
 
+// 3.1. PUT /api/past-question-reviews/:id/proposal: Beğenilmeyen/değiştirilmek istenen soru önerisini manuel düzenle (Admin)
+app.put('/api/past-question-reviews/:id/proposal', requireAdmin, (req, res) => {
+  try {
+    const targetQId = String(req.params.id);
+    const { soru_koku, secenekler, dogru_secenek, aciklama, kurul_adi, ders_adi, konu_adi, degisiklik_ozeti } = req.body || {};
+    const reviews = readPhase14Reviews();
+    const matchingIndices = reviews.map((r, i) => String(r.question_id) === targetQId ? i : -1).filter(i => i !== -1);
+    if (matchingIndices.length === 0) {
+      return res.status(404).json({ error: 'İnceleme kaydı bulunamadı.' });
+    }
+
+    const primaryIdx = matchingIndices[0];
+    const rev = reviews[primaryIdx];
+    if (!rev.proposal) {
+      rev.proposal = {};
+    }
+
+    const changedFields: string[] = Array.isArray(rev.proposal.degisen_alanlar) ? [...rev.proposal.degisen_alanlar] : [];
+
+    if (typeof soru_koku === 'string' && soru_koku.trim()) {
+      rev.proposal.soru_koku = soru_koku.trim();
+      if (!changedFields.includes('soru_koku')) changedFields.push('soru_koku');
+    }
+    if (secenekler && typeof secenekler === 'object') {
+      rev.proposal.secenekler = { ...(rev.proposal.secenekler || {}), ...secenekler };
+      if (!changedFields.includes('secenekler')) changedFields.push('secenekler');
+    }
+    if (dogru_secenek && typeof dogru_secenek === 'string') {
+      rev.proposal.dogru_secenek = dogru_secenek.trim().toUpperCase();
+      if (!changedFields.includes('dogru_secenek')) changedFields.push('dogru_secenek');
+    }
+    if (typeof aciklama === 'string') {
+      rev.proposal.aciklama = aciklama.trim();
+      if (!changedFields.includes('aciklama')) changedFields.push('aciklama');
+    }
+    if (kurul_adi) rev.proposal.kurul_adi = kurul_adi;
+    if (ders_adi) rev.proposal.ders_adi = ders_adi;
+    if (konu_adi) rev.proposal.konu_adi = konu_adi;
+
+    rev.proposal.degisen_alanlar = changedFields;
+    rev.proposal.degisiklik_ozeti = degisiklik_ozeti || rev.proposal.degisiklik_ozeti || 'Kullanıcı/Yönetici tarafından revize edildi.';
+    rev.proposal.review_required = true;
+    rev.status = 'review_required';
+    rev.last_edited_at = new Date().toISOString();
+    rev.last_edited_by = (req.headers['x-admin-email'] as string) || 'admin';
+
+    for (const idx of matchingIndices) {
+      reviews[idx] = { ...reviews[idx], ...rev };
+    }
+    writePhase14Reviews(reviews);
+
+    res.json({
+      success: true,
+      message: `Soru #${targetQId} önerisi başarıyla güncellendi.`,
+      review: rev,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Öneri güncellenemedi: ' + err.message });
+  }
+});
+
 // 4. POST /api/past-question-reviews/trigger: Faz 14 Redaksiyon Scriptini Başlat (Bulut veya Yerel)
 let phase14Process: any = null;
 
@@ -1748,6 +1810,11 @@ app.get('/api/past-question-reviews/logs', (_req, res) => {
     const totalCandidate = 4926;
     const remaining = Math.max(0, totalCandidate - reviews.length);
 
+    let costTracking: any = null;
+    if (fs.existsSync(PHASE14_COST_FILE)) {
+      try { costTracking = JSON.parse(fs.readFileSync(PHASE14_COST_FILE, 'utf-8')); } catch (_) {}
+    }
+
     res.json({
       success: true,
       isRunning: isCloudRunning || isLocalRunning,
@@ -1758,6 +1825,7 @@ app.get('/api/past-question-reviews/logs', (_req, res) => {
       approved: reviews.filter(r => r.status === 'approved').length,
       pending: reviews.filter(r => r.status === 'review_required').length,
       report,
+      costTracking,
       logs: lines,
     });
   } catch (err: any) {

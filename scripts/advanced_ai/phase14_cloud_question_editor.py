@@ -74,6 +74,68 @@ HEADERS_WRITE = {
     "X-API-Password": API_PASSWORD,
 }
 
+# Aylık Bütçe ve Maliyet Denetimi (Maksimum 1000 TL / Ay)
+# Google GenAI Fiyatları:
+# gemini-flash-lite: Girdi $0.075 / 1M token, Çıktı $0.30 / 1M token
+# gemini-flash:      Girdi $0.15 / 1M token,  Çıktı $0.60 / 1M token
+USD_TO_TRY = 42.0  # Güvenli tavan kur oranı
+MAX_MONTHLY_BUDGET_TL = 1000.0
+COST_TRACKING_FILE = OUT_DIR / "cost_tracking.json"
+
+MODEL_PRICING = {
+    "gemini-flash-lite-latest": {"input": 0.075 / 1_000_000, "output": 0.30 / 1_000_000},
+    "gemini-3.5-flash-lite":    {"input": 0.075 / 1_000_000, "output": 0.30 / 1_000_000},
+    "gemini-3.1-flash-lite":    {"input": 0.075 / 1_000_000, "output": 0.30 / 1_000_000},
+    "gemini-3.8-flash":         {"input": 0.150 / 1_000_000, "output": 0.60 / 1_000_000},
+    "gemini-flash-latest":      {"input": 0.150 / 1_000_000, "output": 0.60 / 1_000_000},
+}
+
+
+def load_monthly_cost() -> dict:
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    current_month = datetime.utcnow().strftime("%Y-%m")
+    if COST_TRACKING_FILE.exists():
+        try:
+            data = json.loads(COST_TRACKING_FILE.read_text(encoding="utf-8"))
+            if data.get("month") == current_month:
+                return data
+        except Exception:
+            pass
+    return {
+        "month": current_month,
+        "total_requests": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_tl": 0.0,
+        "max_budget_tl": MAX_MONTHLY_BUDGET_TL,
+        "last_updated": datetime.utcnow().isoformat() + "Z"
+    }
+
+
+def record_cost_and_check_budget(model_name: str, in_tokens: int, out_tokens: int) -> bool:
+    """Maliyeti kaydeder ve 1000 TL bütçe aşımını denetler."""
+    pricing = MODEL_PRICING.get(model_name, {"input": 0.15 / 1_000_000, "output": 0.60 / 1_000_000})
+    cost_usd = (in_tokens * pricing["input"]) + (out_tokens * pricing["output"])
+    cost_tl = cost_usd * USD_TO_TRY
+
+    state = load_monthly_cost()
+    state["total_requests"] += 1
+    state["input_tokens"] += in_tokens
+    state["output_tokens"] += out_tokens
+    state["cost_usd"] = round(state["cost_usd"] + cost_usd, 5)
+    state["cost_tl"] = round(state["cost_tl"] + cost_tl, 3)
+    state["last_updated"] = datetime.utcnow().isoformat() + "Z"
+
+    COST_TRACKING_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+    logging.info(f"[Bütçe Takibi] İstek Maliyeti: ~{cost_tl:.4f} TL | Aylık Toplam: {state['cost_tl']:.2f} TL / {MAX_MONTHLY_BUDGET_TL} TL")
+
+    if state["cost_tl"] >= MAX_MONTHLY_BUDGET_TL:
+        logging.error(f"[BÜTÇE LİMİTİ AŞILDI] Aylık harcama tavanına ({MAX_MONTHLY_BUDGET_TL} TL) ulaşıldı! Bulut çağrıları durduruluyor.")
+        return False
+    return True
+
+
 LOG_FILE = ROOT.parent / "meds_temp" / "logs" / "phase14.log"
 LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 
@@ -123,6 +185,16 @@ def load_curriculum_summary() -> str:
 
 def call_gemini_json(prompt_text: str) -> tuple[dict | None, str]:
     """Doğrudan HTTP REST API ile en düşük maliyetli ve aktif Gemini Flash-Lite/Flash modellerini çağırır."""
+    cost_data = load_monthly_cost()
+    if cost_data["cost_tl"] >= MAX_MONTHLY_BUDGET_TL:
+        logging.warning(f"Aylık bütçe kotası ({MAX_MONTHLY_BUDGET_TL} TL) dolduğu için bulut API çağrısı engellendi.")
+        if lib:
+            logging.info("Sıfır maliyetli yerel model (RTX 4060 - Gemma 3) fallback devreye giriyor...")
+            res = lib.chat(lib.MODEL_TEXT, prompt_text, as_json=True, timeout=120)
+            if isinstance(res, dict):
+                return res, f"local-{lib.MODEL_TEXT}"
+        return None, "budget_exceeded"
+
     # En düşük maliyetli, yüksek kotalı ve aktif resmi modeller sırasıyla denenir
     models = [
         "gemini-flash-lite-latest",
@@ -159,6 +231,11 @@ def call_gemini_json(prompt_text: str) -> tuple[dict | None, str]:
                         .get("text", "")
                         .strip()
                     )
+                    usage = res_body.get("usageMetadata", {})
+                    in_tokens = usage.get("promptTokenCount", len(prompt_text) // 4)
+                    out_tokens = usage.get("candidatesTokenCount", len(text) // 4)
+                    record_cost_and_check_budget(model, in_tokens, out_tokens)
+
                     if text.startswith("```"):
                         lines = text.splitlines()
                         if lines[0].startswith("```"):
@@ -221,16 +298,18 @@ def source_view(question: dict) -> dict:
     }
 
 
-def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> dict | None:
+def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> tuple[dict | None, str]:
     """Soru verisini Gemini Bulut Modeline gönderir ve tıbbi literatüre göre YZV bloğuyla düzenletir."""
     prompt = f"""Sen uzman bir tıp doktoru, akademisyen ve tıp fakültesi kurul/USMLE/TUS sınav soru hazırlama komisyonu başkanısın.
 Aşağıda verilen tıp fakültesi çıkmış sınav sorusunu tıbbi literatüre (Robbins & Cotran Patoloji, Guyton & Hall Tıbbi Fizyoloji, Harrison İç Hastalıkları, Goodman & Gilman Farmakoloji vb.) ve resmi tıp müfredatına göre titizlikle incele.
 
-KESİN TALİMATLAR VE GÖREVLER:
-1. SORU KÖKÜ DENETİMİ VE DÜZELTME:
-   - Soru kökünü kelime ve karakter düzeyinde incele: Yazım hatalarını, fazladan basılmış harfleri (örn: 'hhafif', 'tromboooz'), eksik harfleri (örn: 'patloji' -> 'patoloji', 'anormallk' -> 'anormallik', 'etkisiyle' -> 'etkisi ile') tespit et ve düzelt.
-   - Hatalı soru, soru niteliği taşımayan metin, başlık kırıntısı, anlamsız ifadeler veya sorunun mantıksal ve klinik anlam bütünlüğünü bozan gürültü metinleri temizle.
-   - Soru kökünü tıbbi literatür standartlarına, anlaşılır ve akademik klinik soru kalıbına dönüştür. Karakter kodlama, OCR bozulmaları (0/O, 1/I, bozuk Türkçe karakterler ş, ğ, ı, ö, ü) kesinlikle giderilmelidir.
+KESİN TALİMATLAR VE GÖREVLER (ZORUNLU KURALLAR):
+1. SORU KÖKÜ VE MANTIĞI KESİNLİKLE KÖKLÜ DEĞİŞTİRİLEMEZ (ZORUNLU KORUMA):
+   - Soru kökündeki imla hatalarını, harf düşmelerini (örn: 'patloji' -> 'patoloji', 'etkisiyle' -> 'etkisi ile'), fazla/tekrarlanan harfleri ve OCR karakter bozukluklarını (0/O, 1/I, bozuk Türkçe karakterler) düzelt.
+   - DİKKAT: Soru kökünün yönünü, mantığını ve hedefini KÖKLÜ BİÇİMDE DEĞİŞTİRMEK KESİNLİKLE YASAKTIR!
+     * Örneğin: 'Hangisi doğrudur?' sorusu ASLA 'Hangisi yanlıştır / doğru değildir?' diye değiştirilemez!
+     * Soru olumlu sorulmuşsa ('...etkendir', '...görülür', '...en olasıdır') olumsuz yapılamaz; olumsuz sorulmuşsa ('...değildir', '...beklenmez') olumlu yapılamaz!
+     * Sorunun doğru cevabını ve doğru şıkkını değiştirecek hiçbir köklü manipülasyon yapılamaz!
 
 2. ESKİ, GEREKSİZ VE ANLAMSIZ AÇIKLAMALARIN YENİDEN YAZILMASI:
    - Eski, yetersiz, kopyala-yapıştır veya soruyla alakasız açıklamaları tamamen temizle.
@@ -241,7 +320,7 @@ KESİN TALİMATLAR VE GÖREVLER:
      * Klinik mekanizmaya, komite müfredatına ve soru köküne uygun güçlü, mantıklı tıbbi çeldiriciler üreterek 5 şıkkı (A, B, C, D, E) eksiksiz tamamla!
      * Sonradan yapay zekâ tarafından üretilen/tamamlanan şıkların harflerini "yapay_zeka_tamamlanan_siklar" listesine ekle (örn: ["D", "E"] veya ["E"]).
    - Şıklar içindeki metinleri denetle: Bazen cümleler birleşik basılmış ('hastanıntetkikinde'), kelimeler yapışık ('akutapandisit'), eksik veya karakter bazlı bozukluklar taşıyor olabilir. Birleşik kelimeleri ayır, imla ve Latince terminoloji hatalarını düzelt.
-   - Doğru cevabı tıbbi literatür ışığında kesin olarak doğrula. Eğer kaynakta belirtilen cevap tıp bilimine göre yanlışsa veya şık kayması varsa tıp literatürüne uygun doğru seçeneği ("dogru_secenek") işaretle ve gerekçesini belirt.
+   - Kaynak doğru cevap anahtarına saygı duy; sadece açıkça kanıtlanabilir bariz bir tıp/dizgi hatası varsa gerekçesini belirterek düzelt, keyfi cevap kaydırması yapma.
 
 4. MÜFREDAT VE JSON ŞEMA UYUMLULUĞU:
    - Bu sorunun hangi Kurul (örn: TIP310, TIP320, TIP340, TIP350, TIP360), hangi Ders (Anatomi, Fizyoloji, Patoloji, Farmakoloji, Mikrobiyoloji, Dahiliye, Cerrahi vb.) ve hangi Konu başlığına ait olduğunu resmi müfredata göre tespit et ve JSON içine yaz.

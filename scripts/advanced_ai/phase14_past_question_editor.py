@@ -113,15 +113,18 @@ def load_curriculum_summary() -> str:
 def prompt(source: dict, curriculum_summary: str = "") -> str:
     curriculum_hint = f"\nRESMİ MÜFREDAT KURULLARI:\n{curriculum_summary}\n" if curriculum_summary else ""
     return f"""Aşağıdaki kaynak soruyu detaylıca incele:
-1. SORU KÖKÜ VE ŞIKLARDAKİ YAZIM HATALARI, FAZLA VEYA EKSİK HARFLERİ TESPİT ET:
+1. SORU KÖKÜ VE MANTIĞI KESİNLİKLE KÖKLÜ DEĞİŞTİRİLEMEZ (ZORUNLU KORUMA):
+   - Akademik literatüre uygun olarak soru kökünü köklü bir biçimde ASLA değiştirme!
+   - Özellikle sorunun doğru cevabını ve doğru şıkkını değiştirecek/tersine çevirecek değişiklikler KESİNLİKLE YASAKTIR.
+   - ÖRNEĞİN: 'Hangisi doğrudur?' sorusunu 'Hangisi doğru değildir?' veya 'Hangisi yanlıştır?' diye değiştirmek KESİNLİKLE YASAKTIR! Sorunun yönü (olumlu/olumsuz) ve cevabı daima korunmalıdır.
+2. SORU KÖKÜ VE ŞIKLARDAKİ YAZIM HATALARI, FAZLA VEYA EKSİK HARFLERİ TESPİT ET:
    - Soru kökündeki harf düşmelerini (örn: 'özellkle' -> 'özellikle', 'hastalk' -> 'hastalık', 'etkisiyle' -> 'etkisi ile') düzelt.
    - Fazladan basılmış harfleri veya OCR tekrarlarını (örn: 'aaşağıdakilerden', 'belirtidirr') temizle.
    - Rakam/harf ve OCR gürültülerini (0/O, 1/I/l, bozuk Türkçe karakterler ş, ğ, ı, ö, ü) düzelt.
    - Şıklardaki bitişik yazılmış kelimeleri ayır ('hastanıntetkikinde' -> 'hastanın tetkikinde'), imla ve Latince terminoloji hatalarını düzelt.
-2. EKSİK ŞIKLARI TAMAMLAMA:
+3. EKSİK ŞIKLARI TAMAMLAMA:
    - Soruda 5 şık (A, B, C, D, E) tam olmalıdır. Eksik şık varsa soru kökünün ölçtüğü klinik bilgiye uygun mantıklı tıp çeldiricileri üreterek 5 şıkkı tamamla.
    - Tamamlanan şıkların harflerini "yapay_zeka_tamamlanan_siklar" alanında belirt (örn: ["E"] veya ["D", "E"]).
-3. Tıbbi içeriğin özünü ve klinik sorunun yönünü değiştirme.
 4. Açıklama kaynakta varsa yazımını toparla, eksik veya anlamsızsa tıbbi gerekçesiyle düzenle.
 5. Kurul/ders/konu için kaynakta mevcut etiketleri koru; emin değilsen boş bırak ve inceleme iste.
 {curriculum_hint}
