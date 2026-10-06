@@ -554,6 +554,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             const isPending = rev.status === 'review_required';
             const isApproved = rev.status === 'approved';
             const isRejected = rev.status === 'rejected';
+            const isUnchanged = rev.status === 'unchanged';
             const ratioPercent = Math.round((rev.support_ratio || 0) * 100);
             const isSelected = selectedReviewId === qId;
 
@@ -589,6 +590,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                           ? 'bg-emerald-50 text-emerald-700 border-emerald-300'
                           : isRejected
                           ? 'bg-rose-50 text-rose-700 border-rose-300'
+                          : isUnchanged
+                          ? 'bg-slate-100 text-slate-700 border-slate-300'
                           : isPending
                           ? 'bg-amber-50 text-amber-700 border-amber-300'
                           : 'bg-slate-50 text-slate-700 border-slate-300'
@@ -603,6 +606,11 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         <>
                           <XCircle className="w-3.5 h-3.5 text-rose-600" />
                           <span>Reddedildi</span>
+                        </>
+                      ) : isUnchanged ? (
+                        <>
+                          <Check className="w-3.5 h-3.5 text-slate-500" />
+                          <span>Değişiklik Yok</span>
                         </>
                       ) : (
                         <>
