@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 MedSoru Canlı Terminal Kokpiti ve Boru Hattı İzleyici (Terminal Dashboard v2)
-Tüm aşamaları (Faz 1 - Faz 6) hedefleri ve canlı ilerlemeleriyle gösterir:
+Tüm aşamaları (Faz 1 - Faz 8, Aşama 1 yenileme) hedefleri ve canlı ilerlemeleriyle gösterir:
 - Faz 1 (Ham Metin & OCR)
 - Faz 2 (Türkçe Onarım & Soru Ayrıştırma)
 - Faz 3 (RAG Chunking, BGE-M3 Vektörleme & Zenginleştirme)
@@ -41,7 +41,53 @@ DB_V2_DIR = PROJECT_PARENT / "meds_database_v2"
 GRAPH_FILE = TEMP3_DIR / "advanced_ai" / "medical_knowledge_graph.json"
 PHASE5_STATE_FILE = DB_V2_DIR / "phase5_consensus_state.json"
 PHASE6_STATE_FILE = DB_V2_DIR / "deep_metadata" / "phase6_metadata_state.json"
-PHASE7_STATE_FILE = DB_V2_DIR / "phase7_stories" / "phase7_state.json"
+PHASE7_V2_FILE = DB_V2_DIR / "phase7_v2" / "soru_metadata.jsonl"
+PHASE8_DIR = TEMP_DIR / "phase8"
+CYCLE_STATE_FILE = TEMP_DIR / "state" / "phase_cycle_state.json"
+CYCLE_LOG_FILE = TEMP_DIR / "logs" / "phase_cycle.log"
+STAGE1_REPORT_FILE = TEMP_DIR / "state" / "stage1_refresh_report.json"
+SERVICES = ["meds-web", "meds-pipeline", "meds-phases", "meds-dashboard", "meds-downloads-watcher"]
+CYCLE_NAMES = {"yayin": "Site yayını", "faz5": "Faz 5", "faz6": "Faz 6", "faz6_dogrulama": "Faz 6 doğrulama", "faz6_5": "Faz 6.5", "faz7_5": "Faz 7.5", "faz8": "Faz 8", "sozluk": "Kanıtlı sözlük", "faz9": "Faz 9", "faz10": "Faz 10", "faz11": "Faz 11", "hakem": "Hakem kuyruğu",
+               "asama1": "Aşama 1"}
+
+
+def systemd_active(name):
+    try:
+        r = subprocess.run(["systemctl", "--user", "is-active", name], capture_output=True, text=True, timeout=3)
+        return r.stdout.strip() == "active"
+    except Exception:
+        return False
+
+
+def phase7_v2_stats():
+    st = {"n": 0, "tamam": 0, "kismi": 0, "celiski": 0}
+    if not PHASE7_V2_FILE.exists():
+        return st
+    for line in open(PHASE7_V2_FILE, encoding="utf-8"):
+        try:
+            o = json.loads(line)
+        except Exception:
+            continue
+        st["n"] += 1
+        st[o.get("durum")] = st.get(o.get("durum"), 0) + 1
+        if (o.get("cevap_denetimi") or {}).get("sonuc") == "anahtar_celiskisi":
+            st["celiski"] += 1
+    return st
+
+
+def phase8_stats():
+    st = {"n": 0, "yuksek": 0, "orta": 0, "dusuk": 0}
+    f = PHASE8_DIR / "soru_kazanim.jsonl"
+    if not f.exists():
+        return st
+    for line in open(f, encoding="utf-8"):
+        try:
+            g = json.loads(line).get("guven")
+        except Exception:
+            continue
+        st["n"] += 1
+        st[g] = st.get(g, 0) + 1
+    return st
 
 
 def get_gpu_telemetry():
@@ -123,6 +169,7 @@ def get_process_statuses():
     """Çalışan veya duran temel servislerin durumunu döner."""
     found = {
         "pipeline_runner": False,
+        "phase_cycle": False,
         "watchdog": False,
         "dashboard_8085": False,
         "ollama_server": False,
@@ -134,6 +181,8 @@ def get_process_statuses():
             cmd = " ".join(p.info['cmdline'] or [])
             if "pipeline_runner.py" in cmd:
                 found["pipeline_runner"] = True
+            elif "phase_cycle.py" in cmd:
+                found["phase_cycle"] = True
             elif "watchdog.py" in cmd:
                 found["watchdog"] = True
             elif "dashboard_server.py" in cmd:
@@ -151,11 +200,91 @@ def get_process_statuses():
                 found["active_stage"] = "Faz 5 (Konsensüs)"
             elif "deep_metadata_generator_phase6.py" in cmd:
                 found["active_stage"] = "Faz 6 (Hiper-Metadata)"
-            elif "microagent_storyteller_phase7.py" in cmd:
-                found["active_stage"] = "Faz 7 (Mikro-Ajans Hikaye)"
+            elif "thesaurus_anchor_phase6_5.py" in cmd:
+                found["active_stage"] = "Faz 6.5 (Sözlük & Çapa)"
+            elif "reconstruct_slides_phase7_5.py" in cmd:
+                found["active_stage"] = "Faz 7.5 (Slayt Düzenleme)"
+            elif "phase8_curriculum_graph.py" in cmd:
+                found["active_stage"] = "Faz 8 (Kazanım Ağacı)"
+            elif "stage1_refresh.py" in cmd or "read_document.py" in cmd:
+                found["active_stage"] = "Aşama 1 (İndirme / OCR)"
+            elif "phase7_question_metadata_v2.py" in cmd:
+                found["active_stage"] = "Faz 7 v2 (elle, metadata)"
     except Exception:
         pass
     return found
+
+
+# Faz zinciri tablosu: (anahtar, ad, birim, çıktı sayacı)
+def _lines(p):
+    return fast_count_lines(p) if p.exists() else 0
+
+
+def _json_len(p, key=None):
+    d = read_json_safe(p)
+    if key:
+        d = d.get(key) or {}
+    return len(d) if isinstance(d, (dict, list)) else 0
+
+
+PHASE_ROWS = [
+    ("faz5", "Faz 5  Çoklu AI konsensüs", "soru", lambda: sum(_lines(f) for f in (DB_V2_DIR / "questions").glob("*.jsonl"))),
+    ("faz6", "Faz 6  Derin metadata", "soru", lambda: read_json_safe(PHASE6_STATE_FILE).get("total_questions_processed", 0)),
+    ("faz6_dogrulama", "Faz 6  doğrulama (CPU)", "soru", lambda: _lines(DB_V2_DIR / "deep_metadata_validated" / "dogrulama.jsonl")),
+    ("faz6_5", "Faz 6.5 Sözlük & çapa", "çapa", lambda: _lines(DB_V2_DIR / "medical_thesaurus" / "phase6_5_question_slide_anchors.jsonl")),
+    ("faz7_5", "Faz 7.5 Müfredat slaytları", "ders", lambda: len(list((DB_V2_DIR / "slide_reconstructed").glob("*.json")))),
+    ("faz8", "Faz 8  Kazanım ağacı", "soru", lambda: _lines(TEMP_DIR / "phase8" / "soru_kazanim.jsonl")),
+    ("sozluk", "Kanıtlı sözlük", "terim", lambda: _json_len(DB_V2_DIR / "evidence_thesaurus" / "kanitli_sozluk.json")),
+    ("faz9", "Faz 9  Sözlüklü ağaç", "soru", lambda: _lines(TEMP_DIR / "phase9" / "soru_kazanim.jsonl")),
+    ("faz10", "Faz 10 Kavram kimlikleri", "kavram", lambda: _json_len(DB_V2_DIR / "concept_ids" / "kavramlar.json")),
+    ("faz11", "Faz 11 Soru–slayt eşleşmesi", "soru", lambda: _lines(TEMP_DIR / "phase11" / "soru_slayt.jsonl")),
+    ("yayin", "Site yayını", "soru", lambda: _json_len(DB_DIR / "derived" / "phase_insights" / "insights.json", "items")),
+    ("asama1", "Aşama 1 İndirme & OCR", "kaynak", lambda: len(read_json_safe(STAGE1_REPORT_FILE).get("yeniden_ocr") or [])),
+    ("hakem", "Hakem kuyruğu", "karar", lambda: _lines(TEMP_DIR / "hakem" / "kararlar.jsonl")),
+]
+
+ERROR_PAT = None
+
+
+def recent_errors(limit=8):
+    """Tüm günlüklerden son hata satırları (zaman damgalı satırlar öncelikli)."""
+    import re as _re
+    global ERROR_PAT
+    if ERROR_PAT is None:
+        ERROR_PAT = _re.compile(r"(Traceback|Error\b|ERROR|Exception|\bHATA\b|\bhata\b|✗|rc=[1-9]|başlatılamadı|zaman aşımı)")
+    files = [CYCLE_LOG_FILE, LOG_FILE, TEMP_DIR / "logs" / "watchdog.out"] + sorted((TEMP_DIR / "logs").glob("phase_cycle_*.log"))
+    out = []
+    for f in files:
+        if not f.exists():
+            continue
+        try:
+            with open(f, "rb") as fh:
+                fh.seek(0, 2)
+                fh.seek(max(0, fh.tell() - 60000))
+                lines = fh.read().decode("utf-8", "replace").splitlines()
+        except Exception:
+            continue
+        for l in lines[-400:]:
+            if ERROR_PAT.search(l) and "hata: 0" not in l and "rc=0" not in l:
+                out.append((f.stat().st_mtime, f.name, l.strip()))
+    out.sort(key=lambda x: x[0])
+    seen, res = set(), []
+    for _, name, l in reversed(out):
+        k = l[-120:]
+        if k in seen:
+            continue
+        seen.add(k)
+        res.append(f"[{name}] {l}")
+        if len(res) >= limit:
+            break
+    return res
+
+
+def fmt_dur(sec):
+    if sec is None:
+        return "-"
+    sec = int(sec)
+    return f"{sec}s" if sec < 60 else (f"{sec // 60}dk{sec % 60:02d}" if sec < 3600 else f"{sec // 3600}sa{(sec % 3600) // 60:02d}")
 
 
 def render_dashboard(stdscr):
@@ -178,6 +307,10 @@ def render_dashboard(stdscr):
 
     # Hız ölçümü için zaman serisi
     speed_window = deque(maxlen=60)
+    phase_hist = {}          # anahtar → deque[(zaman, sayı)] canlı hız için
+    phase_counts = {}
+    last_phase_check = 0
+    errors_cache = []
     last_speed_str = "Hesaplanıyor..."
     last_eta_str = "Hesaplanıyor..."
 
@@ -210,7 +343,7 @@ def render_dashboard(stdscr):
             p_state = read_json_safe(STATE_FILE)
             cur_prog = p_state.get("current_progress") or {}
             status_data = read_json_safe(STATUS_FILE)
-            logs = get_recent_logs(LOG_FILE, num_lines=6)
+            logs = get_recent_logs(LOG_FILE, num_lines=3) + get_recent_logs(CYCLE_LOG_FILE, num_lines=3)
             proc_status = get_process_statuses()
 
             # Dosya sayaçlarını her 3 saniyede bir hafifçe güncelle
@@ -274,26 +407,20 @@ def render_dashboard(stdscr):
                     p65_anchors_file = DB_V2_DIR / "medical_thesaurus" / "phase6_5_question_slide_anchors.jsonl"
                     if p65_anchors_file.exists():
                         cached_counts["p65_anchors"] = fast_count_lines(p65_anchors_file)
-                    else:
-                        cached_counts["p65_anchors"] = 2296
-                    p65_state = read_json_safe(DB_V2_DIR / "medical_thesaurus" / "phase6_5_state.json")
-                    cached_counts["p65_terms"] = p65_state.get("thesaurus_terms", 212) if p65_state else 212
 
-                    # Faz 7 5-Adımlı Mikro-Ajans Modelleme durumu
-                    p7_st = read_json_safe(PHASE7_STATE_FILE)
-                    if p7_st:
-                        cached_counts["p7_done"] = p7_st.get("total_stories_generated", len(p7_st.get("processed_qids", [])))
-                    else:
-                        p7_stories_dir = DB_V2_DIR / "phase7_stories"
-                        if p7_stories_dir.exists():
-                            cached_counts["p7_done"] = len(list(p7_stories_dir.glob("*.json")))
+                    p65_state = read_json_safe(DB_V2_DIR / "medical_thesaurus" / "phase6_5_state.json")
+                    cached_counts["p65_terms"] = p65_state.get("thesaurus_terms", 0) if p65_state else 0
+
+                    # Faz 7 v2 (zincir dışı) ve Faz 8, Aşama 1
+                    cached_counts["p7v2"] = phase7_v2_stats()
+                    cached_counts["p8"] = phase8_stats()
+                    cached_counts["s1"] = read_json_safe(STAGE1_REPORT_FILE)
 
                     # Faz 7.5 Müfredat Slayt Düzenleme durumu
                     p75_dir = DB_V2_DIR / "slide_reconstructed"
                     if p75_dir.exists():
                         cached_counts["p75_done"] = len(list(p75_dir.glob("*.json")))
-                    else:
-                        cached_counts["p75_done"] = 410
+
                 except Exception:
                     pass
 
@@ -318,14 +445,17 @@ def render_dashboard(stdscr):
             # ==========================================================
             # 1. BAŞLIK & DONANIM BİLGİSİ
             # ==========================================================
-            title = " 🏥 MEDSORU AI: 6-FAZ MERKEZİ BORU HATTI & DONANIM TELEMETRİSİ "
+            title = " 🏥 MEDSORU AI: FAZ ZİNCİRİ & DONANIM TELEMETRİSİ "
             stdscr.addstr(0, max(0, (w - len(title)) // 2), title, curses.color_pair(1) | curses.A_BOLD)
             stdscr.addstr(1, 2, "═" * (w - 4), curses.A_DIM)
 
             # GPU & VRAM Bilgi Kutusu
-            gpu_str = f"🎮 GPU: {gpu['name']} | Yük: %{gpu['util']:02d} | Sıcaklık: {gpu['temp']}°C"
-            temp_attr = curses.color_pair(4 if gpu['temp'] > 82 else (3 if gpu['temp'] > 72 else 2))
-            stdscr.addstr(2, 2, gpu_str, curses.A_BOLD)
+            gg = read_json_safe(TEMP_DIR / "state" / "gpu_guard.json")
+            gg_txt = (f" | Koruyucu: {gg.get('durum', '?')} (ort. %{gg.get('ort_kullanim_30sn', 0)}, duraklatılan {gg.get('duraklatilan', 0)})"
+                      if gg else " | Koruyucu: KAPALI")
+            gpu_str = f"🎮 GPU: {gpu['name']} | Yük: %{gpu['util']:02d} | Sıcaklık: {gpu['temp']}°C (sınır <89, acil 95){gg_txt}"
+            temp_attr = curses.color_pair(4 if gpu["temp"] >= 90 else (3 if gpu["temp"] >= 80 else 2))
+            stdscr.addstr(2, 2, gpu_str[:max(10, w - 48)], curses.A_BOLD)
 
             vram_bar = draw_bar(gpu["mem_used"], gpu["mem_total"], width=14)
             stdscr.addstr(2, max(2, w - 42), f"VRAM: {gpu['mem_used']}MB/{gpu['mem_total']}MB {vram_bar}", temp_attr)
@@ -343,6 +473,7 @@ def render_dashboard(stdscr):
             def st_attr(is_active):
                 return curses.color_pair(2) if is_active else curses.color_pair(4)
 
+            svc = {n: systemd_active(n) for n in SERVICES}
             p_run_str = f"Runner: {st_label(proc_status['pipeline_runner'])}"
             w_dog_str = f"Watchdog: {st_label(proc_status['watchdog'])}"
             d_srv_str = f"Kokpit(8085): {st_label(proc_status['dashboard_8085'])}"
@@ -355,119 +486,114 @@ def render_dashboard(stdscr):
             stdscr.addstr(5, 72, o_srv_str, st_attr(proc_status['ollama_server']) | curses.A_BOLD)
             stdscr.addstr(5, 96, cur_act_str[:w - 98], curses.color_pair(3) | curses.A_BOLD)
 
-            stdscr.addstr(6, 2, "─" * (w - 4), curses.A_DIM)
+            x = 4
+            for n in SERVICES:
+                lbl = f"{n.replace('meds-', '')}: {'●' if svc[n] else '○'}  "
+                if x + len(lbl) < w - 2:
+                    stdscr.addstr(6, x, lbl, st_attr(svc[n]))
+                x += len(lbl)
+            cyc = read_json_safe(CYCLE_STATE_FILE)
+            if cyc:
+                aktif = CYCLE_NAMES.get(cyc.get("aktif"), cyc.get("aktif") or "bekliyor")
+                hatali = [CYCLE_NAMES.get(k, k) for k, v in (cyc.get("adimlar") or {}).items() if v.get("rc") not in (0, None)]
+                ztxt = f"| Zincir tur {cyc.get('tur', 0)}: {aktif}" + (f" | son hata: {', '.join(hatali)}" if hatali else "")
+                if x < w - 10:
+                    stdscr.addstr(6, x, ztxt[:w - x - 2], curses.color_pair(4 if hatali else 3))
 
             # ==========================================================
-            # 3. 6 FAZLI BORU HATTI: HEDEFLER, İLERLEME VE KALANLAR
+            # 3. AŞAMA 1–4 (pipeline) — kısa özet
             # ==========================================================
-            stdscr.addstr(7, 2, "🚀 6-FAZLI MIMARI: HEDEFLER, TAMAMLANANLAR VE KALANLAR:", curses.color_pair(1) | curses.A_BOLD)
-
-            # --- FAZ 1 ---
-            f1_done = cached_counts["t1"]
-            f1_target = cached_counts["dl"]
-            f1_rem = max(0, f1_target - f1_done)
-            f1_bar = draw_bar(f1_done, f1_target, width=10)
-            f1_st = "✓ TAMAM" if f1_rem <= 15 else f"{f1_rem} bekliyor"
-            stdscr.addstr(8, 4, f"Faz 1 [Ham Metin & OCR]     : Hedef: {f1_target} dosya | İşlenen: {f1_done} {f1_bar} | Kalan: {f1_rem:<3} ({f1_st})", curses.color_pair(2) if f1_rem <= 15 else curses.color_pair(3))
-
-            # --- FAZ 2 ---
-            f2_done = cached_counts["t2"]
-            f2_target = cached_counts["t1"]
-            f2_rem = max(0, f2_target - f2_done)
-            f2_bar = draw_bar(f2_done, f2_target, width=10)
-            f2_st = "✓ TAMAM" if f2_rem == 0 else f"{f2_rem} bekliyor"
-            stdscr.addstr(9, 4, f"Faz 2 [Türkçe Onarım & Soru]: Hedef: {f2_target} dosya | Temizlenen: {f2_done} {f2_bar} | Kalan: {f2_rem:<3} ({f2_st})", curses.color_pair(2) if f2_rem == 0 else curses.color_pair(3))
-
-            # --- FAZ 3 ---
-            f3_done = cached_counts["s3_src"]
-            f3_target = 413
-            f3_rem = max(0, f3_target - f3_done)
-            f3_bar = draw_bar(f3_done, f3_target, width=10)
-            stdscr.addstr(10, 4, f"Faz 3 [RAG Chunk & Vektör]  : Hedef: {f3_target} slayt | Chunk: {cached_counts['s3_chunk']} | Vektör(BGE-M3): {cached_counts['s3_vec']}/413 {f3_bar}", curses.color_pair(2) if f3_rem == 0 else curses.color_pair(3))
-            
-            # Faz 3 Soru Havuzu
-            q_ver = cached_counts["q_verified"]
-            q_rev = cached_counts["q_review"]
-            q_tot = cached_counts["q_total"]
-            stdscr.addstr(11, 4, f"      └─ Soru Havuzu Analizi: Doğrulanan: {q_ver:,} | İnceleme/Hakem Kuyruğu: {q_rev:,} | Toplam Tekil: {q_tot:,}", curses.color_pair(1))
-
-            # --- FAZ 4 ---
-            f4_done = cached_counts["db_q"]
-            f4_target = max(q_ver, 2735)
-            f4_bar = draw_bar(f4_done, f4_target, width=10)
-            stdscr.addstr(12, 4, f"Faz 4 [meds_database Aktarım]: Hedef: {f4_target:,} soru | Aktarılan: {f4_done:,} soru {f4_bar} | DB Chunk: {cached_counts['db_chk']} (Senkron ✓)", curses.color_pair(2))
-
-            # --- FAZ 5 ---
-            p5_done = cached_counts["p5_verified"]
-            p5_target = cached_counts["db_q"]
-            p5_bl = cached_counts["p5_blacklisted"]
-            p5_rem = max(0, p5_target - p5_done - p5_bl)
-            p5_bar = draw_bar(p5_done, p5_target, width=10)
-            p5_st = "Planlandı / Hazır" if p5_done == 0 else f"{p5_done} doğrulandı"
-            stdscr.addstr(13, 4, f"Faz 5 [Çoklu AI Konsensüsü] : Hedef: {p5_target:,} soru | Konsensüs: {p5_done} {p5_bar} | Karantina: {p5_bl} ({p5_st})", curses.color_pair(5))
-
-            # --- FAZ 6 ---
-            p6_q_cnt = cached_counts.get("p6_q_done", 0)
-            p6_lec_cnt = cached_counts.get("p6_lec_done", 0)
-            p6_target = cached_counts["db_q"]
-            p6_bar = draw_bar(p6_q_cnt, max(1, p6_target), width=10)
-            stdscr.addstr(14, 4, f"Faz 6 [Derin Hiper-Metadata] : İşlenen Soru: {p6_q_cnt} {p6_bar} | Slayt Notu: {p6_lec_cnt} (Tempo: 60-120 sn'de 10 Soru / 30 dk'da 1 Ders)", curses.color_pair(3))
-
-            # --- FAZ 6.5 ---
-            p65_anchors = cached_counts.get("p65_anchors", 2296)
-            p65_terms = cached_counts.get("p65_terms", 212)
-            stdscr.addstr(15, 4, f"Faz 6.5 [Tıbbi Sözlük & Anchor] : {p65_terms:,} Terim / Eşanlamlı | {p65_anchors:,} Soru-Slayt Köprüsü (Co-occurrence ✓)", curses.color_pair(2))
-
-            # --- FAZ 7 ---
-            p7_done = cached_counts.get("p7_done", 100)
-            p7_bar = draw_bar(p7_done, 100, width=10)
-            stdscr.addstr(16, 4, f"Faz 7 [Mikro-Ajans Modelleme] : Altın Soru Modeli: {p7_done}/100 {p7_bar} (✓ 100 Altın Soru Hazır)", curses.color_pair(2))
-
-            # --- FAZ 7.5 ---
-            p75_done = cached_counts.get("p75_done", 410)
-            stdscr.addstr(17, 4, f"Faz 7.5 [Müfredat Slaytları]  : {p75_done} Amfi Dersi (KBÜ TIP320/340/350/360 Müfredatıyla Yapılandırıldı ✓)", curses.color_pair(2))
-
-            stdscr.addstr(18, 2, "─" * (w - 4), curses.A_DIM)
+            y = 7
+            stdscr.addstr(y, 2, "🚀 PIPELINE (Aşama 1–4):", curses.color_pair(1) | curses.A_BOLD)
+            f1_done, f1_target = cached_counts["t1"], cached_counts["dl"]
+            pipe = (f"İndirilen {f1_target} | OCR {f1_done} | temizlenen {cached_counts['t2']} | chunk {cached_counts['s3_chunk']} | "
+                    f"vektör {cached_counts['s3_vec']} | DB soru {cached_counts['db_q']:,} | hakem kuyruğu {cached_counts['q_review']:,}")
+            stdscr.addstr(y, 28, pipe[:max(0, w - 30)], curses.color_pair(2))
+            y += 1
 
             # ==========================================================
-            # 4. AKTİF İŞLEM, İŞLEME HIZI VE TAHMİNİ BİTİŞ (ETA)
+            # 4. FAZ ZİNCİRİ: durum, son süre, çıktı, hız
             # ==========================================================
-            stdscr.addstr(19, 2, "⚡ AKTİF SÜREÇ, HIZ & TAHMİNİ BİTİŞ (ETA):", curses.color_pair(5) | curses.A_BOLD)
-
-            cur_desc = cur_prog.get("desc")
-            if not cur_desc:
-                last_time = status_data.get("time", "")
-                cur_desc = f"Boru hattı döngüsü hazır ✓ (Son döngü: {last_time} - Arka plan aktif izlemede)"
-
-            cur_step = cur_prog.get("current", 0)
-            cur_tot = cur_prog.get("total", 0)
-
-            stdscr.addstr(20, 4, f"• Aktif Görev : {cur_desc}"[:w - 6], curses.color_pair(3) | curses.A_BOLD)
-            if cur_tot > 0:
-                p_bar = draw_bar(cur_step, cur_tot, width=max(10, w - 50))
-                stdscr.addstr(21, 4, f"• Canlı Adım  : {cur_step}/{cur_tot} {p_bar}  |  Hız: {last_speed_str}  |  Kalan Süre (ETA): {last_eta_str}", curses.color_pair(2) | curses.A_BOLD)
-            else:
-                stdscr.addstr(21, 4, f"• Canlı Hız   : {last_speed_str}  |  Tahmini Kalan Süre (ETA): {last_eta_str}", curses.color_pair(2) | curses.A_BOLD)
-
-            stdscr.addstr(22, 2, "─" * (w - 4), curses.A_DIM)
+            if now - last_phase_check > 5:
+                last_phase_check = now
+                for key, _n, _u, fn in PHASE_ROWS:
+                    try:
+                        c = int(fn() or 0)
+                    except Exception:
+                        c = 0
+                    phase_counts[key] = c
+                    phase_hist.setdefault(key, deque(maxlen=120)).append((now, c))
+                errors_cache = recent_errors(8)
+            cyc = read_json_safe(CYCLE_STATE_FILE)
+            steps = cyc.get("adimlar") or {}
+            aktif = cyc.get("aktif")
+            done_now = set(cyc.get("tur_tamamlanan") or [])
+            stdscr.addstr(y, 2, f"🔁 FAZ ZİNCİRİ  (tur {cyc.get('tur', '-')}, aktif: {CYCLE_NAMES.get(aktif, aktif or 'bekliyor')})", curses.color_pair(1) | curses.A_BOLD)
+            y += 1
+            hdr = f"{'Faz':<30}{'Durum':<14}{'Son süre':<10}{'Çıktı':>10}  {'Hız':<22}{'Son bitiş':<20}"
+            stdscr.addstr(y, 4, hdr[:w - 6], curses.A_DIM | curses.A_BOLD)
+            y += 1
+            for key, name, unit, _fn in PHASE_ROWS:
+                if y >= h - 12:
+                    break
+                st = steps.get(key) or {}
+                cnt = phase_counts.get(key, 0)
+                hist = phase_hist.get(key) or []
+                if key == aktif:
+                    durum, attr = "● çalışıyor", curses.color_pair(3) | curses.A_BOLD
+                    # canlı hız: son ~10 dk içindeki artış
+                    pts = [p for p in hist if now - p[0] <= 600]
+                    if len(pts) >= 2 and pts[-1][0] - pts[0][0] >= 20 and pts[-1][1] > pts[0][1]:
+                        rate = (pts[-1][1] - pts[0][1]) / ((pts[-1][0] - pts[0][0]) / 60)
+                        hiz = f"{rate:.1f} {unit}/dk (canlı)"
+                    else:
+                        hiz = "ölçülüyor…"
+                    sure = "sürüyor"
+                elif st.get("rc") not in (None, 0):
+                    durum, attr, hiz, sure = f"✗ hata rc={st.get('rc')}", curses.color_pair(4) | curses.A_BOLD, "-", fmt_dur(st.get("sure_sn"))
+                elif st:
+                    durum = "✓ bu turda" if key in done_now else "✓ önceki tur"
+                    attr = curses.color_pair(2)
+                    sure = fmt_dur(st.get("sure_sn"))
+                    s_ = st.get("sure_sn") or 0
+                    hiz = f"{cnt / (s_ / 60):.0f} {unit}/dk (son tur)" if s_ >= 5 and cnt else ("anında" if cnt else "-")
+                else:
+                    durum, attr, hiz, sure = "○ henüz yok", curses.A_DIM, "-", "-"
+                row = f"{name:<30}{durum:<14}{sure:<10}{cnt:>10,}  {hiz:<22}{(st.get('bitis') or '-').replace('T', ' ')[5:16]:<20}"
+                stdscr.addstr(y, 4, row[:w - 6], attr)
+                y += 1
+            p7 = cached_counts.get("p7v2") or {}
+            stdscr.addstr(y, 4, f"Faz 7 v2 (elle, zincir dışı): işlenen {p7.get('n', 0)} | anahtar çelişkisi {p7.get('celiski', 0)}   ·   Faz 7 (eski): karantinada"[:w - 6], curses.A_DIM)
+            y += 1
+            stdscr.addstr(y, 2, "─" * (w - 4), curses.A_DIM)
+            y += 1
 
             # ==========================================================
-            # 5. İLERİ AI & BİLGİ GRAFI KATMANI (GRAPHRAG & HYBRID SEARCH)
+            # 5. HATA KAYITLARI
             # ==========================================================
-            stdscr.addstr(23, 2, "🧠 İLERİ DÜZEY AI KATMANI (GraphRAG & Hibrit Arama):", curses.color_pair(1) | curses.A_BOLD)
-            kg_info = f"• GraphRAG Tıbbi Bilgi Grafı : {cached_counts['kg_nodes']:,} Düğüm | {cached_counts['kg_edges']:,} Kenar (Hastalık-İlaç-Semptom Ağı)"
-            search_info = f"• Hibrit Arama & Bellek      : BM25 + Dense BGE-M3 (24.657 Chunk İndeksli) ✓ | MemGPT Hiyerarşik Bellek: Devrede ✓"
-            stdscr.addstr(24, 4, kg_info[:w - 6], curses.color_pair(6))
-            stdscr.addstr(25, 4, search_info[:w - 6], curses.color_pair(2))
+            stdscr.addstr(y, 2, f"🛑 SON HATA KAYITLARI ({len(errors_cache)}):", curses.color_pair(4) | curses.A_BOLD)
+            y += 1
+            if not errors_cache:
+                stdscr.addstr(y, 4, "Hata yok ✓", curses.color_pair(2))
+                y += 1
+            for l in errors_cache:
+                if y >= h - 8:
+                    break
+                stdscr.addstr(y, 4, l[:w - 6], curses.color_pair(4))
+                y += 1
+            stdscr.addstr(y, 2, "─" * (w - 4), curses.A_DIM)
+            y += 1
 
-            stdscr.addstr(26, 2, "─" * (w - 4), curses.A_DIM)
-
             # ==========================================================
-            # 6. CANLI BORU HATTI LOGLARI
+            # 6. CANLI LOG AKIŞI
             # ==========================================================
-            stdscr.addstr(27, 2, "📜 BORU HATTI CANLI LOG AKIŞI:", curses.color_pair(5) | curses.A_BOLD)
-            line_y = 28
-            for l in logs[-5:]:
+            stdscr.addstr(y, 2, "📜 CANLI LOG AKIŞI:", curses.color_pair(5) | curses.A_BOLD)
+            line_y = y + 1
+            s1 = cached_counts.get("s1") or {}
+            if s1 and line_y < h - 2:
+                stdscr.addstr(line_y, 4, f"Aşama 1 yenileme: hatalı OCR adayı {s1.get('hatali_ocr_aday', 0)} | son turda yeniden okunan {len(s1.get('yeniden_ocr') or [])} | bitiş {s1.get('bitis', '-')}"[:w - 6], curses.color_pair(1))
+                line_y += 1
+            for l in logs[-6:]:
                 if line_y >= h - 2:
                     break
                 attr = curses.color_pair(4 if "ERROR" in l else (3 if "WARN" in l else 0))

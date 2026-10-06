@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { PageHeader } from './ui/PageHeader';
+import { QuestionInsightsPanel } from './QuestionInsightsPanel';
 import {
   Sparkles,
   BookOpen,
@@ -1224,6 +1225,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         })}
                       </ol>
                     )}
+                    <QuestionInsightsPanel questionId={q.id} />
                     {explanation && (
                       <div className="rounded-xl bg-field">
                         <button

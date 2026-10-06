@@ -236,7 +236,7 @@ def get_gpu_telemetry() -> tuple[int, int]:
     return 0, 0
 
 
-def wait_for_gpu_safety(max_util: int = 90, max_temp: int = 80, max_wait_sec: int = 30):
+def wait_for_gpu_safety(max_util: int = 92, max_temp: int = 89, max_wait_sec: int = 30):
     """GPU %90 kullanım veya 80°C üzerine çıkarsa sistemi güvenli sınıra inene kadar bekletir (Thermal & Load Throttling)."""
     import time
     waited = 0
@@ -259,7 +259,7 @@ def chat(model: str, prompt: str, system: str | None = None, as_json: bool = Fal
     import requests
 
     # Donanım Güvenlik Freni: Aşırı ısınma (>=80°C) ve aşırı doyum (>%90) engeli
-    wait_for_gpu_safety(max_util=90, max_temp=80)
+    wait_for_gpu_safety(max_util=92, max_temp=89)
 
     msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": prompt}]
     options = {
@@ -340,7 +340,7 @@ def embed(texts: list[str], model: str = MODEL_EMBED, batch: int = 64):
 
     out = []
     for i in range(0, len(texts), batch):
-        wait_for_gpu_safety(max_util=90, max_temp=80)
+        wait_for_gpu_safety(max_util=92, max_temp=89)
         r = requests.post(f"{OLLAMA_URL}/api/embed", json={"model": model, "input": texts[i:i + batch]}, timeout=600)
         r.raise_for_status()
         out += r.json()["embeddings"]

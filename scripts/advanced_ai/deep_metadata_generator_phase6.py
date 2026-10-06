@@ -69,6 +69,16 @@ OPENROUTER_API_KEY = ENV_KEYS.get("OPENROUTER_API_KEY") or ENV_KEYS.get("MUSE_SP
 OLLAMA_URL = ENV_KEYS.get("OLLAMA_URL", "http://127.0.0.1:11434")
 
 
+def _gpu_temp():
+    try:
+        import subprocess
+        r = subprocess.run(["nvidia-smi", "--query-gpu=temperature.gpu", "--format=csv,noheader,nounits"],
+                           capture_output=True, text=True, timeout=5)
+        return int(r.stdout.strip().splitlines()[0])
+    except Exception:
+        return None
+
+
 class Phase6Scheduler:
     """
     Soru ve Ders Notu işleme zamanlaması:
@@ -80,14 +90,52 @@ class Phase6Scheduler:
         self.data = self._load()
 
     def _load(self) -> dict:
+        """İlerleme günler arasında KORUNUR (eskiden gece yarısı sıfırlanıyordu). Yalnızca 'date' günlük sayaç içindir.
+        İşlenmiş soru kimlikleri ayrıca çıktı dosyalarından da toplanır; durum dosyası kaybolsa bile baştan başlamaz."""
         today_str = date.today().isoformat()
+        d = None
         if self.state_file.exists():
             try:
                 d = json.loads(self.state_file.read_text(encoding="utf-8"))
-                if d.get("date") == today_str:
-                    return d
+            except Exception:
+                d = None
+        if d is None:
+            d = self._empty(today_str)
+        done = set(d.get("processed_question_ids") or [])
+        for f in OUT_METADATA.glob("*_deep_metadata.jsonl"):
+            if f.name.startswith("lecture"):
+                continue
+            try:
+                for line in open(f, encoding="utf-8"):
+                    try:
+                        qid = json.loads(line).get("question_id")
+                    except Exception:
+                        continue
+                    if qid:
+                        done.add(qid)
             except Exception:
                 pass
+        d["processed_question_ids"] = sorted(done)
+        d["total_questions_processed"] = len(done)
+        lec = set(d.get("processed_lecture_sources") or [])
+        lf = OUT_METADATA / "lecture_deep_metadata.jsonl"
+        if lf.exists():
+            for line in open(lf, encoding="utf-8"):
+                try:
+                    sid = json.loads(line).get("source_id")
+                except Exception:
+                    continue
+                if sid:
+                    lec.add(sid)
+        d["processed_lecture_sources"] = sorted(lec)
+        d["total_lectures_processed"] = len(lec)
+        if d.get("date") != today_str:
+            d["date"] = today_str
+            d["today_questions"] = 0
+        return d
+
+    @staticmethod
+    def _empty(today_str: str) -> dict:
         return {
             "date": today_str,
             "processed_question_ids": [],
@@ -111,7 +159,8 @@ class Phase6Scheduler:
     def record_question(self, qid: str, provider: str = "unknown"):
         if qid not in self.data["processed_question_ids"]:
             self.data["processed_question_ids"].append(qid)
-        self.data["total_questions_processed"] += 1
+        self.data["total_questions_processed"] = len(self.data["processed_question_ids"])
+        self.data["today_questions"] = self.data.get("today_questions", 0) + 1
         self.data["last_question_batch_time"] = time.time()
         p_stats = self.data.setdefault("provider_stats", {})
         p_stats[provider] = p_stats.get(provider, 0) + 1
@@ -120,7 +169,7 @@ class Phase6Scheduler:
     def record_lecture(self, source_id: str, provider: str = "unknown"):
         if source_id not in self.data["processed_lecture_sources"]:
             self.data["processed_lecture_sources"].append(source_id)
-        self.data["total_lectures_processed"] += 1
+        self.data["total_lectures_processed"] = len(self.data["processed_lecture_sources"])
         self.data["last_lecture_processed_time"] = time.time()
         p_stats = self.data.setdefault("provider_stats", {})
         p_stats[provider] = p_stats.get(provider, 0) + 1
@@ -272,7 +321,9 @@ def generate_deep_metadata_for_question(q: dict) -> Optional[dict]:
 
     system_prompt = (
         "Sen Tıp Fakültesi Müfredat Kurulu, Tıbbi Ontoloji ve Çok Boyutlu Klinik Bilgi Grafı Uzmanısın. "
-        "Girdi olarak verilen tıp sorusu için ilişkisel, ICD-10 kodlu ve kanıtlanabilir zengin metadata üretirsin."
+        "Girdi olarak verilen tıp sorusu için ilişkisel ve kanıtlanabilir zengin metadata üretirsin. "
+        # ICD-10 istenmez: 2026-10-06 denetiminde kodların çoğu adla uyuşmuyordu (I21.9 "atriyal fibrilasyon" vb.)
+        "Emin olmadığın hastalık adı uydurma; yalnızca ders kitaplarında geçen standart terimleri kullan."
     )
 
     prompt = f"""SORU:
@@ -286,9 +337,6 @@ PEDAGOJİK AMAÇ: {pedagogic_goal}
 
 Lütfen bu soru için zenginleştirilmiş derin metadata kümesini aşağıdaki JSON şemasında oluştur:
 {{
-  "icd10_ve_protokoller": [
-    {{"kod": "Örn: J13 veya I21.9", "ad": "Hastalık adı", "kategori": "Klinik Branş"}}
-  ],
   "ayirici_tani_listesi": [
     {{"hastalik": "Karışabilecek klinik tablo", "ayirici_ozellik": "Klinik/patolojik fark"}}
   ],
@@ -463,11 +511,23 @@ def main():
     print(f"• Çıktı Dizini    : {OUT_METADATA}")
     print("=" * 75)
 
+    # GPU yoksa (ör. "GPU has fallen off the bus", yeniden başlatma gerekiyor) Ollama CPU'ya düşer, 35 sn zaman aşımında
+    # düşük kaliteli bulut yedeğine geçilir → veri kalitesi sessizce düşmesin diye bu tur atlanır (kaldığı yerden sürer).
+    if "--cycles" in sys.argv and _gpu_temp() is None and os.environ.get("MEDS_FAZ6_ALLOW_CPU") != "1":
+        print("[Faz 6] GPU görünmüyor (nvidia-smi yanıt vermiyor); bu tur atlandı. GPU dönünce kaldığı yerden sürer.")
+        return
     scheduler = Phase6Scheduler(STATE_FILE)
     print(f"[Durum] Toplam İşlenen Soru: {scheduler.data.get('total_questions_processed')}, Ders Notu: {scheduler.data.get('total_lectures_processed')}")
 
-    # Tek seferlik veya daemon çalışma
+    # Tek seferlik veya daemon çalışma. --cycles N: N parti işleyip çıkar (faz zinciri orkestratörü için)
     run_once = "--once" in sys.argv
+    max_cycles = None
+    if "--cycles" in sys.argv:
+        try:
+            max_cycles = int(sys.argv[sys.argv.index("--cycles") + 1])
+        except (IndexError, ValueError):
+            max_cycles = 5
+    cycles_done = 0
 
     while True:
         # 1. Ders Notu Zamanlaması Kontrolü (Her 2 saatte bir)
@@ -478,10 +538,20 @@ def main():
         q_count = process_question_batch(scheduler, batch_size=QUESTION_BATCH_SIZE)
         print(f"[Faz 6 Batch Tamamlandı] Bu periyotta {q_count} soru işlendi.")
 
-        if run_once:
+        cycles_done += 1
+        if q_count == 0 and max_cycles is not None:
+            print("[Faz 6] İşlenecek yeni soru kalmadı.")
+            break
+        if run_once or (max_cycles is not None and cycles_done >= max_cycles):
             break
 
         # 60-120 saniye bekleme: GPU/API darboğazını sınırlayan dengeli tempo
+        if max_cycles is not None:
+            # faz zinciri modu: sabit bekleme yok; yalnızca GPU ısınırsa soğumasını bekle
+            while (t := _gpu_temp()) is not None and t >= 89:
+                print(f"[Faz 6] GPU {t} °C — 30 sn soğuma bekleniyor", flush=True)
+                time.sleep(30)
+            continue
         sleep_sec = random.randint(QUESTION_SLEEP_MIN, QUESTION_SLEEP_MAX)
         print(f"\n⏳ Bir sonraki soru batch'i için {sleep_sec // 60} dakika {sleep_sec % 60} saniye bekleniyor...\n")
         time.sleep(sleep_sec)

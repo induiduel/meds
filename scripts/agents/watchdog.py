@@ -227,8 +227,8 @@ def check_system_resources():
         pass
 
 
-def enforce_gpu_thermal_and_load_limits(max_util: int = 90, max_temp: int = 80):
-    """GPU %90 üzeri yük veya 80°C üzeri sıcaklığa ulaşırsa boru hattını dinlendirir."""
+def enforce_gpu_thermal_and_load_limits(max_util: int = 90, max_temp: int = 90):
+    """GPU %90 üzeri yük veya 90°C üzeri sıcaklığa ulaşırsa boru hattını dinlendirir."""
     try:
         res = subprocess.run(
             ["nvidia-smi", "--query-gpu=utilization.gpu,temperature.gpu", "--format=csv,noheader,nounits"],
@@ -301,8 +301,8 @@ def main():
             # 6. Sistem RAM/VRAM kaynak baskısını denetle
             check_system_resources()
 
-            # 7. Donanım Güvenlik Freni: GPU Yükü (%90) ve Sıcaklık (80°C) denetimi
-            enforce_gpu_thermal_and_load_limits(max_util=90, max_temp=80)
+            # 7. GPU sıcaklık/kullanım sınırı artık meds-gpuguard servisinde (scripts/agents/gpu_guard.py):
+            #    bu eski fren yalnızca watchdog'u uyutuyordu, GPU kullanan süreçlere etkisi yoktu.
 
             # 8. QLoRA Eğitim Sonrası Otomatik Veri Denetleme & İyileştirme Tetikleyicisi
             check_post_lora_training_trigger()
@@ -337,8 +337,13 @@ _next_phase_index = 0
 
 
 def check_phase5_and_phase6_workers():
-    """Faz 5, 6, 7 ve 7.5 motorlarını SIRAYLA çalıştırır (aynı anda en fazla bir tane)."""
+    """Faz 5, 6, 7 ve 7.5 motorlarını SIRAYLA çalıştırır (aynı anda en fazla bir tane).
+
+    meds-phases servisi (scripts/agents/phase_cycle.py) varsa zinciri o yönetir; watchdog karışmaz.
+    """
     global _next_phase_index
+    if systemd_user_active("meds-phases.service"):
+        return
     # pipeline_runner zaten fazları bağımlılık sırasıyla yürütüyorsa ikinci bir
     # scheduler açılmaz; böylece GPU üzerinde aynı faz çift çalışmaz.
     if subprocess.run(["pgrep", "-f", "pipeline_runner.py"], capture_output=True, text=True).stdout.strip():

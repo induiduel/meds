@@ -50,6 +50,7 @@ import {
   loadDeepSeekContributions,
   DEEPSEEK_DATA_DIR
 } from './src/services/deepseekDataService.ts';
+import { getQuestionInsights, getInsightsSummary } from './src/services/phaseInsightsService.ts';
 
 import {
   getAllTranscriptionsMeta,
@@ -753,6 +754,19 @@ app.get('/api/questions', (req, res) => {
   // Sort by questionNumber ascending
   result.sort((a, b) => a.questionNumber - b.questionNumber);
   res.json({ questions: result });
+});
+
+// Faz 5/6/6.5/8 analizleri (müfredat kazanımı, slayt kanıtı, terimler). Faz 6 doğrulanmamış AI çıktısıdır.
+app.get('/api/insights/summary', (_req, res) => {
+  res.json(getInsightsSummary());
+});
+
+app.get('/api/questions/:id/insights', (req, res) => {
+  const insights = getQuestionInsights(req.params.id);
+  if (!insights) {
+    return res.status(404).json({ error: 'Bu soru için analiz yok.' });
+  }
+  res.json({ insights });
 });
 
 app.get('/api/questions/:id', (req, res) => {
