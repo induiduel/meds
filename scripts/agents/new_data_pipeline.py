@@ -213,8 +213,18 @@ def main() -> int:
             save_state(st)
             break
     if ran and not only:
+        t_restart = time.time()
         subprocess.run(SITE_REFRESH, capture_output=True)
         log(f"site arama dizini yenilendi · çalışan adımlar: {', '.join(ran)}")
+        # Site açılışta data/local_rag_chunks.json'u yeniden üretir; üretilince yalnız yeni/değişen parçalar vektörlenip
+        # yerel + bulut Supabase'e yazılır (rag_vector_build artımlıdır)
+        chunk_file = ROOT / "data" / "local_rag_chunks.json"
+        for _ in range(90):
+            if chunk_file.exists() and chunk_file.stat().st_mtime > t_restart:
+                break
+            time.sleep(10)
+        rc = run_step("rag_vektor", "RAG vektörleri (yalnız yeni/değişen parçalar) → Supabase", [PY, str(AI / "rag_vector_build.py")], 6 * 3600, False)
+        ran.append("rag_vektor" if rc == 0 else "rag_vektor(hata)")
     else:
         log("yeni veri yok; hiçbir adım çalışmadı")
     st["son"] = {"zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), "calisan": ran}

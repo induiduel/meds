@@ -3070,6 +3070,9 @@ STAGE_ORDER = [
     ("–", "Müfredat bilgi paketi", "scripts/advanced_ai/curriculum_package.py"),
     ("15", "RAG + veritabanı yenileme", "scripts/agents/rag_refresh.py"),
     ("16", "Örnek çalışma soruları (müfredat, günlük sınırlı)", "scripts/advanced_ai/practice_question_generator.py"),
+    ("15", "RAG vektörleri → yerel + bulut Supabase", "scripts/advanced_ai/rag_vector_build.py"),
+    ("–", "Yeni veri hattı (artımlı)", "scripts/agents/new_data_pipeline.py"),
+    ("14", "Faz 14 otomatik ücretsiz kip", "scripts/agents/faz14_auto.sh"),
 ]
 _AI_MARKERS = [
     ("bulut_ucretli", ("PHASE14_PAID_GEMINI_KEY",)),
@@ -3142,6 +3145,7 @@ INGEST_STEPS = {
     "temizle": ("Ders notu temizleme + ortak RAG (Faz 12 + ortak depo)", [_VENV_PY, "scripts/advanced_ai/phase12_clean_notes.py"],
                 [_VENV_PY, "scripts/advanced_ai/build_unified_store.py"]),
     "ornek_soru": ("Örnek soru üret (günlük sınırla)", [_VENV_PY, "scripts/advanced_ai/practice_question_generator.py"]),
+    "rag_vektor": ("RAG vektörleri → Supabase (yerel + bulut)", [_VENV_PY, "scripts/advanced_ai/rag_vector_build.py"]),
     "yeni_veri": ("Yeni verileri işle (yalnız değişen girdiler)", [_VENV_PY, "scripts/agents/new_data_pipeline.py", "--yeni"]),
     "bekleyen": ("İşlenmemiş verileri bitir", [_VENV_PY, "scripts/agents/new_data_pipeline.py", "--bekleyen"]),
 }
