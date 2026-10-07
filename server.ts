@@ -878,6 +878,36 @@ app.get('/api/data-catalog', (_req, res) => {
 });
 
 // Öğren bağlantıları (learn_links.py): soru → Öğren destesi slaytı, eşik altı bağlantı yok
+// ---- Yönetim konsolu: faz verisi gezgini (kategori listesi + alan sorgusu; arama yapmadan listelenir)
+let _stemIndex: { at: number; map: Map<string, string> } | null = null;
+function stemOf(id: string): string {
+  if (!_stemIndex || Date.now() - _stemIndex.at > 60_000) {
+    const map = new Map<string, string>();
+    for (const q of getPastQuestionsDb()) {
+      const st = q?.reconstruction?.stem || q?.stem || q?.rawQuestion?.stem || q?.question || '';
+      if (q?.id) map.set(String(q.id), String(st));
+    }
+    _stemIndex = { at: Date.now(), map };
+  }
+  return _stemIndex.map.get(id) || '';
+}
+
+app.get('/api/admin/phases/categories', requireAdmin, async (_req, res) => {
+  const { listCategories } = await import('./src/services/phaseDataExplorer.ts');
+  res.json({ kategoriler: listCategories() });
+});
+
+app.get('/api/admin/phases/explore', requireAdmin, async (req, res) => {
+  const { explore } = await import('./src/services/phaseDataExplorer.ts');
+  const q = req.query as Record<string, string>;
+  res.json(
+    explore(
+      { kategori: q.kategori || 'mufredat', alan: q.alan || '', deger: q.deger || '', sirala: q.sirala || '', yon: q.yon === 'azalan' ? 'azalan' : 'artan', sayfa: Number(q.sayfa) || 1, boyut: Number(q.boyut) || 50 },
+      stemOf,
+    ),
+  );
+});
+
 // ---- Yönetim konsolu: faz verileri (görüntüle / elle düzelt / arama testi)
 app.get('/api/admin/phases/question/:id', requireAdmin, (req, res) => {
   const id = String(req.params.id);

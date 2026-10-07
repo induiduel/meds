@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Search, Save, RotateCcw, FlaskConical, Code2 } from 'lucide-react';
+import { Search, Save, RotateCcw, FlaskConical, Code2, ChevronLeft, ChevronRight, ArrowUpDown } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { QuestionInsightsPanel, clearInsightsCache } from '../QuestionInsightsPanel';
 import { toast } from '../ui/Toast';
@@ -20,6 +20,8 @@ type Override = {
   guncelleme?: string;
 };
 type Detail = { id: string; ham: any; gorunen: any; duzeltme: Override | null; kayitlar: Record<string, any> };
+type Cat = { id: string; label: string; desc: string; satir: number; soru: number; alanlar: string[] };
+type ExploreRes = { alanlar: string[]; toplam: number; sayfa: number; boyut: number; satirlar: Record<string, any>[]; dagilim: { deger: string; sayi: number }[] };
 type TestResult = { sonuclar: { baslik: string; sayfa: number | null; skor: number; metin: string }[]; faz11: Slide[] };
 
 const HIDEABLE: [string, string][] = [
@@ -58,6 +60,33 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
   const [busy, setBusy] = useState<'' | 'save' | 'test'>('');
   const [showRaw, setShowRaw] = useState(false);
   const [previewKey, setPreviewKey] = useState(0);
+  // Gezgin: kategori + alan sorgusu (arama yapmadan listelenir)
+  const [cats, setCats] = useState<Cat[]>([]);
+  const [eq, setEq] = useState({ kategori: 'mufredat', alan: '', deger: '', sirala: '', yon: 'artan' as 'artan' | 'azalan', sayfa: 1, boyut: 50 });
+  const [ex, setEx] = useState<ExploreRes | null>(null);
+  const [exLoading, setExLoading] = useState(false);
+  const [degerInput, setDegerInput] = useState('');
+
+  useEffect(() => {
+    safeJsonFetch<{ kategoriler: Cat[] }>('/api/admin/phases/categories', { headers }).then((r) => r.ok && r.data && setCats(r.data.kategoriler));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  useEffect(() => {
+    setExLoading(true);
+    const qs = new URLSearchParams(Object.entries(eq).map(([k, v]) => [k, String(v)])).toString();
+    safeJsonFetch<ExploreRes>(`/api/admin/phases/explore?${qs}`, { headers }).then((r) => {
+      setExLoading(false);
+      if (r.ok && r.data) setEx(r.data);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [eq]);
+  // değer kutusu: yazmayı bekle (300 ms)
+  useEffect(() => {
+    const t = window.setTimeout(() => setEq((q) => (q.deger === degerInput ? q : { ...q, deger: degerInput, sayfa: 1 })), 300);
+    return () => window.clearTimeout(t);
+  }, [degerInput]);
+  const curCat = cats.find((c) => c.id === eq.kategori);
+  const cols = (ex?.alanlar || []).filter((k) => k !== 'soru_id');
 
   useEffect(() => {
     safeJsonFetch<any>('/api/past-exams').then((r) => {
@@ -163,6 +192,92 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
 
   return (
     <div className="flex flex-col gap-4">
+      <div className={card}>
+        <div className="flex flex-wrap gap-1.5" role="tablist" aria-label="Veri kategorisi">
+          {cats.map((c) => (
+            <button
+              key={c.id}
+              type="button"
+              role="tab"
+              aria-selected={eq.kategori === c.id}
+              title={c.desc}
+              onClick={() => {
+                setDegerInput('');
+                setEq({ kategori: c.id, alan: '', deger: '', sirala: '', yon: 'artan', sayfa: 1, boyut: eq.boyut });
+              }}
+              className={`h-9 px-2.5 rounded-lg text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer ${eq.kategori === c.id ? 'bg-accent text-white' : 'bg-canvas text-ink-2 hover:text-ink'}`}
+            >
+              {c.label}
+              <span className={`text-[11px] font-mono ${eq.kategori === c.id ? 'text-white/80' : 'text-ink-3'}`}>{c.soru.toLocaleString('tr-TR')}</span>
+            </button>
+          ))}
+        </div>
+        {curCat && <p className="m-0 text-[12.5px] text-ink-3">{curCat.desc} · {curCat.satir.toLocaleString('tr-TR')} kayıt, {curCat.soru.toLocaleString('tr-TR')} soru</p>}
+        <div className="grid gap-2 sm:grid-cols-[minmax(0,10rem)_minmax(0,1fr)_minmax(0,10rem)_auto]">
+          <select className={input} value={eq.alan} onChange={(e) => setEq((q) => ({ ...q, alan: e.target.value, sayfa: 1 }))} aria-label="Sorgulanacak alan">
+            <option value="">Tüm alanlar</option>
+            {cols.map((k) => <option key={k} value={k}>{k}</option>)}
+          </select>
+          <input className={input} value={degerInput} onChange={(e) => setDegerInput(e.target.value)} placeholder='Değer (içerir; tam eşleşme "=yuksek"; "boş" / "dolu")' aria-label="Sorgu değeri" />
+          <select className={input} value={eq.sirala} onChange={(e) => setEq((q) => ({ ...q, sirala: e.target.value }))} aria-label="Sıralama alanı">
+            <option value="">Sıralama yok</option>
+            {cols.map((k) => <option key={k} value={k}>{k}</option>)}
+          </select>
+          <button type="button" onClick={() => setEq((q) => ({ ...q, yon: q.yon === 'artan' ? 'azalan' : 'artan' }))} className="h-9 px-3 rounded-lg border border-line text-[12.5px] inline-flex items-center gap-1 cursor-pointer" aria-label="Sıralama yönü">
+            <ArrowUpDown className="w-3.5 h-3.5" /> {eq.yon === 'artan' ? 'Artan' : 'Azalan'}
+          </button>
+        </div>
+        {eq.alan && (ex?.dagilim?.length ?? 0) > 0 && (
+          <div className="flex flex-wrap gap-1.5 text-[12px]">
+            <span className="text-ink-3">{eq.alan} değerleri:</span>
+            {ex!.dagilim.map((d) => (
+              <button key={d.deger} type="button" onClick={() => setDegerInput('=' + d.deger)} className="px-2 py-0.5 rounded-full bg-canvas hover:bg-line text-ink-2 cursor-pointer">
+                {d.deger.length > 40 ? d.deger.slice(0, 40) + '…' : d.deger} <span className="font-mono text-ink-3">{d.sayi}</span>
+              </button>
+            ))}
+          </div>
+        )}
+        <div className="overflow-x-auto -mx-3.5 px-3.5">
+          <table className="w-full text-[12.5px] border-collapse">
+            <thead>
+              <tr className="text-left text-ink-3">
+                <th className="py-1.5 pr-2 font-semibold">Soru</th>
+                {cols.map((k) => <th key={k} className="py-1.5 pr-2 font-semibold whitespace-nowrap">{k}</th>)}
+              </tr>
+            </thead>
+            <tbody className={exLoading ? 'opacity-60' : ''}>
+              {(ex?.satirlar || []).map((r, i) => (
+                <tr key={i} onClick={() => load(String(r.soru_id))} className={`border-t border-line cursor-pointer hover:bg-canvas ${r.soru_id === selId ? 'bg-canvas' : ''}`}>
+                  <td className="py-1.5 pr-2 align-top max-w-[22rem]">
+                    <span className="block truncate text-ink" title={r._kok}>{r._kok || <span className="font-mono text-ink-3">{r.soru_id}</span>}</span>
+                    {r._elle && <span className="text-[11px] text-warn">elle düzeltildi</span>}
+                  </td>
+                  {cols.map((k) => (
+                    <td key={k} className="py-1.5 pr-2 align-top max-w-[16rem]">
+                      <span className="block truncate" title={String(r[k] ?? '')}>{r[k] === true ? 'evet' : r[k] === false ? 'hayır' : String(r[k] ?? '—')}</span>
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {ex && ex.toplam === 0 && <p className="m-0 py-3 text-[13px] text-ink-3">Bu sorguya uyan kayıt yok.</p>}
+        </div>
+        {ex && ex.toplam > 0 && (
+          <div className="flex items-center justify-between gap-2 text-[12.5px] text-ink-3">
+            <span>{ex.toplam.toLocaleString('tr-TR')} kayıt · sayfa {ex.sayfa} / {Math.max(1, Math.ceil(ex.toplam / ex.boyut))}</span>
+            <div className="flex items-center gap-1">
+              <select className="h-9 rounded-lg border border-line px-1.5" value={eq.boyut} onChange={(e) => setEq((q) => ({ ...q, boyut: Number(e.target.value), sayfa: 1 }))} aria-label="Sayfa boyutu">
+                {[25, 50, 100, 200].map((n) => <option key={n} value={n}>{n}</option>)}
+              </select>
+              <button type="button" disabled={eq.sayfa <= 1} onClick={() => setEq((q) => ({ ...q, sayfa: q.sayfa - 1 }))} className="w-9 h-9 rounded-lg border border-line inline-flex items-center justify-center disabled:opacity-40 cursor-pointer" aria-label="Önceki sayfa"><ChevronLeft className="w-4 h-4" /></button>
+              <button type="button" disabled={eq.sayfa * eq.boyut >= ex.toplam} onClick={() => setEq((q) => ({ ...q, sayfa: q.sayfa + 1 }))} className="w-9 h-9 rounded-lg border border-line inline-flex items-center justify-center disabled:opacity-40 cursor-pointer" aria-label="Sonraki sayfa"><ChevronRight className="w-4 h-4" /></button>
+            </div>
+          </div>
+        )}
+        <p className="m-0 text-[12px] text-ink-3">Bir satıra tıklayınca o sorunun tüm faz verisi, elle düzeltme ve arama testi aşağıda açılır.</p>
+      </div>
+
       <div className={card}>
         <label className="flex items-center gap-2 rounded-lg border border-line px-2.5 h-10">
           <Search className="w-4 h-4 text-ink-3" />
