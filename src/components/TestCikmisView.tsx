@@ -33,6 +33,56 @@ import { ApiService } from '../services/api';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { pathFor } from '../router';
 
+// Kelime düzeyinde fark (LCS). Kök birkaç yüz kelimeyi geçmez; 400 kelime üstünde fark çizilmez.
+type DiffPart = { t: string; k: 'same' | 'add' | 'del' };
+function wordDiff(a: string, b: string): DiffPart[] | null {
+  const A = a.split(/(\s+)/).filter(Boolean);
+  const B = b.split(/(\s+)/).filter(Boolean);
+  if (A.length > 800 || B.length > 800) return null;
+  const n = A.length, m = B.length;
+  const dp: number[][] = Array.from({ length: n + 1 }, () => new Array(m + 1).fill(0));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) dp[i][j] = A[i] === B[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const out: DiffPart[] = [];
+  let i = 0, j = 0;
+  const push = (t: string, k: DiffPart['k']) => (out.length && out[out.length - 1].k === k ? (out[out.length - 1].t += t) : out.push({ t, k }));
+  while (i < n && j < m) {
+    if (A[i] === B[j]) { push(A[i], 'same'); i++; j++; }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) push(A[i++], 'del');
+    else push(B[j++], 'add');
+  }
+  while (i < n) push(A[i++], 'del');
+  while (j < m) push(B[j++], 'add');
+  return out;
+}
+
+function DiffText({ before, after }: { before: string; after: string }) {
+  const parts = useMemo(() => wordDiff(before, after), [before, after]);
+  if (!parts) return <>{after}</>;
+  return (
+    <>
+      {parts.map((p, i) =>
+        p.k === 'same' ? (
+          <span key={i}>{p.t}</span>
+        ) : p.k === 'add' ? (
+          <ins key={i} className="no-underline bg-emerald-100 text-emerald-900 rounded-sm px-0.5">{p.t}</ins>
+        ) : /\S/.test(p.t) ? (
+          <del key={i} className="bg-rose-100 text-rose-800 rounded-sm px-0.5 decoration-rose-500">{p.t}</del>
+        ) : null,
+      )}
+    </>
+  );
+}
+
+const PAGE_SIZE = 30;
+const modelLabel = (m?: string) => {
+  const s = String(m || '').toLowerCase();
+  if (!s) return 'AI önerisi';
+  if (s.includes('gemini')) return 'Gemini önerisi';
+  if (s.includes('muse')) return 'Muse Spark önerisi';
+  if (s.includes('gemma') || s.includes('qwen')) return 'Yerel model önerisi';
+  return `${m} önerisi`;
+};
+
 interface TestCikmisViewProps {
   currentUser: AppUser | null;
   isAdmin: boolean;
@@ -53,7 +103,10 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   const [statusFilter, setStatusFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedReviewId, setSelectedReviewId] = useState<string | null>(null);
-  const [sortOrder, setSortOrder] = useState<'newest' | 'oldest'>('newest');
+  const [sortOrder, setSortOrder] = useState<'newest' | 'oldest' | 'evidence_low' | 'evidence_high'>('newest');
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  // Telefonda kart başına görünüm: fark (varsayılan) | mevcut | öneri
+  const [cardView, setCardView] = useState<Record<string, 'diff' | 'src' | 'prop'>>({});
 
   // Action status
   const [processingId, setProcessingId] = useState<string | null>(null);
@@ -130,12 +183,16 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
 
   useEffect(() => {
     fetchReviews();
+    if (!isAdmin) return;
     fetchLiveStatus();
     const interval = setInterval(() => {
-      fetchLiveStatus();
+      if (!document.hidden) fetchLiveStatus();
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isAdmin]);
+
+  // filtre/arama değişince listeyi başa al
+  useEffect(() => setVisibleCount(PAGE_SIZE), [statusFilter, searchQuery, sortOrder]);
 
   const handleStartReview = async (mode: 'cloud' | 'local') => {
     setIsTriggering(true);
@@ -289,6 +346,10 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
 
     // Sıralama: En son eklenen / işlenen soru en başta (varsayılan)
     const sorted = [...list].sort((a, b) => {
+      if (sortOrder === 'evidence_low' || sortOrder === 'evidence_high') {
+        const d = (a.support_ratio || 0) - (b.support_ratio || 0);
+        return sortOrder === 'evidence_low' ? d : -d;
+      }
       const tA = new Date(a.processed_at || 0).getTime();
       const tB = new Date(b.processed_at || 0).getTime();
       return sortOrder === 'newest' ? tB - tA : tA - tB;
@@ -300,9 +361,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   return (
     <div className="flex flex-col gap-4 pb-16 min-w-0 w-full max-w-[1400px] mx-auto">
       <PageHeader
-        eyebrow="Faz 14 · Canlı Test & İnceleme Katmanı"
         title="Test Edilen Çıkmış Sorular"
-        description="Yerel model (gemma3:4b) ve bulut yapay zeka tarafından üretilen kanıta dayalı OCR/imla redaksiyon önerileri. Canlı soru havuzuna doğrudan yazılmaz; yalnızca onaylanan kayıtlar ana veri tabanına işlenir."
+        description="Faz 14'ün çıkmış sorular için önerdiği OCR, imla ve eksik şık düzeltmeleri. Öneriler soru havuzuna kendiliğinden yazılmaz; yalnız onaylanan düzeltme canlı soruya uygulanır."
         stats={[
           { label: 'İncelenen Soru', value: stats.total.toLocaleString('tr-TR') },
           { label: 'İnceleme Bekleyen', value: stats.pending.toLocaleString('tr-TR'), tone: stats.pending > 0 ? 'warn' : 'default' },
@@ -310,7 +370,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
           { label: 'Reddedilen', value: stats.rejected.toLocaleString('tr-TR'), tone: 'default' },
         ]}
         actions={
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"
               onClick={fetchReviews}
@@ -339,7 +399,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
 
       {/* Canlı İşlem, Kalan Soru & Manuel Çalıştırma Kontrol Paneli (Sadece Admin) */}
       {isAdmin && (
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 text-white shadow-lg space-y-4">
+        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-5 text-white shadow-lg space-y-4">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
@@ -360,7 +420,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
 
           {/* Manuel Tetikleme Butonları */}
           <div className="flex flex-wrap items-center gap-2">
-            <div className="flex items-center gap-1.5 bg-slate-800/80 px-2.5 py-1 rounded-xl border border-slate-700">
+            <div className="flex items-center gap-1.5 bg-slate-800/80 px-2.5 h-11 sm:h-9 rounded-xl border border-slate-700">
               <span className="text-[11px] text-slate-400">Parti:</span>
               <select
                 value={triggerLimit}
@@ -378,7 +438,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               type="button"
               onClick={() => handleStartReview('cloud')}
               disabled={isTriggering || liveStatus?.isRunning}
-              className="h-9 px-3.5 rounded-xl bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-600 hover:to-violet-700 text-white font-bold text-xs inline-flex items-center gap-1.5 transition disabled:opacity-50 cursor-pointer shadow-md"
+              className="h-11 sm:h-9 px-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs inline-flex items-center gap-1.5 transition disabled:opacity-50 cursor-pointer shadow-md"
             >
               <Cloud className="w-3.5 h-3.5" />
               <span>Bulut Başlat (Gemini)</span>
@@ -388,7 +448,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               type="button"
               onClick={() => handleStartReview('local')}
               disabled={isTriggering || liveStatus?.isRunning}
-              className="h-9 px-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-xs inline-flex items-center gap-1.5 transition disabled:opacity-50 cursor-pointer"
+              className="h-11 sm:h-9 px-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-xs inline-flex items-center gap-1.5 transition disabled:opacity-50 cursor-pointer"
             >
               <Cpu className="w-3.5 h-3.5 text-emerald-400" />
               <span>Yerel Başlat (RTX 4060)</span>
@@ -399,7 +459,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 type="button"
                 onClick={handleStopReview}
                 disabled={isTriggering}
-                className="h-9 px-3.5 rounded-xl bg-rose-600/90 hover:bg-rose-600 text-white font-bold text-xs inline-flex items-center gap-1.5 transition cursor-pointer"
+                className="h-11 sm:h-9 px-3.5 rounded-xl bg-rose-600/90 hover:bg-rose-600 text-white font-bold text-xs inline-flex items-center gap-1.5 transition cursor-pointer"
               >
                 <Square className="w-3.5 h-3.5" />
                 <span>Durdur</span>
@@ -409,7 +469,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             <button
               type="button"
               onClick={() => setShowConsole(!showConsole)}
-              className="h-9 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 font-semibold text-xs inline-flex items-center gap-1.5 transition cursor-pointer"
+              className="h-11 sm:h-9 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 font-semibold text-xs inline-flex items-center gap-1.5 transition cursor-pointer"
             >
               <Terminal className="w-3.5 h-3.5 text-amber-400" />
               <span>{showConsole ? 'Konsolu Gizle' : 'Konsolu Aç'}</span>
@@ -421,7 +481,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-2 border-t border-slate-800 text-center font-mono">
           <div className="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80">
             <span className="text-[10px] uppercase text-slate-400 block">Toplam Havuz</span>
-            <strong className="text-base text-slate-200">4.926</strong>
+            <strong className="text-base text-slate-200">{liveStatus?.totalCandidate ? liveStatus.totalCandidate.toLocaleString('tr-TR') : '—'}</strong>
             <span className="text-[10px] text-slate-500 block">Aday Çıkmış</span>
           </div>
           <div className="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80">
@@ -431,7 +491,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
           </div>
           <div className="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80">
             <span className="text-[10px] uppercase text-slate-400 block">Kalan Soru</span>
-            <strong className="text-base text-amber-400">{liveStatus?.remaining ?? Math.max(0, 4926 - allReviews.length)}</strong>
+            <strong className="text-base text-amber-400">{liveStatus?.remaining ?? '—'}</strong>
             <span className="text-[10px] text-amber-500 block">Sırada Bekleyen</span>
           </div>
           <div className="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80">
@@ -567,15 +627,20 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
           })}
 
           {/* Sıralama Butonu */}
-          <button
-            type="button"
-            onClick={() => setSortOrder(prev => prev === 'newest' ? 'oldest' : 'newest')}
-            className="h-11 px-3.5 rounded-xl border border-line bg-white hover:bg-canvas text-ink-2 hover:text-ink text-[13px] font-semibold whitespace-nowrap inline-flex items-center gap-1.5 cursor-pointer shadow-xs ml-1"
-            title="Sıralamayı Değiştir"
-          >
+          <label className="h-11 px-3 rounded-xl border border-line bg-white text-ink-2 text-[13px] font-semibold whitespace-nowrap inline-flex items-center gap-1.5 shrink-0 ml-1">
             <ArrowUpDown className="w-4 h-4 text-accent" />
-            <span>{sortOrder === 'newest' ? 'En Yeni İlk' : 'En Eski İlk'}</span>
-          </button>
+            <span className="sr-only">Sıralama</span>
+            <select
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value as typeof sortOrder)}
+              className="bg-transparent outline-0 cursor-pointer text-ink"
+            >
+              <option value="newest">En yeni</option>
+              <option value="oldest">En eski</option>
+              <option value="evidence_low">Kanıtı en zayıf</option>
+              <option value="evidence_high">Kanıtı en güçlü</option>
+            </select>
+          </label>
 
           {/* Admin: Değişiklik Olmayanları Tekrar Değerlendir Butonu */}
           {isAdmin && stats.unchanged > 0 && (
@@ -587,7 +652,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               title="Değişiklik yapılmamış tüm soruları checkpoint'ten çıkarıp Faz 14 için tekrar hazırla"
             >
               <RotateCcw className="w-3.5 h-3.5 text-amber-600" />
-              <span>Değişiklik Olmayanları Tekrar Değerlendir ({stats.unchanged})</span>
+              <span>Değişmeyenleri tekrar değerlendir ({stats.unchanged})</span>
             </button>
           )}
         </div>
@@ -623,7 +688,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
         </div>
       ) : (
         <div className="flex flex-col gap-4">
-          {filteredReviews.map((rev) => {
+          {filteredReviews.slice(0, visibleCount).map((rev) => {
             const qId = rev.question_id;
             const src = rev.source || ({} as any);
             const prop = rev.proposal || ({} as any);
@@ -633,6 +698,11 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             const isUnchanged = rev.status === 'unchanged';
             const ratioPercent = Math.round((rev.support_ratio || 0) * 100);
             const isSelected = selectedReviewId === qId;
+            const view = cardView[qId] || 'diff';
+            const srcStem = String(src.soru_koku || '');
+            const propStem = String(prop.soru_koku || '');
+            const stemChanged = Boolean(propStem) && propStem.trim() !== srcStem.trim();
+            const srcOpt = (k: string) => String((src.secenekler || {})[k] ?? (src.secenekler || {})[k.toLowerCase()] ?? '');
 
             return (
               <article
@@ -642,13 +712,13 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 }`}
               >
                 {/* Header bar */}
-                <div className="px-4 sm:px-6 py-3.5 bg-canvas border-b border-line flex flex-wrap items-center justify-between gap-3">
+                <div className="px-4 sm:px-6 py-3 bg-canvas border-b border-line flex flex-wrap items-center justify-between gap-2">
                   <div className="flex items-center gap-2.5 min-w-0">
                     <span className="font-mono font-bold text-[14px] text-ink px-2.5 py-1 rounded-lg bg-white border border-line">
                       #{qId}
                     </span>
                     {src.kurul_adi && (
-                      <span className="text-[12px] font-semibold px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200 truncate max-w-[200px]">
+                      <span className="text-[12px] font-semibold px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200 truncate max-w-[140px] sm:max-w-[220px]">
                         {src.kurul_adi}
                       </span>
                     )}
@@ -659,7 +729,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                     )}
                   </div>
 
-                  <div className="flex items-center gap-2 shrink-0">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span
                       className={`text-[11.5px] font-semibold px-2.5 py-1 rounded-full border flex items-center gap-1 ${
                         isApproved
@@ -707,65 +777,29 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                       Kanıt: %{ratioPercent}
                     </span>
 
-                    {/* Admin Onay / Red Butonları */}
-                    {isAdmin && (
-                      <div className="flex items-center gap-1.5 ml-2">
-                        {!isApproved && (
-                          <button
-                            type="button"
-                            onClick={() => handleApprove(qId)}
-                            disabled={processingId === qId}
-                            className="h-8 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer disabled:opacity-50"
-                            title="Öneriyi onayla ve canlı geçmiş sınav sorularına uygula"
-                          >
-                            <Check className="w-3.5 h-3.5" />
-                            <span>Onayla</span>
-                          </button>
-                        )}
-                        {!isRejected && (
-                          <button
-                            type="button"
-                            onClick={() => handleReject(qId)}
-                            disabled={processingId === qId}
-                            className="h-8 px-2.5 rounded-lg border border-line bg-white hover:bg-rose-50 hover:text-rose-600 text-ink-2 text-xs font-medium inline-flex items-center gap-1 cursor-pointer disabled:opacity-50"
-                            title="Öneriyi reddet"
-                          >
-                            <X className="w-3.5 h-3.5" />
-                            <span>Reddet</span>
-                          </button>
-                        )}
-                        {/* Düzenle / Öneri Yap Butonu */}
-                        <button
-                          type="button"
-                          onClick={() => openEditModal(rev)}
-                          className="h-8 px-2.5 rounded-lg border border-indigo-200 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold inline-flex items-center gap-1 cursor-pointer"
-                          title="Öneriyi beğenmediyseniz veya şık/kök düzeltmesi yapmak istiyorsanız manuel düzenleyin"
-                        >
-                          <Edit3 className="w-3.5 h-3.5 text-indigo-600" />
-                          <span>Düzenle / Öneri Yap</span>
-                        </button>
-
-                        {(isUnchanged || isRejected) && (
-                          <button
-                            type="button"
-                            onClick={() => handleReEvaluateUnchanged(qId)}
-                            disabled={processingId === qId || isTriggering}
-                            className="h-8 px-2.5 rounded-lg border border-amber-300 bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-semibold inline-flex items-center gap-1 cursor-pointer disabled:opacity-50"
-                            title="Bu soruyu tekrar Faz 14 değerlendirme kuyruğuna al"
-                          >
-                            <RotateCcw className="w-3.5 h-3.5 text-amber-600" />
-                            <span>Tekrar Değerlendir</span>
-                          </button>
-                        )}
-                      </div>
-                    )}
                   </div>
                 </div>
 
-                {/* Content: Side-by-side or stacked diff comparison */}
+                {/* Telefon/tablet: tek sütun, görünüm seçici. Geniş ekran: iki sütun yan yana. */}
+                <div className="lg:hidden px-4 pt-3" role="tablist" aria-label="Karşılaştırma görünümü">
+                  <div className="grid grid-cols-3 gap-1 p-1 rounded-xl bg-canvas border border-line">
+                    {([['diff', 'Fark'], ['src', 'Mevcut'], ['prop', 'Öneri']] as const).map(([id, label]) => (
+                      <button
+                        key={id}
+                        type="button"
+                        role="tab"
+                        aria-selected={view === id}
+                        onClick={() => setCardView((v) => ({ ...v, [qId]: id }))}
+                        className={`h-10 rounded-lg text-[13px] font-semibold cursor-pointer ${view === id ? 'bg-white text-ink shadow-xs' : 'text-ink-3'}`}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
                 <div className="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                   {/* Sol Kolon: Mevcut Kaynak Soru */}
-                  <div className="flex flex-col gap-3 p-4 rounded-xl bg-slate-50/80 border border-slate-200">
+                  <div className={`${view === 'src' ? 'flex' : 'hidden'} lg:flex flex-col gap-3 p-4 rounded-xl bg-slate-50/80 border border-slate-200 min-w-0`}>
                     <div className="flex items-center justify-between pb-2 border-b border-slate-200">
                       <span className="text-xs font-bold uppercase tracking-wider text-slate-600 flex items-center gap-1.5">
                         <FileText className="w-3.5 h-3.5" />
@@ -778,7 +812,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                       )}
                     </div>
 
-                    <div className="text-[14px] leading-relaxed text-slate-800 font-medium whitespace-pre-wrap">
+                    <div className="text-[14px] leading-relaxed text-slate-800 font-medium whitespace-pre-wrap break-words">
                       {src.soru_koku || <span className="text-slate-400 italic">(Soru kökü boş)</span>}
                     </div>
 
@@ -794,7 +828,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                             }`}
                           >
                             <span className="font-mono font-bold shrink-0">{k})</span>
-                            <span className="flex-1">{String(v)}</span>
+                            <span className="flex-1 min-w-0 break-words">{String(v)}</span>
                           </div>
                         ))}
                       </div>
@@ -809,11 +843,11 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   </div>
 
                   {/* Sağ Kolon: Yerel Modelin Redaksiyon Önerisi */}
-                  <div className="flex flex-col gap-3 p-4 rounded-xl bg-violet-50/50 border border-violet-200">
+                  <div className={`${view === 'src' ? 'hidden' : 'flex'} lg:flex flex-col gap-3 p-4 rounded-xl bg-violet-50/50 border border-violet-200 min-w-0`}>
                     <div className="flex items-center justify-between pb-2 border-b border-violet-200">
                       <span className="text-xs font-bold uppercase tracking-wider text-violet-800 flex items-center gap-1.5">
                         <Sparkles className="w-3.5 h-3.5 text-violet-600" />
-                        <span>Yerel AI Redaksiyon Önerisi</span>
+                        <span>{modelLabel(rev.model)}</span>
                       </span>
                       {prop.dogru_secenek && (
                         <span className="font-mono font-bold text-xs bg-white px-2 py-0.5 rounded border border-violet-200 text-violet-800">
@@ -822,9 +856,21 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                       )}
                     </div>
 
-                    <div className="text-[14px] leading-relaxed text-violet-950 font-medium whitespace-pre-wrap">
-                      {prop.soru_koku || <span className="text-violet-400 italic">(Değişiklik önerilmedi)</span>}
+                    <div className="text-[14px] leading-relaxed text-violet-950 font-medium whitespace-pre-wrap break-words">
+                      {!propStem ? (
+                        <span className="text-violet-500 italic">Kökte değişiklik önerilmedi</span>
+                      ) : stemChanged && view !== 'prop' ? (
+                        <DiffText before={srcStem} after={propStem} />
+                      ) : (
+                        propStem
+                      )}
                     </div>
+                    {stemChanged && view !== 'prop' && (
+                      <p className="m-0 text-[11.5px] text-ink-3">
+                        <ins className="no-underline bg-emerald-100 text-emerald-900 rounded-sm px-0.5">eklenen</ins>{' '}
+                        <del className="bg-rose-100 text-rose-800 rounded-sm px-0.5">çıkarılan</del> kelimeler, mevcut kayda göre
+                      </p>
+                    )}
 
                     {prop.secenekler && Object.keys(prop.secenekler).length > 0 && (
                       <div className="space-y-1.5 pt-1">
@@ -846,7 +892,13 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                               }`}
                             >
                               <span className="font-mono font-bold shrink-0">{k})</span>
-                              <span className="flex-1">{String(v)}</span>
+                              <span className="flex-1 min-w-0 break-words">
+                                {view !== 'prop' && srcOpt(upperKey) && srcOpt(upperKey).trim() !== String(v).trim() ? (
+                                  <DiffText before={srcOpt(upperKey)} after={String(v)} />
+                                ) : (
+                                  String(v)
+                                )}
+                              </span>
                               {isAiCompleted && (
                                 <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10.5px] font-bold bg-purple-100 text-purple-700 border border-purple-200 shrink-0">
                                   <Sparkles className="w-3 h-3 text-purple-600" />
@@ -907,11 +959,66 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   </div>
                 </div>
 
+                {isAdmin && <div className="px-4 sm:px-6 pb-4">
+{/* Admin Onay / Red Butonları */}
+                    {isAdmin && (
+                      <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2">
+                        {!isApproved && (
+                          <button
+                            type="button"
+                            onClick={() => handleApprove(qId)}
+                            disabled={processingId === qId}
+                            className="h-11 sm:h-9 px-3.5 rounded-lg bg-emerald-600 justify-center hover:bg-emerald-700 text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer disabled:opacity-50"
+                            title="Öneriyi onayla ve canlı geçmiş sınav sorularına uygula"
+                          >
+                            <Check className="w-3.5 h-3.5" />
+                            <span>Onayla</span>
+                          </button>
+                        )}
+                        {!isRejected && (
+                          <button
+                            type="button"
+                            onClick={() => handleReject(qId)}
+                            disabled={processingId === qId}
+                            className="h-11 sm:h-9 px-3 rounded-lg border border-line bg-white hover:bg-rose-50 justify-center hover:text-rose-600 text-ink-2 text-xs font-medium inline-flex items-center gap-1 cursor-pointer disabled:opacity-50"
+                            title="Öneriyi reddet"
+                          >
+                            <X className="w-3.5 h-3.5" />
+                            <span>Reddet</span>
+                          </button>
+                        )}
+                        {/* Düzenle / Öneri Yap Butonu */}
+                        <button
+                          type="button"
+                          onClick={() => openEditModal(rev)}
+                          className="h-11 sm:h-9 px-3 rounded-lg border border-indigo-200 justify-center bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold inline-flex items-center gap-1 cursor-pointer"
+                          title="Öneriyi beğenmediyseniz veya şık/kök düzeltmesi yapmak istiyorsanız manuel düzenleyin"
+                        >
+                          <Edit3 className="w-3.5 h-3.5 text-indigo-600" />
+                          <span>Düzenle</span>
+                        </button>
+
+                        {(isUnchanged || isRejected) && (
+                          <button
+                            type="button"
+                            onClick={() => handleReEvaluateUnchanged(qId)}
+                            disabled={processingId === qId || isTriggering}
+                            className="h-11 sm:h-9 px-3 rounded-lg border border-amber-300 justify-center bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-semibold inline-flex items-center gap-1 cursor-pointer disabled:opacity-50"
+                            title="Bu soruyu tekrar Faz 14 değerlendirme kuyruğuna al"
+                          >
+                            <RotateCcw className="w-3.5 h-3.5 text-amber-600" />
+                            <span>Tekrar Değerlendir</span>
+                          </button>
+                        )}
+                      </div>
+                    )}
+                </div>}
+
                 {/* Footer metadata */}
                 <div className="px-4 sm:px-6 py-2.5 bg-slate-50 border-t border-line flex flex-wrap items-center justify-between gap-2 text-[11.5px] text-ink-3">
-                  <div className="flex items-center gap-3">
-                    <span>Model: <strong className="font-mono text-ink-2">{rev.model || 'gemma3:4b'}</strong></span>
-                    <span>İşlem: <strong className="font-mono text-ink-2">{rev.processed_at?.replace('T', ' ')}</strong></span>
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 min-w-0">
+                    <span>Model: <strong className="font-mono text-ink-2 break-all">{rev.model || 'bilinmiyor'}</strong></span>
+                    <span>İşlem: <strong className="font-mono text-ink-2">{rev.processed_at?.slice(0, 16).replace('T', ' ')}</strong></span>
                     {rev.approved_at && (
                       <span className="text-emerald-700 font-medium">
                         Onay: {rev.approved_at.slice(0, 19).replace('T', ' ')} ({rev.approved_by})
@@ -937,32 +1044,42 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               </article>
             );
           })}
+          {filteredReviews.length > visibleCount && (
+            <button
+              type="button"
+              onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+              className="h-12 rounded-xl border border-line bg-white text-ink text-[14px] font-semibold hover:bg-canvas cursor-pointer"
+            >
+              Daha fazla göster ({(filteredReviews.length - visibleCount).toLocaleString('tr-TR')} kayıt daha)
+            </button>
+          )}
         </div>
       )}
 
       {/* Soru Önerisi Düzenleme / Revize Etme Modalı */}
       {editingReview && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-          <div className="bg-white rounded-2xl shadow-2xl border border-line w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+        <div className="fixed inset-0 z-50 flex items-stretch sm:items-center justify-center sm:p-4 bg-slate-900/60" role="dialog" aria-modal="true" aria-labelledby="tc-edit-title" onKeyDown={(e) => e.key === 'Escape' && !isSavingEdit && setEditingReview(null)}>
+          <div className="bg-white sm:rounded-2xl shadow-2xl border border-line w-full max-w-2xl h-full sm:h-auto sm:max-h-[90vh] flex flex-col overflow-hidden">
             {/* Modal Header */}
-            <div className="px-6 py-4 border-b border-line bg-canvas flex items-center justify-between">
+            <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-line bg-canvas flex items-center justify-between gap-2" style={{ paddingTop: 'max(0.75rem, env(safe-area-inset-top))' }}>
               <div className="flex items-center gap-2">
                 <Edit3 className="w-5 h-5 text-indigo-600" />
-                <h3 className="font-bold text-base text-ink">
+                <h3 id="tc-edit-title" className="font-bold text-base text-ink">
                   Soru #{editingReview.question_id} Önerisini Düzenle
                 </h3>
               </div>
               <button
                 type="button"
                 onClick={() => setEditingReview(null)}
-                className="p-1 rounded-lg hover:bg-slate-200 text-slate-500 hover:text-slate-800 transition cursor-pointer"
+                aria-label="Kapat"
+                className="w-11 h-11 inline-flex items-center justify-center rounded-lg hover:bg-slate-200 text-slate-500 hover:text-slate-800 transition cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 overflow-y-auto space-y-4 text-sm flex-1">
+            <div className="p-4 sm:p-6 overflow-y-auto space-y-4 text-sm flex-1">
               <div className="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900 space-y-1">
                 <span className="font-bold block flex items-center gap-1">
                   <AlertTriangle className="w-4 h-4 text-amber-600" />
@@ -982,7 +1099,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   rows={4}
                   value={editStem}
                   onChange={(e) => setEditStem(e.target.value)}
-                  className="w-full p-3 rounded-xl border border-line focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 text-ink text-sm outline-0 leading-relaxed font-sans"
+                  className="w-full p-3 rounded-xl border border-line focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 text-ink text-[16px] sm:text-sm outline-0 leading-relaxed font-sans"
                   placeholder="Düzeltilmiş soru kökünü buraya yazın..."
                 />
               </div>
@@ -998,7 +1115,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                     <select
                       value={editCorrectAnswer}
                       onChange={(e) => setEditCorrectAnswer(e.target.value)}
-                      className="px-2 py-1 rounded-lg border border-line font-bold text-indigo-600 bg-white cursor-pointer"
+                      className="h-10 px-2 rounded-lg border border-line font-bold text-indigo-600 bg-white cursor-pointer"
                     >
                       {['A', 'B', 'C', 'D', 'E'].map((opt) => (
                         <option key={opt} value={opt}>
@@ -1026,7 +1143,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                       onChange={(e) =>
                         setEditOptions((prev) => ({ ...prev, [key]: e.target.value }))
                       }
-                      className="flex-1 px-3 py-1.5 rounded-lg border border-line focus:border-indigo-500 text-sm text-ink outline-0"
+                      className="flex-1 min-w-0 h-11 px-3 rounded-lg border border-line focus:border-indigo-500 text-[16px] sm:text-sm text-ink outline-0"
                       placeholder={`${key} şıkkı metni...`}
                     />
                   </div>
@@ -1042,7 +1159,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   rows={3}
                   value={editExplanation}
                   onChange={(e) => setEditExplanation(e.target.value)}
-                  className="w-full p-3 rounded-xl border border-line focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 text-ink text-sm outline-0 leading-relaxed"
+                  className="w-full p-3 rounded-xl border border-line focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 text-ink text-[16px] sm:text-sm outline-0 leading-relaxed"
                   placeholder="Soruya ait tıbbi açıklama..."
                 />
               </div>
@@ -1063,12 +1180,12 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             </div>
 
             {/* Modal Footer */}
-            <div className="px-6 py-4 border-t border-line bg-canvas flex items-center justify-end gap-2.5">
+            <div className="px-4 sm:px-6 py-3 sm:py-4 border-t border-line bg-canvas grid grid-cols-2 sm:flex sm:items-center sm:justify-end gap-2.5" style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}>
               <button
                 type="button"
                 onClick={() => setEditingReview(null)}
                 disabled={isSavingEdit}
-                className="px-4 py-2 rounded-xl border border-line bg-white hover:bg-slate-100 text-ink-2 text-xs font-semibold cursor-pointer"
+                className="h-11 px-4 rounded-xl border border-line bg-white hover:bg-slate-100 text-ink-2 text-[13.5px] font-semibold cursor-pointer"
               >
                 İptal
               </button>
@@ -1076,7 +1193,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 type="button"
                 onClick={handleSaveEditProposal}
                 disabled={isSavingEdit}
-                className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shadow-sm"
+                className="h-11 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-[13.5px] font-bold inline-flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 shadow-sm"
               >
                 {isSavingEdit ? (
                   <>
@@ -1086,7 +1203,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 ) : (
                   <>
                     <Check className="w-3.5 h-3.5" />
-                    <span>Öneriyi Kaydet & Hazırla</span>
+                    <span>Öneriyi kaydet</span>
                   </>
                 )}
               </button>
