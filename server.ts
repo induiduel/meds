@@ -51,7 +51,7 @@ import {
   DEEPSEEK_DATA_DIR
 } from './src/services/deepseekDataService.ts';
 import { applyMergeOverlay, mergeMtime, readMergeGroups, updateMergeGroup } from './src/services/questionMerge.ts';
-import { applyPhase14Overlay } from './src/services/phase14Overlay.ts';
+import { applyPhase14Overlay, latestReviews } from './src/services/phase14Overlay.ts';
 import { getQuestionInsights, getInsightsSummary, getRawQuestionInsights, getPhaseOverride, savePhaseOverride, getQuestionDerivedRecords } from './src/services/phaseInsightsService.ts';
 import { applyCleanOverlay } from './src/services/lectureCleanOverlay.ts';
 import { applyQuarantine, quarantineMtime } from './src/services/questionQuarantine.ts';
@@ -1922,6 +1922,24 @@ function pastQuestionHasNoAnswer(questionId: string): boolean {
   return !(q.correctAnswer || q.claimedAnswer || q.reconstruction?.correctAnswer);
 }
 
+// Cevabı belirsiz (anketi açık) soruların güncel listesi: /cikmis önbellekten yüklense de anket bu listeye göre açılır.
+app.get('/api/past-question-reviews/answer-doubtful', (_req, res) => {
+  try {
+    const latest = latestReviews();
+    const ids: string[] = [];
+    const options: Record<string, Record<string, string>> = {};
+    for (const [id, r] of latest) {
+      if (!r?.answer_doubtful || r.status !== 'review_required') continue;
+      ids.push(id);
+      const opts = r.proposal?.secenekler && Object.keys(r.proposal.secenekler).length ? r.proposal.secenekler : r.source?.secenekler;
+      if (opts) options[id] = opts;
+    }
+    res.set('Cache-Control', 'no-store').json({ success: true, ids, options });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Liste okunamadı: ' + err.message });
+  }
+});
+
 app.get('/api/past-question-reviews/:id/answer-votes', async (req, res) => {
   try {
     const voter = String(req.headers['x-voter-uid'] || '').slice(0, 128);
@@ -1938,8 +1956,9 @@ app.post('/api/past-question-reviews/:id/answer-votes', async (req, res) => {
     const choice = String(req.body?.choice || '').trim().toUpperCase();
     if (!voter) return res.status(401).json({ error: 'Oy vermek için giriş yapmalısınız.' });
     if (!/^[A-E]$/.test(choice)) return res.status(400).json({ error: 'Geçersiz şık.' });
-    const review = readPhase14Reviews().find((r) => String(r.question_id) === qId);
-    if (!review?.answer_doubtful && !pastQuestionHasNoAnswer(qId)) return res.status(409).json({ error: 'Bu soru için anket açık değil.' });
+    const review = latestReviews().get(qId);
+    const pollOpen = (review?.answer_doubtful && review.status === 'review_required') || pastQuestionHasNoAnswer(qId);
+    if (!pollOpen) return res.status(409).json({ error: 'Bu soru için anket açık değil.' });
     const { error } = await localSupabase.from('answer_votes').insert([{ question_id: qId, voter_uid: voter, choice }]);
     if (error) {
       if ((error as any).code === '23505') return res.status(409).json({ error: 'Bu soru için zaten oy verdiniz.' });
@@ -2094,7 +2113,7 @@ app.post('/api/past-question-reviews/trigger', requireAdmin, (req, res) => {
       });
     }
 
-    const scriptPath = mode === 'cloud'
+    const scriptPath = mode === 'cloud' || mode === 'free'
       ? path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_cloud_question_editor.py')
       : path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_past_question_editor.py');
 
@@ -2102,7 +2121,9 @@ app.post('/api/past-question-reviews/trigger', requireAdmin, (req, res) => {
     fs.mkdirSync(path.dirname(logPath), { recursive: true });
 
     const outLog = fs.openSync(logPath, 'a');
-    const child = spawn('python3', [scriptPath, '--limit', String(limit), ...(mode === 'cloud' ? ['--ucretli-izin'] : [])], {
+    // free: yalnız ücretsiz anahtarlar, her anahtar kendi sorularını paralel çözer (1/10/30 dk aralıklarla yeniden dener)
+    const modeArgs = mode === 'cloud' ? ['--ucretli-izin'] : mode === 'free' ? ['--ucretsiz-paralel'] : [];
+    const child = spawn('python3', [scriptPath, '--limit', String(limit), ...modeArgs], {
       cwd: __dirname,
       detached: true,
       stdio: ['ignore', outLog, outLog]
@@ -2111,7 +2132,7 @@ app.post('/api/past-question-reviews/trigger', requireAdmin, (req, res) => {
 
     res.json({
       success: true,
-      message: `Faz 14 (${mode === 'cloud' ? 'Google Gemini Bulut' : 'Yerel RTX 4060 GPU'}) redaksiyonu başlatıldı (Limit: ${limit}).`,
+      message: `Faz 14 (${mode === 'free' ? 'yalnız ücretsiz anahtarlar, paralel' : mode === 'cloud' ? 'Google Gemini Bulut' : 'Yerel RTX 4060 GPU'}) redaksiyonu başlatıldı (Limit: ${limit}).`,
       mode,
       logFile: logPath,
     });
@@ -2170,6 +2191,13 @@ app.get('/api/past-question-reviews/logs', (_req, res) => {
       pending: reviews.filter(r => r.status === 'review_required').length,
       report,
       costTracking,
+      paralel: (() => {
+        try {
+          return JSON.parse(fs.readFileSync(path.join(path.dirname(PHASE14_COST_FILE), 'paralel_durum.json'), 'utf-8'));
+        } catch {
+          return null;
+        }
+      })(),
       logs: lines,
     });
   } catch (err: any) {

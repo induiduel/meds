@@ -23,6 +23,7 @@ import {
   BookOpen,
   Flag,
   BarChart3,
+  Gift,
 } from 'lucide-react';
 import { PastQuestionReviewRecord } from '../types';
 import { ApiService } from '../services/api';
@@ -352,6 +353,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       max_budget_tl: number;
       last_updated: string;
     } | null;
+    paralel?: { guncelleme: string; anahtarlar: Record<string, { kalan: number; cozulen: number; bekleme_bitis: string | null; ardisik_hata: number }> } | null;
     logs: string[];
   } | null>(null);
   const [isTriggering, setIsTriggering] = useState(false);
@@ -419,7 +421,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   // filtre/arama değişince listeyi başa al
   useEffect(() => setVisibleCount(PAGE_SIZE), [statusFilter, searchQuery, sortOrder]);
 
-  const handleStartReview = async (mode: 'cloud' | 'local') => {
+  const handleStartReview = async (mode: 'cloud' | 'local' | 'free') => {
     setIsTriggering(true);
     setActionFeedback(null);
     try {
@@ -486,8 +488,11 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   const handleCompleteAnswerDoubt = async (qId: string, choice?: string) => {
     setProcessingId(qId);
     try {
+      // 1) Cevabı yaz, belirsiz işaretini kaldır  2) Öneriyi onayla: soru /cikmis'teki canlı soruya uygulanır
       const res = await ApiService.completeAnswerDoubt(ADMIN_EMAIL, qId, choice);
-      setActionFeedback({ message: `Soru #${qId.slice(0, 8)}: ${res.message}`, type: 'ok' });
+      await ApiService.approvePastQuestionReview(ADMIN_EMAIL, qId);
+      setAllReviews((prev) => prev.map((r) => (String(r.question_id) === qId ? { ...r, status: 'approved' as any, answer_doubtful: false } : r)));
+      setActionFeedback({ message: `Soru #${qId.slice(0, 8)}: cevap ${res.winner} olarak kaydedildi ve çıkmış sorulara gönderildi.`, type: 'ok' });
       fetchReviews(true);
     } catch (err: any) {
       setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
@@ -725,7 +730,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               <label className="ms-btn is-sm relative" title="Bir çalıştırmada işlenecek soru sayısı">
                 Parti: {triggerLimit}
                 <select value={triggerLimit} onChange={(e) => setTriggerLimit(Number(e.target.value))} className="absolute inset-0 opacity-0 cursor-pointer" aria-label="Parti büyüklüğü">
-                  {[5, 10, 25, 50].map((v) => <option key={v} value={v}>{v} soru</option>)}
+                  {[5, 10, 25, 50, 100, 200].map((v) => <option key={v} value={v}>{v} soru</option>)}
                 </select>
               </label>
               <button
@@ -747,9 +752,20 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   <Square /> Durdur
                 </button>
               ) : (
-                <button type="button" onClick={() => handleStartReview('cloud')} disabled={isTriggering} className="ms-btn is-sm is-primary">
-                  <Cloud /> Başlat
-                </button>
+                <>
+                  <button
+                    type="button"
+                    onClick={() => handleStartReview('free')}
+                    disabled={isTriggering}
+                    className="ms-btn is-sm"
+                    title="Yalnız ücretsiz anahtarlar. Sorular anahtarlara dağıtılır, her anahtar kendi sorularını paralel çözer; yanıt alamazsa 1 dk → 10 dk → 30 dk bekleyip yeniden dener, başarılı olunca hemen sıradakine geçer."
+                  >
+                    <Gift /> Ücretsiz başlat
+                  </button>
+                  <button type="button" onClick={() => handleStartReview('cloud')} disabled={isTriggering} className="ms-btn is-sm is-primary" title="Önce ücretsiz, tükenince ücretli anahtar (günlük 100 istek, aylık 100 TL sınırı)">
+                    <Cloud /> Başlat (ücretli izinli)
+                  </button>
+                </>
               )}
               {stats.unchanged > 0 && (
                 <button type="button" onClick={() => handleReEvaluateUnchanged()} disabled={isTriggering} className="ms-btn is-sm is-ghost" title="Değişiklik yapılmamış soruları Faz 14 için yeniden kuyruğa al">
@@ -758,6 +774,19 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               )}
             </div>
           </div>
+          {liveStatus?.isRunning && liveStatus.paralel?.anahtarlar && (
+            <ul className="m-0 p-0 list-none flex flex-wrap gap-1.5 text-[12px]" aria-label="Ücretsiz anahtar durumu">
+              {Object.entries(liveStatus.paralel.anahtarlar).map(([ad, d]) => {
+                const bekliyor = d.bekleme_bitis && Date.parse(d.bekleme_bitis) > Date.now();
+                return (
+                  <li key={ad} className={`px-2 py-1 rounded-md border ${d.kalan === 0 ? 'border-line text-ink-3' : bekliyor ? 'border-amber-300 bg-amber-50 text-amber-900' : 'border-emerald-300 bg-emerald-50 text-emerald-900'}`}>
+                    {ad.replace('ücretsiz:', '').replace('GEMINI_FREE_KEY_', 'Anahtar ').replace('GEMINI_API_KEY', 'Anahtar 1')} · {d.cozulen} çözüldü · {d.kalan} kaldı
+                    {bekliyor ? ` · ${new Date(d.bekleme_bitis!).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })}'e kadar bekliyor` : d.kalan ? ' · çalışıyor' : ''}
+                  </li>
+                );
+              })}
+            </ul>
+          )}
           <div className={`ms-progress ${liveStatus?.isRunning && !total ? 'is-indeterminate' : ''}`} role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progressPct} aria-label="İşlenen soru oranı">
             <span style={{ width: `${progressPct}%` }} />
           </div>
@@ -1222,9 +1251,9 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                             onClick={() => handleCompleteAnswerDoubt(qId, answerPick[qId] || pollLeader[qId])}
                             disabled={busy || !(answerPick[qId] || pollLeader[qId])}
                             className="ms-btn is-sm is-ok"
-                            title="Seçili şıkkı cevap olarak kaydet; soru normal inceleme listesine döner"
+                            title="Seçili şıkkı cevap olarak kaydet ve soruyu onaylayıp çıkmış sorulara gönder"
                           >
-                            <Check /> Kaydet · listeye gönder
+                            <Check /> Kaydet · çıkmışa gönder
                           </button>
                         </div>
                       ) : (

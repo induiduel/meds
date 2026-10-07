@@ -173,6 +173,11 @@ def paid_allowed() -> tuple[bool, str]:
 
 
 def record_usage(model_name: str, paid: bool, in_tokens: int, out_tokens: int, cached_tokens: int = 0) -> dict:
+    with _KILIT:
+        return _record_usage(model_name, paid, in_tokens, out_tokens, cached_tokens)
+
+
+def _record_usage(model_name: str, paid: bool, in_tokens: int, out_tokens: int, cached_tokens: int = 0) -> dict:
     st = load_monthly_cost()
     st["total_requests"] += 1
     st["input_tokens"] += in_tokens
@@ -207,13 +212,21 @@ logging.basicConfig(
 
 
 def load_checkpoints() -> set[str]:
+    """İşlenmiş soru kimlikleri: checkpoint + inceleme kayıtlarında zaten bulunanlar (checkpoint kaybolsa/sıfırlansa
+    bile aynı soru yeniden çözülmez)."""
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out: set[str] = set()
     if CHECKPOINT_FILE.exists():
         try:
-            return set(json.loads(CHECKPOINT_FILE.read_text(encoding="utf-8")).get("done_ids", []))
+            out |= set(json.loads(CHECKPOINT_FILE.read_text(encoding="utf-8")).get("done_ids", []))
         except Exception:
             pass
-    return set()
+    if REVIEWS_FILE.exists():
+        for line in REVIEWS_FILE.read_text(encoding="utf-8").splitlines():
+            m = re.search(r'"question_id":\s*"([^"]+)"', line)
+            if m:
+                out.add(m.group(1))
+    return out
 
 
 def save_checkpoint(islenmis_set: set[str], soru_id: str):
@@ -269,6 +282,12 @@ class QuotaExhausted(Exception):
     """Ücretsiz anahtarların günlük kotası bitti (ve ücretliye izin yok)."""
 
 
+import threading
+
+_YEREL = threading.local()            # paralel kipte iş parçacığının kendi anahtarı (_YEREL.anahtar = etiket)
+_KILIT = threading.RLock()            # kayıt/checkpoint/maliyet yazımı (paralel kipte iş parçacıkları arası)
+
+
 def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | None, str]:
     """Gemini REST. system_text (kurallar + müfredat paketi) her istekte AYNI → otomatik önbellek (implicit caching).
     Her istekte hangi API/anahtar/model kullanıldığı ve ücretli sayaç günlüğe yazılır. Yerel model yok."""
@@ -284,6 +303,9 @@ def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | No
     # ücretli anahtarda; Flash-Lite yalnız hiçbir Flash kalmadıysa. (Eski sıra anahtar-önce idi: 1. anahtarın Flash'ı
     # bitince diğer anahtarlardaki Flash denenmeden Lite'a düşülüyordu.)
     tiers = _key_tiers()
+    tek = getattr(_YEREL, "anahtar", None)
+    if tek:                                                  # paralel kip: yalnız bu iş parçacığının ücretsiz anahtarı
+        tiers = [t for t in tiers if t[0] == tek and not t[2]]
     free = [(lb, k, pd) for lb, k, pd in tiers if not pd]
     paid_t = [(lb, k, pd) for lb, k, pd in tiers if pd] if ALLOW_PAID else []
     order = []
@@ -308,11 +330,13 @@ def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | No
             if r in ("gec", "gunluk"):
                 continue
             return r
-        if not gecici:
+        if not gecici or tek:                                 # paralel kipte bekleme işçinin aralık planındadır
             break
         time.sleep(30)
     free_left = [1 for lb, _k, pd in tiers if not pd for m in FREE_MODELS + (WEAK_GEMINI if lite_acik() else [])
                  if (lb, m) not in _daily_exhausted]
+    if tek:
+        return None, "none"                                  # paralel kip: işçi kendi aralığıyla yeniden dener
     if not free_left and not ALLOW_PAID:
         raise QuotaExhausted("ücretsiz günlük kotalar doldu")
     if not tried_any:
@@ -321,13 +345,18 @@ def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | No
     return None, "none"
 
 
+_son_cagri: dict[str, float] = {}     # anahtar başına son istek zamanı (dakikalık sınır anahtar başınadır)
+
+
 def _tek_istek(label: str, key: str, paid: bool, model: str, data_bytes: bytes, prompt_text: str):
     """Tek Gemini isteği. Başarıda (json, model_etiketi); 'tekrar' (geçici hata), 'gunluk' (günlük kota), 'gec' (diğer)."""
     if not paid:                                     # ücretsiz katman: dakikalık sınırın altında kal
-        wait = 60.0 / max(1, FREE_RPM) - (time.time() - _last_call[0])
+        with _KILIT:
+            son = _son_cagri.get(label, 0.0)
+            wait = 60.0 / max(1, FREE_RPM) - (time.time() - son)
+            _son_cagri[label] = time.time() + max(0.0, wait)
         if wait > 0:
             time.sleep(wait)
-        _last_call[0] = time.time()
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     req = urllib.request.Request(url, data=data_bytes, method="POST",
                                  headers={"Content-Type": "application/json", "x-goog-api-key": key})
@@ -961,6 +990,141 @@ def support_ratio(original: dict, proposal: dict) -> float:
     return round(max(0.0, 1.0 - (len(new_tokens) / len(tok_after))), 3)
 
 
+def kayit_yaz(out_reviews, s_id: str, src: dict, ai_sonuc: dict, model_used: str, stats: dict,
+              islenmisler: set, kopya_dizini) -> dict | None:
+    """İnceleme kaydını yazar + checkpoint. Kilitli: aynı soru iki kez yazılamaz (paralel kipte de)."""
+    ratio = support_ratio(src, ai_sonuc)
+    changed = ai_sonuc.get("degisen_alanlar") or []
+    if not changed and ai_sonuc.get("YZV", {}).get("degisiklik_yapildi_mi"):
+        changed = ["soru_koku", "aciklama"]
+    record = {
+        "question_id": s_id,
+        "source_hash": hashlib.sha256(json.dumps(src, ensure_ascii=False, sort_keys=True).encode()).hexdigest(),
+        "processed_at": datetime.utcnow().isoformat() + "Z",
+        "model": model_used or "bilinmiyor",
+        "source": src,
+        "proposal": ai_sonuc,
+        "support_ratio": ratio,
+        "status": "review_required" if (ratio < 0.85 or ai_sonuc.get("review_required", True)) else "unchanged",
+    }
+    if cevap_uyusmazligi(ai_sonuc):
+        record["status"] = "review_required"
+        record["answer_doubtful"] = True                      # /test/cikmis → "Cevap Belirsiz" kategorisi (+ cevap anketi)
+    with _KILIT:
+        if s_id in load_checkpoints() or s_id in islenmisler:
+            logging.warning(f"Soru #{s_id} zaten işlenmiş; ikinci kayıt YAZILMADI")
+            return None
+        out_reviews.write(json.dumps(record, ensure_ascii=False) + "\n")
+        out_reviews.flush()
+        kopya_dizini.ekle(s_id, src)
+        stats["islenen"] += 1
+        stats["degisiklik_onerisi"] += int(bool(changed))
+        stats["inceleme_gerekli"] += int(record["status"] == "review_required")
+        save_checkpoint(islenmisler, s_id)
+    logging.info(f"✓ Soru #{s_id} inceleme katmanına yazıldı ({record['status']}, kanıt {ratio}, {model_used}).")
+    return record
+
+
+ARALIKLAR = [60, 600, 1800]          # paralel ücretsiz kip: başarısızlıktan sonra bekleme (1 dk → 10 dk → 30 dk)
+
+
+def ucretsiz_paralel(questions: list, limit: int, islenmisler: set, stats: dict) -> None:
+    """Yalnız ücretsiz anahtarlar, her anahtar ayrı iş parçacığında, kendi soru listesiyle.
+    Sorular baştan seçilir (işlenmiş/kopya/gizli kopya hariç, seçim içinde de kopya yok) ve anahtarlara sırayla
+    dağıtılır; bir soru yalnız bir anahtara atanır. Her anahtar: başarıda bekleme sıfırlanır ve hemen sıradaki soru;
+    başarısızlıkta 1 dk → 10 dk → 30 dk (sonra 30 dk'da kalır) bekleyip AYNI soruyu yeniden dener."""
+    anahtarlar = [lb for lb, _k, pd in _key_tiers() if not pd]
+    if not anahtarlar:
+        logging.error("Ücretsiz Gemini anahtarı yok")
+        return
+    kopya_dizini = KopyaDizini()
+    kopya_dizini.yukle_incelenenler()
+    gizli = birlestirilen_kopyalar()
+    secim: list[tuple[str, dict]] = []
+    for q in questions:
+        if len(secim) >= limit:
+            break
+        s_id = str(q.get("id") or "")
+        if not s_id or s_id in islenmisler:
+            continue
+        src = source_view(q)
+        if len(src["soru_koku"].strip()) < 15 or len(src["secenekler"]) < 4:
+            continue
+        asil = gizli.get(s_id) or kopya_dizini.kopyasi_mi(s_id, src)
+        if asil:
+            kopya_kaydet(s_id, asil)
+            save_checkpoint(islenmisler, s_id)
+            stats["kopya"] = stats.get("kopya", 0) + 1
+            logging.info(f"Soru #{s_id} atlandı: #{asil} ile aynı soru (kopya)")
+            continue
+        kopya_dizini.ekle(s_id, src)                           # seçim içindeki kopyalar da ayrı anahtara gitmesin
+        secim.append((s_id, src))
+    kuyruklar: dict[str, list] = {a: [] for a in anahtarlar}
+    for i, item in enumerate(secim):
+        kuyruklar[anahtarlar[i % len(anahtarlar)]].append(item)
+    atanan = [sid for k in kuyruklar.values() for sid, _ in k]
+    assert len(atanan) == len(set(atanan)), "bir soru birden çok anahtara atandı"
+    logging.info(f"Paralel ücretsiz kip: {len(secim)} soru · {len(anahtarlar)} anahtar · "
+                 + ", ".join(f"{a}: {len(v)}" for a, v in kuyruklar.items()))
+    durum_f = OUT_DIR / "paralel_durum.json"
+    durum: dict[str, dict] = {a: {"kalan": len(v), "cozulen": 0, "bekleme_bitis": None, "ardisik_hata": 0}
+                              for a, v in kuyruklar.items()}
+
+    def durum_yaz():
+        with _KILIT:
+            durum_f.write_text(json.dumps({"guncelleme": datetime.now().isoformat(timespec="seconds"),
+                                           "anahtarlar": durum}, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    durum_yaz()
+    yeni_dizin = KopyaDizini()                                  # kayıt sırasında (kilitli) güncellenir
+
+    def isci(etiket: str, kuyruk: list):
+        _YEREL.anahtar = etiket
+        hata = 0
+        with REVIEWS_FILE.open("a", encoding="utf-8") as out:
+            while kuyruk:
+                s_id, src = kuyruk[0]
+                with _KILIT:
+                    zaten = s_id in load_checkpoints() or s_id in islenmisler
+                if zaten:                                       # başka yoldan işlendiyse yeniden çözülmez
+                    kuyruk.pop(0)
+                    continue
+                logging.info(f"[{etiket}] Soru #{s_id} inceleniyor ({len(kuyruk)} kaldı)")
+                try:
+                    res, model = ai_ile_soruyu_duzelt(dict(src))
+                except Exception as e:  # noqa: BLE001
+                    logging.warning(f"[{etiket}] Soru #{s_id} hata: {e}")
+                    res, model = None, ""
+                if isinstance(res, dict):
+                    kayit_yaz(out, s_id, src, res, model, stats, islenmisler, yeni_dizin)
+                    kuyruk.pop(0)
+                    hata = 0
+                    durum[etiket].update(kalan=len(kuyruk), cozulen=durum[etiket]["cozulen"] + 1,
+                                         bekleme_bitis=None, ardisik_hata=0)
+                    durum_yaz()
+                    continue                                    # başarı: beklemeden sıradaki soru
+                bekle = ARALIKLAR[min(hata, len(ARALIKLAR) - 1)]
+                hata += 1
+                bitis = datetime.now().timestamp() + bekle
+                durum[etiket].update(bekleme_bitis=datetime.fromtimestamp(bitis).isoformat(timespec="seconds"),
+                                     ardisik_hata=hata)
+                durum_yaz()
+                logging.info(f"[{etiket}] yanıt yok · {hata}. ardışık hata · {bekle // 60} dk sonra #{s_id} yeniden denenecek")
+                time.sleep(bekle)
+                with _KILIT:                                    # günlük kota yenilenmiş olabilir: bu anahtar yeniden denensin
+                    for k in [k for k in _daily_exhausted if k[0] == etiket]:
+                        _daily_exhausted.discard(k)
+        durum[etiket].update(kalan=0, bekleme_bitis=None)
+        durum_yaz()
+        logging.info(f"[{etiket}] kendi soruları bitti ({durum[etiket]['cozulen']} çözüldü)")
+
+    isler = [threading.Thread(target=isci, args=(a, k), name=a, daemon=True) for a, k in kuyruklar.items() if k]
+    for t in isler:
+        t.start()
+    for t in isler:
+        t.join()
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Faz 14 Bulut Tabanlı Çıkmış Soru İyileştirme")
     parser.add_argument("--limit", type=int, default=10, help="Bu çalıştırmada incelenecek soru sayısı")
@@ -968,12 +1132,25 @@ def main() -> int:
     parser.add_argument("--direct-apply", action="store_true", help="İnceleme katmanına yazmanın yanı sıra /api üzerinden de doğrudan uygula")
     parser.add_argument("--ucretli-izin", action="store_true", help="ELLE başlatma: ücretsizler tükenince ücretli anahtara geç")
     parser.add_argument("--ucretsiz-otomatik", action="store_true", help="otomatik kip: yalnız ücretsiz, günlük kota bitene kadar")
+    parser.add_argument("--ucretsiz-paralel", action="store_true",
+                        help="yalnız ücretsiz anahtarlar, her anahtar kendi sorularını paralel çözer (1/10/30 dk aralık)")
     args = parser.parse_args()
+    # Aynı anda tek Faz 14: ikinci başlatma aynı soruları yeniden çözmesin
+    import fcntl
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    _kilit_f = open(OUT_DIR / "faz14.lock", "w")
+    try:
+        fcntl.flock(_kilit_f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        logging.error("Faz 14 zaten çalışıyor (faz14.lock); ikinci çalıştırma başlatılmadı")
+        return 0
+    if args.ucretsiz_paralel:
+        args.ucretli_izin = False
     global ALLOW_PAID
     ALLOW_PAID = bool(args.ucretli_izin) and not args.ucretsiz_otomatik
     if args.ucretsiz_otomatik:
         args.limit = max(args.limit, 5000)                  # kota bitene kadar
-    logging.info(f"Kip: {'ELLE (önce ücretsiz, sonra ücretli)' if ALLOW_PAID else 'YALNIZ ÜCRETSİZ' + (' · otomatik' if args.ucretsiz_otomatik else '')} · limit {args.limit}")
+    logging.info(f"Kip: {'ELLE (önce ücretsiz, sonra ücretli)' if ALLOW_PAID else 'YALNIZ ÜCRETSİZ' + (' · otomatik' if args.ucretsiz_otomatik else '') + (' · PARALEL' if args.ucretsiz_paralel else '')} · limit {args.limit}")
 
     islenmisler = load_checkpoints()
     curriculum_summary = ""  # müfredat paketi sistem metninde (system_text)
@@ -1012,12 +1189,14 @@ def main() -> int:
 
     questions = sorted(questions, key=_order)
     stats = {"aday": len(questions), "islenen": 0, "degisiklik_onerisi": 0, "inceleme_gerekli": 0, "hata": 0}
+    if args.ucretsiz_paralel:
+        ucretsiz_paralel(questions, args.limit, islenmisler, stats)
 
     kopya_dizini = KopyaDizini()
     kopya_dizini.yukle_incelenenler()
     gizli = birlestirilen_kopyalar()                         # sitede gizlenen kopyalar (asıl soru incelenir)
     with REVIEWS_FILE.open("a", encoding="utf-8") as out_reviews:
-        for q in questions:
+        for q in ([] if args.ucretsiz_paralel else questions):
             s_id = str(q.get("id") or "")
             if not s_id or s_id in islenmisler:
                 continue
@@ -1049,36 +1228,9 @@ def main() -> int:
                 stats["hata"] += 1
                 continue
 
-            ratio = support_ratio(src, ai_sonuc)
-            changed = ai_sonuc.get("degisen_alanlar") or []
-            if not changed and ai_sonuc.get("YZV", {}).get("degisiklik_yapildi_mi"):
-                changed = ["soru_koku", "aciklama"]
-
-            # İnceleme katmanı kaydı
-            record = {
-                "question_id": s_id,
-                "source_hash": hashlib.sha256(json.dumps(src, ensure_ascii=False, sort_keys=True).encode()).hexdigest(),
-                "processed_at": datetime.utcnow().isoformat() + "Z",
-                "model": model_used or "bilinmiyor",
-                "source": src,
-                "proposal": ai_sonuc,
-                "support_ratio": ratio,
-                "status": "review_required" if (ratio < 0.85 or ai_sonuc.get("review_required", True)) else "unchanged",
-            }
-            if cevap_uyusmazligi(ai_sonuc):
-                record["status"] = "review_required"
-                record["answer_doubtful"] = True              # /test/cikmis → "Cevap Belirsiz" kategorisi (+ cevap anketi)
-
-            out_reviews.write(json.dumps(record, ensure_ascii=False) + "\n")
-            out_reviews.flush()
-            kopya_dizini.ekle(s_id, src)
-
-            stats["islenen"] += 1
-            stats["degisiklik_onerisi"] += int(bool(changed))
-            stats["inceleme_gerekli"] += int(record["status"] == "review_required")
-
-            save_checkpoint(islenmisler, s_id)
-            logging.info(f"✓ Soru #{s_id} inceleme katmanına yazıldı ({record['status']}, kanıt {ratio}).")
+            record = kayit_yaz(out_reviews, s_id, src, ai_sonuc, model_used, stats, islenmisler, kopya_dizini)
+            if record is None:
+                continue
 
             # Eğer --direct-apply verilmişse canlı API'ye yaz
             if args.direct_apply:

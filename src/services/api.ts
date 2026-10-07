@@ -2663,6 +2663,12 @@ export const ApiService = {
     return res.data;
   },
 
+  /** Anketi açık (cevabı belirsiz) soruların güncel listesi; önbellekten bağımsız. */
+  async getAnswerDoubtful(): Promise<{ ids: string[]; options: Record<string, Record<string, string>> } | null> {
+    const res = await safeJsonFetch<{ success: boolean; ids: string[]; options: Record<string, Record<string, string>> }>('/api/past-question-reviews/answer-doubtful');
+    return res.ok && res.data?.success ? { ids: res.data.ids || [], options: res.data.options || {} } : null;
+  },
+
   async getAnswerVotes(questionId: string, voterUid: string): Promise<AnswerVotes> {
     const res = await safeJsonFetch<AnswerVotes & { success: boolean; error?: string }>(
       `/api/past-question-reviews/${encodeURIComponent(questionId)}/answer-votes`,
@@ -2719,7 +2725,7 @@ export const ApiService = {
   },
 
   /** Faz 14: Redaksiyon işlemini başlat (bulut veya yerel) */
-  async triggerPastQuestionReview(adminEmail: string, mode: 'cloud' | 'local', limit: number = 10): Promise<any> {
+  async triggerPastQuestionReview(adminEmail: string, mode: 'cloud' | 'local' | 'free', limit: number = 10): Promise<any> {
     const res = await safeJsonFetch<{
       success: boolean;
       message: string;
@@ -2768,6 +2774,7 @@ export const ApiService = {
       max_budget_tl: number;
       last_updated: string;
     } | null;
+    paralel?: { guncelleme: string; anahtarlar: Record<string, { kalan: number; cozulen: number; bekleme_bitis: string | null; ardisik_hata: number }> } | null;
     logs: string[];
   }> {
     const res = await safeJsonFetch<{
