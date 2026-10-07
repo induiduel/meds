@@ -583,10 +583,10 @@ def gercek_degisiklikleri_yaz(soru: dict, res: dict) -> None:
         if res.get("cevap_belirsiz"):
             notlar.append(f"bağımsız çözücüler aynı şıkta uzlaşamadı (oylar: {d.get('oylar')}) → cevap belirsiz, elle seçilmeli")
         gercek = ", ".join(alanlar) if alanlar else "yok"
-        res["degisiklik_ozeti"] = ("Otomatik koruma modelin değişikliklerini geri aldı: " + "; ".join(notlar) +
-                                   f". Gerçekte değişen alanlar: {gercek}. Elle inceleyin.")
-        if d.get("aciklama_son_cevapla_celisiyor") or d.get("aciklama_celiskisi") or res.get("anlam_koruma"):
-            res["aciklama_gecersiz"] = True               # açıklama geri alınan sürüme göre yazılmış olabilir
+        bas = "Otomatik koruma modelin bazı değişikliklerini geri aldı" if res.get("anlam_koruma") else "Cevap belirlenemedi"
+        res["degisiklik_ozeti"] = (bas + ": " + "; ".join(notlar) + f". Gerçekte değişen alanlar: {gercek}. Elle inceleyin.")
+        # açıklama geçersizliği yalnız cevap_dogrula'nın açıklama↔cevap karşılaştırmasından gelir (kök geri alınması
+        # tek başına açıklamayı geçersiz kılmaz; triaj testinde doğru açıklama yanlışlıkla işaretlenmişti)
     yzv = (res.get("YZV") or {}).get("degisiklik_ozeti")
     if isinstance(yzv, dict):                                # modelin gerçekleşmeyen değişiklik iddialarını sil
         for alan, k in (("soru_koku", "soru_koku_duzeltmesi"), ("secenekler", "sik_duzeltmesi"), ("dogru_secenek", "cevap_dogrulamasi")):
