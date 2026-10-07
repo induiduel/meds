@@ -1,7 +1,10 @@
 // Retrieval eval: 300 seeded past questions -> simulated student queries -> is the same question in top 5?
 // Run from repo root: npx tsx scripts/eval/retrieval-eval.mts   (STRIP=1 to drop Turkish characters)
+import 'dotenv/config';
 import fs from 'fs';
 import { searchLocalRag } from '../../src/services/localRagEngine.ts';
+import { semanticSearch, fuseRRF } from '../../src/services/vectorSearch.ts';
+// HYBRID=1: BM25 + e5 vektör (yerel Supabase) RRF birleşimi ölçülür
 let seed = 42; const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
 const strip = (s: string) => s.replace(/[ıİ]/g, 'i').replace(/[çÇ]/g, 'c').replace(/[ğĞ]/g, 'g').replace(/[öÖ]/g, 'o').replace(/[şŞ]/g, 's').replace(/[üÜ]/g, 'u');
 const all = JSON.parse(fs.readFileSync('data/pastQuestions.json', 'utf-8'));
@@ -30,7 +33,11 @@ for (const [name, mk] of Object.entries(variants)) {
   let hit1 = 0, hit5 = 0, mrr = 0, n = 0;
   for (const q of picks) {
     const query = mk(q); if (query.trim().length < 6) continue; n++;
-    const r = await searchLocalRag(query, { limit: 5, documentTypes: ['past_question'] as any });
+    let r = await searchLocalRag(query, { limit: process.env.HYBRID ? 40 : 5, documentTypes: ['past_question'] as any });
+    if (process.env.HYBRID) {
+      const v = await semanticSearch(query, { documentTypes: ['past_question'], limit: 40 });
+      r = fuseRRF(r as any[], v, (x: any) => ({ id: x.id, documentId: x.document_id, content: x.content, metadata: x.metadata }) as any, 5) as any;
+    }
     const target = norm(q.stem || q.reconstruction.stem);
     const rank = r.findIndex(x => x.documentId === q.id || norm((x.content.match(/Soru Kökü:\n([\s\S]*?)\n/) || [])[1] || '') === target);
     if (r.some(x => (x.metadata?.topic || '') === q.topic)) (globalThis as any).same = ((globalThis as any).same || 0) + 1;

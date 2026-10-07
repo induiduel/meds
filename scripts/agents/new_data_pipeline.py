@@ -230,7 +230,7 @@ def main() -> int:
         subprocess.run(SITE_REFRESH, capture_output=True)
         log(f"site arama dizini yenilendi · çalışan adımlar: {', '.join(ran)}")
         # Site açılışta data/local_rag_chunks.json'u yeniden üretir; üretilince yalnız yeni/değişen parçalar vektörlenip
-        # yerel + bulut Supabase'e yazılır (rag_vector_build artımlıdır)
+        # yerel Supabase'e yazılır (bulut yalnız MEDS_RAG_TARGETS ile) (rag_vector_build artımlıdır)
         chunk_file = ROOT / "data" / "local_rag_chunks.json"
         for _ in range(90):
             if chunk_file.exists() and chunk_file.stat().st_mtime > t_restart:

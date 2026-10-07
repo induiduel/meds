@@ -181,7 +181,9 @@ def sync_target(name: str, url: str, key: str, chunks: list[dict], idx: dict, ve
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--hedef", default="yerel,bulut")
+    # Bulut Supabase ücretsiz katmanı doldu (2026-10-07) → varsayılan yalnız yerel. Bulut için: --hedef yerel,bulut
+    # ya da .env'de MEDS_RAG_TARGETS=yerel,bulut
+    ap.add_argument("--hedef", default=env().get("MEDS_RAG_TARGETS") or "yerel")
     ap.add_argument("--limit", type=int, default=0, help="test: en fazla N yeni parça vektörle")
     ap.add_argument("--sadece-vektor", action="store_true")
     a = ap.parse_args()

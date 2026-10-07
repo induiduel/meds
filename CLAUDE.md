@@ -67,6 +67,11 @@ Current tokenizer: Turkish case/character folding + full word + 5-char stem. Las
 partial stem words 95%, suffix-changed words 91%, topic only 58% (98% same-topic; topics are shared
 by many questions, so exact match is not expected). Stem-only and word-only were both worse.
 
+Hybrid BM25 + e5 vectors (`src/services/vectorSearch.ts`, local Supabase `match_rag_chunks_e5`, embed service
+`meds-embed` on 127.0.0.1:8091) is OFF by default (`MEDS_VECTOR_SEARCH=1` to enable): `HYBRID=1` eval gave
+94/93/41 (weight 0.8) and 95/93/43 (0.3) vs BM25 96/92/44. Vectors are local-only; cloud Supabase is full
+(`rag_vector_build.py` defaults to `--hedef yerel`).
+
 ## Known gaps
 
 - `requireAdmin` trusts the `x-admin-email` header and loopback IPs (tunnel traffic is loopback):

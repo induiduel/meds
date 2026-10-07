@@ -3,6 +3,7 @@
 //
 // Retrieval order: local BM25 index (localRagEngine) -> Supabase pgvector (only if local
 // finds nothing). AI-generated chunks are excluded so model output never becomes a "source".
+import { semanticSearch, fuseRRF } from './vectorSearch';
 import { GoogleGenAI } from '@google/genai';
 import { supabase } from './supabaseClient.ts';
 import { searchLocalRag, foldTurkish, findChunksById, type RagDocumentType } from './localRagEngine.ts';
@@ -170,7 +171,16 @@ export async function searchRagChunks(
       documentTypes,
       limit: limit * 8,
     });
-    results = local.map((item) => ({
+    // Karma arama: BM25 + anlamsal (e5, yerel Supabase) RRF birleşimi; vektör servisi yoksa yalnız BM25
+    const vec = await semanticSearch(query, { documentTypes, committeeId: options.committeeId, limit: limit * 8 });
+    const fused = vec.length
+      ? fuseRRF(local as any[], vec, (r: any) => ({
+          id: r.id, documentId: r.document_id, documentType: r.document_type, committeeId: r.committee_id,
+          discipline: r.discipline, title: r.title, pageNumber: r.page_number, content: r.content, metadata: r.metadata,
+          similarity: r.similarity, matchScore: r.similarity,
+        }) as any, limit * 8)
+      : local;
+    results = (fused as typeof local).map((item) => ({
       id: item.id,
       documentId: item.documentId,
       documentType: item.documentType,
