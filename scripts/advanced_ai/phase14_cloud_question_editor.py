@@ -430,7 +430,48 @@ def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> tuple[dict | N
         res.setdefault("review_required", True)
         anlam_koru(soru, res)
         cevap_dogrula(soru, res)
+        gercek_degisiklikleri_yaz(soru, res)
     return res, model
+
+
+def gercek_degisiklikleri_yaz(soru: dict, res: dict) -> None:
+    """Koruma/doğrulama modelin değişikliklerini geri aldıysa modelin özeti artık yanlıştır ("düzeltildi" der ama
+    değişiklik yoktur). Değişen alanlar özgün ve SON hal karşılaştırılarak yeniden hesaplanır; özet buna göre yazılır,
+    modelin özgün özeti 'model_ozeti' alanında saklanır. Geri alınan değişikliğe dayanan açıklama geçersiz işaretlenir."""
+    def n(x):
+        return " ".join(str(x or "").split()).lower()
+    alanlar = []
+    if n(res.get("soru_koku")) != n(soru.get("soru_koku")):
+        alanlar.append("soru_koku")
+    osec, ysec = soru.get("secenekler") or {}, res.get("secenekler") or {}
+    if isinstance(osec, dict) and isinstance(ysec, dict) and any(n(osec.get(k)) != n(ysec.get(k)) for k in "ABCDE"):
+        alanlar.append("secenekler")
+    kayitli = str(soru.get("dogru_secenek") or "").strip().upper()[:1]
+    son = str(res.get("dogru_secenek") or "").strip().upper()[:1]
+    if son and son != kayitli:
+        alanlar.append("dogru_secenek")
+    res["cevap_degisti"] = bool(kayitli and son and son != kayitli)
+    for k in ("kurul_adi", "ders_adi", "konu_adi", "aciklama_maddeleri"):
+        if k in (res.get("degisen_alanlar") or []):
+            alanlar.append(k)
+    geri_alinan = bool(res.get("anlam_koruma")) or str((res.get("cevap_dogrulama") or {}).get("sonuc", "")).endswith("korundu")
+    if geri_alinan:
+        res["model_ozeti"] = res.get("degisiklik_ozeti") or ""
+        notlar = list(res.get("anlam_koruma") or [])
+        d = res.get("cevap_dogrulama") or {}
+        if d.get("oneri") and d.get("oneri") != son:
+            notlar.append(f"modelin önerdiği cevap ({d.get('oneri')}) doğrulanamadı → kayıtlı cevap ({son or '-'}) korundu")
+        gercek = ", ".join(alanlar) if alanlar else "yok"
+        res["degisiklik_ozeti"] = ("Otomatik koruma modelin değişikliklerini geri aldı: " + "; ".join(notlar) +
+                                   f". Gerçekte değişen alanlar: {gercek}. Elle inceleyin.")
+        if d.get("aciklama_son_cevapla_celisiyor") or d.get("aciklama_celiskisi") or res.get("anlam_koruma"):
+            res["aciklama_gecersiz"] = True               # açıklama geri alınan sürüme göre yazılmış olabilir
+    yzv = (res.get("YZV") or {}).get("degisiklik_ozeti")
+    if isinstance(yzv, dict):                                # modelin gerçekleşmeyen değişiklik iddialarını sil
+        for alan, k in (("soru_koku", "soru_koku_duzeltmesi"), ("secenekler", "sik_duzeltmesi"), ("dogru_secenek", "cevap_dogrulamasi")):
+            if alan not in alanlar:
+                yzv.pop(k, None)
+    res["degisen_alanlar"] = alanlar
 
 
 _OLUMSUZ = ("değildir", "degildir", "yanlıştır", "yanlistir", "olmaz", "hariç", "haric", "yoktur", "beklenmez",

@@ -1201,6 +1201,17 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                           <p className="m-0">{typeof prop.degisiklik_ozeti === 'string' ? prop.degisiklik_ozeti : JSON.stringify(prop.degisiklik_ozeti)}</p>
                         )}
                         {yzvNote?.soru_koku_duzeltmesi && <p className="m-0"><b>Kök:</b> {yzvNote.soru_koku_duzeltmesi}</p>}
+                        {prop.cevap_dogrulama && (
+                          <p className="m-0 text-ink-2">
+                            <b>Cevap kontrolü:</b> kayıtlı {prop.cevap_dogrulama.kayitli || '–'} · model {prop.cevap_dogrulama.oneri || '–'} · bağımsız model{' '}
+                            {prop.cevap_dogrulama.dogrulayici || '?'} · açıklamanın gösterdiği {prop.cevap_dogrulama.aciklama_gosterdigi || '?'}
+                          </p>
+                        )}
+                        {prop.aciklama_gecersiz && (
+                          <p className="m-0 rounded-md bg-amber-50 text-amber-900 px-2 py-1">
+                            Açıklama, geri alınan değişikliğe göre yazılmış olabilir; işaretlenen cevapla çelişebilir. Onaylamadan önce açıklamayı düzeltin.
+                          </p>
+                        )}
                         {prop.YZV?.referans_literatur && <p className="m-0 text-violet-800"><b>Literatür:</b> {prop.YZV.referans_literatur}</p>}
                       </div>
                     )}
