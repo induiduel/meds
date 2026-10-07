@@ -10,7 +10,7 @@ import os from 'os';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
-import { exec, execFile, execSync, spawn } from 'child_process';
+import { exec, execFile, execSync, spawn, spawnSync } from 'child_process';
 import { createClient } from '@supabase/supabase-js';
 
 const require = createRequire(import.meta.url);
@@ -2074,12 +2074,17 @@ app.post('/api/admin/question-merges/:groupId', requireAdmin, (req, res) => {
 
 // 3.9. Faz 14 ayarları (meds_temp/state/faz14_ayarlari.json): lite_kullan — Flash kotası bitince Flash-Lite yedeği
 const PHASE14_SETTINGS_FILE = path.resolve(__dirname, '..', 'meds_temp', 'state', 'faz14_ayarlari.json');
-function readPhase14Settings(): { lite_kullan: boolean } {
+type Phase14Settings = { lite_kullan: boolean; otomatik_ucretsiz: boolean; otomatik_limit: number };
+function readPhase14Settings(): Phase14Settings {
   try {
     const d = JSON.parse(fs.readFileSync(PHASE14_SETTINGS_FILE, 'utf-8'));
-    return { lite_kullan: d.lite_kullan !== false };
+    return {
+      lite_kullan: d.lite_kullan !== false,
+      otomatik_ucretsiz: d.otomatik_ucretsiz === true,
+      otomatik_limit: Number(d.otomatik_limit) > 0 ? Number(d.otomatik_limit) : 4000,
+    };
   } catch {
-    return { lite_kullan: true };
+    return { lite_kullan: true, otomatik_ucretsiz: false, otomatik_limit: 4000 };
   }
 }
 app.get('/api/past-question-reviews/settings', requireAdmin, (_req, res) => {
@@ -2087,11 +2092,16 @@ app.get('/api/past-question-reviews/settings', requireAdmin, (_req, res) => {
 });
 app.post('/api/past-question-reviews/settings', requireAdmin, (req, res) => {
   try {
-    const next = { ...readPhase14Settings() };
+    const prev = readPhase14Settings();
+    const next = { ...prev };
     if (typeof req.body?.lite_kullan === 'boolean') next.lite_kullan = req.body.lite_kullan;
-    fs.mkdirSync(path.dirname(PHASE14_SETTINGS_FILE), { recursive: true });
-    fs.writeFileSync(PHASE14_SETTINGS_FILE, JSON.stringify(next, null, 1), 'utf-8');
-    res.json({ success: true, ...next });
+    if (typeof req.body?.otomatik_ucretsiz === 'boolean') next.otomatik_ucretsiz = req.body.otomatik_ucretsiz;
+    if (Number(req.body?.otomatik_limit) > 0) next.otomatik_limit = Math.min(10000, Math.floor(Number(req.body.otomatik_limit)));
+    writePhase14Settings(next);
+    let started = false;
+    if (next.otomatik_ucretsiz && !prev.otomatik_ucretsiz) started = startPhase14AutoFree(next.otomatik_limit);
+    if (!next.otomatik_ucretsiz && prev.otomatik_ucretsiz) stopPhase14Auto();
+    res.json({ success: true, ...next, started, running: isPythonScriptRunning('phase14_cloud_question_editor.py') });
   } catch (err: any) {
     res.status(500).json({ error: 'Ayar kaydedilemedi: ' + err.message });
   }
@@ -2192,6 +2202,50 @@ app.get('/api/past-question-reviews/logs', (_req, res) => {
       report,
       costTracking,
       paralel: (() => {
+function writePhase14Settings(next: Phase14Settings) {
+  fs.mkdirSync(path.dirname(PHASE14_SETTINGS_FILE), { recursive: true });
+  fs.writeFileSync(PHASE14_SETTINGS_FILE, JSON.stringify(next, null, 1), 'utf-8');
+}
+
+// Otomatik ücretsiz inceleme: paralel ücretsiz kip (--ucretsiz-paralel) ayrı bir systemd işi olarak çalışır
+// (meds-web yeniden başlasa da durmaz). Anahtar açıkken 5 dk'da bir bekçi: iş durmuşsa ve soru kaldıysa yeniden başlatır.
+// İşlenmiş sorular checkpoint + inceleme kayıtlarından tanınır; tekrar çözülmez. Ücretli anahtar hiç kullanılmaz.
+const PHASE14_AUTO_UNIT = 'meds-faz14-otomatik';
+function startPhase14AutoFree(limit: number): boolean {
+  if (isPythonScriptRunning('phase14_cloud_question_editor.py') || isPythonScriptRunning('phase14_past_question_editor.py')) return false;
+  const script = path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_cloud_question_editor.py');
+  const logPath = path.resolve(__dirname, '..', 'meds_temp', 'logs', 'phase14.log');
+  fs.mkdirSync(path.dirname(logPath), { recursive: true });
+  try { execSync(`systemctl --user reset-failed ${PHASE14_AUTO_UNIT} 2>/dev/null || true`); } catch (_) {}
+  const r = spawnSync('systemd-run', [
+    '--user', `--unit=${PHASE14_AUTO_UNIT}`, '--collect', `--working-directory=${__dirname}`,
+    `--property=StandardOutput=append:${logPath}`, `--property=StandardError=append:${logPath}`,
+    'python3', script, '--limit', String(limit), '--ucretsiz-paralel',
+  ], { encoding: 'utf-8' });
+  if (r.status !== 0) console.error('[Faz14 otomatik] başlatılamadı:', r.stderr);
+  return r.status === 0;
+}
+function stopPhase14Auto() {
+  try { execSync(`systemctl --user stop ${PHASE14_AUTO_UNIT} 2>/dev/null || true`); } catch (_) {}
+}
+function phase14Remaining(): number {
+  try {
+    const done = new Set(readPhase14Reviews().map((r: any) => String(r.question_id)));
+    return getPastQuestionsDb().filter((q: any) => q?.id && !done.has(String(q.id))).length;
+  } catch {
+    return 1;
+  }
+}
+setInterval(() => {
+  const st = readPhase14Settings();
+  if (!st.otomatik_ucretsiz) return;
+  if (phase14Remaining() === 0) {
+    writePhase14Settings({ ...st, otomatik_ucretsiz: false });
+    console.log('[Faz14 otomatik] tüm sorular incelendi; otomatik kip kapatıldı');
+    return;
+  }
+  if (startPhase14AutoFree(st.otomatik_limit)) console.log('[Faz14 otomatik] iş durmuştu, yeniden başlatıldı');
+}, 5 * 60 * 1000);
         try {
           return JSON.parse(fs.readFileSync(path.join(path.dirname(PHASE14_COST_FILE), 'paralel_durum.json'), 'utf-8'));
         } catch {
@@ -2254,6 +2308,10 @@ app.post('/api/past-question-reviews/re-evaluate-unchanged', requireAdmin, (req,
     updateCheckpointFile(PHASE14_CLOUD_CHECKPOINT);
 
     res.json({
+    // Durdur otomatik kipi de kapatır (yoksa bekçi 5 dk içinde yeniden başlatırdı)
+    const st = readPhase14Settings();
+    if (st.otomatik_ucretsiz) writePhase14Settings({ ...st, otomatik_ucretsiz: false });
+    stopPhase14Auto();
       success: true,
       message: `${targetIds.length} soru tekrar değerlendirme kuyruğuna alındı.`,
       count: targetIds.length,

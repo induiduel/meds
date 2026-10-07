@@ -359,6 +359,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   const [isTriggering, setIsTriggering] = useState(false);
   const [triggerLimit, setTriggerLimit] = useState(5);
   const [liteOn, setLiteOn] = useState<boolean | null>(null);
+  const [autoOn, setAutoOn] = useState<boolean | null>(null);
+  const [autoLimit, setAutoLimit] = useState(4000);
   const [showConsole, setShowConsole] = useState(false);
 
   // Edit proposal modal state
@@ -410,7 +412,11 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   useEffect(() => {
     fetchReviews();
     if (!isAdmin) return;
-    ApiService.getPhase14Settings(ADMIN_EMAIL).then((s) => setLiteOn(s ? s.lite_kullan : null));
+    ApiService.getPhase14Settings(ADMIN_EMAIL).then((s) => {
+      setLiteOn(s ? s.lite_kullan : null);
+      setAutoOn(s ? s.otomatik_ucretsiz : null);
+      if (s?.otomatik_limit) setAutoLimit(s.otomatik_limit);
+    });
     fetchLiveStatus();
     const interval = setInterval(() => {
       if (!document.hidden) fetchLiveStatus();
@@ -452,10 +458,35 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     }
   };
 
+  const toggleAuto = async () => {
+    if (autoOn === null) return;
+    const acilacak = !autoOn;
+    if (acilacak && !window.confirm(`Otomatik ücretsiz inceleme açılsın mı?\n\nİncelenmemiş ${autoLimit} soru ücretsiz anahtarlara dağıtılır; her anahtar kendi sorularını tek tek çözer, kota bitince 1/10/30 dk bekleyip devam eder. Ücretli anahtar kullanılmaz. Kapatana ya da "Durdur"a basana kadar sürer.`)) return;
+    setIsTriggering(true);
+    try {
+      const s = await ApiService.setPhase14Settings(ADMIN_EMAIL, { otomatik_ucretsiz: acilacak, otomatik_limit: autoLimit });
+      setAutoOn(s.otomatik_ucretsiz);
+      setActionFeedback({
+        message: s.otomatik_ucretsiz
+          ? s.started
+            ? `✓ Otomatik ücretsiz inceleme başladı (${s.otomatik_limit} soru, ücretsiz anahtarlar paralel).`
+            : '✓ Otomatik ücretsiz inceleme açık. Şu an başka bir Faz 14 çalışıyor; o bitince en geç 5 dk içinde başlar.'
+          : '✓ Otomatik ücretsiz inceleme kapatıldı ve durduruldu.',
+        type: 'ok',
+      });
+      await fetchLiveStatus();
+    } catch (err: any) {
+      setActionFeedback({ message: `Ayar kaydedilemedi: ${err.message}`, type: 'err' });
+    } finally {
+      setIsTriggering(false);
+    }
+  };
+
   const handleStopReview = async () => {
     setIsTriggering(true);
     try {
       await ApiService.stopPastQuestionReview(ADMIN_EMAIL);
+      setAutoOn((v) => (v ? false : v));                 // Durdur otomatik kipi de kapatır
       setActionFeedback({ message: '✓ Faz 14 süreci durduruldu.', type: 'ok' });
       await fetchLiveStatus();
     } catch (err: any) {
@@ -746,6 +777,20 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   <span className={`absolute top-0.5 w-3 h-3 rounded-full bg-white transition-all ${liteOn ? 'left-3.5' : 'left-0.5'}`} />
                 </span>
                 Lite yedeği
+              </button>
+              <button
+                type="button"
+                role="switch"
+                aria-checked={autoOn === true}
+                onClick={toggleAuto}
+                disabled={autoOn === null || isTriggering}
+                title="Açıkken: incelenmemiş sorular yalnız ücretsiz anahtarlarla, anahtar başına tek tek ve paralel incelenir; kota bitince 1/10/30 dk bekleyip sürer. İş durursa en geç 5 dk içinde kaldığı yerden yeniden başlar; işlenen soru tekrar çözülmez."
+                className={`ms-btn is-sm ${autoOn ? 'is-on' : ''}`}
+              >
+                <span className={`relative inline-block w-7 h-4 rounded-full transition-colors ${autoOn ? 'bg-accent' : 'bg-line-2'}`} aria-hidden>
+                  <span className={`absolute top-0.5 w-3 h-3 rounded-full bg-white transition-all ${autoOn ? 'left-3.5' : 'left-0.5'}`} />
+                </span>
+                Otomatik ücretsiz inceleme{autoOn ? ` · ${autoLimit}` : ''}
               </button>
               {liveStatus?.isRunning ? (
                 <button type="button" onClick={handleStopReview} disabled={isTriggering} className="ms-btn is-sm is-danger bg-bad-soft!">

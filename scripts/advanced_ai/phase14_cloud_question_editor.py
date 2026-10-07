@@ -363,6 +363,7 @@ def _tek_istek(label: str, key: str, paid: bool, model: str, data_bytes: bytes, 
     try:
         with urllib.request.urlopen(req, timeout=180) as resp:
             body = json.loads(resp.read().decode("utf-8"))
+        _YEREL.yanit_alindi = True                           # kota/erişim sorunu yok: model yanıt verdi
         text = "".join(p.get("text", "") for p in (body.get("candidates") or [{}])[0].get("content", {}).get("parts", [])).strip()
         usage = body.get("usageMetadata", {})
         in_t = usage.get("promptTokenCount", len(prompt_text) // 4)
@@ -1059,6 +1060,17 @@ def ucretsiz_paralel(questions: list, limit: int, islenmisler: set, stats: dict)
             continue
         kopya_dizini.ekle(s_id, src)                           # seçim içindeki kopyalar da ayrı anahtara gitmesin
         secim.append((s_id, src))
+    if not secim:
+        # İncelenecek soru kalmadı: otomatik ücretsiz kip kapatılır (sunucu bekçisi boşuna yeniden başlatmasın)
+        try:
+            ayar = json.loads(FAZ14_AYAR.read_text(encoding="utf-8")) if FAZ14_AYAR.exists() else {}
+            if ayar.get("otomatik_ucretsiz"):
+                ayar["otomatik_ucretsiz"] = False
+                FAZ14_AYAR.write_text(json.dumps(ayar, ensure_ascii=False, indent=1), encoding="utf-8")
+                logging.info("İncelenecek soru kalmadı → otomatik ücretsiz inceleme kapatıldı")
+        except Exception as e:  # noqa: BLE001
+            logging.warning(f"Ayar güncellenemedi: {e}")
+        return
     kuyruklar: dict[str, list] = {a: [] for a in anahtarlar}
     for i, item in enumerate(secim):
         kuyruklar[anahtarlar[i % len(anahtarlar)]].append(item)
@@ -1081,6 +1093,7 @@ def ucretsiz_paralel(questions: list, limit: int, islenmisler: set, stats: dict)
     def isci(etiket: str, kuyruk: list):
         _YEREL.anahtar = etiket
         hata = 0
+        soru_hata: dict[str, int] = {}
         with REVIEWS_FILE.open("a", encoding="utf-8") as out:
             while kuyruk:
                 s_id, src = kuyruk[0]
@@ -1090,6 +1103,7 @@ def ucretsiz_paralel(questions: list, limit: int, islenmisler: set, stats: dict)
                     kuyruk.pop(0)
                     continue
                 logging.info(f"[{etiket}] Soru #{s_id} inceleniyor ({len(kuyruk)} kaldı)")
+                _YEREL.yanit_alindi = False
                 try:
                     res, model = ai_ile_soruyu_duzelt(dict(src))
                 except Exception as e:  # noqa: BLE001
@@ -1103,6 +1117,16 @@ def ucretsiz_paralel(questions: list, limit: int, islenmisler: set, stats: dict)
                                          bekleme_bitis=None, ardisik_hata=0)
                     durum_yaz()
                     continue                                    # başarı: beklemeden sıradaki soru
+                if getattr(_YEREL, "yanit_alindi", False):
+                    # Model yanıt verdi ama soru işlenemedi (bozuk JSON vb.): sorun soruda, anahtarda değil.
+                    soru_hata[s_id] = soru_hata.get(s_id, 0) + 1
+                    if soru_hata[s_id] >= 2:
+                        kuyruk.pop(0)                           # bu turda bırakılır; checkpoint'e girmez, sonra yeniden denenir
+                        stats["hata"] += 1
+                        logging.warning(f"[{etiket}] Soru #{s_id} iki kez işlenemedi; bu turda bırakıldı")
+                        durum[etiket].update(kalan=len(kuyruk))
+                        durum_yaz()
+                    continue                                    # anahtar sağlıklı: beklemeden devam
                 bekle = ARALIKLAR[min(hata, len(ARALIKLAR) - 1)]
                 hata += 1
                 bitis = datetime.now().timestamp() + bekle

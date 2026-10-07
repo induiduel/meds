@@ -445,6 +445,15 @@ export async function callClientResilientAi(options: {
 }
 
 export interface AnswerVotes { counts: Record<string, number>; total: number; myVote: string | null }
+/** Anketi açık sorular: ids = cevabı belirsiz; resolved = cevabı kabul edilmiş ama anketi açık tutulan. */
+export interface AnswerDoubtfulInfo {
+  ids: string[];
+  options: Record<string, Record<string, string>>;
+  resolved: Record<string, { answer: string; by: string }>;
+}
+
+/** Faz 14 ayarları (/test/cikmis): Lite yedeği, otomatik ücretsiz inceleme */
+export type Phase14Settings = { lite_kullan: boolean; otomatik_ucretsiz: boolean; otomatik_limit: number };
 
 export const ApiService = {
   async getCommittees(): Promise<Committee[]> {
@@ -2707,15 +2716,15 @@ export const ApiService = {
   },
 
   /** Faz 14 ayarları: lite_kullan (Flash kotası bitince Flash-Lite yedeği) */
-  async getPhase14Settings(adminEmail: string): Promise<{ lite_kullan: boolean } | null> {
-    const res = await safeJsonFetch<{ lite_kullan: boolean }>('/api/past-question-reviews/settings', {
+  async getPhase14Settings(adminEmail: string): Promise<Phase14Settings | null> {
+    const res = await safeJsonFetch<Phase14Settings>('/api/past-question-reviews/settings', {
       headers: { 'x-admin-email': adminEmail },
     });
     return res.ok && res.data ? res.data : null;
   },
 
-  async setPhase14Settings(adminEmail: string, settings: { lite_kullan: boolean }): Promise<{ lite_kullan: boolean }> {
-    const res = await safeJsonFetch<{ success: boolean; lite_kullan: boolean; error?: string }>('/api/past-question-reviews/settings', {
+  async setPhase14Settings(adminEmail: string, settings: Partial<Phase14Settings>): Promise<Phase14Settings & { started?: boolean; running?: boolean }> {
+    const res = await safeJsonFetch<Phase14Settings & { success: boolean; started?: boolean; running?: boolean; error?: string }>('/api/past-question-reviews/settings', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
       body: JSON.stringify(settings),
