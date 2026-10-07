@@ -20,11 +20,14 @@ import {
   Edit3,
   DollarSign,
   Copy,
+  Info,
+  BookOpen,
 } from 'lucide-react';
 import { PastQuestionReviewRecord } from '../types';
 import { ApiService } from '../services/api';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { pathFor } from '../router';
+import { safeJsonFetch } from '../services/api';
 
 // Kelime düzeyinde fark (LCS). Kök birkaç yüz kelimeyi geçmez; 400 kelime üstünde fark çizilmez.
 type DiffPart = { t: string; k: 'same' | 'add' | 'del' };
@@ -67,6 +70,146 @@ function DiffText({ before, after }: { before: string; after: string }) {
 }
 
 const PAGE_SIZE = 30;
+
+/** Değişikliğin olduğu yerdeki bilgi simgesi: tıklayınca o değişikliğin ayrıntısı açılır (Esc / dışarı tıkla kapanır). */
+function ChangeInfo({ title, before, after, note }: { title: string; before?: string; after?: string; note?: string }) {
+  const [open, setOpen] = useState(false);
+  const ref = React.useRef<HTMLSpanElement>(null);
+  useEffect(() => {
+    if (!open) return;
+    const close = (e: MouseEvent | KeyboardEvent) => {
+      if (e instanceof KeyboardEvent ? e.key === 'Escape' : !ref.current?.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener('mousedown', close);
+    document.addEventListener('keydown', close);
+    return () => {
+      document.removeEventListener('mousedown', close);
+      document.removeEventListener('keydown', close);
+    };
+  }, [open]);
+  return (
+    <span ref={ref} className="relative inline-flex align-middle shrink-0">
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          setOpen((v) => !v);
+        }}
+        className="w-6 h-6 -m-1 inline-flex items-center justify-center rounded-full text-violet-600 hover:bg-violet-100 cursor-pointer"
+        aria-label={`${title}: değişikliği göster`}
+        aria-expanded={open}
+      >
+        <Info className="w-3.5 h-3.5" />
+      </button>
+      {open && (
+        <span role="dialog" className="absolute z-30 top-6 right-0 w-[min(22rem,80vw)] p-3 rounded-lg bg-white border border-line shadow-lg text-[12.5px] font-normal normal-case tracking-normal text-ink-2 flex flex-col gap-1.5 text-left">
+          <b className="text-ink">{title}</b>
+          {before !== undefined && (
+            <span>
+              <span className="text-ink-3">Önce:</span> {before ? <del className="bg-rose-50 text-rose-800 decoration-rose-400">{before}</del> : <i>(yoktu)</i>}
+            </span>
+          )}
+          {after !== undefined && (
+            <span>
+              <span className="text-ink-3">Sonra:</span> <ins className="no-underline bg-emerald-50 text-emerald-900">{after}</ins>
+            </span>
+          )}
+          {note && <span className="text-ink-3">{note}</span>}
+        </span>
+      )}
+    </span>
+  );
+}
+
+/** Soru için faz verisi (terimler, eş anlamlılar, kısaltmalar, Faz 13 varlıkları, kazanım) + önerinin değiştirdiği alanlar. */
+function TermsDialog({ rev, onClose }: { rev: PastQuestionReviewRecord; onClose: () => void }) {
+  const [data, setData] = useState<any | null | undefined>(undefined);
+  const closeRef = React.useRef(onClose);
+  closeRef.current = onClose;
+  useEffect(() => {
+    safeJsonFetch<{ insights: any }>(`/api/questions/${encodeURIComponent(String(rev.question_id))}/insights`).then((r) =>
+      setData(r.ok ? r.data?.insights || null : null),
+    );
+    const esc = (e: KeyboardEvent) => e.key === 'Escape' && closeRef.current();
+    document.addEventListener('keydown', esc);
+    return () => document.removeEventListener('keydown', esc);
+  }, [rev.question_id]);
+  const prop: any = rev.proposal || {};
+  const yzv = prop.YZV?.degisiklik_ozeti && typeof prop.YZV.degisiklik_ozeti === 'object' ? prop.YZV.degisiklik_ozeti : null;
+  const terms: string[] = Array.from(new Set([...(data?.varliklar || []).map((v: any) => v.ad), ...(data?.faz6_5?.terimler || []), ...(data?.faz5?.terimler || [])]));
+  const syn = Object.entries((data?.faz6_5?.esanlamlilar || {}) as Record<string, string[]>);
+  const abbr = Object.entries((data?.faz6_5?.kisaltmalar || {}) as Record<string, string>);
+  const k = (data?.mufredat || data?.faz8)?.kazanimlar?.[0];
+  const h = 'm-0 text-[11.5px] font-semibold uppercase tracking-wide text-ink-3';
+  return (
+    <div className="fixed inset-0 z-50 flex items-stretch sm:items-center justify-center sm:p-4 bg-slate-900/50" role="dialog" aria-modal="true" aria-label="Terim ve sözlük bilgisi" onClick={onClose}>
+      <div className="bg-white sm:rounded-2xl w-full max-w-xl h-full sm:h-auto sm:max-h-[85vh] overflow-y-auto p-4 flex flex-col gap-3" onClick={(e) => e.stopPropagation()}>
+        <div className="flex items-center justify-between gap-2">
+          <h3 className="m-0 text-[15px] font-bold text-ink">Terimler ve sözlük · #{rev.question_id}</h3>
+          <button type="button" onClick={onClose} className="w-11 h-11 sm:w-8 sm:h-8 inline-flex items-center justify-center rounded-lg hover:bg-canvas cursor-pointer" aria-label="Kapat">
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+        <section className="flex flex-col gap-1">
+          <h4 className={h}>Bu öneride değişenler</h4>
+          {(prop.degisen_alanlar || []).length ? (
+            <div className="flex flex-wrap gap-1">{prop.degisen_alanlar.map((f: string) => <span key={f} className="text-[12px] px-1.5 rounded bg-violet-50 text-violet-700">{f}</span>)}</div>
+          ) : (
+            <p className="m-0 text-[13px] text-ink-3">Değişen alan bildirilmedi.</p>
+          )}
+          {yzv?.soru_koku_duzeltmesi && <p className="m-0 text-[13px]"><b>Kök:</b> {yzv.soru_koku_duzeltmesi}</p>}
+          {yzv?.aciklama_duzeltmesi && <p className="m-0 text-[13px]"><b>Açıklama:</b> {yzv.aciklama_duzeltmesi}</p>}
+          {yzv?.mufredat_atamasi && <p className="m-0 text-[13px]"><b>Müfredat:</b> {yzv.mufredat_atamasi}</p>}
+          {prop.YZV?.referans_literatur && <p className="m-0 text-[13px]"><b>Literatür:</b> {prop.YZV.referans_literatur}</p>}
+        </section>
+        {data === undefined ? (
+          <p className="m-0 text-[13px] text-ink-3">Faz verisi yükleniyor…</p>
+        ) : !data ? (
+          <p className="m-0 text-[13px] text-ink-3">Bu soru için faz verisi (terim, sözlük) yok.</p>
+        ) : (
+          <>
+            {k && (
+              <section className="flex flex-col gap-0.5">
+                <h4 className={h}>Kazanım</h4>
+                <p className="m-0 text-[13px] text-ink">{['Kurul ' + k.kurul, k.ders, k.konu].filter(Boolean).join(' · ')}</p>
+                {k.kazanim && <p className="m-0 text-[13px] text-ink-2">{k.kazanim}</p>}
+              </section>
+            )}
+            {terms.length > 0 && (
+              <section className="flex flex-col gap-1">
+                <h4 className={h}>Terimler ({terms.length})</h4>
+                <div className="flex flex-wrap gap-1">{terms.map((t) => <span key={t} className="text-[12px] px-2 py-0.5 rounded-full bg-canvas text-ink-2">{t}</span>)}</div>
+              </section>
+            )}
+            {syn.length > 0 && (
+              <section className="flex flex-col gap-0.5">
+                <h4 className={h}>Eş anlamlılar</h4>
+                {syn.map(([t, v]) => <p key={t} className="m-0 text-[13px]"><b>{t}</b> = {(v || []).join(', ')}</p>)}
+              </section>
+            )}
+            {abbr.length > 0 && (
+              <section className="flex flex-col gap-0.5">
+                <h4 className={h}>Kısaltmalar</h4>
+                {abbr.map(([a, e]) => <p key={a} className="m-0 text-[13px]"><b>{a}</b> = {e}</p>)}
+              </section>
+            )}
+            {(data.varliklar || []).length > 0 && (
+              <section className="flex flex-col gap-0.5">
+                <h4 className={h}>Kimlikli tıbbi varlıklar (Faz 13)</h4>
+                {(data.varliklar || []).map((v: any) => (
+                  <p key={v.ad} className="m-0 text-[12.5px]">
+                    <b>{v.ad}</b>
+                    <span className="text-ink-3"> · {v.tur || 'tür yok'} · {v.kaynak}{v.kimlik && Object.keys(v.kimlik).length ? ' · ' + Object.entries(v.kimlik).map(([kk, vv]: any) => `${kk}: ${(vv || []).join(',')}`).join(' · ') : ''}</span>
+                  </p>
+                ))}
+              </section>
+            )}
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
 
 // Kurul adı iki biçimde gelir: kaynakta "donem3-kurul1", öneride "TIP310". Karşılaştırma ve gösterim için tek biçim.
 function kurulKey(v?: string): string {
@@ -155,7 +298,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   const [error, setError] = useState<string | null>(null);
 
   // Filters & Sorting
-  const [statusFilter, setStatusFilter] = useState<string>('all');
+  const [statusFilter, setStatusFilter] = useState<string>('review_required');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedReviewId, setSelectedReviewId] = useState<string | null>(null);
   const [sortOrder, setSortOrder] = useState<'newest' | 'oldest' | 'evidence_low' | 'evidence_high'>('newest');
@@ -172,6 +315,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     }
   });
   const [openRows, setOpenRows] = useState<Record<string, boolean>>({});
+  const [termsFor, setTermsFor] = useState<PastQuestionReviewRecord | null>(null);
   const changeLayout = (v: 'list' | 'detail') => {
     setLayout(v);
     try {
@@ -874,10 +1018,19 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   >
                     %{ratioPercent}
                   </span>
-                  <span className="text-[12.5px] text-ink-3 truncate min-w-0">
+                  <span className="text-[12.5px] text-ink-3 truncate min-w-0" title={changes.length ? 'Müfredat değişikliği önerildi' : undefined}>
                     {[kurulLabel(src.kurul_adi), src.ders_adi].filter(Boolean).join(' · ')}
+                    {changes.some((c) => c.alan === 'Kurul' || c.alan === 'Ders') && (
+                      <>
+                        {' → '}
+                        <b className="text-amber-800 font-semibold">{[kurulLabel(prop.kurul_adi || src.kurul_adi), prop.ders_adi || src.ders_adi].filter(Boolean).join(' · ')}</b>
+                      </>
+                    )}
                   </span>
                   <span className="flex-1" />
+                  <button type="button" onClick={() => setTermsFor(rev)} className="h-11 sm:h-8 px-2 rounded-lg inline-flex items-center gap-1 text-[12px] font-semibold text-ink-3 hover:text-ink hover:bg-canvas cursor-pointer shrink-0" title="Terim, sözlük ve değişiklik bilgisi">
+                    <BookOpen className="w-3.5 h-3.5" /> <span className="hidden sm:inline">Terimler</span>
+                  </button>
                   {copyButtons}
                   {layout === 'list' && (
                     <button type="button" onClick={() => setOpenRows((o) => ({ ...o, [qId]: false }))} className="h-11 sm:h-8 px-2.5 rounded-lg text-[12.5px] font-semibold text-ink-3 hover:text-ink hover:bg-canvas cursor-pointer shrink-0">
@@ -945,9 +1098,21 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   <section className={`${view === 'src' ? 'hidden' : 'flex'} lg:flex flex-col gap-2 p-3 rounded-lg bg-violet-50/60 min-w-0`}>
                     <h4 className="m-0 flex items-center justify-between gap-2 text-[11.5px] font-semibold uppercase tracking-wide text-violet-700">
                       <span className="inline-flex items-center gap-1"><Sparkles className="w-3.5 h-3.5" /> {modelLabel(rev.model)}</span>
-                      {prop.dogru_secenek && <span className="normal-case tracking-normal font-mono">Cevap {prop.dogru_secenek}</span>}
+                      {prop.dogru_secenek && (
+                        <span className="normal-case tracking-normal font-mono inline-flex items-center gap-1">
+                          Cevap {prop.dogru_secenek}
+                          {src.dogru_secenek && String(src.dogru_secenek).toUpperCase() !== String(prop.dogru_secenek).toUpperCase() && (
+                            <ChangeInfo title="Cevap değişti" before={String(src.dogru_secenek)} after={String(prop.dogru_secenek)} />
+                          )}
+                        </span>
+                      )}
                     </h4>
                     <p className="m-0 text-[14px] leading-relaxed text-violet-950 font-medium whitespace-pre-wrap break-words">
+                      {stemChanged && (
+                        <span className="float-right ml-1">
+                          <ChangeInfo title="Soru kökü değişikliği" before={srcStem} after={propStem} note={yzvNote?.soru_koku_duzeltmesi} />
+                        </span>
+                      )}
                       {!propStem ? (
                         <span className="text-violet-500 italic">Kökte değişiklik önerilmedi</span>
                       ) : stemChanged && view !== 'prop' ? (
@@ -972,6 +1137,14 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                                 <span className="shrink-0 text-[10.5px] font-semibold px-1.5 py-0.5 rounded bg-purple-100 text-purple-700" title="Bu şık kaynakta yoktu; AI tamamladı">
                                   AI
                                 </span>
+                              )}
+                              {(isAiCompleted || (srcOpt(upperKey) && srcOpt(upperKey).trim() !== String(v).trim())) && (
+                                <ChangeInfo
+                                  title={`${upperKey} şıkkı ${isAiCompleted && !srcOpt(upperKey) ? 'eklendi' : 'değişti'}`}
+                                  before={srcOpt(upperKey)}
+                                  after={String(v)}
+                                  note={isAiCompleted ? 'Kaynakta bu şık eksikti; yapay zekâ tamamladı (doğrulanmadı).' : undefined}
+                                />
                               )}
                             </li>
                           );
@@ -1012,14 +1185,22 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                       </span>
                       {yzvNote?.aciklama_duzeltmesi && <span className="normal-case tracking-normal font-normal text-ink-3">· {yzvNote.aciklama_duzeltmesi}</span>}
                     </h4>
-                    <details open={layout === 'detail'} className="px-3 pb-2 text-[13px] text-ink-2">
-                      <summary className="cursor-pointer text-[12.5px] text-ink-3 py-1">
-                        {explChanged && srcExpl ? 'Farkı göster / gizle (yeşil eklenen, kırmızı çıkarılan)' : 'Göster / gizle'}
-                      </summary>
-                      <p className="m-0 whitespace-pre-wrap leading-relaxed break-words">
-                        {explChanged && srcExpl ? <DiffText before={srcExpl} after={propExpl} /> : propExpl || srcExpl}
-                      </p>
-                    </details>
+                    <div className="px-3 pb-2 pt-1 grid gap-2 lg:grid-cols-2 text-[13px]">
+                      <div className="rounded-md bg-slate-50 p-2.5 min-w-0">
+                        <p className="m-0 mb-1 text-[11.5px] font-semibold text-slate-500">Eski açıklama</p>
+                        <p className="m-0 whitespace-pre-wrap leading-relaxed break-words text-ink-2">{srcExpl || <i className="text-ink-3">Açıklama yoktu</i>}</p>
+                      </div>
+                      <div className="rounded-md bg-violet-50/60 p-2.5 min-w-0">
+                        <p className="m-0 mb-1 text-[11.5px] font-semibold text-violet-700">Yeni açıklama</p>
+                        <p className="m-0 whitespace-pre-wrap leading-relaxed break-words text-violet-950">{propExpl || <i className="text-ink-3">Öneri açıklama içermiyor</i>}</p>
+                      </div>
+                    </div>
+                    {explChanged && srcExpl && (
+                      <details className="px-3 pb-2 text-[13px] text-ink-2">
+                        <summary className="cursor-pointer text-[12.5px] text-ink-3 py-1">Kelime farkını göster (yeşil eklenen, kırmızı çıkarılan)</summary>
+                        <p className="m-0 whitespace-pre-wrap leading-relaxed break-words"><DiffText before={srcExpl} after={propExpl} /></p>
+                      </details>
+                    )}
                   </section>
                 )}
 
@@ -1068,6 +1249,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
           )}
         </div>
       )}
+
+      {termsFor && <TermsDialog rev={termsFor} onClose={() => setTermsFor(null)} />}
 
       {/* Soru Önerisi Düzenleme / Revize Etme Modalı */}
       {editingReview && (

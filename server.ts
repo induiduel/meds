@@ -1605,6 +1605,15 @@ app.get('/api/past-question-reviews', (req, res) => {
 });
 
 // 2. POST /api/past-question-reviews/:id/approve: Öneriyi açık onayla ve geçmiş soru havuzuna uygula (Admin)
+function normalizeCommitteeId(v: unknown): string | null {
+  const s = String(v || '').trim();
+  const m = s.match(/kurul\s*-?\s*(\d)/i) || s.match(/^TIP\s*3(\d)0$/i);
+  if (m) return `donem3-kurul${m[1]}`;
+  if (/final/i.test(s)) return 'donem3-final';
+  if (/b[uü]t[uü]nleme/i.test(s)) return 'donem3-butunleme';
+  return s || null;
+}
+
 app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
   try {
     const targetQId = String(req.params.id);
@@ -1648,7 +1657,13 @@ app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
       targetQ = pastList[qIdx];
     }
 
-    // Orijinal sorunun yedeğini koru ve önerilen alanları uygula
+    // Orijinal sorunun yedeğini koru (yalnız ilk onayda) ve önerilen alanları uygula
+    if (!targetQ.phase14Original) {
+      targetQ.phase14Original = {
+        stem: targetQ.stem, options: targetQ.options, explanation: targetQ.explanation, correctAnswer: targetQ.correctAnswer,
+        committeeId: targetQ.committeeId, discipline: targetQ.discipline, topic: targetQ.topic,
+      };
+    }
     if (proposal.soru_koku) targetQ.stem = proposal.soru_koku;
     if (proposal.secenekler && typeof proposal.secenekler === 'object') {
       const srcOpts = (rev.source && rev.source.secenekler) || {};
@@ -1679,12 +1694,15 @@ app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
     if (proposal.aciklama && proposal.aciklama.trim()) {
       targetQ.explanation = proposal.aciklama;
     }
-    if (proposal.kurul_adi) targetQ.committeeId = proposal.kurul_adi;
+    // Öneride kurul "TIP330" biçiminde gelir; site "donem3-kurul3" bekler (filtre bozulmasın)
+    if (proposal.kurul_adi) targetQ.committeeId = normalizeCommitteeId(proposal.kurul_adi) || targetQ.committeeId;
     if (proposal.ders_adi) targetQ.discipline = proposal.ders_adi;
     if (proposal.konu_adi) targetQ.topic = proposal.konu_adi;
     if (proposal.YZV) {
       targetQ.YZV = proposal.YZV;
     }
+    targetQ.tags = Array.from(new Set([...(Array.isArray(targetQ.tags) ? targetQ.tags : []), 'faz14_duzeltildi']));
+    targetQ.phase14 = { approvedAt: new Date().toISOString(), model: rev.model || null, changes: proposal.degisen_alanlar || [], summary: proposal.degisiklik_ozeti || null };
     targetQ.updatedAt = new Date().toISOString();
 
     savePastQuestionsDb(pastList);

@@ -60,6 +60,9 @@ import {
   isDonem3Question,
 } from '../data/curriculumData';
 
+/** Faz 14'te önerisi onaylanıp canlı soruya uygulanmış soru (test/cikmis'ten). */
+export const isPhase14Fixed = (q: any): boolean => Boolean(q?.phase14 || (Array.isArray(q?.tags) && q.tags.includes('faz14_duzeltildi')));
+
 export const isDeepSeekQuestion = (q: any): boolean => {
   if (!q) return false;
   if (q.answerStatus === 'dogrulanmadi') return false;
@@ -102,6 +105,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
   const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'gemini_v3' | 'existing'>('all');
+  const [phase14Filter, setPhase14Filter] = useState<'all' | 'faz14'>('all');
   const [newnessFilter, setNewnessFilter] = useState<'all' | 'new_only' | 'archived_only'>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -575,6 +579,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       }
 
       // 6. DeepSeek Filter
+      if (phase14Filter === 'faz14' && !isPhase14Fixed(q)) return false;
       if (sourceFilter === 'gemini_v3' && !isGeminiV3Question(q)) return false;
       if (sourceFilter === 'existing' && isGeminiV3Question(q)) return false;
 
@@ -606,7 +611,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     if (sortOrder === 'oldest') sorted.sort((a, b) => (yearOf(a) || 9999) - (yearOf(b) || 9999));
     if (sortOrder === 'number') sorted.sort((a, b) => (a.questionNumber || 9999) - (b.questionNumber || 9999));
     return sorted;
-  }, [questions, ambiguityTab, searchQuery, selectedCommittee, selectedYear, selectedDiscipline, deepseekFilter, sourceFilter, newnessFilter, answerFilter, explanationFilter, sortOrder]);
+  }, [questions, ambiguityTab, searchQuery, selectedCommittee, selectedYear, selectedDiscipline, deepseekFilter, sourceFilter, phase14Filter, newnessFilter, answerFilter, explanationFilter, sortOrder]);
 
   // Paginated list
   const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / itemsPerPage));
@@ -639,6 +644,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ...(sourceFilter !== 'all'
       ? [{ label: sourceFilter === 'gemini_v3' ? 'Gemini v3' : 'Mevcut veriler', clear: () => setSourceFilter('all') }]
       : []),
+    ...(phase14Filter !== 'all' ? [{ label: 'Faz 14 düzeltmesi', clear: () => setPhase14Filter('all') }] : []),
     ...(answerFilter !== 'all'
       ? [{ label: answerFilter === 'with' ? 'Cevaplı' : 'Cevapsız', clear: () => setAnswerFilter('all') }]
       : []),
@@ -915,6 +921,19 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 </div>
               </div>
               <div className="ms-f-row">
+                <span className="ms-f-label">Düzeltme</span>
+                <div className="ms-f-seg" role="radiogroup" aria-label="Faz 14 düzeltmesi">
+                  {([
+                    ['all', 'Tümü'],
+                    ['faz14', `Faz 14 düzeltilmiş ${questions.filter(isPhase14Fixed).length}`],
+                  ] as const).map(([id, label]) => (
+                    <button key={id} type="button" role="radio" aria-checked={phase14Filter === id} onClick={() => { setPhase14Filter(id); setCurrentPage(1); }} className={phase14Filter === id ? 'is-on' : ''}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="ms-f-row">
                 <span className="ms-f-label">Dönem</span>
                 <div className="ms-f-seg" role="radiogroup" aria-label="Dönem">
                   {(
@@ -1081,6 +1100,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   ) : (
                     <span className="h-[20px] px-2 rounded-full bg-slate-100 text-slate-600 text-[11px] font-medium inline-flex items-center shrink-0">
                       Geçmiş Yıl
+                    </span>
+                  )}
+                  {isPhase14Fixed(q) && (
+                    <span className="h-[20px] px-2 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-[11px] font-semibold inline-flex items-center shrink-0" title="Bu soru Faz 14 incelemesinde düzeltildi ve onaylandı">
+                      Düzeltildi
                     </span>
                   )}
                   {isGeminiV3Question(q) && (
