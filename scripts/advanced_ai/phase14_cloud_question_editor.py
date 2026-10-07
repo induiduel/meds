@@ -420,8 +420,15 @@ SCHEMA_HINT = """YANIT ŞEMASI (yalnız JSON):
 def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> tuple[dict | None, str]:
     """Soruyu bulut modeline gönderir. Kayıttaki cevap 'kayitli_cevap' olarak verilir (doğru kabul edilmez)."""
     girdi = {k: v for k, v in soru.items() if k != "dogru_secenek"}
-    girdi["kayitli_cevap"] = soru.get("dogru_secenek") or ""
-    prompt = "İNCELENECEK SORU:\n" + json.dumps(girdi, ensure_ascii=False, indent=1) + "\n\n" + SCHEMA_HINT
+    ek = ""
+    if kok_bozuk(soru):
+        # Kök bozuk: eski cevap gösterilmez (model kökü eski cevaba uydurmasın); cevap YENİ soruya göre seçilir
+        ek = ("\nNOT: Bu sorunun kökü bozuk/eksik (bir şıkkın kopyası ya da çok kısa). Şıklara bakarak sorunun ne sorduğunu "
+              "kur; kurduğun kök YALNIZ TEK bir şıkkı doğru kılmalı (diğer dört şık kesinlikle yanlış olmalı). Şıkların tıbbi "
+              "anlamını değiştirme. Cevabı kurduğun YENİ soruya göre seç. Tek cevaplı bir kök kurulamıyorsa cevap_emin=false.\n")
+    else:
+        girdi["kayitli_cevap"] = soru.get("dogru_secenek") or ""
+    prompt = "İNCELENECEK SORU:\n" + json.dumps(girdi, ensure_ascii=False, indent=1) + "\n" + ek + "\n" + SCHEMA_HINT
     res, model = call_gemini_json(prompt, system_text())
     if isinstance(res, dict):
         maddeler = [str(m).strip() for m in (res.get("aciklama_maddeleri") or []) if str(m).strip()]
@@ -490,7 +497,7 @@ def anlam_koru(soru: dict, res: dict) -> None:
     import difflib
     notlar = []
     ok, yk = soru.get("soru_koku") or "", res.get("soru_koku") or ""
-    if ok and yk and _olumsuz_mu(ok) != _olumsuz_mu(yk):
+    if ok and yk and not kok_bozuk(soru) and _olumsuz_mu(ok) != _olumsuz_mu(yk):
         res["soru_koku"] = ok
         notlar.append("kökün olumlu/olumsuz yönü değiştirilmişti → özgün kök korundu")
     osec, ysec = soru.get("secenekler") or {}, res.get("secenekler") or {}
@@ -501,6 +508,15 @@ def anlam_koru(soru: dict, res: dict) -> None:
             if len(ov) >= 3 and yv and difflib.SequenceMatcher(None, ov.lower(), yv.lower()).ratio() < 0.55:
                 ysec[k] = ov
                 notlar.append(f"{k} şıkkı anlamca değiştirilmişti → özgün şık korundu")
+            elif len(ov) >= 3 and yv:
+                import re as _re
+                kel = lambda t: {w for w in _re.findall(r"[a-zçğıöşü]{4,}", t.lower())}
+                dusen = kel(ov) - kel(yv)
+                # birleşik yazım düzeltmesi (entübasyondakrikoid → krikoid) değil, gerçek bir kelime düştüyse
+                gercek = [w for w in dusen if not any(w in x or x in w for x in kel(yv))]
+                if gercek:
+                    notlar.append(f"{k} şıkkında anlam değişmiş olabilir (çıkarılan: {', '.join(sorted(gercek))}) → özgün şık korundu")
+                    ysec[k] = ov
         res["secenekler"] = ysec
     if notlar:
         res["review_required"] = True
@@ -518,14 +534,39 @@ def _bagimsiz_cevap(soru_koku: str, secenekler: dict) -> tuple[str, str]:
     prompt = ("Tıp fakültesi sınav sorusu. Adım adım düşün, her şıkkı değerlendir, sonra tek doğru şıkkı seç.\n"
               "Soru kökündeki olumsuzluk ifadelerine (değildir, yanlıştır, olmaz, hariç) özellikle dikkat et.\n\n"
               f"SORU: {soru_koku}\n" + "\n".join(f"{k}) {v}" for k, v in sorted(secenekler.items()) if v) +
-              '\n\nYalnız JSON: {"dogru_secenek": "A-E", "gerekce": "kısa"}')
+              "\n\nAyrıca soru kökü yalnız TEK şıkkı doğru kılıyor mu? Birden fazla şık köke uyuyorsa bunu belirt."
+              '\n\nYalnız JSON: {"dogru_secenek": "A-E", "birden_fazla_dogru": false, "uyan_siklar": ["..."], "gerekce": "kısa"}')
     try:
         r = cloud_llm.chat(prompt, as_json=True, max_tokens=4000, temperature=0.0, models=VERIFY_MODELS, timeout=120)
     except Exception as e:
         logging.warning(f"[DOĞRULAMA] hata: {e}")
         return "", ""
     harf = str((r or {}).get("dogru_secenek") or "").strip().upper()[:1]
+    _bagimsiz_cevap.son_coklu = bool((r or {}).get("birden_fazla_dogru"))
+    _bagimsiz_cevap.son_uyan = [str(x).strip().upper()[:1] for x in ((r or {}).get("uyan_siklar") or []) if str(x).strip()]
     return (harf if harf in secenekler else ""), (getattr(cloud_llm, "last_model", {}) or {}).get("ad") or "groq"
+
+
+_bagimsiz_cevap.son_coklu = False
+_bagimsiz_cevap.son_uyan = []
+
+
+def kok_bozuk(soru: dict) -> bool:
+    """Özgün kök soru değilse (çok kısa ya da bir şıkkın kopyası, ör. 'Entübasyonda krikoid bası uygulamak.')."""
+    import difflib
+    k = " ".join(str(soru.get("soru_koku") or "").split()).lower()
+    if len(k) < 25:
+        return True
+    return any(difflib.SequenceMatcher(None, k, " ".join(str(v).split()).lower()).ratio() > 0.75
+               for v in (soru.get("secenekler") or {}).values() if v)
+
+
+def kok_yeniden_yazildi(soru: dict, res: dict) -> bool:
+    """Kök baştan kurulduysa (bozuk köktenyeniden yazım ya da anlamca farklı kök) kayıtlı cevap o soruya ait değildir."""
+    import difflib
+    a = " ".join(str(soru.get("soru_koku") or "").split()).lower()
+    b = " ".join(str(res.get("soru_koku") or "").split()).lower()
+    return bool(b) and (kok_bozuk(soru) or difflib.SequenceMatcher(None, a, b).ratio() < 0.6)
 
 
 def _aciklamanin_cevabi(soru_koku: str, secenekler: dict, res: dict) -> str:
@@ -567,6 +608,24 @@ def cevap_dogrula(soru: dict, res: dict) -> None:
     harf, vmodel = _bagimsiz_cevap(res.get("soru_koku") or soru.get("soru_koku") or "", sec)
     ac_harf = _aciklamanin_cevabi(res.get("soru_koku") or soru.get("soru_koku") or "", sec, res)
     d = {"kayitli": kayitli, "oneri": oneri, "dogrulayici": harf, "dogrulayici_model": vmodel, "aciklama_gosterdigi": ac_harf}
+    if _bagimsiz_cevap.son_coklu:
+        d["birden_fazla_dogru"] = _bagimsiz_cevap.son_uyan or True
+        res["review_required"] = True
+        res["cevap_emin"] = False
+    if kok_yeniden_yazildi(soru, res):
+        # Kök yeniden kurulduğu için kayıtlı cevap eski (bozuk) soruya aittir; cevap YENİ soruya göre belirlenir.
+        d["kok_yeniden_yazildi"] = True
+        res["review_required"] = True
+        uzlasi = bool(harf) and harf == oneri and ac_harf in ("", oneri) and STRONG_VERIFIER in vmodel
+        if uzlasi and not _bagimsiz_cevap.son_coklu:
+            d["sonuc"] = "yeni_soru_cevabi_dogrulandi"
+        else:
+            d["sonuc"] = "yeni_soru_cevabi_dogrulanamadi"
+            notu = "birden fazla şık yeni köke uyuyor" if _bagimsiz_cevap.son_coklu else f"bağımsız model {harf or '?'}, açıklama {ac_harf or '?'}"
+            res.setdefault("anlam_koruma", []).append(f"yeni kök tek ve kesin cevaplı değil ({notu}); kök/cevap elle düzeltilmeli")
+        res["cevap_dogrulama"] = d
+        logging.info(f"[DOĞRULAMA] kök yeniden yazıldı · öneri {oneri} · bağımsız {harf or '?'} · açıklama {ac_harf or '?'} → {d['sonuc']}")
+        return
     if ac_harf and ac_harf != oneri:
         # model açıklamada başka şıkkı savunup farklı harf işaretlemiş → önerinin cevabı güvenilmez
         logging.info(f"[DOĞRULAMA] açıklama {ac_harf} şıkkını gösteriyor, işaretlenen {oneri} → çelişki")
