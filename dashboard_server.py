@@ -945,6 +945,7 @@ HTML_PAGE = """<!DOCTYPE html>
                 <div class="flex flex-wrap gap-3 text-xs text-slate-300 p-2 rounded-lg bg-slate-900 border border-slate-800">
                     <label class="flex items-center gap-1.5" title="Yeni dosya indirilip okununca yeni veri hattı kendiliğinden kuyruğa girer"><input type="checkbox" id="au-auto"> Otomatik geçiş (yeni dosya → yeni veri hattı)</label>
                     <label class="flex items-center gap-1.5" title="Tüm fazları sırayla sürekli çalıştırır (ağır; eski davranış)"><input type="checkbox" id="au-full"> Tam tur (tüm fazlar)</label>
+                    <label class="flex items-center gap-1.5" title="Her gün Gemini kotası sıfırlanınca yalnız ücretsiz anahtarlarla, kota bitene kadar (ücretli asla)"><input type="checkbox" id="au-p14"> Faz 14 otomatik ücretsiz kip</label>
                     <span id="nd-pending" class="text-slate-400"></span>
                 </div>
                 <details class="text-xs text-slate-300 p-2 rounded-lg bg-slate-900 border border-slate-800">
@@ -2888,6 +2889,7 @@ HTML_PAGE = """<!DOCTYPE html>
                 const d = await (await origFetch('/api/newdata/status')).json();
                 if (document.activeElement !== $('au-auto')) $('au-auto').checked = !!(d.otomasyon || {}).otomatik_gecis;
                 if (document.activeElement !== $('au-full')) $('au-full').checked = !!(d.otomasyon || {}).tam_tur;
+                if (document.activeElement !== $('au-p14')) $('au-p14').checked = (d.otomasyon || {}).faz14_ucretsiz_otomatik !== false;
                 const b = d.bekleyen || {};
                 $('nd-pending').textContent = `Bekleyen: okunmamış indirme ${b.okunmamis_indirme ?? '-'} · ayrıştırılmamış ${b.ayristirilmamis ?? '-'} · girdisi değişen adım ${(b.degisen_adim || []).length ? b.degisen_adim.join(', ') : 'yok'}`;
                 const a = d.ornek_ayar || {}, od = d.ornek_durum || {};
@@ -2900,8 +2902,8 @@ HTML_PAGE = """<!DOCTYPE html>
                 }
             } catch (e) { $('nd-pending').textContent = 'Durum alınamadı: ' + e; }
         }
-        const saveAuto = () => igPost('/api/automation', { otomatik_gecis: $('au-auto').checked, tam_tur: $('au-full').checked }).then(() => { $('ig-msg').textContent = 'Otomasyon kaydedildi ✓ (tam tur zincir yeniden yüklenince geçerli)'; });
-        $('au-auto').onchange = saveAuto; $('au-full').onchange = saveAuto;
+        const saveAuto = () => igPost('/api/automation', { otomatik_gecis: $('au-auto').checked, tam_tur: $('au-full').checked, faz14_ucretsiz_otomatik: $('au-p14').checked }).then(() => { $('ig-msg').textContent = 'Otomasyon kaydedildi ✓ (tam tur zincir yeniden yüklenince geçerli)'; });
+        $('au-auto').onchange = saveAuto; $('au-full').onchange = saveAuto; $('au-p14').onchange = saveAuto;
         $('ps-form').onsubmit = async (ev) => {
             ev.preventDefault(); const f = ev.target;
             const j = await igPost('/api/practice/settings', { kaynak_kokleri: f.kaynak_kokleri.value.split(','), kurullar: f.kurullar.value.split(',').map(x => x.trim()),
@@ -3164,8 +3166,8 @@ def _write_json(f: Path, d: dict):
 
 
 def save_automation(p: dict) -> dict:
-    cur = _read_json(AUTOMATION_FILE, {"otomatik_gecis": False, "tam_tur": False})
-    for k in ("otomatik_gecis", "tam_tur"):
+    cur = _read_json(AUTOMATION_FILE, {"otomatik_gecis": False, "tam_tur": False, "faz14_ucretsiz_otomatik": True})
+    for k in ("otomatik_gecis", "tam_tur", "faz14_ucretsiz_otomatik"):
         if k in p:
             cur[k] = bool(p[k])
     _write_json(AUTOMATION_FILE, cur)
@@ -3200,7 +3202,7 @@ def newdata_status() -> dict:
     except Exception as e:  # noqa: BLE001
         d = {"hata": str(e)}
     pq = PROJECT_ROOT / "meds_database" / "derived" / "ornek_sorular" / "durum.json"
-    return {**d, "otomasyon": _read_json(AUTOMATION_FILE, {"otomatik_gecis": False, "tam_tur": False}),
+    return {**d, "otomasyon": _read_json(AUTOMATION_FILE, {"otomatik_gecis": False, "tam_tur": False, "faz14_ucretsiz_otomatik": True}),
             "ornek_ayar": _read_json(PRACTICE_FILE, PRACTICE_DEFAULTS), "ornek_durum": _read_json(pq, {})}
 
 

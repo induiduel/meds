@@ -232,6 +232,17 @@ def _key_tiers() -> list[tuple[str, str, bool]]:
     return tiers
 
 
+# Kip: ücretli anahtar yalnız elle başlatmada (ALLOW_PAID) ve ücretsizler tükenince. Otomatik kip yalnız ücretsiz.
+ALLOW_PAID = False
+FREE_RPM = int(os.environ.get("PHASE14_FREE_RPM", "12"))      # ücretsiz katman dakika sınırının altında tempo
+_last_call = [0.0]
+_daily_exhausted: set[str] = set()                            # bu çalıştırmada günlük kotası biten (anahtar, model)
+
+
+class QuotaExhausted(Exception):
+    """Ücretsiz anahtarların günlük kotası bitti (ve ücretliye izin yok)."""
+
+
 def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | None, str]:
     """Gemini REST. system_text (kurallar + müfredat paketi) her istekte AYNI → otomatik önbellek (implicit caching).
     Her istekte hangi API/anahtar/model kullanıldığı ve ücretli sayaç günlüğe yazılır. Yerel model yok."""
@@ -243,13 +254,24 @@ def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | No
         payload["systemInstruction"] = {"parts": [{"text": system_text}]}
     data_bytes = json.dumps(payload).encode("utf-8")
 
+    tried_any = False
     for label, key, paid in _key_tiers():
+        if paid and not ALLOW_PAID:
+            continue                                         # otomatik/ücretsiz kip: ücretli asla
         if paid:
             ok, why = paid_allowed()
             if not ok:
                 logging.warning(f"[API] {label} kullanılmadı: {why}")
                 continue
         for model in (PAID_MODELS if paid else FREE_MODELS):
+            if (label, model) in _daily_exhausted:
+                continue
+            tried_any = True
+            if not paid:                                     # ücretsiz katman: dakikalık sınırın altında kal
+                wait = 60.0 / max(1, FREE_RPM) - (time.time() - _last_call[0])
+                if wait > 0:
+                    time.sleep(wait)
+                _last_call[0] = time.time()
             url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
             req = urllib.request.Request(url, data=data_bytes, method="POST",
                                          headers={"Content-Type": "application/json", "x-goog-api-key": key})
@@ -275,15 +297,24 @@ def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | No
             except urllib.error.HTTPError as e:
                 err = e.read().decode("utf-8", errors="ignore")[:200]
                 if e.code == 429:
-                    logging.warning(f"[API] {label} · {model}: kota (429), sıradakine geçiliyor")
-                    time.sleep(1)
+                    if any(t in err for t in ("PerDay", "per day", "RPD", "daily", "Quota exceeded")):
+                        _daily_exhausted.add((label, model))
+                        logging.warning(f"[API] {label} · {model}: GÜNLÜK kota doldu; bu çalıştırmada tekrar denenmez")
+                    else:
+                        logging.warning(f"[API] {label} · {model}: dakikalık kota (429), 20 sn bekleniyor")
+                        time.sleep(20)
                     continue
                 logging.warning(f"[API] {label} · {model}: HTTP {e.code} {err}")
                 continue
             except Exception as e:  # noqa: BLE001
                 logging.warning(f"[API] {label} · {model}: {e}")
                 continue
-    logging.error("[API] hiçbir anahtar/model yanıt vermedi (ücretsiz kotalar ve ücretli sınır doldu olabilir); soru sonraki çalıştırmaya kaldı")
+    free_left = [1 for lb, _k, pd in _key_tiers() if not pd for m in FREE_MODELS if (lb, m) not in _daily_exhausted]
+    if not free_left and not ALLOW_PAID:
+        raise QuotaExhausted("ücretsiz günlük kotalar doldu")
+    if not tried_any:
+        raise QuotaExhausted("denenebilecek anahtar/model kalmadı")
+    logging.error("[API] hiçbir anahtar/model yanıt vermedi; soru sonraki çalıştırmaya kaldı")
     return None, "none"
 
 
@@ -395,7 +426,14 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=10, help="Bu çalıştırmada incelenecek soru sayısı")
     parser.add_argument("--chunk-size", type=int, default=30, help="API'den bir seferde çekilecek soru sayısı")
     parser.add_argument("--direct-apply", action="store_true", help="İnceleme katmanına yazmanın yanı sıra /api üzerinden de doğrudan uygula")
+    parser.add_argument("--ucretli-izin", action="store_true", help="ELLE başlatma: ücretsizler tükenince ücretli anahtara geç")
+    parser.add_argument("--ucretsiz-otomatik", action="store_true", help="otomatik kip: yalnız ücretsiz, günlük kota bitene kadar")
     args = parser.parse_args()
+    global ALLOW_PAID
+    ALLOW_PAID = bool(args.ucretli_izin) and not args.ucretsiz_otomatik
+    if args.ucretsiz_otomatik:
+        args.limit = max(args.limit, 5000)                  # kota bitene kadar
+    logging.info(f"Kip: {'ELLE (önce ücretsiz, sonra ücretli)' if ALLOW_PAID else 'YALNIZ ÜCRETSİZ' + (' · otomatik' if args.ucretsiz_otomatik else '')} · limit {args.limit}")
 
     islenmisler = load_checkpoints()
     curriculum_summary = ""  # müfredat paketi sistem metninde (system_text)
@@ -448,7 +486,11 @@ def main() -> int:
                 continue
 
             logging.info(f"Soru #{s_id} inceleniyor · {q.get('committeeId')} · {q.get('discipline')} · {q.get('topic')}")
-            ai_sonuc, model_used = ai_ile_soruyu_duzelt(src, curriculum_summary)
+            try:
+                ai_sonuc, model_used = ai_ile_soruyu_duzelt(src, curriculum_summary)
+            except QuotaExhausted as qe:
+                logging.info(f"Durduruldu: {qe}. Yarın kota yenilenince kaldığı sorudan sürer.")
+                break
 
             if not ai_sonuc or not isinstance(ai_sonuc, dict):
                 logging.warning(f"Soru #{s_id} için AI yanıtı alınamadı.")

@@ -1897,7 +1897,7 @@ app.post('/api/past-question-reviews/trigger', requireAdmin, (req, res) => {
     fs.mkdirSync(path.dirname(logPath), { recursive: true });
 
     const outLog = fs.openSync(logPath, 'a');
-    const child = spawn('python3', [scriptPath, '--limit', String(limit)], {
+    const child = spawn('python3', [scriptPath, '--limit', String(limit), ...(mode === 'cloud' ? ['--ucretli-izin'] : [])], {
       cwd: __dirname,
       detached: true,
       stdio: ['ignore', outLog, outLog]
