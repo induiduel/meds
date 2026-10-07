@@ -856,6 +856,19 @@ class KopyaDizini:
         return ""
 
 
+def birlestirilen_kopyalar() -> dict:
+    """meds_database_v2/soru_birlestirme/birlestirmeler.json: {gizlenen_kopya_id: asil_id} (ayrılan gruplar hariç)."""
+    f = OUT_DIR.parent / "soru_birlestirme" / "birlestirmeler.json"
+    try:
+        out = {}
+        for g in json.loads(f.read_text(encoding="utf-8")).get("gruplar", []):
+            if g.get("durum") != "ayrildi":
+                out.update({u: g["asil"] for u in g.get("uyeler", []) if u != g["asil"]})
+        return out
+    except Exception:
+        return {}
+
+
 def kopya_kaydet(kopya_id: str, asil_id: str):
     try:
         d = json.loads(KOPYA_FILE.read_text(encoding="utf-8")) if KOPYA_FILE.exists() else {}
@@ -1002,6 +1015,7 @@ def main() -> int:
 
     kopya_dizini = KopyaDizini()
     kopya_dizini.yukle_incelenenler()
+    gizli = birlestirilen_kopyalar()                         # sitede gizlenen kopyalar (asıl soru incelenir)
     with REVIEWS_FILE.open("a", encoding="utf-8") as out_reviews:
         for q in questions:
             s_id = str(q.get("id") or "")
@@ -1013,7 +1027,7 @@ def main() -> int:
             src = source_view(q)
             if len(src["soru_koku"].strip()) < 15 or len(src["secenekler"]) < 4:
                 continue
-            asil = kopya_dizini.kopyasi_mi(s_id, src)
+            asil = gizli.get(s_id) or kopya_dizini.kopyasi_mi(s_id, src)
             if asil:
                 # Aynı soru başka kimlikle zaten incelendi (farklı sınav dökümünden ikinci kez girilmiş):
                 # yeniden incelenmez, kota harcanmaz, /test/cikmis'e ikinci kez düşmez.

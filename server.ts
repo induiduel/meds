@@ -50,6 +50,7 @@ import {
   loadDeepSeekContributions,
   DEEPSEEK_DATA_DIR
 } from './src/services/deepseekDataService.ts';
+import { applyMergeOverlay, mergeMtime, readMergeGroups, updateMergeGroup } from './src/services/questionMerge.ts';
 import { applyPhase14Overlay } from './src/services/phase14Overlay.ts';
 import { getQuestionInsights, getInsightsSummary, getRawQuestionInsights, getPhaseOverride, savePhaseOverride, getQuestionDerivedRecords } from './src/services/phaseInsightsService.ts';
 import { applyCleanOverlay } from './src/services/lectureCleanOverlay.ts';
@@ -1063,7 +1064,7 @@ function savePastQuestionsDb(list: any[]) {
 app.get('/api/past-exams/sync', (req, res) => {
   try {
     // Karantina uygulanmış liste: sayı değişince istemci allIds ile karantinadakileri önbelleğinden siler
-    const list = applyQuarantine(applyPhase14Overlay(getPastQuestionsDb()));
+    const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(getPastQuestionsDb())));
     const since = req.query.since as string;
     const clientCount = req.query.count ? parseInt(req.query.count as string, 10) : undefined;
 
@@ -1125,12 +1126,12 @@ app.get('/api/past-exams/sync', (req, res) => {
 app.get('/api/past-exams', (req, res) => {
   try {
     // Karantina: birleşik/bozuk sorular gösterilmez, onarılanlar temiz döner (yalnız okuma yanıtı)
-    const list = applyQuarantine(applyPhase14Overlay(getPastQuestionsDb()));
+    const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(getPastQuestionsDb())));
     const { committeeId, discipline, year, query } = req.query;
 
     // Fast HTTP Cache validator (304 Not Modified)
     if (!committeeId && !discipline && !year && !query && fs.existsSync(PAST_QUESTIONS_FILE)) {
-      const mtime = new Date(Math.max(fs.statSync(PAST_QUESTIONS_FILE).mtimeMs, quarantineMtime()));
+      const mtime = new Date(Math.max(fs.statSync(PAST_QUESTIONS_FILE).mtimeMs, quarantineMtime(), mergeMtime()));
       const ifModifiedSince = req.headers['if-modified-since'];
       if (ifModifiedSince && new Date(ifModifiedSince).getTime() >= mtime.getTime()) {
         return res.status(304).end();
@@ -2008,6 +2009,47 @@ app.post('/api/past-question-reviews/trigger', requireAdmin, (req, res) => {
       : path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_past_question_editor.py');
 
     const logPath = path.resolve(__dirname, '..', 'meds_temp', 'logs', 'phase14.log');
+  }
+});
+
+// Kopya soru birleştirme (src/services/questionMerge.ts): grupları listele, asıl soruyu seç, onayla, ayır (Admin)
+app.get('/api/admin/question-merges', requireAdmin, (_req, res) => {
+  try {
+    const byId = new Map(getPastQuestionsDb().map((q: any) => [String(q.id), q]));
+    const gruplar = readMergeGroups().map((g) => ({
+      ...g,
+      sorular: g.uyeler.map((id) => {
+        const q: any = byId.get(id) || {};
+        return {
+          id,
+          stem: q.stem || q.reconstruction?.stem || '',
+          options: (q.options || q.reconstruction?.options || []).map((o: any) => (typeof o === 'string' ? o : o?.text || '')),
+          correctAnswer: q.correctAnswer || '',
+          committeeId: q.committeeId || '',
+          discipline: q.discipline || '',
+          year: q.year || '',
+          source: q.source || q.sourceFile || '',
+        };
+      }),
+    }));
+    res.json({ gruplar });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Birleştirmeler okunamadı: ' + err.message });
+  }
+});
+app.post('/api/admin/question-merges/:groupId', requireAdmin, (req, res) => {
+  try {
+    const t = String(req.body?.action || '');
+    const action =
+      t === 'primary' ? { type: 'primary' as const, asil: String(req.body?.asil || '') }
+      : t === 'confirm' ? { type: 'confirm' as const }
+      : t === 'split' ? { type: 'split' as const }
+      : t === 'restore' ? { type: 'restore' as const }
+      : null;
+    if (!action) return res.status(400).json({ error: 'Geçersiz işlem.' });
+    res.json({ success: true, grup: updateMergeGroup(String(req.params.groupId), action) });
+  } catch (err: any) {
+    res.status(400).json({ error: err.message });
     fs.mkdirSync(path.dirname(logPath), { recursive: true });
 
     const outLog = fs.openSync(logPath, 'a');

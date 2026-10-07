@@ -37,6 +37,7 @@ import {
   EyeOff,
   Wand2,
   FilePlus2,
+  GitMerge,
 } from 'lucide-react';
 import type { QuestionItem, Committee, QuestionOption } from '../../types';
 import { ApiService, safeJsonFetch } from '../../services/api';
@@ -51,6 +52,7 @@ import { useTheme } from '../../utils/theme';
 import { ManageDraftsSection } from './ManageDraftsSection';
 import { ManageDataSection } from './ManageDataSection';
 import { ManagePhasesSection } from './ManagePhasesSection';
+import { ManageMergesSection } from './ManageMergesSection';
 import { Table2, FlaskConical } from 'lucide-react';
 import { consoleLogBuffer, ManageLogEntry } from './ConsoleLogBuffer';
 import {
@@ -83,7 +85,7 @@ import {
   ManageServiceItem,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'inbox' | 'data' | 'phases' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation';
+export type ManageSection = 'inbox' | 'data' | 'phases' | 'merges' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -101,6 +103,7 @@ const SECTIONS: { id: ManageSection; label: string; hint: string; icon: React.El
   { id: 'inbox', label: 'Gelen Kutusu', hint: 'Bildirim, yorum, taslak ve uyarılar', icon: Inbox },
   { id: 'data', label: 'Tüm veriler', hint: 'Listele, sırala, seç, toplu işlem, CSV', icon: Table2 },
   { id: 'phases', label: 'Faz verileri', hint: 'Soru bazında faz çıktıları: gör, elle düzelt, arama testi', icon: FlaskConical },
+  { id: 'merges', label: 'Birleştirilen sorular', hint: 'Kopya sorular: yan yana gör, asıl soruyu seç, ayır', icon: GitMerge },
   { id: 'drafts', label: 'Taslaklar', hint: 'Topla, birleştir, sil, düzenle, AI ile dönüştür', icon: Layers },
   { id: 'studio', label: 'Taslak stüdyosu', hint: 'Parçaları elle eşle: ağaç, pano, akış, terimler', icon: Workflow },
   { id: 'moderation', label: 'Moderasyon', hint: 'Hatalı soruyu gör ve düzelt', icon: Wrench },
@@ -115,6 +118,7 @@ const SECTION_GROUP: Record<ManageSection, string> = {
   inbox: 'Genel',
   data: 'İçerik',
   phases: 'İçerik',
+  merges: 'İçerik',
   drafts: 'İçerik',
   studio: 'İçerik',
   moderation: 'İçerik',
@@ -940,6 +944,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           )}
 
           {section === 'phases' && <ManagePhasesSection adminEmail={adminEmail} />}
+          {section === 'merges' && <ManageMergesSection adminEmail={adminEmail} />}
 
           {section === 'studio' && (
             <DraftStudio
