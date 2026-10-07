@@ -50,7 +50,7 @@ import {
   loadDeepSeekContributions,
   DEEPSEEK_DATA_DIR
 } from './src/services/deepseekDataService.ts';
-import { getQuestionInsights, getInsightsSummary } from './src/services/phaseInsightsService.ts';
+import { getQuestionInsights, getInsightsSummary, getRawQuestionInsights, getPhaseOverride, savePhaseOverride, getQuestionDerivedRecords } from './src/services/phaseInsightsService.ts';
 import { applyCleanOverlay } from './src/services/lectureCleanOverlay.ts';
 import { applyQuarantine, quarantineMtime } from './src/services/questionQuarantine.ts';
 
@@ -878,6 +878,47 @@ app.get('/api/data-catalog', (_req, res) => {
 });
 
 // Öğren bağlantıları (learn_links.py): soru → Öğren destesi slaytı, eşik altı bağlantı yok
+// ---- Yönetim konsolu: faz verileri (görüntüle / elle düzelt / arama testi)
+app.get('/api/admin/phases/question/:id', requireAdmin, (req, res) => {
+  const id = String(req.params.id);
+  res.json({
+    id,
+    ham: getRawQuestionInsights(id),
+    gorunen: getQuestionInsights(id),
+    duzeltme: getPhaseOverride(id),
+    kayitlar: getQuestionDerivedRecords(id),
+    ozet: getInsightsSummary(),
+  });
+});
+
+app.put('/api/admin/phases/question/:id/override', requireAdmin, (req, res) => {
+  const body = req.body && typeof req.body === 'object' ? req.body : null;
+  const ov = body && Object.keys(body).length ? body : null;
+  const saved = savePhaseOverride(String(req.params.id), ov, String(req.headers['x-admin-email'] || 'yerel'));
+  res.json({ ok: true, duzeltme: saved, gorunen: getQuestionInsights(String(req.params.id)) });
+});
+
+app.post('/api/admin/phases/question/:id/test', requireAdmin, async (req, res) => {
+  try {
+    const q = String(req.body?.query || '').slice(0, 2000);
+    if (q.trim().length < 5) return res.status(400).json({ error: 'Sorgu çok kısa' });
+    const { searchRagChunks } = await import('./src/services/ragService.ts');
+    const hits = await searchRagChunks(q, undefined, { documentTypes: ['lecture_slide'] as any, limit: 8 });
+    const faz11 = (getRawQuestionInsights(String(req.params.id))?.slayt?.slaytlar || []) as any[];
+    res.json({
+      sonuclar: hits.map((h: any) => ({
+        baslik: h.title || '',
+        sayfa: h.pageNumber ?? null,
+        skor: Math.round((h.similarity || 0) * 100) / 100,
+        metin: String(h.content || '').slice(0, 240),
+      })),
+      faz11,
+    });
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'arama hatası' });
+  }
+});
+
 app.get('/api/learn-links', (_req, res) => {
   try {
     const f = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'derived', 'learn_links.json');

@@ -11,6 +11,12 @@ import { safeJsonFetch } from '../services/api';
 
 const cache = new Map<string, any | null>();
 
+/** Yönetim konsolunda elle düzeltme sonrası önizlemenin yeniden yüklenmesi için. */
+export function clearInsightsCache(questionId?: string) {
+  if (questionId) cache.delete(questionId);
+  else cache.clear();
+}
+
 function Chips({ items }: { items: string[] }) {
   if (!items.length) return null;
   return (
@@ -48,16 +54,22 @@ export function QuestionInsightsPanel({ questionId }: { questionId: string }) {
 
   if (!probed || !data) return null;
 
-  // Yalnızca kazanım (Faz 8 yüksek güven), terimler ve eş anlamlılar gösterilir; diğer faz alanları gizli.
   const f5 = data.faz5;
   const f65 = data.faz6_5;
-  const k = (data.mufredat || data.faz8)?.kazanimlar?.[0]; // mufredat: Faz 9 birleşik (Faz 8 öncelikli)
+  const f6 = data.faz6;
+  const mf = data.mufredat || data.faz8; // mufredat: sınav başlığı / Faz 9 birleşik (Faz 8 öncelikli)
+  const k = mf?.kazanimlar?.[0];
   const ents: { ad: string }[] = data.varliklar || [];
   // Faz 13 kimlikli varlıklar önce; sonra Faz 6.5 / Faz 5 terimleri
   const terms: string[] = Array.from(new Set<string>([...ents.map((e) => e.ad), ...(f65?.terimler || []), ...(f5?.terimler || [])])).slice(0, 14);
   const synonyms = Object.entries((f65?.esanlamlilar || {}) as Record<string, string[]>).filter(([, v]) => v?.length);
-  if (!k && !terms.length && !synonyms.length) return null;
-  const baslik = k ? [k.ders, k.konu].filter(Boolean).join(' · ') : 'Terimler';
+  const abbrs = Object.entries((f65?.kisaltmalar || {}) as Record<string, string>);
+  const slides: { kaynak: string; sayfa: number; alinti?: string }[] = data.slayt?.slaytlar || [];
+  const ddx: { hastalik: string; ozellik?: string }[] = f6?.ayirici_tani || [];
+  const icd: string[] = f6?.icd10 || [];
+  if (!k && !terms.length && !synonyms.length && !abbrs.length && !slides.length && !ddx.length) return null;
+  const baslik = k ? [k.ders, k.konu].filter(Boolean).join(' · ') : slides.length ? 'İlgili slaytlar' : 'Terimler';
+  const h4 = 'm-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3 flex items-center gap-1';
 
   return (
     <div className="rounded-xl bg-field">
@@ -77,11 +89,39 @@ export function QuestionInsightsPanel({ questionId }: { questionId: string }) {
         <div className="px-3.5 pb-3.5 flex flex-col gap-3 text-[13.5px] text-ink-2">
           {k && (
             <section className="flex flex-col gap-1">
-              <h4 className="m-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3">{k.kazanim ? 'Kazanım' : 'Müfredat'}</h4>
+              <h4 className="m-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3">{k.kazanim ? 'Kazanım' : 'Müfredat'}{mf?.dogrulama === 'sinav_basligi' ? ' · sınav başlığından' : ' · Faz 8'}</h4>
               {k.kazanim && <p className="m-0 text-ink">{k.kazanim}</p>}
               <p className="m-0 text-[12px] text-ink-3">
                 {['Kurul ' + k.kurul, k.ders, k.konu].filter(Boolean).join(' · ')}
               </p>
+            </section>
+          )}
+
+          {slides.length > 0 && (
+            <section className="flex flex-col gap-1.5">
+              <h4 className={h4}>
+                İlgili slaytlar
+                <span className="normal-case tracking-normal font-normal">· eşleşme güveni {data.slayt?.guven || '-'}</span>
+              </h4>
+              {slides.slice(0, 3).map((sl) => (
+                <div key={`${sl.kaynak}-${sl.sayfa}`} className="rounded-lg bg-canvas px-2.5 py-2">
+                  <p className="m-0 text-[13px] font-semibold text-ink">
+                    {sl.kaynak} <span className="font-normal text-ink-3">· sayfa {sl.sayfa}</span>
+                  </p>
+                  {sl.alinti && <p className="m-0 mt-0.5 text-[12.5px] text-ink-2 break-words">{sl.alinti.replace(/^\[[^\]]*\]\s*/, '')}</p>}
+                </div>
+              ))}
+            </section>
+          )}
+
+          {abbrs.length > 0 && (
+            <section className="flex flex-col gap-1">
+              <h4 className={h4}>Kısaltmalar</h4>
+              {abbrs.map(([ab, exp]) => (
+                <p key={ab} className="m-0 text-[12.5px]">
+                  <span className="font-semibold text-ink">{ab}</span> = {exp}
+                </p>
+              ))}
             </section>
           )}
 
@@ -96,6 +136,24 @@ export function QuestionInsightsPanel({ questionId }: { questionId: string }) {
                   <span className="font-semibold text-ink">{t}</span> = {syn.join(', ')}
                 </p>
               ))}
+            </section>
+          )}
+
+          {(ddx.length > 0 || icd.length > 0) && (
+            <section className="flex flex-col gap-1">
+              <h4 className={h4}>
+                Ayırıcı tanı
+                <span className="normal-case tracking-normal font-normal">
+                  · {f6?.dogrulanmadi ? 'yapay zekâ, doğrulanmadı' : 'ders materyaliyle desteklenen'}
+                </span>
+              </h4>
+              {ddx.slice(0, 5).map((d) => (
+                <p key={d.hastalik} className="m-0 text-[12.5px]">
+                  <span className="font-semibold text-ink">{d.hastalik}</span>
+                  {d.ozellik ? ` — ${d.ozellik}` : ''}
+                </p>
+              ))}
+              {icd.length > 0 && <p className="m-0 text-[12px] text-ink-3">ICD-10: {icd.join(', ')}</p>}
             </section>
           )}
         </div>

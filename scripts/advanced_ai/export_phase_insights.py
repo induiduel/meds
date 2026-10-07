@@ -268,7 +268,7 @@ def main():
                 if found:
                     f65 = items.setdefault(qid, {}).setdefault("faz6_5", {"terimler": [], "esanlamlilar": {}, "slayt": None})
                     for ab, exp in list(found.items())[:6]:
-                        f65["esanlamlilar"].setdefault(ab, [exp])
+                        f65.setdefault("kisaltmalar", {})[ab] = exp
                     cnt["kisaltma_acilimi"] = cnt.get("kisaltma_acilimi", 0) + 1
 
     if not items:

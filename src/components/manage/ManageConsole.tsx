@@ -50,7 +50,8 @@ const AiQuestionOptimizerModal = React.lazy(() => import('../AiQuestionOptimizer
 import { useTheme } from '../../utils/theme';
 import { ManageDraftsSection } from './ManageDraftsSection';
 import { ManageDataSection } from './ManageDataSection';
-import { Table2 } from 'lucide-react';
+import { ManagePhasesSection } from './ManagePhasesSection';
+import { Table2, FlaskConical } from 'lucide-react';
 import { consoleLogBuffer, ManageLogEntry } from './ConsoleLogBuffer';
 import {
   DEFAULT_MANAGE_SETTINGS,
@@ -82,7 +83,7 @@ import {
   ManageServiceItem,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'inbox' | 'data' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation';
+export type ManageSection = 'inbox' | 'data' | 'phases' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -99,6 +100,7 @@ interface ManageConsoleProps {
 const SECTIONS: { id: ManageSection; label: string; hint: string; icon: React.ElementType }[] = [
   { id: 'inbox', label: 'Gelen Kutusu', hint: 'Bildirim, yorum, taslak ve uyarılar', icon: Inbox },
   { id: 'data', label: 'Tüm veriler', hint: 'Listele, sırala, seç, toplu işlem, CSV', icon: Table2 },
+  { id: 'phases', label: 'Faz verileri', hint: 'Soru bazında faz çıktıları: gör, elle düzelt, arama testi', icon: FlaskConical },
   { id: 'drafts', label: 'Taslaklar', hint: 'Topla, birleştir, sil, düzenle, AI ile dönüştür', icon: Layers },
   { id: 'studio', label: 'Taslak stüdyosu', hint: 'Parçaları elle eşle: ağaç, pano, akış, terimler', icon: Workflow },
   { id: 'moderation', label: 'Moderasyon', hint: 'Hatalı soruyu gör ve düzelt', icon: Wrench },
@@ -112,6 +114,7 @@ const SECTIONS: { id: ManageSection; label: string; hint: string; icon: React.El
 const SECTION_GROUP: Record<ManageSection, string> = {
   inbox: 'Genel',
   data: 'İçerik',
+  phases: 'İçerik',
   drafts: 'İçerik',
   studio: 'İçerik',
   moderation: 'İçerik',
@@ -935,6 +938,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           {section === 'data' && (
             <ManageDataSection adminEmail={adminEmail} questions={questions} committees={committees} onRefreshData={onRefreshData} />
           )}
+
+          {section === 'phases' && <ManagePhasesSection adminEmail={adminEmail} />}
 
           {section === 'studio' && (
             <DraftStudio
