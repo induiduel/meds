@@ -61,6 +61,24 @@ GEMINI_KEYS = [
 ]
 GEMINI_KEYS = [k for k in list(dict.fromkeys(GEMINI_KEYS)) if k and not k.startswith("BURAYA_") and not k.startswith("MY_")]
 
+
+def _paid_key() -> str:
+    """ÜCRETLİ anahtar — YALNIZ bu betik (Faz 14) kullanır; ücretsiz anahtarlar tükenince devreye girer.
+    Aylık bütçe tavanı (record_cost_and_check_budget) bu anahtar için de geçerlidir."""
+    v = os.environ.get("PHASE14_PAID_GEMINI_KEY", "").strip()
+    if not v:
+        try:
+            for line in (ROOT / ".env").read_text(encoding="utf-8").splitlines():
+                if line.startswith("PHASE14_PAID_GEMINI_KEY="):
+                    v = line.split("=", 1)[1].strip().strip('"')
+        except OSError:
+            pass
+    return v
+
+
+if _paid_key() and _paid_key() not in GEMINI_KEYS:
+    GEMINI_KEYS.append(_paid_key())
+
 OUT_DIR = ROOT.parent / "meds_database_v2" / "phase14_past_question_editor"
 REVIEWS_FILE = OUT_DIR / "reviews.jsonl"
 CHECKPOINT_FILE = OUT_DIR / "checkpoint_cloud.json"
