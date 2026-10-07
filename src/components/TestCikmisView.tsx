@@ -107,8 +107,6 @@ function questionText(rev: PastQuestionReviewRecord, which: 'src' | 'prop'): str
   if (meta) lines.push(meta);
   lines.push('', String(q.soru_koku || '').trim(), '');
   for (const [k, v] of Object.entries(opts)) lines.push(`${k.toUpperCase()}) ${String(v).trim()}`);
-  const ans = q.dogru_secenek || src.dogru_secenek;
-  if (ans) lines.push('', `Doğru cevap: ${String(ans).toUpperCase()}`);
   return lines.join('\n').trim();
 }
 async function copyText(text: string): Promise<boolean> {
@@ -165,6 +163,23 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   // Telefonda kart başına görünüm: fark (varsayılan) | mevcut | öneri
   const [cardView, setCardView] = useState<Record<string, 'diff' | 'src' | 'prop'>>({});
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  // Görünüm: "list" (her soru tek satır, tıklayınca açılır) | "detail" (tam karşılaştırma kartı). Cihazda hatırlanır.
+  const [layout, setLayout] = useState<'list' | 'detail'>(() => {
+    try {
+      return (localStorage.getItem('tc_layout') as 'list' | 'detail') || 'detail';
+    } catch {
+      return 'detail';
+    }
+  });
+  const [openRows, setOpenRows] = useState<Record<string, boolean>>({});
+  const changeLayout = (v: 'list' | 'detail') => {
+    setLayout(v);
+    try {
+      localStorage.setItem('tc_layout', v);
+    } catch {
+      /* depolama kapalı */
+    }
+  };
 
   // Action status
   const [processingId, setProcessingId] = useState<string | null>(null);
@@ -214,8 +229,9 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     } catch (_) {}
   };
 
-  const fetchReviews = async () => {
-    setIsLoading(true);
+  // silent: işlem sonrası arkada yenile — liste yükleme ekranıyla değişmez, kaydırma konumu korunur
+  const fetchReviews = async (silent = false) => {
+    if (!silent) setIsLoading(true);
     setError(null);
     try {
       const data = await ApiService.getPastQuestionReviews({ status: 'all' });
@@ -233,7 +249,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       setReport(data.report || null);
     } catch (err: any) {
       console.error('[TestCikmisView] Fetch error:', err);
-      setError(err.message || 'İnceleme kayıtları alınamadı.');
+      if (!silent) setError(err.message || 'İnceleme kayıtları alınamadı.');
     } finally {
       setIsLoading(false);
     }
@@ -259,7 +275,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       const res = await ApiService.triggerPastQuestionReview(ADMIN_EMAIL, mode, triggerLimit);
       setActionFeedback({ message: `✓ ${res.message || 'İşlem başlatıldı.'}`, type: 'ok' });
       await fetchLiveStatus();
-      await fetchReviews();
+      await fetchReviews(true);
     } catch (err: any) {
       setActionFeedback({ message: `Başlatılamadı: ${err.message}`, type: 'err' });
     } finally {
@@ -288,10 +304,10 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     try {
       await ApiService.approvePastQuestionReview(ADMIN_EMAIL, qId);
       setActionFeedback({ message: `✓ Soru #${qId} başarıyla güncellendi ve ana soru havuzuna onaylandı.`, type: 'ok' });
-      fetchReviews();
+      fetchReviews(true);
     } catch (err: any) {
       setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
-      fetchReviews();
+      fetchReviews(true);
     } finally {
       setProcessingId(null);
     }
@@ -306,10 +322,10 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     try {
       await ApiService.rejectPastQuestionReview(ADMIN_EMAIL, qId, reason);
       setActionFeedback({ message: `✓ Soru #${qId} önerisi reddedildi.`, type: 'ok' });
-      fetchReviews();
+      fetchReviews(true);
     } catch (err: any) {
       setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
-      fetchReviews();
+      fetchReviews(true);
     } finally {
       setProcessingId(null);
     }
@@ -324,7 +340,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
         message: `✓ ${res.message || 'Değişiklik olmayan sorular tekrar değerlendirme kuyruğuna alındı.'}`,
         type: 'ok'
       });
-      await fetchReviews();
+      await fetchReviews(true);
       await fetchLiveStatus();
     } catch (err: any) {
       setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
@@ -366,7 +382,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       });
       setActionFeedback({ message: `✓ Soru #${qId} önerisi başarıyla kaydedildi.`, type: 'ok' });
       setEditingReview(null);
-      await fetchReviews();
+      await fetchReviews(true);
     } catch (err: any) {
       setActionFeedback({ message: `Kayıt başarısız: ${err.message}`, type: 'err' });
     } finally {
@@ -431,7 +447,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
           <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"
-              onClick={fetchReviews}
+              onClick={() => fetchReviews()}
               disabled={isLoading}
               className="h-10 px-3.5 rounded-xl border border-line bg-white text-ink text-[13.5px] font-semibold inline-flex items-center gap-2 hover:bg-canvas cursor-pointer disabled:opacity-50"
             >
@@ -644,7 +660,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
           )}
         </label>
 
-        <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 sm:pb-0">
+        <div className="flex flex-wrap items-center gap-1.5">
           {[
             { id: 'all', label: 'Tümü', count: stats.total },
             { id: 'review_required', label: 'İnceleme Gerekli', count: stats.pending },
@@ -673,6 +689,22 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               </button>
             );
           })}
+
+          {/* Görünüm: liste / ayrıntılı */}
+          <div className="h-11 p-1 rounded-xl border border-line bg-white inline-flex items-center gap-0.5" role="radiogroup" aria-label="Görünüm">
+            {([['list', 'Liste'], ['detail', 'Ayrıntılı']] as const).map(([id, label]) => (
+              <button
+                key={id}
+                type="button"
+                role="radio"
+                aria-checked={layout === id}
+                onClick={() => changeLayout(id)}
+                className={`h-full px-3 rounded-lg text-[13px] font-semibold cursor-pointer ${layout === id ? 'bg-accent text-white' : 'text-ink-2 hover:text-ink'}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
 
           {/* Sıralama Butonu */}
           <label className="h-11 px-3 rounded-xl border border-line bg-white text-ink-2 text-[13px] font-semibold whitespace-nowrap inline-flex items-center gap-1.5 shrink-0 ml-1">
@@ -718,7 +750,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
           <p className="font-semibold">{error}</p>
           <button
             type="button"
-            onClick={fetchReviews}
+            onClick={() => fetchReviews()}
             className="mt-2 h-9 px-4 rounded-lg bg-rose-600 text-white text-xs font-semibold cursor-pointer"
           >
             Yeniden Dene
@@ -760,17 +792,72 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               : isUnchanged
               ? { label: 'Değişiklik yok', cls: 'bg-slate-100 text-slate-600', Icon: Check }
               : { label: 'İnceleme bekliyor', cls: 'bg-amber-50 text-amber-800', Icon: Clock };
-            const copyWhich: 'src' | 'prop' = view === 'src' ? 'src' : 'prop';
-            const onCopy = async () => {
-              const ok = await copyText(questionText(rev, copyWhich));
+            const onCopy = async (which: 'src' | 'prop') => {
+              const ok = await copyText(questionText(rev, which));
               if (ok) {
-                setCopiedId(qId);
-                window.setTimeout(() => setCopiedId((c) => (c === qId ? null : c)), 1600);
+                setCopiedId(`${qId}:${which}`);
+                window.setTimeout(() => setCopiedId((c) => (c === `${qId}:${which}` ? null : c)), 1600);
               } else {
                 setActionFeedback({ message: 'Kopyalanamadı: tarayıcı panoya erişime izin vermedi.', type: 'err' });
               }
             };
             const btn = 'h-11 sm:h-8 px-3 rounded-lg text-[13px] sm:text-[12.5px] font-semibold inline-flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 transition-colors';
+            const copyBtn = (which: 'src' | 'prop', label: string) => {
+              const done = copiedId === `${qId}:${which}`;
+              return (
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onCopy(which);
+                  }}
+                  className="h-11 sm:h-8 px-2 rounded-lg inline-flex items-center gap-1 text-[12px] font-semibold text-ink-3 hover:text-ink hover:bg-canvas cursor-pointer shrink-0"
+                  title={`${label} soruyu ve şıklarını kopyala (cevap anahtarı hariç)`}
+                  aria-label={done ? 'Kopyalandı' : `${label} soruyu kopyala`}
+                >
+                  {done ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                  <span>{label}</span>
+                </button>
+              );
+            };
+            const copyButtons = (
+              <>
+                {copyBtn('src', 'Eski')}
+                {propStem && copyBtn('prop', 'Yeni')}
+              </>
+            );
+            const srcExpl = String(src.aciklama || '');
+            const propExpl = String(prop.aciklama || '');
+            const explChanged = Boolean(propExpl) && propExpl.trim() !== srcExpl.trim();
+
+            // Liste görünümü: tek satır; tıklayınca ayrıntılı kart açılır
+            if (layout === 'list' && !openRows[qId]) {
+              return (
+                <article
+                  key={qId}
+                  className="bg-white border border-line rounded-xl px-3 py-2 flex items-center gap-2 min-w-0 cursor-pointer hover:border-line-2"
+                  onClick={() => setOpenRows((o) => ({ ...o, [qId]: true }))}
+                >
+                  <span className={`w-2 h-2 rounded-full shrink-0 ${isApproved ? 'bg-emerald-500' : isRejected ? 'bg-rose-500' : isUnchanged ? 'bg-slate-400' : 'bg-amber-500'}`} title={status.label} />
+                  <span className="font-mono text-[12px] text-ink-3 shrink-0 hidden sm:inline">#{qId.slice(0, 8)}</span>
+                  <span className="text-[13.5px] text-ink truncate min-w-0 flex-1">{propStem || srcStem}</span>
+                  {changes.length > 0 && <span className="hidden md:inline text-[11.5px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 shrink-0">müfredat</span>}
+                  {explChanged && <span className="hidden md:inline text-[11.5px] px-1.5 py-0.5 rounded bg-violet-50 text-violet-700 shrink-0">açıklama</span>}
+                  <span className={`text-[11.5px] font-mono shrink-0 ${ratioPercent >= 80 ? 'text-emerald-700' : 'text-rose-700'}`}>%{ratioPercent}</span>
+                  {copyButtons}
+                  {isAdmin && !isApproved && (
+                    <button type="button" onClick={(e) => { e.stopPropagation(); handleApprove(qId); }} disabled={processingId === qId} className="w-11 h-11 sm:w-8 sm:h-8 rounded-lg inline-flex items-center justify-center text-emerald-700 hover:bg-emerald-50 cursor-pointer shrink-0 disabled:opacity-50" title="Onayla" aria-label="Onayla">
+                      <Check className="w-4 h-4" />
+                    </button>
+                  )}
+                  {isAdmin && !isRejected && (
+                    <button type="button" onClick={(e) => { e.stopPropagation(); handleReject(qId); }} disabled={processingId === qId} className="w-11 h-11 sm:w-8 sm:h-8 rounded-lg inline-flex items-center justify-center text-rose-700 hover:bg-rose-50 cursor-pointer shrink-0 disabled:opacity-50" title="Reddet" aria-label="Reddet">
+                      <X className="w-4 h-4" />
+                    </button>
+                  )}
+                </article>
+              );
+            }
 
             return (
               <article key={qId} className="bg-white border border-line rounded-xl overflow-hidden">
@@ -791,15 +878,12 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                     {[kurulLabel(src.kurul_adi), src.ders_adi].filter(Boolean).join(' · ')}
                   </span>
                   <span className="flex-1" />
-                  <button
-                    type="button"
-                    onClick={onCopy}
-                    className="w-11 h-11 sm:w-8 sm:h-8 -my-1.5 rounded-lg inline-flex items-center justify-center text-ink-3 hover:text-ink hover:bg-canvas cursor-pointer shrink-0"
-                    aria-label={copiedId === qId ? 'Kopyalandı' : view === 'src' ? 'Mevcut soruyu kopyala' : 'Önerilen soruyu kopyala'}
-                    title={copiedId === qId ? 'Kopyalandı' : view === 'src' ? 'Mevcut soruyu kopyala' : 'Önerilen soruyu kopyala'}
-                  >
-                    {copiedId === qId ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
-                  </button>
+                  {copyButtons}
+                  {layout === 'list' && (
+                    <button type="button" onClick={() => setOpenRows((o) => ({ ...o, [qId]: false }))} className="h-11 sm:h-8 px-2.5 rounded-lg text-[12.5px] font-semibold text-ink-3 hover:text-ink hover:bg-canvas cursor-pointer shrink-0">
+                      Daralt
+                    </button>
+                  )}
                 </header>
 
                 {/* Müfredat değişikliği */}
@@ -855,12 +939,6 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         ))}
                       </ul>
                     )}
-                    {src.aciklama && (
-                      <details className="text-[12.5px] text-slate-600">
-                        <summary className="cursor-pointer font-semibold text-slate-700 py-1">Mevcut açıklama</summary>
-                        <p className="m-0 mt-1 whitespace-pre-wrap leading-relaxed">{src.aciklama}</p>
-                      </details>
-                    )}
                   </section>
 
                   {/* Öneri (fark işaretli) */}
@@ -906,27 +984,44 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         <del className="bg-rose-100 text-rose-800 rounded-sm px-0.5">çıkarılan</del> kelimeler, mevcut kayda göre
                       </p>
                     )}
-                    {(prop.aciklama || prop.degisiklik_ozeti || yzvNote || prop.YZV?.referans_literatur) && (
-                      <details className="text-[12.5px] text-violet-950">
-                        <summary className="cursor-pointer font-semibold py-1">
-                          Açıklama ve değişiklik notu
-                          {(prop.degisen_alanlar?.length ?? 0) > 0 && <span className="font-normal text-violet-700"> · {(prop.degisen_alanlar || []).join(', ')}</span>}
-                        </summary>
-                        <div className="mt-1 flex flex-col gap-1.5 leading-relaxed">
-                          {prop.degisiklik_ozeti && (
-                            <p className="m-0">
-                              <b>Özet:</b> {typeof prop.degisiklik_ozeti === 'string' ? prop.degisiklik_ozeti : JSON.stringify(prop.degisiklik_ozeti)}
-                            </p>
-                          )}
-                          {yzvNote?.soru_koku_duzeltmesi && <p className="m-0"><b>Kök:</b> {yzvNote.soru_koku_duzeltmesi}</p>}
-                          {yzvNote?.aciklama_duzeltmesi && <p className="m-0"><b>Açıklama düzeltmesi:</b> {yzvNote.aciklama_duzeltmesi}</p>}
-                          {prop.YZV?.referans_literatur && <p className="m-0"><b>Literatür:</b> {prop.YZV.referans_literatur}</p>}
-                          {prop.aciklama && <p className="m-0 whitespace-pre-wrap"><b>Önerilen açıklama:</b> {prop.aciklama}</p>}
-                        </div>
-                      </details>
+                    {(prop.degisiklik_ozeti || (prop.degisen_alanlar?.length ?? 0) > 0 || yzvNote?.soru_koku_duzeltmesi || prop.YZV?.referans_literatur) && (
+                      <div className="text-[12.5px] text-violet-950 bg-white/70 rounded-md px-2.5 py-2 flex flex-col gap-1 leading-relaxed">
+                        <p className="m-0 font-semibold flex flex-wrap items-center gap-1">
+                          Değişiklik notu
+                          {(prop.degisen_alanlar || []).map((f: string) => (
+                            <span key={f} className="font-normal text-[11.5px] px-1.5 rounded bg-violet-100 text-violet-800">{f}</span>
+                          ))}
+                        </p>
+                        {prop.degisiklik_ozeti && (
+                          <p className="m-0">{typeof prop.degisiklik_ozeti === 'string' ? prop.degisiklik_ozeti : JSON.stringify(prop.degisiklik_ozeti)}</p>
+                        )}
+                        {yzvNote?.soru_koku_duzeltmesi && <p className="m-0"><b>Kök:</b> {yzvNote.soru_koku_duzeltmesi}</p>}
+                        {prop.YZV?.referans_literatur && <p className="m-0 text-violet-800"><b>Literatür:</b> {prop.YZV.referans_literatur}</p>}
+                      </div>
                     )}
                   </section>
                 </div>
+
+                {/* Açıklama: eski ↔ yeni (kelime farkı) */}
+                {(srcExpl || propExpl) && (
+                  <section className="mx-3 sm:mx-4 mb-3 rounded-lg border border-line">
+                    <h4 className="m-0 px-3 pt-2 flex flex-wrap items-center gap-2 text-[11.5px] font-semibold uppercase tracking-wide text-ink-3">
+                      Açıklama
+                      <span className={`normal-case tracking-normal text-[11.5px] px-1.5 rounded ${explChanged ? 'bg-violet-50 text-violet-700' : 'bg-slate-100 text-slate-600'}`}>
+                        {explChanged ? (srcExpl ? 'değiştirildi' : 'yeni eklendi') : 'değişmedi'}
+                      </span>
+                      {yzvNote?.aciklama_duzeltmesi && <span className="normal-case tracking-normal font-normal text-ink-3">· {yzvNote.aciklama_duzeltmesi}</span>}
+                    </h4>
+                    <details open={layout === 'detail'} className="px-3 pb-2 text-[13px] text-ink-2">
+                      <summary className="cursor-pointer text-[12.5px] text-ink-3 py-1">
+                        {explChanged && srcExpl ? 'Farkı göster / gizle (yeşil eklenen, kırmızı çıkarılan)' : 'Göster / gizle'}
+                      </summary>
+                      <p className="m-0 whitespace-pre-wrap leading-relaxed break-words">
+                        {explChanged && srcExpl ? <DiffText before={srcExpl} after={propExpl} /> : propExpl || srcExpl}
+                      </p>
+                    </details>
+                  </section>
+                )}
 
                 {/* Eylemler + künye */}
                 <footer className="px-3 sm:px-4 py-2 border-t border-line flex flex-col sm:flex-row sm:items-center gap-2">
