@@ -934,6 +934,16 @@ HTML_PAGE = """<!DOCTYPE html>
 
         <!-- SEKME 4: MASTER SÜREÇ & MOD YÖNETİCİSİ -->
         <div id="tab-master" class="tab-content hidden space-y-6">
+            <div class="glass rounded-2xl p-4 space-y-2">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <div class="text-sm font-semibold text-slate-100">Tüm aşamalar ve betikler <span class="text-xs font-normal text-slate-400">(AI türü kaynak koddan otomatik çıkarılır)</span></div>
+                    <div id="sc-flags" class="text-[11px] text-slate-400"></div>
+                </div>
+                <div class="overflow-x-auto"><table class="w-full text-xs">
+                    <thead class="text-slate-400"><tr><th class="text-left p-1.5">Aşama</th><th class="text-left p-1.5">Betik</th><th class="text-left p-1.5">AI</th><th class="text-left p-1.5">Durum</th><th class="text-left p-1.5">Son çalışma</th><th class="p-1.5"></th></tr></thead>
+                    <tbody id="sc-rows"><tr><td class="p-2 text-slate-500" colspan="6">yükleniyor…</td></tr></tbody>
+                </table></div>
+            </div>
             <!-- Mod Seçim Bannerı -->
             <div class="glass p-6 rounded-2xl border-l-4 border-amber-500 space-y-4">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
@@ -2795,6 +2805,30 @@ HTML_PAGE = """<!DOCTYPE html>
             if (j.sonlandirilan && j.sonlandirilan.length) alert('Sonlandırılan: ' + j.sonlandirilan.join(', '));
         };
 
+        // Betik kataloğu (Fazlar sekmesi)
+        const aiCls = { bulut_ucretli: 'bg-rose-500/20 text-rose-300', bulut_ucretsiz: 'bg-sky-500/20 text-sky-300', yerel_llm: 'bg-amber-500/20 text-amber-300', yerel_ml: 'bg-emerald-500/20 text-emerald-300', yok: 'bg-slate-700/60 text-slate-300' };
+        async function loadScripts() {
+            if (currentTab !== 'master' || document.hidden) return;
+            try {
+                const d = await (await origFetch('/api/master/scripts')).json();
+                $('sc-flags').textContent = `LLM: ${d.llm_backend} · bulut OCR: ${d.ocr_bulut ? 'açık' : 'kapalı'} · otomatik geçiş: ${d.otomatik_gecis ? 'açık' : 'kapalı'}`;
+                $('sc-rows').innerHTML = d.betikler.map(b => `<tr class="border-t border-slate-800">
+                    <td class="p-1.5 font-mono text-slate-300">${b.asama}</td>
+                    <td class="p-1.5"><div class="text-slate-100">${b.ad}</div><div class="text-[10px] text-slate-500 font-mono">${b.betik}${b.var ? '' : ' · (dosya yok)'}</div></td>
+                    <td class="p-1.5"><span class="px-1.5 py-0.5 rounded ${aiCls[b.ai]}" title="${(b.ai_hepsi || []).join(', ')}">${b.ai_etiket}</span></td>
+                    <td class="p-1.5">${b.calisiyor ? '<span class="text-amber-300">● çalışıyor</span>' : '<span class="text-slate-500">bekliyor</span>'}</td>
+                    <td class="p-1.5 font-mono text-slate-400">${b.son ? (b.son.bitis || '').replace('T', ' ').slice(5, 16) + (b.son.rc === 0 ? ' ✓' : ' ✗') : '—'}</td>
+                    <td class="p-1.5 text-right">${b.zincir_anahtari ? `<button class="px-2 py-0.5 rounded bg-indigo-600 hover:bg-indigo-500 text-white" onclick="scQueue('${b.zincir_anahtari}')">Kuyruğa ekle</button>` : '<span class="text-slate-600">elle</span>'}</td></tr>`).join('');
+            } catch (e) { $('sc-rows').innerHTML = `<tr><td class="p-2 text-rose-300" colspan="6">Katalog alınamadı: ${e}</td></tr>`; }
+        }
+        window.scQueue = async (key) => {
+            const r = await origFetch('/api/master/phase_action', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'enqueue', key }) });
+            alert(r.ok ? `${key} kuyruğa eklendi; zincir sıradaki boşlukta çalıştırır.` : 'Eklenemedi');
+            if (typeof updateMasterPhases === 'function') updateMasterPhases();
+        };
+        loadScripts(); setInterval(loadScripts, 15000);
+        const _sw2 = switchTab; switchTab = function (t) { _sw2(t); if (t === 'master') loadScripts(); };
+
         if (cfg.tab && cfg.tab !== 'overview' && document.getElementById('nav-btn-' + cfg.tab)) switchTab(cfg.tab);
     })();
     </script>
@@ -2912,6 +2946,99 @@ def resume_all_phases() -> dict:
     PHASE_PAUSE_FILE.unlink(missing_ok=True)
     subprocess.run(["systemctl", "--user", "start", "meds-pipeline"], capture_output=True)
     return {"durduruldu": False}
+
+
+# Tüm aşama/faz betiklerinin kataloğu: aşama numarası, AI türü (kaynak koddan otomatik), zincir anahtarı, çalışma durumu
+STAGE_ORDER = [
+    ("1", "Aşama 1 · Drive indirme", "scripts/pipeline/02-download.mjs"),
+    ("1", "Aşama 1 · Belge okuma (PDF/PPTX → metin)", "scripts/agents/read_document.py"),
+    ("1", "Aşama 1 · İndirme izleyici", "scripts/agents/watch_downloads.py"),
+    ("1", "Aşama 1 · Hatalı OCR yenileme", "scripts/agents/stage1_refresh.py"),
+    ("2", "Aşama 2 · Türkçe onarım + soru ayrıştırma", "scripts/agents/stage2_clean.py"),
+    ("3", "Aşama 3 · Birleştirme + RAG zenginleştirme", "scripts/agents/stage3_merge.py"),
+    ("4", "Aşama 4 · Veritabanı aktarımı", "scripts/agents/stage4_database.py"),
+    ("5", "Faz 5 · Çoklu AI konsensüs", "scripts/advanced_ai/multi_ai_consensus_phase5.py"),
+    ("6", "Faz 6 · Derin metadata", "scripts/advanced_ai/deep_metadata_generator_phase6.py"),
+    ("6", "Faz 6 doğrulama", "scripts/advanced_ai/validate_phase6_metadata.py"),
+    ("6.5", "Faz 6.5 · Terim sözlüğü + soru–slayt çapası", "scripts/advanced_ai/thesaurus_anchor_phase6_5.py"),
+    ("7", "Faz 7 v2 · Soru metadatası (elle)", "scripts/advanced_ai/phase7_question_metadata_v2.py"),
+    ("7.5", "Faz 7.5 · Müfredat slayt düzenleme", "scripts/advanced_ai/reconstruct_slides_phase7_5.py"),
+    ("8", "Faz 8 · Müfredat ağacı", "scripts/advanced_ai/phase8_curriculum_graph.py"),
+    ("8", "Kanıtlı sözlük", "scripts/advanced_ai/build_evidence_thesaurus.py"),
+    ("9", "Faz 9 · Sözlük destekli ağaç", "scripts/advanced_ai/phase9_thesaurus_graph.py"),
+    ("10", "Faz 10 · Kavram kimlikleri", "scripts/advanced_ai/phase10_concept_ids.py"),
+    ("11", "Faz 11 · Soru–slayt eşleşmesi", "scripts/advanced_ai/phase11_question_slide.py"),
+    ("11", "Öğren bağlantıları", "scripts/advanced_ai/learn_links.py"),
+    ("11", "Hakem kuyruğu", "scripts/advanced_ai/referee_queue.py"),
+    ("11", "Müfredat çözümleme (sınav başlığı)", "scripts/advanced_ai/curriculum_resolve.py"),
+    ("11", "Karantina", "scripts/advanced_ai/quarantine_questions.py"),
+    ("11", "Sınav çıktısı yeniden bölme", "scripts/advanced_ai/resplit_exam_printout.py"),
+    ("11", "Veritabanına yayın", "scripts/advanced_ai/publish_to_database.py"),
+    ("11", "Site analiz yayını", "scripts/advanced_ai/export_phase_insights.py"),
+    ("12", "Faz 12 · Ders notu temizleme", "scripts/advanced_ai/phase12_clean_notes.py"),
+    ("13", "Faz 13 · Tıbbi varlıklar", "scripts/advanced_ai/phase13_entities.py"),
+    ("13", "Ortak depo + RAG parçaları", "scripts/advanced_ai/build_unified_store.py"),
+    ("14", "Faz 14 · Bulut soru düzeltme", "scripts/advanced_ai/phase14_cloud_question_editor.py"),
+    ("14", "Faz 14 · Yerel soru düzeltme (eski)", "scripts/advanced_ai/phase14_past_question_editor.py"),
+    ("–", "Müfredat bilgi paketi", "scripts/advanced_ai/curriculum_package.py"),
+]
+_AI_MARKERS = [
+    ("bulut_ucretli", ("PHASE14_PAID_GEMINI_KEY",)),
+    ("bulut_ucretsiz", ("cloud_llm", "generativelanguage.googleapis.com", "api.groq.com", "lib.chat(", "openrouter.ai", "callMuseSpark")),
+    ("yerel_llm", ("11434", "/api/chat", "ollama")),
+    ("yerel_ml", ("sentence_transformers", "SentenceTransformer", "gliner", "pytesseract", "tesseract", "CrossEncoder", "stanza", "docling")),
+]
+_AI_LABEL = {"bulut_ucretli": "Bulut · ÜCRETLİ (yalnız Faz 14)", "bulut_ucretsiz": "Bulut · ücretsiz", "yerel_llm": "Yerel LLM (Ollama)",
+             "yerel_ml": "Yerel ML (CPU)", "yok": "AI yok"}
+
+
+def script_catalog() -> dict:
+    scripts = str(MEDS_DIR / "scripts" / "agents")
+    if scripts not in sys.path:
+        sys.path.insert(0, scripts)
+    try:
+        import importlib
+        import phase_cycle as PC
+        importlib.reload(PC)
+        step_by_script = {Path(c[1]).name: k for k, _, c, _ in PC.STEPS}
+    except Exception:
+        step_by_script = {}
+    running = set()
+    for d in Path("/proc").iterdir():
+        if d.name.isdigit():
+            try:
+                cmd = (d / "cmdline").read_bytes().replace(b"\0", b" ").decode("utf-8", "replace")
+            except Exception:
+                continue
+            for _, _, rel in STAGE_ORDER:
+                if rel.split("/")[-1] in cmd and ("python" in cmd or "node" in cmd):
+                    running.add(rel)
+    try:
+        st = json.loads(PHASE_CYCLE_STATE.read_text(encoding="utf-8"))
+    except Exception:
+        st = {}
+    out = []
+    env_backend = ""
+    for no, ad, rel in STAGE_ORDER:
+        f = MEDS_DIR / rel
+        src = f.read_text(encoding="utf-8", errors="ignore") if f.exists() else ""
+        kinds = [k for k, marks in _AI_MARKERS if any(m in src for m in marks)]
+        # lib.chat artık varsayılan bulut (ücretsiz); MEDS_LLM_BACKEND=local ise yerel
+        ana = kinds[0] if kinds else "yok"
+        etiket = _AI_LABEL[ana]
+        # Ayara bağlı betikler: koddaki isteğe bağlı bulut yolu kapalıysa gerçek durum gösterilir
+        name = Path(rel).name
+        if name in ("read_document.py", "watch_downloads.py", "stage1_refresh.py") and os.environ.get("MEDS_OCR_CLOUD", "0") != "1":
+            ana, etiket = "yerel_ml", "Yerel ML (Tesseract) · bulut OCR kapalı"
+        if name == "stage2_clean.py" and os.environ.get("MEDS_STAGE2_LLM") != "1":
+            ana, etiket = "yok", "AI yok · kural tabanlı ayrıştırma"
+        key = step_by_script.get(Path(rel).name)
+        son = (st.get("adimlar") or {}).get(key) if key else None
+        out.append({"asama": no, "ad": ad, "betik": rel, "var": f.exists(), "ai": ana, "ai_etiket": etiket,
+                    "ai_hepsi": [_AI_LABEL[k] for k in kinds], "zincir_anahtari": key, "calisiyor": rel in running,
+                    "son": son})
+    return {"betikler": out, "llm_backend": os.environ.get("MEDS_LLM_BACKEND", "cloud"),
+            "ocr_bulut": os.environ.get("MEDS_OCR_CLOUD", "0") == "1", "otomatik_gecis": os.environ.get("MEDS_PHASE_AUTO") == "1"}
 
 
 def phase_detail(key: str) -> dict:
@@ -3624,6 +3751,11 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.send_header("Content-Type", "application/json")
             self.end_headers()
             self.wfile.write(json.dumps(phase_detail(key), ensure_ascii=False).encode("utf-8"))
+        elif self.path == "/api/master/scripts":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(script_catalog(), ensure_ascii=False).encode("utf-8"))
         elif self.path == "/api/master/pause_state":
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
