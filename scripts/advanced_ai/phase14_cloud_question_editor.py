@@ -782,6 +782,13 @@ def _aciklamanin_cevabi(soru_koku: str, secenekler: dict, res: dict) -> str:
     return h if h in secenekler else ""
 
 
+def cevap_uyusmazligi(res: dict) -> bool:
+    """Çözücüler aynı şıkta birleşmedi mi? (en az bir oy farklıysa ya da cevap belirsizse) → "Cevap Belirsiz" kategorisi."""
+    d = (res or {}).get("cevap_dogrulama") or {}
+    oylar = {v for v in (d.get("oylar") or {}).values() if isinstance(v, str) and len(v) == 1}
+    return bool(res.get("cevap_belirsiz")) or len(oylar) > 1 or d.get("sonuc") == "belirsiz"
+
+
 def cevap_dogrula(soru: dict, res: dict) -> None:
     """Cevap ESKİ CEVAP ANAHTARI KULLANILMADAN belirlenir (kullanıcı kuralı): aynı ders kaynaklarını gören bağımsız
     çözücülerin çoğunluk oyu — (1) soruyu düzelten modelin şık analizinin gösterdiği şık, (2) gpt-oss-120b (kör),
@@ -950,6 +957,9 @@ def main() -> int:
                 "support_ratio": ratio,
                 "status": "review_required" if (ratio < 0.85 or ai_sonuc.get("review_required", True)) else "unchanged",
             }
+            if cevap_uyusmazligi(ai_sonuc):
+                record["status"] = "review_required"
+                record["answer_doubtful"] = True              # /test/cikmis → "Cevap Belirsiz" kategorisi (+ cevap anketi)
 
             out_reviews.write(json.dumps(record, ensure_ascii=False) + "\n")
             out_reviews.flush()
