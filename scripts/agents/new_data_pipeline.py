@@ -123,7 +123,13 @@ def pending_counts() -> dict:
         out["okunmamis_indirme"] = f"hesaplanamadı: {e}"
     t1 = {p.relative_to(TEMP / "temp1").with_suffix("") for p in (TEMP / "temp1").rglob("*.json")} if (TEMP / "temp1").exists() else set()
     t2 = {p.relative_to(TEMP / "temp2").with_suffix("") for p in (TEMP / "temp2").rglob("*.json")} if (TEMP / "temp2").exists() else set()
-    out["ayristirilmamis"] = len(t1 - t2)
+    # Aşama 2 kendi durum kaydına göre (bilerek atlanan "ders programı" gibi dosyalar bekleyen sayılmaz)
+    try:
+        s2 = json.loads((TEMP / "state" / "pipeline_state.json").read_text(encoding="utf-8")).get("stage2") or {}
+    except Exception:
+        s2 = {}
+    done2 = {k for k, v in s2.items() if isinstance(v, dict) and v.get("ok")}
+    out["ayristirilmamis"] = len({str(r) for r in t1} - {str(r) for r in t2} - done2)
     st = load_state()
     out["degisen_adim"] = [k for k, _n, _c, ins, _t, _l in STEPS if (st["adimlar"].get(k) or {}).get("girdi") != fingerprint(ins)]
     return out
