@@ -5,6 +5,13 @@ import path from 'path';
 import { GoogleGenAI } from '@google/genai';
 
 // Her model ailesi ve sağlayıcı için özelleştirilmiş zaman aşımı süreleri (milisaniye)
+/** .env'deki ücretsiz Gemini anahtar adları (GEMINI_FREE_KEY_2, _3, …), numara sırasıyla. */
+export function freeGeminiKeyNames(): string[] {
+  return Object.keys(process.env)
+    .filter((n) => /^GEMINI_FREE_KEY_\d+$/.test(n))
+    .sort((a, b) => Number(a.slice(16)) - Number(b.slice(16)));
+}
+
 export const MODEL_TIMEOUTS_MS: Record<string, number> = {
   // Yerel GPU Modelleri (RTX 4060)
   'gemma3:4b': 45000,           // 45 saniye
@@ -130,8 +137,8 @@ export function getFreeGeminiKeys(customKey?: string): KeyInfo[] {
   add(customKey, 'Kullanıcı Özel Anahtarı');
   // 2-4. Free tier keys from .env
   add(process.env.GEMINI_API_KEY, 'Ücretsiz Plan 1 (Gemini)');
-  add(process.env.GEMINI_FREE_KEY_2, 'Ücretsiz Plan 2 (Gemini)');
-  add(process.env.GEMINI_FREE_KEY_3, 'Ücretsiz Plan 3 (Gemini)');
+  // GEMINI_FREE_KEY_2, _3, … (.env'e eklenen tüm ücretsiz anahtarlar)
+  for (const n of freeGeminiKeyNames()) add(process.env[n], `Ücretsiz Plan ${n.slice(16)} (Gemini)`);
   // GEMINI_BACKUP_KEY ücretliydi: yalnız Faz 14 kullanır (PHASE14_PAID_GEMINI_KEY), site kullanmaz
 
   return list;

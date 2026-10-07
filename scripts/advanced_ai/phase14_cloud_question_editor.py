@@ -55,8 +55,7 @@ API_PASSWORD = os.environ.get("MEDSORU_API_PASSWORD", "12345678")
 # Gemini API Anahtarları (GEMINI_API_KEY, GEMINI_FREE_KEY_2, GEMINI_BACKUP_KEY)
 GEMINI_KEYS = [
     os.environ.get("GEMINI_API_KEY", "").strip(),
-    os.environ.get("GEMINI_FREE_KEY_2", "").strip(),
-    os.environ.get("GEMINI_FREE_KEY_3", "").strip(),
+    *[os.environ.get(n, "").strip() for n in sorted((n for n in os.environ if n.startswith("GEMINI_FREE_KEY_") and n[16:].isdigit()), key=lambda n: int(n[16:]))],
     os.environ.get("GEMINI_FALLBACK_KEY", "").strip(),
 ]
 GEMINI_KEYS = [k for k in list(dict.fromkeys(GEMINI_KEYS)) if k and not k.startswith("BURAYA_") and not k.startswith("MY_")]
@@ -225,7 +224,7 @@ def load_curriculum_summary() -> str:
 def _key_tiers() -> list[tuple[str, str, bool]]:
     """(etiket, anahtar, ücretli_mi) — önce ücretsizler, en son ücretli (yalnız Faz 14)."""
     tiers = []
-    for name in ("GEMINI_API_KEY", "GEMINI_FREE_KEY_2", "GEMINI_FREE_KEY_3", "GEMINI_FALLBACK_KEY"):
+    for name in ("GEMINI_API_KEY", *[f"GEMINI_FREE_KEY_{i}" for i in range(2, 51)], "GEMINI_FALLBACK_KEY"):
         v = os.environ.get(name, "").strip()
         if not v:
             try:
