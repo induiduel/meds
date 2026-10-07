@@ -249,8 +249,71 @@ def wait_for_gpu_safety(max_util: int = 92, max_temp: int = 89, max_wait_sec: in
             break
 
 
+# ---- Bulut LLM (Muse Spark / OpenRouter, OpenAI uyumlu) ------------------------------------------------------
+# MEDS_LLM_BACKEND: local (varsayılan) | cloud | auto
+#   cloud: yalnız bulut; başarısızsa hata (MEDS_LLM_LOCAL_FALLBACK=1 ise yerel modele düşer)
+#   auto : önce bulut, olmazsa yerel
+# Anahtar/adres: MUSE_SPARK_API_KEY, MUSE_SPARK_BASE_URL (varsayılan OpenRouter). Model: MEDS_CLOUD_MODEL.
+CLOUD_MODEL_DEFAULT = "meta/muse-spark-1.3-contributor"
+
+
+def _env(key: str, default: str = "") -> str:
+    v = os.environ.get(key)
+    if v is not None:
+        return v
+    envf = Path(__file__).resolve().parents[2] / ".env"
+    try:
+        for line in envf.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line.startswith(key + "="):
+                return line.split("=", 1)[1].split(" #")[0].strip().strip('"').strip("'")
+    except Exception:
+        pass
+    return default
+
+
+def llm_backend() -> str:
+    return _env("MEDS_LLM_BACKEND", "local").lower()
+
+
+def cloud_chat(prompt: str, system: str | None = None, as_json: bool = False, timeout: int = 120,
+               num_predict: int = 2048, model: str | None = None):
+    import requests
+    key = _env("MUSE_SPARK_API_KEY") or _env("OPENROUTER_API_KEY")
+    if not key:
+        raise RuntimeError("bulut LLM anahtarı yok (MUSE_SPARK_API_KEY)")
+    base = (_env("MUSE_SPARK_BASE_URL") or "https://openrouter.ai/api/v1").rstrip("/")
+    mdl = model or _env("MEDS_CLOUD_MODEL", CLOUD_MODEL_DEFAULT)
+    msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": prompt}]
+    body = {"model": mdl, "messages": msgs, "temperature": 0, "max_tokens": num_predict}
+    if as_json:
+        body["response_format"] = {"type": "json_object"}
+    r = requests.post(f"{base}/chat/completions", json=body, timeout=timeout,
+                      headers={"Authorization": f"Bearer {key}", "User-Agent": "MedSor/1.0"})
+    if r.status_code >= 400:
+        raise RuntimeError(f"bulut LLM {r.status_code}: {r.text[:200]}")
+    out = (r.json()["choices"][0]["message"].get("content") or "").strip()
+    if not as_json:
+        return out
+    out = re.sub(r"^```(?:json)?\s*|\s*```$", "", out).strip()
+    return json.loads(out)
+
+
 def chat(model: str, prompt: str, system: str | None = None, as_json: bool = False, timeout: int = 120,
          num_predict: int = 2048, retries: int = 1, num_ctx: int = 8192, num_gpu: int | None = None):
+    backend = llm_backend()
+    if backend in ("cloud", "auto"):
+        try:
+            return cloud_chat(prompt, system=system, as_json=as_json, timeout=timeout, num_predict=num_predict)
+        except Exception as e:  # noqa: BLE001
+            if backend == "cloud" and _env("MEDS_LLM_LOCAL_FALLBACK") != "1":
+                raise RuntimeError(f"bulut LLM başarısız: {e}")
+    return chat_local(model, prompt, system=system, as_json=as_json, timeout=timeout, num_predict=num_predict,
+                      retries=retries, num_ctx=num_ctx, num_gpu=num_gpu)
+
+
+def chat_local(model: str, prompt: str, system: str | None = None, as_json: bool = False, timeout: int = 120,
+               num_predict: int = 2048, retries: int = 1, num_ctx: int = 8192, num_gpu: int | None = None):
     """Yerel model çağrısı.
     Kural: Gemma aktif olarak çalışıyorsa diğer modeller %90 CPU / %10 GPU (num_gpu=3) ile çalışır.
     Gemma çalışmıyorsa diğer tüm modeller tam GPU hızında serbestçe çalışır.
