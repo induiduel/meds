@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import logging
 import os
 import sys
@@ -111,8 +112,12 @@ MODEL_PRICING = {  # USD / token (Google Gemini; flash-lite en ucuz)
 # 100 TL/ay) record_usage/paid_allowed ile aynen korunur.
 # Ücretsiz Flash kotası günde model başına yalnız 20 istek → kota bitince Flash-Lite yedek. Lite'ın cevap değişikliği
 # cevap_dogrula'da ancak güçlü bağımsız model (gpt-oss) + açıklama aynı şıkta birleşirse kabul edilir.
-PAID_MODELS = ["gemini-flash-latest", "gemini-3.5-flash", "gemini-flash-lite-latest"]
-FREE_MODELS = ["gemini-flash-latest", "gemini-3.5-flash", "gemini-flash-lite-latest", "gemini-3.5-flash-lite"]
+# Flash-Lite Faz 14'te HİÇ kullanılmaz (2026-10-07 testleri: çelişkili şık analizi, yanlış cevap). Güçlü model kotası
+# bitince Faz 14 durur (QuotaExhausted) ve kota yenilenince kaldığı yerden sürer.
+PAID_MODELS = ["gemini-flash-latest", "gemini-3.5-flash"]
+FREE_MODELS = ["gemini-flash-latest", "gemini-3.5-flash"]
+STRONG_GEMINI = ["gemini-flash-latest", "gemini-3.5-flash"]       # düşünen modeller: cevap oyu sayılır
+WEAK_GEMINI: list[str] = []                                    # Lite kullanılmaz (bkz. FREE_MODELS notu)
 STRONG_VERIFIER = "gpt-oss"                                    # cevap DEĞİŞİKLİĞİNİ yalnız bu doğrulayıcı onaylayabilir
 # Bağımsız cevap doğrulayıcı (farklı model ailesi, ücretsiz Groq): soruyu kayıtlı cevabı görmeden çözer
 VERIFY_MODELS = ["groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b"]
@@ -262,29 +267,38 @@ def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | No
         payload["systemInstruction"] = {"parts": [{"text": system_text}]}
     data_bytes = json.dumps(payload).encode("utf-8")
 
+    # Sıra MODEL önceliğine göre: güçlü (düşünen) Flash önce BÜTÜN ücretsiz anahtarlarda denenir, sonra (izinliyse)
+    # ücretli anahtarda; Flash-Lite yalnız hiçbir Flash kalmadıysa. (Eski sıra anahtar-önce idi: 1. anahtarın Flash'ı
+    # bitince diğer anahtarlardaki Flash denenmeden Lite'a düşülüyordu.)
+    tiers = _key_tiers()
+    free = [(lb, k, pd) for lb, k, pd in tiers if not pd]
+    paid_t = [(lb, k, pd) for lb, k, pd in tiers if pd] if ALLOW_PAID else []
+    order = []
+    for grup in (STRONG_GEMINI, WEAK_GEMINI):
+        order += [(m, t) for m in grup for t in free] + [(m, t) for m in grup for t in paid_t]
     tried_any = False
-    for label, key, paid in _key_tiers():
-        if paid and not ALLOW_PAID:
-            continue                                         # otomatik/ücretsiz kip: ücretli asla
-        if paid:
-            ok, why = paid_allowed()
-            if not ok:
-                logging.warning(f"[API] {label} kullanılmadı: {why}")
-                continue
-        for model in (PAID_MODELS if paid else FREE_MODELS):
+    for gecis in range(2):                                   # 2. geçiş: dakikalık sınırlar için kısa bekleme sonrası
+        gecici = False
+        for model, (label, key, paid) in order:
             if (label, model) in _daily_exhausted:
                 continue
-            tried_any = True
-            for _deneme in range(3):                         # 429/503/zaman aşımı: aynı modelle bekleyip yeniden dene
-                r = _tek_istek(label, key, paid, model, data_bytes, prompt_text)
-                if r == "tekrar":
-                    time.sleep(20 * (_deneme + 1))
+            if paid:
+                ok, why = paid_allowed()
+                if not ok:
+                    logging.warning(f"[API] {label} kullanılmadı: {why}")
                     continue
-                break
-            if r in ("tekrar", "gec", "gunluk"):
+            tried_any = True
+            r = _tek_istek(label, key, paid, model, data_bytes, prompt_text)
+            if r == "tekrar":
+                gecici = True
+                continue
+            if r in ("gec", "gunluk"):
                 continue
             return r
-    free_left = [1 for lb, _k, pd in _key_tiers() if not pd for m in FREE_MODELS if (lb, m) not in _daily_exhausted]
+        if not gecici:
+            break
+        time.sleep(30)
+    free_left = [1 for lb, _k, pd in tiers if not pd for m in FREE_MODELS if (lb, m) not in _daily_exhausted]
     if not free_left and not ALLOW_PAID:
         raise QuotaExhausted("ücretsiz günlük kotalar doldu")
     if not tried_any:
@@ -438,6 +452,7 @@ def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> tuple[dict | N
             res["aciklama"] = "\n".join(f"• {m}" for m in maddeler)   # site bu satırları madde olarak gösterir
         res.setdefault("review_required", True)
         anlam_koru(soru, res)
+        res["_zayif_model"] = any(model.startswith(w) for w in WEAK_GEMINI)
         cevap_dogrula(soru, res)
         gercek_degisiklikleri_yaz(soru, res)
         res["kaynaklar"] = [{k: c.get(k) for k in ("id", "title", "document_type", "page_number", "similarity")}
@@ -452,6 +467,10 @@ GROUNDING_TYPES = ["lecture_slide", "summary", "transcript"]        # ders mater
 def kaynaklari_bul(kok: str, secenekler: dict, n: int = 6) -> list[dict]:
     """Soruya anlamca en yakın ders materyali parçaları: yerel embed servisi (e5) + yerel Supabase match_rag_chunks_e5.
     Servis/DB yoksa boş liste (Faz 14 kaynaksız devam eder)."""
+    # VARSAYILAN KAPALI: e5-small vektör araması bu sorularda ilgisiz slaytlar getirdi (travma sorusuna hemoglobinopati)
+    # ve doğrulayıcıyı yanılttı (2026-10-07 testi). Açmak: PHASE14_KAYNAK=1
+    if os.environ.get("PHASE14_KAYNAK") != "1":
+        return []
     q = (kok + " " + " ".join(str(v) for v in (secenekler or {}).values() if v))[:1500]
     url = (os.environ.get("LOCAL_SUPABASE_URL") or os.environ.get("SUPABASE_URL") or "http://127.0.0.1:8000").rstrip("/")
     key = os.environ.get("LOCAL_SUPABASE_KEY") or os.environ.get("SUPABASE_SECRET_KEY") or ""
@@ -462,20 +481,75 @@ def kaynaklari_bul(kok: str, secenekler: dict, n: int = 6) -> list[dict]:
                                      data=json.dumps({"texts": [q], "kind": "query"}).encode(), method="POST",
                                      headers={"Content-Type": "application/json"})
         vec = json.loads(urllib.request.urlopen(req, timeout=20).read())["vectors"][0]
-        body = {"query_embedding": "[" + ",".join(f"{x:.6f}" for x in vec) + "]", "match_count": n,
+        body = {"query_embedding": "[" + ",".join(f"{x:.6f}" for x in vec) + "]", "match_count": 60,
                 "filter_types": GROUNDING_TYPES, "filter_committee": None}
         req = urllib.request.Request(url + "/rest/v1/rpc/match_rag_chunks_e5", data=json.dumps(body).encode(), method="POST",
                                      headers={"Content-Type": "application/json", "apikey": key, "Authorization": f"Bearer {key}"})
         rows = json.loads(urllib.request.urlopen(req, timeout=20).read())
-        return [r for r in rows if (r.get("similarity") or 0) >= 0.80][:n]
+        dokum = sinav_dokumu_belgeleri()
+        temiz = [r for r in rows if (r.get("similarity") or 0) >= 0.80 and str(r.get("document_id")) not in dokum
+                 and not sinav_sayfasi_mi(str(r.get("content") or ""))]
+        return temiz[:n]
     except Exception as e:  # noqa: BLE001
         logging.warning(f"[KAYNAK] ders materyali alınamadı: {e}")
         return []
 
 
+def sinav_sayfasi_mi(t: str) -> bool:
+    """ragService.isExamLikePage'in Python eşi: sayfa çıkmış soru/cevap anahtarı gibi mi?"""
+    import re
+    if re.search(r"Sıra\s*No\s*Cevap|Cevabınız", t, re.I):
+        return True
+    q = len(re.findall(r"hangisi(dir)?|hangileri|aşağıdakilerden|nedir\s*\?|\?\s*$", t, re.I | re.M))
+    opts = len(re.findall(r"(^|\s)[a-eA-E]\s*[).]\s+\S", t, re.M))
+    ans = len(re.findall(r"cevap\s*[:=]|doğru cevap", t, re.I))
+    num = len(re.findall(r"(^|\s)\d{1,3}\s*[-.)]\s*[^?]{5,120}\?", t))
+    return (q >= 2 and opts >= 4) or q >= 3 or ans >= 2 or num >= 2
+
+
+_DOKUM: set | None = None
+
+
+def sinav_dokumu_belgeleri() -> set:
+    """Sayfalarının yarısından fazlası soru olan 'ders notları' (çıkmış soru PDF'leri, combinepdf vb.) — ders materyali
+    sayılmaz (ragService.getExamDumpNoteIds ile aynı ölçüt). data/local_rag_chunks.json'dan bir kez hesaplanır, önbelleklenir."""
+    global _DOKUM
+    if _DOKUM is not None:
+        return _DOKUM
+    src = ROOT / "data" / "local_rag_chunks.json"
+    cache = ROOT.parent / "meds_temp" / "state" / "sinav_dokumu_belgeleri.json"
+    try:
+        mt = src.stat().st_mtime
+        if cache.exists():
+            c = json.loads(cache.read_text(encoding="utf-8"))
+            if c.get("mtime") == mt:
+                _DOKUM = set(c["ids"])
+                return _DOKUM
+        d = json.loads(src.read_text(encoding="utf-8"))
+        rows = d if isinstance(d, list) else d.get("chunks", [])
+        say: dict[str, list[int]] = {}
+        for r in rows:
+            if r.get("documentType") != "lecture_slide":
+                continue
+            t = str(r.get("content") or "")
+            if len(re.sub(r"[^a-zA-ZçğıöşüÇĞİÖŞÜ]", "", t)) < 40:
+                continue
+            v = say.setdefault(str(r.get("documentId")), [0, 0])
+            v[0] += 1
+            v[1] += sinav_sayfasi_mi(t)
+        _DOKUM = {k for k, (n, e) in say.items() if e / n >= 0.5}
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_text(json.dumps({"mtime": mt, "ids": sorted(_DOKUM)}), encoding="utf-8")
+        logging.info(f"[KAYNAK] sınav dökümü belge sayısı: {len(_DOKUM)} (ders materyalinden çıkarıldı)")
+    except Exception as e:  # noqa: BLE001
+        logging.warning(f"[KAYNAK] sınav dökümü listesi hesaplanamadı: {e}")
+        _DOKUM = set()
+    return _DOKUM
+
+
 def kaynak_metni(kaynaklar: list[dict]) -> str:
     if not kaynaklar:
-        return "DERS KAYNAKLARI: (bulunamadı — standart tıp bilgisiyle çöz, emin değilsen cevap_emin=false)\n"
+        return ""
     parcalar = [f"[{i}] {c.get('title') or ''}{' s.' + str(c['page_number']) if c.get('page_number') else ''}\n"
                 f"{' '.join(str(c.get('content') or '').split())[:700]}" for i, c in enumerate(kaynaklar, 1)]
     return "DERS KAYNAKLARI (fakülte ders materyalinden, soruyla anlamca en yakın parçalar):\n" + "\n\n".join(parcalar) + "\n"
@@ -553,7 +627,8 @@ def anlam_koru(soru: dict, res: dict) -> None:
                 kel = lambda t: {w for w in _re.findall(r"[a-zçğıöşü]{4,}", t.lower())}
                 dusen = kel(ov) - kel(yv)
                 # birleşik yazım düzeltmesi (entübasyondakrikoid → krikoid) değil, gerçek bir kelime düştüyse
-                gercek = [w for w in dusen if not any(w in x or x in w for x in kel(yv))]
+                gercek = [w for w in dusen if not any(w in x or x in w or difflib.SequenceMatcher(None, w, x).ratio() >= 0.7
+                                                      for x in kel(yv))]   # OCR düzeltmesi (özyolojik→fizyolojik) sayılmaz
                 if gercek:
                     notlar.append(f"{k} şıkkında anlam değişmiş olabilir (çıkarılan: {', '.join(sorted(gercek))}) → özgün şık korundu")
                     ysec[k] = ov
@@ -696,9 +771,12 @@ def cevap_dogrula(soru: dict, res: dict) -> None:
     if ac_harf and oneri and ac_harf != oneri:
         logging.info(f"[DOĞRULAMA] modelin şık analizi/açıklaması {ac_harf}, işaretlediği {oneri} → model oyu {ac_harf} sayılır")
     model_oyu = ac_harf or oneri                               # modelin gerekçesinin gösterdiği şık esas alınır
+    zayif = res.pop("_zayif_model", False)
+    if zayif:
+        model_oyu = ""                                         # Flash-Lite cevabı oy sayılmaz (düşünmeden seçer)
     harf, vmodel = _bagimsiz_cevap(kok, sec, kay)
     coklu = _bagimsiz_cevap.son_coklu
-    oylar = {"duzelten_model": model_oyu, "gpt_oss": harf}
+    oylar = {"duzelten_model": model_oyu or ("(Lite, sayılmadı)" if zayif else ""), "gpt_oss": harf}
     d = {"eski_anahtar": eski, "oneri": oneri, "dogrulayici": harf, "dogrulayici_model": vmodel,
          "aciklama_gosterdigi": ac_harf, "kaynak_sayisi": len(kay or [])}
     if not (model_oyu and harf and model_oyu == harf):
@@ -709,14 +787,14 @@ def cevap_dogrula(soru: dict, res: dict) -> None:
         coklu = coklu or _bagimsiz_cevap.son_coklu
     sayim: dict[str, int] = {}
     for v in oylar.values():
-        if v:
+        if v and len(v) == 1:
             sayim[v] = sayim.get(v, 0) + 1
     kazanan = max(sayim, key=sayim.get) if sayim else ""
     d["oylar"] = oylar
     if kazanan and sayim[kazanan] >= 2:
         res["dogru_secenek"] = kazanan
         res["cevap_belirsiz"] = False
-        res["cevap_emin"] = sayim[kazanan] == len([v for v in oylar.values() if v]) and not coklu
+        res["cevap_emin"] = sayim[kazanan] == len([v for v in oylar.values() if v and len(v) == 1]) and not coklu
         d["sonuc"] = "oybirligi" if res["cevap_emin"] else "cogunluk"
     else:
         res["dogru_secenek"] = ""                               # çözücüler uzlaşamadı: cevap işaretlenmez
