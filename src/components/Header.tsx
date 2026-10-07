@@ -89,12 +89,13 @@ export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'leaderboard', label: 'Sıralama', icon: Trophy },
   { id: 'summaries', label: 'Ders özetleri', icon: BookOpen },
   { id: 'matrix', label: 'Soru haritası', icon: LayoutGrid },
+  { id: 'ornek_sorular', label: 'Örnek sorular', icon: Sparkles },
 ];
 
 /** How many NAV entries the desktop bar may show before folding the rest into "Daha". */
 const NAV_PRIMARY = 9;
 /** v3: dört ana yer önde, gerisi "Daha" menüsünde. */
-const V3_ORDER: AppTab[] = ['quick_add', 'ai_chat', 'learn', 'study', 'questions', 'past_exams', 'glossary', 'flashcards', 'summaries', 'leaderboard', 'matrix'];
+const V3_ORDER: AppTab[] = ['quick_add', 'ai_chat', 'learn', 'study', 'questions', 'past_exams', 'ornek_sorular', 'glossary', 'flashcards', 'summaries', 'leaderboard', 'matrix'];
 
 export const BrandMark: React.FC<{ size?: number }> = ({ size = 34 }) => (
   <span

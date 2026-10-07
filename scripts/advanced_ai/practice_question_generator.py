@@ -45,8 +45,22 @@ RAG = DB / "ortak" / "rag" / "ders_materyali.jsonl"
 SOURCES = DB / "sources"
 PAST = ROOT / "data" / "pastQuestions.json"
 LOG = ROOT.parent / "meds_temp" / "logs" / "ornek_soru.log"
-SOURCE_ROOT = "drive_root/"          # yalnız bu Drive klasöründen gelen ders notları
-SIM_MAX = 0.55
+# Panel ayarları (localhost:8085 → Örnek soru ayarları): meds_temp/state/ornek_soru_ayarlari.json
+SETTINGS = ROOT.parent / "meds_temp" / "state" / "ornek_soru_ayarlari.json"
+DEFAULTS = {"kaynak_kokleri": ["drive_root/"], "baslangic_kurul": 1, "kurullar": [1, 2, 3, 4, 5, 6], "konu_hedef": 10,
+            "gunluk": 10, "parti": 5, "benzerlik_esigi": 0.55, "model": "ucretsiz_sonra_yerel"}
+
+
+def settings() -> dict:
+    try:
+        return {**DEFAULTS, **json.loads(SETTINGS.read_text(encoding="utf-8"))}
+    except Exception:
+        return dict(DEFAULTS)
+
+
+CFG = settings()
+SOURCE_ROOTS = tuple(CFG["kaynak_kokleri"]) or ("drive_root/",)   # yalnız bu Drive klasörlerinden gelen ders notları
+SIM_MAX = float(CFG["benzerlik_esigi"])
 
 
 def log(m: str):
@@ -80,7 +94,7 @@ def load_sources() -> dict[str, dict]:
             s = json.loads(f.read_text(encoding="utf-8"))
         except Exception:
             continue
-        if str(s.get("path", "")).startswith(SOURCE_ROOT) and s.get("doc_type") in (None, "lecture_slide", "summary"):
+        if str(s.get("path", "")).startswith(SOURCE_ROOTS) and s.get("doc_type") in (None, "lecture_slide", "summary"):
             out[s["source_id"]] = s
     return out
 
@@ -197,9 +211,10 @@ Bu konu için {n} adet soru üret. JSON şeması:
 
 def llm(prompt: str) -> tuple[dict | None, str]:
     """Yalnız ücretsiz bulut; olmazsa yerel Ollama. Ücretli anahtar hiç denenmez."""
-    res = cloud_llm.chat(prompt, system=SYSTEM, as_json=True, max_tokens=6000, temperature=0.4, log=log)
-    if isinstance(res, dict):
-        return res, f"{cloud_llm.last_model.get('ad')} (ücretsiz)"
+    if CFG["model"] != "yalniz_yerel":
+        res = cloud_llm.chat(prompt, system=SYSTEM, as_json=True, max_tokens=6000, temperature=0.4, log=log)
+        if isinstance(res, dict):
+            return res, f"{cloud_llm.last_model.get('ad')} (ücretsiz)"
     try:
         import lib
         if lib.ollama_up():
@@ -255,10 +270,10 @@ def validate(q: dict, chunks_by_id: dict, past_stems: list[set], made_stems: lis
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--kurul", type=int, default=1, help="başlangıç kurulu (varsayılan 1)")
-    ap.add_argument("--gunluk", type=int, default=int(os.environ.get("PRACTICE_DAILY_MAX", "10")))
-    ap.add_argument("--konu-hedef", type=int, default=10)
-    ap.add_argument("--parti", type=int, default=5, help="tek istekte üretilecek soru")
+    ap.add_argument("--kurul", type=int, default=int(CFG["baslangic_kurul"]), help="başlangıç kurulu")
+    ap.add_argument("--gunluk", type=int, default=int(os.environ.get("PRACTICE_DAILY_MAX") or CFG["gunluk"]))
+    ap.add_argument("--konu-hedef", type=int, default=int(CFG["konu_hedef"]))
+    ap.add_argument("--parti", type=int, default=int(CFG["parti"]), help="tek istekte üretilecek soru")
     ap.add_argument("--dry", action="store_true", help="kaydetmeden üret ve göster")
     a = ap.parse_args()
 
@@ -282,7 +297,7 @@ def main() -> int:
 
     rep = {"zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), "uretilen": 0, "reddedilen": {}, "konular": []}
     for k in sorted(pkg["kurullar"], key=lambda x: x["kurul"]):
-        if k["kurul"] < a.kurul:
+        if k["kurul"] < a.kurul or k["kurul"] not in CFG["kurullar"]:
             continue
         for d in k["dersler"]:
             for konu in d["konular"]:

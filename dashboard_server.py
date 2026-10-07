@@ -940,10 +940,27 @@ HTML_PAGE = """<!DOCTYPE html>
                     <label class="flex items-center gap-1.5"><input type="checkbox" id="ig-ocr"> Bulut OCR (ücretsiz Gemini)</label>
                     <label class="flex items-center gap-1.5">Aşama 2 düzeltme
                         <select id="ig-llm" class="bg-slate-900 border border-slate-700 rounded px-1 py-0.5"><option value="kapali">Kapalı (kural tabanlı)</option><option value="ucretsiz_bulut">Ücretsiz bulut</option><option value="yerel">Yerel (Ollama)</option></select></label>
-                    <label class="flex items-center gap-1.5">Günlük örnek soru
-                        <input id="ig-daily" type="number" min="1" max="100" class="w-16 bg-slate-900 border border-slate-700 rounded px-1 py-0.5"></label>
                     <span id="ig-msg" class="text-slate-500"></span>
                 </div>
+                <div class="flex flex-wrap gap-3 text-xs text-slate-300 p-2 rounded-lg bg-slate-900 border border-slate-800">
+                    <label class="flex items-center gap-1.5" title="Yeni dosya indirilip okununca yeni veri hattı kendiliğinden kuyruğa girer"><input type="checkbox" id="au-auto"> Otomatik geçiş (yeni dosya → yeni veri hattı)</label>
+                    <label class="flex items-center gap-1.5" title="Tüm fazları sırayla sürekli çalıştırır (ağır; eski davranış)"><input type="checkbox" id="au-full"> Tam tur (tüm fazlar)</label>
+                    <span id="nd-pending" class="text-slate-400"></span>
+                </div>
+                <details class="text-xs text-slate-300 p-2 rounded-lg bg-slate-900 border border-slate-800">
+                    <summary class="cursor-pointer font-semibold text-slate-200">Örnek soru ayarları <span id="ps-sum" class="font-normal text-slate-400"></span></summary>
+                    <form id="ps-form" class="grid gap-2 sm:grid-cols-2 lg:grid-cols-4 mt-2">
+                        <label class="flex flex-col gap-1">Kaynak Drive kökleri (virgülle)<input name="kaynak_kokleri" class="bg-slate-950 border border-slate-700 rounded px-1.5 py-1 font-mono"></label>
+                        <label class="flex flex-col gap-1">Kurullar (virgülle)<input name="kurullar" class="bg-slate-950 border border-slate-700 rounded px-1.5 py-1"></label>
+                        <label class="flex flex-col gap-1">Başlangıç kurulu<input name="baslangic_kurul" type="number" min="1" max="6" class="bg-slate-950 border border-slate-700 rounded px-1.5 py-1"></label>
+                        <label class="flex flex-col gap-1">Konu başına hedef<input name="konu_hedef" type="number" min="1" max="50" class="bg-slate-950 border border-slate-700 rounded px-1.5 py-1"></label>
+                        <label class="flex flex-col gap-1">Günlük en fazla<input name="gunluk" type="number" min="1" max="100" class="bg-slate-950 border border-slate-700 rounded px-1.5 py-1"></label>
+                        <label class="flex flex-col gap-1">İstek başına soru<input name="parti" type="number" min="1" max="10" class="bg-slate-950 border border-slate-700 rounded px-1.5 py-1"></label>
+                        <label class="flex flex-col gap-1">Çıkmışa benzerlik eşiği<input name="benzerlik_esigi" type="number" step="0.05" min="0.3" max="0.9" class="bg-slate-950 border border-slate-700 rounded px-1.5 py-1"></label>
+                        <label class="flex flex-col gap-1">Model<select name="model" class="bg-slate-950 border border-slate-700 rounded px-1.5 py-1"><option value="ucretsiz_sonra_yerel">Ücretsiz bulut, yoksa yerel</option><option value="yalniz_yerel">Yalnız yerel (Ollama)</option></select></label>
+                        <div class="sm:col-span-2 lg:col-span-4 flex items-center gap-2"><button class="px-3 py-1 rounded bg-indigo-600 hover:bg-indigo-500 text-white font-semibold">Kaydet</button><span id="ps-msg" class="text-slate-400"></span></div>
+                    </form>
+                </details>
                 <div id="ig-counts" class="text-xs text-slate-400"></div>
                 <div id="ig-steps" class="grid gap-2 md:grid-cols-3 text-xs"></div>
             </div>
@@ -2850,7 +2867,6 @@ HTML_PAGE = """<!DOCTYPE html>
                 const a = d.ayarlar;
                 if (document.activeElement !== $('ig-ocr')) $('ig-ocr').checked = !!a.bulut_ocr;
                 if (document.activeElement !== $('ig-llm')) $('ig-llm').value = a.asama2_llm;
-                if (document.activeElement !== $('ig-daily')) $('ig-daily').value = a.ornek_soru_gunluk;
                 const c = d.sayilar;
                 $('ig-counts').textContent = `İndirilen PDF/PPTX: ${c.indirilen_pdf_pptx} · okunan (temp1): ${c.okunan_temp1} · ayrıştırılan (temp2): ${c.ayristirilan_temp2} · örnek soru: ${c.ornek_soru}`;
                 $('ig-steps').innerHTML = Object.entries(d.adimlar).map(([k, v]) => `<div class="p-2 rounded-lg bg-slate-900 border border-slate-800 space-y-1">
@@ -2860,9 +2876,41 @@ HTML_PAGE = """<!DOCTYPE html>
             } catch (e) { $('ig-counts').textContent = 'Durum alınamadı: ' + e; }
         }
         window.igRun = async (k) => { const j = await igPost('/api/ingest/run', { adim: k }); $('ig-msg').textContent = j.error || `başlatıldı: ${j.baslik}`; loadIngest(); };
-        const igSave = async () => { const j = await igPost('/api/ingest/settings', { bulut_ocr: $('ig-ocr').checked, asama2_llm: $('ig-llm').value, ornek_soru_gunluk: $('ig-daily').value }); $('ig-msg').textContent = 'Ayar kaydedildi ✓'; };
-        $('ig-ocr').onchange = igSave; $('ig-llm').onchange = igSave; $('ig-daily').onchange = igSave;
+        const igSave = async () => { const j = await igPost('/api/ingest/settings', { bulut_ocr: $('ig-ocr').checked, asama2_llm: $('ig-llm').value}); $('ig-msg').textContent = 'Ayar kaydedildi ✓'; };
+        $('ig-ocr').onchange = igSave; $('ig-llm').onchange = igSave;
         loadIngest(); setInterval(loadIngest, 8000);
+
+        // Otomasyon, bekleyen veriler ve örnek soru ayarları
+        let psLoaded = false;
+        async function loadNewData() {
+            if (currentTab !== 'master' || document.hidden) return;
+            try {
+                const d = await (await origFetch('/api/newdata/status')).json();
+                if (document.activeElement !== $('au-auto')) $('au-auto').checked = !!(d.otomasyon || {}).otomatik_gecis;
+                if (document.activeElement !== $('au-full')) $('au-full').checked = !!(d.otomasyon || {}).tam_tur;
+                const b = d.bekleyen || {};
+                $('nd-pending').textContent = `Bekleyen: okunmamış indirme ${b.okunmamis_indirme ?? '-'} · ayrıştırılmamış ${b.ayristirilmamis ?? '-'} · girdisi değişen adım ${(b.degisen_adim || []).length ? b.degisen_adim.join(', ') : 'yok'}`;
+                const a = d.ornek_ayar || {}, od = d.ornek_durum || {};
+                $('ps-sum').textContent = `· kurul ${a.baslangic_kurul}'den · konu başına ${a.konu_hedef} · günde ${a.gunluk} · bugün ${od.bugun || 0} üretildi`;
+                if (!psLoaded) {
+                    const f = $('ps-form');
+                    f.kaynak_kokleri.value = (a.kaynak_kokleri || []).join(', '); f.kurullar.value = (a.kurullar || []).join(', ');
+                    for (const k of ['baslangic_kurul', 'konu_hedef', 'gunluk', 'parti', 'benzerlik_esigi', 'model']) f[k].value = a[k];
+                    psLoaded = true;
+                }
+            } catch (e) { $('nd-pending').textContent = 'Durum alınamadı: ' + e; }
+        }
+        const saveAuto = () => igPost('/api/automation', { otomatik_gecis: $('au-auto').checked, tam_tur: $('au-full').checked }).then(() => { $('ig-msg').textContent = 'Otomasyon kaydedildi ✓ (tam tur zincir yeniden yüklenince geçerli)'; });
+        $('au-auto').onchange = saveAuto; $('au-full').onchange = saveAuto;
+        $('ps-form').onsubmit = async (ev) => {
+            ev.preventDefault(); const f = ev.target;
+            const j = await igPost('/api/practice/settings', { kaynak_kokleri: f.kaynak_kokleri.value.split(','), kurullar: f.kurullar.value.split(',').map(x => x.trim()),
+                baslangic_kurul: f.baslangic_kurul.value, konu_hedef: f.konu_hedef.value, gunluk: f.gunluk.value, parti: f.parti.value,
+                benzerlik_esigi: f.benzerlik_esigi.value, model: f.model.value });
+            $('ps-msg').textContent = 'Kaydedildi ✓'; psLoaded = false; loadNewData();
+        };
+        loadNewData(); setInterval(loadNewData, 15000);
+        const _sw4 = switchTab; switchTab = function (t) { _sw4(t); if (t === 'master') loadNewData(); };
         const _sw3 = switchTab; switchTab = function (t) { _sw3(t); if (t === 'master') loadIngest(); };
         const _sw2 = switchTab; switchTab = function (t) { _sw2(t); if (t === 'master') loadScripts(); };
 
@@ -3082,17 +3130,78 @@ def script_catalog() -> dict:
 
 # ---- Ders notu alma ve işleme (Drive → okuma → ayrıştırma → veritabanı → örnek soru) ----------------------------
 INGEST_SETTINGS_FILE = TEMP_DIR / "state" / "ingest_settings.json"
-INGEST_DEFAULTS = {"bulut_ocr": False, "asama2_llm": "kapali", "ornek_soru_gunluk": 10}
+INGEST_DEFAULTS = {"bulut_ocr": False, "asama2_llm": "kapali", "ornek_soru_gunluk": 10, "drive_kokleri": ["drive_root"]}
 _VENV_PY = str(MEDS_DIR / ".venv-ocr" / "bin" / "python")
 INGEST_STEPS = {
-    "tara": ("Drive'ı tara ve indir", ["node", "scripts/pipeline/01-inventory.mjs"], ["node", "scripts/pipeline/02-download.mjs"]),
-    "oku": ("Yeni dosyaları oku (Aşama 1)", [_VENV_PY, "scripts/agents/read_document.py", str(PROJECT_ROOT / "meds_downloads")]),
+    "tara": ("Drive'ı tara ve indir (yalnız seçili klasör)", ["node", "scripts/pipeline/01-inventory.mjs"], ["node", "scripts/pipeline/02-download.mjs"]),
+    "oku": ("Yeni dosyaları oku (Aşama 1)", [_VENV_PY, "scripts/agents/read_document.py", str(PROJECT_ROOT / "meds_downloads" / "drive_root")]),
     "ayristir": ("Ayrıştır (Aşama 2)", [_VENV_PY, "scripts/agents/stage2_clean.py"]),
     "aktar": ("Veritabanına aktar (Aşama 3–4)", [_VENV_PY, "scripts/agents/pipeline_runner.py", "--sonraki"]),
     "temizle": ("Ders notu temizleme + ortak RAG (Faz 12 + ortak depo)", [_VENV_PY, "scripts/advanced_ai/phase12_clean_notes.py"],
                 [_VENV_PY, "scripts/advanced_ai/build_unified_store.py"]),
     "ornek_soru": ("Örnek soru üret (günlük sınırla)", [_VENV_PY, "scripts/advanced_ai/practice_question_generator.py"]),
+    "yeni_veri": ("Yeni verileri işle (yalnız değişen girdiler)", [_VENV_PY, "scripts/agents/new_data_pipeline.py", "--yeni"]),
+    "bekleyen": ("İşlenmemiş verileri bitir", [_VENV_PY, "scripts/agents/new_data_pipeline.py", "--bekleyen"]),
 }
+AUTOMATION_FILE = TEMP_DIR / "state" / "otomasyon.json"
+PRACTICE_FILE = TEMP_DIR / "state" / "ornek_soru_ayarlari.json"
+PRACTICE_DEFAULTS = {"kaynak_kokleri": ["drive_root/"], "baslangic_kurul": 1, "kurullar": [1, 2, 3, 4, 5, 6], "konu_hedef": 10,
+                     "gunluk": 10, "parti": 5, "benzerlik_esigi": 0.55, "model": "ucretsiz_sonra_yerel"}
+
+
+def _read_json(f: Path, default: dict) -> dict:
+    try:
+        return {**default, **json.loads(f.read_text(encoding="utf-8"))}
+    except Exception:
+        return dict(default)
+
+
+def _write_json(f: Path, d: dict):
+    f.parent.mkdir(parents=True, exist_ok=True)
+    tmp = f.with_suffix(".tmp")
+    tmp.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.replace(f)
+
+
+def save_automation(p: dict) -> dict:
+    cur = _read_json(AUTOMATION_FILE, {"otomatik_gecis": False, "tam_tur": False})
+    for k in ("otomatik_gecis", "tam_tur"):
+        if k in p:
+            cur[k] = bool(p[k])
+    _write_json(AUTOMATION_FILE, cur)
+    return cur
+
+
+def save_practice(p: dict) -> dict:
+    cur = _read_json(PRACTICE_FILE, PRACTICE_DEFAULTS)
+    if isinstance(p.get("kaynak_kokleri"), list):
+        cur["kaynak_kokleri"] = [str(x).strip().rstrip("/") + "/" for x in p["kaynak_kokleri"] if str(x).strip()][:10] or ["drive_root/"]
+    if isinstance(p.get("kurullar"), list):
+        cur["kurullar"] = sorted({int(x) for x in p["kurullar"] if str(x).isdigit() and 1 <= int(x) <= 6}) or [1]
+    for k, lo, hi in (("baslangic_kurul", 1, 6), ("konu_hedef", 1, 50), ("gunluk", 1, 100), ("parti", 1, 10)):
+        if str(p.get(k, "")).isdigit():
+            cur[k] = max(lo, min(hi, int(p[k])))
+    try:
+        if p.get("benzerlik_esigi") is not None:
+            cur["benzerlik_esigi"] = max(0.3, min(0.9, float(p["benzerlik_esigi"])))
+    except ValueError:
+        pass
+    if p.get("model") in ("ucretsiz_sonra_yerel", "yalniz_yerel"):
+        cur["model"] = p["model"]
+    _write_json(PRACTICE_FILE, cur)
+    return cur
+
+
+def newdata_status() -> dict:
+    try:
+        r = subprocess.run([_VENV_PY, str(MEDS_DIR / "scripts" / "agents" / "new_data_pipeline.py"), "--durum"],
+                           capture_output=True, text=True, timeout=60)
+        d = json.loads(r.stdout)
+    except Exception as e:  # noqa: BLE001
+        d = {"hata": str(e)}
+    pq = PROJECT_ROOT / "meds_database" / "derived" / "ornek_sorular" / "durum.json"
+    return {**d, "otomasyon": _read_json(AUTOMATION_FILE, {"otomatik_gecis": False, "tam_tur": False}),
+            "ornek_ayar": _read_json(PRACTICE_FILE, PRACTICE_DEFAULTS), "ornek_durum": _read_json(pq, {})}
 
 
 def ingest_settings() -> dict:
@@ -3132,8 +3241,8 @@ def run_ingest(step: str) -> dict:
         return {"error": "bu adım zaten çalışıyor"}
     title, *cmds = INGEST_STEPS[step]
     env = dict(os.environ)
-    if step == "ornek_soru":
-        env["PRACTICE_DAILY_MAX"] = str(ingest_settings()["ornek_soru_gunluk"])
+    # Yalnız seçili Drive kökleri (varsayılan: drive_root = kullanıcının verdiği klasör)
+    env["MEDS_DRIVE_ROOTS"] = ",".join(ingest_settings().get("drive_kokleri") or ["drive_root"])
     log_f = TEMP_DIR / "logs" / f"ingest_{step}.log"
     log_f.parent.mkdir(parents=True, exist_ok=True)
     script = " && ".join(" ".join(__import__("shlex").quote(a) for a in c) for c in cmds)
@@ -3871,6 +3980,11 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.send_header("Content-Type", "application/json")
             self.end_headers()
             self.wfile.write(json.dumps(phase_detail(key), ensure_ascii=False).encode("utf-8"))
+        elif self.path == "/api/newdata/status":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(newdata_status(), ensure_ascii=False).encode("utf-8"))
         elif self.path == "/api/ingest/status":
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
@@ -3928,6 +4042,13 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
         except Exception:
             payload = {}
 
+        if self.path in ("/api/automation", "/api/practice/settings"):
+            res = save_automation(payload) if self.path == "/api/automation" else save_practice(payload)
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(res, ensure_ascii=False).encode("utf-8"))
+            return
         if self.path in ("/api/ingest/settings", "/api/ingest/run"):
             res = save_ingest_settings(payload) if self.path.endswith("settings") else run_ingest(str(payload.get("adim") or ""))
             self.send_response(400 if isinstance(res, dict) and res.get("error") else 200)

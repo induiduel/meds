@@ -43,6 +43,7 @@ const PastExamsView = React.lazy(() => import('./components/PastExamsView').then
 const QuestionMatrix = React.lazy(() => import('./components/QuestionMatrix').then(m => ({ default: m.QuestionMatrix })));
 const LocalAiChatView = React.lazy(() => import('./components/LocalAiChatView').then(m => ({ default: m.LocalAiChatView })));
 const TestCikmisView = React.lazy(() => import('./components/TestCikmisView').then(m => ({ default: m.TestCikmisView })));
+const PracticeQuestionsView = React.lazy(() => import('./components/PracticeQuestionsView'));
 
 // Lazy-loaded Modals (Only downloaded when opened)
 const AdminPanelModal = React.lazy(() => import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal })));
@@ -1425,6 +1426,13 @@ export default function App() {
                 setActiveTab('learn');
               }}
             />
+          </Suspense>
+        )}
+
+        {/* TAB: /ornek-sorular — müfredata dayalı örnek çalışma soruları */}
+        {activeTab === 'ornek_sorular' && (
+          <Suspense fallback={<ViewFallback />}>
+            <PracticeQuestionsView />
           </Suspense>
         )}
 

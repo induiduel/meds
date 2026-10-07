@@ -12,6 +12,8 @@ ile paralel belge ve OCR işleme desteği içerir.
 from __future__ import annotations
 
 import argparse
+import os
+import json
 import concurrent.futures
 import sys
 import time
@@ -59,7 +61,31 @@ def scan(root: Path, seen: dict[Path, tuple[float, int]], vision: bool, docling:
                 print(f"✗ HATA {f.name}: {err}", file=sys.stderr)
             else:
                 done += 1
+    if done:
+        enqueue_new_data_if_auto()
     return done
+
+
+def enqueue_new_data_if_auto():
+    """Otomatik geçiş açıksa (panel: meds_temp/state/otomasyon.json) yeni veri hattını faz kuyruğuna ekle (bir kez)."""
+    import fcntl
+    temp = Path(os.environ.get("MEDS_TEMP_DIR") or Path(__file__).resolve().parents[3] / "meds_temp") / "state"
+    try:
+        if not json.loads((temp / "otomasyon.json").read_text(encoding="utf-8")).get("otomatik_gecis"):
+            return
+    except Exception:
+        return
+    qf = temp / "phase_queue.json"
+    with open(temp / "phase_queue.lock", "w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        try:
+            q = json.loads(qf.read_text(encoding="utf-8")) if qf.exists() else []
+        except Exception:
+            q = []
+        if "yeni_veri" not in q:
+            q.append("yeni_veri")
+            qf.write_text(json.dumps(q), encoding="utf-8")
+            print("otomatik geçiş: yeni veri hattı kuyruğa alındı", flush=True)
 
 
 def main():

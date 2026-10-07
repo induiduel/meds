@@ -343,10 +343,23 @@ def process_file(src: Path, out_root: Path = DEFAULT_TEMP1, rel_root: Path | Non
         return None
     base = out_base(src, out_root, rel_root.resolve() if rel_root else None)
     md_path, json_path = base.with_suffix(".md"), base.with_suffix(".json")
+    st_src = src.stat()
+    if json_path.exists() and not force:
+        # Hızlı yol: boyut + değişiklik zamanı aynıysa özet hesaplanmadan atlanır (yeniden işleme yok)
+        try:
+            prev = json.loads(json_path.read_text(encoding="utf-8"))
+            if prev.get("source_size") == st_src.st_size and prev.get("source_mtime") == int(st_src.st_mtime):
+                return json_path
+        except Exception:
+            pass
     digest = sha256_of(src)
     if json_path.exists() and not force:
         try:
-            if json.loads(json_path.read_text(encoding="utf-8")).get("source_sha256") == digest:
+            prev = json.loads(json_path.read_text(encoding="utf-8"))
+            if prev.get("source_sha256") == digest:
+                # boyut/zaman kaydedilir: sonraki çalıştırmalar özet hesaplamadan atlar
+                prev["source_size"], prev["source_mtime"] = st_src.st_size, int(st_src.st_mtime)
+                json_path.write_text(json.dumps(prev, ensure_ascii=False, indent=1), encoding="utf-8")
                 print(f"= atlandı (değişmemiş): {src.name}")
                 return json_path
         except Exception:
@@ -386,6 +399,8 @@ def process_file(src: Path, out_root: Path = DEFAULT_TEMP1, rel_root: Path | Non
                 "stage": "temp1",
                 "source": str(src),
                 "source_sha256": digest,
+                "source_size": st_src.st_size,
+                "source_mtime": int(st_src.st_mtime),
                 "type": kind,
                 "page_count": len(pages),
                 "empty_pages": empty,

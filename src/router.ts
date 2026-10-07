@@ -34,7 +34,8 @@ export type AppRoute =
   | 'admin'
   | 'manage'
   | 'search'
-  | 'test_cikmis';
+  | 'test_cikmis'
+  | 'ornek_sorular';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -46,6 +47,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   study: '/calis',
   practice: '/test',
   test_cikmis: '/test/cikmis',
+  ornek_sorular: '/ornek-sorular',
   leaderboard: '/siralama',
   notes: '/notlar',
   summaries: '/ozetler',
@@ -68,6 +70,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   study: 'Çalış',
   practice: 'Test çöz',
   test_cikmis: 'Test Edilen Çıkmış Sorular (Faz 14 İnceleme)',
+  ornek_sorular: 'Örnek sorular',
   leaderboard: 'Sıralama',
   notes: 'Ders notları',
   summaries: 'Ders özetleri',

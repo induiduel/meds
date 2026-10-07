@@ -34,7 +34,19 @@ def ollama_up():
         return False
 
 
+STAGE_LOCK = Path(os.environ.get("MEDS_TEMP_DIR") or Path(__file__).resolve().parents[3] / "meds_temp") / "state" / "asama_kilidi.lock"
+
+
 def run(stage, args=None):
+    """Aşama betiğini çalıştır; yeni veri hattıyla aynı anda aynı aşama işlenmesin diye ortak kilit."""
+    import fcntl
+    STAGE_LOCK.parent.mkdir(parents=True, exist_ok=True)
+    with open(STAGE_LOCK, "w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        return _run(stage, args)
+
+
+def _run(stage, args=None):
     t = time.time()
     env = dict(os.environ)
     jemalloc_path = Path("/usr/lib/x86_64-linux-gnu/libjemalloc.so.2")

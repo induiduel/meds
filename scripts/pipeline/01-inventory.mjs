@@ -1,6 +1,6 @@
 // Aşama 2: Drive envanteri (yalnızca metadata, dosya indirmez). Çıktı: meds_downloads/_manifest.json
 import fs from 'fs'; import path from 'path'; import crypto from 'crypto';
-import { DOWNLOADS_DIR, DRIVE_ROOTS } from './config.mjs';
+import { DOWNLOADS_DIR, DRIVE_ROOTS, SELECTED_ROOTS } from './config.mjs';
 const UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/122 Safari/537.36';
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const visited = new Set(); const items = [];
@@ -39,7 +39,15 @@ async function crawl(folderId, relPath, rootKey) {
   }
 }
 
-for (const r of DRIVE_ROOTS) { console.log('>>', r.name); await crawl(r.id, '', r.key); }
+// Yalnız seçili kökler taranır; diğer köklerin önceki kayıtları manifestte korunur (silinmez, yeniden taranmaz)
+const roots = SELECTED_ROOTS.length ? DRIVE_ROOTS.filter((r) => SELECTED_ROOTS.includes(r.key)) : DRIVE_ROOTS;
+for (const r of roots) { console.log('>>', r.name); await crawl(r.id, '', r.key); }
+if (SELECTED_ROOTS.length) {
+  try {
+    const prev = JSON.parse(fs.readFileSync(path.join(DOWNLOADS_DIR, '_manifest.json'), 'utf8'));
+    for (const it of prev.items || []) if (!roots.some((r) => r.key === it.root)) items.push(it);
+  } catch { /* önceki manifest yok */ }
+}
 const files = items.filter(i => !i.is_folder);
 const byMime = {}; for (const f of files) byMime[f.mime] = (byMime[f.mime] || 0) + 1;
 fs.mkdirSync(DOWNLOADS_DIR, { recursive: true });

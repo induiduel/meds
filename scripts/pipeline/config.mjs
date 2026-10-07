@@ -6,6 +6,8 @@ export const TEMP_DIR = process.env.MEDS_TEMP_DIR || path.join(PROJECT_ROOT, 'me
 export const DATABASE_DIR = process.env.MEDS_DATABASE_DIR || path.join(PROJECT_ROOT, 'meds_database');
 
 // Drive kök klasörleri (herkese açık; kimlik bilgisi gerekmez)
+// MEDS_DRIVE_ROOTS="drive_root,donem3" → yalnız bu kökler taranır/indirilir (boşsa hepsi). Panel varsayılanı: drive_root.
+export const SELECTED_ROOTS = (process.env.MEDS_DRIVE_ROOTS || '').split(',').map((s) => s.trim()).filter(Boolean);
 export const DRIVE_ROOTS = [
   { key: 'drive_root', name: 'Meds_Drive_Root', id: '1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W' },
   { key: 'cikmislar_k1_6_final', name: '1) Çıkmışlar (Kurul 1-6 & Final)', id: '18U1LZVvV0VROcWVQTDBeJYwdBWiEIVwS' },

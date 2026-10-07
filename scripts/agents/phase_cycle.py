@@ -64,6 +64,8 @@ STEPS = [
     ("faz14", "Faz 14 · Çıkmış soru redaksiyon önerileri (yerel model, inceleme kuyruğu)", [PY, str(AI / "phase14_past_question_editor.py"), "--limit", "10"], 2 * 3600),
     ("ortak", "Ortak veri deposu + RAG parçaları", [PY, str(AI / "build_unified_store.py")], 1800),
     ("hakem", "Hakem kuyruğu (alıntı doğrulamalı konu/slayt denetimi)", [PY, str(AI / "referee_queue.py"), "--max", "200"], 2 * 3600),
+    ("yeni_veri", "Yeni veri hattı (yalnız yeni/değişen veri, gerekli adımlar)", [PY, str(AGENTS / "new_data_pipeline.py"), "--yeni"], 12 * 3600),
+    ("bekleyen", "Bekleyen verileri bitir (Aşama 1–4 + değişen adımlar)", [PY, str(AGENTS / "new_data_pipeline.py"), "--bekleyen"], 12 * 3600),
     ("rag_yenile", "RAG + veritabanı yenileme (ortak depo, analizler, site arama dizini)", [PY, str(AGENTS / "rag_refresh.py")], 3600),
     ("ornek_soru", "Örnek çalışma soruları (müfredat, drive_root notları, günlük sınırlı, yalnız ücretsiz model)", [PY, str(AI / "practice_question_generator.py")], 3600),
 ]
@@ -168,6 +170,17 @@ def wait_if_paused():
         log("▶ devam ettiriliyor")
 
 
+AUTOMATION = TEMP / "state" / "otomasyon.json"
+
+
+def automation() -> dict:
+    """Panel anahtarları: otomatik_gecis (yeni dosya → yeni veri hattı), tam_tur (tüm fazlar sırayla, eski davranış)."""
+    try:
+        return json.loads(AUTOMATION.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
 def record(state: dict, key: str, res: dict):
     """Son sonucu ve son 10 çalışmanın geçmişini durum dosyasına yaz."""
     state.setdefault("adimlar", {})[key] = res
@@ -252,7 +265,7 @@ def main():
     state = json.load(open(STATE, encoding="utf-8")) if STATE.exists() else {"tur": 0, "adimlar": {}}
     # Elle kip (varsayılan): bir faz bitince sıradaki KENDİLİĞİNDEN başlamaz; yalnız panelden kuyruğa eklenen
     # ("Başlat") adımlar çalışır. Eski otomatik tur davranışı: .env MEDS_PHASE_AUTO=1.
-    if os.environ.get("MEDS_PHASE_AUTO") != "1":
+    if not automation().get("tam_tur") and os.environ.get("MEDS_PHASE_AUTO") != "1":
         state["aktif"] = None
         state["kip"] = "elle"
         save_state(state)

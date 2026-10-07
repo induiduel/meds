@@ -3,7 +3,7 @@
 // Kullanım: node scripts/pipeline/02-download.mjs [--limit N] [--rate KBps] [--dry]
 import fs from 'fs'; import path from 'path'; import crypto from 'crypto';
 import { Readable } from 'stream'; import { pipeline } from 'stream/promises'; import { Transform } from 'stream';
-import { DOWNLOADS_DIR } from './config.mjs';
+import { DOWNLOADS_DIR, SELECTED_ROOTS } from './config.mjs';
 
 const arg = (n, d) => { const i = process.argv.indexOf('--' + n); return i < 0 ? d : (process.argv[i + 1] ?? true); };
 const LIMIT = Number(arg('limit', 0)), RATE = Number(arg('rate', 0)) * 1024, DRY = process.argv.includes('--dry');
@@ -50,8 +50,10 @@ function throttle(bps) {
     const wait = sent / bps * 1000 - (Date.now() - t0); if (wait > 0) await sleep(wait); cb(null, c); } });
 }
 
-const todo = manifest.items.filter(i => !i.is_folder && WANT.test(i.name) && state[i.drive_id]?.status !== 'done');
-const all = manifest.items.filter(i => !i.is_folder && WANT.test(i.name));
+// Yalnız seçili kökler (MEDS_DRIVE_ROOTS); daha önce indirilmiş (state 'done') dosya tekrar indirilmez
+const inRoots = (i) => !SELECTED_ROOTS.length || SELECTED_ROOTS.includes(i.root);
+const todo = manifest.items.filter(i => !i.is_folder && inRoots(i) && WANT.test(i.name) && state[i.drive_id]?.status !== 'done');
+const all = manifest.items.filter(i => !i.is_folder && inRoots(i) && WANT.test(i.name));
 console.log(`Hedef: ${all.length} dosya, kalan: ${todo.length}${DRY ? ' (dry-run)' : ''}`);
 if (DRY) process.exit(0);
 
