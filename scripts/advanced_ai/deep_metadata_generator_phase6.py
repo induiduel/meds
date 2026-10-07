@@ -5,10 +5,8 @@ Faz 6: Derin Tıbbi Hiper-Metadata Motoru (Çoklu AI & Dinamik Zamanlama)
 Görevler:
 1. Faz 5 doğrulanmış soruları ve amfi ders notlarını (slide chunks) inceler.
 2. Çoklu AI Katmanı:
-   - Birincil: Groq Cloud (llama-3.3-70b-versatile, qwen/qwen3.8-27b)
-   - İkincil / Bulut: OpenRouter / Muse Spark 1.3 Free (liquid/lfm-2.5-2.6b:free, qwen/qwen3.8-27b:free)
-   - Üçüncül / Yedek: Google Gemini (gemini-2.0-flash / gemini-3.8-flash)
-   - Sıfır Maliyet / Yerel: RTX 4060 GPU (Ollama gemma3:4b / medgemma)
+   - Yalnız bulut: scripts/agents/cloud_llm.py zinciri (Groq gpt-oss-120b / qwen3.8 → Gemini flash,
+     isteğe bağlı OpenRouter/Muse Spark). Yerel model (Ollama) kullanılmaz.
 3. Zamanlama & Hız Kontrolü (Dinamik Scheduler):
    - Soru Havuzu: Her 5-10 dakikada 5 soru işleme temposu (batch_size=5, sleep=300-600 sn)
    - Ders Notu Havuzu: Her 2 saatte bir 1 tam ders notu işleme temposu (interval=7200 sn)
@@ -66,17 +64,8 @@ ENV_KEYS = get_env_keys()
 GROQ_API_KEY = ENV_KEYS.get("GROQ_API_KEY") or ENV_KEYS.get("GROQ_API_KEY_2")
 GEMINI_API_KEY = ENV_KEYS.get("GEMINI_API_KEY") or ENV_KEYS.get("GEMINI_FREE_KEY_2")
 OPENROUTER_API_KEY = ENV_KEYS.get("OPENROUTER_API_KEY") or ENV_KEYS.get("MUSE_SPARK_API_KEY")
-OLLAMA_URL = ENV_KEYS.get("OLLAMA_URL", "http://127.0.0.1:11434")
-
-
-def _gpu_temp():
-    try:
-        import subprocess
-        r = subprocess.run(["nvidia-smi", "--query-gpu=temperature.gpu", "--format=csv,noheader,nounits"],
-                           capture_output=True, text=True, timeout=5)
-        return int(r.stdout.strip().splitlines()[0])
-    except Exception:
-        return None
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
+import cloud_llm  # noqa: E402
 
 
 class Phase6Scheduler:
@@ -144,7 +133,7 @@ class Phase6Scheduler:
             "total_lectures_processed": 0,
             "last_lecture_processed_time": 0.0,
             "last_question_batch_time": 0.0,
-            "provider_stats": {"local_ollama": 0, "openrouter": 0, "groq": 0, "gemini": 0}
+            "provider_stats": {}
         }
 
     def _save(self):
@@ -177,138 +166,9 @@ class Phase6Scheduler:
 
 
 def call_multi_ai_json(prompt: str, system: str) -> Optional[dict]:
-    """
-    Çoklu Yapay Zeka Sağlayıcı Katmanı:
-    1. Local RTX 4060 GPU (Gemma 3:4b / Ollama) -> Ultra hızlı, sınırsız, sıfır maliyet.
-    2. OpenRouter / Muse Spark 1.3 Free (liquid/lfm-2.5-2.6b:free, qwen/qwen3.8-27b:free)
-    3. Groq Cloud (gpt-oss-120b, llama-3.3-70b)
-    4. Google Gemini Flash
-    """
-    # 1. Local GPU (Ollama - RTX 4060)
-    try:
-        req_data = {
-            "model": "gemma3:4b",
-            "messages": [
-                {"role": "system", "content": system},
-                {"role": "user", "content": prompt}
-            ],
-            "format": "json",
-            "stream": False,
-            "options": {
-                "temperature": 0.2,
-                "num_ctx": 2048,
-                "num_gpu": 99
-            }
-        }
-        req = urllib.request.Request(
-            f"{OLLAMA_URL}/api/chat",
-            data=json.dumps(req_data).encode("utf-8"),
-            headers={"Content-Type": "application/json"}
-        )
-        with urllib.request.urlopen(req, timeout=35) as r:
-            res = json.loads(r.read().decode("utf-8"))
-            content = res.get("message", {}).get("content", "").strip()
-            if content:
-                # Markdown bloklarını temizle
-                if content.startswith("```"):
-                    lines = content.splitlines()
-                    if lines[0].startswith("```"):
-                        lines = lines[1:]
-                    if lines and lines[-1].startswith("```"):
-                        lines = lines[:-1]
-                    content = "\n".join(lines).strip()
-                return json.loads(content)
-    except Exception:
-        pass
-
-    # 2. OpenRouter / Muse Spark 1.3 Free
-    if OPENROUTER_API_KEY:
-        for or_model in ["liquid/lfm-2.5-2.6b:free", "qwen/qwen3.8-27b:free"]:
-            try:
-                req_data = {
-                    "model": or_model,
-                    "messages": [
-                        {"role": "system", "content": system},
-                        {"role": "user", "content": prompt}
-                    ],
-                    "temperature": 0.2
-                }
-                req = urllib.request.Request(
-                    "https://openrouter.ai/api/v1/chat/completions",
-                    data=json.dumps(req_data).encode("utf-8"),
-                    headers={
-                        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-                        "Content-Type": "application/json",
-                        "User-Agent": "MedSoru/1.0"
-                    }
-                )
-                with urllib.request.urlopen(req, timeout=30) as r:
-                    res = json.loads(r.read().decode("utf-8"))
-                    content = res["choices"][0]["message"]["content"].strip()
-                    if content.startswith("```"):
-                        lines = content.splitlines()
-                        if lines[0].startswith("```"):
-                            lines = lines[1:]
-                        if lines and lines[-1].startswith("```"):
-                            lines = lines[:-1]
-                        content = "\n".join(lines).strip()
-                    return json.loads(content)
-            except Exception:
-                continue
-
-    # 3. Groq Cloud Fallback
-    if GROQ_API_KEY:
-        for g_model in ["llama-3.3-70b-versatile", "qwen/qwen3.8-27b"]:
-            try:
-                req_data = {
-                    "model": g_model,
-                    "messages": [
-                        {"role": "system", "content": system},
-                        {"role": "user", "content": prompt}
-                    ],
-                    "temperature": 0.2,
-                    "max_tokens": 800,
-                    "response_format": {"type": "json_object"}
-                }
-                req = urllib.request.Request(
-                    "https://api.groq.com/openai/v1/chat/completions",
-                    data=json.dumps(req_data).encode("utf-8"),
-                    headers={
-                        "Authorization": f"Bearer {GROQ_API_KEY}",
-                        "Content-Type": "application/json",
-                        "User-Agent": "MedSoru/1.0"
-                    }
-                )
-                with urllib.request.urlopen(req, timeout=25) as r:
-                    res = json.loads(r.read().decode("utf-8"))
-                    content = res["choices"][0]["message"]["content"].strip()
-                    return json.loads(content)
-            except Exception:
-                continue
-
-    # 4. Google Gemini Fallback
-    if GEMINI_API_KEY:
-        for gemini_model in ["gemini-2.0-flash", "gemini-3.8-flash"]:
-            try:
-                full_prompt = f"{system}\n\n{prompt}"
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/{gemini_model}:generateContent?key={GEMINI_API_KEY}"
-                body = {
-                    "contents": [{"parts": [{"text": full_prompt}]}],
-                    "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}
-                }
-                req = urllib.request.Request(
-                    url,
-                    data=json.dumps(body).encode("utf-8"),
-                    headers={"Content-Type": "application/json"}
-                )
-                with urllib.request.urlopen(req, timeout=25) as r:
-                    res = json.loads(r.read().decode("utf-8"))
-                    content = res["candidates"][0]["content"]["parts"][0]["text"].strip()
-                    return json.loads(content)
-            except Exception:
-                continue
-
-    return None
+    """Bulut model zinciri (scripts/agents/cloud_llm.py): Groq → Gemini (+ isteğe bağlı OpenRouter). Yerel model yok."""
+    res = cloud_llm.chat(prompt, system=system, as_json=True, max_tokens=3000, temperature=0.2)
+    return res if isinstance(res, dict) else None
 
 
 def generate_deep_metadata_for_question(q: dict) -> Optional[dict]:
@@ -449,7 +309,7 @@ def process_question_batch(scheduler: Phase6Scheduler, batch_size: int = QUESTIO
                     with open(out_meta_file, "a", encoding="utf-8") as out_fp:
                         out_fp.write(json.dumps(meta_res, ensure_ascii=False) + "\n")
 
-                    scheduler.record_question(qid, provider="multi_ai")
+                    scheduler.record_question(qid, provider=cloud_llm.last_model.get("ad") or "bulut")
                     processed_ids.add(qid)
                     processed_count += 1
                     print(f"  [Faz 6 Soru ✓] {qid} -> ICD-10, Ayırıcı Tanı ve 50+ Hiper-Etiket üretildi. ({processed_count}/{batch_size})")
@@ -495,7 +355,7 @@ def process_single_lecture(scheduler: Phase6Scheduler) -> bool:
             with open(out_lec_file, "a", encoding="utf-8") as out_fp:
                 out_fp.write(json.dumps(lecture_meta, ensure_ascii=False) + "\n")
 
-            scheduler.record_lecture(source_id, provider="multi_ai")
+            scheduler.record_lecture(source_id, provider=cloud_llm.last_model.get("ad") or "bulut")
             print(f"  [Faz 6 Ders Notu ✓] {source_id} ({lecture_meta.get('ders')}) -> Kapsamlı klinik özet ve vaka analizi oluşturuldu.")
             return True
 
@@ -507,15 +367,10 @@ def main():
     print("🏥 FAZ 6: ÇOKLU AI DESTEKLİ DERİN METADATA & DİNAMİK ZAMANLAYICI")
     print(f"• Soru Havuzu     : {QUESTION_SLEEP_MIN}-{QUESTION_SLEEP_MAX} saniyede bir {QUESTION_BATCH_SIZE} soru (Dengeli tempo)")
     print(f"• Ders Notu Havuzu: Her {LECTURE_INTERVAL_SECONDS // 60} dakikada bir 1 tam amfi slayt destesi")
-    print("• AI Sağlayıcılar : RTX 4060 GPU (Gemma 3) + OpenRouter + Groq + Gemini")
+    print("• AI Sağlayıcılar : bulut zinciri (Groq → Gemini), yerel model yok")
     print(f"• Çıktı Dizini    : {OUT_METADATA}")
     print("=" * 75)
 
-    # GPU yoksa (ör. "GPU has fallen off the bus", yeniden başlatma gerekiyor) Ollama CPU'ya düşer, 35 sn zaman aşımında
-    # düşük kaliteli bulut yedeğine geçilir → veri kalitesi sessizce düşmesin diye bu tur atlanır (kaldığı yerden sürer).
-    if "--cycles" in sys.argv and _gpu_temp() is None and os.environ.get("MEDS_FAZ6_ALLOW_CPU") != "1":
-        print("[Faz 6] GPU görünmüyor (nvidia-smi yanıt vermiyor); bu tur atlandı. GPU dönünce kaldığı yerden sürer.")
-        return
     scheduler = Phase6Scheduler(STATE_FILE)
     print(f"[Durum] Toplam İşlenen Soru: {scheduler.data.get('total_questions_processed')}, Ders Notu: {scheduler.data.get('total_lectures_processed')}")
 
@@ -558,10 +413,7 @@ def main():
 
         # 60-120 saniye bekleme: GPU/API darboğazını sınırlayan dengeli tempo
         if max_cycles is not None:
-            # faz zinciri modu: sabit bekleme yok; yalnızca GPU ısınırsa soğumasını bekle
-            while (t := _gpu_temp()) is not None and t >= 89:
-                print(f"[Faz 6] GPU {t} °C — 30 sn soğuma bekleniyor", flush=True)
-                time.sleep(30)
+            # faz zinciri modu: sabit bekleme yok (bulut kota/hız sınırını cloud_llm yönetir)
             continue
         sleep_sec = random.randint(QUESTION_SLEEP_MIN, QUESTION_SLEEP_MAX)
         print(f"\n⏳ Bir sonraki soru batch'i için {sleep_sec // 60} dakika {sleep_sec % 60} saniye bekleniyor...\n")

@@ -163,15 +163,6 @@ export const AUTOMATION_PIPELINES = [
     ],
   },
   {
-    id: 'phase7-microagent-storyteller',
-    title: '📖 Faz 7: 5 Adımlı Mikro-Ajans Tıbbi Hikaye & Modelleme',
-    description: 'Yerel GPU bilişsel yükünü 5 atomik mikro-adıma bölerek halüsinasyonsuz, çeldirici otopsili ve pedagojik klinik hikayeler üretir.',
-    category: 'Otomasyon & Pipeline',
-    steps: [
-      { script: 'advanced_ai/microagent_storyteller_phase7.py', args: '', title: '1. 5 Adımlı Mikro-Ajans Modelleme ve 100 Altın Örnek' },
-    ],
-  },
-  {
     id: 'phase7-5-reconstruct-slides',
     title: '📚 Faz 7.5: Amfi Ders Slaytlarını Resmi Müfredatla Düzenleme',
     description: 'KBÜ TIP Dönem 3 (TIP320, TIP340, TIP350, TIP360) resmi müfredat hedefleriyle amfi slaytlarını yapılandırır ve çıkmış sorularla kancalar.',

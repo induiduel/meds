@@ -59,7 +59,6 @@ MedSoru Project/
 ├── meds_database_v2/                       # Faz 5/6/6.5/7.5 Zenginleştirilmiş Tıp Ekosistemi
 │   ├── medical_thesaurus/                  # Faz 6.5: Tıbbi sözlük (ontoloji) & soru-slayt kanıt kancaları
 │   ├── slide_reconstructed/                # Faz 7.5: Resmi müfredat formatında düzenlenmiş slaytlar
-│   └── phase7_stories/                     # Faz 7: 5 adımlı mikro-ajan pedagojik klinik hikayeleri
 └── dashboard_server.py                     # Port 8085 Canlı Telemetri & DiGraph Kokpiti
 ```
 
@@ -128,7 +127,6 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 | **Faz 5 (Aşama 5)** | `multi_ai_consensus_phase5.py` | Çoklu AI Konsensüsü & Slayt İğne-Delik Tespiti (`meds_database_v2`) | `pipeline_runner` + `watchdog` |
 | **Faz 6 (Aşama 6)** | `deep_metadata_generator_phase6.py` | Derin Tıbbi Hiper-Metadata (ICD-10, Ayırıcı Tanı - Dinamik Hız) | `pipeline_runner` + `watchdog` |
 | **Faz 6.5 (Aşama 6.5)** | `thesaurus_anchor_phase6_5.py` | Tıbbi Terimler Sözlüğü (Thesaurus) & Co-occurrence Kanıt Motoru | `pipeline_runner` + `watchdog` |
-| **Faz 7 (Aşama 7)** | `microagent_storyteller_phase7.py` | 5 Adımlı Mikro-Ajans Soru Modelleme & Hikaye Motoru | `pipeline_runner` + `watchdog` |
 | **Faz 7.5 (Aşama 7.5)** | `reconstruct_slides_phase7_5.py` | Amfi Ders Slaytlarını Resmi Müfredat Standartlarında Düzenleme | `pipeline_runner` + `watchdog` |
 | **Faz 14** | `phase14_past_question_editor.py` | Çıkmış sorular için yerel modelle OCR/biçim redaksiyon önerileri; her öneri inceleme kuyruğuna yazılır | `phase_cycle` + `gpu_guard` |
 
@@ -171,15 +169,6 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 - Çıkmış sorular ile ders slaytları arasındaki ortak tıbbi terimleri tarar.
 - **Çoklu Ders Eşleşme Çözümü:** Birden fazla slaytta geçen terimler için `Co-occurrence Skoru = (Ortak Terim Sayısı) * (Özgüllük Ağırlığı) * (Yoğunluk) + (Jaccard * 10)` formülünü kullanarak en yüksek örtüşmeye sahip slaytı kesin kanıt (`phase6_5_question_slide_anchors.jsonl`) olarak kancalar.
 
-### Faz 7 (Aşama 7): 5 Adımlı Mikro-Ajans Soru Hikaye & Modelleme (`microagent_storyteller_phase7.py`)
-- Kısıtlı parametreli yerel modellerin bilişsel yükünü 5 atomik mikro-adıma böler:
-  1. *İzole Varlık Çıkarımı:* Soru kökündeki hedef yapı ve sistemi sert JSON olarak çıkarır.
-  2. *RAG Destekli Doğrulama:* Amfi slayt chunk'ından kanıtı doğrular, halüsinasyonu sıfırlar.
-  3. *Çeldirici Otopsisi:* Her yanlış seçeneği döngüsel olarak tek tek inceleyip hocanın tuzağını ve asıl tıp tanımını saptar.
-  4. *Kavramsal Çerçeve:* Neden-sonuç ilişkisini 2 maddelik mantık köprüsüne oturtur.
-  5. *Sentez & Hikayeleştirme:* Akıcı Türkçe, hekimlik nosyonu ve klinik analojiyle öğrencinin aklında kalıcı hikaye üretir.
-- 100 altın standart soruluk rehber veri seti (`training_data/phase7_microagent_100_exemplars.jsonl`) üretir.
-- Duraksama / kurtarma desteği ile her adım anında diske yazılır (`meds_database_v2/phase7_stories`).
 
 ### Faz 7.5 (Aşama 7.5): Amfi Ders Slaytlarını Resmi Müfredat Standartlarında Düzenleme (`reconstruct_slides_phase7_5.py`)
 - **Resmi Müfredat Konumu:** [`curriculum/kbu_tip_donem3_curriculum.json`](file:///home/indu/medsor/meds/curriculum/kbu_tip_donem3_curriculum.json)

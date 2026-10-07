@@ -2,7 +2,7 @@
 """
 Faz 7 v2 — Kanıta dayalı soru metadatası (hikâyeleştirme YOK)
 
-Eski Faz 7 karantinada (meds_database_v2/phase7_stories/KARANTINA.md). Bu sürüm yalnızca soruyu ve konuyu anlayıp
+Eski Faz 7 karantinada (yedek/faz7_hikaye_silindi_20261007/phase7_stories/KARANTINA.md (Faz 7 hikâye üretimi 2026-10-07 silindi)). Bu sürüm yalnızca soruyu ve konuyu anlayıp
 doğrulanabilir metadata çıkarır:
   * soru tipi (olumlu/olumsuz kök), ne soruyor, konu (Faz 8 yüksek güven)
   * tıbbi varlıklar (terim + tür) — her terim soru metninde ya da ders kanıtında geçmek ZORUNDA, yoksa atılır
@@ -53,8 +53,8 @@ def env_keys() -> dict:
 ENV = env_keys()
 GROQ_KEYS = [k for k in (ENV.get("GROQ_API_KEY"), ENV.get("GROQ_API_KEY_2")) if k]
 GROQ_MODEL = os.environ.get("PHASE7_MODEL", "openai/gpt-oss-120b")
-OLLAMA_URL = ENV.get("OLLAMA_URL") or "http://127.0.0.1:11434"
-OLLAMA_MODEL = os.environ.get("PHASE7_LOCAL_MODEL", "deepseek-r1:8b")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
+import cloud_llm  # noqa: E402
 
 NEG = re.compile(r"(yanl[ıi]şt[ıi]r|yanl[ıi]ş\s*(olan|bir)|de[ğg]ildir|de[ğg]il\b|hari[çc]|olamaz|beklenmez|g[öo]r[üu]lmez|"
                  r"yoktur|d[ıi]ş[ıi]nda|bulunmaz|kullan[ıi]lmaz|s[öo]ylenemez|ili[şs]kili de[ğg]il|en az)", re.I)
@@ -87,58 +87,11 @@ def quote_ok(quote: str, evidence: str) -> bool:
     return False
 
 
-def call_groq(messages: list, max_tokens: int = 3000) -> str | None:
-    for key in GROQ_KEYS:
-        body = {"model": GROQ_MODEL, "messages": messages, "temperature": 0.1, "max_tokens": max_tokens,
-                "response_format": {"type": "json_object"}}
-        req = urllib.request.Request("https://api.groq.com/openai/v1/chat/completions", data=json.dumps(body).encode(),
-                                     headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json",
-                                              "User-Agent": "medsor-phase7/2"})
-        for attempt in range(3):
-            try:
-                with urllib.request.urlopen(req, timeout=90) as r:
-                    return json.loads(r.read())["choices"][0]["message"]["content"]
-            except urllib.error.HTTPError as e:
-                if e.code == 429:
-                    time.sleep(15 * (attempt + 1))
-                    continue
-                break
-            except Exception:
-                time.sleep(3)
-    return None
-
-
-def call_ollama(messages: list) -> str | None:
-    body = {"model": OLLAMA_MODEL, "messages": messages, "stream": False, "format": "json",
-            "options": {"temperature": 0.1, "num_predict": 1400}}
-    try:
-        req = urllib.request.Request(f"{OLLAMA_URL}/api/chat", data=json.dumps(body).encode(),
-                                     headers={"Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=240) as r:
-            return json.loads(r.read())["message"]["content"]
-    except Exception:
-        return None
-
-
 def llm_json(system: str, user: str) -> tuple[dict | None, str]:
-    msgs = [{"role": "system", "content": system}, {"role": "user", "content": user}]
-    raw, used = call_groq(msgs), f"groq:{GROQ_MODEL}"
-    if not raw:
-        raw, used = call_ollama(msgs), f"ollama:{OLLAMA_MODEL}"
-    if not raw:
-        return None, used
-    raw = re.sub(r"^```(json)?|```$", "", raw.strip()).strip()
-    raw = re.sub(r"<think>.*?</think>", "", raw, flags=re.S).strip()
-    try:
-        return json.loads(raw), used
-    except json.JSONDecodeError:
-        m = re.search(r"\{.*\}", raw, re.S)
-        if m:
-            try:
-                return json.loads(m.group(0)), used
-            except json.JSONDecodeError:
-                pass
-    return None, used
+    """Bulut zinciri (scripts/agents/cloud_llm.py; ilk model PHASE7_MODEL). Yerel model yok."""
+    chain = [f"groq:{GROQ_MODEL}"] + [m for m in cloud_llm.chain() if m != f"groq:{GROQ_MODEL}"]
+    res = cloud_llm.chat(user, system=system, as_json=True, max_tokens=3000, models=chain)
+    return (res if isinstance(res, dict) else None), (cloud_llm.last_model.get("ad") or "bulut")
 
 
 # --------------------------------------------------------------------------- kanıt

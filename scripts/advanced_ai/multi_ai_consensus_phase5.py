@@ -5,8 +5,8 @@ Faz 5 Çoklu AI Konsensüs & Soru Derin Analiz Motoru
 Görevler:
 1. Mevcut veritabanındaki (meds_database/questions) soruları ve amfi ders notlarını okur.
 2. Her bir soru için eşzamanlı olarak:
-   - Local AI (RTX 4060 - gemma3:4b veya medgemma): Hızlı klinik bağlam, soru biçim denetimi, tıbbi anabilim dalı tespiti.
-   - Cloud AI (Groq qwen/qwen3.8-27b / gpt-oss-120b veya Gemini 3.8 Flash): İleri düzey tıbbi varlık çıkarımı
+   - İkinci görüş (bulut, Gemini ağırlıklı zincir): hızlı klinik bağlam, soru biçim denetimi, anabilim dalı tespiti.
+   - Ana analiz (bulut, Groq ağırlıklı zincir): İleri düzey tıbbi varlık çıkarımı
      (hastalık, ilaç, patojen, gen, belirti, semptom, etiyoloji, tedavi, mekanizma, ölçüm).
 3. BM25 + BGE-M3 Hibrit Arama ile sorunun ilişkili olduğu ders, slayt, sayfa ve metin parçalarını (chunk'ları) nokta atışı tespit eder.
 4. Yanlış kurul, yanlış ders veya yanlış konuya atanmış soruları tespit eder ve düzeltilmiş etiket önerir.
@@ -66,74 +66,26 @@ ENV_KEYS = get_env_keys()
 GROQ_API_KEY = ENV_KEYS.get("GROQ_API_KEY") or ENV_KEYS.get("GROQ_API_KEY_2")
 GEMINI_API_KEY = ENV_KEYS.get("GEMINI_API_KEY") or ENV_KEYS.get("GEMINI_FREE_KEY_2")
 
+# Bulut çağrıları ortak istemciden (scripts/agents/cloud_llm.py): yerel model yok.
+# Konsensüs için iki bağımsız görüş farklı model ailelerinden alınır: ana analiz Groq ağırlıklı zincir,
+# hızlı sınıflandırma Gemini ağırlıklı zincir.
+sys.path.insert(0, str(PROJECT_ROOT / "scripts" / "agents"))
+import cloud_llm  # noqa: E402
+
+PRIMARY_CHAIN = ["groq:qwen/qwen3.8-27b", "groq:openai/gpt-oss-120b", "gemini:gemini-flash-latest", "gemini:gemini-3.5-flash"]
+SECOND_CHAIN = ["gemini:gemini-flash-latest", "gemini:gemini-3.5-flash", "groq:openai/gpt-oss-120b"]
+
+
 def call_cloud_ai(prompt: str, system: str = "") -> Optional[str]:
-    """Cloud AI çağrısı: Önce Groq (qwen/qwen3.8-27b), kota veya hata olursa Gemini (gemini-3.8-flash)."""
-    # 1. Groq Cloud Denemesi
-    if GROQ_API_KEY:
-        try:
-            req_data = {
-                "model": "qwen/qwen3.8-27b",
-                "messages": (
-                    ([{"role": "system", "content": system}] if system else [])
-                    + [{"role": "user", "content": prompt}]
-                ),
-                "temperature": 0.1,
-                "response_format": {"type": "json_object"}
-            }
-            req = urllib.request.Request(
-                "https://api.groq.com/openai/v1/chat/completions",
-                data=json.dumps(req_data).encode("utf-8"),
-                headers={
-                    "Authorization": f"Bearer {GROQ_API_KEY}",
-                    "Content-Type": "application/json",
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
-                }
-            )
-            with urllib.request.urlopen(req, timeout=25) as r:
-                res = json.loads(r.read().decode("utf-8"))
-                return res["choices"][0]["message"]["content"].strip()
-        except Exception as e:
-            # print(f"[Groq Uyarısı] {e}, Gemini'ye geçiliyor...")
-            pass
-
-    # 2. Google Gemini Denemesi
-    if GEMINI_API_KEY:
-        try:
-            full_prompt = f"{system}\n\n{prompt}" if system else prompt
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key={GEMINI_API_KEY}"
-            body = {
-                "contents": [{"parts": [{"text": full_prompt}]}],
-                "generationConfig": {"responseMimeType": "application/json", "temperature": 0.1}
-            }
-            req = urllib.request.Request(
-                url,
-                data=json.dumps(body).encode("utf-8"),
-                headers={"Content-Type": "application/json"}
-            )
-            with urllib.request.urlopen(req, timeout=25) as r:
-                res = json.loads(r.read().decode("utf-8"))
-                return res["candidates"][0]["content"]["parts"][0]["text"].strip()
-        except Exception as e:
-            pass
-
-    return None
+    """Ana analiz (JSON metni döner; çağıran ayrıştırır)."""
+    res = cloud_llm.chat(prompt, system=system or None, as_json=True, max_tokens=2500, models=PRIMARY_CHAIN)
+    return json.dumps(res, ensure_ascii=False) if res else None
 
 
 def call_local_ai(prompt: str, system: str = "") -> Optional[dict]:
-    """Yerel RTX 4060 üzerinden gemma3:4b veya medgemma1.5 çağrısı."""
-    try:
-        model = "gemma3:4b" if "gemma3:4b" in lib.ollama_models() else "medgemma1.5:4b"
-        res = lib.chat(
-            model=model,
-            prompt=prompt,
-            system=system,
-            as_json=True,
-            timeout=40,
-            num_ctx=3072
-        )
-        return res if isinstance(res, dict) else None
-    except Exception:
-        return None
+    """İkinci görüş: hızlı branş/kurul sınıflandırması (eski adıyla korunur; artık bulutta, farklı model ailesi)."""
+    res = cloud_llm.chat(prompt, system=system or None, as_json=True, max_tokens=600, models=SECOND_CHAIN)
+    return res if isinstance(res, dict) else None
 
 
 class ChunkIndex:

@@ -10,7 +10,7 @@ En Yönetici, En Kapsamlı Sistem & Donanım Yöneticisi.
    - 3: Aşırı Güç (Watchdog termal ve yük sınırları dahilinde tam GPU/CPU performansı)
 2. Arka Plan Scriptlerini Yönetme (Başlatma, Durdurma, Yeniden Başlatma, Canlı Durum):
    - pipeline_runner.py, watchdog.py, dashboard_server.py, web_server (server.ts),
-     thesaurus_anchor, deep_metadata, microagent_storyteller, reconstruct_slides,
+     thesaurus_anchor, deep_metadata, reconstruct_slides,
      question_quality_inspector, fast_hybrid_server, monitor.py vb.
 3. Çalışma Takvimi & Zamanlayıcı (Scheduler):
    - Belirli saatlerde çalışma, çalışma aralıkları (ör. 09:00 - 23:00) veya bekleme periyotları.
@@ -113,15 +113,6 @@ MANAGED_SCRIPTS = {
         "cwd": ROOT_DIR,
         "category": "advanced_ai",
         "desc": "ICD-10, ayırıcı tanı, multidisipliner ilişkiler ve hiper-arama etiketleri üretir.",
-        "default_enabled": False,
-        "supports_gpu": True
-    },
-    "microagent_storyteller": {
-        "name": "Faz 7: 5 Adımlı Mikro-Ajans Soru Hikaye Motoru",
-        "script": "scripts/advanced_ai/microagent_storyteller_phase7.py",
-        "cwd": ROOT_DIR,
-        "category": "advanced_ai",
-        "desc": "5 adımlı pedagojik tıp senaryoları ve çeldirici analizleri üretir.",
         "default_enabled": False,
         "supports_gpu": True
     },
@@ -518,7 +509,7 @@ class MasterController:
                 # Eğer zamanlama dışındaysak ve durdurulması gerekiyorsa
                 if not in_sched:
                     # Zaman dışı: Çalışan opsiyonel pipeline scriptlerini askıya al
-                    for k in ["pipeline_runner", "thesaurus_anchor", "deep_metadata", "microagent_storyteller"]:
+                    for k in ["pipeline_runner", "thesaurus_anchor", "deep_metadata"]:
                         if self.is_script_running(k):
                             print(f"[Master Scheduler] Zamanlama dışı saat ({time.strftime('%H:%M')}). {k} bekletmeye alınıyor...")
                             self.stop_script(k)

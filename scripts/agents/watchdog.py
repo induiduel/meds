@@ -346,18 +346,17 @@ def _phase_cooldown_ok(name: str) -> bool:
 
 
 # Faz motorları GPU'yu paylaşır; aynı anda çalışınca laptop GPU'su 89 °C'ye çıkıyordu.
-# Artık sırayla çalışırlar: biri bitmeden sıradaki başlamaz (5 → 6 → 7 → 7.5 → 5 ...).
+# Artık sırayla çalışırlar: biri bitmeden sıradaki başlamaz (5 → 6 → 7.5 → 5 ...).
 PHASE_SEQUENCE = [
     ("multi_ai_consensus_phase5.py", "Faz 5 Çoklu AI Konsensüsü"),
     ("deep_metadata_generator_phase6.py", "Faz 6 Hiper-Metadata Motoru"),
-    ("microagent_storyteller_phase7.py", "Faz 7 Mikro-Ajans Hikaye Motoru"),
     ("reconstruct_slides_phase7_5.py", "Faz 7.5 Müfredat Slayt Motoru"),
 ]
 _next_phase_index = 0
 
 
 def check_phase5_and_phase6_workers():
-    """Faz 5, 6, 7 ve 7.5 motorlarını SIRAYLA çalıştırır (aynı anda en fazla bir tane).
+    """Faz 5, 6 ve 7.5 motorlarını SIRAYLA çalıştırır (aynı anda en fazla bir tane).
 
     meds-phases servisi (scripts/agents/phase_cycle.py) varsa zinciri o yönetir; watchdog karışmaz.
     """

@@ -46,7 +46,7 @@ STEPS = [
     ("faz6_5", "Faz 6.5 · Terim sözlüğü ve soru–slayt çapaları", [PY, str(AI / "thesaurus_anchor_phase6_5.py")], 3600),
     # Faz 7 (mikro-ajan hikâye) DEVRE DIŞI — 2026-10-05 denetimi: "hangisi yanlıştır" sorularında yanlış ifadeyi
     # doğru diye gerekçelendiriyor, hatalı cevap anahtarlarını pekiştiriyor, şık açıklamalarında uydurma bilgi var.
-    # Ayrıntı: meds_database_v2/phase7_stories/KARANTINA.md. Düzeltilmeden zincire geri eklenmemeli.
+    # Ayrıntı: yedek/faz7_hikaye_silindi_20261007/phase7_stories/KARANTINA.md (Faz 7 hikâye üretimi 2026-10-07 silindi). Düzeltilmeden zincire geri eklenmemeli.
     ("faz7_5", "Faz 7.5 · Müfredat slayt düzenleme", [PY, str(AI / "reconstruct_slides_phase7_5.py")], 3600),
     ("faz8", "Faz 8 · Soru–kazanım–konu–ders–kurul ağacı", [PY, str(AI / "phase8_curriculum_graph.py")], 3600),
     ("sozluk", "Kanıtlı sözlük (ders materyalinden kısaltma/yazım varyantı)", [PY, str(AI / "build_evidence_thesaurus.py")], 1800),

@@ -16,7 +16,7 @@ Adımlar
     (artımlı; sonraki çalıştırmalar yalnızca yeni terimleri sorar).
  4. Kavram: Wikidata öğesi. Üyeler: eşleşen terimlerimiz + öğenin Türkçe/İngilizce adı ve takma adları
     (yalnızca materyalde geçenler — eşleştirmeye katkı verebilenler).
- 5. bge-m3 (Ollama, vektör benzerliği): kimliksiz kalan terimler için en yakın kavram yalnızca ADAY olarak yazılır
+ 5. e5-small (CPU, vektör benzerliği): kimliksiz kalan terimler için en yakın kavram yalnızca ADAY olarak yazılır
     (kosinüs ≥ 0,90) → hakem kuyruğu; eşleştirmede kullanılmaz.
  6. Faz 9 motoru bu kavramlarla çalıştırılır → meds_temp/phase10 (Faz 8 yüksek güven öncelikli; aynı karar kuralları).
 
@@ -49,7 +49,6 @@ TEMP = Path(os.environ.get("MEDS_TEMP_DIR") or PROJECT / "meds_temp")
 CACHE = OUT / "wikidata_onbellek.json"
 UA = "MedSor/1.0 (egitim amacli tip terimleri eslestirme)"
 SPARQL = "https://query.wikidata.org/sparql"
-OLLAMA = os.environ.get("OLLAMA_URL") or "http://127.0.0.1:11434"
 MED_PROPS = {"P2892": "umls_cui", "P486": "mesh", "P494": "icd10", "P699": "disease_ontology"}
 BATCH = 120
 GENERIC_EN = set("""cause milk teen teens disease disorder syndrome pain infection cancer tumor tumour drug therapy
@@ -214,20 +213,25 @@ def fetch_items(qids: list[str]) -> dict:
     return items
 
 
-# --------------------------------------------------------------------------- 5) bge-m3 adayları
+# --------------------------------------------------------------------------- 5) vektör adayları (CPU)
+# Eskiden Ollama bge-m3 kullanılıyordu; yerel LLM sunucusuna bağımlılık kaldırıldı. Faz 11 ile aynı çok dilli
+# e5-small modeli CPU'da çalışır (GPU/Ollama gerekmez). Simetrik eşleme olduğu için iki tarafa da "query: " öneki.
+EMB_MODEL = "intfloat/multilingual-e5-small"
+_emb_model = None
+
+
 def embed(texts: list[str]):
-    out = []
-    for i in range(0, len(texts), 64):
-        body = {"model": "bge-m3", "input": texts[i:i + 64]}
-        try:
-            req = urllib.request.Request(f"{OLLAMA}/api/embed", data=json.dumps(body).encode(),
-                                         headers={"Content-Type": "application/json"})
-            with urllib.request.urlopen(req, timeout=120) as r:
-                out.extend(json.loads(r.read())["embeddings"])
-        except Exception as e:  # noqa: BLE001
-            log(f"bge-m3 kullanılamadı ({e}); adaylar atlanıyor")
-            return None
-    return out
+    global _emb_model
+    try:
+        if _emb_model is None:
+            os.environ.setdefault("CUDA_VISIBLE_DEVICES", "")
+            from sentence_transformers import SentenceTransformer
+            _emb_model = SentenceTransformer(EMB_MODEL, device="cpu")
+        v = _emb_model.encode(["query: " + t for t in texts], batch_size=64, normalize_embeddings=True, show_progress_bar=False)
+        return [list(map(float, x)) for x in v]
+    except Exception as e:  # noqa: BLE001
+        log(f"vektör modeli kullanılamadı ({e}); adaylar atlanıyor")
+        return None
 
 
 def cos(a, b):
@@ -328,7 +332,7 @@ def main():
     rep["coklu_uyeli_kavram"] = sum(1 for c in concepts.values() if len(c["uyeler"]) >= 2)
     rep["umls_cui_li_kavram"] = sum(1 for c in concepts.values() if c["kimlik"].get("umls_cui"))
 
-    # ---- 5) bge-m3 adayları (hakem kuyruğu)
+    # ---- 5) vektör adayları (hakem kuyruğu; e5-small, CPU)
     matched = {P8.fold(r["terim"]) for r in term_rows if r.get("qid") or r.get("belirsiz")}
     unmatched = sorted((t for t in attested if P8.fold(t) not in matched), key=lambda t: -terms[t])[:1500]
     labels = [(cid, c["tr"] or c["en"]) for cid, c in concepts.items() if c.get("tr") or c.get("en")]
@@ -339,7 +343,7 @@ def main():
             for t, v in zip(unmatched, eu):
                 best = max(range(len(el)), key=lambda j: cos(v, el[j]))
                 sc = cos(v, el[best])
-                if sc >= 0.90:
+                if sc >= 0.92:          # e5 benzerlikleri bge-m3'ten yüksek dağılır
                     cid = labels[best][0]
                     cands.append({"terim": t, "aday_kavram": cid, "aday_ad": labels[best][1], "qid": concepts[cid]["qid"],
                                   "kosinus": round(sc, 3), "durum": "hakem_bekliyor"})

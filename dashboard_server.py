@@ -3056,22 +3056,6 @@ def get_stats():
             "order": 6.5
         },
         {
-            "id": 7,
-            "phase": "Faz 7",
-            "name": "Faz 7 (Aşama 7): 5 Adımlı Mikro-Ajans Soru Hikaye & Modelleme",
-            "desc": "Kısıtlı parametreli yerel modeller için 5 adımlı mikro-ajan (Varlık Çıkarımı -> RAG Doğrulama -> Çeldirici Otopsisi -> Sebep-Sonuç -> Klinik Hikaye Sentezi) mimarisi ve 100 altın soru modellemesi",
-            "status": "completed",
-            "status_tr": "Tamamlandı ✓ (100 Altın Soru Modeli)",
-            "progress_pct": 100,
-            "processed": f"{c(PROJECT_ROOT / 'meds_database_v2' / 'phase7_stories', 'json')} Hikaye Üretildi",
-            "total": "100 Altın Modelleme / Tüm Sorular",
-            "unit": "Klinik Hikaye Havuzu",
-            "created_files": "meds_database_v2/phase7_stories/*.json",
-            "pending": 0,
-            "eta": "Bitti ✓",
-            "order": 7
-        },
-        {
             "id": 75,
             "phase": "Faz 7.5",
             "name": "Faz 7.5: Amfi Ders Slaytlarını Resmi Müfredatla Düzenleme",
