@@ -250,7 +250,7 @@ ${act.response}`.trim();
 
 function loadGeminiV3RagChunks(): void {
   const file = process.env.MEDS_DATABASE_V3_RAG_CHUNKS
-    || '/home/indu/Masaüstü/MedSoru Project/meds_database/deepseek_meta_data/gemini_v3_rag_chunks.jsonl';
+    || '/home/indu/medsor/meds_database/deepseek_meta_data/gemini_v3_rag_chunks.jsonl';
   if (!fs.existsSync(file)) return;
   try {
     const rows = fs.readFileSync(file, 'utf8').split(/\r?\n/);

@@ -74,8 +74,8 @@ by many questions, so exact match is not expected). Stem-only and word-only were
 
 ## Paths
 
-- Proje kodu: `/home/indu/Masaüstü/MedSoru Project/meds`
-- Veritabanı klasörü (PDF'ler, `database_json/`, redakte sorular): `/home/indu/Masaüstü/MedSoru Project/meds_database`
+- Proje kodu: `/home/indu/medsor/meds`
+- Veritabanı klasörü (PDF'ler, `database_json/`, redakte sorular): `/home/indu/medsor/meds_database`
   — `.env` içindeki `MEDS_DATABASE_DIR` bunu gösterir; script/server varsayılanı da aynıdır. Yeni kodda bu yolu
   hardcode etme, `process.env.MEDS_DATABASE_DIR` kullan.
 

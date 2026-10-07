@@ -11,9 +11,9 @@ def norm(value):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--export-root', default='/home/indu/Masaüstü/MedSoru Project/meds_database_v3_export')
-    ap.add_argument('--curriculum', default='/home/indu/Masaüstü/MedSoru Project/meds/curriculum/kbu_tip_donem3_curriculum.json')
-    ap.add_argument('--output-dir', default='/home/indu/Masaüstü/MedSoru Project/meds_database/deepseek_meta_data')
+    ap.add_argument('--export-root', default='/home/indu/medsor/meds_database_v3_export')
+    ap.add_argument('--curriculum', default='/home/indu/medsor/meds/curriculum/kbu_tip_donem3_curriculum.json')
+    ap.add_argument('--output-dir', default='/home/indu/medsor/meds_database/deepseek_meta_data')
     args = ap.parse_args()
     root, out = Path(args.export_root), Path(args.output_dir); out.mkdir(parents=True, exist_ok=True)
     curriculum = json.loads(Path(args.curriculum).read_text())

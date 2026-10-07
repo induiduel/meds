@@ -33,7 +33,7 @@ dotenv.config({ path: ENV_PATH });
 const PAST_JSON_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
 const SRC_PAST_JSON_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 const LOCAL_RAG_PATH = path.join(ROOT_DIR, 'data', 'local_rag_chunks.json');
-const RAG_SORULAR_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/rag_sorular`;
+const RAG_SORULAR_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/rag_sorular`;
 
 function cleanForPostgres(data) {
   if (data === null || data === undefined) return data;

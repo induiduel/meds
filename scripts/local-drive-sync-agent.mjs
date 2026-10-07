@@ -27,7 +27,7 @@ const CONFIG = {
   driveFolderId: process.env.DRIVE_FOLDER_ID || '1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W',
   appServerUrl: process.env.APP_SERVER_URL || LOCAL_SERVER_URL,
   fallbackServerUrl: CLOUD_SERVER_URL,
-  desktopFolder: process.env.MEDS_DATABASE_DIR || `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}`,
+  desktopFolder: process.env.MEDS_DATABASE_DIR || `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}`,
   syncIntervalMinutes: parseInt(process.env.SYNC_INTERVAL_MINUTES || '60', 10),
   runAtHour: 18, // Hafta içi her gün 18:00
   adminEmail: 'nofrostlife@gmail.com',

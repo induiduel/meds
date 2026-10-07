@@ -5,8 +5,8 @@ import { PDFParse } from 'pdf-parse';
 
 const fileId = '1eam0LUNQ5GiXc7u5-PzO0BcEIRmicrpd';
 const fileName = '2022-2023 DÖNEM 3 KURUL 4 ÇIKMIŞLAR.pdf';
-const destDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/meds_sorular`;
-const txtDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/meds_sorular_txt`;
+const destDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/meds_sorular`;
+const txtDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/meds_sorular_txt`;
 const destPath = path.join(destDir, fileName);
 const destTxt = path.join(txtDir, '2022-2023 DÖNEM 3 KURUL 4 ÇIKMIŞLAR.txt');
 

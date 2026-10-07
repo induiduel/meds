@@ -17,7 +17,7 @@ from datetime import datetime
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "https://kgutsltgmqbnlxcnzrtl.supabase.co")
 SUPABASE_KEY = os.environ.get("SUPABASE_SECRET_KEY", os.environ.get("SUPABASE_KEY", ""))
 
-PROJECT_ROOT = Path("/home/indu/Masaüstü/MedSoru Project")
+PROJECT_ROOT = Path("/home/indu/medsor")
 MEDS_DATABASE_DIR = PROJECT_ROOT / "meds_database"
 DATA_DIR = PROJECT_ROOT / "meds" / "data"
 EXPORT_DIR = MEDS_DATABASE_DIR / "backups" / "supabase_export"

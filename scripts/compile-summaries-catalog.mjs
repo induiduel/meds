@@ -15,8 +15,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
-const SRC_SUMMARIES_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/redakte_ozet`;
-const FALLBACK_SUMMARIES_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/kurul_ders_notlari_ozet`;
+const SRC_SUMMARIES_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/redakte_ozet`;
+const FALLBACK_SUMMARIES_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/kurul_ders_notlari_ozet`;
 const OUT_DATA_PATH = path.join(ROOT_DIR, 'data', 'lectureSummariesCatalog.json');
 const OUT_SRC_PATH = path.join(ROOT_DIR, 'src', 'data', 'lectureSummariesCatalog.json');
 

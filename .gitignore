@@ -45,3 +45,6 @@ linux/
 
 # Öğrenme desteleri derlemede bölünür (scripts/vite/splitLearningDecks.ts)
 src/data/decks/
+
+# kişisel veri — herkese açık repoya girmez
+data/users.json

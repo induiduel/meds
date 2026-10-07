@@ -24,7 +24,7 @@ function downloadDriveBuffer(fileId) {
 
 async function downloadAll() {
   const realSlides = JSON.parse(fs.readFileSync('data/real_drive_slides.json', 'utf8'));
-  const destDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/ders_notlari_pdf`;
+  const destDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/ders_notlari_pdf`;
   if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
 
   console.log(`İndirilecek toplam ders slaytı: ${realSlides.length}`);

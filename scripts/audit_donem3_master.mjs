@@ -30,7 +30,7 @@ async function check() {
   let totalSb = 0;
 
   for (const c of committees) {
-    const localPath = path.join(`${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/database_json`, c.key, 'pastquestions.json');
+    const localPath = path.join(`${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/database_json`, c.key, 'pastquestions.json');
     let localCount = 0;
     if (fs.existsSync(localPath)) {
       const arr = JSON.parse(fs.readFileSync(localPath, 'utf8'));
@@ -53,7 +53,7 @@ async function check() {
   console.log('----------------------------------------------------');
 
   // Check redakte_sorular directory files
-  const redakteDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/redakte_sorular`;
+  const redakteDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/redakte_sorular`;
   if (fs.existsSync(redakteDir)) {
     const files = fs.readdirSync(redakteDir);
     console.log(`\n📁 redakte_sorular klasöründeki toplam JSON/Rapor dosyası: ${files.length}`);

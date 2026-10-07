@@ -73,7 +73,7 @@ async function sendWorkerHeartbeat(status = 'online', lastAction = '16:00 - 18:0
 }
 
 // --- YAPILANDIRMA ---
-const BASE_DATABASE_DIR = process.env.MEDS_DATABASE_DIR || `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}`;
+const BASE_DATABASE_DIR = process.env.MEDS_DATABASE_DIR || `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}`;
 const DIRS = {
   root: BASE_DATABASE_DIR,
   sorularPdf: path.join(BASE_DATABASE_DIR, 'meds_sorular'),

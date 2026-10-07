@@ -31,9 +31,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 
-const BASE_OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/database_json`;
+const BASE_OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/database_json`;
 const MEDS_DATA_DIR = path.join(ROOT_DIR, 'data');
-const MEDS_DATABASE_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}`;
+const MEDS_DATABASE_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}`;
 
 // 1. Kurul ve Sınav Tanımları (Dönem 1, 2, 3)
 const COMMITTEE_DEFINITIONS = [

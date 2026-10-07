@@ -111,12 +111,12 @@ flowchart LR
 ```bash
 # Boru hattını başlatma (uyku engelleyici ile)
 nohup /usr/bin/systemd-inhibit --what=idle:sleep --why=medsoru \
-  /home/indu/Masaüstü/MedSoru\ Project/meds/.venv-ocr/bin/python \
-  /home/indu/Masaüstü/MedSoru\ Project/meds/scripts/agents/pipeline_runner.py > /tmp/runner.log 2>&1 &
+  /home/indu/medsor/meds/.venv-ocr/bin/python \
+  /home/indu/medsor/meds/scripts/agents/pipeline_runner.py > /tmp/runner.log 2>&1 &
 
 # Otonom Watchdog denetleyicisini başlatma
-nohup /home/indu/Masaüstü/MedSoru\ Project/meds/.venv-ocr/bin/python \
-  /home/indu/Masaüstü/MedSoru\ Project/meds/scripts/agents/watchdog.py > /tmp/watchdog.log 2>&1 &
+nohup /home/indu/medsor/meds/.venv-ocr/bin/python \
+  /home/indu/medsor/meds/scripts/agents/watchdog.py > /tmp/watchdog.log 2>&1 &
 
 # GPU ve Donanım durumunu anlık izleme
 watch -n 1 nvidia-smi

@@ -22,7 +22,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-const BASE_DATABASE_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}`;
+const BASE_DATABASE_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}`;
 const IMAGES_DIR = path.join(BASE_DATABASE_DIR, 'meds_sorular_images');
 const TXT_DIR = path.join(BASE_DATABASE_DIR, 'meds_sorular_txt');
 

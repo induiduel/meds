@@ -2,11 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export const GEMINI_V3_DIR = process.env.MEDS_DATABASE_V3_EXPORT
-  || '/home/indu/Masaüstü/MedSoru Project/meds_database_v3_export';
+  || '/home/indu/medsor/meds_database_v3_export';
 const SOURCE_TAG = 'aistudio_curated_20261005';
 const SOURCE_LABEL = 'Gemini v3 · AI Studio küratörlü';
 const METADATA_DIR = process.env.MEDS_GEMINI_V3_METADATA_DIR
-  || '/home/indu/Masaüstü/MedSoru Project/meds_database/deepseek_meta_data';
+  || '/home/indu/medsor/meds_database/deepseek_meta_data';
 
 type V3Question = Record<string, any>;
 type V3Lecture = Record<string, any>;

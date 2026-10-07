@@ -21,7 +21,7 @@ import { createClient } from '@supabase/supabase-js';
 
 dotenv.config();
 
-const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/redakte_sorular`;
+const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/redakte_sorular`;
 if (!fs.existsSync(OUT_DIR)) {
   fs.mkdirSync(OUT_DIR, { recursive: true });
 }

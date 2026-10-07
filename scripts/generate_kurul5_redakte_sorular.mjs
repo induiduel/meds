@@ -24,8 +24,8 @@ import { createClient } from '@supabase/supabase-js';
 
 dotenv.config();
 
-const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/redakte_sorular`;
-const OZET_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/kurul_ders_notlari_ozet/Kurul 5`;
+const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/redakte_sorular`;
+const OZET_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/kurul_ders_notlari_ozet/Kurul 5`;
 
 // -------------------------------------------------------------
 // 1. TIBBİ PATOLOJİ (25 Soru)
@@ -2819,7 +2819,7 @@ async function run() {
   fs.writeFileSync(path.join(OUT_DIR, 'donem3_kurul5_tum_redakte_sorular.json'), JSON.stringify(all, null, 2), 'utf8');
 
   // Update local database_json/donem3k5/pastquestions.json
-  const dbJsonDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/database_json/donem3k5`;
+  const dbJsonDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/database_json/donem3k5`;
   if (!fs.existsSync(dbJsonDir)) {
     fs.mkdirSync(dbJsonDir, { recursive: true });
   }

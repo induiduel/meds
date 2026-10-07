@@ -49,7 +49,7 @@ def read_jsonl(path):
         except Exception: pass
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('--root', type=Path, default=Path('/home/indu/Masaüstü/MedSoru Project/meds_database_v3_export')); ap.add_argument('--output', type=Path)
+    ap = argparse.ArgumentParser(); ap.add_argument('--root', type=Path, default=Path('/home/indu/medsor/meds_database_v3_export')); ap.add_argument('--output', type=Path)
     a = ap.parse_args(); root = a.root; output = a.output or root / 'gemini_v3_rag_chunks.jsonl'; rows = []
     for q in read_jsonl(root / 'questions_curated.jsonl'):
         if q.get('curation_provenance', {}).get('tag') != TAG: continue

@@ -182,7 +182,7 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 - Duraksama / kurtarma desteği ile her adım anında diske yazılır (`meds_database_v2/phase7_stories`).
 
 ### Faz 7.5 (Aşama 7.5): Amfi Ders Slaytlarını Resmi Müfredat Standartlarında Düzenleme (`reconstruct_slides_phase7_5.py`)
-- **Resmi Müfredat Konumu:** [`curriculum/kbu_tip_donem3_curriculum.json`](file:///home/indu/Masaüstü/MedSoru%20Project/meds/curriculum/kbu_tip_donem3_curriculum.json)
+- **Resmi Müfredat Konumu:** [`curriculum/kbu_tip_donem3_curriculum.json`](file:///home/indu/medsor/meds/curriculum/kbu_tip_donem3_curriculum.json)
   - Karabük Üniversitesi Tıp Fakültesi Dönem 3'e ait 5 resmi kurulun tamamı (`TIP310`, `TIP320`, `TIP340`, `TIP350`, `TIP360`) AKTS, teorik ders saati, ilgili ana bilim dalları ve çekirdek konu başlıklarıyla (core_topics) bu dosyada saklanır.
 - **Müfredat Sınırları ve İzolasyon:**
   - Yapay zeka ve orkestratörler müfredat dışına çıkamaz; slayt düzenleme ve soru eşleştirme işlemlerinde yalnızca bu resmi ders başlıkları referans alınır.
@@ -198,7 +198,7 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 
 ## 5. Denetleyici ve Otonom Kurtarma (Watchdog)
 
-[`scripts/agents/watchdog.py`](file:///home/indu/Masaüstü/MedSoru%20Project/meds/scripts/agents/watchdog.py) sistemi sürekli izler:
+[`scripts/agents/watchdog.py`](file:///home/indu/medsor/meds/scripts/agents/watchdog.py) sistemi sürekli izler:
 - `llama-server` süreçlerinde `-ngl 3` (CPU taşması) görürse süreci temizler ve tam GPU ile yeniden başlatır.
 - Ajan kodları güncellendiğinde bayat Python süreçlerini otomatik tazeler.
 - `meds-ollama` konteyneri durursa anında `docker start` yapar.
@@ -211,7 +211,7 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 ## 6. Yeni Geliştirici ve AI Asistanı İçin Talimatlar
 
 1. **Kod Yazarken:**
-   - Herhangi bir model çağrısı yapacaksanız [`scripts/agents/lib.py`](file:///home/indu/Masaüstü/MedSoru%20Project/meds/scripts/agents/lib.py) içindeki `lib.chat()` ve `lib.embed()` fonksiyonlarını kullanın. Asla doğrudan kontrolsüz `requests.post` yazmayın.
+   - Herhangi bir model çağrısı yapacaksanız [`scripts/agents/lib.py`](file:///home/indu/medsor/meds/scripts/agents/lib.py) içindeki `lib.chat()` ve `lib.embed()` fonksiyonlarını kullanın. Asla doğrudan kontrolsüz `requests.post` yazmayın.
    - Dışarıdan bilgi uydurmayı engelleyen koruma mekanizmalarını (`support_ratio`) bozmayın.
 2. **Sistem Durumunu İzlerken:**
    - `http://localhost:8085` kokpit arayüzünü kontrol edin.
@@ -292,7 +292,7 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
   4. Web arayüzü ve API sunucusu (`server.ts` - Port 3000) canlıya geçer.
 
 ### 10.2. Web Otomasyon Kokpiti & Dashboard Entegrasyonu
-- **Merkezi Runner:** [`scripts/automation-runner.mjs`](file:///home/indu/Masaüstü/MedSoru%20Project/meds/scripts/automation-runner.mjs) içine `phase5-multi-ai-consensus` ve `phase6-deep-metadata-generator` boru hatları eklenmiştir; web UI üzerinden tek tıkla tetiklenebilir ve logları izlenebilir.
-- **Canlı Telemetri:** [`dashboard_server.py`](file:///home/indu/Masaüstü/MedSoru%20Project/meds/dashboard_server.py) Port 8085 üzerinde Aşama 6 (Konsensüs) ve Aşama 7 (Hiper-Metadata) ilerlemelerini, günlük kota durumunu ve karantinaya alınan soruları canlı olarak gösterir.
+- **Merkezi Runner:** [`scripts/automation-runner.mjs`](file:///home/indu/medsor/meds/scripts/automation-runner.mjs) içine `phase5-multi-ai-consensus` ve `phase6-deep-metadata-generator` boru hatları eklenmiştir; web UI üzerinden tek tıkla tetiklenebilir ve logları izlenebilir.
+- **Canlı Telemetri:** [`dashboard_server.py`](file:///home/indu/medsor/meds/dashboard_server.py) Port 8085 üzerinde Aşama 6 (Konsensüs) ve Aşama 7 (Hiper-Metadata) ilerlemelerini, günlük kota durumunu ve karantinaya alınan soruları canlı olarak gösterir.
 
 

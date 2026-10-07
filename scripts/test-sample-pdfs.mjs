@@ -40,7 +40,7 @@ async function testMultiple() {
 
   for (const item of samples) {
     const safeName = sanitizeFileName(item.name);
-    const destPath = path.join(`${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/meds_sorular`, safeName);
+    const destPath = path.join(`${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/meds_sorular`, safeName);
     console.log('\nİndiriliyor:', safeName);
     console.log('Kaynak Yol:', item.fullPath);
     await downloadFile(item.id, destPath);

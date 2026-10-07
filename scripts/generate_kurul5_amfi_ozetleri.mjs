@@ -11,8 +11,8 @@
 import fs from 'fs';
 import path from 'path';
 
-const SRC_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/kurul_ders_notlari_txt/Kurul 5`;
-const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/kurul_ders_notlari_ozet/Kurul 5`;
+const SRC_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/kurul_ders_notlari_txt/Kurul 5`;
+const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/kurul_ders_notlari_ozet/Kurul 5`;
 
 if (!fs.existsSync(OUT_DIR)) {
   fs.mkdirSync(OUT_DIR, { recursive: true });

@@ -19,7 +19,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 
-const BASE_DB_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}`;
+const BASE_DB_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}`;
 const DERS_PDF_DIR = path.join(BASE_DB_DIR, 'ders_notlari_pdf');
 const DERS_TXT_DIR = path.join(BASE_DB_DIR, 'ders_notlari_txt');
 const K1_PDF_DIR = path.join(BASE_DB_DIR, 'kurul_ders_notlari', 'Kurul 1');

@@ -3182,7 +3182,7 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             params = urllib.parse.parse_qs(parsed.query)
             term = params.get("term", [""])[0]
 
-            graph_file = Path("/home/indu/Masaüstü/MedSoru Project/meds_temp/temp3/advanced_ai/medical_knowledge_graph.json")
+            graph_file = Path("/home/indu/medsor/meds_temp/temp3/advanced_ai/medical_knowledge_graph.json")
             data = {"nodes": [], "edges": []}
             if graph_file.exists():
                 try:

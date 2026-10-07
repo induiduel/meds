@@ -5293,7 +5293,7 @@ app.post('/api/automation/windows-service-notify', requireAdmin, (req, res) => {
 // Stream local lecture note PDF file directly
 app.get('/api/lecture-pdf/:filename', (req, res) => {
   try {
-    const baseDir = process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database';
+    const baseDir = process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database';
     const notlarDir = path.join(baseDir, 'ders_notlari_pdf');
     const rawFilename = decodeURIComponent(req.params.filename);
     const safeFilename = path.basename(rawFilename);
@@ -5330,7 +5330,7 @@ app.get('/api/lecture-pdf/:filename', (req, res) => {
 // Automation: Comprehensive live file & download status visualizer
 app.get('/api/automation/drive-files-status', (req, res) => {
   try {
-    const baseDir = process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database';
+    const baseDir = process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database';
     const sorularDir = path.join(baseDir, 'meds_sorular');
     const notlarDir = path.join(baseDir, 'ders_notlari_pdf');
     const notlarTxtDir = path.join(baseDir, 'ders_notlari_txt');

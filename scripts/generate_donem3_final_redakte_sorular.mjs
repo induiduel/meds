@@ -19,9 +19,9 @@ import { createClient } from '@supabase/supabase-js';
 
 dotenv.config();
 
-const RAW_JSON_PATH = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/database_json/donem3f/pastquestions.json`;
-const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/redakte_sorular`;
-const DB_JSON_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/database_json/donem3f`;
+const RAW_JSON_PATH = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/database_json/donem3f/pastquestions.json`;
+const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/redakte_sorular`;
+const DB_JSON_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/database_json/donem3f`;
 
 // Temel Tıbbi Düzeltme & İzah Sözlüğü (Kritik çıkmış soru şablonları için)
 const MEDICAL_KNOWLEDGE_BASE = {

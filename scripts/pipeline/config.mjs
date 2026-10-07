@@ -1,6 +1,6 @@
 // MedSoru pipeline: ortak yollar. Akış: Drive -> downloads -> temp -> database
 import path from 'path';
-export const PROJECT_ROOT = process.env.MEDS_PROJECT_ROOT || '/home/indu/Masaüstü/MedSoru Project';
+export const PROJECT_ROOT = process.env.MEDS_PROJECT_ROOT || '/home/indu/medsor';
 export const DOWNLOADS_DIR = process.env.MEDS_DOWNLOADS_DIR || path.join(PROJECT_ROOT, 'meds_downloads');
 export const TEMP_DIR = process.env.MEDS_TEMP_DIR || path.join(PROJECT_ROOT, 'meds_temp');
 export const DATABASE_DIR = process.env.MEDS_DATABASE_DIR || path.join(PROJECT_ROOT, 'meds_database');

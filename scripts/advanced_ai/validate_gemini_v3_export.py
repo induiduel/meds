@@ -22,7 +22,7 @@ def tagged(row):
     return row.get('curation_provenance', {}).get('tag') == TAG or row.get('curation_tag') == TAG or row.get('source_tag') == TAG
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('--root', type=Path, default=Path('/home/indu/Masaüstü/MedSoru Project/meds_database_v3_export')); ap.add_argument('--report', type=Path)
+    ap = argparse.ArgumentParser(); ap.add_argument('--root', type=Path, default=Path('/home/indu/medsor/meds_database_v3_export')); ap.add_argument('--report', type=Path)
     a = ap.parse_args(); root = a.root; report = a.report or root / 'integration_report.json'
     q, qe = jsonl(root / 'questions_curated.jsonl'); l, le = jsonl(root / 'lecture_notes_master_curated.jsonl'); rej, re = jsonl(root / 'audit_rejected_questions.jsonl')
     thesaurus_path = root / 'medical_thesaurus_expanded.json'

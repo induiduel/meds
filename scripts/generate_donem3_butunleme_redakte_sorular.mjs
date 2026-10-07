@@ -19,9 +19,9 @@ import { createClient } from '@supabase/supabase-js';
 
 dotenv.config();
 
-const RAW_JSON_PATH = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/meds_sorular_txt/parsed_butunleme_raw.json`;
-const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/redakte_sorular`;
-const DB_JSON_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/database_json/donem3b`;
+const RAW_JSON_PATH = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/meds_sorular_txt/parsed_butunleme_raw.json`;
+const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/redakte_sorular`;
+const DB_JSON_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/database_json/donem3b`;
 
 function sanitizeText(str) {
   if (!str || typeof str !== 'string') return '';

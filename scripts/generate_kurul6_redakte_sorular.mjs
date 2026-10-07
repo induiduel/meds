@@ -23,7 +23,7 @@ import { createClient } from '@supabase/supabase-js';
 
 dotenv.config();
 
-const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/redakte_sorular`;
+const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/redakte_sorular`;
 
 // -------------------------------------------------------------
 // 1. İÇ HASTALIKLARI - ENDOKRİNOLOJİ VE GERİATRİ (30 Soru)
@@ -2680,7 +2680,7 @@ export async function run() {
   fs.writeFileSync(path.join(OUT_DIR, 'donem3_kurul6_tum_redakte_sorular.json'), JSON.stringify(all, null, 2), 'utf8');
 
   // database_json/donem3k6/pastquestions.json güncelle
-  const dbJsonDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/database_json/donem3k6`;
+  const dbJsonDir = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/database_json/donem3k6`;
   if (!fs.existsSync(dbJsonDir)) {
     fs.mkdirSync(dbJsonDir, { recursive: true });
   }
