@@ -117,6 +117,7 @@ def pop_queue() -> str | None:
 
 def run_queued(state: dict):
     """Elle istenen adımlar: tur sırasını bozmaz, tamamlanan listesine eklenmez."""
+    wait_if_paused()
     while (key := pop_queue()):
         _, name, cmd, timeout = next(s for s in STEPS if s[0] == key)
         log(f"elle istendi: {name}")
@@ -148,6 +149,21 @@ def effective(key: str, cmd: list[str], timeout: int) -> tuple[list[str], int]:
     extra = shlex.split(st.get("ek_arg") or "") if st.get("ek_arg") else []
     to = int(st["zaman_asimi_dk"]) * 60 if str(st.get("zaman_asimi_dk") or "").isdigit() and int(st["zaman_asimi_dk"]) > 0 else timeout
     return cmd + extra, to
+
+
+# Panelden "Tümünü durdur": bu dosya varken zincir yeni adım başlatmaz (çalışan adımı panel sonlandırır)
+PAUSE = TEMP / "state" / "phase_pause.json"
+
+
+def wait_if_paused():
+    noted = False
+    while PAUSE.exists():
+        if not noted:
+            log("⏸ tüm fazlar panelden durduruldu; devam komutu bekleniyor")
+            noted = True
+        time.sleep(15)
+    if noted:
+        log("▶ devam ettiriliyor")
 
 
 def record(state: dict, key: str, res: dict):
@@ -253,6 +269,7 @@ def main():
                 lock.close()
                 os.execv(sys.executable, [sys.executable] + sys.argv)
             run_queued(state)
+            wait_if_paused()
             if not Path(cmd[1]).exists():
                 log(f"atlandı (betik yok): {cmd[1]}")
                 continue

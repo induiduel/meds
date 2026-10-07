@@ -2665,6 +2665,7 @@ HTML_PAGE = """<!DOCTYPE html>
         <label class="flex items-center gap-1"><input type="checkbox" id="pb-compact"> Yoğun</label>
         <label class="flex items-center gap-1">Açılış
             <select id="pb-tab"><option value="overview">Genel</option><option value="stages">Aşamalar</option><option value="master">Fazlar</option><option value="rejected">Reddedilen</option></select></label>
+        <button id="pb-stopall" class="px-2 py-0.5 rounded-md font-semibold bg-rose-600 hover:bg-rose-500 text-white">Tüm fazları durdur</button>
         <label class="flex items-center gap-1" title="Sunucu /api/stats verisini bu aralıkla arka planda hesaplar">Sunucu
             <select id="pb-srv"><option value="3">3 sn</option><option value="5">5 sn</option><option value="10">10 sn</option><option value="30">30 sn</option><option value="60">60 sn</option></select></label>
     </div>
@@ -2776,6 +2777,24 @@ HTML_PAGE = """<!DOCTYPE html>
             $('pb-age').textContent = cfg.pause ? 'duraklatıldı' : age === null ? 'veri bekleniyor' : `güncellendi ${age} sn önce` + (srv !== null && currentTab === 'overview' ? ` · sunucu ${srv} sn önce hesapladı` : '');
         }, 1000);
 
+        // Tüm fazları durdur / devam ettir
+        const stopBtn = $('pb-stopall');
+        const paintStop = (paused) => {
+            stopBtn.textContent = paused ? 'Fazları devam ettir' : 'Tüm fazları durdur';
+            stopBtn.className = 'px-2 py-0.5 rounded-md font-semibold text-white ' + (paused ? 'bg-emerald-600 hover:bg-emerald-500' : 'bg-rose-600 hover:bg-rose-500');
+            stopBtn.dataset.paused = paused ? '1' : '';
+        };
+        const refreshPause = () => origFetch('/api/master/pause_state').then(r => r.json()).then(j => paintStop(j.durduruldu)).catch(() => {});
+        refreshPause(); setInterval(refreshPause, 10000);
+        stopBtn.onclick = async () => {
+            const paused = stopBtn.dataset.paused === '1';
+            if (!paused && !confirm('Tüm fazlar durdurulsun mu? Çalışan adım sonlandırılır, zincir ve Aşama 2–4 duraklar. Devam ettirince kaldığı yerden sürer.')) return;
+            const r = await origFetch(paused ? '/api/master/resume_all' : '/api/master/stop_all', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' });
+            const j = await r.json().catch(() => ({}));
+            paintStop(!!j.durduruldu);
+            if (j.sonlandirilan && j.sonlandirilan.length) alert('Sonlandırılan: ' + j.sonlandirilan.join(', '));
+        };
+
         if (cfg.tab && cfg.tab !== 'overview' && document.getElementById('nav-btn-' + cfg.tab)) switchTab(cfg.tab);
     })();
     </script>
@@ -2855,6 +2874,44 @@ def apply_real_status(stats: dict) -> dict:
         else:
             card["veri_kaynagi"] = "özet (sayısal hedef yok)"
     return stats
+
+
+PHASE_PAUSE_FILE = TEMP_DIR / "state" / "phase_pause.json"
+
+
+def stop_all_phases() -> dict:
+    """Tüm fazları durdur: zincir duraklar (yeni adım başlamaz), çalışan faz/Faz 14 süreçleri sonlandırılır,
+    Aşama 2–4 orkestratörü (meds-pipeline) kapatılır. Durum dosyaları korunur; devam edince kaldığı yerden sürer."""
+    import signal
+    PHASE_PAUSE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    PHASE_PAUSE_FILE.write_text(json.dumps({"durduruldu": True, "zaman": time.strftime("%Y-%m-%dT%H:%M:%S")}), encoding="utf-8")
+    killed = []
+    me = os.getpid()
+    markers = ("/scripts/advanced_ai/", "/scripts/agents/stage", "phase14_")
+    for d in Path("/proc").iterdir():
+        if not d.name.isdigit() or int(d.name) == me:
+            continue
+        try:
+            cmd = (d / "cmdline").read_bytes().replace(b"\0", b" ").decode("utf-8", "replace")
+        except Exception:
+            continue
+        if "python" in cmd and any(m in cmd for m in markers) and "phase_cycle.py" not in cmd:
+            try:
+                os.killpg(os.getpgid(int(d.name)), signal.SIGTERM)
+            except Exception:
+                try:
+                    os.kill(int(d.name), signal.SIGTERM)
+                except Exception:
+                    continue
+            killed.append(cmd.split("/")[-1][:60])
+    subprocess.run(["systemctl", "--user", "stop", "meds-pipeline"], capture_output=True)
+    return {"durduruldu": True, "sonlandirilan": killed}
+
+
+def resume_all_phases() -> dict:
+    PHASE_PAUSE_FILE.unlink(missing_ok=True)
+    subprocess.run(["systemctl", "--user", "start", "meds-pipeline"], capture_output=True)
+    return {"durduruldu": False}
 
 
 def phase_detail(key: str) -> dict:
@@ -3567,6 +3624,11 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.send_header("Content-Type", "application/json")
             self.end_headers()
             self.wfile.write(json.dumps(phase_detail(key), ensure_ascii=False).encode("utf-8"))
+        elif self.path == "/api/master/pause_state":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"durduruldu": PHASE_PAUSE_FILE.exists()}).encode("utf-8"))
         elif self.path == "/api/panel/settings":
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
@@ -3609,6 +3671,13 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
         except Exception:
             payload = {}
 
+        if self.path in ("/api/master/stop_all", "/api/master/resume_all"):
+            res = stop_all_phases() if self.path.endswith("stop_all") else resume_all_phases()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(res, ensure_ascii=False).encode("utf-8"))
+            return
         if self.path in ("/api/master/phase_settings", "/api/panel/settings"):
             if self.path == "/api/master/phase_settings":
                 key = str(payload.get("key") or "")

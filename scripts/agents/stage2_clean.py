@@ -15,6 +15,7 @@ Kullanım: stage2_clean.py [--limit N] [--force] [--no-llm] [--only SUBSTR]
 from __future__ import annotations
 
 import argparse
+import os
 import concurrent.futures
 import difflib
 import re
@@ -438,7 +439,9 @@ if __name__ == "__main__":
     ap.add_argument("--no-llm", action="store_true")
     ap.add_argument("--only")
     a = ap.parse_args()
-    use_llm = not a.no_llm and lib.ollama_up()
-    if not a.no_llm and not use_llm:
-        log.warning("Ollama kapalı: LLM adımları atlanıyor (yalnız deterministik onarım)")
+    # Aşama 1–2 yalnız yerel kaynaklarla (kural tabanlı onarım + soru ayrıştırma); bulut/LLM yok. Ham soru Faz 14'e bırakılır.
+    # LLM'i yeniden açmak için MEDS_STAGE2_LLM=1 (önerilmez).
+    use_llm = not a.no_llm and os.environ.get("MEDS_STAGE2_LLM") == "1"
+    if not use_llm:
+        log.info("Aşama 2: yalnız kural tabanlı onarım ve soru ayrıştırma (LLM/bulut kapalı)")
     print("işlenen:", run(a.limit, a.force, use_llm, a.only))

@@ -90,7 +90,8 @@ def ocr_image(img) -> str:
 
 
 # Bulut görsel okuma (Gemini) varsayılan olarak açık: taranmış sayfalarda en yüksek doğruluk. Kapatmak: MEDS_OCR_CLOUD=0
-CLOUD_OCR = os.environ.get("MEDS_OCR_CLOUD", "1") != "0"
+# Aşama 1 yalnız yerel kaynaklarla çalışır (PyMuPDF + Tesseract). Bulut görsel OCR yalnız MEDS_OCR_CLOUD=1 ile açılır.
+CLOUD_OCR = os.environ.get("MEDS_OCR_CLOUD", "0") == "1"
 _WORD = re.compile(r"[0-9A-Za-zÇĞİÖŞÜçğıöşüÂâÎîÛû]{4,}")
 
 
@@ -139,7 +140,7 @@ def read_image_text(pil_img, use_ocr: bool, use_vision: bool, cloud_needs_text: 
       * Tesseract okuyamadıysa (çok kısa/çöp) → bulut_ocr_dogrulanamadi (yine de en iyi kaynak)
       * örtüşme düşük ve Tesseract okunabilirse → Tesseract (bulut metni şüpheli)
     """
-    use_cloud = use_vision or CLOUD_OCR
+    use_cloud = CLOUD_OCR   # --vision artık bulutu açmaz; yalnız MEDS_OCR_CLOUD=1
     if not use_ocr and not use_cloud:
         return "", "yok"
     proc_img = preprocess_image_for_ocr(pil_img)
@@ -175,7 +176,9 @@ def read_image_text(pil_img, use_ocr: bool, use_vision: bool, cloud_needs_text: 
         print(f"  [uyarı] bulut metni Tesseract'la az örtüşüyor (%{sup * 100:.0f}); Tesseract kullanıldı", file=sys.stderr)
     if tess:
         return tess, "ocr"
-    # ikisi de yoksa son çare web OCR
+    # ikisi de yoksa son çare web OCR (dış servis: yalnız bulut açıkken)
+    if not CLOUD_OCR:
+        return "", "noise_dropped"
     buf = io.BytesIO()
     pil_img.save(buf, format="PNG")
     web = clean_raw(online_web_ocr(buf.getvalue()))
