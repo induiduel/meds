@@ -87,6 +87,7 @@ const overridesFile = () => path.join(dbDir(), 'derived', 'manual_overrides', 'f
 
 export type PhaseOverride = {
   gizle?: string[]; // gizlenecek bölümler: slayt | faz6 | kisaltmalar | terimler | mufredat | varliklar
+  kaldir?: string[]; // kaldırılan bölümler (sitede yok + gezginde "kaldırıldı"); veri dosyası silinmez, geri alınabilir
   slaytlar?: { kaynak: string; sayfa: number; alinti?: string }[];
   kazanim?: { kurul?: number; ders?: string; konu?: string; kazanim?: string };
   kisaltmalar?: Record<string, string>;
@@ -123,7 +124,7 @@ function applyOverride(item: any, ov: PhaseOverride): any {
   if (ov.slaytlar?.length) out.slayt = { guven: 'elle', slaytlar: ov.slaytlar };
   if (ov.kazanim) out.mufredat = { guven: 'elle', dogrulama: 'elle', kazanimlar: [ov.kazanim] };
   if (ov.kisaltmalar) out.faz6_5 = { ...(out.faz6_5 || { terimler: [], esanlamlilar: {} }), kisaltmalar: ov.kisaltmalar };
-  for (const g of ov.gizle || []) {
+  for (const g of [...(ov.gizle || []), ...(ov.kaldir || [])]) {
     if (g === 'slayt') delete out.slayt;
     if (g === 'faz6') delete out.faz6;
     if (g === 'mufredat') { delete out.mufredat; delete out.faz8; }

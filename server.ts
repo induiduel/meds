@@ -928,6 +928,17 @@ app.put('/api/admin/phases/question/:id/override', requireAdmin, (req, res) => {
   res.json({ ok: true, duzeltme: saved, gorunen: getQuestionInsights(String(req.params.id)) });
 });
 
+// Yeniden incele: hakem kuyruğuna elle istek (bir sonraki hakem turunda önce işlenir)
+app.post('/api/admin/phases/question/:id/rereview', requireAdmin, (req, res) => {
+  const tur = String(req.body?.tur || '');
+  if (!['slayt', 'konu'].includes(tur)) return res.status(400).json({ error: 'tur slayt ya da konu olmalı' });
+  const tempDir = process.env.MEDS_TEMP_DIR || path.resolve(process.cwd(), '..', 'meds_temp');
+  const f = path.join(tempDir, 'hakem', 'elle_istek.jsonl');
+  fs.mkdirSync(path.dirname(f), { recursive: true });
+  fs.appendFileSync(f, JSON.stringify({ soru_id: String(req.params.id), tur, zaman: new Date().toISOString(), isteyen: String(req.headers['x-admin-email'] || 'yerel') }) + '\n');
+  res.json({ ok: true, mesaj: `Hakem kuyruğuna eklendi (${tur}); bir sonraki hakem turunda önce incelenir.` });
+});
+
 app.post('/api/admin/phases/question/:id/test', requireAdmin, async (req, res) => {
   try {
     const q = String(req.body?.query || '').slice(0, 2000);

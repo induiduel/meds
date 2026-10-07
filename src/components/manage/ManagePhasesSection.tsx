@@ -3,6 +3,7 @@ import { Search, Save, RotateCcw, FlaskConical, Code2, ChevronLeft, ChevronRight
 import { safeJsonFetch } from '../../services/api';
 import { QuestionInsightsPanel, clearInsightsCache } from '../QuestionInsightsPanel';
 import { toast } from '../ui/Toast';
+import { ApiService } from '../../services/api';
 
 /**
  * "Faz verileri": bir çıkmış sorunun tüm faz çıktılarını (Faz 5/6/6.5/8/11/13, Öğren, sınav başlığı müfredatı,
@@ -12,6 +13,7 @@ import { toast } from '../ui/Toast';
 type Slide = { kaynak: string; sayfa: number; alinti?: string };
 type Override = {
   gizle?: string[];
+  kaldir?: string[];
   slaytlar?: Slide[];
   kazanim?: { kurul?: number; ders?: string; konu?: string; kazanim?: string };
   kisaltmalar?: Record<string, string>;
@@ -143,6 +145,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
     const hasK = Boolean(k.ders || k.konu || k.kazanim);
     const ov: Override = {
       ...(form.gizle.length ? { gizle: form.gizle } : {}),
+      ...(detail?.duzeltme?.kaldir?.length ? { kaldir: detail.duzeltme.kaldir } : {}),
       ...(slaytlar.length ? { slaytlar } : {}),
       ...(hasK ? { kazanim: { ...k, kurul: k.kurul ? Number(k.kurul) : undefined } } : {}),
       ...(Object.keys(kisaltmalar).length ? { kisaltmalar } : {}),
@@ -168,6 +171,67 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
     clearInsightsCache(selId);
     setPreviewKey((k) => k + 1);
     await load(selId);
+  };
+
+  // Bölüm işlemi (gizle / kaldır) — mevcut elle düzeltmeyi koruyarak tek tıkla kaydeder
+  const toggleSection = async (kind: 'gizle' | 'kaldir', key: string) => {
+    if (!selId || !detail) return;
+    const ov: Override = { ...(detail.duzeltme || {}) };
+    delete (ov as any).guncelleyen;
+    delete (ov as any).guncelleme;
+    const list = new Set(ov[kind] || []);
+    if (list.has(key)) list.delete(key);
+    else list.add(key);
+    if (list.size) ov[kind] = [...list];
+    else delete ov[kind];
+    const r = await safeJsonFetch<any>(`/api/admin/phases/question/${encodeURIComponent(selId)}/override`, {
+      method: 'PUT',
+      headers,
+      body: JSON.stringify(ov),
+    });
+    if (!r.ok) {
+      toast.error('İşlem kaydedilemedi');
+      return;
+    }
+    toast.success(`${key}: ${list.has(key) ? (kind === 'gizle' ? 'gizlendi' : 'kaldırıldı') : 'geri alındı'}`);
+    clearInsightsCache(selId);
+    setPreviewKey((k) => k + 1);
+    await load(selId);
+  };
+
+  const rereview = async (tur: 'slayt' | 'konu' | 'faz14') => {
+    if (!selId) return;
+    if (tur === 'faz14') {
+      try {
+        const r = await ApiService.reEvaluateUnchangedPastQuestionReviews(adminEmail, selId);
+        toast.success(r.message || 'Faz 14 kuyruğuna alındı');
+      } catch (e: any) {
+        toast.error(`Faz 14: ${e?.message || 'bu soru için Faz 14 kaydı yok'}`);
+      }
+      return;
+    }
+    const r = await safeJsonFetch<any>(`/api/admin/phases/question/${encodeURIComponent(selId)}/rereview`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ tur }),
+    });
+    if (r.ok) toast.success(r.data?.mesaj || 'Hakem kuyruğuna eklendi');
+    else toast.error('Hakem kuyruğuna eklenemedi');
+  };
+
+  // Kart başlığına bölüm işlemleri
+  const SecActions = ({ k }: { k: string }) => {
+    const ov = detail?.duzeltme || {};
+    const hid = (ov.gizle || []).includes(k);
+    const rem = (ov.kaldir || []).includes(k);
+    const b = 'h-7 px-2 rounded-md text-[11.5px] font-semibold border border-line cursor-pointer hover:bg-canvas';
+    return (
+      <span className="inline-flex gap-1 normal-case tracking-normal">
+        {(hid || rem) && <span className={`h-7 px-2 rounded-md text-[11.5px] inline-flex items-center ${rem ? 'bg-rose-50 text-rose-700' : 'bg-warn-soft text-warn'}`}>{rem ? 'kaldırıldı' : 'gizli'}</span>}
+        <button type="button" className={b} onClick={() => toggleSection('gizle', k)}>{hid ? 'Göster' : 'Gizle'}</button>
+        <button type="button" className={`${b} ${rem ? '' : 'text-rose-700'}`} onClick={() => toggleSection('kaldir', k)}>{rem ? 'Geri al' : 'Kaldır'}</button>
+      </span>
+    );
   };
 
   const runTest = async () => {
@@ -250,6 +314,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
                 <tr key={i} onClick={() => load(String(r.soru_id))} className={`border-t border-line cursor-pointer hover:bg-canvas ${r.soru_id === selId ? 'bg-canvas' : ''}`}>
                   <td className="py-1.5 pr-2 align-top max-w-[22rem]">
                     <span className="block truncate text-ink" title={r._kok}>{r._kok || <span className="font-mono text-ink-3">{r.soru_id}</span>}</span>
+                    {r._durum && <span className={`text-[11px] mr-1.5 ${r._durum === 'kaldırıldı' ? 'text-rose-700' : 'text-warn'}`}>{r._durum}</span>}
                     {r._elle && <span className="text-[11px] text-warn">elle düzeltildi</span>}
                   </td>
                   {cols.map((k) => (
@@ -322,7 +387,31 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
                 Elle düzeltilmiş · {detail.duzeltme?.guncelleyen} · {detail.duzeltme?.guncelleme?.slice(0, 16).replace('T', ' ')}
               </p>
             )}
+            <div className="flex flex-wrap items-center gap-1.5 text-[12.5px]">
+              <span className="text-ink-3">Yeniden incele:</span>
+              <button type="button" onClick={() => rereview('slayt')} className="h-8 px-2.5 rounded-lg border border-line hover:bg-canvas cursor-pointer">Hakem · slayt</button>
+              <button type="button" onClick={() => rereview('konu')} className="h-8 px-2.5 rounded-lg border border-line hover:bg-canvas cursor-pointer">Hakem · konu</button>
+              <button type="button" onClick={() => rereview('faz14')} className="h-8 px-2.5 rounded-lg border border-line hover:bg-canvas cursor-pointer">Faz 14 (soru düzeltme)</button>
+              <span className="flex-1" />
+              {detail.duzeltme && (
+                <button type="button" onClick={() => save(true)} className="h-8 px-2.5 rounded-lg border border-rose-200 text-rose-700 hover:bg-rose-50 cursor-pointer">Tüm elle düzeltmeleri sil</button>
+              )}
+            </div>
           </div>
+
+          {detail.duzeltme && (
+            <div className={card}>
+              <h3 className={h3}>Karşılaştırma · faz çıktısı ↔ sitede görünen</h3>
+              {(['mufredat', 'slayt', 'faz6_5', 'faz6', 'varliklar'] as const)
+                .filter((k) => JSON.stringify(ham?.[k] ?? null) !== JSON.stringify(detail.gorunen?.[k] ?? null))
+                .map((k) => (
+                  <div key={k} className="grid gap-2 md:grid-cols-2">
+                    <div><p className="m-0 mb-1 text-[12px] font-semibold text-ink-3">{k} · faz çıktısı</p><Json value={ham?.[k] ?? null} /></div>
+                    <div><p className="m-0 mb-1 text-[12px] font-semibold text-accent">{k} · sitede görünen</p><Json value={detail.gorunen?.[k] ?? null} /></div>
+                  </div>
+                ))}
+            </div>
+          )}
 
           {showRaw ? (
             <div className="grid gap-3 md:grid-cols-2">
@@ -332,7 +421,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
           ) : (
             <div className="grid gap-3 md:grid-cols-2">
               <div className={card}>
-                <h3 className={h3}>Müfredat</h3>
+                <div className="flex items-center justify-between gap-2"><h3 className={h3}>Müfredat</h3><SecActions k="mufredat" /></div>
                 <p className="m-0 text-[13px]">
                   <b>Sınav başlığı:</b>{' '}
                   {kay.mufredat_sinav_basligi ? `Kurul ${kay.mufredat_sinav_basligi.kurul} · ${kay.mufredat_sinav_basligi.ders} · ${kay.mufredat_sinav_basligi.konu}` : '—'}
@@ -346,7 +435,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
                 </p>
               </div>
               <div className={card}>
-                <h3 className={h3}>Slaytlar (Faz 11) · güven {ham.slayt?.guven || '—'}</h3>
+                <div className="flex items-center justify-between gap-2"><h3 className={h3}>Slaytlar (Faz 11) · güven {ham.slayt?.guven || '—'}</h3><SecActions k="slayt" /></div>
                 {(ham.slayt?.slaytlar || []).map((s: any) => (
                   <p key={`${s.kaynak}${s.sayfa}`} className="m-0 text-[13px]">
                     <b>{s.kaynak}</b> · s.{s.sayfa} <span className="text-ink-3">{(s.gerekce || []).join(', ')}</span>
@@ -358,14 +447,14 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
                 </p>
               </div>
               <div className={card}>
-                <h3 className={h3}>Kısaltmalar · terimler</h3>
+                <div className="flex items-center justify-between gap-2"><h3 className={h3}>Kısaltmalar · terimler</h3><SecActions k="kisaltmalar" /></div>
                 <p className="m-0 text-[13px]">
                   {Object.entries(ham.faz6_5?.kisaltmalar || {}).map(([k, v]) => `${k} = ${v}`).join(' · ') || 'Kısaltma yok'}
                 </p>
                 <p className="m-0 text-[13px] text-ink-2">{[...(ham.faz6_5?.terimler || []), ...(ham.faz5?.terimler || [])].join(', ') || '—'}</p>
               </div>
               <div className={card}>
-                <h3 className={h3}>Faz 13 varlıkları ({(kay.varliklar_tum || []).length})</h3>
+                <div className="flex items-center justify-between gap-2"><h3 className={h3}>Faz 13 varlıkları ({(kay.varliklar_tum || []).length})</h3><SecActions k="varliklar" /></div>
                 <div className="flex flex-wrap gap-1.5">
                   {(kay.varliklar_tum || []).map((v: any, i: number) => (
                     <span
@@ -380,7 +469,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
                 <p className="m-0 text-[11.5px] text-ink-3">Yeşil: kimlikli (sitede görünür) · gri: kimliksiz GLiNER tahmini (gizli)</p>
               </div>
               <div className={card}>
-                <h3 className={h3}>Ayırıcı tanı (Faz 6) · {ham.faz6 ? (ham.faz6.dogrulanmadi ? 'doğrulanmadı' : 'materyalle desteklenen') : '—'}</h3>
+                <div className="flex items-center justify-between gap-2"><h3 className={h3}>Ayırıcı tanı (Faz 6) · {ham.faz6 ? (ham.faz6.dogrulanmadi ? 'doğrulanmadı' : 'materyalle desteklenen') : '—'}</h3><SecActions k="faz6" /></div>
                 {(ham.faz6?.ayirici_tani || []).map((d: any) => (
                   <p key={d.hastalik} className="m-0 text-[13px]"><b>{d.hastalik}</b> — {d.ozellik}</p>
                 ))}

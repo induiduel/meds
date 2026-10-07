@@ -233,10 +233,16 @@ export function explore(q: ExploreQuery, stemOf: (id: string) => string) {
   }
   const boyut = Math.min(Math.max(q.boyut || 50, 10), 200);
   const sayfa = Math.max(q.sayfa || 1, 1);
-  const parca = rows.slice((sayfa - 1) * boyut, sayfa * boyut).map((r) => ({
-    ...r,
-    _kok: stemOf(String(r.soru_id)).slice(0, 160),
-    _elle: Boolean(getPhaseOverride(String(r.soru_id))),
-  }));
+  const OV_KEY: Record<string, string> = { mufredat: 'mufredat', slayt: 'slayt', kisaltma: 'kisaltmalar', terim: 'terimler', varlik: 'varliklar', faz6: 'faz6' };
+  const parca = rows.slice((sayfa - 1) * boyut, sayfa * boyut).map((r) => {
+    const ov = getPhaseOverride(String(r.soru_id));
+    const k = OV_KEY[cat.id];
+    return {
+      ...r,
+      _kok: stemOf(String(r.soru_id)).slice(0, 160),
+      _elle: Boolean(ov),
+      _durum: k && ov?.kaldir?.includes(k) ? 'kaldırıldı' : k && ov?.gizle?.includes(k) ? 'gizli' : null,
+    };
+  });
   return { kategori: cat.id, alanlar, toplam: rows.length, sayfa, boyut, satirlar: parca, dagilim };
 }

@@ -136,6 +136,31 @@ def qblock(q):
     return f"SORU ({tip}): {q['stem']}\n{opts}\n{ans}"
 
 
+# Yönetim konsolundan "yeniden incele" istekleri: {"soru_id", "tur": "slayt"|"konu", "zaman"} — önceki karar olsa da
+# yeniden değerlendirilir, kuyruğun başına alınır, işlenince dosyadan düşer.
+MANUAL = OUT / "elle_istek.jsonl"
+
+
+def manual_items():
+    if not MANUAL.exists():
+        return []
+    reqs = list(P8.read_jsonl(MANUAL))
+    want = {(r["soru_id"], r.get("tur") or "slayt") for r in reqs if r.get("soru_id")}
+    out = []
+    if any(t == "slayt" for _, t in want) and SLIDES.exists():
+        for r in P8.read_jsonl(SLIDES):
+            if (r["soru_id"], "slayt") in want and len(r.get("slaytlar") or []) >= 1:
+                out.append(("slayt", f"slayt:{r['soru_id']}:elle:{int(time.time())}", r))
+    if any(t == "konu" for _, t in want):
+        for p in TREES:
+            if p.exists():
+                for r in P8.read_jsonl(p):
+                    if (r["soru_id"], "konu") in want and r.get("kazanimlar"):
+                        out.append(("konu", f"konu:{r['soru_id']}:elle:{int(time.time())}", r))
+                break
+    return out
+
+
 def konu_items(done):
     for p in TREES:
         if p.exists():
@@ -296,7 +321,9 @@ def main():
             queue.append(("slayt",) + sl[i])
         if i < len(ko):
             queue.append(("konu",) + ko[i])
-    log(f"bekleyen: anahtar {len(an)}, slayt {len(sl)}, konu {len(ko)}; bu tur en çok {a.max}")
+    man = manual_items()
+    queue = man + queue
+    log(f"bekleyen: elle {len(man)}, anahtar {len(an)}, slayt {len(sl)}, konu {len(ko)}; bu tur en çok {a.max}")
     with open(path, "a", encoding="utf-8") as f:
         for kind, key, r in queue[: a.max]:
             q = qs.get(r["soru_id"])
@@ -319,7 +346,16 @@ def main():
                                 "zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), **res}, ensure_ascii=False) + "\n")
             f.flush()
             time.sleep(4)               # dakikalık token kotalarını aşmamak için tempo
-    rep = {"zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), "bekleyen_anahtar": len(an), "bekleyen_slayt": len(sl),
+    if man and MANUAL.exists():                 # işlenen elle istekler düşer (karar verilemeyenler kalır)
+        judged = set()
+        for r in P8.read_jsonl(path):
+            if ":elle:" in str(r.get("anahtar")):
+                judged.add((r["soru_id"], r["tur"]))
+        rest = [r for r in P8.read_jsonl(MANUAL) if (r.get("soru_id"), r.get("tur") or "slayt") not in judged]
+        with open(MANUAL, "w", encoding="utf-8") as mf:
+            for r in rest:
+                mf.write(json.dumps(r, ensure_ascii=False) + "\n")
+    rep = {"zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), "elle_istek": len(man), "bekleyen_anahtar": len(an), "bekleyen_slayt": len(sl),
            "bekleyen_konu": len(ko), **dict(st)}
     json.dump(rep, open(OUT / "rapor.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps(rep, ensure_ascii=False, indent=1))
