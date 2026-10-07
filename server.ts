@@ -961,6 +961,22 @@ app.post('/api/admin/phases/question/:id/test', requireAdmin, async (req, res) =
   }
 });
 
+// Örnek çalışma soruları (müfredata dayalı, drive_root ders notlarından; yapay zekâ üretimi, doğrulanmadı)
+app.get('/api/practice-questions', (req, res) => {
+  try {
+    const f = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'derived', 'ornek_sorular', 'sorular.jsonl');
+    if (!fs.existsSync(f)) return res.json({ sorular: [], toplam: 0 });
+    let rows = fs.readFileSync(f, 'utf-8').split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean) as any[];
+    const { kurul, ders, konu } = req.query as Record<string, string>;
+    if (kurul) rows = rows.filter((r) => String(r.kurul) === String(kurul));
+    if (ders) rows = rows.filter((r) => r.ders === ders);
+    if (konu) rows = rows.filter((r) => r.konu === konu);
+    res.json({ sorular: rows, toplam: rows.length, not: 'Yapay zekâ üretimi; ders notu alıntısıyla kaynaklıdır ama yönetici doğrulamasından geçmemiştir.' });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Müfredat bilgi paketi (kurul → ders → konu): Faz 14, soru üretici ve site özellikleri kullanır. ?kurul=N ile tek kurul.
 app.get('/api/curriculum/package', (req, res) => {
   try {

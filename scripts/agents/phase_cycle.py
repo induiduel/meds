@@ -64,6 +64,8 @@ STEPS = [
     ("faz14", "Faz 14 · Çıkmış soru redaksiyon önerileri (yerel model, inceleme kuyruğu)", [PY, str(AI / "phase14_past_question_editor.py"), "--limit", "10"], 2 * 3600),
     ("ortak", "Ortak veri deposu + RAG parçaları", [PY, str(AI / "build_unified_store.py")], 1800),
     ("hakem", "Hakem kuyruğu (alıntı doğrulamalı konu/slayt denetimi)", [PY, str(AI / "referee_queue.py"), "--max", "200"], 2 * 3600),
+    ("rag_yenile", "RAG + veritabanı yenileme (ortak depo, analizler, site arama dizini)", [PY, str(AGENTS / "rag_refresh.py")], 3600),
+    ("ornek_soru", "Örnek çalışma soruları (müfredat, drive_root notları, günlük sınırlı, yalnız ücretsiz model)", [PY, str(AI / "practice_question_generator.py")], 3600),
 ]
 
 

@@ -934,6 +934,19 @@ HTML_PAGE = """<!DOCTYPE html>
 
         <!-- SEKME 4: MASTER SÜREÇ & MOD YÖNETİCİSİ -->
         <div id="tab-master" class="tab-content hidden space-y-6">
+            <div class="glass rounded-2xl p-4 space-y-3">
+                <div class="text-sm font-semibold text-slate-100">Ders notu alma ve işleme <span class="text-xs font-normal text-slate-400">(Drive → okuma → ayrıştırma → veritabanı → örnek soru · bulut yalnız ücretsiz, yoksa yerel)</span></div>
+                <div class="flex flex-wrap gap-3 text-xs text-slate-300">
+                    <label class="flex items-center gap-1.5"><input type="checkbox" id="ig-ocr"> Bulut OCR (ücretsiz Gemini)</label>
+                    <label class="flex items-center gap-1.5">Aşama 2 düzeltme
+                        <select id="ig-llm" class="bg-slate-900 border border-slate-700 rounded px-1 py-0.5"><option value="kapali">Kapalı (kural tabanlı)</option><option value="ucretsiz_bulut">Ücretsiz bulut</option><option value="yerel">Yerel (Ollama)</option></select></label>
+                    <label class="flex items-center gap-1.5">Günlük örnek soru
+                        <input id="ig-daily" type="number" min="1" max="100" class="w-16 bg-slate-900 border border-slate-700 rounded px-1 py-0.5"></label>
+                    <span id="ig-msg" class="text-slate-500"></span>
+                </div>
+                <div id="ig-counts" class="text-xs text-slate-400"></div>
+                <div id="ig-steps" class="grid gap-2 md:grid-cols-3 text-xs"></div>
+            </div>
             <div class="glass rounded-2xl p-4 space-y-2">
                 <div class="flex flex-wrap items-center justify-between gap-2">
                     <div class="text-sm font-semibold text-slate-100">Tüm aşamalar ve betikler <span class="text-xs font-normal text-slate-400">(AI türü kaynak koddan otomatik çıkarılır)</span></div>
@@ -2827,6 +2840,30 @@ HTML_PAGE = """<!DOCTYPE html>
             if (typeof updateMasterPhases === 'function') updateMasterPhases();
         };
         loadScripts(); setInterval(loadScripts, 15000);
+
+        // Ders notu alma kartı
+        const igPost = (url, body) => origFetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).then(r => r.json());
+        async function loadIngest() {
+            if (currentTab !== 'master' || document.hidden) return;
+            try {
+                const d = await (await origFetch('/api/ingest/status')).json();
+                const a = d.ayarlar;
+                if (document.activeElement !== $('ig-ocr')) $('ig-ocr').checked = !!a.bulut_ocr;
+                if (document.activeElement !== $('ig-llm')) $('ig-llm').value = a.asama2_llm;
+                if (document.activeElement !== $('ig-daily')) $('ig-daily').value = a.ornek_soru_gunluk;
+                const c = d.sayilar;
+                $('ig-counts').textContent = `İndirilen PDF/PPTX: ${c.indirilen_pdf_pptx} · okunan (temp1): ${c.okunan_temp1} · ayrıştırılan (temp2): ${c.ayristirilan_temp2} · örnek soru: ${c.ornek_soru}`;
+                $('ig-steps').innerHTML = Object.entries(d.adimlar).map(([k, v]) => `<div class="p-2 rounded-lg bg-slate-900 border border-slate-800 space-y-1">
+                    <div class="flex items-center justify-between gap-2"><span class="text-slate-200 font-semibold">${v.baslik}</span>
+                    <button class="px-2 py-0.5 rounded ${v.calisiyor ? 'bg-slate-700 text-slate-400' : 'bg-indigo-600 hover:bg-indigo-500 text-white'}" ${v.calisiyor ? 'disabled' : ''} onclick="igRun('${k}')">${v.calisiyor ? 'çalışıyor…' : 'Çalıştır'}</button></div>
+                    <pre class="m-0 text-[10px] text-slate-400 whitespace-pre-wrap max-h-24 overflow-auto">${(v.son || []).join('\\n').replace(/</g, '&lt;') || '—'}</pre></div>`).join('');
+            } catch (e) { $('ig-counts').textContent = 'Durum alınamadı: ' + e; }
+        }
+        window.igRun = async (k) => { const j = await igPost('/api/ingest/run', { adim: k }); $('ig-msg').textContent = j.error || `başlatıldı: ${j.baslik}`; loadIngest(); };
+        const igSave = async () => { const j = await igPost('/api/ingest/settings', { bulut_ocr: $('ig-ocr').checked, asama2_llm: $('ig-llm').value, ornek_soru_gunluk: $('ig-daily').value }); $('ig-msg').textContent = 'Ayar kaydedildi ✓'; };
+        $('ig-ocr').onchange = igSave; $('ig-llm').onchange = igSave; $('ig-daily').onchange = igSave;
+        loadIngest(); setInterval(loadIngest, 8000);
+        const _sw3 = switchTab; switchTab = function (t) { _sw3(t); if (t === 'master') loadIngest(); };
         const _sw2 = switchTab; switchTab = function (t) { _sw2(t); if (t === 'master') loadScripts(); };
 
         if (cfg.tab && cfg.tab !== 'overview' && document.getElementById('nav-btn-' + cfg.tab)) switchTab(cfg.tab);
@@ -2981,6 +3018,8 @@ STAGE_ORDER = [
     ("14", "Faz 14 · Bulut soru düzeltme", "scripts/advanced_ai/phase14_cloud_question_editor.py"),
     ("14", "Faz 14 · Yerel soru düzeltme (eski)", "scripts/advanced_ai/phase14_past_question_editor.py"),
     ("–", "Müfredat bilgi paketi", "scripts/advanced_ai/curriculum_package.py"),
+    ("15", "RAG + veritabanı yenileme", "scripts/agents/rag_refresh.py"),
+    ("16", "Örnek çalışma soruları (müfredat, günlük sınırlı)", "scripts/advanced_ai/practice_question_generator.py"),
 ]
 _AI_MARKERS = [
     ("bulut_ucretli", ("PHASE14_PAID_GEMINI_KEY",)),
@@ -3039,6 +3078,87 @@ def script_catalog() -> dict:
                     "son": son})
     return {"betikler": out, "llm_backend": os.environ.get("MEDS_LLM_BACKEND", "cloud"),
             "ocr_bulut": os.environ.get("MEDS_OCR_CLOUD", "0") == "1", "otomatik_gecis": os.environ.get("MEDS_PHASE_AUTO") == "1"}
+
+
+# ---- Ders notu alma ve işleme (Drive → okuma → ayrıştırma → veritabanı → örnek soru) ----------------------------
+INGEST_SETTINGS_FILE = TEMP_DIR / "state" / "ingest_settings.json"
+INGEST_DEFAULTS = {"bulut_ocr": False, "asama2_llm": "kapali", "ornek_soru_gunluk": 10}
+_VENV_PY = str(MEDS_DIR / ".venv-ocr" / "bin" / "python")
+INGEST_STEPS = {
+    "tara": ("Drive'ı tara ve indir", ["node", "scripts/pipeline/01-inventory.mjs"], ["node", "scripts/pipeline/02-download.mjs"]),
+    "oku": ("Yeni dosyaları oku (Aşama 1)", [_VENV_PY, "scripts/agents/read_document.py", str(PROJECT_ROOT / "meds_downloads")]),
+    "ayristir": ("Ayrıştır (Aşama 2)", [_VENV_PY, "scripts/agents/stage2_clean.py"]),
+    "aktar": ("Veritabanına aktar (Aşama 3–4)", [_VENV_PY, "scripts/agents/pipeline_runner.py", "--sonraki"]),
+    "temizle": ("Ders notu temizleme + ortak RAG (Faz 12 + ortak depo)", [_VENV_PY, "scripts/advanced_ai/phase12_clean_notes.py"],
+                [_VENV_PY, "scripts/advanced_ai/build_unified_store.py"]),
+    "ornek_soru": ("Örnek soru üret (günlük sınırla)", [_VENV_PY, "scripts/advanced_ai/practice_question_generator.py"]),
+}
+
+
+def ingest_settings() -> dict:
+    try:
+        return {**INGEST_DEFAULTS, **json.loads(INGEST_SETTINGS_FILE.read_text(encoding="utf-8"))}
+    except Exception:
+        return dict(INGEST_DEFAULTS)
+
+
+def save_ingest_settings(payload: dict) -> dict:
+    cur = ingest_settings()
+    if "bulut_ocr" in payload:
+        cur["bulut_ocr"] = bool(payload["bulut_ocr"])
+    if payload.get("asama2_llm") in ("kapali", "ucretsiz_bulut", "yerel"):
+        cur["asama2_llm"] = payload["asama2_llm"]
+    if str(payload.get("ornek_soru_gunluk", "")).isdigit():
+        cur["ornek_soru_gunluk"] = max(1, min(100, int(payload["ornek_soru_gunluk"])))
+    INGEST_SETTINGS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    INGEST_SETTINGS_FILE.write_text(json.dumps(cur, ensure_ascii=False, indent=1), encoding="utf-8")
+    return cur
+
+
+def _ingest_running(step: str) -> bool:
+    pid_f = TEMP_DIR / "state" / f"ingest_{step}.pid"
+    try:
+        pid = int(pid_f.read_text())
+        os.kill(pid, 0)
+        return True
+    except Exception:
+        return False
+
+
+def run_ingest(step: str) -> dict:
+    if step not in INGEST_STEPS:
+        return {"error": "bilinmeyen adım"}
+    if _ingest_running(step):
+        return {"error": "bu adım zaten çalışıyor"}
+    title, *cmds = INGEST_STEPS[step]
+    env = dict(os.environ)
+    if step == "ornek_soru":
+        env["PRACTICE_DAILY_MAX"] = str(ingest_settings()["ornek_soru_gunluk"])
+    log_f = TEMP_DIR / "logs" / f"ingest_{step}.log"
+    log_f.parent.mkdir(parents=True, exist_ok=True)
+    script = " && ".join(" ".join(__import__("shlex").quote(a) for a in c) for c in cmds)
+    with open(log_f, "a", encoding="utf-8") as lf:
+        lf.write(f"\n===== {time.strftime('%Y-%m-%d %H:%M:%S')} {title} =====\n")
+        p = subprocess.Popen(["bash", "-lc", script], cwd=str(MEDS_DIR), env=env, stdout=lf, stderr=subprocess.STDOUT,
+                             start_new_session=True)
+    (TEMP_DIR / "state" / f"ingest_{step}.pid").write_text(str(p.pid))
+    return {"baslatildi": step, "baslik": title}
+
+
+def ingest_status() -> dict:
+    dl = PROJECT_ROOT / "meds_downloads"
+    t1 = TEMP_DIR / "temp1"
+    t2 = TEMP_DIR / "temp2"
+    cnt = lambda root, pat: sum(1 for _ in root.rglob(pat)) if root.exists() else 0
+    steps = {}
+    for k, (title, *_c) in INGEST_STEPS.items():
+        lf = TEMP_DIR / "logs" / f"ingest_{k}.log"
+        tail = lf.read_text(encoding="utf-8", errors="replace").splitlines()[-6:] if lf.exists() else []
+        steps[k] = {"baslik": title, "calisiyor": _ingest_running(k), "son": tail}
+    q = DB_DIR / "derived" / "ornek_sorular" / "sorular.jsonl" if "DB_DIR" in globals() else PROJECT_ROOT / "meds_database" / "derived" / "ornek_sorular" / "sorular.jsonl"
+    return {"ayarlar": ingest_settings(), "adimlar": steps,
+            "sayilar": {"indirilen_pdf_pptx": cnt(dl, "*.pdf") + cnt(dl, "*.pptx"), "okunan_temp1": cnt(t1, "*.json"),
+                        "ayristirilan_temp2": cnt(t2, "*.json"), "ornek_soru": sum(1 for _ in open(q, encoding="utf-8")) if q.exists() else 0}}
 
 
 def phase_detail(key: str) -> dict:
@@ -3751,6 +3871,11 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.send_header("Content-Type", "application/json")
             self.end_headers()
             self.wfile.write(json.dumps(phase_detail(key), ensure_ascii=False).encode("utf-8"))
+        elif self.path == "/api/ingest/status":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(ingest_status(), ensure_ascii=False).encode("utf-8"))
         elif self.path == "/api/master/scripts":
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
@@ -3803,6 +3928,13 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
         except Exception:
             payload = {}
 
+        if self.path in ("/api/ingest/settings", "/api/ingest/run"):
+            res = save_ingest_settings(payload) if self.path.endswith("settings") else run_ingest(str(payload.get("adim") or ""))
+            self.send_response(400 if isinstance(res, dict) and res.get("error") else 200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(res, ensure_ascii=False).encode("utf-8"))
+            return
         if self.path in ("/api/master/stop_all", "/api/master/resume_all"):
             res = stop_all_phases() if self.path.endswith("stop_all") else resume_all_phases()
             self.send_response(200)

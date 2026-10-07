@@ -509,6 +509,25 @@ def main() -> int:
     }, ensure_ascii=False, indent=2), encoding="utf-8")
 
     logging.info(f"Faz 14 Bulut İşlemi Tamamlandı: {stats}")
+    # Tüm sorular Faz 14'ten geçtiyse RAG + veritabanı yenilemesini kuyruğa al (bir kez)
+    kalan = sum(1 for q in questions if str(q.get("id") or "") and str(q.get("id")) not in islenmisler
+                and len(source_view(q)["soru_koku"].strip()) >= 15 and len(source_view(q)["secenekler"]) >= 4)
+    if kalan == 0:
+        flag = ROOT.parent / "meds_temp" / "state" / "faz14_bitti_rag.json"
+        if not flag.exists():
+            try:
+                import fcntl
+                qf = ROOT.parent / "meds_temp" / "state" / "phase_queue.json"
+                with open(qf.with_suffix(".lock"), "w") as lk:
+                    fcntl.flock(lk, fcntl.LOCK_EX)
+                    q = json.loads(qf.read_text(encoding="utf-8")) if qf.exists() else []
+                    if "rag_yenile" not in q:
+                        q.append("rag_yenile")
+                    qf.write_text(json.dumps(q), encoding="utf-8")
+                flag.write_text(json.dumps({"zaman": datetime.utcnow().isoformat() + "Z"}), encoding="utf-8")
+                logging.info("Tüm sorular Faz 14'ten geçti → RAG + veritabanı yenilemesi kuyruğa alındı (rag_yenile)")
+            except Exception as e:  # noqa: BLE001
+                logging.warning(f"RAG yenileme kuyruğa alınamadı: {e}")
     print(json.dumps(stats, ensure_ascii=False))
     return 0
 

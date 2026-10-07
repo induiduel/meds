@@ -441,7 +441,19 @@ if __name__ == "__main__":
     a = ap.parse_args()
     # Aşama 1–2 yalnız yerel kaynaklarla (kural tabanlı onarım + soru ayrıştırma); bulut/LLM yok. Ham soru Faz 14'e bırakılır.
     # LLM'i yeniden açmak için MEDS_STAGE2_LLM=1 (önerilmez).
-    use_llm = not a.no_llm and os.environ.get("MEDS_STAGE2_LLM") == "1"
+    # Panel ayarı (meds_temp/state/ingest_settings.json → "asama2_llm"): kapali | ucretsiz_bulut | yerel
+    mode = "kapali"
+    try:
+        import json as _json
+        _f = Path(os.environ.get("MEDS_TEMP_DIR") or Path(__file__).resolve().parents[3] / "meds_temp") / "state" / "ingest_settings.json"
+        mode = _json.loads(_f.read_text(encoding="utf-8")).get("asama2_llm") or "kapali"
+    except Exception:
+        mode = "ucretsiz_bulut" if os.environ.get("MEDS_STAGE2_LLM") == "1" else "kapali"
+    if mode == "yerel":
+        os.environ["MEDS_LLM_BACKEND"] = "local"           # yerel Ollama
+    elif mode == "ucretsiz_bulut":
+        os.environ["MEDS_LLM_BACKEND"] = "cloud"           # cloud_llm: yalnız ücretsiz anahtarlar
+    use_llm = not a.no_llm and mode in ("yerel", "ucretsiz_bulut") and (mode != "yerel" or lib.ollama_up())
     if not use_llm:
         log.info("Aşama 2: yalnız kural tabanlı onarım ve soru ayrıştırma (LLM/bulut kapalı)")
     print("işlenen:", run(a.limit, a.force, use_llm, a.only))
