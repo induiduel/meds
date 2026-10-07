@@ -22,7 +22,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 SCRIPTS_DIR = ROOT / "scripts" / "agents"
-LOG_FILE = ROOT / "meds_temp" / "logs" / "watchdog.log"
+# Günlük veri klasöründeki meds_temp/logs altına (repo içine değil)
+LOG_FILE = Path(os.environ.get("MEDS_TEMP_DIR") or ROOT.parent / "meds_temp") / "logs" / "watchdog.log"
 LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 
 def log(msg: str):

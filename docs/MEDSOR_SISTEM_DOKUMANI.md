@@ -251,9 +251,9 @@ olmayan dosyalar adına göre gruplanmıştır.
 
 | Dosya | Açıklama |
 |---|---|
-| `scripts/ai_studio_deep_curator.py` | MedSoru Gemini Shadow Judge — bozuk tıp sorularını AI Studio ile onarır. |
+| `scripts/archive/ai_studio_deep_curator.py` | MedSoru Gemini Shadow Judge — bozuk tıp sorularını AI Studio ile onarır. |
 | `scripts/background-ai-redactor.mjs` | MedSoru Arkaplan Yapay Zeka Redaksiyon & İyileştirme Motoru (scripts/background-ai-redactor.mjs) Bu subagent/daemon script: 1. meds_sorular_txt klasöründeki tüm sınav dosyalarını en ince ayrıntısına kadar ayrıştırır (sor |
-| `scripts/curriculum_daily_pipeline.py` | scripts/curriculum_daily_pipeline.py ======================================================================================== DÖNEM 3 GÜNLÜK MÜFREDAT VE ETKİLEŞİMLİ ÖĞRENME OTOMASYONU (MASTER CURRICULUM PIPELINE) ======= |
+| `scripts/archive/curriculum_daily_pipeline.py` | scripts/archive/curriculum_daily_pipeline.py ======================================================================================== DÖNEM 3 GÜNLÜK MÜFREDAT VE ETKİLEŞİMLİ ÖĞRENME OTOMASYONU (MASTER CURRICULUM PIPELINE) ======= |
 | `scripts/deep-ai-redactor.mjs` | MedSoru Derin Tıbbi Yapay Zeka Redaksiyon Motoru (scripts/deep-ai-redactor.mjs) Kurallar: 1. Her soru için en az 20 saniye süre ayrılır (derin analiz ve oran sınırlaması). 2. Asla kalıp / laf kalabalığı cümleler ("Bu sor |
 
 ### DeepSeek veri hattı (8)
@@ -262,143 +262,143 @@ olmayan dosyalar adına göre gruplanmıştır.
 |---|---|
 | `scripts/ds_assemble.py` | Adım 4: Batch çıktılarını birleştir, doğrula, onar ve tek JSONL dosyası üret. |
 | `scripts/ds_batches.py` | Adım 2 (v2): Soru -> ders notu aday eşleştirmesi + AI doğrulama iş birimleri. - Final/Bütünleme sınavları kümülatif olduğundan TÜM kurul ders notlarına bakar. - Her aday için en ilgili bölüm (heading) ve kanıt pasajı çık |
-| `scripts/ds_deliver.py` | Adım 5: Doğrulanmış JSONL'i hedef klasöre yaz ve bütünlüğünü doğrula. Hedef: C:\\Users\\indui\\Desktop\\meds_database\\deepseek_data |
+| `scripts/archive/ds_deliver.py` | Adım 5: Doğrulanmış JSONL'i hedef klasöre yaz ve bütünlüğünü doğrula. Hedef: C:\\Users\\indui\\Desktop\\meds_database\\deepseek_data |
 | `scripts/ds_pipeline.py` | Dönem 3 - Çıkmış soru + ders notu eşleştirme ve düzeltme hattı. Adım 1: Deterministik normalizasyon + ders notu kataloğu + iş birimi (batch) üretimi. |
 | `scripts/ds_quote_index.py` | Tüm ders notları için global doğrulama indeksi + alıntı doğrulama. |
-| `scripts/ds_report.py` | Teslim edilen dosyanın kaynak 1279 soruya karşı kapsama ve kalite raporu. |
-| `scripts/ds_retry.py` | Eksik/kalitesiz kalan sorular için tamamlayıcı (retry) batch üretir. |
-| `scripts/ds_schema.py` | _başlık açıklaması yok_ |
+| `scripts/archive/ds_report.py` | Teslim edilen dosyanın kaynak 1279 soruya karşı kapsama ve kalite raporu. |
+| `scripts/archive/ds_retry.py` | Eksik/kalitesiz kalan sorular için tamamlayıcı (retry) batch üretir. |
+| `scripts/archive/ds_schema.py` | _başlık açıklaması yok_ |
 
 ### Denetim ve doğrulama (16)
 
 | Dosya | Açıklama |
 |---|---|
 | `scripts/audit-and-disconnect-faulty-slides.mjs` | MedSoru Slayt İlişkisi Denetim ve Hatalı İlişkileri Kesme Scripti (Script 1) (scripts/audit-and-disconnect-faulty-slides.mjs) Amaç: 1. Çıkmış sorular ile ilişkilendirilen her bir ders slaytını ve sayfasını kontrol eder.  |
-| `scripts/audit_and_fix_flashcards.py` | scripts/audit_and_fix_flashcards.py Audits all flashcards across all interactive learning decks. Guarantees that every flashcard has BOTH: - front AND question (front = front or question) - back AND answer (back = back o |
-| `scripts/audit_donem3_master.mjs` | _başlık açıklaması yok_ |
-| `scripts/audit_drive_pdf_decks.py` | _başlık açıklaması yok_ |
+| `scripts/archive/audit_and_fix_flashcards.py` | scripts/archive/audit_and_fix_flashcards.py Audits all flashcards across all interactive learning decks. Guarantees that every flashcard has BOTH: - front AND question (front = front or question) - back AND answer (back = back o |
+| `scripts/archive/audit_donem3_master.mjs` | _başlık açıklaması yok_ |
+| `scripts/archive/audit_drive_pdf_decks.py` | _başlık açıklaması yok_ |
 | `scripts/check-online-status.ts` | MedSoru - Online Veritabanı ve Yapay Zeka Limit Denetleme Scripti (check-online-status.ts) Bu script: 1. Online Firebase Firestore bağlantısını ve günlük Spark 50K okuma kotasını denetler. 2. Online Supabase PostgreSQL b |
-| `scripts/check_missing_drive_pdfs.py` | _başlık açıklaması yok_ |
+| `scripts/archive/check_missing_drive_pdfs.py` | _başlık açıklaması yok_ |
 | `scripts/detect-database-updates.mjs` | scripts/detect-database-updates.mjs Veritabanında Soru Bazında Güncelleme Tespit ve Ekonomik Artımlı Senkronizasyon Scripti Kullanım: node scripts/detect-database-updates.mjs             -> Güncellemeleri tespit eder ve  |
 | `scripts/detect-faulty-ocr.mjs` | _başlık açıklaması yok_ |
-| `scripts/ds_check_quotes.py` | _başlık açıklaması yok_ |
-| `scripts/ds_validate.py` | _başlık açıklaması yok_ |
-| `scripts/find_truly_missing_pdfs.py` | _başlık açıklaması yok_ |
-| `scripts/inspect_check_result_files.py` | _başlık açıklaması yok_ |
+| `scripts/archive/ds_check_quotes.py` | _başlık açıklaması yok_ |
+| `scripts/archive/ds_validate.py` | _başlık açıklaması yok_ |
+| `scripts/archive/find_truly_missing_pdfs.py` | _başlık açıklaması yok_ |
+| `scripts/archive/inspect_check_result_files.py` | _başlık açıklaması yok_ |
 | `scripts/self-healing-auditor.mjs` | MedSoru Otonom Kendi Kendini Denetleyen ve İyileştiren Sistem (Self-Healing Auditor) (scripts/self-healing-auditor.mjs) Görevleri: 1. Veritabanındaki tüm soruları ve ders notlarını periyodik veya tetiklemeli denetler. 2. |
 | `scripts/verify-question-answers.mjs` | MedSoru Çıkmış Soru ve Cevap Doğrulama Motoru (scripts/verify-question-answers.mjs) Amaç: Çıkmış soruların cevaplarını; hem amfi ders notları/slaytları hem de güncel tıp literatürü ve internet bilgisi ile çapraz kontrole |
-| `scripts/verify_clustering_tuning.ts` | _başlık açıklaması yok_ |
-| `scripts/verify_integrity.py` | _başlık açıklaması yok_ |
+| `scripts/archive/verify_clustering_tuning.ts` | _başlık açıklaması yok_ |
+| `scripts/archive/verify_integrity.py` | _başlık açıklaması yok_ |
 
 ### Deste / içerik üretimi (68)
 
 | Dosya | Açıklama |
 |---|---|
-| `scripts/auto_scheduled_batch_builder.py` | scripts/auto_scheduled_batch_builder.py Manages the structured batch queue for all Kurul 1 lectures. Processes each lecture into deep %500 interactive decks on a planned schedule. |
+| `scripts/archive/auto_scheduled_batch_builder.py` | scripts/archive/auto_scheduled_batch_builder.py Manages the structured batch queue for all Kurul 1 lectures. Processes each lecture into deep %500 interactive decks on a planned schedule. |
 | `scripts/build-database-json.mjs` | scripts/build-database-json.mjs MedSoru Veritabanı JSON Üretim ve Senkronizasyon Motoru Hedef Klasör: meds_database\database_json Bu script: 1. Tüm dönem ve kurullar için klasör hiyerarşisini kurar |
-| `scripts/build_all_curriculum_decks.py` | scripts/build_all_curriculum_decks.py Generates the remaining 6 authentic, faculty-grounded 24-slide learning decks: 1. learn-ileri-tumor-genetigi-metabolizmasi 2. learn-tumor-immunolojisi-metastaz 3. learn-tumor-evrelem |
+| `scripts/archive/build_all_curriculum_decks.py` | scripts/archive/build_all_curriculum_decks.py Generates the remaining 6 authentic, faculty-grounded 24-slide learning decks: 1. learn-ileri-tumor-genetigi-metabolizmasi 2. learn-tumor-immunolojisi-metastaz 3. learn-tumor-evrelem |
 | `scripts/build_batch1_deck.py` | _başlık açıklaması yok_ |
 | `scripts/build_batch2_deck.py` | _başlık açıklaması yok_ |
 | `scripts/build_batch3_deck.py` | _başlık açıklaması yok_ |
 | `scripts/build_batch4_deck.py` | Master Learning Deck Generator - Batch 4: Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar Prof. Dr. Hikmet Keleş - Tıbbi Patoloji (Dönem 3 Kurul 1) |
-| `scripts/build_batch_drive_decks.py` | scripts/build_batch_drive_decks.py Generates the next batch of Google Drive lectures for Dönem 3 Kurul 1: 1. Tromboz Patofizyolojisi, Virchow Triadı ve Trombofili (Prof. Dr. Hikmet Keleş) 2. Emboli Tipleri, Enfarktüs ve  |
-| `scripts/build_bebek_beslenmesi_deck.py` | Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon Güvertesi Sosyal Pediatri ve Çocuk Sağlığı Anabilim Dalı 24 Kapsamlı Slayt ve Pediatri Uzmanlık/Komite Sınavı Düzeyinde Sorular |
-| `scripts/build_chemical_mediators_deck.py` | scripts/build_chemical_mediators_deck.py Generates the comprehensive 22-slide interactive learning deck for: 'Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Komplema |
+| `scripts/archive/build_batch_drive_decks.py` | scripts/archive/build_batch_drive_decks.py Generates the next batch of Google Drive lectures for Dönem 3 Kurul 1: 1. Tromboz Patofizyolojisi, Virchow Triadı ve Trombofili (Prof. Dr. Hikmet Keleş) 2. Emboli Tipleri, Enfarktüs ve  |
+| `scripts/archive/build_bebek_beslenmesi_deck.py` | Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon Güvertesi Sosyal Pediatri ve Çocuk Sağlığı Anabilim Dalı 24 Kapsamlı Slayt ve Pediatri Uzmanlık/Komite Sınavı Düzeyinde Sorular |
+| `scripts/archive/build_chemical_mediators_deck.py` | scripts/archive/build_chemical_mediators_deck.py Generates the comprehensive 22-slide interactive learning deck for: 'Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Komplema |
 | `scripts/build_chunked_study_questions.py` | scripts/build_chunked_study_questions.py Generates original, high-yield practice study questions for each lecture derived directly from the authentic lecture content (synthesis narrative, coreContent, spotPearls, profess |
 | `scripts/build_full_drive_slides.mjs` | _başlık açıklaması yok_ |
-| `scripts/build_halk_sagligi_deck.py` | Builder script for 24 high-yield academic slides: Halk Sagligi Tarihcesi, Felsefesi ve Koruyucu Hekimlik Ilkeleri |
-| `scripts/build_hypersensitivity_deck.py` | build_hypersensitivity_deck.py Generates the comprehensive 500% depth interactive learning deck for: 'learn-asiri-duyarlilik-ve-otoimmunite' (Prof. Dr. Hikmet Keleş / Robbins 11. Baskı) Includes: - 24 rich slides with sy |
-| `scripts/build_karsinojenez_molekuler_deck.py` | scripts/build_karsinojenez_molekuler_deck.py Generates full 24-slide high-yield interactive learning deck for: Prof. Dr. Hikmet Keleş - Karsinojenezin Moleküler Temeli Extracted from: 17)Karsinojenezin Moleküler Temeli.p |
-| `scripts/build_kronik_enflamasyon_deck.py` | scripts/build_kronik_enflamasyon_deck.py Generates full 24-slide high-yield interactive learning deck for: Prof. Dr. Hikmet Keleş - Kronik ve Granülomatöz Enflamasyon Adheres strictly to all curriculum and database const |
-| `scripts/build_kronik_part1.py` | Part 1: Slides 1 to 12 for Kronik ve Granülomatöz Enflamasyon Deck. |
-| `scripts/build_kronik_part2.py` | Part 2: Slides 13 to 24 for Kronik ve Granülomatöz Enflamasyon Deck. |
+| `scripts/archive/build_halk_sagligi_deck.py` | Builder script for 24 high-yield academic slides: Halk Sagligi Tarihcesi, Felsefesi ve Koruyucu Hekimlik Ilkeleri |
+| `scripts/archive/build_hypersensitivity_deck.py` | build_hypersensitivity_deck.py Generates the comprehensive 500% depth interactive learning deck for: 'learn-asiri-duyarlilik-ve-otoimmunite' (Prof. Dr. Hikmet Keleş / Robbins 11. Baskı) Includes: - 24 rich slides with sy |
+| `scripts/archive/build_karsinojenez_molekuler_deck.py` | scripts/archive/build_karsinojenez_molekuler_deck.py Generates full 24-slide high-yield interactive learning deck for: Prof. Dr. Hikmet Keleş - Karsinojenezin Moleküler Temeli Extracted from: 17)Karsinojenezin Moleküler Temeli.p |
+| `scripts/archive/build_kronik_enflamasyon_deck.py` | scripts/archive/build_kronik_enflamasyon_deck.py Generates full 24-slide high-yield interactive learning deck for: Prof. Dr. Hikmet Keleş - Kronik ve Granülomatöz Enflamasyon Adheres strictly to all curriculum and database const |
+| `scripts/archive/build_kronik_part1.py` | Part 1: Slides 1 to 12 for Kronik ve Granülomatöz Enflamasyon Deck. |
+| `scripts/archive/build_kronik_part2.py` | Part 2: Slides 13 to 24 for Kronik ve Granülomatöz Enflamasyon Deck. |
 | `scripts/build_learning_decks.py` | build_learning_decks.py (5x Ayrıntı, Akıl Kartları & Akıcı Sentez Versiyonu) ============================================================================= Bu script: 1. c:\\Users\\indui\\Desktop\\meds_database\\transcrip |
-| `scripts/build_medical_concepts_5000.py` | Master 5,000 Medical Concepts Knowledge Base Generator Gathers, synthesizes, enriches and standardizes 5,000+ medical concepts for MedSoru. |
-| `scripts/build_medical_encyclopedia.py` | Medical Encyclopedia & Dictionary Generator Grounded strictly in authentic lecture notes from Kurul 1, 2, 3 faculty text files: - 26)Böbrek Tümörleri.txt (Prof. Dr. Hikmet Keleş) - 26)Mesane Hastalıkları ve Tümörleri.txt |
-| `scripts/build_mega_medical_encyclopedia.py` | Mega Medical Encyclopedia & Comprehensive Dictionary Generator Scales the medical dictionary to 500+ verified medical diseases, drugs, pathology findings, pathogens, and genetic syndromes strictly grounded in the Dönem 3 |
-| `scripts/build_remaining_drive_decks.py` | _başlık açıklaması yok_ |
-| `scripts/build_tumor_biyolojisi_deck.py` | scripts/build_tumor_biyolojisi_deck.py Generates full 24-slide high-yield interactive learning deck for: Prof. Dr. Hikmet Keleş - Tümör Biyolojisi ve Terminolojisi Replaces the old 4-slide stub with an authentic, deep, % |
-| `scripts/build_uriner_epidemiyoloji_deck.py` | Build High-Quality Academic Deck: 'learn-uriner-sistem-enfeksiyonlari-epidemiyoloji' (24 Slayt) Kaynak: Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi Uzman Tıbbi Mikrobiyoloji ve Enfeksiyon  |
-| `scripts/complete_genetics_pediatric_deck.py` | complete_genetics_pediatric_deck.py Completes slides 13 to 24 for 'learn-genetik-pediatrik-cevresel-patoloji', adds encyclopedia and glossary terms, and handles chunked study questions. |
-| `scripts/complete_missing_batches.py` | complete_missing_batches.py (Hızlı ve Optimize) Eksik kalan 28 batch için doğrulama ve redaksiyon çıktılarını (.meds_ds/out/<batchId>.json) üretir. Ders notu kanıtları hızlı taranır ve açıklama/şık kalitesi standartlara  |
-| `scripts/generate_cell_injury_deck.py` | scripts/generate_cell_injury_deck.py Generates the deep (%500 detail) 24-slide learning deck for: "Hücre Hasarı, Hücre Ölümü ve Nekroz" (Tıbbi Patoloji - Prof. Dr. Hikmet Keleş) Incorporating 24 slides, 48 3D flashcards, |
-| `scripts/generate_cellular_adaptation_deck.py` | scripts/generate_cellular_adaptation_deck.py Generates the deep (%500 detail) 24-slide learning deck for: "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji" (Tıbbi Patoloji - Prof. Dr. Hikmet  |
-| `scripts/generate_chromosomal_diseases_deck.py` | scripts/generate_chromosomal_diseases_deck.py Generates the comprehensive %500 detail 22-slide learning deck for: "Kromozomal Hastalıklar ve Genetik Danışma" (Tıbbi Genetik - Dr. Öğr. Üyesi Serap Arslan) Incorporating 22 |
-| `scripts/generate_chronic_inflammation_deck.py` | scripts/generate_chronic_inflammation_deck.py Generates the deep (%500 detail) 22-slide learning deck for: "Kronik Enflamasyon, Granülomlar ve Doku Onarımı" (Tıbbi Patoloji - Prof. Dr. Hikmet Keleş) Incorporating 22 slid |
-| `scripts/generate_dismorphology_deck.py` | scripts/generate_dismorphology_deck.py Generates the deep (%500 detail) 20-slide learning deck for: "Dismorfolojide Genetik Terminoloji ve Malformasyonlar" (Tıbbi Genetik - Dr. Öğr. Üyesi Serap Arslan) Incorporating 20 s |
-| `scripts/generate_donem3_butunleme_redakte_sorular.mjs` | generate_donem3_butunleme_redakte_sorular.mjs Karabük Üniversitesi Tıp Fakültesi Dönem 3 Bütünleme Sınavı (donem3b) Çıkmış Sorularını %100 Doğrulanmış Tıbbi Şemaya Göre Redakte ve Senkronize Eden Master Script. Kapsam: - |
-| `scripts/generate_donem3_final_redakte_sorular.mjs` | generate_donem3_final_redakte_sorular.mjs Karabük Üniversitesi Tıp Fakültesi Dönem 3 Final Sınavı (donem3f) Çıkmış Sorularını %100 Doğrulanmış Tıbbi Şemaya Göre Redakte ve Senkronize Eden Master Script. Tüm 261 Final Sor |
-| `scripts/generate_epidemic_control_deck.py` | scripts/generate_epidemic_control_deck.py Generates the comprehensive %500 detail 18-slide learning deck for: "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma" (Halk Sağlığı - Uzm. Dr. Erkay Nacar) Incorporating 18 sl |
+| `scripts/archive/build_medical_concepts_5000.py` | Master 5,000 Medical Concepts Knowledge Base Generator Gathers, synthesizes, enriches and standardizes 5,000+ medical concepts for MedSoru. |
+| `scripts/archive/build_medical_encyclopedia.py` | Medical Encyclopedia & Dictionary Generator Grounded strictly in authentic lecture notes from Kurul 1, 2, 3 faculty text files: - 26)Böbrek Tümörleri.txt (Prof. Dr. Hikmet Keleş) - 26)Mesane Hastalıkları ve Tümörleri.txt |
+| `scripts/archive/build_mega_medical_encyclopedia.py` | Mega Medical Encyclopedia & Comprehensive Dictionary Generator Scales the medical dictionary to 500+ verified medical diseases, drugs, pathology findings, pathogens, and genetic syndromes strictly grounded in the Dönem 3 |
+| `scripts/archive/build_remaining_drive_decks.py` | _başlık açıklaması yok_ |
+| `scripts/archive/build_tumor_biyolojisi_deck.py` | scripts/archive/build_tumor_biyolojisi_deck.py Generates full 24-slide high-yield interactive learning deck for: Prof. Dr. Hikmet Keleş - Tümör Biyolojisi ve Terminolojisi Replaces the old 4-slide stub with an authentic, deep, % |
+| `scripts/archive/build_uriner_epidemiyoloji_deck.py` | Build High-Quality Academic Deck: 'learn-uriner-sistem-enfeksiyonlari-epidemiyoloji' (24 Slayt) Kaynak: Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi Uzman Tıbbi Mikrobiyoloji ve Enfeksiyon  |
+| `scripts/archive/complete_genetics_pediatric_deck.py` | complete_genetics_pediatric_deck.py Completes slides 13 to 24 for 'learn-genetik-pediatrik-cevresel-patoloji', adds encyclopedia and glossary terms, and handles chunked study questions. |
+| `scripts/archive/complete_missing_batches.py` | complete_missing_batches.py (Hızlı ve Optimize) Eksik kalan 28 batch için doğrulama ve redaksiyon çıktılarını (.meds_ds/out/<batchId>.json) üretir. Ders notu kanıtları hızlı taranır ve açıklama/şık kalitesi standartlara  |
+| `scripts/archive/generate_cell_injury_deck.py` | scripts/archive/generate_cell_injury_deck.py Generates the deep (%500 detail) 24-slide learning deck for: "Hücre Hasarı, Hücre Ölümü ve Nekroz" (Tıbbi Patoloji - Prof. Dr. Hikmet Keleş) Incorporating 24 slides, 48 3D flashcards, |
+| `scripts/archive/generate_cellular_adaptation_deck.py` | scripts/archive/generate_cellular_adaptation_deck.py Generates the deep (%500 detail) 24-slide learning deck for: "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji" (Tıbbi Patoloji - Prof. Dr. Hikmet  |
+| `scripts/archive/generate_chromosomal_diseases_deck.py` | scripts/archive/generate_chromosomal_diseases_deck.py Generates the comprehensive %500 detail 22-slide learning deck for: "Kromozomal Hastalıklar ve Genetik Danışma" (Tıbbi Genetik - Dr. Öğr. Üyesi Serap Arslan) Incorporating 22 |
+| `scripts/archive/generate_chronic_inflammation_deck.py` | scripts/archive/generate_chronic_inflammation_deck.py Generates the deep (%500 detail) 22-slide learning deck for: "Kronik Enflamasyon, Granülomlar ve Doku Onarımı" (Tıbbi Patoloji - Prof. Dr. Hikmet Keleş) Incorporating 22 slid |
+| `scripts/archive/generate_dismorphology_deck.py` | scripts/archive/generate_dismorphology_deck.py Generates the deep (%500 detail) 20-slide learning deck for: "Dismorfolojide Genetik Terminoloji ve Malformasyonlar" (Tıbbi Genetik - Dr. Öğr. Üyesi Serap Arslan) Incorporating 20 s |
+| `scripts/archive/generate_donem3_butunleme_redakte_sorular.mjs` | generate_donem3_butunleme_redakte_sorular.mjs Karabük Üniversitesi Tıp Fakültesi Dönem 3 Bütünleme Sınavı (donem3b) Çıkmış Sorularını %100 Doğrulanmış Tıbbi Şemaya Göre Redakte ve Senkronize Eden Master Script. Kapsam: - |
+| `scripts/archive/generate_donem3_final_redakte_sorular.mjs` | generate_donem3_final_redakte_sorular.mjs Karabük Üniversitesi Tıp Fakültesi Dönem 3 Final Sınavı (donem3f) Çıkmış Sorularını %100 Doğrulanmış Tıbbi Şemaya Göre Redakte ve Senkronize Eden Master Script. Tüm 261 Final Sor |
+| `scripts/archive/generate_epidemic_control_deck.py` | scripts/archive/generate_epidemic_control_deck.py Generates the comprehensive %500 detail 18-slide learning deck for: "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma" (Halk Sağlığı - Uzm. Dr. Erkay Nacar) Incorporating 18 sl |
 | `scripts/generate_genetics_pediatric_complete.py` | generate_genetics_pediatric_complete.py Master builder for 'learn-genetik-pediatrik-cevresel-patoloji' (Kurul 1). Prof. Dr. Hikmet Keleş & Robbins 11th edition. Constructs: 1. 24 high-yield slides with structured spot pe |
-| `scripts/generate_hemodynamics_deck.py` | scripts/generate_hemodynamics_deck.py Generates the deep (%500 detail) 22-slide learning deck for: "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama" (Tıbbi Patoloji - Prof. Dr. Hikmet Keleş) Incorpo |
-| `scripts/generate_hypersensitivity_complete.py` | generate_hypersensitivity_complete.py Master builder for 'learn-asiri-duyarlilik-ve-otoimmunite'. Constructs: 1. 24 high-yield slides with structured spot pearls, flashcards, core content, practice questions 2. 32 compre |
-| `scripts/generate_infection_isolation_deck.py` | scripts/generate_infection_isolation_deck.py Generates the comprehensive %500 detail 20-slide learning deck for: "Hastane Enfeksiyonları ve İzolasyon Önlemleri" (Enfeksiyon Hastalıkları & Klinik Mikrobiyoloji - Dr. Rüvey |
-| `scripts/generate_intracellular_accumulations_deck.py` | scripts/generate_intracellular_accumulations_deck.py Generates the deep (%500 detail) 24-slide learning deck for: "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar" (Tıbbi Patoloji - Prof. Dr. Hikmet Keleş) Incorpor |
-| `scripts/generate_ischemia_infarct_shock.py` | generate_ischemia_infarct_shock.py Prof. Dr. Hikmet Keleş - Ders 12: Emboli, Enfarktüs ve Şok Patolojisi (Kurul 1 / Dönem 2) 24 slaytlık %500 derinlikli öğrenme güvertesi, 24 özgün çalışma sorusu, chunk_8 ve index.json e |
-| `scripts/generate_kurul2_redakte_sorular.mjs` | generate_kurul2_redakte_sorular.mjs Dönem 3 Kurul 2 (TIP 320 - NÖROPSİKİYATRİ KURULU) çıkmış sorularını: 1. Nöroloji 2. Psikiyatri 3. Tıbbi Farmakoloji (Nörofarmakoloji & Psikofarmakoloji) 4. Beyin ve Sinir Cerrahisi (Nö |
-| `scripts/generate_kurul3_redakte_sorular.mjs` | generate_kurul3_redakte_sorular.mjs Dönem 3 Kurul 3 (TIP 330 - GASTROİNTESTİNAL SİSTEM KURULU) çıkmış sorularını: 1. Tıbbi Patoloji (GİS, KC, Safra Yolları, Pankreas Patolojisi) - 45 Soru 2. Tıbbi Farmakoloji (GİS İlaçla |
-| `scripts/generate_kurul4_amfi_ozetleri.mjs` | generate_kurul4_amfi_ozetleri.mjs meds_database\kurul_ders_notlari_txt\Kurul 4 altındaki 46 adet amfi ders notunu okur; her bir ders notunun klinik, farmakolojik ve patolojik özetini çıkararak C:\U |
-| `scripts/generate_kurul4_redakte_sorular.mjs` | generate_kurul4_redakte_sorular.mjs Dönem 3 Kurul 4 (TIP 340 - DOLAŞIM, SOLUNUM VE TÜMÖR KURULU) çıkmış sorularını: 1. Kardiyoloji ve Kalp Damar Cerrahisi (KVS) - 35 Soru 2. Göğüs Hastalıkları ve Göğüs Cerrahisi (Solunum |
-| `scripts/generate_kurul5_amfi_ozetleri.mjs` | generate_kurul5_amfi_ozetleri.mjs meds_database\kurul_ders_notlari_txt\Kurul 5 altındaki 75 adet amfi ders notunu okur; her bir ders notunun klinik, farmakolojik ve patolojik özetini çıkararak C:\U |
-| `scripts/generate_kurul5_redakte_sorular.mjs` | generate_kurul5_redakte_sorular.mjs Karabük Üniversitesi Tıp Fakültesi Dönem 3 Kurul 5 (TIP 350 - Ortopedi, Travmatoloji ve Hematopoetik Sistem) Çıkmış Sorularını %100 Doğrulanmış Tıbbi Şemaya Göre Redakte ve Senkronize  |
-| `scripts/generate_kurul6_amfi_ozetleri.mjs` | generate_kurul6_amfi_ozetleri.mjs meds_database\kurul_ders_notlari_txt\Kurul 6 altındaki 53 adet amfi ders notunu okur; her bir ders notunun klinik, farmakolojik ve patolojik özetini çıkararak C:\U |
-| `scripts/generate_kurul6_redakte_sorular.mjs` | generate_kurul6_redakte_sorular.mjs Karabük Üniversitesi Tıp Fakültesi Dönem 3 Kurul 6 (TIP 360 - Endokrin, Metabolizma ve Yaşlanma) Çıkmış Sorularını %100 Doğrulanmış Tıbbi Şemaya Göre Redakte ve Senkronize Eden Master  |
+| `scripts/archive/generate_hemodynamics_deck.py` | scripts/archive/generate_hemodynamics_deck.py Generates the deep (%500 detail) 22-slide learning deck for: "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama" (Tıbbi Patoloji - Prof. Dr. Hikmet Keleş) Incorpo |
+| `scripts/archive/generate_hypersensitivity_complete.py` | generate_hypersensitivity_complete.py Master builder for 'learn-asiri-duyarlilik-ve-otoimmunite'. Constructs: 1. 24 high-yield slides with structured spot pearls, flashcards, core content, practice questions 2. 32 compre |
+| `scripts/archive/generate_infection_isolation_deck.py` | scripts/archive/generate_infection_isolation_deck.py Generates the comprehensive %500 detail 20-slide learning deck for: "Hastane Enfeksiyonları ve İzolasyon Önlemleri" (Enfeksiyon Hastalıkları & Klinik Mikrobiyoloji - Dr. Rüvey |
+| `scripts/archive/generate_intracellular_accumulations_deck.py` | scripts/archive/generate_intracellular_accumulations_deck.py Generates the deep (%500 detail) 24-slide learning deck for: "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar" (Tıbbi Patoloji - Prof. Dr. Hikmet Keleş) Incorpor |
+| `scripts/archive/generate_ischemia_infarct_shock.py` | generate_ischemia_infarct_shock.py Prof. Dr. Hikmet Keleş - Ders 12: Emboli, Enfarktüs ve Şok Patolojisi (Kurul 1 / Dönem 2) 24 slaytlık %500 derinlikli öğrenme güvertesi, 24 özgün çalışma sorusu, chunk_8 ve index.json e |
+| `scripts/archive/generate_kurul2_redakte_sorular.mjs` | generate_kurul2_redakte_sorular.mjs Dönem 3 Kurul 2 (TIP 320 - NÖROPSİKİYATRİ KURULU) çıkmış sorularını: 1. Nöroloji 2. Psikiyatri 3. Tıbbi Farmakoloji (Nörofarmakoloji & Psikofarmakoloji) 4. Beyin ve Sinir Cerrahisi (Nö |
+| `scripts/archive/generate_kurul3_redakte_sorular.mjs` | generate_kurul3_redakte_sorular.mjs Dönem 3 Kurul 3 (TIP 330 - GASTROİNTESTİNAL SİSTEM KURULU) çıkmış sorularını: 1. Tıbbi Patoloji (GİS, KC, Safra Yolları, Pankreas Patolojisi) - 45 Soru 2. Tıbbi Farmakoloji (GİS İlaçla |
+| `scripts/archive/generate_kurul4_amfi_ozetleri.mjs` | generate_kurul4_amfi_ozetleri.mjs meds_database\kurul_ders_notlari_txt\Kurul 4 altındaki 46 adet amfi ders notunu okur; her bir ders notunun klinik, farmakolojik ve patolojik özetini çıkararak C:\U |
+| `scripts/archive/generate_kurul4_redakte_sorular.mjs` | generate_kurul4_redakte_sorular.mjs Dönem 3 Kurul 4 (TIP 340 - DOLAŞIM, SOLUNUM VE TÜMÖR KURULU) çıkmış sorularını: 1. Kardiyoloji ve Kalp Damar Cerrahisi (KVS) - 35 Soru 2. Göğüs Hastalıkları ve Göğüs Cerrahisi (Solunum |
+| `scripts/archive/generate_kurul5_amfi_ozetleri.mjs` | generate_kurul5_amfi_ozetleri.mjs meds_database\kurul_ders_notlari_txt\Kurul 5 altındaki 75 adet amfi ders notunu okur; her bir ders notunun klinik, farmakolojik ve patolojik özetini çıkararak C:\U |
+| `scripts/archive/generate_kurul5_redakte_sorular.mjs` | generate_kurul5_redakte_sorular.mjs Karabük Üniversitesi Tıp Fakültesi Dönem 3 Kurul 5 (TIP 350 - Ortopedi, Travmatoloji ve Hematopoetik Sistem) Çıkmış Sorularını %100 Doğrulanmış Tıbbi Şemaya Göre Redakte ve Senkronize  |
+| `scripts/archive/generate_kurul6_amfi_ozetleri.mjs` | generate_kurul6_amfi_ozetleri.mjs meds_database\kurul_ders_notlari_txt\Kurul 6 altındaki 53 adet amfi ders notunu okur; her bir ders notunun klinik, farmakolojik ve patolojik özetini çıkararak C:\U |
+| `scripts/archive/generate_kurul6_redakte_sorular.mjs` | generate_kurul6_redakte_sorular.mjs Karabük Üniversitesi Tıp Fakültesi Dönem 3 Kurul 6 (TIP 360 - Endokrin, Metabolizma ve Yaşlanma) Çıkmış Sorularını %100 Doğrulanmış Tıbbi Şemaya Göre Redakte ve Senkronize Eden Master  |
 | `scripts/generate_medical_glossary.py` | scripts/generate_medical_glossary.py Medical glossary generator and synchronizer for Dönem 3 Kurul 1. Ensures medical_glossary.json remains valid, properly formatted, and sorted. |
-| `scripts/generate_redakte_sorular.mjs` | generate_redakte_sorular.mjs Dönem 3 Kurul 1 çıkmış sorularını: 1. Enfeksiyon Hastalıkları (62 soru) 2. Tıbbi Patoloji (71 soru) 3. Halk Sağlığı (33 soru) 4. Tıbbi Biyoloji ve Genetik - TBG (15 soru) 5. Üroloji (16 soru) |
-| `scripts/generate_slide_pdf_mappings.py` | _başlık açıklaması yok_ |
-| `scripts/generate_thrombosis_complete.py` | generate_thrombosis_complete.py Ders: Prof. Dr. Hikmet Keleş - Tromboz Patofizyolojisi (Kurul 1 / Dönem 2) Tüm 24 slayt, spotlar, flashcardlar, 24 özgün çalışma sorusu, chunk_8 ve sözlük/ansiklopedi entegrasyonu. |
+| `scripts/archive/generate_redakte_sorular.mjs` | generate_redakte_sorular.mjs Dönem 3 Kurul 1 çıkmış sorularını: 1. Enfeksiyon Hastalıkları (62 soru) 2. Tıbbi Patoloji (71 soru) 3. Halk Sağlığı (33 soru) 4. Tıbbi Biyoloji ve Genetik - TBG (15 soru) 5. Üroloji (16 soru) |
+| `scripts/archive/generate_slide_pdf_mappings.py` | _başlık açıklaması yok_ |
+| `scripts/archive/generate_thrombosis_complete.py` | generate_thrombosis_complete.py Ders: Prof. Dr. Hikmet Keleş - Tromboz Patofizyolojisi (Kurul 1 / Dönem 2) Tüm 24 slayt, spotlar, flashcardlar, 24 özgün çalışma sorusu, chunk_8 ve sözlük/ansiklopedi entegrasyonu. |
 | `scripts/medical_data_builder.py` | Medical Data Builder Module Generates comprehensive clinical, pharmacological, microbiological, pathological, and basic science concept entries. |
 | `scripts/rebuild-all-past-questions.mjs` | _başlık açıklaması yok_ |
-| `scripts/rebuild_aging_and_repair_decks.py` | Rebuild Cellular Aging & Tissue Repair Decks with High-Quality Medical Standards 1. learn-hucresel-yaslanma-ve-hucr (24 Slayt) 2. learn-doku-onarimi-yara-iyilesmesi (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
-| `scripts/rebuild_all_14_clean_decks.py` | Rebuilds the 14 decks with 100% authentic, high-yield Turkish medical lecture data matching Prof. Dr. Hikmet Keleş and faculty syllabi from Kurul 1 text files. Completely eliminates all generic placeholder text: - "Müfre |
-| `scripts/rebuild_bobrek_tumorleri_deck.py` | Rebuild Kidney Tumors Deck with High-Quality Medical Standards learn-bobrek-tumorleri (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
-| `scripts/rebuild_cybh_high_quality.py` | Rebuilds learn-cinsel-yolla-bulasan-enfe with rich, fully-articulated medical narrative, completely removing all robotic templates, broken characters, and meaningless headings. |
-| `scripts/rebuild_genital_and_anacocuk_decks.py` | Rebuild Genital Infections & Maternal-Child Health Decks with High-Quality Medical Standards 1. learn-genital-enfeksiyonlar (24 Slayt) 2. learn-ana-cocuk-sagligi (24 Slayt) Enfeksiyon Hastalıkları & Halk Sağlığı Anabilim |
-| `scripts/rebuild_genital_anomalies_and_prenatal.py` | Rebuild Congenital Genital Anomalies & Prenatal Diagnosis Decks with Highest Medical Quality Standards 1. learn-dogumsal-genital-anomaliler (24 Slides - Tıbbi Genetik / Embriyoloji) 2. learn-prenatal-tani (24 Slides - Tı |
-| `scripts/rebuild_group1_nephrology.py` | Rebuild Nephrology Glomerular & Tubulointerstitial Decks with High-Quality Medical Standards 1. learn-glomeruler-hastaliklar-nefrotik (24 Slayt) 2. learn-glomeruler-hastaliklar-nefritik (24 Slayt) 3. learn-tubulointersti |
-| `scripts/rebuild_mesane_deck.py` | Rebuild Bladder Diseases and Tumors Deck with High-Quality Medical Standards learn-mesane-hastaliklari-tumorleri (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
-| `scripts/rebuild_nefritik_deck.py` | Rebuild Nefritik Sendrom Deck with High-Quality Medical Standards learn-glomeruler-hastaliklar-nefritik (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
-| `scripts/rebuild_patoloji_giris.py` | Rebuilds Part 1 decks (Patolojiye Giriş, Hücresel Yaşlanma, Doku Onarımı) with complete grammatical sentences, deep medical narratives, and red/blue spot pearls. |
-| `scripts/rebuild_tubulointerstisyel_deck.py` | Rebuild Tubulointerstitial Diseases Deck with High-Quality Medical Standards learn-tubulointerstisyel-hastaliklar (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
-| `scripts/rebuild_vaskuler_kistik_deck.py` | Rebuild Vascular & Cystic Kidney Diseases Deck with High-Quality Medical Standards learn-vaskuler-kistik-bobrek-hastaliklari (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
-| `scripts/sync_drive_curriculum_and_build_decks.py` | _başlık açıklaması yok_ |
+| `scripts/archive/rebuild_aging_and_repair_decks.py` | Rebuild Cellular Aging & Tissue Repair Decks with High-Quality Medical Standards 1. learn-hucresel-yaslanma-ve-hucr (24 Slayt) 2. learn-doku-onarimi-yara-iyilesmesi (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
+| `scripts/archive/rebuild_all_14_clean_decks.py` | Rebuilds the 14 decks with 100% authentic, high-yield Turkish medical lecture data matching Prof. Dr. Hikmet Keleş and faculty syllabi from Kurul 1 text files. Completely eliminates all generic placeholder text: - "Müfre |
+| `scripts/archive/rebuild_bobrek_tumorleri_deck.py` | Rebuild Kidney Tumors Deck with High-Quality Medical Standards learn-bobrek-tumorleri (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
+| `scripts/archive/rebuild_cybh_high_quality.py` | Rebuilds learn-cinsel-yolla-bulasan-enfe with rich, fully-articulated medical narrative, completely removing all robotic templates, broken characters, and meaningless headings. |
+| `scripts/archive/rebuild_genital_and_anacocuk_decks.py` | Rebuild Genital Infections & Maternal-Child Health Decks with High-Quality Medical Standards 1. learn-genital-enfeksiyonlar (24 Slayt) 2. learn-ana-cocuk-sagligi (24 Slayt) Enfeksiyon Hastalıkları & Halk Sağlığı Anabilim |
+| `scripts/archive/rebuild_genital_anomalies_and_prenatal.py` | Rebuild Congenital Genital Anomalies & Prenatal Diagnosis Decks with Highest Medical Quality Standards 1. learn-dogumsal-genital-anomaliler (24 Slides - Tıbbi Genetik / Embriyoloji) 2. learn-prenatal-tani (24 Slides - Tı |
+| `scripts/archive/rebuild_group1_nephrology.py` | Rebuild Nephrology Glomerular & Tubulointerstitial Decks with High-Quality Medical Standards 1. learn-glomeruler-hastaliklar-nefrotik (24 Slayt) 2. learn-glomeruler-hastaliklar-nefritik (24 Slayt) 3. learn-tubulointersti |
+| `scripts/archive/rebuild_mesane_deck.py` | Rebuild Bladder Diseases and Tumors Deck with High-Quality Medical Standards learn-mesane-hastaliklari-tumorleri (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
+| `scripts/archive/rebuild_nefritik_deck.py` | Rebuild Nefritik Sendrom Deck with High-Quality Medical Standards learn-glomeruler-hastaliklar-nefritik (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
+| `scripts/archive/rebuild_patoloji_giris.py` | Rebuilds Part 1 decks (Patolojiye Giriş, Hücresel Yaşlanma, Doku Onarımı) with complete grammatical sentences, deep medical narratives, and red/blue spot pearls. |
+| `scripts/archive/rebuild_tubulointerstisyel_deck.py` | Rebuild Tubulointerstitial Diseases Deck with High-Quality Medical Standards learn-tubulointerstisyel-hastaliklar (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
+| `scripts/archive/rebuild_vaskuler_kistik_deck.py` | Rebuild Vascular & Cystic Kidney Diseases Deck with High-Quality Medical Standards learn-vaskuler-kistik-bobrek-hastaliklari (24 Slayt) Prof. Dr. Hikmet Keleş & Robbins Pathology |
+| `scripts/archive/sync_drive_curriculum_and_build_decks.py` | _başlık açıklaması yok_ |
 
 ### Değerlendirme (1)
 
 | Dosya | Açıklama |
 |---|---|
-| `scripts/eval-rag-system.ts` | _başlık açıklaması yok_ |
+| `scripts/archive/eval-rag-system.ts` | _başlık açıklaması yok_ |
 
 ### Diğer (50)
 
 | Dosya | Açıklama |
 |---|---|
 | `scripts/automation-runner.mjs` | MedSoru Central Script & Automation Runner Engine ---------------------------------------------------- Bu script; mevcut ve gelecekte oluşturulacak TÜM scriptlerin dinamik taranmasını, manuel veya zincirleme (pipeline) o |
-| `scripts/bulletize_all_decks.py` | scripts/bulletize_all_decks.py Converts all slides across all 17 interactive learning decks into structured, hierarchical markdown with clear bullet points, spot callouts, and curriculum synthesis. |
-| `scripts/compile-summaries-catalog.mjs` | MedSoru Ders Özetleri ve Spot Bilgi Kataloğu Derleyicisi (scripts/compile-summaries-catalog.mjs) meds_database\redakte_ozet altındaki 347 adet Markdown ders özetini okur, ayrıştırır ve web uygulama |
+| `scripts/archive/bulletize_all_decks.py` | scripts/archive/bulletize_all_decks.py Converts all slides across all 17 interactive learning decks into structured, hierarchical markdown with clear bullet points, spot callouts, and curriculum synthesis. |
+| `scripts/archive/compile-summaries-catalog.mjs` | MedSoru Ders Özetleri ve Spot Bilgi Kataloğu Derleyicisi (scripts/archive/compile-summaries-catalog.mjs) meds_database\redakte_ozet altındaki 347 adet Markdown ders özetini okur, ayrıştırır ve web uygulama |
 | `scripts/deploy-gh-pages.cjs` | _başlık açıklaması yok_ |
-| `scripts/diagnose_down_drafts.ts` | _başlık açıklaması yok_ |
+| `scripts/archive/diagnose_down_drafts.ts` | _başlık açıklaması yok_ |
 | `scripts/fast_hybrid_server.py` | MedSoru Low-Latency Hybrid Serving API — FastAPI + DuckDB (cursor-per-request). |
 | `scripts/gpu_recovery.sh` | MedSoru GPU & Audio Otomatik Uyandırma ve Kurtarma Scripti |
 | `scripts/inspect-sources.mjs` | _başlık açıklaması yok_ |
-| `scripts/inspect_genetics_pediatric.py` | _başlık açıklaması yok_ |
-| `scripts/inspect_hypersensitivity.py` | _başlık açıklaması yok_ |
-| `scripts/integrate_batch1_decks.py` | Integrate Batch 1 Rebuilt Decks into src/data/interactive_learning_decks.json Decks: 1. learn-uriner-sistem-enfeksiyonlari-epidemiyoloji 2. learn-uriner-sistemin-spesifik-enfeksiyonlari 3. learn-enfeksiyon-epidemiyoloji  |
-| `scripts/integrate_batch2_decks.py` | Integrate Batch 2 Rebuilt Decks into src/data/interactive_learning_decks.json Decks: 1. learn-enflamasyon-kimyasal-mediyatorleri 2. learn-enfeksiyon-temel-kavramlar 3. learn-sistemik-hastaliklar-bobrek-hasari 4. learn-ur |
-| `scripts/integrate_batch3_decks.py` | _başlık açıklaması yok_ |
-| `scripts/integrate_batch4_decks.py` | _başlık açıklaması yok_ |
-| `scripts/integrate_batch5_decks.py` | _başlık açıklaması yok_ |
-| `scripts/integrate_deepseek_jsonl.py` | scripts/integrate_deepseek_jsonl.py ----------------------------------- Entegrates DeepSeek-verified Dönem 3 questions (meds_donem3_sorulari_duzeltilmis.jsonl) directly into: 1. src/data/pastQuestions.json 2. data/pastQu |
-| `scripts/integrate_new_batch1.py` | _başlık açıklaması yok_ |
-| `scripts/integrate_new_batch2.py` | _başlık açıklaması yok_ |
-| `scripts/integrate_new_batch3.py` | _başlık açıklaması yok_ |
-| `scripts/integrate_new_batch4.py` | _başlık açıklaması yok_ |
-| `scripts/integrate_new_batch5.py` | _başlık açıklaması yok_ |
-| `scripts/lakehouse_migrator.py` | MedSoru Medical Lakehouse Builder — JSON/JSONL/SQLite → Parquet gölü. |
+| `scripts/archive/inspect_genetics_pediatric.py` | _başlık açıklaması yok_ |
+| `scripts/archive/inspect_hypersensitivity.py` | _başlık açıklaması yok_ |
+| `scripts/archive/integrate_batch1_decks.py` | Integrate Batch 1 Rebuilt Decks into src/data/interactive_learning_decks.json Decks: 1. learn-uriner-sistem-enfeksiyonlari-epidemiyoloji 2. learn-uriner-sistemin-spesifik-enfeksiyonlari 3. learn-enfeksiyon-epidemiyoloji  |
+| `scripts/archive/integrate_batch2_decks.py` | Integrate Batch 2 Rebuilt Decks into src/data/interactive_learning_decks.json Decks: 1. learn-enflamasyon-kimyasal-mediyatorleri 2. learn-enfeksiyon-temel-kavramlar 3. learn-sistemik-hastaliklar-bobrek-hasari 4. learn-ur |
+| `scripts/archive/integrate_batch3_decks.py` | _başlık açıklaması yok_ |
+| `scripts/archive/integrate_batch4_decks.py` | _başlık açıklaması yok_ |
+| `scripts/archive/integrate_batch5_decks.py` | _başlık açıklaması yok_ |
+| `scripts/archive/integrate_deepseek_jsonl.py` | scripts/archive/integrate_deepseek_jsonl.py ----------------------------------- Entegrates DeepSeek-verified Dönem 3 questions (meds_donem3_sorulari_duzeltilmis.jsonl) directly into: 1. src/data/pastQuestions.json 2. data/pastQu |
+| `scripts/archive/integrate_new_batch1.py` | _başlık açıklaması yok_ |
+| `scripts/archive/integrate_new_batch2.py` | _başlık açıklaması yok_ |
+| `scripts/archive/integrate_new_batch3.py` | _başlık açıklaması yok_ |
+| `scripts/archive/integrate_new_batch4.py` | _başlık açıklaması yok_ |
+| `scripts/archive/integrate_new_batch5.py` | _başlık açıklaması yok_ |
+| `scripts/archive/lakehouse_migrator.py` | MedSoru Medical Lakehouse Builder — JSON/JSONL/SQLite → Parquet gölü. |
 | `scripts/manage-service.sh` | manage-service.ps1'in Linux karşılığı. Kullanım: manage-service.sh <install-and-start/status/stop/sync-now/notify> [başlık] [mesaj] Servis, systemd --user altında "meds-local-sync.service" olarak çalışır. |
 | `scripts/manage-slide-relations.mjs` | MedSoru Çıkmış Soru & Amfi Slayt İlişki Yönetim Motoru (Master Runner) (scripts/manage-slide-relations.mjs) Bu betik iki ana scripti entegre olarak yönetir: 1. Script 1 (Denetim & Kesme): Çıkmış sorularla ilişkilendirile |
 | `scripts/master_controller.py` | MedSoru Master Orchestrator & Supervisor (scripts/master_controller.py) En Yönetici, En Kapsamlı Sistem & Donanım Yöneticisi. Özellikler: 1. Başlangıçta Terminal & GUI üzerinden Çalışma Modu Seçimi: - 1: Normal (GPU 1-3  |
-| `scripts/master_learning_engine.py` | MASTER LEARNING ENGINE (Eğitim Metodolojisi & Otomasyon Motoru) ============================================================== Tüm dersler için uçtan uca öğrenim sunumlarını (%500 derinlik, akıl kartları, sentez ders not |
+| `scripts/archive/master_learning_engine.py` | MASTER LEARNING ENGINE (Eğitim Metodolojisi & Otomasyon Motoru) ============================================================== Tüm dersler için uçtan uca öğrenim sunumlarını (%500 derinlik, akıl kartları, sentez ders not |
 | `scripts/medical_data_clinical.py` | Clinical Medicine Master Concepts Database (Cardiology, Pulmonology, GI, Nephrology, Endocrine, Heme, Rheum, Neuro, Peds, OB/GYN, Surgery) |
 | `scripts/medical_data_genetics.py` | Genetics, Chromosomal Anomalies, Dysmorphology & Metabolic Inborn Errors Data |
 | `scripts/medical_data_master_taxonomy.py` | Medical Master Taxonomy Generator Generates comprehensive clinical entities across all major organ systems and basic sciences. |
@@ -407,22 +407,22 @@ olmayan dosyalar adına göre gruplanmıştır.
 | `scripts/medical_master_expansion.py` | Medical Master Expansion Database Provides 1,500+ distinct clinical, anatomical, biochemical, physiological, microbiological, pathological, and pharmacological concepts. |
 | `scripts/medical_taxonomy_pharm.py` | Pharmacology Master Taxonomy (1,000+ Drugs, Receptors, Mechanisms, Antidotes) |
 | `scripts/merge-same-exam-duplicates.mjs` | ============================================================================= merge-same-exam-duplicates.mjs ----------------------------------------------------------------------------- Eşleşen sorular birbirini tekrar  |
-| `scripts/merge_same_exam_duplicates.py` | ============================================================================= merge_same_exam_duplicates.py ----------------------------------------------------------------------------- Bu script; 1. Birbiriyle eşleşen,  |
+| `scripts/archive/merge_same_exam_duplicates.py` | ============================================================================= merge_same_exam_duplicates.py ----------------------------------------------------------------------------- Bu script; 1. Birbiriyle eşleşen,  |
 | `scripts/migrate-separate-current-and-past.mjs` | scripts/migrate-separate-current-and-past.mjs Veritabanı Ayrıştırma ve Düzenleme Motoru: 1. 2026-2027 dönemine ait kurullarda henüz sınava girilmediği için tüm mevcut soru ve taslakları güncel havuzdan ('questions') çıka |
 | `scripts/monitor.py` | MedSoru Canlı Terminal Kokpiti ve Boru Hattı İzleyici (Terminal Dashboard v2) Tüm aşamaları (Faz 1 - Faz 6) hedefleri ve canlı ilerlemeleriyle gösterir: - Faz 1 (Ham Metin & OCR) - Faz 2 (Türkçe Onarım & Soru Ayrıştırma) |
-| `scripts/parse_butunleme.py` | _başlık açıklaması yok_ |
+| `scripts/archive/parse_butunleme.py` | _başlık açıklaması yok_ |
 | `scripts/process-local-sorular.mjs` | scripts/process-local-sorular.mjs meds_database\local_sorular klasöründeki PPTX ve PDF dosyalarını işler: 1. PPTX slaytlarını JSZip ile XML'den sayfa sayfa okur. 2. PDF dosyalarını pdf-parse ile ok |
-| `scripts/rechunk_all_study_questions.py` | _başlık açıklaması yok_ |
-| `scripts/reconcile-curriculum-summaries.mjs` | scripts/reconcile-curriculum-summaries.mjs MedSoru Ders Programı (Curriculum) Tabanlı Özet, Hoca, Konu ve Kurul Senkronizasyon Motoru Bu script: 1. Karabük Üniversitesi Tıp Fakültesi Dönem 3 Resmi Müfredatını (curriculum |
-| `scripts/sanitize_questions_and_decks.py` | scripts/sanitize_questions_and_decks.py 1. Audits and sanitizes pastQuestions.json by removing or repairing corrupted, bloated, or unreadable OCR dumps (>1000 chars, multiple '?' marks, garbled characters). 2. Cleans int |
+| `scripts/archive/rechunk_all_study_questions.py` | _başlık açıklaması yok_ |
+| `scripts/archive/reconcile-curriculum-summaries.mjs` | scripts/archive/reconcile-curriculum-summaries.mjs MedSoru Ders Programı (Curriculum) Tabanlı Özet, Hoca, Konu ve Kurul Senkronizasyon Motoru Bu script: 1. Karabük Üniversitesi Tıp Fakültesi Dönem 3 Resmi Müfredatını (curriculum |
+| `scripts/archive/sanitize_questions_and_decks.py` | scripts/archive/sanitize_questions_and_decks.py 1. Audits and sanitizes pastQuestions.json by removing or repairing corrupted, bloated, or unreadable OCR dumps (>1000 chars, multiple '?' marks, garbled characters). 2. Cleans int |
 | `scripts/start-cloudflare-tunnel.mjs` | scripts/start-cloudflare-tunnel.mjs MedSoru Sunucusunu (port 3000) ve Cloudflare Quick Tunnel'ı eşzamanlı olarak başlatır. Domain gerektirmeden anında güvenli bir https://*.trycloudflare.com adresi üretir. |
 | `scripts/start-hybrid-tunnel.mjs` | scripts/start-hybrid-tunnel.mjs Yerel bilgisayarınızdaki MedSoru sunucusunu (port 3000) GitHub Pages (HTTPS) üzerinden güvenle erişilebilir kılmak için ücretsiz bir tünel açar ve adresi doğrudan Firebase Firestore'a kayd |
-| `scripts/switch-env-to-cloud.mjs` | _başlık açıklaması yok_ |
+| `scripts/archive/switch-env-to-cloud.mjs` | _başlık açıklaması yok_ |
 | `scripts/switch-env-to-local.mjs` | _başlık açıklaması yok_ |
 | `scripts/test-sample-pdfs.mjs` | _başlık açıklaması yok_ |
-| `scripts/test_norm.ts` | _başlık açıklaması yok_ |
-| `scripts/tumor_evreleme_slides_part1.py` | Part 1 of the Tumor Staging and Laboratory Diagnosis Deck (Slides 1 to 12) |
-| `scripts/tumor_evreleme_slides_part2.py` | Part 2 of the Tumor Staging and Laboratory Diagnosis Deck (Slides 13 to 24) |
+| `scripts/archive/test_norm.ts` | _başlık açıklaması yok_ |
+| `scripts/archive/tumor_evreleme_slides_part1.py` | Part 1 of the Tumor Staging and Laboratory Diagnosis Deck (Slides 1 to 12) |
+| `scripts/archive/tumor_evreleme_slides_part2.py` | Part 2 of the Tumor Staging and Laboratory Diagnosis Deck (Slides 13 to 24) |
 
 ### Drive indirme ve tarama (13)
 
@@ -431,13 +431,13 @@ olmayan dosyalar adına göre gruplanmıştır.
 | `scripts/crawl-all-drive-folders.mjs` | _başlık açıklaması yok_ |
 | `scripts/download-all-slides.mjs` | _başlık açıklaması yok_ |
 | `scripts/download-and-process-kurul-notes.mjs` | scripts/download-and-process-kurul-notes.mjs Google Drive'daki Kurul 1 - Kurul 6 tüm amfi ders notlarını: 1. meds_database\kurul_ders_notlari\Kurul 1 .. 6 klasörlerine indirir. 2. PDF, PPTX ve DOCX |
-| `scripts/download_and_merge_supabase.py` | Supabase Cloud -> meds_database & meds/data indirme ve akıllı birleştirme betiği. - 4069 çıkmış soru, 885 ders notu, 24 komite ve 605 chunk'ı indirir. - Mevcut yerel verileri ezmeden akıllı tekilleştirme (deduplication)  |
-| `scripts/download_missing_drive_file.mjs` | _başlık açıklaması yok_ |
-| `scripts/extract_missing_drive_materials.py` | extract_missing_drive_materials.py Extracts text from all pending PDF, PPTX, and DOCX files in meds_database/meds_sorular and saves them to meds_database/meds_sorular_txt. |
-| `scripts/extract_remaining_drive_lectures.py` | _başlık açıklaması yok_ |
-| `scripts/inspect_drive_pdfs_deep.py` | _başlık açıklaması yok_ |
+| `scripts/archive/download_and_merge_supabase.py` | Supabase Cloud -> meds_database & meds/data indirme ve akıllı birleştirme betiği. - 4069 çıkmış soru, 885 ders notu, 24 komite ve 605 chunk'ı indirir. - Mevcut yerel verileri ezmeden akıllı tekilleştirme (deduplication)  |
+| `scripts/archive/download_missing_drive_file.mjs` | _başlık açıklaması yok_ |
+| `scripts/archive/extract_missing_drive_materials.py` | extract_missing_drive_materials.py Extracts text from all pending PDF, PPTX, and DOCX files in meds_database/meds_sorular and saves them to meds_database/meds_sorular_txt. |
+| `scripts/archive/extract_remaining_drive_lectures.py` | _başlık açıklaması yok_ |
+| `scripts/archive/inspect_drive_pdfs_deep.py` | _başlık açıklaması yok_ |
 | `scripts/orchestrate_drive_curriculum_ai.mjs` | ============================================================================== MedSoru AI Drive Curriculum Orchestrator & Interactive Deck Generator ======================================================================= |
-| `scripts/test-drive-audio-scan.mjs` | _başlık açıklaması yok_ |
+| `scripts/archive/test-drive-audio-scan.mjs` | _başlık açıklaması yok_ |
 | `scripts/test-drive-folders.mjs` | _başlık açıklaması yok_ |
 | `scripts/transcribe-drive-audio.mjs` | scripts/transcribe-drive-audio.mjs MedSoru Tıbbi Amfi Ses Kayıtları Transkripsiyon, Ders Eşleştirme ve İzleme Motoru --------------------------------------------------------------------------------- 1. Google Drive ('G:\ |
 | `scripts/update-drive-catalog.mjs` | _başlık açıklaması yok_ |
@@ -450,15 +450,15 @@ olmayan dosyalar adına göre gruplanmıştır.
 | `scripts/link-exam-questions.mts` | Link past-exam files to the existing question pool and course material (retrieval only, no AI). npx tsx scripts/link-exam-questions.mts <file-or-folder> [--out report.json] For every question found in a PDF/DOCX it repor |
 | `scripts/match-and-link-lecture-slides.mjs` | MedSoru Slayt Eşleştirme, Bağlama ve Vurgulama Scripti (Script 2) (scripts/match-and-link-lecture-slides.mjs) Amaç: 1. Henüz ders ilişkisi olmayan ya da hatalı ders ilişkisine sahip olduğu tespit edilen (Script 1 ile ili |
 | `scripts/slide-matching-utils.mjs` | MedSoru Slayt Eşleştirme ve Denetim Yardımcı Modülü (scripts/slide-matching-utils.mjs) |
-| `scripts/test_concept_matcher.ts` | _başlık açıklaması yok_ |
-| `scripts/test_glossary_match.js` | _başlık açıklaması yok_ |
-| `scripts/test_glossary_match.mjs` | _başlık açıklaması yok_ |
+| `scripts/archive/test_concept_matcher.ts` | _başlık açıklaması yok_ |
+| `scripts/archive/test_glossary_match.js` | _başlık açıklaması yok_ |
+| `scripts/archive/test_glossary_match.mjs` | _başlık açıklaması yok_ |
 
 ### Onarım ve temizlik (4)
 
 | Dosya | Açıklama |
 |---|---|
-| `scripts/clean_fake_slide_matches.cjs` | _başlık açıklaması yok_ |
+| `scripts/archive/clean_fake_slide_matches.cjs` | _başlık açıklaması yok_ |
 | `scripts/fix-nested-and-embedded-questions.mjs` | scripts/fix-nested-and-embedded-questions.mjs MedSoru İç İçe Geçmiş Şıklar, Soru Kökünde Kalan Şıklar ve Birbirine Yapışmış Soruları Ayrıştırma ve Düzeltme Motoru Çözülen Sorunlar: 1. Şık İçinde Şık (Nested Options): Örn |
 | `scripts/fix-question-typos.mjs` | scripts/fix-question-typos.mjs MedSoru Soru Yazım Hatalarını ve Bozuk OCR İfadelerini Tespit ve Düzeltme Motoru Özellikler: 1. Tire Bölünmelerini Düzeltir: - "Send- romu" -> "Sendromu" - "mev- cuttur" -> "mevcuttur" - "b |
 | `scripts/test-filter-donem3.mjs` | _başlık açıklaması yok_ |
@@ -468,27 +468,27 @@ olmayan dosyalar adına göre gruplanmıştır.
 | Dosya | Açıklama |
 |---|---|
 | `scripts/index-rag-knowledge.mjs` | ============================================================================== MedSoru RAG Knowledge Indexer & Embedder ============================================================================== Bu betik: 1. data/pas |
-| `scripts/reorganize_curriculum_and_rag.py` | scripts/reorganize_curriculum_and_rag.py Tüm soruların Karabük Üniversitesi Tıp Fakültesi resmi ders programlarına (Dönem 1, 2, 3) göre yeniden sınıflandırılması, Dönem 2 / Dönem 3 ayrımının yapılması, #111 vb. hatalı so |
-| `scripts/test-rag.ts` | _başlık açıklaması yok_ |
+| `scripts/archive/reorganize_curriculum_and_rag.py` | scripts/archive/reorganize_curriculum_and_rag.py Tüm soruların Karabük Üniversitesi Tıp Fakültesi resmi ders programlarına (Dönem 1, 2, 3) göre yeniden sınıflandırılması, Dönem 2 / Dönem 3 ayrımının yapılması, #111 vb. hatalı so |
+| `scripts/archive/test-rag.ts` | _başlık açıklaması yok_ |
 
 ### Senkronizasyon ve yedek (16)
 
 | Dosya | Açıklama |
 |---|---|
 | `scripts/auto-git-sync.mjs` | _başlık açıklaması yok_ |
-| `scripts/backup-local-to-cloud.mjs` | scripts/backup-local-to-cloud.mjs Yerel Supabase (Docker) veritabanındaki verileri Cloud Supabase (https://kgutsltgmqbnlxcnzrtl.supabase.co) üzerine yedekler. |
+| `scripts/archive/backup-local-to-cloud.mjs` | scripts/archive/backup-local-to-cloud.mjs Yerel Supabase (Docker) veritabanındaki verileri Cloud Supabase (https://kgutsltgmqbnlxcnzrtl.supabase.co) üzerine yedekler. |
 | `scripts/local-drive-sync-agent.mjs` | MedSoru Yerel Bilgisayar Arka Plan Otomasyon İşleyicisi (Local Sync Worker) Bu betik kendi bilgisayarınızda arkaplanda çalışarak: 1. Google Drive klasöründeki (Kurul 1 ve Dönem 3) yeni PDF/DOCX slaytlarını otomatik takip |
 | `scripts/meds-local-sync.mjs` | MedSoru Yerel Otomasyon ve Senkronizasyon Motoru (meds-local-sync.mjs) Bu betik: 1. Google Drive çıkmış soru ve ders notları klasörlerini tarar. 2. Yeni/eksik PDF'leri doğrudan meds_database klasör |
 | `scripts/sync-all-to-firebase.mjs` | scripts/sync-all-to-firebase.mjs Yerel olarak işlenen tüm verileri doğrudan Firebase Firestore'a eşitler: 1. 184 adet Amfi Ders Slayt Notu -> 'lecture_notes' koleksiyonuna yüklenir. 2. 1.600+ Geçmiş Kurul & Yapay Zeka So |
 | `scripts/sync-all-to-firestore.mjs` | MedSoru Firestore Full Database Sync Script Bu betik: 1. INITIAL_COMMITTEES listesini Firestore 'committees' koleksiyonuna eşitler. 2. data/lecture_notes.json içindeki tüm ders notlarını Firestore 'lecture_notes' koleksi |
 | `scripts/sync-all-to-supabase.mjs` | scripts/sync-all-to-supabase.mjs Veritabanı senkronizasyon motoru: 1. Kurulları (Committees) 2. Çıkmış Soruları (Past Questions - 2314 adet) 3. Amfi Ders Notlarını (Lecture Notes) Supabase PostgreSQL veritabanına aktarır |
 | `scripts/sync-database-json-to-cloud.mjs` | scripts/sync-database-json-to-cloud.mjs meds_database\database_json altındaki yapılandırılmış JSON dosyalarını doğrudan Supabase (PostgreSQL) ve Firebase (Firestore) veritabanlarına yükler. Kullanı |
-| `scripts/sync-deepseek-contributions.ts` | _başlık açıklaması yok_ |
+| `scripts/archive/sync-deepseek-contributions.ts` | _başlık açıklaması yok_ |
 | `scripts/sync-drive-updates.mjs` | scripts/sync-drive-updates.mjs MedSoru Google Drive Değişiklik Tespit ve Manuel Senkronizasyon Motoru --------------------------------------------------------------------- Bu script; Google Drive klasörlerinde (Ders Notl |
 | `scripts/sync-past-questions-to-supabase.mjs` | scripts/sync-past-questions-to-supabase.mjs pastQuestions.json dosyasındaki 2922 adet çıkmış soruyu güvenli 25'lik partiler halinde ve otomatik tekrar (retry) mekanizmasıyla Supabase 'past_questions' tablosuna aktarır. |
-| `scripts/sync-rag-sorular-to-site-and-supabase.mjs` | scripts/sync-rag-sorular-to-site-and-supabase.mjs Bu script: 1. meds_database/rag_sorular klasöründeki 1.082 adet doğrulanmış ve amfi ders notlarıyla zeminlenmiş (grounded) soruyu okur. 2. meds/data/pastQuestions.json do |
+| `scripts/archive/sync-rag-sorular-to-site-and-supabase.mjs` | scripts/archive/sync-rag-sorular-to-site-and-supabase.mjs Bu script: 1. meds_database/rag_sorular klasöründeki 1.082 adet doğrulanmış ve amfi ders notlarıyla zeminlenmiş (grounded) soruyu okur. 2. meds/data/pastQuestions.json do |
 | `scripts/sync_deepseek_data.py` | scripts/sync_deepseek_data.py Robust DeepSeek Data Synchronizer and Sanitizer for MedSoru: - Scans `meds_database/deepseek_data/` and local `deepseek_data/`. - Enforces strict anti-corruption filters: * Rejects bloated q |
-| `scripts/sync_drive_curriculum_folder.mjs` | scripts/sync_drive_curriculum_folder.mjs Google Drive klasöründeki (1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W) tüm ders notlarını: 1. meds_database\ders_notlari_pdf ve kurul_ders_notlari\Kurul 1'e indirir. |
+| `scripts/archive/sync_drive_curriculum_folder.mjs` | scripts/archive/sync_drive_curriculum_folder.mjs Google Drive klasöründeki (1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W) tüm ders notlarını: 1. meds_database\ders_notlari_pdf ve kurul_ders_notlari\Kurul 1'e indirir. |
 | `scripts/sync_to_supabase_v2.py` | scripts/sync_to_supabase_v2.py -------------------------------------------------------------------------------- MedSoru AI - Supabase v2 Chunk-Build Veri Senkronizasyonu Motoru 1. 6.263 Doğrulanmış ve Zenginleştirilmiş Ç |
 | `scripts/sync_user_drive_folder.mjs` | _başlık açıklaması yok_ |
 
@@ -497,15 +497,15 @@ olmayan dosyalar adına göre gruplanmıştır.
 | Dosya | Açıklama |
 |---|---|
 | `scripts/enrich-drive-slides.mjs` | _başlık açıklaması yok_ |
-| `scripts/enrich_apoptosis_terms.py` | Enrich Medical Glossary and Encyclopedia with detailed Apoptosis & Bcl-2 Family entries (Bax, Bak, Intrinsic Pathway, Extrinsic Pathway, Apoptosome, Smac/DIABLO, etc.) |
-| `scripts/enrich_high_yield_terms.py` | _başlık açıklaması yok_ |
-| `scripts/enrich_medical_encyclopedia_and_glossary.py` | scripts/enrich_medical_encyclopedia_and_glossary.py Enriches medical_glossary.json and medical_encyclopedia.json with faculty-aligned, deeply structured medical entries for pathology, genetics, oncology, immunology, and  |
-| `scripts/enrich_new_drive_terms.py` | _başlık açıklaması yok_ |
-| `scripts/enrich_past_questions.py` | enrich_past_questions.py DeepSeek tarafından doğrulanmış ve zenginleştirilmiş soruları (meds_donem3_sorulari_duzeltilmis.jsonl) mevcut pastQuestions.json veri tabanına entegre eder. Tüm kök, şık, gerekçe, kanıt metni, de |
-| `scripts/enrich_spot_pearls_structure.py` | scripts/enrich_spot_pearls_structure.py Upgrades all spotPearls in 'learn-enflamasyon-kimyasal-mediyatorleri' to multi-tier structured format: - Üst madde & alt madde (indented sub-bullets) - 🔴 Kırmızı (Önemli / Kritik / |
-| `scripts/expand_apoptosis_terms.py` | scripts/expand_apoptosis_terms.py Enriches medical_encyclopedia.json and medical_glossary.json with granular entries: 1. Bax Proteini (Bcl-2 Associated X Protein) 2. Bak Proteini (Bcl-2 Antagonist/Killer) 3. İntrensek Ap |
-| `scripts/expand_genetics_pediatric_terms.py` | expand_genetics_pediatric_terms.py Enriches medical_encyclopedia.json and medical_glossary.json with comprehensive, granular terms for Genetics, Pediatric, Environmental, Nutritional Pathology, and Molecular Diagnostics  |
-| `scripts/expand_hypersensitivity_terms.py` | expand_hypersensitivity_terms.py Enriches medical_encyclopedia.json and medical_glossary.json with comprehensive, granular terms for Hypersensitivity, Autoimmunity, Immunogenetics, Rejection, Immunodeficiencies, and Amyl |
+| `scripts/archive/enrich_apoptosis_terms.py` | Enrich Medical Glossary and Encyclopedia with detailed Apoptosis & Bcl-2 Family entries (Bax, Bak, Intrinsic Pathway, Extrinsic Pathway, Apoptosome, Smac/DIABLO, etc.) |
+| `scripts/archive/enrich_high_yield_terms.py` | _başlık açıklaması yok_ |
+| `scripts/archive/enrich_medical_encyclopedia_and_glossary.py` | scripts/archive/enrich_medical_encyclopedia_and_glossary.py Enriches medical_glossary.json and medical_encyclopedia.json with faculty-aligned, deeply structured medical entries for pathology, genetics, oncology, immunology, and  |
+| `scripts/archive/enrich_new_drive_terms.py` | _başlık açıklaması yok_ |
+| `scripts/archive/enrich_past_questions.py` | enrich_past_questions.py DeepSeek tarafından doğrulanmış ve zenginleştirilmiş soruları (meds_donem3_sorulari_duzeltilmis.jsonl) mevcut pastQuestions.json veri tabanına entegre eder. Tüm kök, şık, gerekçe, kanıt metni, de |
+| `scripts/archive/enrich_spot_pearls_structure.py` | scripts/archive/enrich_spot_pearls_structure.py Upgrades all spotPearls in 'learn-enflamasyon-kimyasal-mediyatorleri' to multi-tier structured format: - Üst madde & alt madde (indented sub-bullets) - 🔴 Kırmızı (Önemli / Kritik / |
+| `scripts/archive/expand_apoptosis_terms.py` | scripts/archive/expand_apoptosis_terms.py Enriches medical_encyclopedia.json and medical_glossary.json with granular entries: 1. Bax Proteini (Bcl-2 Associated X Protein) 2. Bak Proteini (Bcl-2 Antagonist/Killer) 3. İntrensek Ap |
+| `scripts/archive/expand_genetics_pediatric_terms.py` | expand_genetics_pediatric_terms.py Enriches medical_encyclopedia.json and medical_glossary.json with comprehensive, granular terms for Genetics, Pediatric, Environmental, Nutritional Pathology, and Molecular Diagnostics  |
+| `scripts/archive/expand_hypersensitivity_terms.py` | expand_hypersensitivity_terms.py Enriches medical_encyclopedia.json and medical_glossary.json with comprehensive, granular terms for Hypersensitivity, Autoimmunity, Immunogenetics, Rejection, Immunodeficiencies, and Amyl |
 
 ### advanced_ai/ (13)
 
@@ -596,10 +596,10 @@ olmayan dosyalar adına göre gruplanmıştır.
 | Dosya | Açıklama |
 |---|---|
 | `scripts/extract-scanned-images.py` | MedSoru Scanned PDF Image Extractor Extracts images from scanned PDFs in meds_database\meds_sorular and saves them to meds_database\meds_sorular_images\[pdf_name]\ |
-| `scripts/extract_batch_pending_lectures.py` | _başlık açıklaması yok_ |
+| `scripts/archive/extract_batch_pending_lectures.py` | _başlık açıklaması yok_ |
 | `scripts/extract_curriculum.py` | _başlık açıklaması yok_ |
 | `scripts/filter-donem3-and-clean-ocr.mjs` | scripts/filter-donem3-and-clean-ocr.mjs 1. Dönem 3 müfredatına (Tıbbi Patoloji, Farmakoloji, Dahiliye, Kardiyoloji, Pediatri, Üroloji, Kadın Doğum, Enfeksiyon, Ortopedi, Acil Tıp, Nöroloji, Psikiyatri, FTR, Genetik vb.)  |
-| `scripts/outline_extracted_lectures.py` | _başlık açıklaması yok_ |
+| `scripts/archive/outline_extracted_lectures.py` | _başlık açıklaması yok_ |
 | `scripts/process-scanned-ocr.mjs` | MedSoru Scanned PDF OCR & Question Extraction Engine Bu betik: 1. meds_sorular_images içindeki taranmış sınav fotoğraflarını OCR ile okur. 2. 180° ters çekilmiş fotoğrafları otomatik tespit edip döndürür. 3. Orijinal ham |
 
 ---

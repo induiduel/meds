@@ -35,7 +35,8 @@ and may write to `data/*.json`. Check `git status` afterwards and revert uninten
   (substring matcher, poor ranking); only `scripts/verify-question-answers.mjs` still uses it.
 - `scripts/link-exam-questions.mts` — parses exam PDFs/DOCX and links each question to the pool and to
   course material (retrieval only). Run it on a folder to check parser changes.
-- `scripts/` — one-off data pipelines; not part of the app runtime.
+- `scripts/` — data pipelines (`pipeline/`, `agents/`, `advanced_ai/` phases, `eval/`). `scripts/archive/` holds one-off
+  scripts nothing calls (deck/summary builders, Windows launchers); excluded from `tsc`, do not wire new code to them.
 - `data/` — local JSON database (large, committed). `src/data/` — data bundled into the frontend.
 
 ## Rules
