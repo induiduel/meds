@@ -45,7 +45,7 @@ def _env() -> dict:
 ENV = _env()
 KEYS = {
     "groq": [k for k in (ENV.get("GROQ_API_KEY"), ENV.get("GROQ_API_KEY_2")) if k],
-    "gemini": [k for k in (ENV.get("GEMINI_API_KEY"), ENV.get("GEMINI_FREE_KEY_2")) if k],
+    "gemini": [k for k in (ENV.get("GEMINI_API_KEY"), ENV.get("GEMINI_FREE_KEY_2"), ENV.get("GEMINI_FREE_KEY_3")) if k],
     "openrouter": [k for k in (ENV.get("MUSE_SPARK_API_KEY"), ENV.get("OPENROUTER_API_KEY")) if k],
     # OpenCode Zen: ücretsiz Muse Spark (muse-spark-1.3-contributor-free). opencode.ai'den alınan anahtar gerekir;
     # "contributor" sürümlerinde istemler sağlayıcının model geliştirmesinde kullanılabilir.

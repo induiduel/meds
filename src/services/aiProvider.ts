@@ -131,6 +131,7 @@ export function getFreeGeminiKeys(customKey?: string): KeyInfo[] {
   // 2-4. Free tier keys from .env
   add(process.env.GEMINI_API_KEY, 'Ücretsiz Plan 1 (Gemini)');
   add(process.env.GEMINI_FREE_KEY_2, 'Ücretsiz Plan 2 (Gemini)');
+  add(process.env.GEMINI_FREE_KEY_3, 'Ücretsiz Plan 3 (Gemini)');
   // GEMINI_BACKUP_KEY ücretliydi: yalnız Faz 14 kullanır (PHASE14_PAID_GEMINI_KEY), site kullanmaz
 
   return list;

@@ -60,11 +60,12 @@ def env() -> dict:
 
 
 def load_chunks() -> list[dict]:
-    d = json.loads(SRC.read_text(encoding="utf-8"))
+    # Postgres text/jsonb NUL (\u0000) kabul etmez (HTTP 400 22P05) → OCR artığı NUL'lar atılır
+    d = json.loads(SRC.read_text(encoding="utf-8").replace("\\u0000", ""))
     rows = d if isinstance(d, list) else d.get("chunks", [])
     out = []
     for c in rows:
-        txt = (c.get("content") or "").strip()
+        txt = (c.get("content") or "").replace("\x00", "").strip()
         if len(txt) < 20 or not c.get("id"):
             continue
         out.append({"id": str(c["id"]), "hash": str(c.get("hash") or hash(txt)), "content": txt,
@@ -140,7 +141,7 @@ def sync_target(name: str, url: str, key: str, chunks: list[dict], idx: dict, ve
     removed = [i for i in synced if i not in want]
     log(f"[{name}] yazılacak: {len(changed)} · silinecek: {len(removed)} · güncel: {len(want) - len(changed)}")
     ok = fail = 0
-    B = 300
+    B = 100 if name == "bulut" else 300                         # bulut (ücretsiz katman): HNSW yazımı yavaş, küçük paket
     for i in range(0, len(changed), B):
         part = changed[i:i + B]
         rows = [{"id": c["id"], "document_id": c["document_id"], "document_type": c["document_type"],
@@ -148,7 +149,11 @@ def sync_target(name: str, url: str, key: str, chunks: list[dict], idx: dict, ve
                  "page_number": c["page_number"], "content": c["content"], "metadata": c["metadata"],
                  "content_hash": c["hash"], "embedding_e5": "[" + ",".join(f"{x:.6f}" for x in vecs[idx[c["hash"]]]) + "]"}
                 for c in part]
-        code, txt = rest(url, key, "POST", "rag_chunks?on_conflict=id", rows, "resolution=merge-duplicates,return=minimal")
+        for _d in range(3):                                         # zaman aşımı (57014/500) → bekleyip yeniden dene
+            code, txt = rest(url, key, "POST", "rag_chunks?on_conflict=id", rows, "resolution=merge-duplicates,return=minimal")
+            if code not in (500, 502, 503, 504):
+                break
+            time.sleep(10 * (_d + 1))
         if code in (200, 201, 204):
             ok += len(part)
             for c in part:

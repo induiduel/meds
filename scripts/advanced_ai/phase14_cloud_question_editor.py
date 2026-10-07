@@ -56,6 +56,7 @@ API_PASSWORD = os.environ.get("MEDSORU_API_PASSWORD", "12345678")
 GEMINI_KEYS = [
     os.environ.get("GEMINI_API_KEY", "").strip(),
     os.environ.get("GEMINI_FREE_KEY_2", "").strip(),
+    os.environ.get("GEMINI_FREE_KEY_3", "").strip(),
     os.environ.get("GEMINI_FALLBACK_KEY", "").strip(),
 ]
 GEMINI_KEYS = [k for k in list(dict.fromkeys(GEMINI_KEYS)) if k and not k.startswith("BURAYA_") and not k.startswith("MY_")]
@@ -104,10 +105,18 @@ MODEL_PRICING = {  # USD / token (Google Gemini; flash-lite en ucuz)
     "gemini-3.5-flash-lite":    {"input": 0.10 / 1_000_000, "output": 0.40 / 1_000_000},
     "gemini-3.1-flash-lite":    {"input": 0.10 / 1_000_000, "output": 0.40 / 1_000_000},
     "gemini-flash-latest":      {"input": 0.30 / 1_000_000, "output": 2.50 / 1_000_000},
+    "gemini-3.5-flash":         {"input": 0.30 / 1_000_000, "output": 2.50 / 1_000_000},
 }
-# Ücretli anahtarda yalnız en ucuz modeller denenir
-PAID_MODELS = ["gemini-flash-lite-latest", "gemini-3.5-flash-lite"]
-FREE_MODELS = ["gemini-flash-lite-latest", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-flash-latest"]
+# Cevap doğruluğu için önce düşünen (reasoning) Flash; Flash-Lite yalnız yedek. Flash-Lite düşünmeden cevap seçtiği için
+# kayıttaki cevabı ~%25 oranında yanlış değiştiriyordu (2026-10-06/07 incelemesi). Ücretli tavanlar (100 istek/gün,
+# 100 TL/ay) record_usage/paid_allowed ile aynen korunur.
+# Ücretsiz Flash kotası günde model başına yalnız 20 istek → kota bitince Flash-Lite yedek. Lite'ın cevap değişikliği
+# cevap_dogrula'da ancak güçlü bağımsız model (gpt-oss) + açıklama aynı şıkta birleşirse kabul edilir.
+PAID_MODELS = ["gemini-flash-latest", "gemini-3.5-flash", "gemini-flash-lite-latest"]
+FREE_MODELS = ["gemini-flash-latest", "gemini-3.5-flash", "gemini-flash-lite-latest", "gemini-3.5-flash-lite"]
+STRONG_VERIFIER = "gpt-oss"                                    # cevap DEĞİŞİKLİĞİNİ yalnız bu doğrulayıcı onaylayabilir
+# Bağımsız cevap doğrulayıcı (farklı model ailesi, ücretsiz Groq): soruyu kayıtlı cevabı görmeden çözer
+VERIFY_MODELS = ["groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b"]
 
 
 def load_monthly_cost() -> dict:
@@ -216,7 +225,7 @@ def load_curriculum_summary() -> str:
 def _key_tiers() -> list[tuple[str, str, bool]]:
     """(etiket, anahtar, ücretli_mi) — önce ücretsizler, en son ücretli (yalnız Faz 14)."""
     tiers = []
-    for name in ("GEMINI_API_KEY", "GEMINI_FREE_KEY_2", "GEMINI_FALLBACK_KEY"):
+    for name in ("GEMINI_API_KEY", "GEMINI_FREE_KEY_2", "GEMINI_FREE_KEY_3", "GEMINI_FALLBACK_KEY"):
         v = os.environ.get(name, "").strip()
         if not v:
             try:
@@ -234,7 +243,7 @@ def _key_tiers() -> list[tuple[str, str, bool]]:
 
 # Kip: ücretli anahtar yalnız elle başlatmada (ALLOW_PAID) ve ücretsizler tükenince. Otomatik kip yalnız ücretsiz.
 ALLOW_PAID = False
-FREE_RPM = int(os.environ.get("PHASE14_FREE_RPM", "12"))      # ücretsiz katman dakika sınırının altında tempo
+FREE_RPM = int(os.environ.get("PHASE14_FREE_RPM", "6"))   # Flash ücretsiz katman dakikalık sınırı düşük
 _last_call = [0.0]
 _daily_exhausted: set[str] = set()                            # bu çalıştırmada günlük kotası biten (anahtar, model)
 
@@ -267,48 +276,15 @@ def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | No
             if (label, model) in _daily_exhausted:
                 continue
             tried_any = True
-            if not paid:                                     # ücretsiz katman: dakikalık sınırın altında kal
-                wait = 60.0 / max(1, FREE_RPM) - (time.time() - _last_call[0])
-                if wait > 0:
-                    time.sleep(wait)
-                _last_call[0] = time.time()
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-            req = urllib.request.Request(url, data=data_bytes, method="POST",
-                                         headers={"Content-Type": "application/json", "x-goog-api-key": key})
-            try:
-                with urllib.request.urlopen(req, timeout=60) as resp:
-                    body = json.loads(resp.read().decode("utf-8"))
-                text = "".join(p.get("text", "") for p in (body.get("candidates") or [{}])[0].get("content", {}).get("parts", [])).strip()
-                usage = body.get("usageMetadata", {})
-                in_t = usage.get("promptTokenCount", len(prompt_text) // 4)
-                out_t = usage.get("candidatesTokenCount", len(text) // 4)
-                cached = usage.get("cachedContentTokenCount", 0)
-                st = record_usage(model, paid, in_t, out_t, cached)
-                if paid:
-                    logging.info(f"[API] {label} · {model} · giriş {in_t} (önbellek {cached}) / çıkış {out_t} token · "
-                                 f"~{st['cost_tl']:.4f} TL · bugün {st['paid_requests_today']}/{PAID_MAX_DAILY_REQUESTS} · "
-                                 f"ay {st['cost_tl']:.2f}/{PAID_MAX_MONTHLY_TL:.0f} TL")
-                else:
-                    logging.info(f"[API] {label} · {model} · giriş {in_t} (önbellek {cached}) / çıkış {out_t} token · ücretsiz")
-                if text.startswith("```"):
-                    text = text.strip("`").split("\n", 1)[1] if "\n" in text else text
-                    text = text.rsplit("```", 1)[0].strip()
-                return json.loads(text), f"{model} ({'ücretli' if paid else 'ücretsiz'})"
-            except urllib.error.HTTPError as e:
-                err = e.read().decode("utf-8", errors="ignore")[:200]
-                if e.code == 429:
-                    if any(t in err for t in ("PerDay", "per day", "RPD", "daily", "Quota exceeded")):
-                        _daily_exhausted.add((label, model))
-                        logging.warning(f"[API] {label} · {model}: GÜNLÜK kota doldu; bu çalıştırmada tekrar denenmez")
-                    else:
-                        logging.warning(f"[API] {label} · {model}: dakikalık kota (429), 20 sn bekleniyor")
-                        time.sleep(20)
+            for _deneme in range(3):                         # 429/503/zaman aşımı: aynı modelle bekleyip yeniden dene
+                r = _tek_istek(label, key, paid, model, data_bytes, prompt_text)
+                if r == "tekrar":
+                    time.sleep(20 * (_deneme + 1))
                     continue
-                logging.warning(f"[API] {label} · {model}: HTTP {e.code} {err}")
+                break
+            if r in ("tekrar", "gec", "gunluk"):
                 continue
-            except Exception as e:  # noqa: BLE001
-                logging.warning(f"[API] {label} · {model}: {e}")
-                continue
+            return r
     free_left = [1 for lb, _k, pd in _key_tiers() if not pd for m in FREE_MODELS if (lb, m) not in _daily_exhausted]
     if not free_left and not ALLOW_PAID:
         raise QuotaExhausted("ücretsiz günlük kotalar doldu")
@@ -316,6 +292,52 @@ def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | No
         raise QuotaExhausted("denenebilecek anahtar/model kalmadı")
     logging.error("[API] hiçbir anahtar/model yanıt vermedi; soru sonraki çalıştırmaya kaldı")
     return None, "none"
+
+
+def _tek_istek(label: str, key: str, paid: bool, model: str, data_bytes: bytes, prompt_text: str):
+    """Tek Gemini isteği. Başarıda (json, model_etiketi); 'tekrar' (geçici hata), 'gunluk' (günlük kota), 'gec' (diğer)."""
+    if not paid:                                     # ücretsiz katman: dakikalık sınırın altında kal
+        wait = 60.0 / max(1, FREE_RPM) - (time.time() - _last_call[0])
+        if wait > 0:
+            time.sleep(wait)
+        _last_call[0] = time.time()
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    req = urllib.request.Request(url, data=data_bytes, method="POST",
+                                 headers={"Content-Type": "application/json", "x-goog-api-key": key})
+    try:
+        with urllib.request.urlopen(req, timeout=180) as resp:
+            body = json.loads(resp.read().decode("utf-8"))
+        text = "".join(p.get("text", "") for p in (body.get("candidates") or [{}])[0].get("content", {}).get("parts", [])).strip()
+        usage = body.get("usageMetadata", {})
+        in_t = usage.get("promptTokenCount", len(prompt_text) // 4)
+        out_t = usage.get("candidatesTokenCount", len(text) // 4)
+        cached = usage.get("cachedContentTokenCount", 0)
+        st = record_usage(model, paid, in_t, out_t, cached)
+        if paid:
+            logging.info(f"[API] {label} · {model} · giriş {in_t} (önbellek {cached}) / çıkış {out_t} token · "
+                         f"~{st['cost_tl']:.4f} TL · bugün {st['paid_requests_today']}/{PAID_MAX_DAILY_REQUESTS} · "
+                         f"ay {st['cost_tl']:.2f}/{PAID_MAX_MONTHLY_TL:.0f} TL")
+        else:
+            logging.info(f"[API] {label} · {model} · giriş {in_t} (önbellek {cached}) / çıkış {out_t} token · ücretsiz")
+        if text.startswith("```"):
+            text = text.strip("`").split("\n", 1)[1] if "\n" in text else text
+            text = text.rsplit("```", 1)[0].strip()
+        return json.loads(text), f"{model} ({'ücretli' if paid else 'ücretsiz'})"
+    except urllib.error.HTTPError as e:
+        err_full = e.read().decode("utf-8", errors="ignore")
+        err = err_full[:200]
+        if e.code == 429:
+            if any(t in err_full for t in ("PerDay", "per day", "RPD", "daily")):   # tam gövde: kısaltılınca günlük kota kaçıyordu
+                _daily_exhausted.add((label, model))
+                logging.warning(f"[API] {label} · {model}: GÜNLÜK kota doldu; bu çalıştırmada tekrar denenmez")
+                return "gunluk"
+            logging.warning(f"[API] {label} · {model}: dakikalık kota (429), beklenip yeniden denenecek")
+            return "tekrar"
+        logging.warning(f"[API] {label} · {model}: HTTP {e.code} {err}")
+        return "tekrar" if e.code in (500, 503, 504) else "gec"
+    except Exception as e:  # noqa: BLE001
+        logging.warning(f"[API] {label} · {model}: {e}")
+        return "tekrar"
 
 
 def canonical_options(question: dict) -> dict[str, str]:
@@ -385,8 +407,11 @@ _SYSTEM_CACHE = None
 
 SCHEMA_HINT = """YANIT ŞEMASI (yalnız JSON):
 {"soru_koku": "...", "secenekler": {"A": "...", "B": "...", "C": "...", "D": "...", "E": "..."},
- "dogru_secenek": "A-E", "cevap_degisti": false, "cevap_emin": true, "cevap_gerekcesi": "...",
- "yapay_zeka_tamamlanan_siklar": [], "aciklama_maddeleri": ["...", "..."],
+ "yapay_zeka_tamamlanan_siklar": [],
+ "sik_analizi": {"A": "bu şık doğru mu yanlış mı, neden (1 cümle)", "B": "...", "C": "...", "D": "...", "E": "..."},
+ "aciklama_maddeleri": ["...", "..."],
+ "dogru_secenek": "A-E (YUKARIDAKİ şık analizi ve açıklamanın gösterdiği şık; onlarla çelişemez)",
+ "cevap_degisti": false, "cevap_emin": true, "cevap_gerekcesi": "...",
  "kurul_adi": "TIP310", "ders_adi": "paketteki ders adı", "konu_adi": "paketteki konu adı",
  "degisen_alanlar": ["soru_koku"], "degisiklik_ozeti": "kısa ve somut",
  "YZV": {"degisiklik_ozeti": {"soru_koku_duzeltmesi": "...", "sik_duzeltmesi": "...", "aciklama_duzeltmesi": "...",
@@ -404,7 +429,149 @@ def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> tuple[dict | N
         if maddeler:
             res["aciklama"] = "\n".join(f"• {m}" for m in maddeler)   # site bu satırları madde olarak gösterir
         res.setdefault("review_required", True)
+        anlam_koru(soru, res)
+        cevap_dogrula(soru, res)
     return res, model
+
+
+_OLUMSUZ = ("değildir", "degildir", "yanlıştır", "yanlistir", "olmaz", "hariç", "haric", "yoktur", "beklenmez",
+            "görülmez", "gorulmez", "yapılmamalı", "yapilmamali", "doğru değil", "dogru degil", "yanlış", "en az")
+
+
+def _olumsuz_mu(metin: str) -> bool:
+    t = (metin or "").lower()
+    return any(w in t for w in _OLUMSUZ)
+
+
+def anlam_koru(soru: dict, res: dict) -> None:
+    """Modelin soruyu kendi cevabına uydurmasını engeller (Flash-Lite 'doğru değildir'i 'doğrudur' yapıp şıkları
+    yeniden yazıyordu). Kökün olumsuzluk yönü değiştiyse kök geri alınır; dolu bir şık anlamca çok değiştiyse
+    (benzerlik < 0.55) o şık özgün haline döner. Boş/eksik şıkların tamamlanmasına izin verilir."""
+    import difflib
+    notlar = []
+    ok, yk = soru.get("soru_koku") or "", res.get("soru_koku") or ""
+    if ok and yk and _olumsuz_mu(ok) != _olumsuz_mu(yk):
+        res["soru_koku"] = ok
+        notlar.append("kökün olumlu/olumsuz yönü değiştirilmişti → özgün kök korundu")
+    osec, ysec = soru.get("secenekler") or {}, res.get("secenekler") or {}
+    if isinstance(osec, dict) and isinstance(ysec, dict):
+        for k, ov in osec.items():
+            ov = str(ov or "").strip()
+            yv = str(ysec.get(k) or "").strip()
+            if len(ov) >= 3 and yv and difflib.SequenceMatcher(None, ov.lower(), yv.lower()).ratio() < 0.55:
+                ysec[k] = ov
+                notlar.append(f"{k} şıkkı anlamca değiştirilmişti → özgün şık korundu")
+        res["secenekler"] = ysec
+    if notlar:
+        res["review_required"] = True
+        res["anlam_koruma"] = notlar
+        logging.info("[KORUMA] " + "; ".join(notlar))
+
+
+def _bagimsiz_cevap(soru_koku: str, secenekler: dict) -> tuple[str, str]:
+    """Kayıtlı cevabı ve önerilen cevabı GÖRMEDEN soruyu çözer (ücretsiz Groq). (harf, model) ya da ("", "")."""
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
+    try:
+        import cloud_llm
+    except Exception:
+        return "", ""
+    prompt = ("Tıp fakültesi sınav sorusu. Adım adım düşün, her şıkkı değerlendir, sonra tek doğru şıkkı seç.\n"
+              "Soru kökündeki olumsuzluk ifadelerine (değildir, yanlıştır, olmaz, hariç) özellikle dikkat et.\n\n"
+              f"SORU: {soru_koku}\n" + "\n".join(f"{k}) {v}" for k, v in sorted(secenekler.items()) if v) +
+              '\n\nYalnız JSON: {"dogru_secenek": "A-E", "gerekce": "kısa"}')
+    try:
+        r = cloud_llm.chat(prompt, as_json=True, max_tokens=4000, temperature=0.0, models=VERIFY_MODELS, timeout=120)
+    except Exception as e:
+        logging.warning(f"[DOĞRULAMA] hata: {e}")
+        return "", ""
+    harf = str((r or {}).get("dogru_secenek") or "").strip().upper()[:1]
+    return (harf if harf in secenekler else ""), (getattr(cloud_llm, "last_model", {}) or {}).get("ad") or "groq"
+
+
+def _aciklamanin_cevabi(soru_koku: str, secenekler: dict, res: dict) -> str:
+    """Modelin yazdığı şık analizi + açıklama hangi şıkkı doğru cevap olarak gösteriyor? (işaretlenen harf verilmez)"""
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
+    try:
+        import cloud_llm
+    except Exception:
+        return ""
+    analiz = res.get("sik_analizi") or {}
+    maddeler = res.get("aciklama_maddeleri") or [res.get("aciklama") or ""]
+    metin = ("\n".join(f"{k}: {v}" for k, v in sorted(analiz.items())) if isinstance(analiz, dict) else str(analiz))
+    prompt = ("Aşağıda bir sınav sorusu ve bir öğrencinin yazdığı açıklama var. Tıbbi doğruluğu DEĞERLENDİRME; yalnız bu "
+              "açıklamanın hangi şıkkı sorunun cevabı olarak gösterdiğini belirle. Soru kökündeki olumsuzluğa dikkat et "
+              "(ör. 'hangisi yanlıştır' sorusunda cevap, açıklamanın YANLIŞ dediği şıktır).\n\n"
+              f"SORU: {soru_koku}\n" + "\n".join(f"{k}) {v}" for k, v in sorted(secenekler.items()) if v) +
+              f"\n\nŞIK ANALİZİ:\n{metin}\n\nAÇIKLAMA:\n" + "\n".join(str(m) for m in maddeler) +
+              '\n\nYalnız JSON: {"aciklamanin_cevabi": "A-E" ya da "belirsiz"}')
+    try:
+        r = cloud_llm.chat(prompt, as_json=True, max_tokens=2000, temperature=0.0, models=VERIFY_MODELS, timeout=120)
+    except Exception:
+        return ""
+    h = str((r or {}).get("aciklamanin_cevabi") or "").strip().upper()[:1]
+    return h if h in secenekler else ""
+
+
+def cevap_dogrula(soru: dict, res: dict) -> None:
+    """Cevap kararını iki bağımsız modelle sağlamlaştırır:
+    * Öneri kayıtlı cevapla aynı ve doğrulayıcı da aynı → değişiklik yok.
+    * Öneri kayıtlıyı değiştiriyor → değişiklik yalnız doğrulayıcı YENİ cevapla hemfikirse kalır;
+      doğrulayıcı kayıtlıyla hemfikirse kayıtlı cevaba dönülür; ikisi de değilse kayıtlı korunur, incelemeye düşer.
+    * Öneri aynı ama doğrulayıcı farklı → cevap korunur, 'cevap şüpheli' olarak incelemeye düşer.
+    Sonuç res['cevap_dogrulama'] alanında saklanır."""
+    kayitli = str(soru.get("dogru_secenek") or "").strip().upper()[:1]
+    oneri = str(res.get("dogru_secenek") or "").strip().upper()[:1]
+    sec = res.get("secenekler") or soru.get("secenekler") or {}     # anlam_koru sonrası: özgün anlamda şıklar
+    if not oneri or not isinstance(sec, dict):
+        return
+    harf, vmodel = _bagimsiz_cevap(res.get("soru_koku") or soru.get("soru_koku") or "", sec)
+    ac_harf = _aciklamanin_cevabi(res.get("soru_koku") or soru.get("soru_koku") or "", sec, res)
+    d = {"kayitli": kayitli, "oneri": oneri, "dogrulayici": harf, "dogrulayici_model": vmodel, "aciklama_gosterdigi": ac_harf}
+    if ac_harf and ac_harf != oneri:
+        # model açıklamada başka şıkkı savunup farklı harf işaretlemiş → önerinin cevabı güvenilmez
+        logging.info(f"[DOĞRULAMA] açıklama {ac_harf} şıkkını gösteriyor, işaretlenen {oneri} → çelişki")
+        d["aciklama_celiskisi"] = True
+        if ac_harf == harf:
+            oneri = ac_harf                                   # açıklama + bağımsız model aynı şıkta: o şık öneridir
+            res["dogru_secenek"] = ac_harf
+        res["review_required"] = True
+    alanlar = list(res.get("degisen_alanlar") or [])
+    if not harf:
+        d["sonuc"] = "dogrulanamadi"
+        if kayitli and oneri != kayitli:                     # doğrulanamayan değişiklik kabul edilmez
+            res["dogru_secenek"] = kayitli
+            res["cevap_degisti"] = False
+            d["sonuc"] = "dogrulanamadi_kayitli_korundu"
+        res["review_required"] = True
+    elif not kayitli or oneri == kayitli:
+        d["sonuc"] = "uzlasi" if harf == oneri else "suphe_kayitli_korundu"
+        if harf != oneri:
+            res["review_required"] = True
+            res["cevap_emin"] = False
+    elif harf == oneri and (STRONG_VERIFIER not in vmodel or (ac_harf and ac_harf != oneri)):
+        res["dogru_secenek"] = kayitli                      # zayıf doğrulayıcı ya da açıklama çelişkisi: değişiklik yok
+        res["cevap_degisti"] = False
+        alanlar = [a for a in alanlar if a not in ("dogru_secenek", "cevap")]
+        d["sonuc"] = "degisiklik_yeterince_dogrulanamadi_kayitli_korundu"
+        res["review_required"] = True
+    elif harf == oneri:
+        d["sonuc"] = "degisiklik_iki_modelce_dogrulandi"
+        res["cevap_degisti"] = True
+        res["review_required"] = True                        # cevap değişikliği her zaman insan onayından geçer
+    else:
+        res["dogru_secenek"] = kayitli
+        res["cevap_degisti"] = False
+        alanlar = [a for a in alanlar if a not in ("dogru_secenek", "cevap")]
+        d["sonuc"] = "degisiklik_reddedildi_kayitli_korundu" if harf == kayitli else "uzlasma_yok_kayitli_korundu"
+        res["review_required"] = True
+    son = str(res.get("dogru_secenek") or "").upper()[:1]
+    if ac_harf and ac_harf != son:
+        # kalan cevapla çelişen açıklama yayınlanmaz: incelemeye düşer, işaretlenir
+        d["aciklama_son_cevapla_celisiyor"] = True
+        res["review_required"] = True
+    res["degisen_alanlar"] = alanlar
+    res["cevap_dogrulama"] = d
+    logging.info(f"[DOĞRULAMA] kayıtlı {kayitli or '-'} · öneri {oneri} · bağımsız {harf or '?'} ({vmodel}) → {d['sonuc']}")
 
 
 def support_ratio(original: dict, proposal: dict) -> float:
