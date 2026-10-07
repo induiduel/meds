@@ -331,19 +331,10 @@ export const registerWithEmailPassword = async (
       congratsSentCommittees: [],
     };
   } catch (firebaseErr: any) {
-    console.warn('Firebase createUser error, activating resilient fallback:', firebaseErr.code || firebaseErr.message);
-    
-    // Fallback: If Firebase Email provider is not enabled in Console or iframe blocks it
-    const fallbackUid = 'std-' + Math.abs(cleanEmail.split('').reduce((acc, char) => (acc << 5) - acc + char.charCodeAt(0), 0)).toString(36) + '-' + Date.now().toString(36);
-    
-    appUser = {
-      uid: fallbackUid,
-      email: cleanEmail,
-      displayName: cleanName,
-      studentNumber: cleanNum,
-      photoURL: null,
-      congratsSentCommittees: [],
-    };
+    // Eskiden burada Firebase hatası "yedek" sahte bir kimlikle örtülüyordu: hesap gerçekte oluşmuyor, herkes herhangi
+    // bir e-postayla oturum açabiliyordu. Artık hata kullanıcıya açıkça gösterilir.
+    console.warn('Firebase createUser error:', firebaseErr?.code || firebaseErr?.message);
+    throw new Error(authErrorMessage(firebaseErr));
   }
 
   cacheUserProfile(appUser);
@@ -365,6 +356,26 @@ export const registerWithEmailPassword = async (
 
   return appUser;
 };
+
+/** Firebase Auth hata kodlarını öğrenciye anlaşılır Türkçe mesaja çevirir. */
+export function authErrorMessage(err: any): string {
+  const code = String(err?.code || '');
+  const map: Record<string, string> = {
+    'auth/operation-not-allowed': 'E-posta ile giriş şu an kapalı. Lütfen "Google ile giriş" kullanın.',
+    'auth/invalid-credential': 'E-posta ya da şifre hatalı.',
+    'auth/invalid-login-credentials': 'E-posta ya da şifre hatalı.',
+    'auth/wrong-password': 'E-posta ya da şifre hatalı.',
+    'auth/user-not-found': 'Bu e-postayla kayıtlı hesap yok. Önce kayıt olun.',
+    'auth/email-already-in-use': 'Bu e-posta zaten kayıtlı. Giriş yapın ya da şifrenizi sıfırlayın.',
+    'auth/invalid-email': 'E-posta adresi geçersiz.',
+    'auth/weak-password': 'Şifre en az 6 karakter olmalı.',
+    'auth/too-many-requests': 'Çok fazla deneme yapıldı. Birkaç dakika sonra tekrar deneyin.',
+    'auth/network-request-failed': 'Bağlantı kurulamadı. İnternetinizi kontrol edip tekrar deneyin.',
+    'auth/unauthorized-domain': 'Bu adresten giriş yetkili değil. Lütfen nofrostlife.com.tr üzerinden girin.',
+    'auth/user-disabled': 'Bu hesap devre dışı bırakılmış.',
+  };
+  return map[code] || 'Giriş yapılamadı. Lütfen tekrar deneyin.';
+}
 
 /**
  * Sign in with Email and Password
@@ -400,26 +411,9 @@ export const loginWithEmailPassword = async (
       congratsSentCommittees: remote?.congratsSentCommittees || cached?.congratsSentCommittees || [],
     };
   } catch (firebaseErr: any) {
-    console.warn('Firebase signIn error, attempting resilient profile recovery:', firebaseErr.code || firebaseErr.message);
-
-    // If admin is attempting login, do NOT create an unverified session on error!
-    if (cleanEmail === ADMIN_EMAIL.toLowerCase()) {
-      throw new Error(firebaseErr.message || 'Yönetici girişi başarısız. Lütfen şifrenizi kontrol ediniz.');
-    }
-
-    // Check remembered student info or cache
-    const remembered = getRememberedStudentInfo();
-    const fallbackUid = 'std-' + Math.abs(cleanEmail.split('').reduce((acc, char) => (acc << 5) - acc + char.charCodeAt(0), 0)).toString(36);
-    const cached = loadStoredUserProfile(fallbackUid);
-
-    appUser = {
-      uid: fallbackUid,
-      email: cleanEmail,
-      displayName: cached?.displayName || remembered.name || cleanEmail.split('@')[0],
-      studentNumber: cached?.studentNumber || remembered.studentNumber || null,
-      photoURL: null,
-      congratsSentCommittees: cached?.congratsSentCommittees || [],
-    };
+    // Şifre doğrulanmadan oturum açılmaz (eski "dayanıklı kurtarma" herkesin herhangi bir öğrenci hesabına girmesine izin veriyordu).
+    console.warn('Firebase signIn error:', firebaseErr?.code || firebaseErr?.message);
+    throw new Error(authErrorMessage(firebaseErr));
   }
 
   cacheUserProfile(appUser);
