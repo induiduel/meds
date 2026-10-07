@@ -3273,6 +3273,15 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.send_error(404)
 
     def do_POST(self):
+        # Değiştiren istekler yalnız bu makineden ve panelin kendi sayfasından (başka sitelerden CSRF engeli)
+        origin = self.headers.get("Origin") or ""
+        local_origins = (f"http://localhost:{PORT}", f"http://127.0.0.1:{PORT}", f"http://[::1]:{PORT}")
+        if self.client_address[0] not in ("127.0.0.1", "::1") or (origin and origin not in local_origins):
+            self.send_response(403)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(b'{"error": "yalniz localhost paneli"}')
+            return
         length = int(self.headers.get("Content-Length", 0))
         body = self.rfile.read(length).decode("utf-8") if length > 0 else "{}"
         try:
