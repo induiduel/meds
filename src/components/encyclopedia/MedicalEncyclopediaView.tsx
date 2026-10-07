@@ -192,7 +192,7 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
 
       // Search Query
       if (q) {
-        const matchTerm = e.term.toLocaleLowerCase('tr-TR').includes(q);
+        const matchTerm = String(e.term ?? '').toLocaleLowerCase('tr-TR').includes(q);
         const matchLatin = (e.latinName || '').toLocaleLowerCase('tr-TR').includes(q);
         const matchAliases = (e.aliases || []).some((a) => a.toLocaleLowerCase('tr-TR').includes(q));
         const matchDefn = (e.definition || '').toLocaleLowerCase('tr-TR').includes(q);
@@ -208,9 +208,10 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
     });
     if (sortMode === 'default') return list;
     const sorted = [...list];
-    if (sortMode === 'az') sorted.sort((a, b) => a.term.localeCompare(b.term, 'tr'));
-    if (sortMode === 'za') sorted.sort((a, b) => b.term.localeCompare(a.term, 'tr'));
-    if (sortMode === 'kurul') sorted.sort((a, b) => String(a.kurul).localeCompare(String(b.kurul), 'tr') || a.term.localeCompare(b.term, 'tr'));
+    const term = (e: any) => String(e?.term ?? '');
+    if (sortMode === 'az') sorted.sort((a, b) => term(a).localeCompare(term(b), 'tr'));
+    if (sortMode === 'za') sorted.sort((a, b) => term(b).localeCompare(term(a), 'tr'));
+    if (sortMode === 'kurul') sorted.sort((a, b) => String(a.kurul ?? '').localeCompare(String(b.kurul ?? ''), 'tr') || term(a).localeCompare(term(b), 'tr'));
     return sorted;
   }, [entries, searchQuery, selectedCategory, selectedKurul, selectedDiscipline, onlyAiVerified, selectedLetter, onlySaved, bookmarkedIds, sortMode]);
 

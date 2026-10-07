@@ -35,11 +35,9 @@ import {
   AlertCircle,
   Database,
   HardDrive,
-  Zap,
   SlidersHorizontal,
   ChevronDown,
   Wand2,
-  PenLine,
 } from 'lucide-react';
 import { ActionMenu, ActionItem } from './ui/ActionMenu';
 import { ReportQuestionModal } from './ReportQuestionModal';
@@ -49,8 +47,6 @@ import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { ApiService } from '../services/api';
 import { pastQuestionsCache, CacheSyncStatus } from '../services/pastQuestionsCache';
 import { AdminCustomRedactModal } from './AdminCustomRedactModal';
-import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
-import { AdvancedQuestionUpgradeModal } from './AdvancedQuestionUpgradeModal';
 import { renderHighlightedSnippet } from './QuestionCard';
 import { learnMatcher, QuestionLearnMatch } from '../services/learnMatcher';
 import { FlashcardComponent } from './learn/InteractiveDeckView';
@@ -135,16 +131,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // AI Similar Question Modal State
   const [similarModalQuestion, setSimilarModalQuestion] = useState<any | null>(null);
-  const [isGeneratingSimilar, setIsGeneratingSimilar] = useState<string | null>(null);
 
   // Admin Custom AI Redaction Modal State
   const [customRedactQuestion, setCustomRedactQuestion] = useState<{ question: QuestionItem; match: any } | null>(null);
 
   // Student & User AI Question Optimizer Modal State
-  const [optimizeModalQuestion, setOptimizeModalQuestion] = useState<QuestionItem | null>(null);
 
   // Advanced Question Upgrade Modal State (Gelişmiş Klinik Vaka)
-  const [upgradeModalQuestion, setUpgradeModalQuestion] = useState<QuestionItem | null>(null);
 
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
@@ -243,21 +236,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       alert('Yorum kaydedilemedi: ' + (e.message || 'Bilinmeyen hata'));
     } finally {
       setIsSubmittingComment(false);
-    }
-  };
-
-  // Generate similar practice question handler
-  const handleGenerateSimilarQuestion = async (q: QuestionItem, slideMatch: any) => {
-    setIsGeneratingSimilar(q.id);
-    try {
-      const generated = await ApiService.generateSimilarQuestion(q, slideMatch);
-      if (generated) {
-        setSimilarModalQuestion(generated);
-      }
-    } catch (e) {
-      console.warn('Generate similar question error:', e);
-    } finally {
-      setIsGeneratingSimilar(null);
     }
   };
 
@@ -1078,26 +1056,17 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             const setCardMode = (m: 'redacted' | 'raw' | 'split') => setCardViewOverrides((prev) => ({ ...prev, [q.id]: m }));
 
             const actions: ActionItem[] = [
-              {
-                label: isGeneratingSimilar === q.id ? 'Benzer soru üretiliyor…' : 'Benzer soru üret',
-                icon: Sparkles,
-                group: 'Yapay zekâ',
-                tone: 'accent',
-                disabled: isGeneratingSimilar === q.id,
-                onClick: () => handleGenerateSimilarQuestion(q, learnMatch || slideMatch),
-              },
               ...(isAdminUser
                 ? [
-                    { label: 'AI ile düzenle', icon: Wand2, group: 'Yapay zekâ', onClick: () => setOptimizeModalQuestion(q) },
                     {
-                      label: 'AI ile redakte et',
-                      icon: PenLine,
+                      label: 'AI ile düzenle',
+                      icon: Wand2,
                       group: 'Yapay zekâ',
-                      onClick: () => setCustomRedactQuestion({ question: q, match: learnMatch || slideMatch }),
+                      tone: 'accent' as const,
+                      onClick: () => setCustomRedactQuestion({ question: q, match: slideMatch }),
                     },
                   ]
                 : []),
-              { label: 'Gelişmiş soruya çevir', icon: Zap, group: 'Yapay zekâ', onClick: () => setUpgradeModalQuestion(q) },
               { label: 'Düzenlenmiş', icon: Sparkles, group: 'Görünüm', hint: effectiveMode === 'redacted' ? '✓' : undefined, onClick: () => setCardMode('redacted') },
               { label: 'Ham metin', icon: FileText, group: 'Görünüm', hint: effectiveMode === 'raw' ? '✓' : undefined, onClick: () => setCardMode('raw') },
               { label: 'Karşılaştır', icon: Layers, group: 'Görünüm', hint: effectiveMode === 'split' ? '✓' : undefined, onClick: () => setCardMode('split') },
@@ -1158,7 +1127,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       <span>{q.reports.length} Bildirim</span>
                     </span>
                   )}
-                  {isGeneratingSimilar === q.id && <RefreshCw className="w-4 h-4 text-accent animate-spin shrink-0" aria-label="Benzer soru üretiliyor" />}
                   <span className="flex-1" />
                   <ActionMenu items={actions} label="İşlemler" title={`Soru #${q.questionNumber}`} />
                 </header>
@@ -1928,25 +1896,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         />
       )}
 
-      {/* Admin AI Question Optimizer Modal */}
-      {(currentUser?.email === ADMIN_EMAIL || currentUser?.isAdmin) && optimizeModalQuestion && (
-        <AiQuestionOptimizerModal
-          question={optimizeModalQuestion}
-          isOpen={Boolean(optimizeModalQuestion)}
-          onClose={() => setOptimizeModalQuestion(null)}
-          currentUser={currentUser}
-          onSaved={(updated) => {
-            setQuestions(prev => prev.map(q => q.id === updated.id ? updated : q));
-            setOptimizeModalQuestion(null);
-          }}
-          onOpenSlideReader={(note, pageNum) => {
-            if (onOpenNote && note?.id) {
-              onOpenNote(note.id, pageNum);
-            }
-          }}
-        />
-      )}
-
       {/* Admin Custom AI Redaction Modal */}
       {(currentUser?.email === ADMIN_EMAIL || currentUser?.isAdmin) && customRedactQuestion && (
         <AdminCustomRedactModal
@@ -1957,23 +1906,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             setQuestions(prev => prev.map(q => q.id === updated.id ? updated : q));
             setCustomRedactQuestion(null);
           }}
-          matchedSlideNote={customRedactQuestion.match ? {
-            noteTitle: customRedactQuestion.match.note.title,
+          matchedSlideNote={customRedactQuestion.match?.note && customRedactQuestion.match?.page ? {
+            noteTitle: customRedactQuestion.match.note.title || '',
             pageNumber: customRedactQuestion.match.page.pageNumber,
-            snippet: customRedactQuestion.match.page.content.substring(0, 300)
+            snippet: String(customRedactQuestion.match.page.content || '').substring(0, 300)
           } : null}
-        />
-      )}
-
-      {/* Advanced Question Upgrade Modal */}
-      {upgradeModalQuestion && (
-        <AdvancedQuestionUpgradeModal
-          question={upgradeModalQuestion}
-          isOpen={Boolean(upgradeModalQuestion)}
-          onClose={() => setUpgradeModalQuestion(null)}
-          onSaveUpgraded={(questionId, advancedData) => {
-            setQuestions(prev => prev.map(q => q.id === questionId ? { ...q, advancedQuestion: advancedData, hasAdvancedVersion: true } : q));
-          }}
         />
       )}
     </div>

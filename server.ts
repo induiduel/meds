@@ -1812,6 +1812,29 @@ app.post('/api/past-question-reviews/:id/reject', requireAdmin, (req, res) => {
   }
 });
 
+// 3.0. POST /api/past-question-reviews/:id/suspicious: Bekleyen öneriyi şüpheli olarak işaretle / kaldır (Admin)
+app.post('/api/past-question-reviews/:id/suspicious', requireAdmin, (req, res) => {
+  try {
+    const targetQId = String(req.params.id);
+    const value = req.body?.value !== false;
+    const reviews = readPhase14Reviews();
+    const matching = reviews.filter((r) => String(r.question_id) === targetQId);
+    if (matching.length === 0) {
+      return res.status(404).json({ error: 'İnceleme kaydı bulunamadı.' });
+    }
+    const nowIso = new Date().toISOString();
+    for (const r of matching) {
+      r.suspicious = value;
+      if (value) r.suspicious_at = nowIso;
+      else delete r.suspicious_at;
+    }
+    writePhase14Reviews(reviews);
+    res.json({ success: true, message: value ? 'Şüpheli olarak işaretlendi.' : 'Şüpheli işareti kaldırıldı.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'İşaret güncellenemedi: ' + err.message });
+  }
+});
+
 // 3.1. PUT /api/past-question-reviews/:id/proposal: Beğenilmeyen/değiştirilmek istenen soru önerisini manuel düzenle (Admin)
 app.put('/api/past-question-reviews/:id/proposal', requireAdmin, (req, res) => {
   try {

@@ -22,6 +22,7 @@ import {
   Copy,
   Info,
   BookOpen,
+  Flag,
 } from 'lucide-react';
 import { PastQuestionReviewRecord } from '../types';
 import { ApiService } from '../services/api';
@@ -244,8 +245,6 @@ function questionText(rev: PastQuestionReviewRecord, which: 'src' | 'prop'): str
   const q = which === 'prop' && prop.soru_koku ? prop : src;
   const opts = q.secenekler && Object.keys(q.secenekler).length ? q.secenekler : src.secenekler || {};
   const lines: string[] = [];
-  const ch = which === 'prop' ? curriculumChanges(src, prop) : [];
-  if (ch.length) lines.push(`[Müfredat değişikliği: ${ch.map((c) => (c.alan === 'Kurul' ? `${c.eski} → ${c.yeni}` : `${c.alan}: ${c.eski} → ${c.yeni}`)).join(' · ')}]`);
   const meta = [kurulLabel(q.kurul_adi || src.kurul_adi), q.ders_adi || src.ders_adi, q.konu_adi || src.konu_adi].filter(Boolean).join(' · ');
   if (meta) lines.push(meta);
   lines.push('', String(q.soru_koku || '').trim(), '');
@@ -459,6 +458,20 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     }
   };
 
+  const handleToggleSuspicious = async (qId: string, value: boolean) => {
+    setProcessingId(qId);
+    setAllReviews(prev => prev.map(r => String(r.question_id) === qId ? { ...r, suspicious: value } : r));
+    try {
+      await ApiService.setPastQuestionReviewSuspicious(ADMIN_EMAIL, qId, value);
+      setActionFeedback({ message: value ? `✓ Soru #${qId} şüpheli olarak işaretlendi.` : `✓ Soru #${qId} şüpheli işareti kaldırıldı.`, type: 'ok' });
+    } catch (err: any) {
+      setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
+      fetchReviews(true);
+    } finally {
+      setProcessingId(null);
+    }
+  };
+
   const handleReject = async (qId: string) => {
     const reason = 'Yönetici incelemesinde reddedildi.';
     setProcessingId(qId);
@@ -513,7 +526,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     setEditSummary(prop.degisiklik_ozeti || 'Kullanıcı/Hoca tarafından akademik literatüre göre revize edildi.');
   };
 
-  const handleSaveEditProposal = async () => {
+  const handleSaveEditProposal = async (approveAfter = false) => {
     if (!editingReview) return;
     const qId = String(editingReview.question_id);
     setIsSavingEdit(true);
@@ -526,7 +539,12 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
         aciklama: editExplanation,
         degisiklik_ozeti: editSummary,
       });
-      setActionFeedback({ message: `✓ Soru #${qId} önerisi başarıyla kaydedildi.`, type: 'ok' });
+      if (approveAfter) {
+        await ApiService.approvePastQuestionReview(ADMIN_EMAIL, qId);
+        setActionFeedback({ message: `✓ Soru #${qId} kaydedildi ve ana soru havuzuna onaylandı.`, type: 'ok' });
+      } else {
+        setActionFeedback({ message: `✓ Soru #${qId} önerisi başarıyla kaydedildi.`, type: 'ok' });
+      }
       setEditingReview(null);
       await fetchReviews(true);
     } catch (err: any) {
@@ -542,13 +560,16 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     const approved = allReviews.filter((r) => r.status === 'approved').length;
     const rejected = allReviews.filter((r) => r.status === 'rejected').length;
     const unchanged = allReviews.filter((r) => r.status === 'unchanged').length;
-    return { total, pending, approved, rejected, unchanged };
+    const suspicious = allReviews.filter((r) => r.suspicious && r.status === 'review_required').length;
+    return { total, pending, approved, rejected, unchanged, suspicious };
   }, [allReviews]);
 
   const filteredReviews = useMemo(() => {
     let list = allReviews;
 
-    if (statusFilter !== 'all') {
+    if (statusFilter === 'suspicious') {
+      list = list.filter((r) => r.suspicious && r.status === 'review_required');
+    } else if (statusFilter !== 'all') {
       list = list.filter((r) => r.status === statusFilter);
     }
 
@@ -812,6 +833,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
           {[
             { id: 'all', label: 'Tümü', count: stats.total },
             { id: 'review_required', label: 'İnceleme Gerekli', count: stats.pending },
+            { id: 'suspicious', label: 'Şüpheli', count: stats.suspicious },
             { id: 'approved', label: 'Onaylandı', count: stats.approved },
             { id: 'rejected', label: 'Reddedildi', count: stats.rejected },
             { id: 'unchanged', label: 'Değişiklik Yok', count: stats.unchanged },
@@ -1016,6 +1038,12 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                     <status.Icon className="w-3 h-3" />
                     <span className="hidden xs:inline sm:inline">{status.label}</span>
                   </span>
+                  {rev.suspicious && (
+                    <span className="h-[22px] px-2 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1 shrink-0 bg-orange-50 text-orange-800 border border-orange-200">
+                      <Flag className="w-3 h-3" />
+                      <span className="hidden sm:inline">Şüpheli</span>
+                    </span>
+                  )}
                   <span
                     className={`h-[22px] px-1.5 rounded-md text-[11.5px] font-mono font-semibold inline-flex items-center shrink-0 ${ratioPercent >= 80 ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'}`}
                     title={`Önerinin kaynak metinle örtüşme oranı: %${ratioPercent}`}
@@ -1222,6 +1250,11 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                           <X className="w-3.5 h-3.5" /> Reddet
                         </button>
                       )}
+                      {isPending && (
+                        <button type="button" onClick={() => handleToggleSuspicious(qId, !rev.suspicious)} disabled={processingId === qId} className={`${btn} border ${rev.suspicious ? 'border-orange-300 bg-orange-50 text-orange-800 hover:bg-orange-100' : 'border-line bg-white hover:bg-orange-50 hover:text-orange-800 text-ink-2'}`}>
+                          <Flag className="w-3.5 h-3.5" /> {rev.suspicious ? 'Şüpheli işaretini kaldır' : 'Şüpheli'}
+                        </button>
+                      )}
                       <button type="button" onClick={() => openEditModal(rev)} className={`${btn} border border-line bg-white hover:bg-canvas text-ink-2`}>
                         <Edit3 className="w-3.5 h-3.5" /> Düzenle
                       </button>
@@ -1391,9 +1424,17 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               </button>
               <button
                 type="button"
-                onClick={handleSaveEditProposal}
+                onClick={() => handleSaveEditProposal(false)}
                 disabled={isSavingEdit}
-                className="h-11 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-[13.5px] font-bold inline-flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 shadow-sm"
+                className="h-11 px-4 rounded-xl border border-indigo-200 bg-white hover:bg-indigo-50 text-indigo-700 text-[13.5px] font-bold inline-flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50"
+              >
+                <span>Kaydet</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => handleSaveEditProposal(true)}
+                disabled={isSavingEdit}
+                className="h-11 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 hover:bg-indigo-700 text-white text-[13.5px] font-bold inline-flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 shadow-sm"
               >
                 {isSavingEdit ? (
                   <>
@@ -1403,7 +1444,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 ) : (
                   <>
                     <Check className="w-3.5 h-3.5" />
-                    <span>Öneriyi kaydet</span>
+                    <span>Kaydet ve onayla</span>
                   </>
                 )}
               </button>

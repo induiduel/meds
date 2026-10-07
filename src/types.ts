@@ -264,6 +264,8 @@ export interface PastQuestionReviewRecord {
   rejected_at?: string;
   rejected_by?: string;
   reject_reason?: string;
+  suspicious?: boolean;
+  suspicious_at?: string;
 }
 
 export interface Committee {

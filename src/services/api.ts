@@ -2638,6 +2638,22 @@ export const ApiService = {
     return res.data;
   },
 
+  /** Faz 14: Bekleyen öneriyi şüpheli olarak işaretle / işareti kaldır */
+  async setPastQuestionReviewSuspicious(adminEmail: string, questionId: string, value: boolean): Promise<any> {
+    const res = await safeJsonFetch<{ success: boolean; message: string; error?: string }>(
+      `/api/past-question-reviews/${encodeURIComponent(questionId)}/suspicious`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+        body: JSON.stringify({ value }),
+      }
+    );
+    if (!res.ok || !res.data?.success) {
+      throw new Error(res.data?.error || res.error || 'İşaret güncellenemedi.');
+    }
+    return res.data;
+  },
+
   /** Faz 14: Redaksiyon işlemini başlat (bulut veya yerel) */
   async triggerPastQuestionReview(adminEmail: string, mode: 'cloud' | 'local', limit: number = 10): Promise<any> {
     const res = await safeJsonFetch<{
