@@ -3,6 +3,7 @@ import { PageHeader } from './ui/PageHeader';
 import { QuestionInsightsPanel } from './QuestionInsightsPanel';
 import {
   Sparkles,
+  Info,
   BookOpen,
   Search,
   Filter,
@@ -113,6 +114,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [explanationFilter, setExplanationFilter] = useState<'all' | 'with' | 'without'>('all');
   const [sortOrder, setSortOrder] = useState<'default' | 'newest' | 'oldest' | 'number'>('default');
   const [openExplanations, setOpenExplanations] = useState<Record<string, boolean>>({});
+  // Faz 14 düzeltmesinin öncesi yalnız istenince gösterilir (rozet ⓘ ya da İşlemler menüsü)
+  const [p14Open, setP14Open] = useState<Record<string, boolean>>({});
   const [ambiguityTab, setAmbiguityTab] = useState<'valid' | 'ambiguous' | 'reported' | 'all'>('valid');
   
   // Per-question card override: questionId -> 'redacted' | 'raw' | 'split'
@@ -1084,6 +1087,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               ...(learnMatch
                 ? [{ label: `Öğren · slayt ${learnMatch.slideNumber}`, icon: GraduationCap, group: 'Diğer', onClick: () => setSelectedLearnMatch({ question: q, match: learnMatch }) }]
                 : []),
+              ...(isPhase14Fixed(q)
+                ? [{ label: p14Open[q.id] ? 'Düzeltme öncesini gizle' : 'Düzeltme öncesini göster', icon: Info, group: 'Diğer', onClick: () => setP14Open((o) => ({ ...o, [q.id]: !o[q.id] })) }]
+                : []),
               { label: 'Kaynak dosyayı göster', icon: FileText, group: 'Diğer', onClick: () => setSelectedRawSourceQuestion(q) },
               { label: copiedId === q.id ? 'Kopyalandı' : 'Soruyu kopyala', icon: copiedId === q.id ? Check : Copy, group: 'Diğer', onClick: () => handleCopyQuestion(q) },
               { label: 'Hata bildir', icon: Flag, group: 'Diğer', tone: 'danger', onClick: () => setReportingQuestion(q) },
@@ -1103,9 +1109,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     </span>
                   )}
                   {isPhase14Fixed(q) && (
-                    <span className="h-[20px] px-2 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-[11px] font-semibold inline-flex items-center shrink-0" title="Bu soru Faz 14 incelemesinde düzeltildi ve onaylandı">
-                      Düzeltildi
-                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setP14Open((o) => ({ ...o, [q.id]: !o[q.id] }))}
+                      aria-expanded={!!p14Open[q.id]}
+                      className="h-[22px] px-2 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-[11px] font-semibold inline-flex items-center gap-1 shrink-0 cursor-pointer hover:bg-violet-100"
+                      title="Faz 14 incelemesinde düzeltildi — değişiklikleri ve öncesini gör"
+                    >
+                      <Info className="w-3 h-3" /> Düzeltildi
+                    </button>
                   )}
                   {isGeminiV3Question(q) && (
                     <span className="h-[20px] px-2 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-[11px] font-bold inline-flex items-center shrink-0">
@@ -1133,6 +1145,40 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   <span className="flex-1" />
                   <ActionMenu items={actions} label="İşlemler" title={`Soru #${q.questionNumber}`} />
                 </header>
+                {isPhase14Fixed(q) && p14Open[q.id] && (() => {
+                  const o: any = (q as any).phase14Original || {};
+                  const p14: any = (q as any).phase14 || {};
+                  return (
+                    <div className="rounded-xl bg-violet-50/60 border border-violet-100 px-3 py-2.5 text-[13px] text-ink-2 flex flex-col gap-1.5">
+                      <p className="m-0 font-semibold text-violet-800 flex flex-wrap items-center gap-1">
+                        Faz 14 düzeltmesi
+                        {(p14.changes || []).map((c: string) => <span key={c} className="font-normal text-[11.5px] px-1.5 rounded bg-white text-violet-700">{c}</span>)}
+                      </p>
+                      {p14.summary &&
+                        (typeof p14.summary === 'string' ? (
+                          <p className="m-0">{p14.summary}</p>
+                        ) : (
+                          Object.entries(p14.summary as Record<string, any>).map(([k, v]) => (
+                            <p key={k} className="m-0">
+                              <span className="text-ink-3">{({ soru_koku_duzeltmesi: 'Kök', aciklama_duzeltmesi: 'Açıklama', mufredat_atamasi: 'Müfredat', siklar: 'Şıklar' } as Record<string, string>)[k] || k}:</span> {String(v)}
+                            </p>
+                          ))
+                        ))}
+                      {(o.committeeId || o.discipline || o.topic) && (
+                        <p className="m-0 text-[12.5px]"><span className="text-ink-3">Önceki kurul/ders/konu:</span> {[o.committeeId ? (formatCommitteeName(String(o.committeeId).replace(/^TIP\s*3(\d)0$/i, 'donem3-kurul$1')) || o.committeeId).split(':')[0] : null, o.discipline, o.topic].filter(Boolean).join(' · ')}</p>
+                      )}
+                      {o.stem && <p className="m-0"><span className="text-ink-3">Önceki kök:</span> {o.stem}</p>}
+                      {Array.isArray(o.options) && o.options.length > 0 && (
+                        <ul className="m-0 pl-4 text-[12.5px]">
+                          {o.options.map((op: any) => <li key={op.key}>{op.key}) {op.text}</li>)}
+                        </ul>
+                      )}
+                      {o.explanation && (
+                        <details className="text-[12.5px]"><summary className="cursor-pointer text-ink-3">Önceki açıklama</summary><p className="m-0 mt-1 whitespace-pre-wrap">{o.explanation}</p></details>
+                      )}
+                    </div>
+                  );
+                })()}
 
                 {effectiveMode === 'split' ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

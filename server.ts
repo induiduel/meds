@@ -1712,6 +1712,13 @@ app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
     if (proposal.YZV) {
       targetQ.YZV = proposal.YZV;
     }
+    // Kart önce reconstruction alanlarını gösterir: düzeltme orada da uygulanmazsa eski kök/şıklar görünmeye devam eder
+    if (targetQ.reconstruction && typeof targetQ.reconstruction === 'object') {
+      if (proposal.soru_koku) targetQ.reconstruction.stem = targetQ.stem;
+      if (Array.isArray(targetQ.options) && targetQ.options.length >= 4) targetQ.reconstruction.options = targetQ.options;
+      if (proposal.dogru_secenek) targetQ.reconstruction.correctAnswer = proposal.dogru_secenek;
+      if (proposal.aciklama && proposal.aciklama.trim()) targetQ.reconstruction.explanation = proposal.aciklama;
+    }
     targetQ.tags = Array.from(new Set([...(Array.isArray(targetQ.tags) ? targetQ.tags : []), 'faz14_duzeltildi']));
     targetQ.phase14 = { approvedAt: new Date().toISOString(), model: rev.model || null, changes: proposal.degisen_alanlar || [], summary: proposal.degisiklik_ozeti || null };
     targetQ.updatedAt = new Date().toISOString();
