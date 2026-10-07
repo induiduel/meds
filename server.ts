@@ -1859,6 +1859,47 @@ app.post('/api/past-question-reviews/:id/answer-doubt', requireAdmin, (req, res)
   }
 });
 
+// 3.0.2. POST /api/past-question-reviews/:id/answer-doubt/complete: anketi bitir, çoğunluk cevabını uygula (Admin)
+app.post('/api/past-question-reviews/:id/answer-doubt/complete', requireAdmin, async (req, res) => {
+  try {
+    const qId = String(req.params.id);
+    const reviews = readPhase14Reviews();
+    const matching = reviews.filter((r) => String(r.question_id) === qId);
+    if (matching.length === 0) return res.status(404).json({ error: 'İnceleme kaydı bulunamadı.' });
+    const { counts, total } = await readAnswerVotes(qId, '');
+    // Yönetici şıkkı kendisi seçebilir; seçmezse anketteki çoğunluk uygulanır.
+    const chosen = String(req.body?.choice || '').trim().toUpperCase();
+    let winner: string;
+    if (chosen) {
+      if (!/^[A-E]$/.test(chosen)) return res.status(400).json({ error: 'Geçersiz şık.' });
+      winner = chosen;
+    } else {
+      if (total === 0) return res.status(409).json({ error: 'Henüz oy yok. Doğru şıkkı seçip öyle kaydedin.' });
+      const max = Math.max(...Object.values(counts));
+      const leaders = Object.keys(counts).filter((k) => counts[k] === max);
+      if (leaders.length > 1) return res.status(409).json({ error: `Oylar eşit (${leaders.join(', ')}). Doğru şıkkı seçip öyle kaydedin.` });
+      winner = leaders[0];
+    }
+    const nowIso = new Date().toISOString();
+    for (const r of matching) {
+      r.proposal = r.proposal || {};
+      r.proposal.dogru_secenek = winner;
+      const changed: string[] = Array.isArray(r.proposal.degisen_alanlar) ? r.proposal.degisen_alanlar : [];
+      if (!changed.includes('dogru_secenek')) changed.push('dogru_secenek');
+      r.proposal.degisen_alanlar = changed;
+      delete r.proposal.cevap_belirsiz;
+      delete r.cevap_belirsiz;
+      delete r.answer_doubtful;
+      r.answer_resolved_at = nowIso;
+      r.answer_vote_result = { winner, counts, total, by: chosen ? 'admin' : 'anket' };
+    }
+    writePhase14Reviews(reviews);
+    res.json({ success: true, winner, counts, total, message: `Cevap ${winner} olarak kaydedildi (${counts[winner] || 0}/${total} oy); soru inceleme listesine döndü.` });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Anket tamamlanamadı: ' + err.message });
+  }
+});
+
 // Cevap anketi: oylar yerel Supabase `answer_votes` tablosunda; kullanıcı başına soru başına tek oy.
 async function readAnswerVotes(questionId: string, voterUid: string) {
   const { data, error } = await localSupabase.from('answer_votes').select('choice, voter_uid').eq('question_id', questionId);
@@ -1871,6 +1912,14 @@ async function readAnswerVotes(questionId: string, voterUid: string) {
     if (voterUid && row.voter_uid === voterUid) myVote = c;
   }
   return { counts, total: Object.values(counts).reduce((a, b) => a + b, 0), myVote };
+}
+
+// Cevap anahtarı olmayan çıkmış soru: öğrenciler ankette doğru şıkkı oylar (cevap anahtarı yerine geçmez).
+// Asıl kayda bakılır: onay bekleyen Faz 14 önerisinin cevabı doğrulanmış sayılmaz.
+function pastQuestionHasNoAnswer(questionId: string): boolean {
+  const q: any = getPastQuestionsDb().find((x: any) => String(x.id) === questionId);
+  if (!q) return false;
+  return !(q.correctAnswer || q.claimedAnswer || q.reconstruction?.correctAnswer);
 }
 
 app.get('/api/past-question-reviews/:id/answer-votes', async (req, res) => {
@@ -1890,7 +1939,7 @@ app.post('/api/past-question-reviews/:id/answer-votes', async (req, res) => {
     if (!voter) return res.status(401).json({ error: 'Oy vermek için giriş yapmalısınız.' });
     if (!/^[A-E]$/.test(choice)) return res.status(400).json({ error: 'Geçersiz şık.' });
     const review = readPhase14Reviews().find((r) => String(r.question_id) === qId);
-    if (!review?.answer_doubtful) return res.status(409).json({ error: 'Bu soru için anket açık değil.' });
+    if (!review?.answer_doubtful && !pastQuestionHasNoAnswer(qId)) return res.status(409).json({ error: 'Bu soru için anket açık değil.' });
     const { error } = await localSupabase.from('answer_votes').insert([{ question_id: qId, voter_uid: voter, choice }]);
     if (error) {
       if ((error as any).code === '23505') return res.status(409).json({ error: 'Bu soru için zaten oy verdiniz.' });
@@ -1963,6 +2012,47 @@ app.put('/api/past-question-reviews/:id/proposal', requireAdmin, (req, res) => {
   }
 });
 
+// Kopya soru birleştirme (src/services/questionMerge.ts): grupları listele, asıl soruyu seç, onayla, ayır (Admin)
+app.get('/api/admin/question-merges', requireAdmin, (_req, res) => {
+  try {
+    const byId = new Map(getPastQuestionsDb().map((q: any) => [String(q.id), q]));
+    const gruplar = readMergeGroups().map((g) => ({
+      ...g,
+      sorular: g.uyeler.map((id) => {
+        const q: any = byId.get(id) || {};
+        return {
+          id,
+          stem: q.stem || q.reconstruction?.stem || '',
+          options: (q.options || q.reconstruction?.options || []).map((o: any) => (typeof o === 'string' ? o : o?.text || '')),
+          correctAnswer: q.correctAnswer || '',
+          committeeId: q.committeeId || '',
+          discipline: q.discipline || '',
+          year: q.year || '',
+          source: q.source || q.sourceFile || '',
+        };
+      }),
+    }));
+    res.json({ gruplar });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Birleştirmeler okunamadı: ' + err.message });
+  }
+});
+app.post('/api/admin/question-merges/:groupId', requireAdmin, (req, res) => {
+  try {
+    const t = String(req.body?.action || '');
+    const action =
+      t === 'primary' ? { type: 'primary' as const, asil: String(req.body?.asil || '') }
+      : t === 'confirm' ? { type: 'confirm' as const }
+      : t === 'split' ? { type: 'split' as const }
+      : t === 'restore' ? { type: 'restore' as const }
+      : null;
+    if (!action) return res.status(400).json({ error: 'Geçersiz işlem.' });
+    res.json({ success: true, grup: updateMergeGroup(String(req.params.groupId), action) });
+  } catch (err: any) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
 // 3.9. Faz 14 ayarları (meds_temp/state/faz14_ayarlari.json): lite_kullan — Flash kotası bitince Flash-Lite yedeği
 const PHASE14_SETTINGS_FILE = path.resolve(__dirname, '..', 'meds_temp', 'state', 'faz14_ayarlari.json');
 function readPhase14Settings(): { lite_kullan: boolean } {
@@ -2009,47 +2099,6 @@ app.post('/api/past-question-reviews/trigger', requireAdmin, (req, res) => {
       : path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_past_question_editor.py');
 
     const logPath = path.resolve(__dirname, '..', 'meds_temp', 'logs', 'phase14.log');
-  }
-});
-
-// Kopya soru birleştirme (src/services/questionMerge.ts): grupları listele, asıl soruyu seç, onayla, ayır (Admin)
-app.get('/api/admin/question-merges', requireAdmin, (_req, res) => {
-  try {
-    const byId = new Map(getPastQuestionsDb().map((q: any) => [String(q.id), q]));
-    const gruplar = readMergeGroups().map((g) => ({
-      ...g,
-      sorular: g.uyeler.map((id) => {
-        const q: any = byId.get(id) || {};
-        return {
-          id,
-          stem: q.stem || q.reconstruction?.stem || '',
-          options: (q.options || q.reconstruction?.options || []).map((o: any) => (typeof o === 'string' ? o : o?.text || '')),
-          correctAnswer: q.correctAnswer || '',
-          committeeId: q.committeeId || '',
-          discipline: q.discipline || '',
-          year: q.year || '',
-          source: q.source || q.sourceFile || '',
-        };
-      }),
-    }));
-    res.json({ gruplar });
-  } catch (err: any) {
-    res.status(500).json({ error: 'Birleştirmeler okunamadı: ' + err.message });
-  }
-});
-app.post('/api/admin/question-merges/:groupId', requireAdmin, (req, res) => {
-  try {
-    const t = String(req.body?.action || '');
-    const action =
-      t === 'primary' ? { type: 'primary' as const, asil: String(req.body?.asil || '') }
-      : t === 'confirm' ? { type: 'confirm' as const }
-      : t === 'split' ? { type: 'split' as const }
-      : t === 'restore' ? { type: 'restore' as const }
-      : null;
-    if (!action) return res.status(400).json({ error: 'Geçersiz işlem.' });
-    res.json({ success: true, grup: updateMergeGroup(String(req.params.groupId), action) });
-  } catch (err: any) {
-    res.status(400).json({ error: err.message });
     fs.mkdirSync(path.dirname(logPath), { recursive: true });
 
     const outLog = fs.openSync(logPath, 'a');

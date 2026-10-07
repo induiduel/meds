@@ -32,6 +32,15 @@ export const RAIL: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'summaries', label: 'Özetler', icon: BookOpen },
 ];
 
+/** Menü kategorileri: kenar menüsünde başlıklı gruplar, telefonda "Daha" sayfasında aynı sıra. */
+export const NAV_GROUPS: { label: string | null; ids: AppTab[] }[] = [
+  { label: null, ids: ['quick_add', 'ai_chat'] },
+  { label: 'Sorular', ids: ['past_exams', 'questions', 'study'] },
+  { label: 'Öğrenme', ids: ['learn', 'summaries', 'flashcards', 'glossary'] },
+  { label: 'Topluluk', ids: ['leaderboard'] },
+];
+const BY_ID = Object.fromEntries(RAIL.map((r) => [r.id, r])) as Record<string, (typeof RAIL)[number]>;
+
 interface AppRailProps {
   activeTab: AppTab;
   setActiveTab: (tab: AppTab) => void;
@@ -78,7 +87,7 @@ export const AppRail: React.FC<AppRailProps> = ({ activeTab, setActiveTab, isAdm
         href={pathFor('quick_add')}
         onClick={linkClick(() => setActiveTab('quick_add'))}
         aria-label="MeDSor ana sayfa"
-        className="shrink-0 flex items-center gap-2.5 mb-3 lg:mb-5 lg:px-2 lg:h-10"
+        className="shrink-0 flex items-center gap-2.5 mb-2 lg:mb-1 lg:px-2 lg:h-10"
       >
         <span className="w-[34px] h-[34px] rounded-[10px] bg-accent text-white flex items-center justify-center shrink-0">
           <Plus className="w-[18px] h-[18px]" strokeWidth={2.8} />
@@ -87,7 +96,13 @@ export const AppRail: React.FC<AppRailProps> = ({ activeTab, setActiveTab, isAdm
           Me<span className="text-accent">DS</span>or
         </span>
       </a>
-      {RAIL.map((r) => item(r.id, r.label, r.icon))}
+      {NAV_GROUPS.map((g, gi) => (
+        <React.Fragment key={g.label || gi}>
+          {g.label && <span className="ms-rail-group" aria-hidden="true">{g.label}</span>}
+          {g.label && <span className="ms-rail-sep" aria-hidden="true" />}
+          {g.ids.map((id) => BY_ID[id] && item(id, BY_ID[id].label, BY_ID[id].icon))}
+        </React.Fragment>
+      ))}
       <span className="flex-1 min-h-3" aria-hidden="true" />
       {isAdmin && item('manage', 'Yönetim', ShieldCheck)}
       <button

@@ -1268,15 +1268,15 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             </div>
 
             <div className="rounded-xl border border-line overflow-hidden">
-              <table className="w-full text-[14px] border-collapse">
+              <table className="w-full table-fixed text-[14px] border-collapse">
                 <caption className="sr-only">Kurul soruları</caption>
                 <thead className="bg-canvas text-[12px] text-ink-2">
                   <tr>
-                    <th scope="col" className="text-left font-semibold px-3 py-2 w-[64px]">No</th>
+                    <th scope="col" className="text-left font-semibold px-3 py-2 w-[48px] sm:w-[64px]">No</th>
                     <th scope="col" className="text-left font-semibold px-3 py-2">Soru</th>
                     <th scope="col" className="text-left font-semibold px-3 py-2 hidden md:table-cell w-[120px]">Durum</th>
                     <th scope="col" className="text-right font-semibold px-3 py-2 hidden lg:table-cell w-[80px]">Parça</th>
-                    <th scope="col" className="text-right font-semibold px-3 py-2 w-[96px]"><span className="sr-only">İşlemler</span></th>
+                    <th scope="col" className="text-right font-semibold px-3 py-2 w-[92px]"><span className="sr-only">İşlemler</span></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -2294,7 +2294,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 )}
               </div>
 
-              <div className="flex flex-wrap items-center gap-2 shrink-0">
+              <div className="flex flex-wrap items-center gap-2 min-w-0 max-w-full">
                 <button
                   onClick={handleSyncAuthDbBridge}
                   disabled={isSyncingAuthDb}

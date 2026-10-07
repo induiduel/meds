@@ -533,7 +533,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
         title="Ders notları ve slaytlar"
         description="Drive'daki ders slaytları sayfa sayfa, yorumsuz metin olarak işlenir. Sorular bu sayfalarla eşleştirilir."
         actions={
-          <div className="flex flex-wrap items-center gap-2 shrink-0">
+          <div className="flex flex-wrap items-center gap-2 min-w-0 max-w-full">
             {isAdmin && (
               <button
                 type="button"

@@ -2654,6 +2654,15 @@ export const ApiService = {
     return res.data;
   },
 
+  async completeAnswerDoubt(adminEmail: string, questionId: string, choice?: string): Promise<{ winner: string; message: string }> {
+    const res = await safeJsonFetch<{ success: boolean; winner: string; message: string; error?: string }>(
+      `/api/past-question-reviews/${encodeURIComponent(questionId)}/answer-doubt/complete`,
+      { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail }, body: JSON.stringify(choice ? { choice } : {}) }
+    );
+    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Anket tamamlanamadı.');
+    return res.data;
+  },
+
   async getAnswerVotes(questionId: string, voterUid: string): Promise<AnswerVotes> {
     const res = await safeJsonFetch<AnswerVotes & { success: boolean; error?: string }>(
       `/api/past-question-reviews/${encodeURIComponent(questionId)}/answer-votes`,

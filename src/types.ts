@@ -254,6 +254,8 @@ export interface PastQuestionReviewRecord {
     konu_adi?: string;
     degisen_alanlar?: string[];
     degisiklik_ozeti?: string;
+    tespit_raporu?: { tespit_edilen_kusur?: string; uygulanan_mudahale?: string };
+    secenek_analizi?: Record<string, string>;
     review_required?: boolean;
     [key: string]: any;
   };
@@ -265,6 +267,9 @@ export interface PastQuestionReviewRecord {
   rejected_by?: string;
   reject_reason?: string;
   suspicious?: boolean;
+  answer_doubtful?: boolean;
+  answer_resolved_at?: string;
+  answer_vote_result?: { winner: string; counts: Record<string, number>; total: number; by?: 'admin' | 'anket' };
   suspicious_at?: string;
 }
 

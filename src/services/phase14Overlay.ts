@@ -52,8 +52,13 @@ export function applyPhase14Overlay<T extends Record<string, any>>(list: T[]): T
   const revs = latestReviews();
   if (!revs.size) return list;
   return list.map((q) => {
-    if (q.phase14 && q.phase14.status !== 'onay_bekliyor') return q; // onaylı: veri zaten Faz 14 hâlinde
     const r = revs.get(String(q.id));
+    if (q.phase14 && q.phase14.status !== 'onay_bekliyor') {
+      // Onaylı: veri zaten Faz 14 hâlinde. Onaydan SONRA yeniden düzenlenip onaylanmamış kayıt varsa o gösterilir.
+      const approvedAt = Date.parse(q.phase14.approvedAt || '') || 0;
+      const editedAt = r ? Date.parse(r.last_edited_at || '') || 0 : 0;
+      if (!r || r.status !== 'review_required' || !r.proposal || editedAt <= approvedAt) return q;
+    }
     if (!r || r.status !== 'review_required' || !r.proposal) return q;
     const p = r.proposal;
     const src = r.source || {};
@@ -86,6 +91,7 @@ export function applyPhase14Overlay<T extends Record<string, any>>(list: T[]): T
         stem: src.soru_koku, options: Object.entries(src.secenekler || {}).map(([k, v]) => ({ key: k.toUpperCase(), text: v })),
         explanation: src.aciklama, correctAnswer: src.dogru_secenek, committeeId: src.kurul_adi, discipline: src.ders_adi, topic: src.konu_adi,
       },
+      answerDoubtful: Boolean(r.answer_doubtful),
       phase14: { status: 'onay_bekliyor', model: r.model, changes: p.degisen_alanlar || [], summary: p.YZV?.degisiklik_ozeti || p.degisiklik_ozeti,
                  cevapDegisti: p.cevap_degisti, cevapGerekcesi: p.cevap_gerekcesi, processedAt: r.processed_at },
       tags: Array.from(new Set([...(Array.isArray(q.tags) ? q.tags : []), 'faz14_inceleme'])),

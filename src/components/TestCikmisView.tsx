@@ -18,12 +18,11 @@ import {
   ArrowUpDown,
   RotateCcw,
   Edit3,
-  DollarSign,
   Copy,
   Info,
   BookOpen,
   Flag,
-  HelpCircle,
+  BarChart3,
 } from 'lucide-react';
 import { PastQuestionReviewRecord } from '../types';
 import { ApiService } from '../services/api';
@@ -31,6 +30,9 @@ import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { pathFor } from '../router';
 import { AnswerPoll } from './AnswerPoll';
 import { safeJsonFetch } from '../services/api';
+import { StemText } from './ui/StemText';
+import { Collapsible } from './ui/Collapsible';
+import { ActionMenu, ActionItem } from './ui/ActionMenu';
 
 // Kelime düzeyinde fark (LCS). Kök birkaç yüz kelimeyi geçmez; 400 kelime üstünde fark çizilmez.
 type DiffPart = { t: string; k: 'same' | 'add' | 'del' };
@@ -145,12 +147,12 @@ function TermsDialog({ rev, onClose }: { rev: PastQuestionReviewRecord; onClose:
   const k = (data?.mufredat || data?.faz8)?.kazanimlar?.[0];
   const h = 'm-0 text-[11.5px] font-semibold uppercase tracking-wide text-ink-3';
   return (
-    <div className="fixed inset-0 z-50 flex items-stretch sm:items-center justify-center sm:p-4 bg-slate-900/50" role="dialog" aria-modal="true" aria-label="Terim ve sözlük bilgisi" onClick={onClose}>
-      <div className="bg-white sm:rounded-2xl w-full max-w-xl h-full sm:h-auto sm:max-h-[85vh] overflow-y-auto p-4 flex flex-col gap-3" onClick={(e) => e.stopPropagation()}>
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Terim ve sözlük bilgisi" onClick={onClose}>
+      <div className="ms-modal-panel bg-white w-full max-w-xl overflow-y-auto px-5 pt-4 pb-5 flex flex-col gap-3" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between gap-2">
-          <h3 className="m-0 text-[15px] font-bold text-ink">Terimler ve sözlük · #{rev.question_id}</h3>
-          <button type="button" onClick={onClose} className="w-11 h-11 sm:w-8 sm:h-8 inline-flex items-center justify-center rounded-lg hover:bg-canvas cursor-pointer" aria-label="Kapat">
-            <X className="w-4 h-4" />
+          <h3 className="m-0 font-display text-[17px] font-semibold text-ink">Terimler ve sözlük <span className="font-mono text-[13px] font-normal text-ink-3">#{String(rev.question_id).slice(0, 8)}</span></h3>
+          <button type="button" onClick={onClose} className="ms-btn is-ghost is-icon" aria-label="Kapat">
+            <X />
           </button>
         </div>
         <section className="flex flex-col gap-1">
@@ -355,7 +357,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   const [isTriggering, setIsTriggering] = useState(false);
   const [triggerLimit, setTriggerLimit] = useState(5);
   const [liteOn, setLiteOn] = useState<boolean | null>(null);
-  const [showConsole, setShowConsole] = useState(() => typeof window === 'undefined' || window.innerWidth >= 1024);
+  const [showConsole, setShowConsole] = useState(false);
 
   // Edit proposal modal state
   const [editingReview, setEditingReview] = useState<PastQuestionReviewRecord | null>(null);
@@ -478,11 +480,28 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     }
   };
 
+  // Cevabı belirsiz soru: seçilen (yoksa anketteki öndeki) şık kaydedilir, soru normal inceleme listesine döner
+  const [answerPick, setAnswerPick] = useState<Record<string, string>>({});
+  const [pollLeader, setPollLeader] = useState<Record<string, string>>({});
+  const handleCompleteAnswerDoubt = async (qId: string, choice?: string) => {
+    setProcessingId(qId);
+    try {
+      const res = await ApiService.completeAnswerDoubt(ADMIN_EMAIL, qId, choice);
+      setActionFeedback({ message: `Soru #${qId.slice(0, 8)}: ${res.message}`, type: 'ok' });
+      fetchReviews(true);
+    } catch (err: any) {
+      setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
+    } finally {
+      setProcessingId(null);
+    }
+  };
+
   const handleToggleAnswerDoubt = async (qId: string, value: boolean) => {
     setProcessingId(qId);
     setAllReviews(prev => prev.map(r => String(r.question_id) === qId ? { ...r, answer_doubtful: value } : r));
     try {
       await ApiService.setPastQuestionAnswerDoubt(ADMIN_EMAIL, qId, value);
+      if (value) setStatusFilter('answer_doubtful');
       setActionFeedback({ message: value ? `✓ Soru #${qId} için cevap anketi açıldı.` : `✓ Soru #${qId} için cevap anketi kapatıldı.`, type: 'ok' });
     } catch (err: any) {
       setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
@@ -590,12 +609,13 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
 
   const stats = useMemo(() => {
     const total = allReviews.length;
-    const pending = allReviews.filter((r) => r.status === 'review_required').length;
+    const pending = allReviews.filter((r) => r.status === 'review_required' && !r.answer_doubtful).length;
+    const doubtful = allReviews.filter((r) => r.answer_doubtful && r.status === 'review_required').length;
     const approved = allReviews.filter((r) => r.status === 'approved').length;
     const rejected = allReviews.filter((r) => r.status === 'rejected').length;
     const unchanged = allReviews.filter((r) => r.status === 'unchanged').length;
     const suspicious = allReviews.filter((r) => r.suspicious && r.status === 'review_required').length;
-    return { total, pending, approved, rejected, unchanged, suspicious };
+    return { total, pending, approved, rejected, unchanged, suspicious, doubtful };
   }, [allReviews]);
 
   const filteredReviews = useMemo(() => {
@@ -603,6 +623,10 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
 
     if (statusFilter === 'suspicious') {
       list = list.filter((r) => r.suspicious && r.status === 'review_required');
+    } else if (statusFilter === 'answer_doubtful') {
+      list = list.filter((r) => r.answer_doubtful && r.status === 'review_required');
+    } else if (statusFilter === 'review_required') {
+      list = list.filter((r) => r.status === 'review_required' && !r.answer_doubtful);
     } else if (statusFilter !== 'all') {
       list = list.filter((r) => r.status === statusFilter);
     }
@@ -635,27 +659,28 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     return sorted;
   }, [allReviews, statusFilter, searchQuery, sortOrder]);
 
+  const statusTabs = [
+    { id: 'review_required', label: 'İnceleme bekliyor', count: stats.pending },
+    { id: 'answer_doubtful', label: 'Cevap belirsiz', count: stats.doubtful },
+    { id: 'suspicious', label: 'Şüpheli', count: stats.suspicious },
+    { id: 'approved', label: 'Onaylandı', count: stats.approved },
+    { id: 'rejected', label: 'Reddedildi', count: stats.rejected },
+    { id: 'unchanged', label: 'Değişiklik yok', count: stats.unchanged },
+    { id: 'all', label: 'Tümü', count: stats.total },
+  ];
+  const total = liveStatus?.totalCandidate || 0;
+  const processed = liveStatus?.processed ?? allReviews.length;
+  const progressPct = total ? Math.min(100, Math.round((processed / total) * 100)) : 0;
+
   return (
-    <div className="flex flex-col gap-4 pb-16 min-w-0 w-full max-w-[1400px] mx-auto">
+    <div className="flex flex-col gap-3 pb-16 min-w-0 w-full max-w-[1400px] mx-auto">
       <PageHeader
-        title="Test Edilen Çıkmış Sorular"
-        description="Faz 14'ün çıkmış sorular için önerdiği OCR, imla ve eksik şık düzeltmeleri. Öneriler soru havuzuna kendiliğinden yazılmaz; yalnız onaylanan düzeltme canlı soruya uygulanır."
-        stats={[
-          { label: 'İncelenen Soru', value: stats.total.toLocaleString('tr-TR') },
-          { label: 'İnceleme Bekleyen', value: stats.pending.toLocaleString('tr-TR'), tone: stats.pending > 0 ? 'warn' : 'default' },
-          { label: 'Onaylanan', value: stats.approved.toLocaleString('tr-TR'), tone: 'ok' },
-          { label: 'Reddedilen', value: stats.rejected.toLocaleString('tr-TR'), tone: 'default' },
-        ]}
+        title="Faz 14 incelemesi"
+        description="Çıkmış sorular için önerilen OCR, imla ve eksik şık düzeltmeleri. Öneri yalnız onaylanınca canlı soruya uygulanır."
         actions={
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              type="button"
-              onClick={() => fetchReviews()}
-              disabled={isLoading}
-              className="h-10 px-3.5 rounded-xl border border-line bg-white text-ink text-[13.5px] font-semibold inline-flex items-center gap-2 hover:bg-canvas cursor-pointer disabled:opacity-50"
-            >
-              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin text-accent' : ''}`} />
-              <span>Yenile</span>
+          <div className="flex items-center gap-1.5">
+            <button type="button" onClick={() => fetchReviews()} disabled={isLoading} className="ms-btn is-ghost is-sm" aria-label="Yenile">
+              <RefreshCw className={isLoading ? 'animate-spin' : ''} /> <span className="hidden sm:inline">Yenile</span>
             </button>
             <a
               href={pathFor('past_exams')}
@@ -665,329 +690,181 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   onBackToPastExams();
                 }
               }}
-              className="h-10 px-4 rounded-xl bg-accent text-white font-semibold text-[13.5px] inline-flex items-center gap-2 hover:bg-accent-hover cursor-pointer"
+              className="ms-btn is-tonal is-sm"
             >
-              <ArrowLeft className="w-4 h-4" />
-              <span>Çıkmış Sorulara Dön</span>
+              <ArrowLeft /> Çıkmış sorular
             </a>
           </div>
         }
       />
 
-      {/* Canlı İşlem, Kalan Soru & Manuel Çalıştırma Kontrol Paneli (Sadece Admin) */}
+      {/* Süreç paneli (yönetici): tek satır durum + ilerleme; ayarlar ve konsol istenince açılır */}
       {isAdmin && (
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-5 text-white shadow-lg space-y-4">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-            <div className="space-y-1">
-              <div className="flex items-center gap-2">
-                <span className={`w-2.5 h-2.5 rounded-full ${liveStatus?.isRunning ? 'bg-emerald-400 animate-ping' : 'bg-slate-500'}`} />
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
-                  Faz 14 Canlı Süreç ve Denetim Kokpiti
-                </span>
-              {liveStatus?.isRunning && (
-                <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">
-                  ● {liveStatus.activeMode === 'cloud' ? 'Google Gemini Flash-Lite / Flash (En Düşük Maliyet)' : 'Gemma 3 (Yerel RTX 4060 GPU)'} Çalışıyor
-                </span>
-              )}
-            </div>
-            <p className="text-xs text-slate-400">
-              Çıkmış sınav sorularını tıbbi literatüre göre tarar, eksik kök ve şıkları düzeltir, YZV bloğuyla inceleme katmanına aktarır.
-            </p>
-          </div>
-
-          {/* Manuel Tetikleme Butonları */}
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="flex items-center gap-1.5 bg-slate-800/80 px-2.5 h-11 sm:h-9 rounded-xl border border-slate-700">
-              <span className="text-[11px] text-slate-400">Parti:</span>
-              <select
-                value={triggerLimit}
-                onChange={(e) => setTriggerLimit(Number(e.target.value))}
-                className="bg-transparent text-white text-xs font-bold outline-0 cursor-pointer"
-              >
-                <option value={5} className="bg-slate-800 text-white">5 Soru</option>
-                <option value={10} className="bg-slate-800 text-white">10 Soru</option>
-                <option value={25} className="bg-slate-800 text-white">25 Soru</option>
-                <option value={50} className="bg-slate-800 text-white">50 Soru</option>
-              </select>
-            </div>
-
-            <button
-              type="button"
-              role="switch"
-              aria-checked={liteOn === true}
-              onClick={toggleLite}
-              disabled={liteOn === null}
-              title="Açıkken: ücretsiz Flash kotası bitince Flash-Lite ile devam edilir; Lite yalnız soruyu düzeltir, cevabı bağımsız modeller belirler. Kapalıyken: Flash yoksa Faz 14 durur."
-              className="h-11 sm:h-9 px-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-xs text-slate-300 inline-flex items-center gap-2 cursor-pointer disabled:opacity-50"
-            >
-              <span>Lite yedeği</span>
-              <span className={`relative w-8 h-4.5 rounded-full transition-colors ${liteOn ? 'bg-emerald-500' : 'bg-slate-600'}`} style={{ height: 18 }}>
-                <span className={`absolute top-0.5 w-3.5 h-3.5 rounded-full bg-white transition-all ${liteOn ? 'left-4' : 'left-0.5'}`} />
-              </span>
-              <span className={`font-bold ${liteOn ? 'text-emerald-300' : 'text-slate-400'}`}>{liteOn === null ? '…' : liteOn ? 'Açık' : 'Kapalı'}</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => handleStartReview('cloud')}
-              disabled={isTriggering || liveStatus?.isRunning}
-              className="h-11 sm:h-9 px-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs inline-flex items-center gap-1.5 transition disabled:opacity-50 cursor-pointer shadow-md"
-            >
-              <Cloud className="w-3.5 h-3.5" />
-              <span>Bulut Başlat (Gemini)</span>
-            </button>
-
-            {liveStatus?.isRunning && (
+        <section className="ms-qcard gap-2.5!" aria-label="Faz 14 süreci">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span className="inline-flex items-center gap-2 text-[13.5px] font-semibold text-ink">
+              <span className={`w-2 h-2 rounded-full ${liveStatus?.isRunning ? 'bg-ok animate-pulse' : 'bg-line-2'}`} aria-hidden />
+              {liveStatus?.isRunning ? `Çalışıyor · ${liveStatus.activeMode === 'cloud' ? 'Gemini' : 'yerel model'}` : 'Süreç bekliyor'}
+            </span>
+            <dl className="m-0 flex flex-wrap gap-x-4 gap-y-1 text-[12.5px] text-ink-3">
+              {[
+                ['Havuz', total ? total.toLocaleString('tr-TR') : '—'],
+                ['İşlenen', processed.toLocaleString('tr-TR')],
+                ['Kalan', liveStatus?.remaining != null ? liveStatus.remaining.toLocaleString('tr-TR') : '—'],
+                ['Onaylanan', String(liveStatus?.approved ?? stats.approved)],
+                ['Bu ay', `${(liveStatus?.costTracking?.cost_tl ?? 0).toFixed(2)} ₺ / ${liveStatus?.costTracking?.max_budget_tl ?? 1000} ₺`],
+              ].map(([k, v]) => (
+                <div key={k} className="flex items-baseline gap-1.5">
+                  <dt>{k}</dt>
+                  <dd className="m-0 font-semibold text-ink tabular-nums">{v}</dd>
+                </div>
+              ))}
+            </dl>
+            <span className="flex-1" />
+            <div className="flex flex-wrap items-center gap-1.5">
+              <label className="ms-btn is-sm relative" title="Bir çalıştırmada işlenecek soru sayısı">
+                Parti: {triggerLimit}
+                <select value={triggerLimit} onChange={(e) => setTriggerLimit(Number(e.target.value))} className="absolute inset-0 opacity-0 cursor-pointer" aria-label="Parti büyüklüğü">
+                  {[5, 10, 25, 50].map((v) => <option key={v} value={v}>{v} soru</option>)}
+                </select>
+              </label>
               <button
                 type="button"
-                onClick={handleStopReview}
-                disabled={isTriggering}
-                className="h-11 sm:h-9 px-3.5 rounded-xl bg-rose-600/90 hover:bg-rose-600 text-white font-bold text-xs inline-flex items-center gap-1.5 transition cursor-pointer"
+                role="switch"
+                aria-checked={liteOn === true}
+                onClick={toggleLite}
+                disabled={liteOn === null}
+                title="Açıkken: ücretsiz Flash kotası bitince Flash-Lite ile devam edilir; Lite yalnız soruyu düzeltir, cevabı bağımsız modeller belirler. Kapalıyken: Flash yoksa Faz 14 durur."
+                className={`ms-btn is-sm ${liteOn ? 'is-on' : ''}`}
               >
-                <Square className="w-3.5 h-3.5" />
-                <span>Durdur</span>
+                <span className={`relative inline-block w-7 h-4 rounded-full transition-colors ${liteOn ? 'bg-accent' : 'bg-line-2'}`} aria-hidden>
+                  <span className={`absolute top-0.5 w-3 h-3 rounded-full bg-white transition-all ${liteOn ? 'left-3.5' : 'left-0.5'}`} />
+                </span>
+                Lite yedeği
               </button>
-            )}
-
-            <button
-              type="button"
-              onClick={() => setShowConsole(!showConsole)}
-              className="h-11 sm:h-9 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 font-semibold text-xs inline-flex items-center gap-1.5 transition cursor-pointer"
-            >
-              <Terminal className="w-3.5 h-3.5 text-amber-400" />
-              <span>{showConsole ? 'Konsolu Gizle' : 'Konsolu Aç'}</span>
-            </button>
-          </div>
-        </div>
-
-        {/* İlerleme ve Kalan Soru Metrikleri */}
-        <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3 pt-2 border-t border-slate-800 text-center font-mono">
-          <div className="p-1.5 sm:p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80">
-            <span className="text-[10px] uppercase text-slate-400 block">Toplam Havuz</span>
-            <strong className="text-base text-slate-200">{liveStatus?.totalCandidate ? liveStatus.totalCandidate.toLocaleString('tr-TR') : '—'}</strong>
-            <span className="text-[10px] text-slate-500 hidden sm:block">Aday Çıkmış</span>
-          </div>
-          <div className="p-1.5 sm:p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80">
-            <span className="text-[10px] uppercase text-slate-400 block">İşlenen Soru</span>
-            <strong className="text-base text-cyan-400">{liveStatus?.processed ?? allReviews.length}</strong>
-            <span className="text-[10px] text-cyan-500 hidden sm:block">reviews.jsonl</span>
-          </div>
-          <div className="p-1.5 sm:p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80">
-            <span className="text-[10px] uppercase text-slate-400 block">Kalan Soru</span>
-            <strong className="text-base text-amber-400">{liveStatus?.remaining ?? '—'}</strong>
-            <span className="text-[10px] text-amber-500 hidden sm:block">Sırada Bekleyen</span>
-          </div>
-          <div className="p-1.5 sm:p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80">
-            <span className="text-[10px] uppercase text-slate-400 block">Onaylanan</span>
-            <strong className="text-base text-emerald-400">{liveStatus?.approved ?? stats.approved}</strong>
-            <span className="text-[10px] text-emerald-500 hidden sm:block">Ana Havuza Aktarıldı</span>
-          </div>
-          <div className="p-1.5 sm:p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 col-span-2 sm:col-span-1">
-            <span className="text-[10px] uppercase text-violet-400 block flex items-center justify-center gap-1">
-              <DollarSign className="w-3 h-3 text-violet-400" />
-              <span>Aylık Bütçe</span>
-            </span>
-            <strong className="text-base text-violet-300">
-              {liveStatus?.costTracking ? `${liveStatus.costTracking.cost_tl.toFixed(2)} ₺` : '0.00 ₺'}
-            </strong>
-            <span className="text-[10px] text-violet-400 hidden sm:block">
-              / {liveStatus?.costTracking?.max_budget_tl ?? 1000} ₺ Tavan
-            </span>
-          </div>
-        </div>
-
-        {/* Canlı Konsol Log Alanı (Terminal Çıktısı) */}
-        {showConsole && (
-          <div className="pt-2 border-t border-slate-800/80 space-y-1.5">
-            <div className="flex items-center justify-between text-[11px] text-slate-400 font-mono">
-              <span className="flex items-center gap-1.5 text-slate-300">
-                <Terminal className="w-3.5 h-3.5 text-amber-400" />
-                <span>Canlı Terminal & Log Akışı (phase14.log)</span>
-              </span>
-              <span>Son 50 satır</span>
+              {liveStatus?.isRunning ? (
+                <button type="button" onClick={handleStopReview} disabled={isTriggering} className="ms-btn is-sm is-danger bg-bad-soft!">
+                  <Square /> Durdur
+                </button>
+              ) : (
+                <button type="button" onClick={() => handleStartReview('cloud')} disabled={isTriggering} className="ms-btn is-sm is-primary">
+                  <Cloud /> Başlat
+                </button>
+              )}
+              {stats.unchanged > 0 && (
+                <button type="button" onClick={() => handleReEvaluateUnchanged()} disabled={isTriggering} className="ms-btn is-sm is-ghost" title="Değişiklik yapılmamış soruları Faz 14 için yeniden kuyruğa al">
+                  <RotateCcw /> Değişmeyenleri yeniden değerlendir ({stats.unchanged})
+                </button>
+              )}
             </div>
-            <div className="bg-slate-950 p-3 rounded-xl border border-slate-800/80 font-mono text-xs text-slate-300 max-h-48 overflow-y-auto space-y-1 select-text">
+          </div>
+          <div className={`ms-progress ${liveStatus?.isRunning && !total ? 'is-indeterminate' : ''}`} role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progressPct} aria-label="İşlenen soru oranı">
+            <span style={{ width: `${progressPct}%` }} />
+          </div>
+          <Collapsible
+            className="ms-disc"
+            open={showConsole}
+            onToggle={setShowConsole}
+            title={
+              <span className="inline-flex items-center gap-2">
+                <Terminal className="w-3.5 h-3.5 text-ink-3" /> Canlı günlük <span className="font-normal text-ink-3">phase14.log · son 50 satır</span>
+              </span>
+            }
+          >
+            <div className="bg-slate-950 p-3 rounded-lg font-mono text-[12px] text-slate-300 max-h-56 overflow-y-auto flex flex-col gap-0.5 select-text">
               {liveStatus?.logs && liveStatus.logs.length > 0 ? (
                 liveStatus.logs.map((line, idx) => {
                   const isErr = line.includes('ERROR') || line.includes('hata') || line.includes('429') || line.includes('404');
                   const isOk = line.includes('✓') || line.includes('başarıyla') || line.includes('unchanged');
                   const isWarn = line.includes('WARNING') || line.includes('review_required');
                   return (
-                    <div
-                      key={idx}
-                      className={`leading-relaxed whitespace-pre-wrap ${
-                        isErr
-                          ? 'text-rose-400'
-                          : isOk
-                          ? 'text-emerald-400'
-                          : isWarn
-                          ? 'text-amber-300'
-                          : 'text-slate-300'
-                      }`}
-                    >
+                    <div key={idx} className={`leading-relaxed whitespace-pre-wrap ${isErr ? 'text-rose-400' : isOk ? 'text-emerald-400' : isWarn ? 'text-amber-300' : 'text-slate-300'}`}>
                       {line}
                     </div>
                   );
                 })
               ) : (
-                <div className="text-slate-500 italic">Henüz log kaydı yok veya işlem bekleniyor...</div>
+                <div className="text-slate-500">Henüz günlük kaydı yok.</div>
               )}
             </div>
-          </div>
-        )}
-        </div>
+          </Collapsible>
+        </section>
       )}
 
       {actionFeedback && (
-        <div
-          className={`p-3.5 rounded-xl border text-[13.5px] font-medium flex items-center justify-between gap-2 ${
-            actionFeedback.type === 'ok'
-              ? 'bg-emerald-50 text-emerald-800 border-emerald-200'
-              : 'bg-rose-50 text-rose-800 border-rose-200'
-          }`}
-        >
-          <span>{actionFeedback.message}</span>
-          <button
-            type="button"
-            onClick={() => setActionFeedback(null)}
-            className="p-1 text-ink-3 hover:text-ink cursor-pointer"
-          >
-            <X className="w-4 h-4" />
+        <div role="status" className={`ms-pop-in flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-[13.5px] font-medium ${actionFeedback.type === 'ok' ? 'bg-ok-soft text-ok' : 'bg-bad-soft text-bad-text'}`}>
+          {actionFeedback.type === 'ok' ? <CheckCircle2 className="w-4 h-4 shrink-0" /> : <AlertTriangle className="w-4 h-4 shrink-0" />}
+          <span className="flex-1 min-w-0">{actionFeedback.message.replace(/^✓\s*/, '')}</span>
+          <button type="button" onClick={() => setActionFeedback(null)} className="ms-btn is-ghost is-sm is-icon text-inherit!" aria-label="Kapat">
+            <X />
           </button>
         </div>
       )}
 
-      {/* Arama & Durum Filtreleri */}
-      <div className="flex flex-col sm:flex-row gap-2.5">
-        <label className="flex-1 flex items-center gap-2 h-11 px-3.5 rounded-xl bg-white border border-line focus-within:border-accent">
-          <Search className="w-4 h-4 text-ink-3 shrink-0" />
-          <input
-            type="search"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Soru ID, kök, ders ya da değişiklik özeti ara..."
-            className="flex-1 bg-transparent border-0 outline-0 text-[14.5px] text-ink placeholder:text-ink-3"
-          />
+      {/* Arama + görünüm + sıralama */}
+      <div className="flex flex-wrap items-center gap-2 min-w-0">
+        <div className="ms-qsearch flex-1 basis-[260px]">
+          <Search aria-hidden />
+          <input type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Soru ID, kök, şık, ders ya da not ara" aria-label="İncelemelerde ara" />
           {searchQuery && (
-            <button
-              type="button"
-              onClick={() => setSearchQuery('')}
-              className="text-ink-3 hover:text-ink cursor-pointer p-1"
-            >
-              <X className="w-3.5 h-3.5" />
-            </button>
-          )}
-        </label>
-
-        <div className="flex flex-wrap items-center gap-1.5">
-          {[
-            { id: 'all', label: 'Tümü', count: stats.total },
-            { id: 'review_required', label: 'İnceleme Gerekli', count: stats.pending },
-            { id: 'suspicious', label: 'Şüpheli', count: stats.suspicious },
-            { id: 'approved', label: 'Onaylandı', count: stats.approved },
-            { id: 'rejected', label: 'Reddedildi', count: stats.rejected },
-            { id: 'unchanged', label: 'Değişiklik Yok', count: stats.unchanged },
-          ].map((tab) => {
-            const on = statusFilter === tab.id;
-            return (
-              <button
-                key={tab.id}
-                type="button"
-                onClick={() => setStatusFilter(tab.id)}
-                className={`h-11 px-3.5 sm:px-4 rounded-xl text-[13.5px] font-semibold whitespace-nowrap cursor-pointer transition-colors inline-flex items-center gap-1.5 ${
-                  on
-                    ? 'bg-accent text-white shadow-xs'
-                    : 'bg-white text-ink-2 border border-line hover:text-ink hover:bg-canvas'
-                }`}
-              >
-                <span>{tab.label}</span>
-                <span className={`text-[11px] px-1.5 py-0.2 rounded-full font-mono ${
-                  on ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-600'
-                }`}>
-                  {tab.count}
-                </span>
-              </button>
-            );
-          })}
-
-          {/* Görünüm: liste / ayrıntılı */}
-          <div className="h-11 p-1 rounded-xl border border-line bg-white inline-flex items-center gap-0.5" role="radiogroup" aria-label="Görünüm">
-            {([['list', 'Liste'], ['detail', 'Ayrıntılı']] as const).map(([id, label]) => (
-              <button
-                key={id}
-                type="button"
-                role="radio"
-                aria-checked={layout === id}
-                onClick={() => changeLayout(id)}
-                className={`h-full px-3 rounded-lg text-[13px] font-semibold cursor-pointer ${layout === id ? 'bg-accent text-white' : 'text-ink-2 hover:text-ink'}`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-
-          {/* Sıralama Butonu */}
-          <label className="h-11 px-3 rounded-xl border border-line bg-white text-ink-2 text-[13px] font-semibold whitespace-nowrap inline-flex items-center gap-1.5 shrink-0 ml-1">
-            <ArrowUpDown className="w-4 h-4 text-accent" />
-            <span className="sr-only">Sıralama</span>
-            <select
-              value={sortOrder}
-              onChange={(e) => setSortOrder(e.target.value as typeof sortOrder)}
-              className="bg-transparent outline-0 cursor-pointer text-ink"
-            >
-              <option value="newest">En yeni</option>
-              <option value="oldest">En eski</option>
-              <option value="evidence_low">Kanıtı en zayıf</option>
-              <option value="evidence_high">Kanıtı en güçlü</option>
-            </select>
-          </label>
-
-          {/* Admin: Değişiklik Olmayanları Tekrar Değerlendir Butonu */}
-          {isAdmin && stats.unchanged > 0 && (
-            <button
-              type="button"
-              onClick={() => handleReEvaluateUnchanged()}
-              disabled={isTriggering}
-              className="h-11 px-3.5 rounded-xl border border-amber-300 bg-amber-50 hover:bg-amber-100 text-amber-800 text-[13px] font-bold whitespace-nowrap inline-flex items-center gap-1.5 cursor-pointer shadow-xs ml-1 transition disabled:opacity-50"
-              title="Değişiklik yapılmamış tüm soruları checkpoint'ten çıkarıp Faz 14 için tekrar hazırla"
-            >
-              <RotateCcw className="w-3.5 h-3.5 text-amber-600" />
-              <span>Değişmeyenleri tekrar değerlendir ({stats.unchanged})</span>
+            <button type="button" onClick={() => setSearchQuery('')} className="ms-btn is-ghost is-sm is-icon" aria-label="Aramayı temizle">
+              <X />
             </button>
           )}
         </div>
+        <div className="ms-seg" role="radiogroup" aria-label="Görünüm">
+          {([['list', 'Liste'], ['detail', 'Ayrıntılı']] as const).map(([id, label]) => (
+            <button key={id} type="button" role="radio" aria-checked={layout === id} onClick={() => changeLayout(id)}>
+              {label}
+            </button>
+          ))}
+        </div>
+        <label className="ms-btn is-ghost is-sm relative">
+          <ArrowUpDown />
+          {{ newest: 'En yeni', oldest: 'En eski', evidence_low: 'Kanıtı en zayıf', evidence_high: 'Kanıtı en güçlü' }[sortOrder]}
+          <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value as typeof sortOrder)} className="absolute inset-0 opacity-0 cursor-pointer" aria-label="Sıralama">
+            <option value="newest">En yeni</option>
+            <option value="oldest">En eski</option>
+            <option value="evidence_low">Kanıtı en zayıf</option>
+            <option value="evidence_high">Kanıtı en güçlü</option>
+          </select>
+        </label>
       </div>
 
-      {/* Liste & Karşılaştırma Kartları */}
+      <div className="ms-chipbar" role="tablist" aria-label="Durum">
+        {statusTabs.map((tab) => {
+          const on = statusFilter === tab.id;
+          return (
+            <button key={tab.id} type="button" role="tab" aria-selected={on} onClick={() => setStatusFilter(tab.id)} className={`ms-fchip ${on ? 'is-on' : ''} ${!tab.count && !on ? 'is-zero' : ''}`}>
+              {tab.id === 'answer_doubtful' && <BarChart3 className="w-3.5 h-3.5" aria-hidden />}
+              {tab.label} <span className="n">{tab.count.toLocaleString('tr-TR')}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Liste & karşılaştırma kartları */}
       {isLoading ? (
-        <div className="bg-white border border-line rounded-2xl p-12 text-center text-ink-2 flex flex-col items-center gap-3">
-          <RefreshCw className="w-6 h-6 animate-spin text-accent" />
-          <span className="text-[14px]">İnceleme kuyruğu ve Faz 14 önerileri yükleniyor...</span>
+        <div className="ms-qcard items-center py-10 text-ink-2">
+          <div className="ms-progress is-indeterminate w-40"><span /></div>
+          <span className="text-[13.5px]">İnceleme kayıtları yükleniyor…</span>
         </div>
       ) : error ? (
-        <div className="bg-white border border-rose-200 rounded-2xl p-8 text-center text-rose-700 flex flex-col items-center gap-2">
-          <AlertTriangle className="w-8 h-8 text-rose-500" />
-          <p className="font-semibold">{error}</p>
-          <button
-            type="button"
-            onClick={() => fetchReviews()}
-            className="mt-2 h-9 px-4 rounded-lg bg-rose-600 text-white text-xs font-semibold cursor-pointer"
-          >
-            Yeniden Dene
-          </button>
+        <div className="ms-qcard items-center text-center py-8 text-bad-text">
+          <AlertTriangle className="w-7 h-7" />
+          <p className="m-0 font-semibold">{error}</p>
+          <button type="button" onClick={() => fetchReviews()} className="ms-btn is-tonal">Yeniden dene</button>
         </div>
       ) : filteredReviews.length === 0 ? (
-        <div className="bg-white border border-line rounded-2xl p-12 text-center text-ink-2 flex flex-col items-center gap-2">
-          <Sparkles className="w-8 h-8 text-ink-3" />
-          <h3 className="font-bold text-[16px] text-ink">Henüz İnceleme Kaydı Bulunamadı</h3>
-          <p className="text-[13.5px] max-w-md text-ink-3">
-            {searchQuery
-              ? 'Arama kriterlerine uygun öneri bulunamadı.'
-              : 'Faz 14 betiği (phase14_past_question_editor.py) henüz bu filtre için kayıt üretmedi. Yönetim panelinden "Script ve görevler" sekmesini kullanarak partiler halinde çalıştırabilirsiniz.'}
+        <div className="ms-qcard items-center text-center py-10 text-ink-2">
+          <Sparkles className="w-7 h-7 text-ink-3" />
+          <h3 className="m-0 font-semibold text-[16px] text-ink">{searchQuery ? 'Aramaya uyan kayıt yok' : 'Bu durumda kayıt yok'}</h3>
+          <p className="m-0 text-[13.5px] max-w-md text-ink-3">
+            {searchQuery ? 'Farklı bir kelime ya da durum seç.' : 'Faz 14 bu süzgeç için henüz kayıt üretmedi. Süreci yukarıdan başlatabilirsin.'}
           </p>
         </div>
       ) : (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2.5 ms-stagger" key={statusFilter}>
           {filteredReviews.slice(0, visibleCount).map((rev) => {
             const qId = rev.question_id;
             const src = rev.source || ({} as any);
@@ -996,6 +873,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             const isApproved = rev.status === 'approved';
             const isRejected = rev.status === 'rejected';
             const isUnchanged = rev.status === 'unchanged';
+            const isDuplicate = (rev.status as string) === 'duplicate';
+            const doubtful = Boolean(rev.answer_doubtful);
             const ratioPercent = Math.round((rev.support_ratio || 0) * 100);
             const view = cardView[qId] || 'diff';
             const srcStem = String(src.soru_koku || '');
@@ -1006,12 +885,14 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             const yzvNote = prop.YZV?.degisiklik_ozeti && typeof prop.YZV.degisiklik_ozeti === 'object' ? prop.YZV.degisiklik_ozeti : null;
             const aiCompletedList: string[] = (prop.yapay_zeka_tamamlanan_siklar || []).map((x: any) => String(x).toUpperCase());
             const status = isApproved
-              ? { label: 'Onaylandı', cls: 'bg-emerald-50 text-emerald-700', Icon: CheckCircle2 }
+              ? { label: 'Onaylandı', cls: 'is-ok', Icon: CheckCircle2, dot: 'bg-ok' }
               : isRejected
-              ? { label: 'Reddedildi', cls: 'bg-rose-50 text-rose-700', Icon: XCircle }
+              ? { label: 'Reddedildi', cls: 'is-bad', Icon: XCircle, dot: 'bg-bad' }
               : isUnchanged
-              ? { label: 'Değişiklik yok', cls: 'bg-slate-100 text-slate-600', Icon: Check }
-              : { label: 'İnceleme bekliyor', cls: 'bg-amber-50 text-amber-800', Icon: Clock };
+              ? { label: 'Değişiklik yok', cls: '', Icon: Check, dot: 'bg-line-2' }
+              : isDuplicate
+              ? { label: `Kopya · #${(rev as any).duplicate_of || '?'}`, cls: '', Icon: Copy, dot: 'bg-line-2' }
+              : { label: 'İnceleme bekliyor', cls: 'is-warn', Icon: Clock, dot: 'bg-warn' };
             const onCopy = async (which: 'src' | 'prop') => {
               const ok = await copyText(questionText(rev, which));
               if (ok) {
@@ -1021,223 +902,208 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 setActionFeedback({ message: 'Kopyalanamadı: tarayıcı panoya erişime izin vermedi.', type: 'err' });
               }
             };
-            const btn = 'h-11 sm:h-8 px-3 rounded-lg text-[13px] sm:text-[12.5px] font-semibold inline-flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 transition-colors';
             const copyBtn = (which: 'src' | 'prop', label: string) => {
               const done = copiedId === `${qId}:${which}`;
               return (
                 <button
                   type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onCopy(which);
-                  }}
-                  className="h-11 sm:h-8 px-2 rounded-lg inline-flex items-center gap-1 text-[12px] font-semibold text-ink-3 hover:text-ink hover:bg-canvas cursor-pointer shrink-0"
+                  onClick={(e) => { e.stopPropagation(); onCopy(which); }}
+                  className="ms-btn is-ghost is-sm"
                   title={`${label} soruyu ve şıklarını kopyala (cevap anahtarı hariç)`}
                   aria-label={done ? 'Kopyalandı' : `${label} soruyu kopyala`}
                 >
-                  {done ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-                  <span>{label}</span>
+                  {done ? <Check className="text-ok" /> : <Copy />}
+                  <span className="hidden sm:inline">{label}</span>
                 </button>
               );
             };
-            const copyButtons = (
-              <>
-                {copyBtn('src', 'Eski')}
-                {propStem && copyBtn('prop', 'Yeni')}
-              </>
-            );
             const srcExpl = String(src.aciklama || '');
             const propExpl = String(prop.aciklama || '');
             const explChanged = Boolean(propExpl) && propExpl.trim() !== srcExpl.trim();
+            const pollOptions = (prop.secenekler && Object.keys(prop.secenekler).length ? prop.secenekler : src.secenekler) || {};
+            const busy = processingId === qId;
 
             // Liste görünümü: tek satır; tıklayınca ayrıntılı kart açılır
             if (layout === 'list' && !openRows[qId]) {
               return (
                 <article
                   key={qId}
-                  className="bg-white border border-line rounded-xl px-3 py-2 flex items-center gap-2 min-w-0 cursor-pointer hover:border-line-2"
+                  className="ms-qcard flex-row! items-center gap-2! py-2! px-3! cursor-pointer"
                   onClick={() => setOpenRows((o) => ({ ...o, [qId]: true }))}
                 >
-                  <span className={`w-2 h-2 rounded-full shrink-0 ${isApproved ? 'bg-emerald-500' : isRejected ? 'bg-rose-500' : isUnchanged ? 'bg-slate-400' : 'bg-amber-500'}`} title={status.label} />
+                  <span className={`w-2 h-2 rounded-full shrink-0 ${status.dot}`} title={status.label} />
                   <span className="font-mono text-[12px] text-ink-3 shrink-0 hidden sm:inline">#{qId.slice(0, 8)}</span>
                   <span className="text-[13.5px] text-ink truncate min-w-0 flex-1">{propStem || srcStem}</span>
-                  {changes.length > 0 && <span className="hidden md:inline text-[11.5px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 shrink-0">müfredat</span>}
-                  {explChanged && <span className="hidden md:inline text-[11.5px] px-1.5 py-0.5 rounded bg-violet-50 text-violet-700 shrink-0">açıklama</span>}
-                  <span className={`text-[11.5px] font-mono shrink-0 ${ratioPercent >= 80 ? 'text-emerald-700' : 'text-rose-700'}`}>%{ratioPercent}</span>
-                  {copyButtons}
+                  {doubtful && <span className="ms-tag is-warn hidden sm:inline-flex"><BarChart3 /> anket</span>}
+                  {changes.length > 0 && <span className="ms-tag is-warn hidden md:inline-flex">müfredat</span>}
+                  {explChanged && <span className="ms-tag is-ai hidden md:inline-flex">açıklama</span>}
+                  <span className={`text-[12px] font-mono shrink-0 ${ratioPercent >= 80 ? 'text-ok' : 'text-bad-text'}`}>%{ratioPercent}</span>
                   {isAdmin && !isApproved && (
-                    <button type="button" onClick={(e) => { e.stopPropagation(); handleApprove(qId); }} disabled={processingId === qId} className="w-11 h-11 sm:w-8 sm:h-8 rounded-lg inline-flex items-center justify-center text-emerald-700 hover:bg-emerald-50 cursor-pointer shrink-0 disabled:opacity-50" title="Onayla" aria-label="Onayla">
-                      <Check className="w-4 h-4" />
+                    <button type="button" onClick={(e) => { e.stopPropagation(); handleApprove(qId); }} disabled={busy} className="ms-btn is-ghost is-sm is-icon text-ok!" title="Onayla" aria-label="Onayla">
+                      <Check />
                     </button>
                   )}
                   {isAdmin && !isRejected && (
-                    <button type="button" onClick={(e) => { e.stopPropagation(); handleReject(qId); }} disabled={processingId === qId} className="w-11 h-11 sm:w-8 sm:h-8 rounded-lg inline-flex items-center justify-center text-rose-700 hover:bg-rose-50 cursor-pointer shrink-0 disabled:opacity-50" title="Reddet" aria-label="Reddet">
-                      <X className="w-4 h-4" />
+                    <button type="button" onClick={(e) => { e.stopPropagation(); handleReject(qId); }} disabled={busy} className="ms-btn is-ghost is-sm is-icon text-bad-text!" title="Reddet" aria-label="Reddet">
+                      <X />
                     </button>
                   )}
                 </article>
               );
             }
 
+            const optList = (opts: Record<string, any>, correct: string | undefined, kind: 'src' | 'prop') => (
+              <ol className="ms-opts gap-1!">
+                {Object.entries(opts).map(([k, v]) => {
+                  const upperKey = k.toUpperCase();
+                  const isCorrect = !doubtful && String(correct || '').toUpperCase() === upperKey;
+                  const before = srcOpt(upperKey);
+                  const isAiCompleted = kind === 'prop' && (!before || aiCompletedList.includes(upperKey));
+                  const optChanged = kind === 'prop' && view !== 'prop' && before && before.trim() !== String(v).trim();
+                  return (
+                    <li key={k} className={`ms-opt min-h-9! py-1.5! text-[13.5px]! ${isCorrect ? 'is-correct' : ''}`}>
+                      <span className="ms-opt-key w-6! h-6! text-[12px]!">{isCorrect ? <Check className="w-3.5 h-3.5" strokeWidth={3} /> : upperKey}</span>
+                      <span>{optChanged ? <DiffText before={before} after={String(v)} /> : String(v)}</span>
+                      <span className="ms-opt-side">
+                        {isAiCompleted && <span className="ms-tag is-ai" title="Bu şık kaynakta yoktu; AI tamamladı">AI</span>}
+                        {kind === 'prop' && (isAiCompleted || (before && before.trim() !== String(v).trim())) && (
+                          <ChangeInfo
+                            title={`${upperKey} şıkkı ${isAiCompleted && !before ? 'eklendi' : 'değişti'}`}
+                            before={before}
+                            after={String(v)}
+                            note={isAiCompleted ? 'Kaynakta bu şık eksikti; yapay zekâ tamamladı (doğrulanmadı).' : undefined}
+                          />
+                        )}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ol>
+            );
+            const answerLabel = (v?: string) => (doubtful ? <span className="ms-tag is-warn">Cevap belirsiz</span> : v ? <span className="ms-tag is-ok">Cevap {String(v).toUpperCase()}</span> : <span className="ms-tag">Cevap yok</span>);
+
+            const moreActions: ActionItem[] = isAdmin
+              ? [
+                  ...(isPending
+                    ? [
+                        { label: rev.suspicious ? 'Şüpheli işaretini kaldır' : 'Şüpheli olarak işaretle', icon: Flag, onClick: () => handleToggleSuspicious(qId, !rev.suspicious) },
+                        { label: doubtful ? 'Cevap anketini kapat' : 'Cevap anketini aç', icon: BarChart3, onClick: () => handleToggleAnswerDoubt(qId, !doubtful) },
+                      ]
+                    : []),
+                  ...(isUnchanged || isRejected ? [{ label: 'Tekrar değerlendir', icon: RotateCcw, onClick: () => handleReEvaluateUnchanged(qId) }] : []),
+                  { label: 'Terimler ve sözlük', icon: BookOpen, group: 'Bilgi', onClick: () => setTermsFor(rev) },
+                ]
+              : [{ label: 'Terimler ve sözlük', icon: BookOpen, onClick: () => setTermsFor(rev) }];
+
             return (
-              <article key={qId} className="bg-white border border-line rounded-xl overflow-hidden">
-                {/* Başlık: tek satır */}
-                <header className="px-3 sm:px-4 pt-2.5 pb-2 flex items-center gap-2 min-w-0">
-                  <span className="font-mono text-[12.5px] font-semibold text-ink shrink-0">#{qId}</span>
-                  <span className={`h-[22px] px-2 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1 shrink-0 ${status.cls}`}>
-                    <status.Icon className="w-3 h-3" />
-                    <span className="hidden xs:inline sm:inline">{status.label}</span>
-                  </span>
-                  {rev.answer_doubtful && (
-                    <span className="h-[22px] px-2 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1 shrink-0 bg-amber-50 text-amber-900 border border-amber-200">
-                      <HelpCircle className="w-3 h-3" />
-                      <span className="hidden sm:inline">Cevap belirsiz</span>
+              <article key={qId} className="ms-qcard p-0! gap-0! overflow-hidden">
+                {/* Başlık */}
+                <header className="ms-qcard-head px-3 sm:px-4 pt-2.5 pb-2">
+                  <span className="ms-qcard-num" title={`#${qId}`}>#{qId.slice(0, 8)}</span>
+                  <span className={`ms-tag ${status.cls}`}><status.Icon /> <span className="hidden sm:inline">{status.label}</span></span>
+                  {rev.answer_vote_result && (
+                    <span className="ms-tag is-ok" title={`Anket sonucu: ${rev.answer_vote_result.winner} şıkkı, ${rev.answer_vote_result.counts[rev.answer_vote_result.winner]}/${rev.answer_vote_result.total} oy`}>
+                      <BarChart3 /> {rev.answer_vote_result.by === 'admin' ? 'Cevap seçildi' : 'Anket'}: {rev.answer_vote_result.winner}
                     </span>
                   )}
-                  {rev.suspicious && (
-                    <span className="h-[22px] px-2 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1 shrink-0 bg-orange-50 text-orange-800 border border-orange-200">
-                      <Flag className="w-3 h-3" />
-                      <span className="hidden sm:inline">Şüpheli</span>
-                    </span>
-                  )}
-                  <span
-                    className={`h-[22px] px-1.5 rounded-md text-[11.5px] font-mono font-semibold inline-flex items-center shrink-0 ${ratioPercent >= 80 ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'}`}
-                    title={`Önerinin kaynak metinle örtüşme oranı: %${ratioPercent}`}
-                  >
-                    %{ratioPercent}
-                  </span>
-                  <span className="text-[12.5px] text-ink-3 truncate min-w-0" title={changes.length ? 'Müfredat değişikliği önerildi' : undefined}>
+                  {doubtful && <span className="ms-tag is-warn"><BarChart3 /> Cevap belirsiz</span>}
+                  {rev.suspicious && <span className="ms-tag is-bad"><Flag /> Şüpheli</span>}
+                  <span className={`ms-tag ${ratioPercent >= 80 ? 'is-ok' : 'is-bad'} font-mono`} title={`Önerinin kaynak metinle örtüşme oranı: %${ratioPercent}`}>%{ratioPercent}</span>
+                  <span className="ms-qcard-meta" title={changes.length ? 'Müfredat değişikliği önerildi' : undefined}>
                     {[kurulLabel(src.kurul_adi), src.ders_adi].filter(Boolean).join(' · ')}
                     {changes.some((c) => c.alan === 'Kurul' || c.alan === 'Ders') && (
                       <>
                         {' → '}
-                        <b className="text-amber-800 font-semibold">{[kurulLabel(prop.kurul_adi || src.kurul_adi), prop.ders_adi || src.ders_adi].filter(Boolean).join(' · ')}</b>
+                        <b className="text-warn font-semibold">{[kurulLabel(prop.kurul_adi || src.kurul_adi), prop.ders_adi || src.ders_adi].filter(Boolean).join(' · ')}</b>
                       </>
                     )}
                   </span>
-                  <span className="flex-1" />
-                  <button type="button" onClick={() => setTermsFor(rev)} className="h-11 sm:h-8 px-2 rounded-lg inline-flex items-center gap-1 text-[12px] font-semibold text-ink-3 hover:text-ink hover:bg-canvas cursor-pointer shrink-0" title="Terim, sözlük ve değişiklik bilgisi">
-                    <BookOpen className="w-3.5 h-3.5" /> <span className="hidden sm:inline">Terimler</span>
-                  </button>
-                  {copyButtons}
-                  {layout === 'list' && (
-                    <button type="button" onClick={() => setOpenRows((o) => ({ ...o, [qId]: false }))} className="h-11 sm:h-8 px-2.5 rounded-lg text-[12.5px] font-semibold text-ink-3 hover:text-ink hover:bg-canvas cursor-pointer shrink-0">
-                      Daralt
-                    </button>
-                  )}
+                  <span className="inline-flex items-center gap-0.5 ml-auto">
+                    {copyBtn('src', 'Eski')}
+                    {propStem && copyBtn('prop', 'Yeni')}
+                    {layout === 'list' && (
+                      <button type="button" onClick={() => setOpenRows((o) => ({ ...o, [qId]: false }))} className="ms-btn is-ghost is-sm">Daralt</button>
+                    )}
+                    <ActionMenu items={moreActions} title={`Soru #${qId.slice(0, 8)}`} />
+                  </span>
                 </header>
 
-                {/* Müfredat değişikliği */}
                 {changes.length > 0 && (
-                  <div className="mx-3 sm:mx-4 mb-2 px-2.5 py-1.5 rounded-lg bg-amber-50 text-amber-900 text-[12.5px] leading-snug">
-                    <span className="font-semibold">Müfredat değişikliği:</span>{' '}
+                  <p className="mx-3 sm:mx-4 mb-2 m-0 px-2.5 py-1.5 rounded-lg bg-warn-soft text-warn text-[12.5px] leading-snug">
+                    <b className="font-semibold">Müfredat:</b>{' '}
                     {changes.map((c, i) => (
                       <span key={c.alan}>
                         {i > 0 && ' · '}
                         {c.alan !== 'Kurul' && `${c.alan} `}
-                        <span className="line-through decoration-amber-500/70">{c.eski}</span> → <b>{c.yeni}</b>
+                        <span className="line-through opacity-70">{c.eski}</span> → <b>{c.yeni}</b>
                       </span>
                     ))}
-                    {yzvNote?.mufredat_atamasi && <span className="block text-amber-800/90 mt-0.5">{yzvNote.mufredat_atamasi}</span>}
-                  </div>
+                    {yzvNote?.mufredat_atamasi && <span className="block opacity-90 mt-0.5">{yzvNote.mufredat_atamasi}</span>}
+                  </p>
                 )}
 
                 {/* Telefon/tablet: görünüm seçici */}
-                <div className="lg:hidden px-3 sm:px-4 pb-2" role="tablist" aria-label="Karşılaştırma görünümü">
-                  <div className="grid grid-cols-3 gap-1 p-0.5 rounded-lg bg-canvas">
+                <div className="lg:hidden px-3 sm:px-4 pb-2">
+                  <div className="ms-seg w-full" role="tablist" aria-label="Karşılaştırma görünümü">
                     {([['diff', 'Fark'], ['src', 'Mevcut'], ['prop', 'Öneri']] as const).map(([id, label]) => (
-                      <button
-                        key={id}
-                        type="button"
-                        role="tab"
-                        aria-selected={view === id}
-                        onClick={() => setCardView((v) => ({ ...v, [qId]: id }))}
-                        className={`h-11 sm:h-9 rounded-md text-[13px] font-semibold cursor-pointer ${view === id ? 'bg-white text-ink shadow-xs' : 'text-ink-3'}`}
-                      >
+                      <button key={id} type="button" role="tab" aria-selected={view === id} onClick={() => setCardView((v) => ({ ...v, [qId]: id }))} className="flex-1 justify-center">
                         {label}
                       </button>
                     ))}
                   </div>
                 </div>
 
-                <div className="px-3 sm:px-4 pb-3 grid grid-cols-1 lg:grid-cols-2 gap-2.5 lg:gap-3">
+                <div className="px-3 sm:px-4 pb-3 grid grid-cols-1 lg:grid-cols-2 gap-2.5">
                   {/* Mevcut kayıt */}
-                  <section className={`${view === 'src' ? 'flex' : 'hidden'} lg:flex flex-col gap-2 p-3 rounded-lg bg-slate-50 min-w-0`}>
-                    <h4 className="m-0 flex items-center justify-between gap-2 text-[11.5px] font-semibold uppercase tracking-wide text-slate-500">
+                  <section className={`${view === 'src' ? 'flex' : 'hidden'} lg:flex flex-col gap-2 p-3 rounded-xl bg-canvas min-w-0`}>
+                    <h4 className="m-0 flex items-center justify-between gap-2 text-[12px] font-semibold text-ink-3">
                       <span className="inline-flex items-center gap-1"><FileText className="w-3.5 h-3.5" /> Mevcut kayıt</span>
-                      {src.dogru_secenek && <span className="normal-case tracking-normal font-mono text-slate-600">Cevap {src.dogru_secenek}</span>}
+                      {answerLabel(src.dogru_secenek)}
                     </h4>
-                    <p className="m-0 text-[14px] leading-relaxed text-ink font-medium whitespace-pre-wrap break-words">
-                      {srcStem || <span className="text-slate-400 italic">Soru kökü boş</span>}
-                    </p>
-                    {src.secenekler && Object.keys(src.secenekler).length > 0 && (
-                      <ul className="m-0 p-0 list-none flex flex-col gap-1">
-                        {Object.entries(src.secenekler).map(([k, v]) => (
-                          <li key={k} className={`px-2 py-1 rounded-md text-[13px] flex items-start gap-1.5 ${k === src.dogru_secenek ? 'bg-emerald-50 text-emerald-900 font-semibold' : 'text-slate-700'}`}>
-                            <span className="font-mono font-semibold shrink-0">{k})</span>
-                            <span className="flex-1 min-w-0 break-words">{String(v)}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                    {srcStem ? <StemText text={srcStem} size="sm" /> : <p className="m-0 text-[13.5px] text-ink-3 italic">Soru kökü boş</p>}
+                    {src.secenekler && Object.keys(src.secenekler).length > 0 && optList(src.secenekler, src.dogru_secenek, 'src')}
                   </section>
 
                   {/* Öneri (fark işaretli) */}
-                  <section className={`${view === 'src' ? 'hidden' : 'flex'} lg:flex flex-col gap-2 p-3 rounded-lg bg-violet-50/60 min-w-0`}>
-                    <h4 className="m-0 flex items-center justify-between gap-2 text-[11.5px] font-semibold uppercase tracking-wide text-violet-700">
+                  <section className={`${view === 'src' ? 'hidden' : 'flex'} lg:flex flex-col gap-2 p-3 rounded-xl bg-accent-soft/40 min-w-0`}>
+                    <h4 className="m-0 flex items-center justify-between gap-2 text-[12px] font-semibold text-accent">
                       <span className="inline-flex items-center gap-1"><Sparkles className="w-3.5 h-3.5" /> {modelLabel(rev.model)}</span>
-                      {prop.dogru_secenek && (
-                        <span className="normal-case tracking-normal font-mono inline-flex items-center gap-1">
-                          Cevap {prop.dogru_secenek}
-                          {src.dogru_secenek && String(src.dogru_secenek).toUpperCase() !== String(prop.dogru_secenek).toUpperCase() && (
-                            <ChangeInfo title="Cevap değişti" before={String(src.dogru_secenek)} after={String(prop.dogru_secenek)} />
-                          )}
-                        </span>
-                      )}
+                      <span className="inline-flex items-center gap-1">
+                        {answerLabel(prop.dogru_secenek)}
+                        {!doubtful && src.dogru_secenek && prop.dogru_secenek && String(src.dogru_secenek).toUpperCase() !== String(prop.dogru_secenek).toUpperCase() && (
+                          <ChangeInfo title="Cevap değişti" before={String(src.dogru_secenek)} after={String(prop.dogru_secenek)} />
+                        )}
+                      </span>
                     </h4>
-                    <p className="m-0 text-[14px] leading-relaxed text-violet-950 font-medium whitespace-pre-wrap break-words">
-                      {stemChanged && (
-                        <span className="float-right ml-1">
-                          <ChangeInfo title="Soru kökü değişikliği" before={srcStem} after={propStem} note={yzvNote?.soru_koku_duzeltmesi} />
-                        </span>
-                      )}
-                      {!propStem ? (
-                        <span className="text-violet-500 italic">Kökte değişiklik önerilmedi</span>
-                      ) : stemChanged && view !== 'prop' ? (
-                        <DiffText before={srcStem} after={propStem} />
-                      ) : (
-                        propStem
-                      )}
-                    </p>
-                    {prop.secenekler && Object.keys(prop.secenekler).length > 0 && (
-                      <ul className="m-0 p-0 list-none flex flex-col gap-1">
-                        {Object.entries(prop.secenekler).map(([k, v]) => {
-                          const upperKey = k.toUpperCase();
-                          const isAiCompleted = !srcOpt(upperKey) || aiCompletedList.includes(upperKey);
-                          const optChanged = view !== 'prop' && srcOpt(upperKey) && srcOpt(upperKey).trim() !== String(v).trim();
-                          return (
-                            <li key={k} className={`px-2 py-1 rounded-md text-[13px] flex items-start gap-1.5 ${k === prop.dogru_secenek ? 'bg-emerald-50 text-emerald-900 font-semibold' : 'text-violet-950'}`}>
-                              <span className="font-mono font-semibold shrink-0">{k})</span>
-                              <span className="flex-1 min-w-0 break-words">
-                                {optChanged ? <DiffText before={srcOpt(upperKey)} after={String(v)} /> : String(v)}
-                              </span>
-                              {isAiCompleted && (
-                                <span className="shrink-0 text-[10.5px] font-semibold px-1.5 py-0.5 rounded bg-purple-100 text-purple-700" title="Bu şık kaynakta yoktu; AI tamamladı">
-                                  AI
-                                </span>
-                              )}
-                              {(isAiCompleted || (srcOpt(upperKey) && srcOpt(upperKey).trim() !== String(v).trim())) && (
-                                <ChangeInfo
-                                  title={`${upperKey} şıkkı ${isAiCompleted && !srcOpt(upperKey) ? 'eklendi' : 'değişti'}`}
-                                  before={srcOpt(upperKey)}
-                                  after={String(v)}
-                                  note={isAiCompleted ? 'Kaynakta bu şık eksikti; yapay zekâ tamamladı (doğrulanmadı).' : undefined}
-                                />
-                              )}
-                            </li>
-                          );
-                        })}
-                      </ul>
+                    {!propStem ? (
+                      <p className="m-0 text-[13.5px] text-ink-3 italic">Kökte değişiklik önerilmedi</p>
+                    ) : stemChanged && view !== 'prop' ? (
+                      <div className="flex items-start gap-1">
+                        <p className="ms-stem is-sm m-0 flex-1 whitespace-pre-wrap"><DiffText before={srcStem} after={propStem} /></p>
+                        <ChangeInfo title="Soru kökü değişikliği" before={srcStem} after={propStem} note={yzvNote?.soru_koku_duzeltmesi} />
+                      </div>
+                    ) : (
+                      <StemText text={propStem} size="sm" />
+                    )}
+                    {doubtful ? (
+                      <AnswerPoll
+                        questionId={qId}
+                        options={pollOptions}
+                        voterUid={currentUser?.uid || null}
+                        className="pt-1"
+                        hint="Çözücüler aynı şıkta uzlaşamadı. Doğru bildiğin şıkkı seç; herkes bir kez oy verebilir."
+                        onVotes={(v) => {
+                          const max = Math.max(0, ...Object.values(v.counts));
+                          const lead = Object.keys(v.counts).filter((k) => max > 0 && v.counts[k] === max);
+                          setPollLeader((m) => (lead.length === 1 && m[qId] !== lead[0] ? { ...m, [qId]: lead[0] } : m));
+                        }}
+                        renderText={(k, t) => {
+                          const before = srcOpt(k);
+                          return view !== 'prop' && before && before.trim() !== t.trim() ? <DiffText before={before} after={t} /> : t;
+                        }}
+                      />
+                    ) : (
+                      prop.secenekler && Object.keys(prop.secenekler).length > 0 && optList(prop.secenekler, prop.dogru_secenek, 'prop')
                     )}
                     {stemChanged && view !== 'prop' && (
                       <p className="m-0 text-[11.5px] text-ink-3">
@@ -1245,157 +1111,151 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         <del className="bg-rose-100 text-rose-800 rounded-sm px-0.5">çıkarılan</del> kelimeler, mevcut kayda göre
                       </p>
                     )}
-                    {(prop.degisiklik_ozeti || (prop.degisen_alanlar?.length ?? 0) > 0 || yzvNote?.soru_koku_duzeltmesi || prop.YZV?.referans_literatur) && (
-                      <div className="text-[12.5px] text-violet-950 bg-white/70 rounded-md px-2.5 py-2 flex flex-col gap-1 leading-relaxed">
-                        <p className="m-0 font-semibold flex flex-wrap items-center gap-1">
+                    {prop.cevap_belirsiz && !doubtful && (
+                      <p className="ms-note is-warn m-0 rounded-lg bg-warn-soft px-2.5 py-1.5">Çözücüler aynı şıkta uzlaşamadı; cevap işaretlenmedi. Onaylamadan önce cevap anketini aç ya da "Düzenle" ile şıkkı seç.</p>
+                    )}
+                    {prop.aciklama_gecersiz && (
+                      <p className="ms-note is-warn m-0 rounded-lg bg-warn-soft px-2.5 py-1.5">
+                        Açıklama {prop.cevap_dogrulama?.aciklama_gosterdigi ? `${prop.cevap_dogrulama.aciklama_gosterdigi} şıkkını` : 'başka bir şıkkı'} savunuyor; işaretlenen cevap {String(prop.dogru_secenek || '–')}. Onaylamadan önce düzeltin.
+                      </p>
+                    )}
+                  </section>
+                </div>
+
+                <div className="px-3 sm:px-4 pb-3 flex flex-col gap-2">
+                  {(prop.degisiklik_ozeti || (prop.degisen_alanlar?.length ?? 0) > 0 || yzvNote?.soru_koku_duzeltmesi || prop.YZV?.referans_literatur || prop.cevap_dogrulama || prop.tespit_raporu || prop.secenek_analizi) && (
+                    <Collapsible
+                      className="ms-disc"
+                      title={
+                        <span className="inline-flex flex-wrap items-center gap-1.5">
                           Değişiklik notu
-                          {(prop.degisen_alanlar || []).map((f: string) => (
-                            <span key={f} className="font-normal text-[11.5px] px-1.5 rounded bg-violet-100 text-violet-800">{f}</span>
-                          ))}
-                        </p>
-                        {prop.degisiklik_ozeti && (
-                          <p className="m-0">{typeof prop.degisiklik_ozeti === 'string' ? prop.degisiklik_ozeti : JSON.stringify(prop.degisiklik_ozeti)}</p>
-                        )}
-                        {yzvNote?.soru_koku_duzeltmesi && <p className="m-0"><b>Kök:</b> {yzvNote.soru_koku_duzeltmesi}</p>}
+                          {(prop.degisen_alanlar || []).slice(0, 4).map((f: string) => <span key={f} className="ms-tag is-ai font-normal">{f}</span>)}
+                        </span>
+                      }
+                    >
+                      <div className="text-[13px] text-ink-2 flex flex-col gap-1.5 leading-relaxed">
+                        {prop.degisiklik_ozeti && <p className="m-0">{typeof prop.degisiklik_ozeti === 'string' ? prop.degisiklik_ozeti : JSON.stringify(prop.degisiklik_ozeti)}</p>}
+                        {yzvNote?.soru_koku_duzeltmesi && <p className="m-0"><b className="text-ink">Kök:</b> {yzvNote.soru_koku_duzeltmesi}</p>}
                         {prop.cevap_dogrulama && (
-                          <p className="m-0 text-ink-2">
-                            <b>Cevap kontrolü:</b>{' '}
+                          <p className="m-0">
+                            <b className="text-ink">Cevap kontrolü:</b>{' '}
                             {prop.cevap_dogrulama.oylar
                               ? Object.entries(prop.cevap_dogrulama.oylar as Record<string, string>)
                                   .map(([k, v]) => `${({ duzelten_model: 'düzelten model', gpt_oss: 'gpt-oss', ucuncu: '3. çözücü' } as Record<string, string>)[k] || k} ${v || '?'}`)
                                   .join(' · ')
                               : `model ${prop.cevap_dogrulama.oneri || '–'} · bağımsız ${prop.cevap_dogrulama.dogrulayici || '?'}`}
                             {' → '}
-                            <b>{prop.dogru_secenek || 'belirsiz'}</b>
+                            <b className="text-ink">{prop.dogru_secenek || 'belirsiz'}</b>
                             {prop.cevap_dogrulama.eski_anahtar ? ` (eski anahtar ${prop.cevap_dogrulama.eski_anahtar}, kararda kullanılmadı)` : ''}
                           </p>
                         )}
-                        {prop.cevap_belirsiz && (
-                          <p className="m-0 rounded-md bg-rose-50 text-rose-800 px-2 py-1 font-medium">
-                            Çözücüler aynı şıkta uzlaşamadı; cevap işaretlenmedi. Onaylamadan önce "Düzenle" ile doğru şıkkı seçin.
-                          </p>
+                        {prop.YZV?.referans_literatur && <p className="m-0"><b className="text-ink">Literatür:</b> {prop.YZV.referans_literatur}</p>}
+                        {prop.tespit_raporu?.tespit_edilen_kusur && <p className="m-0"><b className="text-ink">Tespit edilen kusur:</b> {String(prop.tespit_raporu.tespit_edilen_kusur)}</p>}
+                        {prop.tespit_raporu?.uygulanan_mudahale && <p className="m-0"><b className="text-ink">Uygulanan müdahale:</b> {String(prop.tespit_raporu.uygulanan_mudahale)}</p>}
+                        {prop.secenek_analizi && typeof prop.secenek_analizi === 'object' && (
+                          <div className="flex flex-col gap-1 pt-1">
+                            <b className="text-ink">Şık analizi</b>
+                            {['A', 'B', 'C', 'D', 'E'].map((k) => {
+                              const t = (prop.secenek_analizi as Record<string, any>)[k] ?? (prop.secenek_analizi as Record<string, any>)[k.toLowerCase()];
+                              return t ? (
+                                <p key={k} className={`m-0 ${!doubtful && String(prop.dogru_secenek || '').toUpperCase() === k ? 'text-ok font-medium' : ''}`}>
+                                  <b>{k}:</b> {String(t)}
+                                </p>
+                              ) : null;
+                            })}
+                          </div>
                         )}
-                        {prop.aciklama_gecersiz && (
-                          <p className="m-0 rounded-md bg-amber-50 text-amber-900 px-2 py-1">
-                            Açıklama, geri alınan değişikliğe göre yazılmış olabilir; işaretlenen cevapla çelişebilir. Onaylamadan önce açıklamayı düzeltin.
-                          </p>
-                        )}
-                        {prop.YZV?.referans_literatur && <p className="m-0 text-violet-800"><b>Literatür:</b> {prop.YZV.referans_literatur}</p>}
                       </div>
-                    )}
-                    {(prop.tespit_raporu || prop.secenek_analizi) && (
-                      <details className="text-[12.5px] text-violet-950 bg-white/70 rounded-md px-2.5 py-2 leading-relaxed">
-                        <summary className="cursor-pointer font-semibold">Tespit raporu &amp; şık analizi</summary>
-                        <div className="mt-1.5 flex flex-col gap-1">
-                          {prop.tespit_raporu?.tespit_edilen_kusur && <p className="m-0"><b>Tespit edilen kusur:</b> {String(prop.tespit_raporu.tespit_edilen_kusur)}</p>}
-                          {prop.tespit_raporu?.uygulanan_mudahale && <p className="m-0"><b>Uygulanan müdahale:</b> {String(prop.tespit_raporu.uygulanan_mudahale)}</p>}
-                          {prop.secenek_analizi && typeof prop.secenek_analizi === 'object' && ['A', 'B', 'C', 'D', 'E'].map((k) => {
-                            const t = (prop.secenek_analizi as Record<string, any>)[k] ?? (prop.secenek_analizi as Record<string, any>)[k.toLowerCase()];
-                            return t ? (
-                              <p key={k} className={`m-0 ${String(prop.dogru_secenek || '').toUpperCase() === k ? 'font-medium' : ''}`}>
-                                <b>{k}:</b> {String(t)}
-                              </p>
-                            ) : null;
-                          })}
+                    </Collapsible>
+                  )}
+
+                  {(srcExpl || propExpl) && (
+                    <Collapsible
+                      className="ms-disc"
+                      title={
+                        <span className="inline-flex flex-wrap items-center gap-1.5">
+                          Açıklama
+                          <span className={`ms-tag font-normal ${explChanged ? 'is-ai' : ''}`}>{explChanged ? (srcExpl ? 'değiştirildi' : 'yeni eklendi') : 'değişmedi'}</span>
+                        </span>
+                      }
+                    >
+                      {yzvNote?.aciklama_duzeltmesi && <p className="m-0 mb-2 text-[12.5px] text-ink-3">{yzvNote.aciklama_duzeltmesi}</p>}
+                      <div className="grid gap-2 lg:grid-cols-2 text-[13px]">
+                        <div className="rounded-lg bg-white p-2.5 min-w-0">
+                          <p className="m-0 mb-1 text-[11.5px] font-semibold text-ink-3">Eski</p>
+                          <p className="m-0 whitespace-pre-wrap leading-relaxed text-ink-2 wrap-anywhere">{srcExpl || <i className="text-ink-3">Açıklama yoktu</i>}</p>
                         </div>
-                      </details>
-                    )}
-                  </section>
+                        <div className="rounded-lg bg-white p-2.5 min-w-0">
+                          <p className="m-0 mb-1 text-[11.5px] font-semibold text-accent">Yeni</p>
+                          <p className="m-0 whitespace-pre-wrap leading-relaxed text-ink wrap-anywhere">{propExpl || <i className="text-ink-3">Öneri açıklama içermiyor</i>}</p>
+                        </div>
+                      </div>
+                      {explChanged && srcExpl && (
+                        <details className="pt-2 text-[13px] text-ink-2">
+                          <summary className="cursor-pointer text-[12.5px] text-ink-3 py-1">Kelime farkını göster</summary>
+                          <p className="m-0 whitespace-pre-wrap leading-relaxed break-words"><DiffText before={srcExpl} after={propExpl} /></p>
+                        </details>
+                      )}
+                    </Collapsible>
+                  )}
                 </div>
 
-                {rev.answer_doubtful && (
-                  <AnswerPoll
-                    questionId={qId}
-                    options={(prop.secenekler && Object.keys(prop.secenekler).length ? prop.secenekler : src.secenekler) || {}}
-                    voterUid={currentUser?.uid || null}
-                  />
-                )}
-
-                {/* Açıklama: eski ↔ yeni (kelime farkı) */}
-                {(srcExpl || propExpl) && (
-                  <section className="mx-3 sm:mx-4 mb-3 rounded-lg border border-line">
-                    <h4 className="m-0 px-3 pt-2 flex flex-wrap items-center gap-2 text-[11.5px] font-semibold uppercase tracking-wide text-ink-3">
-                      Açıklama
-                      <span className={`normal-case tracking-normal text-[11.5px] px-1.5 rounded ${explChanged ? 'bg-violet-50 text-violet-700' : 'bg-slate-100 text-slate-600'}`}>
-                        {explChanged ? (srcExpl ? 'değiştirildi' : 'yeni eklendi') : 'değişmedi'}
-                      </span>
-                      {yzvNote?.aciklama_duzeltmesi && <span className="normal-case tracking-normal font-normal text-ink-3">· {yzvNote.aciklama_duzeltmesi}</span>}
-                    </h4>
-                    <div className="px-3 pb-2 pt-1 grid gap-2 lg:grid-cols-2 text-[13px]">
-                      <div className="rounded-md bg-slate-50 p-2.5 min-w-0">
-                        <p className="m-0 mb-1 text-[11.5px] font-semibold text-slate-500">Eski açıklama</p>
-                        <p className="m-0 whitespace-pre-wrap leading-relaxed break-words text-ink-2">{srcExpl || <i className="text-ink-3">Açıklama yoktu</i>}</p>
-                      </div>
-                      <div className="rounded-md bg-violet-50/60 p-2.5 min-w-0">
-                        <p className="m-0 mb-1 text-[11.5px] font-semibold text-violet-700">Yeni açıklama</p>
-                        {prop.aciklama_gecersiz && (
-                          <p className="m-0 mb-1.5 rounded-md bg-amber-100 text-amber-900 px-2 py-1 text-[12.5px] font-medium">
-                            ⚠ Bu açıklama {prop.cevap_dogrulama?.aciklama_gosterdigi ? `${prop.cevap_dogrulama.aciklama_gosterdigi} şıkkını` : 'başka bir şıkkı'} savunuyor; işaretlenen cevap{' '}
-                            {String(prop.dogru_secenek || '–')}. Onaylamadan önce cevabı ya da açıklamayı düzeltin.
-                          </p>
-                        )}
-                        <p className="m-0 whitespace-pre-wrap leading-relaxed break-words text-violet-950">{propExpl || <i className="text-ink-3">Öneri açıklama içermiyor</i>}</p>
-                      </div>
-                    </div>
-                    {explChanged && srcExpl && (
-                      <details className="px-3 pb-2 text-[13px] text-ink-2">
-                        <summary className="cursor-pointer text-[12.5px] text-ink-3 py-1">Kelime farkını göster (yeşil eklenen, kırmızı çıkarılan)</summary>
-                        <p className="m-0 whitespace-pre-wrap leading-relaxed break-words"><DiffText before={srcExpl} after={propExpl} /></p>
-                      </details>
-                    )}
-                  </section>
-                )}
-
                 {/* Eylemler + künye */}
-                <footer className="px-3 sm:px-4 py-2 border-t border-line flex flex-col sm:flex-row sm:items-center gap-2">
+                <footer className="px-3 sm:px-4 py-2 border-t border-line-soft flex flex-wrap items-center gap-1.5">
                   {isAdmin && (
-                    <div className="grid grid-cols-2 sm:flex gap-1.5">
-                      {!isApproved && (
-                        <button type="button" onClick={() => handleApprove(qId)} disabled={processingId === qId} className={`${btn} bg-emerald-600 hover:bg-emerald-700 text-white`}>
-                          <Check className="w-3.5 h-3.5" /> Onayla
-                        </button>
+                    <>
+                      {isPending && doubtful ? (
+                        <div className="flex flex-wrap items-center gap-1.5 w-full sm:w-auto">
+                          <span className="text-[12.5px] text-ink-3">Doğru cevap</span>
+                          <div className="ms-seg" role="radiogroup" aria-label="Kaydedilecek doğru cevap">
+                            {Object.keys(pollOptions).map((k) => k.toUpperCase()).filter((k) => /^[A-E]$/.test(k)).map((k) => {
+                              const sel = (answerPick[qId] || pollLeader[qId]) === k;
+                              return (
+                                <button key={k} type="button" role="radio" aria-checked={sel} onClick={() => setAnswerPick((m) => ({ ...m, [qId]: k }))} className={`font-mono min-w-8 justify-center ${sel ? 'bg-ok! text-white! shadow-none!' : ''}`} title={pollLeader[qId] === k ? 'Ankette önde' : undefined}>
+                                  {k}
+                                </button>
+                              );
+                            })}
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => handleCompleteAnswerDoubt(qId, answerPick[qId] || pollLeader[qId])}
+                            disabled={busy || !(answerPick[qId] || pollLeader[qId])}
+                            className="ms-btn is-sm is-ok"
+                            title="Seçili şıkkı cevap olarak kaydet; soru normal inceleme listesine döner"
+                          >
+                            <Check /> Kaydet · listeye gönder
+                          </button>
+                        </div>
+                      ) : (
+                        !isApproved && (
+                          <button type="button" onClick={() => handleApprove(qId)} disabled={busy} className="ms-btn is-sm is-ok">
+                            <Check /> Onayla
+                          </button>
+                        )
                       )}
                       {!isRejected && (
-                        <button type="button" onClick={() => handleReject(qId)} disabled={processingId === qId} className={`${btn} border border-line bg-white hover:bg-rose-50 hover:text-rose-700 text-ink-2`}>
-                          <X className="w-3.5 h-3.5" /> Reddet
+                        <button type="button" onClick={() => handleReject(qId)} disabled={busy} className="ms-btn is-sm is-danger">
+                          <X /> Reddet
                         </button>
                       )}
-                      {isPending && (
-                        <button type="button" onClick={() => handleToggleSuspicious(qId, !rev.suspicious)} disabled={processingId === qId} className={`${btn} border ${rev.suspicious ? 'border-orange-300 bg-orange-50 text-orange-800 hover:bg-orange-100' : 'border-line bg-white hover:bg-orange-50 hover:text-orange-800 text-ink-2'}`}>
-                          <Flag className="w-3.5 h-3.5" /> {rev.suspicious ? 'Şüpheli işaretini kaldır' : 'Şüpheli'}
-                        </button>
-                      )}
-                      {isPending && (
-                        <button type="button" onClick={() => handleToggleAnswerDoubt(qId, !rev.answer_doubtful)} disabled={processingId === qId} className={`${btn} border ${rev.answer_doubtful ? 'border-amber-300 bg-amber-50 text-amber-900 hover:bg-amber-100' : 'border-line bg-white hover:bg-amber-50 hover:text-amber-900 text-ink-2'}`}>
-                          <HelpCircle className="w-3.5 h-3.5" /> {rev.answer_doubtful ? 'Cevap anketini kapat' : 'Cevapta hata olabilir'}
-                        </button>
-                      )}
-                      <button type="button" onClick={() => openEditModal(rev)} className={`${btn} border border-line bg-white hover:bg-canvas text-ink-2`}>
-                        <Edit3 className="w-3.5 h-3.5" /> Düzenle
+                      <button type="button" onClick={() => openEditModal(rev)} className="ms-btn is-sm is-ghost">
+                        <Edit3 /> Düzenle
                       </button>
-                      {(isUnchanged || isRejected) && (
-                        <button type="button" onClick={() => handleReEvaluateUnchanged(qId)} disabled={processingId === qId || isTriggering} className={`${btn} border border-line bg-white hover:bg-amber-50 text-ink-2`}>
-                          <RotateCcw className="w-3.5 h-3.5" /> Tekrar değerlendir
-                        </button>
-                      )}
-                    </div>
+                    </>
                   )}
-                  <p className="m-0 sm:ml-auto text-[11.5px] text-ink-3 flex flex-wrap gap-x-2.5 gap-y-0.5 min-w-0">
-                    <span className="font-mono break-all">{rev.model || 'model bilinmiyor'}</span>
+                  <p className="m-0 ml-auto text-[11.5px] text-ink-3 flex flex-wrap gap-x-2.5 gap-y-0.5 min-w-0">
+                    <span className="font-mono">{rev.model || 'model bilinmiyor'}</span>
                     {rev.processed_at && <span>{rev.processed_at.slice(0, 16).replace('T', ' ')}</span>}
-                    {rev.approved_at && <span className="text-emerald-700">Onay {rev.approved_at.slice(0, 16).replace('T', ' ')}</span>}
-                    {rev.rejected_at && <span className="text-rose-700">Red {rev.rejected_at.slice(0, 16).replace('T', ' ')}</span>}
+                    {rev.approved_at && <span className="text-ok">Onay {rev.approved_at.slice(0, 16).replace('T', ' ')}</span>}
+                    {rev.rejected_at && <span className="text-bad-text">Red {rev.rejected_at.slice(0, 16).replace('T', ' ')}</span>}
                   </p>
                 </footer>
               </article>
             );
           })}
           {filteredReviews.length > visibleCount && (
-            <button
-              type="button"
-              onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-              className="h-12 rounded-xl border border-line bg-white text-ink text-[14px] font-semibold hover:bg-canvas cursor-pointer"
-            >
+            <button type="button" onClick={() => setVisibleCount((c) => c + PAGE_SIZE)} className="ms-btn is-outline h-11! w-full">
               Daha fazla göster ({(filteredReviews.length - visibleCount).toLocaleString('tr-TR')} kayıt daha)
             </button>
           )}
@@ -1404,166 +1264,106 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
 
       {termsFor && <TermsDialog rev={termsFor} onClose={() => setTermsFor(null)} />}
 
-      {/* Soru Önerisi Düzenleme / Revize Etme Modalı */}
+      {/* Öneriyi düzenle */}
       {editingReview && (
-        <div className="fixed inset-0 z-50 flex items-stretch sm:items-center justify-center sm:p-4 bg-slate-900/60" role="dialog" aria-modal="true" aria-labelledby="tc-edit-title" onKeyDown={(e) => e.key === 'Escape' && !isSavingEdit && setEditingReview(null)}>
-          <div className="bg-white sm:rounded-2xl shadow-2xl border border-line w-full max-w-2xl h-full sm:h-auto sm:max-h-[90vh] flex flex-col overflow-hidden">
-            {/* Modal Header */}
-            <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-line bg-canvas flex items-center justify-between gap-2" style={{ paddingTop: 'max(0.75rem, env(safe-area-inset-top))' }}>
-              <div className="flex items-center gap-2">
-                <Edit3 className="w-5 h-5 text-indigo-600" />
-                <h3 id="tc-edit-title" className="font-bold text-base text-ink">
-                  Soru #{editingReview.question_id} Önerisini Düzenle
-                </h3>
-              </div>
-              <button
-                type="button"
-                onClick={() => setEditingReview(null)}
-                aria-label="Kapat"
-                className="w-11 h-11 inline-flex items-center justify-center rounded-lg hover:bg-slate-200 text-slate-500 hover:text-slate-800 transition cursor-pointer"
-              >
-                <X className="w-5 h-5" />
+        <div
+          className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="tc-edit-title"
+          onMouseDown={(e) => e.target === e.currentTarget && !isSavingEdit && setEditingReview(null)}
+          onKeyDown={(e) => e.key === 'Escape' && !isSavingEdit && setEditingReview(null)}
+        >
+          <div className="ms-modal-panel bg-white w-full max-w-2xl flex flex-col overflow-hidden">
+            <header className="flex items-center gap-2 px-5 pt-4 pb-3 border-b border-line-soft">
+              <h3 id="tc-edit-title" className="m-0 flex-1 min-w-0 font-display text-[17px] font-semibold text-ink truncate">
+                Öneriyi düzenle <span className="font-mono text-[13px] font-normal text-ink-3">#{editingReview.question_id.slice(0, 8)}</span>
+              </h3>
+              <button type="button" onClick={() => setEditingReview(null)} aria-label="Kapat" className="ms-btn is-ghost is-icon">
+                <X />
               </button>
-            </div>
+            </header>
 
-            {/* Modal Body */}
-            <div className="p-4 sm:p-6 overflow-y-auto space-y-4 text-sm flex-1">
-              <div className="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900 space-y-1">
-                <span className="font-bold block flex items-center gap-1">
-                  <AlertTriangle className="w-4 h-4 text-amber-600" />
-                  Akademik Kural & Soru Bütünlüğü Uyarısı:
-                </span>
-                <p>
-                  Soru kökünün yönünü değiştirmeyiniz (örn. olumlu soruyu olumsuza çevirmeyiniz). Doğru cevabı değiştirecek köklü oynamalar yapmayınız; yalnızca imla, OCR bozukluğu, tıbbi terminoloji veya eksik şıkları tamamlayınız.
-                </p>
-              </div>
+            <div className="flex-1 min-h-0 overflow-y-auto px-5 py-4 flex flex-col gap-4">
+              <p className="m-0 text-[12.5px] leading-relaxed text-warn bg-warn-soft rounded-lg px-3 py-2">
+                Kökün yönünü (olumlu/olumsuz) ve cevabı değiştirecek oynamalar yapma; yalnız imla, OCR bozukluğu, terim ve eksik şıkları düzelt.
+              </p>
 
-              {/* Soru Kökü */}
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-ink-2 mb-1.5">
-                  Soru Kökü
-                </label>
+              <label className="flex flex-col gap-1.5">
+                <span className="text-[12.5px] font-semibold text-ink-3">Soru kökü</span>
                 <textarea
-                  rows={4}
+                  rows={5}
                   value={editStem}
                   onChange={(e) => setEditStem(e.target.value)}
-                  className="w-full p-3 rounded-xl border border-line focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 text-ink text-[16px] sm:text-sm outline-0 leading-relaxed font-sans"
-                  placeholder="Düzeltilmiş soru kökünü buraya yazın..."
+                  className="w-full p-3 rounded-xl bg-field border border-transparent focus:border-accent focus:bg-white text-ink text-[16px] sm:text-[14px] outline-0 leading-relaxed resize-y"
+                  placeholder="Düzeltilmiş soru kökü"
                 />
-              </div>
+                <span className="text-[11.5px] text-ink-3">Maddeli kökte her maddeyi ayrı satıra yaz (I. … / II. …); listede maddeler ayrı gösterilir.</span>
+              </label>
 
-              {/* Seçenekler A-E */}
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <label className="block text-xs font-bold uppercase tracking-wider text-ink-2">
-                    Seçenekler (A - E)
-                  </label>
-                  <div className="flex items-center gap-2 text-xs">
-                    <span className="text-ink-3">Doğru Cevap:</span>
-                    <select
-                      value={editCorrectAnswer}
-                      onChange={(e) => setEditCorrectAnswer(e.target.value)}
-                      className="h-10 px-2 rounded-lg border border-line font-bold text-indigo-600 bg-white cursor-pointer"
-                    >
-                      {['A', 'B', 'C', 'D', 'E'].map((opt) => (
-                        <option key={opt} value={opt}>
-                          Şık {opt}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+              <fieldset className="m-0 p-0 border-0 flex flex-col gap-1.5">
+                <legend className="mb-1.5 text-[12.5px] font-semibold text-ink-3">Şıklar · doğru şıkkın harfine dokun</legend>
+                {(['A', 'B', 'C', 'D', 'E'] as const).map((key) => {
+                  const on = editCorrectAnswer === key;
+                  return (
+                    <div key={key} className="flex items-center gap-2">
+                      <button
+                        type="button"
+                        role="radio"
+                        aria-checked={on}
+                        aria-label={`${key} doğru cevap`}
+                        onClick={() => setEditCorrectAnswer(key)}
+                        className={`w-9 h-9 rounded-xl font-mono text-[13px] font-semibold shrink-0 inline-flex items-center justify-center cursor-pointer transition-colors ${on ? 'bg-ok text-white' : 'bg-field text-ink-2 hover:bg-line'}`}
+                      >
+                        {on ? <Check className="w-4 h-4" strokeWidth={3} /> : key}
+                      </button>
+                      <input
+                        type="text"
+                        value={editOptions[key]}
+                        onChange={(e) => setEditOptions((prev) => ({ ...prev, [key]: e.target.value }))}
+                        className={`flex-1 min-w-0 h-10 px-3 rounded-xl border text-[16px] sm:text-[14px] text-ink outline-0 focus:border-accent ${on ? 'bg-ok-tint border-transparent' : 'bg-field border-transparent focus:bg-white'}`}
+                        placeholder={`${key} şıkkı`}
+                      />
+                    </div>
+                  );
+                })}
+              </fieldset>
 
-                {(['A', 'B', 'C', 'D', 'E'] as const).map((key) => (
-                  <div key={key} className="flex items-center gap-2">
-                    <span
-                      className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${
-                        editCorrectAnswer === key
-                          ? 'bg-emerald-600 text-white'
-                          : 'bg-slate-100 text-slate-700'
-                      }`}
-                    >
-                      {key}
-                    </span>
-                    <input
-                      type="text"
-                      value={editOptions[key]}
-                      onChange={(e) =>
-                        setEditOptions((prev) => ({ ...prev, [key]: e.target.value }))
-                      }
-                      className="flex-1 min-w-0 h-11 px-3 rounded-lg border border-line focus:border-indigo-500 text-[16px] sm:text-sm text-ink outline-0"
-                      placeholder={`${key} şıkkı metni...`}
-                    />
-                  </div>
-                ))}
-              </div>
-
-              {/* Açıklama */}
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-ink-2 mb-1.5">
-                  Tıbbi Açıklama ve Kanıt Gerekçesi
-                </label>
+              <label className="flex flex-col gap-1.5">
+                <span className="text-[12.5px] font-semibold text-ink-3">Açıklama</span>
                 <textarea
-                  rows={3}
+                  rows={4}
                   value={editExplanation}
                   onChange={(e) => setEditExplanation(e.target.value)}
-                  className="w-full p-3 rounded-xl border border-line focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 text-ink text-[16px] sm:text-sm outline-0 leading-relaxed"
-                  placeholder="Soruya ait tıbbi açıklama..."
+                  className="w-full p-3 rounded-xl bg-field border border-transparent focus:border-accent focus:bg-white text-ink text-[16px] sm:text-[14px] outline-0 leading-relaxed resize-y"
+                  placeholder="Soruya ait tıbbi açıklama"
                 />
-              </div>
+              </label>
 
-              {/* Değişiklik Notu */}
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-ink-2 mb-1.5">
-                  Değişiklik / Revizyon Notu
-                </label>
+              <label className="flex flex-col gap-1.5">
+                <span className="text-[12.5px] font-semibold text-ink-3">Değişiklik notu</span>
                 <input
                   type="text"
                   value={editSummary}
                   onChange={(e) => setEditSummary(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-line focus:border-indigo-500 text-sm text-ink outline-0"
-                  placeholder="Örn: C şıkkındaki imla hatası düzeltildi, soru kökündeki harf eksikliği giderildi."
+                  className="w-full h-10 px-3 rounded-xl bg-field border border-transparent focus:border-accent focus:bg-white text-[16px] sm:text-[14px] text-ink outline-0"
+                  placeholder="Örn: C şıkkındaki imla hatası düzeltildi."
                 />
-              </div>
+              </label>
             </div>
 
-            {/* Modal Footer */}
-            <div className="px-4 sm:px-6 py-3 sm:py-4 border-t border-line bg-canvas grid grid-cols-2 sm:flex sm:items-center sm:justify-end gap-2.5" style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}>
-              <button
-                type="button"
-                onClick={() => setEditingReview(null)}
-                disabled={isSavingEdit}
-                className="h-11 px-4 rounded-xl border border-line bg-white hover:bg-slate-100 text-ink-2 text-[13.5px] font-semibold cursor-pointer"
-              >
+            <footer className="flex flex-wrap items-center justify-end gap-2 px-5 py-3 border-t border-line-soft" style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}>
+              <button type="button" onClick={() => setEditingReview(null)} disabled={isSavingEdit} className="ms-btn is-ghost">
                 İptal
               </button>
-              <button
-                type="button"
-                onClick={() => handleSaveEditProposal(false)}
-                disabled={isSavingEdit}
-                className="h-11 px-4 rounded-xl border border-indigo-200 bg-white hover:bg-indigo-50 text-indigo-700 text-[13.5px] font-bold inline-flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50"
-              >
-                <span>Kaydet</span>
+              <button type="button" onClick={() => handleSaveEditProposal(false)} disabled={isSavingEdit} className="ms-btn is-tonal">
+                Kaydet
               </button>
-              <button
-                type="button"
-                onClick={() => handleSaveEditProposal(true)}
-                disabled={isSavingEdit}
-                className="h-11 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 hover:bg-indigo-700 text-white text-[13.5px] font-bold inline-flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 shadow-sm"
-              >
-                {isSavingEdit ? (
-                  <>
-                    <RefreshCw className="w-3.5 h-3.5 animate-spin" />
-                    <span>Kaydediliyor...</span>
-                  </>
-                ) : (
-                  <>
-                    <Check className="w-3.5 h-3.5" />
-                    <span>Kaydet ve onayla</span>
-                  </>
-                )}
+              <button type="button" onClick={() => handleSaveEditProposal(true)} disabled={isSavingEdit} className="ms-btn is-ok">
+                {isSavingEdit ? <RefreshCw className="animate-spin" /> : <Check />}
+                {isSavingEdit ? 'Kaydediliyor…' : 'Kaydet ve onayla'}
               </button>
-            </div>
+            </footer>
           </div>
         </div>
       )}

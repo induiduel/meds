@@ -26,12 +26,12 @@ export const PageHeader: React.FC<{
   className?: string;
   children?: React.ReactNode;
 }> = ({ eyebrow, title, description, actions, stats, className = '', children }) => (
-  <header className={`flex flex-col gap-3 ${className}`}>
-    <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
-      <div className="min-w-0 flex flex-col gap-1.5 max-w-3xl">
+  <header className={`flex flex-col gap-2.5 ${className}`}>
+    <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
+      <div className="min-w-0 flex flex-col gap-1 max-w-3xl">
         {eyebrow && <span className="ms-eyebrow">{eyebrow}</span>}
-        <h1 className="ms-page-title m-0 text-[24px] sm:text-[28px] text-ink">{title}</h1>
-        {description && <p className="m-0 text-[14px] leading-relaxed text-ink-2">{description}</p>}
+        <h1 className="ms-page-title m-0 text-ink">{title}</h1>
+        {description && <p className="ms-page-desc m-0 leading-relaxed">{description}</p>}
       </div>
       {actions && <div className="ms-ph-actions min-w-0 max-w-full flex flex-wrap items-center gap-2">{actions}</div>}
     </div>

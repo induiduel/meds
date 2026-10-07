@@ -38,14 +38,24 @@ def log_msg(msg: str):
     except Exception:
         pass
 
-SYSTEM = """Sen tıp fakültesi sınav sorularını ve klinik metinleri inceleyen uzman bir redaksiyon (düzeltme) asistanısın.
-GÖREVİN:
-1. Soru kökünde ve şıklardaki yazım hatalarını, fazla harfleri (örn: 'hhafif', 'tromboooz'), eksik harfleri (örn: 'patloji' -> 'patoloji', 'glomerlr' -> 'glomerüler'), harf/rakam karışıklıklarını (0->O, 1->I) ve birleşik/ayrık yazılan kelimeleri tespit et ve kusursuz tıbbi Türkçe/Latince imlaya göre düzelt.
-2. Tıbbi terminolojiyi (anatomi, fizyoloji, patoloji, farmakoloji, dahiliye terimleri) doğrula, yanlış yazılmış tıp terimlerini düzelt.
-3. Tıbbi bilgi uydurma, klinik sorunun anlamını veya doğru şıkkını sebepsizce değiştirme.
-4. Kaynakta desteklenmeyen veya belirsiz durumlar için review_required: true döndür.
-5. Soru kökü veya şıklarda harf eksikliği/fazlalığı veya imla hatası düzeltildiğinde degisen_alanlar içine ekle ve degisiklik_ozeti içinde somut olarak belirt.
-6. Yanıtın YALNIZCA geçerli bir JSON olmalı."""
+SYSTEM = """Sen tıp fakültesi kurul ve uzmanlık sınavları (TUS/USMLE) için soru denetleyen kıdemli bir tıp eğitimcisi ve redaksiyon asistanısın.
+GÖREVİN: Dizgi/OCR hatalarını, eksik kökleri ve bilimsel tutarsızlıkları düzeltmek; metni tıp literatürüne (Robbins, Guyton, ATLS vb.) uyumlu, anlam kayması içermeyen ve kolay taranabilir temiz bir formata getirmek.
+
+I. ANLAMSAL VE BİLİMSEL KORUMA
+1. ANLAM KAYMASI YASAKTIR: Soru kökündeki veya şıklardaki zaman/öncelik belirteçlerine ("ilk yapılacak", "en sık", "kesin tanı", "başlangıç tedavisi", "en spesifik") ASLA dokunma. Şıkların savunduğu temel argümanı değiştirme; yalnızca terim kaymalarını ve dizgi hatalarını düzelt (örn: "Kaşık tüp" -> "Kaflı tüp" olur; "Kaşık tüp" -> "Cerrahi trakeostomi" olmaz, bu konsept değişimidir). Soru kökü olumsuzsa ("hangisi yanlıştır/değildir?") olumluya çevirme, 4 doğru-1 yanlış dengesini bozma.
+2. MİNİMAL MÜDAHALE: Şıkları baştan yazma; sorunun ölçmek istediği patofizyolojik tuzağı/klinik ayrımı ve çeldiricileri koru. Soru kökü tamamen eksikse, mevcut şıkların tıp literatüründe en sık karşılaştırıldığı ortak klinik paydaya göre kökü tamamla ve bunu review_required ile işaretle.
+3. ÖNCE ANALİZ, EN SON CEVAP: Doğru cevabı ilk adımda ilan etme. Önce her şıkkın bilimsel doğruluk/yanlışlık mekanizmasını analiz et, doğru cevabı en son, bağımsız bir sonuç olarak yaz. Kaynaktaki cevapla analizin vardığı sonuç çelişirse düzeltmeyi uygulama; review_required: true döndür.
+4. Tıbbi bilgi uydurma; kaynakta desteklenmeyen veya belirsiz durumlar için review_required: true döndür.
+
+II. GÖRSEL DÜZEN
+1. Soru kökünde arka arkaya verilen klinik/laboratuvar verilerini tek uzun paragraf bırakma; klinik akışa göre satır atlayarak (\\n) parçala. Hedef soru cümlesi ayrı satırda olsun.
+2. Açıklamada düz metin kullanma; mekanizmayı "Olay Örgüsü", "Neden-Sonuç İlişkisi" veya "Temel Klinik Kural" başlıklı maddelerle ("- ") sun.
+3. Her şık ayrı ve kısa kalsın; gereksiz boşluk/tekrar bırakma.
+
+III. YAZIM
+Fazla/eksik harfleri (örn: 'hhafif', 'tromboooz', 'patloji' -> 'patoloji', 'glomerlr' -> 'glomerüler'), harf/rakam karışıklıklarını (0->O, 1->I), birleşik/ayrık yazılan kelimeleri tespit et ve kusursuz tıbbi Türkçe/Latince imlaya göre düzelt. Düzeltilen her alanı degisen_alanlar içine ekle, degisiklik_ozeti içinde somut belirt.
+
+Yanıtın YALNIZCA geçerli bir JSON olmalı (markdown, kod bloğu veya ek metin yok)."""
 
 
 def canonical_options(question: dict) -> dict[str, str]:
@@ -125,35 +135,45 @@ def prompt(source: dict, curriculum_summary: str = "") -> str:
 3. EKSİK ŞIKLARI TAMAMLAMA:
    - Soruda 5 şık (A, B, C, D, E) tam olmalıdır. Eksik şık varsa soru kökünün ölçtüğü klinik bilgiye uygun mantıklı tıp çeldiricileri üreterek 5 şıkkı tamamla.
    - Tamamlanan şıkların harflerini "yapay_zeka_tamamlanan_siklar" alanında belirt (örn: ["E"] veya ["D", "E"]).
-4. Açıklama kaynakta varsa yazımını toparla, eksik veya anlamsızsa tıbbi gerekçesiyle düzenle.
+4. Açıklama kaynakta varsa yazımını toparla ve maddeli forma getir; eksik veya anlamsızsa tıbbi gerekçesiyle düzenle.
 5. Kurul/ders/konu için kaynakta mevcut etiketleri koru; emin değilsen boş bırak ve inceleme iste.
 {curriculum_hint}
 KAYNAK:
 {json.dumps(source, ensure_ascii=False, indent=2)}
 
-ŞU JSON ŞEMASINI DÖNDÜR:
+6. Çıktıdaki alan SIRASINA uy: önce tespit_raporu ve secenek_analizi, en son dogru_secenek. Doğru şıkkı analizden önce belirleme.
+7. soru_koku içinde klinik/laboratuvar verilerini satır atlayarak (\\n) düzenle; aciklama maddeli (- ) ve başlıklı olsun (Olay Örgüsü / Neden-Sonuç İlişkisi / Temel Klinik Kural).
+
+ŞU JSON ŞEMASINI DÖNDÜR (alanları bu sırayla yaz):
 {{
+  "tespit_raporu": {{"tespit_edilen_kusur": "dizgi hatası, eksik kök veya mantık problemi", "uygulanan_mudahale": "anlamı değiştirmeden yapılan düzeltmenin gerekçesi"}},
+  "secenek_analizi": {{"A":"kısa mekanizma analizi", "B":"", "C":"", "D":"", "E":""}},
   "soru_koku": "Yazım hataları, eksik/fazla harfleri düzeltilmiş soru kökü",
   "secenekler": {{"A":"", "B":"", "C":"", "D":"", "E":""}},
-  "dogru_secenek": "A/B/C/D/E veya kaynak değer",
   "yapay_zeka_tamamlanan_siklar": ["E"],
-  "aciklama": "Kaynak açıklaması ve gerekiyorsa imla/tıbbi gerekçe düzeltmesi",
+  "aciklama": "Maddeli (- ) açıklama: Olay Örgüsü / Neden-Sonuç İlişkisi / Temel Klinik Kural",
   "kurul_adi": "kaynak değeri veya müfredat kodu",
   "ders_adi": "kaynak değeri veya branş",
   "konu_adi": "kaynak değeri veya konu başlığı",
   "degisen_alanlar": ["soru_koku" ve/veya değişen diğer alanlar],
   "degisiklik_ozeti": "Düzeltilen harf hatası, fazla/eksik harf veya kelime düzeltmelerinin somut özeti",
-  "review_required": true
+  "review_required": true,
+  "dogru_secenek": "A/B/C/D/E (analizden sonra, en son alan)"
 }}"""
 
 
-def load_done(full: bool) -> set[str]:
-    if full or not STATE.exists():
-        return set()
-    try:
-        return set(json.loads(STATE.read_text(encoding="utf-8")).get("done_ids") or [])
-    except Exception:
-        return set()
+CLOUD_STATE = OUT / "checkpoint_cloud.json"
+
+
+def load_done() -> set[str]:
+    """İncelenen sorular (yerel + bulut). Tüm sorular bitmeden hiçbiri tekrar incelenmez."""
+    done: set[str] = set()
+    for path in (STATE, CLOUD_STATE):
+        try:
+            done |= set(json.loads(path.read_text(encoding="utf-8")).get("done_ids") or [])
+        except Exception:
+            pass
+    return done
 
 
 def save_state(done: set[str]) -> None:
@@ -163,7 +183,7 @@ def save_state(done: set[str]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=10, help="Bu çalıştırmada incelenecek en fazla soru")
-    parser.add_argument("--full", action="store_true", help="Daha önce incelenenleri de yeniden değerlendir")
+    parser.add_argument("--full", action="store_true", help="Yalnızca tüm sorular incelenmişse yeni tur başlatır; aksi halde etkisizdir")
     args = parser.parse_args()
     if not SOURCE.exists():
         print(f"Kaynak bulunamadı: {SOURCE}", file=sys.stderr)
@@ -172,7 +192,18 @@ def main() -> int:
     raw = json.loads(SOURCE.read_text(encoding="utf-8"))
     questions = raw if isinstance(raw, list) else raw.get("questions", [])
     OUT.mkdir(parents=True, exist_ok=True)
-    done = load_done(args.full)
+    done = load_done()
+    eligible = set()
+    for q in questions:
+        v = source_view(q)
+        if q.get("id") and len(v["soru_koku"].strip()) >= 15 and len(v["secenekler"]) >= 4:
+            eligible.add(str(q["id"]))
+    if eligible and eligible <= done:  # tüm sorular bir kez incelendi → yeni tur
+        log_msg("Tüm sorular incelendi; yeni tur başlıyor")
+        done = set()
+        save_state(done)
+        if CLOUD_STATE.exists():
+            lib.write_json(CLOUD_STATE, {"done_ids": [], "updated_at": time.strftime("%Y-%m-%dT%H:%M:%S")})
     curr_summary = load_curriculum_summary()
     stats = {"aday": len(questions), "islenen": 0, "degisiklik_onerisi": 0, "inceleme_gerekli": 0, "hata": 0}
 
@@ -185,12 +216,15 @@ def main() -> int:
             if len(source["soru_koku"].strip()) < 15 or len(source["secenekler"]) < 4:
                 continue
             try:
-                proposal = lib.chat(MODEL, prompt(source, curr_summary), system=SYSTEM, as_json=True, timeout=180, num_predict=1800)
+                proposal = lib.chat(MODEL, prompt(source, curr_summary), system=SYSTEM, as_json=True, timeout=180, num_predict=3000)
                 if not isinstance(proposal, dict):
                     raise ValueError("Model geçerli JSON nesnesi döndürmedi")
                 ratio = support_ratio(source, proposal)
                 changed = [str(x) for x in proposal.get("degisen_alanlar") or []]
                 review_required = bool(proposal.get("review_required", True)) or ratio < 0.80
+                model_answer = str(proposal.get("dogru_secenek") or "").strip().upper()[:1]
+                if source["dogru_secenek"] and model_answer != str(source["dogru_secenek"]).strip().upper()[:1]:
+                    review_required = True  # analiz kaynaktaki cevapla çelişiyor
                 record = {
                     "question_id": question_id,
                     "source_hash": content_hash(source),

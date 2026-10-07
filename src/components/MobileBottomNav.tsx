@@ -39,14 +39,28 @@ const TABS: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'past_exams', label: 'Çıkmış', icon: Archive },
 ];
 
-const MORE: { id: AppTab; label: string; hint: string; icon: React.ElementType; tint: string }[] = [
-  { id: 'ai_chat', label: 'AI Tıp Asistanı', hint: 'Yerel ve bulut yapay zeka ile soru dedektifi', icon: BotMessageSquare, tint: '#4F46E5' },
-  { id: 'glossary', label: 'Tıbbi Sözlük', hint: 'Hastalık & ilaç ansiklopedisi', icon: BookOpenText, tint: '#0F6E63' },
-  { id: 'study', label: 'Çalış', hint: 'Soru çöz, kendini test et', icon: ListChecks, tint: '#11804A' },
-  { id: 'questions', label: 'Soru havuzu', hint: 'Kurul sorularını birlikte kur', icon: Library, tint: '#1E4FD8' },
-  { id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy, tint: '#B7791F' },
-  { id: 'summaries', label: 'Ders özetleri', hint: 'Spot bilgiler', icon: BookOpen, tint: '#6D28D9' },
-  { id: 'matrix', label: 'Soru haritası', hint: '1–100 doluluk', icon: LayoutGrid, tint: '#0E1A26' },
+// "Daha" sayfası: kenar menüsüyle aynı kategoriler; renk yalnız seçili sayfada
+const MORE_GROUPS: { label: string; items: { id: AppTab; label: string; hint: string; icon: React.ElementType }[] }[] = [
+  {
+    label: 'Sorular',
+    items: [
+      { id: 'questions', label: 'Soru havuzu', hint: 'Kurul sorularını birlikte kur', icon: Library },
+      { id: 'study', label: 'Çalış', hint: 'Soru çöz, kendini test et', icon: ListChecks },
+      { id: 'matrix', label: 'Soru haritası', hint: '1–100 doluluk', icon: LayoutGrid },
+    ],
+  },
+  {
+    label: 'Öğrenme',
+    items: [
+      { id: 'summaries', label: 'Ders özetleri', hint: 'Spot bilgiler', icon: BookOpen },
+      { id: 'glossary', label: 'Sözlük', hint: 'Hastalık ve ilaç ansiklopedisi', icon: BookOpenText },
+      { id: 'ai_chat', label: 'Asistan', hint: 'Kaynaklara dayalı soru-cevap', icon: BotMessageSquare },
+    ],
+  },
+  {
+    label: 'Topluluk',
+    items: [{ id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy }],
+  },
 ];
 
 /** App-style tab bar for phones and tablets (below lg), with a "Daha" sheet for the remaining pages. */
@@ -110,34 +124,37 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activeTab, set
             <div className="max-w-[640px] mx-auto flex flex-col gap-3">
               <span className="self-center w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
               <div className="flex items-center">
-                <h2 className="m-0 flex-1 font-display text-[22px] font-bold tracking-[-0.02em]">Daha fazla</h2>
+                <h2 className="m-0 flex-1 font-display text-[19px] font-semibold tracking-[-0.02em]">Daha fazla</h2>
                 <button type="button" onClick={() => setSheetOpen(false)} aria-label="Kapat" className="w-10 h-10 -mr-2 rounded-full flex items-center justify-center text-ink-2 cursor-pointer">
                   <X className="w-5 h-5" />
                 </button>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {MORE.map(({ id, label, hint, icon: Icon, tint }) => {
-                  const on = activeTab === id;
-                  return (
-                    <a
-                      key={id}
-                      href={pathFor(id)}
-                      onClick={linkClick(() => go(id))}
-                      aria-current={on ? 'page' : undefined}
-                      className={`min-h-[60px] px-3 rounded-2xl flex items-center gap-3 ${on ? 'bg-accent-soft' : 'bg-canvas'}`}
-                    >
-                      <span className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0" style={{ color: tint }}>
-                        <Icon className="w-5 h-5" />
-                      </span>
-                      <span className="flex-1 min-w-0">
-                        <span className={`block text-[15px] font-semibold ${on ? 'text-accent' : 'text-ink'}`}>{label}</span>
-                        <span className="block text-[13px] text-ink-3 truncate">{hint}</span>
-                      </span>
-                      <ChevronRight className="w-4 h-4 text-ink-3 shrink-0" />
-                    </a>
-                  );
-                })}
-              </div>
+              {MORE_GROUPS.map((g) => (
+                <section key={g.label} className="flex flex-col gap-0.5">
+                  <h3 className="m-0 px-1 pb-1 text-[12px] font-semibold text-ink-3">{g.label}</h3>
+                  <div className="flex flex-col bg-canvas rounded-2xl overflow-hidden">
+                    {g.items.map(({ id, label, hint, icon: Icon }, i) => {
+                      const on = activeTab === id;
+                      return (
+                        <a
+                          key={id}
+                          href={pathFor(id)}
+                          onClick={linkClick(() => go(id))}
+                          aria-current={on ? 'page' : undefined}
+                          className={`min-h-[52px] px-3.5 flex items-center gap-3 ${i > 0 ? 'border-t border-line-soft' : ''} ${on ? 'bg-accent-soft' : ''}`}
+                        >
+                          <Icon className={`w-5 h-5 shrink-0 ${on ? 'text-accent' : 'text-ink-2'}`} />
+                          <span className="flex-1 min-w-0">
+                            <span className={`block text-[15px] font-semibold leading-tight ${on ? 'text-accent' : 'text-ink'}`}>{label}</span>
+                            <span className="block text-[12.5px] text-ink-3 truncate">{hint}</span>
+                          </span>
+                          <ChevronRight className="w-4 h-4 text-ink-3 shrink-0" />
+                        </a>
+                      );
+                    })}
+                  </div>
+                </section>
+              ))}
               <div className="flex flex-col bg-canvas rounded-2xl overflow-hidden">
                 <button
                   type="button"
