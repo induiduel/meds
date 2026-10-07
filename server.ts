@@ -1670,6 +1670,10 @@ app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
     if (!proposal) {
       return res.status(400).json({ error: 'Öneri verisi bulunmuyor.' });
     }
+    // Faz 14 çözücüleri uzlaşamadıysa cevap boştur: eski cevap anahtarına sessizce düşülmez, önce cevap seçilmeli
+    if (!String(proposal.dogru_secenek || '').trim()) {
+      return res.status(400).json({ error: 'Bu öneride doğru cevap belirsiz. Önce "Düzenle" ile doğru şıkkı seçin, sonra onaylayın.' });
+    }
 
     const pastList = getPastQuestionsDb();
     let qIdx = pastList.findIndex(q => String(q.id) === targetQId);

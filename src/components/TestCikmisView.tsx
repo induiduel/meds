@@ -1203,8 +1203,20 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         {yzvNote?.soru_koku_duzeltmesi && <p className="m-0"><b>Kök:</b> {yzvNote.soru_koku_duzeltmesi}</p>}
                         {prop.cevap_dogrulama && (
                           <p className="m-0 text-ink-2">
-                            <b>Cevap kontrolü:</b> kayıtlı {prop.cevap_dogrulama.kayitli || '–'} · model {prop.cevap_dogrulama.oneri || '–'} · bağımsız model{' '}
-                            {prop.cevap_dogrulama.dogrulayici || '?'} · açıklamanın gösterdiği {prop.cevap_dogrulama.aciklama_gosterdigi || '?'}
+                            <b>Cevap kontrolü:</b>{' '}
+                            {prop.cevap_dogrulama.oylar
+                              ? Object.entries(prop.cevap_dogrulama.oylar as Record<string, string>)
+                                  .map(([k, v]) => `${({ duzelten_model: 'düzelten model', gpt_oss: 'gpt-oss', ucuncu: '3. çözücü' } as Record<string, string>)[k] || k} ${v || '?'}`)
+                                  .join(' · ')
+                              : `model ${prop.cevap_dogrulama.oneri || '–'} · bağımsız ${prop.cevap_dogrulama.dogrulayici || '?'}`}
+                            {' → '}
+                            <b>{prop.dogru_secenek || 'belirsiz'}</b>
+                            {prop.cevap_dogrulama.eski_anahtar ? ` (eski anahtar ${prop.cevap_dogrulama.eski_anahtar}, kararda kullanılmadı)` : ''}
+                          </p>
+                        )}
+                        {prop.cevap_belirsiz && (
+                          <p className="m-0 rounded-md bg-rose-50 text-rose-800 px-2 py-1 font-medium">
+                            Çözücüler aynı şıkta uzlaşamadı; cevap işaretlenmedi. Onaylamadan önce "Düzenle" ile doğru şıkkı seçin.
                           </p>
                         )}
                         {prop.aciklama_gecersiz && (
@@ -1235,6 +1247,12 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                       </div>
                       <div className="rounded-md bg-violet-50/60 p-2.5 min-w-0">
                         <p className="m-0 mb-1 text-[11.5px] font-semibold text-violet-700">Yeni açıklama</p>
+                        {prop.aciklama_gecersiz && (
+                          <p className="m-0 mb-1.5 rounded-md bg-amber-100 text-amber-900 px-2 py-1 text-[12.5px] font-medium">
+                            ⚠ Bu açıklama {prop.cevap_dogrulama?.aciklama_gosterdigi ? `${prop.cevap_dogrulama.aciklama_gosterdigi} şıkkını` : 'başka bir şıkkı'} savunuyor; işaretlenen cevap{' '}
+                            {String(prop.dogru_secenek || '–')}. Onaylamadan önce cevabı ya da açıklamayı düzeltin.
+                          </p>
+                        )}
                         <p className="m-0 whitespace-pre-wrap leading-relaxed break-words text-violet-950">{propExpl || <i className="text-ink-3">Öneri açıklama içermiyor</i>}</p>
                       </div>
                     </div>

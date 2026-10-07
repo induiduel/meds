@@ -295,6 +295,8 @@ def main():
         for key, name, cmd, timeout in STEPS:
             if key in done:
                 continue
+            if key == "faz14":
+                continue                                       # Faz 14 asla otomatik başlamaz; yalnız panelden elle
             # Betik değiştiyse (yeni adım/ayar) adım aralarında kendini yeniden yükle; durum dosyası korunur
             if Path(__file__).stat().st_mtime > _START_MTIME:
                 log("phase_cycle.py değişti → yeni kodla yeniden yükleniyor (kaldığı adımdan sürer)")

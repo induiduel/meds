@@ -375,10 +375,11 @@ TALİMATLARA HARFİYEN UY:
    gösterir). Olumlu kökü olumsuza, olumsuzu olumluya ÇEVİRME. Sorunun ana hedefi neyse ona odaklan; başka bir konuya kaydırma.
 2. ŞIKLAR: Aynı ilke — imla/OCR/yapışık kelime düzelt, eksik kalan şık metnini bağlamdan tamamla. Kaynakta hiç olmayan
    şıkları ancak 5'e tamamlamak için ekle ve harflerini "yapay_zeka_tamamlanan_siklar" listesine yaz.
-3. CEVAP — ÇOK ÖNEMLİ: Kayıttaki cevap ("kayitli_cevap") YANLIŞ OLABİLİR (çoğu öğrencinin işaretlediği şıktır).
-   Şıkları ASLA kayıttaki cevaba uysun diye değiştirme. Doğru cevabı soru kökü ve şıkların tıbbi içeriğine göre SEN belirle.
-   Kayıttaki cevapla aynıysa "cevap_degisti": false; farklıysa "cevap_degisti": true ve "cevap_gerekcesi"nde nedenini yaz.
-   Emin değilsen "cevap_emin": false yaz.
+3. CEVAP — ÇOK ÖNEMLİ: Sana eski cevap anahtarı VERİLMEZ (öğrenci işaretlerinden gelir, çoğu zaman yanlıştır).
+   Doğru cevabı SEN, düzelttiğin soru kökü ve şıkların tıbbi içeriğine ve verilen DERS KAYNAKLARI'na göre belirle.
+   Önce her şık için "sik_analizi"nde doğru/yanlış kararını gerekçesiyle yaz, sonra "dogru_secenek"i bu analizden seç.
+   Klinik vakalarda verilen değerleri (nabız, tansiyon, şok indeksi = nabız/sistolik TA, GKS, laboratuvar) tek tek hesapla.
+   Emin değilsen "cevap_emin": false yaz. Şıkları bir cevaba uysun diye DEĞİŞTİRME.
 4. MÜFREDAT: Aşağıdaki DÖNEM 3 MÜFREDAT PAKETİ'ni kullan. Sorunun hangi kurul, ders ve KONU başlığına ait olduğunu
    paketteki adlarla birebir yaz (paketteki bir konu adını seç; uydurma ad yazma). Kurulu "TIP3N0" biçiminde yaz.
 5. AÇIKLAMA: Maddeler hâlinde yaz ("aciklama_maddeleri" listesi, 3–6 madde, her madde tek cümle/kısa paragraf):
@@ -407,10 +408,10 @@ _SYSTEM_CACHE = None
 SCHEMA_HINT = """YANIT ŞEMASI (yalnız JSON):
 {"soru_koku": "...", "secenekler": {"A": "...", "B": "...", "C": "...", "D": "...", "E": "..."},
  "yapay_zeka_tamamlanan_siklar": [],
- "sik_analizi": {"A": "bu şık doğru mu yanlış mı, neden (1 cümle)", "B": "...", "C": "...", "D": "...", "E": "..."},
+ "sik_analizi": {"A": "DOĞRU: ... ya da YANLIŞ: ... (ifadenin kendisi doğru mu yanlış mı, 1 cümle)", "B": "...", "C": "...", "D": "...", "E": "..."},
  "aciklama_maddeleri": ["...", "..."],
  "dogru_secenek": "A-E (YUKARIDAKİ şık analizi ve açıklamanın gösterdiği şık; onlarla çelişemez)",
- "cevap_degisti": false, "cevap_emin": true, "cevap_gerekcesi": "...",
+ "cevap_emin": true, "cevap_gerekcesi": "...", "kullanilan_kaynaklar": [1, 3],
  "kurul_adi": "TIP310", "ders_adi": "paketteki ders adı", "konu_adi": "paketteki konu adı",
  "degisen_alanlar": ["soru_koku"], "degisiklik_ozeti": "kısa ve somut",
  "YZV": {"degisiklik_ozeti": {"soru_koku_duzeltmesi": "...", "sik_duzeltmesi": "...", "aciklama_duzeltmesi": "...",
@@ -418,17 +419,18 @@ SCHEMA_HINT = """YANIT ŞEMASI (yalnız JSON):
 
 
 def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> tuple[dict | None, str]:
-    """Soruyu bulut modeline gönderir. Kayıttaki cevap 'kayitli_cevap' olarak verilir (doğru kabul edilmez)."""
-    girdi = {k: v for k, v in soru.items() if k != "dogru_secenek"}
+    """Soruyu bulut modeline gönderir. Eski cevap anahtarı verilmez; ders kaynakları (yerel vektör araması) eklenir."""
+    # Eski cevap anahtarı modele HİÇ verilmez ve kararda kullanılmaz (kullanıcı kuralı, 2026-10-07)
+    girdi = {k: v for k, v in soru.items() if k not in ("dogru_secenek", "aciklama", "kayitli_cevap")}
     ek = ""
     if kok_bozuk(soru):
-        # Kök bozuk: eski cevap gösterilmez (model kökü eski cevaba uydurmasın); cevap YENİ soruya göre seçilir
         ek = ("\nNOT: Bu sorunun kökü bozuk/eksik (bir şıkkın kopyası ya da çok kısa). Şıklara bakarak sorunun ne sorduğunu "
               "kur; kurduğun kök YALNIZ TEK bir şıkkı doğru kılmalı (diğer dört şık kesinlikle yanlış olmalı). Şıkların tıbbi "
-              "anlamını değiştirme. Cevabı kurduğun YENİ soruya göre seç. Tek cevaplı bir kök kurulamıyorsa cevap_emin=false.\n")
-    else:
-        girdi["kayitli_cevap"] = soru.get("dogru_secenek") or ""
-    prompt = "İNCELENECEK SORU:\n" + json.dumps(girdi, ensure_ascii=False, indent=1) + "\n" + ek + "\n" + SCHEMA_HINT
+              "anlamını değiştirme. Tek cevaplı bir kök kurulamıyorsa cevap_emin=false.\n")
+    kaynaklar = kaynaklari_bul(soru.get("soru_koku") or "", soru.get("secenekler") or {})
+    soru["_kaynaklar"] = kaynaklar                                # doğrulayıcılar aynı kaynakları görür
+    prompt = ("İNCELENECEK SORU:\n" + json.dumps(girdi, ensure_ascii=False, indent=1) + "\n" + ek +
+              "\n" + kaynak_metni(kaynaklar) + "\n" + SCHEMA_HINT)
     res, model = call_gemini_json(prompt, system_text())
     if isinstance(res, dict):
         maddeler = [str(m).strip() for m in (res.get("aciklama_maddeleri") or []) if str(m).strip()]
@@ -438,7 +440,45 @@ def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> tuple[dict | N
         anlam_koru(soru, res)
         cevap_dogrula(soru, res)
         gercek_degisiklikleri_yaz(soru, res)
+        res["kaynaklar"] = [{k: c.get(k) for k in ("id", "title", "document_type", "page_number", "similarity")}
+                            for c in kaynaklar]
+    soru.pop("_kaynaklar", None)
     return res, model
+
+
+GROUNDING_TYPES = ["lecture_slide", "summary", "transcript"]        # ders materyali (eski soru/AI çıktısı değil)
+
+
+def kaynaklari_bul(kok: str, secenekler: dict, n: int = 6) -> list[dict]:
+    """Soruya anlamca en yakın ders materyali parçaları: yerel embed servisi (e5) + yerel Supabase match_rag_chunks_e5.
+    Servis/DB yoksa boş liste (Faz 14 kaynaksız devam eder)."""
+    q = (kok + " " + " ".join(str(v) for v in (secenekler or {}).values() if v))[:1500]
+    url = (os.environ.get("LOCAL_SUPABASE_URL") or os.environ.get("SUPABASE_URL") or "http://127.0.0.1:8000").rstrip("/")
+    key = os.environ.get("LOCAL_SUPABASE_KEY") or os.environ.get("SUPABASE_SECRET_KEY") or ""
+    if not q.strip() or not key:
+        return []
+    try:
+        req = urllib.request.Request(os.environ.get("MEDS_EMBED_URL", "http://127.0.0.1:8091/embed"),
+                                     data=json.dumps({"texts": [q], "kind": "query"}).encode(), method="POST",
+                                     headers={"Content-Type": "application/json"})
+        vec = json.loads(urllib.request.urlopen(req, timeout=20).read())["vectors"][0]
+        body = {"query_embedding": "[" + ",".join(f"{x:.6f}" for x in vec) + "]", "match_count": n,
+                "filter_types": GROUNDING_TYPES, "filter_committee": None}
+        req = urllib.request.Request(url + "/rest/v1/rpc/match_rag_chunks_e5", data=json.dumps(body).encode(), method="POST",
+                                     headers={"Content-Type": "application/json", "apikey": key, "Authorization": f"Bearer {key}"})
+        rows = json.loads(urllib.request.urlopen(req, timeout=20).read())
+        return [r for r in rows if (r.get("similarity") or 0) >= 0.80][:n]
+    except Exception as e:  # noqa: BLE001
+        logging.warning(f"[KAYNAK] ders materyali alınamadı: {e}")
+        return []
+
+
+def kaynak_metni(kaynaklar: list[dict]) -> str:
+    if not kaynaklar:
+        return "DERS KAYNAKLARI: (bulunamadı — standart tıp bilgisiyle çöz, emin değilsen cevap_emin=false)\n"
+    parcalar = [f"[{i}] {c.get('title') or ''}{' s.' + str(c['page_number']) if c.get('page_number') else ''}\n"
+                f"{' '.join(str(c.get('content') or '').split())[:700]}" for i, c in enumerate(kaynaklar, 1)]
+    return "DERS KAYNAKLARI (fakülte ders materyalinden, soruyla anlamca en yakın parçalar):\n" + "\n\n".join(parcalar) + "\n"
 
 
 def gercek_degisiklikleri_yaz(soru: dict, res: dict) -> None:
@@ -461,13 +501,13 @@ def gercek_degisiklikleri_yaz(soru: dict, res: dict) -> None:
     for k in ("kurul_adi", "ders_adi", "konu_adi", "aciklama_maddeleri"):
         if k in (res.get("degisen_alanlar") or []):
             alanlar.append(k)
-    geri_alinan = bool(res.get("anlam_koruma")) or str((res.get("cevap_dogrulama") or {}).get("sonuc", "")).endswith("korundu")
+    geri_alinan = bool(res.get("anlam_koruma")) or bool(res.get("cevap_belirsiz"))
     if geri_alinan:
-        res["model_ozeti"] = res.get("degisiklik_ozeti") or ""
+        res.setdefault("model_ozeti", res.get("degisiklik_ozeti") or "")   # yeniden doğrulamada ilk özet korunur
         notlar = list(res.get("anlam_koruma") or [])
         d = res.get("cevap_dogrulama") or {}
-        if d.get("oneri") and d.get("oneri") != son:
-            notlar.append(f"modelin önerdiği cevap ({d.get('oneri')}) doğrulanamadı → kayıtlı cevap ({son or '-'}) korundu")
+        if res.get("cevap_belirsiz"):
+            notlar.append(f"bağımsız çözücüler aynı şıkta uzlaşamadı (oylar: {d.get('oylar')}) → cevap belirsiz, elle seçilmeli")
         gercek = ", ".join(alanlar) if alanlar else "yok"
         res["degisiklik_ozeti"] = ("Otomatik koruma modelin değişikliklerini geri aldı: " + "; ".join(notlar) +
                                    f". Gerçekte değişen alanlar: {gercek}. Elle inceleyin.")
@@ -524,7 +564,21 @@ def anlam_koru(soru: dict, res: dict) -> None:
         logging.info("[KORUMA] " + "; ".join(notlar))
 
 
-def _bagimsiz_cevap(soru_koku: str, secenekler: dict) -> tuple[str, str]:
+def _dogrulayici_sor(prompt: str, max_tokens: int):
+    """Önce güçlü doğrulayıcı (gpt-oss); dakikalık sınıra takılırsa bekleyip 3 kez dener, ancak sonra yedek modele geçer.
+    (Hemen qwen'e geçmek doğru cevap değişikliklerinin 'zayıf doğrulayıcı' diye reddedilmesine yol açıyordu.)"""
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
+    import cloud_llm
+    for deneme in range(3):
+        r = cloud_llm.chat(prompt, as_json=True, max_tokens=max_tokens, temperature=0.0, models=VERIFY_MODELS[:1], timeout=120)
+        if r:
+            return r, (cloud_llm.last_model or {}).get("ad") or VERIFY_MODELS[0]
+        time.sleep(20 * (deneme + 1))
+    r = cloud_llm.chat(prompt, as_json=True, max_tokens=max_tokens, temperature=0.0, models=VERIFY_MODELS[1:], timeout=120)
+    return r, (cloud_llm.last_model or {}).get("ad") or ""
+
+
+def _bagimsiz_cevap(soru_koku: str, secenekler: dict, kaynaklar: list | None = None, modeller: list | None = None) -> tuple[str, str]:
     """Kayıtlı cevabı ve önerilen cevabı GÖRMEDEN soruyu çözer (ücretsiz Groq). (harf, model) ya da ("", "")."""
     sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
     try:
@@ -533,18 +587,26 @@ def _bagimsiz_cevap(soru_koku: str, secenekler: dict) -> tuple[str, str]:
         return "", ""
     prompt = ("Tıp fakültesi sınav sorusu. Adım adım düşün, her şıkkı değerlendir, sonra tek doğru şıkkı seç.\n"
               "Soru kökündeki olumsuzluk ifadelerine (değildir, yanlıştır, olmaz, hariç) özellikle dikkat et.\n\n"
+              "Klinik vakada verilen değerleri tek tek hesapla (ör. şok indeksi = nabız / sistolik TA).\n\n" +
+              (kaynak_metni(kaynaklar) + "\n" if kaynaklar is not None else "") +
               f"SORU: {soru_koku}\n" + "\n".join(f"{k}) {v}" for k, v in sorted(secenekler.items()) if v) +
               "\n\nAyrıca soru kökü yalnız TEK şıkkı doğru kılıyor mu? Birden fazla şık köke uyuyorsa bunu belirt."
               '\n\nYalnız JSON: {"dogru_secenek": "A-E", "birden_fazla_dogru": false, "uyan_siklar": ["..."], "gerekce": "kısa"}')
     try:
-        r = cloud_llm.chat(prompt, as_json=True, max_tokens=4000, temperature=0.0, models=VERIFY_MODELS, timeout=120)
+        if modeller:
+            sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
+            import cloud_llm
+            r = cloud_llm.chat(prompt, as_json=True, max_tokens=4000, temperature=0.0, models=modeller, timeout=180)
+            vm = (cloud_llm.last_model or {}).get("ad") or ""
+        else:
+            r, vm = _dogrulayici_sor(prompt, 4000)
     except Exception as e:
         logging.warning(f"[DOĞRULAMA] hata: {e}")
         return "", ""
     harf = str((r or {}).get("dogru_secenek") or "").strip().upper()[:1]
     _bagimsiz_cevap.son_coklu = bool((r or {}).get("birden_fazla_dogru"))
     _bagimsiz_cevap.son_uyan = [str(x).strip().upper()[:1] for x in ((r or {}).get("uyan_siklar") or []) if str(x).strip()]
-    return (harf if harf in secenekler else ""), (getattr(cloud_llm, "last_model", {}) or {}).get("ad") or "groq"
+    return (harf if harf in secenekler else ""), vm or "groq"
 
 
 _bagimsiz_cevap.son_coklu = False
@@ -569,8 +631,30 @@ def kok_yeniden_yazildi(soru: dict, res: dict) -> bool:
     return bool(b) and (kok_bozuk(soru) or difflib.SequenceMatcher(None, a, b).ratio() < 0.6)
 
 
+def _analizden_cevap(soru_koku: str, secenekler: dict, res: dict) -> str:
+    """Şık analizindeki DOĞRU/YANLIŞ etiketlerinden cevap: olumlu kökte tek DOĞRU, olumsuz kökte tek YANLIŞ şık."""
+    a = res.get("sik_analizi")
+    if not isinstance(a, dict):
+        return ""
+    etiket = {}
+    for k, v in a.items():
+        t = str(v or "").strip().upper().replace("İ", "I")
+        if t.startswith("DOĞRU") or t.startswith("DOGRU"):
+            etiket[str(k).upper()[:1]] = True
+        elif t.startswith("YANLIŞ") or t.startswith("YANLIS"):
+            etiket[str(k).upper()[:1]] = False
+    if len(etiket) < len([v for v in secenekler.values() if v]):
+        return ""
+    hedef = not _olumsuz_mu(soru_koku)
+    aday = [k for k, v in etiket.items() if v is hedef]
+    return aday[0] if len(aday) == 1 and aday[0] in secenekler else ""
+
+
 def _aciklamanin_cevabi(soru_koku: str, secenekler: dict, res: dict) -> str:
     """Modelin yazdığı şık analizi + açıklama hangi şıkkı doğru cevap olarak gösteriyor? (işaretlenen harf verilmez)"""
+    h = _analizden_cevap(soru_koku, secenekler, res)
+    if h:
+        return h
     sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
     try:
         import cloud_llm
@@ -580,13 +664,15 @@ def _aciklamanin_cevabi(soru_koku: str, secenekler: dict, res: dict) -> str:
     maddeler = res.get("aciklama_maddeleri") or [res.get("aciklama") or ""]
     metin = ("\n".join(f"{k}: {v}" for k, v in sorted(analiz.items())) if isinstance(analiz, dict) else str(analiz))
     prompt = ("Aşağıda bir sınav sorusu ve bir öğrencinin yazdığı açıklama var. Tıbbi doğruluğu DEĞERLENDİRME; yalnız bu "
-              "açıklamanın hangi şıkkı sorunun cevabı olarak gösterdiğini belirle. Soru kökündeki olumsuzluğa dikkat et "
-              "(ör. 'hangisi yanlıştır' sorusunda cevap, açıklamanın YANLIŞ dediği şıktır).\n\n"
+              "açıklamanın hangi şıkkı sorunun cevabı olarak gösterdiğini belirle. Dikkat: açıklama bir şıkkın NEDEN YANLIŞ "
+              "olduğunu anlatıyorsa o şık olumlu bir kökte cevap DEĞİLDİR. Soru kökündeki olumsuzluğa dikkat et "
+              "(ör. 'hangisi yanlıştır' sorusunda cevap, açıklamanın YANLIŞ dediği şıktır). Açıklama hiçbir şıkkı açıkça "
+              "cevap olarak göstermiyorsa 'belirsiz' yaz.\n\n"
               f"SORU: {soru_koku}\n" + "\n".join(f"{k}) {v}" for k, v in sorted(secenekler.items()) if v) +
               f"\n\nŞIK ANALİZİ:\n{metin}\n\nAÇIKLAMA:\n" + "\n".join(str(m) for m in maddeler) +
               '\n\nYalnız JSON: {"aciklamanin_cevabi": "A-E" ya da "belirsiz"}')
     try:
-        r = cloud_llm.chat(prompt, as_json=True, max_tokens=2000, temperature=0.0, models=VERIFY_MODELS, timeout=120)
+        r, _vm = _dogrulayici_sor(prompt, 2000)
     except Exception:
         return ""
     h = str((r or {}).get("aciklamanin_cevabi") or "").strip().upper()[:1]
@@ -594,83 +680,62 @@ def _aciklamanin_cevabi(soru_koku: str, secenekler: dict, res: dict) -> str:
 
 
 def cevap_dogrula(soru: dict, res: dict) -> None:
-    """Cevap kararını iki bağımsız modelle sağlamlaştırır:
-    * Öneri kayıtlı cevapla aynı ve doğrulayıcı da aynı → değişiklik yok.
-    * Öneri kayıtlıyı değiştiriyor → değişiklik yalnız doğrulayıcı YENİ cevapla hemfikirse kalır;
-      doğrulayıcı kayıtlıyla hemfikirse kayıtlı cevaba dönülür; ikisi de değilse kayıtlı korunur, incelemeye düşer.
-    * Öneri aynı ama doğrulayıcı farklı → cevap korunur, 'cevap şüpheli' olarak incelemeye düşer.
-    Sonuç res['cevap_dogrulama'] alanında saklanır."""
-    kayitli = str(soru.get("dogru_secenek") or "").strip().upper()[:1]
+    """Cevap ESKİ CEVAP ANAHTARI KULLANILMADAN belirlenir (kullanıcı kuralı): aynı ders kaynaklarını gören bağımsız
+    çözücülerin çoğunluk oyu — (1) soruyu düzelten modelin şık analizinin gösterdiği şık, (2) gpt-oss-120b (kör),
+    (3) ilk ikisi ayrışırsa farklı aileden üçüncü çözücü. En az iki oy aynı şıkta değilse cevap BELİRSİZ bırakılır
+    (dogru_secenek="") ve soru elle incelemeye düşer. Açıklamanın savunduğu şık son cevapla çelişirse açıklama geçersiz
+    işaretlenir. Eski cevap yalnız bilgi olarak saklanır (res['cevap_dogrulama']['eski_anahtar'])."""
+    eski = str(soru.get("dogru_secenek") or "").strip().upper()[:1]
     oneri = str(res.get("dogru_secenek") or "").strip().upper()[:1]
-    sec = res.get("secenekler") or soru.get("secenekler") or {}     # anlam_koru sonrası: özgün anlamda şıklar
-    if not oneri or not isinstance(sec, dict):
+    sec = res.get("secenekler") or soru.get("secenekler") or {}
+    if not isinstance(sec, dict):
         return
-    harf, vmodel = _bagimsiz_cevap(res.get("soru_koku") or soru.get("soru_koku") or "", sec)
-    ac_harf = _aciklamanin_cevabi(res.get("soru_koku") or soru.get("soru_koku") or "", sec, res)
-    d = {"kayitli": kayitli, "oneri": oneri, "dogrulayici": harf, "dogrulayici_model": vmodel, "aciklama_gosterdigi": ac_harf}
-    if _bagimsiz_cevap.son_coklu:
+    kok = res.get("soru_koku") or soru.get("soru_koku") or ""
+    kay = soru.get("_kaynaklar")
+    ac_harf = _aciklamanin_cevabi(kok, sec, res)
+    if ac_harf and oneri and ac_harf != oneri:
+        logging.info(f"[DOĞRULAMA] modelin şık analizi/açıklaması {ac_harf}, işaretlediği {oneri} → model oyu {ac_harf} sayılır")
+    model_oyu = ac_harf or oneri                               # modelin gerekçesinin gösterdiği şık esas alınır
+    harf, vmodel = _bagimsiz_cevap(kok, sec, kay)
+    coklu = _bagimsiz_cevap.son_coklu
+    oylar = {"duzelten_model": model_oyu, "gpt_oss": harf}
+    d = {"eski_anahtar": eski, "oneri": oneri, "dogrulayici": harf, "dogrulayici_model": vmodel,
+         "aciklama_gosterdigi": ac_harf, "kaynak_sayisi": len(kay or [])}
+    if not (model_oyu and harf and model_oyu == harf):
+        h3, m3 = _bagimsiz_cevap(kok, sec, kay, modeller=["gemini:gemini-flash-latest", "gemini:gemini-3.5-flash",
+                                                          "groq:qwen/qwen3.8-27b"])
+        oylar["ucuncu"] = h3
+        d["ucuncu"], d["ucuncu_model"] = h3, m3
+        coklu = coklu or _bagimsiz_cevap.son_coklu
+    sayim: dict[str, int] = {}
+    for v in oylar.values():
+        if v:
+            sayim[v] = sayim.get(v, 0) + 1
+    kazanan = max(sayim, key=sayim.get) if sayim else ""
+    d["oylar"] = oylar
+    if kazanan and sayim[kazanan] >= 2:
+        res["dogru_secenek"] = kazanan
+        res["cevap_belirsiz"] = False
+        res["cevap_emin"] = sayim[kazanan] == len([v for v in oylar.values() if v]) and not coklu
+        d["sonuc"] = "oybirligi" if res["cevap_emin"] else "cogunluk"
+    else:
+        res["dogru_secenek"] = ""                               # çözücüler uzlaşamadı: cevap işaretlenmez
+        res["cevap_emin"] = False
+        res["cevap_belirsiz"] = True
+        d["sonuc"] = "belirsiz"
+    if coklu:
         d["birden_fazla_dogru"] = _bagimsiz_cevap.son_uyan or True
-        res["review_required"] = True
         res["cevap_emin"] = False
     if kok_yeniden_yazildi(soru, res):
-        # Kök yeniden kurulduğu için kayıtlı cevap eski (bozuk) soruya aittir; cevap YENİ soruya göre belirlenir.
         d["kok_yeniden_yazildi"] = True
-        res["review_required"] = True
-        uzlasi = bool(harf) and harf == oneri and ac_harf in ("", oneri) and STRONG_VERIFIER in vmodel
-        if uzlasi and not _bagimsiz_cevap.son_coklu:
-            d["sonuc"] = "yeni_soru_cevabi_dogrulandi"
-        else:
-            d["sonuc"] = "yeni_soru_cevabi_dogrulanamadi"
-            notu = "birden fazla şık yeni köke uyuyor" if _bagimsiz_cevap.son_coklu else f"bağımsız model {harf or '?'}, açıklama {ac_harf or '?'}"
-            res.setdefault("anlam_koruma", []).append(f"yeni kök tek ve kesin cevaplı değil ({notu}); kök/cevap elle düzeltilmeli")
-        res["cevap_dogrulama"] = d
-        logging.info(f"[DOĞRULAMA] kök yeniden yazıldı · öneri {oneri} · bağımsız {harf or '?'} · açıklama {ac_harf or '?'} → {d['sonuc']}")
-        return
-    if ac_harf and ac_harf != oneri:
-        # model açıklamada başka şıkkı savunup farklı harf işaretlemiş → önerinin cevabı güvenilmez
-        logging.info(f"[DOĞRULAMA] açıklama {ac_harf} şıkkını gösteriyor, işaretlenen {oneri} → çelişki")
-        d["aciklama_celiskisi"] = True
-        if ac_harf == harf:
-            oneri = ac_harf                                   # açıklama + bağımsız model aynı şıkta: o şık öneridir
-            res["dogru_secenek"] = ac_harf
-        res["review_required"] = True
-    alanlar = list(res.get("degisen_alanlar") or [])
-    if not harf:
-        d["sonuc"] = "dogrulanamadi"
-        if kayitli and oneri != kayitli:                     # doğrulanamayan değişiklik kabul edilmez
-            res["dogru_secenek"] = kayitli
-            res["cevap_degisti"] = False
-            d["sonuc"] = "dogrulanamadi_kayitli_korundu"
-        res["review_required"] = True
-    elif not kayitli or oneri == kayitli:
-        d["sonuc"] = "uzlasi" if harf == oneri else "suphe_kayitli_korundu"
-        if harf != oneri:
-            res["review_required"] = True
-            res["cevap_emin"] = False
-    elif harf == oneri and (STRONG_VERIFIER not in vmodel or (ac_harf and ac_harf != oneri)):
-        res["dogru_secenek"] = kayitli                      # zayıf doğrulayıcı ya da açıklama çelişkisi: değişiklik yok
-        res["cevap_degisti"] = False
-        alanlar = [a for a in alanlar if a not in ("dogru_secenek", "cevap")]
-        d["sonuc"] = "degisiklik_yeterince_dogrulanamadi_kayitli_korundu"
-        res["review_required"] = True
-    elif harf == oneri:
-        d["sonuc"] = "degisiklik_iki_modelce_dogrulandi"
-        res["cevap_degisti"] = True
-        res["review_required"] = True                        # cevap değişikliği her zaman insan onayından geçer
-    else:
-        res["dogru_secenek"] = kayitli
-        res["cevap_degisti"] = False
-        alanlar = [a for a in alanlar if a not in ("dogru_secenek", "cevap")]
-        d["sonuc"] = "degisiklik_reddedildi_kayitli_korundu" if harf == kayitli else "uzlasma_yok_kayitli_korundu"
-        res["review_required"] = True
-    son = str(res.get("dogru_secenek") or "").upper()[:1]
-    if ac_harf and ac_harf != son:
-        # kalan cevapla çelişen açıklama yayınlanmaz: incelemeye düşer, işaretlenir
-        d["aciklama_son_cevapla_celisiyor"] = True
-        res["review_required"] = True
-    res["degisen_alanlar"] = alanlar
+    son = res["dogru_secenek"]
+    res.pop("aciklama_gecersiz", None)
+    if ac_harf != son:
+        d["aciklama_son_cevapla_celisiyor"] = True             # açıklama başka şıkkı savunuyor ya da hiçbirini
+        res["aciklama_gecersiz"] = True
+    res["review_required"] = True
     res["cevap_dogrulama"] = d
-    logging.info(f"[DOĞRULAMA] kayıtlı {kayitli or '-'} · öneri {oneri} · bağımsız {harf or '?'} ({vmodel}) → {d['sonuc']}")
+    logging.info(f"[DOĞRULAMA] oylar {oylar} → {son or 'BELİRSİZ'} ({d['sonuc']}) · eski anahtar {eski or '-'} (kararda kullanılmadı)")
 
 
 def support_ratio(original: dict, proposal: dict) -> float:
