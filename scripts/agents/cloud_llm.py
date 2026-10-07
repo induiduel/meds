@@ -190,7 +190,15 @@ def chat(prompt: str, system: str | None = None, as_json: bool = False, max_toke
                             break
                         time.sleep(20)
                         continue
-                    if e.code in (400, 401, 403, 404):
+                    if e.code == 400:
+                        # 400 çoğunlukla bu yanıta özgüdür (Groq json_validate_failed, uzun bağlam): yalnız bu çağrı
+                        # başarısız sayılır. Eskiden model süreç boyunca atlanıyordu → uzun Faz 14 işinde gpt-oss tek bir
+                        # 400'den sonra hiç kullanılmıyordu.
+                        if log:
+                            log(f"{spec}: HTTP 400 — bu çağrı atlandı ({body[:120]})")
+                        done_with_key = True
+                        break
+                    if e.code in (401, 403, 404):
                         if log:
                             log(f"{spec}: HTTP {e.code} — bu süreçte atlanıyor")
                         _skip_session.add(spec)

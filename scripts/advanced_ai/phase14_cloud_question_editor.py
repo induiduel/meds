@@ -500,7 +500,10 @@ def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> tuple[dict | N
         res.setdefault("review_required", True)
         anlam_koru(soru, res)
         res["_zayif_model"] = any(model.startswith(w) for w in WEAK_GEMINI)
+        res["_duzelten_model"] = "gemini:" + model.split(" ")[0]
         cevap_dogrula(soru, res)
+        belirsizi_gemini_ile_tamamla(soru, res)
+        res.pop("_duzelten_model", None)
         gercek_degisiklikleri_yaz(soru, res)
         res["kaynaklar"] = [{k: c.get(k) for k in ("id", "title", "document_type", "page_number", "similarity")}
                             for c in kaynaklar]
@@ -735,10 +738,10 @@ def _bagimsiz_cevap(soru_koku: str, secenekler: dict, kaynaklar: list | None = N
             sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
             import cloud_llm
             with _GROQ_KILIT:
-                r = cloud_llm.chat(prompt, as_json=True, max_tokens=4000, temperature=0.0, models=modeller, timeout=180)
+                r = cloud_llm.chat(prompt, as_json=True, max_tokens=2500, temperature=0.0, models=modeller, timeout=180)
             vm = (cloud_llm.last_model or {}).get("ad") or ""
         else:
-            r, vm = _dogrulayici_sor(prompt, 4000)
+            r, vm = _dogrulayici_sor(prompt, 2500)
     except Exception as e:
         logging.warning(f"[DOĞRULAMA] hata: {e}")
         return "", ""
@@ -914,6 +917,63 @@ def kopya_kaydet(kopya_id: str, asil_id: str):
     KOPYA_FILE.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+GEMINI_COZUCU = ["gemini:gemini-flash-latest", "gemini:gemini-3.5-flash", "gemini:gemini-flash-lite-latest",
+                 "gemini:gemini-3.5-flash-lite"]                 # ücretsiz anahtarlar (cloud_llm); Flash yoksa Lite
+
+
+def belirsizi_gemini_ile_tamamla(soru: dict, res: dict) -> None:
+    """Çözücüler uzlaşamadıysa soru Gemini'ye (kör: eski cevap ve diğer oylar gösterilmeden) ayrıca sorulur ve toplam
+    3 cevap şıkkı toplanır. Soru 'şüpheli cevap' olarak işaretlenir (/test/cikmis → Şüpheli). 3 cevaptan en az ikisi
+    aynıysa o şık öneri olarak yazılır ama soru yine şüpheli kalır; üçü de farklıysa cevap boş kalır."""
+    d = res.get("cevap_dogrulama") or {}
+    if d.get("sonuc") not in ("belirsiz", "ayni_model_iki_oy_gecersiz") and not res.get("cevap_belirsiz"):
+        return
+    sec = res.get("secenekler") or soru.get("secenekler") or {}
+    kok = res.get("soru_koku") or soru.get("soru_koku") or ""
+    oylar = {k: v for k, v in (d.get("oylar") or {}).items() if isinstance(v, str) and len(v) == 1}
+    modeller = {"gpt_oss": d.get("dogrulayici_model"), "ucuncu": d.get("ucuncu_model")}
+    cevaplar = [{"cozucu": k, "model": modeller.get(k) or res.get("_duzelten_model") or k, "cevap": v} for k, v in oylar.items()]
+    # aynı modelin ikinci oyu sayılmaz
+    gorulen, tekil = set(), []
+    for c in cevaplar:
+        if c["model"] in gorulen:
+            continue
+        gorulen.add(c["model"])
+        tekil.append(c)
+    cevaplar = tekil
+    deneme = 0
+    while len(cevaplar) < 3 and deneme < 2:
+        deneme += 1
+        adaylar = [m for m in GEMINI_COZUCU if m not in gorulen]
+        if not adaylar:
+            break
+        h, m = _bagimsiz_cevap(kok, sec, soru.get("_kaynaklar"), modeller=adaylar)
+        if h and m and m not in gorulen:
+            gorulen.add(m)
+            cevaplar.append({"cozucu": "gemini", "model": m, "cevap": h})
+        elif m:
+            gorulen.add(m)                                      # yanıt vermeyen modeli tekrar deneme
+    say: dict[str, int] = {}
+    for c in cevaplar:
+        say[c["cevap"]] = say.get(c["cevap"], 0) + 1
+    kazanan = max(say, key=say.get) if say else ""
+    if kazanan and say[kazanan] >= 2:
+        res["dogru_secenek"] = kazanan
+        res["cevap_belirsiz"] = False
+        d["sonuc"] = "gemini_ile_cogunluk_supheli"
+    else:
+        res["dogru_secenek"] = ""
+        res["cevap_belirsiz"] = True
+        d["sonuc"] = "gemini_ile_de_belirsiz"
+    res["cevap_emin"] = False
+    res["supheli_cevap"] = True
+    res["cevap_secenekleri"] = cevaplar                         # toplam 3 cevap (çözücü, model, şık)
+    d["oylar"] = {**(d.get("oylar") or {}), **{"gemini": c["cevap"] for c in cevaplar if c["cozucu"] == "gemini"}}
+    res["cevap_dogrulama"] = d
+    logging.info(f"[DOĞRULAMA] belirsiz → Gemini ile {len(cevaplar)} cevap: "
+                 + ", ".join(f"{c['model']}={c['cevap']}" for c in cevaplar) + f" → {res['dogru_secenek'] or 'BELİRSİZ'} (şüpheli)")
+
+
 def cevap_uyusmazligi(res: dict) -> bool:
     """Çözücüler aynı şıkta birleşmedi mi? (en az bir oy farklıysa ya da cevap belirsizse) → "Cevap Belirsiz" kategorisi."""
     d = (res or {}).get("cevap_dogrulama") or {}
@@ -947,8 +1007,12 @@ def cevap_dogrula(soru: dict, res: dict) -> None:
     d = {"eski_anahtar": eski, "oneri": oneri, "dogrulayici": harf, "dogrulayici_model": vmodel,
          "aciklama_gosterdigi": ac_harf, "kaynak_sayisi": len(kay or [])}
     if not (model_oyu and harf and model_oyu == harf):
-        h3, m3 = _bagimsiz_cevap(kok, sec, kay, modeller=["gemini:gemini-flash-latest", "gemini:gemini-3.5-flash",
-                                                          "groq:qwen/qwen3.8-27b"])
+        # Üçüncü çözücü doğrulayıcıdan FARKLI model olmalı (aynı modelin iki oyu bağımsız doğrulama değildir)
+        adaylar = [m for m in ["gemini:gemini-flash-latest", "gemini:gemini-3.5-flash", "groq:openai/gpt-oss-120b",
+                               "groq:qwen/qwen3.8-27b"] if m != vmodel]
+        h3, m3 = _bagimsiz_cevap(kok, sec, kay, modeller=adaylar)
+        if m3 and m3 == vmodel:
+            h3 = ""                                            # yine aynı modele düştüyse oy sayılmaz
         oylar["ucuncu"] = h3
         d["ucuncu"], d["ucuncu_model"] = h3, m3
         coklu = coklu or _bagimsiz_cevap.son_coklu
@@ -1017,6 +1081,10 @@ def kayit_yaz(out_reviews, s_id: str, src: dict, ai_sonuc: dict, model_used: str
     if cevap_uyusmazligi(ai_sonuc):
         record["status"] = "review_required"
         record["answer_doubtful"] = True                      # /test/cikmis → "Cevap Belirsiz" kategorisi (+ cevap anketi)
+    if ai_sonuc.get("supheli_cevap"):
+        record["status"] = "review_required"
+        record["suspicious"] = True                           # /test/cikmis → "Şüpheli" (3 cevap: proposal.cevap_secenekleri)
+        record["suspicious_at"] = datetime.utcnow().isoformat() + "Z"
     with _KILIT:
         if s_id in load_checkpoints() or s_id in islenmisler:
             logging.warning(f"Soru #{s_id} zaten işlenmiş; ikinci kayıt YAZILMADI")

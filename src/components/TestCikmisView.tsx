@@ -1215,7 +1215,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                             <b className="text-ink">Cevap kontrolü:</b>{' '}
                             {prop.cevap_dogrulama.oylar
                               ? Object.entries(prop.cevap_dogrulama.oylar as Record<string, string>)
-                                  .map(([k, v]) => `${({ duzelten_model: 'düzelten model', gpt_oss: 'gpt-oss', ucuncu: '3. çözücü' } as Record<string, string>)[k] || k} ${v || '?'}`)
+                                  .map(([k, v]) => `${({ duzelten_model: 'düzelten model', gpt_oss: 'gpt-oss', ucuncu: '3. çözücü', gemini: 'Gemini' } as Record<string, string>)[k] || k} ${v || '?'}`)
                                   .join(' · ')
                               : `model ${prop.cevap_dogrulama.oneri || '–'} · bağımsız ${prop.cevap_dogrulama.dogrulayici || '?'}`}
                             {' → '}
@@ -1227,6 +1227,14 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         {prop.tespit_raporu?.tespit_edilen_kusur && <p className="m-0"><b className="text-ink">Tespit edilen kusur:</b> {String(prop.tespit_raporu.tespit_edilen_kusur)}</p>}
                         {prop.tespit_raporu?.uygulanan_mudahale && <p className="m-0"><b className="text-ink">Uygulanan müdahale:</b> {String(prop.tespit_raporu.uygulanan_mudahale)}</p>}
                         {prop.secenek_analizi && typeof prop.secenek_analizi === 'object' && (
+                        {Array.isArray(prop.cevap_secenekleri) && prop.cevap_secenekleri.length > 0 && (
+                          <p className="m-0 rounded-md bg-warn-soft px-2 py-1">
+                            <b className="text-ink">Şüpheli cevap · {prop.cevap_secenekleri.length} cevap:</b>{' '}
+                            {(prop.cevap_secenekleri as { model: string; cevap: string }[])
+                              .map((c) => `${String(c.model).replace(/^(groq|gemini):/, '').replace('openai/', '')} → ${c.cevap}`)
+                              .join(' · ')}
+                          </p>
+                        )}
                           <div className="flex flex-col gap-1 pt-1">
                             <b className="text-ink">Şık analizi</b>
                             {['A', 'B', 'C', 'D', 'E'].map((k) => {
