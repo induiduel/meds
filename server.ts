@@ -1633,7 +1633,10 @@ app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
     if (matchingIndices.length === 0) {
       return res.status(404).json({ error: 'İnceleme kaydı bulunamadı.' });
     }
-    const rev = reviews[matchingIndices[0]];
+    // Aynı soru için birden çok kayıt olabilir (yeniden değerlendirme yeni kayıt ekler): en güncel öneri uygulanır
+    const stamp = (r: any) => Date.parse(r.last_edited_at || r.processed_at || '') || 0;
+    const latestIdx = matchingIndices.reduce((best, i) => (stamp(reviews[i]) >= stamp(reviews[best]) ? i : best), matchingIndices[0]);
+    const rev = reviews[latestIdx];
     const proposal = rev.proposal;
     if (!proposal) {
       return res.status(400).json({ error: 'Öneri verisi bulunmuyor.' });

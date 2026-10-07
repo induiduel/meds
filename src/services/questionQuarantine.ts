@@ -160,12 +160,36 @@ export function quarantineMtime(): number {
   return Math.max(cacheMtime, keyMtime, linkMtime, resolvedMtime);
 }
 
+// Faz 14'te yönetici onayıyla düzeltilmiş soru: kurul, ders, konu, kök, şıklar, cevap ve açıklama Faz 14'ten gelir;
+// karantina, cevap anahtarı ve müfredat katmanları bu soruyu değiştirmez.
+function isPhase14Approved(item: Record<string, any>): boolean {
+  return Boolean(item?.phase14 || (Array.isArray(item?.tags) && item.tags.includes('faz14_duzeltildi')));
+}
+
+function phase14View<T extends Record<string, any>>(item: T): T {
+  const rec = item.reconstruction && typeof item.reconstruction === 'object' ? item.reconstruction : null;
+  return {
+    ...item,
+    contentCommitteeId: item.committeeId,
+    contentDiscipline: item.discipline,
+    contentTopic: item.topic,
+    committeeUncertain: false,
+    curriculumSource: 'faz14',
+    answerStatus: item.correctAnswer || rec?.correctAnswer ? 'faz14' : item.answerStatus,
+    answerNote: undefined,
+  };
+}
+
 export function applyQuarantine<T extends { id?: string; stem?: string; options?: any[]; correctAnswer?: string }>(list: T[]): T[] {
   const q = load();
-  if (!q) return list;
+  if (!q) return list.map((x) => (isPhase14Approved(x as any) ? phase14View(x as any) : x));
   const out: T[] = [];
   for (const item of list) {
     const id = String(item.id);
+    if (isPhase14Approved(item as any)) {
+      out.push(phase14View(item as any));
+      continue;
+    }
     const fix = q.onarim?.[id];          // onarımı olan soru (veritabanı kopyası bozuk olsa da) onarılmış hâliyle gösterilir
     if (!fix && q.sorular?.[id]) continue;
     if (fix) {
@@ -185,5 +209,5 @@ export function applyQuarantine<T extends { id?: string; stem?: string; options?
       out.push(item);
     }
   }
-  return out.map((x) => applyCurriculum(applyAnswerKey(x)));
+  return out.map((x) => (isPhase14Approved(x as any) ? x : applyCurriculum(applyAnswerKey(x))));
 }
