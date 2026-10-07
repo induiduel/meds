@@ -1022,6 +1022,14 @@ export async function recordAiInteraction(params: {
   const currentList = loadAiInteractions();
   currentList.unshift(interaction);
   saveAiInteractions(currentList);
+  // 1b. Veritabanında ayrı bölge: AI bilgilendirmeleri (kalıcı arşiv; kaynak değildir)
+  try {
+    const dir = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'derived', 'ai_bilgi');
+    fs.mkdirSync(dir, { recursive: true });
+    fs.appendFileSync(path.join(dir, 'ai_etkilesimleri.jsonl'), JSON.stringify(interaction) + '\n');
+  } catch (e) {
+    console.warn('ai_bilgi arşivine yazılamadı:', e);
+  }
 
   // 2. Create and index local RAG chunk
   const chunkContent = `[YAPAY ZEKA TIBBİ SORU-CEVAP & AÇIKLAMA]

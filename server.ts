@@ -3541,6 +3541,18 @@ Görevin:
       timeoutMs: typeof timeoutMs === 'number' ? timeoutMs : undefined
     });
 
+    // Asistan yanıtı veritabanında ayrı bölgede saklanır (ai_qa; aranabilir, kaynak sayılmaz)
+    if (result?.text && String(message || '').trim()) {
+      recordAiInteraction({
+        interactionType: 'chat_qa',
+        prompt: String(message),
+        response: String(result.text),
+        userId: String(req.body?.userId || '') || undefined,
+        userDisplayName: req.body?.userDisplayName,
+        metadata: { kaynak: 'asistan', mode, providerUsed: result.providerUsed, eslesenSoru: matchedQuestions.slice(0, 5).map((q: any) => q.id) },
+      }).catch((e: any) => console.warn('AI etkileşimi kaydedilemedi:', e?.message));
+    }
+
     res.json({
       success: true,
       reply: result.text,
