@@ -20,6 +20,7 @@
  */
 
 import fs from 'fs';
+import { latestReviews, normalizeKurul } from './phase14Overlay';
 import { applyCleanOverlay } from './lectureCleanOverlay.ts';
 import path from 'path';
 import crypto from 'crypto';
@@ -851,6 +852,37 @@ ${recon.explanation || 'Açıklama belirtilmemiş.'}`.trim();
       createdAt: q.customRedactedAt || recon.lastUpdated || now,
       updatedAt: now
     });
+  }
+  // Faz 14 önerileri (onay bekleyen + onaylı): aranabilir ama kaynak değil (ai_refinement, GROUNDING dışında)
+  try {
+    for (const [qid, r] of latestReviews()) {
+      const p = r.proposal;
+      if (!p || r.status === 'rejected') continue;
+      const opts = Object.entries(p.secenekler || {}).map(([k, v]) => `${k}) ${v}`).join('\n');
+      const content = `[FAZ 14 SORU DÜZELTME ÖNERİSİ · ${r.status === 'approved' ? 'onaylı' : 'onay bekliyor'}]
+Kurul / Ders / Konu: ${[p.kurul_adi, p.ders_adi, p.konu_adi].filter(Boolean).join(' · ')}
+Soru: ${p.soru_koku || ''}
+${opts}
+Önerilen cevap: ${p.dogru_secenek || ''}${p.cevap_degisti ? ` (kayıttakinden farklı: ${p.cevap_gerekcesi || ''})` : ''}
+Açıklama:
+${p.aciklama || ''}
+Değişiklik özeti: ${typeof p.degisiklik_ozeti === 'string' ? p.degisiklik_ozeti : JSON.stringify(p.degisiklik_ozeti || '')}`.trim();
+      chunks.push({
+        id: `chunk-faz14-${qid}`,
+        documentId: String(qid),
+        documentType: 'ai_refinement',
+        committeeId: normalizeKurul(p.kurul_adi) || 'donem3-kurul1',
+        discipline: p.ders_adi || 'Tıp',
+        title: `Faz 14 önerisi: ${p.ders_adi || ''} - ${p.konu_adi || ''}`,
+        content,
+        metadata: { questionId: String(qid), phase14: true, status: r.status, model: r.model },
+        hash: hashContent(content),
+        createdAt: r.processed_at || now,
+        updatedAt: now,
+      });
+    }
+  } catch {
+    // Faz 14 kaydı yoksa atla
   }
   return chunks;
 }

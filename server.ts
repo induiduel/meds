@@ -50,6 +50,7 @@ import {
   loadDeepSeekContributions,
   DEEPSEEK_DATA_DIR
 } from './src/services/deepseekDataService.ts';
+import { applyPhase14Overlay } from './src/services/phase14Overlay.ts';
 import { getQuestionInsights, getInsightsSummary, getRawQuestionInsights, getPhaseOverride, savePhaseOverride, getQuestionDerivedRecords } from './src/services/phaseInsightsService.ts';
 import { applyCleanOverlay } from './src/services/lectureCleanOverlay.ts';
 import { applyQuarantine, quarantineMtime } from './src/services/questionQuarantine.ts';
@@ -960,6 +961,18 @@ app.post('/api/admin/phases/question/:id/test', requireAdmin, async (req, res) =
   }
 });
 
+// Müfredat bilgi paketi (kurul → ders → konu): Faz 14, soru üretici ve site özellikleri kullanır. ?kurul=N ile tek kurul.
+app.get('/api/curriculum/package', (req, res) => {
+  try {
+    const f = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'derived', 'curriculum_links', 'mufredat_paketi.json');
+    const pkg = JSON.parse(fs.readFileSync(f, 'utf-8'));
+    const k = Number(req.query.kurul);
+    res.json(k ? { ...pkg, kurullar: (pkg.kurullar || []).filter((x: any) => x.kurul === k) } : pkg);
+  } catch {
+    res.status(404).json({ error: 'Müfredat paketi henüz üretilmedi (scripts/advanced_ai/curriculum_package.py).' });
+  }
+});
+
 app.get('/api/learn-links', (_req, res) => {
   try {
     const f = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'derived', 'learn_links.json');
@@ -1034,7 +1047,7 @@ function savePastQuestionsDb(list: any[]) {
 app.get('/api/past-exams/sync', (req, res) => {
   try {
     // Karantina uygulanmış liste: sayı değişince istemci allIds ile karantinadakileri önbelleğinden siler
-    const list = applyQuarantine(getPastQuestionsDb());
+    const list = applyQuarantine(applyPhase14Overlay(getPastQuestionsDb()));
     const since = req.query.since as string;
     const clientCount = req.query.count ? parseInt(req.query.count as string, 10) : undefined;
 
@@ -1096,7 +1109,7 @@ app.get('/api/past-exams/sync', (req, res) => {
 app.get('/api/past-exams', (req, res) => {
   try {
     // Karantina: birleşik/bozuk sorular gösterilmez, onarılanlar temiz döner (yalnız okuma yanıtı)
-    const list = applyQuarantine(getPastQuestionsDb());
+    const list = applyQuarantine(applyPhase14Overlay(getPastQuestionsDb()));
     const { committeeId, discipline, year, query } = req.query;
 
     // Fast HTTP Cache validator (304 Not Modified)

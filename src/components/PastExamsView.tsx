@@ -64,6 +64,8 @@ import {
 
 /** Faz 14'te önerisi onaylanıp canlı soruya uygulanmış soru (test/cikmis'ten). */
 export const isPhase14Fixed = (q: any): boolean => Boolean(q?.phase14 || (Array.isArray(q?.tags) && q.tags.includes('faz14_duzeltildi')));
+/** Faz 14 önerisi gösteriliyor ama yönetici onayı bekliyor (okuma katmanı) */
+export const isPhase14Pending = (q: any): boolean => q?.phase14?.status === 'onay_bekliyor';
 
 export const isDeepSeekQuestion = (q: any): boolean => {
   if (!q) return false;
@@ -107,7 +109,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
   const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'gemini_v3' | 'existing'>('all');
-  const [phase14Filter, setPhase14Filter] = useState<'all' | 'faz14'>('all');
+  const [phase14Filter, setPhase14Filter] = useState<'all' | 'faz14' | 'faz14_onayli' | 'faz14_bekleyen'>('all');
   const [newnessFilter, setNewnessFilter] = useState<'all' | 'new_only' | 'archived_only'>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -584,6 +586,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
       // 6. DeepSeek Filter
       if (phase14Filter === 'faz14' && !isPhase14Fixed(q)) return false;
+      if (phase14Filter === 'faz14_onayli' && (!isPhase14Fixed(q) || isPhase14Pending(q))) return false;
+      if (phase14Filter === 'faz14_bekleyen' && !isPhase14Pending(q)) return false;
       if (sourceFilter === 'gemini_v3' && !isGeminiV3Question(q)) return false;
       if (sourceFilter === 'existing' && isGeminiV3Question(q)) return false;
 
@@ -648,7 +652,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ...(sourceFilter !== 'all'
       ? [{ label: sourceFilter === 'gemini_v3' ? 'Gemini v3' : 'Mevcut veriler', clear: () => setSourceFilter('all') }]
       : []),
-    ...(phase14Filter !== 'all' ? [{ label: 'Faz 14 düzeltmesi', clear: () => setPhase14Filter('all') }] : []),
+    ...(phase14Filter !== 'all' ? [{ label: phase14Filter === 'faz14_bekleyen' ? 'Faz 14 · onay bekliyor' : phase14Filter === 'faz14_onayli' ? 'Faz 14 · onaylı' : 'Faz 14', clear: () => setPhase14Filter('all') }] : []),
     ...(answerFilter !== 'all'
       ? [{ label: answerFilter === 'with' ? 'Cevaplı' : 'Cevapsız', clear: () => setAnswerFilter('all') }]
       : []),
@@ -929,7 +933,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 <div className="ms-f-seg" role="radiogroup" aria-label="Faz 14 düzeltmesi">
                   {([
                     ['all', 'Tümü'],
-                    ['faz14', `Faz 14 düzeltilmiş ${questions.filter(isPhase14Fixed).length}`],
+                    ['faz14', `Faz 14 tümü ${questions.filter(isPhase14Fixed).length}`],
+                    ['faz14_onayli', `Onaylı ${questions.filter((x) => isPhase14Fixed(x) && !isPhase14Pending(x)).length}`],
+                    ['faz14_bekleyen', `Onay bekliyor ${questions.filter(isPhase14Pending).length}`],
                   ] as const).map(([id, label]) => (
                     <button key={id} type="button" role="radio" aria-checked={phase14Filter === id} onClick={() => { setPhase14Filter(id); setCurrentPage(1); }} className={phase14Filter === id ? 'is-on' : ''}>
                       {label}
@@ -1127,7 +1133,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       className="h-[22px] px-2 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-[11px] font-semibold inline-flex items-center gap-1 shrink-0 cursor-pointer hover:bg-violet-100"
                       title="Faz 14 incelemesinde düzeltildi — değişiklikleri ve öncesini gör"
                     >
-                      <Info className="w-3 h-3" /> Düzeltildi
+                      <Info className="w-3 h-3" /> {isPhase14Pending(q) ? 'Faz 14 önerisi · onay bekliyor' : 'Düzeltildi'}
                     </button>
                   )}
                   {isGeminiV3Question(q) && (
@@ -1298,7 +1304,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       </p>
                     )}
                     {(q as any).answerStatus === 'faz14' && (
-                      <p className="m-0 text-[12.5px] text-violet-700 dark:text-violet-300">Cevap, kurul ve açıklama Faz 14 incelemesinde onaylandı.</p>
+                      <p className="m-0 text-[12.5px] text-violet-700 dark:text-violet-300">
+                        {isPhase14Pending(q)
+                          ? 'Bu soru Faz 14 yapay zekâ incelemesinden geçti; düzeltme yönetici onayı bekliyor (doğrulanmadı).'
+                          : 'Cevap, kurul ve açıklama Faz 14 incelemesinde onaylandı.'}
+                        {(q as any).phase14?.cevapDegisti && (q as any).phase14?.cevapGerekcesi ? ` Cevap değişti: ${(q as any).phase14.cevapGerekcesi}` : ''}
+                      </p>
                     )}
                     {(q as any).answerStatus === 'dogrulandi' && (
                       <p className="m-0 text-[12.5px] text-emerald-700 dark:text-emerald-300">

@@ -91,66 +91,80 @@ HEADERS_WRITE = {
     "X-API-Password": API_PASSWORD,
 }
 
-# Aylık Bütçe ve Maliyet Denetimi (Maksimum 1000 TL / Ay)
-# Google GenAI Fiyatları:
-# gemini-flash-lite: Girdi $0.075 / 1M token, Çıktı $0.30 / 1M token
-# gemini-flash:      Girdi $0.15 / 1M token,  Çıktı $0.60 / 1M token
-USD_TO_TRY = 42.0  # Güvenli tavan kur oranı
-MAX_MONTHLY_BUDGET_TL = 1000.0
+# Ücret denetimi: YALNIZ ücretli anahtar (PHASE14_PAID_GEMINI_KEY) sayılır; ücretsiz anahtarlar 0 TL.
+# Kullanıcı sınırları: ücretli anahtarla günde en fazla 100 istek, ayda en fazla 100 TL.
+USD_TO_TRY = 42.0  # güvenli tavan kur
+PAID_MAX_DAILY_REQUESTS = int(os.environ.get("PHASE14_PAID_MAX_DAILY", "100"))
+PAID_MAX_MONTHLY_TL = float(os.environ.get("PHASE14_PAID_MAX_MONTHLY_TL", "100"))
+MAX_MONTHLY_BUDGET_TL = PAID_MAX_MONTHLY_TL  # panel/sayfa uyumu
 COST_TRACKING_FILE = OUT_DIR / "cost_tracking.json"
 
-MODEL_PRICING = {
-    "gemini-flash-lite-latest": {"input": 0.075 / 1_000_000, "output": 0.30 / 1_000_000},
-    "gemini-3.5-flash-lite":    {"input": 0.075 / 1_000_000, "output": 0.30 / 1_000_000},
-    "gemini-3.1-flash-lite":    {"input": 0.075 / 1_000_000, "output": 0.30 / 1_000_000},
-    "gemini-3.8-flash":         {"input": 0.150 / 1_000_000, "output": 0.60 / 1_000_000},
-    "gemini-flash-latest":      {"input": 0.150 / 1_000_000, "output": 0.60 / 1_000_000},
+MODEL_PRICING = {  # USD / token (Google Gemini; flash-lite en ucuz)
+    "gemini-flash-lite-latest": {"input": 0.10 / 1_000_000, "output": 0.40 / 1_000_000},
+    "gemini-3.5-flash-lite":    {"input": 0.10 / 1_000_000, "output": 0.40 / 1_000_000},
+    "gemini-3.1-flash-lite":    {"input": 0.10 / 1_000_000, "output": 0.40 / 1_000_000},
+    "gemini-flash-latest":      {"input": 0.30 / 1_000_000, "output": 2.50 / 1_000_000},
 }
+# Ücretli anahtarda yalnız en ucuz modeller denenir
+PAID_MODELS = ["gemini-flash-lite-latest", "gemini-3.5-flash-lite"]
+FREE_MODELS = ["gemini-flash-lite-latest", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-flash-latest"]
 
 
 def load_monthly_cost() -> dict:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    current_month = datetime.utcnow().strftime("%Y-%m")
+    month = datetime.utcnow().strftime("%Y-%m")
+    day = datetime.utcnow().strftime("%Y-%m-%d")
+    data = {}
     if COST_TRACKING_FILE.exists():
         try:
             data = json.loads(COST_TRACKING_FILE.read_text(encoding="utf-8"))
-            if data.get("month") == current_month:
-                return data
         except Exception:
-            pass
-    return {
-        "month": current_month,
-        "total_requests": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "cost_usd": 0.0,
-        "cost_tl": 0.0,
-        "max_budget_tl": MAX_MONTHLY_BUDGET_TL,
-        "last_updated": datetime.utcnow().isoformat() + "Z"
-    }
+            data = {}
+    if data.get("month") != month:
+        data = {"month": month, "total_requests": 0, "free_requests": 0, "paid_requests": 0, "input_tokens": 0,
+                "output_tokens": 0, "cost_usd": 0.0, "cost_tl": 0.0}
+    if data.get("paid_day") != day:
+        data["paid_day"], data["paid_requests_today"] = day, 0
+    data["max_budget_tl"] = PAID_MAX_MONTHLY_TL
+    data["paid_max_daily"] = PAID_MAX_DAILY_REQUESTS
+    return data
 
 
-def record_cost_and_check_budget(model_name: str, in_tokens: int, out_tokens: int) -> bool:
-    """Maliyeti kaydeder ve 1000 TL bütçe aşımını denetler."""
-    pricing = MODEL_PRICING.get(model_name, {"input": 0.15 / 1_000_000, "output": 0.60 / 1_000_000})
-    cost_usd = (in_tokens * pricing["input"]) + (out_tokens * pricing["output"])
-    cost_tl = cost_usd * USD_TO_TRY
-
-    state = load_monthly_cost()
-    state["total_requests"] += 1
-    state["input_tokens"] += in_tokens
-    state["output_tokens"] += out_tokens
-    state["cost_usd"] = round(state["cost_usd"] + cost_usd, 5)
-    state["cost_tl"] = round(state["cost_tl"] + cost_tl, 3)
+def _save_cost(state: dict):
     state["last_updated"] = datetime.utcnow().isoformat() + "Z"
+    tmp = COST_TRACKING_FILE.with_suffix(".tmp")
+    tmp.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(COST_TRACKING_FILE)
 
-    COST_TRACKING_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
-    logging.info(f"[Bütçe Takibi] İstek Maliyeti: ~{cost_tl:.4f} TL | Aylık Toplam: {state['cost_tl']:.2f} TL / {MAX_MONTHLY_BUDGET_TL} TL")
 
-    if state["cost_tl"] >= MAX_MONTHLY_BUDGET_TL:
-        logging.error(f"[BÜTÇE LİMİTİ AŞILDI] Aylık harcama tavanına ({MAX_MONTHLY_BUDGET_TL} TL) ulaşıldı! Bulut çağrıları durduruluyor.")
-        return False
-    return True
+def paid_allowed() -> tuple[bool, str]:
+    st = load_monthly_cost()
+    if st.get("paid_requests_today", 0) >= PAID_MAX_DAILY_REQUESTS:
+        return False, f"ücretli günlük sınır doldu ({st['paid_requests_today']}/{PAID_MAX_DAILY_REQUESTS})"
+    if st.get("cost_tl", 0) >= PAID_MAX_MONTHLY_TL:
+        return False, f"ücretli aylık bütçe doldu ({st['cost_tl']:.2f}/{PAID_MAX_MONTHLY_TL:.0f} TL)"
+    return True, ""
+
+
+def record_usage(model_name: str, paid: bool, in_tokens: int, out_tokens: int, cached_tokens: int = 0) -> dict:
+    st = load_monthly_cost()
+    st["total_requests"] += 1
+    st["input_tokens"] += in_tokens
+    st["output_tokens"] += out_tokens
+    cost_tl = 0.0
+    if paid:
+        pr = MODEL_PRICING.get(model_name, MODEL_PRICING["gemini-flash-latest"])
+        # önbellekten okunan girdi tokenları %25 fiyatla (implicit caching)
+        usd = (in_tokens - cached_tokens) * pr["input"] + cached_tokens * pr["input"] * 0.25 + out_tokens * pr["output"]
+        cost_tl = usd * USD_TO_TRY
+        st["paid_requests"] = st.get("paid_requests", 0) + 1
+        st["paid_requests_today"] = st.get("paid_requests_today", 0) + 1
+        st["cost_usd"] = round(st["cost_usd"] + usd, 6)
+        st["cost_tl"] = round(st["cost_tl"] + cost_tl, 4)
+    else:
+        st["free_requests"] = st.get("free_requests", 0) + 1
+    _save_cost(st)
+    return {"cost_tl": cost_tl, **st}
 
 
 LOG_FILE = ROOT.parent / "meds_temp" / "logs" / "phase14.log"
@@ -160,10 +174,9 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     datefmt="%H:%M:%S",
-    handlers=[
-        logging.StreamHandler(sys.stderr),
-        logging.FileHandler(str(LOG_FILE), encoding="utf-8")
-    ]
+    # Tek işleyici: sunucu betiğin stdout/stderr'ini zaten phase14.log'a yönlendiriyor; StreamHandler + FileHandler
+    # birlikte her satırı İKİ KEZ yazıyordu (istek tek). Çıktı terminale gidiyorsa (elle çalıştırma) ekrana da yazılır.
+    handlers=[logging.FileHandler(str(LOG_FILE), encoding="utf-8")] + ([logging.StreamHandler(sys.stderr)] if sys.stderr.isatty() else [])
 )
 
 
@@ -200,91 +213,77 @@ def load_curriculum_summary() -> str:
         return ""
 
 
-def call_gemini_json(prompt_text: str) -> tuple[dict | None, str]:
-    """Doğrudan HTTP REST API ile en düşük maliyetli ve aktif Gemini Flash-Lite/Flash modellerini çağırır."""
-    cost_data = load_monthly_cost()
-    if cost_data["cost_tl"] >= MAX_MONTHLY_BUDGET_TL:
-        logging.warning(f"Aylık bütçe kotası ({MAX_MONTHLY_BUDGET_TL} TL) dolduğu için bulut API çağrısı engellendi.")
-        if lib:
-            logging.info("Sıfır maliyetli yerel model (RTX 4060 - Gemma 3) fallback devreye giriyor...")
-            res = lib.chat(lib.MODEL_TEXT, prompt_text, as_json=True, timeout=120)
-            if isinstance(res, dict):
-                return res, f"local-{lib.MODEL_TEXT}"
-        return None, "budget_exceeded"
+def _key_tiers() -> list[tuple[str, str, bool]]:
+    """(etiket, anahtar, ücretli_mi) — önce ücretsizler, en son ücretli (yalnız Faz 14)."""
+    tiers = []
+    for name in ("GEMINI_API_KEY", "GEMINI_FREE_KEY_2", "GEMINI_FALLBACK_KEY"):
+        v = os.environ.get(name, "").strip()
+        if not v:
+            try:
+                for line in (ROOT / ".env").read_text(encoding="utf-8").splitlines():
+                    if line.startswith(name + "="):
+                        v = line.split("=", 1)[1].split(" #")[0].strip().strip('"')
+            except OSError:
+                pass
+        if v and not v.startswith(("BURAYA_", "MY_")) and v != _paid_key() and all(v != t[1] for t in tiers):
+            tiers.append((f"ücretsiz:{name}", v, False))
+    if _paid_key():
+        tiers.append(("ÜCRETLİ:PHASE14_PAID_GEMINI_KEY", _paid_key(), True))
+    return tiers
 
-    # En düşük maliyetli, yüksek kotalı ve aktif resmi modeller sırasıyla denenir
-    models = [
-        "gemini-flash-lite-latest",
-        "gemini-3.5-flash-lite",
-        "gemini-3.1-flash-lite",
-        "gemini-3.8-flash",
-        "gemini-flash-latest",
-    ]
+
+def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | None, str]:
+    """Gemini REST. system_text (kurallar + müfredat paketi) her istekte AYNI → otomatik önbellek (implicit caching).
+    Her istekte hangi API/anahtar/model kullanıldığı ve ücretli sayaç günlüğe yazılır. Yerel model yok."""
     payload = {
-        "contents": [{"parts": [{"text": prompt_text}]}],
-        "generationConfig": {
-            "responseMimeType": "application/json",
-            "temperature": 0.1,
-        },
+        "contents": [{"role": "user", "parts": [{"text": prompt_text}]}],
+        "generationConfig": {"responseMimeType": "application/json", "temperature": 0.1},
     }
+    if system_text:
+        payload["systemInstruction"] = {"parts": [{"text": system_text}]}
     data_bytes = json.dumps(payload).encode("utf-8")
 
-    for key in GEMINI_KEYS:
-        for model in models:
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
-            req = urllib.request.Request(
-                url,
-                data=data_bytes,
-                headers={"Content-Type": "application/json"},
-                method="POST",
-            )
+    for label, key, paid in _key_tiers():
+        if paid:
+            ok, why = paid_allowed()
+            if not ok:
+                logging.warning(f"[API] {label} kullanılmadı: {why}")
+                continue
+        for model in (PAID_MODELS if paid else FREE_MODELS):
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+            req = urllib.request.Request(url, data=data_bytes, method="POST",
+                                         headers={"Content-Type": "application/json", "x-goog-api-key": key})
             try:
-                with urllib.request.urlopen(req, timeout=30) as resp:
-                    res_body = json.loads(resp.read().decode("utf-8"))
-                    text = (
-                        res_body.get("candidates", [{}])[0]
-                        .get("content", {})
-                        .get("parts", [{}])[0]
-                        .get("text", "")
-                        .strip()
-                    )
-                    usage = res_body.get("usageMetadata", {})
-                    in_tokens = usage.get("promptTokenCount", len(prompt_text) // 4)
-                    out_tokens = usage.get("candidatesTokenCount", len(text) // 4)
-                    record_cost_and_check_budget(model, in_tokens, out_tokens)
-
-                    if text.startswith("```"):
-                        lines = text.splitlines()
-                        if lines[0].startswith("```"):
-                            lines = lines[1:]
-                        if lines and lines[-1].startswith("```"):
-                            lines = lines[:-1]
-                        text = "\n".join(lines).strip()
-                    return json.loads(text), model
+                with urllib.request.urlopen(req, timeout=60) as resp:
+                    body = json.loads(resp.read().decode("utf-8"))
+                text = "".join(p.get("text", "") for p in (body.get("candidates") or [{}])[0].get("content", {}).get("parts", [])).strip()
+                usage = body.get("usageMetadata", {})
+                in_t = usage.get("promptTokenCount", len(prompt_text) // 4)
+                out_t = usage.get("candidatesTokenCount", len(text) // 4)
+                cached = usage.get("cachedContentTokenCount", 0)
+                st = record_usage(model, paid, in_t, out_t, cached)
+                if paid:
+                    logging.info(f"[API] {label} · {model} · giriş {in_t} (önbellek {cached}) / çıkış {out_t} token · "
+                                 f"~{st['cost_tl']:.4f} TL · bugün {st['paid_requests_today']}/{PAID_MAX_DAILY_REQUESTS} · "
+                                 f"ay {st['cost_tl']:.2f}/{PAID_MAX_MONTHLY_TL:.0f} TL")
+                else:
+                    logging.info(f"[API] {label} · {model} · giriş {in_t} (önbellek {cached}) / çıkış {out_t} token · ücretsiz")
+                if text.startswith("```"):
+                    text = text.strip("`").split("\n", 1)[1] if "\n" in text else text
+                    text = text.rsplit("```", 1)[0].strip()
+                return json.loads(text), f"{model} ({'ücretli' if paid else 'ücretsiz'})"
             except urllib.error.HTTPError as e:
-                err_text = e.read().decode("utf-8", errors="ignore")
+                err = e.read().decode("utf-8", errors="ignore")[:200]
                 if e.code == 429:
-                    logging.warning(f"Gemini {model} rate limit (429), sonraki düşük maliyetli modele geçiliyor...")
+                    logging.warning(f"[API] {label} · {model}: kota (429), sıradakine geçiliyor")
                     time.sleep(1)
                     continue
-                elif e.code in (404, 503):
-                    logging.warning(f"Gemini {model} kullanılamıyor ({e.code}), alternatif model deneniyor...")
-                    continue
-                logging.error(f"Gemini HTTP {e.code} hatası ({model}): {err_text[:200]}")
-            except Exception as e:
-                logging.warning(f"Gemini çağrı hatası ({model}): {e}")
+                logging.warning(f"[API] {label} · {model}: HTTP {e.code} {err}")
                 continue
-
-    # Bulut anahtarları veya kotaları yetersizse yerel sıfır maliyetli model fallback
-    if lib:
-        try:
-            logging.info("Gemini kotaları nedeniyle yerel model fallback devreye giriyor (Gemma 3)...")
-            res = lib.chat(lib.MODEL_TEXT, prompt_text, as_json=True, timeout=120)
-            if isinstance(res, dict):
-                return res, f"local-{lib.MODEL_TEXT}"
-        except Exception as e:
-            logging.error(f"Yerel model fallback hatası: {e}")
-
+            except Exception as e:  # noqa: BLE001
+                logging.warning(f"[API] {label} · {model}: {e}")
+                continue
+    logging.error("[API] hiçbir anahtar/model yanıt vermedi (ücretsiz kotalar ve ücretli sınır doldu olabilir); soru sonraki çalıştırmaya kaldı")
     return None, "none"
 
 
@@ -315,74 +314,66 @@ def source_view(question: dict) -> dict:
     }
 
 
+PHASE14_RULES = """Sen tıp fakültesi Dönem 3 kurul sınavı soru editörüsün. Görevin, öğrencilerin hatırlayarak ya da OCR ile
+aktardığı ÇIKMIŞ bir soruyu, sorulmak isteneni değiştirmeden doğru, eksiksiz ve okunur hâle getirmektir.
+
+TALİMATLARA HARFİYEN UY:
+1. SORU KÖKÜ: Anlamını ve bağlamını mümkün olduğunca DEĞİŞTİRME. Yalnız imla, harf düşmesi, OCR bozukluğu, yapışık
+   kelime ve eksik kalmış kısmı düzelt/tamamla. Eksik kökü ŞIKLARDAN yararlanarak tamamla (şıklar sorunun ne sorduğunu
+   gösterir). Olumlu kökü olumsuza, olumsuzu olumluya ÇEVİRME. Sorunun ana hedefi neyse ona odaklan; başka bir konuya kaydırma.
+2. ŞIKLAR: Aynı ilke — imla/OCR/yapışık kelime düzelt, eksik kalan şık metnini bağlamdan tamamla. Kaynakta hiç olmayan
+   şıkları ancak 5'e tamamlamak için ekle ve harflerini "yapay_zeka_tamamlanan_siklar" listesine yaz.
+3. CEVAP — ÇOK ÖNEMLİ: Kayıttaki cevap ("kayitli_cevap") YANLIŞ OLABİLİR (çoğu öğrencinin işaretlediği şıktır).
+   Şıkları ASLA kayıttaki cevaba uysun diye değiştirme. Doğru cevabı soru kökü ve şıkların tıbbi içeriğine göre SEN belirle.
+   Kayıttaki cevapla aynıysa "cevap_degisti": false; farklıysa "cevap_degisti": true ve "cevap_gerekcesi"nde nedenini yaz.
+   Emin değilsen "cevap_emin": false yaz.
+4. MÜFREDAT: Aşağıdaki DÖNEM 3 MÜFREDAT PAKETİ'ni kullan. Sorunun hangi kurul, ders ve KONU başlığına ait olduğunu
+   paketteki adlarla birebir yaz (paketteki bir konu adını seç; uydurma ad yazma). Kurulu "TIP3N0" biçiminde yaz.
+5. AÇIKLAMA: Maddeler hâlinde yaz ("aciklama_maddeleri" listesi, 3–6 madde, her madde tek cümle/kısa paragraf):
+   doğru cevabın mekanizması, önemli çeldiricilerin neden yanlış olduğu, varsa klinik ipucu. Uydurma kaynak gösterme.
+6. Yaptığın her değişikliği "degisen_alanlar" ve "degisiklik_ozeti"nde dürüstçe belirt. Değişiklik yoksa boş liste.
+7. Yalnız istenen JSON şemasıyla yanıt ver."""
+
+
+def system_text() -> str:
+    """Kurallar + tüm müfredat paketi: her istekte birebir aynı (Gemini otomatik önbelleği için ön ek)."""
+    global _SYSTEM_CACHE
+    if _SYSTEM_CACHE is None:
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
+            import curriculum_package as CP
+            pkg_text = CP.as_text(CP.load())
+        except Exception as e:  # noqa: BLE001
+            logging.warning(f"Müfredat paketi okunamadı ({e}); paketsiz devam")
+            pkg_text = ""
+        _SYSTEM_CACHE = PHASE14_RULES + "\n\n" + pkg_text
+    return _SYSTEM_CACHE
+
+
+_SYSTEM_CACHE = None
+
+SCHEMA_HINT = """YANIT ŞEMASI (yalnız JSON):
+{"soru_koku": "...", "secenekler": {"A": "...", "B": "...", "C": "...", "D": "...", "E": "..."},
+ "dogru_secenek": "A-E", "cevap_degisti": false, "cevap_emin": true, "cevap_gerekcesi": "...",
+ "yapay_zeka_tamamlanan_siklar": [], "aciklama_maddeleri": ["...", "..."],
+ "kurul_adi": "TIP310", "ders_adi": "paketteki ders adı", "konu_adi": "paketteki konu adı",
+ "degisen_alanlar": ["soru_koku"], "degisiklik_ozeti": "kısa ve somut",
+ "YZV": {"degisiklik_ozeti": {"soru_koku_duzeltmesi": "...", "sik_duzeltmesi": "...", "aciklama_duzeltmesi": "...",
+          "mufredat_atamasi": "...", "cevap_dogrulamasi": "..."}, "referans_literatur": "varsa standart kaynak"}}"""
+
+
 def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> tuple[dict | None, str]:
-    """Soru verisini Gemini Bulut Modeline gönderir ve tıbbi literatüre göre YZV bloğuyla düzenletir."""
-    prompt = f"""Sen uzman bir tıp doktoru, akademisyen ve tıp fakültesi kurul/USMLE/TUS sınav soru hazırlama komisyonu başkanısın.
-Aşağıda verilen tıp fakültesi çıkmış sınav sorusunu tıbbi literatüre (Robbins & Cotran Patoloji, Guyton & Hall Tıbbi Fizyoloji, Harrison İç Hastalıkları, Goodman & Gilman Farmakoloji vb.) ve resmi tıp müfredatına göre titizlikle incele.
-
-KESİN TALİMATLAR VE GÖREVLER (ZORUNLU KURALLAR):
-1. SORU KÖKÜ VE MANTIĞI KESİNLİKLE KÖKLÜ DEĞİŞTİRİLEMEZ (ZORUNLU KORUMA):
-   - Soru kökündeki imla hatalarını, harf düşmelerini (örn: 'patloji' -> 'patoloji', 'etkisiyle' -> 'etkisi ile'), fazla/tekrarlanan harfleri ve OCR karakter bozukluklarını (0/O, 1/I, bozuk Türkçe karakterler) düzelt.
-   - DİKKAT: Soru kökünün yönünü, mantığını ve hedefini KÖKLÜ BİÇİMDE DEĞİŞTİRMEK KESİNLİKLE YASAKTIR!
-     * Örneğin: 'Hangisi doğrudur?' sorusu ASLA 'Hangisi yanlıştır / doğru değildir?' diye değiştirilemez!
-     * Soru olumlu sorulmuşsa ('...etkendir', '...görülür', '...en olasıdır') olumsuz yapılamaz; olumsuz sorulmuşsa ('...değildir', '...beklenmez') olumlu yapılamaz!
-     * Sorunun doğru cevabını ve doğru şıkkını değiştirecek hiçbir köklü manipülasyon yapılamaz!
-
-2. ESKİ, GEREKSİZ VE ANLAMSIZ AÇIKLAMALARIN YENİDEN YAZILMASI:
-   - Eski, yetersiz, kopyala-yapıştır veya soruyla alakasız açıklamaları tamamen temizle.
-   - Soruya ve doğru cevaba doğrudan odaklanan, klinik ve fizyopatolojik/farmakolojik mekanizmayı açıklayan, doğru şıkkın neden doğru olduğunu ve diğer önemli çeldiricilerin neden elendiğini net olarak anlatan öğretici, kaliteli bir açıklama yaz.
-
-3. ŞIKLARIN KONTROLÜ, EKSİK ŞIKLARI TAMAMLAMA VE CEVAP DOĞRULAMA:
-   - 5 seçeneğin (A, B, C, D, E) tamamı mevcut olmalıdır. Eğer soru kaynağında eksik şık varsa (örneğin yalnızca 3 veya 4 şık hatırlanmışsa ya da şık boşsa):
-     * Klinik mekanizmaya, komite müfredatına ve soru köküne uygun güçlü, mantıklı tıbbi çeldiriciler üreterek 5 şıkkı (A, B, C, D, E) eksiksiz tamamla!
-     * Sonradan yapay zekâ tarafından üretilen/tamamlanan şıkların harflerini "yapay_zeka_tamamlanan_siklar" listesine ekle (örn: ["D", "E"] veya ["E"]).
-   - Şıklar içindeki metinleri denetle: Bazen cümleler birleşik basılmış ('hastanıntetkikinde'), kelimeler yapışık ('akutapandisit'), eksik veya karakter bazlı bozukluklar taşıyor olabilir. Birleşik kelimeleri ayır, imla ve Latince terminoloji hatalarını düzelt.
-   - Kaynak doğru cevap anahtarına saygı duy; sadece açıkça kanıtlanabilir bariz bir tıp/dizgi hatası varsa gerekçesini belirterek düzelt, keyfi cevap kaydırması yapma.
-
-4. MÜFREDAT VE JSON ŞEMA UYUMLULUĞU:
-   - Bu sorunun hangi Kurul (örn: TIP310, TIP320, TIP340, TIP350, TIP360), hangi Ders (Anatomi, Fizyoloji, Patoloji, Farmakoloji, Mikrobiyoloji, Dahiliye, Cerrahi vb.) ve hangi Konu başlığına ait olduğunu resmi müfredata göre tespit et ve JSON içine yaz.
-   - Yapılan her müdahaleyi şeffaf biçimde 'YZV' (Yapay Zeka Verisi) altında listele.
-
-MEVCUT SORU VERİSİ:
-{json.dumps(soru, ensure_ascii=False, indent=2)}
-
-MÜFREDAT BİLGİSİ / İPUCU:
-{mufredat_ozeti}
-
-LÜTFEN YALNIZCA AŞAĞIDAKİ JSON ŞEMASINDA YANIT VER:
-{{
-  "soru_koku": "Yazım hataları, fazla veya eksik harfleri düzeltilmiş, anlam bütünlüğü tam soru kökü",
-  "secenekler": {{
-     "A": "...",
-     "B": "...",
-     "C": "...",
-     "D": "...",
-     "E": "..."
-  }},
-  "dogru_secenek": "A/B/C/D/E",
-  "yapay_zeka_tamamlanan_siklar": ["E"],
-  "aciklama": "Soru ve şıklarla doğrudan ilişkili, tıbbi literatüre dayalı yeni ve detaylı açıklama",
-  "kurul_adi": "Belirlenen Kurul Adı veya Kodu (örn: TIP310)",
-  "ders_adi": "Belirlenen Ders Adı (örn: Patoloji)",
-  "konu_adi": "Belirlenen Konu Adı (örn: Kronik Enflamasyon)",
-  "degisen_alanlar": ["soru_koku", "aciklama", "kurul_adi", "ders_adi", "konu_adi"],
-  "degisiklik_ozeti": "Yapılan düzeltmelerin kısa ve somut özeti (harf hataları, açıklama yenilemesi, AI şık tamamlama vb.)",
-  "review_required": true,
-  "YZV": {{
-     "islem_zamani": "{datetime.utcnow().isoformat()}Z",
-     "degisiklik_yapildi_mi": true,
-     "degisen_alanlar": ["soru_koku", "aciklama", "kurul_adi"],
-     "degisiklik_ozeti": {{
-        "soru_koku_duzeltmesi": "Soru kökündeki harf/imla/anlam düzeltmelerinin detayı",
-        "aciklama_duzeltmesi": "Açıklamanın tıbbi literatüre göre nasıl yenilendiği",
-        "sik_duzeltmesi_ve_tamamlama": "Şıklardaki birleşik kelimelerin ayrılması ve eksik şıkların AI ile tamamlanması",
-        "mufredat_atamasi": "Atanan ders, kurul ve konu gerekçesi",
-        "cevap_dogrulamasi": "Doğru şıkkın tıbbi gerekçesi"
-     }},
-     "referans_literatur": "İlgili standart kaynak (örn. Robbins Patoloji 10. Baskı, Bl. 3)"
-  }}
-}}"""
-    return call_gemini_json(prompt)
+    """Soruyu bulut modeline gönderir. Kayıttaki cevap 'kayitli_cevap' olarak verilir (doğru kabul edilmez)."""
+    girdi = {k: v for k, v in soru.items() if k != "dogru_secenek"}
+    girdi["kayitli_cevap"] = soru.get("dogru_secenek") or ""
+    prompt = "İNCELENECEK SORU:\n" + json.dumps(girdi, ensure_ascii=False, indent=1) + "\n\n" + SCHEMA_HINT
+    res, model = call_gemini_json(prompt, system_text())
+    if isinstance(res, dict):
+        maddeler = [str(m).strip() for m in (res.get("aciklama_maddeleri") or []) if str(m).strip()]
+        if maddeler:
+            res["aciklama"] = "\n".join(f"• {m}" for m in maddeler)   # site bu satırları madde olarak gösterir
+        res.setdefault("review_required", True)
+    return res, model
 
 
 def support_ratio(original: dict, proposal: dict) -> float:
@@ -407,7 +398,7 @@ def main() -> int:
     args = parser.parse_args()
 
     islenmisler = load_checkpoints()
-    curriculum_summary = load_curriculum_summary()
+    curriculum_summary = ""  # müfredat paketi sistem metninde (system_text)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     # 1. Soruları çek: Önce yerel veritabanı dosyasından veya /v1/past-exams endpointinden
@@ -432,6 +423,16 @@ def main() -> int:
             logging.error(f"Soru çekme hatası: {e}")
             return 1
 
+    # Ders programı sırası: Dönem 3 Kurul 1'den başlayarak kurul → ders → konu (rastgele değil)
+    import re as _re
+
+    def _order(q: dict):
+        c = str(q.get("contentCommitteeId") or q.get("committeeId") or "")
+        m = _re.search(r"kurul\s*-?\s*(\d)", c, _re.I) or _re.match(r"^TIP\s*3(\d)0$", c, _re.I)
+        k = int(m.group(1)) if m else (7 if "final" in c else 8 if "butunleme" in c else 9)
+        return (k, str(q.get("discipline") or ""), str(q.get("topic") or ""), str(q.get("id") or ""))
+
+    questions = sorted(questions, key=_order)
     stats = {"aday": len(questions), "islenen": 0, "degisiklik_onerisi": 0, "inceleme_gerekli": 0, "hata": 0}
 
     with REVIEWS_FILE.open("a", encoding="utf-8") as out_reviews:
@@ -446,7 +447,7 @@ def main() -> int:
             if len(src["soru_koku"].strip()) < 15 or len(src["secenekler"]) < 4:
                 continue
 
-            logging.info(f"Soru #{s_id} Google Gemini ile inceleniyor...")
+            logging.info(f"Soru #{s_id} inceleniyor · {q.get('committeeId')} · {q.get('discipline')} · {q.get('topic')}")
             ai_sonuc, model_used = ai_ile_soruyu_duzelt(src, curriculum_summary)
 
             if not ai_sonuc or not isinstance(ai_sonuc, dict):
@@ -464,7 +465,7 @@ def main() -> int:
                 "question_id": s_id,
                 "source_hash": hashlib.sha256(json.dumps(src, ensure_ascii=False, sort_keys=True).encode()).hexdigest(),
                 "processed_at": datetime.utcnow().isoformat() + "Z",
-                "model": model_used or "gemini-flash-lite-latest",
+                "model": model_used or "bilinmiyor",
                 "source": src,
                 "proposal": ai_sonuc,
                 "support_ratio": ratio,

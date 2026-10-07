@@ -352,7 +352,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     logs: string[];
   } | null>(null);
   const [isTriggering, setIsTriggering] = useState(false);
-  const [triggerLimit, setTriggerLimit] = useState(15);
+  const [triggerLimit, setTriggerLimit] = useState(5);
   const [showConsole, setShowConsole] = useState(() => typeof window === 'undefined' || window.innerWidth >= 1024);
 
   // Edit proposal modal state
@@ -380,7 +380,9 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     try {
       const data = await ApiService.getPastQuestionReviews({ status: 'all' });
       // Soru ID'sine göre tekilleştir (en son işlenen/güncellenen kaydı tut)
-      const rawList = data.reviews || [];
+      // Aynı soru için birden çok kayıt olabilir (yeniden değerlendirme): en güncel kayıt gösterilir
+      const stamp = (r: any) => Date.parse(r.last_edited_at || r.processed_at || '') || 0;
+      const rawList = [...(data.reviews || [])].sort((a: any, b: any) => stamp(b) - stamp(a));
       const seen = new Set<string>();
       const deduped: PastQuestionReviewRecord[] = [];
       for (const item of rawList) {
@@ -558,7 +560,9 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
         const propMatch = String(r.proposal?.soru_koku || '').toLowerCase().includes(q);
         const discMatch = String(r.source?.ders_adi || r.proposal?.ders_adi || '').toLowerCase().includes(q);
         const summaryMatch = String(r.proposal?.degisiklik_ozeti || '').toLowerCase().includes(q);
-        return idMatch || stemMatch || propMatch || discMatch || summaryMatch;
+        // Faz 14 verisinin tamamı aranabilir: şıklar, açıklama, kurul/ders/konu, model notları
+        const fullMatch = JSON.stringify([r.proposal || {}, r.source?.secenekler || {}, r.source?.aciklama || '', r.source?.konu_adi || '']).toLowerCase().includes(q);
+        return idMatch || stemMatch || propMatch || discMatch || summaryMatch || fullMatch;
       });
     }
 
