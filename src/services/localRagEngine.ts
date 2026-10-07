@@ -163,7 +163,7 @@ function getGeminiKeys(): string[] {
   return [
     process.env.GEMINI_API_KEY,
     process.env.GEMINI_FREE_KEY_2,
-    process.env.GEMINI_BILLED_KEY
+    process.env.MEDS_FREE_ONLY !== '0' ? undefined : process.env.GEMINI_BILLED_KEY, // yalnız ücretsiz anahtarlar
   ].filter((k): k is string => Boolean(k && k.trim() && k !== 'MY_GEMINI_FREE_KEY_1' && k !== 'MY_GEMINI_API_KEY'));
 }
 

@@ -8,7 +8,7 @@ Faz zinciri (phase_cycle.py) Faz 8 bitince bunu çalıştırır; ardından süre
 1. Drive envanteri + artımlı indirme   → scripts/pipeline/01-inventory.mjs, 02-download.mjs
 2. Hatalı OCR tespiti (kaynak bazında): chunk kalite puanı düşük, bozuk karakter oranı yüksek
    ("sඈnav", özel kullanım alanı glifleri) ya da harf düşmesi ("k nuşma") belirtileri
-3. Yeniden okuma: read_document.py --force --docling --vision (tablo/başlık korumalı + görsel model)
+3. Yeniden okuma: read_document.py --force (bulut görsel OCR, Tesseract ile doğrulanır)
    Her turda en fazla --max-reocr kaynak; aynı kaynak 7 gün içinde tekrar denenmez.
 
 Durum: meds_temp/state/stage1_refresh_state.json   Rapor: meds_temp/state/stage1_refresh_report.json
@@ -152,10 +152,11 @@ def main():
             report["yeniden_ocr"].append({**f, "dosya": str(p), "durum": "dry"})
             continue
         log(f"yeniden OCR: {p.name} (öncelik {f['oncelik']})")
-        gpu_ok = subprocess.run(["nvidia-smi"], capture_output=True).returncode == 0
-        cmd = [PY, "scripts/agents/read_document.py", str(p), "--force", "--docling"] + (["--vision"] if gpu_ok else [])
+        # Klasik okuyucu: metin katmanı PyMuPDF; taranmış/bozuk sayfalar bulut görsel OCR (Gemini) + Tesseract doğrulaması.
+        # Docling kullanılmaz: kendi içindeki Tesseract bulut OCR'yi atlıyordu (taranmış sayfada daha düşük doğruluk).
+        cmd = [PY, "scripts/agents/read_document.py", str(p), "--force"]
         rc, o = run(cmd, timeout=3600)
-        state["reocr"][f["source_id"]] = {"ts": time.time(), "rc": rc, "yontem": "docling+vision" if gpu_ok else "docling (GPU yok)"}
+        state["reocr"][f["source_id"]] = {"ts": time.time(), "rc": rc, "yontem": "bulut_ocr+tesseract"}
         report["yeniden_ocr"].append({**f, "dosya": str(p), "rc": rc})
         json.dump(state, open(STATE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 

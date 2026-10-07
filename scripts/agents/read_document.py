@@ -3,7 +3,8 @@
 PDF / PPTX okuma ajanı (downloads -> temp1).
 
 PROJE_TANITIMI.md'deki 1. aşama: ham kaynaktan ilk veriyi çıkarır. Tamamen yerel çalışır
-(PyMuPDF, python-pptx, Tesseract[tur]; isteğe bağlı Ollama görsel model) ve token harcamaz.
+(PyMuPDF, python-pptx, Tesseract[tur]) ve taranmış sayfalar/slayt görselleri için bulut görsel model (Gemini,
+ücretsiz anahtarlar; Tesseract'la kelime örtüşmesiyle doğrulanır). Yerel AI modeli kullanılmaz.
 
 Her kaynak için temp1 altında iki dosya üretilir:
   <ad>.md    okunabilir ham metin ("## Sayfa N" / "## Slayt N" bölümleri)
@@ -34,8 +35,6 @@ import lib  # noqa: E402  (OCR çöp tespiti, kalite puanı, hafif model) — ek
 PROJECT_ROOT = Path(__file__).resolve().parents[3]  # .../MedSoru Project
 DEFAULT_DOWNLOADS = Path(os.environ.get("MEDS_DOWNLOADS_DIR") or PROJECT_ROOT / "meds_downloads")
 DEFAULT_TEMP1 = Path(os.environ.get("MEDS_TEMP_DIR") or PROJECT_ROOT / "meds_temp") / "temp1"
-OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434")
-VISION_MODEL = os.environ.get("MEDS_VISION_MODEL", "qwen3-vl:8b")
 OCR_LANG = os.environ.get("MEDS_OCR_LANG", "tur+eng")
 OCR_DPI = int(os.environ.get("MEDS_OCR_DPI", "250"))
 MIN_TEXT_CHARS = 40  # bunun altındaki sayfalar "metinsiz" sayılır ve OCR'a gider
@@ -80,104 +79,44 @@ def preprocess_image_for_ocr(pil_img):
         return pil_img
 
 
-def slice_image_quadrants(pil_img) -> list:
-    """
-    2. Görüntü Dilimleme (Image Tiling / Slicing):
-    Büyük ve çok yazılı slaytları 2x2 4 kadrana bölerek Qwen-VL downsampling kaybını engeller.
-    """
-    w, h = pil_img.size
-    if w < 1000 or h < 800:
-        return [pil_img]
-    mid_x, mid_y = w // 2, h // 2
-    quadrants = [
-        pil_img.crop((0, 0, mid_x, mid_y)),          # Sol üst
-        pil_img.crop((mid_x, 0, w, mid_y)),          # Sağ üst
-        pil_img.crop((0, mid_y, mid_x, h)),          # Sol alt
-        pil_img.crop((mid_x, mid_y, w, h)),          # Sağ alt
-    ]
-    return quadrants
-
-
 def ocr_image(img) -> str:
-    """
-    4. Hibrit OCR Mimarisi:
-    Önce EasyOCR (varsa) veya Tesseract çalıştırılır.
-    """
-    # EasyOCR kontrolü
-    try:
-        import easyocr
-        reader = easyocr.Reader(['tr', 'en'], gpu=True)
-        results = reader.readtext(np.array(img), detail=0)
-        easy_text = " ".join(results).strip()
-        if easy_text and not lib.is_ocr_garbage(easy_text):
-            return easy_text
-    except Exception:
-        pass
-
-    # Tesseract OCR
+    """Tesseract (tur+eng). psm 3: otomatik sayfa bölütleme — iki sütunlu sınav sayfalarında sütunları karıştırmaz
+    (psm 6 tüm sayfayı tek blok sanıp iki sütunun satırlarını iç içe geçiriyordu)."""
     import pytesseract
     try:
-        return pytesseract.image_to_string(img, lang=OCR_LANG, config="--oem 1 --psm 6")
+        return pytesseract.image_to_string(img, lang=OCR_LANG, config="--oem 1 --psm 3")
     except Exception:
         return ""
 
 
-def vision_ocr_single(png_bytes: bytes) -> str:
-    """Tekil parça için Qwen3-VL ile katı promptlu OCR."""
-    import requests
+# Bulut görsel okuma (Gemini) varsayılan olarak açık: taranmış sayfalarda en yüksek doğruluk. Kapatmak: MEDS_OCR_CLOUD=0
+CLOUD_OCR = os.environ.get("MEDS_OCR_CLOUD", "1") != "0"
+_WORD = re.compile(r"[0-9A-Za-zÇĞİÖŞÜçğıöşüÂâÎîÛû]{4,}")
 
-    # 3. VLM İçin Katı OCR Promptu (Strict Prompting)
-    prompt = (
-        "Sen yüksek hassasiyetli bir tıbbi OCR motorusun. "
-        "Sana verilen görseldeki metni BİREBİR çıkaracaksın. Hiçbir yorum ekleme, özetleme yapma ve metni değiştirme. "
-        "Türkçe karakterleri (ç ğ ı İ ö ş ü) ve tıbbi Latince terimleri koru. "
-        "Eğer tıbbi bir tablo varsa bunu Markdown tablosu formatında ver. "
-        "Eğer görselde okunmayan bir yer varsa oraya [OKUNAMIYOR] yaz. "
-        "Okunabilir hiçbir metin yoksa sadece BOŞ yaz."
-    )
-    r = requests.post(
-        f"{OLLAMA_URL}/api/chat",
-        json={
-            "model": VISION_MODEL,
-            "stream": False,
-            "think": False,
-            "messages": [{"role": "user", "content": prompt, "images": [base64.b64encode(png_bytes).decode()]}],
-            "options": {"temperature": 0},
-        },
-        timeout=600,
-    )
-    r.raise_for_status()
-    out = r.json()["message"]["content"].strip()
-    if out.upper() in {"BOŞ", "BOS", "BOŞTUR", "YOK"}:
-        return ""
-    return out
+
+def _fold(w: str) -> str:
+    return w.translate(str.maketrans("ÇĞİIÖŞÜçğıöşüâîû", "cgiiosucgiosuaiu")).lower()
+
+
+def ocr_support(cloud_text: str, tess_text: str) -> float:
+    """Bulut metnindeki kelimelerin Tesseract çıktısında da geçme oranı (5 harflik kök eşleşmesi).
+    Görsel modelin metin uydurmasını/yeniden yazmasını yakalar; Tesseract hataları kısmi eşleşmeyle tolere edilir."""
+    cw = [_fold(w) for w in _WORD.findall(cloud_text)]
+    if not cw:
+        return 0.0
+    tw = {_fold(w)[:5] for w in _WORD.findall(tess_text)}
+    return sum(1 for w in cw if w[:5] in tw) / len(cw)
 
 
 def vision_ocr(png_bytes: bytes, pil_img=None) -> str:
-    """Yerel Ollama görsel modeliyle (qwen3-vl:8b) sayfayı dilimleyerek (slicing) okur."""
-    if pil_img is None:
-        from PIL import Image
-        pil_img = Image.open(io.BytesIO(png_bytes))
-
-    # Geniş/yoğun görsellerde dilimleme (slicing) uygula
-    w, h = pil_img.size
-    if w >= 1200 and h >= 900:
-        quads = slice_image_quadrants(pil_img)
-        texts = []
-        for q in quads:
-            buf = io.BytesIO()
-            q.save(buf, format="PNG")
-            t = vision_ocr_single(buf.getvalue())
-            if t:
-                texts.append(t)
-        if texts:
-            return "\n\n".join(texts)
-
-    return vision_ocr_single(png_bytes)
+    """Bulut görsel model (Gemini) ile birebir metin çıkarımı. Yanıt yoksa boş."""
+    import cloud_llm
+    out = cloud_llm.vision_ocr(png_bytes)
+    return out or ""
 
 
 def online_web_ocr(png_bytes: bytes) -> str:
-    """Yerel OCR yetersiz kaldığında ücretsiz internet tabanlı OCR motorundan destek alır."""
+    """Son çare: ücretsiz web OCR (bulut görsel ve Tesseract ikisi de yetersizse)."""
     import requests
     try:
         r = requests.post(
@@ -187,108 +126,62 @@ def online_web_ocr(png_bytes: bytes) -> str:
             timeout=20,
         )
         if r.status_code == 200:
-            res = r.json()
-            lines = []
-            for item in res.get("ParsedResults", []):
-                t = item.get("ParsedText", "").strip()
-                if t:
-                    lines.append(t)
-            return "\n".join(lines).strip()
+            return "\n".join(i.get("ParsedText", "").strip() for i in r.json().get("ParsedResults", []) if i.get("ParsedText")).strip()
     except Exception as e:
-        print(f"  [uyarı] Web OCR fallback hatası: {e}", file=sys.stderr)
+        print(f"  [uyarı] Web OCR hatası: {e}", file=sys.stderr)
     return ""
 
 
-def consolidate_ocr_texts(tess_text: str, vision_text: str, web_text: str = "") -> str:
-    """Birden fazla OCR motorunun çıktısını ultra hızlı hafif modelle (qwen3:1.7b) tek ve doğru metne birleştirir."""
-    sources = []
-    if tess_text:
-        sources.append(f"--- Tesseract OCR Çıktısı ---\n{tess_text}")
-    if vision_text:
-        sources.append(f"--- Vision Model Çıktısı ---\n{vision_text}")
-    if web_text:
-        sources.append(f"--- Web OCR Çıktısı ---\n{web_text}")
-
-    if not sources:
-        return ""
-    if len(sources) == 1:
-        # Tek bir kaynak varsa ve çöp değilse doğrudan döndür
-        raw = tess_text or vision_text or web_text
-        return raw if not lib.is_ocr_garbage(raw) else ""
-
-    prompt = (
-        "Aşağıda aynı tıp slaytına/sayfasına ait farklı OCR motorlarının okuduğu metinler verilmiştir.\n"
-        "GÖREV: Bu çıktılardaki yazım/karakter hatalarını tıp terminolojisine ve Türkçe imlaya göre düzelterek "
-        "tek bir temiz ve eksiksiz metin oluştur. Eğer içerik sadece anlamsız çizgi/şekil çöpü ise hiçbir şey yazma.\n"
-        "Yalnızca nihai metni yaz, açıklama yapma.\n\n" + "\n\n".join(sources)
-    )
-    try:
-        merged = lib.chat(lib.MODEL_FAST, prompt, system="Sen uzman bir tıp metni editörüsün.", num_predict=1500)
-        if merged and not lib.is_ocr_garbage(merged):
-            return clean_raw(merged)
-    except Exception as e:
-        print(f"  [uyarı] Hafif model OCR birleştirme hatası: {e}", file=sys.stderr)
-
-    # Birleştirme başarısız olursa en kaliteli olanı seç
-    candidates = [t for t in [vision_text, tess_text, web_text] if t and not lib.is_ocr_garbage(t)]
-    return clean_raw(max(candidates, key=lib.quality_of)) if candidates else ""
-
-
-def read_image_text(pil_img, use_ocr: bool, use_vision: bool) -> tuple[str, str]:
-    """Multi-Engine OCR: Tesseract + Vision Model + Hızlı Konsolidasyon + Web OCR Fallback."""
-    if not use_ocr and not use_vision:
+def read_image_text(pil_img, use_ocr: bool, use_vision: bool, cloud_needs_text: bool = False) -> tuple[str, str]:
+    """Görüntüden metin. Sıra: Tesseract (her zaman, doğrulama tabanı) + bulut görsel model (Gemini).
+    Seçim — metin hiçbir modelle yeniden yazılmaz:
+      * bulut metni Tesseract'la ≥%35 kelime örtüşüyorsa → bulut_ocr (doğrulandı)
+      * Tesseract okuyamadıysa (çok kısa/çöp) → bulut_ocr_dogrulanamadi (yine de en iyi kaynak)
+      * örtüşme düşük ve Tesseract okunabilirse → Tesseract (bulut metni şüpheli)
+    """
+    use_cloud = use_vision or CLOUD_OCR
+    if not use_ocr and not use_cloud:
         return "", "yok"
-
-    tess_text = ""
-    vision_text = ""
-    web_text = ""
-    method = "ocr"
-
-    # 1. Görüntü Ön İşleme (Upscaling + Kontrast)
     proc_img = preprocess_image_for_ocr(pil_img)
-
-    # 1. Motor: Tesseract / EasyOCR
+    tess = ""
     if use_ocr:
-        raw_tess = clean_raw(ocr_image(proc_img))
-        if not lib.is_ocr_garbage(raw_tess):
-            tess_text = raw_tess
+        raw = clean_raw(ocr_image(proc_img))
+        tess = "" if lib.is_ocr_garbage(raw) else raw
 
-    buf = None
-    # 2. Motor: Yerel Görsel Yapay Zeka (Qwen3-VL ile Dilimleme/Slicing)
-    # Tesseract yetersiz kaldıysa, kısa ise veya şüpheliyse devreye girer
-    if use_vision:
+    cloud = ""
+    # Küçük slayt görselleri (simge, logo): Tesseract hiç yazı görmediyse bulut kotası harcanmaz.
+    # Büyük görseller (taranmış slayt, şema, tablo resmi) her zaman bulutta okunur.
+    if cloud_needs_text and pil_img.width * pil_img.height < 500 * 350 and len(_WORD.findall(tess)) < 3:
+        use_cloud = False
+    if use_cloud:
         buf = io.BytesIO()
-        proc_img.save(buf, format="PNG")
-        png_bytes = buf.getvalue()
+        img = pil_img.convert("RGB")
+        if max(img.size) > 2400:                       # gereksiz büyük görüntüyü küçült (hız + kota)
+            img.thumbnail((2400, 2400))
+        img.save(buf, format="PNG")
         try:
-            raw_vis = clean_raw(vision_ocr(png_bytes, pil_img=proc_img))
-            if not lib.is_ocr_garbage(raw_vis):
-                vision_text = raw_vis
-                method = "vision"
+            raw = clean_raw(vision_ocr(buf.getvalue()))
+            cloud = "" if (not raw or lib.is_ocr_garbage(raw)) else raw
         except Exception as e:
-            print(f"  [uyarı] görsel model başarısız: {e}", file=sys.stderr)
+            print(f"  [uyarı] bulut görsel okuma başarısız: {e}", file=sys.stderr)
 
-    # 3. Konsolidasyon & Hızlı Model Düzeltmesi (qwen3:1.7b)
-    final_text = consolidate_ocr_texts(tess_text, vision_text)
-
-    # 4. Kalite Yetersizse İnternet Tabanlı Ücretsiz Web OCR Fallback
-    if len(final_text) < MIN_TEXT_CHARS or lib.quality_of(final_text) < 0.60:
-        if buf is None:
-            buf = io.BytesIO()
-            pil_img.save(buf, format="PNG")
-        web_text = online_web_ocr(buf.getvalue())
-        if web_text and not lib.is_ocr_garbage(web_text):
-            # Web OCR çıktısı ile tekrar konsolide et
-            re_merged = consolidate_ocr_texts(tess_text, vision_text, web_text)
-            if re_merged and lib.quality_of(re_merged) > lib.quality_of(final_text):
-                final_text = re_merged
-                method = "multi_ocr+web"
-
-    # Son çöp kontrolü: Anlamsız karakter/çizim çorbasıysa boşalt
-    if lib.is_ocr_garbage(final_text):
-        return "", "noise_dropped"
-
-    return final_text, method
+    if cloud:
+        tess_words = len(_WORD.findall(tess))
+        if tess_words < 15:
+            return cloud, "bulut_ocr_dogrulanamadi"
+        sup = ocr_support(cloud, tess)
+        if sup >= 0.35:
+            return cloud, "bulut_ocr"
+        print(f"  [uyarı] bulut metni Tesseract'la az örtüşüyor (%{sup * 100:.0f}); Tesseract kullanıldı", file=sys.stderr)
+    if tess:
+        return tess, "ocr"
+    # ikisi de yoksa son çare web OCR
+    buf = io.BytesIO()
+    pil_img.save(buf, format="PNG")
+    web = clean_raw(online_web_ocr(buf.getvalue()))
+    if web and not lib.is_ocr_garbage(web):
+        return web, "web_ocr"
+    return "", "noise_dropped"
 
 
 # --------------------------------------------------------------------------- PDF
@@ -302,7 +195,8 @@ def read_pdf(path: Path, use_ocr: bool, use_vision: bool) -> list[dict]:
             text = clean_raw(page.get_text("text"))
             method = "metin"
             has_images = bool(page.get_images(full=True))
-            if len(text) < MIN_TEXT_CHARS and (has_images or not text):
+            garbled = len(text) >= MIN_TEXT_CHARS and (lib.is_ocr_garbage(text) or lib.quality_of(text) < 0.45)
+            if (len(text) < MIN_TEXT_CHARS and (has_images or not text)) or garbled:
                 pix = page.get_pixmap(dpi=OCR_DPI)
                 img = Image.open(io.BytesIO(pix.tobytes("png")))
                 ocr_text, m = read_image_text(img, use_ocr, use_vision)
@@ -357,7 +251,7 @@ def read_pptx(path: Path, use_ocr: bool, use_vision: bool) -> list[dict]:
                     img = Image.open(io.BytesIO(pic.image.blob)).convert("RGB")
                     if img.width < 200 or img.height < 80:
                         continue
-                    t, m = read_image_text(img, use_ocr, use_vision)
+                    t, m = read_image_text(img, use_ocr, use_vision, cloud_needs_text=True)
                     if len(t) >= 15:
                         img_texts.append(t)
                         method = "metin+" + m
@@ -503,6 +397,8 @@ def iter_sources(paths: list[Path]):
                     yield f
         elif p.is_file():
             yield p
+        else:
+            print(f"  [uyarı] bulunamadı: {p}", file=sys.stderr)
 
 
 def main():
@@ -513,7 +409,7 @@ def main():
     ap.add_argument("--force", action="store_true", help="değişmemiş dosyaları da yeniden oku")
     ap.add_argument("--no-ocr", action="store_true", help="Tesseract OCR kullanma")
     ap.add_argument("--docling", action="store_true", help="Docling kullan (tablo/başlık yapısını korur; ağır ama daha düzenli)")
-    ap.add_argument("--vision", action="store_true", help="OCR yetersizse Ollama görsel modeli kullan")
+    ap.add_argument("--vision", action="store_true", help="bulut görsel okumayı zorla aç (varsayılan zaten açık; kapatmak: MEDS_OCR_CLOUD=0)")
     a = ap.parse_args()
 
     paths = a.paths or [DEFAULT_DOWNLOADS]

@@ -136,7 +136,11 @@ export function getFreeGeminiKeys(customKey?: string): KeyInfo[] {
   return list;
 }
 
+// MEDS_FREE_ONLY (varsayılan açık): yalnız ücretsiz anahtarlar; faturalı anahtar hiç kullanılmaz.
+export const FREE_ONLY = process.env.MEDS_FREE_ONLY !== '0';
+
 export function getBilledGeminiKey(): KeyInfo | null {
+  if (FREE_ONLY) return null;
   const billed = process.env.GEMINI_BILLED_KEY;
   if (!isRealKey(billed)) return null;
   return { key: billed.trim(), label: 'Faturalandırmalı Plan (Son Çare)', isBilled: true };

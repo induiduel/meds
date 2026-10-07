@@ -2,8 +2,9 @@
 """
 Ortak bulut LLM istemcisi (yerel model yok). Faz 5/6/7 v2, hakem ve lib.chat bunu kullanır.
 
-Model zinciri (ücretsiz anahtarlar; ücretli GEMINI_BILLED_KEY kullanılmaz — o Faz 14 bütçesine ayrılmıştır):
-  groq:openai/gpt-oss-120b → groq:qwen/qwen3.8-27b → gemini:gemini-flash-latest → gemini:gemini-3.5-flash
+Model zinciri (yalnız ücretsiz anahtarlar; faturalı GEMINI_BILLED_KEY hiçbir fazda kullanılmaz, MEDS_FREE_ONLY=1):
+  groq:openai/gpt-oss-120b → groq:qwen/qwen3.8-27b → [zen:muse-spark-1.3-contributor-free, OPENCODE_API_KEY varsa]
+  → gemini:gemini-flash-latest → gemini:gemini-3.5-flash
   (+ MEDS_CLOUD_EXTRA_MODELS, ör. "openrouter:meta/muse-spark-1.3" — OpenRouter hesabında model açılınca)
 Kota: 429 "günlük" yanıtı veren model o gün bir daha denenmez (meds_temp/state/cloud_llm.json, süreçler arası);
 dakikalık 429'da kısa beklenir. 400/401/403/404 veren model bu süreçte atlanır. Anahtar havuzu sırayla denenir.
@@ -46,12 +47,20 @@ KEYS = {
     "groq": [k for k in (ENV.get("GROQ_API_KEY"), ENV.get("GROQ_API_KEY_2")) if k],
     "gemini": [k for k in (ENV.get("GEMINI_API_KEY"), ENV.get("GEMINI_FREE_KEY_2"), ENV.get("GEMINI_BACKUP_KEY")) if k],
     "openrouter": [k for k in (ENV.get("MUSE_SPARK_API_KEY"), ENV.get("OPENROUTER_API_KEY")) if k],
+    # OpenCode Zen: ücretsiz Muse Spark (muse-spark-1.3-contributor-free). opencode.ai'den alınan anahtar gerekir;
+    # "contributor" sürümlerinde istemler sağlayıcının model geliştirmesinde kullanılabilir.
+    "zen": [k for k in (ENV.get("OPENCODE_API_KEY"),) if k],
 }
+ZEN_FREE = "zen:muse-spark-1.3-contributor-free"
 
 
 def chain() -> list[str]:
     extra = [m.strip() for m in (ENV.get("MEDS_CLOUD_EXTRA_MODELS") or "").split(",") if m.strip()]
     base = [m.strip() for m in (ENV.get("MEDS_CLOUD_CHAIN") or "").split(",") if m.strip()] or DEFAULT_CHAIN
+    # Ücretsiz Muse Spark anahtar varsa zincire kendiliğinden girer (Groq'tan sonra, Gemini'den önce)
+    if KEYS["zen"] and ZEN_FREE not in base and ZEN_FREE not in extra:
+        i = next((j for j, m in enumerate(base) if m.startswith("gemini:")), len(base))
+        base = base[:i] + [ZEN_FREE] + base[i:]
     return base + extra
 
 
@@ -127,6 +136,8 @@ def _call(spec: str, key: str, system, prompt, as_json, max_tokens, temperature,
         return _openai_style("https://api.groq.com/openai/v1", key, model, system, prompt, as_json, max_tokens, temperature, timeout)
     if prov == "gemini":
         return _gemini(key, model, system, prompt, as_json, max_tokens, temperature, timeout)
+    if prov == "zen":
+        return _openai_style("https://opencode.ai/zen/v1", key, model, system, prompt, as_json, max_tokens, temperature, timeout)
     if prov == "openrouter":
         base = (ENV.get("MUSE_SPARK_BASE_URL") or "https://openrouter.ai/api/v1").rstrip("/")
         return _openai_style(base, key, model, system, prompt, as_json, max_tokens, temperature, timeout)
@@ -211,3 +222,59 @@ if __name__ == "__main__":
     r = chat(sys.argv[1] if len(sys.argv) > 1 else 'JSON ver: {"cevap": "böbreğin fonksiyonel birimi"}', as_json=True, max_tokens=200,
              log=print)
     print(last_model["ad"], r)
+
+
+# ---- Görsel OCR (Gemini; "düşünme" kapalı, sıcaklık 0) -------------------------------------------------------
+VISION_CHAIN = ["gemini:gemini-3.5-flash", "gemini:gemini-flash-latest"]
+VISION_PROMPT = ("Bu görüntü bir tıp fakültesi ders slaytı, ders notu ya da sınav sayfasıdır. İçindeki metni BİREBİR yaz. "
+                 "Sayfa çok sütunluysa önce sol sütunu baştan sona, sonra sağ sütunu yaz. Başlıkları, madde işaretlerini, "
+                 "soru numaralarını ve şıkları (A/B/C veya a/b/c) ayrı satırlarda koru. Tablo varsa Markdown tablosu olarak ver. "
+                 "Türkçe karakterleri ve Latince tıbbi terimleri olduğu gibi koru. Okuyamadığın yere [okunamadı] yaz; tahmin etme, "
+                 "ekleme yapma, imla düzeltme yapma, açıklama yazma. Görüntüde okunabilir metin yoksa yalnızca BOŞ yaz.")
+
+
+def vision_ocr(png_bytes: bytes, prompt: str = VISION_PROMPT, timeout: int = 120, log=None) -> str | None:
+    """Görüntüdeki metni Gemini ile çıkarır. Yanıt yoksa None (çağıran Tesseract'a düşer)."""
+    import base64
+    exhausted = set(_load_state()["kota_dolu"])
+    data = base64.b64encode(png_bytes).decode()
+    for spec in VISION_CHAIN:
+        if spec in exhausted or spec in _skip_session:
+            continue
+        model = spec.split(":", 1)[1]
+        keys = KEYS["gemini"]
+        all_daily = bool(keys)
+        for key in keys:
+            body = {"contents": [{"parts": [{"inline_data": {"mime_type": "image/png", "data": data}}, {"text": prompt}]}],
+                    "generationConfig": {"temperature": 0, "maxOutputTokens": 8000, "thinkingConfig": {"thinkingBudget": 0}}}
+            for attempt in range(2):
+                try:
+                    d = _post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", body,
+                              {"x-goog-api-key": key}, timeout)
+                    parts = (d.get("candidates") or [{}])[0].get("content", {}).get("parts") or []
+                    txt = "".join(p.get("text", "") for p in parts).strip()
+                    _count(spec + ":vision")
+                    last_model["ad"] = spec
+                    return "" if txt.upper() in {"BOŞ", "BOS"} else txt
+                except urllib.error.HTTPError as e:
+                    body_txt = e.read()[:400].decode("utf-8", "replace")
+                    if e.code == 429:
+                        if any(t in body_txt for t in ("per day", "PerDay", "RPD", "daily", "quota")):
+                            break                       # bu anahtarın günlük kotası
+                        all_daily = False
+                        time.sleep(15)
+                        continue
+                    all_daily = False
+                    if e.code in (400, 401, 403, 404):
+                        if log:
+                            log(f"{spec} görsel: HTTP {e.code}")
+                        break
+                    time.sleep(3)
+                except Exception:  # noqa: BLE001
+                    all_daily = False
+                    time.sleep(3)
+            else:
+                all_daily = False
+        if all_daily:
+            _mark_exhausted(spec)
+    return None

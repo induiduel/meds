@@ -69,7 +69,7 @@ async function callResilientAi(prompt) {
   const geminiKeys = [
     process.env.GEMINI_FREE_KEY_2,
     process.env.GEMINI_API_KEY,
-    process.env.GEMINI_BILLED_KEY,
+    (process.env.MEDS_FREE_ONLY !== '0' ? undefined : process.env.GEMINI_BILLED_KEY),
   ].filter(Boolean);
 
   // 1. Groq Cloud (Yüksek Hız, Ücretsiz ve Geniş Token Kotası)

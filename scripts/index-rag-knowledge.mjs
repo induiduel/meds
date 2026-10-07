@@ -47,7 +47,7 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 const RAW_KEYS = [
   process.env.GEMINI_API_KEY,
   process.env.GEMINI_FREE_KEY_2,
-  process.env.GEMINI_BILLED_KEY
+  (process.env.MEDS_FREE_ONLY !== '0' ? undefined : process.env.GEMINI_BILLED_KEY)
 ].filter(k => k && k.trim() && k !== 'MY_GEMINI_FREE_KEY_1' && k !== 'MY_GEMINI_API_KEY');
 
 const GEMINI_KEYS = Array.from(new Set(RAW_KEYS));
