@@ -56,7 +56,6 @@ API_PASSWORD = os.environ.get("MEDSORU_API_PASSWORD", "12345678")
 GEMINI_KEYS = [
     os.environ.get("GEMINI_API_KEY", "").strip(),
     os.environ.get("GEMINI_FREE_KEY_2", "").strip(),
-    os.environ.get("GEMINI_BACKUP_KEY", "").strip(),
     os.environ.get("GEMINI_FALLBACK_KEY", "").strip(),
 ]
 GEMINI_KEYS = [k for k in list(dict.fromkeys(GEMINI_KEYS)) if k and not k.startswith("BURAYA_") and not k.startswith("MY_")]
