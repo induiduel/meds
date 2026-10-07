@@ -117,7 +117,20 @@ MODEL_PRICING = {  # USD / token (Google Gemini; flash-lite en ucuz)
 PAID_MODELS = ["gemini-flash-latest", "gemini-3.5-flash"]
 FREE_MODELS = ["gemini-flash-latest", "gemini-3.5-flash"]
 STRONG_GEMINI = ["gemini-flash-latest", "gemini-3.5-flash"]       # düşünen modeller: cevap oyu sayılır
-WEAK_GEMINI: list[str] = []                                    # Lite kullanılmaz (bkz. FREE_MODELS notu)
+LITE_MODELS = ["gemini-flash-lite-latest", "gemini-3.5-flash-lite"]
+FAZ14_AYAR = ROOT.parent / "meds_temp" / "state" / "faz14_ayarlari.json"   # /test/cikmis sayfasından değiştirilir
+
+
+def lite_acik() -> bool:
+    """Flash kotası bitince Flash-Lite ile devam edilsin mi? (varsayılan açık; /test/cikmis → 'Lite yedeği')
+    Lite yalnız soruyu düzeltir; cevap oyu SAYILMAZ (cevabı bağımsız çözücüler belirler)."""
+    try:
+        return bool(json.loads(FAZ14_AYAR.read_text(encoding="utf-8")).get("lite_kullan", True))
+    except Exception:
+        return True
+
+
+WEAK_GEMINI = LITE_MODELS                                      # cevap oyu sayılmayan modeller
 STRONG_VERIFIER = "gpt-oss"                                    # cevap DEĞİŞİKLİĞİNİ yalnız bu doğrulayıcı onaylayabilir
 # Bağımsız cevap doğrulayıcı (farklı model ailesi, ücretsiz Groq): soruyu kayıtlı cevabı görmeden çözer
 VERIFY_MODELS = ["groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b"]
@@ -274,7 +287,7 @@ def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | No
     free = [(lb, k, pd) for lb, k, pd in tiers if not pd]
     paid_t = [(lb, k, pd) for lb, k, pd in tiers if pd] if ALLOW_PAID else []
     order = []
-    for grup in (STRONG_GEMINI, WEAK_GEMINI):
+    for grup in ((STRONG_GEMINI, WEAK_GEMINI) if lite_acik() else (STRONG_GEMINI,)):
         order += [(m, t) for m in grup for t in free] + [(m, t) for m in grup for t in paid_t]
     tried_any = False
     for gecis in range(2):                                   # 2. geçiş: dakikalık sınırlar için kısa bekleme sonrası
@@ -298,7 +311,8 @@ def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | No
         if not gecici:
             break
         time.sleep(30)
-    free_left = [1 for lb, _k, pd in tiers if not pd for m in FREE_MODELS if (lb, m) not in _daily_exhausted]
+    free_left = [1 for lb, _k, pd in tiers if not pd for m in FREE_MODELS + (WEAK_GEMINI if lite_acik() else [])
+                 if (lb, m) not in _daily_exhausted]
     if not free_left and not ALLOW_PAID:
         raise QuotaExhausted("ücretsiz günlük kotalar doldu")
     if not tried_any:

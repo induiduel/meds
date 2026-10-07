@@ -444,6 +444,8 @@ export async function callClientResilientAi(options: {
   return { text, providerUsed, planUsed, attemptsCount, fallbackUsed };
 }
 
+export interface AnswerVotes { counts: Record<string, number>; total: number; myVote: string | null }
+
 export const ApiService = {
   async getCommittees(): Promise<Committee[]> {
     try {
@@ -2639,6 +2641,41 @@ export const ApiService = {
   },
 
   /** Faz 14: Bekleyen öneriyi şüpheli olarak işaretle / işareti kaldır */
+  async setPastQuestionAnswerDoubt(adminEmail: string, questionId: string, value: boolean): Promise<any> {
+    const res = await safeJsonFetch<{ success: boolean; message: string; error?: string }>(
+      `/api/past-question-reviews/${encodeURIComponent(questionId)}/answer-doubt`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+        body: JSON.stringify({ value }),
+      }
+    );
+    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'İşaret güncellenemedi.');
+    return res.data;
+  },
+
+  async getAnswerVotes(questionId: string, voterUid: string): Promise<AnswerVotes> {
+    const res = await safeJsonFetch<AnswerVotes & { success: boolean; error?: string }>(
+      `/api/past-question-reviews/${encodeURIComponent(questionId)}/answer-votes`,
+      { headers: { 'x-voter-uid': voterUid } }
+    );
+    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Oylar okunamadı.');
+    return res.data;
+  },
+
+  async castAnswerVote(questionId: string, voterUid: string, choice: string): Promise<AnswerVotes> {
+    const res = await safeJsonFetch<AnswerVotes & { success: boolean; error?: string }>(
+      `/api/past-question-reviews/${encodeURIComponent(questionId)}/answer-votes`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-voter-uid': voterUid },
+        body: JSON.stringify({ choice }),
+      }
+    );
+    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Oy kaydedilemedi.');
+    return res.data;
+  },
+
   async setPastQuestionReviewSuspicious(adminEmail: string, questionId: string, value: boolean): Promise<any> {
     const res = await safeJsonFetch<{ success: boolean; message: string; error?: string }>(
       `/api/past-question-reviews/${encodeURIComponent(questionId)}/suspicious`,
@@ -2652,6 +2689,24 @@ export const ApiService = {
       throw new Error(res.data?.error || res.error || 'İşaret güncellenemedi.');
     }
     return res.data;
+  },
+
+  /** Faz 14 ayarları: lite_kullan (Flash kotası bitince Flash-Lite yedeği) */
+  async getPhase14Settings(adminEmail: string): Promise<{ lite_kullan: boolean } | null> {
+    const res = await safeJsonFetch<{ lite_kullan: boolean }>('/api/past-question-reviews/settings', {
+      headers: { 'x-admin-email': adminEmail },
+    });
+    return res.ok && res.data ? res.data : null;
+  },
+
+  async setPhase14Settings(adminEmail: string, settings: { lite_kullan: boolean }): Promise<{ lite_kullan: boolean }> {
+    const res = await safeJsonFetch<{ success: boolean; lite_kullan: boolean; error?: string }>('/api/past-question-reviews/settings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+      body: JSON.stringify(settings),
+    });
+    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Ayar kaydedilemedi.');
+    return { lite_kullan: res.data.lite_kullan };
   },
 
   /** Faz 14: Redaksiyon işlemini başlat (bulut veya yerel) */

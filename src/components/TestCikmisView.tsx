@@ -23,11 +23,13 @@ import {
   Info,
   BookOpen,
   Flag,
+  HelpCircle,
 } from 'lucide-react';
 import { PastQuestionReviewRecord } from '../types';
 import { ApiService } from '../services/api';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { pathFor } from '../router';
+import { AnswerPoll } from './AnswerPoll';
 import { safeJsonFetch } from '../services/api';
 
 // Kelime düzeyinde fark (LCS). Kök birkaç yüz kelimeyi geçmez; 400 kelime üstünde fark çizilmez.
@@ -352,6 +354,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   } | null>(null);
   const [isTriggering, setIsTriggering] = useState(false);
   const [triggerLimit, setTriggerLimit] = useState(5);
+  const [liteOn, setLiteOn] = useState<boolean | null>(null);
   const [showConsole, setShowConsole] = useState(() => typeof window === 'undefined' || window.innerWidth >= 1024);
 
   // Edit proposal modal state
@@ -403,6 +406,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   useEffect(() => {
     fetchReviews();
     if (!isAdmin) return;
+    ApiService.getPhase14Settings(ADMIN_EMAIL).then((s) => setLiteOn(s ? s.lite_kullan : null));
     fetchLiveStatus();
     const interval = setInterval(() => {
       if (!document.hidden) fetchLiveStatus();
@@ -428,6 +432,22 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     }
   };
 
+  const toggleLite = async () => {
+    if (liteOn === null) return;
+    try {
+      const s = await ApiService.setPhase14Settings(ADMIN_EMAIL, { lite_kullan: !liteOn });
+      setLiteOn(s.lite_kullan);
+      setActionFeedback({
+        message: s.lite_kullan
+          ? '✓ Lite yedeği açık: Flash kotası bitince Flash-Lite ile devam edilir (Lite\'ın cevap oyu sayılmaz).'
+          : '✓ Lite yedeği kapalı: Flash kotası bitince Faz 14 durur.',
+        type: 'ok',
+      });
+    } catch (err: any) {
+      setActionFeedback({ message: `Ayar kaydedilemedi: ${err.message}`, type: 'err' });
+    }
+  };
+
   const handleStopReview = async () => {
     setIsTriggering(true);
     try {
@@ -450,6 +470,20 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       await ApiService.approvePastQuestionReview(ADMIN_EMAIL, qId);
       setActionFeedback({ message: `✓ Soru #${qId} başarıyla güncellendi ve ana soru havuzuna onaylandı.`, type: 'ok' });
       fetchReviews(true);
+    } catch (err: any) {
+      setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
+      fetchReviews(true);
+    } finally {
+      setProcessingId(null);
+    }
+  };
+
+  const handleToggleAnswerDoubt = async (qId: string, value: boolean) => {
+    setProcessingId(qId);
+    setAllReviews(prev => prev.map(r => String(r.question_id) === qId ? { ...r, answer_doubtful: value } : r));
+    try {
+      await ApiService.setPastQuestionAnswerDoubt(ADMIN_EMAIL, qId, value);
+      setActionFeedback({ message: value ? `✓ Soru #${qId} için cevap anketi açıldı.` : `✓ Soru #${qId} için cevap anketi kapatıldı.`, type: 'ok' });
     } catch (err: any) {
       setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
       fetchReviews(true);
@@ -676,6 +710,22 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 <option value={50} className="bg-slate-800 text-white">50 Soru</option>
               </select>
             </div>
+
+            <button
+              type="button"
+              role="switch"
+              aria-checked={liteOn === true}
+              onClick={toggleLite}
+              disabled={liteOn === null}
+              title="Açıkken: ücretsiz Flash kotası bitince Flash-Lite ile devam edilir; Lite yalnız soruyu düzeltir, cevabı bağımsız modeller belirler. Kapalıyken: Flash yoksa Faz 14 durur."
+              className="h-11 sm:h-9 px-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-xs text-slate-300 inline-flex items-center gap-2 cursor-pointer disabled:opacity-50"
+            >
+              <span>Lite yedeği</span>
+              <span className={`relative w-8 h-4.5 rounded-full transition-colors ${liteOn ? 'bg-emerald-500' : 'bg-slate-600'}`} style={{ height: 18 }}>
+                <span className={`absolute top-0.5 w-3.5 h-3.5 rounded-full bg-white transition-all ${liteOn ? 'left-4' : 'left-0.5'}`} />
+              </span>
+              <span className={`font-bold ${liteOn ? 'text-emerald-300' : 'text-slate-400'}`}>{liteOn === null ? '…' : liteOn ? 'Açık' : 'Kapalı'}</span>
+            </button>
 
             <button
               type="button"
@@ -1038,6 +1088,12 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                     <status.Icon className="w-3 h-3" />
                     <span className="hidden xs:inline sm:inline">{status.label}</span>
                   </span>
+                  {rev.answer_doubtful && (
+                    <span className="h-[22px] px-2 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1 shrink-0 bg-amber-50 text-amber-900 border border-amber-200">
+                      <HelpCircle className="w-3 h-3" />
+                      <span className="hidden sm:inline">Cevap belirsiz</span>
+                    </span>
+                  )}
                   {rev.suspicious && (
                     <span className="h-[22px] px-2 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1 shrink-0 bg-orange-50 text-orange-800 border border-orange-200">
                       <Flag className="w-3 h-3" />
@@ -1227,8 +1283,33 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         {prop.YZV?.referans_literatur && <p className="m-0 text-violet-800"><b>Literatür:</b> {prop.YZV.referans_literatur}</p>}
                       </div>
                     )}
+                    {(prop.tespit_raporu || prop.secenek_analizi) && (
+                      <details className="text-[12.5px] text-violet-950 bg-white/70 rounded-md px-2.5 py-2 leading-relaxed">
+                        <summary className="cursor-pointer font-semibold">Tespit raporu &amp; şık analizi</summary>
+                        <div className="mt-1.5 flex flex-col gap-1">
+                          {prop.tespit_raporu?.tespit_edilen_kusur && <p className="m-0"><b>Tespit edilen kusur:</b> {String(prop.tespit_raporu.tespit_edilen_kusur)}</p>}
+                          {prop.tespit_raporu?.uygulanan_mudahale && <p className="m-0"><b>Uygulanan müdahale:</b> {String(prop.tespit_raporu.uygulanan_mudahale)}</p>}
+                          {prop.secenek_analizi && typeof prop.secenek_analizi === 'object' && ['A', 'B', 'C', 'D', 'E'].map((k) => {
+                            const t = (prop.secenek_analizi as Record<string, any>)[k] ?? (prop.secenek_analizi as Record<string, any>)[k.toLowerCase()];
+                            return t ? (
+                              <p key={k} className={`m-0 ${String(prop.dogru_secenek || '').toUpperCase() === k ? 'font-medium' : ''}`}>
+                                <b>{k}:</b> {String(t)}
+                              </p>
+                            ) : null;
+                          })}
+                        </div>
+                      </details>
+                    )}
                   </section>
                 </div>
+
+                {rev.answer_doubtful && (
+                  <AnswerPoll
+                    questionId={qId}
+                    options={(prop.secenekler && Object.keys(prop.secenekler).length ? prop.secenekler : src.secenekler) || {}}
+                    voterUid={currentUser?.uid || null}
+                  />
+                )}
 
                 {/* Açıklama: eski ↔ yeni (kelime farkı) */}
                 {(srcExpl || propExpl) && (
@@ -1282,6 +1363,11 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                       {isPending && (
                         <button type="button" onClick={() => handleToggleSuspicious(qId, !rev.suspicious)} disabled={processingId === qId} className={`${btn} border ${rev.suspicious ? 'border-orange-300 bg-orange-50 text-orange-800 hover:bg-orange-100' : 'border-line bg-white hover:bg-orange-50 hover:text-orange-800 text-ink-2'}`}>
                           <Flag className="w-3.5 h-3.5" /> {rev.suspicious ? 'Şüpheli işaretini kaldır' : 'Şüpheli'}
+                        </button>
+                      )}
+                      {isPending && (
+                        <button type="button" onClick={() => handleToggleAnswerDoubt(qId, !rev.answer_doubtful)} disabled={processingId === qId} className={`${btn} border ${rev.answer_doubtful ? 'border-amber-300 bg-amber-50 text-amber-900 hover:bg-amber-100' : 'border-line bg-white hover:bg-amber-50 hover:text-amber-900 text-ink-2'}`}>
+                          <HelpCircle className="w-3.5 h-3.5" /> {rev.answer_doubtful ? 'Cevap anketini kapat' : 'Cevapta hata olabilir'}
                         </button>
                       )}
                       <button type="button" onClick={() => openEditModal(rev)} className={`${btn} border border-line bg-white hover:bg-canvas text-ink-2`}>

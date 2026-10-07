@@ -1839,6 +1839,68 @@ app.post('/api/past-question-reviews/:id/suspicious', requireAdmin, (req, res) =
   }
 });
 
+// 3.0.1. POST /api/past-question-reviews/:id/answer-doubt: "Cevapta hata olabilir" işareti (Admin) → kullanıcı anketi açılır
+app.post('/api/past-question-reviews/:id/answer-doubt', requireAdmin, (req, res) => {
+  try {
+    const targetQId = String(req.params.id);
+    const value = req.body?.value !== false;
+    const reviews = readPhase14Reviews();
+    const matching = reviews.filter((r) => String(r.question_id) === targetQId);
+    if (matching.length === 0) return res.status(404).json({ error: 'İnceleme kaydı bulunamadı.' });
+    for (const r of matching) {
+      if (value) r.answer_doubtful = true;
+      else delete r.answer_doubtful;
+    }
+    writePhase14Reviews(reviews);
+    res.json({ success: true, message: value ? 'Cevap anketi açıldı.' : 'Cevap anketi kapatıldı.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'İşaret güncellenemedi: ' + err.message });
+  }
+});
+
+// Cevap anketi: oylar yerel Supabase `answer_votes` tablosunda; kullanıcı başına soru başına tek oy.
+async function readAnswerVotes(questionId: string, voterUid: string) {
+  const { data, error } = await localSupabase.from('answer_votes').select('choice, voter_uid').eq('question_id', questionId);
+  if (error) throw new Error(error.message);
+  const counts: Record<string, number> = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+  let myVote: string | null = null;
+  for (const row of data || []) {
+    const c = String(row.choice).trim().toUpperCase();
+    if (c in counts) counts[c]++;
+    if (voterUid && row.voter_uid === voterUid) myVote = c;
+  }
+  return { counts, total: Object.values(counts).reduce((a, b) => a + b, 0), myVote };
+}
+
+app.get('/api/past-question-reviews/:id/answer-votes', async (req, res) => {
+  try {
+    const voter = String(req.headers['x-voter-uid'] || '').slice(0, 128);
+    res.json({ success: true, ...(await readAnswerVotes(String(req.params.id), voter)) });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Oylar okunamadı: ' + err.message });
+  }
+});
+
+app.post('/api/past-question-reviews/:id/answer-votes', async (req, res) => {
+  try {
+    const qId = String(req.params.id);
+    const voter = String(req.headers['x-voter-uid'] || '').slice(0, 128);
+    const choice = String(req.body?.choice || '').trim().toUpperCase();
+    if (!voter) return res.status(401).json({ error: 'Oy vermek için giriş yapmalısınız.' });
+    if (!/^[A-E]$/.test(choice)) return res.status(400).json({ error: 'Geçersiz şık.' });
+    const review = readPhase14Reviews().find((r) => String(r.question_id) === qId);
+    if (!review?.answer_doubtful) return res.status(409).json({ error: 'Bu soru için anket açık değil.' });
+    const { error } = await localSupabase.from('answer_votes').insert([{ question_id: qId, voter_uid: voter, choice }]);
+    if (error) {
+      if ((error as any).code === '23505') return res.status(409).json({ error: 'Bu soru için zaten oy verdiniz.' });
+      throw new Error(error.message);
+    }
+    res.json({ success: true, ...(await readAnswerVotes(qId, voter)) });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Oy kaydedilemedi: ' + err.message });
+  }
+});
+
 // 3.1. PUT /api/past-question-reviews/:id/proposal: Beğenilmeyen/değiştirilmek istenen soru önerisini manuel düzenle (Admin)
 app.put('/api/past-question-reviews/:id/proposal', requireAdmin, (req, res) => {
   try {
@@ -1897,6 +1959,31 @@ app.put('/api/past-question-reviews/:id/proposal', requireAdmin, (req, res) => {
     });
   } catch (err: any) {
     res.status(500).json({ error: 'Öneri güncellenemedi: ' + err.message });
+  }
+});
+
+// 3.9. Faz 14 ayarları (meds_temp/state/faz14_ayarlari.json): lite_kullan — Flash kotası bitince Flash-Lite yedeği
+const PHASE14_SETTINGS_FILE = path.resolve(__dirname, '..', 'meds_temp', 'state', 'faz14_ayarlari.json');
+function readPhase14Settings(): { lite_kullan: boolean } {
+  try {
+    const d = JSON.parse(fs.readFileSync(PHASE14_SETTINGS_FILE, 'utf-8'));
+    return { lite_kullan: d.lite_kullan !== false };
+  } catch {
+    return { lite_kullan: true };
+  }
+}
+app.get('/api/past-question-reviews/settings', requireAdmin, (_req, res) => {
+  res.json(readPhase14Settings());
+});
+app.post('/api/past-question-reviews/settings', requireAdmin, (req, res) => {
+  try {
+    const next = { ...readPhase14Settings() };
+    if (typeof req.body?.lite_kullan === 'boolean') next.lite_kullan = req.body.lite_kullan;
+    fs.mkdirSync(path.dirname(PHASE14_SETTINGS_FILE), { recursive: true });
+    fs.writeFileSync(PHASE14_SETTINGS_FILE, JSON.stringify(next, null, 1), 'utf-8');
+    res.json({ success: true, ...next });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Ayar kaydedilemedi: ' + err.message });
   }
 });
 
