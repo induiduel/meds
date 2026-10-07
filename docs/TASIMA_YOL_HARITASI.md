@@ -1,6 +1,6 @@
 # Proje Taşıma ve Yeniden Düzenleme Yol Haritası
 
-Durum: **2026-10-07'de uygulandı** — hedef `/home/indu/medsor`. Klasör adları (meds, meds_database, meds_temp, meds_downloads, meds_database_v2) kod bağımlılığı nedeniyle korundu; yedekler `yedek/` altında toplandı. Eski klasör (`~/Masaüstü/MedSoru Project`) dokunulmadan duruyor ve artık çalışmıyor. Repo içi düzen (scripts/archive vb.) Aşama E'de ayrı yapılacak.
+Durum: **2026-10-07'de uygulandı** — hedef `/home/indu/medsor`. Klasör adları (meds, meds_database, meds_temp, meds_downloads, meds_database_v2) kod bağımlılığı nedeniyle korundu; yedekler `yedek/` altında toplandı. Eski klasör (`~/Masaüstü/MedSoru Project`) dokunulmadan duruyor ve artık çalışmıyor. Aşama E (repo içi temizlik) de 2026-10-07 yapıldı: 142 kullanılmayan betik/kök dosyası `scripts/archive/` altına taşındı, eski `.venv`, `__pycache__`, günlük ve yanlış yerdeki klasörler silindi.
 Hazırlanma: 2026-10-07. Kaynak: canlı sistemin taranması (servisler, yollar, klasör boyutları, kod referansları).
 
 ## 0. Karar bekleyen sorular
