@@ -122,10 +122,40 @@ def run_queued(state: dict):
         log(f"elle istendi: {name}")
         state["aktif"] = key
         save_state(state)
-        state.setdefault("adimlar", {})[key] = run_step(key, name, cmd, timeout)
-        state["adimlar"][key]["elle"] = True
+        c, t = effective(key, cmd, timeout)
+        res = run_step(key, name, c, t)
+        res["elle"] = True
+        record(state, key, res)
         state["aktif"] = None
         save_state(state)
+
+
+# Panelden (localhost:8085) düzenlenen adım ayarları: {anahtar: {"kapali": bool, "zaman_asimi_dk": int, "ek_arg": "…"}}
+SETTINGS = TEMP / "state" / "phase_settings.json"
+
+
+def step_settings(key: str) -> dict:
+    try:
+        return (json.load(open(SETTINGS, encoding="utf-8")) or {}).get(key) or {}
+    except Exception:
+        return {}
+
+
+def effective(key: str, cmd: list[str], timeout: int) -> tuple[list[str], int]:
+    """Panel ayarlarını uygula: ek argümanlar komutun sonuna, zaman aşımı dakika cinsinden."""
+    import shlex
+    st = step_settings(key)
+    extra = shlex.split(st.get("ek_arg") or "") if st.get("ek_arg") else []
+    to = int(st["zaman_asimi_dk"]) * 60 if str(st.get("zaman_asimi_dk") or "").isdigit() and int(st["zaman_asimi_dk"]) > 0 else timeout
+    return cmd + extra, to
+
+
+def record(state: dict, key: str, res: dict):
+    """Son sonucu ve son 10 çalışmanın geçmişini durum dosyasına yaz."""
+    state.setdefault("adimlar", {})[key] = res
+    hist = state.setdefault("gecmis", {}).setdefault(key, [])
+    hist.append(res)
+    del hist[:-10]
 
 
 def save_state(state: dict):
@@ -226,9 +256,15 @@ def main():
             if not Path(cmd[1]).exists():
                 log(f"atlandı (betik yok): {cmd[1]}")
                 continue
+            if step_settings(key).get("kapali"):
+                log(f"atlandı (panelden kapatıldı): {name}")
+                state.setdefault("tur_tamamlanan", []).append(key)
+                save_state(state)
+                continue
             state["aktif"] = key
             save_state(state)
-            state.setdefault("adimlar", {})[key] = run_step(key, name, cmd, timeout)
+            c, t = effective(key, cmd, timeout)
+            record(state, key, run_step(key, name, c, t))
             state.setdefault("tur_tamamlanan", []).append(key)
             save_state(state)
         state["aktif"] = None

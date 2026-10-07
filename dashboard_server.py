@@ -2271,6 +2271,9 @@ HTML_PAGE = """<!DOCTYPE html>
         function renderMasterPhasesTable(phases) {
             const tbody = document.getElementById('master-phases-table-body');
             if (!tbody) return;
+            // Açık ayrıntı çekmecesi (günlük, ayar formu) yeniden çizimde silinmesin: ayır, sonra geri tak
+            const keptDrawer = activeExpandedPhase ? document.getElementById(`phase-log-drawer-${activeExpandedPhase}`) : null;
+            if (keptDrawer) keptDrawer.remove();
 
             tbody.innerHTML = '';
             phases.forEach(p => {
@@ -2362,7 +2365,9 @@ HTML_PAGE = """<!DOCTYPE html>
                 tbody.appendChild(tr);
 
                 // Eğer bu satır tıklandıysa altına log akordiyon panelini aç
-                if (isExpanded) {
+                if (isExpanded && keptDrawer) {
+                    tbody.appendChild(keptDrawer);
+                } else if (isExpanded) {
                     const logTr = document.createElement('tr');
                     logTr.id = `phase-log-drawer-${p.key}`;
                     logTr.className = "bg-slate-950/90 border-b border-indigo-900/40 text-slate-200";
@@ -2404,6 +2409,9 @@ HTML_PAGE = """<!DOCTYPE html>
                                 </div>
                             </div>
 
+                            <!-- Faz ayarları ve son çalışmalar (panelden düzenlenir; faz zinciri her adımda okur) -->
+                            <div id="phase-detail-${p.key}" class="grid gap-3 lg:grid-cols-2 text-xs"><div class="text-slate-500 italic">Ayrıntı yükleniyor…</div></div>
+
                             <!-- Konsol Terminal Penceresi -->
                             <div class="space-y-1">
                                 <div class="flex justify-between items-center text-[10px] font-mono text-slate-400">
@@ -2432,6 +2440,58 @@ HTML_PAGE = """<!DOCTYPE html>
             }
             if (activeExpandedPhase) {
                 loadPhaseLog(activeExpandedPhase, true);
+                loadPhaseDetail(activeExpandedPhase);
+            }
+        }
+
+        async function loadPhaseDetail(key) {
+            const box = document.getElementById(`phase-detail-${key}`);
+            if (!box) return;
+            try {
+                const d = await (await fetch(`/api/master/phase_detail?key=${encodeURIComponent(key)}`)).json();
+                if (d.hata) { box.innerHTML = `<div class="text-rose-400">${d.hata}</div>`; return; }
+                const a = d.ayarlar || {};
+                const fmt = (x) => x ? x.replace('T', ' ').slice(5, 16) : '—';
+                const rows = (d.gecmis || []).map(h => `<tr class="border-t border-slate-800">
+                    <td class="py-1 pr-2 font-mono">${fmt(h.bitis)}</td>
+                    <td class="py-1 pr-2 ${h.rc === 0 ? 'text-emerald-300' : 'text-rose-300'}">${h.rc === 0 ? '✓' : '✗ rc=' + h.rc}</td>
+                    <td class="py-1 pr-2 font-mono">${Math.round((h.sure_sn || 0) / 60)} dk</td>
+                    <td class="py-1 text-slate-400">${h.elle ? 'elle' : 'tur'}</td></tr>`).join('');
+                box.innerHTML = `
+                    <form class="p-3 rounded-lg bg-slate-900 border border-slate-800 space-y-2" onsubmit="savePhaseSettings(event, '${key}')">
+                        <div class="font-semibold text-slate-200">Faz ayarları</div>
+                        <div class="text-slate-400 font-mono break-all">${d.komut}</div>
+                        <label class="flex items-center gap-2"><input type="checkbox" name="kapali" ${a.kapali ? 'checked' : ''}> Turda atla (kapalı)</label>
+                        <label class="flex items-center gap-2">Zaman aşımı (dk)
+                            <input name="zaman_asimi_dk" type="number" min="1" max="1440" value="${a.zaman_asimi_dk || ''}" placeholder="${d.varsayilan_zaman_asimi_dk}" class="w-24 px-2 py-1 rounded bg-slate-950 border border-slate-700"></label>
+                        <label class="flex flex-col gap-1">Ek argümanlar (komutun sonuna)
+                            <input name="ek_arg" value="${(a.ek_arg || '').replace(/"/g, '&quot;')}" placeholder="ör. --max 50" class="px-2 py-1 rounded bg-slate-950 border border-slate-700 font-mono"></label>
+                        <div class="flex items-center gap-2">
+                            <button class="px-3 py-1 rounded bg-indigo-600 hover:bg-indigo-500 text-white font-semibold">Kaydet</button>
+                            <span id="phase-settings-msg-${key}" class="text-slate-400">Bir sonraki çalışmada geçerli olur.</span>
+                        </div>
+                    </form>
+                    <div class="p-3 rounded-lg bg-slate-900 border border-slate-800">
+                        <div class="font-semibold text-slate-200 mb-1">Son çalışmalar ${d.aktif ? '<span class="text-amber-300">· şu an çalışıyor</span>' : ''}${d.bu_turda ? ' <span class="text-emerald-300">· bu turda bitti</span>' : ''}</div>
+                        ${rows ? `<table class="w-full"><thead class="text-slate-500"><tr><th class="text-left">Bitiş</th><th class="text-left">Sonuç</th><th class="text-left">Süre</th><th class="text-left">Tür</th></tr></thead><tbody>${rows}</tbody></table>`
+                               : `<div class="text-slate-500">Geçmiş henüz yok (bu sürümden sonraki çalışmalar kaydedilir).${d.son ? ' Son: ' + fmt(d.son.bitis) + ', rc=' + d.son.rc : ''}</div>`}
+                    </div>`;
+            } catch (err) {
+                box.innerHTML = `<div class="text-rose-400">Ayrıntı alınamadı: ${err}</div>`;
+            }
+        }
+
+        async function savePhaseSettings(ev, key) {
+            ev.preventDefault();
+            const f = ev.target;
+            const body = { key, kapali: f.kapali.checked, zaman_asimi_dk: f.zaman_asimi_dk.value, ek_arg: f.ek_arg.value };
+            const msg = document.getElementById(`phase-settings-msg-${key}`);
+            try {
+                const r = await fetch('/api/master/phase_settings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+                const j = await r.json();
+                if (msg) msg.textContent = r.ok ? 'Kaydedildi ✓ — bir sonraki çalışmada geçerli.' : ('Kaydedilemedi: ' + (j.error || r.status));
+            } catch (err) {
+                if (msg) msg.textContent = 'Kaydedilemedi: ' + err;
             }
         }
 
@@ -2582,9 +2642,273 @@ HTML_PAGE = """<!DOCTYPE html>
             }
         }, 2000);
     </script>
+    <style>
+        /* Yoğun görünüm */
+        body.compact { padding: .75rem !important; }
+        body.compact .p-5, body.compact .p-6 { padding: .75rem !important; }
+        body.compact .p-4 { padding: .55rem !important; }
+        body.compact .space-y-6 > * + * { margin-top: .75rem !important; }
+        body.compact .gap-6 { gap: .75rem !important; }
+        body.compact .gap-4 { gap: .5rem !important; }
+        body.compact .text-3xl { font-size: 1.4rem !important; }
+        body.compact .text-2xl { font-size: 1.2rem !important; }
+        body.compact td.p-3, body.compact th.p-3 { padding: .35rem .5rem !important; }
+        #panel-bar select, #panel-bar input { background: #0f172a; border: 1px solid #334155; border-radius: .4rem; padding: .1rem .3rem; }
+    </style>
+    <div id="panel-bar" class="fixed bottom-3 right-3 z-50 glass rounded-xl px-3 py-2 text-[11px] text-slate-300 flex flex-wrap items-center gap-x-3 gap-y-1 shadow-xl max-w-[calc(100vw-1.5rem)]">
+        <span class="flex items-center gap-1.5" title="Son başarılı güncelleme ve sunucunun veriyi hesapladığı an">
+            <span id="pb-dot" class="w-2 h-2 rounded-full bg-slate-500"></span><span id="pb-age">veri bekleniyor</span>
+        </span>
+        <label class="flex items-center gap-1">Yenile
+            <select id="pb-int"><option value="1">1 sn</option><option value="2">2 sn</option><option value="5">5 sn</option><option value="10">10 sn</option><option value="30">30 sn</option><option value="60">60 sn</option></select></label>
+        <label class="flex items-center gap-1"><input type="checkbox" id="pb-pause"> Duraklat</label>
+        <label class="flex items-center gap-1"><input type="checkbox" id="pb-compact"> Yoğun</label>
+        <label class="flex items-center gap-1">Açılış
+            <select id="pb-tab"><option value="overview">Genel</option><option value="stages">Aşamalar</option><option value="master">Fazlar</option><option value="rejected">Reddedilen</option></select></label>
+        <label class="flex items-center gap-1" title="Sunucu /api/stats verisini bu aralıkla arka planda hesaplar">Sunucu
+            <select id="pb-srv"><option value="3">3 sn</option><option value="5">5 sn</option><option value="10">10 sn</option><option value="30">30 sn</option><option value="60">60 sn</option></select></label>
+    </div>
+    <script>
+    (function () {
+        // ---------- Yalnız değişeni güncelle (titreme/yeniden oluşma yok; açık <details>, odak ve kaydırma korunur) ----------
+        function morphChildren(from, to) {
+            const a = Array.from(from.childNodes), b = Array.from(to.childNodes);
+            for (let i = 0; i < b.length; i++) { if (i < a.length) morphNode(a[i], b[i]); else from.appendChild(b[i]); }
+            for (let i = b.length; i < a.length; i++) a[i].remove();
+        }
+        function morphNode(from, to) {
+            if (from.nodeType !== to.nodeType || from.nodeName !== to.nodeName || (from.id || '') !== (to.id || '')) { from.replaceWith(to); return; }
+            if (from.nodeType === 3 || from.nodeType === 8) { if (from.nodeValue !== to.nodeValue) from.nodeValue = to.nodeValue; return; }
+            if (from.nodeType !== 1) return;
+            if (from.querySelector && from.querySelector('canvas')) { from.replaceWith(to); return; }
+            for (const at of Array.from(from.attributes)) {
+                if (!to.hasAttribute(at.name) && !(at.name === 'open' && from.nodeName === 'DETAILS')) from.removeAttribute(at.name);
+            }
+            for (const at of Array.from(to.attributes)) if (from.getAttribute(at.name) !== at.value) from.setAttribute(at.name, at.value);
+            if (/^(INPUT|TEXTAREA|SELECT)$/.test(from.nodeName)) { if (document.activeElement !== from && 'value' in to && to.getAttribute('value') !== null) from.value = to.value; return; }
+            morphChildren(from, to);
+        }
+        const desc = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
+        Object.defineProperty(Element.prototype, 'innerHTML', {
+            configurable: true,
+            get() { return desc.get.call(this); },
+            set(html) {
+                const str = String(html);
+                // "Boşalt + appendChild ile yeniden doldur" kalıbı: aynı görevin sonunda içerik değişmemişse eski düğümleri
+                // geri koy (animasyon/hover/kaydırma sıfırlanmaz); değiştiyse yalnız kaydırma konumunu koru.
+                if (str === '' && this.isConnected && this.firstChild && !this.querySelector('canvas')) {
+                    const old = Array.from(this.childNodes);
+                    const snap = (ns) => ns.map(n => n.outerHTML || n.nodeValue || '').join('');
+                    const oldHTML = snap(old), top = this.scrollTop, el = this;
+                    desc.set.call(this, '');
+                    this._lastHTML = undefined;
+                    queueMicrotask(() => {
+                        if (snap(Array.from(el.childNodes)) === oldHTML) el.replaceChildren(...old);
+                        if (top) el.scrollTop = top;
+                    });
+                    return;
+                }
+                // Yalnız sayfadaki, içi dolu ve grafik içermeyen elemanlarda karşılaştırmalı güncelle
+                if (!this.isConnected || !this.firstChild || this.closest('[data-no-morph]') || this.querySelector('canvas') || this.nodeName === 'TEMPLATE') {
+                    desc.set.call(this, str); return;
+                }
+                if (this._lastHTML === str) return;              // aynı içerik: dokunma
+                const tmp = document.createElement(this.nodeName === 'TBODY' || this.nodeName === 'TABLE' || this.nodeName === 'TR' ? 'table' : 'div');
+                if (this.nodeName === 'TBODY') { desc.set.call(tmp, '<tbody>' + str + '</tbody>'); morphChildren(this, tmp.firstChild); }
+                else if (this.nodeName === 'TR') { desc.set.call(tmp, '<tbody><tr>' + str + '</tr></tbody>'); morphChildren(this, tmp.querySelector('tr')); }
+                else { desc.set.call(tmp, str); morphChildren(this, tmp); }
+                this._lastHTML = str;
+            },
+        });
+
+        // ---------- Ayarlar (bu tarayıcıda saklanır) ----------
+        const LS = (k, d) => { try { const v = localStorage.getItem('panel_' + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } };
+        const SS = (k, v) => { try { localStorage.setItem('panel_' + k, JSON.stringify(v)); } catch (e) {} };
+        const cfg = { int: LS('int', 2), pause: LS('pause', false), compact: LS('compact', false), tab: LS('tab', 'overview') };
+        const $ = (id) => document.getElementById(id);
+        $('pb-int').value = String(cfg.int); $('pb-pause').checked = cfg.pause; $('pb-compact').checked = cfg.compact; $('pb-tab').value = cfg.tab;
+        document.body.classList.toggle('compact', cfg.compact);
+        $('pb-int').onchange = (e) => { cfg.int = Number(e.target.value); SS('int', cfg.int); };
+        $('pb-pause').onchange = (e) => { cfg.pause = e.target.checked; SS('pause', cfg.pause); };
+        $('pb-compact').onchange = (e) => { cfg.compact = e.target.checked; SS('compact', cfg.compact); document.body.classList.toggle('compact', cfg.compact); };
+        $('pb-tab').onchange = (e) => { cfg.tab = e.target.value; SS('tab', cfg.tab); };
+        fetch('/api/panel/settings').then(r => r.json()).then(j => { $('pb-srv').value = String(j.istatistik_aralik_sn || 5); }).catch(() => {});
+        $('pb-srv').onchange = (e) => fetch('/api/panel/settings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ istatistik_aralik_sn: Number(e.target.value) }) });
+
+        // ---------- İstekler: aynı anda tek, gizli sekmede yok; veri yaşı izlenir ----------
+        let lastOk = 0, serverMade = 0;
+        const origFetch = window.fetch.bind(window);
+        window.fetch = async (url, opts) => {
+            const r = await origFetch(url, opts);
+            if (r.ok && typeof url === 'string' && url.startsWith('/api/')) {
+                lastOk = Date.now();
+                if (url.startsWith('/api/stats')) r.clone().json().then(j => { if (j._panel) serverMade = j._panel.olusturma * 1000; }).catch(() => {});
+            }
+            return r;
+        };
+        const guard = (fn) => { let busy = false; return async function (...args) { if (busy) return; busy = true; try { return await fn.apply(this, args); } finally { busy = false; } }; };
+        updateDashboard = guard(updateDashboard); updateStagesPage = guard(updateStagesPage); updateRejectedPage = guard(updateRejectedPage);
+        updatePhase45Page = guard(updatePhase45Page); updateMasterStatus = guard(updateMasterStatus); updateMasterPhases = guard(updateMasterPhases);
+
+        // Eski sabit 2/5 sn zamanlayıcılarını kaldır; tek zamanlayıcı ayara göre çalışır
+        const _switch = switchTab;
+        switchTab = function (t) { _switch(t); if (tabIntervalId) { clearInterval(tabIntervalId); tabIntervalId = null; } lastTick = Date.now(); };
+        if (tabIntervalId) { clearInterval(tabIntervalId); tabIntervalId = null; }
+        let lastTick = 0;
+        function tick() {
+            if (cfg.pause || document.hidden) return;
+            if (Date.now() - lastTick < cfg.int * 1000) return;
+            lastTick = Date.now();
+            if (currentTab === 'overview') updateDashboard();
+            else if (currentTab === 'stages') updateStagesPage();
+            else if (currentTab === 'rejected') updateRejectedPage();
+            else if (currentTab === 'phase45') updatePhase45Page();
+            else if (currentTab === 'master') { updateMasterStatus(); updateMasterPhases(); }
+        }
+        setInterval(tick, 500);
+        document.addEventListener('visibilitychange', () => { if (!document.hidden) { lastTick = 0; tick(); } });
+
+        setInterval(() => {
+            const age = lastOk ? Math.round((Date.now() - lastOk) / 1000) : null;
+            const srv = serverMade ? Math.round((Date.now() - serverMade) / 1000) : null;
+            const stale = age === null || age > Math.max(10, cfg.int * 3);
+            $('pb-dot').className = 'w-2 h-2 rounded-full ' + (cfg.pause ? 'bg-slate-500' : stale ? 'bg-rose-500' : 'bg-emerald-400');
+            $('pb-age').textContent = cfg.pause ? 'duraklatıldı' : age === null ? 'veri bekleniyor' : `güncellendi ${age} sn önce` + (srv !== null && currentTab === 'overview' ? ` · sunucu ${srv} sn önce hesapladı` : '');
+        }, 1000);
+
+        if (cfg.tab && cfg.tab !== 'overview' && document.getElementById('nav-btn-' + cfg.tab)) switchTab(cfg.tab);
+    })();
+    </script>
 </body>
 </html>
 """
+
+
+# ---- Panel ayarları ve /api/stats önbelleği ---------------------------------------------------------------------
+# get_stats ~1,5 sn sürer; eskiden her 2 sn'de istek başına hesaplanıyor ve tek iş parçacıklı sunucuyu kilitliyordu.
+# Artık arka planda periyodik hesaplanır, uç anında önbellekten döner (oluşturma zamanı ve süresiyle).
+PANEL_SETTINGS_FILE = TEMP_DIR / "state" / "panel_settings.json"
+PANEL_DEFAULTS = {"istatistik_aralik_sn": 5}
+_STATS = {"veri": None, "zaman": 0.0, "sure_ms": 0, "hata": None}
+
+
+def panel_settings() -> dict:
+    try:
+        return {**PANEL_DEFAULTS, **json.loads(PANEL_SETTINGS_FILE.read_text(encoding="utf-8"))}
+    except Exception:
+        return dict(PANEL_DEFAULTS)
+
+
+def _stats_worker():
+    while True:
+        t0 = time.time()
+        try:
+            data = apply_real_status(get_stats())
+            _STATS.update(veri=data, zaman=time.time(), sure_ms=int((time.time() - t0) * 1000), hata=None)
+        except Exception as e:  # noqa: BLE001
+            _STATS["hata"] = str(e)
+        time.sleep(max(2, int(panel_settings().get("istatistik_aralik_sn") or 5)))
+
+
+def cached_stats() -> dict:
+    if _STATS["veri"] is None:                       # ilk istek: arka plan henüz bitmediyse bir kez hesapla
+        t0 = time.time()
+        _STATS.update(veri=apply_real_status(get_stats()), zaman=time.time(), sure_ms=int((time.time() - t0) * 1000))
+    return {**_STATS["veri"], "_panel": {"olusturma": _STATS["zaman"], "sure_ms": _STATS["sure_ms"], "hata": _STATS["hata"],
+                                          "simdi": time.time()}}
+
+
+# Aşama kartlarının bir kısmı sabit yazılmıştı ("Tamamlandı ✓", %88, "Bitti ✓"). Faz kartları faz zincirinin
+# gerçek durumundan, Aşama 1–4 kartları gerçek dosya sayılarından yeniden hesaplanır.
+_CARD_PHASE = {"Faz 5": "faz5", "Faz 6": "faz6", "Faz 6.5": "faz6_5", "Faz 7.5": "faz7_5", "Faz 14": "faz14"}
+
+
+def apply_real_status(stats: dict) -> dict:
+    try:
+        phases = {p["key"]: p for p in get_master_phases().get("phases", [])}
+    except Exception:
+        phases = {}
+    for card in stats.get("stages_progress") or []:
+        key = _CARD_PHASE.get(card.get("phase"))
+        p = phases.get(key) if key else None
+        if p:
+            code = p.get("status_code")
+            card["status"] = {"running": "running", "completed_this": "completed", "completed_prev": "completed",
+                              "error": "failed"}.get(code, "queued")
+            card["status_tr"] = p.get("status_tr") or card.get("status_tr")
+            card["progress_pct"] = p.get("pct") or 0
+            tgt = p.get("target")
+            card["processed"] = f"{p.get('output_count', 0):,} / {tgt:,} {p.get('unit', '')}".replace(",", ".") if tgt else f"{p.get('output_count', 0):,} {p.get('unit', '')}".replace(",", ".")
+            card["pending"] = f"{p['kalan']:,}".replace(",", ".") if p.get("kalan") is not None else card.get("pending")
+            card["eta"] = (f"son bitiş {p['last_end']}" if p.get("last_end") else "henüz çalışmadı") + (f" · {p['speed']}" if p.get("speed") and "ölçül" not in p["speed"] else "")
+            card["veri_kaynagi"] = "faz zinciri (canlı)"
+            continue
+        proc, tot = card.get("processed"), card.get("total")
+        if isinstance(proc, (int, float)) and isinstance(tot, (int, float)) and tot:
+            pct = round(min(100.0, proc / tot * 100), 1)
+            card["progress_pct"] = pct
+            card["status"] = "completed" if pct >= 99.5 else "running"
+            card["status_tr"] = "Tamamlandı ✓" if pct >= 99.5 else f"%{pct} işlendi"
+            card["pending"] = max(0, int(tot - proc))
+            card["eta"] = "bitti" if pct >= 99.5 else f"{int(tot - proc)} kaldı"
+            card["veri_kaynagi"] = "dosya sayımı (canlı)"
+        else:
+            card["veri_kaynagi"] = "özet (sayısal hedef yok)"
+    return stats
+
+
+def phase_detail(key: str) -> dict:
+    """Bir faz adımının tam görünümü: tanım (komut, varsayılan zaman aşımı), panel ayarları, son 10 çalışma, kuyruk."""
+    scripts = str(MEDS_DIR / "scripts" / "agents")
+    if scripts not in sys.path:
+        sys.path.insert(0, scripts)
+    import importlib
+    import phase_cycle as PC  # noqa: E402
+    importlib.reload(PC)
+    step = next((s for s in PC.STEPS if s[0] == key), None)
+    if not step:
+        return {"hata": f"bilinmeyen adım: {key}"}
+    try:
+        st = json.loads(PHASE_CYCLE_STATE.read_text(encoding="utf-8"))
+    except Exception:
+        st = {}
+    try:
+        settings = (json.loads((TEMP_DIR / "state" / "phase_settings.json").read_text(encoding="utf-8")) or {}).get(key) or {}
+    except Exception:
+        settings = {}
+    root = str(MEDS_DIR) + "/"
+    return {
+        "anahtar": key, "ad": step[1], "komut": " ".join(a.replace(root, "") for a in step[2][1:]), "varsayilan_zaman_asimi_dk": step[3] // 60,
+        "ayarlar": settings, "son": (st.get("adimlar") or {}).get(key), "gecmis": list(reversed((st.get("gecmis") or {}).get(key) or [])),
+        "aktif": st.get("aktif") == key, "tur": st.get("tur"), "bu_turda": key in (st.get("tur_tamamlanan") or []),
+    }
+
+
+def save_phase_settings(key: str, payload: dict) -> dict:
+    f = TEMP_DIR / "state" / "phase_settings.json"
+    with open(PHASE_QUEUE_LOCK, "w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        try:
+            allst = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+        except Exception:
+            allst = {}
+        cur = {}
+        if payload.get("kapali"):
+            cur["kapali"] = True
+        za = str(payload.get("zaman_asimi_dk") or "").strip()
+        if za.isdigit() and 0 < int(za) <= 24 * 60:
+            cur["zaman_asimi_dk"] = int(za)
+        ek = str(payload.get("ek_arg") or "").strip()[:300]
+        if ek:
+            cur["ek_arg"] = ek
+        if cur:
+            allst[key] = cur
+        else:
+            allst.pop(key, None)
+        tmp = f.with_suffix(".tmp")
+        tmp.write_text(json.dumps(allst, ensure_ascii=False, indent=1), encoding="utf-8")
+        tmp.replace(f)
+    return cur
 
 
 def get_stats():
@@ -3159,7 +3483,7 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.send_header("Content-Type", "application/json")
             self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
-            self.wfile.write(json.dumps(get_stats(), ensure_ascii=False).encode("utf-8"))
+            self.wfile.write(json.dumps(cached_stats(), ensure_ascii=False).encode("utf-8"))
         elif self.path.startswith("/api/graph"):
             import urllib.parse
             parsed = urllib.parse.urlparse(self.path)
@@ -3236,6 +3560,18 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
             self.wfile.write(json.dumps(get_master_status(), ensure_ascii=False).encode("utf-8"))
+        elif self.path.startswith("/api/master/phase_detail"):
+            import urllib.parse
+            key = urllib.parse.parse_qs(urllib.parse.urlparse(self.path).query).get("key", [""])[0]
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(phase_detail(key), ensure_ascii=False).encode("utf-8"))
+        elif self.path == "/api/panel/settings":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(panel_settings(), ensure_ascii=False).encode("utf-8"))
         elif self.path == "/api/master/phases":
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
@@ -3273,6 +3609,24 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
         except Exception:
             payload = {}
 
+        if self.path in ("/api/master/phase_settings", "/api/panel/settings"):
+            if self.path == "/api/master/phase_settings":
+                key = str(payload.get("key") or "")
+                ok = phase_detail(key).get("hata") is None
+                res = {"ayarlar": save_phase_settings(key, payload)} if ok else {"error": "bilinmeyen adım"}
+            else:
+                cur = panel_settings()
+                v = payload.get("istatistik_aralik_sn")
+                if str(v).isdigit() and 2 <= int(v) <= 300:
+                    cur["istatistik_aralik_sn"] = int(v)
+                PANEL_SETTINGS_FILE.parent.mkdir(parents=True, exist_ok=True)
+                PANEL_SETTINGS_FILE.write_text(json.dumps(cur, ensure_ascii=False), encoding="utf-8")
+                res = cur
+            self.send_response(200 if "error" not in res else 400)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(res, ensure_ascii=False).encode("utf-8"))
+            return
         if self.path == "/api/master/mode":
             res = handle_master_mode(payload.get("mode", "normal"))
             self.send_response(200)
@@ -3803,8 +4157,11 @@ def handle_master_schedule(payload: dict):
         return {"success": False, "error": str(e)}
 
 def run():
-    socketserver.TCPServer.allow_reuse_address = True
-    with socketserver.TCPServer(("0.0.0.0", PORT), RequestHandler) as httpd:
+    import threading
+    threading.Thread(target=_stats_worker, daemon=True, name="stats").start()
+    socketserver.ThreadingTCPServer.allow_reuse_address = True
+    socketserver.ThreadingTCPServer.daemon_threads = True      # yavaş bir istek diğerlerini bekletmesin
+    with socketserver.ThreadingTCPServer(("0.0.0.0", PORT), RequestHandler) as httpd:
         httpd.serve_forever()
 
 if __name__ == "__main__":
