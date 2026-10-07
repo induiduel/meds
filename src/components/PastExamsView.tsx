@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { PageHeader } from './ui/PageHeader';
 import { QuestionInsightsPanel } from './QuestionInsightsPanel';
+import { ChangeInfo } from './ui/ChangeInfo';
 import {
   Sparkles,
   Info,
@@ -1052,6 +1053,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             const options = q.reconstruction?.options || q.options || [];
             const correctAnswer = q.reconstruction?.correctAnswer || q.correctAnswer || q.claimedAnswer;
             const explanation = q.reconstruction?.explanation || q.explanation;
+            // Faz 14 düzeltmesi: öncesi (phase14Original) ve model notları; ⓘ simgeleri yalnız düzeltilmiş sorularda
+            const p14Fixed = isPhase14Fixed(q);
+            const p14o: any = p14Fixed ? (q as any).phase14Original || {} : null;
+            const p14s: any = p14Fixed ? (q as any).phase14?.summary : null;
+            const p14Note = (k: string) => (p14s && typeof p14s === 'object' ? p14s[k] : undefined) as string | undefined;
+            const norm = (t: any) => String(t ?? '').replace(/\s+/g, ' ').trim();
+            const oldOpt = (key: string) => {
+              const o = (p14o?.options || []).find((x: any) => String(x.key).toUpperCase() === String(key).toUpperCase());
+              return o ? String(o.text ?? '') : '';
+            };
             const commentsCount = (q as any).comments?.length || 0;
             const expOpen = !!openExplanations[q.id];
             const meta = ((q as any).committeeUncertain
@@ -1234,11 +1245,22 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   </div>
                 ) : (
                   <>
-                    <p className="m-0 text-[16px] sm:text-[17px] font-medium text-ink leading-[1.5]">{stem}</p>
+                    <div className="flex items-start gap-1.5">
+                      <p className="m-0 flex-1 min-w-0 text-[16px] sm:text-[17px] font-medium text-ink leading-[1.5]">{stem}</p>
+                      {p14Fixed && (
+                        norm(p14o?.stem) && norm(p14o.stem) !== norm(stem) ? (
+                          <ChangeInfo title="Soru kökü düzeltildi (Faz 14)" before={p14o.stem} after={String(stem)} note={p14Note('soru_koku_duzeltmesi')} />
+                        ) : (
+                          <ChangeInfo title="Soru kökü (Faz 14)" note={p14Note('soru_koku_duzeltmesi') || 'Kök değiştirilmedi; soru Faz 14 incelemesinden geçti.'} />
+                        )
+                      )}
+                    </div>
                     {options && options.length > 0 && (
                       <ol className="list-none m-0 p-0 flex flex-col gap-1.5">
                         {options.map((opt: any) => {
                           const isCorrect = opt.key === correctAnswer;
+                          const before = p14Fixed ? oldOpt(opt.key) : '';
+                          const optChanged = p14Fixed && (opt.isAiGenerated || (before && norm(before) !== norm(opt.text)));
                           return (
                             <li
                               key={opt.key}
@@ -1254,7 +1276,17 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                                 {opt.key}
                               </span>
                               <span className={`text-[14.5px] leading-[1.45] ${isCorrect ? 'font-semibold text-ink' : 'text-ink'}`}>{opt.text}</span>
-                              {isCorrect ? <span className="text-[12px] font-semibold text-ok">Doğru</span> : <span />}
+                              <span className="inline-flex items-center gap-1">
+                                {isCorrect && <span className="text-[12px] font-semibold text-ok">Doğru</span>}
+                                {optChanged && (
+                                  <ChangeInfo
+                                    title={`${opt.key} şıkkı ${before ? 'düzeltildi' : 'eklendi'} (Faz 14)`}
+                                    before={before}
+                                    after={String(opt.text)}
+                                    note={opt.isAiGenerated ? 'Kaynakta bu şık eksikti; yapay zekâ tamamladı (doğrulanmadı).' : undefined}
+                                  />
+                                )}
+                              </span>
                             </li>
                           );
                         })}
@@ -1273,11 +1305,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     <QuestionInsightsPanel questionId={q.id} />
                     {explanation && (
                       <div className="rounded-xl bg-field">
+                        <div className="flex items-center pr-2">
                         <button
                           type="button"
                           onClick={() => setOpenExplanations((prev) => ({ ...prev, [q.id]: !prev[q.id] }))}
                           aria-expanded={expOpen}
-                          className="w-full h-11 px-3.5 flex items-center justify-between text-[14px] font-semibold text-ink cursor-pointer"
+                          className="flex-1 min-w-0 h-11 px-3.5 flex items-center justify-between text-[14px] font-semibold text-ink cursor-pointer"
                         >
                           <span className="flex items-center gap-1.5">
                             {isDeepSeekQuestion(q) ? (
@@ -1288,9 +1321,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                             ) : (
                               <span>Açıklama & Çözüm Analizi</span>
                             )}
+                            {p14Fixed && norm(p14o?.explanation) !== norm(explanation) && (
+                              <span className="text-[11.5px] font-semibold px-1.5 py-0.5 rounded bg-violet-50 text-violet-700">Faz 14'te yenilendi</span>
+                            )}
                           </span>
                           <ChevronDown className={`w-4 h-4 text-ink-3 transition-transform ${expOpen ? 'rotate-180' : ''}`} />
                         </button>
+                        {p14Fixed && norm(p14o?.explanation) !== norm(explanation) && (
+                          <ChangeInfo title="Açıklama yenilendi (Faz 14)" before={p14o?.explanation || ''} note={p14Note('aciklama_duzeltmesi')} />
+                        )}
+                        </div>
                         {expOpen && (
                           <div className="px-3.5 pb-3.5 flex flex-col gap-2.5">
                             <p className="m-0 text-[14.5px] text-ink-2 leading-[1.6] whitespace-pre-line">{explanation}</p>
