@@ -286,6 +286,9 @@ import threading
 
 _YEREL = threading.local()            # paralel kipte iş parçacığının kendi anahtarı (_YEREL.anahtar = etiket)
 _KILIT = threading.RLock()            # kayıt/checkpoint/maliyet yazımı (paralel kipte iş parçacıkları arası)
+# Groq (gpt-oss doğrulayıcı) tek hesap: dakikada 8000 token. Paralel iş parçacıkları aynı anda gönderirse çoğu 429 alıp
+# boşa bekler; doğrulama çağrıları sıraya alınır (Gemini düzeltmesi anahtar başına paralel kalır).
+_GROQ_KILIT = threading.Lock()
 
 
 def call_gemini_json(prompt_text: str, system_text: str = "") -> tuple[dict | None, str]:
@@ -703,11 +706,13 @@ def _dogrulayici_sor(prompt: str, max_tokens: int):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
     import cloud_llm
     for deneme in range(3):
-        r = cloud_llm.chat(prompt, as_json=True, max_tokens=max_tokens, temperature=0.0, models=VERIFY_MODELS[:1], timeout=120)
+        with _GROQ_KILIT:
+            r = cloud_llm.chat(prompt, as_json=True, max_tokens=max_tokens, temperature=0.0, models=VERIFY_MODELS[:1], timeout=120)
         if r:
             return r, (cloud_llm.last_model or {}).get("ad") or VERIFY_MODELS[0]
         time.sleep(20 * (deneme + 1))
-    r = cloud_llm.chat(prompt, as_json=True, max_tokens=max_tokens, temperature=0.0, models=VERIFY_MODELS[1:], timeout=120)
+    with _GROQ_KILIT:
+        r = cloud_llm.chat(prompt, as_json=True, max_tokens=max_tokens, temperature=0.0, models=VERIFY_MODELS[1:], timeout=120)
     return r, (cloud_llm.last_model or {}).get("ad") or ""
 
 
@@ -729,7 +734,8 @@ def _bagimsiz_cevap(soru_koku: str, secenekler: dict, kaynaklar: list | None = N
         if modeller:
             sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
             import cloud_llm
-            r = cloud_llm.chat(prompt, as_json=True, max_tokens=4000, temperature=0.0, models=modeller, timeout=180)
+            with _GROQ_KILIT:
+                r = cloud_llm.chat(prompt, as_json=True, max_tokens=4000, temperature=0.0, models=modeller, timeout=180)
             vm = (cloud_llm.last_model or {}).get("ad") or ""
         else:
             r, vm = _dogrulayici_sor(prompt, 4000)
