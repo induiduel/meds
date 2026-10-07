@@ -45,12 +45,15 @@ def run(stage, args=None):
             "tail": (r.stdout + r.stderr)[-400:]}
 
 
+AUTO_NEXT = os.environ.get("MEDS_PIPELINE_AUTO_NEXT") == "1"
+RUN_NEXT_ONCE = "--sonraki" in sys.argv
+
+
 def main():
     delay = IDLE
     while True:
         res = []
         try:
-            ollama_up()
             stages = [
                 ("stage2_clean.py", "Aşama 2 (Faz 2): Türkçe Onarım & Soru Ayrıştırma"),
                 ("stage3_merge.py", "Aşama 3 (Faz 3): RAG Eşleştirme & Zenginleştirme"),
@@ -60,6 +63,11 @@ def main():
                 # meds-phases servisi): sırayla, zaman aşımlı, GPU soğuması beklenerek. Burada çalıştırılınca bir fazın
                 # takılması yeni dosyaların aşama 2-4'ten geçmesini saatlerce durduruyordu.
             ]
+            # Otomatik ilerleme yalnız Aşama 2'ye kadar (yerel: Tesseract + kural tabanlı ayrıştırma). Aşama 3 ve sonrası
+            # (bulut/LLM içerir) kendiliğinden başlamaz: tek sefer için "pipeline_runner.py --sonraki", kalıcı için
+            # .env MEDS_PIPELINE_AUTO_NEXT=1.
+            if not (AUTO_NEXT or RUN_NEXT_ONCE):
+                stages = stages[:1]
             state = lib.State()
             for s_idx, stage_info in enumerate(stages, 1):
                 s, s_desc, *stage_args = stage_info
@@ -68,14 +76,8 @@ def main():
                 res.append(out)
                 log.error(f"{s} rc={out['rc']}: {out['tail']}") if out["rc"] else None
 
-                # Aşama geçişlerinde RAM ve VRAM önbelleğini tazele
-                try:
-                    import requests, gc
-                    requests.post("http://127.0.0.1:11434/api/generate", json={"model": "gemma3:4b", "keep_alive": 0}, timeout=2)
-                    requests.post("http://127.0.0.1:11434/api/generate", json={"model": "bge-m3:latest", "keep_alive": 0}, timeout=2)
-                    gc.collect()
-                except Exception:
-                    pass
+                import gc
+                gc.collect()
                 if out["rc"]:
                     break
             # Eğer hata rc=-9 (dışarıdan kod tazeleme) ise hemen 2 saniyede başla
@@ -87,6 +89,8 @@ def main():
         STATUS.parent.mkdir(parents=True, exist_ok=True)
         STATUS.write_text(json.dumps({"time": time.strftime("%F %T"), "runs": res}, ensure_ascii=False, indent=1))
         lib.State().set_progress("pipeline", len(stages), len(stages), f"Döngü Tamamlandı ✓ (Yeni dosyalar için {delay} sn bekleniyor...)")
+        if RUN_NEXT_ONCE:
+            return
         time.sleep(delay)
 
 

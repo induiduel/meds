@@ -324,11 +324,11 @@ def main():
             # 7. GPU sıcaklık/kullanım sınırı artık meds-gpuguard servisinde (scripts/agents/gpu_guard.py):
             #    bu eski fren yalnızca watchdog'u uyutuyordu, GPU kullanan süreçlere etkisi yoktu.
 
-            # 8. QLoRA Eğitim Sonrası Otomatik Veri Denetleme & İyileştirme Tetikleyicisi
-            check_post_lora_training_trigger()
-
-            # 9. Faz 5 (Çoklu AI Konsensüs) ve Faz 6 (Derin Tıbbi Metadata) Motorlarını Canlı Tut
-            check_phase5_and_phase6_workers()
+            # 8–9. Otomatik faz geçişleri KAPALI (2026-10-07, kullanıcı isteği): watchdog hiçbir fazı/betiği kendiliğinden
+            # başlatmaz (eskiden Faz 5 → 6 → 7.5 sırası ve LoRA sonrası iyileştirici). Fazlar yalnız panelden başlatılır.
+            if os.environ.get("MEDS_PHASE_AUTO") == "1":
+                check_post_lora_training_trigger()
+                check_phase5_and_phase6_workers()
 
         except Exception as e:
             log(f"Watchdog genel döngü hatası: {e}")

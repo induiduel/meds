@@ -248,6 +248,23 @@ def main():
         return 0
     once = "--once" in sys.argv
     state = json.load(open(STATE, encoding="utf-8")) if STATE.exists() else {"tur": 0, "adimlar": {}}
+    # Elle kip (varsayılan): bir faz bitince sıradaki KENDİLİĞİNDEN başlamaz; yalnız panelden kuyruğa eklenen
+    # ("Başlat") adımlar çalışır. Eski otomatik tur davranışı: .env MEDS_PHASE_AUTO=1.
+    if os.environ.get("MEDS_PHASE_AUTO") != "1":
+        state["aktif"] = None
+        state["kip"] = "elle"
+        save_state(state)
+        log("elle kip: fazlar yalnız panelden başlatılınca çalışır (otomatik geçiş kapalı)")
+        while True:
+            if Path(__file__).stat().st_mtime > _START_MTIME:
+                log("phase_cycle.py değişti → yeni kodla yeniden yükleniyor")
+                lock.close()
+                os.execv(sys.executable, [sys.executable] + sys.argv)
+            run_queued(state)
+            if once:
+                return 0
+            time.sleep(10)
+    state["kip"] = "otomatik"
     while True:
         # Yarıda kalan tur varsa (servis yeniden başlatıldı / kesildi) aynı turda kalınan adımdan devam edilir.
         done = set(state.get("tur_tamamlanan") or [])

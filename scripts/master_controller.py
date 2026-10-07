@@ -515,7 +515,8 @@ class MasterController:
                             self.stop_script(k)
                 else:
                     # Zamanlama içinde: Konfigürasyonda 'açık' olanları çalışır durumda tut
-                    for k, enabled in self.active_scripts_config.items():
+                    # Otomatik yeniden başlatma yalnız MEDS_PHASE_AUTO=1 iken (varsayılan: fazlar yalnız panelden başlatılır)
+                    for k, enabled in (self.active_scripts_config.items() if os.environ.get("MEDS_PHASE_AUTO") == "1" else []):
                         if enabled and not self.is_script_running(k):
                             # Güvenli modda supports_gpu olan ağır AI işlerini başlatma
                             if self.current_mode == "safe" and MANAGED_SCRIPTS[k]["supports_gpu"] and k != "watchdog":
