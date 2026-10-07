@@ -7,5 +7,5 @@ STATE="$MEDS/../meds_temp/state/otomasyon.json"
 if [ -f "$STATE" ] && python3 -c "import json,sys;sys.exit(0 if json.load(open('$STATE')).get('faz14_ucretsiz_otomatik', True) is False else 1)"; then
   echo "Faz 14 otomatik ücretsiz kip panelden kapalı; çıkılıyor."; exit 0
 fi
-if pgrep -f "phase14_cloud_question_editor.py" >/dev/null; then echo "Faz 14 zaten çalışıyor."; exit 0; fi
+if pgrep -f "python[^ ]* [^ ]*phase14_cloud_question_editor\.py" >/dev/null; then echo "Faz 14 zaten çalışıyor."; exit 0; fi
 exec "$MEDS/.venv-ocr/bin/python" "$MEDS/scripts/advanced_ai/phase14_cloud_question_editor.py" --ucretsiz-otomatik
