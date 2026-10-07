@@ -614,11 +614,25 @@ def anlam_koru(soru: dict, res: dict) -> None:
     if ok and yk and not kok_bozuk(soru) and _olumsuz_mu(ok) != _olumsuz_mu(yk):
         res["soru_koku"] = ok
         notlar.append("kökün olumlu/olumsuz yönü değiştirilmişti → özgün kök korundu")
+    # Sayısal veri koruması: kökteki değerler (ör. "kapiller dolum <3 sn", nabız 110, Hb 11) değiştirilemez.
+    # Model "<3 sn"yi "<2 sn" yapmıştı (2026-10-07 testi) — bu imla değil, vakanın verisini değiştirmektir.
+    def _sayilar(t: str) -> list[str]:
+        return [x.replace(",", ".") for x in re.findall(r"\d+(?:[.,]\d+)?", t or "")]
+    if ok and res.get("soru_koku") and not kok_bozuk(soru):
+        from collections import Counter
+        eksik = Counter(_sayilar(ok)) - Counter(_sayilar(res["soru_koku"]))
+        if eksik:
+            res["soru_koku"] = ok
+            notlar.append(f"kökteki sayısal değer değiştirilmişti ({', '.join(sorted(eksik))}) → özgün kök korundu")
     osec, ysec = soru.get("secenekler") or {}, res.get("secenekler") or {}
     if isinstance(osec, dict) and isinstance(ysec, dict):
         for k, ov in osec.items():
             ov = str(ov or "").strip()
             yv = str(ysec.get(k) or "").strip()
+            if ov and yv and _sayilar(ov) and sorted(_sayilar(ov)) != sorted(_sayilar(yv)):
+                ysec[k] = ov                                   # şıktaki sayı da değiştirilemez (1000 mL, 20 mL/kg …)
+                notlar.append(f"{k} şıkkındaki sayısal değer değiştirilmişti → özgün şık korundu")
+                continue
             if len(ov) >= 3 and yv and difflib.SequenceMatcher(None, ov.lower(), yv.lower()).ratio() < 0.55:
                 ysec[k] = ov
                 notlar.append(f"{k} şıkkı anlamca değiştirilmişti → özgün şık korundu")
