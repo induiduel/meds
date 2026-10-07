@@ -782,6 +782,89 @@ def _aciklamanin_cevabi(soru_koku: str, secenekler: dict, res: dict) -> str:
     return h if h in secenekler else ""
 
 
+KOPYA_FILE = OUT_DIR / "kopyalar.json"                         # {kopya_id: asıl_id} — Faz 14'ün atladığı kopyalar
+
+
+def _kelimeler(t: str) -> set:
+    import unicodedata
+    t = unicodedata.normalize("NFKD", str(t or "").lower().replace("ı", "i"))
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return set(re.findall(r"[a-z]{4,}", t))
+
+
+def _sayi_imzasi(t) -> tuple:
+    """Kökteki sayılar (tarih/başlık artığı olabilecek 4+ haneli sayılar ve 'No' gibi sıra numaraları hariç)."""
+    return tuple(sorted(x for x in re.findall(r"\d+(?:[.,]\d+)?", str(t or "")) if len(x.split(".")[0]) <= 3))
+
+
+def _ayni_soru(k: set, o: set, k2: set, o2: set, sayi: tuple = (), sayi2: tuple = ()) -> bool:
+    """İki soru aynı mı? Kök+şık kelimeleri birlikte karşılaştırılır (şıkları köke karışmış, başlık artıklı ya da
+    şık sırası farklı kopyalar da yakalanır); şıkları neredeyse aynı olan kısa köklerde kök eşiği düşüktür."""
+    j = lambda a, b: len(a & b) / max(1, len(a | b))
+    tum, tum2 = k | o, k2 | o2
+    if len(tum) < 8 or len(tum2) < 8:
+        return False
+    if sayi and sayi2 and sayi != sayi2:
+        return False                                            # farklı vaka verisi (yaş, nabız, doz…) → farklı soru
+    if len(o) < 6 or len(o2) < 6:
+        # genel şıklar (Yeşil/Sarı/Kırmızı…): soruyu ayıran vakadır → yalnız uzun ve neredeyse aynı kök kopya sayılır
+        return j(k, k2) >= 0.9 and min(len(k), len(k2)) >= 20
+    return (j(k, k2) >= 0.8 and j(o, o2) >= 0.7) or j(tum, tum2) >= 0.75 or (j(o, o2) >= 0.9 and len(o) >= 6 and j(k, k2) >= 0.5)
+
+
+class KopyaDizini:
+    """Neredeyse aynı soruları bulur: kök kelimelerinin Jaccard benzerliği ≥ 0.8 VE şık kelimeleri ≥ 0.7.
+    (OCR artığı, tarih başlığı ya da küçük yazım farkı olan aynı soru; veritabanında ~160 çift var.)"""
+
+    def __init__(self):
+        self.kayit: list[tuple[str, set, set, tuple]] = []
+        self.ters: dict[str, set] = {}
+
+    def ekle(self, qid: str, src: dict):
+        k, o = _kelimeler(src.get("soru_koku")), _kelimeler(" ".join(str(v) for v in (src.get("secenekler") or {}).values()))
+        if len(k) < 4:
+            return
+        i = len(self.kayit)
+        self.kayit.append((qid, k, o, _sayi_imzasi(src.get("soru_koku"))))
+        for w in k:
+            self.ters.setdefault(w, set()).add(i)
+
+    def yukle_incelenenler(self):
+        if not REVIEWS_FILE.exists():
+            return
+        for line in REVIEWS_FILE.read_text(encoding="utf-8").splitlines():
+            try:
+                r = json.loads(line)
+                self.ekle(str(r.get("question_id")), r.get("source") or {})
+            except Exception:
+                continue
+
+    def kopyasi_mi(self, qid: str, src: dict) -> str:
+        k, o = _kelimeler(src.get("soru_koku")), _kelimeler(" ".join(str(v) for v in (src.get("secenekler") or {}).values()))
+        if len(k) < 4:
+            return ""
+        aday: dict[int, int] = {}
+        for w in k:
+            for i in self.ters.get(w, ()):
+                aday[i] = aday.get(i, 0) + 1
+        for i, ortak in sorted(aday.items(), key=lambda x: -x[1])[:50]:
+            aid, k2, o2, n2 = self.kayit[i]
+            if aid == qid:
+                continue
+            if _ayni_soru(k, o, k2, o2, _sayi_imzasi(src.get("soru_koku")), n2):
+                return aid
+        return ""
+
+
+def kopya_kaydet(kopya_id: str, asil_id: str):
+    try:
+        d = json.loads(KOPYA_FILE.read_text(encoding="utf-8")) if KOPYA_FILE.exists() else {}
+    except Exception:
+        d = {}
+    d[kopya_id] = asil_id
+    KOPYA_FILE.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def cevap_uyusmazligi(res: dict) -> bool:
     """Çözücüler aynı şıkta birleşmedi mi? (en az bir oy farklıysa ya da cevap belirsizse) → "Cevap Belirsiz" kategorisi."""
     d = (res or {}).get("cevap_dogrulama") or {}
@@ -917,6 +1000,8 @@ def main() -> int:
     questions = sorted(questions, key=_order)
     stats = {"aday": len(questions), "islenen": 0, "degisiklik_onerisi": 0, "inceleme_gerekli": 0, "hata": 0}
 
+    kopya_dizini = KopyaDizini()
+    kopya_dizini.yukle_incelenenler()
     with REVIEWS_FILE.open("a", encoding="utf-8") as out_reviews:
         for q in questions:
             s_id = str(q.get("id") or "")
@@ -927,6 +1012,15 @@ def main() -> int:
 
             src = source_view(q)
             if len(src["soru_koku"].strip()) < 15 or len(src["secenekler"]) < 4:
+                continue
+            asil = kopya_dizini.kopyasi_mi(s_id, src)
+            if asil:
+                # Aynı soru başka kimlikle zaten incelendi (farklı sınav dökümünden ikinci kez girilmiş):
+                # yeniden incelenmez, kota harcanmaz, /test/cikmis'e ikinci kez düşmez.
+                kopya_kaydet(s_id, asil)
+                save_checkpoint(islenmisler, s_id)
+                stats["kopya"] = stats.get("kopya", 0) + 1
+                logging.info(f"Soru #{s_id} atlandı: #{asil} ile aynı soru (kopya)")
                 continue
 
             logging.info(f"Soru #{s_id} inceleniyor · {q.get('committeeId')} · {q.get('discipline')} · {q.get('topic')}")
@@ -963,6 +1057,7 @@ def main() -> int:
 
             out_reviews.write(json.dumps(record, ensure_ascii=False) + "\n")
             out_reviews.flush()
+            kopya_dizini.ekle(s_id, src)
 
             stats["islenen"] += 1
             stats["degisiklik_onerisi"] += int(bool(changed))
