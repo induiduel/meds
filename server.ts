@@ -1614,7 +1614,9 @@ function writePhase14Reviews(items: any[]) {
     fs.mkdirSync(PHASE14_DIR, { recursive: true });
   }
   const content = items.map(it => JSON.stringify(it)).join('\n') + (items.length > 0 ? '\n' : '');
-  fs.writeFileSync(PHASE14_REVIEWS_FILE, content, 'utf-8');
+  const tmp = PHASE14_REVIEWS_FILE + '.tmp';
+  fs.writeFileSync(tmp, content, 'utf-8');
+  fs.renameSync(tmp, PHASE14_REVIEWS_FILE);
 }
 
 // 1. GET /api/past-question-reviews: İnceleme kuyruğu ve önerileri listele (public okuma)
@@ -1711,6 +1713,19 @@ app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
         stem: targetQ.stem, options: targetQ.options, explanation: targetQ.explanation, correctAnswer: targetQ.correctAnswer,
         committeeId: targetQ.committeeId, discipline: targetQ.discipline, topic: targetQ.topic,
       };
+  // Faz 14 (Python) dosyaya eşzamanlı ekleme yapabilir: okumadan bu yana eklenmiş kayıtlar korunur (yoksa onay/ret
+  // anında yazılan yeni inceleme kaybolurdu). Anahtar: question_id + processed_at.
+  const key = (r: any) => `${r?.question_id}|${r?.processed_at}`;
+  const known = new Set(items.map(key));
+  try {
+    for (const line of fs.readFileSync(PHASE14_REVIEWS_FILE, 'utf-8').split('\n')) {
+      if (!line.trim()) continue;
+      try {
+        const r = JSON.parse(line);
+        if (!known.has(key(r))) items = [...items, r];
+      } catch (_) {}
+    }
+  } catch (_) {}
     }
     if (proposal.soru_koku) targetQ.stem = proposal.soru_koku;
     if (proposal.secenekler && typeof proposal.secenekler === 'object') {

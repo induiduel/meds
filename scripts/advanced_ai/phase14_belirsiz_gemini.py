@@ -36,7 +36,7 @@ def uygula(sonuclar: dict[str, dict]) -> int:
     """Dosyayı yeniden okuyup yalnız hâlâ bekleyen kayıtları günceller (kilitli, atomik)."""
     if not sonuclar:
         return 0
-    with P14._KILIT:
+    with P14._KILIT, P14.dosya_kilidi():
         rows = [json.loads(l) for l in F.read_text(encoding="utf-8").splitlines() if l.strip()]
         n = 0
         for r in rows:

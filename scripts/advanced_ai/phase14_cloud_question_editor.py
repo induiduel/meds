@@ -1061,6 +1061,22 @@ def support_ratio(original: dict, proposal: dict) -> float:
     return round(max(0.0, 1.0 - (len(new_tokens) / len(tok_after))), 3)
 
 
+from contextlib import contextmanager
+
+
+@contextmanager
+def dosya_kilidi():
+    """reviews.jsonl için süreçler arası kilit (Faz 14 işleri ve phase14_belirsiz_gemini.py)."""
+    import fcntl
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    with open(OUT_DIR / "reviews.lock", "w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(lk, fcntl.LOCK_UN)
+
+
 def kayit_yaz(out_reviews, s_id: str, src: dict, ai_sonuc: dict, model_used: str, stats: dict,
               islenmisler: set, kopya_dizini) -> dict | None:
     """İnceleme kaydını yazar + checkpoint. Kilitli: aynı soru iki kez yazılamaz (paralel kipte de)."""
@@ -1085,12 +1101,14 @@ def kayit_yaz(out_reviews, s_id: str, src: dict, ai_sonuc: dict, model_used: str
         record["status"] = "review_required"
         record["suspicious"] = True                           # /test/cikmis → "Şüpheli" (3 cevap: proposal.cevap_secenekleri)
         record["suspicious_at"] = datetime.utcnow().isoformat() + "Z"
-    with _KILIT:
+    with _KILIT, dosya_kilidi():
         if s_id in load_checkpoints() or s_id in islenmisler:
             logging.warning(f"Soru #{s_id} zaten işlenmiş; ikinci kayıt YAZILMADI")
             return None
-        out_reviews.write(json.dumps(record, ensure_ascii=False) + "\n")
-        out_reviews.flush()
+        # Uzun süre açık tutulan tutamaç kullanılmaz: başka süreç dosyayı yeniden yazarsa (os.replace) eklenen satır
+        # eski dosyaya giderdi (2026-10-08'de 15 kayıt böyle kayboldu). Her kayıtta dosya yeniden açılır.
+        with REVIEWS_FILE.open("a", encoding="utf-8") as fo:
+            fo.write(json.dumps(record, ensure_ascii=False) + "\n")
         kopya_dizini.ekle(s_id, src)
         stats["islenen"] += 1
         stats["degisiklik_onerisi"] += int(bool(changed))
