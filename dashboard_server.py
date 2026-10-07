@@ -3008,7 +3008,9 @@ def stop_all_phases() -> dict:
     PHASE_PAUSE_FILE.write_text(json.dumps({"durduruldu": True, "zaman": time.strftime("%Y-%m-%dT%H:%M:%S")}), encoding="utf-8")
     killed = []
     me = os.getpid()
-    markers = ("/scripts/advanced_ai/", "/scripts/agents/stage", "phase14_")
+    # göreli yolla başlatılanlar da yakalansın; yeni veri hattı ve orkestratör de durdurulur (yoksa kilit boşalınca sonraki aşamayı başlatır)
+    markers = ("scripts/advanced_ai/", "scripts/agents/stage", "phase14_", "new_data_pipeline.py", "pipeline_runner.py")
+    keep = ("phase_cycle.py", "rag_vector_build.py", "embed_server.py")   # arama altyapısı faz değildir
     for d in Path("/proc").iterdir():
         if not d.name.isdigit() or int(d.name) == me:
             continue
@@ -3016,7 +3018,7 @@ def stop_all_phases() -> dict:
             cmd = (d / "cmdline").read_bytes().replace(b"\0", b" ").decode("utf-8", "replace")
         except Exception:
             continue
-        if "python" in cmd and any(m in cmd for m in markers) and "phase_cycle.py" not in cmd:
+        if "python" in cmd and any(m in cmd for m in markers) and not any(k in cmd for k in keep):
             try:
                 os.killpg(os.getpgid(int(d.name)), signal.SIGTERM)
             except Exception:

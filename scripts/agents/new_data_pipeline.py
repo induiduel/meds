@@ -135,6 +135,11 @@ def pending_counts() -> dict:
     return out
 
 
+def paused() -> bool:
+    """Panelde "Tümünü durdur" basılıysa (phase_pause.json) yeni adım başlatılmaz."""
+    return (TEMP / "state" / "phase_pause.json").exists()
+
+
 def run_step(key: str, name: str, cmd: list[str], timeout: int, need_lock: bool) -> int:
     out = TEMP / "logs" / f"yeni_veri_{key}.log"
     log(f"▶ {name}")
@@ -146,6 +151,9 @@ def run_step(key: str, name: str, cmd: list[str], timeout: int, need_lock: bool)
         try:
             if lk:
                 fcntl.flock(lk, fcntl.LOCK_EX)          # Aşama 2–4: pipeline_runner ile aynı anda değil
+            if paused():                                # kilit beklenirken durdurulduysa başlatma
+                log(f"⏸ {name} başlatılmadı: tüm fazlar durduruldu")
+                return 130
             p = subprocess.Popen(cmd, cwd=str(ROOT), stdout=of, stderr=subprocess.STDOUT, start_new_session=True,
                                  env={**os.environ, "PYTHONUNBUFFERED": "1"})
             rc = p.wait(timeout=timeout)
@@ -202,7 +210,12 @@ def main() -> int:
         prev = (st["adimlar"].get(key) or {}).get("girdi")
         if not a.hepsi and prev == fp and not (a.bekleyen and key in ("oku", "ayristir", "birlestir", "aktar")):
             continue                                         # girdi değişmedi → tekrar işleme yok
+        if paused():
+            log("⏸ tüm fazlar durduruldu; hat burada bırakıldı (devam edilince kaldığı yerden sürer)")
+            break
         rc = run_step(key, name, cmd, timeout, need_lock)
+        if rc == 130 and paused():
+            break
         # çıktısı bir sonraki adımın girdisi olduğundan parmak izi adım SONRASI alınır
         st["adimlar"][key] = {"girdi": fingerprint(inputs), "rc": rc, "bitis": time.strftime("%Y-%m-%dT%H:%M:%S")}
         save_state(st)
