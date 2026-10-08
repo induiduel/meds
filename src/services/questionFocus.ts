@@ -72,6 +72,8 @@ export function buildQuestionFocus(input: {
   };
 }
 
+const isWordChar = (c: string) => /[\p{L}\p{N}]/u.test(c);
+
 /** Katlanmış metinde terimlerin kapladığı aralıklar; 2 = doğru şık, 1 = soru terimi (şık önceliklidir). */
 export function focusMarks(text: string, terms: string[], answerTerms: string[]): Uint8Array {
   const folded = foldText(text);
@@ -84,8 +86,12 @@ export function focusMarks(text: string, terms: string[], answerTerms: string[])
       for (;;) {
         const i = folded.indexOf(t, from);
         if (i < 0) break;
-        for (let j = i; j < i + t.length; j++) if (marks[j] < v) marks[j] = v;
         from = i + t.length;
+        // Yalnızca kelime başında eşleş; kök eşleşmesini kelimenin sonuna kadar uzat ("polip" → "polipler")
+        if (i > 0 && isWordChar(folded[i - 1])) continue;
+        let end = i + t.length;
+        while (end < folded.length && isWordChar(folded[end])) end++;
+        for (let j = i; j < end; j++) if (marks[j] < v) marks[j] = v;
       }
     }
   };

@@ -109,6 +109,7 @@ export const KazanimlarView: React.FC<Props> = ({
   const [loading, setLoading] = useState<boolean>(true);
 
   // Active resource expansion per kazanim id: 'none' | 'slayt' | 'ornek' | 'cikmis' | 'sozluk' | 'ozet'
+  const [openDers, setOpenDers] = useState<Record<string, boolean>>({});
   const [activeTabByKazanim, setActiveTabByKazanim] = useState<Record<string, string>>({});
   // Solved state for sample questions
   const [ornekAnswers, setOrnekAnswers] = useState<Record<string, string>>({});
@@ -279,18 +280,35 @@ export const KazanimlarView: React.FC<Props> = ({
           <p className="m-0 text-[13px] text-ink-3">Arama terimini değiştirebilir ya da filtreyi temizleyebilirsiniz.</p>
         </div>
       ) : (
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-end gap-1">
+            <button type="button" className="ms-btn is-ghost is-sm" onClick={() => setOpenDers(Object.fromEntries(filteredDersler.map((d) => [d.ders, true])))}>Tümünü aç</button>
+            <button type="button" className="ms-btn is-ghost is-sm" onClick={() => setOpenDers(Object.fromEntries(filteredDersler.map((d) => [d.ders, false])))}>Tümünü kapat</button>
+          </div>
           {filteredDersler.map((dersGroup) => (
-            <section key={dersGroup.ders} className="flex flex-col gap-3">
+            (() => {
+            // Arama ya da tek ders seçiliyken içerik açık gelir; aksi hâlde ders başlığına tıklayınca açılır
+            const isOpen = openDers[dersGroup.ders] ?? (Boolean(searchQuery.trim()) || selectedDers !== 'all');
+            return (
+            <section key={dersGroup.ders} className={`ms-ders-acc ${isOpen ? 'is-open' : ''}`}>
               {/* Ders Başlığı */}
-              <div className="flex items-center gap-2 pb-1.5 border-b border-line-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-accent" />
-                <h2 className="m-0 text-[15px] font-bold text-ink">{dersGroup.ders}</h2>
-                <span className="ms-tag text-[11px] ml-auto font-medium">{dersGroup.count} kazanım</span>
-              </div>
+              <h2 className="m-0">
+                <button
+                  type="button"
+                  aria-expanded={isOpen}
+                  onClick={() => setOpenDers((o) => ({ ...o, [dersGroup.ders]: !isOpen }))}
+                  className="ms-ders-acc-head"
+                >
+                  <ChevronDown className="ms-ders-acc-chev" aria-hidden />
+                  <span className="min-w-0 flex-1 truncate text-[15px] font-semibold text-ink text-left">{dersGroup.ders}</span>
+                  <span className="hidden sm:inline text-[12.5px] text-ink-3 shrink-0">{dersGroup.konular.length} konu</span>
+                  <span className="ms-tag shrink-0 tabular-nums">{dersGroup.count} kazanım</span>
+                </button>
+              </h2>
 
               {/* Konular ve Kazanımlar */}
-              <div className="flex flex-col gap-3">
+              {isOpen && (
+              <div className="flex flex-col gap-3 px-3 pb-3 sm:px-4 sm:pb-4 ms-pop-in">
                 {dersGroup.konular.map((konuGroup) => (
                   <div
                     key={konuGroup.konu}
@@ -628,7 +646,10 @@ export const KazanimlarView: React.FC<Props> = ({
                   </div>
                 ))}
               </div>
+              )}
             </section>
+            );
+            })()
           ))}
         </div>
       )}

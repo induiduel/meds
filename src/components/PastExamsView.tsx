@@ -1395,83 +1395,77 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 })()}
 
                 {isCompareView ? (
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 p-3 bg-canvas/60 rounded-xl border border-line-2 my-2">
-                    {/* Sol: Eski Sürüm */}
-                    <div className="bg-field rounded-lg p-3 flex flex-col gap-2 border border-line-2/60">
-                      <div className="flex items-center justify-between pb-1.5 border-b border-line-2">
-                        <span className="text-[12px] font-bold text-ink-2 flex items-center gap-1.5">
-                          <History className="w-3.5 h-3.5 text-ink-3" /> Eski Sürüm (Ham Çıkmış Sınav)
-                        </span>
-                        {eskiData.correctAnswer && <span className="ms-tag text-[11px]">Cevap: {eskiData.correctAnswer}</span>}
-                      </div>
-                      <StemText text={String(eskiData.stem || stem)} terms={terms} size="sm" />
-                      {(eskiData.options || []).length > 0 && (
-                        <ol className="list-none m-0 p-0 flex flex-col gap-1 text-[13px] text-ink-2">
-                          {(eskiData.options || []).map((opt: any) => (
-                            <li key={opt.key} className={`flex items-start gap-2 p-1 rounded ${opt.key === eskiData.correctAnswer ? 'bg-warn-soft/50 font-medium text-ink' : ''}`}>
-                              <span className="font-mono font-semibold text-ink-3 shrink-0">{opt.key})</span>
-                              <span>{opt.text}</span>
-                            </li>
-                          ))}
-                        </ol>
-                      )}
-                      {eskiData.explanation ? (
-                        <div className="text-[12px] text-ink-3 mt-1 pt-1.5 border-t border-line-2/40">
-                          <span className="font-semibold text-ink-2 block mb-0.5">Eski Açıklama:</span>
-                          <p className="m-0 whitespace-pre-wrap">{eskiData.explanation}</p>
+                  (() => {
+                    const n = (t: any) => String(t ?? '').replace(/\s+/g, ' ').trim();
+                    const oldStem = n(eskiData.stem || stem);
+                    const newStem = n(denetleyiciData.stem || stem);
+                    const oldOpts: any[] = eskiData.options || [];
+                    const newOpts: any[] = denetleyiciData.options || options;
+                    const keys = Array.from(new Set([...oldOpts, ...newOpts].map((o: any) => String(o.key)))).sort();
+                    const oldAns = eskiData.correctAnswer;
+                    const changedCount = keys.filter((k) => n(oldOpts.find((o) => o.key === k)?.text) !== n(newOpts.find((o) => o.key === k)?.text)).length + (oldStem !== newStem ? 1 : 0);
+                    const oldExpl = n(eskiData.explanation);
+                    return (
+                      <div className="ms-cmp">
+                        <div className="ms-cmp-head">
+                          <span><History /> Eski sürüm{oldAns && <span className="ms-tag">Cevap {oldAns}</span>}</span>
+                          <span className="is-new"><ShieldCheck /> Denetleyici sürümü<span className="ms-tag is-ok">Cevap {correctAnswer}</span></span>
                         </div>
-                      ) : (
-                        <p className="text-[11.5px] text-ink-3 m-0 italic">Eski sürümde açıklama bulunmuyor.</p>
-                      )}
-                    </div>
+                        <p className="ms-cmp-summary">
+                          {changedCount ? `${changedCount} alanda değişiklik` : 'Metin değişmedi'}
+                          {answerChanged && <> · <b className="text-warn">cevap {oldAns} → {correctAnswer}</b></>}
+                        </p>
 
-                    {/* Sağ: Denetleyici Sürümü */}
-                    <div className="bg-accent-soft/30 rounded-lg p-3 flex flex-col gap-2 border border-accent/30">
-                      <div className="flex items-center justify-between pb-1.5 border-b border-accent/20">
-                        <span className="text-[12px] font-bold text-accent flex items-center gap-1.5">
-                          <ShieldCheck className="w-3.5 h-3.5 text-ok" /> Denetleyici Sürümü (Altın Standart)
-                        </span>
-                        <span className="ms-tag is-ok text-[11px] font-bold">Onaylı Cevap: {correctAnswer}</span>
-                      </div>
-                      {answerChanged && (
-                        <div className="p-2 bg-warn/10 border border-warn/20 rounded-md text-[12px] text-warn ">
-                          ⚠️ <b>Cevap Düzeltildi:</b> Eski arşivde <b>{eskiData.correctAnswer}</b> idi; literatür incelemesiyle <b>{correctAnswer}</b> olarak güncellendi.
-                        </div>
-                      )}
-                      <StemText text={String(denetleyiciData.stem || stem)} terms={terms} size="sm" />
-                      {(denetleyiciData.options || options).length > 0 && (
-                        <ol className="list-none m-0 p-0 flex flex-col gap-1 text-[13px]">
-                          {(denetleyiciData.options || options).map((opt: any) => {
-                            const isCorr = opt.key === correctAnswer;
-                            return (
-                              <li key={opt.key} className={`flex items-start gap-2 p-1 rounded ${isCorr ? 'bg-ok-soft font-semibold text-ok' : 'text-ink-2'}`}>
-                                <span className="font-mono font-bold shrink-0">{opt.key})</span>
-                                <span>{opt.text}</span>
-                                {isCorr && <span className="ml-auto text-[11px] text-ok font-bold">✓ Doğru</span>}
-                              </li>
-                            );
-                          })}
-                        </ol>
-                      )}
-                      {saEntries.length > 0 && (
-                        <div className="flex flex-col gap-1 text-[12px] mt-1 pt-1.5 border-t border-accent/20">
-                          <span className="font-bold text-accent block">Seçenek Analizi & Çürütme:</span>
-                          {saEntries.map(([k, text]: [string, any]) => (
-                            <div key={k} className="flex items-start gap-1.5 py-0.5">
-                              <span className={`px-1.5 py-0.2 rounded font-mono text-[10.5px] font-bold shrink-0 ${String(text).startsWith('DOĞRU') ? 'bg-ok-soft text-ok' : 'bg-bad-soft text-bad-text'}`}>{k}</span>
-                              <span className="text-ink leading-snug">{text}</span>
+                        {oldStem === newStem ? (
+                          <div className="ms-cmp-row is-same"><span className="ms-cmp-key is-label" title="Soru kökü">Kök</span><div className="ms-cmp-cell is-wide"><StemText text={newStem} terms={terms} size="sm" /></div></div>
+                        ) : (
+                          <div className="ms-cmp-row is-changed">
+                            <span className="ms-cmp-key is-label" title="Soru kökü">Kök</span>
+                            <div className="ms-cmp-cell is-old"><StemText text={oldStem} terms={terms} size="sm" /></div>
+                            <div className="ms-cmp-cell is-new"><StemText text={newStem} terms={terms} size="sm" /></div>
+                          </div>
+                        )}
+
+                        {keys.map((k) => {
+                          const o = n(oldOpts.find((x) => x.key === k)?.text);
+                          const nw = n(newOpts.find((x) => x.key === k)?.text);
+                          const same = o === nw;
+                          const marks = (isAns: boolean, wasAns: boolean) => (
+                            <>{isAns && <span className="ms-tag is-ok">Doğru</span>}{wasAns && <span className="ms-tag is-warn">Eski cevap</span>}</>
+                          );
+                          return (
+                            <div key={k} className={`ms-cmp-row ${same ? 'is-same' : 'is-changed'}`}>
+                              <span className={`ms-cmp-key ${k === correctAnswer ? 'is-ok' : ''}`}>{k}</span>
+                              {same ? (
+                                <div className="ms-cmp-cell is-wide"><span>{nw || '—'}</span>{marks(k === correctAnswer, answerChanged && k === oldAns)}</div>
+                              ) : (
+                                <>
+                                  <div className="ms-cmp-cell is-old"><span>{o || '—'}</span>{answerChanged && k === oldAns && <span className="ms-tag is-warn">Eski cevap</span>}</div>
+                                  <div className="ms-cmp-cell is-new"><span>{nw || '—'}</span>{k === correctAnswer && <span className="ms-tag is-ok">Doğru</span>}</div>
+                                </>
+                              )}
                             </div>
-                          ))}
+                          );
+                        })}
+
+                        <div className="ms-cmp-expl">
+                          <div>
+                            <span className="ms-cmp-label">Eski açıklama</span>
+                            {oldExpl ? <p className="m-0 whitespace-pre-wrap">{eskiData.explanation}</p> : <p className="m-0 text-ink-3">Eski sürümde açıklama yok.</p>}
+                          </div>
+                          <div>
+                            <span className="ms-cmp-label is-new">Yeni açıklama</span>
+                            {explanation ? <SourceText text={String(explanation)} size="sm" /> : <p className="m-0 text-ink-3">Açıklama yok.</p>}
+                            {saEntries.length > 0 && (
+                              <button type="button" className="ms-btn is-ghost is-sm self-start" onClick={() => setAboutQuestion(q)}>
+                                <ShieldCheck /> Şık analizini gör
+                              </button>
+                            )}
+                          </div>
                         </div>
-                      )}
-                      {explanation && (
-                        <div className="text-[12px] text-ink-2 mt-1 pt-1.5 border-t border-accent/20">
-                          <span className="font-bold text-ink block mb-0.5">Patofizyolojik Mekanizma:</span>
-                          <p className="m-0 leading-relaxed whitespace-pre-wrap">{explanation}</p>
-                        </div>
-                      )}
-                    </div>
-                  </div>
+                      </div>
+                    );
+                  })()
                 ) : effectiveMode === 'split' ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
                     <div className="bg-canvas rounded-xl p-3 flex flex-col gap-2">
@@ -1914,6 +1908,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             learnMatch={lm}
             p14StatusNote={p14Note}
             isEskiView={isLegacyView}
+            answerKey={ans ? String(ans) : undefined}
+            options={(q.reconstruction?.options || q.options || []) as { key: string; text: string }[]}
             answerChange={isDenetleyiciQuestion(q) && !hidden && (q.eskiSurum || q.phase14Original)?.correctAnswer && (q.eskiSurum || q.phase14Original).correctAnswer !== ans ? { from: String((q.eskiSurum || q.phase14Original).correctAnswer), to: String(ans) } : undefined}
             onOpenSlide={(kaynak, sayfa) => {
               setAboutQuestion(null);

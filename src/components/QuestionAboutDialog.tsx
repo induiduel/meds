@@ -41,6 +41,9 @@ interface Props {
   learnMatch?: QuestionLearnMatch | null;
   p14StatusNote?: string;
   isEskiView?: boolean;
+  /** Doğru şık ve metni (cevap özeti için) */
+  answerKey?: string;
+  options?: { key: string; text: string }[];
   /** Denetleyici incelemesinde değişen cevap anahtarı */
   answerChange?: { from: string; to: string };
   onOpenSlide?: (kaynak: string, sayfa: number) => void;
@@ -73,6 +76,8 @@ export const QuestionAboutDialog: React.FC<Props> = ({
   referanslar,
   denetleyiciOnayi,
   answerChange,
+  answerKey,
+  options,
   learnMatch,
   p14StatusNote,
   isEskiView,
@@ -85,6 +90,8 @@ export const QuestionAboutDialog: React.FC<Props> = ({
   const [copied, setCopied] = useState(false);
   const [reveal, setReveal] = useState(false);
   const hidden = answerHidden && !reveal;
+  const answerOptionText = options?.find((o) => String(o.key).toUpperCase() === String(answerKey || '').toUpperCase())?.text;
+  const optionText = (k: string) => options?.find((o) => String(o.key).toUpperCase() === k.toUpperCase())?.text;
 
   const copyId = () => {
     navigator.clipboard?.writeText(questionId).then(() => {
@@ -95,7 +102,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
 
   return (
     <Dialog
-      width="max-w-2xl"
+      width="max-w-3xl"
       title={title}
       subtitle={subtitle}
       onClose={onClose}
@@ -117,12 +124,6 @@ export const QuestionAboutDialog: React.FC<Props> = ({
           <span><b>Eski Sınav Arşiv Sürümü:</b> Doğrulanmış ve gerekçelendirilmiş hâl için Denetleyici Sürümüne geçebilirsiniz.</span>
         </div>
       )}
-      {answerChange && (
-        <div className="p-3 bg-warn-soft border border-warn/20 rounded-xl text-[12.5px] text-ink flex items-start gap-2.5 mb-1">
-          <AlertCircle className="w-4 h-4 shrink-0 text-warn mt-0.5" />
-          <span><b>Cevap düzeltildi:</b> Eski sınav arşivindeki cevap ({answerChange.from}) literatür incelemesi sonucunda <b>{answerChange.to}</b> olarak güncellendi.</span>
-        </div>
-      )}
       {p14StatusNote && (
         <div className="p-3 bg-accent-soft/40 border border-accent/20 rounded-xl text-[12.5px] text-ink flex items-start gap-2.5 mb-1">
           <Sparkles className="w-4 h-4 shrink-0 text-accent mt-0.5" />
@@ -130,24 +131,23 @@ export const QuestionAboutDialog: React.FC<Props> = ({
         </div>
       )}
 
-      {/* Künye */}
-      <dl className="ms-about-facts">
-        <div className="is-wide">
-          <dt>Soru kimliği</dt>
-          <dd className="flex items-center gap-1 min-w-0">
-            <span className="font-mono text-[12.5px] truncate" title={questionId}>{questionId}</span>
-            <button type="button" onClick={copyId} className="ms-btn is-ghost is-icon is-sm shrink-0" aria-label="Kimliği kopyala" title="Kimliği kopyala">
-              {copied ? <Check className="text-ok" /> : <Copy />}
-            </button>
-          </dd>
-        </div>
-        {facts.filter((f) => f.value).map((f) => (
-          <div key={f.label} className={f.wide ? 'is-wide' : ''}>
-            <dt>{f.label}</dt>
-            <dd className={f.mono ? 'font-mono' : ''}>{f.value}</dd>
+
+      {/* Cevap özeti */}
+      {answerKey && !hidden && (
+        <div className="ms-about-answer">
+          <span className="ms-about-answer-key" aria-label={`Doğru cevap ${answerKey}`}>{answerKey}</span>
+          <div className="min-w-0 flex-1 flex flex-col gap-0.5">
+            <span className="text-[11.5px] font-semibold text-ok">Doğru cevap</span>
+            {answerOptionText && <span className="text-[14px] font-medium text-ink leading-snug">{answerOptionText}</span>}
+            {answerChange && (
+              <span className="mt-1 inline-flex items-start gap-1.5 text-[12.5px] text-ink-2">
+                <AlertCircle className="w-3.5 h-3.5 shrink-0 text-warn mt-0.5" />
+                <span><b className="text-ink">Cevap düzeltildi:</b> eski arşivde <b className="font-mono">{answerChange.from}</b> idi; literatür incelemesiyle <b className="font-mono">{answerChange.to}</b> olarak güncellendi.</span>
+              </span>
+            )}
           </div>
-        ))}
-      </dl>
+        </div>
+      )}
 
       {/* İlgili slayt */}
       {learnMatch && (
@@ -180,7 +180,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
         <section className="flex flex-col gap-2">
           <H>
             <BookOpen className="w-3.5 h-3.5" /> 
-            {denetleyiciOnayi ? 'Tıbbi Açıklama & Patofizyolojik Mekanizma' : 'Açıklama'} {explanationNote}
+            {denetleyiciOnayi ? 'Açıklama ve patofizyolojik mekanizma' : 'Açıklama'} {explanationNote}
           </H>
           {hidden ? (
             <div className="rounded-xl bg-field px-3.5 py-3 flex flex-wrap items-center gap-2 text-[13px] text-ink-2">
@@ -198,20 +198,31 @@ export const QuestionAboutDialog: React.FC<Props> = ({
       {/* Şık Analizleri & Çürütmeler */}
       {sikAnalizi && Object.keys(sikAnalizi).length > 0 && !hidden && (
         <section className="flex flex-col gap-2">
-          <H><ShieldCheck className="w-3.5 h-3.5 text-ok" /> Şık analizi & patofizyolojik mekanizma</H>
-          <div className="flex flex-col gap-1.5 rounded-xl bg-field p-3 text-[13px]">
-            {Object.entries(sikAnalizi).sort(([a], [b]) => a.localeCompare(b)).map(([k, text]) => {
-              const isCorrect = String(text).toUpperCase().startsWith('DOĞRU');
+          <H><ShieldCheck className="w-3.5 h-3.5 text-ok" /> Şık analizi</H>
+          <ol className="ms-about-analysis">
+            {Object.entries(sikAnalizi).sort(([a], [b]) => a.localeCompare(b)).map(([k, raw]) => {
+              const m = String(raw).match(/^\s*(DOĞRU|YANLIŞ|TARTIŞMALI)(?:\s*\/\s*(TARTIŞMALI|YANLIŞ|DOĞRU))?\s*[:\-–]\s*/i);
+              const verdict = m ? m[1].toLocaleUpperCase('tr-TR') : '';
+              const disputed = m && /TARTIŞMALI/i.test(m[0]);
+              const tone = disputed ? 'is-warn' : verdict === 'DOĞRU' ? 'is-ok' : verdict === 'YANLIŞ' ? 'is-bad' : '';
+              const label = disputed ? (verdict === 'TARTIŞMALI' ? 'Tartışmalı' : `${verdict === 'DOĞRU' ? 'Doğru' : 'Yanlış'} · tartışmalı`) : verdict === 'DOĞRU' ? 'Doğru ifade' : verdict === 'YANLIŞ' ? 'Yanlış ifade' : '';
+              const reason = m ? String(raw).slice(m[0].length) : String(raw);
+              const isAnswer = answerKey && k.toUpperCase() === answerKey.toUpperCase();
               return (
-                <div key={k} className="flex items-start gap-2 py-1 border-b border-line-2/40 last:border-b-0">
-                  <span className={`px-2 py-0.5 rounded text-[11px] font-mono font-bold shrink-0 ${isCorrect ? 'bg-ok-soft text-ok' : 'bg-bad-soft text-bad-text'}`}>
-                    {k}
-                  </span>
-                  <span className="text-ink leading-relaxed text-[12.5px]">{text}</span>
-                </div>
+                <li key={k} className={isAnswer ? 'is-answer' : ''}>
+                  <span className="ms-about-analysis-key">{k}</span>
+                  <div className="min-w-0 flex-1 flex flex-col gap-1">
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      {optionText(k) && <span className="text-[13.5px] font-medium text-ink leading-snug mr-1">{optionText(k)}</span>}
+                      {label && <span className={`ms-tag ${tone}`}>{label}</span>}
+                      {isAnswer && <span className="ms-tag is-ok"><Check /> Cevap</span>}
+                    </div>
+                    <p className="m-0 text-[13px] text-ink-2 leading-relaxed">{reason}</p>
+                  </div>
+                </li>
               );
             })}
-          </div>
+          </ol>
         </section>
       )}
 
@@ -221,7 +232,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
         if (!cleanRefs.length || hidden) return null;
         return (
           <section className="flex flex-col gap-1.5">
-            <H><BookOpen className="w-3.5 h-3.5" /> Standart Referans Tıp Kaynakları</H>
+            <H><BookOpen className="w-3.5 h-3.5" /> Referans kaynaklar</H>
             <ul className="m-0 pl-4 text-[12.5px] text-ink-2 list-disc flex flex-col gap-1">
               {cleanRefs.map((ref, idx) => (
                 <li key={idx} className="leading-snug">{ref}</li>
@@ -239,6 +250,28 @@ export const QuestionAboutDialog: React.FC<Props> = ({
           </div>
         </section>
       )}
+
+      <section className="flex flex-col gap-2">
+        <H>Künye</H>
+        {/* Künye */}
+        <dl className="ms-about-facts">
+          <div>
+            <dt>Soru kimliği</dt>
+            <dd className="flex items-center gap-1 min-w-0">
+              <span className="font-mono text-[12.5px] truncate" title={questionId}>{questionId}</span>
+              <button type="button" onClick={copyId} className="ms-btn is-ghost is-icon is-sm shrink-0" aria-label="Kimliği kopyala" title="Kimliği kopyala">
+                {copied ? <Check className="text-ok" /> : <Copy />}
+              </button>
+            </dd>
+          </div>
+          {facts.filter((f) => f.value).map((f) => (
+            <div key={f.label} className={f.wide ? 'is-wide' : ''}>
+              <dt>{f.label}</dt>
+              <dd className={f.mono ? 'font-mono' : ''}>{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
 
       {/* Müfredat, terimler, ilgili sayfalar (analiz varsa) */}
       <section className="flex flex-col gap-2">
