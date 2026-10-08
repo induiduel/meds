@@ -207,125 +207,130 @@ def generate_rag_markdown(audited):
     return md
 
 def main():
-    print(f"[{datetime.now().isoformat()}] Faz 15 Oturumlu Başdenetim Motoru Devrede...")
+    print(f"[{datetime.now().isoformat()}] Faz 15 Oturumlu Başdenetim Sürekli İzleyici Modu Başlatıldı...", flush=True)
 
-    # pastQuestions.json yükle
-    if not PAST_QUESTIONS_FILE.exists():
-        print("HATA: pastQuestions.json bulunamadı!")
-        return
-
-    with open(PAST_QUESTIONS_FILE, "r", encoding="utf-8") as f:
-        past_questions = json.load(f)
-
-    qmap = {q["id"]: q for q in past_questions if "id" in q}
-    done_ids = load_checkpoint()
-
-    # reviews.jsonl oku
-    reviews = []
-    with open(REVIEWS_FILE, "r", encoding="utf-8") as f:
-        for line in f:
-            if not line.strip(): continue
-            try:
-                d = json.loads(line)
-                qid = d.get("question_id") or d.get("id")
-                if qid and qid not in done_ids:
-                    reviews.append(d)
-            except Exception:
+    while True:
+        try:
+            # pastQuestions.json yükle
+            if not PAST_QUESTIONS_FILE.exists():
+                time.sleep(5)
                 continue
 
-    total_pending = len(reviews)
-    print(f"Kuyrukta bekleyen incelenecek soru sayısı: {total_pending}")
+            with open(PAST_QUESTIONS_FILE, "r", encoding="utf-8") as f:
+                past_questions = json.load(f)
 
-    batch_size = 10
-    batch_count = 0
-    processed_count = 0
+            qmap = {q["id"]: q for q in past_questions if "id" in q}
+            done_ids = load_checkpoint()
 
-    for i in range(0, total_pending, batch_size):
-        batch = reviews[i:i + batch_size]
-        batch_count += 1
+            # reviews.jsonl oku (Faz 14'ten yeni gelen veya bekleyen sorular)
+            reviews = []
+            if REVIEWS_FILE.exists():
+                with open(REVIEWS_FILE, "r", encoding="utf-8") as f:
+                    for line in f:
+                        if not line.strip(): continue
+                        try:
+                            d = json.loads(line)
+                            qid = d.get("question_id") or d.get("id")
+                            if qid and qid not in done_ids:
+                                reviews.append(d)
+                        except Exception:
+                            continue
 
-        for rev in batch:
-            qid = rev.get("question_id") or rev.get("id")
-            orig_q = qmap.get(qid)
+            total_pending = len(reviews)
+            if total_pending > 0:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Yeni {total_pending} soru denetim kuyruğunda. Partiler halinde işleniyor...")
 
-            audited = clean_and_audit_question(rev, orig_q)
+                batch_size = 10
+                batch_count = 0
+                processed_count = 0
 
-            # 1. RAG Markdown Yaz
-            md_path = PHASE15_MD_DIR / f"{qid}.md"
-            md_path.write_text(generate_rag_markdown(audited), encoding="utf-8")
+                for i in range(0, total_pending, batch_size):
+                    batch = reviews[i:i + batch_size]
+                    batch_count += 1
 
-            # 2. Faz 15 JSON Formatında Yaz
-            json_path = PHASE15_JSON_DIR / f"{qid}.json"
-            json_path.write_text(json.dumps(audited, ensure_ascii=False, indent=2), encoding="utf-8")
-
-            # 3. pastQuestions içini güncelle ve Faz 14 Yedeğini koru
-            if orig_q:
-                if not orig_q.get("phase14Original"):
-                    orig_q["phase14Original"] = {
-                        "stem": orig_q.get("stem"),
-                        "options": orig_q.get("options"),
-                        "correctAnswer": orig_q.get("correctAnswer"),
-                        "explanation": orig_q.get("explanation"),
-                        "committeeId": orig_q.get("committeeId"),
-                        "discipline": orig_q.get("discipline"),
-                        "topic": orig_q.get("topic")
-                    }
-
-                orig_q["stem"] = audited["soru_koku"]
-                opts = []
-                for k in ["A", "B", "C", "D", "E"]:
-                    opts.append({
-                        "key": k,
-                        "text": audited["secenekler"][k],
-                        "isCorrect": (k == audited["dogru_secenek"]),
-                        "upvotes": 1
-                    })
-                orig_q["options"] = opts
-                orig_q["correctAnswer"] = audited["dogru_secenek"]
-                orig_q["claimedAnswer"] = audited["dogru_secenek"]
-                orig_q["explanation"] = audited["aciklama"]
-                orig_q["committeeId"] = audited["kurul_adi"]
-                orig_q["discipline"] = audited["ders_adi"]
-                orig_q["topic"] = audited["konu_adi"]
-
-                if orig_q.get("reconstruction") and isinstance(orig_q["reconstruction"], dict):
-                    orig_q["reconstruction"]["stem"] = audited["soru_koku"]
-                    orig_q["reconstruction"]["options"] = opts
-                    orig_q["reconstruction"]["correctAnswer"] = audited["dogru_secenek"]
-                    orig_q["reconstruction"]["explanation"] = audited["aciklama"]
-
-                # Etiketler ve Faz 15 Durumu
-                tags = list(orig_q.get("tags", []))
-                if "faz15_onaylandi" not in tags:
-                    tags.append("faz15_onaylandi")
-                orig_q["tags"] = tags
-                orig_q["status"] = "verified"
-                orig_q["answerStatus"] = "faz15"
-                orig_q["phase15"] = {
-                    "status": "onaylandi",
-                    "auditedAt": datetime.now().isoformat() + "Z",
-                    "cevapDegisti": audited["cevap_degisti"],
-                    "cevapGerekcesi": audited["cevap_gerekcesi"],
-                    "summary": audited["degisiklik_ozeti"]
-                }
-                orig_q["updatedAt"] = datetime.now().isoformat() + "Z"
-                orig_q["faz15Audited"] = True
-
-            done_ids.add(qid)
-            processed_count += 1
-
-        # Her 10 soruluk partide veri tabanını kaydet ve server'a dokun
-        with open(PAST_QUESTIONS_FILE, "w", encoding="utf-8") as f:
-            json.dump(past_questions, f, ensure_ascii=False, indent=2)
-        with open(ROOT / "data" / "pastQuestions.json", "w", encoding="utf-8") as f_data:
-            json.dump(past_questions, f_data, ensure_ascii=False, indent=2)
-
-        # Server dosya izleyicisi için mtime güncelle
-        os.utime(PAST_QUESTIONS_FILE, None)
-        save_checkpoint(done_ids)
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] Parti #{batch_count} tamamlandı ({processed_count}/{total_pending} soru). Veri tabanı güncellendi ve sunucuya senkronize edildi.")
-
-    print(f"🎉 Faz 15 Başdenetim motoru tüm soruları tamamladı! Toplam {processed_count} soru işlendi.")
+                    for rev in batch:
+                        qid = rev.get("question_id") or rev.get("id")
+                        orig_q = qmap.get(qid)
+            
+                        audited = clean_and_audit_question(rev, orig_q)
+            
+                        # 1. RAG Markdown Yaz
+                        md_path = PHASE15_MD_DIR / f"{qid}.md"
+                        md_path.write_text(generate_rag_markdown(audited), encoding="utf-8")
+            
+                        # 2. Faz 15 JSON Formatında Yaz
+                        json_path = PHASE15_JSON_DIR / f"{qid}.json"
+                        json_path.write_text(json.dumps(audited, ensure_ascii=False, indent=2), encoding="utf-8")
+            
+                        # 3. pastQuestions içini güncelle ve Faz 14 Yedeğini koru
+                        if orig_q:
+                            if not orig_q.get("phase14Original"):
+                                orig_q["phase14Original"] = {
+                                    "stem": orig_q.get("stem"),
+                                    "options": orig_q.get("options"),
+                                    "correctAnswer": orig_q.get("correctAnswer"),
+                                    "explanation": orig_q.get("explanation"),
+                                    "committeeId": orig_q.get("committeeId"),
+                                    "discipline": orig_q.get("discipline"),
+                                    "topic": orig_q.get("topic")
+                                }
+            
+                            orig_q["stem"] = audited["soru_koku"]
+                            opts = []
+                            for k in ["A", "B", "C", "D", "E"]:
+                                opts.append({
+                                    "key": k,
+                                    "text": audited["secenekler"][k],
+                                    "isCorrect": (k == audited["dogru_secenek"]),
+                                    "upvotes": 1
+                                })
+                            orig_q["options"] = opts
+                            orig_q["correctAnswer"] = audited["dogru_secenek"]
+                            orig_q["claimedAnswer"] = audited["dogru_secenek"]
+                            orig_q["explanation"] = audited["aciklama"]
+                            orig_q["committeeId"] = audited["kurul_adi"]
+                            orig_q["discipline"] = audited["ders_adi"]
+                            orig_q["topic"] = audited["konu_adi"]
+            
+                            if orig_q.get("reconstruction") and isinstance(orig_q["reconstruction"], dict):
+                                orig_q["reconstruction"]["stem"] = audited["soru_koku"]
+                                orig_q["reconstruction"]["options"] = opts
+                                orig_q["reconstruction"]["correctAnswer"] = audited["dogru_secenek"]
+                                orig_q["reconstruction"]["explanation"] = audited["aciklama"]
+            
+                            # Etiketler ve Faz 15 Durumu
+                            tags = list(orig_q.get("tags", []))
+                            if "faz15_onaylandi" not in tags:
+                                tags.append("faz15_onaylandi")
+                            orig_q["tags"] = tags
+                            orig_q["status"] = "verified"
+                            orig_q["answerStatus"] = "faz15"
+                            orig_q["phase15"] = {
+                                "status": "onaylandi",
+                                "auditedAt": datetime.now().isoformat() + "Z",
+                                "cevapDegisti": audited["cevap_degisti"],
+                                "cevapGerekcesi": audited["cevap_gerekcesi"],
+                                "summary": audited["degisiklik_ozeti"]
+                            }
+                            orig_q["updatedAt"] = datetime.now().isoformat() + "Z"
+                            orig_q["faz15Audited"] = True
+            
+                        done_ids.add(qid)
+                        processed_count += 1
+            
+                    # Her 10 soruluk partide veri tabanını kaydet ve server'a dokun
+                    with open(PAST_QUESTIONS_FILE, "w", encoding="utf-8") as f:
+                        json.dump(past_questions, f, ensure_ascii=False, indent=2)
+                    with open(ROOT / "data" / "pastQuestions.json", "w", encoding="utf-8") as f_data:
+                        json.dump(past_questions, f_data, ensure_ascii=False, indent=2)
+            
+                    # Server dosya izleyicisi için mtime güncelle
+                    os.utime(PAST_QUESTIONS_FILE, None)
+                    save_checkpoint(done_ids)
+                    time.sleep(10)
+        except Exception as err:
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] Faz 15 döngü uyarısı: {err}")
+            time.sleep(10)
 
 if __name__ == "__main__":
     main()
