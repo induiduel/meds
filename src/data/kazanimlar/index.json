@@ -1,0 +1,325 @@
+[
+  {
+    "kurul": 1,
+    "name": "Ürogenital ve Obstetrik Kurulu",
+    "code": "TIP310",
+    "totalCount": 715,
+    "dersler": [
+      {
+        "ders": "Tıbbi Genetik",
+        "count": 73,
+        "konuCount": 7
+      },
+      {
+        "ders": "Enfeksiyon Hastalıkları",
+        "count": 119,
+        "konuCount": 11
+      },
+      {
+        "ders": "Tıbbi Patoloji",
+        "count": 356,
+        "konuCount": 30
+      },
+      {
+        "ders": "Halk Sağlığı",
+        "count": 71,
+        "konuCount": 7
+      },
+      {
+        "ders": "Üroloji",
+        "count": 70,
+        "konuCount": 7
+      },
+      {
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "count": 17,
+        "konuCount": 2
+      },
+      {
+        "ders": "Tıbbi Farmakoloji",
+        "count": 9,
+        "konuCount": 1
+      }
+    ]
+  },
+  {
+    "kurul": 2,
+    "name": "Nöropsikiyatri Kurulu",
+    "code": "TIP320",
+    "totalCount": 221,
+    "dersler": [
+      {
+        "ders": "Tıbbi Genetik",
+        "count": 21,
+        "konuCount": 5
+      },
+      {
+        "ders": "Tıbbi Patoloji",
+        "count": 17,
+        "konuCount": 5
+      },
+      {
+        "ders": "Nöroloji",
+        "count": 38,
+        "konuCount": 10
+      },
+      {
+        "ders": "Aile Hekimliği",
+        "count": 12,
+        "konuCount": 4
+      },
+      {
+        "ders": "Anesteziyoloji ve Reanimasyon",
+        "count": 3,
+        "konuCount": 1
+      },
+      {
+        "ders": "Tıbbi Farmakoloji",
+        "count": 54,
+        "konuCount": 14
+      },
+      {
+        "ders": "Psikiyatri",
+        "count": 61,
+        "konuCount": 19
+      },
+      {
+        "ders": "FTR",
+        "count": 6,
+        "konuCount": 2
+      },
+      {
+        "ders": "Beyin ve Sinir Cerrahisi",
+        "count": 9,
+        "konuCount": 3
+      }
+    ]
+  },
+  {
+    "kurul": 3,
+    "name": "Gastrointestinal Sistem Kurulu",
+    "code": "TIP330",
+    "totalCount": 198,
+    "dersler": [
+      {
+        "ders": "Tıbbi Genetik",
+        "count": 6,
+        "konuCount": 2
+      },
+      {
+        "ders": "Enfeksiyon Hastalıkları",
+        "count": 10,
+        "konuCount": 2
+      },
+      {
+        "ders": "İç Hastalıkları",
+        "count": 47,
+        "konuCount": 15
+      },
+      {
+        "ders": "Tıbbi Patoloji",
+        "count": 61,
+        "konuCount": 19
+      },
+      {
+        "ders": "Tıbbi Farmakoloji",
+        "count": 65,
+        "konuCount": 17
+      },
+      {
+        "ders": "Çocuk Sağlığı ve Hastalıkları",
+        "count": 9,
+        "konuCount": 3
+      }
+    ]
+  },
+  {
+    "kurul": 4,
+    "name": "Dolaşım, Solunum ve Tümör Kurulu",
+    "code": "TIP340",
+    "totalCount": 196,
+    "dersler": [
+      {
+        "ders": "Tıbbi Genetik",
+        "count": 12,
+        "konuCount": 4
+      },
+      {
+        "ders": "Enfeksiyon Hastalıkları",
+        "count": 6,
+        "konuCount": 2
+      },
+      {
+        "ders": "Tıbbi Patoloji",
+        "count": 58,
+        "konuCount": 18
+      },
+      {
+        "ders": "Göğüs Hastalıkları",
+        "count": 11,
+        "konuCount": 3
+      },
+      {
+        "ders": "Kardiyoloji",
+        "count": 39,
+        "konuCount": 11
+      },
+      {
+        "ders": "İç Hastalıkları",
+        "count": 3,
+        "konuCount": 1
+      },
+      {
+        "ders": "Anestezi ve Reanimasyon",
+        "count": 3,
+        "konuCount": 1
+      },
+      {
+        "ders": "Kalp ve Damar Cerrahisi",
+        "count": 6,
+        "konuCount": 2
+      },
+      {
+        "ders": "Tıbbi Farmakoloji",
+        "count": 28,
+        "konuCount": 8
+      },
+      {
+        "ders": "Çocuk Sağlığı ve Hastalıkları",
+        "count": 24,
+        "konuCount": 8
+      },
+      {
+        "ders": "Halk Sağlığı",
+        "count": 6,
+        "konuCount": 2
+      }
+    ]
+  },
+  {
+    "kurul": 5,
+    "name": "Ortopedi, Travmatoloji ve Hematopoetik",
+    "code": "TIP350",
+    "totalCount": 222,
+    "dersler": [
+      {
+        "ders": "Tıbbi Genetik",
+        "count": 9,
+        "konuCount": 3
+      },
+      {
+        "ders": "Enfeksiyon Hastalıkları",
+        "count": 3,
+        "konuCount": 1
+      },
+      {
+        "ders": "Tıbbi Patoloji",
+        "count": 50,
+        "konuCount": 16
+      },
+      {
+        "ders": "Acil Tıp",
+        "count": 26,
+        "konuCount": 8
+      },
+      {
+        "ders": "Ortopedi ve Travmatoloji",
+        "count": 31,
+        "konuCount": 9
+      },
+      {
+        "ders": "FTR",
+        "count": 18,
+        "konuCount": 6
+      },
+      {
+        "ders": "Tıbbi Farmakoloji",
+        "count": 11,
+        "konuCount": 3
+      },
+      {
+        "ders": "Halk Sağlığı",
+        "count": 35,
+        "konuCount": 9
+      },
+      {
+        "ders": "Beyin ve Sinir Cerrahisi",
+        "count": 6,
+        "konuCount": 2
+      },
+      {
+        "ders": "İç Hastalıkları",
+        "count": 24,
+        "konuCount": 6
+      },
+      {
+        "ders": "Çocuk Sağlığı ve Hastalıkları",
+        "count": 6,
+        "konuCount": 2
+      },
+      {
+        "ders": "Göğüs Cerrahisi",
+        "count": 3,
+        "konuCount": 1
+      }
+    ]
+  },
+  {
+    "kurul": 6,
+    "name": "Endokrin, Metabolizma ve Yaşlanma",
+    "code": "TIP360",
+    "totalCount": 182,
+    "dersler": [
+      {
+        "ders": "Tıbbi Genetik",
+        "count": 16,
+        "konuCount": 4
+      },
+      {
+        "ders": "Tıbbi Patoloji",
+        "count": 12,
+        "konuCount": 4
+      },
+      {
+        "ders": "FTR",
+        "count": 5,
+        "konuCount": 1
+      },
+      {
+        "ders": "Tıbbi Farmakoloji",
+        "count": 29,
+        "konuCount": 7
+      },
+      {
+        "ders": "Halk Sağlığı",
+        "count": 46,
+        "konuCount": 12
+      },
+      {
+        "ders": "İç Hastalıkları",
+        "count": 48,
+        "konuCount": 14
+      },
+      {
+        "ders": "Aile Hekimliği",
+        "count": 3,
+        "konuCount": 1
+      },
+      {
+        "ders": "Çocuk Sağlığı ve Hastalıkları",
+        "count": 3,
+        "konuCount": 1
+      },
+      {
+        "ders": "Tıbbi Biyokimya",
+        "count": 17,
+        "konuCount": 5
+      },
+      {
+        "ders": "Psikiyatri",
+        "count": 3,
+        "konuCount": 1
+      }
+    ]
+  }
+]

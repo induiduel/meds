@@ -10,7 +10,9 @@ import {
   query, 
   where, 
   writeBatch,
-  onSnapshot
+  onSnapshot,
+  orderBy,
+  limit
 } from 'firebase/firestore';
 import { auth } from './auth';
 import { FIREBASE_DB_ENABLED } from './dbFlags';
@@ -504,6 +506,34 @@ export class FirestoreDbService {
     } catch (e) {
       console.warn('getAdminNotifications fallback:', e);
       return [];
+    }
+  }
+
+  /**
+   * Realtime listener for incoming admin notifications
+   */
+  static subscribeAdminNotifications(onNotification: (notif: AdminNotification) => void): () => void {
+    if (!FIREBASE_DB_ENABLED) return () => {};
+    try {
+      const q = query(collection(db, NOTIFICATIONS_COLLECTION), orderBy('timestamp', 'desc'), limit(5));
+      let initialLoad = true;
+      const unsubscribe = onSnapshot(q, (snapshot) => {
+        if (initialLoad) {
+          initialLoad = false;
+          return;
+        }
+        snapshot.docChanges().forEach((change) => {
+          if (change.type === 'added') {
+            const data = change.doc.data() as AdminNotification;
+            onNotification(data);
+          }
+        });
+      }, (err) => {
+        console.warn('[subscribeAdminNotifications] Listener hatası:', err.message);
+      });
+      return unsubscribe;
+    } catch {
+      return () => {};
     }
   }
 

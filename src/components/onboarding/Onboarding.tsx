@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { AppUser } from '../../services/auth';
 
-const UserAuthModal = React.lazy(() => import('../UserAuthModal').then(m => ({ default: m.UserAuthModal })));
+const UserAuthModal = React.lazy(() => import('../UserAuthModal').then(m => ({ default: m.UserAuthModal || (m as any).default })));
 
 /* ------------------------------------------------------------------
  * Açılış (splash): logo çizilir, nabız çizgisi akar, sonra solar.

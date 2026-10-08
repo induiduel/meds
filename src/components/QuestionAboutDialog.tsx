@@ -1,9 +1,26 @@
 import React, { useState } from 'react';
-import { BookOpen, Check, Copy, Eye, FileText, GraduationCap, Presentation } from 'lucide-react';
+import { BookOpen, Check, Copy, Eye, FileText, GraduationCap, Presentation, ShieldCheck, History, Sparkles, AlertCircle } from 'lucide-react';
 import { Dialog } from './ui/Dialog';
 import { SourceText } from './ui/SourceText';
 import { QuestionInsightsPanel } from './QuestionInsightsPanel';
 import { QuestionLearnMatch } from '../services/learnMatcher';
+
+export const normalizeRefList = (raw: any): string[] => {
+  if (!raw) return [];
+  if (Array.isArray(raw)) return raw.map((r) => String(r || '').trim()).filter(Boolean);
+  if (typeof raw === 'string') {
+    const trimmed = raw.trim();
+    if (!trimmed) return [];
+    if (trimmed.includes('\n')) {
+      return trimmed.split(/\r?\n/).map((s) => s.trim().replace(/^[-*•\d.]+\s*/, '')).filter(Boolean);
+    }
+    if (trimmed.includes(';') && !trimmed.includes('&')) {
+      return trimmed.split(/;/).map((s) => s.trim()).filter(Boolean);
+    }
+    return [trimmed];
+  }
+  return [];
+};
 
 interface Props {
   questionId: string;
@@ -18,7 +35,15 @@ interface Props {
   answerHidden?: boolean;
   /** Açıklamada işaretlenecek doğru şık ifadeleri */
   answerTerms?: string[];
+  sikAnalizi?: Record<string, string>;
+  referanslar?: any;
+  denetleyiciOnayi?: boolean;
   learnMatch?: QuestionLearnMatch | null;
+  p14StatusNote?: string;
+  isEskiView?: boolean;
+  /** Denetleyici incelemesinde değişen cevap anahtarı */
+  answerChange?: { from: string; to: string };
+  onOpenSlide?: (kaynak: string, sayfa: number) => void;
   onPreviewSlide?: () => void;
   onOpenInLearn?: () => void;
   onShowSource?: () => void;
@@ -31,7 +56,7 @@ const H = ({ children }: { children: React.ReactNode }) => (
 
 /**
  * Çıkmış soru "Hakkında": kimlik ve müfredat künyesi, ilgili slayt, açıklama, kanıt ve terimler tek, kompakt pencerede.
- * Kartta yer kaplamasınlar diye üç nokta menüsünden açılır.
+ * Kartta yer kaplamasınlar diye üç nokta menüsünden ve kart altındaki (i) ikonundan açılır.
  */
 export const QuestionAboutDialog: React.FC<Props> = ({
   questionId,
@@ -44,7 +69,14 @@ export const QuestionAboutDialog: React.FC<Props> = ({
   evidenceTitle = 'Ders notu kanıtı',
   answerHidden,
   answerTerms,
+  sikAnalizi,
+  referanslar,
+  denetleyiciOnayi,
+  answerChange,
   learnMatch,
+  p14StatusNote,
+  isEskiView,
+  onOpenSlide,
   onPreviewSlide,
   onOpenInLearn,
   onShowSource,
@@ -78,6 +110,26 @@ export const QuestionAboutDialog: React.FC<Props> = ({
         </>
       }
     >
+      {/* Durum Bildirimleri (Eski sürüm, Faz 14 vb.) */}
+      {isEskiView && (
+        <div className="p-3 bg-warn/10 border border-warn/20 rounded-xl text-[12.5px] text-warn flex items-start gap-2.5 mb-1">
+          <History className="w-4 h-4 shrink-0 text-warn mt-0.5" />
+          <span><b>Eski Sınav Arşiv Sürümü:</b> Doğrulanmış ve gerekçelendirilmiş hâl için Denetleyici Sürümüne geçebilirsiniz.</span>
+        </div>
+      )}
+      {answerChange && (
+        <div className="p-3 bg-warn-soft border border-warn/20 rounded-xl text-[12.5px] text-ink flex items-start gap-2.5 mb-1">
+          <AlertCircle className="w-4 h-4 shrink-0 text-warn mt-0.5" />
+          <span><b>Cevap düzeltildi:</b> Eski sınav arşivindeki cevap ({answerChange.from}) literatür incelemesi sonucunda <b>{answerChange.to}</b> olarak güncellendi.</span>
+        </div>
+      )}
+      {p14StatusNote && (
+        <div className="p-3 bg-accent-soft/40 border border-accent/20 rounded-xl text-[12.5px] text-ink flex items-start gap-2.5 mb-1">
+          <Sparkles className="w-4 h-4 shrink-0 text-accent mt-0.5" />
+          <span>{p14StatusNote}</span>
+        </div>
+      )}
+
       {/* Künye */}
       <dl className="ms-about-facts">
         <div className="is-wide">
@@ -126,7 +178,10 @@ export const QuestionAboutDialog: React.FC<Props> = ({
       {/* Açıklama */}
       {explanation && (
         <section className="flex flex-col gap-2">
-          <H><BookOpen className="w-3.5 h-3.5" /> Açıklama {explanationNote}</H>
+          <H>
+            <BookOpen className="w-3.5 h-3.5" /> 
+            {denetleyiciOnayi ? 'Tıbbi Açıklama & Patofizyolojik Mekanizma' : 'Açıklama'} {explanationNote}
+          </H>
           {hidden ? (
             <div className="rounded-xl bg-field px-3.5 py-3 flex flex-wrap items-center gap-2 text-[13px] text-ink-2">
               Açıklama cevabı gösterir. Önce şıkkını seç ya da
@@ -140,6 +195,42 @@ export const QuestionAboutDialog: React.FC<Props> = ({
         </section>
       )}
 
+      {/* Şık Analizleri & Çürütmeler */}
+      {sikAnalizi && Object.keys(sikAnalizi).length > 0 && !hidden && (
+        <section className="flex flex-col gap-2">
+          <H><ShieldCheck className="w-3.5 h-3.5 text-ok" /> Şık analizi & patofizyolojik mekanizma</H>
+          <div className="flex flex-col gap-1.5 rounded-xl bg-field p-3 text-[13px]">
+            {Object.entries(sikAnalizi).sort(([a], [b]) => a.localeCompare(b)).map(([k, text]) => {
+              const isCorrect = String(text).toUpperCase().startsWith('DOĞRU');
+              return (
+                <div key={k} className="flex items-start gap-2 py-1 border-b border-line-2/40 last:border-b-0">
+                  <span className={`px-2 py-0.5 rounded text-[11px] font-mono font-bold shrink-0 ${isCorrect ? 'bg-ok-soft text-ok' : 'bg-bad-soft text-bad-text'}`}>
+                    {k}
+                  </span>
+                  <span className="text-ink leading-relaxed text-[12.5px]">{text}</span>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {/* Standart Referans Kaynaklar */}
+      {(() => {
+        const cleanRefs = normalizeRefList(referanslar);
+        if (!cleanRefs.length || hidden) return null;
+        return (
+          <section className="flex flex-col gap-1.5">
+            <H><BookOpen className="w-3.5 h-3.5" /> Standart Referans Tıp Kaynakları</H>
+            <ul className="m-0 pl-4 text-[12.5px] text-ink-2 list-disc flex flex-col gap-1">
+              {cleanRefs.map((ref, idx) => (
+                <li key={idx} className="leading-snug">{ref}</li>
+              ))}
+            </ul>
+          </section>
+        );
+      })()}
+
       {evidence && !hidden && (
         <section className="flex flex-col gap-2">
           <H>{evidenceTitle}</H>
@@ -152,7 +243,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
       {/* Müfredat, terimler, ilgili sayfalar (analiz varsa) */}
       <section className="flex flex-col gap-2">
         <H>Müfredat ve terimler</H>
-        <QuestionInsightsPanel questionId={questionId} bare />
+        <QuestionInsightsPanel questionId={questionId} bare onOpenSlide={onOpenSlide} />
       </section>
     </Dialog>
   );

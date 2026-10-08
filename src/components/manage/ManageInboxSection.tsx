@@ -1,8 +1,9 @@
 import React, { useMemo, useState } from 'react';
-import { Flag, MessageSquare, FileText, Bell, Eye, Check, Send, Pencil, Trash2, Inbox, CheckCircle2, ChevronDown } from 'lucide-react';
+import { Flag, MessageSquare, FileText, Bell, Eye, Check, Send, Pencil, Trash2, Inbox, CheckCircle2, ChevronDown, Smartphone } from 'lucide-react';
 import type { QuestionItem, AdminNotification } from '../../types';
 import type { InboxReport, InboxComment } from '../../services/manageConsoleService';
 import { Panel, EmptyState, SearchBox, ChipBar, Switch, ConfirmButton, dayLabel, timeLabel } from './consoleUi';
+import { AdminMobileNotificationCard } from '../AdminMobileNotificationCard';
 
 /**
  * Gelen kutusu: bildirim, yorum, taslak ve sistem uyarıları tek iş kuyruğunda, en yenisi üstte.
@@ -68,6 +69,7 @@ export const ManageInboxSection: React.FC<Props> = ({
   const [filter, setFilter] = useState<Filter>('all');
   const [query, setQuery] = useState('');
   const [showResolved, setShowResolved] = useState(false);
+  const [showNotificationCard, setShowNotificationCard] = useState(false);
   const [limit, setLimit] = useState(PAGE);
 
   const isDone = (r: InboxReport) => resolvedIds.has(r.id) || (r.status || 'pending') !== 'pending';
@@ -137,8 +139,26 @@ export const ManageInboxSection: React.FC<Props> = ({
     <div className="flex flex-col gap-3 min-w-0">
       <div className="flex flex-col md:flex-row md:items-center gap-2">
         <SearchBox value={query} onChange={(v) => { setQuery(v); setLimit(PAGE); }} placeholder="Kuyrukta ara: bildirim, yorum, taslak, kişi" className="flex-1" />
+        <button
+          onClick={() => setShowNotificationCard(!showNotificationCard)}
+          className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
+            showNotificationCard
+              ? 'bg-emerald-600 text-white'
+              : 'bg-teal-900/60 hover:bg-teal-800 text-teal-200 border border-teal-700/60'
+          }`}
+          title="Telefonda (nofrostlife.com.tr) admin bildirim ayarları"
+        >
+          <Smartphone className="w-3.5 h-3.5 text-amber-300" />
+          <span>{showNotificationCard ? 'Bildirim Ayarlarını Kapat' : '📱 Telefon Bildirim Ayarı'}</span>
+        </button>
         {resolvedCount > 0 && <Switch checked={showResolved} onChange={setShowResolved} label={`Çözülenleri göster (${resolvedCount})`} />}
       </div>
+
+      {showNotificationCard && (
+        <div className="animate-fade-in my-1">
+          <AdminMobileNotificationCard onClose={() => setShowNotificationCard(false)} />
+        </div>
+      )}
       <ChipBar
         label="Tür"
         value={filter}

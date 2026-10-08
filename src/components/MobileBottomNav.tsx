@@ -16,7 +16,8 @@ import {
   ChevronRight,
   X,
   Layers,
-  BotMessageSquare,
+  Target,
+  Compass,
 } from 'lucide-react';
 import type { AppTab } from './Header';
 import { pathFor, linkClick } from '../router';
@@ -44,6 +45,7 @@ const MORE_GROUPS: { label: string; items: { id: AppTab; label: string; hint: st
   {
     label: 'Sorular',
     items: [
+      { id: 'ornek_sorular', label: 'Örnek sorular', hint: 'Kazanım temelli sorular', icon: Target },
       { id: 'questions', label: 'Soru havuzu', hint: 'Kurul sorularını birlikte kur', icon: Library },
       { id: 'study', label: 'Çalış', hint: 'Soru çöz, kendini test et', icon: ListChecks },
       { id: 'matrix', label: 'Soru haritası', hint: '1–100 doluluk', icon: LayoutGrid },
@@ -52,9 +54,9 @@ const MORE_GROUPS: { label: string; items: { id: AppTab; label: string; hint: st
   {
     label: 'Öğrenme',
     items: [
+      { id: 'kazanimlar', label: 'Kazanımlar', hint: 'Müfredat ve kazanım haritası', icon: Compass },
       { id: 'summaries', label: 'Ders özetleri', hint: 'Spot bilgiler', icon: BookOpen },
       { id: 'glossary', label: 'Sözlük', hint: 'Hastalık ve ilaç ansiklopedisi', icon: BookOpenText },
-      { id: 'ai_chat', label: 'Asistan', hint: 'Kaynaklara dayalı soru-cevap', icon: BotMessageSquare },
     ],
   },
   {

@@ -1,0 +1,960 @@
+{
+ "id": "k1-59-immunofarmakoloji",
+ "sira": 59,
+ "kurul": 1,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "İmmünofarmakoloji",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "tarih": "2026-10-14",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Doğal ve edinsel immün yanıtın temel elemanlarını ve işleyişini özetlemek",
+   "sorular": [
+    {
+     "id": "k1-59-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi doğal (doğuştan) immünitenin bileşeni değildir?",
+     "secenekler": {
+      "A": "Deri ve mukus bariyeri",
+      "B": "Kompleman sistemi",
+      "C": "NK hücreleri",
+      "D": "Plazma hücrelerinden salgılanan spesifik antikorlar",
+      "E": "Nötrofiller"
+     },
+     "dogru": "D",
+     "aciklama": "Doğal immünite mekanik, biyokimyasal (kompleman, lizozim, interferon) ve hücresel (nötrofil, makrofaj, NK) bileşenlerden oluşur; spesifik antikorlar edinsel humoral yanıta aittir.",
+     "sik_aciklamalari": {
+      "A": "Mekanik bariyerler doğal immünitenin ilk hattıdır.",
+      "B": "Kompleman biyokimyasal doğal savunma elemanıdır.",
+      "C": "NK hücreleri doğal immünitenin hücresel bileşenidir.",
+      "D": "Doğru: antijen-spesifik antikorlar edinsel immüniteye aittir.",
+      "E": "Nötrofiller doğal immünitenin fagositik hücreleridir."
+     },
+     "bilgi": [
+      1,
+      4
+     ],
+     "benzer_cikmis": [
+      "e33c99dfa3c1",
+      "ea40307575e3"
+     ]
+    },
+    {
+     "id": "k1-59-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Kompleman proteinlerinden hangisi esas olarak opsonin işlevi görür?",
+     "secenekler": {
+      "A": "C3a",
+      "B": "C1q",
+      "C": "C5a",
+      "D": "C5b-C9",
+      "E": "C3b"
+     },
+     "dogru": "E",
+     "aciklama": "C3b opsonindir; C3a ve C5a kemoatraktan, C5b-C9 membran atak kompleksidir.",
+     "sik_aciklamalari": {
+      "A": "C3a kemoatraktan/anafilatoksindir.",
+      "B": "C1q klasik yolu başlatır, temel opsonin değildir.",
+      "C": "C5a kemoatraktandır.",
+      "D": "C5b-C9 membran atak kompleksi olarak lizis yapar.",
+      "E": "Doğru: C3b opsonizasyon sağlar."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "T hücre aktivasyonu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tek başına TCR-MHC/peptid etkileşimi tam aktivasyon için yeterlidir",
+      "B": "Hücre içi patojenler esas olarak TH2 yanıtı uyarır",
+      "C": "TH2 hücreleri IFN-γ üreterek hücre aracılı immüniteyi indükler",
+      "D": "NK hücreleri MHC sınıf I ekspresyonu arttığında aktive olur",
+      "E": "İkinci sinyal APC üzerindeki CD80/CD86 gibi eş-uyaran moleküllerle sağlanır ve abatasept bu sinyali bloke eder"
+     },
+     "dogru": "E",
+     "aciklama": "T hücre aktivasyonu iki sinyal gerektirir: TCR-MHC/peptid ve eş-uyaran (CD40, CD80, CD86); abatasept ikinci sinyali engeller.",
+     "sik_aciklamalari": {
+      "A": "İkinci (eş-uyaran) sinyal olmadan tam aktivasyon olmaz.",
+      "B": "Hücre içi organizmalar TH1 yanıtı uyarır.",
+      "C": "IFN-γ TH1 sitokinidir.",
+      "D": "NK hücreleri MHC sınıf I kaybında aktive olur.",
+      "E": "Doğru: eş-uyaran sinyal ve abatasept blokajı."
+     },
+     "bilgi": [
+      3,
+      6,
+      7
+     ],
+     "benzer_cikmis": [
+      "b94a1c94cec9"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "e33c99dfa3c1",
+     "soru": "İmmün Sistem hangisi doğal bağışık yanıtın komponentlerinden değildir?",
+     "secenekler": {
+      "A": "Epitelyal bariyerler",
+      "B": "Nötrofiller",
+      "C": "Doğal katil hücreler",
+      "D": "Kompleman sistemi",
+      "E": "Plazma hücreleri"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "ea40307575e3",
+     "soru": "Hangisi doğal bağışık yanıtın komponentlerinden değildir?",
+     "secenekler": {
+      "A": "Epitelyal bariyerler",
+      "B": "Nötrofiller",
+      "C": "Doğal katil hücreler",
+      "D": "Kompleman sistemi",
+      "E": "Plazma hücreleri"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "b94a1c94cec9",
+     "soru": "Antijenle aktive olan T lenfositlerinin farklılaşması ve çoğalmasından sorumlu olan primer sitokin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IL-1",
+      "B": "IL-2",
+      "C": "IL-5",
+      "D": "C3b",
+      "E": "IL-2"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Aşırı duyarlılık, otoimmünite ve immün yetmezlik gibi anormal immün yanıtları tanımlamak",
+   "sorular": [
+    {
+     "id": "k1-59-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Anafilaksi hangi tip aşırı duyarlılık reaksiyonudur?",
+     "secenekler": {
+      "A": "Otoimmün reaksiyon",
+      "B": "Tip II (sitotoksik)",
+      "C": "Tip III (immün kompleks)",
+      "D": "Tip IV (gecikmiş tip)",
+      "E": "Tip I (IgE aracılı)"
+     },
+     "dogru": "E",
+     "aciklama": "Tip I aşırı duyarlılık IgE aracılı mast hücresi degranülasyonuyla dakikalar içinde gelişir; anafilaksi tipik örnektir.",
+     "sik_aciklamalari": {
+      "A": "Anafilaksi otoimmün bir tablo değildir.",
+      "B": "Tip II transfüzyon reaksiyonu gibi antikor-hücre hasarıdır.",
+      "C": "Tip III immün kompleks birikimidir.",
+      "D": "Tip IV günler içinde gelişir.",
+      "E": "Doğru: anafilaksi tip I reaksiyondur."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Tüberkülin deri testi pozitifliği hangi mekanizmayla gelişir?",
+     "secenekler": {
+      "A": "IgE ile mast hücresi degranülasyonu",
+      "B": "IgG/IgM ile kompleman aracılı hücre lizisi",
+      "C": "İmmün komplekslerin damar duvarında birikimi",
+      "D": "TH1 hücreleri ve makrofaj birikimiyle gecikmiş tip aşırı duyarlılık",
+      "E": "Otoantikor oluşumu"
+     },
+     "dogru": "D",
+     "aciklama": "Tip IV (gecikmiş tip) aşırı duyarlılık TH1 hücreleri ve makrofajlarla 2-3 günde gelişir; tüberkülin testi örnektir.",
+     "sik_aciklamalari": {
+      "A": "Bu tip I mekanizmasıdır.",
+      "B": "Bu tip II mekanizmasıdır.",
+      "C": "Bu tip III mekanizmasıdır.",
+      "D": "Doğru: tip IV gecikmiş tip aşırı duyarlılık.",
+      "E": "Tüberkülin yanıtı otoimmün değildir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "22. kromozom delesyonuna bağlı timus gelişmemesi ve T hücre yanıtında azalma ile seyreden immün yetmezlik hangisidir?",
+     "secenekler": {
+      "A": "X'e bağlı agammaglobulinemi",
+      "B": "Kronik granülomatöz hastalık",
+      "C": "ADA eksikliği",
+      "D": "DiGeorge sendromu",
+      "E": "Kompleman C5 eksikliği"
+     },
+     "dogru": "D",
+     "aciklama": "DiGeorge sendromunda 22. kromozom anomalisi nedeniyle timus gelişmez ve T hücre yanıtı azalır.",
+     "sik_aciklamalari": {
+      "A": "XLA erkeklerde B hücre/antikor eksikliğidir.",
+      "B": "KGH fagositik hücre fonksiyon bozukluğudur.",
+      "C": "ADA eksikliği deoksi-ATP birikimiyle SCID yapar.",
+      "D": "Doğru: DiGeorge sendromu.",
+      "E": "Kompleman eksikliği timus gelişimini etkilemez."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Glukokortikoidlerin ve kalsinörin inhibitörlerinin etki mekanizmasını ve toksisitelerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-59-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Siklosporinin etki mekanizması hangisidir?",
+     "secenekler": {
+      "A": "Siklofiline bağlanıp kalsinörini inhibe ederek IL-2 transkripsiyonunu baskılar",
+      "B": "mTOR'u inhibe eder",
+      "C": "Pürin de novo sentezini inhibe eder",
+      "D": "Dihidroorotat dehidrojenazı inhibe eder",
+      "E": "DNA'yı alkiller"
+     },
+     "dogru": "A",
+     "aciklama": "Siklosporin-siklofilin kompleksi kalsinörini inhibe eder; NF-AT aktive olamaz ve IL-2, IL-3, IFN-γ transkripsiyonu baskılanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kalsinörin inhibisyonu.",
+      "B": "mTOR inhibisyonu sirolimus/everolimusa aittir.",
+      "C": "Bu mikofenolat mofetil mekanizmasıdır.",
+      "D": "Bu leflunomid mekanizmasıdır.",
+      "E": "Bu siklofosfamid mekanizmasıdır."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kalsinörin inhibitörleriyle ilgili en önemli doz sınırlayıcı toksisite hangisidir?",
+     "secenekler": {
+      "A": "Hemorajik sistit",
+      "B": "Ototoksisite",
+      "C": "Pulmoner fibroz",
+      "D": "Kardiyotoksisite",
+      "E": "Nefrotoksisite"
+     },
+     "dogru": "E",
+     "aciklama": "Siklosporin ve takrolimusun majör endişesi nefrotoksisitedir; ayrıca hipertansiyon, hiperglisemi, hiperkalemi ve nöbet görülür.",
+     "sik_aciklamalari": {
+      "A": "Hemorajik sistit siklofosfamide özgüdür.",
+      "B": "Belirgin toksisite değildir.",
+      "C": "Kalsinörin inhibitörlerinin tipik toksisitesi değildir.",
+      "D": "Belirgin toksisite değildir.",
+      "E": "Doğru: nefrotoksisite."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": [
+      "08c221ddcdc7"
+     ]
+    },
+    {
+     "id": "k1-59-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Glukokortikoidlerin immünosüpresif etkisiyle ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Miyeloid kök hücrelere belirgin toksiktir",
+      "B": "Humoral immüniteyi hücresel immüniteden daha fazla baskılar",
+      "C": "Lenf düğümü ve dalaktaki lenfoid içeriği azaltır ve hücresel immüniteyi daha çok etkiler",
+      "D": "Yalnızca B hücrelerini etkiler",
+      "E": "Kemik iliği aplazisi yapar"
+     },
+     "dogru": "C",
+     "aciklama": "Glukokortikoidler lenfolitiktir; miyeloid/eritroid kök hücrelere toksik değildir ve hücresel immüniteyi humoralden fazla etkiler.",
+     "sik_aciklamalari": {
+      "A": "Miyeloid/eritroid kök hücrelere toksik değildir.",
+      "B": "Hücresel immünite daha fazla etkilenir.",
+      "C": "Doğru: lenfoid içerik azalır, hücresel immünite daha çok etkilenir.",
+      "D": "T hücreleri de etkilenir.",
+      "E": "Kemik iliği toksisitesi beklenmez."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Takrolimus ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Siklofiline bağlanır",
+      "B": "mTOR'u inhibe eder",
+      "C": "FKBP'ye bağlanır, kalsinörini inhibe eder ve siklosporinden 10-100 kat daha etkindir",
+      "D": "Bir pürin analoğudur",
+      "E": "Glukokortikoid reseptör agonistidir"
+     },
+     "dogru": "C",
+     "aciklama": "Takrolimus (FK 506) FKBP immünofilinine bağlanarak kalsinörini inhibe eder; siklosporinden 10-100 kat güçlüdür.",
+     "sik_aciklamalari": {
+      "A": "Siklofiline bağlanan siklosporindir.",
+      "B": "mTOR inhibisyonu FKBP-sirolimus kompleksine aittir.",
+      "C": "Doğru: FKBP bağlanması ve kalsinörin inhibisyonu.",
+      "D": "Takrolimus makrolid yapıdadır.",
+      "E": "Glukokortikoid değildir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "08c221ddcdc7",
+     "soru": "Kalsinörlerin inhibitörlerinin uygulanması durumunda majör endişenin nefrotoksisite olması nedeniyle sıklıkla solid organ ve kök hücre transplantasyonunda ilk tercih edilen ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Talidomid",
+      "B": "Azatioprin",
+      "C": "Siklofosfamid",
+      "D": "Siklosporin"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Proliferasyon sinyal inhibitörleri, mikofenolat mofetil ve talidomid türevlerinin kullanımını bilmek",
+   "sorular": [
+    {
+     "id": "k1-59-q11",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Sirolimusun moleküler hedefi hangisidir?",
+     "secenekler": {
+      "A": "Kalsinörin",
+      "B": "Dihidroorotat dehidrojenaz",
+      "C": "IMPDH",
+      "D": "JAK",
+      "E": "mTOR"
+     },
+     "dogru": "E",
+     "aciklama": "Sirolimus ve everolimus FKBP-12 ile kompleks oluşturarak mTOR'u bloke eder.",
+     "sik_aciklamalari": {
+      "A": "Kalsinörin siklosporin/takrolimus hedefidir.",
+      "B": "Bu leflunomid hedefidir.",
+      "C": "Pürin sentezi mikofenolatla baskılanır.",
+      "D": "JAK tofasitinibin hedefidir.",
+      "E": "Doğru: mTOR; doğru yanıttır."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q12",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Pürinlerin de novo sentezini inhibe ederek T ve B lenfosit yanıtını baskılayan, kardiyak transplantta kronik allograft vaskülopatisini azaltmada ilk seçenek olan ilaç hangisidir?",
+     "secenekler": {
+      "A": "Leflunomid",
+      "B": "Talidomid",
+      "C": "Takrolimus",
+      "D": "Mikofenolat mofetil",
+      "E": "Hidroksiklorokin"
+     },
+     "dogru": "D",
+     "aciklama": "Mikofenolat mofetil pürin de novo sentezini inhibe eder; kardiyak transplantta allograft vaskülopatisini azaltır.",
+     "sik_aciklamalari": {
+      "A": "Leflunomid pirimidin sentezini inhibe eder.",
+      "B": "Talidomid anjiyogenez/TNF inhibitörüdür.",
+      "C": "Takrolimus kalsinörin inhibitörüdür.",
+      "D": "Doğru: mikofenolat mofetil.",
+      "E": "Hidroksiklorokin antimalaryal immünosüpresiftir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q13",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Multipl miyelomda deksametazonla kullanılan, TNF-α ve anjiyogenezi inhibe eden; periferik nöropati ve DVT riski taşıyan ilaç hangisidir?",
+     "secenekler": {
+      "A": "Tofasitinib",
+      "B": "Everolimus",
+      "C": "Talidomid",
+      "D": "Azatioprin",
+      "E": "Mikofenolat mofetil"
+     },
+     "dogru": "C",
+     "aciklama": "Talidomid anjiyogenezi ve TNF-α'yı inhibe eder; miyelomda deksametazonla kullanılır; nöropati, konstipasyon, hipotiroidi ve DVT yapar.",
+     "sik_aciklamalari": {
+      "A": "Tofasitinib JAK inhibitörüdür, RA'da kullanılır.",
+      "B": "Everolimus mTOR inhibitörüdür.",
+      "C": "Doğru: talidomid; doğru yanıttır.",
+      "D": "Azatioprin kemik iliği supresyonu yapar.",
+      "E": "MMF transplantta kullanılır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Sitotoksik immünosüpresif ajanları (azatioprin, siklofosfamid, leflunomid, hidroksiklorokin) ve klinik kullanımlarını sınıflandırmak",
+   "sorular": [
+    {
+     "id": "k1-59-q14",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "İmmünosüpresif özellik gösteren antimalaryal ilaç hangisidir?",
+     "secenekler": {
+      "A": "Hidroksiklorokin",
+      "B": "Siklofosfamid",
+      "C": "Azatioprin",
+      "D": "Leflunomid",
+      "E": "Takrolimus"
+     },
+     "dogru": "A",
+     "aciklama": "Hidroksiklorokin lizozomal/endozomal pH'ı yükseltip MHC sınıf II yüklemesini baskılar; RA ve SLE'de kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: hidroksiklorokin.",
+      "B": "Siklofosfamid alkilleyici ajandır.",
+      "C": "Azatioprin antimetabolittir.",
+      "D": "Leflunomid pirimidin sentez inhibitörüdür.",
+      "E": "Takrolimus kalsinörin inhibitörüdür."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": [
+      "46d3ad6117c8",
+      "2334899176c7"
+     ]
+    },
+    {
+     "id": "k1-59-q15",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Allopurinol kullanan hastada azatioprin dozunun azaltılması gerekmesinin nedeni hangisidir?",
+     "secenekler": {
+      "A": "Allopurinol azatioprinin emilimini artırır",
+      "B": "Allopurinol renal atılımı artırır",
+      "C": "Azatioprin ksantin oksidazla inaktive edilir; allopurinol bu enzimi inhibe eder",
+      "D": "İki ilaç da kalsinörini inhibe eder",
+      "E": "Allopurinol azatioprini aktif metabolite çevirir"
+     },
+     "dogru": "C",
+     "aciklama": "Azatioprin (merkaptopurin) ksantin oksidazla inaktive olur; allopurinol bu enzimi inhibe ettiğinden doz 1/4-1/3'e indirilir.",
+     "sik_aciklamalari": {
+      "A": "Mekanizma emilim değildir.",
+      "B": "Allopurinol azatioprinin atılımını artırmaz.",
+      "C": "Doğru: ksantin oksidaz inhibisyonu.",
+      "D": "Bu ilaçlar kalsinörin inhibitörü değildir.",
+      "E": "Aktivasyon değil inaktivasyon engellenir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q16",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Sitotoksik immünosüpresif ajanlarla ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Leflunomid - pürin sentezi inhibisyonu",
+      "B": "Leflunomid - yalnızca SLE'de onaylı",
+      "C": "Azatioprin - dihidroorotat dehidrojenaz inhibisyonu",
+      "D": "Hidroksiklorokin - DNA alkilasyonu",
+      "E": "Siklofosfamid - hemorajik sistit, mesna ile önlenir"
+     },
+     "dogru": "E",
+     "aciklama": "Siklofosfamid alkilleyicidir; hemorajik sistit yapar ve mesna ile önlenir.",
+     "sik_aciklamalari": {
+      "A": "Leflunomid pirimidin sentezini inhibe eder.",
+      "B": "Leflunomid yalnızca romatoid artritte onaylıdır.",
+      "C": "DHODH inhibisyonu leflunomide aittir.",
+      "D": "Hidroksiklorokin endozomal pH'ı yükseltir.",
+      "E": "Doğru: siklofosfamid-hemorajik sistit-mesna."
+     },
+     "bilgi": [
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "46d3ad6117c8",
+     "soru": "İmmunofarmakoloji alanında, immünosüpresif özellikler gösteren antimalaryal bir ajan olan ilaç hangisidir?",
+     "secenekler": {
+      "A": "Hidroksiklorokin",
+      "B": "Vinkristin",
+      "C": "Talidomid",
+      "D": "Alemtuzumab",
+      "E": "Abatasept"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "2334899176c7",
+     "soru": "Sıra No Tıbbi Farmakoloji Tıbbi Farmakoloji İmmunofarmakoloji İmmünosüpresif özellikler gösteren antimalaryal bir ajan olan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hidroksiklorokin",
+      "B": "Vinkristin",
+      "C": "Talidomid",
+      "D": "Alemtuzumab",
+      "E": "Abatasept"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "İmmünosüpresif antikorları, monoklonal antikorları ve füzyon proteinlerini gruplamak",
+   "sorular": [
+    {
+     "id": "k1-59-q17",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "TNF-α'ya bağlanan füzyon proteini hangisidir?",
+     "secenekler": {
+      "A": "Etanersept",
+      "B": "Abatasept",
+      "C": "Basiliksimab",
+      "D": "Rituksimab",
+      "E": "Omalizumab"
+     },
+     "dogru": "A",
+     "aciklama": "Etanersept TNF-α'yı bağlayan füzyon proteinidir; adalimumab, infliksimab, golimumab ve sertolizumab da anti-TNF ajanlardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: etanersept; doğru yanıttır.",
+      "B": "Abatasept eş-uyaran sinyali bloke eden füzyon proteinidir, TNF bağlamaz.",
+      "C": "Basiliksimab CD25'e bağlanır.",
+      "D": "Rituksimab CD20'ye bağlanır.",
+      "E": "Omalizumab IgE'ye bağlanır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q18",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Postmenopozal osteoporozda kullanılan, RANKL'a bağlanarak osteoklast olgunlaşmasını inhibe eden monoklonal antikor hangisidir?",
+     "secenekler": {
+      "A": "Ekulizumab",
+      "B": "Denosumab",
+      "C": "Palivizumab",
+      "D": "Absiksimab",
+      "E": "Tosilizumab"
+     },
+     "dogru": "B",
+     "aciklama": "Denosumab RANKL'a bağlanır ve osteoklast olgunlaşmasını inhibe eder.",
+     "sik_aciklamalari": {
+      "A": "Ekulizumab C5'e bağlanır.",
+      "B": "Doğru: denosumab; doğru yanıttır.",
+      "C": "Palivizumab RSV'ye karşıdır.",
+      "D": "Absiksimab GpIIb/IIIa'yı bloke eder.",
+      "E": "Tosilizumab IL-6 reseptörünü bloke eder."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": [
+      "d3-b-094"
+     ]
+    },
+    {
+     "id": "k1-59-q20",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Antitimosit globulin ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "İnsan vericilerden elde edilen monoklonal antikordur",
+      "B": "Hümoral immüniteyi baskılarken hücresel immüniteyi korur",
+      "C": "Hayvanların insan lenfoid hücreleriyle immünizasyonuyla elde edilir ve hücresel immüniteyi bozar",
+      "D": "IgE'ye bağlanır",
+      "E": "Yalnızca oral kullanılır"
+     },
+     "dogru": "C",
+     "aciklama": "ALG/ATG at, koyun veya tavşanların insan lenfoid hücreleriyle immünizasyonuyla elde edilir; T hücre yıkımıyla hücresel immünite bozulur, hümoral yanıt korunur.",
+     "sik_aciklamalari": {
+      "A": "Poliklonal hayvan kaynaklıdır.",
+      "B": "Tersine: hücresel immünite bozulur, hümoral korunur.",
+      "C": "Doğru: kaynak ve etki doğru verilmiştir.",
+      "D": "IgE'ye bağlanan omalizumabdır.",
+      "E": "Parenteral uygulanır."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q19",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Monoklonal antikor-hedef eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Alemtuzumab - CD52",
+      "B": "Daratumumab - CD38",
+      "C": "Trastuzumab - HER-2/neu",
+      "D": "Bevacizumab - EGFR",
+      "E": "Ekulizumab - C5"
+     },
+     "dogru": "D",
+     "aciklama": "Bevacizumab VEGF'i bağlar; EGFR'yi hedefleyenler setuksimab ve panitumumabdır.",
+     "sik_aciklamalari": {
+      "A": "Bu eşleşme doğrudur.",
+      "B": "Bu eşleşme doğrudur.",
+      "C": "Bu eşleşme doğrudur.",
+      "D": "Doğru yanıt: bevacizumab VEGF'e bağlanır, eşleşme yanlıştır.",
+      "E": "Bu eşleşme doğrudur."
+     },
+     "bilgi": [
+      30,
+      31,
+      32,
+      35
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-094",
+     "soru": "Yüksek kırık riski taşıyan ve osteoporozu olan postmenapozal kadınların tedavisinde kullanılan insan IgG2 monoklonal antikoru olan madde aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Denosumab",
+      "B": "Siklosporin",
+      "C": "Ekulizumab",
+      "D": "Talidomid",
+      "E": "Takrolimus"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Solid organ ve kemik iliği transplantasyonu ile otoimmün hastalıklarda immünosüpresif tedavi yaklaşımlarını özetlemek",
+   "sorular": [
+    {
+     "id": "k1-59-q21",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Transplantasyon sonrası saatler içinde gelişen, önceden var olan antikorlara bağlı ve immünosüpresiflerle durdurulamayan rejeksiyon hangisidir?",
+     "secenekler": {
+      "A": "Hiperakut rejeksiyon",
+      "B": "Akselere rejeksiyon",
+      "C": "Akut rejeksiyon",
+      "D": "Kronik rejeksiyon",
+      "E": "Graft-versus-host hastalığı"
+     },
+     "dogru": "A",
+     "aciklama": "Hiperakut rejeksiyon saatler içinde önceden var olan antikorlarla gelişir ve durdurulamaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru: hiperakut rejeksiyon.",
+      "B": "Akselere rejeksiyon 2-7 günde gelişir.",
+      "C": "Akut rejeksiyon günler-aylar içinde ve geri döndürülebilirdir.",
+      "D": "Kronik rejeksiyon aylar-yıllar sürer.",
+      "E": "GVHD vericinin hücrelerinin alıcıya saldırmasıdır."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q22",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Allojeneik kök hücre naklinden 30 gün sonra deri döküntüsü, ağır diyare ve hepatotoksisite gelişen hastada ilk tedavi hangisidir?",
+     "secenekler": {
+      "A": "Yüksek doz kortikosteroid",
+      "B": "Antibiyotik",
+      "C": "Talidomid",
+      "D": "Yalnızca destek tedavisi",
+      "E": "IFN-α"
+     },
+     "dogru": "A",
+     "aciklama": "Akut GVHD ilk 100 günde deri, GİS ve karaciğer bulgularıyla başlar; tedaviye yüksek doz kortikosteroidle başlanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: yüksek doz kortikosteroid.",
+      "B": "Tablo enfeksiyon değil GVHD'dir.",
+      "C": "Talidomid ilk seçenek değildir.",
+      "D": "Akut GVHD aktif tedavi gerektirir.",
+      "E": "IFN-α immün yanıtı artırır, uygun değildir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q23",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Rejeksiyon tipleriyle ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Akut rejeksiyon immünosüpresiflerle geri döndürülemez",
+      "B": "Kronik rejeksiyon damar kalınlaşması ve fibrozla aylar-yıllar içinde gelişir",
+      "C": "Hiperakut rejeksiyon 2-7. günlerde görülür",
+      "D": "Akselere rejeksiyon yalnızca T hücre aracılıdır",
+      "E": "GVHD solid organ naklinde en sık komplikasyondur"
+     },
+     "dogru": "B",
+     "aciklama": "Kronik rejeksiyon aylar-yıllar içinde damar kalınlaşması ve fibrozla gelişir.",
+     "sik_aciklamalari": {
+      "A": "Akut rejeksiyon tedaviyle geri döndürülebilir.",
+      "B": "Doğru: kronik rejeksiyon tanımıdır.",
+      "C": "Hiperakut rejeksiyon saatler içinde gelişir.",
+      "D": "Akselere rejeksiyon antikor ve T hücre aracılıdır.",
+      "E": "GVHD esas olarak allojeneik kök hücre naklinde görülür."
+     },
+     "bilgi": [
+      36,
+      37
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Sitokinler ve sitokin inhibitörleriyle yapılan immünomodülasyon tedavisini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-59-q24",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Kolşisine yanıtsız ailesel Akdeniz ateşinde kullanılabilen IL-1β monoklonal antikoru hangisidir?",
+     "secenekler": {
+      "A": "Kanakinumab",
+      "B": "Tosilizumab",
+      "C": "Ustekinumab",
+      "D": "Omalizumab",
+      "E": "Natalizumab"
+     },
+     "dogru": "A",
+     "aciklama": "Kanakinumab rekombinant insan anti-IL-1β antikorudur; kolşisine yanıtsız FMF ve periyodik ateş sendromlarında kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kanakinumab; doğru yanıttır.",
+      "B": "Tosilizumab IL-6 reseptörünü bloke eder.",
+      "C": "Ustekinumab IL-12/IL-23 p40'a bağlanır.",
+      "D": "Omalizumab IgE'ye bağlanır.",
+      "E": "Natalizumab integrin hedefli IgG4'tür."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q25",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "İnterferonlarla ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "IFN-γ tip I, asit-stabil bir interferondur",
+      "B": "IFN-α ve IFN-β aynı reseptöre etki eden tip I interferonlardır",
+      "C": "IFN-β esas olarak aktive T hücrelerince üretilir",
+      "D": "Sitokinlerin serum yarılanma ömrü günlerdir",
+      "E": "IFN-α hepatit tedavisinde kullanılmaz"
+     },
+     "dogru": "B",
+     "aciklama": "IFN-α/β tip I, asit-stabil ve aynı reseptöre etkilidir; IFN-γ tip II, asit-labildir.",
+     "sik_aciklamalari": {
+      "A": "IFN-γ tip II ve asit-labildir.",
+      "B": "Doğru: tip I interferonlar aynı reseptörü kullanır.",
+      "C": "IFN-β fibroblast/epitel kaynaklıdır.",
+      "D": "Sitokinlerin yarılanma ömrü dakikalardır.",
+      "E": "IFN-α hepatit B/C tedavisinde kullanılır."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q26",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Antijenle aktive T lenfositlerinin çoğalmasından sorumlu primer sitokinin transkripsiyonunu baskılayan ilaç grubu hangisidir?",
+     "secenekler": {
+      "A": "mTOR inhibitörleri",
+      "B": "Kalsinörin inhibitörleri",
+      "C": "Anti-TNF ajanlar",
+      "D": "IL-1 antagonistleri",
+      "E": "Antimalaryaller"
+     },
+     "dogru": "B",
+     "aciklama": "Primer T hücre büyüme sitokini IL-2'dir; kalsinörin inhibitörleri NF-AT aktivasyonunu engelleyerek IL-2 transkripsiyonunu baskılar.",
+     "sik_aciklamalari": {
+      "A": "mTOR inhibitörleri IL-2 sonrası proliferasyon sinyalini keser, transkripsiyonu değil.",
+      "B": "Doğru: kalsinörin inhibitörleri IL-2 gen transkripsiyonunu baskılar.",
+      "C": "Anti-TNF ajanlar TNF-α'yı nötralize eder.",
+      "D": "IL-1 antagonistleri IL-2 transkripsiyonunu doğrudan baskılamaz.",
+      "E": "Antimalaryaller antijen sunumunu etkiler."
+     },
+     "bilgi": [
+      15,
+      17,
+      39
+     ],
+     "benzer_cikmis": [
+      "b94a1c94cec9"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "b94a1c94cec9",
+     "soru": "Antijenle aktive olan T lenfositlerinin farklılaşması ve çoğalmasından sorumlu olan primer sitokin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IL-1",
+      "B": "IL-2",
+      "C": "IL-5",
+      "D": "C3b",
+      "E": "IL-2"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Monoklonal antikor adlandırma kurallarını ve monoklonal antikorların hedeflerini bilmek",
+   "sorular": [
+    {
+     "id": "k1-59-q27",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Monoklonal antikor adında \"-ksimab\" eki neyi gösterir?",
+     "secenekler": {
+      "A": "Tamamen fare kaynaklı",
+      "B": "Kimerik antikor",
+      "C": "İnsansılaştırılmış antikor",
+      "D": "Füzyon proteini",
+      "E": "Poliklonal antikor"
+     },
+     "dogru": "B",
+     "aciklama": "-imab/-ksimab kimerik, -zumab insansılaştırılmış ürünleri belirtir.",
+     "sik_aciklamalari": {
+      "A": "Fare antikorları -omab ile adlandırılır.",
+      "B": "Doğru: kimerik antikor.",
+      "C": "İnsansılaştırılmış antikor -zumab ekiyle belirtilir.",
+      "D": "Füzyon proteinleri -sept ekiyle adlandırılır.",
+      "E": "Monoklonal antikor adlandırmasıdır."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q28",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Monoklonal antikorların insansılaştırılmasının temel amacı hangisidir?",
+     "secenekler": {
+      "A": "Antijeniteyi artırmak",
+      "B": "HAMA oluşumunu ve antijeniteyi azaltıp yarılanma ömrünü uzatmak",
+      "C": "Oral biyoyararlanımı sağlamak",
+      "D": "Hedef spesifitesini azaltmak",
+      "E": "Üretim maliyetini düşürmek"
+     },
+     "dogru": "B",
+     "aciklama": "Fare antikorları HAMA oluşturur ve hızla yıkılır; insansılaştırma antijeniteyi azaltır ve yarılanma ömrünü uzatır.",
+     "sik_aciklamalari": {
+      "A": "Amaç antijeniteyi azaltmaktır.",
+      "B": "Doğru: HAMA azalır, yarılanma ömrü uzar.",
+      "C": "Monoklonal antikorlar oral kullanılmaz.",
+      "D": "Spesifite korunur; bu nedenle doğru seçenek değildir.",
+      "E": "Temel amaç maliyet değildir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-59-q29",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki antikorlardan hangisi adlandırma açısından insansılaştırılmış (-zumab) gruptadır ve hedefi doğru verilmiştir?",
+     "secenekler": {
+      "A": "İnfliksimab - IL-6R",
+      "B": "Rituksimab - HER-2",
+      "C": "Trastuzumab - HER-2/neu",
+      "D": "Basiliksimab - TNF-α",
+      "E": "Setuksimab - VEGF"
+     },
+     "dogru": "C",
+     "aciklama": "Trastuzumab insansılaştırılmış anti-HER-2/neu antikorudur; rituksimab, infliksimab, basiliksimab ve setuksimab kimeriktir.",
+     "sik_aciklamalari": {
+      "A": "İnfliksimab kimeriktir ve TNF-α'ya bağlanır.",
+      "B": "Rituksimab kimeriktir ve CD20'ye bağlanır.",
+      "C": "Doğru: trastuzumab - HER-2/neu.",
+      "D": "Basiliksimab kimeriktir ve CD25'e bağlanır.",
+      "E": "Setuksimab kimeriktir ve EGFR'ye bağlanır."
+     },
+     "bilgi": [
+      29,
+      31,
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 29,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T22:56:04"
+}

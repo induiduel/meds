@@ -432,29 +432,56 @@ export function chunkPastQuestions(): RagChunk[] {
   const now = new Date().toISOString();
 
   for (const q of list) {
-    const stem = (q.stem || q.reconstruction?.stem || q.rawQuestion?.stem || '').trim();
+    const isDenetleyici = Boolean(q.denetleyiciOnayi || q.denetleyici_onayi || q.surum === 'denetleyici');
+    const denetleyiciData = q.denetleyiciSurumu || {};
+
+    const stem = (isDenetleyici ? (denetleyiciData.stem || q.stem) : (q.stem || q.reconstruction?.stem || q.rawQuestion?.stem || '')).trim();
     if (!stem) continue;
 
-    const opts = q.options || q.reconstruction?.options || q.rawQuestion?.options || [];
+    const opts = (isDenetleyici && denetleyiciData.options) ? denetleyiciData.options : (q.options || q.reconstruction?.options || q.rawQuestion?.options || []);
     const optLines = Array.isArray(opts)
       ? opts.map((o: any) => typeof o === 'string' ? o : `${o.label || o.key || ''}) ${o.text || ''}`).join('\n')
       : '';
-    const claim = q.claimedAnswer || q.reconstruction?.correctAnswer || q.reconstruction?.correctOption || '';
-    const expl = q.explanation || q.reconstruction?.explanation || '';
+    const claim = isDenetleyici
+      ? (denetleyiciData.correctAnswer || q.correctAnswer || q.claimedAnswer || '')
+      : (q.claimedAnswer || q.reconstruction?.correctAnswer || q.reconstruction?.correctOption || '');
+    const expl = isDenetleyici
+      ? (denetleyiciData.tibbi_aciklama || denetleyiciData.explanation || q.explanation || '')
+      : (q.explanation || q.reconstruction?.explanation || '');
 
-    const content = `[ÇIKMIŞ SINAV SORUSU]
+    // Format option analyses if present
+    let optAnalysisSection = '';
+    const sa = (isDenetleyici ? denetleyiciData.sik_analizi : null) || q.sik_analizi;
+    if (sa && typeof sa === 'object' && Object.keys(sa).length > 0) {
+      optAnalysisSection = '\n\nSeçenek Analizi ve Çürütme (Adım Adım Mekanizma):\n' +
+        Object.entries(sa).map(([k, v]) => `- ${k}: ${v}`).join('\n');
+    }
+
+    // Format references if present
+    let refsSection = '';
+    const refs = (isDenetleyici ? denetleyiciData.referans_kaynaklar : null) || q.referans_kaynaklar;
+    if (Array.isArray(refs) && refs.length > 0) {
+      refsSection = '\n\nStandart Referans Tıp Kaynakları:\n' +
+        refs.map((r: string) => `- ${r}`).join('\n');
+    }
+
+    const header = isDenetleyici
+      ? '[DENETLEYİCİ ONAYLI ÇIKMIŞ SINAV SORUSU - ALTIN STANDART]'
+      : '[ÇIKMIŞ SINAV SORUSU]';
+
+    const content = `${header}
 Ders / Branş: ${q.discipline || 'Tıp'}
 Kurul: ${q.committeeId || 'donem3-kurul1'}
 Sınav Yılı: ${q.examYear || 'Geçmiş Sınav'}
 Konu: ${q.topic || 'Kurul Sorusu'}
-Soru Kökü:
+${isDenetleyici ? 'Denetim Statüsü: Denetleyici Onayı (Doğrulandı, Guyton/Robbins/Moore Uyumlu)\n' : ''}Soru Kökü:
 ${stem}
 
 Seçenekler:
 ${optLines}
 
-Doğru / Kabul Edilen Cevap: ${claim}
-${expl ? `\nAkademik Açıklama & Mekanizma:\n${expl}` : ''}`.trim();
+Doğru / Kabul Edilen Cevap: ${claim}${isDenetleyici ? ' (Denetleyici Onaylı)' : ''}
+${expl ? `\nAkademik Açıklama & Patofizyolojik Mekanizma:\n${expl}` : ''}${optAnalysisSection}${refsSection}`.trim();
 
     const h = hashContent(content);
     chunks.push({
@@ -463,7 +490,7 @@ ${expl ? `\nAkademik Açıklama & Mekanizma:\n${expl}` : ''}`.trim();
       documentType: 'past_question',
       committeeId: q.committeeId || 'donem3-kurul1',
       discipline: q.discipline || 'Tıp',
-      title: `${q.discipline || 'Tıp'} - ${q.topic || 'Çıkmış Soru'} (${q.examYear || 'Çıkmış'})`,
+      title: `${isDenetleyici ? '⭐ [Denetleyici Onaylı] ' : ''}${q.discipline || 'Tıp'} - ${q.topic || 'Çıkmış Soru'} (${q.examYear || 'Çıkmış'})`,
       pageNumber: q.questionNumber || null,
       content,
       metadata: {
@@ -472,7 +499,11 @@ ${expl ? `\nAkademik Açıklama & Mekanizma:\n${expl}` : ''}`.trim();
         sourceFile: q.sourceFile,
         topic: q.topic,
         isAmbiguous: q.isAmbiguous,
-        hasSlideRef: Boolean(q.matchedNoteTitle || q.lectureReference)
+        hasSlideRef: Boolean(q.matchedNoteTitle || q.lectureReference),
+        denetleyiciOnayi: isDenetleyici,
+        surum: isDenetleyici ? 'denetleyici' : 'orijinal',
+        onayDurumu: isDenetleyici ? 'Denetleyici Onaylı' : 'Standart',
+        hasOptionAnalysis: Boolean(sa && Object.keys(sa).length > 0)
       },
       hash: h,
       createdAt: q.createdAt || now,
@@ -1449,6 +1480,11 @@ export async function searchLocalRag(
     const lowerContent = chunk.content.toLowerCase();
     if (lowerContent.includes(normalizedQuery)) {
       finalScore += 25;
+    }
+
+    // Denetleyici Onayı (Altın Standart Soru): En yüksek doğruluk ve güncellik önceliği
+    if (chunk.metadata?.denetleyiciOnayi) {
+      finalScore += 50; // Denetleyici Onaylı doğrulanmış yeni sürüm en öncelikli gelir!
     }
 
     // High yield document types bonus (collected DeepSeek data is top priority ground-truth!)

@@ -11,9 +11,10 @@ import {
   Trophy,
   BookOpen,
   ShieldCheck,
-  BotMessageSquare,
   PanelLeftClose,
   PanelLeftOpen,
+  Target,
+  Compass,
 } from 'lucide-react';
 import type { AppTab } from './Header';
 import { pathFor, linkClick } from '../router';
@@ -21,23 +22,23 @@ import { pathFor, linkClick } from '../router';
 /** v3 rail: every page one tap away on tablet and desktop. Phones use MobileBottomNav. */
 export const RAIL: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'quick_add', label: 'Ekle', icon: SquarePen },
-  { id: 'ai_chat', label: 'Asistan', icon: BotMessageSquare },
-  { id: 'learn', label: 'Öğren', icon: GraduationCap },
   { id: 'past_exams', label: 'Çıkmış', icon: Archive },
-  { id: 'glossary', label: 'Sözlük', icon: BookOpenText },
-  { id: 'flashcards', label: 'Kartlar', icon: Layers },
+  { id: 'ornek_sorular', label: 'Örnek Soru', icon: Target },
   { id: 'questions', label: 'Havuz', icon: Library },
   { id: 'study', label: 'Çalış', icon: ListChecks },
-  { id: 'leaderboard', label: 'Sıralama', icon: Trophy },
+  { id: 'kazanimlar', label: 'Kazanımlar', icon: Compass },
+  { id: 'learn', label: 'Öğren', icon: GraduationCap },
   { id: 'summaries', label: 'Özetler', icon: BookOpen },
-  { id: 'datacore', label: 'Veri', icon: Archive },
+  { id: 'flashcards', label: 'Kartlar', icon: Layers },
+  { id: 'glossary', label: 'Sözlük', icon: BookOpenText },
+  { id: 'leaderboard', label: 'Sıralama', icon: Trophy },
 ];
 
 /** Menü kategorileri: kenar menüsünde başlıklı gruplar, telefonda "Daha" sayfasında aynı sıra. */
 export const NAV_GROUPS: { label: string | null; ids: AppTab[] }[] = [
-  { label: null, ids: ['quick_add', 'ai_chat'] },
-  { label: 'Sorular', ids: ['past_exams', 'questions', 'study'] },
-  { label: 'Öğrenme', ids: ['learn', 'summaries', 'datacore', 'flashcards', 'glossary'] },
+  { label: null, ids: ['quick_add'] },
+  { label: 'Sorular', ids: ['past_exams', 'ornek_sorular', 'questions', 'study'] },
+  { label: 'Öğrenme', ids: ['kazanimlar', 'learn', 'summaries', 'flashcards', 'glossary'] },
   { label: 'Topluluk', ids: ['leaderboard'] },
 ];
 const BY_ID = Object.fromEntries(RAIL.map((r) => [r.id, r])) as Record<string, (typeof RAIL)[number]>;

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { safeJsonFetch } from '../../services/api';
+import { PageHeader } from '../ui/PageHeader';
 
 /**
  * MedSoru Core v2 — Veri Merkezi (salt okunur).
@@ -103,44 +104,35 @@ export default function DataCoreView() {
   useEffect(() => { load('', false, false); }, [load]);
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-4 py-6">
-      <h1 className="text-xl font-semibold mb-1">Veri Merkezi (Core v2)</h1>
-      <p className="text-sm opacity-70 mb-4">
-        Kaynaktan doğrulanmış sorular, müfredat/kazanım eşlemesi, ders notu bağlantıları ve toplu tamamlama. GPU/AI kullanılmaz.
-      </p>
+    <div className="w-full min-w-0 flex flex-col gap-4 pb-12">
+      <PageHeader
+        title="Veri merkezi"
+        description="Kaynaktan doğrulanmış sorular, müfredat/kazanım eşlemesi, ders notu bağlantıları ve toplu tamamlama. GPU/AI kullanılmaz."
+        stats={stats ? ([
+          ['Soru', stats.sorular], ['Cevaplı', stats.cevapli], ['Açık uçlu', stats.acik_uclu],
+          ['Kazanımlı', stats.kazanimli], ['Kaynağa bağlı', stats.kaynak_bagli], ['Not dosyası', stats.notlar_dosya],
+          ['Özet dosyası', stats.ozet_dosya], ['Vektör', stats.vektor?.sayi ?? 0],
+        ] as const).map(([label, value]) => ({ label, value: Number(value ?? 0).toLocaleString('tr-TR') })) : undefined}
+      />
 
-      {stats && (
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-5">
-          {[
-            ['Soru', stats.sorular], ['Cevaplı', stats.cevapli], ['Açık uçlu', stats.acik_uclu],
-            ['Kazanımlı', stats.kazanimli], ['Kaynağa bağlı', stats.kaynak_bagli], ['Not dosyası', stats.notlar_dosya],
-            ['Özet dosyası', stats.ozet_dosya], ['Vektör', stats.vektor?.sayi ?? 0],
-          ].map(([label, value]) => (
-            <div key={String(label)} className="rounded-lg border border-black/10 dark:border-white/15 p-3">
-              <div className="text-xs opacity-60">{label}</div>
-              <div className="text-lg font-semibold">{String(value ?? 0)}</div>
-            </div>
-          ))}
-        </div>
-      )}
-
+      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 items-start">
       {/* Toplu tamamlama: parça yaz → benzer sorular */}
-      <section className="mb-6 rounded-xl border border-black/10 dark:border-white/15 p-3">
-        <div className="text-sm font-medium mb-1">Parça yaz → benzer soruları bul (birleştirme)</div>
-        <p className="text-xs opacity-60 mb-2">Hatırladığın parçayı yaz; aynı soruya ait kayıtlar benzerlikle listelenir (AI yok, deterministik).</p>
+      <section className="ms-panel ms-panel-body">
+        <h2 className="ms-panel-title">Parça yaz → benzer soruları bul (birleştirme)</h2>
+        <p className="m-0 text-[12.5px] leading-normal text-ink-3">Hatırladığın parçayı yaz; aynı soruya ait kayıtlar benzerlikle listelenir (AI yok, deterministik).</p>
         <div className="flex gap-2">
           <textarea
             value={similarStem}
             onChange={(e) => setSimilarStem(e.target.value)}
             placeholder="ör. parenteral uygulama toksik antifungal"
             rows={2}
-            className="flex-1 rounded-lg border border-black/15 dark:border-white/20 bg-transparent px-3 py-2 text-sm"
+            className="flex-1 ms-input h-auto! py-2.5 resize-y"
           />
-          <button onClick={() => findSimilar(similarStem)} className="rounded-lg bg-emerald-700 text-white px-3 py-2 text-sm">Bul</button>
+          <button onClick={() => findSimilar(similarStem)} className="ms-btn is-primary shrink-0">Bul</button>
         </div>
-        <ul className="mt-2 space-y-2">
+        <ul className="m-0 p-0 list-none flex flex-col gap-2 empty:hidden">
           {similarHits.map((h) => (
-            <li key={h.question_id} className="text-xs rounded border border-black/10 dark:border-white/10 p-2">
+            <li key={h.question_id} className="text-[12.5px] leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
               <div className="opacity-60">{h.ders || '—'} · benzerlik {h.benzerlik}{h.answer ? ` · cevap: ${h.answer}` : ''}</div>
               <div className="opacity-90">{h.stem}</div>
             </li>
@@ -149,20 +141,20 @@ export default function DataCoreView() {
       </section>
 
       {/* Toplu tamamlama: çok parçayı birleştir */}
-      <section className="mb-6 rounded-xl border border-black/10 dark:border-white/15 p-3">
-        <div className="text-sm font-medium mb-1">Parçaları birleştir (toplu tamamlama)</div>
-        <p className="text-xs opacity-60 mb-2">Her satıra bir parça yaz; aynı soruya ait olanlar birleşip tam soru adayı üretir (AI yok).</p>
+      <section className="ms-panel ms-panel-body">
+        <h2 className="ms-panel-title">Parçaları birleştir (toplu tamamlama)</h2>
+        <p className="m-0 text-[12.5px] leading-normal text-ink-3">Her satıra bir parça yaz; aynı soruya ait olanlar birleşip tam soru adayı üretir (AI yok).</p>
         <textarea
           value={mergeText}
           onChange={(e) => setMergeText(e.target.value)}
           placeholder={"parenteral toksik antifungal hangisidir\nsadece topikal kullanılan antifungal"}
           rows={3}
-          className="w-full rounded-lg border border-black/15 dark:border-white/20 bg-transparent px-3 py-2 text-sm"
+          className="ms-input h-auto! py-2.5 resize-y"
         />
-        <button onClick={() => doMerge(mergeText)} className="mt-2 rounded-lg bg-violet-700 text-white px-3 py-2 text-sm">Birleştir</button>
-        <ul className="mt-2 space-y-2">
+        <button onClick={() => doMerge(mergeText)} className="ms-btn is-primary self-start">Birleştir</button>
+        <ul className="m-0 p-0 list-none flex flex-col gap-2 empty:hidden">
           {mergeOut.map((m, i) => (
-            <li key={i} className="text-xs rounded border border-black/10 dark:border-white/10 p-2">
+            <li key={i} className="text-[12.5px] leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
               <div className="font-medium">{m.stem}</div>
               <div className="opacity-60">{m.ders || '—'} · {m.birlesik_parca_sayisi ?? 1} parça{m.answer ? ` · cevap: ${m.answer}` : ''}</div>
             </li>
@@ -171,21 +163,21 @@ export default function DataCoreView() {
       </section>
 
       {/* Ders notu araması */}
-      <section className="mb-6 rounded-xl border border-black/10 dark:border-white/15 p-3">
-        <div className="text-sm font-medium mb-2">Ders notu ara (v2 · anlamsal + BM25)</div>
+      <section className="ms-panel ms-panel-body">
+        <h2 className="ms-panel-title">Ders notu ara (v2 · anlamsal + BM25)</h2>
         <div className="flex gap-2">
           <input
             value={noteQuery}
             onChange={(e) => setNoteQuery(e.target.value)}
             onKeyDown={(e) => { if (e.key === 'Enter') searchNotes(noteQuery); }}
             placeholder="ör. antifungal nistatin"
-            className="flex-1 rounded-lg border border-black/15 dark:border-white/20 bg-transparent px-3 py-2 text-sm"
+            className="flex-1 ms-input"
           />
-          <button onClick={() => searchNotes(noteQuery)} className="rounded-lg bg-slate-700 text-white px-3 py-2 text-sm">Ara</button>
+          <button onClick={() => searchNotes(noteQuery)} className="ms-btn is-primary shrink-0">Ara</button>
         </div>
-        <ul className="mt-2 space-y-2">
+        <ul className="m-0 p-0 list-none flex flex-col gap-2 empty:hidden">
           {noteHits.map((h) => (
-            <li key={h.chunk_id} className="text-xs rounded border border-black/10 dark:border-white/10 p-2">
+            <li key={h.chunk_id} className="text-[12.5px] leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
               <div className="opacity-70">{h.ders || '—'} · {h.source_id} · s.{h.page ?? '?'} · skor {h.skor}</div>
               <div className="opacity-90">{h.alinti}</div>
             </li>
@@ -193,28 +185,30 @@ export default function DataCoreView() {
         </ul>
       </section>
 
+      </div>
+
       {audit?.toplam && (
-        <div className="text-xs opacity-70 mb-4">
+        <div className="text-[12.5px] text-ink-3">
           Eski veri denetimi ({audit.zaman}): {audit.toplam.kayit} kayıt · engelleyici {audit.toplam.blocking} · inceleme {audit.toplam.review}
         </div>
       )}
 
       {revize?.toplam != null && (
-        <section className="mb-6 rounded-xl border border-black/10 dark:border-white/15 p-3">
-          <div className="text-sm font-medium mb-1">Revize v2 — eski → yeni düzeltmeler</div>
+        <section className="ms-panel ms-panel-body">
+          <h2 className="ms-panel-title">Revize v2 — eski → yeni düzeltmeler</h2>
           <div className="text-xs opacity-70 mb-2">
             {revize.toplam} kayıt · {revize.revize_edilen} revize · {revize.karantina} karantina · değişiklik kaydı {revize.degisiklik_kaydi}
           </div>
-          <ul className="space-y-2">
+          <ul className="m-0 p-0 list-none flex flex-col gap-2">
             {revChanges.map((c: any, i: number) => (
-              <li key={i} className="text-xs rounded border border-black/10 dark:border-white/10 p-2">
+              <li key={i} className="text-[12.5px] leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
                 <div className="opacity-60 mb-1">{c.id} · {c.model}</div>
                 {(c.degisiklikler || []).map((d: any, j: number) => (
                   <div key={j} className="mb-2 whitespace-pre-wrap break-words">
                     <span className="font-medium">{d.alan}</span>:&nbsp;
                     <span className="line-through opacity-60">{String(d.eski ?? '')}</span>
                     &nbsp;→&nbsp;
-                    <span className="text-emerald-700 dark:text-emerald-400">{String(d.yeni ?? '')}</span>
+                    <span className="text-ok">{String(d.yeni ?? '')}</span>
                   </div>
                 ))}
               </li>
@@ -224,19 +218,19 @@ export default function DataCoreView() {
       )}
 
       {revQuestions.length > 0 && (
-        <section className="mb-6 rounded-xl border border-black/10 dark:border-white/15 p-3">
-          <div className="text-sm font-medium mb-2">Revize v2 — sorular (tam)</div>
-          <ul className="space-y-3">
+        <section className="ms-panel ms-panel-body">
+          <h2 className="ms-panel-title">Revize v2 — sorular (tam)</h2>
+          <ul className="m-0 p-0 list-none flex flex-col gap-3">
             {revQuestions.map((r: any, i: number) => (
-              <li key={i} className="rounded-xl border border-black/10 dark:border-white/10 p-3">
-                <div className="text-sm font-medium mb-1 whitespace-pre-wrap break-words">{r.soru_koku}</div>
+              <li key={i} className="ms-panel p-4 flex flex-col gap-1.5">
+                <div className="m-0 text-[14.5px] font-medium text-ink leading-snug whitespace-pre-wrap break-words">{r.soru_koku}</div>
                 <div className="text-xs opacity-80 grid gap-0.5 mb-1">
                   {Object.entries(r.secenekler || {}).map(([k, v]) => <div key={k} className="break-words">{k}) {String(v)}</div>)}
                 </div>
                 <div className="text-[11px] mb-1">
-                  <span className="rounded bg-indigo-100 text-indigo-800 px-1.5 py-0.5 mr-1">Doğru: {r.dogru_secenek || '—'}</span>
-                  {r.ders_adi && <span className="rounded bg-sky-100 text-sky-800 px-1.5 py-0.5 mr-1">{r.ders_adi}</span>}
-                  {r.konu_adi && <span className="rounded bg-emerald-100 text-emerald-800 px-1.5 py-0.5">{r.konu_adi}</span>}
+                  <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-accent-soft text-accent mr-1">Doğru: {r.dogru_secenek || '—'}</span>
+                  {r.ders_adi && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-field text-ink-2 mr-1">{r.ders_adi}</span>}
+                  {r.konu_adi && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-field text-ink-2">{r.konu_adi}</span>}
                 </div>
                 {((r.aciklama_maddeleri || []).length > 0) ? (
                   <ul className="text-xs opacity-90 list-disc pl-4 space-y-0.5">
@@ -252,35 +246,35 @@ export default function DataCoreView() {
         </section>
       )}
 
-      <div className="flex flex-wrap gap-2 items-center mb-4">
+      <div className="ms-panel p-3 flex flex-wrap gap-2 items-center">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={(e) => { if (e.key === 'Enter') load(query, onlyAnswered, onlyOpen); }}
           placeholder="Sorularda ara…"
-          className="flex-1 min-w-[200px] rounded-lg border border-black/15 dark:border-white/20 bg-transparent px-3 py-2 text-sm"
+          className="flex-1 min-w-[200px] ms-input"
         />
-        <label className="text-sm flex items-center gap-1">
+        <label className="text-[14px] text-ink-2 flex items-center gap-1.5 px-1 cursor-pointer">
           <input type="checkbox" checked={onlyAnswered} onChange={(e) => setOnlyAnswered(e.target.checked)} /> Cevaplı
         </label>
-        <label className="text-sm flex items-center gap-1">
+        <label className="text-[14px] text-ink-2 flex items-center gap-1.5 px-1 cursor-pointer">
           <input type="checkbox" checked={onlyOpen} onChange={(e) => setOnlyOpen(e.target.checked)} /> Açık uçlu
         </label>
-        <button onClick={() => load(query, onlyAnswered, onlyOpen)} className="rounded-lg bg-indigo-600 text-white px-3 py-2 text-sm">Ara</button>
+        <button onClick={() => load(query, onlyAnswered, onlyOpen)} className="ms-btn is-primary shrink-0">Ara</button>
       </div>
 
       {loading && <div className="opacity-70 text-sm">Yükleniyor…</div>}
-      {error && <div className="text-red-600 text-sm">{error}</div>}
+      {error && <div className="text-bad-text text-sm">{error}</div>}
 
-      <ul className="space-y-3">
+      <ul className="m-0 p-0 list-none grid grid-cols-1 xl:grid-cols-2 gap-3 items-start">
         {questions.map((qq) => (
-          <li key={qq.question_id} className="rounded-xl border border-black/10 dark:border-white/15 p-3">
-            <div className="text-sm font-medium mb-1">{qq.stem}</div>
+          <li key={qq.question_id} className="ms-panel p-4 flex flex-col gap-1.5">
+            <p className="m-0 text-[14.5px] font-medium text-ink leading-snug">{qq.stem}</p>
             <div className="flex flex-wrap gap-1 text-[11px] mb-1">
-              {qq.ders && <span className="rounded bg-sky-100 text-sky-800 px-1.5 py-0.5">{qq.ders}</span>}
-              {qq.konu && <span className="rounded bg-emerald-100 text-emerald-800 px-1.5 py-0.5">{qq.konu}</span>}
-              {qq.acik_uclu && <span className="rounded bg-amber-100 text-amber-800 px-1.5 py-0.5">açık uçlu</span>}
-              {qq.answer && <span className="rounded bg-indigo-100 text-indigo-800 px-1.5 py-0.5">cevap: {qq.answer}</span>}
+              {qq.ders && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-field text-ink-2">{qq.ders}</span>}
+              {qq.konu && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-field text-ink-2">{qq.konu}</span>}
+              {qq.acik_uclu && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-warn-soft text-warn">açık uçlu</span>}
+              {qq.answer && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-accent-soft text-accent">cevap: {qq.answer}</span>}
             </div>
             {qq.kazanim && <div className="text-xs opacity-70 mb-1">Kazanım: {qq.kazanim}</div>}
             {!qq.acik_uclu && qq.options && (
@@ -309,13 +303,13 @@ export default function DataCoreView() {
       {!loading && questions.length === 0 && !error && <div className="opacity-60 text-sm">Sonuç yok.</div>}
 
       {clusters.length > 0 && (
-        <section className="mt-6">
-          <h2 className="text-sm font-semibold mb-2">Toplu tamamlama — birleşik soru adayları</h2>
-          <ul className="space-y-2">
+        <section className="flex flex-col gap-2">
+          <h2 className="ms-panel-title">Toplu tamamlama — birleşik soru adayları</h2>
+          <ul className="m-0 p-0 list-none flex flex-col gap-2">
             {clusters.map((c, i) => {
               const m = c.birlesik || c;
               return (
-                <li key={i} className="text-xs rounded border border-black/10 dark:border-white/15 p-2">
+                <li key={i} className="text-[12.5px] leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
                   <div className="font-medium mb-0.5">{String(m.stem || '').slice(0, 140)}</div>
                   <div className="opacity-60">
                     {m.ders || '—'} · {m.birlesik_parca_sayisi ?? 1} parça birleşti

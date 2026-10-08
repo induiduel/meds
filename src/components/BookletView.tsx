@@ -45,7 +45,7 @@ export const BookletView: React.FC<BookletViewProps> = ({
             className={`h-10 px-3 rounded-[10px] text-[13px] font-semibold flex items-center gap-1.5 border transition-colors cursor-pointer ${
               showAnswerKey
                 ? 'bg-teal-50 border-teal-300 text-teal-800'
-                : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+                : 'bg-white border-line text-ink-2 hover:bg-canvas'
             }`}
           >
             {showAnswerKey ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
@@ -56,8 +56,8 @@ export const BookletView: React.FC<BookletViewProps> = ({
             onClick={() => setShowExplanations(!showExplanations)}
             className={`h-10 px-3 rounded-[10px] text-[13px] font-semibold flex items-center gap-1.5 border transition-colors cursor-pointer ${
               showExplanations
-                ? 'bg-emerald-50 border-emerald-300 text-emerald-800'
-                : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+                ? 'bg-ok-soft border-ok text-ok'
+                : 'bg-white border-line text-ink-2 hover:bg-canvas'
             }`}
           >
             <span>Tıbbi Açıklamalar: {showExplanations ? 'Açık' : 'Gizli'}</span>
@@ -75,16 +75,16 @@ export const BookletView: React.FC<BookletViewProps> = ({
       />
 
       {/* A4 Printable Paper Container */}
-      <div className="bg-white rounded-xl border border-slate-200 p-8 shadow-md max-w-4xl mx-auto print:shadow-none print:border-none print:p-0">
+      <div className="bg-white rounded-2xl border border-line p-6 sm:p-8 shadow-sm w-full print:shadow-none print:border-none print:p-0">
         {/* Booklet Header */}
-        <div className="border-b-2 border-slate-900 pb-4 mb-6 text-center space-y-1">
-          <span className="text-xs uppercase tracking-widest font-bold text-slate-500">
+        <div className="border-b-2 border-ink pb-4 mb-6 text-center space-y-1">
+          <span className="text-xs uppercase tracking-widest font-bold text-ink-3">
             T.C. TIP FAKÜLTESİ • DÖNEM {committee?.year || 3}
           </span>
-          <h1 className="text-lg font-black text-slate-900 uppercase">
+          <h1 className="text-lg font-black text-ink uppercase">
             {committee?.name || 'DÖNEM 3 KURUL SINAVI'}
           </h1>
-          <div className="flex items-center justify-center gap-4 text-xs text-slate-600 font-serif">
+          <div className="flex items-center justify-center gap-4 text-xs text-ink-2 font-serif">
             <span>Akademik Yıl: {committee?.term || '2025-2026'}</span>
             <span>•</span>
             <span>Kolektif Öğrenci Rekonstrüksiyon Kitapçığı</span>
@@ -94,7 +94,7 @@ export const BookletView: React.FC<BookletViewProps> = ({
         </div>
 
         {/* Questions Grid: Two Columns on Large Screens & Print */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 text-xs text-slate-900 print:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-x-8 gap-y-6 text-xs text-ink print:grid-cols-2">
           {activeQuestions.map((q) => {
             const hasRec = !!q.reconstruction;
             const stem = hasRec
@@ -107,17 +107,17 @@ export const BookletView: React.FC<BookletViewProps> = ({
             return (
               <div
                 key={q.id}
-                className="space-y-2 border-b border-slate-100 pb-4 break-inside-avoid"
+                className="space-y-2 border-b border-field pb-4 break-inside-avoid"
               >
-                <div className="flex items-center justify-between text-[11px] font-bold text-slate-700">
-                  <span className="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">
+                <div className="flex items-center justify-between text-[11px] font-bold text-ink-2">
+                  <span className="bg-field px-1.5 py-0.5 rounded text-ink">
                     SORU {q.questionNumber}
                   </span>
-                  <span className="text-slate-500 font-sans">{q.discipline}</span>
+                  <span className="text-ink-3 font-sans">{q.discipline}</span>
                 </div>
 
                 {/* Soru Metni */}
-                <p className="leading-relaxed font-serif text-[12px] font-medium text-slate-900">
+                <p className="leading-relaxed font-serif text-[12px] font-medium text-ink">
                   {stem}
                 </p>
 
@@ -130,8 +130,8 @@ export const BookletView: React.FC<BookletViewProps> = ({
                         key={opt.key}
                         className={`flex items-start gap-1.5 ${
                           showAnswerKey && isCorrect
-                            ? 'font-bold text-emerald-800 bg-emerald-50/60 p-0.5 rounded'
-                            : 'text-slate-800'
+                            ? 'font-bold text-ok bg-ok-soft/60 p-0.5 rounded'
+                            : 'text-ink'
                         }`}
                       >
                         <span className="font-bold shrink-0">{opt.key})</span>
@@ -143,11 +143,11 @@ export const BookletView: React.FC<BookletViewProps> = ({
 
                 {/* Explanation (if enabled) */}
                 {showExplanations && hasRec && (
-                  <div className="mt-2 p-2 bg-slate-50 border border-slate-200 rounded text-[11px] text-slate-700">
-                    <span className="font-bold text-slate-900 block mb-0.5">
+                  <div className="mt-2 p-2 bg-canvas border border-line rounded text-[11px] text-ink-2">
+                    <span className="font-bold text-ink block mb-0.5">
                       Doğru Cevap: {q.reconstruction!.correctAnswer}
                     </span>
-                    <p className="text-slate-600 leading-snug">{q.reconstruction!.explanation}</p>
+                    <p className="text-ink-2 leading-snug">{q.reconstruction!.explanation}</p>
                   </div>
                 )}
               </div>
@@ -157,7 +157,7 @@ export const BookletView: React.FC<BookletViewProps> = ({
 
         {/* Answer Key Table at bottom */}
         {showAnswerKey && (
-          <div className="mt-10 pt-6 border-t-2 border-slate-900 break-inside-avoid">
+          <div className="mt-10 pt-6 border-t-2 border-ink break-inside-avoid">
             <h4 className="text-sm font-bold uppercase mb-3 text-center">
               Cevap Anahtarı (Rekonstrükte Sorular)
             </h4>
@@ -165,9 +165,9 @@ export const BookletView: React.FC<BookletViewProps> = ({
               {activeQuestions
                 .filter((q) => q.reconstruction)
                 .map((q) => (
-                  <div key={q.id} className="p-1.5 border border-slate-200 rounded bg-slate-50">
-                    <span className="block text-[11px] text-slate-500">#{q.questionNumber}</span>
-                    <span className="font-bold text-slate-900">
+                  <div key={q.id} className="p-1.5 border border-line rounded bg-canvas">
+                    <span className="block text-[11px] text-ink-3">#{q.questionNumber}</span>
+                    <span className="font-bold text-ink">
                       {q.reconstruction!.correctAnswer}
                     </span>
                   </div>

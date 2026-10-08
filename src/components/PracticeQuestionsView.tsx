@@ -45,9 +45,9 @@ function QuestionCard({ q, n }: { q: PQ; n: number }) {
           const tone = !done
             ? 'bg-white border-line-soft hover:border-accent cursor-pointer'
             : isRight
-            ? 'bg-ok-tint border-emerald-400'
+            ? 'bg-ok-tint border-ok'
             : isPicked
-            ? 'bg-rose-50 border-rose-300'
+            ? 'bg-bad-soft border-bad'
             : 'bg-white border-line-soft opacity-80';
           return (
             <li key={k}>
@@ -60,7 +60,7 @@ function QuestionCard({ q, n }: { q: PQ; n: number }) {
               >
                 <span className={`w-7 h-7 rounded-lg flex items-center justify-center font-mono text-[13px] font-semibold ${done && isRight ? 'bg-ok text-white' : 'bg-canvas text-ink-2'}`}>{k}</span>
                 <span className="text-[14.5px] leading-[1.45] text-ink">{q.secenekler[k]}</span>
-                {done && isRight ? <Check className="w-4 h-4 text-ok" /> : done && isPicked ? <X className="w-4 h-4 text-rose-600" /> : <span />}
+                {done && isRight ? <Check className="w-4 h-4 text-ok" /> : done && isPicked ? <X className="w-4 h-4 text-bad" /> : <span />}
               </button>
             </li>
           );
@@ -68,7 +68,7 @@ function QuestionCard({ q, n }: { q: PQ; n: number }) {
       </ol>
       {done && (
         <div className="flex flex-col gap-2.5">
-          <p className={`m-0 text-[14px] font-semibold ${correct ? 'text-ok' : 'text-rose-700'}`}>
+          <p className={`m-0 text-[14px] font-semibold ${correct ? 'text-ok' : 'text-bad-text'}`}>
             {correct ? 'Doğru!' : `Yanlış — doğru cevap ${q.dogru_secenek}`}
           </p>
           <ul className="m-0 pl-5 flex flex-col gap-1 text-[14px] text-ink-2 leading-relaxed">
@@ -111,7 +111,7 @@ export const PracticeQuestionsView: React.FC = () => {
   );
 
   return (
-    <div className="flex flex-col gap-4 pb-16 w-full max-w-3xl mx-auto min-w-0">
+    <div className="flex flex-col gap-4 pb-16 w-full min-w-0">
       <PageHeader
         title="Örnek sorular"
         description="Kurul 1 derslerinin müfredat kazanımlarına göre hazırlanmış çalışma soruları. Her kazanımda kolay, orta ve zor sorular; cevapladıktan sonra her şıkkın neden doğru ya da yanlış olduğu gösterilir."
@@ -172,7 +172,7 @@ const EskiUretim: React.FC = () => {
   return (
     <div className="flex flex-col gap-4">
 
-      <p className="m-0 rounded-xl bg-amber-50 text-amber-900 px-3.5 py-2.5 text-[13px] flex items-start gap-2">
+      <p className="m-0 rounded-xl bg-warn-soft text-warn px-3.5 py-2.5 text-[13px] flex items-start gap-2">
         <Sparkles className="w-4 h-4 shrink-0 mt-0.5" />
         Bu sorular yapay zekâ ile üretildi ve henüz bir öğretim üyesi ya da yönetici tarafından doğrulanmadı. Cevaplar ders notu
         alıntısına dayanır; şüpheli gördüğünüz soruyu ders notundan kontrol edin.
@@ -197,7 +197,7 @@ const EskiUretim: React.FC = () => {
       </div>
 
       {error ? (
-        <p className="m-0 text-[14px] text-rose-700">{error}</p>
+        <p className="m-0 text-[14px] text-bad-text">{error}</p>
       ) : all === null ? (
         <p className="m-0 text-[14px] text-ink-3">Sorular yükleniyor…</p>
       ) : shown.length === 0 ? (

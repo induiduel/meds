@@ -33,45 +33,83 @@ import { SectionLoader } from './components/ui/Animations';
 import { ToastHost, toast } from './components/ui/Toast';
 import { TooltipHost } from './components/ui/TooltipHost';
 
+function wrapLazy<T extends { default: React.ComponentType<any> }>(
+  promise: Promise<T>
+): Promise<T> {
+  return promise.catch((err) => {
+    console.warn('[SafeLazy] Failed to load component:', err?.message || err);
+    if (typeof window !== 'undefined') {
+      const msg = String(err?.message || err || '');
+      if (
+        msg.includes('dynamically imported module') ||
+        msg.includes('Failed to fetch') ||
+        msg.includes('default')
+      ) {
+        const lastReload = sessionStorage.getItem('medsoru_chunk_reload');
+        if (!lastReload || Date.now() - Number(lastReload) > 8000) {
+          sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));
+          window.location.reload();
+        }
+      }
+    }
+    return {
+      default: (() => (
+        <div className="p-8 text-center text-ink-3">
+          <p className="font-semibold text-ink">Bileşen yüklenirken bir sorun oluştu.</p>
+          <p className="text-sm mt-1">Lütfen sayfayı yenileyiniz.</p>
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="mt-3 px-4 py-2 bg-accent text-white rounded-xl text-sm font-semibold hover:bg-accent-hover cursor-pointer"
+          >
+            Yenile
+          </button>
+        </div>
+      )) as unknown as T['default']
+    } as T;
+  });
+}
+
 // Lazy-loaded Views (Split into separate on-demand chunks)
-const PracticeMode = React.lazy(() => import('./components/PracticeMode').then(m => ({ default: m.PracticeMode })));
-const StudyHub = React.lazy(() => import('./components/study/StudyHub').then(m => ({ default: m.StudyHub })));
-const BookletView = React.lazy(() => import('./components/BookletView').then(m => ({ default: m.BookletView })));
-const LeaderboardView = React.lazy(() => import('./components/LeaderboardView').then(m => ({ default: m.LeaderboardView })));
-const LectureNotesView = React.lazy(() => import('./components/LectureNotesView').then(m => ({ default: m.LectureNotesView })));
-const PastExamsView = React.lazy(() => import('./components/PastExamsView').then(m => ({ default: m.PastExamsView })));
-const QuestionMatrix = React.lazy(() => import('./components/QuestionMatrix').then(m => ({ default: m.QuestionMatrix })));
-const LocalAiChatView = React.lazy(() => import('./components/LocalAiChatView').then(m => ({ default: m.LocalAiChatView })));
-const DataCoreView = React.lazy(() => import('./components/core/DataCoreView'));
-const TestCikmisView = React.lazy(() => import('./components/TestCikmisView').then(m => ({ default: m.TestCikmisView })));
-const TesterOzetView = React.lazy(() => import('./components/TesterOzetView').then(m => ({ default: m.TesterOzetView })));
-const PracticeQuestionsView = React.lazy(() => import('./components/PracticeQuestionsView'));
+const PracticeMode = React.lazy(() => wrapLazy(import('./components/PracticeMode').then(m => ({ default: m.PracticeMode }))));
+const StudyHub = React.lazy(() => wrapLazy(import('./components/study/StudyHub').then(m => ({ default: m.StudyHub }))));
+const BookletView = React.lazy(() => wrapLazy(import('./components/BookletView').then(m => ({ default: m.BookletView }))));
+const LeaderboardView = React.lazy(() => wrapLazy(import('./components/LeaderboardView').then(m => ({ default: m.LeaderboardView }))));
+const LectureNotesView = React.lazy(() => wrapLazy(import('./components/LectureNotesView').then(m => ({ default: m.LectureNotesView }))));
+const PastExamsView = React.lazy(() => wrapLazy(import('./components/PastExamsView').then(m => ({ default: m.PastExamsView }))));
+const QuestionMatrix = React.lazy(() => wrapLazy(import('./components/QuestionMatrix').then(m => ({ default: m.QuestionMatrix }))));
+const LocalAiChatView = React.lazy(() => wrapLazy(import('./components/LocalAiChatView').then(m => ({ default: m.LocalAiChatView }))));
+const DataCoreView = React.lazy(() => wrapLazy(import('./components/core/DataCoreView')));
+const TestCikmisView = React.lazy(() => wrapLazy(import('./components/TestCikmisView').then(m => ({ default: m.TestCikmisView }))));
+const TesterOzetView = React.lazy(() => wrapLazy(import('./components/TesterOzetView').then(m => ({ default: m.TesterOzetView }))));
+const PracticeQuestionsView = React.lazy(() => wrapLazy(import('./components/PracticeQuestionsView')));
+const KazanimlarView = React.lazy(() => wrapLazy(import('./components/KazanimlarView').then(m => ({ default: m.KazanimlarView }))));
 
 // Lazy-loaded Modals (Only downloaded when opened)
-const AdminPanelModal = React.lazy(() => import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal })));
-const ExamPdfModal = React.lazy(() => import('./components/ExamPdfModal').then(m => ({ default: m.ExamPdfModal })));
-const ContributeModal = React.lazy(() => import('./components/ContributeModal').then(m => ({ default: m.ContributeModal })));
-const AddCommitteeModal = React.lazy(() => import('./components/AddCommitteeModal').then(m => ({ default: m.AddCommitteeModal })));
-const GithubPagesGuideModal = React.lazy(() => import('./components/GithubPagesGuideModal').then(m => ({ default: m.GithubPagesGuideModal })));
-const AuthErrorModal = React.lazy(() => import('./components/AuthErrorModal').then(m => ({ default: m.AuthErrorModal })));
-const DriveSaveModal = React.lazy(() => import('./components/DriveSaveModal').then(m => ({ default: m.DriveSaveModal })));
-const UserAuthModal = React.lazy(() => import('./components/UserAuthModal').then(m => ({ default: m.UserAuthModal })));
-const UserProfileModal = React.lazy(() => import('./components/UserProfileModal').then(m => ({ default: m.UserProfileModal })));
-const EditMyQuestionModal = React.lazy(() => import('./components/EditMyQuestionModal').then(m => ({ default: m.EditMyQuestionModal })));
-const RevisionHistoryModal = React.lazy(() => import('./components/RevisionHistoryModal').then(m => ({ default: m.RevisionHistoryModal })));
-const AdminPastExamImporterModal = React.lazy(() => import('./components/AdminPastExamImporterModal').then(m => ({ default: m.AdminPastExamImporterModal })));
-const AiQuestionOptimizerModal = React.lazy(() => import('./components/AiQuestionOptimizerModal').then(m => ({ default: m.AiQuestionOptimizerModal })));
-const NotebookLMSyncModal = React.lazy(() => import('./components/NotebookLMSyncModal').then(m => ({ default: m.NotebookLMSyncModal })));
-const SubagentMonitorModal = React.lazy(() => import('./components/SubagentMonitorModal').then(m => ({ default: m.SubagentMonitorModal })));
-const SystemDiagnosticsModal = React.lazy(() => import('./components/SystemDiagnosticsModal').then(m => ({ default: m.SystemDiagnosticsModal })));
-const AiQuotaAlertModal = React.lazy(() => import('./components/AiQuotaAlertModal').then(m => ({ default: m.AiQuotaAlertModal })));
-const LectureSummariesView = React.lazy(() => import('./components/LectureSummariesView').then(m => ({ default: m.LectureSummariesView })));
-const TranscriptionsView = React.lazy(() => import('./components/TranscriptionsView').then(m => ({ default: m.TranscriptionsView })));
-const FlashcardsView = React.lazy(() => import('./components/flashcards/FlashcardsView').then(m => ({ default: m.FlashcardsView })));
-const SearchView = React.lazy(() => import('./components/search/SearchView').then(m => ({ default: m.SearchView })));
-const InteractiveDeckView = React.lazy(() => import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView })));
-const MedicalEncyclopediaView = React.lazy(() => import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView })));
-const ManageConsole = React.lazy(() => import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole })));
+const AdminPanelModal = React.lazy(() => wrapLazy(import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal }))));
+const ExamPdfModal = React.lazy(() => wrapLazy(import('./components/ExamPdfModal').then(m => ({ default: m.ExamPdfModal }))));
+const ContributeModal = React.lazy(() => wrapLazy(import('./components/ContributeModal').then(m => ({ default: m.ContributeModal }))));
+const AddCommitteeModal = React.lazy(() => wrapLazy(import('./components/AddCommitteeModal').then(m => ({ default: m.AddCommitteeModal }))));
+const GithubPagesGuideModal = React.lazy(() => wrapLazy(import('./components/GithubPagesGuideModal').then(m => ({ default: m.GithubPagesGuideModal }))));
+const AuthErrorModal = React.lazy(() => wrapLazy(import('./components/AuthErrorModal').then(m => ({ default: m.AuthErrorModal }))));
+const DriveSaveModal = React.lazy(() => wrapLazy(import('./components/DriveSaveModal').then(m => ({ default: m.DriveSaveModal }))));
+const UserAuthModal = React.lazy(() => wrapLazy(import('./components/UserAuthModal').then(m => ({ default: m.UserAuthModal }))));
+const UserProfileModal = React.lazy(() => wrapLazy(import('./components/UserProfileModal').then(m => ({ default: m.UserProfileModal }))));
+const EditMyQuestionModal = React.lazy(() => wrapLazy(import('./components/EditMyQuestionModal').then(m => ({ default: m.EditMyQuestionModal }))));
+const RevisionHistoryModal = React.lazy(() => wrapLazy(import('./components/RevisionHistoryModal').then(m => ({ default: m.RevisionHistoryModal }))));
+const AdminPastExamImporterModal = React.lazy(() => wrapLazy(import('./components/AdminPastExamImporterModal').then(m => ({ default: m.AdminPastExamImporterModal }))));
+const AiQuestionOptimizerModal = React.lazy(() => wrapLazy(import('./components/AiQuestionOptimizerModal').then(m => ({ default: m.AiQuestionOptimizerModal }))));
+const NotebookLMSyncModal = React.lazy(() => wrapLazy(import('./components/NotebookLMSyncModal').then(m => ({ default: m.NotebookLMSyncModal }))));
+const SubagentMonitorModal = React.lazy(() => wrapLazy(import('./components/SubagentMonitorModal').then(m => ({ default: m.SubagentMonitorModal }))));
+const SystemDiagnosticsModal = React.lazy(() => wrapLazy(import('./components/SystemDiagnosticsModal').then(m => ({ default: m.SystemDiagnosticsModal }))));
+const AiQuotaAlertModal = React.lazy(() => wrapLazy(import('./components/AiQuotaAlertModal').then(m => ({ default: m.AiQuotaAlertModal }))));
+const LectureSummariesView = React.lazy(() => wrapLazy(import('./components/LectureSummariesView').then(m => ({ default: m.LectureSummariesView }))));
+const TranscriptionsView = React.lazy(() => wrapLazy(import('./components/TranscriptionsView').then(m => ({ default: m.TranscriptionsView }))));
+const FlashcardsView = React.lazy(() => wrapLazy(import('./components/flashcards/FlashcardsView').then(m => ({ default: m.FlashcardsView }))));
+const SearchView = React.lazy(() => wrapLazy(import('./components/search/SearchView').then(m => ({ default: m.SearchView }))));
+const InteractiveDeckView = React.lazy(() => wrapLazy(import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView }))));
+const MedicalEncyclopediaView = React.lazy(() => wrapLazy(import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView }))));
+const ManageConsole = React.lazy(() => wrapLazy(import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole }))));
 
 const ViewFallback = () => <SectionLoader />;
 import { GlossaryProvider } from './components/learn/MedicalGlossaryPopover';
@@ -123,8 +161,15 @@ export default function App() {
   const [initialRoute] = useState(() => {
     const parsed = parseLocation();
     try {
-      if (typeof window !== 'undefined' && /^manage\./i.test(window.location.hostname) && parsed.route === 'quick_add') {
-        return { route: 'manage' as ValidAppTab, param: undefined as string | undefined };
+      if (typeof window !== 'undefined') {
+        const p = new URLSearchParams(window.location.search);
+        const qId = p.get('questionId');
+        if (qId) {
+          return { route: 'past_exams' as ValidAppTab, param: qId };
+        }
+        if (/^manage\./i.test(window.location.hostname) && parsed.route === 'quick_add') {
+          return { route: 'manage' as ValidAppTab, param: undefined as string | undefined };
+        }
       }
     } catch {}
     return parsed;
@@ -152,7 +197,10 @@ export default function App() {
     }
   });
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [pastExamsSearchQuery, setPastExamsSearchQuery] = useState<string>('');
+  const [pastExamsSearchQuery, setPastExamsSearchQuery] = useState<string>(() => {
+    if (initialRoute.route === 'past_exams' && initialRoute.param) return initialRoute.param;
+    return '';
+  });
   const [filterMyQuestionsOnly, setFilterMyQuestionsOnly] = useState<boolean>(false);
 
   // Modals state
@@ -1444,6 +1492,26 @@ export default function App() {
         {activeTab === 'ornek_sorular' && (
           <Suspense fallback={<ViewFallback />}>
             <PracticeQuestionsView />
+          </Suspense>
+        )}
+
+        {/* TAB: /kazanimlar — müfredat ve kazanımlar haritası */}
+        {activeTab === 'kazanimlar' && (
+          <Suspense fallback={<ViewFallback />}>
+            <KazanimlarView
+              onNavigateToLearn={(deckId, slideNumber) => {
+                if (deckId) setSelectedLearnDeckId(deckId);
+                if (slideNumber) setSelectedLearnSlideNumber(slideNumber);
+                setActiveTab('learn');
+              }}
+              onNavigateToPastExams={(query) => {
+                if (query) setPastExamsSearchQuery(query);
+                setActiveTab('past_exams');
+              }}
+              onNavigateToOrnek={() => {
+                setActiveTab('ornek_sorular');
+              }}
+            />
           </Suspense>
         )}
 

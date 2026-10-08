@@ -5,7 +5,7 @@ import { StemText, Highlight } from './ui/StemText';
 import { Collapsible } from './ui/Collapsible';
 import { Dialog } from './ui/Dialog';
 import { foldText, parseQuery, scoreFields, SearchField } from '../services/searchText';
-import { QuestionAboutDialog } from './QuestionAboutDialog';
+import { QuestionAboutDialog, normalizeRefList } from './QuestionAboutDialog';
 import { SourceText, Marked } from './ui/SourceText';
 import { buildQuestionFocus, QuestionFocus } from '../services/questionFocus';
 import { toast } from './ui/Toast';
@@ -50,6 +50,9 @@ import {
   BarChart3,
   Share2,
   ShieldAlert,
+  ShieldCheck,
+  History,
+  Scale,
 } from 'lucide-react';
 import { ActionMenu, ActionItem } from './ui/ActionMenu';
 import { ReportQuestionModal } from './ReportQuestionModal';
@@ -69,6 +72,10 @@ import {
   normalizeDonem3Discipline,
   isDonem3Question,
 } from '../data/curriculumData';
+
+/** Denetleyici Onayı almış (altın standart, doğrulanmış) soru */
+export const isDenetleyiciQuestion = (q: any): boolean =>
+  Boolean(q?.denetleyiciOnayi || q?.denetleyici_onayi || q?.surum === 'denetleyici' || (Array.isArray(q?.tags) && q.tags.includes('denetleyici_onayi')));
 
 /** Faz 14'te önerisi onaylanıp canlı soruya uygulanmış soru. */
 export const isPhase14Fixed = (q: any): boolean =>
@@ -97,7 +104,7 @@ const isNewQ = (q: QuestionItem): boolean =>
       (q.createdAt ? new Date(q.createdAt).getTime() > Date.now() - 30 * 86400000 : false),
   );
 
-type FacetKey = 'pool' | 'committee' | 'year' | 'discipline' | 'topic' | 'answer' | 'explanation' | 'source' | 'p14' | 'newness';
+type FacetKey = 'pool' | 'committee' | 'year' | 'discipline' | 'topic' | 'answer' | 'explanation' | 'source' | 'p14' | 'denetleyici' | 'newness';
 interface Prep {
   q: QuestionItem;
   disc: string;
@@ -140,6 +147,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'gemini_v3' | 'existing'>('all');
   const [phase14Filter, setPhase14Filter] = useState<'all' | 'faz14' | 'faz14_onayli' | 'faz14_bekleyen'>('all');
+  const [denetleyiciFilter, setDenetleyiciFilter] = useState<'all' | 'denetleyici_only' | 'standard_only'>('all');
+  const [versionViewOverrides, setVersionViewOverrides] = useState<Record<string, 'denetleyici' | 'eski' | 'karsilastir'>>({});
+  const [analysisOpen, setAnalysisOpen] = useState<Record<string, boolean>>({});
   const [newnessFilter, setNewnessFilter] = useState<'all' | 'new_only' | 'archived_only'>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -156,11 +166,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   // "Hakkında" penceresi ve şıkka itiraz
   const [aboutQuestion, setAboutQuestion] = useState<QuestionItem | null>(null);
   const [objection, setObjection] = useState<{ question: QuestionItem; option: { key: string; text: string } } | null>(null);
-  // Paylaşılan soru bağlantısı: /cikmis/<soruId> yalnız o soruyu gösterir
+  // Paylaşılan soru bağlantısı: /cikmis/<soruId> veya ?questionId=<soruId> yalnız o soruyu gösterir
   const [sharedId, setSharedId] = useState<string | null>(() => {
     try {
       const r = parseLocation();
-      return r.route === 'past_exams' && r.param ? r.param : null;
+      if (r.route === 'past_exams' && r.param) return r.param;
+      if (typeof window !== 'undefined') {
+        const p = new URLSearchParams(window.location.search);
+        return p.get('questionId') || p.get('q') || null;
+      }
+      return null;
     } catch {
       return null;
     }
@@ -671,6 +686,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       (phase14Filter === 'faz14' && isPhase14Fixed(p.q)) ||
       (phase14Filter === 'faz14_onayli' && isPhase14Fixed(p.q) && !isPhase14Pending(p.q)) ||
       (phase14Filter === 'faz14_bekleyen' && isPhase14Pending(p.q)),
+    denetleyici: (p) =>
+      denetleyiciFilter === 'all' ||
+      (denetleyiciFilter === 'denetleyici_only' && isDenetleyiciQuestion(p.q)) ||
+      (denetleyiciFilter === 'standard_only' && !isDenetleyiciQuestion(p.q)),
     newness: (p) => newnessFilter === 'all' || (newnessFilter === 'new_only') === p.isNew,
   };
   const facetValues: Record<FacetKey, (p: Prep) => (string | null)[]> = {
@@ -683,6 +702,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     explanation: (p) => [p.hasExpl ? 'with' : 'without'],
     source: (p) => [isGeminiV3Question(p.q) ? 'gemini_v3' : 'existing'],
     p14: (p) => [isPhase14Fixed(p.q) ? 'faz14' : null, isPhase14Fixed(p.q) && !isPhase14Pending(p.q) ? 'faz14_onayli' : null, isPhase14Pending(p.q) ? 'faz14_bekleyen' : null],
+    denetleyici: (p) => [isDenetleyiciQuestion(p.q) ? 'denetleyici_only' : 'standard_only'],
     newness: (p) => [p.isNew ? 'new_only' : 'archived_only'],
   };
 
@@ -721,7 +741,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     if (sortOrder === 'number') list.sort((a, b) => (a.questionNumber || 9999) - (b.questionNumber || 9999));
     return { filteredQuestions: list, facetCounts: counts };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, newnessFilter, sortOrder]);
+  }, [prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, sortOrder]);
   const fc = (k: FacetKey, v = 'all') => facetCounts[k].get(v) || 0;
 
   // Seçili kurul/ders artık sonuç vermiyorsa (başka seçim yüzünden) seçimi düşürme: kullanıcı neyi seçtiyse o kalır,
@@ -779,6 +799,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     answer: { with: 'Cevaplı', without: 'Cevapsız', doubtful: 'Cevap belirsiz' } as Record<string, string>,
     source: { gemini_v3: 'Gemini v3', existing: 'Mevcut veriler' } as Record<string, string>,
     p14: { faz14: 'Faz 14', faz14_onayli: 'Faz 14 · onaylı', faz14_bekleyen: 'Faz 14 · onay bekliyor' } as Record<string, string>,
+    denetleyici: { denetleyici_only: 'Denetleyici Onayı', standard_only: 'Standart' } as Record<string, string>,
     newness: { new_only: 'Yeni sorular', archived_only: 'Arşiv' } as Record<string, string>,
     sort: { newest: 'Yeniden eskiye', oldest: 'Eskiden yeniye', number: 'Soru numarası', default: searchQuery.trim() ? 'En ilgili' : 'Varsayılan' } as Record<string, string>,
     view: { raw: 'Ham metin', split: 'Karşılaştır' } as Record<string, string>,
@@ -791,18 +812,20 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ...(selectedYear !== 'all' ? [{ label: selectedYear, clear: () => setSelectedYear('all') }] : []),
     ...(explanationFilter === 'without' ? [{ label: 'Açıklamasız', clear: () => setExplanationFilter('all') }] : []),
     ...(sourceFilter !== 'all' ? [{ label: LABELS.source[sourceFilter], clear: () => setSourceFilter('all') }] : []),
+    ...(denetleyiciFilter !== 'all' ? [{ label: LABELS.denetleyici[denetleyiciFilter], clear: () => setDenetleyiciFilter('all') }] : []),
     ...(phase14Filter !== 'all' && phase14Filter !== 'faz14' ? [{ label: LABELS.p14[phase14Filter], clear: () => setPhase14Filter('all') }] : []),
     ...(newnessFilter === 'archived_only' ? [{ label: 'Arşiv', clear: () => setNewnessFilter('all') }] : []),
     ...(viewMode !== 'redacted' ? [{ label: LABELS.view[viewMode], clear: () => setViewMode('redacted') }] : []),
   ];
   const advancedCount =
-    activeFilterChips.length + (answerFilter !== 'all' ? 1 : 0) + (explanationFilter === 'with' ? 1 : 0) + (newnessFilter === 'new_only' ? 1 : 0);
+    activeFilterChips.length + (answerFilter !== 'all' ? 1 : 0) + (explanationFilter === 'with' ? 1 : 0) + (newnessFilter === 'new_only' ? 1 : 0) + (denetleyiciFilter !== 'all' ? 1 : 0);
   const anyFilter = advancedCount > 0 || selectedCommittee !== 'all' || searchQuery.trim() !== '';
   const clearAllFilters = () => {
     setSearchQuery('');
     setAmbiguityTab('valid');
     setDeepseekFilter('all');
     setSourceFilter('all');
+    setDenetleyiciFilter('all');
     setNewnessFilter('all');
     setSelectedCommittee('all');
     setSelectedYear('all');
@@ -929,8 +952,17 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         </button>
       </div>
 
-      {/* Hızlı süzgeçler: kurul + sık kullanılanlar; sayılar diğer seçimlere göre canlı */}
-      <div className="ms-chipbar" role="toolbar" aria-label="Hızlı süzgeçler">
+      {/* Hızlı süzgeçler: kurul + sık kullanılanlar; sayılar diğer seçimlere göre canlı (yatay kaydırılabilir) */}
+      <div
+        className="ms-chipbar overflow-x-auto scroll-smooth py-1"
+        role="toolbar"
+        aria-label="Hızlı süzgeçler"
+        onWheel={(e) => {
+          if (e.deltaY !== 0) {
+            e.currentTarget.scrollLeft += e.deltaY;
+          }
+        }}
+      >
         <button type="button" className={`ms-fchip ${selectedCommittee === 'all' ? 'is-on' : ''}`} onClick={() => { setSelectedCommittee('all'); resetPage(); }} aria-pressed={selectedCommittee === 'all'}>
           Tüm kurullar <span className="n">{n(fc('committee'))}</span>
         </button>
@@ -976,6 +1008,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         })}
         <button type="button" aria-pressed={explanationFilter === 'with'} className={`ms-fchip ${explanationFilter === 'with' ? 'is-on' : ''}`} onClick={() => { setExplanationFilter(explanationFilter === 'with' ? 'all' : 'with'); resetPage(); }}>
           Açıklamalı <span className="n">{n(fc('explanation', 'with'))}</span>
+        </button>
+        <button
+          type="button"
+          aria-pressed={denetleyiciFilter === 'denetleyici_only'}
+          className={`ms-fchip ${denetleyiciFilter === 'denetleyici_only' ? 'is-on' : ''}`}
+          onClick={() => { setDenetleyiciFilter(denetleyiciFilter === 'denetleyici_only' ? 'all' : 'denetleyici_only'); resetPage(); }}
+          title="Yalnız Denetleyici Onayı almış altın standart sorular"
+        >
+          <ShieldCheck className="w-3.5 h-3.5 text-ok" aria-hidden /> Denetleyici Onayı <span className="n">{n(fc('denetleyici', 'denetleyici_only'))}</span>
         </button>
         <button type="button" aria-pressed={phase14Filter === 'faz14'} className={`ms-fchip ${phase14Filter === 'faz14' ? 'is-on' : ''}`} onClick={() => { setPhase14Filter(phase14Filter === 'faz14' ? 'all' : 'faz14'); resetPage(); }} title="Yalnız Faz 14 incelemesinden geçen sorular">
           <Sparkles className="w-3.5 h-3.5" aria-hidden /> Faz 14 <span className="n">{n(fc('p14', 'faz14'))}</span>
@@ -1176,10 +1217,33 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             // Mavi ⋯ ve "Öğren slaytı" kısayolu yalnızca güvenilir eşleşmelerde
             const reliableLearn = isReliableLearnMatch(learnMatch) ? learnMatch : null;
 
-            const stem = String(q.reconstruction?.stem || q.stem || q.fragments?.[0]?.text || q.topic || '');
-            const options = q.reconstruction?.options || q.options || [];
-            const correctAnswer = q.reconstruction?.correctAnswer || q.correctAnswer || q.claimedAnswer;
-            const explanation = q.reconstruction?.explanation || q.explanation;
+            const isDenetleyici = isDenetleyiciQuestion(q);
+            const denetleyiciData = (q as any).denetleyiciSurumu || {};
+            const eskiData = (q as any).eskiSurum || (q as any).phase14Original || {};
+            const activeVersion: 'denetleyici' | 'eski' | 'karsilastir' =
+              versionViewOverrides[q.id] || (isDenetleyici ? 'denetleyici' : 'eski');
+
+            const isEskiView = activeVersion === 'eski';
+            const isCompareView = activeVersion === 'karsilastir';
+
+            const stem = isEskiView && eskiData.stem
+              ? String(eskiData.stem)
+              : String(q.reconstruction?.stem || q.stem || q.fragments?.[0]?.text || q.topic || '');
+            const options = isEskiView && eskiData.options && eskiData.options.length > 0
+              ? eskiData.options
+              : (q.reconstruction?.options || q.options || []);
+            const correctAnswer = isEskiView && eskiData.correctAnswer
+              ? eskiData.correctAnswer
+              : (q.reconstruction?.correctAnswer || q.correctAnswer || q.claimedAnswer);
+            const explanation = isEskiView
+              ? (eskiData.explanation || '')
+              : (q.reconstruction?.explanation || q.explanation);
+
+            const saObj = (q as any).sik_analizi || denetleyiciData.sik_analizi;
+            const saEntries = saObj && typeof saObj === 'object' ? Object.entries(saObj).sort(([a], [b]) => a.localeCompare(b)) : [];
+            const refList: string[] = normalizeRefList((q as any).referans_kaynaklar ?? denetleyiciData.referans_kaynaklar);
+            const answerChanged = isDenetleyici && Boolean(eskiData.correctAnswer && eskiData.correctAnswer !== (q.correctAnswer || q.claimedAnswer));
+
             const doubtful = isDoubtful(q);
             // Asıl kayıtta cevap yoksa (onay bekleyen AI cevabı sayılmaz) ya da cevap tartışmalıysa şıklar ankete döner
             const keyMissing = !correctAnswer || (isPhase14Pending(q) && !(q as any).phase14Original?.correctAnswer);
@@ -1214,6 +1278,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               ...(isAdminUser
                 ? [{ label: 'AI ile düzenle', icon: Wand2, group: 'Yapay zekâ', tone: 'accent' as const, onClick: () => setCustomRedactQuestion({ question: q, match: slideMatch }) }]
                 : []),
+              ...(isDenetleyici
+                ? [
+                    { label: 'Denetleyici Sürümü (Yeni)', icon: ShieldCheck, group: 'Sürüm', hint: activeVersion === 'denetleyici' ? '✓' : undefined, onClick: () => setVersionViewOverrides((prev) => ({ ...prev, [q.id]: 'denetleyici' })) },
+                    { label: 'Eski Sürüm', icon: History, group: 'Sürüm', hint: activeVersion === 'eski' ? '✓' : undefined, onClick: () => setVersionViewOverrides((prev) => ({ ...prev, [q.id]: 'eski' })) },
+                    { label: 'Sürümleri Karşılaştır', icon: Layers, group: 'Sürüm', hint: activeVersion === 'karsilastir' ? '✓' : undefined, onClick: () => setVersionViewOverrides((prev) => ({ ...prev, [q.id]: 'karsilastir' })) },
+                  ]
+                : []),
               { label: 'Düzenlenmiş', icon: Sparkles, group: 'Görünüm', hint: effectiveMode === 'redacted' ? '✓' : undefined, onClick: () => setCardMode('redacted') },
               { label: 'Ham metin', icon: FileText, group: 'Görünüm', hint: effectiveMode === 'raw' ? '✓' : undefined, onClick: () => setCardMode('raw') },
               { label: 'Karşılaştır', icon: Layers, group: 'Görünüm', hint: effectiveMode === 'split' ? '✓' : undefined, onClick: () => setCardMode('split') },
@@ -1230,6 +1301,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 <header className="ms-qcard-head">
                   <span className="ms-qcard-num">#{q.questionNumber}</span>
                   {isNewQuestion && <span className="ms-tag is-ok">Yeni</span>}
+                  {isDenetleyici && (
+                    <span
+                      className="ms-tag is-ok font-semibold inline-flex items-center gap-1 shadow-2xs"
+                      title="Denetleyici Onayı: Altın standart tıp müfredatı ve mekanizma doğrulamalı sürüm"
+                    >
+                      <ShieldCheck className="w-3.5 h-3.5 text-ok" /> Denetleyici Onayı
+                    </span>
+                  )}
                   {p14Fixed && (
                     <button
                       type="button"
@@ -1252,6 +1331,27 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     </span>
                   )}
                   <span className="ms-qcard-meta" title={formatCommitteeName(q.committeeId)}>{meta}</span>
+                  {isDenetleyici && (
+                    <div role="group" aria-label="Soru sürümü" className="ms-qcard-version inline-flex items-center gap-0.5 p-0.5 rounded-full bg-field">
+                      {([
+                        ['denetleyici', ShieldCheck, 'Denetleyici sürümü (yeni)', 'text-ok'],
+                        ['eski', History, 'Eski sürüm (ham çıkmış sınav)', 'text-ink-2'],
+                        ['karsilastir', Layers, 'Sürümleri karşılaştır', 'text-accent'],
+                      ] as const).map(([v, Icon, label, tone]) => (
+                        <button
+                          key={v}
+                          type="button"
+                          onClick={() => setVersionViewOverrides((prev) => ({ ...prev, [q.id]: v }))}
+                          aria-pressed={activeVersion === v}
+                          aria-label={label}
+                          title={label}
+                          className={`h-7 w-7 inline-flex items-center justify-center rounded-full cursor-pointer transition-colors ${activeVersion === v ? `bg-white shadow-xs ${tone}` : 'text-ink-3 hover:text-ink'}`}
+                        >
+                          <Icon className="w-3.5 h-3.5" />
+                        </button>
+                      ))}
+                    </div>
+                  )}
                   <ActionMenu
                     items={actions}
                     title={`Soru #${q.questionNumber}`}
@@ -1294,7 +1394,85 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   );
                 })()}
 
-                {effectiveMode === 'split' ? (
+                {isCompareView ? (
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 p-3 bg-canvas/60 rounded-xl border border-line-2 my-2">
+                    {/* Sol: Eski Sürüm */}
+                    <div className="bg-field rounded-lg p-3 flex flex-col gap-2 border border-line-2/60">
+                      <div className="flex items-center justify-between pb-1.5 border-b border-line-2">
+                        <span className="text-[12px] font-bold text-ink-2 flex items-center gap-1.5">
+                          <History className="w-3.5 h-3.5 text-ink-3" /> Eski Sürüm (Ham Çıkmış Sınav)
+                        </span>
+                        {eskiData.correctAnswer && <span className="ms-tag text-[11px]">Cevap: {eskiData.correctAnswer}</span>}
+                      </div>
+                      <StemText text={String(eskiData.stem || stem)} terms={terms} size="sm" />
+                      {(eskiData.options || []).length > 0 && (
+                        <ol className="list-none m-0 p-0 flex flex-col gap-1 text-[13px] text-ink-2">
+                          {(eskiData.options || []).map((opt: any) => (
+                            <li key={opt.key} className={`flex items-start gap-2 p-1 rounded ${opt.key === eskiData.correctAnswer ? 'bg-warn-soft/50 font-medium text-ink' : ''}`}>
+                              <span className="font-mono font-semibold text-ink-3 shrink-0">{opt.key})</span>
+                              <span>{opt.text}</span>
+                            </li>
+                          ))}
+                        </ol>
+                      )}
+                      {eskiData.explanation ? (
+                        <div className="text-[12px] text-ink-3 mt-1 pt-1.5 border-t border-line-2/40">
+                          <span className="font-semibold text-ink-2 block mb-0.5">Eski Açıklama:</span>
+                          <p className="m-0 whitespace-pre-wrap">{eskiData.explanation}</p>
+                        </div>
+                      ) : (
+                        <p className="text-[11.5px] text-ink-3 m-0 italic">Eski sürümde açıklama bulunmuyor.</p>
+                      )}
+                    </div>
+
+                    {/* Sağ: Denetleyici Sürümü */}
+                    <div className="bg-accent-soft/30 rounded-lg p-3 flex flex-col gap-2 border border-accent/30">
+                      <div className="flex items-center justify-between pb-1.5 border-b border-accent/20">
+                        <span className="text-[12px] font-bold text-accent flex items-center gap-1.5">
+                          <ShieldCheck className="w-3.5 h-3.5 text-ok" /> Denetleyici Sürümü (Altın Standart)
+                        </span>
+                        <span className="ms-tag is-ok text-[11px] font-bold">Onaylı Cevap: {correctAnswer}</span>
+                      </div>
+                      {answerChanged && (
+                        <div className="p-2 bg-warn/10 border border-warn/20 rounded-md text-[12px] text-warn ">
+                          ⚠️ <b>Cevap Düzeltildi:</b> Eski arşivde <b>{eskiData.correctAnswer}</b> idi; literatür incelemesiyle <b>{correctAnswer}</b> olarak güncellendi.
+                        </div>
+                      )}
+                      <StemText text={String(denetleyiciData.stem || stem)} terms={terms} size="sm" />
+                      {(denetleyiciData.options || options).length > 0 && (
+                        <ol className="list-none m-0 p-0 flex flex-col gap-1 text-[13px]">
+                          {(denetleyiciData.options || options).map((opt: any) => {
+                            const isCorr = opt.key === correctAnswer;
+                            return (
+                              <li key={opt.key} className={`flex items-start gap-2 p-1 rounded ${isCorr ? 'bg-ok-soft font-semibold text-ok' : 'text-ink-2'}`}>
+                                <span className="font-mono font-bold shrink-0">{opt.key})</span>
+                                <span>{opt.text}</span>
+                                {isCorr && <span className="ml-auto text-[11px] text-ok font-bold">✓ Doğru</span>}
+                              </li>
+                            );
+                          })}
+                        </ol>
+                      )}
+                      {saEntries.length > 0 && (
+                        <div className="flex flex-col gap-1 text-[12px] mt-1 pt-1.5 border-t border-accent/20">
+                          <span className="font-bold text-accent block">Seçenek Analizi & Çürütme:</span>
+                          {saEntries.map(([k, text]: [string, any]) => (
+                            <div key={k} className="flex items-start gap-1.5 py-0.5">
+                              <span className={`px-1.5 py-0.2 rounded font-mono text-[10.5px] font-bold shrink-0 ${String(text).startsWith('DOĞRU') ? 'bg-ok-soft text-ok' : 'bg-bad-soft text-bad-text'}`}>{k}</span>
+                              <span className="text-ink leading-snug">{text}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {explanation && (
+                        <div className="text-[12px] text-ink-2 mt-1 pt-1.5 border-t border-accent/20">
+                          <span className="font-bold text-ink block mb-0.5">Patofizyolojik Mekanizma:</span>
+                          <p className="m-0 leading-relaxed whitespace-pre-wrap">{explanation}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ) : effectiveMode === 'split' ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
                     <div className="bg-canvas rounded-xl p-3 flex flex-col gap-2">
                       <span className="text-[12px] font-semibold text-ink-3">Ham metin</span>
@@ -1437,15 +1615,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     {!hideAnswer && !pollMode && (q as any).answerStatus === 'dogrulanmadi' && (
                       <p className="ms-note is-warn">Cevap anahtarı doğrulanmadı — kaynaktaki işaretli şık bir öğrencinin cevabıydı.</p>
                     )}
-                    {(q as any).answerStatus === 'faz14' && (
-                      <p className="ms-note is-ai">
-                        {isPhase14Pending(q)
-                          ? 'Faz 14 yapay zekâ incelemesinden geçti; düzeltme yönetici onayı bekliyor (doğrulanmadı).'
-                          : 'Cevap, kurul ve açıklama Faz 14 incelemesinde onaylandı.'}
-                        {!hideAnswer && (q as any).phase14?.cevapDegisti && (q as any).phase14?.cevapGerekcesi ? ` Cevap değişti: ${(q as any).phase14.cevapGerekcesi}` : ''}
+                    {!hideAnswer && (q as any).answerStatus === 'dogrulandi' && <p className="ms-note is-ok">Cevap ders slaytı kanıtıyla doğrulandı.</p>}
+
+                    {!hideAnswer && (q as any).answerStatus === 'denetleyici_onayli' && (
+                      <p className="ms-note is-ok flex items-center gap-1.5">
+                        <ShieldCheck className="w-4 h-4 text-ok shrink-0" />
+                        <span>Denetleyici Onayı: Altın standart tıp müfredatı ve mekanizma doğrulamalı soru.</span>
                       </p>
                     )}
-                    {!hideAnswer && (q as any).answerStatus === 'dogrulandi' && <p className="ms-note is-ok">Cevap ders slaytı kanıtıyla doğrulandı.</p>}
 
                     {/* Açıklama, ilgili slayt ve terimler kartta yer kaplamaz: üç nokta → Hakkında */}
                   </>
@@ -1479,6 +1656,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     <MessageSquare /> {commentsCount > 0 ? `${commentsCount} yorum` : 'Yorum'}
                   </button>
                   <span className="ms-qcard-foot-sep" aria-hidden />
+                  <button
+                    type="button"
+                    onClick={() => setAboutQuestion(q)}
+                    className="ms-btn is-sm is-ghost is-icon text-ink-2 hover:text-ink"
+                    aria-label="Soru hakkında"
+                    title="Soru hakkında (künye, ilgili slayt, kanıt, terimler)"
+                  >
+                    <Info className="w-4 h-4" />
+                  </button>
                   <button
                     type="button"
                     onClick={() => handleCopyQuestion(q)}
@@ -1695,6 +1881,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         const expl = q.reconstruction?.explanation || q.explanation;
         const p14 = isPhase14Fixed(q) && String(q.phase14Original?.explanation || '').trim() !== String(expl || '').trim();
         const hidden = quizMode && !picks[q.id];
+        const isLegacyView = (versionViewOverrides[q.id] || (isDenetleyiciQuestion(q) ? 'denetleyici' : 'eski')) === 'eski';
+        const p14Note = isPhase14Pending(q)
+          ? 'Faz 14 yapay zekâ incelemesinden geçti; düzeltme yönetici onayı bekliyor (doğrulanmadı).'
+          : isPhase14Fixed(q)
+            ? 'Cevap, kurul ve açıklama Faz 14 incelemesinde onaylandı.'
+            : undefined;
+
         return (
           <QuestionAboutDialog
             questionId={String(q.id)}
@@ -1715,7 +1908,23 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             evidenceTitle={isDeepSeekQuestion(q) ? 'Ders notu ve slayt kanıtı' : 'Ders notu ve amfi kanıtı'}
             answerHidden={hidden}
             answerTerms={f.answerTerms}
+            sikAnalizi={q.sik_analizi || (q as any).denetleyiciSurumu?.sik_analizi}
+            referanslar={q.referans_kaynaklar || (q as any).denetleyiciSurumu?.referans_kaynaklar}
+            denetleyiciOnayi={isDenetleyiciQuestion(q)}
             learnMatch={lm}
+            p14StatusNote={p14Note}
+            isEskiView={isLegacyView}
+            answerChange={isDenetleyiciQuestion(q) && !hidden && (q.eskiSurum || q.phase14Original)?.correctAnswer && (q.eskiSurum || q.phase14Original).correctAnswer !== ans ? { from: String((q.eskiSurum || q.phase14Original).correctAnswer), to: String(ans) } : undefined}
+            onOpenSlide={(kaynak, sayfa) => {
+              setAboutQuestion(null);
+              if (onNavigateToLearn) {
+                if (lm) {
+                  onNavigateToLearn(lm.deckId, sayfa || lm.slideNumber, f);
+                } else {
+                  onNavigateToLearn(undefined, sayfa, f);
+                }
+              }
+            }}
             onPreviewSlide={lm ? () => { setAboutQuestion(null); setSelectedLearnMatch({ question: aboutQuestion, match: lm }); } : undefined}
             onOpenInLearn={lm && onNavigateToLearn ? () => { setAboutQuestion(null); onNavigateToLearn(lm.deckId, lm.slideNumber, f); } : undefined}
             onShowSource={() => { setAboutQuestion(null); setSelectedRawSourceQuestion(aboutQuestion); }}

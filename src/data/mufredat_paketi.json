@@ -1,0 +1,740 @@
+{
+  "donem": 3,
+  "kaynak": "Faz 8 müfredat ağacı (resmî 2026-27 ders programı)",
+  "kurullar": [
+    {
+      "kurul": 1,
+      "kod": "TIP310",
+      "ad": "Ürogenital ve Obstetrik Kurulu",
+      "dersler": [
+        {
+          "ders": "Tıbbi Genetik",
+          "saat": 12,
+          "konular": [
+            "Dismorfolojide Genetik Terminoloji",
+            "Kromozomal Hastalıklar ve Genetik Danışma",
+            "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
+            "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe",
+            "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları",
+            "Prenatal Tanı Yöntemleri",
+            "Preimplantasyon Genetik Tanı (Pgd)"
+          ]
+        },
+        {
+          "ders": "Enfeksiyon Hastalıkları",
+          "saat": 22,
+          "konular": [
+            "Cinsel Yolla Bulaşan Enfeksiyonlarda Tedavi",
+            "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
+            "Genital Enfeksiyonlar",
+            "İzolasyon Yöntemleri",
+            "Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma",
+            "Bağışıklığı Baskılı Hastalarda Enfeksiyon",
+            "Sifilis",
+            "Üriner Sistem Enfeksiyonları",
+            "İntrauterin Enfeksiyonlar",
+            "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
+            "Üretral Akıntı"
+          ]
+        },
+        {
+          "ders": "Tıbbi Patoloji",
+          "saat": 33,
+          "konular": [
+            "Patolojiye Giriş",
+            "Hücresel Adaptasyonlar",
+            "Hücre Hasarı ve Nekroz - I",
+            "Hücre Hasarı ve Nekroz - II",
+            "Hücre İçi Birikimler ve Kalsifikasyonlar",
+            "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+            "Enflamasyonun Kimyasal Mediyatörleri",
+            "Kronik ve Granülomatöz Enflamasyon",
+            "Doku Onarımı ve Yara İyileşmesi",
+            "Ödem, Hiperemi, Konjesyon ve Kanama",
+            "Tromboz Patofizyolojisi",
+            "Aşırı Duyarlılık ve Otoimmünite",
+            "Genetik, Pediatrik ve Çevresel Patoloji",
+            "Tümör Biyolojisi ve Terminolojisi",
+            "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+            "Glomeruler Hastalıklar: Nefrotik Sendrom",
+            "Glomeruler Hastalıklar: Nefritik Sendrom",
+            "Sistemik Hastalıklarda Böbrek Hasarı",
+            "Tübülointerstisyel Hastalıklar",
+            "Vasküler ve Kistik Böbrek Hastalıkları",
+            "Böbrek Tümörleri",
+            "Mesane Hastalıkları ve Tümörleri",
+            "Vulva, Vajen ve Serviks Hastalıkları",
+            "İnvaziv Serviks Kanseri ve Endometriyozis",
+            "Endometrial Hiperplazi ve Kanserleri",
+            "Uterus Düz Kas ve Trofoblastik Tümörleri",
+            "Over Tümörleri",
+            "Memenin Benign Hastalıkları",
+            "Meme Kanseri ve Moleküler Tipleri",
+            "Erkek Genital Sistem ve Prostat Hastalıkları"
+          ]
+        },
+        {
+          "ders": "Halk Sağlığı",
+          "saat": 10,
+          "konular": [
+            "Gebelik ve Emzirme Döneminde Beslenme",
+            "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+            "Halk Sağlığı Tarihçesi",
+            "Koruyucu Sağlık Hizmetleri",
+            "Bebek Beslenmesi",
+            "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
+            "Türkiye’de Sağlık Hizmetleri"
+          ]
+        },
+        {
+          "ders": "Üroloji",
+          "saat": 13,
+          "konular": [
+            "Üriner Obstrüksiyonun Fizyopatolojisi",
+            "Üriner Sistem Taş Hastalıkları Fizyopatolojisi",
+            "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve",
+            "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi",
+            "Üriner Sistemin Spesifik Enfeksiyonları",
+            "Üriner Sistem Enfeksiyonları Lab. Bulguları ve Tedavi",
+            "Enürezis Nokturna"
+          ]
+        },
+        {
+          "ders": "Kadın Hastalıkları ve Doğum",
+          "saat": 4,
+          "konular": [
+            "Abortus",
+            "Gebelik Terminolojisi/Kavramları"
+          ]
+        },
+        {
+          "ders": "Tıbbi Farmakoloji",
+          "saat": 2,
+          "konular": [
+            "İmmünofarmakoloji"
+          ]
+        }
+      ]
+    },
+    {
+      "kurul": 2,
+      "kod": "TIP320",
+      "ad": "Nöropsikiyatri Kurulu",
+      "dersler": [
+        {
+          "ders": "Tıbbi Genetik",
+          "saat": 10,
+          "konular": [
+            "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+            "Nörolojik Hastalıklar",
+            "Davranış Genetiği",
+            "Nörodejeneratif Hastalıklar Genetiği",
+            "Psikiyatrik Hastalıklar ve Genetik Analizi"
+          ]
+        },
+        {
+          "ders": "Tıbbi Patoloji",
+          "saat": 5,
+          "konular": [
+            "SSS Hücresel Reaksiyonları ve Ödem / Herniasyon",
+            "Serebrovasküler Hastalıklar ve İnme",
+            "Santral Sinir Sistemi Enfeksiyonları",
+            "Nörodejeneratif Hastalıklar",
+            "Santral Sinir Sistemi Tümörleri"
+          ]
+        },
+        {
+          "ders": "Nöroloji",
+          "saat": 18,
+          "konular": [
+            "Nörolojik Hastaya Yaklaşım",
+            "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
+            "Nörolojik Muayene",
+            "Baş ağrısına Yaklaşım",
+            "Periferik Nöropati",
+            "Bazal Gangliyonlar ve Ekstrapiramidal Sistem",
+            "Epilepsi",
+            "Medulla Spinalis Hastalıkları",
+            "Felçler",
+            "Kraniyal Sinir Muayenesi"
+          ]
+        },
+        {
+          "ders": "Aile Hekimliği",
+          "saat": 8,
+          "konular": [
+            "Aile Hekimliğinde Periyodik Muayeneler 1",
+            "Aile Hekimliğine Yaklaşım",
+            "Aile Hekimliğinde Periyodik Muayeneler 2",
+            "Nikotin Bağımlılığı ve Tedavisi"
+          ]
+        },
+        {
+          "ders": "Anesteziyoloji ve Reanimasyon",
+          "saat": 2,
+          "konular": [
+            "Ağrı Yolları ve Mekanizmaları"
+          ]
+        },
+        {
+          "ders": "Tıbbi Farmakoloji",
+          "saat": 28,
+          "konular": [
+            "Genel Anestezik İlaçlar",
+            "SSS İlaçları",
+            "Sedatif ve Hipnotik İlaçlar",
+            "Antiepileptik İlaçlar",
+            "Opoid Analjezikler ve Antagonistleri",
+            "Kolinoseptör Bloke Edici İlaçlar",
+            "Otonom Sinir Sistemi Farmakolojisi",
+            "Sempatomimetikler",
+            "Adrenoseptör Antagonist İlaçlar",
+            "Lokal Anestezik İlaçlar",
+            "Kolinoseptör Aktive Edici ve Kolinesteraz İnhibitörleri",
+            "Alkoller",
+            "Miyorelaksan İlaçlar",
+            "Antidepresan İlaçlar"
+          ]
+        },
+        {
+          "ders": "Psikiyatri",
+          "saat": 24,
+          "konular": [
+            "Psikiyatrik Semiyoloji",
+            "Şizofrenik Bozukluklar",
+            "Bipolar Bozukluk",
+            "Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+            "Psikosomatik Bozukluklar Doç. Dr. Zuhal KOÇ APAYDIN",
+            "Cinsel Kimlik Bozuklukları Doç. Dr. Zuhal KOÇ APAYDIN",
+            "Unipolar Depresyon Doç. Dr. Zuhal KOÇ APAYDIN",
+            "Kişilik Bozuklukları",
+            "OKB ve İlişkili Bozukluklar",
+            "Travma ve Stres Bağlantılı Bozukluklar",
+            "Nörogelişimsel Bozukluklar",
+            "Konsültasyon Liyezon Psikiyatrisi",
+            "Damgalama",
+            "İntihar ve Kendine Zarar Verme",
+            "Dikkat Eksikliği Hiperaktivite Bozukluğu UZM.",
+            "Dışa Atım Bozuklukları UZM.",
+            "Yaygın Anksiyete Bozukluğu Doç. Dr. Zuhal KOÇ APAYDIN",
+            "Panik Bozukluk Doç. Dr. Zuhal KOÇ APAYDIN",
+            "Fobik Bozukluk Doç. Dr. Zuhal KOÇ"
+          ]
+        },
+        {
+          "ders": "FTR",
+          "saat": 4,
+          "konular": [
+            "Nörolojik Rehabilitasyona Giriş ve Genel İlkeler",
+            "Sık görülen nörolojik Hastalıklar ve Rehabilitasyonu"
+          ]
+        },
+        {
+          "ders": "Beyin ve Sinir Cerrahisi",
+          "saat": 6,
+          "konular": [
+            "Kafa ve Omurilik Yaralanmaları",
+            "Medulla Spinalis lezyonları",
+            "İntrakraniyal Kitlelerde Belirti ve Bulgular"
+          ]
+        }
+      ]
+    },
+    {
+      "kurul": 3,
+      "kod": "TIP330",
+      "ad": "Gastrointestinal Sistem Kurulu",
+      "dersler": [
+        {
+          "ders": "Tıbbi Genetik",
+          "saat": 4,
+          "konular": [
+            "Gastrointestinal Hastalıkların Genetiği",
+            "Gastrointestinal Tümörlerin Genetiği"
+          ]
+        },
+        {
+          "ders": "Enfeksiyon Hastalıkları",
+          "saat": 4,
+          "konular": [
+            "Kolera",
+            "Zoonotik Enfeksiyonlar"
+          ]
+        },
+        {
+          "ders": "İç Hastalıkları",
+          "saat": 26,
+          "konular": [
+            "Bakteriyel İshaller UZM",
+            "Gastroenteritler UZM",
+            "GİS Motilite Bozuklukları",
+            "Ailesel Akdeniz Ateşi",
+            "Ülser Gastrit",
+            "Sarılıklar",
+            "Üst GIS kanamaları",
+            "Alt GIS kanamaları",
+            "Siroz ve Komplikasyonları",
+            "Gastrointestinal Sistem Parazitozları UZM",
+            "Sindirim Sistemi Tümörleri",
+            "Kolonun Prekanseröz Lezyonları",
+            "Akut Pankreatitler",
+            "Akut Hepatitler",
+            "Malabsorpsiyon Sendromları"
+          ]
+        },
+        {
+          "ders": "Tıbbi Patoloji",
+          "saat": 19,
+          "konular": [
+            "Özofagus Hastalıkları ve Tümörleri",
+            "Gastrit Tipleri",
+            "Peptik Ülser",
+            "Mide Tümörleri",
+            "Malabsorbsiyon ve Çölyak Hastalığı",
+            "Enfeksiyöz ve Divertiküler Kolitler",
+            "İnflamatuar Bağırsak Hastalıkları: Crohn Hastalığı",
+            "İnflamatuar Bağırsak Hastalıkları: Ülseratif Kolit",
+            "Bağırsak Polipler ve Polipozis Sendromları",
+            "Kolorektal Kanser Patogenezi",
+            "Kolorektal Adenokarsinom ve Apandisit",
+            "Akut ve Kronik Viral Hepatitler",
+            "Yağlı Karaciğer Hastalıkları (NAFLD/NASH)",
+            "Kolestatik Karaciğer Hastalıkları",
+            "Karaciğer Sirozu ve Portal Hipertansiyon",
+            "Karaciğer Tümörleri",
+            "Kolesistit, Kolelitiyazis ve Safra Kesesi Tümörleri",
+            "Akut ve Kronik Pankreatitler",
+            "Pankreas Tümörleri"
+          ]
+        },
+        {
+          "ders": "Tıbbi Farmakoloji",
+          "saat": 31,
+          "konular": [
+            "Sülfonamidler, Trimetoprim ve Kinolonlar",
+            "Antihelmintik İlaçlar",
+            "Aminoglikozidler",
+            "Tetrasiklin, Makrolit, Kloramfenikol ve Streptograminler",
+            "GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -1",
+            "Dislipidemide Kullanılan İlaçlar",
+            "Antifungal İlaçlar",
+            "Antiemetik ilaçlar",
+            "GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -2",
+            "Antimikobakteriyel İlaçlar",
+            "Antimikrobik İlaçların Klinik Kullanımı, Önemi ve Önlemleri",
+            "Besin Zehirlenmeleri ve Zehirlenmelerde Yönetim",
+            "Diğer Antimikrobiyaller; Dezenfektan ve Sterilizan Ajanlar",
+            "OTC İlaçların Terapötik ve Toksik Etkileri",
+            "Antiviral İlaçlar",
+            "Vazoaktif Peptidler, Eikozanoidler",
+            "Beta Laktam ve Diğer Hücre Duvarı ile Membran Aktif Antibiyotikler"
+          ]
+        },
+        {
+          "ders": "Çocuk Sağlığı ve Hastalıkları",
+          "saat": 6,
+          "konular": [
+            "Konjenital GİS Malformasyonları",
+            "Biliyer Atrezi ve Diğer Safra Yolu Anomalileri",
+            "Neonatal Kolestaz"
+          ]
+        }
+      ]
+    },
+    {
+      "kurul": 4,
+      "kod": "TIP340",
+      "ad": "Dolaşım, Solunum ve Tümör Kurulu",
+      "dersler": [
+        {
+          "ders": "Tıbbi Genetik",
+          "saat": 8,
+          "konular": [
+            "Ateroskleroz Genetiği",
+            "Tümör Mikro Çevresi, İnvazyon ve Metastaz",
+            "Konjenital Kardiyovasküler Bozukluklarda Genetik Mekanizmalar",
+            "Kardiyovasküler Hastalıkların Genetiği"
+          ]
+        },
+        {
+          "ders": "Enfeksiyon Hastalıkları",
+          "saat": 4,
+          "konular": [
+            "İnfluenza",
+            "Akut romatizmal ateş"
+          ]
+        },
+        {
+          "ders": "Tıbbi Patoloji",
+          "saat": 18,
+          "konular": [
+            "Üst Solunum Yolu Hastalıkları",
+            "Obstrüktif Akciğer Hastalıkları - I",
+            "Obstrüktif Akciğer Hastalıkları - II",
+            "Restriktif Akciğer Hastalıkları",
+            "Pulmoner Vasküler Hastalıklar",
+            "Akut Akciğer Enfeksiyonları",
+            "Kronik ve Fırsatçı Akciğer Enfeksiyonları",
+            "Akciğer Tümörleri",
+            "Plevra Hastalıkları",
+            "Hipertansif Damar Hastalıkları",
+            "Ateroskleroz Patolojisi",
+            "Anevrizmalar ve Diseksiyonlar",
+            "Vaskülitler",
+            "Damar Tümörleri",
+            "İskemik Kalp Hastalıkları",
+            "Miyokard Enfarktüsü",
+            "Hipertansif ve Valvüler Kalp Hastalıkları",
+            "Miyokardit ve Kardiyomiyopatiler"
+          ]
+        },
+        {
+          "ders": "Göğüs Hastalıkları",
+          "saat": 6,
+          "konular": [
+            "Obstrüktif ve restriktif akciğer hastalıkları",
+            "Pnömoniler",
+            "Plevral efüzyon ve ampiyem"
+          ]
+        },
+        {
+          "ders": "Kardiyoloji",
+          "saat": 20,
+          "konular": [
+            "Miyokarditler, Miyokardiyopatiler ve Kalp Tümörleri",
+            "Kalp Kapak Hastalıkları",
+            "Elektrokardiyografiye Giriş",
+            "Ritim Bozukluklarına Giriş",
+            "Enfektif Endokardit",
+            "Kalp Sesleri",
+            "Konjenital Kalp Hastalıkları",
+            "Hipertansiyon",
+            "Perikarditler",
+            "Kalp Yetersizliği",
+            "Koroner Kalp Hastalıkları"
+          ]
+        },
+        {
+          "ders": "İç Hastalıkları",
+          "saat": 2,
+          "konular": [
+            "Hiperlipidemiler"
+          ]
+        },
+        {
+          "ders": "Anestezi ve Reanimasyon",
+          "saat": 1,
+          "konular": [
+            "CPR"
+          ]
+        },
+        {
+          "ders": "Kalp ve Damar Cerrahisi",
+          "saat": 4,
+          "konular": [
+            "Göğüs duvarı anomalileri",
+            "Enfektif endokardit ve damar içi katater enfeksiyonları"
+          ]
+        },
+        {
+          "ders": "Tıbbi Farmakoloji",
+          "saat": 16,
+          "konular": [
+            "Astım ve diğer akciğer hastalıklarının tedavisinde kullanılan ilaçlar",
+            "Kanser kemoterapisi",
+            "Antikoagülanlar ve antitrombotikler",
+            "Diüretikler",
+            "Vazodilatörler ve Anjina Pektoris ilaçları",
+            "Kardiyak aritmilerde kullanılan ilaçlar",
+            "Kalp yetersizliğinde kullanılan ilaçlar",
+            "Antihipertansif İlaçlar"
+          ]
+        },
+        {
+          "ders": "Çocuk Sağlığı ve Hastalıkları",
+          "saat": 9,
+          "konular": [
+            "Solunum Sist. Hastalık. Anamnez",
+            "Solunum Sist. Hastalık. Fizik Muayene",
+            "Solunum sistemi Semptomatolojisi",
+            "Solunum sıkıntısı olan yeni doğana yaklaşım",
+            "Fetal Dolaşım ve Neonatal adaptasyon",
+            "Siyanoz",
+            "Siyanotik doğumsal kalp hastalıkları",
+            "Asiyanotik doğumsal kalp hastalıkları"
+          ]
+        },
+        {
+          "ders": "Halk Sağlığı",
+          "saat": 2,
+          "konular": [
+            "Kanser Hastalıkları Epidemiyolojisi",
+            "Kardiyovasküler sistem hastalıklarının epidemiyolojisi"
+          ]
+        }
+      ]
+    },
+    {
+      "kurul": 5,
+      "kod": "TIP350",
+      "ad": "Ortopedi, Travmatoloji ve Hematopoetik",
+      "dersler": [
+        {
+          "ders": "Tıbbi Genetik",
+          "saat": 6,
+          "konular": [
+            "Lösemi genetik özellikler ve prognostik belirteçler",
+            "Kan Hastalıklarının Genetiği",
+            "Lenfoma Genetik Özellikler ve Prognostik Belirteçler"
+          ]
+        },
+        {
+          "ders": "Enfeksiyon Hastalıkları",
+          "saat": 2,
+          "konular": [
+            "Kırım-Kongo kanamalı ateşi"
+          ]
+        },
+        {
+          "ders": "Tıbbi Patoloji",
+          "saat": 16,
+          "konular": [
+            "Mikrositer Anemiler",
+            "Makrositer ve Hemolitik Anemiler",
+            "Kanama Bozuklukları ve Trombositopeniler",
+            "Reaktif Lenfadenitler",
+            "Hodgkin Lenfoma",
+            "Non-Hodgkin B Hücreli Lenfomalar - I",
+            "Non-Hodgkin B Hücreli Lenfomalar - II",
+            "T ve NK Hücreli Lenfomalar",
+            "Akut Lösemiler",
+            "Kronik Miyeloproliferatif Neoplaziler",
+            "Enfeksiyöz ve Metabolik Kemik Hastalıkları",
+            "Kemik Tümörleri",
+            "Yumuşak Doku Tümörleri",
+            "Artrit Patolojileri",
+            "Enflamatuar ve Vezikülobüllöz Deri Hastalıkları",
+            "Deri Tümörleri ve Malign Melanom"
+          ]
+        },
+        {
+          "ders": "Acil Tıp",
+          "saat": 18,
+          "konular": [
+            "Multitravmaya Yaklaşım",
+            "Ekstremite Travmaları",
+            "Crush ve Kompartman Sendromu",
+            "Senkop, Ani Kardiyak Ölüm (AKÖ)",
+            "Bilinç Bozukluğuna (Koma) Yaklaşım",
+            "İleri Kardiyak Yaşam Desteği ve Özel Durumlar",
+            "Çevresel Acillere Yaklaşım",
+            "Zehirlenmelere Yaklaşım"
+          ]
+        },
+        {
+          "ders": "Ortopedi ve Travmatoloji",
+          "saat": 13,
+          "konular": [
+            "Kemik, eklemve implant enfeksiyonları",
+            "Eklem hastalıkları patolojisi ve artritler",
+            "Spondilodiskitler ve pot hastalığı",
+            "Spondilodiskitler ve npot hastalığı",
+            "Kemik ve kıkırdağın konjenital hastalıkları",
+            "Kemiğin edinsel hastalıkları",
+            "Yetişkin ve çocuk kırıklarına yaklaşım",
+            "Kırık komplikasyonlarına yaklaşım",
+            "Kemiklerin tümörlerine genel yaklaşım"
+          ]
+        },
+        {
+          "ders": "FTR",
+          "saat": 12,
+          "konular": [
+            "Boyun ağrılarına yaklaşım",
+            "Üst ekstremitenin fonksiyonel anatomisi ve Muayene yöntemleri",
+            "Servikal ve lomber bölgenin fonksiyonel anatomisi ve değerlendirme",
+            "Alt ekstremitenin Fonksiyonel Anatomisi ve muayene yöntemleri",
+            "Kas-iskelet sistemi hastalıklarında Non- farmakolojik Yaklaşımlar: Egzersiz",
+            "Bel ağrılarına yaklaşım"
+          ]
+        },
+        {
+          "ders": "Tıbbi Farmakoloji",
+          "saat": 6,
+          "konular": [
+            "NSAİİ, Antiromatikler, Nonopoid analjezikler ve gut tedavi ilaçları",
+            "Kemik mineralizasyonu ve homeostaza etki eden ilaçlar",
+            "Dermatolojik Farmakoloji"
+          ]
+        },
+        {
+          "ders": "Halk Sağlığı",
+          "saat": 13,
+          "konular": [
+            "Sağlık Yönetimi",
+            "Sağlığın geliştirilmesi",
+            "Sağlık Eğitimi",
+            "Meslek hastalıkları",
+            "İş kazaları",
+            "Sağlığın Sosyalleştirilmesi ve Temel Sağlık Hizmetleri (TSH)",
+            "Halk sağlığını etkileyen faktörler",
+            "Çocuk Sağlığı",
+            "Okul Sağlığı"
+          ]
+        },
+        {
+          "ders": "Beyin ve Sinir Cerrahisi",
+          "saat": 3,
+          "konular": [
+            "Kafatasını oluşturan kemiklerin travmaları",
+            "Kafa travmasına eşlik eden erken dönem klinik sorunlar"
+          ]
+        },
+        {
+          "ders": "İç Hastalıkları",
+          "saat": 8,
+          "konular": [
+            "Anemi Tanı, Patofizyoloji ve Sınıflaması",
+            "Demir metabolizması ve anormallikleri, Demir eksikliği ve birikimi UZM.",
+            "Demir metabolizması ve anormallikleri,Demir eksikliği ve",
+            "Megaloblastik anemiler",
+            "Hemolitik anemiler UZM.",
+            "Hemostaz ve anormallikleri, Kanama Pıhtılaşma bozuklukları"
+          ]
+        },
+        {
+          "ders": "Çocuk Sağlığı ve Hastalıkları",
+          "saat": 4,
+          "konular": [
+            "Çocukluk çağı anemilerine yaklaşım",
+            "Hemoglobinopatiler"
+          ]
+        },
+        {
+          "ders": "Göğüs Cerrahisi",
+          "saat": 3,
+          "konular": [
+            "Göğüs travmasının tiplerine göre patolojik ve Klinik sonuçlar"
+          ]
+        }
+      ]
+    },
+    {
+      "kurul": 6,
+      "kod": "TIP360",
+      "ad": "Endokrin, Metabolizma ve Yaşlanma",
+      "dersler": [
+        {
+          "ders": "Tıbbi Genetik",
+          "saat": 8,
+          "konular": [
+            "Endokrin Hastalıklar ve Genetik",
+            "Kalıtsal Metabolik Hastalıklar Genetiği",
+            "Metabolik Hastalıklarda Dismorfik Bulgular ve Veziküler Trafik",
+            "Yaşlanma Genetiği"
+          ]
+        },
+        {
+          "ders": "Tıbbi Patoloji",
+          "saat": 4,
+          "konular": [
+            "Hipofiz ve Epifiz Patolojileri",
+            "Tiroid ve Paratiroid Patolojileri",
+            "Adrenal Bez Patolojileri",
+            "Pankreas ve Nöroendokrin Tümörler ve MEN sendromu"
+          ]
+        },
+        {
+          "ders": "FTR",
+          "saat": 2,
+          "konular": [
+            "Yaşlılığa Özgü Hareket Sistemi Bozuklukları"
+          ]
+        },
+        {
+          "ders": "Tıbbi Farmakoloji",
+          "saat": 14,
+          "konular": [
+            "Pankreatik Hormonlar ve Antidiyabetik İlaçlar",
+            "Hipotalamohipofizer Sistem İlaçları",
+            "Tiroit ve Antitiroid İlaçlar",
+            "Adrenokortikosteroidler ve Agonistler",
+            "Gonadal Hormonlar, inhibitör ve replasman ilaçları",
+            "Histamin, serotonin, melatonin ve Ergot",
+            "Histamin, serotonin, melatonin ve Ergot Alkaloidleri"
+          ]
+        },
+        {
+          "ders": "Halk Sağlığı",
+          "saat": 17,
+          "konular": [
+            "Epidemiyolojiye Giriş",
+            "Önemli Beslenme Sorunları",
+            "Yeterli ve Dengeli Beslenme",
+            "Bağışıklama ve önemi",
+            "Mobbing",
+            "Akılcı İlaç Kullanımı",
+            "Çevre Sağlığına Giriş ve Genel Bilgiler",
+            "Yaşlı Sağlığı Sorunları ve Sağlık",
+            "Sağlık Göstergeleri",
+            "Vaka-Kontrol çalışmaları",
+            "Kohort Çalışmaları",
+            "Deneysel ve Kesitsel Çalışmalar"
+          ]
+        },
+        {
+          "ders": "İç Hastalıkları",
+          "saat": 30,
+          "konular": [
+            "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
+            "Hipotalamus-Hipofiz hastalıklarına giriş",
+            "Cushing Sendromu",
+            "Endokrin Sistem Hastalıklarına Genel Yaklaşım",
+            "Hipoglisemiler",
+            "Yaşlılıkta beslenme UZM.",
+            "Elektrolitler ve Endokrin Sistem Arasındaki ilişki",
+            "Cinsel Farklılaşma Bozuklukları UZM.",
+            "D Vitamini Metabolizması",
+            "Tiroid Bezi Hastalıkları Dr. Abdulvahap Coşkun",
+            "Paratiroid bezi hastalıkları",
+            "Obezite-Metabolizma-Endokrin İlişkisi",
+            "Yaşlanmada Metabolik Sorunlar UZM.",
+            "Yaşlılıkta Beslenme Uzm. Dr BETÜL İVERENDİ"
+          ]
+        },
+        {
+          "ders": "Aile Hekimliği",
+          "saat": 2,
+          "konular": [
+            "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri"
+          ]
+        },
+        {
+          "ders": "Çocuk Sağlığı ve Hastalıkları",
+          "saat": 3,
+          "konular": [
+            "Çocukluk Dönemi Su Metabolizması Bozuklukları"
+          ]
+        },
+        {
+          "ders": "Tıbbi Biyokimya",
+          "saat": 8,
+          "konular": [
+            "Klinik Biyokimya Laboratuvar Organizasyonu",
+            "K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz",
+            "K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz Edilmesinde Dik. Ed. Hususlar",
+            "Biyokimyasal Analizlerde Hata Kaynakları",
+            "Biyokimya Lab. Gelen Numunelerde Analiz Edilen Paket Testler"
+          ]
+        },
+        {
+          "ders": "Psikiyatri",
+          "saat": 3,
+          "konular": [
+            "Yaşlılığa Özgü Ruhsal Sorunlar UZM."
+          ]
+        }
+      ]
+    }
+  ]
+}

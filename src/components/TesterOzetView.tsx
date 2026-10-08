@@ -75,7 +75,7 @@ export function TesterOzetView() {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto px-4 sm:px-8 py-6 space-y-6">
+    <div className="w-full min-w-0 pb-12 space-y-6">
       <PageHeader
         title="2026-2027 Ders Notları Test Laboratuvarı (/tester/ozet)"
         description="Bulut API'leri tarafından dinamik uzunluk ve karşılaştırmalı tablolarla üretilen yeni ders notları canlı önizlemesi."
@@ -104,7 +104,7 @@ export function TesterOzetView() {
         </div>
 
         <div className="p-4 rounded-2xl bg-white border border-line flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
+          <div className="w-10 h-10 rounded-xl bg-ok-soft text-ok flex items-center justify-center font-bold">
             <Layers className="w-5 h-5" />
           </div>
           <div>
@@ -116,7 +116,7 @@ export function TesterOzetView() {
         </div>
 
         <div className="p-4 rounded-2xl bg-white border border-line flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold">
+          <div className="w-10 h-10 rounded-xl bg-accent-soft text-accent flex items-center justify-center font-bold">
             <Sparkles className="w-5 h-5" />
           </div>
           <div>
@@ -128,7 +128,7 @@ export function TesterOzetView() {
         </div>
 
         <div className="p-4 rounded-2xl bg-white border border-line flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold">
+          <div className="w-10 h-10 rounded-xl bg-warn-soft text-warn flex items-center justify-center font-bold">
             <CheckCircle2 className="w-5 h-5" />
           </div>
           <div>
@@ -216,7 +216,7 @@ export function TesterOzetView() {
                   onClick={copyContent}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-line-2 bg-surface hover:bg-line text-ink text-[13px] transition cursor-pointer"
                 >
-                  {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-ink-3" />}
+                  {copied ? <Check className="w-4 h-4 text-ok" /> : <Copy className="w-4 h-4 text-ink-3" />}
                   {copied ? 'Kopyalandı' : 'Markdown Kopyala'}
                 </button>
               </div>

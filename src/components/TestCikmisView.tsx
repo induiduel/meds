@@ -66,9 +66,9 @@ function DiffText({ before, after }: { before: string; after: string }) {
         p.k === 'same' ? (
           <span key={i}>{p.t}</span>
         ) : p.k === 'add' ? (
-          <ins key={i} className="no-underline bg-emerald-100 text-emerald-900 rounded-sm px-0.5">{p.t}</ins>
+          <ins key={i} className="no-underline bg-ok-soft text-ok rounded-sm px-0.5">{p.t}</ins>
         ) : /\S/.test(p.t) ? (
-          <del key={i} className="bg-rose-100 text-rose-800 rounded-sm px-0.5 decoration-rose-500">{p.t}</del>
+          <del key={i} className="bg-bad-soft text-bad-text rounded-sm px-0.5 decoration-bad">{p.t}</del>
         ) : null,
       )}
     </>
@@ -101,7 +101,7 @@ function ChangeInfo({ title, before, after, note }: { title: string; before?: st
           e.stopPropagation();
           setOpen((v) => !v);
         }}
-        className="w-6 h-6 -m-1 inline-flex items-center justify-center rounded-full text-violet-600 hover:bg-violet-100 cursor-pointer"
+        className="w-6 h-6 -m-1 inline-flex items-center justify-center rounded-full text-accent hover:bg-accent-soft cursor-pointer"
         aria-label={`${title}: değişikliği göster`}
         aria-expanded={open}
       >
@@ -112,12 +112,12 @@ function ChangeInfo({ title, before, after, note }: { title: string; before?: st
           <b className="text-ink">{title}</b>
           {before !== undefined && (
             <span>
-              <span className="text-ink-3">Önce:</span> {before ? <del className="bg-rose-50 text-rose-800 decoration-rose-400">{before}</del> : <i>(yoktu)</i>}
+              <span className="text-ink-3">Önce:</span> {before ? <del className="bg-bad-soft text-bad-text decoration-bad">{before}</del> : <i>(yoktu)</i>}
             </span>
           )}
           {after !== undefined && (
             <span>
-              <span className="text-ink-3">Sonra:</span> <ins className="no-underline bg-emerald-50 text-emerald-900">{after}</ins>
+              <span className="text-ink-3">Sonra:</span> <ins className="no-underline bg-ok-soft text-ok">{after}</ins>
             </span>
           )}
           {note && <span className="text-ink-3">{note}</span>}
@@ -159,7 +159,7 @@ function TermsDialog({ rev, onClose }: { rev: PastQuestionReviewRecord; onClose:
         <section className="flex flex-col gap-1">
           <h4 className={h}>Bu öneride değişenler</h4>
           {(prop.degisen_alanlar || []).length ? (
-            <div className="flex flex-wrap gap-1">{prop.degisen_alanlar.map((f: string) => <span key={f} className="text-[12px] px-1.5 rounded bg-violet-50 text-violet-700">{f}</span>)}</div>
+            <div className="flex flex-wrap gap-1">{prop.degisen_alanlar.map((f: string) => <span key={f} className="text-[12px] px-1.5 rounded bg-accent-soft text-accent">{f}</span>)}</div>
           ) : (
             <p className="m-0 text-[13px] text-ink-3">Değişen alan bildirilmedi.</p>
           )}
@@ -824,7 +824,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               {Object.entries(liveStatus.paralel.anahtarlar).map(([ad, d]) => {
                 const bekliyor = d.bekleme_bitis && Date.parse(d.bekleme_bitis) > Date.now();
                 return (
-                  <li key={ad} className={`px-2 py-1 rounded-md border ${d.kalan === 0 ? 'border-line text-ink-3' : bekliyor ? 'border-amber-300 bg-amber-50 text-amber-900' : 'border-emerald-300 bg-emerald-50 text-emerald-900'}`}>
+                  <li key={ad} className={`px-2 py-1 rounded-md border ${d.kalan === 0 ? 'border-line text-ink-3' : bekliyor ? 'border-warn/40 bg-warn-soft text-warn' : 'border-ok bg-ok-soft text-ok'}`}>
                     {ad.replace('ücretsiz:', '').replace('GEMINI_FREE_KEY_', 'Anahtar ').replace('GEMINI_API_KEY', 'Anahtar 1')} · {d.cozulen} çözüldü · {d.kalan} kaldı
                     {bekliyor ? ` · ${new Date(d.bekleme_bitis!).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })}'e kadar bekliyor` : d.kalan ? ' · çalışıyor' : ''}
                   </li>
@@ -852,13 +852,13 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   const isOk = line.includes('✓') || line.includes('başarıyla') || line.includes('unchanged');
                   const isWarn = line.includes('WARNING') || line.includes('review_required');
                   return (
-                    <div key={idx} className={`leading-relaxed whitespace-pre-wrap ${isErr ? 'text-rose-400' : isOk ? 'text-emerald-400' : isWarn ? 'text-amber-300' : 'text-slate-300'}`}>
+                    <div key={idx} className={`leading-relaxed whitespace-pre-wrap ${isErr ? 'text-bad' : isOk ? 'text-ok' : isWarn ? 'text-amber-300' : 'text-slate-300'}`}>
                       {line}
                     </div>
                   );
                 })
               ) : (
-                <div className="text-slate-500">Henüz günlük kaydı yok.</div>
+                <div className="text-ink-3">Henüz günlük kaydı yok.</div>
               )}
             </div>
           </Collapsible>
@@ -1185,8 +1185,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                     )}
                     {stemChanged && view !== 'prop' && (
                       <p className="m-0 text-[11.5px] text-ink-3">
-                        <ins className="no-underline bg-emerald-100 text-emerald-900 rounded-sm px-0.5">eklenen</ins>{' '}
-                        <del className="bg-rose-100 text-rose-800 rounded-sm px-0.5">çıkarılan</del> kelimeler, mevcut kayda göre
+                        <ins className="no-underline bg-ok-soft text-ok rounded-sm px-0.5">eklenen</ins>{' '}
+                        <del className="bg-bad-soft text-bad-text rounded-sm px-0.5">çıkarılan</del> kelimeler, mevcut kayda göre
                       </p>
                     )}
                     {prop.cevap_belirsiz && !doubtful && (

@@ -32,7 +32,15 @@ function Chips({ items }: { items: string[] }) {
 }
 
 /** bare: başlık/aç-kapa olmadan, içerik doğrudan (ör. "Hakkında" penceresinde) */
-export function QuestionInsightsPanel({ questionId, bare = false }: { questionId: string; bare?: boolean }) {
+export function QuestionInsightsPanel({
+  questionId,
+  bare = false,
+  onOpenSlide,
+}: {
+  questionId: string;
+  bare?: boolean;
+  onOpenSlide?: (kaynak: string, sayfa: number) => void;
+}) {
   const [open, setOpen] = useState(bare);
   const [data, setData] = useState<any | null | undefined>(cache.has(questionId) ? cache.get(questionId) : undefined);
   const [probed, setProbed] = useState(cache.has(questionId));
@@ -62,14 +70,16 @@ export function QuestionInsightsPanel({ questionId, bare = false }: { questionId
   const f6 = data.faz6;
   const mf = data.mufredat || data.faz8; // mufredat: sınav başlığı / Faz 9 birleşik (Faz 8 öncelikli)
   const k = mf?.kazanimlar?.[0];
-  const ents: { ad: string }[] = data.varliklar || [];
+  const ents: { ad: string }[] = Array.isArray(data.varliklar) ? data.varliklar : [];
+  const f65Terms = Array.isArray(f65?.terimler) ? f65.terimler : [];
+  const f5Terms = Array.isArray(f5?.terimler) ? f5.terimler : [];
   // Faz 13 kimlikli varlıklar önce; sonra Faz 6.5 / Faz 5 terimleri
-  const terms: string[] = Array.from(new Set<string>([...ents.map((e) => e.ad), ...(f65?.terimler || []), ...(f5?.terimler || [])])).slice(0, 14);
-  const synonyms = Object.entries((f65?.esanlamlilar || {}) as Record<string, string[]>).filter(([, v]) => v?.length);
+  const terms: string[] = Array.from(new Set<string>([...ents.map((e) => e?.ad).filter(Boolean), ...f65Terms, ...f5Terms])).slice(0, 14);
+  const synonyms = Object.entries((f65?.esanlamlilar || {}) as Record<string, string[]>).filter(([, v]) => Array.isArray(v) && v.length);
   const abbrs = Object.entries((f65?.kisaltmalar || {}) as Record<string, string>);
-  const slides: { kaynak: string; sayfa: number; alinti?: string }[] = data.slayt?.slaytlar || [];
-  const ddx: { hastalik: string; ozellik?: string }[] = f6?.ayirici_tani || [];
-  const icd: string[] = f6?.icd10 || [];
+  const slides: { kaynak: string; sayfa: number; alinti?: string }[] = Array.isArray(data.slayt?.slaytlar) ? data.slayt.slaytlar : [];
+  const ddx: { hastalik: string; ozellik?: string }[] = Array.isArray(f6?.ayirici_tani) ? f6.ayirici_tani : [];
+  const icd: string[] = Array.isArray(f6?.icd10) ? f6.icd10 : [];
   if (!k && !terms.length && !synonyms.length && !abbrs.length && !slides.length && !ddx.length) return bare ? <p className="m-0 text-[12.5px] text-ink-3">Bu soru için müfredat analizi henüz yok.</p> : null;
   const baslik = k ? [k.ders, k.konu].filter(Boolean).join(' · ') : slides.length ? 'İlgili slaytlar' : 'Terimler';
   const h4 = 'm-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3 flex items-center gap-1';
@@ -91,11 +101,23 @@ export function QuestionInsightsPanel({ questionId, bare = false }: { questionId
             <span className="normal-case tracking-normal font-normal">· eşleşme güveni {data.slayt?.guven || '-'}</span>
           </h4>
           {slides.slice(0, 3).map((sl) => (
-            <div key={`${sl.kaynak}-${sl.sayfa}`} className="rounded-lg bg-canvas px-2.5 py-2 flex flex-col gap-1">
-              <p className="m-0 text-[13px] font-semibold text-ink">
-                {sl.kaynak} <span className="font-normal text-ink-3">· sayfa {sl.sayfa}</span>
-              </p>
-              {sl.alinti && <SourceText text={sl.alinti.replace(/^\[[^\]]*\]\s*/, '')} size="sm" terms={terms.slice(0, 8)} />}
+            <div key={`${sl.kaynak}-${sl.sayfa}`} className="rounded-lg bg-canvas px-3 py-2 flex items-center justify-between gap-2 border border-line-2/50">
+              <div className="min-w-0 flex-1">
+                <p className="m-0 text-[13px] font-semibold text-ink truncate">
+                  {sl.kaynak} <span className="font-normal text-ink-3">· sayfa {sl.sayfa}</span>
+                </p>
+                {sl.alinti && <SourceText text={sl.alinti.replace(/^\[[^\]]*\]\s*/, '')} size="sm" terms={terms.slice(0, 8)} />}
+              </div>
+              {onOpenSlide && (
+                <button
+                  type="button"
+                  onClick={() => onOpenSlide(sl.kaynak, sl.sayfa)}
+                  className="ms-btn is-tonal is-sm shrink-0"
+                  title="İlgili slayta yönlendir"
+                >
+                  <GraduationCap className="w-3.5 h-3.5" /> <span className="hidden sm:inline">Slayta Git</span>
+                </button>
+              )}
             </div>
           ))}
         </section>

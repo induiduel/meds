@@ -24,6 +24,29 @@ import { Committee, QuestionItem } from '../types';
 import { ApiService } from '../services/api';
 import { InfoPopover } from './InfoPopover';
 import { DONEM3_CURRICULUM_DISCIPLINES } from '../data/curriculumData';
+import mufredatPaketi from '../data/mufredat_paketi.json';
+
+const getKurulNo = (cid: string) => {
+  if (cid.includes('1')) return 1;
+  if (cid.includes('2')) return 2;
+  if (cid.includes('3')) return 3;
+  if (cid.includes('4')) return 4;
+  if (cid.includes('5')) return 5;
+  if (cid.includes('6')) return 6;
+  return 1;
+};
+
+const getDisciplinesForCommittee = (cid: string) => {
+  const kNum = getKurulNo(cid);
+  const kObj = (mufredatPaketi as any).kurullar?.find((k: any) => k.kurul === kNum);
+  return (kObj?.dersler as Array<{ ders: string; konular: string[] }>) || [];
+};
+
+const getTopicsForDiscipline = (cid: string, discipline: string) => {
+  const dersler = getDisciplinesForCommittee(cid);
+  const dersObj = dersler.find((d) => d.ders.toLowerCase().trim() === discipline.toLowerCase().trim());
+  return dersObj?.konular || [];
+};
 
 interface AdminPastExamImporterModalProps {
   isOpen: boolean;
@@ -57,6 +80,17 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
   const [parseError, setParseError] = useState<string | null>(null);
   const [parsedQuestions, setParsedQuestions] = useState<any[]>([]);
   const [autoSaveToFirebase, setAutoSaveToFirebase] = useState(true);
+
+  // Batch fill states for Kurul, Yıl, Ders, Kazanım
+  const [batchDiscipline, setBatchDiscipline] = useState('');
+  const [batchYear, setBatchYear] = useState('');
+  const [batchCommittee, setBatchCommittee] = useState('');
+  const [batchKazanim, setBatchKazanim] = useState('');
+
+  const handleApplyBatch = (field: string, val: string) => {
+    if (!val) return;
+    setParsedQuestions((prev) => prev.map((q) => ({ ...q, [field]: val })));
+  };
 
   // Importing state
   const [isImporting, setIsImporting] = useState(false);
@@ -169,7 +203,15 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
         throw new Error('Belgede geçerli bir soru formatı tespit edilemedi.');
       }
 
-      setParsedQuestions(res.questions);
+      const enriched = (res.questions || []).map((q: any) => ({
+        ...q,
+        committeeId: q.committeeId || targetCommitteeId,
+        examYear: q.examYear || examYear,
+        discipline: q.discipline || (defaultDiscipline.startsWith('Otomatik') ? '' : defaultDiscipline),
+        topic: q.topic || '',
+        kazanim: q.kazanim || q.topic || '',
+      }));
+      setParsedQuestions(enriched);
 
       // If Auto-Save to Firebase & Server is enabled, save immediately
       if (autoSaveToFirebase) {
@@ -263,8 +305,8 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
   };
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
-      <div className="ms-modal-panel bg-white rounded-2xl w-full max-w-5xl shadow-2xl border border-slate-200 overflow-hidden my-auto flex flex-col max-h-[92dvh]">
+    <div className="ms-overlay fixed inset-0 z-50 bg-ink/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+      <div className="ms-modal-panel bg-white rounded-2xl w-full max-w-5xl shadow-2xl border border-line overflow-hidden my-auto flex flex-col max-h-[92dvh]">
         {/* Header */}
         <div className="bg-ink-surface text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
@@ -280,7 +322,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
                   Admin Aracı
                 </span>
               </div>
-              <p className="text-xs text-slate-300">
+              <p className="text-xs text-line-2">
                 Geçmiş senelerin kısmi veya tam sorularını yükleyin, yapay zeka standart formata çevirsin.
               </p>
             </div>
@@ -301,7 +343,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 cursor-pointer"
+              className="p-1.5 rounded-lg text-ink-3 hover:text-white hover:bg-white/10 cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -310,14 +352,14 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
         {/* Success Banner */}
         {importSuccessMessage && (
-          <div className="bg-emerald-50 border-b border-emerald-200 p-4 text-emerald-900 text-xs flex items-center justify-between gap-3">
+          <div className="bg-ok-soft border-b border-ok-soft p-4 text-ok text-xs flex items-center justify-between gap-3">
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+              <CheckCircle2 className="w-5 h-5 text-ok shrink-0" />
               <span>{importSuccessMessage}</span>
             </div>
             <button
               onClick={() => setImportSuccessMessage(null)}
-              className="font-bold text-emerald-700 hover:text-emerald-900 cursor-pointer shrink-0"
+              className="font-bold text-ok hover:text-ok cursor-pointer shrink-0"
             >
               Kapat
             </button>
@@ -326,8 +368,8 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
         {/* Error Banner */}
         {parseError && (
-          <div className="bg-rose-50 border-b border-rose-200 p-3 text-rose-900 text-xs flex items-center gap-2">
-            <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+          <div className="bg-bad-soft border-b border-bad-soft p-3 text-bad-text text-xs flex items-center gap-2">
+            <AlertCircle className="w-4 h-4 text-bad shrink-0" />
             <span>{parseError}</span>
           </div>
         )}
@@ -335,16 +377,16 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
         {/* Content Body */}
         <div className="p-4 sm:p-6 overflow-y-auto space-y-5 text-xs">
           {/* Metadata Controls Bar */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-canvas p-3.5 rounded-xl border border-line">
             {/* Exam Year */}
             <div>
-              <label className="block text-[11px] font-bold text-slate-700 mb-1">
+              <label className="block text-[11px] font-bold text-ink-2 mb-1">
                 Sınav Senesi / Yıl
               </label>
               <select
                 value={examYear}
                 onChange={(e) => setExamYear(e.target.value)}
-                className="w-full bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-slate-800"
+                className="w-full bg-white border border-line-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-ink"
               >
                 <option value="Kategorisiz">Kategorisiz / Belirtilmemiş Yıl</option>
                 <option value="2024-2025">2024-2025</option>
@@ -358,13 +400,13 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
             {/* Target Committee */}
             <div>
-              <label className="block text-[11px] font-bold text-slate-700 mb-1">
+              <label className="block text-[11px] font-bold text-ink-2 mb-1">
                 Hedef Kurul / Komite
               </label>
               <select
                 value={targetCommitteeId}
                 onChange={(e) => setTargetCommitteeId(e.target.value)}
-                className="w-full bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-slate-800 truncate"
+                className="w-full bg-white border border-line-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-ink truncate"
               >
                 {committees.map((c) => (
                   <option key={c.id} value={c.id}>
@@ -376,13 +418,13 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
             {/* Discipline */}
             <div>
-              <label className="block text-[11px] font-bold text-slate-700 mb-1">
+              <label className="block text-[11px] font-bold text-ink-2 mb-1">
                 Ders / Branş (Dönem 3 Müfredatı)
               </label>
               <select
                 value={defaultDiscipline}
                 onChange={(e) => setDefaultDiscipline(e.target.value)}
-                className="w-full bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-slate-800"
+                className="w-full bg-white border border-line-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-ink"
               >
                 <option value="Otomatik (Yapay Zeka Tespit Etsin)">Otomatik (Yapay Zeka Tespit Etsin)</option>
                 {DONEM3_CURRICULUM_DISCIPLINES.map((d) => (
@@ -397,12 +439,12 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
           {/* Paste or Upload Area */}
           <div className="space-y-2">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <label className="font-bold text-slate-800 text-xs flex items-center gap-1.5">
+              <label className="font-bold text-ink text-xs flex items-center gap-1.5">
                 <FileText className="w-4 h-4 text-teal-600" />
                 <span>Çıkmış Soru Metni veya Dosya İçeriği</span>
               </label>
 
-              <label className="inline-flex items-center gap-1.5 px-3 py-1 bg-white hover:bg-slate-50 border border-slate-300 rounded-lg text-[11px] font-semibold text-slate-700 cursor-pointer shadow-2xs">
+              <label className="inline-flex items-center gap-1.5 px-3 py-1 bg-white hover:bg-canvas border border-line-2 rounded-lg text-[11px] font-semibold text-ink-2 cursor-pointer shadow-2xs">
                 <Upload className="w-3.5 h-3.5 text-teal-600" />
                 <span>{fileName ? `Dosya: ${fileName}` : 'Dosya Seç (.pdf, .docx, .txt)'}</span>
                 <input
@@ -422,8 +464,8 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
             )}
 
             {fileExtractStatus && !isExtractingFile && (
-              <div className="bg-emerald-50 border border-emerald-200 text-emerald-900 p-2 rounded-xl flex items-center gap-2 text-xs font-medium">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+              <div className="bg-ok-soft border border-ok-soft text-ok p-2 rounded-xl flex items-center gap-2 text-xs font-medium">
+                <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />
                 <span>{fileExtractStatus}</span>
               </div>
             )}
@@ -442,13 +484,13 @@ Cevap: A
 
 2) Bradikinin birikimine bağlı kuru öksürük yapan ilaç hangisidir?..."
               rows={7}
-              className="w-full p-3 bg-white border border-slate-300 rounded-xl font-mono text-[11px] text-slate-800 focus:outline-hidden focus:ring-2 focus:ring-teal-500/20"
+              className="w-full p-3 bg-white border border-line-2 rounded-xl font-mono text-[11px] text-ink focus:outline-hidden focus:ring-2 focus:ring-teal-500/20"
             />
           </div>
 
           {/* Action Button & Auto-Save Toggle */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
-            <label className="flex items-center gap-2 text-xs font-semibold text-slate-700 cursor-pointer bg-slate-50 border border-slate-200 px-3 py-2 rounded-xl hover:bg-slate-100 transition-colors">
+            <label className="flex items-center gap-2 text-xs font-semibold text-ink-2 cursor-pointer bg-canvas border border-line px-3 py-2 rounded-xl hover:bg-field transition-colors">
               <input
                 type="checkbox"
                 checked={autoSaveToFirebase}
@@ -464,7 +506,7 @@ Cevap: A
             <button
               onClick={handleParseQuestions}
               disabled={isParsing || isImporting || (!rawText.trim() && !uploadedFileBase64)}
-              className="bg-accent hover:from-teal-800 hover:to-emerald-800 disabled:opacity-50 text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer active:scale-95"
+              className="bg-accent hover:from-teal-800 hover:to-ok disabled:opacity-50 text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer active:scale-95"
             >
               {isParsing ? (
                 <>
@@ -487,7 +529,7 @@ Cevap: A
 
           {/* Staging / Parsed Questions List */}
           {parsedQuestions.length > 0 && (
-            <div className="space-y-4 pt-4 border-t border-slate-200">
+            <div className="space-y-4 pt-4 border-t border-line">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-canvas p-3.5 rounded-xl border border-teal-300 shadow-2xs">
                 <div className="space-y-0.5">
                   <div className="flex items-center gap-2">
@@ -499,7 +541,7 @@ Cevap: A
                       Beğeniler: 0
                     </span>
                   </div>
-                  <p className="text-[11px] text-slate-600">
+                  <p className="text-[11px] text-ink-2">
                     Aşağıdaki sorularda düzenleme yapabilir veya doğrudan bulut havuzuna aktarabilirsiniz.
                   </p>
                 </div>
@@ -507,7 +549,7 @@ Cevap: A
                 <button
                   onClick={() => handleBatchImport()}
                   disabled={isImporting}
-                  className="bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white font-bold px-4 py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-md cursor-pointer active:scale-95 shrink-0"
+                  className="bg-ok hover:bg-ok disabled:opacity-50 text-white font-bold px-4 py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-md cursor-pointer active:scale-95 shrink-0"
                 >
                   {isImporting ? (
                     <>
@@ -516,48 +558,194 @@ Cevap: A
                     </>
                   ) : (
                     <>
-                      <Cloud className="w-4 h-4 text-emerald-200" />
+                      <Cloud className="w-4 h-4 text-ok-soft" />
                       <span>Tümünü Firebase ve Sunucuya Aktar</span>
                     </>
                   )}
                 </button>
               </div>
 
+              {/* Toplu Bilgi Doldurma Çubuğu */}
+              <div className="p-3 bg-white rounded-xl border border-line flex flex-wrap items-center gap-2.5 text-xs shadow-xs">
+                <span className="font-bold text-ink-2 flex items-center gap-1 shrink-0">
+                  <Sparkles className="w-3.5 h-3.5 text-teal-600" /> Toplu Bilgi Uygula:
+                </span>
+
+                {/* Kurul */}
+                <div className="flex items-center gap-1">
+                  <select
+                    value={batchCommittee}
+                    onChange={(e) => setBatchCommittee(e.target.value)}
+                    className="bg-canvas border border-line-2 rounded px-2 py-1 text-xs"
+                  >
+                    <option value="">Kurul Seç...</option>
+                    {committees.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.name || (c as any).title}
+                      </option>
+                    ))}
+                  </select>
+                  <button
+                    type="button"
+                    onClick={() => handleApplyBatch('committeeId', batchCommittee)}
+                    disabled={!batchCommittee}
+                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-[11px]"
+                  >
+                    Uygula
+                  </button>
+                </div>
+
+                {/* Yıl */}
+                <div className="flex items-center gap-1">
+                  <input
+                    type="text"
+                    value={batchYear}
+                    onChange={(e) => setBatchYear(e.target.value)}
+                    placeholder="Yıl (örn: 2023-2024)"
+                    className="bg-canvas border border-line-2 rounded px-2 py-1 text-xs w-28"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => handleApplyBatch('examYear', batchYear)}
+                    disabled={!batchYear}
+                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-[11px]"
+                  >
+                    Uygula
+                  </button>
+                </div>
+
+                {/* Ders */}
+                <div className="flex items-center gap-1">
+                  <input
+                    type="text"
+                    list="batch-muf-dersler"
+                    value={batchDiscipline}
+                    onChange={(e) => setBatchDiscipline(e.target.value)}
+                    placeholder="Ders (Müfredat)"
+                    className="bg-canvas border border-line-2 rounded px-2 py-1 text-xs w-36"
+                  />
+                  <datalist id="batch-muf-dersler">
+                    {getDisciplinesForCommittee(targetCommitteeId).map((d) => (
+                      <option key={d.ders} value={d.ders} />
+                    ))}
+                  </datalist>
+                  <button
+                    type="button"
+                    onClick={() => handleApplyBatch('discipline', batchDiscipline)}
+                    disabled={!batchDiscipline}
+                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-[11px]"
+                  >
+                    Uygula
+                  </button>
+                </div>
+
+                {/* Kazanım / Konu */}
+                <div className="flex items-center gap-1 flex-1 min-w-[200px]">
+                  <input
+                    type="text"
+                    list="batch-muf-konular"
+                    value={batchKazanim}
+                    onChange={(e) => setBatchKazanim(e.target.value)}
+                    placeholder="Müfredat Konusu / Kazanım"
+                    className="bg-canvas border border-line-2 rounded px-2 py-1 text-xs flex-1"
+                  />
+                  <datalist id="batch-muf-konular">
+                    {getTopicsForDiscipline(targetCommitteeId, batchDiscipline).map((top) => (
+                      <option key={top} value={top} />
+                    ))}
+                  </datalist>
+                  <button
+                    type="button"
+                    onClick={() => handleApplyBatch('kazanim', batchKazanim)}
+                    disabled={!batchKazanim}
+                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-[11px] shrink-0"
+                  >
+                    Uygula
+                  </button>
+                </div>
+              </div>
+
               {/* Individual Question Cards for Editing */}
               <div className="space-y-3">
-                {parsedQuestions.map((q, idx) => (
+                {parsedQuestions.map((q, idx) => {
+                  const qCommitteeId = q.committeeId || targetCommitteeId;
+                  const qDisciplines = getDisciplinesForCommittee(qCommitteeId);
+                  const qTopics = getTopicsForDiscipline(qCommitteeId, q.discipline || '');
+
+                  return (
                   <div
                     key={idx}
-                    className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3 relative group"
+                    className="p-4 bg-canvas rounded-xl border border-line space-y-3 relative group"
                   >
-                    <div className="flex flex-wrap items-center justify-between gap-2">
-                      <div className="flex items-center gap-2">
-                        <span className="bg-slate-900 text-white font-black px-2 py-0.5 rounded text-[11px]">
+                    <div className="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-line">
+                      <div className="flex flex-wrap items-center gap-2 flex-1">
+                        <span className="bg-ink text-white font-black px-2 py-0.5 rounded text-[11px]">
                           Soru #{q.questionNumber || idx + 1}
                         </span>
+
+                        {/* Kurul Seçimi */}
+                        <select
+                          value={qCommitteeId}
+                          onChange={(e) => handleUpdateParsedField(idx, 'committeeId', e.target.value)}
+                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-[11px] font-semibold text-ink"
+                        >
+                          {committees.map((c) => (
+                            <option key={c.id} value={c.id}>
+                              {c.name || (c as any).title}
+                            </option>
+                          ))}
+                        </select>
+
+                        {/* Sınav Yılı */}
                         <input
                           type="text"
+                          value={q.examYear || ''}
+                          onChange={(e) => handleUpdateParsedField(idx, 'examYear', e.target.value)}
+                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-[11px] w-24 text-ink-2"
+                          placeholder="Yıl (2023-2024)"
+                        />
+
+                        {/* Ders / Branş */}
+                        <input
+                          type="text"
+                          list={`muf-ders-${idx}`}
                           value={q.discipline || ''}
                           onChange={(e) => handleUpdateParsedField(idx, 'discipline', e.target.value)}
-                          className="bg-white border border-slate-300 rounded px-2 py-0.5 text-[11px] font-bold text-teal-800"
-                          placeholder="Ders / Branş"
+                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-[11px] font-bold text-teal-800 w-32"
+                          placeholder="Ders (Müfredat)"
                         />
+                        <datalist id={`muf-ders-${idx}`}>
+                          {qDisciplines.map((d) => (
+                            <option key={d.ders} value={d.ders} />
+                          ))}
+                        </datalist>
+
+                        {/* Konu / Kazanım */}
                         <input
                           type="text"
-                          value={q.topic || ''}
-                          onChange={(e) => handleUpdateParsedField(idx, 'topic', e.target.value)}
-                          className="bg-white border border-slate-300 rounded px-2 py-0.5 text-[11px] text-slate-700 flex-1 min-w-[140px]"
-                          placeholder="Soru Başlığı / Konusu"
+                          list={`muf-konu-${idx}`}
+                          value={q.topic || q.kazanim || ''}
+                          onChange={(e) => {
+                            handleUpdateParsedField(idx, 'topic', e.target.value);
+                            handleUpdateParsedField(idx, 'kazanim', e.target.value);
+                          }}
+                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-[11px] text-ink-2 flex-1 min-w-[130px]"
+                          placeholder="Müfredat Konusu / Kazanım"
                         />
+                        <datalist id={`muf-konu-${idx}`}>
+                          {qTopics.map((top) => (
+                            <option key={top} value={top} />
+                          ))}
+                        </datalist>
                       </div>
 
                       <div className="flex items-center gap-2">
                         <div className="flex items-center gap-1">
-                          <span className="text-[11px] font-bold text-slate-600">Doğru Yanıt:</span>
+                          <span className="text-[11px] font-bold text-ink-2">Cevap:</span>
                           <select
                             value={q.claimedAnswer || 'C'}
                             onChange={(e) => handleUpdateParsedField(idx, 'claimedAnswer', e.target.value)}
-                            className="bg-white border border-slate-300 rounded px-1.5 py-0.5 text-xs font-bold text-emerald-700"
+                            className="bg-white border border-line-2 rounded px-1.5 py-0.5 text-xs font-bold text-ok"
                           >
                             <option value="A">A</option>
                             <option value="B">B</option>
@@ -569,7 +757,7 @@ Cevap: A
 
                         <button
                           onClick={() => handleDeleteParsedQuestion(idx)}
-                          className="text-slate-400 hover:text-rose-600 p-1 rounded transition-colors"
+                          className="text-ink-3 hover:text-bad p-1 rounded transition-colors"
                           title="Bu soruyu listeden çıkar"
                         >
                           <Trash2 className="w-3.5 h-3.5" />
@@ -577,26 +765,38 @@ Cevap: A
                       </div>
                     </div>
 
+                    {/* Kazanım Bilgisi */}
+                    <div className="flex items-center gap-2">
+                      <span className="text-[11px] font-bold text-teal-700 shrink-0">🎯 Kazanım:</span>
+                      <input
+                        type="text"
+                        value={q.kazanim || ''}
+                        onChange={(e) => handleUpdateParsedField(idx, 'kazanim', e.target.value)}
+                        className="w-full bg-white border border-teal-200 focus:border-teal-500 rounded px-2 py-1 text-xs text-ink"
+                        placeholder="Örn: Hücresel adaptasyon mekanizmalarını ve metaplazi özelliklerini açıklar"
+                      />
+                    </div>
+
                     {/* Question Stem */}
                     <div>
-                      <label className="block text-[11px] font-bold text-slate-500 mb-0.5">Soru Kökü</label>
+                      <label className="block text-[11px] font-bold text-ink-3 mb-0.5">Soru Kökü</label>
                       <textarea
                         value={q.stem || ''}
                         onChange={(e) => handleUpdateParsedField(idx, 'stem', e.target.value)}
                         rows={2}
-                        className="w-full p-2 bg-white border border-slate-300 rounded-lg text-xs text-slate-900"
+                        className="w-full p-2 bg-white border border-line-2 rounded-lg text-xs text-ink"
                       />
                     </div>
 
                     {/* Options Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {(q.options || []).map((opt: any) => (
-                        <div key={opt.key} className="flex items-center gap-1.5 bg-white p-1.5 rounded-lg border border-slate-200">
+                        <div key={opt.key} className="flex items-center gap-1.5 bg-white p-1.5 rounded-lg border border-line">
                           <span
                             className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-[11px] shrink-0 ${
                               q.claimedAnswer === opt.key
-                                ? 'bg-emerald-600 text-white'
-                                : 'bg-slate-100 text-slate-700'
+                                ? 'bg-ok text-white'
+                                : 'bg-field text-ink-2'
                             }`}
                           >
                             {opt.key}
@@ -605,7 +805,7 @@ Cevap: A
                             type="text"
                             value={opt.text || ''}
                             onChange={(e) => handleUpdateOption(idx, opt.key, e.target.value)}
-                            className="w-full text-xs text-slate-800 bg-transparent outline-hidden"
+                            className="w-full text-xs text-ink bg-transparent outline-hidden"
                             placeholder={`${opt.key} şıkkı metni`}
                           />
                         </div>
@@ -614,26 +814,27 @@ Cevap: A
 
                     {/* Explanation */}
                     {q.explanation && (
-                      <p className="text-[11px] text-slate-500 bg-white/70 p-2 rounded-lg border border-slate-200/60 italic">
+                      <p className="text-[11px] text-ink-3 bg-white/70 p-2 rounded-lg border border-line/60 italic">
                         <strong>Tıbbi Açıklama:</strong> {q.explanation}
                       </p>
                     )}
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
         </div>
 
         {/* Footer */}
-        <div className="bg-slate-50 p-4 border-t border-slate-200 flex items-center justify-between shrink-0">
-          <span className="text-[11px] text-slate-500">
+        <div className="bg-canvas p-4 border-t border-line flex items-center justify-between shrink-0">
+          <span className="text-[11px] text-ink-3">
             MeDSor Admin Motoru • Sorular eklendikten sonra soru havuzunda anında listelenir.
           </span>
 
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg font-semibold text-xs cursor-pointer"
+            className="px-4 py-2 bg-line hover:bg-line-2 text-ink rounded-lg font-semibold text-xs cursor-pointer"
           >
             Kapat
           </button>

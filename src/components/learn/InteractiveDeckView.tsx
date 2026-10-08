@@ -3136,7 +3136,7 @@ const V3DeckList: React.FC<{
     return seen > 0 && seen < d.slideCount;
   });
   return (
-    <div className="flex flex-col gap-4 max-w-[760px] w-full">
+    <div className="flex flex-col gap-4 w-full">
       {resume && (
         <button
           type="button"
@@ -3156,7 +3156,7 @@ const V3DeckList: React.FC<{
           <span className="h-10 px-5 rounded-full bg-accent text-white text-[14px] font-semibold inline-flex items-center shrink-0">Devam et</span>
         </button>
       )}
-      <ul className="list-none m-0 p-0 flex flex-col">
+      <ul className="list-none m-0 p-0 grid grid-cols-1 lg:grid-cols-2 gap-x-2">
         {decks.map((d, i) => {
           const seen = progress[d.id]?.seen?.length || 0;
           const done = seen >= d.slideCount;

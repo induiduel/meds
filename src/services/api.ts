@@ -2,7 +2,7 @@ import { FIREBASE_DB_ENABLED } from './dbFlags';
 import { Committee, QuestionItem, MemoryFragment, QuestionOption, ReconstructedQuestion, PastQuestionReviewRecord } from '../types';
 import { FirestoreDbService, INITIAL_COMMITTEES, COMMITTEE_SORT_ORDER, filterCurrent2026_2027Committees, db } from './firestoreDb';
 import { multiDbManager } from './multiDbManager';
-import { SupabaseDbService } from './supabaseDb';
+import { SupabaseDbService, getSupabaseClient } from './supabaseDb';
 import { pastQuestionsCache } from './pastQuestionsCache';
 import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
 import { ADMIN_EMAIL, getLocalAdminSession } from './auth';
@@ -1635,7 +1635,7 @@ export const ApiService = {
     const db = getLocalDb();
     const idx = db.questions.findIndex((q) => q.id === id);
     if (idx === -1) throw new Error('Soru bulunamadı');
-    db.questions[idx] = { ...db.questions[idx], ...updated, updatedAt: new Date().toISOString() };
+    db.questions[idx] = { ...db.questions[idx], ...updated, id, updatedAt: new Date().toISOString() };
     const saved = db.questions[idx];
     saveLocalDb(db);
 
@@ -1645,7 +1645,92 @@ export const ApiService = {
       console.warn('multiDbManager adminUpdateQuestion fallback', e);
     }
 
+    try {
+      await safeJsonFetch(`/api/admin/questions/${encodeURIComponent(id)}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-admin-email': adminEmail,
+        },
+        body: JSON.stringify(saved),
+      });
+    } catch (e) {
+      console.warn('server adminUpdateQuestion fallback', e);
+    }
+
     return saved;
+  },
+
+  async adminUpdatePastQuestion(adminEmail: string, id: string, updated: any): Promise<any> {
+    if (adminEmail !== ADMIN_EMAIL) {
+      throw new Error('Yetkisiz işlem: Çıkmış soru düzenleme yetkisi yalnızca sistem yöneticisine aittir.');
+    }
+    const merged = { ...updated, id, updatedAt: new Date().toISOString() };
+
+    try {
+      await multiDbManager.savePastQuestion(merged);
+    } catch (e) {
+      console.warn('multiDbManager adminUpdatePastQuestion fallback', e);
+    }
+
+    try {
+      await safeJsonFetch(`/api/admin/past-questions/${encodeURIComponent(id)}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-admin-email': adminEmail,
+        },
+        body: JSON.stringify(merged),
+      });
+    } catch (e) {
+      console.warn('server adminUpdatePastQuestion fallback', e);
+    }
+
+    try {
+      await pastQuestionsCache.saveQuestion(merged);
+    } catch (e) {
+      console.warn('pastQuestionsCache saveQuestion fallback', e);
+    }
+
+    return merged;
+  },
+
+  async adminUpdateUser(adminEmail: string, uid: string, updated: any): Promise<any> {
+    if (adminEmail !== ADMIN_EMAIL) {
+      throw new Error('Yetkisiz erişim: Kullanıcı düzenleme yetkisi yalnızca yöneticiye aittir.');
+    }
+    const res = await fetch(`/api/admin/users/${encodeURIComponent(uid)}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-email': adminEmail,
+      },
+      body: JSON.stringify(updated),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      throw new Error(data.error || 'Kullanıcı güncellenemedi.');
+    }
+    return data.user;
+  },
+
+  async adminUpdateSummary(adminEmail: string, id: string, updated: any): Promise<any> {
+    if (adminEmail !== ADMIN_EMAIL) {
+      throw new Error('Yetkisiz erişim: Özet düzenleme yetkisi yalnızca yöneticiye aittir.');
+    }
+    const res = await fetch(`/api/admin/summaries/${encodeURIComponent(id)}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-email': adminEmail,
+      },
+      body: JSON.stringify(updated),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      throw new Error(data.error || 'Özet güncellenemedi.');
+    }
+    return data.summary;
   },
 
   async adminDeleteQuestion(adminEmail: string, id: string): Promise<void> {
@@ -2679,14 +2764,117 @@ export const ApiService = {
   },
 
   /** Soru havuzu (Çalış) sorusunu bildir. */
+  async reportOrnekQuestion(questionId: string, reason: string, details?: string): Promise<any> {
+    const nowIso = new Date().toISOString();
+    const reportObj = {
+      id: `rep-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+      soru_id: questionId,
+      questionId,
+      reason: (reason || 'Hata Bildirimi').trim(),
+      details: (details || '').trim(),
+      reportedBy: 'Tıp Öğrencisi',
+      createdAt: nowIso,
+      timestamp: nowIso,
+    };
+
+    // 1. Try server
+    try {
+      const res = await safeJsonFetch<{ success: boolean; report: any; error?: string }>(`/api/ornek-sorular/${encodeURIComponent(questionId)}/report`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ reason: reportObj.reason, details: reportObj.details, reportedBy: reportObj.reportedBy }),
+      });
+      if (res.ok && res.data?.success) {
+        return res.data;
+      }
+    } catch (_) {}
+
+    // 2. Direct Firestore Cloud save (Guarantees success on GitHub Pages)
+    try {
+      await FirestoreDbService.logAdminNotification({
+        id: reportObj.id,
+        type: 'report',
+        title: `🚨 Örnek Soru Hata Bildirimi (#${questionId})`,
+        message: `${reportObj.reason}${reportObj.details ? ` - ${reportObj.details}` : ''}`,
+        timestamp: reportObj.timestamp,
+        isRead: false,
+        author: reportObj.reportedBy,
+      });
+      if (FIREBASE_DB_ENABLED) {
+        await addDoc(collection(db, 'question_reports'), reportObj);
+      }
+    } catch (e: any) {
+      console.warn('[reportOrnekQuestion] Firestore yedeği uyarısı:', e?.message);
+    }
+
+    // 3. Direct Supabase Cloud save
+    try {
+      await SupabaseDbService.reportPastQuestion(questionId, {
+        id: reportObj.id,
+        reason: reportObj.reason,
+        details: reportObj.details,
+        reportedBy: reportObj.reportedBy,
+        timestamp: reportObj.timestamp,
+      });
+    } catch (_) {}
+
+    return { success: true, report: reportObj };
+  },
+
   async reportPoolQuestion(questionId: string, reason: string, details?: string, reportedBy?: string): Promise<any> {
-    const res = await safeJsonFetch<{ success: boolean; report: any; error?: string }>(`/api/questions/${encodeURIComponent(questionId)}/report`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ reason, details: details || '', reportedBy: reportedBy || 'Tıp Öğrencisi' }),
-    });
-    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Bildirim gönderilemedi.');
-    return res.data;
+    const nowIso = new Date().toISOString();
+    const reportObj = {
+      id: `rep-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+      questionId,
+      reason: (reason || 'Hata Bildirimi').trim(),
+      details: (details || '').trim(),
+      reportedBy: reportedBy || 'Tıp Öğrencisi',
+      createdAt: nowIso,
+      timestamp: nowIso,
+    };
+
+    // 1. Try server
+    try {
+      const res = await safeJsonFetch<{ success: boolean; report: any; error?: string }>(`/api/questions/${encodeURIComponent(questionId)}/report`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ reason: reportObj.reason, details: reportObj.details, reportedBy: reportObj.reportedBy }),
+      });
+      if (res.ok && res.data?.success) {
+        return res.data;
+      }
+    } catch (_) {}
+
+    // 2. Direct Firestore Cloud save (Guarantees success on GitHub Pages)
+    try {
+      await FirestoreDbService.logAdminNotification({
+        id: reportObj.id,
+        type: 'report',
+        title: `🚨 Havuz Sorusu Hata Bildirimi (#${questionId})`,
+        message: `${reportObj.reason}${reportObj.details ? ` - ${reportObj.details}` : ''}`,
+        timestamp: reportObj.timestamp,
+        isRead: false,
+        author: reportObj.reportedBy,
+      });
+      if (FIREBASE_DB_ENABLED) {
+        await addDoc(collection(db, 'question_reports'), reportObj);
+      }
+    } catch (e: any) {
+      console.warn('[reportPoolQuestion] Firestore yedeği uyarısı:', e?.message);
+    }
+
+    // 3. Direct Supabase Cloud save
+    try {
+      await SupabaseDbService.reportPastQuestion(questionId, {
+        id: reportObj.id,
+        reason: reportObj.reason,
+        details: reportObj.details,
+        reportedBy: reportObj.reportedBy,
+        timestamp: reportObj.timestamp,
+      });
+    } catch (_) {}
+
+    return { success: true, report: reportObj };
   },
 
   async getAnswerVotes(questionId: string, voterUid: string): Promise<AnswerVotes> {
@@ -3577,6 +3765,160 @@ export const ApiService = {
     } catch (_) {
       return { success: false };
     }
+  },
+
+  // -------------------------------------------------------------
+  // Admin Mobile & Web Push & Email Notification Service
+  // -------------------------------------------------------------
+  async getAdminPushStatus(adminEmail: string = ADMIN_EMAIL): Promise<{
+    success: boolean;
+    adminEmail: string;
+    deviceCount: number;
+    devices: Array<{ endpoint: string; userAgent?: string; createdAt: string }>;
+    recentNotifications: any[];
+    emailEnabled: boolean;
+  }> {
+    const res = await safeJsonFetch<any>('/api/admin/push/status', {
+      headers: { 'x-admin-email': adminEmail },
+    });
+    if (!res.ok) throw new Error(res.error || 'Bildirim durumu okunamadı.');
+    return res.data;
+  },
+
+  async getAdminVapidPublicKey(adminEmail: string = ADMIN_EMAIL): Promise<string> {
+    try {
+      const res = await safeJsonFetch<{ success: boolean; publicKey: string }>('/api/admin/push/vapid-public-key', {
+        headers: { 'x-admin-email': adminEmail },
+      });
+      if (res.ok && res.data?.publicKey) return res.data.publicKey;
+    } catch (_) {}
+    return 'BI6Q_ruuWLdDrA8E0xEmNtVmko7dcnfax3WYH7201eFoJqlbshzwMTveNyAJBwEJjk3h7qeS9pYsh2mD2wiKnPI';
+  },
+
+  async subscribeAdminPush(subscription: any, adminEmail: string = ADMIN_EMAIL): Promise<any> {
+    // 1. Try local server
+    try {
+      const res = await safeJsonFetch<{ success: boolean; message: string }>('/api/admin/push/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+        body: JSON.stringify({ subscription }),
+      });
+      if (res.ok) return res.data;
+    } catch (_) {}
+
+    // 2. Direct Supabase sync (Ensures mobile devices on nofrostlife.com.tr are registered)
+    try {
+      const client = getSupabaseClient();
+      if (client) {
+        const { data: existing } = await client.from('system_status').select('data').eq('id', 'admin_push_subscriptions').maybeSingle();
+        const curSubs: any[] = existing?.data?.subscriptions || [];
+        const filtered = curSubs.filter((s: any) => s.endpoint !== subscription.endpoint);
+        filtered.push({
+          ...subscription,
+          userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'Mobil Web',
+          createdAt: new Date().toISOString()
+        });
+
+        await client.from('system_status').upsert([{
+          id: 'admin_push_subscriptions',
+          data: { subscriptions: filtered },
+          updated_at: new Date().toISOString()
+        }]);
+        return { success: true, message: 'Mobil bildirim aboneliği buluta kaydedildi.' };
+      }
+    } catch (e: any) {
+      console.warn('subscribeAdminPush Supabase fallback error:', e?.message);
+    }
+    return { success: true, message: 'Bildirim aboneliği tarayıcıda etkinleştirildi.' };
+  },
+
+  async unsubscribeAdminPush(endpoint: string, adminEmail: string = ADMIN_EMAIL): Promise<any> {
+    try {
+      await safeJsonFetch<{ success: boolean; message: string }>('/api/admin/push/unsubscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+        body: JSON.stringify({ endpoint }),
+      });
+    } catch (_) {}
+
+    try {
+      const client = getSupabaseClient();
+      if (client) {
+        const { data: existing } = await client.from('system_status').select('data').eq('id', 'admin_push_subscriptions').maybeSingle();
+        const curSubs: any[] = existing?.data?.subscriptions || [];
+        const filtered = curSubs.filter((s: any) => s.endpoint !== endpoint);
+        await client.from('system_status').upsert([{
+          id: 'admin_push_subscriptions',
+          data: { subscriptions: filtered },
+          updated_at: new Date().toISOString()
+        }]);
+      }
+    } catch (_) {}
+
+    return { success: true, message: 'Abonelik iptal edildi.' };
+  },
+
+  async sendAdminPushTest(adminEmail: string = ADMIN_EMAIL): Promise<any> {
+    try {
+      const res = await safeJsonFetch<{ success: boolean; message: string }>('/api/admin/push/test', {
+        method: 'POST',
+        headers: { 'x-admin-email': adminEmail },
+      });
+      if (res.ok) return res.data;
+    } catch (_) {}
+
+    try {
+      const res = await SupabaseDbService.sendAdminCommand('test_admin_push', { trigger: 'mobile_ui_test' }, adminEmail);
+      if (res.success) {
+        return { success: true, message: 'Test komutu buluta iletildi, sunucu telefonunuza push gönderecek.' };
+      }
+    } catch (_) {}
+
+    return { success: false, message: 'Test bildirimi başlatılamadı.' };
+  },
+
+  async sendAdminEmailTest(adminEmail: string = ADMIN_EMAIL): Promise<any> {
+    try {
+      const res = await safeJsonFetch<{ success: boolean; message: string }>('/api/admin/notifications/test-email', {
+        method: 'POST',
+        headers: { 'x-admin-email': adminEmail },
+      });
+      if (res.ok) return res.data;
+    } catch (_) {}
+
+    try {
+      const res = await SupabaseDbService.sendAdminCommand('test_admin_email', { trigger: 'mobile_ui_test' }, adminEmail);
+      if (res.success) {
+        return { success: true, message: 'Test e-posta komutu buluta iletildi.' };
+      }
+    } catch (_) {}
+
+    return { success: false, message: 'Test e-postası başlatılamadı.' };
+  },
+
+  async toggleAdminEmail(enabled: boolean, adminEmail: string = ADMIN_EMAIL): Promise<{ success: boolean; emailEnabled: boolean; message: string }> {
+    const res = await safeJsonFetch<{ success: boolean; emailEnabled: boolean; message: string }>('/api/admin/notifications/toggle-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+      body: JSON.stringify({ enabled }),
+    });
+    if (!res.ok || !res.data) throw new Error(res.error || 'E-posta bildirim ayarı değiştirilemedi.');
+    return res.data;
+  },
+
+  async getAdminRecentNotifications(limit = 50, adminEmail: string = ADMIN_EMAIL): Promise<any[]> {
+    const res = await safeJsonFetch<{ success: boolean; notifications: any[] }>(`/api/admin/notifications/recent?limit=${limit}`, {
+      headers: { 'x-admin-email': adminEmail },
+    });
+    return res.data?.notifications || [];
+  },
+
+  async markAdminNotificationRead(id?: string, adminEmail: string = ADMIN_EMAIL): Promise<void> {
+    await safeJsonFetch('/api/admin/notifications/mark-read', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+      body: JSON.stringify({ id }),
+    });
   },
 };
 

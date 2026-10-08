@@ -15,7 +15,7 @@ import { createClient } from '@supabase/supabase-js';
 
 const require = createRequire(import.meta.url);
 const pdfParseModule = require('pdf-parse');
-const PDFParse = pdfParseModule.PDFParse || pdfParseModule.default || pdfParseModule;
+const PDFParse = pdfParseModule?.PDFParse || pdfParseModule?.default || pdfParseModule;
 
 import {
   extractVerbatimPdfPages,
@@ -55,6 +55,8 @@ import { applyPhase14Overlay, latestReviews } from './src/services/phase14Overla
 import { getQuestionInsights, getInsightsSummary, getRawQuestionInsights, getPhaseOverride, savePhaseOverride, getQuestionDerivedRecords } from './src/services/phaseInsightsService.ts';
 import { applyCleanOverlay } from './src/services/lectureCleanOverlay.ts';
 import { applyQuarantine, quarantineMtime } from './src/services/questionQuarantine.ts';
+import { ServerNotificationService } from './src/services/serverNotificationService.ts';
+import { CloudNotificationBridge } from './src/services/cloudNotificationBridge.ts';
 
 import {
   getAllTranscriptionsMeta,
@@ -497,6 +499,8 @@ if (getTieredGeminiKeys().length === 0 && getTieredGroqKeys().length === 0) {
 const DATA_DIR = path.resolve(__dirname, 'data');
 const DB_FILE = path.resolve(DATA_DIR, 'questions.json');
 const USERS_FILE = path.resolve(DATA_DIR, 'users.json');
+
+const serverNotificationService = new ServerNotificationService(DATA_DIR);
 
 export interface ServerUser {
   uid: string;
@@ -1586,6 +1590,16 @@ app.post('/api/past-exams/:id/comment', (req, res) => {
     savePastQuestionsDb(list);
     mirrorPastQuestionToSupabase(q);
 
+    // Yalnızca yöneticiye anında e-posta ve telefon push bildirimi gönder
+    triggerAdminNotification({
+      type: 'comment',
+      questionId: String(req.params.id),
+      text: newComment.text,
+      author: newComment.author,
+      discipline: q.discipline,
+      topic: q.topic,
+    });
+
     res.json({ success: true, comment: newComment, updatedReconstruction: q.reconstruction });
   } catch (err: any) {
     res.status(500).json({ error: 'Yorum kaydedilemedi: ' + err.message });
@@ -1662,6 +1676,17 @@ app.post('/api/past-exams/:id/report', async (req, res) => {
         // Tablo henüz SQL ile oluşturulmamışsa past_questions.reports birincil kaynaktır
       }
     }
+
+    // Yalnızca yöneticiye anında e-posta ve telefon push bildirimi gönder
+    triggerAdminNotification({
+      type: 'report',
+      questionId: String(req.params.id),
+      reason: newReport.reason,
+      details: newReport.details,
+      author: newReport.reportedBy,
+      discipline: q.discipline,
+      topic: q.topic,
+    });
 
     res.json({
       success: true,
@@ -3134,6 +3159,38 @@ app.post('/api/questions/:id/upvote', (req, res) => {
 });
 
 // Soru havuzu sorusunu bildir (Çalış sayfası): çıkmış sorulardaki bildirimle aynı biçim
+// Örnek sorular (Kurul 1, statik JSON) bildirimleri: data/ornek_soru_bildirimleri.jsonl
+app.post('/api/ornek-sorular/:id/report', (req, res) => {
+  const id = String(req.params.id || '');
+  if (!/^k\d+-\d+-q\d+$/.test(id)) return res.status(400).json({ error: 'Geçersiz soru kimliği.' });
+  const reason = String(req.body?.reason || '').trim();
+  if (!reason) return res.status(400).json({ error: 'Şikayet sebebi belirtilmelidir.' });
+  const report = {
+    soru_id: id,
+    reason: reason.slice(0, 120),
+    details: String(req.body?.details || '').trim().slice(0, 1200),
+    reportedBy: String(req.body?.reportedBy || 'Anonim Öğrenci').slice(0, 80),
+    timestamp: new Date().toISOString(),
+  };
+  try {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+    fs.appendFileSync(path.join(DATA_DIR, 'ornek_soru_bildirimleri.jsonl'), JSON.stringify(report) + '\n', 'utf8');
+  } catch (e: any) {
+    return res.status(500).json({ error: 'Bildirim kaydedilemedi.' });
+  }
+
+  // Yalnızca yöneticiye anında e-posta ve telefon push bildirimi gönder
+  triggerAdminNotification({
+    type: 'report',
+    questionId: id,
+    reason: report.reason,
+    details: report.details,
+    author: report.reportedBy,
+  });
+
+  res.json({ success: true, report });
+});
+
 app.post('/api/questions/:id/report', (req, res) => {
   const question: any = db.questions.find((q) => q.id === req.params.id);
   if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
@@ -3150,6 +3207,18 @@ app.post('/api/questions/:id/report', (req, res) => {
   if (!question.reports.some((r: any) => r.id === report.id)) question.reports.push(report);
   question.updatedAt = report.timestamp;
   saveDatabase();
+
+  // Yalnızca yöneticiye anında e-posta ve telefon push bildirimi gönder
+  triggerAdminNotification({
+    type: 'report',
+    questionId: String(req.params.id),
+    reason: report.reason,
+    details: report.details,
+    author: report.reportedBy,
+    discipline: question.discipline,
+    topic: question.topic,
+  });
+
   res.json({ success: true, report });
 });
 
@@ -3181,6 +3250,16 @@ app.post('/api/questions/:id/fragments', (req, res) => {
   }
   question.updatedAt = new Date().toISOString();
   saveDatabase();
+
+  // Yalnızca yöneticiye anında e-posta ve telefon push bildirimi gönder
+  triggerAdminNotification({
+    type: 'comment',
+    questionId: String(req.params.id),
+    text: `[Hafıza/İpucu Katkısı]: ${newFragment.text}`,
+    author: newFragment.author,
+    discipline: question.discipline,
+    topic: question.topic,
+  });
 
   res.json({ fragment: newFragment, question });
 });
@@ -4746,6 +4825,175 @@ app.post('/api/admin/smtp-test', requireAdmin, async (req, res) => {
   }
 });
 
+app.post('/api/admin/notifications/toggle-email', requireAdmin, (req, res) => {
+  try {
+    const { enabled } = req.body;
+    const updated = saveSmtpConfig({ enabled: Boolean(enabled) });
+    res.json({
+      success: true,
+      emailEnabled: updated.enabled,
+      message: updated.enabled
+        ? 'Admin e-posta bildirimleri başarıyla AÇILDI.'
+        : 'Admin e-posta bildirimleri KAPATILDI (Bildirimler yalnızca telefonunuza Web Push olarak iletilecektir).'
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'E-posta ayarı değiştirilemedi: ' + err.message });
+  }
+});
+
+function triggerAdminNotification(params: {
+  type: 'report' | 'comment' | 'test';
+  questionId: string;
+  reason?: string;
+  details?: string;
+  text?: string;
+  author?: string;
+  discipline?: string;
+  topic?: string;
+}) {
+  try {
+    const cfg = getSmtpConfig();
+    const transporter = createSmtpTransporter();
+    const appUrl = process.env.APP_URL || 'https://nofrostlife.com.tr';
+    serverNotificationService.notifyAdminOnEvent({
+      transporter,
+      smtpFrom: cfg.from,
+      type: params.type,
+      questionId: params.questionId,
+      reason: params.reason,
+      details: params.details,
+      text: params.text,
+      author: params.author,
+      discipline: params.discipline,
+      topic: params.topic,
+      appUrl,
+    });
+  } catch (err: any) {
+    console.warn('[triggerAdminNotification] Hata:', err.message);
+  }
+}
+
+// Supabase & Firebase Bulut Bildirim Köprüsü (Canlı nofrostlife.com.tr -> Admin E-posta & Web Push)
+const cloudNotificationBridge = new CloudNotificationBridge({
+  dataDir: DATA_DIR,
+  cloudSupabase,
+  onNewNotification: (params) => {
+    console.log(`[CloudBridge] 🔔 Buluttan yeni bildirim yakalandı (#${params.questionId}), yöneticiye iletiliyor...`);
+    triggerAdminNotification(params);
+  },
+  onSyncSubscriptions: (cloudSubs) => {
+    for (const sub of cloudSubs) {
+      if (sub && sub.endpoint && sub.keys) {
+        serverNotificationService.addSubscription(sub, sub.userAgent || 'Mobil Cihaz (Bulut)');
+      }
+    }
+  },
+});
+cloudNotificationBridge.start(10000);
+
+// --- Admin Web Push & Mobile Notification Endpoints (Yalnızca Admin) ---
+app.get('/api/admin/push/vapid-public-key', requireAdmin, (_req, res) => {
+  const key = serverNotificationService.getVapidPublicKey();
+  if (!key) {
+    return res.status(500).json({ error: 'VAPID anahtarı oluşturulamadı.' });
+  }
+  res.json({ success: true, publicKey: key });
+});
+
+app.post('/api/admin/push/subscribe', requireAdmin, (req, res) => {
+  try {
+    const { subscription } = req.body;
+    if (!subscription || !subscription.endpoint || !subscription.keys) {
+      return res.status(400).json({ error: 'Geçersiz abonelik nesnesi.' });
+    }
+    const userAgent = (req.headers['user-agent'] as string) || 'Mobil Cihaz';
+    const ok = serverNotificationService.addSubscription(subscription, userAgent);
+    res.json({ success: ok, message: 'Mobil bildirim aboneliği başarıyla kaydedildi.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Abonelik kaydedilemedi: ' + err.message });
+  }
+});
+
+app.post('/api/admin/push/unsubscribe', requireAdmin, (req, res) => {
+  try {
+    const { endpoint } = req.body;
+    const ok = serverNotificationService.removeSubscription(endpoint);
+    res.json({ success: ok, message: 'Mobil bildirim aboneliği kaldırıldı.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Abonelik silinemedi: ' + err.message });
+  }
+});
+
+app.get('/api/admin/push/status', requireAdmin, (_req, res) => {
+  const subs = serverNotificationService.getSubscriptions();
+  const notifs = serverNotificationService.getNotifications(10);
+  const cfg = getSmtpConfig();
+  res.json({
+    success: true,
+    adminEmail: ADMIN_EMAIL,
+    deviceCount: subs.length,
+    devices: subs.map(s => ({
+      endpoint: s.endpoint.slice(0, 45) + '...',
+      userAgent: s.userAgent,
+      createdAt: s.createdAt,
+    })),
+    recentNotifications: notifs,
+    emailEnabled: Boolean(cfg.enabled && cfg.user && cfg.pass),
+  });
+});
+
+app.post('/api/admin/push/test', requireAdmin, async (_req, res) => {
+  try {
+    const result = await serverNotificationService.sendAdminWebPush({
+      title: '🧪 MedSoru Test Bildirimi',
+      body: 'Tebrikler! Telefonunuzda anlık admin bildirimleri kusursuz çalışıyor.',
+      url: 'https://nofrostlife.com.tr/#past-exams',
+    });
+    res.json({
+      success: true,
+      message: `${result.sent} cihaza test bildirimi başarıyla iletildi (Toplam: ${result.total}).`,
+      details: result,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Test bildirimi gönderilemedi: ' + err.message });
+  }
+});
+
+app.get('/api/admin/notifications/recent', requireAdmin, (req, res) => {
+  const limit = Number(req.query.limit) || 50;
+  const list = serverNotificationService.getNotifications(limit);
+  res.json({ success: true, notifications: list });
+});
+
+app.post('/api/admin/notifications/mark-read', requireAdmin, (req, res) => {
+  const id = req.body?.id as string | undefined;
+  serverNotificationService.markAsRead(id);
+  res.json({ success: true });
+});
+
+app.post('/api/admin/notifications/test-email', requireAdmin, async (_req, res) => {
+  try {
+    const cfg = getSmtpConfig();
+    const transporter = createSmtpTransporter();
+    if (!transporter) {
+      return res.status(400).json({ error: 'SMTP yapılandırılmamış veya şifre tanımlanmamış.' });
+    }
+    const result = await serverNotificationService.sendAdminEmail({
+      transporter,
+      smtpFrom: cfg.from,
+      type: 'test',
+      appUrl: process.env.APP_URL || 'https://nofrostlife.com.tr',
+    });
+    if (result.success) {
+      res.json({ success: true, message: `Admin adresine (${ADMIN_EMAIL}) test e-postası başarıyla gönderildi!` });
+    } else {
+      res.status(500).json({ error: result.error || 'E-posta gönderilemedi.' });
+    }
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Email notification endpoint (congratulations, thank you, and admin alert)
 app.post('/api/send-email', async (req, res) => {
   const { to, subject, html, text, type, committeeId, studentNumber } = req.body;
@@ -5102,34 +5350,114 @@ app.delete('/api/admin/users/:uid', requireAdmin, async (req, res) => {
   res.json({ success: true, deletedUser: deleted, localDeleted: idx !== -1, cloud });
 });
 
-// Admin: Update any question
+// Admin: Update any question (full payload supported)
 app.put('/api/admin/questions/:id', requireAdmin, (req, res) => {
   const question = db.questions.find((q) => q.id === req.params.id);
   if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
 
-  const {
-    questionNumber,
-    discipline,
-    topic,
-    status,
-    claimedAnswer,
-    reconstruction,
-    options,
-    fragments,
-  } = req.body;
+  // Nesneyi gelen tüm alanlarla güncelle, id ve güncel tarih korunsun
+  Object.assign(question, req.body, {
+    id: req.params.id,
+    updatedAt: new Date().toISOString(),
+  });
 
-  if (questionNumber !== undefined) question.questionNumber = Number(questionNumber);
-  if (discipline !== undefined) question.discipline = discipline;
-  if (topic !== undefined) question.topic = topic;
-  if (status !== undefined) question.status = status;
-  if (claimedAnswer !== undefined) question.claimedAnswer = claimedAnswer;
-  if (reconstruction !== undefined) question.reconstruction = reconstruction;
-  if (options !== undefined) question.options = options;
-  if (fragments !== undefined) question.fragments = fragments;
-
-  question.updatedAt = new Date().toISOString();
   saveDatabase();
   res.json({ question });
+});
+
+// Admin: Update past question (full payload supported)
+app.put('/api/admin/past-questions/:id', requireAdmin, async (req, res) => {
+  const list = getPastQuestionsDb();
+  const targetId = String(req.params.id);
+  const idx = list.findIndex((q) => String(q.id) === targetId);
+  if (idx === -1) {
+    return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+  }
+
+  const updatedQuestion = {
+    ...list[idx],
+    ...req.body,
+    id: targetId,
+    updatedAt: new Date().toISOString(),
+  };
+  list[idx] = updatedQuestion;
+  savePastQuestionsDb(list);
+
+  try {
+    const client = (localSupabase && isLocalSupabaseActive) ? localSupabase : cloudSupabase;
+    if (client) {
+      await client.from('past_questions').upsert(updatedQuestion);
+    }
+  } catch (e) {
+    console.warn('Supabase past_questions update error', e);
+  }
+
+  res.json({ success: true, question: updatedQuestion });
+});
+
+// Admin: Update user
+app.put('/api/admin/users/:uid', requireAdmin, async (req, res) => {
+  const users = loadUsers();
+  const idx = users.findIndex((u) => u.uid === req.params.uid);
+  if (idx === -1) {
+    return res.status(404).json({ error: 'Kullanıcı bulunamadı.' });
+  }
+
+  const updatedUser = {
+    ...users[idx],
+    ...req.body,
+    uid: req.params.uid,
+    updatedAt: new Date().toISOString(),
+  };
+  users[idx] = updatedUser;
+  saveUsers(users);
+
+  try {
+    const client = (localSupabase && isLocalSupabaseActive) ? localSupabase : cloudSupabase;
+    if (client) {
+      await client.from('users').upsert(updatedUser);
+    }
+  } catch (e) {
+    console.warn('Supabase users update error', e);
+  }
+
+  res.json({ success: true, user: updatedUser });
+});
+
+// Admin: Update lecture summary
+app.put('/api/admin/summaries/:id', requireAdmin, (req, res) => {
+  try {
+    const catPath = path.resolve(__dirname, 'src', 'data', 'lectureSummariesCatalog.json');
+    const dataCatPath = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
+    const p = fs.existsSync(catPath) ? catPath : dataCatPath;
+    if (fs.existsSync(p)) {
+      const content = JSON.parse(fs.readFileSync(p, 'utf-8'));
+      const targetId = req.params.id;
+      let updated: any = null;
+      if (Array.isArray(content)) {
+        const idx = content.findIndex((s) => String(s.id) === targetId);
+        if (idx !== -1) {
+          content[idx] = { ...content[idx], ...req.body, id: targetId };
+          updated = content[idx];
+        }
+      } else if (typeof content === 'object') {
+        if (content[targetId]) {
+          content[targetId] = { ...content[targetId], ...req.body, id: targetId };
+          updated = content[targetId];
+        }
+      }
+      if (updated) {
+        fs.writeFileSync(p, JSON.stringify(content, null, 2), 'utf-8');
+        if (fs.existsSync(dataCatPath) && dataCatPath !== p) {
+          fs.writeFileSync(dataCatPath, JSON.stringify(content, null, 2), 'utf-8');
+        }
+        return res.json({ success: true, summary: updated });
+      }
+    }
+    res.status(404).json({ error: 'Özet bulunamadı.' });
+  } catch (e: any) {
+    res.status(500).json({ error: e.message });
+  }
 });
 
 // Admin: Delete any question

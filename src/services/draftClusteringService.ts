@@ -169,7 +169,7 @@ export function loadMedicalConcepts(): Promise<void> {
   if (!conceptsPromise) {
     conceptsPromise = import('../data/medicalConcepts5000.json')
       .then((m: any) => {
-        MEDICAL_CONCEPT_BANKS = (m.default || m) as MedicalConceptBank[];
+        MEDICAL_CONCEPT_BANKS = (m ? (m.default || m) : []) as MedicalConceptBank[];
         termToConceptMap = null;
         fuzzyBuckets = null;
         fuzzyCache.clear();

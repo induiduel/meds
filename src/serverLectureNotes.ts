@@ -6,7 +6,7 @@ import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
 const pdfParseModule = require('pdf-parse');
-const PDFParse = pdfParseModule.PDFParse || pdfParseModule.default || pdfParseModule;
+const PDFParse = pdfParseModule?.PDFParse || pdfParseModule?.default || pdfParseModule;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

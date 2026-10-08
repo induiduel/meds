@@ -5,7 +5,7 @@ import { ApiService, safeJsonFetch } from '../../services/api';
 import type { InboxReport } from '../../services/manageConsoleService';
 import { Panel, EmptyState, Seg, ConfirmButton, Field, timeLabel } from './consoleUi';
 
-const AiQuestionOptimizerModal = React.lazy(() => import('../AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal })));
+const AiQuestionOptimizerModal = React.lazy(() => import('../AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal || (m as any).default })));
 
 /**
  * Moderasyon: solda şikâyet kuyruğu, sağda şikâyet edilen sorunun tamamı. Kararlar yöneticinin:

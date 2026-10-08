@@ -108,20 +108,6 @@ const loadDeckCards = async (): Promise<StudyCard[]> => {
   return out;
 };
 
-/** Cevap anahtarlı, ders notuyla doğrulanmış çıkmış sorular (scripts/v2 `study build --export`). */
-const loadExamCards = async (): Promise<StudyCard[]> => {
-  const mod: any = await import('../../data/question_cards.json');
-  const rows: any[] = mod.default || mod;
-  return rows.map((q) => ({
-    id: q.id,
-    group: q.group || 'Diğer',
-    front: [q.front, ...Object.entries(q.options || {}).map(([k, v]) => `${k}) ${v}`)].join('\n'),
-    back: q.back,
-    sub: q.tekrar > 1 ? `${q.tekrar} kez çıktı` : q.kurul ? `Kurul ${q.kurul}` : undefined,
-    pearl: q.note || undefined,
-  }));
-};
-
 const shuffle = <T,>(a: T[]) => {
   const r = [...a];
   for (let i = r.length - 1; i > 0; i--) {
@@ -138,9 +124,8 @@ const plain = (s?: string) => String(s || '').replace(/\*\*/g, '');
 // Page
 // ---------------------------------------------------------------------------
 export const FlashcardsView: React.FC = () => {
-  const [source, setSource] = useState<'terms' | 'lessons' | 'exams'>('terms');
+  const [source, setSource] = useState<'terms' | 'lessons'>('terms');
   const [deckCards, setDeckCards] = useState<StudyCard[] | null>(null);
-  const [examCards, setExamCards] = useState<StudyCard[] | null>(null);
   const [group, setGroup] = useState('all');
   const [query, setQuery] = useState('');
   // Göz atma süzgeci: duruma göre ya da favoriler (favoriler kaynak/konu seçiminden bağımsız)
@@ -156,11 +141,10 @@ export const FlashcardsView: React.FC = () => {
 
   useEffect(() => {
     if (source === 'lessons' && !deckCards) loadDeckCards().then(setDeckCards).catch(() => setDeckCards([]));
-    if (source === 'exams' && !examCards) loadExamCards().then(setExamCards).catch(() => setExamCards([]));
-  }, [source, deckCards, examCards]);
+  }, [source, deckCards]);
   useEffect(() => setGroup('all'), [source]);
 
-  const all = source === 'terms' ? GLOSSARY_CARDS : source === 'exams' ? examCards || [] : deckCards || [];
+  const all = source === 'terms' ? GLOSSARY_CARDS : deckCards || [];
   const groups = useMemo(() => {
     const m: Record<string, number> = {};
     all.forEach((c) => (m[c.group] = (m[c.group] || 0) + 1));
@@ -221,7 +205,7 @@ export const FlashcardsView: React.FC = () => {
     );
   }
 
-  const loading = (source === 'lessons' && !deckCards) || (source === 'exams' && !examCards);
+  const loading = source === 'lessons' && !deckCards;
   const startCount = Math.min(limit > 0 ? limit : inGroup.length, counts.due + counts.new || inGroup.length);
 
   return (
@@ -235,7 +219,6 @@ export const FlashcardsView: React.FC = () => {
             [
               ['terms', BookA, 'Terimler', GLOSSARY_CARDS.length],
               ['lessons', GraduationCap, 'Ders kartları', deckCards?.length],
-              ['exams', FileQuestion, 'Çıkmış sorular', examCards?.length],
             ] as const
           ).map(([id, Icon, label, n]) => (
             <button key={id} type="button" role="radio" aria-checked={source === id} onClick={() => setSource(id)} className={`inline-flex items-center justify-center gap-1.5 ${source === id ? 'is-on' : ''}`}>
@@ -258,7 +241,7 @@ export const FlashcardsView: React.FC = () => {
       </div>
 
       {loading ? (
-        <SectionLoader variant="book" label={source === 'exams' ? 'Çıkmış sorular yükleniyor…' : 'Ders kartları yükleniyor…'} />
+        <SectionLoader variant="book" label="Ders kartları yükleniyor…" />
       ) : (
         <>
           {/* Başlat paneli: durum tek satır, ayarlar tek satır, büyük başlat düğmesi */}
@@ -560,7 +543,7 @@ const StudySession: React.FC<{
   const leaveCls = leaving === 'good' ? 'translate-x-[40%] rotate-6 opacity-0' : leaving === 'again' ? '-translate-x-[40%] -rotate-6 opacity-0' : leaving === 'hard' ? 'translate-y-6 opacity-0' : '';
 
   return (
-    <div className="w-full max-w-[640px] mx-auto flex flex-col gap-4 min-h-[calc(100dvh-220px)]">
+    <div className="w-full max-w-[880px] mx-auto flex flex-col gap-4 min-h-[calc(100dvh-220px)]">
       {/* Top bar */}
       <div className="flex items-center gap-3">
         <button type="button" onClick={onExit} aria-label="Oturumu bitir" className="w-10 h-10 -ml-1 rounded-full flex items-center justify-center text-ink-2 hover:bg-white cursor-pointer">

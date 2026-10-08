@@ -28,8 +28,9 @@ import {
   MoreHorizontal,
   Mic,
   Layers,
-  BotMessageSquare,
   Sparkles,
+  Compass,
+  Target,
   Moon,
   Sun,
   Palette,
@@ -79,23 +80,23 @@ interface HeaderProps {
 /** Primary pages, in priority order: the desktop nav shows as many as fit, the rest go under "Daha". */
 export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'quick_add', label: 'Soru ekle', icon: SquarePen },
-  { id: 'ai_chat', label: 'AI Asistan', icon: BotMessageSquare },
-  { id: 'learn', label: 'Öğren', icon: GraduationCap },
   { id: 'past_exams', label: 'Çıkmış sorular', icon: Archive },
-  { id: 'glossary', label: 'Sözlük', icon: BookOpenText },
-  { id: 'flashcards', label: 'Kartlar', icon: Layers },
+  { id: 'ornek_sorular', label: 'Örnek sorular', icon: Target },
   { id: 'questions', label: 'Soru havuzu', icon: Library },
   { id: 'study', label: 'Çalış', icon: ListChecks },
+  { id: 'kazanimlar', label: 'Kazanımlar', icon: Compass },
+  { id: 'learn', label: 'Öğren', icon: GraduationCap },
+  { id: 'glossary', label: 'Sözlük', icon: BookOpenText },
+  { id: 'flashcards', label: 'Kartlar', icon: Layers },
   { id: 'leaderboard', label: 'Sıralama', icon: Trophy },
   { id: 'summaries', label: 'Ders özetleri', icon: BookOpen },
   { id: 'matrix', label: 'Soru haritası', icon: LayoutGrid },
-  { id: 'ornek_sorular', label: 'Örnek sorular', icon: Sparkles },
 ];
 
 /** How many NAV entries the desktop bar may show before folding the rest into "Daha". */
 const NAV_PRIMARY = 9;
 /** v3: dört ana yer önde, gerisi "Daha" menüsünde. */
-const V3_ORDER: AppTab[] = ['quick_add', 'ai_chat', 'learn', 'study', 'questions', 'past_exams', 'ornek_sorular', 'glossary', 'flashcards', 'summaries', 'leaderboard', 'matrix'];
+const V3_ORDER: AppTab[] = ['quick_add', 'past_exams', 'ornek_sorular', 'learn', 'kazanimlar', 'study', 'questions', 'glossary', 'flashcards', 'summaries', 'leaderboard', 'matrix'];
 
 export const BrandMark: React.FC<{ size?: number }> = ({ size = 34 }) => (
   <span

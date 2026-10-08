@@ -37,6 +37,7 @@ import {
   Settings,
   Lock,
   Bell,
+  Smartphone,
   Monitor,
   Play,
   Square,
@@ -51,6 +52,7 @@ import { AdminPastExamImporterModal } from './AdminPastExamImporterModal';
 import { DraftDeduplicationModal } from './DraftDeduplicationModal';
 import { AdminScriptsTab } from './AdminScriptsTab';
 import { AdminDriveSyncSettings } from './AdminDriveSyncSettings';
+import { AdminMobileNotificationCard } from './AdminMobileNotificationCard';
 import { InfoPopover } from './InfoPopover';
 import { StatusPill, questionStemText } from './QuickAddHero';
 import { ApiService, safeJsonFetch } from '../services/api';
@@ -141,6 +143,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const [smtpPass, setSmtpPass] = useState('');
   const [smtpFrom, setSmtpFrom] = useState('');
   const [showSmtpSettings, setShowSmtpSettings] = useState(false);
+  const [showMobileNotificationSettings, setShowMobileNotificationSettings] = useState(false);
   const [isLoadingSmtp, setIsLoadingSmtp] = useState(false);
   const [isSavingSmtp, setIsSavingSmtp] = useState(false);
   const [isTestingSmtp, setIsTestingSmtp] = useState(false);
@@ -2306,6 +2309,19 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 </button>
 
                 <button
+                  onClick={() => setShowMobileNotificationSettings(!showMobileNotificationSettings)}
+                  className={`font-black px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95 ${
+                    showMobileNotificationSettings
+                      ? 'bg-emerald-500 text-slate-950 font-bold border border-emerald-400 shadow-md'
+                      : 'bg-teal-900/90 hover:bg-teal-800 text-teal-100 border border-teal-500/60'
+                  }`}
+                  title="Telefonda (nofrostlife.com.tr) anlık Web Push ve E-posta bildirim ayarları"
+                >
+                  <Smartphone className="w-4 h-4 text-amber-300" />
+                  <span>{showMobileNotificationSettings ? 'Bildirimleri Gizle' : '📱 Telefon & Bildirim'}</span>
+                </button>
+
+                <button
                   onClick={() => setShowSmtpSettings(!showSmtpSettings)}
                   className={`font-black px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95 ${
                     smtpConfig?.hasPass
@@ -2352,6 +2368,19 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   <Mail className="w-3.5 h-3.5" />
                   <span>Şimdi Tanımla & Test Et</span>
                 </button>
+              </div>
+            )}
+
+            {/* Mobil & Web Push Bildirim Kartı */}
+            {showMobileNotificationSettings && (
+              <div className="animate-fade-in mb-4">
+                <AdminMobileNotificationCard
+                  onClose={() => setShowMobileNotificationSettings(false)}
+                  onOpenQuestion={(qId) => {
+                    onClose();
+                    window.location.hash = '#past-exams';
+                  }}
+                />
               </div>
             )}
 

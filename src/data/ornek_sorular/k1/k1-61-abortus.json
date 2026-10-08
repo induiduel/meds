@@ -1,0 +1,1378 @@
+{
+ "id": "k1-61-abortus",
+ "sira": 61,
+ "kurul": 1,
+ "ders": "Kadın Hastalıkları ve Doğum",
+ "konu": "Abortus",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Hilal Ezgi Türkmen",
+ "tarih": "2026-10-15",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Abortusun tanımını yapabilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Abortus tanımında kullanılan gebelik haftası ve fetal ağırlık sınırı hangisidir?",
+     "secenekler": {
+      "A": "İlk 37 hafta ve 2500 g'dan küçük",
+      "B": "İlk 12 hafta ve 1000 g'dan küçük",
+      "C": "İlk 28 hafta ve 1500 g'dan küçük",
+      "D": "İlk 20 hafta ve 500 g'dan küçük",
+      "E": "İlk 8 hafta ve 100 g'dan küçük"
+     },
+     "dogru": "D",
+     "aciklama": "Abortus ilk 20 haftada, 500 g'dan küçük embriyo/fetüs ve eklerinin atılmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Bu preterm doğum sınırıdır.",
+      "B": "Bu sınırlar erken abortusla karıştırılmıştır.",
+      "C": "Sınırlar yanlıştır; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: tanımdaki sınırlardır.",
+      "E": "Sınırlar yanlıştır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Geç abortus hangi gebelik haftaları arasındaki kayıpları ifade eder?",
+     "secenekler": {
+      "A": "0–12. haftalar",
+      "B": "13–20. haftalar",
+      "C": "20–28. haftalar",
+      "D": "28–37. haftalar",
+      "E": "37. haftadan sonra"
+     },
+     "dogru": "B",
+     "aciklama": "İlk 12 haftadaki kayıplar erken, 13–20. haftalar arası geç abortustur.",
+     "sik_aciklamalari": {
+      "A": "Erken abortustur; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: geç abortus aralığıdır.",
+      "C": "Abortus tanımı dışındadır.",
+      "D": "Preterm dönemdir; bu nedenle doğru seçenek değildir.",
+      "E": "Term dönemdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Erken ve geç abortusta öne çıkan nedenler karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Geç kayıplarda kromozomal nedenler daha sıktır",
+      "B": "Her ikisinde de yalnızca enfeksiyon önemlidir",
+      "C": "Erken kayıplarda kromozomal, geç kayıplarda maternal/anatomik nedenler öne çıkar",
+      "D": "Erken kayıplarda anatomik nedenler baskındır",
+      "E": "Neden dağılımı haftadan bağımsızdır"
+     },
+     "dogru": "C",
+     "aciklama": "Kromozomal anomaliler ilk trimesterde %70, ikinci trimesterde %30 oranındadır.",
+     "sik_aciklamalari": {
+      "A": "Erken kayıplarda daha sıktır.",
+      "B": "Enfeksiyonun rolü tartışmalıdır.",
+      "C": "Doğru: dağılım doğrudur.",
+      "D": "Kromozomal nedenler baskındır.",
+      "E": "Haftaya bağlıdır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      2,
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Abortusun insidansını ve en yüksek risk dönemini bilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Abortus riskinin en yüksek olduğu dönem hangisidir?",
+     "secenekler": {
+      "A": "16–20. haftalar",
+      "B": "İlk 8 hafta",
+      "C": "Doğum öncesi son hafta",
+      "D": "12–16. haftalar",
+      "E": "Risk tüm haftalarda eşittir"
+     },
+     "dogru": "B",
+     "aciklama": "Risk ilk 8 haftada en yüksektir; sonra giderek azalır.",
+     "sik_aciklamalari": {
+      "A": "Risk azalmıştır; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: en riskli dönemdir.",
+      "C": "Abortus tanımı dışındadır.",
+      "D": "Risk azalmıştır; bu nedenle doğru seçenek değildir.",
+      "E": "Risk eşit değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Klinik olarak tanınan gebeliklerin yaklaşık ne kadarı abortusla sonlanır?",
+     "secenekler": {
+      "A": "%50",
+      "B": "%1",
+      "C": "%10–12",
+      "D": "%80",
+      "E": "%0,1"
+     },
+     "dogru": "C",
+     "aciklama": "Tüm gebeliklerin %15–20'si, klinik tanınan gebeliklerin %10–12'si abortusla sonlanır.",
+     "sik_aciklamalari": {
+      "A": "Çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "B": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: verilen orandır.",
+      "D": "İlk trimesterdeki düşük payıdır.",
+      "E": "Çok düşüktür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Spontan düşüklerin dağılımı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Gebelik ilerledikçe genetik nedenli düşükler artar",
+      "B": "Çoğu ikinci trimesterdedir",
+      "C": "Kromozom anomalilerinin rolü yoktur",
+      "D": "%80'i ilk trimesterdedir ve bunların yaklaşık yarısı kromozom anomalileriyle ilişkilidir",
+      "E": "İlk trimester düşükleri nadirdir"
+     },
+     "dogru": "D",
+     "aciklama": "Erken dönemde genetik anomalilerin etkisi baskındır.",
+     "sik_aciklamalari": {
+      "A": "Azalır; bu nedenle doğru seçenek değildir.",
+      "B": "Çoğu ilk trimesterdedir.",
+      "C": "Belirgin rolü vardır.",
+      "D": "Doğru: dağılım doğrudur.",
+      "E": "En sık dönemdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Abortusun risk faktörlerini sıralayabilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi abortus risk faktörü değildir?",
+     "secenekler": {
+      "A": "Alkol",
+      "B": "Sigara",
+      "C": "Düzenli folik asit kullanımı",
+      "D": "Aşırı kafein",
+      "E": "Önceki erken gebelik kaybı"
+     },
+     "dogru": "C",
+     "aciklama": "Risk faktörleri sigara, alkol, aşırı kafein, önceki kayıp, ölü doğum öyküsü, diyabet, YÜT ve vajinal kanamadır.",
+     "sik_aciklamalari": {
+      "A": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "B": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: risk faktörü değildir.",
+      "D": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "E": "Risk faktörüdür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Abortus riskini artıran tıbbi durumlar arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "Normal BKİ",
+      "B": "Diyabet ve yardımcı üreme teknikleri",
+      "C": "Düzenli antenatal izlem",
+      "D": "Genç anne yaşı (25)",
+      "E": "Sigara içmeme"
+     },
+     "dogru": "B",
+     "aciklama": "Diyabet ve yardımcı üreme teknikleri risk faktörleri arasındadır.",
+     "sik_aciklamalari": {
+      "A": "Risk faktörü değildir.",
+      "B": "Doğru: risk faktörleridir.",
+      "C": "Koruyucudur; bu nedenle doğru seçenek değildir.",
+      "D": "Risk faktörü değildir.",
+      "E": "Koruyucudur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "İleri anne yaşının abortus riskini artırma mekanizması hangisidir?",
+     "secenekler": {
+      "A": "Enfeksiyon riskinin sıfırlanması",
+      "B": "Uterus boyutunun büyümesi",
+      "C": "Progesteronun artması",
+      "D": "Kromozomal anomali sıklığının artması",
+      "E": "Plasentanın erken olgunlaşmaması"
+     },
+     "dogru": "D",
+     "aciklama": "Anne yaşı arttıkça kromozomal anomali sıklığı artar.",
+     "sik_aciklamalari": {
+      "A": "Yanlıştır; bu nedenle doğru seçenek değildir.",
+      "B": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "C": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: temel mekanizmadır.",
+      "E": "İlgisizdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Abortusun fetal nedenlerini (kromozomal anomaliler) tanımlamak",
+   "sorular": [
+    {
+     "id": "k1-61-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Abort materyallerinde en sık görülen tek kromozom anomalisi hangisidir?",
+     "secenekler": {
+      "A": "Trizomi 13",
+      "B": "Trizomi 21",
+      "C": "45,X (Turner)",
+      "D": "Triploidi 69,XXY",
+      "E": "Trizomi 1"
+     },
+     "dogru": "C",
+     "aciklama": "En sık karyotip normal karyotiptir; en sık anomali 45,X, trizomilerden en sık trizomi 16'dır.",
+     "sik_aciklamalari": {
+      "A": "Daha seyrektir; bu nedenle doğru seçenek değildir.",
+      "B": "En sık trizomi değildir.",
+      "C": "Doğru: en sık tek anomalidir.",
+      "D": "Daha seyrektir; bu nedenle doğru seçenek değildir.",
+      "E": "Hiç görülmez; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": [
+      "c54437b9c45a"
+     ]
+    },
+    {
+     "id": "k1-61-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Abort materyallerinde en sık görülen trizomi hangisidir?",
+     "secenekler": {
+      "A": "Trizomi 13",
+      "B": "Trizomi 21",
+      "C": "Trizomi 18",
+      "D": "Trizomi 16",
+      "E": "Trizomi 19"
+     },
+     "dogru": "D",
+     "aciklama": "Kromozomal düşüklerin çoğu sayısal anomalidir; trizomi 16 en sık trizomidir.",
+     "sik_aciklamalari": {
+      "A": "Daha seyrektir; bu nedenle doğru seçenek değildir.",
+      "B": "Daha seyrektir; bu nedenle doğru seçenek değildir.",
+      "C": "Daha seyrektir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: en sık trizomidir.",
+      "E": "Hiç görülmez; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [
+      "80ab29504d2f"
+     ]
+    },
+    {
+     "id": "k1-61-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Abortusun kromozomal nedenleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İlk trimester abortuslarında kromozomal anomali oranı ~%70'tir",
+      "B": "İkinci trimester abortuslarında oran ~%30'dur",
+      "C": "Abort materyallerinde en sık karyotip normaldir",
+      "D": "Trizomi 1, 3 ve 19 abort materyallerinde hiç görülmez",
+      "E": "Abort materyallerinde en sık anomali yapısal translokasyonlardır"
+     },
+     "dogru": "E",
+     "aciklama": "Kromozomal düşüklerin çoğu sayısal anomalilerdir (45,X; trizomiler).",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): sayısal anomaliler baskındır."
+     },
+     "bilgi": [
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "c54437b9c45a",
+     "soru": "Abortuslar1 fetal faktörlere bağlı ilk trimester abortuslarında en sık karşılaşılan kromozomal anomaliler hangisidir?",
+     "secenekler": {
+      "A": "Monozomi X",
+      "B": "Otozomal trizomi",
+      "C": "Triploidi",
+      "D": "Tetraploidi",
+      "E": "Yapısal Kromozomal Anomaliler"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "80ab29504d2f",
+     "soru": "Fetal faktörlere bağlı ilk trimester abortuslarında en sık karşılaşılan kromozomal anomaliler hangisidir?",
+     "secenekler": {
+      "A": "Yapısal Kromozomal Anomaliler",
+      "B": "Tetraploidi",
+      "C": "Monozomi X",
+      "D": "Triploidi",
+      "E": "Otozomal trizomi"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Abortusun maternal nedenlerini (kronik hastalıklar, anatomik, enfeksiyöz, çevresel) tanımlamak",
+   "sorular": [
+    {
+     "id": "k1-61-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Abortusla ilişkili maternal anatomik neden hangisidir?",
+     "secenekler": {
+      "A": "Over kisti",
+      "B": "İntrauterin sineşi (Asherman sendromu)",
+      "C": "Böbrek taşı",
+      "D": "Hipertiroidi",
+      "E": "Miyopi"
+     },
+     "dogru": "B",
+     "aciklama": "Asherman sendromu anatomik nedendir; leiomiyom, polip ve Müller anomalilerinin rolü tartışmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Anatomik uterin neden değildir.",
+      "B": "Doğru: anatomik nedendir.",
+      "C": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "D": "Endokrin bir durumdur.",
+      "E": "İlgisizdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki maternal kronik hastalıklardan hangisi abortusla ilişkilendirilmemiştir?",
+     "secenekler": {
+      "A": "Çölyak hastalığı",
+      "B": "Diabetes mellitus",
+      "C": "Tiroid bozuklukları",
+      "D": "Miyopi",
+      "E": "Sistemik lupus eritematozus"
+     },
+     "dogru": "D",
+     "aciklama": "DM, tiroid, çölyak, siyanotik kalp, İBH, SLE ve fenilketonüri abortusla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "İlişkilidir; bu nedenle doğru seçenek değildir.",
+      "B": "İlişkilidir; bu nedenle doğru seçenek değildir.",
+      "C": "İlişkilidir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: ilişkili değildir.",
+      "E": "İlişkilidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Abortusun maternal nedenleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": ">5 rad radyasyon maternal neden olarak kabul edilir",
+      "B": "Kemoterapi ve radyoterapi abortusla ilişkilidir",
+      "C": "Toksoplazma ve Listeria suçlanan enfeksiyöz ajanlardandır",
+      "D": "Leiomiyomun abortustaki rolü tartışmalıdır",
+      "E": "Enfeksiyöz ajanların abortus etiyolojisindeki rolü kesin olarak kanıtlanmıştır"
+     },
+     "dogru": "E",
+     "aciklama": "Enfeksiyöz ajanların etiyolojideki yeri tartışmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): rolleri tartışmalıdır."
+     },
+     "bilgi": [
+      10,
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Abortus tiplerinin ayırıcı tanısını yapabilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi tanımlanan abortus tiplerinden biri değildir?",
+     "secenekler": {
+      "A": "Abortus imminens",
+      "B": "Abortus postmaturus",
+      "C": "Abortus insipiens",
+      "D": "Missed abortus",
+      "E": "Rekürren abortus"
+     },
+     "dogru": "B",
+     "aciklama": "Tipler: imminens, insipiens, inkomplet, komplet, missed ve rekürren abortustur.",
+     "sik_aciklamalari": {
+      "A": "Abortus tipidir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: tanımlı bir tip değildir.",
+      "C": "Abortus tipidir; bu nedenle doğru seçenek değildir.",
+      "D": "Abortus tipidir; bu nedenle doğru seçenek değildir.",
+      "E": "Abortus tipidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki abortus tiplerinden hangisinde gebelik devam edebilir?",
+     "secenekler": {
+      "A": "İnkomplet abortus",
+      "B": "Abortus insipiens",
+      "C": "Abortus imminens",
+      "D": "Komplet abortus",
+      "E": "Missed abortus"
+     },
+     "dogru": "C",
+     "aciklama": "Abortus imminenste serviks kapalı ve kalp atımı vardır; gebelik henüz kaybedilmemiştir.",
+     "sik_aciklamalari": {
+      "A": "Kayıp gerçekleşmiştir.",
+      "B": "Kayıp kaçınılmazdır.",
+      "C": "Doğru: seyri diğerlerinden farklıdır.",
+      "D": "Kayıp tamamlanmıştır.",
+      "E": "Gebelik canlılığını yitirmiştir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": [
+      "80ef53596179"
+     ]
+    },
+    {
+     "id": "k1-61-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Abortus tiplerinin ayırıcı tanısında kullanılan temel muayene bulgusu hangisidir?",
+     "secenekler": {
+      "A": "Hastanın yaşı",
+      "B": "Serviksin açık/kapalı olması ile USG'de canlılık ve materyal varlığı",
+      "C": "Saç rengi",
+      "D": "Kan basıncı tek başına",
+      "E": "İdrar rengi"
+     },
+     "dogru": "B",
+     "aciklama": "Her tipin klinik, muayene ve USG özellikleri farklıdır.",
+     "sik_aciklamalari": {
+      "A": "Ayırıcı değildir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: ayırıcı tanının temelidir.",
+      "C": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "D": "Tek başına ayırıcı değildir.",
+      "E": "İlgisizdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      13,
+      14,
+      15,
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "80ef53596179",
+     "soru": "Aşağıdaki abortuslardan hangisinin seyri diğerlerinden farklı seyredebilir?\n- a. Abortus incipens\n- b. Abortus inkompletus\n- c. Abortus imminens\n- d. Anbortus kompletus\n- e. Missed abortus",
+     "secenekler": {
+      "A": "Abortus incipens",
+      "B": "Abortus inkompletus",
+      "C": "Abortus imminens",
+      "D": "Anbortus kompletus",
+      "E": "Missed abortus"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Abortus imminens ve abortus insipiens ayrımını yapabilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "8 haftalık gebeliği olan, vajinal kanaması bulunan kadında serviks kapalı ve USG'de kalp atımı olan embriyo görülüyor. Tanı hangisidir?",
+     "secenekler": {
+      "A": "Missed abortus",
+      "B": "Abortus insipiens",
+      "C": "İnkomplet abortus",
+      "D": "Komplet abortus",
+      "E": "Abortus imminens"
+     },
+     "dogru": "E",
+     "aciklama": "Kapalı serviks, kanama ve canlı embriyo abortus imminenstir.",
+     "sik_aciklamalari": {
+      "A": "Kalp atımı yoktur; bu nedenle doğru seçenek değildir.",
+      "B": "Serviks açıktır; bu nedenle doğru seçenek değildir.",
+      "C": "Serviks açık, materyal kısmen atılmıştır.",
+      "D": "Materyal yoktur; bu nedenle doğru seçenek değildir.",
+      "E": "Doğru: tanı budur; doğru yanıttır."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": [
+      "cc0b4729312b",
+      "d13d1f298e93"
+     ]
+    },
+    {
+     "id": "k1-61-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Abortus insipiensin özelliği hangisidir?",
+     "secenekler": {
+      "A": "Tüm materyal atılmış",
+      "B": "Serviks kapalı ve kalp atımı var",
+      "C": "Serviks açık, kanama fazla, şiddetli kasık ağrısı var; materyal henüz atılmamış",
+      "D": "Kalp atımı olmadan haftalarca uterusta kalma",
+      "E": "Kanama yok"
+     },
+     "dogru": "C",
+     "aciklama": "Kayıp gerçekleşmek üzeredir; medikal veya cerrahi terminasyon yapılır.",
+     "sik_aciklamalari": {
+      "A": "Komplettir; bu nedenle doğru seçenek değildir.",
+      "B": "İmminenstir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: insipiensin tanımıdır.",
+      "D": "Missed abortustur; bu nedenle doğru seçenek değildir.",
+      "E": "Kanama vardır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Abortus imminens ve insipiens yönetimi karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "İmminenste hemen terminasyon yapılır",
+      "B": "İkisinde de küretaj zorunludur",
+      "C": "İnsipienste gebelik korunur",
+      "D": "İmminenste medikal (progesteron vb.) destek; insipienste medikal veya cerrahi terminasyon",
+      "E": "İkisinde de tedavi gerekmez"
+     },
+     "dogru": "D",
+     "aciklama": "İmminenste gebelik devam edebilir; insipienste kayıp kaçınılmazdır.",
+     "sik_aciklamalari": {
+      "A": "Gebelik korunmaya çalışılır.",
+      "B": "İmminenste küretaj yapılmaz.",
+      "C": "Kayıp kaçınılmazdır.",
+      "D": "Doğru: yönetim farkıdır.",
+      "E": "Yönetim gerekir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "cc0b4729312b",
+     "soru": "Abortuslar Son adet tarihine göre 8 haftalık gebeliği olan kadının acil servise vajinal kanama ile başvurusunda, yapılan genital muayene ve ultrasonografisine göre servikal os'un kapalı",
+     "secenekler": {
+      "A": "Septik Abortus",
+      "B": "Kaçınılmaz Düşük",
+      "C": "Ektopik Gebelik",
+      "D": "Kaçınılmaz",
+      "E": "Düşük Tehdidi"
+     },
+     "cevap": null
+    },
+    {
+     "id": "d13d1f298e93",
+     "soru": "Son adet tarihine göre 8 hafta gebeliği olan kadının acil servise vajinal kanama ile başvurusunda, yapılan genital muayene ve ultrasonografisine göre servikal os'un kapalı",
+     "secenekler": {
+      "A": "Septik Abortus",
+      "B": "Kaçınılmaz Düşük",
+      "C": "Ektopik Gebelik",
+      "D": "Kaçınılmaz",
+      "E": "Sıra No"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "İnkomplet, komplet ve missed abortus ayrımını yapabilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Tüm gebelik materyalinin atıldığı, uterusun küçük ve USG'de materyalin görülmediği abortus tipi hangisidir?",
+     "secenekler": {
+      "A": "Missed abortus",
+      "B": "İnkomplet abortus",
+      "C": "Komplet abortus",
+      "D": "Abortus imminens",
+      "E": "Abortus insipiens"
+     },
+     "dogru": "C",
+     "aciklama": "Komplet abortusta tedavi gerekmez; B-HCG pozitif çıkabilir.",
+     "sik_aciklamalari": {
+      "A": "Materyal uterustadır.",
+      "B": "Materyal kısmen kalmıştır.",
+      "C": "Doğru: komplet abortustur.",
+      "D": "Canlı gebelik vardır.",
+      "E": "Materyal henüz atılmamıştır."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Missed abortus için USG tanı kriterlerinden biri hangisidir?",
+     "secenekler": {
+      "A": "Serviksin açık olması",
+      "B": "CRL 3 mm ve kalp atımı olması",
+      "C": "Ortalama kese çapı 10 mm ve embriyo görülmesi",
+      "D": "Yolk sac varlığı",
+      "E": "CRL ≥7 mm olup kalp atımı olmaması"
+     },
+     "dogru": "E",
+     "aciklama": "Kriterler: CRL ≥7 mm ve kalp atımı yok; MSD ≥25 mm ve embriyo yok; kesten sonra belirli sürede embriyo/kalp atımı yokluğu.",
+     "sik_aciklamalari": {
+      "A": "Missed abortusta serviks genellikle kapalıdır.",
+      "B": "Canlı gebeliktir; bu nedenle doğru seçenek değildir.",
+      "C": "Normal bulgudur; bu nedenle doğru seçenek değildir.",
+      "D": "Tek başına tanı koydurmaz.",
+      "E": "Doğru: tanı koydurucu kriterdir."
+     },
+     "bilgi": [
+      18,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "İnkomplet abortusun özellikleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Gebelik ürünlerinin bir kısmının atılması",
+      "B": "Serviks kapalı ve USG'de kavite tamamen boş",
+      "C": "Serviksin açık olması",
+      "D": "Spekulumda plasenta parçaları görülebilmesi",
+      "E": "USG'de kavitede bozulmuş gebelik/fetoplasental elemanlar"
+     },
+     "dogru": "B",
+     "aciklama": "Boş kavite komplet abortusu düşündürür.",
+     "sik_aciklamalari": {
+      "A": "İnkomplet abortus özelliğidir.",
+      "B": "Doğru: komplet abortus bulgusudur.",
+      "C": "İnkomplet abortus özelliğidir.",
+      "D": "İnkomplet abortus özelliğidir.",
+      "E": "İnkomplet abortus özelliğidir."
+     },
+     "bilgi": [
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Septik düşüğü tanıyıp yönetimini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Abortus sonrası enfeksiyon/sepsis gelişme oranı yaklaşık ne kadardır?",
+     "secenekler": {
+      "A": "%0,001",
+      "B": "%30",
+      "C": "%50",
+      "D": "%1–2",
+      "E": "%90"
+     },
+     "dogru": "D",
+     "aciklama": "Abortus sonrası %1–2 oranında enfeksiyon/sepsis gelişir.",
+     "sik_aciklamalari": {
+      "A": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "B": "Çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "C": "Çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: verilen orandır.",
+      "E": "Gerçekçi değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Septik düşükte yönetim ilkesi hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca oral analjezik",
+      "B": "Yalnızca gözlem",
+      "C": "Acil intravenöz antimikrobiyal tedavi ve rest varsa uterusun cerrahi boşaltılması",
+      "D": "Antibiyotiksiz küretaj",
+      "E": "Haftalarca beklemek"
+     },
+     "dogru": "C",
+     "aciklama": "Cerrahi tahliye öncesinde antibiyoterapi uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Yetersizdir; bu nedenle doğru seçenek değildir.",
+      "B": "Acil müdahale gerekir.",
+      "C": "Doğru: yönetim ilkesidir.",
+      "D": "Antibiyotik gerekir.",
+      "E": "Gecikme ölümcül olabilir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Septik düşük ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Erken tanı ve tedavi maternal ölümü önler",
+      "B": "Rest varsa cerrahi boşaltma gerekir",
+      "C": "Cerrahi öncesi antibiyotik verilir",
+      "D": "Maternal ölüm bildirilmiştir",
+      "E": "Septik düşükte uterus tahliyesi kontrendikedir"
+     },
+     "dogru": "E",
+     "aciklama": "Rest varsa uterus cerrahi olarak boşaltılmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): tahliye gerekir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Vajinal kanama, ağrı ve adet gecikmesi olan hastaya yaklaşımı bilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "İlk trimesterde kanama/ağrı ile başvuran gebede ilk istenmesi gereken testler hangileridir?",
+     "secenekler": {
+      "A": "Hiçbir test",
+      "B": "Yalnızca idrar kültürü",
+      "C": "Yalnızca tiroid testleri",
+      "D": "Yalnızca PAP smear",
+      "E": "Tam kan sayımı, kan grubu, Rh ve hCG"
+     },
+     "dogru": "E",
+     "aciklama": "Ektopik gebelik, abortus ve normal gebelik birbirinden ayrılmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Testler gereklidir; bu nedenle doğru seçenek değildir.",
+      "B": "Yetersizdir; bu nedenle doğru seçenek değildir.",
+      "C": "Yetersizdir; bu nedenle doğru seçenek değildir.",
+      "D": "İlk basamak değildir.",
+      "E": "Doğru: ilk istenecek testlerdir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "İlk trimester kanaması gebelerin yaklaşık ne kadarında görülür?",
+     "secenekler": {
+      "A": "%5",
+      "B": "%1",
+      "C": "%90",
+      "D": "%20–40",
+      "E": "Hiç görülmez"
+     },
+     "dogru": "D",
+     "aciklama": "İlk trimester kanaması sıktır ve ayırıcı tanı gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Düşüktür; bu nedenle doğru seçenek değildir.",
+      "B": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "C": "Çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: verilen orandır.",
+      "E": "Sık görülür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Kanama, ağrı ve adet gecikmesi olan hastada ayırıcı tanıda akılda tutulması gereken nadir durum hangisidir?",
+     "secenekler": {
+      "A": "Menopoz",
+      "B": "Heterotopik gebelik",
+      "C": "Pubertas prekoks",
+      "D": "Konjenital adrenal hiperplazi",
+      "E": "Hipospadias"
+     },
+     "dogru": "B",
+     "aciklama": "Heterotopik gebelik ve çoğul gebeliğin birinin kaybı akılda tutulmalıdır.",
+     "sik_aciklamalari": {
+      "A": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: akılda tutulmalıdır.",
+      "C": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "D": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "E": "İlgisizdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "İlk trimester ultrasonografi bulgularını ve gebelik haftası ölçümünü bilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Transvajinal ultrasonografide gestasyonel kese ilk kez hangi haftada görülür?",
+     "secenekler": {
+      "A": "10. hafta",
+      "B": "4–5. hafta",
+      "C": "12. hafta",
+      "D": "2. hafta",
+      "E": "20. hafta"
+     },
+     "dogru": "B",
+     "aciklama": "Kese TVUSG'de 4–5., transabdominal USG'de 6. haftada görülür.",
+     "sik_aciklamalari": {
+      "A": "Geçtir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: TVUSG'de görülme zamanıdır.",
+      "C": "Geçtir; bu nedenle doğru seçenek değildir.",
+      "D": "Çok erkendir; bu nedenle doğru seçenek değildir.",
+      "E": "Çok geçtir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "CRL 15 mm ölçülen embriyonun yaklaşık gebelik haftası hangisidir?",
+     "secenekler": {
+      "A": "~20 hafta",
+      "B": "~15 hafta",
+      "C": "~4 hafta",
+      "D": "~8 hafta",
+      "E": "~12 hafta"
+     },
+     "dogru": "D",
+     "aciklama": "Gebelik haftası ≈ 6 hafta + CRL (mm) gün olarak hesaplanır; 6 hafta + 15 gün ≈ 8 hafta.",
+     "sik_aciklamalari": {
+      "A": "Çok geçtir; bu nedenle doğru seçenek değildir.",
+      "B": "Hatalı hesaptır; bu nedenle doğru seçenek değildir.",
+      "C": "Çok erkendir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: hesap sonucudur.",
+      "E": "Geçtir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "hCG 3000 mIU/ml olan hastada TVUSG'de intrauterin gebelik kesesi görülmüyor. Bu bulgu neyi düşündürür?",
+     "secenekler": {
+      "A": "Hiçbir anlamı yoktur",
+      "B": "Normal gelişen intrauterin gebeliği",
+      "C": "İkiz gebeliği",
+      "D": "Mol gebeliği kesin olarak",
+      "E": "Ektopik gebeliği"
+     },
+     "dogru": "E",
+     "aciklama": "hCG >2000 mIU/ml ise kese mutlaka görülmelidir; görülmemesi ektopik gebeliği düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Önemli bir bulgudur.",
+      "B": "Bu düzeyde kese görülmelidir.",
+      "C": "Kese görülürdü; bu nedenle doğru seçenek değildir.",
+      "D": "Mol yaygın ekojenite yapar.",
+      "E": "Doğru: ektopik gebelik düşünülmelidir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Erken gebelik kanamasında ayırıcı tanıyı yapabilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q34",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Postkoital veya temas kanamasında düşünülmesi gereken nedenler arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "Mol gebelik",
+      "B": "Missed abortus",
+      "C": "Servikal polip",
+      "D": "Ektopik gebelik",
+      "E": "Subkoryonik hematom"
+     },
+     "dogru": "C",
+     "aciklama": "Postkoital kanamada servisit, servikal polip, ektropion, displazi veya travma düşünülmelidir.",
+     "sik_aciklamalari": {
+      "A": "Uterin nedendir; bu nedenle doğru seçenek değildir.",
+      "B": "Uterin nedendir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: servikal kaynaklı nedendir.",
+      "D": "Tubal nedendir; bu nedenle doğru seçenek değildir.",
+      "E": "Uterin nedendir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q35",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Gebelikte kanama, beklenenden büyük uterus, çok yüksek β-hCG ve hiperemezis gravidarumla başvuran hastada en olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Gestasyonel trofoblastik hastalık",
+      "B": "Abortus imminens",
+      "C": "Ektopik gebelik",
+      "D": "Servikal polip",
+      "E": "Komplet abortus"
+     },
+     "dogru": "A",
+     "aciklama": "GTH'de USG'de yaygın karışık ekojenik patern ve teka-lutein kistleri görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: GTH tablosudur.",
+      "B": "hCG bu kadar yüksek değildir.",
+      "C": "Uterus büyümez; bu nedenle doğru seçenek değildir.",
+      "D": "hCG artışı yapmaz; bu nedenle doğru seçenek değildir.",
+      "E": "Uterus küçüktür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q36",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Erken gebelik kanamasının ayırıcı tanısı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Subkoryonik hematom vajinal kanamayla seyreder",
+      "B": "Ektopik gebelik ayırıcı tanının önemli bir parçasıdır",
+      "C": "Kanama uterus dışından da kaynaklanabilir",
+      "D": "Spekulum muayenesi yapılmalıdır",
+      "E": "Erken gebelik kanamalarının tamamı uterin kaynaklıdır"
+     },
+     "dogru": "E",
+     "aciklama": "Serviks ve vajen patolojileri de kanama yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): uterus dışı kaynaklar vardır."
+     },
+     "bilgi": [
+      25,
+      27
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "Erken gebelik kaybında yönetim seçeneklerini bilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q37",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Erken gebelik kaybında medikal tedavide kullanılan prostaglandin E1 analoğu hangisidir?",
+     "secenekler": {
+      "A": "Misoprostol",
+      "B": "Mifepriston",
+      "C": "Oksitosin",
+      "D": "Metotreksat",
+      "E": "Progesteron"
+     },
+     "dogru": "A",
+     "aciklama": "Medikal tedavide misoprostol (PGE1) ve mifepriston (antiprogesteron) kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: PGE1 analoğudur.",
+      "B": "Antiprogesterondur; bu nedenle doğru seçenek değildir.",
+      "C": "Uterotonik hormondur; bu bağlamda verilmemiştir.",
+      "D": "Ektopik gebelikte kullanılır.",
+      "E": "Gebeliği destekler; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q38",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Erken gebelik kaybında yönetim seçenekleri hangileridir?",
+     "secenekler": {
+      "A": "Bekleme-takip, medikal ve cerrahi (D&C, vakum aspirasyon)",
+      "B": "Yalnızca histerektomi",
+      "C": "Yalnızca antibiyotik",
+      "D": "Yalnızca progesteron",
+      "E": "Yönetim gerekmez"
+     },
+     "dogru": "A",
+     "aciklama": "Seçim hastanın durumuna ve tercihine göre yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: yönetim seçenekleridir.",
+      "B": "Uygun değildir; bu nedenle doğru seçenek değildir.",
+      "C": "Yetersizdir; bu nedenle doğru seçenek değildir.",
+      "D": "Kayıp sonrası uygun değildir.",
+      "E": "Yönetim gerekir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q39",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Mifepristonun etki mekanizması hangisidir?",
+     "secenekler": {
+      "A": "Antiprogesteron",
+      "B": "Prostaglandin E1 analoğu",
+      "C": "Östrojen agonisti",
+      "D": "Oksitosin antagonisti",
+      "E": "Folat antagonisti"
+     },
+     "dogru": "A",
+     "aciklama": "Mifepriston antiprogesteron, misoprostol PGE1 analoğudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: mekanizmadır.",
+      "B": "Misoprostolün mekanizmasıdır.",
+      "C": "Yanlıştır; bu nedenle doğru seçenek değildir.",
+      "D": "Yanlıştır; bu nedenle doğru seçenek değildir.",
+      "E": "Metotreksatın mekanizmasıdır."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 14,
+   "metin": "Tekrarlayan gebelik kaybının tanımını, etiyolojisini ve değerlendirmesini bilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q40",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "ASRM'ye göre tekrarlayan gebelik kaybı tanımı hangisidir?",
+     "secenekler": {
+      "A": "İki veya daha fazla klinik gebelik kaybı",
+      "B": "Tek gebelik kaybı",
+      "C": "Beş ardışık kayıp",
+      "D": "Yalnızca ölü doğum",
+      "E": "Ektopik gebelikler dahil tek kayıp"
+     },
+     "dogru": "A",
+     "aciklama": "ASRM ≥2 kaybı, RCOG ardışık ≥3 kaybı tanımlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ASRM tanımıdır.",
+      "B": "Yeterli değildir; bu nedenle doğru seçenek değildir.",
+      "C": "Tanım değildir; bu nedenle doğru seçenek değildir.",
+      "D": "Tanım değildir; bu nedenle doğru seçenek değildir.",
+      "E": "Ektopik hariçtir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q41",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Tekrarlayan gebelik kaybının kabul edilen etiyolojileri arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "Antifosfolipid antikor sendromu",
+      "B": "Miyopi",
+      "C": "Saç dökülmesi",
+      "D": "Akut sistit",
+      "E": "Grip aşısı"
+     },
+     "dogru": "A",
+     "aciklama": "Kabul edilenler parental kromozom anomalisi, tedavisiz hipotiroidi, kontrolsüz DM, uterin anomaliler ve APS'dir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kabul edilen nedendir.",
+      "B": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "C": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "D": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "E": "İlgisizdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q42",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Tekrarlayan gebelik kaybında önerilen değerlendirme ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Maternal ve paternal karyotip yapılır",
+      "B": "Lupus antikoagülan ve antikardiyolipin antikor bakılır",
+      "C": "TSH, HbA1c ve prolaktin değerlendirilir",
+      "D": "Uterin anatomi HSG/histeroskopi ile incelenir",
+      "E": "Uygun değerlendirmeyle tüm olgularda neden bulunur"
+     },
+     "dogru": "E",
+     "aciklama": "Değerlendirme sonrası olguların %33'ünden fazlası açıklanamayan kalır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): birçok olgu açıklanamaz."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 15,
+   "metin": "Alloimmünizasyon ve Rh D immün globulin uygulamasını bilmek",
+   "sorular": [
+    {
+     "id": "k1-61-q43",
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "Rh uyuşmazlığı olan gebeliklerde alloimmünizasyonu önlemek için uygulanan nedir?",
+     "secenekler": {
+      "A": "Rh D immün globulin",
+      "B": "Demir takviyesi",
+      "C": "Folik asit",
+      "D": "Kortikosteroid",
+      "E": "Antibiyotik"
+     },
+     "dogru": "A",
+     "aciklama": "Rh D immün globulin alloimmünizasyonu önler.",
+     "sik_aciklamalari": {
+      "A": "Doğru: uygulanan profilaksidir.",
+      "B": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "C": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "D": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "E": "İlgisizdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q44",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "İlk trimester kanamasıyla başvuran gebede Rh tayininin yapılma gerekçesi hangisidir?",
+     "secenekler": {
+      "A": "Rh negatif annede alloimmünizasyonu önlemek için Rh D immün globulin gereksinimini belirlemek",
+      "B": "Gebelik haftasını hesaplamak",
+      "C": "Enfeksiyonu saptamak",
+      "D": "Ektopik gebeliği kesin tanımak",
+      "E": "Hiçbir gerekçesi yoktur"
+     },
+     "dogru": "A",
+     "aciklama": "İlk başvuruda kan grubu ve Rh istenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: gerekçedir; doğru yanıttır.",
+      "B": "CRL ile hesaplanır; bu nedenle doğru seçenek değildir.",
+      "C": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "D": "Tek başına tanı koydurmaz.",
+      "E": "Gerekçesi vardır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      21,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-q45",
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "Rh D immün globulin uygulaması hangi anne-baba kombinasyonunda alloimmünizasyon riskini önlemeye yöneliktir?",
+     "secenekler": {
+      "A": "Rh negatif anne, Rh pozitif fetüs",
+      "B": "Rh pozitif anne, Rh negatif fetüs",
+      "C": "Her ikisi Rh pozitif",
+      "D": "Her ikisi Rh negatif",
+      "E": "Kan grubundan bağımsız"
+     },
+     "dogru": "A",
+     "aciklama": "Rh negatif annenin Rh pozitif fetal eritrositlere karşı duyarlanması önlenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: risk kombinasyonudur.",
+      "B": "Risk oluşturmaz; bu nedenle doğru seçenek değildir.",
+      "C": "Uyuşmazlık yoktur; bu nedenle doğru seçenek değildir.",
+      "D": "Uyuşmazlık yoktur; bu nedenle doğru seçenek değildir.",
+      "E": "Kan grubuna bağlıdır."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 45,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T22:56:07"
+}

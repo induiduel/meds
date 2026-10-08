@@ -37,6 +37,7 @@ export type AppRoute =
   | 'test_cikmis'
   | 'tester_ozet'
   | 'ornek_sorular'
+  | 'kazanimlar'
   | 'datacore';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
@@ -51,6 +52,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   test_cikmis: '/test/cikmis',
   tester_ozet: '/tester/ozet',
   ornek_sorular: '/ornek-sorular',
+  kazanimlar: '/kazanimlar',
   datacore: '/veri',
   leaderboard: '/siralama',
   notes: '/notlar',
@@ -76,6 +78,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   test_cikmis: 'Test Edilen Çıkmış Sorular (Faz 14 İnceleme)',
   tester_ozet: '2026-2027 Ders Notları Test Laboratuvarı',
   ornek_sorular: 'Örnek sorular',
+  kazanimlar: 'Kazanımlar',
   datacore: 'Veri Merkezi (Core v2)',
   leaderboard: 'Sıralama',
   notes: 'Ders notları',
@@ -107,7 +110,15 @@ const ALIASES: Record<string, AppRoute> = {
   'ezber-kartlari': 'flashcards',
   questions: 'questions',
   havuz: 'questions',
+  ornek_sorular: 'ornek_sorular',
+  'ornek-sorular': 'ornek_sorular',
+  kazanimlar: 'kazanimlar',
+  kazanim: 'kazanimlar',
+  mufredat: 'kazanimlar',
+  curriculum: 'kazanimlar',
   past_exams: 'past_exams',
+  'past-exams': 'past_exams',
+  cikmis: 'past_exams',
   'cikmis-sorular': 'past_exams',
   matrix: 'matrix',
   leaderboard: 'leaderboard',
@@ -138,7 +149,7 @@ export interface ParsedRoute {
 /** Strips a deployment prefix such as /meds so the same build works under a sub-path. */
 const stripBase = (pathname: string) => pathname.replace(/^\/meds(?=\/|$)/, '') || '/';
 
-export const parseLocation = (loc: Pick<Location, 'pathname' | 'hash'> = window.location): ParsedRoute => {
+export const parseLocation = (loc: Pick<Location, 'pathname' | 'hash' | 'search'> = typeof window !== 'undefined' ? window.location : { pathname: '/', hash: '', search: '' }): ParsedRoute => {
   const hash = decodeURIComponent(loc.hash.replace(/^#\/?/, ''));
   const cleanPath = stripBase(loc.pathname);
 
@@ -150,6 +161,21 @@ export const parseLocation = (loc: Pick<Location, 'pathname' | 'hash'> = window.
   if (cleanPath === '/tester/ozet' || cleanPath.startsWith('/tester/ozet/')) {
     const extra = cleanPath.replace(/^\/tester\/ozet\/?/, '');
     return { route: 'tester_ozet', param: extra || undefined };
+  }
+
+  // /cikmis/<questionId> doğrudan soru rota desteği
+  if (cleanPath.startsWith('/cikmis/')) {
+    const extra = cleanPath.replace(/^\/cikmis\/?/, '');
+    return { route: 'past_exams', param: extra || undefined };
+  }
+
+  // ?questionId=... URL sorgu parametresi desteği
+  if (loc.search) {
+    try {
+      const sp = new URLSearchParams(loc.search);
+      const qId = sp.get('questionId');
+      if (qId) return { route: 'past_exams', param: qId };
+    } catch {}
   }
 
   const segs = cleanPath.split('/').filter(Boolean).map(decodeURIComponent);

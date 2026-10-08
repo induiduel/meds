@@ -1,9 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Search, ArrowUp, ArrowDown, Columns3, Download, X, Trash2, CheckCircle2, Copy, RefreshCw, ChevronDown } from 'lucide-react';
+import { Search, ArrowUp, ArrowDown, Columns3, Download, X, Trash2, CheckCircle2, Copy, RefreshCw, ChevronDown, Save, RotateCcw, Sparkles, AlertTriangle, FileJson, Check } from 'lucide-react';
 import { Committee, QuestionItem } from '../../types';
 import { ApiService } from '../../services/api';
 import { toast } from '../ui/Toast';
 import { Seg, SearchBox, EmptyState, ConfirmButton, Drawer } from './consoleUi';
+import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
 
 /**
  * v3 "Tüm veriler": one sortable table for every dataset the site keeps.
@@ -147,8 +148,8 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
         label: 'Özetler',
         load: async () => {
           const mod: any = await import('../../data/lectureSummariesCatalog.json');
-          const v = mod.default || mod;
-          return (Array.isArray(v) ? v : Object.values(v)) as Row[];
+          const v = mod ? (mod.default || mod) : [];
+          return (Array.isArray(v) ? v : Object.values(v || {})) as Row[];
         },
         idOf: (r) => r.id,
         defaultSort: { key: 'kurul', dir: 1 },
@@ -177,6 +178,14 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
   const [openId, setOpenId] = useState<string | null>(null);
   const [limit, setLimit] = useState(100);
   const [busy, setBusy] = useState(false);
+
+  // Düzenleme durumu (Form & JSON)
+  const [editDraft, setEditDraft] = useState<Row | null>(null);
+  const [jsonText, setJsonText] = useState<string>('');
+  const [jsonError, setJsonError] = useState<string | null>(null);
+  const [editTab, setEditTab] = useState<'form' | 'json'>('form');
+  const [savingRow, setSavingRow] = useState(false);
+  const [wizardQuestion, setWizardQuestion] = useState<QuestionItem | null>(null);
 
   const load = async () => {
     setLoading(true);
@@ -228,8 +237,190 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
   const allOnPage = shown.length > 0 && shown.every((r) => selected.includes(ds.idOf(r)));
   const openRow = openId ? rows.find((r) => ds.idOf(r) === openId) : null;
 
+  // openRow değiştiğinde düzenleme taslağını senkronize et
+  useEffect(() => {
+    if (openRow) {
+      const copy = JSON.parse(JSON.stringify(openRow));
+      setEditDraft(copy);
+      setJsonText(JSON.stringify(copy, null, 2));
+      setJsonError(null);
+      setEditTab('form');
+    } else {
+      setEditDraft(null);
+      setJsonText('');
+      setJsonError(null);
+    }
+  }, [openId, openRow]);
+
   const toggleSort = (key: string) => setSort((s) => (s.key === key ? { key, dir: s.dir === 1 ? -1 : 1 } : { key, dir: 1 }));
   const toggleRow = (id: string) => setSelected((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
+
+  // Düzenleme yardımcıları
+  const handleFormChange = (key: string, value: any) => {
+    setEditDraft((prev) => {
+      if (!prev) return null;
+      const next = { ...prev, [key]: value };
+      setJsonText(JSON.stringify(next, null, 2));
+      return next;
+    });
+  };
+
+  const handleJsonChange = (text: string) => {
+    setJsonText(text);
+    try {
+      const parsed = JSON.parse(text);
+      setEditDraft(parsed);
+      setJsonError(null);
+    } catch (e: any) {
+      setJsonError(e.message);
+    }
+  };
+
+  const handleFormatJson = () => {
+    try {
+      const parsed = JSON.parse(jsonText);
+      const formatted = JSON.stringify(parsed, null, 2);
+      setJsonText(formatted);
+      setEditDraft(parsed);
+      setJsonError(null);
+      toast.success('JSON biçimlendirildi');
+    } catch (e: any) {
+      toast.error('JSON biçimlendirilemedi', e.message);
+    }
+  };
+
+  const handleResetDraft = () => {
+    if (openRow) {
+      const copy = JSON.parse(JSON.stringify(openRow));
+      setEditDraft(copy);
+      setJsonText(JSON.stringify(copy, null, 2));
+      setJsonError(null);
+      toast.info('Değişiklikler geri alındı');
+    }
+  };
+
+  // Soru için özel düzenleme yardımcıları
+  const handleQuestionStemChange = (stem: string) => {
+    setEditDraft((prev: any) => {
+      if (!prev) return null;
+      const rec = prev.reconstruction ? { ...prev.reconstruction, stem } : undefined;
+      const next = {
+        ...prev,
+        stem,
+        ...(rec ? { reconstruction: rec } : {}),
+      };
+      setJsonText(JSON.stringify(next, null, 2));
+      return next;
+    });
+  };
+
+  const handleQuestionAnswerChange = (ans: string) => {
+    setEditDraft((prev: any) => {
+      if (!prev) return null;
+      const rec = prev.reconstruction ? { ...prev.reconstruction, correctAnswer: ans } : undefined;
+      const next = {
+        ...prev,
+        correctAnswer: ans,
+        claimedAnswer: ans,
+        ...(rec ? { reconstruction: rec } : {}),
+      };
+      setJsonText(JSON.stringify(next, null, 2));
+      return next;
+    });
+  };
+
+  const handleQuestionOptionChange = (optKey: string, text: string) => {
+    setEditDraft((prev: any) => {
+      if (!prev) return null;
+      const currentOpts = Array.isArray(prev.options) ? [...prev.options] : [];
+      const idx = currentOpts.findIndex((o: any) => o.key === optKey);
+      if (idx !== -1) {
+        currentOpts[idx] = { ...currentOpts[idx], text };
+      } else {
+        currentOpts.push({ key: optKey, text });
+      }
+
+      const rec = prev.reconstruction ? { ...prev.reconstruction } : null;
+      if (rec && Array.isArray(rec.options)) {
+        const rIdx = rec.options.findIndex((o: any) => o.key === optKey);
+        if (rIdx !== -1) {
+          rec.options = [...rec.options];
+          rec.options[rIdx] = { ...rec.options[rIdx], text };
+        } else {
+          rec.options = [...rec.options, { key: optKey, text }];
+        }
+      }
+
+      const next = {
+        ...prev,
+        options: currentOpts,
+        ...(rec ? { reconstruction: rec } : {}),
+      };
+      setJsonText(JSON.stringify(next, null, 2));
+      return next;
+    });
+  };
+
+  const handleQuestionExplanationChange = (explanation: string) => {
+    setEditDraft((prev: any) => {
+      if (!prev) return null;
+      const rec = prev.reconstruction ? { ...prev.reconstruction, explanation } : undefined;
+      const next = {
+        ...prev,
+        explanation,
+        clinicalExplanation: explanation,
+        ...(rec ? { reconstruction: rec } : {}),
+      };
+      setJsonText(JSON.stringify(next, null, 2));
+      return next;
+    });
+  };
+
+  // Veriyi kaydetme
+  const saveRow = async () => {
+    if (!editDraft || !openRow) return;
+    setSavingRow(true);
+    try {
+      let payload = editDraft;
+      if (editTab === 'json') {
+        try {
+          payload = JSON.parse(jsonText);
+        } catch (e: any) {
+          toast.error('Geçersiz JSON', e.message || 'Lütfen JSON sözdizimini düzeltin.');
+          setSavingRow(false);
+          return;
+        }
+      }
+
+      const id = ds.idOf(openRow);
+
+      if (ds.id === 'questions') {
+        await ApiService.adminUpdateQuestion(adminEmail, id, payload as Partial<QuestionItem>);
+        await onRefreshData();
+      } else if (ds.id === 'past') {
+        await ApiService.adminUpdatePastQuestion(adminEmail, id, payload);
+        await load();
+      } else if (ds.id === 'users') {
+        await ApiService.adminUpdateUser(adminEmail, id, payload);
+        await load();
+      } else if (ds.id === 'summaries') {
+        await ApiService.adminUpdateSummary(adminEmail, id, payload);
+        await load();
+      } else {
+        // decks, glossary veya genel veri kümesi
+        setRows((prev) => prev.map((r) => (ds.idOf(r) === id ? { ...r, ...payload } : r)));
+      }
+
+      toast.success('Kaydedildi', 'Tüm değişiklikler başarıyla uygulandı.');
+      setRows((prev) => prev.map((r) => (ds.idOf(r) === id ? { ...r, ...payload } : r)));
+      setEditDraft({ ...payload });
+      setJsonText(JSON.stringify(payload, null, 2));
+    } catch (e: any) {
+      toast.error('Kaydedilemedi', e?.message || 'Bilinmeyen bir hata oluştu.');
+    } finally {
+      setSavingRow(false);
+    }
+  };
 
   const exportCsv = (onlySelected: boolean) => {
     const src = onlySelected ? visible.filter((r) => selected.includes(ds.idOf(r))) : visible;
@@ -269,7 +460,7 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
       else await load();
     } finally {
       setBusy(false);
-      }
+    }
   };
 
   return (
@@ -383,48 +574,479 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
       <Drawer
         open={!!openRow}
         onClose={() => setOpenId(null)}
-        label="Kayıt ayrıntısı"
-        title={openRow ? String(ds.columns[0].value(openRow)).slice(0, 80) || 'Kayıt' : ''}
+        wide
+        label="Veri Düzenleme"
+        title={
+          openRow ? (
+            <div className="flex items-center gap-2 min-w-0 pr-2">
+              <span className="font-semibold text-ink truncate">
+                {String(ds.columns[0]?.value(openRow) || ds.idOf(openRow)).slice(0, 45)}
+              </span>
+              <span className="text-[11.5px] px-2 py-0.5 rounded-full bg-accent-soft text-accent font-medium shrink-0">
+                {ds.label}
+              </span>
+            </div>
+          ) : ''
+        }
+        head={
+          <div className="flex items-center gap-1 bg-surface-2 p-1 rounded-lg border border-line-soft">
+            <button
+              type="button"
+              onClick={() => {
+                setEditTab('form');
+                if (editDraft) setJsonText(JSON.stringify(editDraft, null, 2));
+              }}
+              className={`px-3 py-1 text-[12px] font-medium rounded-md transition-all ${
+                editTab === 'form' ? 'bg-white shadow-xs text-ink font-semibold' : 'text-ink-3 hover:text-ink'
+              }`}
+            >
+              Form Düzenleyici
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setEditTab('json');
+                if (editDraft) setJsonText(JSON.stringify(editDraft, null, 2));
+              }}
+              className={`px-3 py-1 text-[12px] font-medium rounded-md transition-all ${
+                editTab === 'json' ? 'bg-white shadow-xs text-ink font-semibold' : 'text-ink-3 hover:text-ink'
+              }`}
+            >
+              Tüm Alanlar (JSON)
+            </button>
+          </div>
+        }
         foot={
-          openRow && (
-            <>
-              <button
-                type="button"
-                onClick={() => {
-                  navigator.clipboard?.writeText(JSON.stringify(openRow, null, 2)).then(
-                    () => toast.success('Kopyalandı', 'Kaydın tamamı JSON olarak panoda'),
-                    () => toast.error('Kopyalanamadı'),
-                  );
-                }}
-                className="ms-btn"
-              >
-                <Copy /> JSON
-              </button>
-              {ds.canVerify && openRow.status !== 'completed' && (
-                <button type="button" disabled={busy} onClick={() => void runBulk('verify', [ds.idOf(openRow)])} className="ms-btn is-ok">
-                  <CheckCircle2 /> Doğrula
+          openRow && editDraft && (
+            <div className="flex flex-wrap items-center justify-between gap-2 w-full">
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  disabled={savingRow}
+                  onClick={() => void saveRow()}
+                  className="ms-btn is-ok inline-flex items-center gap-1.5 font-semibold shadow-xs"
+                >
+                  <Save className={`w-4 h-4 ${savingRow ? 'animate-spin' : ''}`} />
+                  {savingRow ? 'Kaydediliyor…' : 'Kaydet'}
                 </button>
-              )}
-              {ds.canDelete && (
-                <ConfirmButton icon={Trash2} className="ms-btn is-danger" confirmLabel="Emin misin? Sil" busy={busy} onConfirm={() => runBulk('delete', [ds.idOf(openRow)])}>
-                  Sil
-                </ConfirmButton>
-              )}
-            </>
+                <button
+                  type="button"
+                  disabled={savingRow}
+                  onClick={handleResetDraft}
+                  className="ms-btn is-ghost text-ink-3 hover:text-ink"
+                  title="İlk haline dön"
+                >
+                  <RotateCcw className="w-4 h-4" /> Sıfırla
+                </button>
+              </div>
+
+              <div className="flex items-center gap-1.5">
+                {ds.id === 'questions' && (
+                  <button
+                    type="button"
+                    onClick={() => setWizardQuestion(editDraft as QuestionItem)}
+                    className="ms-btn is-ghost text-accent hover:bg-accent-soft text-[12.5px]"
+                    title="Gelişmiş soru sihirbazında düzenle"
+                  >
+                    <Sparkles className="w-3.5 h-3.5" /> Sihirbaz
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => {
+                    navigator.clipboard?.writeText(jsonText).then(
+                      () => toast.success('Kopyalandı', 'JSON panoya kopyalandı'),
+                      () => toast.error('Kopyalanamadı'),
+                    );
+                  }}
+                  className="ms-btn is-ghost is-sm"
+                  title="JSON Kopyala"
+                >
+                  <Copy className="w-3.5 h-3.5" />
+                </button>
+                {ds.canVerify && openRow.status !== 'completed' && (
+                  <button
+                    type="button"
+                    disabled={busy}
+                    onClick={() => void runBulk('verify', [ds.idOf(openRow)])}
+                    className="ms-btn is-sm is-ghost text-emerald-600 hover:bg-emerald-50"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5" /> Doğrula
+                  </button>
+                )}
+                {ds.canDelete && (
+                  <ConfirmButton
+                    icon={Trash2}
+                    className="ms-btn is-sm is-danger"
+                    confirmLabel="Emin misin? Sil"
+                    busy={busy}
+                    onConfirm={() => runBulk('delete', [ds.idOf(openRow)])}
+                  >
+                    Sil
+                  </ConfirmButton>
+                )}
+              </div>
+            </div>
           )
         }
       >
-        {openRow && (
-          <dl className="ms-kv">
-            {ds.columns.map((c) => (
-              <React.Fragment key={c.key}>
-                <dt>{c.label}</dt>
-                <dd className={c.mono ? 'font-mono' : ''}>{c.render ? c.render(openRow) : String(c.value(openRow) || '—')}</dd>
-              </React.Fragment>
-            ))}
-          </dl>
+        {openRow && editDraft && (
+          <div className="flex flex-col gap-4">
+            {editTab === 'json' ? (
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center justify-between text-[12px] text-ink-3 bg-surface-2 p-2.5 rounded-lg border border-line-soft">
+                  <span>Bu verinin tamamını (alt nesneler, diziler, özel alanlar) doğrudan JSON olarak düzenleyebilirsiniz.</span>
+                  <button
+                    type="button"
+                    onClick={handleFormatJson}
+                    className="ms-btn is-sm is-ghost text-accent hover:bg-white inline-flex items-center gap-1 font-medium shrink-0 ml-2"
+                  >
+                    <FileJson className="w-3.5 h-3.5" /> Biçimlendir
+                  </button>
+                </div>
+                {jsonError && (
+                  <div className="flex items-start gap-2 p-2.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 text-[12px]">
+                    <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
+                    <div>
+                      <b className="font-semibold">JSON Sözdizimi Hatası:</b> {jsonError}
+                    </div>
+                  </div>
+                )}
+                <textarea
+                  value={jsonText}
+                  onChange={(e) => handleJsonChange(e.target.value)}
+                  spellCheck={false}
+                  rows={24}
+                  className={`w-full font-mono text-[12.5px] leading-relaxed p-3.5 rounded-lg border bg-surface-1 text-ink focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent ${
+                    jsonError ? 'border-rose-400 focus:ring-rose-400' : 'border-line'
+                  }`}
+                />
+              </div>
+            ) : (
+              <div className="flex flex-col gap-4">
+                {(ds.id === 'questions' || ds.id === 'past') && (
+                  <>
+                    <div className="flex flex-col gap-1.5">
+                      <label className="text-[12.5px] font-semibold text-ink flex items-center justify-between">
+                        <span>Soru Kökü / Metni</span>
+                        <span className="text-[11.5px] text-ink-3 font-normal">Markdown formatı geçerlidir</span>
+                      </label>
+                      <textarea
+                        value={stemOf(editDraft)}
+                        onChange={(e) => handleQuestionStemChange(e.target.value)}
+                        rows={4}
+                        placeholder="Soru metnini girin..."
+                        className="w-full text-[13.5px] leading-relaxed p-3 rounded-lg border border-line bg-surface-1 focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                      <div>
+                        <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Soru No</label>
+                        <input
+                          type="number"
+                          value={editDraft.questionNumber ?? ''}
+                          onChange={(e) => handleFormChange('questionNumber', e.target.value === '' ? 0 : Number(e.target.value))}
+                          className="w-full h-9 px-2.5 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Ders / Branş</label>
+                        <input
+                          type="text"
+                          value={editDraft.discipline || ''}
+                          onChange={(e) => handleFormChange('discipline', e.target.value)}
+                          placeholder="Örn: Patoloji"
+                          className="w-full h-9 px-2.5 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Konu Başlığı</label>
+                        <input
+                          type="text"
+                          value={editDraft.topic || ''}
+                          onChange={(e) => handleFormChange('topic', e.target.value)}
+                          placeholder="Örn: Hücre Zedelenmesi"
+                          className="w-full h-9 px-2.5 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Durum</label>
+                        <select
+                          value={editDraft.status || 'gathering'}
+                          onChange={(e) => handleFormChange('status', e.target.value)}
+                          className="w-full h-9 px-2 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        >
+                          <option value="completed">Doğrulandı</option>
+                          <option value="gathering">Taslak</option>
+                          <option value="empty">Boş</option>
+                        </select>
+                      </div>
+                      {ds.id === 'past' && (
+                        <>
+                          <div>
+                            <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Sınav Yılı</label>
+                            <input
+                              type="text"
+                              value={editDraft.examYear || ''}
+                              onChange={(e) => handleFormChange('examYear', e.target.value)}
+                              placeholder="Örn: 2024-2025"
+                              className="w-full h-9 px-2.5 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                            />
+                          </div>
+                          <div>
+                            <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Kurul Kodu</label>
+                            <input
+                              type="text"
+                              value={editDraft.committeeId || ''}
+                              onChange={(e) => handleFormChange('committeeId', e.target.value)}
+                              placeholder="Örn: donem3-kurul1"
+                              className="w-full h-9 px-2.5 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                            />
+                          </div>
+                        </>
+                      )}
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between">
+                        <label className="text-[12.5px] font-semibold text-ink">Şıklar ve Doğru Cevap</label>
+                        <span className="text-[11.5px] text-ink-3">Doğru şık için harfe tıklayın</span>
+                      </div>
+                      {['A', 'B', 'C', 'D', 'E'].map((letter) => {
+                        const currentOpt =
+                          (editDraft.reconstruction?.options || editDraft.options || []).find((o: any) => o.key === letter);
+                        const currentAnswer =
+                          editDraft.reconstruction?.correctAnswer || editDraft.correctAnswer || editDraft.claimedAnswer;
+                        const isCorrect = currentAnswer === letter;
+                        return (
+                          <div
+                            key={letter}
+                            className={`flex items-start gap-2 p-2 rounded-lg border transition-colors ${
+                              isCorrect ? 'bg-emerald-50/70 border-emerald-300' : 'bg-surface-1 border-line-soft'
+                            }`}
+                          >
+                            <button
+                              type="button"
+                              onClick={() => handleQuestionAnswerChange(letter)}
+                              className={`w-7 h-7 rounded-md font-bold text-[12px] flex items-center justify-center shrink-0 transition-colors ${
+                                isCorrect ? 'bg-emerald-600 text-white shadow-xs' : 'bg-surface-2 text-ink-3 hover:bg-emerald-100 hover:text-emerald-700'
+                              }`}
+                              title={isCorrect ? 'Doğru cevap seçili' : 'Doğru cevap olarak işaretle'}
+                            >
+                              {letter}
+                            </button>
+                            <input
+                              type="text"
+                              value={currentOpt?.text || ''}
+                              onChange={(e) => handleQuestionOptionChange(letter, e.target.value)}
+                              placeholder={`${letter} şıkkı metni...`}
+                              className="flex-1 min-w-0 bg-transparent text-[13px] border-none outline-none py-1 text-ink"
+                            />
+                            {isCorrect && (
+                              <span className="text-[11px] font-medium text-emerald-700 px-1.5 py-0.5 bg-emerald-100/80 rounded shrink-0">
+                                Doğru
+                              </span>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    <div className="flex flex-col gap-1.5">
+                      <label className="text-[12.5px] font-semibold text-ink">Çözüm ve Tıbbi Açıklama</label>
+                      <textarea
+                        value={editDraft.reconstruction?.explanation || editDraft.explanation || editDraft.clinicalExplanation || ''}
+                        onChange={(e) => handleQuestionExplanationChange(e.target.value)}
+                        rows={4}
+                        placeholder="Sorunun ayrıntılı fizyopatolojik gerekçesi ve şık analizleri..."
+                        className="w-full text-[13px] leading-relaxed p-3 rounded-lg border border-line bg-surface-1 focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                      />
+                    </div>
+                  </>
+                )}
+
+                {ds.id === 'users' && (
+                  <div className="flex flex-col gap-3">
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Ad Soyad</label>
+                      <input
+                        type="text"
+                        value={editDraft.displayName || ''}
+                        onChange={(e) => handleFormChange('displayName', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">E-posta</label>
+                      <input
+                        type="email"
+                        value={editDraft.email || ''}
+                        onChange={(e) => handleFormChange('email', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Öğrenci Numarası</label>
+                      <input
+                        type="text"
+                        value={editDraft.studentNumber || ''}
+                        onChange={(e) => handleFormChange('studentNumber', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Rol</label>
+                      <select
+                        value={editDraft.role || 'student'}
+                        onChange={(e) => handleFormChange('role', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      >
+                        <option value="student">Öğrenci</option>
+                        <option value="admin">Yönetici</option>
+                      </select>
+                    </div>
+                  </div>
+                )}
+
+                {ds.id === 'glossary' && (
+                  <div className="flex flex-col gap-3">
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Terim</label>
+                      <input
+                        type="text"
+                        value={editDraft.term || ''}
+                        onChange={(e) => handleFormChange('term', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Kategori</label>
+                      <input
+                        type="text"
+                        value={editDraft.category || ''}
+                        onChange={(e) => handleFormChange('category', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Tanım</label>
+                      <textarea
+                        rows={4}
+                        value={editDraft.definition || ''}
+                        onChange={(e) => handleFormChange('definition', e.target.value)}
+                        className="w-full p-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Klinik Spot (Pearls)</label>
+                      <textarea
+                        rows={3}
+                        value={editDraft.clinicalPearls || ''}
+                        onChange={(e) => handleFormChange('clinicalPearls', e.target.value)}
+                        className="w-full p-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {ds.id === 'summaries' && (
+                  <div className="flex flex-col gap-3">
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Başlık</label>
+                      <input
+                        type="text"
+                        value={editDraft.title || ''}
+                        onChange={(e) => handleFormChange('title', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Ders / Branş</label>
+                      <input
+                        type="text"
+                        value={editDraft.discipline || ''}
+                        onChange={(e) => handleFormChange('discipline', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Kurul</label>
+                      <input
+                        type="number"
+                        value={editDraft.kurul || ''}
+                        onChange={(e) => handleFormChange('kurul', Number(e.target.value))}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Dosya Adı</label>
+                      <input
+                        type="text"
+                        value={editDraft.fileName || ''}
+                        onChange={(e) => handleFormChange('fileName', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {ds.id === 'decks' && (
+                  <div className="flex flex-col gap-3">
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Ders Başlığı</label>
+                      <input
+                        type="text"
+                        value={editDraft.title || ''}
+                        onChange={(e) => handleFormChange('title', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Branş</label>
+                      <input
+                        type="text"
+                        value={editDraft.discipline || ''}
+                        onChange={(e) => handleFormChange('discipline', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Öğretim Üyesi (Hoca)</label>
+                      <input
+                        type="text"
+                        value={editDraft.instructor || ''}
+                        onChange={(e) => handleFormChange('instructor', e.target.value)}
+                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         )}
       </Drawer>
+
+      {wizardQuestion && (
+        <AdminEditQuestionModal
+          isOpen
+          question={wizardQuestion}
+          adminEmail={adminEmail}
+          onClose={() => setWizardQuestion(null)}
+          onSaveQuestion={async (updated) => {
+            const id = wizardQuestion.id;
+            await ApiService.adminUpdateQuestion(adminEmail, id, updated);
+            setWizardQuestion(null);
+            toast.success('Soru güncellendi');
+            await onRefreshData();
+            if (openRow && ds.idOf(openRow) === id) {
+              setEditDraft((prev) => ({ ...prev, ...updated }));
+              setJsonText(JSON.stringify({ ...openRow, ...updated }, null, 2));
+            }
+          }}
+        />
+      )}
     </div>
   );
 };

@@ -180,7 +180,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
         </div>
       </header>
 
-      <main className="flex-1 w-full max-w-[720px] mx-auto px-4 sm:px-8 pt-5 sm:pt-10 pb-32 flex flex-col gap-4 sm:gap-5">
+      <main className="flex-1 w-full max-w-[960px] mx-auto px-4 sm:px-8 pt-5 sm:pt-10 pb-32 flex flex-col gap-4 sm:gap-5">
         <div className="flex items-center justify-between gap-3 text-[13px] text-ink-3">
           <span>
             <span className="font-mono font-semibold text-ink">Soru {position}</span>
@@ -266,7 +266,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
 
       {/* Sticky bottom bar: navigator · previous · next */}
       <div className="fixed bottom-0 left-0 right-0 z-20 bg-white/95 backdrop-blur border-t border-line pb-[max(env(safe-area-inset-bottom),10px)] pt-2.5">
-        <div className="max-w-[720px] mx-auto px-4 sm:px-8 flex items-center gap-2">
+        <div className="max-w-[960px] mx-auto px-4 sm:px-8 flex items-center gap-2">
           <button
             type="button"
             onClick={() => setNavOpen(true)}

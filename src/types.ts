@@ -205,6 +205,45 @@ export interface QuestionItem {
   };
   advancedQuestion?: any;
   hasAdvancedVersion?: boolean;
+  denetleyiciOnayi?: boolean;
+  denetleyici_onayi?: boolean;
+  surum?: 'denetleyici' | 'orijinal' | string;
+  aktifSurum?: 'denetleyici' | 'orijinal' | string;
+  denetleyiciSurumu?: {
+    stem?: string;
+    options?: any[];
+    correctAnswer?: string;
+    claimedAnswer?: string;
+    dogru_cevap_metni?: string;
+    explanation?: string;
+    tibbi_aciklama?: string;
+    sik_analizi?: Record<string, string>;
+    cevap_gerekcesi?: string;
+    referans_kaynaklar?: string[];
+    degisiklik_notu?: string;
+    discipline?: string;
+    topic?: string;
+    committeeId?: string;
+    onayTarihi?: string;
+    denetleyen?: string;
+  };
+  eskiSurum?: {
+    stem?: string;
+    options?: any[];
+    correctAnswer?: string;
+    claimedAnswer?: string;
+    explanation?: string;
+    discipline?: string;
+    topic?: string;
+    committeeId?: string;
+    examYear?: string;
+    isAmbiguous?: boolean;
+    status?: string;
+  };
+  sik_analizi?: Record<string, string>;
+  tibbi_aciklama?: string;
+  cevap_gerekcesi?: string;
+  referans_kaynaklar?: string[];
   createdAt: string;
   updatedAt: string;
 }
@@ -221,14 +260,15 @@ export interface UserProfile {
 
 export interface AdminNotification {
   id: string;
-  type: 'unassigned_question' | 'new_fragment' | 'batch_cluster_ready';
-  committeeId: string;
+  type: 'unassigned_question' | 'new_fragment' | 'batch_cluster_ready' | 'report' | 'comment' | 'test';
+  committeeId?: string;
   questionId?: string;
   title: string;
   message: string;
   author: string;
   timestamp: string;
   isRead: boolean;
+  url?: string;
 }
 
 export interface PastQuestionReviewRecord {
