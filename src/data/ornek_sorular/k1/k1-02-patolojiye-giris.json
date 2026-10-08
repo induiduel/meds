@@ -1,0 +1,1049 @@
+{
+ "id": "k1-02-patolojiye-giris",
+ "sira": 2,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Patolojiye Giriş",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-09-14",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Patolojinin tanımını, tıptaki yerini ve tarihsel gelişimini (dünyada ve Türkiye'de) açıklar.",
+   "sorular": [
+    {
+     "id": "k1-02-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"Omnis cellula e cellula\" ilkesini ortaya koyan ve 1858'de yayımladığı Cellular Pathologie ile modern patolojinin kurucusu kabul edilen bilim insanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Rudolf Virchow",
+      "B": "Aulus Cornelius Celsus",
+      "C": "Giovanni Battista Morgagni",
+      "D": "Galen",
+      "E": "Philipp Schwartz"
+     },
+     "dogru": "A",
+     "aciklama": "Virchow, tüm hastalıkların hücresel temeli olduğunu vurgulayarak hücresel patolojiyi kurmuş ve modern patolojinin kurucusu kabul edilmiştir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Virchow 1858'de Cellular Pathologie'yi yayımlamış ve 'her hücre başka bir hücreden ortaya çıkar' ilkesini ortaya koymuştur.",
+      "B": "Celsus inflamasyonun dört kardinal belirtisini tanımlamıştır.",
+      "C": "Morgagni hastalıkların organlarda yerleştiğini gösteren, patolojik anatominin kurucusudur; hücresel patolojiyi kurmamıştır.",
+      "D": "Galen inflamasyon belirtilerine fonksiyon kaybını (functio laesa) eklemiştir.",
+      "E": "Philipp Schwartz 1933 reformuyla Türkiye'ye gelip İstanbul Üniversitesi patolojik anatomi kürsüsünü yapılandıran hocadır."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Patoloji ile fizyopatoloji arasındaki ilişki ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Patoloji morfolojik-yapısal değişikliklere, fizyopatoloji fonksiyonel bozukluklara odaklanır; güncel eğilim ikisinin entegrasyonudur.",
+      "B": "Fizyopatoloji morfolojik değişiklikleri, patoloji fonksiyonel bozuklukları esas alır.",
+      "C": "Patoloji yalnızca klinik bilimlere ait uygulamalı bir daldır, temel bilim değildir.",
+      "D": "Klinik pratikte her hastalıkta belirgin morfolojik değişiklik bulunduğundan klinisyen-patolog iletişimi gerekli değildir.",
+      "E": "Patoloji yalnızca organ düzeyinde inceleme yapar; hücre ve doku düzeyi histolojinin konusudur."
+     },
+     "dogru": "A",
+     "aciklama": "Patoloji morfoloji ağırlıklı, fizyopatoloji fonksiyon ağırlıklı yaklaşır; morfolojik değişiklikler her zaman belirgin olmadığı için iki yaklaşımın ve klinik-patolog iletişiminin birleşmesi gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Ders özetinde güncel eğilimin morfolojik ve fonksiyonel bilginin entegrasyonu olduğu vurgulanır.",
+      "B": "Tanımlar ters verilmiştir.",
+      "C": "Patoloji bağımsız bir temel bilimdir; anatomi-histoloji ile klinik bilimler arasında köprü kurar.",
+      "D": "Klinik pratikte morfolojik değişiklikler belirgin olmayabilir; bu yüzden klinisyen-patolog iletişimi kritiktir.",
+      "E": "Patolojinin inceleme düzeyleri hücre, doku, organ ve tüm organizmayı kapsar."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Türkiye'de patolojinin gelişimi ile ilgili eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hamdi Suat Aknar – Darülfünun'da ilk patoloji laboratuvarı ve patoloji müzesi",
+      "B": "Philipp Schwartz – 1942'de kliniko-patolojik derslerin başlatılması",
+      "C": "Osman Nuri Aker – Papanicolaou servikal sitoloji yönteminin Türkiye'ye getirilmesi",
+      "D": "Hamdi Suat Aknar – Veba lenf nodunda fagositoz yapan retiküloendotelyal hücrelerin tarifi",
+      "E": "Şerefeddin Sabuncuoğlu – El-Kanun fi't-Tıbb'ın yazılması"
+     },
+     "dogru": "E",
+     "aciklama": "El-Kanun fi't-Tıbb İbni Sina'nın eseridir; Sabuncuoğlu ilk Türkçe tıp kitabı Cerrahiyetü'l-Haniyye'yi yazmıştır.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme. Aknar 1909'da kürsü başkanı olarak ilk laboratuvarı ve yaklaşık 1800 kavanozluk müzeyi kurmuştur.",
+      "B": "Doğru eşleştirme. Schwartz makroskopi-mikroskopi-otopsiyi eğitimin merkezine almış ve 1942'de kliniko-patolojik dersleri başlatmıştır.",
+      "C": "Doğru eşleştirme. Aker ABD'de Papanicolaou ile çalışmıştır.",
+      "D": "Doğru eşleştirme. Bu tarif Aknar'a aittir.",
+      "E": "Yanlış eşleştirme (aranan cevap). El-Kanun İbni Sina'ya, Cerrahiyetü'l-Haniyye Sabuncuoğlu'na aittir."
+     },
+     "bilgi": [
+      16,
+      17,
+      18,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "İnflamasyonun klasik kardinal belirtileri ve tarihçesi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Celsus De Medicina'da rubor, calor, dolor ve tumor belirtilerini tanımlamıştır.",
+      "B": "Fonksiyon kaybı (functio laesa) Galen tarafından beşinci belirti olarak eklenmiştir.",
+      "C": "\"Tumor\" bu bağlamda neoplaziyi değil şişliği ifade eder.",
+      "D": "Nekroz, Galen'in eklediği beşinci kardinal belirtidir.",
+      "E": "Bu beş bulgu günümüzde de inflamasyonun klasik tanımı olarak kabul edilir."
+     },
+     "dogru": "D",
+     "aciklama": "Galen'in eklediği beşinci belirti fonksiyon kaybıdır (functio laesa); nekroz kardinal belirtiler arasında yer almaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; dört belirtiyi Celsus tanımlamıştır.",
+      "B": "Doğru ifade; functio laesa Galen'e aittir.",
+      "C": "Doğru ifade; kardinal belirtilerdeki tumor, şişlik anlamındadır.",
+      "D": "Yanlış ifade (aranan cevap). Nekroz kardinal belirti değildir; beşinci belirti fonksiyon kaybıdır.",
+      "E": "Doğru ifade; beş bulgu klasik tanımı oluşturur."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Hastalık sürecinin temel öğelerini (etiyoloji, patogenez, morfoloji, fonksiyonel sonuçlar) tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-02-q05",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Bir hastalığın gelişim mekanizmasını, yani etiyolojik ajanın başlattığı ve hücresel-doku düzeyinde değişikliklere uzanan olaylar zincirini tanımlayan kavram aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Etiyoloji",
+      "B": "Morfoloji",
+      "C": "Prognoz",
+      "D": "Patogenez",
+      "E": "Epidemiyoloji"
+     },
+     "dogru": "D",
+     "aciklama": "Patogenez hastalığın gelişim mekanizmasıdır; etiyoloji ise nedenini ifade eder.",
+     "sik_aciklamalari": {
+      "A": "Etiyoloji hastalığın nedenidir (genetik veya edinsel), mekanizması değildir.",
+      "B": "Morfoloji hastalığın oluşturduğu yapısal (makroskobik-mikroskobik) değişikliklerdir.",
+      "C": "Prognoz hastalığın beklenen seyridir; hastalık sürecinin dört temel öğesinden biri değildir.",
+      "D": "Doğru. Patogenez moleküler, hücresel ve doku/organ düzeylerinde ilerleyen olaylar zinciridir.",
+      "E": "Epidemiyoloji hastalıkların toplumdaki dağılımını inceler."
+     },
+     "bilgi": [
+      3,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi hastalık etiyolojisinde genetik (intrinsik) nedenler arasında yer alır?",
+     "secenekler": {
+      "A": "İyonizan radyasyon",
+      "B": "Trizomi 21",
+      "C": "Hipoksi ve iskemik hasar",
+      "D": "Beslenme bozuklukları",
+      "E": "İlaç toksisitesi"
+     },
+     "dogru": "B",
+     "aciklama": "Genetik nedenler kalıtsal ve somatik mutasyonlar ile kromozomal anomalileri kapsar; trizomi 21'de kromozom sayısı 47'dir.",
+     "sik_aciklamalari": {
+      "A": "Radyasyon fiziksel bir etken olup edinsel (ekstrinsik) nedendir.",
+      "B": "Doğru. Trizomi 21 kromozomal anomali olarak genetik (intrinsik) nedendir.",
+      "C": "Hipoksi ve iskemik hasar edinsel nedenler arasında 'diğer' grubundadır.",
+      "D": "Beslenme bozuklukları edinsel nedendir.",
+      "E": "İlaçlar ve toksinler kimyasal ajanlar olarak edinsel nedendir."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q07",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Hastalık sürecinin öğeleri ile ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Moleküler patogenez – inflamasyon, fibrozis ve neoplazi",
+      "B": "Hücresel patogenez – sinyal yolları ve gen ekspresyonu değişikliği",
+      "C": "Doku/organ düzeyi patogenez – apoptoz, nekroz ve adaptasyon",
+      "D": "Mikroskobik morfoloji – dejenerasyon, nekroz, displazi ve stromal yanıt",
+      "E": "Fonksiyonel sonuç – organın boyutu, şekli ve rengi"
+     },
+     "dogru": "D",
+     "aciklama": "Mikroskobik morfolojik değişiklikler dejenerasyon, nekroz, displazi, neoplazi ve stromal yanıttır (inflamasyon, fibrozis, anjiyogenez).",
+     "sik_aciklamalari": {
+      "A": "İnflamasyon, fibrozis ve neoplazi doku/organ düzeyi patogenez örnekleridir.",
+      "B": "Sinyal yolları ve gen ekspresyonu moleküler düzeydir.",
+      "C": "Apoptoz, nekroz ve adaptasyon hücresel düzeydir.",
+      "D": "Doğru eşleştirme. Dejenerasyon, nekroz, displazi, neoplazi ve stromal yanıt (inflamasyon, fibrozis, anjiyogenez) mikroskobik düzeyde görülür.",
+      "E": "Boyut, şekil ve renk makroskobik morfolojik değişikliklerdir; fonksiyonel sonuçlar organ yetmezliği, hormon değişikliği ve semptomlardır."
+     },
+     "bilgi": [
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Patolojinin klinik önemini ve patoloğun konsültan rolünü açıklar.",
+   "sorular": [
+    {
+     "id": "k1-02-q08",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Özellikle neoplazilerde altın standart tanı yöntemi olarak kabul edilen inceleme aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Histopatolojik inceleme",
+      "B": "Bilgisayarlı tomografi",
+      "C": "Serum tümör belirteçleri",
+      "D": "Fizik muayene",
+      "E": "Pozitron emisyon tomografisi"
+     },
+     "dogru": "A",
+     "aciklama": "Patoloji birçok hastalıkta, özellikle neoplazilerde altın standart tanı yöntemidir; rapor tedavi kararını belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Doku tanısı (histopatoloji) neoplazilerde altın standarttır.",
+      "B": "Görüntüleme lezyonu gösterir ancak doku tanısı vermez.",
+      "C": "Tümör belirteçleri tanıyı destekler ve izlemde kullanılır, kesin tanı koydurmaz.",
+      "D": "Fizik muayene ön tanı için önemlidir, kesin tanı değildir.",
+      "E": "PET metabolik aktiviteyi gösterir; doku tanısının yerini tutmaz."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Patoloğun konsültan hekim rolü ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Patolog morfoloji, klinik, radyoloji ve tedavi seçeneklerini birlikte değerlendirir.",
+      "B": "Klinik bilgi yetersizse patolog raporu geciktirip ek bilgi isteyebilir.",
+      "C": "Ön tanı ile patoloji bulguları uyumsuzsa klinisyenle temas kurulması zorunludur.",
+      "D": "Patoloğa hastanın yaşı ve ön tanısı iletilmez; tarafsızlık için yalnızca doku gönderilir.",
+      "E": "Tümör konseyleri patolog ile klinisyen arasındaki konsültasyon yollarından biridir."
+     },
+     "dogru": "D",
+     "aciklama": "Patoloğa yaş, cinsiyet, lokalizasyon, girişim türü, radyoloji-operasyon bulguları, ön tanı ve özel sorular iletilmelidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; patolog klinisyen için konsültan hekimdir.",
+      "B": "Doğru ifade; yetersiz klinik bilgide rapor geciktirilebilir.",
+      "C": "Doğru ifade; uyumsuzlukta temas zorunludur.",
+      "D": "Yanlış ifade (aranan cevap). Klinik bilgi eksikliği tanı hatasına yol açar; yaş ve ön tanı mutlaka iletilir.",
+      "E": "Doğru ifade; tümör konseyi, telefon/yüz yüze görüşme ve yazılı ek açıklama konsültasyon yollarıdır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q10",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Meme kitlesi nedeniyle opere edilen bir hastanın cerrahi patoloji raporu, onkolojik tedavi planı açısından değerlendiriliyor.\n\nBu raporda aşağıdakilerden hangisinin bulunması beklenmez?",
+     "secenekler": {
+      "A": "Tümörün histolojik tanısı",
+      "B": "Cerrahi sınır durumu",
+      "C": "Tümör derecesi ve evrelemeye esas bulgular",
+      "D": "ER/PR ve HER2 gibi prognostik-prediktif belirteçler",
+      "E": "Kemoterapi ilaçlarının doz ve kür sayısı"
+     },
+     "dogru": "E",
+     "aciklama": "Cerrahi patoloji raporu tanı, evre-derece, cerrahi sınır ve prognostik/prediktif belirteçleri içerir; bunlar tedavi kararını yönlendirir ama tedavi dozunu raporda patolog belirlemez.",
+     "sik_aciklamalari": {
+      "A": "Raporda bulunur; tanı raporun temelidir.",
+      "B": "Raporda bulunur; cerrahi sınır adjuvan tedavi kararını etkiler.",
+      "C": "Raporda bulunur; derece ve evre bilgisi prognozu belirler.",
+      "D": "Raporda bulunur; ER/PR, HER2, Ki-67 prognoz ve prediksiyon için immünohistokimya ile değerlendirilir.",
+      "E": "Beklenmez (aranan cevap). Tedavi dozu ve kür planı klinisyenin (onkolog) kararıdır."
+     },
+     "bilgi": [
+      9,
+      10,
+      24
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Patolojinin ana alt dallarını ve genel/özel patoloji ayrımını özetler.",
+   "sorular": [
+    {
+     "id": "k1-02-q11",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Yaşayan hastadan alınan biyopsi ve rezeksiyon materyallerini değerlendirerek tanı, evreleme ve tedavi planında rol oynayan patoloji alt dalı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Adli patoloji",
+      "B": "Deneysel patoloji",
+      "C": "Cerrahi patoloji",
+      "D": "Ultrastrüktürel patoloji",
+      "E": "Klinik otopsi patolojisi"
+     },
+     "dogru": "C",
+     "aciklama": "Cerrahi patoloji yaşayan hastadan alınan materyali değerlendirir ve tanı, evreleme, tedavi planı ve prognozda rol oynar.",
+     "sik_aciklamalari": {
+      "A": "Adli patoloji ani, beklenmedik ve şüpheli ölümlerde ölüm nedenini araştırır.",
+      "B": "Deneysel patoloji hastalık mekanizmalarını deneysel modellerle inceler.",
+      "C": "Doğru. Cerrahi patoloji yaşayan hastadan alınan biyopsi ve rezeksiyonları değerlendirir; raporu tanı, evre ve tedavi planını belirler.",
+      "D": "Ultrastrüktürel patoloji elektron mikroskobu düzeyindeki incelemedir, materyal türünü tanımlamaz.",
+      "E": "Klinik otopsi ölüm nedeni ve eşlik eden hastalıkları aydınlatır; yaşayan hastadan materyal değildir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q12",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi genel patolojinin değil, özel (sistemik) patolojinin inceleme konusudur?",
+     "secenekler": {
+      "A": "Hücresel adaptasyonlar",
+      "B": "Hücre hasarı ve ölümü",
+      "C": "Doku tamiri ve fibrozis",
+      "D": "Glomerülonefritler",
+      "E": "Hemodinamik bozukluklar"
+     },
+     "dogru": "D",
+     "aciklama": "Genel patoloji hücre-doku temel yanıtlarını, özel patoloji ise organ ve sistem hastalıklarını (ör. böbrek glomerül hastalıkları) inceler.",
+     "sik_aciklamalari": {
+      "A": "Adaptasyon genel patoloji konusudur.",
+      "B": "Hasar/ölüm genel patoloji konusudur.",
+      "C": "Doku tamiri ve fibrozis genel patoloji konusudur.",
+      "D": "Doğru. Glomerülonefritler böbreğe özgü, sistemik patoloji konusudur.",
+      "E": "Hemodinamik bozukluklar genel patoloji konusudur."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q13",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Patolojinin alt dalları ve ilgi alanları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Anatomik patoloji otopsi, rezeksiyon ve biyopsi materyallerini inceler.",
+      "B": "Sitopatoloji hücre düzeyindeki değişiklikleri inceler.",
+      "C": "Adli otopsi ani, beklenmedik ve şüpheli ölümlerde neden ve mekanizmayı araştırır.",
+      "D": "Moleküler patoloji alt dallardan biridir ve mutasyon, gen füzyonu analizlerini kapsar.",
+      "E": "Genel patoloji organ sistemlerine özgü hastalıkları, özel patoloji ise hücre-doku temel yanıtlarını inceler."
+     },
+     "dogru": "E",
+     "aciklama": "Tanımlar ters verilmiştir: genel patoloji temel hücre-doku yanıtlarını, özel (sistemik) patoloji organ ve sistem hastalıklarını inceler.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade. Anatomik patoloji otopsi, rezeksiyon ve biyopsi materyallerini kapsar.",
+      "B": "Doğru ifade. Sitopatoloji hücre düzeyindeki patolojik değişiklikleri inceler.",
+      "C": "Doğru ifade; klinik otopsi ise ölüm nedeni ve eşlik eden hastalıklara odaklanır.",
+      "D": "Doğru ifade; PCR, FISH, NGS gibi yöntemleri kullanır.",
+      "E": "Yanlış ifade (aranan cevap). Tanımlar ters verilmiştir: genel patoloji temel hücre-doku yanıtlarını, özel (sistemik) patoloji organ ve sistem hastalıklarını inceler."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Patolojide kullanılan başlıca tanısal yöntemleri (makroskopi, histokimya, immünohistokimya, moleküler patoloji) açıklar.",
+   "sorular": [
+    {
+     "id": "k1-02-q14",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Patoloji laboratuvarında rutin histolojik kesitlerin boyanmasında standart olarak kullanılan boya aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Periyodik asit-Schiff (PAS)",
+      "B": "Hematoksilen-eozin (HE)",
+      "C": "Masson trikrom",
+      "D": "Oil Red O",
+      "E": "Prusya mavisi"
+     },
+     "dogru": "B",
+     "aciklama": "Rutinde parafin bloklardan alınan kesitler hematoksilen-eozin ile boyanır; diğerleri hedefe özgü histokimyasal boyalardır.",
+     "sik_aciklamalari": {
+      "A": "PAS glikojen ve mukopolisakkaritler için özel boyadır.",
+      "B": "Doğru. HE rutin boyadır.",
+      "C": "Masson trikrom bağ dokusu (kollajen) için özel boyadır.",
+      "D": "Oil Red O lipidleri dondurulmuş kesitte gösterir.",
+      "E": "Prusya mavisi demiri gösterir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": [
+      "bc10862ca6e4"
+     ]
+    },
+    {
+     "id": "k1-02-q15",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Histokimyasal boya ile gösterdiği madde eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Prusya mavisi – demir (hemosiderin)",
+      "B": "PAS – glikojen ve mukopolisakkaritler",
+      "C": "Oil Red O – lipid",
+      "D": "Masson trikrom – bağ dokusu",
+      "E": "Retikülin – glikojen"
+     },
+     "dogru": "E",
+     "aciklama": "Retikülin boyası bağ dokusu (retiküler lifler) içindir; glikojen PAS ile gösterilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme. Prusya mavisi dokudaki demiri (hemosiderin) mavi boyar.",
+      "B": "Doğru eşleştirme. PAS glikojen ve mukopolisakkaritleri gösterir.",
+      "C": "Doğru eşleştirme; lipid dondurulmuş kesitte boyanır çünkü rutin takipte çözünür.",
+      "D": "Doğru eşleştirme; Van Gieson da bağ dokusu boyasıdır.",
+      "E": "Yanlış eşleştirme (aranan cevap). Retikülin boyası bağ dokusu (retiküler lifler) içindir; glikojen PAS ile gösterilir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": [
+      "82ee8978e745"
+     ]
+    },
+    {
+     "id": "k1-02-q16",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Hematoksilen-eozin boyaması ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hematoksilen asidik bir boyadır ve kollajeni boyar.",
+      "B": "Eozin bazik bir boyadır ve nükleer DNA'yı boyar.",
+      "C": "Hematoksilen bazik bir boyadır; DNA ve RNA gibi bazofilik yapıları boyar.",
+      "D": "Eozin yalnızca dondurulmuş kesitlerde kullanılabilir.",
+      "E": "HE boyası lipidleri göstermek için tercih edilen boyadır."
+     },
+     "dogru": "C",
+     "aciklama": "Hematoksilen bazik boya olup nükleik asitleri (bazofilik), eozin asidik boya olup mitokondri ve kollajen gibi asidofilik yapıları boyar.",
+     "sik_aciklamalari": {
+      "A": "Hematoksilen bazik boyadır; kollajeni eozin boyar.",
+      "B": "Eozin asidik boyadır ve sitoplazmik/ekstrasellüler asidofilik yapıları boyar.",
+      "C": "Doğru. Hematoksilen bazik boyadır; nükleer DNA ve RNA'yı mavi-mor (bazofilik) boyar.",
+      "D": "HE rutinde parafin kesitlerde kullanılır.",
+      "E": "Lipidler için Oil Red O kullanılır."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q17",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Akciğer adenokarsinomu tanısı alan bir hastada hedefe yönelik tedavi seçimi için EGFR mutasyonu ve ALK gen füzyonu araştırılacaktır.\n\nBu amaçla kullanılabilecek yöntemlerin tümü aşağıdaki seçeneklerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "PAS, Masson trikrom, retikülin",
+      "B": "PCR, FISH, yeni nesil dizileme (NGS)",
+      "C": "HE, Van Gieson, Prusya mavisi",
+      "D": "İİAS, PAP boyası, MGG",
+      "E": "Kriostat kesiti, Oil Red O, Diff-Quick"
+     },
+     "dogru": "B",
+     "aciklama": "Somatik mutasyon (EGFR, KRAS, BRAF) ve gen füzyonu (ALK, BCR-ABL1) analizi moleküler patoloji yöntemleriyle (PCR, RT-PCR, FISH, NGS) yapılır.",
+     "sik_aciklamalari": {
+      "A": "Bunlar histokimyasal boyalardır; mutasyon göstermez.",
+      "B": "Doğru. Moleküler patolojinin temel yöntemleridir.",
+      "C": "Rutin ve histokimyasal boyalardır.",
+      "D": "Sitolojik örnekleme ve boyama yöntemleridir.",
+      "E": "Hızlı tanı ve lipid/sitoloji boyalarıdır; moleküler analiz değildir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": [
+      "7f643a4e3b09"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "bc10862ca6e4",
+     "soru": "Histolojik kesitlerin boyanmasında rutin olarak hangisi kullanılır?",
+     "secenekler": {
+      "A": "Hematoksilen-Eozin",
+      "B": "Tıbbi Patoloji",
+      "C": "Tıbbi Patoloji",
+      "D": "Tıbbi Patoloji",
+      "E": "Tıbbi Patoloji"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "82ee8978e745",
+     "soru": "Wilson hastalığında dokuda biriken maddeyi belirlemede histokimyasal boyalardan hangisi kullanılır?",
+     "secenekler": {
+      "A": "Kristal viyole",
+      "B": "Prusya mavisi",
+      "C": "Rodanin",
+      "D": "Alsiyen mavisi",
+      "E": "Metilen mavisi"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "7f643a4e3b09",
+     "soru": "Aşağıdakilerden hangisi kolorektal adenokarsinom tanısı alan hastalarda tedavi planlanması için kullanılan moleküler patolojik incelemelerden biri değildir?",
+     "secenekler": {
+      "A": "MLH1 metilasyonu.",
+      "B": "BRAF mutasyonu.",
+      "C": "KIT mutasyonu.",
+      "D": "Mikrosatellit instabilite testi.",
+      "E": "KRAS testi."
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Patoloji laboratuvarına gelen materyal tiplerini ve biyopsi türlerini tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-02-q18",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Bir lezyonun yalnızca bir kısmının tanı amacıyla çıkarılması işlemine ne ad verilir?",
+     "secenekler": {
+      "A": "Eksizyonel biyopsi",
+      "B": "İnsizyonel biyopsi",
+      "C": "Rezeksiyon",
+      "D": "Amputasyon",
+      "E": "Otopsi"
+     },
+     "dogru": "B",
+     "aciklama": "İnsizyonel biyopside lezyonun bir bölümü, eksizyonel biyopside lezyonun tamamı çıkarılır.",
+     "sik_aciklamalari": {
+      "A": "Eksizyonel biyopsi lezyonun tamamının çıkarılmasıdır.",
+      "B": "Doğru. Lezyonun yalnızca bir bölümünün tanı amacıyla çıkarılması insizyonel biyopsidir.",
+      "C": "Rezeksiyon organın veya organ parçasının çıkarıldığı rezeksiyon materyalidir.",
+      "D": "Amputasyon bir ekstremitenin çıkarılmasıdır.",
+      "E": "Otopsi ölüm sonrası incelemedir; biyopsi canlıdan alınır."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": [
+      "50dc636976a8"
+     ]
+    },
+    {
+     "id": "k1-02-q19",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Meme, karaciğer, böbrek ve prostat gibi organlarda kalın iğne ile silindirik doku parçası elde edilen biyopsi türü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Punch biyopsi",
+      "B": "İnce iğne aspirasyon biyopsisi",
+      "C": "Tru-cut (kor) biyopsi",
+      "D": "Eksfolyatif sitoloji",
+      "E": "İmprint sitolojisi"
+     },
+     "dogru": "C",
+     "aciklama": "Tru-cut/kor biyopsi meme, karaciğer, böbrek ve prostatta doku (histolojik) örneği sağlar.",
+     "sik_aciklamalari": {
+      "A": "Punch biyopsi deri için kullanılır.",
+      "B": "İİAS doku değil hücre (sitoloji) örneği verir.",
+      "C": "Doğru. Tru-cut (kor) biyopsi kalın iğneyle silindirik doku parçası verir; meme, karaciğer, böbrek ve prostatta kullanılır.",
+      "D": "Eksfolyatif sitoloji dökülen hücrelerin incelenmesidir (serviks, idrar, balgam).",
+      "E": "İmprint intraoperatif sitolojik bir yöntemdir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q20",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Patoloji laboratuvarına gelen materyaller ve biyopsi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Biyopsinin amacı en az invaziv yöntemle en fazla tanısal bilgiyi elde etmektir.",
+      "B": "Organ rezeksiyonları ve amputasyonlar rezeksiyon materyalleri grubundadır.",
+      "C": "Otopsi, sitoloji ve taze/dondurulmuş doku 'diğer materyaller' arasında yer alır.",
+      "D": "Biyopsi, ölümden sonra tanısal amaçla dokudan örnek alınmasıdır.",
+      "E": "Endoskopik ve laparoskopik yolla da biyopsi alınabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Biyopsi canlıdan tanısal amaçla doku veya hücre örneği alınmasıdır; ölümden sonraki inceleme otopsidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade. Biyopsinin amacı en az invaziv yöntemle en fazla tanısal bilgidir.",
+      "B": "Doğru ifade. Organ rezeksiyonları ve amputasyonlar rezeksiyon materyalidir.",
+      "C": "Doğru ifade. Otopsi, sitoloji ve taze/dondurulmuş doku diğer materyallerdir.",
+      "D": "Yanlış ifade (aranan cevap). Biyopsi canlıdan tanısal amaçla doku veya hücre örneği alınmasıdır; ölümden sonraki inceleme otopsidir.",
+      "E": "Doğru ifade. Endoskopik ve laparoskopik biyopsi de biyopsi türleri arasındadır."
+     },
+     "bilgi": [
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "50dc636976a8",
+     "soru": "Herhangi bir lezyonun bir kısmının çıkarılması işlemine ne ad verilir?",
+     "secenekler": {
+      "A": "Eksizyonel biyopsi",
+      "B": "Punch biyopsi",
+      "C": "Küretaj",
+      "D": "İnsizyonel biyopsi",
+      "E": "Traşlama (shave biyopsi)"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Materyal yönetimi ve etiketlemenin önemini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-02-q21",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Patoloji materyalinin etiketlenmesinde aşağıdaki bilgilerden hangisinin bulunması zorunlu değildir?",
+     "secenekler": {
+      "A": "Hastanın adı-soyadı",
+      "B": "Kimlik numarası",
+      "C": "Örneğin alındığı yer ve örnek tipi",
+      "D": "Alınma tarihi ve saati",
+      "E": "Hastanın kan grubu"
+     },
+     "dogru": "E",
+     "aciklama": "Etikette ad-soyad, kimlik numarası, tarih-saat, alındığı yer ve örnek tipi bulunmalıdır; kan grubu etiket bilgisi değildir.",
+     "sik_aciklamalari": {
+      "A": "Zorunludur; kimlik doğrulama için gerekir.",
+      "B": "Zorunludur; kimlik numarası ad-soyad ile birlikte hasta kimliğini doğrular.",
+      "C": "Zorunludur; tanı ve raporlama için kritiktir.",
+      "D": "Zorunludur; zamanlama ve fiksasyon süresi açısından önemlidir.",
+      "E": "Zorunlu değildir (aranan cevap). Etikette ad-soyad, kimlik numarası, tarih-saat, alındığı yer ve örnek tipi bulunmalıdır; kan grubu etiket bilgisi değildir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q22",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Doğru materyal yönetiminin unsurları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Kimlik hatalarının önlenmesi",
+      "B": "İstek formunda yeterli klinik bilgi ve ön tanı bulunması",
+      "C": "Biyogüvenlik kurallarına uyulması",
+      "D": "Rezeksiyon materyalinin laboratuvara gecikmeden ulaştırılması",
+      "E": "Materyalin tanıdan önce fiksatifsiz olarak birkaç gün buzdolabında bekletilmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Doğru materyal yönetimi kimlik, klinik bilgi, biyogüvenlik ve zamanlamadan oluşur; fiksasyonun gecikmesi otolize yol açar.",
+     "sik_aciklamalari": {
+      "A": "Yer alır; kimlik hataları yanlış tanı-tedaviye yol açar.",
+      "B": "Yer alır; yeterli klinik bilgi ve ön tanı doğru yorum için gereklidir.",
+      "C": "Yer alır; biyogüvenlik materyal yönetiminin unsurlarındandır.",
+      "D": "Yer alır; zamanlama unsurudur.",
+      "E": "Yer almaz (aranan cevap); gecikme otoliz ve tanısal kayba neden olur."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q23",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Aynı gün iki farklı hastadan alınan endoskopik biyopsilerin etiketleri karışmış ve gönderilen istek formunda klinik ön tanı belirtilmemiştir.\n\nBu durumla ilgili aşağıdaki ifadelerden hangisi en doğrudur?",
+     "secenekler": {
+      "A": "Laboratuvar verdiği protokol numarası etiket hatasını otomatik olarak düzeltir.",
+      "B": "Kimlik hatası yanlış tanı ve yanlış tedaviye yol açabileceğinden materyal kimliği doğrulanmadan işlem yapılmamalı, klinik bilgi istenmelidir.",
+      "C": "Klinik bilgi patoloğun tanısını etkilemediği için formdaki eksiklik önemsizdir.",
+      "D": "Patolog, iki örneği birleştirip tek rapor düzenlemelidir.",
+      "E": "Etiket hatası yalnızca sitolojik örneklerde önem taşır."
+     },
+     "dogru": "B",
+     "aciklama": "Kimlik hataları yanlış tanı-tedaviye yol açar; yetersiz klinik bilgide patolog raporu geciktirip bilgi isteyebilir.",
+     "sik_aciklamalari": {
+      "A": "Protokol numarası laboratuvara geldikten sonra verilir; kaynaktaki etiket hatasını düzeltmez.",
+      "B": "Doğru. Kimlik doğrulanmadan işlem yapılmamalı; klinik bilgi eksikse patolog raporu geciktirip bilgi isteyebilir.",
+      "C": "Klinik bilgi ve ön tanı yorum için gereklidir.",
+      "D": "Örnekler birleştirilemez; her materyal ayrı kayıt ve rapor gerektirir.",
+      "E": "Etiketleme tüm materyal türleri için zorunludur."
+     },
+     "bilgi": [
+      28,
+      29,
+      10
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Dokunun mikroskopik incelemeye hazırlanma basamaklarını özetler.",
+   "sorular": [
+    {
+     "id": "k1-02-q24",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Patolojide rutin olarak en sık kullanılan fiksatif aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ksilen",
+      "B": "%10 nötral tamponlu formalin",
+      "C": "Parafin",
+      "D": "Serum fizyolojik",
+      "E": "Etanol serisi"
+     },
+     "dogru": "B",
+     "aciklama": "Rutinde standart fiksatif %10 nötral tamponlu formalindir (1 hacim formalin + 9 hacim su).",
+     "sik_aciklamalari": {
+      "A": "Ksilen şeffaflaştırmada kullanılır.",
+      "B": "Doğru. %10 nötral tamponlu formalin (1 hacim formalin + 9 hacim su) rutinde standart fiksatiftir.",
+      "C": "Parafin infiltrasyon ve gömmede kullanılır.",
+      "D": "Serum fizyolojik fiksatif değildir; dokuyu otolizden korumaz.",
+      "E": "Artan etanol serileri dehidrasyonda kullanılır."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": [
+      "d3-b-133",
+      "d3-f-235"
+     ]
+    },
+    {
+     "id": "k1-02-q25",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Histopatolojik doku takibinin basamakları aşağıdakilerin hangisinde doğru sırayla verilmiştir?",
+     "secenekler": {
+      "A": "Dehidrasyon → fiksasyon → şeffaflaştırma → gömme → kesit alma",
+      "B": "Fiksasyon → şeffaflaştırma → dehidrasyon → kesit alma → gömme",
+      "C": "Fiksasyon → dehidrasyon → şeffaflaştırma → parafin infiltrasyonu → gömme → kesit alma → boyama",
+      "D": "Fiksasyon → gömme → dehidrasyon → boyama → kesit alma",
+      "E": "Şeffaflaştırma → fiksasyon → dehidrasyon → gömme → boyama"
+     },
+     "dogru": "C",
+     "aciklama": "Sıralama: fiksasyon, dehidrasyon (artan alkol), şeffaflaştırma (ksilen), infiltrasyon, gömme, kesit alma, lama alma-kurutma, boyama-lamelle kapatma.",
+     "sik_aciklamalari": {
+      "A": "Fiksasyon ilk basamaktır; dehidrasyon fiksasyondan sonra gelir.",
+      "B": "Dehidrasyon şeffaflaştırmadan önce yapılır; gömme kesit almadan öncedir.",
+      "C": "Doğru sıralama. Fiksasyonla korunan doku alkolle suyundan arındırılır, ksilenle şeffaflaştırılır, parafine gömülüp kesilir ve boyanır.",
+      "D": "Gömme dehidrasyondan sonra, boyama kesit almadan sonra yapılır.",
+      "E": "İlk basamak fiksasyondur."
+     },
+     "bilgi": [
+      30,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q26",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Fiksasyon ve doku işleme ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Fiksatif hacmi doku hacminin en az 10-20 katı olmalıdır.",
+      "B": "Formalin dokuya saatte yaklaşık 1 mm penetre olur; büyük ve kanlı parçalar açılarak fikse edilmelidir.",
+      "C": "Carnoy fiksatifi RNA ve glikojeni, Bouin fiksatifi testis biyopsilerini iyi korur.",
+      "D": "Kriostat kesitleri yaklaşık 5 dakikada sonuç verir ve morfolojisi parafin kesitten daha iyidir.",
+      "E": "Işık mikroskobu için rotary mikrotomla parafin bloklardan 4-6 µm kesit alınır."
+     },
+     "dogru": "D",
+     "aciklama": "Kriostat (dondurulmuş) kesit hızlı tanı sağlar ama doku morfolojisi parafin kesite göre zayıftır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade. Fiksatif hacmi doku hacminin en az 10-20 katı olmalıdır.",
+      "B": "Doğru ifade; penetrasyon yavaş olduğundan parça ince olmalıdır.",
+      "C": "Doğru ifade. Carnoy RNA-glikojeni, Bouin testis biyopsilerini iyi korur.",
+      "D": "Yanlış ifade (aranan cevap); kriostat kesitte morfoloji iyi değildir.",
+      "E": "Doğru ifade; elektron mikroskobu için ultramikrotom kullanılır."
+     },
+     "bilgi": [
+      31,
+      32,
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-133",
+     "soru": "Patolojide en yaygın kullanılan fiksatif aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Serum fizyolojik",
+      "B": "Ksilen",
+      "C": "Formol",
+      "D": "Alkol",
+      "E": "Parafin"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3-f-235",
+     "soru": "Dokuda formol hangi işlem için uygulanır?",
+     "secenekler": {
+      "A": "Dehidratasyon",
+      "B": "Saydamlaştırma",
+      "C": "Fiksasyon",
+      "D": "Sertleştirme",
+      "E": "Boyama"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Sık artefakt nedenlerini ve sonuçlarını tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-02-q27",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Dokuya ait olmayan, doku işleme veya teknik hatalara bağlı olarak preparatta ortaya çıkan görünüme ne ad verilir?",
+     "secenekler": {
+      "A": "Displazi",
+      "B": "Metaplazi",
+      "C": "Artefakt",
+      "D": "Otoliz",
+      "E": "Nekroz"
+     },
+     "dogru": "C",
+     "aciklama": "Artefakt teknik hatalara bağlı, dokuya ait olmayan görünümdür; tanıyı zorlaştırıp yanlış tanıya yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Displazi epitelde düzensiz, öncü (premalign) gerçek bir değişikliktir.",
+      "B": "Metaplazi bir olgun hücre tipinin başka bir olgun tiple yer değiştirmesidir.",
+      "C": "Doğru. Artefakt fiksasyon, doku takibi, kesit, boyama veya kapatma hatalarından kaynaklanan, dokuya ait olmayan görünümdür.",
+      "D": "Otoliz yetersiz fiksasyonun sonucu olabilir ama terimin kendisi hücrenin kendi enzimleriyle yıkımıdır.",
+      "E": "Nekroz canlıda gerçekleşen hücre ölümüdür."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q28",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Patolojik preparatta görülen artefakt ile olası nedeni eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Otoliz ve ayrıntıların silinmesi – yetersiz fiksasyon",
+      "B": "Bıçak izi ve kıvrılma – kirli solvent kullanımı",
+      "C": "Soluk ve düzensiz boyanma – fazla fiksasyon süresi",
+      "D": "Bulanıklık – mikrotom bıçağının körlüğü",
+      "E": "Hava kabarcığı – yetersiz dehidrasyon"
+     },
+     "dogru": "A",
+     "aciklama": "Yetersiz fiksasyon otolize, yetersiz dehidrasyon soluk/düzensiz boyanmaya, kirli solvent bulanıklığa, mekanik hatalar bıçak izi-kıvrılma-hava kabarcığına yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Yetersiz fiksasyon dokunun kendi enzimleriyle yıkımına (otoliz) ve ayrıntı kaybına yol açar.",
+      "B": "Bıçak izi ve kıvrılma mekanik (kesit alma) hatasıdır.",
+      "C": "Soluk/düzensiz boyanma yetersiz dehidrasyona bağlanır.",
+      "D": "Bulanıklık kirli solvente bağlanır.",
+      "E": "Hava kabarcığı lamelle kapatmadaki mekanik hatadır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q29",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Rezeksiyon materyali ameliyathaneden laboratuvara uzun süre fiksatifsiz bekletildikten sonra gönderilmiş; kesitlerde hücresel ayrıntıların silindiği görülmüştür.\n\nBu durumla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Görülen değişiklik canlıda gelişmiş koagülasyon nekrozudur.",
+      "B": "Değişiklik dehidrasyon basamağındaki kirli solventten kaynaklanır.",
+      "C": "Değişiklik yetersiz/geç fiksasyona bağlı otoliz artefaktıdır ve yanlış tanıya yol açabilir.",
+      "D": "Değişiklik yalnızca boyama basamağının tekrarlanmasıyla düzeltilebilir.",
+      "E": "Fiksasyonun gecikmesi doku morfolojisini etkilemez."
+     },
+     "dogru": "C",
+     "aciklama": "Fiksasyon dokuyu otoliz ve putrefaksiyondan korur; geç/yetersiz fiksasyon otoliz artefaktına ve ayrıntı kaybına neden olur.",
+     "sik_aciklamalari": {
+      "A": "Nekroz canlıdaki hücre ölümüdür; burada ölüm sonrası enzimatik yıkım (otoliz) söz konusudur.",
+      "B": "Kirli solvent bulanıklık yapar.",
+      "C": "Doğru. Geç/yetersiz fiksasyon otoliz artefaktı yapar; ayrıntı kaybı yanlış tanıya yol açabilir.",
+      "D": "Fiksasyonla korunmamış morfoloji yeniden boyamayla geri kazanılamaz.",
+      "E": "Gecikme otolize yol açar; bu nedenle materyal hemen fiksatife konmalıdır."
+     },
+     "bilgi": [
+      31,
+      35,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Sitopatolojinin temel ilkeleri ve başlıca kullanım alanlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-02-q30",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Serviks kanseri taramasında kullanılan sitolojik yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "PAP smear",
+      "B": "Tru-cut biyopsi",
+      "C": "Kriostat kesiti",
+      "D": "Punch biyopsi",
+      "E": "Elektron mikroskobi"
+     },
+     "dogru": "A",
+     "aciklama": "PAP smear preinvaziv ve invaziv serviks kanseri taramasında kullanılan eksfolyatif sitolojik yöntemdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. PAP smear servikal eksfolyatif sitolojidir; preinvaziv ve invaziv serviks lezyonlarının taramasında kullanılır.",
+      "B": "Tru-cut doku biyopsisidir, tarama yöntemi değildir.",
+      "C": "Kriostat kesiti intraoperatif hızlı tanı içindir.",
+      "D": "Punch biyopsi deri lezyonları içindir.",
+      "E": "Elektron mikroskobi tarama amacıyla kullanılmaz."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q31",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Sitopatoloji ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Minimal invaziv ve uygun maliyetli bir yöntemdir.",
+      "B": "İİAS yaklaşık 22 gauge iğne ile negatif basınç uygulanarak yapılır.",
+      "C": "Alkol ile fikse edilen preparatlar PAP boyası için uygundur.",
+      "D": "Havada kurutulan preparatlar MGG, Wright ve Diff-Quick boyaları için kullanılır.",
+      "E": "Hücre mimarisini histopatolojiden daha iyi gösterdiği için hiçbir zaman ek doku tanısı gerektirmez."
+     },
+     "dogru": "E",
+     "aciklama": "Sitolojinin dezavantajı hücre mimarisini sınırlı göstermesidir; bazen histopatolojik tanı gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade. Sitoloji minimal invaziv ve uygun maliyetlidir.",
+      "B": "Doğru ifade; dış çapı yaklaşık 0,70 mm'dir.",
+      "C": "Doğru ifade; alkol fiksasyonlu preparatlar PAP ve immünohistokimya içindir.",
+      "D": "Doğru ifade. Havada kurutulan preparatlar MGG, Wright ve Diff-Quick ile boyanır.",
+      "E": "Yanlış ifade (aranan cevap). Sitolojinin dezavantajı hücre mimarisini sınırlı göstermesidir; bazen histopatolojik tanı gerekir."
+     },
+     "bilgi": [
+      36,
+      38,
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q33",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Tiroid nodülü olan bir hastada minimal morbidite ile hızlı tanı amacıyla ultrason eşliğinde örnekleme planlanıyor.\n\nBu amaçla en uygun yöntem ve tanısal doğruluğu aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Eksizyonel biyopsi – %50",
+      "B": "İnce iğne aspirasyon biyopsisi – uygun koşullarda %90-95",
+      "C": "Punch biyopsi – %100",
+      "D": "Otopsi – %90-95",
+      "E": "Eksfolyatif sitoloji – %30"
+     },
+     "dogru": "B",
+     "aciklama": "İİAS tiroid, meme, lenf nodu ve US/BT eşliğinde derin kitlelerde endikedir; uygun koşullarda tanısal doğruluğu %90-95'tir.",
+     "sik_aciklamalari": {
+      "A": "Eksizyonel biyopsi daha invazivdir; ilk basamak değildir.",
+      "B": "Doğru. İİAS minimal invazivdir, tiroid nodüllerinde endikedir ve uygun koşullarda doğruluğu %90-95'tir.",
+      "C": "Punch biyopsi deri için kullanılır.",
+      "D": "Otopsi ölüm sonrası incelemedir.",
+      "E": "Eksfolyatif sitoloji dökülen hücreler (serviks, idrar, balgam) içindir; tiroid nodülüne uygulanmaz."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-02-q32",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Servikal sitoloji (Bethesda sistemi) ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Örneğin yeterliliği yalnızca skuamöz hücre sayısıyla değerlendirilir; endoservikal hücreler aranmaz.",
+      "B": "ASC-US ve ASC-H kesin invaziv karsinom kategorileridir.",
+      "C": "LSIL HPV ile ilişkili olabilir; HSIL ileri tetkik gerektirir.",
+      "D": "HSIL saptanan hastada ileri tetkik gerekmez, yıllık tarama yeterlidir.",
+      "E": "Bethesda kategorileri yalnızca İİAS örnekleri için kullanılır."
+     },
+     "dogru": "C",
+     "aciklama": "Bethesda kategorileri negatif, ASC-US, ASC-H, LSIL, HSIL ve karsinomdur; yeterlilik skuamöz ve endoservikal hücrelerle değerlendirilir.",
+     "sik_aciklamalari": {
+      "A": "Yeterlilik için yeterli skuamöz ve endoservikal hücre gerekir.",
+      "B": "ASC-US ve ASC-H atipik skuamöz hücre kategorileridir, karsinom değildir.",
+      "C": "Doğru. LSIL HPV ilişkili olabilen düşük dereceli lezyondur; HSIL ileri tetkik (kolposkopi/biyopsi) gerektirir.",
+      "D": "HSIL ileri tetkik gerektirir.",
+      "E": "Bethesda servikal sitoloji raporlama sistemidir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 33,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:03"
+}

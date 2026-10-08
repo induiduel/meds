@@ -1,0 +1,1776 @@
+{
+ "id": "k1-15-doku-onarimi-ve-yara-iyilesmesi",
+ "sira": 15,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Doku Onarımı ve Yara İyileşmesi",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-09-21",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Doku onarımını tanımlamak ve onarımın iki temel yolunu (rejenerasyon, skar) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Hasar gören dokunun aynı tip hücrelerin çoğalmasıyla normal yapı ve işlevine tamamen geri dönmesine ne ad verilir?",
+     "secenekler": {
+      "A": "Skar oluşumu",
+      "B": "Fibrozis",
+      "C": "Rejenerasyon",
+      "D": "Metaplazi",
+      "E": "Organizasyon"
+     },
+     "dogru": "C",
+     "aciklama": "Onarımın iki temel yolu rejenerasyon (aynı hücre tipinin çoğalması, doku normale döner) ve skar oluşumudur (fibröz doku birikimi).",
+     "sik_aciklamalari": {
+      "A": "Skar fibröz doku birikimidir; yapısal stabilite sağlar ama işlev tam geri dönmez.",
+      "B": "Fibrozis aşırı kollajen birikimidir; normal yapı geri kazanılmaz.",
+      "C": "Doğru. Rejenerasyonda doku mimarisi ve işlevi normale döner.",
+      "D": "Metaplazi bir olgun hücre tipinin başka bir tiple yer değiştirmesidir.",
+      "E": "Organizasyon pıhtı veya eksüdanın granülasyon dokusu ve fibröz dokuyla yer değiştirmesidir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Doku onarımı ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Enflamasyon onarımı engeller; onarım ancak enflamasyon hiç oluşmazsa başlar.",
+      "B": "Onarım yolunun seçiminde hasarın şiddeti önemli değildir.",
+      "C": "Skar oluşumunda dokunun işlevi her zaman tamamen geri kazanılır.",
+      "D": "Enflamasyon zararlı etkeni temizler ve onarım sürecini başlatır.",
+      "E": "Tüm dokular yalnızca rejenerasyonla iyileşir."
+     },
+     "dogru": "D",
+     "aciklama": "Doku onarımı yaralanma sonrası mimari ve işlevin yeniden kazanılmasıdır; enflamasyon hem etkeni temizler hem onarımı başlatır. Yol seçimi hasarın şiddeti ve doku tipine bağlıdır.",
+     "sik_aciklamalari": {
+      "A": "Enflamasyon onarımın başlatıcısıdır.",
+      "B": "Hasarın şiddeti ve doku tipi rejenerasyon mu skar mı olacağını belirler.",
+      "C": "Skar yapısal stabilite sağlar ancak işlev tam geri dönmez.",
+      "D": "Doğru. Doku onarımı yaralanma sonrası mimari ve işlevin yeniden kazanılmasıdır; enflamasyon hem etkeni temizler hem onarımı başlatır. Yol seçimi hasarın şiddeti ve doku tipine bağlıdır.",
+      "E": "Kalıcı dokular ve ağır hasar skarla iyileşir."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Miyokard enfarktüsü geçiren bir hastada nekrotik kalp kasının yerini fibröz dokunun alması ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Onarım yalnızca kardiyak kök hücrelerle gerçekleşir.",
+      "B": "Miyositler hızla çoğalarak hasarlı alanı tamamen rejenere eder.",
+      "C": "Skar dokusu kasılabilir ve kalbin pompa işlevini tam olarak devralır.",
+      "D": "Kalp kası kalıcı (nonproliferatif) doku olduğundan onarım skarla olur; yapısal bütünlük korunur ancak kasılma işlevi geri kazanılmaz.",
+      "E": "Enfarkt alanı hiçbir onarım göstermeden kalır."
+     },
+     "dogru": "D",
+     "aciklama": "Kalıcı dokularda (kalp kası, nöron) rejenerasyon olmaz; hasar skarla onarılır, bu stabilite sağlar ama işlev kaybı kalıcıdır.",
+     "sik_aciklamalari": {
+      "A": "Klinik olarak anlamlı bir kardiyak rejenerasyon yoktur; onarım skarla olur.",
+      "B": "Erişkin miyositler yenilenemez.",
+      "C": "Fibröz skar kasılma yeteneğine sahip değildir.",
+      "D": "Doğru. Kalıcı dokularda (kalp kası, nöron) rejenerasyon olmaz; hasar skarla onarılır, bu stabilite sağlar ama işlev kaybı kalıcıdır.",
+      "E": "Enfarkt alanı granülasyon dokusu ve skarla onarılır."
+     },
+     "bilgi": [
+      2,
+      6,
+      13
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Rejenerasyonun mümkün olduğu koşulları belirtmek ve örneklerini sıralamak",
+   "sorular": [
+    {
+     "id": "k1-15-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi rejenerasyonun gerçekleşebilmesi için gerekli koşullardan biri değildir?",
+     "secenekler": {
+      "A": "Hasarın sınırlı olması",
+      "B": "Bazal membran ve stromanın (doku iskeleti) korunmuş olması",
+      "C": "Kalan hücrelerin ya da kök hücrelerin proliferasyon kapasitesine sahip olması",
+      "D": "Doku iskeletinin tamamen yıkılmış olması",
+      "E": "Dokunun labil veya stabil doku olması"
+     },
+     "dogru": "D",
+     "aciklama": "Rejenerasyon için hasar sınırlı, iskelet korunmuş ve hücreler çoğalabilir olmalıdır; iskeletin yıkılması skarla onarıma yol açar.",
+     "sik_aciklamalari": {
+      "A": "Gerekli koşuldur; geniş hasar skar oluşturur.",
+      "B": "Gerekli koşuldur; iskelet yeni hücrelerin düzgün yerleşimini sağlar.",
+      "C": "Gerekli koşuldur: kalan hücrelerin ya da kök hücrelerin proliferasyon kapasitesine sahip olması.",
+      "D": "Koşul değildir (aranan cevap); iskelet yıkımı skar gerektirir.",
+      "E": "Gerekli koşuldur; kalıcı dokular rejenere olmaz."
+     },
+     "bilgi": [
+      3,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi rejenerasyonla iyileşmeye örnektir?",
+     "secenekler": {
+      "A": "Miyokard enfarktüsü sonrası kalp",
+      "B": "Derin, geniş doku kayıplı deri yarası",
+      "C": "Bazal membranı sağlam yüzeyel epidermis hasarı",
+      "D": "Beyin infarktı",
+      "E": "Diffüz karaciğer apseleri"
+     },
+     "dogru": "C",
+     "aciklama": "Deride bazal membran sağlamsa epidermis tamamen yenilenir; GİS epiteli ve parsiyel hepatektomi sonrası karaciğer de klasik rejenerasyon örnekleridir.",
+     "sik_aciklamalari": {
+      "A": "Kalp kası kalıcı dokudur; skarla iyileşir.",
+      "B": "Derin, iskeleti yıkan yaralar skarla iyileşir.",
+      "C": "Doğru. Deride bazal membran sağlamsa epidermis tamamen yenilenir; GİS epiteli ve parsiyel hepatektomi sonrası karaciğer de klasik rejenerasyon örnekleridir.",
+      "D": "Nöronlar kalıcı hücrelerdir; beyin infarktı rejenere olmaz.",
+      "E": "Apselerde stroma yıkılır; skarla onarım olur."
+     },
+     "bilgi": [
+      3,
+      10,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Rejenerasyon örnekleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Gastrointestinal sistemde villus üstündeki hücreler kript hücrelerince yenilenir.",
+      "B": "Karaciğerin %90'ına kadarı kalan hepatositlerle yenilenebilir.",
+      "C": "Bazal membran sağlamsa epidermis tamamen yenilenir.",
+      "D": "Bazal membranın yıkıldığı derin yaralarda da epidermis iz bırakmadan rejenere olur.",
+      "E": "Doku iskeleti sağlamken yapı ve işlev korunabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Rejenerasyon doku iskeletinin korunmasını gerektirir; iskeleti yıkılmış derin yaralar skarla iyileşir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; kript kök hücreleri epiteli yeniler.",
+      "B": "Doğru ifade; karaciğer güçlü rejenerasyon kapasitesine sahiptir.",
+      "C": "Doğru ifade: bazal membran sağlamsa epidermis tamamen yenilenir.",
+      "D": "Yanlış ifade (aranan cevap); bu durumda skar oluşur.",
+      "E": "Doğru ifade; iskelet yeni hücrelerin düzenli yerleşimini sağlar."
+     },
+     "bilgi": [
+      10,
+      3
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Dokuları hücre çoğalma kapasitesine göre (labil, stabil, kalıcı) sınıflandırmak",
+   "sorular": [
+    {
+     "id": "k1-15-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi kalıcı (nonproliferatif) doku hücresidir?",
+     "secenekler": {
+      "A": "Hepatosit",
+      "B": "Deri epitel hücresi",
+      "C": "Nöron",
+      "D": "Kemik iliği hücresi",
+      "E": "Böbrek tübül epiteli"
+     },
+     "dogru": "C",
+     "aciklama": "Nöronlar ve kalp kası hücreleri kalıcı hücrelerdir; yenilenemez ve hasarda skar oluşur.",
+     "sik_aciklamalari": {
+      "A": "Hepatosit stabil hücredir; uyarıyla bölünebilir.",
+      "B": "Deri epiteli labil (sürekli bölünen) dokudur.",
+      "C": "Doğru. Nöronlar ve kalp kası hücreleri kalıcı hücrelerdir; yenilenemez ve hasarda skar oluşur.",
+      "D": "Kemik iliği labil dokudur.",
+      "E": "Böbrek tübül epiteli stabil dokudur."
+     },
+     "bilgi": [
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Normalde G₀ fazında bekleyen ancak uyarıyla bölünebilen stabil (quiescent) dokulara aşağıdakilerden hangisi örnek değildir?",
+     "secenekler": {
+      "A": "Karaciğer",
+      "B": "Böbrek",
+      "C": "Pankreas",
+      "D": "Damar düz kası ve endotel",
+      "E": "Kalp kası"
+     },
+     "dogru": "E",
+     "aciklama": "Karaciğer, böbrek, pankreas, endotel ve düz kas stabil dokulardır; kalp kası kalıcı dokudur.",
+     "sik_aciklamalari": {
+      "A": "Stabil dokudur; hepatektomi sonrası yenilenir.",
+      "B": "Stabil dokudur: böbrek.",
+      "C": "Stabil dokudur: pankreas.",
+      "D": "Stabil dokulardır: damar düz kası ve endotel.",
+      "E": "Örnek değildir (aranan cevap); kalp kası kalıcı dokudur."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Doku tipleri ile hücre çoğalma kapasitesi eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Gastrointestinal sistem epiteli – kalıcı doku",
+      "B": "Kemik iliği – stabil doku",
+      "C": "Hepatosit – labil doku",
+      "D": "Deri epiteli – labil doku",
+      "E": "Nöron – stabil doku"
+     },
+     "dogru": "D",
+     "aciklama": "Labil dokular (kemik iliği, deri ve GİS epiteli) sürekli yenilenir; stabil dokular (karaciğer, böbrek) uyarıyla bölünür; kalıcı dokular (nöron, kalp kası) bölünmez.",
+     "sik_aciklamalari": {
+      "A": "GİS epiteli labil dokudur.",
+      "B": "Kemik iliği labil dokudur.",
+      "C": "Hepatosit stabil hücredir.",
+      "D": "Doğru. Labil dokular (kemik iliği, deri ve GİS epiteli) sürekli yenilenir; stabil dokular (karaciğer, böbrek) uyarıyla bölünür; kalıcı dokular (nöron, kalp kası) bölünmez.",
+      "E": "Nöronlar kalıcı hücrelerdir."
+     },
+     "bilgi": [
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Kök hücrelerin rejenerasyondaki rolünü ve doku kök hücre örneklerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Kendi kendini yenileyebilen ve farklılaşmış hücre tiplerini oluşturabilen hücrelere ne ad verilir?",
+     "secenekler": {
+      "A": "Fibroblast",
+      "B": "Miyofibroblast",
+      "C": "Makrofaj",
+      "D": "Kök hücre",
+      "E": "Perisit"
+     },
+     "dogru": "D",
+     "aciklama": "Kök hücreler kendini yenileme ve farklılaşma yeteneğine sahiptir; embriyonik kök hücreler totipotent/pluripotent, doku kök hücreleri organa özgüdür.",
+     "sik_aciklamalari": {
+      "A": "Fibroblast ECM sentezleyen bağ dokusu hücresidir.",
+      "B": "Miyofibroblast yara kontraksiyonunda rol oynayan kasılabilir fibroblasttır.",
+      "C": "Makrofaj fagositik bir hücredir.",
+      "D": "Doğru. Kök hücreler kendini yenileme ve farklılaşma yeteneğine sahiptir; embriyonik kök hücreler totipotent/pluripotent, doku kök hücreleri organa özgüdür.",
+      "E": "Perisit yeni damarları saran destek hücresidir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Doku kök hücreleri ve yerleşim yerleri (nişleri) eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Epidermal kök hücreler – deri bazal tabakası",
+      "B": "Bağırsak kök hücreleri – kript tabanı",
+      "C": "Karaciğerde oval hücreler – Hering kanalları çevresi",
+      "D": "Hematopoetik kök hücreler – kemik iliği",
+      "E": "Bağırsak kök hücreleri – villus ucu"
+     },
+     "dogru": "E",
+     "aciklama": "Bağırsak kök hücreleri kript tabanında bulunur; villus ucundaki hücreler olgun ve dökülmek üzere olan hücrelerdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: epidermal kök hücreler – deri bazal tabakası.",
+      "B": "Doğru eşleştirme: bağırsak kök hücreleri – kript tabanı.",
+      "C": "Doğru eşleştirme; kronik karaciğer hasarında rejenerasyona katkı sağlar.",
+      "D": "Doğru eşleştirme: hematopoetik kök hücreler – kemik iliği.",
+      "E": "Yanlış eşleştirme (aranan cevap). Bağırsak kök hücreleri kript tabanında bulunur; villus ucundaki hücreler olgun ve dökülmek üzere olan hücrelerdir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Doku kök hücrelerinin asimetrik bölünmesinin önemi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Her iki yavru hücrenin de olgun hücreye farklılaşarak kök hücre havuzunun tükenmesi",
+      "B": "Kök hücrelerin bölünmeden fibroblasta dönüşmesi",
+      "C": "Kök hücrelerin yalnızca apoptoza gitmesi",
+      "D": "Bir yavru hücrenin kök hücre olarak kalıp kendini yenilemesi, diğerinin olgun hücrelere farklılaşması; böylece kök hücre havuzu korunurken olgun hücre üretilmesi",
+      "E": "Kök hücrelerin tümör hücresine dönüşmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Asimetrik bölünme nişin ve kök hücre havuzunun korunmasını sağlarken doku için olgun hücre üretimini sürdürür.",
+     "sik_aciklamalari": {
+      "A": "Bu durumda kök hücre havuzu tükenirdi; asimetrik bölünme bunu önler.",
+      "B": "Kök hücreler bölünerek yeni hücre üretir.",
+      "C": "Asimetrik bölünme apoptozla ilişkili değildir.",
+      "D": "Doğru. Asimetrik bölünme nişin ve kök hücre havuzunun korunmasını sağlarken doku için olgun hücre üretimini sürdürür.",
+      "E": "Asimetrik bölünme normal fizyolojik bir süreçtir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Karaciğer rejenerasyonunun mekanizmalarını ve kronik karaciğer hasarındaki durumu açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Parsiyel hepatektomi sonrası karaciğer rejenerasyonunun 'priming' (hazırlık) aşamasında hepatositleri büyüme faktörlerine duyarlı hale getiren sitokin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IFN-γ",
+      "B": "IL-4",
+      "C": "IL-10",
+      "D": "IL-6",
+      "E": "IL-17"
+     },
+     "dogru": "D",
+     "aciklama": "Priming aşamasında IL-6 hepatositleri G₀'dan G₁'e geçirip büyüme faktörlerine duyarlı yapar; proliferasyonda HGF ve TGF-α etkilidir.",
+     "sik_aciklamalari": {
+      "A": "IFN-γ makrofaj aktivatörüdür.",
+      "B": "IL-4 Th2/M2 yanıtıyla ilişkilidir.",
+      "C": "IL-10 anti-enflamatuvar sitokindir.",
+      "D": "Doğru. Priming aşamasında IL-6 hepatositleri G₀'dan G₁'e geçirip büyüme faktörlerine duyarlı yapar; proliferasyonda HGF ve TGF-α etkilidir.",
+      "E": "IL-17 nötrofil alımını artırır."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Karaciğer rejenerasyonunda hepatosit proliferasyonunu uyaran başlıca büyüme faktörleri aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "VEGF ve PDGF",
+      "B": "TGF-β ve IL-10",
+      "C": "Eritropoietin ve trombopoietin",
+      "D": "HGF ve TGF-α",
+      "E": "İnsülin ve glukagon"
+     },
+     "dogru": "D",
+     "aciklama": "Priming sonrası proliferasyon aşamasında hepatosit büyüme faktörü (HGF) ve TGF-α hepatosit çoğalmasını uyarır.",
+     "sik_aciklamalari": {
+      "A": "VEGF anjiyogenez, PDGF fibroblast göçü ile ilişkilidir.",
+      "B": "TGF-β fibrogenik ve büyümeyi baskılayıcı etkilidir; IL-10 anti-enflamatuvardır.",
+      "C": "Bunlar hematopoetik büyüme faktörleridir.",
+      "D": "Doğru. Priming sonrası proliferasyon aşamasında hepatosit büyüme faktörü (HGF) ve TGF-α hepatosit çoğalmasını uyarır.",
+      "E": "Bunlar metabolik hormonlardır."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Kronik viral hepatit zemininde siroz gelişen bir hastada karaciğerin rejenerasyon kapasitesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sirozda rejenerasyona hiçbir hücre katkıda bulunmaz.",
+      "B": "Siroz zemininde karaciğer parsiyel hepatektomideki gibi tam rejenere olur.",
+      "C": "Hepatosit proliferasyonu bozulabilir; Hering kanalları çevresindeki oval hücreler katkı sağlar, ancak eşlik eden skar fonksiyonel düzelmeyi sınırlar.",
+      "D": "Skar dokusu rejenerasyonu hızlandırır.",
+      "E": "Kronik hasarda hepatositler kalıcı hücrelere dönüşür ve hiç bölünmez."
+     },
+     "dogru": "C",
+     "aciklama": "Kronik hasarda hepatosit proliferasyonu yetersiz kalabilir; oval (progenitör) hücreler devreye girer, ancak fibrozis doku iskeletini bozduğundan normal yapı geri kazanılamaz.",
+     "sik_aciklamalari": {
+      "A": "Oval hücreler rejenerasyona katkı sağlar.",
+      "B": "Sirozda iskelet bozulduğu için tam rejenerasyon olmaz.",
+      "C": "Doğru. Kronik hasarda hepatosit proliferasyonu yetersiz kalabilir; oval (progenitör) hücreler devreye girer, ancak fibrozis doku iskeletini bozduğundan normal yapı geri kazanılamaz.",
+      "D": "Skar fonksiyonel düzelmeyi sınırlar.",
+      "E": "Hepatositler stabil hücrelerdir; kapasiteleri azalabilir ama kalıcı hücreye dönüşmezler."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Skarla onarımın aşamalarını sıralamak",
+   "sorular": [
+    {
+     "id": "k1-15-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Skarla onarımın aşamaları aşağıdakilerin hangisinde doğru sırayla verilmiştir?",
+     "secenekler": {
+      "A": "ECM birikimi → hemostaz-enflamasyon → remodeling → granülasyon dokusu",
+      "B": "Remodeling → granülasyon dokusu → hemostaz → ECM birikimi",
+      "C": "Granülasyon dokusu → hemostaz → ECM birikimi → remodeling",
+      "D": "Hemostaz ve enflamasyon → hücre çoğalması ve granülasyon dokusu → ECM birikimi → remodeling ve skar olgunlaşması",
+      "E": "Hemostaz → remodeling → enflamasyon → ECM birikimi"
+     },
+     "dogru": "D",
+     "aciklama": "Aşamalar sıralı ve birbiriyle örtüşerek ilerler: hemostaz-enflamasyon, proliferasyon-granülasyon dokusu, ECM birikimi ve remodeling.",
+     "sik_aciklamalari": {
+      "A": "Hemostaz ilk aşamadır.",
+      "B": "Remodeling son aşamadır.",
+      "C": "Granülasyon dokusu hemostazdan sonra gelir.",
+      "D": "Doğru sıralama. Aşamalar sıralı ve birbiriyle örtüşerek ilerler: hemostaz-enflamasyon, proliferasyon-granülasyon dokusu, ECM birikimi ve remodeling.",
+      "E": "Remodeling son aşamadır; enflamasyon hemostazla birlikte ilk aşamadadır."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki durumların hangisinde onarımın skar oluşumuyla gerçekleşmesi beklenmez?",
+     "secenekler": {
+      "A": "Şiddetli veya kronik doku hasarı",
+      "B": "Destekleyici stromanın yıkılması",
+      "C": "Proliferasyon yeteneği olmayan hücrelerin ölümü",
+      "D": "Diffüz karaciğer apseleri",
+      "E": "Bazal membranı sağlam yüzeyel bir epitel erozyonu"
+     },
+     "dogru": "E",
+     "aciklama": "Skarla onarım şiddetli/kronik hasarda, stroma yıkıldığında veya kalıcı hücreler öldüğünde gerekir; iskeleti sağlam yüzeyel epitel hasarı rejenerasyonla iyileşir.",
+     "sik_aciklamalari": {
+      "A": "Skar beklenir: şiddetli veya kronik doku hasarı.",
+      "B": "Skar beklenir; iskelet olmadan rejenerasyon olmaz.",
+      "C": "Skar beklenir (ör. miyokard).",
+      "D": "Skar beklenir; stroma yıkımı vardır.",
+      "E": "Beklenmez (aranan cevap); rejenerasyonla iyileşir."
+     },
+     "bilgi": [
+      13,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Skarla onarım aşamaları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Aşamalar sıralıdır ancak birbirleriyle örtüşerek ilerler.",
+      "B": "Hemostazda oluşan pıhtı sonraki hücre göçü için geçici iskele sağlar.",
+      "C": "Granülasyon dokusu geçici bir yapıdır.",
+      "D": "Remodeling aşamasında skar küçülür ve dayanıklılığı artar.",
+      "E": "ECM birikimi hemostazdan önce, ilk dakikalarda tamamlanır."
+     },
+     "dogru": "E",
+     "aciklama": "ECM birikimi proliferasyon ve granülasyon dokusu oluşumunu izler; ilk dakikalarda hemostaz gerçekleşir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: aşamalar sıralıdır ancak birbirleriyle örtüşerek ilerler.",
+      "B": "Doğru ifade; fibrin ağı hücrelerin göçüne zemin oluşturur.",
+      "C": "Doğru ifade; yerini fibröz skara bırakır.",
+      "D": "Doğru ifade; MMP-TIMP dengesiyle yeniden şekillenir.",
+      "E": "Yanlış ifade (aranan cevap). ECM birikimi proliferasyon ve granülasyon dokusu oluşumunu izler; ilk dakikalarda hemostaz gerçekleşir."
+     },
+     "bilgi": [
+      14,
+      15,
+      17,
+      27
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Hemostaz ve akut enflamasyonun yara iyileşmesindeki rolünü açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Yaralanmanın hemen ardından yara alanında oluşan ilk yapı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Olgun kollajen skar",
+      "B": "Granülasyon dokusu",
+      "C": "Fibrin ağı ve trombosit tıkacından oluşan pıhtı",
+      "D": "Keloid",
+      "E": "Yeni epidermis"
+     },
+     "dogru": "C",
+     "aciklama": "Hemostaz yara iyileşmesinin ilk aşamasıdır; trombositler fibrin ağıyla birlikte pıhtıyı oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Olgun skar haftalar-aylar sonra oluşur.",
+      "B": "Granülasyon dokusu 3-10. günlerde oluşur.",
+      "C": "Doğru. Hemostaz yara iyileşmesinin ilk aşamasıdır; trombositler fibrin ağıyla birlikte pıhtıyı oluşturur.",
+      "D": "Keloid aşırı skar oluşumudur.",
+      "E": "Re-epitelizasyon proliferasyon aşamasında gerçekleşir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Yara iyileşmesinin erken döneminde hücresel olayların zamanlaması ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Makrofajlar yalnızca temizlik yapar, onarımı düzenlemez.",
+      "B": "İlk saatlerde fibroblastlar baskındır.",
+      "C": "Lenfositler ilk dakikalarda gelir ve pıhtıyı oluşturur.",
+      "D": "İlk 6-48 saatte nötrofiller, ardından monosit/makrofajlar alanı temizler.",
+      "E": "Nötrofiller yara iyileşmesine hiç katılmaz."
+     },
+     "dogru": "D",
+     "aciklama": "Akut enflamatuvar faz nötrofillerle başlar; makrofajlar hem temizlikçi hem de büyüme faktörleriyle onarımın düzenleyicisidir.",
+     "sik_aciklamalari": {
+      "A": "Makrofajlar onarımın düzenleyicisidir.",
+      "B": "Fibroblastlar proliferatif aşamada (3-10. gün) belirginleşir.",
+      "C": "Pıhtıyı trombositler ve fibrin oluşturur.",
+      "D": "Doğru. Akut enflamatuvar faz nötrofillerle başlar; makrofajlar hem temizlikçi hem de büyüme faktörleriyle onarımın düzenleyicisidir.",
+      "E": "Nötrofiller erken dönemde alanı temizler."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Deneysel olarak makrofajları ortadan kaldırılmış bir hayvanda yara iyileşmesinin bozulmasının en iyi açıklaması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Makrofajlar pıhtıyı oluşturan başlıca hücrelerdir.",
+      "B": "Makrofajlar hem ölü doku ve artıkları temizler hem de büyüme faktörü ve sitokin salgısıyla fibroblast, anjiyogenez ve ECM birikimini düzenler.",
+      "C": "Makrofajlar epitel hücrelerine dönüşerek yarayı kapatır.",
+      "D": "Makrofajlar yalnızca antikor üretir.",
+      "E": "Makrofajların yara iyileşmesinde rolü yoktur."
+     },
+     "dogru": "B",
+     "aciklama": "Makrofaj hem temizlikçi hem de onarımın düzenleyicisidir; TGF-β, PDGF, FGF gibi faktörlerle granülasyon dokusu ve ECM birikimini yönetir.",
+     "sik_aciklamalari": {
+      "A": "Pıhtıyı trombositler oluşturur.",
+      "B": "Doğru. Makrofaj hem temizlikçi hem de onarımın düzenleyicisidir; TGF-β, PDGF, FGF gibi faktörlerle granülasyon dokusu ve ECM birikimini yönetir.",
+      "C": "Makrofajlar epitel hücresine dönüşmez.",
+      "D": "Antikoru plazma hücreleri üretir.",
+      "E": "Makrofajlar onarımın merkezindedir."
+     },
+     "bilgi": [
+      15,
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Hücre çoğalması ve granülasyon dokusunun özelliklerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Yara iyileşmesinin proliferatif evresinde oluşan; ince duvarlı yeni damarlar, proliferan fibroblastlar, lökositler ve gevşek ECM'den oluşan yapıya ne ad verilir?",
+     "secenekler": {
+      "A": "Granülom",
+      "B": "Granülasyon dokusu",
+      "C": "Keloid",
+      "D": "Fibrin pıhtısı",
+      "E": "Olgun skar"
+     },
+     "dogru": "B",
+     "aciklama": "Granülasyon dokusu makroskopik olarak pembe, nemli, granüler ve kolay kanayan, geçici bir yapıdır.",
+     "sik_aciklamalari": {
+      "A": "Granülom epitelioid makrofaj kümeleridir; kronik enflamasyonun özel tipidir.",
+      "B": "Doğru. Granülasyon dokusu makroskopik olarak pembe, nemli, granüler ve kolay kanayan, geçici bir yapıdır.",
+      "C": "Keloid yara sınırını aşan aşırı skar dokusudur.",
+      "D": "Fibrin pıhtısı hemostaz aşamasında oluşur.",
+      "E": "Olgun skar az hücreli, yoğun kollajenli dokudur."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Yara iyileşmesinin 3-10. günlerinde gerçekleşen proliferatif olaylar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Epitel hücrelerinin yüzeyi kaplaması (re-epitelizasyon)",
+      "B": "Endotel hücrelerinin yeni damar oluşturması (anjiyogenez)",
+      "C": "Fibroblastların göçü ve çoğalması",
+      "D": "Granülasyon dokusu oluşumu",
+      "E": "Kollajenin tamamen olgunlaşıp yara gücünün normal dokuya eşitlenmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Proliferatif evrede re-epitelizasyon, anjiyogenez ve fibroblast çoğalmasıyla granülasyon dokusu oluşur; yara gücü hiçbir zaman normal dokuya tam eşitlenmez.",
+     "sik_aciklamalari": {
+      "A": "Proliferatif evrede gerçekleşir.",
+      "B": "Proliferatif evrede gerçekleşir.",
+      "C": "Proliferatif evrede gerçekleşir.",
+      "D": "Proliferatif evrenin ürünüdür.",
+      "E": "Yer almaz (aranan cevap); olgunlaşma aylar sürer ve yara gücü ~%70-80'de kalır."
+     },
+     "bilgi": [
+      16,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Granülasyon dokusunun makroskopik olarak kolay kanayan, pembe ve granüler görünmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yoğun ve olgun kollajen liflerinin bulunması",
+      "B": "Çok sayıda ince duvarlı, geçirgen yeni kılcal damarın bulunması",
+      "C": "Dokunun tamamen avasküler olması",
+      "D": "Kalsiyum tuzlarının birikmesi",
+      "E": "Epitelioid hücre kümelerinin bulunması"
+     },
+     "dogru": "B",
+     "aciklama": "Anjiyogenezle oluşan ince duvarlı ve sızdıran kılcallar granülasyon dokusuna pembe-granüler görünüm verir ve kolay kanamasına neden olur.",
+     "sik_aciklamalari": {
+      "A": "Olgun kollajen skarın özelliğidir; granülasyon dokusunda ECM gevşektir.",
+      "B": "Doğru. Anjiyogenezle oluşan ince duvarlı ve sızdıran kılcallar granülasyon dokusuna pembe-granüler görünüm verir ve kolay kanamasına neden olur.",
+      "C": "Granülasyon dokusu damardan zengindir.",
+      "D": "Kalsifikasyon granülasyon dokusunun özelliği değildir.",
+      "E": "Epitelioid hücreler granülomun bileşenidir."
+     },
+     "bilgi": [
+      17,
+      19
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Anjiyogenezin tanımını, temel basamaklarını ve önemini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Mevcut damarlardan yeni damar oluşumuna ne ad verilir?",
+     "secenekler": {
+      "A": "Vaskülit",
+      "B": "Anjiyogenez",
+      "C": "Tromboz",
+      "D": "Hiperemi",
+      "E": "Vazodilatasyon"
+     },
+     "dogru": "B",
+     "aciklama": "Anjiyogenez yara iyileşmesi, kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyonda önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Vaskülit damar duvarı inflamasyonudur.",
+      "B": "Doğru. Anjiyogenez yara iyileşmesi, kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyonda önemlidir.",
+      "C": "Tromboz damar içi pıhtı oluşumudur.",
+      "D": "Hiperemi aktif kan akımı artışıdır.",
+      "E": "Vazodilatasyon damar çapının genişlemesidir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Anjiyogenezin temel basamakları aşağıdakilerin hangisinde doğru sırayla verilmiştir?",
+     "secenekler": {
+      "A": "Perisit ile olgunlaşma → VEGF artışı → bazal membran yıkımı → endotel göçü",
+      "B": "VEGF artışı → vazodilatasyon/permeabilite artışı → bazal membranın MMP ile yıkımı → uç hücre göçü ve sap hücre çoğalması → perisit ve düz kasla olgunlaşma",
+      "C": "Endotel göçü → VEGF artışı → bazal membran sentezi → vazokonstriksiyon",
+      "D": "Bazal membran yıkımı → hipoksi → perisit göçü → VEGF azalması",
+      "E": "Damar olgunlaşması → hipoksi → endotel apoptozu"
+     },
+     "dogru": "B",
+     "aciklama": "Hipoksi ve sitokinler VEGF'i artırır; damar geçirgenleşir, MMP'ler bazal membranı yıkar, uç hücreler göç eder, sap hücreler çoğalır ve perisit/düz kasla olgunlaşma olur.",
+     "sik_aciklamalari": {
+      "A": "Olgunlaşma son basamaktır.",
+      "B": "Doğru sıralama. Hipoksi ve sitokinler VEGF'i artırır; damar geçirgenleşir, MMP'ler bazal membranı yıkar, uç hücreler göç eder, sap hücreler çoğalır ve perisit/düz kasla olgunlaşma olur.",
+      "C": "VEGF artışı süreci başlatır; bazal membran yıkılır.",
+      "D": "Hipoksi tetikleyicidir; VEGF artar.",
+      "E": "Bu sıralama anjiyogenezi tanımlamaz."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Anjiyogenezin klinik önemi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Yara iyileşmesinde granülasyon dokusunun oluşması için gereklidir.",
+      "B": "İskemik dokularda kollateral dolaşım gelişimine katkıda bulunur.",
+      "C": "Tümörlerin büyümesi için gereklidir.",
+      "D": "Islak maküler dejenerasyonun patogenezinde rol oynar.",
+      "E": "Anjiyogenez yalnızca embriyonik dönemde görülür; erişkinde patolojik ya da onarım sürecinde rolü yoktur."
+     },
+     "dogru": "E",
+     "aciklama": "Anjiyogenez erişkinde yara iyileşmesi, kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyonda önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; yeni damarlar granülasyon dokusunun ana bileşenidir.",
+      "B": "Doğru ifade; iskemik alanlara kollateral akım sağlanır.",
+      "C": "Doğru ifade; tümörler beslenmek için yeni damar oluşturur.",
+      "D": "Doğru ifade; anormal damar oluşumu görme kaybına yol açar.",
+      "E": "Yanlış ifade (aranan cevap). Anjiyogenez erişkinde yara iyileşmesi, kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyonda önemlidir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "VEGF ve hipoksiye duyarlı faktörün (HIF) anjiyogenezdeki rolünü açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Anjiyogenezin ana tetikleyicisi olan ve endotel göçü ile proliferasyonunu uyaran büyüme faktörü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Eritropoietin",
+      "B": "HGF",
+      "C": "VEGF",
+      "D": "TGF-α",
+      "E": "IL-6"
+     },
+     "dogru": "C",
+     "aciklama": "Hipoksi HIF'i stabilize eder; HIF de VEGF ve diğer anjiyojenik genlerin ekspresyonunu artırır.",
+     "sik_aciklamalari": {
+      "A": "Eritropoietin eritrosit üretimini uyarır.",
+      "B": "HGF hepatosit proliferasyonunu uyarır.",
+      "C": "Doğru. Hipoksi HIF'i stabilize eder; HIF de VEGF ve diğer anjiyojenik genlerin ekspresyonunu artırır.",
+      "D": "TGF-α hepatosit ve epitel proliferasyonunda rol oynar.",
+      "E": "IL-6 akut faz yanıtını ve karaciğer rejenerasyonunda priming'i sağlar."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Hipoksik bir dokuda anjiyogenezin başlamasında hipoksiye duyarlı faktörün (HIF) rolü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hipoksik ortamda yıkılarak VEGF üretimini durdurur.",
+      "B": "Hipoksik ortamda stabilize olur ve VEGF ile diğer anjiyojenik genlerin ekspresyonunu artırır.",
+      "C": "Doğrudan kollajen sentezini başlatır.",
+      "D": "Bazal membranı yıkan bir metalloproteinazdır.",
+      "E": "Perisitlerin damar duvarını terk etmesini engeller."
+     },
+     "dogru": "B",
+     "aciklama": "HIF normal oksijen düzeyinde yıkılır; hipokside stabilize olup VEGF gen ekspresyonunu artırır. Bu nedenle hipoksi anjiyogenezin ana tetikleyicisidir.",
+     "sik_aciklamalari": {
+      "A": "Hipokside HIF yıkılmaz, stabilize olur.",
+      "B": "Doğru. HIF normal oksijen düzeyinde yıkılır; hipokside stabilize olup VEGF gen ekspresyonunu artırır. Bu nedenle hipoksi anjiyogenezin ana tetikleyicisidir.",
+      "C": "Kollajen sentezini fibroblastlar yapar.",
+      "D": "Bazal membranı MMP'ler yıkar.",
+      "E": "HIF'in böyle doğrudan bir işlevi yoktur."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Bazı tümörlerin tedavisinde ve ıslak maküler dejenerasyonda anti-VEGF ajanların kullanılmasının mantığı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Trombosit agregasyonunu artırmak",
+      "B": "Kollajen sentezini artırmak",
+      "C": "Yeni damar oluşumunu (anjiyogenez) baskılayarak tümörün beslenmesini ve retinadaki anormal damarlanmayı azaltmak",
+      "D": "Fibroblastları aktive etmek",
+      "E": "Lökosit göçünü artırmak"
+     },
+     "dogru": "C",
+     "aciklama": "VEGF anjiyogenezin anahtar faktörüdür; bloke edilmesi tümör anjiyogenezini ve ıslak maküler dejenerasyondaki anormal damar oluşumunu azaltır.",
+     "sik_aciklamalari": {
+      "A": "Trombosit agregasyonu hedeflenmez.",
+      "B": "Anti-VEGF ajanların kollajen üzerine böyle bir hedefi yoktur.",
+      "C": "Doğru. VEGF anjiyogenezin anahtar faktörüdür; bloke edilmesi tümör anjiyogenezini ve ıslak maküler dejenerasyondaki anormal damar oluşumunu azaltır.",
+      "D": "Fibroblast aktivasyonu amaçlanmaz.",
+      "E": "Lökosit göçünü artırma amacı yoktur."
+     },
+     "bilgi": [
+      18,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Fibroblast aktivasyonunu ve ECM birikimini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Yara iyileşmesinde fibroblastların göçünü ve çoğalmasını uyaran başlıca büyüme faktörleri aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Histamin ve serotonin",
+      "B": "İnsülin, glukagon ve kortizol",
+      "C": "Eritropoietin ve trombopoietin",
+      "D": "PDGF, FGF-2 ve TGF-β",
+      "E": "C3b ve C5a"
+     },
+     "dogru": "D",
+     "aciklama": "Hasar temizlendikten sonra PDGF, FGF-2 ve TGF-β fibroblastları bölgeye çeker ve çoğaltır; kollajen ve diğer ECM proteinlerinin sentezi artar.",
+     "sik_aciklamalari": {
+      "A": "Bunlar erken vasküler değişikliklerin mediyatörleridir.",
+      "B": "Bunlar metabolik hormonlardır; kortizol tersine iyileşmeyi geciktirir.",
+      "C": "Bunlar hematopoetik büyüme faktörleridir.",
+      "D": "Doğru. Hasar temizlendikten sonra PDGF, FGF-2 ve TGF-β fibroblastları bölgeye çeker ve çoğaltır; kollajen ve diğer ECM proteinlerinin sentezi artar.",
+      "E": "Bunlar kompleman ürünleridir; opsonizasyon ve kemotakside rol alır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Fibroblast aktivasyonu ve ECM birikimi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Fibroblastlar hasar bölgesine ilk dakikalarda gelerek pıhtıyı oluşturur.",
+      "B": "Hasar temizlendikten sonra fibroblastlar bölgeye göç eder, çoğalır ve kollajen ile diğer ECM proteinlerinin sentezini artırır.",
+      "C": "Fibroblastlar yalnızca kollajeni yıkar, sentezlemez.",
+      "D": "Fibroblast aktivasyonu yalnızca IFN-γ ile olur.",
+      "E": "Fibroblastların yara iyileşmesinde rolü yoktur."
+     },
+     "dogru": "B",
+     "aciklama": "Fibroblastlar temizlik evresini takiben aktive olur ve skarın yapısal iskeletini oluşturan ECM'yi üretir.",
+     "sik_aciklamalari": {
+      "A": "Pıhtıyı trombositler ve fibrin oluşturur.",
+      "B": "Doğru. Fibroblastlar temizlik evresini takiben aktive olur ve skarın yapısal iskeletini oluşturan ECM'yi üretir.",
+      "C": "Fibroblastların temel işlevi ECM sentezidir.",
+      "D": "Başlıca uyaranlar PDGF, FGF-2 ve TGF-β'dır.",
+      "E": "Fibroblastlar skar oluşumunun merkezindedir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Yara iyileşmesinde fibroblastlardan ECM birikimi aşamasının hangi sırada gerçekleştiği ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hemostazdan önce",
+      "B": "Nötrofil infiltrasyonundan önce",
+      "C": "Hasar temizlenip granülasyon dokusu oluştuktan sonra; remodelingden önce",
+      "D": "Yalnızca skar olgunlaştıktan sonra",
+      "E": "Yara iyileşmesi boyunca hiç gerçekleşmez"
+     },
+     "dogru": "C",
+     "aciklama": "Skarla onarımda sıra hemostaz-enflamasyon → proliferasyon/granülasyon dokusu → ECM birikimi → remodelingdir.",
+     "sik_aciklamalari": {
+      "A": "Hemostaz ilk aşamadır.",
+      "B": "Nötrofil infiltrasyonu ilk 6-48 saattedir; ECM birikimi sonra gelir.",
+      "C": "Doğru. Skarla onarımda sıra hemostaz-enflamasyon → proliferasyon/granülasyon dokusu → ECM birikimi → remodelingdir.",
+      "D": "Olgunlaşma ECM birikiminden sonra gelir.",
+      "E": "ECM birikimi skarla onarımın temel aşamasıdır."
+     },
+     "bilgi": [
+      14,
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "ECM bileşenlerini (kollajen, elastin, proteoglikan, glikoprotein) ve işlevlerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q34",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Normal iyileşen yara (skar) dokusunda en fazla bulunan kollajen tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tip II",
+      "B": "Tip IV",
+      "C": "Tip I",
+      "D": "Tip V",
+      "E": "Tip IX"
+     },
+     "dogru": "C",
+     "aciklama": "Kollajen skarın ana yapısal proteinidir; olgun skarda fibriler tip I kollajen baskındır (erken granülasyon dokusunda tip III daha fazladır).",
+     "sik_aciklamalari": {
+      "A": "Tip II kollajen kıkırdakta bulunur.",
+      "B": "Tip IV kollajen bazal membranın bileşenidir.",
+      "C": "Doğru. Kollajen skarın ana yapısal proteinidir; olgun skarda fibriler tip I kollajen baskındır (erken granülasyon dokusunda tip III daha fazladır).",
+      "D": "Tip V kollajen skarın baskın tipi değildir.",
+      "E": "Tip IX kollajen kıkırdakla ilişkilidir."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": [
+      "b4f05a852f58"
+     ]
+    },
+    {
+     "id": "k1-15-q35",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "ECM bileşenleri ve bulundukları yerler/işlevleri eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Laminin – bazal membran yapışkan glikoproteini",
+      "B": "Fibronektin – interstisyel matrikste yapışkan glikoprotein",
+      "C": "Elastin – büyük arterler, akciğer ve deride esneklik",
+      "D": "Proteoglikanlar – hidratlı jel ile sıkıştırma kuvvetine direnç",
+      "E": "Hyaluronan – düşük su bağlama kapasitesiyle dokuyu kurutan molekül"
+     },
+     "dogru": "E",
+     "aciklama": "Hyaluronan çok yüksek su bağlama kapasitesine sahiptir; gelişmekte olan dokular ve granülasyon dokusunda bol bulunur.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; hücre adezyonu ve göçünde iskele görevi görür.",
+      "B": "Doğru eşleştirme: fibronektin – interstisyel matrikste yapışkan glikoprotein.",
+      "C": "Doğru eşleştirme; uterusta da bulunur.",
+      "D": "Doğru eşleştirme; büyüme faktörleri için rezervuar da olabilir.",
+      "E": "Yanlış eşleştirme (aranan cevap). Hyaluronan çok yüksek su bağlama kapasitesine sahiptir; gelişmekte olan dokular ve granülasyon dokusunda bol bulunur."
+     },
+     "bilgi": [
+      22,
+      23,
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q36",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Uzun süre taze sebze ve meyve tüketmemiş bir hastada diş eti kanamaları ve yaralarında iyileşme gecikmesi görülüyor.\n\nBu tablonun yara iyileşmesine etkisinin temel mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "C vitamini eksikliğinde kollajenin çapraz bağlanması bozulur ve yara gücü azalır.",
+      "B": "Elastin sentezinin aşırı artması",
+      "C": "Laminin birikiminin artması",
+      "D": "Trombosit sayısının artması",
+      "E": "VEGF üretiminin aşırı artması"
+     },
+     "dogru": "A",
+     "aciklama": "Kollajenin üçlü heliks yapısının olgunlaşması ve çapraz bağlanması için C vitamini gereklidir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kollajenin üçlü heliks yapısının olgunlaşması ve çapraz bağlanması için C vitamini gereklidir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.",
+      "B": "C vitamini eksikliği elastin sentezini artırmaz.",
+      "C": "Laminin artışı bu tablonun mekanizması değildir.",
+      "D": "Trombosit sayısı artışı beklenmez; kanama damar duvarı zayıflığına bağlıdır.",
+      "E": "VEGF artışı bu tabloyu açıklamaz."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "b4f05a852f58",
+     "soru": "Normal iyileşme dokusunda en fazla bulunan temel kolajen hangisidir?",
+     "secenekler": {
+      "A": "Tip I",
+      "B": "Tip II",
+      "C": "Tip III",
+      "D": "Tip IV",
+      "E": "Tip V"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "TGF-β ve diğer fibrogenik sitokinlerin etkilerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q37",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Yara iyileşmesi ve fibroziste en önemli fibrogenik sitokin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IL-6",
+      "B": "IFN-γ",
+      "C": "TGF-β",
+      "D": "TNF",
+      "E": "IL-12"
+     },
+     "dogru": "C",
+     "aciklama": "TGF-β fibroblast göçü ve çoğalmasını, kollajen ve fibronektin sentezini artırır; MMP'leri azaltıp TIMP'leri artırarak ECM yıkımını azaltır.",
+     "sik_aciklamalari": {
+      "A": "IL-6 akut faz yanıtında ve karaciğer rejenerasyonunda rol oynar.",
+      "B": "IFN-γ makrofaj aktivatörüdür.",
+      "C": "Doğru. TGF-β fibroblast göçü ve çoğalmasını, kollajen ve fibronektin sentezini artırır; MMP'leri azaltıp TIMP'leri artırarak ECM yıkımını azaltır.",
+      "D": "TNF pro-enflamatuvar sitokindir.",
+      "E": "IL-12 Th1 yanıtını uyarır."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q38",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "TGF-β'nın yara iyileşmesi ve fibrozisteki etkileri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Fibroblast göçü ve proliferasyonunu artırma",
+      "B": "Kollajen ve fibronektin sentezini artırma",
+      "C": "MMP'leri azaltma ve TIMP'leri artırma",
+      "D": "Anti-enflamatuvar etki",
+      "E": "MMP aktivitesini artırarak ECM yıkımını hızlandırma"
+     },
+     "dogru": "E",
+     "aciklama": "TGF-β ECM yıkımını azaltır (MMP ↓, TIMP ↑); bu nedenle fibrozisi ilerletir.",
+     "sik_aciklamalari": {
+      "A": "TGF-β etkisidir: fibroblast göçü ve proliferasyonunu artırma.",
+      "B": "TGF-β etkisidir: kollajen ve fibronektin sentezini artırma.",
+      "C": "TGF-β etkisidir; ECM birikimi lehine dengedir.",
+      "D": "TGF-β etkisidir: anti-enflamatuvar etki.",
+      "E": "Yer almaz (aranan cevap); TGF-β ECM yıkımını azaltır."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q39",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "TGF-β aktivitesinin kronik olarak artmış olduğu bir organda beklenen değişiklik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "ECM sentezinin artması ve yıkımının azalmasıyla ilerleyici fibrozis",
+      "B": "Kollajenin hızla yıkılmasıyla doku yumuşaması",
+      "C": "Akut nötrofilik enflamasyonun artması",
+      "D": "Parankim hücrelerinin tam rejenerasyonu",
+      "E": "Damar geçirgenliğinin kalıcı artışı ve ödem"
+     },
+     "dogru": "A",
+     "aciklama": "TGF-β hem ECM sentezini artırır hem MMP/TIMP dengesini yıkımı azaltacak yönde değiştirir; sonuç ilerleyici fibrozistir. TGF-β ayrıca antifibrotik tedavilerin potansiyel hedefidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. TGF-β hem ECM sentezini artırır hem MMP/TIMP dengesini yıkımı azaltacak yönde değiştirir; sonuç ilerleyici fibrozistir. TGF-β ayrıca antifibrotik tedavilerin potansiyel hedefidir.",
+      "B": "TGF-β kollajen yıkımını azaltır.",
+      "C": "TGF-β anti-enflamatuvar etkilidir.",
+      "D": "Fibrozis parankim mimarisini bozar; tam rejenerasyon beklenmez.",
+      "E": "Bu TGF-β'nın temel etkisi değildir."
+     },
+     "bilgi": [
+      26,
+      37
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 14,
+   "metin": "ECM yeniden şekillenmesini ve skar olgunlaşmasını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q40",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Skar olgunlaşması sırasında ECM bileşenlerini yıkan enzim ailesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kaspazlar",
+      "B": "Matriks metalloproteinazlar (MMP)",
+      "C": "Kinazlar",
+      "D": "Lipazlar",
+      "E": "Fosfolipaz A₂"
+     },
+     "dogru": "B",
+     "aciklama": "MMP'ler ECM'yi yıkar; aktiviteleri doku metalloproteinaz inhibitörleri (TIMP) ile dengelenir. Bu denge skarın yeniden şekillenmesini sağlar.",
+     "sik_aciklamalari": {
+      "A": "Kaspazlar apoptozda görev alan proteazlardır.",
+      "B": "Doğru. MMP'ler ECM'yi yıkar; aktiviteleri doku metalloproteinaz inhibitörleri (TIMP) ile dengelenir. Bu denge skarın yeniden şekillenmesini sağlar.",
+      "C": "Kinazlar fosforilasyon yapan enzimlerdir.",
+      "D": "Lipazlar trigliseritleri yıkar.",
+      "E": "Fosfolipaz A₂ araşidonik asidi serbestleştirir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q41",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Matriks metalloproteinaz alt grupları ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Jelatinazlar – MMP-2 ve MMP-9",
+      "B": "Stromelizinler – MMP-1",
+      "C": "İnterstisyel kollajenazlar – yalnızca MMP-9",
+      "D": "Jelatinazlar – TIMP-1",
+      "E": "Stromelizinler – kaspaz-3"
+     },
+     "dogru": "A",
+     "aciklama": "İnterstisyel kollajenazlar (MMP-1, -2, -3), jelatinazlar (MMP-2, -9) ve stromelizinler (MMP-3, -10, -11) ECM'yi yıkar; TIMP'ler bunları inhibe eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru. İnterstisyel kollajenazlar (MMP-1, -2, -3), jelatinazlar (MMP-2, -9) ve stromelizinler (MMP-3, -10, -11) ECM'yi yıkar; TIMP'ler bunları inhibe eder.",
+      "B": "MMP-1 interstisyel kollajenazdır.",
+      "C": "MMP-9 jelatinazdır: i̇nterstisyel kollajenazlar – yalnızca MMP-9.",
+      "D": "TIMP'ler MMP inhibitörüdür, jelatinaz değildir.",
+      "E": "Kaspaz-3 apoptoz enzimidir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q42",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Skar dokusunun remodeling (yeniden şekillenme) evresi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "MMP ve TIMP dengesi ile ECM sentez ve yıkımı düzenlenir; skar küçülür ve daha dayanıklı hale gelir.",
+      "B": "Remodeling yaralanmadan sonraki ilk saatlerde tamamlanır.",
+      "C": "Remodeling sırasında yara gücü tam olarak normal dokuya eşitlenir.",
+      "D": "Remodelingde yalnızca kollajen sentezi olur, yıkım olmaz.",
+      "E": "Remodelingde granülasyon dokusu yeniden oluşur."
+     },
+     "dogru": "A",
+     "aciklama": "Remodelingde ECM sentezi ve yıkımı dengelenir; skar olgunlaşır, küçülür ve dayanıklılığı artar, ancak normal dokunun gücüne tam ulaşmaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Remodelingde ECM sentezi ve yıkımı dengelenir; skar olgunlaşır, küçülür ve dayanıklılığı artar, ancak normal dokunun gücüne tam ulaşmaz.",
+      "B": "Remodeling haftalar-aylar sürer.",
+      "C": "Yara gücü genellikle normal dokunun ~%70-80'inde kalır.",
+      "D": "MMP'lerle yıkım da gerçekleşir.",
+      "E": "Granülasyon dokusu proliferatif evrenin ürünüdür; remodelingde yerini skara bırakır."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 15,
+   "metin": "Yara gücünün zaman içindeki değişimini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q43",
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "Yara gücü yaklaşık 3 ay sonunda normal dokunun ne kadarına ulaşır?",
+     "secenekler": {
+      "A": "%10-20",
+      "B": "%30-40",
+      "C": "%70-80",
+      "D": "%100",
+      "E": "%150"
+     },
+     "dogru": "C",
+     "aciklama": "Yara gücü ilk haftada hızla artar ve 3 ayda normal dokunun ~%70-80'ine ulaşır; tam normal güce genellikle hiçbir zaman ulaşılamaz.",
+     "sik_aciklamalari": {
+      "A": "Bu değer ilk haftalardaki düşük gücü yansıtır.",
+      "B": "3 ay sonundaki güç bundan yüksektir.",
+      "C": "Doğru. Yara gücü ilk haftada hızla artar ve 3 ayda normal dokunun ~%70-80'ine ulaşır; tam normal güce genellikle hiçbir zaman ulaşılamaz.",
+      "D": "Tam normal güce genellikle ulaşılamaz.",
+      "E": "Skar normal dokudan güçlü olmaz."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q44",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Skar dokusunun hiçbir zaman normal dokunun gücüne tam ulaşamamasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Skarda hiç kollajen bulunmaması",
+      "B": "Fibröz skar dokusunun daha az organize ve daha az esnek olması",
+      "C": "Skarın tamamen elastinden oluşması",
+      "D": "Skarın aşırı damarlı olması",
+      "E": "Skarda sürekli akut enflamasyon bulunması"
+     },
+     "dogru": "B",
+     "aciklama": "Skar kollajeni normal dokudaki gibi düzenli organize olmaz ve esnekliği azdır; bu nedenle yara gücü sınırlı kalır.",
+     "sik_aciklamalari": {
+      "A": "Skarın ana proteini kollajendir.",
+      "B": "Doğru. Skar kollajeni normal dokudaki gibi düzenli organize olmaz ve esnekliği azdır; bu nedenle yara gücü sınırlı kalır.",
+      "C": "Skar esas olarak kollajenden oluşur.",
+      "D": "Olgun skar az damarlıdır.",
+      "E": "Olgun skarda akut enflamasyon beklenmez."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q45",
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "Karın ameliyatı geçiren bir hastaya postoperatif ilk haftalarda ağır kaldırmaması önerilmektedir.\n\nBu önerinin patolojik temeli aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yara gücü ilk haftalarda düşüktür ve olgunlaşma aylar sürer; mekanik zorlanma yara ayrılması (dehisens) riskini artırır.",
+      "B": "Yara ilk günde normal dokunun gücüne ulaşır.",
+      "C": "Ağır kaldırmak keloid oluşumunu önler.",
+      "D": "Hareket granülasyon dokusunun oluşmasını hızlandırır.",
+      "E": "Mekanik faktörlerin yara iyileşmesine etkisi yoktur."
+     },
+     "dogru": "A",
+     "aciklama": "Yara gücü zamanla artar; erken dönemde mekanik faktörler (gerilme, hareket, basınç) dehisens riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Yara gücü zamanla artar; erken dönemde mekanik faktörler (gerilme, hareket, basınç) dehisens riskini artırır.",
+      "B": "İlk günlerde yara gücü çok düşüktür.",
+      "C": "Ağır kaldırmanın keloidle ilişkisi yoktur.",
+      "D": "Aşırı hareket iyileşmeyi bozar.",
+      "E": "Mekanik faktörler önemli lokal etkenlerdir."
+     },
+     "bilgi": [
+      28,
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 16,
+   "metin": "Primer, sekonder ve tersiyer iyileşmeyi ayırt etmek",
+   "sorular": [
+    {
+     "id": "k1-15-q46",
+     "kazanim": 16,
+     "zorluk": "kolay",
+     "soru": "Temiz, kenarları birbirine yaklaştırılmış bir cerrahi insizyonun iyileşmesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Primer iyileşme (per primam)",
+      "B": "Sekonder iyileşme (per secundam)",
+      "C": "Tersiyer iyileşme (per tertiam)",
+      "D": "Keloid oluşumu",
+      "E": "Kontraktür"
+     },
+     "dogru": "A",
+     "aciklama": "Primer iyileşme minimal doku kaybı olan, kenarları yakınlaştırılmış temiz yaralarda görülür ve az skar bırakır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Primer iyileşme minimal doku kaybı olan, kenarları yakınlaştırılmış temiz yaralarda görülür ve az skar bırakır.",
+      "B": "Sekonder iyileşme geniş doku kayıplı veya enfekte yaralarda görülür.",
+      "C": "Tersiyer iyileşme önce açık bırakılıp sonra kapatılan yaralardır.",
+      "D": "Keloid aşırı skar oluşumudur.",
+      "E": "Kontraktür aşırı yara kontraksiyonudur."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q47",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Sekonder iyileşmenin (per secundam) primer iyileşmeye göre özellikleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Geniş doku kayıplı veya enfekte yaralarda görülmesi",
+      "B": "Daha fazla granülasyon dokusu oluşması",
+      "C": "Daha belirgin skar oluşması",
+      "D": "Yara kontraksiyonunun daha belirgin olması",
+      "E": "Minimal doku kaybı ve çok az skar bırakması"
+     },
+     "dogru": "E",
+     "aciklama": "Minimal doku kaybı ve az skar primer iyileşmenin özelliğidir; sekonder iyileşmede granülasyon dokusu, skar ve kontraksiyon daha belirgindir.",
+     "sik_aciklamalari": {
+      "A": "Sekonder iyileşmenin özelliğidir.",
+      "B": "Sekonder iyileşmenin özelliğidir; büyük boşluk granülasyon dokusuyla dolar.",
+      "C": "Sekonder iyileşmenin özelliğidir.",
+      "D": "Sekonder iyileşmenin özelliğidir; miyofibroblastlar yarayı küçültür.",
+      "E": "Yer almaz (aranan cevap); primer iyileşmenin özelliğidir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q48",
+     "kazanim": 16,
+     "zorluk": "zor",
+     "soru": "Kontamine bir travmatik yara, enfeksiyon riski nedeniyle önce açık bırakılıp birkaç gün antibiyotik ve pansumanla izlendikten sonra cerrahi olarak kapatılıyor.\n\nBu iyileşme biçimi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Primer iyileşme",
+      "B": "Sekonder iyileşme",
+      "C": "Tersiyer iyileşme (gecikmiş primer kapatma)",
+      "D": "Rejenerasyon",
+      "E": "Hipertrofik skar"
+     },
+     "dogru": "C",
+     "aciklama": "Tersiyer iyileşmede (per tertiam) primer kapatma enfeksiyon riski nedeniyle ertelenir; yara tedaviden sonra kapatılır.",
+     "sik_aciklamalari": {
+      "A": "Primer iyileşmede temiz yara hemen kapatılır.",
+      "B": "Sekonder iyileşmede yara kapatılmaz, granülasyonla kendiliğinden dolar.",
+      "C": "Doğru. Tersiyer iyileşmede (per tertiam) primer kapatma enfeksiyon riski nedeniyle ertelenir; yara tedaviden sonra kapatılır.",
+      "D": "Rejenerasyon iyileşme yolu (aynı hücrelerle yenilenme) olup kapatma zamanlamasını tanımlamaz.",
+      "E": "Hipertrofik skar aşırı skar oluşumudur."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 17,
+   "metin": "Yara iyileşmesini etkileyen sistemik ve lokal faktörleri sıralamak",
+   "sorular": [
+    {
+     "id": "k1-15-q49",
+     "kazanim": 17,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi yara iyileşmesini geciktiren lokal faktörlerden en önemlilerindendir?",
+     "secenekler": {
+      "A": "Enfeksiyon",
+      "B": "Yeterli doku perfüzyonu",
+      "C": "Yara kenarlarının yakınlaştırılması",
+      "D": "Yeterli protein alımı",
+      "E": "C vitamini desteği"
+     },
+     "dogru": "A",
+     "aciklama": "Enfeksiyon inflamasyonu uzatır ve doku yıkımını artırır; yara iyileşmesini geciktiren en önemli lokal faktörlerdendir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Enfeksiyon inflamasyonu uzatır ve doku yıkımını artırır; yara iyileşmesini geciktiren en önemli lokal faktörlerdendir.",
+      "B": "Yeterli perfüzyon iyileşmeyi destekler; zayıf perfüzyon geciktirir.",
+      "C": "Kenarların yakınlaştırılması primer iyileşmeyi sağlar.",
+      "D": "Yeterli protein kollajen sentezi için gereklidir.",
+      "E": "C vitamini kollajen olgunlaşmasını destekler."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q50",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Uzun süreli kortikosteroid kullanan bir hastada yara iyileşmesinin gecikmesinin mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Glukokortikoidlerin TGF-β üretimini ve kollajen sentezini inhibe etmesi",
+      "B": "Glukokortikoidlerin kollajen sentezini aşırı artırması",
+      "C": "Glukokortikoidlerin trombosit sayısını artırması",
+      "D": "Glukokortikoidlerin anjiyogenezi aşırı uyarması",
+      "E": "Glukokortikoidlerin yara gücünü hızla normale döndürmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Glukokortikoidler anti-enflamatuvar etkilerinin yanında TGF-β üretimini ve kollajen sentezini baskılar; bu nedenle yara gücü azalır ve iyileşme gecikir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Glukokortikoidler anti-enflamatuvar etkilerinin yanında TGF-β üretimini ve kollajen sentezini baskılar; bu nedenle yara gücü azalır ve iyileşme gecikir.",
+      "B": "Tersine kollajen sentezi azalır.",
+      "C": "Trombosit sayısı artışı iyileşme gecikmesini açıklamaz.",
+      "D": "Glukokortikoidler anjiyogenezi uyarmaz.",
+      "E": "Yara gücü azalır: glukokortikoidlerin yara gücünü hızla normale döndürmesi."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": [
+      "07b5d7e45352"
+     ]
+    },
+    {
+     "id": "k1-15-q51",
+     "kazanim": 17,
+     "zorluk": "zor",
+     "soru": "Yara iyileşmesini etkileyen faktörler ile mekanizmaları eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Diyabet – nötrofil fonksiyon bozukluğu, küçük damar hastalığı ve enfeksiyon eğilimi",
+      "B": "Protein ve C vitamini eksikliği – kollajen sentezinde azalma",
+      "C": "Ateroskleroz ve venöz yetmezlik – dokuda iskemi",
+      "D": "Yabancı cisim (cam, çelik, kemik) – iyileşmenin gecikmesi",
+      "E": "Glukokortikoidler – TGF-β üretimini artırarak hızlı iyileşme"
+     },
+     "dogru": "E",
+     "aciklama": "Glukokortikoidler TGF-β üretimini ve kollajen sentezini inhibe eder; iyileşmeyi geciktirir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: diyabet – nötrofil fonksiyon bozukluğu, küçük damar hastalığı ve enfeksiyon eğilimi.",
+      "B": "Doğru eşleştirme: protein ve C vitamini eksikliği – kollajen sentezinde azalma.",
+      "C": "Doğru eşleştirme; perfüzyon bozulur.",
+      "D": "Doğru eşleştirme; yabancı cisim enflamasyonu sürdürür.",
+      "E": "Yanlış eşleştirme (aranan cevap). Glukokortikoidler TGF-β üretimini ve kollajen sentezini inhibe eder; iyileşmeyi geciktirir."
+     },
+     "bilgi": [
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "07b5d7e45352",
+     "soru": "Kortikosteroitlerin yara iyileşmesi üzerine etkisi ile ilgili olarak aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ameliyat sonrası geç dönemde yara iyileşmesi üzerine etki etmez (yanlış)",
+      "B": "Lizozomal enzimlerin salınımını artırır (tam tersi)",
+      "C": "Steroid epitelizasyonu etkilemez ancak kontraksiyonu daha çok etkiler (ikisinide inhibe ederler)",
+      "D": "İnflamatuaz faza etki etmez (yanlış)",
+      "E": "Yüksek doz veya kronik kullanımları kollajen sentezini azaltır (doğru)"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "metin": "Yetersiz onarımı ve kronik yaraları açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q52",
+     "kazanim": 18,
+     "zorluk": "kolay",
+     "soru": "Yatağa bağımlı bir hastada sakrum gibi kemik çıkıntıları üzerinde uzun süreli basıya bağlı gelişen kronik yaraya ne ad verilir?",
+     "secenekler": {
+      "A": "Venöz ülser",
+      "B": "Basınç (dekübit) ülseri",
+      "C": "Keloid",
+      "D": "Hipertrofik skar",
+      "E": "Kontraktür"
+     },
+     "dogru": "B",
+     "aciklama": "Basınç ülseri kemik çıkıntıları üzerinde uzun süreli basıya bağlı iskemi ile gelişen kronik yaradır.",
+     "sik_aciklamalari": {
+      "A": "Venöz ülser kronik venöz hipertansiyona bağlıdır ve genellikle alt bacakta görülür.",
+      "B": "Doğru. Basınç ülseri kemik çıkıntıları üzerinde uzun süreli basıya bağlı iskemi ile gelişen kronik yaradır.",
+      "C": "Keloid aşırı skar oluşumudur.",
+      "D": "Hipertrofik skar yara sınırları içinde fazla skardır.",
+      "E": "Kontraktür aşırı yara kontraksiyonudur."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q53",
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Diyabetik ayak ülserinin gelişiminde rol oynayan faktörler aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Mikroanjiyopati, nöropati ve enfeksiyon",
+      "B": "Yalnızca venöz hipertansiyon",
+      "C": "Yalnızca keloid eğilimi",
+      "D": "Aşırı kollajen sentezi",
+      "E": "Hiperkalsemi"
+     },
+     "dogru": "A",
+     "aciklama": "Diyabetik ayak ülseri mikroanjiyopati (perfüzyon bozukluğu), nöropati (duyu kaybı, fark edilmeyen travma) ve enfeksiyonun birleşimiyle gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Diyabetik ayak ülseri mikroanjiyopati (perfüzyon bozukluğu), nöropati (duyu kaybı, fark edilmeyen travma) ve enfeksiyonun birleşimiyle gelişir.",
+      "B": "Venöz hipertansiyon venöz bacak ülserinin nedenidir.",
+      "C": "Keloid aşırı yara izi oluşumudur.",
+      "D": "Kronik yaralar yetersiz onarımla ilişkilidir.",
+      "E": "Hiperkalsemi diyabetik ayakla ilişkili değildir."
+     },
+     "bilgi": [
+      34,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q54",
+     "kazanim": 18,
+     "zorluk": "zor",
+     "soru": "Kronik yara tipleri ve altta yatan nedenler eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Venöz bacak ülseri – kronik venöz hipertansiyon",
+      "B": "Arteriyel ülser – periferik arter hastalığı",
+      "C": "Diyabetik ayak ülseri – mikroanjiyopati, nöropati ve enfeksiyon",
+      "D": "Basınç ülseri – kemik çıkıntıları üzerinde uzun süreli bası",
+      "E": "Arteriyel ülser – aşırı TGF-β'ya bağlı kollajen birikimi"
+     },
+     "dogru": "E",
+     "aciklama": "Kronik yaralar yetersiz onarımın sonucudur; arteriyel ülser periferik arter hastalığı ve diyabete bağlı iskemiyle gelişir. Aşırı kollajen birikimi fibrozis/aşırı skarın özelliğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: venöz bacak ülseri – kronik venöz hipertansiyon.",
+      "B": "Doğru eşleştirme; diyabet de katkıda bulunur.",
+      "C": "Doğru eşleştirme: diyabetik ayak ülseri – mikroanjiyopati, nöropati ve enfeksiyon.",
+      "D": "Doğru eşleştirme: basınç ülseri – kemik çıkıntıları üzerinde uzun süreli bası.",
+      "E": "Yanlış eşleştirme (aranan cevap). Kronik yaralar yetersiz onarımın sonucudur; arteriyel ülser periferik arter hastalığı ve diyabete bağlı iskemiyle gelişir. Aşırı kollajen birikimi fibrozis/aşırı skarın özelliğidir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 19,
+   "metin": "Aşırı yara izi oluşumunu (hipertrofik skar, keloid, kontraktür) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q55",
+     "kazanim": 19,
+     "zorluk": "kolay",
+     "soru": "Yara sınırlarının dışına taşan ve gerileme eğilimi az olan, özellikle koyu tenli bireylerde görülen aşırı skar dokusuna ne ad verilir?",
+     "secenekler": {
+      "A": "Hipertrofik skar",
+      "B": "Keloid",
+      "C": "Kontraktür",
+      "D": "Granülasyon dokusu",
+      "E": "Dehisens"
+     },
+     "dogru": "B",
+     "aciklama": "Keloid skarın orijinal yara sınırlarının dışına taşmasıdır ve gerileme eğilimi azdır; hipertrofik skar ise yara sınırları içinde kalır ve zamanla gerileyebilir.",
+     "sik_aciklamalari": {
+      "A": "Hipertrofik skar yara sınırları içinde kalır ve gerileyebilir.",
+      "B": "Doğru. Keloid skarın orijinal yara sınırlarının dışına taşmasıdır ve gerileme eğilimi azdır; hipertrofik skar ise yara sınırları içinde kalır ve zamanla gerileyebilir.",
+      "C": "Kontraktür aşırı yara kontraksiyonudur.",
+      "D": "Granülasyon dokusu iyileşmenin geçici evresidir.",
+      "E": "Dehisens yara kenarlarının ayrılmasıdır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q56",
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "Hipertrofik skar ile keloidin ayırımında en önemli özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hipertrofik skarda kollajen bulunmaması",
+      "B": "Keloidin orijinal yara sınırlarının dışına taşması, hipertrofik skarın ise yara sınırları içinde kalması",
+      "C": "Keloidin yalnızca açık tenlilerde görülmesi",
+      "D": "Hipertrofik skarın hiç gerilememesi",
+      "E": "Keloidin kendiliğinden hızla kaybolması"
+     },
+     "dogru": "B",
+     "aciklama": "Her ikisinde de aşırı kollajen birikir; ayrım lezyonun yara sınırını aşıp aşmamasına ve gerileme eğilimine dayanır.",
+     "sik_aciklamalari": {
+      "A": "Her ikisi de aşırı kollajen içerir.",
+      "B": "Doğru. Her ikisinde de aşırı kollajen birikir; ayrım lezyonun yara sınırını aşıp aşmamasına ve gerileme eğilimine dayanır.",
+      "C": "Keloid özellikle koyu tenlilerde sıktır.",
+      "D": "Hipertrofik skar zamanla gerileyebilir.",
+      "E": "Keloidin gerileme eğilimi azdır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q57",
+     "kazanim": 19,
+     "zorluk": "zor",
+     "soru": "Göğüs ön duvarı ve el yanığı sonrası iyileşen bir hastada eklem hareketlerini kısıtlayan deformite gelişmiştir.\n\nBu durum ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yara kontraksiyonunun aşırı olmasıyla gelişen kontraktürdür; özellikle el, ayak tabanı ve göğüs ön duvarında hareket kısıtlılığı yapar.",
+      "B": "Yetersiz kollajen birikimiyle gelişen kronik ülserdir.",
+      "C": "Yara sınırlarını aşan keloidin tipik görünümüdür ve hareketi etkilemez.",
+      "D": "Granülasyon dokusunun hiç oluşmamasının sonucudur.",
+      "E": "Primer iyileşmenin olağan sonucudur."
+     },
+     "dogru": "A",
+     "aciklama": "Kontraktür aşırı yara kontraksiyonudur; yanık sonrası sık görülür ve el, ayak tabanı, göğüs ön duvarında eklem hareketini kısıtlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kontraktür aşırı yara kontraksiyonudur; yanık sonrası sık görülür ve el, ayak tabanı, göğüs ön duvarında eklem hareketini kısıtlar.",
+      "B": "Kronik ülser yetersiz onarımdır; burada aşırı kontraksiyon vardır.",
+      "C": "Keloid yara sınırını aşan skar kitlesidir; tabloyu açıklayan kontraktürdür.",
+      "D": "Yanıkta yoğun granülasyon dokusu ve sekonder iyileşme görülür.",
+      "E": "Yanık yaraları genellikle sekonder iyileşir; kontraktür olağan sonuç değildir."
+     },
+     "bilgi": [
+      35,
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 20,
+   "metin": "Parankimal organlarda fibrozisi ve antifibrotik yaklaşımları açıklamak",
+   "sorular": [
+    {
+     "id": "k1-15-q58",
+     "kazanim": 20,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi parankimal organlarda fibrozise örnek değildir?",
+     "secenekler": {
+      "A": "Karaciğer sirozu",
+      "B": "İdyopatik pulmoner fibrozis",
+      "C": "Pnömokonyoz",
+      "D": "Son dönem böbrek hastalığı",
+      "E": "Primer iyileşmeyle kapanan cerrahi insizyon"
+     },
+     "dogru": "E",
+     "aciklama": "Parankimal fibrozis kronik inflamasyon veya persistan toksik/iskemik hasarla gelişen aşırı kollajen-ECM birikimidir; siroz, pulmoner fibrozis, pnömokonyoz, son dönem böbrek hastalığı ve sistemik skleroz örnektir.",
+     "sik_aciklamalari": {
+      "A": "Örnektir: karaciğer sirozu.",
+      "B": "Örnektir: i̇dyopatik pulmoner fibrozis.",
+      "C": "Örnektir; inhale partiküllere bağlı akciğer fibrozisidir.",
+      "D": "Örnektir: son dönem böbrek hastalığı.",
+      "E": "Örnek değildir (aranan cevap); minimal skarla normal yara iyileşmesidir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q59",
+     "kazanim": 20,
+     "zorluk": "orta",
+     "soru": "Parankimal organ fibrozisinin başlıca nedenleri ve sonucu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kronik inflamasyon ve persistan toksik/iskemik hasar nedeniyle gelişir; organ fonksiyonunda ciddi ve genellikle kalıcı bozulma yapar.",
+      "B": "Akut, kısa süreli enflamasyonun olağan sonucudur ve tamamen geri döner.",
+      "C": "Yalnızca genetik nedenlerle oluşur.",
+      "D": "Organ fonksiyonunu artırır.",
+      "E": "Kollajen yıkımının aşırı artmasıyla oluşur."
+     },
+     "dogru": "A",
+     "aciklama": "Uzamış hasar ve enflamasyon aşırı kollajen ve ECM birikimine yol açar; parankim mimarisi bozulur ve işlev kalıcı olarak azalır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Uzamış hasar ve enflamasyon aşırı kollajen ve ECM birikimine yol açar; parankim mimarisi bozulur ve işlev kalıcı olarak azalır.",
+      "B": "Akut enflamasyon genellikle rezolüsyonla iyileşir; fibrozis kronik süreçtir.",
+      "C": "Fibrozis çoğunlukla edinsel kronik hasarla gelişir.",
+      "D": "Fibrozis organ fonksiyonunu bozar.",
+      "E": "Fibrozis kollajen birikiminin yıkımı aşmasıyla oluşur."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-15-q60",
+     "kazanim": 20,
+     "zorluk": "zor",
+     "soru": "Antifibrotik tedavi yaklaşımları ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "TGF-β ve diğer fibrogenik sitokinler potansiyel hedeflerdir; bazı antifibrotik ilaçlar idyopatik pulmoner fibrozis ve karaciğer fibrozisinde klinik kullanıma girmiştir, ancak etkin ve güvenli tedavi hâlâ araştırma alanıdır.",
+      "B": "Antifibrotik tedavinin amacı kollajen birikimini artırmaktır.",
+      "C": "Fibrozisi tamamen ve kesin olarak geri döndüren rutin bir tedavi mevcuttur.",
+      "D": "TGF-β'yı artırmak fibrozisi azaltır.",
+      "E": "Antifibrotik tedavinin organ fonksiyonunu korumada hiçbir hedefi yoktur."
+     },
+     "dogru": "A",
+     "aciklama": "Antifibrotik yaklaşımların amacı aşırı kollajen birikimini sınırlayıp organ fonksiyonunu korumaktır; TGF-β gibi fibrogenik sitokinler başlıca hedeflerdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Antifibrotik yaklaşımların amacı aşırı kollajen birikimini sınırlayıp organ fonksiyonunu korumaktır; TGF-β gibi fibrogenik sitokinler başlıca hedeflerdir.",
+      "B": "Amaç kollajen birikimini sınırlamaktır.",
+      "C": "Etkin ve güvenli tedavi hâlâ araştırma konusudur.",
+      "D": "TGF-β fibrozisi artırır.",
+      "E": "Temel amaç organ fonksiyonunu korumaktır."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 60,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:25"
+}

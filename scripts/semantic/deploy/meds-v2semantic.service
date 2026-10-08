@@ -1,0 +1,17 @@
+[Unit]
+Description=MedSoru Semantik Veri Modeli servisi (CPU e5 + FAISS, GPU yok)
+Documentation=file:///home/indu/medsor/meds/scripts/semantic/README.md
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/indu/medsor/meds/scripts
+EnvironmentFile=-/home/indu/medsor/meds/.env
+Environment=MEDS_CORE_DIR=/home/indu/medsor/meds_database_core
+ExecStart=/home/indu/medsor/meds/.venv-ocr/bin/python -m semantic.server
+Restart=on-failure
+RestartSec=15
+Nice=5
+
+[Install]
+WantedBy=default.target

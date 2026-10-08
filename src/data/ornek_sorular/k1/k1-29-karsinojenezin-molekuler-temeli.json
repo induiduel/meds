@@ -1,0 +1,959 @@
+{
+ "id": "k1-29-karsinojenezin-molekuler-temeli",
+ "sira": 29,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Karsinojenezin Moleküler Temeli",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": null,
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Kanser genlerinin dört ana sınıfını (onkogenler, tümör baskılayıcı genler, apoptozu düzenleyen genler, tümör-konak etkileşim genleri) ayırt eder ve onkogen işlev kazanımı ile tümör baskılayıcı gen işlev kaybı örüntüsünü açıklar.",
+   "sorular": [
+    {
+     "id": "k1-29-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi kanser genlerinin dört ana sınıfından biri değildir?",
+     "secenekler": {
+      "A": "Onkogenler",
+      "B": "Tümör baskılayıcı genler",
+      "C": "Apoptozu düzenleyen genler",
+      "D": "Tümör-konak etkileşim genleri",
+      "E": "Hemoglobin genleri"
+     },
+     "dogru": "E",
+     "aciklama": "Kanser genleri onkogenler, tümör baskılayıcı genler, apoptozu düzenleyen genler ve tümör-konak etkileşim genleridir (anjiyogenez, invazyon, bağışıklık kaçışı).",
+     "sik_aciklamalari": {
+      "A": "Ana sınıflardandır; işlev kazanımıyla büyümeyi uyarır.",
+      "B": "Ana sınıflardandır; işlev kaybıyla büyüme frenleri kalkar.",
+      "C": "Ana sınıflardandır; BCL2 ailesi örnektir.",
+      "D": "Ana sınıflardandır; VEGF, MMP, PD-L1 örneklerdir.",
+      "E": "Yer almaz (aranan cevap). Kanser genleri onkogenler, tümör baskılayıcı genler, apoptozu düzenleyen genler ve tümör-konak etkileşim genleridir (anjiyogenez, invazyon, bağışıklık kaçışı)."
+     },
+     "bilgi": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q05",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Tümör baskılayıcı genlerde tümör gelişimi için her iki alelin de inaktive olması gerektiğini açıklayan hipotez aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İki vuruş (two-hit) hipotezi",
+      "B": "Hijyen hipotezi",
+      "C": "Moleküler taklit hipotezi",
+      "D": "Warburg hipotezi",
+      "E": "Klonal seleksiyon hipotezi"
+     },
+     "dogru": "A",
+     "aciklama": "İki vuruş hipotezine göre tümör baskılayıcı genin her iki alelinin inaktivasyonu tümör gelişimini başlatır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. İki vuruş hipotezine göre tümör baskılayıcı genin her iki alelinin inaktivasyonu tümör gelişimini başlatır.",
+      "B": "Hijyen hipotezi alerji gelişimiyle ilgilidir.",
+      "C": "Moleküler taklit otoimmüniteyi açıklar.",
+      "D": "Warburg etkisi kanser hücre metabolizmasını tanımlar.",
+      "E": "Klonal seleksiyon tümör ilerlemesini açıklar; bialelik inaktivasyonu tanımlamaz."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Onkogenler ve tümör baskılayıcı genlerin karşılaştırılmasında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Onkogenlerde işlev kaybı, tümör baskılayıcı genlerde işlev kazanımı vardır.",
+      "B": "Onkogenler resesif etki gösterir.",
+      "C": "Tümör baskılayıcı genler büyümeyi uyaran onkoproteinler kodlar.",
+      "D": "Onkogenlerde genellikle tek alel mutasyonu yeterlidir; tümör baskılayıcı genlerde çoğunlukla iki alelin de inaktivasyonu gerekir.",
+      "E": "Her iki grup da yalnızca germ hattı mutasyonlarıyla etkilenir."
+     },
+     "dogru": "D",
+     "aciklama": "Onkogenler dominant etkiyle büyümeyi sürekli uyarır; tümör baskılayıcı genlerde iki vuruş hipotezine göre bialelik inaktivasyon tümörü başlatır.",
+     "sik_aciklamalari": {
+      "A": "Tanımlar ters verilmiştir.",
+      "B": "Onkogenler dominant etkilidir.",
+      "C": "Büyümeyi uyaran onkoproteinleri onkogenler kodlar.",
+      "D": "Doğru. Onkogenler dominant etkiyle büyümeyi sürekli uyarır; tümör baskılayıcı genlerde iki vuruş hipotezine göre bialelik inaktivasyon tümörü başlatır.",
+      "E": "Mutasyonların çoğu somatiktir."
+     },
+     "bilgi": [
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "İç (mitokondriyal) apoptoz yolunu düzenleyen BCL2 ailesi üyelerinden hangisi antiapoptotiktir?",
+     "secenekler": {
+      "A": "BAX",
+      "B": "BAK",
+      "C": "BCL-XL",
+      "D": "Sitokrom c",
+      "E": "Kaspaz-9"
+     },
+     "dogru": "C",
+     "aciklama": "BCL2 ve BCL-XL antiapoptotik, BAX ve BAK proapoptotiktir; kanserde apoptozu tetikleyen sinyaller bloke olur ve hücre ölümüne direnç gelişir.",
+     "sik_aciklamalari": {
+      "A": "BAX proapoptotiktir.",
+      "B": "BAK proapoptotiktir.",
+      "C": "Doğru. BCL2 ve BCL-XL antiapoptotik, BAX ve BAK proapoptotiktir; kanserde apoptozu tetikleyen sinyaller bloke olur ve hücre ölümüne direnç gelişir.",
+      "D": "Sitokrom c mitokondriden salınarak apoptozu başlatır; BCL2 ailesi üyesi değildir.",
+      "E": "Kaspaz-9 başlatıcı kaspazdır."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Tümör-konak etkileşim genleri ve düzenledikleri süreçler eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "VEGF – anjiyogenez",
+      "B": "Trombospondin-1 – anjiyogenez inhibisyonu",
+      "C": "MMP'ler ve E-kadherin – invazyon ve metastaz",
+      "D": "PD-L1, PD-1, CTLA-4 – bağışıklık kaçışı",
+      "E": "E-kadherin – anjiyogenezin başlıca uyarıcısı"
+     },
+     "dogru": "E",
+     "aciklama": "E-kadherin hücreler arası bağlantı molekülüdür; kaybı invazyon ve metastazı kolaylaştırır. Anjiyogenezin başlıca uyarıcısı VEGF'tir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: VEGF – anjiyogenez.",
+      "B": "Doğru eşleştirme; p53 de anjiyogenezi inhibe eder.",
+      "C": "Doğru eşleştirme: MMP'ler ve E-kadherin – invazyon ve metastaz.",
+      "D": "Doğru eşleştirme: PD-L1, PD-1, CTLA-4 – bağışıklık kaçışı.",
+      "E": "Yanlış eşleştirme (aranan cevap). E-kadherin hücreler arası bağlantı molekülüdür; kaybı invazyon ve metastazı kolaylaştırır. Anjiyogenezin başlıca uyarıcısı VEGF'tir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Nokta mutasyon, kromozomal yeniden düzenleme, kopya sayısı değişikliği, anöploidi, mikroRNA ve epigenetik değişiklikleri örnekleriyle tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-29-q06",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Kronik miyeloid lösemide görülen ve konstitütif aktif tirozin kinaz üreten genetik değişiklik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "t(8;14) MYC translokasyonu",
+      "B": "t(14;18) BCL2 translokasyonu",
+      "C": "t(9;22) BCR-ABL füzyonu (Philadelphia kromozomu)",
+      "D": "MYCN amplifikasyonu",
+      "E": "13q14 delesyonu"
+     },
+     "dogru": "C",
+     "aciklama": "BCR-ABL füzyonu konstitütif aktif tirozin kinaz üretir; imatinib gibi tirozin kinaz inhibitörleriyle hedeflenir.",
+     "sik_aciklamalari": {
+      "A": "MYC translokasyonu Burkitt lenfomada görülür.",
+      "B": "BCL2 translokasyonu foliküler lenfomada görülür.",
+      "C": "Doğru. BCR-ABL füzyonu konstitütif aktif tirozin kinaz üretir; imatinib gibi tirozin kinaz inhibitörleriyle hedeflenir.",
+      "D": "MYCN amplifikasyonu nöroblastomda kötü prognozla ilişkilidir.",
+      "E": "13q14 delesyonu RB kaybıyla ilişkilidir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q11",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Haploid sayının katı olmayan kromozom sayısına ne ad verilir?",
+     "secenekler": {
+      "A": "Anöploidi",
+      "B": "Poliploidi",
+      "C": "Amplifikasyon",
+      "D": "Translokasyon",
+      "E": "Mikrosatellit instabilitesi"
+     },
+     "dogru": "A",
+     "aciklama": "Anöploidi mitoz kontrol noktası kusurları ve kromozom ayrılma hatalarıyla oluşur; onkogen dozu artar, tümör baskılayıcı gen dozu azalır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Anöploidi mitoz kontrol noktası kusurları ve kromozom ayrılma hatalarıyla oluşur; onkogen dozu artar, tümör baskılayıcı gen dozu azalır.",
+      "B": "Poliploidi haploid sayının tam katlarıdır.",
+      "C": "Amplifikasyon belirli bir gen bölgesinin kopya sayısının artmasıdır.",
+      "D": "Translokasyon kromozom segmentlerinin yer değiştirmesidir.",
+      "E": "Mikrosatellit instabilitesi kısa tekrar dizilerinin uzunluk değişikliğidir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kromozomal translokasyonlar ve sonuçları eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Burkitt lenfoma – BCL2'nin immünoglobulin ağır zincir lokusuna taşınmasıyla apoptozun baskılanması",
+      "B": "Foliküler lenfoma – MYC'nin immünoglobulin ağır zincir lokusuna taşınmasıyla büyümenin uyarılması",
+      "C": "Burkitt lenfoma – MYC'nin immünoglobulin ağır zincir lokusuna taşınmasıyla MYC'nin aşırı ekspresyonu",
+      "D": "KML – BCL2 aşırı ekspresyonu",
+      "E": "Foliküler lenfoma – BCR-ABL füzyonu"
+     },
+     "dogru": "C",
+     "aciklama": "Translokasyon proto-onkogeni güçlü promotör/enhancer altına taşıyarak aşırı ekspresyona (MYC, BCL2) veya füzyon gen oluşumuna (BCR-ABL) yol açar.",
+     "sik_aciklamalari": {
+      "A": "BCL2 translokasyonu foliküler lenfomaya aittir.",
+      "B": "MYC translokasyonu Burkitt lenfomaya aittir.",
+      "C": "Doğru. Translokasyon proto-onkogeni güçlü promotör/enhancer altına taşıyarak aşırı ekspresyona (MYC, BCL2) veya füzyon gen oluşumuna (BCR-ABL) yol açar.",
+      "D": "KML'de BCR-ABL füzyonu vardır.",
+      "E": "Foliküler lenfomada BCL2 translokasyonu vardır."
+     },
+     "bilgi": [
+      7,
+      9,
+      10
+     ],
+     "benzer_cikmis": [
+      "b58ec7e58175"
+     ]
+    },
+    {
+     "id": "k1-29-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Nöroblastomlu bir çocuğun tümöründe sitogenetik incelemede çok sayıda 'çift dakika' ve homojen boyanan bölgeler görülüyor.\n\nBu bulgu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tümör baskılayıcı gen delesyonunu gösterir.",
+      "B": "Anöploidinin tek nedenidir.",
+      "C": "Epigenetik hipermetilasyonun göstergesidir.",
+      "D": "Gen amplifikasyonunun sitogenetik bulgusudur; MYCN amplifikasyonu nöroblastomda kötü prognozla ilişkilidir.",
+      "E": "Bu bulgu prognozu iyileştirir."
+     },
+     "dogru": "D",
+     "aciklama": "Çift dakikalar sentromersiz, küçük, kromozom dışı DNA parçalarıdır; homojen boyanan bölgelerle birlikte gen amplifikasyonunu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Delesyon kopya kaybıdır; çift dakikalar kopya artışını gösterir.",
+      "B": "Anöploidi kromozom sayısı değişikliğidir.",
+      "C": "Hipermetilasyon sitogenetikte bu görünümü oluşturmaz.",
+      "D": "Doğru. Çift dakikalar sentromersiz, küçük, kromozom dışı DNA parçalarıdır; homojen boyanan bölgelerle birlikte gen amplifikasyonunu gösterir.",
+      "E": "MYCN amplifikasyonu kötü prognoz göstergesidir."
+     },
+     "bilgi": [
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Onkojenik etkili mikroRNA'lar (onkomir) ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Onkomirler tümör baskılayıcı mRNA'yı hedefleyerek baskılayıcı protein düzeyini azaltabilir.",
+      "B": "MikroRNA'lar uzun, çift sarmallı ve protein kodlayan RNA'lardır.",
+      "C": "Onkogen mRNA'sını baskılayan miRNA'nın artması onkoproteini artırır.",
+      "D": "MikroRNA'lar gen ekspresyonunu etkilemez.",
+      "E": "MikroRNA'lar yalnızca DNA'yı metilleyerek etki eder."
+     },
+     "dogru": "A",
+     "aciklama": "MikroRNA'lar kodlamayan kısa tek sarmallı RNA'lardır ve hedef mRNA translasyonunu baskılar veya yıkıma uğratır; onkogen mRNA'sını baskılayan miRNA'nın kaybı onkoproteini artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. MikroRNA'lar kodlamayan kısa tek sarmallı RNA'lardır ve hedef mRNA translasyonunu baskılar veya yıkıma uğratır; onkogen mRNA'sını baskılayan miRNA'nın kaybı onkoproteini artırır.",
+      "B": "miRNA'lar kısa, tek sarmallı ve kodlamayan RNA'lardır.",
+      "C": "Onkogen mRNA'sını baskılayan miRNA'nın kaybı onkoproteini artırır.",
+      "D": "miRNA'lar ekspresyonu post-transkripsiyonel düzeyde düzenler.",
+      "E": "miRNA'lar mRNA üzerinden etki eder."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q12",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi tümör baskılayıcı gen kaybına yol açan bir genetik değişiklik örneğidir?",
+     "secenekler": {
+      "A": "HER2 amplifikasyonu",
+      "B": "BCR-ABL füzyonu",
+      "C": "RAS aktive edici nokta mutasyonu",
+      "D": "13q14 delesyonuyla RB kaybı",
+      "E": "MYC'nin aşırı ekspresyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Delesyonlar tümör baskılayıcı genlerin kaybına yol açar; 13q14 delesyonu RB kaybıyla retinoblastom ve osteosarkom gibi tümörlerle ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "HER2 amplifikasyonu onkogen aşırı ekspresyonudur.",
+      "B": "BCR-ABL onkojenik füzyon proteinidir.",
+      "C": "RAS mutasyonu onkogen işlev kazanımıdır.",
+      "D": "Doğru. Delesyonlar tümör baskılayıcı genlerin kaybına yol açar; 13q14 delesyonu RB kaybıyla retinoblastom ve osteosarkom gibi tümörlerle ilişkilidir.",
+      "E": "MYC aşırı ekspresyonu onkogen aktivasyonudur."
+     },
+     "bilgi": [
+      6,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q09",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Epigenetik değişikliklerin kanserdeki rolü ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kanserde global hipermetilasyon ve tümör baskılayıcı promotörlerinde hipometilasyon görülür.",
+      "B": "Histon modifikasyonlarının gen ekspresyonuna etkisi yoktur.",
+      "C": "Epigenetik değişiklikler DNA dizisini kalıcı olarak değiştirir.",
+      "D": "Kanserde global hipometilasyon genomik instabiliteye katkı verirken tümör baskılayıcı gen promotörlerinin hipermetilasyonu gen susturulması yapar.",
+      "E": "Epigenetik değişiklikler yalnızca germ hattında görülür."
+     },
+     "dogru": "D",
+     "aciklama": "Epigenetik değişiklikler DNA dizisi değişmeden ekspresyonu kalıcı olarak değiştirir; DNA metilasyonu ve histon modifikasyonlarıyla gerçekleşir.",
+     "sik_aciklamalari": {
+      "A": "Desen ters verilmiştir.",
+      "B": "Histon modifikasyonları kromatin erişilebilirliğini ve ekspresyonu etkiler.",
+      "C": "Epigenetik değişiklikler dizi değişikliği yapmaz.",
+      "D": "Doğru. Epigenetik değişiklikler DNA dizisi değişmeden ekspresyonu kalıcı olarak değiştirir; DNA metilasyonu ve histon modifikasyonlarıyla gerçekleşir.",
+      "E": "Kanserde somatik epigenetik değişiklikler sıktır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q13",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Nokta mutasyonlarının kanser genleri üzerindeki etkileri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Nokta mutasyonları proto-onkogenlerde fonksiyon kaybı, tümör baskılayıcılarda fonksiyon kazanımı yapar.",
+      "B": "Nokta mutasyonlar kromozom sayısını değiştirir.",
+      "C": "Nokta mutasyonları yalnızca hematolojik malignitelerde görülür.",
+      "D": "Nokta mutasyonları RAS gibi proto-onkogenlerde fonksiyon kazanımı, TP53 gibi tümör baskılayıcı genlerde fonksiyon kaybı oluşturabilir ve birçok solid tümörde baskın lezyon tipidir.",
+      "E": "Nokta mutasyonların kanserde önemi yoktur."
+     },
+     "dogru": "D",
+     "aciklama": "Nokta mutasyonlar solid tümörlerde sık görülen lezyon tipidir; translokasyonlar ise hematolojik malignitelerde öne çıkar.",
+     "sik_aciklamalari": {
+      "A": "Etkiler ters verilmiştir.",
+      "B": "Kromozom sayısını anöploidi değiştirir.",
+      "C": "Nokta mutasyonları solid tümörlerde baskındır.",
+      "D": "Doğru. Nokta mutasyonlar solid tümörlerde sık görülen lezyon tipidir; translokasyonlar ise hematolojik malignitelerde öne çıkar.",
+      "E": "Nokta mutasyonları karsinogenezde temel rol oynar."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "b58ec7e58175",
+     "soru": "Aşağıdaki neoplazmlardan hangisi İmmünglobulin genlerini içeren kromozom parçacıklarının translokasyonu ile ilişkilidir?",
+     "secenekler": {
+      "A": "İnsan T hücreli lösemisi",
+      "B": "H. pilori bağlı mide lenfoması",
+      "C": "Hodgkin lenfoma",
+      "D": "Burkitt lenfoma",
+      "E": "Multiple myelom"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Genomik istikrarsızlığı ve DNA onarım kusurlarını (uyumsuzluk onarımı/Lynch, nükleotid eksizyon onarımı/kseroderma pigmentozum, homolog rekombinasyon/BRCA, polimeraz proofreading) ilişkilendirir.",
+   "sorular": [
+    {
+     "id": "k1-29-q14",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Lynch sendromunda (HNPCC) bozulan DNA onarım sistemi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nükleotid eksizyon onarımı",
+      "B": "DNA polimeraz proofreading",
+      "C": "Homolog rekombinasyon onarımı",
+      "D": "Uyumsuzluk onarımı (mismatch repair, MMR)",
+      "E": "RAG aracılı rekombinasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Lynch sendromunda germ hattı MMR mutasyonu ve ikinci alelde somatik ikinci darbe bulunur; mikrosatellit instabilitesi tipiktir.",
+     "sik_aciklamalari": {
+      "A": "NER kusuru kseroderma pigmentozumda görülür.",
+      "B": "Proofreading kusuru bazı endometrium/kolorektal alt tiplerinde görülür.",
+      "C": "Homolog rekombinasyon kusuru BRCA mutasyonlarında görülür.",
+      "D": "Doğru. Lynch sendromunda germ hattı MMR mutasyonu ve ikinci alelde somatik ikinci darbe bulunur; mikrosatellit instabilitesi tipiktir.",
+      "E": "RAG lenfoid hücrelerde immünoglobulin/TCR çeşitlenmesinde görev alır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [
+      "9be10779f352"
+     ]
+    },
+    {
+     "id": "k1-29-q15",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Güneş gören deri bölgelerinde çocukluk çağından itibaren çok sayıda melanom, skuamöz ve bazal hücreli karsinom gelişen bir hastada altta yatan kusur aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Uyumsuzluk onarımı kusuru (Lynch)",
+      "B": "BRCA1 mutasyonu",
+      "C": "Nükleotid eksizyon onarımı kusuru (kseroderma pigmentozum)",
+      "D": "BCR-ABL füzyonu",
+      "E": "MYCN amplifikasyonu"
+     },
+     "dogru": "C",
+     "aciklama": "UV ışınları DNA'da pirimidin dimerleri oluşturur ve bunlar NER ile onarılır; kseroderma pigmentozumda bu yol otozomal resesif olarak kusurludur.",
+     "sik_aciklamalari": {
+      "A": "Lynch kolorektal ve endometrium kanserleriyle ilişkilidir.",
+      "B": "BRCA1 meme ve over kanseri riskini artırır.",
+      "C": "Doğru. UV ışınları DNA'da pirimidin dimerleri oluşturur ve bunlar NER ile onarılır; kseroderma pigmentozumda bu yol otozomal resesif olarak kusurludur.",
+      "D": "BCR-ABL kronik miyeloid lösemiyle ilişkilidir.",
+      "E": "MYCN amplifikasyonu nöroblastomla ilişkilidir."
+     },
+     "bilgi": [
+      19,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q16",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Mikrosatellit instabilitesi aşağıdakilerden hangisinin göstergesidir?",
+     "secenekler": {
+      "A": "Homolog rekombinasyon kusuru",
+      "B": "Telomeraz aktivasyonu",
+      "C": "Nükleotid eksizyon onarımı kusuru",
+      "D": "Apoptoz kusuru",
+      "E": "Uyumsuzluk onarımı (MMR) kusuru"
+     },
+     "dogru": "E",
+     "aciklama": "Mikrosatellit instabilitesi 1-6 bazlık tekrar dizilerinin uzunluk değişikliğidir; MMR kusurunu gösterir ve HNPCC ile bazı sporadik kanserlerde sıktır.",
+     "sik_aciklamalari": {
+      "A": "Homolog rekombinasyon kusuru kromozomal kırıklarla ilişkilidir.",
+      "B": "Telomeraz aktivasyonu ölümsüzlükle ilişkilidir.",
+      "C": "NER kusuru UV hasarının onarılamamasıyla ilişkilidir.",
+      "D": "Apoptoz kusuru mikrosatellit instabilitesi yapmaz.",
+      "E": "Doğru. Mikrosatellit instabilitesi 1-6 bazlık tekrar dizilerinin uzunluk değişikliğidir; MMR kusurunu gösterir ve HNPCC ile bazı sporadik kanserlerde sıktır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q18",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Homolog rekombinasyon onarımında görev alan ve germ hattı mutasyonu meme ve over kanseri riskini artıran genler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "BRCA1 ve BRCA2",
+      "B": "MLH1 ve MSH2",
+      "C": "XPA ve XPC",
+      "D": "RAG1 ve RAG2",
+      "E": "MYC ve MYCN"
+     },
+     "dogru": "A",
+     "aciklama": "BRCA1/BRCA2 homolog rekombinasyon tamirinde rol alır; Bloom, ataksi-telanjiektazi ve Fanconi anemisi de bu tamir yolu kusurlarıyla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. BRCA1/BRCA2 homolog rekombinasyon tamirinde rol alır; Bloom, ataksi-telanjiektazi ve Fanconi anemisi de bu tamir yolu kusurlarıyla ilişkilidir.",
+      "B": "MLH1 ve MSH2 uyumsuzluk onarımı genleridir.",
+      "C": "XP genleri nükleotid eksizyon onarımıyla ilişkilidir (bu derste genel olarak NER kusuru olarak verilmiştir).",
+      "D": "RAG1/2 lenfoid reseptör gen rekombinasyonu enzimleridir.",
+      "E": "MYC ve MYCN onkogenlerdir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q17",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "DNA polimeraz proofreading kusuru olan bazı endometrium ve kolorektal karsinomlarda immün kontrol noktası inhibitörlerine iyi yanıt alınmasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mutasyon oranının çok düşük olması",
+      "B": "Nokta mutasyon oranının büyük ölçüde artmasıyla yüksek neoantijen yükü oluşması",
+      "C": "Tümörün hiç PD-L1 eksprese etmemesi",
+      "D": "Tümörün tamamen avasküler olması",
+      "E": "Tümör hücrelerinin MHC molekülü taşımaması"
+     },
+     "dogru": "B",
+     "aciklama": "Proofreading (3'→5' ekzonükleaz) kusurunda mutasyon yükü ve neoantijen sayısı artar; bağışıklık sistemi tümörü daha kolay tanır.",
+     "sik_aciklamalari": {
+      "A": "Mutasyon oranı yüksektir.",
+      "B": "Doğru. Proofreading (3'→5' ekzonükleaz) kusurunda mutasyon yükü ve neoantijen sayısı artar; bağışıklık sistemi tümörü daha kolay tanır.",
+      "C": "Yanıtın nedeni neoantijen yüküdür.",
+      "D": "Avaskülerlik bu yanıtı açıklamaz.",
+      "E": "MHC kaybı tersine bağışıklık tanınmasını azaltır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q19",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Lenfoma ve lösemilerde görülen translokasyonların temelinde yatan 'düzenlenmiş genomik kararsızlık' ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İmmünoglobulin ve TCR genlerinin çeşitlenmesini sağlayan RAG1, RAG2 ve AID enzimlerinin yanlış rekombinasyon ve sınıf değişimi olayları translokasyonlara yol açabilir.",
+      "B": "Lenfoid hücrelerde hiçbir fizyolojik DNA yeniden düzenlemesi olmaz.",
+      "C": "AID yalnızca epitel hücrelerinde eksprese edilir.",
+      "D": "Bu translokasyonlar yalnızca UV ışığına bağlıdır.",
+      "E": "RAG enzimleri yalnızca DNA polimeraz proofreading işlevi görür."
+     },
+     "dogru": "A",
+     "aciklama": "Lenfoid hücrelerde fizyolojik olarak gerçekleşen gen yeniden düzenlemeleri hatalı olduğunda onkogenler immünoglobulin lokusları yanına taşınabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Lenfoid hücrelerde fizyolojik olarak gerçekleşen gen yeniden düzenlemeleri hatalı olduğunda onkogenler immünoglobulin lokusları yanına taşınabilir.",
+      "B": "Lenfoid hücrelerde fizyolojik yeniden düzenleme vardır.",
+      "C": "AID germinal merkez B hücrelerinde çalışır.",
+      "D": "UV deri kanserleriyle ilişkilidir.",
+      "E": "RAG enzimleri V(D)J rekombinasyonunu yapar."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "9be10779f352",
+     "soru": "Lynch sendromu ile ilgili yanlış olan hangisidir?",
+     "secenekler": {
+      "A": "Tümörler daha çok sağ kolonda gelişir.",
+      "B": "Etyolojisinde DNA tamir genlerinde sorun vardır (mikrosatellit instabilite).",
+      "C": "Herediter NonPolipozis Kolorektal Kanser Sendromu (HNPCC) olarak ta bilinir ve tipik olarak kolonda polip sayısı bir ya da iki tanedir.",
+      "D": "Bu sendromu taşıyan hastalarda ; over, endometrium, kolon kanserlerinin riski de genel popülasyona göre artmıştır.",
+      "E": "Kolon kanseri tarama için etkilenen bireylerde 25 yaşından itibaren kolonoskopi yapılması önerilir."
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Kimyasal, fiziksel (radyasyon) ve mikrobiyal (viral, bakteriyel) karsinojenlerin moleküler mekanizmalarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-29-q20",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Sitokrom P-450 enzimleriyle aktif kanserojene dönüştürülmesi gereken (dolaylı etkili) karsinojen aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Alkilleyici kemoterapi ilaçları",
+      "B": "Benzo[a]piren",
+      "C": "İyonlaştırıcı radyasyon",
+      "D": "HPV E6 proteini",
+      "E": "UVB ışını"
+     },
+     "dogru": "B",
+     "aciklama": "Dolaylı etkili karsinojenler (polisiklik aromatik hidrokarbonlar, aromatik aminler, azo boyalar, aflatoksin B1) vücutta metabolik aktivasyon gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Alkilleyici ajanlar doğrudan etkili karsinojenlerdir.",
+      "B": "Doğru. Dolaylı etkili karsinojenler (polisiklik aromatik hidrokarbonlar, aromatik aminler, azo boyalar, aflatoksin B1) vücutta metabolik aktivasyon gerektirir.",
+      "C": "Radyasyon fiziksel karsinojendir.",
+      "D": "HPV E6 viral onkoproteindir.",
+      "E": "UVB fiziksel karsinojendir."
+     },
+     "bilgi": [
+      25,
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q23",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "CD4+ T hücre tropizmi gösteren ve uzun latent dönem sonrası erişkin T hücreli lösemi/lenfomaya yol açan virüs aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "EBV",
+      "B": "HPV",
+      "C": "HTLV-1",
+      "D": "HBV",
+      "E": "HHV-8"
+     },
+     "dogru": "C",
+     "aciklama": "HTLV-1'in Tax proteini T hücre proliferasyonunu uyarır ve NF-κB'yi aktive eder; 40-60 yıllık latent dönem sonrası ek mutasyonlarla ATLL gelişir.",
+     "sik_aciklamalari": {
+      "A": "EBV B lenfositleri enfekte eder.",
+      "B": "HPV epitel hücrelerini enfekte eder.",
+      "C": "Doğru. HTLV-1'in Tax proteini T hücre proliferasyonunu uyarır ve NF-κB'yi aktive eder; 40-60 yıllık latent dönem sonrası ek mutasyonlarla ATLL gelişir.",
+      "D": "HBV hepatosellüler karsinomla ilişkilidir.",
+      "E": "HHV-8 Kaposi sarkomuyla ilişkilidir; bu derste ele alınmamıştır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": [
+      "1158c1b67c50"
+     ]
+    },
+    {
+     "id": "k1-29-q21",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yüksek riskli HPV'nin E6 onkoproteininin temel etki mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "RB'ye bağlanıp E2F'yi serbestleştirmesi",
+      "B": "p53'e bağlanıp yıkımını artırması ve telomerazı (TERT) uyarması",
+      "C": "BCL2'yi immünoglobulin lokusuna taşıması",
+      "D": "CD40 sinyalini taklit etmesi",
+      "E": "Tax proteiniyle NF-κB'yi aktive etmesi"
+     },
+     "dogru": "B",
+     "aciklama": "E6 p53'ü yıkıma götürür ve telomerazı uyarır; E7 RB ile etkileşerek E2F'yi serbestleştirir ve p21'i inhibe eder.",
+     "sik_aciklamalari": {
+      "A": "Bu E7'nin mekanizmasıdır.",
+      "B": "Doğru. E6 p53'ü yıkıma götürür ve telomerazı uyarır; E7 RB ile etkileşerek E2F'yi serbestleştirir ve p21'i inhibe eder.",
+      "C": "Bu foliküler lenfoma translokasyonudur.",
+      "D": "Bu EBV LMP1'in mekanizmasıdır.",
+      "E": "Bu HTLV-1 Tax proteininin mekanizmasıdır."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": [
+      "36fbe58185b3"
+     ]
+    },
+    {
+     "id": "k1-29-q22",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Servikal öncü lezyondan invaziv karsinoma ilerlemede HPV genomu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Öncü lezyonda HPV konak genomuna entegredir; invaziv kanserde epizomal hale gelir.",
+      "B": "Öncü lezyonda HPV epizomaldir; invaziv kanserde konak genomuna entegre olur, viral negatif düzenleyici bölge bozulur ve E6-E7 aşırı eksprese edilir.",
+      "C": "İnvaziv kanserde HPV tamamen kaybolur.",
+      "D": "HPV entegrasyonu E6 ve E7 ekspresyonunu azaltır.",
+      "E": "Entegrasyon genomik instabiliteyi azaltır."
+     },
+     "dogru": "B",
+     "aciklama": "Entegrasyonla E6/E7 aşırı ekspresyonu hücre döngüsünü kontrolsüz aktive eder, apoptozu baskılar ve genomik instabiliteyi artırır.",
+     "sik_aciklamalari": {
+      "A": "Durumlar ters verilmiştir.",
+      "B": "Doğru. Entegrasyonla E6/E7 aşırı ekspresyonu hücre döngüsünü kontrolsüz aktive eder, apoptozu baskılar ve genomik instabiliteyi artırır.",
+      "C": "HPV DNA'sı invaziv kanserde konak genomunda bulunur.",
+      "D": "Entegrasyon E6/E7 ekspresyonunu artırır.",
+      "E": "Entegrasyon genomik instabiliteyi artırır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q24",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Epstein-Barr virüsünün (EBV) onkojenik mekanizması ve ilişkili tümörler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "B lenfositleri CD21 reseptörü üzerinden enfekte eder.",
+      "B": "LMP1 CD40 sinyalini taklit ederek NF-κB'yi aktive eder.",
+      "C": "EBNA2 büyümeyi destekler.",
+      "D": "Burkitt lenfoma, Hodgkin lenfoma alt tipleri ve nazofaringeal karsinomla ilişkilidir.",
+      "E": "EBV'nin başlıca hedefi CD4+ T hücreleridir ve Tax proteini aracılığıyla etki eder."
+     },
+     "dogru": "E",
+     "aciklama": "CD4+ T hücre tropizmi ve Tax proteini HTLV-1'e aittir; EBV B lenfositlerini enfekte eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: B lenfositleri CD21 reseptörü üzerinden enfekte eder.",
+      "B": "Doğru ifade: LMP1 CD40 sinyalini taklit ederek NF-κB'yi aktive eder.",
+      "C": "Doğru ifade: EBNA2 büyümeyi destekler.",
+      "D": "Doğru ifade; immün baskılanmış hastalarda B hücreli lenfomalar da görülür.",
+      "E": "Yanlış ifade (aranan cevap). CD4+ T hücre tropizmi ve Tax proteini HTLV-1'e aittir; EBV B lenfositlerini enfekte eder."
+     },
+     "bilgi": [
+      34,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q26",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İyonlaştırıcı radyasyonun karsinojenik etkisi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Esas olarak pirimidin dimerleri oluşturur.",
+      "B": "DNA çift sarmal kırıkları, translokasyonlar ve delesyonlar yapar; lösemiler yaklaşık 7 yıllık latent dönemden sonra gelişebilir.",
+      "C": "Yalnızca deri kanserlerine yol açar.",
+      "D": "Radyasyonun tiroid kanseriyle ilişkisi yoktur.",
+      "E": "İyonlaştırıcı radyasyon dolaylı etkili kimyasal karsinojendir."
+     },
+     "dogru": "B",
+     "aciklama": "X ve gama ışınları, radon ve nükleer kazalar lösemiler ile tiroid, meme, akciğer ve kolon karsinomlarına yol açabilir (Hiroşima-Nagazaki, Çernobil).",
+     "sik_aciklamalari": {
+      "A": "Pirimidin dimerleri UV ışınının etkisidir.",
+      "B": "Doğru. X ve gama ışınları, radon ve nükleer kazalar lösemiler ile tiroid, meme, akciğer ve kolon karsinomlarına yol açabilir (Hiroşima-Nagazaki, Çernobil).",
+      "C": "Lösemi ve birçok solid tümöre yol açar.",
+      "D": "Radyasyon tiroid kanseri riskini artırır.",
+      "E": "Radyasyon fiziksel karsinojendir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q27",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kimyasal karsinogenezde başlatıcı (initiator) ve promotör kavramları ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Promotör tek başına tümör oluşturur ve tek doz yeterlidir.",
+      "B": "Başlatıcı kalıcı DNA hasarı oluşturur ve tek doz yeterli olabilir; promotör tek başına tümör yapmaz, başlatıcıdan sonra tekrarlayan maruziyetle etki eder.",
+      "C": "Promotör başlatıcıdan önce uygulandığında tümör oluşur.",
+      "D": "Başlatıcının etkisi geri dönüşümlüdür.",
+      "E": "Başlatıcı ve promotör aynı kavramlardır."
+     },
+     "dogru": "B",
+     "aciklama": "Başlatıcı mutasyon oluşturur; promotör bu hücrelerin klonal proliferasyonunu uyararak preneoplastik klonu genişletir, ek mutasyonlarla malign klon oluşur.",
+     "sik_aciklamalari": {
+      "A": "Promotör tek başına tümör oluşturmaz.",
+      "B": "Doğru. Başlatıcı mutasyon oluşturur; promotör bu hücrelerin klonal proliferasyonunu uyararak preneoplastik klonu genişletir, ek mutasyonlarla malign klon oluşur.",
+      "C": "Promotör başlatıcıdan sonra etkilidir.",
+      "D": "Başlatıcının oluşturduğu DNA hasarı kalıcıdır.",
+      "E": "Farklı kavramlardır."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q25",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Helicobacter pylori ile ilişkili mide MALT lenfoması olan bir hastada erken evrede H. pylori eradikasyon tedavisi verilmesinin gerekçesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "H. pylori'nin doğrudan DNA'ya entegre olan bir onkoprotein üretmesi",
+      "B": "Erken evre MALT lenfomasının kronik antijenik uyarının ortadan kalkmasıyla gerileyebilmesi",
+      "C": "Antibiyotiklerin doğrudan lenfoma hücrelerini öldürmesi",
+      "D": "H. pylori'nin yalnızca adenokarsinom yaptığı için lenfomaya etkisinin olmaması",
+      "E": "Eradikasyonun mide asidini artırması"
+     },
+     "dogru": "B",
+     "aciklama": "H. pylori kronik gastrit ve kronik antijenik uyarıyla MALT lenfomasına zemin hazırlar; erken evrede eradikasyonla lenfoma gerileyebilir.",
+     "sik_aciklamalari": {
+      "A": "H. pylori bakteridir; viral onkoprotein gibi genoma entegre olmaz.",
+      "B": "Doğru. H. pylori kronik gastrit ve kronik antijenik uyarıyla MALT lenfomasına zemin hazırlar; erken evrede eradikasyonla lenfoma gerileyebilir.",
+      "C": "Antibiyotikler lenfoma hücrelerine doğrudan etki etmez.",
+      "D": "H. pylori hem adenokarsinom hem MALT lenfomasıyla ilişkilidir.",
+      "E": "Tedavinin gerekçesi asit artışı değildir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "1158c1b67c50",
+     "soru": "Lenfoid neoplaziler1 Patogenezinde HTLV-1 virüsünün rol oynadığı lenfoproliferatif hastalık, aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Erişkin T hücreli lenfoması",
+      "B": "Mikozis Fungoides",
+      "C": "Nonendemik Burkitt lenfoma",
+      "D": "Folliküler lenfoma",
+      "E": "Lenfoblastik lenfoma"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "36fbe58185b3",
+     "soru": "Tıbbi Patoloji\nServiks kanseri-2\nHVPE6 viral onkoproteini etkisini\nhangi̇si ü̈zerinden\noluşturur?",
+     "secenekler": {
+      "A": "Retinoblastom tümör baskılayıcı geni p53",
+      "B": "p16",
+      "C": "p27",
+      "D": "Siklin D1",
+      "E": "p53"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Tümörü destekleyen enflamasyonu ve başlangıç-promosyon-ilerleme aşamalarından oluşan çok aşamalı karsinogenezi ve klinik çıkarımlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-29-q28",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Çok aşamalı karsinogenezin basamakları aşağıdakilerin hangisinde doğru sırayla verilmiştir?",
+     "secenekler": {
+      "A": "Promosyon → başlangıç → ilerleme",
+      "B": "İlerleme → başlangıç → promosyon",
+      "C": "Başlangıç → promosyon → ilerleme",
+      "D": "Başlangıç → ilerleme → promosyon",
+      "E": "Promosyon → ilerleme → başlangıç"
+     },
+     "dogru": "C",
+     "aciklama": "Başlangıç kalıcı DNA hasarı, promosyon mutasyonlu hücrelerin klonal genişlemesi, ilerleme ek mutasyonlarla agresif fenotip kazanılmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Başlangıç ilk basamaktır.",
+      "B": "İlerleme son basamaktır.",
+      "C": "Doğru sıralama. Başlangıç kalıcı DNA hasarı, promosyon mutasyonlu hücrelerin klonal genişlemesi, ilerleme ek mutasyonlarla agresif fenotip kazanılmasıdır.",
+      "D": "Promosyon ilerlemeden önce gelir.",
+      "E": "Başlangıç ilk basamaktır."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q29",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Tümörü destekleyen enflamasyonda enflamatuvar hücrelerin pro-tümör etkileri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "EGF gibi büyüme faktörlerinin salgılanması",
+      "B": "ECM'nin yeniden şekillenmesi",
+      "C": "Anjiyogenezin artması",
+      "D": "TGF-β ile Treg ve MDSC birikimi",
+      "E": "Sitotoksik T hücre aktivitesinin güçlenerek tümörün tamamen yok edilmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Tümörle ilişkili enflamasyon immünsüpresif mikroçevre oluşturur; kanser stroması iyileşen yara stromasına benzer.",
+     "sik_aciklamalari": {
+      "A": "Pro-tümör etkidir: EGF gibi büyüme faktörlerinin salgılanması.",
+      "B": "Pro-tümör etkidir; invazyonu kolaylaştırır.",
+      "C": "Pro-tümör etkidir: anjiyogenezin artması.",
+      "D": "Pro-tümör etkidir; immünsüpresyon sağlar.",
+      "E": "Yer almaz (aranan cevap). Tümörle ilişkili enflamasyon immünsüpresif mikroçevre oluşturur; kanser stroması iyileşen yara stromasına benzer."
+     },
+     "bilgi": [
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q30",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Moleküler karsinogenez bilgisine dayanan tedavi yaklaşımları ile ilgili eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "BCR-ABL – tirozin kinaz inhibitörü",
+      "B": "HER2/ERBB2 amplifikasyonu – hedefe yönelik anti-HER2 tedavi",
+      "C": "BRAF V600E – BRAF inhibitörü",
+      "D": "PD-1/PD-L1/CTLA-4 – immün kontrol noktası inhibitörleri",
+      "E": "Mikrosatellit instabilitesi – BCR-ABL inhibitörü"
+     },
+     "dogru": "E",
+     "aciklama": "BCR-ABL inhibitörleri KML'de kullanılır; yüksek mutasyon/neoantijen yükü olan MMR kusurlu tümörlerde immün kontrol noktası inhibitörleri öne çıkar.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: BCR-ABL – tirozin kinaz inhibitörü.",
+      "B": "Doğru eşleştirme: HER2/ERBB2 amplifikasyonu – hedefe yönelik anti-HER2 tedavi.",
+      "C": "Doğru eşleştirme: BRAF V600E – BRAF inhibitörü.",
+      "D": "Doğru eşleştirme: PD-1/PD-L1/CTLA-4 – immün kontrol noktası inhibitörleri.",
+      "E": "Yanlış eşleştirme (aranan cevap). BCR-ABL inhibitörleri KML'de kullanılır; yüksek mutasyon/neoantijen yükü olan MMR kusurlu tümörlerde immün kontrol noktası inhibitörleri öne çıkar."
+     },
+     "bilgi": [
+      37,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q32",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kanser stromasının iyileşen yara stromasına benzetilmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Her ikisinde de kronik enflamatuvar infiltrasyon, anjiyogenez ve ECM yeniden şekillenmesi bulunması",
+      "B": "Her ikisinin de tamamen avasküler olması",
+      "C": "Her ikisinde de hiç hücre bulunmaması",
+      "D": "Kanser stromasının yalnızca kemik dokusundan oluşması",
+      "E": "Yara iyileşmesinin her zaman kansere dönüşmesi"
+     },
+     "dogru": "A",
+     "aciklama": "İnvaziv tümörler makrofaj, nötrofil ve lenfositlerden oluşan kronik enflamatuvar infiltrasyon içerir; büyüme faktörleri, anjiyogenez ve ECM değişiklikleri hem yara iyileşmesinde hem tümörde görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. İnvaziv tümörler makrofaj, nötrofil ve lenfositlerden oluşan kronik enflamatuvar infiltrasyon içerir; büyüme faktörleri, anjiyogenez ve ECM değişiklikleri hem yara iyileşmesinde hem tümörde görülür.",
+      "B": "Her ikisi de anjiyogenez içerir.",
+      "C": "Her ikisinde de yoğun hücresel bileşen vardır.",
+      "D": "Kanser stroması bağ dokusu, damarlar ve inflamatuvar hücrelerden oluşur.",
+      "E": "Yara iyileşmesi kansere dönüşmez; benzerlik yalnızca stromal süreçlerdedir."
+     },
+     "bilgi": [
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-29-q31",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "İleri evre tümörlerde tek hedefli tedaviye sık direnç gelişmesinin en iyi açıklaması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İleri tümörlerin genetik olarak homojen olması",
+      "B": "Tümör ilerlemesi sırasında genetik heterojenlik ve tedaviye dirençli alt klonların seçilimi",
+      "C": "Tümör hücrelerinin hiç mutasyon taşımaması",
+      "D": "Kanser hücrelerinin bölünmeyi tamamen durdurması",
+      "E": "Tedavinin yalnızca stromayı hedeflemesi"
+     },
+     "dogru": "B",
+     "aciklama": "Çok aşamalı karsinogenezde biriken mutasyonlar heterojen bir hücre popülasyonu oluşturur; tedavi baskısı dirençli alt klonların seçilimine yol açar.",
+     "sik_aciklamalari": {
+      "A": "İleri tümörler heterojendir.",
+      "B": "Doğru. Çok aşamalı karsinogenezde biriken mutasyonlar heterojen bir hücre popülasyonu oluşturur; tedavi baskısı dirençli alt klonların seçilimine yol açar.",
+      "C": "Tümör hücreleri çok sayıda mutasyon taşır.",
+      "D": "Kanser hücreleri sürekli çoğalır.",
+      "E": "Hedefe yönelik tedaviler tümör hücresindeki moleküler hedeflere yöneliktir."
+     },
+     "bilgi": [
+      36,
+      37
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 32,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:49"
+}

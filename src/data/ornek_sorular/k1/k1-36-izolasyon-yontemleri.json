@@ -1,0 +1,965 @@
+{
+ "id": "k1-36-izolasyon-yontemleri",
+ "sira": 36,
+ "kurul": 1,
+ "ders": "Enfeksiyon Hastalıkları",
+ "konu": "İzolasyon Yöntemleri",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
+ "tarih": "2026-09-30",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Enfeksiyon zincirini ve canlı/cansız kaynakları tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-36-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi cansız enfeksiyon kaynağıdır?",
+     "secenekler": {
+      "A": "Hasta yakını",
+      "B": "Kolonize sağlık personeli",
+      "C": "Asemptomatik taşıyıcı hasta",
+      "D": "Kontamine tıbbi alet yüzeyi",
+      "E": "Ziyaretçi"
+     },
+     "dogru": "D",
+     "aciklama": "Cansız kaynaklar alet-yüzey, su, hava ve yiyeceklerdir; canlı kaynaklar hasta, personel, yakın ve ziyaretçilerdir.",
+     "sik_aciklamalari": {
+      "A": "Canlı kaynaktır; bu nedenle doğru seçenek değildir.",
+      "B": "Canlı kaynaktır; bu nedenle doğru seçenek değildir.",
+      "C": "Canlı kaynaktır; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: cansız kaynaktır.",
+      "E": "Canlı kaynaktır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Duyarlı kişinin enfeksiyona yakalanma riskini artıran faktörler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Diabetes mellitus",
+      "B": "Kalıcı kateter",
+      "C": "Düzenli el hijyeni",
+      "D": "Kemoterapi veya steroid kullanımı",
+      "E": "Bozulmuş flora"
+     },
+     "dogru": "C",
+     "aciklama": "Mikroorganizma yükü, immünite, kateter, eşlik eden hastalıklar, ilaçlar ve bozulmuş flora riski artırır.",
+     "sik_aciklamalari": {
+      "A": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "B": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: el hijyeni riski azaltır.",
+      "D": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "E": "Risk faktörüdür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "İzolasyon önlemlerinin enfeksiyon zincirindeki temel hedefi hangisidir?",
+     "secenekler": {
+      "A": "Etkeni genetik olarak değiştirmek",
+      "B": "Zincirin herhangi bir halkasını keserek bulaşı önlemek",
+      "C": "Konağın yaşını değiştirmek",
+      "D": "Tüm halkaların aynı anda değişmesini beklemek",
+      "E": "Kaynağı tamamen yok etmek zorunluluğu"
+     },
+     "dogru": "B",
+     "aciklama": "Zincirin herhangi bir halkasını kesmek enfeksiyonu önler; izolasyon önlemleri bu zincire yönelir.",
+     "sik_aciklamalari": {
+      "A": "Mümkün değildir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: izolasyonun hedefidir.",
+      "C": "Konak yaşı değiştirilemez.",
+      "D": "Tek halka kesilmesi yeterlidir.",
+      "E": "Kaynağın yok edilmesi zorunlu değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Mikroorganizmaların temas (direk/indirek), damlacık, solunum ve vektör aracılı taşınma yollarını ayırt eder.",
+   "sorular": [
+    {
+     "id": "k1-36-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Sağlık personelinin elleri aracılığıyla mikroorganizma taşınması hangi bulaş yoluna örnektir?",
+     "secenekler": {
+      "A": "Damlacık",
+      "B": "Direk temas",
+      "C": "İndirek temas",
+      "D": "Solunum (hava yolu)",
+      "E": "Vektör"
+     },
+     "dogru": "C",
+     "aciklama": "İndirek temas kontamine alet, yüzey veya kişi aracılığıyla taşınmadır; el hijyeni indirek teması önler.",
+     "sik_aciklamalari": {
+      "A": "Damlacık solunum salgısıyla olur.",
+      "B": "Direk temasta kaynak ile alıcı doğrudan temas eder.",
+      "C": "Doğru: indirek temas örneğidir.",
+      "D": "Hava yolu aerosol ile olur.",
+      "E": "Vektör artropod aracılığıyla olur."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Damlacık ve solunum (hava yolu) bulaşı arasındaki temel fark hangisidir?",
+     "secenekler": {
+      "A": "Solunum bulaşı yalnızca temasla olur",
+      "B": "İkisi aynıdır",
+      "C": "Damlacık bulaşı uzun mesafede havada asılı kalır",
+      "D": "Solunumda damlacık çekirdekleri aerosol halinde distal solunum yollarına kadar ulaşır; damlacık ise ağız, burun ve göz mukozasına geçer",
+      "E": "Damlacık bulaşında N95 zorunludur"
+     },
+     "dogru": "D",
+     "aciklama": "Damlacık katı-sıvı süspansiyon, solunum katı-sıvı-gaz aerosoldür.",
+     "sik_aciklamalari": {
+      "A": "Hava yoluyla olur; bu nedenle doğru seçenek değildir.",
+      "B": "Farklı yollardır; bu nedenle doğru seçenek değildir.",
+      "C": "Damlacıklar büyük ve çabuk düşer.",
+      "D": "Doğru: iki yolun farkıdır.",
+      "E": "Damlacıkta cerrahi maske yeterlidir."
+     },
+     "bilgi": [
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Kan veya enfekte vücut sıvılarının hasarlı deri ya da mukoza ile teması hangi bulaş yoludur ve korunmada temel olan nedir?",
+     "secenekler": {
+      "A": "Damlacık; N95 maske",
+      "B": "Direk temas; eldiven ve önlük",
+      "C": "Hava yolu; negatif basınçlı oda",
+      "D": "Vektör; sineklik",
+      "E": "İndirek temas; yalnızca maske"
+     },
+     "dogru": "B",
+     "aciklama": "Direk temas izolasyonunda eldiven ve önlük korunma sağlar.",
+     "sik_aciklamalari": {
+      "A": "Damlacık yolu değildir.",
+      "B": "Doğru: direk temas ve korunması doğrudur.",
+      "C": "Hava yolu değildir; bu nedenle doğru seçenek değildir.",
+      "D": "Vektörle ilgisi yoktur.",
+      "E": "Maske tek başına yetmez."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Damlacık ve aerosol özelliklerini, partikül boyutuna göre düşme sürelerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-36-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Havada en uzun süre asılı kalan partikül boyutu hangisidir?",
+     "secenekler": {
+      "A": "10 µm",
+      "B": "1–3 µm",
+      "C": "20 µm",
+      "D": "100 µm",
+      "E": ">100 µm"
+     },
+     "dogru": "B",
+     "aciklama": "1–3 µm partiküller uzun süre asılı kalır; 10 µm 17 dk, 20 µm 4 dk, 100 µm 10 sn'de düşer.",
+     "sik_aciklamalari": {
+      "A": "17 dakikada düşer; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: en uzun asılı kalan partiküllerdir.",
+      "C": "4 dakikada düşer; bu nedenle doğru seçenek değildir.",
+      "D": "10 saniyede düşer; bu nedenle doğru seçenek değildir.",
+      "E": "Büyük damlacıklar hızla düşer."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "10 µm büyüklüğündeki bir partikülün havada düşme süresi yaklaşık ne kadardır?",
+     "secenekler": {
+      "A": "4 dakika",
+      "B": "10 saniye",
+      "C": "17 dakika",
+      "D": "Saatlerce asılı kalır",
+      "E": "1 saniye"
+     },
+     "dogru": "C",
+     "aciklama": "Knight ve ark. (1980) verilerine göre 10 µm partikül ~17 dakikada düşer.",
+     "sik_aciklamalari": {
+      "A": "20 µm partikülün süresidir.",
+      "B": "100 µm partikülün süresidir.",
+      "C": "Doğru: verilen süredir.",
+      "D": "1–3 µm partiküller uzun süre asılı kalır.",
+      "E": "Gerçekçi değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Küçük partiküllerin havada uzun süre kalmasının izolasyon açısından önemi hangisidir?",
+     "secenekler": {
+      "A": "Eldiven yeterli korunma sağlar",
+      "B": "Damlacık izolasyonu yeterlidir",
+      "C": "Küçük partiküller bulaş yapmaz",
+      "D": "Hava yolu bulaşında rol oynar; bu nedenle solunum izolasyonunda N95 maske ve negatif basınçlı oda gerekir",
+      "E": "Odanın havalandırılması gereksizdir"
+     },
+     "dogru": "D",
+     "aciklama": "Küçük partiküller uzun süre asılı kaldığından hava yolu bulaşında önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Eldiven hava yolunu korumaz.",
+      "B": "Damlacık önlemleri yetersizdir.",
+      "C": "Bulaştırırlar; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: hava yolu önlemlerinin gerekçesidir.",
+      "E": "Havalandırma (6–12 değişim/saat) gerekir."
+     },
+     "bilgi": [
+      9,
+      20
+     ],
+     "benzer_cikmis": [
+      "16ad86ef48d4"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "16ad86ef48d4",
+     "soru": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
+      "B": "Damlacık izolasyonu ≥5 µm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma için uygulanır",
+      "C": "Temas izolasyonu çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için uygulanır",
+      "D": "Solunum izolasyonu <5 µm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma için uygulanır",
+      "E": "Temas izolasyonu enterik enfeksiyona sebep olan mikroorganizmaların bulaşını engellemek için uygulanır"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Mikroorganizmanın çevresel şartlara dayanıklılığını etkileyen faktörleri özetler.",
+   "sorular": [
+    {
+     "id": "k1-36-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Çevresel şartlara en dayanıklı mikroorganizmalardan biri hangisidir?",
+     "secenekler": {
+      "A": "Neisseria gonorrhoeae",
+      "B": "Zarflı virüsler",
+      "C": "İnfluenza virüsü",
+      "D": "HIV",
+      "E": "Mycobacterium tuberculosis"
+     },
+     "dogru": "E",
+     "aciklama": "M. tuberculosis ve mantar sporları dayanıklı, zarflı virüsler duyarlıdır.",
+     "sik_aciklamalari": {
+      "A": "Çevreye dayanıksızdır.",
+      "B": "Zarflı virüsler duyarlıdır.",
+      "C": "Zarflı virüstür ve duyarlıdır.",
+      "D": "Zarflı virüstür ve duyarlıdır.",
+      "E": "Doğru: çevresel olarak dayanıklıdır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Mikroorganizmanın çevresel dayanıklılığını etkileyen faktörler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Sıcaklık",
+      "B": "Hastanın kan grubu",
+      "C": "Nem",
+      "D": "UV ışınları",
+      "E": "Kimyasallar"
+     },
+     "dogru": "B",
+     "aciklama": "Sıcaklık, nem, hava akımı, UV ve kimyasallar dayanıklılığı etkiler.",
+     "sik_aciklamalari": {
+      "A": "Etkili faktördür; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: dayanıklılığı etkilemez.",
+      "C": "Etkili faktördür; bu nedenle doğru seçenek değildir.",
+      "D": "Etkili faktördür; bu nedenle doğru seçenek değildir.",
+      "E": "Etkili faktördür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "İnfluenza virüsünün bulaşı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Vektörle bulaşır",
+      "B": "Yalnızca kan yoluyla bulaşır",
+      "C": "Çevrede aylarca canlı kalır",
+      "D": "Hapşırma, öksürme ve konuşma sırasında partiküllerle bulaşır ve zarflı olduğundan çevresel koşullara görece duyarlıdır",
+      "E": "Bulaşta damlacıkların rolü yoktur"
+     },
+     "dogru": "D",
+     "aciklama": "Damlacık yoluyla bulaşan hastalıklarda damlacık izolasyonu uygulanır; zarflı virüsler dayanıksızdır.",
+     "sik_aciklamalari": {
+      "A": "Vektörle bulaşmaz; bu nedenle doğru seçenek değildir.",
+      "B": "Kan yolu temel yol değildir.",
+      "C": "Zarflı virüsler kısa süre canlı kalır.",
+      "D": "Doğru: bulaş özellikleri doğrudur.",
+      "E": "Damlacıklar temel rol oynar."
+     },
+     "bilgi": [
+      6,
+      10
+     ],
+     "benzer_cikmis": [
+      "e27485d2647f",
+      "ebd6f39f398d"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "e27485d2647f",
+     "soru": "Aşağıdakilerden hangisi influenza virüsünün bulaşı ile ilgilidir?",
+     "secenekler": {
+      "A": "Ellerde 5 dk canlı kalabilir",
+      "B": "Hapşırma, öksürme VE konuşma sırasında partiküllerle bulaşmaz",
+      "C": "Hastaneye yatarsa solunum izolasyonu gerekir",
+      "D": "Temas yoluyla bulaşmaz",
+      "E": "Sert yüzeylerde canlı kalmaz"
+     },
+     "cevap": null
+    },
+    {
+     "id": "ebd6f39f398d",
+     "soru": "61. Aşağıdaki ifadelerden hangisi influenza virüsünün bulaşıyla ilgili yanlıştır?",
+     "secenekler": {
+      "A": "Hapşırma, öksürme ve konuşma sırasında partiküllere bulaşır",
+      "B": "Hastaneye yatarsa hava yolu izolasyonu gerekir",
+      "C": "Sert yüzeylerde 24-48 saat canlı kalabilir",
+      "D": "Ellerde <5 dakika canlı kalabilir",
+      "E": "Daha az oranda temas yoluyla bulaşır"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Standart önlemlerin amacını, kapsamını ve bileşenlerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-36-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Standart önlemler hangi hastalara uygulanır?",
+     "secenekler": {
+      "A": "Yalnızca tüberkülozlu hastalara",
+      "B": "Yalnızca HIV pozitif hastalara",
+      "C": "Tanıya bakılmaksızın tüm hastalara",
+      "D": "Yalnızca yoğun bakım hastalarına",
+      "E": "Yalnızca ateşli hastalara"
+     },
+     "dogru": "C",
+     "aciklama": "Standart önlemler tanımlanmış olan/olmayan enfekte kan ve vücut sıvılarıyla bulaştan korunmak için tüm hastalarda uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Tüberkülozda ek önlem gerekir; standart önlem herkese uygulanır.",
+      "B": "Yalnızca HIV ile sınırlı değildir.",
+      "C": "Doğru: tüm hastalara uygulanır.",
+      "D": "Tüm birimlerde uygulanır.",
+      "E": "Ateşten bağımsızdır."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": [
+      "16ad86ef48d4"
+     ]
+    },
+    {
+     "id": "k1-36-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi standart önlemlerin bileşenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Eldiven kullanımı",
+      "B": "El hijyeni",
+      "C": "Negatif basınçlı oda",
+      "D": "Güvenli enjeksiyon",
+      "E": "Kontamine ekipmanın uygun yönetimi"
+     },
+     "dogru": "C",
+     "aciklama": "Negatif basınçlı oda solunum izolasyonunun bileşenidir.",
+     "sik_aciklamalari": {
+      "A": "Standart önlem bileşenidir.",
+      "B": "Standart önlem bileşenidir.",
+      "C": "Doğru: bulaş yoluna yönelik ek önlemdir.",
+      "D": "Standart önlem bileşenidir.",
+      "E": "Standart önlem bileşenidir."
+     },
+     "bilgi": [
+      12,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Standart önlemlerin kapsadığı maruziyetler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Kan",
+      "B": "Sağlam deri ile bozulmamış bir yüzeye kısa temas",
+      "C": "Tüm vücut sıvıları",
+      "D": "Bozulmuş cilt",
+      "E": "Mukoza"
+     },
+     "dogru": "B",
+     "aciklama": "Standart önlemler kan, vücut sıvıları, bozulmuş cilt ve mukozayla olası direk/indirek teması kapsar.",
+     "sik_aciklamalari": {
+      "A": "Kapsamdadır; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: bu tanım standart önlem kapsamında risk olarak sayılmaz.",
+      "C": "Kapsamdadır; bu nedenle doğru seçenek değildir.",
+      "D": "Kapsamdadır; bu nedenle doğru seçenek değildir.",
+      "E": "Kapsamdadır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "16ad86ef48d4",
+     "soru": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
+      "B": "Damlacık izolasyonu ≥5 µm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma için uygulanır",
+      "C": "Temas izolasyonu çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için uygulanır",
+      "D": "Solunum izolasyonu <5 µm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma için uygulanır",
+      "E": "Temas izolasyonu enterik enfeksiyona sebep olan mikroorganizmaların bulaşını engellemek için uygulanır"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "El hijyeni, eldiven kullanımı ve kişisel koruyucu ekipman giyilmesini gerektiren durumları açıklar.",
+   "sorular": [
+    {
+     "id": "k1-36-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Gözle görülür kirlenme olmadığında tercih edilebilecek el hijyeni yöntemi hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca su ile durulamak",
+      "B": "Yalnızca eldiven giymek",
+      "C": "Hiçbir işlem",
+      "D": "Yalnızca kâğıt havluyla silmek",
+      "E": "Alkol bazlı antiseptik"
+     },
+     "dogru": "E",
+     "aciklama": "El hijyeni sabun-su veya antiseptikle sağlanır; görünür kirlenme yoksa antiseptik uygundur.",
+     "sik_aciklamalari": {
+      "A": "Yalnız su yetersizdir.",
+      "B": "Eldiven el hijyeninin yerini almaz.",
+      "C": "El hijyeni gereklidir.",
+      "D": "Silmek hijyen sağlamaz.",
+      "E": "Doğru: uygun yöntemdir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aynı hastada kirli bölgeden temiz bölgeye geçerken yapılması gereken hangisidir?",
+     "secenekler": {
+      "A": "İkinci eldiveni üstüne giymek",
+      "B": "Aynı eldivenle devam etmek",
+      "C": "Eldiveni alkolle silmek",
+      "D": "Eldiveni çıkarıp el hijyeni sağlamak ve yeni eldiven giymek",
+      "E": "Yalnızca önlüğü değiştirmek"
+     },
+     "dogru": "D",
+     "aciklama": "Eldiven el hijyeninin yerini almaz; giyme-çıkarma arasında hijyen şarttır.",
+     "sik_aciklamalari": {
+      "A": "Kontaminasyonu önlemez.",
+      "B": "Kontaminasyonu taşır.",
+      "C": "Eldiven dezenfeksiyonu önerilmez.",
+      "D": "Doğru: önerilen uygulamadır.",
+      "E": "Eldiven değiştirilmelidir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Kan ve vücut sıvılarının sıçrama ihtimali olan bir işlemde standart önlemler kapsamında gerekli KKE hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca bone",
+      "B": "Yalnızca eldiven",
+      "C": "Önlük, maske ve yüz/göz koruyucu (eldivenle birlikte)",
+      "D": "Hiçbir KKE gerekmez",
+      "E": "Yalnızca galoş"
+     },
+     "dogru": "C",
+     "aciklama": "Temas ihtimalinde önlük, sıçrama ihtimalinde önlük + maske + yüz/göz koruyucu gerekir.",
+     "sik_aciklamalari": {
+      "A": "Yetersizdir; bu nedenle doğru seçenek değildir.",
+      "B": "Yüz ve gövde korunmaz.",
+      "C": "Doğru: sıçrama riskine uygun KKE'dir.",
+      "D": "KKE gereklidir; bu nedenle doğru seçenek değildir.",
+      "E": "Yetersizdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Güvenli enjeksiyon ve delici-kesici alet yönetimi kurallarını uygular.",
+   "sorular": [
+    {
+     "id": "k1-36-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Kullanılmış enjektör iğnesi ile ilgili doğru uygulama hangisidir?",
+     "secenekler": {
+      "A": "Kılıfına geri takılması",
+      "B": "Kılıfına geçirilmeden delinmeye dirençli kaba atılması",
+      "C": "Ucunun bükülmesi",
+      "D": "Normal çöpe atılması",
+      "E": "Tekrar kullanılması"
+     },
+     "dogru": "B",
+     "aciklama": "Güvenli enjeksiyonda iğneler kılıfına geçirilmez, bükülmez ve delinmeye dirençli kaplara atılır.",
+     "sik_aciklamalari": {
+      "A": "Yaralanma riskini artırır.",
+      "B": "Doğru: güvenli uygulamadır.",
+      "C": "Yaralanma riskini artırır.",
+      "D": "Delici-kesici atık kabına atılmalıdır.",
+      "E": "Tekrar kullanım yasaktır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Güvenli enjeksiyon ve delici-kesici alet yönetimi kurallarının temel amacı hangisidir?",
+     "secenekler": {
+      "A": "Atık miktarını artırmak",
+      "B": "İlaç maliyetini azaltmak",
+      "C": "Enjeksiyon süresini kısaltmak",
+      "D": "Hastanın ağrısını azaltmak",
+      "E": "Delici-kesici alet yaralanmalarını ve kan yoluyla bulaşan enfeksiyonları önlemek"
+     },
+     "dogru": "E",
+     "aciklama": "Kurallar HBV, HCV ve HIV gibi kan yoluyla bulaşan enfeksiyonları önlemeye yöneliktir.",
+     "sik_aciklamalari": {
+      "A": "Amaç bu değildir; bu nedenle doğru seçenek değildir.",
+      "B": "Maliyet temel amaç değildir.",
+      "C": "Süre temel amaç değildir.",
+      "D": "Ağrı temel amaç değildir.",
+      "E": "Doğru: temel amaçtır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Güvenli enjeksiyon kuralları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İğneler kılıfına geçirilmemelidir",
+      "B": "İğnelerin ucu bükülmemelidir",
+      "C": "Kullanım sonrası delinmeye dirençli kaplara atılmalıdır",
+      "D": "Delici aletler de aynı kurallara tabidir",
+      "E": "İğneyi tek elle kılıfına geri takmak tüm durumlarda önerilen standart uygulamadır"
+     },
+     "dogru": "E",
+     "aciklama": "İğneler kılıfına geçirilmemelidir; yaralanmaların önemli nedenidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): kılıfa geri takma önerilmez."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Bulaş yoluna yönelik izolasyon önlemlerini (temas, damlacık, solunum) tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-36-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Bulaş yoluna yönelik izolasyon önlemleri standart önlemlerle ilişkisi bakımından nasıl uygulanır?",
+     "secenekler": {
+      "A": "Standart önlemlerle hiç birlikte uygulanmaz",
+      "B": "Standart önlemlerin yerine",
+      "C": "Yalnızca standart önlemler yetersizse ve onları kaldırarak",
+      "D": "Standart önlemlere ek olarak",
+      "E": "Yalnızca personel için"
+     },
+     "dogru": "D",
+     "aciklama": "Temas, damlacık ve solunum izolasyonu standart önlemlere eklenir.",
+     "sik_aciklamalari": {
+      "A": "Birlikte uygulanır; bu nedenle doğru seçenek değildir.",
+      "B": "Yerine geçmez; bu nedenle doğru seçenek değildir.",
+      "C": "Standart önlemler kaldırılmaz.",
+      "D": "Doğru: ek önlemdir; doğru yanıttır.",
+      "E": "Hasta odaklı önlemlerdir."
+     },
+     "bilgi": [
+      17,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Tek kişilik oda mümkün değilse aynı mikroorganizmayla enfekte/kolonize hastaların aynı odaya yerleştirilmesine ne ad verilir?",
+     "secenekler": {
+      "A": "Kohortlama",
+      "B": "Karantina",
+      "C": "Dekontaminasyon",
+      "D": "Sterilizasyon",
+      "E": "Profilaksi"
+     },
+     "dogru": "A",
+     "aciklama": "Kohort uygulaması temas izolasyonunda kaynak izolasyonunu sağlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kohortlamanın tanımıdır.",
+      "B": "Karantina temaslıların gözlemidir.",
+      "C": "Dekontaminasyon yüzey temizliğidir.",
+      "D": "Sterilizasyon tüm mikroorganizmaların yok edilmesidir.",
+      "E": "Profilaksi koruyucu tedavidir."
+     },
+     "bilgi": [
+      18,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Temas izolasyonu gereklilikleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Negatif basınçlı oda ve N95 maske zorunluluğu",
+      "B": "Eldiven ve önlük kullanımı",
+      "C": "Tek kişilik oda veya kohortlama",
+      "D": "Malzemelerin ortak kullanılmaması",
+      "E": "KKE'nin odadan ayrılmadan çıkarılması"
+     },
+     "dogru": "A",
+     "aciklama": "Negatif basınçlı oda ve N95 solunum izolasyonu gereklilikleridir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: solunum izolasyonuna aittir.",
+      "B": "Temas izolasyonu gerekliliğidir.",
+      "C": "Temas izolasyonu gerekliliğidir.",
+      "D": "Temas izolasyonu gerekliliğidir.",
+      "E": "Temas izolasyonu gerekliliğidir."
+     },
+     "bilgi": [
+      18,
+      20
+     ],
+     "benzer_cikmis": [
+      "f3525a1ca5c5"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "f3525a1ca5c5",
+     "soru": "Aşağıdakilerden hangisi temas izolasyonu için yapılması gerekenlerden değildir?",
+     "secenekler": {
+      "A": "Tek kişilik oda, mümkün değilse aynı mikroorganizma ile enfekte/kolonize hastaların aynı odaya yerleştirilmesi (kohortlama)",
+      "B": "Odalar veya hastalar arasında malzeme veya tıbbi cihaz ortak kullanımının önlenmesi",
+      "C": "Kişisel koruyucu ekipmanların (KKE) hasta odasından ayrılmadan çıkarılması",
+      "D": "Odadan ayrıldıktan sonra el hijyeni uygulanması",
+      "E": "Odaya girmeden önce N95 maske takılması"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Temas, damlacık ve solunum izolasyonlarının endikasyonlarını ve gerekliliklerini karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k1-36-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki hastalıklardan hangisi solunum (hava yolu) izolasyonu gerektirir?",
+     "secenekler": {
+      "A": "Akciğer tüberkülozu",
+      "B": "Meningokok enfeksiyonu",
+      "C": "İnfluenza",
+      "D": "Clostridioides difficile ishali",
+      "E": "MRSA yara enfeksiyonu"
+     },
+     "dogru": "A",
+     "aciklama": "Kızamık, su çiçeği, yaygın zona ve akciğer/larenks tüberkülozu solunum izolasyonu gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: hava yoluyla bulaşır.",
+      "B": "Meningokok damlacık izolasyonu gerektirir.",
+      "C": "İnfluenza damlacık izolasyonu gerektirir.",
+      "D": "Temas izolasyonu gerektirir.",
+      "E": "Temas izolasyonu gerektirir."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Neisseria meningitidis enfeksiyonunda uygulanması gereken izolasyon tipi hangisidir?",
+     "secenekler": {
+      "A": "Damlacık izolasyonu",
+      "B": "Solunum (hava yolu) izolasyonu",
+      "C": "Yalnızca standart önlem",
+      "D": "Koruyucu (ters) izolasyon",
+      "E": "İzolasyon gerekmez"
+     },
+     "dogru": "A",
+     "aciklama": "Meningokok damlacık yoluyla bulaşır; aerosol ile bulaşan enfeksiyonlar arasında yer almaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru: damlacık izolasyonu gerekir.",
+      "B": "Hava yolu izolasyonu gerekmez.",
+      "C": "Ek önlem gerekir; bu nedenle doğru seçenek değildir.",
+      "D": "Ters izolasyon bağışıklığı baskılanmış hasta içindir.",
+      "E": "İzolasyon gerekir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "İzolasyon tipleri ve gereklilikleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Damlacık izolasyonunda farklı tanılı hastalar arasında en az 1 metre mesafe bırakılır",
+      "B": "Damlacık izolasyonundaki hastaya nakilde cerrahi maske takılır",
+      "C": "Solunum izolasyonunda saatte 6–12 hava değişimi sağlanan negatif basınçlı oda tercih edilir",
+      "D": "Temas izolasyonu çok ilaç dirençli mikroorganizmalarda uygulanır",
+      "E": "Kızamıklı hasta için damlacık izolasyonu ve cerrahi maske yeterlidir"
+     },
+     "dogru": "E",
+     "aciklama": "Kızamık hava yoluyla bulaşır; N95/FFP2 maske ve negatif basınçlı oda ile solunum izolasyonu gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): solunum izolasyonu gerekir."
+     },
+     "bilgi": [
+      19,
+      20,
+      21,
+      26
+     ],
+     "benzer_cikmis": [
+      "16ad86ef48d4"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "16ad86ef48d4",
+     "soru": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
+      "B": "Damlacık izolasyonu ≥5 µm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma için uygulanır",
+      "C": "Temas izolasyonu çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için uygulanır",
+      "D": "Solunum izolasyonu <5 µm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma için uygulanır",
+      "E": "Temas izolasyonu enterik enfeksiyona sebep olan mikroorganizmaların bulaşını engellemek için uygulanır"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Kişisel koruyucu ekipmanın giyilme ve çıkarılma sırasını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-36-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "KKE giyme sırasında ilk basamak hangisidir?",
+     "secenekler": {
+      "A": "El hijyeni",
+      "B": "Eldiven",
+      "C": "Gözlük",
+      "D": "Maske",
+      "E": "Önlük"
+     },
+     "dogru": "A",
+     "aciklama": "Giyme sırası: el hijyeni → önlük → eldiven → (solunum izolasyonunda N95) → gözlük/yüz koruyucu.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ilk basamaktır.",
+      "B": "Önlükten sonra giyilir.",
+      "C": "Son basamaklardadır.",
+      "D": "Önlük ve eldivenden sonra takılır.",
+      "E": "El hijyeninden sonra giyilir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "KKE çıkarma sırasında ilk çıkarılan ekipman hangisidir?",
+     "secenekler": {
+      "A": "Eldiven",
+      "B": "Maske",
+      "C": "Gözlük",
+      "D": "Önlük",
+      "E": "Bone"
+     },
+     "dogru": "A",
+     "aciklama": "Çıkarma sırası: eldiven → el hijyeni → önlük → el hijyeni → gözlük/yüz koruyucu → maske → el hijyeni.",
+     "sik_aciklamalari": {
+      "A": "Doğru: en kontamine ekipman ilk çıkarılır.",
+      "B": "Maske en son çıkarılır.",
+      "C": "Önlükten sonra çıkarılır.",
+      "D": "Eldivenden sonra çıkarılır.",
+      "E": "Sıralamada ilk değildir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "KKE çıkarma işlemi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hasta alanından ayrılırken uygulanır",
+      "B": "Eldiven çıkarıldıktan sonra el hijyeni yapılır",
+      "C": "Maske son çıkarılan ekipmanlardandır",
+      "D": "Her basamak arası el hijyeni esastır",
+      "E": "Maske eldivenden önce, ilk olarak çıkarılmalıdır"
+     },
+     "dogru": "E",
+     "aciklama": "İlk çıkarılan eldivendir; maske en son çıkarılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): maske son çıkarılır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 30,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:59"
+}

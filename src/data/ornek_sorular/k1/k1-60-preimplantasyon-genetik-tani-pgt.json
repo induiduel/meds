@@ -1,0 +1,840 @@
+{
+ "id": "k1-60-preimplantasyon-genetik-tani-pgt",
+ "sira": 60,
+ "kurul": 1,
+ "ders": "Tıbbi Genetik",
+ "konu": "Preimplantasyon Genetik Tanı (PGT)",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "tarih": "2026-10-14",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Preimplantasyon genetik tanı (PGD) ve preimplantasyon genetik taramanın (PGS) tanımını ve birbirinden farkını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-60-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Preimplantasyon genetik tanının (PGD) en önemli yararı hangisidir?",
+     "secenekler": {
+      "A": "Gebelik sırasında amniyosentezi zorunlu kılması",
+      "B": "Hastayı olası gebelik terminasyonundan (medikal abortus) koruması",
+      "C": "Yalnızca doğum sonrası tanı sağlaması",
+      "D": "IVF gereksinimini ortadan kaldırması",
+      "E": "Tüm embriyoların transfer edilmesini sağlaması"
+     },
+     "dogru": "B",
+     "aciklama": "PGD'de embriyolar transfer öncesi test edilir; sağlıklı embriyo transfer edildiğinden gebelik terminasyonu ihtiyacı ortadan kalkar.",
+     "sik_aciklamalari": {
+      "A": "PGD sonrası doğrulama önerilebilir, ancak temel yarar terminasyondan korunmadır.",
+      "B": "Doğru: PGD'nin en önemli yararıdır.",
+      "C": "PGD implantasyon öncesi yapılır.",
+      "D": "PGD yardımlı üreme tekniği gerektirir.",
+      "E": "Yalnızca sağlıklı embriyolar transfer edilir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "PGS (preimplantasyon genetik tarama) ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Gebelikte fetal kandan yapılan testtir",
+      "B": "Bilinen bir tek gen mutasyonunun embriyoda aranmasıdır",
+      "C": "Aday embriyolarda anöploidi taraması yapılarak öploid embriyonun transfer edilmesidir",
+      "D": "Yalnızca HLA uyumu için yapılır",
+      "E": "Yalnızca erkek infertilitesinde uygulanır"
+     },
+     "dogru": "C",
+     "aciklama": "PGS tüp bebek başarısını artırmaya yönelik anöploidi taramasıdır; özellikle ileri anne yaşında kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Fetal kan örneklemesi kordosentezdir.",
+      "B": "Bilinen mutasyonun aranması PGD (PGT-M) kapsamındadır.",
+      "C": "Doğru: PGS'nin tanımıdır.",
+      "D": "HLA tiplemesi PGD'nin özel bir uygulamasıdır.",
+      "E": "PGS'nin ana kullanım alanı ileri anne yaşıdır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "PGD ve PGS karşılaştırıldığında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "PGD gebelik sırasında amniyon sıvısından yapılır",
+      "B": "PGS yalnızca tek gen hastalıklarında uygulanır",
+      "C": "PGD ve PGS'nin amacı aynıdır",
+      "D": "PGD bilinen genetik riski olan ailede spesifik hastalığın tanısına, PGS ise genel anöploidi taramasıyla gebelik başarısını artırmaya yöneliktir",
+      "E": "PGS ileri anne yaşında kullanılmaz"
+     },
+     "dogru": "D",
+     "aciklama": "PGD bilinen riskli ailelerde hastalıklı embriyoyu ayırmaya, PGS ise öploid embriyo seçerek IVF başarısını artırmaya yöneliktir.",
+     "sik_aciklamalari": {
+      "A": "PGD implantasyon öncesi embriyoda yapılır.",
+      "B": "PGS anöploidi taramasıdır.",
+      "C": "Amaçları farklıdır: PGD ve PGS'nin amacı aynıdır.",
+      "D": "Doğru: iki yaklaşımın farkıdır.",
+      "E": "PGS ileri anne yaşında yaygın kullanılır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "PGD/PGS endikasyonlarını ve hangi çiftlere uygulandığını sıralamak",
+   "sorular": [
+    {
+     "id": "k1-60-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi PGD endikasyonu değildir?",
+     "secenekler": {
+      "A": "Dengeli yapısal kromozom anomalisi taşıyıcılığı",
+      "B": "Tek gen hastalığı taşıyıcısı çift",
+      "C": "Genetik riski olmayan, doğal yolla ilk gebeliğini sorunsuz elde etmiş genç çift",
+      "D": "İki veya daha fazla IVF başarısızlığı",
+      "E": "HLA uyumlu kardeş isteyen çift"
+     },
+     "dogru": "C",
+     "aciklama": "PGD endikasyonları tek gen hastalığı riski, yapısal kromozom anomalisi, ileri yaş IVF, tekrarlayan IVF başarısızlığı ve HLA uyumlu kardeş isteğidir.",
+     "sik_aciklamalari": {
+      "A": "Önemli endikasyondur.",
+      "B": "Öncelikli endikasyondur.",
+      "C": "Doğru: genetik risk ve IVF gereksinimi yoktur.",
+      "D": "Endikasyondur: i̇ki veya daha fazla IVF başarısızlığı.",
+      "E": "Endikasyondur: HLA uyumlu kardeş isteyen çift."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Mendelyen kalıtılan hastalıklarda PGD'nin prenatal tanıya göre büyük avantaj sağlamasının nedeni hangisidir?",
+     "secenekler": {
+      "A": "PGD'nin maliyetinin daha düşük olması",
+      "B": "Bu hastalıklarda tekrarlama riskinin sıfır olması",
+      "C": "Prenatal tanının bu hastalıklarda hiç yapılamaması",
+      "D": "PGD'nin IVF gerektirmemesi",
+      "E": "Tekrarlama riskinin %25 veya %50 gibi yüksek olması ve gebelik terminasyonu ihtiyacının önlenmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Yüksek tekrarlama riskli ailelerde PGD sağlıklı embriyo seçerek tekrar eden terminasyonları önler.",
+     "sik_aciklamalari": {
+      "A": "PGD maliyetlidir: PGD'nin maliyetinin daha düşük olması.",
+      "B": "Risk yüksektir: bu hastalıklarda tekrarlama riskinin sıfır olması.",
+      "C": "Prenatal tanı yapılabilir; ancak sonlandırma gerektirebilir.",
+      "D": "PGD IVF gerektirir: PGD'nin IVF gerektirmemesi.",
+      "E": "Doğru: avantajın gerekçesidir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Konvansiyonel prenatal tanı yerine PGD'nin tercih edileceği durum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Genetik riski olmayan rutin gebelik",
+      "B": "Ciddi genetik riskli ailede gebelik sonlandırmanın etik/dini/kişisel nedenlerle kabul edilmediği veya geç kalacağı durum",
+      "C": "Yalnızca folik asit eksikliği",
+      "D": "Yalnızca fetal cinsiyet merakı",
+      "E": "Gebeliğin üçüncü trimesterinde başvuru"
+     },
+     "dogru": "B",
+     "aciklama": "Konvansiyonel prenatal tanıyla sonlandırmanın geç kalacağı veya kabul edilmediği ciddi riskli ailelerde PGD tercih edilir.",
+     "sik_aciklamalari": {
+      "A": "Risk yoksa PGD endikasyonu yoktur.",
+      "B": "Doğru: PGD'nin klinik endikasyonudur.",
+      "C": "Folik asit eksikliği PGD endikasyonu değildir.",
+      "D": "Tıbbi gerekçe olmadan cinsiyet seçimi endikasyon değildir.",
+      "E": "PGD gebelik başlamadan uygulanır."
+     },
+     "bilgi": [
+      3,
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Kromozomal (sayısal ve yapısal) düzensizliklerde PGD uygulamasını ve segregasyon tiplerini tanımlamak",
+   "sorular": [
+    {
+     "id": "k1-60-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Dengeli translokasyon taşıyıcısında dengeli gamet oluşturan segregasyon tipi hangisidir?",
+     "secenekler": {
+      "A": "3:1 interchange segregasyon",
+      "B": "Adjacent-1 segregasyon",
+      "C": "Adjacent-2 segregasyon",
+      "D": "Alternate segregasyon",
+      "E": "3:1 tersiyer segregasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Alternate segregasyon dengeli, adjacent-1 ve adjacent-2 dengesiz gamet/embriyo verir.",
+     "sik_aciklamalari": {
+      "A": "3:1 interchange tam trizomi/monozomi yapar.",
+      "B": "Adjacent-1 dengesiz ürün verir.",
+      "C": "Adjacent-2 dengesiz ürün verir.",
+      "D": "Doğru: alternate segregasyon dengeli ürün verir.",
+      "E": "3:1 tersiyer segregasyon dengesiz ürün verir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Dengeli translokasyon taşıyıcılığının görülme sıklığı en yüksek olan grup hangisidir?",
+     "secenekler": {
+      "A": "Sağlıklı çocuk sahibi çiftler",
+      "B": "Neonatal popülasyon (~%0,2)",
+      "C": "İnfertil çiftler (~%0,6)",
+      "D": "Genel erişkin popülasyon",
+      "E": "İlk trimester gebelik kayıpları (~%6)"
+     },
+     "dogru": "E",
+     "aciklama": "Taşıyıcılık neonatal popülasyonda %0,2, infertil çiftlerde %0,6, ilk trimester kayıplarında %6'dır.",
+     "sik_aciklamalari": {
+      "A": "Bu grupta yüksek değildir.",
+      "B": "Neonatal popülasyonda düşüktür.",
+      "C": "İnfertil çiftlerde orta düzeydedir.",
+      "D": "Genel popülasyonda düşüktür.",
+      "E": "Doğru: en yüksek oran kayıplardadır."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Anöploidiler ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kromozomun bir parçasının kaybıdır",
+      "B": "Genellikle paternal mayoz II hatasından kaynaklanır",
+      "C": "Genellikle maternal mayoz I hatalarından kaynaklanır ve ileri maternal yaş, tekrarlayan IVF başarısızlığı ve ilk trimester kayıplarının önemli nedenidir",
+      "D": "PGS ile araştırılamaz",
+      "E": "Gebelik kayıplarıyla ilişkisi yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Anöploidiler bir kromozomun tamamını içeren sayısal bozukluklardır; PGS ile taranır.",
+     "sik_aciklamalari": {
+      "A": "Parça kaybı yapısal anomalidir.",
+      "B": "Çoğunlukla maternal mayoz I kaynaklıdır.",
+      "C": "Doğru: anöploidilerin kaynağı ve klinik önemi doğrudur.",
+      "D": "PGS anöploidi taramasıdır.",
+      "E": "İlk trimester kayıplarının önemli nedenidir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Tek gen hastalıklarında (OR, OD, XR) ve HLA uyumlu kardeş amaçlı PGD ilkelerini bilmek",
+   "sorular": [
+    {
+     "id": "k1-60-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Otozomal resesif hastalık için heterozigot taşıyıcı iki ebeveynin çocuğunun hasta olma riski nedir?",
+     "secenekler": {
+      "A": "%50",
+      "B": "%25",
+      "C": "%75",
+      "D": "%100",
+      "E": "%0"
+     },
+     "dogru": "B",
+     "aciklama": "OR kalıtımda heterozigot çiftin çocuğunda hastalık %25, taşıyıcılık %50, sağlıklı %25 olasılıktır.",
+     "sik_aciklamalari": {
+      "A": "%50 taşıyıcılık riskidir.",
+      "B": "Doğru: OR hastalık riskidir.",
+      "C": "%75 sağlıklı veya taşıyıcı toplamıdır.",
+      "D": "%100 değildir: %100.",
+      "E": "Risk vardır: %0; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "HLA uyumlu kardeş amaçlı PGD'nin temel gerekçesi hangisidir?",
+     "secenekler": {
+      "A": "Hasta çocuğun gen tedavisine ihtiyaç duymaması",
+      "B": "HLA genlerinin X kromozomunda bulunması",
+      "C": "HLA uyumunun IVF başarısını garanti etmesi",
+      "D": "Beta talasemi gibi hastalıklarda en iyi tedavi olan allojenik kök hücre naklinde tam HLA uyumlu kardeş vericinin en iyi sonucu vermesi",
+      "E": "HLA tiplemesinin kolay ve ucuz olması"
+     },
+     "dogru": "D",
+     "aciklama": "HLA genleri 6p'de yer alır; uygun donör yoksa hem mutasyon açısından normal hem HLA uyumlu embriyo seçilir.",
+     "sik_aciklamalari": {
+      "A": "Amaç kök hücre nakli için verici sağlamaktır.",
+      "B": "HLA genleri 6. kromozomun kısa kolundadır.",
+      "C": "HLA uyumu IVF başarısını belirlemez.",
+      "D": "Doğru: HLA PGD'nin gerekçesidir.",
+      "E": "Maliyet yüksektir: HLA tiplemesinin kolay ve ucuz olması."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q13",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "HLA uyumlu kardeş amaçlı PGD'de en büyük zorluk hangisidir?",
+     "secenekler": {
+      "A": "Embriyo sayısının fazla olması",
+      "B": "ICSI'nin gereksiz olması",
+      "C": "Maliyetin çok düşük olması",
+      "D": "Hem HLA uyumlu hem mutasyon açısından normal embriyo bulma olasılığının düşük olması",
+      "E": "HLA genlerinin tek kromozomda olmaması"
+     },
+     "dogru": "D",
+     "aciklama": "İki koşulu birlikte sağlayan embriyo olasılığı düşüktür; az embriyo, öngörülemeyen yanıt, yüksek maliyet ve kontaminasyon için ICSI zorunluluğu diğer zorluklardır.",
+     "sik_aciklamalari": {
+      "A": "Embriyo sayısı azdır.",
+      "B": "Kontaminasyonu önlemek için ICSI zorunludur.",
+      "C": "Maliyet yüksektir: maliyetin çok düşük olması.",
+      "D": "Doğru: en büyük sıkıntıdır.",
+      "E": "HLA genlerinin çoğu 6p'dedir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Huntington hastalığı riski taşıyan ancak kendi taşıyıcılık durumunu öğrenmek istemeyen birey için PGD'de uygulanan yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "PGD'nin kesinlikle reddedilmesi",
+      "B": "Bireyin isteğine rağmen sonucunun açıklanması",
+      "C": "Ebeveyn taraması yapılmadan ve raporlanmadan hastalıksız embriyoların transferi",
+      "D": "Tüm embriyoların test edilmeden transferi",
+      "E": "Yalnızca erkek embriyoların transferi"
+     },
+     "dogru": "C",
+     "aciklama": "Huntington'da çoğu çift kendi durumunu bilmek istemez; ebeveyn sonucu raporlanmadan hastalıksız embriyolar transfer edilir.",
+     "sik_aciklamalari": {
+      "A": "PGD uygulanabilir: PGD'nin kesinlikle reddedilmesi.",
+      "B": "Bilmeme hakkı ihlal edilir.",
+      "C": "Doğru: bilmeme hakkını koruyan yaklaşımdır.",
+      "D": "Test edilmeden transfer PGD amacına aykırıdır.",
+      "E": "OD hastalıkta cinsiyet seçimi anlamsızdır."
+     },
+     "bilgi": [
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "STR tabanlı haplotipleme ve SNP tabanlı Karyomapping yöntemlerini karşılaştırmak",
+   "sorular": [
+    {
+     "id": "k1-60-q14",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Mutasyonun doğrudan analizi yapılmadan, hastalık genine komşu STR alelleri izlenerek yapılan PGD yöntemi hangisidir?",
+     "secenekler": {
+      "A": "FISH",
+      "B": "STR tabanlı haplotipleme (PGH)",
+      "C": "a-CGH",
+      "D": "Sanger dizileme",
+      "E": "Karyotip"
+     },
+     "dogru": "B",
+     "aciklama": "STR tabanlı haplotiplemede gen bölgesine komşu aleller izlenerek riskli kromozom bölgesinin aktarılıp aktarılmadığı belirlenir.",
+     "sik_aciklamalari": {
+      "A": "FISH prob hibridizasyonudur.",
+      "B": "Doğru: haplotiplemenin tanımıdır.",
+      "C": "a-CGH dozaj farkını saptar.",
+      "D": "Sanger doğrudan mutasyon dizilemesidir.",
+      "E": "Karyotip kromozom yapısını inceler."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q15",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "SNP tabanlı Karyomapping yönteminin STR haplotiplemeye üstünlüğü hangisidir?",
+     "secenekler": {
+      "A": "Rekombinasyon hata payının artması",
+      "B": "Yalnızca tek bir STR bölgesini incelemesi",
+      "C": "Hiç linkage analizi yapmaması",
+      "D": "Sadece sayısal anomalileri göstermesi",
+      "E": "Tüm genom boyunca ~300.000 SNP ile linkage analizi yapması ve teorik olarak tüm kalıtsal hastalıklara uygulanabilmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Karyomapping genom boyunca homojen dağılmış SNP'lerle analiz yapar; rekombinasyon hata payı azalır.",
+     "sik_aciklamalari": {
+      "A": "Hata payı azalır: rekombinasyon hata payının artması.",
+      "B": "Tüm genom incelenir.",
+      "C": "Genom boyu linkage analizi yapar.",
+      "D": "Monogenik hastalıklar da değerlendirilebilir.",
+      "E": "Doğru: yöntemin üstünlüğüdür."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q16",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Mutasyon spesifik test imkânı olmayan bir tek gen hastalığında PGD için en uygun yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca morfolojik embriyo seçimi",
+      "B": "Yalnızca FISH ile sayısal analiz",
+      "C": "Yalnızca a-CGH",
+      "D": "PGD yapılamaz",
+      "E": "Hastalık genine bağlı marker/haplotip analizi (STR veya SNP tabanlı)"
+     },
+     "dogru": "E",
+     "aciklama": "Mutasyon spesifik test olmadığında bağlantı analizi (haplotipleme/Karyomapping) etkilidir.",
+     "sik_aciklamalari": {
+      "A": "Morfoloji genetik durumu göstermez.",
+      "B": "FISH tek gen mutasyonunu göstermez.",
+      "C": "a-CGH dozaj analizidir.",
+      "D": "Haplotipleme ile PGD yapılabilir.",
+      "E": "Doğru: dolaylı bağlantı analizi uygundur."
+     },
+     "bilgi": [
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Embriyo biyopsi yöntemlerini (polar cisim, blastomer, trofoektoderm) avantaj ve dezavantajlarıyla karşılaştırmak",
+   "sorular": [
+    {
+     "id": "k1-60-q17",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Günümüzde PGD'de en çok tercih edilen embriyo biyopsi yöntemi hangisidir?",
+     "secenekler": {
+      "A": "Blastomer biyopsisi",
+      "B": "Polar cisim biyopsisi",
+      "C": "Blastokist (trofoektoderm) biyopsisi",
+      "D": "Koryon villus örneklemesi",
+      "E": "Amniyosentez"
+     },
+     "dogru": "C",
+     "aciklama": "Blastomer biyopsisi eskiden en çok kullanılırken yerini 4–5. günde yapılan trofoektoderm biyopsisine bırakmıştır.",
+     "sik_aciklamalari": {
+      "A": "Blastomer biyopsisi yerini blastokist biyopsisine bırakmıştır.",
+      "B": "Polar cisim biyopsisi yalnız maternal riskleri gösterir.",
+      "C": "Doğru: güncel tercih edilen yöntemdir.",
+      "D": "CVS prenatal tanı yöntemidir.",
+      "E": "Amniyosentez prenatal tanı yöntemidir."
+     },
+     "bilgi": [
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q18",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Polar cisim biyopsisinin kısıtlılığı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Transferden önce analiz süresinin çok kısa olması",
+      "B": "Paternal ve mitotik kaynaklı anöploidileri saptayamaması ve cinsiyet tayininde kullanılamaması",
+      "C": "Embriyonun kritik hücrelerinin alınması",
+      "D": "Her iki ebeveyn kaynaklı sorunları göstermesi",
+      "E": "5. günde yapılması"
+     },
+     "dogru": "B",
+     "aciklama": "Polar cisim yalnız maternal genetik bilgiyi yansıtır; avantajı transferden önce uzun analiz süresidir.",
+     "sik_aciklamalari": {
+      "A": "Avantajı uzun analiz süresidir.",
+      "B": "Doğru: temel kısıtlılıktır.",
+      "C": "Polar cisim embriyonun parçası değildir.",
+      "D": "Yalnız maternal riskleri gösterir.",
+      "E": "Oosit/zigot aşamasında yapılır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q19",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Embriyo biyopsi yöntemleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Blastomer biyopsisi 3. günde 6–8 hücreli aşamada yapılır",
+      "B": "Trofoektoderm biyopsisinde tek seferde birkaç hücre alınabilir",
+      "C": "Trofoektoderm plasentayı oluşturduğundan embriyonun kritik hücreleri alınmaz",
+      "D": "Blastokist biyopsisinin dezavantajı zaman sorunu ve embriyo dondurma gerekliliğidir",
+      "E": "Polar cisim biyopsisi babadan gelen mutasyonları saptamak için en uygun yöntemdir"
+     },
+     "dogru": "E",
+     "aciklama": "Polar cisim yalnız maternal genetik bilgiyi taşır; paternal mutasyonları gösteremez.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: blastomer biyopsisi 3. günde 6–8 hücreli aşamada yapılır.",
+      "B": "Doğru ifade: 2–9 hücre alınabilir.",
+      "C": "Doğru ifade: trofoektoderm plasentayı oluşturduğundan embriyonun kritik hücreleri alınmaz.",
+      "D": "Doğru ifade: blastokist biyopsisinin dezavantajı zaman sorunu ve embriyo dondurma gerekliliğidir.",
+      "E": "Yanlış ifade (aranan cevap): paternal mutasyonları saptayamaz."
+     },
+     "bilgi": [
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "PGD genetik testlerini (PCR, WGA, FISH, mikroarray, sekanslama) ve PGT alt tiplerini (PGT-A, PGT-SR, PGT-M) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-60-q20",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Yapısal kromozom anomalilerinin embriyoda tespitine yönelik PGT alt tipi hangisidir?",
+     "secenekler": {
+      "A": "PGT-HLA",
+      "B": "PGT-A",
+      "C": "PGT-M",
+      "D": "PGT-SR",
+      "E": "PGT-X"
+     },
+     "dogru": "D",
+     "aciklama": "PGT-A sayısal, PGT-SR yapısal kromozom anomalilerini, PGT-M monogenik hastalıkları saptar.",
+     "sik_aciklamalari": {
+      "A": "Bu derste ayrı bir alt tip olarak tanımlanmamıştır.",
+      "B": "PGT-A anöploidi taramasıdır.",
+      "C": "PGT-M monogenik hastalıklar içindir.",
+      "D": "Doğru: yapısal düzenlemeler içindir.",
+      "E": "Böyle bir alt tip yoktur."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q21",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Çok az miktardaki embriyo DNA'sının analiz öncesi çoğaltılmasını sağlayan yöntem hangisidir?",
+     "secenekler": {
+      "A": "FISH",
+      "B": "Tüm genom amplifikasyonu (WGA)",
+      "C": "Karyotip",
+      "D": "İmmünohistokimya",
+      "E": "Western blot"
+     },
+     "dogru": "B",
+     "aciklama": "WGA çok az DNA'dan analiz öncesi miktar artırımını sağlar.",
+     "sik_aciklamalari": {
+      "A": "FISH DNA'yı çoğaltmaz.",
+      "B": "Doğru: WGA'nın amacıdır.",
+      "C": "Karyotip metafaz hücresi gerektirir.",
+      "D": "İmmünohistokimya protein analizidir.",
+      "E": "Western blot protein analizidir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q22",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "PGD'de kullanılan mikroarray (a-CGH) ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "DNA izole edilmeden hücre içinde analiz yapar",
+      "B": "Yalnızca 5 kromozomu inceleyebilir",
+      "C": "24 kromozomun anöploidisini ve delesyon/duplikasyonları tek işlemde gösterir; işlem 4–5 gün sürdüğünden embriyo dondurulmalıdır",
+      "D": "Sonuç birkaç saatte alınır",
+      "E": "Tek gen nokta mutasyonlarını en iyi gösterir"
+     },
+     "dogru": "C",
+     "aciklama": "a-CGH DNA dozaj farklarını saptar ve tüm kromozomları inceler; süre nedeniyle embriyo dondurma gerekir.",
+     "sik_aciklamalari": {
+      "A": "Hücre içinde analiz FISH'in özelliğidir.",
+      "B": "Tüm kromozomları inceler.",
+      "C": "Doğru: yöntemin özellikleri doğrudur.",
+      "D": "İşlem 4–5 gün sürer.",
+      "E": "Nokta mutasyonları dizileme ile saptanır."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "PGD'de genetik danışmanlık, hasta hazırlığı ve kalite/güvenilirlik sorunlarını özetlemek",
+   "sorular": [
+    {
+     "id": "k1-60-q23",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "PGD testlerinin güvenilirliğini bozan etkenler arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "Uygun donanım",
+      "B": "Yeterli sayıda informatif marker kullanımı",
+      "C": "Optimal laboratuvar koşulları",
+      "D": "Allel drop-out (ADO)",
+      "E": "ICSI kullanımı"
+     },
+     "dogru": "D",
+     "aciklama": "Allel drop-out, DNA kontaminasyonu ve amplifikasyon kaybı güvenilirliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Uygun donanım riski azaltır.",
+      "B": "İnformatif marker riski azaltır.",
+      "C": "Optimal koşullar riski azaltır.",
+      "D": "Doğru: ADO yanlış sonuca yol açabilir.",
+      "E": "ICSI kontaminasyonu azaltır."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q24",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "PGD öncesi genetik danışmanlık ve hasta hazırlığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yöntem, güven aralığı, yarar ve riskler anlatılır; bilgilendirilmiş onam her iki eşe ayrı ayrı imzalatılır",
+      "B": "Yalnızca annenin onamı yeterlidir",
+      "C": "Riskler anlatılmaz",
+      "D": "Sonuçların %100 kesin olduğu belirtilir",
+      "E": "Danışmanlık PGD sonrası yapılır"
+     },
+     "dogru": "A",
+     "aciklama": "Danışmada yöntem, güven aralığı, yarar ve riskler anlatılır; her iki eşten ayrı onam alınır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: danışma ve onam ilkeleridir.",
+      "B": "Her iki eşin onamı gerekir.",
+      "C": "Riskler mutlaka anlatılır.",
+      "D": "Testlerin güven aralığı vardır.",
+      "E": "Danışmanlık işlem öncesi yapılır."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q25",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "PGD'de embriyonik mozaisizm ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Mitotik kaynaklı mozaisizm oranları laboratuvarlar arasında farklılık gösterir ve %30'a kadar çıkabilir; mayotik kaynaklı anöploidide tüm hücreler etkilenir",
+      "B": "Mozaisizm PGD'de hiç görülmez",
+      "C": "Mayotik anöploidide yalnızca bazı hücreler etkilenir",
+      "D": "Laboratuvar koşulları mozaisizmi etkilemez",
+      "E": "Mozaisizm biyopsi sonucunu her zaman doğru yansıtır"
+     },
+     "dogru": "A",
+     "aciklama": "Mitotik hatalar mozaisizme yol açar; kültür koşulları mitoz hatalarını tetikleyebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: mozaisizmin kaynakları doğru verilmiştir.",
+      "B": "Mozaisizm önemli bir sorundur.",
+      "C": "Mayotik hatada tüm hücreler etkilenir.",
+      "D": "Laboratuvar koşulları önemlidir.",
+      "E": "Biyopsi tüm embriyoyu temsil etmeyebilir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "IVF sürecinde ovulasyon indüksiyonu, OPU, denüdasyon ve ICSI basamaklarını ve endikasyonlarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-60-q26",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Oosit toplama (OPU) hCG enjeksiyonundan ne kadar sonra planlanır?",
+     "secenekler": {
+      "A": "35–36 saat",
+      "B": "6 saat",
+      "C": "72 saat",
+      "D": "7 gün",
+      "E": "1 saat"
+     },
+     "dogru": "A",
+     "aciklama": "Metafaz II 36 saatte gerçekleştiğinden OPU hCG'den 35–36 saat sonra planlanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: OPU zamanlamasıdır.",
+      "B": "Oosit olgunlaşması için çok erkendir.",
+      "C": "Ovulasyon gerçekleşmiş olur.",
+      "D": "Çok geçtir: 7 gün; bu nedenle doğru seçenek değildir.",
+      "E": "Çok erkendir: 1 saat."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q27",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi ICSI endikasyonudur?",
+     "secenekler": {
+      "A": "Total sperm konsantrasyonu <2 milyon/ml",
+      "B": "Normal sperm parametreleri ve ilk IVF denemesi",
+      "C": "Yüksek sperm motilitesi",
+      "D": "Normal morfolojinin %50 olması",
+      "E": "Doğal gebelik öyküsü"
+     },
+     "dogru": "A",
+     "aciklama": "ICSI endikasyonları: konsantrasyon <2 milyon/ml, motilite <%5, normal morfoloji <%4, cerrahi sperm vb.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ağır oligospermi ICSI endikasyonudur.",
+      "B": "Normal parametrelerde ICSI zorunlu değildir.",
+      "C": "Yüksek motilite endikasyon değildir.",
+      "D": "Normal morfoloji yüksek olduğunda endikasyon yoktur.",
+      "E": "Doğal gebelik endikasyon değildir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q29",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Denüdasyon işlemi aşağıdakilerden hangisini ifade eder?",
+     "secenekler": {
+      "A": "Oositin kümülüs-korona hücrelerinden hyaluronidaz ve pipetle ayrılması",
+      "B": "Tek spermin oosit sitoplazmasına enjeksiyonu",
+      "C": "Embriyonun uterusa transferi",
+      "D": "Trofoektoderm biyopsisi",
+      "E": "Embriyonun dondurulması"
+     },
+     "dogru": "A",
+     "aciklama": "Denüdasyon oositin çevresindeki kümülüs-korona hücrelerinden ayrılmasıdır; ardından ICSI yapılabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: denüdasyonun tanımıdır.",
+      "B": "Bu ICSI'dir: tek spermin oosit sitoplazmasına enjeksiyonu.",
+      "C": "Bu embriyo transferidir.",
+      "D": "Bu PGD biyopsisidir.",
+      "E": "Bu vitrifikasyondur."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-60-q28",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "IVF sürecinde OPU ile elde edilen oosit sayısı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "İdeal sayı 8–13'tür; 5'in altı gebelik oranını azaltır, 20'nin üstü OHSS riski oluşturur",
+      "B": "Oosit sayısı arttıkça risk hiç artmaz",
+      "C": "İdeal sayı 1–2'dir",
+      "D": "20'nin üzeri en güvenli aralıktır",
+      "E": "Oosit sayısının gebelik oranına etkisi yoktur"
+     },
+     "dogru": "A",
+     "aciklama": "OPU'da ideal oosit sayısı 8–13'tür; az oosit gebelik şansını düşürür, çok sayı OHSS riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ideal aralık ve riskler doğrudur.",
+      "B": "Fazla oosit OHSS riskini artırır.",
+      "C": "Az oosit gebelik oranını düşürür.",
+      "D": "20 üzeri OHSS riskidir.",
+      "E": "Oosit sayısı gebelik oranını etkiler."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 29,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:33"
+}

@@ -1,0 +1,1461 @@
+{
+ "id": "k1-46-mesane-hastaliklari-ve-tumorleri",
+ "sira": 46,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Mesane Hastalıkları ve Tümörleri",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-06",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Alt idrar yolu ürotelyumunun yapısını ve patoloji gruplarını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Böbrek pelvisi, üreter, mesane ve üretrayı döşeyen epitel hangisidir?",
+     "secenekler": {
+      "A": "Tek katlı silindirik epitel",
+      "B": "Çok katlı keratinize yassı epitel",
+      "C": "Ürotelyum (geçiş epiteli)",
+      "D": "Psödostratifiye silli epitel",
+      "E": "Tek katlı yassı epitel"
+     },
+     "dogru": "C",
+     "aciklama": "Alt idrar yolu ürotelyum (geçiş epiteli) ile kaplıdır; altında lamina propria ve muskularis propria bulunur.",
+     "sik_aciklamalari": {
+      "A": "Tek katlı silindirik epitel bağırsak mukozasında bulunur.",
+      "B": "Keratinize yassı epitel deri epitelidir; mesanede ancak metaplazi ile görülür.",
+      "C": "Doğru: ürotelyum alt idrar yolunun normal döşeyici epitelidir.",
+      "D": "Psödostratifiye silli epitel solunum yollarını döşer.",
+      "E": "Tek katlı yassı epitel damar endotelinde ve alveollerde görülür."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Mesanede muskularis propria tabakasının diğer adı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lamina propria",
+      "B": "Detrusor kası",
+      "C": "Muskularis mukoza",
+      "D": "Adventisya",
+      "E": "Trigon epiteli"
+     },
+     "dogru": "B",
+     "aciklama": "Mesanede muskularis propria detrusor kası olarak adlandırılır; tümör evrelemesinde invazyonu belirleyicidir.",
+     "sik_aciklamalari": {
+      "A": "Lamina propria ürotelyumun altındaki bağ dokusudur.",
+      "B": "Doğru: detrusor mesanenin kas tabakasıdır.",
+      "C": "Muskularis mukoza ince ve düzensiz bir tabakadır, detrusor değildir.",
+      "D": "Adventisya en dış bağ dokusu katmanıdır.",
+      "E": "Trigon mesane tabanındaki bölgedir, kas tabakasının adı değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Alt idrar yolu patolojileri gruplandırıldığında aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "UPJ tıkanıklığı – doğuştan anomali",
+      "B": "Hemorajik sistit – enfeksiyon/inflamasyon",
+      "C": "Ürotelyal karsinom – neoplazma",
+      "D": "Mesane divertikülü – her zaman neoplastik süreç",
+      "E": "Retroperitoneal fibrozis – reaktif süreç"
+     },
+     "dogru": "D",
+     "aciklama": "Mesane divertikülü konjenital veya edinilmiş bir yapısal anomalidir; neoplazm değildir, nadiren zemininde tümör gelişebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: UPJ tıkanıklığı konjenitaldir.",
+      "B": "Doğru eşleştirme: hemorajik sistit inflamatuar bir tablodur.",
+      "C": "Doğru eşleştirme: ürotelyal karsinom en sık mesane neoplazmıdır.",
+      "D": "Yanlış eşleştirme (aranan cevap): divertikül neoplazm değildir.",
+      "E": "Doğru eşleştirme: retroperitoneal fibrozis reaktif bir süreçtir."
+     },
+     "bilgi": [
+      1,
+      2,
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Üreter bozukluklarını (UPJ tıkanıklığı, neoplazm, retroperitoneal fibrozis) tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Bebek ve çocuklarda hidronefrozun en sık nedeni hangisidir?",
+     "secenekler": {
+      "A": "Retroperitoneal fibrozis",
+      "B": "Üreteropelvik bileşke (UPJ) tıkanıklığı",
+      "C": "Ürotelyal karsinom",
+      "D": "Benign prostat hiperplazisi",
+      "E": "Strüvit taşı"
+     },
+     "dogru": "B",
+     "aciklama": "UPJ tıkanıklığı konjenitaldir; bebek/çocukta hidronefrozun en sık nedenidir ve erkek çocuklarda daha sıktır.",
+     "sik_aciklamalari": {
+      "A": "Retroperitoneal fibrozis orta-ileri yaş erişkinlerde görülür.",
+      "B": "Doğru: proksimal basınç artışı pelvis-kaliks dilatasyonu yapar.",
+      "C": "Ürotelyal karsinom erişkin hastalığıdır.",
+      "D": "BPH yaşlı erkeklerde görülür.",
+      "E": "Taşlar çocuklukta hidronefrozun en sık nedeni değildir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Retroperitoneal fibrozis ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Üreter daralmasına ve hidronefroza yol açabilir",
+      "B": "IgG4 ilişkili hastalık ile ilişkili olabilir",
+      "C": "Ergot türevleri gibi ilaçlar neden olabilir",
+      "D": "Çoğu olgu idiyopatiktir (Ormond hastalığı)",
+      "E": "En sık çocukluk çağında ve kızlarda görülür"
+     },
+     "dogru": "E",
+     "aciklama": "Retroperitoneal fibrozis orta-ileri yaşta ve erkeklerde daha sık görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: üreterleri saran fibrozis obstrüksiyon yapar.",
+      "B": "Doğru ifade: IgG4 ilişkili hastalık nedenlerden biridir.",
+      "C": "Doğru ifade: ergot türevleri, adrenerjik blokerler ve TNF inhibitörleri sayılır.",
+      "D": "Doğru ifade: idiyopatik form Ormond hastalığıdır.",
+      "E": "Yanlış ifade (aranan cevap): erişkin erkeklerde daha sıktır."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Migren nedeniyle uzun süre ergot türevi kullanan 58 yaşında erkekte iki taraflı hidronefroz saptanıyor. Görüntülemede üreterleri saran fibroinflamatuar doku izleniyor.\n\nBu tabloyla ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Üreterin primer skuamöz hücreli karsinomudur",
+      "B": "Konjenital UPJ tıkanıklığıdır",
+      "C": "Retroperitoneal fibrozistir; lenfoma ve ürotelyal karsinom gibi maligniteler de ayırıcı tanıda/etiyolojide yer alır",
+      "D": "İlaç ile ilişkisi yoktur",
+      "E": "Tek taraflı tutulum zorunludur"
+     },
+     "dogru": "C",
+     "aciklama": "İlaç (ergot) öyküsü ve üreteri saran fibrozis retroperitoneal fibrozisi düşündürür; malignite ve IgG4 hastalığı da nedenler arasındadır.",
+     "sik_aciklamalari": {
+      "A": "Üreter neoplazmları genellikle ürotelyal karsinomdur ve kitle yapar.",
+      "B": "UPJ tıkanıklığı konjenital olup çocuklarda görülür.",
+      "C": "Doğru: retroperitoneal fibrozis obstrüktif üropati ayırıcı tanısındadır.",
+      "D": "Ergot türevleri bilinen ilaç nedenleridir.",
+      "E": "Fibrozis her iki üreteri tutabilir."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Mesane divertiküllerinin nedenlerini ve klinik önemini bilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Mesane divertikülü aşağıdakilerden hangisini tanımlar?",
+     "secenekler": {
+      "A": "Mesane mukozasının inflamasyonu",
+      "B": "Mesane duvarında mukozanın kese benzeri invajinasyonu",
+      "C": "Ürotelyumun skuamöz metaplazisi",
+      "D": "Mesanede papiller tümör",
+      "E": "Mesanede kalsiyum içeren makrofaj birikimi"
+     },
+     "dogru": "B",
+     "aciklama": "Divertikül, mesane duvarında mukozanın dışa doğru kese benzeri çıkıntısıdır.",
+     "sik_aciklamalari": {
+      "A": "Mukoza inflamasyonu sistittir.",
+      "B": "Doğru: divertikülün tanımıdır.",
+      "C": "Skuamöz metaplazi kronik irritasyon sonucu gelişir.",
+      "D": "Papiller tümör ürotelyal neoplazmdır.",
+      "E": "Bu tanım malakoplakiyi çağrıştırır, divertikül değildir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Edinilmiş mesane divertikülünün en sık nedeni hangisidir?",
+     "secenekler": {
+      "A": "HPV enfeksiyonu",
+      "B": "Kas tabakasında doğuştan fokal zayıflık",
+      "C": "Hemorajik sistit",
+      "D": "Benign prostat hiperplazisi gibi distal obstrüksiyon",
+      "E": "Ürotelyal karsinom"
+     },
+     "dogru": "D",
+     "aciklama": "Edinilmiş divertiküller BPH veya üretra darlığı gibi distal obstrüksiyona bağlı artan basınçla oluşur.",
+     "sik_aciklamalari": {
+      "A": "HPV kondiloma ve karsinom ile ilişkilidir.",
+      "B": "Kas tabakasında fokal zayıflık konjenital divertikül nedenidir.",
+      "C": "Hemorajik sistit divertikül nedeni değildir.",
+      "D": "Doğru: distal obstrüksiyon duvar zayıf noktalarından fıtıklaşmaya yol açar.",
+      "E": "Ürotelyal karsinom divertikül nedeni değildir, nadiren divertikülde gelişir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Büyük mesane divertikülü olan hastada aşağıdaki komplikasyonlardan hangisinin gelişmesi beklenmez?",
+     "secenekler": {
+      "A": "Tekrarlayan idrar yolu enfeksiyonu",
+      "B": "Taş oluşumu",
+      "C": "Nadiren divertikül içinde tümör gelişimi",
+      "D": "İşeme sonrası dolgunluk hissi",
+      "E": "Hiperkalsemiye bağlı nefrokalsinozis"
+     },
+     "dogru": "E",
+     "aciklama": "Divertikül içi idrar stazı enfeksiyon, taş ve nadiren tümöre zemin hazırlar; büyük divertiküller işeme sonrası dolgunluk verir.",
+     "sik_aciklamalari": {
+      "A": "Beklenir: staz bakteri çoğalmasını kolaylaştırır.",
+      "B": "Beklenir: staz kristalizasyonu artırır.",
+      "C": "Beklenir: nadiren tümör gelişebilir.",
+      "D": "Beklenir: divertikülde kalan idrar dolgunluk hissi yapar.",
+      "E": "Doğru (beklenmez): nefrokalsinozis divertikül komplikasyonu değildir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Sistit tiplerini ve özelliklerini ayırt edebilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Akut bakteriyel sistitin en sık etkeni hangisidir?",
+     "secenekler": {
+      "A": "Schistosoma haematobium",
+      "B": "Adenovirus",
+      "C": "Escherichia coli",
+      "D": "Treponema pallidum",
+      "E": "Candida albicans"
+     },
+     "dogru": "C",
+     "aciklama": "Akut bakteriyel sistitte en sık etkenler E. coli başta olmak üzere koliformlar, Proteus, Klebsiella ve Enterobacter'dir.",
+     "sik_aciklamalari": {
+      "A": "Şistozomiyazis kronik sistit ve skuamöz karsinomla ilişkilidir.",
+      "B": "Adenovirus hemorajik sistitle ilişkilidir.",
+      "C": "Doğru: E. coli en sık etkendir.",
+      "D": "T. pallidum sifilis etkenidir.",
+      "E": "Kandida nadir ve fırsatçı bir etkendir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Siklofosfamid tedavisi alan hastada gelişen kanlı idrar ve dizüri tablosunun en olası nedeni hangisidir?",
+     "secenekler": {
+      "A": "Malakoplaki",
+      "B": "İnterstisyel sistit",
+      "C": "Gonokokal üretrit",
+      "D": "Akrolein metabolitine bağlı hemorajik sistit",
+      "E": "Mesane divertikülü"
+     },
+     "dogru": "D",
+     "aciklama": "Siklofosfamidin akrolein metaboliti ve adenovirus enfeksiyonları hemorajik sistite yol açar.",
+     "sik_aciklamalari": {
+      "A": "Malakoplaki bu ilaçla ilişkili bir sistit tipi değildir.",
+      "B": "İnterstisyel sistit kültür negatif, Hunner ülserli kronik tablodur.",
+      "C": "Gonore cinsel yolla bulaşan üretrittir.",
+      "D": "Doğru: ilaç etiyolojisi akılda tutulmalıdır.",
+      "E": "Divertikül ilaçla gelişmez."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "42 yaşında kadın aylardır süren suprapubik ağrı, sık ve acil idrara çıkma yakınmasıyla başvuruyor. Tekrarlanan idrar kültürleri negatif; sistoskopide mukozada ağrılı ülseröz lezyon izleniyor.\n\nEn olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Akut bakteriyel sistit",
+      "B": "Hunner ülserli interstisyel sistit",
+      "C": "Hemorajik sistit",
+      "D": "Ürotelyal karsinom in situ",
+      "E": "Mesane divertikülü"
+     },
+     "dogru": "B",
+     "aciklama": "Kronik pelvik ağrı, kültür negatifliği, kadın cinsiyet ve Hunner ülseri interstisyel sistit (ağrılı mesane sendromu) için tipiktir.",
+     "sik_aciklamalari": {
+      "A": "Bakteriyel sistitte kültür pozitiftir.",
+      "B": "Doğru: Hunner ülseri ağrılı mesane sendromunun lezyonudur.",
+      "C": "Hemorajik sistit ilaç veya adenovirüsle ilişkilidir ve hematüri ön plandadır.",
+      "D": "Karsinom in situ ağrısız hematüri ve pozitif sitoloji ile seyreder.",
+      "E": "Divertikül ülserle tanımlanmaz."
+     },
+     "bilgi": [
+      8,
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Kronik irritasyon, skuamöz metaplazi ve skuamöz hücreli karsinom ilişkisini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Ürotelyumda uzun süreli kronik irritasyon sonucu gelişen ve skuamöz hücreli karsinoma zemin hazırlayabilen değişiklik hangisidir?",
+     "secenekler": {
+      "A": "Hipoplazi",
+      "B": "Atrofi",
+      "C": "Skuamöz metaplazi",
+      "D": "Agenezi",
+      "E": "Hiyalinizasyon"
+     },
+     "dogru": "C",
+     "aciklama": "Kronik enfeksiyon, taş, kateter ve şistozomiyazis skuamöz metaplaziye ve karsinom gelişimine zemin oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Hipoplazi gelişimsel yetersizliktir.",
+      "B": "Atrofi hücre boyut/sayı azalmasıdır, karsinom zemini olarak tanımlanmaz.",
+      "C": "Doğru: metaplazi → displazi → karsinom zinciri vardır.",
+      "D": "Agenezi organın hiç gelişmemesidir.",
+      "E": "Hiyalinizasyon bu süreçle ilişkili değildir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi mesanede skuamöz metaplaziye yol açan kronik irritasyon nedenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Uzun süreli kateter kullanımı",
+      "B": "Mesane taşı",
+      "C": "Şistozomiyazis",
+      "D": "Kronik enfeksiyon",
+      "E": "Tek seferlik akut viral üretrit"
+     },
+     "dogru": "E",
+     "aciklama": "Skuamöz metaplazi uzun süreli irritasyonla gelişir; tek seferlik akut süreç beklenen neden değildir.",
+     "sik_aciklamalari": {
+      "A": "Kateter kronik mekanik irritasyon yapar.",
+      "B": "Taş kronik irritasyon kaynağıdır.",
+      "C": "Şistozomiyazis en önemli nedenlerden biridir.",
+      "D": "Kronik enfeksiyon metaplaziye yol açar.",
+      "E": "Doğru: kısa süreli akut enfeksiyon metaplazi zemini oluşturmaz."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Mısır'da tarım işçisi olarak çalışmış ve yıllarca tekrarlayan hematürisi olan hastada mesane biyopsisinde keratinleşen atipik yassı epitel adaları invaziv büyüme gösteriyor.\n\nBu tümörün patogenezini en iyi açıklayan sıra hangisidir?",
+     "secenekler": {
+      "A": "FGFR3 mutasyonu → düşük dereceli papiller tümör",
+      "B": "Kronik inflamasyon → skuamöz metaplazi → displazi → skuamöz hücreli karsinom",
+      "C": "VHL kaybı → HIF birikimi → karsinom",
+      "D": "HPV 6/11 → kondiloma akuminata",
+      "E": "Akrolein → hemorajik sistit → adenokarsinom"
+     },
+     "dogru": "B",
+     "aciklama": "Endemik şistozomiyazis bölgesinde kronik sistit skuamöz metaplazi ve displazi üzerinden skuamöz hücreli karsinoma ilerler.",
+     "sik_aciklamalari": {
+      "A": "FGFR3 düşük dereceli papiller ürotelyal karsinom yoludur.",
+      "B": "Doğru: kronik inflamatuar zeminin karsinojen olduğu modeldir.",
+      "C": "VHL–HIF yolu berrak hücreli RHK'ya aittir.",
+      "D": "HPV 6/11 benign anogenital siğil yapar.",
+      "E": "Akrolein hemorajik sistit yapar; bu dizi tanımlanmış değildir."
+     },
+     "bilgi": [
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Ürotelyal karsinomun risk faktörlerini, genetik yollarını ve morfolojik paternlerini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Mesanenin en sık malign tümörü hangisidir?",
+     "secenekler": {
+      "A": "Rabdomiyosarkom",
+      "B": "Skuamöz hücreli karsinom",
+      "C": "Adenokarsinom",
+      "D": "Ürotelyal karsinom",
+      "E": "Lenfoma"
+     },
+     "dogru": "D",
+     "aciklama": "Mesane kanserlerinin yaklaşık %90'ı ürotelyal karsinomdur.",
+     "sik_aciklamalari": {
+      "A": "Rabdomiyosarkom çocuklarda nadir görülür.",
+      "B": "Skuamöz hücreli karsinom daha çok şistozomiyazis zemininde görülür.",
+      "C": "Adenokarsinom nadirdir.",
+      "D": "Doğru: mesanenin en sık malign tümörüdür.",
+      "E": "Mesane lenfoması nadirdir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi ürotelyal karsinom için majör risk faktörü değildir?",
+     "secenekler": {
+      "A": "Sigara",
+      "B": "Boya, kauçuk ve tekstil endüstrisindeki aromatik aminler",
+      "C": "Siklofosfamid",
+      "D": "Pelvik radyoterapi",
+      "E": "HPV 6 ve 11 enfeksiyonu"
+     },
+     "dogru": "E",
+     "aciklama": "Ürotelyal karsinomun majör risk faktörleri sigara, aromatik aminler, siklofosfamid ve pelvik radyoterapidir.",
+     "sik_aciklamalari": {
+      "A": "Sigara en önemli risk faktörüdür.",
+      "B": "Aromatik aminler mesleki karsinojenlerdir.",
+      "C": "Siklofosfamid risk faktörüdür.",
+      "D": "Pelvik radyoterapi riski artırır.",
+      "E": "Doğru: HPV 6/11 düşük riskli tiplerdir ve kondiloma yapar."
+     },
+     "bilgi": [
+      14,
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q19",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Ürotelyal karsinom tanısında kullanılan yöntemlerle ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "İdrar sitolojisi düşük dereceli papiller tümörlerde en duyarlı yöntemdir",
+      "B": "Sistoskopi ve biyopsi temel tanı yöntemidir; idrar sitolojisi özellikle yüksek dereceli tümör ve CIS'te değerlidir",
+      "C": "Tanı yalnızca serum tümör belirteçleri ile konur",
+      "D": "Biyopsi gereksizdir",
+      "E": "En sık bulgu ağrılı hematüridir"
+     },
+     "dogru": "B",
+     "aciklama": "Tanı sistoskopi + biyopsi ile konur; idrar sitolojisi yüksek dereceli tümör ve CIS'te daha yararlıdır. En sık bulgu ağrısız hematüridir.",
+     "sik_aciklamalari": {
+      "A": "Sitoloji düşük dereceli tümörlerde duyarlılığı düşüktür.",
+      "B": "Doğru: tanı yaklaşımı doğru tanımlanmıştır.",
+      "C": "Serum belirteçleri tanı koydurmaz.",
+      "D": "Histopatolojik tanı ve evreleme için biyopsi gereklidir.",
+      "E": "Tipik bulgu ağrısız hematüridir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Ürotelyal karsinomun iki genetik yolu karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Her iki yol da VHL kaybı ile başlar",
+      "B": "Düşük dereceli papiller yol TP53 ve RB; invaziv yol FGFR3 ile ilişkilidir",
+      "C": "Düşük dereceli papiller yol FGFR3 ve HRAS; yüksek dereceli CIS-invaziv yol TP53 ve RB ile ilişkilidir",
+      "D": "İki yolun klinik davranışı ve prognozu aynıdır",
+      "E": "Karsinom in situ yalnızca düşük dereceli papiller tümörden gelişir"
+     },
+     "dogru": "C",
+     "aciklama": "FGFR3/HRAS düşük dereceli papiller tümörlerle; TP53/RB yüksek dereceli CIS ve invaziv karsinomla ilişkilidir ve prognozları farklıdır.",
+     "sik_aciklamalari": {
+      "A": "VHL kaybı berrak hücreli RHK'ya aittir.",
+      "B": "Genler yer değiştirilmiştir.",
+      "C": "Doğru: iki yolun genetik temeli doğru verilmiştir.",
+      "D": "İki yolun klinik davranışı farklıdır.",
+      "E": "CIS yüksek dereceli yolun öncülüdür."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Ürotelyal karsinomda evrenin (kas invazyonunun) prognoz açısından önemini kavramak",
+   "sorular": [
+    {
+     "id": "k1-46-q20",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Ürotelyal karsinomda tedavi ve prognozu en çok belirleyen özellik hangisidir?",
+     "secenekler": {
+      "A": "İdrar pH'sı",
+      "B": "Hastanın cinsiyeti",
+      "C": "Hematürinin rengi",
+      "D": "Tümör evresi, özellikle muskularis propria (detrusor) invazyonu",
+      "E": "Tümörün mesanedeki yan duvar yerleşimi"
+     },
+     "dogru": "D",
+     "aciklama": "Kas invazyonunun varlığı tedavi seçimini ve prognozu en çok belirleyen faktördür.",
+     "sik_aciklamalari": {
+      "A": "İdrar pH'sı prognostik bir ölçüt değildir.",
+      "B": "Cinsiyet prognozun ana belirleyicisi değildir.",
+      "C": "Hematüri rengi prognostik değildir.",
+      "D": "Doğru: kas invaziv hastalık prognozu belirgin kötüleştirir.",
+      "E": "Yerleşim tek başına evre kadar belirleyici değildir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q21",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Transüretral rezeksiyon materyalinin patolojik değerlendirmesinde muskularis propria bulunmasının önemi nedir?",
+     "secenekler": {
+      "A": "HPV varlığını gösterir",
+      "B": "Tümör derecesini tek başına belirler",
+      "C": "Kas invazyonunun değerlendirilebilmesini, dolayısıyla evrelemeyi sağlar",
+      "D": "Sitolojinin yerine geçer",
+      "E": "Önemi yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Örnekte detrusor kası varsa invazyon değerlendirilebilir; kas invazyonu evreyi ve tedaviyi belirler.",
+     "sik_aciklamalari": {
+      "A": "HPV mesane karsinomunda temel bir etken değildir.",
+      "B": "Derece sitolojik/histolojik atipiye göre belirlenir.",
+      "C": "Doğru: evreleme için kas tabakasının örneklenmesi gerekir.",
+      "D": "Biyopsi ve sitoloji birbirini tamamlar.",
+      "E": "Kas tabakasının varlığı evreleme için kritiktir."
+     },
+     "bilgi": [
+      1,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q22",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "İki hastada mesane ürotelyal karsinomu saptanıyor: Hasta 1'de tümör lamina propriaya sınırlı, Hasta 2'de detrusor kasına invaziv.\n\nBu hastaların karşılaştırılmasında hangisi doğrudur?",
+     "secenekler": {
+      "A": "İki hastanın prognozu aynıdır",
+      "B": "Hasta 2'nin prognozu daha kötüdür ve daha agresif tedavi gerektirir",
+      "C": "Hasta 1'de kas invazyonu olmadığı için tümör benigndir",
+      "D": "Evre prognozu etkilemez; yalnızca derece önemlidir",
+      "E": "Hasta 2'de idrar sitolojisi her zaman negatiftir"
+     },
+     "dogru": "B",
+     "aciklama": "Kas invazyonu (detrusor) ürotelyal karsinomda prognozu kötüleştiren ve tedaviyi değiştiren en önemli faktördür.",
+     "sik_aciklamalari": {
+      "A": "Evre farkı prognozu belirgin değiştirir.",
+      "B": "Doğru: kas invaziv hastalık daha kötü seyirlidir.",
+      "C": "Lamina propria invazyonu da maligndir.",
+      "D": "Evre, özellikle kas invazyonu, belirleyicidir.",
+      "E": "Yüksek dereceli invaziv tümörlerde sitoloji sıklıkla pozitiftir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Cinsel yolla bulaşan enfeksiyonların ortak özelliklerini ve risk davranışlarını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q23",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "En sık görülen bakteriyel cinsel yolla bulaşan enfeksiyon etkeni hangisidir?",
+     "secenekler": {
+      "A": "Treponema pallidum",
+      "B": "Neisseria gonorrhoeae",
+      "C": "Chlamydia trachomatis",
+      "D": "Haemophilus ducreyi",
+      "E": "Ureaplasma urealyticum"
+     },
+     "dogru": "C",
+     "aciklama": "C. trachomatis en sık bakteriyel CYBE etkenidir; N. gonorrhoeae ikinci sıradadır.",
+     "sik_aciklamalari": {
+      "A": "Sifilis daha seyrektir.",
+      "B": "Gonore klamidyadan sonra ikinci sık bakteriyel CYBE'dir.",
+      "C": "Doğru: gonokok dışı üretritin de en sık etkenidir.",
+      "D": "Şankroid nadirdir: haemophilus ducreyi.",
+      "E": "Ureaplasma NGU etkenlerinden biridir ama en sık değildir."
+     },
+     "bilgi": [
+      23,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q24",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Cinsel yolla bulaşan enfeksiyonların ortak özellikleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yenidoğana hiçbir zaman bulaşmaz",
+      "B": "Her zaman belirgin semptomlarla seyreder",
+      "C": "Yalnızca erkekleri etkiler",
+      "D": "Birden fazla etkenle koinfeksiyon sıktır; bu nedenle bir CYBE saptanınca diğerleri de araştırılmalıdır",
+      "E": "Tanıda yalnızca kültür kullanılır"
+     },
+     "dogru": "D",
+     "aciklama": "Gonore–klamidya koinfeksiyonu sıktır, trichomoniasis tanısında eşzamanlı klamidya/gonore testleri yapılır; birçok CYBE asemptomatik seyreder.",
+     "sik_aciklamalari": {
+      "A": "Sifilis, gonore, klamidya ve herpes yenidoğana bulaşabilir.",
+      "B": "Klamidya, gonore (kadında) ve trichomoniasis sıklıkla asemptomatiktir.",
+      "C": "Her iki cinsiyet etkilenir.",
+      "D": "Doğru: koinfeksiyon ve birlikte test yaklaşımı ortak özelliktir.",
+      "E": "NAAT gibi moleküler yöntemler yaygın kullanılır."
+     },
+     "bilgi": [
+      24,
+      28,
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q25",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Korunmasız cinsel ilişki sonrası üretral akıntı ile başvuran erkekte gonore saptanıyor.\n\nBu hastaya yaklaşımda aşağıdakilerden hangisi en uygundur?",
+     "secenekler": {
+      "A": "Yalnızca gonoreyi tedavi edip başka test yapmamak",
+      "B": "Sık eşlik eden Chlamydia trachomatis koinfeksiyonunu da araştırmak",
+      "C": "Partner değerlendirmesini gereksiz saymak",
+      "D": "Klamidyayı dışlamak için Gram boyamaya güvenmek",
+      "E": "Semptom geçince takibi bırakmak"
+     },
+     "dogru": "B",
+     "aciklama": "Gonorede klamidya koinfeksiyonu sıktır; CYBE tanısında diğer etkenler de araştırılmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Koinfeksiyon atlanırsa komplikasyon riski sürer.",
+      "B": "Doğru: koinfeksiyon taraması standart yaklaşımdır.",
+      "C": "Partnerlerin değerlendirilmesi yeniden enfeksiyonu önler.",
+      "D": "Klamidya hücre içi bakteri olup Gram boyama ile gösterilemez; NAAT gerekir.",
+      "E": "Asemptomatik seyir bulaşı ve komplikasyonu sürdürebilir."
+     },
+     "bilgi": [
+      24,
+      27,
+      28
+     ],
+     "benzer_cikmis": [
+      "d3-b-032"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-032",
+     "soru": "Otuz beş yaşında erkek hasta, 1 haftadır devam eden penis ucundan sarı renkli akıntı ve idrarda yanma şikâyeti ile polikliniğe başvuruyor. Hastanın üretral akıntı örneğinin Gram boyamasında her sahada 3 tane PMNL ve bu lökositlerin içinde gram negatif diplokoklar görülüyor. Bu olguda düşünülecek en olası klinik tablo ve etken mikroorganizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Epididimoorşit – Streptococcus pneumoniae",
+      "B": "Prostatit – Chlamydia trachomatis",
+      "C": "Üretrit – Neisseria gonorrhoeae",
+      "D": "Epididimoorşit – Mycoplasma genitalium",
+      "E": "Üretrit – Treponema pallidum"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Sifilisin etkenini, evrelerini, patognomonik lezyonunu ve tanısını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q26",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Sifilisin tüm evrelerinde görülen patognomonik histolojik lezyon hangisidir?",
+     "secenekler": {
+      "A": "Cowdry tip A inklüzyon",
+      "B": "Kazeifiye granülom",
+      "C": "Koilositoz",
+      "D": "Proliferatif endarterit ve plazma hücresinden zengin infiltrat",
+      "E": "Yıldızsı apse"
+     },
+     "dogru": "D",
+     "aciklama": "Sifiliste tüm evrelerde proliferatif endarterit ve plazma hücresinden zengin infiltrat görülür; lümen daralması iskemiye yol açar.",
+     "sik_aciklamalari": {
+      "A": "Cowdry A inklüzyonu herpes enfeksiyonunda görülür.",
+      "B": "Kazeifiye granülom tüberkülozun bulgusudur.",
+      "C": "Koilositoz HPV enfeksiyonunun bulgusudur.",
+      "D": "Doğru: sifilisin patognomonik lezyonudur.",
+      "E": "Yıldızsı apse lenfogranüloma venereumda görülür."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q27",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Genital bölgede 1–2 cm çaplı, tabanı sert (indüre) ve ağrısız tek ülser saptanan hastada en olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Genital herpes",
+      "B": "Şankroid",
+      "C": "Primer sifilis (sert şankr)",
+      "D": "Kondiloma akuminata",
+      "E": "Trichomoniasis"
+     },
+     "dogru": "C",
+     "aciklama": "Primer sifiliste enfeksiyondan ~21 gün sonra tabanı belirgin indüre, ağrısız şankr gelişir ve kendiliğinden iyileşir.",
+     "sik_aciklamalari": {
+      "A": "Herpes ağrılı vezikül ve ülserlerle seyreder.",
+      "B": "Şankroid ağrılı, çoklu ve indürasyonsuz ülser yapar.",
+      "C": "Doğru: ağrısız, indüre ülser sert şankrdır.",
+      "D": "Kondiloma papiller siğil şeklindedir, ülser değildir.",
+      "E": "Trichomoniasis ülser değil vajinit/üretrit yapar."
+     },
+     "bilgi": [
+      19,
+      31
+     ],
+     "benzer_cikmis": [
+      "608fd8157f3b"
+     ]
+    },
+    {
+     "id": "k1-46-q28",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Sifilis evreleri ve tanısı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sekonder sifiliste anogenital bölgede kondiloma lata görülür",
+      "B": "Tersiyer sifiliste gumma, kardiyovasküler sifilis ve nörosifilis gelişebilir",
+      "C": "Nontreponemal testler (RPR, VDRL) tedavi izleminde kullanılır",
+      "D": "Treponemal testler genellikle ömür boyu pozitif kalır",
+      "E": "Serolojik testlerin duyarlılığı primer sifiliste sekonder sifilise göre daha yüksektir"
+     },
+     "dogru": "E",
+     "aciklama": "Serolojinin duyarlılığı primer sifiliste sınırlı, sekonder sifiliste çok yüksektir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: kondiloma lata geniş tabanlı kabarık lezyonlardır (kondiloma akuminata ile karıştırılmamalıdır).",
+      "B": "Doğru ifade: tersiyer evre 5–20 yıl sonra görülür.",
+      "C": "Doğru ifade: tedaviyle titre düşer.",
+      "D": "Doğru ifade: treponemal antikorlar kalıcıdır.",
+      "E": "Yanlış ifade (aranan cevap): duyarlılık sekonder evrede en yüksektir."
+     },
+     "bilgi": [
+      20,
+      22
+     ],
+     "benzer_cikmis": [
+      "84eda84539cb",
+      "14db0e045e06"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "608fd8157f3b",
+     "soru": "e fizik muayenede 1-2 cm, tabanı sert ülser saptanan, LAP saptanmayan hastada öncelikle düşünülmesi gerek enfeksiyon hastalığı hangisidir?",
+     "secenekler": {
+      "A": "HSV enfeksiyonu",
+      "B": "Lenfogranüloma venerum",
+      "C": "Sifiliz",
+      "D": "Şankroid",
+      "E": "Granüloma inguinale"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "84eda84539cb",
+     "soru": "Sifiliz ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sekonder sifilizde anogenital bölgede kondiloma aküminata adı verilen lezyonlar görülür (terminal dönem)",
+      "B": "El ayaları ve ayak tabanlarında deri tutulumu sık görülür (sekonder sifiliz doğru)",
+      "C": "Gomlarda bulaşıcılık yüksektir (tersiyer sifiliz)",
+      "D": "Primer sfilizde yumuşak şankr görülür",
+      "E": "Tersiyer sifiliz vakalarının %80’inden fazlasını nörosifiliz"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "14db0e045e06",
+     "soru": "Sifiliz kliniği için hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Primer sifilizde şankr mevcuttur",
+      "B": "Sekonder si asemtomatiktir",
+      "C": "Latent sifilizde treponemal testler pozitiftir",
+      "D": "Tersiyer sifilizde nörolojik tutulum görülür",
+      "E": "Tersiyer sifilizde gommatöz lezyonlar görülür"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Konjenital sifilisi ve Hutchinson triadını bilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q29",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Konjenital sifiliste görülen Hutchinson triadında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "İnterstisyel keratit",
+      "B": "Hutchinson dişleri",
+      "C": "Sinir tipi işitme kaybı",
+      "D": "Hepatosplenomegali",
+      "E": "Sekizinci kranial sinir tutulumuna bağlı sağırlık"
+     },
+     "dogru": "D",
+     "aciklama": "Hutchinson triadı interstisyel keratit, Hutchinson dişleri ve sensörinöral işitme kaybıdır; hepatosplenomegali erken konjenital sifilis bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Triadın bileşenidir.",
+      "B": "Triadın bileşenidir; kesici dişler tornavida/çivi şeklindedir.",
+      "C": "Triadın bileşenidir.",
+      "D": "Doğru: hepatosplenomegali erken form bulgusudur, triadda yer almaz.",
+      "E": "Sinir tipi işitme kaybının bir ifadesidir ve triadın bileşenidir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q30",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Konjenital sifilis ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Erken formda Hutchinson dişleri görülür",
+      "B": "Yalnızca doğum kanalından geçişte bulaşır",
+      "C": "İntrauterin ölüme yol açmaz",
+      "D": "Gebeliğin herhangi bir döneminde plasenta yoluyla bulaşabilir",
+      "E": "Treponema pallidum penisiline dirençlidir"
+     },
+     "dogru": "D",
+     "aciklama": "Konjenital sifilis gebeliğin herhangi bir döneminde transplasental bulaşır; intrauterin/perinatal ölüm ~%25 olabilir.",
+     "sik_aciklamalari": {
+      "A": "Hutchinson dişleri geç form bulgusudur.",
+      "B": "Bulaş plasenta yoluyladır, yalnız doğumda değil.",
+      "C": "İntrauterin/perinatal ölüm önemli bir sonuçtur.",
+      "D": "Doğru: transplasental bulaş temel yoldur.",
+      "E": "Etken penisiline son derece duyarlıdır."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q31",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Yenidoğan bir bebekte burun akıntısı (snuffles), deri döküntüsü, hepatosplenomegali ve iskelet lezyonları saptanıyor. Annenin gebelikte izlemi yapılmamış.\n\nBu bebekte ileride gelişebilecek geç bulgu hangisidir?",
+     "secenekler": {
+      "A": "Hunner ülseri",
+      "B": "Kondiloma akuminata",
+      "C": "İnterstisyel keratit",
+      "D": "Yıldızsı apseler",
+      "E": "Koilositoz"
+     },
+     "dogru": "C",
+     "aciklama": "Tablo erken konjenital sifilistir; geç formda Hutchinson triadı (interstisyel keratit, Hutchinson dişleri, işitme kaybı) gelişebilir.",
+     "sik_aciklamalari": {
+      "A": "Hunner ülseri interstisyel sistitin lezyonudur.",
+      "B": "Kondiloma akuminata HPV 6/11 ile ilişkilidir.",
+      "C": "Doğru: interstisyel keratit Hutchinson triadının bileşenidir.",
+      "D": "Yıldızsı apseler LGV'nin histolojik bulgusudur.",
+      "E": "Koilositoz HPV'nin sitopatik etkisidir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Gonorenin etkenini, kliniğini, komplikasyonlarını ve tanısını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q32",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Erkekte üretral akıntının Gram boyamasında nötrofiller içinde Gram negatif diplokoklar görülüyor.\n\nEn olası etken hangisidir?",
+     "secenekler": {
+      "A": "Chlamydia trachomatis",
+      "B": "Neisseria gonorrhoeae",
+      "C": "Treponema pallidum",
+      "D": "Trichomonas vaginalis",
+      "E": "Haemophilus ducreyi"
+     },
+     "dogru": "B",
+     "aciklama": "Hücre içi Gram negatif diplokoklar gonore için tipiktir.",
+     "sik_aciklamalari": {
+      "A": "Klamidya zorunlu hücre içi bakteridir, Gram boyamada görülmez.",
+      "B": "Doğru: N. gonorrhoeae Gram negatif diplokoktur.",
+      "C": "T. pallidum spirokettir ve Gram boyamada görülmez.",
+      "D": "Trichomonas kamçılı protozoondur.",
+      "E": "H. ducreyi Gram negatif kokobasildir."
+     },
+     "bilgi": [
+      23,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q33",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Gonore ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kadınlarda çoğunlukla asemptomatik seyreder",
+      "B": "Tedavi edilmezse pelvik inflamatuar hastalık ve infertiliteye yol açabilir",
+      "C": "Tanıda NAAT tercih edilir; kültür antibiyotik duyarlılığı için kullanılır",
+      "D": "Yenidoğanda konjonktivit körlük riski taşır",
+      "E": "Yalnızca üretrayı tutar; rektum ve orofarenks tutulumu olmaz"
+     },
+     "dogru": "E",
+     "aciklama": "Gonokok üretra, serviks, rektum, orofarenks ve konjonktivaya yerleşebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: kadında asemptomatik seyir sıktır.",
+      "B": "Doğru ifade: PID, infertilite ve ektopik gebelik komplikasyonlardır.",
+      "C": "Doğru ifade: NAAT tanıda, kültür duyarlılık testinde kullanılır.",
+      "D": "Doğru ifade: doğumda bulaşan konjonktivit körlük yapabilir.",
+      "E": "Yanlış ifade (aranan cevap): ekstragenital tutulum olur."
+     },
+     "bilgi": [
+      23,
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q34",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Yenidoğanlarda gonokokal konjonktiviti önlemek için doğumda uygulanan profilaksi ve bunun gerekçesi hangisidir?",
+     "secenekler": {
+      "A": "Gümüş nitrat veya antibiyotikli göz damlası; doğum kanalında bulaşan enfeksiyonun körlüğe yol açabilmesi",
+      "B": "HPV aşısı; kondilom önlenmesi",
+      "C": "Penisilin enjeksiyonu; konjenital sifilisin tedavisi",
+      "D": "Asiklovir; herpes keratiti",
+      "E": "Profilaksi gerekmez; enfeksiyon kendiliğinden geçer"
+     },
+     "dogru": "A",
+     "aciklama": "Doğumda bulaşan gonokokal konjonktivit körlük riski taşır; gümüş nitrat veya antibiyotikli göz damlası ile profilaksi yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: profilaksi körlüğü önlemeye yöneliktir.",
+      "B": "HPV aşısı ergenlikte uygulanır ve göz profilaksisi değildir.",
+      "C": "Konjenital sifilis tedavisi ayrı bir konudur.",
+      "D": "Asiklovir rutin göz profilaksisi değildir.",
+      "E": "Gonokokal konjonktivit ağır seyredebilir; profilaksi gerekir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Gonokok dışı üretrit/servisit ve Chlamydia trachomatis enfeksiyonunu açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q35",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Gonokok dışı üretrit/servisitin en sık etkeni hangisidir?",
+     "secenekler": {
+      "A": "Chlamydia trachomatis",
+      "B": "Mycoplasma genitalium",
+      "C": "Trichomonas vaginalis",
+      "D": "Ureaplasma urealyticum",
+      "E": "Neisseria gonorrhoeae"
+     },
+     "dogru": "A",
+     "aciklama": "NGU'nun en sık etkeni C. trachomatis'tir; olguların ~%50'sinde spesifik patojen bulunamaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru: klamidya NGU'nun en sık etkenidir.",
+      "B": "M. genitalium NGU etkenidir ama daha seyrektir.",
+      "C": "T. vaginalis NGU nedenleri arasındadır, en sık değildir.",
+      "D": "U. urealyticum daha seyrek etkendir.",
+      "E": "Gonokok tanım gereği NGU etkeni değildir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q36",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Chlamydia trachomatis ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Elementer cisim enfeksiyöz ve hücre dışı; retiküler cisim metabolik olarak aktif ve hücre içi formdur",
+      "B": "Hücre dışında serbest yaşayan Gram pozitif koktur",
+      "C": "Yassı epitele tropizm gösterir",
+      "D": "Gram boyamada diplokok olarak görülür",
+      "E": "Tanıda ıslak preparat altın standarttır"
+     },
+     "dogru": "A",
+     "aciklama": "Zorunlu hücre içi Gram negatif bakteri olan C. trachomatis elementer ve retiküler cisim formlarına sahiptir; kolumnar epitele tropizm gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: iki formun özellikleri doğru tanımlanmıştır.",
+      "B": "Zorunlu hücre içi Gram negatif bakteridir.",
+      "C": "Kolumnar epitele tropizm gösterir.",
+      "D": "Gram negatif diplokok gonokoktur.",
+      "E": "Tanıda NAAT kullanılır; ıslak preparat trichomonas içindir."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q37",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Klamidya enfeksiyonunun komplikasyonları ile ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Erkek – epididimit ve prostatit",
+      "B": "Kadın – infertilite ve ektopik gebelik",
+      "C": "Yenidoğan – konjonktivit ve pnömoni",
+      "D": "Tanı – genital sürüntü veya idrarda NAAT",
+      "E": "Kadın – tabanı sert, ağrısız tek genital ülser"
+     },
+     "dogru": "E",
+     "aciklama": "Tabanı sert ağrısız ülser primer sifilisin şankrıdır; klamidya üretrit/servisit ve üst genital yol komplikasyonları yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: erkekte epididimit ve prostatit görülür.",
+      "B": "Doğru eşleştirme: tubal hasar infertilite ve ektopik gebelik yapar.",
+      "C": "Doğru eşleştirme: vajinal doğumda bulaşır.",
+      "D": "Doğru eşleştirme: NAAT tercih edilen tanı yöntemidir.",
+      "E": "Yanlış eşleştirme (aranan cevap): bu lezyon sifilise aittir."
+     },
+     "bilgi": [
+      19,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "Lenfogranüloma venereum ve şankroidi tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q38",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Şankroidin (yumuşak şankr) etkeni hangisidir?",
+     "secenekler": {
+      "A": "Haemophilus ducreyi",
+      "B": "Treponema pallidum",
+      "C": "Chlamydia trachomatis L1-L3",
+      "D": "Herpes simpleks virüs 2",
+      "E": "Neisseria gonorrhoeae"
+     },
+     "dogru": "A",
+     "aciklama": "Şankroid etkeni Gram negatif kokobasil olan Haemophilus ducreyi'dir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: H. ducreyi ağrılı yumuşak ülser yapar.",
+      "B": "T. pallidum sert şankr (sifilis) yapar.",
+      "C": "L1–L3 serovarları lenfogranüloma venereum etkenidir.",
+      "D": "HSV-2 ağrılı vezikül ve ülser yapar.",
+      "E": "Gonokok üretrit/servisit yapar."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q39",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Şankroidi sifilitik şankrdan ayırmada en önemli klinik özellik hangisidir?",
+     "secenekler": {
+      "A": "Şankroid ülserlerinin ağrılı, çoklu ve sert indürasyonsuz olması",
+      "B": "Şankroid ülserlerinin ağrısız ve tabanı sert olması",
+      "C": "Şankroidde ülser hiç oluşmaması",
+      "D": "Şankroidin yalnızca kadınlarda görülmesi",
+      "E": "Şankroidin inkübasyonunun 5–20 yıl olması"
+     },
+     "dogru": "A",
+     "aciklama": "Şankroidde 4–7 gün inkübasyon sonrası papül hızla ağrılı, çoklu ve indürasyonsuz ülsere dönüşür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: sert indürasyon yokluğu sifilisten ayrımda anahtardır.",
+      "B": "Ağrısız ve sert taban sifilitik şankrın özelliğidir.",
+      "C": "Şankroidin temel lezyonu ülserdir.",
+      "D": "Her iki cinsiyette görülür.",
+      "E": "İnkübasyon 4–7 gündür; 5–20 yıl tersiyer sifilis süresidir."
+     },
+     "bilgi": [
+      19,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q40",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "HIV pozitif, erkeklerle cinsel ilişkiye giren bir erkekte proktit ve fistülize olmuş hassas kasık lenfadenopatisi gelişiyor. Lenf nodu biyopsisinde yıldızsı apseler içeren nekrotizan granülomlar görülüyor.\n\nEn olası tanı ve uzun dönem sekeli hangisidir?",
+     "secenekler": {
+      "A": "Lenfogranüloma venereum; anogenital bölge ve rektumda fibrotik darlıklar",
+      "B": "Şankroid; kondiloma lata",
+      "C": "Sekonder sifilis; gumma",
+      "D": "Genital herpes; Hutchinson dişleri",
+      "E": "Gonore; tiroidizasyon"
+     },
+     "dogru": "A",
+     "aciklama": "C. trachomatis L1–L3'e bağlı LGV proktit, fistülize lenfadenopati ve yıldızsı apseler yapar; uzun dönemde rektal darlık gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: LGV'nin kliniği, histolojisi ve sekeli uyumludur.",
+      "B": "Şankroid ağrılı ülser yapar; kondiloma lata sekonder sifilis lezyonudur.",
+      "C": "Sifiliste plazma hücreli endarterit beklenir, yıldızsı apse değil.",
+      "D": "Hutchinson dişleri konjenital sifilise aittir.",
+      "E": "Tiroidizasyon kronik piyelonefrit bulgusudur."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 14,
+   "metin": "Trichomoniasis, genital herpes ve HPV enfeksiyonlarının klinik ve mikroskobik özelliklerini bilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q41",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Şeffaf bir halo ile çevrili, homojen intranükleer inklüzyon (Cowdry tip A) ve çok çekirdekli dev hücreler hangi genital enfeksiyonda görülür?",
+     "secenekler": {
+      "A": "Herpes simpleks virüs",
+      "B": "HPV",
+      "C": "Trichomonas vaginalis",
+      "D": "Chlamydia trachomatis",
+      "E": "Treponema pallidum"
+     },
+     "dogru": "A",
+     "aciklama": "Genital herpeste intraepitelyal veziküller, Cowdry tip A inklüzyonları ve çok çekirdekli dev hücreler görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: HSV'nin tipik sitopatik etkisidir.",
+      "B": "HPV'nin sitopatik etkisi koilositozdur.",
+      "C": "Trichomonas ıslak preparatta hareketli protozoon olarak görülür.",
+      "D": "Klamidya hücre içi cisimler oluşturur, Cowdry A değil.",
+      "E": "Sifiliste plazma hücreli endarterit görülür."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": [
+      "b0b9b653d6e8"
+     ]
+    },
+    {
+     "id": "k1-46-q42",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Bol, köpüklü, sarı-yeşil vajinal akıntı ve kaşıntı ile başvuran kadında tanı nasıl konur?",
+     "secenekler": {
+      "A": "Vajinal kazıntının ıslak preparatında hareketli kamçılı organizmanın görülmesiyle",
+      "B": "Gram boyamada hücre içi diplokoklarla",
+      "C": "Koilositlerin görülmesiyle",
+      "D": "Cowdry A inklüzyonlarıyla",
+      "E": "Karanlık alan mikroskopisinde spiroketlerle"
+     },
+     "dogru": "A",
+     "aciklama": "Trichomoniasis tanısı ıslak preparatta hareketli T. vaginalis gösterilerek konur; eşzamanlı klamidya ve gonore testleri yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kamçılı protozoonun hareketli görülmesi tanı koydurur.",
+      "B": "Hücre içi diplokoklar gonoreyi gösterir.",
+      "C": "Koilositler HPV enfeksiyonunda görülür.",
+      "D": "Cowdry A inklüzyonları herpese aittir.",
+      "E": "Spiroketler sifiliste görülür."
+     },
+     "bilgi": [
+      33,
+      34
+     ],
+     "benzer_cikmis": [
+      "e28693ffa242"
+     ]
+    },
+    {
+     "id": "k1-46-q43",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Genital enfeksiyonlar ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kondiloma akuminata etkeni düşük riskli HPV tip 6 ve 11'dir",
+      "B": "Kondilomda papiller skuamöz proliferasyon ve koilositoz görülür",
+      "C": "Genital herpes nüksleri primer enfeksiyondan daha hafif ve kısa sürelidir",
+      "D": "Yenidoğan herpesinde mortalite yaygın hastalıkta en yüksektir",
+      "E": "Trichomoniasis gebelikte erken doğum riskini azaltır"
+     },
+     "dogru": "E",
+     "aciklama": "Trichomoniasis gebelikte erken membran rüptürü ve erken doğum riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: HPV 6/11 anogenital siğil yapar.",
+      "B": "Doğru ifade: koilositoz perinükleer halo ve hafif atipidir.",
+      "C": "Doğru ifade: nüksler daha hafiftir; asemptomatik saçılım sıktır.",
+      "D": "Doğru ifade: yaygın hastalıkta mortalite ~%30'dur.",
+      "E": "Yanlış ifade (aranan cevap): risk artar, azalmaz."
+     },
+     "bilgi": [
+      33,
+      36,
+      37,
+      38,
+      39
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "b0b9b653d6e8",
+     "soru": "Cinsel yolla bulaşan hastalıklar. Şeffaf bir halo ile çevrelenen açık mor, homojen intranükleer Inklüzyon (Cowdry A İnklüzyon) hangisi ile infeksiyonda görülür?",
+     "secenekler": {
+      "A": "Human papillomavirus",
+      "B": "Neisseria gonorrhoeae",
+      "C": "Herpes Simpleks",
+      "D": "Trichomonas vaginalis",
+      "E": "Chlamydia"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "e28693ffa242",
+     "soru": "Tıbbi Patoloji Tıbbi Patoloji Cinsel Yolla Bulaşan Hastalıklar Hangisi servikovajinal yayma sitolojisinde direkt olarak tesbit edilebilir?",
+     "secenekler": {
+      "A": "Treponema pallidum",
+      "B": "Neisseria gonorrhoeae",
+      "C": "HerpesSimpleks",
+      "D": "Trichomonas vaginalis",
+      "E": "Chlamydiatrachomatis"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "HPV aşısının etkisini ve uygulama önerisini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-46-q44",
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "HPV aşısının uygulanması önerilen grup hangisidir?",
+     "secenekler": {
+      "A": "Ergenlik öncesi/ergenlik dönemindeki kız ve erkek çocuklar",
+      "B": "Yalnızca 60 yaş üstü kadınlar",
+      "C": "Yalnızca serviks kanseri tanısı almış hastalar",
+      "D": "Yalnızca yenidoğanlar",
+      "E": "Yalnızca erkekler"
+     },
+     "dogru": "A",
+     "aciklama": "HPV aşısı ergenlik öncesi/ergenlikte kız ve erkek çocuklara rutin olarak uygulanmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: cinsel aktivite öncesi aşılama en etkilidir.",
+      "B": "İleri yaş rutin aşılama hedefi değildir.",
+      "C": "Aşı koruyucudur, kanser tedavisi değildir.",
+      "D": "Yenidoğanlara rutin uygulanmaz.",
+      "E": "Her iki cinsiyete önerilir."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-46-q45",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Dört veya dokuz değerlikli HPV aşısının etkileri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tip 6 ve 11'e karşı koruyarak anogenital siğilleri önler ve HPV ilişkili karsinom insidansını azaltır",
+      "B": "Yalnızca anogenital siğilleri önler, kanser riskini etkilemez",
+      "C": "Sifilis ve gonoreye karşı da korur",
+      "D": "Mevcut serviks kanserini tedavi eder",
+      "E": "Yalnızca düşük riskli tipleri içerir"
+     },
+     "dogru": "A",
+     "aciklama": "Aşı düşük riskli 6/11'e karşı siğilleri önler; yüksek riskli tiplere karşı koruyarak özellikle serviks kanseri insidansını azaltır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: hem siğil hem kanser önleyici etkisi vardır.",
+      "B": "Karsinom insidansını da azaltır.",
+      "C": "Bakteriyel CYBE'lere karşı koruma sağlamaz.",
+      "D": "Aşı koruyucudur, tedavi edici değildir.",
+      "E": "Yüksek riskli tipleri de içerir; kanser önleyici etkisi bundandır."
+     },
+     "bilgi": [
+      38,
+      40
+     ],
+     "benzer_cikmis": [
+      "61384be5d1e3"
+     ]
+    },
+    {
+     "id": "k1-46-q46",
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "HPV ile ilişkili aşağıdaki lezyon/kanserlerden hangisi aşının önleyebileceği hastalık spektrumunda yer almaz?",
+     "secenekler": {
+      "A": "Kondiloma akuminata",
+      "B": "Serviks karsinomu",
+      "C": "Orofaringeal tonsil karsinomu",
+      "D": "Vulva karsinomu",
+      "E": "Mesanenin şistozomiyazise bağlı skuamöz hücreli karsinomu"
+     },
+     "dogru": "E",
+     "aciklama": "HPV kondiloma ile serviks, penis, vulva, orofarenks ve konjonktiva karsinomlarıyla ilişkilidir; şistozomiyazis ilişkili mesane SCC'si HPV ile ilişkili değildir.",
+     "sik_aciklamalari": {
+      "A": "HPV 6/11 kaynaklıdır; aşı ile önlenir.",
+      "B": "Yüksek riskli HPV ile ilişkilidir; aşı insidansı azaltır.",
+      "C": "HPV ilişkili karsinomlar arasındadır.",
+      "D": "HPV ilişkili karsinomlar arasındadır.",
+      "E": "Doğru: kronik irritasyon/şistozomiyazis zemininde gelişir, HPV aşısı ile önlenmez."
+     },
+     "bilgi": [
+      13,
+      38,
+      40
+     ],
+     "benzer_cikmis": [
+      "1930494e8ed0"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "61384be5d1e3",
+     "soru": "Kadınlarda servikal Üriner Sistem Enfeksiyonu ve Cinsel Yolla Bulaşan Hastalıklar kansere yol açabilen cinsel yolla bulaşan hastalık hangisidir?",
+     "secenekler": {
+      "A": "Klamidya Trachomatis",
+      "B": "Genital Herpes Enfeksiyonları",
+      "C": "Şankroid",
+      "D": "Trikomoniasiz",
+      "E": "Gonore"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "1930494e8ed0",
+     "soru": "Üroloji Üriner Sistem Enfeksiyonu ve Cinsel Yolla Bulaşan Hastalıklar kansere yol açabilen cinsel yolla bulaşan hastalık hangisidir?",
+     "secenekler": {
+      "A": "Klamidya",
+      "B": "Trachomatis",
+      "C": "Genital Herpes Enfeksiyonları",
+      "D": "Şankroid"
+     },
+     "cevap": "C"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 46,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:15"
+}

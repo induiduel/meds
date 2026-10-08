@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronDown, GraduationCap, Tags } from 'lucide-react';
 import { safeJsonFetch } from '../services/api';
+import { SourceText } from './ui/SourceText';
 
 /**
  * Çıkmış soru kartında "Müfredat & Kaynak" paneli.
@@ -30,8 +31,9 @@ function Chips({ items }: { items: string[] }) {
   );
 }
 
-export function QuestionInsightsPanel({ questionId }: { questionId: string }) {
-  const [open, setOpen] = useState(false);
+/** bare: başlık/aç-kapa olmadan, içerik doğrudan (ör. "Hakkında" penceresinde) */
+export function QuestionInsightsPanel({ questionId, bare = false }: { questionId: string; bare?: boolean }) {
+  const [open, setOpen] = useState(bare);
   const [data, setData] = useState<any | null | undefined>(cache.has(questionId) ? cache.get(questionId) : undefined);
   const [probed, setProbed] = useState(cache.has(questionId));
 
@@ -52,7 +54,8 @@ export function QuestionInsightsPanel({ questionId }: { questionId: string }) {
     };
   }, [questionId]);
 
-  if (!probed || !data) return null;
+  if (!probed) return bare ? <p className="m-0 text-[12.5px] text-ink-3">Müfredat bilgisi yükleniyor…</p> : null;
+  if (!data) return bare ? <p className="m-0 text-[12.5px] text-ink-3">Bu soru için müfredat analizi henüz yok.</p> : null;
 
   const f5 = data.faz5;
   const f65 = data.faz6_5;
@@ -67,9 +70,81 @@ export function QuestionInsightsPanel({ questionId }: { questionId: string }) {
   const slides: { kaynak: string; sayfa: number; alinti?: string }[] = data.slayt?.slaytlar || [];
   const ddx: { hastalik: string; ozellik?: string }[] = f6?.ayirici_tani || [];
   const icd: string[] = f6?.icd10 || [];
-  if (!k && !terms.length && !synonyms.length && !abbrs.length && !slides.length && !ddx.length) return null;
+  if (!k && !terms.length && !synonyms.length && !abbrs.length && !slides.length && !ddx.length) return bare ? <p className="m-0 text-[12.5px] text-ink-3">Bu soru için müfredat analizi henüz yok.</p> : null;
   const baslik = k ? [k.ders, k.konu].filter(Boolean).join(' · ') : slides.length ? 'İlgili slaytlar' : 'Terimler';
   const h4 = 'm-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3 flex items-center gap-1';
+
+  const content = (
+    <>
+      {k && (
+        <section className="flex flex-col gap-1">
+          <h4 className={h4}>{k.kazanim ? 'Kazanım' : 'Müfredat'}{mf?.dogrulama === 'sinav_basligi' ? ' · sınav başlığından' : ' · Faz 8'}</h4>
+          {k.kazanim && <p className="m-0 text-ink">{k.kazanim}</p>}
+          <p className="m-0 text-[12px] text-ink-3">{['Kurul ' + k.kurul, k.ders, k.konu].filter(Boolean).join(' · ')}</p>
+        </section>
+      )}
+
+      {slides.length > 0 && (
+        <section className="flex flex-col gap-1.5">
+          <h4 className={h4}>
+            İlgili slaytlar
+            <span className="normal-case tracking-normal font-normal">· eşleşme güveni {data.slayt?.guven || '-'}</span>
+          </h4>
+          {slides.slice(0, 3).map((sl) => (
+            <div key={`${sl.kaynak}-${sl.sayfa}`} className="rounded-lg bg-canvas px-2.5 py-2 flex flex-col gap-1">
+              <p className="m-0 text-[13px] font-semibold text-ink">
+                {sl.kaynak} <span className="font-normal text-ink-3">· sayfa {sl.sayfa}</span>
+              </p>
+              {sl.alinti && <SourceText text={sl.alinti.replace(/^\[[^\]]*\]\s*/, '')} size="sm" terms={terms.slice(0, 8)} />}
+            </div>
+          ))}
+        </section>
+      )}
+
+      {abbrs.length > 0 && (
+        <section className="flex flex-col gap-1">
+          <h4 className={h4}>Kısaltmalar</h4>
+          {abbrs.map(([ab, exp]) => (
+            <p key={ab} className="m-0 text-[12.5px]">
+              <span className="font-semibold text-ink">{ab}</span> = {exp}
+            </p>
+          ))}
+        </section>
+      )}
+
+      {(terms.length > 0 || synonyms.length > 0) && (
+        <section className="flex flex-col gap-1.5">
+          <h4 className={h4}>
+            <Tags className="w-3.5 h-3.5" /> Terimler
+          </h4>
+          <Chips items={terms} />
+          {synonyms.map(([t, syn]) => (
+            <p key={t} className="m-0 text-[12.5px]">
+              <span className="font-semibold text-ink">{t}</span> = {syn.join(', ')}
+            </p>
+          ))}
+        </section>
+      )}
+
+      {(ddx.length > 0 || icd.length > 0) && (
+        <section className="flex flex-col gap-1">
+          <h4 className={h4}>
+            Ayırıcı tanı
+            <span className="normal-case tracking-normal font-normal">· {f6?.dogrulanmadi ? 'yapay zekâ, doğrulanmadı' : 'ders materyaliyle desteklenen'}</span>
+          </h4>
+          {ddx.slice(0, 5).map((d) => (
+            <p key={d.hastalik} className="m-0 text-[12.5px]">
+              <span className="font-semibold text-ink">{d.hastalik}</span>
+              {d.ozellik ? ` — ${d.ozellik}` : ''}
+            </p>
+          ))}
+          {icd.length > 0 && <p className="m-0 text-[12px] text-ink-3">ICD-10: {icd.join(', ')}</p>}
+        </section>
+      )}
+    </>
+  );
+
+  if (bare) return <div className="flex flex-col gap-3.5 text-[13.5px] text-ink-2">{content}</div>;
 
   return (
     <div className="rounded-xl bg-field">
@@ -85,79 +160,7 @@ export function QuestionInsightsPanel({ questionId }: { questionId: string }) {
         </span>
         <ChevronDown className={`w-4 h-4 text-ink-3 shrink-0 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
-      {open && (
-        <div className="px-3.5 pb-3.5 flex flex-col gap-3 text-[13.5px] text-ink-2">
-          {k && (
-            <section className="flex flex-col gap-1">
-              <h4 className="m-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3">{k.kazanim ? 'Kazanım' : 'Müfredat'}{mf?.dogrulama === 'sinav_basligi' ? ' · sınav başlığından' : ' · Faz 8'}</h4>
-              {k.kazanim && <p className="m-0 text-ink">{k.kazanim}</p>}
-              <p className="m-0 text-[12px] text-ink-3">
-                {['Kurul ' + k.kurul, k.ders, k.konu].filter(Boolean).join(' · ')}
-              </p>
-            </section>
-          )}
-
-          {slides.length > 0 && (
-            <section className="flex flex-col gap-1.5">
-              <h4 className={h4}>
-                İlgili slaytlar
-                <span className="normal-case tracking-normal font-normal">· eşleşme güveni {data.slayt?.guven || '-'}</span>
-              </h4>
-              {slides.slice(0, 3).map((sl) => (
-                <div key={`${sl.kaynak}-${sl.sayfa}`} className="rounded-lg bg-canvas px-2.5 py-2">
-                  <p className="m-0 text-[13px] font-semibold text-ink">
-                    {sl.kaynak} <span className="font-normal text-ink-3">· sayfa {sl.sayfa}</span>
-                  </p>
-                  {sl.alinti && <p className="m-0 mt-0.5 text-[12.5px] text-ink-2 break-words">{sl.alinti.replace(/^\[[^\]]*\]\s*/, '')}</p>}
-                </div>
-              ))}
-            </section>
-          )}
-
-          {abbrs.length > 0 && (
-            <section className="flex flex-col gap-1">
-              <h4 className={h4}>Kısaltmalar</h4>
-              {abbrs.map(([ab, exp]) => (
-                <p key={ab} className="m-0 text-[12.5px]">
-                  <span className="font-semibold text-ink">{ab}</span> = {exp}
-                </p>
-              ))}
-            </section>
-          )}
-
-          {(terms.length > 0 || synonyms.length > 0) && (
-            <section className="flex flex-col gap-1.5">
-              <h4 className="m-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3 flex items-center gap-1">
-                <Tags className="w-3.5 h-3.5" /> Terimler
-              </h4>
-              <Chips items={terms} />
-              {synonyms.map(([t, syn]) => (
-                <p key={t} className="m-0 text-[12.5px]">
-                  <span className="font-semibold text-ink">{t}</span> = {syn.join(', ')}
-                </p>
-              ))}
-            </section>
-          )}
-
-          {(ddx.length > 0 || icd.length > 0) && (
-            <section className="flex flex-col gap-1">
-              <h4 className={h4}>
-                Ayırıcı tanı
-                <span className="normal-case tracking-normal font-normal">
-                  · {f6?.dogrulanmadi ? 'yapay zekâ, doğrulanmadı' : 'ders materyaliyle desteklenen'}
-                </span>
-              </h4>
-              {ddx.slice(0, 5).map((d) => (
-                <p key={d.hastalik} className="m-0 text-[12.5px]">
-                  <span className="font-semibold text-ink">{d.hastalik}</span>
-                  {d.ozellik ? ` — ${d.ozellik}` : ''}
-                </p>
-              ))}
-              {icd.length > 0 && <p className="m-0 text-[12px] text-ink-3">ICD-10: {icd.join(', ')}</p>}
-            </section>
-          )}
-        </div>
-      )}
+      {open && <div className="px-3.5 pb-3.5 flex flex-col gap-3 text-[13.5px] text-ink-2">{content}</div>}
     </div>
   );
 }

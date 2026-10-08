@@ -1,0 +1,829 @@
+{
+ "id": "k1-55-over-tumorleri",
+ "sira": 55,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Over Tümörleri",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-12",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Over tümörlerinin köken aldığı hücre tiplerini ve buna bağlı sınıflamayı açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-55-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Over tümörlerinin köken aldığı üç normal hücre tipi arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Seks kord-stromal hücreler",
+      "B": "Yüzey (sölomik) epiteli",
+      "C": "Germ hücreleri",
+      "D": "Ürotelyal hücreler",
+      "E": "Hepsi over tümörlerinin kaynağıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Over tümörleri multipotent yüzey epiteli, totipotent germ hücreleri ve seks kord-stromal hücrelerden köken alır.",
+     "sik_aciklamalari": {
+      "A": "Seks kord-stromal hücreler granüloza ve fibrom-tekoma tümörlerinin kaynağıdır.",
+      "B": "Yüzey epiteli en sık over tümörlerinin kaynağıdır.",
+      "C": "Germ hücreleri teratom ve disgerminom gibi tümörlerin kaynağıdır.",
+      "D": "Doğru: ürotelyum overin normal hücre tipi değildir (Brenner tümörü ürotelyuma benzer epitel içerse de yüzey epitelinden köken alır).",
+      "E": "Ürotelyal hücreler overin normal hücre tiplerinden değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Germ hücrelerinden köken alan over tümörü hangisidir?",
+     "secenekler": {
+      "A": "Brenner tümörü",
+      "B": "Fibrom",
+      "C": "Disgerminom",
+      "D": "Seröz kistadenom",
+      "E": "Granüloza hücreli tümör"
+     },
+     "dogru": "C",
+     "aciklama": "Disgerminom ve teratomlar germ hücreli tümörlerdir.",
+     "sik_aciklamalari": {
+      "A": "Brenner tümörü yüzey epitel kökenlidir.",
+      "B": "Fibrom seks kord-stromal tümördür.",
+      "C": "Doğru: disgerminom germ hücreli tümördür.",
+      "D": "Seröz kistadenom yüzey epitel kökenlidir.",
+      "E": "Granüloza hücreli tümör seks kord-stromal kökenlidir."
+     },
+     "bilgi": [
+      1,
+      19
+     ],
+     "benzer_cikmis": [
+      "cce4dd188409"
+     ]
+    },
+    {
+     "id": "k1-55-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Over kanserlerinin kaynağı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Over kanserlerinin çoğu germ hücreli tümördür",
+      "B": "Malign yüzey epitel tümörleri tüm over kanserlerinin ~%90'ını oluşturur",
+      "C": "Seks kord-stromal tümörler over kanserlerinin en sık tipidir",
+      "D": "Metastatik tümörler primer over kanserlerinden sıktır",
+      "E": "Teratomlar over kanserlerinin %90'ını oluşturur"
+     },
+     "dogru": "B",
+     "aciklama": "Yüzey epitel tümörleri primer over tümörlerinin büyük kısmını, malign tipleri ise over kanserlerinin ~%90'ını oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Germ hücreli tümörlerin çoğu benign matür kistik teratomdur.",
+      "B": "Doğru: over kanserinin başlıca kaynağı sölomik epiteldir.",
+      "C": "Seks kord-stromal tümörler daha seyrektir.",
+      "D": "Metastazlar primer kanserlerden daha sık değildir.",
+      "E": "Teratomların %90'ından fazlası benigndir."
+     },
+     "bilgi": [
+      2,
+      19
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "cce4dd188409",
+     "soru": "Germ hücrelerinden köken alan over tümörü hangisidir?",
+     "secenekler": {
+      "A": "Fibrom",
+      "B": "Brenner tümörü",
+      "C": "Seröz tümör",
+      "D": "Disgerminom",
+      "E": "Sertoli Leydig hücreli tümör"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Yüzey epitel kökenli (seröz, müsinöz, endometrioid, Brenner) tümörleri karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-55-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Overin en sık epitelyal tümörü hangisidir?",
+     "secenekler": {
+      "A": "Endometrioid tümör",
+      "B": "Müsinöz tümör",
+      "C": "Seröz tümör",
+      "D": "Brenner tümörü",
+      "E": "Berrak hücreli tümör"
+     },
+     "dogru": "C",
+     "aciklama": "Seröz tümörler overin en sık epitelyal tümörleridir.",
+     "sik_aciklamalari": {
+      "A": "Endometrioid tümörler daha seyrektir.",
+      "B": "Müsinöz tümörler daha seyrektir.",
+      "C": "Doğru: en sık epitelyal over tümörüdür.",
+      "D": "Brenner tümörü seyrektir.",
+      "E": "Berrak hücreli tümörler daha seyrektir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Değişici (ürotelyal tip) epitel adaları içeren zengin fibröz stromadan oluşan, genellikle solid, tek taraflı ve benign over tümörü hangisidir?",
+     "secenekler": {
+      "A": "Seröz kistadenom",
+      "B": "Fibrom",
+      "C": "Matür kistik teratom",
+      "D": "Brenner tümörü",
+      "E": "Krukenberg tümörü"
+     },
+     "dogru": "D",
+     "aciklama": "Brenner tümörü üriner epitele benzer değişici epitel adaları içerir; çoğunlukla benigndir.",
+     "sik_aciklamalari": {
+      "A": "Seröz kistadenom kistik ve silyalı kolumnar epitellidir.",
+      "B": "Fibrom epitel adası içermeyen stromal tümördür.",
+      "C": "Teratom üç germ yaprağı dokusu içerir.",
+      "D": "Doğru: Brenner tümörünün tanımıdır.",
+      "E": "Krukenberg tümörü metastatik taşlı yüzük hücreli karsinomdur."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Yüzey epitel kökenli over tümörleri karşılaştırıldığında aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Müsinöz tümörlerin ~%80'i benigndir",
+      "B": "Müsinöz tümörler seröz tümörlerden daha az bilateraldir",
+      "C": "Endometrioid tümörler endometriozisle birlikte gelişebilir ve PTEN mutasyonu taşır",
+      "D": "Endometrioid karsinomlara %15–30 oranında endometrium kanseri eşlik eder",
+      "E": "Müsinöz kistadenokarsinomların prognozu seröz kistadenokarsinomlardan daha kötüdür"
+     },
+     "dogru": "E",
+     "aciklama": "Müsinöz kistadenokarsinomların prognozu seröz olanlardan daha iyidir; prognozu en çok evre belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: %80 benign, %10 borderline, %10 malign.",
+      "B": "Doğru ifade: bilateralite daha azdır.",
+      "C": "Doğru ifade: endometriozis ve PTEN ilişkisi vardır.",
+      "D": "Doğru ifade: eşlik eden endometrium kanseri sıktır.",
+      "E": "Yanlış ifade (aranan cevap): müsinözlerin prognozu daha iyidir."
+     },
+     "bilgi": [
+      13,
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Seröz tümörlerin benign, borderline ve malign formlarını ayırt edebilmek",
+   "sorular": [
+    {
+     "id": "k1-55-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Benign seröz over tümörlerinde papillaların uçlarında görülen laminer kalsifikasyonlara ne ad verilir?",
+     "secenekler": {
+      "A": "Call-Exner cisimcikleri",
+      "B": "Psammom cisimcikleri",
+      "C": "Schiller-Duval cisimcikleri",
+      "D": "Mallory cisimcikleri",
+      "E": "Russell cisimcikleri"
+     },
+     "dogru": "B",
+     "aciklama": "Seröz tümörlerde papillaların ucunda psammom cisimcikleri bulunur.",
+     "sik_aciklamalari": {
+      "A": "Call-Exner cisimleri granüloza hücreli tümörde görülür.",
+      "B": "Doğru: psammom cisimleri seröz tümörlerin özelliğidir.",
+      "C": "Schiller-Duval cisimleri yolk kesesi tümöründe görülür.",
+      "D": "Mallory cisimleri karaciğer hastalıklarında görülür.",
+      "E": "Russell cisimleri plazma hücrelerinde görülür."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Borderline (düşük malignite potansiyelli) seröz tümörlerle ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Belirgin stromal invazyon ve anaplazi gösterir",
+      "B": "Az veya hiç stromal invazyon göstermez; peritona yayılsa da implantlar non-invazivdir",
+      "C": "Peritona hiçbir zaman yayılmaz",
+      "D": "Overde sınırlı olduklarında 5 yıllık sağkalım %20'dir",
+      "E": "Tümüyle benign tümörlerdir"
+     },
+     "dogru": "B",
+     "aciklama": "Borderline tümörler az hücresel atipi ve minimal/yok stromal invazyon gösteren ara formlardır; overde sınırlıyken sağkalım ~%100'dür.",
+     "sik_aciklamalari": {
+      "A": "Belirgin invazyon ve anaplazi karsinomu gösterir.",
+      "B": "Doğru: borderline tümörün tanımıdır.",
+      "C": "Peritona yayılabilirler.",
+      "D": "Overde sınırlı borderline tümörde sağkalım ~%100'dür.",
+      "E": "Düşük dereceli kanser olarak değerlendirilirler."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": [
+      "1e956788584e"
+     ]
+    },
+    {
+     "id": "k1-55-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Seröz over tümörlerinin yaş dağılımı ve bilateralitesi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Benign seröz tümörler hiç bilateral değildir",
+      "B": "Tümü çocukluk çağında görülür",
+      "C": "Malign olanlar 20 yaş altında sıktır",
+      "D": "Benign olanlar 30–40, malign olanlar 45–65 yaşta saptanır; benignlerin ~%15'i bilateraldir",
+      "E": "Seröz tümörler küçük olup nadiren 2 cm'yi aşar"
+     },
+     "dogru": "D",
+     "aciklama": "Benign seröz tümörler 30–40, malign olanlar 45–65 yaşta görülür; 30–40 cm'ye ulaşabilir ve benignlerin %15'i bilateraldir.",
+     "sik_aciklamalari": {
+      "A": "Benignlerin yaklaşık %15'i bilateraldir.",
+      "B": "Seröz tümörler erişkin hastalığıdır.",
+      "C": "Malign seröz tümörler orta-ileri yaşta görülür.",
+      "D": "Doğru: yaş ve bilateralite bilgileri doğrudur.",
+      "E": "Çok büyük boyutlara ulaşabilirler."
+     },
+     "bilgi": [
+      6,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Düşük ve yüksek dereceli seröz over karsinomu karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Düşük dereceli karsinomların %96'sında TP53 mutasyonu vardır",
+      "B": "Yüksek dereceli karsinom borderline tümörden yavaşça gelişir",
+      "C": "Düşük derecelide KRAS/BRAF/ERBB2 mutasyonları ve basamaklı yavaş ilerleme; yüksek derecelide TP53 mutasyonu ve bir kısmı tuba intraepitelyal karsinomundan hızlı gelişim",
+      "D": "Her ikisi de BRAF mutasyonu ile başlar",
+      "E": "Yüksek dereceli karsinomun tuba ile ilişkisi yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Düşük dereceli seröz karsinom benign/borderline lezyonlardan yavaş gelişir; yüksek dereceli karsinom hızlı gelişir, %96 TP53 mutasyonludur ve kısmen tubadan kaynaklanır.",
+     "sik_aciklamalari": {
+      "A": "TP53 mutasyonu yüksek dereceli karsinomun özelliğidir.",
+      "B": "Basamaklı yavaş gelişim düşük dereceli yola aittir.",
+      "C": "Doğru: iki yolun farkları doğru verilmiştir.",
+      "D": "BRAF düşük dereceli yolla ilişkilidir.",
+      "E": "Yüksek dereceli karsinomun bir kısmı tuba kökenlidir."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": [
+      "65f9b62a9df0"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "1e956788584e",
+     "soru": "Borderline seröz",
+     "secenekler": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D",
+      "E": "E"
+     },
+     "cevap": null
+    },
+    {
+     "id": "65f9b62a9df0",
+     "soru": "Aşı yapılan kürataj materialinde p53 mutasyonu saptanan, hücrelerinde nükleositoplazmik oranı oldukça artmış, yüksek atipi gösteren epiteliyal tümör tipi hangisidir?",
+     "secenekler": {
+      "A": "Berrak hücreli karsinom",
+      "B": "Endometrioid tip endometrial karsinom",
+      "C": "Endometrial stromal sarkom",
+      "D": "Leiomyosarkom",
+      "E": "Seröz karsinom"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Over kanserlerinin risk faktörlerini ve genetik temelini (BRCA1/BRCA2) tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-55-q11",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Ailesel over kanserlerinin büyük bölümünden sorumlu genler hangileridir?",
+     "secenekler": {
+      "A": "RB ve WT1",
+      "B": "VHL ve MET",
+      "C": "APC ve KRAS",
+      "D": "BRCA1 ve BRCA2",
+      "E": "PKD1 ve PKD2"
+     },
+     "dogru": "D",
+     "aciklama": "Over kanserlerinin %5–10'u aileseldir; büyük bölümünde BRCA1 ve BRCA2 mutasyonları vardır.",
+     "sik_aciklamalari": {
+      "A": "RB retinoblastom, WT1 Wilms tümörüyle ilişkilidir.",
+      "B": "VHL ve MET böbrek tümörleriyle ilişkilidir.",
+      "C": "APC ve KRAS kolorektal karsinogenezde rol oynar.",
+      "D": "Doğru: BRCA1/2 germline mutasyonları en önemli genetik risk faktörüdür.",
+      "E": "PKD1/2 polikistik böbrek hastalığı genleridir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q12",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi over kanseri riskini azaltan bir faktördür?",
+     "secenekler": {
+      "A": "Hiç doğum yapmamış olmak",
+      "B": "Uzun süreli oral kontraseptif kullanımı",
+      "C": "BRCA1 germline mutasyonu",
+      "D": "Düşük doğum sayısı",
+      "E": "BRCA2 germline mutasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "Uzun süreli oral kontraseptif kullanımı over kanseri riskini azaltır; nulliparite ve BRCA mutasyonları riski artırır.",
+     "sik_aciklamalari": {
+      "A": "Nulliparite risk faktörüdür.",
+      "B": "Doğru: koruyucu bir faktördür.",
+      "C": "BRCA1 mutasyonu yaşam boyu riski ~%30'a çıkarır.",
+      "D": "Düşük doğum sayısı riski artırır.",
+      "E": "BRCA2 mutasyonu riski artırır."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q13",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Over kanserinin genetik temeli ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Over kanserlerinin %5–10'u aileseldir",
+      "B": "BRCA1 taşıyıcılarında yaşam boyu risk ~%30'dur",
+      "C": "BRCA2 taşıyıcılarında risk BRCA1'den biraz daha düşüktür",
+      "D": "Sporadik olguların %8–10'unda da BRCA mutasyonları görülebilir",
+      "E": "BRCA mutasyonu saptanan ailelerde genetik danışma gereksizdir"
+     },
+     "dogru": "E",
+     "aciklama": "BRCA mutasyon taşıyıcılığı genetik danışma ve tarama gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: ailesel olgular %5–10'dur.",
+      "B": "Doğru ifade: BRCA1'de risk ~%30'dur.",
+      "C": "Doğru ifade: BRCA2'de risk biraz daha düşüktür.",
+      "D": "Doğru ifade: sporadik olgularda da bu mutasyonlar bulunabilir.",
+      "E": "Yanlış ifade (aranan cevap): genetik danışma ve tarama gerekir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Germ hücreli tümörlerin (teratomlar) klinik ve morfolojik özelliklerini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-55-q14",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Germ hücreli over tümörlerinin en sık görülen tipi hangisidir?",
+     "secenekler": {
+      "A": "Disgerminom",
+      "B": "İmmatür teratom",
+      "C": "Matür kistik teratom (dermoid kist)",
+      "D": "Koryokarsinom",
+      "E": "Struma ovarii"
+     },
+     "dogru": "C",
+     "aciklama": "Germ hücreli tümörlerin %90'ından fazlası benign matür kistik teratomdur.",
+     "sik_aciklamalari": {
+      "A": "Disgerminom daha seyrektir.",
+      "B": "İmmatür teratom nadirdir.",
+      "C": "Doğru: dermoid kist en sık germ hücreli tümördür.",
+      "D": "Over koryokarsinomu nadirdir.",
+      "E": "Struma ovarii nadir monodermal teratomdur."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q15",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki over tümörlerinden hangisinde paraneoplastik limbik ensefalit gelişebilir?",
+     "secenekler": {
+      "A": "Brenner tümörü",
+      "B": "Seröz kistadenom",
+      "C": "Müsinöz kistadenom",
+      "D": "Matür nöral doku içeren teratom",
+      "E": "Fibrom"
+     },
+     "dogru": "D",
+     "aciklama": "Matür nöral doku içeren teratomlarda paraneoplastik limbik ensefalit gelişebilir.",
+     "sik_aciklamalari": {
+      "A": "Brenner tümörü bu sendromla ilişkili değildir.",
+      "B": "Seröz tümörler bu sendromla ilişkili değildir.",
+      "C": "Müsinöz tümörler bu sendromla ilişkili değildir.",
+      "D": "Doğru: nöral doku içeren teratomla ilişkilidir.",
+      "E": "Fibrom Meigs sendromuyla ilişkilidir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": [
+      "d3-f-140",
+      "past-q-22_final_230619_145249-118"
+     ]
+    },
+    {
+     "id": "k1-55-q16",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Teratomlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hasta yaşı küçüldükçe malign olma olasılığı artar",
+      "B": "İmmatür teratomda nöroepitelyal diferansiyasyon odakları kötü habercidir",
+      "C": "Struma ovarii hipertiroidiye neden olabilir",
+      "D": "Matür kistik teratomların ~%1'inde, sıklıkla skuamöz hücreli karsinom şeklinde malign dönüşüm görülür",
+      "E": "Matür kistik teratomlar çoğunlukla bilateral ve 20 cm'den büyüktür"
+     },
+     "dogru": "E",
+     "aciklama": "Matür kistik teratomların %90'ı tek taraflıdır ve çapı nadiren 10 cm'yi aşar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: genç yaşta malignite olasılığı artar.",
+      "B": "Doğru ifade: nöroepitelyal odaklar kötü prognoz gösterir.",
+      "C": "Doğru ifade: struma ovarii tiroid dokusundan oluşur.",
+      "D": "Doğru ifade: malign dönüşüm nadirdir ve genellikle SCC'dir.",
+      "E": "Yanlış ifade (aranan cevap): çoğu tek taraflı ve 10 cm'den küçüktür."
+     },
+     "bilgi": [
+      19,
+      20,
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-140",
+     "soru": "Aşağıdaki over tümörlerinden hangisinde paraneoplastik komplikasyon olarak limbik ensefalit gelişebilir?",
+     "secenekler": {
+      "A": "Seröz tümör",
+      "B": "Teratom",
+      "C": "Müsinöz tümör",
+      "D": "Fibrotekom",
+      "E": "Endometrioid tümör"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "past-q-22_final_230619_145249-118",
+     "soru": "Aşağıdakilerden hangisinde paraneoplastik komplikasyon olarak limbik ensefalit geligir?",
+     "secenekler": {
+      "A": "Seröz tümör",
+      "B": "Teratom",
+      "C": "Müsinöz tümör",
+      "D": "Fibrotekom",
+      "E": "Endometrioid tümör"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Seks kord-stromal tümörleri (granulosa hücreli, fibrom-tekoma, Sertoli-Leydig) tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-55-q17",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Call-Exner cisimcikleri ve kahve çekirdeği görünümünde çentikli çekirdekler hangi over tümöründe görülür?",
+     "secenekler": {
+      "A": "Endometrioid karsinom",
+      "B": "Seröz karsinom",
+      "C": "Granüloza hücreli tümör",
+      "D": "Brenner tümörü",
+      "E": "Disgerminom"
+     },
+     "dogru": "C",
+     "aciklama": "Granüloza hücreli tümörde Call-Exner cisimleri ve kahve çekirdeği çentikli nükleuslar tanıya yardımcıdır.",
+     "sik_aciklamalari": {
+      "A": "Endometrioid karsinom tübüler glandlar oluşturur.",
+      "B": "Seröz karsinomda psammom cisimleri görülebilir.",
+      "C": "Doğru: granüloza hücreli tümörün tanısal bulgularıdır.",
+      "D": "Brenner tümöründe değişici epitel adaları vardır; çentikli çekirdek de görülebilir ama Call-Exner yoktur.",
+      "E": "Disgerminom germ hücreli tümördür."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": [
+      "9ecaf666e604"
+     ]
+    },
+    {
+     "id": "k1-55-q18",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Granüloza hücreli tümör ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tamamen benigndir ve malignite potansiyeli yoktur",
+      "B": "Fazla östrojen üretir ve serum inhibin düzeyi tanı ve takipte yararlıdır",
+      "C": "Germ hücreli tümördür",
+      "D": "En sık juvenil tipi görülür",
+      "E": "Davranışı histolojiden kesin olarak öngörülebilir"
+     },
+     "dogru": "B",
+     "aciklama": "Granüloza tümörü östrojen üretir, %5–25 malign davranış gösterebilir; inhibin tanı ve takipte yararlıdır.",
+     "sik_aciklamalari": {
+      "A": "Tümünün malignite potansiyeli vardır.",
+      "B": "Doğru: hormonal aktivite ve belirteç doğru verilmiştir.",
+      "C": "Seks kord-stromal tümördür.",
+      "D": "%95'i erişkin tiptir.",
+      "E": "Davranışı histolojiden öngörmek güçtür."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q19",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Fibrom/tekoma grubu tümörlerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Fibroblast ve/veya teka hücrelerinden oluşan stromal tümörlerdir",
+      "B": "%90'ı tek taraflı, kapsüllü, sert, solid kitlelerdir",
+      "C": "Teka hücrelerinden zengin olanlar hormonal aktif olabilir",
+      "D": "Bazal hücreli nevüs (Gorlin-Goltz) sendromu ile birlikte olabilir",
+      "E": "Hücresellik ve mitotik aktivite artışı benign fibromun tanı ölçütüdür"
+     },
+     "dogru": "E",
+     "aciklama": "Mitotik aktif, selüler ve N/S oranı artmış stromal tümörler fibrosarkom olarak adlandırılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: stromal tümörlerdir.",
+      "B": "Doğru ifade: makroskopik özellikleridir.",
+      "C": "Doğru ifade: teka hücreleri hormon üretebilir.",
+      "D": "Doğru ifade: Gorlin-Goltz birlikteliği vardır.",
+      "E": "Yanlış ifade (aranan cevap): bu bulgular fibrosarkomu düşündürür."
+     },
+     "bilgi": [
+      26,
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "9ecaf666e604",
+     "soru": "‘’Call-Exner’’ cisimcikleri ve nükleer çentikler hangisinde görülür?",
+     "secenekler": {
+      "A": "Seröz karsinom",
+      "B": "Endometrioid karsinom",
+      "C": "Brenner tümörü",
+      "D": "Granülosa hücreli tümör",
+      "E": "Fibrotekoma"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Meigs sendromu ve Krukenberg tümörü gibi klinik korelasyonları değerlendirebilmek",
+   "sorular": [
+    {
+     "id": "k1-55-q20",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Over tümörü, asit ve hidrotoraks birlikteliği ile tanımlanan sendrom hangisidir?",
+     "secenekler": {
+      "A": "Meigs sendromu",
+      "B": "Krukenberg tümörü",
+      "C": "Gorlin-Goltz sendromu",
+      "D": "Psödomiksoma peritonei",
+      "E": "Lynch sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "Meigs sendromu tipik olarak fibrom/tekoma ile ilişkilidir; asit ve nadiren sağ hidrotoraks eşlik eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Meigs sendromunun tanımıdır.",
+      "B": "Krukenberg tümörü overe GİS metastazıdır.",
+      "C": "Gorlin-Goltz bazal hücreli nevüs sendromudur.",
+      "D": "Psödomiksoma peritonei peritonda müsin birikimidir.",
+      "E": "Lynch sendromu mismatch repair defektidir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q21",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Mide kanseri öyküsü olan kadında bilateral solid over kitleleri saptanıyor; mikroskopide fibröz zeminde müsin salgılayan taşlı yüzük hücreleri görülüyor.\n\nEn olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Krukenberg tümörü",
+      "B": "Primer müsinöz kistadenom",
+      "C": "Brenner tümörü",
+      "D": "Granüloza hücreli tümör",
+      "E": "Matür kistik teratom"
+     },
+     "dogru": "A",
+     "aciklama": "Krukenberg tümörü GİS müsinöz karsinomlarının overe bilateral metastazıdır; taşlı yüzük hücreleri tipiktir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: bilateral metastatik taşlı yüzük hücreli tümördür.",
+      "B": "Primer müsinöz tümörler nadiren bilateraldir ve kistiktir.",
+      "C": "Brenner tümörü değişici epitel adaları içerir.",
+      "D": "Granüloza tümöründe Call-Exner cisimleri görülür.",
+      "E": "Teratom üç germ yaprağı dokusu içerir."
+     },
+     "bilgi": [
+      14,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q22",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Over tümörleriyle ilgili klinik korelasyonlardan hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Over tümörlerinin ~%30'u rutin muayenede rastlantısal saptanır",
+      "B": "Dermoid kist torsiyonla akut batını taklit edebilir",
+      "C": "Malign seröz tümör yayılımı sıklıkla asite yol açar",
+      "D": "Psödomiksoma peritonei olgularının çoğu appendiks başta olmak üzere GİS tümörü kaynaklıdır",
+      "E": "Primer müsinöz over tümörleri Krukenberg tümörlerinden daha sık bilateraldir"
+     },
+     "dogru": "E",
+     "aciklama": "Krukenberg tümörleri tipik olarak bilateraldir; primer müsinöz tümörlerin bilateral olma oranı düşüktür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: semptomlar ileri evrede ortaya çıkar.",
+      "B": "Doğru ifade: torsiyon akut cerrahi gerektirebilir.",
+      "C": "Doğru ifade: peritoneal yayılım asit yapar.",
+      "D": "Doğru ifade: psödomiksoma çoğunlukla GİS kaynaklıdır.",
+      "E": "Yanlış ifade (aranan cevap): bilateralite Krukenberg'i düşündürür."
+     },
+     "bilgi": [
+      13,
+      14,
+      15,
+      21,
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "CA-125'in tanı ve takipteki rolünü açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-55-q23",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "CA-125'in klinik kullanımda en yüksek değeri hangisidir?",
+     "secenekler": {
+      "A": "Over epitelyal kanserinde tedaviye yanıtın izlenmesi",
+      "B": "Genel popülasyonda over kanseri taraması",
+      "C": "Germ hücreli tümörlerin tanısı",
+      "D": "Granüloza hücreli tümör takibi",
+      "E": "Benign lezyonların dışlanması"
+     },
+     "dogru": "A",
+     "aciklama": "CA-125 tarama için sınırlı yararlıdır; tedaviye yanıtın izlenmesinde değeri çok yüksektir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tedavi izleminde değerlidir.",
+      "B": "Duyarlılık/özgüllük sorunları nedeniyle tarama değeri sınırlıdır.",
+      "C": "Germ hücreli tümörler için temel belirteç değildir.",
+      "D": "Granüloza tümörü takibinde inhibin kullanılır.",
+      "E": "Birçok benign lezyonda da yükselir."
+     },
+     "bilgi": [
+      31,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q24",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "CA-125'in over kanseri taramasında yararlılığının sınırlı olmasının nedeni hangisidir?",
+     "secenekler": {
+      "A": "Overe sınırlı tümörlerin ~%50'sinde yükselmemesi ve birçok benign lezyon/over dışı kanserde yükselebilmesi",
+      "B": "Hiçbir over kanserinde yükselmemesi",
+      "C": "Yalnızca erkeklerde ölçülebilmesi",
+      "D": "Ölçümünün mümkün olmaması",
+      "E": "Tedavi izleminde değerinin olmaması"
+     },
+     "dogru": "A",
+     "aciklama": "CA-125 epitelyal over kanserlerinin %75–90'ında yüksektir, ancak erken evrede sıklıkla normaldir ve özgül değildir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: düşük erken evre duyarlılığı ve düşük özgüllük sorundur.",
+      "B": "Kanserlerin çoğunda yükselir.",
+      "C": "Kadınlarda ölçülür: yalnızca erkeklerde ölçülebilmesi.",
+      "D": "Rutin olarak ölçülebilir.",
+      "E": "Tedavi izleminde değeri yüksektir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-55-q25",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Seröz over karsinomu nedeniyle kemoterapi alan hastada CA-125 düzeyinin normal sınıra inmesi en doğru şekilde nasıl yorumlanır?",
+     "secenekler": {
+      "A": "Tedaviye yanıtın göstergesidir; izlemde düzeyin yeniden yükselmesi nüksü düşündürür",
+      "B": "Tanının yanlış olduğunu gösterir",
+      "C": "Hastalığın kesin olarak tamamen ortadan kalktığını kanıtlar",
+      "D": "CA-125'in bu hastalıkla ilişkisi yoktur",
+      "E": "Tedavinin hemen kesilmesi gerektiğini gösterir"
+     },
+     "dogru": "A",
+     "aciklama": "CA-125 tedaviye yanıtın izlenmesinde çok değerlidir; düşüş yanıtı, yeniden yükselme nüksü düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: CA-125'in temel klinik kullanımıdır.",
+      "B": "Düşüş tanıyı çürütmez, yanıtı gösterir.",
+      "C": "Normal düzey mikroskobik hastalığı dışlamaz.",
+      "D": "Epitelyal over kanserinde CA-125 yüksektir.",
+      "E": "Tedavi kararı tek başına belirteçle verilmez."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 25,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:29"
+}

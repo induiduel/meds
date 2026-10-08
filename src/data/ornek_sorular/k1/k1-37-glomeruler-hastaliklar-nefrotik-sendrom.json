@@ -1,0 +1,1137 @@
+{
+ "id": "k1-37-glomeruler-hastaliklar-nefrotik-sendrom",
+ "sira": 37,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Glomerüler Hastalıklar: Nefrotik Sendrom",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-01",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Nefrotik sendromun klinik tanımını ve temel bileşenlerini (ağır proteinüri, hipoalbüminemi, ödem, hiperlipidemi/lipidüri) açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-37-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Erişkinde nefrotik sendrom tanısı için gereken proteinüri düzeyi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "≥0,15 g/gün",
+      "B": "≥0,5 g/gün",
+      "C": "≥1 g/gün",
+      "D": "≥3,5 g/gün",
+      "E": "≥10 g/gün"
+     },
+     "dogru": "D",
+     "aciklama": "Nefrotik sendrom erişkinde ≥3,5 g/gün proteinüri, hipoalbüminemi, generalize ödem ile hiperlipidemi ve lipidüri ile tanımlanır.",
+     "sik_aciklamalari": {
+      "A": "Bu düzey nefrotik aralığın çok altındadır.",
+      "B": "Bu düzey nefrotik aralığın altındadır.",
+      "C": "Bu düzey nefrotik aralığın altındadır.",
+      "D": "Doğru. Nefrotik sendrom erişkinde ≥3,5 g/gün proteinüri, hipoalbüminemi, generalize ödem ile hiperlipidemi ve lipidüri ile tanımlanır.",
+      "E": "Tanı eşiği bu kadar yüksek değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi nefrotik sendromun temel bileşenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Ağır proteinüri",
+      "B": "Hipoalbüminemi",
+      "C": "Belirgin hematüri ve eritrosit silendirleri",
+      "D": "Hiperlipidemi ve lipidüri",
+      "E": "Generalize ödem"
+     },
+     "dogru": "C",
+     "aciklama": "Belirgin hematüri, eritrosit silendirleri, hipertansiyon ve böbrek yetmezliği nefritik sendromun özellikleridir.",
+     "sik_aciklamalari": {
+      "A": "Temel bileşendir: ağır proteinüri.",
+      "B": "Temel bileşendir: hipoalbüminemi.",
+      "C": "Yer almaz (aranan cevap); nefritik sendromun özelliğidir.",
+      "D": "Temel bileşendir: hiperlipidemi ve lipidüri.",
+      "E": "Temel bileşendir: generalize ödem."
+     },
+     "bilgi": [
+      1,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Nefrotik sendromlu bir hastada idrarda 'yağ cisimcikleri' ve 'Malta haçı' görünümünde lipid saptanmasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hiperkalsemi",
+      "B": "Böbrekte yağ nekrozu",
+      "C": "GBM'nin lipoprotein geçirgenliğinin artmasıyla gelişen lipidüri",
+      "D": "Eritrosit silendirleri",
+      "E": "İdrar yolu enfeksiyonu"
+     },
+     "dogru": "C",
+     "aciklama": "Nefrotik sendromda karaciğerde lipoprotein sentezi artar (hiperlipidemi) ve GBM'nin lipoprotein geçirgenliği artarak lipidüri gelişir.",
+     "sik_aciklamalari": {
+      "A": "Hiperkalsemi lipidüri yapmaz.",
+      "B": "Yağ nekrozu pankreatit ve yağ dokusu travmasıyla ilişkilidir.",
+      "C": "Doğru. Nefrotik sendromda karaciğerde lipoprotein sentezi artar (hiperlipidemi) ve GBM'nin lipoprotein geçirgenliği artarak lipidüri gelişir.",
+      "D": "Eritrosit silendirleri nefritik sendrom bulgusudur.",
+      "E": "Enfeksiyon lipidüriyi açıklamaz."
+     },
+     "bilgi": [
+      1,
+      4
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Nefrotik sendromun patofizyolojisini (filtrasyon bariyerinin bozulması, ödem ve hiperlipidemi mekanizmaları) kavramak",
+   "sorular": [
+    {
+     "id": "k1-37-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Nefrotik sendromda ödem gelişiminin temel mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Venöz tromboz",
+      "B": "Lenfatik tıkanıklık",
+      "C": "Akut enflamasyona bağlı geçirgenlik artışı",
+      "D": "Hipoalbüminemiye bağlı plazma kolloid ozmotik basıncının düşmesi",
+      "E": "Arteriyol dilatasyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Filtrasyon bariyerinin bozulmasıyla proteinüri, albümin kaybıyla hipoalbüminemi ve düşen onkotik basınçla ödem gelişir.",
+     "sik_aciklamalari": {
+      "A": "Venöz tromboz lokal ödem yapar; nefrotik sendromdaki yaygın ödemi açıklamaz.",
+      "B": "Lenfatik tıkanıklık lenfödem yapar.",
+      "C": "Enflamatuvar ödem bu sendromun temel mekanizması değildir.",
+      "D": "Doğru. Filtrasyon bariyerinin bozulmasıyla proteinüri, albümin kaybıyla hipoalbüminemi ve düşen onkotik basınçla ödem gelişir.",
+      "E": "Arteriyol dilatasyonu hiperemi yapar."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Nefrotik sendromda hiperlipidemi gelişmesinin mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karaciğerde lipoprotein sentezinin artması ve katabolizmanın azalması",
+      "B": "Bağırsakta lipid emiliminin durması",
+      "C": "Adipoz dokunun tamamen yıkılması",
+      "D": "İnsülin üretiminin artması",
+      "E": "Böbrekte lipid sentezi"
+     },
+     "dogru": "A",
+     "aciklama": "Hipoalbüminemiye yanıt olarak karaciğerde lipoprotein sentezi artar ve katabolizma azalır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hipoalbüminemiye yanıt olarak karaciğerde lipoprotein sentezi artar ve katabolizma azalır.",
+      "B": "Emilimin durması hiperlipidemi yapmaz.",
+      "C": "Adipoz doku yıkımı bu tabloyu açıklamaz.",
+      "D": "İnsülin artışı temel mekanizma değildir.",
+      "E": "Böbrek lipid sentez yeri değildir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Glomerüler hasarın immünolojik mekanizmaları ile immünfloresan boyanma desenleri eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Anti-GBM antikorları – granüler boyanma",
+      "B": "İmmün kompleksler – lineer boyanma",
+      "C": "Dolaşan veya in situ immün kompleksler – granüler boyanma; anti-GBM antikorları – lineer boyanma",
+      "D": "Tüm glomerüler hastalıklarda boyanma negatiftir.",
+      "E": "Anti-GBM antikorları hiç boyanma göstermez."
+     },
+     "dogru": "C",
+     "aciklama": "İmmünfloresan deseni (granüler/lineer) altta yatan mekanizmayı ve hastalığı tanımada yol göstericidir.",
+     "sik_aciklamalari": {
+      "A": "Anti-GBM antikorları lineer boyanır.",
+      "B": "İmmün kompleksler granüler boyanır.",
+      "C": "Doğru. İmmünfloresan deseni (granüler/lineer) altta yatan mekanizmayı ve hastalığı tanımada yol göstericidir.",
+      "D": "Birçok glomerüler hastalıkta immünfloresan pozitiftir.",
+      "E": "Anti-GBM antikorları GBM boyunca lineer boyanır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Böbrek hastalıklarının başlıca klinik sendromlarını (nefrotik, nefritik, akut böbrek hasarı, kronik böbrek hastalığı) karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-37-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Hematüri, hafif proteinüri, böbrek yetmezliği ve hipertansiyon ile seyreden klinik sendrom aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nefrotik sendrom",
+      "B": "Asemptomatik bakteriüri",
+      "C": "Lipidüri",
+      "D": "Nefritik sendrom",
+      "E": "Anasarka"
+     },
+     "dogru": "D",
+     "aciklama": "Nefrotik sendrom proteinüri, hipoalbüminemi, hiperlipidemi ve ödemle; nefritik sendrom hematüri, hafif proteinüri, böbrek yetmezliği ve hipertansiyonla tanımlanır.",
+     "sik_aciklamalari": {
+      "A": "Nefrotik sendromda ağır proteinüri öndedir.",
+      "B": "Asemptomatik bakteriüri enfeksiyon kavramıdır.",
+      "C": "Lipidüri nefrotik sendromun bir bulgusudur.",
+      "D": "Doğru. Nefrotik sendrom proteinüri, hipoalbüminemi, hiperlipidemi ve ödemle; nefritik sendrom hematüri, hafif proteinüri, böbrek yetmezliği ve hipertansiyonla tanımlanır.",
+      "E": "Anasarka yaygın ödemdir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Böbrek hastalıklarının klinik sendromları ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Nefrotik ve nefritik sendrom aynı bulgularla seyreder.",
+      "B": "Akut böbrek hasarı kronik böbrek hastalığıyla eş anlamlıdır.",
+      "C": "Nefrotik sendromda hipertansiyon ve hematüri en belirgin bulgulardır.",
+      "D": "Sendromların ayrımı ayırıcı tanıyı ve düşünülecek hastalıkları belirler; nefrotik, nefritik, akut böbrek hasarı ve kronik böbrek hastalığı başlıca sendromlardır.",
+      "E": "Klinik sendromlar biyopsi kararını etkilemez."
+     },
+     "dogru": "D",
+     "aciklama": "Klinik sendrom sınıflaması patolojik ayırıcı tanının ilk adımıdır.",
+     "sik_aciklamalari": {
+      "A": "Bulguları belirgin olarak farklıdır.",
+      "B": "Akut ve kronik tablolar farklıdır.",
+      "C": "Bu nefritik sendromun özellikleridir.",
+      "D": "Doğru. Klinik sendrom sınıflaması patolojik ayırıcı tanının ilk adımıdır.",
+      "E": "Klinik tablo biyopsi ve ileri tetkik kararını yönlendirir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki hastalardan hangisinde nefritik sendromdan çok nefrotik sendrom düşünülmelidir?",
+     "secenekler": {
+      "A": "Boğaz enfeksiyonundan 2 hafta sonra koyu renkli idrar, hipertansiyon ve oligüri gelişen çocuk",
+      "B": "Hemoptizi ve hızla ilerleyen böbrek yetmezliği olan genç erkek",
+      "C": "Göz kapaklarında ve bacaklarda yaygın ödem, 6 g/gün proteinüri, düşük serum albümini ve yüksek kolesterolü olan erişkin",
+      "D": "Hematüri ve eritrosit silendirleri saptanan hipertansif hasta",
+      "E": "Oligüri ve azotemiyle başvuran hasta"
+     },
+     "dogru": "C",
+     "aciklama": "Ağır proteinüri, hipoalbüminemi, ödem ve hiperlipidemi nefrotik sendromu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Hematüri, hipertansiyon ve oligüri nefritik tabloyu düşündürür.",
+      "B": "Pulmoner-renal tablo nefritik bir hastalığı düşündürür.",
+      "C": "Doğru. Ağır proteinüri, hipoalbüminemi, ödem ve hiperlipidemi nefrotik sendromu gösterir.",
+      "D": "Eritrosit silendirleri nefritik sendrom bulgusudur.",
+      "E": "Oligüri ve azotemi nefritik sendrom/akut böbrek hasarıyla uyumludur."
+     },
+     "bilgi": [
+      1,
+      3
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Primer ve sekonder nefrotik sendrom nedenlerini ayırt edebilmek",
+   "sorular": [
+    {
+     "id": "k1-37-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi primer glomerül hastalıklarından biri değildir?",
+     "secenekler": {
+      "A": "Minimal değişiklik hastalığı",
+      "B": "Fokal segmental glomeruloskleroz",
+      "C": "Membranöz nefropati",
+      "D": "Membranoproliferatif glomerulonefrit",
+      "E": "Diyabetik nefropati"
+     },
+     "dogru": "E",
+     "aciklama": "Diyabetik nefropati sistemik hastalığa bağlı (sekonder) glomerüler tutulumdur.",
+     "sik_aciklamalari": {
+      "A": "Primer glomerül hastalığıdır.",
+      "B": "Primer formu vardır.",
+      "C": "Primer formu vardır (PLA2R).",
+      "D": "Primer formu vardır.",
+      "E": "Primer değildir (aranan cevap); sekonder nedendir."
+     },
+     "bilgi": [
+      5,
+      24
+     ],
+     "benzer_cikmis": [
+      "f29869dabe85"
+     ]
+    },
+    {
+     "id": "k1-37-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Membranöz nefropatinin sekonder nedenleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Hepatit B",
+      "B": "Sifiliz",
+      "C": "Karsinomlar",
+      "D": "Penisilamin ve altın tedavisi",
+      "E": "Anti-PLA2R otoantikorları"
+     },
+     "dogru": "E",
+     "aciklama": "Primer membranöz nefropatinin ~%80'inde podosit antijenlerine (en sık PLA2R) karşı otoantikor vardır; sekonder nedenler enfeksiyonlar, tümörler ve ilaç-metallerdir.",
+     "sik_aciklamalari": {
+      "A": "Sekonder nedendir: hepatit B.",
+      "B": "Sekonder nedendir: sifiliz.",
+      "C": "Sekonder nedendir; KLL de neden olabilir.",
+      "D": "Sekonder nedendir: penisilamin ve altın tedavisi.",
+      "E": "Yer almaz (aranan cevap); primer formun belirtecidir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Nefrotik sendromlu bir erişkinde primer-sekonder neden ayrımının klinik önemi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ayrım yalnızca akademik öneme sahiptir.",
+      "B": "Tüm nefrotik sendromlar aynı tedaviye yanıt verir.",
+      "C": "Sekonder nedenlerin (enfeksiyon, tümör, ilaç, sistemik hastalık) bulunup tedavi edilmesi tabloyu kökten değiştirebilir.",
+      "D": "Sekonder nedenler hiçbir zaman tedavi edilemez.",
+      "E": "Primer nedenler yalnızca çocuklarda görülür."
+     },
+     "dogru": "C",
+     "aciklama": "Örneğin ilaca bağlı membranöz nefropatide ilacın kesilmesi veya hepatit B tedavisi proteinüriyi düzeltebilir.",
+     "sik_aciklamalari": {
+      "A": "Ayrım tedaviyi doğrudan etkiler.",
+      "B": "Tedavi nedene göre değişir.",
+      "C": "Doğru. Örneğin ilaca bağlı membranöz nefropatide ilacın kesilmesi veya hepatit B tedavisi proteinüriyi düzeltebilir.",
+      "D": "Altta yatan hastalığın tedavisi sonucu değiştirebilir.",
+      "E": "Primer nedenler erişkinlerde de görülür (ör. primer FSGS, membranöz nefropati)."
+     },
+     "bilgi": [
+      5,
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "f29869dabe85",
+     "soru": "Hangisi primer glomerül hastalıklarından değildir?",
+     "secenekler": {
+      "A": "Henoch-Schönlein purpurası",
+      "B": "Minimal değişiklik hastalığı",
+      "C": "Fokal segmental glomerüloskleroz",
+      "D": "Yoğun birikim hastalığı",
+      "E": "Membranöproliferatif glomerülonefrit"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Minimal değişiklik hastalığının patogenezini, morfolojisini ve klinik özelliklerini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-37-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Çocuklarda nefrotik sendromun en sık nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Membranöz nefropati",
+      "B": "Amiloidoz",
+      "C": "Diyabetik nefropati",
+      "D": "Minimal değişiklik hastalığı",
+      "E": "MPGN tip I"
+     },
+     "dogru": "D",
+     "aciklama": "Minimal değişiklik hastalığı izole nefrotik sendrom, normal böbrek fonksiyonu ve seçici proteinüriyle seyreder.",
+     "sik_aciklamalari": {
+      "A": "Membranöz nefropati erişkinlerde (30-60 yaş) sıktır.",
+      "B": "Amiloidoz çocuklarda nadir nedendir.",
+      "C": "Diyabetik nefropati erişkin sistemik hastalığıdır.",
+      "D": "Doğru. Minimal değişiklik hastalığı izole nefrotik sendrom, normal böbrek fonksiyonu ve seçici proteinüriyle seyreder.",
+      "E": "MPGN çocuk ve genç erişkinde görülür ama en sık neden değildir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Yaygın ödem ve nefrotik düzeyde proteinüri ile başvuran 5 yaşındaki bir çocuğun böbrek biyopsisinde ışık mikroskopisi normal, immünfloresan negatif; elektron mikroskopisinde podosit ayak uzantılarında yaygın silinme saptanıyor.\n\nBu hastalıkla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kortikosteroide yanıt kötüdür ve 10 yılda çoğu hasta son dönem böbrek yetmezliğine gider.",
+      "B": "Hematüri ve hipertansiyon tipiktir.",
+      "C": "Proteinüri seçici değildir.",
+      "D": "Çocukların %90'ından fazlası kortikosteroide yanıt verir; ancak yanıt verenlerde tekrarlayan ataklar sıktır.",
+      "E": "Elektron mikroskopisinde subepitelyal 'spike and dome' görünümü vardır."
+     },
+     "dogru": "D",
+     "aciklama": "Minimal değişiklik hastalığında proteinüri seçicidir (ağırlıkla albümin); çocukların >%90'ı steroide yanıt verir, >%60-70'inde nüks olur ve küçük bir grup FSGS'ye ilerler.",
+     "sik_aciklamalari": {
+      "A": "Bu tablo FSGS'ye uyar.",
+      "B": "Hematüri ve hipertansiyon FSGS'de daha sıktır.",
+      "C": "Minimal değişiklik hastalığında proteinüri seçicidir.",
+      "D": "Doğru. Minimal değişiklik hastalığında proteinüri seçicidir (ağırlıkla albümin); çocukların >%90'ı steroide yanıt verir, >%60-70'inde nüks olur ve küçük bir grup FSGS'ye ilerler.",
+      "E": "Spike and dome membranöz nefropatiye aittir."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": [
+      "64b34cf12c7c"
+     ]
+    },
+    {
+     "id": "k1-37-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Minimal değişiklik hastalığının patogenezi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Önde gelen hipotez podosit hasarına bağlı ayak uzantılarının füzyonudur.",
+      "B": "GBM'nin seçici geçirgenliği kaybolur.",
+      "C": "T hücre kaynaklı geçirgenlik faktörleri olası mekanizmadır.",
+      "D": "Nefrin/podosin antikorları olası mekanizmalar arasında sayılır.",
+      "E": "İmmünfloresanda GBM boyunca yoğun granüler immün kompleks birikimi temel bulgudur."
+     },
+     "dogru": "E",
+     "aciklama": "Minimal değişiklik hastalığında immünfloresan negatiftir; granüler birikim membranöz nefropati gibi immün kompleks hastalıklarında görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: önde gelen hipotez podosit hasarına bağlı ayak uzantılarının füzyonudur.",
+      "B": "Doğru ifade: GBM'nin seçici geçirgenliği kaybolur.",
+      "C": "Doğru ifade; steroid yanıtını açıklamaya yardımcı olur.",
+      "D": "Doğru ifade: nefrin/podosin antikorları olası mekanizmalar arasında sayılır.",
+      "E": "Yanlış ifade (aranan cevap). Minimal değişiklik hastalığında immünfloresan negatiftir; granüler birikim membranöz nefropati gibi immün kompleks hastalıklarında görülür."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "64b34cf12c7c",
+     "soru": "6 yaşındaki erkek hastada yaygın ödem bulguları ve 3,5 gr üzerinde proteinüri tespit ediliyor. Elektron mikroskopide podositlerin ayaksı çıktılarının silinmesi izleniyor. Aşağıdakilerden glomerül hastalığından hangisi akla gelmelidir?",
+     "secenekler": {
+      "A": "Alport sendromu",
+      "B": "Postenfeksiyöz (poststreptokokal) glomerülonefrit",
+      "C": "Ig A nefropatisi",
+      "D": "Minimal değişiklik hastalığı",
+      "E": "Membranöz nefropati"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Fokal segmental glomerulosklerozun (FSGS) primer ve sekonder formlarını, patogenezini ve morfolojisini tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-37-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Fokal segmental glomerulosklerozda 'fokal' ve 'segmental' terimleri neyi ifade eder?",
+     "secenekler": {
+      "A": "Tüm glomerüllerin tamamen sklerotik olması",
+      "B": "Yalnızca tübüllerin tutulması",
+      "C": "Glomerüllerin bir kısmında (fokal) ve glomerülün bir bölümünde (segmental) skleroz bulunması",
+      "D": "Yalnızca damarların tutulması",
+      "E": "Hiç skleroz bulunmaması"
+     },
+     "dogru": "C",
+     "aciklama": "FSGS tek bir hastalık değil, bir hasar paternidir; primer ve sekonder formları vardır.",
+     "sik_aciklamalari": {
+      "A": "Bu global ve difüz sklerozdur.",
+      "B": "FSGS glomerüler bir hastalıktır.",
+      "C": "Doğru. FSGS tek bir hastalık değil, bir hasar paternidir; primer ve sekonder formları vardır.",
+      "D": "FSGS damar hastalığı değildir.",
+      "E": "Tanımı gereği skleroz vardır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Sekonder FSGS nedenleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Nefron kaybı sonrası hiperfiltrasyon",
+      "B": "HIV enfeksiyonu",
+      "C": "Eroin kullanımı",
+      "D": "Podosit proteinlerinde genetik mutasyonlar",
+      "E": "Anti-PLA2R otoantikorları"
+     },
+     "dogru": "E",
+     "aciklama": "Anti-PLA2R primer membranöz nefropatinin otoantikorudur; FSGS'de ortak tema podosit hasarı ve kaybıdır.",
+     "sik_aciklamalari": {
+      "A": "Sekonder FSGS nedenidir; obezite ve tek böbrekte görülür.",
+      "B": "Sekonder FSGS nedenidir.",
+      "C": "Sekonder FSGS nedenidir.",
+      "D": "Sekonder (genetik) FSGS nedenidir.",
+      "E": "Yer almaz (aranan cevap). Anti-PLA2R primer membranöz nefropatinin otoantikorudur; FSGS'de ortak tema podosit hasarı ve kaybıdır."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q19",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "FSGS'nin morfolojik bulguları ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İmmünfloresanda GBM boyunca lineer IgG boyanması",
+      "B": "Işık mikroskopisinde tramvay rayı görünümü",
+      "C": "Elektron mikroskopisinde subepitelyal hörgüçler",
+      "D": "Işık mikroskopisinde fokal segmental skleroz, kılcal lümen tıkanması, hiyalin birikimi ve köpüklü makrofajlar; immünfloresanda sklerotik segmentlerde nonspesifik IgM ve kompleman",
+      "E": "Kimmelstiel-Wilson nodülleri"
+     },
+     "dogru": "D",
+     "aciklama": "Fokal ve segmental tutulum biyopside atlanabileceği için yeterli sayıda glomerül değerlendirilmelidir.",
+     "sik_aciklamalari": {
+      "A": "Lineer IgG anti-GBM hastalığına aittir.",
+      "B": "Tramvay rayı MPGN'ye aittir.",
+      "C": "Hörgüçler postenfeksiyöz glomerülonefritte görülür.",
+      "D": "Doğru. Fokal ve segmental tutulum biyopside atlanabileceği için yeterli sayıda glomerül değerlendirilmelidir.",
+      "E": "Kimmelstiel-Wilson nodülleri diyabetik nefropatiye aittir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "FSGS ile minimal değişiklik hastalığının ayırımında aşağıdakilerden hangisi FSGS lehinedir?",
+     "secenekler": {
+      "A": "Seçici proteinüri ve kortikosteroide mükemmel yanıt",
+      "B": "Işık mikroskopisinin tamamen normal olması",
+      "C": "Hematüri ve hipertansiyonun daha sık olması, seçici olmayan proteinüri, zayıf steroid yanıtı ve son dönem böbrek yetmezliğine ilerleme",
+      "D": "Nakil sonrası hiç nüks görülmemesi",
+      "E": "Çocuklarda en sık neden olması"
+     },
+     "dogru": "C",
+     "aciklama": "FSGS'de en az %50 hasta 10 yılda son dönem böbrek yetmezliğine ilerler ve nakil sonrası nüks sıktır.",
+     "sik_aciklamalari": {
+      "A": "Bu minimal değişiklik hastalığının özelliğidir.",
+      "B": "FSGS'de ışık mikroskopisinde segmental skleroz görülür.",
+      "C": "Doğru. FSGS'de en az %50 hasta 10 yılda son dönem böbrek yetmezliğine ilerler ve nakil sonrası nüks sıktır.",
+      "D": "FSGS'de nakil sonrası nüks sıktır.",
+      "E": "Çocuklarda en sık neden minimal değişiklik hastalığıdır."
+     },
+     "bilgi": [
+      13,
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Membranöz nefropatinin patogenezini (PLA2R), morfolojisini ve klinik özelliklerini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-37-q20",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Primer membranöz nefropatide en sık saptanan otoantikorun hedefi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fosfolipaz A2 reseptörü (PLA2R)",
+      "B": "Tip IV kollajen",
+      "C": "C3 konvertaz",
+      "D": "Nefrin",
+      "E": "Asetilkolin reseptörü"
+     },
+     "dogru": "A",
+     "aciklama": "Primer olguların ~%80'inde podosit antijenlerine karşı otoantikor bulunur; en sık hedef PLA2R'dir ve anti-PLA2R tanı ve izlemde kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Primer olguların ~%80'inde podosit antijenlerine karşı otoantikor bulunur; en sık hedef PLA2R'dir ve anti-PLA2R tanı ve izlemde kullanılır.",
+      "B": "Tip IV kollajene karşı antikorlar anti-GBM hastalığıyla ilişkilidir.",
+      "C": "C3 konvertazı stabilize eden otoantikor C3 nefritik faktördür (C3 glomerulopatisi).",
+      "D": "Nefrin antikorları minimal değişiklik hastalığında olası mekanizmadır.",
+      "E": "Asetilkolin reseptör antikoru miyastenia gravis'tedir."
+     },
+     "bilgi": [
+      15,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q21",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Membranöz nefropatide inflamasyon olmaksızın ağır proteinüri gelişmesinin açıklaması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Otoantikorların çoğunlukla IgG4 alt sınıfında olması ve klasik kompleman yolunu zayıf aktive etmesi; hasarın subepitelyal in situ immün komplekslerle oluşması",
+      "B": "Nötrofillerin glomerülde yoğun birikmesi",
+      "C": "Anti-GBM antikorlarının lineer birikmesi",
+      "D": "Glomerülde kristal birikimi",
+      "E": "T hücrelerinin doğrudan GBM'yi yıkması"
+     },
+     "dogru": "A",
+     "aciklama": "İnflamasyonun yokluğu membranöz nefropatiyi nefritik sendromdan ayıran patogenetik özelliktir; alternatif veya lektin yolunun rolü düşünülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. İnflamasyonun yokluğu membranöz nefropatiyi nefritik sendromdan ayıran patogenetik özelliktir; alternatif veya lektin yolunun rolü düşünülür.",
+      "B": "Membranöz nefropatide nötrofilik inflamasyon yoktur.",
+      "C": "Lineer birikim anti-GBM hastalığına aittir.",
+      "D": "Kristal birikimi bu hastalığın mekanizması değildir.",
+      "E": "Hasar antikor aracılıdır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q23",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Membranöz nefropatinin klinik özellikleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "En sık 2-6 yaş çocuklarda görülür ve steroide mükemmel yanıt verir.",
+      "B": "En sık 30-60 yaş erişkinlerde yavaş seyirli nefrotik sendrom yapar; proteinüri seçici değildir, steroid yanıtı minimaldir ve prognoz değişkendir.",
+      "C": "Proteinüri seçicidir ve hiç böbrek yetmezliği gelişmez.",
+      "D": "Anti-PLA2R antikorunun izlemde yeri yoktur.",
+      "E": "Olguların tamamı sekonder nedenlere bağlıdır."
+     },
+     "dogru": "B",
+     "aciklama": "Membranöz nefropatide ≈%40 hasta 2-20 yılda böbrek yetmezliğine ilerler, %10-30'unda remisyon görülür; anti-PLA2R titresi tedavi yanıtını izlemede kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Bu özellikler minimal değişiklik hastalığına aittir.",
+      "B": "Doğru. Membranöz nefropatide ≈%40 hasta 2-20 yılda böbrek yetmezliğine ilerler, %10-30'unda remisyon görülür; anti-PLA2R titresi tedavi yanıtını izlemede kullanılır.",
+      "C": "Proteinüri seçici değildir ve böbrek yetmezliği gelişebilir.",
+      "D": "Anti-PLA2R tanı ve izlemde kullanılır.",
+      "E": "Çoğu olgu idiyopatiktir (primer)."
+     },
+     "bilgi": [
+      14,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q22",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Membranöz nefropatinin elektron mikroskopik görünümü ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Subendotelyal birikintiler ve mezangial interpozisyonla çift kontur",
+      "B": "Subepitelyal birikintiler ve aralarında bazal membran çıkıntıları ('spike and dome')",
+      "C": "Yalnızca podosit ayak uzantılarında silinme, birikinti yok",
+      "D": "GBM içinde şerit benzeri yoğun birikintiler",
+      "E": "Subepitelyal büyük 'hörgüç' birikintileri ve yoğun nötrofil infiltrasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "Işık mikroskopisinde difüz kapiller duvar kalınlaşması, immünfloresanda granüler Ig ve kompleman, elektron mikroskopisinde 'spike and dome' görülür.",
+     "sik_aciklamalari": {
+      "A": "Bu MPGN tip I'in bulgusudur.",
+      "B": "Doğru. Işık mikroskopisinde difüz kapiller duvar kalınlaşması, immünfloresanda granüler Ig ve kompleman, elektron mikroskopisinde 'spike and dome' görülür.",
+      "C": "Bu minimal değişiklik hastalığının bulgusudur.",
+      "D": "Bu yoğun birikim hastalığının bulgusudur.",
+      "E": "Hörgüçler ve nötrofil infiltrasyonu postenfeksiyöz glomerülonefrite aittir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Membranoproliferatif glomerulonefrit (MPGN) tip I'in morfolojik bulgularını (tramvay rayı) tanıyabilmek",
+   "sorular": [
+    {
+     "id": "k1-37-q24",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Işık mikroskopisinde GBM'de çift kontur ('tramvay rayı') görünümü ve lobüllü glomerüller ile karakterize hastalık aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Minimal değişiklik hastalığı",
+      "B": "Membranoproliferatif glomerulonefrit (MPGN) tip I",
+      "C": "Membranöz nefropati",
+      "D": "FSGS",
+      "E": "Amiloidoz"
+     },
+     "dogru": "B",
+     "aciklama": "MPGN'de mezangial interpozisyona bağlı çift kontur oluşur; GBM kalınlaşması ve mezangiyal hiperhücrelilik 'membranöz + proliferatif' paterni oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Işık mikroskopisi normaldir.",
+      "B": "Doğru. MPGN'de mezangial interpozisyona bağlı çift kontur oluşur; GBM kalınlaşması ve mezangiyal hiperhücrelilik 'membranöz + proliferatif' paterni oluşturur.",
+      "C": "Difüz kapiller duvar kalınlaşması görülür; tramvay rayı tipik değildir.",
+      "D": "Segmental skleroz görülür.",
+      "E": "Amiloid birikimi görülür."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q25",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "MPGN tip I'de immünfloresan ve elektron mikroskopisi bulguları aşağıdakilerin hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "İmmünfloresan negatif; elektron mikroskopisinde yalnızca ayak uzantısı silinmesi",
+      "B": "Granüler IgG ve kompleman; subendotelyal ve mezangiyal birikintiler",
+      "C": "Lineer IgG; birikinti yok",
+      "D": "Yalnızca C3 boyanması; GBM içinde şerit benzeri birikinti",
+      "E": "Granüler IgG; subepitelyal spike and dome"
+     },
+     "dogru": "B",
+     "aciklama": "MPGN tip I immün kompleks aracılı olup subendotelyal ve mezangiyal birikintiler gösterir.",
+     "sik_aciklamalari": {
+      "A": "Bu minimal değişiklik hastalığıdır.",
+      "B": "Doğru. MPGN tip I immün kompleks aracılı olup subendotelyal ve mezangiyal birikintiler gösterir.",
+      "C": "Bu anti-GBM hastalığıdır.",
+      "D": "Bu yoğun birikim hastalığıdır (C3 glomerulopatisi).",
+      "E": "Bu membranöz nefropatidir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q26",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "MPGN tip I'in klinik seyri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Çocuk ve genç erişkinlerde görülür.",
+      "B": "Nefrotik ve nefritik bulguların karışımıyla seyreder.",
+      "C": "Genellikle yavaş ve kronik progresyon gösterir.",
+      "D": "Sekonder formlarda (hepatit B/C, SLE) altta yatan hastalığın tedavisi tabloyu düzeltebilir.",
+      "E": "Kortikosteroid ve immünsüpresif tedaviye neredeyse tüm olgularda tam ve kalıcı yanıt alınır."
+     },
+     "dogru": "E",
+     "aciklama": "MPGN'de çoğu hastada kalıcı proteinüri ve azotemi olur; steroid ve immünsüpresif tedavilerin faydası sınırlıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: çocuk ve genç erişkinlerde görülür.",
+      "B": "Doğru ifade: nefrotik ve nefritik bulguların karışımıyla seyreder.",
+      "C": "Doğru ifade: genellikle yavaş ve kronik progresyon gösterir.",
+      "D": "Doğru ifade: sekonder formlarda (hepatit B/C, SLE) altta yatan hastalığın tedavisi tabloyu düzeltebilir.",
+      "E": "Yanlış ifade (aranan cevap). MPGN'de çoğu hastada kalıcı proteinüri ve azotemi olur; steroid ve immünsüpresif tedavilerin faydası sınırlıdır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "C3 glomerulopatisi ve yoğun birikim hastalığının patogenezini ve morfolojisini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-37-q27",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "C3 glomerulopatisinin temel patogenetik mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Alternatif kompleman yolunun kontrolsüz aktivasyonu",
+      "B": "IgE aracılı mast hücre degranülasyonu",
+      "C": "Anti-PLA2R otoantikorları",
+      "D": "Amiloid birikimi",
+      "E": "Podosit proteinlerinde mutasyon"
+     },
+     "dogru": "A",
+     "aciklama": "C3 nefritik faktör (C3 konvertazı stabilize eden otoantikor) ve faktör H, faktör I, membran kofaktör proteini mutasyonları/otoantikorları rol oynar; düşük serum C3 önemli ipucudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. C3 nefritik faktör (C3 konvertazı stabilize eden otoantikor) ve faktör H, faktör I, membran kofaktör proteini mutasyonları/otoantikorları rol oynar; düşük serum C3 önemli ipucudur.",
+      "B": "Tip I aşırı duyarlılık mekanizmasıdır.",
+      "C": "Anti-PLA2R membranöz nefropatiyle ilişkilidir.",
+      "D": "Amiloidoz ayrı bir sekonder nedendir.",
+      "E": "Podosit mutasyonları genetik FSGS ile ilişkilidir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q28",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "İmmünfloresanda güçlü C3 boyanması varken IgG, C1q ve C4 boyanmasının olmaması aşağıdakilerden hangisini düşündürür?",
+     "secenekler": {
+      "A": "Membranöz nefropati",
+      "B": "C3 glomerulopatisi",
+      "C": "Anti-GBM hastalığı",
+      "D": "Minimal değişiklik hastalığı",
+      "E": "Lupus nefriti"
+     },
+     "dogru": "B",
+     "aciklama": "C3 glomerulopatisi yoğun birikim hastalığı (eski MPGN tip II) ve C3 glomerulonefritini kapsar; klasik yol bileşenleri bulunmaz.",
+     "sik_aciklamalari": {
+      "A": "Membranöz nefropatide granüler IgG boyanması vardır.",
+      "B": "Doğru. C3 glomerulopatisi yoğun birikim hastalığı (eski MPGN tip II) ve C3 glomerulonefritini kapsar; klasik yol bileşenleri bulunmaz.",
+      "C": "Anti-GBM'de lineer IgG vardır.",
+      "D": "Minimal değişiklik hastalığında immünfloresan negatiftir.",
+      "E": "Lupus nefritinde genellikle IgG, C1q ve C4 de boyanır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q29",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "C3 glomerulopatisi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Prognozu çok iyidir ve nakil sonrası rekürrens görülmez.",
+      "B": "Yoğun birikim hastalığında elektron mikroskopisinde GBM içinde şerit benzeri birikintiler görülür; prognoz kötüdür ve nakil sonrası rekürrens %85'e ulaşabilir.",
+      "C": "Klasik kompleman yolunun aşırı aktivasyonuyla gelişir.",
+      "D": "Serum C3 düzeyi genellikle yüksektir.",
+      "E": "Işık mikroskopisinde tamamen normal glomerüller görülür."
+     },
+     "dogru": "B",
+     "aciklama": "C3 glomerulopatisinde ışık mikroskopisinde MPGN'ye benzer çift bazal membran görülebilir; C3 GN'de mezangiyal-subendotelyal birikintiler bulunur.",
+     "sik_aciklamalari": {
+      "A": "Prognoz kötü, rekürrens yüksektir.",
+      "B": "Doğru. C3 glomerulopatisinde ışık mikroskopisinde MPGN'ye benzer çift bazal membran görülebilir; C3 GN'de mezangiyal-subendotelyal birikintiler bulunur.",
+      "C": "Alternatif yol aşırı aktivasyonu söz konusudur.",
+      "D": "Serum C3 düzeyi düşüktür.",
+      "E": "Işık mikroskopisinde MPGN benzeri değişiklikler görülür."
+     },
+     "bilgi": [
+      23,
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Nefrotik sendrom yapan glomerüler hastalıkların ışık, immünfloresan ve elektron mikroskopisi bulgularını karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-37-q30",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Işık mikroskopisi normal, immünfloresan negatif ve elektron mikroskopisinde yalnızca yaygın podosit ayak uzantısı silinmesi görülen glomerüler hastalık aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Minimal değişiklik hastalığı",
+      "B": "Membranöz nefropati",
+      "C": "MPGN tip I",
+      "D": "C3 glomerulonefriti",
+      "E": "Diyabetik nefropati"
+     },
+     "dogru": "A",
+     "aciklama": "Işık mikroskopisinin normal olması hastalığa 'minimal değişiklik' adını verir; tanı elektron mikroskopisiyle konur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Işık mikroskopisinin normal olması hastalığa 'minimal değişiklik' adını verir; tanı elektron mikroskopisiyle konur.",
+      "B": "Membranöz nefropatide immünfloresanda granüler IgG ve EM'de subepitelyal birikintiler vardır.",
+      "C": "MPGN'de çift kontur ve subendotelyal birikintiler vardır.",
+      "D": "C3 GN'de güçlü C3 boyanması vardır.",
+      "E": "Diyabetik nefropatide GBM kalınlaşması ve nodüler skleroz vardır."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q31",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Nefrotik sendrom yapan glomerüler hastalıklarda elektron mikroskopi bulgusu eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Minimal değişiklik hastalığı – yaygın ayak uzantısı silinmesi",
+      "B": "Membranöz nefropati – subepitelyal birikintiler ve 'spike and dome'",
+      "C": "MPGN tip I – subendotelyal ve mezangiyal birikintiler",
+      "D": "Yoğun birikim hastalığı – GBM içinde şerit benzeri birikintiler",
+      "E": "FSGS – subepitelyal büyük 'hörgüç' birikintileri"
+     },
+     "dogru": "E",
+     "aciklama": "FSGS'de elektron mikroskopisinde yaygın ayak uzantısı silinmesi görülür; hörgüçler postenfeksiyöz glomerülonefritin bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: minimal değişiklik hastalığı – yaygın ayak uzantısı silinmesi.",
+      "B": "Doğru eşleştirme: membranöz nefropati – subepitelyal birikintiler ve 'spike and dome'.",
+      "C": "Doğru eşleştirme: MPGN tip I – subendotelyal ve mezangiyal birikintiler.",
+      "D": "Doğru eşleştirme: yoğun birikim hastalığı – GBM içinde şerit benzeri birikintiler.",
+      "E": "Yanlış eşleştirme (aranan cevap). FSGS'de elektron mikroskopisinde yaygın ayak uzantısı silinmesi görülür; hörgüçler postenfeksiyöz glomerülonefritin bulgusudur."
+     },
+     "bilgi": [
+      8,
+      12,
+      17,
+      19,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q32",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Erişkin bir hastanın böbrek biyopsisinde ışık mikroskopisinde difüz kapiller duvar kalınlaşması, immünfloresanda GBM boyunca granüler IgG ve C3 saptanıyor; hücre proliferasyonu yok.\n\nEn olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Minimal değişiklik hastalığı",
+      "B": "Membranöz nefropati",
+      "C": "FSGS",
+      "D": "Anti-GBM hastalığı",
+      "E": "C3 glomerulopatisi"
+     },
+     "dogru": "B",
+     "aciklama": "Difüz kapiller duvar kalınlaşması, granüler IgG ve inflamasyon/proliferasyon yokluğu membranöz nefropatiyi düşündürür; EM'de subepitelyal birikintiler beklenir.",
+     "sik_aciklamalari": {
+      "A": "Işık mikroskopisi normal ve immünfloresan negatiftir.",
+      "B": "Doğru. Difüz kapiller duvar kalınlaşması, granüler IgG ve inflamasyon/proliferasyon yokluğu membranöz nefropatiyi düşündürür; EM'de subepitelyal birikintiler beklenir.",
+      "C": "Segmental skleroz ve nonspesifik IgM görülür.",
+      "D": "Lineer IgG boyanması görülür.",
+      "E": "IgG olmaksızın güçlü C3 boyanması görülür."
+     },
+     "bilgi": [
+      17,
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Nefrotik sendromda sekonder nedenleri (diyabetik nefropati, amiloidoz, lupus nefriti) özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-37-q33",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Diyabetik nefropatinin karakteristik nodüler glomerüler lezyonu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kimmelstiel-Wilson nodülleri",
+      "B": "Tramvay rayı görünümü",
+      "C": "Spike and dome",
+      "D": "Hilal (kresent)",
+      "E": "Hörgüç (hump)"
+     },
+     "dogru": "A",
+     "aciklama": "Diyabetik nefropati GBM kalınlaşması ve Kimmelstiel-Wilson nodüler glomerulosklerozu ile nefrotik sendrom yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Diyabetik nefropati GBM kalınlaşması ve Kimmelstiel-Wilson nodüler glomerulosklerozu ile nefrotik sendrom yapabilir.",
+      "B": "Tramvay rayı MPGN'ye aittir.",
+      "C": "Spike and dome membranöz nefropatiye aittir.",
+      "D": "Hilal hızlı ilerleyen glomerülonefritin bulgusudur.",
+      "E": "Hörgüç postenfeksiyöz glomerülonefrite aittir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q34",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Nefrotik sendromun sekonder nedenleri ve morfolojik bulguları eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Diyabetik nefropati – GBM kalınlaşması ve nodüler glomeruloskleroz",
+      "B": "Amiloid nefropatisi – mezangium ve kapiller duvarlarda amiloid birikimi",
+      "C": "Lupus nefriti sınıf V – membranöz patern",
+      "D": "Amiloidoz – Kongo kırmızısı ile boyanan birikimler",
+      "E": "Diyabetik nefropati – subepitelyal hörgüçler ve nötrofil infiltrasyonu"
+     },
+     "dogru": "E",
+     "aciklama": "Subepitelyal hörgüçler ve nötrofil infiltrasyonu postenfeksiyöz glomerülonefritin bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: diyabetik nefropati – GBM kalınlaşması ve nodüler glomeruloskleroz.",
+      "B": "Doğru eşleştirme: amiloid nefropatisi – mezangium ve kapiller duvarlarda amiloid birikimi.",
+      "C": "Doğru eşleştirme: lupus nefriti sınıf V – membranöz patern.",
+      "D": "Doğru eşleştirme; amiloid Kongo kırmızısıyla boyanır.",
+      "E": "Yanlış eşleştirme (aranan cevap). Subepitelyal hörgüçler ve nötrofil infiltrasyonu postenfeksiyöz glomerülonefritin bulgusudur."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q35",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "SLE'li genç bir kadında nefrotik sendrom gelişiyor; böbrek biyopsisinde membranöz patern saptanıyor.\n\nBu tablo ile ilgili aşağıdakilerden hangisi en doğrudur?",
+     "secenekler": {
+      "A": "Lupus nefriti sınıf V (membranöz) ile uyumludur ve sistemik hastalığın tedavisi etiyolojik tedaviyi oluşturur.",
+      "B": "Tablo kesinlikle primer membranöz nefropatidir ve SLE ile ilişkisizdir.",
+      "C": "Bu tablo minimal değişiklik hastalığıdır.",
+      "D": "Bu tablo diyabetik nefropatidir.",
+      "E": "Bu tablo amiloidozdur."
+     },
+     "dogru": "A",
+     "aciklama": "Sistemik hastalıkların tanınması nefrotik sendromun etiyolojik tedavisini mümkün kılar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sistemik hastalıkların tanınması nefrotik sendromun etiyolojik tedavisini mümkün kılar.",
+      "B": "SLE varlığında membranöz patern lupus nefriti sınıf V'i düşündürür.",
+      "C": "Minimal değişiklikte ışık mikroskopisi normaldir.",
+      "D": "Diyabet öyküsü yoktur ve morfoloji farklıdır.",
+      "E": "Amiloidozda amiloid birikimi görülür."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Nefrotik sendromda klinik yaklaşımı, tanı yöntemlerini ve böbrek biyopsisinin yerini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-37-q36",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Nefrotik sendromlu hastalarda görülen klinik komplikasyonlar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Yaygın ödem",
+      "B": "Artmış enfeksiyon eğilimi",
+      "C": "Tromboemboli eğilimi",
+      "D": "Ksantom ve lipemi gibi hiperlipidemi bulguları",
+      "E": "Kanama eğiliminde belirgin artış ve trombositoz yokluğunda hemofili benzeri tablo"
+     },
+     "dogru": "E",
+     "aciklama": "Nefrotik sendromda yaygın ödem, enfeksiyon ve tromboemboli eğilimi ile hiperlipidemi bulguları görülür.",
+     "sik_aciklamalari": {
+      "A": "Görülür: yaygın ödem.",
+      "B": "Görülür; immünoglobulin kaybı katkıda bulunur.",
+      "C": "Görülür; antikoagülan proteinlerin kaybı katkıda bulunur.",
+      "D": "Görülür: ksantom ve lipemi gibi hiperlipidemi bulguları.",
+      "E": "Yer almaz (aranan cevap); tersine tromboz eğilimi artar."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q37",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Nefrotik sendromda böbrek biyopsisinin yeri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Biyopsinin tanı ve tedaviye hiçbir katkısı yoktur.",
+      "B": "Biyopsi morfolojik sınıflama ve prognoz tayini sağlayarak tedavi seçimini doğrudan etkiler.",
+      "C": "Biyopsi yalnızca enfeksiyon tanısı için yapılır.",
+      "D": "Biyopsiyle yalnızca ışık mikroskopisi yapılır; immünfloresan ve elektron mikroskopisi gereksizdir.",
+      "E": "Biyopsi tüm çocuklarda ilk basamak tetkiktir."
+     },
+     "dogru": "B",
+     "aciklama": "Tanıda proteinüri düzeyi-seçiciliği, böbrek fonksiyon testleri ve seroloji kullanılır; biyopsi ışık, immünfloresan ve elektron mikroskopisiyle sınıflama sağlar.",
+     "sik_aciklamalari": {
+      "A": "Biyopsi tanı ve tedavi için kritik bilgi sağlar.",
+      "B": "Doğru. Tanıda proteinüri düzeyi-seçiciliği, böbrek fonksiyon testleri ve seroloji kullanılır; biyopsi ışık, immünfloresan ve elektron mikroskopisiyle sınıflama sağlar.",
+      "C": "Biyopsinin amacı glomerüler hastalığın sınıflanmasıdır.",
+      "D": "Üç yöntem birlikte değerlendirilir; örneğin minimal değişiklik ancak EM ile tanınır.",
+      "E": "Çocuklarda tipik minimal değişiklik tablosunda önce steroid yanıtı değerlendirilir; biyopsi her çocukta ilk basamak değildir."
+     },
+     "bilgi": [
+      25,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-37-q38",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Nefrotik sendromlu bir hastanın değerlendirilmesinde proteinürinin 'seçici' olup olmadığının belirlenmesinin önemi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Seçici (ağırlıkla albümin) proteinüri minimal değişiklik hastalığını ve iyi steroid yanıtını; seçici olmayan proteinüri FSGS ve membranöz nefropati gibi hastalıkları düşündürür.",
+      "B": "Seçicilik yalnızca enfeksiyon varlığını gösterir.",
+      "C": "Seçicilik yalnızca hiperlipideminin derecesini gösterir.",
+      "D": "Seçicilik nefritik sendromun kesin kanıtıdır.",
+      "E": "Seçiciliğin ayırıcı tanıda değeri yoktur."
+     },
+     "dogru": "A",
+     "aciklama": "Proteinüri düzeyi ve seçiciliği klinik yaklaşımın parçasıdır ve olası glomerüler hastalığı tahmin etmeye yardımcı olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Proteinüri düzeyi ve seçiciliği klinik yaklaşımın parçasıdır ve olası glomerüler hastalığı tahmin etmeye yardımcı olur.",
+      "B": "Seçicilik filtrasyon bariyerinin hasar tipini yansıtır.",
+      "C": "Seçicilik lipid düzeyini göstermez.",
+      "D": "Seçicilik nefrotik sendrom içi ayırıcı tanıda kullanılır.",
+      "E": "Ayırıcı tanıda önemlidir."
+     },
+     "bilgi": [
+      25,
+      6,
+      13,
+      18
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 38,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:01"
+}

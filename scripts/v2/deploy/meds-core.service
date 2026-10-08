@@ -1,0 +1,18 @@
+[Unit]
+Description=MedSoru Core v2 - bagimsiz veri hatti (GPU yok, ucretsiz bulut)
+Documentation=file:///home/indu/medsor/meds/scripts/v2/README.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/indu/medsor/meds/scripts
+EnvironmentFile=-/home/indu/medsor/meds/.env
+Environment=MEDS_CORE_DIR=/home/indu/medsor/meds_database_core
+ExecStart=/home/indu/medsor/meds/.venv-ocr/bin/python -m v2 cycle --watch --interval 600 --post --answers-limit 30 --roots /home/indu/medsor/meds_downloads
+Restart=on-failure
+RestartSec=30
+Nice=10
+
+[Install]
+WantedBy=default.target

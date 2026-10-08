@@ -1,0 +1,1002 @@
+{
+ "id": "k1-41-sistemik-hastaliklarda-bobrek-hasari",
+ "sira": 41,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Sistemik Hastalıklarda Böbrek Hasarı",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-02",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Sistemik hastalıkların böbrek üzerindeki etkilerini ve böbreği tutan başlıca sistemik hastalıkları açıklar.",
+   "sorular": [
+    {
+     "id": "k1-41-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Sistemik hastalıkların böbreği etkileme mekanizmaları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "İmmün kompleks birikimi (SLE, enfeksiyonlar)",
+      "B": "Metabolik ve hemodinamik bozukluklar (diyabet, hipertansiyon)",
+      "C": "Böbreğin doğumsal ektopik yerleşimi",
+      "D": "Vasküler lezyonlar ve trombotik mikroanjiyopatiler",
+      "E": "Fibriller depozitler (amiloidoz)"
+     },
+     "dogru": "C",
+     "aciklama": "Böbrek hasarı immün kompleksler, metabolik-hemodinamik bozukluklar, fibriller depozitler ve vasküler lezyonlar/TMA olmak üzere dört temel mekanizmayla oluşur.",
+     "sik_aciklamalari": {
+      "A": "Temel mekanizmadır: i̇mmün kompleks birikimi (SLE, enfeksiyonlar).",
+      "B": "Temel mekanizmadır: metabolik ve hemodinamik bozukluklar (diyabet, hipertansiyon).",
+      "C": "Yer almaz (aranan cevap); gelişimsel bir anomalidir, sistemik hastalık mekanizması değildir.",
+      "D": "Temel mekanizmadır: vasküler lezyonlar ve trombotik mikroanjiyopatiler.",
+      "E": "Temel mekanizmadır: fibriller depozitler (amiloidoz)."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Böbreğin sistemik hastalıklardaki rolü ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Böbrek sistemik hastalıklardan hiç etkilenmez.",
+      "B": "Yalnızca enfeksiyonlar böbreği etkiler.",
+      "C": "Sistemik hastalıklarda böbrek hasarı her zaman tam iyileşir.",
+      "D": "Böbrek birçok sistemik hastalığın hem hedefi hem de katkı faktörüdür ve hasar sıklıkla kronik böbrek hastalığına ilerler.",
+      "E": "Hipertansiyonun böbrekle ilişkisi yoktur."
+     },
+     "dogru": "D",
+     "aciklama": "Örneğin hipertansiyon böbrek hasarı yapar, böbrek hasarı da hipertansiyonu ağırlaştırır.",
+     "sik_aciklamalari": {
+      "A": "Böbrek sistemik hastalıkların sık hedefidir.",
+      "B": "Metabolik, immünolojik ve vasküler hastalıklar da etkiler.",
+      "C": "Hasar sıklıkla kronikleşir.",
+      "D": "Doğru. Örneğin hipertansiyon böbrek hasarı yapar, böbrek hasarı da hipertansiyonu ağırlaştırır.",
+      "E": "Hipertansiyon böbrek hasarının önemli nedenidir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki sistemik hastalık–böbrek hasarı mekanizması eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "SLE – immün kompleks birikimi",
+      "B": "Diyabet – metabolik ve hemodinamik hasar",
+      "C": "Amiloidoz – anti-GBM antikorlarının lineer birikimi",
+      "D": "TTP – trombotik mikroanjiyopati",
+      "E": "Amiloidoz – fibriller protein depoziti"
+     },
+     "dogru": "C",
+     "aciklama": "Amiloidozda hücre dışı fibriller protein birikir; lineer anti-GBM birikimi Goodpasture hastalığına aittir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: SLE – immün kompleks birikimi.",
+      "B": "Doğru eşleştirme: diyabet – metabolik ve hemodinamik hasar.",
+      "C": "Yanlış eşleştirme (aranan cevap). Amiloidozda hücre dışı fibriller protein birikir; lineer anti-GBM birikimi Goodpasture hastalığına aittir.",
+      "D": "Doğru eşleştirme: TTP – trombotik mikroanjiyopati.",
+      "E": "Doğru eşleştirme: amiloidoz – fibriller protein depoziti."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Sistemik hastalıklarda glomerüler tutulumun başlıca nedenlerini (SLE, diyabet, amiloidoz, enfeksiyonlar, ilaçlar, maligniteler) ve klinik spektrumu tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-41-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki enfeksiyöz etkenlerden hangisi glomerüler tutuluma yol açan sistemik nedenler arasında sayılmaz?",
+     "secenekler": {
+      "A": "Plasmodium falciparum",
+      "B": "Treponema pallidum",
+      "C": "Hepatit B virüsü",
+      "D": "HIV",
+      "E": "Rinovirüs"
+     },
+     "dogru": "E",
+     "aciklama": "Glomerüler tutulum yapan enfeksiyonlar arasında sıtma (P. falciparum), sifiliz, HBV ve HIV sayılır.",
+     "sik_aciklamalari": {
+      "A": "Glomerüler tutulum nedenidir.",
+      "B": "Glomerüler tutulum nedenidir.",
+      "C": "Glomerüler tutulum nedenidir.",
+      "D": "Glomerüler tutulum nedenidir.",
+      "E": "Sayılmaz (aranan cevap). Glomerüler tutulum yapan enfeksiyonlar arasında sıtma (P. falciparum), sifiliz, HBV ve HIV sayılır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Sistemik hastalıklarda glomerüler tutulumun klinik spektrumu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca nefrotik sendrom görülür.",
+      "B": "Böbrek yetmezliği hiç gelişmez.",
+      "C": "Yalnızca asemptomatik bakteriüri görülür.",
+      "D": "Nefrotik sendrom, nefritik sendrom, asemptomatik hematüri/proteinüri ve böbrek yetmezliği görülebilir.",
+      "E": "Maligniteler glomerüler tutulum yapmaz."
+     },
+     "dogru": "D",
+     "aciklama": "SLE, diyabet, amiloidoz, enfeksiyonlar, ilaçlar (altın, penisilamin, eroin) ve maligniteler (karsinomlar, melanom) farklı klinik tablolarla glomerüler tutulum yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Nefritik tablolar da görülür.",
+      "B": "Böbrek yetmezliği gelişebilir.",
+      "C": "Bakteriüri enfeksiyon bulgusudur.",
+      "D": "Doğru. SLE, diyabet, amiloidoz, enfeksiyonlar, ilaçlar (altın, penisilamin, eroin) ve maligniteler (karsinomlar, melanom) farklı klinik tablolarla glomerüler tutulum yapabilir.",
+      "E": "Karsinomlar ve melanom glomerüler tutulum yapabilir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Romatoid artrit nedeniyle uzun süre penisilamin kullanan bir hastada nefrotik sendrom gelişmesinin en olası açıklaması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Alport sendromu",
+      "B": "Akut poststreptokokal glomerulonefrit",
+      "C": "İlaçla ilişkili sekonder glomerüler hastalık (ör. membranöz patern)",
+      "D": "Malign nefroskleroz",
+      "E": "Şiga toksini aracılı HUS"
+     },
+     "dogru": "C",
+     "aciklama": "Altın, penisilamin ve eroin gibi ilaçlar glomerüler tutuluma yol açabilir; ilacın kesilmesi tabloyu düzeltebilir.",
+     "sik_aciklamalari": {
+      "A": "Alport kalıtsaldır: alport sendromu.",
+      "B": "Enfeksiyon öyküsü yoktur.",
+      "C": "Doğru. Altın, penisilamin ve eroin gibi ilaçlar glomerüler tutuluma yol açabilir; ilacın kesilmesi tabloyu düzeltebilir.",
+      "D": "Malign nefroskleroz ağır hipertansiyona bağlıdır.",
+      "E": "HUS kanlı diyareyle başlar."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Lupus nefritinin immün kompleks mekanizmasını ve böbrek tutulumunun prognostik önemini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-41-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Sistemik lupus eritematozus hangi aşırı duyarlılık tipinin prototipidir?",
+     "secenekler": {
+      "A": "Tip I",
+      "B": "Tip II",
+      "C": "Tip III (immün kompleks)",
+      "D": "Tip IV",
+      "E": "Hiçbiri"
+     },
+     "dogru": "C",
+     "aciklama": "SLE'de immün kompleksler glomerüllerde mezangial, subendotelyal ve subepitelyal alanlarda, bazen tübüler/peritübüler bazal membranlarda birikir.",
+     "sik_aciklamalari": {
+      "A": "Tip I IgE aracılıdır.",
+      "B": "Tip II hücre/matriks antijenine bağlanan antikorla gelişir; SLE'de de katkısı vardır ama prototip tip III'tür.",
+      "C": "Doğru. SLE'de immün kompleksler glomerüllerde mezangial, subendotelyal ve subepitelyal alanlarda, bazen tübüler/peritübüler bazal membranlarda birikir.",
+      "D": "Tip IV T hücre aracılıdır.",
+      "E": "SLE tip III'ün prototipidir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Lupus nefritinde immün komplekslerin birikebileceği yerler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Mezangium",
+      "B": "Subendotelyal alan",
+      "C": "Subepitelyal alan",
+      "D": "Tübüler ve peritübüler kapiller bazal membranlar",
+      "E": "Kortikal kemik iliği"
+     },
+     "dogru": "E",
+     "aciklama": "Lupus nefritinde kompleksler glomerüllerin farklı kompartmanlarında ve bazen tübüler/peritübüler bazal membranlarda birikir.",
+     "sik_aciklamalari": {
+      "A": "Birikim yeridir: mezangium.",
+      "B": "Birikim yeridir; tel halka lezyonunu oluşturur.",
+      "C": "Birikim yeridir; membranöz paternde görülür.",
+      "D": "Birikim yeridir: tübüler ve peritübüler kapiller bazal membranlar.",
+      "E": "Yer almaz (aranan cevap); böbrekte kemik iliği yoktur."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "SLE'de böbrek tutulumunun klinik önemi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Böbrek tutulumu SLE prognozunu etkilemez.",
+      "B": "Lupus nefriti immün kompleks dışı bir mekanizmayla gelişir.",
+      "C": "SLE'de böbrek tutulumu yalnızca asemptomatik hematüriyle sınırlıdır.",
+      "D": "Böbrek SLE'nin başlıca hedef organıdır; nefritik ve nefrotik bulgular karışabilir ve böbrek tutulumu prognozu belirgin kötüleştirir.",
+      "E": "Böbrek tutulumu hiçbir zaman böbrek yetmezliğine ilerlemez."
+     },
+     "dogru": "D",
+     "aciklama": "Böbrek yetmezliği SLE'de önemli ölüm nedenidir; erken tanı ve sınıflama tedaviyi yönlendirir.",
+     "sik_aciklamalari": {
+      "A": "Böbrek tutulumu kötü prognoz belirtecidir.",
+      "B": "Lupus nefriti immün kompleks aracılıdır.",
+      "C": "Klinik geniş bir spektrumdadır.",
+      "D": "Doğru. Böbrek yetmezliği SLE'de önemli ölüm nedenidir; erken tanı ve sınıflama tedaviyi yönlendirir.",
+      "E": "Böbrek yetmezliği gelişebilir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Diyabetik nefropatinin böbrek lezyonlarını ve klinik seyrini özetler.",
+   "sorular": [
+    {
+     "id": "k1-41-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Diyabetik nefropatide görülen nodüler glomeruloskleroz lezyonuna ne ad verilir?",
+     "secenekler": {
+      "A": "Kimmelstiel-Wilson lezyonu",
+      "B": "Tel halka lezyonu",
+      "C": "Hilal",
+      "D": "Soğan zarı lezyonu",
+      "E": "Pire ısırığı görünümü"
+     },
+     "dogru": "A",
+     "aciklama": "Diyabetik nefropatide GBM kalınlaşması, difüz mezangial skleroz ve nodüler (Kimmelstiel-Wilson) glomeruloskleroz görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Diyabetik nefropatide GBM kalınlaşması, difüz mezangial skleroz ve nodüler (Kimmelstiel-Wilson) glomeruloskleroz görülür.",
+      "B": "Tel halka lupus nefriti sınıf IV'te görülür.",
+      "C": "Hilal RPGN'nin bulgusudur.",
+      "D": "Soğan zarı malign nefrosklerozda görülür.",
+      "E": "Pire ısırığı malign nefrosklerozda kortikal peteşilerdir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Diyabetik nefropatinin klinik seyri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İlk bulgu genellikle ağır hematüridir.",
+      "B": "Tip 2 diyabette nefropati görülmez.",
+      "C": "Diyabetik nefropati hiçbir zaman son dönem böbrek hastalığına ilerlemez.",
+      "D": "Mikroalbüminüriden makroalbüminüriye ve sıklıkla nefrotik sendroma ilerler; ABD'de kronik böbrek hastalığının en sık nedenidir.",
+      "E": "Diyabetik nefropatinin patogenezinde hipergliseminin rolü yoktur."
+     },
+     "dogru": "D",
+     "aciklama": "Kronik hiperglisemi, glikozilasyon ürünleri, hemodinamik değişiklikler ve oksidatif stres böbrek lezyonlarını oluşturur.",
+     "sik_aciklamalari": {
+      "A": "İlk bulgu mikroalbüminüridir.",
+      "B": "Tip 2 diyabete bağlı nefropati ABD'de KBH'nin en sık nedenidir.",
+      "C": "Son dönem böbrek hastalığının önde gelen nedenidir.",
+      "D": "Doğru. Kronik hiperglisemi, glikozilasyon ürünleri, hemodinamik değişiklikler ve oksidatif stres böbrek lezyonlarını oluşturur.",
+      "E": "Kronik hiperglisemi patogenezin temelidir."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": [
+      "d3-f-029"
+     ]
+    },
+    {
+     "id": "k1-41-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Diyabetik nefropatide glomerüler lezyonların gelişiminde rol oynayan mekanizmalar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Kronik hiperglisemi",
+      "B": "İleri glikozilasyon son ürünleri",
+      "C": "Hemodinamik değişiklikler (hiperfiltrasyon)",
+      "D": "Oksidatif stres",
+      "E": "Anti-GBM otoantikorlarının lineer birikimi"
+     },
+     "dogru": "E",
+     "aciklama": "Diyabetik nefropati metabolik ve hemodinamik bir hasardır; anti-GBM birikimi otoimmün Goodpasture hastalığına aittir.",
+     "sik_aciklamalari": {
+      "A": "Mekanizmadır: kronik hiperglisemi.",
+      "B": "Mekanizmadır: i̇leri glikozilasyon son ürünleri.",
+      "C": "Mekanizmadır: hemodinamik değişiklikler (hiperfiltrasyon).",
+      "D": "Mekanizmadır: oksidatif stres.",
+      "E": "Yer almaz (aranan cevap). Diyabetik nefropati metabolik ve hemodinamik bir hasardır; anti-GBM birikimi otoimmün Goodpasture hastalığına aittir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-029",
+     "soru": "Diyabetik nefropati ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hiperfiltrasyon fazında böbrekte büyüme (renomegali) görülür.",
+      "B": "Patognomonik renal patoloji bulgusu nodüler glomerülosklerozdur.",
+      "C": "Aşikar diyabetik nefropati - persistan proteinüri evresinde yalnızca afferent arteriolde hiyalinizasyon görülür.",
+      "D": "Böbrek yetmezliği ya da kardiyovasküler hastalık varsa tansiyon hedefi <130/80 mmHg, aksi takdirde <140/90 mmHg'dir.",
+      "E": "Geri dönüşümlü son evre mikroalbüminürik fazdır."
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Amiloid nefropatisinin patogenezini, kliniğini ve tanı yöntemini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-41-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Böbrek biyopsisinde amiloid birikiminin gösterilmesinde kullanılan boya ve polarize ışıktaki tipik görünüm aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "PAS – mor boyanma",
+      "B": "Prusya mavisi – mavi boyanma",
+      "C": "Kongo kırmızısı – elma yeşili çift kırınım",
+      "D": "Masson trikrom – mavi kollajen",
+      "E": "Gümüşleme – siyah lifler"
+     },
+     "dogru": "C",
+     "aciklama": "Amiloid Kongo kırmızısı ile boyanır ve polarize ışıkta elma yeşili çift kırınım verir; tipi immünohistokimya ve/veya kütle spektrometrisiyle belirlenir.",
+     "sik_aciklamalari": {
+      "A": "PAS glikojen ve bazal membranı gösterir.",
+      "B": "Prusya mavisi demiri gösterir.",
+      "C": "Doğru. Amiloid Kongo kırmızısı ile boyanır ve polarize ışıkta elma yeşili çift kırınım verir; tipi immünohistokimya ve/veya kütle spektrometrisiyle belirlenir.",
+      "D": "Masson trikrom kollajeni gösterir.",
+      "E": "Gümüşleme retikülin ve bazal membranı gösterir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Amiloid nefropatisi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Amiloid yalnızca hücre içinde birikir.",
+      "B": "Amiloid nefropatisi yalnızca hematüriyle seyreder.",
+      "C": "Amiloid glomerüler mezangium ve kılcal duvarlarda birikir; tübüller ve damarlar da tutulabilir; klinikte nefrotik sendrom ve ilerleyici böbrek yetmezliği görülür.",
+      "D": "Tanı yalnızca serum testleriyle konur.",
+      "E": "Amiloid nefropatisi böbrek fonksiyonunu etkilemez."
+     },
+     "dogru": "C",
+     "aciklama": "Amiloid fibriller proteinlerin ekstrasellüler birikimidir.",
+     "sik_aciklamalari": {
+      "A": "Amiloid hücre dışında birikir.",
+      "B": "Başlıca nefrotik sendrom yapar.",
+      "C": "Doğru. Amiloid fibriller proteinlerin ekstrasellüler birikimidir.",
+      "D": "Tanı biyopsiyle histopatolojik olarak konur.",
+      "E": "İlerleyici böbrek yetmezliği yapar."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Uzun süreli romatoid artriti olan bir hastada nefrotik sendrom gelişiyor; böbrek biyopsisinde glomerüllerde amorf eozinofilik birikimler saptanıyor.\n\nBu hastada birikimin tipini belirlemek için en uygun yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca HE boyası yeterlidir.",
+      "B": "Serum ASO düzeyi ölçülmelidir.",
+      "C": "Prusya mavisi ile demir aranmalıdır.",
+      "D": "Kongo kırmızısı ile amiloid doğrulanmalı; tipi immünohistokimya ve/veya kütle spektrometrisiyle belirlenmelidir.",
+      "E": "Biyopsi tekrarı gereksizdir; tanı klinikle konur."
+     },
+     "dogru": "D",
+     "aciklama": "Kronik inflamatuvar hastalık zemininde AA tipi amiloidoz düşünülür; tip tayini tedavi ve prognoz için önemlidir.",
+     "sik_aciklamalari": {
+      "A": "HE amiloidi düşündürür ama doğrulama ve tiplendirme gerekir.",
+      "B": "ASO poststreptokokal GN için kullanılır.",
+      "C": "Demir boyası amiloidi göstermez.",
+      "D": "Doğru. Kronik inflamatuvar hastalık zemininde AA tipi amiloidoz düşünülür; tip tayini tedavi ve prognoz için önemlidir.",
+      "E": "Tanı histopatolojik olarak kesinleştirilir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Sistemik vaskülitler ve ANCA ilişkili glomerulonefritin mekanizmasını ve serolojik belirteçlerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-41-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "ANCA ilişkili küçük damar vaskülitlerinde böbrekte en sık görülen tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Pauci-immün hızlı ilerleyen (hilal) glomerulonefrit",
+      "B": "Minimal değişiklik hastalığı",
+      "C": "Membranöz nefropati",
+      "D": "Amiloidoz",
+      "E": "Kimmelstiel-Wilson nodülleri"
+     },
+     "dogru": "A",
+     "aciklama": "Granülomatozisli poliangiit, mikroskopik poliangiit ve eozinofilik granülomatozisli poliangiit pauci-immün RPGN yapar; hilal oluşumu ve minimal immün birikim vardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Granülomatozisli poliangiit, mikroskopik poliangiit ve eozinofilik granülomatozisli poliangiit pauci-immün RPGN yapar; hilal oluşumu ve minimal immün birikim vardır.",
+      "B": "Minimal değişiklik nefrotik sendrom yapar.",
+      "C": "Membranöz nefropati immün kompleks aracılıdır.",
+      "D": "Amiloidoz fibriller birikimdir.",
+      "E": "Kimmelstiel-Wilson diyabetik nefropatide görülür."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi küçük damar ANCA ilişkili vaskülitlerden biri değildir?",
+     "secenekler": {
+      "A": "Granülomatozisli poliangiit (eski Wegener)",
+      "B": "Mikroskopik poliangiit",
+      "C": "Eozinofilik granülomatozisli poliangiit",
+      "D": "Poststreptokokal glomerulonefrit",
+      "E": "Hepsi ANCA ilişkili vaskülittir"
+     },
+     "dogru": "D",
+     "aciklama": "Poststreptokokal GN immün kompleks aracılı postenfeksiyöz bir glomerulonefrittir; vaskülit değildir.",
+     "sik_aciklamalari": {
+      "A": "ANCA ilişkili küçük damar vaskülitidir.",
+      "B": "ANCA ilişkili küçük damar vaskülitidir.",
+      "C": "ANCA ilişkili küçük damar vaskülitidir.",
+      "D": "Vaskülit değildir (aranan cevap). Poststreptokokal GN immün kompleks aracılı postenfeksiyöz bir glomerulonefrittir; vaskülit değildir.",
+      "E": "Poststreptokokal GN vaskülit olmadığı için bu seçenek yanlıştır."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Ateş, kilo kaybı, sinüzit, akciğer nodülleri ve hızlı ilerleyen nefritik sendromla başvuran bir hastada böbrek biyopsisinde hilaller görülüyor ve immünfloresanda belirgin birikim yok.\n\nBu hastada tanıyı desteklemek için istenmesi gereken serolojik test aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "ASO",
+      "B": "PR3-ANCA ve MPO-ANCA",
+      "C": "Anti-PLA2R",
+      "D": "Serum amilaz",
+      "E": "AFP"
+     },
+     "dogru": "B",
+     "aciklama": "Sistemik bulgular ve pauci-immün RPGN ANCA ilişkili vasküliti (özellikle granülomatozisli poliangiit) düşündürür.",
+     "sik_aciklamalari": {
+      "A": "ASO poststreptokokal GN için kullanılır.",
+      "B": "Doğru. Sistemik bulgular ve pauci-immün RPGN ANCA ilişkili vasküliti (özellikle granülomatozisli poliangiit) düşündürür.",
+      "C": "Anti-PLA2R membranöz nefropati belirtecidir.",
+      "D": "Amilaz pankreas belirtecidir.",
+      "E": "AFP tümör belirtecidir."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Trombotik mikroanjiyopatilerin (HUS, kompleman-aracılı TMA, TTP) ortak patogenezini ve ayırt edici özelliklerini tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-41-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Trombotik mikroanjiyopati (TMA) üçlüsünü oluşturan bulgular aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Mikrovasküler tromboz, mikroanjiyopatik hemolitik anemi ve trombositopeni",
+      "B": "Ağır proteinüri, hipoalbüminemi ve hiperlipidemi",
+      "C": "Ateş, artrit ve döküntü",
+      "D": "Hematüri, işitme kaybı ve göz bulguları",
+      "E": "Hiperkalsemi, anemi ve kemik ağrısı"
+     },
+     "dogru": "A",
+     "aciklama": "TMA'ya sıklıkla böbrek yetmezliği eşlik eder; üçlünün tanınması ayırıcı tanı ve tedavinin temelidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. TMA'ya sıklıkla böbrek yetmezliği eşlik eder; üçlünün tanınması ayırıcı tanı ve tedavinin temelidir.",
+      "B": "Bu nefrotik sendromdur.",
+      "C": "Bu bulgular TMA üçlüsü değildir.",
+      "D": "Bu Alport sendromudur.",
+      "E": "Bu bulgular multipl miyelomu düşündürür."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Kanlı ishal sonrası hematüri, oligüri, hemolitik anemi ve trombositopeni gelişen 4 yaşındaki bir çocukta en olası tanı ve etken aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "TTP – ADAMTS13 eksikliği",
+      "B": "Şiga toksini aracılı HUS – E. coli O157:H7",
+      "C": "Kompleman aracılı TMA – faktör H mutasyonu",
+      "D": "Poststreptokokal GN",
+      "E": "Malign nefroskleroz"
+     },
+     "dogru": "B",
+     "aciklama": "Şiga toksini üreten E. coli (özellikle O157:H7) ve Shigella dysenteriae HUS'a yol açar; glomerüler endotel Şiga toksin reseptörü taşıdığından hassastır ve çocuklarda akut böbrek yetmezliğinin sık nedenidir.",
+     "sik_aciklamalari": {
+      "A": "TTP'de klasik pentad vardır ve genellikle kanlı ishal öyküsü yoktur.",
+      "B": "Doğru. Şiga toksini üreten E. coli (özellikle O157:H7) ve Shigella dysenteriae HUS'a yol açar; glomerüler endotel Şiga toksin reseptörü taşıdığından hassastır ve çocuklarda akut böbrek yetmezliğinin sık nedenidir.",
+      "C": "Kompleman aracılı TMA'da genellikle prodromal diyare yoktur.",
+      "D": "Poststreptokokal GN'de hemolitik anemi ve trombositopeni beklenmez.",
+      "E": "Malign nefroskleroz ağır hipertansiyona bağlıdır."
+     },
+     "bilgi": [
+      15,
+      16,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q21",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Trombotik trombositopenik purpuranın (TTP) temel patogenezi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "ADAMTS13 eksikliği nedeniyle ultra büyük vWF multimerlerinin parçalanamaması ve yaygın trombosit agregasyonu",
+      "B": "Şiga toksininin endotel hücrelerini öldürmesi",
+      "C": "Anti-GBM antikorları",
+      "D": "Amiloid birikimi",
+      "E": "Faktör VIII eksikliği"
+     },
+     "dogru": "A",
+     "aciklama": "ADAMTS13 eksikliği edinsel (inhibitör otoantikor) veya kalıtsal (gen mutasyonu) olabilir; klasik pentad ateş, trombositopeni, mikroanjiyopatik hemolitik anemi, nörolojik belirtiler ve böbrek anormallikleridir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. ADAMTS13 eksikliği edinsel (inhibitör otoantikor) veya kalıtsal (gen mutasyonu) olabilir; klasik pentad ateş, trombositopeni, mikroanjiyopatik hemolitik anemi, nörolojik belirtiler ve böbrek anormallikleridir.",
+      "B": "Bu HUS'un mekanizmasıdır.",
+      "C": "Anti-GBM Goodpasture'a aittir.",
+      "D": "Amiloid fibriller birikimdir.",
+      "E": "Faktör VIII eksikliği hemofili A'dır."
+     },
+     "bilgi": [
+      20,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q23",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Trombotik mikroanjiyopatide böbrekte görülen morfolojik bulgular arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Glomerüler kılcal damar ve arteriyollerde tromboz",
+      "B": "Subendotelyal şişlik",
+      "C": "Bazal membran duplikasyonu",
+      "D": "Şiddetli olgularda kortikal nekroz",
+      "E": "Mezangiumda yoğun IgA birikimi"
+     },
+     "dogru": "E",
+     "aciklama": "TMA'da trombüsler ve endotel hasarı bulguları görülür; mezangiyal IgA birikimi IgA nefropatisine aittir.",
+     "sik_aciklamalari": {
+      "A": "TMA bulgusudur: glomerüler kılcal damar ve arteriyollerde tromboz.",
+      "B": "TMA bulgusudur: subendotelyal şişlik.",
+      "C": "TMA bulgusudur: bazal membran duplikasyonu.",
+      "D": "TMA bulgusudur; iskemik hasar sonucudur.",
+      "E": "Yer almaz (aranan cevap). TMA'da trombüsler ve endotel hasarı bulguları görülür; mezangiyal IgA birikimi IgA nefropatisine aittir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q22",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Trombotik mikroanjiyopati tipleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ortak mekanizma endotel hasarı ve trombosit aktivasyonu/agregasyonudur.",
+      "B": "Periferik yaymada şistositler mikroanjiyopatik hemolitik anemiyi gösterir.",
+      "C": "Kompleman aracılı TMA faktör H, faktör I veya membran kofaktör proteini kusurlarıyla ilişkilidir ve prognozu Şiga toksini aracılı HUS'tan kötüdür.",
+      "D": "Kompleman aracılı TMA'da plazma değişimi ve C5 inhibitörü birinci basamak tedavidir.",
+      "E": "Kompleman aracılı TMA'da kanlı prodromal diyare tipiktir ve prognoz Şiga toksini HUS'undan daha iyidir."
+     },
+     "dogru": "E",
+     "aciklama": "Prodromal diyare Şiga toksini aracılı HUS'ta tipiktir; kompleman aracılı TMA'da genellikle yoktur ve prognoz daha kötüdür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: ortak mekanizma endotel hasarı ve trombosit aktivasyonu/agregasyonudur.",
+      "B": "Doğru ifade: periferik yaymada şistositler mikroanjiyopatik hemolitik anemiyi gösterir.",
+      "C": "Doğru ifade: kompleman aracılı TMA faktör H, faktör I veya membran kofaktör proteini kusurlarıyla ilişkilidir ve prognozu Şiga toksini aracılı HUS'tan kötüdür.",
+      "D": "Doğru ifade: kompleman aracılı TMA'da plazma değişimi ve C5 inhibitörü birinci basamak tedavidir.",
+      "E": "Yanlış ifade (aranan cevap). Prodromal diyare Şiga toksini aracılı HUS'ta tipiktir; kompleman aracılı TMA'da genellikle yoktur ve prognoz daha kötüdür."
+     },
+     "bilgi": [
+      12,
+      13,
+      17,
+      18,
+      19
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Hipertansif böbrek hastalığını (benign ve malign nefroskleroz) morfolojik ve klinik özellikleriyle açıklar.",
+   "sorular": [
+    {
+     "id": "k1-41-q24",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Uzun süreli benign hipertansiyonda böbrek arteriyollerinde görülen tipik lezyon aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hiyalin arteriyoloskleroz (homojen pembe kalınlaşma)",
+      "B": "Fibrinoid nekroz",
+      "C": "Soğan zarı görünümü",
+      "D": "Hilal oluşumu",
+      "E": "Kimmelstiel-Wilson nodülü"
+     },
+     "dogru": "A",
+     "aciklama": "Uzun süreli hipertansiyonda plazma proteinleri damar duvarına sızar ve matris birikir; hiyalin arteriyoloskleroz lümeni daraltır ve iskemik nefroskleroz yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Uzun süreli hipertansiyonda plazma proteinleri damar duvarına sızar ve matris birikir; hiyalin arteriyoloskleroz lümeni daraltır ve iskemik nefroskleroz yapar.",
+      "B": "Fibrinoid nekroz malign hipertansiyonda görülür.",
+      "C": "Soğan zarı malign hipertansiyonda hiperplastik arteriyolosklerozdur.",
+      "D": "Hilal RPGN'de görülür.",
+      "E": "Kimmelstiel-Wilson diyabetik nefropatide görülür."
+     },
+     "bilgi": [
+      23,
+      24
+     ],
+     "benzer_cikmis": [
+      "1c5e94123e02"
+     ]
+    },
+    {
+     "id": "k1-41-q25",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Malign nefrosklerozun morfolojik bulguları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Arteriyollerde fibrinoid nekroz",
+      "B": "İnterlobüler arterlerde konsantrik intimal proliferasyon (soğan zarı)",
+      "C": "Kortikal peteşiyal kanamalar (pire ısırığı görünümü)",
+      "D": "Glomerüler nekroz ve tromboz alanları",
+      "E": "Simetrik küçülmüş, ince granüler yüzeyli böbrek ve homojen hiyalin arteriyoloskleroz (tek başına)"
+     },
+     "dogru": "E",
+     "aciklama": "Simetrik küçük, ince granüler böbrek ve hiyalin arteriyoloskleroz benign nefrosklerozun bulgularıdır.",
+     "sik_aciklamalari": {
+      "A": "Malign nefroskleroz bulgusudur.",
+      "B": "Malign nefroskleroz bulgusudur (hiperplastik arteriyoloskleroz).",
+      "C": "Malign nefroskleroz bulgusudur.",
+      "D": "Malign nefroskleroz bulgusudur.",
+      "E": "Yer almaz (aranan cevap); benign nefrosklerozu tanımlar."
+     },
+     "bilgi": [
+      24,
+      26
+     ],
+     "benzer_cikmis": [
+      "5b9ad411e63a"
+     ]
+    },
+    {
+     "id": "k1-41-q27",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Benign nefrosklerozun klinik özellikleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tek başına benign hipertansiyonda üremi sıktır.",
+      "B": "Azalmış idrar konsantrasyon yeteneği, hafif GFR azalması ve hafif proteinüri sık görülür; tek başına üremi nadirdir.",
+      "C": "Ağır hematüri tipik bulgudur.",
+      "D": "Diyabetin eşlik etmesi riski azaltır.",
+      "E": "Hiçbir zaman proteinüri görülmez."
+     },
+     "dogru": "B",
+     "aciklama": "Ağır hipertansiyon, diyabet ve eşlik eden primer böbrek hastalığı böbrek yetmezliği riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Tek başına benign hipertansiyonda üremi nadirdir.",
+      "B": "Doğru. Ağır hipertansiyon, diyabet ve eşlik eden primer böbrek hastalığı böbrek yetmezliği riskini artırır.",
+      "C": "Ağır hematüri tipik değildir.",
+      "D": "Diyabet riski artırır.",
+      "E": "Hafif proteinüri sıktır."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q26",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Kan basıncı 230/135 mmHg ölçülen, papilödem ve ensefalopati bulguları olan bir hasta ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Benign hipertansiyon tablosudur ve acil tedavi gerektirmez.",
+      "B": "Malign hipertansiyon bir tıbbi acil durumdur; hızlı ve kontrollü kan basıncı düşürülmesi gerekir ve böbrekte fibrinoid nekroz ile hiperplastik arteriyoloskleroz beklenir.",
+      "C": "Böbrekte yalnızca hiyalin arteriyoloskleroz beklenir.",
+      "D": "Tedavi edilse de 5 yıllık sağkalım beklenmez.",
+      "E": "Papilödem bu tabloyla ilişkili değildir."
+     },
+     "dogru": "B",
+     "aciklama": "Malign hipertansiyonda (genellikle sistolik >200, diyastolik >120 mmHg) zamanında tedaviyle hastaların ~%50'si 5 yıl veya daha uzun yaşar.",
+     "sik_aciklamalari": {
+      "A": "Bu değerler ve bulgular malign hipertansiyonu gösterir.",
+      "B": "Doğru. Malign hipertansiyonda (genellikle sistolik >200, diyastolik >120 mmHg) zamanında tedaviyle hastaların ~%50'si 5 yıl veya daha uzun yaşar.",
+      "C": "Hiyalin arteriyoloskleroz benign nefrosklerozun bulgusudur.",
+      "D": "Zamanında tedaviyle ~%50 5 yıl veya daha uzun yaşar.",
+      "E": "Papilödem malign hipertansiyonun bulgusudur."
+     },
+     "bilgi": [
+      26,
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "1c5e94123e02",
+     "soru": "Küçük arter ve duvarlarının homojen pembe materyal birikimi ile görülen renal vasküler hastalık hangisidir?",
+     "secenekler": {
+      "A": "Malign hipertansiyon (Malign nefroskleroz)",
+      "B": "Kronik pyelonefrit",
+      "C": "Nefroskleroz (Arterionefroskleroz)",
+      "D": "Kronik glomerülonefrit",
+      "E": "Hiperplastik arteriyoloskleroz"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "5b9ad411e63a",
+     "soru": "Renal vasküler hastalıklar - Nekrotizan arteriyolit ve hiperplastik arteriyolitin görüldüğü böbrek patolojisi hangisidir?",
+     "secenekler": {
+      "A": "Kronik pyelonefrit",
+      "B": "Malign hipertansiyon (Malign nefroskleroz)",
+      "C": "Nefroskleroz (Arterionefroskleroz)",
+      "D": "Hyalin arteriyoloskleroz",
+      "E": "Kronik glomerülonefrit"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Kronik böbrek hastalığının patogenezini, morfolojisini, klinik özelliklerini ve ortak son yolak olduğunu açıklar.",
+   "sorular": [
+    {
+     "id": "k1-41-q28",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Kronik böbrek hastalığının ilerlemesinde kalan nefronlarda gelişen ve sonunda daha fazla nefron kaybına yol açan değişiklik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hiperfiltrasyon, glomerüler hipertrofi ve kapiller hipertansiyon",
+      "B": "Nefronların hızla çoğalması",
+      "C": "Glomerüler filtrasyonun tamamen durması",
+      "D": "Kollajen yıkımının artması",
+      "E": "Tübüllerin hipertrofik olarak rejenere olması"
+     },
+     "dogru": "A",
+     "aciklama": "Kalan nefronlardaki hiperfiltrasyon zamanla proteinüri, mezangial matris birikimi ve skleroza yol açar; bu kendi kendini besleyen döngü ilerleyici fonksiyon kaybı yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kalan nefronlardaki hiperfiltrasyon zamanla proteinüri, mezangial matris birikimi ve skleroza yol açar; bu kendi kendini besleyen döngü ilerleyici fonksiyon kaybı yapar.",
+      "B": "Nefronlar yeniden oluşmaz.",
+      "C": "Kalan nefronlarda GFR artar.",
+      "D": "Kollajen birikir ve fibrozis gelişir.",
+      "E": "Tübüler atrofi gelişir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q29",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Kronik böbrek hastalığının morfolojisi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Böbrekler büyümüş ve yüzeyleri düzgündür.",
+      "B": "Vasküler/glomerüler kökenli olanlarda böbrekler simetrik küçük ve granüler yüzeylidir; piyelonefrit kökenli olanlarda asimetrik ve düzensiz skarlıdır.",
+      "C": "Mikroskopide normal glomerüller görülür.",
+      "D": "İnterstisyel fibrozis görülmez.",
+      "E": "Damar duvarları incelir ve lümenler genişler."
+     },
+     "dogru": "B",
+     "aciklama": "Son dönem böbrekte sklerotik glomerüller, tübüler atrofi, belirgin interstisyel fibrozis, lenfosit/plazma hücre infiltrasyonu ve damar duvarı kalınlaşması görülür.",
+     "sik_aciklamalari": {
+      "A": "Böbrekler küçülür: böbrekler büyümüş ve yüzeyleri düzgündür.",
+      "B": "Doğru. Son dönem böbrekte sklerotik glomerüller, tübüler atrofi, belirgin interstisyel fibrozis, lenfosit/plazma hücre infiltrasyonu ve damar duvarı kalınlaşması görülür.",
+      "C": "Yaygın glomeruloskleroz görülür.",
+      "D": "Belirgin interstisyel fibrozis vardır.",
+      "E": "Damar duvarları kalınlaşır ve lümenler daralır."
+     },
+     "bilgi": [
+      29,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q30",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Kronik böbrek hastalığının klinik özellikleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Başlangıç sinsi olup yıllarca asemptomatik olabilir.",
+      "B": "İlk bulgular proteinüri, azotemi ve hipertansiyondur.",
+      "C": "İlerleyen dönemde hiperpotasemi, metabolik asidoz ve anemi görülür.",
+      "D": "Kemik mineral bozuklukları gelişebilir.",
+      "E": "Kronik böbrek hastalığı yalnızca glomerüler hastalıklardan gelişir; tübülointerstisyel, vasküler ve kistik hastalıklar KBH'ye yol açmaz."
+     },
+     "dogru": "E",
+     "aciklama": "KBH glomerüler, tübülointerstisyel, vasküler ve kistik hastalıkların ortak son evresidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: başlangıç sinsi olup yıllarca asemptomatik olabilir.",
+      "B": "Doğru ifade: i̇lk bulgular proteinüri, azotemi ve hipertansiyondur.",
+      "C": "Doğru ifade: i̇lerleyen dönemde hiperpotasemi, metabolik asidoz ve anemi görülür.",
+      "D": "Doğru ifade: kemik mineral bozuklukları gelişebilir.",
+      "E": "Yanlış ifade (aranan cevap). KBH glomerüler, tübülointerstisyel, vasküler ve kistik hastalıkların ortak son evresidir."
+     },
+     "bilgi": [
+      29,
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Genetik faktörlerin (APOL1) ve böbrek hasarının klinik öneminin değerlendirilmesini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-41-q31",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Afrika kökenli bireylerde kronik böbrek hastalığı riskini artıran ve tripanosom enfeksiyonuna direnç sağlayan gen aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "APOL1",
+      "B": "COL4A5",
+      "C": "PKD1",
+      "D": "PLA2R1",
+      "E": "ADAMTS13"
+     },
+     "dogru": "A",
+     "aciklama": "APOL1 polimorfizmleri tripanosom enfeksiyonuna direnç sağlarken böbrek hastalığı riskini artırır; mekanizma tam olarak bilinmemektedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. APOL1 polimorfizmleri tripanosom enfeksiyonuna direnç sağlarken böbrek hastalığı riskini artırır; mekanizma tam olarak bilinmemektedir.",
+      "B": "COL4A5 Alport sendromuyla ilişkilidir.",
+      "C": "PKD1 polikistik böbrek hastalığıyla ilişkilidir.",
+      "D": "PLA2R membranöz nefropatide otoantikor hedefidir.",
+      "E": "ADAMTS13 eksikliği TTP yapar."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q32",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Sistemik hastalığı olan hastalarda böbrek hasarının değerlendirilmesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Böbrek fonksiyonu yalnızca semptom geliştiğinde değerlendirilmelidir.",
+      "B": "Erken dönemde böbrek fonksiyon taraması ve idrar tahlili (proteinüri, hematüri) yapılmalı; gerekirse biyopsiyle morfolojik alt tip ve evre belirlenmelidir.",
+      "C": "İdrar tahlilinin tanıda değeri yoktur.",
+      "D": "Biyopsi hiçbir zaman tedaviyi etkilemez.",
+      "E": "Sistemik hastalığın kontrolü böbrek prognozunu etkilemez."
+     },
+     "dogru": "B",
+     "aciklama": "Tedavi sistemik hastalığın optimal kontrolü ve böbrek hedefli stratejilerle progresyonun yavaşlatılmasıdır.",
+     "sik_aciklamalari": {
+      "A": "KBH başlangıçta asemptomatik olduğundan erken tarama gerekir.",
+      "B": "Doğru. Tedavi sistemik hastalığın optimal kontrolü ve böbrek hedefli stratejilerle progresyonun yavaşlatılmasıdır.",
+      "C": "İdrar tahlili proteinüri ve hematüriyi gösterir.",
+      "D": "Biyopsi tedavi seçimini etkiler.",
+      "E": "Sistemik hastalığın kontrolü progresyonu yavaşlatır."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-41-q33",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "APOL1 geni ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "APOL1 polimorfizmleri yalnızca Avrupa kökenli bireylerde görülür.",
+      "B": "Belirli polimorfizmler tripanosom enfeksiyonuna direnç sağlarken böbrek hastalığı riskini artırır; mekanizma tam bilinmemekte, hedefe yönelik ilaçların klinik denemeleri sürmektedir.",
+      "C": "APOL1 mutasyonu Alport sendromunun nedenidir.",
+      "D": "APOL1 varyantları böbrek hastalığı riskini azaltır.",
+      "E": "APOL1'i hedefleyen onaylı ve rutin kullanılan tedavi vardır."
+     },
+     "dogru": "B",
+     "aciklama": "Afrika kökenli Amerikalılarda KBH yaklaşık 5 kat daha sıktır ve APOL1 varyantları bu farkın önemli bir kısmını açıklar.",
+     "sik_aciklamalari": {
+      "A": "Özellikle Afrika kökenli bireylerde önemlidir.",
+      "B": "Doğru. Afrika kökenli Amerikalılarda KBH yaklaşık 5 kat daha sıktır ve APOL1 varyantları bu farkın önemli bir kısmını açıklar.",
+      "C": "Alport sendromu tip IV kollajen mutasyonudur.",
+      "D": "Varyantlar riski artırır.",
+      "E": "Hedefe yönelik ilaçlar klinik deneme aşamasındadır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 33,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:07"
+}

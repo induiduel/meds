@@ -1,0 +1,1019 @@
+{
+ "id": "k1-34-genital-enfeksiyonlar",
+ "sira": 34,
+ "kurul": 1,
+ "ders": "Enfeksiyon Hastalıkları",
+ "konu": "Genital Enfeksiyonlar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
+ "tarih": "2026-09-29",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Genital cilt ve mukoza enfeksiyonlarını (sifiliz, şankroid, LGV, donovanozis, HPV, molluscum, uyuz) sınıflandırır.",
+   "sorular": [
+    {
+     "id": "k1-34-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki genital cilt-mukoza enfeksiyonlarından hangisi cinsel yolla bulaşan grupta yer almaz?",
+     "secenekler": {
+      "A": "Donovanozis",
+      "B": "Sifiliz",
+      "C": "Şankroid",
+      "D": "Follikülit",
+      "E": "Uyuz"
+     },
+     "dogru": "D",
+     "aciklama": "Cinsel yolla bulaşanlar sifiliz, şankroid, LGV, donovanozis, HPV, molluscum ve uyuzdur; follikülit diğer enfeksiyonlar grubundadır.",
+     "sik_aciklamalari": {
+      "A": "CYBH'dir; bu nedenle doğru seçenek değildir.",
+      "B": "CYBH'dir; bu nedenle doğru seçenek değildir.",
+      "C": "CYBH'dir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: follikülit CYBH grubunda değildir.",
+      "E": "Cinsel temasla bulaşabilir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Donovanozisin (granüloma inguinale) etkeni hangisidir?",
+     "secenekler": {
+      "A": "Chlamydia trachomatis L1–L3",
+      "B": "Haemophilus ducreyi",
+      "C": "Klebsiella granulomatis",
+      "D": "Treponema pallidum",
+      "E": "HPV"
+     },
+     "dogru": "C",
+     "aciklama": "Donovanozis subkutan papül, nodül, derin doku nekrozu ve kanama yapar; LAP yoktur.",
+     "sik_aciklamalari": {
+      "A": "LGV etkenidir; bu nedenle doğru seçenek değildir.",
+      "B": "Şankroid etkenidir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: donovanozis etkenidir.",
+      "D": "Sifiliz etkenidir; bu nedenle doğru seçenek değildir.",
+      "E": "Kondilom etkenidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Genital lezyon–etken eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kondiloma lata – sekonder sifiliz",
+      "B": "Kondiloma aküminata – HPV",
+      "C": "Düzensiz, nekrotik yumuşak ülser – şankroid",
+      "D": "Papül/herpes benzeri ülser ve büyük bubo – LGV",
+      "E": "Düzgün kenarlı sert tabanlı ülser – şankroid"
+     },
+     "dogru": "E",
+     "aciklama": "Düzgün kenarlı sert tabanlı ülser primer sifilizin şankrıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış eşleştirme (aranan cevap): sert şankr sifilize aittir."
+     },
+     "bilgi": [
+      5,
+      6,
+      7,
+      9,
+      31
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Genital cilt ve mukoza lezyonlarında ağrı ve lenfadenopati bulgularına göre ayırıcı tanı yapar.",
+   "sorular": [
+    {
+     "id": "k1-34-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki genital ülserlerden hangisi tipik olarak ağrılıdır?",
+     "secenekler": {
+      "A": "Primer sifiliz",
+      "B": "Genital herpes",
+      "C": "LGV'deki primer lezyon",
+      "D": "Granüloma inguinale",
+      "E": "Molluscum contagiosum"
+     },
+     "dogru": "B",
+     "aciklama": "HSV ve şankroid ağrılıdır; sifiliz, LGV, granüloma inguinale, HPV ve molluscum ağrısızdır.",
+     "sik_aciklamalari": {
+      "A": "Sifiliz ağrısızdır; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: herpes ağrılıdır.",
+      "C": "LGV primer lezyonu ağrısızdır.",
+      "D": "Granüloma inguinale ağrısızdır.",
+      "E": "Molluscum ağrısızdır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Peniste ağrısız, 1–2 cm, tabanı sert ülser ve ağrısız bilateral lenfadenopatisi olan hastada en olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Şankroid",
+      "B": "Primer sifiliz",
+      "C": "Genital herpes",
+      "D": "LGV",
+      "E": "Donovanozis"
+     },
+     "dogru": "B",
+     "aciklama": "Sifilizde ağrısız sert ülser ve ağrısız bilateral LAP tipiktir.",
+     "sik_aciklamalari": {
+      "A": "Şankroid ağrılı ülser ve ağrılı bubo yapar.",
+      "B": "Doğru: sifilizin tipik tablosudur.",
+      "C": "Herpes ağrılı ülser ve hassas LAP yapar.",
+      "D": "LGV'de belirgin ağrılı bubo vardır.",
+      "E": "Donovanoziste LAP yoktur."
+     },
+     "bilgi": [
+      2,
+      3,
+      5
+     ],
+     "benzer_cikmis": [
+      "608fd8157f3b",
+      "b30842036c7c",
+      "d7bd6ad27b1f"
+     ]
+    },
+    {
+     "id": "k1-34-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Genital lezyonlarda lenfadenopati paterni ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sifilizde ağrısız bilateral LAP görülür",
+      "B": "HSV'de hassas bilateral LAP görülür",
+      "C": "Şankroidde ağrılı, fluktuasyon ve rüptür gösterebilen bubo görülür",
+      "D": "LGV'de ağrılı büyük bubo görülür",
+      "E": "Granüloma inguinalede belirgin ağrılı bubo tipiktir"
+     },
+     "dogru": "E",
+     "aciklama": "Granüloma inguinalede LAP yoktur; subkutan granülom yalancı LAP görüntüsü verebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): LAP yoktur."
+     },
+     "bilgi": [
+      3,
+      8
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "608fd8157f3b",
+     "soru": "e fizik muayenede 1-2 cm, tabanı sert ülser saptanan, LAP saptanmayan hastada öncelikle düşünülmesi gerek enfeksiyon hastalığı hangisidir?",
+     "secenekler": {
+      "A": "HSV enfeksiyonu",
+      "B": "Lenfogranüloma venerum",
+      "C": "Sifiliz",
+      "D": "Şankroid",
+      "E": "Granüloma inguinale"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "b30842036c7c",
+     "soru": "Peniste ağrısız yara ile başvuran ve fizik muayenede 1-2 cm, tabanı sert ülser saptanan, LAP saptanmayan hastada öncelikle düşünülmesi gerek enfeksiyon hastalığı hangisidir?",
+     "secenekler": {
+      "A": "HSV enfeksiyonu",
+      "B": "Lenfogranüloma venerum",
+      "C": "Sifiliz",
+      "D": "Şankroid",
+      "E": "Granüloma inguinale"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d7bd6ad27b1f",
+     "soru": "Enfeksiyon Hastalıkları Enfeksiyon8 Peniste ağrısız yara ile başvuran ve fizik muayenede 1-2 cm, tabanı sert ülser saptanan, LAP saptanmayan hastada öncelikle düşünülmesi gerek enfeksiyon hastalığı hangisidir?",
+     "secenekler": {
+      "A": "HSV enfeksiyonu",
+      "B": "Lenfogranüloma venerum",
+      "C": "Sifiliz",
+      "D": "Şankroid",
+      "E": "Granüloma inguinale"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Vajinal enfeksiyonların anamnez ve fizik muayene özelliklerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-34-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Vajinal enfeksiyon düşünülen kadının anamnezinde sorgulanması gereken durumlar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Kontrasepsiyon yöntemi",
+      "B": "Menstrüasyon ve gebelik",
+      "C": "Göz rengi",
+      "D": "Diabetes mellitus",
+      "E": "HIV durumu"
+     },
+     "dogru": "C",
+     "aciklama": "Menstrüasyon, gebelik, kontrasepsiyon, geçirilmiş ÜSE, cinsel yaşam, alerji, DM ve HIV sorgulanır.",
+     "sik_aciklamalari": {
+      "A": "Sorgulanmalıdır; bu nedenle doğru seçenek değildir.",
+      "B": "Sorgulanmalıdır; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: sorgulanması gerekmez.",
+      "D": "Sorgulanmalıdır; bu nedenle doğru seçenek değildir.",
+      "E": "Sorgulanmalıdır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Vajinal muayenede diffüz perineal eritem hangi enfeksiyonlarda görülebilir?",
+     "secenekler": {
+      "A": "Yalnızca HPV",
+      "B": "Yalnızca bakteriyel vajinoz",
+      "C": "Yalnızca sifiliz",
+      "D": "Trikomoniyaz ve kandidiyaz",
+      "E": "Yalnızca donovanozis"
+     },
+     "dogru": "D",
+     "aciklama": "Diffüz perineal eritem trikomoniyaz ve kandidiyazda; papül/papülopüstül kandidiyazda görülür. BV'de inflamasyon yoktur.",
+     "sik_aciklamalari": {
+      "A": "HPV siğil yapar; bu nedenle doğru seçenek değildir.",
+      "B": "BV'de inflamasyon yoktur.",
+      "C": "Sifiliz ülser yapar.",
+      "D": "Doğru: perineal eritem bu iki enfeksiyonda görülür.",
+      "E": "Donovanozis nodül/ülser yapar."
+     },
+     "bilgi": [
+      10,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Vajinit ayırıcı tanısında akıntı özelliği–etken eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Beyaz, koyu kıvamlı akıntı ve belirgin kaşıntı – kandidiyaz",
+      "B": "İnce, homojen, balık kokulu akıntı – bakteriyel vajinoz",
+      "C": "Sarı-yeşil pürülan akıntı ve çilek görünümü – trikomoniyaz",
+      "D": "Clue cell – bakteriyel vajinoz",
+      "E": "Hareketli flagellalı parazit – kandidiyaz"
+     },
+     "dogru": "E",
+     "aciklama": "Hareketli flagellalı parazit trikomoniyazın bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış eşleştirme (aranan cevap): trikomonasa aittir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Vulvovajinit kandidiyazın klinik, tanı ve tedavisini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-34-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Komplike olmamış vulvovajinal kandidiyazda önerilen oral tedavi hangisidir?",
+     "secenekler": {
+      "A": "Seftriakson 250 mg",
+      "B": "Metronidazol 2 g tek doz",
+      "C": "Flukonazol 150 mg tek doz",
+      "D": "Asiklovir",
+      "E": "Penisilin"
+     },
+     "dogru": "C",
+     "aciklama": "Komplike olmamış VVK'da topikal antifungal veya flukonazol 150 mg PO tek doz verilir.",
+     "sik_aciklamalari": {
+      "A": "Gonore tedavisidir; bu nedenle doğru seçenek değildir.",
+      "B": "Trikomonas/BV tedavisidir.",
+      "C": "Doğru: önerilen tedavidir.",
+      "D": "Herpes tedavisidir; bu nedenle doğru seçenek değildir.",
+      "E": "Sifiliz tedavisidir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Vulvovajinal kandidiyaz için risk faktörleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Hücresel immün yetmezlik",
+      "B": "Diabetes mellitus",
+      "C": "Antibiyotik kullanımı",
+      "D": "Vajinal laktobasil florasının korunması",
+      "E": "Sıkı giysiler"
+     },
+     "dogru": "D",
+     "aciklama": "Risk faktörleri DM, antibiyotik, bozulmuş fagositoz, hücresel immün yetmezlik ve sıkı giysilerdir.",
+     "sik_aciklamalari": {
+      "A": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "B": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "C": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: sağlıklı flora koruyucudur.",
+      "E": "Risk faktörüdür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Komplike veya rekürren vulvovajinal kandidiyazda yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Tek doz flukonazol her zaman yeterlidir",
+      "B": "Kültür/antifungal duyarlılık testi ve 10–14 gün tedavi; albicans dışı türler tedaviye dirençli olabilir",
+      "C": "Metronidazol eklenir",
+      "D": "Tedavi gerekmez",
+      "E": "Yalnızca eş tedavi edilir"
+     },
+     "dogru": "B",
+     "aciklama": "Albicans dışı türler tekrarlayan ve tedavisi güç enfeksiyonlara yol açar; komplike olgularda kültür ve uzun tedavi gerekir.",
+     "sik_aciklamalari": {
+      "A": "Komplike olguda yetersiz kalabilir.",
+      "B": "Doğru: komplike VVK yaklaşımıdır.",
+      "C": "Metronidazol antifungal değildir.",
+      "D": "Tedavi gerekir; bu nedenle doğru seçenek değildir.",
+      "E": "Eş tedavisi temel yaklaşım değildir."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Bakteriyel vajinozisin etkenini, risk faktörlerini, Amsel kriterlerini ve tedavisini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-34-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Bakteriyel vajinozun Amsel kriterlerinden biri hangisidir?",
+     "secenekler": {
+      "A": "Hareketli trofozoit",
+      "B": "Vajen pH < 3,5",
+      "C": "Beyaz peynirimsi akıntı",
+      "D": "Vajen pH > 4,5",
+      "E": "Gram negatif diplokok"
+     },
+     "dogru": "D",
+     "aciklama": "Amsel: ince homojen akıntı, pH > 4,5, Whiff testi pozitifliği ve ≥%20 clue cell; üç kriter tanı için yeterlidir.",
+     "sik_aciklamalari": {
+      "A": "Trikomonas bulgusudur.",
+      "B": "Asidik pH normal floradır.",
+      "C": "Kandidiyaz bulgusudur.",
+      "D": "Doğru: Amsel kriteridir.",
+      "E": "Gonore bulgusudur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bakteriyel vajinozun patogenezi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tek bir virüsün enfeksiyonu",
+      "B": "Candida'nın aşırı çoğalması",
+      "C": "Laktobasillerin azalması ve Gardnerella vaginalis ile zorunlu anaeropların sinerjik çoğalması",
+      "D": "Trichomonas'ın invazyonu",
+      "E": "Laktobasillerin artması"
+     },
+     "dogru": "C",
+     "aciklama": "Normal florada ~%96 laktobasil bulunur; BV'de Gardnerella ve anaeroplar (Mobiluncus, Atopobium) çoğalır.",
+     "sik_aciklamalari": {
+      "A": "BV bakteriyeldir; bu nedenle doğru seçenek değildir.",
+      "B": "Bu kandidiyazdır; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: BV'nin patogenezidir.",
+      "D": "Bu trikomoniyazdır; bu nedenle doğru seçenek değildir.",
+      "E": "Laktobasiller azalır."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Bakteriyel vajinoz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Balık kokusu ilişki sonrası ve menstrüasyonda artar",
+      "B": "Vajen duvarında inflamasyon yoktur",
+      "C": "Tedavide metronidazol veya klindamisin kullanılır",
+      "D": "Semptomatik gebeler tedavi edilir",
+      "E": "Semptomları düzelen kadınlarda eş tedavisi her zaman zorunludur"
+     },
+     "dogru": "E",
+     "aciklama": "BV'de semptomları düzelenlerde kontrol ve eş tedavisi gerekmez.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): eş tedavisi gerekmez."
+     },
+     "bilgi": [
+      14,
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Trikomonas enfeksiyonunun klinik, tanı ve tedavisini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-34-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Vajen mukozasında 'çilek görünümü' hangi enfeksiyonun tipik bulgusudur?",
+     "secenekler": {
+      "A": "Bakteriyel vajinoz",
+      "B": "Trikomoniyaz",
+      "C": "Kandidiyaz",
+      "D": "Gonore",
+      "E": "Sifiliz"
+     },
+     "dogru": "B",
+     "aciklama": "Trikomoniyazda vulvar irritasyon, sarı-yeşil pürülan akıntı, dizüri, ağrılı koitus ve çilek görünümü görülür.",
+     "sik_aciklamalari": {
+      "A": "BV'de inflamasyon yoktur.",
+      "B": "Doğru: trikomonasın tipik bulgusudur.",
+      "C": "Kandidada beyaz plaklar görülür.",
+      "D": "Gonore servisit yapar.",
+      "E": "Sifiliz ülser yapar."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Trikomonas enfeksiyonunun tedavisi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Eş tedavisi gerekmez",
+      "B": "Yalnızca lokal tedavi yeterlidir",
+      "C": "Metronidazol 2 g tek doz veya 2x500 mg bir hafta; eş tedavisi gerekir, tek başına lokal tedavi önerilmez",
+      "D": "Flukonazol ilk tercihtir",
+      "E": "Gebede tedavi kontrendikedir"
+     },
+     "dogru": "C",
+     "aciklama": "Trikomonas tedavisinde sistemik metronidazol ve eş tedavisi esastır; semptomatik gebeler tedavi edilir.",
+     "sik_aciklamalari": {
+      "A": "Eş tedavisi gerekir.",
+      "B": "Lokal tedavi tek başına önerilmez.",
+      "C": "Doğru: tedavi ilkesidir.",
+      "D": "Flukonazol antifungaldir.",
+      "E": "Semptomatik gebeler tedavi edilir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Gebelikte trikomonas enfeksiyonunun yol açabileceği olumsuz sonuçlar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Erken membran rüptürü",
+      "B": "Fetal nöral tüp defekti",
+      "C": "Erken doğum",
+      "D": "Düşük doğum ağırlığı",
+      "E": "Hepsi trikomonasla ilişkilidir"
+     },
+     "dogru": "B",
+     "aciklama": "Trikomonas gebelikte erken membran rüptürü, erken doğum ve düşük doğum ağırlığı nedeni olabilir.",
+     "sik_aciklamalari": {
+      "A": "İlişkili sonuçtur; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: NTD trikomonasla ilişkili değildir.",
+      "C": "İlişkili sonuçtur; bu nedenle doğru seçenek değildir.",
+      "D": "İlişkili sonuçtur; bu nedenle doğru seçenek değildir.",
+      "E": "A seçeneği ilişkili değildir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Servisit ve endometritin nedenlerini, klinik bulgularını ve tanısını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-34-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Kronik servisitin en sık nedeni hangisidir?",
+     "secenekler": {
+      "A": "Mycoplasma genitalium",
+      "B": "HSV",
+      "C": "Trichomonas vaginalis",
+      "D": "Enfeksiyon dışı mekanik/kimyasal irritanlar",
+      "E": "Tüberküloz"
+     },
+     "dogru": "D",
+     "aciklama": "Akut servisit HSV, T. vaginalis, M. genitalium, Tbc, M. hominis ve U. urealyticum ile; kronik servisit mekanik/kimyasal irritanlarla oluşur.",
+     "sik_aciklamalari": {
+      "A": "Akut servisit etkenidir.",
+      "B": "Akut servisit etkenidir.",
+      "C": "Akut servisit etkenidir.",
+      "D": "Doğru: kronik servisitin nedenidir.",
+      "E": "Akut servisit etkenleri arasında sayılmıştır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Servisitte beklenen klinik özellikler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Servikal eksuda",
+      "B": "Pürülan/mukopürülan akıntı",
+      "C": "Servikal frajilite",
+      "D": "Karın muayenesinde defans ve rebound",
+      "E": "Asemptomatik seyir"
+     },
+     "dogru": "D",
+     "aciklama": "Servisit asemptomatik olabilir veya pürülan/mukopürülan akıntı ve frajilite yapar; defans ve rebound peritoniti (PİH) düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Servisit bulgusudur.",
+      "B": "Servisit bulgusudur.",
+      "C": "Servisit bulgusudur.",
+      "D": "Doğru: servisitte beklenmez.",
+      "E": "Servisit asemptomatik olabilir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": [
+      "d376d0d4439c"
+     ]
+    },
+    {
+     "id": "k1-34-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Endometritin kesin tanısı hangi yöntemle konur?",
+     "secenekler": {
+      "A": "Göğüs grafisi",
+      "B": "Yalnızca klinik muayene",
+      "C": "Serum CRP",
+      "D": "İdrar kültürü",
+      "E": "Endometrial biyopsi (histopatoloji)"
+     },
+     "dogru": "E",
+     "aciklama": "Endometrit adet arası, fazla ve postkoital kanama yapar; genellikle alt genital enfeksiyonla birliktedir; kesin tanı biyopsiyle konur.",
+     "sik_aciklamalari": {
+      "A": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "B": "Klinik tanı kesin değildir.",
+      "C": "CRP spesifik değildir.",
+      "D": "İdrar kültürü endometriti göstermez.",
+      "E": "Doğru: kesin tanı histopatolojiktir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d376d0d4439c",
+     "soru": "Servisitte beklenen klinik özelliklerden hangisi DEĞİLDİR?",
+     "secenekler": {
+      "A": "Pelvik ağrı",
+      "B": "Vajinal akıntı",
+      "C": "Servikal eksuda",
+      "D": "Karın muayenesinde defans-rebound",
+      "E": "Disparoni"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Endometrit, salpenjit ve pelvik absenin özelliklerini özetler.",
+   "sorular": [
+    {
+     "id": "k1-34-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Doğum sonu endometrit riski hangi doğum şeklinde daha yüksektir?",
+     "secenekler": {
+      "A": "İkisi eşittir",
+      "B": "Vajinal doğum",
+      "C": "Sezaryen",
+      "D": "Doğum şekli etkilemez",
+      "E": "Yalnızca evde doğum"
+     },
+     "dogru": "C",
+     "aciklama": "Doğum sonu endometrit vajinal doğumda %2–5, sezaryende %20–55 oranındadır.",
+     "sik_aciklamalari": {
+      "A": "Oranlar farklıdır; bu nedenle doğru seçenek değildir.",
+      "B": "Risk daha düşüktür; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: sezaryende risk çok daha yüksektir.",
+      "D": "Doğum şekli etkiler.",
+      "E": "Bu ifade veriyi yansıtmaz."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Endometrit tipleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Akut endometrit (PİH)",
+      "B": "Konjenital endometrit",
+      "C": "Kronik endometrit",
+      "D": "Doğum sonu endometrit",
+      "E": "Hepsi endometrit tipidir"
+     },
+     "dogru": "B",
+     "aciklama": "Endometritin akut (PİH), kronik ve doğum sonu tipleri vardır.",
+     "sik_aciklamalari": {
+      "A": "Endometrit tipidir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: tanımlanmış bir tip değildir.",
+      "C": "Endometrit tipidir; bu nedenle doğru seçenek değildir.",
+      "D": "Endometrit tipidir; bu nedenle doğru seçenek değildir.",
+      "E": "A seçeneği bir tip değildir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Endometrit, salpenjit ve pelvik apseyi kapsayan üst genital enfeksiyonlar ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hiçbir zaman alt genital enfeksiyonla ilişkili değildir",
+      "B": "Genellikle alt genital enfeksiyonla birliktedir ve PİH spektrumunda yer alır",
+      "C": "Yalnızca erkeklerde görülür",
+      "D": "Antibiyotik tedavisi gerektirmez",
+      "E": "Kronik pelvik ağrı yapmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Üst genital enfeksiyonlar asendan yolla alt genital enfeksiyondan gelişir ve PİH spektrumunda yer alır.",
+     "sik_aciklamalari": {
+      "A": "Alt genital enfeksiyonla birliktedir.",
+      "B": "Doğru: ilişki doğrudur.",
+      "C": "Kadın genital sistemini tutar.",
+      "D": "Antibiyotik gerektirir.",
+      "E": "Kronik ağrı sekeli yapabilir."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "İntrapartum, postpartum ve postoperatif genital enfeksiyonların etkenlerini ve tedavisini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-34-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Koryoamniyonit nasıl gelişir?",
+     "secenekler": {
+      "A": "Solunum yoluyla",
+      "B": "Hematojen yolla",
+      "C": "Membran rüptürü sonrası asendan yayılımla",
+      "D": "Fekal-oral yolla",
+      "E": "Vektör ısırığıyla"
+     },
+     "dogru": "C",
+     "aciklama": "Koryoamniyonit amniyotik sıvı ve membranların enfeksiyonudur; etkenler S. agalactiae, E. coli, Mycoplasma, G. vaginalis ve anaeroblardır.",
+     "sik_aciklamalari": {
+      "A": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "B": "Tipik yol değildir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: asendan yayılımla gelişir.",
+      "D": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "E": "İlgisizdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Postpartum endometrit (puerperal sepsis) tedavisinde kullanılan rejim hangisidir?",
+     "secenekler": {
+      "A": "Gentamisin + klindamisin",
+      "B": "Flukonazol",
+      "C": "Asiklovir",
+      "D": "Metronidazol 2 g tek doz",
+      "E": "Penisilin G tek başına"
+     },
+     "dogru": "A",
+     "aciklama": "Gentamisin + klindamisin veya ampisilin-sulbaktam, piperasilin-tazobaktam, sefoksitin kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: önerilen rejimdir.",
+      "B": "Antifungaldir; bu nedenle doğru seçenek değildir.",
+      "C": "Antiviraldir; bu nedenle doğru seçenek değildir.",
+      "D": "Trikomonas tedavisidir.",
+      "E": "Tek başına yeterli değildir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Postoperatif genital enfeksiyonlar ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Vajinal histerektomi sonrası daha sık görülür",
+      "B": "Erken dönemde peritonit ve gram negatif sepsis görülebilir",
+      "C": "Geç dönemde anaerobik apse gelişebilir",
+      "D": "Apse varlığında drenaj uygulanır",
+      "E": "Anaerob etkenler bu enfeksiyonlarda hiç rol oynamaz"
+     },
+     "dogru": "E",
+     "aciklama": "Etkenler S. agalactiae, E. coli, Klebsiella, Proteus, G. vaginalis ve anaeroblardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): anaeroblar önemli etkendir."
+     },
+     "bilgi": [
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Prostatit, epididimit ve orşitin özelliklerini ve tedavisini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-34-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Akut bakteriyel prostatitte rektal muayene bulgusu hangisidir?",
+     "secenekler": {
+      "A": "Şiş ve hassas prostat",
+      "B": "Sert nodüler prostat",
+      "C": "Normal prostat",
+      "D": "Küçük atrofik prostat",
+      "E": "Palpe edilemeyen prostat"
+     },
+     "dogru": "A",
+     "aciklama": "Akut bakteriyel prostatitte girişim öyküsü, alt üriner sistem şikayetleri, ateş ve şiş-hassas prostat görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tipik muayene bulgusudur.",
+      "B": "Sert nodül karsinomu düşündürür.",
+      "C": "Akut prostatitte prostat normal değildir.",
+      "D": "Atrofi beklenmez; bu nedenle doğru seçenek değildir.",
+      "E": "Prostat palpe edilir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Genitoüriner girişim sonrası gelişen akut bakteriyel prostatitte direnç sorunu nedeniyle tercih edilebilecek tedavi hangisidir?",
+     "secenekler": {
+      "A": "Karbapenem (2–4 hafta)",
+      "B": "Flukonazol",
+      "C": "Asiklovir",
+      "D": "Tek doz fosfomisin",
+      "E": "Metronidazol tek doz"
+     },
+     "dogru": "A",
+     "aciklama": "Kinolon direnci ve GSBL önemlidir; girişim öyküsü sonrası karbapenem kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: dirençli etkenlere yönelik seçenektir.",
+      "B": "Antifungaldir; bu nedenle doğru seçenek değildir.",
+      "C": "Antiviraldir; bu nedenle doğru seçenek değildir.",
+      "D": "Prostatit için yetersizdir.",
+      "E": "Uygun değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      27,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Granülomatöz epididimit/orşitte ayırıcı tanıda düşünülmesi gereken enfeksiyonlar hangileridir?",
+     "secenekler": {
+      "A": "Tüberküloz ve bruselloz",
+      "B": "Kandidiyaz ve trikomoniyaz",
+      "C": "HPV ve molluscum",
+      "D": "BV ve kandidiyaz",
+      "E": "Uyuz ve bit"
+     },
+     "dogru": "A",
+     "aciklama": "Granülomatöz epididimit/orşitte tüberküloz ve bruselloz düşünülmelidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: granülomatöz etkenlerdir.",
+      "B": "Granülomatöz epididimit nedeni değildir.",
+      "C": "Deri lezyonu yapar; bu nedenle doğru seçenek değildir.",
+      "D": "Vajinal enfeksiyonlardır.",
+      "E": "Ektoparazitlerdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Cinsel yolla bulaşan hastalık etkenlerini sıralar.",
+   "sorular": [
+    {
+     "id": "k1-34-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi cinsel yolla bulaşan hastalık etkeni değildir?",
+     "secenekler": {
+      "A": "Streptococcus pneumoniae",
+      "B": "Neisseria gonorrhoeae",
+      "C": "Treponema pallidum",
+      "D": "HPV",
+      "E": "Haemophilus ducreyi"
+     },
+     "dogru": "A",
+     "aciklama": "CYBH etkenleri gonokok, klamidya, trikomonas, T. pallidum, HIV, HPV, HSV, HBV, K. granulomatis, H. ducreyi ve molluscum'dur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: pnömokok CYBH etkeni değildir.",
+      "B": "CYBH etkenidir; bu nedenle doğru seçenek değildir.",
+      "C": "CYBH etkenidir; bu nedenle doğru seçenek değildir.",
+      "D": "CYBH etkenidir; bu nedenle doğru seçenek değildir.",
+      "E": "CYBH etkenidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki viral etkenlerden hangisi cinsel yolla bulaşabilir?",
+     "secenekler": {
+      "A": "HBV",
+      "B": "Rotavirüs",
+      "C": "Rinovirüs",
+      "D": "Kızamık virüsü",
+      "E": "Varisella zoster virüsü"
+     },
+     "dogru": "A",
+     "aciklama": "HIV, HPV, HSV ve HBV cinsel yolla bulaşan viral etkenlerdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: cinsel yolla bulaşabilir.",
+      "B": "Fekal-oral bulaşır; bu nedenle doğru seçenek değildir.",
+      "C": "Solunum yoluyla bulaşır.",
+      "D": "Solunum yoluyla bulaşır.",
+      "E": "Solunum/temasla bulaşır."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-34-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "CYBH etkenlerinin geniş spektrumda olmasının klinik yaklaşıma etkisi hangisidir?",
+     "secenekler": {
+      "A": "Sendromik değerlendirmenin önem kazanması",
+      "B": "Tanı testlerinin gereksizleşmesi",
+      "C": "Tek bir antibiyotiğin tüm etkenlere yeterli olması",
+      "D": "Partner değerlendirmesinin gereksizleşmesi",
+      "E": "Yalnızca viral etkenlerin araştırılması"
+     },
+     "dogru": "A",
+     "aciklama": "Geniş etken spektrumu nedeniyle sendromik değerlendirme önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: sendromik yaklaşımın gerekçesidir.",
+      "B": "Testler gereklidir; bu nedenle doğru seçenek değildir.",
+      "C": "Etkenler farklı tedaviler gerektirir.",
+      "D": "Partner değerlendirmesi gereklidir.",
+      "E": "Bakteri ve parazitler de etkendir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 33,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:56"
+}

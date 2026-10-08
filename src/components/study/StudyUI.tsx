@@ -1,4 +1,5 @@
 import React from 'react';
+import { SourceText } from '../ui/SourceText';
 import { parseExplanation } from '../QuestionCard';
 import { OptionKey, StudyQuestion } from '../../services/studyStore';
 
@@ -106,13 +107,9 @@ export const ExplanationBlock: React.FC<{ q: StudyQuestion; compact?: boolean }>
       {sections.map((s, i) => (
         <div key={i} className={sections.length > 1 ? 'grid grid-cols-1 sm:grid-cols-[120px_minmax(0,1fr)] gap-1 sm:gap-4' : ''}>
           {sections.length > 1 && <div className="text-[12px] font-semibold uppercase tracking-[0.06em] text-ink-2 pt-0.5">{s.label}</div>}
-          <p
-            className={`m-0 whitespace-pre-line leading-[1.6] ${compact ? 'text-[14px]' : 'text-[15px]'} ${
-              s.pearl ? 'px-3 py-2.5 rounded-lg bg-accent-soft' : ''
-            }`}
-          >
-            {s.body}
-          </p>
+          <div className={s.pearl ? 'px-3 py-2.5 rounded-lg bg-accent-soft' : ''}>
+            <SourceText text={s.body} size={compact ? 'sm' : 'md'} />
+          </div>
         </div>
       ))}
     </div>

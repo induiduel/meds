@@ -19,6 +19,7 @@ import {
 import { committeeShortLabel } from '../QuickAddHero';
 import { Segmented, OptionButton, ExplanationBlock, EmptyState, cardCls, btnPrimary, btnSecondary, btnGhost, selectCls, Field, isTypingTarget } from './StudyUI';
 import { QuestionAiChatDrawer } from '../QuestionAiChatDrawer';
+import { StudyReportButton } from './StudyReportButton';
 
 type Mode = 'all' | 'unsolved' | 'review' | 'wrong';
 
@@ -379,6 +380,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                 <NotebookPen className="w-4 h-4" />
                 <span className="hidden sm:inline">Not al</span>
               </button>
+              <StudyReportButton q={q} />
             </header>
 
             <h2 className={`m-0 font-display font-medium tracking-[-0.01em] leading-[1.35] ${q.stem.length > 220 ? 'text-[17px] sm:text-[19px]' : 'text-[19px] sm:text-[22px]'}`}>{q.stem}</h2>

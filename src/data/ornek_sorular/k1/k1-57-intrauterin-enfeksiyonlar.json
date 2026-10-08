@@ -1,0 +1,944 @@
+{
+ "id": "k1-57-intrauterin-enfeksiyonlar",
+ "sira": 57,
+ "kurul": 1,
+ "ders": "Enfeksiyon Hastalıkları",
+ "konu": "İntrauterin Enfeksiyonlar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
+ "tarih": "2026-10-13",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "İntrauterin (konjenital) enfeksiyonların tanımını yapmak ve transplasental, asendan ve doğum sırasında geçiş yollarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-57-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "İntrauterin enfeksiyonların başlıca bulaş yolları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Transplasental",
+      "B": "İnhalasyon",
+      "C": "Asendan",
+      "D": "Doğum sırasında geçiş",
+      "E": "Hepsi intrauterin bulaş yoludur"
+     },
+     "dogru": "B",
+     "aciklama": "Bulaş yolları transplasental, asendan ve doğum sırasında geçiştir.",
+     "sik_aciklamalari": {
+      "A": "Bulaş yoludur; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: inhalasyon intrauterin bulaş yolu değildir.",
+      "C": "Bulaş yoludur; bu nedenle doğru seçenek değildir.",
+      "D": "Bulaş yoludur; bu nedenle doğru seçenek değildir.",
+      "E": "A seçeneği bulaş yolu değildir."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Asendan yolla geçen intrauterin enfeksiyonlarda baskın etken grubu hangisidir?",
+     "secenekler": {
+      "A": "Helmintler",
+      "B": "Prionlar",
+      "C": "Bakteriler",
+      "D": "Yalnızca virüsler",
+      "E": "Yalnızca protozoonlar"
+     },
+     "dogru": "C",
+     "aciklama": "Transplasental yolda virüs, bakteri ve protozoa; asendan yolda bakteriler; doğumda bakteri ve virüsler geçer.",
+     "sik_aciklamalari": {
+      "A": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "B": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: asendan yolda bakteriler baskındır.",
+      "D": "Asendan yolda bakteriler baskındır.",
+      "E": "Protozoonlar transplasental geçer."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Vertikal geçişin en yüksek olasılıkla gerçekleştiği dönem ve olası sonuçları hangisidir?",
+     "secenekler": {
+      "A": "Postpartum 1. yıl; yalnızca ishal",
+      "B": "Gebelik öncesi; yapısal anomali",
+      "C": "İlk trimester; yalnızca abortus",
+      "D": "Doğum sırası; pnömoni, menenjit, sepsis, göz enfeksiyonu, hepatit ve HIV",
+      "E": "Konsepsiyon anı; genetik mutasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Doğum sırasında geçiş vertikal geçişin en olası dönemidir.",
+     "sik_aciklamalari": {
+      "A": "Bu postnatal dönemdir.",
+      "B": "Gebelik öncesi vertikal geçiş yoktur.",
+      "C": "İlk trimester teratojenite dönemidir.",
+      "D": "Doğru: dönem ve sonuçlar doğrudur.",
+      "E": "Enfeksiyon genetik mutasyon yapmaz."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "İntrauterin enfeksiyon etkenlerini (virüsler, bakteriler, protozoalar) gruplandırmak ve TORCH grubunu tanımlamak",
+   "sorular": [
+    {
+     "id": "k1-57-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "TORCH grubundaki 'R' harfi hangi etkeni ifade eder?",
+     "secenekler": {
+      "A": "Rotavirüs",
+      "B": "Rubella",
+      "C": "Rinovirüs",
+      "D": "Rickettsia",
+      "E": "RSV"
+     },
+     "dogru": "B",
+     "aciklama": "TORCH: Toxoplasma, Rubella, CMV, Herpes/HSV ve benzeri etkenler.",
+     "sik_aciklamalari": {
+      "A": "TORCH'ta yer almaz; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: R rubelladır.",
+      "C": "TORCH'ta yer almaz; bu nedenle doğru seçenek değildir.",
+      "D": "TORCH'ta yer almaz; bu nedenle doğru seçenek değildir.",
+      "E": "TORCH'ta yer almaz; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi intrauterin enfeksiyona yol açan protozoondur?",
+     "secenekler": {
+      "A": "CMV",
+      "B": "Listeria monocytogenes",
+      "C": "Treponema pallidum",
+      "D": "Toxoplasma gondii",
+      "E": "Rubella virüsü"
+     },
+     "dogru": "D",
+     "aciklama": "Protozoa etkenleri T. gondii ve T. cruzi'dir.",
+     "sik_aciklamalari": {
+      "A": "Virüstür; bu nedenle doğru seçenek değildir.",
+      "B": "Bakteridir; bu nedenle doğru seçenek değildir.",
+      "C": "Bakteridir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: protozoondur.",
+      "E": "Virüstür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "İntrauterin enfeksiyon etkenleri ile grup eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Borrelia – bakteri",
+      "B": "Trypanosoma cruzi – protozoon",
+      "C": "Enterovirüsler – virüs",
+      "D": "Campylobacter – bakteri",
+      "E": "Listeria monocytogenes – virüs"
+     },
+     "dogru": "E",
+     "aciklama": "Listeria monocytogenes bakteridir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış eşleştirme (aranan cevap): Listeria bakteridir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Enfeksiyonun oluştuğu döneme göre fetüs ve yenidoğan üzerindeki etkilerini (abortus, fetal gelişme geriliği, organ gelişim bozuklukları, prematürite, sepsis, menenjit) sıralamak",
+   "sorular": [
+    {
+     "id": "k1-57-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Organogenez döneminde geçirilen intrauterin enfeksiyonların en önemli sonucu hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca anne ateşi",
+      "B": "Hiçbir etkisi olmaması",
+      "C": "Teratojen etki ile organ gelişim bozuklukları",
+      "D": "Yalnızca makrozomi",
+      "E": "Postmatürite"
+     },
+     "dogru": "C",
+     "aciklama": "Organogenez döneminde enfeksiyonlar teratojen etki gösterir.",
+     "sik_aciklamalari": {
+      "A": "Fetal etkiler vardır.",
+      "B": "Belirgin etkileri vardır.",
+      "C": "Doğru: teratojenite riskidir.",
+      "D": "Tipik değildir; bu nedenle doğru seçenek değildir.",
+      "E": "Tipik değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Asendan geçişle oluşan intrauterin enfeksiyonun tipik sonuçları hangileridir?",
+     "secenekler": {
+      "A": "Yalnızca sağırlık",
+      "B": "Yalnızca katarakt",
+      "C": "Yalnızca konjenital kalp hastalığı",
+      "D": "Erken membran rüptürü, prematürite, neonatal sepsis ve menenjit",
+      "E": "Hiçbir sonuç yoktur"
+     },
+     "dogru": "D",
+     "aciklama": "Asendan geçiş abortus, EMR, prematürite, düşük doğum ağırlığı, serebral palsi, pnömoni, menenjit ve sepsise yol açar.",
+     "sik_aciklamalari": {
+      "A": "Rubella/CMV ile ilişkilidir.",
+      "B": "Rubella ile ilişkilidir.",
+      "C": "Rubella ile ilişkilidir.",
+      "D": "Doğru: asendan geçişin sonuçlarıdır.",
+      "E": "Sonuçları vardır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Transplasental geçişin fetüs üzerindeki etkileri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Fetal gelişme geriliği",
+      "B": "Abortus",
+      "C": "Postmatür doğum ve makrozomi",
+      "D": "SSS ve göz tutulumu",
+      "E": "Düşük doğum ağırlığı ve prematürite"
+     },
+     "dogru": "C",
+     "aciklama": "Transplasental geçiş abortus, gelişme geriliği, organ bozuklukları, düşük doğum ağırlığı ve prematüriteye yol açar.",
+     "sik_aciklamalari": {
+      "A": "Etkisidir; bu nedenle doğru seçenek değildir.",
+      "B": "Etkisidir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: beklenen sonuç değildir.",
+      "D": "Etkisidir; bu nedenle doğru seçenek değildir.",
+      "E": "Etkisidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Grup B streptokok enfeksiyonlarının kolonizasyon oranlarını, erken ve geç başlangıçlı hastalık özelliklerini ve korunma yaklaşımını (35-37. hafta kültürü) bilmek",
+   "sorular": [
+    {
+     "id": "k1-57-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Grup B streptokok taraması için gebelikte kültür hangi haftalarda alınır?",
+     "secenekler": {
+      "A": "8–10. hafta",
+      "B": "35–37. hafta",
+      "C": "20–22. hafta",
+      "D": "40. haftadan sonra",
+      "E": "Tarama yapılmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Tarama ve intrapartum profilaksi ile yenidoğan GBS hastalığı önlenir.",
+     "sik_aciklamalari": {
+      "A": "Çok erkendir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: tarama zamanıdır.",
+      "C": "Erkendir; bu nedenle doğru seçenek değildir.",
+      "D": "Çok geçtir; bu nedenle doğru seçenek değildir.",
+      "E": "Tarama yapılır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": [
+      "b94282e7d010",
+      "b6079d34889d"
+     ]
+    },
+    {
+     "id": "k1-57-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Erken başlangıçlı GBS enfeksiyonu ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca menenjitle seyreder",
+      "B": "Doğumdan 3 ay sonra görülür",
+      "C": "Doğumdan sonraki ilk haftada görülür; ağır pnömoni sepse ilerler ve mortalite pretermde %25'tir",
+      "D": "Mortalitesi yoktur",
+      "E": "Annede hiç kolonizasyon yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Erken başlangıçlı hastalık olguların %80–85'idir; mortalite pretermde %25, termde %5'tir.",
+     "sik_aciklamalari": {
+      "A": "Geç başlangıçlı form menenjitle seyreder.",
+      "B": "Bu geç başlangıçlıdır.",
+      "C": "Doğru: erken başlangıçlı hastalığın özellikleridir.",
+      "D": "Mortalitesi vardır; bu nedenle doğru seçenek değildir.",
+      "E": "Gebelerin %20–25'inde kolonizasyon vardır."
+     },
+     "bilgi": [
+      9,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "GBS ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Gebelerin %20–25'inde rektal ve vajinal kolonizasyon vardır",
+      "B": "Geç başlangıçlı hastalık 2. hafta ile 3. ay arasında menenjit ve bakteriyemi yapar",
+      "C": "Annede postpartum endometrit ve sezaryen sonrası yara enfeksiyonu yapabilir",
+      "D": "Erken doğum ve koryoamniyonitle ilişkilidir",
+      "E": "GBS kolonizasyonu gebelikte nadir olduğundan tarama gereksizdir"
+     },
+     "dogru": "E",
+     "aciklama": "Kolonizasyon sıktır ve 35–37. haftada tarama önerilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): tarama önerilir."
+     },
+     "bilgi": [
+      9,
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "b94282e7d010",
+     "soru": "Aşağıdakilerden hangisi intrauterin enfeksiyonlar için doğrudur?",
+     "secenekler": {
+      "A": "I. Grup B streptokokları için gebeliğin 35-37. haftasında tarama yapılmalıdır",
+      "B": "II. HIV pozitif annede yüksek viral yük bebeğe bulaş riskini artırmaktadır",
+      "C": "III. HBsAg pozitif anneden doğan bebeğe aktif ve pasif bağışıklama yapılmaktadır",
+      "D": "IV. Tüm gebelerde TORCH taraması yapılmalıdır",
+      "E": "Yalnız I ve III"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "b6079d34889d",
+     "soru": "Sıra No Enfeksiyon Hastalıkları Enfeksiyon19 Aşağıdakilerden hangisi intrauterin enfeksiyonlar için doğrudur? I. Grup B streptokoklar için gebeliğin 35-37. haftasında tarama yapılmalıdır II. HIV pozitif annede yüksek viral yük bebeğe bulaş riskini arttırmaktadır III. HBsAg pozitif anneden doğan bebeğe aktif ve pasif bağışıklama yapılmaktadır IV. Tüm gebelerde TORCH taraması yapılmalıdır",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız I ve III",
+      "C": "Yalnız II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Listeriyozun bulaş yolunu, gebelikte hücresel bağışıklık ilişkisini ve granulomatosis infantiseptica tablosunu açıklamak",
+   "sorular": [
+    {
+     "id": "k1-57-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Listeriyozun gebelere bulaş yolu hangisidir?",
+     "secenekler": {
+      "A": "Kan transfüzyonu",
+      "B": "Solunum yolu",
+      "C": "Cinsel temas",
+      "D": "Kontamine gıdalar (süt, sebze)",
+      "E": "Vektör ısırığı"
+     },
+     "dogru": "D",
+     "aciklama": "Listeria kontamine gıdalarla bulaşır; annede bakteriyemi ile fetüse geçer.",
+     "sik_aciklamalari": {
+      "A": "Tipik yol değildir; bu nedenle doğru seçenek değildir.",
+      "B": "Tipik yol değildir; bu nedenle doğru seçenek değildir.",
+      "C": "Tipik yol değildir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: gıda kaynaklı bulaşır.",
+      "E": "Tipik yol değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Gebelikte listeriyoza duyarlılığın artma nedeni ve dönemi hangisidir?",
+     "secenekler": {
+      "A": "Hümoral bağışıklığın artması; ilk trimester",
+      "B": "Hücresel bağışıklığın baskılanması; özellikle 26–30. haftalar",
+      "C": "Mide asidinin artması; doğum sonrası",
+      "D": "Kompleman artışı; 40. hafta",
+      "E": "Duyarlılık artmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Listeria hücre içi bakteridir; gebelikte hücresel bağışıklıktaki değişiklik duyarlılığı artırır.",
+     "sik_aciklamalari": {
+      "A": "Mekanizma yanlıştır.",
+      "B": "Doğru: mekanizma ve dönem doğrudur.",
+      "C": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "D": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "E": "Duyarlılık artar; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Karaciğer ve dalakta yaygın mikroapseler ve granülomlarla seyreden yenidoğan tablosu hangisidir?",
+     "secenekler": {
+      "A": "Erken başlangıçlı GBS",
+      "B": "Konjenital rubella sendromu",
+      "C": "Konjenital CMV",
+      "D": "Konjenital toksoplazmoz",
+      "E": "Granulomatosis infantiseptica (konjenital listeriyoz)"
+     },
+     "dogru": "E",
+     "aciklama": "Listeriyozda annede kendini sınırlayan ateşli tablo, fetüste %20 abortus/ölü doğum/neonatal ölüm görülür.",
+     "sik_aciklamalari": {
+      "A": "GBS pnömoni/sepsis yapar.",
+      "B": "Rubella katarakt, sağırlık ve kalp hastalığı yapar.",
+      "C": "CMV periventriküler kalsifikasyon ve sağırlık yapar.",
+      "D": "Toksoplazma koryoretinit ve hidrosefali yapar.",
+      "E": "Doğru: listeriyozun tipik tablosudur."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "HIV enfeksiyonunda vertikal geçiş riskini artıran faktörleri ve perinatal kemoprofilaksi yaklaşımını bilmek",
+   "sorular": [
+    {
+     "id": "k1-57-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi HIV'in vertikal geçiş riskini artırır?",
+     "secenekler": {
+      "A": "Emzirmeme",
+      "B": "Yüksek CD4 sayısı",
+      "C": "Yüksek viral yük",
+      "D": "Antiretroviral profilaksi",
+      "E": "Planlı sezaryen (yüksek viral yükte)"
+     },
+     "dogru": "C",
+     "aciklama": "AIDS, düşük CD4, yüksek viral yük, ikiz, koryoamniyonit, EMR ve emzirme riski artırır.",
+     "sik_aciklamalari": {
+      "A": "Emzirme riski artırır; emzirmemek azaltır.",
+      "B": "Düşük CD4 risklidir.",
+      "C": "Doğru: risk artırır.",
+      "D": "Profilaksi riski azaltır.",
+      "E": "Sezaryen riski azaltır."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "HIV pozitif gebede sezaryen hangi durumda önerilir?",
+     "secenekler": {
+      "A": "Viral yük saptanamıyorsa her durumda",
+      "B": "Viral yük >1000 kopya/ml veya bilinmiyorsa 38. haftada",
+      "C": "Hiçbir durumda önerilmez",
+      "D": "Yalnızca 28. haftada",
+      "E": "Yalnızca ikiz gebelikte"
+     },
+     "dogru": "B",
+     "aciklama": "Yüksek veya bilinmeyen viral yükte 38. haftada sezaryen önerilir; vertikal geçişi artıran müdahalelerden kaçınılır.",
+     "sik_aciklamalari": {
+      "A": "Baskılanmış viral yükte zorunlu değildir.",
+      "B": "Doğru: önerilen yaklaşımdır.",
+      "C": "Belirli durumlarda önerilir.",
+      "D": "Zamanlama yanlıştır.",
+      "E": "Ölçüt viral yüktür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "HIV pozitif anne ve bebeğinde perinatal kemoprofilaksi yaklaşımı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bebeğe emzirme özellikle önerilir",
+      "B": "Bebeğe yalnızca antikor testi yapılır",
+      "C": "Kemoprofilaksi önerilmez",
+      "D": "Anneye doğumda veya sezaryenden 3 saat önce IV zidovudin, bebeğe 1 ay zidovudin şurup verilir; bebeğin tanısında PCR kullanılır",
+      "E": "Anneye profilaksi verilmez"
+     },
+     "dogru": "D",
+     "aciklama": "Maternal antikorlar bebekte bulunduğundan tanıda PCR kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Emzirme riski artırır.",
+      "B": "Antikor maternal kaynaklı olabilir.",
+      "C": "Kemoprofilaksi önerilir.",
+      "D": "Doğru: kemoprofilaksi yaklaşımıdır.",
+      "E": "Anneye profilaksi verilir."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Viral hepatitlerin (HAV, HBV, HCV, HDV, HEV) vertikal bulaş özelliklerini ve korunma/tedavi yöntemlerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-57-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Gebelikte en yüksek anne ölümüne yol açan viral hepatit hangisidir?",
+     "secenekler": {
+      "A": "Hepatit D",
+      "B": "Hepatit A",
+      "C": "Hepatit C",
+      "D": "Hepatit E",
+      "E": "Hepatit G"
+     },
+     "dogru": "D",
+     "aciklama": "Hepatit E 3. trimesterde fulminan seyirle %20'ye varan mortalite yapar.",
+     "sik_aciklamalari": {
+      "A": "HBV ile birliktedir.",
+      "B": "Genellikle hafif seyirlidir.",
+      "C": "Gebelikte yüksek anne ölümüyle bilinmez.",
+      "D": "Doğru: gebelikte en ağır seyreden hepatittir.",
+      "E": "Bu derste ele alınmaz."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "HBsAg pozitif anneden doğan bebekte vertikal bulaşın önlenmesi için yapılması gereken hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca gözlem",
+      "B": "Pasif (HBIG) ve aktif (aşı) bağışıklama",
+      "C": "Yalnızca antibiyotik",
+      "D": "Emzirmenin kesin yasaklanması",
+      "E": "Yalnızca 1 yaşında aşılama"
+     },
+     "dogru": "B",
+     "aciklama": "Vertikal bulaş sonrası kronikleşme %85–90'dır; pasif + aktif bağışıklama ile %94 önlenebilir.",
+     "sik_aciklamalari": {
+      "A": "Önlem gerekir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: önerilen korunmadır.",
+      "C": "Antibiyotik etkisizdir.",
+      "D": "Bu derste önerilen önlem değildir.",
+      "E": "Geç kalınır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [
+      "443c2a4062df",
+      "cdcd3f642057"
+     ]
+    },
+    {
+     "id": "k1-57-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Gebelikte viral hepatitler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kronik HBV'li gebede 30–34. haftada HBV-DNA ≥10⁷ kopya/ml ise tenofovir/lamivudin başlanır",
+      "B": "HCV'de vertikal bulaş viral yükle orantılıdır",
+      "C": "HDV enfeksiyonu için hepatit B aşılanması yeterlidir",
+      "D": "Her gebenin HBV testi yapılmalıdır",
+      "E": "HCV'de vertikal bulaşı önleyen etkili profilaksi yöntemi vardır"
+     },
+     "dogru": "E",
+     "aciklama": "HCV'de vertikal bulaşı önleyen yöntem yoktur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): HCV'de profilaksi yoktur."
+     },
+     "bilgi": [
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "443c2a4062df",
+     "soru": "Aşağıdaki ifadelerden hangileri doğrudur?\nI. [Eksik ifade - Muhtemelen: HBsAg pozitif anneden doğan bebeğe doğumdan sonra 12 saat içinde HBIG ve aşı uygulanması bulaş riskini azaltır.]\nII. [Eksik ifade - Muhtemelen: TORCH enfeksiyonları gebelikte tarama ile erken teşhis edilebilir.]\nIII. HBsAg pozitif anneden doğan bebeğe aktif ve pasif bağışıklama yapılmaktadır.\nIV. Tüm gebelerde TORCH taraması yapılmalıdır.",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız I ve III",
+      "C": "Yalnız II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "cdcd3f642057",
+     "soru": "bulaş riskini arttırmaktadır III. HBsAg pozitif anneden doğan bebeğe aktif ve pasif bağışıklama yapılmaktadır IV. Tüm gebelerde TORCH taraması yapılmalıdır a. Yalnız I b. Yalnız I ve III c. Yalnız II ve IV d. Yalnız IV e. I, II, III ve IV (Cevap: e)",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız I ve III",
+      "C": "Yalnız II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Toksoplazma, rubella, CMV ve HSV enfeksiyonlarının konjenital etkilerini, tanı yöntemlerini ve tedavisini karşılaştırmak",
+   "sorular": [
+    {
+     "id": "k1-57-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Konjenital rubella sendromunun bulguları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Katarakt",
+      "B": "Sağırlık",
+      "C": "Granulomatosis infantiseptica",
+      "D": "Konjenital kalp hastalığı",
+      "E": "Mental retardasyon"
+     },
+     "dogru": "C",
+     "aciklama": "Granulomatosis infantiseptica listeriyozun tablosudur.",
+     "sik_aciklamalari": {
+      "A": "Rubella bulgusudur; bu nedenle doğru seçenek değildir.",
+      "B": "Rubella bulgusudur; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: listeriyoza aittir.",
+      "D": "Rubella bulgusudur; bu nedenle doğru seçenek değildir.",
+      "E": "Rubella bulgusudur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      14,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "En sık görülen konjenital viral enfeksiyon nedeni hangisidir?",
+     "secenekler": {
+      "A": "Kızamık",
+      "B": "Rubella",
+      "C": "HSV",
+      "D": "VZV",
+      "E": "CMV"
+     },
+     "dogru": "E",
+     "aciklama": "Konjenital CMV canlı doğumların %0,5–2,2'sinde görülür; en yüksek bulaş riski 3. trimesterdedir.",
+     "sik_aciklamalari": {
+      "A": "Daha seyrektir; bu nedenle doğru seçenek değildir.",
+      "B": "Aşılama nedeniyle daha seyrektir.",
+      "C": "İntrauterin HSV nadirdir.",
+      "D": "Daha seyrektir; bu nedenle doğru seçenek değildir.",
+      "E": "Doğru: en sık konjenital viral enfeksiyondur."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Konjenital rubella riskinin gebelik haftasına göre değişimi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "13–14. haftada ~%54, ikinci trimester sonunda ~%25, 4. aydan sonra ~%10 (yalnızca sağırlık)",
+      "B": "Risk gebelik ilerledikçe artar",
+      "C": "Risk tüm haftalarda aynıdır",
+      "D": "4. aydan sonra risk %100'dür",
+      "E": "İlk trimesterde risk yoktur"
+     },
+     "dogru": "A",
+     "aciklama": "Risk gebelik haftası ilerledikçe azalır; korunma seronegatif kadınların gebelik öncesi aşılanmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: risk dağılımı doğrudur.",
+      "B": "Risk azalır; bu nedenle doğru seçenek değildir.",
+      "C": "Risk değişir; bu nedenle doğru seçenek değildir.",
+      "D": "Risk düşer; bu nedenle doğru seçenek değildir.",
+      "E": "İlk trimester en riskli dönemdir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Toksoplazmozda IgG avidite testinin kullanımını, IgM'in çapraz pozitifliğini ve gebelikte tedavi seçeneklerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-57-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Toksoplazma IgM ve IgG'si pozitif saptanan gebede ilk aşamada yapılması gereken test hangisidir?",
+     "secenekler": {
+      "A": "IgG avidite testi",
+      "B": "Hemen amniyosentez",
+      "C": "Tedavisiz gebeliği sonlandırma",
+      "D": "Hiçbir test yapılmaması",
+      "E": "Yalnızca tam kan sayımı"
+     },
+     "dogru": "A",
+     "aciklama": "IgM çapraz pozitiflik gösterebilir ve 2 yıla kadar pozitif kalabilir; avidite enfeksiyonun zamanlamasını belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ilk basamak testtir.",
+      "B": "İlk basamak değildir.",
+      "C": "Uygun değildir; bu nedenle doğru seçenek değildir.",
+      "D": "Değerlendirme gerekir.",
+      "E": "Tanıya katkısı yoktur."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": [
+      "ccc69774841a"
+     ]
+    },
+    {
+     "id": "k1-57-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Toksoplazma IgG avidite sonucunun %35 çıkması nasıl yorumlanır?",
+     "secenekler": {
+      "A": "Yüksek avidite; enfeksiyon en az ~4 ay önce geçirilmiştir",
+      "B": "Düşük avidite; yeni enfeksiyon",
+      "C": "Şüpheli",
+      "D": "Yanlış pozitif",
+      "E": "Aktif konjenital enfeksiyon"
+     },
+     "dogru": "A",
+     "aciklama": "Avidite >%30 yüksek (eski), %20–30 orta (şüpheli), <%20 düşük (yeni) olarak yorumlanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: yüksek avidite eski enfeksiyonu gösterir.",
+      "B": "Düşük avidite <%20'dir.",
+      "C": "Şüpheli aralık %20–30'dur.",
+      "D": "Yorum bu değildir; bu nedenle doğru seçenek değildir.",
+      "E": "Eski enfeksiyonu gösterir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "16. haftadan önce akut toksoplazmoz tanısı konan gebede ilk tedavi seçeneği hangisidir?",
+     "secenekler": {
+      "A": "Spiramisin",
+      "B": "Pirimetamin + sulfadiazin (ilk trimesterde)",
+      "C": "Tedavi verilmez",
+      "D": "Flukonazol",
+      "E": "Asiklovir"
+     },
+     "dogru": "A",
+     "aciklama": "16–18. haftadan önce spiramisin; 2. trimesterde pirimetamin + sulfadiazin; bebeğe bir yıl pirimetamin + sulfadiazin + lökoverin verilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: erken gebelikte tercih edilen ilaçtır.",
+      "B": "2. trimesterde kullanılır.",
+      "C": "Tedavi edilir; bu nedenle doğru seçenek değildir.",
+      "D": "Antifungaldir; bu nedenle doğru seçenek değildir.",
+      "E": "Antiviraldir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "ccc69774841a",
+     "soru": "Enfeksiyon20\nToksoplazma Ig M ve Ig\n G pozitif saptanan bir\ngebede ilk aşamada ne\nyapmalıdır?",
+     "secenekler": {
+      "A": "Ig G avidite testi",
+      "B": "2 hafta sonra seroloji tekrarı",
+      "C": "Spiramisin başlanması",
+      "D": "Primetamin+sulfadiazin başlanması",
+      "E": "Kord kanında toksoplazma PCR bakılması"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Kızamık, suçiçeği, influenza, parvovirus B19 ve sıtmanın gebelik ve fetüs üzerindeki etkilerini ve korunma seçeneklerini bilmek",
+   "sorular": [
+    {
+     "id": "k1-57-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "İnfluenza düşünülen gebede doğru yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Gecikmeden antiviral tedavi verilmesi",
+      "B": "Doğuma kadar beklenmesi",
+      "C": "Yalnızca antibiyotik verilmesi",
+      "D": "Tedavinin kontrendike olması",
+      "E": "Gebeliğin sonlandırılması"
+     },
+     "dogru": "A",
+     "aciklama": "İnfluenza gebelikte erken doğum, ağır hastalık ve ölüm riski taşır; tedavi gecikmeden verilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: önerilen yaklaşımdır.",
+      "B": "Gecikme riskli; bu nedenle doğru seçenek değildir.",
+      "C": "Antibiyotik etkisizdir.",
+      "D": "Tedavi verilir; bu nedenle doğru seçenek değildir.",
+      "E": "Uygun değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "İntrauterin parvovirus B19 enfeksiyonunun fetüste yol açtığı tipik tablo hangisidir?",
+     "secenekler": {
+      "A": "Hidrops fetalis ve trombositopeni",
+      "B": "Katarakt ve kalp hastalığı",
+      "C": "Granulomatosis infantiseptica",
+      "D": "Hutchinson triadı",
+      "E": "Periventriküler kalsifikasyon"
+     },
+     "dogru": "A",
+     "aciklama": "Parvovirus B19 temasında seroloji ve DNA testi yapılır; intrauterin enfeksiyonda hidrops ve trombositopeni görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tipik fetal tablodur.",
+      "B": "Rubellaya aittir; bu nedenle doğru seçenek değildir.",
+      "C": "Listeriyoza aittir; bu nedenle doğru seçenek değildir.",
+      "D": "Konjenital sifilise aittir.",
+      "E": "CMV'ye aittir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Gebelikte kızamık ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Pnömoni riski ~3 kat artar",
+      "B": "Komplikasyonlara bağlı ölüm ~6 kat artar",
+      "C": "%20–60 düşük riski vardır",
+      "D": "Gebelik öncesi aşılama önerilir",
+      "E": "Gebelikte kızamık geçirilmesi fetüs için hiçbir risk oluşturmaz"
+     },
+     "dogru": "E",
+     "aciklama": "Kızamık mikrosefali, gelişme geriliği ve hidramniyoz yapabilir; konjenital kızamık riski <%25'tir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): fetal riskleri vardır."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 30,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:31"
+}

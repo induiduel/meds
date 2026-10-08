@@ -3,6 +3,7 @@ import { Search, ArrowUp, ArrowDown, Columns3, Download, X, Trash2, CheckCircle2
 import { Committee, QuestionItem } from '../../types';
 import { ApiService } from '../../services/api';
 import { toast } from '../ui/Toast';
+import { Seg, SearchBox, EmptyState, ConfirmButton, Drawer } from './consoleUi';
 
 /**
  * v3 "Tüm veriler": one sortable table for every dataset the site keeps.
@@ -40,17 +41,11 @@ interface Props {
   onRefreshData: () => Promise<void>;
 }
 
-const STATUS_TONE: Record<string, string> = {
-  completed: 'bg-ok-soft text-ok',
-  gathering: 'bg-warn-soft text-warn',
-  empty: 'bg-canvas text-ink-2',
-};
+const STATUS_TONE: Record<string, string> = { completed: 'is-ok', gathering: 'is-warn', empty: '' };
 const STATUS_LABEL: Record<string, string> = { completed: 'Doğrulandı', gathering: 'Taslak', empty: 'Boş' };
 const fmtDate = (s?: string) => (s ? new Date(s).toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: '2-digit' }) : '—');
 const stemOf = (q: Row) => q?.reconstruction?.stem || q?.stem || q?.rawQuestion?.stem || q?.fragments?.[0]?.text || q?.topic || '';
-const Pill: React.FC<{ cls: string; children: React.ReactNode }> = ({ cls, children }) => (
-  <span className={`inline-flex items-center h-5 px-1.5 rounded-full text-[11.5px] font-semibold whitespace-nowrap ${cls}`}>{children}</span>
-);
+const Pill: React.FC<{ cls: string; children: React.ReactNode }> = ({ cls, children }) => <span className={`ms-tag ${cls}`}>{children}</span>;
 
 export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, committees, onRefreshData }) => {
   const committeeName = (id?: string) => {
@@ -95,7 +90,7 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
           { key: 'discipline', label: 'Ders', width: '140px', value: (r) => r.discipline || '' },
           { key: 'committee', label: 'Kurul', width: '110px', value: (r) => committeeName(r.committeeId) },
           { key: 'year', label: 'Yıl', width: '90px', value: (r) => r.examYear || '' },
-          { key: 'state', label: 'Durum', width: '100px', value: (r) => (r.isAmbiguous ? 0 : r.reconstruction ? 2 : 1), render: (r) => (r.isAmbiguous ? <Pill cls="bg-warn-soft text-warn">Eksik</Pill> : r.reconstruction ? <Pill cls="bg-ok-soft text-ok">Düzenlendi</Pill> : <Pill cls="bg-canvas text-ink-2">Ham</Pill>) },
+          { key: 'state', label: 'Durum', width: '100px', value: (r) => (r.isAmbiguous ? 0 : r.reconstruction ? 2 : 1), render: (r) => (r.isAmbiguous ? <Pill cls="is-warn">Eksik</Pill> : r.reconstruction ? <Pill cls="is-ok">Düzenlendi</Pill> : <Pill cls="">Ham</Pill>) },
           { key: 'answer', label: 'Cevap', width: '60px', mono: true, value: (r) => r.reconstruction?.correctAnswer || r.correctAnswer || r.claimedAnswer || '' },
         ],
       },
@@ -110,7 +105,7 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
           { key: 'name', label: 'Ad', width: 'minmax(0,1fr)', value: (r) => r.displayName || r.email || '' },
           { key: 'email', label: 'E-posta', width: '200px', value: (r) => r.email || '' },
           { key: 'no', label: 'Öğrenci no', width: '120px', mono: true, value: (r) => r.studentNumber || '' },
-          { key: 'role', label: 'Rol', width: '90px', value: (r) => r.role || '', render: (r) => <Pill cls={r.role === 'admin' ? 'bg-accent-soft text-accent' : 'bg-canvas text-ink-2'}>{r.role === 'admin' ? 'Yönetici' : 'Öğrenci'}</Pill> },
+          { key: 'role', label: 'Rol', width: '90px', value: (r) => r.role || '', render: (r) => <Pill cls={r.role === 'admin' ? 'is-accent' : ''}>{r.role === 'admin' ? 'Yönetici' : 'Öğrenci'}</Pill> },
           { key: 'created', label: 'Kayıt', width: '80px', value: (r) => r.createdAt || '', render: (r) => fmtDate(r.createdAt) },
           { key: 'lastLogin', label: 'Son giriş', width: '84px', value: (r) => r.lastLoginAt || '', render: (r) => fmtDate(r.lastLoginAt) },
         ],
@@ -144,7 +139,7 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
           { key: 'term', label: 'Terim', width: '200px', value: (r) => r.term || '' },
           { key: 'category', label: 'Kategori', width: '140px', value: (r) => r.category || '' },
           { key: 'definition', label: 'Tanım', width: 'minmax(0,1fr)', value: (r) => r.definition || '' },
-          { key: 'pearl', label: 'Spot', width: '64px', value: (r) => (r.clinicalPearls ? 1 : 0), render: (r) => (r.clinicalPearls ? <Pill cls="bg-ok-soft text-ok">Var</Pill> : <span className="text-ink-3">—</span>) },
+          { key: 'pearl', label: 'Spot', width: '64px', value: (r) => (r.clinicalPearls ? 1 : 0), render: (r) => (r.clinicalPearls ? <Pill cls="is-ok">Var</Pill> : <span className="text-ink-3">—</span>) },
         ],
       },
       {
@@ -181,7 +176,6 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
   const [selected, setSelected] = useState<string[]>([]);
   const [openId, setOpenId] = useState<string | null>(null);
   const [limit, setLimit] = useState(100);
-  const [confirmDelete, setConfirmDelete] = useState(false);
   const [busy, setBusy] = useState(false);
 
   const load = async () => {
@@ -204,7 +198,6 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
     setOpenId(null);
     setQuery('');
     setLimit(100);
-    setConfirmDelete(false);
     void load();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dsId]);
@@ -212,11 +205,6 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
   useEffect(() => {
     if (dsId === 'questions') setRows(questions as Row[]);
   }, [questions, dsId]);
-  useEffect(() => {
-    if (!confirmDelete) return;
-    const t = window.setTimeout(() => setConfirmDelete(false), 4000);
-    return () => window.clearTimeout(t);
-  }, [confirmDelete]);
 
   const cols = ds.columns.filter((c) => !hidden[c.key]);
   const grid = `28px ${cols.map((c) => c.width || '1fr').join(' ')}`;
@@ -281,235 +269,162 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
       else await load();
     } finally {
       setBusy(false);
-      setConfirmDelete(false);
-    }
+      }
   };
 
   return (
     <div className="flex flex-col gap-3 min-w-0">
-      {/* Dataset picker */}
-      <div role="tablist" aria-label="Veri kümesi" className="flex gap-1 bg-canvas rounded-xl p-1 overflow-x-auto no-scrollbar self-start max-w-full">
-        {DATASETS.map((d) => (
-          <button
-            key={d.id}
-            type="button"
-            role="tab"
-            aria-selected={dsId === d.id}
-            onClick={() => setDsId(d.id)}
-            className={`shrink-0 h-8 px-3 rounded-lg text-[13px] whitespace-nowrap cursor-pointer ${
-              dsId === d.id ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
-            }`}
-          >
-            {d.label}
-          </button>
-        ))}
-      </div>
+      <Seg label="Veri kümesi" value={dsId} onChange={setDsId} options={DATASETS.map((d) => ({ id: d.id, label: d.label }))} className="self-start" />
 
-      {/* Toolbar */}
       <div className="flex flex-wrap items-center gap-2">
-        <label className="flex-1 min-w-[200px] flex items-center gap-2 h-9 px-3 rounded-[10px] bg-white border border-line focus-within:border-accent">
-          <Search className="w-4 h-4 text-ink-3 shrink-0" />
-          <span className="sr-only">Tabloda ara</span>
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder={`${ds.label} içinde ara`}
-            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[14px] placeholder:text-slate-600"
-          />
-        </label>
-        <span className="text-[12.5px] text-ink-3 font-mono">{visible.length.toLocaleString('tr-TR')} kayıt</span>
+        <SearchBox value={query} onChange={setQuery} placeholder={`${ds.label} içinde ara`} count={`${visible.length.toLocaleString('tr-TR')} kayıt`} className="flex-1 min-w-[220px]" />
         <div className="relative">
-          <button
-            type="button"
-            onClick={() => setColMenu((v) => !v)}
-            aria-expanded={colMenu}
-            className="h-9 px-3 rounded-[10px] border border-line bg-white text-[13px] font-semibold text-ink inline-flex items-center gap-1.5 cursor-pointer"
-          >
-            <Columns3 className="w-4 h-4" />
-            Sütunlar
+          <button type="button" onClick={() => setColMenu((v) => !v)} aria-expanded={colMenu} className="ms-btn">
+            <Columns3 /> Sütunlar
           </button>
           {colMenu && (
-            <div className="absolute right-0 top-10 z-30 w-[200px] bg-white border border-line rounded-xl shadow-lg p-1.5">
-              {ds.columns.map((c) => (
-                <label key={c.key} className="flex items-center gap-2 h-8 px-2 rounded-lg hover:bg-canvas text-[13px] cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={!hidden[c.key]}
-                    onChange={() => setHidden((h) => ({ ...h, [c.key]: !h[c.key] }))}
-                    className="w-4 h-4 accent-[#2453E6]"
-                  />
-                  {c.label}
-                </label>
-              ))}
-            </div>
+            <>
+              <div className="fixed inset-0 z-20" onClick={() => setColMenu(false)} aria-hidden="true" />
+              <div className="ms-menu">
+                {ds.columns.map((c) => (
+                  <label key={c.key} className="ms-menu-item">
+                    <input type="checkbox" checked={!hidden[c.key]} onChange={() => setHidden((h) => ({ ...h, [c.key]: !h[c.key] }))} />
+                    {c.label}
+                  </label>
+                ))}
+              </div>
+            </>
           )}
         </div>
-        <button type="button" onClick={() => exportCsv(false)} className="h-9 px-3 rounded-[10px] border border-line bg-white text-[13px] font-semibold text-ink inline-flex items-center gap-1.5 cursor-pointer">
-          <Download className="w-4 h-4" />
-          CSV
+        <button type="button" onClick={() => exportCsv(false)} className="ms-btn">
+          <Download /> CSV
         </button>
-        <button type="button" onClick={() => void load()} aria-label="Yenile" className="w-9 h-9 rounded-[10px] border border-line bg-white text-ink-2 inline-flex items-center justify-center cursor-pointer">
-          <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+        <button type="button" onClick={() => void load()} aria-label="Yenile" title="Yenile" className="ms-btn is-ghost is-icon">
+          <RefreshCw className={loading ? 'animate-spin' : ''} />
         </button>
       </div>
 
-      {/* Bulk bar */}
+      <div className="ms-table-wrap">
+        <div className="w-full min-w-[760px]">
+          <div className="grid items-center gap-x-3 h-10 px-3 border-b border-line text-[12px] font-semibold text-ink-3 sticky top-0 bg-white z-[1]" style={{ gridTemplateColumns: grid }}>
+            <input
+              type="checkbox"
+              aria-label="Bu sayfadakilerin hepsini seç"
+              checked={allOnPage}
+              onChange={() => setSelected((s) => (allOnPage ? s.filter((id) => !shown.some((r) => ds.idOf(r) === id)) : Array.from(new Set([...s, ...shown.map(ds.idOf)]))))}
+              className="w-[15px] h-[15px] accent-accent cursor-pointer"
+            />
+            {cols.map((c) => (
+              <button key={c.key} type="button" onClick={() => toggleSort(c.key)} className={`text-left inline-flex items-center gap-1 cursor-pointer hover:text-ink whitespace-nowrap ${sort.key === c.key ? 'text-ink' : ''}`} aria-sort={sort.key === c.key ? (sort.dir === 1 ? 'ascending' : 'descending') : undefined}>
+                {c.label}
+                {sort.key === c.key && (sort.dir === 1 ? <ArrowUp className="w-3 h-3" /> : <ArrowDown className="w-3 h-3" />)}
+              </button>
+            ))}
+          </div>
+          {loading && rows.length === 0 ? (
+            <div className="p-3 flex flex-col gap-2" role="status" aria-label="Yükleniyor">
+              {[0, 1, 2, 3, 4].map((i) => <div key={i} className="h-8 rounded-lg ms-shimmer" />)}
+            </div>
+          ) : shown.length === 0 ? (
+            <EmptyState icon={Search} title={query ? 'Aramaya uyan kayıt yok' : 'Bu kümede kayıt yok'} />
+          ) : (
+            shown.map((r) => {
+              const id = ds.idOf(r);
+              const sel = selected.includes(id);
+              const open = openId === id;
+              return (
+                <div
+                  key={id}
+                  onClick={() => setOpenId(open ? null : id)}
+                  className={`grid items-center gap-x-3 min-h-10 px-3 py-1.5 border-b border-line-soft last:border-b-0 text-[13.5px] cursor-pointer transition-colors ${sel || open ? 'bg-accent-soft' : 'hover:bg-canvas'}`}
+                  style={{ gridTemplateColumns: grid }}
+                >
+                  <input type="checkbox" checked={sel} onClick={(e) => e.stopPropagation()} onChange={() => toggleRow(id)} aria-label="Satırı seç" className="w-[15px] h-[15px] accent-accent cursor-pointer" />
+                  {cols.map((c) => (
+                    <span key={c.key} className={`min-w-0 truncate ${c.mono ? 'font-mono text-[12.5px]' : ''}`} title={String(c.value(r))}>
+                      {c.render ? c.render(r) : c.value(r) || '—'}
+                    </span>
+                  ))}
+                </div>
+              );
+            })
+          )}
+          {visible.length > limit && (
+            <button type="button" onClick={() => setLimit((n) => n + 200)} className="w-full h-11 border-t border-line-soft text-[13px] font-semibold text-accent cursor-pointer inline-flex items-center justify-center gap-1 hover:bg-canvas">
+              <ChevronDown className="w-4 h-4" />
+              {(visible.length - limit).toLocaleString('tr-TR')} kayıt daha
+            </button>
+          )}
+        </div>
+      </div>
+
       {selected.length > 0 && (
-        <div className="flex flex-wrap items-center gap-2 bg-ink text-white rounded-xl pl-3.5 pr-2 py-1.5">
-          <b className="text-[13px]">{selected.length} seçili</b>
-          <span className="flex-1" />
-          <button type="button" onClick={() => exportCsv(true)} className="h-8 px-2.5 rounded-lg border border-white/25 text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer">
-            <Download className="w-3.5 h-3.5" />
-            CSV
+        <div className="ms-bulkbar">
+          <b>{selected.length} seçili</b>
+          <button type="button" onClick={() => exportCsv(true)} className="ms-btn is-sm">
+            <Download /> CSV
           </button>
           {ds.canVerify && (
-            <button type="button" disabled={busy} onClick={() => void runBulk('verify', selected)} className="h-8 px-2.5 rounded-lg border border-white/25 text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              Doğrula
+            <button type="button" disabled={busy} onClick={() => void runBulk('verify', selected)} className="ms-btn is-sm">
+              <CheckCircle2 /> Doğrula
             </button>
           )}
           {ds.canDelete && (
-            <button
-              type="button"
-              disabled={busy}
-              onClick={() => (confirmDelete ? void runBulk('delete', selected) : setConfirmDelete(true))}
-              className="h-8 px-2.5 rounded-lg bg-bad text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
-            >
-              <Trash2 className="w-3.5 h-3.5" />
-              {confirmDelete ? `Emin misin? ${selected.length} kaydı sil` : 'Sil'}
-            </button>
+            <ConfirmButton icon={Trash2} className="ms-btn is-sm" confirmLabel={`Emin misin? ${selected.length} kaydı sil`} busy={busy} onConfirm={() => runBulk('delete', selected)}>
+              Sil
+            </ConfirmButton>
           )}
-          <button type="button" onClick={() => setSelected([])} aria-label="Seçimi temizle" className="w-8 h-8 rounded-lg inline-flex items-center justify-center cursor-pointer">
-            <X className="w-4 h-4" />
+          <button type="button" onClick={() => setSelected([])} aria-label="Seçimi temizle" className="ms-btn is-sm is-icon">
+            <X />
           </button>
         </div>
       )}
 
-      <div className="flex gap-3 min-w-0 items-start">
-        {/* Table */}
-        <div className="flex-1 min-w-0 bg-white border border-line rounded-xl overflow-x-auto">
-          <div className="w-full min-w-[760px]">
-            <div className="grid items-center gap-x-3 h-9 px-3 border-b border-line bg-field text-[12px] font-semibold text-ink-3 sticky top-0" style={{ gridTemplateColumns: grid }}>
-              <input
-                type="checkbox"
-                aria-label="Bu sayfadakilerin hepsini seç"
-                checked={allOnPage}
-                onChange={() => setSelected((s) => (allOnPage ? s.filter((id) => !shown.some((r) => ds.idOf(r) === id)) : Array.from(new Set([...s, ...shown.map(ds.idOf)]))))}
-                className="w-4 h-4 accent-[#2453E6]"
-              />
-              {cols.map((c) => (
-                <button key={c.key} type="button" onClick={() => toggleSort(c.key)} className="text-left inline-flex items-center gap-1 cursor-pointer hover:text-ink whitespace-nowrap" aria-sort={sort.key === c.key ? (sort.dir === 1 ? 'ascending' : 'descending') : undefined}>
-                  {c.label}
-                  {sort.key === c.key && (sort.dir === 1 ? <ArrowUp className="w-3 h-3" /> : <ArrowDown className="w-3 h-3" />)}
-                </button>
-              ))}
-            </div>
-            {loading && rows.length === 0 ? (
-              <p className="m-0 px-4 py-10 text-center text-[14px] text-ink-3">Yükleniyor…</p>
-            ) : shown.length === 0 ? (
-              <p className="m-0 px-4 py-10 text-center text-[14px] text-ink-3">Kayıt yok.</p>
-            ) : (
-              shown.map((r) => {
-                const id = ds.idOf(r);
-                const sel = selected.includes(id);
-                const open = openId === id;
-                return (
-                  <div
-                    key={id}
-                    onClick={() => setOpenId(open ? null : id)}
-                    className={`grid items-center gap-x-3 min-h-10 px-3 py-1.5 border-b border-line-soft text-[13.5px] cursor-pointer ${sel ? 'bg-accent-soft' : open ? 'bg-canvas' : 'hover:bg-field'}`}
-                    style={{ gridTemplateColumns: grid }}
-                  >
-                    <input
-                      type="checkbox"
-                      checked={sel}
-                      onClick={(e) => e.stopPropagation()}
-                      onChange={() => toggleRow(id)}
-                      aria-label="Satırı seç"
-                      className="w-4 h-4 accent-[#2453E6]"
-                    />
-                    {cols.map((c) => (
-                      <span key={c.key} className={`min-w-0 truncate ${c.mono ? 'font-mono' : ''}`} title={String(c.value(r))}>
-                        {c.render ? c.render(r) : c.value(r) || '—'}
-                      </span>
-                    ))}
-                  </div>
-                );
-              })
-            )}
-            {visible.length > limit && (
-              <button type="button" onClick={() => setLimit((n) => n + 200)} className="w-full h-10 text-[13px] font-semibold text-accent cursor-pointer inline-flex items-center justify-center gap-1">
-                <ChevronDown className="w-4 h-4" />
-                {(visible.length - limit).toLocaleString('tr-TR')} kayıt daha
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Detail panel */}
-        {openRow && (
-          <button type="button" aria-label="Paneli kapat" onClick={() => setOpenId(null)} className="ms-fade-in lg:hidden fixed inset-0 z-40 bg-[rgba(14,26,38,0.35)] cursor-default" />
-        )}
-        {openRow && (
-          <aside
-            role="dialog"
-            aria-label="Kayıt ayrıntısı"
-            onKeyDown={(e) => e.key === 'Escape' && setOpenId(null)}
-            className="ms-slide-left lg:animate-none fixed lg:sticky z-50 lg:z-auto top-0 right-0 bottom-0 w-[min(420px,92vw)] lg:w-[320px] shrink-0 flex flex-col bg-white border-l lg:border border-line lg:rounded-xl overflow-hidden lg:max-h-[calc(100dvh-220px)] shadow-lg lg:shadow-none"
-          >
-            <div className="flex items-center gap-2 px-3.5 py-3 border-b border-line">
-              <span className="text-[14px] font-semibold flex-1 truncate">{String(ds.columns[0].value(openRow)) || 'Kayıt'}</span>
-              <button type="button" onClick={() => setOpenId(null)} aria-label="Kapat" className="w-8 h-8 rounded-full inline-flex items-center justify-center text-ink-2 hover:bg-canvas cursor-pointer">
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-            <div className="flex-1 overflow-y-auto px-3.5 py-3 flex flex-col gap-2">
-              {ds.columns.map((c) => (
-                <div key={c.key} className="flex flex-col gap-0.5">
-                  <span className="text-[11.5px] font-semibold uppercase tracking-[0.06em] text-ink-3">{c.label}</span>
-                  <span className={`text-[13.5px] text-ink break-words ${c.mono ? 'font-mono' : ''}`}>{c.render ? c.render(openRow) : String(c.value(openRow) || '—')}</span>
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-wrap gap-1.5 px-3.5 py-3 border-t border-line">
+      <Drawer
+        open={!!openRow}
+        onClose={() => setOpenId(null)}
+        label="Kayıt ayrıntısı"
+        title={openRow ? String(ds.columns[0].value(openRow)).slice(0, 80) || 'Kayıt' : ''}
+        foot={
+          openRow && (
+            <>
               <button
                 type="button"
                 onClick={() => {
                   navigator.clipboard?.writeText(JSON.stringify(openRow, null, 2)).then(
                     () => toast.success('Kopyalandı', 'Kaydın tamamı JSON olarak panoda'),
-                    () => toast.error('Kopyalanamadı')
+                    () => toast.error('Kopyalanamadı'),
                   );
                 }}
-                className="h-8 px-2.5 rounded-lg border border-line text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+                className="ms-btn"
               >
-                <Copy className="w-3.5 h-3.5" />
-                JSON
+                <Copy /> JSON
               </button>
               {ds.canVerify && openRow.status !== 'completed' && (
-                <button type="button" disabled={busy} onClick={() => void runBulk('verify', [ds.idOf(openRow)])} className="h-8 px-2.5 rounded-lg border border-line text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50">
-                  <CheckCircle2 className="w-3.5 h-3.5" />
-                  Doğrula
+                <button type="button" disabled={busy} onClick={() => void runBulk('verify', [ds.idOf(openRow)])} className="ms-btn is-ok">
+                  <CheckCircle2 /> Doğrula
                 </button>
               )}
               {ds.canDelete && (
-                <button
-                  type="button"
-                  disabled={busy}
-                  onClick={() => {
-                    setSelected([ds.idOf(openRow)]);
-                    setConfirmDelete(true);
-                  }}
-                  className="h-8 px-2.5 rounded-lg bg-bad-soft text-bad-text text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
-                >
-                  <Trash2 className="w-3.5 h-3.5" />
-                  Sil…
-                </button>
+                <ConfirmButton icon={Trash2} className="ms-btn is-danger" confirmLabel="Emin misin? Sil" busy={busy} onConfirm={() => runBulk('delete', [ds.idOf(openRow)])}>
+                  Sil
+                </ConfirmButton>
               )}
-            </div>
-          </aside>
+            </>
+          )
+        }
+      >
+        {openRow && (
+          <dl className="ms-kv">
+            {ds.columns.map((c) => (
+              <React.Fragment key={c.key}>
+                <dt>{c.label}</dt>
+                <dd className={c.mono ? 'font-mono' : ''}>{c.render ? c.render(openRow) : String(c.value(openRow) || '—')}</dd>
+              </React.Fragment>
+            ))}
+          </dl>
         )}
-      </div>
+      </Drawer>
     </div>
   );
 };

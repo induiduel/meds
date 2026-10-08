@@ -16,6 +16,7 @@ import {
 } from '../../services/studyStore';
 import { committeeShortLabel } from '../QuickAddHero';
 import { Segmented, OptionButton, ExplanationBlock, EmptyState, cardCls, btnPrimary, btnSecondary, btnGhost, selectCls, Field, formatDuration, isTypingTarget } from './StudyUI';
+import { StudyReportButton } from './StudyReportButton';
 import { QuestionAiChatDrawer } from '../QuestionAiChatDrawer';
 
 interface SelfTestViewProps {
@@ -406,6 +407,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
               >
                 <Flag className="w-4 h-4" /> {flags.has(q.id) ? 'İşaretli' : 'Sonra bak'}
               </button>
+              <StudyReportButton q={q} compact />
             </header>
             <h2 className={`m-0 font-display font-medium tracking-[-0.01em] leading-[1.35] ${q.stem.length > 220 ? 'text-[17px] sm:text-[19px]' : 'text-[19px] sm:text-[22px]'}`}>{q.stem}</h2>
             <div role="radiogroup" aria-label="Şıklar" className="flex flex-col gap-2">
@@ -662,6 +664,7 @@ const ResultView: React.FC<{
                           {getReview().has(q.id) ? <BookmarkCheck className="w-3.5 h-3.5" /> : <Bookmark className="w-3.5 h-3.5" />}
                           {getReview().has(q.id) ? 'Tekrar listesinde' : 'Tekrar listesine ekle'}
                         </button>
+                        <StudyReportButton q={q} className="h-8! ml-auto mr-1" />
                         <button
                           type="button"
                           onClick={() => setChatQuestion(q)}

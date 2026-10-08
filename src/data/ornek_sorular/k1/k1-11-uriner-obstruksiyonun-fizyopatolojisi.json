@@ -1,0 +1,1212 @@
+{
+ "id": "k1-11-uriner-obstruksiyonun-fizyopatolojisi",
+ "sira": 11,
+ "kurul": 1,
+ "ders": "Üroloji",
+ "konu": "Üriner Obstrüksiyonun Fizyopatolojisi",
+ "ogretim_uyesi": "Doç. Dr. Özer Baran",
+ "tarih": "2026-09-17",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Obstrüktif üropatiyi tanımlamak ve klinik tabloyu belirleyen faktörleri açıklamak",
+   "sorular": [
+    {
+     "id": "k1-11-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Obstrüktif üropati aşağıdakilerden hangisini tanımlar?",
+     "secenekler": {
+      "A": "Eksternal meatustan renal tübüle kadar herhangi bir düzeyde idrar akımını engelleyen durumların tümü",
+      "B": "Yalnızca üretra darlığı",
+      "C": "Yalnızca böbrek taşı",
+      "D": "Yalnızca mesane tümörü",
+      "E": "İdrar yolu enfeksiyonu"
+     },
+     "dogru": "A",
+     "aciklama": "Obstrüksiyonun proksimalinde staz ve basınç artışı gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: obstrüktif üropatinin tanımıdır.",
+      "B": "Üretra darlığı nedenlerden yalnızca biridir.",
+      "C": "Taş nedenlerden yalnızca biridir.",
+      "D": "Tümör nedenlerden yalnızca biridir.",
+      "E": "Enfeksiyon obstrüksiyona eşlik edebilir ama tanımı değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Obstrüktif üropatide klinik tabloyu belirleyen faktörler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Obstrüksiyonun derecesi",
+      "B": "Obstrüksiyonun seviyesi",
+      "C": "Hastanın kan grubu",
+      "D": "Obstrüksiyonun süresi",
+      "E": "Enfeksiyon varlığı"
+     },
+     "dogru": "C",
+     "aciklama": "Seviye, derece, süre ve enfeksiyon kliniği belirler; aynı obstrüksiyon farklı hastalarda farklı seyredebilir.",
+     "sik_aciklamalari": {
+      "A": "Belirleyici faktördür.",
+      "B": "Belirleyici faktördür.",
+      "C": "Doğru: kan grubu belirleyici değildir.",
+      "D": "Belirleyici faktördür.",
+      "E": "Belirleyici faktördür."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "İdrar akımının herhangi bir düzeyde engellenmesinin ilk hidrodinamik sonucu hangisidir?",
+     "secenekler": {
+      "A": "Obstrüksiyonun distalinde basınç artışı",
+      "B": "Obstrüksiyonun proksimalinde staz ve basınç artışı",
+      "C": "GFR'nin hemen artması",
+      "D": "İdrar dilüsyon yeteneğinin artması",
+      "E": "Böbreğin hemen hipertrofisi"
+     },
+     "dogru": "B",
+     "aciklama": "Obstrüksiyonun üst tarafında idrar birikir ve basınç yükselir; hasar zincirini bu başlatır.",
+     "sik_aciklamalari": {
+      "A": "Distalde basınç artmaz.",
+      "B": "Doğru: ilk sonuçtur.",
+      "C": "GFR azalır; bu nedenle doğru seçenek değildir.",
+      "D": "Dilüsyon yeteneği değişmez veya etkilenmez; artış beklenmez.",
+      "E": "Hipertrofi karşı böbrekte gelişebilir."
+     },
+     "bilgi": [
+      1,
+      24
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Obstrüksiyonu neden, süre, derece, seviye ve etkilenime göre sınıflamak",
+   "sorular": [
+    {
+     "id": "k1-11-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Obstrüksiyonun seviyeye göre sınıflandırılmasında kullanılan terimler hangileridir?",
+     "secenekler": {
+      "A": "Konjenital ve edinsel",
+      "B": "Akut ve kronik",
+      "C": "Komplet ve inkomplet",
+      "D": "İnfravezikal ve supravezikal",
+      "E": "Unilateral ve bilateral"
+     },
+     "dogru": "D",
+     "aciklama": "Sınıflama: nedene, süreye, dereceye, seviyeye (infra/supravezikal) ve etkilenime göre yapılır.",
+     "sik_aciklamalari": {
+      "A": "Nedene göre sınıflamadır.",
+      "B": "Süreye göre sınıflamadır.",
+      "C": "Dereceye göre sınıflamadır.",
+      "D": "Doğru: seviye sınıflamasıdır.",
+      "E": "Etkilenime göre sınıflamadır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İdrar akımının tamamen durduğu obstrüksiyon hangi sınıflamaya göre tanımlanır?",
+     "secenekler": {
+      "A": "Neden – konjenital",
+      "B": "Süre – kronik",
+      "C": "Derece – komplet",
+      "D": "Seviye – supravezikal",
+      "E": "Etkilenim – unilateral"
+     },
+     "dogru": "C",
+     "aciklama": "Dereceye göre obstrüksiyon komplet veya inkomplet olabilir.",
+     "sik_aciklamalari": {
+      "A": "Neden sınıflaması kökenle ilgilidir.",
+      "B": "Süre sınıflaması zamanla ilgilidir.",
+      "C": "Doğru: tam tıkanma komplet obstrüksiyondur.",
+      "D": "Seviye sınıflaması yerleşimle ilgilidir.",
+      "E": "Etkilenim taraf sayısıyla ilgilidir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Uzun süredir BPH'si olan 70 yaşında erkekte iki taraflı hidroüreteronefroz saptanıyor. Bu obstrüksiyonun sınıflaması hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Konjenital, kronik, infravezikal, unilateral",
+      "B": "Konjenital, akut, supravezikal, unilateral",
+      "C": "Edinsel, akut, supravezikal, unilateral",
+      "D": "Edinsel, kronik, infravezikal, bilateral etkilenimli",
+      "E": "Sınıflanamaz"
+     },
+     "dogru": "D",
+     "aciklama": "BPH edinsel, kronik ve mesane çıkışı düzeyinde (infravezikal) bir obstrüksiyondur; her iki üst sistemi etkileyebilir.",
+     "sik_aciklamalari": {
+      "A": "BPH konjenital değildir.",
+      "B": "BPH konjenital değildir.",
+      "C": "BPH infravezikaldir.",
+      "D": "Doğru: sınıflama doğrudur.",
+      "E": "Ölçütlere göre sınıflanabilir."
+     },
+     "bilgi": [
+      3,
+      6,
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Böbrek, üreter, mesane ve üretra düzeyindeki obstrüksiyon nedenlerini sıralamak",
+   "sorular": [
+    {
+     "id": "k1-11-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "İleri yaş erkekte en sık infravezikal obstrüksiyon nedeni hangisidir?",
+     "secenekler": {
+      "A": "Posterior üretral valv",
+      "B": "Benign prostat hiperplazisi",
+      "C": "Üreterosel",
+      "D": "Retrokaval üreter",
+      "E": "UPJ darlığı"
+     },
+     "dogru": "B",
+     "aciklama": "BPH ileri yaş erkekte en sık infravezikal obstrüksiyon nedenidir.",
+     "sik_aciklamalari": {
+      "A": "Posterior üretral valv konjenital, çocuklarda görülür.",
+      "B": "Doğru: en sık nedendir.",
+      "C": "Üreterosel üreter düzeyinde konjenital nedendir.",
+      "D": "Retrokaval üreter supravezikal konjenital nedendir.",
+      "E": "UPJ darlığı böbrek düzeyinde nedendir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": [
+      "d3-b-144"
+     ]
+    },
+    {
+     "id": "k1-11-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi üreteri dıştan sıkıştırarak obstrüksiyon yapan ekstrensek bir nedendir?",
+     "secenekler": {
+      "A": "Üreter taşı",
+      "B": "Retroperitoneal fibrozis",
+      "C": "Üreterosel",
+      "D": "Renal pelvis TCC",
+      "E": "Nekroze papilla"
+     },
+     "dogru": "B",
+     "aciklama": "Gebelik ve retroperitoneal fibrozis gibi ekstrensek nedenler üreteri dıştan sıkıştırır.",
+     "sik_aciklamalari": {
+      "A": "Taş intraluminal nedendir.",
+      "B": "Doğru: ekstrensek nedendir.",
+      "C": "Üreterosel konjenital intrensek nedendir.",
+      "D": "Pelvis tümörü intrensek nedendir.",
+      "E": "Papilla parçası intraluminal nedendir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Obstrüksiyon nedenleri ile düzey eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "UPJ darlığı – böbrek düzeyi (konjenital)",
+      "B": "Prune-belly sendromu – üreter düzeyi (konjenital)",
+      "C": "Posterior üretral valv – üretra düzeyi (konjenital)",
+      "D": "Prostat apsesi – mesane/üretra düzeyi (inflamatuar)",
+      "E": "Echinococcus – üretra düzeyi (neoplastik)"
+     },
+     "dogru": "E",
+     "aciklama": "Echinococcus böbrek düzeyinde inflamatuar/enfeksiyöz bir obstrüksiyon nedenidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış eşleştirme (aranan cevap): Echinococcus böbrek düzeyinde inflamatuar nedendir."
+     },
+     "bilgi": [
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-144",
+     "soru": "Kronik infravezikal obstrüksiyonun en sık sebebi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nörojen mesane",
+      "B": "Prostat kanseri",
+      "C": "Üretra darlığı",
+      "D": "Benign prostat hiperplazisi",
+      "E": "Mesane tümörü"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Alt üriner sistem (infravezikal) obstrüksiyonunu ve sonuçlarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-11-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Alt üriner sistem obstrüksiyonunda mesanede gelişen tipik değişiklik hangisidir?",
+     "secenekler": {
+      "A": "Mukozanın tamamen kaybı",
+      "B": "Mesane atrofisi ve küçülme",
+      "C": "Distansiyon ve trabekülasyon",
+      "D": "Mesane kapasitesinin sıfırlanması",
+      "E": "Hiçbir değişiklik olmaz"
+     },
+     "dogru": "C",
+     "aciklama": "Alt üriner obstrüksiyonda üretrada basınç artışı, divertikül, rüptür, fistül; mesanede distansiyon ve trabekülasyon gelişir.",
+     "sik_aciklamalari": {
+      "A": "Mukoza kaybı tipik değildir.",
+      "B": "Atrofi beklenmez; hipertrofi gelişir.",
+      "C": "Doğru: tipik mesane değişiklikleridir.",
+      "D": "Kapasite sıfırlanmaz.",
+      "E": "Belirgin değişiklikler olur."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İnfravezikal obstrüksiyonda mesanedeki değişikliklerin uzun dönemde yol açabileceği sonuçlar hangileridir?",
+     "secenekler": {
+      "A": "Mesane kapasitesinde sınırsız artış",
+      "B": "Yalnızca prostat küçülmesi",
+      "C": "Glomerül sayısında artış",
+      "D": "Vezikoüreteral reflü ve kronik böbrek yetmezliği",
+      "E": "Hiçbir sonuç yoktur"
+     },
+     "dogru": "D",
+     "aciklama": "Mesane değişiklikleri vezikoüreteral reflü ve kronik böbrek yetmezliğine ilerleyebilir.",
+     "sik_aciklamalari": {
+      "A": "Kapasite sınırsız artmaz.",
+      "B": "Prostat küçülmesi bir sonuç değildir.",
+      "C": "Glomerül sayısı artmaz.",
+      "D": "Doğru: uzun dönem sonuçlardır.",
+      "E": "Ciddi sonuçları vardır."
+     },
+     "bilgi": [
+      7,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Alt üriner sistem obstrüksiyonunun üretra ve prostattaki sonuçları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Üretrada distansiyon ve incelme",
+      "B": "Üretrada hipertrofi ve daralma",
+      "C": "Üretra divertikülü",
+      "D": "Üretra rüptürü ve fistül",
+      "E": "Prostatik kanallarda dilatasyon"
+     },
+     "dogru": "B",
+     "aciklama": "Basınç artışı üretrada distansiyon/incelme, divertikül, rüptür, fistül ve prostatik kanal dilatasyonu yapar.",
+     "sik_aciklamalari": {
+      "A": "Görülen bir sonuçtur.",
+      "B": "Doğru: obstrüksiyon proksimalinde üretra genişler ve incelir.",
+      "C": "Görülen bir sonuçtur.",
+      "D": "Görülen bir sonuçtur.",
+      "E": "Görülen bir sonuçtur."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Akut ve kronik alt üriner sistem obstrüksiyonunun evrelerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-11-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Kronik alt üriner sistem obstrüksiyonunda rezidüel idrarın olmadığı, mesanenin güçlü kontraksiyonlarla direnci yendiği evre hangisidir?",
+     "secenekler": {
+      "A": "Postobstrüktif diürez",
+      "B": "İrritasyon evresi",
+      "C": "Dekompansasyon evresi",
+      "D": "Glob vezikale",
+      "E": "Kompansasyon evresi"
+     },
+     "dogru": "E",
+     "aciklama": "Kompansasyon evresinde rezidü kalmaz; zamanla detrüsör yorulur ve kesik kesik işeme başlar.",
+     "sik_aciklamalari": {
+      "A": "Postobstrüktif diürez obstrüksiyon giderildikten sonradır.",
+      "B": "İrritasyonda rezidü <50 ml olabilir ve mukoza ödemlidir.",
+      "C": "Dekompansasyonda belirgin rezidü vardır.",
+      "D": "Glob vezikale akut retansiyondur.",
+      "E": "Doğru: kompansasyon evresidir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kronik infravezikal obstrüksiyonun irritasyon/konjesyon evresinin bulguları hangileridir?",
+     "secenekler": {
+      "A": "Ani anüri",
+      "B": "Rezidüel idrar >500 ml ve bilateral hidroüreteronefroz",
+      "C": "Hiç semptom olmaması",
+      "D": "Pollaküri, noktüri, urgency, dizüri ve detrüsör hipertrofisi; rezidüel idrar <50 ml",
+      "E": "Mesanenin atrofik ve ince duvarlı olması"
+     },
+     "dogru": "D",
+     "aciklama": "İrritasyon evresinde mukoza ödemi ve konjesyonla mesane hassaslaşır.",
+     "sik_aciklamalari": {
+      "A": "Anüri akut bilateral obstrüksiyonun bulgusudur.",
+      "B": "Bu dekompansasyon evresidir.",
+      "C": "İrritatif semptomlar vardır.",
+      "D": "Doğru: irritasyon evresinin bulgularıdır.",
+      "E": "Duvar hipertrofiktir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Kronik infravezikal obstrüksiyonun dekompansasyon evresi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Mesane fonksiyonu obstrüksiyon kaldırıldığında tamamen düzelir",
+      "B": "Rezidüel idrar hiç yoktur",
+      "C": "Belirgin rezidüel idrar (>500 ml), VUR, bilateral hidroüreteronefroz gelişir; obstrüksiyon kaldırılsa da mesane fonksiyonu düzelmez",
+      "D": "Üst üriner sistem etkilenmez",
+      "E": "En erken evredir"
+     },
+     "dogru": "C",
+     "aciklama": "Dekompansasyonda üreterotrigonal kompleks bozulur ve kronik böbrek yetmezliği gelişebilir.",
+     "sik_aciklamalari": {
+      "A": "Mesane fonksiyonu düzelmez.",
+      "B": "Belirgin rezidü vardır.",
+      "C": "Doğru: dekompansasyonun özellikleridir.",
+      "D": "Üst sistem etkilenir.",
+      "E": "En ileri evredir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Mesane duvarındaki patolojik değişiklikleri (trabekülasyon, selül, divertikül) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-11-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "İntravezikal basınç artışıyla hipertrofik detrüsör kas demetlerinin oluşturduğu görünüme ne ad verilir?",
+     "secenekler": {
+      "A": "Sakkül",
+      "B": "Selül",
+      "C": "Divertikül",
+      "D": "Trabekülasyon",
+      "E": "Fistül"
+     },
+     "dogru": "D",
+     "aciklama": "İntravezikal basıncın 2–4 kat artmasıyla trabekülasyon, ardından selül ve divertikül oluşur.",
+     "sik_aciklamalari": {
+      "A": "Sakkül selülün büyümüş halidir.",
+      "B": "Selül küçük mukozal cepçiklerdir.",
+      "C": "Divertikül mukozanın kese benzeri çıkıntısıdır.",
+      "D": "Doğru: trabekülasyonun tanımıdır.",
+      "E": "Fistül anormal bağlantıdır."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Mesane duvarında obstrüksiyona bağlı değişikliklerin kronolojik sırası hangisidir?",
+     "secenekler": {
+      "A": "Fibroblast → düz kas atrofisi → inflamasyon",
+      "B": "Düz kas hipertrofisi → inflamasyon → fibroblast",
+      "C": "Erken inflamasyon → epitel proliferasyonu → 1. hafta submukozal fibroblast → 2. hafta düz kas hipertrofisi",
+      "D": "Divertikül → trabekülasyon → selül",
+      "E": "Değişiklikler aynı anda başlar"
+     },
+     "dogru": "C",
+     "aciklama": "Süreç tip III kollajen artışı ve kompliyans azalmasıyla sonuçlanır.",
+     "sik_aciklamalari": {
+      "A": "Sıra yanlıştır ve atrofi beklenmez.",
+      "B": "Hipertrofi daha geç gelişir.",
+      "C": "Doğru: kronolojik sıra doğrudur.",
+      "D": "Sıra trabekülasyon → selül → divertiküldür.",
+      "E": "Değişiklikler sırayla gelişir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Mesanede divertikül oluşumu ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Divertikül trabekülasyondan önce oluşur",
+      "B": "Selüller perivezikal yağ dokusu ve peritona doğru büyüyerek sakkül ve divertikül oluşturur",
+      "C": "Divertikül yalnızca konjenitaldir",
+      "D": "Divertikül kompliyansı artırır",
+      "E": "Divertikül tip III kollajen azalmasıyla oluşur"
+     },
+     "dogru": "B",
+     "aciklama": "Basınç artışıyla trabekülasyon, selül, sakkül ve divertikül sırasıyla gelişir.",
+     "sik_aciklamalari": {
+      "A": "Divertikül daha geç evrededir.",
+      "B": "Doğru: divertikül oluşum mekanizmasıdır.",
+      "C": "Edinsel divertiküller de vardır.",
+      "D": "Kompliyans azalır; bu nedenle doğru seçenek değildir.",
+      "E": "Tip III kollajen artar."
+     },
+     "bilgi": [
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Üst üriner sistem (supravezikal) obstrüksiyonunun kompansasyon ve dekompansasyon evrelerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-11-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Üst üriner sistem obstrüksiyonunda basınç artışının ilk etkilediği yapı hangisidir?",
+     "secenekler": {
+      "A": "Glomerül bazal membranı",
+      "B": "Mesane",
+      "C": "Üretra",
+      "D": "Prostat",
+      "E": "Kaliksler"
+     },
+     "dogru": "E",
+     "aciklama": "Basınç artışı önce kaliksleri etkiler; forniksler küntleşir, papillalar yassılaşır.",
+     "sik_aciklamalari": {
+      "A": "Glomerül doğrudan ilk etkilenen yapı değildir.",
+      "B": "Mesane supravezikal obstrüksiyonda ilk etkilenen değildir.",
+      "C": "Üretra etkilenmez; bu nedenle doğru seçenek değildir.",
+      "D": "Prostat etkilenmez; bu nedenle doğru seçenek değildir.",
+      "E": "Doğru: ilk etkilenen yapılardır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Üst üriner sistem obstrüksiyonunda kompansasyon evresinin bulguları hangileridir?",
+     "secenekler": {
+      "A": "Hiçbir değişiklik olmaması",
+      "B": "Mesanede trabekülasyon",
+      "C": "Üretra divertikülü",
+      "D": "Böbrek parankiminin hemen kalınlaşması",
+      "E": "Forniks küntleşmesi, papilla yassılaşması, konkav görüntünün konveksleşmesi, üreter ve pelviste dilatasyon ile düz kas hipertrofisi"
+     },
+     "dogru": "E",
+     "aciklama": "Kompansasyonda pelvis-üreterde dilatasyon ve kas hipertrofisi-hiperplazisi gelişir.",
+     "sik_aciklamalari": {
+      "A": "Belirgin değişiklikler olur.",
+      "B": "Trabekülasyon infravezikal obstrüksiyonda görülür.",
+      "C": "Üretra divertikülü infravezikal obstrüksiyonda görülür.",
+      "D": "Parankim zamanla incelir.",
+      "E": "Doğru: kompansasyon bulgularıdır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Üst üriner sistem obstrüksiyonunun dekompansasyon evresinde aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "7. günde dilate kollektör kanallarda atrofi ve nekroz başlaması",
+      "B": "Kas dokusunun yerini kollajen ve elastik bağ dokusunun alması",
+      "C": "Neksus hasarıyla peristaltizmin bozulması",
+      "D": "Peristaltizmin güçlenmesi",
+      "E": "Üreter duvarında fonksiyon kaybı"
+     },
+     "dogru": "D",
+     "aciklama": "Dekompansasyonda bağ dokusu kasın yerini alır ve peristaltizm bozulur.",
+     "sik_aciklamalari": {
+      "A": "Dekompansasyon bulgusudur.",
+      "B": "Dekompansasyon bulgusudur.",
+      "C": "Dekompansasyon bulgusudur.",
+      "D": "Doğru: peristaltizm güçlenmez, bozulur.",
+      "E": "Dekompansasyon bulgusudur."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Basınç azaltıcı koruyucu mekanizmaları (pyelointerstisyel, pyelolenfatik, pyelovenöz reflü) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-11-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Üst üriner sistem obstrüksiyonunda en sık görülen basınç azaltıcı koruyucu mekanizma hangisidir?",
+     "secenekler": {
+      "A": "Pyelovenöz reflü",
+      "B": "Pyelointerstisyel reflü",
+      "C": "Pyelolenfatik reflü",
+      "D": "Vezikoüreteral reflü",
+      "E": "Renal kontrbalans"
+     },
+     "dogru": "B",
+     "aciklama": "Basınçla yırtılan papilla ve fornikslerden idrar sinüs ve perirenal alana geçer; venöz ve lenfatik yolla taşınır.",
+     "sik_aciklamalari": {
+      "A": "Koruyucu mekanizmadır ancak en sık değildir.",
+      "B": "Doğru: en sık koruyucu mekanizmadır.",
+      "C": "Koruyucu mekanizmadır ancak en sık değildir.",
+      "D": "VUR mesaneden üretere geri akımdır.",
+      "E": "Renal kontrbalans karşı böbreğin yanıtıdır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Pyelolenfatik ve pyelovenöz reflüler ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bu mekanizmaların koruyucu etkisi yoktur",
+      "B": "Obstrüksiyonda lenfatik drenaj azalır",
+      "C": "Böbrek lenfi hiler ve kapsüler lenfatiklerle drene olur ve obstrüksiyonda artar; mekanizmalar etkinse fonksiyon kaybı gecikir",
+      "D": "Pyelovenöz reflü yalnızca mesanede görülür",
+      "E": "Bu mekanizmalar GFR'yi artırır"
+     },
+     "dogru": "C",
+     "aciklama": "Akut lenfatik obstrüksiyonda natriürez ve diürez oluşur; koruyucu mekanizmalar basıncı azaltır.",
+     "sik_aciklamalari": {
+      "A": "Koruyucu etkileri vardır.",
+      "B": "Lenfatik drenaj artar.",
+      "C": "Doğru: mekanizmaların işlevidir.",
+      "D": "Böbrek düzeyinde görülür.",
+      "E": "Koruyucudurlar; GFR artışı beklenmez."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Supravezikal obstrüksiyonda intrarenal reflü ve ekstravazasyonun klinik önemi hangisidir?",
+     "secenekler": {
+      "A": "Basıncı artırması",
+      "B": "Böbreği enfeksiyondan tamamen koruması",
+      "C": "Böbrek fonksiyonunu artırması",
+      "D": "Yalnızca alt üriner sistemi etkilemesi",
+      "E": "Vasküler alana doğrudan idrar ve bakteri girişine yol açabilmesi"
+     },
+     "dogru": "E",
+     "aciklama": "İntrapelvik basınç artışı forniks rüptürü ve ekstravazasyon yapar; intrarenal reflüyle bakteri dolaşıma geçebilir (ürosepsis riski).",
+     "sik_aciklamalari": {
+      "A": "Basıncı azaltıcıdır ancak bakteri geçişine yol açabilir.",
+      "B": "Enfeksiyon riskini artırır.",
+      "C": "Fonksiyonu artırmaz.",
+      "D": "Üst sistem olayıdır.",
+      "E": "Doğru: bakteri ve idrarın vasküler alana geçişi önemlidir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Obstrüksiyonun böbrek fonksiyonlarına etkilerini ve fonksiyonel geri dönüşümü açıklamak",
+   "sorular": [
+    {
+     "id": "k1-11-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Deneysel çalışmalarda (köpek) obstrüksiyon kaç hafta sürdüğünde böbrek fonksiyonunun geri dönmediği gösterilmiştir?",
+     "secenekler": {
+      "A": "1 gün",
+      "B": "6 hafta",
+      "C": "2 hafta",
+      "D": "4 hafta",
+      "E": "3 gün"
+     },
+     "dogru": "B",
+     "aciklama": "2 haftalık obstrüksiyonda %46, 4 haftada %35 fonksiyon geri döner; 6 haftada geri dönüş yoktur.",
+     "sik_aciklamalari": {
+      "A": "Fonksiyon geri döner.",
+      "B": "Doğru: 6 haftada geri dönüş yoktur.",
+      "C": "%46 geri döner; bu nedenle doğru seçenek değildir.",
+      "D": "%35 geri döner; bu nedenle doğru seçenek değildir.",
+      "E": "Fonksiyon geri döner."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Obstrüksiyonun böbrek fonksiyonuna etkisi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Asidifikasyon iyileşir",
+      "B": "İdrar konsantrasyon yeteneği artar",
+      "C": "Başlangıçta idrar volümü azalır ve osmolarite artar; ileri dönemde ADH direnciyle dilüe, poliürik idrar oluşur",
+      "D": "Hipertansiyon görülmez",
+      "E": "Azotemi gelişmez"
+     },
+     "dogru": "C",
+     "aciklama": "İleri dönemde konsantrasyon ve asidifikasyon bozulur; azotemi ve hipertansiyon gelişir.",
+     "sik_aciklamalari": {
+      "A": "Asidifikasyon bozulur.",
+      "B": "Konsantrasyon yeteneği bozulur.",
+      "C": "Doğru: fonksiyonel değişikliklerin seyridir.",
+      "D": "Hipertansiyon gelişebilir.",
+      "E": "Azotemi gelişir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q28",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Obstrüksiyonda GFR'nin azalmasını açıklayan filtrasyon basıncı değişikliği hangisidir?",
+     "secenekler": {
+      "A": "Bowman kapsülü basıncının azalması",
+      "B": "Glomerül içi basıncın artması",
+      "C": "Kapiller onkotik basıncın azalması",
+      "D": "Sistemik basıncın artması",
+      "E": "Bowman kapsülü hidrostatik basıncının artması"
+     },
+     "dogru": "E",
+     "aciklama": "Glomerül içi basınç ~70 mmHg, onkotik basınç 25–30, Bowman basıncı 10–15 mmHg'dır; Bowman basıncı arttıkça net filtrasyon azalır.",
+     "sik_aciklamalari": {
+      "A": "Bowman basıncı azalırsa GFR artar.",
+      "B": "Glomerül basıncının artması GFR'yi artırır.",
+      "C": "Onkotik basınç azalması GFR'yi artırır.",
+      "D": "Sistemik basınç artışı GFR'yi düşürmez.",
+      "E": "Doğru: obstrüksiyonda geri basınç artar."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Obstrüksiyon giderildikten sonra böbrek fonksiyonunda beklenen değişiklikler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Hidrojen ve fosfat ekskresyonunda azalma",
+      "B": "GFR ve renal kan akımında azalma",
+      "C": "Konsantrasyon kabiliyetinin bozulması",
+      "D": "Üriner dilüsyon yeteneğinin bozulması",
+      "E": "Sodyum reabsorpsiyonunda hafif bozulma"
+     },
+     "dogru": "D",
+     "aciklama": "Obstrüksiyon sonrası GFR, konsantrasyon, H+/fosfat ekskresyonu ve Na reabsorpsiyonu etkilenir; dilüsyon yeteneği etkilenmez.",
+     "sik_aciklamalari": {
+      "A": "Beklenen değişikliktir.",
+      "B": "Beklenen değişikliktir.",
+      "C": "Beklenen değişikliktir.",
+      "D": "Doğru: dilüsyon yeteneği korunur.",
+      "E": "Beklenen değişikliktir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q29",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Obstrüksiyona bağlı böbrek hasarında TNF-α'nın rolü hangisidir?",
+     "secenekler": {
+      "A": "Parankim kalınlığını artırması",
+      "B": "Böbreği fibrozisten koruması",
+      "C": "GFR'yi artırması",
+      "D": "İnflamatuar infiltrasyonu ve tübüler apoptozu uyararak fibrozise yol açması",
+      "E": "Hiçbir rolünün olmaması"
+     },
+     "dogru": "D",
+     "aciklama": "Hasar önce artan basınçla başlar, sonra kan akımı azalır; TNF-α fibrozise katkıda bulunur.",
+     "sik_aciklamalari": {
+      "A": "Parankim incelir; bu nedenle doğru seçenek değildir.",
+      "B": "Fibrozisi artırır; bu nedenle doğru seçenek değildir.",
+      "C": "GFR'yi artırmaz; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: TNF-α'nın fibrotik rolüdür.",
+      "E": "Belirgin rolü vardır."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Tek taraflı obstrüksiyonda karşı böbreğin davranışını (renal kontrbalans) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-11-q30",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Bir böbreğin kaybedilmesi durumunda karşı böbrekte gelişen yanıt hangisidir?",
+     "secenekler": {
+      "A": "Atrofi",
+      "B": "Kompansatuar hipertrofi",
+      "C": "Hidronefroz",
+      "D": "Nekroz",
+      "E": "Fibrozis"
+     },
+     "dogru": "B",
+     "aciklama": "Renal kontrbalans: bir böbrek kaybedilirse diğerinde kompansatuar hipertrofi gelişir.",
+     "sik_aciklamalari": {
+      "A": "Atrofi beklenmez; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: kompansatuar hipertrofidir.",
+      "C": "Hidronefroz obstrüksiyon sonucudur.",
+      "D": "Nekroz beklenmez; bu nedenle doğru seçenek değildir.",
+      "E": "Fibrozis beklenmez; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q31",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Renal hipotrofi kavramı neyi ifade eder?",
+     "secenekler": {
+      "A": "Böbreğin konjenital küçüklüğü",
+      "B": "Karşı böbreğin hipertrofisi",
+      "C": "Tek taraflı obstrüksiyon giderildiğinde veya transplantasyon yapıldığında total fonksiyonun azalması",
+      "D": "Böbrek tümörünün büyümesi",
+      "E": "Mesane kapasitesinin artması"
+     },
+     "dogru": "C",
+     "aciklama": "Renal kontrbalans kapsamında tek taraflı obstrüksiyonun giderilmesi sonrası total fonksiyonun azalmasına renal hipotrofi denir.",
+     "sik_aciklamalari": {
+      "A": "Konjenital hipoplazi farklı bir kavramdır.",
+      "B": "Bu kompansatuar hipertrofidir.",
+      "C": "Doğru: renal hipotrofinin tanımıdır.",
+      "D": "Tümörle ilgisi yoktur.",
+      "E": "Mesaneyle ilgili değildir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q32",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Tek taraflı kronik obstrüksiyonu olan hastada karşı böbreğin davranışı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Karşı böbrek kompansatuar hipertrofiyle yükü üstlenir; obstrüksiyon giderilince toplam fonksiyon dengesi yeniden kurulur (renal kontrbalans)",
+      "B": "Karşı böbrek de hemen atrofiye uğrar",
+      "C": "Karşı böbreğin fonksiyonu değişmez",
+      "D": "Karşı böbrekte de obstrüksiyon gelişir",
+      "E": "Her iki böbrek eşit derecede hasar görür"
+     },
+     "dogru": "A",
+     "aciklama": "Renal kontrbalans, iki böbrek arasındaki fonksiyonel dengeyi tanımlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: renal kontrbalansın tanımıdır.",
+      "B": "Atrofi beklenmez; bu nedenle doğru seçenek değildir.",
+      "C": "Hipertrofi gelişir; bu nedenle doğru seçenek değildir.",
+      "D": "Karşı böbrekte obstrüksiyon gelişmez.",
+      "E": "Tek taraflı obstrüksiyonda karşı böbrek korunur."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Klinik tabloyu ve belirtileri (akut/kronik obstrüksiyon, glob vezikale) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-11-q33",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Akut komplet infravezikal obstrüksiyonda aşırı işeme isteğine rağmen idrar yapılamaması tablosuna ne ad verilir?",
+     "secenekler": {
+      "A": "Glob vezikale",
+      "B": "Postobstrüktif diürez",
+      "C": "Renal kolik",
+      "D": "Noktüri",
+      "E": "Hematüri"
+     },
+     "dogru": "A",
+     "aciklama": "Glob vezikalede mesanenin ani boşaltılması vakum etkisiyle kanamaya yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: akut idrar retansiyonudur.",
+      "B": "Postobstrüktif diürez obstrüksiyon giderildikten sonra görülür.",
+      "C": "Renal kolik üst sistem tıkanıklığında görülür.",
+      "D": "Noktüri irritasyon belirtisidir.",
+      "E": "Hematüri bulgudur, tablo değildir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q34",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Akut bilateral üst üriner obstrüksiyonun en tipik klinik bulgusu hangisidir?",
+     "secenekler": {
+      "A": "Ani başlayan anüri",
+      "B": "Poliüri",
+      "C": "Asemptomatik seyir",
+      "D": "Ayak bileği ödemi ve yavaş başlangıç",
+      "E": "Noktüri"
+     },
+     "dogru": "A",
+     "aciklama": "Akut obstrüksiyonda böğür ağrısı, bulantı, kusma; bilateralde ani anüri olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: bilateral akut obstrüksiyonun bulgusudur.",
+      "B": "Poliüri kronik kısmi obstrüksiyon veya postobstrüktif dönemdedir.",
+      "C": "Akut tablo semptomatiktir.",
+      "D": "Kronik obstrüksiyonu düşündürür.",
+      "E": "İrritatif semptomdur."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q35",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Kronik bilateral obstrüksiyonda görülebilecek klinik bulgular arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Ani başlayan şiddetli böğür ağrısı ve kusma",
+      "B": "Karın çevresinde artış",
+      "C": "Ayak bileği ödemi",
+      "D": "Halsizlik ve baş ağrısı",
+      "E": "Üremi semptomları (mental değişiklik, tremor)"
+     },
+     "dogru": "A",
+     "aciklama": "Kronik obstrüksiyon sinsi seyirlidir; ani şiddetli ağrı akut obstrüksiyonu düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: akut obstrüksiyon bulgusudur.",
+      "B": "Kronik bilateral obstrüksiyon bulgusudur.",
+      "C": "Kronik bilateral obstrüksiyon bulgusudur.",
+      "D": "Kronik bilateral obstrüksiyon bulgusudur.",
+      "E": "Kronik bilateral obstrüksiyon bulgusudur."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Radyolojik değerlendirme yöntemlerini sıralamak",
+   "sorular": [
+    {
+     "id": "k1-11-q36",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Üriner obstrüksiyonda ilk değerlendirme yöntemi hangisidir?",
+     "secenekler": {
+      "A": "Ultrasonografi",
+      "B": "İntravenöz piyelografi",
+      "C": "MRI",
+      "D": "Nükleer tıp (MAG3)",
+      "E": "Sistoskopi"
+     },
+     "dogru": "A",
+     "aciklama": "USG noninvaziv, hızlı ve düşük maliyetli olduğu için ilk değerlendirme yöntemidir; sonuçları subjektiftir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ilk yöntemdir.",
+      "B": "IVP anatomik seviyeyi gösterir ama kontrast ve radyasyon gerektirir.",
+      "C": "MRI ileri kesitsel değerlendirmedir.",
+      "D": "Nükleer tıp fonksiyonel değerlendirme sağlar.",
+      "E": "Sistoskopi invazivdir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q37",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Obstrükte böbreğin fonksiyonel değerlendirmesinde kullanılan yöntem hangisidir?",
+     "secenekler": {
+      "A": "Nükleer tıp sintigrafisi (MAG3, DTPA, 131I-OIH)",
+      "B": "Düz grafi",
+      "C": "Fizik muayene",
+      "D": "Tam kan sayımı",
+      "E": "Göğüs grafisi"
+     },
+     "dogru": "A",
+     "aciklama": "Nükleer tıp yöntemleri fonksiyonel değerlendirme sağlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: fonksiyonel değerlendirme yöntemidir.",
+      "B": "Düz grafi fonksiyon göstermez.",
+      "C": "Fizik muayene fonksiyonu ölçmez.",
+      "D": "Kan sayımı böbrek fonksiyonunu göstermez.",
+      "E": "Göğüs grafisi ilgisizdir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q38",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Üriner obstrüksiyonda görüntüleme yöntemleri ile ilgili hangisi yanlıştır?",
+     "secenekler": {
+      "A": "USG noninvaziv, hızlı ve ucuzdur ancak sonuçları subjektiftir",
+      "B": "IVP obstrüksiyonun anatomik seviyesini gösterir",
+      "C": "IVP radyoopak madde ve radyasyon gerektirir",
+      "D": "MRI kesitsel görüntüleme sağlar",
+      "E": "USG radyasyon içerir ve ilk tercih edilmez"
+     },
+     "dogru": "E",
+     "aciklama": "USG radyasyonsuzdur ve ilk tercih edilen yöntemdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): USG radyasyonsuzdur ve ilk tercihtir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": [
+      "9c28829238be"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "9c28829238be",
+     "soru": "Aşağıdaki patolojilerin hangisinde üst üriner sistem görüntüleme yöntemlerine gerek yoktur?",
+     "secenekler": {
+      "A": "Ürosepsis varlığı",
+      "B": "Enfekte böbrek taşı",
+      "C": "Akut sistit",
+      "D": "Akut pyelonefrit",
+      "E": "Tekrarlayan üriner enfeksiyonlar"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Tedavi ilkelerini ve postobstrüktif diürezi açıklamak",
+   "sorular": [
+    {
+     "id": "k1-11-q39",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Akut infravezikal obstrüksiyonda (glob vezikale) acil tedavi yöntemi hangisidir?",
+     "secenekler": {
+      "A": "Üretral kateterizasyon",
+      "B": "Perkütan nefrostomi",
+      "C": "Radikal prostatektomi",
+      "D": "Antibiyotik tek başına",
+      "E": "Gözlem"
+     },
+     "dogru": "A",
+     "aciklama": "İnfravezikal obstrüksiyonda üretral kateterizasyon, supravezikalde perkütan nefrostomi veya üreteral kateterizasyon uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: acil drenaj yöntemidir.",
+      "B": "Supravezikal obstrüksiyonda kullanılır.",
+      "C": "Acil drenaj yöntemi değildir.",
+      "D": "Obstrüksiyonu gidermez.",
+      "E": "Acil müdahale gerekir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q40",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Bilateral obstrüksiyon veya soliter böbrekte obstrüksiyon giderildikten sonra gelişen belirgin poliüriye ne ad verilir?",
+     "secenekler": {
+      "A": "Postobstrüktif diürez",
+      "B": "Glob vezikale",
+      "C": "Renal kontrbalans",
+      "D": "Pyelointerstisyel reflü",
+      "E": "Anüri"
+     },
+     "dogru": "A",
+     "aciklama": "Postobstrüktif diürez genellikle hafif ve kendini sınırlar; fark edilmezse ciddi elektrolit bozukluğu gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: postobstrüktif diürezin tanımıdır.",
+      "B": "Glob vezikale akut retansiyondur.",
+      "C": "Renal kontrbalans karşı böbreğin yanıtıdır.",
+      "D": "Koruyucu basınç mekanizmasıdır.",
+      "E": "Anüri idrar yokluğudur."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-11-q41",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Üriner obstrüksiyonda tedavi ilkeleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Komplet bilateral obstrüksiyon veya soliter böbrekte anüri acil tedavi gerektirir",
+      "B": "Supravezikal obstrüksiyonda perkütan nefrostomi uygulanabilir",
+      "C": "Tekrarlayan enfeksiyon ve progresif renal hasar erken cerrahi endikasyonudur",
+      "D": "Postobstrüktif diürezde sıvı-elektrolit izlemi gerekir",
+      "E": "Postobstrüktif diürez her zaman ağırdır ve elektrolit izlemine gerek yoktur"
+     },
+     "dogru": "E",
+     "aciklama": "Postobstrüktif diürez genellikle hafif ve kendini sınırlar; ancak fark edilmezse ciddi elektrolit bozukluğu gelişebileceğinden izlem gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): genellikle hafiftir ve izlem gerekir."
+     },
+     "bilgi": [
+      33,
+      34,
+      35
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 41,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:17"
+}

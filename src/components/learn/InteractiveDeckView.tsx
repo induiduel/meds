@@ -62,6 +62,7 @@ import { HighlighterToolbar, Highlightable, isPenActive, usePenActive, stopPen }
 import { SlideDrawingCanvas, DrawingModeToolbarTrigger, useDrawingGlobalState, setDrawingGlobalState } from './SlideDrawingCanvas';
 import { toast } from '../ui/Toast';
 import { safeJsonFetch } from '../../services/api';
+import { QuestionFocus, focusMarks } from '../../services/questionFocus';
 
 // ---------------------------------------------------------------------------
 // Data types (shape of interactive_learning_decks.json)
@@ -191,6 +192,9 @@ interface InteractiveDeckViewProps {
   /** Opens the PDF dialog; with a target it starts on that deck's slide. */
   onOpenPdfModal?: (target?: { deckId: string; slideNumber: number }) => void;
   onSelectCommittee?: (committeeId: string) => void;
+  /** Çıkmış sorudan gelindiyse: sorunun ifadeleri ve doğru şık slaytta işaretlenir */
+  questionFocus?: QuestionFocus | null;
+  onClearQuestionFocus?: () => void;
 }
 
 // ---------------------------------------------------------------------------
@@ -646,7 +650,7 @@ const ScrollRow: React.FC<{ label: string; children: React.ReactNode }> = ({ lab
   );
 };
 
-export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange, onOpenPdfModal }) => {
+export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange, onOpenPdfModal, questionFocus, onClearQuestionFocus }) => {
   // Liste hafif katalogdan gelir; slaytlar yalnızca açılan deste için yüklenir (12 MB tek parça yerine)
   const allDecks = DECK_CATALOG;
   const [deckId, setDeckId] = useState<string | null>(initialDeckId || null);
@@ -870,6 +874,8 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
             onDeckChange?.(null);
           }}
           onExportPdf={onOpenPdfModal ? (slideNumber) => onOpenPdfModal({ deckId: activeDeck.id, slideNumber }) : undefined}
+          focus={questionFocus && (!questionFocus.deckId || questionFocus.deckId === activeDeck.id) ? questionFocus : null}
+          onClearFocus={onClearQuestionFocus}
         />
       )}
       </div>
@@ -889,7 +895,9 @@ const DeckPlayer: React.FC<{
   onProgress: (index: number) => void;
   onClose: () => void;
   onExportPdf?: (slideNumber: number) => void;
-}> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf }) => {
+  focus?: QuestionFocus | null;
+  onClearFocus?: () => void;
+}> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf, focus, onClearFocus }) => {
   const slides = deck.slides;
   const n = slides.length;
   const [index, setIndex] = useState(() => Math.min(Math.max(0, startAt), n - 1));
@@ -943,6 +951,52 @@ const DeckPlayer: React.FC<{
   const marking = penOn || drawMode !== 'none';
 
   const slide = slides[index];
+  // Soru odağı: bağlı slaytta sorunun ifadeleri (mavi) ve doğru şık (yeşil) işaretlenir.
+  // DOM'a dokunmadan CSS Custom Highlight API ile; destek yoksa yalnız bant görünür.
+  const stageRef = useRef<HTMLDivElement>(null);
+  const focusOnSlide = Boolean(focus && (!focus.slideNumber || focus.slideNumber === slide?.slideNumber));
+  const [focusHits, setFocusHits] = useState<number | null>(null);
+  useEffect(() => {
+    const reg = (globalThis as any).CSS?.highlights;
+    const HL = (globalThis as any).Highlight;
+    if (!reg || !HL) return;
+    reg.delete('ms-q-focus');
+    reg.delete('ms-q-answer');
+    setFocusHits(null);
+    if (!focus || !focusOnSlide) return;
+    const t = window.setTimeout(() => {
+      const root = stageRef.current;
+      if (!root) return;
+      const q: Range[] = [];
+      const a: Range[] = [];
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+      for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+        const text = node.nodeValue || '';
+        if (text.trim().length < 3 || (node.parentElement && node.parentElement.closest('button, [aria-hidden="true"]'))) continue;
+        const marks = focusMarks(text, focus.terms, focus.answerTerms);
+        let start = -1;
+        for (let i = 0; i <= text.length; i++) {
+          const v = i < text.length ? marks[i] : 0;
+          if (start >= 0 && v !== marks[start]) {
+            const r = document.createRange();
+            r.setStart(node, start);
+            r.setEnd(node, i);
+            (marks[start] === 2 ? a : q).push(r);
+            start = -1;
+          }
+          if (start < 0 && v) start = i;
+        }
+      }
+      if (q.length) reg.set('ms-q-focus', new HL(...q));
+      if (a.length) reg.set('ms-q-answer', new HL(...a));
+      setFocusHits(q.length + a.length);
+    }, 250);
+    return () => {
+      window.clearTimeout(t);
+      reg.delete('ms-q-focus');
+      reg.delete('ms-q-answer');
+    };
+  }, [focus, focusOnSlide, index, viewMode, mode]);
 
   // Synchronized PDF page state
   const [activePdfPage, setActivePdfPage] = useState<number>(() => {
@@ -1406,7 +1460,24 @@ const DeckPlayer: React.FC<{
           </aside>
         )}
       <div className={`flex-1 min-w-0 min-h-0 grid grid-cols-1 ${panelOpen ? 'lg:grid-cols-[minmax(0,1fr)_400px]' : ''}`}>
-        <div className="min-h-0 min-w-0 relative">
+        <div ref={stageRef} className="min-h-0 min-w-0 relative">
+          {focus && focusOnSlide && (
+            <div className="ms-qfocus-band ms-pop-in" role="status">
+              <span className="ms-qfocus-dot is-q" aria-hidden /> <span className="truncate">{focus.label}</span>
+              {focus.answerKey && (
+                <span className="ms-qfocus-ans">
+                  <span className="ms-qfocus-dot is-a" aria-hidden /> Doğru şık {focus.answerKey}
+                  {focus.answerText ? <span className="hidden sm:inline">: {focus.answerText.length > 48 ? focus.answerText.slice(0, 46) + '…' : focus.answerText}</span> : null}
+                </span>
+              )}
+              {focusHits === 0 && <span className="text-ink-3 hidden sm:inline">· slayt metninde birebir geçmiyor</span>}
+              {onClearFocus && (
+                <button type="button" onClick={onClearFocus} className="ms-qfocus-x" aria-label="İşaretlemeyi kaldır">
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+          )}
           {viewMode === 'pdf' ? (
             <div className="absolute inset-0 p-2 sm:p-4 flex flex-col">
               <DeckPdfViewer

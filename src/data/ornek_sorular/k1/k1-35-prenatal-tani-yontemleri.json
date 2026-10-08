@@ -1,0 +1,1157 @@
+{
+ "id": "k1-35-prenatal-tani-yontemleri",
+ "sira": 35,
+ "kurul": 1,
+ "ders": "Tıbbi Genetik",
+ "konu": "Prenatal Tanı Yöntemleri",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "tarih": "2026-09-30",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Prenatal tanının tanımını, kapsamını, amaçlarını ve yararlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-35-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Prenatal tanının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca annenin hastalıklarının taranması",
+      "B": "Yalnızca doğumdan sonra yapılan genetik testler",
+      "C": "Fetusta genetik veya genetik dışı nedenli hastalık ve malformasyonların gebeliğin mümkün olan en erken döneminde tanınması",
+      "D": "Yalnızca cinsiyet tayini",
+      "E": "Doğum sonrası tedavinin planlanmasından ibaret işlemler"
+     },
+     "dogru": "C",
+     "aciklama": "Prenatal tanı embriyo ve fetusta yapılan tüm diagnostik çalışmaları kapsar; doğum öncesi tedavi ve doğum sonrası önlemlerin planlanmasını sağlar.",
+     "sik_aciklamalari": {
+      "A": "Hedef fetustur: yalnızca annenin hastalıklarının taranması.",
+      "B": "Doğum sonrası testler postnataldir.",
+      "C": "Doğru: prenatal tanının tanımıdır.",
+      "D": "Cinsiyet tayini prenatal tanının yalnızca bir uygulamasıdır.",
+      "E": "Prenatal tanı doğum öncesi tanıyı kapsar."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Prenatal tanının sınırları ile ilgili ailenin bilgilendirilmesinde vurgulanması gereken nokta hangisidir?",
+     "secenekler": {
+      "A": "Normal sonuç fetusun her açıdan sağlıklı olduğunu garanti eder",
+      "B": "Prenatal tanı teknikleri fetusta olabilecek bütün anomalileri gösteremez",
+      "C": "Tüm genetik hastalıklar tek testle saptanır",
+      "D": "Sonuçlar her zaman kesindir",
+      "E": "Test tekrar gerekmez"
+     },
+     "dogru": "B",
+     "aciklama": "Prenatal tanı tüm anomalileri gösteremez; yanlış güven duygusu önlenmelidir.",
+     "sik_aciklamalari": {
+      "A": "Normal sonuç her anomaliyi dışlamaz.",
+      "B": "Doğru: testlerin sınırlılığı anlatılmalıdır.",
+      "C": "Her hastalık tek testle saptanamaz.",
+      "D": "Sonuçlar net olmayabilir.",
+      "E": "Test tekrarı gerekebilir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Prenatal tanının amaç ve yararları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Ailenin bilgilendirilerek karar vermesini desteklemek",
+      "B": "Doğum öncesi tedavi olanağı sağlamak",
+      "C": "Doğum sonrası önlemleri planlamak",
+      "D": "Anomali saptandığında gebeliğin sonlandırılmasını zorunlu kılmak",
+      "E": "Hastalıkları gebeliğin erken döneminde tanımak"
+     },
+     "dogru": "D",
+     "aciklama": "Prenatal tanıda anomali saptansa bile gebeliği sonlandırma zorunluluğu yoktur; karar aileye aittir.",
+     "sik_aciklamalari": {
+      "A": "Prenatal tanının amacıdır.",
+      "B": "Prenatal tanının yararıdır.",
+      "C": "Prenatal tanının yararıdır.",
+      "D": "Doğru: sonlandırma zorunlu değildir.",
+      "E": "Prenatal tanının tanımında yer alır."
+     },
+     "bilgi": [
+      1,
+      5
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Anomali grubuna göre kullanılacak tanı yöntemini (USG, DNA/enzim analizi, fetal kromozom analizi) eşleştirir.",
+   "sorular": [
+    {
+     "id": "k1-35-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Fetal malformasyonların saptanmasında kullanılan temel yöntem hangisidir?",
+     "secenekler": {
+      "A": "Fetal kromozom analizi",
+      "B": "Enzim analizi",
+      "C": "Ultrasonografi",
+      "D": "DNA dizileme",
+      "E": "Anne serum AFP tek başına"
+     },
+     "dogru": "C",
+     "aciklama": "Malformasyonlar USG, tek gen hastalıkları DNA/enzim analizi, kromozom anomalileri fetal kromozom analiziyle saptanır.",
+     "sik_aciklamalari": {
+      "A": "Kromozom analizi kromozom anomalileri içindir.",
+      "B": "Enzim analizi metabolik hastalıklar içindir.",
+      "C": "Doğru: yapısal anomaliler USG ile görülür.",
+      "D": "DNA analizi tek gen hastalıkları içindir.",
+      "E": "AFP tarama testidir, malformasyon tanısı koydurmaz."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Ailede kistik fibroz öyküsü olan gebelikte uygun prenatal tanı yaklaşımı hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca karyotip",
+      "B": "Yalnızca ultrasonografi",
+      "C": "Yalnızca anne serum AFP",
+      "D": "Fetal örnekte DNA (mutasyon) analizi",
+      "E": "Hiçbir test yapılamaz"
+     },
+     "dogru": "D",
+     "aciklama": "Tek gen hastalıklarının prenatal tanısı DNA ve/veya enzim analiziyle yapılır.",
+     "sik_aciklamalari": {
+      "A": "Karyotip tek gen mutasyonunu göstermez.",
+      "B": "USG tek gen hastalığını göstermez.",
+      "C": "AFP NTD taramasında kullanılır.",
+      "D": "Doğru: tek gen hastalığına uygun yöntemdir.",
+      "E": "Moleküler tanı yapılabilir."
+     },
+     "bilgi": [
+      2,
+      3,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Sitogenetik ve moleküler prenatal testler karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sitogenetik testler nokta mutasyonlarını en iyi gösterir",
+      "B": "Sitogenetik testler kromozom düzeyinde, moleküler testler DNA düzeyinde mutasyon analizi yapar",
+      "C": "Moleküler testler kromozom sayısını hiç değerlendiremez",
+      "D": "İkisi aynı düzeyde inceleme yapar",
+      "E": "Moleküler testler yalnızca malformasyon tanısında kullanılır"
+     },
+     "dogru": "B",
+     "aciklama": "Prenatal genetik testler kromozom (sitogenetik) ve DNA (moleküler) düzeyindeki analizlerin birleşimidir.",
+     "sik_aciklamalari": {
+      "A": "Nokta mutasyonları moleküler yöntemlerle saptanır.",
+      "B": "Doğru: iki düzeyin farkıdır.",
+      "C": "Bazı moleküler yöntemler (ör. QF-PCR, mikroarray) anöploidiyi gösterebilir.",
+      "D": "İnceleme düzeyleri farklıdır.",
+      "E": "Malformasyon tanısı esas olarak USG ile konur."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Prenatal tanı öncesi genetik danışmanın içeriğini ve multidisipliner ekip yaklaşımını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-35-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Prenatal tanıda multidisipliner ekipte yer alması beklenen disiplinler arasında aşağıdakilerden hangisi bulunmaz?",
+     "secenekler": {
+      "A": "Klinik genetik ve genetik danışma",
+      "B": "Kadın-doğum",
+      "C": "Ultrasonografi",
+      "D": "Ortopedi",
+      "E": "Laboratuvar"
+     },
+     "dogru": "D",
+     "aciklama": "Prenatal tanı ekibi kadın-doğum, ultrasonografi, klinik genetik, genetik danışma ve laboratuvardan oluşur.",
+     "sik_aciklamalari": {
+      "A": "Ekibin bileşenidir: klinik genetik ve genetik danışma.",
+      "B": "Ekibin bileşenidir: kadın-doğum.",
+      "C": "Ekibin bileşenidir: ultrasonografi.",
+      "D": "Doğru: ortopedi ekibin temel bileşeni olarak sayılmaz.",
+      "E": "Ekibin bileşenidir: laboratuvar."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Prenatal tanı öncesi genetik danışmada aileye anlatılması gereken konular arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Yöntemlerin risk ve sınırları",
+      "B": "Etkilenme riski",
+      "C": "Anomali saptanırsa gebeliğin mutlaka sonlandırılacağı",
+      "D": "Sonuç alma süresi ve tekrar gerekebileceği",
+      "E": "Sonucun net olmayabileceği"
+     },
+     "dogru": "C",
+     "aciklama": "Danışmada risk, hastalık, yöntem riskleri, sonuç süresi ve belirsizlikler anlatılır; sonlandırma zorunluluğu olmadığı vurgulanır.",
+     "sik_aciklamalari": {
+      "A": "Anlatılması gereken konudur.",
+      "B": "Anlatılması gereken konudur.",
+      "C": "Doğru: böyle bir zorunluluk yoktur.",
+      "D": "Anlatılması gereken konudur.",
+      "E": "Anlatılması gereken konudur."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Prenatal tanı sürecinin başarısını en çok belirleyen faktör hangisidir?",
+     "secenekler": {
+      "A": "Ailenin bilgilendirilmemesi",
+      "B": "Yalnızca tek bir hekimin deneyimi",
+      "C": "Yalnızca laboratuvar cihazının markası",
+      "D": "Yalnızca gebeliğin haftası",
+      "E": "Multidisipliner ekip içindeki koordinasyon"
+     },
+     "dogru": "E",
+     "aciklama": "Prenatal tanı tek hekimin değil ekibin işidir; koordinasyon başarıyı belirler.",
+     "sik_aciklamalari": {
+      "A": "Bilgilendirme zorunludur.",
+      "B": "Tek hekim yaklaşımı yeterli değildir.",
+      "C": "Cihaz tek başına başarıyı belirlemez.",
+      "D": "Zamanlama önemlidir ama tek belirleyici değildir.",
+      "E": "Doğru: ekip koordinasyonu belirleyicidir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Prenatal tanı endikasyonlarını (ileri anne yaşı, serum/USG anormallikleri, aile öyküsü, NTD, X'e bağlı hastalık, etnik risk) sıralar.",
+   "sorular": [
+    {
+     "id": "k1-35-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "En yaygın prenatal tanı endikasyonu hangisidir?",
+     "secenekler": {
+      "A": "Baba yaşının 25 olması",
+      "B": "Anne yaşının 35 veya üzerinde olması",
+      "C": "İlk gebelik olması",
+      "D": "Annenin uzun boylu olması",
+      "E": "Kan grubu A olması"
+     },
+     "dogru": "B",
+     "aciklama": "İleri anne yaşı (≥35) en yaygın prenatal tanı endikasyonudur.",
+     "sik_aciklamalari": {
+      "A": "Genç baba yaşı endikasyon değildir.",
+      "B": "Doğru: en sık endikasyondur.",
+      "C": "İlk gebelik tek başına endikasyon değildir.",
+      "D": "Boy endikasyon değildir.",
+      "E": "Kan grubu endikasyon değildir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "X'e bağlı resesif hastalık (ör. hemofili) öyküsü olan ailede, spesifik tanı testi yoksa prenatal tanının amacı hangisidir?",
+     "secenekler": {
+      "A": "Ense kalınlığı ölçümü",
+      "B": "AFP ölçümü",
+      "C": "NTD taraması",
+      "D": "Folik asit dozunun belirlenmesi",
+      "E": "Fetal cinsiyet tayini"
+     },
+     "dogru": "E",
+     "aciklama": "X'e bağlı hastalıkta erkek çocukta risk %50'dir; spesifik test yoksa cinsiyet tayini yapılır.",
+     "sik_aciklamalari": {
+      "A": "NT kromozomal taramadır.",
+      "B": "AFP NTD taramasıdır.",
+      "C": "NTD taraması bu endikasyonla ilgisizdir.",
+      "D": "Folik asit NTD önleme içindir.",
+      "E": "Doğru: erkek fetus riski belirler."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Prenatal tanı endikasyonları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tay-Sachs ve kistik fibroz Aşkenazi Yahudilerinde sıktır",
+      "B": "Talasemi Akdeniz çevresinde sıktır",
+      "C": "NTD'li olguların birinci derece yakınlarında risk artar",
+      "D": "Gebelik öncesi ve ilk trimesterde folik asit NTD insidansını ~%75 azaltır",
+      "E": "Otozomal resesif tek gen hastalığında tekrarlama riski %50'dir"
+     },
+     "dogru": "E",
+     "aciklama": "Otozomal resesif hastalıklarda tekrarlama riski %25'tir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: etnik risk grubudur.",
+      "B": "Doğru ifade: bölgesel risk grubudur.",
+      "C": "Doğru ifade: risk %2–5'e çıkar.",
+      "D": "Doğru ifade: folik asit koruyucudur.",
+      "E": "Yanlış ifade (aranan cevap): risk %25'tir."
+     },
+     "bilgi": [
+      12,
+      13,
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "İleri anne yaşı ve trizomiler için yaşa bağlı canlı doğum ve tekrarlama risklerini yorumlar.",
+   "sorular": [
+    {
+     "id": "k1-35-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Daha önce trizomili çocuk öyküsü olan kadının sonraki gebeliklerindeki trizomi riski nasıl hesaplanır?",
+     "secenekler": {
+      "A": "Her zaman %50",
+      "B": "Anne yaşı riski + %1",
+      "C": "Her zaman %25",
+      "D": "Risk artmaz",
+      "E": "Yalnızca baba yaşına göre"
+     },
+     "dogru": "B",
+     "aciklama": "Trizomili çocuk öyküsünde tekrarlama riski anne yaşı riski + %1'dir; tek başına prenatal tanı endikasyonudur.",
+     "sik_aciklamalari": {
+      "A": "%50 otozomal dominant risktir.",
+      "B": "Doğru: verilen hesaplama yöntemidir.",
+      "C": "%25 otozomal resesif risktir.",
+      "D": "Risk artar: risk artmaz.",
+      "E": "Anne yaşı esas alınır."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Trizomilerin canlı doğum sıklıkları azalan sırayla hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Trizomi 18 > trizomi 21 > trizomi 13",
+      "B": "Trizomi 13 > trizomi 18 > trizomi 21",
+      "C": "Trizomi 21 > trizomi 18 > trizomi 13",
+      "D": "Hepsi eşit sıklıktadır",
+      "E": "Trizomi 13 > trizomi 21 > trizomi 18"
+     },
+     "dogru": "C",
+     "aciklama": "Trizomi 21 ~1/800, trizomi 18 ~1/7500, trizomi 13 ~1/15000–25000 canlı doğumda görülür.",
+     "sik_aciklamalari": {
+      "A": "Trizomi 21 en sıktır.",
+      "B": "Sıralama terstir: trizomi 13 > trizomi 18 > trizomi 21.",
+      "C": "Doğru: sıralama doğrudur.",
+      "D": "Sıklıklar farklıdır.",
+      "E": "Trizomi 13 en nadirdir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Ebeveynlerden birinde 21q21q Robertsonian translokasyonu saptanıyor.\n\nBu çiftin canlı doğan çocuklarında Down sendromu riski nedir?",
+     "secenekler": {
+      "A": "%4–5",
+      "B": "%1",
+      "C": "%15",
+      "D": "%100",
+      "E": "%25"
+     },
+     "dogru": "D",
+     "aciklama": "21q21q Robertsonian translokasyonu veya izokromozom 21 varlığında Down sendromu riski %100'dür.",
+     "sik_aciklamalari": {
+      "A": "%4–5 baba taşıyıcı rob(14;21) riskidir.",
+      "B": "%1 yaşa bağlı ek risktir.",
+      "C": "%15 anne taşıyıcı rob(14;21) riskidir.",
+      "D": "Doğru: tüm canlı gebelikler etkilenir.",
+      "E": "%25 otozomal resesif risktir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Non-invaziv prenatal tanı yöntemlerini (USG, anne serumu AFP, ikili/üçlü/dörtlü tarama, fetal hücre ve serbest fetal DNA/RNA) açıklar.",
+   "sorular": [
+    {
+     "id": "k1-35-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Açık nöral tüp defektlerinde anne serumunda yükselen belirteç hangisidir?",
+     "secenekler": {
+      "A": "PAPP-A",
+      "B": "Alfa-fetoprotein (AFP)",
+      "C": "Estriol",
+      "D": "İnhibin A",
+      "E": "PSA"
+     },
+     "dogru": "B",
+     "aciklama": "AFP fetal karaciğer kaynaklıdır; açık NTD'de yükselir ve 16. haftada çalışılır.",
+     "sik_aciklamalari": {
+      "A": "PAPP-A trizomilerde düşer.",
+      "B": "Doğru: NTD'de AFP yükselir.",
+      "C": "Estriol trizomi taramasında kullanılır.",
+      "D": "İnhibin A Down'da artar.",
+      "E": "PSA prostat belirtecidir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Anne dolaşımındaki serbest fetal DNA incelemesi ile aşağıdakilerden hangisi saptanabilir?",
+     "secenekler": {
+      "A": "Amniyon sıvısı miktarı",
+      "B": "Fetal kalp yapısı",
+      "C": "Fetal ense kalınlığı",
+      "D": "Y kromozomu dizileriyle fetal cinsiyet ve RhD geni ile Rh uyuşmazlığı",
+      "E": "Plasenta yerleşimi"
+     },
+     "dogru": "D",
+     "aciklama": "Serbest fetal DNA/RNA ile cinsiyet, babadan kalıtılan aleller, RhD durumu ve anöploidi değerlendirilebilir.",
+     "sik_aciklamalari": {
+      "A": "Amniyon sıvısı USG ile değerlendirilir.",
+      "B": "Kalp yapısı USG ile değerlendirilir.",
+      "C": "NT USG ile ölçülür: fetal ense kalınlığı.",
+      "D": "Doğru: serbest fetal DNA uygulamalarıdır.",
+      "E": "Plasenta yerleşimi USG ile değerlendirilir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Anne kanında fetal hücre izolasyonu ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca maternal hücreler incelenir",
+      "B": "Anne kanında çok sayıda fetal hücre bulunur",
+      "C": "İnvaziv bir yöntemdir",
+      "D": "En uygun zaman 35. haftadır",
+      "E": "En uygun örnek alma zamanı 10–13. haftadır; hücre azlığı ve önceki gebeliklerden kalan hücreler sınırlılık oluşturur"
+     },
+     "dogru": "E",
+     "aciklama": "Fetal hücreler anne kanında az bulunur ve önceki gebeliklerden kalabilir; en uygun örnekleme 10–13. haftadır.",
+     "sik_aciklamalari": {
+      "A": "Fetal hücreler izole edilir.",
+      "B": "Fetal hücreler azdır.",
+      "C": "Non-invaziv bir yöntemdir.",
+      "D": "Uygun zaman ilk trimester sonudur.",
+      "E": "Doğru: zamanlama ve sınırlılıklar doğrudur."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "İkili, üçlü ve dörtlü tarama testlerinin bileşenlerini, zamanlamasını ve trizomi paternlerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-35-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "İkili tarama testinin (11–14. hafta) biyokimyasal bileşenleri hangileridir?",
+     "secenekler": {
+      "A": "AFP, uE3, hCG ve inhibin A",
+      "B": "AFP, uE3 ve hCG",
+      "C": "Serbest β-hCG ve PAPP-A",
+      "D": "Yalnızca AFP",
+      "E": "PSA ve CA-125"
+     },
+     "dogru": "C",
+     "aciklama": "İkili test serbest β-hCG ve PAPP-A'dan oluşur ve NT ile birlikte değerlendirilir.",
+     "sik_aciklamalari": {
+      "A": "Bu dörtlü testtir: AFP, uE3, hCG ve inhibin A.",
+      "B": "Bu üçlü testtir: AFP, uE3 ve hCG.",
+      "C": "Doğru: ikili testin bileşenleridir.",
+      "D": "AFP tek başına NTD taramasıdır.",
+      "E": "Bunlar prenatal tarama testi değildir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Dörtlü tarama testinde üçlü teste eklenen bileşen ve Down sendromunda değişimi hangisidir?",
+     "secenekler": {
+      "A": "AFP; artar",
+      "B": "PAPP-A; artar",
+      "C": "Dimerik inhibin A; artar",
+      "D": "Estriol; artar",
+      "E": "PSA; azalır"
+     },
+     "dogru": "C",
+     "aciklama": "Dörtlü test AFP + uE3 + hCG'ye inhibin A ekler; Down'da inhibin A artar.",
+     "sik_aciklamalari": {
+      "A": "AFP üçlü testte zaten vardır.",
+      "B": "PAPP-A ikili testtedir ve trizomilerde azalır.",
+      "C": "Doğru: eklenen bileşen ve değişimi doğrudur.",
+      "D": "Estriol üçlü testte zaten vardır.",
+      "E": "PSA tarama bileşeni değildir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "İlk trimester taramasında PAPP-A düşük, serbest β-hCG yüksek bulunuyor.\n\nBu biyokimyasal patern en çok hangi trizomiyi düşündürür?",
+     "secenekler": {
+      "A": "Normal gebelik",
+      "B": "Trizomi 18",
+      "C": "Trizomi 13",
+      "D": "Turner sendromu",
+      "E": "Trizomi 21"
+     },
+     "dogru": "E",
+     "aciklama": "Trizomilerde PAPP-A düşer; serbest β-hCG trizomi 21'de yüksek, trizomi 13 ve 18'de düşüktür.",
+     "sik_aciklamalari": {
+      "A": "Normal gebelikte PAPP-A düşük değildir.",
+      "B": "Trizomi 18'de β-hCG düşüktür.",
+      "C": "Trizomi 13'te β-hCG düşüktür.",
+      "D": "Turner farklı bir patern gösterir.",
+      "E": "Doğru: düşük PAPP-A + yüksek β-hCG trizomi 21 paternidir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Fetal ense kalınlığının (NT) tanımını, ölçüm zamanını, eşik değerini ve artışına yol açan durumları açıklar.",
+   "sorular": [
+    {
+     "id": "k1-35-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Fetal ense kalınlığı hangi gebelik haftalarında ölçülür?",
+     "secenekler": {
+      "A": "5–7. hafta",
+      "B": "11–14. hafta",
+      "C": "20–24. hafta",
+      "D": "30–34. hafta",
+      "E": "Doğumdan sonra"
+     },
+     "dogru": "B",
+     "aciklama": "NT 11–14. haftada ölçülür ve >3 mm artmış kabul edilir.",
+     "sik_aciklamalari": {
+      "A": "Çok erken bir dönemdir.",
+      "B": "Doğru: ölçüm penceresidir.",
+      "C": "İkinci trimester sonu NT ölçümü için uygun değildir.",
+      "D": "Üçüncü trimesterde ölçülmez.",
+      "E": "Prenatal bir ölçümdür."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Fetal ense kalınlığı artışıyla ilişkili durumlar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Kalp anomalileri",
+      "B": "Trizomi 21",
+      "C": "Turner sendromu",
+      "D": "Fetal makrozomi",
+      "E": "Karın duvarı anomalileri"
+     },
+     "dogru": "D",
+     "aciklama": "NT artışı kromozomal bozukluklar (Tri 13/18/21, Turner), kalp, akciğer, böbrek ve karın duvarı anomalileri ile ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "İlişkili durumdur: kalp anomalileri.",
+      "B": "İlişkili durumdur: trizomi 21.",
+      "C": "İlişkili durumdur: turner sendromu.",
+      "D": "Doğru: makrozomi NT artışının nedeni olarak sayılmaz.",
+      "E": "İlişkili durumdur: karın duvarı anomalileri."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "İkili test ile ense kalınlığı ölçümünün birlikte değerlendirilmesinin trizomi saptama başarısına etkisi hangisidir?",
+     "secenekler": {
+      "A": "Başarı %10'a düşer",
+      "B": "Başarı ~%90'a ulaşır",
+      "C": "Başarıyı etkilemez",
+      "D": "Yalnızca NTD saptanır",
+      "E": "Yalnızca cinsiyet belirlenir"
+     },
+     "dogru": "B",
+     "aciklama": "İkili teste NT eklendiğinde Down, trizomi 13 ve 18 taramasında başarı ~%90 olur.",
+     "sik_aciklamalari": {
+      "A": "Başarı artar: başarı %10'a düşer.",
+      "B": "Doğru: kombine tarama başarıyı artırır.",
+      "C": "NT eklenmesi başarıyı artırır.",
+      "D": "NTD taraması AFP ile yapılır.",
+      "E": "Cinsiyet tayini amacı yoktur."
+     },
+     "bilgi": [
+      20,
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "İnvaziv prenatal tanı yöntemlerini (fetoskopi, amniyosentez, CVS, kordosentez, PGD) tanımlar ve karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k1-35-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "İkinci trimesterde rutin olarak en yaygın uygulanan invaziv prenatal tanı yöntemi hangisidir?",
+     "secenekler": {
+      "A": "Kordosentez",
+      "B": "Fetoskopi",
+      "C": "Amniyosentez",
+      "D": "Preimplantasyon genetik tanı",
+      "E": "Koryon villus örneklemesi"
+     },
+     "dogru": "C",
+     "aciklama": "Amniyosentez 15–16. haftada uygulanan en yaygın invaziv yöntemdir.",
+     "sik_aciklamalari": {
+      "A": "Kordosentez özel endikasyonlarda kullanılır.",
+      "B": "Fetoskopi yüksek komplikasyonlu ve nadir kullanılır.",
+      "C": "Doğru: en yaygın invaziv yöntemdir.",
+      "D": "PGD gebelik öncesi uygulanır.",
+      "E": "CVS ilk trimesterde uygulanır."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Fetoskopinin dezavantajı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Non-invaziv olması",
+      "B": "Fetüsün doğrudan gözlenememesi",
+      "C": "İlk trimesterde uygulanması",
+      "D": "Maternal kontaminasyon olmaması",
+      "E": "Yüksek abortus (~%20) ve fetal ölüm (~%2) oranı"
+     },
+     "dogru": "E",
+     "aciklama": "Fetoskopi fetüsü endoskopla doğrudan gözler ancak enfeksiyon, kanama, membran rüptürü, yüksek abortus ve fetal ölüm riski taşır.",
+     "sik_aciklamalari": {
+      "A": "İnvaziv bir yöntemdir.",
+      "B": "Fetüs doğrudan gözlenir; bu avantajdır.",
+      "C": "15–18. haftada uygulanır.",
+      "D": "Bu bir dezavantaj değildir.",
+      "E": "Doğru: en önemli dezavantajıdır."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "İnvaziv prenatal tanı yöntemleri ile fetal kayıp riski eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Fetoskopi en düşük riskli yöntemdir",
+      "B": "Amniyosentez ~%20",
+      "C": "Kordosentez risksizdir",
+      "D": "Amniyosentez ~%0,5–1; kordosentez ~%2–3",
+      "E": "Tüm yöntemlerin riski aynıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Amniyosentezde fetal kayıp ~%0,5–1, kordosentezde ~%2–3, fetoskopide abortus ~%20'dir.",
+     "sik_aciklamalari": {
+      "A": "Fetoskopi en riskli yöntemlerdendir.",
+      "B": "%20 fetoskopiye aittir.",
+      "C": "Kordosentezin riski vardır.",
+      "D": "Doğru: risk oranları doğru verilmiştir.",
+      "E": "Riskler farklıdır: tüm yöntemlerin riski aynıdır."
+     },
+     "bilgi": [
+      26,
+      27,
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Amniyosentez ve CVS'nin uygulama haftalarını, avantaj-dezavantajlarını, komplikasyonlarını ve numune kurallarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-35-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Koryon villus örneklemesinin (CVS) en önemli avantajı hangisidir?",
+     "secenekler": {
+      "A": "Amniyon sıvısı biyokimyası sağlaması",
+      "B": "Plasental mozaisizm olmaması",
+      "C": "20. haftadan sonra uygulanması",
+      "D": "Maternal kontaminasyon riskinin hiç olmaması",
+      "E": "Erken sonuç alınması"
+     },
+     "dogru": "E",
+     "aciklama": "CVS 10–12. haftada uygulanır ve erken sonuç verir; plasental mozaisizm ~%1 artar.",
+     "sik_aciklamalari": {
+      "A": "Amniyon sıvısı amniyosentezle alınır.",
+      "B": "Plasental mozaisizm görülebilir.",
+      "C": "İlk trimesterde uygulanır.",
+      "D": "Uzun süreli kültürde kontaminasyon riski vardır.",
+      "E": "Doğru: en önemli avantajıdır."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "CVS'nin 10. gebelik haftasından önce tercih edilmemesinin nedeni hangisidir?",
+     "secenekler": {
+      "A": "Sonucun geç çıkması",
+      "B": "Ekstremite kısalması defekti riski",
+      "C": "Plasentanın henüz oluşmamış olması",
+      "D": "Amniyon sıvısının yetersizliği",
+      "E": "Maternal kontaminasyonun kesin olması"
+     },
+     "dogru": "B",
+     "aciklama": "10. haftadan önce yapılan CVS ekstremite kısalması defektleriyle ilişkilendirildiğinden tercih edilmez.",
+     "sik_aciklamalari": {
+      "A": "CVS erken sonuç verir.",
+      "B": "Doğru: erken CVS'nin bilinen riskidir.",
+      "C": "Villuslar mevcuttur.",
+      "D": "CVS amniyon sıvısı kullanmaz.",
+      "E": "Kontaminasyon kesin değildir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q31",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "CVS'de direkt yöntem ile uzun süreli kültür karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Direkt yöntem stroma hücrelerini kullanır",
+      "B": "Direkt yöntemin bant kalitesi çok yüksektir",
+      "C": "Uzun süreli kültürde kontaminasyon riski yoktur",
+      "D": "Direkt yöntem hızlıdır ve maternal kontaminasyon riski yoktur ancak bant kalitesi kötüdür; uzun süreli kültürde bant kalitesi yüksektir",
+      "E": "İki yöntem aynı hücreleri inceler"
+     },
+     "dogru": "D",
+     "aciklama": "Direkt yöntem sitotrofoblastların spontan mitozunu kullanır; uzun süreli kültür stroma hücrelerini üretir ve kontaminasyon riski taşır.",
+     "sik_aciklamalari": {
+      "A": "Direkt yöntem sitotrofoblastları kullanır.",
+      "B": "Direkt yöntemde bant kalitesi kötüdür.",
+      "C": "Uzun süreli kültürde kontaminasyon riski yüksektir.",
+      "D": "Doğru: iki yöntemin farkları doğrudur.",
+      "E": "Farklı hücre tipleri incelenir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Amniyosentez numunesi ile ilgili kurallardan hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Örnek normal çevre sıcaklığında taşınmalıdır",
+      "B": "Kanlı ve pıhtılı örneklerden kaçınılmalıdır",
+      "C": "Hücre kültürü ile sonuç 2–3 haftada alınır",
+      "D": "Amniyon sıvısında normal-patolojik ayrım anne serumuna göre daha kesindir",
+      "E": "Örnek hücre canlılığını korumak için dondurularak gönderilmelidir"
+     },
+     "dogru": "E",
+     "aciklama": "Örnek dondurulmamalıdır; dondurma hücre döngüsünü durdurur ve kültürü engeller.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: örnek normal çevre sıcaklığında taşınmalıdır.",
+      "B": "Doğru ifade: kanlı ve pıhtılı örneklerden kaçınılmalıdır.",
+      "C": "Doğru ifade: kültür 2–3 hafta sürer.",
+      "D": "Doğru ifade: amniyon sıvısında normal-patolojik ayrım anne serumuna göre daha kesindir.",
+      "E": "Yanlış ifade (aranan cevap): örnek dondurulmaz."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Kordosentezin endikasyonlarını, uygulama zamanını ve beklenen anomalileri açıklar.",
+   "sorular": [
+    {
+     "id": "k1-35-q32",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Kordosentez gebeliğin hangi döneminde uygulanır?",
+     "secenekler": {
+      "A": "Yalnızca ilk trimester",
+      "B": "7–10. hafta",
+      "C": "18–20. haftadan doğuma kadar",
+      "D": "Gebelik öncesi",
+      "E": "Yalnızca doğumdan sonra"
+     },
+     "dogru": "C",
+     "aciklama": "Kordosentez USG eşliğinde göbek kordonundan 1–2 cc fetal kan alınmasıdır; 18–20. haftadan doğuma kadar uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Kordosentez ilk trimesterde yapılmaz.",
+      "B": "Bu dönem CVS'ye uygundur.",
+      "C": "Doğru: uygulama zamanıdır.",
+      "D": "Gebelik öncesi PGD uygulanır.",
+      "E": "Prenatal bir yöntemdir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q33",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Kordosentezin tercih edildiği durumlar hangileridir?",
+     "secenekler": {
+      "A": "Geç başvurular ve amniyosentez/CVS'de saptanan mozaikliğin aydınlatılması",
+      "B": "İlk trimester taraması",
+      "C": "Rutin düşük riskli gebelikler",
+      "D": "Folik asit dozu belirleme",
+      "E": "Fetal cinsiyet tayini için ilk tercih"
+     },
+     "dogru": "A",
+     "aciklama": "Kordosentez geç başvurularda ve AS/CVS mozaikliğinin aydınlatılmasında tercih edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: temel endikasyonlarıdır.",
+      "B": "İlk trimester taraması non-invaziv testlerle yapılır.",
+      "C": "Riskli olduğundan rutin uygulanmaz.",
+      "D": "Folik asit dozu riskle belirlenir.",
+      "E": "Cinsiyet tayini için ilk tercih değildir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q34",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Kordosentez sonucunda saptanabilecek bulgular arasında aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Gebelik haftasının kesin tayini",
+      "B": "Trizomi ve monozomi",
+      "C": "Delesyon ve inversiyon",
+      "D": "Tek gen ve metabolik hastalıklar",
+      "E": "İnv9 gibi polimorfizmler ve marker kromozomlar"
+     },
+     "dogru": "A",
+     "aciklama": "Kordosentezle karyotip anomalileri, tek gen ve metabolik hastalıklar, polimorfizmler ve marker kromozomlar saptanabilir; gebelik haftası USG ile belirlenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: gebelik haftası USG ile belirlenir.",
+      "B": "Saptanabilir: trizomi ve monozomi.",
+      "C": "Saptanabilir: delesyon ve inversiyon.",
+      "D": "Saptanabilir: tek gen ve metabolik hastalıklar.",
+      "E": "Saptanabilir: i̇nv9 gibi polimorfizmler ve marker kromozomlar."
+     },
+     "bilgi": [
+      23,
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Prenatal kromozom analizinde karşılaşılan sorunları (kromozom varyantları, marker kromozom, mozaisizm, kültür başarısızlığı) açıklar.",
+   "sorular": [
+    {
+     "id": "k1-35-q35",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Prenatal kromozom analizinde karşılaşılan sorunlar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Fetal kalp atımının olmaması nedeniyle USG yapılamaması",
+      "B": "Kromozom varyantları",
+      "C": "Marker kromozomlar",
+      "D": "Mozaisizm",
+      "E": "Kültür başarısızlığı"
+     },
+     "dogru": "A",
+     "aciklama": "Prenatal kromozom analizinde varyantlar, marker kromozomlar, cinsiyet kromozomları, yapısal anomaliler, mozaisizm ve kültür başarısızlığı sık sorunlardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: bu kromozom analizine özgü bir sorun değildir.",
+      "B": "Sık karşılaşılan sorundur.",
+      "C": "Sık karşılaşılan sorundur.",
+      "D": "Sık karşılaşılan sorundur.",
+      "E": "Sık karşılaşılan sorundur."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q36",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Amniyosentez kültüründe XX/XY mozaisizmi saptanması en olası olarak neyi düşündürür?",
+     "secenekler": {
+      "A": "Maternal hücre kontaminasyonu",
+      "B": "Gerçek fetal hermafroditizm",
+      "C": "Triploidi",
+      "D": "Trizomi 21",
+      "E": "Turner sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "XX/XY mozaisizmi maternal kontaminasyonu düşündürür; analiz tekrarlanmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: maternal hücreler XX hattını açıklar.",
+      "B": "Önce kontaminasyon dışlanmalıdır.",
+      "C": "Triploidi bu bulguyla tanımlanmaz.",
+      "D": "Trizomi 21 XX/XY mozaikliği yapmaz.",
+      "E": "Turner 45,X'tir: turner sendromu."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q37",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Prenatal sitogenetik analizde nadir görülen bir sentromerik varyant saptanması durumunda önerilen yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Ebeveyn çalışması, C bantlama veya FISH ile değerlendirme",
+      "B": "Doğrudan gebeliğin sonlandırılması",
+      "C": "Bulgunun göz ardı edilmesi",
+      "D": "Yalnızca AFP ölçümü",
+      "E": "Yalnızca USG tekrarı"
+     },
+     "dogru": "A",
+     "aciklama": "Analiz 400–500 bant düzeyinde G bantlama ile yapılır; sık görülmeyen sentromerik varyantlarda ebeveyn çalışması, C bant veya FISH yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: varyantın anlamını belirlemek için gereklidir.",
+      "B": "Varyant çoğu zaman benign olabilir; sonlandırma kararı verilmez.",
+      "C": "Değerlendirme gerekir.",
+      "D": "AFP kromozom varyantını değerlendirmez.",
+      "E": "USG kromozom varyantını açıklamaz."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "Plasentaya sınırlı mozaisizm, trisomy rescue ve uniparental dizomi (UPD) kavramlarını ilişkilendirir.",
+   "sorular": [
+    {
+     "id": "k1-35-q38",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Plasentaya sınırlı mozaisizmde (PSM) trofoblastla sınırlı olan tip hangisidir?",
+     "secenekler": {
+      "A": "Tip I",
+      "B": "Tip II",
+      "C": "Tip III",
+      "D": "Tip IV",
+      "E": "Gerçek fetal mozaisizm"
+     },
+     "dogru": "A",
+     "aciklama": "Tip I trofoblastla, tip II koryonik stromayla, tip III her ikisiyle sınırlıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tip I trofoblasta sınırlıdır.",
+      "B": "Tip II koryonik stromaya sınırlıdır.",
+      "C": "Tip III her ikisini tutar.",
+      "D": "Tip IV tanımlanmamıştır.",
+      "E": "Gerçek mozaisizm fetusu da tutar."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q39",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Trizomik bir zigotta ekstra kromozomun kaybıyla (trisomy rescue) kalan iki kopyanın aynı ebeveynden gelmesi hangi duruma yol açar?",
+     "secenekler": {
+      "A": "Uniparental dizomi",
+      "B": "Triploidi",
+      "C": "Robertsonian translokasyon",
+      "D": "Ring kromozom",
+      "E": "Monozomi"
+     },
+     "dogru": "A",
+     "aciklama": "Trisomy rescue sonucu iki kopya aynı ebeveynden kalırsa UPD oluşur; trizomik kaçışların ~1/3'ünde görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: UPD'nin oluşum mekanizmasıdır.",
+      "B": "Triploidi tam takım artışıdır.",
+      "C": "Translokasyon farklı mekanizmadır.",
+      "D": "Ring kromozom farklı mekanizmadır.",
+      "E": "Monozomi kromozom eksikliğidir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-q40",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "CVS'de trizomi 15 mozaisizmi saptanan, amniyosentez karyotipi normal (46 kromozom) gelen gebelikte hangi durum araştırılmalıdır?",
+     "secenekler": {
+      "A": "Trisomy rescue sonrası kromozom 15 uniparental dizomisi (imprinting hastalığı riski)",
+      "B": "Triploidi",
+      "C": "Klinefelter sendromu",
+      "D": "Robertsonian translokasyon taşıyıcılığı yoktur, araştırma gerekmez",
+      "E": "Yalnızca AFP ölçümü"
+     },
+     "dogru": "A",
+     "aciklama": "Plasentaya sınırlı mozaisizm trisomy rescue işareti olabilir; kromozom 15 gibi imprintli genler içeren kromozomlarda UPD hastalık (PWS/AS) yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: PSM ve UPD ilişkisinin klinik önemidir.",
+      "B": "Triploidi bu bulguyla ilişkili değildir.",
+      "C": "Klinefelter gonozomal anöploididir.",
+      "D": "UPD riski nedeniyle araştırma gerekir.",
+      "E": "AFP UPD'yi göstermez."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 40,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:58"
+}

@@ -1,0 +1,966 @@
+{
+ "id": "k1-50-sifilis",
+ "sira": 50,
+ "kurul": 1,
+ "ders": "Enfeksiyon Hastalıkları",
+ "konu": "Sifilis",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
+ "tarih": "2026-10-07",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Spiroketlerin yapısal özelliklerini ve görüntülenme yöntemlerini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-50-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Spiroketlerin görüntülenmesinde kullanılan temel direkt yöntem hangisidir?",
+     "secenekler": {
+      "A": "Gram boyama",
+      "B": "Karanlık alan mikroskopisi",
+      "C": "Ziehl-Neelsen boyama",
+      "D": "KOH preparatı",
+      "E": "Hint mürekkebi"
+     },
+     "dogru": "B",
+     "aciklama": "Spiroketler Gram boyasıyla iyi boyanmaz; karanlık alan mikroskopisiyle görülür.",
+     "sik_aciklamalari": {
+      "A": "Spiroketler Gram ile iyi boyanmaz.",
+      "B": "Doğru: spiroketlerin görüntülenme yöntemidir.",
+      "C": "Aside dirençli bakteriler içindir.",
+      "D": "Mantarlar için kullanılır.",
+      "E": "Kriptokok kapsülü için kullanılır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Spiroketlerin hücre duvarı yapısı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Mikolik asitten zengindir",
+      "B": "Kalın peptidoglikan içerir ve Gram pozitife benzer",
+      "C": "Hücre duvarı yoktur",
+      "D": "Sitoplazmik membran, ince peptidoglikan ve dış membran içerir; yapı Gram negatife benzer",
+      "E": "Kitin içerir"
+     },
+     "dogru": "D",
+     "aciklama": "Duvar yapısı Gram negatife benzese de Gram boyasıyla iyi boyanmaz.",
+     "sik_aciklamalari": {
+      "A": "Mikolik asit mikobakterilerde bulunur.",
+      "B": "Peptidoglikan incedir.",
+      "C": "Hücre duvarı vardır.",
+      "D": "Doğru: spiroket duvar yapısıdır.",
+      "E": "Kitin mantar duvarında bulunur."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Spiroketlerin karakteristik burgu hareketini sağlayan yapı hangisidir?",
+     "secenekler": {
+      "A": "Kapsül",
+      "B": "Dış yüzeydeki pili",
+      "C": "Periplazmik aralıktaki flajella (endoflajella)",
+      "D": "Spor",
+      "E": "Sitoplazmik inklüzyonlar"
+     },
+     "dogru": "C",
+     "aciklama": "Periplazmik aralıktaki flajella burgu hareketi sağlar.",
+     "sik_aciklamalari": {
+      "A": "Kapsül hareket sağlamaz.",
+      "B": "Pili tutunmayı sağlar.",
+      "C": "Doğru: hareket organelidir.",
+      "D": "Spor dayanıklılık formudur.",
+      "E": "Hareket sağlamaz; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Treponema cinsinin alt türlerini ve yol açtıkları hastalıkları sınıflandırabilmek",
+   "sorular": [
+    {
+     "id": "k1-50-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Veneral sifilizin etkeni hangisidir?",
+     "secenekler": {
+      "A": "Treponema pallidum subsp. pertenue",
+      "B": "Treponema pallidum subsp. pallidum",
+      "C": "Treponema pallidum subsp. endemicum",
+      "D": "Treponema carateum",
+      "E": "Borrelia burgdorferi"
+     },
+     "dogru": "B",
+     "aciklama": "T. pallidum subsp. pallidum dünyada yaygın olup cinsel yolla bulaşır.",
+     "sik_aciklamalari": {
+      "A": "Yaws etkenidir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: sifiliz etkenidir.",
+      "C": "Bejel etkenidir; bu nedenle doğru seçenek değildir.",
+      "D": "Pinta etkenidir; bu nedenle doğru seçenek değildir.",
+      "E": "Lyme etkenidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Treponema alt türü ile hastalık eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "T. pallidum subsp. pallidum – yaws",
+      "B": "T. carateum – bejel",
+      "C": "T. pallidum subsp. endemicum – pinta",
+      "D": "T. pallidum subsp. pertenue – yaws",
+      "E": "T. carateum – veneral sifiliz"
+     },
+     "dogru": "D",
+     "aciklama": "Pertenue yaws, endemicum bejel, carateum pinta yapar.",
+     "sik_aciklamalari": {
+      "A": "Pallidum sifiliz yapar.",
+      "B": "Carateum pinta yapar.",
+      "C": "Endemicum bejel yapar.",
+      "D": "Doğru eşleştirme; doğru yanıttır.",
+      "E": "Carateum pinta yapar."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Endemik treponematozlarda kemik tutulumu ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bejel yalnızca kemiği tutar",
+      "B": "Pintada kemik tutulumu en belirgindir",
+      "C": "Hiçbirinde cilt tutulumu yoktur",
+      "D": "Yaws ve bejelde cilt ve kemik tutulumu görülürken pintada yalnızca cilt tutulumu vardır",
+      "E": "Yaws cinsel yolla bulaşır ve kemik tutmaz"
+     },
+     "dogru": "D",
+     "aciklama": "Tutulum paterni ayırıcı tanıda kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Bejel cilt ve kemiği tutar.",
+      "B": "Pintada kemik tutulumu yoktur.",
+      "C": "Cilt tutulumu ortaktır.",
+      "D": "Doğru: tutulum farkı doğrudur.",
+      "E": "Yaws cilt temasıyla bulaşır ve kemik tutar."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Sifilizin epidemiyolojisini ve bulaş yollarını özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-50-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi sifilizin bulaş yollarından biri değildir?",
+     "secenekler": {
+      "A": "Transplasental geçiş",
+      "B": "Cinsel ilişki",
+      "C": "Solunum yoluyla damlacık",
+      "D": "Kan transfüzyonu",
+      "E": "Perkütan yaralanma"
+     },
+     "dogru": "C",
+     "aciklama": "Sifiliz lezyonlara direkt temas, cinsel ilişki, transplasental/doğum, kan ve perkütan yaralanmayla bulaşır.",
+     "sik_aciklamalari": {
+      "A": "Bulaş yoludur; bu nedenle doğru seçenek değildir.",
+      "B": "Bulaş yoludur; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: solunum yoluyla bulaşmaz.",
+      "D": "Bulaş yoludur; bu nedenle doğru seçenek değildir.",
+      "E": "Bulaş yoludur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Sifilizin hangi lezyonlarına doğrudan temas bulaşa yol açar?",
+     "secenekler": {
+      "A": "Gom",
+      "B": "Şankr ve kondiloma lata",
+      "C": "Aort anevrizması",
+      "D": "Tabes dorsalis",
+      "E": "Latent dönem"
+     },
+     "dogru": "B",
+     "aciklama": "Şankr ve kondiloma lata bulaştırıcı lezyonlardır.",
+     "sik_aciklamalari": {
+      "A": "Gomlar genellikle bakteri içermez.",
+      "B": "Doğru: bulaştırıcı lezyonlardır.",
+      "C": "Kardiyovasküler dönemde bulaştırıcılık yoktur.",
+      "D": "Nörolojik tablodur, bulaştırıcı lezyon değildir.",
+      "E": "Asemptomatik dönemdir."
+     },
+     "bilgi": [
+      7,
+      10,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "DSÖ verilerine göre sifilizin gebelikteki önemi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sifiliz anneden bebeğe geçmez",
+      "B": "Gebelikte sifiliz görülmez",
+      "C": "Milyonlarca gebede aktif sifiliz bildirilmiştir ve önemli bir perinatal komplikasyon nedenidir",
+      "D": "Gebelikte tarama gerekmez",
+      "E": "Perinatal komplikasyon yapmaz"
+     },
+     "dogru": "C",
+     "aciklama": "2016'da ~1 milyon gebede aktif sifiliz; 2012'de 930 bin gebede sifiliz ve 350 bin istenmeyen olay bildirilmiştir.",
+     "sik_aciklamalari": {
+      "A": "Transplasental geçer.",
+      "B": "Gebelikte görülür; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: halk sağlığı önemidir.",
+      "D": "Tarama önemlidir; bu nedenle doğru seçenek değildir.",
+      "E": "Perinatal komplikasyon yapar."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Sifilizin patogenezini ve inkübasyon süresini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-50-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Sifilizde inkübasyon süresi genellikle ne kadardır?",
+     "secenekler": {
+      "A": "2 saat",
+      "B": "1 gün",
+      "C": "1 yıl",
+      "D": "6 ay",
+      "E": "3 hafta"
+     },
+     "dogru": "E",
+     "aciklama": "İnkübasyon 3–90 gün olup genellikle 3 haftadır.",
+     "sik_aciklamalari": {
+      "A": "Gerçekçi değildir; bu nedenle doğru seçenek değildir.",
+      "B": "Çok kısadır; bu nedenle doğru seçenek değildir.",
+      "C": "Çok uzundur; bu nedenle doğru seçenek değildir.",
+      "D": "Uzundur; bu nedenle doğru seçenek değildir.",
+      "E": "Doğru: tipik inkübasyon süresidir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Sifiliz patogenezi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca giriş yerinde kalır, yayılmaz",
+      "B": "Etken mukoza veya bozulmuş ciltten girer, çoğalır, kan ve lenf yoluyla yayılır ve damar endotelinde çoğalır",
+      "C": "Sağlam deriden kolayca geçer ve yalnızca deride kalır",
+      "D": "Solunum yoluyla girer",
+      "E": "Hiçbir zaman damar tutulumu yapmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Sistemik yayılım organ tutulumunu ve spiroketemiyi açıklar.",
+     "sik_aciklamalari": {
+      "A": "Sistemik yayılım olur.",
+      "B": "Doğru: patogenez doğrudur.",
+      "C": "Mukoza veya bozulmuş ciltten girer ve yayılır.",
+      "D": "Solunum yolu giriş yolu değildir.",
+      "E": "Endarterit tipiktir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Sifilizde damar endotelinde çoğalmanın tersiyer dönemde yol açtığı patolojik süreç hangisidir?",
+     "secenekler": {
+      "A": "Damar dilatasyonu olmaksızın tromboz",
+      "B": "Ateroskleroz",
+      "C": "Endarteritis obliterans ve damar oklüzyonu",
+      "D": "Vaskülitin hiç görülmemesi",
+      "E": "Arteriyovenöz fistül"
+     },
+     "dogru": "C",
+     "aciklama": "Kardiyovasküler sifilizde endarteritis obliterans çıkan aortu tutar; anevrizma ve aort yetmezliği gelişebilir.",
+     "sik_aciklamalari": {
+      "A": "Temel süreç endarterittir.",
+      "B": "Ateroskleroz farklı süreçtir.",
+      "C": "Doğru: sifilizin vasküler patolojisidir.",
+      "D": "Vaskülit tipiktir; bu nedenle doğru seçenek değildir.",
+      "E": "Tipik değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      8,
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Primer sifilizin klinik özelliklerini tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-50-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Primer sifilizin tipik lezyonu hangisidir?",
+     "secenekler": {
+      "A": "Gom",
+      "B": "Ağrılı veziküller",
+      "C": "Kaşıntısız yaygın döküntü",
+      "D": "Ağrısız ülser (şankr)",
+      "E": "Kondiloma lata"
+     },
+     "dogru": "D",
+     "aciklama": "~3 hafta inkübasyon sonrası ağrısız, bulaştırıcı şankr gelişir ve ~1 ayda iyileşir.",
+     "sik_aciklamalari": {
+      "A": "Tersiyer sifiliz bulgusudur.",
+      "B": "Herpes bulgusudur; bu nedenle doğru seçenek değildir.",
+      "C": "Sekonder sifiliz bulgusudur.",
+      "D": "Doğru: primer lezyondur.",
+      "E": "Sekonder sifiliz bulgusudur."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Primer sifiliz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Spiroketemi organ invazyonu için kaynak olabilir",
+      "B": "Şankr ağrısızdır",
+      "C": "Şankr tedavisiz iyileşir",
+      "D": "Şankrdan ~1 hafta sonra ağrısız bölgesel LAP gelişir",
+      "E": "Şankr bulaştırıcı değildir"
+     },
+     "dogru": "E",
+     "aciklama": "Şankr bulaştırıcıdır; primer dönemde bulaş riski yüksektir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade: ~1 ayda iyileşir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): şankr bulaştırıcıdır."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": [
+      "d8d000439cee"
+     ]
+    },
+    {
+     "id": "k1-50-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Primer sifilizde şankrın kendiliğinden iyileşmesinin klinik önemi hangisidir?",
+     "secenekler": {
+      "A": "Bağışıklığın kalıcı olarak gelişmesi",
+      "B": "Enfeksiyonun tamamen sona ermesi",
+      "C": "Hastanın tedavi almadan hastalığın sistemik dönemlere ilerleyebilmesi",
+      "D": "Serolojik testlerin negatifleşmesi",
+      "E": "Bulaşın imkânsız hale gelmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Şankr iyileşse de spiroketemi sürer ve hastalık sekonder, latent ve tersiyer dönemlere ilerleyebilir.",
+     "sik_aciklamalari": {
+      "A": "Kalıcı bağışıklık oluşmaz.",
+      "B": "Enfeksiyon sürer; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: tedavisiz ilerleme riski vardır.",
+      "D": "Treponemal testler pozitif kalır.",
+      "E": "Bulaş devam edebilir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d8d000439cee",
+     "soru": "Primer sifiliz için hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Şankr mevcuttur",
+      "B": "Şankr bulaştırıcı değildir",
+      "C": "Şankr tedavisiz iyileşir",
+      "D": "Şankr ile birlikte LAP bulunabilir",
+      "E": "Şankr ve LAP ağrılıdır"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Sekonder sifilizin cilt, mukoza ve sistemik bulgularını ayırt edebilmek",
+   "sorular": [
+    {
+     "id": "k1-50-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Sekonder sifilizin en sık bulgusu hangisidir?",
+     "secenekler": {
+      "A": "Gom",
+      "B": "Cilt lezyonları (kaşıntısız, simetrik, yaygın döküntü)",
+      "C": "Aort anevrizması",
+      "D": "Tabes dorsalis",
+      "E": "Şankr"
+     },
+     "dogru": "B",
+     "aciklama": "Sekonder sifiliz şankrdan 2–8 hafta sonra ortaya çıkar; en sık cilt lezyonları görülür.",
+     "sik_aciklamalari": {
+      "A": "Tersiyer bulgudur; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: en sık bulgudur.",
+      "C": "Tersiyer bulgudur; bu nedenle doğru seçenek değildir.",
+      "D": "Tersiyer bulgudur; bu nedenle doğru seçenek değildir.",
+      "E": "Primer bulgudur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Gövde, el ve ayak tabanlarında kaşıntısız döküntü ve epitroklear lenfadenopatisi olan hastada öncelikle düşünülmesi gereken tanı hangisidir?",
+     "secenekler": {
+      "A": "Genital herpes",
+      "B": "Primer sifiliz",
+      "C": "Tersiyer sifiliz",
+      "D": "Sekonder sifiliz",
+      "E": "Şankroid"
+     },
+     "dogru": "D",
+     "aciklama": "El-ayak tabanı döküntüsü ve epitroklear LAP sekonder sifiliz için tipik ipuçlarıdır.",
+     "sik_aciklamalari": {
+      "A": "Herpes veziküler lezyon yapar.",
+      "B": "Primer dönemde şankr vardır.",
+      "C": "Tersiyer dönemde gom ve organ tutulumu vardır.",
+      "D": "Doğru: sekonder sifilizin tipik tablosudur.",
+      "E": "Şankroid ağrılı ülser yapar."
+     },
+     "bilgi": [
+      14,
+      15
+     ],
+     "benzer_cikmis": [
+      "8329cee8b571"
+     ]
+    },
+    {
+     "id": "k1-50-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Sekonder sifiliz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kondiloma lata bulaştırıcıdır",
+      "B": "Kaş dökülmesi ve toksik alopesi görülebilir",
+      "C": "Hepatit, üveit ve glomerülonefrit gelişebilir",
+      "D": "Akut menenjit veya kraniyal sinir tutulumu olabilir",
+      "E": "Sekonder sifiliz asemptomatik olup hiçbir cilt bulgusu vermez"
+     },
+     "dogru": "E",
+     "aciklama": "Sekonder sifiliz çok sistemli, semptomatik bir tablodur; asemptomatik dönem latent sifilizdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): sekonder sifiliz semptomatiktir."
+     },
+     "bilgi": [
+      13,
+      15,
+      16,
+      17
+     ],
+     "benzer_cikmis": [
+      "14db0e045e06",
+      "84eda84539cb"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "8329cee8b571",
+     "soru": "Gövde, bacaklar, el ve ayak tabanlarında döküntü şikayetiyle başvuran 37 yaşında erkek hastanın öncelikle yapılması gerekenler arasında yer almaz.",
+     "secenekler": {
+      "A": "Siğoz serolojisi istenmesi",
+      "B": "HIV serolojisi istenmesi",
+      "C": "Hepatit serolojisi istenmesi",
+      "D": "Sekonder siğoz ön tanısıyla kardiyovasküler"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "14db0e045e06",
+     "soru": "Sifiliz kliniği için hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Primer sifilizde şankr mevcuttur",
+      "B": "Sekonder si asemtomatiktir",
+      "C": "Latent sifilizde treponemal testler pozitiftir",
+      "D": "Tersiyer sifilizde nörolojik tutulum görülür",
+      "E": "Tersiyer sifilizde gommatöz lezyonlar görülür"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "84eda84539cb",
+     "soru": "Sifiliz ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sekonder sifilizde anogenital bölgede kondiloma aküminata adı verilen lezyonlar görülür (terminal dönem)",
+      "B": "El ayaları ve ayak tabanlarında deri tutulumu sık görülür (sekonder sifiliz doğru)",
+      "C": "Gomlarda bulaşıcılık yüksektir (tersiyer sifiliz)",
+      "D": "Primer sfilizde yumuşak şankr görülür",
+      "E": "Tersiyer sifiliz vakalarının %80’inden fazlasını nörosifiliz"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Latent sifilizin özelliklerini ve erken/geç latent ayrımını bilmek",
+   "sorular": [
+    {
+     "id": "k1-50-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Latent sifilizde tanı nasıl konur?",
+     "secenekler": {
+      "A": "Akciğer grafisiyle",
+      "B": "Şankrın karanlık alan mikroskopisiyle",
+      "C": "Döküntü biyopsisiyle",
+      "D": "Yalnızca serolojik testlerle",
+      "E": "İdrar kültürüyle"
+     },
+     "dogru": "D",
+     "aciklama": "Latent dönem asemptomatiktir; tanı yalnızca serolojiyle konur.",
+     "sik_aciklamalari": {
+      "A": "Tanı koydurmaz; bu nedenle doğru seçenek değildir.",
+      "B": "Latent dönemde şankr yoktur.",
+      "C": "Döküntü yoktur; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: tanı serolojiktir.",
+      "E": "Tanı koydurmaz; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Erken latent ve geç latent sifiliz ayrımında kullanılan süre hangisidir?",
+     "secenekler": {
+      "A": "Ayrım yapılmaz",
+      "B": "İlk 1 ay erken latent",
+      "C": "İlk 10 yıl erken latent",
+      "D": "İlk 1 hafta erken latent",
+      "E": "İlk 1 yıl erken latent, sonrası geç latent"
+     },
+     "dogru": "E",
+     "aciklama": "Erken/geç ayrımı bulaştırıcılık ve tedavi süresini belirler.",
+     "sik_aciklamalari": {
+      "A": "Ayrım yapılır; bu nedenle doğru seçenek değildir.",
+      "B": "Süre yanlıştır; bu nedenle doğru seçenek değildir.",
+      "C": "Süre yanlıştır; bu nedenle doğru seçenek değildir.",
+      "D": "Süre yanlıştır; bu nedenle doğru seçenek değildir.",
+      "E": "Doğru: kabul edilen ayrımdır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Latent sifiliz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "3–30 yıl sürebilir",
+      "B": "Olguların %60–70'inde ömür boyu latent kalabilir",
+      "C": "İlk 4 yılda sekonder relapslar gelişebilir",
+      "D": "Relapsların çoğu ilk yılda mukokutanöz bulgularla olur",
+      "E": "Latent dönemde treponemal testler negatiftir"
+     },
+     "dogru": "E",
+     "aciklama": "Treponemal testler ömür boyu pozitif kalır; latent dönemde tanı serolojiyle konur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): treponemal testler pozitiftir."
+     },
+     "bilgi": [
+      17,
+      18,
+      26
+     ],
+     "benzer_cikmis": [
+      "14db0e045e06"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "14db0e045e06",
+     "soru": "Sifiliz kliniği için hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Primer sifilizde şankr mevcuttur",
+      "B": "Sekonder si asemtomatiktir",
+      "C": "Latent sifilizde treponemal testler pozitiftir",
+      "D": "Tersiyer sifilizde nörolojik tutulum görülür",
+      "E": "Tersiyer sifilizde gommatöz lezyonlar görülür"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Tersiyer sifilizin gom, nörosifiliz ve kardiyovasküler tutulumlarını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-50-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Tersiyer sifilizde görülen ve genellikle bakteri içermeyen granülomatöz lezyona ne ad verilir?",
+     "secenekler": {
+      "A": "Şankr",
+      "B": "Gom",
+      "C": "Kondiloma lata",
+      "D": "Roseola",
+      "E": "Bubo"
+     },
+     "dogru": "B",
+     "aciklama": "Gomlar tip IV aşırı duyarlılıkla gelişen granülomlardır; cilt, kemik ve karaciğerde görülür.",
+     "sik_aciklamalari": {
+      "A": "Primer lezyondur; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: tersiyer lezyondur.",
+      "C": "Sekonder lezyondur; bu nedenle doğru seçenek değildir.",
+      "D": "Sekonder döküntü tipidir.",
+      "E": "Lenfadenopatidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Spinal kord dorsal kök gangliyonlarının tutulumuyla ataksi, düşük ayak ve Romberg pozitifliği yapan nörosifiliz formu hangisidir?",
+     "secenekler": {
+      "A": "Asemptomatik nörosifiliz",
+      "B": "Genel parezi",
+      "C": "Tabes dorsalis",
+      "D": "Meningovasküler sifiliz",
+      "E": "Gom"
+     },
+     "dogru": "C",
+     "aciklama": "Tabes dorsalis ve genel parezi tersiyer nörosifilizin klasik formlarıdır.",
+     "sik_aciklamalari": {
+      "A": "Belirti vermez; bu nedenle doğru seçenek değildir.",
+      "B": "Genel parezi kişilik değişikliği ve demans yapar.",
+      "C": "Doğru: tabes dorsalisin tanımıdır.",
+      "D": "Kişilik değişikliği, baş ağrısı ve paralizi yapar.",
+      "E": "Gom granülomatöz lezyondur."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Kardiyovasküler sifiliz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Endarteritis obliterans görülür",
+      "B": "Sıklıkla çıkan aort tutulur",
+      "C": "Aort anevrizması ve aort yetmezliği gelişebilir",
+      "D": "Grafilerde kalsifikasyon izlenebilir",
+      "E": "Bu dönemde hasta yüksek derecede bulaştırıcıdır"
+     },
+     "dogru": "E",
+     "aciklama": "Kardiyovasküler sifiliz döneminde bulaştırıcılık yoktur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): bulaştırıcılık yoktur."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Sifiliz tanısında karanlık saha mikroskobisini ve serolojik testleri karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-50-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Tedavi takibinde kullanılan sifiliz serolojik testi hangisidir?",
+     "secenekler": {
+      "A": "VDRL/RPR",
+      "B": "TPHA",
+      "C": "FTA-ABS",
+      "D": "Karanlık alan mikroskopisi",
+      "E": "Kültür"
+     },
+     "dogru": "A",
+     "aciklama": "Nontreponemal testler (VDRL, RPR) tedavi ile 1–2 yılda negatifleşir; tarama, takip ve nörosifiliz tanısında kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tedavi takibinde kullanılır.",
+      "B": "Ömür boyu pozitif kalır.",
+      "C": "Ömür boyu pozitif kalır.",
+      "D": "Direkt tanı yöntemidir.",
+      "E": "T. pallidum rutin kültürde üretilmez."
+     },
+     "bilgi": [
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Spesifik (treponemal) testler ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "TPHA ve FTA-ABS bakteriye karşı antikoru saptar, primer sifilizde pozitifleşir ve ömür boyu pozitif kalır",
+      "B": "Kardiyolipin antijenine karşı antikor saptar",
+      "C": "Tedavi ile kısa sürede negatifleşir",
+      "D": "Tedavi takibinde idealdir",
+      "E": "Primer sifilizde hiçbir zaman pozitifleşmez"
+     },
+     "dogru": "A",
+     "aciklama": "Treponemal testler en erken yükselen ve en spesifik testlerdir; tedavi takibinde kullanılamaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru: treponemal testlerin özellikleridir.",
+      "B": "Bu nontreponemal testtir.",
+      "C": "Ömür boyu pozitif kalır.",
+      "D": "Takipte kullanılmaz.",
+      "E": "Erken pozitifleşir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Sifiliz tanısında karanlık saha mikroskobisinin kullanılabileceği örnek hangisidir?",
+     "secenekler": {
+      "A": "Şankr veya kondiloma latadan alınan seröz akıntı",
+      "B": "Latent dönemde kan",
+      "C": "Gom biyopsisi",
+      "D": "Aort duvarı",
+      "E": "Tabes dorsalisli hastanın BOS'u"
+     },
+     "dogru": "A",
+     "aciklama": "Erken lezyonlarda (şankr, kondiloma lata, mukozal lezyonlar) direkt etken gösterimi mümkündür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: uygun örnektir.",
+      "B": "Latent dönemde lezyon yoktur.",
+      "C": "Gomlar genellikle bakteri içermez.",
+      "D": "Uygun örnek değildir.",
+      "E": "Nörosifiliz tanısı serolojik/BOS testleriyle konur."
+     },
+     "bilgi": [
+      19,
+      24
+     ],
+     "benzer_cikmis": [
+      "e28693ffa242"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "e28693ffa242",
+     "soru": "Tıbbi Patoloji Tıbbi Patoloji Cinsel Yolla Bulaşan Hastalıklar Hangisi servikovajinal yayma sitolojisinde direkt olarak tesbit edilebilir?",
+     "secenekler": {
+      "A": "Treponema pallidum",
+      "B": "Neisseria gonorrhoeae",
+      "C": "HerpesSimpleks",
+      "D": "Trichomonas vaginalis",
+      "E": "Chlamydiatrachomatis"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Sifiliz tedavi şemalarını ve nörosifiliz tedavisini özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-50-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Primer, sekonder ve erken latent sifilizin tedavisi hangisidir?",
+     "secenekler": {
+      "A": "Benzatin penisilin 2,4 milyon ünite IM tek doz",
+      "B": "Kristalize penisilin 10–14 gün",
+      "C": "Asiklovir",
+      "D": "Flukonazol",
+      "E": "Metronidazol"
+     },
+     "dogru": "A",
+     "aciklama": "Erken sifiliz tek doz benzatin penisilinle tedavi edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: erken sifiliz tedavisidir.",
+      "B": "Nörosifiliz tedavisidir.",
+      "C": "Antiviraldir; bu nedenle doğru seçenek değildir.",
+      "D": "Antifungaldir; bu nedenle doğru seçenek değildir.",
+      "E": "Trikomonas tedavisidir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Geç latent, gummatöz ve kardiyovasküler sifilizde tedavi şeması hangisidir?",
+     "secenekler": {
+      "A": "Haftada bir benzatin penisilin 2,4 milyon ünite IM, 3 hafta",
+      "B": "Tek doz benzatin penisilin",
+      "C": "Oral amoksisilin 1 gün",
+      "D": "Tedavi gerekmez",
+      "E": "Yalnızca kortikosteroid"
+     },
+     "dogru": "A",
+     "aciklama": "Doz sayısı döneme ve doku tutulumuna göre belirlenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: geç dönem tedavisidir.",
+      "B": "Erken sifiliz tedavisidir.",
+      "C": "Yetersizdir; bu nedenle doğru seçenek değildir.",
+      "D": "Tedavi gerekir; bu nedenle doğru seçenek değildir.",
+      "E": "Antibiyotik gerekir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-50-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Nörosifiliz tedavisinin diğer formlardan farkı hangisidir?",
+     "secenekler": {
+      "A": "Kristalize penisilin 6x2–4 milyon ünite IV, 10–14 gün gibi daha yüksek doz ve daha uzun süreli tedavi gerekir",
+      "B": "Tek doz benzatin penisilin yeterlidir",
+      "C": "Penisilin hiç kullanılmaz",
+      "D": "Yalnızca oral tedavi yapılır",
+      "E": "Tedavi süresi 1 gündür"
+     },
+     "dogru": "A",
+     "aciklama": "SSS tutulumu daha yüksek doz ve daha uzun tedavi gerektirir; penisilin alerjisinde alternatif düşünülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: nörosifiliz tedavisidir.",
+      "B": "Yetersizdir; bu nedenle doğru seçenek değildir.",
+      "C": "Penisilin esastır; bu nedenle doğru seçenek değildir.",
+      "D": "Parenteral tedavi gerekir.",
+      "E": "Süre 10–14 gündür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 30,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:22"
+}

@@ -1,0 +1,1325 @@
+{
+ "id": "k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri",
+ "sira": 14,
+ "kurul": 1,
+ "ders": "Halk Sağlığı",
+ "konu": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+ "ogretim_uyesi": "Uzm. Dr. Erkay Nacar (Halk Sağlığı ABD)",
+ "tarih": "2026-09-18",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Bulaşıcı hastalıkların yeniden ortaya çıkışını ve 21. yüzyıl salgın tehditlerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-14-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Ortaya çıkan yeni insan patojenlerinin yaklaşık ne kadarı hayvan kaynaklıdır?",
+     "secenekler": {
+      "A": "%95",
+      "B": "%5",
+      "C": "%20",
+      "D": "%70",
+      "E": "%1"
+     },
+     "dogru": "D",
+     "aciklama": "Ortaya çıkan insan patojenlerinin ~%70'i hayvan kaynaklıdır; sağlıklı çevre salgınların önlenmesinde gereklidir.",
+     "sik_aciklamalari": {
+      "A": "Gerçek oranın üstündedir.",
+      "B": "Gerçek oranın çok altındadır.",
+      "C": "Gerçek oranın altındadır.",
+      "D": "Doğru: zoonotik kaynak baskındır.",
+      "E": "Çok düşüktür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "21. yüzyılda salgınların yayılma hızı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "1970'lerden sonra yeni patojen bulunmamıştır",
+      "B": "Salgınlar artık yalnızca lokal kalır",
+      "C": "Önceden lokal kalan salgınlar kıtalararası uçak hızında yayılabilir; 2009 grip salgını 9 aydan kısa sürede tüm kıtalara ulaşmıştır",
+      "D": "Bulaşıcı hastalıklar artık sorun değildir",
+      "E": "Küreselleşmenin salgın yayılımına etkisi yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Küresel ulaşım salgınların hızla yayılmasına yol açar; 1970'lerden bu yana 1500'den fazla yeni patojen bulunmuştur.",
+     "sik_aciklamalari": {
+      "A": "1500'den fazla yeni patojen bulunmuştur.",
+      "B": "Salgınlar hızla küreselleşebilir.",
+      "C": "Doğru: 21. yüzyıl salgın tehdidinin özelliğidir.",
+      "D": "Tehdit devam etmektedir.",
+      "E": "Küreselleşme yayılımı hızlandırır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "1970'lerden sonra 'bulaşıcı hastalıklar artık sorun olmayacak' görüşünün yanlış çıkmasını gösteren örnekler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "HIV'in 70 milyondan fazla kişiyi enfekte etmesi",
+      "B": "Çiçek hastalığının yeniden yaygın salgınlar yapması",
+      "C": "MERS'in 2015'te Güney Kore'de salgın yapması",
+      "D": "2009 grip salgınının kısa sürede tüm kıtalara yayılması",
+      "E": "1500'den fazla yeni patojenin tanımlanması"
+     },
+     "dogru": "B",
+     "aciklama": "Çiçek hastalığı eradike edilmiştir; diğer örnekler bulaşıcı hastalık tehdidinin sürdüğünü gösterir.",
+     "sik_aciklamalari": {
+      "A": "Tehdidin sürdüğünü gösterir.",
+      "B": "Doğru: çiçek eradike edilmiş olup yeniden salgın yapmamıştır.",
+      "C": "Tehdidin sürdüğünü gösterir.",
+      "D": "Tehdidin sürdüğünü gösterir.",
+      "E": "Tehdidin sürdüğünü gösterir."
+     },
+     "bilgi": [
+      1,
+      2,
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Salgına hazırlığın temel unsurlarını (sürveyans, sağlıklı çevre, bilimsel yatırım, güçlü sağlık sistemi) sıralamak",
+   "sorular": [
+    {
+     "id": "k1-14-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Salgına hazırlığın temel unsurları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "İyi bir sürveyans sistemi",
+      "B": "Sağlık hizmetlerine erişimin kısıtlanması",
+      "C": "Sağlıklı çevre",
+      "D": "Bilimsel yatırımın sürekliliği",
+      "E": "Güçlü sağlık sistemi"
+     },
+     "dogru": "B",
+     "aciklama": "Hazırlık sürveyans, sağlıklı çevre, bilimsel yatırım ve güçlü sağlık sistemine dayanır; halkın sisteme ulaşabilmesi gerekir.",
+     "sik_aciklamalari": {
+      "A": "Temel unsurdur; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: erişim kısıtlaması hazırlığı zayıflatır.",
+      "C": "Temel unsurdur; bu nedenle doğru seçenek değildir.",
+      "D": "Temel unsurdur; bu nedenle doğru seçenek değildir.",
+      "E": "Temel unsurdur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İyi bir sürveyans sisteminde tanının ilk başladığı nokta hangisidir?",
+     "secenekler": {
+      "A": "Medya",
+      "B": "Bakanlık",
+      "C": "Uluslararası kuruluşlar",
+      "D": "Klinisyen",
+      "E": "Belediye"
+     },
+     "dogru": "D",
+     "aciklama": "Tanı ilk olarak klinisyenle başlar; halkın sisteme ulaşabilmesi ve sistemin hazırlıklı olması gerekir. Ebola Batı Afrika'da iki ay tanı alamamıştır.",
+     "sik_aciklamalari": {
+      "A": "Medya tanı koymaz; bu nedenle doğru seçenek değildir.",
+      "B": "Bakanlık bildirimleri değerlendirir.",
+      "C": "Uluslararası kuruluşlar sonraki basamaktadır.",
+      "D": "Doğru: ilk tanı klinisyende konur.",
+      "E": "Belediye tanı koymaz."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Sağlık sistemlerinin salgına karşı güçlendirilmesinde gerekli olanlar hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Sağlık çalışanı sayısının azaltılması",
+      "B": "Yalnızca salgın sırasında geçici bütçe",
+      "C": "Uzun vadeli yatırım, uygun finansman ve kişisel koruyucu ekipmanla donatılmış eğitimli işgücü",
+      "D": "Kişisel koruyucu ekipmanın sınırlanması",
+      "E": "Hastanelerin kapasitesinin düşürülmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Salgınlar sistemi baskı altına alır; öncesi, sırası ve sonrasında güvenli hizmet için uzun vadeli yatırım ve donanımlı işgücü gerekir.",
+     "sik_aciklamalari": {
+      "A": "İşgücü korunmalı ve güçlendirilmelidir.",
+      "B": "Geçici bütçe yetersizdir.",
+      "C": "Doğru: sistem güçlendirmenin bileşenleridir.",
+      "D": "KKD sağlanmalıdır; bu nedenle doğru seçenek değildir.",
+      "E": "Kapasite artırılmalıdır."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Epidemik fazları ve her faza karşılık gelen müdahaleleri açıklamak",
+   "sorular": [
+    {
+     "id": "k1-14-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Epidemik fazlardan üçüncüsü hangisidir?",
+     "secenekler": {
+      "A": "Topluluğa giriş",
+      "B": "Amplifikasyon",
+      "C": "Lokal yayılım",
+      "D": "Salgının sönmesi",
+      "E": "Eradikasyon"
+     },
+     "dogru": "B",
+     "aciklama": "Fazlar: 1) giriş/ortaya çıkış, 2) lokal yayılım, 3) amplifikasyon, 4) bağışıklığın yayılmasıyla sönme.",
+     "sik_aciklamalari": {
+      "A": "Birinci fazdır; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: üçüncü fazdır.",
+      "C": "İkinci fazdır; bu nedenle doğru seçenek değildir.",
+      "D": "Dördüncü fazdır; bu nedenle doğru seçenek değildir.",
+      "E": "Eradikasyon bir faz değildir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Epidemik fazların sönme aşamasının nedeni hangisidir?",
+     "secenekler": {
+      "A": "Sürveyansın durdurulması",
+      "B": "Patojenin mutasyonla kaybolması",
+      "C": "Tüm vektörlerin yok olması",
+      "D": "Patojene karşı bağışıklığın toplumda yayılması",
+      "E": "Vakaların bildiriminin kesilmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Dördüncü fazda patojene bağışıklık yayıldıkça salgın söner.",
+     "sik_aciklamalari": {
+      "A": "Sürveyans durdurulmamalıdır.",
+      "B": "Bu, fazın tanımı değildir.",
+      "C": "Vektör yokluğu her salgın için geçerli değildir.",
+      "D": "Doğru: bağışıklık bulaşı azaltır.",
+      "E": "Bildirim kesilmesi salgını söndürmez."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Epidemik fazlar ile uygun müdahale tipi eşleştirildiğinde hangisi doğrudur?",
+     "secenekler": {
+      "A": "Amplifikasyon – yalnızca bekleme",
+      "B": "Ortaya çıkış fazı – etkiyi azaltma",
+      "C": "Ortaya çıkış fazı – bekleme ve erken teşhis; lokal yayılım – sınırlama; amplifikasyon – etkiyi azaltma",
+      "D": "Lokal yayılım – eradikasyon",
+      "E": "Fazlarla müdahaleler arasında ilişki yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Her epidemik faz farklı müdahale tipine karşılık gelir: bekleme/erken teşhis, sınırlama, etkiyi azaltma ve kontrol.",
+     "sik_aciklamalari": {
+      "A": "Amplifikasyonda etkinin azaltılması gerekir.",
+      "B": "Etkiyi azaltma geniş yayılımda öne çıkar.",
+      "C": "Doğru: faz–müdahale ilişkisi doğrudur.",
+      "D": "Eradikasyon küresel hedeftir.",
+      "E": "Her faz farklı müdahaleye karşılık gelir."
+     },
+     "bilgi": [
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Salgını bekleme ve erken teşhisin temelini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-14-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Salgının ortaya çıkışı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Erken teşhisin önemi yoktur",
+      "B": "Tam olarak öngörülebilir",
+      "C": "Tahmin etmek mümkün değildir",
+      "D": "Öngörülemez ancak tahmin edilebilir; risklerin önceden tahmini en olası tehditlere odaklanmayı sağlar",
+      "E": "Yeni hastalıklarda araştırma gerekmez"
+     },
+     "dogru": "D",
+     "aciklama": "Faz 1 müdahalesi bekleme ve erken teşhistir; en olası hastalıklar ve yayılım sürücüleri tahmin edilir.",
+     "sik_aciklamalari": {
+      "A": "Erken teşhis kritiktir.",
+      "B": "Ortaya çıkış öngörülemez.",
+      "C": "Tahmin edilebilir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: bekleme ilkesinin temelidir.",
+      "E": "Yeni hastalıklar için hızlı araştırma gerekir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Salgını bekleme (öngörü) faaliyeti aşağıdakilerden hangisini kapsar?",
+     "secenekler": {
+      "A": "Yalnızca aşı üretimi",
+      "B": "Salgın bittikten sonra rapor yazılması",
+      "C": "En olası hastalıkların tahmini ve yayılmayı kolaylaştıracak sürücülerin hızlı tanımlanması",
+      "D": "Hastaların taburcu edilmesi",
+      "E": "Vektörlerin tamamen yok edilmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Öngörü, en olası tehditlerin ve yayılım sürücülerinin önceden belirlenmesidir.",
+     "sik_aciklamalari": {
+      "A": "Aşı üretimi tek başına öngörü değildir.",
+      "B": "Bu salgın sonrası değerlendirmedir.",
+      "C": "Doğru: öngörünün kapsamıdır.",
+      "D": "Klinik bir süreçtir.",
+      "E": "Vektör eradikasyonu öngörü faaliyeti değildir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "2014 Ebola salgınında hastalığın Batı Afrika'da yaklaşık iki ay tanı alamamasının salgın yönetimindeki önemli dersi hangisidir?",
+     "secenekler": {
+      "A": "Tanının gecikmesi salgın seyrini değiştirmez",
+      "B": "Erken teşhis ve hazırlıklı sürveyans sistemi gecikirse salgın sınırlanamadan büyür",
+      "C": "Sürveyans gereksizdir",
+      "D": "Klinisyenlerin tanıda rolü yoktur",
+      "E": "Korku doğru kararlar alınmasını sağlar"
+     },
+     "dogru": "B",
+     "aciklama": "Gecikmiş tanı sınırlamayı geciktirir; salgınlar korku ve korku hatalı kararlara yol açar.",
+     "sik_aciklamalari": {
+      "A": "Gecikme salgını büyütür.",
+      "B": "Doğru: erken teşhisin önemini gösterir.",
+      "C": "Sürveyans temel unsurdur.",
+      "D": "Tanı klinisyende başlar.",
+      "E": "Korku hatalı kararlara yol açar."
+     },
+     "bilgi": [
+      3,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Sınırlama, etkiyi azaltma ve kontrol altına alma kavramlarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-14-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Salgında sınırlama ne zaman başlar?",
+     "secenekler": {
+      "A": "Yalnızca ölümler başladığında",
+      "B": "Salgın bittikten sonra",
+      "C": "Pandemi ilan edildikten bir yıl sonra",
+      "D": "Aşı bulunduktan sonra",
+      "E": "İlk vaka teşhis edildiği anda"
+     },
+     "dogru": "E",
+     "aciklama": "Hızlı ve etkili sınırlama erken teşhis kadar önemlidir ve ilk vaka teşhisiyle başlar.",
+     "sik_aciklamalari": {
+      "A": "Ölüm beklenmez; bu nedenle doğru seçenek değildir.",
+      "B": "Salgın sonrası sınırlama anlamsızdır.",
+      "C": "Çok geç bir zamandır.",
+      "D": "Aşı beklenmeden sınırlama yapılmalıdır.",
+      "E": "Doğru: sınırlama ilk vakayla başlar."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Epidemi veya pandemi gelişmişse 'etkiyi azaltma' aşamasında hedeflenen nedir?",
+     "secenekler": {
+      "A": "Patojenin dünya çapında kalıcı olarak yok edilmesi",
+      "B": "Morbidite, mortalite, ekonomik ve sosyal etkilerin azaltılması",
+      "C": "Yalnızca vaka bildirimlerinin durdurulması",
+      "D": "Sağlık çalışanlarının işten uzaklaştırılması",
+      "E": "Toplumla iletişimin kesilmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Salgın yayıldığında müdahale morbidite, mortalite ve sosyoekonomik etkilerin azaltılmasına yönelir.",
+     "sik_aciklamalari": {
+      "A": "Bu eradikasyondur; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: etkiyi azaltmanın hedefidir.",
+      "C": "Bildirim sürdürülmelidir.",
+      "D": "İşgücü korunmalıdır.",
+      "E": "İletişim sürdürülmelidir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Bir bulaşıcı hastalığı taşıdığı bilinen vakaların bulaştırıcılık süresince sağlam bireylerden ayrı tutulması salgın yönetiminin hangi aşamasına hizmet eder?",
+     "secenekler": {
+      "A": "Eliminasyon",
+      "B": "Eradikasyon",
+      "C": "Sınırlama",
+      "D": "Öngörü",
+      "E": "İnfodemi yönetimi"
+     },
+     "dogru": "C",
+     "aciklama": "İzolasyon gibi önlemler hastalığın yayılımını sınırlamaya yöneliktir.",
+     "sik_aciklamalari": {
+      "A": "Eliminasyon bölgesel sorun olmaktan çıkarmadır.",
+      "B": "Eradikasyon küresel yok etmedir.",
+      "C": "Doğru: yayılımın sınırlanmasıdır.",
+      "D": "Öngörü salgın öncesi tahmindir.",
+      "E": "İnfodemi yanlış bilgi yönetimidir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": [
+      "7d52b54c7061",
+      "3eab6ec16a1f"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "7d52b54c7061",
+     "soru": "HALK SAĞLIĞI\nHALK SAĞLIĞI\nSalgın hastalıklarda\nkontrol ve korunma\nyöntemleri\nBir bulaşıcı hastalığı\n taşıdığı bilinen\nvakaların, bu\nhastalığın bulaştırıcılık\nsüresince sağlam\nbireylerden ayrılması\nhangi tanım ile ifade edilir?2",
+     "secenekler": {
+      "A": "Saküler trend",
+      "B": "Filyasyon",
+      "C": "Karantina",
+      "D": "Tecrit",
+      "E": "İtlaf"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "3eab6ec16a1f",
+     "soru": "Salgın hastalıklarda kontrol ve korunma yöntemleri Bir bulaşıcı hastalığı taşıdığı bilinen vakaların, bu hastalığın bulaştırıcılık süresince sağlam bireylerden ayrılması hangi tanım ile ifade edilir?",
+     "secenekler": {
+      "A": "Tecrit",
+      "B": "Karantina",
+      "C": "Kontrol",
+      "D": "Filyasyon",
+      "E": "Sporadi"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Eliminasyon ve eradikasyonu ayırt etmek",
+   "sorular": [
+    {
+     "id": "k1-14-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Patojenin dünya çapında görülme sıklığının kalıcı olarak ortadan kaldırılmasına ne ad verilir?",
+     "secenekler": {
+      "A": "Sınırlama",
+      "B": "Eliminasyon",
+      "C": "Kontrol",
+      "D": "Eradikasyon",
+      "E": "Filyasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Eradikasyon patojenin dünya çapında kalıcı olarak yok edilmesidir; çok zordur ve nadiren elde edilir.",
+     "sik_aciklamalari": {
+      "A": "Sınırlama yayılımın engellenmesidir.",
+      "B": "Eliminasyon belirli bölgede halk sağlığı sorunu olmaktan çıkmasıdır.",
+      "C": "Kontrol sıklığın kabul edilebilir düzeye indirilmesidir.",
+      "D": "Doğru: eradikasyonun tanımıdır.",
+      "E": "Filyasyon temaslıların izlenmesidir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": [
+      "4b381af29103"
+     ]
+    },
+    {
+     "id": "k1-14-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Hastalığın tanımlanmış bir coğrafi bölgede artık büyük bir halk sağlığı sorunu olmamasına ne ad verilir?",
+     "secenekler": {
+      "A": "Endemi",
+      "B": "Eradikasyon",
+      "C": "Pandemi",
+      "D": "Amplifikasyon",
+      "E": "Eliminasyon"
+     },
+     "dogru": "E",
+     "aciklama": "Eliminasyonda gözetim ve kontrol önlemleri yeniden ortaya çıkmayı önlemek için sürdürülmelidir.",
+     "sik_aciklamalari": {
+      "A": "Endemi hastalığın bölgede sürekli bulunmasıdır.",
+      "B": "Eradikasyon dünya çapında kalıcı yok etmedir.",
+      "C": "Pandemi küresel salgındır.",
+      "D": "Amplifikasyon epidemik fazdır.",
+      "E": "Doğru: eliminasyonun tanımıdır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": [
+      "03ea7ff95d79",
+      "dbdc94070cd3"
+     ]
+    },
+    {
+     "id": "k1-14-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Eliminasyon ve eradikasyon karşılaştırıldığında aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Eliminasyon belirli bir coğrafi bölgeyle sınırlıdır",
+      "B": "Eradikasyon dünya çapında kalıcıdır",
+      "C": "Eradikasyon eliminasyondan çok daha zordur",
+      "D": "Eliminasyonda gözetim ve kontrol önlemleri sürdürülmelidir",
+      "E": "Eliminasyon sağlanan bölgede tüm kontrol önlemleri hemen kaldırılabilir"
+     },
+     "dogru": "E",
+     "aciklama": "Eliminasyon sonrası hastalığın yeniden ortaya çıkmasını önlemek için gözetim ve kontrol sürmelidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade: nadiren elde edilir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): önlemler sürdürülmelidir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": [
+      "acd33437ed5d",
+      "4e61d5ee29d6"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "4b381af29103",
+     "soru": "Enfeksiyon hastalığını etkiyle birlikte yeryüzünden yok etmek hangi tanım ile ifade edilir?",
+     "secenekler": {
+      "A": "Eliminasyon",
+      "B": "Eradikayon",
+      "C": "Kontrol",
+      "D": "Bildirim",
+      "E": "Filyasyon"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "03ea7ff95d79",
+     "soru": "Hastalığın etkeni tam anlamıyla yok edilmemekle birlikte, hiç vaka görülmemesi hangi tanım ile ifade edilir?\nSürveyans\nFilyasyon\nEradikasyon\nEliminasyon",
+     "secenekler": {
+      "A": "Sürveyans",
+      "B": "Filyasyon",
+      "C": "Eradikasyon",
+      "D": "Eliminasyon"
+     },
+     "cevap": null
+    },
+    {
+     "id": "dbdc94070cd3",
+     "soru": "Hastalığın etkeni tam anlamıyla yok edilmemekle birlikte, hiç vaka görülmemesi hangi tanım ile ifade edilir?",
+     "secenekler": {
+      "A": "Sürveyans",
+      "B": "Filyasyon",
+      "C": "Eradikasyon",
+      "D": "Eliminasyon",
+      "E": "Bildirim"
+     },
+     "cevap": null
+    },
+    {
+     "id": "acd33437ed5d",
+     "soru": "HALK SAĞLIĞI HALK SAĞLIĞI Salgın hastalıklarda kontrol ve korunma yöntemleri",
+     "secenekler": {
+      "A": "Eliminasyon",
+      "B": "Eradikayon",
+      "C": "Kontrol",
+      "D": "Bildirim",
+      "E": "Filyasyon"
+     },
+     "cevap": null
+    },
+    {
+     "id": "4e61d5ee29d6",
+     "soru": "Salgın hastalıklarda kontrol ve korunma yöntemleri hangi tanım ile ifade edilir??",
+     "secenekler": {
+      "A": "Eliminasyon",
+      "B": "Eradikayon",
+      "C": "Kontrol",
+      "D": "Bildirim",
+      "E": "Filyasyon"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Salgına müdahalenin dört özelliğini ve kurumlar arası koordinasyonun gerektirdiklerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-14-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Salgın yanıtının dört özelliği arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Tam ve eksiksiz sağlık enformasyonu",
+      "B": "Kurumlar arası koordinasyon",
+      "C": "Bilginin kamuoyundan gizlenmesi",
+      "D": "Riskin tam ve doğru aktarılması",
+      "E": "Tam ve eksiksiz sağlık müdahaleleri"
+     },
+     "dogru": "C",
+     "aciklama": "Salgın yanıtının dört özelliği koordinasyon, enformasyon, risk iletişimi ve müdahalelerdir.",
+     "sik_aciklamalari": {
+      "A": "Dört özellikten biridir.",
+      "B": "Dört özellikten biridir.",
+      "C": "Doğru: bilgi gizleme yanıtın özelliği değildir; riskin doğru aktarılması gerekir.",
+      "D": "Dört özellikten biridir.",
+      "E": "Dört özellikten biridir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Etkili kurumlar arası koordinasyon için gerekenler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Ortak eylem planı",
+      "B": "Acil operasyon merkezi gibi özel fiziksel alan",
+      "C": "Toplantı ve dokümantasyon araçları",
+      "D": "Her kurumun ayrı ve birbirinden bağımsız eylem planı yürütmesi",
+      "E": "İletişim araçları"
+     },
+     "dogru": "D",
+     "aciklama": "Koordinasyon ortak eylem planı, operasyon merkezi, dokümantasyon ve iletişim araçları gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Koordinasyon gereksinimidir.",
+      "B": "Koordinasyon gereksinimidir.",
+      "C": "Koordinasyon gereksinimidir.",
+      "D": "Doğru: bağımsız planlar koordinasyonu bozar.",
+      "E": "Koordinasyon gereksinimidir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Salgının 'istisnai bir olay' olarak kurumlar arası koordinasyon gerektirmesinin nedeni hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca tek bir kurumun yetkisinde olması",
+      "B": "Fazladan insan ve finansal kaynak, ek ortak ve sektör gerektirmesi",
+      "C": "Kaynak ihtiyacının azalması",
+      "D": "Sektörler arası işbirliğine gerek olmaması",
+      "E": "Salgınların hiçbir zaman karmaşık olmaması"
+     },
+     "dogru": "B",
+     "aciklama": "Kapsamlı salgın yanıtı her zaman karmaşıktır; tüm paydaşların etkin çalışması ancak güçlü koordinasyonla mümkündür.",
+     "sik_aciklamalari": {
+      "A": "Birçok kurum ve sektör işin içindedir.",
+      "B": "Doğru: koordinasyonun gerekçesidir.",
+      "C": "Kaynak ihtiyacı artar.",
+      "D": "Sektörler arası işbirliği gerekir.",
+      "E": "Salgın yanıtı karmaşıktır."
+     },
+     "bilgi": [
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Tam ve eksiksiz sağlık enformasyonunun iki türünü (sürveyans ve müdahale bilgisi) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-14-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Salgın yönetiminde gereken iki temel sağlık enformasyonu türü hangileridir?",
+     "secenekler": {
+      "A": "Reklam ve tanıtım bilgisi",
+      "B": "Sürveyans bilgisi ve müdahale bilgisi",
+      "C": "Yalnızca finansal bilgi",
+      "D": "Yalnızca medya haberleri",
+      "E": "Yalnızca kişisel görüşler"
+     },
+     "dogru": "B",
+     "aciklama": "İzleme, müdahale etkisini ölçme ve karar verme için sürveyans ve müdahale bilgisi gerekir.",
+     "sik_aciklamalari": {
+      "A": "Reklam bilgisi salgın enformasyonu değildir.",
+      "B": "Doğru: iki temel bilgi türüdür.",
+      "C": "Finansal bilgi tek başına yeterli değildir.",
+      "D": "Medya haberleri sürveyans verisi değildir.",
+      "E": "Kişisel görüşler veri değildir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Sürveyans bilgisinin içeriği hangisidir?",
+     "secenekler": {
+      "A": "Personel maaşları",
+      "B": "Müdahalelerin süreç ve çıktı göstergeleri",
+      "C": "Hastane bütçesi",
+      "D": "Kişi, zaman ve yere göre vaka ve ölüm sayıları",
+      "E": "İlaç fiyatları"
+     },
+     "dogru": "D",
+     "aciklama": "Sürveyans kişi-zaman-yer dağılımında vaka/ölüm sayısı verir; müdahale bilgisi süreç ve çıktı göstergelerini verir.",
+     "sik_aciklamalari": {
+      "A": "Maaşlar sürveyans verisi değildir.",
+      "B": "Bu müdahale bilgisidir.",
+      "C": "Bütçe sürveyans verisi değildir.",
+      "D": "Doğru: sürveyans bilgisinin içeriğidir.",
+      "E": "İlaç fiyatları sürveyans verisi değildir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Bir aşılama kampanyasında uygulanan doz sayısı ve ulaşılan hedef nüfus oranı hangi bilgi türüne örnektir?",
+     "secenekler": {
+      "A": "İnfodemi",
+      "B": "Sürveyans bilgisi (vaka sayısı)",
+      "C": "Müdahale bilgisi (süreç/çıktı göstergesi)",
+      "D": "Risk algısı",
+      "E": "Eradikasyon göstergesi"
+     },
+     "dogru": "C",
+     "aciklama": "Müdahale bilgisi müdahalelerin süreç ve çıktı göstergelerini verir.",
+     "sik_aciklamalari": {
+      "A": "İnfodemi yanlış bilgi yayılımıdır.",
+      "B": "Sürveyans vaka/ölüm sayılarını gösterir.",
+      "C": "Doğru: kampanya göstergeleri müdahale bilgisidir.",
+      "D": "Risk algısı toplumsal bir kavramdır.",
+      "E": "Eradikasyon küresel yok etmedir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Riski tam ve doğru şekilde aktarmayı ve infodemiyi açıklamak",
+   "sorular": [
+    {
+     "id": "k1-14-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Salgın sırasında patojenle birlikte yanlış, gereksiz ve panik yaratan abartılı bilgilerin yayılmasına ne ad verilir?",
+     "secenekler": {
+      "A": "Sporadik",
+      "B": "Pandemi",
+      "C": "Endemi",
+      "D": "Epizootik",
+      "E": "İnfodemi"
+     },
+     "dogru": "E",
+     "aciklama": "İnfodemiyi önlemek için konuşma, dinleme ve dedikoduları engelleme önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Sporadik dağınık tek tük vakadır.",
+      "B": "Pandemi küresel salgındır.",
+      "C": "Endemi bölgede sürekli görülen hastalıktır.",
+      "D": "Epizootik hayvan salgınıdır.",
+      "E": "Doğru: infodeminin tanımıdır."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "İnfodemiyi önlemede etkili yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Bilgi akışını tamamen kesmek",
+      "B": "Hiç açıklama yapmamak",
+      "C": "Yalnızca tek taraflı buyurgan duyurular",
+      "D": "Toplumun kaygılarını göz ardı etmek",
+      "E": "Toplumla konuşma, dinleme ve dedikoduları engelleme"
+     },
+     "dogru": "E",
+     "aciklama": "Riskin tam ve doğru aktarılması için iki yönlü iletişim ve dedikodu yönetimi gerekir.",
+     "sik_aciklamalari": {
+      "A": "Bilgi akışının kesilmesi yanlış bilgiyi artırır.",
+      "B": "Bilgi boşluğu söylentileri artırır.",
+      "C": "Tek taraflı buyurgan dil benimsenmez.",
+      "D": "Kaygılar dinlenmelidir.",
+      "E": "Doğru: infodemi yönetiminin temelidir."
+     },
+     "bilgi": [
+      15,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Riskin tam ve doğru aktarılması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Salgın yanıtının dört özelliğinden biridir",
+      "B": "Dedikoduların engellenmesi önemlidir",
+      "C": "İnsanların kaygı ve algılarının dinlenmesi gerekir",
+      "D": "İnfodemi panik yaratabilir",
+      "E": "Paniği önlemek için risk olduğundan düşük gösterilmelidir"
+     },
+     "dogru": "E",
+     "aciklama": "Risk tam ve doğru aktarılmalıdır; riski küçümsemek güveni ve uyumu bozar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): risk doğru aktarılmalıdır."
+     },
+     "bilgi": [
+      12,
+      15,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Tam ve eksiksiz sağlık müdahalelerinin amaçlarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-14-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Tam ve eksiksiz sağlık müdahalelerinin amaçları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Ağır morbidite ve mortaliteyi azaltmak",
+      "B": "Bulaşmayı azaltmak",
+      "C": "Vaka bildirimini azaltmak",
+      "D": "Sağlık sistemi üzerindeki etkiyi azaltmak",
+      "E": "Politik ve diğer sektörler üzerindeki etkiyi azaltmak"
+     },
+     "dogru": "C",
+     "aciklama": "Müdahaleler bulaşmayı, ağır morbidite/mortaliteyi ve sağlık sistemi ile diğer sektörlere etkiyi azaltmayı amaçlar.",
+     "sik_aciklamalari": {
+      "A": "Müdahalelerin amacıdır.",
+      "B": "Müdahalelerin amacıdır.",
+      "C": "Doğru: bildirimin azaltılması amaç değildir.",
+      "D": "Müdahalelerin amacıdır.",
+      "E": "Müdahalelerin amacıdır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Müdahale seçimi neye göre yapılır?",
+     "secenekler": {
+      "A": "Tüm hastalıklar için tek tip müdahale uygulanır",
+      "B": "Yalnızca maliyete göre",
+      "C": "Yalnızca medyanın ilgisine göre",
+      "D": "Hastalığın bulaş ve etki profiline göre",
+      "E": "Rastgele"
+     },
+     "dogru": "D",
+     "aciklama": "Her hastalık farklı müdahale gerektirir; seçim bulaş ve etki profiline göre yapılır.",
+     "sik_aciklamalari": {
+      "A": "Her hastalık farklı müdahale gerektirir.",
+      "B": "Maliyet tek belirleyici değildir.",
+      "C": "Medya ilgisi ölçüt değildir.",
+      "D": "Doğru: müdahale hastalığa özgüdür.",
+      "E": "Rastgele seçim yapılmaz."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "DSÖ'ye göre kombine difteri-tetanoz-boğmaca aşısının küresel olarak çocukları koruma oranı ve bu verinin anlamı hangisidir?",
+     "secenekler": {
+      "A": "~%5; aşıların etkisiz olduğunu gösterir",
+      "B": "~%86; aşıların büyük salgınların çoğunu engellediğini gösterir",
+      "C": "%100; hiç vaka kalmadığını gösterir",
+      "D": "~%20; aşının önerilmediğini gösterir",
+      "E": "Veri yoktur"
+     },
+     "dogru": "B",
+     "aciklama": "Aşılar ve antibiyotikler büyük salgınların birçoğunu engeller; DBT aşısı çocukların ~%86'sını korur.",
+     "sik_aciklamalari": {
+      "A": "Oran çok daha yüksektir.",
+      "B": "Doğru: veri ve anlamı doğrudur.",
+      "C": "%100 değildir; bu nedenle doğru seçenek değildir.",
+      "D": "Oran yüksektir ve aşı önerilir.",
+      "E": "DSÖ verisi mevcuttur."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Salgın yönetiminde toplumsal bazda düşünme ilkesini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-14-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Salgın yönetiminde toplumsal bazda düşünme ilkesinin temeli hangisidir?",
+     "secenekler": {
+      "A": "Toplulukların yekpare olmaması ve risk algısının sosyoekonomik faktörlere göre değişmesi",
+      "B": "Tüm toplumların aynı risk algısına sahip olması",
+      "C": "Toplumun salgın yönetimine katılmaması gerektiği",
+      "D": "Kültürel inançların önemsiz olması",
+      "E": "Yalnızca uzmanların karar vermesi"
+     },
+     "dogru": "A",
+     "aciklama": "Risk algısı din, ekonomik gelişmişlik, kültür, etnik köken ve dile göre değişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ilkenin temelidir.",
+      "B": "Risk algısı farklıdır.",
+      "C": "Toplumun katılımı gereklidir.",
+      "D": "Kültürel inançlar önemlidir.",
+      "E": "Toplumun katılımı gerekir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Toplumla ilişki kurma adımları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Hastalıktan kurtulanların toplumdan dışlanması",
+      "B": "Toplumla etkin diyalog",
+      "C": "Karşılıklı güven ilişkisi",
+      "D": "Sürekli bilgilendirme",
+      "E": "Dedikoduların engellenmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Hastalıktan kurtulanların topluma kaynaştırılması gerekir; dışlanma iş birliğini bozar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kurtulanlar topluma kaynaştırılmalıdır.",
+      "B": "İlişki kurma adımıdır.",
+      "C": "İlişki kurma adımıdır.",
+      "D": "İlişki kurma adımıdır.",
+      "E": "İlişki kurma adımıdır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "İyi eğitimli ve hazırlıklı bir toplumun salgın yönetimine katkısı hangisidir?",
+     "secenekler": {
+      "A": "Salgınları uzman desteği olmadan teşhis edebilmesi ve müdahalelerin etkin uygulanmasını sağlaması",
+      "B": "Sağlık sistemine ihtiyacı ortadan kaldırması",
+      "C": "Salgın bildirimini engellemesi",
+      "D": "Müdahaleleri yavaşlatması",
+      "E": "Hiçbir katkısı olmaması"
+     },
+     "dogru": "A",
+     "aciklama": "Hazırlıklı toplum salgını erken fark eder ve müdahalelerin uygulanmasını kolaylaştırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: toplumsal hazırlığın katkısıdır.",
+      "B": "Sağlık sistemi gereklidir.",
+      "C": "Bildirim kolaylaşır.",
+      "D": "Müdahaleler hızlanır.",
+      "E": "Önemli katkısı vardır."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "21. yüzyılda iletişim problemlerini ve güven tesisinin önemini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-14-q34",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "21. yüzyılda salgın iletişiminin problemleri arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "Sağlık bilgisinin internet ve sosyal medyadan alınması",
+      "B": "Uzman görüşüne güvenin artması",
+      "C": "Tek taraflı buyurgan dilin kolay benimsenmesi",
+      "D": "Olayların yavaş yayılması",
+      "E": "Bilgiye erişimin zorlaşması"
+     },
+     "dogru": "A",
+     "aciklama": "Tek taraflı buyurgan dil benimsenmiyor, uzmana güven azalıyor, bilgi sosyal medyadan alınıyor ve olaylar hızla infial yaratıyor.",
+     "sik_aciklamalari": {
+      "A": "Doğru: çağın iletişim sorunlarındandır.",
+      "B": "Uzmana güven azalmaktadır.",
+      "C": "Buyurgan dil benimsenmemektedir.",
+      "D": "İnfial yaratma hızı artmıştır.",
+      "E": "Bilgiye erişim kolaylaşmıştır ama kalite sorunludur."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q35",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Uzman görüşünü topluma etkili şekilde iletebilmek için öncelikle ne yapılmalıdır?",
+     "secenekler": {
+      "A": "Güven tesis edilmelidir",
+      "B": "Buyurgan dil kullanılmalıdır",
+      "C": "Toplumun kaygıları dinlenmemelidir",
+      "D": "Sosyal medya tamamen yasaklanmalıdır",
+      "E": "Bilgilendirme yapılmamalıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Uzman görüşünü iletmek için önce güven tesis edilmelidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: güven iletişimin ön koşuludur.",
+      "B": "Buyurgan dil benimsenmez.",
+      "C": "Dinlemek bilgi vermek kadar önemlidir.",
+      "D": "Yasaklama güveni artırmaz.",
+      "E": "Sürekli bilgilendirme gerekir."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q36",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Salgın iletişiminde 'dinlemenin' önemi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "İnsanların inanç, kaygı ve algılarını dinlemek gerçekleri ve tavsiyeleri vermek kadar önemlidir",
+      "B": "Dinleme zaman kaybıdır",
+      "C": "Yalnızca uzmanların görüşleri dinlenmelidir",
+      "D": "Toplumun algıları bilimsel olmadığı için önemsizdir",
+      "E": "Dinleme yalnızca salgın bittikten sonra yapılır"
+     },
+     "dogru": "A",
+     "aciklama": "Dinleme güven oluşturur ve mesajların kabulünü artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: dinlemenin önemi budur.",
+      "B": "Dinleme iletişimin temelidir.",
+      "C": "Toplum da dinlenmelidir.",
+      "D": "Algılar davranışı belirler.",
+      "E": "Dinleme salgın boyunca sürmelidir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "Hastaları tedavi etme ve sağlık işgücünü koruma ilkesini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-14-q37",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "2014 Batı Afrika Ebola salgınında daha iyi destekleyici bakım ile ölüm oranı yaklaşık ne kadar düşmüştür?",
+     "secenekler": {
+      "A": "%75'ten %33'e",
+      "B": "%10'dan %5'e",
+      "C": "%100'den %90'a",
+      "D": "Değişmemiştir",
+      "E": "%33'ten %75'e"
+     },
+     "dogru": "A",
+     "aciklama": "Spesifik tedavi olmadan da destekleyici bakım hayat kurtarır; Ebola'da mortalite %75'ten %33'e düşmüştür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: verilen değişimdir.",
+      "B": "Oranlar uyumsuzdur; bu nedenle doğru seçenek değildir.",
+      "C": "Oranlar uyumsuzdur; bu nedenle doğru seçenek değildir.",
+      "D": "Belirgin düşüş olmuştur.",
+      "E": "Değişim ters verilmiştir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q38",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Salgın yönetiminde sağlık işgücünün korunmasının önemi hangisidir?",
+     "secenekler": {
+      "A": "Sağlık çalışanlarının hastalıktan korunması yanıtın sürdürülebilmesi için gereklidir",
+      "B": "Sağlık çalışanları salgında rol oynamaz",
+      "C": "Yalnızca doktorların korunması yeterlidir",
+      "D": "Gönüllülerin rolü yoktur",
+      "E": "Koruyucu ekipman gereksizdir"
+     },
+     "dogru": "A",
+     "aciklama": "Toplum sağlığı çalışanları, gönüllüler, ebeler, hemşireler ve doktorlar her düzeyde hayati fark yaratır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: işgücü korunmazsa yanıt çöker.",
+      "B": "Sağlık çalışanları kritik rol oynar.",
+      "C": "Tüm sağlık işgücü korunmalıdır.",
+      "D": "Gönüllüler önemli rol oynar.",
+      "E": "KKD gereklidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      6,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q39",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Salgınlarda tedavi araçları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "HIV'e karşı antivirallerin keşfi halk sağlığı devrimini sürdürmüştür",
+      "B": "Monoklonal antikorlar tanı ve tedavide kullanılmaya başlanmıştır",
+      "C": "Bazı yeni tedavilerin fiyatı kitlesel uygulamaya uygun değildir",
+      "D": "Tedavilerin yararı kalifiye personelce uygulandığında ortaya çıkar",
+      "E": "Spesifik tedavi yoksa klinik bakımın hiçbir yararı yoktur"
+     },
+     "dogru": "E",
+     "aciklama": "Spesifik tedavi olmasa bile yeterli klinik ve destekleyici bakım hayat kurtarır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): destekleyici bakım hayat kurtarır."
+     },
+     "bilgi": [
+      22,
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 14,
+   "metin": "Hastalıklara göre başlıca bulaş yollarını ve müdahale bileşenlerini özetlemek",
+   "sorular": [
+    {
+     "id": "k1-14-q40",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki hastalıklardan hangisi vektör yoluyla bulaşır?",
+     "secenekler": {
+      "A": "Sıtma",
+      "B": "Kolera",
+      "C": "Kızamık",
+      "D": "Polio",
+      "E": "Şigelloz"
+     },
+     "dogru": "A",
+     "aciklama": "Chikungunya, sıtma, sarı humma ve Zika vektör yoluyla bulaşır; vektör kontrolü temel müdahaledir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: sıtma vektörle bulaşır.",
+      "B": "Kolera fekal-oral/su yoluyla bulaşır.",
+      "C": "Kızamık solunum yoluyla bulaşır.",
+      "D": "Polio fekal-oral yolla bulaşır.",
+      "E": "Şigelloz fekal-oral/gıda yoluyla bulaşır."
+     },
+     "bilgi": [
+      26,
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q41",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Kolera salgınında öne çıkan müdahale bileşeni hangisidir?",
+     "secenekler": {
+      "A": "Su ve sanitasyon",
+      "B": "Vektör kontrolü",
+      "C": "Kemirgen kontrolü",
+      "D": "Güvenli defin tek başına",
+      "E": "Kene kontrolü"
+     },
+     "dogru": "A",
+     "aciklama": "Kolera fekal-oral/su yoluyla bulaşır; su ve sanitasyon ile aşılama öne çıkar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: bulaş yoluna uygun müdahaledir.",
+      "B": "Vektör kontrolü vektörel hastalıklarda öne çıkar.",
+      "C": "Kemirgen kontrolü vebada önemlidir.",
+      "D": "Güvenli defin Ebola gibi hastalıklarda öne çıkar.",
+      "E": "Kene kontrolü KKKA'da önemlidir."
+     },
+     "bilgi": [
+      27,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-14-q42",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Hastalık–bulaş yolu eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kırım-Kongo kanamalı ateşi – hayvanlar (başlıca kene)/temas",
+      "B": "Bubonik veba – kemirgen",
+      "C": "Rift Vadisi ateşi – hayvanlar/vektör",
+      "D": "Maymun çiçeği – hayvanlar/temas",
+      "E": "Kızamık – fekal-oral/su"
+     },
+     "dogru": "E",
+     "aciklama": "Kızamık solunum yoluyla bulaşır; korunmada aşılama öne çıkar.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış eşleştirme (aranan cevap): kızamık solunum yoluyla bulaşır."
+     },
+     "bilgi": [
+      27,
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 42,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:22"
+}

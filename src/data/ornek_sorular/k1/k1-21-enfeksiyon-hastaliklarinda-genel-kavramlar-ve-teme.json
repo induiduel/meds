@@ -1,0 +1,1145 @@
+{
+ "id": "k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme",
+ "sira": 21,
+ "kurul": 1,
+ "ders": "Enfeksiyon Hastalıkları",
+ "konu": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
+ "ogretim_uyesi": "Uz. Dr. Merve Kaçar",
+ "tarih": "2026-09-23",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "İnsanlarda enfeksiyon hastalığına yol açan mikroorganizmaları ve bunların sınıflandırılmasını tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-21-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Hastalık oluşturabilen mikroorganizmalara ne ad verilir?",
+     "secenekler": {
+      "A": "Saprofit",
+      "B": "Nonpatojen",
+      "C": "Kommensal",
+      "D": "Patojen",
+      "E": "Rezervuar"
+     },
+     "dogru": "D",
+     "aciklama": "Hastalık oluşturan mikroorganizmalar patojen, hastalık oluşturmayanlar nonpatojendir.",
+     "sik_aciklamalari": {
+      "A": "Saprofitler ölü organik maddeden beslenir.",
+      "B": "Nonpatojenler hastalık yapmaz.",
+      "C": "Kommensaller genellikle zararsız birlikte yaşayanlardır.",
+      "D": "Doğru: patojenin tanımıdır.",
+      "E": "Rezervuar patojenin yaşadığı ortamdır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki enfeksiyöz etkenlerden hangisi nükleik asit içermez?",
+     "secenekler": {
+      "A": "Virüs",
+      "B": "Prion",
+      "C": "Bakteri",
+      "D": "Mantar",
+      "E": "Protozoon"
+     },
+     "dogru": "B",
+     "aciklama": "Prionlar nükleik asit içermeyen, inaktivasyona dirençli, protein yapıda enfeksiyöz etkenlerdir.",
+     "sik_aciklamalari": {
+      "A": "Virüsler DNA veya RNA içerir.",
+      "B": "Doğru: prion yalnızca proteindir.",
+      "C": "Bakteriler DNA içerir.",
+      "D": "Mantarlar ökaryottur ve DNA içerir.",
+      "E": "Protozoonlar ökaryottur ve DNA içerir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Mikroorganizma grubu ile örnek eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Protozoon – Giardia",
+      "B": "Helmint (sestod) – Taenia",
+      "C": "Helmint (trematod) – Fasciola",
+      "D": "Mantar – Malassezia",
+      "E": "Protozoon – Ascaris"
+     },
+     "dogru": "E",
+     "aciklama": "Ascaris bir nematod (yuvarlak solucan) yani helminttir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış eşleştirme (aranan cevap): Ascaris helminttir."
+     },
+     "bilgi": [
+      29,
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Enfeksiyon hastalıklarının genel belirti ve bulgularını sistemlere göre açıklar.",
+   "sorular": [
+    {
+     "id": "k1-21-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Enfeksiyon hastalıklarında görülen genel sistemik bulgulardan biri hangisidir?",
+     "secenekler": {
+      "A": "Saç rengi değişikliği",
+      "B": "Miyopi",
+      "C": "Ateş",
+      "D": "Boy uzaması",
+      "E": "Diş çürüğü"
+     },
+     "dogru": "C",
+     "aciklama": "Ateş, taşikardi, lenfadenopati, döküntü ve ense sertliği enfeksiyonlarda görülebilir.",
+     "sik_aciklamalari": {
+      "A": "Enfeksiyon bulgusu değildir.",
+      "B": "Enfeksiyon bulgusu değildir.",
+      "C": "Doğru: en sık genel bulgudur.",
+      "D": "Enfeksiyon bulgusu değildir.",
+      "E": "Genel enfeksiyon bulgusu değildir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Enfeksiyon ile enfeksiyon hastalığı arasındaki fark hangisidir?",
+     "secenekler": {
+      "A": "İkisi aynı anlamdadır",
+      "B": "Enfeksiyon hastalığı klinik belirti ve bulgular geliştiğinde ortaya çıkar; her enfeksiyon hastalıkla sonuçlanmaz",
+      "C": "Enfeksiyon hastalığı her zaman asemptomatiktir",
+      "D": "Enfeksiyon her zaman ölümle sonuçlanır",
+      "E": "Enfeksiyon yalnızca bakterilerle olur"
+     },
+     "dogru": "B",
+     "aciklama": "Enfeksiyon mikroorganizmanın girmesi, yerleşmesi ve çoğalmasıdır; asemptomatik olabilir.",
+     "sik_aciklamalari": {
+      "A": "Kavramlar farklıdır.",
+      "B": "Doğru: iki kavramın farkıdır.",
+      "C": "Hastalık semptomatiktir.",
+      "D": "Enfeksiyon çoğunlukla ölümle sonuçlanmaz.",
+      "E": "Tüm mikroorganizmalar enfeksiyon yapabilir."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Ateş, ense sertliği ve bilinç değişikliği ile başvuran hastada bu bulgular hangi sistem tutulumunu düşündürür?",
+     "secenekler": {
+      "A": "Gastrointestinal sistem",
+      "B": "Üriner sistem",
+      "C": "Deri ve yumuşak doku",
+      "D": "Santral sinir sistemi (menenjit)",
+      "E": "Kas-iskelet sistemi"
+     },
+     "dogru": "D",
+     "aciklama": "Sistemlere göre bulgular tanıya yönlendirir; ense sertliği meningeal irritasyonu gösterir.",
+     "sik_aciklamalari": {
+      "A": "GİS bulguları ishal ve kusmadır.",
+      "B": "Üriner bulgular dizüri ve yan ağrısıdır.",
+      "C": "Deri bulguları kızarıklık ve şişliktir.",
+      "D": "Doğru: SSS enfeksiyonunu düşündürür.",
+      "E": "Kas-iskelet bulguları eklem ağrısıdır."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": [
+      "57ffcc508b51"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "57ffcc508b51",
+     "soru": "Enfeksiyon hs Enfeksiyon hs ENFEKSİYON 1 En sık menenjit etkeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Virüsler",
+      "B": "Bakteriler",
+      "C": "Mantarlar",
+      "D": "Parazitler",
+      "E": "Prionlar"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Enfeksiyon, kolonizasyon, patojenite, virülans ve invazyon gibi patogenezle ilişkili temel kavramları tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-21-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Burunda Staphylococcus aureus saptanan ancak doku invazyonu ve klinik hastalığı olmayan kişideki durum hangisidir?",
+     "secenekler": {
+      "A": "İnvazyon",
+      "B": "Enfeksiyon hastalığı",
+      "C": "Kolonizasyon",
+      "D": "Epidemi",
+      "E": "Sepsis"
+     },
+     "dogru": "C",
+     "aciklama": "Kolonizasyon mikroorganizmanın yerleşip çoğalması ancak invazyon ve hastalık yapmamasıdır.",
+     "sik_aciklamalari": {
+      "A": "Doku invazyonu yoktur.",
+      "B": "Klinik hastalık yoktur.",
+      "C": "Doğru: kolonizasyonun örneğidir.",
+      "D": "Epidemi toplumsal kavramdır.",
+      "E": "Sistemik enfeksiyon yoktur."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Patojenitenin derecesini, yani oluşturulan hastalığın şiddetini ifade eden kavram hangisidir?",
+     "secenekler": {
+      "A": "Patojenite",
+      "B": "Virülans",
+      "C": "İnvazyon",
+      "D": "Kolonizasyon",
+      "E": "İnkübasyon"
+     },
+     "dogru": "B",
+     "aciklama": "Patojenite hastalık yapabilme kapasitesi, virülans ise bunun derecesidir; aynı türün suşları farklı virülansa sahip olabilir.",
+     "sik_aciklamalari": {
+      "A": "Patojenite hastalık yapabilme kapasitesidir.",
+      "B": "Doğru: virülansın tanımıdır.",
+      "C": "İnvazyon dokuya giriş ve yayılmadır.",
+      "D": "Kolonizasyon hastalıksız yerleşmedir.",
+      "E": "İnkübasyon bir zaman dilimidir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Patogenezle ilgili kavram–örnek eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Fırsatçı patojen – Pneumocystis jirovecii",
+      "B": "Taşıyıcı – kronik asemptomatik Salmonella Typhi taşıyıcılığı",
+      "C": "Rezervuar – Legionella için tatlı sular",
+      "D": "Endojen enfeksiyon – deri florasındaki KNS ile kateter ilişkili kan dolaşımı enfeksiyonu",
+      "E": "Ekzojen enfeksiyon – normal flora üyesiyle gelişen enfeksiyon"
+     },
+     "dogru": "E",
+     "aciklama": "Normal flora üyesiyle gelişen enfeksiyon endojendir; ekzojen enfeksiyon dış kaynaktan bulaşla oluşur.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış eşleştirme (aranan cevap): bu endojen enfeksiyondur."
+     },
+     "bilgi": [
+      9,
+      10,
+      11,
+      13
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Enfeksiyon gelişimini etkileyen mikroorganizmaya ve konağa ait faktörleri sıralar.",
+   "sorular": [
+    {
+     "id": "k1-21-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Enfeksiyon gelişimini belirleyen faktörler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Enfeksiyon dozu",
+      "B": "Mikroorganizmanın virülansı",
+      "C": "Hastanın göz rengi",
+      "D": "Konağın duyarlılığı",
+      "E": "Konak savunmasının durumu"
+     },
+     "dogru": "C",
+     "aciklama": "Enfeksiyon gelişimini virülans, enfeksiyon dozu ve konak duyarlılığı belirler.",
+     "sik_aciklamalari": {
+      "A": "Belirleyici faktördür.",
+      "B": "Belirleyici faktördür.",
+      "C": "Doğru: belirleyici değildir.",
+      "D": "Belirleyici faktördür.",
+      "E": "Belirleyici faktördür."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aynı etkenin farklı konaklarda farklı klinik sonuçlar doğurmasının nedeni hangisidir?",
+     "secenekler": {
+      "A": "Virülansın sabit ve önemsiz olması",
+      "B": "Etkenin her konakta aynı davranması",
+      "C": "Enfeksiyon dozunun önemsiz olması",
+      "D": "Konağın duyarlılığı ve savunma durumundaki farklılıklar",
+      "E": "Konak faktörlerinin rolü olmaması"
+     },
+     "dogru": "D",
+     "aciklama": "Enfeksiyon sonucu mikroorganizma ve konak faktörlerinin etkileşimiyle belirlenir.",
+     "sik_aciklamalari": {
+      "A": "Virülans önemlidir; bu nedenle doğru seçenek değildir.",
+      "B": "Etkenler farklı sonuçlar doğurabilir.",
+      "C": "Doz önemlidir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: konak faktörleri belirleyicidir.",
+      "E": "Konak faktörleri önemlidir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Clostridioides difficile'nin antibiyotik kullanımı sonrası hastalık yapması hangi kavramla açıklanır?",
+     "secenekler": {
+      "A": "Ekzojen zoonoz",
+      "B": "Mikrobiyotanın değişmesiyle hastalık yapan fırsatçı patojen",
+      "C": "Prion hastalığı",
+      "D": "Vektör kaynaklı enfeksiyon",
+      "E": "Pandemi"
+     },
+     "dogru": "B",
+     "aciklama": "Fırsatçı patojenler konak savunması bozulunca, mikrobiyota değişince veya uygun bölgeye ulaşınca hastalık yapar.",
+     "sik_aciklamalari": {
+      "A": "Zoonoz değildir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: fırsatçı patojen örneğidir.",
+      "C": "Prion değildir; bu nedenle doğru seçenek değildir.",
+      "D": "Vektörle bulaşmaz; bu nedenle doğru seçenek değildir.",
+      "E": "Pandemi toplumsal kavramdır."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Normal vücut florasını, floranın bulunduğu bölgeleri ve steril bölgeleri açıklar.",
+   "sorular": [
+    {
+     "id": "k1-21-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki vücut bölgelerinden hangisi normalde sterildir?",
+     "secenekler": {
+      "A": "Kalın bağırsak",
+      "B": "Deri",
+      "C": "Ağız boşluğu",
+      "D": "Santral sinir sistemi",
+      "E": "Vajina"
+     },
+     "dogru": "D",
+     "aciklama": "SSS, alt solunum yolları, dolaşım, üst ürogenital bölgeler ve vücut boşlukları sterildir.",
+     "sik_aciklamalari": {
+      "A": "Kalın bağırsakta yoğun flora vardır.",
+      "B": "Deride flora vardır.",
+      "C": "Ağızda flora vardır.",
+      "D": "Doğru: steril bölgedir.",
+      "E": "Vajinada flora vardır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Uygun alınmayan idrar örneğinde kontaminasyona yol açan flora hangi bölgeye aittir?",
+     "secenekler": {
+      "A": "Böbrek pelvisi",
+      "B": "Üreter",
+      "C": "Periüretral bölge",
+      "D": "Mesane",
+      "E": "Kan dolaşımı"
+     },
+     "dogru": "C",
+     "aciklama": "Üst ürogenital bölgeler sterildir; periüretral mikroorganizmalar örneği kontamine edebilir.",
+     "sik_aciklamalari": {
+      "A": "Böbrek pelvisi steril bölgedir.",
+      "B": "Üreter steril bölgedir.",
+      "C": "Doğru: periüretral flora kontaminasyon kaynağıdır.",
+      "D": "Mesane normalde sterildir.",
+      "E": "Kan sterildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Normal mikrobiyota ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Deri ve mukozalarda hastalık yapmadan yaşar",
+      "B": "Alt solunum yolları normalde sterildir",
+      "C": "Flora üyeleri endojen enfeksiyonlara yol açabilir",
+      "D": "Mikrobiyotanın bozulması fırsatçı patojenlerin hastalık yapmasını kolaylaştırır",
+      "E": "Steril bölgeden flora üyesinin izole edilmesi her zaman önemsizdir"
+     },
+     "dogru": "E",
+     "aciklama": "Steril bölgeden üreme klinik olarak anlamlıdır ve enfeksiyon açısından değerlendirilmelidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): steril bölgeden üreme anlamlıdır."
+     },
+     "bilgi": [
+      9,
+      13,
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Bakterilerin sınıflandırılmasını ve hücre yapısını özetler.",
+   "sorular": [
+    {
+     "id": "k1-21-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Bakterilerde gram boyanma özelliğinden sorumlu yapı hangisidir?",
+     "secenekler": {
+      "A": "Spor",
+      "B": "Flagella",
+      "C": "Pili",
+      "D": "Hücre duvarı",
+      "E": "Ribozom"
+     },
+     "dogru": "D",
+     "aciklama": "Hücre duvarı (mikoplazma dışında) gram boyanma özelliğinden sorumludur.",
+     "sik_aciklamalari": {
+      "A": "Spor dayanıklılık formudur.",
+      "B": "Flagella hareket organelidir.",
+      "C": "Pili tutunmayı sağlar.",
+      "D": "Doğru: hücre duvarı yapısı boyanmayı belirler.",
+      "E": "Ribozom protein sentezi yapar."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Bakterilerin sınıflandırılmasında kullanılan ölçütler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Gram boyanma özelliği",
+      "B": "Morfoloji (kok, basil, spiral)",
+      "C": "Çekirdek zarı varlığı",
+      "D": "Oksijen kullanımı",
+      "E": "Kapsül ve spor durumu"
+     },
+     "dogru": "C",
+     "aciklama": "Bakteriler prokaryottur, çekirdek zarı yoktur; sınıflama büyüklük, morfoloji, boyanma, hareket, oksijen kullanımı ve kapsül/spor ile yapılır.",
+     "sik_aciklamalari": {
+      "A": "Sınıflama ölçütüdür.",
+      "B": "Sınıflama ölçütüdür.",
+      "C": "Doğru: bakterilerde çekirdek zarı yoktur.",
+      "D": "Sınıflama ölçütüdür.",
+      "E": "Sınıflama ölçütüdür."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Bakteri hücre yapısı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bakterilerde sitoplazmik membran yoktur",
+      "B": "Genetik materyal tek çembersel çift iplikli DNA'dır",
+      "C": "Tüm bakterilerde hücre duvarı vardır",
+      "D": "Bakterilerde mitokondri bulunur",
+      "E": "Bakteri DNA'sı çekirdek zarı ile çevrilidir"
+     },
+     "dogru": "B",
+     "aciklama": "Bakteri yapısında sitoplazma, sitoplazmik membran, hücre duvarı, tek çembersel çift iplikli DNA ve bazılarında kapsül, flagella, pili ve spor bulunur.",
+     "sik_aciklamalari": {
+      "A": "Sitoplazmik membran vardır.",
+      "B": "Doğru: bakteri genomunun yapısıdır.",
+      "C": "Mikoplazmalarda hücre duvarı yoktur.",
+      "D": "Mitokondri ökaryotlarda bulunur.",
+      "E": "Çekirdek zarı yoktur."
+     },
+     "bilgi": [
+      24,
+      27
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Prion, virüs, klamidya, mikoplazma ve riketsiyaların temel özelliklerini ve oluşturdukları hastalıkları bilir.",
+   "sorular": [
+    {
+     "id": "k1-21-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Hücre duvarı olmayan, bu nedenle gram boyanmayan ve beta-laktamlara dirençli bakteri grubu hangisidir?",
+     "secenekler": {
+      "A": "Klamidyalar",
+      "B": "Mikoplazmalar",
+      "C": "Riketsiyalar",
+      "D": "Stafilokoklar",
+      "E": "Streptokoklar"
+     },
+     "dogru": "B",
+     "aciklama": "Mikoplazmaların hücre duvarı yoktur, zarlarında kolesterol bulunur; M. pneumoniae atipik pnömoni yapar.",
+     "sik_aciklamalari": {
+      "A": "Klamidyaların hücre duvarı vardır ama peptidoglikan yoktur.",
+      "B": "Doğru: mikoplazmaların özelliğidir.",
+      "C": "Riketsiyalar hücre duvarına sahiptir.",
+      "D": "Gram pozitif hücre duvarı vardır.",
+      "E": "Gram pozitif hücre duvarı vardır."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "ATP sentezleyemediği için konak ATP'sine bağımlı olan (enerji paraziti) zorunlu hücre içi etken hangisidir?",
+     "secenekler": {
+      "A": "Escherichia coli",
+      "B": "Mikoplazma",
+      "C": "Klamidya",
+      "D": "Candida",
+      "E": "Prion"
+     },
+     "dogru": "C",
+     "aciklama": "Klamidyalar zorunlu hücre içi enerji parazitleridir; C. trachomatis üretrit/PID/LGV, C. psittaci psittakoz yapar.",
+     "sik_aciklamalari": {
+      "A": "E. coli serbest yaşayabilir.",
+      "B": "Mikoplazmalar yapay besiyerinde üretilebilir.",
+      "C": "Doğru: klamidyanın özelliğidir.",
+      "D": "Candida mantardır; bu nedenle doğru seçenek değildir.",
+      "E": "Prion metabolizması olmayan proteindir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q22",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi DNA tümör virüsü değildir?",
+     "secenekler": {
+      "A": "HHV-8",
+      "B": "HPV",
+      "C": "EBV",
+      "D": "HCV",
+      "E": "HBV"
+     },
+     "dogru": "D",
+     "aciklama": "DNA tümör virüsleri HPV, EBV, HHV-8 ve HBV; RNA tümör virüsleri retrovirüsler ve HCV'dir.",
+     "sik_aciklamalari": {
+      "A": "DNA tümör virüsüdür.",
+      "B": "DNA tümör virüsüdür.",
+      "C": "DNA tümör virüsüdür.",
+      "D": "Doğru: HCV RNA tümör virüsüdür.",
+      "E": "DNA tümör virüsüdür."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Etken–hastalık eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "R. conorii – Akdeniz benekli ateşi (tache noire)",
+      "B": "R. prowazekii – epidemik tifüs",
+      "C": "C. psittaci – psittakoz",
+      "D": "Prion – kuru",
+      "E": "M. pneumoniae – Rocky Mountain benekli ateşi"
+     },
+     "dogru": "E",
+     "aciklama": "Rocky Mountain benekli ateşi R. rickettsii ile oluşur; M. pneumoniae atipik pnömoni yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme: inkübasyon 30 yıla kadar olabilir.",
+      "E": "Yanlış eşleştirme (aranan cevap): RMSF etkeni R. rickettsii'dir."
+     },
+     "bilgi": [
+      21,
+      26,
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Mantarlar, protozoonlar, helmintler ve artropodların özelliklerini ve örneklerini sıralar.",
+   "sorular": [
+    {
+     "id": "k1-21-q23",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Hücre duvarı olmayan tek hücreli ökaryotik mikroorganizmalara ne ad verilir?",
+     "secenekler": {
+      "A": "Mantarlar",
+      "B": "Helmintler",
+      "C": "Protozoonlar",
+      "D": "Bakteriler",
+      "E": "Virüsler"
+     },
+     "dogru": "C",
+     "aciklama": "Protozoonlar sıtma, toksoplazmoz, leishmaniasis, amebiyaz, trikomoniyaz ve giardiyaz yapar.",
+     "sik_aciklamalari": {
+      "A": "Mantarların hücre duvarı vardır.",
+      "B": "Helmintler çok hücrelidir.",
+      "C": "Doğru: protozoonun tanımıdır.",
+      "D": "Bakteriler prokaryottur.",
+      "E": "Virüsler hücresel değildir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q24",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki mantarlardan hangisi fırsatçı sistemik mikoz etkenidir?",
+     "secenekler": {
+      "A": "Microsporum (dermatofit)",
+      "B": "Malassezia",
+      "C": "Trichophyton (dermatofit)",
+      "D": "Aspergillus",
+      "E": "Epidermophyton"
+     },
+     "dogru": "D",
+     "aciklama": "Candida ve Aspergillus fırsatçı sistemik mikoz yapar; Malassezia yüzeyel, dermatofitler kutanöz mikoz yapar.",
+     "sik_aciklamalari": {
+      "A": "Kutanöz mikoz etkenidir.",
+      "B": "Yüzeyel mikoz (pitiriyazis versikolor) etkenidir.",
+      "C": "Kutanöz mikoz etkenidir.",
+      "D": "Doğru: fırsatçı sistemik mikoz etkenidir.",
+      "E": "Kutanöz mikoz etkenidir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q25",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Artropod vektör ile taşıdığı hastalık eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kene – KKKA ve Lyme",
+      "B": "Sivrisinek – sıtma ve dengue",
+      "C": "Tatarcık – leishmaniasis",
+      "D": "Pire – veba",
+      "E": "Tatarcık – Lyme hastalığı"
+     },
+     "dogru": "E",
+     "aciklama": "Lyme hastalığı kene ile taşınır; tatarcık leishmaniasis taşır.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış eşleştirme (aranan cevap): Lyme kene ile bulaşır."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Enfeksiyon zincirinin halkalarını ve enfeksiyonların önlenmesindeki rolünü açıklar.",
+   "sorular": [
+    {
+     "id": "k1-21-q26",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Enfeksiyon zinciri kaç halkadan oluşur?",
+     "secenekler": {
+      "A": "2",
+      "B": "6",
+      "C": "3",
+      "D": "10",
+      "E": "1"
+     },
+     "dogru": "B",
+     "aciklama": "Etken, kaynak, kaynaktan çıkış, taşınma, giriş kapısı ve duyarlı konak olmak üzere altı halka vardır.",
+     "sik_aciklamalari": {
+      "A": "Eksik sayıdır; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: altı halkalıdır.",
+      "C": "Epidemiyolojik üçgenle karıştırılmıştır.",
+      "D": "Fazla sayıdır; bu nedenle doğru seçenek değildir.",
+      "E": "Tek halka değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q27",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "El hijyeni enfeksiyon zincirinin hangi halkasını kırmaya yöneliktir?",
+     "secenekler": {
+      "A": "Taşınma (bulaş yolu)",
+      "B": "Etken",
+      "C": "Duyarlı konak",
+      "D": "Kaynak",
+      "E": "Giriş kapısının anatomik yapısı"
+     },
+     "dogru": "A",
+     "aciklama": "El hijyeni etkenin kaynaktan konağa taşınmasını engeller; aşılama duyarlı konağı, izolasyon kaynaktan çıkışı hedefler.",
+     "sik_aciklamalari": {
+      "A": "Doğru: taşınma halkasını kırar.",
+      "B": "Etken doğrudan yok edilmez.",
+      "C": "Konak duyarlılığı aşılamayla azaltılır.",
+      "D": "Kaynak tedavi/izolasyonla kontrol edilir.",
+      "E": "Anatomik yapı değiştirilmez."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q28",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Enfeksiyon zinciri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Halkalardan biri engellenirse enfeksiyon oluşamaz",
+      "B": "Aşılama duyarlı konak halkasını hedefler",
+      "C": "İzolasyon kaynaktan çıkış/taşınmayı engeller",
+      "D": "Giriş kapısı zincirin halkalarından biridir",
+      "E": "Zincirin kırılması için tüm halkaların aynı anda engellenmesi zorunludur"
+     },
+     "dogru": "E",
+     "aciklama": "Tek bir halkanın kırılması enfeksiyonu önlemek için yeterlidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): tek halka yeterlidir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Endemi, epidemi ve pandemi kavramlarını tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-21-q29",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Kıtalararası yayılım gösteren salgına ne ad verilir?",
+     "secenekler": {
+      "A": "Pandemi",
+      "B": "Endemi",
+      "C": "Epidemi",
+      "D": "Sporadik",
+      "E": "Hiperendemi"
+     },
+     "dogru": "A",
+     "aciklama": "Endemi alışılmış sıklıkta, epidemi beklenenden fazla görülme, pandemi kıtalararası salgındır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: pandeminin tanımıdır.",
+      "B": "Endemi alışılmış sıklıktır.",
+      "C": "Epidemi beklenenden fazlasıdır.",
+      "D": "Sporadik tek tük olgulardır.",
+      "E": "Hiperendemi yüksek endemik düzeydir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q30",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Bir hastalığın bir bölgede alışılmış (beklenen) sıklıkta sürekli görülmesine ne ad verilir?",
+     "secenekler": {
+      "A": "Endemi",
+      "B": "Epidemi",
+      "C": "Pandemi",
+      "D": "Sporadik",
+      "E": "Salgın"
+     },
+     "dogru": "A",
+     "aciklama": "Endemi hastalığın bölgede alışılmış sıklıkta görülmesidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: endeminin tanımıdır.",
+      "B": "Epidemi beklenenden fazladır.",
+      "C": "Pandemi kıtalararasıdır.",
+      "D": "Sporadik dağınık olgulardır.",
+      "E": "Salgın beklenenden fazla vakadır."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": [
+      "dc36512b0392",
+      "5146083d7638"
+     ]
+    },
+    {
+     "id": "k1-21-q31",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Bir ilçede her yıl ortalama 5 bruselloz olgusu görülürken bu yıl 40 olgu saptanıyor. Bu durumun tanımı hangisidir?",
+     "secenekler": {
+      "A": "Epidemi",
+      "B": "Endemi",
+      "C": "Pandemi",
+      "D": "Sporadik",
+      "E": "Kolonizasyon"
+     },
+     "dogru": "A",
+     "aciklama": "Beklenenden fazla vaka görülmesi epidemidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: beklenenin üstünde artıştır.",
+      "B": "Endemi alışılmış sıklıktır.",
+      "C": "Kıtalararası yayılım yoktur.",
+      "D": "Olgular tek tük değildir.",
+      "E": "Kolonizasyon bireysel kavramdır."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": [
+      "c9d60b2a5e97",
+      "4d214104c117"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "dc36512b0392",
+     "soru": "Bir hastalık veya sağlık olayının belli bir yerde sıra sıra ve tek tük olgular şeklinde gözlenmesidir' hangisinin tanımıdır?",
+     "secenekler": {
+      "A": "Pandemi",
+      "B": "Endemi",
+      "C": "Epidemi",
+      "D": "Sporadi",
+      "E": "Saküler değişiklik"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "5146083d7638",
+     "soru": "Halk Sağlığı, Epidemiyolojinin Tanım ve Sınıflandırılması, 'Bir hastalık veya sağlık olayının belli bir yerde sıra no ara sıra ve tek tük olgular şeklinde gözlenmesidir''hangisinin tanımıdır?",
+     "secenekler": {
+      "A": "Pandemi",
+      "B": "Endemi",
+      "C": "Epidemi",
+      "D": "Sporadi",
+      "E": "Saküler değişiklik"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "c9d60b2a5e97",
+     "soru": "'Bir hastalığın belli bir bölgede belli bir dönemde anlamlı ölçüde artış göstermesi''ni ifade eden tanım hangisidir?",
+     "secenekler": {
+      "A": "Pandemi",
+      "B": "Endemi",
+      "C": "Epidemi",
+      "D": "Sporadi",
+      "E": "Saküler değişiklik"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "4d214104c117",
+     "soru": "Halk Sağlığı Epidemiyolojinin Tanım ve Sınıflandırılması bağlamında 'Bir hastalığın belli bir bölgede belli bir dönemde anlamlı ölçüde artışı' ifade eden tanım hangisidir?",
+     "secenekler": {
+      "A": "Endemi",
+      "B": "Sporadi",
+      "C": "Epidemi",
+      "D": "Saküler değişiklik"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Zoonozları ve kaynaklarına göre örneklerini sıralar.",
+   "sorular": [
+    {
+     "id": "k1-21-q32",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Kaynağı hayvan olan etkenlerle oluşan enfeksiyon hastalıklarına ne ad verilir?",
+     "secenekler": {
+      "A": "Zoonoz",
+      "B": "Endemi",
+      "C": "Nozokomiyal enfeksiyon",
+      "D": "Endojen enfeksiyon",
+      "E": "Fırsatçı enfeksiyon"
+     },
+     "dogru": "A",
+     "aciklama": "Bruselloz, şarbon, Q ateşi, kuduz, toksoplazmoz ve tularemi zoonozlardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: zoonozun tanımıdır.",
+      "B": "Endemi epidemiyolojik kavramdır.",
+      "C": "Hastane kaynaklı enfeksiyondur.",
+      "D": "Flora kaynaklı enfeksiyondur.",
+      "E": "Bozulmuş savunmada görülen enfeksiyondur."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q33",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi zoonotik hastalık değildir?",
+     "secenekler": {
+      "A": "Kızamık",
+      "B": "Bruselloz",
+      "C": "Şarbon",
+      "D": "Kuduz",
+      "E": "Tularemi"
+     },
+     "dogru": "A",
+     "aciklama": "Kızamık insandan insana solunum yoluyla bulaşır; diğerleri zoonozdur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: zoonoz değildir.",
+      "B": "Zoonozdur; bu nedenle doğru seçenek değildir.",
+      "C": "Zoonozdur; bu nedenle doğru seçenek değildir.",
+      "D": "Zoonozdur; bu nedenle doğru seçenek değildir.",
+      "E": "Zoonozdur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q34",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Borrelia için küçük kemiricilerin oynadığı rol hangi kavramla tanımlanır?",
+     "secenekler": {
+      "A": "Rezervuar",
+      "B": "Taşıyıcı",
+      "C": "Duyarlı konak",
+      "D": "Giriş kapısı",
+      "E": "Fırsatçı patojen"
+     },
+     "dogru": "A",
+     "aciklama": "Rezervuar patojenin insan dışında yaşadığı ekolojik ortamdır; Legionella için tatlı sular, Borrelia için küçük kemiriciler örnektir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: rezervuar tanımına uyar.",
+      "B": "Taşıyıcı asemptomatik bulaştıran kişidir.",
+      "C": "Duyarlı konak enfekte olabilecek bireydir.",
+      "D": "Giriş kapısı vücuda giriş yeridir.",
+      "E": "Fırsatçı patojen etken türüdür."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Enfeksiyon hastalıklarının seyrindeki temel basamakları (inkübasyon, prodrom, klinik, konvelesan) açıklar.",
+   "sorular": [
+    {
+     "id": "k1-21-q35",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Etkenin vücuda girmesinden prodromal belirtilerin çıkmasına kadar geçen döneme ne ad verilir?",
+     "secenekler": {
+      "A": "İnkübasyon dönemi",
+      "B": "Prodromal dönem",
+      "C": "Klinik dönem",
+      "D": "Konvelesan dönem",
+      "E": "Sekel dönemi"
+     },
+     "dogru": "A",
+     "aciklama": "İnkübasyon döneminde semptom ve bulgu yoktur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: inkübasyonun tanımıdır.",
+      "B": "Prodrom özgül olmayan belirtilerin dönemidir.",
+      "C": "Klinik dönem tipik bulguların dönemidir.",
+      "D": "Konvelesan iyileşme dönemidir.",
+      "E": "Sekel kalıcı hasardır."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q36",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Prodromal dönemin özelliği hangisidir?",
+     "secenekler": {
+      "A": "Ateş, baş ağrısı, halsizlik gibi özgül olmayan belirtilerin bulunması",
+      "B": "Hiçbir belirti olmaması",
+      "C": "Karakteristik klinik bulguların en belirgin olması",
+      "D": "Akut bulguların gerilemesi",
+      "E": "Kalıcı sekel gelişmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Prodrom inkübasyonun sonundan tipik klinik bulgulara kadar süren dönemdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: prodromun özelliğidir.",
+      "B": "Bu inkübasyondur; bu nedenle doğru seçenek değildir.",
+      "C": "Bu klinik dönemdir; bu nedenle doğru seçenek değildir.",
+      "D": "Bu konvelesan dönemdir.",
+      "E": "Sekel hastalık sonrası gelişir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-21-q37",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Enfeksiyon hastalıklarının seyri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Klinik dönem iyileşme, kronikleşme, sekel veya ölümle sonuçlanabilir",
+      "B": "Konvelesan dönemde akut bulgular geriler",
+      "C": "İnkübasyon döneminde semptom yoktur",
+      "D": "Konvelesan dönemde sekel gelişebilir",
+      "E": "Klinik iyileşme sağlandığında bulaştırıcılık her zaman sona ermiştir"
+     },
+     "dogru": "E",
+     "aciklama": "Bulaştırıcılık klinik iyileşmeden sonra da sürebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): bulaştırıcılık sürebilir."
+     },
+     "bilgi": [
+      17,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 37,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:36"
+}

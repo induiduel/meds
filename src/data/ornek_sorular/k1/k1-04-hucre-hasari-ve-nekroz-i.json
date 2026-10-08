@@ -1,0 +1,861 @@
+{
+ "id": "k1-04-hucre-hasari-ve-nekroz-i",
+ "sira": 4,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Hücre Hasarı ve Nekroz - I",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-09-15",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Hücre hasarı kavramını ve hücrenin strese yanıtlarını tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-04-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Hücrenin normal homeostazını koruyamadığı ve sonucu geri dönüşümlü bozukluk ya da hücre ölümü olabilen duruma ne ad verilir?",
+     "secenekler": {
+      "A": "Hücre hasarı",
+      "B": "Hücresel adaptasyon",
+      "C": "Hiperplazi",
+      "D": "Metaplazi",
+      "E": "Senesens"
+     },
+     "dogru": "A",
+     "aciklama": "Hücre hasarı homeostazın korunamamasıdır; sonuç geri dönüşümlü hasar veya geri dönüşümsüz hasar ve hücre ölümüdür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hücre hasarı birçok hastalığın temelini oluşturur.",
+      "B": "Adaptasyonda hücre yeni bir denge kurar; homeostaz kaybı değil, uyumdur.",
+      "C": "Hiperplazi bir adaptasyon tipidir (hücre sayısı artışı).",
+      "D": "Metaplazi olgun hücre tipi değişimidir; bir adaptasyondur.",
+      "E": "Senesens hücresel yaşlanmadır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Zararlı bir uyarana maruz kalan sağlıklı hücrede olayların tipik sırası aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hücre ölümü → geri dönüşümlü hasar → geri dönüşümsüz hasar",
+      "B": "Geri dönüşümsüz hasar → geri dönüşümlü hasar → hücre ölümü",
+      "C": "Geri dönüşümlü hasar → geri dönüşümsüz hasar → hücre ölümü (nekroz/apoptoz)",
+      "D": "Apoptoz → nekroz → geri dönüşümlü hasar",
+      "E": "Adaptasyon → hücre ölümü → geri dönüşümlü hasar"
+     },
+     "dogru": "C",
+     "aciklama": "Sağlıklı hücre → zararlı uyaran → geri dönüşümlü hasar → (şiddetli/ilerleyici) geri dönüşümsüz hasar → hücre ölümü.",
+     "sik_aciklamalari": {
+      "A": "Hücre ölümü sürecin son basamağıdır, başlangıcı değildir.",
+      "B": "Geri dönüşümsüz hasar geri dönüşümlü hasardan sonra gelir.",
+      "C": "Doğru. Hasar ilerledikçe geri dönüşümsüz hale gelir ve ölümle sonuçlanır.",
+      "D": "Apoptoz ve nekroz sürecin sonundadır.",
+      "E": "Adaptasyon başarısız olursa hasar, sonra ölüm gelişir; sıra yanlıştır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Hücre hasarında morfolojik değişikliklerin zamanlaması ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Işık mikroskobik değişiklikler hücre ölümünden önce ortaya çıkar.",
+      "B": "Hücre ölümü tipik olarak ultrastrüktürel, ışık mikroskobik ve makroskobik değişikliklerden önce gelir.",
+      "C": "Makroskobik değişiklikler elektron mikroskobik değişikliklerden önce görülür.",
+      "D": "Hücre işlevini kaybettiği anda her zaman ölmüştür.",
+      "E": "Morfolojik değişiklik görülmeyen dokuda hasar olamaz."
+     },
+     "dogru": "B",
+     "aciklama": "Hücreler hızla işlevsiz hale gelip yine canlı kalabilir; ölüm, mikroskopta ve çıplak gözle görülen değişikliklerden önce gerçekleşir.",
+     "sik_aciklamalari": {
+      "A": "Işık mikroskobik değişiklikler hücre ölümünden sonra görünür hale gelir.",
+      "B": "Doğru. Biyokimyasal ölüm morfolojik bulgulardan önce gelir.",
+      "C": "Sıra ultrastrüktürel → ışık mikroskobik → makroskobik şeklindedir.",
+      "D": "İşlev kaybı olan hücre bir süre canlı kalabilir.",
+      "E": "Erken dönemde morfolojik bulgu olmadan hasar ve ölüm olabilir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Hücre hasarının başlıca nedenlerini sıralar.",
+   "sorular": [
+    {
+     "id": "k1-04-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Hücre hasarı ve nekrozun en sık nedenlerinden biri olan, kan akımının azalması veya kesilmesi durumuna ne ad verilir?",
+     "secenekler": {
+      "A": "Hipoksi",
+      "B": "Hiperemi",
+      "C": "Konjesyon",
+      "D": "İskemi",
+      "E": "Ödem"
+     },
+     "dogru": "D",
+     "aciklama": "İskemi kan akımının azalması/kesilmesidir; oksijen ve besin azalır, atıklar uzaklaştırılamaz. Hipoksi yalnızca oksijen eksikliğini ifade eder.",
+     "sik_aciklamalari": {
+      "A": "Hipoksi oksijen eksikliğidir; kan akımı korunmuş olabilir (ör. anemi).",
+      "B": "Hiperemi aktif kan akımı artışıdır.",
+      "C": "Konjesyon venöz drenajın bozulmasıyla pasif kan birikimidir.",
+      "D": "Doğru. İskemide hem oksijen hem besin eksikliği vardır.",
+      "E": "Ödem interstisyel sıvı artışıdır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kapalı bir garajda motor çalışırken bilinci bulanıklaşan bir hastada hücre hasarının temel mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hemoglobine bağlanarak oksijen taşınmasını bozan karbon monoksite bağlı hipoksi",
+      "B": "Mikrobiyal toksin üretimi",
+      "C": "Otoimmün antikor aracılı hasar",
+      "D": "Nokta mutasyonuna bağlı protein kaybı",
+      "E": "Ani basınç değişikliğine bağlı gaz embolisi"
+     },
+     "dogru": "A",
+     "aciklama": "Karbon monoksit hemoglobine bağlanarak oksijen taşınmasını bozar ve hipoksik hücre hasarı yapar; aynı zamanda çevresel bir toksindir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. CO zehirlenmesi hipoksi nedenleri arasındadır.",
+      "B": "Enfeksiyöz ajanların mekanizmasıdır.",
+      "C": "İmmünolojik hasar mekanizmasıdır.",
+      "D": "Genetik anormalliklerin mekanizmasıdır.",
+      "E": "Dekompresyon hastalığı gibi fiziksel etken mekanizmasıdır."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Hücre hasarı nedenleri ile örnekleri arasındaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Genetik anormallik – orak hücreli anemi",
+      "B": "Fiziksel etken – dalgıçlarda dekompresyon hastalığı",
+      "C": "Beslenme dengesizliği – obezite ve tip 2 diyabet",
+      "D": "Toksin – etanol ve sigara dumanı",
+      "E": "İmmünolojik reaksiyon – protein-kalori malnütrisyonu"
+     },
+     "dogru": "E",
+     "aciklama": "Protein-kalori malnütrisyonu beslenme dengesizliğinin (yetersiz alım) örneğidir; immünolojik nedenler otoimmünite, alerji ve aşırı immün yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; nokta mutasyonu örneğidir.",
+      "B": "Doğru eşleştirme; ani basınç değişikliği fiziksel etkendir.",
+      "C": "Doğru eşleştirme; aşırı alım da beslenme dengesizliğidir.",
+      "D": "Doğru eşleştirme; yaşam tarzı kaynaklı toksinlerdir.",
+      "E": "Yanlış eşleştirme (aranan cevap). Protein-kalori malnütrisyonu beslenme dengesizliğinin (yetersiz alım) örneğidir; immünolojik nedenler otoimmünite, alerji ve aşırı immün yanıttır."
+     },
+     "bilgi": [
+      5,
+      7,
+      8,
+      9,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q07",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Hücre hasarında hücresel hedefler ve etken özellikleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Plazma ve organel zarları, mitokondriler, protein sentez mekanizması, DNA ve sitoiskelet başlıca hedeflerdir.",
+      "B": "Birden fazla hücresel hedef aynı anda etkilenebilir.",
+      "C": "İlaçlar terapötik dozda güvenli olup yüksek dozda veya duyarlı bireyde toksik olabilir.",
+      "D": "Enfeksiyöz ajanlar hasarı yalnızca doğrudan toksin üretimiyle yapar; bağışıklık yanıtı hasara katkıda bulunmaz.",
+      "E": "Genetik anormallikler yanlış katlanmış protein birikimiyle hasar yapabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Enfeksiyöz ajanlar toksin üretimi, hücre içinde replikasyon ve aşırı/kronik bağışıklık yanıtı ile hasar verir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bunlar hasarın ana hedefleridir.",
+      "B": "Doğru ifade; hedefler birbiriyle bağlantılıdır.",
+      "C": "Doğru ifade; doz ve bireysel duyarlılık belirleyicidir.",
+      "D": "Yanlış ifade (aranan cevap). Konak bağışıklık yanıtı da önemli bir hasar mekanizmasıdır.",
+      "E": "Doğru ifade; fonksiyon kaybı/kazanımı da genetik mekanizmalardır."
+     },
+     "bilgi": [
+      5,
+      6,
+      8,
+      13
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Hücre hasarının sonucunu belirleyen faktörleri ve hücre tipine özgü duyarlılıkları açıklar.",
+   "sorular": [
+    {
+     "id": "k1-04-q08",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Hücre hasarının sonucunu belirleyen etken özellikleri aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Etkenin rengi, kokusu ve ağırlığı",
+      "B": "Etkenin türü, süresi ve şiddeti",
+      "C": "Hastanın kan grubu ve cinsiyeti",
+      "D": "Hücrenin büyüklüğü ve şekli",
+      "E": "Etkenin coğrafi kaynağı"
+     },
+     "dogru": "B",
+     "aciklama": "Hasarın sonucu etkenin türüne, süresine ve şiddetine bağlıdır; ayrıca hedef hücrenin tipi ve genetik zemin yanıtı etkiler.",
+     "sik_aciklamalari": {
+      "A": "Bu özellikler hasarın sonucunu belirlemez.",
+      "B": "Doğru. Aynı etken düşük dozda geri dönüşümlü, yüksek dozda ölümcül hasar yapabilir.",
+      "C": "Kan grubu ve cinsiyet temel belirleyiciler arasında sayılmaz.",
+      "D": "Hücrenin tipi ve durumu önemlidir; büyüklük-şekil belirleyici değildir.",
+      "E": "Coğrafi kaynak hasarın sonucunu belirlemez."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Tam iskemiye maruz kalan dokularda geri dönüşümsüz hasarın gelişme süresi karşılaştırıldığında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kalp kası iskemiyi iskelet kasından daha uzun süre tolere eder.",
+      "B": "İskelet kası ve kalp kası aynı sürede geri dönüşümsüz hasara uğrar.",
+      "C": "Kalp kasında 20-30 dakikada geri dönüşümsüz hasar gelişebilirken iskelet kası 2-3 saat tolere edebilir.",
+      "D": "İskelet kası 20-30 dakikada, kalp kası 2-3 saatte nekroza gider.",
+      "E": "Hiçbir hücre tipi iskemiyi tolere edemez; hasar anında geri dönüşümsüzdür."
+     },
+     "dogru": "C",
+     "aciklama": "Farklı hücre tipleri aynı strese farklı yanıt verir; metabolik gereksinimi yüksek kalp kası iskemiye çok daha duyarlıdır.",
+     "sik_aciklamalari": {
+      "A": "Tersi doğrudur; kalp kası daha duyarlıdır.",
+      "B": "Hücre tipine göre duyarlılık farklıdır.",
+      "C": "Doğru. Metabolik gereksinimi yüksek kalp kası iskemiye çok daha duyarlıdır; iskelet kası 2-3 saat tolere edebilir.",
+      "D": "Süreler ters verilmiştir.",
+      "E": "Hücreler belirli bir süre iskemiyi geri dönüşümlü hasarla tolere edebilir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q10",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Aynı dozda bir ilacı alan iki hastadan birinde ciddi karaciğer hasarı gelişirken diğerinde hiçbir hasar görülmemiştir.\n\nBu farkı en iyi açıklayan durum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hasarın sonucu yalnızca etkenin türüne bağlıdır.",
+      "B": "İlaçlar hiçbir koşulda hücre hasarı yapmaz.",
+      "C": "Karaciğer hücreleri toksinlere karşı tamamen dirençlidir.",
+      "D": "Toksin metabolizmasını etkileyen genetik polimorfizmler bireyin hasara duyarlılığını değiştirir.",
+      "E": "Hasar yalnızca immünolojik nedenlerle oluşabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Hedef hücrenin durumu ve genetik zemin (polimorfizmler) toksin metabolizmasını ve hasar duyarlılığını etkiler.",
+     "sik_aciklamalari": {
+      "A": "Etkenin türü, süresi ve şiddetinin yanında konak özellikleri de belirleyicidir.",
+      "B": "İlaçlar yüksek dozda veya duyarlı bireyde toksik olabilir.",
+      "C": "Hepatositler toksik hasara uğrayabilir.",
+      "D": "Doğru. Bireysel genetik farklar aynı doza farklı yanıtı açıklar.",
+      "E": "Toksik hasar immün mekanizma olmadan da gelişir."
+     },
+     "bilgi": [
+      5,
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Geri dönüşümlü hücre hasarının morfolojik özelliklerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-04-q11",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Geri dönüşümlü hücre hasarının ışık mikroskobunda görülen en erken bulgusu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karyoreksis",
+      "B": "Hücresel şişme (hidropik değişim)",
+      "C": "Distrofik kalsifikasyon",
+      "D": "Karyolizis",
+      "E": "Koagülasyon nekrozu"
+     },
+     "dogru": "B",
+     "aciklama": "Hücresel şişme en erken geri dönüşümlü hasar bulgusudur; ATP eksikliğine bağlı Na⁺/K⁺ ATPaz pompasının bozulmasıyla oluşur.",
+     "sik_aciklamalari": {
+      "A": "Karyoreksis nekrozun nükleer değişikliğidir.",
+      "B": "Doğru. ER dilatasyonuna karşılık gelen berrak vakuoller görülür.",
+      "C": "Distrofik kalsifikasyon nekrotik dokuda gelişir.",
+      "D": "Karyolizis nekrozun nükleer değişikliğidir.",
+      "E": "Koagülasyon nekrozu geri dönüşümsüz hasardır."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q12",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hücresel şişmenin (hidropik değişim) mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "ATP eksikliğine bağlı Na⁺/K⁺ ATPaz pompasının bozulması ve hücre içine su girişi",
+      "B": "Trigliseridlerin sitoplazmada birikmesi",
+      "C": "Kaspazların aktive olması",
+      "D": "Çekirdeğin büzülüp bazofilisinin artması",
+      "E": "Hücre zarının tamamen parçalanması"
+     },
+     "dogru": "A",
+     "aciklama": "ATP azalınca Na⁺/K⁺ pompası çalışamaz; hücre içinde sodyum ve su birikir, ER dilate olur ve sitoplazmada berrak vakuoller oluşur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. ATP azalınca pompa durur, hücre içinde Na⁺ ve su birikir, hücre şişer.",
+      "B": "Bu yağlanmanın (steatoz) tanımıdır.",
+      "C": "Kaspaz aktivasyonu apoptoz mekanizmasıdır.",
+      "D": "Bu piknozdur; nekrozun nükleer değişikliğidir.",
+      "E": "Zarın parçalanması geri dönüşümsüz hasarın (nekroz) özelliğidir; geri dönüşümlü hasarda membran bütünlüğü korunur."
+     },
+     "bilgi": [
+      17,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q13",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi geri dönüşümlü hücre hasarının özelliklerinden biri değildir?",
+     "secenekler": {
+      "A": "Plazma zarında kabarcıklanma ve mikrovillus kaybı",
+      "B": "Endoplazmik retikulum dilatasyonu ve ribozomların ayrılması",
+      "C": "Yağlanma",
+      "D": "Miyelin figürleri",
+      "E": "Mitokondrilerde kalsiyum içeren elektron yoğun birikintiler"
+     },
+     "dogru": "E",
+     "aciklama": "Mitokondrilerde belirgin şişme ve kalsiyum-protein içeren elektron yoğun birikintiler geç, geri dönüşümsüz hasarın bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Geri dönüşümlü hasarda görülür.",
+      "B": "Geri dönüşümlü hasarda görülür.",
+      "C": "Geri dönüşümlü hasarda görülür; özellikle karaciğer ve kalpte.",
+      "D": "Geri dönüşümlü hasarda da görülebilir; zar fosfolipidlerinden türer.",
+      "E": "Geri dönüşümlü hasarın özelliği değildir (aranan cevap); hücre ölümünün yaklaştığını gösterir."
+     },
+     "bilgi": [
+      16,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q14",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "İskemik hasar sonrası çok sayıda hücresinde hidropik değişim gelişmiş bir organın makroskobik görünümü için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Organ küçülür, sertleşir ve kahverengi görünür.",
+      "B": "Organ soluk görünür, turgoru artar ve ağırlığı artabilir.",
+      "C": "Organ sıvılaşır ve viskoz bir kitleye dönüşür.",
+      "D": "Organda kama şeklinde, sarı ve kenarı belirgin bir alan oluşur.",
+      "E": "Organ yüzeyinde tebeşir beyazı kalsifik plaklar oluşur."
+     },
+     "dogru": "B",
+     "aciklama": "Hücresel şişme birçok hücreyi etkilediğinde organ soluk, gergin (turgoru artmış) ve daha ağır görünür.",
+     "sik_aciklamalari": {
+      "A": "Küçülme atrofiye uyar; hidropik değişim organı büyütür.",
+      "B": "Doğru. Şişen hücreler organı soluk, gergin ve ağır gösterir.",
+      "C": "Sıvılaşma likefaksiyon nekrozunun görünümüdür.",
+      "D": "Kama şeklinde sarı alan koagülatif nekroz (enfarkt) görünümüdür.",
+      "E": "Kalsifik plaklar kalsifikasyonun bulgusudur."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Geri dönüşümlü hasarın geri dönüşümsüz hale geçiş kriterlerini sıralar.",
+   "sorular": [
+    {
+     "id": "k1-04-q15",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi hücre hasarının geri dönüşümsüz hale geldiğini gösteren kriterlerden biridir?",
+     "secenekler": {
+      "A": "Hücresel şişme",
+      "B": "Mitokondriyal fonksiyonun geri kazanılamaması",
+      "C": "Endoplazmik retikulum dilatasyonu",
+      "D": "Hücre içinde yağ vakuolleri",
+      "E": "Mikrovillus kaybı"
+     },
+     "dogru": "B",
+     "aciklama": "Geri dönüşümsüzlük kriterleri mitokondriyal fonksiyonun geri kazanılamaması, zarlarda kalıcı hasar ve DNA-kromatin bütünlüğünün bozulmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Geri dönüşümlü hasarın en erken bulgusudur.",
+      "B": "Doğru. ATP üretimi kalıcı olarak bozulur.",
+      "C": "Geri dönüşümlü hasarda görülür.",
+      "D": "Yağlanma geri dönüşümlü hasardır.",
+      "E": "Geri dönüşümlü hasarda görülür."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q16",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Geri dönüşümlü hasardan geri dönüşümsüz hasara geçiş ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kalıcı veya şiddetli stres geri dönüşümlü hasar sınırını aşar.",
+      "B": "Plazma ve organel zarlarında kalıcı hasar geri dönüşümsüzlük kriteridir.",
+      "C": "DNA ve kromatin bütünlüğünün bozulması geri dönüşümsüzlük kriteridir.",
+      "D": "Geri dönüşümsüz hasarın sonucu hücre ölümüdür.",
+      "E": "Hücresel şişme ve yağlanma geri dönüşümsüzlüğün kesin kriterleridir."
+     },
+     "dogru": "E",
+     "aciklama": "Şişme ve yağlanma geri dönüşümlü hasarın bulgularıdır; geri dönüşümsüzlüğü mitokondri, zar ve DNA hasarının kalıcılığı belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; şiddet ve süre hasarın geri dönüp dönmeyeceğini belirler.",
+      "B": "Doğru ifade; zar hasarı hücre içeriğinin sızmasına yol açar.",
+      "C": "Doğru ifade; DNA-kromatin bütünlüğünün bozulması geri dönüşümsüzlük kriteridir.",
+      "D": "Doğru ifade; nekroz veya apoptoz gelişir.",
+      "E": "Yanlış ifade (aranan cevap). Şişme ve yağlanma geri dönüşümlü hasarın bulgularıdır; geri dönüşümsüzlüğü mitokondri, zar ve DNA hasarının kalıcılığı belirler."
+     },
+     "bilgi": [
+      16,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q17",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "İskemik miyokardın elektron mikroskobik incelemesinde mitokondrilerin belirgin şiştiği ve içlerinde büyük, amorf, elektron yoğun birikintiler bulunduğu görülüyor.\n\nBu bulgu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hücre fizyolojik hipertrofi içindedir.",
+      "B": "Erken, kolayca geri dönebilen hasarı gösterir.",
+      "C": "Birikintiler trigliserid damlacıklarıdır.",
+      "D": "Bulgu apoptozun kaspaz aktivasyonunu gösterir.",
+      "E": "Kalsiyum ve protein çökeltileridir; geri dönüşümsüz hasarı ve yaklaşan hücre ölümünü gösterir."
+     },
+     "dogru": "E",
+     "aciklama": "Geç hasarda mitokondriler belirgin şişer ve içlerinde çökelmiş kalsiyum-protein içeren elektron yoğun birikintiler oluşur; bu geri dönüşümsüzlüğün işaretidir.",
+     "sik_aciklamalari": {
+      "A": "Hipertrofide organel sayısı artar, bu tür birikintiler görülmez.",
+      "B": "Erken hasarda mitokondrilerde yalnızca hafif şişme olur.",
+      "C": "Trigliserid birikimi yağlanmadır; mitokondri içinde değil sitoplazmik vakuollerdedir.",
+      "D": "Kaspaz aktivasyonu elektron mikroskobunda bu şekilde görülmez.",
+      "E": "Doğru. Mitokondride kalsiyum-protein çökeltileri geç hasarı ve yaklaşan ölümü gösterir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Nekroz ve apoptozun temel ayrımını yapar.",
+   "sorular": [
+    {
+     "id": "k1-04-q18",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Nekroz ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Programlı ve enerji gerektiren fizyolojik bir hücre ölümüdür.",
+      "B": "Embriyonik gelişimde parmak arası dokunun ortadan kalkmasını sağlar.",
+      "C": "Şiddetli enerji yetersizliği veya toksik hasara bağlı 'kazara' hücre ölümüdür ve her zaman patolojiktir.",
+      "D": "Çevre dokuda inflamasyon oluşturmaz.",
+      "E": "Hücre zarı daima sağlam kalır."
+     },
+     "dogru": "C",
+     "aciklama": "Nekroz kazara, her zaman patolojik ölümdür; zarlar parçalanır ve inflamasyon gelişir. Apoptoz ise programlıdır ve fizyolojik olabilir.",
+     "sik_aciklamalari": {
+      "A": "Bu tanım apoptoza aittir.",
+      "B": "Bu fizyolojik apoptoz örneğidir.",
+      "C": "Doğru. Nekroz enerji yetersizliği veya toksik hasara bağlı, her zaman patolojik ölümdür.",
+      "D": "Nekrozda içerik sızar ve inflamatuar yanıt oluşur.",
+      "E": "Nekrozda hücre ve organel zarları parçalanır."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q19",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Nekroz ve apoptozun karşılaştırılmasında aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nekroz her zaman patolojiktir; apoptoz fizyolojik veya patolojik olabilir.",
+      "B": "Nekrozda zarlar parçalanır ve içerik dışarı sızar.",
+      "C": "Nekroz çevre dokuda inflamasyona yol açar.",
+      "D": "Apoptoz programlı ve düzenlenmiş hücre ölümüdür.",
+      "E": "Apoptoz yalnızca patolojik durumlarda görülür."
+     },
+     "dogru": "E",
+     "aciklama": "Apoptoz programlı hücre ölümüdür ve hem fizyolojik hem patolojik koşullarda görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; nekroz patolojik, apoptoz fizyolojik veya patolojik olabilir.",
+      "B": "Doğru ifade; zar hasarı içeriğin sızmasına yol açar.",
+      "C": "Doğru ifade; sızan içerik inflamasyonu tetikler.",
+      "D": "Doğru ifade; apoptoz kendi ölüm programını aktive eden düzenlenmiş ölümdür.",
+      "E": "Yanlış ifade (aranan cevap). Apoptoz programlı hücre ölümüdür ve hem fizyolojik hem patolojik koşullarda görülür."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q20",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi nekroz ve apoptoz dışında tanımlanmış düzenlenmiş hücre ölümü tiplerinden biri değildir?",
+     "secenekler": {
+      "A": "Nekroptoz",
+      "B": "Piroptoz",
+      "C": "Ferroptoz",
+      "D": "Hidropik değişim",
+      "E": "Hiçbiri; hepsi hücre ölümü tipidir"
+     },
+     "dogru": "D",
+     "aciklama": "Nekroptoz, piroptoz ve ferroptoz diğer hücre ölümü tipleridir; hidropik değişim geri dönüşümlü hasarın bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Nekroptoz tanımlanmış bir hücre ölümü tipidir.",
+      "B": "Piroptoz tanımlanmış bir hücre ölümü tipidir.",
+      "C": "Ferroptoz tanımlanmış bir hücre ölümü tipidir.",
+      "D": "Doğru cevap. Hidropik değişim (hücresel şişme) ölüm değil, geri dönüşümlü hasardır.",
+      "E": "Hidropik değişim hücre ölümü tipi olmadığı için bu seçenek yanlıştır."
+     },
+     "bilgi": [
+      22,
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Nekrozun sitoplazmik ve nükleer değişikliklerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-04-q21",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Nekrotik hücrede çekirdeğin büzülerek küçülmesi ve bazofilisinin artmasına ne ad verilir?",
+     "secenekler": {
+      "A": "Karyolizis",
+      "B": "Karyoreksis",
+      "C": "Piknoz",
+      "D": "Kromatolizis",
+      "E": "Vakuolizasyon"
+     },
+     "dogru": "C",
+     "aciklama": "Piknozda çekirdek büzülür ve bazofilisi artar; karyoreksiste parçalanır, karyoliziste bazofilisini kaybederek solar.",
+     "sik_aciklamalari": {
+      "A": "Karyolizis bazofili kaybı ve çekirdeğin solmasıdır.",
+      "B": "Karyoreksis piknotik çekirdeğin parçalanmasıdır.",
+      "C": "Doğru. Piknozda çekirdek küçülür, koyulaşır ve bazofilisi artar.",
+      "D": "Kromatolizis bu derste nekrozun nükleer değişikliği olarak tanımlanmaz.",
+      "E": "Vakuolizasyon sitoplazmik bir değişikliktir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q22",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Nekrotik hücrelerde HE boyamada sitoplazmanın daha pembe (eozinofilik) görünmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Denatüre proteinlere eozin bağlanması ve bazofilik RNA'nın kaybı",
+      "B": "Glikojen birikiminin artması",
+      "C": "Çekirdekte DNA miktarının artması",
+      "D": "Ribozomların sayıca artması",
+      "E": "Hücre içine kalsiyum girişinin azalması"
+     },
+     "dogru": "A",
+     "aciklama": "Nekrozda artmış eozinofili denatüre proteinlerin eozin bağlaması ve normalde bazofili sağlayan RNA'nın kaybıyla oluşur; glikojen kaybıyla camsı görünüm eklenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Denatüre proteinler eozin bağlar, RNA kaybı bazofiliyi azaltır; sitoplazma pembeleşir.",
+      "B": "Nekrozda glikojen kaybolur; camsı görünüme katkı verir.",
+      "C": "Çekirdekte DNA yıkılır (karyolizis); eozinofiliyle ilişkili değildir.",
+      "D": "Ribozomal RNA kaybı bazofiliyi azaltır; ribozom artışı tersine bazofili yapar.",
+      "E": "Hasarlı hücrede kalsiyum girişi artar; eozinofili nedeni değildir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q23",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Nekrozdaki değişiklikler ve nekrotik hücrelerin akıbeti ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nükleer değişiklikler sırasıyla piknoz, karyoreksis ve karyolizis biçiminde görülebilir.",
+      "B": "1-2 gün içinde çekirdek tamamen kaybolabilir.",
+      "C": "Miyelin figürleri hücre zarı fosfolipidlerinden türer.",
+      "D": "Yağ asitlerinin kalsiyumla birleşmesi distrofik kalsifikasyona yol açabilir.",
+      "E": "Nekrotik hücreler yalnızca kendi lizozomal enzimleriyle sindirilir; lökositlerin katkısı yoktur."
+     },
+     "dogru": "E",
+     "aciklama": "Ölü hücreler hem kendi lizozomal enzimleri hem de bölgeye gelen lökositlerin enzimleriyle sindirilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; nükleer değişiklikler piknoz, karyoreksis ve karyolizis biçimindedir.",
+      "B": "Doğru ifade; çekirdek 1-2 günde tamamen kaybolabilir.",
+      "C": "Doğru ifade; elektron mikroskobunda görülür.",
+      "D": "Doğru ifade; yağ asidi-kalsiyum birleşimi distrofik kalsifikasyona yol açar.",
+      "E": "Yanlış ifade (aranan cevap). Ölü hücreler hem kendi lizozomal enzimleri hem de bölgeye gelen lökositlerin enzimleriyle sindirilir."
+     },
+     "bilgi": [
+      23,
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Başlıca doku nekrozu kalıplarını (koagülatif, sıvılaşma, gangrenöz) örnekleriyle açıklar.",
+   "sorular": [
+    {
+     "id": "k1-04-q24",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "En sık görülen nekroz tipi ve kalp, böbrek, dalak gibi organlardaki iskemik enfarktların tipik nekrozu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Likefaksiyon nekrozu",
+      "B": "Kazeöz nekroz",
+      "C": "Yağ nekrozu",
+      "D": "Koagülatif nekroz",
+      "E": "Fibrinoid nekroz"
+     },
+     "dogru": "D",
+     "aciklama": "Koagülatif nekroz en sık tiptir; yapısal proteinler ve enzimler denatüre olduğu için doku mimarisi birkaç gün korunur.",
+     "sik_aciklamalari": {
+      "A": "Likefaksiyon nekrozu püy oluşturan enfeksiyonlar ve beyin infarktlarında görülür.",
+      "B": "Kazeöz nekroz tüberkülozla ilişkilidir.",
+      "C": "Yağ nekrozu pankreatit ve meme travmasıyla ilişkilidir.",
+      "D": "Doğru. Koagülatif nekroz en sık tiptir ve solid organ enfarktlarının tipik nekrozudur.",
+      "E": "Fibrinoid nekroz damar duvarında immün kompleks birikimiyle ilişkilidir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": [
+      "28b4d100f48e"
+     ]
+    },
+    {
+     "id": "k1-04-q25",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "İskemik inme geçiren bir hastanın beyninde enfarkt alanında görülmesi beklenen nekroz tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Likefaksiyon (sıvılaşma) nekrozu",
+      "B": "Koagülatif nekroz",
+      "C": "Kazeöz nekroz",
+      "D": "Fibrinoid nekroz",
+      "E": "Gangrenöz nekroz"
+     },
+     "dogru": "A",
+     "aciklama": "İskemik enfarktlar genellikle koagülatif nekrozla seyreder; beyin infarktları bu kuralın istisnasıdır ve sıvılaşma nekrozu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Beyinde iskemi likefaksiyon nekrozu oluşturur.",
+      "B": "Koagülatif nekroz beyin dışındaki solid organ enfarktlarında görülür.",
+      "C": "Kazeöz nekroz tüberküloza özgüdür.",
+      "D": "Fibrinoid nekroz damar duvarında görülür.",
+      "E": "Gangren klinik bir terimdir; genellikle ekstremitelerde kullanılır."
+     },
+     "bilgi": [
+      30,
+      33
+     ],
+     "benzer_cikmis": [
+      "d3-b-113",
+      "4c8b0d8dbd53"
+     ]
+    },
+    {
+     "id": "k1-04-q26",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Koagülatif nekrozun morfolojik özellikleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Doku hızla sıvılaşarak viskoz bir kitleye dönüşür.",
+      "B": "Mikroskopide çekirdekler kaybolur fakat hücre konturları korunur; doku sert, soluk ve kuru görünür.",
+      "C": "Tipik olarak beyin infarktlarında görülür.",
+      "D": "Peynirimsi, beyaz-sarı ufalanan bir görünüm vardır.",
+      "E": "Proteoliz hızlandığı için doku mimarisi ilk saatlerde kaybolur."
+     },
+     "dogru": "B",
+     "aciklama": "Koagülatif nekrozda proteinler ve enzimler denatüre olduğu için proteoliz gecikir; doku mimarisi ve hücre konturları birkaç gün korunur.",
+     "sik_aciklamalari": {
+      "A": "Bu sıvılaşma nekrozunun özelliğidir.",
+      "B": "Doğru. Proteoliz geciktiği için hücre konturları ve doku mimarisi birkaç gün korunur.",
+      "C": "Beyin infarktları sıvılaşma nekrozu gösterir.",
+      "D": "Peynirimsi görünüm kazeöz nekroza aittir.",
+      "E": "Proteoliz gecikir; mimari birkaç gün korunur."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-04-q28",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Deri altında gelişen bakteriyel bir enfeksiyonda lokalize, sarı-krem renkli, nekrotik materyal içeren boşluk oluşumu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Lökosit ve mikrobiyal enzimlerin dokuyu sıvılaştırmasıyla oluşan likefaksiyon nekrozudur; bu lokalize püy birikimi apsedir.",
+      "B": "Doku mimarisinin korunduğu koagülatif nekrozdur.",
+      "C": "Tüberküloza özgü kazeöz nekrozdur.",
+      "D": "Damar duvarında immün kompleks birikimiyle oluşan fibrinoid nekrozdur.",
+      "E": "Geri dönüşümlü hasar olan hidropik değişimdir."
+     },
+     "dogru": "A",
+     "aciklama": "Püy oluşturan bakteri ve mantar enfeksiyonları likefaksiyon nekrozu yapar; püyün lokalize birikimine apse denir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Püy oluşturan enfeksiyonlarda doku sıvılaşır; lokalize püy birikimi apsedir.",
+      "B": "Koagülatif nekrozda doku sıvılaşmaz.",
+      "C": "Kazeöz nekroz peynirimsi görünümlüdür ve tüberkülozla ilişkilidir.",
+      "D": "Fibrinoid nekroz vaskülitlerde damar duvarında görülür.",
+      "E": "Hidropik değişim geri dönüşümlüdür ve püy oluşturmaz."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": [
+      "4c8b0d8dbd53"
+     ]
+    },
+    {
+     "id": "k1-04-q27",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Periferik arter hastalığı olan diyabetik bir hastanın ayak parmağında kan akımı kesilmesine bağlı siyah, kuru bir alan gelişiyor; günler sonra bölgeye bakteriyel enfeksiyon eklenerek doku yumuşayıp kötü kokulu hale geliyor.\n\nBu tablo ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Gangrenöz nekroz klasik bir histolojik nekroz tipidir ve kazeöz nekrozla aynıdır.",
+      "B": "Başlangıçtaki kuru gangren sıvılaşma nekrozu, sonraki ıslak gangren koagülatif nekrozdur.",
+      "C": "Gangren klinik bir terimdir; temelde geniş koagülatif nekroz alanıdır ve enfeksiyon eklenince ikincil sıvılaşmayla ıslak gangren gelişir.",
+      "D": "Bu tablo yağ nekrozuna örnektir.",
+      "E": "Enfeksiyon eklenmesi nekrozun tipini değiştirmez."
+     },
+     "dogru": "C",
+     "aciklama": "Gangrenöz nekroz genellikle alt ekstremitede kan akımı kesilen alanlarda görülen geniş koagülatif nekrozdur; enfeksiyonla sıvılaşma eklenir (ıslak gangren).",
+     "sik_aciklamalari": {
+      "A": "Gangren histolojik değil klinik bir terimdir ve kazeöz nekrozla ilgisi yoktur.",
+      "B": "Tipler ters verilmiştir: temel koagülatif, enfeksiyonla eklenen sıvılaşmadır.",
+      "C": "Doğru. Gangren geniş koagülatif nekrozdur; enfeksiyon eklendiğinde ıslak gangrene döner.",
+      "D": "Yağ nekrozu pankreas, meme gibi yağdan zengin dokularda görülür.",
+      "E": "Enfeksiyon lökosit ve mikrobiyal enzimlerle ikincil sıvılaşma yapar."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "28b4d100f48e",
+     "soru": "En sık görülen nekroz tipi hangisidir?",
+     "secenekler": {
+      "A": "Kazeiikasyon nekrozu.",
+      "B": "Fibrinoid nekroz.",
+      "C": "Yağ nekrozu.",
+      "D": "Koagülasyon nekrozu.",
+      "E": "Likefaksiyon nekrozu."
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "d3-b-113",
+     "soru": "Beyinde iskemi sonucu hangi tipte nekroz oluşur?",
+     "secenekler": {
+      "A": "Koagülasyon nekrozu",
+      "B": "Likefaksiyon nekrozu",
+      "C": "Kazeifikasyon nekrozu",
+      "D": "Fibrinoid nekroz",
+      "E": "Gangrenöz nekroz"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "4c8b0d8dbd53",
+     "soru": "Abseler ve beyin infarktüsü hangi nekroz tipine örnektir?",
+     "secenekler": {
+      "A": "Kazeifikasyon",
+      "B": "Fibrinoid nekroz",
+      "C": "Yağ nekrozu",
+      "D": "Koagülasyon nekrozu",
+      "E": "Likefaksiyon nekrozu"
+     },
+     "cevap": "B"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 28,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:06"
+}

@@ -1,0 +1,971 @@
+{
+ "id": "k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan",
+ "sira": 33,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": null,
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "İyi huylu ve kötü huylu neoplazmların konak üzerindeki lokal ve sistemik etkilerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-33-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Benign bir tümörün ciddi klinik sonuçlara yol açabilmesinde en kritik faktörlerden biri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tümörün rengi",
+      "B": "Tümörün yüzeyinin düzgün olması",
+      "C": "Hastanın kan grubu",
+      "D": "Tümörün yerleşim yeri",
+      "E": "Tümörün kapsüllü olması"
+     },
+     "dogru": "D",
+     "aciklama": "Küçük bir tümör bile kritik bir lokalizasyonda ağır sonuç doğurabilir: 1 cm hipofiz adenomu hipopituitarizm, küçük safra kanalı karsinomu obstrüktif sarılık yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Renk klinik ciddiyeti belirlemez.",
+      "B": "Yüzey özelliği temel belirleyici değildir.",
+      "C": "Kan grubu tümörün etkisini belirlemez.",
+      "D": "Doğru. Küçük bir tümör bile kritik bir lokalizasyonda ağır sonuç doğurabilir: 1 cm hipofiz adenomu hipopituitarizm, küçük safra kanalı karsinomu obstrüktif sarılık yapabilir.",
+      "E": "Kapsül genellikle benign davranışla ilişkilidir; ciddiyeti belirleyen yerleşimdir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Pankreas beta hücre tümörü olan bir hastada beklenen klinik tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Obstrüktif sarılık",
+      "B": "Hipertansiyon ve hipokalemi",
+      "C": "Hiperinsülinizm ve hipoglisemi",
+      "D": "Polisitemi",
+      "E": "Hiperkalsemi"
+     },
+     "dogru": "C",
+     "aciklama": "Endokrin bez tümörlerinde hiperfonksiyon sık görülür; iyi diferansiye benign tümörlerde hormon üretimi daha olasıdır.",
+     "sik_aciklamalari": {
+      "A": "Obstrüktif sarılık safra kanalı tümörlerinde görülür.",
+      "B": "Bu adrenal korteks aldosteron üreten tümörünün bulgusudur.",
+      "C": "Doğru. İnsülin fazlalığı hipoglisemi ve koma riski yaratır.",
+      "D": "Polisitemi eritropoetin üreten tümörlerde (ör. renal hücreli karsinom) görülür.",
+      "E": "Hiperkalsemi PTHrP üreten tümörlerde görülür."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Kolon karsinomlu bir hastada yorgunluk ve hipokrom mikrositer anemi saptanıyor.\n\nBu anemi ile ilgili en olası açıklama aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tümörün eritropoetin üretmesi",
+      "B": "Paraneoplastik polisitemi",
+      "C": "Tümörün yüzey ülserasyonuna bağlı kronik kan kaybıyla demir eksikliği",
+      "D": "Hemoliz yapan ektopik ACTH",
+      "E": "Tümörün hiçbir sistemik etkisi olmaması"
+     },
+     "dogru": "C",
+     "aciklama": "Deri ve gastrointestinal mukoza tümörlerinde ülserasyon kanama, anemi ve sekonder enfeksiyona yol açar; mide/kolon karsinomlarında kronik kan kaybı demir eksikliği anemisine neden olur.",
+     "sik_aciklamalari": {
+      "A": "Eritropoetin polisitemi yapar.",
+      "B": "Polisitemi anemi değil eritrosit artışıdır.",
+      "C": "Doğru. Deri ve gastrointestinal mukoza tümörlerinde ülserasyon kanama, anemi ve sekonder enfeksiyona yol açar; mide/kolon karsinomlarında kronik kan kaybı demir eksikliği anemisine neden olur.",
+      "D": "Ektopik ACTH Cushing sendromu yapar.",
+      "E": "Tümörler kanama, kaşeksi, bağışıklık baskılanması gibi sistemik etkiler yapabilir."
+     },
+     "bilgi": [
+      4,
+      1
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Kanser kaşeksisinin tanımını ve patogenezini (TNF/kaşektin, sitokinler, artmış bazal metabolizma) açıklar.",
+   "sorular": [
+    {
+     "id": "k1-33-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Kanser kaşeksisinde iştahı baskılayan ve lipoprotein lipazı inhibe eden, 'kaşektin' olarak da bilinen mediyatör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "PTHrP",
+      "B": "İnsülin",
+      "C": "Eritropoetin",
+      "D": "TNF",
+      "E": "ACTH"
+     },
+     "dogru": "D",
+     "aciklama": "TNF makrofajlar veya tümör hücrelerince üretilir; katabolizmayı artırarak yağ ve kas kaybına yol açar.",
+     "sik_aciklamalari": {
+      "A": "PTHrP paraneoplastik hiperkalsemi yapar.",
+      "B": "İnsülin anabolik hormondur.",
+      "C": "Eritropoetin eritrosit üretimini uyarır.",
+      "D": "Doğru. TNF makrofajlar veya tümör hücrelerince üretilir; katabolizmayı artırarak yağ ve kas kaybına yol açar.",
+      "E": "ACTH paraneoplastik Cushing sendromu yapar."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kanser kaşeksisi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca azalmış besin alımına bağlıdır ve beslenme desteğiyle tamamen düzelir.",
+      "B": "Kaşeksi yalnızca yağ dokusu kaybıyla sınırlıdır.",
+      "C": "Kaşeksinin şiddeti tümör yaygınlığıyla ilişkili değildir.",
+      "D": "Tümör ve konak kaynaklı mediyatörlerle ilişkilidir; bazal metabolizma artmış kalır ve normal açlıktan farklı bir katabolik süreçtir.",
+      "E": "Bazal metabolizma kaşeksi sırasında belirgin azalır."
+     },
+     "dogru": "D",
+     "aciklama": "Kaşeksi kilo kaybı (yağ ve kas), halsizlik, iştahsızlık ve anemiyle seyreder; şiddeti tümör büyüklüğü ve yaygınlığıyla koreledir ve nedensel tümör ortadan kaldırılmadan etkili tedavi yoktur.",
+     "sik_aciklamalari": {
+      "A": "Kaşeksi yalnızca besin alımı azlığıyla açıklanmaz.",
+      "B": "Kas kaybı da önemlidir.",
+      "C": "Şiddeti tümör yaygınlığıyla koreledir.",
+      "D": "Doğru. Kaşeksi kilo kaybı (yağ ve kas), halsizlik, iştahsızlık ve anemiyle seyreder; şiddeti tümör büyüklüğü ve yaygınlığıyla koreledir ve nedensel tümör ortadan kaldırılmadan etkili tedavi yoktur.",
+      "E": "Normal açlıktan farklı olarak bazal metabolizma artmıştır."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "İleri evre pankreas kanserli bir hastada yeterli kalori desteğine rağmen kas ve yağ kaybının sürmesi en iyi aşağıdakilerden hangisiyle açıklanır?",
+     "secenekler": {
+      "A": "Hastanın yeterince yemek yememesi",
+      "B": "Hipoglisemi",
+      "C": "TNF gibi mediyatörlerle süren katabolizma ve artmış bazal metabolizma",
+      "D": "Paraneoplastik polisitemi",
+      "E": "Tümörün hormon salgılamaması"
+     },
+     "dogru": "C",
+     "aciklama": "Kaşeksi aktif bir katabolik süreçtir; beslenme desteği tek başına yetersiz kalır.",
+     "sik_aciklamalari": {
+      "A": "Soruda yeterli kalori desteği verildiği belirtilmiştir.",
+      "B": "Hipoglisemi kaşeksinin açıklaması değildir.",
+      "C": "Doğru. Kaşeksi aktif bir katabolik süreçtir; beslenme desteği tek başına yetersiz kalır.",
+      "D": "Polisitemi kilo kaybını açıklamaz.",
+      "E": "Kaşeksi hormon salgısından bağımsız mediyatörlerle gelişir."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Paraneoplastik sendromların tanımını, sık görülen tiplerini ve mekanizmalarını özetler.",
+   "sorular": [
+    {
+     "id": "k1-33-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "En sık görülen paraneoplastik sendrom aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hiperkalsemi",
+      "B": "Polisitemi",
+      "C": "Hipoglisemi",
+      "D": "Akantozis nigrikans",
+      "E": "Kırmızı hücre aplazisi"
+     },
+     "dogru": "A",
+     "aciklama": "Paraneoplastik hiperkalsemi PTHrP, TGF-α ve aktif D vitamini metabolitleriyle oluşur; akciğer skuamöz hücreli karsinomu, böbrek ve meme karsinomu ile erişkin T hücreli lösemi/lenfomayla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Paraneoplastik hiperkalsemi PTHrP, TGF-α ve aktif D vitamini metabolitleriyle oluşur; akciğer skuamöz hücreli karsinomu, böbrek ve meme karsinomu ile erişkin T hücreli lösemi/lenfomayla ilişkilidir.",
+      "B": "Polisitemi daha nadir görülür.",
+      "C": "Hipoglisemi daha nadir görülür.",
+      "D": "Akantozis nigrikans daha nadir görülen deri bulgusudur.",
+      "E": "Kırmızı hücre aplazisi timomayla ilişkili nadir sendromdur."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": [
+      "d3-f-002"
+     ]
+    },
+    {
+     "id": "k1-33-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Paraneoplastik sendrom ve ilişkili tümör eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ektopik ACTH ile Cushing sendromu – küçük hücreli akciğer karsinomu",
+      "B": "Trousseau fenomeni (venöz tromboz) – pankreas karsinomu",
+      "C": "Hipoglisemi – küçük hücreli akciğer karsinomunda ADH salınımı",
+      "D": "Miyasteni ve kırmızı hücre aplazisi – timoma",
+      "E": "Polisitemi – renal hücreli karsinom"
+     },
+     "dogru": "C",
+     "aciklama": "Küçük hücreli akciğer karsinomunda ADH salınımı SIADH yapar; hipoglisemi insülin veya insülin benzeri madde üreten fibrosarkom, diğer sarkomlar ve over karsinomunda görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: ektopik ACTH ile Cushing sendromu – küçük hücreli akciğer karsinomu.",
+      "B": "Doğru eşleştirme; akciğer karsinomunda da görülür.",
+      "C": "Yanlış eşleştirme (aranan cevap). Küçük hücreli akciğer karsinomunda ADH salınımı SIADH yapar; hipoglisemi insülin veya insülin benzeri madde üreten fibrosarkom, diğer sarkomlar ve over karsinomunda görülür.",
+      "D": "Doğru eşleştirme: miyasteni ve kırmızı hücre aplazisi – timoma.",
+      "E": "Doğru eşleştirme; serebellar hemanjiyom ve HCC de neden olabilir."
+     },
+     "bilgi": [
+      11,
+      12,
+      13,
+      14
+     ],
+     "benzer_cikmis": [
+      "d68152ea1055"
+     ]
+    },
+    {
+     "id": "k1-33-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Paraneoplastik sendromlar ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tümörün lokal veya uzak yayılımıyla açıklanamayan semptom ve bulgu kompleksleridir.",
+      "B": "Kanser hastalarının yaklaşık %10-15'inde görülür.",
+      "C": "Gizli bir tümörün ilk belirtisi olabilir.",
+      "D": "Tümörün köken aldığı dokuya özgü hormon salgısıyla oluşan bulgular (ör. pankreas beta hücre tümöründe insülin) paraneoplastik sendrom olarak sınıflanır.",
+      "E": "Metastazı taklit ederek tanıyı güçleştirebilir."
+     },
+     "dogru": "D",
+     "aciklama": "Paraneoplastik sendrom tümör dokusuna özgü hormon salgısıyla açıklanamayan bulgulardır; beta hücre tümöründe insülin üretimi kök dokuya özgü hormon salgısıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: tümörün lokal veya uzak yayılımıyla açıklanamayan semptom ve bulgu kompleksleridir.",
+      "B": "Doğru ifade: kanser hastalarının yaklaşık %10-15'inde görülür.",
+      "C": "Doğru ifade: gizli bir tümörün ilk belirtisi olabilir.",
+      "D": "Yanlış ifade (aranan cevap). Paraneoplastik sendrom tümör dokusuna özgü hormon salgısıyla açıklanamayan bulgulardır; beta hücre tümöründe insülin üretimi kök dokuya özgü hormon salgısıdır.",
+      "E": "Doğru ifade: metastazı taklit ederek tanıyı güçleştirebilir."
+     },
+     "bilgi": [
+      9,
+      3
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-002",
+     "soru": "Aşağıdakilerden hangisi en sık görülen üç paraneoplastik sendromdan biridir?",
+     "secenekler": {
+      "A": "Myastenia gravis",
+      "B": "Hipoglisemi",
+      "C": "Nefrotik sendrom",
+      "D": "Non-bakteriyel trombotik endokardit",
+      "E": "Polisitemi"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "d68152ea1055",
+     "soru": "Timoma hangi paraneoplastik sendrom ile ilişkilidir?",
+     "secenekler": {
+      "A": "Hiperkalsemi",
+      "B": "Cushing sendromu",
+      "C": "Non-bakteriyel trombotik endokardit",
+      "D": "Poisitemi",
+      "E": "Kırmızı hücre aplazisi"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Kanser derecelendirmenin (grading) tanımını ve değerlendirilen morfolojik unsurları açıklar.",
+   "sorular": [
+    {
+     "id": "k1-33-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Tümör derecelendirmesinde (grading) aşağıdakilerden hangisi göz önüne alınır?",
+     "secenekler": {
+      "A": "Uzak organ metastazı",
+      "B": "Tümör büyüklüğü",
+      "C": "Lenf düğümü metastazı",
+      "D": "Tümör hücrelerinin diferansiyasyon derecesi",
+      "E": "Lokal invazyonun yaygınlığı"
+     },
+     "dogru": "D",
+     "aciklama": "Derecelendirme diferansiyasyon derecesi, mitoz sayısı, tümör nekrozu ve mimari bozulmaya dayanır; amaç biyolojik agresifliği kaba olarak tahmin etmektir.",
+     "sik_aciklamalari": {
+      "A": "Uzak metastaz evreleme (M) unsurudur.",
+      "B": "Tümör büyüklüğü evreleme (T) unsurudur.",
+      "C": "Lenf düğümü tutulumu evreleme (N) unsurudur.",
+      "D": "Doğru. Derecelendirme diferansiyasyon derecesi, mitoz sayısı, tümör nekrozu ve mimari bozulmaya dayanır; amaç biyolojik agresifliği kaba olarak tahmin etmektir.",
+      "E": "Lokal invazyon evreleme (T) unsurudur."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": [
+      "d3-b-111"
+     ]
+    },
+    {
+     "id": "k1-33-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Derecelendirme (grading) ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tamamen nesneldir ve gözlemciden bağımsızdır.",
+      "B": "Tüm tümörlerde aynı skala kullanılır.",
+      "C": "Genellikle düşük (iyi diferansiye), orta ve yüksek (az diferansiye/anaplastik) derece kullanılır; meme, prostat ve beyin tümörlerinde özgül sistemler vardır ve değerlendirme özneldir.",
+      "D": "Derecelendirme tümörün yayılımını tanımlar.",
+      "E": "Mitoz sayısı derecelendirmede değerlendirilmez."
+     },
+     "dogru": "C",
+     "aciklama": "Derecelendirmenin öznelliği nedeniyle dijital patoloji ve yapay zekâ nesnelliği artırmaya yönelik katkılar sunabilir.",
+     "sik_aciklamalari": {
+      "A": "Derecelendirme özneldir.",
+      "B": "Skala tümör tipine göre değişir.",
+      "C": "Doğru. Derecelendirmenin öznelliği nedeniyle dijital patoloji ve yapay zekâ nesnelliği artırmaya yönelik katkılar sunabilir.",
+      "D": "Yayılımı evreleme tanımlar.",
+      "E": "Mitoz sayısı değerlendirilen unsurlardandır."
+     },
+     "bilgi": [
+      16,
+      17,
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Bir tümörün histopatolojik raporunda 'yüksek dereceli' ifadesinin taşıdığı anlam aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tümörün uzak metastaz yaptığı",
+      "B": "Tümörün iyi diferansiye olduğu",
+      "C": "Tümörün az diferansiye/anaplastik olduğu ve biyolojik olarak daha agresif davranmasının beklendiği",
+      "D": "Tümörün lenf düğümü tutulumu gösterdiği",
+      "E": "Tümörün boyutunun büyük olduğu"
+     },
+     "dogru": "C",
+     "aciklama": "Derece tümörün diferansiyasyonunu ve agresiflik eğilimini yansıtır; yayılım (boyut, lenf düğümü, metastaz) ise evrelemenin konusudur.",
+     "sik_aciklamalari": {
+      "A": "Uzak metastaz evrelemeyle (M) ifade edilir.",
+      "B": "İyi diferansiye tümörler düşük derecelidir.",
+      "C": "Doğru. Derece tümörün diferansiyasyonunu ve agresiflik eğilimini yansıtır; yayılım (boyut, lenf düğümü, metastaz) ise evrelemenin konusudur.",
+      "D": "Lenf düğümü tutulumu N kategorisidir.",
+      "E": "Boyut T kategorisidir."
+     },
+     "bilgi": [
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-111",
+     "soru": "Tümör derecelendirmesinde (grading) aşağıdakilerden hangisi göz önüne alınır?",
+     "secenekler": {
+      "A": "Uzak organ metastazı",
+      "B": "Tümör büyüklüğü",
+      "C": "Lenf nodu metastazı",
+      "D": "İnvazyon derinliği",
+      "E": "Mitoz sayısı"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Kanser evrelemenin (staging) tanımını ve TNM sisteminin temel yapısını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-33-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "TNM sisteminde 'N' harfi neyi ifade eder?",
+     "secenekler": {
+      "A": "Tümör nekrozu",
+      "B": "Nöral invazyon",
+      "C": "Nükleer derece",
+      "D": "Bölgesel lenf düğümü tutulumu",
+      "E": "Uzak metastaz"
+     },
+     "dogru": "D",
+     "aciklama": "TNM'de T primer tümörü (boyut ve lokal yayılım), N bölgesel lenf düğümlerini, M uzak metastazı tanımlar.",
+     "sik_aciklamalari": {
+      "A": "Nekroz derecelendirmede değerlendirilir.",
+      "B": "Nöral invazyon N harfiyle ifade edilmez.",
+      "C": "Nükleer özellikler derecelendirme unsurudur.",
+      "D": "Doğru. TNM'de T primer tümörü (boyut ve lokal yayılım), N bölgesel lenf düğümlerini, M uzak metastazı tanımlar.",
+      "E": "Uzak metastaz M ile gösterilir."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Tümör evrelemesinde aşağıdakilerden hangisinin önemi yoktur?",
+     "secenekler": {
+      "A": "Tümörün büyüklüğü",
+      "B": "Diferansiyasyon derecesi",
+      "C": "Bölgesel lenf düğümü tutulumu",
+      "D": "Uzak organ metastazı",
+      "E": "Lokal invazyon derinliği"
+     },
+     "dogru": "B",
+     "aciklama": "Evreleme tümörün yayılımını (T, N, M) tanımlar; diferansiyasyon derecesi derecelendirmenin (grading) konusudur.",
+     "sik_aciklamalari": {
+      "A": "T kategorisinde değerlendirilir.",
+      "B": "Evrelemede yer almaz (aranan cevap); derecelendirme unsurudur.",
+      "C": "N kategorisidir: bölgesel lenf düğümü tutulumu.",
+      "D": "M kategorisidir: uzak organ metastazı.",
+      "E": "T kategorisinde lokal yayılım olarak değerlendirilir."
+     },
+     "bilgi": [
+      18,
+      16
+     ],
+     "benzer_cikmis": [
+      "d3-f-001"
+     ]
+    },
+    {
+     "id": "k1-33-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "TNM sistemi ve klinik evreler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "T0 bazal membranı aşmamış karsinoma in situ için kullanılabilir; T1-T4 artan boyut ve lokal invazyonu gösterir.",
+      "B": "N0 bölgesel lenf düğümü tutulumu olmadığını gösterir.",
+      "C": "M1 uzak metastaz varlığını gösterir ve ileri evreye karşılık gelir.",
+      "D": "TNM kombinasyonları evre I-IV klinik evrelere dönüştürülür.",
+      "E": "Aynı histolojik tipteki iki tümörün evresi farklı olsa da prognozları her zaman aynıdır."
+     },
+     "dogru": "E",
+     "aciklama": "Aynı histolojik tipteki tümörler farklı evrelerde çok farklı prognoza sahip olabilir; bu nedenle evreleme prognozun temel belirleyicisidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade (ders notundaki AJCC özetine göre).",
+      "B": "Doğru ifade: N0 bölgesel lenf düğümü tutulumu olmadığını gösterir.",
+      "C": "Doğru ifade: M1 uzak metastaz varlığını gösterir ve ileri evreye karşılık gelir.",
+      "D": "Doğru ifade: TNM kombinasyonları evre I-IV klinik evrelere dönüştürülür.",
+      "E": "Yanlış ifade (aranan cevap). Aynı histolojik tipteki tümörler farklı evrelerde çok farklı prognoza sahip olabilir; bu nedenle evreleme prognozun temel belirleyicisidir."
+     },
+     "bilgi": [
+      19,
+      20,
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-001",
+     "soru": "Tümör evrelemesinde aşağıdakilerden hangisinin önemi yoktur?",
+     "secenekler": {
+      "A": "Tümörün büyüklüğü",
+      "B": "Diferansiyasyon derecesi",
+      "C": "Lenf nodu yayılımı",
+      "D": "Organ metastazı",
+      "E": "Tümör derinliği"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Evreleme ile derecelendirmenin prognostik ve tedavi planlamasındaki klinik önemini karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k1-33-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Solid tümörlerde prognoz ve tedavi kararı için en önemli parametre aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Derece (grade)",
+      "B": "Evre (stage)",
+      "C": "Hastanın kan grubu",
+      "D": "Tümörün rengi",
+      "E": "Serum tümör belirteci düzeyi"
+     },
+     "dogru": "B",
+     "aciklama": "Evreleme prognozu belirlemede derecelendirmeden üstündür ve tedavi planlamasının temel parametresidir; derece agresiflik ve nüks eğilimi hakkında yardımcı bilgi sağlar.",
+     "sik_aciklamalari": {
+      "A": "Derece yardımcı bilgi verir ancak evre daha belirleyicidir.",
+      "B": "Doğru. Evreleme prognozu belirlemede derecelendirmeden üstündür ve tedavi planlamasının temel parametresidir; derece agresiflik ve nüks eğilimi hakkında yardımcı bilgi sağlar.",
+      "C": "Kan grubu prognostik parametre değildir.",
+      "D": "Renk prognostik parametre değildir.",
+      "E": "Tümör belirteçleri izlemde değerlidir; evre kadar belirleyici değildir."
+     },
+     "bilgi": [
+      18,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Evreleme ve derecelendirmenin karşılaştırılmasında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Derecelendirme tümörün yayılımını, evreleme diferansiyasyonunu tanımlar.",
+      "B": "Evreleme yayılımı (T, N, M) tanımlar ve prognozda daha belirleyicidir; derecelendirme diferansiyasyon ve agresiflik hakkında yardımcı bilgi verir.",
+      "C": "Her ikisi de yalnızca moleküler testlerle yapılır.",
+      "D": "Derecelendirme her zaman evrelemeden daha önemli prognostik bilgidir.",
+      "E": "Modern yaklaşımda moleküler özelliklerin risk sınıflamasına katkısı yoktur."
+     },
+     "dogru": "B",
+     "aciklama": "Modern yaklaşım evre + derece + moleküler özelliklerle daha doğru risk sınıflaması yapar.",
+     "sik_aciklamalari": {
+      "A": "Tanımlar ters verilmiştir.",
+      "B": "Doğru. Modern yaklaşım evre + derece + moleküler özelliklerle daha doğru risk sınıflaması yapar.",
+      "C": "Derecelendirme histopatolojiyle, evreleme klinik-radyolojik-patolojik verilerle yapılır.",
+      "D": "Solid tümörlerde evre daha belirleyicidir.",
+      "E": "Moleküler özellikler risk sınıflamasına katkıda bulunur."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Aynı histolojik tipte ve aynı derecede iki kolon karsinomundan birinde lenf düğümü ve karaciğer metastazı varken diğeri mukozaya sınırlıdır.\n\nBu iki hastanın prognozu ile ilgili en doğru ifade aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Histolojik tip ve derece aynı olduğu için prognozları aynıdır.",
+      "B": "Evreleri farklı olduğundan prognozları çok farklıdır; metastatik hastanın prognozu belirgin olarak kötüdür.",
+      "C": "Mukozaya sınırlı tümörün prognozu daha kötüdür.",
+      "D": "Prognozu yalnızca serum CEA belirler.",
+      "E": "Prognozu yalnızca tümörün derecesi belirler."
+     },
+     "dogru": "B",
+     "aciklama": "Evreleme prognozu belirlemede derecelendirmeden üstündür; M1 varlığı evre IV ve kötü prognoz demektir.",
+     "sik_aciklamalari": {
+      "A": "Evre farkı prognozu belirgin biçimde değiştirir.",
+      "B": "Doğru. Evreleme prognozu belirlemede derecelendirmeden üstündür; M1 varlığı evre IV ve kötü prognoz demektir.",
+      "C": "Lokalize tümörün prognozu daha iyidir.",
+      "D": "CEA izlemde kullanılır; prognozu tek başına belirlemez.",
+      "E": "Derece yardımcıdır; burada belirleyici olan evredir."
+     },
+     "bilgi": [
+      20,
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Kanserin laboratuvar tanısında kullanılan morfolojik yöntemleri (biyopsi, sitoloji, dondurulmuş kesit, ince iğne aspirasyonu) açıklar.",
+   "sorular": [
+    {
+     "id": "k1-33-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Cerrahi sırasında hızlı tanı ve cerrahi sınırların değerlendirilmesi amacıyla yapılan inceleme aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Dondurulmuş kesit (frozen)",
+      "B": "Serum tümör belirteci",
+      "C": "Akış sitometrisi",
+      "D": "Germ hattı genetik analiz",
+      "E": "Pap testi"
+     },
+     "dogru": "A",
+     "aciklama": "Dondurulmuş kesitin sonucu hızlıdır ancak daha sonra parafin kesitlerle doğrulama gerekebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Dondurulmuş kesitin sonucu hızlıdır ancak daha sonra parafin kesitlerle doğrulama gerekebilir.",
+      "B": "Tümör belirteçleri serumda ölçülür; intraoperatif sınır değerlendirmez.",
+      "C": "Akış sitometrisi lösemi/lenfoma sınıflamasında kullanılır.",
+      "D": "Germ hattı analizi kalıtsal yatkınlığı gösterir.",
+      "E": "Pap testi servikal tarama yöntemidir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "İnce iğne aspirasyon biyopsisi (İİAB) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İnce iğne ile kitleden hücreler aspire edilip yayma hazırlanır.",
+      "B": "Minimal invaziv, hızlı ve ucuzdur.",
+      "C": "Meme, tiroid, lenf düğümü ve tükürük bezlerinde kullanılır.",
+      "D": "Görüntüleme eşliğinde karaciğer, pankreas ve pelvik lenf düğümlerinde uygulanabilir.",
+      "E": "Doku mimarisinin ve cerrahi sınırların tam değerlendirilmesini sağlayan yöntemdir."
+     },
+     "dogru": "E",
+     "aciklama": "İİAB sitolojik (hücre) incelemedir; doku mimarisi ve cerrahi sınırlar eksizyonel biyopsi ile değerlendirilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: i̇nce iğne ile kitleden hücreler aspire edilip yayma hazırlanır.",
+      "B": "Doğru ifade: minimal invaziv, hızlı ve ucuzdur.",
+      "C": "Doğru ifade: meme, tiroid, lenf düğümü ve tükürük bezlerinde kullanılır.",
+      "D": "Doğru ifade: görüntüleme eşliğinde karaciğer, pankreas ve pelvik lenf düğümlerinde uygulanabilir.",
+      "E": "Yanlış ifade (aranan cevap). İİAB sitolojik (hücre) incelemedir; doku mimarisi ve cerrahi sınırlar eksizyonel biyopsi ile değerlendirilir."
+     },
+     "bilgi": [
+      24,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Sitolojik (Papanicolaou) incelemenin kanser tanısındaki dayanağı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Neoplastik hücrelerin daha yapışkan olup yüzeylerden dökülmemesi",
+      "B": "Neoplastik hücrelerin daha az yapışkan olması ve sıvılara/yüzeylere kolayca dökülmesi; hücre anaplazisi, nükleer atipi ve kohezivite kaybının değerlendirilmesi",
+      "C": "Doku mimarisinin tam olarak korunması",
+      "D": "Yalnızca serum belirteçlerinin ölçülmesi",
+      "E": "Yalnızca DNA dizilemesi yapılması"
+     },
+     "dogru": "B",
+     "aciklama": "Servikal smear, bronşiyal lavaj-balgam, idrar ve vücut sıvıları incelenir; Pap testi servikal kanser mortalitesinde dramatik azalma sağlamıştır.",
+     "sik_aciklamalari": {
+      "A": "Neoplastik hücreler daha az yapışkandır.",
+      "B": "Doğru. Servikal smear, bronşiyal lavaj-balgam, idrar ve vücut sıvıları incelenir; Pap testi servikal kanser mortalitesinde dramatik azalma sağlamıştır.",
+      "C": "Sitolojide doku mimarisi değerlendirilemez.",
+      "D": "Sitoloji morfolojik bir yöntemdir.",
+      "E": "Sitoloji mikroskobik incelemedir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "İmmünohistokimya ve akış sitometrisinin tanıdaki kullanım alanlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-33-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Lösemi ve lenfomaların sınıflandırılmasında en sık kullanılan, hücreleri floresan işaretli antikorlarla tek tek analiz eden yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Akış sitometrisi",
+      "B": "Pap testi",
+      "C": "Dondurulmuş kesit",
+      "D": "Serum CEA ölçümü",
+      "E": "Hematoksilen-eozin boyası"
+     },
+     "dogru": "A",
+     "aciklama": "Akış sitometrisi hücre yüzeyi veya içi antijenlerin çok parametreli analizidir; DNA ploidisi ve hücre döngüsü değerlendirmesinde de kullanılabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Akış sitometrisi hücre yüzeyi veya içi antijenlerin çok parametreli analizidir; DNA ploidisi ve hücre döngüsü değerlendirmesinde de kullanılabilir.",
+      "B": "Pap testi servikal sitolojidir.",
+      "C": "Dondurulmuş kesit intraoperatif hızlı tanıdır.",
+      "D": "CEA serum tümör belirtecidir.",
+      "E": "HE rutin histolojik boyadır."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Primeri bilinmeyen bir karaciğer metastazında tümör hücrelerinin sitokeratin ve PSA ile pozitif boyanması aşağıdakilerden hangisini düşündürür?",
+     "secenekler": {
+      "A": "Metastatik prostat karsinomu",
+      "B": "Lenfoma",
+      "C": "Sarkom",
+      "D": "Melanom",
+      "E": "Glial tümör"
+     },
+     "dogru": "A",
+     "aciklama": "İmmünohistokimya tümör tipini (sitokeratin + → karsinom) ve primer odağı (PSA + → prostat) belirler; ayrıca ER/PR, HER2 gibi prognostik/prediktif belirteçleri gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. İmmünohistokimya tümör tipini (sitokeratin + → karsinom) ve primer odağı (PSA + → prostat) belirler; ayrıca ER/PR, HER2 gibi prognostik/prediktif belirteçleri gösterir.",
+      "B": "Lenfomalar sitokeratin negatif lenfoid belirteçler gösterir.",
+      "C": "Sarkomlar genellikle sitokeratin negatif mezenkimal tümörlerdir.",
+      "D": "Melanom melanositik belirteçler gösterir.",
+      "E": "Glial tümörler PSA eksprese etmez."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "İmmünohistokimyanın kullanım alanları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tümörün tipini belirlemek",
+      "B": "Metastatik tümörün primer odağını saptamak",
+      "C": "Meme kanserinde östrojen/progesteron reseptörü ve HER2 gibi prognostik-prediktif belirteçleri göstermek",
+      "D": "Parafin kesitlerde spesifik antijenleri monoklonal antikorlarla göstermek",
+      "E": "Tümörün TNM evresini tek başına belirlemek"
+     },
+     "dogru": "E",
+     "aciklama": "Evreleme tümör boyutu, lenf düğümü ve uzak metastaz bilgisiyle yapılır; immünohistokimya tip, köken ve belirteç bilgisi sağlar.",
+     "sik_aciklamalari": {
+      "A": "İHK kullanım alanıdır.",
+      "B": "İHK kullanım alanıdır.",
+      "C": "İHK kullanım alanıdır.",
+      "D": "İHK'nın tanımıdır: parafin kesitlerde spesifik antijenleri monoklonal antikorlarla göstermek.",
+      "E": "Yanlış ifade (aranan cevap). Evreleme tümör boyutu, lenf düğümü ve uzak metastaz bilgisiyle yapılır; immünohistokimya tip, köken ve belirteç bilgisi sağlar."
+     },
+     "bilgi": [
+      28,
+      18
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Serum tümör belirteçlerini, kullanım amaçlarını ve sınırlamalarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-33-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Epitelyal over karsinomlarında yükselen serum tümör belirteci aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "PSA",
+      "B": "CA-125",
+      "C": "AFP",
+      "D": "CA 19-9",
+      "E": "CEA"
+     },
+     "dogru": "B",
+     "aciklama": "CA-125 epitelyal over karsinomlarıyla; PSA prostat, AFP hepatosellüler karsinom ve yolk kesesi tümörü, CA 19-9 pankreas-safra yolu, CEA kolorektal ve diğer karsinomlarla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "PSA prostat karsinomu ve BPH'de yükselir.",
+      "B": "Doğru. CA-125 epitelyal over karsinomlarıyla; PSA prostat, AFP hepatosellüler karsinom ve yolk kesesi tümörü, CA 19-9 pankreas-safra yolu, CEA kolorektal ve diğer karsinomlarla ilişkilidir.",
+      "C": "AFP HCC ve yolk kesesi tümörlerinde yükselir.",
+      "D": "CA 19-9 pankreas ve safra yolu tümörlerinde yükselir.",
+      "E": "CEA kolorektal, pankreatik, mide ve meme karsinomlarında yükselebilir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Serum tümör belirteçlerinin kullanımı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Duyarlılık ve özgüllükleri yüksek olduğundan toplum taraması için idealdir.",
+      "B": "Tedavi yanıtının izlenmesi ve nüksün saptanmasında değerlidir; rezeksiyon sonrası normalleşip yeniden yükselmesi nüksü gösterir.",
+      "C": "Normal PSA düzeyi prostat kanserini kesin olarak dışlar.",
+      "D": "PSA yalnızca prostat kanserinde yükselir.",
+      "E": "Tümör belirteçleri tek başına kesin tanı koydurur."
+     },
+     "dogru": "B",
+     "aciklama": "Tümör belirteçlerinin duyarlılık ve özgüllüğü sınırlıdır; BPH'de PSA artabilir ve normal PSA'da prostat kanseri olabilir.",
+     "sik_aciklamalari": {
+      "A": "Duyarlılık ve özgüllük sınırlıdır; tarama için genellikle uygun değildir.",
+      "B": "Doğru. Tümör belirteçlerinin duyarlılık ve özgüllüğü sınırlıdır; BPH'de PSA artabilir ve normal PSA'da prostat kanseri olabilir.",
+      "C": "Normal PSA'da da prostat kanseri olabilir.",
+      "D": "BPH'de de PSA yükselebilir.",
+      "E": "Kesin tanı histopatolojiyle konur."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Serum tümör belirteci ve ilişkili tümör eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "AFP – hepatosellüler karsinom",
+      "B": "AFP – yolk kesesi tümörü",
+      "C": "CEA – kolorektal karsinom",
+      "D": "CA 19-9 – pankreas ve safra yolu karsinomları",
+      "E": "CA-125 – prostat karsinomu"
+     },
+     "dogru": "E",
+     "aciklama": "CA-125 epitelyal over karsinomlarının belirtecidir; prostat karsinomunun belirteci PSA'dır.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: AFP – hepatosellüler karsinom.",
+      "B": "Doğru eşleştirme: AFP – yolk kesesi tümörü.",
+      "C": "Doğru eşleştirme: CEA – kolorektal karsinom.",
+      "D": "Doğru eşleştirme: CA 19-9 – pankreas ve safra yolu karsinomları.",
+      "E": "Yanlış eşleştirme (aranan cevap). CA-125 epitelyal over karsinomlarının belirtecidir; prostat karsinomunun belirteci PSA'dır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Moleküler tanı yöntemlerinin tanı, prognoz, kalıtsal yatkınlık ve hedefe yönelik tedavideki rolünü açıklar.",
+   "sorular": [
+    {
+     "id": "k1-33-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Lenfoid proliferasyonun reaktif (poliklonal) mi yoksa neoplastik (monoklonal) mi olduğunu ayırt etmede kullanılan moleküler yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İmmünoglobulin veya T hücre reseptörü gen yeniden düzenlenmelerinin PCR ile saptanması (klonalite analizi)",
+      "B": "Serum CA-125 ölçümü",
+      "C": "Pap testi",
+      "D": "Prusya mavisi boyası",
+      "E": "Dondurulmuş kesit"
+     },
+     "dogru": "A",
+     "aciklama": "Klonalite analizi neoplastik ve reaktif lenfoid proliferasyonu ayırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Klonalite analizi neoplastik ve reaktif lenfoid proliferasyonu ayırır.",
+      "B": "CA-125 over karsinomu belirtecidir.",
+      "C": "Pap testi servikal sitolojidir.",
+      "D": "Prusya mavisi demir boyasıdır.",
+      "E": "Dondurulmuş kesit hızlı morfolojik tanıdır; klonalite göstermez."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Moleküler değişiklik ve ilişkili tümör/klinik anlam eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "t(11;22) EWS-FLI1 füzyonu – Ewing sarkomu",
+      "B": "BCR-ABL füzyon transkriptleri – kronik miyeloid lösemi ve minimal kalıntı hastalık takibi",
+      "C": "JAK2 mutasyonu – polisitemia vera",
+      "D": "MYCN amplifikasyonu – nöroblastomda kötü prognoz",
+      "E": "HER2 amplifikasyonu – meme kanserinde iyi prognoz ve hedefli tedaviye gerek olmaması"
+     },
+     "dogru": "E",
+     "aciklama": "HER2 (ERBB2) amplifikasyonu meme kanserinde kötü prognoz göstergesi ve hedefli tedavi endikasyonudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: t(11;22) EWS-FLI1 füzyonu – Ewing sarkomu.",
+      "B": "Doğru eşleştirme: BCR-ABL füzyon transkriptleri – kronik miyeloid lösemi ve minimal kalıntı hastalık takibi.",
+      "C": "Doğru eşleştirme: JAK2 mutasyonu – polisitemia vera.",
+      "D": "Doğru eşleştirme: MYCN amplifikasyonu – nöroblastomda kötü prognoz.",
+      "E": "Yanlış eşleştirme (aranan cevap). HER2 (ERBB2) amplifikasyonu meme kanserinde kötü prognoz göstergesi ve hedefli tedavi endikasyonudur."
+     },
+     "bilgi": [
+      33,
+      34,
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q31",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Kalıtsal kanser yatkınlığının moleküler tanısının klinik yararları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Bireye özel tarama stratejisi belirlenmesi",
+      "B": "Profilaktik cerrahi kararının verilmesi",
+      "C": "Aile bireylerine genetik danışmanlık sağlanması",
+      "D": "BRCA1/BRCA2, APC, TP53 gibi germ hattı mutasyonların saptanması",
+      "E": "Tümörün derecesinin (grade) belirlenmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Germ hattı mutasyon analizi risk değerlendirmesi, tarama ve danışmanlık sağlar; derece histopatolojik değerlendirmeyle belirlenir.",
+     "sik_aciklamalari": {
+      "A": "Klinik yararıdır: bireye özel tarama stratejisi belirlenmesi.",
+      "B": "Klinik yararıdır: profilaktik cerrahi kararının verilmesi.",
+      "C": "Klinik yararıdır: aile bireylerine genetik danışmanlık sağlanması.",
+      "D": "Moleküler tanının kapsamıdır.",
+      "E": "Yer almaz (aranan cevap). Germ hattı mutasyon analizi risk değerlendirmesi, tarama ve danışmanlık sağlar; derece histopatolojik değerlendirmeyle belirlenir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-33-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki tümörlerden hangisinin immün kontrol noktası inhibitörlerine daha iyi yanıt vermesi beklenir ve bu tedavi doku tipinden bağımsız onay almıştır?",
+     "secenekler": {
+      "A": "Mikrosatellit instabilitesi yüksek (MSI-yüksek) ve yüksek mutasyon yüklü tümörler",
+      "B": "Mutasyon yükü çok düşük tümörler",
+      "C": "Yalnızca HER2 amplifikasyonlu tümörler",
+      "D": "Yalnızca BCR-ABL pozitif tümörler",
+      "E": "Benign tümörler"
+     },
+     "dogru": "A",
+     "aciklama": "MSI-yüksek ve DNA polimeraz proofreading kusurlu, yüksek mutasyon yüklü tümörler daha fazla neoantijen taşır ve kontrol noktası inhibitörlerine daha iyi yanıt verir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. MSI-yüksek ve DNA polimeraz proofreading kusurlu, yüksek mutasyon yüklü tümörler daha fazla neoantijen taşır ve kontrol noktası inhibitörlerine daha iyi yanıt verir.",
+      "B": "Düşük mutasyon yükü daha az neoantijen demektir.",
+      "C": "HER2 amplifikasyonu anti-HER2 tedavi endikasyonudur.",
+      "D": "BCR-ABL tirozin kinaz inhibitörleriyle hedeflenir.",
+      "E": "Benign tümörler immünoterapi hedefi değildir."
+     },
+     "bilgi": [
+      38,
+      37
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 31,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:55"
+}

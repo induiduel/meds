@@ -1,0 +1,875 @@
+{
+ "id": "k1-58-enurezis-nokturna",
+ "sira": 58,
+ "kurul": 1,
+ "ders": "Üroloji",
+ "konu": "Enürezis Nokturna",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Salih Bürlükkara",
+ "tarih": "2026-10-13",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Enürezis nokturnanın tanımını yapmak ve oluş zamanına (primer/sekonder) ve semptomlarına (monosemptomatik/monosemptomatik olmayan) göre sınıflamasını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-58-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Enürezis nokturna tanısı için alt yaş sınırı hangisidir?",
+     "secenekler": {
+      "A": "2 yaş",
+      "B": "1 yaş",
+      "C": "5 yaş",
+      "D": "10 yaş",
+      "E": "15 yaş"
+     },
+     "dogru": "C",
+     "aciklama": "Enürezis nokturna 5 yaş ve üzeri çocuklarda uyku sırasında tekrarlayan istemsiz idrar kaçırmadır; 3 ay süreyle en az haftada 2 kez olmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Bu yaşta idrar kontrolü henüz gelişmemiştir.",
+      "B": "Bu yaşta idrar kontrolü beklenmez.",
+      "C": "Doğru: tanı için alt yaş sınırıdır.",
+      "D": "Tanı daha erken konabilir.",
+      "E": "Tanı çok daha erken konur."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Sekonder enürezis nokturnanın tanımı hangisidir?",
+     "secenekler": {
+      "A": "Yaşamı boyunca hiç kuru kalamamış olma",
+      "B": "En az 6 aylık kuru dönemden sonra yeniden ıslatmanın başlaması",
+      "C": "Yalnızca gündüz idrar kaçırma",
+      "D": "Gündüz inkontinansı ve aciliyetin eşlik etmesi",
+      "E": "5 yaşından önce gece ıslatma"
+     },
+     "dogru": "B",
+     "aciklama": "Primer NE hiç kuru kalamamış, sekonder NE en az 6 ay kuru dönemi olan çocuktur; sekonder NE'de tetikleyici araştırılır.",
+     "sik_aciklamalari": {
+      "A": "Bu primer NE'dir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: sekonder NE tanımıdır.",
+      "C": "Bu gündüz inkontinansıdır.",
+      "D": "Bu monosemptomatik olmayan NE'dir.",
+      "E": "5 yaş altı fizyolojik olabilir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Gece ıslatmasına ek olarak gündüz aciliyet ve günde 9 kez işeme yakınması olan 7 yaşında çocuk hangi gruba girer?",
+     "secenekler": {
+      "A": "Noktüri",
+      "B": "Primer monosemptomatik enürezis nokturna",
+      "C": "Normal gelişim",
+      "D": "Monosemptomatik olmayan enürezis nokturna (MoNE)",
+      "E": "Enkoprezis"
+     },
+     "dogru": "D",
+     "aciklama": "MoNE'de gündüz inkontinansı, aciliyet, işeme güçlüğü veya anormal gündüz işeme sıklığı (<4 veya >7) vardır.",
+     "sik_aciklamalari": {
+      "A": "Noktüri gece uyanıp işemedir.",
+      "B": "MNE'de yalnızca gece ıslatma vardır.",
+      "C": "Bu yaşta tablo patolojiktir.",
+      "D": "Doğru: gündüz semptomları MoNE'yi gösterir.",
+      "E": "Enkoprezis dışkı kaçırmadır."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Enürezis nokturnanın epidemiyolojisini, ergen prevalansını ve yıllık spontan remisyon oranını bilmek",
+   "sorular": [
+    {
+     "id": "k1-58-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Enürezis nokturnada yıllık spontan remisyon oranı yaklaşık ne kadardır?",
+     "secenekler": {
+      "A": "%50",
+      "B": "%1",
+      "C": "%15",
+      "D": "%90",
+      "E": "%0"
+     },
+     "dogru": "C",
+     "aciklama": "Ergenlerde prevalans ~%3, yıllık spontan remisyon ~%15'tir.",
+     "sik_aciklamalari": {
+      "A": "Gerçek oranın üstündedir.",
+      "B": "Gerçek oranın altındadır.",
+      "C": "Doğru: verilen orandır.",
+      "D": "Çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "E": "Spontan remisyon olur."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Ergenlerde enürezis nokturna prevalansı yaklaşık ne kadardır?",
+     "secenekler": {
+      "A": "%30",
+      "B": "%3",
+      "C": "%0,01",
+      "D": "%50",
+      "E": "%15"
+     },
+     "dogru": "B",
+     "aciklama": "Enürezis yaygındır; ergen prevalansı ~%3'tür.",
+     "sik_aciklamalari": {
+      "A": "Çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: ergen prevalansıdır.",
+      "C": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "D": "Gerçekçi değildir; bu nedenle doğru seçenek değildir.",
+      "E": "Bu yıllık spontan remisyon oranıdır."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Enürezis nokturnanın doğal seyri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Spontan remisyon görülmez",
+      "B": "Tüm olgular 6 yaşında kendiliğinden düzelir",
+      "C": "Ergenlikte hiç görülmez",
+      "D": "Islatma sıklığı arttıkça tedavisiz kuru kalma şansı belirgin azalır",
+      "E": "Sık ıslatan çocukların düzelme şansı daha yüksektir"
+     },
+     "dogru": "D",
+     "aciklama": "Yıllık spontan remisyon %15 olsa da sık ıslatan çocuklarda kendiliğinden düzelme şansı düşüktür.",
+     "sik_aciklamalari": {
+      "A": "Spontan remisyon vardır.",
+      "B": "Tüm olgular düzelmez.",
+      "C": "Ergenlerde ~%3 görülür.",
+      "D": "Doğru: sıklık prognozu belirler.",
+      "E": "Ters ilişki vardır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Noktürnal poliüri ve beklenen mesane kapasitesi kavramlarını tanımlamak ve hesaplamak",
+   "sorular": [
+    {
+     "id": "k1-58-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "8 yaşındaki çocuğun beklenen mesane kapasitesi formüle göre kaç mL'dir?",
+     "secenekler": {
+      "A": "500 mL",
+      "B": "240 mL",
+      "C": "400 mL",
+      "D": "80 mL",
+      "E": "270 mL"
+     },
+     "dogru": "E",
+     "aciklama": "Beklenen kapasite = (yaş × 30) + 30 mL; 8 × 30 + 30 = 270 mL. Formül 400 mL'ye ulaşılana kadar geçerlidir.",
+     "sik_aciklamalari": {
+      "A": "Erişkin kapasitesini aşar.",
+      "B": "+30 eklenmemiştir; bu nedenle doğru seçenek değildir.",
+      "C": "Erişkin kapasitesidir.",
+      "D": "Yanlış hesaplamadır.",
+      "E": "Doğru: formüle göre hesaplanan değerdir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Noktürnal poliüri nasıl tanımlanır?",
+     "secenekler": {
+      "A": "Gece hiç idrar yapmama",
+      "B": "Gündüz 10'dan fazla işeme",
+      "C": "Gece idrar hacminin yaşa göre beklenen mesane kapasitesinin en az %130'u olması",
+      "D": "Gece idrar hacminin beklenen kapasitenin %50'si olması",
+      "E": "Sabah idrarının konsantre olması"
+     },
+     "dogru": "C",
+     "aciklama": "Gece idrar hacmi ıslanan bez ağırlığı + sabah ilk idrarla hesaplanır.",
+     "sik_aciklamalari": {
+      "A": "Bu tanım değildir; bu nedenle doğru seçenek değildir.",
+      "B": "Bu gündüz sıklık artışıdır.",
+      "C": "Doğru: noktürnal poliüri tanımıdır.",
+      "D": "Eşik %130'dur; bu nedenle doğru seçenek değildir.",
+      "E": "Konsantre idrar poliüriyi göstermez."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "7 yaşındaki çocukta ıslak bez ağırlığı 220 g ve sabah ilk idrar 140 mL ölçülüyor.\n\nBu bulgunun yorumu hangisidir?",
+     "secenekler": {
+      "A": "Hesaplama yapılamaz",
+      "B": "Noktürnal poliüri yoktur",
+      "C": "Mesane kapasitesi azalmıştır",
+      "D": "Gece idrar hacmi 360 mL'dir; beklenen kapasitenin (240 mL) %130'unu aştığından noktürnal poliüri vardır",
+      "E": "Gece idrar hacmi 80 mL'dir"
+     },
+     "dogru": "D",
+     "aciklama": "Beklenen kapasite 7×30+30=240 mL; %130'u 312 mL'dir; 360 mL bu eşiği aşar.",
+     "sik_aciklamalari": {
+      "A": "Hesaplama yapılabilir.",
+      "B": "Eşik aşılmıştır; bu nedenle doğru seçenek değildir.",
+      "C": "Veri mesane kapasitesini değil gece hacmini gösterir.",
+      "D": "Doğru: hesap ve yorum doğrudur.",
+      "E": "Hacimler toplanmalıdır."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Patogenezde genetik faktörler, uyanma bozukluğu, noktürnal poliüri ve artmış detrusor aktivitesinin rolünü açıklamak",
+   "sorular": [
+    {
+     "id": "k1-58-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Anne ve babanın her ikisinde enürezis öyküsü olan çocukta enürezis riski yaklaşık ne kadardır?",
+     "secenekler": {
+      "A": "%5",
+      "B": "%77",
+      "C": "%25",
+      "D": "%44",
+      "E": "%100"
+     },
+     "dogru": "B",
+     "aciklama": "Her iki ebeveynde öykü varsa %77, birinde varsa %44 risk vardır.",
+     "sik_aciklamalari": {
+      "A": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: verilen orandır.",
+      "C": "Gerçek oranın altındadır.",
+      "D": "Tek ebeveyn riskidir.",
+      "E": "Kesin değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Noktürnal poliürinin patogenezinde rol oynayan hormonal mekanizma hangisidir?",
+     "secenekler": {
+      "A": "İnsülin direnci",
+      "B": "Gece kortizolün azalması",
+      "C": "Gece ADH salgısındaki döngüsel ritmin bozulması",
+      "D": "Tiroid hormon fazlalığı",
+      "E": "Büyüme hormonu eksikliği"
+     },
+     "dogru": "C",
+     "aciklama": "Normalde gece ADH yüksek olup idrar çıkışını ~%50 azaltır; ritim bozukluğu fonksiyonel kapasiteyi aşan idrar üretimine yol açar ve desmopressinin rasyonelini oluşturur.",
+     "sik_aciklamalari": {
+      "A": "İnsülin direnci ilgili değildir.",
+      "B": "Kortizol bu mekanizmanın parçası değildir.",
+      "C": "Doğru: temel mekanizmadır.",
+      "D": "Tiroid ilgili değildir.",
+      "E": "Büyüme hormonu ilgili değildir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Enürezis patogenezi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Enüretik çocukların uyandırma uyarılarına yanıtı azdır",
+      "B": "Artmış detrusor aktivitesinde fonksiyonel mesane kapasitesi düşüktür",
+      "C": "Uyku apnesi atrial natriüretik peptid salınımını artırarak enürezise yol açabilir",
+      "D": "10 yaş üstü primer NE'de DEHB ilişkili semptomlar sıktır",
+      "E": "Enüretik çocuklarda uyarılma eşiğinin artması iyi uyku kalitesini gösterir"
+     },
+     "dogru": "E",
+     "aciklama": "Enüretik çocukların uyku kalitesi kötüdür; artmış uyarılma eşiği iyi uyku anlamına gelmez.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): uyku kalitesi kötüdür."
+     },
+     "bilgi": [
+      9,
+      11,
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "İlk değerlendirmede uyarı işaretlerini tanımak ve işeme çizelgesinin rolünü açıklamak",
+   "sorular": [
+    {
+     "id": "k1-58-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Enürezisli çocuğun ilk değerlendirmesinde ICCS tanımlı işeme çizelgesi pratikte kaç gün tutulur?",
+     "secenekler": {
+      "A": "1 yıl",
+      "B": "1 saat",
+      "C": "3 ay",
+      "D": "Ardışık 2 gün",
+      "E": "Tutulmaz"
+     },
+     "dogru": "D",
+     "aciklama": "İşeme çizelgesi ardışık iki gün tutulur; dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+     "sik_aciklamalari": {
+      "A": "Gereksiz uzunluktadır.",
+      "B": "Yetersiz bir süredir.",
+      "C": "Gereksiz uzunluktadır.",
+      "D": "Doğru: pratik uygulamadır.",
+      "E": "İlk değerlendirmede önerilir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Enürezisli çocukta aşağıdaki uyarı işaretlerinden hangisi kreatinin ve idrar glikozu bakılmasını gerektirir?",
+     "secenekler": {
+      "A": "Ailede enürezis öyküsü",
+      "B": "Kilo kaybı/büyüme geriliği veya gece içme ihtiyacıyla aşırı susuzluk",
+      "C": "Haftada 2 kez ıslatma",
+      "D": "5 yaşında olma",
+      "E": "Erkek cinsiyet"
+     },
+     "dogru": "B",
+     "aciklama": "Uyarı işaretleri (kilo kaybı, aşırı susuzluk, işeme güçlüğü, yeni başlangıçlı sekonder enürezis, ağır horlama) ileri inceleme gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Aile öyküsü uyarı işareti değildir.",
+      "B": "Doğru: sistemik hastalık açısından değerlendirme gerekir.",
+      "C": "Tanı ölçütüdür; bu nedenle doğru seçenek değildir.",
+      "D": "Yaş uyarı işareti değildir.",
+      "E": "Cinsiyet uyarı işareti değildir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "İşeme çizelgesinin zorunlu olduğu durum hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca kız çocuklarında",
+      "B": "Hiçbir durumda zorunlu değildir",
+      "C": "Yalnızca 15 yaş üstünde",
+      "D": "Yalnızca ailesel öyküde",
+      "E": "Monosemptomatik olmayan enürezisi düşündüren bulgular varlığında"
+     },
+     "dogru": "E",
+     "aciklama": "İşeme çizelgesi ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur.",
+     "sik_aciklamalari": {
+      "A": "Cinsiyete bağlı değildir.",
+      "B": "Bazı durumlarda zorunludur.",
+      "C": "Yaşa bağlı değildir.",
+      "D": "Aile öyküsü zorunluluk nedeni değildir.",
+      "E": "Doğru: MoNE şüphesinde zorunludur."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": [
+      "58323383fc5c"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "58323383fc5c",
+     "soru": "Sadece gece yatağı ıslatma yakınması ile ilk defa başvuran 6 yaşındaki bir erkek çocuğun işeme çizelgesi ile noktürnal poliüri ve gündüz işeme hacimlerinin normal olduğu saptanmıştır. Tedavi başlangıcındaki stratejiniz ne olur?",
+     "secenekler": {
+      "A": "Enüretik alarm ile tedaviye başlarım",
+      "B": "Desmopressin ile tedaviye başlarım",
+      "C": "Enüretik alarm ve desmopressin kombinasyonuyla tedaviye başlarım",
+      "D": "Oksibutinin ile tedaviye başlarım",
+      "E": "Oksibutinin ve desmopressin kombinasyonuyla tedaviye başlarım"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Öykü, fizik bakı, laboratuvar ve görüntüleme basamaklarını özetlemek",
+   "sorular": [
+    {
+     "id": "k1-58-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Monosemptomatik enürezis nokturnada önerilen tek laboratuvar tetkiki hangisidir?",
+     "secenekler": {
+      "A": "Ürodinami",
+      "B": "Spinal MRG",
+      "C": "İşeme sistogramı",
+      "D": "Tam idrar tetkiki",
+      "E": "Sistoskopi"
+     },
+     "dogru": "D",
+     "aciklama": "MNE'de tam idrar tetkiki DM, diabetes insipidus, ÜSE ve kronik böbrek yetmezliğini ayırt etmek için yeterlidir.",
+     "sik_aciklamalari": {
+      "A": "Komplike olgularda yapılır.",
+      "B": "Nörolojik bulguda gerekir.",
+      "C": "Komplike olgularda yapılır.",
+      "D": "Doğru: tek önerilen tetkiktir.",
+      "E": "Komplike olgularda yapılır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": [
+      "be044a004165",
+      "5d899b60d372"
+     ]
+    },
+    {
+     "id": "k1-58-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Enürezisli çocuğun değerlendirmesinde en önemli ve bazen tek gerekli basamak hangisidir?",
+     "secenekler": {
+      "A": "Spinal MRG",
+      "B": "Öykü (tıbbi geçmiş)",
+      "C": "Sistoskopi",
+      "D": "Ürodinami",
+      "E": "BT"
+     },
+     "dogru": "B",
+     "aciklama": "Öykü genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış ve bağırsak alışkanlıklarını kapsar.",
+     "sik_aciklamalari": {
+      "A": "Yalnızca nörolojik bulguda gerekir.",
+      "B": "Doğru: en önemli basamaktır.",
+      "C": "İnvazivdir ve rutin değildir.",
+      "D": "Komplike olgularda yapılır.",
+      "E": "Rutin değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Roma IV kabızlık kriterleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Aşırı dışkı tutma",
+      "B": "Haftada 2 veya daha az dışkılama",
+      "C": "Günde 3 kez yumuşak dışkılama",
+      "D": "Ağrılı veya sert bağırsak hareketi",
+      "E": "Rektumda büyük fekal kitle"
+     },
+     "dogru": "C",
+     "aciklama": "En az 4 hafta süreyle en az iki kriter gerekir; kabızlık MoNE tedavisinden önce ekarte edilmelidir.",
+     "sik_aciklamalari": {
+      "A": "Roma IV kriteridir; bu nedenle doğru seçenek değildir.",
+      "B": "Roma IV kriteridir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: normal dışkılama paternidir.",
+      "D": "Roma IV kriteridir; bu nedenle doğru seçenek değildir.",
+      "E": "Roma IV kriteridir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      14,
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "be044a004165",
+     "soru": "Üroloji\nÜroloji\nDış atım bozuklukları\n(Enürezis ve\nEnkoprezis)\nMonosemptomatik\nNoktürnal Enürezis\ntanısında önerilen\nTetkik hangisidir?",
+     "secenekler": {
+      "A": "Tam idrar tetkiki",
+      "B": "Ultrasonografi ile\nmesane duvar\nkalınlığının ölçülmesi",
+      "C": "İşeme sonrası rezidüel\nidrar bakılması",
+      "D": "Spinal bölgenin\nmanyetik rezonans\ngörüntülemesi",
+      "E": "İşeme sistogramı"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "5d899b60d372",
+     "soru": "Monosemptomatik Noktürnal Enürezis tanısında önerilen tetkik hangisidir?",
+     "secenekler": {
+      "A": "Tam idrar tetkiki",
+      "B": "Ultrasonografi ile mesane duvar kalınlığının ölçülmesi",
+      "C": "İşeme sonrası rezidüel idrar bakılması",
+      "D": "Spinal bölgenin manyetik rezonans görüntülemesi",
+      "E": "İşeme sistogramı"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Monosemptomatik ve komplike enüreziste tedavi önceliklerini karşılaştırmak",
+   "sorular": [
+    {
+     "id": "k1-58-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Monosemptomatik olmayan enüreziste antienüretik tedaviden önce yapılması gereken hangisidir?",
+     "secenekler": {
+      "A": "Hiçbir şey yapılmaması",
+      "B": "Doğrudan imipramin başlanması",
+      "C": "Spinal cerrahi",
+      "D": "Sıvı alımının tamamen kesilmesi",
+      "E": "Kabızlık ve gündüz semptomlarının tedavisi"
+     },
+     "dogru": "E",
+     "aciklama": "MoNE'de kabızlık tedavi edilir, gündüz semptomları gece ıslatmadan önce ele alınır; günde ~6 kez işeme ve iyi postür önerilir.",
+     "sik_aciklamalari": {
+      "A": "Aktif tedavi gerekir.",
+      "B": "İmipramin üçüncü basamaktır.",
+      "C": "Cerrahi endikasyon yoktur.",
+      "D": "Yeterli sıvı alımı önerilir.",
+      "E": "Doğru: tedavi önceliğidir."
+     },
+     "bilgi": [
+      14,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Enürezis tedavisine ilişkin genel tavsiyelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Çocuğa ıslatmanın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir",
+      "B": "Bekle-gör tutumu her yaşta yeterlidir",
+      "C": "Çocuk cezalandırılmalıdır",
+      "D": "Gece uyandırma kesin tedavidir",
+      "E": "Çocuğun tedaviye katılımı gerekmez"
+     },
+     "dogru": "A",
+     "aciklama": "Tedavinin ana gerekçeleri psikolojik ve sosyaldir; genellikle 6 yaş civarında aktif tedavi gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: temel tavsiyelerdir.",
+      "B": "Bekle-gör yeterli değildir.",
+      "C": "Cezalandırma zararlıdır.",
+      "D": "Gece uyandırma iyileştirici değildir.",
+      "E": "Çocuğun aktif katılımı gerekir."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": [
+      "d3-f-170",
+      "past-q-22_final_230619_145249-148"
+     ]
+    },
+    {
+     "id": "k1-58-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "İşeme çizelgesinde noktürnal poliüri ve normal gündüz işeme hacimleri saptanan MNE'li çocukta birinci basamak tercih hangisidir?",
+     "secenekler": {
+      "A": "Desmopressin",
+      "B": "Enürezis alarmı",
+      "C": "İmipramin",
+      "D": "Antikolinerjik monoterapi",
+      "E": "Spinal MRG sonrası cerrahi"
+     },
+     "dogru": "A",
+     "aciklama": "Strateji A: noktürnal poliüri + normal gündüz hacmi → desmopressin; normal gece hacmi + düşük maksimum işeme hacmi → alarm.",
+     "sik_aciklamalari": {
+      "A": "Doğru: bu profilde desmopressin tercih edilir.",
+      "B": "Alarm düşük işeme hacminde tercih edilir.",
+      "C": "İmipramin üçüncü basamaktır.",
+      "D": "Antikolinerjik ikinci basamakta kombinasyonla kullanılır.",
+      "E": "Cerrahi endikasyon yoktur."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": [
+      "58323383fc5c"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-170",
+     "soru": "Enürezis nokturna ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tedaviye çocuğun aktif katılımı sağlanmalıdır.",
+      "B": "Tedavinin başarılı olabilmesi için tedaviye 4 yaşından önce başlanması gerekir.",
+      "C": "Çocuklarda yaş büyüdükçe görülme sıklığı azalır.",
+      "D": "Bağırsak alışkanlıklarıyla ilişkili olabilir.",
+      "E": "Hastalığın genetik temeli de vardır."
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "past-q-22_final_230619_145249-148",
+     "soru": "Hangisi enürezis nokturna için yanlistr?",
+     "secenekler": {
+      "A": "Tedaviye cocugun aktif katilimi saglanmalidir:",
+      "B": "Tedavinin basarili olmasi icin 4 yasindan önce tedavi baslanmasi gerekir .",
+      "C": "Çocuklarda yas büyüdükçe görülme siklig azalir",
+      "D": "Bagirsak aliskanliklaryla iliskili olabilir.",
+      "E": "Hastaligin genetik temeli de vardir."
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "58323383fc5c",
+     "soru": "Sadece gece yatağı ıslatma yakınması ile ilk defa başvuran 6 yaşındaki bir erkek çocuğun işeme çizelgesi ile noktürnal poliüri ve gündüz işeme hacimlerinin normal olduğu saptanmıştır. Tedavi başlangıcındaki stratejiniz ne olur?",
+     "secenekler": {
+      "A": "Enüretik alarm ile tedaviye başlarım",
+      "B": "Desmopressin ile tedaviye başlarım",
+      "C": "Enüretik alarm ve desmopressin kombinasyonuyla tedaviye başlarım",
+      "D": "Oksibutinin ile tedaviye başlarım",
+      "E": "Oksibutinin ve desmopressin kombinasyonuyla tedaviye başlarım"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Enürezis alarmı ve desmopressinin endikasyon, etkinlik, doz ve yan etkilerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-58-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Enürezis alarmının başarı oranı yaklaşık ne kadardır?",
+     "secenekler": {
+      "A": "%50–70",
+      "B": "%5",
+      "C": "%100",
+      "D": "%10–20",
+      "E": "%95–100"
+     },
+     "dogru": "A",
+     "aciklama": "Alarm iyi motive aile gerektirir; her gece kesintisiz kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: verilen başarı oranıdır.",
+      "B": "Gerçek oranın çok altındadır.",
+      "C": "Her olguda başarılı değildir.",
+      "D": "Gerçek oranın altındadır.",
+      "E": "Bu kadar yüksek değildir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Desmopressin kullanımı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Habitüel polidipside kontrendikedir ve tedavi sırasında sıvı kısıtlaması yapılmalıdır",
+      "B": "Etkisi 3 ay sonra başlar",
+      "C": "Sıvı alımı artırılmalıdır",
+      "D": "Tüm çocuklarda kalıcı kür sağlar",
+      "E": "Arginin vazopressin antagonistidir"
+     },
+     "dogru": "A",
+     "aciklama": "Desmopressin ADH analoğudur; hiponatremi riskine karşı sıvı kısıtlanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: güvenli kullanım ilkesidir.",
+      "B": "Etkisi hemen başlar.",
+      "C": "Sıvı kısıtlanmalıdır.",
+      "D": "~1/3'ü kuru kalır; bu nedenle doğru seçenek değildir.",
+      "E": "Analoğudur, antagonist değildir."
+     },
+     "bilgi": [
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Enürezis alarmı ve desmopressin uygulama ilkeleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Alarmda 6 haftada ilerleme yoksa tedavi durdurulur",
+      "B": "Alarmda ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür",
+      "C": "Desmopressine 1–2 haftada yanıt yoksa tedavi kesilir",
+      "D": "Desmopressin tablet 0,2–0,4 mg dozunda kullanılır",
+      "E": "Desmopressinin etkinliği ancak 3. ayda ortaya çıkar"
+     },
+     "dogru": "E",
+     "aciklama": "Desmopressinin etkinliği hemen ortaya çıkar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): etki hemen başlar."
+     },
+     "bilgi": [
+      25,
+      27
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Tedaviye dirençli olgularda antikolinerjikler ve üçüncü basamak imipramin tedavisinin yerini bilmek",
+   "sorular": [
+    {
+     "id": "k1-58-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Enürezis nokturnada desmopressin, alarm ve antikolinerjikler başarısız olduğunda kullanılan üçüncü basamak ilaç hangisidir?",
+     "secenekler": {
+      "A": "İmipramin",
+      "B": "Furosemid",
+      "C": "Metformin",
+      "D": "Amoksisilin",
+      "E": "Levotiroksin"
+     },
+     "dogru": "A",
+     "aciklama": "İmipramin trisiklik antidepresandır; 25–50 mg yatmadan önce verilir; dirençli çocukların %30–50'si fayda görür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: üçüncü basamak ilaçtır.",
+      "B": "Diüretik enürezisi kötüleştirir.",
+      "C": "Antidiyabetiktir; bu nedenle doğru seçenek değildir.",
+      "D": "Antibiyotiktir; bu nedenle doğru seçenek değildir.",
+      "E": "Tiroid hormonudur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Antikolinerjik tedavinin enürezis nokturnada kullanılma koşulları hangisidir?",
+     "secenekler": {
+      "A": "Rezidü idrar olmaması ve kabızlığın dışlanması/tedavisi; desmopressinle kombinasyonda ikinci basamak",
+      "B": "Birinci basamakta tek başına",
+      "C": "Rezidü idrar varlığında",
+      "D": "Kabızlık tedavi edilmeden",
+      "E": "Yalnızca 2 yaş altında"
+     },
+     "dogru": "A",
+     "aciklama": "Antikolinerjikler yatmadan 1 saat önce verilir; kabızlık, rezidü, ağız kuruluğu ve psikiyatrik dalgalanma yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kullanım koşullarıdır.",
+      "B": "İkinci basamakta kombinasyonla kullanılır.",
+      "C": "Rezidüde kontrendikedir.",
+      "D": "Kabızlık kötüleşir; bu nedenle doğru seçenek değildir.",
+      "E": "Enürezis tanısı 5 yaş üstündedir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "İmipramin tedavisinin kullanımını en çok kısıtlayan faktör hangisidir?",
+     "secenekler": {
+      "A": "Kardiyotoksisite",
+      "B": "Hiponatremi",
+      "C": "Hiperglisemi",
+      "D": "Nefrotoksisite",
+      "E": "Ototoksisite"
+     },
+     "dogru": "A",
+     "aciklama": "İmipraminde yanıt 1 ay sonra değerlendirilir; en önemli kısıtlayıcı faktör kardiyotoksisitedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: temel kısıtlayıcı yan etkidir.",
+      "B": "Hiponatremi desmopressinle ilişkilidir.",
+      "C": "Hiperglisemi tipik yan etki değildir.",
+      "D": "Nefrotoksisite aminoglikozidlerle ilişkilidir.",
+      "E": "Ototoksisite aminoglikozidlerle ilişkilidir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 27,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:32"
+}

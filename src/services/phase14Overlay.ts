@@ -51,15 +51,26 @@ export function normalizeKurul(v: unknown): string | null {
 export function applyPhase14Overlay<T extends Record<string, any>>(list: T[]): T[] {
   const revs = latestReviews();
   if (!revs.size) return list;
+  // İnceleme kaydı olan her soru, kayıt dosyası değişince "güncellendi" sayılır: cihaz önbelleği (artıksal senkron)
+  // onay/red/anket sonucunu da alır; yoksa eski "onay bekliyor" ya da "cevap belirsiz" hâli cihazda kalıyordu.
+  const touched = (q: T): T => {
+    const at = new Date(Math.max(Date.parse(q.updatedAt || '') || 0, cacheMtime)).toISOString();
+    return at === q.updatedAt ? q : { ...q, updatedAt: at };
+  };
   return list.map((q) => {
     const r = revs.get(String(q.id));
+    if (q.phase15 || (Array.isArray(q.tags) && q.tags.includes('faz15_onaylandi'))) {
+      // Faz 15 Başdenetiminden geçmiş soru en üst otoritedir, eski Faz 14 taslağı bunu ezemez.
+      return r ? touched(q) : q;
+    }
     if (q.phase14 && q.phase14.status !== 'onay_bekliyor') {
       // Onaylı: veri zaten Faz 14 hâlinde. Onaydan SONRA yeniden düzenlenip onaylanmamış kayıt varsa o gösterilir.
       const approvedAt = Date.parse(q.phase14.approvedAt || '') || 0;
       const editedAt = r ? Date.parse(r.last_edited_at || '') || 0 : 0;
-      if (!r || r.status !== 'review_required' || !r.proposal || editedAt <= approvedAt) return q;
+      if (!r || r.status !== 'review_required' || !r.proposal || editedAt <= approvedAt) return r ? touched(q) : q;
     }
-    if (!r || r.status !== 'review_required' || !r.proposal) return q;
+    if (!r) return q;
+    if (r.status !== 'review_required' || !r.proposal) return touched(q);
     const p = r.proposal;
     const src = r.source || {};
     const ans = String(p.dogru_secenek || '').toUpperCase() || undefined;

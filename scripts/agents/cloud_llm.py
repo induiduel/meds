@@ -25,7 +25,7 @@ TEMP = Path(os.environ.get("MEDS_TEMP_DIR") or ROOT.parent / "meds_temp")
 STATE = TEMP / "state" / "cloud_llm.json"
 UA = "MedSor/1.0"
 
-DEFAULT_CHAIN = ["groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b", "gemini:gemini-flash-latest", "gemini:gemini-3.5-flash"]
+DEFAULT_CHAIN = ["gemini:gemini-flash-latest", "gemini:gemini-flash-lite-latest", "gemini:gemini-3.5-flash", "gemini:gemini-3.5-flash-lite", "groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b"]
 
 
 def _env() -> dict:

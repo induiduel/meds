@@ -522,8 +522,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       // 1) Cevabı yaz, belirsiz işaretini kaldır  2) Öneriyi onayla: soru /cikmis'teki canlı soruya uygulanır
       const res = await ApiService.completeAnswerDoubt(ADMIN_EMAIL, qId, choice);
       await ApiService.approvePastQuestionReview(ADMIN_EMAIL, qId);
-      setAllReviews((prev) => prev.map((r) => (String(r.question_id) === qId ? { ...r, status: 'approved' as any, answer_doubtful: false } : r)));
-      setActionFeedback({ message: `Soru #${qId.slice(0, 8)}: cevap ${res.winner} olarak kaydedildi ve çıkmış sorulara gönderildi.`, type: 'ok' });
+      setAllReviews((prev) => prev.map((r) => (String(r.question_id) === qId ? { ...r, status: 'approved' as any, answer_doubtful: false, answer_poll_open: true, answer_vote_result: { winner: res.winner, by: 'admin' } } : r)));
+      setActionFeedback({ message: `Soru #${qId.slice(0, 8)}: cevap ${res.winner} olarak kaydedildi ve çıkmış sorulara gönderildi. Anket açık kalıyor; topluluk cevabı karşılaştırılacak.`, type: 'ok' });
       fetchReviews(true);
     } catch (err: any) {
       setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
@@ -534,7 +534,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
 
   const handleToggleAnswerDoubt = async (qId: string, value: boolean) => {
     setProcessingId(qId);
-    setAllReviews(prev => prev.map(r => String(r.question_id) === qId ? { ...r, answer_doubtful: value } : r));
+    setAllReviews(prev => prev.map(r => String(r.question_id) === qId ? { ...r, answer_doubtful: value, ...(value ? {} : { answer_poll_open: false }) } : r));
     try {
       await ApiService.setPastQuestionAnswerDoubt(ADMIN_EMAIL, qId, value);
       if (value) setStatusFilter('answer_doubtful');
@@ -949,6 +949,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             const isUnchanged = rev.status === 'unchanged';
             const isDuplicate = (rev.status as string) === 'duplicate';
             const doubtful = Boolean(rev.answer_doubtful);
+            // Cevabı kabul edilmiş ama anketi açık tutulan soru: kabul edilen cevap + topluluk oyları birlikte gösterilir
+            const keptPoll = !doubtful && Boolean(rev.answer_poll_open) && Boolean(rev.answer_vote_result?.winner);
             const ratioPercent = Math.round((rev.support_ratio || 0) * 100);
             const view = cardView[qId] || 'diff';
             const srcStem = String(src.soru_koku || '');
@@ -1064,6 +1066,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         { label: doubtful ? 'Cevap anketini kapat' : 'Cevap anketini aç', icon: BarChart3, onClick: () => handleToggleAnswerDoubt(qId, !doubtful) },
                       ]
                     : []),
+                  ...(keptPoll ? [{ label: 'Cevap anketini kapat', icon: BarChart3, onClick: () => handleToggleAnswerDoubt(qId, false) }] : []),
                   ...(isUnchanged || isRejected ? [{ label: 'Tekrar değerlendir', icon: RotateCcw, onClick: () => handleReEvaluateUnchanged(qId) }] : []),
                   { label: 'Terimler ve sözlük', icon: BookOpen, group: 'Bilgi', onClick: () => setTermsFor(rev) },
                 ]
@@ -1076,7 +1079,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   <span className="ms-qcard-num" title={`#${qId}`}>#{qId.slice(0, 8)}</span>
                   <span className={`ms-tag ${status.cls}`}><status.Icon /> <span className="hidden sm:inline">{status.label}</span></span>
                   {rev.answer_vote_result && (
-                    <span className="ms-tag is-ok" title={`Anket sonucu: ${rev.answer_vote_result.winner} şıkkı, ${rev.answer_vote_result.counts[rev.answer_vote_result.winner]}/${rev.answer_vote_result.total} oy`}>
+                    <span className="ms-tag is-ok" title={`Kabul edilen cevap: ${rev.answer_vote_result.winner}${rev.answer_vote_result.total ? ` · kayıt anında ${rev.answer_vote_result.counts?.[rev.answer_vote_result.winner] || 0}/${rev.answer_vote_result.total} oy` : ''}${keptPoll ? ' · anket açık' : ''}`}>
                       <BarChart3 /> {rev.answer_vote_result.by === 'admin' ? 'Cevap seçildi' : 'Anket'}: {rev.answer_vote_result.winner}
                     </span>
                   )}
@@ -1159,13 +1162,14 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                     ) : (
                       <StemText text={propStem} size="sm" />
                     )}
-                    {doubtful ? (
+                    {doubtful || keptPoll ? (
                       <AnswerPoll
                         questionId={qId}
+                        acceptedAnswer={keptPoll ? rev.answer_vote_result?.winner : undefined}
                         options={pollOptions}
                         voterUid={currentUser?.uid || null}
                         className="pt-1"
-                        hint="Çözücüler aynı şıkta uzlaşamadı. Doğru bildiğin şıkkı seç; herkes bir kez oy verebilir."
+                        hint={keptPoll ? 'Cevap kabul edildi; anket açık kalıyor. Topluluğun cevabı kabul edilen cevapla karşılaştırılır.' : 'Çözücüler aynı şıkta uzlaşamadı. Doğru bildiğin şıkkı seç; herkes bir kez oy verebilir.'}
                         onVotes={(v) => {
                           const max = Math.max(0, ...Object.values(v.counts));
                           const lead = Object.keys(v.counts).filter((k) => max > 0 && v.counts[k] === max);
@@ -1223,10 +1227,6 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                             {prop.cevap_dogrulama.eski_anahtar ? ` (eski anahtar ${prop.cevap_dogrulama.eski_anahtar}, kararda kullanılmadı)` : ''}
                           </p>
                         )}
-                        {prop.YZV?.referans_literatur && <p className="m-0"><b className="text-ink">Literatür:</b> {prop.YZV.referans_literatur}</p>}
-                        {prop.tespit_raporu?.tespit_edilen_kusur && <p className="m-0"><b className="text-ink">Tespit edilen kusur:</b> {String(prop.tespit_raporu.tespit_edilen_kusur)}</p>}
-                        {prop.tespit_raporu?.uygulanan_mudahale && <p className="m-0"><b className="text-ink">Uygulanan müdahale:</b> {String(prop.tespit_raporu.uygulanan_mudahale)}</p>}
-                        {prop.secenek_analizi && typeof prop.secenek_analizi === 'object' && (
                         {Array.isArray(prop.cevap_secenekleri) && prop.cevap_secenekleri.length > 0 && (
                           <p className="m-0 rounded-md bg-warn-soft px-2 py-1">
                             <b className="text-ink">Şüpheli cevap · {prop.cevap_secenekleri.length} cevap:</b>{' '}
@@ -1235,6 +1235,10 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                               .join(' · ')}
                           </p>
                         )}
+                        {prop.YZV?.referans_literatur && <p className="m-0"><b className="text-ink">Literatür:</b> {prop.YZV.referans_literatur}</p>}
+                        {prop.tespit_raporu?.tespit_edilen_kusur && <p className="m-0"><b className="text-ink">Tespit edilen kusur:</b> {String(prop.tespit_raporu.tespit_edilen_kusur)}</p>}
+                        {prop.tespit_raporu?.uygulanan_mudahale && <p className="m-0"><b className="text-ink">Uygulanan müdahale:</b> {String(prop.tespit_raporu.uygulanan_mudahale)}</p>}
+                        {prop.secenek_analizi && typeof prop.secenek_analizi === 'object' && (
                           <div className="flex flex-col gap-1 pt-1">
                             <b className="text-ink">Şık analizi</b>
                             {['A', 'B', 'C', 'D', 'E'].map((k) => {

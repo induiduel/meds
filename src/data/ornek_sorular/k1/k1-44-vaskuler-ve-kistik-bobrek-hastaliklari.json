@@ -1,0 +1,818 @@
+{
+ "id": "k1-44-vaskuler-ve-kistik-bobrek-hastaliklari",
+ "sira": 44,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Vasküler ve Kistik Böbrek Hastalıkları",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-05",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Hipertansif nefrosklerozun benign ve malign formlarının patogenez, morfoloji ve klinik özelliklerini ayırt eder.",
+   "sorular": [
+    {
+     "id": "k1-44-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Benign nefrosklerozda arteriyollerde görülen tipik lezyon aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Soğan zarı görünümü",
+      "B": "Fibrinoid nekroz",
+      "C": "Hiyalin arteriyoloskleroz",
+      "D": "Granülomatöz vaskülit",
+      "E": "Kolesterol embolisi"
+     },
+     "dogru": "C",
+     "aciklama": "Benign nefrosklerozda arteriyol duvarında pembe, homojen hiyalin birikimi (hiyalin arteriyoloskleroz) görülür.",
+     "sik_aciklamalari": {
+      "A": "Soğan zarı (hiperplastik arteriyoloskleroz) malign nefrosklerozda görülür.",
+      "B": "Fibrinoid nekroz malign nefrosklerozun bulgusudur.",
+      "C": "Doğru: uzun süreli primer hipertansiyonda tipik lezyondur.",
+      "D": "Granülomatöz vaskülit hipertansif nefrosklerozun bulgusu değildir.",
+      "E": "Kolesterol embolisi aterosklerotik plak kaynaklı ayrı bir tablodur."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": [
+      "1c5e94123e02",
+      "bb574711c247"
+     ]
+    },
+    {
+     "id": "k1-44-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Malign nefroskleroz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kortikal yüzeyde pire ısırığı görünümünde peteşiler görülür",
+      "B": "Arteriyollerde fibrinoid nekroz vardır",
+      "C": "İnterlobüler arterlerde soğan zarı görünümü izlenir",
+      "D": "Papilödem ve ensefalopati eşlik edebilir",
+      "E": "Böbrekler simetrik küçük ve ince granüler yüzeylidir; yetmezlik nadirdir"
+     },
+     "dogru": "E",
+     "aciklama": "Simetrik küçük, ince granüler böbrek ve nadir yetmezlik benign nefrosklerozu tanımlar; malign formda akut böbrek yetmezliği gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: peteşiyal kanamalar pire ısırığı görünümü verir.",
+      "B": "Doğru ifade: fibrinoid nekroz (nekrotizan arteriyolit) tipiktir.",
+      "C": "Doğru ifade: hiperplastik arteriyoloskleroz soğan zarı görünümü yapar.",
+      "D": "Doğru ifade: ağır hipertansiyonun sistemik bulgularıdır.",
+      "E": "Yanlış ifade (aranan cevap): bu benign nefrosklerozun tanımıdır."
+     },
+     "bilgi": [
+      2,
+      3
+     ],
+     "benzer_cikmis": [
+      "5b9ad411e63a"
+     ]
+    },
+    {
+     "id": "k1-44-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Kan basıncı 240/140 mmHg olan 42 yaşında erkekte baş ağrısı, bulanık görme, papilödem ve hızla yükselen kreatinin saptanıyor.\n\nBu hastanın böbreğinde beklenen bulgu ve yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Hiyalin arteriyoloskleroz; yalnızca yaşam tarzı değişikliği",
+      "B": "Kortiko-medüller kaba skarlar; uzun süreli antibiyotik",
+      "C": "Fibrinoid nekroz ve hiperplastik arteriyoloskleroz; acil antihipertansif tedavi",
+      "D": "Glomerüllerde kresentler; plazmaferez tek tedavi",
+      "E": "Çok sayıda büyük kist; kist aspirasyonu"
+     },
+     "dogru": "C",
+     "aciklama": "Tablo malign hipertansiyon/malign nefrosklerozdur; fibrinoid nekroz ve soğan zarı lezyonları ile akut böbrek yetmezliği gelişir, acil tedavi gerekir.",
+     "sik_aciklamalari": {
+      "A": "Hiyalin arteriyoloskleroz benign formun bulgusudur; acil durum yönetimi gerekmez.",
+      "B": "Kaba skarlar kronik piyelonefriti düşündürür.",
+      "C": "Doğru: malign nefrosklerozun morfolojisi ve acil antihipertansif yaklaşım.",
+      "D": "Kresentler hızlı ilerleyen glomerülonefritin bulgusudur.",
+      "E": "Büyük kistler ADPKD'ye aittir; papilödemli hipertansif krizi açıklamaz."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "1c5e94123e02",
+     "soru": "Küçük arter ve duvarlarının homojen pembe materyal birikimi ile görülen renal vasküler hastalık hangisidir?",
+     "secenekler": {
+      "A": "Malign hipertansiyon (Malign nefroskleroz)",
+      "B": "Kronik pyelonefrit",
+      "C": "Nefroskleroz (Arterionefroskleroz)",
+      "D": "Kronik glomerülonefrit",
+      "E": "Hiperplastik arteriyoloskleroz"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "bb574711c247",
+     "soru": "Renal vasküler hastalıklar küçük arter ve duvarlarının homojen pembe materyal birikimi ile görülen renal vasküler hastalık hangisidir?",
+     "secenekler": {
+      "A": "Malign hipertansiyon (Malign nefroskleroz)",
+      "B": "Kronik pyelonefrit",
+      "C": "Nefroskleroz (Arterionefroskleroz)",
+      "D": "Nefroskle (Arterion)",
+      "E": "Kronik glomerülonefrit"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "5b9ad411e63a",
+     "soru": "Renal vasküler hastalıklar - Nekrotizan arteriyolit ve hiperplastik arteriyolitin görüldüğü böbrek patolojisi hangisidir?",
+     "secenekler": {
+      "A": "Kronik pyelonefrit",
+      "B": "Malign hipertansiyon (Malign nefroskleroz)",
+      "C": "Nefroskleroz (Arterionefroskleroz)",
+      "D": "Hyalin arteriyoloskleroz",
+      "E": "Kronik glomerülonefrit"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Trombotik mikroanjiyopatilerin (TMA) böbrek üzerindeki etkisini ve başlıca formlarının etiyolojik sınıflamasını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-44-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Trombotik mikroanjiyopatinin (TMA) klasik üçlüsünde aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Mikrovasküler tromboz",
+      "B": "Mikroanjiyopatik hemolitik anemi",
+      "C": "Trombositopeni",
+      "D": "Polisitemi",
+      "E": "Sık eşlik eden böbrek yetmezliği zemininde trombüsler"
+     },
+     "dogru": "D",
+     "aciklama": "TMA mikrovasküler tromboz, mikroanjiyopatik hemolitik anemi ve trombositopeni ile karakterizedir.",
+     "sik_aciklamalari": {
+      "A": "Üçlünün parçasıdır: küçük damarlarda trombüs oluşur.",
+      "B": "Üçlünün parçasıdır: eritrositler trombüslü damarlarda parçalanır.",
+      "C": "Üçlünün parçasıdır: trombositler trombüslerde tüketilir.",
+      "D": "Doğru: polisitemi TMA'da beklenmez; aksine anemi vardır.",
+      "E": "Böbrek yetmezliği TMA'ya sık eşlik eder ve trombüsler glomerüllerde görülür."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-44-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Primer trombotik mikroanjiyopati formları ile etiyolojileri eşleştirildiğinde hangisi doğrudur?",
+     "secenekler": {
+      "A": "Şiga toksin ilişkili HÜS – ADAMTS13'e karşı otoantikor",
+      "B": "Kalıtsal TTP – görece sık görülen form",
+      "C": "Kalıtsal kompleman aracılı TMA – Shigella dysenteriae enfeksiyonu",
+      "D": "Edinsel TTP – otoantikorlarla ilişkili ADAMTS13 eksikliği",
+      "E": "Edinsel kompleman aracılı TMA – en sık TMA formu"
+     },
+     "dogru": "D",
+     "aciklama": "Edinsel TTP, ADAMTS13'e karşı otoantikorlara bağlıdır ve TTP'nin görece sık formudur.",
+     "sik_aciklamalari": {
+      "A": "Şiga toksin HÜS, STEC veya S. dysenteriae tip 1 toksiniyle ilişkilidir.",
+      "B": "Kalıtsal (genetik) ADAMTS13 eksikliği nadirdir.",
+      "C": "Kalıtsal form kompleman düzenleyici genlerin mutasyonuna bağlıdır.",
+      "D": "Doğru: otoantikora bağlı ADAMTS13 eksikliği edinsel TTP'yi oluşturur.",
+      "E": "Edinsel kompleman aracılı TMA nadirdir; en sık edinsel form Şiga toksin HÜS'tür."
+     },
+     "bilgi": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-44-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Kanlı ishal geçirdikten bir hafta sonra 4 yaşında çocukta solukluk, peteşiler ve oligüri gelişiyor. Periferik yaymada şistositler, trombosit sayısında düşüklük saptanıyor.\n\nBu tabloda böbrek biyopsisinde en olası bulgu hangisidir?",
+     "secenekler": {
+      "A": "Glomerüler kılcallarda trombüsler ve subendotel şişme",
+      "B": "Mezangial IgA birikimi",
+      "C": "Subepitelyal hörgüç şeklinde birikimler",
+      "D": "Tübüllerde tiroidizasyon",
+      "E": "Kalikslerin üzerinde kaba skarlar"
+     },
+     "dogru": "A",
+     "aciklama": "Tablo Şiga toksin ilişkili HÜS'tür; böbrekte glomerüler kılcal ve arteriyollerde trombüs, subendotel şişme ve bazal membran duplikasyonu görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: TMA'nın tipik böbrek bulgularıdır.",
+      "B": "Mezangial IgA, IgA nefropatisinin bulgusudur.",
+      "C": "Subepitelyal hörgüçler poststreptokokal glomerülonefrite aittir.",
+      "D": "Tiroidizasyon kronik piyelonefrit bulgusudur.",
+      "E": "Kaba skarlar kronik piyelonefritte görülür; akut HÜS bulgusu değildir."
+     },
+     "bilgi": [
+      5,
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Kronik böbrek hastalığı ve son dönem böbreğin ortak morfolojik ve klinik özelliklerini kavrar.",
+   "sorular": [
+    {
+     "id": "k1-44-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Son dönem böbrekte beklenen ortak morfolojik bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Glomerüllerde global skleroz",
+      "B": "Böbreklerin belirgin büyümesi ve kortikal apseler",
+      "C": "İnterstisyumda yalnızca ödem",
+      "D": "Tübüllerde hipertrofi ve sayısal artış",
+      "E": "Damar lümenlerinin genişlemesi"
+     },
+     "dogru": "A",
+     "aciklama": "Son dönem böbrekte glomerüllerde global skleroz, tübül atrofisi, interstisyel fibrozis ve damar duvarı kalınlaşması görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: nedenden bağımsız ortak son yol bulgusudur.",
+      "B": "Son dönem böbrekler genellikle küçülmüştür; apse akut piyelonefrit bulgusudur.",
+      "C": "İnterstisyel fibrozis vardır, yalnız ödem değil.",
+      "D": "Tübüller atrofik ve kayıptır.",
+      "E": "Damar duvarları kalınlaşır, lümen daralır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-44-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kronik böbrek hastalığı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca glomerüler hastalıklar sonucu gelişir",
+      "B": "Hipertansiyon görülmez",
+      "C": "Son dönemde biyopsi altta yatan nedeni her zaman kesin gösterir",
+      "D": "Diyaliz veya nakil olmaksızın genellikle kendiliğinden düzelir",
+      "E": "İlerlemiş nefron kaybının ortak son yoludur ve üremi, elektrolit bozukluğu, hipertansiyonla seyreder"
+     },
+     "dogru": "E",
+     "aciklama": "KBH farklı hastalıkların ortak son yoludur; üremi, elektrolit bozuklukları ve hipertansiyon görülür, diyaliz/nakil olmadıkça ölümcüldür.",
+     "sik_aciklamalari": {
+      "A": "Vasküler, tübülointerstisyel ve kistik hastalıklar da KBH'ye yol açar.",
+      "B": "Hipertansiyon KBH'nin sık bulgusudur.",
+      "C": "Son dönem böbrekte ortak skarlaşma nedeni çoğu kez gizler.",
+      "D": "KBH ilerleyicidir; tedavisiz ölümcüldür.",
+      "E": "Doğru: ortak son yol ve klinik bulgular doğru tanımlanmıştır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-44-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Yıllardır hemodiyaliz programında olan son dönem böbrek hastasında yeni ortaya çıkan hematüri nedeniyle yapılan görüntülemede korteks ve medullada çok sayıda kist saptanıyor.\n\nBu hasta için en önemli uzun dönem risk hangisidir?",
+     "secenekler": {
+      "A": "Willis poligonu anevrizması rüptürü",
+      "B": "Konjenital hepatik fibrozis",
+      "C": "Renal hücreli karsinom gelişimi",
+      "D": "Retinitis pigmentosa",
+      "E": "Pulmoner hipoplazi"
+     },
+     "dogru": "C",
+     "aciklama": "Edinilmiş kistik böbrek hastalığında renal hücreli karsinom riski yaklaşık 100 kat artar; düzenli görüntüleme gerekir.",
+     "sik_aciklamalari": {
+      "A": "Willis anevrizmaları ADPKD'nin ekstrarenal bulgusudur.",
+      "B": "Konjenital hepatik fibrozis ARPKD ile ilişkilidir.",
+      "C": "Doğru: uzun süreli diyalizle gelişen edinilmiş kistik hastalıkta RCC riski artar.",
+      "D": "Retinitis pigmentosa nefronofthisis ile ilişkilidir.",
+      "E": "Pulmoner hipoplazi neonatal ARPKD'de görülür."
+     },
+     "bilgi": [
+      10,
+      13
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Başlıca kistik böbrek hastalıklarının (basit kist, edinilmiş kistik hastalık, ADPKD, ARPKD, nefronofthisis, multikistik displazi) özelliklerini karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k1-44-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Otozomal dominant (erişkin) polikistik böbrek hastalığında en sık etkilenen gen ve ürünü hangisidir?",
+     "secenekler": {
+      "A": "PKD1 – polikistin-1",
+      "B": "PKD2 – polikistin-2",
+      "C": "PKHD1 – fibrosistin",
+      "D": "NPHP1 – nefrosistin",
+      "E": "WT1 – Wilms tümör proteini"
+     },
+     "dogru": "A",
+     "aciklama": "ADPKD olgularının %85–90'ında 16p13.3'teki PKD1 geni (polikistin-1) etkilenmiştir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: PKD1 en sık etkilenen gendir.",
+      "B": "PKD2 olguların yalnızca %10–15'inden sorumludur.",
+      "C": "PKHD1/fibrosistin otozomal resesif (çocukluk çağı) PKD genidir.",
+      "D": "NPHP genleri nefronofthisis ile ilişkilidir.",
+      "E": "WT1 Wilms tümörü ile ilişkili bir gendir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": [
+      "bd6d30d8ece7"
+     ]
+    },
+    {
+     "id": "k1-44-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi otozomal dominant polikistik böbrek hastalığının ekstrarenal bulgularından biri değildir?",
+     "secenekler": {
+      "A": "Polikistik karaciğer",
+      "B": "Willis çemberinde sakküler anevrizma",
+      "C": "Mitral kapak prolapsusu",
+      "D": "Retinitis pigmentosa",
+      "E": "Diğer kalp kapağı defektleri"
+     },
+     "dogru": "D",
+     "aciklama": "ADPKD'de karaciğer kistleri, beyin anevrizmaları ve kapak defektleri görülür; retinitis pigmentosa nefronofthisis ile ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "ADPKD'li hastaların yaklaşık %30'unda polikistik karaciğer vardır.",
+      "B": "Hastaların %10–30'unda sakküler anevrizma görülür.",
+      "C": "Mitral kapak prolapsusu yaklaşık %20–25 sıklıktadır.",
+      "D": "Doğru: retinitis pigmentosa nefronofthisisin ekstrarenal bulgusudur.",
+      "E": "Diğer kapak defektleri de ADPKD ile ilişkilidir."
+     },
+     "bilgi": [
+      18,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-44-q12",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Böbreklerin büyük, korteks ve medullanın toplayıcı kanallardan köken alan çok sayıda küçük kistle süngerimsi göründüğü ve karaciğerde konjenital hepatik fibrozisin eşlik ettiği hastalık hangisidir?",
+     "secenekler": {
+      "A": "Otozomal resesif (çocukluk çağı) polikistik böbrek hastalığı",
+      "B": "Otozomal dominant polikistik böbrek hastalığı",
+      "C": "Multikistik böbrek displazisi",
+      "D": "Basit böbrek kisti",
+      "E": "Edinilmiş kistik böbrek hastalığı"
+     },
+     "dogru": "A",
+     "aciklama": "ARPKD'de PKHD1 mutasyonu, süngerimsi büyük böbrekler ve karaciğerde kist/konjenital hepatik fibrozis görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tanım ARPKD'ye uyar; uzun dönemde karaciğer fibrozisi ve siroz gelişir.",
+      "B": "ADPKD'de kistler büyük (3–4 cm) ve nefronun farklı segmentlerindendir.",
+      "C": "Multikistik displazi çoğunlukla tek taraflı, işlevsiz bir böbrektir.",
+      "D": "Basit kistler kortekse sınırlı, tek veya az sayıdadır.",
+      "E": "Edinilmiş kistik hastalık uzun süreli diyaliz hastalarında görülür."
+     },
+     "bilgi": [
+      20,
+      21
+     ],
+     "benzer_cikmis": [
+      "863f0fee9fb5",
+      "5125be1e7be5"
+     ]
+    },
+    {
+     "id": "k1-44-q14",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Basit böbrek kistleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Müsinöz içerik ve çok katlı epitel içerir",
+      "B": "İnce duvarlı, berrak sıvılı, kortekse sınırlıdır ve klinik önemi tümörden ayırt edilmesidir",
+      "C": "Renal hücreli karsinom riskini 100 kat artırır",
+      "D": "Çocukluk çağının en sık kistik böbrek hastalığıdır",
+      "E": "Her iki böbreği 4 kg'a kadar büyütür"
+     },
+     "dogru": "B",
+     "aciklama": "Basit kistler kortekse sınırlı, ince parlak duvarlı, berrak sıvılı ve tek katlı düz/kübik epitelle döşelidir; genellikle asemptomatiktir.",
+     "sik_aciklamalari": {
+      "A": "Basit kistler berrak sıvı ve tek katlı epitel içerir.",
+      "B": "Doğru: görüntülemede düzgün kontur ve anekoik görünüm tümörden ayırır.",
+      "C": "RCC riski artışı edinilmiş kistik böbrek hastalığına aittir.",
+      "D": "Çocukluğun en sık kistik böbrek hastalığı multikistik displazidir.",
+      "E": "Masif büyüme ADPKD'de görülür."
+     },
+     "bilgi": [
+      12,
+      25
+     ],
+     "benzer_cikmis": [
+      "cdf4feff3eaa"
+     ]
+    },
+    {
+     "id": "k1-44-q13",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Poliüri ve polidipsi ile başvuran 12 yaşında çocukta böbrekler küçük ve büzüşmüş, biyopside kortikomedüller bileşkede küçük kistler, tübül atrofisi ve interstisyel fibrozis saptanıyor. Göz muayenesinde retinitis pigmentosa var.\n\nBu hastalıkla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Polikistin-1 mutasyonu ile gelişir ve böbrekler çok büyüktür",
+      "B": "Uzun süreli diyaliz sonrası edinilir",
+      "C": "Displazi prekanseröz bir süreçtir",
+      "D": "Kistler her zaman radyolojik olarak belirgin ve büyüktür",
+      "E": "Ürünleri siliya ile ilişkili NPHP genlerindeki mutasyonlarla gelişir ve son dönem böbrek yetmezliğine ilerler"
+     },
+     "dogru": "E",
+     "aciklama": "Tablo nefronofthisis-medüller kistik hastalık kompleksidir; siliyopati olup 2–10 yılda son dönem böbrek yetmezliğine ilerler.",
+     "sik_aciklamalari": {
+      "A": "Polikistin-1 ADPKD'ye aittir; bu hastada böbrekler küçüktür.",
+      "B": "Diyalizle edinilen kistler edinilmiş kistik hastalıktır.",
+      "C": "Displazi multikistik displazide gelişimsel bozukluk anlamındadır, prekanseröz değildir.",
+      "D": "Kistler radyolojik olarak görülemeyecek kadar küçük olabilir.",
+      "E": "Doğru: NPHP genleri epitel siliyası proteinlerini kodlar; çocuk/gençlerde SDBY'nin önemli genetik nedenidir."
+     },
+     "bilgi": [
+      22,
+      23,
+      24
+     ],
+     "benzer_cikmis": [
+      "4cd676539f1b",
+      "9becc00b3e42"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "bd6d30d8ece7",
+     "soru": "Böbreğin Kistik Hastalıkları Otozomal Dominant (erişkin) polikistik böbrek hastalığı hangi proteini kodlayan gen defekti sonucu gelişir?",
+     "secenekler": {
+      "A": "Fibrosistin",
+      "B": "Polisistin",
+      "C": "Nefrosistin",
+      "D": "Sistein",
+      "E": "Tirozin"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "863f0fee9fb5",
+     "soru": "Böbreklerde makroskopik olarak süngerimsi görünüme sebep olan durum hangisidir?",
+     "secenekler": {
+      "A": "Erişkin polikistik böbrek hastalığı",
+      "B": "Çocukluk çağı polikistik böbrek hastalığı",
+      "C": "Medüller sünger böbrek",
+      "D": "Mültikistik Renal Displazi",
+      "E": "Çocukluk çağı polikistik böbrek hastalığı"
+     },
+     "cevap": null
+    },
+    {
+     "id": "5125be1e7be5",
+     "soru": "Siroz gelişimi daha çok hangisinde görülür?",
+     "secenekler": {
+      "A": "Çocukluk çağı polikistik böbrek hastalığı",
+      "B": "Medüller sünger böbrek",
+      "C": "Nefronofitizis-medüller kistik hastalık kompleksi",
+      "D": "Erişkin polikistik böbrek hastalığı",
+      "E": "Multikistik renal displazi"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "cdf4feff3eaa",
+     "soru": "Aşağıdakilerden hangisi basit renal kistlerin özelliklerinden biridir?",
+     "secenekler": {
+      "A": "İnce 'bröz bir kapsülle çevrilir",
+      "B": "Musinöz içeriğe sahiptir",
+      "C": "Kübik ya da yassılaşmış epitel ile döşelidir",
+      "D": "5 cm boyutuna varan olabilir",
+      "E": "Polikistik hastalıkta böbrek ve karaciğerde kistler görülebilir"
+     },
+     "cevap": null
+    },
+    {
+     "id": "4cd676539f1b",
+     "soru": "Böbreğin Kistik Hastalıkları - Nefronofitizis-medüller kistik hastalık kompleksi hangi proteini kodlayan gen defekti sonucu gelişir?",
+     "secenekler": {
+      "A": "Fibrosistin",
+      "B": "Polisistin",
+      "C": "Nefrosistin",
+      "D": "Sistein",
+      "E": "Tirozin"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "9becc00b3e42",
+     "soru": "Nefronofitizis-medüller kistik hastalık kompleksi hangi proteini kodlayan gen defekti sonucu gelişir?",
+     "secenekler": {
+      "A": "Fibrosistin",
+      "B": "Polisistin",
+      "C": "Nefrosistin",
+      "D": "Sistein",
+      "E": "Tirozin"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "İdrar yolu tıkanıklığının böbrek üzerindeki etkilerini ve tıkanıklık seviyesine göre tutulum örüntüsünü açıklar.",
+   "sorular": [
+    {
+     "id": "k1-44-q15",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "İdrar yolu tıkanıklığının böbrek üzerindeki etkileri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Enfeksiyona yatkınlığı artırır",
+      "B": "Taş oluşumunu kolaylaştırır",
+      "C": "Uzun süreli olduğunda hidronefroza yol açar",
+      "D": "Kalıcı böbrek atrofisi gelişebilir",
+      "E": "Böbrek parankimini koruyucu etki gösterir"
+     },
+     "dogru": "E",
+     "aciklama": "Tıkanıklık enfeksiyon ve taşa yatkınlık yaratır; uzun sürerse hidronefroz ve kalıcı atrofi yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: staz bakteri çoğalmasını kolaylaştırır.",
+      "B": "Doğru ifade: staz kristalizasyonu artırır.",
+      "C": "Doğru ifade: kronik tıkanıklık obstrüktif üropati/hidronefroz yapar.",
+      "D": "Doğru ifade: uzun süreli basınç parankim atrofisine götürür.",
+      "E": "Yanlış ifade (aranan cevap): tıkanıklık parankime zarar verir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-44-q16",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "İdrar yolu tıkanıklığında tıkanıklık seviyesi ile böbrek tutulum örüntüsü arasındaki ilişki için hangisi doğrudur?",
+     "secenekler": {
+      "A": "Mesane boynunun üzerindeki tıkanıklık genellikle iki taraflı tutulum yapar",
+      "B": "Mesane boynunun altındaki (örn. prostat, üretra) tıkanıklık genellikle iki taraflı tutulum yapar",
+      "C": "Üreter taşı her iki böbreği eşit etkiler",
+      "D": "Tutulum seviyeden bağımsızdır",
+      "E": "Üretra darlığı yalnızca tek böbreği etkiler"
+     },
+     "dogru": "B",
+     "aciklama": "Tıkanıklık mesane boynunun altındaysa her iki üst sistem etkilenir; üzerindeyse (tek üreter) tutulum tek taraflıdır.",
+     "sik_aciklamalari": {
+      "A": "Mesane boynu üzerindeki tıkanıklık (örn. tek üreter) tek taraflıdır.",
+      "B": "Doğru: prostat ve üretra düzeyindeki tıkanıklık iki taraflı etki yapar.",
+      "C": "Tek üreterdeki taş yalnız o tarafı etkiler.",
+      "D": "Tutulum örüntüsü doğrudan seviyeye bağlıdır.",
+      "E": "Üretra darlığı mesane boynunun altında olduğundan iki taraflı etki yapar."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-44-q17",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "70 yaşında erkek, yıllardır süren idrar yapma güçlüğü ve son dönemde gelişen böbrek fonksiyon bozukluğu ile başvuruyor. Ultrasonda her iki böbrekte pelvikaliksiyel dilatasyon saptanıyor.\n\nBu tabloyu en iyi açıklayan durum hangisidir?",
+     "secenekler": {
+      "A": "Sağ üreterde tek taş",
+      "B": "Benign prostat hiperplazisine bağlı mesane boynu altı tıkanıklık",
+      "C": "Tek taraflı üreteropelvik bileşke darlığı",
+      "D": "Sol renal arter stenozu",
+      "E": "Akut piyelonefrit"
+     },
+     "dogru": "B",
+     "aciklama": "Mesane boynunun altındaki prostat kaynaklı tıkanıklık iki taraflı hidronefroz ve böbrek fonksiyon bozukluğu yapar.",
+     "sik_aciklamalari": {
+      "A": "Tek üreter taşı yalnızca ilgili tarafta dilatasyon yapar.",
+      "B": "Doğru: BPH mesane boynu altı tıkanıklıkla iki taraflı tutuluma yol açar.",
+      "C": "Tek taraflı darlık iki taraflı dilatasyonu açıklamaz.",
+      "D": "Renal arter stenozu pelvikaliksiyel dilatasyon yapmaz.",
+      "E": "Akut piyelonefrit genellikle tek taraflıdır ve kronik dilatasyon yapmaz."
+     },
+     "bilgi": [
+      26,
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Ürolitiyazisin patogenezini, başlıca taş tiplerini ve klinik özelliklerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-44-q18",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Üriner sistem taşları arasında en sık görülen tip hangisidir?",
+     "secenekler": {
+      "A": "Ürik asit taşı",
+      "B": "Sistin taşı",
+      "C": "Kalsiyum oksalat/fosfat taşı",
+      "D": "Strüvit taşı",
+      "E": "Ksantin taşı"
+     },
+     "dogru": "C",
+     "aciklama": "Kalsiyum oksalat ve/veya kalsiyum fosfat taşları tüm taşların yaklaşık %80'ini oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Ürik asit taşları yaklaşık %6–7'dir.",
+      "B": "Sistin taşları %1–2 ile nadirdir.",
+      "C": "Doğru: kalsiyum taşları en sık tiptir.",
+      "D": "Strüvit taşları yaklaşık %10'dur.",
+      "E": "Ksantin taşları çok nadirdir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-44-q19",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Proteus vulgaris ile tekrarlayan idrar yolu enfeksiyonu olan hastada pelvis ve kaliksleri dolduran geyik boynuzu şeklinde taş saptanıyor.\n\nBu taşın en olası bileşimi hangisidir?",
+     "secenekler": {
+      "A": "Kalsiyum oksalat",
+      "B": "Ürik asit",
+      "C": "Sistin",
+      "D": "Magnezyum amonyum fosfat",
+      "E": "Kalsiyum karbonat"
+     },
+     "dogru": "D",
+     "aciklama": "Üreyi parçalayan bakteriler idrarı alkalileştirir ve magnezyum amonyum fosfat (strüvit) taşlarına yol açar; geyik boynuzu taşlar sıklıkla bu tiptedir.",
+     "sik_aciklamalari": {
+      "A": "Kalsiyum oksalat taşları hiperkalsiüri ile ilişkilidir, enfeksiyonla değil.",
+      "B": "Ürik asit taşları asidik idrarda oluşur.",
+      "C": "Sistin taşları kalıtsal sistinüride görülür.",
+      "D": "Doğru: strüvit taşı üreaz pozitif bakterilerle ilişkilidir.",
+      "E": "Kalsiyum karbonat taşları enfeksiyon ilişkili tipik taş değildir."
+     },
+     "bilgi": [
+      30,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-44-q20",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Üriner taşlar ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kalsiyum taşlı hastaların yarısında hiperkalsiüri vardır, ancak hiperkalsemi yoktur",
+      "B": "Ürik asit taşlı olguların yarısında hiperürisemi yoktur",
+      "C": "Ürik asit ve sistin taşları asidik idrarda oluşma eğilimindedir",
+      "D": "Alkali idrar kalsiyum fosfat taş riskini artırır",
+      "E": "Taşların çoğu iki taraflıdır ve pelvis dışında, mesanede oluşur"
+     },
+     "dogru": "E",
+     "aciklama": "Taşların yaklaşık %80'i tek taraflıdır ve en sık böbrek pelvis ve kalikslerinde oluşur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: absorptif veya renal hiperkalsiüri söz konusudur.",
+      "B": "Doğru ifade: sürekli asidik idrar (pH<5,5) daha belirleyicidir.",
+      "C": "Doğru ifade: her iki taş da düşük pH'ta çöker.",
+      "D": "Doğru ifade: kalsiyum fosfat alkali idrarda çöker.",
+      "E": "Yanlış ifade (aranan cevap): taşlar çoğunlukla tek taraflı ve pelvis-kalikslerdedir."
+     },
+     "bilgi": [
+      27,
+      29,
+      31,
+      32
+     ],
+     "benzer_cikmis": [
+      "d3-b-145"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-145",
+     "soru": "Aşağıdakilerden hangisi ürik asit taşlarında görülen metabolik düzensizliklerden biridir?",
+     "secenekler": {
+      "A": "Hipoürikosüri",
+      "B": "Hipersistinüri",
+      "C": "Hipomagnezüri",
+      "D": "Düşük idrar pH'sı",
+      "E": "Hiperokzalüri"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Hidronefrozun tanımını, nedenlerini, patogenezini, morfolojisini ve klinik özelliklerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-44-q21",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Hidronefroz aşağıdakilerden hangisini tanımlar?",
+     "secenekler": {
+      "A": "İdrar çıkışının kronik engeli sonucu pelvis-kaliks dilatasyonu ve kortikal atrofi",
+      "B": "Böbrek papillalarının iskemik nekrozu",
+      "C": "Pelvis ve kalikslerin irinle dolması",
+      "D": "Kortekste çok sayıda kist oluşumu",
+      "E": "Glomerüllerde global skleroz"
+     },
+     "dogru": "A",
+     "aciklama": "Hidronefroz, idrar akımının kronik engeli sonucu pelvis ve kalikslerin genişlemesi ve parankim atrofisidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: hidronefrozun tanımıdır.",
+      "B": "Papilla nekrozu papiller nekrozdur.",
+      "C": "İrinle dolu sistem piyonefrozdur.",
+      "D": "Kortikal kistler kistik böbrek hastalıklarına aittir.",
+      "E": "Global skleroz son dönem böbreğin genel bulgusudur."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-44-q22",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Hidronefroz patogenezi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tıkanıklık başlar başlamaz glomerüler filtrasyon tamamen durur",
+      "B": "GFR bir süre devam eder; filtrat interstisyuma geri sızar ve artan basınç papilla ve piramitleri sıkıştırır",
+      "C": "İlk etkilenen yapı glomerüllerdir; tübüller korunur",
+      "D": "Dilatasyon yalnızca üreterde görülür",
+      "E": "Kortikal parankim kalınlaşır"
+     },
+     "dogru": "B",
+     "aciklama": "Tıkanıklığa rağmen filtrasyon sürer; artan basınç papillaları sıkıştırır, tübül fonksiyonu ve kan akımı bozulur.",
+     "sik_aciklamalari": {
+      "A": "Filtrasyon bir süre devam eder; dilatasyonu da bu sağlar.",
+      "B": "Doğru: hidronefrozun temel patogenezidir.",
+      "C": "Önce tübül fonksiyonu bozulur; glomerüller geç döneme kadar korunur.",
+      "D": "Pelvis ve kaliksler belirgin dilate olur.",
+      "E": "Korteks incelir ve atrofiye uğrar."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-44-q23",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "İki taraflı kısmi idrar yolu tıkanıklığı olan bir hastada beklenebilecek klinik tablo ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Her zaman ani anüri gelişir",
+      "B": "Konsantrasyon kusuruna bağlı poliüri görülebilir ve lezyonun gerçek doğasını maskeleyebilir",
+      "C": "Diğer böbrek sağlıklı olduğundan uzun süre sessiz kalır",
+      "D": "Tıkanıklık giderilse bile fonksiyon asla geri dönmez",
+      "E": "Masif proteinüri tipik ilk bulgudur"
+     },
+     "dogru": "B",
+     "aciklama": "İki taraflı kısmi tıkanmada tübül hasarına bağlı konsantrasyon kusuru poliüriye yol açar ve tıkanıklığı gizleyebilir.",
+     "sik_aciklamalari": {
+      "A": "Ani anüri iki taraflı tam tıkanmada görülür.",
+      "B": "Doğru: kısmi tıkanmada oligüri yerine poliüri olabilir.",
+      "C": "Sessiz seyir tek taraflı hidronefrozda, karşı böbrek sağlamken görülür.",
+      "D": "Tıkanıklık erken giderilirse fonksiyon geri dönebilir.",
+      "E": "Proteinüri belirgin değildir; tübüler fonksiyon bozukluğu ön plandadır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 23,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:10"
+}

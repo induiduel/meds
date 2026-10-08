@@ -1,0 +1,1144 @@
+{
+ "id": "k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy",
+ "sira": 39,
+ "kurul": 1,
+ "ders": "Üroloji",
+ "konu": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi",
+ "ogretim_uyesi": "Dr. F. Şamil Uysal",
+ "tarih": "2026-10-01",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Üriner sistem enfeksiyonlarını (ÜSE) tanımlar ve enfeksiyonun yerine göre sınıflandırır.",
+   "sorular": [
+    {
+     "id": "k1-39-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Üriner sistem enfeksiyonu (ÜSE) aşağıdakilerden hangisini tanımlar?",
+     "secenekler": {
+      "A": "İdrar miktarının azalması",
+      "B": "İdrarda yalnızca eritrosit bulunması",
+      "C": "Böbrek taşı varlığı",
+      "D": "Üriner sistemde mikrobiyal patojenlerin varlığı",
+      "E": "Mesane tümörü"
+     },
+     "dogru": "D",
+     "aciklama": "ÜSE enfeksiyonun yerine göre sistit, piyelonefrit ve bakteriüri olarak sınıflanır; semptomatik veya asemptomatik olabilir.",
+     "sik_aciklamalari": {
+      "A": "Bu oligüridir; bu nedenle doğru seçenek değildir.",
+      "B": "Bu hematüridir; bu nedenle doğru seçenek değildir.",
+      "C": "Taş ayrı bir hastalıktır.",
+      "D": "Doğru: ÜSE'nin tanımıdır.",
+      "E": "Tümör ayrı bir hastalıktır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "ÜSE'nin enfeksiyonun yerine göre sınıflaması hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Nefritik ve nefrotik sendrom",
+      "B": "Akut ve kronik böbrek yetmezliği",
+      "C": "Sistit, piyelonefrit ve bakteriüri",
+      "D": "Hematüri ve proteinüri",
+      "E": "Benign ve malign"
+     },
+     "dogru": "C",
+     "aciklama": "ÜSE yerleşim yerine göre sistit (mesane), piyelonefrit (böbrek) ve bakteriüri olarak sınıflanır.",
+     "sik_aciklamalari": {
+      "A": "Glomerüler sendrom sınıflamasıdır.",
+      "B": "Böbrek yetmezliği sınıflamasıdır.",
+      "C": "Doğru: yerleşime göre sınıflamadır.",
+      "D": "Bunlar idrar bulgularıdır.",
+      "E": "Tümör sınıflamasıdır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "İdrar örneği alma teknikleri kontaminasyon açısından en güvenilirden en az güvenilire doğru sıralandığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Orta akım > kateterizasyon > suprapubik aspirasyon",
+      "B": "Suprapubik aspirasyon > üretral kateterizasyon > orta akım idrarı",
+      "C": "Kateterizasyon > orta akım > suprapubik aspirasyon",
+      "D": "Hepsi eşit güvenilirdedir",
+      "E": "Torba ile alınan idrar en güvenilirdir"
+     },
+     "dogru": "B",
+     "aciklama": "Yanlış teknik kontaminasyonu ve gereksiz tedaviyi artırır.",
+     "sik_aciklamalari": {
+      "A": "Sıralama terstir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: güvenilirlik sırası doğrudur.",
+      "C": "Suprapubik aspirasyon en güvenilirdir.",
+      "D": "Güvenilirlikler farklıdır.",
+      "E": "Torba idrarı kontaminasyona açıktır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Bakteriüri, kontaminasyon, anlamlı bakteriüri ve piyüri kavramlarını ayırt eder.",
+   "sorular": [
+    {
+     "id": "k1-39-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Orta akım idrarında klasik anlamlı bakteriüri eşiği hangisidir?",
+     "secenekler": {
+      "A": "≥10² CFU/ml",
+      "B": "≥10 CFU/ml",
+      "C": "≥10⁵ CFU/ml",
+      "D": "≥10⁹ CFU/ml",
+      "E": "Herhangi bir üreme"
+     },
+     "dogru": "C",
+     "aciklama": "Klasik eşik ≥10⁵ CFU/ml'dir; eşik hasta grubuna göre değişir.",
+     "sik_aciklamalari": {
+      "A": "Klasik eşik değildir.",
+      "B": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: klasik eşiktir.",
+      "D": "Çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "E": "Herhangi bir üreme suprapubik aspirasyonda anlamlıdır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Bakteriüri olmaksızın piyüri saptanması öncelikle hangi durumları düşündürür?",
+     "secenekler": {
+      "A": "Asemptomatik bakteriüri",
+      "B": "Kontaminasyon",
+      "C": "Normal idrar",
+      "D": "Tüberküloz, taş ve kanser",
+      "E": "Komplike olmayan sistit"
+     },
+     "dogru": "D",
+     "aciklama": "Piyüri olmadan bakteriüri kontaminasyonu; bakteriüri olmadan piyüri tüberküloz, taş ve kanseri düşündürür.",
+     "sik_aciklamalari": {
+      "A": "ASB'de bakteriüri vardır.",
+      "B": "Kontaminasyon piyürisiz bakteriüriyi düşündürür.",
+      "C": "Normalde idrarda lökosit bulunmaz.",
+      "D": "Doğru: steril piyüri nedenleridir.",
+      "E": "Sistitte bakteriüri beklenir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Anlamlı bakteriüri eşikleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kadın komplike olmayan sistitte 10³ CFU/ml anlamlıdır",
+      "B": "Komplike piyelonefritte 10⁵ CFU/ml esas alınır",
+      "C": "Erkeklerde 10⁴ CFU/ml anlamlıdır",
+      "D": "Suprapubik aspirasyonda herhangi bir bakteri üremesi anlamlıdır",
+      "E": "Tüm hasta gruplarında tek eşik olarak 10⁵ CFU/ml kullanılmalıdır"
+     },
+     "dogru": "E",
+     "aciklama": "Eşik hasta grubuna ve alım tekniğine göre değişir; tek sayı ile karar verilmemelidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): eşikler gruplara göre farklıdır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Komplike olmayan ve komplike ÜSE kavramlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-39-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Komplike olmayan ÜSE hangi hastada görülür?",
+     "secenekler": {
+      "A": "Kalıcı kateteri olan hastada",
+      "B": "Üriner sistemde yapısal veya işlevsel anomali bulunmayan hastada",
+      "C": "Obstrüktif üropatisi olan hastada",
+      "D": "Böbrek nakli yapılmış hastada",
+      "E": "Nörojenik mesanesi olan hastada"
+     },
+     "dogru": "B",
+     "aciklama": "Komplike ÜSE bulaş ihtimalini artıran ve tedavinin etkinliğini azaltan faktörlerin varlığında gelişir.",
+     "sik_aciklamalari": {
+      "A": "Kateter komplike edici faktördür.",
+      "B": "Doğru: komplike olmayan ÜSE'nin tanımıdır.",
+      "C": "Obstrüksiyon komplike edici faktördür.",
+      "D": "Transplantasyon komplike edici faktördür.",
+      "E": "Nörojenik mesane komplike edici faktördür."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi ÜSE'yi komplike hale getiren bir faktör değildir?",
+     "secenekler": {
+      "A": "Kalıcı üriner kateter",
+      "B": "Üriner obstrüksiyon",
+      "C": "Sağlıklı, gebe olmayan genç kadın",
+      "D": "Kontrolsüz diabetes mellitus",
+      "E": "İmmünsüpresyon"
+     },
+     "dogru": "C",
+     "aciklama": "Komplike ÜSE yapısal-işlevsel anomali veya tedavi etkinliğini azaltan faktör varlığında gelişir.",
+     "sik_aciklamalari": {
+      "A": "Komplike edici faktördür.",
+      "B": "Komplike edici faktördür.",
+      "C": "Doğru: komplike olmayan ÜSE'nin tipik hasta profilidir.",
+      "D": "Komplike edici faktördür.",
+      "E": "Komplike edici faktördür."
+     },
+     "bilgi": [
+      6,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Komplike ve komplike olmayan ÜSE ayrımının klinik önemi hangisidir?",
+     "secenekler": {
+      "A": "Ayrımın hiçbir klinik önemi olmaması",
+      "B": "Komplikasyon varlığının tedavi ve izlem yaklaşımını değiştirmesi",
+      "C": "Komplike ÜSE'nin tedavi gerektirmemesi",
+      "D": "Komplike olmayan ÜSE'nin hep hastanede tedavi edilmesi",
+      "E": "Ayrımın yalnızca çocuklarda yapılması"
+     },
+     "dogru": "B",
+     "aciklama": "Komplike ÜSE'de etken spektrumu, tedavi süresi ve izlem farklıdır.",
+     "sik_aciklamalari": {
+      "A": "Klinik olarak önemlidir.",
+      "B": "Doğru: ayrımın önemidir.",
+      "C": "Komplike ÜSE tedavi gerektirir.",
+      "D": "Komplike olmayan ÜSE genellikle ayaktan tedavi edilir.",
+      "E": "Ayrım tüm yaş gruplarında yapılır."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Rekürren enfeksiyon, re-enfeksiyon, bakteriyel persistans, profilaksi ve süpresyon tanımlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-39-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Başarılı tedaviden sonra dışarıdan gelen yeni bir patojenle oluşan enfeksiyona ne ad verilir?",
+     "secenekler": {
+      "A": "Profilaksi",
+      "B": "Bakteriyel persistans",
+      "C": "Süpresyon",
+      "D": "Re-enfeksiyon",
+      "E": "Kontaminasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Rekürren enfeksiyon aynı patojenle, re-enfeksiyon yeni patojenle oluşur.",
+     "sik_aciklamalari": {
+      "A": "Profilaksi koruyucu stratejidir.",
+      "B": "Persistans yerleşik patojenle tekrarlamadır.",
+      "C": "Süpresyon tedavi stratejisidir.",
+      "D": "Doğru: re-enfeksiyonun tanımıdır.",
+      "E": "Kontaminasyon örnekleme hatasıdır."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [
+      "5d97c7f55509",
+      "742468bc5a25"
+     ]
+    },
+    {
+     "id": "k1-39-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Eradike edilemeyen bir enfeksiyon odağında bakterinin büyümesini engellemeye yönelik antimikrobiyal kullanımına ne ad verilir?",
+     "secenekler": {
+      "A": "Kontaminasyon",
+      "B": "Profilaksi",
+      "C": "Re-enfeksiyon",
+      "D": "Süpresyon",
+      "E": "Eradikasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Profilaksi re-enfeksiyonları önler; süpresyon eradike edilemeyen odağın büyümesini engeller.",
+     "sik_aciklamalari": {
+      "A": "Kontaminasyon örnekleme hatasıdır.",
+      "B": "Profilaksi yeni enfeksiyonları önlemeye yöneliktir.",
+      "C": "Re-enfeksiyon bir enfeksiyon tipidir.",
+      "D": "Doğru: süpresyonun tanımıdır.",
+      "E": "Eradikasyon odağın tamamen yok edilmesidir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Enfekte struvit taşı olan hastada tedaviden kısa süre sonra aynı bakteriyle tekrarlayan enfeksiyonlar görülüyor.\n\nBu durum en iyi hangi kavramla açıklanır?",
+     "secenekler": {
+      "A": "Kontaminasyon",
+      "B": "Re-enfeksiyon",
+      "C": "Bakteriyel persistans",
+      "D": "Asemptomatik bakteriüri",
+      "E": "Profilaksi başarısı"
+     },
+     "dogru": "C",
+     "aciklama": "Persistans üriner sisteme yerleşmiş (ör. taş içi) patojenlerin neden olduğu rekürrenslerdir.",
+     "sik_aciklamalari": {
+      "A": "Klinik enfeksiyon vardır.",
+      "B": "Re-enfeksiyon dışarıdan yeni patojenle olur.",
+      "C": "Doğru: yerleşik odaktan kaynaklanan tekrardır.",
+      "D": "Hasta semptomatiktir.",
+      "E": "Tekrarlayan enfeksiyon profilaksi başarısı değildir."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "5d97c7f55509",
+     "soru": "\"Üriner enfeksiyonun başarılı tedavisinden sonra yeniden aynı patojen ile gelişen enfeksiyon\"",
+     "secenekler": {
+      "A": "Sistit",
+      "B": "Rekürren Enfeksiyon",
+      "C": "Bakteriyel Persistans",
+      "D": "Kontaminasyon",
+      "E": "Üriner Sistem Enfeksiyonu"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "742468bc5a25",
+     "soru": "Üriner Sistem Enfeksiyonu - \"Üriner enfeksiyonun başarılı tedavisinden sonra yeniden aynı patojen ile gelişen enfeksiyon\" hangisini tarif eder?",
+     "secenekler": {
+      "A": "Re-enfeksiyon",
+      "B": "Sistit",
+      "C": "Rekürren Enfeksiyon",
+      "D": "Bakteriyel Persistans",
+      "E": "Kontaminasyon"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "ÜSE insidansını ve epidemiyolojik özelliklerini yorumlar.",
+   "sorular": [
+    {
+     "id": "k1-39-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "ÜSE nedeniyle sağlık kuruluşuna başvuru sıklığı kadınlarda erkeklere göre nasıldır?",
+     "secenekler": {
+      "A": "Erkeklerle eşittir",
+      "B": "Yaklaşık iki kat fazladır",
+      "C": "Erkeklerin yarısıdır",
+      "D": "On kat azdır",
+      "E": "Kadınlarda ÜSE görülmez"
+     },
+     "dogru": "B",
+     "aciklama": "ÜSE birinci basamakta en sık başvuru nedenlerindendir; kadınlarda başvuru erkeklerin iki katıdır.",
+     "sik_aciklamalari": {
+      "A": "Kadınlarda daha sıktır.",
+      "B": "Doğru: verilen orandır.",
+      "C": "Kadınlarda daha sıktır.",
+      "D": "Kadınlarda daha sıktır.",
+      "E": "Kadınlarda sıktır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "ÜSE'nin nozokomiyal enfeksiyonlar içindeki payı ve ana nedeni hangisidir?",
+     "secenekler": {
+      "A": "Hiç pay almaz",
+      "B": "~%1; çoğu cerrahi kaynaklıdır",
+      "C": "~%90; çoğu solunum kaynaklıdır",
+      "D": "~%40; çoğunluğu üriner kateter ilişkilidir",
+      "E": "~%5; çoğu ilaç kaynaklıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Kateter yönetimi hastane enfeksiyonlarını azaltmanın kilit yoludur.",
+     "sik_aciklamalari": {
+      "A": "Önemli bir paya sahiptir.",
+      "B": "Oran çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "C": "Oran çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: verilen oran ve neden doğrudur.",
+      "E": "Oran ve neden yanlıştır."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Nozokomiyal ve toplum kaynaklı ÜSE etkenleri karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "İki grupta etken profili aynıdır",
+      "B": "Toplum kaynaklı enfeksiyonlarda en sık etken Pseudomonas'tır",
+      "C": "Nozokomiyal enfeksiyonlarda yalnızca duyarlı E. coli görülür",
+      "D": "Etken profili ampirik tedaviyi etkilemez",
+      "E": "Nozokomiyal enfeksiyonlar tipik olarak Pseudomonas veya dirençli suşlarla; toplum kaynaklı enfeksiyonlar barsak kökenli bakterilerle oluşur"
+     },
+     "dogru": "E",
+     "aciklama": "Etken profili ampirik tedavi seçimini etkiler.",
+     "sik_aciklamalari": {
+      "A": "Profiller farklıdır.",
+      "B": "Toplumda barsak kökenli bakteriler baskındır.",
+      "C": "Nozokomiyal enfeksiyonda dirençli suşlar sıktır.",
+      "D": "Ampirik tedaviyi belirler.",
+      "E": "Doğru: etken farkı doğrudur."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Semptomatik ve asemptomatik bakteriürilerin epidemiyolojisini ve risk faktörlerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-39-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Akut komplike olmayan ÜSE'nin en sık etkeni hangisidir?",
+     "secenekler": {
+      "A": "Staphylococcus saprophyticus",
+      "B": "Escherichia coli",
+      "C": "Pseudomonas aeruginosa",
+      "D": "Enterococcus",
+      "E": "Candida"
+     },
+     "dogru": "B",
+     "aciklama": "E. coli %75–95, ardından S. saprophyticus %5–10 oranında etkendir.",
+     "sik_aciklamalari": {
+      "A": "İkinci sık etkendir.",
+      "B": "Doğru: en sık etkendir.",
+      "C": "Nozokomiyal enfeksiyonlarda öne çıkar.",
+      "D": "Nadiren etkendir; bu nedenle doğru seçenek değildir.",
+      "E": "Kateterli hastalarda görülebilir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi asemptomatik bakteriüri için risk faktörü değildir?",
+     "secenekler": {
+      "A": "Parite",
+      "B": "Yaşlılık",
+      "C": "Genç yaş ve yüksek sosyoekonomik düzey",
+      "D": "Diabetes mellitus",
+      "E": "Geçirilmiş ÜSE öyküsü"
+     },
+     "dogru": "C",
+     "aciklama": "ASB risk faktörleri yaşlılık, parite, diyabet, geçirilmiş ÜSE ve düşük sosyoekonomik düzeydir.",
+     "sik_aciklamalari": {
+      "A": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "B": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: risk faktörlerinin tersidir.",
+      "D": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "E": "Risk faktörüdür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": [
+      "fa51bc9060f6"
+     ]
+    },
+    {
+     "id": "k1-39-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Asemptomatik bakteriüride tedavi endikasyonu olan grup aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kalıcı kateterli yaşlılar (girişim planlanmayan)",
+      "B": "Sağlıklı genç erkekler",
+      "C": "Menopoz öncesi sağlıklı kadınlar",
+      "D": "Gebeler",
+      "E": "Kontrollü diyabetli kadınlar"
+     },
+     "dogru": "D",
+     "aciklama": "ASB'de çocuklar, yaşlılar (derste belirtildiği gibi), gebeler ve mukozal kanama riski olan invaziv girişim yapılacak hastalar dışında tedavi endikasyonu yoktur; gebelik klasik endikasyondur.",
+     "sik_aciklamalari": {
+      "A": "Rutin tedavi direnç gelişimine yol açar.",
+      "B": "Tedavi endikasyonu yoktur.",
+      "C": "Tedavi endikasyonu yoktur.",
+      "D": "Doğru: gebelikte ASB tedavi edilir.",
+      "E": "Rutin tedavi önerilmez."
+     },
+     "bilgi": [
+      4,
+      19
+     ],
+     "benzer_cikmis": [
+      "0b26a85fe1d3"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "fa51bc9060f6",
+     "soru": "Üriner Sistem Enfeksiyonu Hangisi asemptomatik bakteriüri için risk faktörü değildir?",
+     "secenekler": {
+      "A": "Doğum sayısı",
+      "B": "Diyabetes mellitus",
+      "C": "Geçirilmiş ÜSE öyküsü",
+      "D": "Soğuk İklim",
+      "E": "Düşük sosyoekonomik düzey"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "0b26a85fe1d3",
+     "soru": "Üriner enfeksiyon semptomları olmayan bir kişide birer gün arayla iki farklı idrar kültüründe de 10⁵ kob/mL sayıda aynı üropatojen saptanmasına ne denir?",
+     "secenekler": {
+      "A": "Basit sistit",
+      "B": "Asemptomatik bakteriüri",
+      "C": "Piyelonefrit",
+      "D": "Relaps",
+      "E": "Komplike üriner sistem enfeksiyonu"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Özel risk gruplarında (çocuk, yaşlı, gebe, diyabetli, HIV/AIDS, katater ilişkili) ÜSE özelliklerini özetler.",
+   "sorular": [
+    {
+     "id": "k1-39-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Gebelikte akut piyelonefrit en sık hangi trimesterde görülür?",
+     "secenekler": {
+      "A": "Trimesterle ilişkisi yoktur",
+      "B": "İlk trimester",
+      "C": "Doğum sonrası",
+      "D": "Gebelik öncesi",
+      "E": "İkinci trimester"
+     },
+     "dogru": "E",
+     "aciklama": "Gebelikte %4–10 ASB, %1–4 akut sistit görülür; akut piyelonefrit en çok ikinci trimesterde (%1–2) görülür.",
+     "sik_aciklamalari": {
+      "A": "Trimesterle ilişkilidir.",
+      "B": "İlk trimesterde daha az görülür.",
+      "C": "Doğum sonrası dönem gebelik değildir.",
+      "D": "Gebelik öncesi dönem kapsam dışıdır.",
+      "E": "Doğru: en sık ikinci trimesterdedir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Diyabetli hastalarda ÜSE ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Diyabet ÜSE riskini azaltır",
+      "B": "Bakteriüri riski 2–4 kat artmıştır; amfizematöz sistit/piyelonefrit gelişebilir ve Klebsiella daha sık etkendir",
+      "C": "Diyabetlilerde yalnızca E. coli etken olur",
+      "D": "Amfizematöz enfeksiyonlar diyabetle ilişkili değildir",
+      "E": "Diyabetli kadınlarda ASB görülmez"
+     },
+     "dogru": "B",
+     "aciklama": "Diyabetli kadınlarda ASB ~%26'dır; kontrolsüz diyabet komplike ÜSE zeminidir.",
+     "sik_aciklamalari": {
+      "A": "Risk artar; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: diyabette ÜSE özellikleridir.",
+      "C": "Klebsiella daha sıktır.",
+      "D": "Amfizematöz enfeksiyonlar diyabette görülür.",
+      "E": "ASB ~%26'dır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Özel risk gruplarında ÜSE ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Çocuklarda ÜSE bimodal dağılım gösterir",
+      "B": "İlk üç ayda erkeklerde, ilerleyen yıllarda kızlarda daha sıktır",
+      "C": "HIV/AIDS'li hastalarda baskın üropatojen Enterococcus'tur",
+      "D": "Kateter ilişkili ÜSE'de en önemli risk faktörü kateterin kalış süresidir",
+      "E": "Yaşlılarda ASB nadirdir ve ÜSE tipik semptomlarla seyreder"
+     },
+     "dogru": "E",
+     "aciklama": "Yaşlı kadınların %50'den fazlasında ASB görülür; yaşlıda ÜSE non-spesifik semptomlarla seyredebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): ASB sıktır ve semptomlar atipiktir."
+     },
+     "bilgi": [
+      17,
+      18,
+      21,
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Ürosepsis epidemiyolojisini ve risk faktörlerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-39-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Ürosepsis mortalitesi yaklaşık ne kadardır?",
+     "secenekler": {
+      "A": "%1–2",
+      "B": "%0,1",
+      "C": "%20–42",
+      "D": "%90–100",
+      "E": "Mortalite yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Ürosepsis sistemik enflamasyonun eşlik ettiği enfeksiyondur; mortalite %20–42'dir ve erkeklerde daha sıktır.",
+     "sik_aciklamalari": {
+      "A": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "B": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: verilen mortalite aralığıdır.",
+      "D": "Çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "E": "Ciddi mortalitesi vardır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi ürosepsis için risk faktörü değildir?",
+     "secenekler": {
+      "A": "Diabetes mellitus",
+      "B": "İleri yaş",
+      "C": "Genç, sağlıklı ve immün yeterli birey",
+      "D": "İmmünsüpresyon",
+      "E": "Kemoterapi alma"
+     },
+     "dogru": "C",
+     "aciklama": "Risk faktörleri yaşlılık, diyabet, immünsüpresyon, transplantasyon, kemoterapi ve AIDS'tir.",
+     "sik_aciklamalari": {
+      "A": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "B": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: risk faktörü taşımaz.",
+      "D": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "E": "Risk faktörüdür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Ürosepsisten ciddi sepsis ve septik şoka ilerlemeyi tanımlayan özellik hangisidir?",
+     "secenekler": {
+      "A": "Kontamine idrar örneği",
+      "B": "Yalnızca piyüri",
+      "C": "Yalnızca asemptomatik bakteriüri",
+      "D": "Hafif dizüri",
+      "E": "Organ yetmezliği ve septik şokun eklenmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Ürosepsiste sistemik enflamasyon vardır; ciddi sepsiste organ yetmezliği ve septik şok eklenir.",
+     "sik_aciklamalari": {
+      "A": "Kontaminasyon klinik tablo değildir.",
+      "B": "Piyüri yerel bulgudur.",
+      "C": "ASB sistemik değildir.",
+      "D": "Dizüri yerel semptomdur.",
+      "E": "Doğru: ilerlemenin tanımıdır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "ÜSE patogenezini ve enfeksiyonun giriş yollarını (asendan, hematojen, lenfojen) açıklar.",
+   "sorular": [
+    {
+     "id": "k1-39-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "ÜSE'nin en sık giriş yolu hangisidir?",
+     "secenekler": {
+      "A": "Doğrudan travma",
+      "B": "Hematojen yol",
+      "C": "Lenfojen yol",
+      "D": "Asendan yol",
+      "E": "İnhalasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Üriner sistemde bakterilerin kolonize olduğu tek yer üretradır; asendan yol en sık giriş yoludur.",
+     "sik_aciklamalari": {
+      "A": "Travma tipik giriş yolu değildir.",
+      "B": "Hematojen yol daha nadirdir.",
+      "C": "Lenfojen yol nadirdir.",
+      "D": "Doğru: en sık yoldur.",
+      "E": "İnhalasyon ÜSE yolu değildir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": [
+      "8581ef352502",
+      "8e82145b0846"
+     ]
+    },
+    {
+     "id": "k1-39-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Hematojen yolla gelişen piyelonefritin en tipik zemini hangisidir?",
+     "secenekler": {
+      "A": "Kısa üretra",
+      "B": "Stafilokok bakteriyemisi veya endokardit",
+      "C": "Vezikoüreteral reflü",
+      "D": "Cinsel aktivite",
+      "E": "Postmenopozal östrojen eksikliği"
+     },
+     "dogru": "B",
+     "aciklama": "Hematojen yolda kan yoluyla renal parankime ulaşan bakteriler (özellikle stafilokok) rol oynar; gram negatiflerin rolü düşüktür.",
+     "sik_aciklamalari": {
+      "A": "Asendan yolu kolaylaştırır.",
+      "B": "Doğru: hematojen yolun tipik zeminidir.",
+      "C": "Asendan yolu kolaylaştırır.",
+      "D": "Asendan yolu kolaylaştırır.",
+      "E": "Asendan yolu kolaylaştırır."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "ÜSE patogenezi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Üropatojen ile konak arasındaki etkileşim sonucu oluşur",
+      "B": "Bakteriyel adherens ve epitel reseptivitesi rol oynar",
+      "C": "Obstrüksiyon ve VUR zemin hazırlar",
+      "D": "Normalde üretrovezikal bölgenin proksimalinde idrar sterildir",
+      "E": "Gram negatif bakteriler esas olarak hematojen yolla piyelonefrit yapar"
+     },
+     "dogru": "E",
+     "aciklama": "Hematojen yolda gram negatiflerin rolü düşüktür; stafilokoklar önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): gram negatifler asendan yolla gelir."
+     },
+     "bilgi": [
+      26,
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "8581ef352502",
+     "soru": "Hangisi ÜSE patogenezi ile ilgili yanlış tanımlamadır?",
+     "secenekler": {
+      "A": "Asendan yol mikroorganizmaların üriner sistemi en sık enfekte etme sebebidir",
+      "B": "Üriner Sistemde bakterilerin kolonize olduğu yegane yer üretradır",
+      "C": "Erkeklerde, ÜSE kadınlardan daha sık görülür",
+      "D": "İntestinal bakterilerin perine ve vajen ağzında kolonize oluşu özellikle seksüel aktif çağda ÜSE riskini artırmaktadır",
+      "E": "Vezikoüreteral reflüsü olanlarda üst üriner sistemin enfekte olması daha kolaydır"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "8e82145b0846",
+     "soru": "Üriner Sistem Enfeksiyonu (ÜSE) patogenezi ile ilgili hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Asendan yol mikroorganizmalarının üriner sistemi en sık enfekte etme sebebidir",
+      "B": "Üriner Sistemde bakterilerin kolonize olduğu yegane yer",
+      "C": "Erkeklerde, kadınlardan sık görülür üretradır",
+      "D": "İntestinal bakterilerin perine ve vajen ağzında kolonize oluşu özellikle seksüel aktif çağda ÜSE riskini artırmaktadır",
+      "E": "Vezikoüreteral reflüsü olanlarda üst üriner sistemin enfekte olması daha kolaydır"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Hematüri, ağrı ve alt üriner sistem semptomlarının özelliklerini yorumlar.",
+   "sorular": [
+    {
+     "id": "k1-39-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Mikroskobik hematüri tanımı hangisidir?",
+     "secenekler": {
+      "A": "İdrar rengi normal iken büyük büyütme alanında >3 eritrosit görülmesi",
+      "B": "İdrarın kırmızı renkte olması",
+      "C": "İdrarda lökosit görülmesi",
+      "D": "İdrarda protein bulunması",
+      "E": "İdrarda kristal görülmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Hematüri makroskopik veya mikroskopik olabilir; erişkinde malignite bulgusu kabul edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: mikroskobik hematürinin tanımıdır.",
+      "B": "Bu makroskopik hematüridir.",
+      "C": "Bu piyüridir; bu nedenle doğru seçenek değildir.",
+      "D": "Bu proteinüridir; bu nedenle doğru seçenek değildir.",
+      "E": "Bu kristalüridir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Alt üriner sistem semptomlarından hangisi depolama (irritatif) semptomudur?",
+     "secenekler": {
+      "A": "Noktüri",
+      "B": "Akış azalması",
+      "C": "Tutukluk (hesitancy)",
+      "D": "Aralıklı akım",
+      "E": "Ikınma"
+     },
+     "dogru": "A",
+     "aciklama": "Depolama semptomları sıklık, noktüri, dizüri, stres/urge inkontinanstır; işeme semptomları tıkayıcı nedenlerle ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: depolama semptomudur.",
+      "B": "İşeme semptomudur; bu nedenle doğru seçenek değildir.",
+      "C": "İşeme semptomudur; bu nedenle doğru seçenek değildir.",
+      "D": "İşeme semptomudur; bu nedenle doğru seçenek değildir.",
+      "E": "İşeme semptomudur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Üriner semptomların yorumlanması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İzomorfik eritrositler ürolojik, dismorfik eritrositler glomerüler hastalığı düşündürür",
+      "B": "İnflamasyon ağrısı devamlı, obstrüksiyon ağrısı kolik tarzdadır",
+      "C": "Pnömatüri amfizematöz sistit ve fistülü düşündürür",
+      "D": "Üretral akıntı CYBE'nin en sık bulgusudur",
+      "E": "Makroskopik hematüri her zaman mikroskopik hematüriden daha ciddi bir hastalığı gösterir"
+     },
+     "dogru": "E",
+     "aciklama": "Hematürinin makro veya mikro olması ciddiyetle ilişkili değildir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): ciddiyetle ilişkisizdir."
+     },
+     "bilgi": [
+      29,
+      30,
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Sistit, akut/kronik piyelonefrit, prostatit, orşit, epididimit ve üretrit sendromlarını tanır.",
+   "sorular": [
+    {
+     "id": "k1-39-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Akut piyelonefriti sistitten ayıran temel klinik bulgu hangisidir?",
+     "secenekler": {
+      "A": "Yan ağrısı ve ateş-titreme",
+      "B": "Dizüri",
+      "C": "Sık idrara çıkma",
+      "D": "Ani idrar ihtiyacı",
+      "E": "Suprapubik hassasiyet"
+     },
+     "dogru": "A",
+     "aciklama": "Yan ağrısı yoksa akut piyelonefritten söz edilemez; sistitte dizüri, sıklık ve urgency vardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: üst sistem tutulumunun bulgusudur.",
+      "B": "Sistitte de görülür.",
+      "C": "Sistitte de görülür.",
+      "D": "Sistitte de görülür.",
+      "E": "Sistit bulgusudur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Erişkin erkeklerde en sık orşit nedeni ve önemli sonucu hangisidir?",
+     "secenekler": {
+      "A": "Kabakulak orşiti; bilateral olgularda atrofi/azoospermi",
+      "B": "Tüberküloz; testis kanseri",
+      "C": "Gonore; hidrosel",
+      "D": "E. coli; torsiyon",
+      "E": "Travma; varikosel"
+     },
+     "dogru": "A",
+     "aciklama": "Kabakulak orşiti %20–30 görülür, %20'si bilateraldir ve atrofi/azoospermiye yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: en sık neden ve sonucudur.",
+      "B": "Tüberküloz granülomatöz epididimit yapar.",
+      "C": "Gonore üretrit/epididimit yapar.",
+      "D": "E. coli epididimit yapabilir; torsiyon sonucu değildir.",
+      "E": "Travma orşitin en sık nedeni değildir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Akut skrotal ağrıyla başvuran genç erkekte epididimit düşünülürken ayırıcı tanıda mutlaka akla gelmesi gereken ve şüphede eksplorasyon gerektiren durum hangisidir?",
+     "secenekler": {
+      "A": "Testis torsiyonu",
+      "B": "Varikosel",
+      "C": "Spermatosel",
+      "D": "Hidrosel",
+      "E": "Peyronie hastalığı"
+     },
+     "dogru": "A",
+     "aciklama": "Genç erkekte epididimit ayırıcı tanısında testis torsiyonu düşünülmeli, şüphede cerrahi eksplorasyon yapılmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: acil cerrahi gerektiren durumdur.",
+      "B": "Varikosel akut şiddetli ağrı yapmaz.",
+      "C": "Spermatosel akut tablo değildir.",
+      "D": "Hidrosel genellikle ağrısızdır.",
+      "E": "Peyronie penil bir hastalıktır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Prostatitlerin NIH sınıflamasını ve gonokokkal/gonokok dışı üretrit ayrımını yapar.",
+   "sorular": [
+    {
+     "id": "k1-39-q34",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "NIH prostatit sınıflamasında kategori I hangisidir?",
+     "secenekler": {
+      "A": "Akut bakteriyel prostatit",
+      "B": "Kronik bakteriyel prostatit",
+      "C": "İnflamatuar kronik pelvik ağrı sendromu",
+      "D": "Non-inflamatuar kronik pelvik ağrı sendromu",
+      "E": "Asemptomatik inflamatuar prostatit"
+     },
+     "dogru": "A",
+     "aciklama": "NIH: I akut, II kronik bakteriyel, IIIA inflamatuar, IIIB non-inflamatuar, IV asemptomatik.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kategori I akut bakteriyel prostatittir.",
+      "B": "Kategori II'dir; bu nedenle doğru seçenek değildir.",
+      "C": "Kategori IIIA'dır; bu nedenle doğru seçenek değildir.",
+      "D": "Kategori IIIB'dir; bu nedenle doğru seçenek değildir.",
+      "E": "Kategori IV'tür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q35",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Akut bakteriyel prostatitte rektal tuşe yapılması neden önerilmez?",
+     "secenekler": {
+      "A": "Bakteriyemi riski nedeniyle",
+      "B": "Prostat palpe edilemediği için",
+      "C": "Tanıya hiçbir katkısı olmadığı için",
+      "D": "Hastada ağrı olmadığı için",
+      "E": "Prostat kanseri riskini artırdığı için"
+     },
+     "dogru": "A",
+     "aciklama": "Akut prostatitte masaj/tuşe bakteriyemiye yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: bakteriyemi riski nedeniyle önerilmez.",
+      "B": "Prostat palpe edilebilir; hassastır.",
+      "C": "Gerekçe bakteriyemi riskidir.",
+      "D": "Akut prostatit ağrılıdır.",
+      "E": "Kanser riskiyle ilişkili değildir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-39-q36",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Gonokokkal ve gonokok dışı üretrit karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Gonokokkalda kuluçka 2–7 gün, akıntı sarı-bol ve başlangıç ani; gonokok dışında kuluçka 10–21 gün, akıntı az-açık renkli ve başlangıç derecelidir",
+      "B": "Gonokok dışı üretritte kuluçka daha kısadır",
+      "C": "Gonokokkal üretritte akıntı az ve berraktır",
+      "D": "C. trachomatis gonokokkal üretrit etkenidir",
+      "E": "İki tablo klinik olarak ayırt edilemez"
+     },
+     "dogru": "A",
+     "aciklama": "Gonokok dışı üretrit etkenleri C. trachomatis, U. urealyticum, T. vaginalis, HSV ve M. genitalium'dur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: iki tablonun klinik farklarıdır.",
+      "B": "Gonokok dışında kuluçka daha uzundur.",
+      "C": "Gonokokkalda akıntı bol ve sarıdır.",
+      "D": "C. trachomatis gonokok dışı etkendir.",
+      "E": "Klinik farklar vardır."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": [
+      "d3-b-032"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-032",
+     "soru": "Otuz beş yaşında erkek hasta, 1 haftadır devam eden penis ucundan sarı renkli akıntı ve idrarda yanma şikâyeti ile polikliniğe başvuruyor. Hastanın üretral akıntı örneğinin Gram boyamasında her sahada 3 tane PMNL ve bu lökositlerin içinde gram negatif diplokoklar görülüyor. Bu olguda düşünülecek en olası klinik tablo ve etken mikroorganizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Epididimoorşit – Streptococcus pneumoniae",
+      "B": "Prostatit – Chlamydia trachomatis",
+      "C": "Üretrit – Neisseria gonorrhoeae",
+      "D": "Epididimoorşit – Mycoplasma genitalium",
+      "E": "Üretrit – Treponema pallidum"
+     },
+     "cevap": "C"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 36,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:04"
+}

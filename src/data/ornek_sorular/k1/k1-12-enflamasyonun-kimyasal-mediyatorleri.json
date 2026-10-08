@@ -1,0 +1,1219 @@
+{
+ "id": "k1-12-enflamasyonun-kimyasal-mediyatorleri",
+ "sira": 12,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Enflamasyonun Kimyasal Mediyatörleri",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-09-17",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Enflamasyon mediyatörlerini tanımlamak ve ortak özelliklerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Enflamatuvar reaksiyonu başlatan, güçlendiren ve düzenleyen çözünebilir moleküllere ne ad verilir?",
+     "secenekler": {
+      "A": "Opsoninler",
+      "B": "Enflamasyon mediyatörleri",
+      "C": "Adezyon molekülleri",
+      "D": "Antijenler",
+      "E": "Şaperonlar"
+     },
+     "dogru": "B",
+     "aciklama": "Mediyatörler hücrelerden ve plazma proteinlerinden kaynaklanan çözünebilir moleküllerdir; enflamasyon bu moleküller üzerinden yönlendirilir ve tedavide hedeflenir.",
+     "sik_aciklamalari": {
+      "A": "Opsoninler mikropları fagositoz için kaplayan moleküllerdir; mediyatörlerin bir alt işlevidir.",
+      "B": "Doğru. Mediyatörlerin tanımıdır.",
+      "C": "Adezyon molekülleri hücre yüzeyine bağlı yapışma proteinleridir.",
+      "D": "Antijenler bağışık yanıtı uyaran yabancı moleküllerdir.",
+      "E": "Şaperonlar protein katlanmasına yardım eden hücre içi proteinlerdir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Enflamasyon mediyatörlerinin ortak özellikleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Genellikle lokal olarak üretilirler.",
+      "B": "Çoğu kısa ömürlüdür ve hızla inaktive olur.",
+      "C": "Mikrobiyal ürünler ve hasarlı hücre moleküllerine yanıt olarak üretimleri artar.",
+      "D": "Çoğu uzun ömürlüdür ve dolaşımda haftalarca aktif kalır.",
+      "E": "Aşırı veya kontrolsüz üretimleri doku hasarına yol açabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Mediyatörlerin çoğu kısa ömürlüdür ve hızla yıkılır; bu, yanıtın kontrol altında kalmasını sağlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; lokal üretim etkinin hedefte yoğunlaşmasını sağlar.",
+      "B": "Doğru ifade; örneğin bradikinin kinazlarca hızla yıkılır.",
+      "C": "Doğru ifade; mikrop ve hasar sinyalleri üretimi tetikler.",
+      "D": "Yanlış ifade (aranan cevap). Mediyatörlerin çoğu kısa ömürlüdür.",
+      "E": "Doğru ifade; kontrolsüz üretim sepsis gibi tablolarda hasar yapar."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Enflamasyonda çok sayıda mediyatörün birbirinin etkisini güçlendirmesi ve yedeklemesi klinik olarak aşağıdaki durumlardan hangisini en iyi açıklar?",
+     "secenekler": {
+      "A": "Tek bir mediyatör yolunun bloke edilmesinin çoğu zaman enflamatuvar yanıtı tamamen durdurmaması",
+      "B": "Antihistaminiklerin tüm enflamasyon tiplerini tamamen ortadan kaldırması",
+      "C": "Enflamasyonun yalnızca tek bir mediyatörle yürümesi",
+      "D": "Mediyatörlerin birbirlerinin etkisini her zaman nötralize etmesi",
+      "E": "NSAİİ'lerin sitokin üretimini tamamen durdurması"
+     },
+     "dogru": "A",
+     "aciklama": "Mediyatörlerin fazlalığı ve sinerjisi enflamasyonu güçlü ve dayanıklı kılar; bir yolu bloklamak yanıtı genellikle tamamen durdurmaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Yedekleme nedeniyle tek hedefli tedavi kısmi etki gösterir.",
+      "B": "Histamin yalnızca erken vasküler olaylarda etkilidir; antihistaminikler enflamasyonu tamamen durdurmaz.",
+      "C": "Enflamasyon çok sayıda mediyatörle yürür.",
+      "D": "Mediyatörler birbirini güçlendirir; nötralize etmez.",
+      "E": "NSAİİ'ler COX'u inhibe eder; sitokin üretimini durdurmaz."
+     },
+     "bilgi": [
+      2,
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Hücre kaynaklı ve plazma kaynaklı mediyatörleri ayırt etmek",
+   "sorular": [
+    {
+     "id": "k1-12-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi plazma kaynaklı enflamasyon mediyatörü sistemlerinden biridir?",
+     "secenekler": {
+      "A": "Histamin",
+      "B": "Prostaglandinler",
+      "C": "Lökotrienler",
+      "D": "Kompleman sistemi",
+      "E": "Sitokinler"
+     },
+     "dogru": "D",
+     "aciklama": "Plazma kaynaklı mediyatörler başlıca karaciğerde sentezlenir, dolaşımda inaktif prekürsör olarak bulunur; kompleman, kinin ve koagülasyon/fibrinolitik sistemleri kapsar.",
+     "sik_aciklamalari": {
+      "A": "Histamin mast hücresi granüllerinde depolanan hücre kaynaklı mediyatördür.",
+      "B": "Prostaglandinler hücrelerde yeni sentezlenen hücre kaynaklı mediyatörlerdir.",
+      "C": "Lökotrienler hücrelerde araşidonik asitten sentezlenir.",
+      "D": "Doğru. Kompleman plazma kaynaklıdır.",
+      "E": "Sitokinler hücreler tarafından salınır."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Hücre kaynaklı mediyatörlerden granüllerde önceden depolanmış olup uyarıyla hızla salınan mediyatör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Prostaglandin E₂",
+      "B": "Lökotrien B₄",
+      "C": "TNF",
+      "D": "Histamin",
+      "E": "Nitrik oksit"
+     },
+     "dogru": "D",
+     "aciklama": "Histamin mast hücresi granüllerinde hazır bulunur ve hızla salınır; prostaglandin, lökotrien ve sitokinler uyarı sonrası yeni sentezlenir.",
+     "sik_aciklamalari": {
+      "A": "PGE₂ uyarı sonrası araşidonik asitten yeni sentezlenir.",
+      "B": "LTB₄ lipoksijenaz yoluyla yeni sentezlenir.",
+      "C": "TNF yeni sentez gerektiren bir sitokindir.",
+      "D": "Doğru. Hazır depolanmış, hızlı salınan mediyatördür.",
+      "E": "NO NOS enzimleriyle üretilen gazdır; depolanmaz."
+     },
+     "bilgi": [
+      3,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Plazma kaynaklı mediyatörler ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Başlıca mast hücrelerinde sentezlenip granüllerde depolanırlar.",
+      "B": "Dolaşımda aktif halde bulunur ve sürekli etki gösterirler.",
+      "C": "Yalnızca lipid türevi moleküllerdir.",
+      "D": "Başlıca karaciğerde sentezlenir, dolaşımda inaktif prekürsör olarak bulunur ve enflamasyon bölgesinde proteolitik basamaklarla aktive olur.",
+      "E": "Yalnızca lenfositlerden salınırlar."
+     },
+     "dogru": "D",
+     "aciklama": "Kompleman, kinin ve koagülasyon sistemleri gibi plazma proteinleri karaciğer kaynaklıdır ve kaskad şeklinde proteolitik aktivasyonla etki eder.",
+     "sik_aciklamalari": {
+      "A": "Bu histamin gibi hücre kaynaklı mediyatörlerin özelliğidir.",
+      "B": "İnaktif prekürsör olarak dolaşırlar; aktivasyon lokal olur.",
+      "C": "Plazma kaynaklı mediyatörler proteindir; lipid türevleri (eikozanoidler, PAF) hücre kaynaklıdır.",
+      "D": "Doğru. Kompleman, kinin ve koagülasyon sistemleri gibi plazma proteinleri karaciğer kaynaklıdır ve kaskad şeklinde proteolitik aktivasyonla etki eder.",
+      "E": "Lenfositler sitokin salar; plazma mediyatörleri karaciğer kaynaklıdır."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Vazoaktif aminleri (histamin, serotonin) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Histaminin en zengin kaynağı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mast hücreleri",
+      "B": "Hepatositler",
+      "C": "Nötrofiller",
+      "D": "Fibroblastlar",
+      "E": "Eritrositler"
+     },
+     "dogru": "A",
+     "aciklama": "Histamin en çok mast hücrelerinde (ayrıca bazofil ve trombositlerde) granüllerde depolanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Mast hücreleri histaminin başlıca kaynağıdır.",
+      "B": "Hepatositler plazma kaynaklı mediyatörleri sentezler.",
+      "C": "Nötrofiller histaminin başlıca kaynağı değildir.",
+      "D": "Fibroblastlar kollajen sentezler.",
+      "E": "Eritrositler histamin içermez."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Histaminin enflamasyondaki etkileri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Arteriollerde vazokonstriksiyon yapar.",
+      "B": "H2 reseptörü aracılığıyla venüllerde kalıcı geçirgenlik artışı yapar.",
+      "C": "Yalnızca kronik enflamasyonda etkilidir.",
+      "D": "Arteriollerde vazodilatasyon, venüllerde endotel kasılmasıyla geçici geçirgenlik artışı yapar; etkisi H1 reseptörü aracılığıyladır.",
+      "E": "Kemik iliğinde lökosit üretimini artırır."
+     },
+     "dogru": "D",
+     "aciklama": "Histamin en erken etkili mediyatörlerdendir; H1 aracılı vazodilatasyon ve geçici geçirgenlik artışı yapar, alerji ve ürtikerde önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Histamin arteriollerde vazodilatasyon yapar.",
+      "B": "Enflamasyondaki etkisi H1 aracılıdır ve geçirgenlik artışı geçicidir.",
+      "C": "Histamin akut enflamasyonun en erken mediyatörlerindendir.",
+      "D": "Doğru. Histamin en erken etkili mediyatörlerdendir; H1 aracılı vazodilatasyon ve geçici geçirgenlik artışı yapar, alerji ve ürtikerde önemlidir.",
+      "E": "Lökosit üretimi histaminin etkisi değildir."
+     },
+     "bilgi": [
+      5,
+      7
+     ],
+     "benzer_cikmis": [
+      "3a3711848429"
+     ]
+    },
+    {
+     "id": "k1-12-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Vazoaktif aminler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Histamin ve serotonin başlıca vazoaktif aminlerdir.",
+      "B": "IgE aracılı reaksiyonlar mast hücresi degranülasyonunu tetikler.",
+      "C": "Serotonin trombosit ve bazı nöroendokrin hücrelerden salınır.",
+      "D": "Serotonin, enflamasyonda histaminden daha güçlü bir vazodilatör olup başlıca mast hücrelerinden salınır.",
+      "E": "Serotoninin enflamasyondaki rolü histamine göre daha az belirgindir ve vazokonstriksiyon etkisi baskındır."
+     },
+     "dogru": "D",
+     "aciklama": "Serotonin trombositlerden salınır ve baskın etkisi vazokonstriksiyondur; enflamasyondaki rolü histamin kadar belirgin değildir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: histamin ve serotonin başlıca vazoaktif aminlerdir.",
+      "B": "Doğru ifade; fiziksel hasar ve bazı nöropeptit/sitokinler de degranülasyonu tetikler.",
+      "C": "Doğru ifade: serotonin trombosit ve bazı nöroendokrin hücrelerden salınır.",
+      "D": "Yanlış ifade (aranan cevap). Serotonin vazokonstriktördür ve trombosit kaynaklıdır.",
+      "E": "Doğru ifade: serotoninin enflamasyondaki rolü histamine göre daha az belirgindir ve vazokonstriksiyon etkisi baskındır."
+     },
+     "bilgi": [
+      5,
+      6,
+      8
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "3a3711848429",
+     "soru": "T. Farmakoloji Histamin, serotonin, melatonin ve Ergot Alkaloidleri Histamin, insanda ve kobayda hangi reseptör aracılığı ile bronkokonstriksiyona neden olur?",
+     "secenekler": {
+      "A": "H1 reseptörü",
+      "B": "H2 reseptörü",
+      "C": "H3 reseptörü",
+      "D": "H4 reseptörü",
+      "E": "Hiçbiri"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Araşidonik asit metabolizmasını ve eikozanoidleri açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Araşidonik asidin membran fosfolipidlerinden serbestleşmesini sağlayan enzim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Siklooksijenaz",
+      "B": "Fosfolipaz A₂",
+      "C": "5-lipoksijenaz",
+      "D": "Nitrik oksit sentaz",
+      "E": "Kallikrein"
+     },
+     "dogru": "B",
+     "aciklama": "Uyarı sonrası fosfolipaz A₂ araşidonik asidi membran fosfolipidlerinden serbestleştirir; araşidonik asit tüm eikozanoidlerin öncülüdür.",
+     "sik_aciklamalari": {
+      "A": "Siklooksijenaz serbest araşidonik asitten prostaglandin/tromboksan üretir.",
+      "B": "Doğru. Kortikosteroidler bu enzimi inhibe eder.",
+      "C": "5-lipoksijenaz lökotrien üretir.",
+      "D": "NOS argininden nitrik oksit üretir.",
+      "E": "Kallikrein kininojenden bradikinin oluşturur."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Araşidonik asit metabolizma yolları ve ürünleri eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Siklooksijenaz yolu – lökotrienler ve lipoksinler",
+      "B": "Lipoksijenaz yolu – prostaglandinler ve tromboksan",
+      "C": "Lipoksijenaz yolu – bradikinin",
+      "D": "Siklooksijenaz yolu – prostaglandinler ve tromboksan",
+      "E": "Siklooksijenaz yolu – nitrik oksit"
+     },
+     "dogru": "D",
+     "aciklama": "COX yolu prostaglandin ve tromboksan, lipoksijenaz yolu lökotrien ve lipoksin üretir; bu yollar anti-enflamatuvar ilaçların hedefidir.",
+     "sik_aciklamalari": {
+      "A": "Lökotrien ve lipoksinler lipoksijenaz yolunun ürünleridir.",
+      "B": "Prostaglandin ve tromboksan COX yolunun ürünleridir.",
+      "C": "Bradikinin kinin sisteminin ürünüdür.",
+      "D": "Doğru. COX yolu prostaglandin ve tromboksan, lipoksijenaz yolu lökotrien ve lipoksin üretir; bu yollar anti-enflamatuvar ilaçların hedefidir.",
+      "E": "NO arginin–NOS yolunun ürünüdür."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Eikozanoidler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Araşidonik asit 20 karbonlu çoklu doymamış bir yağ asididir.",
+      "B": "Eikozanoidler G proteinine bağlı reseptörler üzerinden etki eder.",
+      "C": "Prostaglandin, tromboksan, lökotrien ve lipoksinler eikozanoidlerdir.",
+      "D": "Eikozanoidler hücrede uyarı sonrası yeni sentezlenir.",
+      "E": "Eikozanoidler karaciğerde sentezlenip dolaşımda inaktif prekürsör olarak bulunan plazma proteinleridir."
+     },
+     "dogru": "E",
+     "aciklama": "Eikozanoidler membran fosfolipidlerinden türeyen lipid mediyatörlerdir; hücrelerde yeni sentezlenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: araşidonik asit 20 karbonlu çoklu doymamış bir yağ asididir.",
+      "B": "Doğru ifade: eikozanoidler G proteinine bağlı reseptörler üzerinden etki eder.",
+      "C": "Doğru ifade: prostaglandin, tromboksan, lökotrien ve lipoksinler eikozanoidlerdir.",
+      "D": "Doğru ifade; granüllerde depolanmazlar.",
+      "E": "Yanlış ifade (aranan cevap); bu tanım plazma kaynaklı mediyatörlere aittir."
+     },
+     "bilgi": [
+      9,
+      10
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Prostaglandinlerin (PGD₂, PGE₂, PGI₂, TxA₂) etkilerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Trombositlerde üretilen, güçlü trombosit agregasyonu ve vazokonstriksiyon yapan eikozanoid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Prostasiklin (PGI₂)",
+      "B": "Tromboksan A₂ (TxA₂)",
+      "C": "PGE₂",
+      "D": "Lipoksin",
+      "E": "LTB₄"
+     },
+     "dogru": "B",
+     "aciklama": "TxA₂ trombositte üretilir ve agregasyon + vazokonstriksiyon yapar; endoteldeki PGI₂ ise tersine vazodilatasyon ve agregasyon inhibisyonu yapar.",
+     "sik_aciklamalari": {
+      "A": "PGI₂ endotelde üretilir; vazodilatasyon yapar ve agregasyonu inhibe eder.",
+      "B": "Doğru. TxA₂ trombositte üretilir ve agregasyon + vazokonstriksiyon yapar; endoteldeki PGI₂ ise tersine vazodilatasyon ve agregasyon inhibisyonu yapar.",
+      "C": "PGE₂ vazodilatördür; ateş ve ağrıda önemlidir.",
+      "D": "Lipoksinler anti-enflamatuvardır.",
+      "E": "LTB₄ nötrofil kemoatraktanıdır."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Enflamasyonda ateş ve ağrı oluşumunda en önemli rol oynayan, ağrı eşiğini düşüren prostaglandin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "TxA₂",
+      "B": "PGI₂",
+      "C": "PGD₂",
+      "D": "LTC₄",
+      "E": "PGE₂"
+     },
+     "dogru": "E",
+     "aciklama": "PGE₂ vazodilatördür; ateş ve ağrıda önemlidir ve ağrı eşiğini düşürür. Hipotalamusta TNF/IL-1 etkisiyle üretilerek ateşe yol açar.",
+     "sik_aciklamalari": {
+      "A": "TxA₂ trombosit agregasyonu ve vazokonstriksiyon yapar.",
+      "B": "PGI₂ vazodilatasyon ve agregasyon inhibisyonu yapar.",
+      "C": "PGD₂ başlıca mast hücresi ürünüdür; vazodilatasyon ve nötrofil kemotaksisi yapar.",
+      "D": "LTC₄ sisteinil lökotriendir; bronkokonstriksiyon yapar.",
+      "E": "Doğru. PGE₂ vazodilatördür; ateş ve ağrıda önemlidir ve ağrı eşiğini düşürür. Hipotalamusta TNF/IL-1 etkisiyle üretilerek ateşe yol açar."
+     },
+     "bilgi": [
+      12,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Siklooksijenaz izoenzimleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "COX-1 yalnızca enflamasyon sırasında indüklenir.",
+      "B": "COX-2 mide ve böbrekte homeostatik işlevlerden sorumlu konstitütif enzimdir.",
+      "C": "COX-1 konstitütif olup mide-böbrek gibi homeostatik işlevlerde, COX-2 inflamatuvar uyarıyla indüklenerek görev alır.",
+      "D": "COX-2 inhibisyonu tromboksan/prostasiklin dengesini hiç etkilemez.",
+      "E": "Her iki izoenzim de lökotrien üretir."
+     },
+     "dogru": "C",
+     "aciklama": "Bu ayrım seçici COX-2 inhibitörlerinin geliştirilmesinin temelidir; ancak seçici COX-2 inhibisyonu TxA₂/PGI₂ dengesini bozarak tromboz riskini artırabilir.",
+     "sik_aciklamalari": {
+      "A": "COX-1 konstitütiftir; indüklenen izoenzim COX-2'dir.",
+      "B": "Tanım COX-1'e aittir.",
+      "C": "Doğru. Bu ayrım seçici COX-2 inhibitörlerinin geliştirilmesinin temelidir; ancak seçici COX-2 inhibisyonu TxA₂/PGI₂ dengesini bozarak tromboz riskini artırabilir.",
+      "D": "Seçici COX-2 inhibitörleri bu dengeyi bozarak tromboz riskini artırabilir.",
+      "E": "COX enzimleri prostaglandin ve tromboksan üretir; lökotrienler lipoksijenaz yolunun ürünüdür."
+     },
+     "bilgi": [
+      11,
+      13,
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Lökotrienleri ve lipoksinleri açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Güçlü bir nötrofil kemoatraktanı olan, lökosit adezyonu ve ROS üretimini artıran lökotrien aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "LTB₄",
+      "B": "LTC₄",
+      "C": "LTD₄",
+      "D": "LTE₄",
+      "E": "Lipoksin A₄"
+     },
+     "dogru": "A",
+     "aciklama": "LTB₄ güçlü nötrofil kemoatraktanıdır; sisteinil lökotrienler (LTC₄/LTD₄/LTE₄) ise bronkokonstriksiyon, vazokonstriksiyon ve permeabilite artışı yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. LTB₄ güçlü nötrofil kemoatraktanıdır; sisteinil lökotrienler (LTC₄/LTD₄/LTE₄) ise bronkokonstriksiyon, vazokonstriksiyon ve permeabilite artışı yapar.",
+      "B": "LTC₄ sisteinil lökotriendir; bronkokonstriksiyon yapar.",
+      "C": "LTD₄ sisteinil lökotriendir.",
+      "D": "LTE₄ sisteinil lökotriendir.",
+      "E": "Lipoksinler nötrofil kemotaksisini inhibe eder."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Astım patogenezinde bronkokonstriksiyona ve damar geçirgenliği artışına katkıda bulunan mediyatör grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lipoksinler",
+      "B": "Prostasiklin",
+      "C": "Sisteinil lökotrienler (LTC₄, LTD₄, LTE₄)",
+      "D": "Nitrik oksit",
+      "E": "IL-10"
+     },
+     "dogru": "C",
+     "aciklama": "Sisteinil lökotrienler bronkokonstriksiyon, vazokonstriksiyon ve permeabilite artışı yapar; astımda önemlidir ve reseptör antagonistleri tedavide kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Lipoksinler anti-enflamatuvardır.",
+      "B": "Prostasiklin vazodilatör ve anti-agregandır.",
+      "C": "Doğru. Sisteinil lökotrienler bronkokonstriksiyon, vazokonstriksiyon ve permeabilite artışı yapar; astımda önemlidir ve reseptör antagonistleri tedavide kullanılır.",
+      "D": "NO vazodilatördür: nitrik oksit.",
+      "E": "IL-10 anti-enflamatuvar bir sitokindir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Lipoksinler ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Siklooksijenaz yolunun pro-enflamatuvar ürünleridir.",
+      "B": "Güçlü nötrofil kemoatraktanıdırlar.",
+      "C": "Lökosit-trombosit etkileşimleriyle oluşan, nötrofil kemotaksisini ve adezyonunu inhibe eden anti-enflamatuvar eikozanoidlerdir.",
+      "D": "Bronkokonstriksiyonun temel mediyatörüdür.",
+      "E": "Yalnızca karaciğerde sentezlenir."
+     },
+     "dogru": "C",
+     "aciklama": "Lipoksinler lökosit toplanmasını sınırlar ve enflamasyonun çözünme (resolution) fazında önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Lipoksinler lipoksijenaz yolunun anti-enflamatuvar ürünleridir.",
+      "B": "Nötrofil kemotaksisini inhibe ederler.",
+      "C": "Doğru. Lipoksinler lökosit toplanmasını sınırlar ve enflamasyonun çözünme (resolution) fazında önemlidir.",
+      "D": "Bronkokonstriksiyon sisteinil lökotrienlerin etkisidir.",
+      "E": "Lökosit-trombosit etkileşimiyle oluşur."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Eikozanoidleri hedefleyen ilaç gruplarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Non-steroid anti-enflamatuvar ilaçların (NSAİİ) temel etki mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fosfolipaz A₂ inhibisyonu",
+      "B": "5-lipoksijenaz inhibisyonu",
+      "C": "Siklooksijenaz (COX) inhibisyonu",
+      "D": "Lökotrien reseptör blokajı",
+      "E": "TNF nötralizasyonu"
+     },
+     "dogru": "C",
+     "aciklama": "NSAİİ'ler COX'u inhibe ederek prostaglandin ve tromboksan üretimini azaltır.",
+     "sik_aciklamalari": {
+      "A": "Fosfolipaz A₂'yi kortikosteroidler inhibe eder.",
+      "B": "5-lipoksijenazı zileuton inhibe eder.",
+      "C": "Doğru. NSAİİ'ler COX'u inhibe ederek prostaglandin ve tromboksan üretimini azaltır.",
+      "D": "Lökotrien reseptör (CysLT₁) antagonistleri ayrı bir ilaç grubudur.",
+      "E": "TNF'yi biyolojik ajanlar hedefler."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Eikozanoid yolunu hedefleyen ilaç–hedef eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "NSAİİ – siklooksijenaz",
+      "B": "Zileuton – 5-lipoksijenaz",
+      "C": "Lökotrien reseptör antagonistleri – CysLT₁ reseptörü",
+      "D": "Kortikosteroidler – fosfolipaz A₂ ve COX-2 ekspresyonu",
+      "E": "Zileuton – tromboksan reseptörü"
+     },
+     "dogru": "E",
+     "aciklama": "Zileuton 5-lipoksijenaz inhibitörüdür; lökotrien sentezini azaltır.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: NSAİİ – siklooksijenaz.",
+      "B": "Doğru eşleştirme: zileuton – 5-lipoksijenaz.",
+      "C": "Doğru eşleştirme; alerjik astım ve rinitte kullanılır.",
+      "D": "Doğru eşleştirme; ayrıca IL-1/TNF üretimi ve iNOS ekspresyonu azalır.",
+      "E": "Yanlış eşleştirme (aranan cevap). Zileuton 5-lipoksijenaz inhibitörüdür; lökotrien sentezini azaltır."
+     },
+     "bilgi": [
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Kortikosteroidlerin NSAİİ'lere göre daha geniş anti-enflamatuvar etki göstermesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca COX-1'i inhibe etmeleri",
+      "B": "Fosfolipaz A₂'yi inhibe ederek hem COX hem lipoksijenaz ürünlerini azaltmaları; ayrıca COX-2, IL-1/TNF ve iNOS ekspresyonunu baskılamaları",
+      "C": "Yalnızca histamin reseptörlerini bloke etmeleri",
+      "D": "Kompleman sistemini aktive etmeleri",
+      "E": "Yalnızca lökotrien reseptörlerini bloke etmeleri"
+     },
+     "dogru": "B",
+     "aciklama": "Kortikosteroidler araşidonik asit salınımını en başta (fosfolipaz A₂) engeller ve sitokin üretimini de baskılar; bu nedenle hem eikozanoid hem sitokin yanıtı azalır.",
+     "sik_aciklamalari": {
+      "A": "Kortikosteroidler seçici COX-1 inhibitörü değildir.",
+      "B": "Doğru. Kortikosteroidler araşidonik asit salınımını en başta (fosfolipaz A₂) engeller ve sitokin üretimini de baskılar; bu nedenle hem eikozanoid hem sitokin yanıtı azalır.",
+      "C": "Histamin reseptör blokajı antihistaminiklerin etkisidir.",
+      "D": "Kortikosteroidler komplemanı aktive etmez.",
+      "E": "Bu lökotrien reseptör antagonistlerinin etkisidir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Sitokinleri (TNF, IL-1, IL-6) ve lokal/sistemik etkilerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "TNF ve IL-1'in sistemik etkileri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Ateş",
+      "B": "Akut faz yanıtı",
+      "C": "Lökositoz",
+      "D": "Sepsiste şok",
+      "E": "Hipotermi ve lökopeni ile enflamasyonun baskılanması"
+     },
+     "dogru": "E",
+     "aciklama": "TNF ve IL-1 ateş, akut faz yanıtı (CRP, SAA, fibrinojen) ve lökositoz yapar; yüksek TNF sepsiste şok ve kaşeksiye yol açar.",
+     "sik_aciklamalari": {
+      "A": "Yer alır; hipotalamusta PGE₂ üretimiyle ateş oluşur.",
+      "B": "Yer alır; karaciğerde CRP, SAA ve fibrinojen üretimi artar.",
+      "C": "Yer alır: lökositoz.",
+      "D": "Yer alır; vazodilatasyon ve miyokard depresyonu şoka yol açar.",
+      "E": "Yer almaz (aranan cevap). TNF ve IL-1 ateş, akut faz yanıtı (CRP, SAA, fibrinojen) ve lökositoz yapar; yüksek TNF sepsiste şok ve kaşeksiye yol açar."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": [
+      "b8556fcf0419"
+     ]
+    },
+    {
+     "id": "k1-12-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "TNF ve IL-1'in enflamasyon bölgesindeki lokal etkileri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Endotelde ICAM/VCAM ekspresyonunu ve prokoagülan aktiviteyi artırır, lökosit adezyon-göç-aktivasyonunu güçlendirir.",
+      "B": "Endotel adezyon moleküllerini azaltarak lökosit göçünü engeller.",
+      "C": "Fibroblastlarda kollajen sentezini durdurur.",
+      "D": "Yalnızca antiviral etki gösterir.",
+      "E": "Lokal etkisi yoktur; yalnızca sistemik etkilidir."
+     },
+     "dogru": "A",
+     "aciklama": "TNF ve IL-1 endoteli aktive eder, lökosit göçünü artırır ve fibroblastlarda kollajen sentezini uyararak doku yeniden düzenlenmesine katkıda bulunur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. TNF ve IL-1 endoteli aktive eder, lökosit göçünü artırır ve fibroblastlarda kollajen sentezini uyararak doku yeniden düzenlenmesine katkıda bulunur.",
+      "B": "Adezyon moleküllerinin ekspresyonu artar.",
+      "C": "Kollajen sentezi artar.",
+      "D": "Antiviral etki tip I interferonların özelliğidir.",
+      "E": "Hem lokal hem sistemik etkileri vardır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q24",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Karaciğerde akut faz proteinlerinin sentezini uyarmasıyla bilinen başlıca sitokin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IL-4",
+      "B": "IL-10",
+      "C": "IL-6",
+      "D": "IL-2",
+      "E": "Tip I interferon"
+     },
+     "dogru": "C",
+     "aciklama": "IL-6 karaciğerde akut faz yanıtını (CRP, SAA, fibrinojen) uyarır; TNF ve IL-1 de bu yanıta katkıda bulunur.",
+     "sik_aciklamalari": {
+      "A": "IL-4 Th2 yanıtıyla ilişkilidir.",
+      "B": "IL-10 anti-enflamatuvar etkilidir.",
+      "C": "Doğru. IL-6 karaciğerde akut faz yanıtını (CRP, SAA, fibrinojen) uyarır; TNF ve IL-1 de bu yanıta katkıda bulunur.",
+      "D": "IL-2 T hücre çoğalmasını uyarır.",
+      "E": "Tip I interferonlar antiviraldir."
+     },
+     "bilgi": [
+      22,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q25",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Mononükleer fagositer sistemin (makrofajların) güçlü bir aktivatörü olan ve kronik hücresel immün yanıtın temel sitokini sayılan molekül aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IL-10",
+      "B": "IL-4",
+      "C": "IL-17",
+      "D": "IFN-γ",
+      "E": "IL-6"
+     },
+     "dogru": "D",
+     "aciklama": "IL-12 IFN-γ üretimini artırarak Th1 yanıtını güçlendirir; IFN-γ makrofajları aktive eder.",
+     "sik_aciklamalari": {
+      "A": "IL-10 makrofaj aktivasyonunu baskılar.",
+      "B": "IL-4 Th2 yanıtında rol oynar.",
+      "C": "IL-17 nötrofil alımını destekler; psöriyazis ve romatoid artritte rol oynar.",
+      "D": "Doğru. IL-12 IFN-γ üretimini artırarak Th1 yanıtını güçlendirir; IFN-γ makrofajları aktive eder.",
+      "E": "IL-6 akut faz yanıtını uyarır."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": [
+      "5fbd3dae5a91"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "b8556fcf0419",
+     "soru": "Sitokinler ilgili hangisi yanlıştır?",
+     "secenekler": {
+      "A": "IL-1, IL-6, TNF-a ateş yüksekliğinin oluşmasında rol oynar",
+      "B": "IL-8 kemotaksis mekanizmasında rol alır",
+      "C": "IL-1 antiinflamatuvar bir sitokindir",
+      "D": "Endotel, nötrofil ve makrofajdan yüzey reseptörlerininin lipopolisakkarite yapışması sonucu IL-6 sentezi uyarılır",
+      "E": "Sitokinler akut faz reaktanlarının salınımda rol oynar"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "5fbd3dae5a91",
+     "soru": "Aşağıdaki sitokinlerden hangisi mononükleer fagositer sistemin güçlü bir aktivatörüdür?",
+     "secenekler": {
+      "A": "INF-gama",
+      "B": "IL-2",
+      "C": "IL-4",
+      "D": "IL-10",
+      "E": "IL-12"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Kemokinlerin başlıca işlevlerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q26",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Kemokinlerin temel işlevi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lökositler için kemoatraktan olmak",
+      "B": "Kan pıhtılaşmasını başlatmak",
+      "C": "Hücre zarını lize etmek",
+      "D": "Antikor üretmek",
+      "E": "Glikojen depolamak"
+     },
+     "dogru": "A",
+     "aciklama": "Kemokinler 8-10 kDa küçük sitokinlerdir; temel işlevleri lökositler için kemoatraktan olmaktır ve yaklaşık 20 reseptörleri vardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kemokinler 8-10 kDa küçük sitokinlerdir; temel işlevleri lökositler için kemoatraktan olmaktır ve yaklaşık 20 reseptörleri vardır.",
+      "B": "Pıhtılaşma koagülasyon kaskadıyla başlar.",
+      "C": "Hücre lizisini kompleman MAC yapar.",
+      "D": "Antikorları plazma hücreleri üretir.",
+      "E": "Glikojen depolamak kemokin işlevi değildir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q27",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Kemokinler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "8-10 kDa büyüklüğünde küçük sitokinlerdir.",
+      "B": "Hücre dışı matriks ve endotel yüzeyinde proteoglikanlara bağlanarak tutulurlar.",
+      "C": "İnflamatuvar kemokinler mikrop ve doku hasarıyla indüklenir.",
+      "D": "Homeostatik kemokinler lenfoid doku organizasyonunu sağlar.",
+      "E": "Yalnızca enflamasyon sırasında üretilirler; normal hücre yerleşiminde görevleri yoktur."
+     },
+     "dogru": "E",
+     "aciklama": "Kemokinlerin bir kısmı (homeostatik kemokinler) normal koşullarda lenfoid doku organizasyonu ve hücre yerleşiminde görev alır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: 8-10 kDa büyüklüğünde küçük sitokinlerdir.",
+      "B": "Doğru ifade; bu sayede kemotaktik gradyan oluşur.",
+      "C": "Doğru ifade: i̇nflamatuvar kemokinler mikrop ve doku hasarıyla indüklenir.",
+      "D": "Doğru ifade: homeostatik kemokinler lenfoid doku organizasyonunu sağlar.",
+      "E": "Yanlış ifade (aranan cevap). Kemokinlerin bir kısmı (homeostatik kemokinler) normal koşullarda lenfoid doku organizasyonu ve hücre yerleşiminde görev alır."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q28",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Kemokinlerin endotel yüzeyindeki proteoglikanlara bağlanarak tutulmasının enflamasyondaki önemi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kemokinlerin kanla hızla seyrelmesini sağlamak",
+      "B": "Endotel yüzeyinde yüksek konsantrasyonda sunularak lökositlerde integrin aktivasyonunu ve yönlü göçü sağlamak",
+      "C": "Kompleman aktivasyonunu engellemek",
+      "D": "Trombosit agregasyonunu inhibe etmek",
+      "E": "Lökositlerin apoptozunu indüklemek"
+     },
+     "dogru": "B",
+     "aciklama": "Yüzeyde tutulan kemokinler yuvarlanan lökositi aktive eder (integrinlerin yüksek afiniteli forma geçişi) ve doku içinde kemotaktik gradyan oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Bağlanma tersine kemokinlerin yerel konsantrasyonunu korur.",
+      "B": "Doğru. Yüzeyde tutulan kemokinler yuvarlanan lökositi aktive eder (integrinlerin yüksek afiniteli forma geçişi) ve doku içinde kemotaktik gradyan oluşturur.",
+      "C": "Kemokinlerin kompleman üzerinde böyle bir etkisi yoktur.",
+      "D": "Trombosit agregasyonu kemokinlerin işlevi değildir.",
+      "E": "Kemokinler lökosit apoptozunu indüklemez."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Kompleman sisteminin aktivasyon yollarını ve etkilerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q29",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Kompleman sisteminin üç aktivasyon yolunun ortak buluşma noktası aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "C1 aktivasyonu",
+      "B": "Mannoz bağlayıcı lektin bağlanması",
+      "C": "C3 konvertaz oluşumu",
+      "D": "Antijen-antikor kompleksi",
+      "E": "Faktör H bağlanması"
+     },
+     "dogru": "C",
+     "aciklama": "Klasik (antijen-antikor, C1), alternatif (mikrobiyal yüzey) ve lektin (MBL) yolları C3 konvertaz oluşumunda birleşir.",
+     "sik_aciklamalari": {
+      "A": "C1 yalnızca klasik yolu başlatır.",
+      "B": "MBL yalnızca lektin yolunu başlatır.",
+      "C": "Doğru. Klasik (antijen-antikor, C1), alternatif (mikrobiyal yüzey) ve lektin (MBL) yolları C3 konvertaz oluşumunda birleşir.",
+      "D": "Antijen-antikor kompleksi klasik yolun tetikleyicisidir.",
+      "E": "Faktör H düzenleyici proteindir; C3 konvertazı inaktive eder."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q30",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Kompleman ürünleri ve başlıca etkileri eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "C3a ve C5a – anafilatoksin; histamin salınımını uyarır",
+      "B": "C5a – güçlü kemotaktik ajan",
+      "C": "C3b – opsonizasyon",
+      "D": "C5b-C9 – membran atak kompleksi ile hücre lizisi",
+      "E": "C3b – Neisseria türlerinin lizisinde temel membran atak kompleksi"
+     },
+     "dogru": "E",
+     "aciklama": "C3b opsonindir; Neisseria türlerinin öldürülmesinde önemli olan membran atak kompleksi C5b-C9'dur.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: C3a ve C5a – anafilatoksin; histamin salınımını uyarır.",
+      "B": "Doğru eşleştirme: C5a – güçlü kemotaktik ajan.",
+      "C": "Doğru eşleştirme: C3b – opsonizasyon.",
+      "D": "Doğru eşleştirme: C5b-C9 – membran atak kompleksi ile hücre lizisi.",
+      "E": "Yanlış eşleştirme (aranan cevap). C3b opsonindir; Neisseria türlerinin öldürülmesinde önemli olan membran atak kompleksi C5b-C9'dur."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": [
+      "5877a336f3a3"
+     ]
+    },
+    {
+     "id": "k1-12-q31",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Terminal kompleman bileşenleri (C5-C9) eksikliği olan bir hastada en çok beklenen klinik sorun aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tekrarlayan Neisseria enfeksiyonları",
+      "B": "Kalıtsal anjiyoödem",
+      "C": "Paroksismal noktürnal hemoglobinüri",
+      "D": "Lökosit adezyon eksikliği",
+      "E": "Tekrarlayan viral siğiller"
+     },
+     "dogru": "A",
+     "aciklama": "Membran atak kompleksi (C5b-C9) özellikle Neisseria türlerinin öldürülmesinde önemlidir; eksikliğinde tekrarlayan Neisseria enfeksiyonları görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Membran atak kompleksi (C5b-C9) özellikle Neisseria türlerinin öldürülmesinde önemlidir; eksikliğinde tekrarlayan Neisseria enfeksiyonları görülür.",
+      "B": "Kalıtsal anjiyoödem C1-INH eksikliğine bağlıdır.",
+      "C": "PNH DAF/CD59 (GPI bağlı) eksikliğine bağlıdır.",
+      "D": "Lökosit adezyon eksikliği integrin/selektin ligand mutasyonlarına bağlıdır.",
+      "E": "Viral siğiller kompleman MAC eksikliğinin tipik sonucu değildir."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "5877a336f3a3",
+     "soru": "Tıbbi Patoloji sisteminde opsonizasyonda ve fagositozda görevli kompleman hangisidir?",
+     "secenekler": {
+      "A": "C6",
+      "B": "C3b",
+      "C": "C5a",
+      "D": "C3",
+      "E": "C5b-9"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Kompleman düzenleyici proteinleri ve eksikliklerinin sonuçlarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q32",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "C1 inhibitörü (C1-INH) eksikliğinde gelişen klinik tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Paroksismal noktürnal hemoglobinüri",
+      "B": "Kalıtsal anjiyoödem",
+      "C": "Hemolitik üremik sendrom",
+      "D": "Kistik fibrozis",
+      "E": "Tay-Sachs hastalığı"
+     },
+     "dogru": "B",
+     "aciklama": "C1-INH klasik yolu düzenler; eksikliğinde kalıtsal anjiyoödem gelişir.",
+     "sik_aciklamalari": {
+      "A": "PNH DAF ve CD59 eksikliğine bağlıdır.",
+      "B": "Doğru. C1-INH klasik yolu düzenler; eksikliğinde kalıtsal anjiyoödem gelişir.",
+      "C": "HÜS faktör H eksikliğiyle ilişkilidir.",
+      "D": "Kistik fibrozis CFTR mutasyonuna bağlıdır.",
+      "E": "Tay-Sachs heksozaminidaz eksikliğidir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q33",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Kompleman düzenleyici proteinler ve eksikliklerinde görülen hastalıklar eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "DAF ve CD59 eksikliği – paroksismal noktürnal hemoglobinüri",
+      "B": "Faktör H eksikliği – kalıtsal anjiyoödem",
+      "C": "C1-INH eksikliği – hemolitik üremik sendrom",
+      "D": "DAF eksikliği – kistik fibrozis",
+      "E": "CD59 eksikliği – tekrarlayan Neisseria enfeksiyonu"
+     },
+     "dogru": "A",
+     "aciklama": "GPI bağlı DAF ve CD59 eritrositleri komplemandan korur; eksikliğinde PNH gelişir. Faktör H eksikliği HÜS ve ıslak maküler dejenerasyonla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. GPI bağlı DAF ve CD59 eritrositleri komplemandan korur; eksikliğinde PNH gelişir. Faktör H eksikliği HÜS ve ıslak maküler dejenerasyonla ilişkilidir.",
+      "B": "Kalıtsal anjiyoödem C1-INH eksikliğidir.",
+      "C": "HÜS faktör H eksikliğiyle ilişkilidir.",
+      "D": "Kistik fibrozis CFTR hastalığıdır.",
+      "E": "Tekrarlayan Neisseria enfeksiyonu terminal kompleman eksikliğinde görülür."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q34",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Gece boyunca hemoliz atakları ve sabah koyu renkli idrar ile başvuran bir hastada eritrositlerin komplemana bağlı lizise duyarlı olmasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "C1-INH fazlalığı",
+      "B": "Terminal kompleman bileşenlerinin eksikliği",
+      "C": "Eritrosit yüzeyinde GPI bağlı düzenleyici proteinlerin (DAF/CD59) eksikliği",
+      "D": "Lökosit adezyon molekülü eksikliği",
+      "E": "Faktör H fazlalığı"
+     },
+     "dogru": "C",
+     "aciklama": "DAF ve CD59 C3 konvertaz ve MAC oluşumunu sınırlar; GPI bağlantı eksikliğinde eritrositler kompleman lizisine açık kalır (PNH).",
+     "sik_aciklamalari": {
+      "A": "C1-INH fazlalığı komplemanı baskılar; hemoliz yapmaz.",
+      "B": "Terminal kompleman eksikliği lizisi azaltır.",
+      "C": "Doğru. DAF ve CD59 C3 konvertaz ve MAC oluşumunu sınırlar; GPI bağlantı eksikliğinde eritrositler kompleman lizisine açık kalır (PNH).",
+      "D": "Lökosit adezyon eksikliği hemoliz yapmaz.",
+      "E": "Faktör H fazlalığı kompleman aktivasyonunu sınırlar."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Kallikrein-kinin sistemini, PAF ve nitrik oksidi açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q35",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Kallikrein aracılığıyla plazma kininojenlerinden oluşan, geçirgenlik artışı, arteriyol vazodilatasyonu ve ağrı yapan mediyatör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Histamin",
+      "B": "Serotonin",
+      "C": "Bradikinin",
+      "D": "PAF",
+      "E": "Tromboksan A₂"
+     },
+     "dogru": "C",
+     "aciklama": "Bradikinin kinin sisteminin ürünüdür; kinazlar tarafından hızla yıkılır.",
+     "sik_aciklamalari": {
+      "A": "Histamin mast hücresi kaynaklı vazoaktif amindir.",
+      "B": "Serotonin trombosit kaynaklı vazoaktif amindir.",
+      "C": "Doğru. Bradikinin kinin sisteminin ürünüdür; kinazlar tarafından hızla yıkılır.",
+      "D": "PAF fosfolipid türevi bir mediyatördür.",
+      "E": "TxA₂ trombosit kaynaklı eikozanoiddir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q36",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Nitrik oksit (NO) ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Çözünür bir gazdır.",
+      "B": "Endotelde eNOS, nöronlarda nNOS, makrofajlarda iNOS ile üretilir.",
+      "C": "Enflamasyonda vazodilatasyon yapar.",
+      "D": "Peroksinitrit oluşumuyla mikrobisidal aktivite sağlar.",
+      "E": "Güçlü vazokonstriktördür ve trombosit agregasyonunu artırır."
+     },
+     "dogru": "E",
+     "aciklama": "NO vazodilatördür; makrofajlarda iNOS ile üretilen NO peroksinitrit oluşturarak mikropları öldürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: çözünür bir gazdır.",
+      "B": "Doğru ifade: endotelde eNOS, nöronlarda nNOS, makrofajlarda iNOS ile üretilir.",
+      "C": "Doğru ifade: enflamasyonda vazodilatasyon yapar.",
+      "D": "Doğru ifade: peroksinitrit oluşumuyla mikrobisidal aktivite sağlar.",
+      "E": "Yanlış ifade (aranan cevap). NO vazodilatördür; makrofajlarda iNOS ile üretilen NO peroksinitrit oluşturarak mikropları öldürür."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q37",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Trombosit aktive edici faktör (PAF) ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Karaciğerde sentezlenen bir plazma proteinidir.",
+      "B": "Fosfolipid türevi bir mediyatördür; trombosit agregasyonu ve bronkokonstriksiyon yapar, düşük dozda vazodilatasyon ve geçirgenlik artışına yol açar.",
+      "C": "Yalnızca nöronlardan salınır.",
+      "D": "Siklooksijenaz yolunun ürünüdür.",
+      "E": "Kompleman membran atak kompleksinin bileşenidir."
+     },
+     "dogru": "B",
+     "aciklama": "PAF trombosit, bazofil, mast hücresi, nötrofil, makrofaj ve endotelden salınan fosfolipid türevi mediyatördür; akut enflamasyondaki önemi tartışmalıdır.",
+     "sik_aciklamalari": {
+      "A": "PAF bir protein değil, fosfolipid türevidir.",
+      "B": "Doğru. PAF trombosit, bazofil, mast hücresi, nötrofil, makrofaj ve endotelden salınan fosfolipid türevi mediyatördür; akut enflamasyondaki önemi tartışmalıdır.",
+      "C": "PAF birçok lökosit, trombosit ve endotelden salınır.",
+      "D": "PAF eikozanoid değildir.",
+      "E": "MAC C5b-C9'dan oluşur."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "Nöropeptitleri ve mediyatörlerin fazlalığı-sinerjisini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-12-q38",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Duyusal sinirlerden salınarak ağrı sinyal iletimine ve enflamatuvar yanıtın başlatılmasına katkıda bulunan mediyatör grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nöropeptitler",
+      "B": "Lipoksinler",
+      "C": "Opsoninler",
+      "D": "Akut faz proteinleri",
+      "E": "İmmünoglobulinler"
+     },
+     "dogru": "A",
+     "aciklama": "Nöropeptitler duyusal sinirler ve bazı lökositlerden salınır; ağrı iletimi ve düz kas kontraksiyonu yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Nöropeptitler duyusal sinirler ve bazı lökositlerden salınır; ağrı iletimi ve düz kas kontraksiyonu yapar.",
+      "B": "Lipoksinler anti-enflamatuvar eikozanoidlerdir.",
+      "C": "Opsoninler fagositozu kolaylaştırır.",
+      "D": "Akut faz proteinleri karaciğerde üretilir.",
+      "E": "İmmünoglobulinler plazma hücrelerinden salınır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q39",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi enflamasyon tedavisinde hedeflenen 'stratejik düğüm noktaları' arasında yer almaz?",
+     "secenekler": {
+      "A": "Siklooksijenaz",
+      "B": "TNF",
+      "C": "IL-1 ve IL-6",
+      "D": "IL-17",
+      "E": "Hemoglobin sentezi"
+     },
+     "dogru": "E",
+     "aciklama": "Tedavide COX, lökotrien yolu, TNF, IL-1, IL-6, IL-17 ve kompleman gibi düğüm noktaları hedeflenir.",
+     "sik_aciklamalari": {
+      "A": "Hedeflenir; NSAİİ'ler.",
+      "B": "Hedeflenir; anti-TNF ajanlar.",
+      "C": "Hedeflenir: IL-1 ve IL-6.",
+      "D": "Hedeflenir; psöriyazis ve romatoid artritte.",
+      "E": "Yer almaz (aranan cevap); hemoglobin sentezi enflamasyon mediyatörü değildir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-12-q40",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Ağır bir enflamatuvar hastalıkta yalnızca antihistaminik tedavi verildiğinde yanıtın kısmi kalması en iyi aşağıdakilerden hangisiyle açıklanır?",
+     "secenekler": {
+      "A": "Histaminin enflamasyonda hiçbir rolü yoktur.",
+      "B": "Mediyatörlerin fazlalığı ve sinerjisi nedeniyle diğer yollar (eikozanoidler, sitokinler, kompleman, kininler) yanıtı sürdürür.",
+      "C": "Antihistaminikler histamin üretimini artırır.",
+      "D": "Enflamasyon yalnızca histaminle yürür.",
+      "E": "Histamin H2 reseptörü aracılığıyla etki ettiği için H1 blokörleri işe yaramaz."
+     },
+     "dogru": "B",
+     "aciklama": "Mediyatörler birbirini yedekler ve güçlendirir; bir yolun bloke edilmesi yanıtı genellikle tamamen durdurmaz.",
+     "sik_aciklamalari": {
+      "A": "Histamin erken vasküler olaylarda önemlidir.",
+      "B": "Doğru. Mediyatörler birbirini yedekler ve güçlendirir; bir yolun bloke edilmesi yanıtı genellikle tamamen durdurmaz.",
+      "C": "Antihistaminikler reseptörü bloke eder; üretimi artırmaz.",
+      "D": "Enflamasyon çok sayıda mediyatörle yürür.",
+      "E": "Histaminin enflamasyondaki etkisi H1 reseptörü aracılığıyladır."
+     },
+     "bilgi": [
+      34,
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 40,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:18"
+}

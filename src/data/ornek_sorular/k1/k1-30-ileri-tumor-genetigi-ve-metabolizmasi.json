@@ -1,0 +1,838 @@
+{
+ "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi",
+ "sira": 30,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "İleri Tümör Genetiği ve Metabolizması",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": null,
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Retinoblastoma proteininin (RB) hücre döngüsünün G1/S kontrol noktasındaki rolünü ve iki vuruş (two-hit) hipotezini ailesel ve sporadik retinoblastom örnekleriyle açıklar.",
+   "sorular": [
+    {
+     "id": "k1-30-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki genlerden hangisinin işlev kaybı tümör gelişimine yol açar?",
+     "secenekler": {
+      "A": "RAS",
+      "B": "MYC",
+      "C": "Retinoblastom (RB) geni",
+      "D": "BCL2",
+      "E": "ABL"
+     },
+     "dogru": "C",
+     "aciklama": "RB keşfedilen ilk tümör baskılayıcı gendir; G1/S geçişinin ana negatif düzenleyicisidir ve kaybı kontrolsüz proliferasyona yol açar.",
+     "sik_aciklamalari": {
+      "A": "RAS proto-onkogendir; işlev kazanımı tümör yapar.",
+      "B": "MYC proto-onkogendir; aşırı ekspresyonu tümör yapar.",
+      "C": "Doğru. RB keşfedilen ilk tümör baskılayıcı gendir; G1/S geçişinin ana negatif düzenleyicisidir ve kaybı kontrolsüz proliferasyona yol açar.",
+      "D": "BCL2 antiapoptotik gendir; aşırı ekspresyonu tümörü destekler.",
+      "E": "ABL proto-onkogendir; BCR ile füzyonu onkojeniktir."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": [
+      "d3-b-124"
+     ]
+    },
+    {
+     "id": "k1-30-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "RB proteininin işlevi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hiperfosforile RB aktiftir ve E2F'yi bağlar.",
+      "B": "p16 RB fosforilasyonunu artırır.",
+      "C": "RB fosforilasyonu siklin B-CDK1 tarafından G1'de yapılır.",
+      "D": "Hipofosforile RB aktiftir, E2F transkripsiyon faktörlerini bağlayıp baskılar ve G1/S geçişini engeller.",
+      "E": "RB kaybı hücre döngüsünü G1'de kalıcı olarak durdurur."
+     },
+     "dogru": "D",
+     "aciklama": "Büyüme faktörleri siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile ederek inaktive eder ve E2F serbestleşir. p16 ve p21 bu fosforilasyonu engeller.",
+     "sik_aciklamalari": {
+      "A": "Hiperfosforile RB inaktiftir.",
+      "B": "p16 CDK4/6 inhibitörüdür; fosforilasyonu azaltır.",
+      "C": "RB'yi siklin D-CDK4/6 ve siklin E-CDK2 fosforile eder.",
+      "D": "Doğru. Büyüme faktörleri siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile ederek inaktive eder ve E2F serbestleşir. p16 ve p21 bu fosforilasyonu engeller.",
+      "E": "RB kaybı G1/S kontrolünü kaldırır ve proliferasyonu artırır."
+     },
+     "bilgi": [
+      1,
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Ailesel ve sporadik retinoblastomun karşılaştırılmasında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ailesel formda her iki RB aleli germ hattında mutant olarak miras alınır.",
+      "B": "Sporadik form ailesel formdan daha erken yaşta görülür.",
+      "C": "Ailesel formda bir mutant alel germ hattında miras alınır, ikinci alel somatik olarak inaktive olur; sporadik formda aynı hücrede iki bağımsız somatik olay gerekir.",
+      "D": "RB mutasyonu hücre düzeyinde dominant etkilidir.",
+      "E": "Retinoblastomda iki vuruş hipotezi geçerli değildir."
+     },
+     "dogru": "C",
+     "aciklama": "Kalıtım otozomal dominant eğilimli olsa da hücre düzeyinde mutasyon etkisi resesiftir; sporadik hastalık iki bağımsız olay gerektirdiğinden daha geç ve nadir görülür.",
+     "sik_aciklamalari": {
+      "A": "Germ hattında bir mutant alel miras alınır.",
+      "B": "Sporadik form daha geç ortaya çıkar.",
+      "C": "Doğru. Kalıtım otozomal dominant eğilimli olsa da hücre düzeyinde mutasyon etkisi resesiftir; sporadik hastalık iki bağımsız olay gerektirdiğinden daha geç ve nadir görülür.",
+      "D": "Hücre düzeyinde etki resesiftir.",
+      "E": "Retinoblastom iki vuruş hipotezinin prototipidir."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi RB yolunu bozarak RB'nin sürekli hiperfosforile (inaktif) kalmasına yol açan onkojenik değişikliklerden biri değildir?",
+     "secenekler": {
+      "A": "Siklin D amplifikasyonu",
+      "B": "CDK4 aktive edici mutasyonu",
+      "C": "p16 (CDKN2A) delesyonu",
+      "D": "HPV E7 proteininin RB'ye bağlanması",
+      "E": "p21 (CDKN1A) ekspresyonunun artması"
+     },
+     "dogru": "E",
+     "aciklama": "p21 bir CDK inhibitörüdür; artışı RB fosforilasyonunu önler ve G1'de durmaya yol açar. CDKN2A delesyonu pankreas, melanom ve baş-boyun karsinomlarında sıktır.",
+     "sik_aciklamalari": {
+      "A": "RB yolunu bozan değişikliktir.",
+      "B": "RB yolunu bozan değişikliktir.",
+      "C": "RB yolunu bozan değişikliktir; epigenetik susturma da görülür.",
+      "D": "E7 RB'ye bağlanıp E2F'yi serbestleştirir ve p21'i inhibe eder.",
+      "E": "Bozan değişiklik değildir (aranan cevap); tersine RB'yi aktif tutar."
+     },
+     "bilgi": [
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": [
+      "0af2ce32aaca"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-124",
+     "soru": "Aşağıdaki genlerden hangisinin kaybı tümör gelişimine neden olur?",
+     "secenekler": {
+      "A": "Bcl-2 geni",
+      "B": "Ras geni",
+      "C": "MYC geni",
+      "D": "Retinoblastom geni",
+      "E": "ABL geni"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "0af2ce32aaca",
+     "soru": "HPV E7 viral onkoproteini etkisini hangisi üzerinden oluşturur?",
+     "secenekler": {
+      "A": "Retinoblastom tümör baskılayıcı geni p53",
+      "B": "p16",
+      "C": "p27",
+      "D": "Siklin D1",
+      "E": "p16"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "TP53'ün aktivasyon mekanizmasını, üç temel işlevini (geçici durma, senesens, apoptoz) ve TP53 mutasyonlarının (Li-Fraumeni sendromu, MDM2 amplifikasyonu) sonuçlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-30-q05",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Stres yokken p53'e bağlanarak onu proteazomal yıkıma hedefleyen ve düzeyini düşük tutan protein aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "PUMA",
+      "B": "ATM",
+      "C": "p21",
+      "D": "MDM2",
+      "E": "GADD45"
+     },
+     "dogru": "D",
+     "aciklama": "Normalde p53'ün yarı ömrü ~20 dakikadır; MDM2 p53'ü yıkıma götürür. Stresle ATM/ATR p53'ü fosforile eder ve MDM2'den ayırır.",
+     "sik_aciklamalari": {
+      "A": "PUMA p53'ün apoptozu başlatan hedef genidir.",
+      "B": "ATM DNA hasarında p53'ü fosforile ederek aktive eder.",
+      "C": "p21 p53'ün hedef genidir; CDK'ları inhibe eder.",
+      "D": "Doğru. Normalde p53'ün yarı ömrü ~20 dakikadır; MDM2 p53'ü yıkıma götürür. Stresle ATM/ATR p53'ü fosforile eder ve MDM2'den ayırır.",
+      "E": "GADD45 p53'ün DNA onarımıyla ilişkili hedef genidir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "DNA hasarı sonrası p53 aktivasyonunun sonuçları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "p21 aracılığıyla G1'de geçici durma ve onarıma zaman kazanılması",
+      "B": "Onarım başarılıysa MDM2 artışıyla p53'ün kendi yıkımını sağlaması",
+      "C": "Onarılamayan hasarda senesens",
+      "D": "Onarılamayan hasarda PUMA ve BAX aracılı apoptoz",
+      "E": "Hasarlı hücrenin hızla bölünmeye zorlanması"
+     },
+     "dogru": "E",
+     "aciklama": "p53'ün üç işlevi geçici durma, senesens ve apoptozdur; amaç hasarlı hücrenin çoğalmasını önlemektir.",
+     "sik_aciklamalari": {
+      "A": "p53 sonucudur: p21 aracılığıyla G1'de geçici durma ve onarıma zaman kazanılması.",
+      "B": "p53 sonucudur; negatif geri besleme döngüsüdür.",
+      "C": "p53 sonucudur: onarılamayan hasarda senesens.",
+      "D": "p53 sonucudur; mitokondriyal yol aktive olur.",
+      "E": "Yer almaz (aranan cevap). p53'ün üç işlevi geçici durma, senesens ve apoptozdur; amaç hasarlı hücrenin çoğalmasını önlemektir."
+     },
+     "bilgi": [
+      9,
+      12,
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Genç yaşta sarkom, meme kanseri ve adrenal korteks karsinomu gelişen ve ailesinde çok sayıda erken başlangıçlı kanser bulunan bir hastada en olası sendrom aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lynch sendromu",
+      "B": "Nörofibromatozis tip 2",
+      "C": "Ailesel adenomatöz polipozis",
+      "D": "Li-Fraumeni sendromu",
+      "E": "Kseroderma pigmentozum"
+     },
+     "dogru": "D",
+     "aciklama": "Li-Fraumeni sendromunda germ hattında bir mutant TP53 aleli bulunur; erken yaşta sarkom, meme kanseri, lösemi, beyin tümörü ve adrenal korteks karsinomu gelişir.",
+     "sik_aciklamalari": {
+      "A": "Lynch MMR defektidir; kolorektal ve endometrium kanserleri öne çıkar.",
+      "B": "NF2 sinir kılıfı tümörleri ve meningiomlarla ilişkilidir.",
+      "C": "FAP APC mutasyonudur; kolon polipozisi yapar.",
+      "D": "Doğru. Li-Fraumeni sendromunda germ hattında bir mutant TP53 aleli bulunur; erken yaşta sarkom, meme kanseri, lösemi, beyin tümörü ve adrenal korteks karsinomu gelişir.",
+      "E": "Kseroderma pigmentozum UV ilişkili deri kanserleri yapar."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "p53'ün aktivasyon yolu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Stres ATM/ATR kinazlarını aktive eder; p53 fosforile olur, MDM2'den ayrılır, çekirdekte birikir ve p21, GADD45, PUMA gibi hedef genleri uyarır.",
+      "B": "p53 yalnızca hücre zarındaki reseptörlerle aktive olur.",
+      "C": "p53 aktivasyonu MDM2 bağlanmasının artmasıyla olur.",
+      "D": "p53'ün yarı ömrü normalde günlerdir.",
+      "E": "Hipoksi p53'ü etkilemez."
+     },
+     "dogru": "A",
+     "aciklama": "DNA hasarı, hipoksi ve onkogenik sinyal gibi stresler p53'ü stabilize eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru. DNA hasarı, hipoksi ve onkogenik sinyal gibi stresler p53'ü stabilize eder.",
+      "B": "p53 bir transkripsiyon faktörüdür; hücre içi stres yollarıyla aktive olur.",
+      "C": "Aktivasyon MDM2'den ayrılmayla olur.",
+      "D": "Yarı ömrü ~20 dakikadır.",
+      "E": "Hipoksi p53'ü aktive eden streslerdendir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q08",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "TP53 geni mutasyona uğramamış olan bazı sarkomlarda p53'ün işlevsiz kalmasının mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "MDM2 amplifikasyonu ile p53'ün aşırı yıkıma uğraması",
+      "B": "p21 aşırı ekspresyonu",
+      "C": "ATM aktivitesinin artması",
+      "D": "BAX aşırı ekspresyonu",
+      "E": "RB'nin hipofosforile kalması"
+     },
+     "dogru": "A",
+     "aciklama": "MDM2 amplifikasyonu p53'ü sürekli yıkıma götürür; DNA hasarına rağmen durma ve onarım olmaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru. MDM2 amplifikasyonu p53'ü sürekli yıkıma götürür; DNA hasarına rağmen durma ve onarım olmaz.",
+      "B": "p21 artışı hücre döngüsünü durdurur; p53 işlev kaybını açıklamaz.",
+      "C": "ATM aktivitesi p53'ü aktive eder.",
+      "D": "BAX apoptozu kolaylaştırır.",
+      "E": "Hipofosforile RB aktif olup proliferasyonu baskılar."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "TGF-β, E-kadherin/NF2 ve APC/β-katenin/WNT tümör baskılayıcı yollarının işleyişini ve bağlam bağımlı davranışlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-30-q10",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Sporadik kolon karsinomlarının %70-80'inde mutasyona uğrayan ve germ hattı mutasyonu ailesel adenomatöz polipozise yol açan gen aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "APC",
+      "B": "NF2",
+      "C": "TP53",
+      "D": "IDH1",
+      "E": "RB"
+     },
+     "dogru": "A",
+     "aciklama": "APC β-katenin yıkım kompleksinin parçasıdır; kaybında β-katenin birikir ve WNT yolu sürekli aktif kalır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. APC β-katenin yıkım kompleksinin parçasıdır; kaybında β-katenin birikir ve WNT yolu sürekli aktif kalır.",
+      "B": "NF2 kaybı nörofibromatozis tip 2 ile ilişkilidir.",
+      "C": "TP53 Li-Fraumeni ile ilişkilidir.",
+      "D": "IDH1 gliom ve AML'de mutasyona uğrar.",
+      "E": "RB retinoblastomla ilişkilidir."
+     },
+     "bilgi": [
+      21,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q14",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "NF2 geninin (merlin) kaybı ile ilişkili tümörler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sinir kılıfı tümörleri ve meningiomlar",
+      "B": "Kolon adenomları",
+      "C": "Retinoblastom",
+      "D": "Kronik miyeloid lösemi",
+      "E": "Gliom (IDH mutant)"
+     },
+     "dogru": "A",
+     "aciklama": "NF2 temas inhibisyonu yolunda rol oynar; kaybı nörofibromatozis tip 2 ile sinir kılıfı tümörleri ve meningiomlara yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. NF2 temas inhibisyonu yolunda rol oynar; kaybı nörofibromatozis tip 2 ile sinir kılıfı tümörleri ve meningiomlara yol açar.",
+      "B": "Kolon adenomları APC ile ilişkilidir.",
+      "C": "Retinoblastom RB ile ilişkilidir.",
+      "D": "KML BCR-ABL ile ilişkilidir.",
+      "E": "Gliomlar IDH mutasyonuyla ilişkilidir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q11",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "WNT yolu ve APC kaybı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "APC β-katenini stabilize ederek çekirdeğe taşır.",
+      "B": "β-katenin yalnızca hücre zarında görev yapar, transkripsiyonla ilgisi yoktur.",
+      "C": "APC kaybında WNT uyarısı olmasa bile β-katenin birikir, çekirdekte TCF ile büyüme genlerini aktive eder ve proliferasyon sürekli uyarılır.",
+      "D": "WNT uyarısı yıkım kompleksini aktive eder.",
+      "E": "APC kaybı proliferasyonu durdurur."
+     },
+     "dogru": "C",
+     "aciklama": "β-katenin hem E-kadherin ile adezyonda hem WNT yolunda transkripsiyon kofaktörü olarak görev yapar; APC normalde onu yıkım için işaretler.",
+     "sik_aciklamalari": {
+      "A": "APC β-katenini yıkım için işaretler.",
+      "B": "β-katenin WNT yolunda transkripsiyon kofaktörüdür.",
+      "C": "Doğru. β-katenin hem E-kadherin ile adezyonda hem WNT yolunda transkripsiyon kofaktörü olarak görev yapar; APC normalde onu yıkım için işaretler.",
+      "D": "WNT uyarısı yıkım kompleksini devre dışı bırakır.",
+      "E": "APC kaybı proliferasyonu artırır."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q12",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kanserde E-kadherin kaybı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hücre kohezyonunu artırır ve invazyonu azaltır.",
+      "B": "E-kadherin kaybı yalnızca hematolojik malignitelerde önemlidir.",
+      "C": "E-kadherin bir anjiyogenez faktörüdür.",
+      "D": "Epitelyal-mezenkimal geçişin (EMT) kilit olayıdır; SNAIL ve TWIST gibi faktörlerle baskılanır, hücre kohezyonu azalır ve invazyon artar.",
+      "E": "E-kadherin temas inhibisyonunu bozmaz."
+     },
+     "dogru": "D",
+     "aciklama": "E-kadherin epitelde temel adezyon molekülüdür; polarite ve temas inhibisyonu için önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Kayıp kohezyonu azaltır ve invazyonu artırır.",
+      "B": "Özellikle epitelyal tümörlerde önemlidir.",
+      "C": "E-kadherin adezyon molekülüdür.",
+      "D": "Doğru. E-kadherin epitelde temel adezyon molekülüdür; polarite ve temas inhibisyonu için önemlidir.",
+      "E": "E-kadherin temas inhibisyonu için gereklidir; kaybı bunu bozar."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q13",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "TGF-β yolunun kanserdeki 'iki yüzlü' davranışı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "TGF-β kanserin her evresinde yalnızca tümör baskılayıcıdır.",
+      "B": "TGF-β normal epitelde proliferasyonu güçlü biçimde uyarır.",
+      "C": "Erken evrede TGF-β yolunun kaybı büyüme frenini kaldırır; ileri evrede TGF-β EMT, invazyon, metastaz ve immün baskılayıcı mikroçevreyle tümörü destekleyebilir.",
+      "D": "TGF-β SMAD proteinleri üzerinden MYC ve CDK4'ü aktive eder.",
+      "E": "TGF-β reseptör mutasyonları kanserde hiç görülmez."
+     },
+     "dogru": "C",
+     "aciklama": "TGF-β normalde SMAD'lar üzerinden MYC ve CDK4'ü baskılayarak proliferasyonu inhibe eder; ancak davranışı bağlama bağımlıdır.",
+     "sik_aciklamalari": {
+      "A": "İleri evrede tümörü destekleyebilir.",
+      "B": "Normalde proliferasyonun güçlü inhibitörüdür.",
+      "C": "Doğru. TGF-β normalde SMAD'lar üzerinden MYC ve CDK4'ü baskılayarak proliferasyonu inhibe eder; ancak davranışı bağlama bağımlıdır.",
+      "D": "MYC ve CDK4'ü baskılar.",
+      "E": "Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Warburg etkisini, onkogenlerin (RAS-PI3K/AKT, MYC, TP53) metabolizmayı düzenlemesini ve FDG-PET'teki klinik yansımasını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-30-q15",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Tümör hücrelerinin oksijen varlığında bile glikozu laktata çeviren aerobik glikolizi tercih etmesine ne ad verilir?",
+     "secenekler": {
+      "A": "Pasteur etkisi",
+      "B": "Otofaji",
+      "C": "Warburg etkisi",
+      "D": "Senesens",
+      "E": "Anöploidi"
+     },
+     "dogru": "C",
+     "aciklama": "Warburg etkisinde ATP üretimi düşük olsa da glikoliz ara ürünleri nükleotid, amino asit ve lipit sentezi için karbon iskeleti sağlar.",
+     "sik_aciklamalari": {
+      "A": "Pasteur etkisi oksijenin glikolizi baskılamasıdır; tümörlerde tersine aerobik glikoliz vardır.",
+      "B": "Otofaji hücrenin kendi bileşenlerini yıkmasıdır.",
+      "C": "Doğru. Warburg etkisinde ATP üretimi düşük olsa da glikoliz ara ürünleri nükleotid, amino asit ve lipit sentezi için karbon iskeleti sağlar.",
+      "D": "Senesens kalıcı hücre döngüsü durmasıdır.",
+      "E": "Anöploidi anormal kromozom sayısıdır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q16",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Tümörlerin FDG-PET ile görüntülenmesinin biyolojik temeli aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tümörlerin glikoz alımının azalması",
+      "B": "Tümörlerin yalnızca oksidatif fosforilasyon kullanması",
+      "C": "Tümörlerin kalsiyum biriktirmesi",
+      "D": "Warburg etkisiyle tümör hücrelerinin glikoz alımının artması; özellikle yüksek proliferatif tümörlerin yüksek FDG tutması",
+      "E": "Tümör damarlarının avasküler olması"
+     },
+     "dogru": "D",
+     "aciklama": "FDG 18F-işaretli glikoz analoğudur; primer tümör ve metastaz taraması ile tedavi yanıtı izleminde kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Tümörlerde glikoz alımı artar.",
+      "B": "Tümörler aerobik glikolize yönelir.",
+      "C": "FDG kalsiyumu göstermez.",
+      "D": "Doğru. FDG 18F-işaretli glikoz analoğudur; primer tümör ve metastaz taraması ile tedavi yanıtı izleminde kullanılır.",
+      "E": "Tümörler anjiyogenez gösterir."
+     },
+     "bilgi": [
+      24,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q18",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hızla bölünen tümör hücreleri için aerobik glikolizin avantajı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Glikoz başına en yüksek ATP verimini sağlaması",
+      "B": "Laktat üretiminin tamamen engellenmesi",
+      "C": "Hücrenin bölünmesini durdurması",
+      "D": "Glikoliz ara ürünlerinin nükleotid, amino asit ve lipit sentezi için karbon iskeleti sağlaması",
+      "E": "Oksijen tüketiminin artması"
+     },
+     "dogru": "D",
+     "aciklama": "Warburg metabolizması ATP açısından verimsiz olsa da biyosentez için gereken yapı taşlarını sağlar.",
+     "sik_aciklamalari": {
+      "A": "Aerobik glikolizde ATP üretimi nispeten düşüktür.",
+      "B": "Glikoz laktata çevrilir.",
+      "C": "Amaç bölünmeyi desteklemektir.",
+      "D": "Doğru. Warburg metabolizması ATP açısından verimsiz olsa da biyosentez için gereken yapı taşlarını sağlar.",
+      "E": "Aerobik glikoliz oksijen tüketimine dayanmaz."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q17",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Onkogen ve tümör baskılayıcıların hücre metabolizması üzerine etkileri ile ilgili eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "RAS-PI3K/AKT – glikoz taşıyıcı ve glikolitik enzim ekspresyonunda artış",
+      "B": "MYC – glikolitik ve glutaminolitik enzimlerde artış, glutamin bağımlılığı",
+      "C": "TP53 – büyüme destekleyici metabolik genlerin baskılanması",
+      "D": "Onkogen aktivasyonu ve tümör baskılayıcı kaybı – Warburg metabolizmasının sürdürülmesi",
+      "E": "MYC – glikolizin tamamen durdurulması ve oksidatif fosforilasyona kesin geçiş"
+     },
+     "dogru": "E",
+     "aciklama": "MYC glikoliz ve glutaminoliz enzimlerini artırarak büyüme için metabolik ara ürün üretimini destekler.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: RAS-PI3K/AKT – glikoz taşıyıcı ve glikolitik enzim ekspresyonunda artış.",
+      "B": "Doğru eşleştirme: MYC – glikolitik ve glutaminolitik enzimlerde artış, glutamin bağımlılığı.",
+      "C": "Doğru eşleştirme: TP53 – büyüme destekleyici metabolik genlerin baskılanması.",
+      "D": "Doğru ifade: onkogen aktivasyonu ve tümör baskılayıcı kaybı – Warburg metabolizmasının sürdürülmesi.",
+      "E": "Yanlış eşleştirme (aranan cevap). MYC glikoliz ve glutaminoliz enzimlerini artırarak büyüme için metabolik ara ürün üretimini destekler."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Otofajinin kanserdeki çift yönlü rolünü ve tedavi direnciyle ilişkisini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-30-q19",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Otofajinin kanserdeki rolü ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Her evrede yalnızca tümör baskılayıcıdır.",
+      "B": "Erken evrede hasarlı organelleri temizleyerek tümör baskılayıcı olabilir, geç evrede tümör sağkalımını destekleyebilir.",
+      "C": "Kanserle hiçbir ilişkisi yoktur.",
+      "D": "Yalnızca normal hücrelerde görülür.",
+      "E": "Her zaman tümörü yok eder."
+     },
+     "dogru": "B",
+     "aciklama": "Otofaji besin eksikliğinde hücrenin kendi bileşenlerini yıkıp enerji sağlamasıdır; kanserde çift yönlü rol oynar.",
+     "sik_aciklamalari": {
+      "A": "Geç evrede tümörü destekleyebilir.",
+      "B": "Doğru. Otofaji besin eksikliğinde hücrenin kendi bileşenlerini yıkıp enerji sağlamasıdır; kanserde çift yönlü rol oynar.",
+      "C": "Otofaji kanserde önemli bir rol oynar.",
+      "D": "Tümör hücreleri de otofajiyi kullanır.",
+      "E": "Otofaji tümör sağkalımını da destekleyebilir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q20",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kemoterapi ve radyoterapi sonrası bazı tümör hücrelerinin hayatta kalıp yıllar sonra nüks yapmasında otofajinin rolü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Otofajinin tümör hücrelerini hızla öldürmesi",
+      "B": "Tümör hücrelerinin otofajiyi aktive ederek DNA hasarı, metabolik stres ve hipoksiye dayanıp uykuda kalabilmesi",
+      "C": "Otofajinin DNA onarımını tamamen engellemesi",
+      "D": "Otofajinin anjiyogenezi durdurması",
+      "E": "Otofajinin tümör hücrelerini normal hücreye dönüştürmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Otofaji stres altında sağkalım yanıtı olarak tedavi direncine ve nükse katkıda bulunabilir; otofaji modülatörleri gelecekte kombinasyon tedavilerinde yer alabilir.",
+     "sik_aciklamalari": {
+      "A": "Otofaji burada sağkalımı destekler.",
+      "B": "Doğru. Otofaji stres altında sağkalım yanıtı olarak tedavi direncine ve nükse katkıda bulunabilir; otofaji modülatörleri gelecekte kombinasyon tedavilerinde yer alabilir.",
+      "C": "Otofajinin bu şekilde bir etkisi yoktur.",
+      "D": "Otofaji anjiyogenezi durdurmaz.",
+      "E": "Otofaji hücreyi normale döndürmez."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q21",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Otofaji ve kanser tedavisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Otofaji normalde adaptif bir sağkalım yanıtıdır.",
+      "B": "Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkarak enerji sağlar.",
+      "C": "Tedavi kaynaklı stres altında tümör hücreleri otofajiyi aktive edebilir.",
+      "D": "Otofaji modülatörleri gelecekte kombinasyon tedavilerinde yer alabilir.",
+      "E": "Otofajinin tedavi direnci ve nükslerle hiçbir ilişkisi yoktur."
+     },
+     "dogru": "E",
+     "aciklama": "Otofaji tümör hücrelerinin tedavi stresine dayanmasını sağlayarak direnç ve nükse katkıda bulunabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: otofaji normalde adaptif bir sağkalım yanıtıdır.",
+      "B": "Doğru ifade: şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkarak enerji sağlar.",
+      "C": "Doğru ifade: tedavi kaynaklı stres altında tümör hücreleri otofajiyi aktive edebilir.",
+      "D": "Doğru ifade: otofaji modülatörleri gelecekte kombinasyon tedavilerinde yer alabilir.",
+      "E": "Yanlış ifade (aranan cevap). Otofaji tümör hücrelerinin tedavi stresine dayanmasını sağlayarak direnç ve nükse katkıda bulunabilir."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Onkojenik IDH mutasyonlarının 2-hidroksiglutarat (onkojenik metabolit) üretimi üzerinden epigenetik değişiklikler yapmasını ve klinik önemini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-30-q22",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Onkojenik IDH mutasyonu sonucu üretilen 'onkometabolit' aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Laktat",
+      "B": "2-hidroksiglutarat (2-HG)",
+      "C": "α-ketoglutarat",
+      "D": "Sitrat",
+      "E": "Süksinil-CoA"
+     },
+     "dogru": "B",
+     "aciklama": "Mutant IDH normal izositrat-α-ketoglutarat dönüşümünü kaybeder ve 2-HG üretir; 2-HG TET2'yi inhibe ederek epigenetik değişikliklere yol açar.",
+     "sik_aciklamalari": {
+      "A": "Laktat Warburg glikolizinin ürünüdür.",
+      "B": "Doğru. Mutant IDH normal izositrat-α-ketoglutarat dönüşümünü kaybeder ve 2-HG üretir; 2-HG TET2'yi inhibe ederek epigenetik değişikliklere yol açar.",
+      "C": "α-ketoglutarat normal IDH reaksiyonunun ürünüdür.",
+      "D": "Sitrat Krebs döngüsü ara ürünüdür.",
+      "E": "Süksinil-CoA Krebs döngüsü ara ürünüdür."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q23",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "2-hidroksiglutaratın onkojenik etkisinin mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "TET2'yi inhibe ederek geniş çaplı DNA ve histon metilasyon değişiklikleriyle onkojenik gen ekspresyonuna yol açması",
+      "B": "Doğrudan BCR-ABL füzyonu oluşturması",
+      "C": "p53'ü MDM2'den ayırması",
+      "D": "VEGF'yi nötralize etmesi",
+      "E": "E-kadherin ekspresyonunu artırması"
+     },
+     "dogru": "A",
+     "aciklama": "IDH mutasyonları metabolizma ile epigenetik arasındaki bağlantının örneğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. IDH mutasyonları metabolizma ile epigenetik arasındaki bağlantının örneğidir.",
+      "B": "Füzyon genleri translokasyonla oluşur.",
+      "C": "Bu stres yanıtında ATM/ATR aracılı olaydır.",
+      "D": "VEGF'yi bevacizumab nötralize eder.",
+      "E": "2-HG'nin böyle bir etkisi tanımlanmamıştır."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q24",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "IDH mutasyonlarının klinik önemi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "IDH mutasyonu yalnızca meme kanserinde görülür.",
+      "B": "Düşük-orta dereceli gliomlar, bazı AML alt tipleri, bazı kolanjiyokarsinomlar ve sarkomlarda görülür; mutant IDH inhibitörleri özellikle AML'de onaylanmıştır.",
+      "C": "IDH mutant tümörler için hedefe yönelik bir tedavi geliştirilmemiştir.",
+      "D": "IDH mutasyonu tümör baskılayıcı işlev kaybıdır.",
+      "E": "IDH mutasyonu 2-HG üretimini azaltır."
+     },
+     "dogru": "B",
+     "aciklama": "IDH mutasyonları homojen alt tipler tanımlar ve hedefe yönelik tedavi için moleküler hedef oluşturur.",
+     "sik_aciklamalari": {
+      "A": "IDH mutasyonu gliom, AML, kolanjiyokarsinom ve sarkomlarda görülür.",
+      "B": "Doğru. IDH mutasyonları homojen alt tipler tanımlar ve hedefe yönelik tedavi için moleküler hedef oluşturur.",
+      "C": "Mutant IDH inhibitörleri AML'de onaylanmıştır.",
+      "D": "Onkojenik IDH mutasyonu yeni bir işlev (2-HG üretimi) kazandırır.",
+      "E": "Mutasyon 2-HG üretimine yol açar."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Tümör anjiyogenezinin mekanizmasını (HIF-1α/VEGF) ve anti-anjiyojen tedavinin (bevacizumab) ilke ve sınırlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-30-q25",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Hipoksik tümör dokusunda VEGF transkripsiyonunu artıran transkripsiyon faktörü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "HIF-1α",
+      "B": "E2F",
+      "C": "TCF",
+      "D": "SMAD",
+      "E": "NF-κB"
+     },
+     "dogru": "A",
+     "aciklama": "Hipoksi HIF-1α'yı stabilize eder ve VEGF transkripsiyonu artar; RAS ve MYC gibi onkogenler de anjiyojenik faktörleri artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hipoksi HIF-1α'yı stabilize eder ve VEGF transkripsiyonu artar; RAS ve MYC gibi onkogenler de anjiyojenik faktörleri artırır.",
+      "B": "E2F G1/S geçişini sağlayan transkripsiyon faktörüdür.",
+      "C": "TCF WNT/β-katenin yolunun transkripsiyon faktörüdür.",
+      "D": "SMAD'lar TGF-β sinyalinin aracılarıdır.",
+      "E": "NF-κB enflamasyon ve sağkalım genlerini düzenler; burada anahtar faktör HIF-1α'dır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q26",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Tümör damarlarının özellikleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tümör damarları normal damarlardan daha düzenli ve sızdırmazdır.",
+      "B": "Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF ve FGF üretir.",
+      "C": "Tümör damarları metastazı engeller.",
+      "D": "Tümörler yeni damar oluşturmadan sınırsız büyüyebilir.",
+      "E": "Tümörle ilişkili makrofajlar anjiyogenezi baskılar."
+     },
+     "dogru": "B",
+     "aciklama": "Anormal tümör damarları oksijen ve besin sağlar ve metastatik hücrelerin dolaşıma girmesini kolaylaştırır.",
+     "sik_aciklamalari": {
+      "A": "Tümör damarları düzensiz ve sızıntılıdır.",
+      "B": "Doğru. Anormal tümör damarları oksijen ve besin sağlar ve metastatik hücrelerin dolaşıma girmesini kolaylaştırır.",
+      "C": "Tümör damarları metastazı kolaylaştırır.",
+      "D": "Büyüme için anjiyogenez gereklidir.",
+      "E": "Tümörle ilişkili makrofajlar anjiyojenik faktör üretir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q28",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Anti-anjiyojen tedavi ve kanser tedavisinde ağ düzeyinde yaklaşım ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tek bir yolak hedeflendiğinde kanser her zaman kalıcı olarak iyileşir.",
+      "B": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; RB, TP53, PI3K/AKT ve anjiyogenez gibi nodal noktaları hedefleyen kombinasyon yaklaşımları gerekebilir.",
+      "C": "Bevacizumab tek başına yaşam süresini yıllarca uzatır.",
+      "D": "Anjiyogenez tümör büyümesi için gereksizdir.",
+      "E": "Tümör mikroçevresinin tedaviye yanıtta rolü yoktur."
+     },
+     "dogru": "B",
+     "aciklama": "Bevacizumab yaşam süresini genellikle aylar düzeyinde uzatır; tek hedefli tedavinin sınırları kombinasyon stratejilerini gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Tek hedefli tedavilere direnç sıktır.",
+      "B": "Doğru. Bevacizumab yaşam süresini genellikle aylar düzeyinde uzatır; tek hedefli tedavinin sınırları kombinasyon stratejilerini gerektirir.",
+      "C": "Fayda genellikle aylar düzeyindedir.",
+      "D": "Anjiyogenez tümör büyümesi için gereklidir.",
+      "E": "Mikroçevre tedaviye yanıtı etkiler."
+     },
+     "bilgi": [
+      33,
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-q27",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Metastatik kolorektal kanserli bir hastada bevacizumab tedavisine başlangıçta yanıt alındıktan sonra hastalığın yeniden ilerlemesinin olası mekanizmaları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Tümörün başka anjiyojenik faktörlere geçmesi",
+      "B": "Stromal adaptasyon gelişmesi",
+      "C": "Tümörün daha invaziv bir fenotipe kayması",
+      "D": "Çoklu yolakların tümör büyümesini sürdürmesi",
+      "E": "Bevacizumabın VEGF'yi aktive ederek anjiyogenezi artırması"
+     },
+     "dogru": "E",
+     "aciklama": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; faydası kısmi ve geçicidir çünkü tümörler alternatif yollara geçebilir.",
+     "sik_aciklamalari": {
+      "A": "Direnç mekanizmasıdır.",
+      "B": "Direnç mekanizmasıdır.",
+      "C": "Direnç mekanizmasıdır.",
+      "D": "Direnç mekanizmasıdır; kombinasyon stratejilerini gerekçelendirir.",
+      "E": "Yer almaz (aranan cevap); bevacizumab VEGF'yi nötralize eder."
+     },
+     "bilgi": [
+      33,
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 28,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:51"
+}

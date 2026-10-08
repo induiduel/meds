@@ -1363,7 +1363,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
         {/* Tab: Dynamic Scripts & Tasks Hub */}
         {activeTab === 'scripts' && (
-          <div className="flex-1 overflow-hidden flex flex-col min-h-0">
+          <div className="flex-1 overflow-y-auto flex flex-col min-h-0 p-4">
             <AdminScriptsTab adminEmail={adminEmail} onRefreshAllData={onRefreshData} />
           </div>
         )}

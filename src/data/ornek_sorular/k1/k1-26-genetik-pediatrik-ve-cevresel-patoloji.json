@@ -1,0 +1,968 @@
+{
+ "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji",
+ "sira": 26,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Genetik, Pediatrik ve Çevresel Patoloji",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-09-25",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Hastalık gelişiminde genetik zemin, çevresel faktörler ve yaşam tarzı/beslenmeden oluşan \"üçlü çerçeve\"yi açıklamak",
+   "sorular": [
+    {
+     "id": "k1-26-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Hastalık gelişimini açıklayan 'üçlü çerçeve'nin bileşenleri aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Genetik zemin, çevresel faktörler, yaşam tarzı ve beslenme",
+      "B": "Yaş, cinsiyet, kan grubu",
+      "C": "Ateş, ağrı, şişlik",
+      "D": "Etiyoloji, prognoz, tedavi",
+      "E": "Hücre, doku, organ"
+     },
+     "dogru": "A",
+     "aciklama": "Hastalık çoğu zaman genetik zemin, çevresel faktörler ve yaşam tarzı/beslenmenin etkileşiminden doğar; klinikte bu üç bileşen birlikte değerlendirilmelidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hastalık çoğu zaman genetik zemin, çevresel faktörler ve yaşam tarzı/beslenmenin etkileşiminden doğar; klinikte bu üç bileşen birlikte değerlendirilmelidir.",
+      "B": "Bunlar demografik özelliklerdir.",
+      "C": "Bunlar enflamasyon bulgularıdır.",
+      "D": "Bunlar klinik süreç kavramlarıdır.",
+      "E": "Bunlar yapısal organizasyon düzeyleridir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Genetik yatkınlık ile çevresel faktörlerin etkileşimi ile ilgili aşağıdakilerden hangisi en doğrudur?",
+     "secenekler": {
+      "A": "Genetik zemin her zaman hastalığın kesin olarak ortaya çıkmasını belirler.",
+      "B": "Beslenme yalnızca enfeksiyon hastalıklarını etkiler.",
+      "C": "Çevresel faktörlerin genetik hastalıklar üzerinde hiçbir etkisi yoktur.",
+      "D": "Genetik yatkınlık zemini sağlar; çevre ve beslenme hastalığın zamanlamasını ve şiddetini belirler.",
+      "E": "Klinik değerlendirmede yalnızca genetik testler yeterlidir."
+     },
+     "dogru": "D",
+     "aciklama": "Entegre bakış açısında hasta biyopsikososyal ve çevresel bağlamda değerlendirilir.",
+     "sik_aciklamalari": {
+      "A": "Genetik zemin çoğu zaman yatkınlık oluşturur; ortaya çıkış çevreye de bağlıdır.",
+      "B": "Beslenme kronik hastalıkları da etkiler.",
+      "C": "Çevre genetik yatkınlığın ifadesini etkiler.",
+      "D": "Doğru. Entegre bakış açısında hasta biyopsikososyal ve çevresel bağlamda değerlendirilir.",
+      "E": "Genetik tek başına yeterli değildir; çevresel bağlam da değerlendirilir."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Aynı genetik yatkınlığa sahip iki kardeşten sigara içen ve obez olanında hastalığın daha erken ve ağır seyretmesi en iyi aşağıdakilerden hangisiyle açıklanır?",
+     "secenekler": {
+      "A": "Hastalığın tamamen çevresel olması",
+      "B": "Sigaranın genetik kodu değiştirerek yeni bir hastalık oluşturması",
+      "C": "Genetik yatkınlığın kardeşler arasında farklı olması zorunluluğu",
+      "D": "Genetik zeminin üzerine eklenen yaşam tarzı ve çevresel faktörlerin hastalığın zamanlaması ve şiddetini belirlemesi",
+      "E": "Obezitenin hiçbir hastalıkla ilişkisinin olmaması"
+     },
+     "dogru": "D",
+     "aciklama": "Üçlü çerçeveye göre genetik zemin yatkınlık sağlar; çevre ve yaşam tarzı hastalığın ortaya çıkışını ve seyrini belirler.",
+     "sik_aciklamalari": {
+      "A": "Genetik yatkınlık da rol oynar.",
+      "B": "Sigara DNA hasarı yapabilir ancak burada açıklama yaşam tarzı etkisidir.",
+      "C": "Soruda yatkınlıklar aynı kabul edilmiştir.",
+      "D": "Doğru. Üçlü çerçeveye göre genetik zemin yatkınlık sağlar; çevre ve yaşam tarzı hastalığın ortaya çıkışını ve seyrini belirler.",
+      "E": "Obezite birçok hastalık için risk faktörüdür."
+     },
+     "bilgi": [
+      1,
+      39
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "İnsan genomunun temel özelliklerini ve kodlamayan DNA'nın işlevlerini tanımlamak",
+   "sorular": [
+    {
+     "id": "k1-26-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "İnsan genomunda protein kodlayan bölgeler genomun yaklaşık ne kadarını oluşturur?",
+     "secenekler": {
+      "A": "%1,5",
+      "B": "%15",
+      "C": "%50",
+      "D": "%75",
+      "E": "%98"
+     },
+     "dogru": "A",
+     "aciklama": "Genom yaklaşık 3,3 milyar baz çiftidir; ~19.000 protein kodlayan gen genomun yalnızca ~%1,5'ini oluşturur, büyük kısmı kodlamayan DNA'dır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Genom yaklaşık 3,3 milyar baz çiftidir; ~19.000 protein kodlayan gen genomun yalnızca ~%1,5'ini oluşturur, büyük kısmı kodlamayan DNA'dır.",
+      "B": "Gerçek oran bunun çok altındadır.",
+      "C": "Genomun yarısı protein kodlamaz.",
+      "D": "Bu oran kodlamayan DNA için bile ifade edilmez.",
+      "E": "Bu oran genomun neredeyse tamamıdır; kodlamayan kısmı yaklaşık bu kadardır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kodlamayan DNA ve kromatin yapısı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Heterokromatin dağınık ve transkripsiyonel olarak aktiftir.",
+      "B": "Kodlamayan DNA'nın hiçbir düzenleyici işlevi yoktur.",
+      "C": "Güçlendirici (enhancer) bölgeler yalnızca hemen yanındaki geni etkileyebilir.",
+      "D": "Ökromatin dağınık ve transkripsiyonel olarak aktif, heterokromatin yoğun ve inaktiftir.",
+      "E": "Promotör bölgeler transkripsiyonu sonlandırır."
+     },
+     "dogru": "D",
+     "aciklama": "Kodlamayan DNA promotör, güçlendirici, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir; güçlendiriciler 100 kb veya daha uzaktan ekspresyonu düzenleyebilir.",
+     "sik_aciklamalari": {
+      "A": "Heterokromatin yoğun ve inaktiftir.",
+      "B": "Kodlamayan DNA gen ifadesini ince ayarla kontrol eder.",
+      "C": "Güçlendiriciler uzak mesafeden etki edebilir.",
+      "D": "Doğru. Kodlamayan DNA promotör, güçlendirici, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir; güçlendiriciler 100 kb veya daha uzaktan ekspresyonu düzenleyebilir.",
+      "E": "Promotör transkripsiyonu başlatır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi kodlamayan DNA içinde bulunan düzenleyici elemanlardan biri değildir?",
+     "secenekler": {
+      "A": "Promotör bölgeler",
+      "B": "Güçlendirici (enhancer) bölgeler",
+      "C": "Fibrillin-1 proteinini kodlayan ekzonlar",
+      "D": "Uzun kodlamayan RNA (lncRNA) genleri",
+      "E": "miRNA genleri"
+     },
+     "dogru": "C",
+     "aciklama": "Protein kodlayan ekzonlar genomun kodlayan kısmıdır; promotörler, güçlendiriciler ve düzenleyici RNA'lar kodlamayan DNA'nın düzenleyici elemanlarıdır.",
+     "sik_aciklamalari": {
+      "A": "Kodlamayan düzenleyici elemandır; transkripsiyonu başlatır.",
+      "B": "Kodlamayan düzenleyici elemandır.",
+      "C": "Yer almaz (aranan cevap); protein kodlayan bölgedir.",
+      "D": "Kodlamayan düzenleyici RNA'dır.",
+      "E": "Kodlamayan düzenleyici RNA'dır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Genetik varyasyon tiplerini (SNP, CNV) ve epigenetik düzenleme mekanizmalarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-26-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "DNA dizisi değişmeden gen ekspresyonunun kalıcı olarak düzenlenmesine ne ad verilir?",
+     "secenekler": {
+      "A": "Nokta mutasyonu",
+      "B": "Kromozomal translokasyon",
+      "C": "Epigenetik düzenleme",
+      "D": "Kopya sayısı varyasyonu",
+      "E": "Trizomi"
+     },
+     "dogru": "C",
+     "aciklama": "Epigenetik düzenlemenin temel mekanizmaları DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır.",
+     "sik_aciklamalari": {
+      "A": "Nokta mutasyonu DNA dizisinde değişikliktir.",
+      "B": "Translokasyon kromozom segmentlerinin yer değiştirmesidir.",
+      "C": "Doğru. Epigenetik düzenlemenin temel mekanizmaları DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır.",
+      "D": "CNV DNA segmentinin delesyon/duplikasyonudur.",
+      "E": "Trizomi kromozom sayısal anomalisidir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Genetik varyasyon tipleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "SNP binlerce-milyonlarca bazlık segmentin delesyonudur.",
+      "B": "CNV tek baz pozisyonundaki varyasyondur.",
+      "C": "SNP'ler ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkileyebilir; CNV'ler otizm ve gelişimsel gerilikle ilişkili olabilir.",
+      "D": "Bireyler arasındaki genetik fark dizinin %50'sidir.",
+      "E": "SNP'ler yalnızca kodlayan bölgelerde bulunur."
+     },
+     "dogru": "C",
+     "aciklama": "SNP tek baz varyasyonu, CNV büyük segmentlerin delesyon/duplikasyonudur; bireyler arası fark dizinin %0,5'inden azdır.",
+     "sik_aciklamalari": {
+      "A": "Bu tanım CNV'ye aittir.",
+      "B": "Bu tanım SNP'ye aittir.",
+      "C": "Doğru. SNP tek baz varyasyonu, CNV büyük segmentlerin delesyon/duplikasyonudur; bireyler arası fark dizinin %0,5'inden azdır.",
+      "D": "Bireyler arası fark %0,5'ten azdır.",
+      "E": "SNP'ler kodlayan ve kodlamayan bölgelerde bulunur."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Bir tümörde tümör baskılayıcı gen dizisinde mutasyon olmamasına rağmen genin ifade edilmediği saptanıyor.\n\nBu durumun en olası epigenetik mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Promotör bölgedeki sitozinlerin aşırı metilasyonuyla genin susturulması",
+      "B": "Genin ikinci bir kopyasının eklenmesi",
+      "C": "Histon asetilasyonunun artmasıyla kromatinin açılması",
+      "D": "Trizomi",
+      "E": "Ekzonda nokta mutasyonu"
+     },
+     "dogru": "A",
+     "aciklama": "Promotör bölgesinde ağır sitozin metilasyonu gen susturulmasına yol açar; kanserde tümör baskılayıcı gen promotörlerinde anormal metilasyon görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Promotör bölgesinde ağır sitozin metilasyonu gen susturulmasına yol açar; kanserde tümör baskılayıcı gen promotörlerinde anormal metilasyon görülür.",
+      "B": "Kopya eklenmesi CNV'dir ve ekspresyonu artırabilir.",
+      "C": "Histon asetilasyonu genellikle kromatini açar ve ekspresyonu artırır.",
+      "D": "Trizomi sayısal kromozom anomalisidir.",
+      "E": "Soruda dizi değişikliği olmadığı belirtilmiştir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Mendel tipi tek gen hastalıklarında otozomal dominant ve otozomal resesif kalıtımı özetlemek",
+   "sorular": [
+    {
+     "id": "k1-26-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Otozomal dominant kalıtımda etkilenmiş bir birey ile sağlıklı bir eşin çocuğunun hastalığı taşıma olasılığı her gebelik için ne kadardır?",
+     "secenekler": {
+      "A": "%0",
+      "B": "%25",
+      "C": "%50",
+      "D": "%75",
+      "E": "%100"
+     },
+     "dogru": "C",
+     "aciklama": "Otozomal dominant hastalıklarda heterozigot bireyde fenotip görülür; etkilenen × normal eş çiftinde her gebelikte risk %50'dir.",
+     "sik_aciklamalari": {
+      "A": "Etkilenen ebeveynden mutant alel geçebileceği için risk vardır.",
+      "B": "%25 iki taşıyıcı ebeveynde otozomal resesif hastalık riskidir.",
+      "C": "Doğru. Otozomal dominant hastalıklarda heterozigot bireyde fenotip görülür; etkilenen × normal eş çiftinde her gebelikte risk %50'dir.",
+      "D": "Bu oran iki heterozigot etkilenen ebeveynde fenotip görülme olasılığıdır.",
+      "E": "Heterozigot ebeveyn her zaman mutant aleli geçirmez."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Otozomal resesif kalıtımın özellikleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Fenotip her iki alel mutasyonlu olduğunda ortaya çıkar.",
+      "B": "Ebeveynler genellikle asemptomatik taşıyıcıdır.",
+      "C": "Hastalıkların çoğu enzim eksikliğidir.",
+      "D": "Heterozigot bireylerde hastalık tam olarak ortaya çıkar.",
+      "E": "Akraba evliliklerinde sıklık artar."
+     },
+     "dogru": "D",
+     "aciklama": "Otozomal resesif hastalıklarda heterozigotlar genellikle asemptomatik taşıyıcıdır; heterozigotta fenotip görülmesi otozomal dominant kalıtımın özelliğidir.",
+     "sik_aciklamalari": {
+      "A": "Otozomal resesif özelliğidir.",
+      "B": "Otozomal resesif özelliğidir.",
+      "C": "Otozomal resesif özelliğidir; çocuklukta başlama eğilimindedir.",
+      "D": "Yer almaz (aranan cevap). Otozomal resesif hastalıklarda heterozigotlar genellikle asemptomatik taşıyıcıdır; heterozigotta fenotip görülmesi otozomal dominant kalıtımın özelliğidir.",
+      "E": "Otozomal resesif özelliğidir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Mendel tipi kalıtım paternlerinde sıklıkla kodlanan protein türleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Otozomal dominant hastalıklarda sık kodlanan ürünler reseptörler, yapısal proteinler ve tümör baskılayıcılardır; otozomal resesiflerin çoğu enzim eksikliğidir.",
+      "B": "Otozomal dominant hastalıkların hepsi enzim eksikliğidir.",
+      "C": "Otozomal resesif hastalıklar yalnızca yapısal protein bozukluğudur.",
+      "D": "Tek gen hastalıklarında aile öyküsü önemsizdir.",
+      "E": "Mendel tipi hastalıklar birden fazla genin küçük etkileriyle oluşur."
+     },
+     "dogru": "A",
+     "aciklama": "Örneğin Marfan sendromu (yapısal protein, fibrillin-1) otozomal dominant, birçok metabolik hastalık (enzim eksikliği) otozomal resesiftir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Örneğin Marfan sendromu (yapısal protein, fibrillin-1) otozomal dominant, birçok metabolik hastalık (enzim eksikliği) otozomal resesiftir.",
+      "B": "Enzim eksiklikleri genellikle otozomal resesiftir.",
+      "C": "Otozomal resesiflerin çoğu enzim eksikliğidir; kistik fibroziste ise iyon kanalı etkilenir.",
+      "D": "Tek gen hastalıkları aile öyküsüyle güçlü ilişkilidir.",
+      "E": "Mendel tipi hastalıklarda tek gen belirleyicidir."
+     },
+     "bilgi": [
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Marfan sendromu ve kistik fibrozisin genetik temelini, patogenezini ve klinik bulgularını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-26-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Marfan sendromunda mutasyona uğrayan gen aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "CFTR",
+      "B": "BRCA1",
+      "C": "COL1A1",
+      "D": "FBN1 (fibrillin-1)",
+      "E": "PKD1"
+     },
+     "dogru": "D",
+     "aciklama": "Marfan sendromu FBN1 mutasyonuyla gelişen sistemik bağ dokusu hastalığıdır; aort duvarı, bağlar ve siliyer zonüller etkilenir.",
+     "sik_aciklamalari": {
+      "A": "CFTR kistik fibrozisle ilişkilidir.",
+      "B": "BRCA1 meme-over kanseri yatkınlık genidir.",
+      "C": "COL1A1 tip I kollajen genidir; Marfan'ın nedeni değildir.",
+      "D": "Doğru. Marfan sendromu FBN1 mutasyonuyla gelişen sistemik bağ dokusu hastalığıdır; aort duvarı, bağlar ve siliyer zonüller etkilenir.",
+      "E": "PKD1 otozomal dominant polikistik böbrek hastalığıyla ilişkilidir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Marfan sendromunda en çok hayatı tehdit eden komplikasyon ve mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aort kökü dilatasyonu ve diseksiyonu; fibrillin-1 eksikliğiyle elastik lif bütünlüğünün bozulması ve TGF-β sinyalinin artması",
+      "B": "Bronşiektazi; mukus dehidratasyonu",
+      "C": "Pankreas yetmezliği; kanal tıkanması",
+      "D": "Lösemi; trizomi 21",
+      "E": "Kurşun çizgileri; büyüme plağında kurşun birikimi"
+     },
+     "dogru": "A",
+     "aciklama": "Fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler; mutasyonla ekstraselüler matriks zayıflar, aort anevrizması ve diseksiyon riski artar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler; mutasyonla ekstraselüler matriks zayıflar, aort anevrizması ve diseksiyon riski artar.",
+      "B": "Bu kistik fibrozisin akciğer tutulumudur.",
+      "C": "Bu kistik fibrozisin pankreas tutulumudur.",
+      "D": "Lösemi riski Down sendromunda artar.",
+      "E": "Bu kurşun toksisitesi bulgusudur."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q15",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kistik fibrozisin patofizyolojisi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "CFTR bir sodyum pompasıdır ve hastalık otozomal dominant kalıtılır.",
+      "B": "Ter bezlerinde NaCl geri emilimi artar ve ter hipotoniktir.",
+      "C": "Solunum epitelinde klorür sekresyonu azalır, ENaC aktivitesi artar, su emilimi artar ve mukus dehidrate-visköz hale gelir.",
+      "D": "Mukus aşırı sulu hale gelir.",
+      "E": "Hastalık yalnızca akciğeri etkiler."
+     },
+     "dogru": "C",
+     "aciklama": "CFTR klorür ve bikarbonat kanalıdır; hastalık otozomal resesiftir. Ter bezlerinde NaCl geri emilimi azalır ve ter hipertonik, 'tuzlu'dur.",
+     "sik_aciklamalari": {
+      "A": "CFTR klorür-bikarbonat kanalıdır; kalıtım otozomal resesiftir.",
+      "B": "Ter bezlerinde NaCl geri emilimi azalır; ter tuzludur.",
+      "C": "Doğru. CFTR klorür ve bikarbonat kanalıdır; hastalık otozomal resesiftir. Ter bezlerinde NaCl geri emilimi azalır ve ter hipertonik, 'tuzlu'dur.",
+      "D": "Mukus dehidrate ve visközdür.",
+      "E": "Pankreas, bağırsak ve üreme sistemi de tutulur."
+     },
+     "bilgi": [
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q16",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Kistik fibrozis ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi gelişir.",
+      "B": "Pseudomonas aeruginosa ve Burkholderia cepacia önemli akciğer patojenleridir.",
+      "C": "Ter bezlerinde NaCl geri emiliminin artması nedeniyle ter hipotoniktir.",
+      "D": "Erkeklerde vas deferens agenezisi azospermi ve infertiliteye yol açar.",
+      "E": "Pankreasta kanal tıkanmasıyla ekzokrin yetmezlik ve malabsorpsiyon gelişir."
+     },
+     "dogru": "C",
+     "aciklama": "Kistik fibroziste ter bezlerinde NaCl geri emilimi azalır; ter hipertonik ve tuzludur (klasik bulgu).",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi gelişir.",
+      "B": "Doğru ifade; S. aureus ve tüberküloz dışı mikobakteriler de etkendir.",
+      "C": "Yanlış ifade (aranan cevap). Kistik fibroziste ter bezlerinde NaCl geri emilimi azalır; ter hipertonik ve tuzludur (klasik bulgu).",
+      "D": "Doğru ifade: erkeklerde vas deferens agenezisi azospermi ve infertiliteye yol açar.",
+      "E": "Doğru ifade: pankreasta kanal tıkanmasıyla ekzokrin yetmezlik ve malabsorpsiyon gelişir."
+     },
+     "bilgi": [
+      13,
+      14
+     ],
+     "benzer_cikmis": [
+      "d3-f-136"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-136",
+     "soru": "Kistik fibrozis hastalığı ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Temel olarak ekzokrin bezler ile respiratuar, gastrointestinal ve üreme kanallarının epitelinde sıvı salgılanmasını etkileyen bir epitelyal transport bozukluğudur.",
+      "B": "Kronik öksürük, persistan akciğer enfeksiyonları, obstrüktif akciğer hastalığı ve kor pulmonale gibi kardiyorespiratuar komplikasyonlar, Amerika Birleşik Devletleri'ndeki kistik fibrozis merkezlerinde takip edilen hastalardaki en sık ölüm nedenini (ölümlerin yaklaşık %80'ini) oluşturur.",
+      "C": "Kalın, yapışkan mukus tıkaçları bebeklerin ince bağırsaklarında da görülebilir; bazen bu, mekonyum ileusu adı verilen ince bağırsak obstrüksiyonuna neden olabilir.",
+      "D": "Terde düşük sodyum klorür düzeyi, kistik fibrozis için sabit ve karakteristik biyokimyasal anormalliktir.",
+      "E": "Tekrarlayan kronik akciğer enfeksiyonları ve pankreas yetmezliği, kistik fibrozisin morbidite ve mortalitesinden sorumlu iki temel klinik bulgusudur."
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Down sendromunun patogenezini ve klinik özelliklerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-26-q17",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Down sendromunun en sık oluşum mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Paternal mayozda nokta mutasyonu",
+      "B": "X kromozomu inaktivasyonu",
+      "C": "Mitokondriyal DNA mutasyonu",
+      "D": "Maternal mayozda kromozom ayrılamaması (nondisjunction)",
+      "E": "Epigenetik metilasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Down sendromu en sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması ile gelişir ve anne yaşı arttıkça risk artar.",
+     "sik_aciklamalari": {
+      "A": "Down sendromu nokta mutasyonu değil sayısal anomalidir.",
+      "B": "X inaktivasyonu Down sendromunu açıklamaz.",
+      "C": "Mitokondriyal DNA mutasyonu bu sendromun nedeni değildir.",
+      "D": "Doğru. Down sendromu en sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması ile gelişir ve anne yaşı arttıkça risk artar.",
+      "E": "Metilasyon değişikliği trizomi oluşturmaz."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q18",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Down sendromunda görülmesi beklenen bulgular arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Düz yüz profili ve epikantus",
+      "B": "Yukarı eğimli palpebral fissürler",
+      "C": "Zihinsel gerilik ve hipotoni",
+      "D": "Konjenital kalp defekti",
+      "E": "Uzun ince vücut, araknodaktili ve lens subluksasyonu"
+     },
+     "dogru": "E",
+     "aciklama": "Uzun ince vücut, araknodaktili ve lens subluksasyonu Marfan sendromunun bulgularıdır.",
+     "sik_aciklamalari": {
+      "A": "Down sendromu bulgusudur.",
+      "B": "Down sendromu bulgusudur.",
+      "C": "Down sendromu bulgusudur; IQ çoğunlukla 25-50'dir.",
+      "D": "Down sendromu bulgusudur (~%40).",
+      "E": "Yer almaz (aranan cevap); Marfan bulgularıdır."
+     },
+     "bilgi": [
+      16,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q19",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Down sendromlu bireylerde ileriki yaşamda riski artan durumlar aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Lösemi ve Alzheimer benzeri nöropatoloji",
+      "B": "Aort diseksiyonu ve lens subluksasyonu",
+      "C": "Bronşiektazi ve pankreas yetmezliği",
+      "D": "Kurşun nöropatisi ve bazofilik beneklenme",
+      "E": "Wernicke-Korsakoff sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "Down sendromunda konjenital kalp defektlerine ek olarak lösemi ve Alzheimer benzeri nöropatoloji riski artar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Down sendromunda konjenital kalp defektlerine ek olarak lösemi ve Alzheimer benzeri nöropatoloji riski artar.",
+      "B": "Bunlar Marfan sendromunun komplikasyonlarıdır.",
+      "C": "Bunlar kistik fibrozis bulgularıdır.",
+      "D": "Bunlar kurşun toksisitesi bulgularıdır.",
+      "E": "Wernicke-Korsakoff kronik alkol kullanımına bağlı tiamin eksikliğiyle ilişkilidir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Çevresel hastalık kavramını; iklim değişikliği, hava kirliliği, kurşun, tütün ve alkolün sağlık etkilerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-26-q20",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Akciğer kanserlerinin %80-90'ından sorumlu olan ve kanserlerin en yaygın dış kaynaklı nedeni kabul edilen etken aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Alkol",
+      "B": "Tütün",
+      "C": "Kurşun",
+      "D": "Aflatoksin",
+      "E": "Ozon"
+     },
+     "dogru": "B",
+     "aciklama": "Tütün dumanı ~2000 kimyasal içerir (polisiklik aromatik hidrokarbonlar, nitrozaminler vb.) ve kanserojen, aterojen ve trombojendir.",
+     "sik_aciklamalari": {
+      "A": "Alkol karaciğer, pankreas ve sinir sistemi hasarı yapar.",
+      "B": "Doğru. Tütün dumanı ~2000 kimyasal içerir (polisiklik aromatik hidrokarbonlar, nitrozaminler vb.) ve kanserojen, aterojen ve trombojendir.",
+      "C": "Kurşun nörolojik ve hematolojik toksisite yapar.",
+      "D": "Aflatoksin hepatoselüler karsinomla ilişkilidir.",
+      "E": "Ozon solunum epiteline zarar veren kirleticidir; akciğer kanserlerinin başlıca nedeni değildir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q21",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Eski binada yaşayan bir çocukta davranış bozukluğu, düşük IQ, mikrositer hipokromik anemi, eritrositlerde bazofilik beneklenme ve kemik grafisinde büyüme plağında radyo-opak çizgiler saptanıyor.\n\nEn olası neden aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Demir eksikliği anemisi",
+      "B": "Kurşun toksisitesi",
+      "C": "Karbon monoksit zehirlenmesi",
+      "D": "Kronik alkol kullanımı",
+      "E": "Ozon maruziyeti"
+     },
+     "dogru": "B",
+     "aciklama": "Kurşun kaynakları eski boyalar, su boruları ve kirli topraktır; çocuklarda oral emilim ve kan-beyin bariyeri geçirgenliği daha fazladır.",
+     "sik_aciklamalari": {
+      "A": "Demir eksikliği bazofilik beneklenme ve kurşun çizgileri yapmaz.",
+      "B": "Doğru. Kurşun kaynakları eski boyalar, su boruları ve kirli topraktır; çocuklarda oral emilim ve kan-beyin bariyeri geçirgenliği daha fazladır.",
+      "C": "CO zehirlenmesi akut hipoksi yapar; bu bulguları açıklamaz.",
+      "D": "Alkol çocukta bu tabloyu açıklamaz.",
+      "E": "Ozon solunum epiteline zarar verir."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q22",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Alkol metabolizması ve hepatik steatoz gelişimi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Alkolün ana metabolizma yolu MEOS'tur ve NADH/NAD⁺ oranı azalır.",
+      "B": "Alkol dehidrojenaz ile asetaldehit oluşur; NAD⁺ tüketimi NADH/NAD⁺ oranını artırır, yağ asidi oksidasyonu azalır ve steatoz gelişir.",
+      "C": "Alkol yağ asidi oksidasyonunu artırarak karaciğer yağını azaltır.",
+      "D": "Alkolün hepatik etkisi yalnızca akut dönemde görülür.",
+      "E": "Alkol metabolizmasında sitokrom P-450 hiç rol oynamaz."
+     },
+     "dogru": "B",
+     "aciklama": "Ana yol alkol dehidrojenazdır; yüksek dozda MEOS ve sitokrom P-450 devreye girer. Kronik kullanımda steatoz → steatohepatit → siroz ilerleyişi görülür.",
+     "sik_aciklamalari": {
+      "A": "Ana yol alkol dehidrojenazdır ve NADH/NAD⁺ oranı artar.",
+      "B": "Doğru. Ana yol alkol dehidrojenazdır; yüksek dozda MEOS ve sitokrom P-450 devreye girer. Kronik kullanımda steatoz → steatohepatit → siroz ilerleyişi görülür.",
+      "C": "Yağ asidi oksidasyonu azalır.",
+      "D": "Kronik kullanım karaciğer, pankreas, kalp ve sinir sistemi hasarı yapar.",
+      "E": "Yüksek dozda sitokrom P-450 (MEOS) devreye girer."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q24",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "İklim değişikliğinin sağlık üzerine etkileri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Sıcak hava dalgalarına bağlı kardiyovasküler ve solunum mortalitesinin artması",
+      "B": "Sel ve altyapı bozulmasıyla su ve gıda kaynaklı enfeksiyonların artması",
+      "C": "Vektör ekolojisinin değişmesiyle sıtma ve dang gibi hastalıkların yayılması",
+      "D": "Tarım verimindeki düşüşle yetersiz beslenme",
+      "E": "Vektör kaynaklı hastalıkların tamamen ortadan kalkması"
+     },
+     "dogru": "E",
+     "aciklama": "İklim değişikliği vektör ekolojisini değiştirerek vektör kaynaklı hastalıkların yayılımını artırabilir; zorunlu göç ve ruh sağlığı etkileri de görülür.",
+     "sik_aciklamalari": {
+      "A": "İklim değişikliği etkisidir.",
+      "B": "İklim değişikliği etkisidir.",
+      "C": "İklim değişikliği etkisidir.",
+      "D": "İklim değişikliği etkisidir.",
+      "E": "Yer almaz (aranan cevap). İklim değişikliği vektör ekolojisini değiştirerek vektör kaynaklı hastalıkların yayılımını artırabilir; zorunlu göç ve ruh sağlığı etkileri de görülür."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q25",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Sağlık eşitsizlikleri ve 'ırk' kavramı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Modern genetik biyolojik olarak keskin sınırlı ırklar bulunduğunu göstermiştir.",
+      "B": "'Irk' klinikte biyolojik değil sosyal bir kategori olarak ele alınmalıdır; dezavantajlı gruplar kirliliğe daha çok maruz kalır ve sağlık hizmetine daha zor erişir.",
+      "C": "Sağlık eşitsizliklerinin çevresel maruziyetle ilişkisi yoktur.",
+      "D": "Sosyal sınıf yaşam tarzı faktörlerini etkilemez.",
+      "E": "Kalabalık konutlar enfeksiyon yükünü azaltır."
+     },
+     "dogru": "B",
+     "aciklama": "Sağlık eşitsizliği hastalık insidansı, prevalansı, morbidite ve mortalitede topluluklar arası sistematik farktır; kardiyovasküler ve enfeksiyöz hastalık yükü dezavantajlı gruplarda artar.",
+     "sik_aciklamalari": {
+      "A": "Modern genetik keskin biyolojik ırklar olmadığını göstermiştir.",
+      "B": "Doğru. Sağlık eşitsizliği hastalık insidansı, prevalansı, morbidite ve mortalitede topluluklar arası sistematik farktır; kardiyovasküler ve enfeksiyöz hastalık yükü dezavantajlı gruplarda artar.",
+      "C": "Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır.",
+      "D": "Yaşam tarzı faktörleri sosyal sınıfla yakından ilişkilidir.",
+      "E": "Kalabalık ve yetersiz konutlar enfeksiyon yükünü artırır."
+     },
+     "bilgi": [
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q23",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Çevresel ve yaşam tarzı etkenleri ile sonuçları eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ozon – serbest radikal üretimi ve solunum epitel hasarı",
+      "B": "Tütün – ateroskleroz, trombosit agregasyonunda artış ve miyokard enfarktüsü",
+      "C": "Kronik alkol – tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu",
+      "D": "Kurşun – erişkinde periferik nöropati ve bilek-ayak düşmesi",
+      "E": "Aflatoksin – mide kanseri"
+     },
+     "dogru": "E",
+     "aciklama": "Aflatoksin (Aspergillus) hepatoselüler karsinomla; nitrozamin/nitrozamidler mide kanseriyle ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: ozon – serbest radikal üretimi ve solunum epitel hasarı.",
+      "B": "Doğru eşleştirme; tütün ateroskleroz için bağımsız risk faktörüdür.",
+      "C": "Doğru eşleştirme: kronik alkol – tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu.",
+      "D": "Doğru eşleştirme: kurşun – erişkinde periferik nöropati ve bilek-ayak düşmesi.",
+      "E": "Yanlış eşleştirme (aranan cevap). Aflatoksin (Aspergillus) hepatoselüler karsinomla; nitrozamin/nitrozamidler mide kanseriyle ilişkilidir."
+     },
+     "bilgi": [
+      23,
+      25,
+      27,
+      29,
+      36
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Yetersiz beslenme (marasmus, kwashiorkor), yeme bozuklukları ve obezitenin patofizyolojisini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-26-q26",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Protein yoksunluğunun baskın olduğu; ödem, karaciğer yağlanması, deride mozaik pigmentasyon ve saçta 'bayrak işareti' ile seyreden malnütrisyon tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Marasmus",
+      "B": "Kwashiorkor",
+      "C": "Anoreksiya nervoza",
+      "D": "Bulimia nervoza",
+      "E": "Obezite"
+     },
+     "dogru": "B",
+     "aciklama": "Kwashiorkor genellikle erken sütten kesilme ve karbonhidrat ağırlıklı diyetle protein yoksunluğu sonucu gelişir.",
+     "sik_aciklamalari": {
+      "A": "Marasmusta kalori eksikliği baskındır; kas ve yağ kaybı olur, ödem tipik değildir.",
+      "B": "Doğru. Kwashiorkor genellikle erken sütten kesilme ve karbonhidrat ağırlıklı diyetle protein yoksunluğu sonucu gelişir.",
+      "C": "Anoreksiya nervoza kişinin kendine uyguladığı açlıktır.",
+      "D": "Bulimia nervozada aşırı yeme ve kusturma atakları vardır.",
+      "E": "Obezite aşırı yağ birikimidir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q27",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Marasmus ile kwashiorkorun karşılaştırılmasında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Marasmusta somatik bölme (kas, yağ) tükenir, viseral bölme korunur; kwashiorkorda ödem ve karaciğer yağlanması belirgindir.",
+      "B": "Marasmusta ödem ve karaciğer yağlanması tipiktir.",
+      "C": "Kwashiorkorda kalori eksikliği baskındır ve ödem görülmez.",
+      "D": "Her iki tabloda da bağışıklık sistemi güçlenir.",
+      "E": "Marasmusta subkutan yağ dokusu artar."
+     },
+     "dogru": "A",
+     "aciklama": "Marasmusta 'zayıf çomak' görünümüyle kas ve yağ kaybı vardır; kwashiorkorda protein yoksunluğuna bağlı ödem ve yağlı karaciğer görülür. Her ikisinde T hücre aracılı immünite azalır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Marasmusta 'zayıf çomak' görünümüyle kas ve yağ kaybı vardır; kwashiorkorda protein yoksunluğuna bağlı ödem ve yağlı karaciğer görülür. Her ikisinde T hücre aracılı immünite azalır.",
+      "B": "Ödem ve yağlanma kwashiorkorun özelliğidir.",
+      "C": "Kwashiorkorda protein yoksunluğu baskındır ve ödem tipiktir.",
+      "D": "T hücre aracılı immünite belirgin azalır.",
+      "E": "Marasmusta subkutan yağ kaybolur."
+     },
+     "bilgi": [
+      31,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q28",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Anoreksiya nervozalı bir hastada beklenen bulgular arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Gonadotropin salınımının azalması ve amenore",
+      "B": "Bradikardi ve hipotansiyon",
+      "C": "Osteopeni/osteoporoz",
+      "D": "Hipokalemi",
+      "E": "Leptin ve vücut yağ oranında belirgin artış"
+     },
+     "dogru": "E",
+     "aciklama": "Anoreksiya nervozada belirgin kilo kaybı ve düşük vücut ağırlığı vardır; gonadotropin azalır, amenore, bradikardi, hipotansiyon, osteopeni ve hipokalemi görülür.",
+     "sik_aciklamalari": {
+      "A": "Beklenen bulgudur: gonadotropin salınımının azalması ve amenore.",
+      "B": "Beklenen bulgudur: bradikardi ve hipotansiyon.",
+      "C": "Beklenen bulgudur: osteopeni/osteoporoz.",
+      "D": "Beklenen bulgudur: hipokalemi.",
+      "E": "Yer almaz (aranan cevap); yağ dokusu ve leptin azalır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q30",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Obezitede kanser riskinin artış mekanizmaları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Hiperinsülinemi ve IGF-1 artışı",
+      "B": "Artmış östrojen biyoyararlanımı",
+      "C": "Azalmış adiponektin",
+      "D": "Kronik düşük dereceli inflamasyon",
+      "E": "Adiponektin düzeyinin belirgin artması"
+     },
+     "dogru": "E",
+     "aciklama": "Obezitede adiponektin azalır; hiperinsülinemi-IGF-1, östrojen ve kronik inflamasyon endometrium, özofagus, kolon ve böbrek gibi kanserlerin riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Mekanizmadır: hiperinsülinemi ve IGF-1 artışı.",
+      "B": "Mekanizmadır; endometrium kanseri riski artar.",
+      "C": "Mekanizmadır: azalmış adiponektin.",
+      "D": "Mekanizmadır: kronik düşük dereceli inflamasyon.",
+      "E": "Yer almaz (aranan cevap). Obezitede adiponektin azalır; hiperinsülinemi-IGF-1, östrojen ve kronik inflamasyon endometrium, özofagus, kolon ve böbrek gibi kanserlerin riskini artırır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q29",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Obezite ve enerji homeostazı ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Leptin yağ dokusundan salgılanır; obezitede düzeyi yüksek olmasına rağmen leptin direnci vardır.",
+      "B": "Leptin hipotalamusta POMC/CART nöronlarını aktive eder, NPY/AgRP nöronlarını inhibe eder.",
+      "C": "Adiponektin insülin duyarlılığını artırır ve obezlerde düşüktür.",
+      "D": "Viseral (karın içi) yağ metabolik sendrom ve kardiyovasküler riskle daha yakından ilişkilidir.",
+      "E": "NPY/AgRP nöronlarının aktivasyonu iştahı azaltır ve katabolik yanıtı başlatır."
+     },
+     "dogru": "E",
+     "aciklama": "Hipotalamus arkuat çekirdekte POMC/CART iştahı azaltır, NPY/AgRP iştahı artırır (anabolik yanıt).",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: leptin yağ dokusundan salgılanır; obezitede düzeyi yüksek olmasına rağmen leptin direnci vardır.",
+      "B": "Doğru ifade: leptin hipotalamusta POMC/CART nöronlarını aktive eder, NPY/AgRP nöronlarını inhibe eder.",
+      "C": "Doğru ifade: adiponektin insülin duyarlılığını artırır ve obezlerde düşüktür.",
+      "D": "Doğru ifade: viseral (karın içi) yağ metabolik sendrom ve kardiyovasküler riskle daha yakından ilişkilidir.",
+      "E": "Yanlış ifade (aranan cevap). Hipotalamus arkuat çekirdekte POMC/CART iştahı azaltır, NPY/AgRP iştahı artırır (anabolik yanıt)."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Moleküler tanı yöntemlerini ve moleküler değişikliklere dayalı hedefe yönelik tedaviyi özetlemek",
+   "sorular": [
+    {
+     "id": "k1-26-q31",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Tek platformda çok sayıda gen, tüm ekzom veya tüm genomu dizileyebilen moleküler yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karyotip analizi",
+      "B": "Yeni nesil dizileme (NGS)",
+      "C": "Hematoksilen-eozin boyası",
+      "D": "Kongo kırmızısı boyası",
+      "E": "İnce iğne aspirasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "NGS nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panellerinde ve farmakogenomik profillemede kullanılır; biyoenformatik analiz ve klinik korelasyon gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Karyotip kromozom düzeyinde sayısal ve büyük yapısal anomalileri gösterir.",
+      "B": "Doğru. NGS nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panellerinde ve farmakogenomik profillemede kullanılır; biyoenformatik analiz ve klinik korelasyon gerektirir.",
+      "C": "HE rutin histolojik boyadır.",
+      "D": "Kongo kırmızısı amiloid boyasıdır.",
+      "E": "İİAS sitolojik örnekleme yöntemidir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q32",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Moleküler tanı yöntemleri ve inceleme düzeyi eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Karyotip – kromozom düzeyi",
+      "B": "FISH – kromozom/bölgesel düzey",
+      "C": "Array CGH – kopya sayısı değişiklikleri",
+      "D": "PCR ve RT-PCR – gen düzeyi",
+      "E": "Karyotip – tek baz düzeyinde nokta mutasyonu saptama"
+     },
+     "dogru": "E",
+     "aciklama": "Karyotip ışık mikroskobu düzeyinde kromozom değişikliklerini gösterir; tek baz düzeyindeki değişiklikler PCR temelli yöntemler veya dizilemeyle saptanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: karyotip – kromozom düzeyi.",
+      "B": "Doğru eşleştirme: FISH – kromozom/bölgesel düzey.",
+      "C": "Doğru eşleştirme: array CGH – kopya sayısı değişiklikleri.",
+      "D": "Doğru eşleştirme: PCR ve RT-PCR – gen düzeyi.",
+      "E": "Yanlış eşleştirme (aranan cevap). Karyotip ışık mikroskobu düzeyinde kromozom değişikliklerini gösterir; tek baz düzeyindeki değişiklikler PCR temelli yöntemler veya dizilemeyle saptanır."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-q33",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Onkolojide moleküler değişiklik ile hedefe yönelik tedavi eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "EGFR mutasyonu – trastuzumab",
+      "B": "HER2 amplifikasyonu – trastuzumab",
+      "C": "BRAF V600E – EGFR tirozin kinaz inhibitörü",
+      "D": "HER2 amplifikasyonu – BRAF inhibitörü",
+      "E": "EGFR mutasyonu – BRAF inhibitörü"
+     },
+     "dogru": "B",
+     "aciklama": "EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir.",
+     "sik_aciklamalari": {
+      "A": "EGFR mutasyonu tirozin kinaz inhibitörleriyle hedeflenir.",
+      "B": "Doğru. EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir.",
+      "C": "BRAF V600E BRAF inhibitörleriyle hedeflenir.",
+      "D": "HER2 trastuzumabla hedeflenir.",
+      "E": "EGFR mutasyonu EGFR tirozin kinaz inhibitörüyle hedeflenir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 33,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:45"
+}

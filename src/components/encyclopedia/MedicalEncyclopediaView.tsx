@@ -50,6 +50,8 @@ export interface EncyclopediaEntry {
   pitfallsAndWarnings?: string;
   relatedItems?: string[];
   badgeColor?: string;
+  /** 's13_study': tanım ders notu alıntılarından yazıldı (scripts/v2 study build). */
+  uretici?: string;
   aiAudit: {
     verified: boolean;
     verifiedAt: string;
@@ -609,7 +611,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                   {activeEntry.aiAudit?.verified && (
                     <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
                       <ShieldCheck className="w-3.5 h-3.5" />
-                      <span>AI Onaylı (%{activeEntry.aiAudit.accuracyScore})</span>
+                      <span>{activeEntry.uretici === 's13_study' ? 'Ders notuyla doğrulandı' : 'AI Onaylı'} (%{activeEntry.aiAudit.accuracyScore})</span>
                     </span>
                   )}
                 </div>

@@ -1,0 +1,3080 @@
+{
+ "kurul_ad": {
+  "1": "Ürogenital ve Obstetrik Kurulu",
+  "2": "Nöropsikiyatri Kurulu",
+  "3": "Gastrointestinal Sistem Kurulu",
+  "4": "Dolaşım, Solunum ve Tümör Kurulu",
+  "5": "Ortopedi, Travmatoloji ve Hematopoetik",
+  "6": "Endokrin, Metabolizma ve Yaşlanma"
+ },
+ "kazanim": {
+  "1": [
+   "Dismorfolojide Genetik Terminoloji",
+   "Patolojiye Giriş",
+   "Hücresel Adaptasyonlar",
+   "Hücre Hasarı ve Nekroz - I",
+   "Hücre Hasarı ve Nekroz - II",
+   "Gebelik ve Emzirme Döneminde Beslenme",
+   "Hücre İçi Birikimler ve Kalsifikasyonlar",
+   "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+   "Kromozomal Hastalıklar ve Genetik Danışma",
+   "Üriner Obstrüksiyonun Fizyopatolojisi",
+   "Enflamasyonun Kimyasal Mediyatörleri",
+   "Kronik ve Granülomatöz Enflamasyon",
+   "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+   "Doku Onarımı ve Yara İyileşmesi",
+   "Ödem, Hiperemi, Konjesyon ve Kanama",
+   "Cinsel Yolla Bulaşan Enfeksiyonlarda Tedavi",
+   "Halk Sağlığı Tarihçesi",
+   "Koruyucu Sağlık Hizmetleri",
+   "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
+   "Tromboz Patofizyolojisi",
+   "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
+   "Bebek Beslenmesi",
+   "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
+   "Aşırı Duyarlılık ve Otoimmünite",
+   "Genetik, Pediatrik ve Çevresel Patoloji",
+   "Üriner Sistem Taş Hastalıkları Fizyopatolojisi",
+   "Tümör Biyolojisi ve Terminolojisi",
+   "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe",
+   "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları",
+   "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+   "Genital Enfeksiyonlar",
+   "Prenatal Tanı Yöntemleri",
+   "İzolasyon Yöntemleri",
+   "Glomeruler Hastalıklar: Nefrotik Sendrom",
+   "Glomeruler Hastalıklar: Nefritik Sendrom",
+   "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve",
+   "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi",
+   "Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma",
+   "Sistemik Hastalıklarda Böbrek Hasarı",
+   "Tübülointerstisyel Hastalıklar",
+   "Üriner Sistemin Spesifik Enfeksiyonları",
+   "Vasküler ve Kistik Böbrek Hastalıkları",
+   "Böbrek Tümörleri",
+   "Mesane Hastalıkları ve Tümörleri",
+   "Bağışıklığı Baskılı Hastalarda Enfeksiyon",
+   "Vulva, Vajen ve Serviks Hastalıkları",
+   "İnvaziv Serviks Kanseri ve Endometriyozis",
+   "Sifilis",
+   "Üriner Sistem Enfeksiyonları Lab. Bulguları ve Tedavi",
+   "Üriner Sistem Enfeksiyonları",
+   "Endometrial Hiperplazi ve Kanserleri",
+   "Uterus Düz Kas ve Trofoblastik Tümörleri",
+   "Over Tümörleri",
+   "Memenin Benign Hastalıkları",
+   "İntrauterin Enfeksiyonlar",
+   "Enürezis Nokturna",
+   "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
+   "İmmünofarmakoloji",
+   "Preimplantasyon Genetik Tanı (Pgd)",
+   "Abortus",
+   "Üretral Akıntı",
+   "Türkiye’de Sağlık Hizmetleri",
+   "Gebelik Terminolojisi/Kavramları",
+   "Meme Kanseri ve Moleküler Tipleri",
+   "Erkek Genital Sistem ve Prostat Hastalıkları"
+  ],
+  "2": [
+   "Nörolojik Hastaya Yaklaşım",
+   "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
+   "SSS Hücresel Reaksiyonları ve Ödem / Herniasyon",
+   "Serebrovasküler Hastalıklar ve İnme",
+   "Nörolojik Muayene",
+   "Ağrı Yolları ve Mekanizmaları",
+   "Genel Anestezik İlaçlar",
+   "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+   "SSS İlaçları",
+   "Baş ağrısına Yaklaşım",
+   "Psikiyatrik Semiyoloji",
+   "Kafa ve Omurilik Yaralanmaları",
+   "Medulla Spinalis lezyonları",
+   "İntrakraniyal Kitlelerde Belirti ve Bulgular",
+   "Şizofrenik Bozukluklar",
+   "Nörolojik Rehabilitasyona Giriş ve Genel İlkeler",
+   "Periferik Nöropati",
+   "Bazal Gangliyonlar ve Ekstrapiramidal Sistem",
+   "Bipolar Bozukluk",
+   "Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+   "Sedatif ve Hipnotik İlaçlar",
+   "Psikosomatik Bozukluklar Doç. Dr. Zuhal KOÇ APAYDIN",
+   "Cinsel Kimlik Bozuklukları Doç. Dr. Zuhal KOÇ APAYDIN",
+   "Epilepsi",
+   "Antiepileptik İlaçlar",
+   "Nörolojik Hastalıklar",
+   "Aile Hekimliğinde Periyodik Muayeneler 1",
+   "Sık görülen nörolojik Hastalıklar ve Rehabilitasyonu",
+   "Santral Sinir Sistemi Enfeksiyonları",
+   "Nörodejeneratif Hastalıklar",
+   "Medulla Spinalis Hastalıkları",
+   "Felçler",
+   "Opoid Analjezikler ve Antagonistleri",
+   "Unipolar Depresyon Doç. Dr. Zuhal KOÇ APAYDIN",
+   "Kişilik Bozuklukları",
+   "Aile Hekimliğine Yaklaşım",
+   "OKB ve İlişkili Bozukluklar",
+   "Travma ve Stres Bağlantılı Bozukluklar",
+   "Kolinoseptör Bloke Edici İlaçlar",
+   "Santral Sinir Sistemi Tümörleri",
+   "Otonom Sinir Sistemi Farmakolojisi",
+   "Nörogelişimsel Bozukluklar",
+   "Konsültasyon Liyezon Psikiyatrisi",
+   "Damgalama",
+   "İntihar ve Kendine Zarar Verme",
+   "Sempatomimetikler",
+   "Adrenoseptör Antagonist İlaçlar",
+   "Lokal Anestezik İlaçlar",
+   "Dikkat Eksikliği Hiperaktivite Bozukluğu UZM.",
+   "Dışa Atım Bozuklukları UZM.",
+   "Kolinoseptör Aktive Edici ve Kolinesteraz İnhibitörleri",
+   "Davranış Genetiği",
+   "Nörodejeneratif Hastalıklar Genetiği",
+   "Yaygın Anksiyete Bozukluğu Doç. Dr. Zuhal KOÇ APAYDIN",
+   "Panik Bozukluk Doç. Dr. Zuhal KOÇ APAYDIN",
+   "Fobik Bozukluk Doç. Dr. Zuhal KOÇ",
+   "Aile Hekimliğinde Periyodik Muayeneler 2",
+   "Alkoller",
+   "Psikiyatrik Hastalıklar ve Genetik Analizi",
+   "Miyorelaksan İlaçlar",
+   "Nikotin Bağımlılığı ve Tedavisi",
+   "Kraniyal Sinir Muayenesi",
+   "Antidepresan İlaçlar"
+  ],
+  "3": [
+   "Bakteriyel İshaller UZM",
+   "Gastroenteritler UZM",
+   "GİS Motilite Bozuklukları",
+   "Ailesel Akdeniz Ateşi",
+   "Sülfonamidler, Trimetoprim ve Kinolonlar",
+   "Antihelmintik İlaçlar",
+   "Aminoglikozidler",
+   "Tetrasiklin, Makrolit, Kloramfenikol ve Streptograminler",
+   "Ülser Gastrit",
+   "Sarılıklar",
+   "Üst GIS kanamaları",
+   "Alt GIS kanamaları",
+   "Özofagus Hastalıkları ve Tümörleri",
+   "Gastrit Tipleri",
+   "Siroz ve Komplikasyonları",
+   "Gastrointestinal Sistem Parazitozları UZM",
+   "GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -1",
+   "Dislipidemide Kullanılan İlaçlar",
+   "Antifungal İlaçlar",
+   "Antiemetik ilaçlar",
+   "GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -2",
+   "Peptik Ülser",
+   "Mide Tümörleri",
+   "Kolera",
+   "Malabsorbsiyon ve Çölyak Hastalığı",
+   "Enfeksiyöz ve Divertiküler Kolitler",
+   "İnflamatuar Bağırsak Hastalıkları: Crohn Hastalığı",
+   "İnflamatuar Bağırsak Hastalıkları: Ülseratif Kolit",
+   "Bağırsak Polipler ve Polipozis Sendromları",
+   "Antimikobakteriyel İlaçlar",
+   "Antimikrobik İlaçların Klinik Kullanımı, Önemi ve Önlemleri",
+   "Konjenital GİS Malformasyonları",
+   "Sindirim Sistemi Tümörleri",
+   "Kolonun Prekanseröz Lezyonları",
+   "Kolorektal Kanser Patogenezi",
+   "Kolorektal Adenokarsinom ve Apandisit",
+   "Akut Pankreatitler",
+   "Gastrointestinal Hastalıkların Genetiği",
+   "Besin Zehirlenmeleri ve Zehirlenmelerde Yönetim",
+   "Gastrointestinal Tümörlerin Genetiği",
+   "Akut ve Kronik Viral Hepatitler",
+   "Yağlı Karaciğer Hastalıkları (NAFLD/NASH)",
+   "Akut Hepatitler",
+   "Malabsorpsiyon Sendromları",
+   "Diğer Antimikrobiyaller; Dezenfektan ve Sterilizan Ajanlar",
+   "OTC İlaçların Terapötik ve Toksik Etkileri",
+   "Kolestatik Karaciğer Hastalıkları",
+   "Karaciğer Sirozu ve Portal Hipertansiyon",
+   "Karaciğer Tümörleri",
+   "Kolesistit, Kolelitiyazis ve Safra Kesesi Tümörleri",
+   "Biliyer Atrezi ve Diğer Safra Yolu Anomalileri",
+   "Neonatal Kolestaz",
+   "Antiviral İlaçlar",
+   "Vazoaktif Peptidler, Eikozanoidler",
+   "Beta Laktam ve Diğer Hücre Duvarı ile Membran Aktif Antibiyotikler",
+   "Akut ve Kronik Pankreatitler",
+   "Pankreas Tümörleri",
+   "Zoonotik Enfeksiyonlar"
+  ],
+  "4": [
+   "Üst Solunum Yolu Hastalıkları",
+   "Obstrüktif Akciğer Hastalıkları - I",
+   "Obstrüktif Akciğer Hastalıkları - II",
+   "Ateroskleroz Genetiği",
+   "Restriktif Akciğer Hastalıkları",
+   "Pulmoner Vasküler Hastalıklar",
+   "Solunum Sist. Hastalık. Anamnez",
+   "Solunum Sist. Hastalık. Fizik Muayene",
+   "Solunum sistemi Semptomatolojisi",
+   "Solunum sıkıntısı olan yeni doğana yaklaşım",
+   "Akut Akciğer Enfeksiyonları",
+   "Kronik ve Fırsatçı Akciğer Enfeksiyonları",
+   "Obstrüktif ve restriktif akciğer hastalıkları",
+   "Pnömoniler",
+   "Miyokarditler, Miyokardiyopatiler ve Kalp Tümörleri",
+   "Plevral efüzyon ve ampiyem",
+   "Tümör Mikro Çevresi, İnvazyon ve Metastaz",
+   "Kanser Hastalıkları Epidemiyolojisi",
+   "Kardiyovasküler sistem hastalıklarının epidemiyolojisi",
+   "Astım ve diğer akciğer hastalıklarının tedavisinde kullanılan ilaçlar",
+   "Göğüs duvarı anomalileri",
+   "Kalp Kapak Hastalıkları",
+   "Konjenital Kardiyovasküler Bozukluklarda Genetik Mekanizmalar",
+   "Elektrokardiyografiye Giriş",
+   "Akciğer Tümörleri",
+   "Plevra Hastalıkları",
+   "Hipertansif Damar Hastalıkları",
+   "Ateroskleroz Patolojisi",
+   "Anevrizmalar ve Diseksiyonlar",
+   "Ritim Bozukluklarına Giriş",
+   "Kanser kemoterapisi",
+   "Hiperlipidemiler",
+   "Fetal Dolaşım ve Neonatal adaptasyon",
+   "Siyanoz",
+   "Siyanotik doğumsal kalp hastalıkları",
+   "Asiyanotik doğumsal kalp hastalıkları",
+   "Enfektif Endokardit",
+   "CPR",
+   "Antikoagülanlar ve antitrombotikler",
+   "Vaskülitler",
+   "Damar Tümörleri",
+   "Kalp Sesleri",
+   "Konjenital Kalp Hastalıkları",
+   "Hipertansiyon",
+   "Perikarditler",
+   "Diüretikler",
+   "İskemik Kalp Hastalıkları",
+   "Miyokard Enfarktüsü",
+   "Kardiyovasküler Hastalıkların Genetiği",
+   "Vazodilatörler ve Anjina Pektoris ilaçları",
+   "İnfluenza",
+   "Akut romatizmal ateş",
+   "Kardiyak aritmilerde kullanılan ilaçlar",
+   "Enfektif endokardit ve damar içi katater enfeksiyonları",
+   "Kalp yetersizliğinde kullanılan ilaçlar",
+   "Kalp Yetersizliği",
+   "Koroner Kalp Hastalıkları",
+   "Antihipertansif İlaçlar",
+   "Hipertansif ve Valvüler Kalp Hastalıkları",
+   "Miyokardit ve Kardiyomiyopatiler"
+  ],
+  "5": [
+   "Sağlık Yönetimi",
+   "Lösemi genetik özellikler ve prognostik belirteçler",
+   "Sağlığın geliştirilmesi",
+   "Mikrositer Anemiler",
+   "Makrositer ve Hemolitik Anemiler",
+   "Boyun ağrılarına yaklaşım",
+   "Anemi Tanı, Patofizyoloji ve Sınıflaması",
+   "Kemik, eklemve implant enfeksiyonları",
+   "Kanama Bozuklukları ve Trombositopeniler",
+   "Reaktif Lenfadenitler",
+   "NSAİİ, Antiromatikler, Nonopoid analjezikler ve gut tedavi ilaçları",
+   "Demir metabolizması ve anormallikleri, Demir eksikliği ve birikimi UZM.",
+   "Demir metabolizması ve anormallikleri,Demir eksikliği ve",
+   "Kafatasını oluşturan kemiklerin travmaları",
+   "Kafa travmasına eşlik eden erken dönem klinik sorunlar",
+   "Hodgkin Lenfoma",
+   "Non-Hodgkin B Hücreli Lenfomalar - I",
+   "Üst ekstremitenin fonksiyonel anatomisi ve Muayene yöntemleri",
+   "Çocukluk çağı anemilerine yaklaşım",
+   "Multitravmaya Yaklaşım",
+   "Non-Hodgkin B Hücreli Lenfomalar - II",
+   "T ve NK Hücreli Lenfomalar",
+   "Megaloblastik anemiler",
+   "Hemolitik anemiler UZM.",
+   "Eklem hastalıkları patolojisi ve artritler",
+   "Hemostaz ve anormallikleri, Kanama Pıhtılaşma bozuklukları",
+   "Sağlık Eğitimi",
+   "Hemoglobinopatiler",
+   "Ekstremite Travmaları",
+   "Spondilodiskitler ve pot hastalığı",
+   "Spondilodiskitler ve npot hastalığı",
+   "Crush ve Kompartman Sendromu",
+   "Akut Lösemiler",
+   "Kronik Miyeloproliferatif Neoplaziler",
+   "Enfeksiyöz ve Metabolik Kemik Hastalıkları",
+   "Kemik Tümörleri",
+   "Servikal ve lomber bölgenin fonksiyonel anatomisi ve değerlendirme",
+   "Göğüs travmasının tiplerine göre patolojik ve Klinik sonuçlar",
+   "Yumuşak Doku Tümörleri",
+   "Artrit Patolojileri",
+   "Meslek hastalıkları",
+   "İş kazaları",
+   "Sağlığın Sosyalleştirilmesi ve Temel Sağlık Hizmetleri (TSH)",
+   "Senkop, Ani Kardiyak Ölüm (AKÖ)",
+   "Bilinç Bozukluğuna (Koma) Yaklaşım",
+   "İleri Kardiyak Yaşam Desteği ve Özel Durumlar",
+   "Kemik ve kıkırdağın konjenital hastalıkları",
+   "Alt ekstremitenin Fonksiyonel Anatomisi ve muayene yöntemleri",
+   "Kemik mineralizasyonu ve homeostaza etki eden ilaçlar",
+   "Kırım-Kongo kanamalı ateşi",
+   "Çevresel Acillere Yaklaşım",
+   "Enflamatuar ve Vezikülobüllöz Deri Hastalıkları",
+   "Deri Tümörleri ve Malign Melanom",
+   "Kemiğin edinsel hastalıkları",
+   "Halk sağlığını etkileyen faktörler",
+   "Dermatolojik Farmakoloji",
+   "Kan Hastalıklarının Genetiği",
+   "Yetişkin ve çocuk kırıklarına yaklaşım",
+   "Kırık komplikasyonlarına yaklaşım",
+   "Kemiklerin tümörlerine genel yaklaşım",
+   "Lenfoma Genetik Özellikler ve Prognostik Belirteçler",
+   "Çocuk Sağlığı",
+   "Okul Sağlığı",
+   "Kas-iskelet sistemi hastalıklarında Non- farmakolojik Yaklaşımlar: Egzersiz",
+   "Zehirlenmelere Yaklaşım",
+   "Bel ağrılarına yaklaşım"
+  ],
+  "6": [
+   "Hipofiz ve Epifiz Patolojileri",
+   "Tiroid ve Paratiroid Patolojileri",
+   "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
+   "Hipotalamus-Hipofiz hastalıklarına giriş",
+   "Cushing Sendromu",
+   "Pankreatik Hormonlar ve Antidiyabetik İlaçlar",
+   "Klinik Biyokimya Laboratuvar Organizasyonu",
+   "Hipotalamohipofizer Sistem İlaçları",
+   "Tiroit ve Antitiroid İlaçlar",
+   "Endokrin Sistem Hastalıklarına Genel Yaklaşım",
+   "Hipoglisemiler",
+   "Yaşlılıkta beslenme UZM.",
+   "Elektrolitler ve Endokrin Sistem Arasındaki ilişki",
+   "Cinsel Farklılaşma Bozuklukları UZM.",
+   "K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz",
+   "K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz Edilmesinde Dik. Ed. Hususlar",
+   "D Vitamini Metabolizması",
+   "Endokrin Hastalıklar ve Genetik",
+   "Tiroid Bezi Hastalıkları Dr. Abdulvahap Coşkun",
+   "Epidemiyolojiye Giriş",
+   "Önemli Beslenme Sorunları",
+   "Paratiroid bezi hastalıkları",
+   "Yeterli ve Dengeli Beslenme",
+   "Adrenokortikosteroidler ve Agonistler",
+   "Biyokimyasal Analizlerde Hata Kaynakları",
+   "Obezite-Metabolizma-Endokrin İlişkisi",
+   "Bağışıklama ve önemi",
+   "Yaşlılığa Özgü Ruhsal Sorunlar UZM.",
+   "Kalıtsal Metabolik Hastalıklar Genetiği",
+   "Adrenal Bez Patolojileri",
+   "Pankreas ve Nöroendokrin Tümörler ve MEN sendromu",
+   "Biyokimya Lab. Gelen Numunelerde Analiz Edilen Paket Testler",
+   "Gonadal Hormonlar, inhibitör ve replasman ilaçları",
+   "Mobbing",
+   "Akılcı İlaç Kullanımı",
+   "Çevre Sağlığına Giriş ve Genel Bilgiler",
+   "Yaşlanmada Metabolik Sorunlar UZM.",
+   "Yaşlı Sağlığı Sorunları ve Sağlık",
+   "Sağlık Göstergeleri",
+   "Metabolik Hastalıklarda Dismorfik Bulgular ve Veziküler Trafik",
+   "Yaşlılıkta Beslenme Uzm. Dr BETÜL İVERENDİ",
+   "Histamin, serotonin, melatonin ve Ergot",
+   "Histamin, serotonin, melatonin ve Ergot Alkaloidleri",
+   "Yaşlanma Genetiği",
+   "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri",
+   "Çocukluk Dönemi Su Metabolizması Bozuklukları",
+   "Yaşlılığa Özgü Hareket Sistemi Bozuklukları",
+   "Vaka-Kontrol çalışmaları",
+   "Kohort Çalışmaları",
+   "Deneysel ve Kesitsel Çalışmalar"
+  ]
+ },
+ "konular": [
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Genetik",
+   "konu": "Dismorfolojide Genetik Terminoloji",
+   "text": "Tıbbi Genetik Dismorfolojide Genetik Terminoloji"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Patolojiye Giriş",
+   "text": "Tıbbi Patoloji Patolojiye Giriş"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Hücresel Adaptasyonlar",
+   "text": "Tıbbi Patoloji Hücresel Adaptasyonlar"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Hücre Hasarı ve Nekroz - I",
+   "text": "Tıbbi Patoloji Hücre Hasarı ve Nekroz - I"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Hücre Hasarı ve Nekroz - II",
+   "text": "Tıbbi Patoloji Hücre Hasarı ve Nekroz - II"
+  },
+  {
+   "kurul": 1,
+   "ders": "Halk Sağlığı",
+   "konu": "Gebelik ve Emzirme Döneminde Beslenme",
+   "text": "Halk Sağlığı Gebelik ve Emzirme Döneminde Beslenme"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Hücre İçi Birikimler ve Kalsifikasyonlar",
+   "text": "Tıbbi Patoloji Hücre İçi Birikimler ve Kalsifikasyonlar"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+   "text": "Tıbbi Patoloji Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Genetik",
+   "konu": "Kromozomal Hastalıklar ve Genetik Danışma",
+   "text": "Tıbbi Genetik Kromozomal Hastalıklar ve Genetik Danışma"
+  },
+  {
+   "kurul": 1,
+   "ders": "Üroloji",
+   "konu": "Üriner Obstrüksiyonun Fizyopatolojisi",
+   "text": "Üroloji Üriner Obstrüksiyonun Fizyopatolojisi"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Enflamasyonun Kimyasal Mediyatörleri",
+   "text": "Tıbbi Patoloji Enflamasyonun Kimyasal Mediyatörleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Kronik ve Granülomatöz Enflamasyon",
+   "text": "Tıbbi Patoloji Kronik ve Granülomatöz Enflamasyon"
+  },
+  {
+   "kurul": 1,
+   "ders": "Halk Sağlığı",
+   "konu": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+   "text": "Halk Sağlığı Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Doku Onarımı ve Yara İyileşmesi",
+   "text": "Tıbbi Patoloji Doku Onarımı ve Yara İyileşmesi"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Ödem, Hiperemi, Konjesyon ve Kanama",
+   "text": "Tıbbi Patoloji Ödem, Hiperemi, Konjesyon ve Kanama"
+  },
+  {
+   "kurul": 1,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Cinsel Yolla Bulaşan Enfeksiyonlarda Tedavi",
+   "text": "Enfeksiyon Hastalıkları Cinsel Yolla Bulaşan Enfeksiyonlarda Tedavi"
+  },
+  {
+   "kurul": 1,
+   "ders": "Halk Sağlığı",
+   "konu": "Halk Sağlığı Tarihçesi",
+   "text": "Halk Sağlığı Halk Sağlığı Tarihçesi"
+  },
+  {
+   "kurul": 1,
+   "ders": "Halk Sağlığı",
+   "konu": "Koruyucu Sağlık Hizmetleri",
+   "text": "Halk Sağlığı Koruyucu Sağlık Hizmetleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Genetik",
+   "konu": "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
+   "text": "Tıbbi Genetik Doğumsal Kadın/Erkek Genital Gelişim Anomalileri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Tromboz Patofizyolojisi",
+   "text": "Tıbbi Patoloji Tromboz Patofizyolojisi"
+  },
+  {
+   "kurul": 1,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
+   "text": "Enfeksiyon Hastalıkları Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler"
+  },
+  {
+   "kurul": 1,
+   "ders": "Halk Sağlığı",
+   "konu": "Bebek Beslenmesi",
+   "text": "Halk Sağlığı Bebek Beslenmesi"
+  },
+  {
+   "kurul": 1,
+   "ders": "Halk Sağlığı",
+   "konu": "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
+   "text": "Halk Sağlığı Ana-Çocuk Sağlığı Düzeyinin İzlenmesi"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Aşırı Duyarlılık ve Otoimmünite",
+   "text": "Tıbbi Patoloji Aşırı Duyarlılık ve Otoimmünite"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Genetik, Pediatrik ve Çevresel Patoloji",
+   "text": "Tıbbi Patoloji Genetik, Pediatrik ve Çevresel Patoloji"
+  },
+  {
+   "kurul": 1,
+   "ders": "Üroloji",
+   "konu": "Üriner Sistem Taş Hastalıkları Fizyopatolojisi",
+   "text": "Üroloji Üriner Sistem Taş Hastalıkları Fizyopatolojisi"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Tümör Biyolojisi ve Terminolojisi",
+   "text": "Tıbbi Patoloji Tümör Biyolojisi ve Terminolojisi"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Genetik",
+   "konu": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe",
+   "text": "Tıbbi Genetik Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Genetik",
+   "konu": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları",
+   "text": "Tıbbi Genetik Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+   "text": "Tıbbi Patoloji Tümör İmmünolojisi ve Metastaz Mekanizmaları"
+  },
+  {
+   "kurul": 1,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Genital Enfeksiyonlar",
+   "text": "Enfeksiyon Hastalıkları Genital Enfeksiyonlar"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Genetik",
+   "konu": "Prenatal Tanı Yöntemleri",
+   "text": "Tıbbi Genetik Prenatal Tanı Yöntemleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "İzolasyon Yöntemleri",
+   "text": "Enfeksiyon Hastalıkları İzolasyon Yöntemleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Glomeruler Hastalıklar: Nefrotik Sendrom",
+   "text": "Tıbbi Patoloji Glomeruler Hastalıklar: Nefrotik Sendrom"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Glomeruler Hastalıklar: Nefritik Sendrom",
+   "text": "Tıbbi Patoloji Glomeruler Hastalıklar: Nefritik Sendrom"
+  },
+  {
+   "kurul": 1,
+   "ders": "Üroloji",
+   "konu": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve",
+   "text": "Üroloji Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve"
+  },
+  {
+   "kurul": 1,
+   "ders": "Üroloji",
+   "konu": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi",
+   "text": "Üroloji Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi"
+  },
+  {
+   "kurul": 1,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma",
+   "text": "Enfeksiyon Hastalıkları Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Sistemik Hastalıklarda Böbrek Hasarı",
+   "text": "Tıbbi Patoloji Sistemik Hastalıklarda Böbrek Hasarı"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Tübülointerstisyel Hastalıklar",
+   "text": "Tıbbi Patoloji Tübülointerstisyel Hastalıklar"
+  },
+  {
+   "kurul": 1,
+   "ders": "Üroloji",
+   "konu": "Üriner Sistemin Spesifik Enfeksiyonları",
+   "text": "Üroloji Üriner Sistemin Spesifik Enfeksiyonları"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Vasküler ve Kistik Böbrek Hastalıkları",
+   "text": "Tıbbi Patoloji Vasküler ve Kistik Böbrek Hastalıkları"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Böbrek Tümörleri",
+   "text": "Tıbbi Patoloji Böbrek Tümörleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Mesane Hastalıkları ve Tümörleri",
+   "text": "Tıbbi Patoloji Mesane Hastalıkları ve Tümörleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Bağışıklığı Baskılı Hastalarda Enfeksiyon",
+   "text": "Enfeksiyon Hastalıkları Bağışıklığı Baskılı Hastalarda Enfeksiyon"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Vulva, Vajen ve Serviks Hastalıkları",
+   "text": "Tıbbi Patoloji Vulva, Vajen ve Serviks Hastalıkları"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "İnvaziv Serviks Kanseri ve Endometriyozis",
+   "text": "Tıbbi Patoloji İnvaziv Serviks Kanseri ve Endometriyozis"
+  },
+  {
+   "kurul": 1,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Sifilis",
+   "text": "Enfeksiyon Hastalıkları Sifilis"
+  },
+  {
+   "kurul": 1,
+   "ders": "Üroloji",
+   "konu": "Üriner Sistem Enfeksiyonları Lab. Bulguları ve Tedavi",
+   "text": "Üroloji Üriner Sistem Enfeksiyonları Lab. Bulguları ve Tedavi"
+  },
+  {
+   "kurul": 1,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Üriner Sistem Enfeksiyonları",
+   "text": "Enfeksiyon Hastalıkları Üriner Sistem Enfeksiyonları"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Endometrial Hiperplazi ve Kanserleri",
+   "text": "Tıbbi Patoloji Endometrial Hiperplazi ve Kanserleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Uterus Düz Kas ve Trofoblastik Tümörleri",
+   "text": "Tıbbi Patoloji Uterus Düz Kas ve Trofoblastik Tümörleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Over Tümörleri",
+   "text": "Tıbbi Patoloji Over Tümörleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Memenin Benign Hastalıkları",
+   "text": "Tıbbi Patoloji Memenin Benign Hastalıkları"
+  },
+  {
+   "kurul": 1,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "İntrauterin Enfeksiyonlar",
+   "text": "Enfeksiyon Hastalıkları İntrauterin Enfeksiyonlar"
+  },
+  {
+   "kurul": 1,
+   "ders": "Üroloji",
+   "konu": "Enürezis Nokturna",
+   "text": "Üroloji Enürezis Nokturna"
+  },
+  {
+   "kurul": 1,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
+   "text": "Enfeksiyon Hastalıkları Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "İmmünofarmakoloji",
+   "text": "Tıbbi Farmakoloji İmmünofarmakoloji"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Genetik",
+   "konu": "Preimplantasyon Genetik Tanı (Pgd)",
+   "text": "Tıbbi Genetik Preimplantasyon Genetik Tanı (Pgd)"
+  },
+  {
+   "kurul": 1,
+   "ders": "Kadın Hastalıkları ve Doğum",
+   "konu": "Abortus",
+   "text": "Kadın Hastalıkları ve Doğum Abortus"
+  },
+  {
+   "kurul": 1,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Üretral Akıntı",
+   "text": "Enfeksiyon Hastalıkları Üretral Akıntı"
+  },
+  {
+   "kurul": 1,
+   "ders": "Halk Sağlığı",
+   "konu": "Türkiye’de Sağlık Hizmetleri",
+   "text": "Halk Sağlığı Türkiye’de Sağlık Hizmetleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Kadın Hastalıkları ve Doğum",
+   "konu": "Gebelik Terminolojisi/Kavramları",
+   "text": "Kadın Hastalıkları ve Doğum Gebelik Terminolojisi/Kavramları"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Meme Kanseri ve Moleküler Tipleri",
+   "text": "Tıbbi Patoloji Meme Kanseri ve Moleküler Tipleri"
+  },
+  {
+   "kurul": 1,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Erkek Genital Sistem ve Prostat Hastalıkları",
+   "text": "Tıbbi Patoloji Erkek Genital Sistem ve Prostat Hastalıkları"
+  },
+  {
+   "kurul": 2,
+   "ders": "Nöroloji",
+   "konu": "Nörolojik Hastaya Yaklaşım",
+   "text": "Nöroloji Nörolojik Hastaya Yaklaşım"
+  },
+  {
+   "kurul": 2,
+   "ders": "Nöroloji",
+   "konu": "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
+   "text": "Nöroloji Bilinç Bozukluğu Olan Hastaya Yaklaşım"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Patoloji",
+   "konu": "SSS Hücresel Reaksiyonları ve Ödem / Herniasyon",
+   "text": "Tıbbi Patoloji SSS Hücresel Reaksiyonları ve Ödem / Herniasyon"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Serebrovasküler Hastalıklar ve İnme",
+   "text": "Tıbbi Patoloji Serebrovasküler Hastalıklar ve İnme"
+  },
+  {
+   "kurul": 2,
+   "ders": "Nöroloji",
+   "konu": "Nörolojik Muayene",
+   "text": "Nöroloji Nörolojik Muayene"
+  },
+  {
+   "kurul": 2,
+   "ders": "Anesteziyoloji ve Reanimasyon",
+   "konu": "Ağrı Yolları ve Mekanizmaları",
+   "text": "Anesteziyoloji ve Reanimasyon Ağrı Yolları ve Mekanizmaları"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Genel Anestezik İlaçlar",
+   "text": "Tıbbi Farmakoloji Genel Anestezik İlaçlar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Genetik",
+   "konu": "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+   "text": "Tıbbi Genetik Beyin ve İskelet Sistemi Gelişimi Genetiği"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "SSS İlaçları",
+   "text": "Tıbbi Farmakoloji SSS İlaçları"
+  },
+  {
+   "kurul": 2,
+   "ders": "Nöroloji",
+   "konu": "Baş ağrısına Yaklaşım",
+   "text": "Nöroloji Baş ağrısına Yaklaşım"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Psikiyatrik Semiyoloji",
+   "text": "Psikiyatri Psikiyatrik Semiyoloji"
+  },
+  {
+   "kurul": 2,
+   "ders": "Beyin ve Sinir Cerrahisi",
+   "konu": "Kafa ve Omurilik Yaralanmaları",
+   "text": "Beyin ve Sinir Cerrahisi Kafa ve Omurilik Yaralanmaları"
+  },
+  {
+   "kurul": 2,
+   "ders": "Beyin ve Sinir Cerrahisi",
+   "konu": "Medulla Spinalis lezyonları",
+   "text": "Beyin ve Sinir Cerrahisi Medulla Spinalis lezyonları"
+  },
+  {
+   "kurul": 2,
+   "ders": "Beyin ve Sinir Cerrahisi",
+   "konu": "İntrakraniyal Kitlelerde Belirti ve Bulgular",
+   "text": "Beyin ve Sinir Cerrahisi İntrakraniyal Kitlelerde Belirti ve Bulgular"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Şizofrenik Bozukluklar",
+   "text": "Psikiyatri Şizofrenik Bozukluklar"
+  },
+  {
+   "kurul": 2,
+   "ders": "FTR",
+   "konu": "Nörolojik Rehabilitasyona Giriş ve Genel İlkeler",
+   "text": "FTR Nörolojik Rehabilitasyona Giriş ve Genel İlkeler"
+  },
+  {
+   "kurul": 2,
+   "ders": "Nöroloji",
+   "konu": "Periferik Nöropati",
+   "text": "Nöroloji Periferik Nöropati"
+  },
+  {
+   "kurul": 2,
+   "ders": "Nöroloji",
+   "konu": "Bazal Gangliyonlar ve Ekstrapiramidal Sistem",
+   "text": "Nöroloji Bazal Gangliyonlar ve Ekstrapiramidal Sistem"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Bipolar Bozukluk",
+   "text": "Psikiyatri Bipolar Bozukluk"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+   "text": "Psikiyatri Psikiyatrik Bozukluklarda Uygulanan Tedaviler"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Sedatif ve Hipnotik İlaçlar",
+   "text": "Tıbbi Farmakoloji Sedatif ve Hipnotik İlaçlar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Psikosomatik Bozukluklar Doç. Dr. Zuhal KOÇ APAYDIN",
+   "text": "Psikiyatri Psikosomatik Bozukluklar Doç. Dr. Zuhal KOÇ APAYDIN"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Cinsel Kimlik Bozuklukları Doç. Dr. Zuhal KOÇ APAYDIN",
+   "text": "Psikiyatri Cinsel Kimlik Bozuklukları Doç. Dr. Zuhal KOÇ APAYDIN"
+  },
+  {
+   "kurul": 2,
+   "ders": "Nöroloji",
+   "konu": "Epilepsi",
+   "text": "Nöroloji Epilepsi"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Antiepileptik İlaçlar",
+   "text": "Tıbbi Farmakoloji Antiepileptik İlaçlar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Genetik",
+   "konu": "Nörolojik Hastalıklar",
+   "text": "Tıbbi Genetik Nörolojik Hastalıklar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Aile Hekimliği",
+   "konu": "Aile Hekimliğinde Periyodik Muayeneler 1",
+   "text": "Aile Hekimliği Aile Hekimliğinde Periyodik Muayeneler 1"
+  },
+  {
+   "kurul": 2,
+   "ders": "FTR",
+   "konu": "Sık görülen nörolojik Hastalıklar ve Rehabilitasyonu",
+   "text": "FTR Sık görülen nörolojik Hastalıklar ve Rehabilitasyonu"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Santral Sinir Sistemi Enfeksiyonları",
+   "text": "Tıbbi Patoloji Santral Sinir Sistemi Enfeksiyonları"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Nörodejeneratif Hastalıklar",
+   "text": "Tıbbi Patoloji Nörodejeneratif Hastalıklar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Nöroloji",
+   "konu": "Medulla Spinalis Hastalıkları",
+   "text": "Nöroloji Medulla Spinalis Hastalıkları"
+  },
+  {
+   "kurul": 2,
+   "ders": "Nöroloji",
+   "konu": "Felçler",
+   "text": "Nöroloji Felçler"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Opoid Analjezikler ve Antagonistleri",
+   "text": "Tıbbi Farmakoloji Opoid Analjezikler ve Antagonistleri"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Unipolar Depresyon Doç. Dr. Zuhal KOÇ APAYDIN",
+   "text": "Psikiyatri Unipolar Depresyon Doç. Dr. Zuhal KOÇ APAYDIN"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Kişilik Bozuklukları",
+   "text": "Psikiyatri Kişilik Bozuklukları"
+  },
+  {
+   "kurul": 2,
+   "ders": "Aile Hekimliği",
+   "konu": "Aile Hekimliğine Yaklaşım",
+   "text": "Aile Hekimliği Aile Hekimliğine Yaklaşım"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "OKB ve İlişkili Bozukluklar",
+   "text": "Psikiyatri OKB ve İlişkili Bozukluklar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Travma ve Stres Bağlantılı Bozukluklar",
+   "text": "Psikiyatri Travma ve Stres Bağlantılı Bozukluklar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Kolinoseptör Bloke Edici İlaçlar",
+   "text": "Tıbbi Farmakoloji Kolinoseptör Bloke Edici İlaçlar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Santral Sinir Sistemi Tümörleri",
+   "text": "Tıbbi Patoloji Santral Sinir Sistemi Tümörleri"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Otonom Sinir Sistemi Farmakolojisi",
+   "text": "Tıbbi Farmakoloji Otonom Sinir Sistemi Farmakolojisi"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Nörogelişimsel Bozukluklar",
+   "text": "Psikiyatri Nörogelişimsel Bozukluklar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Konsültasyon Liyezon Psikiyatrisi",
+   "text": "Psikiyatri Konsültasyon Liyezon Psikiyatrisi"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Damgalama",
+   "text": "Psikiyatri Damgalama"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "İntihar ve Kendine Zarar Verme",
+   "text": "Psikiyatri İntihar ve Kendine Zarar Verme"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Sempatomimetikler",
+   "text": "Tıbbi Farmakoloji Sempatomimetikler"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Adrenoseptör Antagonist İlaçlar",
+   "text": "Tıbbi Farmakoloji Adrenoseptör Antagonist İlaçlar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Lokal Anestezik İlaçlar",
+   "text": "Tıbbi Farmakoloji Lokal Anestezik İlaçlar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Dikkat Eksikliği Hiperaktivite Bozukluğu UZM.",
+   "text": "Psikiyatri Dikkat Eksikliği Hiperaktivite Bozukluğu UZM."
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Dışa Atım Bozuklukları UZM.",
+   "text": "Psikiyatri Dışa Atım Bozuklukları UZM."
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Kolinoseptör Aktive Edici ve Kolinesteraz İnhibitörleri",
+   "text": "Tıbbi Farmakoloji Kolinoseptör Aktive Edici ve Kolinesteraz İnhibitörleri"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Genetik",
+   "konu": "Davranış Genetiği",
+   "text": "Tıbbi Genetik Davranış Genetiği"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Genetik",
+   "konu": "Nörodejeneratif Hastalıklar Genetiği",
+   "text": "Tıbbi Genetik Nörodejeneratif Hastalıklar Genetiği"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Yaygın Anksiyete Bozukluğu Doç. Dr. Zuhal KOÇ APAYDIN",
+   "text": "Psikiyatri Yaygın Anksiyete Bozukluğu Doç. Dr. Zuhal KOÇ APAYDIN"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Panik Bozukluk Doç. Dr. Zuhal KOÇ APAYDIN",
+   "text": "Psikiyatri Panik Bozukluk Doç. Dr. Zuhal KOÇ APAYDIN"
+  },
+  {
+   "kurul": 2,
+   "ders": "Psikiyatri",
+   "konu": "Fobik Bozukluk Doç. Dr. Zuhal KOÇ",
+   "text": "Psikiyatri Fobik Bozukluk Doç. Dr. Zuhal KOÇ"
+  },
+  {
+   "kurul": 2,
+   "ders": "Aile Hekimliği",
+   "konu": "Aile Hekimliğinde Periyodik Muayeneler 2",
+   "text": "Aile Hekimliği Aile Hekimliğinde Periyodik Muayeneler 2"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Alkoller",
+   "text": "Tıbbi Farmakoloji Alkoller"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Genetik",
+   "konu": "Psikiyatrik Hastalıklar ve Genetik Analizi",
+   "text": "Tıbbi Genetik Psikiyatrik Hastalıklar ve Genetik Analizi"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Miyorelaksan İlaçlar",
+   "text": "Tıbbi Farmakoloji Miyorelaksan İlaçlar"
+  },
+  {
+   "kurul": 2,
+   "ders": "Aile Hekimliği",
+   "konu": "Nikotin Bağımlılığı ve Tedavisi",
+   "text": "Aile Hekimliği Nikotin Bağımlılığı ve Tedavisi"
+  },
+  {
+   "kurul": 2,
+   "ders": "Nöroloji",
+   "konu": "Kraniyal Sinir Muayenesi",
+   "text": "Nöroloji Kraniyal Sinir Muayenesi"
+  },
+  {
+   "kurul": 2,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Antidepresan İlaçlar",
+   "text": "Tıbbi Farmakoloji Antidepresan İlaçlar"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Bakteriyel İshaller UZM",
+   "text": "İç Hastalıkları Bakteriyel İshaller UZM"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Gastroenteritler UZM",
+   "text": "İç Hastalıkları Gastroenteritler UZM"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "GİS Motilite Bozuklukları",
+   "text": "İç Hastalıkları GİS Motilite Bozuklukları"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Ailesel Akdeniz Ateşi",
+   "text": "İç Hastalıkları Ailesel Akdeniz Ateşi"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Sülfonamidler, Trimetoprim ve Kinolonlar",
+   "text": "Tıbbi Farmakoloji Sülfonamidler, Trimetoprim ve Kinolonlar"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Antihelmintik İlaçlar",
+   "text": "Tıbbi Farmakoloji Antihelmintik İlaçlar"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Aminoglikozidler",
+   "text": "Tıbbi Farmakoloji Aminoglikozidler"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Tetrasiklin, Makrolit, Kloramfenikol ve Streptograminler",
+   "text": "Tıbbi Farmakoloji Tetrasiklin, Makrolit, Kloramfenikol ve Streptograminler"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Ülser Gastrit",
+   "text": "İç Hastalıkları Ülser Gastrit"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Sarılıklar",
+   "text": "İç Hastalıkları Sarılıklar"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Üst GIS kanamaları",
+   "text": "İç Hastalıkları Üst GIS kanamaları"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Alt GIS kanamaları",
+   "text": "İç Hastalıkları Alt GIS kanamaları"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Özofagus Hastalıkları ve Tümörleri",
+   "text": "Tıbbi Patoloji Özofagus Hastalıkları ve Tümörleri"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Gastrit Tipleri",
+   "text": "Tıbbi Patoloji Gastrit Tipleri"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Siroz ve Komplikasyonları",
+   "text": "İç Hastalıkları Siroz ve Komplikasyonları"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Gastrointestinal Sistem Parazitozları UZM",
+   "text": "İç Hastalıkları Gastrointestinal Sistem Parazitozları UZM"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -1",
+   "text": "Tıbbi Farmakoloji GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -1"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Dislipidemide Kullanılan İlaçlar",
+   "text": "Tıbbi Farmakoloji Dislipidemide Kullanılan İlaçlar"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Antifungal İlaçlar",
+   "text": "Tıbbi Farmakoloji Antifungal İlaçlar"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Antiemetik ilaçlar",
+   "text": "Tıbbi Farmakoloji Antiemetik ilaçlar"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -2",
+   "text": "Tıbbi Farmakoloji GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -2"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Peptik Ülser",
+   "text": "Tıbbi Patoloji Peptik Ülser"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Mide Tümörleri",
+   "text": "Tıbbi Patoloji Mide Tümörleri"
+  },
+  {
+   "kurul": 3,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Kolera",
+   "text": "Enfeksiyon Hastalıkları Kolera"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Malabsorbsiyon ve Çölyak Hastalığı",
+   "text": "Tıbbi Patoloji Malabsorbsiyon ve Çölyak Hastalığı"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Enfeksiyöz ve Divertiküler Kolitler",
+   "text": "Tıbbi Patoloji Enfeksiyöz ve Divertiküler Kolitler"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "İnflamatuar Bağırsak Hastalıkları: Crohn Hastalığı",
+   "text": "Tıbbi Patoloji İnflamatuar Bağırsak Hastalıkları: Crohn Hastalığı"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "İnflamatuar Bağırsak Hastalıkları: Ülseratif Kolit",
+   "text": "Tıbbi Patoloji İnflamatuar Bağırsak Hastalıkları: Ülseratif Kolit"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Bağırsak Polipler ve Polipozis Sendromları",
+   "text": "Tıbbi Patoloji Bağırsak Polipler ve Polipozis Sendromları"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Antimikobakteriyel İlaçlar",
+   "text": "Tıbbi Farmakoloji Antimikobakteriyel İlaçlar"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Antimikrobik İlaçların Klinik Kullanımı, Önemi ve Önlemleri",
+   "text": "Tıbbi Farmakoloji Antimikrobik İlaçların Klinik Kullanımı, Önemi ve Önlemleri"
+  },
+  {
+   "kurul": 3,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Konjenital GİS Malformasyonları",
+   "text": "Çocuk Sağlığı ve Hastalıkları Konjenital GİS Malformasyonları"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Sindirim Sistemi Tümörleri",
+   "text": "İç Hastalıkları Sindirim Sistemi Tümörleri"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Kolonun Prekanseröz Lezyonları",
+   "text": "İç Hastalıkları Kolonun Prekanseröz Lezyonları"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Kolorektal Kanser Patogenezi",
+   "text": "Tıbbi Patoloji Kolorektal Kanser Patogenezi"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Kolorektal Adenokarsinom ve Apandisit",
+   "text": "Tıbbi Patoloji Kolorektal Adenokarsinom ve Apandisit"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Akut Pankreatitler",
+   "text": "İç Hastalıkları Akut Pankreatitler"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Genetik",
+   "konu": "Gastrointestinal Hastalıkların Genetiği",
+   "text": "Tıbbi Genetik Gastrointestinal Hastalıkların Genetiği"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Besin Zehirlenmeleri ve Zehirlenmelerde Yönetim",
+   "text": "Tıbbi Farmakoloji Besin Zehirlenmeleri ve Zehirlenmelerde Yönetim"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Genetik",
+   "konu": "Gastrointestinal Tümörlerin Genetiği",
+   "text": "Tıbbi Genetik Gastrointestinal Tümörlerin Genetiği"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Akut ve Kronik Viral Hepatitler",
+   "text": "Tıbbi Patoloji Akut ve Kronik Viral Hepatitler"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Yağlı Karaciğer Hastalıkları (NAFLD/NASH)",
+   "text": "Tıbbi Patoloji Yağlı Karaciğer Hastalıkları (NAFLD/NASH)"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Akut Hepatitler",
+   "text": "İç Hastalıkları Akut Hepatitler"
+  },
+  {
+   "kurul": 3,
+   "ders": "İç Hastalıkları",
+   "konu": "Malabsorpsiyon Sendromları",
+   "text": "İç Hastalıkları Malabsorpsiyon Sendromları"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Diğer Antimikrobiyaller; Dezenfektan ve Sterilizan Ajanlar",
+   "text": "Tıbbi Farmakoloji Diğer Antimikrobiyaller; Dezenfektan ve Sterilizan Ajanlar"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "OTC İlaçların Terapötik ve Toksik Etkileri",
+   "text": "Tıbbi Farmakoloji OTC İlaçların Terapötik ve Toksik Etkileri"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Kolestatik Karaciğer Hastalıkları",
+   "text": "Tıbbi Patoloji Kolestatik Karaciğer Hastalıkları"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Karaciğer Sirozu ve Portal Hipertansiyon",
+   "text": "Tıbbi Patoloji Karaciğer Sirozu ve Portal Hipertansiyon"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Karaciğer Tümörleri",
+   "text": "Tıbbi Patoloji Karaciğer Tümörleri"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Kolesistit, Kolelitiyazis ve Safra Kesesi Tümörleri",
+   "text": "Tıbbi Patoloji Kolesistit, Kolelitiyazis ve Safra Kesesi Tümörleri"
+  },
+  {
+   "kurul": 3,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Biliyer Atrezi ve Diğer Safra Yolu Anomalileri",
+   "text": "Çocuk Sağlığı ve Hastalıkları Biliyer Atrezi ve Diğer Safra Yolu Anomalileri"
+  },
+  {
+   "kurul": 3,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Neonatal Kolestaz",
+   "text": "Çocuk Sağlığı ve Hastalıkları Neonatal Kolestaz"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Antiviral İlaçlar",
+   "text": "Tıbbi Farmakoloji Antiviral İlaçlar"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Vazoaktif Peptidler, Eikozanoidler",
+   "text": "Tıbbi Farmakoloji Vazoaktif Peptidler, Eikozanoidler"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Beta Laktam ve Diğer Hücre Duvarı ile Membran Aktif Antibiyotikler",
+   "text": "Tıbbi Farmakoloji Beta Laktam ve Diğer Hücre Duvarı ile Membran Aktif Antibiyotikler"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Akut ve Kronik Pankreatitler",
+   "text": "Tıbbi Patoloji Akut ve Kronik Pankreatitler"
+  },
+  {
+   "kurul": 3,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Pankreas Tümörleri",
+   "text": "Tıbbi Patoloji Pankreas Tümörleri"
+  },
+  {
+   "kurul": 3,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Zoonotik Enfeksiyonlar",
+   "text": "Enfeksiyon Hastalıkları Zoonotik Enfeksiyonlar"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Üst Solunum Yolu Hastalıkları",
+   "text": "Tıbbi Patoloji Üst Solunum Yolu Hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Obstrüktif Akciğer Hastalıkları - I",
+   "text": "Tıbbi Patoloji Obstrüktif Akciğer Hastalıkları - I"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Obstrüktif Akciğer Hastalıkları - II",
+   "text": "Tıbbi Patoloji Obstrüktif Akciğer Hastalıkları - II"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Genetik",
+   "konu": "Ateroskleroz Genetiği",
+   "text": "Tıbbi Genetik Ateroskleroz Genetiği"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Restriktif Akciğer Hastalıkları",
+   "text": "Tıbbi Patoloji Restriktif Akciğer Hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Pulmoner Vasküler Hastalıklar",
+   "text": "Tıbbi Patoloji Pulmoner Vasküler Hastalıklar"
+  },
+  {
+   "kurul": 4,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Solunum Sist. Hastalık. Anamnez",
+   "text": "Çocuk Sağlığı ve Hastalıkları Solunum Sist. Hastalık. Anamnez"
+  },
+  {
+   "kurul": 4,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Solunum Sist. Hastalık. Fizik Muayene",
+   "text": "Çocuk Sağlığı ve Hastalıkları Solunum Sist. Hastalık. Fizik Muayene"
+  },
+  {
+   "kurul": 4,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Solunum sistemi Semptomatolojisi",
+   "text": "Çocuk Sağlığı ve Hastalıkları Solunum sistemi Semptomatolojisi"
+  },
+  {
+   "kurul": 4,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Solunum sıkıntısı olan yeni doğana yaklaşım",
+   "text": "Çocuk Sağlığı ve Hastalıkları Solunum sıkıntısı olan yeni doğana yaklaşım"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Akut Akciğer Enfeksiyonları",
+   "text": "Tıbbi Patoloji Akut Akciğer Enfeksiyonları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Kronik ve Fırsatçı Akciğer Enfeksiyonları",
+   "text": "Tıbbi Patoloji Kronik ve Fırsatçı Akciğer Enfeksiyonları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Göğüs Hastalıkları",
+   "konu": "Obstrüktif ve restriktif akciğer hastalıkları",
+   "text": "Göğüs Hastalıkları Obstrüktif ve restriktif akciğer hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Göğüs Hastalıkları",
+   "konu": "Pnömoniler",
+   "text": "Göğüs Hastalıkları Pnömoniler"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kardiyoloji",
+   "konu": "Miyokarditler, Miyokardiyopatiler ve Kalp Tümörleri",
+   "text": "Kardiyoloji Miyokarditler, Miyokardiyopatiler ve Kalp Tümörleri"
+  },
+  {
+   "kurul": 4,
+   "ders": "Göğüs Hastalıkları",
+   "konu": "Plevral efüzyon ve ampiyem",
+   "text": "Göğüs Hastalıkları Plevral efüzyon ve ampiyem"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Genetik",
+   "konu": "Tümör Mikro Çevresi, İnvazyon ve Metastaz",
+   "text": "Tıbbi Genetik Tümör Mikro Çevresi, İnvazyon ve Metastaz"
+  },
+  {
+   "kurul": 4,
+   "ders": "Halk Sağlığı",
+   "konu": "Kanser Hastalıkları Epidemiyolojisi",
+   "text": "Halk Sağlığı Kanser Hastalıkları Epidemiyolojisi"
+  },
+  {
+   "kurul": 4,
+   "ders": "Halk Sağlığı",
+   "konu": "Kardiyovasküler sistem hastalıklarının epidemiyolojisi",
+   "text": "Halk Sağlığı Kardiyovasküler sistem hastalıklarının epidemiyolojisi"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Astım ve diğer akciğer hastalıklarının tedavisinde kullanılan ilaçlar",
+   "text": "Tıbbi Farmakoloji Astım ve diğer akciğer hastalıklarının tedavisinde kullanılan ilaçlar"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kalp ve Damar Cerrahisi",
+   "konu": "Göğüs duvarı anomalileri",
+   "text": "Kalp ve Damar Cerrahisi Göğüs duvarı anomalileri"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kardiyoloji",
+   "konu": "Kalp Kapak Hastalıkları",
+   "text": "Kardiyoloji Kalp Kapak Hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Genetik",
+   "konu": "Konjenital Kardiyovasküler Bozukluklarda Genetik Mekanizmalar",
+   "text": "Tıbbi Genetik Konjenital Kardiyovasküler Bozukluklarda Genetik Mekanizmalar"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kardiyoloji",
+   "konu": "Elektrokardiyografiye Giriş",
+   "text": "Kardiyoloji Elektrokardiyografiye Giriş"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Akciğer Tümörleri",
+   "text": "Tıbbi Patoloji Akciğer Tümörleri"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Plevra Hastalıkları",
+   "text": "Tıbbi Patoloji Plevra Hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Hipertansif Damar Hastalıkları",
+   "text": "Tıbbi Patoloji Hipertansif Damar Hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Ateroskleroz Patolojisi",
+   "text": "Tıbbi Patoloji Ateroskleroz Patolojisi"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Anevrizmalar ve Diseksiyonlar",
+   "text": "Tıbbi Patoloji Anevrizmalar ve Diseksiyonlar"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kardiyoloji",
+   "konu": "Ritim Bozukluklarına Giriş",
+   "text": "Kardiyoloji Ritim Bozukluklarına Giriş"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Kanser kemoterapisi",
+   "text": "Tıbbi Farmakoloji Kanser kemoterapisi"
+  },
+  {
+   "kurul": 4,
+   "ders": "İç Hastalıkları",
+   "konu": "Hiperlipidemiler",
+   "text": "İç Hastalıkları Hiperlipidemiler"
+  },
+  {
+   "kurul": 4,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Fetal Dolaşım ve Neonatal adaptasyon",
+   "text": "Çocuk Sağlığı ve Hastalıkları Fetal Dolaşım ve Neonatal adaptasyon"
+  },
+  {
+   "kurul": 4,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Siyanoz",
+   "text": "Çocuk Sağlığı ve Hastalıkları Siyanoz"
+  },
+  {
+   "kurul": 4,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Siyanotik doğumsal kalp hastalıkları",
+   "text": "Çocuk Sağlığı ve Hastalıkları Siyanotik doğumsal kalp hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Asiyanotik doğumsal kalp hastalıkları",
+   "text": "Çocuk Sağlığı ve Hastalıkları Asiyanotik doğumsal kalp hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kardiyoloji",
+   "konu": "Enfektif Endokardit",
+   "text": "Kardiyoloji Enfektif Endokardit"
+  },
+  {
+   "kurul": 4,
+   "ders": "Anestezi ve Reanimasyon",
+   "konu": "CPR",
+   "text": "Anestezi ve Reanimasyon CPR"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Antikoagülanlar ve antitrombotikler",
+   "text": "Tıbbi Farmakoloji Antikoagülanlar ve antitrombotikler"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Vaskülitler",
+   "text": "Tıbbi Patoloji Vaskülitler"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Damar Tümörleri",
+   "text": "Tıbbi Patoloji Damar Tümörleri"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kardiyoloji",
+   "konu": "Kalp Sesleri",
+   "text": "Kardiyoloji Kalp Sesleri"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kardiyoloji",
+   "konu": "Konjenital Kalp Hastalıkları",
+   "text": "Kardiyoloji Konjenital Kalp Hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kardiyoloji",
+   "konu": "Hipertansiyon",
+   "text": "Kardiyoloji Hipertansiyon"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kardiyoloji",
+   "konu": "Perikarditler",
+   "text": "Kardiyoloji Perikarditler"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Diüretikler",
+   "text": "Tıbbi Farmakoloji Diüretikler"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "İskemik Kalp Hastalıkları",
+   "text": "Tıbbi Patoloji İskemik Kalp Hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Miyokard Enfarktüsü",
+   "text": "Tıbbi Patoloji Miyokard Enfarktüsü"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Genetik",
+   "konu": "Kardiyovasküler Hastalıkların Genetiği",
+   "text": "Tıbbi Genetik Kardiyovasküler Hastalıkların Genetiği"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Vazodilatörler ve Anjina Pektoris ilaçları",
+   "text": "Tıbbi Farmakoloji Vazodilatörler ve Anjina Pektoris ilaçları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "İnfluenza",
+   "text": "Enfeksiyon Hastalıkları İnfluenza"
+  },
+  {
+   "kurul": 4,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Akut romatizmal ateş",
+   "text": "Enfeksiyon Hastalıkları Akut romatizmal ateş"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Kardiyak aritmilerde kullanılan ilaçlar",
+   "text": "Tıbbi Farmakoloji Kardiyak aritmilerde kullanılan ilaçlar"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kalp ve Damar Cerrahisi",
+   "konu": "Enfektif endokardit ve damar içi katater enfeksiyonları",
+   "text": "Kalp ve Damar Cerrahisi Enfektif endokardit ve damar içi katater enfeksiyonları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Kalp yetersizliğinde kullanılan ilaçlar",
+   "text": "Tıbbi Farmakoloji Kalp yetersizliğinde kullanılan ilaçlar"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kardiyoloji",
+   "konu": "Kalp Yetersizliği",
+   "text": "Kardiyoloji Kalp Yetersizliği"
+  },
+  {
+   "kurul": 4,
+   "ders": "Kardiyoloji",
+   "konu": "Koroner Kalp Hastalıkları",
+   "text": "Kardiyoloji Koroner Kalp Hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Antihipertansif İlaçlar",
+   "text": "Tıbbi Farmakoloji Antihipertansif İlaçlar"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Hipertansif ve Valvüler Kalp Hastalıkları",
+   "text": "Tıbbi Patoloji Hipertansif ve Valvüler Kalp Hastalıkları"
+  },
+  {
+   "kurul": 4,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Miyokardit ve Kardiyomiyopatiler",
+   "text": "Tıbbi Patoloji Miyokardit ve Kardiyomiyopatiler"
+  },
+  {
+   "kurul": 5,
+   "ders": "Halk Sağlığı",
+   "konu": "Sağlık Yönetimi",
+   "text": "Halk Sağlığı Sağlık Yönetimi"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Genetik",
+   "konu": "Lösemi genetik özellikler ve prognostik belirteçler",
+   "text": "Tıbbi Genetik Lösemi genetik özellikler ve prognostik belirteçler"
+  },
+  {
+   "kurul": 5,
+   "ders": "Halk Sağlığı",
+   "konu": "Sağlığın geliştirilmesi",
+   "text": "Halk Sağlığı Sağlığın geliştirilmesi"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Mikrositer Anemiler",
+   "text": "Tıbbi Patoloji Mikrositer Anemiler"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Makrositer ve Hemolitik Anemiler",
+   "text": "Tıbbi Patoloji Makrositer ve Hemolitik Anemiler"
+  },
+  {
+   "kurul": 5,
+   "ders": "FTR",
+   "konu": "Boyun ağrılarına yaklaşım",
+   "text": "FTR Boyun ağrılarına yaklaşım"
+  },
+  {
+   "kurul": 5,
+   "ders": "İç Hastalıkları",
+   "konu": "Anemi Tanı, Patofizyoloji ve Sınıflaması",
+   "text": "İç Hastalıkları Anemi Tanı, Patofizyoloji ve Sınıflaması"
+  },
+  {
+   "kurul": 5,
+   "ders": "Ortopedi ve Travmatoloji",
+   "konu": "Kemik, eklemve implant enfeksiyonları",
+   "text": "Ortopedi ve Travmatoloji Kemik, eklemve implant enfeksiyonları"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Kanama Bozuklukları ve Trombositopeniler",
+   "text": "Tıbbi Patoloji Kanama Bozuklukları ve Trombositopeniler"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Reaktif Lenfadenitler",
+   "text": "Tıbbi Patoloji Reaktif Lenfadenitler"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "NSAİİ, Antiromatikler, Nonopoid analjezikler ve gut tedavi ilaçları",
+   "text": "Tıbbi Farmakoloji NSAİİ, Antiromatikler, Nonopoid analjezikler ve gut tedavi ilaçları"
+  },
+  {
+   "kurul": 5,
+   "ders": "İç Hastalıkları",
+   "konu": "Demir metabolizması ve anormallikleri, Demir eksikliği ve birikimi UZM.",
+   "text": "İç Hastalıkları Demir metabolizması ve anormallikleri, Demir eksikliği ve birikimi UZM."
+  },
+  {
+   "kurul": 5,
+   "ders": "İç Hastalıkları",
+   "konu": "Demir metabolizması ve anormallikleri,Demir eksikliği ve",
+   "text": "İç Hastalıkları Demir metabolizması ve anormallikleri,Demir eksikliği ve"
+  },
+  {
+   "kurul": 5,
+   "ders": "Beyin ve Sinir Cerrahisi",
+   "konu": "Kafatasını oluşturan kemiklerin travmaları",
+   "text": "Beyin ve Sinir Cerrahisi Kafatasını oluşturan kemiklerin travmaları"
+  },
+  {
+   "kurul": 5,
+   "ders": "Beyin ve Sinir Cerrahisi",
+   "konu": "Kafa travmasına eşlik eden erken dönem klinik sorunlar",
+   "text": "Beyin ve Sinir Cerrahisi Kafa travmasına eşlik eden erken dönem klinik sorunlar"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Hodgkin Lenfoma",
+   "text": "Tıbbi Patoloji Hodgkin Lenfoma"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Non-Hodgkin B Hücreli Lenfomalar - I",
+   "text": "Tıbbi Patoloji Non-Hodgkin B Hücreli Lenfomalar - I"
+  },
+  {
+   "kurul": 5,
+   "ders": "FTR",
+   "konu": "Üst ekstremitenin fonksiyonel anatomisi ve Muayene yöntemleri",
+   "text": "FTR Üst ekstremitenin fonksiyonel anatomisi ve Muayene yöntemleri"
+  },
+  {
+   "kurul": 5,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Çocukluk çağı anemilerine yaklaşım",
+   "text": "Çocuk Sağlığı ve Hastalıkları Çocukluk çağı anemilerine yaklaşım"
+  },
+  {
+   "kurul": 5,
+   "ders": "Acil Tıp",
+   "konu": "Multitravmaya Yaklaşım",
+   "text": "Acil Tıp Multitravmaya Yaklaşım"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Non-Hodgkin B Hücreli Lenfomalar - II",
+   "text": "Tıbbi Patoloji Non-Hodgkin B Hücreli Lenfomalar - II"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "T ve NK Hücreli Lenfomalar",
+   "text": "Tıbbi Patoloji T ve NK Hücreli Lenfomalar"
+  },
+  {
+   "kurul": 5,
+   "ders": "İç Hastalıkları",
+   "konu": "Megaloblastik anemiler",
+   "text": "İç Hastalıkları Megaloblastik anemiler"
+  },
+  {
+   "kurul": 5,
+   "ders": "İç Hastalıkları",
+   "konu": "Hemolitik anemiler UZM.",
+   "text": "İç Hastalıkları Hemolitik anemiler UZM."
+  },
+  {
+   "kurul": 5,
+   "ders": "Ortopedi ve Travmatoloji",
+   "konu": "Eklem hastalıkları patolojisi ve artritler",
+   "text": "Ortopedi ve Travmatoloji Eklem hastalıkları patolojisi ve artritler"
+  },
+  {
+   "kurul": 5,
+   "ders": "İç Hastalıkları",
+   "konu": "Hemostaz ve anormallikleri, Kanama Pıhtılaşma bozuklukları",
+   "text": "İç Hastalıkları Hemostaz ve anormallikleri, Kanama Pıhtılaşma bozuklukları"
+  },
+  {
+   "kurul": 5,
+   "ders": "Halk Sağlığı",
+   "konu": "Sağlık Eğitimi",
+   "text": "Halk Sağlığı Sağlık Eğitimi"
+  },
+  {
+   "kurul": 5,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Hemoglobinopatiler",
+   "text": "Çocuk Sağlığı ve Hastalıkları Hemoglobinopatiler"
+  },
+  {
+   "kurul": 5,
+   "ders": "Acil Tıp",
+   "konu": "Ekstremite Travmaları",
+   "text": "Acil Tıp Ekstremite Travmaları"
+  },
+  {
+   "kurul": 5,
+   "ders": "Ortopedi ve Travmatoloji",
+   "konu": "Spondilodiskitler ve pot hastalığı",
+   "text": "Ortopedi ve Travmatoloji Spondilodiskitler ve pot hastalığı"
+  },
+  {
+   "kurul": 5,
+   "ders": "Ortopedi ve Travmatoloji",
+   "konu": "Spondilodiskitler ve npot hastalığı",
+   "text": "Ortopedi ve Travmatoloji Spondilodiskitler ve npot hastalığı"
+  },
+  {
+   "kurul": 5,
+   "ders": "Acil Tıp",
+   "konu": "Crush ve Kompartman Sendromu",
+   "text": "Acil Tıp Crush ve Kompartman Sendromu"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Akut Lösemiler",
+   "text": "Tıbbi Patoloji Akut Lösemiler"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Kronik Miyeloproliferatif Neoplaziler",
+   "text": "Tıbbi Patoloji Kronik Miyeloproliferatif Neoplaziler"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Enfeksiyöz ve Metabolik Kemik Hastalıkları",
+   "text": "Tıbbi Patoloji Enfeksiyöz ve Metabolik Kemik Hastalıkları"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Kemik Tümörleri",
+   "text": "Tıbbi Patoloji Kemik Tümörleri"
+  },
+  {
+   "kurul": 5,
+   "ders": "FTR",
+   "konu": "Servikal ve lomber bölgenin fonksiyonel anatomisi ve değerlendirme",
+   "text": "FTR Servikal ve lomber bölgenin fonksiyonel anatomisi ve değerlendirme"
+  },
+  {
+   "kurul": 5,
+   "ders": "Göğüs Cerrahisi",
+   "konu": "Göğüs travmasının tiplerine göre patolojik ve Klinik sonuçlar",
+   "text": "Göğüs Cerrahisi Göğüs travmasının tiplerine göre patolojik ve Klinik sonuçlar"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Yumuşak Doku Tümörleri",
+   "text": "Tıbbi Patoloji Yumuşak Doku Tümörleri"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Artrit Patolojileri",
+   "text": "Tıbbi Patoloji Artrit Patolojileri"
+  },
+  {
+   "kurul": 5,
+   "ders": "Halk Sağlığı",
+   "konu": "Meslek hastalıkları",
+   "text": "Halk Sağlığı Meslek hastalıkları"
+  },
+  {
+   "kurul": 5,
+   "ders": "Halk Sağlığı",
+   "konu": "İş kazaları",
+   "text": "Halk Sağlığı İş kazaları"
+  },
+  {
+   "kurul": 5,
+   "ders": "Halk Sağlığı",
+   "konu": "Sağlığın Sosyalleştirilmesi ve Temel Sağlık Hizmetleri (TSH)",
+   "text": "Halk Sağlığı Sağlığın Sosyalleştirilmesi ve Temel Sağlık Hizmetleri (TSH)"
+  },
+  {
+   "kurul": 5,
+   "ders": "Acil Tıp",
+   "konu": "Senkop, Ani Kardiyak Ölüm (AKÖ)",
+   "text": "Acil Tıp Senkop, Ani Kardiyak Ölüm (AKÖ)"
+  },
+  {
+   "kurul": 5,
+   "ders": "Acil Tıp",
+   "konu": "Bilinç Bozukluğuna (Koma) Yaklaşım",
+   "text": "Acil Tıp Bilinç Bozukluğuna (Koma) Yaklaşım"
+  },
+  {
+   "kurul": 5,
+   "ders": "Acil Tıp",
+   "konu": "İleri Kardiyak Yaşam Desteği ve Özel Durumlar",
+   "text": "Acil Tıp İleri Kardiyak Yaşam Desteği ve Özel Durumlar"
+  },
+  {
+   "kurul": 5,
+   "ders": "Ortopedi ve Travmatoloji",
+   "konu": "Kemik ve kıkırdağın konjenital hastalıkları",
+   "text": "Ortopedi ve Travmatoloji Kemik ve kıkırdağın konjenital hastalıkları"
+  },
+  {
+   "kurul": 5,
+   "ders": "FTR",
+   "konu": "Alt ekstremitenin Fonksiyonel Anatomisi ve muayene yöntemleri",
+   "text": "FTR Alt ekstremitenin Fonksiyonel Anatomisi ve muayene yöntemleri"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Kemik mineralizasyonu ve homeostaza etki eden ilaçlar",
+   "text": "Tıbbi Farmakoloji Kemik mineralizasyonu ve homeostaza etki eden ilaçlar"
+  },
+  {
+   "kurul": 5,
+   "ders": "Enfeksiyon Hastalıkları",
+   "konu": "Kırım-Kongo kanamalı ateşi",
+   "text": "Enfeksiyon Hastalıkları Kırım-Kongo kanamalı ateşi"
+  },
+  {
+   "kurul": 5,
+   "ders": "Acil Tıp",
+   "konu": "Çevresel Acillere Yaklaşım",
+   "text": "Acil Tıp Çevresel Acillere Yaklaşım"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Enflamatuar ve Vezikülobüllöz Deri Hastalıkları",
+   "text": "Tıbbi Patoloji Enflamatuar ve Vezikülobüllöz Deri Hastalıkları"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Deri Tümörleri ve Malign Melanom",
+   "text": "Tıbbi Patoloji Deri Tümörleri ve Malign Melanom"
+  },
+  {
+   "kurul": 5,
+   "ders": "Ortopedi ve Travmatoloji",
+   "konu": "Kemiğin edinsel hastalıkları",
+   "text": "Ortopedi ve Travmatoloji Kemiğin edinsel hastalıkları"
+  },
+  {
+   "kurul": 5,
+   "ders": "Halk Sağlığı",
+   "konu": "Halk sağlığını etkileyen faktörler",
+   "text": "Halk Sağlığı Halk sağlığını etkileyen faktörler"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Dermatolojik Farmakoloji",
+   "text": "Tıbbi Farmakoloji Dermatolojik Farmakoloji"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Genetik",
+   "konu": "Kan Hastalıklarının Genetiği",
+   "text": "Tıbbi Genetik Kan Hastalıklarının Genetiği"
+  },
+  {
+   "kurul": 5,
+   "ders": "Ortopedi ve Travmatoloji",
+   "konu": "Yetişkin ve çocuk kırıklarına yaklaşım",
+   "text": "Ortopedi ve Travmatoloji Yetişkin ve çocuk kırıklarına yaklaşım"
+  },
+  {
+   "kurul": 5,
+   "ders": "Ortopedi ve Travmatoloji",
+   "konu": "Kırık komplikasyonlarına yaklaşım",
+   "text": "Ortopedi ve Travmatoloji Kırık komplikasyonlarına yaklaşım"
+  },
+  {
+   "kurul": 5,
+   "ders": "Ortopedi ve Travmatoloji",
+   "konu": "Kemiklerin tümörlerine genel yaklaşım",
+   "text": "Ortopedi ve Travmatoloji Kemiklerin tümörlerine genel yaklaşım"
+  },
+  {
+   "kurul": 5,
+   "ders": "Tıbbi Genetik",
+   "konu": "Lenfoma Genetik Özellikler ve Prognostik Belirteçler",
+   "text": "Tıbbi Genetik Lenfoma Genetik Özellikler ve Prognostik Belirteçler"
+  },
+  {
+   "kurul": 5,
+   "ders": "Halk Sağlığı",
+   "konu": "Çocuk Sağlığı",
+   "text": "Halk Sağlığı Çocuk Sağlığı"
+  },
+  {
+   "kurul": 5,
+   "ders": "Halk Sağlığı",
+   "konu": "Okul Sağlığı",
+   "text": "Halk Sağlığı Okul Sağlığı"
+  },
+  {
+   "kurul": 5,
+   "ders": "FTR",
+   "konu": "Kas-iskelet sistemi hastalıklarında Non- farmakolojik Yaklaşımlar: Egzersiz",
+   "text": "FTR Kas-iskelet sistemi hastalıklarında Non- farmakolojik Yaklaşımlar: Egzersiz"
+  },
+  {
+   "kurul": 5,
+   "ders": "Acil Tıp",
+   "konu": "Zehirlenmelere Yaklaşım",
+   "text": "Acil Tıp Zehirlenmelere Yaklaşım"
+  },
+  {
+   "kurul": 5,
+   "ders": "FTR",
+   "konu": "Bel ağrılarına yaklaşım",
+   "text": "FTR Bel ağrılarına yaklaşım"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Hipofiz ve Epifiz Patolojileri",
+   "text": "Tıbbi Patoloji Hipofiz ve Epifiz Patolojileri"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Tiroid ve Paratiroid Patolojileri",
+   "text": "Tıbbi Patoloji Tiroid ve Paratiroid Patolojileri"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
+   "text": "İç Hastalıkları Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Hipotalamus-Hipofiz hastalıklarına giriş",
+   "text": "İç Hastalıkları Hipotalamus-Hipofiz hastalıklarına giriş"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Cushing Sendromu",
+   "text": "İç Hastalıkları Cushing Sendromu"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Pankreatik Hormonlar ve Antidiyabetik İlaçlar",
+   "text": "Tıbbi Farmakoloji Pankreatik Hormonlar ve Antidiyabetik İlaçlar"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Biyokimya",
+   "konu": "Klinik Biyokimya Laboratuvar Organizasyonu",
+   "text": "Tıbbi Biyokimya Klinik Biyokimya Laboratuvar Organizasyonu"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Hipotalamohipofizer Sistem İlaçları",
+   "text": "Tıbbi Farmakoloji Hipotalamohipofizer Sistem İlaçları"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Tiroit ve Antitiroid İlaçlar",
+   "text": "Tıbbi Farmakoloji Tiroit ve Antitiroid İlaçlar"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Endokrin Sistem Hastalıklarına Genel Yaklaşım",
+   "text": "İç Hastalıkları Endokrin Sistem Hastalıklarına Genel Yaklaşım"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Hipoglisemiler",
+   "text": "İç Hastalıkları Hipoglisemiler"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Yaşlılıkta beslenme UZM.",
+   "text": "İç Hastalıkları Yaşlılıkta beslenme UZM."
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Elektrolitler ve Endokrin Sistem Arasındaki ilişki",
+   "text": "İç Hastalıkları Elektrolitler ve Endokrin Sistem Arasındaki ilişki"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Cinsel Farklılaşma Bozuklukları UZM.",
+   "text": "İç Hastalıkları Cinsel Farklılaşma Bozuklukları UZM."
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Biyokimya",
+   "konu": "K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz",
+   "text": "Tıbbi Biyokimya K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Biyokimya",
+   "konu": "K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz Edilmesinde Dik. Ed. Hususlar",
+   "text": "Tıbbi Biyokimya K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz Edilmesinde Dik. Ed. Hususlar"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "D Vitamini Metabolizması",
+   "text": "İç Hastalıkları D Vitamini Metabolizması"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Genetik",
+   "konu": "Endokrin Hastalıklar ve Genetik",
+   "text": "Tıbbi Genetik Endokrin Hastalıklar ve Genetik"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Tiroid Bezi Hastalıkları Dr. Abdulvahap Coşkun",
+   "text": "İç Hastalıkları Tiroid Bezi Hastalıkları Dr. Abdulvahap Coşkun"
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Epidemiyolojiye Giriş",
+   "text": "Halk Sağlığı Epidemiyolojiye Giriş"
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Önemli Beslenme Sorunları",
+   "text": "Halk Sağlığı Önemli Beslenme Sorunları"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Paratiroid bezi hastalıkları",
+   "text": "İç Hastalıkları Paratiroid bezi hastalıkları"
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Yeterli ve Dengeli Beslenme",
+   "text": "Halk Sağlığı Yeterli ve Dengeli Beslenme"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Adrenokortikosteroidler ve Agonistler",
+   "text": "Tıbbi Farmakoloji Adrenokortikosteroidler ve Agonistler"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Biyokimya",
+   "konu": "Biyokimyasal Analizlerde Hata Kaynakları",
+   "text": "Tıbbi Biyokimya Biyokimyasal Analizlerde Hata Kaynakları"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Obezite-Metabolizma-Endokrin İlişkisi",
+   "text": "İç Hastalıkları Obezite-Metabolizma-Endokrin İlişkisi"
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Bağışıklama ve önemi",
+   "text": "Halk Sağlığı Bağışıklama ve önemi"
+  },
+  {
+   "kurul": 6,
+   "ders": "Psikiyatri",
+   "konu": "Yaşlılığa Özgü Ruhsal Sorunlar UZM.",
+   "text": "Psikiyatri Yaşlılığa Özgü Ruhsal Sorunlar UZM."
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Genetik",
+   "konu": "Kalıtsal Metabolik Hastalıklar Genetiği",
+   "text": "Tıbbi Genetik Kalıtsal Metabolik Hastalıklar Genetiği"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Adrenal Bez Patolojileri",
+   "text": "Tıbbi Patoloji Adrenal Bez Patolojileri"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Patoloji",
+   "konu": "Pankreas ve Nöroendokrin Tümörler ve MEN sendromu",
+   "text": "Tıbbi Patoloji Pankreas ve Nöroendokrin Tümörler ve MEN sendromu"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Biyokimya",
+   "konu": "Biyokimya Lab. Gelen Numunelerde Analiz Edilen Paket Testler",
+   "text": "Tıbbi Biyokimya Biyokimya Lab. Gelen Numunelerde Analiz Edilen Paket Testler"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Gonadal Hormonlar, inhibitör ve replasman ilaçları",
+   "text": "Tıbbi Farmakoloji Gonadal Hormonlar, inhibitör ve replasman ilaçları"
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Mobbing",
+   "text": "Halk Sağlığı Mobbing"
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Akılcı İlaç Kullanımı",
+   "text": "Halk Sağlığı Akılcı İlaç Kullanımı"
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Çevre Sağlığına Giriş ve Genel Bilgiler",
+   "text": "Halk Sağlığı Çevre Sağlığına Giriş ve Genel Bilgiler"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Yaşlanmada Metabolik Sorunlar UZM.",
+   "text": "İç Hastalıkları Yaşlanmada Metabolik Sorunlar UZM."
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Yaşlı Sağlığı Sorunları ve Sağlık",
+   "text": "Halk Sağlığı Yaşlı Sağlığı Sorunları ve Sağlık"
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Sağlık Göstergeleri",
+   "text": "Halk Sağlığı Sağlık Göstergeleri"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Genetik",
+   "konu": "Metabolik Hastalıklarda Dismorfik Bulgular ve Veziküler Trafik",
+   "text": "Tıbbi Genetik Metabolik Hastalıklarda Dismorfik Bulgular ve Veziküler Trafik"
+  },
+  {
+   "kurul": 6,
+   "ders": "İç Hastalıkları",
+   "konu": "Yaşlılıkta Beslenme Uzm. Dr BETÜL İVERENDİ",
+   "text": "İç Hastalıkları Yaşlılıkta Beslenme Uzm. Dr BETÜL İVERENDİ"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Histamin, serotonin, melatonin ve Ergot",
+   "text": "Tıbbi Farmakoloji Histamin, serotonin, melatonin ve Ergot"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Farmakoloji",
+   "konu": "Histamin, serotonin, melatonin ve Ergot Alkaloidleri",
+   "text": "Tıbbi Farmakoloji Histamin, serotonin, melatonin ve Ergot Alkaloidleri"
+  },
+  {
+   "kurul": 6,
+   "ders": "Tıbbi Genetik",
+   "konu": "Yaşlanma Genetiği",
+   "text": "Tıbbi Genetik Yaşlanma Genetiği"
+  },
+  {
+   "kurul": 6,
+   "ders": "Aile Hekimliği",
+   "konu": "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri",
+   "text": "Aile Hekimliği Yaşlılık Döneminde Güvenli Yaşamın İlkeleri"
+  },
+  {
+   "kurul": 6,
+   "ders": "Çocuk Sağlığı ve Hastalıkları",
+   "konu": "Çocukluk Dönemi Su Metabolizması Bozuklukları",
+   "text": "Çocuk Sağlığı ve Hastalıkları Çocukluk Dönemi Su Metabolizması Bozuklukları"
+  },
+  {
+   "kurul": 6,
+   "ders": "FTR",
+   "konu": "Yaşlılığa Özgü Hareket Sistemi Bozuklukları",
+   "text": "FTR Yaşlılığa Özgü Hareket Sistemi Bozuklukları"
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Vaka-Kontrol çalışmaları",
+   "text": "Halk Sağlığı Vaka-Kontrol çalışmaları"
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Kohort Çalışmaları",
+   "text": "Halk Sağlığı Kohort Çalışmaları"
+  },
+  {
+   "kurul": 6,
+   "ders": "Halk Sağlığı",
+   "konu": "Deneysel ve Kesitsel Çalışmalar",
+   "text": "Halk Sağlığı Deneysel ve Kesitsel Çalışmalar"
+  }
+ ],
+ "agac": {
+  "Tıbbi Genetik": {
+   "1": [
+    "Dismorfolojide Genetik Terminoloji",
+    "Kromozomal Hastalıklar ve Genetik Danışma",
+    "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
+    "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe",
+    "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları",
+    "Prenatal Tanı Yöntemleri",
+    "Preimplantasyon Genetik Tanı (Pgd)"
+   ],
+   "2": [
+    "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+    "Nörolojik Hastalıklar",
+    "Davranış Genetiği",
+    "Nörodejeneratif Hastalıklar Genetiği",
+    "Psikiyatrik Hastalıklar ve Genetik Analizi"
+   ],
+   "3": [
+    "Gastrointestinal Hastalıkların Genetiği",
+    "Gastrointestinal Tümörlerin Genetiği"
+   ],
+   "4": [
+    "Ateroskleroz Genetiği",
+    "Tümör Mikro Çevresi, İnvazyon ve Metastaz",
+    "Konjenital Kardiyovasküler Bozukluklarda Genetik Mekanizmalar",
+    "Kardiyovasküler Hastalıkların Genetiği"
+   ],
+   "5": [
+    "Lösemi genetik özellikler ve prognostik belirteçler",
+    "Kan Hastalıklarının Genetiği",
+    "Lenfoma Genetik Özellikler ve Prognostik Belirteçler"
+   ],
+   "6": [
+    "Endokrin Hastalıklar ve Genetik",
+    "Kalıtsal Metabolik Hastalıklar Genetiği",
+    "Metabolik Hastalıklarda Dismorfik Bulgular ve Veziküler Trafik",
+    "Yaşlanma Genetiği"
+   ]
+  },
+  "Tıbbi Patoloji": {
+   "1": [
+    "Patolojiye Giriş",
+    "Hücresel Adaptasyonlar",
+    "Hücre Hasarı ve Nekroz - I",
+    "Hücre Hasarı ve Nekroz - II",
+    "Hücre İçi Birikimler ve Kalsifikasyonlar",
+    "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+    "Enflamasyonun Kimyasal Mediyatörleri",
+    "Kronik ve Granülomatöz Enflamasyon",
+    "Doku Onarımı ve Yara İyileşmesi",
+    "Ödem, Hiperemi, Konjesyon ve Kanama",
+    "Tromboz Patofizyolojisi",
+    "Aşırı Duyarlılık ve Otoimmünite",
+    "Genetik, Pediatrik ve Çevresel Patoloji",
+    "Tümör Biyolojisi ve Terminolojisi",
+    "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+    "Glomeruler Hastalıklar: Nefrotik Sendrom",
+    "Glomeruler Hastalıklar: Nefritik Sendrom",
+    "Sistemik Hastalıklarda Böbrek Hasarı",
+    "Tübülointerstisyel Hastalıklar",
+    "Vasküler ve Kistik Böbrek Hastalıkları",
+    "Böbrek Tümörleri",
+    "Mesane Hastalıkları ve Tümörleri",
+    "Vulva, Vajen ve Serviks Hastalıkları",
+    "İnvaziv Serviks Kanseri ve Endometriyozis",
+    "Endometrial Hiperplazi ve Kanserleri",
+    "Uterus Düz Kas ve Trofoblastik Tümörleri",
+    "Over Tümörleri",
+    "Memenin Benign Hastalıkları",
+    "Meme Kanseri ve Moleküler Tipleri",
+    "Erkek Genital Sistem ve Prostat Hastalıkları"
+   ],
+   "2": [
+    "SSS Hücresel Reaksiyonları ve Ödem / Herniasyon",
+    "Serebrovasküler Hastalıklar ve İnme",
+    "Santral Sinir Sistemi Enfeksiyonları",
+    "Nörodejeneratif Hastalıklar",
+    "Santral Sinir Sistemi Tümörleri"
+   ],
+   "3": [
+    "Özofagus Hastalıkları ve Tümörleri",
+    "Gastrit Tipleri",
+    "Peptik Ülser",
+    "Mide Tümörleri",
+    "Malabsorbsiyon ve Çölyak Hastalığı",
+    "Enfeksiyöz ve Divertiküler Kolitler",
+    "İnflamatuar Bağırsak Hastalıkları: Crohn Hastalığı",
+    "İnflamatuar Bağırsak Hastalıkları: Ülseratif Kolit",
+    "Bağırsak Polipler ve Polipozis Sendromları",
+    "Kolorektal Kanser Patogenezi",
+    "Kolorektal Adenokarsinom ve Apandisit",
+    "Akut ve Kronik Viral Hepatitler",
+    "Yağlı Karaciğer Hastalıkları (NAFLD/NASH)",
+    "Kolestatik Karaciğer Hastalıkları",
+    "Karaciğer Sirozu ve Portal Hipertansiyon",
+    "Karaciğer Tümörleri",
+    "Kolesistit, Kolelitiyazis ve Safra Kesesi Tümörleri",
+    "Akut ve Kronik Pankreatitler",
+    "Pankreas Tümörleri"
+   ],
+   "4": [
+    "Üst Solunum Yolu Hastalıkları",
+    "Obstrüktif Akciğer Hastalıkları - I",
+    "Obstrüktif Akciğer Hastalıkları - II",
+    "Restriktif Akciğer Hastalıkları",
+    "Pulmoner Vasküler Hastalıklar",
+    "Akut Akciğer Enfeksiyonları",
+    "Kronik ve Fırsatçı Akciğer Enfeksiyonları",
+    "Akciğer Tümörleri",
+    "Plevra Hastalıkları",
+    "Hipertansif Damar Hastalıkları",
+    "Ateroskleroz Patolojisi",
+    "Anevrizmalar ve Diseksiyonlar",
+    "Vaskülitler",
+    "Damar Tümörleri",
+    "İskemik Kalp Hastalıkları",
+    "Miyokard Enfarktüsü",
+    "Hipertansif ve Valvüler Kalp Hastalıkları",
+    "Miyokardit ve Kardiyomiyopatiler"
+   ],
+   "5": [
+    "Mikrositer Anemiler",
+    "Makrositer ve Hemolitik Anemiler",
+    "Kanama Bozuklukları ve Trombositopeniler",
+    "Reaktif Lenfadenitler",
+    "Hodgkin Lenfoma",
+    "Non-Hodgkin B Hücreli Lenfomalar - I",
+    "Non-Hodgkin B Hücreli Lenfomalar - II",
+    "T ve NK Hücreli Lenfomalar",
+    "Akut Lösemiler",
+    "Kronik Miyeloproliferatif Neoplaziler",
+    "Enfeksiyöz ve Metabolik Kemik Hastalıkları",
+    "Kemik Tümörleri",
+    "Yumuşak Doku Tümörleri",
+    "Artrit Patolojileri",
+    "Enflamatuar ve Vezikülobüllöz Deri Hastalıkları",
+    "Deri Tümörleri ve Malign Melanom"
+   ],
+   "6": [
+    "Hipofiz ve Epifiz Patolojileri",
+    "Tiroid ve Paratiroid Patolojileri",
+    "Adrenal Bez Patolojileri",
+    "Pankreas ve Nöroendokrin Tümörler ve MEN sendromu"
+   ]
+  },
+  "Halk Sağlığı": {
+   "1": [
+    "Gebelik ve Emzirme Döneminde Beslenme",
+    "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+    "Halk Sağlığı Tarihçesi",
+    "Koruyucu Sağlık Hizmetleri",
+    "Bebek Beslenmesi",
+    "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "Türkiye’de Sağlık Hizmetleri"
+   ],
+   "4": [
+    "Kanser Hastalıkları Epidemiyolojisi",
+    "Kardiyovasküler sistem hastalıklarının epidemiyolojisi"
+   ],
+   "5": [
+    "Sağlık Yönetimi",
+    "Sağlığın geliştirilmesi",
+    "Sağlık Eğitimi",
+    "Meslek hastalıkları",
+    "İş kazaları",
+    "Sağlığın Sosyalleştirilmesi ve Temel Sağlık Hizmetleri (TSH)",
+    "Halk sağlığını etkileyen faktörler",
+    "Çocuk Sağlığı",
+    "Okul Sağlığı"
+   ],
+   "6": [
+    "Epidemiyolojiye Giriş",
+    "Önemli Beslenme Sorunları",
+    "Yeterli ve Dengeli Beslenme",
+    "Bağışıklama ve önemi",
+    "Mobbing",
+    "Akılcı İlaç Kullanımı",
+    "Çevre Sağlığına Giriş ve Genel Bilgiler",
+    "Yaşlı Sağlığı Sorunları ve Sağlık",
+    "Sağlık Göstergeleri",
+    "Vaka-Kontrol çalışmaları",
+    "Kohort Çalışmaları",
+    "Deneysel ve Kesitsel Çalışmalar"
+   ]
+  },
+  "Üroloji": {
+   "1": [
+    "Üriner Obstrüksiyonun Fizyopatolojisi",
+    "Üriner Sistem Taş Hastalıkları Fizyopatolojisi",
+    "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve",
+    "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi",
+    "Üriner Sistemin Spesifik Enfeksiyonları",
+    "Üriner Sistem Enfeksiyonları Lab. Bulguları ve Tedavi",
+    "Enürezis Nokturna"
+   ]
+  },
+  "Enfeksiyon Hastalıkları": {
+   "1": [
+    "Cinsel Yolla Bulaşan Enfeksiyonlarda Tedavi",
+    "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
+    "Genital Enfeksiyonlar",
+    "İzolasyon Yöntemleri",
+    "Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma",
+    "Bağışıklığı Baskılı Hastalarda Enfeksiyon",
+    "Sifilis",
+    "Üriner Sistem Enfeksiyonları",
+    "İntrauterin Enfeksiyonlar",
+    "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
+    "Üretral Akıntı"
+   ],
+   "3": [
+    "Kolera",
+    "Zoonotik Enfeksiyonlar"
+   ],
+   "4": [
+    "İnfluenza",
+    "Akut romatizmal ateş"
+   ],
+   "5": [
+    "Kırım-Kongo kanamalı ateşi"
+   ]
+  },
+  "Tıbbi Farmakoloji": {
+   "1": [
+    "İmmünofarmakoloji"
+   ],
+   "2": [
+    "Genel Anestezik İlaçlar",
+    "SSS İlaçları",
+    "Sedatif ve Hipnotik İlaçlar",
+    "Antiepileptik İlaçlar",
+    "Opoid Analjezikler ve Antagonistleri",
+    "Kolinoseptör Bloke Edici İlaçlar",
+    "Otonom Sinir Sistemi Farmakolojisi",
+    "Sempatomimetikler",
+    "Adrenoseptör Antagonist İlaçlar",
+    "Lokal Anestezik İlaçlar",
+    "Kolinoseptör Aktive Edici ve Kolinesteraz İnhibitörleri",
+    "Alkoller",
+    "Miyorelaksan İlaçlar",
+    "Antidepresan İlaçlar"
+   ],
+   "3": [
+    "Sülfonamidler, Trimetoprim ve Kinolonlar",
+    "Antihelmintik İlaçlar",
+    "Aminoglikozidler",
+    "Tetrasiklin, Makrolit, Kloramfenikol ve Streptograminler",
+    "GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -1",
+    "Dislipidemide Kullanılan İlaçlar",
+    "Antifungal İlaçlar",
+    "Antiemetik ilaçlar",
+    "GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -2",
+    "Antimikobakteriyel İlaçlar",
+    "Antimikrobik İlaçların Klinik Kullanımı, Önemi ve Önlemleri",
+    "Besin Zehirlenmeleri ve Zehirlenmelerde Yönetim",
+    "Diğer Antimikrobiyaller; Dezenfektan ve Sterilizan Ajanlar",
+    "OTC İlaçların Terapötik ve Toksik Etkileri",
+    "Antiviral İlaçlar",
+    "Vazoaktif Peptidler, Eikozanoidler",
+    "Beta Laktam ve Diğer Hücre Duvarı ile Membran Aktif Antibiyotikler"
+   ],
+   "4": [
+    "Astım ve diğer akciğer hastalıklarının tedavisinde kullanılan ilaçlar",
+    "Kanser kemoterapisi",
+    "Antikoagülanlar ve antitrombotikler",
+    "Diüretikler",
+    "Vazodilatörler ve Anjina Pektoris ilaçları",
+    "Kardiyak aritmilerde kullanılan ilaçlar",
+    "Kalp yetersizliğinde kullanılan ilaçlar",
+    "Antihipertansif İlaçlar"
+   ],
+   "5": [
+    "NSAİİ, Antiromatikler, Nonopoid analjezikler ve gut tedavi ilaçları",
+    "Kemik mineralizasyonu ve homeostaza etki eden ilaçlar",
+    "Dermatolojik Farmakoloji"
+   ],
+   "6": [
+    "Pankreatik Hormonlar ve Antidiyabetik İlaçlar",
+    "Hipotalamohipofizer Sistem İlaçları",
+    "Tiroit ve Antitiroid İlaçlar",
+    "Adrenokortikosteroidler ve Agonistler",
+    "Gonadal Hormonlar, inhibitör ve replasman ilaçları",
+    "Histamin, serotonin, melatonin ve Ergot",
+    "Histamin, serotonin, melatonin ve Ergot Alkaloidleri"
+   ]
+  },
+  "Kadın Hastalıkları ve Doğum": {
+   "1": [
+    "Abortus",
+    "Gebelik Terminolojisi/Kavramları"
+   ]
+  },
+  "Nöroloji": {
+   "2": [
+    "Nörolojik Hastaya Yaklaşım",
+    "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
+    "Nörolojik Muayene",
+    "Baş ağrısına Yaklaşım",
+    "Periferik Nöropati",
+    "Bazal Gangliyonlar ve Ekstrapiramidal Sistem",
+    "Epilepsi",
+    "Medulla Spinalis Hastalıkları",
+    "Felçler",
+    "Kraniyal Sinir Muayenesi"
+   ]
+  },
+  "Anesteziyoloji ve Reanimasyon": {
+   "2": [
+    "Ağrı Yolları ve Mekanizmaları"
+   ]
+  },
+  "Psikiyatri": {
+   "2": [
+    "Psikiyatrik Semiyoloji",
+    "Şizofrenik Bozukluklar",
+    "Bipolar Bozukluk",
+    "Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+    "Psikosomatik Bozukluklar Doç. Dr. Zuhal KOÇ APAYDIN",
+    "Cinsel Kimlik Bozuklukları Doç. Dr. Zuhal KOÇ APAYDIN",
+    "Unipolar Depresyon Doç. Dr. Zuhal KOÇ APAYDIN",
+    "Kişilik Bozuklukları",
+    "OKB ve İlişkili Bozukluklar",
+    "Travma ve Stres Bağlantılı Bozukluklar",
+    "Nörogelişimsel Bozukluklar",
+    "Konsültasyon Liyezon Psikiyatrisi",
+    "Damgalama",
+    "İntihar ve Kendine Zarar Verme",
+    "Dikkat Eksikliği Hiperaktivite Bozukluğu UZM.",
+    "Dışa Atım Bozuklukları UZM.",
+    "Yaygın Anksiyete Bozukluğu Doç. Dr. Zuhal KOÇ APAYDIN",
+    "Panik Bozukluk Doç. Dr. Zuhal KOÇ APAYDIN",
+    "Fobik Bozukluk Doç. Dr. Zuhal KOÇ"
+   ],
+   "6": [
+    "Yaşlılığa Özgü Ruhsal Sorunlar UZM."
+   ]
+  },
+  "Beyin ve Sinir Cerrahisi": {
+   "2": [
+    "Kafa ve Omurilik Yaralanmaları",
+    "Medulla Spinalis lezyonları",
+    "İntrakraniyal Kitlelerde Belirti ve Bulgular"
+   ],
+   "5": [
+    "Kafatasını oluşturan kemiklerin travmaları",
+    "Kafa travmasına eşlik eden erken dönem klinik sorunlar"
+   ]
+  },
+  "FTR": {
+   "2": [
+    "Nörolojik Rehabilitasyona Giriş ve Genel İlkeler",
+    "Sık görülen nörolojik Hastalıklar ve Rehabilitasyonu"
+   ],
+   "5": [
+    "Boyun ağrılarına yaklaşım",
+    "Üst ekstremitenin fonksiyonel anatomisi ve Muayene yöntemleri",
+    "Servikal ve lomber bölgenin fonksiyonel anatomisi ve değerlendirme",
+    "Alt ekstremitenin Fonksiyonel Anatomisi ve muayene yöntemleri",
+    "Kas-iskelet sistemi hastalıklarında Non- farmakolojik Yaklaşımlar: Egzersiz",
+    "Bel ağrılarına yaklaşım"
+   ],
+   "6": [
+    "Yaşlılığa Özgü Hareket Sistemi Bozuklukları"
+   ]
+  },
+  "Aile Hekimliği": {
+   "2": [
+    "Aile Hekimliğinde Periyodik Muayeneler 1",
+    "Aile Hekimliğine Yaklaşım",
+    "Aile Hekimliğinde Periyodik Muayeneler 2",
+    "Nikotin Bağımlılığı ve Tedavisi"
+   ],
+   "6": [
+    "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri"
+   ]
+  },
+  "İç Hastalıkları": {
+   "3": [
+    "Bakteriyel İshaller UZM",
+    "Gastroenteritler UZM",
+    "GİS Motilite Bozuklukları",
+    "Ailesel Akdeniz Ateşi",
+    "Ülser Gastrit",
+    "Sarılıklar",
+    "Üst GIS kanamaları",
+    "Alt GIS kanamaları",
+    "Siroz ve Komplikasyonları",
+    "Gastrointestinal Sistem Parazitozları UZM",
+    "Sindirim Sistemi Tümörleri",
+    "Kolonun Prekanseröz Lezyonları",
+    "Akut Pankreatitler",
+    "Akut Hepatitler",
+    "Malabsorpsiyon Sendromları"
+   ],
+   "4": [
+    "Hiperlipidemiler"
+   ],
+   "5": [
+    "Anemi Tanı, Patofizyoloji ve Sınıflaması",
+    "Demir metabolizması ve anormallikleri, Demir eksikliği ve birikimi UZM.",
+    "Demir metabolizması ve anormallikleri,Demir eksikliği ve",
+    "Megaloblastik anemiler",
+    "Hemolitik anemiler UZM.",
+    "Hemostaz ve anormallikleri, Kanama Pıhtılaşma bozuklukları"
+   ],
+   "6": [
+    "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
+    "Hipotalamus-Hipofiz hastalıklarına giriş",
+    "Cushing Sendromu",
+    "Endokrin Sistem Hastalıklarına Genel Yaklaşım",
+    "Hipoglisemiler",
+    "Yaşlılıkta beslenme UZM.",
+    "Elektrolitler ve Endokrin Sistem Arasındaki ilişki",
+    "Cinsel Farklılaşma Bozuklukları UZM.",
+    "D Vitamini Metabolizması",
+    "Tiroid Bezi Hastalıkları Dr. Abdulvahap Coşkun",
+    "Paratiroid bezi hastalıkları",
+    "Obezite-Metabolizma-Endokrin İlişkisi",
+    "Yaşlanmada Metabolik Sorunlar UZM.",
+    "Yaşlılıkta Beslenme Uzm. Dr BETÜL İVERENDİ"
+   ]
+  },
+  "Çocuk Sağlığı ve Hastalıkları": {
+   "3": [
+    "Konjenital GİS Malformasyonları",
+    "Biliyer Atrezi ve Diğer Safra Yolu Anomalileri",
+    "Neonatal Kolestaz"
+   ],
+   "4": [
+    "Solunum Sist. Hastalık. Anamnez",
+    "Solunum Sist. Hastalık. Fizik Muayene",
+    "Solunum sistemi Semptomatolojisi",
+    "Solunum sıkıntısı olan yeni doğana yaklaşım",
+    "Fetal Dolaşım ve Neonatal adaptasyon",
+    "Siyanoz",
+    "Siyanotik doğumsal kalp hastalıkları",
+    "Asiyanotik doğumsal kalp hastalıkları"
+   ],
+   "5": [
+    "Çocukluk çağı anemilerine yaklaşım",
+    "Hemoglobinopatiler"
+   ],
+   "6": [
+    "Çocukluk Dönemi Su Metabolizması Bozuklukları"
+   ]
+  },
+  "Göğüs Hastalıkları": {
+   "4": [
+    "Obstrüktif ve restriktif akciğer hastalıkları",
+    "Pnömoniler",
+    "Plevral efüzyon ve ampiyem"
+   ]
+  },
+  "Kardiyoloji": {
+   "4": [
+    "Miyokarditler, Miyokardiyopatiler ve Kalp Tümörleri",
+    "Kalp Kapak Hastalıkları",
+    "Elektrokardiyografiye Giriş",
+    "Ritim Bozukluklarına Giriş",
+    "Enfektif Endokardit",
+    "Kalp Sesleri",
+    "Konjenital Kalp Hastalıkları",
+    "Hipertansiyon",
+    "Perikarditler",
+    "Kalp Yetersizliği",
+    "Koroner Kalp Hastalıkları"
+   ]
+  },
+  "Kalp ve Damar Cerrahisi": {
+   "4": [
+    "Göğüs duvarı anomalileri",
+    "Enfektif endokardit ve damar içi katater enfeksiyonları"
+   ]
+  },
+  "Anestezi ve Reanimasyon": {
+   "4": [
+    "CPR"
+   ]
+  },
+  "Ortopedi ve Travmatoloji": {
+   "5": [
+    "Kemik, eklemve implant enfeksiyonları",
+    "Eklem hastalıkları patolojisi ve artritler",
+    "Spondilodiskitler ve pot hastalığı",
+    "Spondilodiskitler ve npot hastalığı",
+    "Kemik ve kıkırdağın konjenital hastalıkları",
+    "Kemiğin edinsel hastalıkları",
+    "Yetişkin ve çocuk kırıklarına yaklaşım",
+    "Kırık komplikasyonlarına yaklaşım",
+    "Kemiklerin tümörlerine genel yaklaşım"
+   ]
+  },
+  "Acil Tıp": {
+   "5": [
+    "Multitravmaya Yaklaşım",
+    "Ekstremite Travmaları",
+    "Crush ve Kompartman Sendromu",
+    "Senkop, Ani Kardiyak Ölüm (AKÖ)",
+    "Bilinç Bozukluğuna (Koma) Yaklaşım",
+    "İleri Kardiyak Yaşam Desteği ve Özel Durumlar",
+    "Çevresel Acillere Yaklaşım",
+    "Zehirlenmelere Yaklaşım"
+   ]
+  },
+  "Göğüs Cerrahisi": {
+   "5": [
+    "Göğüs travmasının tiplerine göre patolojik ve Klinik sonuçlar"
+   ]
+  },
+  "Tıbbi Biyokimya": {
+   "6": [
+    "Klinik Biyokimya Laboratuvar Organizasyonu",
+    "K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz",
+    "K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz Edilmesinde Dik. Ed. Hususlar",
+    "Biyokimyasal Analizlerde Hata Kaynakları",
+    "Biyokimya Lab. Gelen Numunelerde Analiz Edilen Paket Testler"
+   ]
+  }
+ }
+}

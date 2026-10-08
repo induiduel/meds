@@ -1,0 +1,907 @@
+{
+ "id": "k1-28-tumor-biyolojisi-ve-terminolojisi",
+ "sira": 28,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Tümör Biyolojisi ve Terminolojisi",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-09-28",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Neoplazi, tümör, kanser, onkoloji, parankim ve stroma kavramlarını tanımlamak",
+   "sorular": [
+    {
+     "id": "k1-28-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Neoplazmın dönüşmüş neoplastik hücrelerden oluşan, tümörün biyolojik davranışını belirleyen ve adlandırmada esas alınan bileşenine ne ad verilir?",
+     "secenekler": {
+      "A": "Stroma",
+      "B": "Granülasyon dokusu",
+      "C": "Kapsül",
+      "D": "Parankim",
+      "E": "Bazal membran"
+     },
+     "dogru": "D",
+     "aciklama": "Parankim tümörün neoplastik hücre komponentidir; stroma ise konak kökenli bağ dokusu, damar ve inflamatuvar hücrelerden oluşan destek dokusudur.",
+     "sik_aciklamalari": {
+      "A": "Stroma konak kökenli destek dokusudur; adlandırmayı belirlemez.",
+      "B": "Granülasyon dokusu yara iyileşmesinin geçici yapısıdır.",
+      "C": "Kapsül özellikle benign tümörlerde görülen sıkıştırılmış fibröz dokudur.",
+      "D": "Doğru. Parankim tümörün neoplastik hücre komponentidir; stroma ise konak kökenli bağ dokusu, damar ve inflamatuvar hücrelerden oluşan destek dokusudur.",
+      "E": "Bazal membran epitel ile stromayı ayıran yapıdır."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Kanserin temel özellikleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kanser DNA mutasyonlarına dayalı genetik bir hastalıktır.",
+      "B": "Tümörler genellikle tek bir hücrenin soyundan gelir (klonal köken).",
+      "C": "Neoplastik hücreler normal büyüme kontrolüne tamamen duyarlıdır.",
+      "D": "Epigenetik değişiklikler mutasyon olmadan gen ekspresyonunu değiştirebilir.",
+      "E": "Büyüme/sağkalım avantajı sağlayan alt klonlar seçilimle baskın hale gelir."
+     },
+     "dogru": "C",
+     "aciklama": "Neoplazi 'yeni büyüme'dir; neoplastik hücre normal büyüme kontrolüne dirençlidir ve sürekli çoğalma eğilimindedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: kanser DNA mutasyonlarına dayalı genetik bir hastalıktır.",
+      "B": "Doğru ifade: tümörler genellikle tek bir hücrenin soyundan gelir (klonal köken).",
+      "C": "Yanlış ifade (aranan cevap). Neoplazi 'yeni büyüme'dir; neoplastik hücre normal büyüme kontrolüne dirençlidir ve sürekli çoğalma eğilimindedir.",
+      "D": "Doğru ifade; DNA metilasyonu ve histon modifikasyonları örnektir.",
+      "E": "Doğru ifade; Darwinci seçilimle tümör ilerler."
+     },
+     "bilgi": [
+      1,
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi kanserin ayırt edici (hallmark) özelliklerinden biri değildir?",
+     "secenekler": {
+      "A": "Büyüme sinyallerinde kendine yeterlilik",
+      "B": "Apoptozdan kaçınma",
+      "C": "Sınırsız çoğalma potansiyeli",
+      "D": "Temas inhibisyonuna ve büyüme engelleyici sinyallere artmış duyarlılık",
+      "E": "Değişmiş hücresel metabolizma (Warburg etkisi)"
+     },
+     "dogru": "D",
+     "aciklama": "Kanser hücreleri büyüme engelleyici sinyallere duyarsızdır; diğer özellikler sürekli anjiyogenez, istila-metastaz ve bağışıklık gözetiminden kaçınmadır.",
+     "sik_aciklamalari": {
+      "A": "Ayırt edici özelliktir.",
+      "B": "Ayırt edici özelliktir.",
+      "C": "Ayırt edici özelliktir (ölümsüzlük).",
+      "D": "Özellik değildir (aranan cevap); tersine duyarsızlık vardır.",
+      "E": "Ayırt edici özelliktir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Benign ve malign neoplazmların isimlendirilmesini ve terminolojik istisnaları bilmek",
+   "sorular": [
+    {
+     "id": "k1-28-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi '-oma' eki taşımasına rağmen malign bir tümördür?",
+     "secenekler": {
+      "A": "Fibroma",
+      "B": "Lipoma",
+      "C": "Leiomyoma",
+      "D": "Melanom",
+      "E": "Kondroma"
+     },
+     "dogru": "D",
+     "aciklama": "Lenfoma, melanom, mezotelyoma ve seminom '-oma' ekine rağmen maligndir.",
+     "sik_aciklamalari": {
+      "A": "Fibroma fibroblast kökenli benign tümördür.",
+      "B": "Lipoma yağ dokusu kökenli benign tümördür.",
+      "C": "Leiomyoma düz kas kökenli benign tümördür.",
+      "D": "Doğru. Lenfoma, melanom, mezotelyoma ve seminom '-oma' ekine rağmen maligndir.",
+      "E": "Kondroma kıkırdak kökenli benign tümördür."
+     },
+     "bilgi": [
+      13,
+      10
+     ],
+     "benzer_cikmis": [
+      "28cd981ce3de"
+     ]
+    },
+    {
+     "id": "k1-28-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Tümör isimlendirmesinde aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Liposarkom – yağ dokusu kökenli malign mezenkimal tümör",
+      "B": "Adenokarsinom – glandüler farklılaşma gösteren malign epitelyal tümör",
+      "C": "Rabdomyoma – iskelet kası kökenli benign tümör",
+      "D": "Osteosarkom – kemik kökenli benign tümör",
+      "E": "Kistadenom – sıklıkla overde görülen benign epitelyal tümör"
+     },
+     "dogru": "D",
+     "aciklama": "'Sarkom' mezenkimal dokudan türeyen malign tümörler için kullanılır; osteosarkom maligndir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: liposarkom – yağ dokusu kökenli malign mezenkimal tümör.",
+      "B": "Doğru eşleştirme: adenokarsinom – glandüler farklılaşma gösteren malign epitelyal tümör.",
+      "C": "Doğru eşleştirme: rabdomyoma – iskelet kası kökenli benign tümör.",
+      "D": "Yanlış eşleştirme (aranan cevap). 'Sarkom' mezenkimal dokudan türeyen malign tümörler için kullanılır; osteosarkom maligndir.",
+      "E": "Doğru eşleştirme: kistadenom – sıklıkla overde görülen benign epitelyal tümör."
+     },
+     "bilgi": [
+      10,
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Tükürük bezinde fibromiksoid stroma içinde epitel adacıkları ile kıkırdak ve kemik odakları içeren, tek klondan türeyip birden fazla diferansiyasyon hattı gösteren tümör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Teratom",
+      "B": "Hamartom",
+      "C": "Pleomorfik adenom (karma tümör)",
+      "D": "Khoristom",
+      "E": "Kondrosarkom"
+     },
+     "dogru": "C",
+     "aciklama": "Karma tümörler tek klonal hücreden türer ve birden fazla diferansiyasyon hattı gösterir; teratomlar ise totipotent germ hücresinden köken alır ve birden fazla germ tabakası içerir.",
+     "sik_aciklamalari": {
+      "A": "Teratom germ hücre kökenlidir ve birden fazla germ tabakası içerir.",
+      "B": "Hamartom organın kendi olgun dokularının düzensiz kitlesidir.",
+      "C": "Doğru. Karma tümörler tek klonal hücreden türer ve birden fazla diferansiyasyon hattı gösterir; teratomlar ise totipotent germ hücresinden köken alır ve birden fazla germ tabakası içerir.",
+      "D": "Khoristom ektopik olgun doku adacığıdır.",
+      "E": "Kondrosarkom malign kıkırdak tümörüdür."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Overin matür kistik teratomu (dermoid kist) ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tek germ tabakasından köken alan mezenkimal tümördür.",
+      "B": "Bulunduğu organa ait olgun dokuların düzensiz kitlesidir.",
+      "C": "Malign epitelyal tümördür.",
+      "D": "Totipotent germ hücre kökenlidir; kıl folikülü ve yağ bezi gibi birden fazla germ tabakasına ait dokular içerir.",
+      "E": "Kan hücresi neoplazmıdır."
+     },
+     "dogru": "D",
+     "aciklama": "Teratom en sık over ve testiste görülür; birden fazla germ tabakasından doku içerir.",
+     "sik_aciklamalari": {
+      "A": "Teratom birden fazla germ tabakası içerir.",
+      "B": "Bu hamartomun tanımıdır.",
+      "C": "Matür kistik teratom benigndir.",
+      "D": "Doğru. Teratom en sık over ve testiste görülür; birden fazla germ tabakasından doku içerir.",
+      "E": "Kan hücresi neoplazmları lösemi ve lenfomadır."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q07",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Mide duvarında rastlantısal olarak saptanan olgun pankreas dokusu adacığı nasıl adlandırılır?",
+     "secenekler": {
+      "A": "Hamartom",
+      "B": "Teratom",
+      "C": "Khoristom",
+      "D": "Adenom",
+      "E": "Metastaz"
+     },
+     "dogru": "C",
+     "aciklama": "Khoristom heterotopik (ektopik) olgun doku adacığıdır ve genellikle klinik açıdan önemsizdir; hamartom ise bulunduğu organa ait olgun dokuların düzensiz kitlesidir.",
+     "sik_aciklamalari": {
+      "A": "Hamartom organın kendi dokularından oluşur; mideye ait olmayan pankreas dokusu hamartom değildir.",
+      "B": "Teratom germ hücre kökenli, birden fazla germ tabakası içeren tümördür.",
+      "C": "Doğru. Khoristom heterotopik (ektopik) olgun doku adacığıdır ve genellikle klinik açıdan önemsizdir; hamartom ise bulunduğu organa ait olgun dokuların düzensiz kitlesidir.",
+      "D": "Adenom glandüler epitelin benign neoplazmıdır.",
+      "E": "Metastaz malign tümörün uzak yayılımıdır; olgun normal doku değildir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "28cd981ce3de",
+     "soru": "Tıbbi Patoloji Neoplazi Hangisi kötü huylu neoplazidir??",
+     "secenekler": {
+      "A": "Fibrom",
+      "B": "Hemanjyom",
+      "C": "Mol hidatiform",
+      "D": "Melanom",
+      "E": "Nevüs"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Diferansiyasyon, anaplazi, displazi ve karsinoma in situ kavramlarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-28-q09",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Tümör hücrelerinde diferansiyasyon kaybına ne ad verilir?",
+     "secenekler": {
+      "A": "Anaplazi",
+      "B": "Hiperplazi",
+      "C": "Metaplazi",
+      "D": "Hipertrofi",
+      "E": "Atrofi"
+     },
+     "dogru": "A",
+     "aciklama": "Anaplazi diferansiyasyon kaybıdır ve malignite için güvenilir bir belirteçtir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Anaplazi diferansiyasyon kaybıdır ve malignite için güvenilir bir belirteçtir.",
+      "B": "Hiperplazi hücre sayısında artıştır.",
+      "C": "Metaplazi olgun hücre tipi değişimidir.",
+      "D": "Hipertrofi hücre boyutunda artıştır.",
+      "E": "Atrofi hücre boyut/sayısında azalmadır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi anaplazinin morfolojik özelliklerinden biri değildir?",
+     "secenekler": {
+      "A": "Hücresel ve nükleer pleomorfizm",
+      "B": "Hiperkromazi ve yüksek nükleus/sitoplazma oranı",
+      "C": "Hücrelerin köken aldığı normal hücreye birebir benzemesi",
+      "D": "Atipik ve çok kutuplu mitozlar",
+      "E": "Tümör dev hücreleri"
+     },
+     "dogru": "C",
+     "aciklama": "Normal hücreye benzerlik diferansiyasyonun derecesini gösterir; anaplazide bu benzerlik kaybolur.",
+     "sik_aciklamalari": {
+      "A": "Anaplazi özelliğidir.",
+      "B": "Anaplazi özelliğidir; oran 1:1'e yaklaşır.",
+      "C": "Özellik değildir (aranan cevap); iyi diferansiyasyonu tanımlar.",
+      "D": "Anaplazi özelliğidir.",
+      "E": "Anaplazi özelliğidir."
+     },
+     "bilgi": [
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q11",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Displazinin epitel kalınlığının tamamını tuttuğu ancak bazal membranın aşılmadığı lezyon aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hafif displazi",
+      "B": "Karsinoma in situ",
+      "C": "İnvaziv karsinom",
+      "D": "Metaplazi",
+      "E": "Hiperplazi"
+     },
+     "dogru": "B",
+     "aciklama": "Karsinoma in situ'da tüm epitel atipik hücrelerle döşelidir ancak bazal membran sağlamdır; invaziv kansere ilerleme riski yüksektir.",
+     "sik_aciklamalari": {
+      "A": "Hafif displazi epitelin yalnızca alt kısmını tutar ve gerileyebilir.",
+      "B": "Doğru. Karsinoma in situ'da tüm epitel atipik hücrelerle döşelidir ancak bazal membran sağlamdır; invaziv kansere ilerleme riski yüksektir.",
+      "C": "İnvaziv karsinomda bazal membran aşılmıştır.",
+      "D": "Metaplazide olgun hücre tipi değişir, atipi yoktur.",
+      "E": "Hiperplazide atipi olmadan hücre sayısı artar."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q13",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "İyi diferansiye malign tümörlerin kök dokuya özgü işlevleri sürdürebilmesine örnek aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hepatosellüler karsinomun safra üretmesi",
+      "B": "Anaplastik tümörün tüm işlevlerini kaybetmesi",
+      "C": "Lipomun kapsülle çevrili olması",
+      "D": "Sarkomun hematojen yayılması",
+      "E": "Karsinomun lenfatik yayılması"
+     },
+     "dogru": "A",
+     "aciklama": "İyi diferansiye tümörler kök dokunun işlevlerini sürdürebilir: endokrin karsinomlar hormon, skuamöz karsinom keratin, hepatosellüler karsinom safra üretebilir. Ektopik hormon üretimi paraneoplastik sendromlara yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. İyi diferansiye tümörler kök dokunun işlevlerini sürdürebilir: endokrin karsinomlar hormon, skuamöz karsinom keratin, hepatosellüler karsinom safra üretebilir. Ektopik hormon üretimi paraneoplastik sendromlara yol açabilir.",
+      "B": "Bu anaplazinin fonksiyonel sonucudur.",
+      "C": "Kapsül benign tümörlerin büyüme özelliğidir.",
+      "D": "Bu yayılım yoludur; işlev sürdürmeyle ilgili değildir.",
+      "E": "Bu yayılım yoludur: karsinomun lenfatik yayılması."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q12",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Displazi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Epitelde düzensiz proliferasyonla gelişen hücresel atipi ve mimari bozukluktur.",
+      "B": "Yüzeyel katlarda mitoz ve olgunlaşma-polarite kaybı görülür.",
+      "C": "Hafif-orta displazi nedene yönelik tedaviyle gerileyebilir.",
+      "D": "Displazi her zaman invaziv kanserle eş anlamlıdır ve geri dönüşümsüzdür.",
+      "E": "Karsinoma in situ displazinin en ileri formudur."
+     },
+     "dogru": "D",
+     "aciklama": "Displazi kanserle eş anlamlı değildir; hafif-orta displazi uyaran ortadan kalkınca gerileyebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: epitelde düzensiz proliferasyonla gelişen hücresel atipi ve mimari bozukluktur.",
+      "B": "Doğru ifade: yüzeyel katlarda mitoz ve olgunlaşma-polarite kaybı görülür.",
+      "C": "Doğru ifade: hafif-orta displazi nedene yönelik tedaviyle gerileyebilir.",
+      "D": "Yanlış ifade (aranan cevap). Displazi kanserle eş anlamlı değildir; hafif-orta displazi uyaran ortadan kalkınca gerileyebilir.",
+      "E": "Doğru ifade; tüm epitel kalınlığı tutulur."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Lokal büyüme, invazyon ve metastazı; metastaz yollarını ve organ tropizmini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-28-q14",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Malignite için en kesin (ayırt edici) özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tümör boyutunun büyük olması",
+      "B": "Metastaz",
+      "C": "Kapsül varlığı",
+      "D": "Yavaş büyüme",
+      "E": "Hücrelerin iyi diferansiye olması"
+     },
+     "dogru": "B",
+     "aciklama": "Metastaz primer tümörden ayrı bölgelerde implant oluşmasıdır; malignite için ayırt edici özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir.",
+     "sik_aciklamalari": {
+      "A": "Benign tümörler de büyük olabilir.",
+      "B": "Doğru. Metastaz primer tümörden ayrı bölgelerde implant oluşmasıdır; malignite için ayırt edici özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir.",
+      "C": "Kapsül daha çok benign tümörlerde görülür.",
+      "D": "Yavaş büyüme benign tümörlerde tipiktir.",
+      "E": "İyi diferansiyasyon benign ve bazı malign tümörlerde görülebilir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q15",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Karsinomların en sık ilk yayılım yolu ve ilk metastaz bölgesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hematojen yol – kemik",
+      "B": "Lenfatik yol – bölgesel lenf düğümleri",
+      "C": "Vücut boşluklarına tohumlanma – periton",
+      "D": "Hematojen yol – iskelet kası",
+      "E": "Doğrudan yayılım – deri"
+     },
+     "dogru": "B",
+     "aciklama": "Lenfatik yayılım karsinomlar için tipiktir; sentinel lenf düğümü primer tümörden ilk lenf drenajını alan düğümdür ve biyopsisi evreleme ile tedavi planlamasında önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Hematojen yayılım sarkomlarda daha tipiktir; karsinomlar da geç dönemde kullanabilir.",
+      "B": "Doğru. Lenfatik yayılım karsinomlar için tipiktir; sentinel lenf düğümü primer tümörden ilk lenf drenajını alan düğümdür ve biyopsisi evreleme ile tedavi planlamasında önemlidir.",
+      "C": "Boşluk tohumlanması over karsinomu gibi özel durumlarda görülür.",
+      "D": "İskelet kası nadir metastaz bölgesidir.",
+      "E": "Bu metastaz yolu olarak tanımlanmaz."
+     },
+     "bilgi": [
+      23,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q16",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Tümörlerin organ tropizmi ile ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Prostat karsinomu – kemik",
+      "B": "Bronkojenik karsinom – adrenal bez ve beyin",
+      "C": "Nöroblastom – karaciğer ve kemik",
+      "D": "Üveal melanom – karaciğer",
+      "E": "Prostat karsinomu – iskelet kası (en sık metastaz yeri)"
+     },
+     "dogru": "E",
+     "aciklama": "İskelet kası çok vasküler olmasına rağmen nadir metastaz bölgesidir; prostat karsinomu tipik olarak kemiğe metastaz yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: prostat karsinomu – kemik.",
+      "B": "Doğru eşleştirme: bronkojenik karsinom – adrenal bez ve beyin.",
+      "C": "Doğru eşleştirme: nöroblastom – karaciğer ve kemik.",
+      "D": "Doğru eşleştirme: üveal melanom – karaciğer.",
+      "E": "Yanlış eşleştirme (aranan cevap). İskelet kası çok vasküler olmasına rağmen nadir metastaz bölgesidir; prostat karsinomu tipik olarak kemiğe metastaz yapar."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q18",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Benign ve malign tümörlerin lokal büyüme biçimleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Benign tümörler çevre dokuları istila ederek büyür.",
+      "B": "Malign tümörler genellikle kalın bir kapsülle sınırlıdır.",
+      "C": "Benign tümörler genellikle çevreyi iterek genişler ve kapsül enükleasyonu kolaylaştırır; malign tümörler çevre dokulara sızarak invaziv büyür.",
+      "D": "Malign tümörlerde cerrahi sınırın değerlendirilmesi gereksizdir.",
+      "E": "Hemanjiyom gibi benign vasküler tümörler her zaman kapsüllüdür."
+     },
+     "dogru": "C",
+     "aciklama": "Malign tümörlerde kapsül genellikle yoktur veya 'tümör dilcikleri' tarafından aşılır; bu nedenle yeterli cerrahi sınır ve patolojik temiz sınır teyidi önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Benign tümörler istila etmez.",
+      "B": "Malign tümörlerde kapsül genellikle yoktur.",
+      "C": "Doğru. Malign tümörlerde kapsül genellikle yoktur veya 'tümör dilcikleri' tarafından aşılır; bu nedenle yeterli cerrahi sınır ve patolojik temiz sınır teyidi önemlidir.",
+      "D": "Cerrahi sınır değerlendirmesi malign tümörlerde kritiktir.",
+      "E": "Hemanjiyom sınırlı olmayabilir (istisna)."
+     },
+     "bilgi": [
+      20,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q17",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Metastaz ve yayılım yolları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Over karsinomu periton yüzeylerine tohumlanma şeklinde yayılabilir.",
+      "B": "Medulloblastom ve ependimom BOS yoluyla meninks ve spinal yüzeylere yayılabilir.",
+      "C": "Hematojen yayılım en sık ince duvarlı venler yoluyla olur; portal drenajlı tümörlerde ilk durak karaciğerdir.",
+      "D": "Bazal hücreli karsinomlar lokal invazivdir ancak nadiren metastaz yapar.",
+      "E": "Bölgesel lenf düğümünün büyümesi her zaman metastaz anlamına gelir; histolojik doğrulamaya gerek yoktur."
+     },
+     "dogru": "E",
+     "aciklama": "Lenf düğümü büyümesi reaktif hiperplaziye de bağlı olabilir; metastaz için histolojik doğrulama şarttır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: over karsinomu periton yüzeylerine tohumlanma şeklinde yayılabilir.",
+      "B": "Doğru ifade: medulloblastom ve ependimom BOS yoluyla meninks ve spinal yüzeylere yayılabilir.",
+      "C": "Doğru ifade; sistemik venöz drenajda ilk durak akciğerdir.",
+      "D": "Doğru ifade: bazal hücreli karsinomlar lokal invazivdir ancak nadiren metastaz yapar.",
+      "E": "Yanlış ifade (aranan cevap). Lenf düğümü büyümesi reaktif hiperplaziye de bağlı olabilir; metastaz için histolojik doğrulama şarttır."
+     },
+     "bilgi": [
+      22,
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Kanser epidemiyolojisini, çevresel/mesleki risk faktörlerini ve edinsel yatkınlık koşullarını özetlemek",
+   "sorular": [
+    {
+     "id": "k1-28-q19",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki mesleki maruziyet–kanser eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Asbest – mezotelyoma",
+      "B": "Benzen – hepatik anjiyosarkom",
+      "C": "Vinil klorür – akut miyeloid lösemi",
+      "D": "Kadmiyum – mezotelyoma",
+      "E": "Radon – prostat kanseri"
+     },
+     "dogru": "A",
+     "aciklama": "Asbest akciğer kanseri ve mezotelyoma; benzen AML; vinil klorür hepatik anjiyosarkom; kadmiyum prostat; radon akciğer kanseriyle ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Asbest akciğer kanseri ve mezotelyoma; benzen AML; vinil klorür hepatik anjiyosarkom; kadmiyum prostat; radon akciğer kanseriyle ilişkilidir.",
+      "B": "Benzen akut miyeloid lösemiyle ilişkilidir.",
+      "C": "Vinil klorür hepatik anjiyosarkomla ilişkilidir.",
+      "D": "Kadmiyum prostat kanseriyle ilişkilidir.",
+      "E": "Radon akciğer kanseriyle ilişkilidir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q20",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kanser epidemiyolojisi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kanser insidansı yaşla azalır.",
+      "B": "Kanser kardiyovasküler hastalıklardan sonra ikinci ölüm nedenidir; insidansı yaşla artar ve ölümlerin çoğu 55-75 yaş arasındadır.",
+      "C": "Göçmenlerde kanser riski hiç değişmez.",
+      "D": "Enfeksiyonların kanser gelişimine katkısı yoktur.",
+      "E": "Sigara akciğer kanseri ölümlerinin küçük bir kısmından sorumludur."
+     },
+     "dogru": "B",
+     "aciklama": "Yaşla somatik mutasyonlar birikir ve bağışıklık gözetimi azalır; coğrafi farklılıklar ve göçle riskin değişmesi çevresel etkinin önemini gösterir.",
+     "sik_aciklamalari": {
+      "A": "İnsidans yaşla artar.",
+      "B": "Doğru. Yaşla somatik mutasyonlar birikir ve bağışıklık gözetimi azalır; coğrafi farklılıklar ve göçle riskin değişmesi çevresel etkinin önemini gösterir.",
+      "C": "Göçle risk yeni ülkenin düzeyine yaklaşır.",
+      "D": "Enfeksiyonlar dünya kanserlerinin ~%15'inden sorumludur.",
+      "E": "Sigara akciğer kanseri ölümlerinin ~%90'ıyla ilişkilidir."
+     },
+     "bilgi": [
+      28,
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q21",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Kanser riskini artıran edinsel koşullar ve öncü lezyonlar ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kronik gastrit mide adenokarsinomuna zemin hazırlayabilir.",
+      "B": "İnflamatuvar bağırsak hastalığı kolorektal karsinom riskini artırır.",
+      "C": "İmmün yetmezlik özellikle virüs ilişkili tümörlere (ör. EBV lenfomaları) yatkınlık yapar.",
+      "D": "Karşılanmamış östrojen etkisiyle gelişen endometrial hiperplazi öncü lezyondur.",
+      "E": "Tüm benign tümörler premaligndir; uterus leiomyomunun malign dönüşümü sıktır."
+     },
+     "dogru": "E",
+     "aciklama": "Tüm benign tümörler premalign değildir: kolon adenomunda dönüşüm riski anlamlıyken uterus leiomyomunda malign dönüşüm son derece nadirdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: kronik gastrit mide adenokarsinomuna zemin hazırlayabilir.",
+      "B": "Doğru ifade: i̇nflamatuvar bağırsak hastalığı kolorektal karsinom riskini artırır.",
+      "C": "Doğru ifade: i̇mmün yetmezlik özellikle virüs ilişkili tümörlere (ör. EBV lenfomaları) yatkınlık yapar.",
+      "D": "Doğru ifade: karşılanmamış östrojen etkisiyle gelişen endometrial hiperplazi öncü lezyondur.",
+      "E": "Yanlış ifade (aranan cevap). Tüm benign tümörler premalign değildir: kolon adenomunda dönüşüm riski anlamlıyken uterus leiomyomunda malign dönüşüm son derece nadirdir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Kansere kalıtsal yatkınlık sendromlarını ve öncü lezyonları bilmek",
+   "sorular": [
+    {
+     "id": "k1-28-q22",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Ailesel adenomatöz polipozis sendromunda germ hattı mutasyonu bulunan gen aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "RB",
+      "B": "TP53",
+      "C": "APC",
+      "D": "RET",
+      "E": "PTCH1"
+     },
+     "dogru": "C",
+     "aciklama": "Otozomal dominant kalıtsal kanser sendromları ve genleri: retinoblastom (RB), Li-Fraumeni (TP53), FAP (APC), MEN2 (RET), nevoid bazal hücreli karsinom (PTCH1).",
+     "sik_aciklamalari": {
+      "A": "RB ailesel retinoblastomla ilişkilidir.",
+      "B": "TP53 Li-Fraumeni sendromuyla ilişkilidir.",
+      "C": "Doğru. Otozomal dominant kalıtsal kanser sendromları ve genleri: retinoblastom (RB), Li-Fraumeni (TP53), FAP (APC), MEN2 (RET), nevoid bazal hücreli karsinom (PTCH1).",
+      "D": "RET MEN tip 2 ile ilişkilidir.",
+      "E": "PTCH1 nevoid bazal hücreli karsinom sendromuyla ilişkilidir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q23",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Kalıtsal kanser sendromu ve sorumlu gen eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Herediter meme-over kanseri – BRCA1, BRCA2",
+      "B": "Lynch sendromu (HNPCC) – MSH2, MLH1, MSH6",
+      "C": "Ailesel melanom – CDKN2A",
+      "D": "Nörofibromatozis – NF1, NF2",
+      "E": "Li-Fraumeni sendromu – APC"
+     },
+     "dogru": "E",
+     "aciklama": "Li-Fraumeni sendromunun geni TP53'tür; APC ailesel adenomatöz polipoziste mutasyona uğrar.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: herediter meme-over kanseri – BRCA1, BRCA2.",
+      "B": "Doğru eşleştirme: lynch sendromu (HNPCC) – MSH2, MLH1, MSH6.",
+      "C": "Doğru eşleştirme: ailesel melanom – CDKN2A.",
+      "D": "Doğru eşleştirme: nörofibromatozis – NF1, NF2.",
+      "E": "Yanlış eşleştirme (aranan cevap). Li-Fraumeni sendromunun geni TP53'tür; APC ailesel adenomatöz polipoziste mutasyona uğrar."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q24",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Otozomal resesif kalıtılan ve DNA onarım bozukluğuna bağlı kansere yatkınlık yapan sendromlar aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Kseroderma pigmentozum, ataksi-telenjiektazi, Bloom sendromu, Fanconi anemisi",
+      "B": "Retinoblastom, Li-Fraumeni, MEN2",
+      "C": "FAP, Lynch, nörofibromatozis",
+      "D": "Marfan, kistik fibrozis, Down sendromu",
+      "E": "BRCA1, BRCA2, CDKN2A"
+     },
+     "dogru": "A",
+     "aciklama": "Bu sendromlarda DNA onarım sistemleri bozuktur; örneğin kseroderma pigmentozumda nükleotid eksizyon onarımı bozulur ve UV ilişkili deri kanserleri gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Bu sendromlarda DNA onarım sistemleri bozuktur; örneğin kseroderma pigmentozumda nükleotid eksizyon onarımı bozulur ve UV ilişkili deri kanserleri gelişir.",
+      "B": "Bunlar otozomal dominant sendromlardır.",
+      "C": "Bunlar otozomal dominant sendromlardır.",
+      "D": "Bunlar kalıtsal kanser yatkınlık sendromu değildir.",
+      "E": "Bunlar genlerdir ve otozomal dominant yatkınlıkla ilişkilidir."
+     },
+     "bilgi": [
+      35,
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Kanser geni kategorilerini, sürücü/yolcu mutasyonları ve genomik istikrarsızlığı açıklamak",
+   "sorular": [
+    {
+     "id": "k1-28-q25",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Proto-onkogenlerin işlev kazanımı mutasyonlarıyla oluşan ve genellikle tek alelin etkilenmesinin yeterli olduğu kanser geni grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Onkogenler",
+      "B": "Tümör baskılayıcı genler",
+      "C": "DNA onarım genleri",
+      "D": "Apoptoz genleri",
+      "E": "Yolcu mutasyon genleri"
+     },
+     "dogru": "A",
+     "aciklama": "Onkogenler büyümeyi teşvik eden onkoproteinler kodlar ve baskın etki gösterir; tümör baskılayıcı genlerde genellikle her iki alelin inaktivasyonu gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Onkogenler büyümeyi teşvik eden onkoproteinler kodlar ve baskın etki gösterir; tümör baskılayıcı genlerde genellikle her iki alelin inaktivasyonu gerekir.",
+      "B": "Tümör baskılayıcılarda işlev kaybı söz konusudur ve genellikle iki alel inaktive olmalıdır.",
+      "C": "DNA onarım genleri işlev kaybıyla genomik istikrarsızlık yapar.",
+      "D": "Apoptoz genleri ayrı bir kategoridir.",
+      "E": "Yolcu mutasyonlar bir gen grubu değildir; nötr mutasyonlardır."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q26",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Sürücü ve yolcu mutasyonlar ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yolcu mutasyonlar karsinogenezin doğrudan nedenidir.",
+      "B": "Sürücü mutasyonlar kanser genlerinin işlevini değiştirerek karsinogeneze doğrudan katkı sağlar; yolcu mutasyonlar uygunluk açısından nötrdür, ancak tedavi baskısı altında direnç sağlayabilir.",
+      "C": "Sürücü mutasyonlar genom boyunca rastgele dağılır.",
+      "D": "Yolcu mutasyonlar hiçbir koşulda klinik önem kazanmaz.",
+      "E": "Mutasyonel imza analizinin klinik bir değeri yoktur."
+     },
+     "dogru": "B",
+     "aciklama": "Sürücü mutasyonlar kanser genlerinde kümelenir; yolcu mutasyonlar dağınıktır. Mutasyonel imzalar (UV, sigara, aflatoksin) etkene ipucu verir.",
+     "sik_aciklamalari": {
+      "A": "Doğrudan katkı sürücü mutasyonlara aittir.",
+      "B": "Doğru. Sürücü mutasyonlar kanser genlerinde kümelenir; yolcu mutasyonlar dağınıktır. Mutasyonel imzalar (UV, sigara, aflatoksin) etkene ipucu verir.",
+      "C": "Sürücü mutasyonlar kanser genlerinde kümelenir.",
+      "D": "Yolcu mutasyonlar tedavi baskısı altında 'yeni sürücü' olabilir.",
+      "E": "Mutasyonel imza etiyolojiye ipucu verir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q28",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "RAS sinyal yolu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "GDP bağlı RAS aktif formdur.",
+      "B": "Aktif (GTP bağlı) RAS, RAF/MAP kinaz ve PI3K/AKT yollarıyla proliferatif sinyal iletir; GAP'ler aktivasyonu sonlandırır ve PTEN PI3K yolunun frenidir.",
+      "C": "PTEN PI3K yolunu aktive eder.",
+      "D": "RAS mutasyonları büyümeyi baskılar.",
+      "E": "GAP'ler RAS'ı sürekli aktif tutar."
+     },
+     "dogru": "B",
+     "aciklama": "RAS ve yolak bileşenlerindeki (ör. BRAF) aktive edici mutasyonlar kontrolsüz büyümeye yol açar.",
+     "sik_aciklamalari": {
+      "A": "GDP bağlı RAS inaktiftir.",
+      "B": "Doğru. RAS ve yolak bileşenlerindeki (ör. BRAF) aktive edici mutasyonlar kontrolsüz büyümeye yol açar.",
+      "C": "PTEN PI3K yolunu frenler.",
+      "D": "RAS mutasyonları büyümeyi uyarır.",
+      "E": "GAP'ler GTP hidrolizini artırarak RAS'ı inaktive eder."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q27",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Genomik istikrarsızlık ve DNA onarım bozuklukları ile ilgili eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Lynch sendromu – uyumsuzluk onarımı (MMR) defekti",
+      "B": "Kseroderma pigmentozum – nükleotid eksizyon onarımı (NER) defekti",
+      "C": "BRCA1/BRCA2 – homolog rekombinasyon onarım defekti",
+      "D": "Onarım bozuklukları mutasyon oranını artırarak sürücü mutasyon edinimini kolaylaştırır",
+      "E": "Kseroderma pigmentozum – uyumsuzluk onarımı defekti ve kolon kanseri"
+     },
+     "dogru": "E",
+     "aciklama": "Kseroderma pigmentozumda NER defekti vardır ve UV ilişkili deri kanserleri gelişir; MMR defekti Lynch sendromunda görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: lynch sendromu – uyumsuzluk onarımı (MMR) defekti.",
+      "B": "Doğru eşleştirme: kseroderma pigmentozum – nükleotid eksizyon onarımı (NER) defekti.",
+      "C": "Doğru eşleştirme: BRCA1/BRCA2 – homolog rekombinasyon onarım defekti.",
+      "D": "Doğru ifade: onarım bozuklukları mutasyon oranını artırarak sürücü mutasyon edinimini kolaylaştırır.",
+      "E": "Yanlış eşleştirme (aranan cevap). Kseroderma pigmentozumda NER defekti vardır ve UV ilişkili deri kanserleri gelişir; MMR defekti Lynch sendromunda görülür."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Kronik enflamasyonun tümör gelişimindeki rolünü ve çok aşamalı karsinogenezi açıklamak",
+   "sorular": [
+    {
+     "id": "k1-28-q29",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Kronik enflamasyonun tümör gelişimini kolaylaştırma mekanizmaları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Büyümeyi destekleyen faktörlerin (EGF vb.) salgılanması",
+      "B": "ECM'yi parçalayan proteazların üretimi",
+      "C": "VEGF ile anjiyogenezin artması",
+      "D": "Treg ve MDSC ile immünsüpresif mikroçevre oluşması",
+      "E": "Tümör hücrelerinin apoptozunun artırılarak tümörün tamamen yok edilmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Tümörle ilişkili enflamasyon büyüme faktörleri, proteazlar ve anjiyogenezle tümörü destekler; immünsüpresif mikroçevre oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Mekanizmadır: büyümeyi destekleyen faktörlerin (EGF vb.) salgılanması.",
+      "B": "Mekanizmadır; istila ve metastazı kolaylaştırır.",
+      "C": "Mekanizmadır: VEGF ile anjiyogenezin artması.",
+      "D": "Mekanizmadır: treg ve MDSC ile immünsüpresif mikroçevre oluşması.",
+      "E": "Yer almaz (aranan cevap). Tümörle ilişkili enflamasyon büyüme faktörleri, proteazlar ve anjiyogenezle tümörü destekler; immünsüpresif mikroçevre oluşturur."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q30",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Çok aşamalı karsinogenez ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kanser tek bir mutasyonla aniden gelişir.",
+      "B": "Birden çok genetik ve epigenetik olay zamanla birikerek kanserin ayırt edici özelliklerinin kazanılmasına yol açar; tümör ilerlemesi daha agresif alt klonların seçilimidir.",
+      "C": "İleri tümörler genetik olarak tamamen homojendir.",
+      "D": "Alt klonların tedaviye direnç geliştirmesi beklenmez.",
+      "E": "Epigenetik değişikliklerin karsinogenezde rolü yoktur."
+     },
+     "dogru": "B",
+     "aciklama": "İlk sürücü mutasyon → öncül hücre → ek mutasyonlar → kurucu kanser hücresi → alt klonlar; ileri tümörler heterojendir ve tek basamaklı tedaviye direnç sıktır.",
+     "sik_aciklamalari": {
+      "A": "Karsinogenez çok aşamalıdır.",
+      "B": "Doğru. İlk sürücü mutasyon → öncül hücre → ek mutasyonlar → kurucu kanser hücresi → alt klonlar; ileri tümörler heterojendir ve tek basamaklı tedaviye direnç sıktır.",
+      "C": "İleri tümörler heterojendir.",
+      "D": "Direnç gelişimi sıktır.",
+      "E": "Epigenetik olaylar da birikir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-28-q31",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Uzun süreli ülseratif kolit öyküsü olan bir hastada kolorektal karsinom gelişmesi ile ilgili aşağıdakilerden hangisi en doğru açıklamadır?",
+     "secenekler": {
+      "A": "Kronik enflamasyon büyüme faktörleri, ROS ve süregen hücre yenilenmesiyle mutasyon birikimini ve çok aşamalı karsinogenezi kolaylaştırır.",
+      "B": "Kronik enflamasyon tümör gelişimini engeller.",
+      "C": "Kanser tek bir kalıtsal mutasyonun doğrudan sonucudur.",
+      "D": "Enflamatuvar hücrelerin tümör mikroçevresine hiçbir katkısı yoktur.",
+      "E": "Bu tablo yalnızca yolcu mutasyonlarla açıklanır."
+     },
+     "dogru": "A",
+     "aciklama": "İnflamatuvar bağırsak hastalığı kolorektal karsinom için edinsel yatkınlık koşuludur; kronik enflamasyon çok aşamalı karsinogeneze zemin hazırlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. İnflamatuvar bağırsak hastalığı kolorektal karsinom için edinsel yatkınlık koşuludur; kronik enflamasyon çok aşamalı karsinogeneze zemin hazırlar.",
+      "B": "Kronik enflamasyon tümör gelişimini destekler.",
+      "C": "Burada edinsel bir yatkınlık söz konusudur.",
+      "D": "Enflamatuvar hücreler büyüme, anjiyogenez ve invazyonu destekler.",
+      "E": "Karsinogenezde sürücü mutasyonlar belirleyicidir."
+     },
+     "bilgi": [
+      31,
+      36,
+      37
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 31,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:48"
+}

@@ -1,0 +1,1254 @@
+{
+ "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri",
+ "sira": 19,
+ "kurul": 1,
+ "ders": "Tıbbi Genetik",
+ "konu": "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "tarih": "2026-09-22",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Fertilizasyonu ve fertilizasyonun üç temel görevini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Fertilizasyonun temel görevleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Cinsiyetin belirlenmesi",
+      "B": "Spermin haploid kromozom takımını vermesi",
+      "C": "Gonadların testis yönünde farklılaşmasını tamamlamak",
+      "D": "Embriyonik gelişimin başlatılması",
+      "E": "Zigot oluşumu"
+     },
+     "dogru": "C",
+     "aciklama": "Fertilizasyonun üç görevi sperm haploid takımını vermek, cinsiyeti belirlemek ve embriyonik gelişimi başlatmaktır; gonadal farklılaşma sonraki haftalarda olur.",
+     "sik_aciklamalari": {
+      "A": "Cinsiyet fertilizasyon anında belirlenir.",
+      "B": "Fertilizasyonun görevidir.",
+      "C": "Doğru: gonadal farklılaşma fertilizasyonun görevi değildir.",
+      "D": "Embriyonik gelişim fertilizasyonla başlar.",
+      "E": "Pronükleusların birleşmesiyle zigot oluşur."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Genetik cinsiyet hangi anda belirlenir?",
+     "secenekler": {
+      "A": "İmplantasyonda",
+      "B": "Fertilizasyon anında",
+      "C": "Gonadal farklılaşmada",
+      "D": "Doğumda",
+      "E": "Pubertede"
+     },
+     "dogru": "B",
+     "aciklama": "Cinsiyet, spermin X veya Y kromozomu taşımasına bağlı olarak fertilizasyon anında belirlenir.",
+     "sik_aciklamalari": {
+      "A": "İmplantasyon cinsiyeti belirlemez.",
+      "B": "Doğru: genetik cinsiyet fertilizasyonda belirlenir.",
+      "C": "Gonadal cinsiyet sonradan oluşur.",
+      "D": "Doğumda fenotipik cinsiyet görülür.",
+      "E": "Pubertede sekonder karakterler gelişir."
+     },
+     "bilgi": [
+      1,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Fertilizasyonda dişi ve erkek pronükleuslarının birleşmesiyle oluşan yapı ve kromozom sayısı hangisidir?",
+     "secenekler": {
+      "A": "Gamet; diploid (46)",
+      "B": "Morula; haploid (23)",
+      "C": "Blastosist; triploid (69)",
+      "D": "Zigot; diploid (46)",
+      "E": "Zigot; haploid (23)"
+     },
+     "dogru": "D",
+     "aciklama": "Haploid sperm ve yumurta pronükleuslarının birleşmesiyle diploid zigot oluşur.",
+     "sik_aciklamalari": {
+      "A": "Gametler haploiddir.",
+      "B": "Morula 16 hücreli evredir ve diploiddir.",
+      "C": "Blastosist normalde triploid değildir.",
+      "D": "Doğru: zigot diploiddir.",
+      "E": "Zigot diploiddir: zigot; haploid (23)."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Erken embriyonik gelişim basamaklarını (morula, blastosist, implantasyon) özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "16 hücreli embriyonik aşamaya ne ad verilir?",
+     "secenekler": {
+      "A": "Zigot",
+      "B": "Blastosist",
+      "C": "Morula",
+      "D": "Gastrula",
+      "E": "Nörula"
+     },
+     "dogru": "C",
+     "aciklama": "16 hücreli aşama morula, 32 hücreli aşama blastosisttir.",
+     "sik_aciklamalari": {
+      "A": "Zigot tek hücredir: zigot.",
+      "B": "Blastosist 32 hücreli evredir.",
+      "C": "Doğru: morula 16 hücreli evredir.",
+      "D": "Gastrula daha ileri bir evredir.",
+      "E": "Nörula sinir tüpü oluşum evresidir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Konseptus genlerinin aktifleştiği embriyonik aşama hangisidir?",
+     "secenekler": {
+      "A": "Zigot aşaması",
+      "B": "4–8 hücreli aşama",
+      "C": "32 hücreli aşama",
+      "D": "İmplantasyon sonrası 4. hafta",
+      "E": "Gonadal farklılaşma sırasında"
+     },
+     "dogru": "B",
+     "aciklama": "Konseptus genleri 4–8 hücreli aşamada aktifleşir.",
+     "sik_aciklamalari": {
+      "A": "Zigotta maternal ürünler hâkimdir.",
+      "B": "Doğru: embriyonik genom bu aşamada aktifleşir.",
+      "C": "32 hücreli aşama blastosisttir; aktivasyon daha önce olur.",
+      "D": "Aktivasyon çok daha erkendir.",
+      "E": "Gonadal farklılaşma haftalar sonradır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "İmplantasyon ve hCG pozitifliği ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "hCG ancak 3. ayda pozitifleşir",
+      "B": "hCG fertilizasyondan hemen sonra pozitifleşir",
+      "C": "İmplantasyon morula evresinde gerçekleşir",
+      "D": "6. günde hCG pozitifleşir ve implantasyon gerçekleşir",
+      "E": "İmplantasyon zigot evresinde olur"
+     },
+     "dogru": "D",
+     "aciklama": "Blastosist evresinde, 6. günde hCG pozitifleşir ve implantasyon gerçekleşir.",
+     "sik_aciklamalari": {
+      "A": "hCG çok daha erken pozitifleşir.",
+      "B": "hCG implantasyonla birlikte saptanır.",
+      "C": "İmplantasyon blastosist evresinde olur.",
+      "D": "Doğru: verilen zamanlamadır.",
+      "E": "Zigot implante olmaz."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Normal cinsiyet farklılaşmasının düzeylerini ve dört ana aşamasını sıralayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Normal cinsiyet gelişiminin dört ana aşaması arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Fertilizasyon ve genetik cinsiyet",
+      "B": "Menopoz",
+      "C": "Ortak organların gelişimi",
+      "D": "Gonadal farklılaşma",
+      "E": "İç ve dış genitalya gelişimi"
+     },
+     "dogru": "B",
+     "aciklama": "Dört ana aşama: fertilizasyon/genetik cinsiyet, ortak organların gelişimi, gonadal farklılaşma ve iç-dış genitalya gelişimidir.",
+     "sik_aciklamalari": {
+      "A": "İlk aşamadır: fertilizasyon ve genetik cinsiyet.",
+      "B": "Doğru: menopoz cinsiyet gelişiminin aşaması değildir.",
+      "C": "İkinci aşamadır: ortak organların gelişimi.",
+      "D": "Üçüncü aşamadır: gonadal farklılaşma.",
+      "E": "Dördüncü aşamadır: i̇ç ve dış genitalya gelişimi."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Cinsiyet farklılaşma düzeyleri sıralandığında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İkincil seks karakterleri → genetik → gonadal",
+      "B": "Gonadal → genetik → toplumsal rol",
+      "C": "Toplumsal rol → genetik → gonadal",
+      "D": "Genetik → gonadal → iç-dış genitalya → pubertede ikincil seks karakterleri → toplumsal rol",
+      "E": "Yalnızca genetik cinsiyetten oluşur"
+     },
+     "dogru": "D",
+     "aciklama": "Cinsiyet biyolojik ve toplumsal boyutları olan çok basamaklı bir süreçtir.",
+     "sik_aciklamalari": {
+      "A": "İkincil karakterler pubertede gelişir.",
+      "B": "Genetik cinsiyet ilk düzeydir.",
+      "C": "Toplumsal rol en son düzeydir.",
+      "D": "Doğru: düzeyler doğru sıralanmıştır.",
+      "E": "Çok basamaklı bir süreçtir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Jost'un 1947'de yaptığı tavşan deneyinin cinsiyet gelişimine katkısı hangisidir?",
+     "secenekler": {
+      "A": "SRY genini keşfetmesi",
+      "B": "Overlerin varlığının fetal genital farklılaşma için zorunlu olduğunu göstermesi",
+      "C": "Kadın yönde gelişimin (overler hariç) spesifik genetik bilgi yokluğunda gerçekleştiğini göstermesi",
+      "D": "Barr cisimciğini tanımlaması",
+      "E": "DHT'nin iç genitalyayı belirlediğini göstermesi"
+     },
+     "dogru": "C",
+     "aciklama": "Jost deneyi kadın gelişiminin varsayılan yol olduğunu ve overlerin fetal genital farklılaşmayı etkilemediğini göstermiştir.",
+     "sik_aciklamalari": {
+      "A": "SRY moleküler çalışmalarla bulunmuştur.",
+      "B": "Overlerin varlığı fetal farklılaşmayı etkilemez.",
+      "C": "Doğru: deneyin temel sonucudur.",
+      "D": "Barr cisimciği bu deneyle ilişkili değildir.",
+      "E": "DHT dış genitalya farklılaşmasıyla ilişkilidir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Kromozomal cinsiyet belirteçlerini ve Barr cisimciğini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Barr cisimciği nedir?",
+     "secenekler": {
+      "A": "Mitokondriyal DNA kümesi",
+      "B": "Y kromozomunun kısa kolu",
+      "C": "Dişide interfazda inaktif kalan X kromozomu",
+      "D": "Sentromer bölgesi",
+      "E": "Ribozom kümesi"
+     },
+     "dogru": "C",
+     "aciklama": "Barr cisimciği (seks kromatini) dişi hücrelerde interfazda inaktif X kromozomudur.",
+     "sik_aciklamalari": {
+      "A": "Mitokondriyal DNA ilişkili değildir.",
+      "B": "Y kromozomu Barr cisimciği oluşturmaz.",
+      "C": "Doğru: Barr cisimciğinin tanımıdır.",
+      "D": "Sentromer kromozomun bölgesidir.",
+      "E": "Ribozomlar ilişkili değildir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Erkek cinsiyetini belirleyen kromozom hangisidir?",
+     "secenekler": {
+      "A": "X kromozomu sayısı",
+      "B": "Y kromozomu",
+      "C": "21. kromozom",
+      "D": "Mitokondriyal DNA",
+      "E": "Barr cisimciği sayısı"
+     },
+     "dogru": "B",
+     "aciklama": "Erkek cinsiyetini Y kromozomu belirler; genel kural olarak Y varsa kişi internal ve eksternal olarak erkektir.",
+     "sik_aciklamalari": {
+      "A": "X sayısı tek başına erkekliği belirlemez.",
+      "B": "Doğru: Y kromozomu (SRY) erkek gelişimini başlatır.",
+      "C": "21. kromozom cinsiyetle ilişkili değildir.",
+      "D": "Mitokondriyal DNA cinsiyeti belirlemez.",
+      "E": "Barr cisimciği inaktif X'i gösterir."
+     },
+     "bilgi": [
+      4,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "47,XXY karyotipli bireyde interfaz hücrelerinde kaç Barr cisimciği beklenir?",
+     "secenekler": {
+      "A": "3",
+      "B": "0",
+      "C": "2",
+      "D": "1",
+      "E": "Barr cisimciği sayısı karyotipten tahmin edilemez"
+     },
+     "dogru": "D",
+     "aciklama": "Barr cisimciği sayısı X sayısından bir eksiktir; iki X'i olan 47,XXY bireyde bir Barr cisimciği görülür.",
+     "sik_aciklamalari": {
+      "A": "Üç Barr cisimciği dört X varlığında görülür.",
+      "B": "Sıfır Barr cisimciği 46,XY veya 45,X'te görülür.",
+      "C": "İki Barr cisimciği üç X varlığında görülür.",
+      "D": "Doğru: bir X inaktive edilir.",
+      "E": "X sayısından tahmin edilebilir."
+     },
+     "bilgi": [
+      4,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Genital sistemin embriyolojik gelişimini ve mezonefrik ile paramezonefrik kanalların kaderini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Erkek üreme sisteminin iç yapılarını geliştiren embriyonik kanal hangisidir?",
+     "secenekler": {
+      "A": "Genital tüberkül",
+      "B": "Paramezonefrik (Müller) kanal",
+      "C": "Ürogenital sinüs",
+      "D": "Mezonefrik (Wolff) kanal",
+      "E": "Labioskrotal kabartı"
+     },
+     "dogru": "D",
+     "aciklama": "Wolff kanalı erkek, Müller kanalı dişi iç genital sistemini geliştirir.",
+     "sik_aciklamalari": {
+      "A": "Genital tüberkül dış genitalyayı oluşturur.",
+      "B": "Müller kanalı dişi iç genitalyasını oluşturur.",
+      "C": "Ürogenital sinüs başka yapılara katkıda bulunur.",
+      "D": "Doğru: Wolff kanalı erkek iç genitalyasını oluşturur.",
+      "E": "Labioskrotal kabartı skrotum/labia majörü oluşturur."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Müller kanallarının erkek embriyoda gerilemesini sağlayan faktör hangisidir?",
+     "secenekler": {
+      "A": "DHT",
+      "B": "Leydig hücrelerinden salınan testosteron",
+      "C": "Sertoli hücrelerinden salınan AMH",
+      "D": "Östrojen",
+      "E": "hCG"
+     },
+     "dogru": "C",
+     "aciklama": "AMH/MİF Sertoli hücrelerinden salınır ve Müller kanallarını baskılar; testosteron Wolff kanalını destekler.",
+     "sik_aciklamalari": {
+      "A": "DHT dış genitalyanın farklılaşmasını sağlar.",
+      "B": "Testosteron Wolff kanalının gelişimini sağlar.",
+      "C": "Doğru: AMH Müller kanalını geriletir.",
+      "D": "Östrojen Müller gerilemesi yapmaz.",
+      "E": "hCG bu etkiden sorumlu değildir."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Testisi olan ancak testosteron yapamayan, AMH üretimi normal 46,XY fetüste iç genital kanallar için beklenen tablo hangisidir?",
+     "secenekler": {
+      "A": "Müller ve Wolff kanalları birlikte gelişmiş",
+      "B": "Müller kanalları gerilemiş, Wolff kanalları gelişmemiş",
+      "C": "Müller kanalları gelişmiş, Wolff kanalları gerilemiş",
+      "D": "Her iki kanal normal erkek yönde gelişmiş",
+      "E": "Kanallar etkilenmez"
+     },
+     "dogru": "B",
+     "aciklama": "AMH Müller kanalını geriletir; testosteron yokluğunda Wolff kanalı gelişemez.",
+     "sik_aciklamalari": {
+      "A": "AMH varken Müller kanalı gelişmez.",
+      "B": "Doğru: iki faktörün bağımsız etkileri sonucudur.",
+      "C": "AMH normal olduğundan Müller kanalı geriler.",
+      "D": "Testosteron yokluğunda Wolff gelişmez.",
+      "E": "Testosteron eksikliği iç genitalyayı etkiler."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Gonadal farklılaşmada rol alan genleri (SRY, SOX9, SF1, WT1, DAX1, WNT4, FOXL2, FGF9, DMRT1) ve işlevlerini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Farklılaşmamış gonaddan testis gelişimini başlatan ve Y kromozomunun kısa kolunda (Yp11.3) bulunan gen hangisidir?",
+     "secenekler": {
+      "A": "RSPO1",
+      "B": "WNT4",
+      "C": "FOXL2",
+      "D": "DAX1",
+      "E": "SRY"
+     },
+     "dogru": "E",
+     "aciklama": "SRY (testis belirleyici faktör) testis gelişimini başlatır.",
+     "sik_aciklamalari": {
+      "A": "RSPO1 over gelişiminde rol alır.",
+      "B": "WNT4 over gelişiminde rol alır.",
+      "C": "FOXL2 over gelişiminde rol alır.",
+      "D": "DAX1 potansiyel testisi baskılar.",
+      "E": "Doğru: SRY testis belirleyici gendir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "WT1 geni mutasyonunda aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Wilms tümörü",
+      "B": "Gonadal disgenezi",
+      "C": "Fokal segmental glomerüloskleroz",
+      "D": "Blefarofimozis-pitozis-epikantus inversus",
+      "E": "Bipotansiyel gonad gelişiminde bozukluk"
+     },
+     "dogru": "D",
+     "aciklama": "WT1 bipotansiyel gonad ve böbrek gelişimi için gereklidir; mutasyonunda gonadal disgenezi, FSGS ve Wilms tümörü görülür. BPES FOXL2 mutasyonuna bağlıdır.",
+     "sik_aciklamalari": {
+      "A": "WT1 mutasyonunda görülür.",
+      "B": "WT1 mutasyonunda görülür.",
+      "C": "WT1 mutasyonunda görülür.",
+      "D": "Doğru: BPES FOXL2 ile ilişkilidir.",
+      "E": "WT1 bipotansiyel gonad için gereklidir."
+     },
+     "bilgi": [
+      11,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q19",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Over gelişiminde birlikte çalışan ve SOX9'u baskılayan gen grubu hangisidir?",
+     "secenekler": {
+      "A": "SRY, SOX9, FGF9",
+      "B": "RSPO1, WNT4, CTNNB1, FOXL2",
+      "C": "AR, SRD5A2",
+      "D": "CYP21A2, DHCR7",
+      "E": "FMR1, ELN"
+     },
+     "dogru": "B",
+     "aciklama": "RSPO1, WNT4, CTNNB1 ve FOXL2 birlikte çalışır; CTNNB1 ekspresyonunu artırarak SOX9'u baskılar.",
+     "sik_aciklamalari": {
+      "A": "Bunlar testis yolu genleridir.",
+      "B": "Doğru: over yolu genleridir.",
+      "C": "Bunlar androjen etkisi/dönüşümü genleridir.",
+      "D": "Bunlar steroid/kolesterol metabolizması genleridir.",
+      "E": "Bunlar başka sendromların genleridir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Gonadal farklılaşma genleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "SOX9 duplikasyonu 46,XX CGB ile ilişkilidir",
+      "B": "SOX9 heterozigot LOF mutasyonu kampomelik displazi ve 46,XY CGB yapar",
+      "C": "DAX1 kopya sayısı artışı XY CGB'ye yol açar",
+      "D": "SF1 steroid sentezi ve HHG aksından sorumludur",
+      "E": "SRY otozomal bir gendir ve 17. kromozomda yer alır"
+     },
+     "dogru": "E",
+     "aciklama": "SRY Y kromozomunun kısa kolunda (Yp11.3) yer alır; 17. kromozomdaki otozomal testis belirleyici gen SOX9'dur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: ekstra SOX9 SRY'siz erkek gelişimi sağlar.",
+      "B": "Doğru ifade: SOX9 kaybı testis gelişimini bozar.",
+      "C": "Doğru ifade: DAX1 potansiyel testisi baskılar.",
+      "D": "Doğru ifade: SF1'in işlevidir.",
+      "E": "Yanlış ifade (aranan cevap): SRY Y kromozomundadır."
+     },
+     "bilgi": [
+      7,
+      10,
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Gonadal disgenezi genetiğini ve pür gonadal disgeneziyi açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q20",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki genlerden hangisinin mutasyonu gonadal disgeneziye yol açabilir?",
+     "secenekler": {
+      "A": "ELN",
+      "B": "FMR1",
+      "C": "WT1",
+      "D": "CFTR",
+      "E": "HBB"
+     },
+     "dogru": "C",
+     "aciklama": "WT1 mutasyonları bipotansiyel gonad gelişimini bozarak gonadal disgeneziye yol açar.",
+     "sik_aciklamalari": {
+      "A": "ELN Williams sendromu ile ilişkilidir.",
+      "B": "FMR1 Frajil X ile ilişkilidir.",
+      "C": "Doğru: WT1 gonad gelişimi için gereklidir.",
+      "D": "CFTR kistik fibroz genidir.",
+      "E": "HBB hemoglobinopatilerle ilişkilidir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q21",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "SF1 ve WT1 yokluğunda gelişimin hangi basamağı baskılanır?",
+     "secenekler": {
+      "A": "Morula oluşumu",
+      "B": "Dış genitalyanın DHT ile farklılaşması",
+      "C": "Pubertede sekonder karakterlerin gelişimi",
+      "D": "Ürogenital katlantı (bipotansiyel gonad) oluşumu",
+      "E": "Barr cisimciği oluşumu"
+     },
+     "dogru": "D",
+     "aciklama": "SF1/WT1 yokluğunda ürogenital katlantı oluşumu baskılanır; bu genler bipotansiyel gonad için gereklidir.",
+     "sik_aciklamalari": {
+      "A": "Morula erken embriyonik evredir.",
+      "B": "DHT etkisi daha sonraki bir basamaktır.",
+      "C": "Puberte çok daha geç dönemdir.",
+      "D": "Doğru: erken gonad gelişimi bozulur.",
+      "E": "Barr cisimciği X inaktivasyonudur."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q22",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "46,XY karyotipli, dişi dış genitalyalı ve streak gonadlı bireyde (pür gonadal disgenezi) altta yatan mekanizma için hangisi en olasıdır?",
+     "secenekler": {
+      "A": "21-hidroksilaz eksikliği",
+      "B": "SRY veya testis farklılaşma yolu genlerinde (ör. SOX9, SF1, WT1) bozukluk",
+      "C": "5α-redüktaz eksikliği",
+      "D": "Androjen reseptörü normal, testis normal",
+      "E": "Trizomi 21"
+     },
+     "dogru": "B",
+     "aciklama": "Testis gelişimini başlatan/sürdüren genlerin bozukluğunda gonad testise farklılaşamaz; testosteron ve AMH olmadığından dişi fenotip oluşur.",
+     "sik_aciklamalari": {
+      "A": "21-hidroksilaz eksikliği 46,XX virilizasyonu yapar.",
+      "B": "Doğru: testis farklılaşma yolu bozukluğu gonadal disgenezi yapar.",
+      "C": "5α-redüktaz eksikliğinde testisler vardır.",
+      "D": "Normal testis bu tabloyu açıklamaz.",
+      "E": "Trizomi 21 gonadal disgenezi nedeni değildir."
+     },
+     "bilgi": [
+      7,
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "İç ve dış genital organ gelişiminde testosteron, AMH ve DHT'nin rolünü açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q23",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Dış genitalyanın erkek yönde (penis ve skrotum) farklılaşmasını sağlayan hormon hangisidir?",
+     "secenekler": {
+      "A": "FSH",
+      "B": "AMH",
+      "C": "Östrojen",
+      "D": "Progesteron",
+      "E": "Dihidrotestosteron (DHT)"
+     },
+     "dogru": "E",
+     "aciklama": "Dış genitalya farklılaşması DHT'ye bağlıdır; DHT yokluğunda dişi dış genitalya gelişir.",
+     "sik_aciklamalari": {
+      "A": "FSH gonad işlevini düzenler.",
+      "B": "AMH Müller kanalını geriletir.",
+      "C": "Östrojen erkek dış genitalya gelişimini sağlamaz.",
+      "D": "Progesteron bu etkiden sorumlu değildir.",
+      "E": "Doğru: DHT dış genitalyayı virilize eder."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q24",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "DHT eksikliğinde genital tüberkülün dönüştüğü yapı hangisidir?",
+     "secenekler": {
+      "A": "Labia minör",
+      "B": "Labia majör",
+      "C": "Klitoris",
+      "D": "Vajen üst kısmı",
+      "E": "Uterus"
+     },
+     "dogru": "C",
+     "aciklama": "DHT eksikliğinde genital tüberkül klitoris, labioskrotal kabartı labia majör, ürogenital kıvrımlar labia minör olur.",
+     "sik_aciklamalari": {
+      "A": "Labia minör ürogenital kıvrımlardan gelişir.",
+      "B": "Labia majör labioskrotal kabartıdan gelişir.",
+      "C": "Doğru: genital tüberkül klitorise dönüşür.",
+      "D": "Vajen üst kısmı Müller kanalından gelişir.",
+      "E": "Uterus Müller kanalından gelişir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q25",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Erkek iç ve dış genital gelişiminde hormon–etki eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "AMH – Müller kanallarının baskılanması",
+      "B": "Testosteron – Wolff kanalının gelişimi",
+      "C": "DHT – penis ve skrotum gelişimi",
+      "D": "DHT – erkek tipi kellik",
+      "E": "AMH – dış genitalyanın virilizasyonu"
+     },
+     "dogru": "E",
+     "aciklama": "Dış genitalyanın virilizasyonu DHT'ye bağlıdır; AMH yalnız Müller kanalını geriletir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: AMH – Müller kanallarının baskılanması.",
+      "B": "Doğru eşleştirme: testosteron – Wolff kanalının gelişimi.",
+      "C": "Doğru eşleştirme: DHT – penis ve skrotum gelişimi.",
+      "D": "Doğru eşleştirme: DHT erkek tipi kelliğe neden olur.",
+      "E": "Yanlış eşleştirme (aranan cevap): virilizasyonu DHT yapar."
+     },
+     "bilgi": [
+      9,
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Cinsiyet gelişim bozukluklarını (CGB) sınıflandırabilmek ve temel terimleri tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q26",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Cinsiyet gelişim bozuklukları (CGB) güncel sınıflamada kaç ana gruba ayrılır?",
+     "secenekler": {
+      "A": "Sınıflama yoktur",
+      "B": "2: erkek ve kadın",
+      "C": "4: gerçek ve psödohermafroditizm alt tipleri",
+      "D": "5",
+      "E": "3: cinsiyet kromozom CGB, 46,XX CGB ve 46,XY CGB"
+     },
+     "dogru": "E",
+     "aciklama": "CGB üç gruba ayrılır: cinsiyet kromozom CGB, 46,XX CGB ve 46,XY CGB.",
+     "sik_aciklamalari": {
+      "A": "Tanımlı bir sınıflama vardır.",
+      "B": "İkili sınıflama CGB'yi kapsamaz.",
+      "C": "Hermafrodit terimleri yerine güncel terminoloji kullanılır.",
+      "D": "Güncel CGB sınıflamasında beş ana grup tanımlanmamıştır.",
+      "E": "Doğru: güncel sınıflamadır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q27",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Gerçek hermafroditizm (ovotestiküler CGB) ile ilgili tanımlayıcı gonadal bulgu hangisidir?",
+     "secenekler": {
+      "A": "Streak gonad",
+      "B": "Ovotestis",
+      "C": "Normal iki over",
+      "D": "Normal iki testis",
+      "E": "Gonad yokluğu"
+     },
+     "dogru": "B",
+     "aciklama": "Gerçek hermafroditte aynı bireyde over ve testis dokusu (ovotestis) bulunur; güncel terminolojide interseks terimi tercih edilir.",
+     "sik_aciklamalari": {
+      "A": "Streak gonad gonadal disgenezide görülür.",
+      "B": "Doğru: ovotestis tanımlayıcıdır.",
+      "C": "İki normal over tek başına tanımı karşılamaz.",
+      "D": "İki normal testis tanımı karşılamaz.",
+      "E": "Gonad yokluğu farklı bir tablodur."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q28",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Kromozomal ve gen mutasyonuna bağlı CGB'ler karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kromozomal varyantlarda aile öyküsü hep pozitiftir",
+      "B": "Gen mutasyonları kromozomal anomalilerden daha sıktır",
+      "C": "Kromozomal varyantlar genellikle sporadik, gen mutasyonları genellikle kalıtsaldır",
+      "D": "Gen mutasyonlarında genetik danışmanın önemi yoktur",
+      "E": "Seks kromozomu sayısal anomalilerinde fenotip otozomlardakinden ağırdır"
+     },
+     "dogru": "C",
+     "aciklama": "Gen mutasyonları daha nadirdir (~1/10.000), genellikle kalıtsaldır ve aile öyküsü pozitiftir; seks kromozomu anomalilerinde fenotip daha ılımlıdır.",
+     "sik_aciklamalari": {
+      "A": "Kromozomal varyantlar çoğunlukla sporadiktir.",
+      "B": "Gen mutasyonları daha nadirdir.",
+      "C": "Doğru: kalıtım farkı danışmayı belirler.",
+      "D": "Kalıtsal olduklarından danışma önemlidir.",
+      "E": "Seks kromozomu anomalilerinde fenotip daha ılımlıdır."
+     },
+     "bilgi": [
+      19,
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Kromozomal CGB'leri (Klinefelter, Turner, 47,XYY, 47,XXX) açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q29",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "En sık görülen seks kromozom varyantı hangisidir?",
+     "secenekler": {
+      "A": "47,XXX",
+      "B": "Turner (45,X)",
+      "C": "47,XYY",
+      "D": "Klinefelter (47,XXY)",
+      "E": "48,XXXY"
+     },
+     "dogru": "D",
+     "aciklama": "Bu derste Klinefelter en sık seks kromozom varyantı olarak (~1/500 erkek doğum) verilmiştir.",
+     "sik_aciklamalari": {
+      "A": "XXX ~1/1000'dir: 47,XXX.",
+      "B": "Turner daha seyrektir.",
+      "C": "XYY ~1/1000'dir: 47,XYY.",
+      "D": "Doğru: en sık seks kromozom varyantıdır.",
+      "E": "48,XXXY nadirdir: 48,XXXY."
+     },
+     "bilgi": [
+      20,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q30",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Turner sendromu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Fertilite normaldir",
+      "B": "Y kromozomu bulunur",
+      "C": "Primer gonad overdir ancak fonksiyonel değildir; tedavide büyüme hormonu ve östrojen kullanılır",
+      "D": "Pubertede sekonder seks özellikleri normal gelişir",
+      "E": "Uzun boy tipiktir"
+     },
+     "dogru": "C",
+     "aciklama": "Turner'da tek X vardır; over fonksiyonel değildir, sterilite, kısa boy, yele boyun görülür.",
+     "sik_aciklamalari": {
+      "A": "Sterilite vardır: fertilite normaldir.",
+      "B": "Y kromozomu yoktur: Y kromozomu bulunur.",
+      "C": "Doğru: gonad ve tedavi bilgisi doğrudur.",
+      "D": "Sekonder seks özellikleri gelişmez.",
+      "E": "Kısa boy tipiktir: uzun boy tipiktir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q31",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Gonozomal anomaliler ile özellik eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Klinefelter – küçük testis, düşük testosteron, sterilite",
+      "B": "47,XYY – genellikle fertil, hafif öğrenme güçlüğü",
+      "C": "47,XXX – motor/dil geriliği, fertilite normal",
+      "D": "Turner – kısa boy, yele boyun, böbrek/dolaşım anomalileri",
+      "E": "47,XYY – küçük testis, azospermi ve jinekomasti"
+     },
+     "dogru": "E",
+     "aciklama": "Küçük testis, azospermi ve jinekomasti Klinefelter sendromuna aittir; 47,XYY genellikle normal ve fertildir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: klinefelter – küçük testis, düşük testosteron, sterilite.",
+      "B": "Doğru eşleştirme: 47,XYY – genellikle fertil, hafif öğrenme güçlüğü.",
+      "C": "Doğru eşleştirme: 47,XXX – motor/dil geriliği, fertilite normal.",
+      "D": "Doğru eşleştirme: turner – kısa boy, yele boyun, böbrek/dolaşım anomalileri.",
+      "E": "Yanlış eşleştirme (aranan cevap): bu bulgular Klinefelter'e aittir."
+     },
+     "bilgi": [
+      20,
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Miks gonadal disgeneziyi tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q32",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Miks gonadal disgenezide tipik karyotip hangisidir?",
+     "secenekler": {
+      "A": "45,X",
+      "B": "47,XXY",
+      "C": "46,XX",
+      "D": "47,XXX",
+      "E": "45,X/46,XY mozaik"
+     },
+     "dogru": "E",
+     "aciklama": "Miks gonadal disgenezide 45,X/46,XY mozaik karyotip bulunur.",
+     "sik_aciklamalari": {
+      "A": "45,X tek başına Turner'dır.",
+      "B": "47,XXY Klinefelter'dir.",
+      "C": "46,XX normal dişi karyotiptir.",
+      "D": "47,XXX triple X'tir.",
+      "E": "Doğru: tipik mozaik karyotiptir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q33",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Miks gonadal disgenezide gonad yapısı nasıldır?",
+     "secenekler": {
+      "A": "Bir tarafta disgenetik testis, diğer tarafta streak gonad",
+      "B": "İki normal testis",
+      "C": "İki normal over",
+      "D": "Her iki tarafta ovotestis",
+      "E": "Gonad yokluğu"
+     },
+     "dogru": "A",
+     "aciklama": "Miks gonadal disgenezide asimetrik gonadlar vardır: bir tarafta disgenetik testis, diğer tarafta streak gonad.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tipik gonad dağılımıdır.",
+      "B": "Normal testisler beklenmez.",
+      "C": "Normal overler beklenmez.",
+      "D": "Ovotestis ovotestiküler CGB'nin özelliğidir.",
+      "E": "Gonadlar mevcuttur: gonad yokluğu."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q34",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Miks gonadal disgenezinin klinik özellikleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Fenotip ambigus genitalyadan Turner veya normal kadın/erkek fenotipine kadar değişir; tanı çoğu kez infertilite ile konur",
+      "B": "Fenotip her zaman normal erkektir",
+      "C": "Her zaman doğumda ambigus genitalya ile tanınır",
+      "D": "Fertilite normaldir",
+      "E": "Karyotip her zaman 46,XX'tir"
+     },
+     "dogru": "A",
+     "aciklama": "Mozaikliğe bağlı olarak fenotip geniş spektrum gösterir; çoğu olgu infertilite araştırmasında tanınır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: geniş fenotipik spektrum tipiktir.",
+      "B": "Fenotip değişkendir.",
+      "C": "Her olgu doğumda fark edilmez.",
+      "D": "İnfertilite sık tanı nedenidir.",
+      "E": "Karyotip 45,X/46,XY'dir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Gen mutasyonlarına bağlı CGB'leri (5α-redüktaz eksikliği, androjen duyarsızlık sendromu, KAH) açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q35",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Testosteronun DHT'ye dönüşümünü sağlayan enzimin eksikliğinde hangi hormon profili beklenir?",
+     "secenekler": {
+      "A": "Testosteron normal/yüksek, DHT düşük",
+      "B": "Testosteron düşük, DHT yüksek",
+      "C": "Her ikisi de yüksek",
+      "D": "Kortizol yüksek, ACTH düşük",
+      "E": "17-OH progesteron yüksek"
+     },
+     "dogru": "A",
+     "aciklama": "5α-redüktaz eksikliğinde (SRD5A2, otozomal resesif) testosteron DHT'ye çevrilemez.",
+     "sik_aciklamalari": {
+      "A": "Doğru: 5-ARD'nin hormon profilidir.",
+      "B": "DHT düşüktür: testosteron düşük, DHT yüksek.",
+      "C": "DHT düşüktür: her ikisi de yüksek.",
+      "D": "Bu profil 5-ARD'ye ait değildir.",
+      "E": "17-OH progesteron yüksekliği KAH'yi düşündürür."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q36",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Dış genitalyası normal dişi görünümünde, vajeni kısa ve kör, uterusu olmayan ve primer amenore ile başvuran 46,XY bireyde en olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Komplet androjen duyarsızlık sendromu (CAIS)",
+      "B": "5α-redüktaz eksikliği",
+      "C": "Turner sendromu",
+      "D": "Konjenital adrenal hiperplazi",
+      "E": "Klinefelter sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "CAIS'te X'e bağlı AR mutasyonu vardır; testisler AMH ürettiğinden uterus ve tüpler yoktur, kadın sekonder karakterleri gelişir ama kıllanma seyrektir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: klinik tablo CAIS'e uyar.",
+      "B": "5-ARD'de pubertede virilizasyon olur.",
+      "C": "Turner 45,X'tir: turner sendromu.",
+      "D": "KAH 46,XX virilizasyonudur.",
+      "E": "Klinefelter 47,XXY erkektir."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q37",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Gen mutasyonuna bağlı CGB'ler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "5-ARD'de pubertede testisler iner, penis büyür ve ses kalınlaşır",
+      "B": "CAIS'te inmemiş testisler nadiren kanserleşebileceğinden cerrahi olarak çıkarılır",
+      "C": "PAIS geniş yelpazede ambigus genitalya ile gelir",
+      "D": "MAIS'te dış görünüm tamamen erkektir",
+      "E": "CAIS'te testisler AMH üretmez ve uterus ile tüpler normal gelişir"
+     },
+     "dogru": "E",
+     "aciklama": "CAIS'te testisler AMH ürettiğinden Müller yapıları (uterus, tüpler, üst vajina) gelişmez.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: pubertede virilizasyon olur.",
+      "B": "Doğru ifade: testis kanser riski nedeniyle çıkarılır.",
+      "C": "Doğru ifade: PAIS'in özelliğidir.",
+      "D": "Doğru ifade: MAIS'te fenotip erkektir.",
+      "E": "Yanlış ifade (aranan cevap): AMH üretilir, Müller yapıları yoktur."
+     },
+     "bilgi": [
+      26,
+      28,
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "Konjenital adrenal hiperplazinin mekanizmasını, formlarını ve prenatal yönetimini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q38",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "46,XX bireylerde kuşkulu genitalyanın en önemli nedeni hangisidir?",
+     "secenekler": {
+      "A": "Konjenital adrenal hiperplazi",
+      "B": "Androjen duyarsızlık sendromu",
+      "C": "5α-redüktaz eksikliği",
+      "D": "Klinefelter sendromu",
+      "E": "Turner sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "KAH 46,XX CGB'de kuşkulu genitalyanın en önemli nedenidir; olguların %90–95'i 21-hidroksilaz (CYP21A2) eksikliğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: fetal androjen fazlalığı virilizasyon yapar.",
+      "B": "AIS 46,XY bireylerde görülür.",
+      "C": "5-ARD 46,XY bireylerde görülür.",
+      "D": "Klinefelter 47,XXY'dir.",
+      "E": "Turner 45,X'tir: turner sendromu."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q39",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Klasik KAH formları ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tuz kaybettirici form (~%75) ve basit virilizan form (~%25) prenatal başlangıçlıdır",
+      "B": "Nonklasik form prenatal başlangıçlıdır",
+      "C": "Enzim aktivitesi %50'nin üzerindeyse klasik form oluşur",
+      "D": "Tuz kaybettirici form nadirdir",
+      "E": "KAH'de ACTH düşer"
+     },
+     "dogru": "A",
+     "aciklama": "Klasik KAH prenatal başlar; enzim aktivitesi %10'un altına düşerse klasik, %20–50 azalırsa nonklasik tablo oluşur. Kortizol yetersizliği ACTH'yi artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: klasik formların dağılımıdır.",
+      "B": "Nonklasik form postnatal başlar.",
+      "C": "Klasik formda aktivite %10'un altındadır.",
+      "D": "Tuz kaybettirici form daha sıktır.",
+      "E": "ACTH artar ve hiperplazi gelişir."
+     },
+     "bilgi": [
+      31,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q40",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Daha önce klasik KAH'li çocuğu olan aileye yeni gebelikte uygulanan prenatal yönetim hangisidir?",
+     "secenekler": {
+      "A": "Anne adayına 6–8. haftada deksametazon başlanır; etkilenmiş kız fetusta sürdürülür, erkek veya etkilenmemiş fetusta kesilir",
+      "B": "Gebelik boyunca tüm fetuslarda deksametazon kesintisiz sürdürülür",
+      "C": "Deksametazon yalnızca doğumdan sonra başlanır",
+      "D": "Prenatal yönetim gerekmez",
+      "E": "Yalnızca erkek fetuslarda tedavi sürdürülür"
+     },
+     "dogru": "A",
+     "aciklama": "Riskli ailelerde 6–8. haftada deksametazon başlanır; etkilenmiş kız fetusta virilizasyonu önlemek için gebelik sonuna kadar sürdürülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: prenatal yönetim ilkesi budur.",
+      "B": "Etkilenmemiş/erkek fetusta ilaç kesilir.",
+      "C": "Virilizasyonu önlemek için erken başlanmalıdır.",
+      "D": "Riskli ailelerde prenatal yönetim önerilir.",
+      "E": "Tedavinin amacı kız fetusun virilizasyonunu önlemektir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 14,
+   "metin": "CGB'ye tanısal yaklaşım algoritmasını özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-19-q41",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Cinsiyet gelişim bozukluğu şüphesi olan yenidoğanda ilk yapılması gereken genetik analiz hangisidir?",
+     "secenekler": {
+      "A": "Karyotip",
+      "B": "Tüm ekzom dizileme",
+      "C": "Tek gen dizileme",
+      "D": "Metilasyon analizi",
+      "E": "Mitokondriyal DNA analizi"
+     },
+     "dogru": "A",
+     "aciklama": "CGB'ye yaklaşımda ilk analiz karyotiptir; klasik karyotipleme atlanmamalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ilk basamak karyotiptir.",
+      "B": "WES ilk basamak değildir.",
+      "C": "Tek gen testi karyotipten sonra planlanır.",
+      "D": "Metilasyon analizi imprinting hastalıkları içindir.",
+      "E": "Mitokondriyal analiz ilk basamak değildir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q42",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Karyotipi 46,XX olan, gonadları palpe edilemeyen, pelvik USG'de uterus saptanan kuşkulu genitalyalı yenidoğanda öncelikle istenmesi gereken test hangisidir?",
+     "secenekler": {
+      "A": "Plazma 17-OH progesteron",
+      "B": "Serum PSA",
+      "C": "Serum AFP",
+      "D": "FMR1 tekrar analizi",
+      "E": "Androjen reseptör dizilemesi"
+     },
+     "dogru": "A",
+     "aciklama": "46,XX CGB'de önce KAH düşünülür; 17-OH progesteron yüksekliği tanı koydurur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: KAH taraması için temel testtir.",
+      "B": "PSA prostat belirtecidir.",
+      "C": "AFP germ hücreli tümör belirtecidir.",
+      "D": "FMR1 Frajil X için kullanılır.",
+      "E": "AR dizilemesi 46,XY CGB'de değerlendirilir."
+     },
+     "bilgi": [
+      31,
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-q43",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "CGB'ye tanısal yaklaşım ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İlk analiz karyotiptir",
+      "B": "Pelvik USG, 17-OH progesteron ve testosteron değerlendirilir",
+      "C": "46,XY CGB'de androjen biyosentez defektleri ve 5α-redüktaz eksikliği akla gelir",
+      "D": "Tuz kaybettirici KAH şüphesi olan yenidoğan acil değerlendirilmelidir",
+      "E": "Uygun testlerle tüm olgularda genetik tanı konulabilir"
+     },
+     "dogru": "E",
+     "aciklama": "Olguların %20–25'inde genetik tanı konulamaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: karyotip ilk basamaktır.",
+      "B": "Doğru ifade: temel değerlendirmelerdir.",
+      "C": "Doğru ifade: 46,XY CGB ayırıcı tanısıdır.",
+      "D": "Doğru ifade: tuz kaybı yaşamı tehdit eder.",
+      "E": "Yanlış ifade (aranan cevap): olguların bir kısmında tanı konulamaz."
+     },
+     "bilgi": [
+      33,
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 43,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:33"
+}

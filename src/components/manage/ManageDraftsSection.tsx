@@ -6,7 +6,6 @@ import {
   Check,
   ChevronDown,
   Zap,
-  Search,
   Eye,
   EyeOff,
   Undo2,
@@ -32,6 +31,7 @@ import {
   deleteDraftEverywhere,
   reconstructDraft,
 } from '../../services/manageConsoleService';
+import { Seg, SearchBox, EmptyState, ConfirmButton } from './consoleUi';
 
 interface ManageDraftsSectionProps {
   adminEmail: string;
@@ -49,7 +49,6 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
   adminEmail,
   adminName,
   committeeId,
-  committeeName,
   questions,
   onRefreshData,
   notify,
@@ -74,8 +73,6 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
   const [optimizingQuestion, setOptimizingQuestion] = useState<QuestionItem | null>(null);
   const [reconstructingIds, setReconstructingIds] = useState<Set<string>>(new Set());
   const [deletingIds, setDeletingIds] = useState<Set<string>>(new Set());
-  const [confirmBatch, setConfirmBatch] = useState(false);
-  const [confirmBulkDelete, setConfirmBulkDelete] = useState(false);
   const [sensitivity, setSensitivity] = useState<'strict' | 'balanced' | 'loose'>(() => {
     try {
       const s = localStorage.getItem('medsoru_cluster_sensitivity');
@@ -116,18 +113,6 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
       /* yoksay */
     }
   };
-
-  useEffect(() => {
-    if (!confirmBatch) return;
-    const t = window.setTimeout(() => setConfirmBatch(false), 4000);
-    return () => window.clearTimeout(t);
-  }, [confirmBatch]);
-
-  useEffect(() => {
-    if (!confirmBulkDelete) return;
-    const t = window.setTimeout(() => setConfirmBulkDelete(false), 4000);
-    return () => window.clearTimeout(t);
-  }, [confirmBulkDelete]);
 
   const stemOf = (q: QuestionItem) =>
     q.reconstruction?.stem || q.stem || q.fragments?.[0]?.text || '';
@@ -325,7 +310,6 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
       }
     } finally {
       setIsBulkDeleting(false);
-      setConfirmBulkDelete(false);
     }
   };
 
@@ -433,23 +417,19 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
   const DraftActions: React.FC<{ q: QuestionItem; compact?: boolean }> = ({ q, compact }) => {
     const isRec = reconstructingIds.has(q.id);
     const isDel = deletingIds.has(q.id);
-    const btn = 'h-8 px-2.5 rounded-lg border border-line bg-white text-[12.5px] font-medium text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer disabled:opacity-50';
     return (
-      <span className={`inline-flex items-center gap-1.5 ${compact ? '' : 'flex-wrap'}`} onClick={(e) => e.stopPropagation()}>
-        <button type="button" onClick={() => setEditingDraft(q)} className={btn} title="Taslağı düzenle">
-          <Pencil className="w-3.5 h-3.5" /><span>Düzenle</span>
+      <span className={`inline-flex items-center gap-1 ${compact ? '' : 'flex-wrap'}`} onClick={(e) => e.stopPropagation()}>
+        <button type="button" onClick={() => setEditingDraft(q)} className="ms-btn is-sm is-ghost" title="Taslağı düzenle">
+          <Pencil /> Düzenle
         </button>
-        <button type="button" onClick={() => setOptimizingQuestion(q)} className="h-8 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-[12.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors" title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür">
-          <Wand2 className="w-3.5 h-3.5" /><span>AI ile Geliştir</span>
+        <button type="button" onClick={() => setOptimizingQuestion(q)} className="ms-btn is-sm is-tonal" title="Amfi slaytlarıyla tam soruya geliştir (önizlemeli)">
+          <Wand2 /> AI ile geliştir
         </button>
-        <button type="button" onClick={() => { void handleReconstruct(q); }} disabled={isRec} className={btn} title="Yapay zekaya tam soruya dönüştür">
-          {isRec ? <RefreshCw className="w-3.5 h-3.5 animate-spin" /> : <Sparkles className="w-3.5 h-3.5" />}
-          <span>{isRec ? 'Dönüşüyor…' : 'AI Dönüştür'}</span>
+        <button type="button" onClick={() => { void handleReconstruct(q); }} disabled={isRec} className="ms-btn is-sm is-ghost" title="Doğrudan tam soruya dönüştür">
+          {isRec ? <RefreshCw className="animate-spin" /> : <Sparkles />} {isRec ? 'Dönüşüyor…' : 'AI dönüştür'}
         </button>
-        <button type="button" onClick={() => { void handleDeleteDraft(q); }} disabled={isDel}
-          className="h-8 px-2.5 rounded-lg border border-rose-300 bg-rose-50 text-rose-700 text-[12.5px] font-semibold hover:bg-rose-100 inline-flex items-center gap-1 cursor-pointer disabled:opacity-50" title="Taslağı her yerden sil">
-          {isDel ? <RefreshCw className="w-3.5 h-3.5 animate-spin" /> : <Trash2 className="w-3.5 h-3.5" />}
-          <span>{isDel ? 'Siliniyor…' : 'Sil'}</span>
+        <button type="button" onClick={() => { void handleDeleteDraft(q); }} disabled={isDel} className="ms-btn is-sm is-danger" title="Taslağı her yerden sil">
+          {isDel ? <RefreshCw className="animate-spin" /> : <Trash2 />} {isDel ? 'Siliniyor…' : 'Sil'}
         </button>
       </span>
     );
@@ -464,265 +444,219 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
     { id: 'manual', label: 'Elle seç', count: selectedDraftIds.length || undefined },
   ];
 
-  const stats = [
-    { label: 'Taslak', value: analysis?.totalDrafts ?? '–', hint: 'öğrenci girdisi', dot: '#4A5868' },
-    { label: 'Tahmini soru', value: analysis?.estimatedTrueQuestions ?? '–', hint: 'hedefe doğru', dot: '#1F9D55' },
-    { label: 'Hazır küme', value: readyCount, hint: `${analysis?.potentialSavedDuplicates ?? 0} mükerrer`, dot: '#1E4FD8' },
-    { label: 'Birleşik', value: mergedQuestions.length, hint: 'konsolide soru', dot: '#10B981' },
-    { label: 'Muğlak', value: analysis?.vagueDraftsCount ?? '–', hint: 'eşleşme arıyor', dot: '#F59E0B' },
+  const summary = [
+    { label: 'taslak', value: analysis?.totalDrafts ?? '–', tone: '' },
+    { label: 'tahmini soru', value: analysis?.estimatedTrueQuestions ?? '–', tone: 'is-ok' },
+    { label: `hazır küme (${analysis?.potentialSavedDuplicates ?? 0} mükerrer)`, value: readyCount, tone: 'is-ok' },
+    { label: 'birleşik', value: mergedQuestions.length, tone: '' },
+    { label: 'muğlak', value: analysis?.vagueDraftsCount ?? '–', tone: 'is-warn' },
   ];
 
+  const qrow = (q: QuestionItem, extra?: React.ReactNode, colors?: Map<string, string>) => (
+    <>
+      <span className="ms-row-meta">
+        <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
+        <span className="truncate">{q.discipline}{q.topic ? ` · ${q.topic}` : ''}</span>
+        {extra}
+      </span>
+      <span className="text-[14px] text-ink leading-snug">{stemOf(q) ? (colors ? <Colored text={stemOf(q)} colors={colors} /> : stemOf(q)) : <span className="text-ink-3">Metin girilmemiş</span>}</span>
+    </>
+  );
+
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 min-w-0">
       <div className="flex flex-col xl:flex-row xl:items-center gap-2">
-        <div className="flex items-center gap-2.5 min-w-0 flex-1">
-          <span className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center shrink-0">
-            <Layers className="w-5 h-5" />
-          </span>
-          <div className="min-w-0">
-            <h3 className="m-0 font-display font-bold text-[18px] tracking-[-0.02em]">Taslak atölyesi</h3>
-            <p className="m-0 text-[13px] text-ink-3 truncate">{committeeName || 'Seçili kurul'} — topla, birleştir, sil, düzenle, AI ile dönüştür</p>
-          </div>
-        </div>
+        <p className="m-0 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-ink-2 flex-1 min-w-0">
+          {summary.map((x) => (
+            <span key={x.label} className="inline-flex items-center gap-1.5 tabular-nums">
+              <span className={`ms-sdot ${x.tone}`} aria-hidden="true" />
+              <b className="text-ink">{x.value}</b> {x.label}
+            </span>
+          ))}
+        </p>
         <div className="flex items-center gap-2 shrink-0 flex-wrap">
-          <div role="radiogroup" aria-label="Kümeleme hassasiyeti" className="inline-flex gap-1 bg-canvas rounded-[10px] p-[3px]" title="Sıkı: yalnızca güçlü eşleşmeler kümelenir. Gevşek: daha çok öneri gösterir.">
-            {([['strict', 'Sıkı'], ['balanced', 'Dengeli'], ['loose', 'Gevşek']] as const).map(([id, label]) => (
-              <button key={id} type="button" role="radio" aria-checked={sensitivity === id} onClick={() => changeSensitivity(id)}
-                className={`h-9 px-2.5 rounded-lg text-[13px] cursor-pointer whitespace-nowrap ${sensitivity === id ? 'bg-white font-semibold shadow text-ink' : 'text-ink-2'}`}>{label}</button>
-            ))}
-          </div>
+          <Seg
+            label="Kümeleme hassasiyeti"
+            value={sensitivity}
+            onChange={(v) => changeSensitivity(v)}
+            options={[
+              { id: 'strict', label: 'Sıkı' },
+              { id: 'balanced', label: 'Dengeli' },
+              { id: 'loose', label: 'Gevşek' },
+            ]}
+          />
           {blockedCount > 0 && (
-            <button type="button" onClick={handleClearBlocked} title="Aynı değil engellerini temizle"
-              className="h-10 px-3 rounded-[10px] border border-line-2 text-[13px] font-semibold text-ink-2 cursor-pointer">
-              {blockedCount} engel × temizle
+            <button type="button" onClick={handleClearBlocked} title="“Aynı değil” engellerini temizle" className="ms-btn is-ghost">
+              <X /> {blockedCount} engel
             </button>
           )}
-          <button type="button" onClick={() => { void runAnalysis(); }} disabled={loading}
-            className="h-10 px-3.5 rounded-[10px] border border-line-2 text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50">
-            <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} /> Yeniden analiz
+          <button type="button" onClick={() => { void runAnalysis(); }} disabled={loading} className="ms-btn">
+            <RefreshCw className={loading ? 'animate-spin' : ''} /> Yeniden analiz
           </button>
           {readyCount > 0 && (
-            <button type="button" disabled={isBatchMerging}
-              onClick={() => (confirmBatch ? (setConfirmBatch(false), void handleBatchMergeReady()) : setConfirmBatch(true))}
-              className={`h-10 px-3.5 rounded-[10px] text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 ${confirmBatch ? 'bg-rose-700 text-white' : 'bg-ok text-white hover:bg-emerald-900'}`}>
-              <Zap className="w-4 h-4" />{confirmBatch ? 'Emin misin? Birleştir' : `Hazır ${readyCount} kümeyi birleştir`}
-            </button>
+            <ConfirmButton icon={Zap} className="ms-btn is-ok" confirmLabel={`Emin misin? ${readyCount} küme`} busy={isBatchMerging} busyLabel="Birleştiriliyor…" onConfirm={() => handleBatchMergeReady()}>
+              Hazır {readyCount} kümeyi birleştir
+            </ConfirmButton>
           )}
         </div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
-        {stats.map((s) => (
-          <div key={s.label} className="rounded-xl bg-canvas px-3 py-2 flex flex-col">
-            <span className="flex items-center gap-1.5 text-[12px] text-ink-2">
-              <span className="w-2 h-2 rounded-full" style={{ background: s.dot }} aria-hidden="true" />{s.label}
-            </span>
-            <span className="flex items-baseline gap-1.5">
-              <span className="font-mono text-[20px] font-semibold text-ink leading-tight">{s.value}</span>
-              {s.hint && <span className="text-[12px] text-ink-3 truncate">{s.hint}</span>}
-            </span>
-          </div>
-        ))}
-      </div>
-
-      <div className="flex items-center gap-2">
-        <div role="tablist" aria-label="Taslak görünümü" className="flex gap-1 bg-canvas rounded-xl p-1 overflow-x-auto min-w-0">
-          {tabs.map((t) => {
-            const on = activeFilter === t.id;
-            return (
-              <button key={t.id} type="button" role="tab" aria-selected={on} onClick={() => setActiveFilter(t.id)}
-                className={`shrink-0 h-8 px-3 rounded-lg text-[13.5px] whitespace-nowrap cursor-pointer inline-flex items-center gap-1.5 ${on ? 'bg-white text-ink font-semibold shadow' : 'text-ink-2 hover:text-ink'}`}>
-                {t.id === 'manual' && <GitMerge className="w-3.5 h-3.5" />}{t.label}
-                {t.count !== undefined && <span className={`font-mono text-[12px] ${on ? 'text-accent' : 'text-ink-3'}`}>{t.count}</span>}
-              </button>
-            );
-          })}
-        </div>
-      </div>
+      <Seg
+        label="Taslak görünümü"
+        value={activeFilter}
+        onChange={setActiveFilter}
+        className="self-start"
+        options={tabs.map((t) => ({ id: t.id, label: t.id === 'manual' ? <><GitMerge className="w-3.5 h-3.5" />{t.label}</> : t.label, n: t.count }))}
+      />
 
       {loading ? (
-        <div role="status" className="py-14 text-center text-[15px] font-semibold text-ink">Taslaklar taranıyor…</div>
+        <div className="flex flex-col gap-3" role="status" aria-label="Taslaklar taranıyor">
+          {[0, 1, 2].map((i) => <div key={i} className="h-28 rounded-2xl ms-shimmer" />)}
+        </div>
       ) : activeFilter === 'merged' ? (
         <div className="flex flex-col gap-3">
-          <p className="m-0 text-[13.5px] text-ink-2">Daha önce birleştirilmiş taslaklar. Parçaları inceleyebilir, hata varsa <strong className="text-ink">"Ayır (Geri Al)"</strong> ile eski hallerine döndürebilirsiniz.</p>
+          <p className="m-0 text-[13.5px] text-ink-2">Daha önce birleştirilmiş taslaklar. Parçaları incele; hata varsa <b className="text-ink">Ayır</b> ile eski hallerine döndür.</p>
           {mergedQuestions.length === 0 && (
-            <div className="rounded-xl border border-line px-4 py-10 text-center text-[14px] text-ink-2">Henüz birleştirilmiş soru yok. "Hazır" veya "Elle seç" sekmesinden birleştirebilirsiniz.</div>
+            <section className="ms-panel"><EmptyState icon={Layers} title="Henüz birleştirilmiş soru yok">“Hazır” ya da “Elle seç” sekmesinden birleştirebilirsin.</EmptyState></section>
           )}
           {mergedQuestions.map((q) => {
             const isInspecting = inspectingMergedId === q.id;
             const isUnmerging = unmergingQuestionId === q.id;
             const satelliteCount = q.mergedSatellites?.length || q.fragments?.filter((f) => f.text.includes('[Birleştirilen Taslak')).length || 0;
             return (
-              <article key={q.id} className="rounded-2xl bg-white border border-emerald-200 overflow-hidden flex flex-col">
-                <div className="flex items-center gap-3 px-4 py-3 bg-emerald-50 border-b border-emerald-100 flex-wrap">
-                  <span className="w-9 h-9 rounded-[10px] bg-ok-soft text-ok font-mono text-[13px] font-bold flex items-center justify-center shrink-0">{numLabel(q)}</span>
-                  <div className="flex-1 min-w-[200px]">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-ink text-[14.5px] truncate">{q.topic || q.discipline || 'Birleştirilmiş Soru'}</span>
-                      <span className="h-5 px-2 rounded-full bg-ok text-white text-[11px] font-semibold inline-flex items-center gap-1 shrink-0">
-                        <Layers className="w-3 h-3" />{satelliteCount > 0 ? `${satelliteCount + 1} taslak birleşik` : 'Birleşik'}
-                      </span>
-                    </div>
-                    <span className="text-[12px] text-ink-3">{q.discipline} · {q.fragments?.length || 0} parça · {q.options?.length || 0} şık</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 shrink-0 flex-wrap">
-                    <DraftActions q={q} compact />
-                    <button type="button" onClick={() => setInspectingMergedId(isInspecting ? null : q.id)}
-                      className="h-8 px-2.5 rounded-lg border border-line bg-white text-[12.5px] font-medium text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer">
-                      {isInspecting ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}<span>{isInspecting ? 'Kapat' : 'İncele'}</span>
-                    </button>
-                    <button type="button" onClick={() => { void handleUnmergeQuestion(q.id); }} disabled={isUnmerging}
-                      className="h-8 px-2.5 rounded-lg border border-rose-300 bg-rose-50 text-rose-700 text-[12.5px] font-semibold hover:bg-rose-100 inline-flex items-center gap-1 cursor-pointer disabled:opacity-50">
-                      {isUnmerging ? <RefreshCw className="w-3.5 h-3.5 animate-spin" /> : <Undo2 className="w-3.5 h-3.5" />}
-                      <span>{isUnmerging ? 'Ayrılıyor…' : 'Ayır (Geri Al)'}</span>
-                    </button>
+              <article key={q.id} className="ms-panel">
+                <div className="ms-row !border-t-0">
+                  <span className="ms-ricon is-ok font-mono text-[12.5px] font-bold">{numLabel(q)}</span>
+                  <div className="ms-row-main">
+                    <span className="flex flex-wrap items-center gap-2">
+                      <span className="ms-row-title truncate">{q.topic || q.discipline || 'Birleştirilmiş soru'}</span>
+                      <span className="ms-tag is-ok"><Layers /> {satelliteCount > 0 ? `${satelliteCount + 1} taslak` : 'Birleşik'}</span>
+                    </span>
+                    <span className="ms-row-meta"><span>{q.discipline}</span><span>{q.fragments?.length || 0} parça</span><span>{q.options?.length || 0} şık</span></span>
+                    <p className="m-0 pt-1 text-[14px] text-ink leading-relaxed">{stemOf(q) || <span className="text-ink-3">Soru kökü henüz girilmemiş</span>}</p>
                   </div>
                 </div>
-                <div className="p-3.5 flex flex-col gap-2">
-                  <p className="m-0 text-[14px] text-ink leading-relaxed">{stemOf(q) || 'Soru kökü henüz girilmemiş'}</p>
-                  {isInspecting && q.mergedSatellites && q.mergedSatellites.length > 0 && (
-                    <div className="flex flex-col gap-2.5 mt-2 pt-2 border-t border-line-soft">
-                      <div className="text-[12px] font-semibold text-ink-3 uppercase tracking-wider">
-                        İç İçe Geçen Katkı ve Taslak Parçaları ({q.mergedSatellites.length})
-                      </div>
-                      {q.mergedSatellites.map((sat, sIdx) => (
-                        <div key={sat.id || sIdx} className="rounded-xl bg-canvas border border-line-soft p-3 text-[13px] flex flex-col gap-1.5">
-                          <div className="flex items-center justify-between gap-2">
-                            <span className="font-semibold text-ink">
-                              Taslak #{sIdx + 1}: {sat.contributedByName || sat.author || 'Anonim Tıbbiyeli'}
-                            </span>
-                            <span className="text-[11.5px] text-ink-3 font-mono">{numLabel(sat)}</span>
-                          </div>
-                          <p className="m-0 text-ink-2 leading-relaxed">{stemOf(sat) || 'Metin girilmemiş'}</p>
-                          {sat.fragments && sat.fragments.length > 0 && (
-                            <div className="flex flex-col gap-1 mt-1 pl-2 border-l-2 border-accent/40">
-                              {sat.fragments.map((sf) => (
-                                <div key={sf.id} className="text-[12px] text-ink-3">
-                                  <span className="font-medium text-ink-2">{sf.author}:</span> “{sf.text}”
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                          {sat.options && sat.options.length > 0 && (
-                            <div className="flex flex-wrap gap-1 mt-1">
-                              {sat.options.map((opt) => (
-                                <span key={opt.key} className="px-2 py-0.5 rounded bg-white border border-line text-[11.5px]">
-                                  <strong>{opt.key})</strong> {opt.text}
-                                </span>
-                              ))}
-                            </div>
-                          )}
+                <div className="flex flex-wrap items-center gap-1 px-4 pb-3 pl-[60px]">
+                  <DraftActions q={q} compact />
+                  <span className="flex-1" />
+                  <button type="button" onClick={() => setInspectingMergedId(isInspecting ? null : q.id)} className="ms-btn is-sm">
+                    {isInspecting ? <EyeOff /> : <Eye />} {isInspecting ? 'Kapat' : 'Parçalar'}
+                  </button>
+                  <button type="button" onClick={() => { void handleUnmergeQuestion(q.id); }} disabled={isUnmerging} className="ms-btn is-sm is-warn">
+                    {isUnmerging ? <RefreshCw className="animate-spin" /> : <Undo2 />} {isUnmerging ? 'Ayrılıyor…' : 'Ayır'}
+                  </button>
+                </div>
+                {isInspecting && q.mergedSatellites && q.mergedSatellites.length > 0 && (
+                  <div className="flex flex-col gap-2 px-4 pb-4 pl-[60px]">
+                    {q.mergedSatellites.map((sat, sIdx) => (
+                      <div key={sat.id || sIdx} className="rounded-xl bg-canvas p-3 text-[13px] flex flex-col gap-1.5">
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="font-semibold text-ink">{sat.contributedByName || sat.author || 'Anonim'}</span>
+                          <span className="text-[11.5px] text-ink-3 font-mono">{numLabel(sat)}</span>
                         </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                        <p className="m-0 text-ink-2 leading-relaxed">{stemOf(sat) || 'Metin girilmemiş'}</p>
+                        {sat.fragments && sat.fragments.length > 0 && (
+                          <ul className="m-0 p-0 list-none flex flex-col gap-0.5">
+                            {sat.fragments.map((sf) => (
+                              <li key={sf.id} className="text-[12.5px] text-ink-3"><b className="font-medium text-ink-2">{sf.author}:</b> “{sf.text}”</li>
+                            ))}
+                          </ul>
+                        )}
+                        {sat.options && sat.options.length > 0 && (
+                          <div className="flex flex-wrap gap-1">
+                            {sat.options.map((opt) => (
+                              <span key={opt.key} className="ms-tag !h-auto !py-1 !whitespace-normal"><b className="font-mono">{opt.key}</b> {opt.text}</span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </article>
             );
           })}
         </div>
       ) : activeFilter === 'manual' ? (
         <div className="flex flex-col gap-2.5">
-          <p className="m-0 text-[13.5px] text-ink-2">Aynı soruya ait taslakları işaretleyin. Biri <strong className="text-ink">çapa</strong> olur; şıklar harmanlanır, mükerrerler temizlenir. <strong className="text-ink">Seçtiklerinizde ortak geçen kelimeler aynı renkle boyanır.</strong></p>
+          <p className="m-0 text-[13.5px] text-ink-2">Aynı soruya ait taslakları işaretle. Biri <b className="text-ink">çapa</b> olur; şıklar harmanlanır, mükerrerler temizlenir. Seçtiklerinde ortak geçen kelimeler aynı renkle boyanır.</p>
           {manualColors.size > 0 && <WordLegend texts={selectedQs.map(fullText)} colors={manualColors} />}
-          <label className="flex items-center gap-2 h-11 px-3.5 rounded-xl bg-white border border-line focus-within:border-accent">
-            <Search className="w-4 h-4 text-ink-3 shrink-0" />
-            <span className="sr-only">Taslaklarda ara</span>
-            <input type="search" placeholder="Metin, konu, ders ya da soru no ara" value={manualSearchQuery} onChange={(e) => setManualSearchQuery(e.target.value)}
-              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-slate-600" />
-            <span className="text-[12.5px] text-ink-3 shrink-0">{manualFilteredQuestions.length}</span>
-          </label>
-          <ul className="list-none m-0 p-0 flex flex-col gap-1.5">
-            {manualFilteredQuestions.map((q) => {
-              const on = selectedDraftIds.includes(q.id);
-              const isAnchor = on && manualAnchorId === q.id;
-              return (
-                <li key={q.id} className={`rounded-xl border px-3 py-2.5 flex items-start gap-3 ${on ? 'bg-accent-soft/60 border-accent/40' : 'bg-white border-line'}`}>
-                  <button type="button" role="checkbox" aria-checked={on} onClick={() => toggleSelectDraft(q.id)} aria-label="Taslağı seç"
-                    className={`mt-0.5 w-5 h-5 rounded-md flex items-center justify-center shrink-0 cursor-pointer ${on ? 'bg-accent text-white' : 'bg-white border border-line-2'}`}>
-                    {on && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
-                  </button>
-                  <span className="flex-1 min-w-0 flex flex-col gap-1">
-                    <span className="flex items-center gap-2 min-w-0 text-[12.5px] text-ink-3">
-                      <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
-                      <span className="truncate">{q.discipline}{q.topic ? ` · ${q.topic}` : ''}</span>
-                      {isAnchor && <span className="ml-auto shrink-0 h-5 px-2 rounded-full bg-accent text-white text-[11px] font-semibold inline-flex items-center">Çapa</span>}
-                    </span>
-                    <span className="text-[14px] text-ink leading-snug">
-                      {stemOf(q) ? <Colored text={stemOf(q)} colors={manualColors} /> : 'Metin girilmemiş'}
-                    </span>
-                    {q.options && q.options.length > 0 && (
-                      <span className="flex flex-wrap gap-1">
-                        {q.options.map((o) => (
-                          <span key={o.key} className="max-w-[260px] truncate h-6 px-2 rounded-md bg-canvas text-[12px] text-ink-2 inline-flex items-center">
-                            <strong className="font-mono mr-1">{o.key}</strong><Colored text={o.text} colors={manualColors} />
-                          </span>
-                        ))}
-                      </span>
-                    )}
-                    <span className="mt-1"><DraftActions q={q} compact /></span>
-                  </span>
-                </li>
-              );
-            })}
-          </ul>
+          <SearchBox value={manualSearchQuery} onChange={setManualSearchQuery} placeholder="Metin, konu, ders ya da soru no" count={manualFilteredQuestions.length} />
+          <section className="ms-panel">
+            <ul className="ms-rows">
+              {manualFilteredQuestions.map((q) => {
+                const on = selectedDraftIds.includes(q.id);
+                const isAnchor = on && manualAnchorId === q.id;
+                return (
+                  <li key={q.id} className={`ms-row ${on ? 'is-on' : ''}`}>
+                    <button type="button" role="checkbox" aria-checked={on} onClick={() => toggleSelectDraft(q.id)} aria-label="Taslağı seç"
+                      className={`mt-0.5 w-5 h-5 rounded-md flex items-center justify-center shrink-0 cursor-pointer transition-colors ${on ? 'bg-accent text-white' : 'bg-white border border-line-2 hover:border-accent'}`}>
+                      {on && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
+                    </button>
+                    <div className="ms-row-main">
+                      {qrow(q, isAnchor ? <span className="ms-tag is-accent">Çapa</span> : undefined, manualColors)}
+                      {q.options && q.options.length > 0 && (
+                        <span className="flex flex-wrap gap-1 pt-0.5">
+                          {q.options.map((o) => (
+                            <span key={o.key} className="ms-tag max-w-[260px] truncate"><b className="font-mono">{o.key}</b> <Colored text={o.text} colors={manualColors} /></span>
+                          ))}
+                        </span>
+                      )}
+                      <span className="pt-1"><DraftActions q={q} compact /></span>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
           {selectedDraftIds.length > 0 && (
-            <div className="sticky bottom-0 flex items-center gap-2 px-3 py-2.5 rounded-xl bg-ink text-white shadow-lg flex-wrap">
-              <span className="text-[13.5px] shrink-0"><strong>{selectedDraftIds.length}</strong> seçili</span>
+            <div className="ms-bulkbar">
+              <b>{selectedDraftIds.length} seçili</b>
               {selectedDraftIds.length >= 2 && (
-                <label className="relative min-w-0 flex-1 sm:flex-none sm:w-[280px]">
-                  <span className="sr-only">Çapa soru</span>
-                  <select value={manualAnchorId} onChange={(e) => setManualAnchorId(e.target.value)}
-                    className="appearance-none w-full h-10 rounded-[11px] bg-white/10 border border-white/20 pl-3 pr-8 text-[13.5px] cursor-pointer truncate">
-                    {selectedDraftIds.map((id) => {
-                      const q = committeeQuestions.find((x) => x.id === id);
-                      return <option key={id} value={id} className="text-black">Çapa: {q ? numLabel(q) : '?'} · {q?.topic || q?.discipline}</option>;
-                    })}
-                  </select>
-                  <ChevronDown className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 opacity-70" />
-                </label>
+                <select value={manualAnchorId} onChange={(e) => setManualAnchorId(e.target.value)} aria-label="Çapa soru">
+                  {selectedDraftIds.map((id) => {
+                    const q = committeeQuestions.find((x) => x.id === id);
+                    return <option key={id} value={id}>Çapa: {q ? numLabel(q) : '?'} · {q?.topic || q?.discipline}</option>;
+                  })}
+                </select>
               )}
-              <button type="button" onClick={() => { setSelectedDraftIds([]); setManualAnchorId(''); }}
-                className="h-10 px-3 rounded-[11px] text-[13.5px] font-semibold hover:bg-white/10 cursor-pointer">Temizle</button>
-              <button type="button" onClick={() => { void handleManualMergeSelected(); }} disabled={isManualMerging || selectedDraftIds.length < 2}
-                className="h-10 px-4 rounded-[11px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shrink-0">
-                {isManualMerging ? <RefreshCw className="w-4 h-4 animate-spin" /> : <GitMerge className="w-4 h-4" />}
+              <button type="button" onClick={() => { setSelectedDraftIds([]); setManualAnchorId(''); }} className="ms-btn">Temizle</button>
+              <ConfirmButton icon={Trash2} className="ms-btn" confirmLabel="Emin misin? Sil" busy={isBulkDeleting} onConfirm={() => handleBulkDeleteSelected()}>
+                Sil
+              </ConfirmButton>
+              <button type="button" onClick={() => { void handleManualMergeSelected(); }} disabled={isManualMerging || selectedDraftIds.length < 2} className="ms-btn is-primary">
+                {isManualMerging ? <RefreshCw className="animate-spin" /> : <GitMerge />}
                 {selectedDraftIds.length < 2 ? 'En az 2 seç' : 'Birleştir'}
-              </button>
-              <button type="button"
-                onClick={() => (confirmBulkDelete ? void handleBulkDeleteSelected() : setConfirmBulkDelete(true))}
-                disabled={isBulkDeleting}
-                className={`h-10 px-4 rounded-[11px] text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shrink-0 ${confirmBulkDelete ? 'bg-rose-700 text-white' : 'bg-white/10 hover:bg-white/20'}`}>
-                {isBulkDeleting ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
-                {confirmBulkDelete ? 'Emin misin? Sil' : 'Seçilenleri sil'}
               </button>
             </div>
           )}
         </div>
       ) : activeFilter === 'vague' ? (
         <div className="flex flex-col gap-2">
-          <p className="m-0 text-[13.5px] text-ink-2">Bu taslaklarda henüz güçlü bir eşleşme için yeterli bilgi yok. Yeni ipucu ya da şık geldikçe otomatik bağlanırlar.</p>
-          {!analysis?.unmatchedVagueDrafts.length ? (
-            <div className="rounded-xl border border-line px-4 py-10 text-center text-[14px] text-ink-2">Muğlak taslak yok.</div>
-          ) : (
-            analysis.unmatchedVagueDrafts.map((q) => (
-              <div key={q.id} className="rounded-xl bg-white border border-line px-3.5 py-2.5 flex flex-col gap-1.5">
-                <span className="flex items-center gap-2 text-[12.5px] text-ink-3 min-w-0">
-                  <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
-                  <span className="truncate">{q.discipline}{q.topic ? ` · ${q.topic}` : ''}</span>
-                </span>
-                <span className="text-[14px] text-ink leading-snug">{stemOf(q) || 'Metin girilmemiş'}</span>
-                <span><DraftActions q={q} compact /></span>
-              </div>
-            ))
-          )}
+          <p className="m-0 text-[13.5px] text-ink-2">Bu taslaklarda güçlü bir eşleşme için yeterli bilgi yok. Yeni ipucu ya da şık geldikçe kendiliğinden bağlanırlar.</p>
+          <section className="ms-panel">
+            {!analysis?.unmatchedVagueDrafts.length ? (
+              <EmptyState icon={Check} title="Muğlak taslak yok" />
+            ) : (
+              <ul className="ms-rows">
+                {analysis.unmatchedVagueDrafts.map((q) => (
+                  <li key={q.id} className="ms-row">
+                    <div className="ms-row-main">
+                      {qrow(q)}
+                      <span className="pt-1"><DraftActions q={q} compact /></span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
         </div>
       ) : filteredClusters.length === 0 ? (
-        <div className="rounded-xl border border-line px-4 py-10 text-center flex flex-col items-center gap-3">
-          <p className="m-0 text-[15px] font-semibold">Bu sekmede küme yok</p>
-          <p className="m-0 text-[14px] text-ink-2">Taslakları kendin birleştirmek istersen elle seçebilirsin.</p>
-          <button type="button" onClick={() => setActiveFilter('manual')} className="h-10 px-4 rounded-[10px] bg-accent text-white text-[14px] font-semibold cursor-pointer">Elle seçime geç</button>
-        </div>
+        <section className="ms-panel">
+          <EmptyState icon={Layers} title="Bu sekmede küme yok" action={<button type="button" onClick={() => setActiveFilter('manual')} className="ms-btn is-primary"><GitMerge /> Elle seçime geç</button>}>
+            Taslakları kendin birleştirmek istersen elle seçebilirsin.
+          </EmptyState>
+        </section>
       ) : (
         filteredClusters.map((cluster) => {
           const anchor = effectiveAnchorOf(cluster);
@@ -734,108 +668,89 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
           const clusterTexts = members.map(fullText);
           const colors = sharedWordColors(clusterTexts);
           return (
-            <article key={cluster.id} className={`rounded-2xl bg-white border overflow-hidden ${ready ? 'border-emerald-200' : 'border-line'}`}>
-              <div className="flex items-center gap-3 px-3.5 py-3 flex-wrap">
-                <span className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 font-mono text-[13px] font-semibold ${ready ? 'bg-ok-soft text-ok' : 'bg-warn-soft text-warn'}`}>
-                  {anchor.isUnassignedNumber || !anchor.questionNumber ? '?' : anchor.questionNumber}
-                </span>
-                <span className="flex-1 min-w-[220px] flex flex-col">
+            <article key={cluster.id} className="ms-panel">
+              <header className="ms-panel-head">
+                <span className={`ms-ricon ${ready ? 'is-ok' : 'is-warn'} font-mono text-[12.5px] font-bold`}>{anchor.isUnassignedNumber || !anchor.questionNumber ? '?' : anchor.questionNumber}</span>
+                <span className="flex-1 min-w-[200px] flex flex-col gap-0.5">
                   <span className="flex items-center gap-2 min-w-0">
                     <span className="text-[14.5px] font-semibold text-ink truncate">{cluster.detectedSubject || anchor.topic || anchor.discipline}</span>
-                    <span className={`shrink-0 h-5 px-1.5 rounded-full text-[11.5px] font-mono font-semibold inline-flex items-center ${ready ? 'bg-ok-soft text-ok' : 'bg-warn-soft text-warn'}`}>%{cluster.overallConfidence}</span>
+                    <span className={`ms-tag ${ready ? 'is-ok' : 'is-warn'} tabular-nums`}>%{cluster.overallConfidence}</span>
                   </span>
                   <span className="text-[12.5px] text-ink-3 truncate">{anchor.discipline} · {satellites.length} taslak birleşecek</span>
-                  <span className="mt-1"><WordLegend texts={clusterTexts} colors={colors} /></span>
-                  <label className="mt-1.5 flex items-center gap-1.5 text-[12px] text-ink-2">
-                    <span className="shrink-0">Çapa:</span>
-                    <select value={anchor.id} onChange={(e) => setAnchorOverrides((prev) => ({ ...prev, [cluster.id]: e.target.value }))}
-                      className="h-8 max-w-[260px] border border-line-2 rounded-lg px-1.5 text-[12.5px] bg-white cursor-pointer truncate" title="Birleşince ana soru olacak taslağı seç">
+                </span>
+                <span className="ms-panel-tools">
+                  <label className="inline-flex items-center gap-1.5 text-[12.5px] text-ink-3">
+                    Çapa
+                    <select value={anchor.id} onChange={(e) => setAnchorOverrides((prev) => ({ ...prev, [cluster.id]: e.target.value }))} className="ms-input is-sm !w-auto max-w-[220px]" title="Birleşince ana soru olacak taslak">
                       {members.map((m) => (
                         <option key={m.id} value={m.id}>{numLabel(m)} · {(m.topic || m.discipline || '').slice(0, 40)}</option>
                       ))}
                     </select>
                   </label>
+                  <button type="button" onClick={() => handleDissolveCluster(cluster.id)} title="Bu kümeyi dağıt (yalnızca görünüm)" className="ms-btn is-sm is-ghost">
+                    <Split /> Dağıt
+                  </button>
+                  <button type="button" onClick={() => setExpandedClusterId(open ? null : cluster.id)} aria-expanded={open} className="ms-btn is-sm">
+                    Karşılaştır <ChevronDown className={`transition-transform ${open ? 'rotate-180' : ''}`} />
+                  </button>
+                  <button type="button" onClick={() => { void handleMergeCluster(cluster); }} disabled={merging || busy} className={`ms-btn is-sm ${ready ? 'is-ok' : 'is-primary'}`}>
+                    {merging ? <RefreshCw className="animate-spin" /> : <GitMerge />} {merging ? 'Birleştiriliyor…' : 'Birleştir'}
+                  </button>
                 </span>
-                <button type="button" onClick={() => handleDissolveCluster(cluster.id)} title="Bu kümeyi dağıt (yalnızca görünüm)"
-                  className="h-9 px-2.5 rounded-[10px] border border-line bg-white text-[12px] font-medium text-ink-2 hover:text-rose-700 items-center gap-1 cursor-pointer hidden sm:inline-flex">
-                  <Split className="w-3.5 h-3.5" /><span>Kümeyi Dağıt</span>
-                </button>
-                <button type="button" onClick={() => setExpandedClusterId(open ? null : cluster.id)} aria-expanded={open}
-                  className="h-9 px-3 rounded-[10px] border border-line bg-white text-[13px] font-semibold text-ink-2 items-center gap-1 cursor-pointer hover:border-line-2 hidden sm:inline-flex">
-                  Karşılaştır<ChevronDown className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} />
-                </button>
-                <button type="button" onClick={() => { void handleMergeCluster(cluster); }} disabled={merging || busy}
-                  className={`h-9 px-3 rounded-[10px] text-[13px] font-semibold text-white inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 ${ready ? 'bg-ok hover:bg-emerald-900' : 'bg-ink hover:bg-blue-950'}`}>
-                  {merging ? <RefreshCw className="w-4 h-4 animate-spin" /> : <GitMerge className="w-4 h-4" />}
-                  <span>{merging ? 'Birleştiriliyor…' : 'Birleştir'}</span>
-                </button>
-              </div>
-
-              <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-2 px-3.5 pb-3.5">
-                <div className="rounded-xl bg-canvas px-3 py-2.5 flex flex-col gap-1.5">
+              </header>
+              <div className="px-4 pt-2"><WordLegend texts={clusterTexts} colors={colors} /></div>
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 p-3 pt-2">
+                <div className="rounded-xl bg-accent-soft/60 px-3 py-2.5 flex flex-col gap-1.5 min-w-0">
                   <span className="flex items-center gap-1.5 text-[12px] font-semibold text-accent">
-                    <Layers className="w-3.5 h-3.5" />Çapa soru
+                    <Layers className="w-3.5 h-3.5" /> Çapa soru
                     <span className="ml-auto font-normal text-ink-3">{anchor.options?.length || 0} şık</span>
                   </span>
                   <span className={`text-[13.5px] text-ink leading-relaxed ${open ? '' : 'line-clamp-3'}`}>
                     {stemOf(anchor) ? <Colored text={stemOf(anchor)} colors={colors} /> : 'Soru kökü henüz girilmemiş'}
                   </span>
                   {open && anchor.options && anchor.options.length > 0 && (
-                    <span className="flex flex-col gap-0.5 pt-1 border-t border-line-soft mt-1">
+                    <span className="flex flex-col gap-0.5 pt-1.5 mt-1 border-t border-accent/15">
                       {anchor.options.map((o) => (
                         <span key={o.key} className="text-[12.5px] text-ink-2">
-                          <strong className="font-mono text-ink mr-1">{o.key})</strong><Colored text={o.text} colors={colors} />
+                          <b className="font-mono text-ink mr-1">{o.key}</b><Colored text={o.text} colors={colors} />
                         </span>
                       ))}
                     </span>
                   )}
                   <span className="pt-1"><DraftActions q={anchor} compact /></span>
                 </div>
-                <ul className={`list-none m-0 p-0 flex flex-col gap-1.5 ${open ? '' : 'max-h-[220px] overflow-y-auto'}`}>
+                <ul className={`list-none m-0 p-0 flex flex-col gap-1.5 ${open ? '' : 'max-h-[240px] overflow-y-auto'}`}>
                   {satellites.map((satQ) => {
-                    const comp = cluster.satelliteDrafts.find((s) => s.question.id === satQ.id)?.compatibility;
+                    const comp = cluster.satelliteDrafts.find((sd) => sd.question.id === satQ.id)?.compatibility;
                     return (
-                      <li key={satQ.id} className="rounded-xl border border-line-soft px-3 py-2 flex flex-col gap-1">
+                      <li key={satQ.id} className="rounded-xl bg-canvas px-3 py-2 flex flex-col gap-1 min-w-0">
                         <div className="flex items-center gap-2 text-[12.5px] min-w-0 flex-wrap">
                           <span className="font-semibold text-ink truncate">{satQ.contributedByName || 'Anonim'}</span>
-                          <span className="text-ink-3 shrink-0">· {numLabel(satQ)}</span>
-                          {comp && <span className="shrink-0 font-mono text-[12px] font-semibold text-ok">%{comp.score}</span>}
+                          <span className="text-ink-3 shrink-0 font-mono">{numLabel(satQ)}</span>
+                          {comp && <span className="ms-tag is-ok tabular-nums">%{comp.score}</span>}
                           <span className="ml-auto inline-flex items-center gap-1 shrink-0">
-                            <button type="button" onClick={() => handleDetachSatellite(cluster.id, satQ.id)} title="Bu taslağı kümeden çıkar (yalnızca görünüm)"
-                              className="text-[11.5px] px-2 py-0.5 rounded-md text-ink-3 hover:text-rose-700 hover:bg-rose-100 border border-line-soft cursor-pointer inline-flex items-center gap-1">
-                              <Split className="w-3 h-3" /><span>Ayır</span>
-                            </button>
-                            <button type="button" onClick={() => handleMarkNotSame(anchor.id, satQ.id)} title="Bunlar farklı sorular — bir daha aynı kümede gösterme (kalıcı)"
-                              className="text-[11.5px] px-2 py-0.5 rounded-md text-ink-3 hover:text-rose-700 hover:bg-rose-100 border border-line-soft cursor-pointer inline-flex items-center gap-1">
-                              <X className="w-3 h-3" /><span>Aynı değil</span>
-                            </button>
+                            <button type="button" onClick={() => handleDetachSatellite(cluster.id, satQ.id)} title="Kümeden çıkar (yalnızca görünüm)" className="ms-btn is-sm is-ghost"><Split /> Çıkar</button>
+                            <button type="button" onClick={() => handleMarkNotSame(anchor.id, satQ.id)} title="Farklı sorular; bir daha aynı kümede gösterme (kalıcı)" className="ms-btn is-sm is-danger"><X /> Aynı değil</button>
                           </span>
                         </div>
                         <span className={`text-[13px] text-ink-2 leading-snug ${open ? '' : 'line-clamp-2'}`}>
-                          {stemOf(satQ) ? <Colored text={stemOf(satQ)} colors={colors} /> : 'Metin'}
+                          {stemOf(satQ) ? <Colored text={stemOf(satQ)} colors={colors} /> : 'Metin yok'}
                         </span>
                         {open && comp && comp.reasons.length > 0 && (
                           <span className="flex flex-wrap gap-1">
-                            {comp.reasons.map((r, i) => (
-                              <span key={i} className="px-2 py-0.5 rounded-md bg-canvas text-[11.5px] text-ink-2">{r}</span>
-                            ))}
+                            {comp.reasons.map((r, i) => <span key={i} className="ms-tag">{r}</span>)}
                           </span>
                         )}
-                        <span><DraftActions q={satQ} compact /></span>
+                        {open && <span><DraftActions q={satQ} compact /></span>}
                       </li>
                     );
                   })}
                 </ul>
               </div>
-              <button type="button" onClick={() => setExpandedClusterId(open ? null : cluster.id)}
-                className="sm:hidden w-full h-10 border-t border-line-soft text-[13px] font-semibold text-ink-2 inline-flex items-center justify-center gap-1 cursor-pointer">
-                {open ? 'Daha az' : 'Karşılaştır'}<ChevronDown className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} />
-              </button>
             </article>
           );
         })
       )}
-
       {editingDraft && (
         <AdminEditQuestionModal
           isOpen

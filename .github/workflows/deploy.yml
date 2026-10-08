@@ -36,6 +36,8 @@ jobs:
       - name: Build with Vite
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
+          VITE_BASE: "/meds/"
+          BUILD_TARGET: "gh-pages"
         run: |
           npm run build
           touch ./dist/.nojekyll

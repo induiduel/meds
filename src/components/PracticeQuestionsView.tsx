@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { BookOpen, Check, X, RotateCcw, Sparkles, Filter } from 'lucide-react';
 import { PageHeader } from './ui/PageHeader';
 import { safeJsonFetch } from '../services/api';
+import { KazanimSorulariView, KAZANIM_INDEX } from './KazanimSorulariView';
 
 /**
  * Örnek çalışma soruları (/ornek-sorular): müfredata dayalı, Drive ders notlarından (drive_root) yapay zekâ ile üretilmiş,
@@ -93,7 +94,44 @@ function QuestionCard({ q, n }: { q: PQ; n: number }) {
   );
 }
 
+const SEKME_KEY = 'medsoru_ornek_sekme';
+
 export const PracticeQuestionsView: React.FC = () => {
+  const [sekme, setSekme] = useState<'k1' | 'diger'>(() => {
+    try { return window.localStorage.getItem(SEKME_KEY) === 'diger' ? 'diger' : 'k1'; } catch { return 'k1'; }
+  });
+  const sekmeSec = (v: 'k1' | 'diger') => { setSekme(v); try { window.localStorage.setItem(SEKME_KEY, v); } catch { /* depolama kapalı */ } };
+  const k1Soru = KAZANIM_INDEX.reduce((a, x) => a + x.soru_sayisi, 0);
+  const k1Kazanim = KAZANIM_INDEX.reduce((a, x) => a + x.kazanim, 0);
+  const sekmeBtn = (v: 'k1' | 'diger', label: string) => (
+    <button type="button" role="tab" aria-selected={sekme === v} onClick={() => sekmeSec(v)}
+      className={`h-10 px-3.5 rounded-lg text-[14px] font-medium cursor-pointer ${sekme === v ? 'bg-white text-ink shadow-sm' : 'text-ink-2 hover:text-ink'}`}>
+      {label}
+    </button>
+  );
+
+  return (
+    <div className="flex flex-col gap-4 pb-16 w-full max-w-3xl mx-auto min-w-0">
+      <PageHeader
+        title="Örnek sorular"
+        description="Kurul 1 derslerinin müfredat kazanımlarına göre hazırlanmış çalışma soruları. Her kazanımda kolay, orta ve zor sorular; cevapladıktan sonra her şıkkın neden doğru ya da yanlış olduğu gösterilir."
+        stats={sekme === 'k1' ? [
+          { label: 'Ders', value: String(KAZANIM_INDEX.length) },
+          { label: 'Kazanım', value: k1Kazanim.toLocaleString('tr-TR') },
+          { label: 'Soru', value: k1Soru.toLocaleString('tr-TR') },
+        ] : undefined}
+      />
+      <div role="tablist" aria-label="Soru kümesi" className="self-start flex gap-1 p-1 rounded-xl bg-field border border-line-soft">
+        {sekmeBtn('k1', 'Kurul 1 · kazanım temelli')}
+        {sekmeBtn('diger', 'Diğer üretim')}
+      </div>
+      {sekme === 'k1' ? <KazanimSorulariView /> : <EskiUretim />}
+    </div>
+  );
+};
+
+/** Daha önce API'den gelen, yapay zekâ ile üretilmiş ve doğrulanmamış sorular (meds_database/derived/ornek_sorular). */
+const EskiUretim: React.FC = () => {
   const [all, setAll] = useState<PQ[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [kurul, setKurul] = useState<string>('');
@@ -132,12 +170,7 @@ export const PracticeQuestionsView: React.FC = () => {
   const sel = 'h-11 px-3 rounded-xl border border-line bg-white text-[14px] text-ink min-w-0';
 
   return (
-    <div className="flex flex-col gap-4 pb-16 w-full max-w-3xl mx-auto min-w-0">
-      <PageHeader
-        title="Örnek sorular"
-        description="Müfredat konularına göre, fakültenin ders notlarından üretilmiş çalışma soruları. Her sorunun dayandığı ders notu alıntısı cevapla birlikte gösterilir."
-        stats={all ? [{ label: 'Soru', value: all.length.toLocaleString('tr-TR') }, { label: 'Konu', value: String(new Set(all.map((q) => q.konu)).size) }] : undefined}
-      />
+    <div className="flex flex-col gap-4">
 
       <p className="m-0 rounded-xl bg-amber-50 text-amber-900 px-3.5 py-2.5 text-[13px] flex items-start gap-2">
         <Sparkles className="w-4 h-4 shrink-0 mt-0.5" />

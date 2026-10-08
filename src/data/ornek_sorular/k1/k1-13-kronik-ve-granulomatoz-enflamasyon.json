@@ -1,0 +1,1258 @@
+{
+ "id": "k1-13-kronik-ve-granulomatoz-enflamasyon",
+ "sira": 13,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Kronik ve Granülomatöz Enflamasyon",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-09-18",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Kronik enflamasyonu tanımlamak ve akut enflamasyonla karşılaştırmak",
+   "sorular": [
+    {
+     "id": "k1-13-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Kronik enflamasyonda baskın olan hücre grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nötrofiller",
+      "B": "Eritrositler",
+      "C": "Makrofaj, lenfosit ve plazma hücreleri (mononükleer hücreler)",
+      "D": "Trombositler",
+      "E": "Bazofiller"
+     },
+     "dogru": "C",
+     "aciklama": "Kronik enflamasyonda mononükleer hücreler (makrofaj, lenfosit, plazma hücresi) baskındır; akut enflamasyonda ise nötrofiller ve ödem öndedir.",
+     "sik_aciklamalari": {
+      "A": "Nötrofiller akut enflamasyonun tipik hücresidir.",
+      "B": "Eritrositler enflamatuvar hücre değildir.",
+      "C": "Doğru. Mononükleer hücre infiltrasyonu kronik enflamasyonun temel özelliğidir.",
+      "D": "Trombositler hemostazda görev alır.",
+      "E": "Bazofiller alerjik reaksiyonlarla ilişkilidir; kronik enflamasyonun baskın hücresi değildir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Kronik enflamasyonun tanımı için aşağıdakilerden hangisi en doğrudur?",
+     "secenekler": {
+      "A": "Dakikalar-saatler içinde başlayan, nötrofil ve ödem ağırlıklı kendini sınırlayan yanıt",
+      "B": "Hücre içi trigliserid birikimi",
+      "C": "Yalnızca akut enflamasyonu izleyen, her zaman tam iyileşmeyle biten yanıt",
+      "D": "Haftalar-aylar süren; enflamasyon, doku hasarı ve onarım girişimlerinin (anjiyogenez, fibrozis) eş zamanlı sürdüğü yanıt",
+      "E": "Bir olgun hücre tipinin başka bir olgun tiple yer değiştirmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Kronik enflamasyon akut enflamasyonu izleyebilir veya sinsi başlangıçlı primer kronik olabilir; enflamasyon, hasar ve onarım birlikte sürer.",
+     "sik_aciklamalari": {
+      "A": "Bu akut enflamasyonun tanımıdır.",
+      "B": "Bu steatozdur: hücre içi trigliserid birikimi.",
+      "C": "Kronik enflamasyon primer olarak da başlayabilir ve sıklıkla fibrozisle sonlanır.",
+      "D": "Doğru. Kronik enflamasyon akut enflamasyonu izleyebilir veya sinsi başlangıçlı primer kronik olabilir; enflamasyon, hasar ve onarım birlikte sürer.",
+      "E": "Bu metaplazidir: bir olgun hücre tipinin başka bir olgun tiple yer değiştirmesi."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Akut ve kronik enflamasyonun sonuçlarının karşılaştırılmasında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Akut enflamasyon genellikle kalıcı organ fonksiyon kaybıyla sonlanır.",
+      "B": "Kronik enflamasyon her zaman tam rezolüsyonla iyileşir.",
+      "C": "Akut enflamasyon genelde tam iyileşme veya basit skarla sonlanırken kronik enflamasyonda kalıcı doku yıkımı, fibrozis ve organ fonksiyon kaybı gelişebilir.",
+      "D": "İki tablonun sonuçları arasında fark yoktur.",
+      "E": "Kronik enflamasyonda doku onarımı hiç gerçekleşmez."
+     },
+     "dogru": "C",
+     "aciklama": "Kronik enflamasyonda süregen hasar ve onarım girişimleri fibrozis ve organ fonksiyon kaybına yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Akut enflamasyon çoğunlukla tam iyileşir.",
+      "B": "Kronik enflamasyon sıklıkla fibrozisle sonlanır.",
+      "C": "Doğru. Kronik enflamasyonda süregen hasar ve onarım girişimleri fibrozis ve organ fonksiyon kaybına yol açabilir.",
+      "D": "Sonuçlar belirgin şekilde farklıdır.",
+      "E": "Onarım girişimleri (anjiyogenez, fibrozis) kronik enflamasyonun parçasıdır."
+     },
+     "bilgi": [
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Kronik enflamasyonun başlıca nedenlerini sıralamak",
+   "sorular": [
+    {
+     "id": "k1-13-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi kronik enflamasyonun başlıca nedenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Mycobacterium tuberculosis gibi kalıcı enfeksiyonlar",
+      "B": "Otoimmün hastalıklar",
+      "C": "Silika ve asbest gibi toksik maddelere uzun süreli maruziyet",
+      "D": "Kısa süreli, tamamen temizlenen bakteriyel enfeksiyon",
+      "E": "Endojen lipid birikimi (ateroskleroz)"
+     },
+     "dogru": "D",
+     "aciklama": "Kronik enflamasyonun nedenleri kalıcı enfeksiyonlar, aşırı duyarlılık hastalıkları ve uzun süreli toksik maruziyettir.",
+     "sik_aciklamalari": {
+      "A": "Nedendir; tüberkülozda granülomatöz enflamasyon gelişir.",
+      "B": "Nedendir; otoantijenlere süregen yanıt vardır.",
+      "C": "Nedendir; silikozis ve asbest ilişkili akciğer hastalığı örnektir.",
+      "D": "Neden değildir (aranan cevap); etken temizlenince enflamasyon akut kalır ve iyileşir.",
+      "E": "Nedendir; arter duvarında kronik enflamasyon olur."
+     },
+     "bilgi": [
+      5,
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Uzun süre taş ocağında çalışan bir hastada gelişen akciğer fibrozisi hangi kronik enflamasyon nedenine örnektir?",
+     "secenekler": {
+      "A": "Kalıcı viral enfeksiyon",
+      "B": "Alerjik reaksiyon",
+      "C": "Otoimmün hastalık",
+      "D": "Eksojen toksik madde (silika) maruziyeti",
+      "E": "Endojen lipid birikimi"
+     },
+     "dogru": "D",
+     "aciklama": "Silika gibi eksojen toksik maddeler uzun süreli maruziyette kronik enflamasyon ve fibrozise (silikozis) yol açar.",
+     "sik_aciklamalari": {
+      "A": "Viral enfeksiyon bu tablonun nedeni değildir.",
+      "B": "Alerji zararsız antijenlere aşırı yanıttır.",
+      "C": "Otoimmünite otoantijenlere yanıttır.",
+      "D": "Doğru. Silika gibi eksojen toksik maddeler uzun süreli maruziyette kronik enflamasyon ve fibrozise (silikozis) yol açar.",
+      "E": "Endojen lipid birikimi aterosklerozun nedenidir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Kronik enflamasyon nedenleri ile örnekleri arasındaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kalıcı enfeksiyon – kronik viral hepatitin siroza ilerlemesi",
+      "B": "Aşırı duyarlılık hastalığı – tekrarlayan ataklarla karışık akut ve kronik enflamasyon",
+      "C": "Eksojen toksik madde – asbeste bağlı akciğer fibrozisi ve mezotelyoma",
+      "D": "Kalıcı enfeksiyon – silikozis",
+      "E": "Endojen toksik madde – kolesterol/lipid birikimiyle ateroskleroz"
+     },
+     "dogru": "D",
+     "aciklama": "Silikozis eksojen toksik madde (silika) maruziyetine bağlıdır; enfeksiyöz değildir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: kalıcı enfeksiyon – kronik viral hepatitin siroza ilerlemesi.",
+      "B": "Doğru eşleştirme; geç evrede fibrozis baskınlaşır.",
+      "C": "Doğru eşleştirme: eksojen toksik madde – asbeste bağlı akciğer fibrozisi ve mezotelyoma.",
+      "D": "Yanlış eşleştirme (aranan cevap). Silikozis eksojen toksik madde (silika) maruziyetine bağlıdır; enfeksiyöz değildir.",
+      "E": "Doğru eşleştirme: endojen toksik madde – kolesterol/lipid birikimiyle ateroskleroz."
+     },
+     "bilgi": [
+      5,
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Kronik enflamasyonun morfolojik özelliklerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-13-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi kronik enflamasyonun histolojik özelliklerinden biri değildir?",
+     "secenekler": {
+      "A": "Mononükleer hücre infiltrasyonu",
+      "B": "Parankim tahribi",
+      "C": "Bağ dokusuyla yer değiştirme (fibrozis)",
+      "D": "Yalnızca nötrofil ve ödemden oluşan eksüda",
+      "E": "Anjiyogenez"
+     },
+     "dogru": "D",
+     "aciklama": "Kronik enflamasyonun üç temel özelliği mononükleer hücre birikimi, doku yıkımı ve onarım girişimleridir (anjiyogenez, fibrozis).",
+     "sik_aciklamalari": {
+      "A": "Özelliğidir: mononükleer hücre infiltrasyonu.",
+      "B": "Özelliğidir; kalıcı etken doku yıkımına yol açar.",
+      "C": "Özelliğidir: bağ dokusuyla yer değiştirme (fibrozis).",
+      "D": "Özelliği değildir (aranan cevap); bu akut enflamasyonun bulgusudur.",
+      "E": "Özelliğidir; onarım girişiminin parçasıdır."
+     },
+     "bilgi": [
+      4,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kronik enflamasyonlu bir akciğer örneğinde normal alveollerin yerini kübik epitelle döşeli boşlukların alması ve aralarında bağ dokusu artışı izleniyor.\n\nBu görünüm kronik enflamasyonun hangi özelliklerini yansıtır?",
+     "secenekler": {
+      "A": "Yalnızca akut eksüdasyon",
+      "B": "Metastatik kalsifikasyon",
+      "C": "Hücresel şişme",
+      "D": "Parankim tahribi ve fibrozis ile yer değiştirme",
+      "E": "Hücre içi glikojen birikimi"
+     },
+     "dogru": "D",
+     "aciklama": "Kronik enflamasyonda parankim tahrip olur ve bağ dokusu ile yer değiştirir; alveollerin yerini kübik epitelli boşluklar alır.",
+     "sik_aciklamalari": {
+      "A": "Eksüdasyon akut enflamasyonun özelliğidir.",
+      "B": "Metastatik kalsifikasyon hiperkalsemiyle ilişkilidir.",
+      "C": "Hücresel şişme geri dönüşümlü hasar bulgusudur.",
+      "D": "Doğru. Kronik enflamasyonda parankim tahrip olur ve bağ dokusu ile yer değiştirir; alveollerin yerini kübik epitelli boşluklar alır.",
+      "E": "Glikojen birikimi bu tabloyla ilgili değildir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Kronik enflamasyonda doku yıkımı ile onarımın eş zamanlı sürmesinin morfolojik sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Anjiyogenez, fibrozis ve yara izi oluşumu",
+      "B": "Doku mimarisinin hiç değişmeden korunması",
+      "C": "Saf hücre hipertrofisi",
+      "D": "Yalnızca seröz eksüda",
+      "E": "Likefaksiyon nekrozuyla dokunun tamamen erimesi"
+     },
+     "dogru": "A",
+     "aciklama": "Kalıcı etken doku yıkımına, iyileşme girişimleri ise anjiyogenez, fibrozis ve skar oluşumuna yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kalıcı etken doku yıkımına, iyileşme girişimleri ise anjiyogenez, fibrozis ve skar oluşumuna yol açar.",
+      "B": "Kronik enflamasyonda mimari bozulur.",
+      "C": "Hipertrofi bir adaptasyondur.",
+      "D": "Seröz eksüda akut enflamasyonun kalıbıdır.",
+      "E": "Likefaksiyon püy oluşturan enfeksiyonlar ve beyin infarktında görülür."
+     },
+     "bilgi": [
+      8,
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Makrofajların kronik enflamasyondaki merkezi rolünü, kökenini ve dağılımını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-13-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Karaciğerde yerleşik makrofajlara ne ad verilir?",
+     "secenekler": {
+      "A": "Mikroglia",
+      "B": "Alveoler makrofaj",
+      "C": "Kupffer hücresi",
+      "D": "Langerhans hücresi",
+      "E": "Sinüs histiyositi"
+     },
+     "dogru": "C",
+     "aciklama": "Yerleşik makrofajlar organa göre farklı adlandırılır: karaciğerde Kupffer hücreleri, beyinde mikroglia, akciğerde alveoler makrofaj, dalak/lenf düğümünde sinüs histiyositleri.",
+     "sik_aciklamalari": {
+      "A": "Mikroglia beyindeki makrofajlardır.",
+      "B": "Alveoler makrofajlar akciğerdedir.",
+      "C": "Doğru. Yerleşik makrofajlar organa göre farklı adlandırılır: karaciğerde Kupffer hücreleri, beyinde mikroglia, akciğerde alveoler makrofaj, dalak/lenf düğümünde sinüs histiyositleri.",
+      "D": "Langerhans hücresi deride antijen sunan dendritik hücredir.",
+      "E": "Sinüs histiyositleri dalak ve lenf düğümündedir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Makrofajların kronik enflamasyondaki işlevleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Mikrop ve nekrotik doku fagositozu",
+      "B": "TNF, IL-1 ve kemokin salgısı",
+      "C": "TGF-β, PDGF ve FGF ile onarım ve fibrozisin uyarılması",
+      "D": "T lenfositlerine antijen sunumu",
+      "E": "Antikor üretimi"
+     },
+     "dogru": "E",
+     "aciklama": "Makrofajlar fagositoz, mediyatör salgısı, onarım-fibrozis ve antijen sunumu yapar; antikorları plazma hücreleri üretir.",
+     "sik_aciklamalari": {
+      "A": "Makrofaj işlevidir: mikrop ve nekrotik doku fagositozu.",
+      "B": "Makrofaj işlevidir: TNF, IL-1 ve kemokin salgısı.",
+      "C": "Makrofaj işlevidir: TGF-β, PDGF ve FGF ile onarım ve fibrozisin uyarılması.",
+      "D": "Makrofaj işlevidir; ko-uyarıcı sinyal de sağlar.",
+      "E": "Yer almaz (aranan cevap); antikoru plazma hücreleri üretir."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": [
+      "d3-f-240"
+     ]
+    },
+    {
+     "id": "k1-13-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Makrofajların kökeni ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İnflamatuvar yanıttaki makrofajların çoğu kemik iliği öncüllerinden (kan monositi) türer; bazı yerleşik makrofajlar embriyonik öncüllerden (vitellus kesesi, fetal karaciğer) köken alır.",
+      "B": "Tüm doku makrofajları yalnızca embriyonik vitellus kesesinden türer.",
+      "C": "Makrofajlar lenfositlerin farklılaşmasıyla oluşur.",
+      "D": "Makrofajlar fibroblastlardan türer.",
+      "E": "Doku makrofajları yalnızca dalakta üretilir."
+     },
+     "dogru": "A",
+     "aciklama": "Doku makrofaj havuzu, dolaşımdaki monositlerden gelen inflamatuvar makrofajlar ile embriyonik kökenli yerleşik makrofajların karışımıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Doku makrofaj havuzu, dolaşımdaki monositlerden gelen inflamatuvar makrofajlar ile embriyonik kökenli yerleşik makrofajların karışımıdır.",
+      "B": "İnflamasyondaki makrofajların çoğu kan monositinden gelir.",
+      "C": "Makrofajlar miyeloid seriden (monosit) gelir.",
+      "D": "Fibroblastlar mezenkimal hücrelerdir; makrofaj kaynağı değildir.",
+      "E": "Makrofajlar tüm dokularda bulunur."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-240",
+     "soru": "Antikora bağlı (hümoral) immünitede antikor salgılayan hücre aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "T lenfosit",
+      "B": "Plazma hücresi",
+      "C": "Makrofaj",
+      "D": "Nötrofil granülosit",
+      "E": "Doğal katil (NK) hücre"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Klasik (M1) ve alternatif (M2) makrofaj aktivasyonunu ayırt etmek",
+   "sorular": [
+    {
+     "id": "k1-13-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Makrofajların klasik (M1) aktivasyonunu indükleyen T hücre kaynaklı sitokin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IL-4",
+      "B": "IL-13",
+      "C": "IL-10",
+      "D": "IFN-γ",
+      "E": "TGF-β"
+     },
+     "dogru": "D",
+     "aciklama": "Klasik aktivasyon mikrobiyal ürünler (LPS, TLR ligandları) ve IFN-γ ile; alternatif aktivasyon IL-4 ve IL-13 ile indüklenir.",
+     "sik_aciklamalari": {
+      "A": "IL-4 alternatif (M2) aktivasyonu indükler.",
+      "B": "IL-13 alternatif (M2) aktivasyonu indükler.",
+      "C": "IL-10 M2 makrofajların salgıladığı anti-enflamatuvar sitokindir.",
+      "D": "Doğru. Klasik aktivasyon mikrobiyal ürünler (LPS, TLR ligandları) ve IFN-γ ile; alternatif aktivasyon IL-4 ve IL-13 ile indüklenir.",
+      "E": "TGF-β M2 makrofaj ürünüdür; fibrozisi uyarır."
+     },
+     "bilgi": [
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Alternatif (M2) aktive makrofajların başlıca işlevi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "ROS ve NO üretimiyle mikropları öldürmek",
+      "B": "IL-12 salgılayarak Th1 yanıtını güçlendirmek",
+      "C": "IL-10 ve TGF-β ile enflamasyonu baskılamak, anjiyogenez ve kollajen sentezini uyararak onarım ve fibrozisi sağlamak",
+      "D": "Antikor üretmek",
+      "E": "Histamin salgılamak"
+     },
+     "dogru": "C",
+     "aciklama": "M2 makrofajların mikrobisidal aktivitesi sınırlıdır; onarım ve fibrozis ile enflamasyonun baskılanmasında rol oynar.",
+     "sik_aciklamalari": {
+      "A": "Mikrop öldürme klasik (M1) aktivasyonun özelliğidir.",
+      "B": "IL-12 salgısı M1 makrofajlara özgüdür.",
+      "C": "Doğru. M2 makrofajların mikrobisidal aktivitesi sınırlıdır; onarım ve fibrozis ile enflamasyonun baskılanmasında rol oynar.",
+      "D": "Antikor üretimi plazma hücrelerine aittir.",
+      "E": "Histamin mast hücrelerinden salınır."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "M1 ve M2 makrofaj aktivasyonu ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "M1 aktivasyonunda lizozomal enzimler, ROS ve NO artar.",
+      "B": "M1 makrofajlar IL-1, TNF, IL-12 ve IL-6 salgılar.",
+      "C": "M2 aktivasyonu IL-4 ve IL-13 ile indüklenir.",
+      "D": "Teorik olarak erken yanıt M1, sonraki dönem M2 ağırlıklıdır; pratikte ara formlar sıktır.",
+      "E": "M2 makrofajlar güçlü mikrobisidal aktivite göstererek enflamasyonu sürdürür."
+     },
+     "dogru": "E",
+     "aciklama": "M2 makrofajların mikrobisidal aktivitesi sınırlıdır; enflamasyonu baskılar ve onarımı sağlar. Bu dengenin bozulması kronik enflamasyon ve fibroziste rol oynar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: M1 aktivasyonunda lizozomal enzimler, ROS ve NO artar.",
+      "B": "Doğru ifade: M1 makrofajlar IL-1, TNF, IL-12 ve IL-6 salgılar.",
+      "C": "Doğru ifade: M2 aktivasyonu IL-4 ve IL-13 ile indüklenir.",
+      "D": "Doğru ifade: teorik olarak erken yanıt M1, sonraki dönem M2 ağırlıklıdır; pratikte ara formlar sıktır.",
+      "E": "Yanlış ifade (aranan cevap); bu M1 makrofajların özelliğidir."
+     },
+     "bilgi": [
+      12,
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Lenfositlerin ve CD4+ T hücre alt gruplarının (Th1, Th2, Th17) rolünü açıklamak",
+   "sorular": [
+    {
+     "id": "k1-13-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "IL-17 salgılayarak nötrofil alımını ve aktivasyonunu artıran CD4+ T hücre alt grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Th1",
+      "B": "Th2",
+      "C": "Th17",
+      "D": "Düzenleyici T hücresi",
+      "E": "CD8+ sitotoksik T hücresi"
+     },
+     "dogru": "C",
+     "aciklama": "Th1 IFN-γ ile M1 aktivasyonunu, Th2 eozinofil aktivasyonu ve M2'yi, Th17 IL-17 ile nötrofil alımını destekler.",
+     "sik_aciklamalari": {
+      "A": "Th1 IFN-γ üretir ve makrofajları klasik yolla aktive eder.",
+      "B": "Th2 eozinofil aktivasyonu yapar ve M2'yi destekler.",
+      "C": "Doğru. Th1 IFN-γ ile M1 aktivasyonunu, Th2 eozinofil aktivasyonu ve M2'yi, Th17 IL-17 ile nötrofil alımını destekler.",
+      "D": "Düzenleyici T hücreleri yanıtı baskılar.",
+      "E": "CD8+ hücreler sitotoksik etkilidir; CD4+ alt grubu değildir."
+     },
+     "bilgi": [
+      17,
+      18,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "CD4+ T hücre alt grupları ve etkileri eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Th1 – IFN-γ ile klasik (M1) makrofaj aktivasyonu",
+      "B": "Th2 – IL-17 ile nötrofil alımı",
+      "C": "Th17 – eozinofil aktivasyonu",
+      "D": "Th1 – alternatif (M2) makrofaj aktivasyonu",
+      "E": "Th2 – IFN-γ üretimi"
+     },
+     "dogru": "A",
+     "aciklama": "Th1 hücreleri IFN-γ üreterek makrofajların klasik aktivasyonunu uyarır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Th1 hücreleri IFN-γ üreterek makrofajların klasik aktivasyonunu uyarır.",
+      "B": "IL-17 ile nötrofil alımı Th17'ye aittir.",
+      "C": "Eozinofil aktivasyonu Th2'ye aittir.",
+      "D": "M2 aktivasyonunu Th2 destekler.",
+      "E": "IFN-γ Th1 ürünüdür: th2 – IFN-γ üretimi."
+     },
+     "bilgi": [
+      17,
+      18,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Kronik enflamasyonda lenfositler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Makrofajlarla birlikte kronik enflamasyonda baskın hücrelerdendir.",
+      "B": "Adaptif bağışıklıkla antijen özgüllüğü sağlar.",
+      "C": "B hücreleri ve plazma hücreleri antikor üretir.",
+      "D": "Bazı kronik lezyonlarda plazma hücreleri belirgindir.",
+      "E": "Lenfositler kronik enflamasyonda yalnızca seyirci hücrelerdir; makrofajları etkilemezler."
+     },
+     "dogru": "E",
+     "aciklama": "T lenfositler sitokinlerle (IFN-γ, IL-4, IL-17) makrofajları ve diğer hücreleri aktive ederek kronik enflamasyonu yönlendirir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: makrofajlarla birlikte kronik enflamasyonda baskın hücrelerdendir.",
+      "B": "Doğru ifade: adaptif bağışıklıkla antijen özgüllüğü sağlar.",
+      "C": "Doğru ifade: B hücreleri ve plazma hücreleri antikor üretir.",
+      "D": "Doğru ifade: bazı kronik lezyonlarda plazma hücreleri belirgindir.",
+      "E": "Yanlış ifade (aranan cevap). T lenfositler sitokinlerle (IFN-γ, IL-4, IL-17) makrofajları ve diğer hücreleri aktive ederek kronik enflamasyonu yönlendirir."
+     },
+     "bilgi": [
+      16,
+      17,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Lenfosit-makrofaj döngüsünü ve kronik enflamasyonun sürdürülmesindeki önemini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-13-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Lenfosit-makrofaj döngüsünde makrofajın T hücresini aktive etmek için salgıladığı sitokin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IL-12",
+      "B": "IL-10",
+      "C": "IL-4",
+      "D": "TGF-β",
+      "E": "IL-13"
+     },
+     "dogru": "A",
+     "aciklama": "Makrofaj antijen sunar ve IL-12 salgılayarak T hücresini aktive eder; T hücresi de IFN-γ ile makrofajı yeniden aktive eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Makrofaj antijen sunar ve IL-12 salgılayarak T hücresini aktive eder; T hücresi de IFN-γ ile makrofajı yeniden aktive eder.",
+      "B": "IL-10 baskılayıcı bir sitokindir.",
+      "C": "IL-4 Th2/M2 yanıtıyla ilişkilidir.",
+      "D": "TGF-β fibrozis ve baskılamayla ilişkilidir.",
+      "E": "IL-13 M2 aktivasyonu yapar."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Lenfosit-makrofaj etkileşiminin kronik enflamasyonu sürdürmesi en iyi aşağıdakilerden hangisiyle açıklanır?",
+     "secenekler": {
+      "A": "İki hücrenin birbirini baskılaması",
+      "B": "Makrofajların antikor üretmesi",
+      "C": "Lenfositlerin makrofajları fagosite etmesi",
+      "D": "Makrofajın IL-12 ve antijen sunumuyla T hücresini, T hücresinin IFN-γ ile makrofajı karşılıklı aktive ettiği pozitif geri besleme döngüsü",
+      "E": "Lenfositlerin kompleman sistemini inhibe etmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Karşılıklı aktivasyon döngüsü uyaran ortadan kalkmadıkça yanıtın süregen olmasına yol açar.",
+     "sik_aciklamalari": {
+      "A": "Hücreler birbirini aktive eder.",
+      "B": "Makrofajlar antikor üretmez.",
+      "C": "Böyle bir etkileşim yoktur.",
+      "D": "Doğru. Karşılıklı aktivasyon döngüsü uyaran ortadan kalkmadıkça yanıtın süregen olmasına yol açar.",
+      "E": "Böyle bir mekanizma döngüyü açıklamaz."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Kronik granülomatöz bir hastalıkta IFN-γ etkisinin bloke edilmesi (ör. IFN-γ reseptör defekti) durumunda en olası sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Makrofajların klasik aktivasyonu azalır, hücre içi mikropların (ör. mikobakteriler) kontrolü bozulur.",
+      "B": "Makrofajlar daha güçlü mikrobisidal hale gelir.",
+      "C": "Plazma hücreleri antikor üretimini bırakır.",
+      "D": "Nötrofillerin kemik iliğinden çıkışı durur.",
+      "E": "Hiçbir etkisi olmaz."
+     },
+     "dogru": "A",
+     "aciklama": "Lenfosit-makrofaj döngüsünün IFN-γ ayağı bozulunca makrofajlar aktive olamaz; hücre içi patojenler kontrol edilemez ve granülom oluşumu zayıflar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Lenfosit-makrofaj döngüsünün IFN-γ ayağı bozulunca makrofajlar aktive olamaz; hücre içi patojenler kontrol edilemez ve granülom oluşumu zayıflar.",
+      "B": "IFN-γ yokluğunda mikrobisidal aktivite azalır.",
+      "C": "Antikor üretimi doğrudan IFN-γ'ya bağlı değildir.",
+      "D": "Nötrofil çıkışı bu defektle ilişkili değildir.",
+      "E": "IFN-γ döngünün temel sitokinidir; etkisi önemlidir."
+     },
+     "bilgi": [
+      20,
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Eozinofil, nötrofil ve mast hücrelerinin kronik enflamasyondaki rolünü özetlemek",
+   "sorular": [
+    {
+     "id": "k1-13-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Helmint parazit enfeksiyonları ve IgE aracılı alerjik reaksiyonlarda belirgin olan, özgül kemoatraktanı eotaksin olan hücre aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nötrofil",
+      "B": "Eozinofil",
+      "C": "Makrofaj",
+      "D": "Plazma hücresi",
+      "E": "Fibroblast"
+     },
+     "dogru": "B",
+     "aciklama": "Eozinofil granüllerindeki major basic protein parazitler için toksiktir, ancak konak epitel hücrelerine de zarar verir.",
+     "sik_aciklamalari": {
+      "A": "Nötrofiller akut enflamasyonun tipik hücresidir.",
+      "B": "Doğru. Eozinofil granüllerindeki major basic protein parazitler için toksiktir, ancak konak epitel hücrelerine de zarar verir.",
+      "C": "Makrofajlar kronik enflamasyonun merkezi hücresidir; eotaksinle çağrılan hücre değildir.",
+      "D": "Plazma hücreleri antikor üretir.",
+      "E": "Fibroblastlar onarım hücresidir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Kronik enflamasyona katılan diğer hücreler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Eozinofil granüllerindeki major basic protein parazitler için toksiktir.",
+      "B": "Osteomiyelitte süregen nötrofil infiltrasyonu görülebilir.",
+      "C": "Mast hücreleri histamin, lökotrien ve sitokin salgılar.",
+      "D": "Mast hücreleri hem akut hem kronik enflamasyona katılır.",
+      "E": "Nötrofiller kronik enflamasyonda hiçbir koşulda bulunmaz."
+     },
+     "dogru": "E",
+     "aciklama": "Nötrofiller akut enflamasyonun tipik hücresi olsa da osteomiyelit ve sigaraya bağlı akciğer hastalıkları gibi bazı kronik tablolarda süregen katılım gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; konak epiteline de zarar verebilir.",
+      "B": "Doğru ifade: osteomiyelitte süregen nötrofil infiltrasyonu görülebilir.",
+      "C": "Doğru ifade: mast hücreleri histamin, lökotrien ve sitokin salgılar.",
+      "D": "Doğru ifade: mast hücreleri hem akut hem kronik enflamasyona katılır.",
+      "E": "Yanlış ifade (aranan cevap). Nötrofiller akut enflamasyonun tipik hücresi olsa da osteomiyelit ve sigaraya bağlı akciğer hastalıkları gibi bazı kronik tablolarda süregen katılım gösterir."
+     },
+     "bilgi": [
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Uzun yıllardır sigara içen bir hastada kronik akciğer hastalığının biyopsisinde mononükleer hücrelerin yanında belirgin ve süregen nötrofil infiltrasyonu görülüyor.\n\nBu bulgu ile ilgili aşağıdakilerden hangisi en doğrudur?",
+     "secenekler": {
+      "A": "Nötrofil varlığı lezyonun kesinlikle akut olduğunu gösterir.",
+      "B": "Nötrofiller bazı kronik tablolarda (sigara ilişkili akciğer hastalığı, osteomiyelit) süregen olarak bulunabilir.",
+      "C": "Bulgu eozinofilik pnömoniyi gösterir.",
+      "D": "Nötrofiller kronik enflamasyonda yalnızca artefakttır.",
+      "E": "Nötrofiller burada antikor üretmektedir."
+     },
+     "dogru": "B",
+     "aciklama": "Kalıcı uyaran (sigara dumanı, nekrotik kemik) nötrofil alımını sürdürebilir; mononükleer hücrelerle birlikte karışık bir infiltrat görülür.",
+     "sik_aciklamalari": {
+      "A": "Nötrofil varlığı tek başına lezyonun akut olduğunu kanıtlamaz.",
+      "B": "Doğru. Kalıcı uyaran (sigara dumanı, nekrotik kemik) nötrofil alımını sürdürebilir; mononükleer hücrelerle birlikte karışık bir infiltrat görülür.",
+      "C": "Eozinofilik tablo eozinofil baskınlığı gerektirir.",
+      "D": "Nötrofiller gerçek bir infiltrat bileşenidir.",
+      "E": "Nötrofiller antikor üretmez."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Granülomatöz enflamasyonu tanımlamak ve granülom morfolojisini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-13-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Aktive makrofajların (epitelioid hücreler) nodüler kümeler oluşturduğu kronik enflamasyon tipine ne ad verilir?",
+     "secenekler": {
+      "A": "Seröz enflamasyon",
+      "B": "Fibrinöz enflamasyon",
+      "C": "Granülomatöz enflamasyon",
+      "D": "Pürülan enflamasyon",
+      "E": "Ülseratif enflamasyon"
+     },
+     "dogru": "C",
+     "aciklama": "Granülomatöz enflamasyon kronik enflamasyonun özel tipidir; epitelioid hücre kümeleri çevresinde lenfosit halkası bulunur ve bazen merkezi nekroz vardır.",
+     "sik_aciklamalari": {
+      "A": "Seröz enflamasyon hücreden fakir sıvı birikimidir.",
+      "B": "Fibrinöz enflamasyon fibrin birikimidir.",
+      "C": "Doğru. Granülomatöz enflamasyon kronik enflamasyonun özel tipidir; epitelioid hücre kümeleri çevresinde lenfosit halkası bulunur ve bazen merkezi nekroz vardır.",
+      "D": "Pürülan enflamasyon irin oluşumudur.",
+      "E": "Ülser epitel yüzeyinin lokal kaybıdır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Granülom morfolojisi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Epitelioid hücreler bol, pembe, granüler sitoplazmalı ve hücre sınırları belirsizdir; Langhans dev hücrelerinde çekirdekler periferde taç şeklinde dizilir.",
+      "B": "Granülom yalnızca nötrofillerden oluşur.",
+      "C": "Langhans dev hücrelerinde çekirdekler merkezde kümelenir.",
+      "D": "Granülom çevresinde lenfosit bulunmaz.",
+      "E": "Granülomlar asla fibrozisle sonuçlanmaz."
+     },
+     "dogru": "A",
+     "aciklama": "Granülomda epitelioid hücreler, Langhans tipi dev hücreler ve çevrede lenfositler bulunur; zamanla fibroblast ve kollajen birikir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Granülomda epitelioid hücreler, Langhans tipi dev hücreler ve çevrede lenfositler bulunur; zamanla fibroblast ve kollajen birikir.",
+      "B": "Granülomun temel hücresi aktive makrofajdır (epitelioid hücre).",
+      "C": "Langhans hücrelerinde çekirdekler periferde at nalı/taç şeklindedir.",
+      "D": "Çevrede lenfosit halkası tipiktir.",
+      "E": "Granülomlar zamanla fibrozisle iyileşir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Granülomatöz enflamasyonda makrofajların epitelioid hücrelere dönüşmesinin temel uyaranı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kalıcı antijene karşı gelişen güçlü T hücre yanıtı ve IFN-γ üretimi",
+      "B": "Histamin salınımı",
+      "C": "Kompleman C3b birikimi",
+      "D": "Nötrofillerin NET oluşturması",
+      "E": "Hiperkalsemi"
+     },
+     "dogru": "A",
+     "aciklama": "Kalıcı mikrobiyal antijen T hücrelerini uyarır; IFN-γ makrofajları aktive ederek epitelioid hücrelere dönüştürür. Granülom etkeni izole etmeye yönelik bir stratejidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kalıcı mikrobiyal antijen T hücrelerini uyarır; IFN-γ makrofajları aktive ederek epitelioid hücrelere dönüştürür. Granülom etkeni izole etmeye yönelik bir stratejidir.",
+      "B": "Histamin erken vasküler değişikliklerin mediyatörüdür.",
+      "C": "C3b opsonindir; epitelioid dönüşümü sağlamaz.",
+      "D": "NET'ler nötrofil kaynaklıdır.",
+      "E": "Hiperkalsemi metastatik kalsifikasyon yapar."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Kazeifiye ve non-kazeifiye granülomları ayırt etmek",
+   "sorular": [
+    {
+     "id": "k1-13-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Merkezi kazeöz (peynirimsi) nekroz içeren granülomların tipik örneği aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sarkoidoz",
+      "B": "Crohn hastalığı",
+      "C": "Tüberküloz",
+      "D": "Dikiş materyali granülomu",
+      "E": "Talk granülomu"
+     },
+     "dogru": "C",
+     "aciklama": "Kazeöz granülomun tipik örneği tüberkülozdur; sarkoidoz, Crohn ve çoğu yabancı cisim granülomu non-kazeözdür.",
+     "sik_aciklamalari": {
+      "A": "Sarkoidoz non-kazeöz granülom oluşturur.",
+      "B": "Crohn hastalığı non-kazeöz granülom oluşturur.",
+      "C": "Doğru. Kazeöz granülomun tipik örneği tüberkülozdur; sarkoidoz, Crohn ve çoğu yabancı cisim granülomu non-kazeözdür.",
+      "D": "Yabancı cisim granülomları genellikle non-kazeözdür.",
+      "E": "Talk granülomu yabancı cisim granülomudur."
+     },
+     "bilgi": [
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerin hangisinde non-kazeöz (nekrozsuz) granülom beklenir?",
+     "secenekler": {
+      "A": "Akciğer tüberkülozu",
+      "B": "Sarkoidoz",
+      "C": "Tüberküloz lenfadeniti",
+      "D": "Kazeifiye tüberküloz odağı",
+      "E": "Miliyer tüberküloz"
+     },
+     "dogru": "B",
+     "aciklama": "Non-kazeöz granülomlar sarkoidoz, Crohn hastalığı ve bazı yabancı cisim granülomlarında görülür.",
+     "sik_aciklamalari": {
+      "A": "Tüberküloz kazeöz granülom oluşturur.",
+      "B": "Doğru. Non-kazeöz granülomlar sarkoidoz, Crohn hastalığı ve bazı yabancı cisim granülomlarında görülür.",
+      "C": "Tüberküloz lenfadenitinde kazeöz granülom beklenir.",
+      "D": "Tanımı gereği kazeöz nekroz içerir.",
+      "E": "Tüberkülozun yaygın formudur; kazeöz granülom beklenir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Kazeöz granülomun merkezindeki nekrozun mikroskopik görünümü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hücre konturlarının korunduğu, çekirdeksiz eozinofilik hücreler",
+      "B": "Amorf, eozinofilik, granüler materyal; doku mimarisi ve hücre sınırları kaybolmuş",
+      "C": "Gölgeli yağ hücreleri ve bazofilik kalsiyum sabunları",
+      "D": "Damar duvarında parlak pembe camsı materyal",
+      "E": "Sıvılaşmış nötrofil yığınları"
+     },
+     "dogru": "B",
+     "aciklama": "Kazeöz nekroz makroskopik olarak peynirimsi, mikroskopik olarak amorf granüler pembe materyaldir; hücre sınırları seçilemez.",
+     "sik_aciklamalari": {
+      "A": "Hücre konturlarının korunması koagülatif nekroza aittir.",
+      "B": "Doğru. Kazeöz nekroz makroskopik olarak peynirimsi, mikroskopik olarak amorf granüler pembe materyaldir; hücre sınırları seçilemez.",
+      "C": "Bu yağ nekrozunun görünümüdür.",
+      "D": "Bu fibrinoid nekrozdur.",
+      "E": "Bu likefaksiyon nekrozu/apsedir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Granülomatöz enflamasyonun başlıca nedenlerini ve hastalık örneklerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-13-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi granülomatöz enflamasyona yol açan hastalıklardan biri değildir?",
+     "secenekler": {
+      "A": "Tüberküloz",
+      "B": "Sarkoidoz",
+      "C": "Crohn hastalığı",
+      "D": "Sifiliz",
+      "E": "Fibroadenom"
+     },
+     "dogru": "E",
+     "aciklama": "Granülomatöz enflamasyon enfeksiyöz (tüberküloz, sifiliz, mantar, parazit), immün aracılı (sarkoidoz, Crohn) ve yabancı cisim nedenlerine bağlıdır. Fibroadenom memenin benign fibroepitelyal tümörüdür.",
+     "sik_aciklamalari": {
+      "A": "Granülomatöz enflamasyon yapar.",
+      "B": "Granülomatöz enflamasyon yapar.",
+      "C": "Granülomatöz enflamasyon yapar.",
+      "D": "Granülomatöz enflamasyon yapar (gumma).",
+      "E": "Yol açmaz (aranan cevap); bir tümördür. Granülomatöz enflamasyon enfeksiyöz (tüberküloz, sifiliz, mantar, parazit), immün aracılı (sarkoidoz, Crohn) ve yabancı cisim nedenlerine bağlıdır. Fibroadenom memenin benign fibroepitelyal tümörüdür."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": [
+      "d3-b-139"
+     ]
+    },
+    {
+     "id": "k1-13-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Makrofajlardan oluşan bir duvar, belirgin plazma hücresi infiltrasyonu ve hücre konturları tamamen kaybolmadan oluşan merkezi nekroz içeren granülomatöz lezyon (gumma) hangi hastalığın hangi evresinde görülür?",
+     "secenekler": {
+      "A": "Tüberkülozun primer evresi",
+      "B": "Sifilizin üçüncül evresi",
+      "C": "Sarkoidozun akciğer evresi",
+      "D": "Kedi tırmığı hastalığının erken evresi",
+      "E": "Crohn hastalığının aktif dönemi"
+     },
+     "dogru": "B",
+     "aciklama": "Gumma Treponema pallidum enfeksiyonunun üçüncül (tersiyer) evresinde görülür; plazma hücrelerinden zengin infiltrat tipiktir.",
+     "sik_aciklamalari": {
+      "A": "Tüberküloz kazeöz granülom oluşturur; gumma terimi kullanılmaz.",
+      "B": "Doğru. Gumma Treponema pallidum enfeksiyonunun üçüncül (tersiyer) evresinde görülür; plazma hücrelerinden zengin infiltrat tipiktir.",
+      "C": "Sarkoidoz non-kazeöz granülomdur.",
+      "D": "Kedi tırmığı hastalığında stellat, nötrofilden zengin granülomlar görülür.",
+      "E": "Crohn non-kazeöz granülom oluşturur."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Kediyle oynadıktan birkaç hafta sonra koltuk altında lenfadenopati gelişen bir çocuğun lenf düğümü biyopsisinde yıldız (stellat) şekilli, merkezinde granüler debris ve belirgin nötrofiller bulunan granülomlar görülüyor.\n\nBu tablonun etkeni ve granülom özelliği aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Mycobacterium tuberculosis – kazeöz granülom, bol Langhans dev hücresi",
+      "B": "Bartonella henselae – stellat granülom, merkezde nötrofil; dev hücreler genellikle nadir",
+      "C": "Treponema pallidum – gumma",
+      "D": "Silika – yabancı cisim granülomu",
+      "E": "Sarkoidoz – non-kazeöz granülom"
+     },
+     "dogru": "B",
+     "aciklama": "Kedi tırmığı hastalığının etkeni gram-negatif bir basil olan Bartonella henselae'dir; yuvarlak veya stellat granülomlar, merkezde granüler debris ve nötrofiller görülür.",
+     "sik_aciklamalari": {
+      "A": "Tüberküloz bu öykü ve morfolojiye uymaz.",
+      "B": "Doğru. Kedi tırmığı hastalığının etkeni gram-negatif bir basil olan Bartonella henselae'dir; yuvarlak veya stellat granülomlar, merkezde granüler debris ve nötrofiller görülür.",
+      "C": "Gumma sifilizin üçüncül evresine aittir.",
+      "D": "Silika yabancı cisim granülomu yapar; kedi teması öyküsüyle ilişkisizdir.",
+      "E": "Sarkoidoz nötrofilden zengin stellat granülom yapmaz."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-139",
+     "soru": "Aşağıdakilerden hangisi, granülomatöz inflamasyona yol açabilen hastalıklardan birisi değildir?",
+     "secenekler": {
+      "A": "Sifiliz",
+      "B": "Sarkoidoz",
+      "C": "Fibroadenom",
+      "D": "Tüberküloz",
+      "E": "Crohn hastalığı"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Yabancı cisim granülomlarının özelliklerini tanımlamak",
+   "sorular": [
+    {
+     "id": "k1-13-q34",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Yabancı cisim granülomlarına yol açan materyaller arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Dikiş iplikleri",
+      "B": "Talk",
+      "C": "Cam parçacıkları",
+      "D": "Metal parçacıkları",
+      "E": "Mycobacterium tuberculosis"
+     },
+     "dogru": "E",
+     "aciklama": "Yabancı cisim granülomları fagositoz edilemeyecek kadar büyük veya çözünmeyen materyallere karşı (talk, dikiş, cam, metal) gelişir; M. tuberculosis enfeksiyöz (immün) granülom yapar.",
+     "sik_aciklamalari": {
+      "A": "Yabancı cisim granülomu nedenidir.",
+      "B": "Yabancı cisim granülomu nedenidir.",
+      "C": "Yabancı cisim granülomu nedenidir.",
+      "D": "Yabancı cisim granülomu nedenidir.",
+      "E": "Yer almaz (aranan cevap); immün aracılı kazeöz granülom yapar."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q35",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Geçirilmiş ameliyat bölgesinden alınan biyopside dev hücrelerin içinde ve çevresinde polarize ışıkta ışığı kıran partiküller görülüyor.\n\nBu bulgu için en olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tüberküloz granülomu",
+      "B": "Sarkoidoz",
+      "C": "Yabancı cisim granülomu",
+      "D": "Sifilitik gumma",
+      "E": "Kedi tırmığı hastalığı"
+     },
+     "dogru": "C",
+     "aciklama": "Yabancı cisim granülomunda dev hücrelerin merkezinde veya çevresinde yabancı materyal bulunur; polarize ışıkta çift kırılım gösteren partiküller tanıya yardımcı olur.",
+     "sik_aciklamalari": {
+      "A": "Tüberkülozda kazeöz nekroz ve asit-fast basiller beklenir.",
+      "B": "Sarkoidozda polarize partikül tipik değildir.",
+      "C": "Doğru. Yabancı cisim granülomunda dev hücrelerin merkezinde veya çevresinde yabancı materyal bulunur; polarize ışıkta çift kırılım gösteren partiküller tanıya yardımcı olur.",
+      "D": "Gumma plazma hücreli, merkezi nekrozlu sifilitik lezyondur.",
+      "E": "Kedi tırmığında nötrofilden zengin stellat granülom görülür."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q36",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Yabancı cisim granülomlarını immün (enfeksiyöz) granülomlardan ayıran özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yabancı cisim granülomlarında güçlü antijen özgül T hücre yanıtı temel uyarandır.",
+      "B": "Yabancı cisim granülomlarında uyaran, fagositoz edilemeyecek kadar büyük veya çözünmeyen inert materyaldir; dev hücreler materyali çevreler.",
+      "C": "Yabancı cisim granülomlarında daima kazeöz nekroz bulunur.",
+      "D": "Yabancı cisim granülomları yalnızca akciğerde görülür.",
+      "E": "Yabancı cisim granülomlarında makrofaj bulunmaz."
+     },
+     "dogru": "B",
+     "aciklama": "Yabancı cisim granülomu inert materyalin uzaklaştırılamamasına karşı gelişir; immün granülomlarda ise kalıcı antijene karşı T hücre ve IFN-γ yanıtı temel uyarandır.",
+     "sik_aciklamalari": {
+      "A": "Antijen özgül T hücre yanıtı immün granülomların özelliğidir.",
+      "B": "Doğru. Yabancı cisim granülomu inert materyalin uzaklaştırılamamasına karşı gelişir; immün granülomlarda ise kalıcı antijene karşı T hücre ve IFN-γ yanıtı temel uyarandır.",
+      "C": "Yabancı cisim granülomları genellikle non-kazeözdür.",
+      "D": "Herhangi bir dokuda (deri, cerrahi saha) görülebilir.",
+      "E": "Makrofaj ve dev hücreler granülomun temel bileşenidir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "Granülomların klinik önemini, tanı yöntemlerini ve iyileşme biçimini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-13-q37",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Granülomatöz enflamasyonda kesin etken tanısı için kullanılan yöntemler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Asit-fast (ARB) boyası",
+      "B": "Mantar boyaları",
+      "C": "Kültür",
+      "D": "Moleküler yöntemler",
+      "E": "Yalnızca rutin HE boyasıyla granülom görülmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Granülom sınırlı bir hastalık grubunu düşündürür; kesin etken tanısı için özel boyalar, kültür, moleküler yöntemler ve seroloji gerekir.",
+     "sik_aciklamalari": {
+      "A": "Kullanılır; mikobakterileri gösterir.",
+      "B": "Kullanılır; mantar boyaları granülom yapan mantar etkenlerini gösterir.",
+      "C": "Kullanılır; kültür etkenin üretilip tanımlanmasını sağlar.",
+      "D": "Kullanılır; seroloji de yardımcıdır.",
+      "E": "Kesin etken tanısı için yeterli değildir (aranan cevap)."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q38",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Granülom oluşumunun vücut açısından anlamı ve iyileşme biçimi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Granülom etkeni her zaman tamamen yok eder ve iz bırakmadan iyileşir.",
+      "B": "Granülom etkeni izole etme stratejisidir; etken yok edilemese de yayılımı sınırlanır ve çoğunlukla fibrozis ve kalıcı skarla iyileşir.",
+      "C": "Granülom etkenin yayılmasını hızlandırır.",
+      "D": "Granülomlar yalnızca akut enflamasyonda görülür.",
+      "E": "Granülomlar likefaksiyon nekrozuyla iyileşir."
+     },
+     "dogru": "B",
+     "aciklama": "Granülom etkeni hapseden bir duvar oluşturur; iyileşme çoğunlukla fibrozis ve skarla olur.",
+     "sik_aciklamalari": {
+      "A": "Etken her zaman yok edilemez; iyileşme skarla olur.",
+      "B": "Doğru. Granülom etkeni hapseden bir duvar oluşturur; iyileşme çoğunlukla fibrozis ve skarla olur.",
+      "C": "Granülom yayılımı sınırlar.",
+      "D": "Granülomatöz enflamasyon kronik enflamasyonun özel tipidir.",
+      "E": "Granülomlar fibrozisle iyileşir."
+     },
+     "bilgi": [
+      30,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q39",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Akciğer biyopsisinde kazeöz granülomlar görülen bir hastada tanının kesinleştirilmesi için en uygun yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Granülom görülmesi tek başına tüberküloz tanısı için yeterlidir; ek test gerekmez.",
+      "B": "Asit-fast boyama, kültür ve moleküler yöntemlerle etkenin gösterilmesi; mantar enfeksiyonları da ayırıcı tanıda değerlendirilmeli",
+      "C": "Yalnızca serum CRP düzeyine bakılması",
+      "D": "Yalnızca PAS boyasıyla glikojen aranması",
+      "E": "Yalnızca Prusya mavisi ile demir aranması"
+     },
+     "dogru": "B",
+     "aciklama": "Kazeöz granülom tüberkülozu düşündürür ancak mantarlar da benzer tablo yapabilir; kesin tanı etkenin özel boya, kültür ve moleküler yöntemlerle gösterilmesini gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Granülom sınırlı bir hastalık grubunu düşündürür; etken gösterilmelidir.",
+      "B": "Doğru. Kazeöz granülom tüberkülozu düşündürür ancak mantarlar da benzer tablo yapabilir; kesin tanı etkenin özel boya, kültür ve moleküler yöntemlerle gösterilmesini gerektirir.",
+      "C": "CRP özgül değildir: yalnızca serum CRP düzeyine bakılması.",
+      "D": "PAS mantar duvarını gösterebilir ama tek başına yaklaşım yetersizdir; glikojen aramak amaç değildir.",
+      "E": "Prusya mavisi demir boyasıdır; etken göstermez."
+     },
+     "bilgi": [
+      33,
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 14,
+   "metin": "Kronik enflamasyonun fibrozis ve non-klasik hastalıklarla ilişkisini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-13-q40",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Uzamış kronik enflamasyonda fibrozisin gelişmesinde en önemli fibrogenik sitokin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IFN-γ",
+      "B": "TGF-β",
+      "C": "IL-12",
+      "D": "Histamin",
+      "E": "C5a"
+     },
+     "dogru": "B",
+     "aciklama": "TGF-β ve diğer fibrogenik sitokinler fibroblastları aktive eder ve kollajen birikimine yol açar.",
+     "sik_aciklamalari": {
+      "A": "IFN-γ makrofajları klasik yolla aktive eder.",
+      "B": "Doğru. TGF-β ve diğer fibrogenik sitokinler fibroblastları aktive eder ve kollajen birikimine yol açar.",
+      "C": "IL-12 Th1 yanıtını uyarır.",
+      "D": "Histamin vazoaktif amindir.",
+      "E": "C5a kemotaktik kompleman ürünüdür."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q41",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Kronik enflamasyona bağlı fibrozisin klinik sonuçları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Karaciğer sirozu",
+      "B": "Akciğer fibrozisi",
+      "C": "Böbrek yetmezliği",
+      "D": "Konstriktif perikardit",
+      "E": "Akut seröz efüzyonun iz bırakmadan çözülmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Uzamış enflamasyonda fibrozis siroz, akciğer fibrozisi, böbrek yetmezliği ve konstriktif perikardite yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Fibrozisin klinik sonucudur.",
+      "B": "Fibrozisin klinik sonucudur.",
+      "C": "Fibrozisin klinik sonucudur.",
+      "D": "Fibrozisin klinik sonucudur.",
+      "E": "Yer almaz (aranan cevap); bu akut enflamasyonun tam rezolüsyonudur."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-13-q42",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Klasik enflamatuvar hastalık olarak görülmeyen ancak seyrinde kronik, düşük dereceli enflamasyonun anlamlı rol oynadığı hastalıklar aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Ateroskleroz, tip 2 diyabet/metabolik sendrom, Alzheimer hastalığı",
+      "B": "Akut apandisit, lobar pnömoni, sellülit",
+      "C": "Kalıtsal anjiyoödem, PNH, HÜS",
+      "D": "Trizomi 21, Turner sendromu, Klinefelter sendromu",
+      "E": "Kırık, yanık, kesik"
+     },
+     "dogru": "A",
+     "aciklama": "Ateroskleroz, tip 2 diyabet/metabolik sendrom ve Alzheimer hastalığında kronik düşük dereceli enflamasyon hastalık seyrine katkıda bulunur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Ateroskleroz, tip 2 diyabet/metabolik sendrom ve Alzheimer hastalığında kronik düşük dereceli enflamasyon hastalık seyrine katkıda bulunur.",
+      "B": "Bunlar klasik akut enflamatuvar hastalıklardır.",
+      "C": "Bunlar kompleman düzenleyici protein eksiklikleriyle ilişkilidir.",
+      "D": "Bunlar kromozomal anomalilerdir.",
+      "E": "Bunlar fiziksel yaralanmalardır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 42,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:20"
+}

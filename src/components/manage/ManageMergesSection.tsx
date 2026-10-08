@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Check, Crown, Split, Undo2, Copy } from 'lucide-react';
+import { Check, Crown, Split, Undo2, Copy, Info, CheckCircle2, ChevronDown } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
+import { ChipBar, EmptyState } from './consoleUi';
 
 /**
  * "Birleştirilen sorular": farklı kimliklerle iki kez girilmiş aynı çıkmış sorular (src/services/questionMerge.ts).
@@ -76,102 +77,103 @@ export const ManageMergesSection: React.FC<{ adminEmail: string }> = ({ adminEma
     } else toast.error(r.data?.error || r.error || 'İşlem yapılamadı.');
   };
 
-  const tab = (id: Filtre, label: string) => (
-    <button
-      key={id}
-      type="button"
-      onClick={() => {
-        setFiltre(id);
-        setSayfa(1);
-      }}
-      className={`h-9 px-3 rounded-lg text-[13px] font-medium cursor-pointer border ${filtre === id ? 'bg-ink text-white border-ink' : 'bg-white text-ink-2 border-line hover:bg-canvas'}`}
-      aria-pressed={filtre === id}
-    >
-      {label} <span className="opacity-70">{say[id]}</span>
-    </button>
-  );
+  const durumTag = (g: Grup) =>
+    g.durum === 'onayli' ? <span className="ms-tag is-ok"><Check /> Onaylandı</span>
+    : g.durum === 'ayrildi' ? <span className="ms-tag">Ayrıldı · hepsi görünür</span>
+    : <span className="ms-tag is-accent">Otomatik birleşti</span>;
 
   return (
     <div className="flex flex-col gap-3 min-w-0">
-      <div className="flex flex-col gap-1">
-        <h2 className="m-0 text-[16px] font-bold text-ink">Birleştirilen sorular</h2>
-        <p className="m-0 text-[13px] text-ink-3 max-w-3xl">
-          Aynı soru farklı sınav dökümlerinden farklı kimliklerle birden çok kez girilmiş. Sitede her gruptan yalnız{' '}
-          <b>asıl</b> soru gösterilir, kopyalar gizlenir (veri silinmez). Metinler farklıysa doğru olanı asıl yapın; aslında farklı
-          sorularsa grubu ayırın.
-        </p>
+      <div className="ms-alert is-accent">
+        <Info aria-hidden="true" />
+        <span>
+          Aynı soru farklı dökümlerden farklı kimliklerle birden çok kez girilmiş. Sitede her gruptan yalnız <b>asıl</b> soru görünür, kopyalar
+          gizlenir (veri silinmez). Metinler farklıysa doğru olanı asıl yap; aslında farklı sorularsa grubu ayır.
+        </span>
       </div>
-      <div className="flex flex-wrap gap-1.5" role="group" aria-label="Filtre">
-        {tab('incele', 'İncelenmeli (metin farklı)')}
-        {tab('ayni', 'Birebir aynı')}
-        {tab('onayli', 'Onaylandı')}
-        {tab('ayrildi', 'Ayrıldı')}
-        {tab('hepsi', 'Hepsi')}
-      </div>
+      <ChipBar
+        label="Grup durumu"
+        value={filtre}
+        onChange={(v) => {
+          setFiltre(v);
+          setSayfa(1);
+        }}
+        options={[
+          { id: 'incele', label: 'İncelenmeli · metin farklı', n: say.incele },
+          { id: 'ayni', label: 'Birebir aynı', n: say.ayni },
+          { id: 'onayli', label: 'Onaylandı', n: say.onayli },
+          { id: 'ayrildi', label: 'Ayrıldı', n: say.ayrildi },
+          { id: 'hepsi', label: 'Hepsi', n: say.hepsi },
+        ]}
+      />
 
       {gruplar === null ? (
-        <p className="m-0 text-[13px] text-ink-3">Yükleniyor…</p>
+        <div className="flex flex-col gap-3" role="status" aria-label="Yükleniyor">
+          {[0, 1].map((i) => <div key={i} className="h-48 rounded-2xl ms-shimmer" />)}
+        </div>
       ) : liste.length === 0 ? (
-        <p className="m-0 text-[13px] text-ink-3">Bu filtrede grup yok.</p>
+        <section className="ms-panel">
+          <EmptyState icon={CheckCircle2} title="Bu filtrede grup yok">{filtre === 'incele' ? 'İncelenmesi gereken birleştirme kalmadı.' : null}</EmptyState>
+        </section>
       ) : (
         <>
           {liste.slice(0, sayfa * PAGE).map((g) => (
-            <section key={g.id} className="rounded-xl border border-line bg-white p-3 flex flex-col gap-2.5">
-              <header className="flex flex-wrap items-center gap-2 text-[12.5px] text-ink-3">
-                <span className="font-mono text-ink-2">{g.id}</span>
-                <span>· {g.uyeler.length} soru</span>
-                <span>· benzerlik {(g.benzerlik * 100).toFixed(0)}%</span>
-                <span className={`px-1.5 rounded ${g.birebir_ayni ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50 text-amber-800'}`}>
-                  {g.birebir_ayni ? 'birebir aynı' : 'metin farklı'}
+            <section key={g.id} className="ms-panel">
+              <header className="ms-panel-head">
+                <span className="flex flex-wrap items-center gap-1.5 min-w-0">
+                  <span className={`ms-tag ${g.birebir_ayni ? 'is-ok' : 'is-warn'}`}>{g.birebir_ayni ? 'Birebir aynı' : 'Metin farklı'}</span>
+                  {durumTag(g)}
+                  <span className="text-[12.5px] text-ink-3 tabular-nums">{g.uyeler.length} soru · benzerlik %{(g.benzerlik * 100).toFixed(0)}</span>
+                  <span className="font-mono text-[11.5px] text-ink-3 truncate max-w-[18ch]" title={g.id}>{g.id}</span>
                 </span>
-                <span className="px-1.5 rounded bg-canvas text-ink-2">
-                  {g.durum === 'otomatik' ? 'otomatik birleşti' : g.durum === 'onayli' ? 'onaylandı' : 'ayrıldı (hepsi görünür)'}
-                </span>
-                <span className="ml-auto flex gap-1.5">
+                <span className="ms-panel-tools">
                   {g.durum !== 'ayrildi' ? (
                     <>
                       {g.durum !== 'onayli' && (
-                        <button type="button" disabled={busy === g.id} onClick={() => islem(g, { action: 'confirm' }, 'Birleştirme onaylandı.')} className="h-8 px-2.5 rounded-lg border border-line text-[12.5px] font-semibold text-ink-2 hover:bg-emerald-50 hover:text-emerald-800 inline-flex items-center gap-1 cursor-pointer disabled:opacity-50">
-                          <Check className="w-3.5 h-3.5" /> Onayla
+                        <button type="button" disabled={busy === g.id} onClick={() => islem(g, { action: 'confirm' }, 'Birleştirme onaylandı.')} className="ms-btn is-sm is-ok">
+                          <Check /> Onayla
                         </button>
                       )}
-                      <button type="button" disabled={busy === g.id} onClick={() => islem(g, { action: 'split' }, 'Grup ayrıldı; tüm sorular sitede görünür.')} className="h-8 px-2.5 rounded-lg border border-line text-[12.5px] font-semibold text-ink-2 hover:bg-rose-50 hover:text-rose-800 inline-flex items-center gap-1 cursor-pointer disabled:opacity-50">
-                        <Split className="w-3.5 h-3.5" /> Farklı sorular, ayır
+                      <button type="button" disabled={busy === g.id} onClick={() => islem(g, { action: 'split' }, 'Grup ayrıldı; tüm sorular sitede görünür.')} className="ms-btn is-sm">
+                        <Split /> Farklı sorular, ayır
                       </button>
                     </>
                   ) : (
-                    <button type="button" disabled={busy === g.id} onClick={() => islem(g, { action: 'restore' }, 'Grup yeniden birleştirildi.')} className="h-8 px-2.5 rounded-lg border border-line text-[12.5px] font-semibold text-ink-2 hover:bg-canvas inline-flex items-center gap-1 cursor-pointer disabled:opacity-50">
-                      <Undo2 className="w-3.5 h-3.5" /> Yeniden birleştir
+                    <button type="button" disabled={busy === g.id} onClick={() => islem(g, { action: 'restore' }, 'Grup yeniden birleştirildi.')} className="ms-btn is-sm">
+                      <Undo2 /> Yeniden birleştir
                     </button>
                   )}
                 </span>
               </header>
-              <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(auto-fit, minmax(min(100%, 260px), 1fr))` }}>
+              <div className="p-3 grid gap-2" style={{ gridTemplateColumns: `repeat(auto-fit, minmax(min(100%, 280px), 1fr))` }}>
                 {g.sorular.map((q) => {
                   const asil = q.id === g.asil && g.durum !== 'ayrildi';
                   return (
-                    <article key={q.id} className={`rounded-lg p-2.5 flex flex-col gap-1.5 min-w-0 border ${asil ? 'border-emerald-300 bg-emerald-50/40' : 'border-line-soft bg-canvas/40'}`}>
-                      <div className="flex items-center gap-1.5 text-[11.5px] text-ink-3 min-w-0">
-                        {asil ? <Crown className="w-3.5 h-3.5 text-emerald-700 shrink-0" /> : <Copy className="w-3.5 h-3.5 shrink-0" />}
-                        <span className="font-mono truncate">{q.id}</span>
-                        <span className="truncate">· {[q.committeeId, q.discipline, q.year].filter(Boolean).join(' · ')}</span>
+                    <article key={q.id} className={`rounded-xl p-3 flex flex-col gap-2 min-w-0 ${asil ? 'bg-ok-tint ring-1 ring-ok/35' : 'bg-canvas'}`}>
+                      <div className="flex items-center gap-1.5 text-[12px] text-ink-3 min-w-0">
+                        {asil ? <span className="ms-tag is-ok"><Crown /> Asıl</span> : <span className="ms-tag"><Copy /> Kopya</span>}
+                        <span className="truncate">{[q.committeeId, q.discipline, q.year].filter(Boolean).join(' · ')}</span>
                       </div>
-                      <p className="m-0 text-[13.5px] text-ink leading-snug break-words whitespace-pre-wrap">{q.stem || <i className="text-ink-3">kök yok</i>}</p>
-                      <ol className="m-0 p-0 list-none flex flex-col gap-0.5 text-[12.5px] text-ink-2">
-                        {q.options.map((o, i) => (
-                          <li key={i} className={LETTERS[i] === q.correctAnswer ? 'font-semibold text-emerald-800' : ''}>
-                            {LETTERS[i]}) {o}
-                          </li>
-                        ))}
+                      <p className="m-0 text-[14px] text-ink leading-relaxed break-words whitespace-pre-wrap">{q.stem || <i className="text-ink-3">Kök yok</i>}</p>
+                      <ol className="m-0 p-0 list-none flex flex-col gap-1">
+                        {q.options.map((o, i) => {
+                          const ok = LETTERS[i] === q.correctAnswer;
+                          return (
+                            <li key={i} className={`flex items-start gap-2 text-[13px] leading-snug ${ok ? 'text-ok font-semibold' : 'text-ink-2'}`}>
+                              <span className={`shrink-0 w-5 h-5 rounded-md inline-flex items-center justify-center font-mono text-[11.5px] ${ok ? 'bg-ok text-white' : 'bg-white text-ink-3'}`}>{LETTERS[i]}</span>
+                              <span className="min-w-0">{o}</span>
+                            </li>
+                          );
+                        })}
                       </ol>
                       <div className="flex items-center justify-between gap-2 mt-auto pt-1">
-                        <span className="text-[11.5px] text-ink-3">Cevap: {q.correctAnswer || '–'}</span>
+                        <span className="font-mono text-[11.5px] text-ink-3 truncate" title={q.id}>{q.id}</span>
                         {!asil && g.durum !== 'ayrildi' && (
-                          <button type="button" disabled={busy === g.id} onClick={() => islem(g, { action: 'primary', asil: q.id }, 'Asıl soru değiştirildi.')} className="h-8 px-2.5 rounded-lg border border-line text-[12.5px] font-semibold text-ink-2 hover:bg-emerald-50 hover:text-emerald-800 inline-flex items-center gap-1 cursor-pointer disabled:opacity-50">
-                            <Crown className="w-3.5 h-3.5" /> Bunu asıl yap
+                          <button type="button" disabled={busy === g.id} onClick={() => islem(g, { action: 'primary', asil: q.id }, 'Asıl soru değiştirildi.')} className="ms-btn is-sm is-tonal">
+                            <Crown /> Bunu asıl yap
                           </button>
                         )}
-                        {asil && <span className="text-[11.5px] font-semibold text-emerald-800">Sitede görünen</span>}
+                        {asil && <span className="text-[12px] font-semibold text-ok">Sitede görünen</span>}
                       </div>
                     </article>
                   );
@@ -180,8 +182,8 @@ export const ManageMergesSection: React.FC<{ adminEmail: string }> = ({ adminEma
             </section>
           ))}
           {liste.length > sayfa * PAGE && (
-            <button type="button" onClick={() => setSayfa((n) => n + 1)} className="self-center h-9 px-4 rounded-lg border border-line text-[13px] text-ink-2 hover:bg-canvas cursor-pointer">
-              Daha fazla göster ({liste.length - sayfa * PAGE} grup daha)
+            <button type="button" onClick={() => setSayfa((n) => n + 1)} className="ms-btn self-center">
+              <ChevronDown /> {liste.length - sayfa * PAGE} grup daha
             </button>
           )}
         </>

@@ -1,0 +1,1529 @@
+{
+ "id": "k1-17-cinsel-yolla-bulasan-enfeksiyonlarda-tedavi",
+ "sira": 17,
+ "kurul": 1,
+ "ders": "Enfeksiyon Hastalıkları",
+ "konu": "Cinsel Yolla Bulaşan Enfeksiyonlarda Tedavi",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
+ "tarih": "2026-09-21",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Cinsel yolla bulaşan hastalıklarda (CYBH) etkenleri bakteri, virüs ve parazit olarak sınıflandırabilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki CYBH etkenlerinden hangisi paraziter bir etkendir?",
+     "secenekler": {
+      "A": "Neisseria gonorrhoeae",
+      "B": "Trichomonas vaginalis",
+      "C": "Chlamydia trachomatis",
+      "D": "HPV",
+      "E": "Haemophilus ducreyi"
+     },
+     "dogru": "B",
+     "aciklama": "Paraziter CYBH etkenleri T. vaginalis, Phthirus pubis ve Sarcoptes scabiei'dir.",
+     "sik_aciklamalari": {
+      "A": "Bakteridir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: kamçılı protozoondur.",
+      "C": "Bakteridir; bu nedenle doğru seçenek değildir.",
+      "D": "Virüstür; bu nedenle doğru seçenek değildir.",
+      "E": "Bakteridir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi viral CYBH etkenidir?",
+     "secenekler": {
+      "A": "Mycoplasma genitalium",
+      "B": "Klebsiella granulomatis",
+      "C": "Molluscum contagiosum",
+      "D": "Treponema pallidum",
+      "E": "Sarcoptes scabiei"
+     },
+     "dogru": "C",
+     "aciklama": "Viral etkenler HBV, HPV, CMV, EBV, Molluscum contagiosum, adenovirus ve HCV'dir.",
+     "sik_aciklamalari": {
+      "A": "Bakteridir; bu nedenle doğru seçenek değildir.",
+      "B": "Bakteridir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: poksvirüs ailesinden viral etkendir.",
+      "D": "Spiroket bakteridir.",
+      "E": "Parazittir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "CYBH etkenleri ile grup eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Phthirus pubis – parazit",
+      "B": "Haemophilus ducreyi – bakteri",
+      "C": "Klebsiella granulomatis – bakteri",
+      "D": "CMV – virüs",
+      "E": "Mycoplasma genitalium – virüs"
+     },
+     "dogru": "E",
+     "aciklama": "Mycoplasma genitalium bakteriyel bir CYBH etkenidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış eşleştirme (aranan cevap): bakteridir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "CYBH'de bulaş yollarını (cinsel yol, kan-kan ürünleri, anneden bebeğe geçiş) açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "CYBH'de en sık bulaş yolu hangisidir?",
+     "secenekler": {
+      "A": "Vektör ısırığı",
+      "B": "Solunum yolu",
+      "C": "Fekal-oral yol",
+      "D": "Vajinal, anal veya oral mukoza yoluyla cinsel temas",
+      "E": "Deri teması olmadan ortak eşya"
+     },
+     "dogru": "D",
+     "aciklama": "Bulaş genellikle mukozal cinsel temasla; ayrıca kan ürünleri ve anneden bebeğe olur.",
+     "sik_aciklamalari": {
+      "A": "Vektörle bulaşmaz; bu nedenle doğru seçenek değildir.",
+      "B": "Solunum yolu CYBH bulaş yolu değildir.",
+      "C": "Fekal-oral yol temel yol değildir.",
+      "D": "Doğru: en sık yoldur.",
+      "E": "Temel bulaş yolu değildir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Anneden bebeğe geçiş bilgisinin klinik önemi hangisidir?",
+     "secenekler": {
+      "A": "Taramaya gerek olmaması",
+      "B": "Hiçbir CYBH anneden bebeğe geçmez",
+      "C": "Yalnızca doğumdan sonra önem taşır",
+      "D": "HBV, HIV ve sifilis gibi enfeksiyonlarda perinatal profilaksi ve tarama gerektirmesi",
+      "E": "Yalnızca trikomonasta geçerli olması"
+     },
+     "dogru": "D",
+     "aciklama": "Gebelikte, doğumda ve sonrasında anneden bebeğe bulaş olabilir.",
+     "sik_aciklamalari": {
+      "A": "Tarama önemlidir; bu nedenle doğru seçenek değildir.",
+      "B": "Birçok etken anneden bebeğe geçer.",
+      "C": "Gebelik ve doğum sırasında da önemlidir.",
+      "D": "Doğru: perinatal önlemler gereklidir.",
+      "E": "Birçok etken için geçerlidir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "CYBH bulaş yolları ile ilgili hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kan ve kan ürünleri ile bulaş olabilir",
+      "B": "Gebelik sırasında anneden bebeğe bulaş olabilir",
+      "C": "Doğum sırasında bulaş olabilir",
+      "D": "Oral mukoza yoluyla bulaş olabilir",
+      "E": "CYBH yalnızca vajinal ilişkiyle bulaşır; anal ve oral temas önemsizdir"
+     },
+     "dogru": "E",
+     "aciklama": "Bulaş vajinal, anal veya oral mukoza yoluyla olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): anal ve oral temas da bulaştırır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Vajinal akıntı, üretral akıntı ve genital ülser gibi başlıca klinik sendromları tanıyabilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi CYBH'nin başlıca klinik sendromlarından biri değildir?",
+     "secenekler": {
+      "A": "Üretral akıntı",
+      "B": "Vajinal akıntı",
+      "C": "Akut otitis media",
+      "D": "Genital ülser",
+      "E": "Anorektal akıntı"
+     },
+     "dogru": "C",
+     "aciklama": "CYBH vajinal/üretral/anorektal akıntı, genital ülser ve sistemik belirtilerle kendini gösterir.",
+     "sik_aciklamalari": {
+      "A": "Başlıca sendromdur; bu nedenle doğru seçenek değildir.",
+      "B": "Başlıca sendromdur; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: CYBH sendromu değildir.",
+      "D": "Başlıca sendromdur; bu nedenle doğru seçenek değildir.",
+      "E": "Başlıca sendromdur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "CYBH'de sendromik yaklaşımın avantajı hangisidir?",
+     "secenekler": {
+      "A": "Tanı testlerine hiç gerek kalmaması",
+      "B": "Etken bilinmeden klinik sendroma göre tedaviye başlanabilmesi",
+      "C": "Partner tedavisinin gereksizleşmesi",
+      "D": "Antibiyotik direncini tamamen önlemesi",
+      "E": "Yalnızca viral enfeksiyonlarda kullanılması"
+     },
+     "dogru": "B",
+     "aciklama": "Sendromik yaklaşım özellikle ülserli hastalıkta etken bilinmeden tedaviye başlamayı sağlar.",
+     "sik_aciklamalari": {
+      "A": "Testler tanıyı doğrulamak için gereklidir.",
+      "B": "Doğru: sendromik yaklaşımın avantajıdır.",
+      "C": "Partner tedavisi gereklidir.",
+      "D": "Direnci tamamen önlemez.",
+      "E": "Bakteriyel enfeksiyonlarda da kullanılır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Üretrit triadı hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Disparoni, postkoital kanama ve servikal eksuda",
+      "B": "Ateş, döküntü ve artrit",
+      "C": "Hematüri, kolik ve taş",
+      "D": "Üretral irritasyon, kaşıntı ve dizüri",
+      "E": "Vulvar kaşıntı, kokulu akıntı ve ödem"
+     },
+     "dogru": "D",
+     "aciklama": "Üretrit triadı üretral irritasyon, kaşıntı ve dizüridir; akut (gonokok) ve subakut/persistan (klamidya) ayrımı yapılır.",
+     "sik_aciklamalari": {
+      "A": "Bu servisit bulgularıdır.",
+      "B": "Bu sistemik/reaktif tablodur.",
+      "C": "Bu ürolitiyazis tablosudur.",
+      "D": "Doğru: üretrit triadıdır.",
+      "E": "Bu vajinit bulgularıdır."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Vajinit ve servisit ayırıcı tanısında muayene bulgularını ve direkt mikroskopi (KOH, serum fizyolojik, Gram) sonuçlarını yorumlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "%10 KOH eklenmesiyle ortaya çıkan amin (balık) kokusu hangi tanıyı destekler?",
+     "secenekler": {
+      "A": "Kandidiyazis",
+      "B": "Bakteriyel vajinozis",
+      "C": "Gonore",
+      "D": "Genital herpes",
+      "E": "Şankroid"
+     },
+     "dogru": "B",
+     "aciklama": "Amin kokusu testi bakteriyel vajinozis için tipiktir; tanı Amsel kriterleriyle konur.",
+     "sik_aciklamalari": {
+      "A": "Kandidada KOH ile maya hücreleri görülür, amin kokusu tipik değildir.",
+      "B": "Doğru: BV'nin tipik bulgusudur.",
+      "C": "Gonorede Gram negatif diplokok görülür.",
+      "D": "Herpeste veziküler lezyonlar görülür.",
+      "E": "Şankroid ülserli hastalıktır."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Serum fizyolojik ile yapılan direkt bakıda hareketli trofozoitler görülmesi hangi tanıyı koydurur?",
+     "secenekler": {
+      "A": "Kandidiyazis",
+      "B": "Bakteriyel vajinozis",
+      "C": "Trikomoniyazis",
+      "D": "Klamidya servisiti",
+      "E": "Sifilis"
+     },
+     "dogru": "C",
+     "aciklama": "Hareketli trofozoitler trikomoniyazis tanısını koydurur; metronidazol ve partner tedavisi başlanır.",
+     "sik_aciklamalari": {
+      "A": "Kandidada maya hücreleri görülür.",
+      "B": "BV'de clue cell görülür.",
+      "C": "Doğru: trikomonas tanısıdır.",
+      "D": "Klamidya direkt bakıda gösterilmez.",
+      "E": "Sifilis direkt bakıda trofozoit vermez."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [
+      "e28693ffa242"
+     ]
+    },
+    {
+     "id": "k1-17-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Vajinit ve servisit ayrımı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Vajinitte vulvar irritasyon görülmez",
+      "B": "Vajinitte postkoital kanama tipiktir",
+      "C": "Servisit hiçbir zaman PİH'e ilerlemez",
+      "D": "Servisitte disparoni, postkoital kanama ve servikal eksuda/kanama odakları görülür; servikal akıntı üst genital enfeksiyon açısından daha risklidir",
+      "E": "İkisi klinik olarak ayırt edilemez"
+     },
+     "dogru": "D",
+     "aciklama": "Vajinitte vulvar irritasyon ve eksuda; servisitte disparoni, postkoital kanama ve servikal eksuda ön plandadır.",
+     "sik_aciklamalari": {
+      "A": "Vajinitte vulvar irritasyon ön plandadır.",
+      "B": "Postkoital kanama servisite özgüdür.",
+      "C": "Servisit PİH'e ilerleyebilir.",
+      "D": "Doğru: ayırıcı bulgular doğrudur.",
+      "E": "Klinik olarak ayırt edilebilir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "e28693ffa242",
+     "soru": "Tıbbi Patoloji Tıbbi Patoloji Cinsel Yolla Bulaşan Hastalıklar Hangisi servikovajinal yayma sitolojisinde direkt olarak tesbit edilebilir?",
+     "secenekler": {
+      "A": "Treponema pallidum",
+      "B": "Neisseria gonorrhoeae",
+      "C": "HerpesSimpleks",
+      "D": "Trichomonas vaginalis",
+      "E": "Chlamydiatrachomatis"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Üretrit etkenlerini ve nongonokokal üretrit kavramını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Gram boyamada gram negatif diplokok saptanmayan üretrit/servisitte en olası etken hangisidir?",
+     "secenekler": {
+      "A": "Neisseria gonorrhoeae",
+      "B": "Chlamydia trachomatis",
+      "C": "Treponema pallidum",
+      "D": "Candida albicans",
+      "E": "HPV"
+     },
+     "dogru": "B",
+     "aciklama": "Nongonokokal üretrit/servisitte en olası etken C. trachomatis'tir; üretritte M. genitalium da etkendir.",
+     "sik_aciklamalari": {
+      "A": "Gonokok Gram boyamada diplokok olarak görülür.",
+      "B": "Doğru: nongonokokal enfeksiyonun en sık etkenidir.",
+      "C": "Sifilis ülser yapar.",
+      "D": "Kandida vajinit yapar.",
+      "E": "HPV siğil yapar; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Nongonokokal üretrit/servisitin tedavisinde kullanılan ilaçlar hangileridir?",
+     "secenekler": {
+      "A": "Flukonazol",
+      "B": "Penisilin G",
+      "C": "Azitromisin veya doksisiklin",
+      "D": "Asiklovir",
+      "E": "Metronidazol tek başına"
+     },
+     "dogru": "C",
+     "aciklama": "Nongonokokal üretrit/servisit tedavisi azitromisin veya doksisiklin içerir.",
+     "sik_aciklamalari": {
+      "A": "Flukonazol antifungaldir.",
+      "B": "Penisilin sifilis tedavisidir.",
+      "C": "Doğru: önerilen ilaçlardır.",
+      "D": "Asiklovir antiviraldir.",
+      "E": "Metronidazol trikomonas ve BV tedavisidir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Üretrit etkenleri ve klinik seyir eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Akut üretrit – klamidya; persistan üretrit – gonokok",
+      "B": "Akut üretrit – gonokok; subakut/persistan üretrit – klamidya",
+      "C": "T. vaginalis en sık üretrit etkenidir",
+      "D": "M. genitalium üretrit yapmaz",
+      "E": "Gram negatif diplokok klamidyayı gösterir"
+     },
+     "dogru": "B",
+     "aciklama": "Yakınma süresine göre akut (gonokok) ve subakut/persistan (klamidya) üretrit ayrımı yapılır.",
+     "sik_aciklamalari": {
+      "A": "Eşleştirme terstir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: klinik ayrım doğrudur.",
+      "C": "T. vaginalis nadiren üretrit yapar.",
+      "D": "M. genitalium üretrit etkenidir.",
+      "E": "Gram negatif diplokok gonokoku gösterir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": [
+      "d3-b-032"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-032",
+     "soru": "Otuz beş yaşında erkek hasta, 1 haftadır devam eden penis ucundan sarı renkli akıntı ve idrarda yanma şikâyeti ile polikliniğe başvuruyor. Hastanın üretral akıntı örneğinin Gram boyamasında her sahada 3 tane PMNL ve bu lökositlerin içinde gram negatif diplokoklar görülüyor. Bu olguda düşünülecek en olası klinik tablo ve etken mikroorganizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Epididimoorşit – Streptococcus pneumoniae",
+      "B": "Prostatit – Chlamydia trachomatis",
+      "C": "Üretrit – Neisseria gonorrhoeae",
+      "D": "Epididimoorşit – Mycoplasma genitalium",
+      "E": "Üretrit – Treponema pallidum"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Ürogenital enfeksiyonlarda asemptomatik seyir oranlarını cinsiyetlere göre karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Kadınlarda asemptomatik seyretme oranı en yüksek olan ürogenital enfeksiyon hangisidir?",
+     "secenekler": {
+      "A": "Genital herpes",
+      "B": "Gonore",
+      "C": "Trikomoniyazis",
+      "D": "Klamidya (%90'a varan)",
+      "E": "Şankroid"
+     },
+     "dogru": "D",
+     "aciklama": "Kadında klamidya %90'a varan, gonore %50'ye varan, trikomoniyazis %10–50 oranında asemptomatiktir.",
+     "sik_aciklamalari": {
+      "A": "Bu derste oran verilmemiştir.",
+      "B": "%50'ye varan oranda asemptomatiktir.",
+      "C": "%10–50 oranında asemptomatiktir.",
+      "D": "Doğru: en yüksek asemptomatik oran klamidyadadır.",
+      "E": "Ağrılı ülserle seyreder."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Erkeklerde klamidya enfeksiyonunun asemptomatik seyir oranı yaklaşık ne kadardır?",
+     "secenekler": {
+      "A": "%100",
+      "B": "%1",
+      "C": "%50'ye varan",
+      "D": "%5",
+      "E": "Erkeklerde hiç asemptomatik değildir"
+     },
+     "dogru": "C",
+     "aciklama": "Erkekte klamidya %50'ye varan oranda asemptomatiktir.",
+     "sik_aciklamalari": {
+      "A": "Tüm olgular asemptomatik değildir.",
+      "B": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: verilen orandır.",
+      "D": "Gerçek oranın altındadır.",
+      "E": "Erkekte de asemptomatik seyir sıktır."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Asemptomatik CYBH'lerin halk sağlığı açısından önemi hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca erkeklerde görülmeleri",
+      "B": "Hiçbir komplikasyon yapmamaları",
+      "C": "Kendiliğinden kalıcı bağışıklık oluşturmaları",
+      "D": "Tarama gerektirmemeleri",
+      "E": "Bulaşı sürdürmeleri ve PİH gibi komplikasyonlara yol açmaları nedeniyle taramanın önemli olması"
+     },
+     "dogru": "E",
+     "aciklama": "Sessiz enfeksiyonlar bulaşı sürdürür ve PİH gibi komplikasyonlara yol açar.",
+     "sik_aciklamalari": {
+      "A": "Her iki cinsiyette görülür.",
+      "B": "Komplikasyon yapabilirler.",
+      "C": "Kalıcı bağışıklık oluşmaz.",
+      "D": "Tarama önemlidir; bu nedenle doğru seçenek değildir.",
+      "E": "Doğru: taramanın gerekçesidir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "CYBH komplikasyonlarını (pelvik inflamatuvar hastalık, epididimoorşit, sistemik komplikasyonlar) tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Pelvik inflamatuvar hastalığın (PİH) kapsamına aşağıdakilerden hangisi girmez?",
+     "secenekler": {
+      "A": "Endometrit",
+      "B": "Sistit",
+      "C": "Salpenjit",
+      "D": "Tuboovaryan abse",
+      "E": "Pelvik peritonit"
+     },
+     "dogru": "B",
+     "aciklama": "PİH endometrit, salpenjit, ooforit, tuboovaryan abse ve pelvik peritoniti kapsar.",
+     "sik_aciklamalari": {
+      "A": "PİH kapsamındadır; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: sistit alt üriner enfeksiyondur.",
+      "C": "PİH kapsamındadır; bu nedenle doğru seçenek değildir.",
+      "D": "PİH kapsamındadır; bu nedenle doğru seçenek değildir.",
+      "E": "PİH kapsamındadır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Disemine gonokok enfeksiyonunun sistemik komplikasyonları hangileridir?",
+     "secenekler": {
+      "A": "Pnömoni ve plevrit",
+      "B": "Menenjit ve ensefalit",
+      "C": "Gonokoksik artrit ve perihepatit",
+      "D": "Nefrolitiyazis",
+      "E": "Hipotiroidi"
+     },
+     "dogru": "C",
+     "aciklama": "Sistemik komplikasyonlar reaktif artrit, gonokoksik artrit ve perihepatittir.",
+     "sik_aciklamalari": {
+      "A": "Bu derste verilen komplikasyonlar değildir.",
+      "B": "Bu derste verilen komplikasyonlar değildir.",
+      "C": "Doğru: tipik sistemik komplikasyonlardır.",
+      "D": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "E": "İlgisizdir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Ateşli skrotal ağrı ve ödemle başvuran erkekte epididimit düşünülürken ayırıcı tanıda yer alması gerekenler hangileridir?",
+     "secenekler": {
+      "A": "Akut sistit",
+      "B": "Yalnızca hidrosel",
+      "C": "Yalnızca varikosel",
+      "D": "Torsiyon, infarkt, abse ve nekrotizan fasiit",
+      "E": "Böbrek taşı"
+     },
+     "dogru": "D",
+     "aciklama": "Epididimit/prostatit skrotal ağrı-ödem ve ağrılı ejakülasyonla seyreder; ateşte torsiyon, infarkt, abse ve nekrotizan fasiit ayırıcı tanıdadır.",
+     "sik_aciklamalari": {
+      "A": "Sistit skrotal ağrı yapmaz.",
+      "B": "Hidrosel ağrısızdır.",
+      "C": "Varikosel akut ateşli tablo yapmaz.",
+      "D": "Doğru: ayırıcı tanıda yer alanlardır.",
+      "E": "Taş genellikle skrotal ödem yapmaz."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": [
+      "7854c9c91611"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "7854c9c91611",
+     "soru": "Akut enfeksiyöz orşit tablosuyla gelen genç bir erkekte yapılması gereken en önemli ayırıcı tanı hangisidir?",
+     "secenekler": {
+      "A": "Testis torsiyonu",
+      "B": "Varikorsel",
+      "C": "Tüberküloz orşiti",
+      "D": "Hidrosel",
+      "E": "Akut epididimit"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "CYBH tanısında direkt bakı, nükleik asit amplifikasyon testleri (NAAT) ve kültürün yerini bilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "CYBH tanısında yüksek duyarlılığı nedeniyle ilk seçenek kabul edilen yöntem hangisidir?",
+     "secenekler": {
+      "A": "Ultrasonografi",
+      "B": "Kültür",
+      "C": "Direkt bakı",
+      "D": "Serum biyokimyası",
+      "E": "Nükleik asit amplifikasyon testleri (NAAT)"
+     },
+     "dogru": "E",
+     "aciklama": "NAAT yüksek duyarlılıkla ilk seçenektir; kültür direnç takibinde gereklidir.",
+     "sik_aciklamalari": {
+      "A": "USG CYBH tanısı koydurmaz.",
+      "B": "Kültür direnç takibi için gereklidir.",
+      "C": "Direkt bakı hızlıdır ama duyarlılığı sınırlıdır.",
+      "D": "Biyokimya tanı koydurmaz.",
+      "E": "Doğru: ilk seçenektir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Genital herpes tanısında kullanılan yöntem hangisidir?",
+     "secenekler": {
+      "A": "Gram boyama",
+      "B": "KOH preparatı",
+      "C": "NAAT; klinik şüphede HSV-2'ye spesifik antikor",
+      "D": "Amin kokusu testi",
+      "E": "Karanlık alan mikroskopisi"
+     },
+     "dogru": "C",
+     "aciklama": "Genital herpes tanısı NAAT ile konur; klinik şüphede HSV-2 spesifik antikor bakılır.",
+     "sik_aciklamalari": {
+      "A": "Gram boyama bakteriyel etkenler içindir.",
+      "B": "KOH mantar ve BV için kullanılır.",
+      "C": "Doğru: tanı yöntemidir.",
+      "D": "Amin testi BV içindir.",
+      "E": "Karanlık alan mikroskopisi sifilis için kullanılır."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "CYBH tanı yöntemlerinin yeri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "NAAT yüksek duyarlılıklıdır",
+      "B": "Kültür antibiyotik direnç takibini sağlar",
+      "C": "Direkt bakı hızlı ve ucuz bir ilk basamak olabilir",
+      "D": "Şankroidde kesin tanı kültürle konur",
+      "E": "Kültür, NAAT'a göre her zaman daha duyarlıdır ve ilk seçenektir"
+     },
+     "dogru": "E",
+     "aciklama": "NAAT duyarlılığı yüksek olduğundan ilk seçenektir; kültür esas olarak direnç takibinde değerlidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): NAAT ilk seçenektir."
+     },
+     "bilgi": [
+      16,
+      17,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Neisseria gonorrhoeae kültürünün özel koşullarını ve antibiyogram avantajını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Neisseria gonorrhoeae kültürünün en önemli avantajı hangisidir?",
+     "secenekler": {
+      "A": "En yüksek duyarlılığa sahip olması",
+      "B": "Sonucun dakikalar içinde çıkması",
+      "C": "Özel koşul gerektirmemesi",
+      "D": "Antibiyogram yapılabilmesi",
+      "E": "Viral etkenleri de göstermesi"
+     },
+     "dogru": "D",
+     "aciklama": "Kültürle antibiyogram yapılarak dirence göre tedavi planlanır.",
+     "sik_aciklamalari": {
+      "A": "NAAT daha duyarlıdır.",
+      "B": "Kültür zaman alır; bu nedenle doğru seçenek değildir.",
+      "C": "Özel koşullar gerekir.",
+      "D": "Doğru: kültürün avantajıdır.",
+      "E": "Bakteri kültürüdür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "N. gonorrhoeae kültürü için gerekli özel koşullar hangileridir?",
+     "secenekler": {
+      "A": "Örneğin dondurulup ertesi hafta ekilmesi",
+      "B": "Hasta başı ekim ve %10 CO2'li ortam",
+      "C": "Anaerob ortam ve oda ısısı",
+      "D": "Yalnızca kanlı agar ve aerob ortam, gecikmeli ekim",
+      "E": "Özel koşul gerekmez"
+     },
+     "dogru": "B",
+     "aciklama": "Gonokok hassas bir bakteridir; hasta başı ekim ve CO2'li ortam gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Dondurma bakteriyi öldürebilir.",
+      "B": "Doğru: kültür koşullarıdır.",
+      "C": "Anaerob ortam uygun değildir.",
+      "D": "Gecikme üremeyi engeller.",
+      "E": "Özel koşul gerekir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Gonore tedavisinde güncel antibiyograma göre tedavi planlanmasının gerekçesi hangisidir?",
+     "secenekler": {
+      "A": "Tedavinin gereksiz olması",
+      "B": "Gonokokun hiç direnç geliştirmemesi",
+      "C": "Antibiyotiklerin gonoreyi etkilememesi",
+      "D": "Gonorenin viral etiyolojisi",
+      "E": "Gonokokta penisilinaz, PBP değişimi, tetrasiklin ve kinolon direnci gibi gelişen direnç mekanizmaları"
+     },
+     "dogru": "E",
+     "aciklama": "Direnç gelişimi nedeniyle kültür ve antibiyogram tedavi seçimine rehberlik eder.",
+     "sik_aciklamalari": {
+      "A": "Tedavi gereklidir; bu nedenle doğru seçenek değildir.",
+      "B": "Direnç gelişir; bu nedenle doğru seçenek değildir.",
+      "C": "Uygun antibiyotiklerle tedavi edilir.",
+      "D": "Bakteriyeldir; bu nedenle doğru seçenek değildir.",
+      "E": "Doğru: direnç mekanizmalarıdır."
+     },
+     "bilgi": [
+      17,
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Trikomoniyazis tedavisini, partner tedavisini ve cinsel perhiz süresini bilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Trikomoniyazis tedavisinde önerilen rejim hangisidir?",
+     "secenekler": {
+      "A": "Flukonazol 150 mg tek doz",
+      "B": "Seftriakson 250 mg tek doz",
+      "C": "Asiklovir 5 gün",
+      "D": "Metronidazol 2 g tek doz",
+      "E": "Penisilin G"
+     },
+     "dogru": "D",
+     "aciklama": "Trikomoniyazis tedavisi metronidazol 2 g tek dozdur; gebede de aynıdır.",
+     "sik_aciklamalari": {
+      "A": "Kandida tedavisidir.",
+      "B": "Gonore tedavisinin parçasıdır.",
+      "C": "Herpes tedavisidir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: önerilen tedavidir.",
+      "E": "Sifilis tedavisidir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Trikomoniyazis tedavisinde cinsel perhiz süresi ne kadardır?",
+     "secenekler": {
+      "A": "6 ay",
+      "B": "Perhiz gerekmez",
+      "C": "Tedavi süresince ve sonrasında 7 gün",
+      "D": "1 gün",
+      "E": "1 yıl"
+     },
+     "dogru": "C",
+     "aciklama": "Partner tedavisi yapılır ve tedavi ile sonrasında 7 gün cinsel perhiz önerilir.",
+     "sik_aciklamalari": {
+      "A": "Gereksiz uzunluktadır.",
+      "B": "Perhiz gereklidir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: önerilen süredir.",
+      "D": "Yetersizdir; bu nedenle doğru seçenek değildir.",
+      "E": "Gereksiz uzunluktadır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Trikomoniyazis tedavisinde partnerin eş zamanlı tedavisinin amacı hangisidir?",
+     "secenekler": {
+      "A": "Partnerin hiçbir zaman enfekte olmaması",
+      "B": "İlaç direncinin artırılması",
+      "C": "Tedavi süresinin uzatılması",
+      "D": "Gebelikte tedavinin kontrendike olması",
+      "E": "Reenfeksiyonun önlenmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Partner eş zamanlı tedavi edilmezse 'ping-pong' reenfeksiyon gelişir.",
+     "sik_aciklamalari": {
+      "A": "Partner sıklıkla enfektedir.",
+      "B": "Direnç artırılması amaç değildir.",
+      "C": "Süre uzatılmaz; bu nedenle doğru seçenek değildir.",
+      "D": "Gebede aynı tedavi uygulanır.",
+      "E": "Doğru: reenfeksiyon önlenir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Chlamydia trachomatis enfeksiyonu ve lenfogranüloma venereum tedavisini bilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Chlamydia trachomatis enfeksiyonunda standart tedavi hangisidir?",
+     "secenekler": {
+      "A": "Metronidazol 2 g tek doz",
+      "B": "Azitromisin 1 g tek doz",
+      "C": "Flukonazol",
+      "D": "Asiklovir",
+      "E": "İmikimod"
+     },
+     "dogru": "B",
+     "aciklama": "Klamidya tedavisi azitromisin 1 g tek dozdur; alternatif levofloksasin 7 gündür.",
+     "sik_aciklamalari": {
+      "A": "Trikomonas tedavisidir.",
+      "B": "Doğru: standart tedavidir.",
+      "C": "Antifungaldir; bu nedenle doğru seçenek değildir.",
+      "D": "Antiviraldir; bu nedenle doğru seçenek değildir.",
+      "E": "Siğil tedavisidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Gebe kadında klamidya enfeksiyonunun tedavisi ve izlemi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Doksisiklin ilk tercihtir",
+      "B": "Levofloksasin tercih edilir",
+      "C": "Tedavi doğuma kadar ertelenir",
+      "D": "Kontrol gerekmez",
+      "E": "Azitromisin veya eritromisin verilir; 3–4 hafta sonra kontrol yapılır"
+     },
+     "dogru": "E",
+     "aciklama": "Gebede fetal güvenlik açısından azitromisin/eritromisin seçilir ve 3–4 hafta sonra kontrol yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doksisiklin gebelikte kullanılmaz.",
+      "B": "Kinolonlar gebede kontrendikedir.",
+      "C": "Tedavi ertelenmez; bu nedenle doğru seçenek değildir.",
+      "D": "Kontrol önerilir; bu nedenle doğru seçenek değildir.",
+      "E": "Doğru: gebede tedavi yaklaşımıdır."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Lenfogranüloma venereumun klinik özellikleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Lenfadenopati yapmaz",
+      "B": "Viral bir enfeksiyondur",
+      "C": "C. trachomatis'e bağlıdır; tek/bilateral lenfadenopati, papül ve herpes benzeri ülserle seyreder ve bölgesel LAP ayırıcı tanısında düşünülmelidir",
+      "D": "Etkeni H. ducreyi'dir",
+      "E": "Yalnızca vajinal akıntıyla seyreder"
+     },
+     "dogru": "C",
+     "aciklama": "LGV, C. trachomatis'in özel serovarlarıyla oluşan ve belirgin bölgesel lenfadenopatiyle seyreden bir CYBH'dir.",
+     "sik_aciklamalari": {
+      "A": "Belirgin lenfadenopati yapar.",
+      "B": "Bakteriyel etkenlidir.",
+      "C": "Doğru: LGV'nin klinik tablosudur.",
+      "D": "H. ducreyi şankroid etkenidir.",
+      "E": "Ülser ve lenfadenopatiyle seyreder."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Gonorede antimikrobiyal direnç mekanizmalarını ve kombine tedavi şemalarını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q34",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Gonorenin standart kombine tedavi şeması hangisidir?",
+     "secenekler": {
+      "A": "Siprofloksasin tek başına",
+      "B": "Penisilin G tek başına",
+      "C": "Tetrasiklin tek başına",
+      "D": "Seftriakson 250 mg tek doz + azitromisin 1 g",
+      "E": "Metronidazol + flukonazol"
+     },
+     "dogru": "D",
+     "aciklama": "Direnç nedeniyle monoterapi yerine kombine tedavi zorunludur.",
+     "sik_aciklamalari": {
+      "A": "Kinolon direnci vardır.",
+      "B": "Penisilinaz direnci nedeniyle uygun değildir.",
+      "C": "Tetrasiklin direnci vardır.",
+      "D": "Doğru: standart kombine tedavidir.",
+      "E": "Bu kombinasyon gonore tedavisi değildir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q35",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Gonokokta antimikrobiyal direnç mekanizmaları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Penisilinaz üretimi",
+      "B": "Hücre duvarı olmaması",
+      "C": "Penisilin bağlayan protein (PBP) değişimi",
+      "D": "Tetrasiklin direnci",
+      "E": "Kinolon direnci"
+     },
+     "dogru": "B",
+     "aciklama": "Gonokok direnci penisilinaz, PBP değişimi, tetrasiklin ve kinolon direncini kapsar; gonokokun hücre duvarı vardır.",
+     "sik_aciklamalari": {
+      "A": "Direnç mekanizmasıdır.",
+      "B": "Doğru: gonokok hücre duvarına sahiptir.",
+      "C": "Direnç mekanizmasıdır.",
+      "D": "Direnç mekanizmasıdır.",
+      "E": "Direnç mekanizmasıdır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q36",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Sefalosporin alerjisi olan gonoreli hastada önerilen alternatif tedavi hangisidir?",
+     "secenekler": {
+      "A": "Tedavi verilmez",
+      "B": "Seftriakson + azitromisin",
+      "C": "Yalnızca penisilin",
+      "D": "Metronidazol",
+      "E": "Gemifloksasin veya gentamisin + azitromisin 2 g"
+     },
+     "dogru": "E",
+     "aciklama": "Azitromisin alerjisinde doksisiklin; sefalosporin alerjisinde gemifloksasin veya gentamisin + azitromisin 2 g kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Tedavi gereklidir; bu nedenle doğru seçenek değildir.",
+      "B": "Seftriakson sefalosporindir.",
+      "C": "Penisilin direnç nedeniyle uygun değildir.",
+      "D": "Metronidazol gonokoka etkili değildir.",
+      "E": "Doğru: önerilen alternatif şemadır."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "Pelvik inflamatuvar hastalıkta hastaneye yatış endikasyonlarını ve intravenöz antibiyotik rejimlerini bilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q37",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi PİH'de hastaneye yatış endikasyonudur?",
+     "secenekler": {
+      "A": "Hafif pelvik ağrı, ateşsiz",
+      "B": "Tuboovaryan abse",
+      "C": "Oral tedaviye iyi yanıt",
+      "D": "Gebelik olmaması",
+      "E": "Bulantı-kusma olmaması"
+     },
+     "dogru": "B",
+     "aciklama": "Yatış endikasyonları: tuboovaryan abse, gebelik, bulantı-kusma ve ateş, oral tedaviye yanıtsızlık.",
+     "sik_aciklamalari": {
+      "A": "Ayaktan tedavi edilebilir.",
+      "B": "Doğru: yatış endikasyonudur.",
+      "C": "Yatış gerekmez; bu nedenle doğru seçenek değildir.",
+      "D": "Gebelik yatış endikasyonudur, yokluğu değildir.",
+      "E": "Kusma yatış endikasyonudur, yokluğu değildir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q38",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "PİH'de intravenöz tedavi rejimlerinden biri hangisidir?",
+     "secenekler": {
+      "A": "Metronidazol 2 g tek doz",
+      "B": "Flukonazol tek doz",
+      "C": "Asiklovir",
+      "D": "Sefoksitin 4x2 g + doksisiklin 2x100 mg",
+      "E": "Penisilin G tek başına"
+     },
+     "dogru": "D",
+     "aciklama": "Sefoksitin + doksisiklin veya ampisilin/sulbaktam + doksisiklin; düzelmeden 24–48 saat sonra oral tedaviye geçilip toplam 14 gün tamamlanır.",
+     "sik_aciklamalari": {
+      "A": "Trikomonas tedavisidir.",
+      "B": "Antifungaldir; bu nedenle doğru seçenek değildir.",
+      "C": "Antiviraldir; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: önerilen IV rejimdir.",
+      "E": "PİH için uygun değildir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q39",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "PİH tedavisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Klinik düzelmeden 24–48 saat sonra oral doksisikline geçilir",
+      "B": "Abse varlığında klindamisin eklenir",
+      "C": "Toplam tedavi süresi 14 gündür",
+      "D": "Uygun tedavi abse ve infertilite riskini azaltır",
+      "E": "Gebelikte PİH her zaman ayaktan oral tedaviyle yönetilir"
+     },
+     "dogru": "E",
+     "aciklama": "Gebelik PİH'de hastaneye yatış endikasyonudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): gebelikte yatış gerekir."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 14,
+   "metin": "Epididimit/epididimoorşit etkenlerini, ayırıcı tanısını ve tedavisini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q40",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Epididimit/epididimoorşitin cinsel yolla bulaşan etkenleri hangileridir?",
+     "secenekler": {
+      "A": "Candida ve Aspergillus",
+      "B": "HPV ve HSV",
+      "C": "C. trachomatis ve N. gonorrhoeae",
+      "D": "T. pallidum ve H. ducreyi",
+      "E": "Molluscum contagiosum"
+     },
+     "dogru": "C",
+     "aciklama": "Epididimit etkenleri C. trachomatis, N. gonorrhoeae ve enterik bakterilerdir.",
+     "sik_aciklamalari": {
+      "A": "Mantarlar tipik etken değildir.",
+      "B": "Tipik epididimit etkeni değildir.",
+      "C": "Doğru: CYBH ilişkili etkenlerdir.",
+      "D": "Ülserli hastalık etkenleridir.",
+      "E": "Deri lezyonu yapar; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q41",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Gonore dışlanmış ve enterik etiyoloji düşünülen epididimoorşitte önerilen tedavi hangisidir?",
+     "secenekler": {
+      "A": "Seftriakson 250 mg tek doz + levofloksasin 500 mg 10 gün",
+      "B": "Metronidazol 2 g tek doz",
+      "C": "Asiklovir",
+      "D": "Flukonazol",
+      "E": "Yalnızca istirahat"
+     },
+     "dogru": "A",
+     "aciklama": "Etiyolojik ipuçları (insertif anal seks, cerrahi öykü) tedaviyi yönlendirir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: önerilen tedavidir.",
+      "B": "Trikomonas tedavisidir.",
+      "C": "Antiviraldir; bu nedenle doğru seçenek değildir.",
+      "D": "Antifungaldir; bu nedenle doğru seçenek değildir.",
+      "E": "Antibiyotik gereklidir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q42",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Epididimoorşitte etiyolojinin enterik bakteri olabileceğini düşündüren öykü hangisidir?",
+     "secenekler": {
+      "A": "İnsertif anal seks veya yakın zamanda ürolojik cerrahi",
+      "B": "Yalnızca heteroseksüel vajinal ilişki",
+      "C": "Ailede enürezis",
+      "D": "Kabakulak aşısı",
+      "E": "Genç yaş ve tek partner"
+     },
+     "dogru": "A",
+     "aciklama": "İnsertif anal seks ve cerrahi/enstrümantasyon öyküsü enterik etkenleri düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: enterik etiyoloji ipuçlarıdır.",
+      "B": "Daha çok CYBH etkenlerini düşündürür.",
+      "C": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "D": "Aşı epididimit etiyolojisini belirlemez.",
+      "E": "CYBH etkenlerini düşündürür."
+     },
+     "bilgi": [
+      14,
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 15,
+   "metin": "Genital herpes enfeksiyonunun özelliklerini ve tanı yöntemini özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q43",
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "Genital herpesin en sık etkeni hangisidir?",
+     "secenekler": {
+      "A": "HSV-2",
+      "B": "HPV 6",
+      "C": "CMV",
+      "D": "EBV",
+      "E": "HBV"
+     },
+     "dogru": "A",
+     "aciklama": "Genital herpes genellikle HSV-2 ile oluşur; HSV-1 oranı artmaktadır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: en sık etkendir.",
+      "B": "HPV 6 siğil yapar; bu nedenle doğru seçenek değildir.",
+      "C": "CMV genital herpes etkeni değildir.",
+      "D": "EBV genital herpes etkeni değildir.",
+      "E": "HBV hepatit etkenidir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q44",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Genital herpes enfeksiyonunun özellikleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Ağrısız, tabanı sert tek ülser",
+      "B": "Ağrılı veziküler/ülseratif lezyonlar",
+      "C": "Latent enfeksiyon",
+      "D": "Rekürrens",
+      "E": "Subklinik viral saçılım"
+     },
+     "dogru": "A",
+     "aciklama": "Ağrısız, tabanı sert tek ülser sifilitik şankrın özelliğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: sifilise aittir.",
+      "B": "Herpes özelliğidir; bu nedenle doğru seçenek değildir.",
+      "C": "Herpes özelliğidir; bu nedenle doğru seçenek değildir.",
+      "D": "Herpes özelliğidir; bu nedenle doğru seçenek değildir.",
+      "E": "Herpes özelliğidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q45",
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "Genital herpesin ilk atağında görülebilecek ciddi bulgular hangileridir?",
+     "secenekler": {
+      "A": "Ciddi ülserasyon ve nörolojik tutulum",
+      "B": "Hiçbir semptom olmaz",
+      "C": "Yalnızca kaşıntı",
+      "D": "Karnabahar görünümlü siğil",
+      "E": "Ağrısız lenfadenopati"
+     },
+     "dogru": "A",
+     "aciklama": "İlk atak tekrarlayan ataklardan daha ağırdır; ciddi ülserasyon ve nörolojik tutulum olabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ilk atağın ciddi bulgularıdır.",
+      "B": "Semptomatik olabilir.",
+      "C": "Daha ağır bulgular olabilir.",
+      "D": "Siğil HPV bulgusudur.",
+      "E": "Ağrısız LAP sifilisi düşündürür."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 16,
+   "metin": "Şankroidin (ulkus molle) etkenini, klinik bulanı ve tedavisini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q46",
+     "kazanim": 16,
+     "zorluk": "kolay",
+     "soru": "Şankroidin (ulkus molle) etkeni hangisidir?",
+     "secenekler": {
+      "A": "Haemophilus ducreyi",
+      "B": "Treponema pallidum",
+      "C": "HSV-2",
+      "D": "Klebsiella granulomatis",
+      "E": "Chlamydia trachomatis"
+     },
+     "dogru": "A",
+     "aciklama": "Şankroid H. ducreyi ile oluşan ağrılı genital ülserdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: şankroid etkenidir.",
+      "B": "Sifilis etkenidir; bu nedenle doğru seçenek değildir.",
+      "C": "Genital herpes etkenidir.",
+      "D": "Granuloma inguinale etkenidir.",
+      "E": "LGV ve üretrit etkenidir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q47",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Şankroidde Giemsa/Gram boyamada görülen tipik dizilim hangisidir?",
+     "secenekler": {
+      "A": "Balık sürüsü ve tren yolu",
+      "B": "Hücre içi diplokok",
+      "C": "Clue cell",
+      "D": "Cowdry A inklüzyonu",
+      "E": "Tomurcuklanan maya"
+     },
+     "dogru": "A",
+     "aciklama": "Şankroidde hızla ülserleşen, pürülan tabanlı ağrılı lezyon ve balık sürüsü/tren yolu dizilimi görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tipik boyanma görünümüdür.",
+      "B": "Gonoreye aittir; bu nedenle doğru seçenek değildir.",
+      "C": "BV'ye aittir; bu nedenle doğru seçenek değildir.",
+      "D": "Herpese aittir; bu nedenle doğru seçenek değildir.",
+      "E": "Kandidaya aittir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q48",
+     "kazanim": 16,
+     "zorluk": "zor",
+     "soru": "Ağrılı, pürülan tabanlı genital ülseri olan, sifilis ve HSV testleri negatif hastada önerilen tedavi hangisidir?",
+     "secenekler": {
+      "A": "Azitromisin 1 g tek doz veya seftriakson 250 mg tek doz",
+      "B": "Asiklovir 7 gün",
+      "C": "Benzatin penisilin",
+      "D": "Flukonazol",
+      "E": "İmikimod"
+     },
+     "dogru": "A",
+     "aciklama": "Tablo şankroidi destekler; tek doz azitromisin veya seftriakson etkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: şankroid tedavisidir.",
+      "B": "HSV negatif olduğundan uygun değildir.",
+      "C": "Sifilis negatiftir; bu nedenle doğru seçenek değildir.",
+      "D": "Antifungaldir; bu nedenle doğru seçenek değildir.",
+      "E": "Siğil tedavisidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 17,
+   "metin": "Anogenital siğilin klinik görünümünü ve tedavi seçeneklerini listeleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-17-q49",
+     "kazanim": 17,
+     "zorluk": "kolay",
+     "soru": "Anogenital siğilin (kondiloma akuminata) tipik klinik görünümü hangisidir?",
+     "secenekler": {
+      "A": "Yumuşak, karnabahar görünümünde, ağrısız lezyonlar",
+      "B": "Ağrılı veziküller",
+      "C": "Tabanı sert ağrısız tek ülser",
+      "D": "Pürülan tabanlı ağrılı ülser",
+      "E": "Köpüklü sarı-yeşil akıntı"
+     },
+     "dogru": "A",
+     "aciklama": "Anogenital siğil tek veya çok sayıda, yumuşak, karnabahar görünümlü ağrısız lezyonlardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tipik görünümdür.",
+      "B": "Herpese aittir; bu nedenle doğru seçenek değildir.",
+      "C": "Sifilise aittir; bu nedenle doğru seçenek değildir.",
+      "D": "Şankroide aittir; bu nedenle doğru seçenek değildir.",
+      "E": "Trikomonasa aittir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q50",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi anogenital siğil tedavi seçeneklerinden biri değildir?",
+     "secenekler": {
+      "A": "Metronidazol",
+      "B": "Podofilotoksin",
+      "C": "İmikimod",
+      "D": "Kriyoterapi",
+      "E": "Triklorasetik asit"
+     },
+     "dogru": "A",
+     "aciklama": "Tedavi podofilotoksin, imikimod, kriyoterapi, TCA ve cerrahi/ablatif yöntemlerdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: metronidazol siğil tedavisi değildir.",
+      "B": "Tedavi seçeneğidir; bu nedenle doğru seçenek değildir.",
+      "C": "Tedavi seçeneğidir; bu nedenle doğru seçenek değildir.",
+      "D": "Tedavi seçeneğidir; bu nedenle doğru seçenek değildir.",
+      "E": "Tedavi seçeneğidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-17-q51",
+     "kazanim": 17,
+     "zorluk": "zor",
+     "soru": "Anogenital siğil tanısında kesin tanı/doğrulama için kullanılabilen yöntem hangisidir?",
+     "secenekler": {
+      "A": "Biyopsi",
+      "B": "KOH preparatı",
+      "C": "Amin kokusu testi",
+      "D": "Gram boyama",
+      "E": "Karanlık alan mikroskopisi"
+     },
+     "dogru": "A",
+     "aciklama": "Anogenital siğil tanısında biyopsi kullanılır; histolojide koilositoz görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tanıda biyopsi kullanılır.",
+      "B": "KOH mantar ve BV içindir.",
+      "C": "Amin testi BV içindir.",
+      "D": "Gram boyama bakteriler içindir.",
+      "E": "Karanlık alan sifilis içindir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": [
+      "61384be5d1e3"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "61384be5d1e3",
+     "soru": "Kadınlarda servikal Üriner Sistem Enfeksiyonu ve Cinsel Yolla Bulaşan Hastalıklar kansere yol açabilen cinsel yolla bulaşan hastalık hangisidir?",
+     "secenekler": {
+      "A": "Klamidya Trachomatis",
+      "B": "Genital Herpes Enfeksiyonları",
+      "C": "Şankroid",
+      "D": "Trikomoniasiz",
+      "E": "Gonore"
+     },
+     "cevap": "B"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 51,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:29"
+}

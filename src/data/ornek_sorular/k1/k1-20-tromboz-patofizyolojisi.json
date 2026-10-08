@@ -1,0 +1,1405 @@
+{
+ "id": "k1-20-tromboz-patofizyolojisi",
+ "sira": 20,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Tromboz Patofizyolojisi",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-09-23",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Hemostaz ve tromboz kavramlarını tanımlayıp birbirinden ayırabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Canlıda damar içinde patolojik pıhtı (trombüs) oluşmasına ne ad verilir?",
+     "secenekler": {
+      "A": "Hemostaz",
+      "B": "Fibrinoliz",
+      "C": "Emboli",
+      "D": "Tromboz",
+      "E": "Konjesyon"
+     },
+     "dogru": "D",
+     "aciklama": "Hemostaz vasküler yaralanma sonrası kanamayı sınırlayan fizyolojik pıhtı oluşumudur; tromboz ise hemostatik yanıtın uygunsuz/aşırı aktivasyonuyla damar içinde patolojik trombüs oluşmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Hemostaz fizyolojik, kanamayı durduran süreçtir.",
+      "B": "Fibrinoliz pıhtının plazminle çözülmesidir.",
+      "C": "Emboli damar içinde taşınan ve uzak bir damarı tıkayan kitledir.",
+      "D": "Doğru. Hemostaz vasküler yaralanma sonrası kanamayı sınırlayan fizyolojik pıhtı oluşumudur; tromboz ise hemostatik yanıtın uygunsuz/aşırı aktivasyonuyla damar içinde patolojik trombüs oluşmasıdır.",
+      "E": "Konjesyon venöz drenaj bozukluğuyla pasif kan birikimidir."
+     },
+     "bilgi": [
+      1,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hemostaz ve tromboz ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hemostaz ve tromboz tamamen aynı fizyolojik süreçtir.",
+      "B": "Hemostaz her zaman patolojiktir.",
+      "C": "Tromboz yalnızca damar dışında gelişir.",
+      "D": "Tromboz normal hemostatik mekanizmaların uygunsuz veya aşırı aktivasyonudur ve kardiyovasküler ölümlerin büyük kısmının patolojik temelidir.",
+      "E": "Tromboz kanama eğilimini ifade eder."
+     },
+     "dogru": "D",
+     "aciklama": "Aynı mekanizmalar yaralanma yerinde koruyucu (hemostaz), uygunsuz yerde/aşırı olduğunda ise zararlıdır (tromboz).",
+     "sik_aciklamalari": {
+      "A": "Hemostaz fizyolojik, tromboz patolojiktir.",
+      "B": "Hemostaz kanamayı durduran fizyolojik yanıttır.",
+      "C": "Tromboz damar içinde gelişir.",
+      "D": "Doğru. Aynı mekanizmalar yaralanma yerinde koruyucu (hemostaz), uygunsuz yerde/aşırı olduğunda ise zararlıdır (tromboz).",
+      "E": "Kanama eğilimi hemorajik diyatezdir."
+     },
+     "bilgi": [
+      1,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Prokoagülan ve antikoagülan mekanizmalar arasındaki dengenin bozulmasının olası sonuçları ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Denge yalnızca kanama yönünde bozulabilir.",
+      "B": "Antikoagülan yöndeki bozukluk tromboza yol açar.",
+      "C": "Denge bozulması klinik sonuç doğurmaz.",
+      "D": "Denge prokoagülan yönde bozulursa tromboz, antikoagülan yönde bozulursa kanama eğilimi gelişir.",
+      "E": "Denge yalnızca trombositlerle sağlanır."
+     },
+     "dogru": "D",
+     "aciklama": "Hemostaz trombosit, pıhtılaşma faktörleri ve endotelin oluşturduğu bir dengedir; dengenin bozulma yönü tromboz veya kanamayı belirler.",
+     "sik_aciklamalari": {
+      "A": "Denge her iki yönde bozulabilir.",
+      "B": "Antikoagülan yöndeki bozukluk kanama eğilimi yapar.",
+      "C": "Tromboz ve kanama önemli klinik sonuçlardır.",
+      "D": "Doğru. Hemostaz trombosit, pıhtılaşma faktörleri ve endotelin oluşturduğu bir dengedir; dengenin bozulma yönü tromboz veya kanamayı belirler.",
+      "E": "Endotel ve pıhtılaşma faktörleri de dengenin bileşenidir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Normal hemostazın bileşenlerini ve basamaklarını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Hemostazın üç ana bileşeni aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Trombositler, pıhtılaşma faktörleri ve endotel hücreleri",
+      "B": "Eritrositler, lenfositler ve makrofajlar",
+      "C": "Albümin, globulin ve fibronektin",
+      "D": "Nötrofiller, eozinofiller ve bazofiller",
+      "E": "Kollajen, elastin ve laminin"
+     },
+     "dogru": "A",
+     "aciklama": "Hemostaz trombositler, pıhtılaşma faktörleri ve endotelin etkileşimiyle gerçekleşir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hemostaz trombositler, pıhtılaşma faktörleri ve endotelin etkileşimiyle gerçekleşir.",
+      "B": "Bu hücreler hemostazın ana bileşeni değildir.",
+      "C": "Bunlar plazma ve matriks proteinleridir; ana bileşen sınıflaması değildir.",
+      "D": "Granülositler hemostazın ana bileşeni değildir.",
+      "E": "Bunlar hücre dışı matriks proteinleridir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Damar yaralanmasından sonra hemostazın basamakları aşağıdakilerin hangisinde doğru sırayla verilmiştir?",
+     "secenekler": {
+      "A": "Sekonder hemostaz → vazokonstriksiyon → primer hemostaz → pıhtı stabilizasyonu",
+      "B": "Primer hemostaz → pıhtı stabilizasyonu → vazokonstriksiyon → sekonder hemostaz",
+      "C": "Arteriyel vazokonstriksiyon → primer hemostaz → sekonder hemostaz → pıhtı stabilizasyonu ve çözülme",
+      "D": "Fibrinoliz → vazokonstriksiyon → primer hemostaz",
+      "E": "Pıhtı stabilizasyonu → sekonder hemostaz → primer hemostaz"
+     },
+     "dogru": "C",
+     "aciklama": "Önce nörojenik refleks ve endotelinle vazokonstriksiyon, sonra trombosit tıkacı (primer), ardından fibrin oluşumu (sekonder) ve son olarak pıhtı stabilizasyonu-çözülme gerçekleşir.",
+     "sik_aciklamalari": {
+      "A": "Vazokonstriksiyon ilk basamaktır.",
+      "B": "Vazokonstriksiyon ilk basamaktır.",
+      "C": "Doğru sıralama. Önce nörojenik refleks ve endotelinle vazokonstriksiyon, sonra trombosit tıkacı (primer), ardından fibrin oluşumu (sekonder) ve son olarak pıhtı stabilizasyonu-çözülme gerçekleşir.",
+      "D": "Fibrinoliz son aşamadadır.",
+      "E": "Stabilizasyon son basamaktır."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Primer ve sekonder hemostaz ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Primer hemostazda subendotelyal kollajen ve vWF açığa çıkar.",
+      "B": "Primer hemostaz gevşek bir trombosit tıkacı oluşturur.",
+      "C": "Sekonder hemostazda doku faktörü faktör VII ile kompleks yaparak kaskadı başlatır.",
+      "D": "Sekonder hemostaz, trombosit tıkacı oluşmadan önce gerçekleşen ilk savunmadır.",
+      "E": "Trombin fibrinojeni fibrine çevirir ve fibrin ağı trombosit tıkacını güçlendirir."
+     },
+     "dogru": "D",
+     "aciklama": "İlk hemostatik savunma primer hemostazdaki trombosit tıkacıdır; sekonder hemostaz fibrin ağıyla bu tıkacı güçlendirir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: primer hemostazda subendotelyal kollajen ve vWF açığa çıkar.",
+      "B": "Doğru ifade: primer hemostaz gevşek bir trombosit tıkacı oluşturur.",
+      "C": "Doğru ifade: sekonder hemostazda doku faktörü faktör VII ile kompleks yaparak kaskadı başlatır.",
+      "D": "Yanlış ifade (aranan cevap). İlk hemostatik savunma primer hemostazdaki trombosit tıkacıdır; sekonder hemostaz fibrin ağıyla bu tıkacı güçlendirir.",
+      "E": "Doğru ifade: trombin fibrinojeni fibrine çevirir ve fibrin ağı trombosit tıkacını güçlendirir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Trombositlerin yapısını, granüllerini ve salgı içeriklerini sıralayabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Trombositlerin yoğun (dens) granüllerinde bulunan ve trombosit toplanmasını sürdüren molekül aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fibrinojen",
+      "B": "von Willebrand faktörü",
+      "C": "ADP",
+      "D": "PDGF",
+      "E": "Fibronektin"
+     },
+     "dogru": "C",
+     "aciklama": "Yoğun granüllerde ADP, ATP, Ca²⁺, serotonin ve epinefrin; alfa granüllerde fibrinojen, faktör V, vWF, fibronektin, PDGF ve TGF-β bulunur.",
+     "sik_aciklamalari": {
+      "A": "Fibrinojen alfa granül içeriğidir.",
+      "B": "vWF alfa granül içeriğidir.",
+      "C": "Doğru. Yoğun granüllerde ADP, ATP, Ca²⁺, serotonin ve epinefrin; alfa granüllerde fibrinojen, faktör V, vWF, fibronektin, PDGF ve TGF-β bulunur.",
+      "D": "PDGF alfa granül içeriğidir.",
+      "E": "Fibronektin alfa granül içeriğidir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Trombosit granülleri ve içerikleri eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Alfa granül – fibrinojen",
+      "B": "Alfa granül – faktör V",
+      "C": "Alfa granül – PDGF ve TGF-β",
+      "D": "Yoğun granül – von Willebrand faktörü",
+      "E": "Yoğun granül – serotonin ve kalsiyum"
+     },
+     "dogru": "D",
+     "aciklama": "vWF alfa granüllerde depolanır; yoğun granüller ADP, ATP, Ca²⁺, serotonin ve epinefrin içerir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: alfa granül – fibrinojen.",
+      "B": "Doğru eşleştirme: alfa granül – faktör V.",
+      "C": "Doğru eşleştirme; onarımda da rol oynar.",
+      "D": "Yanlış eşleştirme (aranan cevap). vWF alfa granüllerde depolanır; yoğun granüller ADP, ATP, Ca²⁺, serotonin ve epinefrin içerir.",
+      "E": "Doğru eşleştirme: yoğun granül – serotonin ve kalsiyum."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Trombosit granül içeriklerinin salınmasının hemostazdaki işlevsel sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Trombosit agregasyonunu durdurmak",
+      "B": "Endotelden prostasiklin salınımını artırmak",
+      "C": "Fibrini yıkmak",
+      "D": "Agregasyonu ve yeni trombositlerin toplanmasını sürdürmek; pıhtılaşma ve onarım için gerekli molekülleri sağlamak",
+      "E": "Antitrombin III'ü aktive etmek"
+     },
+     "dogru": "D",
+     "aciklama": "ADP gibi yoğun granül içerikleri yeni trombositleri toplar ('toplanma' döngüsü); alfa granüldeki fibrinojen, faktör V ve büyüme faktörleri pıhtılaşma ve onarıma katkıda bulunur.",
+     "sik_aciklamalari": {
+      "A": "Granül içeriği agregasyonu artırır.",
+      "B": "Prostasiklin endotelin antitrombotik ürünüdür; trombosit granül salınımının amacı değildir.",
+      "C": "Fibrini plazmin yıkar.",
+      "D": "Doğru. ADP gibi yoğun granül içerikleri yeni trombositleri toplar ('toplanma' döngüsü); alfa granüldeki fibrinojen, faktör V ve büyüme faktörleri pıhtılaşma ve onarıma katkıda bulunur.",
+      "E": "Antitrombin III endotel ilişkili doğal antikoagülandır."
+     },
+     "bilgi": [
+      8,
+      11
+     ],
+     "benzer_cikmis": [
+      "32d883c80ad5"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "32d883c80ad5",
+     "soru": "Tıbbi Patoloji\nTıbbi Patoloji\nHemostaz ve\nTromboemboli\nHangisi hemostazda\ntrombosit\nf fonksiyonlarından\nd değildir?",
+     "secenekler": {
+      "A": "Endotel hasarı sonucu\ntrombositler özellikle\nvWF’ye bağlanırlar",
+      "B": "Trombosit aktivasyonu\nsonucu kalsiyum\nsalınımı olur",
+      "C": "Trombositler çok\nsayıda uzun dikensi\nmemran uzantılarına\nsahip kürelerden\ndoğru yüzeyli disklere\ndoğru şekil değiştirirler",
+      "D": "Trombositler\nfibrinojenle çapraz bağ\noluştururlar ve\nkümelenirler",
+      "E": "Trombosit aktivasyonu\nsonucu\nadenozindifosfat (ADP)\nvve trombaxan A2\nsalınımı olur"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Trombosit yapışması, aktivasyonu ve agregasyonunu ve ilgili kalıtsal hastalıkları açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Trombosit yapışmasında subendotelyal kollajen ile trombosit GpIb reseptörü arasında köprü kuran molekül aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fibrinojen",
+      "B": "Plazmin",
+      "C": "Trombin",
+      "D": "von Willebrand faktörü",
+      "E": "Antitrombin III"
+     },
+     "dogru": "D",
+     "aciklama": "vWF yaralanma bölgesinde trombositlerin kollajene tutunmasını sağlar; eksikliği von Willebrand hastalığına yol açar.",
+     "sik_aciklamalari": {
+      "A": "Fibrinojen GpIIb/IIIa aracılığıyla trombositler arası köprü (agregasyon) kurar.",
+      "B": "Plazmin fibrinoliz enzimidir.",
+      "C": "Trombin trombositleri PAR reseptörleri üzerinden aktive eder.",
+      "D": "Doğru. vWF yaralanma bölgesinde trombositlerin kollajene tutunmasını sağlar; eksikliği von Willebrand hastalığına yol açar.",
+      "E": "Antitrombin III doğal antikoagülandır."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kalıtsal trombosit bozuklukları ve eksik molekül eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bernard-Soulier sendromu – GpIIb/IIIa eksikliği",
+      "B": "Glanzmann trombastenisi – GpIb eksikliği",
+      "C": "von Willebrand hastalığı – vWF eksikliği",
+      "D": "Glanzmann trombastenisi – faktör VIII eksikliği",
+      "E": "Bernard-Soulier sendromu – fibrinojen fazlalığı"
+     },
+     "dogru": "C",
+     "aciklama": "vWF eksikliği von Willebrand hastalığı, GpIb eksikliği Bernard-Soulier sendromu (yapışma bozukluğu), GpIIb/IIIa eksikliği Glanzmann trombastenisi (agregasyon bozukluğu) yapar.",
+     "sik_aciklamalari": {
+      "A": "Bernard-Soulier GpIb eksikliğidir.",
+      "B": "Glanzmann GpIIb/IIIa eksikliğidir.",
+      "C": "Doğru. vWF eksikliği von Willebrand hastalığı, GpIb eksikliği Bernard-Soulier sendromu (yapışma bozukluğu), GpIIb/IIIa eksikliği Glanzmann trombastenisi (agregasyon bozukluğu) yapar.",
+      "D": "Faktör VIII eksikliği hemofili A'dır.",
+      "E": "Bernard-Soulier GpIb eksikliğiyle oluşan kanama diyatezidir."
+     },
+     "bilgi": [
+      9,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Trombosit agregasyonu ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Aktivasyonla GpIIb/IIIa'nın konformasyonu değişir ve fibrinojeni bağlar.",
+      "B": "Fibrinojen trombositler arasında köprü oluşturur.",
+      "C": "İlk agregasyon geri dönüşümlüdür; trombin etkisiyle kalıcı hale gelir.",
+      "D": "Agregasyon GpIb–vWF etkileşimiyle gerçekleşir; GpIIb/IIIa'nın rolü yoktur.",
+      "E": "Aktive trombositlerde negatif yüklü fosfatidilserin dışa dönerek pıhtılaşma için platform oluşturur."
+     },
+     "dogru": "D",
+     "aciklama": "GpIb–vWF yapışmayı, GpIIb/IIIa–fibrinojen agregasyonu sağlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: aktivasyonla GpIIb/IIIa'nın konformasyonu değişir ve fibrinojeni bağlar.",
+      "B": "Doğru ifade: fibrinojen trombositler arasında köprü oluşturur.",
+      "C": "Doğru ifade: i̇lk agregasyon geri dönüşümlüdür; trombin etkisiyle kalıcı hale gelir.",
+      "D": "Yanlış ifade (aranan cevap). GpIb–vWF yapışmayı, GpIIb/IIIa–fibrinojen agregasyonu sağlar.",
+      "E": "Doğru ifade; fosfolipid yüzey sekonder hemostaz için gereklidir."
+     },
+     "bilgi": [
+      9,
+      10,
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Koagülasyon kaskadının temel prensiplerini ve faktör özelliklerini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Koagülasyon faktörlerinin büyük çoğunluğunun sentezlendiği organ aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Böbrek",
+      "B": "Dalak",
+      "C": "Karaciğer",
+      "D": "Kemik iliği",
+      "E": "Akciğer"
+     },
+     "dogru": "C",
+     "aciklama": "Pıhtılaşma faktörlerinin çoğu karaciğerde sentezlenir ve inaktif proenzim olarak dolaşır; bu nedenle karaciğer hastalıkları pıhtılaşma bozukluğu yapar.",
+     "sik_aciklamalari": {
+      "A": "Böbrek koagülasyon faktörlerinin ana kaynağı değildir.",
+      "B": "Dalak trombosit depolar; faktör sentezlemez.",
+      "C": "Doğru. Pıhtılaşma faktörlerinin çoğu karaciğerde sentezlenir ve inaktif proenzim olarak dolaşır; bu nedenle karaciğer hastalıkları pıhtılaşma bozukluğu yapar.",
+      "D": "Kemik iliği kan hücrelerini üretir.",
+      "E": "Akciğer faktör sentez yeri değildir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Koagülasyon kaskadının temel prensipleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Reaksiyonlar kalsiyum ve fosfolipid yüzeyinden bağımsızdır.",
+      "B": "Kaskadın son ürünü fibrinojendir.",
+      "C": "Faktörler dolaşımda aktif enzim olarak bulunur.",
+      "D": "Her basamakta enzim, substrat ve kofaktör bulunur; reaksiyonlar negatif yüklü fosfolipidler üzerinde ve kalsiyum varlığında gerçekleşir.",
+      "E": "Kalsiyum yalnızca faktör VIII'e bağlanır."
+     },
+     "dogru": "D",
+     "aciklama": "Ca²⁺ faktör II, VII, IX ve X'un γ-karboksiglutamat bölgelerine bağlanarak bu faktörlerin fosfolipid yüzeye tutunmasını sağlar; kaskadın sonunda fibrinojen fibrine dönüşür.",
+     "sik_aciklamalari": {
+      "A": "Kalsiyum ve fosfolipid yüzey zorunludur.",
+      "B": "Son ürün fibrindir; fibrinojen substrattır.",
+      "C": "Faktörler inaktif proenzim olarak dolaşır.",
+      "D": "Doğru. Ca²⁺ faktör II, VII, IX ve X'un γ-karboksiglutamat bölgelerine bağlanarak bu faktörlerin fosfolipid yüzeye tutunmasını sağlar; kaskadın sonunda fibrinojen fibrine dönüşür.",
+      "E": "Kalsiyum faktör II, VII, IX ve X'un γ-karboksiglutamat bölgelerine bağlanır."
+     },
+     "bilgi": [
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Laboratuvarda kan örneklerinin pıhtılaşmasını önlemek için kalsiyum bağlayıcı (sitrat, EDTA) tüpler kullanılmasının dayanağı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kalsiyumun trombositleri yıkması",
+      "B": "Kalsiyumun plazmini aktive etmesi",
+      "C": "Kalsiyumun faktör II, VII, IX ve X'un γ-karboksiglutamat bölgelerine bağlanarak kaskadın fosfolipid yüzeyde ilerlemesi için zorunlu olması",
+      "D": "Kalsiyumun fibrini çözmesi",
+      "E": "Kalsiyumun vWF'yi inaktive etmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Kalsiyum olmadan vitamin K bağımlı faktörler fosfolipid yüzeye bağlanamaz ve kaskad ilerleyemez; bu nedenle kalsiyum bağlanınca kan pıhtılaşmaz.",
+     "sik_aciklamalari": {
+      "A": "Kalsiyum trombositleri yıkmaz.",
+      "B": "Kalsiyum plazminin aktivatörü değildir.",
+      "C": "Doğru. Kalsiyum olmadan vitamin K bağımlı faktörler fosfolipid yüzeye bağlanamaz ve kaskad ilerleyemez; bu nedenle kalsiyum bağlanınca kan pıhtılaşmaz.",
+      "D": "Fibrini plazmin çözer.",
+      "E": "Kalsiyumun vWF'yi inaktive etmek gibi bir rolü yoktur."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Ekstrinsik ve intrinsik yolları ve laboratuvar testlerini (PT, aPTT) ilişkilendirebilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Ekstrinsik pıhtılaşma yolunu (faktör VII, X, V, II ve fibrinojen) değerlendiren laboratuvar testi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "aPTT",
+      "B": "Protrombin zamanı (PT)",
+      "C": "Kanama zamanı",
+      "D": "Trombosit sayısı",
+      "E": "D-dimer"
+     },
+     "dogru": "B",
+     "aciklama": "PT ekstrinsik yolu, aPTT intrinsik yolu değerlendirir.",
+     "sik_aciklamalari": {
+      "A": "aPTT intrinsik yolu değerlendirir.",
+      "B": "Doğru. PT ekstrinsik yolu, aPTT intrinsik yolu değerlendirir.",
+      "C": "Kanama zamanı trombosit fonksiyonunu yansıtır.",
+      "D": "Trombosit sayısı primer hemostaz için bilgi verir; pıhtılaşma yolunu değerlendirmez.",
+      "E": "D-dimer fibrin yıkım ürünüdür."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Hemofili A'lı (faktör VIII eksikliği) bir hastada en olası laboratuvar bulgusu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "PT uzun, aPTT normal",
+      "B": "PT normal, aPTT uzun",
+      "C": "PT ve aPTT normal, trombosit sayısı düşük",
+      "D": "Yalnızca D-dimer yüksek",
+      "E": "Fibrinojen yüksek"
+     },
+     "dogru": "B",
+     "aciklama": "Faktör VIII intrinsik yolun faktörüdür; eksikliğinde aPTT uzar, ekstrinsik yolu değerlendiren PT normaldir.",
+     "sik_aciklamalari": {
+      "A": "Bu tablo ekstrinsik yol (ör. faktör VII) eksikliğini düşündürür.",
+      "B": "Doğru. Faktör VIII intrinsik yolun faktörüdür; eksikliğinde aPTT uzar, ekstrinsik yolu değerlendiren PT normaldir.",
+      "C": "Hemofilide trombosit sayısı normaldir ve aPTT uzar.",
+      "D": "D-dimer fibrinoliz göstergesidir; hemofiliye özgü değildir.",
+      "E": "Fibrinojen yüksekliği hemofilinin bulgusu değildir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "PT ve aPTT testlerinin kullanımı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "PT intrinsik, aPTT ekstrinsik yolu değerlendirir.",
+      "B": "Bu testler kanama bozukluklarında hangi faktör grubunun etkilendiğini ayırt etmeye yardımcı olur.",
+      "C": "PT yalnızca trombosit fonksiyonunu ölçer.",
+      "D": "aPTT uzaması her zaman faktör VII eksikliğini gösterir.",
+      "E": "İn vitro test ayrımı canlıdaki pıhtılaşmayı birebir yansıtır."
+     },
+     "dogru": "B",
+     "aciklama": "PT ve aPTT in vitro yollara göre faktör gruplarını değerlendirir; ancak canlıda kaskad doku faktörü-VIIa ile başlar ve yollar iç içedir.",
+     "sik_aciklamalari": {
+      "A": "PT ekstrinsik, aPTT intrinsik yolu değerlendirir.",
+      "B": "Doğru. PT ve aPTT in vitro yollara göre faktör gruplarını değerlendirir; ancak canlıda kaskad doku faktörü-VIIa ile başlar ve yollar iç içedir.",
+      "C": "PT pıhtılaşma faktörlerini ölçer.",
+      "D": "Faktör VII eksikliği PT'yi uzatır.",
+      "E": "İn vitro ayrım in vivo gerçeği tam yansıtmaz."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Koagülasyon kaskadının in vivo gerçekliğini ve trombinin merkezî rolünü açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Canlıda (in vivo) pıhtılaşmanın asıl başlangıç noktası aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Faktör XII'nin negatif yüklü yüzeyle aktivasyonu",
+      "B": "Doku faktörü + faktör VIIa kompleksi",
+      "C": "Plazminojen aktivasyonu",
+      "D": "Antitrombin III aktivasyonu",
+      "E": "Protein C aktivasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "İn vivo pıhtılaşma doku faktörü-faktör VIIa kompleksiyle başlar; bu kompleks faktör IX ve X'u aktive eder.",
+     "sik_aciklamalari": {
+      "A": "Faktör XII aktivasyonu in vitro intrinsik yolun başlangıcıdır.",
+      "B": "Doğru. İn vivo pıhtılaşma doku faktörü-faktör VIIa kompleksiyle başlar; bu kompleks faktör IX ve X'u aktive eder.",
+      "C": "Plazminojen aktivasyonu fibrinolizi başlatır.",
+      "D": "Antitrombin III doğal antikoagülandır.",
+      "E": "Protein C antikoagülan yoldadır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Trombinin hemostazdaki işlevleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Fibrinojeni fibrine çevirmek",
+      "B": "Faktör XIII'ü aktive etmek",
+      "C": "Faktör V, VIII ve XI'i aktive etmek",
+      "D": "PAR reseptörleri üzerinden trombositleri aktive etmek",
+      "E": "Fibrini yıkarak D-dimer oluşturmak"
+     },
+     "dogru": "E",
+     "aciklama": "Fibrini yıkıp D-dimer oluşturan plazmindir; trombin fibrin oluşumu ve kaskadın güçlenmesinde merkezi roldedir.",
+     "sik_aciklamalari": {
+      "A": "Trombin işlevidir: fibrinojeni fibrine çevirmek.",
+      "B": "Trombin işlevidir; faktör XIII fibrini çapraz bağlar.",
+      "C": "Trombin işlevidir; kaskadı güçlendirir.",
+      "D": "Trombin işlevidir: PAR reseptörleri üzerinden trombositleri aktive etmek.",
+      "E": "Yer almaz (aranan cevap); bu plazminin işlevidir."
+     },
+     "bilgi": [
+      17,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Trombinin hem prokoagülan hem antikoagülan yönde etki edebilmesi aşağıdakilerden hangisiyle açıklanır?",
+     "secenekler": {
+      "A": "Normal endotelde trombomoduline bağlanarak protein C'yi aktive etmesi",
+      "B": "Plazminojeni doğrudan aktive etmesi",
+      "C": "vWF'yi yıkması",
+      "D": "Kalsiyumu bağlaması",
+      "E": "Antitrombin III üretmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Trombin hasarlı bölgede fibrin oluşturur; sağlam endotelde ise trombomoduline bağlanarak protein C'yi aktive eder ve antikoagülan yola katılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Trombin hasarlı bölgede fibrin oluşturur; sağlam endotelde ise trombomoduline bağlanarak protein C'yi aktive eder ve antikoagülan yola katılır.",
+      "B": "Plazminojeni t-PA ve ürokinaz aktive eder.",
+      "C": "Trombin vWF'yi yıkmaz.",
+      "D": "Kalsiyum bağlama trombin işlevi değildir.",
+      "E": "Antitrombin III karaciğerde sentezlenen bir proteindir; trombin üretmez."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Pıhtılaşmayı sınırlayan mekanizmaları ve fibrinolizi açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Fibrini ve fibrinojeni yıkarak fibrin yıkım ürünleri ve D-dimer oluşturan enzim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Trombin",
+      "B": "Plazmin",
+      "C": "Faktör XIII",
+      "D": "Antitrombin III",
+      "E": "Kallikrein"
+     },
+     "dogru": "B",
+     "aciklama": "Plazminojen t-PA ve ürokinazla plazmine dönüşür; plazmin fibrini yıkar.",
+     "sik_aciklamalari": {
+      "A": "Trombin fibrinojeni fibrine çevirir.",
+      "B": "Doğru. Plazminojen t-PA ve ürokinazla plazmine dönüşür; plazmin fibrini yıkar.",
+      "C": "Faktör XIII fibrini çapraz bağlayarak stabilize eder.",
+      "D": "Antitrombin III trombin ve diğer serin proteazları inhibe eder.",
+      "E": "Kallikrein bradikinin oluşturur."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi pıhtılaşma kaskadının doğal inhibitörlerinden biri değildir?",
+     "secenekler": {
+      "A": "Protein C",
+      "B": "Doku faktörü yolu inhibitörü (TFPI)",
+      "C": "Antitrombin III",
+      "D": "Protein S",
+      "E": "von Willebrand faktörü"
+     },
+     "dogru": "E",
+     "aciklama": "Doğal antikoagülanlar protein C/S (trombomodulinle), antitrombin III (heparin benzeri moleküllerle) ve TFPI'dir; vWF trombosit yapışmasını sağlayan prokoagülan bir moleküldür.",
+     "sik_aciklamalari": {
+      "A": "Doğal inhibitördür; faktör Va ve VIIIa'yı inaktive eder.",
+      "B": "Doğal inhibitördür; doku faktörü-VIIa kompleksini baskılar.",
+      "C": "Doğal inhibitördür: antitrombin III.",
+      "D": "Doğal inhibitördür; protein C'nin kofaktörüdür.",
+      "E": "Doğal inhibitör değildir (aranan cevap)."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [
+      "addacefedced"
+     ]
+    },
+    {
+     "id": "k1-20-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Fibrinolitik sistemin aşırı çalışmasını önleyen; plazmini doğrudan inhibe ederek fibrinolizi sınırlayan molekül aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Doku plazminojen aktivatörü (t-PA)",
+      "B": "Ürokinaz",
+      "C": "α2-antiplazmin",
+      "D": "Plazminojen",
+      "E": "Faktör XIIa"
+     },
+     "dogru": "C",
+     "aciklama": "Plazminojen t-PA ve ürokinazla plazmine dönüşür; α2-antiplazmin plazmini, PAI ise plazminojen aktivatörlerini inhibe ederek fibrinolizi sınırlar.",
+     "sik_aciklamalari": {
+      "A": "t-PA plazminojeni aktive eder; fibrinolizi artırır.",
+      "B": "Ürokinaz plazminojen aktivatörüdür; fibrinolizi artırır.",
+      "C": "Doğru. α2-antiplazmin dolaşımdaki serbest plazmini hızla inaktive eder.",
+      "D": "Plazminojen plazminin inaktif öncülüdür; inhibitör değildir.",
+      "E": "Faktör XIIa pıhtılaşma kaskadının (intrinsik yol) bileşenidir; plazmin inhibitörü değildir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": [
+      "d3-f-057"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "addacefedced",
+     "soru": "Pıhtılaşma kaskadının doğal inhibitörleri arasında değildir?",
+     "secenekler": {
+      "A": "Protein C",
+      "B": "Doku faktör yolu inhibitörü",
+      "C": "Antitrombin 3",
+      "D": "vWF"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "d3-f-057",
+     "soru": "Aşağıdakilerden hangisinin temel etkisi fibrinoliz değildir?",
+     "secenekler": {
+      "A": "Antitrombin III",
+      "B": "Ürokinaz",
+      "C": "Streptokinaz",
+      "D": "Plazmin",
+      "E": "Doku plazminojen aktivatörü"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Endotelin antitrombotik ve protrombotik özelliklerini karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Normal endotelin trombosit agregasyonunu azaltan ve vazodilatasyon yapan ürünleri aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "PGI₂ (prostasiklin), NO ve ADPaz",
+      "B": "Tromboksan A₂ ve ADP",
+      "C": "Doku faktörü ve PAI",
+      "D": "vWF ve fibrinojen",
+      "E": "Endotelin ve serotonin"
+     },
+     "dogru": "A",
+     "aciklama": "Normal endotel PGI₂, NO ve ADPaz ile trombosit agregasyonunu azaltır; ayrıca protein C/S, antitrombin III, TFPI ve t-PA ile tromboza karşı korur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Normal endotel PGI₂, NO ve ADPaz ile trombosit agregasyonunu azaltır; ayrıca protein C/S, antitrombin III, TFPI ve t-PA ile tromboza karşı korur.",
+      "B": "TxA₂ ve ADP agregasyonu artırır.",
+      "C": "Doku faktörü ve PAI aktive/disfonksiyone endotelin protrombotik ürünleridir.",
+      "D": "vWF ve fibrinojen trombosit yapışma/agregasyonunu sağlar.",
+      "E": "Endotelin ve serotonin vazokonstriktördür."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Aktive veya disfonksiyone endotelin protrombotik özellikleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Trombomodulin ekspresyonunun azalması",
+      "B": "Protein C reseptörünün azalması",
+      "C": "TFPI'nin azalması",
+      "D": "Doku faktörü ve PAI üretiminin artması",
+      "E": "t-PA ve prostasiklin üretiminin artması"
+     },
+     "dogru": "E",
+     "aciklama": "Disfonksiyone endotelde antikoagülan moleküller (trombomodulin, protein C reseptörü, TFPI) azalır; doku faktörü ve PAI artar. t-PA ve prostasiklin artışı antitrombotik özelliklerdir.",
+     "sik_aciklamalari": {
+      "A": "Protrombotik değişikliktir.",
+      "B": "Protrombotik değişikliktir.",
+      "C": "Protrombotik değişikliktir.",
+      "D": "Protrombotik değişikliktir.",
+      "E": "Yer almaz (aranan cevap); bunlar normal endotelin antitrombotik ürünleridir."
+     },
+     "bilgi": [
+      20,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Endotelin hemostazdaki rolü ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Endotel her koşulda yalnızca protrombotik bir yüzeydir.",
+      "B": "Normal endotel tromboza karşı korurken, aktive/disfonksiyone endotelin net etkisi protrombotik yüzey ve artmış tromboz riskidir.",
+      "C": "Endotel hemostaz dengesine katkıda bulunmaz.",
+      "D": "Disfonksiyone endotelde trombomodulin artar.",
+      "E": "Normal endotel doku faktörünü yüksek düzeyde eksprese eder."
+     },
+     "dogru": "B",
+     "aciklama": "Endotel hem antitrombotik hem protrombotik özelliklere sahiptir; dengeyi endotelin durumu belirler.",
+     "sik_aciklamalari": {
+      "A": "Normal endotel antitrombotiktir.",
+      "B": "Doğru. Endotel hem antitrombotik hem protrombotik özelliklere sahiptir; dengeyi endotelin durumu belirler.",
+      "C": "Endotel hemostazın üç temel bileşeninden biridir.",
+      "D": "Disfonksiyone endotelde trombomodulin azalır.",
+      "E": "Doku faktörü aktive/hasarlı endotelde artar."
+     },
+     "bilgi": [
+      20,
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Virchow üçlüsünü ve bileşenlerini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Virchow üçlüsünün bileşenleri aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Endotel hasarı, anormal kan akımı, hiperkoagülabilite",
+      "B": "Ateş, lökositoz, taşikardi",
+      "C": "Hipertansiyon, diyabet, obezite",
+      "D": "Ödem, hiperemi, kanama",
+      "E": "Anemi, trombositopeni, lökopeni"
+     },
+     "dogru": "A",
+     "aciklama": "Virchow üçlüsü trombozun üç temel mekanizmasıdır; en önemlisi endotel hasarı/disfonksiyonudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Virchow üçlüsü trombozun üç temel mekanizmasıdır; en önemlisi endotel hasarı/disfonksiyonudur.",
+      "B": "Bunlar sistemik enflamasyon bulgularıdır.",
+      "C": "Bunlar kardiyovasküler risk faktörleridir.",
+      "D": "Bunlar hemodinamik bozukluklardır.",
+      "E": "Bunlar sitopenilerdir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Anormal kan akımının (staz/türbülans) tromboza yol açma mekanizmaları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Endotel hasarı ve aktivasyonunu teşvik etmesi",
+      "B": "Trombosit ve lökositlerin endotelle temasını artırması",
+      "C": "Aktive pıhtılaşma faktörlerinin yıkanıp seyrelmesini azaltması",
+      "D": "Antikoagülanların bölgeye akışını azaltması",
+      "E": "Plazmin üretimini artırarak pıhtıyı çözmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Staz ve türbülans endotel aktivasyonu, hücre-endotel temasının artması ve faktörlerin seyrelmemesi yoluyla trombozu kolaylaştırır.",
+     "sik_aciklamalari": {
+      "A": "Yer alır: endotel hasarı ve aktivasyonunu teşvik etmesi.",
+      "B": "Yer alır; laminer akım bozulur.",
+      "C": "Yer alır: aktive pıhtılaşma faktörlerinin yıkanıp seyrelmesini azaltması.",
+      "D": "Yer alır; inhibitörlerin ulaşımı azalır.",
+      "E": "Yer almaz (aranan cevap); plazmin artışı trombozu önler."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q31",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Kalp ve arteriyel dolaşımda trombüs oluşumu için genellikle ön koşul kabul edilen Virchow üçlüsü bileşeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Endotel hasarı",
+      "B": "Kalıtsal hiperkoagülabilite",
+      "C": "Venöz staz",
+      "D": "Anemi",
+      "E": "Hipoalbüminemi"
+     },
+     "dogru": "A",
+     "aciklama": "Endotel hasarı subendotelyal ECM ve doku faktörünü açığa çıkararak trombosit yapışmasını ve pıhtılaşmayı tetikler; aterosklerotik plak, hipertansiyon, hiperkolesterolemi ve sigara başlıca nedenlerdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Endotel hasarı subendotelyal ECM ve doku faktörünü açığa çıkararak trombosit yapışmasını ve pıhtılaşmayı tetikler; aterosklerotik plak, hipertansiyon, hiperkolesterolemi ve sigara başlıca nedenlerdir.",
+      "B": "Kalıtsal hiperkoagülabilite daha çok venöz trombozla ilişkilidir.",
+      "C": "Venöz staz venöz trombozun önemli nedenidir.",
+      "D": "Anemi Virchow üçlüsünün bileşeni değildir.",
+      "E": "Hipoalbüminemi ödem nedenidir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Atriyal fibrilasyonu olan bir hastada sol atriyum kulakçığında trombüs gelişmesinin Virchow üçlüsüne göre başlıca mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kalıtsal faktör V Leiden mutasyonu",
+      "B": "Staz (anormal kan akımı)",
+      "C": "Heparine bağlı trombositopeni",
+      "D": "Antifosfolipid antikorları",
+      "E": "Aşırı fibrinoliz"
+     },
+     "dogru": "B",
+     "aciklama": "Atriyal fibrilasyonda atriyum etkin kasılamaz ve kan staz yapar; immobilizasyon, kalp yetmezliği ve varisler de staz nedenleridir.",
+     "sik_aciklamalari": {
+      "A": "Kalıtsal hiperkoagülabilite bu tablonun temel mekanizması değildir.",
+      "B": "Doğru. Atriyal fibrilasyonda atriyum etkin kasılamaz ve kan staz yapar; immobilizasyon, kalp yetmezliği ve varisler de staz nedenleridir.",
+      "C": "HIT heparin kullanımına bağlıdır.",
+      "D": "APS otoimmün hiperkoagülabilitedir; bu tablonun temel mekanizması değildir.",
+      "E": "Aşırı fibrinoliz trombozu değil kanamayı kolaylaştırır."
+     },
+     "bilgi": [
+      23,
+      25
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Kalıtsal (primer) hiperkoagülabilite nedenlerini ve risk artışlarını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q32",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Faktör V'in protein C'ye dirençli hale gelmesine yol açan ve kalıtsal hiperkoagülabilitenin en bilinen nedenlerinden olan mutasyon aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Faktör V Leiden",
+      "B": "Protrombin G20210A",
+      "C": "JAK2 V617F",
+      "D": "BCR-ABL",
+      "E": "BRCA1"
+     },
+     "dogru": "A",
+     "aciklama": "Faktör V Leiden mutasyonunda (Arg506Glu) aktive faktör V protein C ile inaktive edilemez; venöz tromboz riski heterozigotta 3-4 kat, homozigotta 25-50 kat artar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Faktör V Leiden mutasyonunda (Arg506Glu) aktive faktör V protein C ile inaktive edilemez; venöz tromboz riski heterozigotta 3-4 kat, homozigotta 25-50 kat artar.",
+      "B": "Protrombin G20210A protrombin düzeyini artırır; faktör V direnci yapmaz.",
+      "C": "JAK2 V617F miyeloproliferatif neoplazilerle ilişkilidir.",
+      "D": "BCR-ABL kronik miyeloid lösemiyle ilişkilidir.",
+      "E": "BRCA1 meme-over kanseri yatkınlık genidir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q33",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi kalıtsal (primer) hiperkoagülabilite nedenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Antitrombin III eksikliği",
+      "B": "Protein C eksikliği",
+      "C": "Protein S eksikliği",
+      "D": "Protrombin G20210A mutasyonu",
+      "E": "Oral kontraseptif kullanımı"
+     },
+     "dogru": "E",
+     "aciklama": "Oral kontraseptif kullanımı edinsel (sekonder) bir risk faktörüdür; diğerleri kalıtsal nedenlerdir.",
+     "sik_aciklamalari": {
+      "A": "Kalıtsal nedendir: antitrombin III eksikliği.",
+      "B": "Kalıtsal nedendir: protein C eksikliği.",
+      "C": "Kalıtsal nedendir: protein S eksikliği.",
+      "D": "Kalıtsal nedendir; venöz tromboz riski ~3 kat artar.",
+      "E": "Kalıtsal değildir (aranan cevap); edinsel risk faktörüdür."
+     },
+     "bilgi": [
+      28,
+      29,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q34",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Kalıtsal trombofili için genetik test istenmesi aşağıdaki durumların hangisinde en uygundur?",
+     "secenekler": {
+      "A": "75 yaşında, kalça kırığı ameliyatı sonrası DVT gelişen hasta",
+      "B": "Belirgin edinsel risk faktörü olmayan, güçlü aile öyküsü bulunan 30 yaşında DVT'li hasta",
+      "C": "Uzun süreli immobilizasyon sonrası DVT gelişen 80 yaşında hasta",
+      "D": "Metastatik pankreas kanseri olan ve DVT gelişen hasta",
+      "E": "Hiç tromboz öyküsü olmayan, ailesinde de tromboz bulunmayan sağlıklı kişi"
+     },
+     "dogru": "B",
+     "aciklama": "Genetik test 50 yaş altı DVT, güçlü aile öyküsü ve belirgin edinsel risk faktörü yokluğunda düşünülür.",
+     "sik_aciklamalari": {
+      "A": "Cerrahi ve ileri yaş belirgin edinsel risk faktörleridir.",
+      "B": "Doğru. Genetik test 50 yaş altı DVT, güçlü aile öyküsü ve belirgin edinsel risk faktörü yokluğunda düşünülür.",
+      "C": "İmmobilizasyon ve ileri yaş trombozu açıklar.",
+      "D": "Kanser güçlü bir edinsel risk faktörüdür.",
+      "E": "Tarama endikasyonu yoktur."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Edinsel (sekonder) hiperkoagülabilite nedenlerini sıralayabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q35",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi edinsel (sekonder) hiperkoagülabilite nedenidir?",
+     "secenekler": {
+      "A": "Faktör V Leiden mutasyonu",
+      "B": "Protrombin G20210A mutasyonu",
+      "C": "Kanser",
+      "D": "Kalıtsal antitrombin III eksikliği",
+      "E": "Kalıtsal protein C eksikliği"
+     },
+     "dogru": "C",
+     "aciklama": "Kanser yüksek riskli edinsel hiperkoagülabilite nedenidir; diğer seçenekler kalıtsal nedenlerdir.",
+     "sik_aciklamalari": {
+      "A": "Kalıtsal nedendir: faktör V Leiden mutasyonu.",
+      "B": "Kalıtsal nedendir: protrombin G20210A mutasyonu.",
+      "C": "Doğru. Kanser yüksek riskli edinsel hiperkoagülabilite nedenidir; diğer seçenekler kalıtsal nedenlerdir.",
+      "D": "Kalıtsal nedendir: kalıtsal antitrombin III eksikliği.",
+      "E": "Kalıtsal nedendir: kalıtsal protein C eksikliği."
+     },
+     "bilgi": [
+      26,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q36",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Edinsel hiperkoagülabilite nedenleri arasında yüksek riskli gruba giren durum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sigara içiciliği",
+      "B": "Oral kontraseptif kullanımı",
+      "C": "Uzun süreli immobilizasyon",
+      "D": "Orak hücreli anemi",
+      "E": "Hiperöstrojenik durumlar"
+     },
+     "dogru": "C",
+     "aciklama": "Yüksek riskli edinsel durumlar: immobilizasyon, MI, atriyal fibrilasyon, doku hasarı, kanser, prostetik kapak, DİK, HIT ve APS'dir. Sigara, OKS, orak hücreli anemi ve hiperöstrojenik durumlar artmış risk grubundadır.",
+     "sik_aciklamalari": {
+      "A": "Artmış risk grubundadır.",
+      "B": "Artmış risk grubundadır.",
+      "C": "Doğru. Yüksek riskli edinsel durumlar: immobilizasyon, MI, atriyal fibrilasyon, doku hasarı, kanser, prostetik kapak, DİK, HIT ve APS'dir. Sigara, OKS, orak hücreli anemi ve hiperöstrojenik durumlar artmış risk grubundadır.",
+      "D": "Artmış risk grubundadır.",
+      "E": "Artmış risk grubundadır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q37",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Hiperkoagülabilite ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kanın pıhtı oluşturma eğiliminin normalden fazla olmasıdır.",
+      "B": "Primer (kalıtsal) ve sekonder (edinsel) olarak ikiye ayrılır.",
+      "C": "Özellikle venöz tromboz için güçlü risk faktörüdür.",
+      "D": "Gebelik, uzun uçuş, cerrahi ve travma kalıtsal yatkınlığı olan kişilerde riski artırır.",
+      "E": "Nefrotik sendrom ve kardiyomiyopati tromboz riskini azaltır."
+     },
+     "dogru": "E",
+     "aciklama": "Kardiyomiyopati ve nefrotik sendrom edinsel olarak tromboz riskini artıran durumlardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: kanın pıhtı oluşturma eğiliminin normalden fazla olmasıdır.",
+      "B": "Doğru ifade: primer (kalıtsal) ve sekonder (edinsel) olarak ikiye ayrılır.",
+      "C": "Doğru ifade: özellikle venöz tromboz için güçlü risk faktörüdür.",
+      "D": "Doğru ifade; kalıtsal ve edinsel faktörler birbirini güçlendirir.",
+      "E": "Yanlış ifade (aranan cevap). Kardiyomiyopati ve nefrotik sendrom edinsel olarak tromboz riskini artıran durumlardır."
+     },
+     "bilgi": [
+      26,
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "Heparine bağlı trombositopeni ve antifosfolipid antikor sendromunu açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q38",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Fraksiyone edilmemiş heparin kullanan hastaların yaklaşık %5'inde heparin-PF4 kompleksine karşı otoantikor gelişmesiyle ortaya çıkan tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Heparine bağlı trombositopeni (HIT)",
+      "B": "Hemofili A",
+      "C": "von Willebrand hastalığı",
+      "D": "Glanzmann trombastenisi",
+      "E": "Bernard-Soulier sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "HIT'te trombositler aktive olup tüketilir; trombositopeniye rağmen protrombotik bir durum oluşur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. HIT'te trombositler aktive olup tüketilir; trombositopeniye rağmen protrombotik bir durum oluşur.",
+      "B": "Hemofili A kalıtsal faktör VIII eksikliğidir.",
+      "C": "von Willebrand hastalığı vWF eksikliğidir.",
+      "D": "Glanzmann trombastenisi GpIIb/IIIa eksikliğidir.",
+      "E": "Bernard-Soulier sendromu GpIb eksikliğidir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q39",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Antifosfolipid antikor sendromunun klinik triadı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ateş, döküntü, artrit",
+      "B": "Tekrarlayan trombozlar (venöz ve arteriyel), tekrarlayan düşükler ve trombositopeni",
+      "C": "Anemi, lökopeni, splenomegali",
+      "D": "Hipertansiyon, proteinüri, ödem",
+      "E": "Kanama, hemartroz, uzamış aPTT"
+     },
+     "dogru": "B",
+     "aciklama": "APS'de asıl hedef β2-glikoprotein I olabilir; lupus antikoagülanı olarak pıhtılaşma testlerini uzatır ve sifiliz serolojisinde yalancı pozitiflik yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Bu bulgular APS triadı değildir.",
+      "B": "Doğru. APS'de asıl hedef β2-glikoprotein I olabilir; lupus antikoagülanı olarak pıhtılaşma testlerini uzatır ve sifiliz serolojisinde yalancı pozitiflik yapabilir.",
+      "C": "Bu bulgular APS triadını oluşturmaz.",
+      "D": "Bunlar preeklampsi/nefrotik tabloyu düşündürür.",
+      "E": "APS kanama değil tromboz eğilimi yapar."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q40",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Tekrarlayan düşük öyküsü olan bir kadında aPTT uzun bulunuyor ve VDRL testi yalancı pozitif çıkıyor; hastada geçirilmiş derin ven trombozu da var.\n\nBu tablo ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "aPTT uzaması nedeniyle hastada kanama eğilimi baskındır.",
+      "B": "Antifosfolipid antikor sendromudur; lupus antikoagülanı in vitro pıhtılaşma testlerini uzatırken in vivo hiperkoagülabilite yapar.",
+      "C": "Tablo hemofili A'dır.",
+      "D": "VDRL pozitifliği kesin aktif sifiliz tanısı koydurur.",
+      "E": "Tedavide antikoagülan kontrendikedir."
+     },
+     "dogru": "B",
+     "aciklama": "APS'de antikorlar fosfolipidlere bağlanarak in vitro testleri uzatır ancak in vivo tromboza yol açar; tedavi antikoagülasyon ve gerektiğinde immünsupresyondur.",
+     "sik_aciklamalari": {
+      "A": "aPTT uzamasına rağmen in vivo tromboz eğilimi vardır.",
+      "B": "Doğru. APS'de antikorlar fosfolipidlere bağlanarak in vitro testleri uzatır ancak in vivo tromboza yol açar; tedavi antikoagülasyon ve gerektiğinde immünsupresyondur.",
+      "C": "Hemofili kanama hastalığıdır; tekrarlayan tromboz ve düşük beklenmez.",
+      "D": "APS'de kardiyolipin antikorları nedeniyle yalancı pozitiflik olabilir.",
+      "E": "Tedavi antikoagülasyondur."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 14,
+   "metin": "Trombüsün morfolojisini, arteriyel-venöz trombüs farkını ve ölüm sonrası pıhtıdan ayrımını yapabilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q41",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Akan kanda oluşan trombüslerde görülen, trombosit-fibrin ve eritrosit katmanlarının ardışık dizilimiyle oluşan koyu-açık bantlara ne ad verilir?",
+     "secenekler": {
+      "A": "Zahn çizgileri",
+      "B": "Kerley B çizgileri",
+      "C": "Liesegang halkaları",
+      "D": "Psammom cisimcikleri",
+      "E": "Russell cisimcikleri"
+     },
+     "dogru": "A",
+     "aciklama": "Zahn çizgileri yalnızca akan kanda oluşan trombüslerde görülür ve gerçek trombüsü ölüm sonrası pıhtıdan ayırt ettirir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Zahn çizgileri yalnızca akan kanda oluşan trombüslerde görülür ve gerçek trombüsü ölüm sonrası pıhtıdan ayırt ettirir.",
+      "B": "Kerley B çizgileri akciğer grafisinde interstisyel ödem bulgusudur.",
+      "C": "Liesegang halkaları trombüs katmanı değildir.",
+      "D": "Psammom cisimcikleri lamelli kalsifikasyonlardır.",
+      "E": "Russell cisimcikleri plazma hücrelerindeki immünoglobulin birikimidir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q42",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Arteriyel ve venöz trombüslerin karşılaştırılmasında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Arteriyel trombüsler staz zemininde oluşur ve eritrositten zengindir.",
+      "B": "Venöz trombüsler endotel hasarı bölgelerinde oluşur ve trombositten zengindir.",
+      "C": "Arteriyel/kardiyak trombüsler endotel hasarı veya türbülans bölgelerinde oluşur ve trombositten zengindir; venöz trombüsler staz zemininde oluşur, eritrositten zengindir ve tıkayıcıdır.",
+      "D": "Venöz trombüs en sık üst ekstremite yüzeyel venlerinde oluşur.",
+      "E": "İki trombüs tipi arasında fark yoktur."
+     },
+     "dogru": "C",
+     "aciklama": "Venöz trombüs en sık alt ekstremite derin venlerinde (DVT) oluşur ve pulmoner emboli kaynağıdır.",
+     "sik_aciklamalari": {
+      "A": "Bu venöz trombüsün özelliğidir.",
+      "B": "Bu arteriyel trombüsün özelliğidir.",
+      "C": "Doğru. Venöz trombüs en sık alt ekstremite derin venlerinde (DVT) oluşur ve pulmoner emboli kaynağıdır.",
+      "D": "En sık alt ekstremite derin venlerinde oluşur.",
+      "E": "Oluşum zemini ve bileşimleri farklıdır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q44",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Mural trombüs ve kapak vejetasyonları ile ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Miyokard enfarktüsü sonrası diskinetik ventrikül duvarı – mural trombüs",
+      "B": "Anevrizma – mural trombüs",
+      "C": "Enfektif endokardit – kapak vejetasyonu",
+      "D": "Sistemik lupus eritematozus – Libman-Sacks endokarditi",
+      "E": "Mural trombüs – emboli kaynağı olamaz"
+     },
+     "dogru": "E",
+     "aciklama": "Mural trombüsler ve kapak vejetasyonları sistemik emboli kaynağı olabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: miyokard enfarktüsü sonrası diskinetik ventrikül duvarı – mural trombüs.",
+      "B": "Doğru eşleştirme: anevrizma – mural trombüs.",
+      "C": "Doğru eşleştirme: enfektif endokardit – kapak vejetasyonu.",
+      "D": "Doğru eşleştirme: sistemik lupus eritematozus – Libman-Sacks endokarditi.",
+      "E": "Yanlış eşleştirme (aranan cevap). Mural trombüsler ve kapak vejetasyonları sistemik emboli kaynağı olabilir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q43",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Otopside büyük bir vende jelatinimsi, gevşek, damar duvarına yapışmayan, alt kısmı koyu kırmızı ve üst kısmı sarı ('tavuk yağı' görünümlü) bir pıhtı bulunuyor.\n\nBu bulgu için en doğru yorum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Canlıyken oluşmuş tıkayıcı venöz trombüstür.",
+      "B": "Zahn çizgileri içeren arteriyel trombüstür.",
+      "C": "Ölüm sonrası oluşmuş pıhtıdır.",
+      "D": "Organize ve rekanalize olmuş trombüstür.",
+      "E": "Kalp kapağında enfektif vejetasyondur."
+     },
+     "dogru": "C",
+     "aciklama": "Ölüm sonrası pıhtı gevşek, jelatinimsi, duvara bağlı değildir ve eritrositlerin çökmesiyle alt koyu kırmızı-üst sarı katman oluşur; gerçek trombüs sert ve duvara sıkıca yapışıktır.",
+     "sik_aciklamalari": {
+      "A": "Gerçek trombüs duvara yapışık ve serttir.",
+      "B": "Zahn çizgileri akan kanda oluşur ve burada tarif edilmemiştir.",
+      "C": "Doğru. Ölüm sonrası pıhtı gevşek, jelatinimsi, duvara bağlı değildir ve eritrositlerin çökmesiyle alt koyu kırmızı-üst sarı katman oluşur; gerçek trombüs sert ve duvara sıkıca yapışıktır.",
+      "D": "Organizasyon duvara yapışık, fibröz doku içeren trombüste görülür.",
+      "E": "Vejetasyon kapak yüzeyinde oluşur."
+     },
+     "bilgi": [
+      37,
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 15,
+   "metin": "Trombüsün akıbetini ve trombozun klinik önemini özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-20-q45",
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "Trombüsün olası akıbetleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Yayılma",
+      "B": "Embolizasyon",
+      "C": "Çözünme",
+      "D": "Organizasyon ve rekanalizasyon",
+      "E": "Metaplaziye uğrayarak normal damar duvarına dönüşme"
+     },
+     "dogru": "E",
+     "aciklama": "Trombüs yayılabilir, embolize olabilir, çözünebilir veya organize olup rekanalize olabilir.",
+     "sik_aciklamalari": {
+      "A": "Olası akıbettir; trombüs büyüyerek tıkanıklığı artırabilir.",
+      "B": "Olası akıbettir; kopan parça uzak damarı tıkar.",
+      "C": "Olası akıbettir; fibrinolizle çözünebilir.",
+      "D": "Olası akıbettir; kısmi lümen açıklığı sağlar.",
+      "E": "Yer almaz (aranan cevap). Trombüs yayılabilir, embolize olabilir, çözünebilir veya organize olup rekanalize olabilir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q46",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Trombüsün organizasyonu ve rekanalizasyonu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Trombüs içine endotel, düz kas ve fibroblastların büyümesi ve kapiller kanallar oluşmasıyla kısmi lümen açıklığı sağlanır.",
+      "B": "Trombüsün tamamen sıvılaşarak kaybolmasıdır.",
+      "C": "Trombüsün parçalanıp akciğere gitmesidir.",
+      "D": "Trombüsün kalsiyumla tamamen kemikleşmesidir.",
+      "E": "Trombüsün yeni trombositlerle hızla büyümesidir."
+     },
+     "dogru": "A",
+     "aciklama": "Organizasyon-rekanalizasyon uzun süre kalan trombüslerin akıbetidir; trombüs fibröz dokuya dönüşür ve içinden geçen kanallar kısmi akım sağlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Organizasyon-rekanalizasyon uzun süre kalan trombüslerin akıbetidir; trombüs fibröz dokuya dönüşür ve içinden geçen kanallar kısmi akım sağlar.",
+      "B": "Bu çözünmedir (fibrinoliz).",
+      "C": "Bu embolizasyondur: trombüsün parçalanıp akciğere gitmesidir.",
+      "D": "Bu tanım organizasyonu tarif etmez.",
+      "E": "Bu yayılmadır: trombüsün yeni trombositlerle hızla büyümesidir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-20-q47",
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "Trombozun klinik önemi ve tedavi yaklaşımı ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Derin ven trombozu pulmoner emboli riski nedeniyle hayatı tehdit edebilir.",
+      "B": "Arteriyel tromboz miyokard enfarktüsü, iskemik inme, akut ekstremite iskemisi ve bağırsak enfarktüsü yapabilir.",
+      "C": "Aspirin antiplatelet bir ajandır.",
+      "D": "Heparin, varfarin ve direkt oral antikoagülanlar antikoagülan ilaçlardır.",
+      "E": "Risk faktörü kontrolünün tromboz önlenmesinde yeri yoktur."
+     },
+     "dogru": "E",
+     "aciklama": "Tromboz önlenmesinde antiplatelet, antikoagülan tedavi ve risk faktörlerinin kontrolü birlikte kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: derin ven trombozu pulmoner emboli riski nedeniyle hayatı tehdit edebilir.",
+      "B": "Doğru ifade: arteriyel tromboz miyokard enfarktüsü, iskemik inme, akut ekstremite iskemisi ve bağırsak enfarktüsü yapabilir.",
+      "C": "Doğru ifade: aspirin antiplatelet bir ajandır.",
+      "D": "Doğru ifade: heparin, varfarin ve direkt oral antikoagülanlar antikoagülan ilaçlardır.",
+      "E": "Yanlış ifade (aranan cevap). Tromboz önlenmesinde antiplatelet, antikoagülan tedavi ve risk faktörlerinin kontrolü birlikte kullanılır."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 47,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:35"
+}

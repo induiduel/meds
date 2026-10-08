@@ -1,0 +1,1572 @@
+{
+ "id": "k1-49-invaziv-serviks-kanseri-ve-endometriyozis",
+ "sira": 49,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "İnvaziv Serviks Kanseri ve Endometriyozis",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-07",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Servisitin tanımını, sıklığını ve enfeksiyöz/non-enfeksiyöz ayrımını yapabilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Servisit aşağıdakilerden hangisini tanımlar?",
+     "secenekler": {
+      "A": "Serviksin benign ekzofitik lezyonu",
+      "B": "Serviksin inflamatuvar durumu",
+      "C": "Serviksin prekanseröz epitel değişikliği",
+      "D": "Serviksin invaziv tümörü",
+      "E": "Endometriyal dokunun uterus dışında bulunması"
+     },
+     "dogru": "B",
+     "aciklama": "Servisit serviksin çok yaygın görülen inflamatuvar durumudur ve sıklıkla irinli akıntıyla seyreder.",
+     "sik_aciklamalari": {
+      "A": "Benign ekzofitik lezyon endoservikal poliptir.",
+      "B": "Doğru: servisitin tanımıdır.",
+      "C": "Prekanseröz değişiklik SIL/CIN'dir.",
+      "D": "İnvaziv tümör serviks karsinomudur.",
+      "E": "Bu tanım endometriyozise aittir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Servisitin enfeksiyöz ve non-enfeksiyöz olarak kesin ayrımının zor olmasının temel nedeni hangisidir?",
+     "secenekler": {
+      "A": "Serviksin biyopsisinin yapılamaması",
+      "B": "Servisitin her zaman asemptomatik olması",
+      "C": "Vajinal floranın normalde çok sayıda mikroorganizma içermesi",
+      "D": "Servisitin yalnızca virüslerle oluşması",
+      "E": "Servisitin nadir görülmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Vajinal florada normalde bakteriler ve kandida bulunduğundan saptanan organizmanın etken olup olmadığını ayırmak zordur; bu nedenle ampirik tedavi sık uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Serviks biyopsisi yapılabilir.",
+      "B": "Servisit sıklıkla akıntıyla semptomatiktir.",
+      "C": "Doğru: flora üyeleri ayrımı güçleştirir.",
+      "D": "Bakteriyel, protozoal ve viral etkenler vardır.",
+      "E": "Servisit çok yaygındır."
+     },
+     "bilgi": [
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Servisit ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Çok yaygın bir durumdur",
+      "B": "Sıklıkla irinli vajinal akıntıyla birliktedir",
+      "C": "Enfeksiyöz ve non-enfeksiyöz olarak sınıflanır",
+      "D": "Akıntı nedeniyle jinekolojik başvurunun sık nedenidir",
+      "E": "Malign potansiyeli olan prekanseröz bir lezyondur"
+     },
+     "dogru": "E",
+     "aciklama": "Servisit inflamatuvar bir durumdur; prekanseröz lezyon SIL/CIN'dir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: servisit çok sık görülür.",
+      "B": "Doğru ifade: irinli akıntı tipiktir.",
+      "C": "Doğru ifade: iki gruba ayrılır.",
+      "D": "Doğru ifade: akıntı şikayetiyle sık başvurulur.",
+      "E": "Yanlış ifade (aranan cevap): servisit prekanseröz değildir."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Normal vajinal florayı ve servisitin başlıca cinsel yolla bulaşan etkenlerini sayabilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi normal vajinal florada bulunabilen bir mikroorganizmadır?",
+     "secenekler": {
+      "A": "HSV-2",
+      "B": "Treponema pallidum",
+      "C": "Neisseria gonorrhoeae",
+      "D": "Candida türleri",
+      "E": "Chlamydia trachomatis"
+     },
+     "dogru": "D",
+     "aciklama": "Vajinal florada aerob/anaerob bakteriler, streptokok, stafilokok, enterokok, E. coli ve Candida türleri bulunabilir.",
+     "sik_aciklamalari": {
+      "A": "HSV-2 cinsel yolla bulaşan viral patojendir.",
+      "B": "T. pallidum patojendir, flora üyesi değildir.",
+      "C": "Gonokok cinsel yolla bulaşan patojendir.",
+      "D": "Doğru: Candida flora üyesi olabilir.",
+      "E": "C. trachomatis cinsel yolla bulaşan patojendir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi servisitin cinsel yolla bulaşan başlıca etkenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Chlamydia trachomatis",
+      "B": "Ureaplasma urealyticum",
+      "C": "Trichomonas vaginalis",
+      "D": "HSV-2",
+      "E": "Enterococcus türleri"
+     },
+     "dogru": "E",
+     "aciklama": "Servisitin cinsel yolla bulaşan etkenleri C. trachomatis, U. urealyticum, T. vaginalis, N. gonorrhoeae, HSV-2 ve bazı HPV tipleridir.",
+     "sik_aciklamalari": {
+      "A": "En sık servisit etkenidir.",
+      "B": "Cinsel yolla bulaşan etkenler arasındadır.",
+      "C": "Cinsel yolla bulaşan protozoondur.",
+      "D": "Cinsel yolla bulaşan viral etkendir.",
+      "E": "Doğru: enterokoklar normal flora elemanıdır."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Gebelikte genital herpes saptanan kadın için en önemli perinatal risk hangisidir?",
+     "secenekler": {
+      "A": "Bebekte sarkoma botryoides",
+      "B": "Bebekte Hutchinson triadı",
+      "C": "Bebekte kondiloma akuminatum",
+      "D": "Doğumda bebeğe bulaşarak ağır, bazen ölümcül sistemik yenidoğan herpesi",
+      "E": "Herhangi bir risk yoktur"
+     },
+     "dogru": "D",
+     "aciklama": "HSV-2 doğum sırasında bebeğe bulaşabilir ve yenidoğanda ağır, bazen ölümcül sistemik herpese yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Sarkoma botryoides HSV ile ilişkili değildir.",
+      "B": "Hutchinson triadı konjenital sifilise aittir.",
+      "C": "Kondilom HPV 6/11 ile ilişkilidir.",
+      "D": "Doğru: perinatal bulaş gebelik takibinde dikkate alınmalıdır.",
+      "E": "Yenidoğan herpesi ciddi bir risktir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Chlamydia trachomatis servisitinin klinik özelliklerini ve laboratuvar tanısını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Servisitin en yaygın etkeni hangisidir?",
+     "secenekler": {
+      "A": "Neisseria gonorrhoeae",
+      "B": "Chlamydia trachomatis",
+      "C": "HSV-2",
+      "D": "Trichomonas vaginalis",
+      "E": "Candida albicans"
+     },
+     "dogru": "B",
+     "aciklama": "C. trachomatis en yaygın servisit etkenidir; CYBH kliniklerinde servisit olgularının %40'ına kadarından sorumludur.",
+     "sik_aciklamalari": {
+      "A": "Gonokok önemli ama daha seyrek etkendir.",
+      "B": "Doğru: klamidya en sık etkendir.",
+      "C": "HSV-2 servisit etkenlerinden biridir, en sık değildir.",
+      "D": "Trichomonas daha çok vajinit yapar.",
+      "E": "Candida flora elemanı olup vajinit yapar."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Chlamydia trachomatis servisitinin sıklıkla asemptomatik seyretmesinin önemi nedir?",
+     "secenekler": {
+      "A": "Komplikasyon riski ortadan kalkar",
+      "B": "Hastalık kendiliğinden ve iz bırakmadan geçer",
+      "C": "Tedavinin gecikmesi pelvik inflamatuvar hastalık riskini artırır",
+      "D": "Partnere bulaş olmaz",
+      "E": "Tanı için hiçbir test gerekmez"
+     },
+     "dogru": "C",
+     "aciklama": "Asemptomatik klamidya enfeksiyonu tedavisiz kalarak PID ve sekellerine yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Asemptomatik seyir komplikasyon riskini azaltmaz.",
+      "B": "Tedavisiz enfeksiyon komplikasyon yapabilir.",
+      "C": "Doğru: gecikmiş tedavi PID riskini artırır.",
+      "D": "Asemptomatik kişiler de bulaştırır.",
+      "E": "Tanı için NAAT gereklidir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Mukopürülan servikal akıntısı olan kadında servisit etkenlerinin laboratuvar tanısında tercih edilen yöntem hangisidir?",
+     "secenekler": {
+      "A": "Rutin idrar mikroskopisi",
+      "B": "Gram boyamada klamidya cisimciklerinin aranması",
+      "C": "Serum tümör belirteçleri",
+      "D": "Vajinal sıvıda nükleik asit amplifikasyon testleri (NAAT)",
+      "E": "Karanlık alan mikroskopisi"
+     },
+     "dogru": "D",
+     "aciklama": "NAAT ile C. trachomatis, N. gonorrhoeae ve T. vaginalis araştırılır; patojen tanımlanınca hedefe yönelik tedavi yapılır.",
+     "sik_aciklamalari": {
+      "A": "İdrar mikroskopisi servisit etkenini belirlemez.",
+      "B": "Klamidya hücre içi olduğundan Gram boyamada görülmez.",
+      "C": "Tümör belirteçleri enfeksiyon tanısında kullanılmaz.",
+      "D": "Doğru: NAAT duyarlı ve özgül tanı yöntemidir.",
+      "E": "Karanlık alan mikroskopisi spiroketler (sifilis) içindir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Servisitin klinik bulgularını, tanı ve tedavi prensiplerini özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Normalden farklı renk, koku veya kıvamdaki beyaz-sarımsı vajinal akıntıya ne ad verilir?",
+     "secenekler": {
+      "A": "Disparoni",
+      "B": "Menoraji",
+      "C": "Lökore",
+      "D": "Dizüri",
+      "E": "Metroraji"
+     },
+     "dogru": "C",
+     "aciklama": "Lökore anormal beyaz-sarımsı vajinal akıntıdır ve servisitin klinik bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Disparoni ağrılı cinsel ilişkidir.",
+      "B": "Menoraji uzamış/aşırı menstrüel kanamadır.",
+      "C": "Doğru: servisitte irinli/mukopürülan akıntı ile birlikte görülür.",
+      "D": "Dizüri ağrılı idrar yapmadır.",
+      "E": "Metroraji düzensiz uterin kanamadır."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Servisitte ampirik tedavi seçilirken hangi etkenlerin kapsanması esastır?",
+     "secenekler": {
+      "A": "Candida ve Enterococcus",
+      "B": "Chlamydia trachomatis ve Neisseria gonorrhoeae",
+      "C": "HPV 6 ve 11",
+      "D": "Streptococcus ve Staphylococcus",
+      "E": "Treponema pallidum ve HSV-1"
+     },
+     "dogru": "B",
+     "aciklama": "Servisitin tedavisi çoğunlukla ampiriktir ve C. trachomatis ile N. gonorrhoeae'ye etkili rejimler seçilir.",
+     "sik_aciklamalari": {
+      "A": "Bunlar flora üyeleridir.",
+      "B": "Doğru: en önemli ve komplikasyon yapan iki bakteriyel etkendir.",
+      "C": "HPV antibiyotikle tedavi edilmez.",
+      "D": "Bunlar flora üyeleridir, ampirik tedavinin hedefi değildir.",
+      "E": "Ampirik servisit tedavisinin ana hedefleri değildir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Servisit tanı ve tedavi prensipleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Spekulum muayenesi yapılır",
+      "B": "Servikal/vajinal akıntı değerlendirilir",
+      "C": "NAAT ile etken araştırılabilir",
+      "D": "Ampirik tedavi komplikasyon riskini azaltır",
+      "E": "Normal floradan herhangi bir bakteri üremesi her zaman etken kabul edilip tedavi edilmelidir"
+     },
+     "dogru": "E",
+     "aciklama": "Vajinada normal flora bulunduğundan flora elemanlarının üremesi her zaman etken anlamına gelmez; aşırı yorumdan kaçınılmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: muayenenin temelidir.",
+      "B": "Doğru ifade: akıntı değerlendirilmelidir.",
+      "C": "Doğru ifade: NAAT hedefe yönelik tedavi sağlar.",
+      "D": "Doğru ifade: ampirik yaklaşım komplikasyonları önler.",
+      "E": "Yanlış ifade (aranan cevap): normal flora aşırı yorumlanmamalıdır."
+     },
+     "bilgi": [
+      3,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Endoservikal polipin tanımını, morfolojisini, histolojisini ve tedavisini bilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Endoservikal polip ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "HPV 16 ile oluşur",
+      "B": "Prekanseröz lezyondur",
+      "C": "Benign ekzofitik lezyondur ve malign potansiyeli yoktur",
+      "D": "Nadir görülür",
+      "E": "Tedavisi radikal histerektomidir"
+     },
+     "dogru": "C",
+     "aciklama": "Endoservikal polip endoservikal kanalda gelişen yaygın, benign ekzofitik lezyondur.",
+     "sik_aciklamalari": {
+      "A": "HPV ile ilişkili değildir.",
+      "B": "Prekanseröz değildir.",
+      "C": "Doğru: malign potansiyeli yoktur.",
+      "D": "Yaygın bir lezyondur.",
+      "E": "Basit küretaj veya eksizyon yeterlidir."
+     },
+     "bilgi": [
+      10,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Endoservikal polipin histolojik özellikleri hangisidir?",
+     "secenekler": {
+      "A": "Koilositoz ve papiller skuamöz proliferasyon",
+      "B": "Fibröz stroma ve mukus salgılayan endoservikal bezler, sıklıkla inflamasyon",
+      "C": "Tam kat skuamöz atipi",
+      "D": "Keratin incileri ve stromal invazyon",
+      "E": "Malign embriyonel rabdomiyoblastlar"
+     },
+     "dogru": "B",
+     "aciklama": "Endoservikal polipte fibröz stroma içinde mukus salgılayan endoservikal bezler bulunur; inflamasyon sık eşlik eder.",
+     "sik_aciklamalari": {
+      "A": "Koilositoz ve papiller yapı kondiloma bulgusudur.",
+      "B": "Doğru: polipin tipik histolojisidir.",
+      "C": "Tam kat atipi HSIL/CIN III'e aittir.",
+      "D": "Keratin incileri ve invazyon SCC bulgusudur.",
+      "E": "Rabdomiyoblastlar sarkoma botryoides'e aittir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Düzensiz vajinal kanama ile başvuran kadında servikal açıklıktan dışarı sarkan polipoid kitle saptanıyor.\n\nBu lezyonla ilgili en uygun yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Kemoradyoterapi",
+      "B": "Doğrudan radikal histerektomi",
+      "C": "Yalnızca antibiyotik",
+      "D": "Basit eksizyon/küretaj ve histolojik inceleme ile maligniteyi dışlamak",
+      "E": "Hiçbir işlem yapmadan izlem"
+     },
+     "dogru": "D",
+     "aciklama": "Endoservikal polipte ülserasyon kanama yapabilir; basit eksizyon genellikle küratiftir ve histoloji ile malignite dışlanır.",
+     "sik_aciklamalari": {
+      "A": "Kemoradyoterapi malign tümörlerde kullanılır.",
+      "B": "Benign lezyon için radikal cerrahi gereksizdir.",
+      "C": "Antibiyotik polipi ortadan kaldırmaz.",
+      "D": "Doğru: tedavi ve tanı birlikte sağlanır.",
+      "E": "Kanayan lezyonda malignite dışlanmalıdır."
+     },
+     "bilgi": [
+      11,
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Serviks epitelini, skuamo-kolumnar bileşkeyi ve transformasyon bölgesini tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Serviks tümörlerinin en sık geliştiği ve Pap testinde örnek alınan bölge hangisidir?",
+     "secenekler": {
+      "A": "Vajinal fornikslerin dış yüzü",
+      "B": "Endometriyal kavite",
+      "C": "Transformasyon bölgesi",
+      "D": "Uterus fundusu",
+      "E": "Over yüzeyi"
+     },
+     "dogru": "C",
+     "aciklama": "Transformasyon bölgesindeki olgunlaşmamış metaplastik skuamöz hücreler HPV'ye en duyarlı alandır; tümörler en sık burada gelişir.",
+     "sik_aciklamalari": {
+      "A": "Vajinal fornikslerin dış yüzü tarama hedefi değildir.",
+      "B": "Endometriyal kavite servikal tarama alanı değildir.",
+      "C": "Doğru: Pap testi bu bölgeden örnek alır.",
+      "D": "Fundus uterus gövdesidir.",
+      "E": "Over yüzeyi servikal taramayla ilgili değildir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Serviks epiteli ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Endoserviks keratinize skuamöz epitelle döşelidir",
+      "B": "Ektoserviks kolumnar epitelle döşelidir",
+      "C": "Skuamo-kolumnar bileşkenin yeri yaşamboyu sabittir",
+      "D": "Endoserviks kolumnar mukus salgılayan, ektoserviks skuamöz epitelle döşelidir",
+      "E": "Transformasyon bölgesi yalnızca menopozdan sonra oluşur"
+     },
+     "dogru": "D",
+     "aciklama": "Endoserviks kolumnar, ektoserviks skuamöz epitellidir; bileşkenin yeri yaş ve hormonal duruma göre değişir.",
+     "sik_aciklamalari": {
+      "A": "Endoserviks kolumnar epitellidir.",
+      "B": "Ektoserviks skuamöz epitellidir.",
+      "C": "Bileşkenin yeri yaş ve hormonlarla değişir.",
+      "D": "Doğru: iki epitelin dağılımı doğru verilmiştir.",
+      "E": "Transformasyon bölgesi ergenlikte eversiyonla oluşur."
+     },
+     "bilgi": [
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Transformasyon bölgesinin HPV enfeksiyonuna en duyarlı alan olmasının nedeni hangisidir?",
+     "secenekler": {
+      "A": "Keratinize çok katlı yassı epitel içermesi",
+      "B": "Metaplastik, olgunlaşmamış skuamöz hücrelerden oluşması",
+      "C": "Hiç bazal hücre içermemesi",
+      "D": "Yalnızca mukus salgılayan hücrelerden oluşması",
+      "E": "İmmün hücrelerden tamamen yoksun olması"
+     },
+     "dogru": "B",
+     "aciklama": "Ergenlikte eversiyon ile ektoservikse kayan kolumnar epitel skuamöz metaplaziye uğrar; HPV olgunlaşmamış skuamöz hücreleri enfekte eder.",
+     "sik_aciklamalari": {
+      "A": "Serviks normalde keratinize değildir.",
+      "B": "Doğru: HPV'nin hedefi olgunlaşmamış skuamöz hücrelerdir.",
+      "C": "Metaplastik epitelde bazal/rezerv hücreler vardır.",
+      "D": "Mukus salgılayan hücreler endoservikal epiteldir.",
+      "E": "Bu ifade HPV duyarlılığını açıklamaz."
+     },
+     "bilgi": [
+      15,
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "HPV enfeksiyonunun doğal seyrini ve servikal karsinogenezdeki rolünü açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "HPV enfeksiyonlarının büyük çoğunluğunun doğal seyri nasıldır?",
+     "secenekler": {
+      "A": "Her zaman invaziv karsinoma ilerler",
+      "B": "Geçicidir ve aylar içinde immün sistem tarafından temizlenir",
+      "C": "Her zaman ömür boyu kalıcıdır",
+      "D": "Hemen HSIL oluşturur",
+      "E": "Yalnızca ölümcül seyreder"
+     },
+     "dogru": "B",
+     "aciklama": "Çoğu HPV enfeksiyonu geçicidir; süre tipe bağlıdır ve yüksek riskli tiplerde daha uzundur.",
+     "sik_aciklamalari": {
+      "A": "Çoğu enfeksiyon kansere ilerlemez.",
+      "B": "Doğru: geçici enfeksiyon çoğu kişide kansere ilerlemez.",
+      "C": "Çoğu enfeksiyon kalıcı değildir.",
+      "D": "Çoğu enfeksiyon lezyon oluşturmadan temizlenir.",
+      "E": "Enfeksiyon genellikle zararsız seyreder."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Servikal öncü lezyon ve karsinom gelişimi için ana risk faktörü hangisidir?",
+     "secenekler": {
+      "A": "Endoservikal polip",
+      "B": "Geçici düşük riskli HPV enfeksiyonu",
+      "C": "Kandida vajiniti",
+      "D": "Yüksek riskli HPV ile persistan enfeksiyon",
+      "E": "Bakteriyel vajinoz"
+     },
+     "dogru": "D",
+     "aciklama": "Kalıcı yüksek riskli HPV enfeksiyonu CIN ve karsinom gelişiminde kritiktir.",
+     "sik_aciklamalari": {
+      "A": "Endoservikal polip benigndir.",
+      "B": "Geçici düşük riskli enfeksiyon kanser riski taşımaz.",
+      "C": "Kandida servikal karsinom risk faktörü değildir.",
+      "D": "Doğru: persistan enfeksiyon tarama ve izlem yoğunluğunu belirler.",
+      "E": "Bakteriyel vajinoz ana risk faktörü değildir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": [
+      "d3-f-143",
+      "past-q-22_final_230619_145249-121"
+     ]
+    },
+    {
+     "id": "k1-49-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Yüksek riskli HPV'nin karsinogenezdeki rolü ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "HPV bir DNA virüsüdür",
+      "B": "Yüksek riskli HPV serviks kanserinin ana etkenidir",
+      "C": "Vajina, vulva, penis, anüs ve orofarenks karsinomlarında da rol oynar",
+      "D": "Viral replikasyon olgunlaşan skuamöz hücrelerde gerçekleşir",
+      "E": "Yüksek riskli HPV tiplerinde enfeksiyon süresi düşük riskli tiplere göre daha kısadır"
+     },
+     "dogru": "E",
+     "aciklama": "Yüksek riskli tiplerde enfeksiyon süresi daha uzundur; bu da persistans ve karsinom riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: HPV DNA virüsüdür.",
+      "B": "Doğru ifade: ana etiyolojik etkendir.",
+      "C": "Doğru ifade: HPV ilişkili kanserler serviks dışında da görülür.",
+      "D": "Doğru ifade: replikasyon olgunlaşan hücrelerde olur.",
+      "E": "Yanlış ifade (aranan cevap): yüksek riskli tiplerde süre daha uzundur."
+     },
+     "bilgi": [
+      16,
+      17,
+      18,
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-143",
+     "soru": "Aşağıdakilerden hangisi invaziv serviks karsinomu gelişiminde bir risk faktörü değildir?",
+     "secenekler": {
+      "A": "Yüksek risk grubuna ait inatçı papillomavirus enfeksiyonu",
+      "B": "İlk cinsel ilişkinin erken yaşta olması",
+      "C": "UV (ultraviyole) maruziyeti",
+      "D": "Birden çok cinsel partner bulunması",
+      "E": "Birden çok cinsel partneri olan erkeğin eşi olmak"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "past-q-22_final_230619_145249-121",
+     "soru": "Aşağıdakilerden hangisi, invaziv serviks karsinomu gelisimi igin bir risk faktörü degildir?",
+     "secenekler": {
+      "A": "Yüksek risk grubuna ait inatc papillomavirus enfeksiyonu",
+      "B": "ilk cinsel iliskinin erken yasta olmasi",
+      "C": "UV maruziyeti",
+      "D": "Birden cok cinsel partner bulunmasi",
+      "E": "Birden cok cinsel partneri olan erkegin esi olmak"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Yüksek ve düşük riskli HPV tiplerini ve ilgili risk faktörlerini ayırt edebilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "CIN ve servikal karsinomların yaklaşık %70'inden sorumlu olan HPV tipleri hangileridir?",
+     "secenekler": {
+      "A": "HPV 1 ve 2",
+      "B": "HPV 6 ve 11",
+      "C": "HPV 16 ve 18",
+      "D": "HPV 3 ve 10",
+      "E": "HPV 5 ve 8"
+     },
+     "dogru": "C",
+     "aciklama": "HPV 16 ve 18 en önemli onkojenik genotiplerdir ve tarama/aşılamada hedeflenir.",
+     "sik_aciklamalari": {
+      "A": "HPV 1/2 deri siğilleriyle ilişkilidir.",
+      "B": "HPV 6/11 düşük riskli olup kondilom yapar.",
+      "C": "Doğru: yüksek riskli tiplerin en önemlileridir.",
+      "D": "HPV 3/10 yassı deri siğilleriyle ilişkilidir.",
+      "E": "HPV 5/8 epidermodisplazi verrusiformis ile ilişkilidir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi servikal karsinom için HPV ile ilişkili risk faktörlerinden biri değildir?",
+     "secenekler": {
+      "A": "Erken yaşta ilk cinsel ilişki",
+      "B": "Çok sayıda cinsel partner",
+      "C": "Çok partnerli eş",
+      "D": "Sigara içme",
+      "E": "Hiç cinsel ilişki öyküsü olmaması"
+     },
+     "dogru": "E",
+     "aciklama": "Erken cinsel ilişki, çok partner, çok partnerli eş, sigara ve immün yetmezlik risk faktörleridir.",
+     "sik_aciklamalari": {
+      "A": "Risk faktörüdür: erken yaşta ilk cinsel ilişki.",
+      "B": "Risk faktörüdür: çok sayıda cinsel partner.",
+      "C": "Risk faktörüdür: çok partnerli eş.",
+      "D": "Ek risk artırıcıdır.",
+      "E": "Doğru: cinsel ilişki öyküsünün olmaması HPV maruziyetini azaltır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": [
+      "d3-f-143",
+      "past-q-22_final_230619_145249-121"
+     ]
+    },
+    {
+     "id": "k1-49-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Düşük ve yüksek riskli HPV tipleri karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yüksek riskli tipler yalnızca kondilom yapar",
+      "B": "Düşük riskli tiplerin E7 proteini RB'ye yüksek afiniteyle bağlanır",
+      "C": "Düşük riskli tiplerde DNA episomal kalır; yüksek riskli tipler konak genomuna entegre olma eğilimindedir",
+      "D": "Düşük riskli tipler karsinomların %70'inden sorumludur",
+      "E": "Entegrasyonun progresyonla ilişkisi yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "HPV 6/11'de DNA episomal kalır ve E7 RB'ye düşük afiniteyle bağlanır; HPV 16/18 entegre olur ve bu progresyonla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Kondilom düşük riskli tiplerle ilişkilidir.",
+      "B": "Düşük riskli tiplerde E7–RB afinitesi düşüktür.",
+      "C": "Doğru: entegrasyon farkı onkojenik potansiyeli açıklar.",
+      "D": "%70 oranı HPV 16/18'e aittir.",
+      "E": "Entegrasyon progresyonla ilişkilidir."
+     },
+     "bilgi": [
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-143",
+     "soru": "Aşağıdakilerden hangisi invaziv serviks karsinomu gelişiminde bir risk faktörü değildir?",
+     "secenekler": {
+      "A": "Yüksek risk grubuna ait inatçı papillomavirus enfeksiyonu",
+      "B": "İlk cinsel ilişkinin erken yaşta olması",
+      "C": "UV (ultraviyole) maruziyeti",
+      "D": "Birden çok cinsel partner bulunması",
+      "E": "Birden çok cinsel partneri olan erkeğin eşi olmak"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "past-q-22_final_230619_145249-121",
+     "soru": "Aşağıdakilerden hangisi, invaziv serviks karsinomu gelisimi igin bir risk faktörü degildir?",
+     "secenekler": {
+      "A": "Yüksek risk grubuna ait inatc papillomavirus enfeksiyonu",
+      "B": "ilk cinsel iliskinin erken yasta olmasi",
+      "C": "UV maruziyeti",
+      "D": "Birden cok cinsel partner bulunmasi",
+      "E": "Birden cok cinsel partneri olan erkegin esi olmak"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "HPV onkoproteinlerinin (E6 ve E7) etki mekanizmalarını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "HPV E6 onkoproteini etkisini hangi tümör baskılayıcı protein üzerinden gösterir?",
+     "secenekler": {
+      "A": "RB",
+      "B": "p53",
+      "C": "VHL",
+      "D": "APC",
+      "E": "BRCA1"
+     },
+     "dogru": "B",
+     "aciklama": "E6 p53'e bağlanarak yıkımına aracılık eder ve telomeraz ekspresyonunu artırır.",
+     "sik_aciklamalari": {
+      "A": "RB, E7'nin hedefidir.",
+      "B": "Doğru: E6–p53 etkileşimi apoptozu inhibe eder.",
+      "C": "VHL berrak hücreli RHK ile ilişkilidir.",
+      "D": "APC kolorektal karsinogenezde rol oynar.",
+      "E": "BRCA1 meme/over kanseri ile ilişkilidir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": [
+      "36fbe58185b3"
+     ]
+    },
+    {
+     "id": "k1-49-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "HPV E7 proteininin etki mekanizması hangisidir?",
+     "secenekler": {
+      "A": "HIF'i stabilize eder",
+      "B": "p53'ün yıkımını sağlar",
+      "C": "Telomerazı inhibe eder",
+      "D": "RB'ye bağlanarak E2F'i serbest bırakır ve G1/S geçişini hızlandırır",
+      "E": "MET reseptörünü aktive eder"
+     },
+     "dogru": "D",
+     "aciklama": "E7, RB proteinine bağlanarak E2F transkripsiyon faktörlerini serbest bırakır; hücre döngüsü kontrolü bozulur.",
+     "sik_aciklamalari": {
+      "A": "HIF stabilizasyonu VHL kaybıyla ilişkilidir.",
+      "B": "p53 yıkımı E6'nın etkisidir.",
+      "C": "E6 telomerazı artırır; E7 inhibe etmez.",
+      "D": "Doğru: E7–RB etkileşimi hücre döngüsünü hızlandırır.",
+      "E": "MET aktivasyonu papiller RHK ile ilişkilidir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Yüksek riskli HPV'nin konak genomuna entegrasyonunun karsinogenezdeki sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "E6 ve E7 ekspresyonunun tamamen durması",
+      "B": "Viral replikasyonun artması ve koilositozun belirginleşmesi",
+      "C": "E6–E7'yi negatif düzenleyen viral genin bozulmasıyla E6–E7 ekspresyonunun artması ve genomik instabilite",
+      "D": "Virüsün episomal forma dönüşmesi",
+      "E": "Hücrenin G1 fazında kalıcı olarak durması"
+     },
+     "dogru": "C",
+     "aciklama": "Entegrasyon E6/E7 baskılayıcı viral geni bozar; E6–E7 artar, genomik instabilite ve ek mutasyonlar birikir.",
+     "sik_aciklamalari": {
+      "A": "Ekspresyon artar, durmaz.",
+      "B": "Entegre HSIL'de viral replikasyon düşüktür, koilositoz azalır.",
+      "C": "Doğru: progresyonun moleküler göstergesidir.",
+      "D": "Entegrasyon episomal durumun tersidir.",
+      "E": "HPV büyüme durmasını engeller."
+     },
+     "bilgi": [
+      21,
+      26,
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "36fbe58185b3",
+     "soru": "Tıbbi Patoloji\nServiks kanseri-2\nHVPE6 viral onkoproteini etkisini\nhangi̇si ü̈zerinden\noluşturur?",
+     "secenekler": {
+      "A": "Retinoblastom tümör baskılayıcı geni p53",
+      "B": "p16",
+      "C": "p27",
+      "D": "Siklin D1",
+      "E": "p53"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Skuamöz intraepitelyal lezyon (SIL) ve servikal intraepiteliyal neoplazi (CIN) kavramlarını ve sınıflamasını bilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Servikal prekanseröz lezyonların histolojik (CIN) sınıflaması kaç basamaklıdır?",
+     "secenekler": {
+      "A": "İki basamaklı: LSIL ve HSIL",
+      "B": "Üç basamaklı: CIN I, CIN II, CIN III",
+      "C": "Dört basamaklı",
+      "D": "Tek basamaklı",
+      "E": "Beş basamaklı"
+     },
+     "dogru": "B",
+     "aciklama": "Histolojik sınıflama CIN I–II–III olarak üç basamaklı; klinik yönetim sınıflaması LSIL/HSIL olarak iki basamaklıdır.",
+     "sik_aciklamalari": {
+      "A": "LSIL/HSIL iki basamaklı klinik yönetim sınıflamasıdır.",
+      "B": "Doğru: CIN sınıflaması üç basamaklıdır.",
+      "C": "Dört basamaklı bir CIN sınıflaması yoktur.",
+      "D": "Tek basamaklı değildir.",
+      "E": "Beş basamaklı değildir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "SIL ve CIN sınıflamalarının eşleştirmesinde hangisi doğrudur?",
+     "secenekler": {
+      "A": "LSIL = CIN III",
+      "B": "LSIL = CIN I ve II; HSIL = CIN III",
+      "C": "HSIL = yalnızca invaziv karsinom",
+      "D": "LSIL = CIN I; HSIL = CIN II ve CIN III",
+      "E": "CIN II LSIL içinde yer alır"
+     },
+     "dogru": "D",
+     "aciklama": "LSIL CIN I'e, HSIL ise CIN II ve CIN III'e karşılık gelir.",
+     "sik_aciklamalari": {
+      "A": "CIN III HSIL'dir: LSIL = CIN III.",
+      "B": "CIN II HSIL içindedir.",
+      "C": "HSIL prekanseröz intraepitelyal lezyondur, invaziv değildir.",
+      "D": "Doğru: iki sistem bu şekilde eşleşir.",
+      "E": "CIN II HSIL kapsamındadır."
+     },
+     "bilgi": [
+      28,
+      29,
+      30
+     ],
+     "benzer_cikmis": [
+      "814d679ce75a"
+     ]
+    },
+    {
+     "id": "k1-49-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "SIL'in yaş dağılımı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "SIL yalnızca menopoz sonrası görülür",
+      "B": "SIL ve invaziv karsinom aynı yaşta zirve yapar",
+      "C": "İnvaziv karsinom SIL'den önce zirve yapar",
+      "D": "SIL insidansı ~30 yaşında, invaziv karsinom ~45 yaşında zirve yapar",
+      "E": "SIL çocukluk çağında zirve yapar"
+     },
+     "dogru": "D",
+     "aciklama": "SIL ~30, invaziv karsinom ~45 yaşta zirve yapar; bu fark ilerlemenin yıllar aldığını ve tarama zamanlamasını belirler.",
+     "sik_aciklamalari": {
+      "A": "SIL üreme çağında sıktır.",
+      "B": "Zirveler arasında yaklaşık 15 yıl fark vardır.",
+      "C": "Öncül lezyon karsinomdan önce görülür.",
+      "D": "Doğru: yaş farkı tarama penceresini oluşturur.",
+      "E": "SIL çocuklukta zirve yapmaz."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "814d679ce75a",
+     "soru": "Bu hastanın tanısı için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "I. Servikal İntraepitelyal Neoplazi (CIN-1)",
+      "B": "II. Servikal İntraepitelyal Neoplazi (CIN-2)",
+      "C": "III. Servikal İntraepitelyal Neoplazi (CIN-3)",
+      "D": "IV. Servikal Hücreli Karsinom"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "LSIL ve HSIL'in histolojik ve biyolojik özelliklerini karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "LSIL (CIN I) için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Çoğu spontan geriler ve prekanseröz kabul edilmez",
+      "B": "Tam kat olgunlaşmamış hücreler içerir",
+      "C": "Viral replikasyon düşüktür",
+      "D": "Mutlaka eksizyon gerekir",
+      "E": "HSIL'den daha az görülür"
+     },
+     "dogru": "A",
+     "aciklama": "LSIL HSIL'den sıktır, çoğu spontan geriler; viral replikasyon yüksek, hücre büyümesi değişikliği hafiftir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: konservatif izlem yeterlidir.",
+      "B": "Tam kat tutulum CIN III'ün özelliğidir.",
+      "C": "LSIL'de viral replikasyon yüksektir.",
+      "D": "LSIL'de yakın takip yapılır.",
+      "E": "LSIL HSIL'den daha sık görülür."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "CIN III'ün histolojik özelliği aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Displazinin yalnızca alt üçte birde olması ve yüzeyde belirgin koilositoz",
+      "B": "Olgunlaşmamış atipik hücrelerin epitelin tam kalınlığını tutması; koilositoz genellikle yok",
+      "C": "Normal olgunlaşma ve atipi yokluğu",
+      "D": "Stromaya invazyon",
+      "E": "Papiller ekzofitik yapı"
+     },
+     "dogru": "B",
+     "aciklama": "CIN III'te olgunlaşmamış hücreler tam kalınlığa uzanır; viral replikasyon düşük olduğundan koilositoz genellikle görülmez.",
+     "sik_aciklamalari": {
+      "A": "Bu tanım LSIL (CIN I) içindir.",
+      "B": "Doğru: CIN III'ün tanımlayıcı bulgusudur.",
+      "C": "Bu normal epiteldir.",
+      "D": "Stromal invazyon invaziv karsinomu gösterir.",
+      "E": "Papiller ekzofitik yapı kondilomaya aittir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "LSIL ve HSIL'in biyolojik özellikleri karşılaştırıldığında hangisi yanlıştır?",
+     "secenekler": {
+      "A": "LSIL'de viral replikasyon yüksek, HSIL'de düşüktür",
+      "B": "HSIL'de proliferasyon belirgin artmış ve olgunlaşma durmuştur",
+      "C": "LSIL'de yüzeysel katmanda koilositik değişiklik vardır",
+      "D": "HSIL'de karsinom riski yüksektir ancak zorunlu değildir",
+      "E": "HSIL'de koilositoz LSIL'den daha belirgindir ve viral replikasyon en yüksektir"
+     },
+     "dogru": "E",
+     "aciklama": "HSIL'de viral replikasyon düşüktür; CIN III'te koilositoz genellikle görülmez.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: replikasyon LSIL'de yüksektir.",
+      "B": "Doğru ifade: HSIL'de olgunlaşma durur.",
+      "C": "Doğru ifade: LSIL'de koilositoz tipiktir.",
+      "D": "Doğru ifade: HSIL eksizyon gerektirir.",
+      "E": "Yanlış ifade (aranan cevap): HSIL'de replikasyon ve koilositoz azdır."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "SIL'in doğal seyrini ve klinik yönetimini özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q34",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Anormal Pap testi sonucu olan kadında SIL tanısı nasıl konur?",
+     "secenekler": {
+      "A": "Yalnızca ultrasonografi ile",
+      "B": "Yalnızca serum HPV antikoru ile",
+      "C": "Kolposkopi ve biyopsi ile",
+      "D": "Yalnızca idrar tahlili ile",
+      "E": "Yalnızca fizik muayene ile"
+     },
+     "dogru": "C",
+     "aciklama": "SIL genellikle asemptomatiktir; anormal Pap sonrası kolposkopi ve biyopsi ile tanı konur, lezyonlar asetik asitle vurgulanır.",
+     "sik_aciklamalari": {
+      "A": "Ultrasonografi intraepitelyal lezyonu göstermez.",
+      "B": "Serum antikoru SIL tanısı koydurmaz.",
+      "C": "Doğru: kolposkopik biyopsi tanı yöntemidir.",
+      "D": "İdrar tahlili SIL tanısında kullanılmaz.",
+      "E": "SIL genellikle gözle ayırt edilemez."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q35",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "SIL'in doğal seyri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "HSIL'in tamamı 1 yıl içinde karsinoma dönüşür",
+      "B": "LSIL'in tamamı HSIL'e ilerler",
+      "C": "LSIL'in ~%60'ı geriler, ~%10'u HSIL'e ilerler",
+      "D": "HSIL hiçbir zaman gerilemez",
+      "E": "LSIL'in ~%60'ı karsinoma ilerler"
+     },
+     "dogru": "C",
+     "aciklama": "LSIL %60 geriler, %30 persiste, %10 HSIL'e ilerler; HSIL %30 geriler, %60 persiste, %10 karsinoma 2–10 yılda ilerler.",
+     "sik_aciklamalari": {
+      "A": "HSIL'in ~%10'u 2–10 yılda karsinoma ilerler.",
+      "B": "Yalnız ~%10'u HSIL'e ilerler.",
+      "C": "Doğru: LSIL'in doğal seyri doğru verilmiştir.",
+      "D": "HSIL'in ~%30'u geriler.",
+      "E": "LSIL'in çoğu geriler."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q36",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Kolposkopik biyopside HSIL (CIN III) saptanan 32 yaşında kadın için en uygun yönetim hangisidir?",
+     "secenekler": {
+      "A": "Konik biyopsi (eksizyon)",
+      "B": "Hiçbir işlem yapmadan 10 yıl sonra kontrol",
+      "C": "Yalnızca antibiyotik tedavisi",
+      "D": "Doğrudan radikal histerektomi ve kemoterapi",
+      "E": "Yalnızca HPV aşısı"
+     },
+     "dogru": "A",
+     "aciklama": "HSIL veya kalıcı LSIL'de konik biyopsi yapılır; uygun yönetim invaziv karsinom gelişimini önler.",
+     "sik_aciklamalari": {
+      "A": "Doğru: HSIL eksizyon gerektirir.",
+      "B": "HSIL'in karsinoma ilerleme riski nedeniyle izlemsiz bırakılmaz.",
+      "C": "Antibiyotik HPV lezyonunu tedavi etmez.",
+      "D": "İntraepitelyal lezyonda radikal tedavi gereksizdir.",
+      "E": "Aşı mevcut lezyonu tedavi etmez."
+     },
+     "bilgi": [
+      30,
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "Pap testi ve HPV DNA testinin tarama rolünü açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q37",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Pap testi hangi bölgeden hücre kazınmasına dayanır?",
+     "secenekler": {
+      "A": "Endometriyum",
+      "B": "Transformasyon bölgesi",
+      "C": "Vulva",
+      "D": "Over",
+      "E": "Fallop tüpü"
+     },
+     "dogru": "B",
+     "aciklama": "Pap testi tümörlerin en sık geliştiği transformasyon bölgesinden hücre kazınmasına dayanır.",
+     "sik_aciklamalari": {
+      "A": "Endometriyum Pap testinin hedefi değildir.",
+      "B": "Doğru: HPV'ye en duyarlı alan örneklenir.",
+      "C": "Vulva servikal taramayla örneklenmez.",
+      "D": "Over Pap testi ile örneklenmez.",
+      "E": "Fallop tüpü Pap testi ile örneklenmez."
+     },
+     "bilgi": [
+      15,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q38",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "HPV DNA testinin servikal taramadaki rolü ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "20 yaş altında rutin tarama testidir",
+      "B": "Pap testinin yerine tamamen geçer ve sitolojiye gerek kalmaz",
+      "C": "Düşük riskli tipleri saptamak için kullanılır",
+      "D": "Negatif prediktif değeri düşüktür",
+      "E": "Özellikle 30 yaş ve üzerinde değerlidir; negatifse izleyen 5 yılda risk çok düşüktür"
+     },
+     "dogru": "E",
+     "aciklama": "HPV DNA testi Pap testine tamamlayıcıdır, yüksek riskli tipleri hassasiyetle saptar ve yüksek negatif prediktif değeri tarama aralığını uzatır.",
+     "sik_aciklamalari": {
+      "A": "Genç yaşta geçici enfeksiyonlar sık olduğundan değeri sınırlıdır.",
+      "B": "Pap testine tamamlayıcıdır.",
+      "C": "Yüksek riskli tipleri saptamada kullanılır.",
+      "D": "Negatif prediktif değeri yüksektir.",
+      "E": "Doğru: 30 yaş üstünde ve negatif sonuçta güçlü güvence sağlar."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q39",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Pap testinin halk sağlığı etkisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "En başarılı tarama testlerinden biridir",
+      "B": "Serviks kanseri ölüm oranında ~%75 azalma sağlamıştır",
+      "C": "Yeni olguların >%85'i kaynak kısıtlı ülkelerdedir",
+      "D": "Tarama programları mortaliteyi belirgin azaltır",
+      "E": "Tarama yaygınlaştıkça yeni olguların çoğu gelişmiş ülkelerde görülmeye başlamıştır"
+     },
+     "dogru": "E",
+     "aciklama": "Taramanın yaygın olduğu ülkelerde insidans düşmüştür; yeni olguların >%85'i kaynak kısıtlı ülkelerdedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: Pap testi çok başarılıdır.",
+      "B": "Doğru ifade: ölümlerde ~%75 azalma sağlamıştır.",
+      "C": "Doğru ifade: yük kaynak kısıtlı ülkelerdedir.",
+      "D": "Doğru ifade: tarama mortaliteyi azaltır.",
+      "E": "Yanlış ifade (aranan cevap): olguların çoğu kaynak kısıtlı ülkelerdedir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 14,
+   "metin": "HPV aşılamasının ilkelerini ve aşılama-tarama birlikteliğini bilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q40",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "HPV aşısının rutin olarak önerildiği yaş grubu hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca gebeler",
+      "B": "Yalnızca 60 yaş üstü kadınlar",
+      "C": "Yalnızca yenidoğanlar",
+      "D": "11–12 yaş kız ve erkek çocuklar",
+      "E": "Yalnızca CIN III tanılı hastalar"
+     },
+     "dogru": "D",
+     "aciklama": "HPV aşısı 11–12 yaş kız ve erkeklere ve 26 yaşına kadar gençlere önerilir.",
+     "sik_aciklamalari": {
+      "A": "Gebelik rutin aşılama endikasyonu değildir.",
+      "B": "İleri yaş rutin aşılama grubu değildir.",
+      "C": "Yenidoğanlara rutin uygulanmaz.",
+      "D": "Doğru: cinsel aktivite öncesi aşılama hedeflenir.",
+      "E": "Aşı tedavi edici değil, koruyucudur."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q41",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "HPV aşılı kadınlarda servikal taramaya devam edilmesinin nedeni hangisidir?",
+     "secenekler": {
+      "A": "Birçok kadının aşıdan önce enfekte olması ve aşıların tüm onkojenik genotipleri kapsamaması",
+      "B": "Aşının hiç koruma sağlamaması",
+      "C": "Aşının yalnızca erkeklerde etkili olması",
+      "D": "Aşının bakteriyel CYBE'lere karşı geliştirilmiş olması",
+      "E": "Aşının koruma süresinin birkaç hafta olması"
+     },
+     "dogru": "A",
+     "aciklama": "HPV aşıları taramanın yerine geçmez; strateji Pap + HPV testi + aşılamadır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: aşılama ve tarama birbirini tamamlar.",
+      "B": "Aşı etkili koruma sağlar.",
+      "C": "Aşı her iki cinsiyette etkilidir.",
+      "D": "Aşı HPV'ye karşıdır.",
+      "E": "Aşılar en az 10 yıl koruma sağlar."
+     },
+     "bilgi": [
+      35,
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q42",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "HPV aşılaması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Dört ve dokuz değerlikli aşılar mevcuttur",
+      "B": "En az 10 yıl koruma sağlar",
+      "C": "Erkek aşılaması toplumdaki enfeksiyon yükünü azaltır",
+      "D": "Yüksek riskli HPV tiplerine karşı aşılama ana korunma basamağıdır",
+      "E": "Aşılanan kadınlarda Pap ve HPV testiyle taramaya gerek kalmaz"
+     },
+     "dogru": "E",
+     "aciklama": "Aşılar tüm onkojenik tipleri kapsamaz ve birçok kadın aşı öncesi enfektedir; tarama sürmelidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: dört ve dokuz değerlikli aşılar vardır.",
+      "B": "Doğru ifade: koruma en az 10 yıldır.",
+      "C": "Doğru ifade: erkek aşılaması sürü etkisi sağlar.",
+      "D": "Doğru ifade: aşılama birincil korunmadır.",
+      "E": "Yanlış ifade (aranan cevap): tarama devam etmelidir."
+     },
+     "bilgi": [
+      35,
+      36
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 15,
+   "metin": "İnvaziv serviks karsinomunun histolojik tiplerini, makroskopisini ve insidans değişimini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q43",
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "İnvaziv serviks karsinomunun en sık histolojik tipi hangisidir?",
+     "secenekler": {
+      "A": "Skuamöz hücreli karsinom",
+      "B": "Adenokarsinom",
+      "C": "Adenoskuamöz karsinom",
+      "D": "Küçük hücreli nöroendokrin karsinom",
+      "E": "Sarkom"
+     },
+     "dogru": "A",
+     "aciklama": "İnvaziv serviks karsinomlarının ~%80'i skuamöz hücreli karsinomdur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: en sık tiptir.",
+      "B": "Adenokarsinom ve adenoskuamöz birlikte ~%15'tir.",
+      "C": "Adenoskuamöz karsinom daha seyrektir.",
+      "D": "Küçük hücreli nöroendokrin karsinom <%5'tir.",
+      "E": "Sarkomlar çok nadirdir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q44",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "İnvaziv serviks karsinomunun histolojik tipleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Skuamöz, adeno-, adenoskuamöz ve küçük hücreli nöroendokrin karsinomların tümü yüksek riskli HPV ile ilişkilidir",
+      "B": "Yalnızca skuamöz hücreli karsinom HPV ile ilişkilidir",
+      "C": "Adenokarsinom en sık tiptir",
+      "D": "Küçük hücreli nöroendokrin karsinomun prognozu en iyisidir",
+      "E": "Histolojik tip prognozu etkilemez"
+     },
+     "dogru": "A",
+     "aciklama": "Tüm ana servikal karsinom tipleri yüksek riskli HPV ile ilişkilidir; histolojik tip prognoz ve tedaviyi etkiler.",
+     "sik_aciklamalari": {
+      "A": "Doğru: HPV ortak etiyolojik etkendir.",
+      "B": "Diğer tipler de HPV ilişkilidir.",
+      "C": "En sık tip SCC'dir: adenokarsinom en sık tiptir.",
+      "D": "Küçük hücreli nöroendokrin karsinomun prognozu kötüdür.",
+      "E": "Histolojik tip prognozu etkiler."
+     },
+     "bilgi": [
+      37,
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q45",
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "Servikal karsinom insidans ve mortalitesindeki değişimin en önemli nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Pap testi ile tarama programlarının öncül lezyonları erken saptaması",
+      "B": "HPV enfeksiyonunun tamamen ortadan kalkması",
+      "C": "Histolojik tiplerin değişmesi",
+      "D": "Radyoterapinin bulunması",
+      "E": "Sigara kullanımının artması"
+     },
+     "dogru": "A",
+     "aciklama": "Taramanın yaygınlaştığı ülkelerde öncül lezyonlar erken saptanıp tedavi edildiğinden insidans ve ölüm oranı belirgin azalmıştır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tarama ölüm oranında ~%75 azalma sağlamıştır.",
+      "B": "HPV enfeksiyonu hâlâ yaygındır.",
+      "C": "Histolojik tip dağılımı düşüşün nedeni değildir.",
+      "D": "Tedavi yöntemleri tek başına bu düşüşü açıklamaz.",
+      "E": "Sigara risk artırıcıdır."
+     },
+     "bilgi": [
+      33,
+      37
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 16,
+   "metin": "İnvaziv serviks karsinomunun lokal ve lenfatik yayılımını tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q46",
+     "kazanim": 16,
+     "zorluk": "kolay",
+     "soru": "İnvaziv serviks karsinomunda serviksi sararak oluşturduğu kalın, rijit serviks görünümüne ne ad verilir?",
+     "secenekler": {
+      "A": "Fıçı serviks",
+      "B": "Çilek serviks",
+      "C": "Kolposkopik beyaz alan",
+      "D": "Nabothian kisti",
+      "E": "Ektropiyon"
+     },
+     "dogru": "A",
+     "aciklama": "Serviksi saran derin stromal invazyon palpasyonda kalın, rijit 'fıçı serviks' görünümü yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: fıçı serviks derin invazyonu gösterir.",
+      "B": "Çilek serviks trichomoniasis ile ilişkilendirilir.",
+      "C": "Asetobeyaz alan kolposkopik bir bulgudur.",
+      "D": "Nabothian kisti benign retansiyon kistidir.",
+      "E": "Ektropiyon kolumnar epitelin dışa dönmesidir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q47",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "İnvaziv serviks karsinomunda pelvik lenf düğümü metastazı riski en çok hangi faktörle ilişkilidir?",
+     "secenekler": {
+      "A": "İnvazyon derinliği ve vasküler boşluk tutulumu",
+      "B": "Hastanın boyu",
+      "C": "Menarş yaşı",
+      "D": "Kan grubu",
+      "E": "Endoservikal polip varlığı"
+     },
+     "dogru": "A",
+     "aciklama": "Derin invazyon ve vasküler boşluk tutulumu pelvik lenf düğümü metastazı riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: invazyon derinliği metastaz riskini belirler.",
+      "B": "Boy metastaz riskini etkilemez.",
+      "C": "Menarş yaşı metastaz riskiyle ilişkilendirilmez.",
+      "D": "Kan grubu prognostik değildir.",
+      "E": "Endoservikal polip benigndir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q48",
+     "kazanim": 16,
+     "zorluk": "zor",
+     "soru": "Pelvik muayenede uterusun pelvis duvarına fikse olduğu saptanan serviks karsinomlu hastada bu bulgu en iyi hangi yayılımla açıklanır?",
+     "secenekler": {
+      "A": "Parametrial yayılım",
+      "B": "Hematojen akciğer metastazı",
+      "C": "Endometriyal kaviteye yüzeysel yayılım",
+      "D": "Over metastazı",
+      "E": "İntraepitelyal yayılım"
+     },
+     "dogru": "A",
+     "aciklama": "Parametrial yayılım uterusu pelvik yapılara fikse eder ve ileri lokal hastalığı gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: parametriyum tutulumu fiksasyona yol açar.",
+      "B": "Akciğer metastazı uterus fiksasyonu yapmaz.",
+      "C": "Endometriyal yayılım fiksasyon nedeni değildir.",
+      "D": "Over metastazı fiksasyonu açıklamaz.",
+      "E": "İntraepitelyal yayılım invaziv değildir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 17,
+   "metin": "İnvaziv serviks karsinomunun klinik bulgularını, tedavisini ve prognozunu özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-49-q49",
+     "kazanim": 17,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi invaziv serviks karsinomunun klinik bulgularından biri değildir?",
+     "secenekler": {
+      "A": "Beklenmedik vajinal kanama",
+      "B": "Lökore",
+      "C": "Disparoni",
+      "D": "Dizüri",
+      "E": "Galaktore"
+     },
+     "dogru": "E",
+     "aciklama": "İnvaziv serviks karsinomunda beklenmedik kanama, lökore, disparoni ve dizüri görülür.",
+     "sik_aciklamalari": {
+      "A": "Sık görülen bulgudur.",
+      "B": "Anormal akıntı görülebilir.",
+      "C": "Ağrılı ilişki görülebilir.",
+      "D": "Mesane çevresine yayılımda dizüri olabilir.",
+      "E": "Doğru: galaktore serviks karsinomu bulgusu değildir."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q50",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Mikroinvaziv serviks karsinomunda uygulanabilecek tedavi hangisidir?",
+     "secenekler": {
+      "A": "Konik biyopsi",
+      "B": "Yalnızca antibiyotik",
+      "C": "Yalnızca HPV aşısı",
+      "D": "Hiçbir tedavi gerekmez",
+      "E": "Yalnızca hormon tedavisi"
+     },
+     "dogru": "A",
+     "aciklama": "Mikroinvaziv olguda konik biyopsi; daha ileri hastalıkta histerektomi ve lenf diseksiyonu, ileri evrede radyoterapi ve kemoterapi uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: mikroinvaziv karsinomda konizasyon yeterli olabilir.",
+      "B": "Antibiyotik kanser tedavisi değildir.",
+      "C": "Aşı mevcut kanseri tedavi etmez.",
+      "D": "Karsinom tedavisiz bırakılmaz.",
+      "E": "Hormon tedavisi servikal SCC'de standart değildir."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-49-q51",
+     "kazanim": 17,
+     "zorluk": "zor",
+     "soru": "Hiç servikal tarama yaptırmamış 50 yaşında kadında temas sonrası kanama ve kötü kokulu akıntı var; biyopside küçük hücreli nöroendokrin karsinom saptanıyor.\n\nBu hasta için doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Prognoz evre ve alt tiple belirlenir; küçük hücreli nöroendokrin alt tipte prognoz kötüdür",
+      "B": "Bu alt tip HPV ile ilişkili değildir",
+      "C": "Prognoz en iyi alt tiptir",
+      "D": "Tedavi yalnızca konik biyopsidir",
+      "E": "Tarama yapılmamasının prognozla ilişkisi yoktur"
+     },
+     "dogru": "A",
+     "aciklama": "Serviks karsinomunun prognozunu evre ve alt tip belirler; küçük hücreli nöroendokrin karsinom kötü prognozludur. Hastalık taramayanlarda daha sık görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: alt tip ve evre belirleyicidir.",
+      "B": "Bu alt tip de yüksek riskli HPV ile ilişkilidir.",
+      "C": "Küçük hücreli alt tipin prognozu kötüdür.",
+      "D": "Konik biyopsi mikroinvaziv olgular içindir.",
+      "E": "Erken tanı ve tarama prognozu belirgin iyileştirir."
+     },
+     "bilgi": [
+      37,
+      39
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 51,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:21"
+}

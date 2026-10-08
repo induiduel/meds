@@ -1,0 +1,18 @@
+[Unit]
+Description=MedSoru Revize v2 - Faz 14 sorularinin yeniden revizyonu (ucretsiz bulut AI, GPU yok)
+Documentation=file:///home/indu/medsor/meds/scripts/v2/revize/INSTRUCTIONS.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/indu/medsor/meds/scripts
+EnvironmentFile=-/home/indu/medsor/meds/.env
+Environment=MEDS_CORE_DIR=/home/indu/medsor/meds_database_core
+ExecStart=/home/indu/medsor/meds/.venv-ocr/bin/python -m v2.revize run --limit 200 --watch --interval 30
+Restart=on-failure
+RestartSec=30
+Nice=8
+
+[Install]
+WantedBy=default.target

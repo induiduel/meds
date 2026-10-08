@@ -1,0 +1,1112 @@
+{
+ "id": "k1-22-bebek-beslenmesi",
+ "sira": 22,
+ "kurul": 1,
+ "ders": "Halk Sağlığı",
+ "konu": "Bebek Beslenmesi",
+ "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
+ "tarih": "2026-09-23",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Dünyada ve Türkiye'de çocuk nüfusu, bebek ölüm hızı ve beslenme göstergelerini yorumlar.",
+   "sorular": [
+    {
+     "id": "k1-22-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Bebek ölüm hızı nasıl hesaplanır?",
+     "secenekler": {
+      "A": "Ölü doğumlar / toplam doğum × 100",
+      "B": "5 yaş altı ölümler / toplam nüfus × 100",
+      "C": "Aynı yıl içinde 1 yaşını doldurmadan ölen bebek sayısı / aynı yıldaki canlı doğum sayısı × 1000",
+      "D": "Anne ölümleri / canlı doğum × 100.000",
+      "E": "28 günden önce ölen bebekler / toplam nüfus × 1000"
+     },
+     "dogru": "C",
+     "aciklama": "Bebek ölüm hızı bebek sağlığı düzeyinin temel göstergesidir.",
+     "sik_aciklamalari": {
+      "A": "Bu ölü doğum oranıdır.",
+      "B": "Bu tanım bebek ölüm hızına uymaz.",
+      "C": "Doğru: bebek ölüm hızının tanımıdır.",
+      "D": "Bu anne ölüm oranıdır.",
+      "E": "Payda yanlıştır; neonatal ölüm hızı canlı doğumla hesaplanır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": [
+      "c8daba804d82"
+     ]
+    },
+    {
+     "id": "k1-22-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "DSÖ verilerine göre çocuk ölümlerinin ne kadarı yetersiz beslenme ile ilişkilidir?",
+     "secenekler": {
+      "A": "%5'ten azı",
+      "B": "Yaklaşık yarısı",
+      "C": "Tamamı",
+      "D": "Hiçbiri",
+      "E": "Yaklaşık onda biri"
+     },
+     "dogru": "B",
+     "aciklama": "Tüm çocuk ölümlerinin yarısı yetersiz beslenmeyle ilişkilidir; beslenme müdahaleleri ölümleri önemli ölçüde azaltabilir.",
+     "sik_aciklamalari": {
+      "A": "Gerçek oranın çok altındadır.",
+      "B": "Doğru: verilen orandır.",
+      "C": "Tamamı değildir; bu nedenle doğru seçenek değildir.",
+      "D": "Belirgin ilişki vardır.",
+      "E": "Gerçek oranın altındadır."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "5 yaş altı çocuklarda küresel beslenme göstergeleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Zayıflık aşırı kilodan çok daha nadirdir",
+      "B": "Yalnızca aşırı kilo sorunu vardır",
+      "C": "Bodurluk artık görülmemektedir",
+      "D": "Bodurluk (~150 milyon), zayıflık (~43 milyon) ve aşırı kilo (~36 milyon) bir arada görülmektedir",
+      "E": "Yetersiz ve aşırı beslenme bir arada bulunmaz"
+     },
+     "dogru": "D",
+     "aciklama": "Yetersiz ve aşırı beslenme birlikte önemli bir halk sağlığı sorunudur (çifte yük).",
+     "sik_aciklamalari": {
+      "A": "Zayıflık aşırı kilodan daha sıktır.",
+      "B": "Bodurluk ve zayıflık da sorundur.",
+      "C": "Bodurluk en yaygın sorundur.",
+      "D": "Doğru: veriler doğru verilmiştir.",
+      "E": "İkisi bir arada görülür."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "c8daba804d82",
+     "soru": "Yenidoğan ve yenidoğan sonrası ölüm hızlarının toplamı aşağıdakilerden hangisini verir?",
+     "secenekler": {
+      "A": "Erken yenidoğan ölüm hızı",
+      "B": "Geç yenidoğan ölüm hızı",
+      "C": "Postneonal ölüm hızı",
+      "D": "Bebek ölüm hızı",
+      "E": "Perinatal ölüm hızı"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "DSÖ ve UNICEF'in bebek ve küçük çocuk beslenmesi önerilerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-22-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "DSÖ ve UNICEF'e göre doğumdan sonra emzirmeye ne zaman başlanmalıdır?",
+     "secenekler": {
+      "A": "24 saat sonra",
+      "B": "İlk 1 saat içinde",
+      "C": "3. günde",
+      "D": "1 hafta sonra",
+      "E": "Kolostrum geçtikten sonra"
+     },
+     "dogru": "B",
+     "aciklama": "Öneriler: ilk 1 saatte emzirme, ilk 6 ay yalnız anne sütü, 6. aydan itibaren tamamlayıcı gıda, 2 yaş ve sonrasına kadar emzirme.",
+     "sik_aciklamalari": {
+      "A": "Geç başlamadır; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: erken emzirme önerilir.",
+      "C": "Geç başlamadır; bu nedenle doğru seçenek değildir.",
+      "D": "Çok geçtir; bu nedenle doğru seçenek değildir.",
+      "E": "Kolostrum bebeğe verilmelidir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "DSÖ/UNICEF'e göre bebeklere yalnızca anne sütü verilmesi önerilen süre hangisidir?",
+     "secenekler": {
+      "A": "İlk 1 yıl",
+      "B": "İlk 2 ay",
+      "C": "İlk 6 ay",
+      "D": "İlk 2 hafta",
+      "E": "İlk 2 yıl"
+     },
+     "dogru": "C",
+     "aciklama": "İlk 6 ay yalnız anne sütü önerilir; 6. aydan itibaren tamamlayıcı besinler eklenir.",
+     "sik_aciklamalari": {
+      "A": "6. aydan sonra tamamlayıcı gıda gerekir.",
+      "B": "Süre çok kısadır; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: önerilen süredir.",
+      "D": "Süre çok kısadır; bu nedenle doğru seçenek değildir.",
+      "E": "2 yaşa kadar emzirme sürer ama yalnız anne sütü 6 aydır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Anne sütünün bebeğin enerji ve besin gereksinimini karşılama oranları hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "İlk 6 ayda %30",
+      "B": "İlk 6 ayda %50, 6–12 ayda %100",
+      "C": "Her dönemde %100",
+      "D": "İlk 6 ayda %100, 6–12 ayda %50, 12. aydan sonra %30",
+      "E": "12. aydan sonra %100"
+     },
+     "dogru": "D",
+     "aciklama": "Anne sütü ilk 6 ayda tek başına yeterlidir; sonrasında tamamlayıcı besin gerekir.",
+     "sik_aciklamalari": {
+      "A": "İlk 6 ayda tam karşılar.",
+      "B": "Oranlar ters verilmiştir.",
+      "C": "6. aydan sonra yeterli değildir.",
+      "D": "Doğru: oranlar doğrudur.",
+      "E": "12. aydan sonra %30'dur."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": [
+      "d3-b-045"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-045",
+     "soru": "Bebek beslenmesi ve anne sütü ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Anne sütü ilk 6 ayda bebeğin ihtiyacının %100'ünü karşılar",
+      "B": "Anne sütü proteininin %60-70'i whey proteinidir",
+      "C": "Anne sütü, D vitamini hariç tüm vitamin ihtiyaçlarını karşılar",
+      "D": "Anne sütünde alerjen olan alfa-laktoalbumin bulunmaz",
+      "E": "Anne sütündeki demirin %50-60'ı emilir"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Bebek beslenmesinin amaçlarını sıralar.",
+   "sorular": [
+    {
+     "id": "k1-22-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Bebek beslenmesinin amaçları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Büyüme ve gelişmeyi desteklemek",
+      "B": "Bebeğin mümkün olan en hızlı kilo almasını sağlamak",
+      "C": "Anne-bebek bağını güçlendirmek",
+      "D": "Yeme becerisini geliştirmek",
+      "E": "Gelecekteki sağlığı desteklemek"
+     },
+     "dogru": "B",
+     "aciklama": "Beslenme yalnız kalori değil, büyüme-gelişim, bağ kurma, yeme becerisi ve pozitif tutum ortamlarını içeren bir süreçtir.",
+     "sik_aciklamalari": {
+      "A": "Amaçlardandır; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: aşırı hızlı kilo alımı amaç değildir.",
+      "C": "Amaçlardandır; bu nedenle doğru seçenek değildir.",
+      "D": "Amaçlardandır; bu nedenle doğru seçenek değildir.",
+      "E": "Amaçlardandır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Bebek beslenmesinin 'gelişimsel ve ilişkisel bir süreç' olarak tanımlanmasının anlamı hangisidir?",
+     "secenekler": {
+      "A": "Annenin beslenmeye katılmaması",
+      "B": "Beslenmenin yalnız kalori sağlamak olması",
+      "C": "Beslenmenin kalori sağlamanın ötesinde bağ kurma ve yeme becerisini geliştirmeyi içermesi",
+      "D": "Yeme becerisinin önemsiz olması",
+      "E": "Beslenmenin yalnızca hastanede yapılması"
+     },
+     "dogru": "C",
+     "aciklama": "Bebek beslenmesi büyüme, bağ kurma, yeme becerisi ve pozitif tutum ortamlarını birlikte hedefler.",
+     "sik_aciklamalari": {
+      "A": "Anne-bebek etkileşimi merkezdedir.",
+      "B": "Kaloriden fazlasını içerir.",
+      "C": "Doğru: tanımın anlamıdır.",
+      "D": "Yeme becerisi önemli bir hedeftir.",
+      "E": "Beslenme günlük yaşamın parçasıdır."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Bebek beslenmesinin yeterliliğini değerlendirmede en iyi gösterge hangisidir?",
+     "secenekler": {
+      "A": "Annenin kilosu",
+      "B": "Günlük alınan kalorinin hesaplanması",
+      "C": "Bebeğin ağlama sıklığı",
+      "D": "Büyüme çizelgesinde düzenli izlem",
+      "E": "Biberon sayısı"
+     },
+     "dogru": "D",
+     "aciklama": "Kalori hesabı yerine büyüme takibi esastır.",
+     "sik_aciklamalari": {
+      "A": "Annenin kilosu bebeğin yeterliliğini göstermez.",
+      "B": "Anne sütü alımında kalori hesabı pratik değildir.",
+      "C": "Ağlama spesifik değildir.",
+      "D": "Doğru: yeterliliğin en iyi göstergesidir.",
+      "E": "Biberon sayısı yeterliliği göstermez."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Bebeklikte büyüme ve sindirim sisteminin fizyolojik özelliklerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-22-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Sağlıklı bir bebek doğum ağırlığının 3 katına hangi yaşta ulaşır?",
+     "secenekler": {
+      "A": "2 yaşında",
+      "B": "1 aylıkken",
+      "C": "4–6 aylıkken",
+      "D": "1 yaşında",
+      "E": "5 yaşında"
+     },
+     "dogru": "D",
+     "aciklama": "Bebek 10–14. günde doğum ağırlığına döner, 4–6 ayda 2 katına, 1 yaşında 3 katına ulaşır.",
+     "sik_aciklamalari": {
+      "A": "2. yılda kazanılan ağırlık doğum ağırlığı kadardır.",
+      "B": "1 ayda doğum ağırlığını yeni geçer.",
+      "C": "4–6 ayda 2 katına ulaşır.",
+      "D": "Doğru: 1 yaşında 3 katıdır.",
+      "E": "Çok geçtir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Bebeğin mide kapasitesi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yaşla değişmez",
+      "B": "Doğumda 250 ml'dir",
+      "C": "Doğumda 10–20 ml iken 1 yaşında 250 ml'ye ulaşır",
+      "D": "1 yaşında 50 ml'dir",
+      "E": "Doğumda 1 litredir"
+     },
+     "dogru": "C",
+     "aciklama": "Mide kapasitesi arttıkça bebek daha seyrek ve bir defada daha çok beslenir.",
+     "sik_aciklamalari": {
+      "A": "Kapasite büyümeyle artar.",
+      "B": "Doğumda kapasite çok küçüktür.",
+      "C": "Doğru: kapasite değişimi doğrudur.",
+      "D": "1 yaşında 250 ml'dir.",
+      "E": "Gerçekçi değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Bebeklikte büyüme ve sindirim sistemi özellikleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Boy ilk yaşta ~%50 artar",
+      "B": "Vücut suyu doğumda %70 iken 1 yaşında %60'a düşer",
+      "C": "İlk haftalarda gastrik asidite ve pepsin düşüktür ancak süt proteinini sindirmeye engel değildir",
+      "D": "Anne sütü yağı iyi emilir",
+      "E": "Hayvansal yağlar anne sütü yağından daha iyi emilir"
+     },
+     "dogru": "E",
+     "aciklama": "Anne sütü yağı iyi emilirken hayvansal yağların %20–48'i feçesle atılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): hayvansal yağlar daha az emilir."
+     },
+     "bilgi": [
+      8,
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Yenidoğanın enerji, protein, yağ, karbonhidrat ve su gereksinimlerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-22-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Bal ve mısır şurubu içeren ev mamalarının 1 yaşından önce bebeklere verilmemesinin nedeni hangisidir?",
+     "secenekler": {
+      "A": "Demir içeriklerinin çok yüksek olması",
+      "B": "Clostridium botulinum sporu içerebilmeleri",
+      "C": "Protein içermemeleri",
+      "D": "Kalsiyum emilimini artırmaları",
+      "E": "Vitamin D içermeleri"
+     },
+     "dogru": "B",
+     "aciklama": "Bal ve mısır şurubu C. botulinum sporu içerebilir; bebek botulizmi riski vardır.",
+     "sik_aciklamalari": {
+      "A": "Demir içeriği gerekçe değildir.",
+      "B": "Doğru: botulizm riskidir.",
+      "C": "Protein içeriği gerekçe değildir.",
+      "D": "Kalsiyumla ilişkili değildir.",
+      "E": "Vitamin D ile ilgili değildir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bebeklerde protein gereksinimi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kg başına gereksinim erişkinden düşüktür",
+      "B": "Kg başına gereksinim erişkinden yüksektir; anne sütü ilk 6 ay için tam yeterlidir",
+      "C": "Anne sütü ilk 6 ayda protein yönünden yetersizdir",
+      "D": "İkinci 6 ayda ek protein kaynağına gerek yoktur",
+      "E": "Bebekler protein gereksinimini yalnızca tahıldan karşılar"
+     },
+     "dogru": "B",
+     "aciklama": "Protein gereksinimi ~kg × 1,6 g'dır; ikinci 6 ayda yoğurt, et, yumurta, süt ve tahıl ile desteklenir.",
+     "sik_aciklamalari": {
+      "A": "Gereksinim daha yüksektir.",
+      "B": "Doğru: gereksinim ve kaynak bilgisi doğrudur.",
+      "C": "İlk 6 ayda yeterlidir.",
+      "D": "İkinci 6 ayda destek gerekir.",
+      "E": "Çeşitli kaynaklar kullanılır."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Bebeklerde yağ ve su gereksinimi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Her 100 kalori için 3,8–6 g yağ önerilir",
+      "B": "Linoleik asit büyüme ve deri bütünlüğü için elzemdir",
+      "C": "Anne sütü enerjisinin ~%5'i linoleik asitten sağlanır",
+      "D": "Su gereksinimi yaklaşık 1,5 ml/kal/gün'dür",
+      "E": "Yalnız anne sütü alan bebeğe sıcak havalarda mutlaka ek su verilmelidir"
+     },
+     "dogru": "E",
+     "aciklama": "Anne sütündeki su bebeğin gereksinimini karşılar; kusma/ishalde elektrolit dengesi izlenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): anne sütündeki su yeterlidir."
+     },
+     "bilgi": [
+      14,
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Kalsiyum, demir, çinko ve flor gibi minerallerin gereksinim ve kaynaklarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-22-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Term bebeklerin doğumdaki demir deposu yaklaşık ne zamana kadar yeterlidir?",
+     "secenekler": {
+      "A": "Hiç demir deposu yoktur",
+      "B": "Yalnızca ilk 1 hafta",
+      "C": "5 yaşına kadar",
+      "D": "Doğum ağırlığının iki katına ulaşana kadar (~4. ay)",
+      "E": "Ömür boyu"
+     },
+     "dogru": "D",
+     "aciklama": "Normal bebekler doğum ağırlığının iki katı oluncaya kadar yeterli demir deposuna sahiptir; prematürelerde daha erken tükenir.",
+     "sik_aciklamalari": {
+      "A": "Term bebeklerin demir deposu vardır.",
+      "B": "Depolar daha uzun süre yeterlidir.",
+      "C": "Depolar daha erken tükenir.",
+      "D": "Doğru: depolar ~4. aya kadar yeterlidir.",
+      "E": "Depolar tükenir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yenidoğanda deposu bulunmayan ve anne sütündeki formu mamadakinden daha iyi emilen mineral hangisidir?",
+     "secenekler": {
+      "A": "Kalsiyum",
+      "B": "Demir",
+      "C": "Çinko",
+      "D": "Flor",
+      "E": "Sodyum"
+     },
+     "dogru": "C",
+     "aciklama": "Yenidoğanların çinko deposu yoktur; anne sütü çinkosu iyi emilir ve ilk yıl yeterlidir.",
+     "sik_aciklamalari": {
+      "A": "Kalsiyum bu tanıma uymaz.",
+      "B": "Term bebeklerin demir deposu vardır.",
+      "C": "Doğru: çinko deposu yoktur.",
+      "D": "Flor anne sütünde düşüktür; deposu tanımı burada verilmemiştir.",
+      "E": "Sodyum bu tanıma uymaz."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Bebeklerde mineral gereksinimi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İnek sütü bazlı beslenen bebeklerde hipokalsemiye dikkat edilmelidir",
+      "B": "Anne sütü kalsiyumunun ~2/3'ü vücutta birikir",
+      "C": "Demir gereksinimi 3 yaşına kadar 10 mg/gün'e yükselir",
+      "D": "Anne sütünün flor içeriği düşüktür; dişler çıktıktan sonra düşük florlu su önerilir",
+      "E": "Prematüre bebeklerde demir depoları term bebeklerden daha geç tükenir"
+     },
+     "dogru": "E",
+     "aciklama": "Prematürelerde demir depoları term bebeklerden daha erken tükenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): daha erken tükenir."
+     },
+     "bilgi": [
+      17,
+      18,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Bebeğin vitamin gereksinimlerini ve D ile K vitamini desteğinin gerekliliğini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-22-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Yenidoğanın hemorajik hastalığını önlemek için doğumdan sonra uygulanan vitamin ve yolu hangisidir?",
+     "secenekler": {
+      "A": "C vitamini, intravenöz",
+      "B": "D vitamini, oral",
+      "C": "1 mg K vitamini, intramüsküler",
+      "D": "A vitamini, oral",
+      "E": "B12 vitamini, subkutan"
+     },
+     "dogru": "C",
+     "aciklama": "K vitamini yetersizliği yenidoğanın hemorajik hastalığına yol açar; doğumda 1 mg IM uygulanır.",
+     "sik_aciklamalari": {
+      "A": "C vitamini bu amaçla kullanılmaz.",
+      "B": "D vitamini raşitizmi önlemek için verilir.",
+      "C": "Doğru: standart profilaksidir.",
+      "D": "A vitamini bu amaçla kullanılmaz.",
+      "E": "B12 bu amaçla kullanılmaz."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Yeterli beslenen annenin sütü term bebeğin hangi vitamin gereksinimini karşılamaz?",
+     "secenekler": {
+      "A": "C vitamini",
+      "B": "D vitamini",
+      "C": "A vitamini",
+      "D": "B1 vitamini",
+      "E": "B6 vitamini"
+     },
+     "dogru": "B",
+     "aciklama": "Yeterli beslenen annenin sütü D vitamini dışındaki tüm vitamin ihtiyacını karşılar; bebeğe D vitamini verilmeli veya düzenli güneşlendirilmelidir.",
+     "sik_aciklamalari": {
+      "A": "Anne sütü C vitamininden zengindir.",
+      "B": "Doğru: D vitamini desteği gerekir.",
+      "C": "Yeterli beslenen annede A vitamini yeterlidir.",
+      "D": "B1 yeterlidir; bu nedenle doğru seçenek değildir.",
+      "E": "B6 yeterlidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      21,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Katı vejetaryen beslenen annenin yalnız anne sütü alan bebeğinde hangi vitamin eksikliği riski özellikle artar?",
+     "secenekler": {
+      "A": "E vitamini",
+      "B": "C vitamini",
+      "C": "K vitamini (doğumda verildiyse)",
+      "D": "B12 vitamini",
+      "E": "Folat"
+     },
+     "dogru": "D",
+     "aciklama": "Katı vejetaryen veya pernisiyöz anemili annelerin sütü B12 yönünden yetersiz olabilir.",
+     "sik_aciklamalari": {
+      "A": "E vitamini bu durumda öne çıkmaz.",
+      "B": "Anne sütü C vitamininden zengindir.",
+      "C": "K vitamini doğumda profilaktik verilir.",
+      "D": "Doğru: B12 hayvansal kaynaklıdır.",
+      "E": "Folat bitkisel kaynaklarda bulunur."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Anne sütünün bileşimini, evrelerini ve faydalarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-22-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Doğum sonrası ilk ~5 gün salgılanan, sIgA, laktoferrin ve lökositten zengin süte ne ad verilir?",
+     "secenekler": {
+      "A": "Olgun süt",
+      "B": "Geçiş sütü",
+      "C": "Kolostrum",
+      "D": "Son süt",
+      "E": "Prematüre sütü"
+     },
+     "dogru": "C",
+     "aciklama": "Kolostrum (ilk ağız) olgun süte göre daha fazla protein, Na, K, Cl; daha az yağ ve karbonhidrat içerir.",
+     "sik_aciklamalari": {
+      "A": "Olgun süt 15. günden itibaren salgılanır.",
+      "B": "Geçiş sütü 6–15. günlerde salgılanır.",
+      "C": "Doğru: kolostrumun tanımıdır.",
+      "D": "Son süt emzirmenin sonundaki yağdan zengin süttür.",
+      "E": "Prematüre sütü erken doğumdaki anne sütüdür."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Emzirmenin sonuna doğru gelen 'son süt' ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Karbonhidrattan zengindir, yağ içermez",
+      "B": "Yağdan zengindir; bebeğin son sütü alması için meme boşaltılmalıdır",
+      "C": "Kolostrum ile aynıdır",
+      "D": "Protein içermez",
+      "E": "Bebeğe verilmemelidir"
+     },
+     "dogru": "B",
+     "aciklama": "Ön süt karbonhidrattan, son süt yağdan zengindir; sona doğru yağ 4–5 kat, protein %50 artar.",
+     "sik_aciklamalari": {
+      "A": "Bu ön sütün özelliğidir.",
+      "B": "Doğru: son sütün özelliğidir.",
+      "C": "Kolostrum ilk günlerin sütüdür.",
+      "D": "Protein de artar; bu nedenle doğru seçenek değildir.",
+      "E": "Son süt bebeğe verilmelidir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Emzirmenin anne ve bebeğe faydaları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bebekte ileri yaşta obezite ve tip 2 diyabet riski azalır",
+      "B": "Orta kulak iltihabında ~%43 azalma olur",
+      "C": "Anne için meme ve over kanseri riski azalır",
+      "D": "Postpartum depresyon azalır",
+      "E": "Emzirme süresi uzadıkça annede meme kanseri riski artar"
+     },
+     "dogru": "E",
+     "aciklama": "Emzirme süresi arttıkça meme kanseri riski azalır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade: over kanserinde ~%30 azalma görülür.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): risk azalır."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Anne sütü ile inek sütünü enerji ve besin ögesi düzeylerinde karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k1-22-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Anne sütünde bulunmayıp inek sütünde bulunan alerjen protein hangisidir?",
+     "secenekler": {
+      "A": "Lizozim",
+      "B": "Laktoferrin",
+      "C": "Taurin",
+      "D": "sIgA",
+      "E": "Beta-laktoglobulin"
+     },
+     "dogru": "E",
+     "aciklama": "Beta-laktoglobulin inek sütü alerjisi riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Lizozim anne sütünde bulunur.",
+      "B": "Laktoferrin anne sütünde bulunur.",
+      "C": "Taurin anne sütünde 30–40 kat fazladır.",
+      "D": "sIgA anne sütünde bulunur.",
+      "E": "Doğru: inek sütüne özgü alerjendir."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Anne sütü ve inek sütü protein yapısı karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "İkisinin protein yapısı aynıdır",
+      "B": "Anne sütü %80 kazein içerir",
+      "C": "İnek sütünde enerjinin daha azı proteinden gelir",
+      "D": "Anne sütü %60–70 whey, inek sütü %80 kazein içerir; anne sütü proteini daha kolay sindirilir",
+      "E": "Anne sütünde whey bulunmaz"
+     },
+     "dogru": "D",
+     "aciklama": "Anne sütünde enerjinin %6–7'si, inek sütünde %20'si proteinden gelir.",
+     "sik_aciklamalari": {
+      "A": "Yapıları farklıdır; bu nedenle doğru seçenek değildir.",
+      "B": "Anne sütü whey ağırlıklıdır.",
+      "C": "İnek sütünde protein payı daha fazladır.",
+      "D": "Doğru: protein farkı doğrudur.",
+      "E": "Anne sütü whey ağırlıklıdır."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Anne sütü ile inek sütü karşılaştırıldığında aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Anne sütü demirinin %50–60'ı, inek sütü demirinin ~%10'u emilir",
+      "B": "Anne sütü ozmolaritesi ~286 mOsm/kg, inek sütü ~400 mOsm/kg'dır",
+      "C": "Anne sütündeki Na ve K inek sütünün ~1/3'üdür",
+      "D": "Taurin anne sütünde çok daha fazladır",
+      "E": "İnek sütü bebeğin böbreğini solüt yüklenmesinden daha iyi korur"
+     },
+     "dogru": "E",
+     "aciklama": "Düşük solüt yükü sayesinde bebeğin böbreğini koruyan anne sütüdür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): anne sütü korur."
+     },
+     "bilgi": [
+      31,
+      32,
+      33
+     ],
+     "benzer_cikmis": [
+      "d3-f-046"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-f-046",
+     "soru": "Anne sütündeki demirin yaklaşık yüzde kaçı emilir?",
+     "secenekler": {
+      "A": "90",
+      "B": "30",
+      "C": "40",
+      "D": "60",
+      "E": "10"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Anne sütünün içeriğini etkileyen faktörleri sıralar.",
+   "sorular": [
+    {
+     "id": "k1-22-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Anne sütünün içeriğini etkileyen faktörler arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "Laktasyon evresi (kolostrum, geçiş, olgun süt)",
+      "B": "Bebeğin göz rengi",
+      "C": "Babanın kan grubu",
+      "D": "Hastanenin büyüklüğü",
+      "E": "Mevsimin adı"
+     },
+     "dogru": "A",
+     "aciklama": "Anne sütü bileşimi laktasyon evresine, emzirmenin başı/sonuna, prematüriteye ve annenin beslenmesine göre değişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: bileşim dönemsel değişir.",
+      "B": "Göz rengi süt bileşimini etkilemez.",
+      "C": "Babanın kan grubu etkisizdir.",
+      "D": "Hastane büyüklüğü etkisizdir.",
+      "E": "Bu bir belirleyici değildir."
+     },
+     "bilgi": [
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Prematüre doğum yapan annenin sütü olgun term sütüne göre nasıldır?",
+     "secenekler": {
+      "A": "Protein, Na ve Cl yönünden zengin; laktozdan düşüktür",
+      "B": "Protein yönünden fakirdir",
+      "C": "Laktozdan çok zengindir",
+      "D": "Term sütle tamamen aynıdır",
+      "E": "Yağ içermez"
+     },
+     "dogru": "A",
+     "aciklama": "Prematüre anne sütü protein, Na ve Cl yönünden zengin, laktozdan düşüktür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: prematüre sütünün özelliğidir.",
+      "B": "Protein yönünden zengindir.",
+      "C": "Laktoz daha düşüktür.",
+      "D": "Bileşim farklıdır; bu nedenle doğru seçenek değildir.",
+      "E": "Yağ içerir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Anne sütü alan bebeğe meyve püresi eklenmesinin demir emilimine etkisi hangisidir?",
+     "secenekler": {
+      "A": "Anne sütü demirinin emilimi ~%50–60'tan ~%10'a düşer",
+      "B": "Demir emilimi iki katına çıkar",
+      "C": "Etkisi yoktur",
+      "D": "Demir emilimi %100 olur",
+      "E": "Yalnızca çinko emilimini artırır"
+     },
+     "dogru": "A",
+     "aciklama": "Yalnız anne sütüyle beslenmede demir emilimi yüksektir; meyve püresi eklenince emilim %10'a düşer.",
+     "sik_aciklamalari": {
+      "A": "Doğru: verilen değişimdir.",
+      "B": "Emilim azalır; bu nedenle doğru seçenek değildir.",
+      "C": "Belirgin etkisi vardır.",
+      "D": "Gerçekçi değildir; bu nedenle doğru seçenek değildir.",
+      "E": "Verilen bilgi demir emilimiyle ilgilidir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Emzirmede dikkat edilmesi gereken noktaları ve sağılmış anne sütünün saklanma koşullarını bilir.",
+   "sorular": [
+    {
+     "id": "k1-22-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Sağılmış anne sütünün oda ısısında saklanabilmesi için uygun sıcaklık aralığı hangisidir?",
+     "secenekler": {
+      "A": "22–26 °C",
+      "B": "35–40 °C",
+      "C": "−18 °C",
+      "D": "4 °C",
+      "E": "50 °C"
+     },
+     "dogru": "A",
+     "aciklama": "Oda ısısı 22–26 °C kabul edilir; daha uzun süre saklama için buzdolabı ve −18 °C dondurucu kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: oda ısısı aralığıdır.",
+      "B": "Bu sıcaklık oda ısısı değildir ve bakteri üremesini artırır.",
+      "C": "−18 °C dondurucu sıcaklığıdır.",
+      "D": "4 °C buzdolabı sıcaklığıdır.",
+      "E": "Bu sıcaklık sütü bozar."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Sağılmış anne sütü daha uzun süre saklanacaksa hangi yöntem önerilir?",
+     "secenekler": {
+      "A": "Buzdolabı veya −18 °C'de dondurucu",
+      "B": "Güneş altında bekletme",
+      "C": "Oda ısısında bir hafta bekletme",
+      "D": "Kaynatıp oda ısısında saklama",
+      "E": "Açık kapta bekletme"
+     },
+     "dogru": "A",
+     "aciklama": "Oda ısısında süre kısadır; uzun saklama için soğuk zincir gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: uzun süreli saklama yöntemidir.",
+      "B": "Güneş sütü bozar; bu nedenle doğru seçenek değildir.",
+      "C": "Oda ısısında bu kadar saklanmaz.",
+      "D": "Kaynatma bileşenleri bozar.",
+      "E": "Açık kap kontaminasyona yol açar."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": [
+      "9097b00f321f"
+     ]
+    },
+    {
+     "id": "k1-22-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Emzirmede dikkat edilmesi gereken noktalarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bebeğin son sütü alabilmesi için meme boşaltılmalıdır",
+      "B": "Kolostrum bebeğe verilmelidir",
+      "C": "Doğumdan sonraki ilk saatte emzirmeye başlanmalıdır",
+      "D": "Sağılan süt uygun koşullarda saklanmalıdır",
+      "E": "Ön süt alındıktan sonra memeyi değiştirmek son sütten yararlanmayı artırır"
+     },
+     "dogru": "E",
+     "aciklama": "Son süt yağdan zengindir; memeyi boşaltmadan değiştirmek son sütten yararlanmayı azaltır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): meme boşaltılmalıdır."
+     },
+     "bilgi": [
+      2,
+      24,
+      26,
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "9097b00f321f",
+     "soru": "HALK SAĞLIĞI HALK SAĞLIĞI Bebek beslenmesi Sağılmış anne sütü buzdolabında kaç gün saklanabilir?",
+     "secenekler": {
+      "A": "",
+      "B": "",
+      "C": "2021/‏6/‏22",
+      "D": "sinav.karabük.edu.tr",
+      "E": "cevabiniz.html"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Tamamlayıcı beslenmeye başlama zamanını, nedenlerini ve erken başlamanın sakıncalarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-22-q34",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Tamamlayıcı (ek) beslenmeye hangi ayda başlanması önerilir?",
+     "secenekler": {
+      "A": "6. ay",
+      "B": "2. ay",
+      "C": "4. hafta",
+      "D": "12. ay",
+      "E": "18. ay"
+     },
+     "dogru": "A",
+     "aciklama": "6. aydan itibaren tamamlayıcı besinler eklenir; emzirme 2 yaş ve sonrasına kadar sürdürülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: önerilen başlangıçtır.",
+      "B": "Çok erkendir; bu nedenle doğru seçenek değildir.",
+      "C": "Çok erkendir; bu nedenle doğru seçenek değildir.",
+      "D": "Geç kalınmış olur; bu nedenle doğru seçenek değildir.",
+      "E": "Çok geçtir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      2,
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q35",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "6. ayda ek gıdaya başlamayı gerektiren nedenler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Anne sütünün 6. ayda tamamen kesilmesi gerekliliği",
+      "B": "Artan enerji gereksiniminin karşılanamaması",
+      "C": "Demir eksikliği riski",
+      "D": "Çinko eksikliği riski",
+      "E": "Çiğneme becerisinin gelişmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Ek gıdaya başlama anne sütünü kesmek anlamına gelmez; emzirme 2 yaşa kadar sürer.",
+     "sik_aciklamalari": {
+      "A": "Doğru: anne sütü kesilmez.",
+      "B": "Ek gıda gerekçesidir.",
+      "C": "Ek gıda gerekçesidir.",
+      "D": "Ek gıda gerekçesidir.",
+      "E": "Ek gıda gerekçesidir."
+     },
+     "bilgi": [
+      2,
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-22-q36",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "6. aydan önce ek gıdaya başlanmasının sakıncaları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Çiğneme becerisinin hızla gelişmesi",
+      "B": "Enzim immatüritesi",
+      "C": "Böbreklerin yeterince gelişmemiş olması",
+      "D": "Alerji ve boğulma riski",
+      "E": "Anne sütünden yararlanmanın azalması"
+     },
+     "dogru": "A",
+     "aciklama": "Erken ek gıda enzim ve böbrek immatüritesi, alerji, boğulma, anne sütünden yararlanmada azalma ve enfeksiyon artışına yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: bu bir sakınca değildir.",
+      "B": "Erken ek gıdanın sakıncasıdır.",
+      "C": "Erken ek gıdanın sakıncasıdır.",
+      "D": "Erken ek gıdanın sakıncasıdır.",
+      "E": "Erken ek gıdanın sakıncasıdır."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 36,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:38"
+}

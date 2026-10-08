@@ -15,9 +15,15 @@ export interface QuestionLearnMatch {
   synthesisNarrative?: string;
   spotPearls?: string[];
   flashcards?: SlideFlashcard[];
-  matchType: 'direct' | 'stem' | 'keyword';
+  matchType: 'direct' | 'stem' | 'keyword' | 'computed';
   matchScore: number;
+  /** Sunucu bağlantısının güveni (learn_links.py: cross-encoder skoru ≥5 → yuksek) */
+  confidence?: 'yuksek' | 'orta';
 }
+
+/** Güvenilir eşleşme: soru slayta doğrudan kayıtlı ya da sunucu bağlantısı yüksek güvenli. */
+export const isReliableLearnMatch = (m: QuestionLearnMatch | null | undefined): m is QuestionLearnMatch =>
+  !!m && (m.matchType === 'direct' || m.matchType === 'stem' || (m.matchType === 'computed' && m.confidence === 'yuksek'));
 
 function normalizeTr(str: string): string {
   if (!str) return '';
@@ -92,7 +98,7 @@ class LearnMatcherService {
 
   private loading: Promise<void> | null = null;
   /** Sunucuda önceden hesaplanan bağlantılar (scripts/advanced_ai/learn_links.py: BM25+e5+cross-encoder, eşikli). */
-  private computed: Map<string, { deckId: string; slideNumber: number }> | null = null;
+  private computed: Map<string, { deckId: string; slideNumber: number; guven?: 'yuksek' | 'orta' }> | null = null;
 
   /**
    * Slayt indeksini arka planda kurar (desteler parça parça yüklenir). Hazır olana kadar
@@ -100,7 +106,7 @@ class LearnMatcherService {
    */
   public ensureLoaded(): Promise<void> {
     if (!this.loading) {
-      const links = safeJsonFetch<{ baglantilar: Record<string, { deckId: string; slideNumber: number }> }>('/api/learn-links')
+      const links = safeJsonFetch<{ baglantilar: Record<string, { deckId: string; slideNumber: number; guven?: 'yuksek' | 'orta' }> }>('/api/learn-links')
         .then((r) => {
           if (r.ok && r.data?.baglantilar) this.computed = new Map(Object.entries(r.data.baglantilar));
         })
@@ -184,7 +190,7 @@ class LearnMatcherService {
       const c = this.computed.get(String(q.id));
       const hit = c ? this.slideByKey.get(`${c.deckId}#${c.slideNumber}`) : undefined;
       if (hit) {
-        const res = { ...hit, matchType: 'computed' as any, matchScore: 90 };
+        const res: QuestionLearnMatch = { ...hit, matchType: 'computed', matchScore: 90, confidence: c!.guven };
         this.cache.set(q.id, res);
         return res;
       }

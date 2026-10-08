@@ -268,8 +268,10 @@ export interface PastQuestionReviewRecord {
   reject_reason?: string;
   suspicious?: boolean;
   answer_doubtful?: boolean;
+  /** Cevap kabul edildi ama anket açık bırakıldı (topluluk karşılaştırması) */
+  answer_poll_open?: boolean;
   answer_resolved_at?: string;
-  answer_vote_result?: { winner: string; counts: Record<string, number>; total: number; by?: 'admin' | 'anket' };
+  answer_vote_result?: { winner: string; counts?: Record<string, number>; total?: number; by?: 'admin' | 'anket' };
   suspicious_at?: string;
 }
 

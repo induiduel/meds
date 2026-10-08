@@ -35,7 +35,9 @@ export type AppRoute =
   | 'manage'
   | 'search'
   | 'test_cikmis'
-  | 'ornek_sorular';
+  | 'tester_ozet'
+  | 'ornek_sorular'
+  | 'datacore';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -47,7 +49,9 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   study: '/calis',
   practice: '/test',
   test_cikmis: '/test/cikmis',
+  tester_ozet: '/tester/ozet',
   ornek_sorular: '/ornek-sorular',
+  datacore: '/veri',
   leaderboard: '/siralama',
   notes: '/notlar',
   summaries: '/ozetler',
@@ -70,7 +74,9 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   study: 'Çalış',
   practice: 'Test çöz',
   test_cikmis: 'Test Edilen Çıkmış Sorular (Faz 14 İnceleme)',
+  tester_ozet: '2026-2027 Ders Notları Test Laboratuvarı',
   ornek_sorular: 'Örnek sorular',
+  datacore: 'Veri Merkezi (Core v2)',
   leaderboard: 'Sıralama',
   notes: 'Ders notları',
   summaries: 'Ders özetleri',
@@ -141,6 +147,10 @@ export const parseLocation = (loc: Pick<Location, 'pathname' | 'hash'> = window.
     const extra = cleanPath.replace(/^\/test\/cikmis\/?/, '');
     return { route: 'test_cikmis', param: extra || undefined };
   }
+  if (cleanPath === '/tester/ozet' || cleanPath.startsWith('/tester/ozet/')) {
+    const extra = cleanPath.replace(/^\/tester\/ozet\/?/, '');
+    return { route: 'tester_ozet', param: extra || undefined };
+  }
 
   const segs = cleanPath.split('/').filter(Boolean).map(decodeURIComponent);
   if (segs.length > 0) {
@@ -148,6 +158,7 @@ export const parseLocation = (loc: Pick<Location, 'pathname' | 'hash'> = window.
     if (route) return { route, param: segs[1] };
   }
   // Legacy #tab links (only on the root path)
+  if (hash === 'tester/ozet' || hash === 'tester_ozet') return { route: 'tester_ozet' };
   if (hash === 'test/cikmis' || hash === 'test_cikmis') return { route: 'test_cikmis' };
   if (hash && (ALIASES[hash] || BY_SEGMENT[hash])) return { route: ALIASES[hash] || BY_SEGMENT[hash] };
   return { route: 'quick_add' };

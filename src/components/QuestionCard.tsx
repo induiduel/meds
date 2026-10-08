@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { SourceText } from './ui/SourceText';
 import {
   Plus,
   Check,
@@ -680,9 +681,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                     const distractors = s.label === 'Çeldiriciler' ? parseDistractors(s.body) : null;
                     if (sections.length === 1 && s.label === 'Açıklama') {
                       return (
-                        <p key={i} className="m-0 text-[16px] leading-[1.65] whitespace-pre-line">
-                          {s.body}
-                        </p>
+                        <SourceText key={i} text={s.body} className="text-[16px]!" />
                       );
                     }
                     return (
@@ -698,7 +697,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                             ))}
                           </dl>
                         ) : (
-                          <p className={`m-0 text-[16px] leading-[1.65] whitespace-pre-line ${s.pearl ? 'px-[18px] py-4 rounded-xl bg-accent-soft' : ''}`}>{s.body}</p>
+                          <div className={s.pearl ? 'px-[18px] py-4 rounded-xl bg-accent-soft' : ''}><SourceText text={s.body} className="text-[16px]!" /></div>
                         )}
                       </div>
                     );

@@ -1,0 +1,1162 @@
+{
+ "id": "k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri",
+ "sira": 54,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Uterus Düz Kas ve Trofoblastik Tümörleri",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-09",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Uterus düz kas tümörü olan leiomyomun özelliklerini ve klinik önemini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Kadınlarda en sık görülen benign tümör hangisidir?",
+     "secenekler": {
+      "A": "Lipom",
+      "B": "Endometrial polip",
+      "C": "Leiomyom",
+      "D": "Fibroadenom",
+      "E": "Onkositoma"
+     },
+     "dogru": "C",
+     "aciklama": "Leiomyom myometriumun düz kas hücrelerinden köken alan, reprodüktif dönemdeki kadınların %30–50'sinde gelişen en sık benign tümördür.",
+     "sik_aciklamalari": {
+      "A": "Lipom genel popülasyonda sıktır, kadınlarda en sık benign tümör değildir.",
+      "B": "Endometrial polip sık ama leiomyom kadar sık değildir.",
+      "C": "Doğru: kadınlarda en sık benign tümördür.",
+      "D": "Fibroadenom memenin sık benign tümörüdür.",
+      "E": "Onkositoma benign böbrek tümörüdür."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Leiomyom ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Postmenapozal dönemde belirgin büyür",
+      "B": "Östrojen büyümeyi uyarır ve tümör postmenapozal dönemde küçülür",
+      "C": "Poliklonal bir hiperplazidir",
+      "D": "En sık bulgusu ağrısız hematüridir",
+      "E": "Kesit yüzü yumuşak, kanamalı ve nekrotiktir"
+     },
+     "dogru": "B",
+     "aciklama": "Leiomyom östrojene bağımlıdır; menopozda küçülür. Monoklonaldir ve 6. ile 12. kromozom yeniden düzenlenmeleri görülür.",
+     "sik_aciklamalari": {
+      "A": "Postmenapozda küçülür.",
+      "B": "Doğru: hormonal bağımlılık tedaviye yol gösterir.",
+      "C": "Monoklonal bir neoplazmdır.",
+      "D": "En sık bulgu menorajidir.",
+      "E": "Kesit yüzü gri-beyaz, girdapsıdır; tarif edilen görünüm leiomyosarkoma aittir."
+     },
+     "bilgi": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "38 yaşında kadın uzun ve aşırı adet kanaması ile başvuruyor. Muayenede uterus düzensiz büyümüş; ultrasonda keskin sınırlı, çok sayıda intramural ve submukoz kitle var.\n\nBu tabloyla ilgili hangisi yanlıştır?",
+     "secenekler": {
+      "A": "En olası tanı leiomyomdur",
+      "B": "Kesit yüzü gri-beyaz ve girdapsı görünümde olması beklenir",
+      "C": "Submukoz yerleşim menorajiyi açıklayabilir",
+      "D": "Leiomyomlar parazitik yerleşim gösterebilir",
+      "E": "Kitlelerin çok sayıda olması leiomyosarkoma dönüşüm riskini artırır"
+     },
+     "dogru": "E",
+     "aciklama": "Leiomyomlar sarkoma dönüşmez ve multipl olmaları malignite riskini artırmaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: klinik ve görüntüleme leiomyoma uyar.",
+      "B": "Doğru ifade: leiomyomun tipik makroskopisidir.",
+      "C": "Doğru ifade: yerleşim semptomu belirler.",
+      "D": "Doğru ifade: parazitik leiomyom tanımlanmıştır.",
+      "E": "Yanlış ifade (aranan cevap): çok sayıda olmak malignite riskini artırmaz."
+     },
+     "bilgi": [
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Leiomyomu leiomyosarkomdan ayırt eden bulguları sıralayabilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Leiomyosarkom ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Gri-beyaz, girdapsı ve keskin sınırlıdır",
+      "B": "Çoğunlukla multipldir",
+      "C": "Reprodüktif çağda en sıktır",
+      "D": "De novo gelişir; leiomyomdan dönüşmez",
+      "E": "Kadınların %30–50'sinde görülür"
+     },
+     "dogru": "D",
+     "aciklama": "Leiomyosarkom de novo gelişir, her zaman soliterdir ve postmenapozal dönemde görülür.",
+     "sik_aciklamalari": {
+      "A": "Bu görünüm leiomyoma aittir.",
+      "B": "Leiomyosarkom soliterdir.",
+      "C": "Postmenapozal dönemde görülür.",
+      "D": "Doğru: leiomyomdan köken almaz.",
+      "E": "Bu sıklık leiomyoma aittir."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki bulgulardan hangisi uterin düz kas tümöründe leiomyosarkomu düşündürür?",
+     "secenekler": {
+      "A": "Menopozda küçülen kitle",
+      "B": "Reprodüktif çağda multipl, gri-beyaz girdapsı kitleler",
+      "C": "Postmenapozal dönemde soliter, yumuşak, kanamalı ve nekrotik kitle",
+      "D": "Keskin sınırlı subseröz kitle",
+      "E": "Oral kontraseptiflerle büyüyen kitle"
+     },
+     "dogru": "C",
+     "aciklama": "Leiomyosarkom soliter, postmenapozal, yumuşak, kanamalı ve nekrotiktir.",
+     "sik_aciklamalari": {
+      "A": "Menopozda küçülme leiomyomun hormon bağımlılığıdır.",
+      "B": "Bu bulgular leiomyomu düşündürür.",
+      "C": "Doğru: leiomyosarkomun klinik ve makroskopik özellikleridir.",
+      "D": "Keskin sınır benign tümörü düşündürür.",
+      "E": "Östrojenle büyüme leiomyom özelliğidir."
+     },
+     "bilgi": [
+      3,
+      4,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Leiomyom ve leiomyosarkom karşılaştırıldığında aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Leiomyom reprodüktif dönemde, leiomyosarkom postmenapozal dönemde görülür",
+      "B": "Leiomyom çoğu zaman multipl, leiomyosarkom soliterdir",
+      "C": "Leiomyom gri-beyaz girdapsı, leiomyosarkom kanamalı ve nekrotiktir",
+      "D": "Leiomyom monoklonaldir",
+      "E": "Leiomyosarkomların çoğu önceden var olan leiomyomun malign dönüşümüyle gelişir"
+     },
+     "dogru": "E",
+     "aciklama": "Leiomyosarkom de novo gelişir; leiomyomlar sarkoma dönüşmez.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: yaş dağılımları farklıdır.",
+      "B": "Doğru ifade: sayı ayırıcı bir özelliktir.",
+      "C": "Doğru ifade: makroskopik görünümleri farklıdır.",
+      "D": "Doğru ifade: leiomyom monoklonal neoplazmdır.",
+      "E": "Yanlış ifade (aranan cevap): dönüşüm söz konusu değildir."
+     },
+     "bilgi": [
+      2,
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Gestasyonel trofoblastik hastalıkların (mol hidatiform, invaziv mol, koryokarsinom) spektrumunu tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Gestasyonel trofoblastik hastalık spektrumunda en agresif olan hangisidir?",
+     "secenekler": {
+      "A": "Parsiyel mol",
+      "B": "Koryokarsinom",
+      "C": "Komplet mol",
+      "D": "İnvaziv mol",
+      "E": "Plasental polip"
+     },
+     "dogru": "B",
+     "aciklama": "Spektrum mol hidatiform, invaziv mol ve koryokarsinomdan oluşur; benign moldan malign koryokarsinoma agresiflik artar.",
+     "sik_aciklamalari": {
+      "A": "Parsiyel mol en az agresif formlardandır.",
+      "B": "Doğru: koryokarsinom ileri derecede agresif malign tümördür.",
+      "C": "Komplet mol benign kabul edilir ancak ilerleyebilir.",
+      "D": "İnvaziv mol lokal invazivdir, metastatik potansiyeli yoktur.",
+      "E": "Plasental polip trofoblastik neoplazm değildir."
+     },
+     "bilgi": [
+      8,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Mol hidatiformun makroskopik görünümü hangisidir?",
+     "secenekler": {
+      "A": "Kanamalı nekrotik kitle, villus yok",
+      "B": "Gri-beyaz girdapsı kitle",
+      "C": "Çikolata kisti",
+      "D": "Şişmiş, kistik genişlemiş koryon villuslarından oluşan üzüm salkımı görünümü",
+      "E": "Sarı-turuncu kesit yüzü"
+     },
+     "dogru": "D",
+     "aciklama": "Mol hidatiform hidropik şişmiş koryon villuslarından oluşur ve üzüm salkımı görünümündedir.",
+     "sik_aciklamalari": {
+      "A": "Villussuz kanamalı kitle koryokarsinomdur.",
+      "B": "Gri-beyaz girdapsı görünüm leiomyoma aittir.",
+      "C": "Çikolata kisti over endometriozisidir.",
+      "D": "Doğru: molün tipik makroskopisidir.",
+      "E": "Sarı-turuncu kesit berrak hücreli RHK'ya aittir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": [
+      "92d7ae967be5"
+     ]
+    },
+    {
+     "id": "k1-54-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Komplet mol küretajı sonrası izlemle ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Komplet mollerin tamamı koryokarsinoma dönüşür",
+      "B": "Mollerin %80–90'ı tekrarlamaz; komplet mollerin ~%10'u invaziv mole, %2–3'ü koryokarsinoma ilerler",
+      "C": "Küretaj sonrası hCG izlemine gerek yoktur",
+      "D": "Parsiyel mol koryokarsinomun en sık öncülüdür",
+      "E": "Koryokarsinom yalnızca molü izler, normal gebelik sonrası görülmez"
+     },
+     "dogru": "B",
+     "aciklama": "Küretaj sonrası beta-hCG izlemi tam olmayan küretaj ya da invaziv mol/koryokarsinom gelişimini ortaya koyar.",
+     "sik_aciklamalari": {
+      "A": "Yalnız küçük bir kısmı koryokarsinoma ilerler.",
+      "B": "Doğru: molün doğal seyri doğru verilmiştir.",
+      "C": "hCG izlemi zorunludur.",
+      "D": "Koryokarsinom olgularının %50'si komplet molü izler.",
+      "E": "Olguların yarısı mol dışındaki gebeliklerden sonra gelişir."
+     },
+     "bilgi": [
+      17,
+      19
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "92d7ae967be5",
+     "soru": "Gebelik ve gestasyonel hastalıkların patolojisi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hematosalpenks",
+      "B": "Hidrosalpenks",
+      "C": "Mol hidatiform",
+      "D": "Akut koryoamniyonit",
+      "E": "Plesental site trofoblastik tümör"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Trofoblastik hastalıklarda hCG ilişkisini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Trofoblastik hastalıkların tanı ve tedavi izleminde kullanılan belirteç hangisidir?",
+     "secenekler": {
+      "A": "CEA",
+      "B": "AFP",
+      "C": "CA-125",
+      "D": "hCG",
+      "E": "PSA"
+     },
+     "dogru": "D",
+     "aciklama": "Tüm trofoblastik hastalıklar normal gebelikten çok daha yüksek hCG salgılar; hCG tanı ve tedavi izleminde kullanılır.",
+     "sik_aciklamalari": {
+      "A": "CEA gastrointestinal tümörlerde kullanılır.",
+      "B": "AFP yolk kesesi tümörü ve hepatoselüler karsinomla ilişkilidir.",
+      "C": "CA-125 over epitelyal tümörlerinde kullanılır.",
+      "D": "Doğru: hCG trofoblast ürünüdür.",
+      "E": "PSA prostat belirtecidir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Trofoblastik hastalıklarda hCG düzeyleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Normal gebelikten düşüktür",
+      "B": "Koryokarsinomda moldekinden düşüktür",
+      "C": "Mol hidatiformdan invaziv mole ve koryokarsinoma gidildikçe artar",
+      "D": "Tüm trofoblastik hastalıklarda saptanamaz",
+      "E": "İzlemde değeri yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "hCG düzeyi agresiflikle paralel olarak mol → invaziv mol → koryokarsinom sırasıyla artar.",
+     "sik_aciklamalari": {
+      "A": "Trofoblastik hastalıklarda normal gebelikten yüksektir.",
+      "B": "Koryokarsinomda hCG moldekinden çok daha yüksektir.",
+      "C": "Doğru: hCG spektrum boyunca artar.",
+      "D": "hCG tüm formlarda yüksek salgılanır.",
+      "E": "hCG tedavi etkinliğinin izlenmesinde kullanılır."
+     },
+     "bilgi": [
+      9,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Mol hidatiform nedeniyle küretaj yapılan hastada beta-hCG düzeyinin düşmeyip yükselmeye devam etmesi en olası olarak neyi gösterir?",
+     "secenekler": {
+      "A": "Endometriozis",
+      "B": "Normal iyileşme",
+      "C": "Leiomyom gelişimi",
+      "D": "Tam olmayan küretaj veya invaziv mol/koryokarsinom gelişimi",
+      "E": "Laboratuvar hatası dışında anlamı yoktur"
+     },
+     "dogru": "D",
+     "aciklama": "Küretaj sonrası beta-hCG izlemi tam olmayan küretaj veya komplikasyonları (invaziv mol, koryokarsinom) ortaya koyar.",
+     "sik_aciklamalari": {
+      "A": "Endometriozis hCG yüksekliği yapmaz.",
+      "B": "Normal iyileşmede hCG düşer.",
+      "C": "Leiomyom hCG salgılamaz.",
+      "D": "Doğru: kalıcı/yükselen hCG persistan trofoblastik hastalığı gösterir.",
+      "E": "Klinik olarak anlamlı ve araştırılması gereken bir bulgudur."
+     },
+     "bilgi": [
+      9,
+      17
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Komplet ve parsiyel mol hidatiformu karyotip, morfoloji ve davranış açısından karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Parsiyel mol hidatiformun karyotipi hangisidir?",
+     "secenekler": {
+      "A": "Diploit (46XX)",
+      "B": "Triploit (69XXY)",
+      "C": "Haploit (23X)",
+      "D": "Tetraploit (92XXXX)",
+      "E": "45X"
+     },
+     "dogru": "B",
+     "aciklama": "Parsiyel mol her zaman triploittir; normal ovumun iki spermatozoa veya diploid spermle fertilizasyonu sonucu oluşur.",
+     "sik_aciklamalari": {
+      "A": "46XX komplet molün tipik karyotipidir.",
+      "B": "Doğru: parsiyel mol triploittir.",
+      "C": "Haploit karyotip mol için tanımlanmaz.",
+      "D": "Tetraploit parsiyel molün karyotipi değildir.",
+      "E": "45X Turner sendromu karyotipidir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Komplet ve parsiyel mol karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Parsiyel molde belirgin diffüz trofoblastik proliferasyon ve atipi vardır",
+      "B": "Komplet mol triploittir",
+      "C": "Komplet molde fetal doku yoktur; parsiyel molde fetal parçalar ve fetal eritrositler bulunur",
+      "D": "Parsiyel molde villusların tümü anormaldir",
+      "E": "Komplet mol normal ovumun fertilizasyonuyla oluşur"
+     },
+     "dogru": "C",
+     "aciklama": "Komplet mol embriyogenezise izin vermez; parsiyel molde fetal parçalar ve bir miktar normal villus bulunur.",
+     "sik_aciklamalari": {
+      "A": "Parsiyel molde proliferasyon odaksal ve hafiftir, atipi genellikle yoktur.",
+      "B": "Komplet mol çoğunlukla diploittir.",
+      "C": "Doğru: fetal doku varlığı temel ayırıcı özelliktir.",
+      "D": "Komplet molde villusların tümü anormaldir.",
+      "E": "Komplet mol boş ovumun fertilizasyonuyla oluşur."
+     },
+     "bilgi": [
+      11,
+      12,
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Fetal kalp sesleri alınamayan, hCG düzeyi çok yüksek 42 yaşında kadının küretaj materyalinde tüm villuslarda hidropik şişme, sistern oluşumu, villus içi damar yokluğu ve diffüz atipik trofoblastik proliferasyon görülüyor; fetal doku yok.\n\nBu lezyonun kökeni hangisidir?",
+     "secenekler": {
+      "A": "Maternal kromozomların çoğalması",
+      "B": "Normal ovumun iki spermatozoayla fertilizasyonu (69XXY)",
+      "C": "Boş ovumun iki spermatozoa veya diploid spermle fertilizasyonu",
+      "D": "Leiomyomun malign dönüşümü",
+      "E": "Endometriumun myometriuma gömülmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Tablo komplet moldür; boş ovumun paternal kromozomlarla fertilizasyonu sonucu 46XX (nadiren 46XY) diploid karyotip oluşur.",
+     "sik_aciklamalari": {
+      "A": "Molar hastalık paternal kökenlidir.",
+      "B": "Bu parsiyel molün patogenezidir.",
+      "C": "Doğru: komplet molün patogenezidir; kromozomlar tamamen paterneldir.",
+      "D": "Leiomyom trofoblastik hastalık değildir.",
+      "E": "Bu adenomyozis tanımıdır."
+     },
+     "bilgi": [
+      11,
+      13,
+      14,
+      15
+     ],
+     "benzer_cikmis": [
+      "74792e2b6c4c",
+      "6e3d82c7ba46"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "74792e2b6c4c",
+     "soru": "Gebelik ve gestasyonel hastalıkların patolojisi Mol hidatiform sıklığını arttıran faktörlerden değildir?",
+     "secenekler": {
+      "A": "20 yaş altında olmak",
+      "B": "40 yaş üstünde olmak",
+      "C": "Asya kökenli olmak",
+      "D": "Geçirilmiş mol öyküsü",
+      "E": "Ektopik gebelik"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "6e3d82c7ba46",
+     "soru": "Mol hidatiform sıklığını arttıran faktörlerden değildir?",
+     "secenekler": {
+      "A": "20 yaş altında olmak",
+      "B": "40 yaş üstünde olmak",
+      "C": "Geçirilmiş mol öyküsü",
+      "D": "Asya kökenli olmak",
+      "E": "Ektopik gebelik öyküsü"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "İnvaziv molün özelliklerini ve tedavisini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "İnvaziv mol ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Leiomyomun bir türüdür",
+      "B": "Uzak organlara sık metastaz yapar",
+      "C": "Villus içermeyen anaplastik trofoblastik tümördür",
+      "D": "Lokal olarak invaziv olan ancak metastatik potansiyel göstermeyen komplet moldür",
+      "E": "Tedavisi yoktur"
+     },
+     "dogru": "D",
+     "aciklama": "İnvaziv mol, myometriuma derin invazyon gösteren ancak metastaz yapmayan komplet moldür.",
+     "sik_aciklamalari": {
+      "A": "Düz kas tümörü değildir.",
+      "B": "Metastaz izlenmez: uzak organlara sık metastaz yapar.",
+      "C": "Villussuz anaplastik tümör koryokarsinomdur.",
+      "D": "Doğru: invaziv molün tanımıdır.",
+      "E": "Çoğu olgu kemoterapiyle tam tedavi edilir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "İnvaziv molün yaşamı tehdit eden komplikasyonu hangisidir?",
+     "secenekler": {
+      "A": "Akciğere yaygın metastaz",
+      "B": "Derine invaze hidropik villusların uterus yırtılmasına ve kanamaya yol açması",
+      "C": "Lenf nodu metastazı",
+      "D": "Beyin metastazı",
+      "E": "Leiomyosarkoma dönüşüm"
+     },
+     "dogru": "B",
+     "aciklama": "Myometriuma derin invaze olan hidropik villuslar uterus yırtılması ve ağır kanamaya neden olabilir.",
+     "sik_aciklamalari": {
+      "A": "Uzak metastaz koryokarsinomun özelliğidir.",
+      "B": "Doğru: lokal invazyonun ciddi komplikasyonudur.",
+      "C": "Lenf nodu metastazı tipik değildir.",
+      "D": "Beyin metastazı koryokarsinomda görülür.",
+      "E": "Trofoblastik lezyon düz kas tümörüne dönüşmez."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "İnvaziv mol ve koryokarsinom karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Her ikisinde de villus yoktur",
+      "B": "İnvaziv molde hidropik villuslar bulunur ve metastaz izlenmez; koryokarsinomda villus yoktur ve kan yoluyla yaygın metastaz sıktır",
+      "C": "İnvaziv mol koryokarsinomdan daha agresiftir",
+      "D": "Koryokarsinomda hCG invaziv moldekinden düşüktür",
+      "E": "İnvaziv mol kemoterapiye yanıt vermez"
+     },
+     "dogru": "B",
+     "aciklama": "İnvaziv mol villus içerir ve metastaz yapmaz; koryokarsinom villussuz anaplastik trofoblastlardan oluşur ve hematojen yayılır.",
+     "sik_aciklamalari": {
+      "A": "İnvaziv molde villuslar vardır.",
+      "B": "Doğru: iki tablonun temel farkları verilmiştir.",
+      "C": "Koryokarsinom daha agresiftir.",
+      "D": "hCG koryokarsinomda daha yüksektir.",
+      "E": "İnvaziv mol çoğunlukla kemoterapiyle tam tedavi edilir."
+     },
+     "bilgi": [
+      9,
+      18,
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Koryokarsinomun klinik ve morfolojik özelliklerini özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Koryokarsinomun en sık metastaz yaptığı organ hangisidir?",
+     "secenekler": {
+      "A": "Dalak",
+      "B": "Kemik",
+      "C": "Akciğer",
+      "D": "Over",
+      "E": "Deri"
+     },
+     "dogru": "C",
+     "aciklama": "Koryokarsinom tanı anında sıklıkla kan yoluyla akciğer (%50), vajina, beyin, karaciğer ve böbreklere yayılmıştır.",
+     "sik_aciklamalari": {
+      "A": "Dalak sık metastaz bölgesi değildir.",
+      "B": "Kemik sık metastaz bölgesi olarak sayılmaz.",
+      "C": "Doğru: en sık metastaz bölgesi akciğerdir.",
+      "D": "Over sık metastaz bölgesi değildir.",
+      "E": "Deri sık metastaz bölgesi değildir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Koryokarsinomun morfolojik özelliği hangisidir?",
+     "secenekler": {
+      "A": "Endometrial bez ve stroma",
+      "B": "Hidropik villuslar ve sistern oluşumu",
+      "C": "Gri-beyaz girdapsı düz kas demetleri",
+      "D": "Fetal doku ve triploit villuslar",
+      "E": "Koryon villusu içermeyen, anaplastik sito- ve sinsityotrofoblastlardan oluşan kanamalı-nekrotik tümör"
+     },
+     "dogru": "E",
+     "aciklama": "Koryokarsinomda villus oluşmaz; tümör tamamen anaplastik trofoblastlardan oluşur ve kanamalı-nekrotiktir.",
+     "sik_aciklamalari": {
+      "A": "Endometrial bez ve stroma endometriozis/adenomyozisi gösterir.",
+      "B": "Hidropik villuslar mol hidatiforma aittir.",
+      "C": "Düz kas demetleri leiomyomdur.",
+      "D": "Fetal doku ve triploidi parsiyel moldür.",
+      "E": "Doğru: villus yokluğu tanısal özelliktir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Gestasyonel (plasental) koryokarsinomun kemoterapiye çok iyi yanıt verirken gonad kaynaklı koryokarsinomun kötü yanıt vermesinin nedeni hangisidir?",
+     "secenekler": {
+      "A": "Gonad tümörlerinin metastaz yapmaması",
+      "B": "Gonad tümörlerinin hCG salgılamaması",
+      "C": "Plasental tümörün villus içermesi",
+      "D": "Plasental tümörde paternal antijenlerin bulunması ve bunlara karşı maternal immün yanıtın tedaviye katkısı",
+      "E": "Plasental tümörün yalnızca lokal kalması"
+     },
+     "dogru": "D",
+     "aciklama": "Gestasyonel koryokarsinomda paternal antijenler maternal immün yanıtı tetikler; gonad tümörlerinde bu antijenler bulunmaz.",
+     "sik_aciklamalari": {
+      "A": "Gonad koryokarsinomları da metastaz yapabilir.",
+      "B": "Gonad koryokarsinomları da hCG salgılar.",
+      "C": "Koryokarsinom villus içermez.",
+      "D": "Doğru: prognoz farkını açıklayan mekanizmadır.",
+      "E": "Gestasyonel koryokarsinom yaygın metastaz yapar."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Plasentanın normal anatomisini ve histolojisini tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Term umbilikal kordda normalde kaç damar bulunur?",
+     "secenekler": {
+      "A": "1 arter, 1 ven",
+      "B": "1 arter, 2 ven",
+      "C": "2 arter, 1 ven",
+      "D": "2 arter, 2 ven",
+      "E": "3 arter"
+     },
+     "dogru": "C",
+     "aciklama": "Termdeki umbilikal kord ~55–60 cm olup 2 arter ve 1 ven içerir.",
+     "sik_aciklamalari": {
+      "A": "Tek umbilikal arter anormaldir.",
+      "B": "Normal kordda bir ven bulunur.",
+      "C": "Doğru: normal kordun damar yapısıdır.",
+      "D": "İki ven normal değildir.",
+      "E": "Kordda ven bulunmak zorundadır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Plasental villus histolojisi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Villuslarda epitel bulunmaz",
+      "B": "Villuslar ürotelyumla döşelidir",
+      "C": "Term plasentada sitotrofoblastlar çok belirgindir",
+      "D": "Sinsityotrofoblastlar tek çekirdekli küçük hücrelerdir",
+      "E": "Sinsityotrofoblastlar bol eozinofilik sitoplazmalı multinükleer hücreler; sitotrofoblastlar berrak sitoplazmalı belirgin sınırlı hücrelerdir"
+     },
+     "dogru": "E",
+     "aciklama": "Villuslar sinsityo- ve sitotrofoblastlarla döşelidir; term plasentada sitotrofoblastlar belirsizleşir.",
+     "sik_aciklamalari": {
+      "A": "Villuslar trofoblastik epitel taşır.",
+      "B": "Villuslar trofoblastla döşelidir.",
+      "C": "Term plasentada sitotrofoblastlar belirsizdir.",
+      "D": "Sinsityotrofoblastlar çok çekirdeklidir.",
+      "E": "Doğru: iki trofoblast tipinin özellikleri doğru verilmiştir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": [
+      "fdf1781d19d8"
+     ]
+    },
+    {
+     "id": "k1-54-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Umbilikal kordun plasentaya periferik giriş yaptığı plasenta tipine ne ad verilir?",
+     "secenekler": {
+      "A": "Plasenta inkreata",
+      "B": "Plasenta akreata",
+      "C": "Plasenta perkreata",
+      "D": "Battledore plasenta",
+      "E": "Parsiyel mol"
+     },
+     "dogru": "D",
+     "aciklama": "Kordun plasentaya periferik girişi battledore plasenta olarak adlandırılır; giriş yerinde amniyonda skuamöz metaplazi sıktır.",
+     "sik_aciklamalari": {
+      "A": "İnkreata villusların myometriuma girmesidir.",
+      "B": "Akreata desidua yokluğunda yüzeyel yapışmadır.",
+      "C": "Perkreata villusların serozayı aşmasıdır.",
+      "D": "Doğru: battledore plasentanın tanımıdır.",
+      "E": "Parsiyel mol trofoblastik hastalıktır."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "fdf1781d19d8",
+     "soru": "Gebelik ve gestasyonel hastalıkların patolojisi Plesental site trofoblastik tümör hangi hücrelerden kaynaklanır?",
+     "secenekler": {
+      "A": "Sitotrofoblast",
+      "B": "Sinsityotrofoblast",
+      "C": "İntermediyer trofoblast",
+      "D": "Fetal eritrosit",
+      "E": "Desidual hücreler"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Plasentanın inflamasyonunu (asendan/hematojen) ve TORCH kompleksini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Plasentaya en sık ulaşan enfeksiyon yolu ve tipik etken grubu hangisidir?",
+     "secenekler": {
+      "A": "Hematojen yol; virüsler",
+      "B": "Asendan yol; bakteriler",
+      "C": "Lenfatik yol; mantarlar",
+      "D": "Doğrudan komşuluk; parazitler",
+      "E": "Asendan yol; virüsler"
+     },
+     "dogru": "B",
+     "aciklama": "Asendan (doğum kanalından) enfeksiyonlar daha sık ve çoğunlukla bakteriyeldir.",
+     "sik_aciklamalari": {
+      "A": "Hematojen yol daha seyrektir ve villite yol açar.",
+      "B": "Doğru: asendan bakteriyel enfeksiyon en sıktır.",
+      "C": "Lenfatik yol plasental enfeksiyonun tipik yolu değildir.",
+      "D": "Doğrudan komşuluk temel yol değildir.",
+      "E": "Asendan enfeksiyonlar çoğunlukla bakteriyeldir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Erken membran rüptürü ile erken doğum yapan kadının plasentasında koryoamnionda ödem, damar dolgunluğu ve nötrofil infiltrasyonu görülüyor.\n\nEn olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Akut korioamnionit",
+      "B": "Villit",
+      "C": "Preeklampsi",
+      "D": "Plasenta akreata",
+      "E": "Koryokarsinom"
+     },
+     "dogru": "A",
+     "aciklama": "Asendan enfeksiyonda koryoamnionda ödem, konjesyon ve nötrofiller görülür; erken doğum ve erken membran rüptürü ile birliktedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: korioamnionitin tipik bulgularıdır.",
+      "B": "Villit hematojen enfeksiyonda villusları tutar.",
+      "C": "Preeklampsi vasküler bir tablodur.",
+      "D": "Akreata anormal implantasyondur.",
+      "E": "Koryokarsinom trofoblastik malignitedir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": [
+      "633a00385237",
+      "594723e45fb6"
+     ]
+    },
+    {
+     "id": "k1-54-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Hematojen yolla plasentaya ulaşan enfeksiyonlar ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "En sık villusları tutar (villit)",
+      "B": "Sifiliz, tüberküloz, listeriozis ve toksoplazmozis etken olabilir",
+      "C": "Transplasental enfeksiyonlar fetüsü etkileyerek TORCH kompleksini oluşturur",
+      "D": "Virüsler de etken olabilir",
+      "E": "Asendan enfeksiyonlardan daha sık görülür ve başlıca bulgusu korioamnionittir"
+     },
+     "dogru": "E",
+     "aciklama": "Asendan enfeksiyonlar daha sıktır ve korioamnionit yapar; hematojen enfeksiyonlar villit yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: villit hematojen enfeksiyonun tipik bulgusudur.",
+      "B": "Doğru ifade: bunlar villit etkenleridir.",
+      "C": "Doğru ifade: TORCH kompleksi transplasental enfeksiyonlardır.",
+      "D": "Doğru ifade: virüsler hematojen etkenler arasındadır.",
+      "E": "Yanlış ifade (aranan cevap): bu özellikler asendan enfeksiyona aittir."
+     },
+     "bilgi": [
+      27,
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "633a00385237",
+     "soru": "Gebelik ve gestasyonel hastalıkların patolojisi, mikroskopik incelemede koryoamniyonda ödem ve damar dolgunluğu ile birlikte nötroil infiltrasyonu izlendiğinde tanınız nedir?",
+     "secenekler": {
+      "A": "Hematosalpenks",
+      "B": "Hidrosalpenks",
+      "C": "Mol hidatiform",
+      "D": "Akut koryoamniyonit",
+      "E": "Plesental site trofoblastik tümör"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "594723e45fb6",
+     "soru": "Tıbbi Patoloji\nÇift kontü\ntren rayı\nGebelik ve gestasyonel\nhastalıkların patolojisi\nmikroskopik\nincelemede\nkoryoamniyonda\nödem ve damar\ndolgunluğu ile birlikte\nnötroil iniltrasyonu\nizlendiğinde tanınız\nedir?",
+     "secenekler": {
+      "A": "Hematosalpenks",
+      "B": "Hidrosalpenks",
+      "C": "Mol hidatiform",
+      "D": "Akut koryoamniyonit",
+      "E": "Plesental site trofoblastik tümör"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Ektopik gebeliği açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Ektopik gebeliğin en sık yerleşim yeri hangisidir?",
+     "secenekler": {
+      "A": "Tuba uterina",
+      "B": "Over",
+      "C": "Periton boşluğu",
+      "D": "Serviks",
+      "E": "Karaciğer"
+     },
+     "dogru": "A",
+     "aciklama": "Ektopik gebelik gebeliklerin %1'inde görülür ve olguların %90'ından fazlası tüptedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tubal gebelik en sık formdur.",
+      "B": "Ovaryan gebelik nadirdir.",
+      "C": "Abdominal gebelik nadirdir.",
+      "D": "Servikal gebelik nadirdir.",
+      "E": "Karaciğer yerleşimi son derece nadirdir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Ektopik gebeliğin en sık nedeni hangisidir?",
+     "secenekler": {
+      "A": "Tüplerdeki kronik inflamatuar değişiklikler",
+      "B": "Leiomyom",
+      "C": "Endometrial polip",
+      "D": "Komplet mol",
+      "E": "Plasenta akreata"
+     },
+     "dogru": "A",
+     "aciklama": "Kronik salpenjit gibi tubal inflamatuar değişiklikler ovumun tüpte takılmasına yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: en sık nedendir.",
+      "B": "Leiomyom ektopik gebeliğin en sık nedeni değildir.",
+      "C": "Endometrial polip tubal implantasyona yol açmaz.",
+      "D": "Mol trofoblastik hastalıktır.",
+      "E": "Akreata anormal plasental yapışmadır."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Adet gecikmesi olan genç kadın ani karın ağrısı ve şok tablosuyla başvuruyor; acil cerrahide tuba rüptüre ve batın içi kan var. Tuba içinde hematosalpinks saptanıyor.\n\nTanıyı histolojik olarak kesinleştiren bulgu hangisidir?",
+     "secenekler": {
+      "A": "Koryon villuslarının görülmesi",
+      "B": "Endometrial bez ve stroma görülmesi",
+      "C": "Düz kas demetleri",
+      "D": "Granülomlar",
+      "E": "Atipik anaplastik trofoblastlar ve villus yokluğu"
+     },
+     "dogru": "A",
+     "aciklama": "Tubal gebelikte tanı villusların görülmesine dayanır; rüptür akut batın ve şok yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: villuslar gebelik ürününü kanıtlar.",
+      "B": "Endometrial bez/stroma endometriozisi gösterir.",
+      "C": "Düz kas tuba duvarının normal bileşenidir.",
+      "D": "Granülom tüberküloz salpenjitini düşündürür.",
+      "E": "Villussuz anaplastik trofoblast koryokarsinomdur."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": [
+      "92d7ae967be5"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "92d7ae967be5",
+     "soru": "Gebelik ve gestasyonel hastalıkların patolojisi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hematosalpenks",
+      "B": "Hidrosalpenks",
+      "C": "Mol hidatiform",
+      "D": "Akut koryoamniyonit",
+      "E": "Plesental site trofoblastik tümör"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Preeklampsi/eklampsiyi ve temel mekanizmasını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Preeklampsinin klasik bulguları hangileridir?",
+     "secenekler": {
+      "A": "Hipertansiyon, ödem ve proteinüri",
+      "B": "Hipotansiyon, poliüri ve hipoglisemi",
+      "C": "Ateş, döküntü ve eozinofili",
+      "D": "Hematüri, kolik ve taş",
+      "E": "Galaktore ve amenore"
+     },
+     "dogru": "A",
+     "aciklama": "Preeklampsi gebeliğin üçüncü trimesterinde hipertansiyon, ödem ve proteinüri ile oluşur; konvülsiyon eklenirse eklampsi olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: preeklampsinin üçlüsüdür.",
+      "B": "Bu bulgular preeklampsiyle ilişkili değildir.",
+      "C": "Bu bulgular ilaç aşırı duyarlılığını düşündürür.",
+      "D": "Bu bulgular ürolitiyazis tablosudur.",
+      "E": "Bu bulgular hiperprolaktinemiyi düşündürür."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Preeklampsinin temel patogenetik mekanizması hangisidir?",
+     "secenekler": {
+      "A": "Uteroplasental yataktaki spiral arteriollerin yetersiz dilatasyonu ile plasentaya maternal kan akımının azalması",
+      "B": "Plasentanın bakteriyel enfeksiyonu",
+      "C": "Trofoblastların malign dönüşümü",
+      "D": "Villusların myometriuma direkt yapışması",
+      "E": "Umbilikal kordda tek arter bulunması"
+     },
+     "dogru": "A",
+     "aciklama": "Normalde spiral arteriollerin muskuloelastik duvarı fibrinöz materyalle dolarak genişler; preeklampside damarlar dar kalır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: temel mekanizma yetersiz vasküler yeniden yapılanmadır.",
+      "B": "Enfeksiyon preeklampsinin nedeni değildir.",
+      "C": "Malign dönüşüm koryokarsinomu tanımlar.",
+      "D": "Direkt myometrial yapışma plasenta akreata spektrumudur.",
+      "E": "Tek umbilikal arter preeklampsinin temel mekanizması değildir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Preeklampsi/eklampsi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Gebeliğin üçüncü trimesterinde görülür",
+      "B": "Konvülsiyonların eklenmesi eklampsi olarak adlandırılır",
+      "C": "Şiddetli eklampside DİC gelişebilir",
+      "D": "Spiral arteriollerin normal fizyolojik genişlemesi yetersiz kalır",
+      "E": "Spiral arteriollerin aşırı genişlemesi plasentada hiperperfüzyona yol açar"
+     },
+     "dogru": "E",
+     "aciklama": "Preeklampside spiral arterioller yeterince genişlemez ve plasenta hipoperfüze olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: üçüncü trimester hastalığıdır.",
+      "B": "Doğru ifade: konvülsiyon eklenmesi eklampsidir.",
+      "C": "Doğru ifade: DİC ölümcül komplikasyondur.",
+      "D": "Doğru ifade: yetersiz dilatasyon temel mekanizmadır.",
+      "E": "Yanlış ifade (aranan cevap): sorun yetersiz dilatasyon ve hipoperfüzyondur."
+     },
+     "bilgi": [
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Plasental gross anomalileri (accreta/increta/percreta) sıralayabilmek",
+   "sorular": [
+    {
+     "id": "k1-54-q34",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Villusların araya desidua girmeden myometriuma yüzeysel olarak yapışmasına ne ad verilir?",
+     "secenekler": {
+      "A": "Plasenta akreata",
+      "B": "Plasenta inkreata",
+      "C": "Plasenta perkreata",
+      "D": "Battledore plasenta",
+      "E": "Korioamnionit"
+     },
+     "dogru": "A",
+     "aciklama": "Akreata desidua yokluğunda yüzeyel yapışma, inkreata myometriuma girme, perkreata serozayı aşmadır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: akreatanın tanımıdır.",
+      "B": "İnkreatada villuslar myometrium içine girer.",
+      "C": "Perkreatada villuslar serozayı aşar.",
+      "D": "Battledore kordun periferik girişidir.",
+      "E": "Korioamnionit enfeksiyöz bir süreçtir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q35",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Plasental villusların myometriumu tüm kat geçerek serozaya ulaşmasına ne ad verilir?",
+     "secenekler": {
+      "A": "Plasenta perkreata",
+      "B": "Plasenta akreata",
+      "C": "Plasenta inkreata",
+      "D": "İnvaziv mol",
+      "E": "Adenomyozis"
+     },
+     "dogru": "A",
+     "aciklama": "Plasenta perkreatada villuslar serozayı aşar; uterin rüptür riski taşır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: en ileri anormal implantasyon formudur.",
+      "B": "Akreata yüzeyel yapışmadır.",
+      "C": "İnkreatada villuslar myometriuma girer ancak serozayı aşmaz.",
+      "D": "İnvaziv mol hidropik villuslarla trofoblastik hastalıktır.",
+      "E": "Adenomyozis endometriumun myometrium içine uzanmasıdır."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-54-q36",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Plasental anormal implantasyonun (akreata/inkreata/perkreata) klinik sonuçları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Postpartum kanama",
+      "B": "Ateş",
+      "C": "Uterin rüptür",
+      "D": "Plasentanın ayrılmasında güçlük",
+      "E": "Koryokarsinoma zorunlu dönüşüm"
+     },
+     "dogru": "E",
+     "aciklama": "Anormal implantasyon postpartum kanama, ateş ve uterin rüptür riski yaratır; koryokarsinoma dönüşüm beklenen bir sonuç değildir.",
+     "sik_aciklamalari": {
+      "A": "Beklenen sonuçtur: plasenta tam ayrılamaz ve kanama olur.",
+      "B": "Beklenen sonuçtur: kalan dokuya bağlı ateş gelişebilir.",
+      "C": "Beklenen sonuçtur: özellikle perkreatada rüptür riski vardır.",
+      "D": "Beklenen sonuçtur: desidua olmadığından ayrılma bozulur.",
+      "E": "Doğru: anormal implantasyon malign dönüşüm yapmaz."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 36,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:27"
+}

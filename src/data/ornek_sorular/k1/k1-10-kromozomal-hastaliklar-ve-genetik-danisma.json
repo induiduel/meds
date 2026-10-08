@@ -1,0 +1,1276 @@
+{
+ "id": "k1-10-kromozomal-hastaliklar-ve-genetik-danisma",
+ "sira": 10,
+ "kurul": 1,
+ "ders": "Tıbbi Genetik",
+ "konu": "Kromozomal Hastalıklar ve Genetik Danışma",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "tarih": "2026-09-16",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Kromozom anomalilerini klinik etkiye (dengeli/dengesiz) ve sitogenetik olarak (sayısal/yapısal) sınıflandırmak",
+   "sorular": [
+    {
+     "id": "k1-10-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Kromozomal bozukluklar tüm canlı doğumların yaklaşık ne kadarında görülür?",
+     "secenekler": {
+      "A": "%50",
+      "B": "%25",
+      "C": "%0,001",
+      "D": "%1",
+      "E": "%10"
+     },
+     "dogru": "D",
+     "aciklama": "Kromozomal bozukluklar canlı doğumların ~%1'inde görülür ve ağır morbidite/mortaliteyle seyreder.",
+     "sik_aciklamalari": {
+      "A": "Gerçekçi değildir: %50.",
+      "B": "Bu oran çok yüksektir.",
+      "C": "Bu oran çok düşüktür.",
+      "D": "Doğru: verilen sıklıktır.",
+      "E": "Gerçek sıklıktan fazladır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Dengeli kromozom anomalisi taşıyan birey için hangisi doğrudur?",
+     "secenekler": {
+      "A": "Gen dozajı bozulmuştur",
+      "B": "Her zaman ağır zekâ geriliği vardır",
+      "C": "Kendisinde genellikle fenotip oluşmaz ancak sonraki kuşakta dengesiz gamet riski artar",
+      "D": "Çocuklarında hiçbir risk yoktur",
+      "E": "Mutlaka letaldir"
+     },
+     "dogru": "C",
+     "aciklama": "Dengeli anomalilerde gen dozajı korunduğundan taşıyıcı sağlıklıdır; ancak sonraki kuşakta risk %1–100 arasında artar.",
+     "sik_aciklamalari": {
+      "A": "Gen dozajı bozulması dengesiz anomalilerde olur.",
+      "B": "Dengeli taşıyıcıda fenotip beklenmez.",
+      "C": "Doğru: dengeli anomalinin klinik anlamıdır.",
+      "D": "Dengesiz gamet riski vardır.",
+      "E": "Dengeli taşıyıcılık letal değildir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Kromozom anomalilerinin sınıflaması ile ilgili hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sitogenetik olarak sayısal ve yapısal diye ikiye ayrılır",
+      "B": "Öploidi ve anöploidi sayısal anomalilerdir",
+      "C": "Translokasyon ve inversiyon yapısal anomalilerdir",
+      "D": "Dengesiz anomalilerde bulgular etkilenen genlere göre değişir",
+      "E": "Dengeli anomaliler her zaman taşıyıcıda ağır fenotip oluşturur"
+     },
+     "dogru": "E",
+     "aciklama": "Dengeli anomaliler taşıyıcıda fenotip oluşturmaz; dengesizler gen dozajını bozar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: sitogenetik sınıflamadır.",
+      "B": "Doğru ifade: sayısal anomali türleridir.",
+      "C": "Doğru ifade: yapısal anomali örnekleridir.",
+      "D": "Doğru ifade: fenotip etkilenen genlere bağlıdır.",
+      "E": "Yanlış ifade (aranan cevap): dengeli taşıyıcı sağlıklıdır."
+     },
+     "bilgi": [
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Sayısal anomalileri (öploidi, anöploidi) tanımlamak ve poliploidi örneklerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-10-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "69 kromozomlu karyotip hangi anomaliyi ifade eder?",
+     "secenekler": {
+      "A": "Trizomi",
+      "B": "Triploidi",
+      "C": "Tetraploidi",
+      "D": "Monozomi",
+      "E": "Tetrazomi"
+     },
+     "dogru": "B",
+     "aciklama": "Triploidi haploid sayının üç katı (69) kromozomdur; tetraploidi 92'dir.",
+     "sik_aciklamalari": {
+      "A": "Trizomi 2n+1=47'dir.",
+      "B": "Doğru: 3n=69'dur. Triploidi haploid sayının üç katı (69) kromozomdur; tetraploidi 92'dir.",
+      "C": "Tetraploidi 92 kromozomdur.",
+      "D": "Monozomi 45 kromozomdur.",
+      "E": "Tetrazomi 48 kromozomdur."
+     },
+     "bilgi": [
+      4,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Triploidinin oluşum mekanizmaları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Diploid sperm ile haploid yumurtanın döllenmesi",
+      "B": "Bir yumurtanın iki spermle döllenmesi (dispermi)",
+      "C": "Mayoz I'de tek bir kromozomun ayrılamaması",
+      "D": "Haploid sperm ile diploid yumurtanın döllenmesi",
+      "E": "Hepsi triploidi mekanizmasıdır"
+     },
+     "dogru": "C",
+     "aciklama": "Triploidi dispermi veya diploid gametle döllenme sonucu oluşur; tek kromozomun ayrılamaması anöploidi yapar.",
+     "sik_aciklamalari": {
+      "A": "Diploid sperm triploidiye yol açar.",
+      "B": "Dispermi triploidi mekanizmasıdır.",
+      "C": "Doğru: tek kromozom ayrılamaması trizomi/monozomi yapar.",
+      "D": "Diploid yumurta triploidiye yol açar.",
+      "E": "A seçeneği triploidi mekanizması değildir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Büyük plasenta ve hidatiform değişikliklerle seyreden molar gebelikle birlikte triploidi saptanan fetüste ekstra kromozom takımının kaynağı genellikle hangisidir?",
+     "secenekler": {
+      "A": "Anne",
+      "B": "Baba",
+      "C": "Mitotik ayrılamama",
+      "D": "Robertsonian translokasyon",
+      "E": "Uniparental dizomi"
+     },
+     "dogru": "B",
+     "aciklama": "Molar gebelikle birlikte olan triploidide ekstra takım baba kaynaklıdır; triploidi kromozomal düşüklerin ~%20'sidir.",
+     "sik_aciklamalari": {
+      "A": "Maternal kaynak molar değişiklikle ilişkilendirilmez.",
+      "B": "Doğru: paternal ekstra takım molar değişiklikle ilişkilidir.",
+      "C": "Mitotik ayrılamama mozaiklik yapar.",
+      "D": "Translokasyon triploidi nedeni değildir.",
+      "E": "UPD tek kromozomun iki kopyasının tek ebeveynden gelmesidir."
+     },
+     "bilgi": [
+      5,
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Anöploidi oluş mekanizmalarını (kromozom ayrılamaması, anafazda geri kalma) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-10-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Hücre bölünmesi sırasında bir kutba iki kat kromozom gidip diğerine gitmemesine ne ad verilir?",
+     "secenekler": {
+      "A": "Translokasyon",
+      "B": "Krossing over",
+      "C": "İmprinting",
+      "D": "Kromozom ayrılamaması (non-disjunction)",
+      "E": "İnversiyon"
+     },
+     "dogru": "D",
+     "aciklama": "Kromozom ayrılamaması trizomi veya monozomi ile sonuçlanır.",
+     "sik_aciklamalari": {
+      "A": "Translokasyon kromozomlar arası parça değişimidir.",
+      "B": "Krossing over homologlar arası parça değişimidir.",
+      "C": "İmprinting alel ekspresyonundaki ebeveyn kökenli farktır.",
+      "D": "Doğru: ayrılamamanın tanımıdır.",
+      "E": "İnversiyon segmentin ters dönmesidir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Anafazda geri kalma (anaphase lag) sonucunda hangi durum ortaya çıkabilir?",
+     "secenekler": {
+      "A": "Yalnızca triploidi",
+      "B": "Kromozomun kaybolmasıyla monozomi veya özdeşine katılmasıyla trizomi",
+      "C": "Robertsonian translokasyon",
+      "D": "İzokromozom oluşumu",
+      "E": "Ring kromozom oluşumu"
+     },
+     "dogru": "B",
+     "aciklama": "Anafazda geri kalan kromozom ya özdeşinin grubuna katılır ya kaybolur; trizomi veya monozomi oluşur.",
+     "sik_aciklamalari": {
+      "A": "Triploidi tam takım artışıdır.",
+      "B": "Doğru: mekanizmanın iki olası sonucudur.",
+      "C": "Robertsonian akrosentrik füzyondur.",
+      "D": "İzokromozom kol kaybı ve duplikasyonudur.",
+      "E": "Ring kromozom iki uçtaki kırık birleşmesidir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Trizomik bir bireyde ekstra kromozomun iki kopyasının aynı ebeveynden gelen özdeş kardeş kromatitler olduğu saptanıyor.\n\nAyrılamama en olası hangi evrede gerçekleşmiştir?",
+     "secenekler": {
+      "A": "Mitoz G1",
+      "B": "Mayoz I",
+      "C": "Mayoz II",
+      "D": "Döllenme sonrası S fazı",
+      "E": "İmprinting sırasında"
+     },
+     "dogru": "C",
+     "aciklama": "Mayoz II ayrılamamasında gametteki iki kopya aynı ebeveyne ait kardeş kromatitlerdir; mayoz I'de her iki parental homolog taşınır.",
+     "sik_aciklamalari": {
+      "A": "G1 fazında ayrılma olmaz.",
+      "B": "Mayoz I'de iki farklı homolog taşınır.",
+      "C": "Doğru: kardeş kromatitlerin ayrılamaması mayoz II'dir.",
+      "D": "S fazı DNA replikasyonudur.",
+      "E": "İmprinting ayrılamama değildir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Anöploidi tiplerini (trizomi, tetrazomi, nullizomi, monozomi) tanımlamak",
+   "sorular": [
+    {
+     "id": "k1-10-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Yaşamla bağdaşan tek monozomi hangisidir?",
+     "secenekler": {
+      "A": "Monozomi 18",
+      "B": "Monozomi 21",
+      "C": "Monozomi 13",
+      "D": "X monozomisi (Turner)",
+      "E": "Monozomi 1"
+     },
+     "dogru": "D",
+     "aciklama": "Turner sendromu (45,X) yaşamla bağdaşan tek monozomidir.",
+     "sik_aciklamalari": {
+      "A": "Otozomal monozomiler letaldir.",
+      "B": "Otozomal monozomiler letaldir.",
+      "C": "Otozomal monozomiler letaldir.",
+      "D": "Doğru: 45,X yaşamla bağdaşır.",
+      "E": "Otozomal monozomiler letaldir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki karyotip–sendrom eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "45,X – Klinefelter sendromu",
+      "B": "47,+13 – Down sendromu",
+      "C": "47,+18 – Edwards sendromu",
+      "D": "47,XXY – Turner sendromu",
+      "E": "47,+21 – Patau sendromu"
+     },
+     "dogru": "C",
+     "aciklama": "47,+21 Down, 47,+18 Edwards, 47,+13 Patau, 47,XXY Klinefelter, 45,X Turner'dır.",
+     "sik_aciklamalari": {
+      "A": "45,X Turner sendromudur.",
+      "B": "Trizomi 13 Patau sendromudur.",
+      "C": "Doğru: trizomi 18 Edwards sendromudur.",
+      "D": "47,XXY Klinefelter sendromudur.",
+      "E": "Trizomi 21 Down sendromudur."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Canlı doğumda görülebilen otozomal trizomiler hangileridir?",
+     "secenekler": {
+      "A": "Trizomi 1, 2 ve 3",
+      "B": "Trizomi 13, 18 ve 21",
+      "C": "Trizomi 16 ve 22",
+      "D": "Tüm otozomal trizomiler",
+      "E": "Hiçbir otozomal trizomi canlı doğmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Canlı doğumda en sık otozomal trizomiler +13, +18, +21'dir; diğerleri letaldir.",
+     "sik_aciklamalari": {
+      "A": "Büyük kromozom trizomileri letaldir.",
+      "B": "Doğru: yaşamla bağdaşabilen trizomilerdir.",
+      "C": "Trizomi 16 düşüklerde sık görülür, canlı doğumla bağdaşmaz.",
+      "D": "Diğer otozomal trizomiler letaldir.",
+      "E": "13, 18 ve 21 canlı doğabilir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": [
+      "80ab29504d2f",
+      "c54437b9c45a"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "80ab29504d2f",
+     "soru": "Fetal faktörlere bağlı ilk trimester abortuslarında en sık karşılaşılan kromozomal anomaliler hangisidir?",
+     "secenekler": {
+      "A": "Yapısal Kromozomal Anomaliler",
+      "B": "Tetraploidi",
+      "C": "Monozomi X",
+      "D": "Triploidi",
+      "E": "Otozomal trizomi"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "c54437b9c45a",
+     "soru": "Abortuslar1 fetal faktörlere bağlı ilk trimester abortuslarında en sık karşılaşılan kromozomal anomaliler hangisidir?",
+     "secenekler": {
+      "A": "Monozomi X",
+      "B": "Otozomal trizomi",
+      "C": "Triploidi",
+      "D": "Tetraploidi",
+      "E": "Yapısal Kromozomal Anomaliler"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Yapısal kromozom anomalilerini (delesyon, duplikasyon, inversiyon, translokasyon, izokromozom, ring, marker) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-10-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Bir kolun kaybı ve diğer kolun duplikasyonu ile ayna simetrisi gösteren yapısal kromozom anomalisi hangisidir?",
+     "secenekler": {
+      "A": "Marker kromozom",
+      "B": "Ring kromozom",
+      "C": "İnversiyon",
+      "D": "İzokromozom",
+      "E": "Duplikasyon"
+     },
+     "dogru": "D",
+     "aciklama": "İzokromozom parsiyel trizomi + parsiyel monozomi oluşturur; en sık i(Xq) Turner sendromuna yol açar.",
+     "sik_aciklamalari": {
+      "A": "Marker kromozom bantlamayla tanımlanamayan küçük kromozomdur.",
+      "B": "Ring kromozom iki ucun birleşmesidir.",
+      "C": "İnversiyon segmentin 180° dönmesidir.",
+      "D": "Doğru: izokromozomun tanımıdır.",
+      "E": "Duplikasyon segment tekrarıdır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "İnversiyon ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tek kırık ile oluşur",
+      "B": "Her zaman ağır fenotip yapar",
+      "C": "Dengelidir ve taşıyıcıda fenotip yapmaz; sonraki nesilde dengesiz gamet riski vardır",
+      "D": "Perisentrik inversiyon sentromeri içermez",
+      "E": "Gen dozajını bozar"
+     },
+     "dogru": "C",
+     "aciklama": "İnversiyonda iki kırık oluşur ve segment 180° döner; parasentrik sentromersiz, perisentrik sentromerlidir.",
+     "sik_aciklamalari": {
+      "A": "İki kırık gerekir: tek kırık ile oluşur.",
+      "B": "Taşıyıcıda fenotip beklenmez.",
+      "C": "Doğru: dengeli yapısal anomalidir.",
+      "D": "Perisentrik inversiyon sentromeri içerir.",
+      "E": "Dengeli olduğundan dozaj korunur."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Yapısal kromozom anomalileri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Delesyonun klinik etkisi haploinsufficiency ile açıklanır",
+      "B": "Duplikasyonların klinik etkisi delesyonlara göre genellikle daha azdır",
+      "C": "Ring kromozom en sık X kromozomunda görülür ve mozaiklik yapabilir",
+      "D": "Marker kromozomların kökenini belirlemek için FISH/mikroarray gerekir",
+      "E": "Duplikasyon genellikle mitozda kardeş kromatit ayrılamamasıyla oluşur"
+     },
+     "dogru": "E",
+     "aciklama": "Duplikasyon genellikle mayozda eşit olmayan krossing over ile oluşur; bir homologda duplikasyon, diğerinde delesyon olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: tek kopyanın yetersizliği fenotip yapar.",
+      "B": "Doğru ifade: duplikasyonlar daha iyi tolere edilir.",
+      "C": "Doğru ifade: ring kromozom instabil ve mozaiktir.",
+      "D": "Doğru ifade: klasik bantlama yetmez.",
+      "E": "Yanlış ifade (aranan cevap): mekanizma eşit olmayan krossing overdır."
+     },
+     "bilgi": [
+      11,
+      14,
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Mikrodelesyon/duplikasyon sendromlarını bölgeleriyle sıralamak",
+   "sorular": [
+    {
+     "id": "k1-10-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "DiGeorge sendromu hangi kromozom bölgesindeki mikrodelesyonla ilişkilidir?",
+     "secenekler": {
+      "A": "7q11.23",
+      "B": "22q11.2",
+      "C": "17p11.2",
+      "D": "5p15",
+      "E": "15q11-q13"
+     },
+     "dogru": "B",
+     "aciklama": "DiGeorge 22q11.2 interstisyel delesyonudur.",
+     "sik_aciklamalari": {
+      "A": "7q11.23 Williams sendromudur.",
+      "B": "Doğru: DiGeorge bölgesidir.",
+      "C": "17p11.2 Smith-Magenis sendromudur.",
+      "D": "5p15 Cri du chat sendromudur.",
+      "E": "15q11-q13 Prader-Willi/Angelman bölgesidir."
+     },
+     "bilgi": [
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki mikrodelesyon/duplikasyon sendromu–bölge eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Smith-Magenis – 17p11.2 delesyon",
+      "B": "Williams – 7q11.23 delesyon",
+      "C": "Cat-Eye – 22q11 duplikasyon",
+      "D": "Charcot-Marie-Tooth – 17p12 duplikasyon",
+      "E": "Nörofibromatozis – 22q11.2 duplikasyon"
+     },
+     "dogru": "E",
+     "aciklama": "Nörofibromatozis 17q11.2 delesyonu ile ilişkilendirilmiştir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: smith-Magenis – 17p11.2 delesyon.",
+      "B": "Doğru eşleştirme: williams – 7q11.23 delesyon.",
+      "C": "Doğru eşleştirme: cat-Eye – 22q11 duplikasyon.",
+      "D": "Doğru eşleştirme: charcot-Marie-Tooth – 17p12 duplikasyon.",
+      "E": "Yanlış eşleştirme (aranan cevap): NF 17q11.2 delesyonudur."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Klinik olarak mikrodelesyon sendromu düşünülen hastada rutin karyotip normal geliyor.\n\nBir sonraki uygun tanı yöntemi hangisidir?",
+     "secenekler": {
+      "A": "Ultrasonografi",
+      "B": "Tekrar rutin karyotip",
+      "C": "Serum biyokimyası",
+      "D": "FISH veya kromozomal mikroarray",
+      "E": "Tanı konulamaz"
+     },
+     "dogru": "D",
+     "aciklama": "Submikroskobik delesyon/duplikasyonlar rutin karyotipte görülmez; FISH ve mikroarray ile saptanır.",
+     "sik_aciklamalari": {
+      "A": "USG genetik tanı koydurmaz.",
+      "B": "Karyotip çözünürlüğü yetersizdir.",
+      "C": "Biyokimya kromozom değişikliği göstermez.",
+      "D": "Doğru: submikroskobik değişiklikleri gösterir.",
+      "E": "FISH/mikroarray ile tanı konabilir."
+     },
+     "bilgi": [
+      13,
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Translokasyon tiplerini (resiprokal, Robertsonian, insersiyonal) ayırt etmek",
+   "sorular": [
+    {
+     "id": "k1-10-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Akrosentrik kromozomların kısa kollarını kaybederek sentromerik bölgeden birleşmesiyle oluşan translokasyon hangisidir?",
+     "secenekler": {
+      "A": "Resiprokal translokasyon",
+      "B": "Robertsonian translokasyon",
+      "C": "İnsersiyonal translokasyon",
+      "D": "İnversiyon",
+      "E": "İzokromozom"
+     },
+     "dogru": "B",
+     "aciklama": "Robertsonian translokasyonda 45 kromozomlu dengeli karyotip oluşur; en sık rob(13;14) ve rob(14;21).",
+     "sik_aciklamalari": {
+      "A": "Resiprokal translokasyon iki kromozom arasında parça değişimidir.",
+      "B": "Doğru: Robertsonian translokasyonun tanımıdır.",
+      "C": "İnsersiyonal translokasyon segmentin başka kromozom içine girmesidir.",
+      "D": "İnversiyon aynı kromozomda segment dönmesidir.",
+      "E": "İzokromozom kol kaybı ve duplikasyonudur."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "İnsersiyonal translokasyon ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca akrosentrik kromozomları tutar",
+      "B": "Tek kırık ile oluşur",
+      "C": "En sık translokasyon tipidir",
+      "D": "Prenatal tanı gerektirmez",
+      "E": "Oluşması için üç kırık bölgesi gerekir ve dengesiz gamet riski yüksektir"
+     },
+     "dogru": "E",
+     "aciklama": "İnsersiyonal translokasyon nadirdir, 3 kırık gerektirir; dengesiz gamet riski yüksektir ve prenatal tanı önerilir.",
+     "sik_aciklamalari": {
+      "A": "Akrosentrik füzyon Robertsonian translokasyondur.",
+      "B": "Üç kırık gerekir: tek kırık ile oluşur.",
+      "C": "Nadir görülür: en sık translokasyon tipidir.",
+      "D": "Prenatal tanı önerilir.",
+      "E": "Doğru: mekanizma ve risk doğru verilmiştir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Tekrarlayan düşük öyküsü olan çiftte eşlerden birinde dengeli resiprokal translokasyon saptanıyor.\n\nBu durumla ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Toplam kromozom sayısı 45'e düşmüştür",
+      "B": "Taşıyıcıda ağır zekâ geriliği beklenir",
+      "C": "Taşıyıcı fenotipik olarak normaldir ancak dengesiz gametler düşük ve etkilenmiş çocuk riskini artırır",
+      "D": "Çiftin gebeliklerinde risk yoktur",
+      "E": "Translokasyon akrosentrik kromozomlar arasında olmak zorundadır"
+     },
+     "dogru": "C",
+     "aciklama": "Resiprokal translokasyonda kromozom kuruluşu değişmez ve taşıyıcı sağlıklıdır; dengesiz gamet riski tekrarlayan düşük ve infertiliteye yol açar.",
+     "sik_aciklamalari": {
+      "A": "45 kromozom Robertsonian translokasyonda görülür.",
+      "B": "Dengeli taşıyıcı fenotipik olarak normaldir.",
+      "C": "Doğru: dengeli taşıyıcılığın klinik sonucudur.",
+      "D": "Dengesiz gamet riski vardır.",
+      "E": "Resiprokal translokasyon herhangi homolog olmayan kromozomlar arasında olabilir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Otozomal trizomileri (Down, Edwards, Patau) karyotip, klinik ve prognoz yönünden karşılaştırmak",
+   "sorular": [
+    {
+     "id": "k1-10-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Mikroftalmi, yarık dudak-damak ve polidaktili triadı hangi sendromun karakteristiğidir?",
+     "secenekler": {
+      "A": "Turner sendromu",
+      "B": "Edwards sendromu (trizomi 18)",
+      "C": "Down sendromu (trizomi 21)",
+      "D": "Patau sendromu (trizomi 13)",
+      "E": "Klinefelter sendromu"
+     },
+     "dogru": "D",
+     "aciklama": "Patau sendromunda mikroftalmi + yarık dudak/damak + polidaktili triadı karakteristiktir; holoprozensefali eşlik edebilir.",
+     "sik_aciklamalari": {
+      "A": "Turner'da kısa boy ve gonadal disgenezi vardır.",
+      "B": "Edwards'ta clenched hand ve rocker-bottom ayak tipiktir.",
+      "C": "Down'da hipotoni ve tipik yüz bulguları görülür.",
+      "D": "Doğru: Patau triadıdır.",
+      "E": "Klinefelter'de küçük testis ve infertilite vardır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Belirgin oksiput, üst üste binen parmaklarla kapalı el (clenched hand), rocker-bottom ayak ve yenidoğanda hipertonisite saptanan bebekte en olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Prader-Willi sendromu",
+      "B": "Patau sendromu",
+      "C": "Down sendromu",
+      "D": "Cri du chat sendromu",
+      "E": "Edwards sendromu"
+     },
+     "dogru": "E",
+     "aciklama": "Edwards (trizomi 18) bulgularıdır; %80'i kızdır ve çoğu ilk yıl içinde kaybedilir.",
+     "sik_aciklamalari": {
+      "A": "Prader-Willi'de yenidoğanda hipotoni görülür.",
+      "B": "Patau triadı farklıdır.",
+      "C": "Down'da hipotoni tipiktir.",
+      "D": "Cri du chat'te kedi miyavlaması tarzı ağlama vardır.",
+      "E": "Doğru: tipik Edwards bulgularıdır."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Otozomal trizomiler karşılaştırıldığında hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Down sendromu ~1/660 canlı doğumda görülür",
+      "B": "Edwards sendromunda canlı doğanların ~%50'si ilk hafta kaybedilir",
+      "C": "Patau sendromunda ~%90'ı ilk yıl kaybedilir",
+      "D": "Edwards ve Patau için ileri anne yaşı risk faktörüdür",
+      "E": "Patau sendromu Down sendromundan daha sık görülür ve prognozu daha iyidir"
+     },
+     "dogru": "E",
+     "aciklama": "Patau ~1/5000 ile Down'dan çok daha nadirdir ve prognozu çok kötüdür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: Down en sık trizomidir.",
+      "B": "Doğru ifade: Edwards'ta erken ölüm sıktır.",
+      "C": "Doğru ifade: Patau'da ilk yıl mortalitesi yüksektir.",
+      "D": "Doğru ifade: maternal yaş risk faktörüdür.",
+      "E": "Yanlış ifade (aranan cevap): Patau daha nadir ve prognozu kötüdür."
+     },
+     "bilgi": [
+      23,
+      28,
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Down sendromunda kromozom tiplerini ve genetik danışmayı açıklamak",
+   "sorular": [
+    {
+     "id": "k1-10-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Down sendromunun en sık görülen karyotip tipi hangisidir?",
+     "secenekler": {
+      "A": "Robertsonian translokasyon",
+      "B": "Klasik (full) trizomi 21",
+      "C": "Mozaik",
+      "D": "İzokromozom 21q",
+      "E": "Ring 21"
+     },
+     "dogru": "B",
+     "aciklama": "Down olgularının %95'i klasik trizomi 21 (çoğu maternal mayotik ayrılamama), %4'ü Robertsonian translokasyon, %1'i mozaiktir.",
+     "sik_aciklamalari": {
+      "A": "Translokasyon ~%4'tür.",
+      "B": "Doğru: en sık tiptir.",
+      "C": "Mozaik ~%1'dir: mozaik.",
+      "D": "İzokromozom seyrek bir mekanizmadır.",
+      "E": "Ring 21 nadirdir: ring 21."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Translokasyon tipi Down sendromlu çocuğu olan aileye yaklaşımda hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca anne yaşı ile risk hesaplanır",
+      "B": "Tekrarlama riski klasik trizomi ile aynıdır",
+      "C": "Parental karyotip gereksizdir",
+      "D": "Anne yaşına bağlı olmadığından ve tekrarlama riski yüksek olabildiğinden parental karyotip yapılmalıdır",
+      "E": "Taşıyıcı ebeveyn fenotipik olarak etkilenmiştir"
+     },
+     "dogru": "D",
+     "aciklama": "Translokasyon tipi Down anne yaşından bağımsızdır; taşıyıcı ebeveynin saptanması için parental karyotip gerekir.",
+     "sik_aciklamalari": {
+      "A": "Translokasyonda risk taşıyıcı cinsiyetine bağlıdır.",
+      "B": "Tekrarlama riski daha yüksek olabilir.",
+      "C": "Parental karyotip gereklidir.",
+      "D": "Doğru: danışma için parental karyotip şarttır.",
+      "E": "Dengeli taşıyıcı fenotipik olarak normaldir."
+     },
+     "bilgi": [
+      18,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q28",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Down sendromunda eşlik eden durumlarla ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Duodenal atrezi ile ilişkisi yoktur",
+      "B": "Konjenital kalp hastalığı hiç görülmez",
+      "C": "Lösemi riski azalmıştır",
+      "D": "Endokardiyal yastık defekti sıktır ve lösemi riski artmıştır",
+      "E": "Erken ölümlerin en sık nedeni enfeksiyonlardır"
+     },
+     "dogru": "D",
+     "aciklama": "Endokardiyal yastık defekti canlı doğanların ~1/3'ünde görülür; lösemi riski 15 kat artmıştır; erken ölümler çoğunlukla kalp hastalığına bağlıdır.",
+     "sik_aciklamalari": {
+      "A": "Duodenal atrezi eşlik edebilir.",
+      "B": "Kalp hastalığı sıktır.",
+      "C": "Lösemi riski 15 kat artmıştır.",
+      "D": "Doğru: eşlik eden önemli durumlardır.",
+      "E": "Erken ölümler genellikle konjenital kalp hastalıklarından kaynaklanır."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Robertsonian translokasyon taşıyıcılarında translokasyon tipi Down sendromlu çocuk sahibi olma riski ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Taşıyıcının cinsiyeti riski etkilemez",
+      "B": "Baba taşıyıcı ise ~%15, anne taşıyıcı ise ~%1",
+      "C": "Anne taşıyıcı ise ~%15, baba taşıyıcı ise ~%4–5",
+      "D": "Risk her iki durumda %50'dir",
+      "E": "Risk yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Robertsonian taşıyıcılarda risk taşıyıcının cinsiyetine göre değişir: anne %15, baba %4–5.",
+     "sik_aciklamalari": {
+      "A": "Taşıyıcı cinsiyeti riski etkiler.",
+      "B": "Oranlar ters verilmiştir.",
+      "C": "Doğru: verilen risk oranlarıdır.",
+      "D": "%50 gerçek risk değildir.",
+      "E": "Dengesiz gamet riski yüksektir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Delesyon sendromlarını (Cri du chat, Wolf-Hirschhorn) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-10-q29",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Kedi miyavlamasına benzer ağlama ile karakterize sendrom hangisidir?",
+     "secenekler": {
+      "A": "Edwards sendromu",
+      "B": "Wolf-Hirschhorn sendromu",
+      "C": "Williams sendromu",
+      "D": "Angelman sendromu",
+      "E": "Cri du chat sendromu"
+     },
+     "dogru": "E",
+     "aciklama": "Cri du chat 5p15 delesyonudur; anormal larinks gelişimi kedi miyavlaması tarzı ağlamaya yol açar.",
+     "sik_aciklamalari": {
+      "A": "Edwards trizomi 18'dir.",
+      "B": "Wolf-Hirschhorn 4p16.3 delesyonudur.",
+      "C": "Williams 7q11.23 delesyonudur.",
+      "D": "Angelman 15q11-q13 ile ilişkilidir.",
+      "E": "Doğru: karakteristik ağlama bu sendroma aittir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q30",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Wolf-Hirschhorn sendromu ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "5p15 delesyonudur",
+      "B": "4p16.3 delesyonu ile oluşur ve tanı çoğunlukla FISH ile konur",
+      "C": "Rutin karyotipte her zaman kolayca görülür",
+      "D": "Kedi miyavlaması ağlama tipiktir",
+      "E": "Trizomi 4'tür"
+     },
+     "dogru": "B",
+     "aciklama": "Wolf-Hirschhorn del 4p16.3 ile oluşur; şiddetli büyüme geriliği, balık ağzı görünümü vardır; genellikle FISH ile tanı konur.",
+     "sik_aciklamalari": {
+      "A": "5p15 Cri du chat'tir.",
+      "B": "Doğru: bölge ve tanı yöntemi doğrudur.",
+      "C": "Genellikle karyotipte görülmez.",
+      "D": "Bu Cri du chat bulgusudur.",
+      "E": "Delesyon sendromudur."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q31",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Cri du chat sendromunda kromozom bölgeleri ile klinik bulgu ilişkisi hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "7q11.23 – ağlama",
+      "B": "4p16.3 – ağlama",
+      "C": "5p15.3 – karakteristik ağlama; 5p15.2 – diğer klinik özellikler",
+      "D": "22q11.2 – ağlama",
+      "E": "15q11 – ağlama"
+     },
+     "dogru": "C",
+     "aciklama": "5p15.3 ağlama ile, 5p15.2 diğer klinik özelliklerle ilişkilidir; ağlama yetişkinlikte kaybolur.",
+     "sik_aciklamalari": {
+      "A": "7q11.23 Williams'tır.",
+      "B": "4p16.3 Wolf-Hirschhorn'dur.",
+      "C": "Doğru: bölge–bulgu ilişkisi doğrudur.",
+      "D": "22q11.2 DiGeorge'dur.",
+      "E": "15q11 PWS/AS bölgesidir."
+     },
+     "bilgi": [
+      12,
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Gonozomal kromozom hastalıklarını (Klinefelter, 47,XYY, XXX, Turner) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-10-q32",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Küçük testis, azospermi ve jinekomasti ile karakterize gonozomal hastalık hangisidir?",
+     "secenekler": {
+      "A": "47,XYY",
+      "B": "Turner sendromu",
+      "C": "Klinefelter sendromu (47,XXY)",
+      "D": "47,XXX",
+      "E": "Down sendromu"
+     },
+     "dogru": "C",
+     "aciklama": "Klinefelter sendromunda küçük testis, daima infertilite, jinekomasti ve eksik virilizasyon görülür.",
+     "sik_aciklamalari": {
+      "A": "XYY'de fertilite genellikle normaldir.",
+      "B": "Turner kız çocuklarında görülür.",
+      "C": "Doğru: klasik Klinefelter bulgularıdır.",
+      "D": "XXX kadınlarda görülür.",
+      "E": "Down otozomal trizomidir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q33",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Turner sendromu ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "FSH ve LH düşüktür",
+      "B": "Erkeklerde görülür",
+      "C": "Fertilite genellikle normaldir",
+      "D": "Kısa boy, gonadal disgenezi, yele boyun; östrojen düşük, FSH/LH yüksektir",
+      "E": "Spontan abortus nadirdir"
+     },
+     "dogru": "D",
+     "aciklama": "Turner %50 45,X, %15 i(Xq); kısa boy, gonadal disgenezi, aort koarktasyonu görülür; hastaların %95'i spontan abortusla kaybedilir.",
+     "sik_aciklamalari": {
+      "A": "Gonad yetmezliği nedeniyle FSH/LH yüksektir.",
+      "B": "Turner kızlarda görülür.",
+      "C": "Gonadal disgenezi nedeniyle infertilite vardır.",
+      "D": "Doğru: klinik ve hormon profili doğrudur.",
+      "E": "Spontan abortus çok sıktır."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q34",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Gonozomal anomaliler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Klinefelter'de X sayısı arttıkça fenotip ağırlaşır",
+      "B": "47,XYY paternal mayotik ayrılamamayla oluşur",
+      "C": "47,XXX maternal mayotik ayrılamamayla oluşur",
+      "D": "XYY ve XXX'te fertilite genellikle normaldir",
+      "E": "Klinefelter hastalarında fertilite genellikle normaldir ve meme kanseri riski azalmıştır"
+     },
+     "dogru": "E",
+     "aciklama": "Klinefelter'de daima infertilite (azospermi) vardır ve meme kanseri riski artmıştır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: X sayısı fenotipi ağırlaştırır.",
+      "B": "Doğru ifade: XYY paternal kökenlidir.",
+      "C": "Doğru ifade: XXX maternal kökenlidir.",
+      "D": "Doğru ifade: fertilite korunur.",
+      "E": "Yanlış ifade (aranan cevap): Klinefelter infertil ve meme kanseri riski artmıştır."
+     },
+     "bilgi": [
+      35,
+      36
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Genomik imprinting ve uniparental dizomiyi tanımlamak",
+   "sorular": [
+    {
+     "id": "k1-10-q35",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Anneden ve babadan kalıtılan aleller arasındaki ekspresyon farkını açıklayan mekanizma hangisidir?",
+     "secenekler": {
+      "A": "Genomik imprinting",
+      "B": "Non-disjunction",
+      "C": "Robertsonian translokasyon",
+      "D": "Krossing over",
+      "E": "Anafazda geri kalma"
+     },
+     "dogru": "A",
+     "aciklama": "Genomik imprinting alelin ebeveyn kökenine bağlı farklı ekspresyonudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: imprintingin tanımıdır.",
+      "B": "Non-disjunction ayrılamamadır.",
+      "C": "Robertsonian akrosentrik füzyondur.",
+      "D": "Krossing over rekombinasyondur.",
+      "E": "Anafazda geri kalma kromozom kaybına yol açar."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q36",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Uniparental dizomi (UPD) ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bir kromozomun (veya bir kısmının) iki kopyasının tek ebeveynden gelmesidir",
+      "B": "Bir kromozomun tamamen kaybıdır",
+      "C": "Kromozom sayısının 69 olmasıdır",
+      "D": "İki farklı kromozom arasında parça değişimidir",
+      "E": "Yalnızca X kromozomunda görülür"
+     },
+     "dogru": "A",
+     "aciklama": "UPD'de kromozom kısmı tek ebeveynden gelir; izodizomi (aynı kromozomun duplikasyonu) ve heterodizomi (iki farklı homolog) ayırt edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: UPD'nin tanımıdır.",
+      "B": "Kromozom kaybı monozomidir.",
+      "C": "69 kromozom triploididir.",
+      "D": "Parça değişimi translokasyondur.",
+      "E": "UPD otozomlarda da görülür."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q37",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "UPD alt tipleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "İzodizomide aynı kromozomun iki kopyası, heterodizomide aynı ebeveynin iki farklı homoloğu bulunur",
+      "B": "İzodizomide iki farklı homolog bulunur",
+      "C": "Heterodizomide aynı kromozomun duplikasyonu vardır",
+      "D": "İkisi arasında fark yoktur",
+      "E": "UPD her zaman triploidi ile birliktedir"
+     },
+     "dogru": "A",
+     "aciklama": "İzodizomi tek kromozomun duplikasyonu, heterodizomi aynı ebeveynden iki farklı homoloğun gelmesidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: alt tipler doğru tanımlanmıştır.",
+      "B": "Bu heterodizominin tanımıdır.",
+      "C": "Bu izodizominin tanımıdır.",
+      "D": "İki alt tip farklıdır.",
+      "E": "UPD triploidi ile ilişkili değildir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "Prader-Willi ve Angelman sendromlarını köken ve klinik yönünden karşılaştırmak",
+   "sorular": [
+    {
+     "id": "k1-10-q38",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Prader-Willi ve Angelman sendromlarının ortak tuttuğu kromozom bölgesi hangisidir?",
+     "secenekler": {
+      "A": "15q11-q13",
+      "B": "22q11.2",
+      "C": "7q11.23",
+      "D": "5p15",
+      "E": "4p16.3"
+     },
+     "dogru": "A",
+     "aciklama": "Her iki sendrom 15q11-q13 bölgesini tutar; fark etkilenen alelin ebeveyn kökenidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ortak imprinting bölgesidir.",
+      "B": "22q11.2 DiGeorge'dur.",
+      "C": "7q11.23 Williams'tır.",
+      "D": "5p15 Cri du chat'tir.",
+      "E": "4p16.3 Wolf-Hirschhorn'dur."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q39",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Prader-Willi sendromunun en sık genetik mekanizması hangisidir?",
+     "secenekler": {
+      "A": "15q11-q13'te paternal delesyon",
+      "B": "15q11-q13'te maternal delesyon",
+      "C": "Paternal UPD 15",
+      "D": "Trizomi 15",
+      "E": "FMR1 tekrar genişlemesi"
+     },
+     "dogru": "A",
+     "aciklama": "PWS'te %70 paternal delesyon, %30 maternal UPD; Angelman'da %70 maternal delesyon, paternal UPD vardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: PWS'nin en sık mekanizmasıdır.",
+      "B": "Maternal delesyon Angelman'a yol açar.",
+      "C": "Paternal UPD Angelman mekanizmasıdır.",
+      "D": "Trizomi 15 PWS mekanizması değildir.",
+      "E": "FMR1 Frajil X ile ilişkilidir."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q40",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Maksiller hipoplazi, büyük ağız ve nöbetleri olan çocukta 15q11-q13 bölgesinde her iki kromozomun babadan geldiği (paternal UPD) saptanıyor.\n\nEn olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Angelman sendromu",
+      "B": "Prader-Willi sendromu",
+      "C": "Williams sendromu",
+      "D": "Frajil X sendromu",
+      "E": "DiGeorge sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "Paternal UPD 15'te maternal kopya yoktur; maternal eksprese genlerin yokluğu Angelman sendromuna yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: klinik ve mekanizma Angelman'a uyar.",
+      "B": "PWS maternal UPD ile oluşur ve obezite, hiperfaji görülür.",
+      "C": "Williams 7q11.23 delesyonudur.",
+      "D": "Frajil X FMR1 ile ilişkilidir.",
+      "E": "DiGeorge 22q11.2 delesyonudur."
+     },
+     "bilgi": [
+      38,
+      39
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 14,
+   "metin": "Genetik danışmanın ilkelerini ve basamaklarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-10-q41",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Genetik danışmanın temel görevi hangisidir?",
+     "secenekler": {
+      "A": "Hastalıkla ilgili bilgileri doğru ve tam aktarmak, çözüm yollarını sunmak",
+      "B": "Aileye üreme kararını dayatmak",
+      "C": "Yalnızca test istemek",
+      "D": "Bilgi vermeden tedavi başlamak",
+      "E": "Akrabaları bilgilendirmeyi yasaklamak"
+     },
+     "dogru": "A",
+     "aciklama": "Genetik danışma doğru ve tam bilgi aktarır, seyir, risk ve testleri anlatır; asla yönlendirici olmamalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: danışmanın temel görevidir.",
+      "B": "Danışma yönlendirici olmamalıdır.",
+      "C": "Test istemi danışmanın yalnızca bir parçasıdır.",
+      "D": "Bilgilendirme esastır.",
+      "E": "Hasta ve akrabalar bilgilendirilir."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q42",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Klasik trizomi 21'li çocuğu olan, 30 yaşından genç anneye verilecek tekrarlama riski yaklaşık ne kadardır?",
+     "secenekler": {
+      "A": "%1,4",
+      "B": "%50",
+      "C": "%25",
+      "D": "%15",
+      "E": "%0"
+     },
+     "dogru": "A",
+     "aciklama": "30 yaşından genç annelerde tekrarlama riski ~%1,4'tür; olası neden germline mozaikliktir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: verilen tekrarlama riskidir.",
+      "B": "Bu otozomal dominant kalıtım riskidir.",
+      "C": "Bu otozomal resesif kalıtım riskidir.",
+      "D": "%15 anne taşıyıcı translokasyon riskidir.",
+      "E": "Risk sıfır değildir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-10-q43",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Klinik olarak Down sendromu tanısı kolayca konulan yenidoğan için genetik danışma öncesi doğru yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Karyotip ile tanının doğrulanması ve trizomi tipi/mozaisizmin belirlenmesi",
+      "B": "Klinik tanı yeterli olduğundan karyotip gereksizdir",
+      "C": "Yalnızca anne yaşına göre risk hesaplanması",
+      "D": "Yalnızca ultrason yapılması",
+      "E": "Aileye danışma verilmemesi"
+     },
+     "dogru": "A",
+     "aciklama": "Klinik tanı kolay olsa da karyotip doğrulaması gerekir; trizomi tipi (klasik, translokasyon, mozaik) tekrarlama riskini belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tip belirlenmeden doğru danışma verilemez.",
+      "B": "Karyotip tekrarlama riskini belirlemek için şarttır.",
+      "C": "Translokasyon tipi anne yaşından bağımsızdır.",
+      "D": "Ultrason karyotip vermez.",
+      "E": "Danışma gereklidir: aileye danışma verilmemesi."
+     },
+     "bilgi": [
+      26,
+      27,
+      40
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 43,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:15"
+}

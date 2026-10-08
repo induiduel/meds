@@ -1,0 +1,791 @@
+{
+ "id": "k1-43-uriner-sistemin-spesifik-enfeksiyonlari",
+ "sira": 43,
+ "kurul": 1,
+ "ders": "Üroloji",
+ "konu": "Üriner Sistemin Spesifik Enfeksiyonları",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Salih Bürlükkara",
+ "tarih": "2026-10-05",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Alt üriner sistem enfeksiyonlarının en sık formu olan akut sistitin etkenlerini, klinik bulgularını, tanı ve tedavisini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-43-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Akut sistitte aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "A": "Suprapubik ağrı",
+      "B": "Dizüri",
+      "C": "Pollaküri",
+      "D": "Yüksek ateş",
+      "E": "Ani idrar yapma ihtiyacı"
+     },
+     "dogru": "D",
+     "aciklama": "Sistitte dizüri, pollaküri, urgency, suprapubik ağrı ve bazen hematüri olur; ateş görülmez.",
+     "sik_aciklamalari": {
+      "A": "Sistit bulgusudur; bu nedenle doğru seçenek değildir.",
+      "B": "Sistit bulgusudur; bu nedenle doğru seçenek değildir.",
+      "C": "Sistit bulgusudur; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: ateş üst sistem tutulumunu düşündürür.",
+      "E": "Sistit bulgusudur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Komplike olmayan akut sistitte kullanılan tedavi rejimi hangisidir?",
+     "secenekler": {
+      "A": "Parenteral aminoglikozit 21 gün",
+      "B": "Fosfomisin 3 g tek doz veya TMP/SMZ 160/800 mg 2x1 3 gün",
+      "C": "Antitüberküloz tedavi 6 ay",
+      "D": "Albendazol 3 ay",
+      "E": "Yalnızca bol sıvı"
+     },
+     "dogru": "B",
+     "aciklama": "Kısa süreli etkin tedavi ile sistit semptomları geriler.",
+     "sik_aciklamalari": {
+      "A": "Bu uzun parenteral tedavi sistit için gereksizdir.",
+      "B": "Doğru: önerilen rejimlerdir.",
+      "C": "Tüberküloz tedavisidir.",
+      "D": "Kist hidatik medikal tedavisidir.",
+      "E": "Antibiyotik gereklidir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Akut sistitte ikinci en sık etken hangisidir?",
+     "secenekler": {
+      "A": "Escherichia coli",
+      "B": "Staphylococcus saprophyticus",
+      "C": "Mycobacterium tuberculosis",
+      "D": "Echinococcus granulosus",
+      "E": "Treponema pallidum"
+     },
+     "dogru": "B",
+     "aciklama": "En sık E. coli (%75–90), ikinci sırada S. saprophyticus; ayrıca Klebsiella ve Proteus görülür.",
+     "sik_aciklamalari": {
+      "A": "En sık etkendir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: ikinci sık etkendir.",
+      "C": "Tüberküloz spesifik enfeksiyondur.",
+      "D": "Kist hidatik etkenidir.",
+      "E": "Sifilis etkenidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Akut sistit tanısı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tanı yalnızca sistoskopiyle konur",
+      "B": "Tanı için mutlaka BT gerekir",
+      "C": "Kesin tanı idrar kültürüyle konur ancak genellikle piyüri, hematüri, bakteriüri ve nitrit pozitifliği gösteren tam idrar tetkiki yeterlidir",
+      "D": "İdrar tetkikinde hiçbir anormallik beklenmez",
+      "E": "Kültür hiçbir zaman gerekmez"
+     },
+     "dogru": "C",
+     "aciklama": "Komplike olmayan sistitte TİT çoğunlukla yeterlidir; kültür kesin tanı sağlar.",
+     "sik_aciklamalari": {
+      "A": "Sistoskopi rutin değildir.",
+      "B": "Görüntüleme rutin gerekmez.",
+      "C": "Doğru: tanı yaklaşımı doğrudur.",
+      "D": "Piyüri, bakteriüri ve nitrit beklenir.",
+      "E": "Gerektiğinde kültür alınır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Akut piyelonefritin komplike/komplike olmayan ayrımını, risk faktörlerini, tanı ve tedavi yaklaşımını özetler.",
+   "sorular": [
+    {
+     "id": "k1-43-q05",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Üst üriner sistem enfeksiyonlarının en sık formu hangisidir?",
+     "secenekler": {
+      "A": "Üretrit",
+      "B": "Akut sistit",
+      "C": "Akut piyelonefrit",
+      "D": "Prostatit",
+      "E": "Epididimit"
+     },
+     "dogru": "C",
+     "aciklama": "Akut piyelonefrit böbreğin akut bakteriyel enfeksiyonudur; ateş, yan ağrısı ve bulantı-kusma ile seyreder.",
+     "sik_aciklamalari": {
+      "A": "Üretrit alt sistem/genital enfeksiyondur.",
+      "B": "Sistit alt sistem enfeksiyonudur.",
+      "C": "Doğru: üst sistemin en sık enfeksiyonudur.",
+      "D": "Prostatit genital organ enfeksiyonudur.",
+      "E": "Epididimit genital organ enfeksiyonudur."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi komplike piyelonefrit risk faktörü değildir?",
+     "secenekler": {
+      "A": "Gebelik",
+      "B": "Üriner obstrüksiyon",
+      "C": "Erkek cinsiyet",
+      "D": "Sağlıklı, gebe olmayan genç kadın",
+      "E": "Vezikoüreteral reflü"
+     },
+     "dogru": "D",
+     "aciklama": "Risk faktörleri obstrüksiyon, erkek ÜSE, yabancı cisim, gebelik, rezidü, VUR, immünsüpresyon, girişim ve hastane kaynaklı enfeksiyondur.",
+     "sik_aciklamalari": {
+      "A": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "B": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "C": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: komplike olmayan hasta profilidir.",
+      "E": "Risk faktörüdür; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q07",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Akut piyelonefrit tedavi yaklaşımı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tüm olgulara tek doz fosfomisin yeterlidir",
+      "B": "Komplike veya şiddetli semptomlu olgular hospitalize edilir; ampirik tedavi başlanıp kültür sonucuna göre düzenlenir; süre 7–21 gündür",
+      "C": "Kültür alınmadan tedaviye gerek yoktur",
+      "D": "Görüntüleme hiçbir hastada yapılmaz",
+      "E": "Hidrasyon kontrendikedir"
+     },
+     "dogru": "B",
+     "aciklama": "Hafif-orta olgularda 5–14 gün oral tedavi verilebilir; risk faktörü, acil şüphesi ve tedaviye yanıtsızlıkta görüntüleme yapılır.",
+     "sik_aciklamalari": {
+      "A": "Tek doz sistit tedavisidir.",
+      "B": "Doğru: tedavi ilkeleri doğrudur.",
+      "C": "Ampirik tedavi kültür beklenmeden başlanır.",
+      "D": "Belirli durumlarda görüntüleme gerekir.",
+      "E": "Hidrasyon tedavinin parçasıdır."
+     },
+     "bilgi": [
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": [
+      "9c28829238be"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "9c28829238be",
+     "soru": "Aşağıdaki patolojilerin hangisinde üst üriner sistem görüntüleme yöntemlerine gerek yoktur?",
+     "secenekler": {
+      "A": "Ürosepsis varlığı",
+      "B": "Enfekte böbrek taşı",
+      "C": "Akut sistit",
+      "D": "Akut pyelonefrit",
+      "E": "Tekrarlayan üriner enfeksiyonlar"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Genitoüriner tüberkülozun etiyolojisini, patogenezini, klinik bulgularını, tanı ve tedavisini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-43-q08",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Genitoüriner tüberkülozda böbreklerin tutulum yolu en sık hangisidir?",
+     "secenekler": {
+      "A": "Doğrudan travma",
+      "B": "Asendan yol",
+      "C": "Cinsel temas",
+      "D": "Hematojen yayılım",
+      "E": "Oral yol"
+     },
+     "dogru": "D",
+     "aciklama": "Basilin ilk yerleştiği yer akciğerdir; böbrekler çoğunlukla hematojen yolla tutulur.",
+     "sik_aciklamalari": {
+      "A": "Travma yol değildir.",
+      "B": "Asendan yol nonspesifik ÜSE'de baskındır.",
+      "C": "Cinsel temas tipik yol değildir.",
+      "D": "Doğru: hematojen yayılım esastır.",
+      "E": "Oral yol kist hidatikte görülür."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Üriner tüberküloz ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hızlı seyirlidir",
+      "B": "Primer enfeksiyondan hemen sonra gelişir",
+      "C": "Çoğunlukla bilateraldir",
+      "D": "Kadınlarda daha sıktır",
+      "E": "Primer enfeksiyondan 5–25 yıl sonra ortaya çıkar; ~%70'i tek taraflıdır ve erkeklerde 2 kat sıktır"
+     },
+     "dogru": "E",
+     "aciklama": "Hastaların %52–76'sında Tbc öyküsü vardır; %50'si 20–40 yaşındadır ve yavaş seyirlidir.",
+     "sik_aciklamalari": {
+      "A": "Yavaş seyirlidir; bu nedenle doğru seçenek değildir.",
+      "B": "Yıllar sonra ortaya çıkar.",
+      "C": "Çoğunlukla tek taraflıdır.",
+      "D": "Erkeklerde daha sıktır.",
+      "E": "Doğru: epidemiyolojik özellikler doğrudur."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q11",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Erkek genital sistem tüberkülozunda vas deferens tutulumunun muayene bulgusu hangisidir?",
+     "secenekler": {
+      "A": "Translüminasyon veren kist",
+      "B": "Tespih tanesi gibi nodüler yapı",
+      "C": "Yumuşak, hassas olmayan vas",
+      "D": "Vasın hiç palpe edilememesi",
+      "E": "Çan tokmağı anomalisi"
+     },
+     "dogru": "B",
+     "aciklama": "Erkek genital Tbc %80 renal Tbc ile birliktedir; en sık epididimoorşit şeklinde görülür ve oligospermi sıktır.",
+     "sik_aciklamalari": {
+      "A": "Translüminasyon hidrosel/kist bulgusudur.",
+      "B": "Doğru: tipik muayene bulgusudur.",
+      "C": "Tutulum nodülerdir; bu nedenle doğru seçenek değildir.",
+      "D": "Vas palpe edilebilir.",
+      "E": "Torsiyonla ilişkili anomalidir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q10",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Üriner tüberkülozun tedavisi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tedavi 1 hafta sürer",
+      "B": "Tek doz fosfomisin yeterlidir",
+      "C": "Standart 6 aylık protokol uygulanır; iyileşme sürecinde skatrizasyon ve obstrüksiyon gelişebilir, obstrüksiyonda steroid ve cerrahi gerekebilir",
+      "D": "Cerrahiye hiçbir zaman gerek kalmaz",
+      "E": "Obstrüksiyon tedaviyle asla gelişmez"
+     },
+     "dogru": "C",
+     "aciklama": "Tedavi süresince ve sonrasında skar dokusuna bağlı obstrüksiyon izlenmelidir.",
+     "sik_aciklamalari": {
+      "A": "Süre 6 aydır; bu nedenle doğru seçenek değildir.",
+      "B": "Tüberküloz uzun süreli tedavi gerektirir.",
+      "C": "Doğru: tedavi ilkeleri doğrudur.",
+      "D": "Obstrüksiyonda cerrahi gerekebilir.",
+      "E": "Skatrizasyonla obstrüksiyon gelişebilir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Üriner tüberkülozun laboratuvar, görüntüleme ve ayırıcı tanı özelliklerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-43-q12",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Böbrek tüberkülozunda tipik idrar bulgusu hangisidir?",
+     "secenekler": {
+      "A": "Normal idrar",
+      "B": "Nitrit pozitif bakteriüri",
+      "C": "Alkali idrar ve strüvit kristalleri",
+      "D": "Steril piyüri ile birlikte hematüri ve proteinüri",
+      "E": "Yalnızca glukozüri"
+     },
+     "dogru": "D",
+     "aciklama": "Hastaların %90'ında idrarda eritrosit, lökosit ve asit pH vardır; rutin kültürde üreme olmaz (steril piyüri).",
+     "sik_aciklamalari": {
+      "A": "Anormal bulgular vardır.",
+      "B": "Nonspesifik ÜSE bulgusudur.",
+      "C": "Enfeksiyon taşı bulgusudur.",
+      "D": "Doğru: tipik bulgudur.",
+      "E": "Glukozüri tipik değildir."
+     },
+     "bilgi": [
+      16,
+      19
+     ],
+     "benzer_cikmis": [
+      "7566af0e68ad"
+     ]
+    },
+    {
+     "id": "k1-43-q13",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Üriner tüberkülozda kontrastlı grafide (IVP) görülen tipik bulgular hangileridir?",
+     "secenekler": {
+      "A": "Normal görünüm",
+      "B": "Çan tokmağı görünümü",
+      "C": "Geyik boynuzu taşı",
+      "D": "Pire ısırığı böbrek",
+      "E": "Kalikslerde güve yeniği görünümü ve üreterde tespihleşme/tirbuşon görüntüsü"
+     },
+     "dogru": "E",
+     "aciklama": "IVP'de %93 anormal bulgu vardır; geç dönemde mesane kontrakte olur ve böbrek fonksiyonunu yitirir.",
+     "sik_aciklamalari": {
+      "A": "Çoğunlukla anormaldir.",
+      "B": "Testis torsiyonuyla ilişkili anomalidir.",
+      "C": "Strüvit taşı bulgusudur.",
+      "D": "Malign hipertansiyon bulgusudur.",
+      "E": "Doğru: tipik radyolojik bulgulardır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q15",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi üriner tüberkülozun ayırıcı tanısında yer almaz?",
+     "secenekler": {
+      "A": "İnvaziv transizyonel karsinom",
+      "B": "Medüller sünger böbrek",
+      "C": "Komplike olmayan akut sistit (tek atak, kültür pozitif)",
+      "D": "Schistosoma haematobium infestasyonu",
+      "E": "Renal amiloidoz"
+     },
+     "dogru": "C",
+     "aciklama": "Ayırıcı tanıda kronik nonspesifik sistit/piyelonefrit, medüller sünger böbrek, invaziv TCC, amiloidoz, şistozomiyazis ve koksidiyomikoz yer alır.",
+     "sik_aciklamalari": {
+      "A": "Ayırıcı tanıdadır; bu nedenle doğru seçenek değildir.",
+      "B": "Ayırıcı tanıdadır; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: tek atak, kültür pozitif sistit steril piyürili kronik tabloyu taklit etmez.",
+      "D": "Ayırıcı tanıdadır; bu nedenle doğru seçenek değildir.",
+      "E": "Ayırıcı tanıdadır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q14",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Üriner tüberküloz tanısı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "3 gün ardışık ilk sabah idrarında spesifik kültür başarısı ~%90'dır",
+      "B": "PCR güvenilir bir yöntemdir",
+      "C": "PPD olguların bir kısmında nonreaktif olabilir",
+      "D": "Hastaların bir kısmında akciğer grafisinde pulmoner hastalık görülmez",
+      "E": "Negatif PPD ve normal akciğer grafisi üriner tüberkülozu kesin olarak dışlar"
+     },
+     "dogru": "E",
+     "aciklama": "PPD %15 kadarında nonreaktif, %20–50'sinde akciğer grafisi normaldir; bu bulgular tanıyı dışlamaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade: duyarlılık ~%96'dır.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): tanıyı dışlamaz."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "7566af0e68ad",
+     "soru": "İYE Laboratuvar Tanısında Önemli Parametreler",
+     "secenekler": {
+      "A": "Üriner tüberküloz",
+      "B": "Üretral kateterli hastalar",
+      "C": "Mesane tümörü",
+      "D": "Akut bakteriyel prostatit",
+      "E": "Antibakteriyel tedavi"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Prostatitin NIH sınıflamasını, etiyolojisini, klinik özelliklerini, tanı ve tedavisini bilir.",
+   "sorular": [
+    {
+     "id": "k1-43-q16",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "50 yaş altı erkeklerde en sık görülen ürolojik enfeksiyon hangisidir?",
+     "secenekler": {
+      "A": "Piyelonefrit",
+      "B": "Prostatit",
+      "C": "Kist hidatik",
+      "D": "Böbrek tüberkülozu",
+      "E": "Orşit"
+     },
+     "dogru": "B",
+     "aciklama": "Prostatit 50 yaş altında en sık, 50 yaş üstünde 3. sıklıkta görülen ürolojik enfeksiyondur.",
+     "sik_aciklamalari": {
+      "A": "Daha seyrektir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: en sık ürolojik enfeksiyondur.",
+      "C": "Nadirdir; bu nedenle doğru seçenek değildir.",
+      "D": "Nadirdir; bu nedenle doğru seçenek değildir.",
+      "E": "Daha seyrektir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q17",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Meares-Stamey dört kap testinde üçüncü kap hangi örneği içerir?",
+     "secenekler": {
+      "A": "Sonraki 10 ml orta akım idrarı",
+      "B": "İlk 10 ml idrar",
+      "C": "Prostat masajı sonrası prostatik sıvı",
+      "D": "Prostat masajı sonrası 10 ml idrar",
+      "E": "Kan örneği"
+     },
+     "dogru": "C",
+     "aciklama": "1. kap üretra, 2. kap mesane, 3. kap prostatik sıvı, 4. kap masaj sonrası idrardır.",
+     "sik_aciklamalari": {
+      "A": "2. kaptır; bu nedenle doğru seçenek değildir.",
+      "B": "1. kaptır; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: 3. kap prostatik sıvıdır.",
+      "D": "4. kaptır; bu nedenle doğru seçenek değildir.",
+      "E": "Testin parçası değildir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q19",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Prostatit sınıflaması ve etiyolojisi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tip 4 semptomatik prostatittir",
+      "B": "En yaygın kategori Tip 1'dir",
+      "C": "Hastaların çoğunda bakteriyel enfeksiyon saptanır",
+      "D": "En yaygın kategori Tip 3 (kronik non-bakteriyel/kronik pelvik ağrı) olup en sık bakteriyel etken E. coli'dir",
+      "E": "Tekrarlama riski çok düşüktür"
+     },
+     "dogru": "D",
+     "aciklama": "Hastaların %10'undan azında bakteriyel enfeksiyon saptanır; tekrarlama riski %20–50'dir.",
+     "sik_aciklamalari": {
+      "A": "Tip 4 asemptomatiktir.",
+      "B": "Tip 3 en yaygındır; bu nedenle doğru seçenek değildir.",
+      "C": "Bakteriyel etken az saptanır.",
+      "D": "Doğru: sınıflama ve etiyoloji doğrudur.",
+      "E": "Tekrarlama riski yüksektir."
+     },
+     "bilgi": [
+      23,
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q18",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Akut bakteriyel prostatit tanısıyla parenteral antibiyotik başlanan hastanın ateşi düşmüyor.\n\nEn olası durum ve yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Normal seyir; hiçbir şey yapılmaz",
+      "B": "Tedavinin hemen kesilmesi",
+      "C": "Kronik non-bakteriyel prostatit; yalnızca NSAİİ",
+      "D": "Kist hidatik; albendazol",
+      "E": "Prostatik apse; görüntüleme ve gerekirse drenaj"
+     },
+     "dogru": "E",
+     "aciklama": "Antibiyotik sonrası ateş düşmezse prostatik apse düşünülür; sepsis açısından dikkat gerekir.",
+     "sik_aciklamalari": {
+      "A": "Ateşin sürmesi normal değildir.",
+      "B": "Tedavi kesilmez, nedeni araştırılır.",
+      "C": "Ateşli akut tablo kronik non-bakteriyel prostatit değildir.",
+      "D": "Kist hidatikle ilgisi yoktur.",
+      "E": "Doğru: apse düşünülmelidir."
+     },
+     "bilgi": [
+      27,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Orşit ve epididimitin etiyolojisini ve tedavisini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-43-q20",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "İzole orşitin en sık nedeni hangisidir?",
+     "secenekler": {
+      "A": "Viral (kabakulak)",
+      "B": "Bakteriyel üretrit",
+      "C": "Amiodaron",
+      "D": "Fungal",
+      "E": "Otoimmün"
+     },
+     "dogru": "A",
+     "aciklama": "İzole orşit nadirdir ve genellikle viraldir; çoğu olgu epididimoorşit şeklindedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kabakulak en sık izole orşit nedenidir.",
+      "B": "Bakteriyel nedenler genellikle epididimitle başlar.",
+      "C": "Amiodaron epididimit yapabilir.",
+      "D": "Fungal nedenler nadirdir.",
+      "E": "Otoimmün nedenler nadirdir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q21",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Epididimitte inflamatuar süreç epididimin hangi bölümünde başlar?",
+     "secenekler": {
+      "A": "Kuyruk",
+      "B": "Baş",
+      "C": "Gövde",
+      "D": "Rete testis",
+      "E": "Vas deferens"
+     },
+     "dogru": "A",
+     "aciklama": "Epididimitte inflamasyon kuyrukta başlar; testis tutulursa epididimoorşit gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kuyrukta başlar.",
+      "B": "Başlangıç yeri değildir.",
+      "C": "Başlangıç yeri değildir.",
+      "D": "Rete testis epididimin parçası değildir.",
+      "E": "Vas deferens epididimin devamıdır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q22",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Orşit ve epididimit ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Epididimit idrar yolu enfeksiyonu, CYBH, viral, fungal, otoimmün veya amiodaron kaynaklı olabilir",
+      "B": "Çocuk ve yaşlılarda orşitin en sık etkeni idrar yolu enfeksiyonudur",
+      "C": "Orşit tedavisinde istirahat, skrotal elevasyon, soğuk uygulama ve NSAİİ kullanılır",
+      "D": "Tbc şüphesinde ardışık 3 sabah idrarında ARB ve M. tuberculosis DNA'sı aranır",
+      "E": "Akut skrotal ağrıda testis torsiyonu ayırıcı tanıda düşünülmez"
+     },
+     "dogru": "E",
+     "aciklama": "Akut orşit/epididimit tablosundaki genç erkekte en önemli ayırıcı tanı testis torsiyonudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): torsiyon mutlaka düşünülmelidir."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": [
+      "7854c9c91611"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "7854c9c91611",
+     "soru": "Akut enfeksiyöz orşit tablosuyla gelen genç bir erkekte yapılması gereken en önemli ayırıcı tanı hangisidir?",
+     "secenekler": {
+      "A": "Testis torsiyonu",
+      "B": "Varikorsel",
+      "C": "Tüberküloz orşiti",
+      "D": "Hidrosel",
+      "E": "Akut epididimit"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Renal kist hidatiğin bulaş yolunu, tutulum yerlerini, tanı ve tedavisini özetler.",
+   "sorular": [
+    {
+     "id": "k1-43-q23",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Kist hidatiğin insana bulaş yolu hangisidir?",
+     "secenekler": {
+      "A": "Oral",
+      "B": "Cinsel temas",
+      "C": "Solunum",
+      "D": "Kan transfüzyonu",
+      "E": "Vektör ısırığı"
+     },
+     "dogru": "A",
+     "aciklama": "Echinococcus granulosus yumurtaları oral yolla alınır; larvalar kan ve lenf dolaşımıyla organlara yerleşir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: oral bulaştır.",
+      "B": "Cinsel yolla bulaşmaz.",
+      "C": "Solunumla bulaşmaz; bu nedenle doğru seçenek değildir.",
+      "D": "Transfüzyon yolu değildir.",
+      "E": "Vektörle bulaşmaz; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q24",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Echinococcus granulosus yaşam döngüsünde insanın rolü ve en sık tutulan organ hangisidir?",
+     "secenekler": {
+      "A": "Ara konakçı; karaciğer",
+      "B": "Ana konakçı; böbrek",
+      "C": "Ana konakçı; akciğer",
+      "D": "Ara konakçı; beyin",
+      "E": "Vektör; böbrek"
+     },
+     "dogru": "A",
+     "aciklama": "Köpek ve kedi ana konakçı, insan ara konakçıdır; hastalık yalnız ara konakçıda olur, en sık karaciğer tutulur, izole böbrek tutulumu nadirdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: insan ara konakçıdır, karaciğer en sık tutulur.",
+      "B": "Ana konakçı köpek/kedidir; böbrek nadirdir.",
+      "C": "İnsan ana konakçı değildir.",
+      "D": "Beyin en sık yer değildir.",
+      "E": "İnsan vektör değildir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q26",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Renal kist hidatik toplayıcı sisteme açıldığında görülebilecek tipik bulgu hangisidir?",
+     "secenekler": {
+      "A": "Hidatüri (idrarla kız kist/membran atılması)",
+      "B": "Pnömatüri",
+      "C": "Hematospermi",
+      "D": "Kiluri",
+      "E": "Glukozüri"
+     },
+     "dogru": "A",
+     "aciklama": "Kist toplayıcı sisteme açılırsa renal kolik, hematüri ve hidatüri gelişir; tanıda radyoloji ve seroloji kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: hidatüri tipiktir.",
+      "B": "Pnömatüri fistül veya amfizematöz enfeksiyonu düşündürür.",
+      "C": "Hematospermi seminal sıvıda kandır.",
+      "D": "Kiluri lenfatik fistülle ilişkilidir.",
+      "E": "Glukozüri ilgisizdir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-43-q25",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Renal kist hidatik tedavisi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Temel tedavi cerrahidir; ameliyattan 7–10 gün önce albendazol/mebendazol başlanıp 3–6 ay sürdürülür; kist rüptüründe anafilaksi gelişebilir",
+      "B": "Tek doz fosfomisin yeterlidir",
+      "C": "Perkütan rastgele aspirasyon her zaman güvenlidir",
+      "D": "Medikal tedavi hiç kullanılmaz",
+      "E": "Antitüberküloz tedavi uygulanır"
+     },
+     "dogru": "A",
+     "aciklama": "Kistektomi, parsiyel veya total nefrektomi uygulanır; prazikuantel, mebendazol ve albendazol medikal tedavide kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tedavi ilkeleri doğrudur.",
+      "B": "Parazit antibiyotikle tedavi edilmez.",
+      "C": "Rüptür anafilaksi riski taşır.",
+      "D": "Medikal tedavi cerrahiye eşlik eder.",
+      "E": "Antitüberküloz tedavi kist hidatikte kullanılmaz."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 26,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:09"
+}

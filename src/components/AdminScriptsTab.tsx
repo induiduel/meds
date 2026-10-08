@@ -30,6 +30,8 @@ import {
   AdminScriptJob
 } from '../services/api';
 import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
+import { toast } from './ui/Toast';
+import { Panel, EmptyState, SearchBox, ChipBar, Switch, Drawer, logTone } from './manage/consoleUi';
 
 interface AdminScriptsTabProps {
   adminEmail: string;
@@ -54,7 +56,12 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
     }
     return init;
   });
-  const [feedback, setFeedback] = useState<{ text: string; type: 'success' | 'error' | 'info' } | null>(null);
+  // Durum iletileri uygulama genelindeki toast ile gösterilir
+  const setFeedback = (f: { text: string; type: 'success' | 'error' | 'info' } | null) => {
+    if (!f) return;
+    if (f.type === 'error') toast.error(f.text);
+    else if (f.type === 'success') toast.success(f.text);
+  };
 
   // Terminal Console Drawer State
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
@@ -230,511 +237,216 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
     return matchesCat && matchesSearch;
   });
 
-  // Helper for runtime badge styling
-  const getRuntimeBadge = (runtime: string) => {
-    switch (runtime) {
-      case 'node':
-        return { label: 'Node.js', bg: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' };
-      case 'tsx':
-        return { label: 'TypeScript', bg: 'bg-sky-500/20 text-sky-300 border-sky-500/30' };
-      case 'python':
-        return { label: 'Python 3', bg: 'bg-amber-500/20 text-amber-300 border-amber-500/30' };
-      case 'batch':
-        return { label: 'CMD / Batch', bg: 'bg-orange-500/20 text-orange-300 border-orange-500/30' };
-      case 'powershell':
-        return { label: 'PowerShell', bg: 'bg-accent-soft text-accent border-accent/30' };
-      default:
-        return { label: runtime, bg: 'bg-line-soft text-ink border-line' };
+  // Veri başlıklarındaki baştaki emoji ve elle yazılmış "1." numarası görünümde atılır
+  const cleanTitle = (t: string) => t.replace(/^[\p{Extended_Pictographic}\uFE0F\u200D\s]+/u, '').replace(/^\d+\.\s*/, '');
+  const RUNTIME_LABEL: Record<string, string> = { node: 'Node.js', tsx: 'TypeScript', python: 'Python', batch: 'Batch', powershell: 'PowerShell' };
+  const runningCount = Object.keys(activeJobs).length;
+  const catCount = (cat: string) => (cat === 'Tümü' ? scripts.length : scripts.filter((s) => s.category === cat).length);
+
+  const openLogsFor = (script: AdminScriptItem) => {
+    const targetJob = activeJobs[script.name] || historyJobs.find((h) => h.name.toLowerCase() === script.name.toLowerCase());
+    if (targetJob) {
+      openTerminalForJob(targetJob);
+    } else {
+      setTerminalJobId(null);
+      setTerminalJob(null);
+      setTerminalLogs([`[Bilgi] ${script.title} için henüz kayıtlı günlük yok.`, `Başlatmak için "Çalıştır"a bas.`]);
+      setIsTerminalOpen(true);
     }
   };
 
+  const jobStatusTag = (status?: string) =>
+    status === 'running' ? (
+      <span className="ms-tag is-warn"><span className="ms-sdot is-warn is-live" /> Çalışıyor</span>
+    ) : status === 'completed' ? (
+      <span className="ms-tag is-ok"><Check /> Tamamlandı</span>
+    ) : status ? (
+      <span className="ms-tag is-bad">{status === 'cancelled' ? 'Durduruldu' : 'Hata'}</span>
+    ) : null;
+
   return (
-    <div className="flex flex-col h-full overflow-hidden bg-white text-ink text-xs">
-      {/* 1. Header Banner & Dynamic Auto-Discovery Info */}
-      <div className="p-4 sm:p-5 border-b border-line bg-white shrink-0">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div className="space-y-1">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-accent-soft border border-accent/30 flex items-center justify-center text-accent">
-                <Terminal className="w-4 h-4" />
-              </div>
-              <h3 className="text-base sm:text-lg font-black text-ink flex items-center gap-2">
-                <span>Script & Görev Otomasyon Merkezi</span>
-                <span className="bg-accent-soft text-accent border border-accent/30 text-[11px] font-bold px-2 py-0.5 rounded-full">
-                  {scripts.length} Script Hazır
-                </span>
-                {Object.keys(activeJobs).length > 0 && (
-                  <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[11px] font-extrabold px-2 py-0.5 rounded-full flex items-center gap-1 animate-pulse">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                    {Object.keys(activeJobs).length} Süreç Çalışıyor
-                  </span>
-                )}
-              </h3>
-            </div>
-            <p className="text-[11px] text-ink max-w-3xl leading-relaxed">
-              Bu panel; <code className="bg-canvas text-accent px-1 py-0.5 rounded font-mono">scripts/</code> klasöründeki mevcut tüm betikleri ve <strong>ileride oluşturacağınız her yeni scripti</strong> otomatik olarak tanır. İstediğiniz argümanlarla anlık çalıştırabilir, toplu otomasyon zincirleri (pipelines) tetikleyebilir ve canlı çıktıları konsoldan izleyebilirsiniz.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2 self-start md:self-center shrink-0">
-            <button
-              onClick={() => setIsTerminalOpen(!isTerminalOpen)}
-              className={`px-3 py-2 rounded-xl font-bold flex items-center gap-1.5 transition-all cursor-pointer text-xs border ${
-                isTerminalOpen
-                  ? 'bg-accent text-white border-accent/30 shadow-md'
-                  : 'bg-canvas hover:bg-line-soft text-accent border-line'
-              }`}
-              title="Canlı terminal ve log konsolunu açar/kapatır"
-            >
-              <FileCode className="w-3.5 h-3.5" />
-              <span>{isTerminalOpen ? 'Terminali Gizle' : 'Canlı Konsol'}</span>
-              {terminalLogs.length > 0 && (
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              )}
-            </button>
-
-            <button
-              onClick={() => loadScriptsData()}
-              disabled={isLoading}
-              className="bg-accent hover:bg-accent disabled:opacity-50 text-white font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow-sm transition-all cursor-pointer text-xs"
-              title="scripts/ klasörünü yeniden dinamik tarar"
-            >
-              <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin' : ''}`} />
-              <span>{isLoading ? 'Taranıyor...' : 'Yeniden Tara'}</span>
-            </button>
-          </div>
+    <div className="flex flex-col gap-3 min-w-0">
+      <div className="flex flex-col md:flex-row md:items-center gap-2">
+        <SearchBox value={searchQuery} onChange={setSearchQuery} placeholder="Betik adı, açıklama ya da etiket (slide, supabase, verify…)" count={`${filteredScripts.length} betik`} className="flex-1" />
+        <div className="flex items-center gap-2">
+          <button type="button" onClick={() => setIsTerminalOpen(true)} className="ms-btn" title="Canlı betik konsolunu aç">
+            <FileCode /> Konsol
+            {runningCount > 0 && <span className="ms-btn-badge">{runningCount}</span>}
+          </button>
+          <button type="button" onClick={() => loadScriptsData()} disabled={isLoading} className="ms-btn is-ghost" title="scripts/ klasörünü yeniden tarar; yeni betikler kendiliğinden listelenir">
+            <RefreshCw className={isLoading ? 'animate-spin' : ''} /> {isLoading ? 'Taranıyor…' : 'Yeniden tara'}
+          </button>
         </div>
-
-        {/* Action feedback message */}
-        {feedback && (
-          <div
-            className={`mt-3 p-2.5 rounded-xl border flex items-center justify-between text-xs animate-fadeIn ${
-              feedback.type === 'success'
-                ? 'bg-emerald-950/80 border-emerald-500/50 text-emerald-200'
-                : feedback.type === 'error'
-                ? 'bg-rose-950/80 border-rose-500/50 text-rose-200'
-                : 'bg-accent-soft border-accent/30 text-accent'
-            }`}
-          >
-            <div className="flex items-center gap-2">
-              {feedback.type === 'success' ? (
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              ) : (
-                <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0" />
-              )}
-              <span>{feedback.text}</span>
-            </div>
-            <button
-              onClick={() => setFeedback(null)}
-              className="text-ink-3 hover:text-ink p-1 cursor-pointer"
-            >
-              <X className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        )}
       </div>
 
-      {/* 2. Main Scrollable Content */}
-      <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-6">
-        {/* Predefined Automation Pipelines (Chains) */}
-        <div className="space-y-3">
-          <div className="flex items-center justify-between">
-            <h4 className="font-bold text-sm text-ink flex items-center gap-2">
-              <Zap className="w-4 h-4 text-amber-400" />
-              <span>Tek Tıkla Zincirleme Otomasyonlar (Pipelines)</span>
-            </h4>
-            <span className="text-[11px] text-ink-3">
-              Birden fazla scripti sıralı ve hatasız icra eder
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {pipelines.map((pipe) => {
-              const isPipeRunning =
-                terminalJob?.type === 'pipeline' &&
-                terminalJob?.pipelineId === pipe.id &&
-                terminalJob?.status === 'running';
-
-              return (
-                <div
-                  key={pipe.id}
-                  className="bg-white border border-line hover:border-accent/30 rounded-2xl p-4 flex flex-col justify-between transition-all shadow-sm"
-                >
-                  <div className="space-y-2">
-                    <div className="flex items-start justify-between gap-2">
-                      <h5 className="font-bold text-xs text-ink leading-snug">{pipe.title}</h5>
-                      <span className="text-[11px] bg-canvas text-ink-3 font-mono px-1.5 py-0.5 rounded shrink-0">
-                        {pipe.steps.length} Adım
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-ink leading-relaxed">{pipe.description}</p>
-
-                    <div className="bg-white p-2 rounded-xl border border-line space-y-1 text-[11px] font-mono text-ink-3">
-                      {pipe.steps.map((st, idx) => (
-                        <div key={idx} className="flex items-center gap-1.5 truncate">
-                          <span className="text-accent shrink-0 font-bold">{idx + 1}.</span>
-                          <span className="truncate text-ink">{st.title || st.script}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="pt-3 mt-3 border-t border-line flex items-center justify-between gap-2">
-                    <span className="text-[11px] text-ink-3">Arka Plan Süreci</span>
-                    <button
-                      onClick={() => handleRunPipeline(pipe.id)}
-                      disabled={isPipeRunning}
-                      className={`px-3 py-1.5 rounded-xl font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer ${
-                        isPipeRunning
-                          ? 'bg-amber-600 text-white animate-pulse'
-                          : 'bg-accent hover:bg-accent text-white active:scale-95'
-                      }`}
-                    >
-                      {isPipeRunning ? (
-                        <>
-                          <RefreshCw className="w-3.5 h-3.5 animate-spin" />
-                          <span>Çalışıyor...</span>
-                        </>
-                      ) : (
-                        <>
-                          <Play className="w-3.5 h-3.5 fill-current" />
-                          <span>Pipeline Başlat</span>
-                        </>
-                      )}
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Filters and Search Bar */}
-        <div className="space-y-3 pt-2">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
-            <div className="relative flex-1 max-w-md">
-              <Search className="w-4 h-4 text-ink-3 absolute left-3 top-2.5" />
-              <input
-                type="text"
-                placeholder="Script adı, açıklama veya etiket ara (örn: slide, supabase, verify)..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white border border-line rounded-xl pl-9 pr-3 py-2 text-xs text-ink placeholder-slate-500 focus:outline-none focus:border-accent/30"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-2.5 top-2.5 text-ink-3 hover:text-ink"
-                >
-                  <X className="w-3.5 h-3.5" />
-                </button>
-              )}
-            </div>
-
-            <span className="text-[11px] text-ink-3">
-              Gösterilen: <strong>{filteredScripts.length}</strong> / Toplam: {scripts.length} script
-            </span>
-          </div>
-
-          {/* Category Pills */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-[11px] scrollbar-none">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-3 py-1 rounded-xl font-bold whitespace-nowrap transition-all cursor-pointer shrink-0 ${
-                  selectedCategory === cat
-                    ? 'bg-accent text-white shadow-sm'
-                    : 'bg-white hover:bg-canvas text-ink-3 hover:text-ink border border-line'
-                }`}
-              >
-                {cat}
-                <span className="ml-1 opacity-70 text-[11px]">
-                  (
-                  {cat === 'Tümü'
-                    ? scripts.length
-                    : scripts.filter((s) => s.category === cat).length}
-                  )
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Individual Script Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3.5">
-          {filteredScripts.map((script) => {
-            const badge = getRuntimeBadge(script.runtime);
-            const activeJob = activeJobs[script.name];
-            const isCurrentlyRunning = Boolean(activeJob || runningJobName === script.name);
-            const userArg = customArgs[script.name] !== undefined ? customArgs[script.name] : script.defaultArgs || '';
-
+      <Panel flush title="Zincirler" icon={Zap} count={pipelines.length} desc="Birden çok betiği sırayla çalıştırır; bir adım hata verirse zincir durur.">
+        <ul className="ms-rows">
+          {pipelines.map((pipe) => {
+            const running = terminalJob?.type === 'pipeline' && terminalJob?.pipelineId === pipe.id && terminalJob?.status === 'running';
             return (
-              <div
-                key={script.name}
-                className={`bg-white rounded-2xl p-4 border transition-all flex flex-col justify-between ${
-                  isCurrentlyRunning
-                    ? 'border-accent/30 bg-accent-soft shadow-lg'
-                    : 'border-line hover:border-line'
-                }`}
-              >
-                <div className="space-y-2">
-                  <div className="flex items-start justify-between gap-2 flex-wrap">
-                    <div className="space-y-0.5">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h5 className="font-black text-xs sm:text-sm text-ink">{script.title}</h5>
-                        {script.isCustom && (
-                          <span className="bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30 text-[11px] font-bold px-1.5 py-0.2 rounded-full">
-                            ✨ Yeni Eklenen
-                          </span>
-                        )}
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <code className="text-[11px] text-accent font-mono bg-white px-1.5 py-0.5 rounded border border-line">
-                          {script.name}
-                        </code>
-                        {script.sizeBytes ? (
-                          <span className="text-[11px] text-ink-3">
-                            ({(script.sizeBytes / 1024).toFixed(1)} KB)
-                          </span>
-                        ) : null}
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-1.5 shrink-0">
-                      <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full border ${badge.bg}`}>
-                        {badge.label}
-                      </span>
-                    </div>
-                  </div>
-
-                  <p className="text-[11px] text-ink leading-relaxed">{script.description}</p>
-
-                  {/* Tags */}
-                  {script.tags && script.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-1 pt-1">
-                      {script.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-[11px] bg-white text-ink-3 border border-line px-1.5 py-0.2 rounded"
-                        >
-                          #{tag}
+              <li key={pipe.id} className="ms-row">
+                <span className="ms-ricon is-accent"><Layers aria-hidden="true" /></span>
+                <div className="ms-row-main">
+                  <span className="ms-row-title">{cleanTitle(pipe.title)}</span>
+                  <span className="ms-row-text">{pipe.description}</span>
+                  <ol className="m-0 p-0 list-none flex flex-wrap items-center gap-1 pt-1">
+                    {pipe.steps.map((st, idx) => (
+                      <li key={idx} className="inline-flex items-center gap-1 text-[12px] text-ink-2">
+                        {idx > 0 && <ArrowRight className="w-3 h-3 text-ink-3" aria-hidden="true" />}
+                        <span className="h-6 px-2 rounded-md bg-canvas inline-flex items-center gap-1.5">
+                          <span className="font-mono text-[11.5px] text-ink-3">{idx + 1}</span>
+                          {cleanTitle(st.title || st.script)}
                         </span>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Custom Parameter / Arg Input */}
-                  <div className="pt-2">
-                    <label className="text-[11px] text-ink-3 block mb-1 font-semibold flex items-center justify-between">
-                      <span>Çalıştırma Argümanları (Opsiyonel):</span>
-                      {script.defaultArgs && (
-                        <button
-                          onClick={() =>
-                            setCustomArgs((prev) => ({ ...prev, [script.name]: script.defaultArgs || '' }))
-                          }
-                          className="text-accent hover:text-accent text-[11px] cursor-pointer"
-                        >
-                          Varsayılana Dön ({script.defaultArgs})
-                        </button>
-                      )}
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Örn: --unverified, --all, -Action check..."
-                      value={userArg}
-                      onChange={(e) =>
-                        setCustomArgs((prev) => ({ ...prev, [script.name]: e.target.value }))
-                      }
-                      className="w-full bg-white border border-line rounded-xl px-2.5 py-1.5 text-[11px] font-mono text-accent placeholder-slate-600 focus:outline-none focus:border-accent/30"
-                    />
-                  </div>
+                      </li>
+                    ))}
+                  </ol>
                 </div>
-
-                {/* Card Footer Actions */}
-                <div className="pt-3 mt-3 border-t border-line flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2">
-                    {isCurrentlyRunning ? (
-                      <span className="text-[11px] font-bold text-emerald-400 flex items-center gap-1.5 animate-pulse">
-                        <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                        Çalışıyor...
-                      </span>
-                    ) : (
-                      <span className="text-[11px] text-ink-3">Hazır</span>
-                    )}
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    {/* View Logs Button */}
-                    <button
-                      type="button"
-                      onClick={() => {
-                        const targetJob =
-                          activeJob ||
-                          historyJobs.find((h) => h.name.toLowerCase() === script.name.toLowerCase());
-                        if (targetJob) {
-                          openTerminalForJob(targetJob);
-                        } else {
-                          // Open empty terminal
-                          setTerminalJobId(null);
-                          setTerminalJob(null);
-                          setTerminalLogs([
-                            `[Bilgi] ${script.title} için henüz kayıtlı log bulunmuyor.`,
-                            `Başlatmak için 'Çalıştır' butonuna basabilirsiniz.`
-                          ]);
-                          setIsTerminalOpen(true);
-                        }
-                      }}
-                      className="bg-canvas hover:bg-line-soft text-ink px-2.5 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1 cursor-pointer transition-all"
-                      title="Bu betiğin son loglarını inceler"
-                    >
-                      <Eye className="w-3.5 h-3.5" />
-                      <span>Loglar</span>
-                    </button>
-
-                    {/* Run / Stop Button */}
-                    {isCurrentlyRunning && activeJob ? (
-                      <button
-                        type="button"
-                        onClick={() => handleStopJob(activeJob.id)}
-                        className="bg-rose-900/80 hover:bg-rose-800 text-rose-200 border border-rose-700/80 font-bold px-3 py-1.5 rounded-xl text-xs flex items-center gap-1 cursor-pointer transition-all"
-                      >
-                        <Square className="w-3.5 h-3.5 fill-current" />
-                        <span>Durdur</span>
-                      </button>
-                    ) : (
-                      <button
-                        type="button"
-                        onClick={() => handleRunScript(script.name)}
-                        disabled={isCurrentlyRunning}
-                        className="bg-accent hover:bg-accent disabled:opacity-50 text-white font-black px-3.5 py-1.5 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
-                      >
-                        <Play className="w-3.5 h-3.5 fill-current" />
-                        <span>Çalıştır</span>
-                      </button>
-                    )}
-                  </div>
+                <div className="ms-row-actions">
+                  <button type="button" onClick={() => handleRunPipeline(pipe.id)} disabled={running} className={`ms-btn is-sm ${running ? 'is-warn' : 'is-primary'}`}>
+                    {running ? <RefreshCw className="animate-spin" /> : <Play />} {running ? 'Çalışıyor…' : 'Başlat'}
+                  </button>
                 </div>
-              </div>
+              </li>
             );
           })}
-        </div>
-      </div>
+        </ul>
+      </Panel>
 
-      {/* 3. Interactive Live Terminal Drawer */}
-      {isTerminalOpen && (
-        <div className="border-t border-line bg-white flex flex-col h-72 sm:h-80 shadow-2xl shrink-0 animate-slideUp">
-          {/* Terminal Header */}
-          <div className="p-2.5 sm:px-4 bg-white border-b border-line flex items-center justify-between gap-3 text-xs">
-            <div className="flex items-center gap-2 overflow-hidden">
-              <Terminal className="w-4 h-4 text-emerald-400 shrink-0" />
-              <div className="truncate">
-                <span className="font-bold text-ink truncate">
-                  {terminalJob?.title || terminalJob?.name || 'Canlı Betik Konsolu'}
-                </span>
-                {terminalJob?.status && (
-                  <span
-                    className={`ml-2 text-[11px] font-extrabold px-1.5 py-0.2 rounded ${
-                      terminalJob.status === 'running'
-                        ? 'bg-amber-500/20 text-amber-300 animate-pulse'
-                        : terminalJob.status === 'completed'
-                        ? 'bg-emerald-500/20 text-emerald-300'
-                        : 'bg-rose-500/20 text-rose-300'
-                    }`}
-                  >
-                    {terminalJob.status.toUpperCase()}
-                  </span>
-                )}
-                {terminalJob?.durationMs ? (
-                  <span className="text-[11px] text-ink-3 ml-2">
-                    ({(terminalJob.durationMs / 1000).toFixed(1)} sn)
-                  </span>
-                ) : null}
-              </div>
-            </div>
+      <ChipBar
+        label="Kategori"
+        value={selectedCategory}
+        onChange={setSelectedCategory}
+        options={categories.map((cat) => ({ id: cat, label: cat, n: catCount(cat) }))}
+      />
 
-            <div className="flex items-center gap-2 shrink-0">
-              <label className="hidden sm:flex items-center gap-1 text-[11px] text-ink-3 cursor-pointer select-none">
-                <input
-                  type="checkbox"
-                  checked={autoScroll}
-                  onChange={(e) => setAutoScroll(e.target.checked)}
-                  className="rounded w-3.5 h-3.5 text-indigo-600 bg-canvas"
-                />
-                <span>Oto-Kaydır</span>
-              </label>
-
-              {terminalJob?.status === 'running' && (
-                <button
-                  onClick={() => handleStopJob(terminalJob.id)}
-                  className="bg-rose-900/80 hover:bg-rose-800 text-rose-200 border border-rose-700/80 px-2.5 py-1 rounded-lg text-[11px] font-bold flex items-center gap-1 cursor-pointer"
-                >
-                  <Square className="w-3 h-3 fill-current" />
-                  <span>Durdur</span>
-                </button>
-              )}
-
-              <button
-                onClick={() => {
-                  navigator.clipboard.writeText(terminalLogs.join('\n'));
-                  setCopied(true);
-                  setTimeout(() => setCopied(false), 2000);
-                }}
-                className="bg-canvas hover:bg-line-soft text-ink px-2.5 py-1 rounded-lg text-[11px] flex items-center gap-1 cursor-pointer"
-                title="Tüm logları panoya kopyalar"
-              >
-                <Copy className="w-3 h-3" />
-                <span>{copied ? '✓ Kopyalandı' : 'Kopyala'}</span>
-              </button>
-
-              <button
-                onClick={() => setTerminalLogs([])}
-                className="bg-canvas hover:bg-line-soft text-ink px-2.5 py-1 rounded-lg text-[11px] cursor-pointer"
-                title="Konsol ekranını temizler"
-              >
-                Temizle
-              </button>
-
-              <button
-                onClick={() => setIsTerminalOpen(false)}
-                className="bg-canvas hover:bg-line-soft text-ink p-1.5 rounded-lg text-[11px] cursor-pointer"
-                title="Terminali Kapat"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
-            </div>
-          </div>
-
-          {/* Terminal Logs View */}
-          <div className="flex-1 p-3 font-mono text-[11px] overflow-y-auto leading-relaxed bg-white text-ink select-text">
-            {terminalLogs.length === 0 ? (
-              <div className="text-ink-3 py-6 text-center font-sans">
-                Henüz konsol çıktısı yok. Yukarıdan bir script veya otomasyon başlatın...
-              </div>
-            ) : (
-              terminalLogs.map((log, index) => {
-                let colorClass = 'text-ink';
-                if (log.includes('[HATA]') || log.includes('[STDERR]') || log.includes('error') || log.includes('Error')) {
-                  colorClass = 'text-rose-400 font-semibold';
-                } else if (log.includes('[BAŞARILI]') || log.includes('✓') || log.includes('BAŞARIYLA')) {
-                  colorClass = 'text-emerald-400 font-semibold';
-                } else if (log.includes('[UYARI]') || log.includes('WARN')) {
-                  colorClass = 'text-amber-400';
-                } else if (log.includes('🚀') || log.includes('▶️') || log.includes('BAŞLADI')) {
-                  colorClass = 'text-accent font-bold';
-                }
-
-                return (
-                  <div key={index} className={`whitespace-pre-wrap break-all ${colorClass}`}>
-                    {log}
+      <Panel flush>
+        {filteredScripts.length === 0 ? (
+          <EmptyState icon={Search} title="Betik bulunamadı">Aramayı ya da kategoriyi değiştir.</EmptyState>
+        ) : (
+          <ul className="ms-rows">
+            {filteredScripts.map((script) => {
+              const activeJob = activeJobs[script.name];
+              const running = Boolean(activeJob || runningJobName === script.name);
+              const userArg = customArgs[script.name] !== undefined ? customArgs[script.name] : script.defaultArgs || '';
+              return (
+                <li key={script.name} className={`ms-row ${running ? 'bg-accent-soft/50' : ''}`}>
+                  <span className={`ms-ricon ${running ? 'is-warn' : ''}`}><Code aria-hidden="true" /></span>
+                  <div className="ms-row-main">
+                    <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                      <span className="ms-row-title">{cleanTitle(script.title)}</span>
+                      <span className="ms-tag">{RUNTIME_LABEL[script.runtime] || script.runtime}</span>
+                      {script.isCustom && <span className="ms-tag is-accent">Yeni</span>}
+                      {running && <span className="ms-tag is-warn"><span className="ms-sdot is-warn is-live" /> Çalışıyor</span>}
+                    </span>
+                    <span className="ms-row-text">{script.description}</span>
+                    <span className="ms-row-meta">
+                      <code className="font-mono text-[12px] text-ink-2">{script.name}</code>
+                      {script.sizeBytes ? <span>{(script.sizeBytes / 1024).toFixed(1)} KB</span> : null}
+                      {script.tags && script.tags.length > 0 && <span>{script.tags.map((t) => `#${t}`).join(' ')}</span>}
+                    </span>
+                    <span className="flex items-center gap-2 pt-1.5 max-w-[640px]">
+                      <input
+                        type="text"
+                        value={userArg}
+                        onChange={(e) => setCustomArgs((prev) => ({ ...prev, [script.name]: e.target.value }))}
+                        placeholder="Argümanlar (isteğe bağlı): --all, --unverified …"
+                        aria-label={`${script.title} argümanları`}
+                        spellCheck={false}
+                        className="ms-input is-sm is-mono flex-1"
+                      />
+                      {script.defaultArgs && userArg !== script.defaultArgs && (
+                        <button type="button" onClick={() => setCustomArgs((prev) => ({ ...prev, [script.name]: script.defaultArgs || '' }))} className="ms-btn is-sm is-ghost" title={`Varsayılan: ${script.defaultArgs}`}>
+                          Varsayılan
+                        </button>
+                      )}
+                    </span>
                   </div>
-                );
-              })
+                  <div className="ms-row-actions">
+                    <button type="button" onClick={() => openLogsFor(script)} className="ms-btn is-sm is-ghost" title="Bu betiğin son günlüğü">
+                      <Eye /> Günlük
+                    </button>
+                    {running && activeJob ? (
+                      <button type="button" onClick={() => handleStopJob(activeJob.id)} className="ms-btn is-sm is-danger">
+                        <Square /> Durdur
+                      </button>
+                    ) : (
+                      <button type="button" onClick={() => handleRunScript(script.name)} disabled={running} className="ms-btn is-sm is-primary">
+                        <Play /> Çalıştır
+                      </button>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </Panel>
+
+      <Drawer
+        open={isTerminalOpen}
+        onClose={() => setIsTerminalOpen(false)}
+        wide
+        label="Betik konsolu"
+        title={terminalJob?.title || terminalJob?.name || 'Betik konsolu'}
+        head={
+          <span className="hidden sm:inline-flex items-center gap-1.5">
+            {jobStatusTag(terminalJob?.status)}
+            {terminalJob?.durationMs ? <span className="text-[12px] text-ink-3 tabular-nums">{(terminalJob.durationMs / 1000).toFixed(1)} sn</span> : null}
+          </span>
+        }
+        foot={
+          <>
+            <button
+              type="button"
+              onClick={() => {
+                navigator.clipboard.writeText(terminalLogs.join('\n'));
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+              }}
+              className="ms-btn"
+            >
+              {copied ? <Check /> : <Copy />} {copied ? 'Kopyalandı' : 'Kopyala'}
+            </button>
+            <button type="button" onClick={() => setTerminalLogs([])} className="ms-btn">
+              Temizle
+            </button>
+            {terminalJob?.status === 'running' && (
+              <button type="button" onClick={() => handleStopJob(terminalJob.id)} className="ms-btn is-danger">
+                <Square /> Durdur
+              </button>
             )}
-            <div ref={logsEndRef} />
-          </div>
-        </div>
-      )}
+          </>
+        }
+      >
+        <Switch checked={autoScroll} onChange={setAutoScroll} label="Yeni satırlara otomatik kaydır" />
+        <pre className="ms-term flex-1 !max-h-none min-h-[50vh]" aria-live="polite">
+          {terminalLogs.length === 0 ? (
+            <span className="t">Henüz çıktı yok. Bir betik ya da zincir başlat.</span>
+          ) : (
+            terminalLogs.map((log, index) => (
+              <div key={index} className={logTone(log)}>
+                {log}
+              </div>
+            ))
+          )}
+          <div ref={logsEndRef} />
+        </pre>
+        {historyJobs.length > 0 && (
+          <section className="ms-dsec">
+            <h3>Son çalışmalar <span className="n">{historyJobs.length}</span></h3>
+            <ul className="ms-dlist">
+              {historyJobs.slice(0, 8).map((j) => (
+                <li key={j.id} className="!p-0">
+                  <button type="button" onClick={() => openTerminalForJob(j)} className="w-full flex items-center gap-2 px-2.5 py-2 text-left cursor-pointer hover:bg-field rounded-[10px]">
+                    <span className="flex-1 min-w-0 truncate">{j.title || j.name}</span>
+                    {jobStatusTag(j.status)}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </Drawer>
     </div>
   );
 };

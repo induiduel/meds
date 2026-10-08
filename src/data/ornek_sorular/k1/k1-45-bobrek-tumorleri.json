@@ -1,0 +1,1600 @@
+{
+ "id": "k1-45-bobrek-tumorleri",
+ "sira": 45,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Böbrek Tümörleri",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-06",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "İdrar yolu neoplazmlarının genel spektrumunu özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Böbrekte en sık görülen malign tümör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nefroblastom (Wilms tümörü)",
+      "B": "Renal hücreli karsinom",
+      "C": "Onkositoma",
+      "D": "Anjiyomiyolipom",
+      "E": "Pelvis ürotelyal karsinomu"
+     },
+     "dogru": "B",
+     "aciklama": "Böbrekte en sık malign tümör renal hücreli karsinomdur (RHK); nefroblastom ve pelvis tümörleri daha azdır.",
+     "sik_aciklamalari": {
+      "A": "Wilms tümörü çocukluk çağının en sık böbrek tümörüdür, genelde en sık değildir.",
+      "B": "Doğru: RHK böbrek primer malign tümörlerinin %80–85'idir.",
+      "C": "Onkositoma benign bir tümördür.",
+      "D": "Anjiyomiyolipom benign perivasküler hücre tümörüdür.",
+      "E": "Kaliks/pelvis primer neoplazmları RHK'dan daha seyrektir."
+     },
+     "bilgi": [
+      1,
+      4
+     ],
+     "benzer_cikmis": [
+      "dc9c4f240fef"
+     ]
+    },
+    {
+     "id": "k1-45-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "İdrar yolu neoplazmlarına tanısal yaklaşımda ilk yapılması önerilen ayrım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Benign–malign ayrımı yapılmadan doğrudan tedavi",
+      "B": "Üst sistem (böbrek) ve alt idrar yolu tümörlerinin ayrılması",
+      "C": "Yalnızca hasta yaşına göre sınıflama",
+      "D": "Yalnızca tümör boyutuna göre sınıflama",
+      "E": "Metastaz varlığının cinsiyete göre değerlendirilmesi"
+     },
+     "dogru": "B",
+     "aciklama": "İdrar yolu neoplazmlarında önce üst/alt sistem ayrımı yapmak tanısal yaklaşımı yönlendirir.",
+     "sik_aciklamalari": {
+      "A": "Tedavi tanı ve sınıflama olmadan planlanamaz.",
+      "B": "Doğru: üst ve alt sistem tümörlerinin biyolojisi ve sıklığı farklıdır.",
+      "C": "Yaş tek başına sınıflama ölçütü değildir.",
+      "D": "Boyut evrelemede önemlidir, ancak ilk yaklaşım üst/alt ayrımıdır.",
+      "E": "Bu yaklaşım tanısal sınıflamada temel adım değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Erişkin otopsilerinde sık rastlanan ve klinik olarak genellikle önemsiz kabul edilen böbrek lezyonu hangisidir?",
+     "secenekler": {
+      "A": "Merkezi yıldız skarlı kahverengi kitle",
+      "B": "3–15 cm arası sarı-turuncu kortikal kitle",
+      "C": "0,5 cm'den küçük kortikal papiller adenom",
+      "D": "Renal vene uzanan tümör trombüsü",
+      "E": "Pelviste ekzofitik ürotelyal tümör"
+     },
+     "dogru": "C",
+     "aciklama": "Otopsilerde erişkinlerin %40'ına kadarında <0,5 cm kortikal papiller adenom bulunur ve genellikle tedavi gerektirmez.",
+     "sik_aciklamalari": {
+      "A": "Merkezi yıldız skar onkositomanın özelliğidir.",
+      "B": "Bu tanım berrak hücreli RHK'yı düşündürür; klinik önemi büyüktür.",
+      "C": "Doğru: küçük kortikal papiller adenomlar otopside sık ve önemsizdir.",
+      "D": "Renal ven trombüsü RHK'nın vasküler yayılımıdır.",
+      "E": "Pelvis ürotelyal tümörü klinik önemi olan bir neoplazmdır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "dc9c4f240fef",
+     "soru": "Erişkinde en sık saptanan böbrek kanseri hangisidir?",
+     "secenekler": {
+      "A": "Onkositom",
+      "B": "Berrak hücreli renal hücreli karsinom",
+      "C": "Papiller renal hücreli karsinom",
+      "D": "Wilms tümörü",
+      "E": "Kromofob hücreli renal hücreli karsinom"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Böbrek ve alt idrar yolu tümör sıklığını karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Alt idrar yolu neoplazmlarının renal hücreli karsinoma göre sıklığı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "İkisi eşit sıklıktadır",
+      "B": "RHK alt idrar yolu tümörlerinden on kat sıktır",
+      "C": "Alt idrar yolu neoplazmları yaklaşık iki kat daha yaygındır",
+      "D": "Alt idrar yolu tümörleri çok nadirdir",
+      "E": "Alt idrar yolu tümörleri yalnızca çocuklarda görülür"
+     },
+     "dogru": "C",
+     "aciklama": "Alt idrar yolu (mesane vb.) neoplazmları RHK'dan yaklaşık iki kat daha yaygındır.",
+     "sik_aciklamalari": {
+      "A": "Sıklıkları eşit değildir.",
+      "B": "RHK daha seyrektir; on kat sık değildir.",
+      "C": "Doğru: alt idrar yolu tümörleri daha sıktır.",
+      "D": "Alt idrar yolu tümörleri sık görülür.",
+      "E": "Bu tümörler çoğunlukla erişkinlerde görülür."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Renal hücreli karsinom için aşağıdaki sıklık bilgilerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Böbrek primer malign tümörlerinin %10'unu oluşturur",
+      "B": "Erişkin kanserlerinin yaklaşık %20'sini oluşturur",
+      "C": "Böbrek primer malign tümörlerinin %80–85'ini oluşturur",
+      "D": "Çocukluk çağı böbrek tümörlerinin en sık tümörüdür",
+      "E": "Mortalitesi %1'in altındadır"
+     },
+     "dogru": "C",
+     "aciklama": "RHK böbrek primer malign tümörlerinin %80–85'i, erişkin kanserlerinin %2–3'üdür ve mortalitesi yaklaşık %40'tır.",
+     "sik_aciklamalari": {
+      "A": "Oran %80–85'tir, %10 değildir.",
+      "B": "Erişkin kanserlerinin yalnızca %2–3'ünü oluşturur.",
+      "C": "Doğru: RHK böbreğin baskın malign tümörüdür.",
+      "D": "Çocuklukta en sık böbrek tümörü Wilms tümörüdür.",
+      "E": "Mortalite yaklaşık %40 ile yüksektir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": [
+      "d3-b-122"
+     ]
+    },
+    {
+     "id": "k1-45-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki karşılaştırmalardan hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Alt idrar yolu neoplazmları RHK'dan daha sıktır",
+      "B": "Böbrekte en sık malign tümör RHK'dır",
+      "C": "Kaliks/pelvis primer tümörleri RHK'dan daha seyrektir",
+      "D": "Wilms tümörü erişkinde en sık böbrek tümörüdür",
+      "E": "RHK erişkin kanserlerinin yaklaşık %2–3'ünü oluşturur"
+     },
+     "dogru": "D",
+     "aciklama": "Wilms tümörü çocukluk çağının en sık böbrek tümörüdür; erişkinde nadirdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: yaklaşık iki kat daha yaygındır.",
+      "B": "Doğru ifade: RHK baskın malign tümördür.",
+      "C": "Doğru ifade: pelvis-kaliks tümörleri daha az görülür.",
+      "D": "Yanlış ifade (aranan cevap): Wilms tümörü erişkinde nadirdir.",
+      "E": "Doğru ifade: RHK erişkin kanserlerinin %2–3'üdür."
+     },
+     "bilgi": [
+      1,
+      4,
+      38
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-122",
+     "soru": "Renal tübüler epitelden köken alan, böbreğin tüm primer malign tümörlerinin %80-85'ini oluşturan ve tüm erişkin kanserlerinin %2-3'ünü oluşturan böbrek tümörü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mezoblastik nefroma",
+      "B": "Transizyonel hücreli karsinom",
+      "C": "Renal hücreli karsinom",
+      "D": "Rabdoid tümör",
+      "E": "Wilms tümörü"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Renal hücreli karsinomun (RHK) kökenini, yerleşimini ve epidemiyolojisini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Renal hücreli karsinom hangi yapıdan köken alır?",
+     "secenekler": {
+      "A": "Perivasküler hücreler",
+      "B": "Ürotelyum",
+      "C": "Glomerüler mezangial hücreler",
+      "D": "Renal tübüler epitel",
+      "E": "Metanefrik blastem"
+     },
+     "dogru": "D",
+     "aciklama": "RHK renal tübüler epitelden köken alır ve çoğunlukla kortekse yerleşir.",
+     "sik_aciklamalari": {
+      "A": "Perivasküler hücreler anjiyomiyolipomun kökenidir.",
+      "B": "Ürotelyum pelvis ve mesane ürotelyal karsinomlarının kökenidir.",
+      "C": "Mezangial hücreler RHK kaynağı değildir.",
+      "D": "Doğru: RHK tübül epitel kaynaklıdır.",
+      "E": "Metanefrik blastem Wilms tümörünün kökenidir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": [
+      "d3-b-122"
+     ]
+    },
+    {
+     "id": "k1-45-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Görüntülemede böbrek korteksinden kaynaklanan solid kitle saptanan erişkinde öncelikle düşünülmesi gereken tanı hangisidir?",
+     "secenekler": {
+      "A": "Nefroblastom",
+      "B": "Ürotelyal karsinom",
+      "C": "Renal hücreli karsinom",
+      "D": "Basit kist",
+      "E": "Lenfoma"
+     },
+     "dogru": "C",
+     "aciklama": "RHK ağırlıkla korteksten kaynaklandığından erişkinde kortikal solid kitlede öncelikle RHK düşünülür.",
+     "sik_aciklamalari": {
+      "A": "Nefroblastom çocuklarda görülür.",
+      "B": "Ürotelyal karsinom pelvis-kaliks kaynaklıdır.",
+      "C": "Doğru: kortikal solid kitlenin en olası nedenidir.",
+      "D": "Basit kist solid değil, sıvı içeriklidir.",
+      "E": "Böbrek lenfoması nadirdir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Renal hücreli karsinomun epidemiyolojisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Erişkin kanserlerinin %2–3'ünü oluşturur",
+      "B": "Mortalitesi yaklaşık %40'tır",
+      "C": "Böbrek korteksine yerleşim eğilimindedir",
+      "D": "Çoğunlukla toplayıcı sistem ürotelyumundan gelişir",
+      "E": "Yüksek insidansı nedeniyle erken tanı önemlidir"
+     },
+     "dogru": "D",
+     "aciklama": "RHK tübül epitelinden köken alır; ürotelyum kaynaklı tümörler ürotelyal karsinomlardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: erişkin kanserlerinin küçük ama önemli bir kısmıdır.",
+      "B": "Doğru ifade: yaklaşık %40 mortalite bildirilir.",
+      "C": "Doğru ifade: kortikal yerleşimlidir.",
+      "D": "Yanlış ifade (aranan cevap): köken tübül epitelidir.",
+      "E": "Doğru ifade: mortalite yüksek olduğundan erken tanı kritiktir."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-122",
+     "soru": "Renal tübüler epitelden köken alan, böbreğin tüm primer malign tümörlerinin %80-85'ini oluşturan ve tüm erişkin kanserlerinin %2-3'ünü oluşturan böbrek tümörü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mezoblastik nefroma",
+      "B": "Transizyonel hücreli karsinom",
+      "C": "Renal hücreli karsinom",
+      "D": "Rabdoid tümör",
+      "E": "Wilms tümörü"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "RHK majör risk faktörlerini ve özel risk durumlarını sayabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi renal hücreli karsinomun majör risk faktörlerinden biri değildir?",
+     "secenekler": {
+      "A": "Sigara",
+      "B": "Hipertansiyon",
+      "C": "Obezite",
+      "D": "Mesleki kadmiyum maruziyeti",
+      "E": "Aspirin kullanımı"
+     },
+     "dogru": "E",
+     "aciklama": "RHK'nın majör risk faktörleri sigara, hipertansiyon, obezite ve kadmiyum maruziyetidir.",
+     "sik_aciklamalari": {
+      "A": "Sigara en önemli değiştirilebilir risk faktörüdür.",
+      "B": "Hipertansiyon majör risk faktörüdür.",
+      "C": "Obezite majör risk faktörüdür.",
+      "D": "Kadmiyum mesleki risk faktörüdür.",
+      "E": "Doğru: aspirin RHK için tanımlı majör risk faktörü değildir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Uzun süreli diyaliz tedavisi alan hastada RHK riskini artıran durum hangisidir?",
+     "secenekler": {
+      "A": "Papiller nekroz",
+      "B": "Edinilmiş polikistik (kistik) böbrek hastalığı",
+      "C": "Akut piyelonefrit",
+      "D": "Minimal değişiklik hastalığı",
+      "E": "Benign nefroskleroz"
+     },
+     "dogru": "B",
+     "aciklama": "Kronik diyaliz sonrası gelişen edinilmiş kistik böbrek hastalığı RHK riskini belirgin artırır.",
+     "sik_aciklamalari": {
+      "A": "Papiller nekroz RHK risk faktörü olarak tanımlanmaz.",
+      "B": "Doğru: diyaliz hastalarında böbrek tümörü açısından farkındalık gerekir.",
+      "C": "Akut piyelonefrit enfeksiyöz bir süreçtir.",
+      "D": "Minimal değişiklik hastalığı glomerüler bir hastalıktır.",
+      "E": "Benign nefroskleroz hipertansiyon bulgusudur; özel RHK durumu değildir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki hastalardan hangisinde renal hücreli karsinom gelişme riski en yüksek kabul edilir?",
+     "secenekler": {
+      "A": "Normal kilolu, sigara içmeyen 25 yaşında kadın",
+      "B": "Sigara içen, obez, hipertansif ve 10 yıldır diyalize giren 60 yaşında erkek",
+      "C": "Tekrarlayan sistit öyküsü olan genç kadın",
+      "D": "Böbrek taşı düşürmüş 30 yaşında erkek",
+      "E": "Akut glomerülonefrit geçirmiş çocuk"
+     },
+     "dogru": "B",
+     "aciklama": "Sigara, obezite, hipertansiyon ve uzun süreli diyaliz (edinilmiş kistik hastalık) birlikte RHK riskini en yüksek kılar.",
+     "sik_aciklamalari": {
+      "A": "Risk faktörü taşımayan genç bireydir.",
+      "B": "Doğru: birden fazla majör risk faktörü ve özel risk durumu bir aradadır.",
+      "C": "Sistit RHK için tanımlı risk faktörü değildir.",
+      "D": "Taş öyküsü bu derste RHK risk faktörü olarak sayılmaz.",
+      "E": "Akut glomerülonefrit RHK riskini artıran durum değildir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "RHK'nın moleküler temelli sınıflamasını ve üç ana alt tipini tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Renal hücreli karsinomun en sık görülen alt tipi hangisidir?",
+     "secenekler": {
+      "A": "Toplayıcı kanal karsinomu",
+      "B": "Papiller karsinom",
+      "C": "Kromofob karsinom",
+      "D": "Berrak hücreli karsinom",
+      "E": "Onkositoma"
+     },
+     "dogru": "D",
+     "aciklama": "Berrak hücreli karsinom RHK'ların yaklaşık %65'ini oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Toplayıcı kanal karsinomu çok nadirdir.",
+      "B": "Papiller karsinom böbrek kanserlerinin %10–15'idir.",
+      "C": "Kromofob karsinom yaklaşık %5 ile en nadir ana alt tiptir.",
+      "D": "Doğru: en sık RHK alt tipidir.",
+      "E": "Onkositoma benign tümördür, RHK alt tipi değildir."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": [
+      "dc9c4f240fef",
+      "26f6fb5669b7"
+     ]
+    },
+    {
+     "id": "k1-45-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "RHK'nın moleküler temelli sınıflamasının klinik önemi nedir?",
+     "secenekler": {
+      "A": "Tümörün boyutunu belirler",
+      "B": "Yalnızca akademik amaçlıdır",
+      "C": "Alt tipin belirlenmesi prognoz ve tedavi seçiminde belirleyicidir",
+      "D": "Benign tümörleri dışlar",
+      "E": "Hastanın yaşını tahmin ettirir"
+     },
+     "dogru": "C",
+     "aciklama": "Berrak hücreli, papiller ve kromofob alt tiplerin genetiği ve seyri farklıdır; alt tip prognoz ve tedaviyi yönlendirir.",
+     "sik_aciklamalari": {
+      "A": "Boyut evrelemenin konusudur.",
+      "B": "Sınıflama doğrudan klinik karar verdirir.",
+      "C": "Doğru: alt tip prognostik ve terapötik önem taşır.",
+      "D": "Moleküler sınıflama benign-malign ayrımı için yapılmaz.",
+      "E": "Moleküler alt tip yaş tahmini sağlamaz."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "RHK alt tipleri ile moleküler özellik eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Berrak hücreli – VHL geninin iki kopyasının kaybı",
+      "B": "Papiller – MET fonksiyon artışı",
+      "C": "Kromofob – çok sayıda kromozom kaybı ve hipoploidi",
+      "D": "Berrak hücreli – 3p segment kaybı",
+      "E": "Kromofob – 7q üzerindeki MET'in germ hattı mutasyonu"
+     },
+     "dogru": "E",
+     "aciklama": "MET (7q) mutasyonları papiller karsinomun özelliğidir; kromofob karsinomda çoklu kromozom kaybı ve hipoploidi görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: VHL kaybı berrak hücrelinin imzasıdır.",
+      "B": "Doğru eşleştirme: MET artışı papiller alt tipin ortak özelliğidir.",
+      "C": "Doğru eşleştirme: kromofobda aşırı hipoploidi vardır.",
+      "D": "Doğru eşleştirme: sporadik olgularda 3p delesyonu görülür.",
+      "E": "Yanlış eşleştirme (aranan cevap): MET papiller karsinomla ilişkilidir."
+     },
+     "bilgi": [
+      9,
+      13,
+      19,
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "dc9c4f240fef",
+     "soru": "Erişkinde en sık saptanan böbrek kanseri hangisidir?",
+     "secenekler": {
+      "A": "Onkositom",
+      "B": "Berrak hücreli renal hücreli karsinom",
+      "C": "Papiller renal hücreli karsinom",
+      "D": "Wilms tümörü",
+      "E": "Kromofob hücreli renal hücreli karsinom"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "26f6fb5669b7",
+     "soru": "Tıbbi Patoloji Böbrek tümörleri-2 Erişkinde en sık saptanan böbrek kanseri hangisidir?",
+     "secenekler": {
+      "A": "Onkositom",
+      "B": "Berrak hücreli renal hücreli karsinom",
+      "C": "Papiller renal hücreli karsinom",
+      "D": "Wilms tümörü",
+      "E": "Kromofob hücreli renal hücreli karsinom"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Berrak hücreli karsinomun VHL geni temelli moleküler patogenezini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Berrak hücreli renal hücreli karsinomun ayırt edici moleküler özelliği hangisidir?",
+     "secenekler": {
+      "A": "WT1 delesyonu",
+      "B": "MET geninde fonksiyon artışı",
+      "C": "KRAS mutasyonu",
+      "D": "VHL geninin her iki kopyasının kaybı/inaktivasyonu",
+      "E": "BCR-ABL füzyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Berrak hücreli karsinomda VHL geninin iki alelinin de kaybı veya inaktivasyonu tanısal moleküler imzadır.",
+     "sik_aciklamalari": {
+      "A": "WT1 Wilms tümörüyle ilişkilidir.",
+      "B": "MET artışı papiller karsinomun özelliğidir.",
+      "C": "KRAS RHK'da ayırt edici değildir.",
+      "D": "Doğru: VHL kaybı berrak hücreli alt tipin temelidir.",
+      "E": "BCR-ABL kronik miyeloid lösemide görülür."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Sporadik berrak hücreli karsinomda VHL kaybının en sık mekanizması hangisidir?",
+     "secenekler": {
+      "A": "7q amplifikasyonu",
+      "B": "3p segmentinde monoallelik delesyon ve diğer alelde mutasyon veya inaktivasyon",
+      "C": "Y kromozomu kaybı",
+      "D": "Siklin D1 yeniden düzenlenmesi",
+      "E": "Mitokondriyal kompleks I mutasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "Çoğu sporadik tümörde 3p'de tek alel delesyonu ve diğer alelde mutasyon/hipermetilasyon ile VHL fonksiyonu kaybolur.",
+     "sik_aciklamalari": {
+      "A": "7q (MET) değişiklikleri papiller karsinomla ilişkilidir.",
+      "B": "Doğru: iki alelin de kaybı VHL protein fonksiyon kaybına yol açar.",
+      "C": "Y kaybı onkositomada görülebilir.",
+      "D": "Siklin D1 yeniden düzenlenmesi onkositomada tanımlanmıştır.",
+      "E": "Kompleks I mutasyonları onkositomanın özelliğidir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Berrak hücreli karsinom patogenezi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "VHL kaybı HIF birikimine yol açar",
+      "B": "HIF, MYC ile iş birliği yaparak metabolizmayı yeniden programlar",
+      "C": "Histon metilasyonunu düzenleyen genlerde fonksiyon kaybı mutasyonları sıktır",
+      "D": "Tümör stroması belirgin vaskülerdir",
+      "E": "Temel olay VHL'nin aktive edici (fonksiyon kazandıran) mutasyonudur"
+     },
+     "dogru": "E",
+     "aciklama": "VHL bir tümör baskılayıcıdır; berrak hücreli karsinomda fonksiyon kaybı (iki alelin inaktivasyonu) vardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: VHL yokluğunda HIF yıkılamaz.",
+      "B": "Doğru ifade: HIF–MYC iş birliği proliferasyonu destekler.",
+      "C": "Doğru ifade: epigenetik değişiklikler patogenezde önemlidir.",
+      "D": "Doğru ifade: HIF–VEGF sürücülü anjiyogenez vaskülariteyi açıklar.",
+      "E": "Yanlış ifade (aranan cevap): fonksiyon kazanımı değil kaybı söz konusudur."
+     },
+     "bilgi": [
+      9,
+      14,
+      16,
+      17,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Von Hippel-Lindau hastalığının klinik özelliklerini ve böbrek tutulumunu bilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Von Hippel-Lindau hastalığının kalıtım şekli hangisidir?",
+     "secenekler": {
+      "A": "Mitokondriyal",
+      "B": "Otozomal resesif",
+      "C": "X'e bağlı resesif",
+      "D": "Otozomal dominant",
+      "E": "Multifaktöriyel"
+     },
+     "dogru": "D",
+     "aciklama": "VHL hastalığı otozomal dominant kalıtılır ve çoklu neoplazm yatkınlığı yapar.",
+     "sik_aciklamalari": {
+      "A": "Mitokondriyal kalıtım VHL ile ilişkili değildir.",
+      "B": "Otozomal resesif kalıtım VHL için geçerli değildir.",
+      "C": "X'e bağlı kalıtım söz konusu değildir.",
+      "D": "Doğru: tek germ hattı mutasyonu yatkınlık için yeterlidir.",
+      "E": "VHL tek gen hastalığıdır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Retina ve serebellumunda hemanjiyoblastom saptanan genç hastanın böbreğinde kitle bulunuyor.\n\nBöbrekteki kitlenin en olası tipi ve özelliği hangisidir?",
+     "secenekler": {
+      "A": "Kromofob RHK; tek ve iyi prognozlu",
+      "B": "Berrak hücreli RHK; sıklıkla bilateral ve multipl",
+      "C": "Onkositoma; merkezi yıldız skarlı",
+      "D": "Anjiyomiyolipom; tüberöz skleroz ile ilişkili",
+      "E": "Wilms tümörü; çocukluk çağında"
+     },
+     "dogru": "B",
+     "aciklama": "Tablo VHL hastalığıdır; etkilenenlerin %40–60'ında bilateral ve multipl berrak hücreli karsinom gelişir.",
+     "sik_aciklamalari": {
+      "A": "Kromofob RHK VHL ile ilişkili değildir.",
+      "B": "Doğru: VHL'de böbrek tutulumu berrak hücreli karsinomdur.",
+      "C": "Onkositoma VHL'nin böbrek tümörü değildir.",
+      "D": "Anjiyomiyolipom tüberöz skleroz ile ilişkilidir.",
+      "E": "Wilms tümörü VHL ile ilişkili değildir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": [
+      "6baf4a9edad5"
+     ]
+    },
+    {
+     "id": "k1-45-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Von Hippel-Lindau hastalığı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Gen lokusu kromozom 3p25'tedir",
+      "B": "Etkilenenlerin %40–60'ında berrak hücreli karsinom gelişir",
+      "C": "Serebellar ve retinal hemanjiyoblastomlar görülür",
+      "D": "Bilateral/multipl böbrek tümörlerinde kalıtsal sendrom düşünülmelidir",
+      "E": "Böbrek tümörleri tipik olarak tek taraflı papiller karsinomdur"
+     },
+     "dogru": "E",
+     "aciklama": "VHL hastalığında böbrek tümörleri bilateral ve multipl berrak hücreli karsinomlardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: VHL geni 3p25'te yer alır.",
+      "B": "Doğru ifade: böbrek tutulumu sıktır.",
+      "C": "Doğru ifade: hemanjiyoblastomlar hastalığın karakteristiğidir.",
+      "D": "Doğru ifade: multipl tümörlerde sistemik tarama gerekir.",
+      "E": "Yanlış ifade (aranan cevap): tümörler berrak hücreli ve sıklıkla bilateraldir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "6baf4a9edad5",
+     "soru": "Tıbbi Patoloji Tıbbi Patoloji Böbrek tümörleri-1 Retinasında ve serebellumunda hemanjioblastom tanısı almış kişide böbreğinde de kitle tespit ediliyor. Görülmesi beklenen gen mutasyonu hangisidir? Sıra No Von Hippel Lindau MET ailesel geni Deny-Drash WAGR Beckwith-Wiedemann",
+     "secenekler": {
+      "A": "Von Hippel Lindau",
+      "B": "MET ailesel geni",
+      "C": "Deny-Drash",
+      "D": "WAGR",
+      "E": "Beckwith-Wiedemann"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "İki vuruş (two-hit) hipotezini berrak hücreli karsinom üzerinden açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Kalıtsal berrak hücreli karsinomda iki vuruş hipotezine göre 'ilk vuruş' hangisidir?",
+     "secenekler": {
+      "A": "MET amplifikasyonu",
+      "B": "Tümörde diğer alelin somatik kaybı",
+      "C": "Germ hattı VHL mutasyonu",
+      "D": "HIF artışı",
+      "E": "VEGF salınımı"
+     },
+     "dogru": "C",
+     "aciklama": "Kalıtsal olgularda ilk vuruş doğuştan taşınan germ hattı VHL mutasyonudur.",
+     "sik_aciklamalari": {
+      "A": "MET artışı papiller karsinomla ilişkilidir.",
+      "B": "Diğer alelin somatik kaybı ikinci vuruştur.",
+      "C": "Doğru: tüm hücrelerde bulunan germ hattı mutasyonudur.",
+      "D": "HIF artışı VHL kaybının sonucudur.",
+      "E": "VEGF salınımı HIF'in alt basamağıdır."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "İki vuruş hipotezinde ikinci vuruşun mekanizmaları arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "VEGF reseptör blokajı",
+      "B": "VHL geninin amplifikasyonu",
+      "C": "MET geninin germ hattı mutasyonu",
+      "D": "Somatik mutasyon veya promotör hipermetilasyonu ile diğer VHL alelinin susturulması",
+      "E": "Y kromozomu kazanımı"
+     },
+     "dogru": "D",
+     "aciklama": "İkinci vuruş, kalan VHL alelinin somatik mutasyon, delesyon veya hipermetilasyon ile inaktivasyonudur.",
+     "sik_aciklamalari": {
+      "A": "VEGF blokajı tedavi yaklaşımıdır, vuruş değildir.",
+      "B": "Tümör baskılayıcı genlerde amplifikasyon değil kayıp beklenir.",
+      "C": "MET germ hattı mutasyonu ailesel papiller karsinoma aittir.",
+      "D": "Doğru: her iki alel de işlevsiz hale gelir.",
+      "E": "Y kazanımı bu süreçle ilgili değildir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "İki vuruş hipotezi açısından kalıtsal ve sporadik berrak hücreli karsinom karşılaştırıldığında hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sporadik olguda tek vuruş yeterlidir",
+      "B": "Kalıtsal olguda iki vuruş da germ hattıdır",
+      "C": "Sporadik olguda iki vuruş da somatiktir; kalıtsal olguda tümör için yalnızca bir somatik vuruş yeterlidir",
+      "D": "Her iki tipte de VHL fonksiyonu korunur",
+      "E": "Kalıtsal olgular daha ileri yaşta ve tek taraflı görülür"
+     },
+     "dogru": "C",
+     "aciklama": "Kalıtsal olgularda germ hattı mutasyonu doğuştan olduğundan tek somatik vuruş tümör için yeterlidir; sporadikte iki vuruş da somatik olmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Sporadik olguda iki somatik vuruş gerekir.",
+      "B": "Kalıtsal olguda yalnız ilk vuruş germ hattıdır.",
+      "C": "Doğru: bu fark kalıtsal olguların daha erken ve multipl olmasını açıklar.",
+      "D": "Her iki tipte de VHL fonksiyonu kaybolur.",
+      "E": "Kalıtsal olgular daha erken, bilateral ve multipl görülür."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "VHL proteininin HIF düzenlenmesindeki rolünü ve HIF-VEGF ilişkisini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "VHL proteininin normal görevi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "VEGF'yi doğrudan sentezlemek",
+      "B": "HIF'in oksijene bağımlı yıkımını sağlamak",
+      "C": "MET reseptörünü aktive etmek",
+      "D": "Eritropoietin reseptörü olarak çalışmak",
+      "E": "DNA tamirini başlatmak"
+     },
+     "dogru": "B",
+     "aciklama": "VHL proteini normoksik koşullarda HIF'in oksijene bağımlı degradasyonunu sağlar.",
+     "sik_aciklamalari": {
+      "A": "VEGF HIF'in hedef genidir; VHL tarafından sentezlenmez.",
+      "B": "Doğru: VHL yokken HIF normoksiyada bile stabil kalır.",
+      "C": "MET bir tirozin kinaz reseptörüdür; VHL ile aktive edilmez.",
+      "D": "VHL bir reseptör değildir.",
+      "E": "VHL'nin temel işlevi HIF yıkımıdır, DNA tamiri değil."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "VHL kaybının berrak hücreli karsinomda belirgin vaskülariteye yol açma mekanizması hangisidir?",
+     "secenekler": {
+      "A": "Mitokondriyal proliferasyon → onkositik değişim",
+      "B": "HIF yıkımı → VEGF azalması",
+      "C": "MET aktivasyonu → HGF artışı",
+      "D": "HIF birikimi → VEGF ekspresyonunda artış → anjiyogenez",
+      "E": "Glikojen birikimi → damar dilatasyonu"
+     },
+     "dogru": "D",
+     "aciklama": "VHL yokluğunda stabil HIF transkripsiyon faktörü olarak VEGF'yi artırır; tümör anjiyogenezi ve vaskülarizasyonu artar.",
+     "sik_aciklamalari": {
+      "A": "Mitokondriyal proliferasyon onkositomada görülür.",
+      "B": "VHL kaybında HIF yıkılmaz, birikir.",
+      "C": "MET–HGF yolu papiller karsinomla ilişkilidir.",
+      "D": "Doğru: HIF–VEGF ekseni anjiyogenezin temelidir.",
+      "E": "Glikojen berrak sitoplazmayı açıklar, vaskülariteyi değil."
+     },
+     "bilgi": [
+      14,
+      15,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "VHL–HIF yolu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "HIF bir transkripsiyon faktörüdür",
+      "B": "VHL yokluğunda HIF normoksik koşullarda da stabil kalır",
+      "C": "HIF birikimi metabolik yeniden programlamayı başlatır",
+      "D": "HIF, MYC proto-onkogeniyle iş birliği yapar",
+      "E": "HIF yalnızca hipoksik koşullarda ve VHL varlığında birikir; VHL kaybı HIF'i azaltır"
+     },
+     "dogru": "E",
+     "aciklama": "VHL kaybı HIF yıkımını engeller ve HIF'in oksijenden bağımsız birikmesine yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: HIF gen ekspresyonunu düzenler.",
+      "B": "Doğru ifade: VHL kaybında 'psödohipoksi' gelişir.",
+      "C": "Doğru ifade: anjiyogenez ve metabolik değişim başlar.",
+      "D": "Doğru ifade: proliferasyonu destekleyen iş birliğidir.",
+      "E": "Yanlış ifade (aranan cevap): VHL kaybı HIF'i artırır."
+     },
+     "bilgi": [
+      14,
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Papiller böbrek hücreli karsinomda MET geni ve sinyal artışını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Papiller böbrek hücreli karsinomun hem ailesel hem sporadik formlarında ortak moleküler özellik hangisidir?",
+     "secenekler": {
+      "A": "VHL kaybı",
+      "B": "MET fonksiyonunda artış",
+      "C": "ADAMTS13 eksikliği",
+      "D": "PKD1 mutasyonu",
+      "E": "WT1 kaybı"
+     },
+     "dogru": "B",
+     "aciklama": "Papiller RHK'nın ailesel ve sporadik formlarında ortak özellik MET fonksiyonunun artışıdır.",
+     "sik_aciklamalari": {
+      "A": "VHL kaybı berrak hücreli karsinomun özelliğidir.",
+      "B": "Doğru: MET tanısal ve tedavi edilebilir bir hedeftir.",
+      "C": "ADAMTS13 eksikliği TTP ile ilişkilidir.",
+      "D": "PKD1 mutasyonu ADPKD'ye aittir.",
+      "E": "WT1 kaybı Wilms tümörüyle ilişkilidir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "MET geni ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "HIF'in yıkımını sağlar",
+      "B": "Kromozom 3p üzerinde tümör baskılayıcı gendir",
+      "C": "Kromozom 7q üzerinde HGF reseptörü olan bir tirozin kinazı kodlar",
+      "D": "Mitokondriyal kompleks I bileşenidir",
+      "E": "Polikistin-1'i kodlar"
+     },
+     "dogru": "C",
+     "aciklama": "MET, 7q'da HGF üzerinden hücre büyümesi ve motilitesini düzenleyen bir tirozin kinaz reseptörünü kodlar.",
+     "sik_aciklamalari": {
+      "A": "HIF yıkımını VHL proteini sağlar.",
+      "B": "3p'deki tümör baskılayıcı VHL'dir.",
+      "C": "Doğru: MET bir proto-onkogendir ve HGF reseptörüdür.",
+      "D": "Kompleks I mutasyonları onkositomada görülür.",
+      "E": "Polikistin-1'i PKD1 geni kodlar."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Papiller RHK'da MET değişikliklerinin mekanizmaları ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "MET artışı tübül epitelinde apoptozu artırır",
+      "B": "Her iki formda da MET'in iki alelinin kaybı",
+      "C": "Ailesel formda MET hipermetilasyonla susturulur",
+      "D": "Sporadik olgularda kopya sayısı artışı/somatik mutasyon, ailesel olgularda germ hattı aktive edici mutasyon",
+      "E": "Papiller karsinom genellikle tek odaklı ve ileri evrede saptanır"
+     },
+     "dogru": "D",
+     "aciklama": "Sporadik papiller karsinomda MET kopya artışı/somatik mutasyon, ailesel formda germ hattı mutasyonu vardır; sonuç proksimal tübülde anormal proliferasyondur.",
+     "sik_aciklamalari": {
+      "A": "MET sinyali proliferasyonu artırır, apoptozu değil.",
+      "B": "MET onkogendir; kayıp değil artış söz konusudur.",
+      "C": "Susturulma tümör baskılayıcı genlerde (ör. VHL) beklenir.",
+      "D": "Doğru: her iki mekanizma MET sinyal artışına yol açar.",
+      "E": "Papiller karsinom sıklıkla multifokal/bilateral ve erken evrede saptanır."
+     },
+     "bilgi": [
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Kromofob renal hücreli karsinomun kökenini, genetiğini ve prognozunu açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Kromofob renal hücreli karsinom hangi hücrelerden köken alır?",
+     "secenekler": {
+      "A": "Proksimal tübül epiteli",
+      "B": "Toplayıcı kanalların ara (interkale) hücreleri",
+      "C": "Ürotelyum",
+      "D": "Perisitler",
+      "E": "Metanefrik blastem"
+     },
+     "dogru": "B",
+     "aciklama": "Kromofob karsinom toplayıcı kanalların ara hücrelerinden köken alır.",
+     "sik_aciklamalari": {
+      "A": "Proksimal tübül berrak hücreli ve papiller karsinomların kökenidir.",
+      "B": "Doğru: farklı kökeni alt tip ayrımında önemlidir.",
+      "C": "Ürotelyum ürotelyal karsinomların kökenidir.",
+      "D": "Perisitler anjiyomiyolipomun kökenidir.",
+      "E": "Metanefrik blastem Wilms tümörünün kökenidir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Kromofob RHK ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "VHL kaybı tanısal imzasıdır",
+      "B": "RHK'ların en sık alt tipidir",
+      "C": "Diğer RHK alt tiplerine göre prognozu daha olumludur",
+      "D": "Kesit yüzü bol lipite bağlı sarı-turuncudur",
+      "E": "MET artışı ile karakterizedir"
+     },
+     "dogru": "C",
+     "aciklama": "Kromofob RHK nadir (%5), hafif eozinofilik-soluk sitoplazmalıdır ve prognozu daha iyidir.",
+     "sik_aciklamalari": {
+      "A": "VHL kaybı berrak hücreli karsinoma aittir.",
+      "B": "En sık alt tip berrak hücreli karsinomdur.",
+      "C": "Doğru: daha iyi sağkalım tedavi planını etkiler.",
+      "D": "Sarı-turuncu kesit yüzü berrak hücreli tiptir.",
+      "E": "MET artışı papiller karsinomun özelliğidir."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Kromofob renal hücreli karsinomun genetik özelliği olarak aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "PKHD1 mutasyonu",
+      "B": "3p25 VHL germ hattı mutasyonu",
+      "C": "7q MET germ hattı mutasyonu",
+      "D": "Çok sayıda kromozom kaybı ve aşırı hipoploidi",
+      "E": "Philadelphia kromozomu"
+     },
+     "dogru": "D",
+     "aciklama": "Kromofob karsinomda çok sayıda kromozom kaybı ve aşırı hipoploidi vardır; kritik gen değişiklikleri net değildir.",
+     "sik_aciklamalari": {
+      "A": "PKHD1 ARPKD genidir.",
+      "B": "VHL berrak hücreli karsinom ve VHL hastalığına aittir.",
+      "C": "MET ailesel papiller karsinomla ilişkilidir.",
+      "D": "Doğru: alt tipin karakteristik genetik bulgusudur.",
+      "E": "Philadelphia kromozomu KML'de görülür."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "RHK alt tiplerinin makroskopik ve mikroskopik özelliklerini karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q34",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Kesit yüzü bol lipit içeriğine bağlı olarak sarı-turuncu görünen böbrek tümörü hangisidir?",
+     "secenekler": {
+      "A": "Onkositoma",
+      "B": "Berrak hücreli RHK",
+      "C": "Kromofob RHK",
+      "D": "Ürotelyal karsinom",
+      "E": "Wilms tümörü"
+     },
+     "dogru": "B",
+     "aciklama": "Berrak hücreli karsinomun bol lipit içeriği kesit yüzüne sarı-turuncu renk verir.",
+     "sik_aciklamalari": {
+      "A": "Onkositomanın kesit yüzü kahverengidir.",
+      "B": "Doğru: sarı-turuncu kesit yüzü bu alt tipe tipiktir.",
+      "C": "Kromofob karsinom bu klasik sarı-turuncu görünümle tanımlanmaz.",
+      "D": "Ürotelyal karsinom pelviste papiller kitle yapar.",
+      "E": "Wilms tümörü çocuklarda görülür ve bu görünümle tanımlanmaz."
+     },
+     "bilgi": [
+      8,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q35",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Berrak hücreli karsinomun mikroskopik özellikleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Lipit ve glikojen içeren vakuollü berrak sitoplazma",
+      "B": "Belirgin hücre membranları",
+      "C": "İnce fibrovasküler stroma ile ayrılan yuvalar",
+      "D": "Çekirdekler genellikle küçük ve yuvarlak",
+      "E": "Stroma bol ve hiposelüler, damarsız"
+     },
+     "dogru": "E",
+     "aciklama": "Berrak hücreli karsinomda stroma azdır ancak belirgin derecede vaskülerdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: berrak sitoplazma tanının temelidir.",
+      "B": "Doğru ifade: hücre sınırları belirgindir.",
+      "C": "Doğru ifade: ince damarlı stroma yuvaları ayırır.",
+      "D": "Doğru ifade: klasik formda çekirdek küçüktür.",
+      "E": "Yanlış ifade (aranan cevap): stroma az ama zengin vaskülerdir."
+     },
+     "bilgi": [
+      26,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q36",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "RHK alt tipi ile makroskopik/mikroskopik özellik eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Berrak hücreli RHK – merkezi yıldız skar",
+      "B": "Kromofob RHK – sarı-turuncu kesit yüzü, bol lipit",
+      "C": "Papiller RHK – sıklıkla multifokal ve bilateral, papiller büyüme paterni",
+      "D": "Anaplastik varyant – küçük yuvarlak çekirdekler, mitoz yok",
+      "E": "Kromofob RHK – en sık alt tip"
+     },
+     "dogru": "C",
+     "aciklama": "Papiller RHK papiller büyüme gösterir, sıklıkla multifokal ve bilateraldir ve erken evrede saptanır.",
+     "sik_aciklamalari": {
+      "A": "Merkezi yıldız skar onkositomanın özelliğidir.",
+      "B": "Sarı-turuncu kesit berrak hücreli tipe aittir.",
+      "C": "Doğru eşleştirme: papiller karsinomun karakteristik özellikleridir.",
+      "D": "Anaplastik varyantta pleomorfik hiperkromatik çekirdek ve çok mitoz vardır.",
+      "E": "Kromofob en nadir ana alt tiptir."
+     },
+     "bilgi": [
+      18,
+      21,
+      23,
+      27,
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 13,
+   "metin": "RHK'nın lokal ve vasküler yayılım özelliklerini tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q37",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Renal hücreli karsinomun en karakteristik vasküler yayılım şekli hangisidir?",
+     "secenekler": {
+      "A": "Pulmoner arter trombozu",
+      "B": "Renal arter içinde retrograd ilerleme",
+      "C": "Lenfatiklerle yalnızca inguinal lenf nodlarına yayılım",
+      "D": "Portal vene invazyon",
+      "E": "Renal veni invaze ederek katı tümör kolonu oluşturması"
+     },
+     "dogru": "E",
+     "aciklama": "RHK renal veni invaze ederek katı tümör kolonu oluşturur; ileri olguda vena kava ve kalbin sağ tarafına uzanabilir.",
+     "sik_aciklamalari": {
+      "A": "Pulmoner arter trombozu RHK'nın tipik yayılım şekli değildir.",
+      "B": "Arteriyel retrograd ilerleme tipik değildir.",
+      "C": "İnguinal nodlar böbrek drenaj bölgesi değildir.",
+      "D": "Portal ven invazyonu RHK'nın karakteristik yayılımı değildir.",
+      "E": "Doğru: vasküler invazyon evreleme ve cerrahiyi belirler."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q38",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "RHK'nın lokal yayılımı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Toplayıcı sisteme mantar tarzında genişleyip kaliks, pelvis ve üretere uzanabilir",
+      "B": "Sınırları her zaman infiltratif ve belirsizdir",
+      "C": "Perirenal yağ dokusuna invazyon en sık başlangıç bulgusudur",
+      "D": "Uydu lezyon hiç görülmez",
+      "E": "Adrenal invazyon erken ve sık görülür"
+     },
+     "dogru": "A",
+     "aciklama": "RHK genellikle iyi sınırlıdır ancak uydu lezyonlar olabilir; toplayıcı sisteme mantar tarzında uzanabilir, perirenal yağ ve adrenal invazyon nadirdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: toplayıcı sisteme uzanım tipik lokal yayılımdır.",
+      "B": "Sınırlar genellikle iyi tanımlıdır.",
+      "C": "Perirenal yağ invazyonu nadirdir ve lokal ileri hastalığı gösterir.",
+      "D": "Uydu lezyonlar görülebilir.",
+      "E": "Adrenal bezine direkt invazyon nadirdir."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q39",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Sağ böbrekte kitle saptanan hastada bilgisayarlı tomografide tümörün renal ven ve inferior vena kava içinde kesintisiz bir kolon halinde sağ atriyuma uzandığı görülüyor.\n\nBu bulgu için en doğru yorum hangisidir?",
+     "secenekler": {
+      "A": "Renal hücreli karsinomun ileri vasküler yayılımı; evreleme ve cerrahi yaklaşımı doğrudan etkiler",
+      "B": "Onkositomanın tipik benign büyüme paternidir",
+      "C": "Anjiyomiyolipomun spontan kanamasıdır",
+      "D": "Basit kistin rüptürüdür",
+      "E": "Klinik önemi olmayan otopsi bulgusudur"
+     },
+     "dogru": "A",
+     "aciklama": "RHK renal ven, vena kava ve nadiren sağ kalbe uzanan tümör kolonu oluşturabilir; bu durum evrelemeyi ve cerrahiyi belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tümör trombüsü RHK'nın karakteristik ileri yayılımıdır.",
+      "B": "Onkositoma benign olup vasküler invazyon yapmaz.",
+      "C": "Anjiyomiyolipom kanaması retroperitoneal hematom yapar, vena kava kolonu değil.",
+      "D": "Basit kist vasküler yayılım yapmaz.",
+      "E": "Bu bulgu klinik olarak son derece önemlidir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 14,
+   "metin": "RHK'nın klasik klinik triadını ve en sık başvuru semptomunu bilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q40",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Renal hücreli karsinomun en sık başvuru semptomu hangisidir?",
+     "secenekler": {
+      "A": "Hematüri",
+      "B": "Ateş",
+      "C": "Kilo kaybı",
+      "D": "Polisitemi",
+      "E": "Kemik ağrısı"
+     },
+     "dogru": "A",
+     "aciklama": "Hematüri olguların yarısından fazlasında görülen en sık başvuru semptomudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: aralıklı makroskopik veya sürekli mikroskopik hematüri görülür.",
+      "B": "Ateş sistemik bulgular arasındadır, en sık semptom değildir.",
+      "C": "Kilo kaybı spesifik olmayan bir bulgudur.",
+      "D": "Polisitemi hastaların yalnızca %5–10'unda görülür.",
+      "E": "Kemik ağrısı metastaz bulgusu olabilir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q41",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "RHK'nın klasik klinik triadı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ağrısız hematüri, ele gelen kitle ve künt yan ağrısından oluşur; üçü birlikte olguların yalnızca ~%10'unda görülür",
+      "B": "Ateş, polisitemi ve hiperkalsemiden oluşur",
+      "C": "Olguların çoğunda üç bulgu birlikte görülür",
+      "D": "Dizüri, piyüri ve ateşten oluşur",
+      "E": "Ödem, proteinüri ve hipoalbüminemiden oluşur"
+     },
+     "dogru": "A",
+     "aciklama": "Klasik triad ağrısız hematüri, palpabl kitle ve künt yan ağrısıdır; birlikteliği nadir olduğundan tanı gecikebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: triadın üç bileşeni ve düşük birliktelik oranı.",
+      "B": "Bunlar paraneoplastik/sistemik bulgulardır.",
+      "C": "Üçü birlikte yalnız yaklaşık %10 olguda görülür.",
+      "D": "Bu bulgular idrar yolu enfeksiyonunu düşündürür.",
+      "E": "Bu bulgular nefrotik sendroma aittir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q42",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "RHK'da hematüri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Olguların yarısından fazlasında görülür",
+      "B": "Aralıklı ve geçici makroskopik hematüri olabilir",
+      "C": "Altta sürekli mikroskobik hematüri bulunabilir",
+      "D": "Geçici makroskopik hematüri yanıltıcı olabilir",
+      "E": "Makroskopik hematüri kaybolduğunda tümör dışlanmış olur"
+     },
+     "dogru": "E",
+     "aciklama": "RHK'da makroskopik hematüri geçici olabilir ve sürekli mikroskobik hematüri devam edebilir; bu nedenle kaybolması tümörü dışlamaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: en sık başvuru bulgusudur.",
+      "B": "Doğru ifade: hematüri aralıklıdır.",
+      "C": "Doğru ifade: mikroskobik hematüri ısrarcı olabilir.",
+      "D": "Doğru ifade: geçici olması tanıyı geciktirebilir.",
+      "E": "Yanlış ifade (aranan cevap): hematürinin geçmesi tümörü dışlamaz."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 15,
+   "metin": "RHK'nın paraneoplastik ve sistemik bulgularını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q43",
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "Renal hücreli karsinomlu hastada polisitemi gelişmesinin nedeni hangisidir?",
+     "secenekler": {
+      "A": "Tümör hücrelerinin eritropoietin üretmesi",
+      "B": "Tümörün kemik iliğine metastazı",
+      "C": "Kronik hipoksemi",
+      "D": "Dehidratasyon",
+      "E": "Demir eksikliği"
+     },
+     "dogru": "A",
+     "aciklama": "Polisitemi hastaların %5–10'unda tümör hücrelerinin eritropoietin üretimine bağlı paraneoplastik bulgudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ektopik/artmış eritropoietin üretimi polisitemi yapar.",
+      "B": "Kemik iliği metastazı genellikle sitopeni yapar.",
+      "C": "Kronik hipoksemi sekonder polisitemi nedenidir ancak burada mekanizma tümördür.",
+      "D": "Dehidratasyon göreceli polisitemi yapar, paraneoplastik değildir.",
+      "E": "Demir eksikliği anemiye yol açar."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q44",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi RHK ile ilişkili paraneoplastik/sistemik bulgulardan biri değildir?",
+     "secenekler": {
+      "A": "Hiperkalsemi",
+      "B": "Hipertansiyon",
+      "C": "Cushing sendromu",
+      "D": "Feminizasyon veya maskülinizasyon",
+      "E": "Hipoglisemiye bağlı nöbetler ile hipokalsemi tetanisi"
+     },
+     "dogru": "E",
+     "aciklama": "RHK'da polisitemi, hiperkalsemi, hipertansiyon, Cushing sendromu, feminizasyon/maskülinizasyon ve ateş görülebilir.",
+     "sik_aciklamalari": {
+      "A": "Hiperkalsemi RHK'nın paraneoplastik bulgusudur.",
+      "B": "Hipertansiyon (renin üretimi) görülebilir.",
+      "C": "Cushing sendromu (ACTH benzeri madde) bildirilmiştir.",
+      "D": "Hormon üretimine bağlı feminizasyon/maskülinizasyon olabilir.",
+      "E": "Doğru: hipokalsemi tetanisi ve hipoglisemi bu derste RHK bulgusu olarak sayılmaz."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q45",
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "58 yaşında sigara içen erkekte açıklanamayan ateş, hemoglobin yüksekliği ve serum kalsiyumunda artış saptanıyor; idrarda mikroskobik hematüri var.\n\nBu bulgularla ilgili en doğru yorum hangisidir?",
+     "secenekler": {
+      "A": "Spesifik olmayan bu sistemik bulgular altta yatan RHK'yı düşündürmeli ve tanı gecikmesine neden olabilir",
+      "B": "Bulgular kesin olarak primer hiperparatiroidiyi gösterir",
+      "C": "Polisitemi vera tanısı için yeterlidir",
+      "D": "Bulgular yalnızca enfeksiyonla açıklanır",
+      "E": "Bu tablo benign onkositomaya özgüdür"
+     },
+     "dogru": "A",
+     "aciklama": "Ateş, polisitemi ve hiperkalsemi RHK'nın paraneoplastik bulgularıdır; spesifik olmadıkları için tanı gecikebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: hematüri ile birlikte RHK araştırılmalıdır.",
+      "B": "Hiperkalsemi paraneoplastik de olabilir; tek başına hiperparatiroidiyi kanıtlamaz.",
+      "C": "Polisitemi eritropoietin üretimine bağlı sekonder olabilir.",
+      "D": "Polisitemi ve hiperkalsemi enfeksiyonla açıklanmaz.",
+      "E": "Onkositoma bu paraneoplastik tabloyla tanımlanmaz."
+     },
+     "bilgi": [
+      5,
+      30,
+      31,
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 16,
+   "metin": "RHK'nın sık metastaz bölgelerini ve klinik önemini kavramak",
+   "sorular": [
+    {
+     "id": "k1-45-q46",
+     "kazanim": 16,
+     "zorluk": "kolay",
+     "soru": "Renal hücreli karsinomun en sık metastaz yaptığı bölgeler hangileridir?",
+     "secenekler": {
+      "A": "Akciğerler ve kemikler",
+      "B": "Dalak ve over",
+      "C": "Deri ve kas",
+      "D": "Tiroid ve meme",
+      "E": "Testis ve prostat"
+     },
+     "dogru": "A",
+     "aciklama": "RHK'nın en sık metastaz bölgeleri akciğerler ve kemiklerdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: hematojen yayılımla akciğer ve kemik tutulur.",
+      "B": "Dalak ve over sık metastaz bölgeleri değildir.",
+      "C": "Deri ve kas nadir metastaz bölgeleridir.",
+      "D": "Tiroid ve meme metastazı nadirdir.",
+      "E": "Testis ve prostat sık RHK metastaz bölgesi değildir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q47",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "RHK'da metastazların klinik önemi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Metastaza bağlı semptomlar bazen ilk başvuru nedeni olabilir",
+      "B": "Metastaz yalnızca ölümden sonra saptanır",
+      "C": "Uzak metastaz erken evre göstergesidir",
+      "D": "Metastazlar yalnızca lenf noduna olur",
+      "E": "Metastaz tanıyı her zaman kolaylaştırır ve geciktirmez"
+     },
+     "dogru": "A",
+     "aciklama": "RHK sessiz seyredebildiğinden hasta akciğer veya kemik metastazının semptomlarıyla başvurabilir; uzak metastaz ileri evreyi gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: patolojik kırık ya da öksürük ilk bulgu olabilir.",
+      "B": "Metastazlar yaşamda klinik olarak saptanır.",
+      "C": "Uzak metastaz ileri evre göstergesidir.",
+      "D": "Hematojen yayılım akciğer ve kemiklere olur.",
+      "E": "Metastaz bulguları spesifik olmayıp tanıyı geciktirebilir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q48",
+     "kazanim": 16,
+     "zorluk": "zor",
+     "soru": "Patolojik femur kırığı ile başvuran 62 yaşında hastanın kırık bölgesinden alınan biyopside, belirgin hücre membranlı, berrak sitoplazmalı hücrelerden oluşan ve ince damarlı stroma ile ayrılmış yuvalar görülüyor.\n\nPrimer tümörün en olası yeri ve tipi hangisidir?",
+     "secenekler": {
+      "A": "Böbrek – berrak hücreli renal hücreli karsinom",
+      "B": "Prostat – adenokarsinom",
+      "C": "Tiroid – papiller karsinom",
+      "D": "Akciğer – küçük hücreli karsinom",
+      "E": "Böbrek – onkositoma"
+     },
+     "dogru": "A",
+     "aciklama": "Kemik metastazında berrak sitoplazmalı, belirgin membranlı ve zengin damarlı stromalı yuvalar berrak hücreli RHK'yı düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: RHK kemik metastazı ile ilk kez tanınabilir.",
+      "B": "Prostat metastazları genellikle osteoblastiktir ve bu morfolojiyi göstermez.",
+      "C": "Papiller tiroid karsinomunda çekirdek değişiklikleri ve papiller yapı beklenir.",
+      "D": "Küçük hücreli karsinom küçük, dar sitoplazmalı hücrelerden oluşur.",
+      "E": "Onkositoma benigndir ve metastaz yapmaz."
+     },
+     "bilgi": [
+      26,
+      28,
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 17,
+   "metin": "Onkositoma, anjiyomiyolipom ve Wilms tümörünün temel özelliklerini ve klinik önemini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-45-q49",
+     "kazanim": 17,
+     "zorluk": "kolay",
+     "soru": "Kahverengi kesit yüzü, ince taneli eozinofilik sitoplazma ve merkezi yıldız şeklinde skar ile karakterize benign böbrek tümörü hangisidir?",
+     "secenekler": {
+      "A": "Onkositoma",
+      "B": "Anjiyomiyolipom",
+      "C": "Berrak hücreli RHK",
+      "D": "Wilms tümörü",
+      "E": "Papiller adenom"
+     },
+     "dogru": "A",
+     "aciklama": "Onkositoma bol mitokondri içeren, kahverengi kesitli ve merkezi yıldız skarlı benign tümördür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tanım onkositomanın klasik özellikleridir.",
+      "B": "Anjiyomiyolipom damar, düz kas ve yağ içerir.",
+      "C": "Berrak hücreli RHK sarı-turuncu kesit yüzlüdür.",
+      "D": "Wilms tümörü çocuklarda görülen malign tümördür.",
+      "E": "Papiller adenom küçük (<0,5 cm) kortikal lezyondur."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q50",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Anjiyomiyolipom ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Perivasküler hücrelerden köken alır ve tüberöz skleroz kompleksi ile ilişkilidir",
+      "B": "VHL hastalığının tipik böbrek tümörüdür",
+      "C": "Malign tümör olup sık metastaz yapar",
+      "D": "Çocukluk çağının en sık böbrek tümörüdür",
+      "E": "Merkezi yıldız skar içerir"
+     },
+     "dogru": "A",
+     "aciklama": "Anjiyomiyolipom perisitlerden köken alır, tüberöz skleroz ile birlikte görülür; büyük lezyonlarda spontan kanama riski vardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: köken ve sendrom ilişkisi doğru verilmiştir.",
+      "B": "VHL hastalığının böbrek tümörü berrak hücreli karsinomdur.",
+      "C": "Anjiyomiyolipom benigndir.",
+      "D": "Çocukluğun en sık böbrek tümörü Wilms tümörüdür.",
+      "E": "Merkezi yıldız skar onkositomanın özelliğidir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-45-q51",
+     "kazanim": 17,
+     "zorluk": "zor",
+     "soru": "Onkositoma, anjiyomiyolipom ve Wilms tümörü ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Onkositoma hücreleri mitokondriyal kompleks I'te yıkıcı mutasyonlar taşır",
+      "B": "Çoklu onkositik nodüllü hastaların bir kısmında eş zamanlı RHK bulunabilir",
+      "C": "Büyük anjiyomiyolipomlarda spontan kanama riski vardır",
+      "D": "Wilms tümörü 10 yaş altı çocuklarda en sık görülen üçüncü solid kanserdir",
+      "E": "Wilms tümörü erişkinlerde en sık görülen böbrek tümörüdür"
+     },
+     "dogru": "E",
+     "aciklama": "Wilms tümörü çocukluk çağının en sık böbrek tümörüdür; erişkinde nadirdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: mitokondriyal proliferasyon onkositik morfolojiyi açıklar.",
+      "B": "Doğru ifade: %10–30 olguda eş zamanlı RHK olabilir.",
+      "C": "Doğru ifade: kanama riski büyük lezyonlarda önemlidir.",
+      "D": "Doğru ifade: çocuklarda sık görülen solid tümördür.",
+      "E": "Yanlış ifade (aranan cevap): erişkinde nadirdir."
+     },
+     "bilgi": [
+      34,
+      35,
+      37,
+      38
+     ],
+     "benzer_cikmis": [
+      "d3-b-107"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-107",
+     "soru": "Wilms tümörü ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "WAGR sendromu, Denys-Drash sendromu ve Beckwith-Wiedemann sendromu gibi konjenital malformasyon sendromlarında görülme sıklığı artmıştır.",
+      "B": "Lezyonların çoğunda blastemal, stromal ve epitelyal hücre tiplerinin trifazik kombinasyonu görülür.",
+      "C": "Çocuklarda en sık görülen primer böbrek tümörüdür.",
+      "D": "Nefrektomi ile tümörün çıkarılmasına karşın hastaların %50'sinden azı 5 yıl yaşar.",
+      "E": "Tümörlerin yaklaşık %5'inde prognozla yakın ilişkili olan anaplazi odakları vardır."
+     },
+     "cevap": "D"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 51,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:13"
+}

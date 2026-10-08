@@ -1,0 +1,857 @@
+{
+ "id": "k1-56-memenin-benign-hastaliklari",
+ "sira": 56,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Memenin Benign Hastalıkları",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-12",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Memenin normal yapısını (terminal duktal lobüler ünite, intralobüler/interlobüler stroma) tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-56-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Memenin fonksiyonel birimi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Meme başı derisi",
+      "B": "İnterlobüler yağ dokusu",
+      "C": "İntralobüler stroma ile desteklenen lobül (terminal duktal lobüler ünite)",
+      "D": "Pektoral kas",
+      "E": "Aksiller lenf nodu"
+     },
+     "dogru": "C",
+     "aciklama": "Özelleşmiş intralobüler stroma ile desteklenen lobül memenin fonksiyonel bölümüdür; laktasyonda lüminal epitel süt üretir.",
+     "sik_aciklamalari": {
+      "A": "Meme başı derisi salgı birimi değildir.",
+      "B": "İnterlobüler stroma meme boyutunu belirler, fonksiyonel birim değildir.",
+      "C": "Doğru: TDLU memenin fonksiyonel birimidir.",
+      "D": "Pektoral kas meme dokusu değildir.",
+      "E": "Lenf nodu drenaj yapısıdır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Meme boyutunu belirleyen ve pubertede artıp yaşla involüsyona uğrayan yapı hangisidir?",
+     "secenekler": {
+      "A": "Lüminal epitel",
+      "B": "İntralobüler stroma",
+      "C": "Miyoepitelyal hücreler",
+      "D": "İnterlobüler stroma",
+      "E": "Büyük laktiferöz duktuslar"
+     },
+     "dogru": "D",
+     "aciklama": "İnterlobüler stroma pubertede artar, yaşla involüsyona uğrar ve meme boyutunu belirler.",
+     "sik_aciklamalari": {
+      "A": "Lüminal epitel süt üretir.",
+      "B": "İntralobüler stroma lobülü destekleyen özelleşmiş stromadır.",
+      "C": "Miyoepitelyal hücreler sütün boşaltılmasını sağlar.",
+      "D": "Doğru: meme boyutundaki değişim bu stromaya bağlıdır.",
+      "E": "Duktuslar meme boyutunu belirlemez."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Meme lezyonları ve köken aldıkları doku eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Fibroadenom – intralobüler stroma",
+      "B": "Fibroadenom – interlobüler stroma kökenli monofazik tümör",
+      "C": "Lipom – interlobüler stroma",
+      "D": "Radyoterapi sonrası anjiosarkom – interlobüler stroma",
+      "E": "Filloides tümör – intralobüler stroma"
+     },
+     "dogru": "B",
+     "aciklama": "Fibroadenom intralobüler stromadan köken alan bifazik bir tümördür; interlobüler stroma lezyonları monofaziktir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: fibroadenom intralobüler stroma kökenlidir.",
+      "B": "Yanlış eşleştirme (aranan cevap): fibroadenom bifazik ve intralobüler kökenlidir.",
+      "C": "Doğru eşleştirme: lipom interlobüler stroma lezyonudur.",
+      "D": "Doğru eşleştirme: anjiosarkom interlobüler stromanın tek malignitesidir.",
+      "E": "Doğru eşleştirme: filloides da intralobüler stromadan gelişir."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": [
+      "ed720d8c8d25"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "ed720d8c8d25",
+     "soru": "Meme hastalıkları patolojisi, meme lezyonları ve köken aldıkları doku eşleşmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Terminal duktal lobülar ünite- duktal ektazi",
+      "B": "İnterlobular stromaYağ nekrozu",
+      "C": "Lobular stromaFilloides tümör",
+      "D": "Laktiferöz sinüsSoliter duktal papillom",
+      "E": "Terminal duktal lobülar ünite- Atipik hiperplazi"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Meme hastalıklarının klinik bulgularını ve yaş ile malignite ilişkisini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-56-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Patolojik meme başı akıntısına en sık neden olan benign lezyon hangisidir?",
+     "secenekler": {
+      "A": "Fibroadenom",
+      "B": "İntraduktal papillom",
+      "C": "Yağ nekrozu",
+      "D": "Basit kist",
+      "E": "Lipom"
+     },
+     "dogru": "B",
+     "aciklama": "Meme başı altındaki büyük duktuslarda gelişen papillom patolojik akıntının en sık nedenidir.",
+     "sik_aciklamalari": {
+      "A": "Fibroadenom kitle yapar, akıntı yapmaz.",
+      "B": "Doğru: intraduktal papillom en sık nedendir.",
+      "C": "Yağ nekrozu ağrısız kitle oluşturur.",
+      "D": "Basit kist akıntının tipik nedeni değildir.",
+      "E": "Lipom akıntı yapmaz."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki meme başı akıntısı özelliklerinden hangisi malignite açısından en fazla endişe uyandırır?",
+     "secenekler": {
+      "A": "Laktasyon döneminde süt gelmesi",
+      "B": "Bilateral, sıkmakla gelen seröz akıntı",
+      "C": "Birçok kanaldan gelen süt benzeri akıntı",
+      "D": "Tek taraflı, spontan ve kanlı akıntı",
+      "E": "Menstrüasyonla ilişkili meme ağrısı"
+     },
+     "dogru": "D",
+     "aciklama": "Tek taraflı, spontan, tek duktus kaynaklı ve kanlı akıntı patolojiktir ve malignite açısından endişe uyandırır.",
+     "sik_aciklamalari": {
+      "A": "Laktasyon fizyolojiktir.",
+      "B": "Bu özellikler fizyolojik akıntıya aittir.",
+      "C": "Çok kanallı akıntı fizyolojiktir.",
+      "D": "Doğru: patolojik akıntının özellikleridir.",
+      "E": "Döngüsel mastalji benign bir semptomdur."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Meme semptomlarında yaş ve malignite ilişkisi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Meme başı akıntısının kansere bağlı olma riski 60 yaş üstünde azalır",
+      "B": "Malignite olasılığı yaşla azalır",
+      "C": "Ele gelen kitlelerin kansere bağlı olma olasılığı 40 yaş altında ~%10 iken ileri yaşta ~%60'a çıkar",
+      "D": "Ağrılı kitlelerin çoğu maligndir",
+      "E": "Düzgün sınırlı kitleler her zaman benigndir ve incelenmesi gerekmez"
+     },
+     "dogru": "C",
+     "aciklama": "Malignite olasılığı yaşla artar; akıntı için risk 60 yaş altında %7, üstünde %30'dur.",
+     "sik_aciklamalari": {
+      "A": "60 yaş üstünde risk %30'a çıkar.",
+      "B": "Malignite olasılığı yaşla artar.",
+      "C": "Doğru: yaş semptom değerlendirmesinde temel belirleyicidir.",
+      "D": "Ağrılı kitlelerin tama yakını benigndir.",
+      "E": "Bazı kanserler düzgün sınırlıdır; tüm kitleler incelenmelidir."
+     },
+     "bilgi": [
+      5,
+      9,
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "İnflamatuar proçesleri (akut mastit, yağ nekrozu) ayırt edebilmek",
+   "sorular": [
+    {
+     "id": "k1-56-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Akut mastitin en sık etkeni hangisidir?",
+     "secenekler": {
+      "A": "Mycobacterium tuberculosis",
+      "B": "Escherichia coli",
+      "C": "Candida albicans",
+      "D": "Staphylococcus aureus",
+      "E": "Streptococcus pneumoniae"
+     },
+     "dogru": "D",
+     "aciklama": "Meme hastalığına herhangi bir sıklıkta yol açan tek enfeksiyöz etken S. aureus'tur; emzirmenin ilk haftalarında meme başı fissürlerinden girer.",
+     "sik_aciklamalari": {
+      "A": "Tüberküloz memede nadirdir.",
+      "B": "E. coli meme enfeksiyonunun tipik etkeni değildir.",
+      "C": "Kandida mastitin sık etkeni değildir.",
+      "D": "Doğru: laktasyon mastiti ve apselerinin etkenidir.",
+      "E": "Pnömokok mastit etkeni değildir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Travma öyküsü olan yaşlı kadında memede ağrısız sert kitle ve mamografide kalsifikasyonlar saptanıyor. Biyopside nekrotik yağ hücrelerini çevreleyen köpüksü histiyositler, yabancı cisim dev hücreleri ve hemosiderin görülüyor.\n\nEn olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Akut mastit",
+      "B": "Yağ nekrozu",
+      "C": "İnvaziv duktal karsinom",
+      "D": "Fibroadenom",
+      "E": "Filloides tümör"
+     },
+     "dogru": "B",
+     "aciklama": "Yağ nekrozu travma sonrası gelişir; ağrısız kitle ve kalsifikasyonlarla kanseri taklit eder; köpüksü histiyositler tanının anahtarıdır.",
+     "sik_aciklamalari": {
+      "A": "Akut mastit laktasyonda ağrılı, eritemli tablodur.",
+      "B": "Doğru: klinik ve histoloji yağ nekrozuna uyar.",
+      "C": "Karsinomda atipik epitel hücreleri beklenir.",
+      "D": "Fibroadenom bifazik tümördür.",
+      "E": "Filloides selüler stromalı bifazik tümördür."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Memenin inflamatuar lezyonları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Meme inflamasyonu seyrektir",
+      "B": "Akut mastit çoğunlukla laktasyon döneminde görülür",
+      "C": "Yağ nekrozu ve mastitler meme kanseri riskini belirgin artırır",
+      "D": "Çoğu akut mastit antibiyotik ve sütün boşaltılmasıyla düzelir",
+      "E": "İnflamasyonun önemli taklitçisi inflamatuar meme karsinomudur"
+     },
+     "dogru": "C",
+     "aciklama": "Mastit tipleri ve travmatik yağ nekrozunun hiçbirinde kanser riskinde artış yoktur; esas önemleri maligniteyi taklit etmeleridir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: inflamatuar lezyonlar seyrektir.",
+      "B": "Doğru ifade: laktasyon ve emzirme döneminde görülür.",
+      "C": "Yanlış ifade (aranan cevap): kanser riskini artırmazlar.",
+      "D": "Doğru ifade: tedavi genellikle yeterlidir.",
+      "E": "Doğru ifade: inflamatuar karsinom mastiti taklit eder."
+     },
+     "bilgi": [
+      6,
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "İntralobüler ve interlobüler stroma kökenli neoplazileri sınıflayabilmek",
+   "sorular": [
+    {
+     "id": "k1-56-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "İnterlobüler stromal hücrelerden köken alan ve memede lokal radyoterapi sonrası gelişen malign tümör hangisidir?",
+     "secenekler": {
+      "A": "Fibroadenom",
+      "B": "Filloides tümör",
+      "C": "Anjiosarkom",
+      "D": "Lipom",
+      "E": "Hemanjiom"
+     },
+     "dogru": "C",
+     "aciklama": "İnterlobüler stromal hücrelerden köken alan tek malignite radyoterapi sonrası gelişen anjiosarkomdur.",
+     "sik_aciklamalari": {
+      "A": "Fibroadenom intralobüler stroma kökenli benign tümördür.",
+      "B": "Filloides intralobüler stroma kökenlidir.",
+      "C": "Doğru: radyoterapi öyküsü anjiosarkom için önemlidir.",
+      "D": "Lipom interlobüler kökenli benign tümördür.",
+      "E": "Hemanjiom interlobüler kökenli benign tümördür."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İntralobüler stroma kökenli tümörler ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tamamı maligndir",
+      "B": "Monofaziktir ve hemanjiom ile lipomu içerir",
+      "C": "Yalnızca epitelyal komponent içerir",
+      "D": "Fibroadenom ve filloides tümörü içerir ve bifaziktir",
+      "E": "Radyoterapi sonrası gelişir"
+     },
+     "dogru": "D",
+     "aciklama": "İntralobüler stromadan gelişen tümörler fibroadenom ve filloides tümörüdür; hem stromal hem epitelyal komponent içerir.",
+     "sik_aciklamalari": {
+      "A": "Fibroadenom benigndir; filloides çoğunlukla benigndir.",
+      "B": "Bu tanım interlobüler stroma lezyonlarına aittir.",
+      "C": "Stromal ve epitelyal komponent birliktedir.",
+      "D": "Doğru: bifazik tümörlerdir.",
+      "E": "Radyoterapi sonrası gelişen tümör anjiosarkomdur."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": [
+      "4815c43f2af1"
+     ]
+    },
+    {
+     "id": "k1-56-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "İntralobüler stromal tümörlerin karakteristik bifazik morfolojisi hangi mekanizma ile açıklanır?",
+     "secenekler": {
+      "A": "Epitelyal hücrelerin primer malign proliferasyonu",
+      "B": "Neoplastik lobüler fibroblast proliferasyonunun lobüler epitelde reaktif proliferasyonu uyarması ve epiteli iterek yarık benzeri yapılar oluşturması",
+      "C": "Yağ dokusunun nekrozu",
+      "D": "İnterlobüler stromanın radyasyon hasarı",
+      "E": "Miyoepitelyal hücre kaybı"
+     },
+     "dogru": "B",
+     "aciklama": "Neoplastik bileşen stromal fibroblastlardır; epitel proliferasyonu reaktiftir ve stroma epiteli iterek yarıklar oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Epitel proliferasyonu reaktiftir, neoplastik değildir.",
+      "B": "Doğru: bifazik tümörlerin patogenezidir.",
+      "C": "Yağ nekrozu inflamatuar bir lezyondur.",
+      "D": "Radyasyon anjiosarkomla ilişkilidir.",
+      "E": "Glandlar normal miyoepitel ve lüminal hücrelerle döşelidir."
+     },
+     "bilgi": [
+      17,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "4815c43f2af1",
+     "soru": "İntralobüler stromadan köken alan bifazik tümör hangisidir?",
+     "secenekler": {
+      "A": "Filloides",
+      "B": "Fibroadenom",
+      "C": "İnsitu duktal karsinom",
+      "D": "Papillom",
+      "E": "Radial skar"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Fibroadenom ile filloides tümörün özelliklerini karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-56-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Genç kadında kolayca hareket ettirilebilen, keskin sınırlı, lastik kıvamında meme kitlesinin en olası tanısı hangisidir?",
+     "secenekler": {
+      "A": "İnvaziv karsinom",
+      "B": "Filloides tümör",
+      "C": "Fibroadenom",
+      "D": "Yağ nekrozu",
+      "E": "Anjiosarkom"
+     },
+     "dogru": "C",
+     "aciklama": "Fibroadenom memenin en sık benign tümörüdür; 3. dekatta pik yapar ve mobil, iyi sınırlı kitle oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Karsinom genellikle düzensiz sınırlı ve ileri yaştadır.",
+      "B": "Filloides daha ileri yaşta ve hızlı büyüyen kitledir.",
+      "C": "Doğru: klinik tablo fibroadenoma uyar.",
+      "D": "Yağ nekrozu yaşlılarda travma sonrası görülür.",
+      "E": "Anjiosarkom radyoterapi sonrası gelişir."
+     },
+     "bilgi": [
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": [
+      "3ba09c3bc501",
+      "d3-b-117"
+     ]
+    },
+    {
+     "id": "k1-56-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Fibroadenom ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Östrojen aktivitesi artışı etkilidir",
+      "B": "Gebelikte büyüyebilir, menopoz sonrası geriler",
+      "C": "En sık üst dış kadranda yerleşir",
+      "D": "Hastaların ~%10'unda multipldir",
+      "E": "Stroması yüksek selülarite, mitoz ve nükleer pleomorfizm gösterir"
+     },
+     "dogru": "E",
+     "aciklama": "Fibroadenomda stroma düşük selüleriteli ve atipisizdir; yüksek selülarite ve pleomorfizm filloides tümörü düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: hormon duyarlı bir tümördür.",
+      "B": "Doğru ifade: hormonal duruma göre değişir.",
+      "C": "Doğru ifade: üst dış kadran sık yerleşim yeridir.",
+      "D": "Doğru ifade: multipl olabilir.",
+      "E": "Yanlış ifade (aranan cevap): bu özellikler filloidese aittir."
+     },
+     "bilgi": [
+      18,
+      19,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q16",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Filloides tümör ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sıklıkla aksiller lenf nodlarına metastaz yapar",
+      "B": "Fibroadenomun malign dönüşümüyle gelişir",
+      "C": "Tamamı maligndir",
+      "D": "De novo gelişir; malign olanlar uzak metastaz yapabilir ancak aksiller lenf nodu metastazı yapmaz",
+      "E": "Nüks oranı fibroadenomdan düşüktür"
+     },
+     "dogru": "D",
+     "aciklama": "Filloides tümör de novo gelişir, çoğu benigndir; ~%15'i malign olup uzak metastaz yapabilir, aksiller metastaz yapmaz.",
+     "sik_aciklamalari": {
+      "A": "Aksiller lenf nodu metastazı yapmaz.",
+      "B": "Fibroadenomdan gelişmez.",
+      "C": "Genellikle benigndir.",
+      "D": "Doğru: filloidesin biyolojik davranışı doğru verilmiştir.",
+      "E": "Nüks oranı yüksektir."
+     },
+     "bilgi": [
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Filloides tümörü fibroadenomdan ayırmada aşağıdakilerden hangisi kullanılamaz?",
+     "secenekler": {
+      "A": "Stromal selüleritenin yüksekliği",
+      "B": "Bifazik (stromal + epitelyal) yapı",
+      "C": "Yaprak şeklinde çıkıntılar",
+      "D": "Mitoz ve nükleer pleomorfizm",
+      "E": "Daha ileri yaş ve hızlı büyüme"
+     },
+     "dogru": "B",
+     "aciklama": "Her iki tümör de bifazik olduğundan bifaziklik ayırıcı özellik değildir.",
+     "sik_aciklamalari": {
+      "A": "Filloidesta stroma daha selülerdir; ayırıcıdır.",
+      "B": "Doğru: her ikisi de bifaziktir; ayırıcı değildir.",
+      "C": "Yaprak benzeri projeksiyonlar filloidesi düşündürür.",
+      "D": "Mitoz ve pleomorfizm filloidesin özelliğidir.",
+      "E": "Yaş ve büyüme hızı ayırıcıdır."
+     },
+     "bilgi": [
+      21,
+      23
+     ],
+     "benzer_cikmis": [
+      "e9b718545ebe",
+      "c79cbfcaafa3"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "3ba09c3bc501",
+     "soru": "Meme hastalıkları patolojisi hem stromal hem de epitel komponentlerin proliferasyonu ile karakterli memenin en sık benign tümörü hangisidir?",
+     "secenekler": {
+      "A": "Fibroadenom",
+      "B": "Papillom",
+      "C": "İnsitu duktal karsinom",
+      "D": "Radial skar",
+      "E": "Filloides"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "d3-b-117",
+     "soru": "Hem stromal hem de epitelyal komponentin proliferasyonu ile karakterli bifazik bir tümör olan, genellikle genç kadınlarda görülen ve kolayca hareket ettirilebilen mobil kitleler oluşturan memenin en sık benign tümörü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hemanjiom",
+      "B": "Lipom",
+      "C": "İnvaziv duktal karsinom",
+      "D": "Fibrokistik değişiklikler",
+      "E": "Fibroadenom"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "e9b718545ebe",
+     "soru": "Köken alan bifazik tümör hangisidir?",
+     "secenekler": {
+      "A": "Fibroadenom",
+      "B": "İnsitu duktal karsinom",
+      "C": "Papillom",
+      "D": "Radial skar",
+      "E": "Filloides"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "c79cbfcaafa3",
+     "soru": "Bifazik tümör hangisidir?",
+     "secenekler": {
+      "A": "Fibroadenom",
+      "B": "İnsitu duktal karsinom",
+      "C": "Papillom",
+      "D": "Radial skar",
+      "E": "Filloides"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Benign epitelyal lezyonları kanser riskine göre gruplandırabilmek",
+   "sorular": [
+    {
+     "id": "k1-56-q17",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki meme lezyonlarından hangisi en yüksek kanser riski taşır?",
+     "secenekler": {
+      "A": "Atipik duktal hiperplazi",
+      "B": "Basit kist",
+      "C": "Apokrin metaplazi",
+      "D": "Sklerozan adenozis",
+      "E": "Fibrozis"
+     },
+     "dogru": "A",
+     "aciklama": "Atipili proliferatif hastalık (ADH, ALH) yaklaşık 5 kat risk artışı ile en yüksek riskli benign lezyondur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: atipili hiperplazi belirgin risk artışı yapar.",
+      "B": "Basit kist non-proliferatif olup risk artırmaz.",
+      "C": "Apokrin metaplazi risk artırmaz.",
+      "D": "Sklerozan adenozis hafif risk artışı (1,5–2 kat) yapar.",
+      "E": "Fibrozis risk artırmaz."
+     },
+     "bilgi": [
+      30,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q18",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisinde meme kanseri riski artmaz?",
+     "secenekler": {
+      "A": "Apokrin metaplazili basit kist",
+      "B": "Sklerozan adenozis",
+      "C": "Atipik epitelyal hiperplazi",
+      "D": "Komplike sklerozan lezyon (radial skar)",
+      "E": "Papillom"
+     },
+     "dogru": "A",
+     "aciklama": "Non-proliferatif değişiklikler (kist, apokrin metaplazi, adenozis, fibrozis) kanser riskini artırmaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru: non-proliferatif lezyondur.",
+      "B": "Atipisiz proliferatif hastalıktır; hafif risk artışı vardır.",
+      "C": "Atipili proliferatif hastalıktır; belirgin risk artışı vardır.",
+      "D": "Atipisiz proliferatif hastalıktır; hafif risk artışı vardır.",
+      "E": "Atipisiz proliferatif hastalıktır; hafif risk artışı vardır."
+     },
+     "bilgi": [
+      25,
+      29,
+      32
+     ],
+     "benzer_cikmis": [
+      "93f2378c2fac",
+      "dd657daf6805"
+     ]
+    },
+    {
+     "id": "k1-56-q19",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Meme benign epitelyal lezyonlarının risk sınıflaması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Epitel hiperplazisi iki hücre tabakasından fazla hücre bulunmasıdır",
+      "B": "Atipisiz proliferatif hastalık 1,5–2 kat risk artışı yapar",
+      "C": "Atipili lobüler hiperplazi LCIS'e benzer ancak daha sınırlı yayılım gösterir",
+      "D": "Atipili hiperplazi her iki memede risk artışı yapar",
+      "E": "Atipili hiperplazi yalnızca lezyonun bulunduğu memede risk artırır"
+     },
+     "dogru": "E",
+     "aciklama": "Atipili proliferatif hastalık her iki memede orta düzeyde risk artışı yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: normalde duktuslar iki katmanlı döşelidir.",
+      "B": "Doğru ifade: hafif risk artışıdır.",
+      "C": "Doğru ifade: ALH LCIS'e, ADH DCIS'e benzer.",
+      "D": "Doğru ifade: risk bilateraldir.",
+      "E": "Yanlış ifade (aranan cevap): risk her iki memede artar."
+     },
+     "bilgi": [
+      24,
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "93f2378c2fac",
+     "soru": "Meme hastalıkları patolojisi Proliferatif/nonproliferatif hastalıklardan hangisinde kanser riski artmaz?",
+     "secenekler": {
+      "A": "Sklerozan adenozis",
+      "B": "Atipik epitelyal hiperplazi",
+      "C": "Radial skar",
+      "D": "Apokrin metaplazi",
+      "E": "Şiddetli hiperplazi"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "dd657daf6805",
+     "soru": "Proliferatif/nonproliferatif hastalıklardan hangisinde kanser riski artmaz?",
+     "secenekler": {
+      "A": "Sklerozan adenozis",
+      "B": "Atipik epitelyal hiperplazi",
+      "C": "Radial skar",
+      "D": "Apokrin metaplazi"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Fibrokistik değişikliklerin morfolojisini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-56-q20",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Fibrokistik değişikliklerde açılmamış kistlerin makroskopik görünümüne verilen ad hangisidir?",
+     "secenekler": {
+      "A": "Mavi kubbe kistleri",
+      "B": "Çikolata kistleri",
+      "C": "Dermoid kistler",
+      "D": "Nabothian kistleri",
+      "E": "Gartner kistleri"
+     },
+     "dogru": "A",
+     "aciklama": "Fibrokistik değişikliklerde açılmamış kistler kahverengiden maviye renk değiştirir ve mavi kubbe kistleri olarak adlandırılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: fibrokistik değişikliğin tipik makroskopisidir.",
+      "B": "Çikolata kisti over endometriozisidir.",
+      "C": "Dermoid kist matür kistik teratomdur.",
+      "D": "Nabothian kisti servikste görülür.",
+      "E": "Gartner kisti vajinada görülür."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q21",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Fibrokistik değişikliklerin temel morfolojik bileşenleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Kistik duktuslar",
+      "B": "Apokrin metaplazi",
+      "C": "Fibrozis",
+      "D": "Adenozis",
+      "E": "Stromal invazyon gösteren atipik hücreler"
+     },
+     "dogru": "E",
+     "aciklama": "Fibrokistik değişikliğin temel bileşenleri kistik duktuslar, apokrin metaplazi, fibrozis ve adenozistir.",
+     "sik_aciklamalari": {
+      "A": "Temel bileşendir: kistik duktuslar.",
+      "B": "Temel bileşendir; kistleri döşeyen hücrelerde görülür.",
+      "C": "Temel bileşendir; kist rüptürü sonrası gelişir.",
+      "D": "Temel bileşendir: adenozis.",
+      "E": "Doğru: stromal invazyon karsinomu gösterir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q22",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Fibrokistik değişikliklerle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Genellikle multifokal-bilateraldir; kist içi sekresyonların kalsifikasyonu mamografide mikrokalsifikasyon olarak görülebilir",
+      "B": "Oral kontraseptif kullanımı insidansı belirgin artırır",
+      "C": "Her zaman tek taraflı ve tek odaklıdır",
+      "D": "Prekanseröz lezyon olarak kabul edilir",
+      "E": "Kistler genellikle 10 cm'den büyüktür"
+     },
+     "dogru": "A",
+     "aciklama": "Fibrokistik değişiklikler multifokal ve bilateraldir; kistler 1–5 cm'dir ve sekresyon kalsifikasyonları mamografide görülebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: morfolojik ve radyolojik özellikleri doğru verilmiştir.",
+      "B": "OKS insidansı artırmaz, hatta riski azaltır.",
+      "C": "Genellikle multifokal-bilateraldir.",
+      "D": "Non-proliferatif değişiklikler kanser riski taşımaz.",
+      "E": "Kist çapı genellikle 1–5 cm'dir."
+     },
+     "bilgi": [
+      26,
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Erkek memesinin patolojilerini (jinekomasti, kanser) özetleyebilmek",
+   "sorular": [
+    {
+     "id": "k1-56-q23",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Jinekomastinin temel nedeni hangisidir?",
+     "secenekler": {
+      "A": "Östrojen fazlalığı (östrojen-androjen dengesizliği)",
+      "B": "Androjen fazlalığı",
+      "C": "Bakteriyel enfeksiyon",
+      "D": "Travma",
+      "E": "Radyasyon"
+     },
+     "dogru": "A",
+     "aciklama": "Jinekomasti östrojen ile androjenler arasındaki dengesizlik sonucu stromal ve epitelyal hücre artışıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: temel neden göreceli östrojen fazlalığıdır.",
+      "B": "Androjen fazlalığı jinekomasti yapmaz.",
+      "C": "Enfeksiyon jinekomasti nedeni değildir.",
+      "D": "Travma jinekomasti nedeni değildir.",
+      "E": "Radyasyon jinekomasti nedeni olarak sayılmaz."
+     },
+     "bilgi": [
+      10,
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q24",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi jinekomasti etiyolojisinde yer almaz?",
+     "secenekler": {
+      "A": "Karaciğer sirozu",
+      "B": "Fonksiyonel testiküler tümör",
+      "C": "Klinefelter sendromu",
+      "D": "Anabolik steroid kullanımı",
+      "E": "Androjen fazlalığı yapan adrenal hiperplazi ile östrojen azalması"
+     },
+     "dogru": "E",
+     "aciklama": "Jinekomasti östrojen fazlalığına bağlıdır; siroz, fonksiyonel testis tümörü, Klinefelter ve anabolik steroidler başlıca nedenlerdir.",
+     "sik_aciklamalari": {
+      "A": "Siroz östrojen yıkımını azaltarak jinekomasti yapar.",
+      "B": "Fonksiyonel testis tümörleri hormon dengesini bozar.",
+      "C": "Klinefelter sendromu jinekomastiyle ilişkilidir.",
+      "D": "Anabolik steroidler jinekomasti yapabilir.",
+      "E": "Doğru: androjen fazlalığı ve östrojen azalması jinekomasti mekanizması değildir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-56-q25",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Erkek meme kanseri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Genellikle subareolar palpabl kitle şeklindedir",
+      "B": "Deri ve torasik duvarı sıklıkla invaze eder",
+      "C": "Tanı anında tümörlerin yaklaşık yarısı metastaz yapmıştır",
+      "D": "Morfolojik ve biyolojik olarak kadın karsinomlarına benzer",
+      "E": "Evreler eşleştirildiğinde prognozu kadınlara göre belirgin daha iyidir"
+     },
+     "dogru": "E",
+     "aciklama": "Evreler eşleştirildiğinde erkek meme kanserinin prognozu kadınlardakine benzerdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: subareolar kitle tipiktir.",
+      "B": "Doğru ifade: az meme dokusu nedeniyle invazyon sıktır.",
+      "C": "Doğru ifade: tanı sıklıkla gecikir.",
+      "D": "Doğru ifade: kadın karsinomlarına benzer.",
+      "E": "Yanlış ifade (aranan cevap): prognoz benzerdir."
+     },
+     "bilgi": [
+      33,
+      35
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 25,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:30"
+}

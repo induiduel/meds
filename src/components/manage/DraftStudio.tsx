@@ -634,7 +634,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
               <b className="text-[15px]">AI ile dönüştür</b>
               <div className="text-[12.5px] text-ink-3 truncate">{c.title || 'Adsız aday'} · {c.fragmentIds.length} parça · kaynaklara dayalı</div>
             </div>
-            <button type="button" aria-label="Kapat" onClick={() => !aiSaving && setAiFor(null)} className="w-9 h-9 rounded-full hover:bg-field flex items-center justify-center cursor-pointer"><X className="w-4 h-4" /></button>
+            <button type="button" aria-label="Kapat" onClick={() => !aiSaving && setAiFor(null)} className="ms-btn is-ghost is-icon"><X className="w-4 h-4" /></button>
           </div>
           <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain p-4 flex flex-col gap-4">
             <section className="flex flex-col gap-2">
@@ -665,7 +665,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                 Yerel modeller sırayla çalışır; ilk sonuç bulut ya da ilk biten modelden gelir.
               </span>
               <div className="flex items-center gap-2">
-                <button type="button" onClick={() => runAi(c)} disabled={loadingCount > 0} className="h-10 px-5 rounded-full bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer disabled:opacity-60">
+                <button type="button" onClick={() => runAi(c)} disabled={loadingCount > 0} className="ms-btn is-primary">
                   {loadingCount > 0 ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
                   {loadingCount > 0 ? `${loadingCount} model çalışıyor…` : results.length ? 'Yeniden üret' : 'Soruları üret'}
                 </button>
@@ -767,8 +767,8 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             <span className="text-[12.5px] text-ink-3 flex-1 min-w-[200px]">
               {aiPick.length ? `${aiPick.length} seçili · ana soru adayın taslağına yazılır, diğerleri alternatif olarak ayrı kaydedilir.` : 'Kaydetmek için sonuçları işaretle; birden çok seçebilirsin.'}
             </span>
-            <button type="button" onClick={() => setAiFor(null)} disabled={aiSaving} className="h-10 px-4 rounded-full bg-field text-[13.5px] font-semibold cursor-pointer">Kapat</button>
-            <button type="button" onClick={() => void saveAi(c)} disabled={aiSaving || aiPick.length === 0} className="h-10 px-5 rounded-full bg-accent hover:bg-accent-hover text-white text-[13.5px] font-semibold inline-flex items-center gap-2 cursor-pointer disabled:opacity-50">
+            <button type="button" onClick={() => setAiFor(null)} disabled={aiSaving} className="ms-btn">Kapat</button>
+            <button type="button" onClick={() => void saveAi(c)} disabled={aiSaving || aiPick.length === 0} className="ms-btn is-primary">
               {aiSaving && <Loader2 className="w-4 h-4 animate-spin" />}
               Seçilenleri kaydet{aiPick.length ? ` (${aiPick.length})` : ''}
             </button>
@@ -1573,34 +1573,34 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
         </div>
 
         <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-line">
-          <div role="radiogroup" aria-label="Durum" className="inline-flex bg-field rounded-full p-0.5">
+          <div role="radiogroup" aria-label="Durum" className="ms-seg">
             {(['open', 'ready'] as const).map((s) => (
-              <button key={s} type="button" role="radio" aria-checked={c.status === s} onClick={() => updateCand(c.id, { status: s })} className={`h-8 px-3 rounded-full text-[12.5px] cursor-pointer ${c.status === s ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2'}`}>
+              <button key={s} type="button" role="radio" aria-checked={c.status === s} onClick={() => updateCand(c.id, { status: s })}>
                 {STATUS[s].label}
               </button>
             ))}
           </div>
           <span className="flex-1" />
-          <button type="button" onClick={() => deleteCand(c.id)} className="h-9 px-3 rounded-full text-bad-text hover:bg-bad-soft text-[13px] font-semibold cursor-pointer inline-flex items-center gap-1.5">
-            <Trash2 className="w-4 h-4" /> Sil
+          <button type="button" onClick={() => deleteCand(c.id)} className="ms-btn is-danger">
+            <Trash2 /> Sil
           </button>
           <button
             type="button"
             onClick={() => void openAi(c)}
-            className="h-9 px-4 rounded-full bg-ink text-white text-[13px] font-semibold cursor-pointer inline-flex items-center gap-1.5"
+            className="ms-btn is-tonal"
             title="Bulut ve yerel AI modelleriyle soru ve alternatifler üret"
           >
-            <Bot className="w-4 h-4" /> AI ile dönüştür
+            <Bot /> AI ile dönüştür
           </button>
           <button
             type="button"
             disabled={busy === c.id}
             onClick={() => void convert(c)}
-            className="h-9 px-4 rounded-full bg-accent hover:bg-accent-hover text-white text-[13px] font-semibold cursor-pointer inline-flex items-center gap-1.5 disabled:opacity-60"
+            className="ms-btn is-primary"
             title="Parçaların geldiği taslakları tek soruda birleştirip bu alanlarla kaydeder"
           >
             {busy === c.id ? 'Kaydediliyor…' : c.status === 'done' ? 'Yeniden kaydet' : 'Soruya dönüştür'}
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight />
           </button>
         </div>
         {c.convertedQuestionId && <span className="text-[12px] text-ok">Kaydedildi · {c.convertedQuestionId}</span>}
@@ -1704,10 +1704,10 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
         {state.candidates.filter((c) => c.groupId === g.id).length} aday · {state.groups.filter((x) => x.parentId === g.id).length} alt konu
       </div>
       <div className="flex gap-2">
-        <button type="button" onClick={() => createGroup(g.id)} className="h-9 px-3 rounded-full bg-field text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer"><FolderPlus className="w-4 h-4" /> Alt konu</button>
-        <button type="button" onClick={() => createCandidate([], g.id)} className="h-9 px-3 rounded-full bg-field text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer"><Plus className="w-4 h-4" /> Aday</button>
+        <button type="button" onClick={() => createGroup(g.id)} className="ms-btn"><FolderPlus /> Alt konu</button>
+        <button type="button" onClick={() => createCandidate([], g.id)} className="ms-btn"><Plus /> Aday</button>
         <span className="flex-1" />
-        <button type="button" onClick={() => deleteGroup(g.id)} className="h-9 px-3 rounded-full text-bad-text hover:bg-bad-soft text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer"><Trash2 className="w-4 h-4" /> Sil</button>
+        <button type="button" onClick={() => deleteGroup(g.id)} className="ms-btn is-danger"><Trash2 /> Sil</button>
       </div>
       <span className="text-[12px] text-ink-3">Silince içindeki adaylar ve alt konular bir üst seviyeye taşınır.</span>
     </div>
@@ -1727,32 +1727,31 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
       {/* Başlık + araç çubuğu */}
       <div className="flex flex-wrap items-center gap-2">
         <div className="min-w-0 mr-auto">
-          <h2 className="m-0 font-display text-[22px] font-bold tracking-[-0.02em]">Taslak stüdyosu</h2>
-          <p className="m-0 text-[13px] text-ink-3">
+          <p className="m-0 text-[13px] text-ink-2">
             {committeeName || 'Kurul'} · {stats.frags} parça · <b className="text-ink">{stats.free}</b> eşlenmemiş · {stats.cands} aday · {stats.ready} hazır · {stats.done} soru oldu
           </p>
         </div>
-        <div role="tablist" aria-label="Görünüm" className="inline-flex bg-field rounded-full p-1">
+        <div role="tablist" aria-label="Görünüm" className="ms-seg">
           {VIEWS.map((v) => {
             const Icon = v.icon;
             return (
-              <button key={v.id} type="button" role="tab" aria-selected={view === v.id} onClick={() => setView(v.id)} className={`h-8 px-3 rounded-full text-[13px] inline-flex items-center gap-1.5 cursor-pointer ${view === v.id ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'}`}>
+              <button key={v.id} type="button" role="tab" aria-selected={view === v.id} onClick={() => setView(v.id)}>
                 <Icon className="w-4 h-4" /> {v.label}
               </button>
             );
           })}
         </div>
-        <button type="button" onClick={autoGroup} className="h-9 px-3.5 rounded-full bg-accent hover:bg-accent-hover text-white text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer" title="Eşlenmemiş benzer parçalardan aday öner">
-          <Sparkles className="w-4 h-4" /> Otomatik grupla
+        <button type="button" onClick={autoGroup} className="ms-btn is-primary" title="Eşlenmemiş benzer parçalardan aday öner">
+          <Sparkles /> Otomatik grupla
         </button>
-        <button type="button" onClick={() => createGroup(null, discF !== 'all' ? discF : '')} className="h-9 px-3 rounded-full bg-field text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer">
-          <FolderPlus className="w-4 h-4" /> Konu
+        <button type="button" onClick={() => createGroup(null, discF !== 'all' ? discF : '')} className="ms-btn">
+          <FolderPlus /> Konu
         </button>
         <span className="inline-flex">
-          <button type="button" onClick={undo} disabled={!past.current.length} aria-label="Geri al" title="Geri al (Ctrl+Z)" className="w-9 h-9 rounded-full hover:bg-field flex items-center justify-center disabled:opacity-40 cursor-pointer"><Undo2 className="w-4 h-4" /></button>
-          <button type="button" onClick={redo} disabled={!future.current.length} aria-label="Yinele" title="Yinele (Ctrl+Shift+Z)" className="w-9 h-9 rounded-full hover:bg-field flex items-center justify-center disabled:opacity-40 cursor-pointer"><Redo2 className="w-4 h-4" /></button>
-          <button type="button" onClick={exportJson} aria-label="Dışa aktar" title="Stüdyoyu JSON olarak indir" className="w-9 h-9 rounded-full hover:bg-field flex items-center justify-center cursor-pointer"><Download className="w-4 h-4" /></button>
-          <button type="button" onClick={() => importRef.current?.click()} aria-label="İçe aktar" title="JSON içe aktar" className="w-9 h-9 rounded-full hover:bg-field flex items-center justify-center cursor-pointer"><Upload className="w-4 h-4" /></button>
+          <button type="button" onClick={undo} disabled={!past.current.length} aria-label="Geri al" title="Geri al (Ctrl+Z)" className="ms-btn is-ghost is-icon"><Undo2 className="w-4 h-4" /></button>
+          <button type="button" onClick={redo} disabled={!future.current.length} aria-label="Yinele" title="Yinele (Ctrl+Shift+Z)" className="ms-btn is-ghost is-icon"><Redo2 className="w-4 h-4" /></button>
+          <button type="button" onClick={exportJson} aria-label="Dışa aktar" title="Stüdyoyu JSON olarak indir" className="ms-btn is-ghost is-icon"><Download className="w-4 h-4" /></button>
+          <button type="button" onClick={() => importRef.current?.click()} aria-label="İçe aktar" title="JSON içe aktar" className="ms-btn is-ghost is-icon"><Upload className="w-4 h-4" /></button>
           <input ref={importRef} type="file" accept="application/json" hidden onChange={(e) => e.target.files?.[0] && void importJson(e.target.files[0])} />
         </span>
       </div>
@@ -1805,12 +1804,12 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
         </aside>
 
         {/* Orta: görünüm */}
-        <main className="min-w-0 bg-white rounded-2xl shadow-sm p-3 sm:p-4" onClick={() => setPicked([])}>
+        <section aria-label="Stüdyo görünümü" className="min-w-0 bg-white rounded-2xl shadow-sm p-3 sm:p-4" onClick={() => setPicked([])}>
           {view === 'tree' && TreeView()}
           {view === 'board' && BoardView()}
           {view === 'flow' && FlowView()}
           {view === 'terms' && TermsView()}
-        </main>
+        </section>
 
         {/* Sağ: düzenleyici (geniş ekranda sabit, dar ekranda çekmece) */}
         {(sel && (selCand || selFrag || selGroup)) ? (
@@ -1822,10 +1821,10 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             >
               <div className="flex items-center gap-2 mb-3">
                 <CircleDot className="w-4 h-4 text-accent" />
-                <span className="text-[12px] font-semibold uppercase tracking-[.06em] text-ink-3 flex-1">
+                <span className="text-[13px] font-semibold text-ink-2 flex-1">
                   {selCand ? 'Soru adayı' : selFrag ? 'Parça' : 'Konu'}
                 </span>
-                <button type="button" aria-label="Kapat" onClick={() => { setSel(null); setInspectorOpen(false); }} className="w-8 h-8 rounded-full hover:bg-field flex items-center justify-center cursor-pointer"><X className="w-4 h-4" /></button>
+                <button type="button" aria-label="Kapat" onClick={() => { setSel(null); setInspectorOpen(false); }} className="ms-btn is-ghost is-icon is-sm"><X /></button>
               </div>
               {selCand && <React.Fragment key={selCand.id}>{CandidateEditor({ c: selCand })}</React.Fragment>}
               {selFrag && <React.Fragment key={selFrag.id}>{FragmentInspector({ f: selFrag })}</React.Fragment>}

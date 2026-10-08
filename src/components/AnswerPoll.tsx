@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { BarChart3, Check, Users } from 'lucide-react';
+import { BarChart3, Check, ShieldCheck, Users } from 'lucide-react';
 import { ApiService, AnswerVotes } from '../services/api';
 import { Highlight } from './ui/StemText';
 
@@ -44,6 +44,8 @@ interface Props {
   renderText?: (key: string, text: string) => React.ReactNode;
   /** Oylar her yüklendiğinde/değiştiğinde (ör. yönetici için öndeki şık) */
   onVotes?: (v: AnswerVotes) => void;
+  /** Yöneticinin kabul ettiği cevap: anket açık kalır, kabul edilen cevap ve topluluk karşılaştırması gösterilir */
+  acceptedAnswer?: string;
 }
 
 /**
@@ -51,7 +53,8 @@ interface Props {
  * en çok oy alan şık yeşille öne çıkar, kullanıcının oyu işaretlenir. Dağılım her zaman görünür.
  * Oylar görünür olunca yüklenir (uzun listede tek tek istek yağmuru olmasın).
  */
-export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hint, terms, className = '', renderText, onVotes }) => {
+export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hint, terms, className = '', renderText, onVotes, acceptedAnswer }) => {
+  const accepted = acceptedAnswer ? String(acceptedAnswer).trim().toUpperCase() : '';
   const rootRef = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
   const [votes, setVotes] = useState<AnswerVotes | null>(null);
@@ -137,21 +140,23 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
           const lead = leaders.includes(o.key);
           const mine = myVote === o.key;
           const sel = !myVote && picked === o.key;
+          const acc = accepted === o.key;
           return (
             <li key={o.key}>
               <button
                 type="button"
-                className={`ms-poll-row ${lead ? 'is-lead' : ''} ${mine ? 'is-mine' : ''} ${sel ? 'is-picked' : ''}`}
+                className={`ms-poll-row ${lead ? 'is-lead' : ''} ${mine ? 'is-mine' : ''} ${sel ? 'is-picked' : ''} ${acc ? 'is-accepted' : ''}`}
                 onClick={() => canVote && setPicked((p) => (p === o.key ? null : o.key))}
                 disabled={!canVote || busy}
                 aria-pressed={sel || mine}
-                aria-label={`${o.key} şıkkı, ${n} oy, yüzde ${pct}${lead ? ', en çok oy' : ''}${mine ? ', senin oyun' : ''}`}
+                aria-label={`${o.key} şıkkı, ${n} oy, yüzde ${pct}${acc ? ', kabul edilen cevap' : ''}${lead ? ', en çok oy' : ''}${mine ? ', senin oyun' : ''}`}
               >
                 <span className="ms-poll-fill" style={{ width: run ? `${pct}%` : '0%', transitionDelay: `${i * 55}ms` }} aria-hidden />
-                <span className="ms-poll-key">{mine ? <Check className="w-3.5 h-3.5" strokeWidth={3} /> : o.key}</span>
+                <span className="ms-poll-key">{mine || acc ? <Check className="w-3.5 h-3.5" strokeWidth={3} /> : o.key}</span>
                 <span className="ms-poll-text">{renderText ? renderText(o.key, o.text) : <Highlight text={o.text} terms={terms} />}</span>
                 <span className="ms-poll-meta">
-                  {lead && <span className="ms-poll-tag">{leaders.length > 1 ? 'Eşit' : 'Önde'}</span>}
+                  {acc && <span className="ms-poll-tag is-accepted">Kabul edilen</span>}
+                  {lead && <span className="ms-poll-tag">{accepted ? (leaders.length > 1 ? 'Topluluk · eşit' : 'Topluluk') : leaders.length > 1 ? 'Eşit' : 'Önde'}</span>}
                   <span className="ms-poll-pct"><Pct value={pct} run={run} /></span>
                 </span>
               </button>
@@ -159,6 +164,31 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
           );
         })}
       </ol>
+
+      {accepted && votes && (() => {
+        const accPct = total ? Math.round(((counts[accepted] || 0) / total) * 100) : 0;
+        const agree = total > 0 && leaders.length === 1 && leaders[0] === accepted;
+        const tie = total > 0 && leaders.length > 1 && leaders.includes(accepted);
+        const tone = total === 0 ? '' : agree ? 'is-agree' : tie ? 'is-tie' : 'is-disagree';
+        return (
+          <div className={`ms-poll-compare ${tone}`} role="status">
+            <span className="ms-poll-compare-cell">
+              <ShieldCheck className="w-3.5 h-3.5" aria-hidden />
+              <span className="text-ink-3">Kabul edilen</span>
+              <b className="font-mono">{accepted}</b>
+            </span>
+            <span className="ms-poll-compare-cell">
+              <Users className="w-3.5 h-3.5" aria-hidden />
+              <span className="text-ink-3">Topluluk</span>
+              <b className="font-mono">{total ? leaders.join(' / ') : '—'}</b>
+              {total > 0 && <span className="text-ink-3">· {accepted} şıkkına %{accPct}</span>}
+            </span>
+            <span className="ms-poll-compare-verdict">
+              {total === 0 ? 'Henüz oy yok' : agree ? 'Uyuşuyor' : tie ? 'Topluluk kararsız' : 'Uyuşmuyor'}
+            </span>
+          </div>
+        );
+      })()}
 
       {picked && canVote && (
         <div className="ms-poll-confirm ms-pop-in">

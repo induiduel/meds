@@ -1,5 +1,30 @@
 [
   {
+    "id": "job_1791455734568_k3dos",
+    "name": "test-drive-folders.mjs",
+    "type": "single",
+    "args": "",
+    "status": "completed",
+    "startedAt": "2026-10-08T10:35:34.568Z",
+    "completedAt": "2026-10-08T10:35:39.194Z",
+    "durationMs": 4626,
+    "exitCode": 0,
+    "requestedBy": "nofrostlife@gmail.com",
+    "logSummary": "[13:35:37] [Folder 4] Found 1 files:\n[13:35:37]    - Çıkmış sorular (ID: 16ianUX4Nnl-dU9SZOSOgvDDuEaM1x6vZ)\n[13:35:38] [Folder 5] Status: 200\n[13:35:38] [Folder 5] Found 1 files:\n[13:35:38]    - 3. Sınıf (ID: 1FAqqW0iAeg3NNjkPBeY3zG9X4FXaJuVM)\n[13:35:38] [Folder 6] Status: 200\n[13:35:39] [Folder 6] Found 1 files:\n[13:35:39]    - Dönem 3 Çıkmış Toplama (ID: 1QKbD3800KBa3AUWP8apMSiKCMV0jiA21)\n[13:35:39] ------------------------------------------------------------\n[13:35:39] ✅ [BAŞARILI] İşlem tamamlandı. Süre: 4.6 sn."
+  },
+  {
+    "id": "pipe_1791455646477_g6nrm",
+    "name": "full-sync-and-cloud",
+    "type": "pipeline",
+    "status": "failed",
+    "startedAt": "2026-10-08T10:34:06.477Z",
+    "completedAt": "2026-10-08T10:34:46.389Z",
+    "durationMs": 39912,
+    "exitCode": null,
+    "requestedBy": "nofrostlife@gmail.com",
+    "logSummary": "[13:34:27]   35 dosya bulundu.\n[13:34:27]      ✓ Toplam Benzersiz Çıkmış Soru PDF Sayısı: 145\n[13:34:27]   📥 2. ADIM: Çıkmış Soru PDF Dosyaları İndiriliyor...\n[13:34:33]      ✓ İndirildi: 2.Kurul-2021.pdf (3.64 MB)\n[13:34:35]      ✓ İndirildi: KURUL 2 ÇIKMIŞ 3.pdf (0.95 MB)\n[13:34:38]      ✓ İndirildi: Kurul 2Sınavı.pdf (1.50 MB)\n[13:34:41]      ✓ İndirildi: Kurul II Sınavı.pdf (0.43 MB)\n[13:34:46] ❌ [Adım Başarısız]: meds-local-sync.mjs çıkış kodu: null\n[13:34:46] ============================================================\n[13:34:46] ⚠️ [PIPELINE SONLANDI] Durum: failed, Süre: 39.9 sn."
+  },
+  {
     "id": "job_1790985004378_yfowo",
     "name": "sync_user_drive_folder.mjs",
     "type": "single",
@@ -10,7 +35,7 @@
     "durationMs": 7916,
     "exitCode": 0,
     "requestedBy": "nofrostlife@gmail.com",
-    "logSummary": "[02:50:12] 40. [1Y9Kf7vAx_yXORQwXQtF3V54tk2mKFEQk] Meds_Drive_Root / Kurul 1 / Tıbbi Patoloji  / 25) Vasküler ve Kistik Böbrek Hastalıkları.pdf\n[02:50:12] 41. [1ZcRFr5Bb1ZNlLqvCtdm-oJlnCvT4M06u] Meds_Drive_Root / Kurul 1 / Tıbbi Patoloji  / 26)Böbrek Tümörleri.pdf\n[02:50:12] 42. [1Z_yS7ZJYNDq-oXjNYKWY_CTfEAZQdg56] Meds_Drive_Root / Kurul 1 / Tıbbi Patoloji  / 26)Mesane Hastalıkları ve Tümörleri.pdf\n[02:50:12] 43. [1dIUpRGGlkJsuyK4rrTqUBw3V82cQazvv] Meds_Drive_Root / Kurul 1 / Üroloji / 1)Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi.pdf\n[02:50:12] 44. [1bvyIs3jM82_zu3HwqDr6t_wfMNTI9_eD] Meds_Drive_Root / Kurul 1 / Üroloji / 2)Ürolitiyazis Patofizyolojisi.pdf\n[02:50:12] 45. [1XIiygNWy83fY2wEnVFMz1Fh5WL8DV2KE] Meds_Drive_Root / Kurul 1 / Üroloji / 3)Üriner Sistem Enfeksiyonları.pdf\n[02:50:12] 46. [1wsnQe7-lUuwTTyAhBWZbQbFm4-DzcciE] Meds_Drive_Root / Kurul 1 / Üroloji / 4)'Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi'.pdf\n[02:50:12] 47. [1HJWgSxlk0an9wqpLHU2z319wEOi26D_L] Meds_Drive_Root / Kurul 1 / Üroloji / 5) Üriner Sistemin Spesifik Enfeksiyonları.pdf\n[02:50:12] ------------------------------------------------------------\n[02:50:12] ✅ [BAŞARILI] İşlem tamamlandı. Süre: 7.9 sn."
+    "logSummary": ""
   },
   {
     "id": "job_1790937744027_yznb8",

@@ -1,0 +1,704 @@
+{
+ "id": "k1-06-gebelik-ve-emzirme-doneminde-beslenme",
+ "sira": 6,
+ "kurul": 1,
+ "ders": "Halk Sağlığı",
+ "konu": "Gebelik ve Emzirme Döneminde Beslenme",
+ "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
+ "tarih": "2026-09-15",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Gebelik ve emzirme döneminde beslenmenin temel ilkelerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-06-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Gebelikte yeterli ve dengeli beslenmenin amaçları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Gebenin kendi fizyolojik gereksinimlerini karşılamak",
+      "B": "Gebelik süresince kilo artışını tamamen engellemek",
+      "C": "Vücut depolarını dengede tutmak",
+      "D": "Bebeğin sağlıklı büyüme ve gelişmesini sağlamak",
+      "E": "Emzirmeye hazırlık"
+     },
+     "dogru": "B",
+     "aciklama": "Gebelikte beslenme gebenin gereksinimlerini, depolarını, bebeğin gelişimini ve emzirmeye hazırlığı sağlamayı amaçlar; uygun kilo artışı beklenir.",
+     "sik_aciklamalari": {
+      "A": "Beslenmenin amaçlarındandır.",
+      "B": "Doğru: kilo artışını engellemek amaç değildir; önerilen ağırlık artışı vardır.",
+      "C": "Beslenmenin amaçlarındandır.",
+      "D": "Beslenmenin amaçlarındandır.",
+      "E": "Beslenmenin amaçlarındandır."
+     },
+     "bilgi": [
+      10,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-06-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Gebelik sırasındaki maternal beslenmenin bebeğin yetişkinlikteki kronik hastalık riskini etkilediğini öne süren hipotez hangisidir?",
+     "secenekler": {
+      "A": "Demografik dönüşüm kuramı",
+      "B": "Hijyen hipotezi",
+      "C": "Fetal programlama (Barker) hipotezi",
+      "D": "Germ teorisi",
+      "E": "Epidemiyolojik üçgen"
+     },
+     "dogru": "C",
+     "aciklama": "David Barker'ın fetal programlama hipotezine göre fetal dönemde maruz kalınan ortam erişkin kronik hastalıklarla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Demografik dönüşüm nüfus yapısını açıklar.",
+      "B": "Hijyen hipotezi alerjik hastalıklarla ilgilidir.",
+      "C": "Doğru: fetal programlama hipotezidir.",
+      "D": "Germ teorisi hastalıkların mikrobiyal nedenini açıklar.",
+      "E": "Epidemiyolojik üçgen konak-etken-çevre modelidir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-06-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Gebelikte beslenmeyi olumsuz etkileyen risk faktörleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Sigara-alkol kullanımı",
+      "B": "18 yaşından küçük gebelik",
+      "C": "Dört veya daha fazla doğum",
+      "D": "25 yaşında, ilk gebeliği olan, düzenli doğum öncesi bakım alan kadın",
+      "E": "Besin emilim bozukluğu"
+     },
+     "dogru": "D",
+     "aciklama": "<18 veya >35 yaş, düşük eğitim, 4+ doğum, sigara-alkol, kronik hastalık, emilim bozukluğu, aşırı aktivite ve yetersiz DÖB risk faktörleridir.",
+     "sik_aciklamalari": {
+      "A": "Madde kullanımı risk faktörüdür.",
+      "B": "Adolesan gebelik risk faktörüdür.",
+      "C": "Çok doğum risk faktörüdür.",
+      "D": "Doğru: tarif edilen kadında risk faktörü yoktur.",
+      "E": "Emilim bozukluğu risk faktörüdür."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Anne sağlığı kavramını ve anne ölümlerinin başlıca nedenlerini açıklamak",
+   "sorular": [
+    {
+     "id": "k1-06-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Anne ölüm oranı (MMR) nasıl tanımlanır?",
+     "secenekler": {
+      "A": "1000 canlı doğumda bebek ölümü sayısı",
+      "B": "100.000 canlı doğumda gerçekleşen anne ölümü sayısı",
+      "C": "1000 kadında doğum sayısı",
+      "D": "100 gebelikte düşük sayısı",
+      "E": "10.000 nüfusta kadın ölümü sayısı"
+     },
+     "dogru": "B",
+     "aciklama": "MMR 100.000 canlı doğumdaki anne ölümüdür; 2000–2020 arasında dünyada ~%34 azalmıştır.",
+     "sik_aciklamalari": {
+      "A": "Bu bebek ölüm hızıdır.",
+      "B": "Doğru: MMR'nin tanımıdır.",
+      "C": "Bu doğurganlık hızına ilişkin bir ölçüdür.",
+      "D": "Bu düşük oranıdır; bu nedenle doğru seçenek değildir.",
+      "E": "Bu genel kadın ölüm hızıdır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-06-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi anne ölümlerinin doğrudan nedenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Enfeksiyonlar",
+      "B": "Doğum sonrası şiddetli kanama",
+      "C": "Anemi",
+      "D": "Preeklampsi/eklampsi",
+      "E": "Güvenli olmayan kürtaj"
+     },
+     "dogru": "C",
+     "aciklama": "Doğrudan nedenler kanama, enfeksiyon, preeklampsi/eklampsi, doğum komplikasyonları ve güvenli olmayan kürtajdır; anemi, sıtma ve kalp hastalığı dolaylı nedenlerdir.",
+     "sik_aciklamalari": {
+      "A": "Doğrudan nedendir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğrudan nedendir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: anemi dolaylı nedendir.",
+      "D": "Doğrudan nedendir; bu nedenle doğru seçenek değildir.",
+      "E": "Doğrudan nedendir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-06-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Anne ölümleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Her gün yaklaşık 800 önlenebilir anne ölümü olmaktadır",
+      "B": "Anne ölümlerinin ~%95'i düşük/orta gelirli ülkelerde gerçekleşir",
+      "C": "Doğrudan nedenler anne ölümlerinin ~%75'ini oluşturur",
+      "D": "Adolesan annelerde eklampsi ve puerperal endometrit riski daha yüksektir",
+      "E": "Anne ölümlerinin çoğu tedavi edilemeyen nedenlere bağlıdır ve vasıflı bakım sonucu değiştirmez"
+     },
+     "dogru": "E",
+     "aciklama": "Anne ölümüne yol açan komplikasyonların çoğu önlenebilir veya tedavi edilebilir; vasıflı sağlık personeli hayat kurtarır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): çoğu önlenebilir/tedavi edilebilir."
+     },
+     "bilgi": [
+      1,
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Kadınların gebelik ve doğumda bakım almasını/aramasını engelleyen faktörleri sıralamak",
+   "sorular": [
+    {
+     "id": "k1-06-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi kadınların gebelik ve doğumda bakım almasını engelleyen faktörlerden biri değildir?",
+     "secenekler": {
+      "A": "Yetersiz ve kalitesiz hizmet",
+      "B": "Yoksulluk",
+      "C": "Bilgi eksikliği",
+      "D": "Sağlık tesisinin eve yakın olması",
+      "E": "Kültürel inanç ve uygulamalar"
+     },
+     "dogru": "D",
+     "aciklama": "Yoksulluk, tesislere uzaklık, bilgi eksikliği, kalitesiz hizmet ve kültürel faktörler bakıma erişimi engeller.",
+     "sik_aciklamalari": {
+      "A": "Engelleyici faktördür.",
+      "B": "Engelleyici faktördür.",
+      "C": "Engelleyici faktördür.",
+      "D": "Doğru: yakınlık erişimi kolaylaştırır.",
+      "E": "Engelleyici faktördür."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-06-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Doğum öncesi bakım (DÖB) ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tehlike işaretleri hakkında bilgi vermez",
+      "B": "Yalnızca doğum günü yapılan muayenedir",
+      "C": "Anne ve bebeğin eğitilmiş sağlık personelince periyodik muayene ve önerilerle izlenmesidir; nitelikli DÖB hayat kurtarır",
+      "D": "Sigara ve alkolün zararları DÖB kapsamında değildir",
+      "E": "Yalnızca riskli gebelere uygulanır"
+     },
+     "dogru": "C",
+     "aciklama": "DÖB anne-bebek izlemi, hijyen, sigara-alkol zararları ve tehlike işaretleri eğitimini içerir.",
+     "sik_aciklamalari": {
+      "A": "Tehlike işaretleri eğitimi DÖB kapsamındadır.",
+      "B": "Gebelik boyunca periyodik izlemdir.",
+      "C": "Doğru: DÖB'ün tanımı ve önemi doğrudur.",
+      "D": "Bu konular DÖB kapsamındadır.",
+      "E": "Tüm gebelere önerilir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": [
+      "09fda18f5ae5"
+     ]
+    },
+    {
+     "id": "k1-06-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Yeterli doğum hizmetine erişme olasılığı en düşük olan kadın grubu hangisidir?",
+     "secenekler": {
+      "A": "Özel sağlık sigortası olan kadınlar",
+      "B": "Kentte yaşayan yüksek gelirli kadınlar",
+      "C": "Sağlık tesisine yakın oturan eğitimli kadınlar",
+      "D": "Uzak bölgelerde yaşayan yoksul kadınlar",
+      "E": "Sağlık çalışanı olan kadınlar"
+     },
+     "dogru": "D",
+     "aciklama": "Uzak bölgelerdeki yoksul kadınlar (özellikle Sahra altı Afrika ve Güney Asya) yeterli hizmete en düşük olasılıkla erişir.",
+     "sik_aciklamalari": {
+      "A": "Erişim olasılığı yüksektir.",
+      "B": "Erişim olasılığı yüksektir.",
+      "C": "Erişim olasılığı yüksektir.",
+      "D": "Doğru: birden fazla engel bir aradadır.",
+      "E": "Erişim olasılığı yüksektir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "09fda18f5ae5",
+     "soru": "Tüm gebelerde, anne ve bebeğin sağlığını korumaya yönelik olarak yapılması gereken “Doğum Öncesi Bakım İzlem Protokolü”ne göre her gebeye en az kaç kez nitelikli izlem yapılmalıdır?",
+     "secenekler": {
+      "A": "Çocuk sağ ve hast",
+      "B": "Çocuklarda su dengesi bozuklukları",
+      "C": "Sıra No",
+      "D": "",
+      "E": "Sıra No"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Gebelikte beslenmenin önemini, yetersiz ve aşırı beslenmenin sonuçlarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-06-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Gebelikte en sık görülen beslenme yetersizliği hangisidir?",
+     "secenekler": {
+      "A": "İyot fazlalığı",
+      "B": "Demir eksikliği anemisi",
+      "C": "Protein fazlalığı",
+      "D": "A vitamini fazlalığı",
+      "E": "Kalsiyum fazlalığı"
+     },
+     "dogru": "B",
+     "aciklama": "Demir eksikliği anemisi gebelikte en sık beslenme yetersizliğidir; DSÖ'ye göre Hb <11 g/dl anemidir.",
+     "sik_aciklamalari": {
+      "A": "İyot eksikliği önemlidir; fazlalığı sık sorun değildir.",
+      "B": "Doğru: en sık yetersizliktir.",
+      "C": "Protein fazlalığı sık sorun değildir.",
+      "D": "A vitamini fazlası teratojeniktir ama en sık sorun değildir.",
+      "E": "Kalsiyum fazlalığı sık sorun değildir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": [
+      "0e3776db3ca4"
+     ]
+    },
+    {
+     "id": "k1-06-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Gebelikte aşırı beslenmenin sonuçları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Makrozomiye bağlı doğum hasarı",
+      "B": "Gestasyonel diyabet",
+      "C": "Preeklampsi",
+      "D": "Osteomalazi",
+      "E": "Çocukluk çağı obezitesi"
+     },
+     "dogru": "D",
+     "aciklama": "Osteomalazi yetersiz beslenmenin sonucudur; aşırı beslenme gestasyonel diyabet, preeklampsi, sezaryen, makrozomi ve çocukluk obezitesi riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Aşırı beslenmenin sonucudur.",
+      "B": "Aşırı beslenmenin sonucudur.",
+      "C": "Aşırı beslenmenin sonucudur.",
+      "D": "Doğru: osteomalazi yetersiz beslenmeyle ilişkilidir.",
+      "E": "Aşırı beslenmenin sonucudur."
+     },
+     "bilgi": [
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-06-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "İlk trimesterde günlük 60 gramdan fazla alkol tüketen annelerin bebeklerinde görülebilen sendromla ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca makrozomi görülür",
+      "B": "Bebeklerin tamamı sağlıklı doğar",
+      "C": "Fetal alkol sendromu bebeklerin %30–40'ında görülür; büyüme geriliği, SSS anomalileri ve tipik yüz bulguları vardır",
+      "D": "Alkolün fetüse etkisi yalnızca 3. trimesterde ortaya çıkar",
+      "E": "Az miktarda düzenli alkol gebelikte önerilir"
+     },
+     "dogru": "C",
+     "aciklama": "Gebelikte alkolden kaçınılmalıdır; FAS büyüme geriliği, SSS anomalileri ve karakteristik yüz bulgularını içerir.",
+     "sik_aciklamalari": {
+      "A": "FAS büyüme geriliği yapar.",
+      "B": "Belirgin risk vardır.",
+      "C": "Doğru: FAS'ın sıklığı ve bulguları doğrudur.",
+      "D": "İlk trimester maruziyeti kritiktir.",
+      "E": "Gebelikte alkol önerilmez."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "0e3776db3ca4",
+     "soru": "Aşağıdakilerden hangisi demir eksikliği anemisi nedenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Gebelik",
+      "B": "Vejeteryan beslenme",
+      "C": "Peptik ülsere bağlı gastrointestinal sistem kanaması",
+      "D": "Hemodiyaliz",
+      "E": "C vitamini intoksikasyonu"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Gebelikte ağırlık artışı ile günlük enerji ve besin öğesi gereksinimlerini özetlemek",
+   "sorular": [
+    {
+     "id": "k1-06-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Gebelik öncesi BKİ'si 20,0–24,9 olan kadın için gebelikte önerilen ağırlık artışı hangisidir?",
+     "secenekler": {
+      "A": "7,0–11,5 kg arası artış (fazla kilolu önerisi)",
+      "B": "11,5–16,0 kg arası artış",
+      "C": "En az 6,0 kg (obez önerisi)",
+      "D": "23 kg (üçüz gebelik önerisi)",
+      "E": "Yalnızca 2–3 kg"
+     },
+     "dogru": "B",
+     "aciklama": "BKİ 20,0–24,9 için 11,5–16,0 kg; 25,0–29,9 için 7,0–11,5 kg; ≥30 için en az 6 kg; üçüz gebelikte 23 kg önerilir.",
+     "sik_aciklamalari": {
+      "A": "Fazla kilolu gebeler içindir.",
+      "B": "Doğru: normal BKİ için öneridir.",
+      "C": "Obez gebeler içindir.",
+      "D": "Üçüz gebelik içindir.",
+      "E": "Yetersiz bir artıştır."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": [
+      "ad64451dd2a0"
+     ]
+    },
+    {
+     "id": "k1-06-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Gebelikte folik asit ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Günlük gereksinim 10 g'dır",
+      "B": "Folik asit eksikliği mikrositer anemi yapar",
+      "C": "Folik asidin nöral tüp defektiyle ilişkisi yoktur",
+      "D": "Yalnızca doğumdan sonra başlanmalıdır",
+      "E": "Planlı gebelikte gebe kalmadan 3 ay önce günde 400 mcg folik asit önerilir"
+     },
+     "dogru": "E",
+     "aciklama": "Folik asit eksikliği megaloblastik anemi ve nöral tüp defekti riskini artırır; gebelik öncesi başlanmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Gereksinim mikrogram düzeyindedir.",
+      "B": "Folat eksikliği megaloblastik anemi yapar.",
+      "C": "NTD riskini azaltır.",
+      "D": "Gebelik öncesi başlanmalıdır.",
+      "E": "Doğru: önerilen doz ve zamanlamadır."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": [
+      "076da3a0bce9"
+     ]
+    },
+    {
+     "id": "k1-06-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Gebelikte enerji ve besin öğesi gereksinimleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Normal gebelikte günlük ek enerji ~+340 kaloridir",
+      "B": "Günlük diyete 20–25 g protein eklenmelidir",
+      "C": "Gebenin günlük kalsiyum ihtiyacı 1000–1300 mg'dır",
+      "D": "İyot eksikliğinden korunmanın en kolay yolu iyotlu tuz kullanımıdır",
+      "E": "B12 vitamini yalnızca bitkisel besinlerde bulunur"
+     },
+     "dogru": "E",
+     "aciklama": "B12 vitamini yalnızca hayvansal besinlerde bulunur; eksikliği megaloblastik anemi ve nörolojik sorun yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: ikizde +600, üçüzde +900 kaloridir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade: adolesan gebede 1300 mg'dır.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): B12 hayvansal kaynaklıdır."
+     },
+     "bilgi": [
+      15,
+      16,
+      18,
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "ad64451dd2a0",
+     "soru": "Sağılmış anne sütü oda ısısında kaç saat saklanabilir? Bebek beslenmesi Bebek beslenmesi Sağlıklı bir gebe kadının, gebeliği süresince ortalama kaç kg ağırlık artışı olur? 9-13kg unika D Dönem 3 Kurul 1 Sonucu | Anasayfa / Sınav Sonucu",
+     "secenekler": {
+      "A": "Sağılmış anne sütü oda ısısında kaç saat saklanabilir?",
+      "B": "Bebek beslenmesi",
+      "C": "Sağlıklı bir gebe kadının, gebeliği süresince ortalama kaç kg ağırlık artışı olur?",
+      "D": "9-13kg",
+      "E": "15-20kg"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "076da3a0bce9",
+     "soru": "Aşağıdakilerden hangisi mikrositer anemilere örnektir?",
+     "secenekler": {
+      "A": "Folik asit eksikliği anemisi",
+      "B": "Hemolitik anemiler",
+      "C": "Vitamin B12 eksikliği anemisi",
+      "D": "Hipotiroidi",
+      "E": "Demir eksikliği anemisi"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Sağlık Bakanlığı demir ve D vitamini destek programını bilmek",
+   "sorular": [
+    {
+     "id": "k1-06-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Sağlık Bakanlığı programına göre gebelere demir desteği hangi gebelik haftasında başlanır?",
+     "secenekler": {
+      "A": "16. hafta",
+      "B": "4. hafta",
+      "C": "30. hafta",
+      "D": "Doğumdan sonra",
+      "E": "Yalnızca anemi saptanırsa"
+     },
+     "dogru": "A",
+     "aciklama": "Klinik anemi olmasa da tüm gebelere 16. haftadan itibaren 6 ay + doğum sonrası 3 ay günlük 40–60 mg elementer demir verilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: programın başlangıç haftasıdır.",
+      "B": "Program 16. haftada başlar.",
+      "C": "Çok geç bir dönemdir.",
+      "D": "Doğumdan önce başlar ve doğum sonrası sürer.",
+      "E": "Anemi olmasa da tüm gebelere önerilir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-06-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Sağlık Bakanlığı D vitamini destek programı ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "12. haftadan doğum sonrası 6. aya kadar günlük 1200 IU D vitamini önerilir",
+      "B": "Yalnızca doğumdan sonra 1 hafta verilir",
+      "C": "Günlük 50.000 IU önerilir",
+      "D": "Yalnızca kış aylarında verilir",
+      "E": "D vitamini desteği önerilmez"
+     },
+     "dogru": "A",
+     "aciklama": "Program gebeliğin 12. haftasından doğum sonrası 6. aya kadar günlük 1200 IU D vitamini önerir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: programın içeriğidir.",
+      "B": "Süre daha uzundur; bu nedenle doğru seçenek değildir.",
+      "C": "Doz programdakinden çok yüksektir.",
+      "D": "Mevsimden bağımsız önerilir.",
+      "E": "Destek programı vardır."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-06-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Sağlık Bakanlığı demir destek programına göre toplam demir desteği süresi ve günlük elementer demir dozu hangisidir?",
+     "secenekler": {
+      "A": "Toplam 9 ay; 40–60 mg",
+      "B": "Toplam 1 ay; 500 mg",
+      "C": "Toplam 3 ay; 5 mg",
+      "D": "Ömür boyu; 100 mg",
+      "E": "Yalnızca doğum günü; 1 g"
+     },
+     "dogru": "A",
+     "aciklama": "Gebeliğin 16. haftasından itibaren 6 ay ve doğum sonrası 3 ay olmak üzere toplam 9 ay, günlük 40–60 mg elementer demir verilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: süre ve doz doğrudur.",
+      "B": "Süre ve doz yanlıştır.",
+      "C": "Süre ve doz yanlıştır.",
+      "D": "Ömür boyu destek önerilmez.",
+      "E": "Tek doz uygulama söz konusu değildir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Emzirme döneminde beslenme ilkelerini ve kaçınılması gereken maddeleri açıklamak",
+   "sorular": [
+    {
+     "id": "k1-06-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Sağlıklı emziren annenin günlük ortalama süt üretimi ne kadardır?",
+     "secenekler": {
+      "A": "~800 ml",
+      "B": "~100 ml",
+      "C": "~3000 ml",
+      "D": "~50 ml",
+      "E": "~5000 ml"
+     },
+     "dogru": "A",
+     "aciklama": "Sağlıklı anne günde ortalama 800 ml süt yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ortalama süt miktarıdır.",
+      "B": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "C": "Çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "D": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "E": "Gerçekçi değildir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-06-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Emzirme döneminde beslenme ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Günlük 1800 kalorinin altı önerilmez ve günde 2–3 litre sıvı alınmalıdır",
+      "B": "Yeterli beslenen anne daha fazla yerse süt üretimi belirgin artar",
+      "C": "Emziren anneye ek protein gerekmez",
+      "D": "Yetersiz beslenen annede süt içeriği tamamen değişir",
+      "E": "Annenin sıvı alımı süt üretimini etkilemez"
+     },
+     "dogru": "A",
+     "aciklama": "Emzirmede 1800 kaloriden az diyet önerilmez; ilk 6 ayda ek 15 g, ikinci 6 ayda ek 12 g protein ve 2–3 litre sıvı önerilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: temel öneriler doğrudur.",
+      "B": "Yeterli beslenen annede fazla beslenme süt yapımını artırmaz.",
+      "C": "Ek protein önerilir.",
+      "D": "İçerik fazla değişmez; protein ve yağ azalabilir.",
+      "E": "Yeterli sıvı alımı önerilir."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-06-q22",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Emziklilik döneminde besin gruplarından hangisinden fazladan porsiyon alınması önerilir?",
+     "secenekler": {
+      "A": "Tahıl grubu (1,5 porsiyon fazla)",
+      "B": "Yağ-şeker grubu",
+      "C": "Hiçbir gruptan ek alınmaz",
+      "D": "Yalnızca tuzlu atıştırmalıklar",
+      "E": "Yalnızca kafeinli içecekler"
+     },
+     "dogru": "A",
+     "aciklama": "Emziklilikte tahıllardan 1,5 porsiyon fazla alınır; süt grubundan gebe/emzikli için 3–4 porsiyon önerilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tahıl grubunda artış önerilir.",
+      "B": "Yağ-şeker grubundan ek önerilmez.",
+      "C": "Bazı gruplardan ek gerekir.",
+      "D": "Tuz ve atıştırmalık önerilmez.",
+      "E": "Kafein sınırlandırılmalıdır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-06-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Emziren annenin maddelerle ilişkisi konusunda aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sigaranın zararlı maddeleri süte geçer",
+      "B": "Alkol süt gelmesini engeller ve bebekte uyuşukluk yapar",
+      "C": "Bir fincan kahve genellikle olumsuz etki yapmaz",
+      "D": "Aşırı kafein bebekte huzursuzluk ve uykusuzluk yapabilir",
+      "E": "Alkol süt üretimini artırdığından emziren annelere önerilir"
+     },
+     "dogru": "E",
+     "aciklama": "Alkol süt gelmesini engeller ve bebeğin büyümesini olumsuz etkiler; emziren anne alkolden kaçınmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): alkol önerilmez."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 22,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:08"
+}

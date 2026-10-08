@@ -667,7 +667,7 @@ export async function generateResilientMedicalAi(options: {
   // 1. BASAMAK: YEREL GPU MODELLERİ (RTX 4060)
   // Kullanıcı yerel moddaysa veya model yerel ise, sırasıyla yerel modelleri dene.
   // =========================================================================
-  const isLocalPreferred = preferredProvider === 'local-ollama' || preferredProvider === 'ollama' ||
+  const isLocalPreferred = (preferredProvider as string) === 'local-ollama' || (preferredProvider as string) === 'ollama' ||
     Boolean(model && (model.startsWith('gemma3') || model.startsWith('deepseek-r1') || model.startsWith('qwen3') || model.startsWith('medgemma')));
 
   if (isLocalPreferred) {
@@ -764,7 +764,7 @@ export async function generateResilientMedicalAi(options: {
   try {
     const geminiModel = 'gemini-3.8-flash';
     const geminiRes = await callGeminiPool(prompt, customGeminiKey, geminiModel, isJson, systemInstruction);
-    console.log(`[AI Multi-Provider] ✓ 4. BASAMAK (Google Gemini Flash ${geminiRes.model}) başarıyla yanıt verdi!`);
+    console.log(`[AI Multi-Provider] ✓ 4. BASAMAK (Google Gemini Flash ${geminiModel}) başarıyla yanıt verdi!`);
     return {
       text: geminiRes.text,
       providerUsed: `${geminiRes.providerUsed} [Son Çare Yedek]`,

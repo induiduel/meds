@@ -50,6 +50,44 @@ import {
 } from 'lucide-react';
 import { SummaryDetail } from './LectureSummariesView';
 import { HighlighterToolbar, Highlightable } from './ui/Highlighter';
+import { structureBulletBlock, isBoilerplateSubheading, foldForCompare } from './summary/summaryStructure';
+import { SummaryRichList } from './summary/SummaryRichList';
+
+/**
+ * Bölüm içeriğini blok parçalarına ayırır: ### alt başlık, "> [!...]" kutusu ve ardışık tablo satırları
+ * ayrı parçadır. Tablo ya da kutu bittiğinde (satır tipi değişince) yeni parça başlar; böylece tablo
+ * satırları tek tabloda toplanır ve tablodan/kutudan sonra gelen maddeler kaybolmaz.
+ */
+const splitReaderChunks = (content: string): string[] => {
+  const chunks: string[] = [];
+  let cur: string[] = [];
+  let mode: 'text' | 'table' | 'callout' = 'text';
+  const flush = () => {
+    if (cur.length) chunks.push(cur.join('\n'));
+    cur = [];
+  };
+  for (const line of content.split('\n')) {
+    const t = line.trim();
+    const isTable = /^\|.*\|/.test(t);
+    const isCalloutStart = /^>\s*\[!/.test(t);
+    if (/^###\s+/.test(t) || isCalloutStart) {
+      flush();
+      mode = isCalloutStart ? 'callout' : 'text';
+    } else if (isTable && mode !== 'table') {
+      flush();
+      mode = 'table';
+    } else if (mode === 'table' && !isTable) {
+      flush();
+      mode = 'text';
+    } else if (mode === 'callout' && !t.startsWith('>')) {
+      flush();
+      mode = 'text';
+    }
+    cur.push(line);
+  }
+  flush();
+  return chunks;
+};
 
 interface SummaryArtifactReaderProps {
   summary: SummaryDetail;
@@ -97,13 +135,6 @@ interface CalloutBlock {
   type: 'warning' | 'important' | 'tip' | 'note';
   title?: string;
   content: string;
-}
-
-interface BulletItem {
-  key?: string;
-  content: string;
-  subItems?: string[];
-  numberedPills?: string[];
 }
 
 export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
@@ -270,8 +301,8 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
     const lines = headerBlock.split('\n');
     lines.forEach((l) => {
       const t = l.trim();
-      if (t.startsWith('')) {
-        dossier.rawTitle = t.replace(/^\s*/, '').replace(/:\s*Detaylı Çalışma Metni.*$/, '').trim();
+      if (t.startsWith('📘')) {
+        dossier.rawTitle = t.replace(/^📘\s*/u, '').replace(/:\s*Detaylı Çalışma Metni.*$/, '').trim();
       } else if (t.includes('**Ders Kodu & Başlığı:**')) {
         dossier.courseCode = t.replace(/.*\*\*Ders Kodu & Başlığı:\*\*\s*/, '').trim();
       } else if (t.includes('**Öğretim Üyesi:**')) {
@@ -339,7 +370,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
       const subBlocks: any[] = [];
 
       // Split inner content by subsections (###) or callouts or tables or questions
-      const chunks = innerContent.split(/(?=^###\s+|^>\s*\[!|^\|.*\|.*\|)/m);
+      const chunks = splitReaderChunks(innerContent);
 
       chunks.forEach((chunk, cIdx) => {
         const trimmedChunk = chunk.trim();
@@ -419,6 +450,14 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
               type: 'question'
             });
 
+            return;
+          }
+
+          // Şablon alt başlıklar ("A. Temel Kavramlar…") içerikle ilgisiz: başlık gizlenir, maddeler birleşir
+          if (isBoilerplateSubheading(subHeadingLine)) {
+            const prev = subBlocks[subBlocks.length - 1];
+            if (prev && prev.type === 'rich') prev.md += '\n' + subRest;
+            else subBlocks.push({ type: 'rich', md: subRest });
             return;
           }
 
@@ -521,52 +560,15 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
 
           // Check if bullet list
           if (pTrim.startsWith('- ') || pTrim.startsWith('* ')) {
-            const pLines = pTrim.split('\n');
-            const items: BulletItem[] = [];
-            let currentItem: BulletItem | null = null;
-
-            pLines.forEach((pl) => {
-              const isSub = pl.startsWith('  ') || pl.startsWith('\t');
-              const cleanLine = pl.replace(/^[\s\t]*[-\*]\s*/, '').trim();
-
-              if (!isSub && (pl.trim().startsWith('-') || pl.trim().startsWith('*'))) {
-                // Top-level bullet
-                let key = '';
-                let content = cleanLine;
-
-                const boldMatch = cleanLine.match(/^\*\*(.*?)\*\*[:\.]?\s*(.*)/);
-                if (boldMatch) {
-                  key = boldMatch[1].trim();
-                  content = boldMatch[2].trim();
-                }
-
-                // Check for concatenated numbered list items: e.g. "1. Standart 2. Bulaş Yolu"
-                const numberedMatches = content.match(/\b\d+\.\s+[^1-9\n]+/g);
-                let numberedPills: string[] | undefined = undefined;
-                if (numberedMatches && numberedMatches.length >= 2) {
-                  numberedPills = numberedMatches.map((m) => m.trim());
-                }
-
-                currentItem = { key, content, subItems: [], numberedPills };
-                items.push(currentItem);
-
-                if (isSpotWall && key) {
-                  spotWallItems.push(`${key}: ${content}`);
-                }
-              } else if (currentItem) {
-                // Sub-bullet
-                currentItem.subItems = currentItem.subItems || [];
-                currentItem.subItems.push(cleanLine);
-              }
-            });
-
-            if (items.length > 0) {
-              subBlocks.push({
-                type: 'bulletList',
-                items
+            if (isSpotWall) {
+              pTrim.split('\n').forEach((pl) => {
+                if (/^\s/.test(pl)) return;
+                const bold = pl.replace(/^[-*]\s*/, '').trim().match(/^\*\*(.*?)\*\*[:.]?\s*(.*)/);
+                if (bold) spotWallItems.push(`${bold[1].trim()}: ${bold[2].trim()}`);
               });
-              return;
             }
+            subBlocks.push({ type: 'rich', md: pTrim });
+            return;
           }
 
           // Fallback plain paragraph
@@ -576,6 +578,18 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
           });
         });
       });
+
+      // Madde metinlerini yapılandır (sıkışık listeler, konu grupları)
+      const bodyKeys: string[] = [];
+      subBlocks.forEach((b) => {
+        if (b.type === 'rich' || b.type === 'heading3') {
+          const md = b.type === 'rich' ? b.md : b.content;
+          b.groups = structureBulletBlock(md || '');
+          (md || '').split('\n').forEach((l: string) => bodyKeys.push(foldForCompare(l.replace(/^\s*[-*]\s*/, ''))));
+        }
+      });
+      // Uzun slayt başlığı ilk maddede aynen tekrar ediyorsa alt başlık kutusunu gösterme
+      if (secContext && bodyKeys.includes(foldForCompare(numMatch ? numMatch[2] : rawHeading))) secContext = '';
 
       return {
         id: secId,
@@ -645,6 +659,8 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
 
   const formatInlineMarkdown = (str: string, useMarkers: boolean): string => {
     let out = str
+      // Açık vurgu: ==önemli ifade== (ders notu editörünün işaretlediği kritik bilgi)
+      .replace(/==([^=\n]+?)==/g, '<mark class="reader-mark-yellow">$1</mark>')
       .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-inherit">$1</strong>')
       .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
       .replace(/`([^`]+)`/g, '<code class="font-mono text-xs px-1 py-0.5 rounded bg-black/5">$1</code>');
@@ -659,6 +675,12 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
       out = out.replace(/\b(siklosporin|takrolimus|sirolimus|everolimus|azatioprin|mikofenolat mofetil|kortikosteroidler|prednizon|talidomid|lenalidomid|metotreksat)\b/gi, '<mark class="reader-mark-green">$1</mark>');
       // Cyan marker: İmmun & Patoloji kavramları
       out = out.replace(/\b(MHC sınıf I|MHC sınıf II|NF-AT|kalsinörin|interlökin|IFN-γ|TNF-α|IgE|IgG|IgM|fagositoz)\b/g, '<mark class="reader-mark-cyan">$1</mark>');
+      // Sayı + birim ve yüzdeler: "5 μm", "1 metre", "6-12 kez", "%0,5-3"
+      out = out.replace(
+        /(%\s?\d+(?:[.,]\d+)?(?:\s?[-–]\s?\d+(?:[.,]\d+)?)?|(?<![\w.,])\d+(?:[.,]\d+)?(?:\s?[-–]\s?\d+(?:[.,]\d+)?)?\s?(?:μm|µm|mm|cm|metre|metere|mg\/dl|mg\/dL|g\/dl|mEq\/L|mmHg|mcg|mg|ml|mL|kg|saat|gün|hafta|yıl|yaş|kez|dakika|dk|°C))/g,
+        '<span class="reader-mark-num">$1</span>'
+      );
+      out = out.replace(/↑+/g, '<span class="reader-arrow-up">$&</span>').replace(/↓+/g, '<span class="reader-arrow-down">$&</span>');
     }
 
     return out;
@@ -1162,13 +1184,15 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                               </h3>
                             </div>
 
-                            {block.content && (
-                              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                                {renderHighlightedText(block.content)}
-                              </p>
-                            )}
+                            {block.groups?.length > 0 && <SummaryRichList groups={block.groups} renderText={renderHighlightedText} />}
                           </div>
                         );
+                      }
+
+                      if (block.type === 'rich') {
+                        return block.groups?.length > 0 ? (
+                          <SummaryRichList key={bIdx} groups={block.groups} renderText={renderHighlightedText} />
+                        ) : null;
                       }
 
                       // 2. Callout Cards ([!WARNING], [!IMPORTANT], [!TIP])
@@ -1379,68 +1403,6 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                                 </div>
                               )}
                             </div>
-                          </div>
-                        );
-                      }
-
-                      // 5. Hierarchical Bullet Lists (Maddelendirmeler)
-                      if (block.type === 'bulletList') {
-                        return (
-                          <div key={bIdx} className="space-y-3 my-2">
-                            {block.items.map((it: BulletItem, itIdx: number) => {
-                              return (
-                                <div
-                                  key={itIdx}
-                                  className="p-3.5 sm:p-4 rounded-xl bg-[var(--reader-card,#ffffff)] border border-[var(--reader-border,#e2e8f0)] space-y-2 hover:border-teal-400/60 transition-colors shadow-2xs"
-                                >
-                                  {/* Lead-in Keyword */}
-                                  <div className="flex items-start gap-2.5">
-                                    <span className="w-2 h-2 rounded-full bg-teal-600 shrink-0 mt-2" />
-                                    <div className="flex-1 space-y-1">
-                                      {it.key && (
-                                        <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-slate-100">
-                                          {renderHighlightedText(it.key)}
-                                        </h4>
-                                      )}
-                                      {it.content && (
-                                        <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                                          {renderHighlightedText(it.content)}
-                                        </p>
-                                      )}
-                                    </div>
-                                  </div>
-
-                                  {/* Concatenated Numbered Pills (e.g. 1. Standart Önlemler, 2. Bulaş Yolu) */}
-                                  {it.numberedPills && it.numberedPills.length > 0 && (
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 pl-4">
-                                      {it.numberedPills.map((pill, pIdx) => (
-                                        <div
-                                          key={pIdx}
-                                          className="p-2 rounded-lg bg-teal-50/70 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-800/60 text-xs font-medium text-teal-900 dark:text-teal-200"
-                                        >
-                                          {renderHighlightedText(pill)}
-                                        </div>
-                                      ))}
-                                    </div>
-                                  )}
-
-                                  {/* Nested Sub-bullets */}
-                                  {it.subItems && it.subItems.length > 0 && (
-                                    <ul className="pl-6 space-y-1.5 border-l-2 border-teal-200 dark:border-teal-800/80 ml-3.5 mt-2">
-                                      {it.subItems.map((sub, sIdx) => (
-                                        <li
-                                          key={sIdx}
-                                          className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 flex items-start gap-2 leading-relaxed"
-                                        >
-                                          <span className="text-teal-500 font-bold shrink-0 mt-0.5">•</span>
-                                          <span>{renderHighlightedText(sub)}</span>
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  )}
-                                </div>
-                              );
-                            })}
                           </div>
                         );
                       }

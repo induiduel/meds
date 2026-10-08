@@ -5,7 +5,10 @@ import { StemText, Highlight } from './ui/StemText';
 import { Collapsible } from './ui/Collapsible';
 import { Dialog } from './ui/Dialog';
 import { foldText, parseQuery, scoreFields, SearchField } from '../services/searchText';
-import { QuestionInsightsPanel } from './QuestionInsightsPanel';
+import { QuestionAboutDialog } from './QuestionAboutDialog';
+import { SourceText, Marked } from './ui/SourceText';
+import { buildQuestionFocus, QuestionFocus } from '../services/questionFocus';
+import { toast } from './ui/Toast';
 import { ChangeInfo } from './ui/ChangeInfo';
 import {
   Sparkles,
@@ -45,6 +48,8 @@ import {
   Wand2,
   EyeOff,
   BarChart3,
+  Share2,
+  ShieldAlert,
 } from 'lucide-react';
 import { ActionMenu, ActionItem } from './ui/ActionMenu';
 import { ReportQuestionModal } from './ReportQuestionModal';
@@ -55,9 +60,9 @@ import { ApiService } from '../services/api';
 import { pastQuestionsCache, CacheSyncStatus } from '../services/pastQuestionsCache';
 import { AdminCustomRedactModal } from './AdminCustomRedactModal';
 import { renderHighlightedSnippet } from './QuestionCard';
-import { learnMatcher, QuestionLearnMatch } from '../services/learnMatcher';
+import { learnMatcher, QuestionLearnMatch, isReliableLearnMatch } from '../services/learnMatcher';
 import { FlashcardComponent } from './learn/InteractiveDeckView';
-import { pathFor, linkClick } from '../router';
+import { pathFor, linkClick, parseLocation, writeLocation } from '../router';
 import {
   OFFICIAL_CURRICULUM_COMMITTEES,
   DONEM3_CURRICULUM_DISCIPLINES,
@@ -65,10 +70,19 @@ import {
   isDonem3Question,
 } from '../data/curriculumData';
 
-/** Faz 14'te önerisi onaylanıp canlı soruya uygulanmış soru (test/cikmis'ten). */
-export const isPhase14Fixed = (q: any): boolean => Boolean(q?.phase14 || (Array.isArray(q?.tags) && q.tags.includes('faz14_duzeltildi')));
+/** Faz 15 Başdenetim onaylı soru */
+export const isPhase15Audited = (q: any): boolean =>
+  Boolean(q?.phase15 || (Array.isArray(q?.tags) && q.tags.includes('faz15_onaylandi')));
+
+/** Faz 14 veya Faz 15'te önerisi onaylanıp canlı soruya uygulanmış soru. */
+export const isPhase14Fixed = (q: any): boolean =>
+  Boolean(
+    isPhase15Audited(q) ||
+    q?.phase14 ||
+    (Array.isArray(q?.tags) && q.tags.includes('faz14_duzeltildi'))
+  );
 /** Faz 14 önerisi gösteriliyor ama yönetici onayı bekliyor (okuma katmanı) */
-export const isPhase14Pending = (q: any): boolean => q?.phase14?.status === 'onay_bekliyor';
+export const isPhase14Pending = (q: any): boolean => q?.phase14?.status === 'onay_bekliyor' && !isPhase15Audited(q);
 
 export const isDeepSeekQuestion = (q: any): boolean => {
   if (!q) return false;
@@ -111,7 +125,7 @@ interface PastExamsViewProps {
   initialSearchQuery?: string;
   onOpenNote?: (noteId: string, pageNumber?: number) => void;
   onUpdateQuestionReference?: (questionId: string, match: QuestionLectureMatch) => Promise<void>;
-  onNavigateToLearn?: (deckId?: string, slideNumber?: number) => void;
+  onNavigateToLearn?: (deckId?: string, slideNumber?: number, focus?: QuestionFocus) => void;
 }
 
 export const PastExamsView: React.FC<PastExamsViewProps> = ({
@@ -133,7 +147,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
   const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'gemini_v3' | 'existing'>('all');
-  const [phase14Filter, setPhase14Filter] = useState<'all' | 'faz14' | 'faz14_onayli' | 'faz14_bekleyen'>('all');
+  const [phase14Filter, setPhase14Filter] = useState<'all' | 'faz15' | 'faz14' | 'faz14_onayli' | 'faz14_bekleyen'>('all');
   const [newnessFilter, setNewnessFilter] = useState<'all' | 'new_only' | 'archived_only'>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -147,6 +161,28 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     try { return localStorage.getItem('cikmis_quiz') === '1'; } catch { return false; }
   });
   const [picks, setPicks] = useState<Record<string, string>>({});
+  // "Hakkında" penceresi ve şıkka itiraz
+  const [aboutQuestion, setAboutQuestion] = useState<QuestionItem | null>(null);
+  const [objection, setObjection] = useState<{ question: QuestionItem; option: { key: string; text: string } } | null>(null);
+  // Paylaşılan soru bağlantısı: /cikmis/<soruId> yalnız o soruyu gösterir
+  const [sharedId, setSharedId] = useState<string | null>(() => {
+    try {
+      const r = parseLocation();
+      return r.route === 'past_exams' && r.param ? r.param : null;
+    } catch {
+      return null;
+    }
+  });
+  // Cevabı belirsiz sorular sunucudan güncel alınır (cihaz önbelleği eski kalsa bile anket açılır)
+  const [doubtInfo, setDoubtInfo] = useState<{ ids: Set<string>; options: Record<string, Record<string, string>>; resolved: Record<string, { answer: string; by: string }> } | null>(null);
+  useEffect(() => {
+    let alive = true;
+    const load = () => ApiService.getAnswerDoubtful().then((d) => alive && d && setDoubtInfo({ ids: new Set(d.ids), options: d.options, resolved: d.resolved })).catch(() => {});
+    load();
+    const t = window.setInterval(() => !document.hidden && load(), 60000);
+    return () => { alive = false; window.clearInterval(t); };
+  }, []);
+  const isDoubtful = (q: QuestionItem) => (doubtInfo ? doubtInfo.ids.has(String(q.id)) : Boolean((q as any).answerDoubtful));
   useEffect(() => {
     try { localStorage.setItem('cikmis_quiz', quizMode ? '1' : '0'); } catch { /* gizli pencere */ }
     if (!quizMode) setPicks({});
@@ -439,6 +475,62 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     setTimeout(() => setCopiedId(null), 2000);
   };
 
+  // Soruyu bağlantı olarak paylaş: telefonda paylaşım menüsü, değilse bağlantı panoya kopyalanır
+  const questionLink = (q: QuestionItem) => {
+    const base = (window.location.pathname.match(/^\/meds(?=\/|$)/) || [''])[0];
+    return `${window.location.origin}${base}${pathFor('past_exams', String(q.id))}`;
+  };
+  const handleShareQuestion = async (q: QuestionItem) => {
+    const url = questionLink(q);
+    const title = `Çıkmış soru #${q.questionNumber || ''}${q.discipline ? ` · ${q.discipline}` : ''}`;
+    if (navigator.share && window.matchMedia?.('(pointer: coarse)').matches) {
+      try {
+        await navigator.share({ title, url });
+        return;
+      } catch (e: any) {
+        if (e?.name === 'AbortError') return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      toast.success('Bağlantı kopyalandı', 'Soruyu bu bağlantıyla paylaşabilirsin.');
+    } catch {
+      toast.info('Bağlantı', url);
+    }
+  };
+  // Soru → slayt odağı: soru kökünün ayırt edici kelimeleri + doğru şık (Öğren'de ve önizlemede işaretlenir)
+  const focusFor = (q: QuestionItem, match?: QuestionLearnMatch | null): QuestionFocus =>
+    buildQuestionFocus({
+      id: String(q.id),
+      label: `Soru #${q.questionNumber || ''}${q.discipline ? ` · ${q.discipline}` : ''}`,
+      stem: String(q.reconstruction?.stem || q.stem || q.fragments?.[0]?.text || ''),
+      options: (q.reconstruction?.options || q.options || []).map((o: any) => ({ key: String(o.key), text: String(o.text ?? '') })),
+      answer: String(q.reconstruction?.correctAnswer || q.correctAnswer || q.claimedAnswer || doubtInfo?.resolved?.[String(q.id)]?.answer || ''),
+      deckId: match?.deckId,
+      slideNumber: match?.slideNumber,
+    });
+  const showAllQuestions = () => {
+    setSharedId(null);
+    writeLocation('past_exams');
+  };
+  // Geri/ileri: adres çubuğundaki soru kimliği izlenir
+  useEffect(() => {
+    const onPop = () => {
+      const r = parseLocation();
+      setSharedId(r.route === 'past_exams' && r.param ? r.param : null);
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+  // Paylaşılan sorudayken arama ya da süzgeç değişirse normal listeye dönülür
+  const filterSig = `${searchQuery}|${selectedCommittee}|${selectedDiscipline}|${selectedTopic}|${selectedYear}|${answerFilter}|${ambiguityTab}`;
+  const firstSig = useRef(filterSig);
+  useEffect(() => {
+    if (sharedId && filterSig !== firstSig.current) showAllQuestions();
+    firstSig.current = filterSig;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filterSig]);
+
   const effectiveNotes = lectureNotes && lectureNotes.length > 0 ? lectureNotes : internalNotes;
 
   // Find best matching lecture note page for a question
@@ -536,7 +628,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         comms: uncertain ? (content ? [content] : []) : Array.from(new Set([q.committeeId, content].filter(Boolean) as string[])),
         isNew: isNewQ(q),
         hasAnswer: Boolean(q.correctAnswer || q.claimedAnswer || q.reconstruction?.correctAnswer) && !(isPhase14Pending(q) && !anyQ.phase14Original?.correctAnswer),
-        doubtful: Boolean(anyQ.answerDoubtful),
+        doubtful: isDoubtful(q),
         hasExpl: Boolean(expl.trim()),
         fields: [
           { text: foldText(stem), weight: 3 },
@@ -547,7 +639,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         ],
       };
     });
-  }, [questions]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [questions, doubtInfo]);
 
   const deferredQuery = useDeferredValue(searchQuery);
   const parsedQuery = useMemo(() => parseQuery(deferredQuery), [deferredQuery]);
@@ -583,6 +676,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     source: (p) => sourceFilter === 'all' || (sourceFilter === 'gemini_v3') === isGeminiV3Question(p.q),
     p14: (p) =>
       phase14Filter === 'all' ||
+      (phase14Filter === 'faz15' && isPhase15Audited(p.q)) ||
       (phase14Filter === 'faz14' && isPhase14Fixed(p.q)) ||
       (phase14Filter === 'faz14_onayli' && isPhase14Fixed(p.q) && !isPhase14Pending(p.q)) ||
       (phase14Filter === 'faz14_bekleyen' && isPhase14Pending(p.q)),
@@ -597,7 +691,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     answer: (p) => [p.hasAnswer && !p.doubtful ? 'with' : null, p.hasAnswer ? null : 'without', p.doubtful ? 'doubtful' : null],
     explanation: (p) => [p.hasExpl ? 'with' : 'without'],
     source: (p) => [isGeminiV3Question(p.q) ? 'gemini_v3' : 'existing'],
-    p14: (p) => [isPhase14Fixed(p.q) ? 'faz14' : null, isPhase14Fixed(p.q) && !isPhase14Pending(p.q) ? 'faz14_onayli' : null, isPhase14Pending(p.q) ? 'faz14_bekleyen' : null],
+    p14: (p) => [isPhase15Audited(p.q) ? 'faz15' : null, isPhase14Fixed(p.q) ? 'faz14' : null, isPhase14Fixed(p.q) && !isPhase14Pending(p.q) ? 'faz14_onayli' : null, isPhase14Pending(p.q) ? 'faz14_bekleyen' : null],
     newness: (p) => [p.isNew ? 'new_only' : 'archived_only'],
   };
 
@@ -683,16 +777,17 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   // Paginated list
   const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / itemsPerPage));
   const paginatedQuestions = useMemo(() => {
+    if (sharedId) return questions.filter((q) => String(q.id) === sharedId);
     const start = (currentPage - 1) * itemsPerPage;
     return filteredQuestions.slice(start, start + itemsPerPage);
-  }, [filteredQuestions, currentPage]);
+  }, [filteredQuestions, currentPage, sharedId, questions]);
 
   const resetPage = () => setCurrentPage(1);
   const LABELS = {
     pool: { valid: 'Tam metin', ambiguous: 'İncelemede', reported: 'Hata bildirilen', all: 'Tüm havuz' } as Record<string, string>,
     answer: { with: 'Cevaplı', without: 'Cevapsız', doubtful: 'Cevap belirsiz' } as Record<string, string>,
     source: { gemini_v3: 'Gemini v3', existing: 'Mevcut veriler' } as Record<string, string>,
-    p14: { faz14: 'Faz 14', faz14_onayli: 'Faz 14 · onaylı', faz14_bekleyen: 'Faz 14 · onay bekliyor' } as Record<string, string>,
+    p14: { faz15: 'Faz 15 Onaylı', faz14: 'Faz 14', faz14_onayli: 'Faz 14 · onaylı', faz14_bekleyen: 'Faz 14 · onay bekliyor' } as Record<string, string>,
     newness: { new_only: 'Yeni sorular', archived_only: 'Arşiv' } as Record<string, string>,
     sort: { newest: 'Yeniden eskiye', oldest: 'Eskiden yeniye', number: 'Soru numarası', default: searchQuery.trim() ? 'En ilgili' : 'Varsayılan' } as Record<string, string>,
     view: { raw: 'Ham metin', split: 'Karşılaştır' } as Record<string, string>,
@@ -705,7 +800,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ...(selectedYear !== 'all' ? [{ label: selectedYear, clear: () => setSelectedYear('all') }] : []),
     ...(explanationFilter === 'without' ? [{ label: 'Açıklamasız', clear: () => setExplanationFilter('all') }] : []),
     ...(sourceFilter !== 'all' ? [{ label: LABELS.source[sourceFilter], clear: () => setSourceFilter('all') }] : []),
-    ...(phase14Filter !== 'all' ? [{ label: LABELS.p14[phase14Filter], clear: () => setPhase14Filter('all') }] : []),
+    ...(phase14Filter !== 'all' && phase14Filter !== 'faz14' ? [{ label: LABELS.p14[phase14Filter], clear: () => setPhase14Filter('all') }] : []),
     ...(newnessFilter === 'archived_only' ? [{ label: 'Arşiv', clear: () => setNewnessFilter('all') }] : []),
     ...(viewMode !== 'redacted' ? [{ label: LABELS.view[viewMode], clear: () => setViewMode('redacted') }] : []),
   ];
@@ -891,6 +986,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         <button type="button" aria-pressed={explanationFilter === 'with'} className={`ms-fchip ${explanationFilter === 'with' ? 'is-on' : ''}`} onClick={() => { setExplanationFilter(explanationFilter === 'with' ? 'all' : 'with'); resetPage(); }}>
           Açıklamalı <span className="n">{n(fc('explanation', 'with'))}</span>
         </button>
+        <button type="button" aria-pressed={phase14Filter === 'faz15'} className={`ms-fchip ${phase14Filter === 'faz15' ? 'is-on' : ''}`} style={phase14Filter === 'faz15' ? { background: '#0284c7', borderColor: '#0284c7', color: '#fff' } : {}} onClick={() => { setPhase14Filter(phase14Filter === 'faz15' ? 'all' : 'faz15'); resetPage(); }} title="Yalnız Faz 15 Başdenetiminden geçen ve %100 doğrulanan sorular">
+          <Sparkles className="w-3.5 h-3.5 text-amber-300" aria-hidden /> Faz 15 Onaylı <span className="n">{n(fc('p14', 'faz15'))}</span>
+        </button>
+        <button type="button" aria-pressed={phase14Filter === 'faz14'} className={`ms-fchip ${phase14Filter === 'faz14' ? 'is-on' : ''}`} onClick={() => { setPhase14Filter(phase14Filter === 'faz14' ? 'all' : 'faz14'); resetPage(); }} title="Yalnız Faz 14 incelemesinden geçen sorular">
+          <Sparkles className="w-3.5 h-3.5" aria-hidden /> Faz 14 <span className="n">{n(fc('p14', 'faz14'))}</span>
+        </button>
         {(fc('newness', 'new_only') > 0 || newnessFilter === 'new_only') && (
           <button type="button" aria-pressed={newnessFilter === 'new_only'} className={`ms-fchip ${newnessFilter === 'new_only' ? 'is-on' : ''}`} onClick={() => { setNewnessFilter(newnessFilter === 'new_only' ? 'all' : 'new_only'); resetPage(); }}>
             Yeni <span className="n">{n(fc('newness', 'new_only'))}</span>
@@ -1023,9 +1124,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 ['gemini_v3', 'Gemini v3', fc('source', 'gemini_v3')],
                 ['existing', 'Mevcut', fc('source', 'existing')],
               ])}
-              {segRow('Faz 14 düzeltmesi', phase14Filter, setPhase14Filter, [
+              {segRow('AI İnceleme ve Denetim', phase14Filter, setPhase14Filter, [
                 ['all', 'Tümü', fc('p14')],
-                ['faz14', 'Düzeltilen', fc('p14', 'faz14')],
+                ['faz15', 'Faz 15 Onaylı', fc('p14', 'faz15')],
+                ['faz14', 'Faz 14', fc('p14', 'faz14')],
                 ['faz14_onayli', 'Onaylı', fc('p14', 'faz14_onayli')],
                 ['faz14_bekleyen', 'Onay bekliyor', fc('p14', 'faz14_bekleyen')],
               ])}
@@ -1050,6 +1152,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         <div className="bg-white rounded-2xl border border-line">
           <SectionLoader variant="book" label="Çıkmış sorular yükleniyor…" />
         </div>
+      ) : sharedId && paginatedQuestions.length === 0 ? (
+        <div className="ms-qcard items-center text-center py-10">
+          <HelpCircle className="w-8 h-8 text-ink-3" />
+          <p className="m-0 font-display text-[18px] font-semibold">Paylaşılan soru bulunamadı</p>
+          <p className="m-0 text-[13.5px] text-ink-2 max-w-sm">Soru kaldırılmış, birleştirilmiş ya da bağlantı eksik olabilir.</p>
+          <button type="button" onClick={showAllQuestions} className="ms-btn is-tonal">Tüm çıkmış sorular</button>
+        </div>
       ) : paginatedQuestions.length === 0 ? (
         <div className="ms-qcard items-center text-center py-10">
           <HelpCircle className="w-8 h-8 text-ink-3" />
@@ -1060,7 +1169,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           <button type="button" onClick={clearAllFilters} className="ms-btn is-tonal">Filtreleri temizle</button>
         </div>
       ) : (
-        <div className="flex flex-col gap-2.5 ms-stagger" key={`${currentPage}-${filteredQuestions.length}`}>
+        <div className="flex flex-col gap-2.5 ms-stagger" key={`${currentPage}-${filteredQuestions.length}-${sharedId || ''}`}>
+          {sharedId && (
+            <div className="ms-shared-band" role="status">
+              <Share2 className="w-4 h-4 shrink-0" aria-hidden />
+              <span className="min-w-0 flex-1">Paylaşılan soru gösteriliyor</span>
+              <button type="button" onClick={showAllQuestions} className="ms-btn is-ghost is-sm">Tüm sorular <ChevronRight /></button>
+            </div>
+          )}
           {paginatedQuestions.map((q) => {
             const effectiveMode: 'redacted' | 'raw' | 'split' = cardViewOverrides[q.id] || viewMode;
             const userUid = currentUser?.uid || currentUser?.email || 'anonim-std';
@@ -1070,15 +1186,19 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
             const slideMatch = getQuestionSlideMatch(q);
             const learnMatch = learnMatcher.getMatch(q);
+            // Mavi ⋯ ve "Öğren slaytı" kısayolu yalnızca güvenilir eşleşmelerde
+            const reliableLearn = isReliableLearnMatch(learnMatch) ? learnMatch : null;
 
             const stem = String(q.reconstruction?.stem || q.stem || q.fragments?.[0]?.text || q.topic || '');
             const options = q.reconstruction?.options || q.options || [];
             const correctAnswer = q.reconstruction?.correctAnswer || q.correctAnswer || q.claimedAnswer;
             const explanation = q.reconstruction?.explanation || q.explanation;
-            const doubtful = Boolean((q as any).answerDoubtful);
+            const doubtful = isDoubtful(q);
             // Asıl kayıtta cevap yoksa (onay bekleyen AI cevabı sayılmaz) ya da cevap tartışmalıysa şıklar ankete döner
             const keyMissing = !correctAnswer || (isPhase14Pending(q) && !(q as any).phase14Original?.correctAnswer);
-            const pollMode = options.length >= 2 && (doubtful || keyMissing);
+            // Cevabı yöneticice kabul edilmiş ama anketi açık tutulan soru: kabul edilen cevap + topluluk oyları
+            const acceptedPoll = !doubtful ? doubtInfo?.resolved?.[String(q.id)]?.answer : undefined;
+            const pollMode = options.length >= 2 && (doubtful || keyMissing || Boolean(acceptedPoll));
             // Faz 14 düzeltmesi: öncesi (phase14Original) ve model notları; ⓘ simgeleri yalnız düzeltilmiş sorularda
             const p14Fixed = isPhase14Fixed(q);
             const p14o: any = p14Fixed ? (q as any).phase14Original || {} : null;
@@ -1101,18 +1221,20 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             const explChangedP14 = p14Fixed && norm(p14o?.explanation) !== norm(explanation);
 
             const actions: ActionItem[] = [
+              ...(reliableLearn
+                ? [{ label: 'Öğren slaytı', icon: GraduationCap, group: 'Öğren', tone: 'accent' as const, hint: `slayt ${reliableLearn.slideNumber}`, onClick: () => setSelectedLearnMatch({ question: q, match: reliableLearn }) }]
+                : []),
               ...(isAdminUser
                 ? [{ label: 'AI ile düzenle', icon: Wand2, group: 'Yapay zekâ', tone: 'accent' as const, onClick: () => setCustomRedactQuestion({ question: q, match: slideMatch }) }]
                 : []),
               { label: 'Düzenlenmiş', icon: Sparkles, group: 'Görünüm', hint: effectiveMode === 'redacted' ? '✓' : undefined, onClick: () => setCardMode('redacted') },
               { label: 'Ham metin', icon: FileText, group: 'Görünüm', hint: effectiveMode === 'raw' ? '✓' : undefined, onClick: () => setCardMode('raw') },
               { label: 'Karşılaştır', icon: Layers, group: 'Görünüm', hint: effectiveMode === 'split' ? '✓' : undefined, onClick: () => setCardMode('split') },
-              ...(learnMatch ? [{ label: `Öğren · slayt ${learnMatch.slideNumber}`, icon: GraduationCap, group: 'Diğer', onClick: () => setSelectedLearnMatch({ question: q, match: learnMatch }) }] : []),
+              { label: 'Hakkında', icon: Info, group: 'Soru', hint: learnMatch ? `slayt ${learnMatch.slideNumber}` : undefined, onClick: () => setAboutQuestion(q) },
               ...(p14Fixed
                 ? [{ label: p14Open[q.id] ? 'Düzeltme öncesini gizle' : 'Düzeltme öncesini göster', icon: Info, group: 'Diğer', onClick: () => setP14Open((o) => ({ ...o, [q.id]: !o[q.id] })) }]
                 : []),
               { label: 'Kaynak dosyayı göster', icon: FileText, group: 'Diğer', onClick: () => setSelectedRawSourceQuestion(q) },
-              { label: copiedId === q.id ? 'Kopyalandı' : 'Soruyu kopyala', icon: copiedId === q.id ? Check : Copy, group: 'Diğer', onClick: () => handleCopyQuestion(q) },
               { label: 'Hata bildir', icon: Flag, group: 'Diğer', tone: 'danger', onClick: () => setReportingQuestion(q) },
             ];
 
@@ -1121,7 +1243,25 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 <header className="ms-qcard-head">
                   <span className="ms-qcard-num">#{q.questionNumber}</span>
                   {isNewQuestion && <span className="ms-tag is-ok">Yeni</span>}
-                  {p14Fixed && (
+                  {isPhase15Audited(q) && (
+                    <span
+                      className="ms-tag is-ok"
+                      style={{
+                        background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
+                        color: '#ffffff',
+                        fontWeight: 600,
+                        border: 'none',
+                        boxShadow: '0 1px 3px rgba(2,132,199,0.3)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.3rem'
+                      }}
+                      title="Faz 15 Başdenetçi tarafından %100 tıbbi literatürle doğrulandı"
+                    >
+                      <Sparkles className="w-3 h-3 text-amber-300" /> Faz 15 Onaylı
+                    </span>
+                  )}
+                  {p14Fixed && !isPhase15Audited(q) && (
                     <button
                       type="button"
                       onClick={() => setP14Open((o) => ({ ...o, [q.id]: !o[q.id] }))}
@@ -1129,19 +1269,25 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       className="ms-tag is-ai"
                       title="Faz 14 incelemesinde düzeltildi — değişiklikleri ve öncesini gör"
                     >
-                      <Info /> {isPhase14Pending(q) ? 'Onay bekliyor' : 'Düzeltildi'}
+                      <Info /> {isPhase14Pending(q) ? 'Onay bekliyor' : 'Faz 14'}
                     </button>
                   )}
                   {isGeminiV3Question(q) && <span className="ms-tag is-ai">Gemini v3</span>}
                   {q.isAmbiguous && <span className="ms-tag is-warn">Eksik</span>}
-                  {pollMode && <span className="ms-tag is-warn"><BarChart3 /> {doubtful ? 'Cevap belirsiz' : 'Cevapsız'}</span>}
+                  {pollMode && (acceptedPoll
+                    ? <span className="ms-tag is-ok" title="Cevap kabul edildi; anket topluluk karşılaştırması için açık"><BarChart3 /> Anket açık</span>
+                    : <span className="ms-tag is-warn"><BarChart3 /> {doubtful ? 'Cevap belirsiz' : 'Cevapsız'}</span>)}
                   {q.reports && q.reports.length > 0 && (
                     <span className="ms-tag is-bad" title={`${q.reports.length} hata bildirimi`}>
                       <Flag /> {q.reports.length}
                     </span>
                   )}
                   <span className="ms-qcard-meta" title={formatCommitteeName(q.committeeId)}>{meta}</span>
-                  <ActionMenu items={actions} title={`Soru #${q.questionNumber}`} />
+                  <ActionMenu
+                    items={actions}
+                    title={`Soru #${q.questionNumber}`}
+                    highlight={reliableLearn ? { icon: GraduationCap, title: `Öğren slaytı var (slayt ${reliableLearn.slideNumber})` } : undefined}
+                  />
                 </header>
 
                 {p14Fixed && p14Open[q.id] && (() => {
@@ -1240,11 +1386,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     {pollMode ? (
                       <AnswerPoll
                         questionId={String(q.id)}
-                        options={options}
+                        options={((doubtful || acceptedPoll) && doubtInfo?.options[String(q.id)]) || options}
                         voterUid={currentUser?.uid || null}
                         terms={terms}
+                        acceptedAnswer={acceptedPoll}
                         hint={
-                          doubtful
+                          acceptedPoll
+                            ? `Cevap ${acceptedPoll} olarak kabul edildi. Anket açık: kendi cevabını ver, topluluğun cevabı kabul edilen cevapla karşılaştırılır.`
+                            : doubtful
                             ? 'Cevap anahtarı tartışmalı: bağımsız çözücüler aynı şıkta uzlaşamadı. Doğru bildiğin şıkkı seç.'
                             : 'Bu sorunun cevap anahtarı yok. Doğru bildiğin şıkkı seç; çoğunluğun cevabı öne çıkar.'
                         }
@@ -1279,7 +1428,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                             );
                             const cls = `ms-opt ${showCorrect ? 'is-correct' : ''} ${wrongPick ? 'is-wrong' : ''} ${picked && (showCorrect || wrongPick) ? 'is-reveal' : ''}`;
                             return (
-                              <li key={key}>
+                              <li key={key} className="ms-opt-line">
+                                <button
+                                  type="button"
+                                  className="ms-objection"
+                                  onClick={() => setObjection({ question: q, option: { key, text: String(opt.text ?? '') } })}
+                                  aria-label={`${key} şıkkına itiraz et`}
+                                  title={`${key} şıkkına itiraz et`}
+                                >
+                                  <ShieldAlert aria-hidden />
+                                </button>
                                 {quizMode ? (
                                   <button type="button" className={cls} disabled={!!picked} onClick={() => setPicks((p) => ({ ...p, [q.id]: key }))} aria-label={`${key} şıkkını seç`}>
                                     {body}
@@ -1299,11 +1457,22 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         <button type="button" className="ms-btn is-ghost is-sm" onClick={() => setPicks((p) => { const x = { ...p }; delete x[q.id]; return x; })}>
                           Yeniden dene
                         </button>
+                        {explanation && (
+                          <button type="button" className="ms-btn is-ghost is-sm" onClick={() => setAboutQuestion(q)}>
+                            <BookOpen /> Açıklama
+                          </button>
+                        )}
                       </p>
                     )}
 
                     {!hideAnswer && !pollMode && (q as any).answerStatus === 'dogrulanmadi' && (
                       <p className="ms-note is-warn">Cevap anahtarı doğrulanmadı — kaynaktaki işaretli şık bir öğrencinin cevabıydı.</p>
+                    )}
+                    {(q as any).answerStatus === 'faz15' && (
+                      <p className="ms-note is-ok" style={{ borderColor: 'var(--color-primary, #0284c7)' }}>
+                        ✓ Faz 15 Başdenetim tarafından incelendi, şıklar ve tıp literatürüyle %100 doğrulandı.
+                        {!hideAnswer && (q as any).phase15?.cevapDegisti && (q as any).phase15?.cevapGerekcesi ? ` Cevap güncellendi: ${(q as any).phase15.cevapGerekcesi}` : ''}
+                      </p>
                     )}
                     {(q as any).answerStatus === 'faz14' && (
                       <p className="ms-note is-ai">
@@ -1315,35 +1484,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     )}
                     {!hideAnswer && (q as any).answerStatus === 'dogrulandi' && <p className="ms-note is-ok">Cevap ders slaytı kanıtıyla doğrulandı.</p>}
 
-                    <QuestionInsightsPanel questionId={q.id} />
-                    {explanation && (!quizMode || picked) && (
-                      <div className="flex items-start gap-1">
-                        <Collapsible
-                          className="ms-disc flex-1 min-w-0"
-                          title={
-                            <span className="inline-flex items-center gap-2">
-                              Açıklama
-                              {explChangedP14 && <span className="ms-tag is-ai">Faz 14'te yenilendi</span>}
-                            </span>
-                          }
-                        >
-                          <p className="ms-disc-body m-0"><Highlight text={String(explanation)} terms={terms} /></p>
-                          {(q.evidenceText || q.reconstruction?.evidenceText) && (
-                            <div className="mt-2.5 rounded-lg bg-white px-3 py-2.5 text-[13px] flex flex-col gap-1">
-                              <span className="font-semibold text-ink flex items-center gap-1.5">
-                                <BookOpen className="w-3.5 h-3.5 text-ink-3" />
-                                {isDeepSeekQuestion(q) ? 'Ders notu ve slayt kanıtı' : 'Ders notu ve amfi kanıtı'}
-                                {q.verification?.evidenceStatus && (
-                                  <span className="ms-tag is-ok">{q.verification.evidenceStatus === 'kanitli' ? 'Kanıtlı' : q.verification.evidenceStatus}</span>
-                                )}
-                              </span>
-                              <p className="m-0 leading-relaxed text-ink-2">{q.evidenceText || q.reconstruction?.evidenceText}</p>
-                            </div>
-                          )}
-                        </Collapsible>
-                        {explChangedP14 && <span className="pt-2.5"><ChangeInfo title="Açıklama yenilendi (Faz 14)" before={p14o?.explanation || ''} note={p14Note('aciklama_duzeltmesi')} /></span>}
-                      </div>
-                    )}
+                    {/* Açıklama, ilgili slayt ve terimler kartta yer kaplamaz: üç nokta → Hakkında */}
                   </>
                 )}
 
@@ -1374,17 +1515,19 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   >
                     <MessageSquare /> {commentsCount > 0 ? `${commentsCount} yorum` : 'Yorum'}
                   </button>
-                  <span className="flex-1" />
-                  {learnMatch && (
-                    <button
-                      type="button"
-                      onClick={() => setSelectedLearnMatch({ question: q, match: learnMatch })}
-                      title={`${learnMatch.deckTitle} · slayt ${learnMatch.slideNumber}`}
-                      className="ms-btn is-sm is-ghost text-accent! min-w-0 max-w-full"
-                    >
-                      <GraduationCap /> <span className="truncate">Öğren · slayt {learnMatch.slideNumber}</span>
-                    </button>
-                  )}
+                  <span className="ms-qcard-foot-sep" aria-hidden />
+                  <button
+                    type="button"
+                    onClick={() => handleCopyQuestion(q)}
+                    className={`ms-btn is-sm is-ghost is-icon ${copiedId === q.id ? 'text-ok!' : ''}`}
+                    aria-label={copiedId === q.id ? 'Soru kopyalandı' : 'Soruyu kopyala'}
+                    title={copiedId === q.id ? 'Kopyalandı' : 'Soruyu metin olarak kopyala'}
+                  >
+                    {copiedId === q.id ? <Check /> : <Copy />}
+                  </button>
+                  <button type="button" onClick={() => handleShareQuestion(q)} className="ms-btn is-sm is-ghost is-icon" aria-label="Soruyu paylaş" title="Soru bağlantısını paylaş">
+                    <Share2 />
+                  </button>
                 </footer>
 
                 {expandedCommentsQuestionId === q.id && (
@@ -1424,7 +1567,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             );
           })}
 
-          {totalPages > 1 && (
+          {totalPages > 1 && !sharedId && (
             <nav aria-label="Sayfalar" className="flex items-center justify-between gap-2 pt-1 text-[13.5px]">
               <button type="button" onClick={() => { setCurrentPage((prev) => Math.max(1, prev - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }} disabled={currentPage === 1} className="ms-btn is-outline">
                 <ChevronLeft /> <span className="hidden sm:inline">Önceki</span>
@@ -1456,8 +1599,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   onClick={() => {
                     const dId = selectedLearnMatch.match.deckId;
                     const sNum = selectedLearnMatch.match.slideNumber;
+                    const focus = focusFor(selectedLearnMatch.question, selectedLearnMatch.match);
                     setSelectedLearnMatch(null);
-                    onNavigateToLearn(dId, sNum);
+                    onNavigateToLearn(dId, sNum, focus);
                   }}
                   className="ms-btn is-primary"
                 >
@@ -1475,11 +1619,24 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             {selectedLearnMatch.match.badge && <span className="ms-tag self-start">{selectedLearnMatch.match.badge}</span>}
             <h3 className="m-0 text-[15.5px] font-semibold text-ink">{selectedLearnMatch.match.slideTitle}</h3>
           </div>
-          {selectedLearnMatch.match.synthesisNarrative && (
-            <Collapsible className="ms-disc" title="Amfi ve ders notu sentezi" defaultOpen>
-              <p className="ms-disc-body m-0 max-h-64 overflow-y-auto">{selectedLearnMatch.match.synthesisNarrative}</p>
-            </Collapsible>
-          )}
+          {(() => {
+            const f = focusFor(selectedLearnMatch.question, selectedLearnMatch.match);
+            return (
+              <>
+                <div className="ms-focus-legend">
+                  <span><mark className="ms-hl">soru ifadesi</mark></span>
+                  {f.answerKey && <span><mark className="ms-hl is-answer">doğru şık {f.answerKey}</mark>{f.answerText ? ` — ${f.answerText}` : ''}</span>}
+                </div>
+                {selectedLearnMatch.match.synthesisNarrative && (
+                  <Collapsible className="ms-disc" title="Amfi ve ders notu sentezi" defaultOpen>
+                    <div className="max-h-72 overflow-y-auto pr-1">
+                      <SourceText text={selectedLearnMatch.match.synthesisNarrative} terms={f.terms} answerTerms={f.answerTerms} size="sm" />
+                    </div>
+                  </Collapsible>
+                )}
+              </>
+            );
+          })()}
           {selectedLearnMatch.match.spotPearls && selectedLearnMatch.match.spotPearls.length > 0 && (
             <section className="flex flex-col gap-1.5">
               <h4 className="m-0 text-[12.5px] font-semibold text-ink-3">Sınav için önemli noktalar</h4>
@@ -1491,7 +1648,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       <span className="ms-stem-mark is-dot" aria-hidden />
                       <span className="min-w-0">
                         {isObj && pearl.badge && <b className="text-ink mr-1">{pearl.badge}</b>}
-                        {isObj ? pearl.text : String(pearl || '')}
+                        <Marked
+                          text={isObj ? String(pearl.text || '') : String(pearl || '')}
+                          terms={focusFor(selectedLearnMatch.question).terms}
+                          answerTerms={focusFor(selectedLearnMatch.question).answerTerms}
+                        />
                       </span>
                     </li>
                   );
@@ -1561,6 +1722,61 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           </Dialog>
         );
       })()}
+
+      {/* Soru hakkında: künye, ilgili slayt, açıklama, kanıt, terimler */}
+      {aboutQuestion && (() => {
+        const q: any = aboutQuestion;
+        const lm = learnMatcher.getMatch(aboutQuestion);
+        const f = focusFor(aboutQuestion, lm);
+        const ans = q.reconstruction?.correctAnswer || q.correctAnswer || q.claimedAnswer;
+        const expl = q.reconstruction?.explanation || q.explanation;
+        const p14 = isPhase14Fixed(q) && String(q.phase14Original?.explanation || '').trim() !== String(expl || '').trim();
+        const hidden = quizMode && !picks[q.id];
+        return (
+          <QuestionAboutDialog
+            questionId={String(q.id)}
+            title={`Soru #${q.questionNumber || '–'} hakkında`}
+            subtitle={[q.discipline, q.examYear].filter(Boolean).join(' · ')}
+            facts={[
+              { label: 'Kurul', value: formatCommitteeName(q.contentCommitteeId || q.committeeId) },
+              { label: 'Ders', value: q.discipline },
+              { label: 'Konu', value: q.topic && !/^Soru #/.test(q.topic) ? q.topic : undefined },
+              { label: 'Sınav', value: q.examYear },
+              { label: 'Soru no', value: q.questionNumber ? `#${q.questionNumber}` : undefined, mono: true },
+              { label: 'Cevap', value: hidden ? 'gizli' : ans || doubtInfo?.resolved?.[String(q.id)]?.answer, mono: !hidden },
+              { label: 'Kaynak dosya', value: q.sourceFile || q.sourceNote, wide: true },
+            ]}
+            explanation={expl ? String(expl) : undefined}
+            explanationNote={p14 ? <span className="ms-tag is-ai normal-case tracking-normal">Faz 14'te yenilendi</span> : undefined}
+            evidence={q.evidenceText || q.reconstruction?.evidenceText}
+            evidenceTitle={isDeepSeekQuestion(q) ? 'Ders notu ve slayt kanıtı' : 'Ders notu ve amfi kanıtı'}
+            answerHidden={hidden}
+            answerTerms={f.answerTerms}
+            learnMatch={lm}
+            onPreviewSlide={lm ? () => { setAboutQuestion(null); setSelectedLearnMatch({ question: aboutQuestion, match: lm }); } : undefined}
+            onOpenInLearn={lm && onNavigateToLearn ? () => { setAboutQuestion(null); onNavigateToLearn(lm.deckId, lm.slideNumber, f); } : undefined}
+            onShowSource={() => { setAboutQuestion(null); setSelectedRawSourceQuestion(aboutQuestion); }}
+            onClose={() => setAboutQuestion(null)}
+          />
+        );
+      })()}
+
+      {/* Şıkka itiraz */}
+      {objection && (
+        <ReportQuestionModal
+          question={objection.question}
+          objectOption={objection.option}
+          onClose={() => setObjection(null)}
+          onSubmit={async (reason, details) => {
+            const res = await ApiService.reportPastQuestion(objection.question.id, reason, details, currentUser?.displayName || 'Tıp Öğrencisi');
+            if (res?.report) {
+              setQuestions((prev) =>
+                prev.map((q) => (q.id === objection.question.id && !(q.reports || []).some((r: any) => r.id === res.report.id) ? { ...q, reports: [...(q.reports || []), res.report] } : q)),
+              );
+            }
+          }}
+        />
+      )}
 
       {/* Hata bildir */}
       {reportingQuestion && (

@@ -1,0 +1,1116 @@
+{
+ "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi",
+ "sira": 23,
+ "kurul": 1,
+ "ders": "Halk Sağlığı",
+ "konu": "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
+ "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
+ "tarih": "2026-09-24",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Ana-çocuk sağlığı izlemlerinin gerekçesini ve risk gruplarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-23-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Koruyucu hekimlikte periyodik izlem yapılan başlıca risk grupları hangileridir?",
+     "secenekler": {
+      "A": "Yalnızca yaşlılar",
+      "B": "Bebek/çocuklar ve kadınlar",
+      "C": "Yalnızca sporcular",
+      "D": "Yalnızca erkek işçiler",
+      "E": "Yalnızca üniversite öğrencileri"
+     },
+     "dogru": "B",
+     "aciklama": "Bebek/çocuklar ve kadınlar risk gruplarıdır; izlemle sorunlar önlenir veya erken tespit edilir.",
+     "sik_aciklamalari": {
+      "A": "Yaşlılar ayrı bir izlem grubudur; ACS kapsamı değildir.",
+      "B": "Doğru: ana-çocuk sağlığının hedef gruplarıdır.",
+      "C": "Sporcular risk grubu olarak tanımlanmamıştır.",
+      "D": "Bu grup ACS izleminin hedefi değildir.",
+      "E": "Bu grup ACS izleminin hedefi değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bebek-çocuk ölümlülüğünü artıran anne kaynaklı riskler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Dört ve daha fazla doğum",
+      "B": "Anne yaşının 18'den küçük olması",
+      "C": "Doğumlar arasında uzun aralık bırakılması",
+      "D": "Kısa doğum aralığı",
+      "E": "Hepsi risk faktörüdür"
+     },
+     "dogru": "C",
+     "aciklama": "Riskler anne yaşının <18 olması, 4+ doğum ve kısa doğum aralığıdır; uzun aralık risk değildir.",
+     "sik_aciklamalari": {
+      "A": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "B": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: uzun aralık koruyucudur.",
+      "D": "Risk faktörüdür; bu nedenle doğru seçenek değildir.",
+      "E": "A seçeneği risk faktörü değildir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Türkiye'de ana-çocuk sağlığı izlemlerinin hedef nüfusu ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Çocuk nüfusu hiç izlenmez",
+      "B": "Nüfusun %80'i 0–14 yaştır",
+      "C": "15–49 yaş kadınlar nüfusun %2'sidir",
+      "D": "Nüfusun ~%20,3'ü 0–14 yaş çocuk, ~%25,4'ü 15–49 yaş kadındır",
+      "E": "Hedef nüfus yalnızca gebelerdir"
+     },
+     "dogru": "D",
+     "aciklama": "İzlem hedef nüfusunun büyüklüğü hizmet planlamasını belirler.",
+     "sik_aciklamalari": {
+      "A": "Çocuklar izlenir; bu nedenle doğru seçenek değildir.",
+      "B": "Oran çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "C": "Oran çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru: verilen oranlardır.",
+      "E": "Gebe olmayan kadınlar ve çocuklar da izlenir."
+     },
+     "bilgi": [
+      2,
+      6
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Anne ölümünü tanımlar; Türkiye ve dünya verilerini yorumlar.",
+   "sorular": [
+    {
+     "id": "k1-23-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Anne ölümü tanımında doğumdan sonra kaç günlük süre esas alınır?",
+     "secenekler": {
+      "A": "28 gün",
+      "B": "7 gün",
+      "C": "42 gün",
+      "D": "1 yıl",
+      "E": "3 gün"
+     },
+     "dogru": "C",
+     "aciklama": "Anne ölümü gebelik süresince, doğumda veya doğumu izleyen 42 gün içinde obstetrik nedenlere bağlı ölümdür.",
+     "sik_aciklamalari": {
+      "A": "28 gün neonatal dönemdir.",
+      "B": "Süre daha uzundur; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: tanımdaki süredir.",
+      "D": "1 yıl geç anne ölümleri için kullanılır.",
+      "E": "Süre daha uzundur; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Anne ölüm oranını etkileyen faktörler arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "Babanın mesleği",
+      "B": "Toplumsal cinsiyet eşitliği ve kadının toplumdaki statüsü",
+      "C": "Bebeğin cinsiyeti",
+      "D": "Hastanenin rengi",
+      "E": "Mevsim"
+     },
+     "dogru": "B",
+     "aciklama": "Anne ölümü sağlık hizmetlerine erişim, toplumsal cinsiyet eşitliği ve kadının statüsüyle ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğrudan belirleyici olarak verilmemiştir.",
+      "B": "Doğru: sosyal eşitsizlik belirleyicidir.",
+      "C": "Bebeğin cinsiyeti belirleyici değildir.",
+      "D": "İlgisizdir; bu nedenle doğru seçenek değildir.",
+      "E": "Belirleyici değildir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "2024 Türkiye anne ölüm oranı verileri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "En yüksek oran Doğu Karadeniz'dedir",
+      "B": "Türkiye ortalaması ~500/100.000'dir",
+      "C": "Tüm bölgelerde oran aynıdır",
+      "D": "Türkiye ortalaması ~11,5/100.000; en yüksek Kuzeydoğu Anadolu bölgesindedir",
+      "E": "Oran canlı doğum başına yüzde olarak verilir"
+     },
+     "dogru": "D",
+     "aciklama": "Bölgeler arası fark izlem ve hizmete erişimle ilişkilidir; Doğu Karadeniz'de en düşüktür.",
+     "sik_aciklamalari": {
+      "A": "Doğu Karadeniz en düşük bölgedir.",
+      "B": "Değer çok yüksektir.",
+      "C": "Bölgesel farklar vardır.",
+      "D": "Doğru: verilen değerlerdir.",
+      "E": "100.000 canlı doğumda ifade edilir."
+     },
+     "bilgi": [
+      3,
+      5
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "İzlenen grupları ve Aile Hekimliği Uygulama Yönetmeliği'nin izlem-tarama kapsamını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-23-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "15–49 yaş kadınlar ana-çocuk sağlığı izlemlerinde kaç grupta izlenir?",
+     "secenekler": {
+      "A": "2: gebeler ve bebekler",
+      "B": "1: yalnızca gebeler",
+      "C": "3: gebeler, lohusalar ve gebe-lohusa olmayan kadınlar",
+      "D": "5",
+      "E": "İzlenmez"
+     },
+     "dogru": "C",
+     "aciklama": "Kadınlar 3 grupta, 0–6 yaş çocuklar bebek ve çocuk olarak 2 grupta izlenir.",
+     "sik_aciklamalari": {
+      "A": "Bebekler ayrı gruptadır.",
+      "B": "Lohusalar ve diğer kadınlar da izlenir.",
+      "C": "Doğru: üç kadın grubu izlenir.",
+      "D": "Beş grup yoktur; bu nedenle doğru seçenek değildir.",
+      "E": "Kadınlar izlenir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aile Hekimliği Uygulama Yönetmeliği'ne göre ana çocuk sağlığı izlemleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "İzlemler gönüllülük esasına göre yapılmaz",
+      "B": "ACS hizmetleri yalnızca hastanelerde verilir",
+      "C": "Aile hekiminin tarama görevi yoktur",
+      "D": "Aile hekimi ACS ve aile planlaması hizmeti verir; yaş, cinsiyet ve hastalık gruplarına göre izlem-tarama yapar",
+      "E": "Yönetmelik yalnızca erişkin erkekleri kapsar"
+     },
+     "dogru": "D",
+     "aciklama": "Yönetmelik izlemlerin yasal çerçevesini oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Bu ifade yönetmelik içeriğini yansıtmaz.",
+      "B": "Birinci basamakta verilir.",
+      "C": "Tarama görevi vardır.",
+      "D": "Doğru: yönetmeliğin kapsamıdır.",
+      "E": "Kadın ve çocukları kapsar."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Türkiye'de gebe, bebek ve çocuk takibini sağlık ocaklarına görev olarak veren düzenleme hangisidir?",
+     "secenekler": {
+      "A": "2003 Sağlıkta Dönüşüm Programı",
+      "B": "1961 tarihli 224 sayılı kanun",
+      "C": "1978 Alma-Ata Bildirgesi",
+      "D": "1920 Winslow tanımı",
+      "E": "2009 izlem sayısı değişikliği"
+     },
+     "dogru": "B",
+     "aciklama": "224 sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Kanunu gebe-bebek-çocuk takibini sağlık ocaklarına vermiştir.",
+     "sik_aciklamalari": {
+      "A": "2003 programı anne-çocuğa önem vermiştir ama ilk görevlendirme değildir.",
+      "B": "Doğru: izlemleri kurumsallaştıran kanundur.",
+      "C": "Alma-Ata uluslararası bir bildirgedir.",
+      "D": "Winslow halk sağlığı tanımıdır.",
+      "E": "2009'da izlem sayısı 4'e indirilmiştir."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Doğum öncesi bakımın tanımını, yararını ve tarihçesini özetler.",
+   "sorular": [
+    {
+     "id": "k1-23-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Doğum öncesi bakım (DÖB) aşağıdakilerden hangisini tanımlar?",
+     "secenekler": {
+      "A": "Yalnızca ultrason çekimi",
+      "B": "Yalnızca doğum anında yapılan muayene",
+      "C": "Doğumdan sonra bebeğin aşılanması",
+      "D": "Anne ve fetüsün gebelik boyunca eğitimli personelce düzenli aralıklarla izlenmesi",
+      "E": "Lohusa döneminde ev ziyareti"
+     },
+     "dogru": "D",
+     "aciklama": "DÖB gebeliğin hem anne hem fetüs için sağlıklı geçmesini sağlar.",
+     "sik_aciklamalari": {
+      "A": "USG DÖB'ün yalnızca bir parçasıdır.",
+      "B": "Gebelik boyunca süren izlemdir.",
+      "C": "Bu doğum sonrası hizmettir.",
+      "D": "Doğru: DÖB'ün tanımıdır.",
+      "E": "Bu lohusa izlemidir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Doğum öncesi bakımın yararları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Düşük ağırlıklı doğum riskinin azalması",
+      "B": "Ölü doğum riskinin azalması",
+      "C": "Sezaryen oranının artırılması",
+      "D": "Anne ölümü riskinin azalması",
+      "E": "Perinatal ölüm riskinin azalması"
+     },
+     "dogru": "C",
+     "aciklama": "DÖB ölü doğum, düşük ağırlıklı doğum, anne ve perinatal ölüm riskini azaltır.",
+     "sik_aciklamalari": {
+      "A": "DÖB'ün yararıdır; bu nedenle doğru seçenek değildir.",
+      "B": "DÖB'ün yararıdır; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: sezaryen artışı amaç değildir.",
+      "D": "DÖB'ün yararıdır; bu nedenle doğru seçenek değildir.",
+      "E": "DÖB'ün yararıdır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "DÖB'ün tarihçesi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Başlangıç amacı sezaryen oranını artırmaktı",
+      "B": "İlk kez 2009'da uygulanmıştır",
+      "C": "Etkinliği hiç gösterilmemiştir",
+      "D": "Yalnızca Avrupa'da uygulanmıştır",
+      "E": "20. yüzyıl başında ABD'de ortaya atılmış; 1915 Johns Hopkins deneyimi prematürite ölümlerini azaltmıştır"
+     },
+     "dogru": "E",
+     "aciklama": "DÖB fetal anomalileri önlemek amacıyla başlamış; Boston ev ziyaretleri ve Johns Hopkins deneyimi etkinliğini göstermiştir.",
+     "sik_aciklamalari": {
+      "A": "Amaç anne-fetüs sağlığıdır.",
+      "B": "Çok daha eskidir; bu nedenle doğru seçenek değildir.",
+      "C": "Etkinliği gösterilmiştir.",
+      "D": "ABD'de başlamıştır; bu nedenle doğru seçenek değildir.",
+      "E": "Doğru: tarihçe doğrudur."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Yeterli doğum öncesi bakım ölçütlerini ve Kessner indeksini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-23-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Kessner indeksinde doğum öncesi bakımın yeterliliğini değerlendiren ölçütler arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Bakımın hangi ayda başladığı",
+      "B": "Gebenin boy uzunluğu",
+      "C": "Doğuma kadar kaç kez izlendiği",
+      "D": "Bakımın yapıldığı yer (bakım kalitesi)",
+      "E": "Hepsi Kessner ölçütüdür"
+     },
+     "dogru": "B",
+     "aciklama": "Kessner indeksi bakımın başlama ayı, izlem sayısı ve bakım yerini değerlendirir.",
+     "sik_aciklamalari": {
+      "A": "Kessner ölçütüdür; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: boy uzunluğu Kessner ölçütü değildir.",
+      "C": "Kessner ölçütüdür; bu nedenle doğru seçenek değildir.",
+      "D": "Kessner ölçütüdür; bu nedenle doğru seçenek değildir.",
+      "E": "A seçeneği ölçüt değildir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Yeterli doğum öncesi bakım almanın ölçütleri hangileridir?",
+     "secenekler": {
+      "A": "Bakımın yalnızca telefonla yapılması",
+      "B": "Bakımın akrabalar tarafından verilmesi",
+      "C": "Bakımın gebeliğin 7. ayında başlaması",
+      "D": "Yalnızca doğumda hastaneye gidilmesi",
+      "E": "Bakımın sağlık personelince verilmesi ve gebeliğin ilk 3 ayında başlaması"
+     },
+     "dogru": "E",
+     "aciklama": "5. ayda başlayan izlem yeterli sayılmaz; bakım ilk trimesterde ve sağlık personelince başlamalıdır.",
+     "sik_aciklamalari": {
+      "A": "Yüz yüze izlem gerekir.",
+      "B": "Sağlık personeli gerekir.",
+      "C": "Geç başlamadır; bu nedenle doğru seçenek değildir.",
+      "D": "Gebelik boyunca izlem gerekir.",
+      "E": "Doğru: yeterlilik ölçütleridir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": [
+      "a4e8e7391b4e",
+      "fe74dc7053d7"
+     ]
+    },
+    {
+     "id": "k1-23-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Gebeliğin 5. ayında ilk kez sağlık personeli tarafından izlenmeye başlanan ve sonrasında 4 izlemi tamamlanan gebenin doğum öncesi bakımı nasıl değerlendirilir?",
+     "secenekler": {
+      "A": "Değerlendirme yapılamaz",
+      "B": "Yeterli; çünkü 4 izlem tamamlanmıştır",
+      "C": "Yeterli; çünkü sağlık personeli izlemiştir",
+      "D": "Yetersiz; çünkü bakım ilk 3 ayda başlamamıştır",
+      "E": "Mükemmel bakım kabul edilir"
+     },
+     "dogru": "D",
+     "aciklama": "Yeterli bakım için izlemin ilk trimesterde başlaması gerekir; 5. ayda başlayan izlem yeterli sayılmaz.",
+     "sik_aciklamalari": {
+      "A": "Kessner ölçütleriyle değerlendirilebilir.",
+      "B": "İzlem sayısı tek başına yeterli değildir.",
+      "C": "Personel ölçütü tek başına yeterli değildir.",
+      "D": "Doğru: başlama zamanı ölçütü karşılanmamıştır.",
+      "E": "Geç başlama nedeniyle yetersizdir."
+     },
+     "bilgi": [
+      13,
+      14
+     ],
+     "benzer_cikmis": [
+      "37d39f04ae0a"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "a4e8e7391b4e",
+     "soru": "'Yeterli doğum öncesi bakım alma' kriterlerinden olmayan hangisidir?",
+     "secenekler": {
+      "A": "İzlemin gebeliğin 2. ayında başlamış olması",
+      "B": "İzlemin sağlık personeli tarafından yapılması",
+      "C": "Gebelik boyunca en az 4 kez izlem yapılmış olması",
+      "D": "İzlemin gebeliğin ilk 3 ayında başlamış olması",
+      "E": "İzlemin gebeliğin 5. ayında başlamış olması"
+     },
+     "cevap": null
+    },
+    {
+     "id": "fe74dc7053d7",
+     "soru": "Doğum öncesinde yeterli bakım alma kriterlerinden olmayan hangisidir?",
+     "secenekler": {
+      "A": "İzlemenin gebeliğin 2. ayında başlamış olması",
+      "B": "İzlemenin sağlık personeli tarafından yapılması",
+      "C": "Gebelik boyunca en az 4 kere izlem yapılmış olması",
+      "D": "İzlemenin gebeliğin 3. ayında başlamış olması",
+      "E": "İzlemenin gebeliğin 5. ayında başlamış olması"
+     },
+     "cevap": null
+    },
+    {
+     "id": "37d39f04ae0a",
+     "soru": "No DU HALK SAĞLIĞI HALK SAĞLIĞI Ana çocuk sağlığı izleme Doğum öncesi yeterli bakım alma kriterlerinden olmayan hangisidir?",
+     "secenekler": {
+      "A": "İzlemin gebeliğin 2. ayında başlamış olması",
+      "B": "İzlemin sağlık personeli tarafından yapılması",
+      "C": "Gebelik boyunca en az 4 kez izlem yapılmış olması",
+      "D": "İzlemin gebeliğin ilk 3 ayında başlamış olması",
+      "E": "İzlemin gebeliğin 5.ayında başlamış olması"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Gebe izlem takvimini ve her izlemin içeriğini bilir.",
+   "sorular": [
+    {
+     "id": "k1-23-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Güncel uygulamada bir gebeye en az kaç izlem yapılır?",
+     "secenekler": {
+      "A": "13",
+      "B": "4",
+      "C": "6",
+      "D": "1",
+      "E": "10"
+     },
+     "dogru": "B",
+     "aciklama": "Sosyalleştirmede 13 izlem öngörülmüş; 2001'de 6'ya, 2009'da 4'e inmiştir.",
+     "sik_aciklamalari": {
+      "A": "Sosyalleştirme dönemi sayısıdır.",
+      "B": "Doğru: güncel izlem sayısıdır.",
+      "C": "2001 dönemindeki sayıdır.",
+      "D": "Yetersizdir; bu nedenle doğru seçenek değildir.",
+      "E": "Güncel sayı değildir."
+     },
+     "bilgi": [
+      12,
+      16
+     ],
+     "benzer_cikmis": [
+      "09fda18f5ae5"
+     ]
+    },
+    {
+     "id": "k1-23-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Gebe izlem takviminde 2. izlem hangi haftalarda yapılır ve hangi taramayı içerir?",
+     "secenekler": {
+      "A": "36–38. hafta; Leopold manevraları",
+      "B": "0–14. hafta; yalnızca kan grubu",
+      "C": "18–24. hafta; indirekt Coombs ve 24–28. haftada glukoz taraması",
+      "D": "28–32. hafta; postpartum aile planlaması danışmanlığı",
+      "E": "40. hafta; doğum"
+     },
+     "dogru": "C",
+     "aciklama": "İzlem takvimi: 0–14, 18–24, 28–32, 36–38. haftalar; 2. izlemde Rh uyuşmazlığı ve gestasyonel diyabet taranır.",
+     "sik_aciklamalari": {
+      "A": "Bu 4. izlemdir; bu nedenle doğru seçenek değildir.",
+      "B": "Bu 1. izlemdir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: 2. izlemin zamanı ve içeriğidir.",
+      "D": "Bu 3. izlemdir; bu nedenle doğru seçenek değildir.",
+      "E": "İzlem takviminde yer almaz."
+     },
+     "bilgi": [
+      16,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Gebe izlemlerinin içerikleri ile ilgili eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "1. izlem – öykü, fizik muayene, idrar, Hb-Htc, kan grubu, HBsAg, demir ve tetanoz",
+      "B": "2. izlem – uterus yüksekliği, ödem, fetal kalp sesi, indirekt Coombs",
+      "C": "3. izlem – doğum, emzirme ve postpartum aile planlaması danışmanlığı",
+      "D": "4. izlem – Leopold manevraları ve obstetrik vajinal muayene",
+      "E": "1. izlem – Leopold manevraları ile prezentasyonun belirlenmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Leopold manevraları ve prezente kısmın değerlendirilmesi 4. izlemde (36–38. hafta) yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış eşleştirme (aranan cevap): Leopold 4. izlemdedir."
+     },
+     "bilgi": [
+      17,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "09fda18f5ae5",
+     "soru": "Tüm gebelerde, anne ve bebeğin sağlığını korumaya yönelik olarak yapılması gereken “Doğum Öncesi Bakım İzlem Protokolü”ne göre her gebeye en az kaç kez nitelikli izlem yapılmalıdır?",
+     "secenekler": {
+      "A": "Çocuk sağ ve hast",
+      "B": "Çocuklarda su dengesi bozuklukları",
+      "C": "Sıra No",
+      "D": "",
+      "E": "Sıra No"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Gebelikte tehlike işaretlerini, üçlü testi ve sevk edilecek durumları sıralar.",
+   "sorular": [
+    {
+     "id": "k1-23-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi gebelikte tehlike işaretlerinden biri değildir?",
+     "secenekler": {
+      "A": "Vajinal kanama",
+      "B": "Sabah hafif bulantı",
+      "C": "Konvülsiyon",
+      "D": "Şiddetli baş ağrısı ve görme bozukluğu",
+      "E": "Fetus hareketlerinin kaybolması"
+     },
+     "dogru": "B",
+     "aciklama": "Tehlike işaretleri: kanama, konvülsiyon, baş ağrısı-görme bozukluğu, ateş, ciddi karın ağrısı, solunum güçlüğü, su gelmesi, ödem, fetal hareket kaybı ve hızlı kilo alımı.",
+     "sik_aciklamalari": {
+      "A": "Tehlike işaretidir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: hafif sabah bulantısı fizyolojiktir.",
+      "C": "Tehlike işaretidir; bu nedenle doğru seçenek değildir.",
+      "D": "Tehlike işaretidir; bu nedenle doğru seçenek değildir.",
+      "E": "Tehlike işaretidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Üçlü test ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kesin tanı testidir",
+      "B": "İlk trimesterde 8. haftada yapılır",
+      "C": "Yalnızca gestasyonel diyabeti tarar",
+      "D": "15–22. haftada (ideal 16–18) trizomi 21, trizomi 18 ve nöral tüp defekti olasılığını araştırır",
+      "E": "Rh uyuşmazlığını saptar"
+     },
+     "dogru": "D",
+     "aciklama": "Üçlü test beta-hCG ve AFP gibi belirteçlerle tarama yapar; kesin tanı değildir.",
+     "sik_aciklamalari": {
+      "A": "Tarama testidir; bu nedenle doğru seçenek değildir.",
+      "B": "İkinci trimester testidir.",
+      "C": "Diyabet glukoz taramasıyla değerlendirilir.",
+      "D": "Doğru: zamanlama ve amaç doğrudur.",
+      "E": "Rh uyuşmazlığı indirekt Coombs ile taranır."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Gebe izleminde aşağıdaki durumlardan hangisi ileri basamağa sevk gerektirmez?",
+     "secenekler": {
+      "A": "Uterus yüksekliğinin gebelik haftasına göre ±4 cm farklı olması",
+      "B": "Hb < 7 g/dl",
+      "C": "Hb 11,5 g/dl",
+      "D": "Fetal kalp sesinin alınamaması",
+      "E": "Çoğul gebelik şüphesi"
+     },
+     "dogru": "C",
+     "aciklama": "Sevk durumları: tehlike işareti, Hb <7 g/dl, kanama, preeklampsi/HT/proteinüri, ±4 cm uterus farkı, FKS alınamaması, inatçı bakteriüri, sistemik hastalık ve çoğul gebelik şüphesi.",
+     "sik_aciklamalari": {
+      "A": "Sevk gerektirir; bu nedenle doğru seçenek değildir.",
+      "B": "Sevk gerektirir; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru: normal sınırdaki Hb sevk gerektirmez.",
+      "D": "Sevk gerektirir; bu nedenle doğru seçenek değildir.",
+      "E": "Sevk gerektirir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Gebelikte kilo alımını, ödem nedenlerini ve gebelik toksemisini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-23-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Gebelikte toplam kilo artışı yaklaşık ne kadardır?",
+     "secenekler": {
+      "A": "Kilo artışı olmaz",
+      "B": "1–2 kg",
+      "C": "25–30 kg",
+      "D": "40 kg",
+      "E": "9–13 kg"
+     },
+     "dogru": "E",
+     "aciklama": "İlk 3 ayda ~1 kg, sonrasında ayda 1,5–2 kg alınır; toplam 9–13 kg'dır.",
+     "sik_aciklamalari": {
+      "A": "Kilo artışı fizyolojiktir.",
+      "B": "Çok azdır; bu nedenle doğru seçenek değildir.",
+      "C": "Fazladır; bu nedenle doğru seçenek değildir.",
+      "D": "Aşırıdır; bu nedenle doğru seçenek değildir.",
+      "E": "Doğru: bu derste verilen toplam artıştır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": [
+      "ad64451dd2a0"
+     ]
+    },
+    {
+     "id": "k1-23-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Gebelikte ödem nedenleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Şiddetli anemi",
+      "B": "Düzenli hafif yürüyüş",
+      "C": "Kronik böbrek veya kalp hastalığı",
+      "D": "Hidramnios",
+      "E": "Gebelik toksemisi"
+     },
+     "dogru": "B",
+     "aciklama": "Ödem nedenleri: şiddetli anemi, kronik böbrek/kalp hastalığı, çoğul gebelik, hidramnios, protein yetmezliği, uzun süre ayakta kalma ve toksemi.",
+     "sik_aciklamalari": {
+      "A": "Ödem nedenidir; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru: hafif yürüyüş ödem nedeni değildir.",
+      "C": "Ödem nedenidir; bu nedenle doğru seçenek değildir.",
+      "D": "Ödem nedenidir; bu nedenle doğru seçenek değildir.",
+      "E": "Ödem nedenidir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Gebelik toksemisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Son 3 ayda hipertansiyon, ödem ve proteinüri ile ortaya çıkar",
+      "B": "Konvülsiyon/koma eklenirse eklampsi adını alır",
+      "C": "İlk gebelikte daha sık görülür",
+      "D": "Çoğul gebelik ve hidramniosta daha sıktır",
+      "E": "En sık ilk trimesterde ortaya çıkar"
+     },
+     "dogru": "E",
+     "aciklama": "Gebelik toksemisi son 3 ayda ortaya çıkar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış ifade (aranan cevap): son trimesterde görülür."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "ad64451dd2a0",
+     "soru": "Sağılmış anne sütü oda ısısında kaç saat saklanabilir? Bebek beslenmesi Bebek beslenmesi Sağlıklı bir gebe kadının, gebeliği süresince ortalama kaç kg ağırlık artışı olur? 9-13kg unika D Dönem 3 Kurul 1 Sonucu | Anasayfa / Sınav Sonucu",
+     "secenekler": {
+      "A": "Sağılmış anne sütü oda ısısında kaç saat saklanabilir?",
+      "B": "Bebek beslenmesi",
+      "C": "Sağlıklı bir gebe kadının, gebeliği süresince ortalama kaç kg ağırlık artışı olur?",
+      "D": "9-13kg",
+      "E": "15-20kg"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Türkiye'de doğum öncesi bakım, doğum ve sezaryen göstergelerini yorumlar.",
+   "sorular": [
+    {
+     "id": "k1-23-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Türkiye'de sezaryen ile doğum oranı yaklaşık ne kadardır?",
+     "secenekler": {
+      "A": "~%1",
+      "B": "~%5",
+      "C": "~%15",
+      "D": "~%90",
+      "E": "~%52"
+     },
+     "dogru": "E",
+     "aciklama": "Türkiye'de sezaryen oranı ~%52'dir ve çoğu gereksizdir; önemli bir halk sağlığı sorunudur.",
+     "sik_aciklamalari": {
+      "A": "Çok düşüktür; bu nedenle doğru seçenek değildir.",
+      "B": "Gerçek oranın çok altındadır.",
+      "C": "DSÖ'nün önerdiği düzeye yakındır, Türkiye'nin gerçek oranı değildir.",
+      "D": "Çok yüksektir; bu nedenle doğru seçenek değildir.",
+      "E": "Doğru: verilen orandır."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Türkiye'de doğum öncesi bakım ve doğum göstergeleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Doğumların yarısı eğitimsiz kişilerce yaptırılır",
+      "B": "Doğumların çoğu evde yapılmaktadır",
+      "C": "DÖB oranı %10'un altındadır",
+      "D": "Kadınların ~%90'ı uzman personelden DÖB almış, doğumların ~%96'sı sağlık kuruluşunda yapılmıştır",
+      "E": "Sezaryen oranı %5'tir"
+     },
+     "dogru": "D",
+     "aciklama": "Türkiye'de DÖB ve kurumsal doğum oranları yüksektir; doğumların %99'u eğitimli personelce yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğumların %99'u eğitimli personelcedir.",
+      "B": "Kurumsal doğum oranı yüksektir.",
+      "C": "DÖB oranı yüksektir.",
+      "D": "Doğru: göstergeler doğrudur.",
+      "E": "Sezaryen oranı ~%52'dir."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Türkiye'de doğum hizmetlerinin en önemli halk sağlığı sorunu olarak öne çıkan gösterge hangisidir?",
+     "secenekler": {
+      "A": "Doğum öncesi bakımın hiç verilmemesi",
+      "B": "Doğumların çoğunun evde yapılması",
+      "C": "Gereksiz sezaryen oranının yüksekliği",
+      "D": "Eğitimli personel eksikliği",
+      "E": "Demir desteğinin hiç verilmemesi"
+     },
+     "dogru": "C",
+     "aciklama": "Kurumsal doğum ve DÖB yüksek olmasına rağmen sezaryen oranı ~%52'dir ve çoğu gereksizdir.",
+     "sik_aciklamalari": {
+      "A": "DÖB yaygındır; bu nedenle doğru seçenek değildir.",
+      "B": "Doğumların %96'sı kuruluşta yapılır.",
+      "C": "Doğru: öne çıkan sorundur.",
+      "D": "Doğumların %99'u eğitimli personelcedir.",
+      "E": "Demir desteği oranı %81'dir."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 10,
+   "metin": "Lohusa izlemini ve gebe-lohusa olmayan kadın izlemini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-23-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Lohusa izlemi toplam kaç kez yapılır?",
+     "secenekler": {
+      "A": "3",
+      "B": "1",
+      "C": "6",
+      "D": "10",
+      "E": "Hiç yapılmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Doğumun ertesi günü 1 kez ve lohusalıkta 2 kez daha olmak üzere toplam 3 izlem yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: toplam izlem sayısıdır.",
+      "B": "Yetersizdir; bu nedenle doğru seçenek değildir.",
+      "C": "Fazladır; bu nedenle doğru seçenek değildir.",
+      "D": "Fazladır; bu nedenle doğru seçenek değildir.",
+      "E": "Lohusa izlemi yapılır."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Lohusa izleminin amaçları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Leopold manevrası ile fetal pozisyonun belirlenmesi",
+      "B": "Puerperal sepsisin tespiti",
+      "C": "Mastitin tespiti",
+      "D": "İdrar yolu enfeksiyonunun tespiti",
+      "E": "Eğitim ve danışmanlık"
+     },
+     "dogru": "A",
+     "aciklama": "Lohusa izleminde puerperal sepsis, mastit, İYE tespiti ve eğitim amaçlanır; Leopold gebelikte yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: doğum sonrası fetal pozisyon değerlendirilmez.",
+      "B": "Lohusa izleminin amacıdır.",
+      "C": "Lohusa izleminin amacıdır.",
+      "D": "Lohusa izleminin amacıdır.",
+      "E": "Lohusa izleminin amacıdır."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Gebe ve lohusa olmayan 15–49 yaş kadın izlemi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yılda 2 kez yapılır; aile planlaması, gebeliğin erken tespiti ve riskli gebeliğe aday kadınların belirlenmesi amaçlanır",
+      "B": "Bu kadınlar izlenmez",
+      "C": "Ayda bir yapılır",
+      "D": "Yalnızca menopoz sonrası yapılır",
+      "E": "Amacı yalnızca aşılamadır"
+     },
+     "dogru": "A",
+     "aciklama": "Bu izlem erken gebelik tespiti ve risk yönetimi sağlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: izlem sıklığı ve amaçları doğrudur.",
+      "B": "Bu grup izlenir; bu nedenle doğru seçenek değildir.",
+      "C": "Sıklık yılda 2'dir; bu nedenle doğru seçenek değildir.",
+      "D": "Üreme çağı kadınları izlenir.",
+      "E": "Amaçları daha geniştir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Bebek ve çocuk izlemlerinin amaçlarını, dönemlerini ve izlem takvimini bilir.",
+   "sorular": [
+    {
+     "id": "k1-23-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Neonatal dönem ne kadar sürer?",
+     "secenekler": {
+      "A": "İlk 4 hafta",
+      "B": "İlk 1 yıl",
+      "C": "İlk 6 yıl",
+      "D": "İlk 1 hafta",
+      "E": "İlk 3 ay"
+     },
+     "dogru": "A",
+     "aciklama": "Neonatal dönem ilk 4 hafta, bebeklik 1 yaşa kadar, okul öncesi dönem 6 yaşa kadar sürer.",
+     "sik_aciklamalari": {
+      "A": "Doğru: neonatal dönemdir.",
+      "B": "Bebeklik dönemidir; bu nedenle doğru seçenek değildir.",
+      "C": "Okul öncesi dönemin sonudur.",
+      "D": "Erken neonatal dönemdir.",
+      "E": "Bu bir dönem tanımı değildir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Bebeğin ilk ziyaret muayenesinde değerlendirilen refleksler hangileridir?",
+     "secenekler": {
+      "A": "Emme, Moro ve yakalama refleksleri",
+      "B": "Babinski dışında hiçbir refleks",
+      "C": "Yalnızca diz refleksi",
+      "D": "Pupil refleksi dışında hiçbiri",
+      "E": "Refleks değerlendirilmez"
+     },
+     "dogru": "A",
+     "aciklama": "İlk ziyarette deri, fontaneller, gözler, ağız, boyun, göbek, genital organlar, kalça ve refleksler değerlendirilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: yenidoğan refleksleridir.",
+      "B": "Temel yenidoğan refleksleri değerlendirilir.",
+      "C": "Diz refleksi temel yenidoğan değerlendirmesi değildir.",
+      "D": "Birçok refleks değerlendirilir.",
+      "E": "Refleksler değerlendirilir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Çocuk izlem takvimi (1 yaş sonrası) hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "1, 1,5, 2, 2,5, 3, 4 ve 5 yaşında",
+      "B": "Yalnızca 1 ve 5 yaşında",
+      "C": "Her ay",
+      "D": "Yalnızca okul başlangıcında",
+      "E": "İzlem yapılmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Çocuk izlemi 1, 1,5, 2, 2,5, 3, 4 ve 5 yaşında yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: izlem takvimidir.",
+      "B": "Daha sık izlem yapılır.",
+      "C": "Her ay izlem bebeklik dönemine aittir.",
+      "D": "İzlem daha erken başlar.",
+      "E": "İzlem yapılır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 12,
+   "metin": "Bebeklikte büyüme ve gelişme basamakları ile diş gelişimini özetler.",
+   "sorular": [
+    {
+     "id": "k1-23-q34",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Bebeklerde ilk süt dişleri genellikle hangi aylarda çıkar?",
+     "secenekler": {
+      "A": "5–9. aylar",
+      "B": "1. ay",
+      "C": "18–24. aylar",
+      "D": "3. yaş",
+      "E": "Doğumda"
+     },
+     "dogru": "A",
+     "aciklama": "İlk süt dişleri 5–9. ayda çıkar; 1 yaşında 6–8, 2,5 yaşında 20 diş beklenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ilk dişlerin çıkış zamanıdır.",
+      "B": "Çok erkendir; bu nedenle doğru seçenek değildir.",
+      "C": "Geç bir dönemdir; bu nedenle doğru seçenek değildir.",
+      "D": "Çok geçtir; bu nedenle doğru seçenek değildir.",
+      "E": "Doğuştan diş nadirdir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q35",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Ön fontanel genellikle ne zaman kapanır?",
+     "secenekler": {
+      "A": "9–18. aylar arasında",
+      "B": "Doğumda",
+      "C": "4. ayda",
+      "D": "5 yaşında",
+      "E": "Hiç kapanmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Arka fontanel ~4. ayda, ön fontanel 9–18. aylar arasında kapanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ön fontanel kapanma zamanıdır.",
+      "B": "Doğumda açıktır; bu nedenle doğru seçenek değildir.",
+      "C": "4. ayda arka fontanel kapanır.",
+      "D": "Çok geçtir; bu nedenle doğru seçenek değildir.",
+      "E": "Fontanel kapanır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-q36",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Bebeklikte gelişim basamakları ile ilgili eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "2. ay – başını dik tutar",
+      "B": "4. ay – destekle oturur",
+      "C": "6. ay – desteksiz oturur",
+      "D": "9. ay – emekler",
+      "E": "2. ay – bir elinden tutulunca yürür"
+     },
+     "dogru": "E",
+     "aciklama": "Bir elinden tutulunca yürüme 12. ayda beklenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "B": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
+      "E": "Yanlış eşleştirme (aranan cevap): bu 12. aya aittir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 36,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:40"
+}

@@ -2666,16 +2666,27 @@ export const ApiService = {
   async completeAnswerDoubt(adminEmail: string, questionId: string, choice?: string): Promise<{ winner: string; message: string }> {
     const res = await safeJsonFetch<{ success: boolean; winner: string; message: string; error?: string }>(
       `/api/past-question-reviews/${encodeURIComponent(questionId)}/answer-doubt/complete`,
-      { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail }, body: JSON.stringify(choice ? { choice } : {}) }
+      { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail }, body: JSON.stringify({ ...(choice ? { choice } : {}), keepPoll: true }) }
     );
     if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Anket tamamlanamadı.');
     return res.data;
   },
 
   /** Anketi açık (cevabı belirsiz) soruların güncel listesi; önbellekten bağımsız. */
-  async getAnswerDoubtful(): Promise<{ ids: string[]; options: Record<string, Record<string, string>> } | null> {
-    const res = await safeJsonFetch<{ success: boolean; ids: string[]; options: Record<string, Record<string, string>> }>('/api/past-question-reviews/answer-doubtful');
-    return res.ok && res.data?.success ? { ids: res.data.ids || [], options: res.data.options || {} } : null;
+  async getAnswerDoubtful(): Promise<AnswerDoubtfulInfo | null> {
+    const res = await safeJsonFetch<{ success: boolean } & AnswerDoubtfulInfo>('/api/past-question-reviews/answer-doubtful');
+    return res.ok && res.data?.success ? { ids: res.data.ids || [], options: res.data.options || {}, resolved: res.data.resolved || {} } : null;
+  },
+
+  /** Soru havuzu (Çalış) sorusunu bildir. */
+  async reportPoolQuestion(questionId: string, reason: string, details?: string, reportedBy?: string): Promise<any> {
+    const res = await safeJsonFetch<{ success: boolean; report: any; error?: string }>(`/api/questions/${encodeURIComponent(questionId)}/report`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ reason, details: details || '', reportedBy: reportedBy || 'Tıp Öğrencisi' }),
+    });
+    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Bildirim gönderilemedi.');
+    return res.data;
   },
 
   async getAnswerVotes(questionId: string, voterUid: string): Promise<AnswerVotes> {
@@ -2730,7 +2741,7 @@ export const ApiService = {
       body: JSON.stringify(settings),
     });
     if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Ayar kaydedilemedi.');
-    return { lite_kullan: res.data.lite_kullan };
+    return res.data;
   },
 
   /** Faz 14: Redaksiyon işlemini başlat (bulut veya yerel) */

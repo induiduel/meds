@@ -33,6 +33,8 @@ function getCustomApiUrl(): string {
 
 const DB_NAME = 'medsoru_past_questions_db';
 const DB_VERSION = 1;
+const CACHE_FORMAT_KEY = 'medsoru_pq_cache_format';
+const CACHE_FORMAT = '2026-10-07';
 const STORE_QUESTIONS = 'past_questions';
 const STORE_META = 'metadata';
 
@@ -378,6 +380,10 @@ class PastQuestionsCacheService {
   }
 
   public async getLastSyncTime(): Promise<string | null> {
+    // Önbellek biçimi değişince (ör. Faz 14 / cevap anketi alanları) cihaz bir kez tam yükleme yapar
+    try {
+      if (typeof window !== 'undefined' && window.localStorage.getItem(CACHE_FORMAT_KEY) !== CACHE_FORMAT) return null;
+    } catch { /* depolama kapalı */ }
     return this.getMeta<string>(KEY_LAST_SYNC);
   }
 
@@ -672,6 +678,7 @@ class PastQuestionsCacheService {
       }
 
       await this.setLastSyncTime(maxTime, fetched.length);
+      try { window.localStorage.setItem(CACHE_FORMAT_KEY, CACHE_FORMAT); } catch { /* depolama kapalı */ }
       this.currentStatus.lastSyncTime = maxTime;
       this.currentStatus.totalCached = fetched.length;
     }

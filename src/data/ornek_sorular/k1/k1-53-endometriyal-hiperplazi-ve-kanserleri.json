@@ -1,0 +1,1058 @@
+{
+ "id": "k1-53-endometriyal-hiperplazi-ve-kanserleri",
+ "sira": 53,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Endometriyal Hiperplazi ve Kanserleri",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-09",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Menstrüel siklusun hormonal düzenlenmesini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-53-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Folikülün yırtılarak ovulasyonun gerçekleşmesini ve korpus luteum oluşumunu sağlayan hormon hangisidir?",
+     "secenekler": {
+      "A": "FSH",
+      "B": "LH",
+      "C": "GnRH",
+      "D": "Östrojen",
+      "E": "hCG"
+     },
+     "dogru": "B",
+     "aciklama": "LH ovulasyonu tetikler ve folikülün korpus luteuma dönüşmesini sağlar.",
+     "sik_aciklamalari": {
+      "A": "FSH folikül gelişimini ve östrojen salgısını uyarır.",
+      "B": "Doğru: LH piki ovulasyona yol açar.",
+      "C": "GnRH hipotalamustan salınır ve hipofizi uyarır.",
+      "D": "Östrojen endometriumu prolifere eder; ovulasyonu doğrudan yapmaz.",
+      "E": "hCG korpus luteumu gebelikte sürdürür."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Menstrüel siklusta hormon pikleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Östrojen luteal faz ortasında ilk zirvesini yapar",
+      "B": "Progesteron ovulasyondan önce pik yapar",
+      "C": "LH piki östrojen pikinden önce görülür",
+      "D": "Östrojen 11–12. günde pik yapar; yaklaşık 36 saat sonra LH piki ovulasyonu tetikler",
+      "E": "FSH ovulasyondan sonra korpus luteumu oluşturur"
+     },
+     "dogru": "D",
+     "aciklama": "Östrojen 11–12. günde pik yapar, ~36 saat sonra LH piki ovulasyonu tetikler; progesteron luteal faz ortasında zirve yapar.",
+     "sik_aciklamalari": {
+      "A": "Östrojenin ana piki folikül fazının sonundadır.",
+      "B": "Progesteron luteal faz ortasında zirve yapar.",
+      "C": "LH piki östrojen pikini izler.",
+      "D": "Doğru: ovulasyon zamanlaması östrojen–LH ilişkisiyle belirlenir.",
+      "E": "Korpus luteum oluşumunu LH sağlar."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Döllenme gerçekleşen bir siklusta korpus luteumun bozulmasını engelleyerek progesteron salgısını sürdüren hormon ve bu etkinin yaklaşık süresi hangisidir?",
+     "secenekler": {
+      "A": "GnRH; doğuma kadar",
+      "B": "FSH; ovulasyondan 1 gün sonrasına kadar",
+      "C": "hCG; gebeliğin ~5. ayına kadar",
+      "D": "Östrojen; ilk 1 hafta",
+      "E": "LH; menarştan menapoza kadar"
+     },
+     "dogru": "C",
+     "aciklama": "hCG korpus luteumun bozulmasını engeller ve gebeliğin ~5. ayına kadar progesteron salgısını sürdürür.",
+     "sik_aciklamalari": {
+      "A": "GnRH hipotalamik hormondur ve bu etkiyi göstermez.",
+      "B": "FSH korpus luteumu sürdürmez.",
+      "C": "Doğru: hCG gebeliğin biyokimyasal belirtecidir.",
+      "D": "Östrojen korpus luteumu idame ettirmez.",
+      "E": "LH bu uzun süreli etkiden sorumlu değildir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Endometriumun siklus içindeki yapısal değişimlerini tanımlayabilmek",
+   "sorular": [
+    {
+     "id": "k1-53-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Endometriumda bezlerin kıvrıntılı hale geldiği, subnükleer vakuolizasyon ve stromal ödemin görüldüğü faz hangisidir?",
+     "secenekler": {
+      "A": "Menstrüasyon fazı",
+      "B": "Proliferatif faz",
+      "C": "Sekretuar faz",
+      "D": "Menapoz",
+      "E": "Menarş"
+     },
+     "dogru": "C",
+     "aciklama": "Ovulasyon sonrası progesteron etkisiyle sekretuar fazda bezler kıvrıntılı olur, subnükleer vakuolizasyon ve stromal ödem gelişir.",
+     "sik_aciklamalari": {
+      "A": "Menstrüasyonda iskemi, nekroz ve dökülme olur.",
+      "B": "Proliferatif fazda aktif mitoz ve düz bezler vardır.",
+      "C": "Doğru: sekretuar fazın tipik bulgularıdır.",
+      "D": "Menapoz siklusun sona ermesidir.",
+      "E": "Menarş ilk menstrüasyondur."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Proliferatif faz ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Endometrium 5 mm'ye ulaşır ve bezler kıvrıntılıdır",
+      "B": "Progesteron etkisi altındadır",
+      "C": "Spiral arterler kasılarak iskemi oluşturur",
+      "D": "Östrojen etkisi altında, 5–14. günler arasında aktif mitozla endometrium 2–3 mm'ye ulaşır",
+      "E": "Ovulasyondan sonra başlar"
+     },
+     "dogru": "D",
+     "aciklama": "Proliferatif fazda östrojen etkisiyle bezler ve yüzey epitel yenilenir, aktif mitoz olur.",
+     "sik_aciklamalari": {
+      "A": "5 mm ve kıvrıntılı bezler sekretuar faza aittir.",
+      "B": "Progesteron sekretuar fazı yönetir.",
+      "C": "Spiral arter kasılması menstrüasyonda olur.",
+      "D": "Doğru: proliferatif fazın tanımıdır.",
+      "E": "Ovulasyondan sonra sekretuar faz başlar."
+     },
+     "bilgi": [
+      6,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Menstrüasyon fazını başlatan olaylar dizisi hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "LH piki → ovulasyon → kanama",
+      "B": "Korpus luteum işlevi azalır → progesteron/östrojen düşer → spiral arterler kasılır → iskemi, nekroz ve damar yırtılması",
+      "C": "Östrojen artışı → mitoz → dökülme",
+      "D": "hCG artışı → korpus luteum gerilemesi → kanama",
+      "E": "FSH artışı → bazal tabakanın dökülmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Korpus luteum geriledikçe hormonlar düşer, spiral arterler kasılır ve fonksiyonel tabaka iskemik nekrozla dökülür.",
+     "sik_aciklamalari": {
+      "A": "LH piki ovulasyon yapar, kanama değil.",
+      "B": "Doğru: menstrüasyonun patofizyolojisidir.",
+      "C": "Östrojen artışı proliferasyon yapar.",
+      "D": "hCG korpus luteumu korur.",
+      "E": "Bazal tabaka dökülmez; rejenerasyon kaynağıdır."
+     },
+     "bilgi": [
+      12,
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Endometrium ve myometriumun histolojik yapısını sıralayabilmek",
+   "sorular": [
+    {
+     "id": "k1-53-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Menstrüasyonla dökülen endometrium tabakası hangisidir?",
+     "secenekler": {
+      "A": "Seroza",
+      "B": "Bazal tabaka",
+      "C": "Myometrium",
+      "D": "Fonksiyonel tabaka",
+      "E": "Perimetrium"
+     },
+     "dogru": "D",
+     "aciklama": "Fonksiyonel tabaka menstrüasyonla dökülür; bazal tabaka kalır ve endometriumu yeniler.",
+     "sik_aciklamalari": {
+      "A": "Seroza dış örtüdür: seroza.",
+      "B": "Bazal tabaka rejenerasyon kaynağıdır.",
+      "C": "Myometrium kas tabakasıdır, dökülmez.",
+      "D": "Doğru: fonksiyonel tabaka her siklusta dökülür.",
+      "E": "Perimetrium uterusun dış tabakasıdır."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Endometrium histolojisi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bezlerin şekli siklusa göre değişmez",
+      "B": "Çok katlı keratinize yassı epitelle döşelidir",
+      "C": "Basit prizmatik epitel ve basit tübüler bezler içeren lamina propriadan oluşur",
+      "D": "Bazal tabaka her ay dökülür",
+      "E": "Ürotelyum ile kaplıdır"
+     },
+     "dogru": "C",
+     "aciklama": "Endometrium basit prizmatik epitel ve tübüler bezler içeren lamina propriadan oluşur; bez morfolojisi siklusa göre değişir.",
+     "sik_aciklamalari": {
+      "A": "Bez şekli siklus gününü yansıtır.",
+      "B": "Yassı epitel ektoserviks ve vajinada bulunur.",
+      "C": "Doğru: endometriumun histolojisidir.",
+      "D": "Bazal tabaka kalıcıdır.",
+      "E": "Ürotelyum idrar yollarını döşer."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Endometrial biyopside siklus gününün değerlendirilmesinde temel olarak hangi yapı kullanılır ve endometriumun rejenerasyonu nereden kaynaklanır?",
+     "secenekler": {
+      "A": "Myometrial kas lifleri; fonksiyonel tabaka",
+      "B": "Bez morfolojisi; bazal tabaka",
+      "C": "Seroza; myometrium",
+      "D": "Spiral arterlerin sayısı; seroza",
+      "E": "Yüzey epitelinin keratinizasyonu; fonksiyonel tabaka"
+     },
+     "dogru": "B",
+     "aciklama": "Bez şekli ve büyüklüğü siklusa göre değiştiğinden siklus günü tayininde kullanılır; rejenerasyon bazal tabakadan olur.",
+     "sik_aciklamalari": {
+      "A": "Myometrium siklus tayininde kullanılmaz; fonksiyonel tabaka dökülür.",
+      "B": "Doğru: iki bilgi de doğru verilmiştir.",
+      "C": "Seroza ve myometrium endometrium rejenerasyon kaynağı değildir.",
+      "D": "Seroza rejenerasyon kaynağı değildir.",
+      "E": "Endometrium keratinize değildir."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Uzun süreli (karşılanmamış) östrojen etkisinin endometrium üzerindeki etkilerini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-53-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Postmenapozal dönemde tek başına östrojen alan kadınlarda hangi endometrial değişiklik riski artar?",
+     "secenekler": {
+      "A": "Adenomyozis",
+      "B": "Endometrial atrofi",
+      "C": "Seröz karsinom",
+      "D": "Endometrial hiperplazi",
+      "E": "Kronik endometrit"
+     },
+     "dogru": "D",
+     "aciklama": "Tek başına östrojen alan postmenapozal kadınların %15–30'unda endometrial hiperplazi gelişir; progesteron eklenmesi riski azaltır.",
+     "sik_aciklamalari": {
+      "A": "Adenomyozis östrojen tedavisinin tipik sonucu değildir.",
+      "B": "Atrofi östrojen yokluğunda gelişir.",
+      "C": "Seröz karsinom östrojenle ilişkili değildir.",
+      "D": "Doğru: karşılanmamış östrojen hiperplazi yapar.",
+      "E": "Kronik endometrit enfeksiyöz/inflamatuvar süreçtir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Uzun süreli karşılanmamış östrojen kullanımı ve endometrium kanseri ilişkisi için hangisi doğrudur?",
+     "secenekler": {
+      "A": "Risk değişmez",
+      "B": "10–15 yıl kullanımdan sonra risk ~10 kat artar; bu kanserler genellikle düşük derecelidir",
+      "C": "Gelişen kanserler genellikle yüksek dereceli seröz tiptedir",
+      "D": "Progesteron eklenmesi riski artırır",
+      "E": "Risk yalnızca erkeklerde artar"
+     },
+     "dogru": "B",
+     "aciklama": "Uzun süreli östrojen kullanımı kanser riskini ~10 kat artırır; bu tümörler düşük dereceli ve prognozu iyidir.",
+     "sik_aciklamalari": {
+      "A": "Risk belirgin artar.",
+      "B": "Doğru: östrojen ilişkili tip düşük dereceli endometrioid karsinomdur.",
+      "C": "Seröz karsinom östrojenle ilişkili değildir.",
+      "D": "Progesteron riski azaltır.",
+      "E": "Endometrium kanseri kadınlarda görülür."
+     },
+     "bilgi": [
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi rölatif östrojen fazlalığı yaparak endometrial hiperplaziye yol açan durumlardan biri değildir?",
+     "secenekler": {
+      "A": "Obezite",
+      "B": "Polikistik over",
+      "C": "Granüloza-teka hücreli tümör",
+      "D": "Menapozda anovulasyon",
+      "E": "Kombine östrojen–progesteron tedavisi"
+     },
+     "dogru": "E",
+     "aciklama": "Obezite, PKOS, östrojen üreten tümörler ve anovulasyon karşılanmamış östrojen etkisi yaratır; progesteron eklenmesi koruyucudur.",
+     "sik_aciklamalari": {
+      "A": "Adipöz dokuda steroid öncülleri östrojene dönüşür.",
+      "B": "Polikistik over östrojen üretir.",
+      "C": "Granüloza-teka hücreli tümör östrojen salgılar.",
+      "D": "Anovulasyonda progesteron karşılığı yoktur.",
+      "E": "Doğru: progesteron hiperplazi riskini azaltır."
+     },
+     "bilgi": [
+      16,
+      31
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Endometrial metaplastik değişiklikleri ve tiplerini sıralayabilmek",
+   "sorular": [
+    {
+     "id": "k1-53-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Endometriumda en sık görülen epitelyal metaplazi hangisidir?",
+     "secenekler": {
+      "A": "Silyalı metaplazi",
+      "B": "Hobnail metaplazi",
+      "C": "Skuamöz metaplazi",
+      "D": "Papiller metaplazi",
+      "E": "Osseöz metaplazi"
+     },
+     "dogru": "C",
+     "aciklama": "Skuamöz metaplazi en sık epitelyal metaplazidir; diffüz veya moruller şeklinde izlenir.",
+     "sik_aciklamalari": {
+      "A": "Silyalı metaplazi hiperplazi ile birlikte görülür ama en sık değildir.",
+      "B": "Hobnail metaplazi daha nadirdir.",
+      "C": "Doğru: en sık metaplazi tipidir.",
+      "D": "Papiller metaplazi daha seyrektir.",
+      "E": "Osseöz metaplazi stromal bir metaplazidir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Ayırıcı tanısında berrak hücreli adenokarsinomun düşünülmesi gereken endometrial metaplazi hangisidir?",
+     "secenekler": {
+      "A": "Silyalı metaplazi",
+      "B": "Skuamöz metaplazi",
+      "C": "Hobnail metaplazi",
+      "D": "Düz kas metaplazisi",
+      "E": "Adipöz metaplazi"
+     },
+     "dogru": "C",
+     "aciklama": "Hobnail metaplazide çekirdekleri apikal yerleşimli, berrak görünümlü hücreler bulunur; berrak hücreli karsinomla karışabilir.",
+     "sik_aciklamalari": {
+      "A": "Silyalı metaplazi tuba epiteline benzer.",
+      "B": "Skuamöz metaplazi adenoakantomadan ayırt edilir.",
+      "C": "Doğru: hobnail görünüm berrak hücreli karsinomu taklit eder.",
+      "D": "Düz kas metaplazisi stromal bir değişikliktir.",
+      "E": "Adipöz metaplazi stromal bir değişikliktir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Endometrial metaplaziler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sıklıkla hiperöstrojenizmle ilişkilidir",
+      "B": "Papiller metaplazi uzun süreli östrojen stimülasyonu ve hiperplazi ile ilişkilidir",
+      "C": "Silyalı metaplazi hiperplazi ile birlikte daha sık görülür",
+      "D": "Stromada düz kas, kıkırdak, kemik, glial ve yağ metaplazisi olabilir",
+      "E": "Metaplastik değişiklikler neoplastik lezyonlardır ve doğrudan karsinom tanısı koydurur"
+     },
+     "dogru": "E",
+     "aciklama": "Endometrial metaplaziler hormonal etkiyle gelişen non-neoplastik değişikliklerdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: hiperöstrojenizm ortak zemindir.",
+      "B": "Doğru ifade: papiller metaplazi östrojenle ilişkilidir.",
+      "C": "Doğru ifade: hiperplaziyle birlikte görülür.",
+      "D": "Doğru ifade: stromal metaplaziler mezenkimal kökenlidir.",
+      "E": "Yanlış ifade (aranan cevap): metaplaziler non-neoplastiktir."
+     },
+     "bilgi": [
+      18,
+      20,
+      21,
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Anormal uterin kanamaları ve menstrüasyon bozukluklarını sınıflayabilmek",
+   "sorular": [
+    {
+     "id": "k1-53-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "21 gün veya daha sık aralıklarla olan adet kanamasına ne ad verilir?",
+     "secenekler": {
+      "A": "Oligomenore",
+      "B": "Polimenore",
+      "C": "Menoraji",
+      "D": "Hipomenore",
+      "E": "Metroraji"
+     },
+     "dogru": "B",
+     "aciklama": "Polimenore 21 gün veya daha sık adet görmedir; oligomenore 35 günü aşan seyrek adettir.",
+     "sik_aciklamalari": {
+      "A": "Oligomenore 35 günü geçen seyrek adettir.",
+      "B": "Doğru: sık adet görme polimenoredir.",
+      "C": "Menoraji aşırı-uzun düzenli kanamadır.",
+      "D": "Hipomenore az miktarlı düzenli kanamadır.",
+      "E": "Metroraji kanama bittikten sonra lekelenmedir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Normal menstrüasyonun tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "On günü aşan kanama",
+      "B": "Anovulatuar siklusta olan uzun süreli kanama",
+      "C": "Proliferatif dönemde görülen düzensiz kanama",
+      "D": "Ovulatuar siklusla birlikte, sekretuar dönemden sonra olan ve beş günü aşmayan kanama",
+      "E": "Postmenapozal dönemde olan kanama"
+     },
+     "dogru": "D",
+     "aciklama": "Bu kriterlerin dışında kalan her kanama anormal uterin kanama kabul edilir.",
+     "sik_aciklamalari": {
+      "A": "Beş günü aşan kanama anormaldir.",
+      "B": "Anovulatuar kanama disfonksiyonel kanamadır.",
+      "C": "Düzensiz kanama anormaldir.",
+      "D": "Doğru: normal menstrüasyonun tanımıdır.",
+      "E": "Postmenapozal kanama anormaldir ve araştırılmalıdır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Disfonksiyonel uterin kanama ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Progesteron fazlalığı ana nedendir",
+      "B": "Her zaman endometrium karsinomuna bağlıdır",
+      "C": "Yalnızca ovulatuar sikluslarda görülür",
+      "D": "Leiomyom gibi organik lezyonlar nedeniyle oluşur",
+      "E": "Organik bir nedene bağlanamaz; anovulatuar tip uzun süreli düzensiz östrojen stimülasyonuyla ilişkilidir"
+     },
+     "dogru": "E",
+     "aciklama": "Disfonksiyonel kanama organik nedene bağlanamayan kanamadır; ovulatuar ve anovulatuar gruplara ayrılır.",
+     "sik_aciklamalari": {
+      "A": "Anovulatuar kanamada progesteron yetersizdir.",
+      "B": "Tanım gereği organik neden (tümör) yoktur.",
+      "C": "Anovulatuar formu da vardır.",
+      "D": "Organik nedenler tanım dışıdır.",
+      "E": "Doğru: anovulatuar tip düzensiz östrojen etkisiyle oluşur."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Düzensiz proliferatif endometrium, endometrial polip ve endometrial hiperplaziyi ayırt edebilmek",
+   "sorular": [
+    {
+     "id": "k1-53-q19",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Endometrium bazalisin lokalize hiperplazisiyle oluşan, kaviteye uzanan ve üç kenarı yüzey epiteli ile çevrili benign lezyon hangisidir?",
+     "secenekler": {
+      "A": "Endometrial hiperplazi",
+      "B": "Endometrial polip",
+      "C": "Adenomyozis",
+      "D": "Leiomyom",
+      "E": "Seröz karsinom"
+     },
+     "dogru": "B",
+     "aciklama": "Endometrial polip bazalisin lokalize hiperplazisidir; tamoksifen kullananlarda büyük ve çok sayıda olabilir.",
+     "sik_aciklamalari": {
+      "A": "Hiperplazi diffüz proliferasyondur.",
+      "B": "Doğru: polipin tanımıdır.",
+      "C": "Adenomyozis endometriumun myometrium içine büyümesidir.",
+      "D": "Leiomyom düz kas tümörüdür.",
+      "E": "Seröz karsinom malign tümördür."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q20",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Endometrial hiperplazide karsinom gelişme riskini en çok belirleyen özellik hangisidir?",
+     "secenekler": {
+      "A": "Stromal ödem",
+      "B": "Bezlerin kistik genişlemesi",
+      "C": "Sitolojik atipi varlığı",
+      "D": "Silyalı metaplazi",
+      "E": "Hastanın menarş yaşı"
+     },
+     "dogru": "C",
+     "aciklama": "Basit hiperplazide risk önemsizken atipili hiperplazide ~%20 karsinom riski vardır.",
+     "sik_aciklamalari": {
+      "A": "Stromal ödem risk belirteci değildir.",
+      "B": "Kistik genişleme düzensiz proliferatif endometriumda da görülür.",
+      "C": "Doğru: atipi riski belirleyen temel özelliktir.",
+      "D": "Silyalı metaplazi non-neoplastiktir.",
+      "E": "Menarş yaşı hiperplazide risk sınıflaması ölçütü değildir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Perimenopozal kadında endometrial örnekte yoğun stroma içinde dar çaplı ve kistik genişlemiş bezler, uniform görünümün bozulması saptanıyor; atipi yok ve bez/stroma oranı belirgin artmamış.\n\nEn uygun tanı ve yorum hangisidir?",
+     "secenekler": {
+      "A": "Seröz endometrial intraepitelyal karsinom",
+      "B": "Atipili hiperplazi; %20 karsinom riski",
+      "C": "Endometrioid karsinom",
+      "D": "Düzensiz proliferatif endometrium; gerçek premalign lezyon değildir",
+      "E": "Kronik endometrit"
+     },
+     "dogru": "D",
+     "aciklama": "Düzensiz proliferatif endometrium uzamış karşılanmamış östrojen etkisiyle gelişir; perimenapozal kadınlarda sıktır ve premalign değildir.",
+     "sik_aciklamalari": {
+      "A": "SEIC atrofi zemininde p53 pozitif hücrelerle tanımlanır.",
+      "B": "Atipi olmadığından atipili hiperplazi değildir.",
+      "C": "Karsinom bulguları yoktur.",
+      "D": "Doğru: bulgular düzensiz proliferatif endometriuma uyar.",
+      "E": "Kronik endometrit tanısı için plazma hücreleri gerekir."
+     },
+     "bilgi": [
+      27,
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Endometrit tanısında hücre tiplerinin anlamını açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-53-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Kronik endometrit tanısı için endometriumda görülmesi şart olan hücre hangisidir?",
+     "secenekler": {
+      "A": "Makrofaj",
+      "B": "Nötrofil",
+      "C": "Eozinofil",
+      "D": "Mast hücresi",
+      "E": "Plazma hücresi"
+     },
+     "dogru": "E",
+     "aciklama": "Plazma hücresi normal endometriumda bulunmaz ve kronik endometrit tanısı için şarttır.",
+     "sik_aciklamalari": {
+      "A": "Makrofajlar spesifik değildir.",
+      "B": "Nötrofiller menstrüasyon çevresinde normaldir.",
+      "C": "Eozinofil plazma hücresi aramak için uyarıcıdır.",
+      "D": "Mast hücreleri tanı ölçütü değildir.",
+      "E": "Doğru: plazma hücresi tanı koydurur."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q23",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Endometrial biyopside nötrofil (PMNL) görülmesinin yorumu ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hiçbir zaman normal kabul edilmez",
+      "B": "Her durumda kronik endometrit tanısı koydurur",
+      "C": "Her zaman tüberküloz göstergesidir",
+      "D": "Menstrüasyon çevresinde normaldir; siklus ortasında görülmesi akut endometriti düşündürür",
+      "E": "Plazma hücrelerinin yerine geçer"
+     },
+     "dogru": "D",
+     "aciklama": "PMNL'ler menstrüasyon döneminde fizyolojiktir; siklus ortasında görülmeleri akut endometriti düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Menstrüasyonda normaldir.",
+      "B": "Kronik endometrit için plazma hücresi gerekir.",
+      "C": "Granülomatöz endometrit tüberkülozu düşündürür.",
+      "D": "Doğru: zamanlama yorumu belirler.",
+      "E": "Plazma hücresi kronik endometrit için şarttır."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q24",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Endometrial örnekte granülomatöz inflamasyon saptanan hastada en olası etken hangisidir?",
+     "secenekler": {
+      "A": "Chlamydia trachomatis",
+      "B": "Tüberküloz",
+      "C": "Neisseria gonorrhoeae",
+      "D": "Candida albicans",
+      "E": "HPV"
+     },
+     "dogru": "B",
+     "aciklama": "En sık spesifik endometrit klamidya ve neisseria endometritidir; granülomatöz endometritler en sık tüberküloza bağlıdır.",
+     "sik_aciklamalari": {
+      "A": "Klamidya spesifik endometrit yapar ancak tipik olarak granülomatöz değildir.",
+      "B": "Doğru: granülomatöz endometritin en sık nedenidir.",
+      "C": "Gonokok süpüratif inflamasyon yapar.",
+      "D": "Kandida granülomatöz endometritin olağan nedeni değildir.",
+      "E": "HPV endometrit etkeni değildir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Adenomyozis ile endometriozisi karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-53-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Endometriyal gland ve stromanın endometrium dışındaki bir bölgede bulunmasına ne ad verilir?",
+     "secenekler": {
+      "A": "Endometriozis",
+      "B": "Adenomyozis",
+      "C": "Endometrial hiperplazi",
+      "D": "Endometrial polip",
+      "E": "Endometrit"
+     },
+     "dogru": "A",
+     "aciklama": "Endometriozis endometrial bez ve stromanın uterus dışında bulunmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: endometriozisin tanımıdır.",
+      "B": "Adenomyozis endometriumun myometrium içine uzanmasıdır.",
+      "C": "Hiperplazi endometrium içinde proliferasyondur.",
+      "D": "Polip kaviteye uzanan lokalize lezyondur.",
+      "E": "Endometrit endometrium inflamasyonudur."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": [
+      "fbf5584a9e7c",
+      "4309340460fb"
+     ]
+    },
+    {
+     "id": "k1-53-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Endometriozisin köken teorileri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "En çok kabul gören rejürjitasyon teorisidir; uzak ve intranodal lezyonları vasküler/lenfatik yayılım teorisi açıklar",
+      "B": "Tek teori metaplastik teoridir",
+      "C": "Rejürjitasyon teorisi uzak organ lezyonlarını en iyi açıklar",
+      "D": "Endometriozis yalnızca doğuştan anomalidir",
+      "E": "Lenfatik yayılım teorisi kabul görmemiştir"
+     },
+     "dogru": "A",
+     "aciklama": "Rejürjitasyon, metaplastik ve vasküler/lenfatik yayılım teorileri vardır; uzak lezyonları yalnız yayılım teorisi açıklar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: teorilerin kapsamı doğru verilmiştir.",
+      "B": "Birden fazla teori vardır.",
+      "C": "Uzak lezyonları rejürjitasyon açıklayamaz.",
+      "D": "Konjenital anomali olarak tanımlanmaz.",
+      "E": "Lenfatik/vasküler yayılım uzak lezyonları açıklar."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": [
+      "6cefa61e30ae",
+      "3c658ed04747"
+     ]
+    },
+    {
+     "id": "k1-53-q27",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Adenomyozis ve endometriozis karşılaştırıldığında aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Adenomyozis endometrium bazal tabakasının myometrium içine büyümesidir",
+      "B": "Adenomyozis menoraji ve dismenoreye neden olabilir",
+      "C": "Endometriozis reprodüktif kadınların ~%10'unda, infertil kadınların ~%50'sinde görülür",
+      "D": "Over endometriozisi çikolata kistleri oluşturabilir",
+      "E": "Endometriozis endometriumun myometrium içine gömülmesi olarak tanımlanır"
+     },
+     "dogru": "E",
+     "aciklama": "Endometriumun myometrium içine gömülmesi adenomyozistir; endometriozis uterus dışı yerleşimdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: adenomyozisin tanımıdır.",
+      "B": "Doğru ifade: klinik bulgularıdır.",
+      "C": "Doğru ifade: sıklık bilgileri doğrudur.",
+      "D": "Doğru ifade: dejenere kanla dolu kistler oluşur.",
+      "E": "Yanlış ifade (aranan cevap): bu tanım adenomyozise aittir."
+     },
+     "bilgi": [
+      34,
+      35
+     ],
+     "benzer_cikmis": [
+      "c3a245f632f9",
+      "c18fbc20e1e5",
+      "d03585b45d9b"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "fbf5584a9e7c",
+     "soru": "Tıbbi Patoloji Tıbbi Patoloji Korpus uteri hastalıkları patolojisi endometriyal gland ve/veya stromanın endometriyum dışındaki bir bölgede izlenmesi ile ilgili teorilerden değildir?",
+     "secenekler": {
+      "A": "Regürjitasyon teorisi",
+      "B": "Ekstrauterin kök/progenitör hücre teorisi",
+      "C": "Östrojen aromataz aktivite teorisi",
+      "D": "Benign metastaz teorisi",
+      "E": "Metaplastik teori"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "4309340460fb",
+     "soru": "Korpus uteri hastalıkları patolojisi endometriyal gland ve/veya stromanın endometriyum dışındaki bir bölgede izlenmesi ile ifade edilen hangisidir?",
+     "secenekler": {
+      "A": "Adenomyozis",
+      "B": "Leioyoma",
+      "C": "İnvaziv mol",
+      "D": "Ektopik gebelik",
+      "E": "Endometriyozis"
+     },
+     "cevap": null
+    },
+    {
+     "id": "6cefa61e30ae",
+     "soru": "Endometriyal gland ve/veya stromanın endometriyum dışındaki bir bölgede izlenmesi ile ilgili teorilerden değildir?",
+     "secenekler": {
+      "A": "Regürjitasyon teorisi",
+      "B": "Ekstrauterin kök/progenitör hücre teorisi",
+      "C": "Östrojen aromataz aktivite teorisi",
+      "D": "Benign metastaz teorisi",
+      "E": "Metaplastik teori"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "3c658ed04747",
+     "soru": "Regürjitasyon teorisi",
+     "secenekler": {
+      "A": "Regürjitasyon teorisi",
+      "B": "Ekstrauterin kök/progenitör hücre teorisi",
+      "C": "Östrojen aromataz aktivite teorisi",
+      "D": "Benign metastaz teorisi",
+      "E": "Metaplastik teori"
+     },
+     "cevap": null
+    },
+    {
+     "id": "c3a245f632f9",
+     "soru": "Du Tıbbi Patoloji Tıbbi Patoloji Korpus uteri hastalıkları patolojisi Endometriyuma ait dokuların myometriuma gömülmesi ile ifade edilen hangisidir?",
+     "secenekler": {
+      "A": "Endometriyozis",
+      "B": "Leioyoma",
+      "C": "Ektopik gebelik",
+      "D": "İnvaziv mol",
+      "E": "Adenomyozis"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "c18fbc20e1e5",
+     "soru": "Tıbbi Patoloji\nTıbbi Patoloji\nKorpus uteri hastalıkları\npatojisi\nEndometriyuma ait\ndokuların myometriuma\ngömülmesi ile ifade\nedilen hangisidir?",
+     "secenekler": {
+      "A": "Endometriyozis",
+      "B": "Leioyoma",
+      "C": "Ektopik gebelik",
+      "D": "İnvaziv mol",
+      "E": "Adenomyozis"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d03585b45d9b",
+     "soru": "Korpus uteri hastalıkları patolojisi",
+     "secenekler": {
+      "A": "Endometriyozis",
+      "B": "Leioyoma",
+      "C": "Ektopik gebelik",
+      "D": "İnvaziv mol",
+      "E": "Adenomyozis"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Endometrium karsinomunun iki alt tipinin patogenezini karşılaştırabilmek",
+   "sorular": [
+    {
+     "id": "k1-53-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Tip I (endometrioid) endometrium karsinomunun gelişim zemini hangisidir?",
+     "secenekler": {
+      "A": "Östrojen fazlalığı ve endometrial hiperplazi",
+      "B": "Endometrial atrofi",
+      "C": "Adenomyozis",
+      "D": "Kronik endometrit",
+      "E": "Leiomyom"
+     },
+     "dogru": "A",
+     "aciklama": "Endometrioid karsinom (%80) östrojen fazlalığı ve hiperplazi zemininde gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Tip I östrojen ilişkilidir.",
+      "B": "Atrofi zemini Tip II (seröz) karsinoma aittir.",
+      "C": "Adenomyozis karsinom zemini olarak tanımlanmaz.",
+      "D": "Kronik endometrit karsinom zemini değildir.",
+      "E": "Leiomyom düz kas tümörüdür."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q29",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Seröz endometrium karsinomunda olguların tamamına yakınında görülen moleküler değişiklik hangisidir?",
+     "secenekler": {
+      "A": "TP53 mutasyonu",
+      "B": "PTEN mutasyonu",
+      "C": "Mismatch repair gen mutasyonu",
+      "D": "VHL kaybı",
+      "E": "MET amplifikasyonu"
+     },
+     "dogru": "A",
+     "aciklama": "Seröz karsinomda TP53 mutasyonu neredeyse her olguda vardır; immün boyamada diffüz-kuvvetli p53 pozitiftir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: TP53 Tip II'nin imzasıdır.",
+      "B": "PTEN Tip I'in erken olayıdır.",
+      "C": "Mismatch repair mutasyonu Tip I ve Lynch sendromu ile ilişkilidir.",
+      "D": "VHL berrak hücreli RHK ile ilişkilidir.",
+      "E": "MET papiller RHK ile ilişkilidir."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q30",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Tip I ve Tip II endometrium karsinomları karşılaştırıldığında hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tip I'de PTEN ve mismatch repair mutasyonları erken olaylardır",
+      "B": "Cowden ve Lynch sendromlarında Tip I riski yüksektir",
+      "C": "Tip II atrofi zemininde gelişir ve öncü lezyonu SEIC'dir",
+      "D": "Tip II agresif davranır",
+      "E": "Tip II dengelenmemiş östrojen ve hiperplazi zemininde gelişir"
+     },
+     "dogru": "E",
+     "aciklama": "Seröz (Tip II) karsinom atrofi zemininde gelişir ve dengelenmemiş östrojenle ilişkili değildir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: Tip I'in moleküler olaylarıdır.",
+      "B": "Doğru ifade: PTEN (Cowden) ve MMR (Lynch) ilişkisi vardır.",
+      "C": "Doğru ifade: SEIC seröz karsinomun öncülüdür.",
+      "D": "Doğru ifade: seröz karsinom agresiftir.",
+      "E": "Yanlış ifade (aranan cevap): bu Tip I'in özelliğidir."
+     },
+     "bilgi": [
+      38,
+      39
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 11,
+   "metin": "Endometrium karsinomunun morfolojisini ve FIGO derecelendirmesini açıklayabilmek",
+   "sorular": [
+    {
+     "id": "k1-53-q31",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Batı ülkelerinde kadın genital sisteminin en sık tümörü hangisidir?",
+     "secenekler": {
+      "A": "Endometrium karsinomu",
+      "B": "Vulvar karsinom",
+      "C": "Vajinal karsinom",
+      "D": "Fallop tüpü karsinomu",
+      "E": "Uterin sarkom"
+     },
+     "dogru": "A",
+     "aciklama": "Endometrium karsinomu Batı ülkelerinde kadın genital sisteminin en sık tümörüdür; genellikle 55–65 yaşta görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: en sık genital tümördür.",
+      "B": "Vulvar karsinom nadirdir.",
+      "C": "Vajinal karsinom son derece nadirdir.",
+      "D": "Fallop tüpü karsinomu nadirdir.",
+      "E": "Uterin sarkomlar nadirdir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q32",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Endometrium karsinomunda derecelendirme ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Endometrioid karsinomlar FIGO'ya göre I–III derecelendirilir; seröz karsinomlar yüksek dereceli kabul edilir",
+      "B": "Seröz karsinomlar FIGO derece 1 kabul edilir",
+      "C": "Endometrioid karsinomlar derecelendirilmez",
+      "D": "Tüm endometrium karsinomları düşük derecelidir",
+      "E": "Derece prognozla ilişkili değildir"
+     },
+     "dogru": "A",
+     "aciklama": "Endometrioid karsinomlar FIGO I–III olarak derecelendirilir; seröz karsinomlar tanım gereği yüksek derecelidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: derecelendirme ilkesi doğru verilmiştir.",
+      "B": "Seröz karsinomlar yüksek derecelidir.",
+      "C": "Endometrioid karsinomlar FIGO'ya göre derecelendirilir.",
+      "D": "Seröz karsinom yüksek derecelidir.",
+      "E": "Derece prognostik bilgi verir; ancak en önemli faktör evredir."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-53-q33",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Endometrium karsinomunda yaşam süresini belirleyen en önemli faktör hangisidir?",
+     "secenekler": {
+      "A": "Evre",
+      "B": "Hastanın menarş yaşı",
+      "C": "Tümörün renk özelliği",
+      "D": "Eşlik eden endometrial polip varlığı",
+      "E": "Siklus düzeni"
+     },
+     "dogru": "A",
+     "aciklama": "Her iki tipte de yaşam süresini belirleyen en önemli faktör evredir; seröz tümörlerin prognozu daha kötüdür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: evre en güçlü prognostik faktördür.",
+      "B": "Menarş yaşı risk faktörü olabilir ama prognozu belirlemez.",
+      "C": "Makroskopik renk prognostik değildir.",
+      "D": "Polip varlığı prognozu belirlemez.",
+      "E": "Siklus düzeni prognostik faktör değildir."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 33,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:02:26"
+}

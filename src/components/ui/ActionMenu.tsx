@@ -20,6 +20,8 @@ interface ActionMenuProps {
   /** Accessible name and the sheet title on phones. */
   title?: string;
   className?: string;
+  /** Mavi tetikleyici ve önünde ikon: menüde öne çıkan bir şey var (ör. Öğren slaytı). */
+  highlight?: { icon: React.ElementType; title: string };
 }
 
 const toneCls = {
@@ -32,7 +34,7 @@ const toneCls = {
  * One "⋯ İşlemler" button that collects a card's secondary actions.
  * Desktop/tablet: anchored dropdown. Phones (<640px): bottom sheet, like a native app.
  */
-export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'İşlemler', className = '' }) => {
+export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'İşlemler', className = '', highlight }) => {
   const [open, setOpen] = useState(false);
   const [isPhone, setIsPhone] = useState(() => typeof window !== 'undefined' && window.innerWidth < 640);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -109,12 +111,17 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = '�
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="menu"
         aria-expanded={open}
-        aria-label={label ? undefined : title}
-        title={title}
-        className={`h-9 rounded-[10px] border flex items-center justify-center gap-1.5 text-[13.5px] font-semibold text-ink cursor-pointer transition-colors ${
-          label ? 'px-2.5' : 'w-9'
-        } ${open ? 'bg-canvas border-line-2' : 'bg-white border-line hover:border-line-2'}`}
+        aria-label={label ? undefined : highlight ? `${title} · ${highlight.title}` : title}
+        title={highlight ? `${title} · ${highlight.title}` : title}
+        className={`h-9 rounded-[10px] border flex items-center justify-center gap-1 text-[13.5px] font-semibold cursor-pointer transition-colors ${
+          label || highlight ? 'px-2' : 'w-9'
+        } ${
+          highlight
+            ? `text-accent border-accent/40 ${open ? 'bg-accent-soft border-accent' : 'bg-accent-soft hover:border-accent'}`
+            : `text-ink ${open ? 'bg-canvas border-line-2' : 'bg-white border-line hover:border-line-2'}`
+        }`}
       >
+        {highlight && <highlight.icon className="w-4 h-4" />}
         <MoreHorizontal className="w-[18px] h-[18px]" />
         {label && <span className="hidden sm:inline">{label}</span>}
       </button>

@@ -4,8 +4,9 @@ import rawEncyclopedia from './medical_encyclopedia.json';
 /**
  * Universal reader and synthesizer for medical terms:
  * - Unifies medical_glossary.json (both string definitions and structured objects)
- * - Merges medical_encyclopedia.json (rich pathology, pharmacology, and clinical diseases)
- * Ensures every medical term, drug, disease, bacterium and virus has a live, interactive floating toast card!
+ * - medical_glossary.json is curated by scripts/v2 (`study build --export`): every entry is checked
+ *   against lecture notes (`dogrulama`, `kaynaklar`)
+ * - medical_encyclopedia.json only contributes aliases to existing entries (it is unverified AI content)
  */
 export interface GlossaryEntry {
   term: string;
@@ -26,6 +27,11 @@ const CATEGORY_LABELS: Record<string, string> = {
   patojen: 'Mikrobiyoloji',
   bakteriyoloji: 'Bakteriyoloji',
   viroloji: 'Viroloji',
+  terim: 'Tıbbi terim',
+  protein: 'Protein & molekül',
+  'halk-sagligi': 'Halk sağlığı',
+  epidemiyoloji: 'Halk sağlığı',
+  uroloji: 'Üroloji',
 };
 
 const BADGE_BY_CATEGORY: Record<string, string> = {
@@ -111,7 +117,7 @@ if (Array.isArray(rawGlossary)) {
   }
 }
 
-// 2. Process medical_encyclopedia.json (Enrich and fill definitions)
+// 2. medical_encyclopedia.json: yalnız takma ad zenginleştirmesi (bkz. aşağıdaki not)
 if (Array.isArray(rawEncyclopedia)) {
   for (const enc of rawEncyclopedia as any[]) {
     if (!enc) continue;
@@ -123,31 +129,7 @@ if (Array.isArray(rawEncyclopedia)) {
     const definition = String(enc.definition || enc.description || enc.summary || '').trim();
     if (!definition) continue;
 
-    // Clinical Pearls from examSpotPearls, lectureContextNotes, morphologyOrMechanism, pitfalls, or clinicalPearls
-    const pearlsArr: string[] = [];
-    if (Array.isArray(enc.examSpotPearls)) {
-      pearlsArr.push(...enc.examSpotPearls);
-    }
-    if (Array.isArray(enc.clinicalSignificance)) {
-      pearlsArr.push(...enc.clinicalSignificance);
-    }
-    if (Array.isArray(enc.highYieldFacts)) {
-      pearlsArr.push(...enc.highYieldFacts);
-    }
-    if (typeof enc.clinicalPearls === 'string' && enc.clinicalPearls.trim()) {
-      pearlsArr.push(enc.clinicalPearls.trim());
-    } else if (typeof enc.clinicalPearl === 'string' && enc.clinicalPearl.trim()) {
-      pearlsArr.push(enc.clinicalPearl.trim());
-    }
-    if (typeof enc.morphologyOrMechanism === 'string' && enc.morphologyOrMechanism.trim()) {
-      pearlsArr.push(`Mekanizma: ${enc.morphologyOrMechanism.trim()}`);
-    }
-    if (Array.isArray(enc.pitfallsAndWarnings)) {
-      pearlsArr.push(...enc.pitfallsAndWarnings);
-    }
-    const clinicalPearls = pearlsArr.slice(0, 3).join(' • ').trim() || undefined;
-
-    // Aliases from aliases, latinName, relatedTerms, and parentheses in term
+    // Takma adlar: aliases, latinName ve terimdeki parantez (relatedTerms eş anlamlı değildir, eklenmez)
     const aliases: string[] = [];
     if (enc.latinName && typeof enc.latinName === 'string') {
       aliases.push(enc.latinName.trim());
@@ -155,44 +137,21 @@ if (Array.isArray(rawEncyclopedia)) {
     if (Array.isArray(enc.aliases)) {
       aliases.push(...enc.aliases.map((a: string) => String(a).trim()));
     }
-    if (Array.isArray(enc.relatedTerms)) {
-      aliases.push(...enc.relatedTerms.map((t: string) => String(t).replace(/-/g, ' ').trim()));
-    }
     const parenMatch = term.match(/^(.+?)\s*\((.+?)\)$/);
     if (parenMatch) {
       aliases.push(parenMatch[1].trim());
       aliases.push(parenMatch[2].trim());
     }
 
-    const existing = termMap.get(normKey);
-    if (existing) {
-      // Merge: prefer longer definition and combine pearls
-      if (!existing.definition || definition.length > existing.definition.length) {
-        existing.definition = definition;
-      }
-      if (!existing.clinicalPearls && clinicalPearls) {
-        existing.clinicalPearls = clinicalPearls;
-      }
-      if (aliases.length > 0) {
-        const mergedAliases = Array.from(new Set([...(existing.aliases || []), ...aliases])).filter(
-          (a) => a.toLowerCase() !== normKey
-        );
-        existing.aliases = mergedAliases.length > 0 ? mergedAliases : undefined;
-      }
-    } else {
-      const rawCat = String(enc.category || enc.discipline || 'Tıbbi Patoloji');
-      const category = CATEGORY_LABELS[rawCat.toLowerCase()] || rawCat;
-      const cleanAliases = Array.from(new Set(aliases)).filter((a) => a.toLowerCase() !== normKey);
-
-      termMap.set(normKey, {
-        term,
-        aliases: cleanAliases.length > 0 ? cleanAliases : undefined,
-        category,
-        definition,
-        clinicalPearls,
-        badgeColor: BADGE_BY_CATEGORY[rawCat.toLowerCase()] || 'rose',
-        discipline: enc.discipline || undefined,
-      });
+    // Ansiklopedi kayıtları doğrulanmamış (AI) içerik taşır: sözlüğe yeni terim eklemez, tanımı ezmez.
+    // Yalnız aynı terimin (veya parantez dışı adının) sözlük kaydına takma ad ekler.
+    const existing = termMap.get(normKey) || (parenMatch ? termMap.get(parenMatch[1].trim().toLowerCase()) : undefined);
+    if (existing && aliases.length > 0) {
+      const own = existing.term.toLowerCase();
+      const mergedAliases = Array.from(new Set([...(existing.aliases || []), ...aliases])).filter(
+        (a) => a && a.toLowerCase() !== own
+      );
+      existing.aliases = mergedAliases.length > 0 ? mergedAliases : undefined;
     }
   }
 }

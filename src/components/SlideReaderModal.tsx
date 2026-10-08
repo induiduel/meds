@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SourceText } from './ui/SourceText';
 import { 
   X, 
   BookOpen, 
@@ -234,9 +235,7 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
 
               {/* Rendered Text Content */}
               <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-2xs space-y-4">
-                <div className="prose prose-sm max-w-none text-slate-800 text-sm leading-relaxed whitespace-pre-wrap font-sans">
-                  {activePage.content}
-                </div>
+                <SourceText text={String(activePage.content || '')} terms={(activePage.keywords || []).filter((k) => k.length >= 4).slice(0, 8)} />
 
                 {(activePage as any).repairedContent && (
                   <div className="pt-4 border-t border-amber-200/80 bg-amber-50/60 p-4 rounded-xl text-amber-950 space-y-1.5">
@@ -244,9 +243,7 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
                       <Sparkles className="w-3.5 h-3.5 text-amber-600" />
                       Redakte Amfi Dersi Tamamlayıcı Notu & Açıklaması
                     </div>
-                    <div className="text-sm leading-relaxed whitespace-pre-line text-slate-800">
-                      {(activePage as any).repairedContent}
-                    </div>
+                    <SourceText text={String((activePage as any).repairedContent || '')} size="sm" />
                   </div>
                 )}
               </div>

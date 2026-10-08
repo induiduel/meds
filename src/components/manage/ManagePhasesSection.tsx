@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Search, Save, RotateCcw, FlaskConical, Code2, ChevronLeft, ChevronRight, ArrowUpDown } from 'lucide-react';
+import { Search, Save, RotateCcw, FlaskConical, Code2, ChevronLeft, ChevronRight, ArrowUpDown, Info } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { QuestionInsightsPanel, clearInsightsCache } from '../QuestionInsightsPanel';
 import { toast } from '../ui/Toast';
+import { SearchBox, ChipBar, EmptyState, Drawer } from './consoleUi';
 import { ApiService } from '../../services/api';
 
 /**
@@ -36,13 +37,13 @@ const HIDEABLE: [string, string][] = [
 ];
 const stemOf = (q: any) => q?.reconstruction?.stem || q?.stem || q?.rawQuestion?.stem || '';
 const fold = (s: string) => s.toLocaleLowerCase('tr-TR');
-const card = 'rounded-xl border border-line bg-white p-3.5 flex flex-col gap-2';
-const h3 = 'm-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3';
-const input = 'w-full rounded-lg border border-line bg-white px-2.5 py-1.5 text-[13.5px]';
+const card = 'rounded-xl bg-canvas p-3.5 flex flex-col gap-2 min-w-0';
+const h3 = 'm-0 text-[12.5px] font-semibold text-ink-2';
+const input = 'ms-input';
 
 function Json({ value }: { value: any }) {
   return (
-    <pre className="m-0 max-h-72 overflow-auto rounded-lg bg-canvas p-2 text-[11.5px] leading-snug whitespace-pre-wrap break-words">
+    <pre className="ms-term !max-h-72 !min-h-0 !text-[11.5px]">
       {value == null ? '—' : JSON.stringify(value, null, 1)}
     </pre>
   );
@@ -224,12 +225,11 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
     const ov = detail?.duzeltme || {};
     const hid = (ov.gizle || []).includes(k);
     const rem = (ov.kaldir || []).includes(k);
-    const b = 'h-7 px-2 rounded-md text-[11.5px] font-semibold border border-line cursor-pointer hover:bg-canvas';
     return (
-      <span className="inline-flex gap-1 normal-case tracking-normal">
-        {(hid || rem) && <span className={`h-7 px-2 rounded-md text-[11.5px] inline-flex items-center ${rem ? 'bg-rose-50 text-rose-700' : 'bg-warn-soft text-warn'}`}>{rem ? 'kaldırıldı' : 'gizli'}</span>}
-        <button type="button" className={b} onClick={() => toggleSection('gizle', k)}>{hid ? 'Göster' : 'Gizle'}</button>
-        <button type="button" className={`${b} ${rem ? '' : 'text-rose-700'}`} onClick={() => toggleSection('kaldir', k)}>{rem ? 'Geri al' : 'Kaldır'}</button>
+      <span className="inline-flex items-center gap-1">
+        {(hid || rem) && <span className={`ms-tag ${rem ? 'is-bad' : 'is-warn'}`}>{rem ? 'Kaldırıldı' : 'Gizli'}</span>}
+        <button type="button" className="ms-btn is-sm is-ghost" onClick={() => toggleSection('gizle', k)}>{hid ? 'Göster' : 'Gizle'}</button>
+        <button type="button" className={`ms-btn is-sm ${rem ? 'is-ghost' : 'is-danger'}`} onClick={() => toggleSection('kaldir', k)}>{rem ? 'Geri al' : 'Kaldır'}</button>
       </span>
     );
   };
@@ -255,70 +255,89 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
   const faz11Keys = new Set((test?.faz11 || []).map((s) => `${fold(s.kaynak)}#${s.sayfa}`));
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className={card}>
-        <div className="flex flex-wrap gap-1.5" role="tablist" aria-label="Veri kategorisi">
-          {cats.map((c) => (
-            <button
-              key={c.id}
-              type="button"
-              role="tab"
-              aria-selected={eq.kategori === c.id}
-              title={c.desc}
-              onClick={() => {
-                setDegerInput('');
-                setEq({ kategori: c.id, alan: '', deger: '', sirala: '', yon: 'artan', sayfa: 1, boyut: eq.boyut });
-              }}
-              className={`h-9 px-2.5 rounded-lg text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer ${eq.kategori === c.id ? 'bg-accent text-white' : 'bg-canvas text-ink-2 hover:text-ink'}`}
-            >
-              {c.label}
-              <span className={`text-[11px] font-mono ${eq.kategori === c.id ? 'text-white/80' : 'text-ink-3'}`}>{c.soru.toLocaleString('tr-TR')}</span>
-            </button>
-          ))}
-        </div>
-        {curCat && <p className="m-0 text-[12.5px] text-ink-3">{curCat.desc} · {curCat.satir.toLocaleString('tr-TR')} kayıt, {curCat.soru.toLocaleString('tr-TR')} soru</p>}
-        <div className="grid gap-2 sm:grid-cols-[minmax(0,10rem)_minmax(0,1fr)_minmax(0,10rem)_auto]">
-          <select className={input} value={eq.alan} onChange={(e) => setEq((q) => ({ ...q, alan: e.target.value, sayfa: 1 }))} aria-label="Sorgulanacak alan">
-            <option value="">Tüm alanlar</option>
-            {cols.map((k) => <option key={k} value={k}>{k}</option>)}
-          </select>
-          <input className={input} value={degerInput} onChange={(e) => setDegerInput(e.target.value)} placeholder='Değer (içerir; tam eşleşme "=yuksek"; "boş" / "dolu")' aria-label="Sorgu değeri" />
-          <select className={input} value={eq.sirala} onChange={(e) => setEq((q) => ({ ...q, sirala: e.target.value }))} aria-label="Sıralama alanı">
-            <option value="">Sıralama yok</option>
-            {cols.map((k) => <option key={k} value={k}>{k}</option>)}
-          </select>
-          <button type="button" onClick={() => setEq((q) => ({ ...q, yon: q.yon === 'artan' ? 'azalan' : 'artan' }))} className="h-9 px-3 rounded-lg border border-line text-[12.5px] inline-flex items-center gap-1 cursor-pointer" aria-label="Sıralama yönü">
-            <ArrowUpDown className="w-3.5 h-3.5" /> {eq.yon === 'artan' ? 'Artan' : 'Azalan'}
-          </button>
-        </div>
-        {eq.alan && (ex?.dagilim?.length ?? 0) > 0 && (
-          <div className="flex flex-wrap gap-1.5 text-[12px]">
-            <span className="text-ink-3">{eq.alan} değerleri:</span>
-            {ex!.dagilim.map((d) => (
-              <button key={d.deger} type="button" onClick={() => setDegerInput('=' + d.deger)} className="px-2 py-0.5 rounded-full bg-canvas hover:bg-line text-ink-2 cursor-pointer">
-                {d.deger.length > 40 ? d.deger.slice(0, 40) + '…' : d.deger} <span className="font-mono text-ink-3">{d.sayi}</span>
-              </button>
-            ))}
+    <div className="flex flex-col gap-3 min-w-0">
+      <div className="relative">
+        <SearchBox value={term} onChange={setTerm} placeholder="Soruya git: numara (#1529), kimlik ya da kökten bir parça" />
+        {term.trim().length >= 2 && (
+          <div className="ms-suggest">
+            {matches.length === 0 ? (
+              <p className="m-0 px-3 py-3 text-[13px] text-ink-3">Eşleşen soru yok.</p>
+            ) : (
+              matches.map((q) => (
+                <button key={q.id} type="button" onClick={() => { void load(q.id); setTerm(''); }} className="ms-suggest-row !min-h-[42px]">
+                  <span className="font-mono text-[12px] text-ink-3 shrink-0">#{q.questionNumber}</span>
+                  <span className="truncate">{stemOf(q).slice(0, 140)}</span>
+                </button>
+              ))
+            )}
           </div>
         )}
-        <div className="overflow-x-auto -mx-3.5 px-3.5">
-          <table className="w-full text-[12.5px] border-collapse">
+      </div>
+
+      <ChipBar
+        label="Veri kategorisi"
+        value={eq.kategori}
+        onChange={(id) => {
+          setDegerInput('');
+          setEq({ kategori: id, alan: '', deger: '', sirala: '', yon: 'artan', sayfa: 1, boyut: eq.boyut });
+        }}
+        options={cats.map((c) => ({ id: c.id, label: c.label, n: c.soru }))}
+      />
+
+      <section className="ms-panel">
+        <header className="ms-panel-head">
+          <h2 className="ms-panel-title">{curCat?.label || 'Kategori'}</h2>
+          {curCat && <span className="text-[12.5px] text-ink-3 tabular-nums">{curCat.satir.toLocaleString('tr-TR')} kayıt · {curCat.soru.toLocaleString('tr-TR')} soru</span>}
+          {curCat?.desc && <p className="ms-panel-desc">{curCat.desc}</p>}
+        </header>
+        <div className="px-4 pt-3 pb-2 flex flex-col gap-2">
+          <div className="grid gap-2 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)_minmax(0,11rem)_auto]">
+            <select className="ms-input" value={eq.alan} onChange={(e) => setEq((q) => ({ ...q, alan: e.target.value, sayfa: 1 }))} aria-label="Sorgulanacak alan">
+              <option value="">Tüm alanlar</option>
+              {cols.map((k) => <option key={k} value={k}>{k}</option>)}
+            </select>
+            <input className="ms-input" value={degerInput} onChange={(e) => setDegerInput(e.target.value)} placeholder='Değer: içerir · "=yuksek" tam eşleşme · "boş" / "dolu"' aria-label="Sorgu değeri" />
+            <select className="ms-input" value={eq.sirala} onChange={(e) => setEq((q) => ({ ...q, sirala: e.target.value }))} aria-label="Sıralama alanı">
+              <option value="">Sıralama yok</option>
+              {cols.map((k) => <option key={k} value={k}>{k}</option>)}
+            </select>
+            <button type="button" onClick={() => setEq((q) => ({ ...q, yon: q.yon === 'artan' ? 'azalan' : 'artan' }))} className="ms-btn" aria-label="Sıralama yönü">
+              <ArrowUpDown /> {eq.yon === 'artan' ? 'Artan' : 'Azalan'}
+            </button>
+          </div>
+          {eq.alan && (ex?.dagilim?.length ?? 0) > 0 && (
+            <div className="ms-chipbar is-wrap">
+              <span className="text-[12.5px] text-ink-3 self-center">{eq.alan}:</span>
+              {ex!.dagilim.map((d) => (
+                <button key={d.deger} type="button" onClick={() => setDegerInput('=' + d.deger)} className={`ms-fchip !h-7 ${eq.deger === '=' + d.deger ? 'is-on' : ''}`}>
+                  {d.deger.length > 40 ? d.deger.slice(0, 40) + '…' : d.deger} <span className="n">{d.sayi}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+        <div className="overflow-x-auto">
+          <table className={`ms-table ${exLoading ? 'opacity-60' : ''}`}>
             <thead>
-              <tr className="text-left text-ink-3">
-                <th className="py-1.5 pr-2 font-semibold">Soru</th>
-                {cols.map((k) => <th key={k} className="py-1.5 pr-2 font-semibold whitespace-nowrap">{k}</th>)}
+              <tr>
+                <th scope="col">Soru</th>
+                {cols.map((k) => <th key={k} scope="col">{k}</th>)}
               </tr>
             </thead>
-            <tbody className={exLoading ? 'opacity-60' : ''}>
+            <tbody>
               {(ex?.satirlar || []).map((r, i) => (
-                <tr key={i} onClick={() => load(String(r.soru_id))} className={`border-t border-line cursor-pointer hover:bg-canvas ${r.soru_id === selId ? 'bg-canvas' : ''}`}>
-                  <td className="py-1.5 pr-2 align-top max-w-[22rem]">
-                    <span className="block truncate text-ink" title={r._kok}>{r._kok || <span className="font-mono text-ink-3">{r.soru_id}</span>}</span>
-                    {r._durum && <span className={`text-[11px] mr-1.5 ${r._durum === 'kaldırıldı' ? 'text-rose-700' : 'text-warn'}`}>{r._durum}</span>}
-                    {r._elle && <span className="text-[11px] text-warn">elle düzeltildi</span>}
+                <tr key={i} onClick={() => load(String(r.soru_id))} className={`is-button ${r.soru_id === selId ? 'is-on' : ''}`}>
+                  <td className="max-w-[22rem]">
+                    <span className="block truncate" title={r._kok}>{r._kok || <span className="font-mono text-ink-3">{r.soru_id}</span>}</span>
+                    {(r._durum || r._elle) && (
+                      <span className="flex gap-1 pt-0.5">
+                        {r._durum && <span className={`ms-tag ${r._durum === 'kaldırıldı' ? 'is-bad' : 'is-warn'}`}>{r._durum}</span>}
+                        {r._elle && <span className="ms-tag is-warn">Elle düzeltildi</span>}
+                      </span>
+                    )}
                   </td>
                   {cols.map((k) => (
-                    <td key={k} className="py-1.5 pr-2 align-top max-w-[16rem]">
+                    <td key={k} className="max-w-[16rem]">
                       <span className="block truncate" title={String(r[k] ?? '')}>{r[k] === true ? 'evet' : r[k] === false ? 'hayır' : String(r[k] ?? '—')}</span>
                     </td>
                   ))}
@@ -326,82 +345,54 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
               ))}
             </tbody>
           </table>
-          {ex && ex.toplam === 0 && <p className="m-0 py-3 text-[13px] text-ink-3">Bu sorguya uyan kayıt yok.</p>}
+          {ex && ex.toplam === 0 && <EmptyState icon={Search} title="Bu sorguya uyan kayıt yok" />}
+          {!ex && <div className="p-3 flex flex-col gap-2">{[0, 1, 2, 3].map((i) => <div key={i} className="h-8 rounded-lg ms-shimmer" />)}</div>}
         </div>
         {ex && ex.toplam > 0 && (
-          <div className="flex items-center justify-between gap-2 text-[12.5px] text-ink-3">
-            <span>{ex.toplam.toLocaleString('tr-TR')} kayıt · sayfa {ex.sayfa} / {Math.max(1, Math.ceil(ex.toplam / ex.boyut))}</span>
+          <footer className="flex flex-wrap items-center justify-between gap-2 px-4 py-2.5 border-t border-line-soft text-[12.5px] text-ink-3">
+            <span className="tabular-nums">{ex.toplam.toLocaleString('tr-TR')} kayıt · sayfa {ex.sayfa} / {Math.max(1, Math.ceil(ex.toplam / ex.boyut))} · satıra dokununca ayrıntı açılır</span>
             <div className="flex items-center gap-1">
-              <select className="h-9 rounded-lg border border-line px-1.5" value={eq.boyut} onChange={(e) => setEq((q) => ({ ...q, boyut: Number(e.target.value), sayfa: 1 }))} aria-label="Sayfa boyutu">
-                {[25, 50, 100, 200].map((n) => <option key={n} value={n}>{n}</option>)}
+              <select className="ms-input is-sm !w-auto" value={eq.boyut} onChange={(e) => setEq((q) => ({ ...q, boyut: Number(e.target.value), sayfa: 1 }))} aria-label="Sayfa boyutu">
+                {[25, 50, 100, 200].map((n) => <option key={n} value={n}>{n} satır</option>)}
               </select>
-              <button type="button" disabled={eq.sayfa <= 1} onClick={() => setEq((q) => ({ ...q, sayfa: q.sayfa - 1 }))} className="w-9 h-9 rounded-lg border border-line inline-flex items-center justify-center disabled:opacity-40 cursor-pointer" aria-label="Önceki sayfa"><ChevronLeft className="w-4 h-4" /></button>
-              <button type="button" disabled={eq.sayfa * eq.boyut >= ex.toplam} onClick={() => setEq((q) => ({ ...q, sayfa: q.sayfa + 1 }))} className="w-9 h-9 rounded-lg border border-line inline-flex items-center justify-center disabled:opacity-40 cursor-pointer" aria-label="Sonraki sayfa"><ChevronRight className="w-4 h-4" /></button>
+              <button type="button" disabled={eq.sayfa <= 1} onClick={() => setEq((q) => ({ ...q, sayfa: q.sayfa - 1 }))} className="ms-btn is-sm is-icon is-ghost" aria-label="Önceki sayfa"><ChevronLeft /></button>
+              <button type="button" disabled={eq.sayfa * eq.boyut >= ex.toplam} onClick={() => setEq((q) => ({ ...q, sayfa: q.sayfa + 1 }))} className="ms-btn is-sm is-icon is-ghost" aria-label="Sonraki sayfa"><ChevronRight /></button>
             </div>
-          </div>
+          </footer>
         )}
-        <p className="m-0 text-[12px] text-ink-3">Bir satıra tıklayınca o sorunun tüm faz verisi, elle düzeltme ve arama testi aşağıda açılır.</p>
-      </div>
+      </section>
 
-      <div className={card}>
-        <label className="flex items-center gap-2 rounded-lg border border-line px-2.5 h-10">
-          <Search className="w-4 h-4 text-ink-3" />
-          <input
-            value={term}
-            onChange={(e) => setTerm(e.target.value)}
-            placeholder="Soru numarası (#1529), kimlik ya da soru metninden bir parça"
-            className="flex-1 bg-transparent outline-none text-[14px]"
-          />
-        </label>
-        {matches.length > 0 && (
-          <ul className="m-0 p-0 list-none flex flex-col max-h-64 overflow-auto">
-            {matches.map((q) => (
-              <li key={q.id}>
-                <button
-                  type="button"
-                  onClick={() => load(q.id)}
-                  className={`w-full text-left px-2 py-1.5 rounded-lg text-[13px] hover:bg-canvas ${q.id === selId ? 'bg-canvas font-semibold' : ''}`}
-                >
-                  <span className="font-mono text-ink-3">#{q.questionNumber}</span> {stemOf(q).slice(0, 120)}
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-        {term.trim().length >= 2 && matches.length === 0 && <p className="m-0 text-[13px] text-ink-3">Eşleşen soru yok.</p>}
-      </div>
-
+      <Drawer
+        open={!!detail}
+        onClose={() => { setDetail(null); setSelId(null); }}
+        wide
+        label="Faz verisi ayrıntısı"
+        title={selQ ? `#${selQ.questionNumber}` : 'Soru'}
+        head={
+          <button type="button" onClick={() => setShowRaw((v) => !v)} className="ms-btn is-sm is-ghost">
+            <Code2 /> {showRaw ? 'Kartlar' : 'Ham JSON'}
+          </button>
+        }
+      >
       {detail && (
         <>
-          <div className={card}>
-            <div className="flex items-start justify-between gap-2">
-              <p className="m-0 text-[14px] font-semibold text-ink">
-                <span className="font-mono text-ink-3">#{selQ?.questionNumber}</span> {stemOf(selQ)}
-              </p>
-              <button type="button" onClick={() => setShowRaw((v) => !v)} className="shrink-0 inline-flex items-center gap-1 text-[12.5px] text-ink-3">
-                <Code2 className="w-4 h-4" /> {showRaw ? 'Kartlar' : 'Ham JSON'}
-              </button>
+          <p className="m-0 text-[15px] leading-relaxed text-ink font-medium">{stemOf(selQ)}</p>
+          {detail.gorunen?.elle_duzeltildi && (
+            <div className="ms-alert is-warn !py-2">
+              <Info aria-hidden="true" />
+              <span>Elle düzeltilmiş · {detail.duzeltme?.guncelleyen} · {detail.duzeltme?.guncelleme?.slice(0, 16).replace('T', ' ')}</span>
             </div>
-            {detail.gorunen?.elle_duzeltildi && (
-              <p className="m-0 text-[12.5px] text-warn">
-                Elle düzeltilmiş · {detail.duzeltme?.guncelleyen} · {detail.duzeltme?.guncelleme?.slice(0, 16).replace('T', ' ')}
-              </p>
-            )}
-            <div className="flex flex-wrap items-center gap-1.5 text-[12.5px]">
-              <span className="text-ink-3">Yeniden incele:</span>
-              <button type="button" onClick={() => rereview('slayt')} className="h-8 px-2.5 rounded-lg border border-line hover:bg-canvas cursor-pointer">Hakem · slayt</button>
-              <button type="button" onClick={() => rereview('konu')} className="h-8 px-2.5 rounded-lg border border-line hover:bg-canvas cursor-pointer">Hakem · konu</button>
-              <button type="button" onClick={() => rereview('faz14')} className="h-8 px-2.5 rounded-lg border border-line hover:bg-canvas cursor-pointer">Faz 14 (soru düzeltme)</button>
-              <span className="flex-1" />
-              {detail.duzeltme && (
-                <button type="button" onClick={() => save(true)} className="h-8 px-2.5 rounded-lg border border-rose-200 text-rose-700 hover:bg-rose-50 cursor-pointer">Tüm elle düzeltmeleri sil</button>
-              )}
-            </div>
+          )}
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span className="text-[12.5px] text-ink-3 mr-1">Yeniden incele</span>
+            <button type="button" onClick={() => rereview('slayt')} className="ms-btn is-sm">Hakem · slayt</button>
+            <button type="button" onClick={() => rereview('konu')} className="ms-btn is-sm">Hakem · konu</button>
+            <button type="button" onClick={() => rereview('faz14')} className="ms-btn is-sm">Faz 14 · soru düzeltme</button>
           </div>
 
           {detail.duzeltme && (
-            <div className={card}>
-              <h3 className={h3}>Karşılaştırma · faz çıktısı ↔ sitede görünen</h3>
+            <section className="ms-dsec">
+              <h3>Faz çıktısı ↔ sitede görünen</h3>
               {(['mufredat', 'slayt', 'faz6_5', 'faz6', 'varliklar'] as const)
                 .filter((k) => JSON.stringify(ham?.[k] ?? null) !== JSON.stringify(detail.gorunen?.[k] ?? null))
                 .map((k) => (
@@ -410,9 +401,8 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
                     <div><p className="m-0 mb-1 text-[12px] font-semibold text-accent">{k} · sitede görünen</p><Json value={detail.gorunen?.[k] ?? null} /></div>
                   </div>
                 ))}
-            </div>
+            </section>
           )}
-
           {showRaw ? (
             <div className="grid gap-3 md:grid-cols-2">
               <div className={card}><h3 className={h3}>Faz çıktısı (ham)</h3><Json value={ham} /></div>
@@ -481,12 +471,13 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
             </div>
           )}
 
-          <div className={card}>
-            <h3 className={h3}>Elle düzelt</h3>
+          <section className="ms-dsec">
+            <h3>Elle düzelt</h3>
             <div className="flex flex-wrap gap-x-4 gap-y-1.5">
               {HIDEABLE.map(([k, label]) => (
-                <label key={k} className="inline-flex items-center gap-1.5 text-[13px]">
+                <label key={k} className="inline-flex items-center gap-1.5 text-[13px] cursor-pointer">
                   <input
+                    className="w-[15px] h-[15px] accent-accent"
                     type="checkbox"
                     checked={form.gizle.includes(k)}
                     onChange={(e) => setForm((f) => ({ ...f, gizle: e.target.checked ? [...f.gizle, k] : f.gizle.filter((x) => x !== k) }))}
@@ -505,40 +496,41 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
             <textarea className={`${input} min-h-[48px] font-mono`} placeholder={'Kısaltmalar: her satıra "KISALTMA = açılım"'} value={form.kisaltmalar} onChange={(e) => setForm((f) => ({ ...f, kisaltmalar: e.target.value }))} />
             <input className={input} placeholder="Not (neden düzeltildi)" value={form.not} onChange={(e) => setForm((f) => ({ ...f, not: e.target.value }))} />
             <div className="flex flex-wrap gap-2">
-              <button type="button" disabled={busy !== ''} onClick={() => save(false)} className="h-10 px-3.5 rounded-lg bg-accent text-white text-[13.5px] font-semibold inline-flex items-center gap-1.5 disabled:opacity-60">
-                <Save className="w-4 h-4" /> Kaydet
+              <button type="button" disabled={busy !== ''} onClick={() => save(false)} className="ms-btn is-primary">
+                <Save /> Düzeltmeyi kaydet
               </button>
-              <button type="button" disabled={busy !== '' || !detail.duzeltme} onClick={() => save(true)} className="h-10 px-3.5 rounded-lg border border-line text-[13.5px] inline-flex items-center gap-1.5 disabled:opacity-50">
-                <RotateCcw className="w-4 h-4" /> Düzeltmeyi kaldır
+              <button type="button" disabled={busy !== '' || !detail.duzeltme} onClick={() => save(true)} className="ms-btn is-ghost">
+                <RotateCcw /> Tüm elle düzeltmeleri kaldır
               </button>
             </div>
-          </div>
+          </section>
 
-          <div className={card}>
-            <h3 className={h3}>Arama testi (ders slaytları, BM25 + temiz ders materyali)</h3>
+          <section className="ms-dsec">
+            <h3>Arama testi · ders slaytları, BM25 + temiz ders materyali</h3>
             <textarea className={`${input} min-h-[56px]`} value={query} onChange={(e) => setQuery(e.target.value)} />
-            <button type="button" disabled={busy !== ''} onClick={runTest} className="self-start h-10 px-3.5 rounded-lg border border-line text-[13.5px] inline-flex items-center gap-1.5 disabled:opacity-60">
-              <FlaskConical className="w-4 h-4" /> {busy === 'test' ? 'Aranıyor…' : 'Testi çalıştır'}
+            <button type="button" disabled={busy !== ''} onClick={runTest} className="ms-btn self-start">
+              <FlaskConical /> {busy === 'test' ? 'Aranıyor…' : 'Testi çalıştır'}
             </button>
             {test && (
               <ol className="m-0 pl-5 flex flex-col gap-1.5 text-[13px]">
                 {test.sonuclar.map((r, i) => (
                   <li key={i}>
                     <b>{r.baslik}</b> {r.sayfa != null && <span className="text-ink-3">· s.{r.sayfa}</span>} <span className="text-ink-3">· {r.skor}</span>
-                    {faz11Keys.has(`${fold(r.baslik)}#${r.sayfa}`) && <span className="ml-1.5 px-1.5 rounded bg-ok-soft text-ok text-[11.5px] font-semibold">Faz 11 ile aynı</span>}
+                    {faz11Keys.has(`${fold(r.baslik)}#${r.sayfa}`) && <span className="ml-1.5 ms-tag is-ok">Faz 11 ile aynı</span>}
                     <div className="text-ink-2 text-[12.5px]">{r.metin}</div>
                   </li>
                 ))}
               </ol>
             )}
-          </div>
+          </section>
 
-          <div className={card}>
-            <h3 className={h3}>Sitede görünen (önizleme)</h3>
+          <section className="ms-dsec">
+            <h3>Sitede görünen · önizleme</h3>
             <QuestionInsightsPanel key={`${selId}-${previewKey}`} questionId={selId!} />
-          </div>
+          </section>
         </>
       )}
+      </Drawer>
     </div>
   );
 };

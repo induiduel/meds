@@ -1,0 +1,17 @@
+[Unit]
+Description=MedSoru Core v2 anlamsal arama servisi (CPU e5, GPU yok)
+Documentation=file:///home/indu/medsor/meds/scripts/v2/README.md
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/indu/medsor/meds/scripts
+EnvironmentFile=-/home/indu/medsor/meds/.env
+Environment=MEDS_CORE_DIR=/home/indu/medsor/meds_database_core
+ExecStart=/home/indu/medsor/meds/.venv-ocr/bin/python -m v2.search_server
+Restart=on-failure
+RestartSec=15
+Nice=5
+
+[Install]
+WantedBy=default.target

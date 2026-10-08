@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { PageHeader } from '../ui/PageHeader';
-import { BookA, GraduationCap, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2, ChevronLeft, ChevronRight, ChevronDown, Star } from 'lucide-react';
+import { BookA, GraduationCap, FileQuestion, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2, ChevronLeft, ChevronRight, ChevronDown, Star } from 'lucide-react';
 import { getFavoriteCards, toggleFavoriteCard } from '../../services/studyStore';
 import { GLOSSARY } from '../../data/glossary';
 import { SectionLoader, SuccessCheck } from '../ui/Animations';
@@ -108,6 +108,20 @@ const loadDeckCards = async (): Promise<StudyCard[]> => {
   return out;
 };
 
+/** Cevap anahtarlı, ders notuyla doğrulanmış çıkmış sorular (scripts/v2 `study build --export`). */
+const loadExamCards = async (): Promise<StudyCard[]> => {
+  const mod: any = await import('../../data/question_cards.json');
+  const rows: any[] = mod.default || mod;
+  return rows.map((q) => ({
+    id: q.id,
+    group: q.group || 'Diğer',
+    front: [q.front, ...Object.entries(q.options || {}).map(([k, v]) => `${k}) ${v}`)].join('\n'),
+    back: q.back,
+    sub: q.tekrar > 1 ? `${q.tekrar} kez çıktı` : q.kurul ? `Kurul ${q.kurul}` : undefined,
+    pearl: q.note || undefined,
+  }));
+};
+
 const shuffle = <T,>(a: T[]) => {
   const r = [...a];
   for (let i = r.length - 1; i > 0; i--) {
@@ -124,8 +138,9 @@ const plain = (s?: string) => String(s || '').replace(/\*\*/g, '');
 // Page
 // ---------------------------------------------------------------------------
 export const FlashcardsView: React.FC = () => {
-  const [source, setSource] = useState<'terms' | 'lessons'>('terms');
+  const [source, setSource] = useState<'terms' | 'lessons' | 'exams'>('terms');
   const [deckCards, setDeckCards] = useState<StudyCard[] | null>(null);
+  const [examCards, setExamCards] = useState<StudyCard[] | null>(null);
   const [group, setGroup] = useState('all');
   const [query, setQuery] = useState('');
   // Göz atma süzgeci: duruma göre ya da favoriler (favoriler kaynak/konu seçiminden bağımsız)
@@ -141,10 +156,11 @@ export const FlashcardsView: React.FC = () => {
 
   useEffect(() => {
     if (source === 'lessons' && !deckCards) loadDeckCards().then(setDeckCards).catch(() => setDeckCards([]));
-  }, [source, deckCards]);
+    if (source === 'exams' && !examCards) loadExamCards().then(setExamCards).catch(() => setExamCards([]));
+  }, [source, deckCards, examCards]);
   useEffect(() => setGroup('all'), [source]);
 
-  const all = source === 'terms' ? GLOSSARY_CARDS : deckCards || [];
+  const all = source === 'terms' ? GLOSSARY_CARDS : source === 'exams' ? examCards || [] : deckCards || [];
   const groups = useMemo(() => {
     const m: Record<string, number> = {};
     all.forEach((c) => (m[c.group] = (m[c.group] || 0) + 1));
@@ -205,7 +221,7 @@ export const FlashcardsView: React.FC = () => {
     );
   }
 
-  const loading = source === 'lessons' && !deckCards;
+  const loading = (source === 'lessons' && !deckCards) || (source === 'exams' && !examCards);
   const startCount = Math.min(limit > 0 ? limit : inGroup.length, counts.due + counts.new || inGroup.length);
 
   return (
@@ -219,6 +235,7 @@ export const FlashcardsView: React.FC = () => {
             [
               ['terms', BookA, 'Terimler', GLOSSARY_CARDS.length],
               ['lessons', GraduationCap, 'Ders kartları', deckCards?.length],
+              ['exams', FileQuestion, 'Çıkmış sorular', examCards?.length],
             ] as const
           ).map(([id, Icon, label, n]) => (
             <button key={id} type="button" role="radio" aria-checked={source === id} onClick={() => setSource(id)} className={`inline-flex items-center justify-center gap-1.5 ${source === id ? 'is-on' : ''}`}>
@@ -241,7 +258,7 @@ export const FlashcardsView: React.FC = () => {
       </div>
 
       {loading ? (
-        <SectionLoader variant="book" label="Ders kartları yükleniyor…" />
+        <SectionLoader variant="book" label={source === 'exams' ? 'Çıkmış sorular yükleniyor…' : 'Ders kartları yükleniyor…'} />
       ) : (
         <>
           {/* Başlat paneli: durum tek satır, ayarlar tek satır, büyük başlat düğmesi */}
@@ -592,10 +609,10 @@ const StudySession: React.FC<{
           >
             <span className="flex items-center gap-2">
               <span className="h-6 px-2.5 rounded-full bg-accent-soft text-accent text-[12px] font-semibold inline-flex items-center max-w-[70%] truncate">{card.group}</span>
-              <span className="ml-auto mr-12 text-[12px] text-ink-3">{reverse ? 'Tanım' : 'Terim'}</span>
+              <span className="ml-auto mr-12 text-[12px] text-ink-3">{card.id.startsWith('q:') ? (reverse ? 'Cevap' : 'Soru') : reverse ? 'Tanım' : 'Terim'}</span>
             </span>
             <span className="flex-1 flex flex-col items-center justify-center text-center gap-2 px-2">
-              <span className={`font-display font-bold tracking-[-0.02em] text-ink ${reverse ? 'text-[18px] sm:text-[20px] leading-[1.45] font-medium' : 'text-[28px] sm:text-[34px] leading-[1.15]'}`}>
+              <span className={`font-display font-bold tracking-[-0.02em] text-ink whitespace-pre-line ${reverse || plain(front).length > 60 ? 'text-[17px] sm:text-[19px] leading-[1.45] font-medium' : 'text-[28px] sm:text-[34px] leading-[1.15]'} ${plain(front).length > 60 ? 'self-stretch text-left' : ''}`}>
                 {plain(front)}
               </span>
               {!reverse && card.sub && <span className="font-mono text-[13px] text-ink-3">{card.sub}</span>}

@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => {
     process.env.npm_lifecycle_event === 'predeploy';
 
   return {
-    base: process.env.VITE_BASE || '/',
+    base: process.env.VITE_BASE || (isGhPages ? '/meds/' : '/'),
     plugins: [splitLearningDecks(__dirname), react(), tailwindcss()],
     define: {
       'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co'),

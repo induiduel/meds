@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { SourceText } from './ui/SourceText';
 import { PageHeader } from './ui/PageHeader';
 import { 
   BookMarked, 
@@ -1007,8 +1008,8 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                             </button>
                           </div>
 
-                          <div className="text-xs text-slate-800 whitespace-pre-wrap leading-relaxed font-sans bg-white p-3.5 rounded-lg border border-slate-100">
-                            {page.content}
+                          <div className="bg-white p-3.5 rounded-lg border border-slate-100">
+                            <SourceText text={String(page.content || '')} size="sm" />
                           </div>
 
                           {page.keywords && page.keywords.length > 0 && (

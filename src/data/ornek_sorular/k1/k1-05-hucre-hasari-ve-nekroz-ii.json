@@ -1,0 +1,773 @@
+{
+ "id": "k1-05-hucre-hasari-ve-nekroz-ii",
+ "sira": 5,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Hücre Hasarı ve Nekroz - II",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-09-15",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Nekrozun kazeöz, yağ ve fibrinoid kalıplarını özellikleri ve klinik bağlamıyla açıklamak",
+   "sorular": [
+    {
+     "id": "k1-05-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Akciğer tüberkülozunda enfeksiyon odaklarında görülen, makroskopik olarak yumuşak, kırılgan ve peynir benzeri görünümlü nekroz tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Koagülatif nekroz",
+      "B": "Kazeöz nekroz",
+      "C": "Yağ nekrozu",
+      "D": "Fibrinoid nekroz",
+      "E": "Gangrenöz nekroz"
+     },
+     "dogru": "B",
+     "aciklama": "Kazeöz nekroz başlıca Mycobacterium tuberculosis odaklarında görülür ve genellikle granülomatöz inflamasyonla birliktedir.",
+     "sik_aciklamalari": {
+      "A": "Koagülatif nekroz solid organ enfarktlarının tipik nekrozudur; peynirimsi değildir.",
+      "B": "Doğru. 'Kazeöz' peynir benzeri anlamındadır; çevresinde granülom bulunur.",
+      "C": "Yağ nekrozu pankreatit ve yağ dokusu travmasında görülür.",
+      "D": "Fibrinoid nekroz küçük damar duvarlarında görülür.",
+      "E": "Gangren ekstremitelerde iskemiye bağlı geniş koagülatif nekrozu anlatan klinik terimdir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Akut pankreatitli bir hastanın otopsisinde peripankreatik yağ dokusu ve mezenterde tebeşir beyazı odaklar görülmüştür.\n\nBu bulgunun oluşum mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İmmün komplekslerin damar duvarında birikmesi",
+      "B": "Mikobakterilere karşı granülom oluşumu",
+      "C": "Sızan lipazların trigliseritleri yıkması ve serbest yağ asitlerinin kalsiyumla sabunlaşması",
+      "D": "Lökosit enzimleriyle dokunun sıvılaşması",
+      "E": "Yapısal proteinlerin denatürasyonu ve proteolizin gecikmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Yağ nekrozunda asiner hücrelerden sızan lipazlar trigliseritleri yıkar; serbest yağ asitleri kalsiyumla birleşerek tebeşir beyazı sabunlaşma (saponifikasyon) alanları oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Bu fibrinoid nekrozun mekanizmasıdır.",
+      "B": "Bu kazeöz nekrozla birlikte görülen granülomatöz yanıttır.",
+      "C": "Doğru. Yağ asidi + kalsiyum birleşimi yağ nekrozunun ayırt edici özelliğidir.",
+      "D": "Bu likefaksiyon nekrozunun mekanizmasıdır.",
+      "E": "Bu koagülatif nekrozun mekanizmasıdır."
+     },
+     "bilgi": [
+      3,
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Fibrinoid nekroz ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Makroskopik olarak tebeşir beyazı sabunlaşma alanları şeklinde tanınır.",
+      "B": "Damar duvarında parlak pembe, amorf, camsı materyal birikir.",
+      "C": "İçeriğinde immün kompleksler ve fibrin gibi plazma proteinleri bulunur.",
+      "D": "Şiddetli hipertansiyon ve vaskülitlerle ilişkilidir.",
+      "E": "Özellikle küçük damar duvarlarında görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Fibrinoid nekroz ışık mikroskobunda tanınan bir damar duvarı nekrozudur; tebeşir beyazı sabunlaşma yağ nekrozuna aittir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış ifade (aranan cevap); bu yağ nekrozunun makroskopisidir.",
+      "B": "Doğru ifade; 'fibrin benzeri' görünüm adını buradan alır.",
+      "C": "Doğru ifade; antijen-antikor kompleksleri ve fibrin birikir.",
+      "D": "Doğru ifade; poliarteritis nodosa gibi vaskülitlerde görülür.",
+      "E": "Doğru ifade; özellikle küçük arter ve arteriyollerde görülür."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki nekroz tipi–mikroskopik bulgu eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kazeöz nekroz – amorf, granüler pembe alan ve çevresinde epitelioid histiyosit, dev hücre ve lenfositler",
+      "B": "Yağ nekrozu – çevresi bazofilik kalsiyum tuzlarıyla sınırlı gölgeli yağ hücreleri",
+      "C": "Fibrinoid nekroz – damar duvarında parlak pembe camsı materyal",
+      "D": "Kazeöz nekroz – doku mimarisinin ve hücre konturlarının günlerce korunması",
+      "E": "Poliarteritis nodosa – arter duvarında çevresel parlak pembe nekroz ve inflamasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Kazeöz nekrozda doku mimarisi ve hücre hatları kaybolur; konturların korunması koagülatif nekrozun özelliğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme; nekrozu çevreleyen bu yapıya granülom denir.",
+      "B": "Doğru eşleştirme; yağ nekrozunun tanımlayıcı bulgusudur.",
+      "C": "Doğru eşleştirme: fibrinoid nekroz – damar duvarında parlak pembe camsı materyal.",
+      "D": "Yanlış eşleştirme (aranan cevap); kazeöz nekrozda mimari silinir.",
+      "E": "Doğru eşleştirme; fibrinoid nekroz örneğidir."
+     },
+     "bilgi": [
+      2,
+      5,
+      7
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Hücre hasarında dolaşıma kaçan hücre içi enzimleri (serum biyobelirteçleri) sıralamak",
+   "sorular": [
+    {
+     "id": "k1-05-q05",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Nekroz sırasında hücre zarı bütünlüğünün bozulmasıyla dolaşıma kaçan ve miyokard nekrozunu gösteren serum belirteci aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "ALP",
+      "B": "Amilaz",
+      "C": "ALT",
+      "D": "CK-MB",
+      "E": "GGT"
+     },
+     "dogru": "D",
+     "aciklama": "Miyokard nekrozunda CK-MB, hepatosit hasarında ALT/AST, safra yolu hasarında ALP yükselir.",
+     "sik_aciklamalari": {
+      "A": "ALP safra yolu hasarında yükselir.",
+      "B": "Amilaz pankreas hasarı belirtecidir; miyokardı göstermez.",
+      "C": "ALT hepatosit hasarını gösterir.",
+      "D": "Doğru. CK-MB kreatin kinazın miyokard izoenzimidir.",
+      "E": "GGT bu derste miyokard belirteci olarak verilmez; hepatobiliyer bir enzimdir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Hücre hasarında dolaşıma kaçan enzim ile hasarın kaynağı eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "ALT/AST – hepatosit hasarı",
+      "B": "ALP – miyokard nekrozu",
+      "C": "CK-MB – safra yolu hasarı",
+      "D": "ALT – iskelet kası enfarktı",
+      "E": "ALP – beyin infarktı"
+     },
+     "dogru": "A",
+     "aciklama": "Hücre içi enzimler zar bütünlüğü bozulunca dolaşıma geçer: ALT/AST karaciğer, CK-MB miyokard, ALP safra yolu hasarını gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. ALT ve AST hepatosit hasarında yükselir.",
+      "B": "ALP safra yolu hasarında yükselir.",
+      "C": "CK-MB miyokard nekrozunda yükselir.",
+      "D": "ALT hepatosit hasarının belirtecidir.",
+      "E": "ALP beyin infarktının belirteci değildir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q07",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Akut miyokard enfarktüsü geçiren bir hastada serum CK-MB düzeyinin yükselmesinin hücresel temeli aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Apoptotik cisimciklerin makrofajlarca fagositozu",
+      "B": "Hücre zarı korunduğu için enzimin aktif sekresyonu",
+      "C": "Nekrotik miyositlerde zar bütünlüğünün bozulmasıyla hücre içi enzimin dolaşıma kaçması",
+      "D": "Kaspaz-3 aktivasyonuyla enzimin sentezinin artması",
+      "E": "Miyositlerin hiperplaziyle çoğalması"
+     },
+     "dogru": "C",
+     "aciklama": "Nekrozda zar bütünlüğü bozulur ve içerik sızar; bu nedenle hücre içi enzimler serumda ölçülebilir. Apoptozda zar korunduğundan içerik sızmaz.",
+     "sik_aciklamalari": {
+      "A": "Apoptozda içerik sızmadan fagosite edilir; enzim salınımı beklenmez.",
+      "B": "Enzim yükselmesi aktif sekresyon değil, zar hasarına bağlı sızıntıdır.",
+      "C": "Doğru. Serum biyobelirteçlerinin temeli zar hasarıdır.",
+      "D": "Kaspazlar proteinleri parçalar; enzim sentezini artırmaz.",
+      "E": "Miyositler hiperplazi göstermez ve bu enzim yükselmesini açıklamaz."
+     },
+     "bilgi": [
+      8,
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Apoptozun fizyolojik ve patolojik nedenlerini, morfolojisini ve biyokimyasal yollarını açıklamak",
+   "sorular": [
+    {
+     "id": "k1-05-q08",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi fizyolojik apoptoza örnektir?",
+     "secenekler": {
+      "A": "Miyokard enfarktında miyosit ölümü",
+      "B": "Embriyogenezde parmak aralarındaki fazlalık hücrelerin ortadan kalkması",
+      "C": "Akut pankreatitte yağ nekrozu",
+      "D": "Tüberkülozda kazeöz nekroz",
+      "E": "Beyin infarktında likefaksiyon"
+     },
+     "dogru": "B",
+     "aciklama": "Embriyogenezde fazlalık hücrelerin eliminasyonu, menstrüasyonda endometrium dökülmesi ve laktasyon sonrası meme involüsyonu fizyolojik apoptoz örnekleridir.",
+     "sik_aciklamalari": {
+      "A": "İskemik miyosit ölümü (koagülatif nekroz) patolojiktir.",
+      "B": "Doğru. Gelişimsel yapıların şekillenmesi apoptozla olur.",
+      "C": "Yağ nekrozu patolojik nekrozdur.",
+      "D": "Kazeöz nekroz patolojik nekrozdur.",
+      "E": "Likefaksiyon nekrozu patolojiktir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi anti-apoptotik etki gösterir?",
+     "secenekler": {
+      "A": "BCL-2 ve BCL-XL üretiminin artması",
+      "B": "BAX ve BAK aktivasyonu",
+      "C": "Sitokrom c'nin sitozole salınması",
+      "D": "Kaspaz-9 aktivasyonu",
+      "E": "BH3-only proteinlerin aktivasyonu"
+     },
+     "dogru": "A",
+     "aciklama": "BCL-2 ve BCL-XL mitokondri dış membran bütünlüğünü koruyarak sitokrom c sızmasını önler; anti-apoptotiktir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. BCL-2 ailesinin anti-apoptotik üyeleridir.",
+      "B": "BAX/BAK mitokondri geçirgenliğini artıran pro-apoptotik efektörlerdir.",
+      "C": "Sitokrom c salınması içsel yolun anahtar pro-apoptotik basamağıdır.",
+      "D": "Kaspaz-9 içsel yolun başlatıcı kaspazıdır.",
+      "E": "BH3-only proteinler stres sensörleridir; BAX/BAK'ı aktive edip BCL-2'yi baskılayarak apoptozu başlatır."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": [
+      "b465530de7ac"
+     ]
+    },
+    {
+     "id": "k1-05-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Apoptozun ölüm reseptörü (dışsal) yolu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Fas (CD95) ve tip I TNF reseptörü ligandlarıyla etkileşince adaptör proteinler üzerinden kaspaz-8 aktive olur.",
+      "B": "Başlatıcı kaspazı kaspaz-9'dur.",
+      "C": "Mitokondriden sitokrom c salınması ilk basamaktır.",
+      "D": "BCL-2 artışı bu yolu doğrudan başlatır.",
+      "E": "İnfazcı kaspazlara ulaşmadan sonlanır."
+     },
+     "dogru": "A",
+     "aciklama": "Dışsal yolda FasL (aktive T hücrelerinde) veya TNF-α reseptöre bağlanır, adaptör proteinler kaspaz-8'i, o da infazcı kaspazları (3, 6, 7) aktive eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Dışsal yolda FasL (aktive T hücrelerinde) veya TNF-α reseptöre bağlanır, adaptör proteinler kaspaz-8'i, o da infazcı kaspazları (3, 6, 7) aktive eder.",
+      "B": "Kaspaz-9 içsel (mitokondriyal) yolun başlatıcısıdır.",
+      "C": "Sitokrom c salınması içsel yolun basamağıdır.",
+      "D": "BCL-2 anti-apoptotiktir; apoptozu başlatmaz.",
+      "E": "Her iki yol da infazcı kaspaz kaskadında birleşir."
+     },
+     "bilgi": [
+      16,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q11",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Apoptotik hücrelerin morfolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hücre küçülür, sitoplazma yoğunlaşır.",
+      "B": "Kromatin çekirdek zarının kenarına toplanıp yoğunlaşır.",
+      "C": "Hücre şişer ve zar parçalanarak içerik dışarı sızar.",
+      "D": "Hücre parçalanarak apoptotik cisimcikler oluşur.",
+      "E": "Apoptotik cisimcikler makrofajlarca hızla fagosite edilir."
+     },
+     "dogru": "C",
+     "aciklama": "Apoptozda hücre küçülür ve zar genelde korunur; şişme ve içerik sızması nekrozun özelliğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; organeller sıkı paketlenir.",
+      "B": "Doğru ifade; kromatin kondansasyonu tipiktir.",
+      "C": "Yanlış ifade (aranan cevap); bu nekrozun morfolojisidir.",
+      "D": "Doğru ifade; hücresel ve nükleer parçalanma olur.",
+      "E": "Doğru ifade; bu nedenle inflamasyon gelişmez."
+     },
+     "bilgi": [
+      10,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q12",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Mitokondriyal (içsel) apoptoz yolunun basamakları aşağıdakilerin hangisinde doğru sırayla verilmiştir?",
+     "secenekler": {
+      "A": "Kaspaz-3 aktivasyonu → BAX/BAK aktivasyonu → sitokrom c salınması → BH3-only aktivasyonu",
+      "B": "Fas-FasL bağlanması → kaspaz-8 → sitokrom c salınması",
+      "C": "Sitokrom c salınması → BH3-only aktivasyonu → BCL-2 artışı",
+      "D": "DNA hasarı/büyüme faktörü kaybı → BH3-only proteinler → BAX/BAK ile mitokondri geçirgenliği → sitokrom c → kaspaz-9 → infazcı kaspazlar",
+      "E": "BCL-2 artışı → kaspaz-9 → sitokrom c salınması"
+     },
+     "dogru": "D",
+     "aciklama": "Stres BH3-only proteinlerce algılanır, BAX/BAK mitokondri dış zarını geçirgen yapar, sitokrom c sızar, kaspaz-9 aktive olur ve infazcı kaspazlar hücreyi parçalar.",
+     "sik_aciklamalari": {
+      "A": "Sıra terstir; infazcı kaspaz son basamaktır.",
+      "B": "Fas-FasL ve kaspaz-8 dışsal yola aittir.",
+      "C": "BH3-only aktivasyonu sitokrom c salınmasından önce gelir; BCL-2 artışı apoptozu engeller.",
+      "D": "Doğru sıralama. Stres BH3-only proteinlerce algılanır, BAX/BAK mitokondri dış zarını geçirgen yapar, sitokrom c sızar, kaspaz-9 aktive olur ve infazcı kaspazlar hücreyi parçalar.",
+      "E": "BCL-2 artışı apoptozu baskılar; sitokrom c kaspaz-9'dan önce salınır."
+     },
+     "bilgi": [
+      17,
+      18,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q13",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Apoptotik hücrelerin inflamasyon oluşturmadan ortadan kaldırılmasını sağlayan mekanizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hücre zarının yırtılıp lizozomal enzimlerin dokuya salınması",
+      "B": "Plazma zarında fosfatidilserinin dış tabakaya geçmesi ('beni ye' sinyali) ve makrofajlarca hızlı fagositoz",
+      "C": "Nötrofillerin bölgeye yoğun göçü ve püy oluşumu",
+      "D": "Kalsiyum tuzlarının çökmesiyle distrofik kalsifikasyon",
+      "E": "IL-1 salınımıyla inflamozom aktivasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "Fosfatidilserin dış yüzeye geçer, salınan çekici faktörler makrofajları çağırır; hücre içeriği sızmadan fagosite edildiği için inflamasyon olmaz.",
+     "sik_aciklamalari": {
+      "A": "Zar yırtılması nekrozun özelliğidir ve inflamasyon başlatır.",
+      "B": "Doğru. Fosfatidilserin dış yüzeye geçer, salınan çekici faktörler makrofajları çağırır; hücre içeriği sızmadan fagosite edildiği için inflamasyon olmaz.",
+      "C": "Nötrofil göçü ve püy nekroz/akut inflamasyonun bulgusudur.",
+      "D": "Distrofik kalsifikasyon nekrotik dokuda gelişir.",
+      "E": "İnflamozom-IL-1 piroptozun özelliğidir ve inflamasyon yapar."
+     },
+     "bilgi": [
+      14,
+      15,
+      23
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "b465530de7ac",
+     "soru": "Hangisi anti-apoptotik etki gösterir?",
+     "secenekler": {
+      "A": "BH3 proteinlerin aktivasyonu",
+      "B": "Bax-Bak proteinlerinin aktivasyonu",
+      "C": "Sitokrom c sızması",
+      "D": "Bcl-2/ Bcl-xL üretimi",
+      "E": "Kaspazların aktivasyonu"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Nekroz ile apoptozu karşılaştırmak",
+   "sorular": [
+    {
+     "id": "k1-05-q14",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki özelliklerden hangisi nekroza değil apoptoza aittir?",
+     "secenekler": {
+      "A": "Hücrenin şişmesi",
+      "B": "Zar bütünlüğünün bozulması",
+      "C": "Çevre dokuda belirgin inflamasyon",
+      "D": "Enerji (ATP) gerektiren, düzenlenmiş süreç olması",
+      "E": "Geniş hücre gruplarını etkilemesi"
+     },
+     "dogru": "D",
+     "aciklama": "Apoptoz ATP gerektiren, programlı bir ölümdür; nekroz enerji bağımlı değildir ve kontrolsüzdür.",
+     "sik_aciklamalari": {
+      "A": "Hücre şişmesi nekrozda görülür; apoptozda hücre küçülür.",
+      "B": "Zar bütünlüğünün bozulması nekrozun özelliğidir.",
+      "C": "Belirgin inflamasyon nekrozda görülür.",
+      "D": "Doğru. Apoptoz enerji bağımlı ve düzenlenmiştir.",
+      "E": "Nekroz geniş alanları, apoptoz tek hücreleri veya küçük grupları etkiler."
+     },
+     "bilgi": [
+      9,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q15",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Nekroz ve apoptozun karşılaştırılması ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nekrozda piknoz, karyoreksis ve karyolizis görülür.",
+      "B": "Apoptozda çekirdek nükleozom boyutunda parçalara ayrılır.",
+      "C": "Nekroz her zaman patolojiktir.",
+      "D": "Apoptoz çoğunlukla fizyolojiktir ancak DNA ve protein hasarı sonrası patolojik olabilir.",
+      "E": "Aynı dokuda nekroz ve apoptoz asla birlikte bulunmaz."
+     },
+     "dogru": "E",
+     "aciklama": "İskemi, oksidatif stres ve radyasyon gibi etkenler hem nekroza hem apoptoza yol açabilir; aynı dokuda iki yol birlikte görülebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: nekrozda piknoz, karyoreksis ve karyolizis görülür.",
+      "B": "Doğru ifade; endonükleazlar DNA'yı nükleozomlar arasından keser.",
+      "C": "Doğru ifade: nekroz her zaman patolojiktir.",
+      "D": "Doğru ifade: apoptoz çoğunlukla fizyolojiktir ancak DNA ve protein hasarı sonrası patolojik olabilir.",
+      "E": "Yanlış ifade (aranan cevap). İskemi, oksidatif stres ve radyasyon gibi etkenler hem nekroza hem apoptoza yol açabilir; aynı dokuda iki yol birlikte görülebilir."
+     },
+     "bilgi": [
+      9,
+      21,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q16",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Kolonoskopi hazırlık rejimi uygulanan bir hastanın kolon biyopsisinde kript epitelinde tek tek dağılmış, küçülmüş, yoğun eozinofilik sitoplazmalı ve parçalanmış koyu çekirdekli hücreler görülüyor; çevrede inflamasyon yok.\n\nBu bulgu için en olası açıklama aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Koagülatif nekroz",
+      "B": "Likefaksiyon nekrozu",
+      "C": "Apoptoz",
+      "D": "Kazeöz nekroz",
+      "E": "Hidropik değişim"
+     },
+     "dogru": "C",
+     "aciklama": "Tek hücrelerin küçülmesi, kromatin yoğunlaşması ve parçalanması ile inflamasyon yokluğu apoptozu gösterir; hazırlık rejimleri kript epitelinde apoptozu sıklıkla tetikler.",
+     "sik_aciklamalari": {
+      "A": "Koagülatif nekroz geniş hücre gruplarını etkiler ve inflamasyonla birliktedir.",
+      "B": "Likefaksiyonda doku sıvılaşır, püy ve inflamasyon olur.",
+      "C": "Doğru. Tek tek dağılmış, küçülmüş hücreler ve inflamasyon yokluğu apoptozun özelliğidir.",
+      "D": "Kazeöz nekroz granülomla birliktedir ve tüberkülozda görülür.",
+      "E": "Hidropik değişimde hücre şişer ve berrak vakuoller oluşur; parçalanma olmaz."
+     },
+     "bilgi": [
+      14,
+      21
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Diğer hücre ölümü biçimlerini ve otofajinin hücre ölümüyle ilişkisini özetlemek",
+   "sorular": [
+    {
+     "id": "k1-05-q17",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "İnflamozom aktivasyonu ile gerçekleşen, IL-1 salınımı, ateş ve inflamasyona yol açan hücre ölümü biçimi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ferroptoz",
+      "B": "Nekroptoz",
+      "C": "Apoptoz",
+      "D": "Otofaji",
+      "E": "Piroptoz"
+     },
+     "dogru": "E",
+     "aciklama": "Piroptoz inflamozom aracılı, IL-1 salınımıyla belirgin inflamasyon oluşturan düzenli hücre ölümüdür.",
+     "sik_aciklamalari": {
+      "A": "Ferroptoz demir bağımlı lipid peroksidasyonu ile karakterizedir.",
+      "B": "Nekroptoz TNF gibi sinyallerle tetiklenen nekroz-apoptoz hibrididir.",
+      "C": "Apoptoz inflamasyon oluşturmaz.",
+      "D": "Otofaji temelde hayatta kalma mekanizmasıdır.",
+      "E": "Doğru. 'Piro' ateşi anlatır; IL-1 aracılı ateş ve inflamasyon görülür."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q18",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Hücre ölümü biçimleri ve tanımlayıcı özellikleri eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ferroptoz – demir bağımlı lipid peroksidasyonu",
+      "B": "Nekroptoz – inflamozom aktivasyonu ve IL-1 salınımı",
+      "C": "Piroptoz – demir bağımlı ölüm",
+      "D": "Apoptoz – zarın parçalanması ve belirgin inflamasyon",
+      "E": "Ferroptoz – Fas-FasL etkileşimi"
+     },
+     "dogru": "A",
+     "aciklama": "Ferroptoz demir bağımlı lipid peroksidasyonudur; nekroptoz TNF ile tetiklenen hibrit ölümdür; piroptoz inflamozom-IL-1 aracılıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Nörodejeneratif hastalık ve kanser araştırmalarında gündemdedir.",
+      "B": "İnflamozom-IL-1 piroptozun özelliğidir.",
+      "C": "Demir bağımlılık ferroptozun özelliğidir.",
+      "D": "Apoptozda zar korunur ve inflamasyon olmaz.",
+      "E": "Fas-FasL apoptozun dışsal yoluna aittir."
+     },
+     "bilgi": [
+      22,
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q19",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Otofaji ve hücre ölümü ilişkisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Otofaji temelde bir hayatta kalma mekanizmasıdır.",
+      "B": "Besin yoksunluğunda otofaji genleri (Atg) aktive olur.",
+      "C": "Organeller otofagozoma alınır ve lizozomla birleşerek sindirilir.",
+      "D": "Aşırı ve kontrolsüz otofaji apoptoz ve nekrozla birleşen hücre ölümüne yol açabilir.",
+      "E": "Otofaji hiçbir hastalıkta artmış olarak görülmez."
+     },
+     "dogru": "E",
+     "aciklama": "Artmış otofaji iskemik hasar, miyopatiler ve bazı nörodejeneratif hastalıklarda görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; kıtlıkta enerji sağlar.",
+      "B": "Doğru ifade; Atg genleri süreci başlatır.",
+      "C": "Doğru ifade; otofagolizozomda sindirim ürünleri besin olarak kullanılır.",
+      "D": "Doğru ifade; hücresel yapılar aşırı tüketilir.",
+      "E": "Yanlış ifade (aranan cevap). Artmış otofaji iskemik hasar, miyopatiler ve bazı nörodejeneratif hastalıklarda görülür."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Hücre hasarının biyokimyasal mekanizmalarını (DNA hasarı/p53, ER stresi, kalsiyum, ROS, iskemi) açıklamak",
+   "sorular": [
+    {
+     "id": "k1-05-q20",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Hafif DNA hasarında hücre döngüsünü durdurup onarıma izin veren, şiddetli hasarda ise apoptozu başlatan ve 'genom bekçisi' olarak adlandırılan protein aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "BCL-2",
+      "B": "p53",
+      "C": "Kaspaz-8",
+      "D": "Sitokrom c",
+      "E": "IRE1"
+     },
+     "dogru": "B",
+     "aciklama": "p53 hafif hasarda döngüyü durdurup onarım sağlar, şiddetli hasarda mitokondriyal yol üzerinden apoptozu indükler; kaybında genomik instabilite ve kanser riski artar.",
+     "sik_aciklamalari": {
+      "A": "BCL-2 anti-apoptotik bir mitokondri proteinidir.",
+      "B": "Doğru. p53 hafif hasarda döngüyü durdurup onarım sağlar, şiddetli hasarda mitokondriyal yol üzerinden apoptozu indükler; kaybında genomik instabilite ve kanser riski artar.",
+      "C": "Kaspaz-8 dışsal yolun başlatıcı kaspazıdır.",
+      "D": "Sitokrom c mitokondriden salınan pro-apoptotik bir moleküldür.",
+      "E": "IRE1 ER stresinde katlanmamış protein yanıtının sensörüdür."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q21",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "İskemiye maruz kalan bir hücrede aşağıdaki değişikliklerden hangisinin görülmesi beklenir?",
+     "secenekler": {
+      "A": "Hücre içi glikojen depolarının artması",
+      "B": "Hücre içi pH'ın yükselmesi",
+      "C": "Sitozolik kalsiyum düzeyinin artması",
+      "D": "Hücre içi potasyum konsantrasyonunun artması",
+      "E": "Na⁺/K⁺ ATPaz pompa aktivitesinin artması"
+     },
+     "dogru": "C",
+     "aciklama": "İskemide ATP azalır; hücre içine Ca²⁺ girişi ve depolardan salınımı artar, proteaz-fosfolipaz-endonükleazlar aktive olur.",
+     "sik_aciklamalari": {
+      "A": "Anaerobik glikoliz artar ve glikojen tükenir.",
+      "B": "Laktik asit birikimiyle pH düşer.",
+      "C": "Doğru. Sitozolik kalsiyum artışı hasarı derinleştirir.",
+      "D": "Pompa yetmezliğinde potasyum hücreden kaybedilir.",
+      "E": "ATP eksikliğinde pompa aktivitesi azalır."
+     },
+     "bilgi": [
+      29,
+      33
+     ],
+     "benzer_cikmis": [
+      "1406c91bf995"
+     ]
+    },
+    {
+     "id": "k1-05-q22",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi hücrede serbest oksijen radikali (ROS) yükünü artırır?",
+     "secenekler": {
+      "A": "Süperoksit dismutaz",
+      "B": "Katalaz",
+      "C": "Glutatyon peroksidaz",
+      "D": "β-karoten",
+      "E": "Reperfüzyon"
+     },
+     "dogru": "E",
+     "aciklama": "SOD, katalaz, glutatyon peroksidaz ve β-karoten ROS'u temizleyen savunma sistemleridir; iskemik dokuya kan akımının dönmesi (reperfüzyon) ise ROS üretimini artırır.",
+     "sik_aciklamalari": {
+      "A": "SOD süperoksiti temizleyen enzimatik savunmadır.",
+      "B": "Katalaz hidrojen peroksiti yıkan enzimatik savunmadır.",
+      "C": "Glutatyon peroksidaz enzimatik antioksidandır.",
+      "D": "β-karoten non-enzimatik antioksidandır.",
+      "E": "Doğru. Reperfüzyonda gelen oksijen ve inflamatuar hücreler ROS üretimini artırır."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": [
+      "d5a45edb62b8"
+     ]
+    },
+    {
+     "id": "k1-05-q24",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Endoplazmik retikulumda yanlış katlanmış protein birikimine verilen yanıt ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İlk yanıt doğrudan nekrozdur.",
+      "B": "IRE1 gibi sensörler katlanmamış protein yanıtını başlatır; önce şaperonlar artar ve protein sentezi yavaşlar, yük aşılırsa mitokondriyal apoptoz yolu aktive olur.",
+      "C": "Şaperon protein sentezi azalır, protein sentezi hızlanır.",
+      "D": "ER stresi yalnızca dışsal (Fas) yol üzerinden apoptoz yapar.",
+      "E": "Yanlış katlanmış proteinlerin hücre hasarıyla ilişkisi yoktur."
+     },
+     "dogru": "B",
+     "aciklama": "Katlanmamış protein yanıtı önce adaptiftir; kapasite aşılırsa proapoptotik sinyaller artar ve mitokondriyal yol devreye girer (terminal yanıt).",
+     "sik_aciklamalari": {
+      "A": "İlk yanıt adaptiftir (şaperon artışı, sentezin yavaşlaması).",
+      "B": "Doğru. Katlanmamış protein yanıtı önce adaptiftir; kapasite aşılırsa proapoptotik sinyaller artar ve mitokondriyal yol devreye girer (terminal yanıt).",
+      "C": "Tersine şaperonlar artar ve protein sentezi yavaşlar.",
+      "D": "ER stresi mitokondriyal (içsel) yolu aktive eder.",
+      "E": "Yanlış katlanmış protein birikimi apoptozun patolojik nedenlerindendir."
+     },
+     "bilgi": [
+      28,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q23",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Reaktif oksijen türleri (ROS) ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Dış yörüngelerinde eşleşmemiş elektron taşırlar.",
+      "B": "Hidroksil radikali Fenton reaksiyonu ile oluşur ve en güçlü hasar verici radikaldir.",
+      "C": "Lipid peroksidasyonu, protein oksidasyonu ve DNA hasarı yaparlar.",
+      "D": "Üretim temizlemeyi aştığında oksidatif stres gelişir.",
+      "E": "Başlıca kaynakları yalnızca dış ortamdaki radyasyondur; mitokondri ROS üretmez."
+     },
+     "dogru": "E",
+     "aciklama": "Mitokondriyal oksidatif fosforilasyon başlıca ROS kaynaklarından biridir; inflamatuar hücrelerin solunum patlaması, radyasyon, toksinler ve ilaçlar da kaynaktır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade; serbest radikal tanımıdır.",
+      "B": "Doğru ifade: hidroksil radikali Fenton reaksiyonu ile oluşur ve en güçlü hasar verici radikaldir.",
+      "C": "Doğru ifade; nekroz, apoptoz, yaşlanma ve kansere katkıda bulunur.",
+      "D": "Doğru ifade: üretim temizlemeyi aştığında oksidatif stres gelişir.",
+      "E": "Yanlış ifade (aranan cevap). Mitokondriyal oksidatif fosforilasyon başlıca ROS kaynaklarından biridir; inflamatuar hücrelerin solunum patlaması, radyasyon, toksinler ve ilaçlar da kaynaktır."
+     },
+     "bilgi": [
+      30,
+      31,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-05-q25",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Hücre içi kalsiyum artışının hücre hasarını derinleştirme mekanizmaları ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kalsiyum yalnızca kas kasılmasını artırır; hasarla ilişkisi yoktur.",
+      "B": "Kalsiyum artışı Na⁺/K⁺ ATPaz pompasını aktive ederek hücreyi korur.",
+      "C": "Kalsiyum artışı ROS üretimini tamamen durdurur.",
+      "D": "Sitozolik kalsiyum artışı proteaz, fosfolipaz ve endonükleazları aktive ederek zar, sitoskeleton ve DNA hasarına yol açar.",
+      "E": "Normalde sitoplazmik kalsiyum hücre dışından daha yüksektir."
+     },
+     "dogru": "D",
+     "aciklama": "Normalde sitoplazmik Ca²⁺ çok düşüktür; hasarda artan kalsiyum yıkıcı enzimleri aktive eder.",
+     "sik_aciklamalari": {
+      "A": "Kalsiyum hasarda önemli bir aracıdır.",
+      "B": "Kalsiyum artışı hücreyi korumaz; hasarı artırır.",
+      "C": "Kalsiyum artışı ROS üretimini durdurmaz.",
+      "D": "Doğru. Normalde sitoplazmik Ca²⁺ çok düşüktür; hasarda artan kalsiyum yıkıcı enzimleri aktive eder.",
+      "E": "Sitoplazmik kalsiyum normalde çok düşüktür."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "1406c91bf995",
+     "soru": "Hücrede iskemi sonucu hangisi gerçekleşir?",
+     "secenekler": {
+      "A": "Glikojen artışı",
+      "B": "pH artışı",
+      "C": "Sitozoloik kalsiyum artışı",
+      "D": "Hücre içi potasyum artışı",
+      "E": "Sodyum-potasyum pompasının aktivitesinde artış"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d5a45edb62b8",
+     "soru": "Hücre Hasarı, Hücre Ölümü Ve Adaptasyonlar Hangisi serbest oksijen radikallerini arttırır?",
+     "secenekler": {
+      "A": "Süperoksit dismutaz",
+      "B": "Glutatyon peroksidaz",
+      "C": "Reperfüzyon",
+      "D": "Beta-karoten",
+      "E": "Seruloplazmin"
+     },
+     "cevap": "A"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 25,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:07"
+}

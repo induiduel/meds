@@ -30,13 +30,14 @@ export const RAIL: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'study', label: 'Çalış', icon: ListChecks },
   { id: 'leaderboard', label: 'Sıralama', icon: Trophy },
   { id: 'summaries', label: 'Özetler', icon: BookOpen },
+  { id: 'datacore', label: 'Veri', icon: Archive },
 ];
 
 /** Menü kategorileri: kenar menüsünde başlıklı gruplar, telefonda "Daha" sayfasında aynı sıra. */
 export const NAV_GROUPS: { label: string | null; ids: AppTab[] }[] = [
   { label: null, ids: ['quick_add', 'ai_chat'] },
   { label: 'Sorular', ids: ['past_exams', 'questions', 'study'] },
-  { label: 'Öğrenme', ids: ['learn', 'summaries', 'flashcards', 'glossary'] },
+  { label: 'Öğrenme', ids: ['learn', 'summaries', 'datacore', 'flashcards', 'glossary'] },
   { label: 'Topluluk', ids: ['leaderboard'] },
 ];
 const BY_ID = Object.fromEntries(RAIL.map((r) => [r.id, r])) as Record<string, (typeof RAIL)[number]>;

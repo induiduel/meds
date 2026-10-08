@@ -1,0 +1,848 @@
+{
+ "id": "k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler",
+ "sira": 31,
+ "kurul": 1,
+ "ders": "Tıbbi Genetik",
+ "konu": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "tarih": "2026-09-28",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Ürogenital sistem tümörlerinin (böbrek, mesane, prostat, testis, endometrium, vulva, over) epidemiyolojisini, risk faktörlerini ve genetik temelini özetler.",
+   "sorular": [
+    {
+     "id": "k1-31-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Kadınlarda en sık görülen üriner sistem tümörü hangisidir?",
+     "secenekler": {
+      "A": "Renal hücreli karsinom",
+      "B": "Mesane kanseri",
+      "C": "Wilms tümörü",
+      "D": "Üretra karsinomu",
+      "E": "Üreter karsinomu"
+     },
+     "dogru": "B",
+     "aciklama": "Ürogenital tümörler erkeklerde en sık tümörlerdir (prostat, mesane); kadınlarda en sık üriner sistem tümörü mesane kanseridir.",
+     "sik_aciklamalari": {
+      "A": "RCC mesane kanserinden daha seyrektir.",
+      "B": "Doğru: kadınlarda en sık üriner tümördür.",
+      "C": "Wilms tümörü çocukluk çağı tümörüdür.",
+      "D": "Üretra karsinomu nadirdir.",
+      "E": "Üreter karsinomu nadirdir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Renal hücreli karsinom ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sigara ve obezite risk faktörü değildir",
+      "B": "RCC'lerin çoğu papiller tiptedir",
+      "C": "Böbrek tümörlerinin ~%85'i RCC'dir ve bunların ~%70'i berrak hücreli histolojidedir",
+      "D": "Tanı anında metastaz hiç görülmez",
+      "E": "En sık metastaz yeri beyindir"
+     },
+     "dogru": "C",
+     "aciklama": "RCC böbrek tümörlerinin ~%85'idir, çoğu berrak hücrelidir; sigara, obezite ve hipertansiyon risk faktörüdür; en sık metastaz akciğerdir.",
+     "sik_aciklamalari": {
+      "A": "Sigara, obezite ve HT risk faktörleridir.",
+      "B": "En sık tip berrak hücrelidir.",
+      "C": "Doğru: oranlar doğru verilmiştir.",
+      "D": "Tanıda olguların ~%35'i metastatiktir.",
+      "E": "En sık metastaz yeri akciğerdir (%50–60)."
+     },
+     "bilgi": [
+      2,
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Kanserin böbreği dolaylı olarak etkileme yolları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Amiloidoz",
+      "B": "Elektrolit bozuklukları",
+      "C": "Renal ven trombozu",
+      "D": "Böbreğe doğrudan tümör infiltrasyonu",
+      "E": "Glomerülopati"
+     },
+     "dogru": "D",
+     "aciklama": "Doğrudan etkiler metastaz, infiltrasyon, iskemi ve obstrüksiyondur; elektrolit bozukluğu, ABY, DİK, renal ven trombozu, amiloidoz, glomerülopati ve nefrokalsinoz dolaylı etkilerdir.",
+     "sik_aciklamalari": {
+      "A": "Dolaylı etkidir: amiloidoz.",
+      "B": "Dolaylı etkidir: elektrolit bozuklukları.",
+      "C": "Dolaylı etkidir: renal ven trombozu.",
+      "D": "Doğru: infiltrasyon doğrudan etkidir.",
+      "E": "Dolaylı etkidir: glomerülopati."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Herediter renal hücreli karsinom sendromlarını (VHL, BAP1-TPDS, BHD, HLRCC, HPRC, TSC, PGL/PCC) gen, lokus ve klinik özellikleriyle açıklar ve genetik değerlendirme kriterlerini bilir.",
+   "sorular": [
+    {
+     "id": "k1-31-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Von Hippel-Lindau hastalığından sorumlu gen ve lokusu hangisidir?",
+     "secenekler": {
+      "A": "BAP1 – 3p21",
+      "B": "VHL – 3p25",
+      "C": "FLCN – 17p11",
+      "D": "FH – 1q43",
+      "E": "MET – 7q31"
+     },
+     "dogru": "B",
+     "aciklama": "VHL geni 3p25'te tümör baskılayıcı bir gendir; otozomal dominant kalıtılır.",
+     "sik_aciklamalari": {
+      "A": "BAP1 BAP1-TPDS genidir.",
+      "B": "Doğru: VHL hastalığının genidir.",
+      "C": "FLCN Birt-Hogg-Dubé genidir.",
+      "D": "FH HLRCC genidir: FH – 1q43.",
+      "E": "MET HPRC genidir: MET – 7q31."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [
+      "6baf4a9edad5"
+     ]
+    },
+    {
+     "id": "k1-31-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kıl folikülü hamartomları, akciğer kistleri/spontan pnömotoraks ve kromofob/onkositik böbrek tümörleri ile karakterize sendrom hangisidir?",
+     "secenekler": {
+      "A": "Tüberoz skleroz kompleksi",
+      "B": "Von Hippel-Lindau hastalığı",
+      "C": "Birt-Hogg-Dubé sendromu",
+      "D": "HLRCC",
+      "E": "HPRC"
+     },
+     "dogru": "C",
+     "aciklama": "BHDS 17p11'deki FLCN (folikülin) mutasyonuyla otozomal dominant kalıtılır ve mTOR yolağını etkiler.",
+     "sik_aciklamalari": {
+      "A": "TSC'de anjiyomiyolipom ve hamartomlar görülür.",
+      "B": "VHL'de berrak hücreli RCC ve hemanjiyoblastom görülür.",
+      "C": "Doğru: BHDS'nin klasik triadıdır.",
+      "D": "HLRCC'de leiomyomatozis ve tip 2 papiller RCC görülür.",
+      "E": "HPRC'de papiller tip 1 RCC görülür."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi herediter RCC açısından genetik değerlendirme kriterlerinden biri değildir?",
+     "secenekler": {
+      "A": "Bilinen patojenik varyant taşıyan akraba",
+      "B": "Bilateral veya multifokal tümör",
+      "C": "RCC'li yakın akraba",
+      "D": "75 yaşında tek taraflı, tek odaklı berrak hücreli RCC ve negatif aile öyküsü",
+      "E": "Sendroma özgü histoloji"
+     },
+     "dogru": "D",
+     "aciklama": "Herediter RCC tüm RCC'lerin ~%3'üdür; bilateral/multifokal tümör, aile öyküsü, bilinen varyant ve özgün histoloji değerlendirme kriterleridir.",
+     "sik_aciklamalari": {
+      "A": "Bilinen varyant kriterdir.",
+      "B": "Bilateral/multifokal tümör kriterdir.",
+      "C": "Aile öyküsü kriterdir.",
+      "D": "Doğru: ileri yaşta tek odaklı, öyküsüz tümör kriter değildir.",
+      "E": "Özgün histoloji kriterdir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Herediter RCC sendromları ile gen–klinik eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "HLRCC – FH geni, leiomyomatozis ve agresif tip 2 papiller RCC",
+      "B": "HPRC – MET geni, bilateral multifokal papiller tümörler",
+      "C": "TSC – TSC1/TSC2, renal anjiyomiyolipomlar",
+      "D": "BAP1-TPDS – uveal melanom, mezotelyoma, RCC",
+      "E": "VHL – FLCN geni, akciğer kistleri ve spontan pnömotoraks"
+     },
+     "dogru": "E",
+     "aciklama": "FLCN geni, akciğer kistleri ve pnömotoraks Birt-Hogg-Dubé sendromuna aittir; VHL'de hemanjiyoblastom ve berrak hücreli RCC görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: HLRCC – FH geni, leiomyomatozis ve agresif tip 2 papiller RCC.",
+      "B": "Doğru eşleştirme: HPRC – MET geni, bilateral multifokal papiller tümörler.",
+      "C": "Doğru eşleştirme: TSC – TSC1/TSC2, renal anjiyomiyolipomlar.",
+      "D": "Doğru eşleştirme: BAP1-TPDS – uveal melanom, mezotelyoma, RCC.",
+      "E": "Yanlış eşleştirme (aranan cevap): bu BHDS'ye aittir."
+     },
+     "bilgi": [
+      7,
+      9,
+      10,
+      11,
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "6baf4a9edad5",
+     "soru": "Tıbbi Patoloji Tıbbi Patoloji Böbrek tümörleri-1 Retinasında ve serebellumunda hemanjioblastom tanısı almış kişide böbreğinde de kitle tespit ediliyor. Görülmesi beklenen gen mutasyonu hangisidir? Sıra No Von Hippel Lindau MET ailesel geni Deny-Drash WAGR Beckwith-Wiedemann",
+     "secenekler": {
+      "A": "Von Hippel Lindau",
+      "B": "MET ailesel geni",
+      "C": "Deny-Drash",
+      "D": "WAGR",
+      "E": "Beckwith-Wiedemann"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "İleri evre berrak hücreli RCC'de hedefe yönelik tedavi kombinasyonlarını ve VHL ilişkili RCC'de belzutifanın yerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-31-q08",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "VHL hastalığı ile ilişkili RCC olgularında onaylanmış ilaç hangisidir?",
+     "secenekler": {
+      "A": "Olaparib",
+      "B": "Erdafitinib",
+      "C": "Belzutifan",
+      "D": "Trastuzumab",
+      "E": "Sirolimus"
+     },
+     "dogru": "C",
+     "aciklama": "VHL ilişkili RCC olgularında belzutifan onaylanmıştır.",
+     "sik_aciklamalari": {
+      "A": "Olaparib PARP inhibitörüdür.",
+      "B": "Erdafitinib FGFR değişikliği olan mesane kanserinde kullanılır.",
+      "C": "Doğru: VHL ilişkili RCC'de kullanılır.",
+      "D": "Trastuzumab HER2 hedefli antikordur.",
+      "E": "Sirolimus TSC'de kullanılan mTOR inhibitörüdür."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "İleri evre berrak hücreli RCC'de birinci basamakta kullanılan kombinasyonlar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Lenvatinib + pembrolizumab",
+      "B": "Aksitinib + pembrolizumab",
+      "C": "Kabozantinib + nivolumab",
+      "D": "Olaparib + erdafitinib",
+      "E": "İpilimumab + nivolumab"
+     },
+     "dogru": "D",
+     "aciklama": "İleri evre ccRCC'de VEGFR inhibitörü + anti-PD-1 veya anti-CTLA-4 + anti-PD-1 kombinasyonları onaylıdır.",
+     "sik_aciklamalari": {
+      "A": "Onaylı kombinasyondur.",
+      "B": "Onaylı kombinasyondur.",
+      "C": "Onaylı kombinasyondur.",
+      "D": "Doğru: bu kombinasyon ccRCC tedavisi değildir.",
+      "E": "Onaylı kombinasyondur."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q10",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "İleri evre ccRCC tedavisinde kullanılan ilaç–hedef eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Aksitinib – PD-1",
+      "B": "Kabozantinib – VEGFR/MET/AXL; nivolumab – PD-1",
+      "C": "İpilimumab – VEGFR",
+      "D": "Pembrolizumab – CTLA-4",
+      "E": "Lenvatinib – PARP"
+     },
+     "dogru": "B",
+     "aciklama": "Kabozantinib VEGFR/MET/AXL inhibitörü, nivolumab anti-PD-1'dir; ipilimumab anti-CTLA-4'tür.",
+     "sik_aciklamalari": {
+      "A": "Aksitinib VEGFR inhibitörüdür.",
+      "B": "Doğru: hedefler doğru eşleştirilmiştir.",
+      "C": "İpilimumab CTLA-4'ü hedefler.",
+      "D": "Pembrolizumab PD-1'i hedefler.",
+      "E": "Lenvatinib tirozin kinaz (VEGFR) inhibitörüdür."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Mesane kanserinin moleküler değişikliklerini (papiller tümörde FGFR3, invaziv tümörde p53/RB), prognostik belirteçlerini ve hedefe yönelik tedavilerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-31-q11",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Yüzeysel papiller mesane kanseri gelişiminde en karakteristik gen değişikliği hangisidir?",
+     "secenekler": {
+      "A": "STK11 mutasyonu",
+      "B": "BRCA2 mutasyonu",
+      "C": "VHL kaybı",
+      "D": "FGFR3 mutasyonu",
+      "E": "FLCN mutasyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Papiller tümörlerde FGFR3 (ve Ras) mutasyonları, invaziv tümörlerde p53/pRB yolak değişiklikleri vardır.",
+     "sik_aciklamalari": {
+      "A": "STK11 Peutz-Jeghers genidir.",
+      "B": "BRCA2 prostat/meme/over ile ilişkilidir.",
+      "C": "VHL berrak hücreli RCC ile ilişkilidir.",
+      "D": "Doğru: FGFR3/Ras yüzeysel papiller tümörlerin %82'sinde görülür.",
+      "E": "FLCN BHD sendromu genidir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q12",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "FGFR3/FGFR2 değişikliği saptanan ileri evre ürotelyal karsinomda kullanılan hedefe yönelik ilaç hangisidir?",
+     "secenekler": {
+      "A": "Belzutifan",
+      "B": "Erdafitinib",
+      "C": "Olaparib",
+      "D": "Everolimus",
+      "E": "Tamoksifen"
+     },
+     "dogru": "B",
+     "aciklama": "Erdafitinib pan-FGFR inhibitörüdür; immünoterapide avelumab, pembrolizumab, atezolizumab ve nivolumab onaylıdır.",
+     "sik_aciklamalari": {
+      "A": "Belzutifan VHL ilişkili RCC'de kullanılır.",
+      "B": "Doğru: FGFR değişikliğinde kullanılır.",
+      "C": "Olaparib HRR mutasyonlu tümörlerde kullanılır.",
+      "D": "Everolimus mTOR inhibitörüdür.",
+      "E": "Tamoksifen hormon reseptör modülatörüdür."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q13",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Mesane kanserinde prognostik belirteçler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "FGFR3 düşük dereceli non-invaziv tümörlerde iyi prognostik belirteçtir",
+      "B": "ERBB2, RAS ve PIK3CA erken nüks belirteçleridir",
+      "C": "Ki67 yüksekliği kötü prognostiktir",
+      "D": "TP53 mutasyonu kötü prognostiktir",
+      "E": "TP53 mutasyonu düşük dereceli papiller tümörlerde iyi prognozu gösterir"
+     },
+     "dogru": "E",
+     "aciklama": "TP53 mutasyonu invaziv yolun ve kötü prognozun göstergesidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: FGFR3 düşük dereceli non-invaziv tümörlerde iyi prognostik belirteçtir.",
+      "B": "Doğru ifade: ERBB2, RAS ve PIK3CA erken nüks belirteçleridir.",
+      "C": "Doğru ifade: ki67 yüksekliği kötü prognostiktir.",
+      "D": "Doğru ifade: TP53 mutasyonu kötü prognostiktir.",
+      "E": "Yanlış ifade (aranan cevap): TP53 kötü prognostiktir."
+     },
+     "bilgi": [
+      17,
+      20
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Prostat kanserinin genetik yapısını, germ hattı ve somatik tümör testi önerilerini ve hedefe yönelik tedavisini (PARP inhibitörleri, CDK12) açıklar.",
+   "sorular": [
+    {
+     "id": "k1-31-q14",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Prostat kanserinde homolog rekombinasyon genlerinde en sık germ hattı mutasyonu bulunan gen hangisidir?",
+     "secenekler": {
+      "A": "FGFR3",
+      "B": "VHL",
+      "C": "BRCA2",
+      "D": "STK11",
+      "E": "MET"
+     },
+     "dogru": "C",
+     "aciklama": "Prostat kanserinde HR genlerinde en sık BRCA2, ardından CHEK2, ATM, BRCA1, PALB2 mutasyonları bulunur.",
+     "sik_aciklamalari": {
+      "A": "FGFR3 mesane kanseriyle ilişkilidir.",
+      "B": "VHL RCC ile ilişkilidir.",
+      "C": "Doğru: en sık germ hattı HR gen mutasyonudur.",
+      "D": "STK11 Peutz-Jeghers genidir.",
+      "E": "MET papiller RCC ile ilişkilidir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q15",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Prostat kanserinde germ hattı genetik test önerilen durumlar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Aşkenazi Yahudi kökeni",
+      "B": "Pozitif aile öyküsü",
+      "C": "Metastatik hastalık",
+      "D": "Düşük riskli, lokalize, aile öyküsü olmayan hastalık",
+      "E": "Kişisel meme kanseri öyküsü"
+     },
+     "dogru": "D",
+     "aciklama": "Germ hattı testi aile öyküsü, yüksek/çok yüksek riskli veya metastatik hastalık, Aşkenazi kökeni ve meme kanseri öyküsünde önerilir.",
+     "sik_aciklamalari": {
+      "A": "Test önerilir: aşkenazi Yahudi kökeni.",
+      "B": "Test önerilir: pozitif aile öyküsü.",
+      "C": "Test önerilir: metastatik hastalık.",
+      "D": "Doğru: düşük riskli öyküsüz hastalık kriter değildir.",
+      "E": "Test önerilir: kişisel meme kanseri öyküsü."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q16",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Prostat kanserinde hedefe yönelik tedavi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "PARP inhibitörleri yalnızca FGFR3 mutasyonunda kullanılır",
+      "B": "CDK12 mutasyonu iyi prognozu gösterir",
+      "C": "HRR gen mutasyonlu olgularda PARP inhibitörleri kullanılır; CDK12 mutasyonlu tümörler agresiftir ve PARP inhibitörlerine kötü yanıt verir",
+      "D": "MSI-H saptanırsa genetik danışmanlık gerekmez",
+      "E": "Metastatik vakaların çoğu kastrasyona duyarlıdır"
+     },
+     "dogru": "C",
+     "aciklama": "Olaparib ve rukaparib HRR mutasyonlu prostat kanserinde onaylıdır; CDK12 mutasyonu agresif seyirle ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "PARP inhibitörleri HRR mutasyonlarında kullanılır.",
+      "B": "CDK12 mutasyonu kötü prognozludur.",
+      "C": "Doğru: hedefe yönelik tedavi ilkeleri doğrudur.",
+      "D": "MSI-H/dMMR'de Lynch açısından danışmanlık önerilir.",
+      "E": "Metastatik vakaların %89'u kastrasyona dirençlidir."
+     },
+     "bilgi": [
+      22,
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Testis tümörlerinin ana alt tiplerini, risk faktörlerini ve serum tümör belirteçlerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-31-q17",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Testis tümörlerinde kullanılan serum tümör belirteçleri hangileridir?",
+     "secenekler": {
+      "A": "PSA ve CA-125",
+      "B": "AFP, beta-hCG ve LDH",
+      "C": "CEA ve CA 19-9",
+      "D": "Kalsitonin ve tiroglobulin",
+      "E": "İnhibin ve AMH"
+     },
+     "dogru": "B",
+     "aciklama": "AFP, beta-hCG ve LDH prognoz ve tedavi sonuçlarının değerlendirilmesinde kritiktir.",
+     "sik_aciklamalari": {
+      "A": "PSA prostat, CA-125 over belirtecidir.",
+      "B": "Doğru: testis tümör belirteçleridir.",
+      "C": "CEA ve CA 19-9 GİS tümör belirteçleridir.",
+      "D": "Tiroid belirteçleridir.",
+      "E": "Seks kord tümörlerinde kullanılabilir; germ hücreli tümörlerin standart belirteçleri değildir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q18",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi testis tümörleri için risk faktörü değildir?",
+     "secenekler": {
+      "A": "Beyaz ırk",
+      "B": "İnmemiş testis",
+      "C": "Ailede testis kanseri",
+      "D": "Klinefelter sendromu",
+      "E": "Vazektomi"
+     },
+     "dogru": "E",
+     "aciklama": "Risk faktörleri inmemiş/kötü gelişmiş testis, aile öyküsü, infertilite, Klinefelter ve beyaz ırktır.",
+     "sik_aciklamalari": {
+      "A": "Risk faktörüdür: beyaz ırk.",
+      "B": "Önemli risk faktörüdür.",
+      "C": "Risk faktörüdür: ailede testis kanseri.",
+      "D": "Risk faktörüdür: klinefelter sendromu.",
+      "E": "Doğru: vazektomi bu derste risk faktörü olarak sayılmaz."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q19",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Testis germ hücreli tümörlerinin alt tipleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Seminomlar non-seminomlardan daha hızlı yayılır",
+      "B": "Non-seminomlar daha hızlı gelişip yayılır; seminomlar radyoterapiye daha duyarlıdır",
+      "C": "Testis tümörleri erkek tümörlerinin %20'sini oluşturur",
+      "D": "Germ hücreli tümörler testis malign tümörlerinin %20'sidir",
+      "E": "Görülme yaşı en sık 60–70'tir"
+     },
+     "dogru": "B",
+     "aciklama": "Testis tümörleri nadirdir (<%1); malign tümörlerin %95'i germ hücrelidir; en sık 20–35 yaşta görülür ve 5 yıllık sağkalım %95'tir.",
+     "sik_aciklamalari": {
+      "A": "Non-seminomlar daha hızlı yayılır.",
+      "B": "Doğru: iki alt tipin davranışı doğru verilmiştir.",
+      "C": "Erkek tümörlerinin %1'inden azdır.",
+      "D": "Malign testis tümörlerinin %95'i germ hücrelidir.",
+      "E": "En sık 20–35 yaştadır."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Endometrium kanserinin risk faktörlerini, Lynch sendromu ilişkisini ve moleküler sınıflamasını (POLE, MSI-H, kopya sayısı düşük/yüksek) açıklar.",
+   "sorular": [
+    {
+     "id": "k1-31-q20",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Endometrium kanserinin moleküler sınıflamasında en iyi prognozlu grup hangisidir?",
+     "secenekler": {
+      "A": "Kopya sayısı düşük",
+      "B": "Kopya sayısı yüksek (anormal p53)",
+      "C": "MSI-H",
+      "D": "POLE mutasyonlu",
+      "E": "Seröz alt tip"
+     },
+     "dogru": "D",
+     "aciklama": "POLE mutasyonlu tümörler iyi, MSI-H orta prognozludur; kopya sayısı yüksek (anormal p53) en agresif gruptur.",
+     "sik_aciklamalari": {
+      "A": "Ara prognoz grubudur.",
+      "B": "En agresif gruptur: kopya sayısı yüksek (anormal p53).",
+      "C": "Orta prognozludur: MSI-H.",
+      "D": "Doğru: en iyi prognozlu gruptur.",
+      "E": "Seröz tümörler genellikle kopya sayısı yüksek gruptadır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q21",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Lynch sendromunda endometrium kanseri riski ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "70 yaşına kadar risk ~%39'dur; en yüksek riski MSH6, en düşük riski PMS2 taşır",
+      "B": "Risk genel popülasyonla aynıdır",
+      "C": "En yüksek riski PMS2 taşır",
+      "D": "Medyan tanı yaşı 75'tir",
+      "E": "Profilaktik cerrahi önerilmez"
+     },
+     "dogru": "A",
+     "aciklama": "Lynch'te endometrium kanseri riski ~%39, medyan yaş 47,5'tir; 40 yaşından sonra histerektomi ve BSO uygulanabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: risk dağılımı doğru verilmiştir.",
+      "B": "Risk belirgin artmıştır.",
+      "C": "PMS2 en düşük riski taşır.",
+      "D": "Medyan yaş 47,5'tir.",
+      "E": "40 yaş sonrası profilaktik cerrahi uygulanabilir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q22",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Endometrium kanserinde MMR immünohistokimyasında MLH1 kaybı saptanıyor.\n\nBir sonraki uygun adım hangisidir?",
+     "secenekler": {
+      "A": "MLH1 promotör metilasyonunun değerlendirilmesi ile sporadik-Lynch ayrımı",
+      "B": "Doğrudan Lynch sendromu tanısı koymak",
+      "C": "Moleküler değerlendirmeyi sonlandırmak",
+      "D": "Yalnızca p53 boyası ile karar vermek",
+      "E": "BRCA1 dizilemesi"
+     },
+     "dogru": "A",
+     "aciklama": "MLH1 kaybı epigenetik promotör metilasyonuna bağlı sporadik olabilir; metilasyon analizi Lynch ayrımı için gereklidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: algoritmadaki basamaktır.",
+      "B": "Metilasyon dışlanmadan Lynch tanısı konmaz.",
+      "C": "Değerlendirme tamamlanmalıdır.",
+      "D": "p53 ayrı bir moleküler gruptur.",
+      "E": "BRCA1 bu algoritmanın parçası değildir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 8,
+   "metin": "Vulva ve over kanserinin genetik yönlerini ve Peutz-Jeghers sendromunda servikal adenoma malignum riskini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-31-q23",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Peutz-Jeghers sendromundan sorumlu gen hangisidir?",
+     "secenekler": {
+      "A": "STK11",
+      "B": "BRCA1",
+      "C": "TP53",
+      "D": "CDH1",
+      "E": "PTEN"
+     },
+     "dogru": "A",
+     "aciklama": "Peutz-Jeghers STK11 mutasyonuyla otozomal dominant kalıtılır; GİS hamartomatöz polipler ve mukokutanöz lezyonlarla seyreder.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Peutz-Jeghers genidir.",
+      "B": "BRCA1 HBOC genidir: BRCA1.",
+      "C": "TP53 Li-Fraumeni genidir.",
+      "D": "CDH1 kalıtsal diffüz gastrik kanser genidir.",
+      "E": "PTEN hamartom tümör sendromu genidir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q24",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Peutz-Jeghers sendromlu kadında serviks için özel olarak artmış risk taşıyan tümör hangisidir?",
+     "secenekler": {
+      "A": "Adenoma malignum",
+      "B": "Skuamöz hücreli karsinom",
+      "C": "Embriyonel rabdomiyosarkom",
+      "D": "Koryokarsinom",
+      "E": "Leiomyosarkom"
+     },
+     "dogru": "A",
+     "aciklama": "Peutz-Jeghers'te serviks adenoma malignum yaşam boyu riski ~%10'dur; overyan seks kord tümörü, meme ve ince bağırsak kanserine de yatkınlık vardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: herediter servikal kanser formudur.",
+      "B": "SCC esas olarak HPV ile ilişkilidir.",
+      "C": "Rabdomiyosarkom küçük çocuklarda vajinada görülür.",
+      "D": "Koryokarsinom trofoblastik tümördür.",
+      "E": "Leiomyosarkom uterus düz kas tümörüdür."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q25",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Vulva ve over kanserinin genetik ve klinik yönleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Vulva kanserinin %90'ı skuamöz hücreli karsinomdur",
+      "B": "50 yaş altında HPV, üstünde liken skleroz/skuamöz hiperplazi risk faktörüdür",
+      "C": "Over kanserinde aile öyküsü en önemli risk faktörüdür",
+      "D": "BRCA pozitif over kanserlerinde öncü lezyon fallop tüplerindedir",
+      "E": "Lynch sendromunda over kanseri, sporadik olgulara göre daha geç yaşta başlar"
+     },
+     "dogru": "E",
+     "aciklama": "Lynch'te over kanseri hem sporadik hem HBOC olgularından daha erken başlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade: vulva kanserinin %90'ı skuamöz hücreli karsinomdur.",
+      "B": "Doğru ifade: 50 yaş altında HPV, üstünde liken skleroz/skuamöz hiperplazi risk faktörüdür.",
+      "C": "Doğru ifade: bir birinci derece akrabada risk 3 kat artar.",
+      "D": "Doğru ifade: BRCA pozitif over kanserlerinde öncü lezyon fallop tüplerindedir.",
+      "E": "Yanlış ifade (aranan cevap): Lynch'te başlangıç daha erkendir."
+     },
+     "bilgi": [
+      33,
+      34,
+      35
+     ],
+     "benzer_cikmis": []
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 9,
+   "metin": "Ailesel meme-over kanseri sendromlarını ve PARP inhibitörlerinin sentetik letalite mantığını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-31-q26",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "PARP inhibitörlerinin BRCA1/2 eksik tümörlerde etkili olmasını açıklayan kavram hangisidir?",
+     "secenekler": {
+      "A": "Sentetik letalite",
+      "B": "Genomik imprinting",
+      "C": "Haploinsufficiency",
+      "D": "Antisipasyon",
+      "E": "Penetrans"
+     },
+     "dogru": "A",
+     "aciklama": "PARP ile BRCA1/2 arasında sentetik letal ilişki vardır; BRCA eksik hücrede PARP inhibisyonu tümör hücresini öldürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: iki tamir yolunun birlikte kaybı hücre ölümüne yol açar.",
+      "B": "İmprinting ebeveyne özgü ekspresyondur.",
+      "C": "Haploinsufficiency tek kopyanın yetersizliğidir.",
+      "D": "Antisipasyon kuşaklar boyunca erken başlangıçtır.",
+      "E": "Penetrans fenotip ortaya çıkma oranıdır."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q27",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Ailesel meme-over kanseri sendromları ile gen eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Li-Fraumeni – TP53",
+      "B": "PTEN hamartom tümör sendromu – PTEN",
+      "C": "Kalıtsal diffüz gastrik kanser – CDH1",
+      "D": "Peutz-Jeghers – STK11",
+      "E": "HBOC – MLH1"
+     },
+     "dogru": "E",
+     "aciklama": "HBOC BRCA1/BRCA2 ile ilişkilidir; MLH1 Lynch sendromu genidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme: li-Fraumeni – TP53.",
+      "B": "Doğru eşleştirme: PTEN hamartom tümör sendromu – PTEN.",
+      "C": "Doğru eşleştirme: invaziv lobüler meme kanseri riski artar.",
+      "D": "Doğru eşleştirme: peutz-Jeghers – STK11.",
+      "E": "Yanlış eşleştirme (aranan cevap): HBOC BRCA1/2 ile ilişkilidir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-31-q28",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Erkek meme kanseri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Meme kanserlerinin ~%1'idir, ~%10'u herediterdir ve en önemli risk faktörü aile öyküsüdür",
+      "B": "Meme kanserlerinin yarısını oluşturur",
+      "C": "Herediter olgu yoktur",
+      "D": "Aile öyküsü riski etkilemez",
+      "E": "Premenopozal kadın meme kanserine benzer"
+     },
+     "dogru": "A",
+     "aciklama": "Erkek meme kanseri postmenopozal kadın meme kanserine benzer; birinci derece akrabada kanser riski 2–5 kat artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: epidemiyoloji ve risk faktörü doğrudur.",
+      "B": "Meme kanserlerinin ~%1'idir.",
+      "C": "~%10'u herediterdir.",
+      "D": "Aile öyküsü en önemli risk faktörüdür.",
+      "E": "Postmenopozal kadın meme kanserine benzer."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": [
+      "84a2418b9192"
+     ]
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "84a2418b9192",
+     "soru": "Tıbbi Patoloji - Tıbbi Patoloji - Meme kanseri-3 - Erkek meme kanserinde kadın meme kanserine göre aşağıdakilerden hangisi daha sık beklenmez?",
+     "secenekler": {
+      "A": "Tanı anında lenf nodu metastazı",
+      "B": "Deri invazyonu",
+      "C": "Göğüs duvarı invazyonu",
+      "D": "Uzak metastaz",
+      "E": "Cerb-B2 (Her2) ekspresyonu"
+     },
+     "cevap": "E"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 28,
+ "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
+ "guncelleme": "2026-10-08T20:01:52"
+}

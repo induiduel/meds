@@ -42,7 +42,9 @@ const LectureNotesView = React.lazy(() => import('./components/LectureNotesView'
 const PastExamsView = React.lazy(() => import('./components/PastExamsView').then(m => ({ default: m.PastExamsView })));
 const QuestionMatrix = React.lazy(() => import('./components/QuestionMatrix').then(m => ({ default: m.QuestionMatrix })));
 const LocalAiChatView = React.lazy(() => import('./components/LocalAiChatView').then(m => ({ default: m.LocalAiChatView })));
+const DataCoreView = React.lazy(() => import('./components/core/DataCoreView'));
 const TestCikmisView = React.lazy(() => import('./components/TestCikmisView').then(m => ({ default: m.TestCikmisView })));
+const TesterOzetView = React.lazy(() => import('./components/TesterOzetView').then(m => ({ default: m.TesterOzetView })));
 const PracticeQuestionsView = React.lazy(() => import('./components/PracticeQuestionsView'));
 
 // Lazy-loaded Modals (Only downloaded when opened)
@@ -75,6 +77,7 @@ const ViewFallback = () => <SectionLoader />;
 import { GlossaryProvider } from './components/learn/MedicalGlossaryPopover';
 import { systemHealthMonitor } from './services/systemHealthMonitor';
 import { ApiService } from './services/api';
+import type { QuestionFocus } from './services/questionFocus';
 import { multiDbManager } from './services/multiDbManager';
 import { 
   initAuth, 
@@ -207,6 +210,8 @@ export default function App() {
     initialRoute.route === 'learn' ? initialRoute.param : undefined
   );
   const [selectedLearnSlideNumber, setSelectedLearnSlideNumber] = useState<number | undefined>(undefined);
+  // Çıkmış sorudan Öğren'e gelindiyse soru ifadeleri ve doğru şık slaytta işaretlenir
+  const [learnQuestionFocus, setLearnQuestionFocus] = useState<QuestionFocus | null>(null);
   const [selectedGlossaryTermId, setSelectedGlossaryTermId] = useState<string | undefined>(() => {
     if (initialRoute.route === 'glossary' && initialRoute.param) return initialRoute.param;
     if (typeof window !== 'undefined') {
@@ -1188,9 +1193,14 @@ export default function App() {
             <InteractiveDeckView
               initialDeckId={selectedLearnDeckId}
               initialSlideNumber={selectedLearnSlideNumber}
+              questionFocus={learnQuestionFocus}
+              onClearQuestionFocus={() => setLearnQuestionFocus(null)}
               onDeckChange={(id) => {
                 setSelectedLearnDeckId(id ?? undefined);
-                if (id === null) setSelectedLearnSlideNumber(undefined);
+                if (id === null) {
+                  setSelectedLearnSlideNumber(undefined);
+                  setLearnQuestionFocus(null);
+                }
                 writeLocation('learn', id ?? undefined);
               }}
               onOpenPdfModal={(target) => {
@@ -1420,9 +1430,10 @@ export default function App() {
                 setActiveTab('notes');
               }}
               onUpdateQuestionReference={handleUpdateQuestionReference}
-              onNavigateToLearn={(deckId, slideNumber) => {
+              onNavigateToLearn={(deckId, slideNumber, focus) => {
                 setSelectedLearnDeckId(deckId);
                 setSelectedLearnSlideNumber(slideNumber);
+                setLearnQuestionFocus(focus || null);
                 setActiveTab('learn');
               }}
             />
@@ -1444,6 +1455,13 @@ export default function App() {
               isAdmin={isAdmin}
               onBackToPastExams={() => setActiveTab('past_exams')}
             />
+          </Suspense>
+        )}
+
+        {/* TAB: /tester/ozet — 2026-2027 Ders Notları Test Laboratuvarı */}
+        {activeTab === 'tester_ozet' && (
+          <Suspense fallback={<ViewFallback />}>
+            <TesterOzetView />
           </Suspense>
         )}
 
@@ -1518,6 +1536,13 @@ export default function App() {
         {activeTab === 'transcripts' && (
           <Suspense fallback={<ViewFallback />}>
             <TranscriptionsView />
+          </Suspense>
+        )}
+
+        {/* /veri — MedSoru Core v2 Veri Merkezi (salt okunur) */}
+        {activeTab === 'datacore' && (
+          <Suspense fallback={<ViewFallback />}>
+            <DataCoreView />
           </Suspense>
         )}
 

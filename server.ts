@@ -124,8 +124,8 @@ const CLOUD_SUPABASE_KEY_SRC = process.env.CLOUD_SUPABASE_SECRET_KEY
   ? 'CLOUD_SUPABASE_SECRET_KEY'
   : (process.env.CLOUD_SUPABASE_KEY ? 'CLOUD_SUPABASE_KEY' : (process.env.SUPABASE_SECRET_KEY ? 'SUPABASE_SECRET_KEY' : 'none'));
 
-export const localSupabase = createClient(LOCAL_SUPABASE_URL, LOCAL_SUPABASE_KEY);
-export const cloudSupabase = createClient(CLOUD_SUPABASE_URL, CLOUD_SUPABASE_KEY);
+export const localSupabase = createClient(LOCAL_SUPABASE_URL, LOCAL_SUPABASE_KEY || 'anon-key-unset');
+export const cloudSupabase = createClient(CLOUD_SUPABASE_URL, CLOUD_SUPABASE_KEY || 'anon-key-unset');
 
 // Primary client: localSupabase if Docker is alive, fallback to cloudSupabase
 export let supabase = localSupabase;
@@ -414,6 +414,23 @@ const PUBLIC_API_DIRECTORY = {
     { path: '/v1/transcriptions', source: '/api/transcriptions', description: 'Amfi ses kaydı transkriptleri' },
     { path: '/v1/past-question-reviews', source: '/api/past-question-reviews', description: 'Faz 14 çıkmış soru redaksiyon inceleme katmanı ve önerileri' },
     { path: '/v1/deepseek/contributions', source: '/api/deepseek/contributions', description: 'İçe aktarılmış katkı ve metadata verileri' },
+    { path: '/v1/v2/status', source: '/api/v2/status', description: 'MedSoru Core v2 çekirdek durumu (bağımsız hat)' },
+    { path: '/v1/v2/katalog', source: '/api/v2/katalog', description: 'MedSoru Core v2 veri kümeleri kataloğu' },
+    { path: '/v1/v2/audit', source: '/api/v2/audit', description: 'MedSoru Core v2 veri denetim raporu (summary=1 ile özet)' },
+    { path: '/v1/v2/questions', source: '/api/v2/questions', description: 'Core v2 soruları (kurul/ders/konu/cevap filtreleri, sayfalı)' },
+    { path: '/v1/v2/stats', source: '/api/v2/stats', description: 'Core v2 veri istatistikleri' },
+    { path: '/v1/v2/graph', source: '/api/v2/graph', description: 'Core v2 kavram grafı (ders/konu/kazanım/terim)' },
+    { path: '/v1/v2/summaries', source: '/api/v2/summaries', description: 'Core v2 düzeltilmiş ders özetleri' },
+    { path: '/v1/v2/notes', source: '/api/v2/notes', description: 'Core v2 düzeltilmiş ders notu parçaları' },
+    { path: '/v1/v2/cluster', source: '/api/v2/cluster', description: 'Core v2 toplu tamamlama (birleşik soru adayları)' },
+    { path: '/v1/v2/search', source: '/api/v2/search', description: 'Core v2 ders notu araması (anlamsal + BM25, CPU)' },
+    { path: '/v1/v2/similar', source: '/api/v2/similar', description: 'Core v2 benzer soru bulma (toplu tamamlama)' },
+    { path: '/v1/v2/merge', source: '/api/v2/merge', description: 'Core v2 parça birleştirme (POST; toplu tamamlama)' },
+    { path: '/v1/v2/semantic/classify', source: '/api/v2/semantic/classify', description: 'Semantik veri modeli: ders/konu/kazanım + niyet + varlıklar' },
+    { path: '/v1/v2/semantic/search', source: '/api/v2/semantic/search', description: 'Semantik veri modeli: ders notu parça araması' },
+    { path: '/v1/v2/revize', source: '/api/v2/revize', description: 'Revize v2: özet + örnekler' },
+    { path: '/v1/v2/revize/questions', source: '/api/v2/revize/questions', description: 'Revize v2: revize edilmiş sorular' },
+    { path: '/v1/v2/revize/changes', source: '/api/v2/revize/changes', description: 'Revize v2: eski→yeni değişiklik kayıtları' },
   ],
   examples: [
     'GET /v1/questions',
@@ -432,7 +449,7 @@ app.get(['/api/documentation', '/v1/documentation'], (_req, res) => {
 });
 
 const PUBLIC_V1_PREFIXES = [
-  '/committees', '/questions', '/sorular', '/past-exams', '/cikmis', '/past-question-reviews', '/data-catalog', '/learn-links',
+  '/v2', '/committees', '/questions', '/sorular', '/past-exams', '/cikmis', '/past-question-reviews', '/data-catalog', '/learn-links',
   '/lecture-notes', '/summaries', '/search', '/insights', '/slides', '/notebooklm', '/audit',
   '/lecture-pdf', '/gemini-v3', '/rag', '/ai/interactions', '/deepseek', '/transcriptions',
 ];
@@ -502,7 +519,8 @@ function loadUsers(): ServerUser[] {
   if (fs.existsSync(USERS_FILE)) {
     try {
       const data = JSON.parse(fs.readFileSync(USERS_FILE, 'utf-8'));
-      if (Array.isArray(data) && data.length > 0) return data;
+      // Boş dizi de geçerli: kullanıcı silinmişse demo veri geri tohumlanmaz.
+      if (Array.isArray(data)) return data;
     } catch (e) {
       console.error('Error reading users file:', e);
     }
@@ -877,6 +895,348 @@ app.get('/api/data-catalog', (_req, res) => {
   } catch (err: any) {
     res.status(500).json({ error: 'Veri kataloğu okunamadı: ' + err.message });
   }
+});
+
+// ---- MedSoru Core v2 (bağımsız denetim/ingest hattı) — salt okunur uçlar ----
+// Çıktı yalnız MEDS_CORE_DIR (varsayılan ../meds_database_core) altındadır; eski veriye dokunulmaz.
+function medsCoreDir(): string {
+  if (process.env.MEDS_CORE_DIR) return process.env.MEDS_CORE_DIR;
+  const dbDir = process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database');
+  return path.resolve(dbDir, '..', 'meds_database_core');
+}
+function medsCoreAuditFiles(): string[] {
+  try {
+    const dir = path.join(medsCoreDir(), 'reports');
+    if (!fs.existsSync(dir)) return [];
+    return fs.readdirSync(dir).filter((f) => f.startsWith('audit_') && f.endsWith('.json')).sort();
+  } catch {
+    return [];
+  }
+}
+app.get(['/api/v2/status', '/api/v2/status/'], (_req, res) => {
+  const reports = medsCoreAuditFiles();
+  res.json({
+    coreDir: medsCoreDir(),
+    var: fs.existsSync(medsCoreDir()),
+    raporSayisi: reports.length,
+    sonRapor: reports.length ? reports[reports.length - 1] : null,
+  });
+});
+app.get(['/api/v2/katalog', '/api/v2/katalog/'], (_req, res) => {
+  try {
+    const f = path.join(medsCoreDir(), 'KATALOG.json');
+    if (!fs.existsSync(f)) return res.json({ veri_kumeleri: [] });
+    const cat = JSON.parse(fs.readFileSync(f, 'utf-8'));
+    cat.veri_kumeleri = (cat.veri_kumeleri || []).map(({ yol, ...rest }: any) => rest);
+    res.json(cat);
+  } catch (err: any) {
+    res.status(500).json({ error: 'v2 katalog okunamadı: ' + err.message });
+  }
+});
+app.get(['/api/v2/audit', '/api/v2/audit/'], (req, res) => {
+  try {
+    const reports = medsCoreAuditFiles();
+    if (!reports.length) return res.status(404).json({ error: 'v2 denetim raporu bulunamadı.' });
+    const latest = path.join(medsCoreDir(), 'reports', reports[reports.length - 1]);
+    const report = JSON.parse(fs.readFileSync(latest, 'utf-8'));
+    if (String(req.query.summary || '') === '1') {
+      return res.json({ zaman: report.zaman, toplam: report.toplam, inceleme_kuyrugu: report.inceleme_kuyrugu, kaynaklar: report.kaynaklar });
+    }
+    res.json(report);
+  } catch (err: any) {
+    res.status(500).json({ error: 'v2 denetim raporu okunamadı: ' + err.message });
+  }
+});
+
+// v2 soru ucu: CORE sorularını filtreli, sayfalı ve hızlı biçimde sunar (salt okunur).
+let _v2qCache: { at: number; data: any[] } | null = null;
+function medsCoreQuestions(): any[] {
+  try {
+    const dir = path.join(medsCoreDir(), 'questions');
+    if (!fs.existsSync(dir)) return [];
+    const files = fs.readdirSync(dir).filter((f) => f.endsWith('.jsonl'));
+    let mtime = 0;
+    for (const f of files) mtime = Math.max(mtime, fs.statSync(path.join(dir, f)).mtimeMs);
+    if (_v2qCache && _v2qCache.at === mtime) return _v2qCache.data;
+    const rows: any[] = [];
+    for (const f of files) {
+      for (const line of fs.readFileSync(path.join(dir, f), 'utf-8').split('\n')) {
+        const t = line.trim();
+        if (t) { try { rows.push(JSON.parse(t)); } catch { /* bozuk satır atlanır */ } }
+      }
+    }
+    _v2qCache = { at: mtime, data: rows };
+    return rows;
+  } catch { return []; }
+}
+app.get(['/api/v2/questions', '/api/v2/questions/'], (req, res) => {
+  try {
+    const q = req.query as Record<string, string>;
+    let rows = medsCoreQuestions();
+    if (q.committeeId || q.kurul) rows = rows.filter((r) => String(r.kurul ?? '') === String(q.committeeId ?? q.kurul));
+    if (q.discipline || q.ders) { const d = (q.discipline || q.ders || '').toLowerCase(); rows = rows.filter((r) => String(r.ders || '').toLowerCase().includes(d)); }
+    if (q.topic || q.konu) { const k = (q.topic || q.konu || '').toLowerCase(); rows = rows.filter((r) => String(r.konu || '').toLowerCase().includes(k)); }
+    if (q.status) rows = rows.filter((r) => r.status === q.status);
+    if (q.answer === '1') rows = rows.filter((r) => !!r.answer);
+    if (q.unanswered === '1') rows = rows.filter((r) => !r.answer);
+    if (q.acik_uclu === '1') rows = rows.filter((r) => r.acik_uclu);
+    if (q.q) { const s = q.q.toLowerCase(); rows = rows.filter((r) => String(r.stem || '').toLowerCase().includes(s)); }
+    const total = rows.length;
+    const answered = rows.filter((r) => !!r.answer).length;
+    const withCurriculum = rows.filter((r) => r.konu || r.kazanim).length;
+    const limit = Math.min(Number(q.limit) || 50, 500);
+    const offset = Number(q.offset) || 0;
+    res.json({ total, answered, withCurriculum, limit, offset, questions: rows.slice(offset, offset + limit) });
+  } catch (err: any) {
+    res.status(500).json({ error: 'v2 sorular okunamadı: ' + err.message });
+  }
+});
+
+// v2 ek veri uçları: notlar/özetler/graf/küme/istatistik (salt okunur, hızlı).
+function medsCoreJson(rel: string, fallback: any = null): any {
+  try {
+    const f = path.join(medsCoreDir(), rel);
+    if (!fs.existsSync(f)) return fallback;
+    return JSON.parse(fs.readFileSync(f, 'utf-8'));
+  } catch { return fallback; }
+}
+function medsCoreCount(rel: string, ext: string): number {
+  try {
+    const d = path.join(medsCoreDir(), rel);
+    if (!fs.existsSync(d)) return 0;
+    return fs.readdirSync(d).filter((f) => f.endsWith(ext)).length;
+  } catch { return 0; }
+}
+function loadV2Jsonl(rel: string, limit = 500): any[] {
+  try {
+    const f = path.join(medsCoreDir(), rel);
+    if (!fs.existsSync(f)) return [];
+    const out: any[] = [];
+    for (const line of fs.readFileSync(f, 'utf-8').split('\n')) {
+      const t = line.trim();
+      if (!t) continue;
+      try { out.push(JSON.parse(t)); } catch { /* atla */ }
+      if (out.length >= limit) break;
+    }
+    return out;
+  } catch { return []; }
+}
+app.get(['/api/v2/stats', '/api/v2/stats/'], (_req, res) => {
+  const rows = medsCoreQuestions();
+  res.json({
+    sorular: rows.length,
+    cevapli: rows.filter((r) => !!r.answer).length,
+    acik_uclu: rows.filter((r) => r.acik_uclu).length,
+    konulu: rows.filter((r) => r.konu).length,
+    kazanimli: rows.filter((r) => r.kazanim).length,
+    kaynak_bagli: rows.filter((r) => (r.kaynak_baglari || []).length).length,
+    notlar_dosya: medsCoreCount('notes', '.jsonl'),
+    ozet_dosya: medsCoreCount('summaries', '.json'),
+    parca_dosya: medsCoreCount('chunks', '.jsonl'),
+    kaynak_dosya: medsCoreCount('sources', '.json'),
+    vektor: medsCoreJson('vectors/e5_manifest.json', {}),
+  });
+});
+app.get(['/api/v2/graph', '/api/v2/graph/'], (_req, res) => {
+  const g = medsCoreJson('derived/kavram_grafi.json', { dugumler: [], kenarlar: [] });
+  res.json({ dugum: (g.dugumler || []).length, kenar: (g.kenarlar || []).length, ...g });
+});
+app.get(['/api/v2/summaries', '/api/v2/summaries/'], (_req, res) => {
+  try {
+    const dir = path.join(medsCoreDir(), 'summaries');
+    if (!fs.existsSync(dir)) return res.json({ dosyalar: [] });
+    const dosyalar = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => {
+      const arr = medsCoreJson(`summaries/${f}`, []);
+      return { dosya: f, adet: Array.isArray(arr) ? arr.length : 0 };
+    });
+    res.json({ dosyalar });
+  } catch (err: any) { res.status(500).json({ error: err.message }); }
+});
+app.get(['/api/v2/summaries/:file', '/api/v2/summaries/:file/'], (req, res) => {
+  const file = path.basename(String(req.params.file));
+  const data = medsCoreJson(`summaries/${file}`, null);
+  if (data === null) return res.status(404).json({ error: 'özet bulunamadı' });
+  res.json({ dosya: file, ozetler: data });
+});
+app.get(['/api/v2/notes', '/api/v2/notes/'], (_req, res) => {
+  try {
+    const dir = path.join(medsCoreDir(), 'notes');
+    if (!fs.existsSync(dir)) return res.json({ adet: 0, dosyalar: [] });
+    const dosyalar = fs.readdirSync(dir).filter((f) => f.endsWith('.jsonl')).slice(0, 2000);
+    res.json({ adet: dosyalar.length, dosyalar });
+  } catch (err: any) { res.status(500).json({ error: err.message }); }
+});
+app.get(['/api/v2/notes/:sourceId'], (req, res) => {
+  const sid = path.basename(String(req.params.sourceId)).replace(/\.jsonl$/, '');
+  const rows = loadV2Jsonl(`notes/${sid}.jsonl`, Number((req.query as any).limit) || 500);
+  if (!rows.length) return res.status(404).json({ error: 'not bulunamadı' });
+  res.json({ sourceId: sid, adet: rows.length, parcalar: rows });
+});
+app.get(['/api/v2/cluster', '/api/v2/cluster/'], (req, res) => {
+  const rows = loadV2Jsonl('derived/birlesik_sorular.jsonl', Number((req.query as any).limit) || 20);
+  res.json({ birlesik: rows.length, ornekler: rows });
+});
+// v2 ders notu araması: önce anlamsal vektör servisi (CPU e5, :8092), kapalıysa BM25-lite yedeği.
+let _v2chunkIndex: { at: number; postings: Map<string, number[]>; docs: any[]; byId: Map<string, any> } | null = null;
+function _v2fold(s: string): string[] {
+  return s.toLocaleLowerCase('tr')
+    .replace(/[ıİ]/g, 'i').replace(/[çÇ]/g, 'c').replace(/[ğĞ]/g, 'g')
+    .replace(/[öÖ]/g, 'o').replace(/[şŞ]/g, 's').replace(/[üÜ]/g, 'u')
+    .replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter((w) => w.length > 2);
+}
+function medsCoreIndex() {
+  const dir = path.join(medsCoreDir(), 'chunks');
+  if (!fs.existsSync(dir)) return null;
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.jsonl'));
+  let mtime = 0;
+  for (const f of files) mtime = Math.max(mtime, fs.statSync(path.join(dir, f)).mtimeMs);
+  if (_v2chunkIndex && _v2chunkIndex.at === mtime) return _v2chunkIndex;
+  const docs: any[] = [];
+  for (const f of files) {
+    for (const line of fs.readFileSync(path.join(dir, f), 'utf-8').split('\n')) {
+      const t = line.trim();
+      if (t) { try { docs.push(JSON.parse(t)); } catch { /* atla */ } }
+    }
+  }
+  const postings = new Map<string, number[]>();
+  const byId = new Map<string, any>();
+  docs.forEach((d, i) => {
+    byId.set(String(d.chunk_id), d);
+    for (const tk of new Set(_v2fold(String(d.text || '')))) {
+      const arr = postings.get(tk) || [];
+      arr.push(i);
+      postings.set(tk, arr);
+    }
+  });
+  _v2chunkIndex = { at: mtime, postings, docs, byId };
+  return _v2chunkIndex;
+}
+function medsCoreChunkSearch(q: string, limit: number) {
+  const idx = medsCoreIndex();
+  if (!idx) return [];
+  const N = idx.docs.length;
+  const scores = new Map<number, number>();
+  for (const tk of new Set(_v2fold(q))) {
+    const arr = idx.postings.get(tk);
+    if (!arr) continue;
+    const idf = Math.log(1 + (N - arr.length + 0.5) / (arr.length + 0.5));
+    for (const i of arr) scores.set(i, (scores.get(i) || 0) + idf);
+  }
+  return [...scores.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit).map(([i, s]) => ({
+    chunk_id: idx.docs[i].chunk_id, source_id: idx.docs[i].source_id, page: idx.docs[i].page,
+    ders: idx.docs[i].ders, konu: idx.docs[i].konu, skor: Number(s.toFixed(3)),
+    alinti: String(idx.docs[i].text || '').slice(0, 240),
+  }));
+}
+function _v2enrich(hit: any): any {
+  const idx = medsCoreIndex();
+  const d = idx?.byId.get(String(hit.chunk_id));
+  if (!d) return hit;
+  return { ...hit, source_id: d.source_id, page: d.page, ders: d.ders, konu: d.konu,
+    alinti: String(d.text || '').slice(0, 240) };
+}
+app.get(['/api/v2/search', '/api/v2/search/'], async (req, res) => {
+  const q = String((req.query as any).q || '');
+  const k = Number((req.query as any).limit) || 10;
+  if (!q.trim()) return res.json({ sorgu: q, sonuc: [] });
+  try {
+    const url = `${process.env.MEDS_V2SEARCH_URL || 'http://127.0.0.1:8092'}/search?q=${encodeURIComponent(q)}&k=${k}`;
+    const r = await fetch(url, { signal: AbortSignal.timeout(15000) });
+    if (r.ok) {
+      const d: any = await r.json();
+      if (Array.isArray(d.sonuc)) return res.json({ sorgu: q, kaynak: 'vektor', sonuc: d.sonuc.map(_v2enrich) });
+    }
+  } catch { /* servis kapalı → BM25 yedeği */ }
+  try { res.json({ sorgu: q, kaynak: 'bm25', sonuc: medsCoreChunkSearch(q, k) }); }
+  catch (err: any) { res.status(500).json({ error: err.message }); }
+});
+// Toplu tamamlama: verilen parçaya en benzeyen CORE soruları (deterministik; AI yok).
+function _v2shingles(s: string, n = 4): Set<string> {
+  const t = s.toLocaleLowerCase('tr').replace(/\s+/g, '');
+  const out = new Set<string>();
+  for (let i = 0; i + n <= t.length; i++) out.add(t.slice(i, i + n));
+  return out;
+}
+function _v2jac(a: Set<string>, b: Set<string>): number {
+  if (!a.size || !b.size) return 0;
+  let inter = 0;
+  for (const x of a) if (b.has(x)) inter++;
+  return inter / (a.size + b.size - inter);
+}
+function medsCoreSimilar(stem: string, limit: number) {
+  const qa = new Set(_v2fold(stem));
+  const qs = _v2shingles(stem);
+  const scored = medsCoreQuestions().map((r) => {
+    const st = String(r.stem || '');
+    const sim = 0.6 * _v2jac(qa, new Set(_v2fold(st))) + 0.4 * _v2jac(qs, _v2shingles(st));
+    return { r, sim };
+  });
+  return scored.filter((x) => x.sim >= 0.2).sort((a, b) => b.sim - a.sim).slice(0, limit)
+    .map((x) => ({
+      question_id: x.r.question_id, stem: x.r.stem, ders: x.r.ders, konu: x.r.konu,
+      answer: x.r.answer, benzerlik: Number(x.sim.toFixed(3)),
+    }));
+}
+app.get(['/api/v2/similar', '/api/v2/similar/'], (req, res) => {
+  const stem = String((req.query as any).stem || '');
+  if (!stem.trim()) return res.json({ stem, sonuc: [] });
+  try { res.json({ stem, sonuc: medsCoreSimilar(stem, Number((req.query as any).limit) || 10) }); }
+  catch (err: any) { res.status(500).json({ error: err.message }); }
+});
+// Toplu tamamlama: birden çok parçayı birleştirip tam soru adayları üretir (Python çekirdeği).
+app.post(['/api/v2/merge', '/api/v2/merge/'], async (req, res) => {
+  try {
+    const url = `${process.env.MEDS_V2SEARCH_URL || 'http://127.0.0.1:8092'}/merge`;
+    const r = await fetch(url, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(req.body || {}), signal: AbortSignal.timeout(20000),
+    });
+    if (r.ok) return res.json(await r.json());
+    return res.status(503).json({ error: 'merge servisi yanıt vermedi' });
+  } catch (err: any) {
+    res.status(503).json({ error: 'merge servisi kapalı: ' + err.message });
+  }
+});
+
+// Semantik veri modeli (CPU e5 + FAISS) — soruyu anlamlandırma uçları (:8093).
+async function _semProxy(pathq: string, res: any) {
+  try {
+    const url = `${process.env.MEDS_SEM_URL || 'http://127.0.0.1:8093'}${pathq}`;
+    const r = await fetch(url, { signal: AbortSignal.timeout(20000) });
+    const d = await r.json();
+    res.status(r.status).json(d);
+  } catch (err: any) {
+    res.status(503).json({ error: 'semantik servis kapalı: ' + err.message });
+  }
+}
+app.get(['/api/v2/semantic/classify', '/api/v2/semantic/classify/'], (req, res) => {
+  _semProxy(`/classify?q=${encodeURIComponent(String((req.query as any).q || ''))}`, res);
+});
+app.get(['/api/v2/semantic/search', '/api/v2/semantic/search/'], (req, res) => {
+  const q = req.query as any;
+  _semProxy(`/retrieve?q=${encodeURIComponent(String(q.q || ''))}&k=${Number(q.limit) || 10}`, res);
+});
+
+// Revize v2 — Faz 14 sorularının yeniden revizyonu (salt okunur).
+app.get(['/api/v2/revize', '/api/v2/revize/'], (_req, res) => {
+  const report = medsCoreJson('revize_v2/report.json', {});
+  const questions = loadV2Jsonl('revize_v2/questions.jsonl', 5);
+  res.json({ ...report, ornekler: questions });
+});
+app.get(['/api/v2/revize/questions', '/api/v2/revize/questions/'], (req, res) => {
+  const q = req.query as any;
+  let rows = loadV2Jsonl('revize_v2/questions.jsonl', Math.min(Number(q.limit) || 50, 500));
+  if (q.durum) rows = rows.filter((r) => r.durum === q.durum);
+  res.json({ adet: rows.length, sorular: rows });
+});
+app.get(['/api/v2/revize/karantina', '/api/v2/revize/karantina/'], (_req, res) => {
+  res.json({ kayitlar: loadV2Jsonl('revize_v2/quarantine.jsonl', 100) });
+});
+app.get(['/api/v2/revize/changes', '/api/v2/revize/changes/'], (req, res) => {
+  const q = req.query as any;
+  let rows = loadV2Jsonl('revize_v2/changes.jsonl', Math.min(Number(q.limit) || 50, 500));
+  if (q.id) rows = rows.filter((r) => r.id === q.id);
+  res.json({ adet: rows.length, degisiklikler: rows });
 });
 
 // Öğren bağlantıları (learn_links.py): soru → Öğren destesi slaytı, eşik altı bağlantı yok
@@ -1613,6 +1973,19 @@ function writePhase14Reviews(items: any[]) {
   if (!fs.existsSync(PHASE14_DIR)) {
     fs.mkdirSync(PHASE14_DIR, { recursive: true });
   }
+  // Faz 14 (Python) dosyaya eşzamanlı ekleme yapabilir: okumadan bu yana eklenmiş kayıtlar korunur (yoksa onay/ret
+  // anında yazılan yeni inceleme kaybolurdu). Anahtar: question_id + processed_at.
+  const key = (r: any) => `${r?.question_id}|${r?.processed_at}`;
+  const known = new Set(items.map(key));
+  try {
+    for (const line of fs.readFileSync(PHASE14_REVIEWS_FILE, 'utf-8').split('\n')) {
+      if (!line.trim()) continue;
+      try {
+        const r = JSON.parse(line);
+        if (!known.has(key(r))) items = [...items, r];
+      } catch (_) {}
+    }
+  } catch (_) {}
   const content = items.map(it => JSON.stringify(it)).join('\n') + (items.length > 0 ? '\n' : '');
   const tmp = PHASE14_REVIEWS_FILE + '.tmp';
   fs.writeFileSync(tmp, content, 'utf-8');
@@ -1713,19 +2086,6 @@ app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
         stem: targetQ.stem, options: targetQ.options, explanation: targetQ.explanation, correctAnswer: targetQ.correctAnswer,
         committeeId: targetQ.committeeId, discipline: targetQ.discipline, topic: targetQ.topic,
       };
-  // Faz 14 (Python) dosyaya eşzamanlı ekleme yapabilir: okumadan bu yana eklenmiş kayıtlar korunur (yoksa onay/ret
-  // anında yazılan yeni inceleme kaybolurdu). Anahtar: question_id + processed_at.
-  const key = (r: any) => `${r?.question_id}|${r?.processed_at}`;
-  const known = new Set(items.map(key));
-  try {
-    for (const line of fs.readFileSync(PHASE14_REVIEWS_FILE, 'utf-8').split('\n')) {
-      if (!line.trim()) continue;
-      try {
-        const r = JSON.parse(line);
-        if (!known.has(key(r))) items = [...items, r];
-      } catch (_) {}
-    }
-  } catch (_) {}
     }
     if (proposal.soru_koku) targetQ.stem = proposal.soru_koku;
     if (proposal.secenekler && typeof proposal.secenekler === 'object') {
@@ -1865,7 +2225,10 @@ app.post('/api/past-question-reviews/:id/answer-doubt', requireAdmin, (req, res)
     if (matching.length === 0) return res.status(404).json({ error: 'İnceleme kaydı bulunamadı.' });
     for (const r of matching) {
       if (value) r.answer_doubtful = true;
-      else delete r.answer_doubtful;
+      else {
+        delete r.answer_doubtful;
+        delete r.answer_poll_open;
+      }
     }
     writePhase14Reviews(reviews);
     res.json({ success: true, message: value ? 'Cevap anketi açıldı.' : 'Cevap anketi kapatıldı.' });
@@ -1884,6 +2247,7 @@ app.post('/api/past-question-reviews/:id/answer-doubt/complete', requireAdmin, a
     const { counts, total } = await readAnswerVotes(qId, '');
     // Yönetici şıkkı kendisi seçebilir; seçmezse anketteki çoğunluk uygulanır.
     const chosen = String(req.body?.choice || '').trim().toUpperCase();
+    const keepPoll = req.body?.keepPoll !== false;
     let winner: string;
     if (chosen) {
       if (!/^[A-E]$/.test(chosen)) return res.status(400).json({ error: 'Geçersiz şık.' });
@@ -1905,6 +2269,9 @@ app.post('/api/past-question-reviews/:id/answer-doubt/complete', requireAdmin, a
       delete r.proposal.cevap_belirsiz;
       delete r.cevap_belirsiz;
       delete r.answer_doubtful;
+      // Anket kapanmaz: kabul edilen cevap gösterilir, topluluk oylamaya devam eder (karşılaştırma için)
+      if (keepPoll) r.answer_poll_open = true;
+      else delete r.answer_poll_open;
       r.answer_resolved_at = nowIso;
       r.answer_vote_result = { winner, counts, total, by: chosen ? 'admin' : 'anket' };
     }
@@ -1943,13 +2310,18 @@ app.get('/api/past-question-reviews/answer-doubtful', (_req, res) => {
     const latest = latestReviews();
     const ids: string[] = [];
     const options: Record<string, Record<string, string>> = {};
+    // Cevabı yöneticice kabul edilmiş ama anketi açık bırakılmış sorular: kabul edilen cevap + açık anket
+    const resolved: Record<string, { answer: string; by: string }> = {};
     for (const [id, r] of latest) {
-      if (!r?.answer_doubtful || r.status !== 'review_required') continue;
-      ids.push(id);
+      const doubtful = r?.answer_doubtful && r.status === 'review_required';
+      const kept = !doubtful && r?.answer_poll_open && r.answer_vote_result?.winner;
+      if (!doubtful && !kept) continue;
+      if (doubtful) ids.push(id);
+      else resolved[id] = { answer: String(r.answer_vote_result.winner), by: String(r.answer_vote_result.by || 'admin') };
       const opts = r.proposal?.secenekler && Object.keys(r.proposal.secenekler).length ? r.proposal.secenekler : r.source?.secenekler;
       if (opts) options[id] = opts;
     }
-    res.set('Cache-Control', 'no-store').json({ success: true, ids, options });
+    res.set('Cache-Control', 'no-store').json({ success: true, ids, options, resolved });
   } catch (err: any) {
     res.status(500).json({ error: 'Liste okunamadı: ' + err.message });
   }
@@ -1972,7 +2344,7 @@ app.post('/api/past-question-reviews/:id/answer-votes', async (req, res) => {
     if (!voter) return res.status(401).json({ error: 'Oy vermek için giriş yapmalısınız.' });
     if (!/^[A-E]$/.test(choice)) return res.status(400).json({ error: 'Geçersiz şık.' });
     const review = latestReviews().get(qId);
-    const pollOpen = (review?.answer_doubtful && review.status === 'review_required') || pastQuestionHasNoAnswer(qId);
+    const pollOpen = (review?.answer_doubtful && review.status === 'review_required') || Boolean(review?.answer_poll_open) || pastQuestionHasNoAnswer(qId);
     if (!pollOpen) return res.status(409).json({ error: 'Bu soru için anket açık değil.' });
     const { error } = await localSupabase.from('answer_votes').insert([{ question_id: qId, voter_uid: voter, choice }]);
     if (error) {
@@ -2102,6 +2474,50 @@ function readPhase14Settings(): Phase14Settings {
     return { lite_kullan: true, otomatik_ucretsiz: false, otomatik_limit: 4000 };
   }
 }
+function writePhase14Settings(next: Phase14Settings) {
+  fs.mkdirSync(path.dirname(PHASE14_SETTINGS_FILE), { recursive: true });
+  fs.writeFileSync(PHASE14_SETTINGS_FILE, JSON.stringify(next, null, 1), 'utf-8');
+}
+
+// Otomatik ücretsiz inceleme: paralel ücretsiz kip (--ucretsiz-paralel) ayrı bir systemd işi olarak çalışır
+// (meds-web yeniden başlasa da durmaz). Anahtar açıkken 5 dk'da bir bekçi: iş durmuşsa ve soru kaldıysa yeniden başlatır.
+// İşlenmiş sorular checkpoint + inceleme kayıtlarından tanınır; tekrar çözülmez. Ücretli anahtar hiç kullanılmaz.
+const PHASE14_AUTO_UNIT = 'meds-faz14-otomatik';
+function startPhase14AutoFree(limit: number): boolean {
+  if (isPythonScriptRunning('phase14_cloud_question_editor.py') || isPythonScriptRunning('phase14_past_question_editor.py')) return false;
+  const script = path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_cloud_question_editor.py');
+  const logPath = path.resolve(__dirname, '..', 'meds_temp', 'logs', 'phase14.log');
+  fs.mkdirSync(path.dirname(logPath), { recursive: true });
+  try { execSync(`systemctl --user reset-failed ${PHASE14_AUTO_UNIT} 2>/dev/null || true`); } catch (_) {}
+  const r = spawnSync('systemd-run', [
+    '--user', `--unit=${PHASE14_AUTO_UNIT}`, '--collect', `--working-directory=${__dirname}`,
+    `--property=StandardOutput=append:${logPath}`, `--property=StandardError=append:${logPath}`,
+    'python3', script, '--limit', String(limit), '--ucretsiz-paralel',
+  ], { encoding: 'utf-8' });
+  if (r.status !== 0) console.error('[Faz14 otomatik] başlatılamadı:', r.stderr);
+  return r.status === 0;
+}
+function stopPhase14Auto() {
+  try { execSync(`systemctl --user stop ${PHASE14_AUTO_UNIT} 2>/dev/null || true`); } catch (_) {}
+}
+function phase14Remaining(): number {
+  try {
+    const done = new Set(readPhase14Reviews().map((r: any) => String(r.question_id)));
+    return getPastQuestionsDb().filter((q: any) => q?.id && !done.has(String(q.id))).length;
+  } catch {
+    return 1;
+  }
+}
+setInterval(() => {
+  const st = readPhase14Settings();
+  if (!st.otomatik_ucretsiz) return;
+  if (phase14Remaining() === 0) {
+    writePhase14Settings({ ...st, otomatik_ucretsiz: false });
+    console.log('[Faz14 otomatik] tüm sorular incelendi; otomatik kip kapatıldı');
+    return;
+  }
+  if (startPhase14AutoFree(st.otomatik_limit)) console.log('[Faz14 otomatik] iş durmuştu, yeniden başlatıldı');
+}, 5 * 60 * 1000);
 app.get('/api/past-question-reviews/settings', requireAdmin, (_req, res) => {
   res.json(readPhase14Settings());
 });
@@ -2169,6 +2585,10 @@ app.post('/api/past-question-reviews/trigger', requireAdmin, (req, res) => {
 // 5. POST /api/past-question-reviews/stop: Faz 14 süreçlerini durdur (Admin)
 app.post('/api/past-question-reviews/stop', requireAdmin, (_req, res) => {
   try {
+    // Durdur otomatik kipi de kapatır (yoksa bekçi 5 dk içinde yeniden başlatırdı)
+    const st = readPhase14Settings();
+    if (st.otomatik_ucretsiz) writePhase14Settings({ ...st, otomatik_ucretsiz: false });
+    stopPhase14Auto();
     try { execSync('pkill -9 -f "phase14_cloud_question_editor.py"', { stdio: 'ignore' }); } catch (_) {}
     try { execSync('pkill -9 -f "phase14_past_question_editor.py"', { stdio: 'ignore' }); } catch (_) {}
     res.json({ success: true, message: 'Faz 14 arka plan süreçleri durduruldu.' });
@@ -2217,50 +2637,6 @@ app.get('/api/past-question-reviews/logs', (_req, res) => {
       report,
       costTracking,
       paralel: (() => {
-function writePhase14Settings(next: Phase14Settings) {
-  fs.mkdirSync(path.dirname(PHASE14_SETTINGS_FILE), { recursive: true });
-  fs.writeFileSync(PHASE14_SETTINGS_FILE, JSON.stringify(next, null, 1), 'utf-8');
-}
-
-// Otomatik ücretsiz inceleme: paralel ücretsiz kip (--ucretsiz-paralel) ayrı bir systemd işi olarak çalışır
-// (meds-web yeniden başlasa da durmaz). Anahtar açıkken 5 dk'da bir bekçi: iş durmuşsa ve soru kaldıysa yeniden başlatır.
-// İşlenmiş sorular checkpoint + inceleme kayıtlarından tanınır; tekrar çözülmez. Ücretli anahtar hiç kullanılmaz.
-const PHASE14_AUTO_UNIT = 'meds-faz14-otomatik';
-function startPhase14AutoFree(limit: number): boolean {
-  if (isPythonScriptRunning('phase14_cloud_question_editor.py') || isPythonScriptRunning('phase14_past_question_editor.py')) return false;
-  const script = path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_cloud_question_editor.py');
-  const logPath = path.resolve(__dirname, '..', 'meds_temp', 'logs', 'phase14.log');
-  fs.mkdirSync(path.dirname(logPath), { recursive: true });
-  try { execSync(`systemctl --user reset-failed ${PHASE14_AUTO_UNIT} 2>/dev/null || true`); } catch (_) {}
-  const r = spawnSync('systemd-run', [
-    '--user', `--unit=${PHASE14_AUTO_UNIT}`, '--collect', `--working-directory=${__dirname}`,
-    `--property=StandardOutput=append:${logPath}`, `--property=StandardError=append:${logPath}`,
-    'python3', script, '--limit', String(limit), '--ucretsiz-paralel',
-  ], { encoding: 'utf-8' });
-  if (r.status !== 0) console.error('[Faz14 otomatik] başlatılamadı:', r.stderr);
-  return r.status === 0;
-}
-function stopPhase14Auto() {
-  try { execSync(`systemctl --user stop ${PHASE14_AUTO_UNIT} 2>/dev/null || true`); } catch (_) {}
-}
-function phase14Remaining(): number {
-  try {
-    const done = new Set(readPhase14Reviews().map((r: any) => String(r.question_id)));
-    return getPastQuestionsDb().filter((q: any) => q?.id && !done.has(String(q.id))).length;
-  } catch {
-    return 1;
-  }
-}
-setInterval(() => {
-  const st = readPhase14Settings();
-  if (!st.otomatik_ucretsiz) return;
-  if (phase14Remaining() === 0) {
-    writePhase14Settings({ ...st, otomatik_ucretsiz: false });
-    console.log('[Faz14 otomatik] tüm sorular incelendi; otomatik kip kapatıldı');
-    return;
-  }
-  if (startPhase14AutoFree(st.otomatik_limit)) console.log('[Faz14 otomatik] iş durmuştu, yeniden başlatıldı');
-}, 5 * 60 * 1000);
         try {
           return JSON.parse(fs.readFileSync(path.join(path.dirname(PHASE14_COST_FILE), 'paralel_durum.json'), 'utf-8'));
         } catch {
@@ -2323,10 +2699,6 @@ app.post('/api/past-question-reviews/re-evaluate-unchanged', requireAdmin, (req,
     updateCheckpointFile(PHASE14_CLOUD_CHECKPOINT);
 
     res.json({
-    // Durdur otomatik kipi de kapatır (yoksa bekçi 5 dk içinde yeniden başlatırdı)
-    const st = readPhase14Settings();
-    if (st.otomatik_ucretsiz) writePhase14Settings({ ...st, otomatik_ucretsiz: false });
-    stopPhase14Auto();
       success: true,
       message: `${targetIds.length} soru tekrar değerlendirme kuyruğuna alındı.`,
       count: targetIds.length,
@@ -2759,6 +3131,26 @@ app.post('/api/questions/:id/upvote', (req, res) => {
   question.updatedAt = new Date().toISOString();
   saveDatabase();
   res.json({ success: true, upvotes: question.upvotes, liked, likedBy: question.likedBy, question });
+});
+
+// Soru havuzu sorusunu bildir (Çalış sayfası): çıkmış sorulardaki bildirimle aynı biçim
+app.post('/api/questions/:id/report', (req, res) => {
+  const question: any = db.questions.find((q) => q.id === req.params.id);
+  if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
+  const reason = String(req.body?.reason || '').trim();
+  if (!reason) return res.status(400).json({ error: 'Şikayet sebebi belirtilmelidir.' });
+  const report = {
+    id: String(req.body?.id || `rep-${Date.now()}`),
+    reason: reason.slice(0, 120),
+    details: String(req.body?.details || '').trim().slice(0, 1200),
+    reportedBy: String(req.body?.reportedBy || 'Anonim Öğrenci').slice(0, 80),
+    timestamp: new Date().toISOString(),
+  };
+  question.reports = Array.isArray(question.reports) ? question.reports : [];
+  if (!question.reports.some((r: any) => r.id === report.id)) question.reports.push(report);
+  question.updatedAt = report.timestamp;
+  saveDatabase();
+  res.json({ success: true, report });
 });
 
 // Add fragment/memory to a question
@@ -6639,6 +7031,43 @@ app.get('/api/admin/export-zip', requireAdmin, async (req, res) => {
     return res.end(buffer);
   } catch (err: any) {
     res.status(500).json({ error: 'ZIP arşivi oluşturulamadı: ' + err.message });
+  }
+});
+
+// API: 2026-2027 Üretilen Test Ders Notları ve Özetleri (/tester/ozet için veri kaynağı)
+app.get('/api/tester/ozet', (req, res) => {
+  try {
+    const studyDir = path.resolve(__dirname, '..', 'meds_temp', 'study', 'k1');
+    if (!fs.existsSync(studyDir)) {
+      return res.json({ success: true, count: 0, items: [] });
+    }
+    const files = fs.readdirSync(studyDir).filter(f => f.startsWith('2026_') && f.endsWith('.md')).sort();
+    const items = files.map(file => {
+      const fullPath = path.join(studyDir, file);
+      const content = fs.readFileSync(fullPath, 'utf-8');
+      const lines = content.split('\n');
+      const title = (lines.find(l => l.startsWith('# ')) || file).replace(/^#\s*/, '').replace(/\*+/g, '').trim();
+      const wordCount = content.split(/\s+/).filter(Boolean).length;
+      const tableCount = (content.match(/\|[\s-:]+\|/g) || []).length;
+      const questionCount = (content.match(/### Soru \d+/g) || []).length;
+      return {
+        id: file.replace('.md', ''),
+        fileName: file,
+        title,
+        wordCount,
+        tableCount,
+        questionCount,
+        content,
+        mtime: fs.statSync(fullPath).mtime
+      };
+    });
+    res.json({
+      success: true,
+      count: items.length,
+      items
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Tester özet verisi okunamadı: ' + err.message });
   }
 });
 
