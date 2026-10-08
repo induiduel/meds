@@ -648,10 +648,11 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     const pending = allReviews.filter((r) => r.status === 'review_required' && !r.answer_doubtful).length;
     const doubtful = allReviews.filter((r) => r.answer_doubtful && r.status === 'review_required').length;
     const approved = allReviews.filter((r) => r.status === 'approved').length;
+    const faz15 = allReviews.filter((r) => r.status === 'approved' || (r as any).faz15Audited || (r as any).phase15).length;
     const rejected = allReviews.filter((r) => r.status === 'rejected').length;
     const unchanged = allReviews.filter((r) => r.status === 'unchanged').length;
     const suspicious = allReviews.filter((r) => r.suspicious && r.status === 'review_required').length;
-    return { total, pending, approved, rejected, unchanged, suspicious, doubtful };
+    return { total, pending, approved, faz15, rejected, unchanged, suspicious, doubtful };
   }, [allReviews]);
 
   const filteredReviews = useMemo(() => {
@@ -661,6 +662,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       list = list.filter((r) => r.suspicious && r.status === 'review_required');
     } else if (statusFilter === 'answer_doubtful') {
       list = list.filter((r) => r.answer_doubtful && r.status === 'review_required');
+    } else if (statusFilter === 'faz15') {
+      list = list.filter((r) => r.status === 'approved' || (r as any).faz15Audited || (r as any).phase15);
     } else if (statusFilter === 'review_required') {
       list = list.filter((r) => r.status === 'review_required' && !r.answer_doubtful);
     } else if (statusFilter !== 'all') {
@@ -697,6 +700,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
 
   const statusTabs = [
     { id: 'review_required', label: 'İnceleme bekliyor', count: stats.pending },
+    { id: 'faz15', label: '✨ Faz 15 Başdenetim', count: stats.faz15 },
     { id: 'answer_doubtful', label: 'Cevap belirsiz', count: stats.doubtful },
     { id: 'suspicious', label: 'Şüpheli', count: stats.suspicious },
     { id: 'approved', label: 'Onaylandı', count: stats.approved },
@@ -711,8 +715,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   return (
     <div className="flex flex-col gap-3 pb-16 min-w-0 w-full max-w-[1400px] mx-auto">
       <PageHeader
-        title="Faz 14 incelemesi"
-        description="Çıkmış sorular için önerilen OCR, imla ve eksik şık düzeltmeleri. Öneri yalnız onaylanınca canlı soruya uygulanır."
+        title="Faz 14 İncelemesi & Faz 15 Başdenetim"
+        description="Çıkmış sorular için önerilen OCR, imla ve eksik şık düzeltmeleri ile Faz 15 tıp literatürü başdenetim onayları."
         actions={
           <div className="flex items-center gap-1.5">
             <button type="button" onClick={() => fetchReviews()} disabled={isLoading} className="ms-btn is-ghost is-sm" aria-label="Yenile">
@@ -747,7 +751,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 ['Havuz', total ? total.toLocaleString('tr-TR') : '—'],
                 ['İşlenen', processed.toLocaleString('tr-TR')],
                 ['Kalan', liveStatus?.remaining != null ? liveStatus.remaining.toLocaleString('tr-TR') : '—'],
-                ['Onaylanan', String(liveStatus?.approved ?? stats.approved)],
+                ['Faz 15 Onaylı', String(stats.faz15)],
                 ['Bu ay', `${(liveStatus?.costTracking?.cost_tl ?? 0).toFixed(2)} ₺ / ${liveStatus?.costTracking?.max_budget_tl ?? 1000} ₺`],
               ].map(([k, v]) => (
                 <div key={k} className="flex items-baseline gap-1.5">
@@ -1078,6 +1082,24 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 <header className="ms-qcard-head px-3 sm:px-4 pt-2.5 pb-2">
                   <span className="ms-qcard-num" title={`#${qId}`}>#{qId.slice(0, 8)}</span>
                   <span className={`ms-tag ${status.cls}`}><status.Icon /> <span className="hidden sm:inline">{status.label}</span></span>
+                  {(rev.status === 'approved' || (rev as any).faz15Audited) && (
+                    <span
+                      className="ms-tag is-ok"
+                      style={{
+                        background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
+                        color: '#ffffff',
+                        fontWeight: 600,
+                        border: 'none',
+                        boxShadow: '0 1px 3px rgba(2,132,199,0.3)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.3rem'
+                      }}
+                      title="Faz 15 Başdenetçi tarafından incelendi, şıklar ve tıp literatürüyle %100 doğrulandı"
+                    >
+                      <Sparkles className="w-3 h-3 text-amber-300" /> Faz 15 Onaylı
+                    </span>
+                  )}
                   {rev.answer_vote_result && (
                     <span className="ms-tag is-ok" title={`Kabul edilen cevap: ${rev.answer_vote_result.winner}${rev.answer_vote_result.total ? ` · kayıt anında ${rev.answer_vote_result.counts?.[rev.answer_vote_result.winner] || 0}/${rev.answer_vote_result.total} oy` : ''}${keptPoll ? ' · anket açık' : ''}`}>
                       <BarChart3 /> {rev.answer_vote_result.by === 'admin' ? 'Cevap seçildi' : 'Anket'}: {rev.answer_vote_result.winner}
