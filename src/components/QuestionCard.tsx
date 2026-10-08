@@ -383,6 +383,14 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
             </button>
           )}
 
+          {(question.oncul_maddeleri || question.reconstruction?.oncul_maddeleri) && (
+            <div className="flex flex-col gap-1.5 py-2.5 px-3.5 bg-canvas rounded-xl font-medium text-[15px] sm:text-[16px] text-ink border border-line my-1">
+              {(question.oncul_maddeleri || question.reconstruction?.oncul_maddeleri)?.map((p, idx) => (
+                <div key={idx} className="leading-snug">{p}</div>
+              ))}
+            </div>
+          )}
+
           {isExpanded && (
             <>
               {rows.length > 0 ? (

@@ -43,6 +43,7 @@ export interface ReconstructedQuestion {
   reconstructionQuality?: string;
   qualityScore?: number;
   isAiRefined?: boolean;
+  oncul_maddeleri?: string[];
   /** Course material / past questions the AI based this reconstruction on. */
   sources?: SourceRef[];
 }
@@ -179,6 +180,7 @@ export interface QuestionItem {
     };
   };
   stem?: string;
+  oncul_maddeleri?: string[];
   rawQuestion?: {
     stem?: string;
     options?: QuestionOption[] | string[];
