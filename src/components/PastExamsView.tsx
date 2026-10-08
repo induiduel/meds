@@ -70,19 +70,11 @@ import {
   isDonem3Question,
 } from '../data/curriculumData';
 
-/** Faz 15 Başdenetim onaylı soru */
-export const isPhase15Audited = (q: any): boolean =>
-  Boolean(q?.phase15 || (Array.isArray(q?.tags) && q.tags.includes('faz15_onaylandi')));
-
-/** Faz 14 veya Faz 15'te önerisi onaylanıp canlı soruya uygulanmış soru. */
+/** Faz 14'te önerisi onaylanıp canlı soruya uygulanmış soru. */
 export const isPhase14Fixed = (q: any): boolean =>
-  Boolean(
-    isPhase15Audited(q) ||
-    q?.phase14 ||
-    (Array.isArray(q?.tags) && q.tags.includes('faz14_duzeltildi'))
-  );
+  Boolean(q?.phase14 || (Array.isArray(q?.tags) && q.tags.includes('faz14_duzeltildi')));
 /** Faz 14 önerisi gösteriliyor ama yönetici onayı bekliyor (okuma katmanı) */
-export const isPhase14Pending = (q: any): boolean => q?.phase14?.status === 'onay_bekliyor' && !isPhase15Audited(q);
+export const isPhase14Pending = (q: any): boolean => q?.phase14?.status === 'onay_bekliyor';
 
 export const isDeepSeekQuestion = (q: any): boolean => {
   if (!q) return false;
@@ -147,7 +139,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
   const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'gemini_v3' | 'existing'>('all');
-  const [phase14Filter, setPhase14Filter] = useState<'all' | 'faz15' | 'faz14' | 'faz14_onayli' | 'faz14_bekleyen'>('all');
+  const [phase14Filter, setPhase14Filter] = useState<'all' | 'faz14' | 'faz14_onayli' | 'faz14_bekleyen'>('all');
   const [newnessFilter, setNewnessFilter] = useState<'all' | 'new_only' | 'archived_only'>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -676,7 +668,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     source: (p) => sourceFilter === 'all' || (sourceFilter === 'gemini_v3') === isGeminiV3Question(p.q),
     p14: (p) =>
       phase14Filter === 'all' ||
-      (phase14Filter === 'faz15' && isPhase15Audited(p.q)) ||
       (phase14Filter === 'faz14' && isPhase14Fixed(p.q)) ||
       (phase14Filter === 'faz14_onayli' && isPhase14Fixed(p.q) && !isPhase14Pending(p.q)) ||
       (phase14Filter === 'faz14_bekleyen' && isPhase14Pending(p.q)),
@@ -691,7 +682,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     answer: (p) => [p.hasAnswer && !p.doubtful ? 'with' : null, p.hasAnswer ? null : 'without', p.doubtful ? 'doubtful' : null],
     explanation: (p) => [p.hasExpl ? 'with' : 'without'],
     source: (p) => [isGeminiV3Question(p.q) ? 'gemini_v3' : 'existing'],
-    p14: (p) => [isPhase15Audited(p.q) ? 'faz15' : null, isPhase14Fixed(p.q) ? 'faz14' : null, isPhase14Fixed(p.q) && !isPhase14Pending(p.q) ? 'faz14_onayli' : null, isPhase14Pending(p.q) ? 'faz14_bekleyen' : null],
+    p14: (p) => [isPhase14Fixed(p.q) ? 'faz14' : null, isPhase14Fixed(p.q) && !isPhase14Pending(p.q) ? 'faz14_onayli' : null, isPhase14Pending(p.q) ? 'faz14_bekleyen' : null],
     newness: (p) => [p.isNew ? 'new_only' : 'archived_only'],
   };
 
@@ -787,7 +778,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     pool: { valid: 'Tam metin', ambiguous: 'İncelemede', reported: 'Hata bildirilen', all: 'Tüm havuz' } as Record<string, string>,
     answer: { with: 'Cevaplı', without: 'Cevapsız', doubtful: 'Cevap belirsiz' } as Record<string, string>,
     source: { gemini_v3: 'Gemini v3', existing: 'Mevcut veriler' } as Record<string, string>,
-    p14: { faz15: 'Faz 15 Onaylı', faz14: 'Faz 14', faz14_onayli: 'Faz 14 · onaylı', faz14_bekleyen: 'Faz 14 · onay bekliyor' } as Record<string, string>,
+    p14: { faz14: 'Faz 14', faz14_onayli: 'Faz 14 · onaylı', faz14_bekleyen: 'Faz 14 · onay bekliyor' } as Record<string, string>,
     newness: { new_only: 'Yeni sorular', archived_only: 'Arşiv' } as Record<string, string>,
     sort: { newest: 'Yeniden eskiye', oldest: 'Eskiden yeniye', number: 'Soru numarası', default: searchQuery.trim() ? 'En ilgili' : 'Varsayılan' } as Record<string, string>,
     view: { raw: 'Ham metin', split: 'Karşılaştır' } as Record<string, string>,
@@ -986,9 +977,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         <button type="button" aria-pressed={explanationFilter === 'with'} className={`ms-fchip ${explanationFilter === 'with' ? 'is-on' : ''}`} onClick={() => { setExplanationFilter(explanationFilter === 'with' ? 'all' : 'with'); resetPage(); }}>
           Açıklamalı <span className="n">{n(fc('explanation', 'with'))}</span>
         </button>
-        <button type="button" aria-pressed={phase14Filter === 'faz15'} className={`ms-fchip ${phase14Filter === 'faz15' ? 'is-on' : ''}`} style={phase14Filter === 'faz15' ? { background: '#0284c7', borderColor: '#0284c7', color: '#fff' } : {}} onClick={() => { setPhase14Filter(phase14Filter === 'faz15' ? 'all' : 'faz15'); resetPage(); }} title="Yalnız Faz 15 Başdenetiminden geçen ve %100 doğrulanan sorular">
-          <Sparkles className="w-3.5 h-3.5 text-amber-300" aria-hidden /> Faz 15 Onaylı <span className="n">{n(fc('p14', 'faz15'))}</span>
-        </button>
         <button type="button" aria-pressed={phase14Filter === 'faz14'} className={`ms-fchip ${phase14Filter === 'faz14' ? 'is-on' : ''}`} onClick={() => { setPhase14Filter(phase14Filter === 'faz14' ? 'all' : 'faz14'); resetPage(); }} title="Yalnız Faz 14 incelemesinden geçen sorular">
           <Sparkles className="w-3.5 h-3.5" aria-hidden /> Faz 14 <span className="n">{n(fc('p14', 'faz14'))}</span>
         </button>
@@ -1126,7 +1114,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               ])}
               {segRow('AI İnceleme ve Denetim', phase14Filter, setPhase14Filter, [
                 ['all', 'Tümü', fc('p14')],
-                ['faz15', 'Faz 15 Onaylı', fc('p14', 'faz15')],
                 ['faz14', 'Faz 14', fc('p14', 'faz14')],
                 ['faz14_onayli', 'Onaylı', fc('p14', 'faz14_onayli')],
                 ['faz14_bekleyen', 'Onay bekliyor', fc('p14', 'faz14_bekleyen')],
@@ -1243,25 +1230,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 <header className="ms-qcard-head">
                   <span className="ms-qcard-num">#{q.questionNumber}</span>
                   {isNewQuestion && <span className="ms-tag is-ok">Yeni</span>}
-                  {isPhase15Audited(q) && (
-                    <span
-                      className="ms-tag is-ok"
-                      style={{
-                        background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
-                        color: '#ffffff',
-                        fontWeight: 600,
-                        border: 'none',
-                        boxShadow: '0 1px 3px rgba(2,132,199,0.3)',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '0.3rem'
-                      }}
-                      title="Faz 15 Başdenetçi tarafından %100 tıbbi literatürle doğrulandı"
-                    >
-                      <Sparkles className="w-3 h-3 text-amber-300" /> Faz 15 Onaylı
-                    </span>
-                  )}
-                  {p14Fixed && !isPhase15Audited(q) && (
+                  {p14Fixed && (
                     <button
                       type="button"
                       onClick={() => setP14Open((o) => ({ ...o, [q.id]: !o[q.id] }))}
@@ -1467,12 +1436,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
                     {!hideAnswer && !pollMode && (q as any).answerStatus === 'dogrulanmadi' && (
                       <p className="ms-note is-warn">Cevap anahtarı doğrulanmadı — kaynaktaki işaretli şık bir öğrencinin cevabıydı.</p>
-                    )}
-                    {(q as any).answerStatus === 'faz15' && (
-                      <p className="ms-note is-ok" style={{ borderColor: 'var(--color-primary, #0284c7)' }}>
-                        ✓ Faz 15 Başdenetim tarafından incelendi, şıklar ve tıp literatürüyle %100 doğrulandı.
-                        {!hideAnswer && (q as any).phase15?.cevapDegisti && (q as any).phase15?.cevapGerekcesi ? ` Cevap güncellendi: ${(q as any).phase15.cevapGerekcesi}` : ''}
-                      </p>
                     )}
                     {(q as any).answerStatus === 'faz14' && (
                       <p className="ms-note is-ai">

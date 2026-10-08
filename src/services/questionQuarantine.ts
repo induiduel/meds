@@ -160,28 +160,22 @@ export function quarantineMtime(): number {
   return Math.max(cacheMtime, keyMtime, linkMtime, resolvedMtime);
 }
 
-// Faz 14 ve Faz 15'te onaylanmış soru: kurul, ders, konu, kök, şıklar, cevap ve açıklama Faz 15/Faz 14'ten gelir;
+// Faz 14'te yönetici onayıyla düzeltilmiş soru: kurul, ders, konu, kök, şıklar, cevap ve açıklama Faz 14'ten gelir;
 // karantina, cevap anahtarı ve müfredat katmanları bu soruyu değiştirmez.
 function isPhase14Approved(item: Record<string, any>): boolean {
-  return Boolean(
-    item?.phase15 ||
-    (Array.isArray(item?.tags) && item.tags.includes('faz15_onaylandi')) ||
-    item?.phase14 ||
-    (Array.isArray(item?.tags) && item.tags.includes('faz14_duzeltildi'))
-  );
+  return Boolean(item?.phase14 || (Array.isArray(item?.tags) && item.tags.includes('faz14_duzeltildi')));
 }
 
 function phase14View<T extends Record<string, any>>(item: T): T {
   const rec = item.reconstruction && typeof item.reconstruction === 'object' ? item.reconstruction : null;
-  const isP15 = Boolean(item?.phase15 || (Array.isArray(item?.tags) && item.tags.includes('faz15_onaylandi')));
   return {
     ...item,
     contentCommitteeId: item.committeeId,
     contentDiscipline: item.discipline,
     contentTopic: item.topic,
     committeeUncertain: false,
-    curriculumSource: isP15 ? 'faz15' : 'faz14',
-    answerStatus: item.correctAnswer || rec?.correctAnswer ? (isP15 ? 'faz15' : 'faz14') : item.answerStatus,
+    curriculumSource: 'faz14',
+    answerStatus: item.correctAnswer || rec?.correctAnswer ? 'faz14' : item.answerStatus,
     answerNote: undefined,
   };
 }

@@ -59,10 +59,6 @@ export function applyPhase14Overlay<T extends Record<string, any>>(list: T[]): T
   };
   return list.map((q) => {
     const r = revs.get(String(q.id));
-    if (q.phase15 || (Array.isArray(q.tags) && q.tags.includes('faz15_onaylandi'))) {
-      // Faz 15 Başdenetiminden geçmiş soru en üst otoritedir, eski Faz 14 taslağı bunu ezemez.
-      return r ? touched(q) : q;
-    }
     if (q.phase14 && q.phase14.status !== 'onay_bekliyor') {
       // Onaylı: veri zaten Faz 14 hâlinde. Onaydan SONRA yeniden düzenlenip onaylanmamış kayıt varsa o gösterilir.
       const approvedAt = Date.parse(q.phase14.approvedAt || '') || 0;
