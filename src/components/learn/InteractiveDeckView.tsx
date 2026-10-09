@@ -219,6 +219,8 @@ export interface InteractiveDeck {
   matchedPastQuestionsCount: number;
   totalUtterancesCount?: number;
   assignedUtterancesCount?: number;
+  /** Desteye bağlı sorular (targetSlide ile adımlara dağıtılır) */
+  questions?: any[];
 }
 
 interface InteractiveDeckViewProps {

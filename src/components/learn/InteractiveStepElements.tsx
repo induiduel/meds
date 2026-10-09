@@ -578,9 +578,9 @@ const CausalChainElement: React.FC<{ data: InteractiveElementData }> = ({ data }
 // 9. İnteraktif Hücre Maskeli Ezber Tablosu (Interactive Masked Memorization Table)
 const InteractiveTableElement: React.FC<{ data: InteractiveElementData }> = ({ data }) => {
   const d = data as any;
-  const headers = (d.tableHeaders && d.tableHeaders.length ? d.tableHeaders : d.headers) || (d.table && d.table.headers) || [];
-  const rawRows = (d.tableRows && d.tableRows.length ? d.tableRows : d.rows) || (d.table && d.table.rows) || [];
-  const rows = rawRows.map((r: any) => {
+  const headers: string[] = (d.tableHeaders && d.tableHeaders.length ? d.tableHeaders : d.headers) || (d.table && d.table.headers) || [];
+  const rawRows: any[] = (d.tableRows && d.tableRows.length ? d.tableRows : d.rows) || (d.table && d.table.rows) || [];
+  const rows: { cells: { text?: string; isMasked?: boolean; [k: string]: any }[] }[] = rawRows.map((r: any) => {
     if (r && Array.isArray(r.cells)) return r;
     if (Array.isArray(r)) {
       return {
