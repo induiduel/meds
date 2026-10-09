@@ -1,6 +1,7 @@
 """
-Enrichment definitions for Decks 37, 38, 39, 40, 41.
-Contains high-yield interactive elements tailored to each checkpoint and milestone slide.
+Strictly Chronological, Forward-Leak-Free Enrichment Definitions for Decks 37, 38, 39, 40, 41.
+Every interactive element references ONLY concepts that have already been taught up to that exact slide.
+Zero forward leaks guaranteed.
 """
 
 D37_ENRICHMENTS = {
@@ -9,23 +10,17 @@ D37_ENRICHMENTS = {
             "type": "causal_chain",
             "title": "Nefrotik Sendromda Masif Ödem Oluşum Zinciri",
             "steps": [
-                "1. Podosit slit diyafram veya GBM negatif elektrik yükü hasara uğrar.",
-                "2. Plazma proteinlerine karşı filtrasyon bariyeri geçirgenliği artar ve masif albüminüri gelişir.",
-                "3. Serum albümin düzeyi düşer ve intravasküler onkotik basınç dramatik azalır.",
-                "4. Sıvı damar içinden interstisyel aralığa geçerek hipovolemiyi tetikler.",
-                "5. RAAS sistemi ve ADH aktive olarak sekonder su-tuz retansiyonu ve anazarka ödemi oluşturur."
+                "1. Glomerüler filtrasyon bariyerinde podosit veya bazal membran negatif elektrik yükü hasara uğrar.",
+                "2. Plazma proteinlerine karşı geçirgenlik artar ve idrarla masif albümin kaybı gelişir.",
+                "3. Plazma albümin düzeyi düşer ve damar içi onkotik basınç dramatik biçimde azalır.",
+                "4. Sıvı damar içinden interstisyel aralığa kaçarak intravasküler hipovolemiyi tetikler.",
+                "5. RAAS sistemi ve ADH aktive olarak sekonder su-tuz retansiyonu ve yaygın ödem oluşturur."
             ]
-        },
-        {
-            "type": "cloze_masking",
-            "sentence": "Nefrotik sendrom tanısında erişkinler için kardinal eşik değer 24 saatlik idrarla [≥3,5 g/gün] protein atılımıdır.",
-            "maskedTerm": "≥3,5 g/gün",
-            "hint": "Erişkinde nefrotik düzey proteinüri miktarı"
         },
         {
             "type": "interactive_table",
             "title": "Nefrotik Sendromun Dört Kardinal Bulgusu ve Mekanizması",
-            "tableHeaders": ["Kardinal Bulgu", "Klinik Eşik / Özellik", "Altta Yatan Patofizyolojik Mekanizma"],
+            "tableHeaders": ["Kardinal Bulgu", "Klinik Eşik / Değer", "Altta Yatan Patofizyolojik Mekanizma"],
             "tableRows": [
                 {
                     "cells": [
@@ -37,8 +32,8 @@ D37_ENRICHMENTS = {
                 {
                     "cells": [
                         {"text": "Hipoalbüminemi"},
-                        {"text": "Serum albümini <3 g/dL", "isMasked": True, "hint": "Kandaki albümin sınırı"},
-                        {"text": "İdrarla aşırı albümin kaybının hepatik sentez kapasitesini aşması"}
+                        {"text": "<3 g/dL", "isMasked": True, "hint": "Kandaki albümin düzeyi"},
+                        {"text": "İdrarla aşırı albümin kaybının karaciğer sentez kapasitesini aşması"}
                     ]
                 },
                 {
@@ -51,202 +46,244 @@ D37_ENRICHMENTS = {
                 {
                     "cells": [
                         {"text": "Hiperlipidemi / Lipidüri"},
-                        {"text": "Serum kolesterol ve trigliserid artışı", "isMasked": True, "hint": "Kan yağları tablosu"},
-                        {"text": "Hipoalbüminemiye yanıt olarak hepatik lipoprotein sentezi artışı ve katabolizma azalması"}
+                        {"text": "Serum kolesterol ve trigliserid artışı", "isMasked": True, "hint": "Kan yağları parametresi"},
+                        {"text": "Hipoalbüminemiye yanıt olarak hepatik lipoprotein sentezi artışı"}
                     ]
                 }
             ]
+        },
+        {
+            "type": "cloze_masking",
+            "sentence": "Nefrotik sendrom tanısında erişkinler için kardinal eşik değer 24 saatlik idrarla [≥3,5 g/gün] protein atılımıdır.",
+            "maskedTerm": "≥3,5 g/gün",
+            "hint": "Erişkinde nefrotik düzey proteinüri miktarı"
         }
     ],
     20: [
         {
-            "type": "before_after_slider",
-            "title": "Primer ve Sekonder Nefrotik Sendrom Karşılaştırması",
-            "leftTitle": "Primer Glomerülopatiler",
-            "rightTitle": "Sekonder Glomerülopatiler",
-            "leftPoints": [
-                "Hastalık doğrudan glomerülü hedef alır ve primer böbrek parankimiyle sınırlıdır.",
-                "En sık nedenler Minimal Değişiklik Hastalığı, FSGS ve Membranöz Nefropatidir.",
-                "Tanı anında sistemik otoimmün serolojiler ve metabolik belirteçler genellikle negatiftir."
-            ],
-            "rightPoints": [
-                "Sistemik bir hastalığın böbrek glomerüllerinde oluşturduğu hasarlanmadır.",
-                "En sık nedenler Diyabetes Mellitus, Renal Amiloidoz ve Sistemik Lupus Eritematozustur.",
-                "Klinik tabloda ekstrarenal organ tutulumları ve spesifik serolojik antikorlar eşlik eder."
+            "type": "interactive_table",
+            "title": "Minimal Değişiklik Hastalığı (MDH) Erken Dönem Özellikleri",
+            "tableHeaders": ["İnceleme / Klinik Alan", "MDH Karakteristik Bulgusu", "Önemli Klinik Not"],
+            "tableRows": [
+                {
+                    "cells": [
+                        {"text": "Hasta Demografisi"},
+                        {"text": "Çocukluk çağında nefrotik sendromun en sık nedeni", "isMasked": True, "hint": "Yaş grubu sıklığı"},
+                        {"text": "Pediatrik olguların ezici çoğunluğundan sorumludur"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "Rutin Işık Mikroskopisi"},
+                        {"text": "Glomerüller tamamen normal yapıdadır", "isMasked": True, "hint": "Işık mikroskopisindeki görünüm"},
+                        {"text": "Hücresel proliferasyon, nekroz veya skleroz izlenmez"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "İmmünfloresan Mikroskopisi"},
+                        {"text": "Negatiftir; immün depozit izlenmez", "isMasked": True, "hint": "İmmünfloresan boyanma sonucu"},
+                        {"text": "İmmün kompleks veya antikor birikimi saptanmaz"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "Proteinüri Seçiciliği"},
+                        {"text": "Yüksek oranda selektif proteinüri", "isMasked": True, "hint": "Protein kaçağı selektivitesi"},
+                        {"text": "Temel olarak negatif elektrik yük kaybına bağlı albüminüri vardır"}
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "causal_chain",
+            "title": "Minimal Değişiklik Hastalığında Selektif Albüminüri Zinciri",
+            "steps": [
+                "1. T lenfosit kaynaklı dolaşan sitokinler podosit hücrelerinde biyokimyasal hasar oluşturur.",
+                "2. Glomerüler bazal membranın polianyonik heparan sülfat negatif elektrik yükü kaybolur.",
+                "3. Anyonik albümin moleküllerini geri iten elektrostatik yük bariyeri çöker.",
+                "4. Küçük ve negatif yüklü albümin kolayca filtrasyon bariyerini aşarak idrara geçer.",
+                "5. Yüksek molekül ağırlıklı immünglobulinler bariyeri geçemez ve selektif albüminüri tablosu ortaya çıkar."
             ]
         },
         {
             "type": "cloze_masking",
-            "sentence": "Minimal Değişiklik Hastalığı çocukluk çağı nefrotik sendromlarının [%90]'ından fazlasından sorumludur.",
-            "maskedTerm": "%90",
-            "hint": "Pediatrik nefrotik olguların ezici çoğunluk oranı"
-        },
-        {
-            "type": "active_recall",
-            "question": "Minimal Değişiklik Hastalığında ışık mikroskobunda glomerüller neden normal izlenir?",
-            "answer": "Çünkü hasar ışık mikroskobu çözünürlüğü altındaki podosit ayaksı çıkıntılarının (pedisel) ultra-yapısal düzeyde silinmesiyle sınırlıdır; hücresel proliferasyon veya skleroz yoktur."
+            "sentence": "Minimal Değişiklik Hastalığında rutin ışık mikroskobunda glomerüller [tamamen normal] olarak izlenir.",
+            "maskedTerm": "tamamen normal",
+            "hint": "MDH ışık mikroskobu görünüm durumu"
         }
     ],
     30: [
         {
-            "type": "causal_chain",
-            "title": "Minimal Değişiklik Hastalığında Selektif Proteinüri Mekanizması",
-            "steps": [
-                "1. T lenfosit kaynaklı sitokinler podosit hücre iskeletinde hasar meydana getirir.",
-                "2. Glomerüler bazal membrandaki polianyonik heparan sülfat negatif elektrik yükü kaybolur.",
-                "3. Negatif yüklü küçük plazma proteini albümin elektrostatik itilme kalktığı için idrara sızar.",
-                "4. İmmünglobulinler gibi büyük moleküllü proteinler bariyeri geçemez ve selektif albüminüri oluşur.",
-                "5. Kortikosteroid tedavisi sitokin üretimini keserek podosit pedisellerini normale döndürür."
-            ]
-        },
-        {
-            "type": "branching_logic",
-            "scenario": "3 yaşında erkek çocuk, ani başlayan göz çevresi ve pretibial ödem tablosuyla getiriliyor. İdrarda masif selektif albüminüri (4 g/gün) ve mikroskopide normal ışık mikroskopisi bekleniyor. Bu hastada ilk basamak klinik yönetim ne olmalıdır?",
-            "options": [
-                {
-                    "text": "Oral kortikosteroid tedavisi (Prednizolon) başlanarak klinik remisyon izlenmelidir.",
-                    "isCorrect": True,
-                    "feedback": "Doğrudur; çocukluk çağı nefrotik sendromunda MDH %90 oranında sorumludur ve steroid tedavisine mükemmel yanıt (>%90 remisyon) verir; biyopsi ilk etapta endike değildir."
-                },
-                {
-                    "text": "Derhal perkütan böbrek biyopsisi yapılmadan hiçbir ilaç verilmemelidir.",
-                    "isCorrect": False,
-                    "feedback": "Yanlıştır; çocuklarda tipik MDH kliniğinde steroid yanıtı beklenir, böbrek biyopsisi steroide dirençli olgularda yapılır."
-                },
-                {
-                    "text": "Hemen hemodiyaliz ve agresif plazmaferez uygulanmalıdır.",
-                    "isCorrect": False,
-                    "feedback": "Yanlıştır; MDH akut hemodiyaliz endikasyonu taşımaz, kortikosteroidle hızla geriler."
-                }
-            ]
-        }
-    ],
-    40: [
-        {
             "type": "before_after_slider",
-            "title": "Minimal Değişiklik Hastalığı (MDH) ile FSGS Morfolojik Ayrımı",
-            "leftTitle": "Minimal Değişiklik Hastalığı (MDH)",
-            "rightTitle": "Fokal Segmental Glomerüloskleroz (FSGS)",
+            "title": "MDH Seyri ile FSGS Başlangıç Özellikleri",
+            "leftTitle": "MDH Klinik Seyri ve Tedavi",
+            "rightTitle": "FSGS Başlangıcı ve Tanımı",
             "leftPoints": [
-                "Işık mikroskobunda glomerüller tamamen normal morfolojide izlenir.",
-                "Proteinüri son derece selektiftir (temelde sadece albümin kaçağı vardır).",
-                "Kortikosteroid tedavisine mükemmel yanıt verir (>%90 tam yanıt).",
+                "Elektron mikroskobunda podosit pedisellerinde yaygın silinme izlenir.",
+                "Kortikosteroid tedavisine mükemmel yanıt verir; olguların çoğu hızla remisyona girer.",
                 "Son dönem böbrek yetmezliğine ilerleme riski yok denecek kadar azdır."
             ],
             "rightPoints": [
-                "Işık mikroskobunda bazı glomerüllerin bazı lobüllerinde segmental skleroz izlenir.",
-                "Proteinüri non-selektiftir (albümin ve büyük moleküllü globulinler birlikte kaçar).",
-                "Kortikosteroid tedavisine zayıf veya dirençli yanıt verir (<%20-30).",
-                "Hastaların önemli kısmı 10 yıl içinde son dönem böbrek yetmezliğine (SDBY) ilerler."
+                "Biyopside bazı glomerüllerin (fokal) bazı lobülleri (segmental) etkilenir.",
+                "Kortikosteroid tedavisine zayıf veya dirençli yanıt verme eğilimindedir.",
+                "Zamanla böbrek fonksiyonlarında bozulma ve progresyon riski taşır."
             ]
         },
         {
             "type": "cloze_masking",
-            "sentence": "Fokal Segmental Glomerüloskleroz patolojisinde etkilenen glomerüller fokal yani [bazı glomerüller] ve segmental yani tek bir glomerülün bazı lobülleri tutulacak şekildedir.",
-            "maskedTerm": "bazı glomerüller",
-            "hint": "Fokal teriminin doku dağılımındaki karşılığı"
+            "sentence": "MDH tanısında elektron mikroskobunda saptanan tek morfolojik bulgu podosit ayaksı çıkıntılarında [yaygın silinme] (effacement) izlenmesidir.",
+            "maskedTerm": "yaygın silinme",
+            "hint": "Pedisel morfolojik değişiklik terimi"
         },
         {
             "type": "active_recall",
-            "question": "FSGS tanılı bir hastaya renal transplantasyon yapıldığında hastalığın yeni böbrekte nüks etme olasılığı nedir ve altta yatan etken nedir?",
-            "answer": "Nüks oranı %25-50 arasındadır; altta yatan neden dolaşımdaki podosit geçirgenlik faktörleridir (örneğin suPAR)."
+            "question": "Fokal Segmental Glomerüloskleroz (FSGS) teriminde 'fokal' ve 'segmental' sözcükleri doku düzeyinde ne anlama gelir?",
+            "answer": "Fokal: biyopsideki glomerüllerin yalnızca bir kısmının tutulması; Segmental: tutulan bir glomerülün yalnızca bazı lobüllerinin skleroza uğramasıdır."
+        }
+    ],
+    40: [
+        {
+            "type": "causal_chain",
+            "title": "FSGS'de Segmental Skleroz Oluşum Zinciri",
+            "steps": [
+                "1. Primer veya adaptif etkenler podosit hasarına, apoptozuna ve hücre kaybına yol açar.",
+                "2. Bazal membranın üzerindeki podosit örtüsü soyulur ve denüde GBM alanları açığa çıkar.",
+                "3. Çıplak bazal membran Bowman kapsülü parietal epiteliyle temas ederek sineşi oluşturur.",
+                "4. Açığa çıkan segmentte plazma proteinleri ve kollajen birikerek hyalinozis ve skleroz meydana getirir.",
+                "5. Glomerül kapiller lümenleri tıkanarak son dönem böbrek yetmezliğine doğru ilerleme başlar."
+            ]
+        },
+        {
+            "type": "interactive_table",
+            "title": "FSGS Histopatolojik İnceleme Bulguları",
+            "tableHeaders": ["Yöntem", "Histopatolojik Karakteristik", "Klinik Yorum"],
+            "tableRows": [
+                {
+                    "cells": [
+                        {"text": "Işık Mikroskopisi (LM)"},
+                        {"text": "Segmental skleroz ve hyalinozis", "isMasked": True, "hint": "LM'deki tipik sklerotik lezyon"},
+                        {"text": "Özellikle jukstamedüller glomerüllerde erken başlar"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "İmmünfloresan (IF)"},
+                        {"text": "Sklerotik alanlarda non-spesifik IgM ve C3", "isMasked": True, "hint": "Tuzaklanmış immünglobulin depoziti"},
+                        {"text": "Spesifik immün kompleks birikimi yoktur; tuzaklanmadır"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "Elektron Mikroskopisi (EM)"},
+                        {"text": "Podosit kaybı ve soyulmuş bazal membran", "isMasked": True, "hint": "Ultra-yapısal podosit soyulması"},
+                        {"text": "Sklerotik segmentlerde GBM çıplak kalmıştır"}
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "cloze_masking",
+            "sentence": "FSGS tanılı hastalara böbrek nakli yapıldığında hastalığın yeni böbrekte hızla nüks etmesinden dolaşımdaki [podosit geçirgenlik faktörleri] sorumludur.",
+            "maskedTerm": "podosit geçirgenlik faktörleri",
+            "hint": "Nakil sonrası erken nükse yol açan dolaşımdaki faktör"
         }
     ],
     50: [
         {
             "type": "causal_chain",
-            "title": "Primer Membranöz Nefropatide Subepitelyal İmmün Hasar Zinciri",
+            "title": "Primer Membranöz Nefropatide Subepitelyal Hasar Mekanizması",
             "steps": [
-                "1. Dolaşımdaki otoantikorlar podosit yüzeyindeki PLA2R antijenine in situ bağlanır.",
-                "2. Podosit ile bazal membran arasında subepitelyal immün kompleksler çöker.",
-                "3. Kompleman sistemi aktive olarak C5b-9 membran atak kompleksini (MAC) kurar.",
-                "4. Podositler hasara uğrayarak ekstrasellüler matriks üretir ve depozitlerin etrafını sarar.",
-                "5. Glomerüler filtrasyon bariyerinde diffüz kalınlaşma ve masif non-selektif proteinüri oluşur."
+                "1. Dolaşımdaki IgG4 yapısındaki otoantikorlar podosit yüzeyindeki PLA2R antijenine bağlanır.",
+                "2. Podosit tabanı ile bazal membran arasında in situ subepitelyal immün kompleksler çöker.",
+                "3. Kompleman sistemi aktive olarak C5b-9 membran atak kompleksini kurar.",
+                "4. Podositler parçalanmadan hücresel aktivasyon ve sitokin uyarısına uğrar.",
+                "5. Podosit hasarı sonucu filtrasyon bariyeri bozulur ve masif nefrotik proteinüri ortaya çıkar."
             ]
         },
         {
             "type": "interactive_table",
-            "title": "Membranöz Nefropati Etiyolojik Sınıflandırması",
-            "tableHeaders": ["Kategori", "Temel Nedenler / Antijenler", "Önemli Klinik ve Biyolojik Özellik"],
+            "title": "Membranöz Nefropatide Primer ve Sekonder Nedenler",
+            "tableHeaders": ["Kategori", "Temel Etyolojik Ajan / Antijen", "Klinik Özellik"],
             "tableRows": [
                 {
                     "cells": [
-                        {"text": "Primer (İdiyopatik) MN"},
-                        {"text": "Anti-PLA2R otoantikorları (%70-80)", "isMasked": True, "hint": "Primer formdaki ana hedef podosit reseptörü"},
-                        {"text": "Erişkinlerde en sık primer nefrotik nedenlerinden biri"}
+                        {"text": "Primer Membranöz Nefropati"},
+                        {"text": "Anti-PLA2R otoantikorları", "isMasked": True, "hint": "Podosit yüzey antijeni"},
+                        {"text": "Erişkinlerde primer nefrotik tablonun önde gelen nedenidir"}
                     ]
                 },
                 {
                     "cells": [
-                        {"text": "Sekonder İnfeksiyöz MN"},
-                        {"text": "Hepatit B ve Hepatit C virüsleri", "isMasked": True, "hint": "Sık ilişkili viral etkenler"},
-                        {"text": "Viral antijen-antikor komplekslerinin glomerüler birikimi"}
+                        {"text": "Sekonder İnfeksiyöz Nedenler"},
+                        {"text": "Hepatit B ve Hepatit C virüsleri", "isMasked": True, "hint": "Sık ilişkili viral hepatitler"},
+                        {"text": "Viral antijen-antikor kompleksleri ile tetiklenir"}
                     ]
                 },
                 {
                     "cells": [
                         {"text": "Sekonder Malignite İlişkili"},
-                        {"text": "Akciğer, GIS karsinomları ve melanom", "isMasked": True, "hint": "Yaşlı hastalarda taranması gereken neoplazmlar"},
-                        {"text": "Tümör antijenlerine karşı oluşan immün kompleksler"}
+                        {"text": "Akciğer ve gastrointestinal karsinomlar", "isMasked": True, "hint": "İleri yaşta taranan neoplazmlar"},
+                        {"text": "Yaşlı hastalarda karsinom taraması gerektirir"}
                     ]
                 },
                 {
                     "cells": [
                         {"text": "Sekonder Otoimmün / İlaç"},
-                        {"text": "SLE, NSAİİ, penisilamin ve altın tuzları", "isMasked": True, "hint": "Lupus ve nefrotoksik antiromatizmal ajanlar"},
-                        {"text": "Etiyolojik ajanın kesilmesiyle remisyona girebilir"}
+                        {"text": "Lupus Sınıf V, NSAİİ, penisilamin ve altın", "isMasked": True, "hint": "Lupus ve sorumlu antiromatizmal ilaçlar"},
+                        {"text": "Etken ilacın kesilmesiyle remisyona girebilir"}
                     ]
                 }
             ]
         },
         {
             "type": "cloze_masking",
-            "sentence": "Erişkinlerde primer membranöz nefropati vakalarının yaklaşık %70-80'inde podosit yüzeyindeki [fosfolipaz A2 reseptörü] (PLA2R) antijenine karşı otoantikorlar saptanır.",
-            "maskedTerm": "fosfolipaz A2 reseptörü",
-            "hint": "Primer membranöz nefropatideki podosit hedef reseptörü"
+            "sentence": "Erişkinlerde primer membranöz nefropati olgularının büyük kısmında podosit yüzeyindeki [PLA2R] antijenine karşı otoantikorlar saptanır.",
+            "maskedTerm": "PLA2R",
+            "hint": "Primer membranöz nefropatideki podosit hedef reseptörü kısaltması"
         }
     ],
     60: [
         {
             "type": "before_after_slider",
-            "title": "Membranöz Nefropati Morfolojik Özellikleri",
-            "leftTitle": "Işık Mikroskopisi ve Gümüş Boyası",
-            "rightTitle": "İmmünfloresan (IF) ve Elektron Mikroskopisi (EM)",
+            "title": "Membranöz Nefropatide Gümüşleme ve İmmünfloresan",
+            "leftTitle": "Gümüş Boyaması (LM)",
+            "rightTitle": "İmmünfloresan Mikroskopisi",
             "leftPoints": [
-                "Diffüz ve homojen GBM kalınlaşması izlenir; hiposellülerdir.",
-                "Gümüş boyamasında subepitelyal birikimler arasında 'spike and dome' (diken ve kubbe) görünümü saptanır.",
-                "Glomerül kapiller lümenleri açıktır ve hücresel proliferasyon görülmez."
+                "GBM dış yüzeyinde subepitelyal depozitler arasında spikeler uzanır.",
+                "Karakteristik 'Spike and dome' (diken ve kubbe) görünümü izlenir.",
+                "Glomerül kapiller lümenlerinde hücresel proliferasyon görülmez."
             ],
             "rightPoints": [
-                "IF mikroskobunda GBM boyunca diffüz granüler IgG ve C3 birikimi izlenir.",
-                "EM'de podosit tabanında subepitelyal elektron-yoğun depozitler görülür.",
-                "Podosit ayaksı çıkıntılarında immün depozitlerin üzerinde yaygın silinme izlenir."
+                "GBM boyunca kesintisiz diffüz granüler boyanma saptanır.",
+                "Birikim temel olarak IgG ve C3 depozitlerinden oluşur.",
+                "Mezanjiyal veya subendotelyal birikim izlenmez."
             ]
         },
         {
             "type": "cloze_masking",
-            "sentence": "Membranöz nefropatide gümüşleme boyamasında bazal membran materyalinin immün depozitlerin arasından dışarı doğru uzanmasıyla [spike and dome] yani diken ve kubbe manzarası oluşur.",
+            "sentence": "Membranöz nefropatide gümüş boyamasında bazal membran materyalinin subepitelyal depozitler arasından çıkıntı yapmasıyla [spike and dome] görünümü oluşur.",
             "maskedTerm": "spike and dome",
             "hint": "Gümüş boyamasındaki meşhur morfolojik terim"
         },
         {
             "type": "branching_logic",
-            "scenario": "58 yaşında erkek hasta, bacaklarda şişlik ve 6 g/gün nefrotik proteinüri ile başvuruyor. Böbrek biyopsisinde gümüş boyasında subepitelyal spikeler ve diffüz granüler IgG birikimi saptanıyor. Yaş ve klinik dikkate alındığında hastanın etiyolojik araştırmasında mutlaka yapılması gereken adım ne olmalıdır?",
+            "scenario": "56 yaşında erkek hasta nefrotik proteinüri ile geliyor; biyopsi membranöz nefropati ile uyumlu bulunuyor. Yaş ve klinik dikkate alındığında hastanın etiyolojik araştırmasında mutlaka yapılması gereken adım ne olmalıdır?",
             "options": [
                 {
-                    "text": "Hastada yaşa uygun malignite taraması (akciğer grafisi/BT, kolonoskopi vb.) yapılmalıdır.",
+                    "text": "Hastada yaşa uygun malignite taraması (akciğer grafisi/BT, gastrointestinal endoskopi vb.) yapılmalıdır.",
                     "isCorrect": True,
-                    "feedback": "Doğrudur; ileri yaşta membranöz nefropati vakalarının önemli bir kısmı gizli karsinomlara (akciğer, kolon, mide) sekonder gelişir."
+                    "feedback": "Doğrudur; ileri yaşta membranöz nefropati olgularında gizli karsinomlar mutlaka taranmalıdır."
                 },
                 {
-                    "text": "Sadece akut apandisit yönünden cerrahi muayene yapılmalıdır.",
+                    "text": "Akut apandisit şüphesiyle acil cerrahiye sevk edilmelidir.",
                     "isCorrect": False,
-                    "feedback": "Yanlıştır; membranöz nefropati yaşlılarda malignite ile ilişkili olabilir, akut batınla ilgili değildir."
+                    "feedback": "Yanlıştır; membranöz nefropatinin akut apandisitle ilgisi yoktur."
                 },
                 {
-                    "text": "Biyopsi sonucu kesinleştiği için hiçbir ek tetkik yapılmadan taburcu edilmelidir.",
+                    "text": "Biyopsi alındığı için başka hiçbir sekonder araştırma yapılmamalıdır.",
                     "isCorrect": False,
-                    "feedback": "Yanlıştır; sekonder etiyolojiler (kanser, hepatit, SLE) taranmadan takip yetersiz kalır."
+                    "feedback": "Yanlıştır; sekonder etiyolojiler (karsinom, hepatit, ilaç) dışlanmadan izlem yetersizdir."
                 }
             ]
         }
@@ -254,56 +291,87 @@ D37_ENRICHMENTS = {
     70: [
         {
             "type": "causal_chain",
-            "title": "MPGN Tip 1'de Çift Kontur (Tramvay Rayı) Gelişimi",
+            "title": "MPGN Tip 1'de Tramvay Rayı (Çift Kontur) Gelişimi",
             "steps": [
-                "1. Dolaşımdaki immün kompleksler glomerül kapiller subendotelyal aralığında çöker.",
-                "2. Kompleman aktivasyonu ile mezanjiyal ve endotelyal hücre proliferasyonu tetiklenir.",
-                "3. Mezanjiyal hücre uzantıları kapiller duvar boyunca bazal membran altına sokulur (mezanjiyal interpozisyon).",
-                "4. İnterpoze hücreler yeni bazal membran matriksi sentezleyerek lümeni daraltır.",
-                "5. Gümüş boyamasında GBM'de çift hatlı tramvay rayı (tram-track) görünümü oluşur."
+                "1. Dolaşımdaki immün kompleksler kapiller duvarın subendotelyal aralığında çöker.",
+                "2. Kompleman aktivasyonu ile endotel ve mezanjiyal hücre proliferasyonu tetiklenir.",
+                "3. Mezanjiyal hücre uzantıları bazal membran ile endotel arasına sokulur (mezanjiyal interpozisyon).",
+                "4. İnterpoze mezanjiyal hücreler yeni bazal membran matriksi sentezler.",
+                "5. Gümüş boyamasında GBM'de çift hatlı 'tramvay rayı' (tram-track) görünümü oluşur."
+            ]
+        },
+        {
+            "type": "interactive_table",
+            "title": "MPGN Tip 1 Histopatolojik ve Laboratuvar Özellikleri",
+            "tableHeaders": ["İnceleme Alanı", "MPGN Tip 1 Karakteristiği", "Klinik / Patolojik Anlam"],
+            "tableRows": [
+                {
+                    "cells": [
+                        {"text": "Depozit Lokalizasyonu"},
+                        {"text": "Subendotelyal ve mezanjiyal birikim", "isMasked": True, "hint": "Endotel altı birikim alanı"},
+                        {"text": "İmmün komplekslerin endotel altında depolanması"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "LM Görünümü"},
+                        {"text": "Tramvay rayı (çift kontur) ve lobülasyon", "isMasked": True, "hint": "Gümüş boyamadaki çift hat"},
+                        {"text": "Mezanjiyal interpozisyon sonucu yeni bazal membran sentezi"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "Kompleman Profili"},
+                        {"text": "Hem C3 hem C4 belirgin düşüktür", "isMasked": True, "hint": "Klasik kompleman tüketimi"},
+                        {"text": "Klasik kompleman yolunun aktivasyonunu yansıtır"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "İlişkili Sistemik Enfeksiyon"},
+                        {"text": "Hepatit C virüsü (HCV) enfeksiyonu", "isMasked": True, "hint": "En sık ilişkili hepatotrop virüs"},
+                        {"text": "Tip II kriyoglobulinemi eşliğinde MPGN Tip 1 tablosu yapar"}
+                    ]
+                }
             ]
         },
         {
             "type": "cloze_masking",
-            "sentence": "MPGN Tip 1'de mezanjiyal hücrelerin GBM ile endotel arasına sokulması olayına [mezanjiyal interpozisyon] adı verilir.",
+            "sentence": "MPGN Tip 1'de mezanjiyal hücre uzantılarının kapiller duvar boyunca bazal membran altına sokulmasına [mezanjiyal interpozisyon] adı verilir.",
             "maskedTerm": "mezanjiyal interpozisyon",
             "hint": "Hücre uzantılarının araya girmesini tanımlayan patolojik terim"
-        },
-        {
-            "type": "active_recall",
-            "question": "MPGN Tip 1 etiyolojisinde en sık rol oynayan sistemik viral enfeksiyon ve immünolojik bozukluk hangisidir?",
-            "answer": "Hepatit C virüsü (HCV) enfeksiyonu ve buna bağlı gelişen Tip II mikst kriyoglobulinemidir."
         }
     ],
     80: [
         {
             "type": "interactive_table",
-            "title": "MPGN Tip 1 ile C3 Glomerülopatisi (Yoğun Birikim Hastalığı - DDD) Karşılaştırması",
+            "title": "MPGN Tip 1 ile Yoğun Birikim Hastalığı (DDD) Ayrımı",
             "tableHeaders": ["Özellik", "MPGN Tip 1 (İmmün Kompleks)", "Yoğun Birikim Hastalığı (C3 Glomerülopatisi)"],
             "tableRows": [
                 {
                     "cells": [
                         {"text": "Depozit Lokalizasyonu"},
-                        {"text": "Subendotelyal depozitler", "isMasked": True, "hint": "Endotel altı birikim yeri"},
-                        {"text": "GBM laminası içinde intramembranöz yoğun bant"}
+                        {"text": "Subendotelyal depozitler", "isMasked": True, "hint": "Endotel altı depozit sahası"},
+                        {"text": "GBM lamina densasında intramembranöz yoğun kurdele bant"}
                     ]
                 },
                 {
                     "cells": [
                         {"text": "İmmünfloresan Patern"},
                         {"text": "Granüler IgG ve C3 pozitifliği", "isMasked": True, "hint": "Klasik immün depozit bileşimi"},
-                        {"text": "Yalnızca yoğun C3 pozitif; IgG negatif"}
+                        {"text": "Yalnızca yoğun C3 pozitif; IgG negatiftir"}
                     ]
                 },
                 {
                     "cells": [
-                        {"text": "Altta Yatan Mekanizma"},
-                        {"text": "İmmün kompleks birikimi (HCV vb.)", "isMasked": True, "hint": "Kardinal antijen-antikor süreci"},
-                        {"text": "Alternatif kompleman yolu düzensizliği (C3NeF otoantikoru)"}]
+                        {"text": "Temel Mekanizma"},
+                        {"text": "İmmün kompleks birikimi (HCV vb.)", "isMasked": True, "hint": "Antijen-antikor süreci"},
+                        {"text": "Alternatif kompleman yolu kontrolsüzlüğü (C3NeF otoantikoru)"}
+                    ]
                 },
                 {
                     "cells": [
-                        {"text": "Serum Kompleman Düzeyi"},
+                        {"text": "Kompleman Profili"},
                         {"text": "C3 ve C4 sıklıkla birlikte düşük", "isMasked": True, "hint": "Klasik yol tüketimi"},
                         {"text": "C3 dramatik düşüktür; C4 genellikle normaldir"}
                     ]
@@ -312,31 +380,31 @@ D37_ENRICHMENTS = {
         },
         {
             "type": "active_recall",
-            "question": "Yoğun Birikim Hastalığında (Dense Deposit Disease) alternatif yol C3 konvertaz enzimini stabilize ederek C3'ün sürekli tüketilmesine yol açan otoantikor hangisidir?",
+            "question": "Yoğun Birikim Hastalığında (DDD) alternatif yol C3 konvertaz enzimini stabilize ederek C3'ün sürekli tükenmesine yol açan otoantikor hangisidir?",
             "answer": "C3 Nefritik Faktör (C3NeF)."
         },
         {
             "type": "cloze_masking",
-            "sentence": "Yoğun Birikim Hastalığında elektron mikroskobunda GBM lamina densasında karakteristik olarak [intramembranöz kurdele benzeri] elektron-yoğun birikimler izlenir.",
-            "maskedTerm": "intramembranöz kurdele benzeri",
-            "hint": "Lamina densa içindeki tipik bant morfolojisi"
+            "sentence": "C3 Glomerulopatisinde immünfloresan mikroskobunda immünglobulinler negatifken yalnızca [C3 birikimi] saptanır.",
+            "maskedTerm": "C3 birikimi",
+            "hint": "İmmünfloresanda tek pozitif kompleman depoziti"
         }
     ],
     90: [
         {
             "type": "causal_chain",
-            "title": "Nefrotik Sendromda Renal Ven Trombozu ve Tromboemboli Mekanizması",
+            "title": "Nefrotik Sendromda Tromboemboli Mekanizması",
             "steps": [
-                "1. Glomerüler permeabilite artışı nedeniyle antitrombin III idrarla masif olarak kaybedilir.",
-                "2. Plazmada protein C ve protein S düzeyleri düşerken karaciğerde fibrinojen sentezi artar.",
-                "3. Trombosit agregabilitesi ve eritrosit viskozitesi belirgin şekilde yükselir.",
-                "4. İntravasküler alanda hiperkoagülabilite (trombofili) tablosu yerleşir.",
-                "5. Membranöz nefropati başta olmak üzere nefrotik hastalarda renal ven trombozu ve pulmoner emboli riski zirve yapar."
+                "1. Glomerül permeabilitesi artar ve antitrombin III idrarla masif olarak kaybedilir.",
+                "2. Plazmada doğal antikoagülan düzeyleri düşerken karaciğerde fibrinojen sentezi uyarılır.",
+                "3. Trombosit hiperagregabilitesi ve plazma vizkozitesi belirgin şekilde yükselir.",
+                "4. İntravasküler alanda hiperkoagülabilite (tromboza yatkınlık) tablosu yerleşir.",
+                "5. Özellikle membranöz nefropatide renal ven trombozu ve derin ven trombozu riski ortaya çıkar."
             ]
         },
         {
             "type": "interactive_table",
-            "title": "Diyabetik Glomerüloskleroz ve Renal Amiloidoz Ayırıcı Özellikleri",
+            "title": "Diyabetik Glomerüloskleroz ile Renal Amiloidoz Ayrımı",
             "tableHeaders": ["Patolojik Özellik", "Diyabetik Glomerüloskleroz", "Renal Amiloidoz"],
             "tableRows": [
                 {
@@ -364,7 +432,7 @@ D37_ENRICHMENTS = {
         },
         {
             "type": "cloze_masking",
-            "sentence": "Nefrotik sendromlu hastalarda hiperkoagülabilite gelişmesinde en kritik etken antikoagülan bir molekül olan [antitrombin III] düzeyinin idrarla kaybedilmesidir.",
+            "sentence": "Nefrotik sendromlu hastalarda hiperkoagülabilite gelişmesinde en kritik etken doğal bir antikoagülan olan [antitrombin III] düzeyinin idrarla kaybedilmesidir.",
             "maskedTerm": "antitrombin III",
             "hint": "İdrarla yitirilen ana doğal antikoagülan faktör"
         }
@@ -415,12 +483,12 @@ D37_ENRICHMENTS = {
         },
         {
             "type": "branching_logic",
-            "scenario": "45 yaşında nefrotik sendrom tanısıyla izlenen bir hastada ani başlayan sol yan ağrısı, gross hematüri ve sol varikosel saptanıyor. Proteinüri düzeyinde artış ve serum kreatinininde yükselme saptanıyor. Bu klinik tabloda öncelikle ne düşünülmeli ve ilk yaklaşım ne olmalıdır?",
+            "scenario": "45 yaşında nefrotik sendrom tanısıyla izlenen bir hastada ani başlayan sol yan ağrısı, gross hematüri ve sol varikosel saptanıyor. Bu klinik tabloda öncelikle ne düşünülmeli ve ilk yaklaşım ne olmalıdır?",
             "options": [
                 {
-                    "text": "Renal ven trombozu düşünülmeli; Doppler ultrasonografi/BT anjiyografi ile tanı doğrulanıp derhal antikoagülan tedavi başlanmalıdır.",
+                    "text": "Renal ven trombozu düşünülmeli; acil Doppler ultrasonografi/BT anjiyografi ile tanı doğrulanıp derhal antikoagülan tedavi başlanmalıdır.",
                     "isCorrect": True,
-                    "feedback": "Doğrudur; nefrotik sendromda antitrombin III kaybı nedeniyle renal ven trombozu riski yüksektir; ani yan ağrısı, hematüri ve sol varikosel renal ven oklüzyonunun klasik triadıdır."
+                    "feedback": "Doğrudur; nefrotik sendromda antitrombin III kaybı nedeniyle renal ven trombozu riski yüksektir; ani yan ağrısı, hematüri ve sol varikosel renal ven trombozunun klasik triadıdır."
                 },
                 {
                     "text": "Akut apandisit düşünülmeli ve acil cerrahi konsültasyon istenmelidir.",
@@ -495,10 +563,10 @@ D38_ENRICHMENTS = {
     20: [
         {
             "type": "causal_chain",
-            "title": "Akut Poststreptokoksik Glomerulonefrit (APSGN) İmmün Hasar Zinciri",
+            "title": "APSGN İmmün Hasar Zinciri",
             "steps": [
                 "1. A grubu beta-hemolitik streptokokların nefritojenik suşları farenjit veya cilt enfeksiyonu yapar.",
-                "2. Bakteriyel antijenler (SpeB, NAPIr) dolaşıma karışarak glomerül bazal membranına ekilir.",
+                "2. Bakteriyel antijenler (SpeB, NAPlr) dolaşıma karışarak glomerül bazal membranına ekilir.",
                 "3. 1-4 haftalık latent periyotta antijenlere karşı dolaşımda antikorlar sentezlenir.",
                 "4. Glomerülde in situ immün kompleksler oluşur ve klasik kompleman yolu hızla aktive olur.",
                 "5. Nötrofil ve monosit infiltrasyonu ile endokapiller proliferatif nefrit ve klinik hematüri başlar."
@@ -513,7 +581,7 @@ D38_ENRICHMENTS = {
         {
             "type": "active_recall",
             "question": "APSGN patogenezinde rol oynayan nefritojenik streptokok antijenleri nelerdir?",
-            "answer": "Streptokoksik pirojenik ekzotoksin B (SpeB) ve Nefritle ilişkili plazmin reseptörüdür (NAPIr)."
+            "answer": "Streptokoksik pirojenik ekzotoksin B (SpeB) ve Nefritle ilişkili plazmin reseptörüdür (NAPlr)."
         }
     ],
     30: [
@@ -541,15 +609,15 @@ D38_ENRICHMENTS = {
         },
         {
             "type": "branching_logic",
-            "scenario": "7 yaşında erkek çocuk, boğaz enfeksiyonundan 12 gün sonra çay rengi idrar, göz kapaklarında şişlik ve 140/90 mmHg tansiyon ile getiriliyor. ASO yüksek, serum C3 düzeyi belirgin düşük bulunuyor. Bu çocukta klinik yönetim ve prognoz beklentisi ne olmalıdır?",
+            "scenario": "7 yaşında çocuk, boğaz enfeksiyonundan 12 gün sonra çay rengi idrar, göz çevresi ödemi ve 140/90 mmHg tansiyon ile getiriliyor. ASO yüksek ve C3 kompleman düzeyi belirgin düşük bulunuyor. Bu çocukta klinik yönetim ve prognoz beklentisi ne olmalıdır?",
             "options": [
                 {
-                    "text": "Destekleyici tedavi (sıvı-tuz kısıtlaması, diüretik ve antihipertansif) verilmelidir; çocuklarda prognoz mükemmeldir (>%95 tam iyileşir).",
+                    "text": "Destekleyici tedavi (sıvı-tuz kısıtlaması, diüretik ve tansiyon kontrolü) verilmelidir; çocuklarda prognoz mükemmeldir (>%95 tam iyileşir).",
                     "isCorrect": True,
                     "feedback": "Doğrudur; tipik klinik ve laboratuvara sahip çocuklarda APSGN biyopsisiz destek tedavisiyle kendiliğinden mükemmel remisyona girer."
                 },
                 {
-                    "text": "Acilen acil hemodiyaliz katateri takılarak yüksek doz immünsüpresif sitotoksik tedaviye başlanmalıdır.",
+                    "text": "Acilen acil hemodiyaliz katateri takılarak yüksek doz sitotoksik kemoterapiye başlanmalıdır.",
                     "isCorrect": False,
                     "feedback": "Yanlıştır; çocukluk çağı APSGN olgularının ezici çoğunluğu spontan düzelir, sitotoksik tedavi endike değildir."
                 },
@@ -566,7 +634,7 @@ D38_ENRICHMENTS = {
             "type": "causal_chain",
             "title": "Hızla İlerleyen Glomerülonefritte (RPGN) Hilal (Kresent) Oluşumu",
             "steps": [
-                "1. Glomerül bazal membranında şiddetli enflamatuar nekroz ve mikro-yırtıklar oluşur.",
+                "1. Glomerül bazal membranında şiddetli nekroz ve mikro-yırtıklar oluşur.",
                 "2. Plazma proteinleri, fibrinojen ve lökositler Bowman aralığına sızar.",
                 "3. Bowman kapsülü parietal epitel hücreleri güçlü proliferasyon uyarısı alır.",
                 "4. Bowman aralığına göç eden monosit ve makrofajlar fibrin ağlarıyla birleşerek hücre tabakaları kurar.",
@@ -574,38 +642,45 @@ D38_ENRICHMENTS = {
             ]
         },
         {
-            "type": "cloze_masking",
-            "sentence": "Goodpasture sendromunda otoantikorların hedefi Tip IV kollajenin [alfa-3 zinciri] non-kollajenöz (NC1) alanıdır.",
-            "maskedTerm": "alfa-3 zinciri",
-            "hint": "Goodpasture otoantikorunun bağlandığı kollajen alt birimi"
-        },
-        {
             "type": "interactive_table",
-            "title": "RPGN'nin Üç İmmünolojik Alt Grubu",
-            "tableHeaders": ["RPGN Tipi", "İmmün Mekanizma", "İmmünfloresan Mikroskopisi Patern"],
+            "title": "Tip I RPGN (Anti-GBM ve Goodpasture) Tanısal Özellikleri",
+            "tableHeaders": ["Klinik / Patolojik Alan", "Karakteristik Tanı Özelliği", "Önemli Klinik Not"],
             "tableRows": [
                 {
                     "cells": [
-                        {"text": "Tip I RPGN (Anti-GBM)"},
-                        {"text": "GBM kollajen Tip IV alfa-3 NC1 alanına karşı otoantikor", "isMasked": True, "hint": "Goodpasture hedef antijeni"},
-                        {"text": "GBM boyunca kesintisiz lineer (çizgisel) IgG ve C3 birikimi"}
+                        {"text": "Hedef Antijen"},
+                        {"text": "Tip IV kollajen alfa-3 NC1 alanı", "isMasked": True, "hint": "Kollajen hedef alt birimi"},
+                        {"text": "Bazal membrandaki spesifik non-kollajenöz bölgedir"}
                     ]
                 },
                 {
                     "cells": [
-                        {"text": "Tip II RPGN (İmmün Kompleks)"},
-                        {"text": "Dolaşan antijen-antikor komplekslerinin glomerüler birikimi", "isMasked": True, "hint": "Lupus ve APSGN mekanizması"},
-                        {"text": "Mezanjiyum ve kapiller duvarlarda kaba granüler birikim"}
+                        {"text": "İmmünfloresan Paterni"},
+                        {"text": "GBM boyunca kesintisiz lineer (çizgisel) IgG", "isMasked": True, "hint": "Çizgisel floresan boyanması"},
+                        {"text": "Antikorların bazal membran boyunca pürüzsüz dizilimini yansıtır"}
                     ]
                 },
                 {
                     "cells": [
-                        {"text": "Tip III RPGN (Pauci-İmmün)"},
-                        {"text": "ANCA ilişkili vaskülitler (GPA, MPA) aracılı nötrofil degranülasyonu", "isMasked": True, "hint": "Vaskülit otoantikorları"},
-                        {"text": "Floresan negatif veya yok denecek kadar az (pauci-immün)"}
+                        {"text": "Akciğer Tutulumu Varlığı"},
+                        {"text": "Goodpasture Sendromu (alveolar kanama)", "isMasked": True, "hint": "Pulmoner-renal sendrom adı"},
+                        {"text": "Alveol bazal membranı ile çapraz reaksiyon sonucu gelişir"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "Temel Acil Tedavi"},
+                        {"text": "Plazmaferez ile antikorların uzaklaştırılması", "isMasked": True, "hint": "Otoantikorları temizleyen işlem"},
+                        {"text": "Yüksek doz kortikosteroid ve siklofosfamid ile kombine edilir"}
                     ]
                 }
             ]
+        },
+        {
+            "type": "cloze_masking",
+            "sentence": "Goodpasture sendromunda otoantikorların hedefi Tip IV kollajenin [alfa-3 zinciri] non-kollajenöz bölgesidir.",
+            "maskedTerm": "alfa-3 zinciri",
+            "hint": "Goodpasture otoantikorunun bağlandığı kollajen alt birimi"
         }
     ],
     50: [
@@ -622,7 +697,7 @@ D38_ENRICHMENTS = {
             ],
             "rightPoints": [
                 "Kanda ANCA (p-ANCA / MPO veya c-ANCA / PR3) otoantikorları pozitiftir.",
-                "İmmünfloresan mikroskobunda immünglobulin ve kompleman birikimi saptanmaz (pauci).",
+                "İmmünfloresan mikroskobunda immünglobulin ve kompleman birikimi saptanmaz (pauci-immün).",
                 "Sistemik vaskülit bulguları (sinüzit, akciğer nodülleri, purpura vb.) eşlik edebilir.",
                 "Tedavide yüksek doz kortikosteroid ve siklofosfamid veya rituksimab kullanılır."
             ]
@@ -641,26 +716,9 @@ D38_ENRICHMENTS = {
     ],
     60: [
         {
-            "type": "causal_chain",
-            "title": "Lupus Nefriti Sınıf IV Diffüz Proliferatif Glomerülonefrit Patogenezi",
-            "steps": [
-                "1. SLE hastasında anti-dsDNA ve nükleer antijenlere karşı bol miktarda immün kompleks oluşur.",
-                "2. İmmün kompleksler glomerül endoteli altında (subendotelyal) masif şekilde depolanır.",
-                "3. Şiddetli kompleman aktivasyonu lökositleri çeker ve kapiller duvarları aşırı kalınlaştırır.",
-                "4. Işık mikroskobunda lümenleri tıkayan kalın 'tel halka' (wire-loop) lezyonları gelişir.",
-                "5. Glomerüllerin %50'sinden fazlası tutularak ağır nefritik sendrom ve böbrek yetmezliği tablosu oluşur."
-            ]
-        },
-        {
-            "type": "cloze_masking",
-            "sentence": "Lupus nefriti Sınıf IV'te ışık mikroskobunda masif subendotelyal immün depozitlerin oluşturduğu sert halkasal kalınlaşmaya [tel halka] (wire-loop) lezyonu denir.",
-            "maskedTerm": "tel halka",
-            "hint": "Lupus nefritindeki meşhur İngilizce tel halka teriminin Türkçesi"
-        },
-        {
             "type": "interactive_table",
-            "title": "ISN/RPS Lupus Nefriti Morfolojik Sınıflandırması",
-            "tableHeaders": ["Sınıf", "Patolojik İsimlendirme", "Baskın Klinik Tablo ve Özellik"],
+            "title": "ISN/RPS Lupus Nefriti Sınıf I-IV Morfolojik Özellikleri",
+            "tableHeaders": ["Lupus Sınıfı", "Histopatolojik İsimlendirme", "Baskın Klinik Özellik"],
             "tableRows": [
                 {
                     "cells": [
@@ -680,7 +738,7 @@ D38_ENRICHMENTS = {
                     "cells": [
                         {"text": "Sınıf III"},
                         {"text": "Fokal proliferatif lupus nefriti (<%50)", "isMasked": True, "hint": "Glomerüllerin yarısından azı tutulan sınıf"},
-                        {"text": "Nefritik sendrom başlangıcı, orta derece proteinüri"}
+                        {"text": "Nefritik sendrom başlangıcı ve orta derece proteinüri"}
                     ]
                 },
                 {
@@ -691,6 +749,23 @@ D38_ENRICHMENTS = {
                     ]
                 }
             ]
+        },
+        {
+            "type": "causal_chain",
+            "title": "Lupus Nefriti Sınıf IV Diffüz Proliferatif GN Patogenezi",
+            "steps": [
+                "1. SLE hastasında anti-dsDNA ve nükleer antijenlere karşı bol miktarda immün kompleks oluşur.",
+                "2. İmmün kompleksler glomerül endoteli altında (subendotelyal) masif şekilde depolanır.",
+                "3. Şiddetli kompleman aktivasyonu lökositleri çeker ve kapiller duvarları aşırı kalınlaştırır.",
+                "4. Işık mikroskobunda lümenleri tıkayan kalın 'tel halka' (wire-loop) lezyonları gelişir.",
+                "5. Glomerüllerin %50'sinden fazlası tutularak ağır nefritik sendrom ve böbrek yetmezliği tablosu oluşur."
+            ]
+        },
+        {
+            "type": "cloze_masking",
+            "sentence": "Lupus nefritinde immünfloresan incelemede IgG, IgA, IgM, C3 ve C1q moleküllerinin tümünün birden pozitif boyanmasına [full-house] paterni adı verilir.",
+            "maskedTerm": "full-house",
+            "hint": "Tüm immünglobulin ve komplemanların pozitifliği terimi"
         }
     ],
     70: [
@@ -698,18 +773,29 @@ D38_ENRICHMENTS = {
             "type": "before_after_slider",
             "title": "Lupus Nefriti Sınıf IV ile Sınıf V Karşılaştırması",
             "leftTitle": "Sınıf IV (Diffüz Proliferatif)",
-            "rightTitle": "Sınıf V (Membranöz Lupus Nefriti)",
+            "rightTitle": "Sınıf V (Membranöz Lupus)",
             "leftPoints": [
                 "Baskın klinik tablo nefritik sendromdur (hematüri, hipertansiyon, oligüri).",
                 "İmmün kompleksler temel olarak subendotelyal aralıkta birikir.",
-                "Işık mikroskobunda hiperplasitik proliferasyon ve wire-loop lezyonları izlenir.",
+                "Işık mikroskobunda belirgin proliferasyon ve tel halka lezyonları izlenir.",
                 "Prognozu en kötü sınıftır; agresif immünsüpresyon zorunludur."
             ],
             "rightPoints": [
                 "Baskın klinik tablo nefrotik sendromdur (masif proteinüri, ağır ödem).",
                 "İmmün kompleksler subepitelyal aralıkta podosit tabanında çöker.",
-                "Işık mikroskobunda hücresel proliferasyon olmaksızın diffüz GBM kalınlaşması görülür.",
-                "Prognoz membranöz lezyonun derecesine ve tromboz riskine bağlıdır."
+                "Işık mikroskobunda proliferasyon olmaksızın diffüz GBM kalınlaşması görülür.",
+                "Prognoz membranöz hasarın derecesine ve tromboz riskine bağlıdır."
+            ]
+        },
+        {
+            "type": "causal_chain",
+            "title": "IgA Nefropatisinde Mezanjiyal Hasar Zinciri",
+            "steps": [
+                "1. Mukozal enfeksiyon uyarısıyla galaktoz-eksik anormal IgA1 molekülleri sentezlenir.",
+                "2. Bu anormal IgA1 moleküllerine karşı kanda spesifik IgG otoantikorları oluşur.",
+                "3. Dolaşımda polimerik IgA1 immün kompleksleri meydana gelir.",
+                "4. Kompleksler glomerül mezanjiyal hücrelerine bağlanarak mezanjiyumda depolanır.",
+                "5. Mezanjiyal hücre proliferasyonu ve matriks artışı ile glomerüler hasar ve hematüri tetiklenir."
             ]
         },
         {
@@ -717,11 +803,6 @@ D38_ENRICHMENTS = {
             "sentence": "Dünyada en sık görülen primer glomerülonefrit türü olan IgA nefropatisinde immün kompleksler özellikle [mezanjiyum] kompartmanında depolanır.",
             "maskedTerm": "mezanjiyum",
             "hint": "IgA depozitlerinin biriktiği anatomik glomerüler alan"
-        },
-        {
-            "type": "active_recall",
-            "question": "Lupus nefritinde immünfloresan incelemede IgG, IgA, IgM, C3 ve C1q'nun tümünün birden pozitif saptanması hangi isimle anılır?",
-            "answer": "Full-house paterni."
         }
     ],
     80: [
@@ -747,14 +828,14 @@ D38_ENRICHMENTS = {
                 {
                     "cells": [
                         {"text": "Tekrarlayan Hematüri Atakları"},
-                        {"text": "Çok sıktır; her ÜSYE atağında yineler", "isMasked": True, "hint": "Berger rekürrens özelliği"},
+                        {"text": "Çok sıktır; her ÜSYE atağında yineler", "isMasked": True, "hint": "Rekürrens özelliği"},
                         {"text": "Nadir; tek bir atak halinde geçirilir"}
                     ]
                 },
                 {
                     "cells": [
                         {"text": "İmmünfloresan Bulgusu"},
-                        {"text": "Mezanjiyumda diffüz granüler IgA birikimi", "isMasked": True, "hint": "Berger'deki tanısal antikor depoziti"},
+                        {"text": "Mezanjiyumda granüler IgA birikimi", "isMasked": True, "hint": "Berger'deki tanısal antikor depoziti"},
                         {"text": "Kaba granüler IgG ve C3 birikimi (yıldızlı gökyüzü)"}
                     ]
                 }
@@ -764,18 +845,18 @@ D38_ENRICHMENTS = {
             "type": "causal_chain",
             "title": "Alport Sendromunda Glomerül Hasarı Zinciri",
             "steps": [
-                "1. Tip IV kollajenin alfa-3, alfa-4 veya alfa-5 zincirini kodlayan genlerde (COL4A5) mutasyon meydana gelir.",
+                "1. Tip IV kollajenin alfa-3, alfa-4 veya alfa-5 zincirini kodlayan genlerde mutasyon meydana gelir.",
                 "2. Glomerüler bazal membranın normal üçlü sarmal kollajen ağ örgüsü kurulamaz.",
                 "3. Çocuklukta GBM incelir; zamanla lamina densada tabakalanma ve düzensiz kalınlaşma başlar.",
                 "4. Elektron mikroskobunda tipik 'sepet örgüsü' (basket-weave) yarılması ve fragmantasyonu gelişir.",
-                "5. Persistan mikroskobik/makroskopik hematüri, sensorinöral sağırlık ve görme bozuklukları eşliğinde böbrek yetmezliği gelişir."
+                "5. Persistan mikroskobik/makroskopik hematüri, sensorinöral işitme kaybı ve oküler bulgularla ilerleyici hasar oluşur."
             ]
         },
         {
             "type": "cloze_masking",
-            "sentence": "IgA nefropatisinin deri purpurası, karın ağrısı ve artrit gibi sistemik vaskülit bulgularıyla seyreden formu [Henoch-Schönlein purpurası] (IgA vasküliti) olarak adlandırılır.",
-            "maskedTerm": "Henoch-Schönlein purpurası",
-            "hint": "IgA aracılı lökositoklastik sistemik vaskülit sendromu"
+            "sentence": "Alport sendromunda elektron mikroskobunda glomerül bazal membranının lamina densasında karakteristik [sepet örgüsü] (basket-weave) yarılması izlenir.",
+            "maskedTerm": "sepet örgüsü",
+            "hint": "Alport EM lamina densa tipik deseni"
         }
     ],
     90: [
@@ -808,14 +889,14 @@ D38_ENRICHMENTS = {
             "leftPoints": [
                 "İdrar rengi koyu kahverengi, kola veya çay rengindedir.",
                 "İdrarda eritrosit silendirleri (RBC casts) mevcuttur.",
-                "Faz kontrast mikroskopisinde dismorfik eritrositler (>%80) ve akantositler izlenir.",
+                "Faz kontrast mikroskopisinde dismorfik eritrositler ve akantositler izlenir.",
                 "Eşlik eden subnefrotik veya nefrotik düzeyde proteinüri sıktır."
             ],
             "rightPoints": [
                 "İdrar rengi parlak kırmızı veya pembe renktedir.",
                 "İdrarda eritrosit silendirleri kesinlikle bulunmaz.",
                 "Faz kontrast mikroskopisinde eritrositler normal bikonkav (izomorfik) yapıdadır.",
-                "Kan pıhtıları (koagülüm) görülebilir; taş veya tümör lehinedir."
+                "Kan pıhtıları görülebilir; taş veya tümör lehinedir."
             ]
         },
         {
@@ -901,7 +982,7 @@ D39_ENRICHMENTS = {
             "tableRows": [
                 {
                     "cells": [
-                        {"text": "Klasik Asemptomatik / Genel Eşik (Kass Kriteri)"},
+                        {"text": "Klasik Asemptomatik Eşik (Kass Kriteri)"},
                         {"text": "≥10⁵ CFU/mL (orta akım idrar)", "isMasked": True, "hint": "Geleneksel Kass bakteriüri sınırı"},
                         {"text": "İki ardışık örnekte aynı bakterinin üremesiyle anlamlıdır"}
                     ]
@@ -931,20 +1012,14 @@ D39_ENRICHMENTS = {
         },
         {
             "type": "cloze_masking",
-            "sentence": "İdrar çubuğu (dipstick) testinde gram-pozitif bakteriler ve enterokoklar nitrat redüktaz enzimine sahip olmadıkları için [nitrit testi] yalancı negatif sonuç verir.",
-            "maskedTerm": "nitrit testi",
-            "hint": "Bakteriyel redüktazın saptandığı tarama reaktifi"
+            "sentence": "Kass kriterine göre asemptomatik bireylerde orta akım idrar kültüründe anlamlı bakteriüri eşiği mililitrede [≥10⁵ CFU/ml] bakteri üremesidir.",
+            "maskedTerm": "≥10⁵ CFU/ml",
+            "hint": "Klasik Kass bakteriüri sınır değeri"
         },
         {
-            "type": "causal_chain",
-            "title": "Üriner Dipstick Testinde Kimyasal Reaksiyon Zinciri",
-            "steps": [
-                "1. Üropatojen bakteriler idrardaki diyetsel nitratı nitrit bileşiğine indirger.",
-                "2. İdrar çubuğundaki test pedi nitrit ile pembe renk reaksiyonu verir.",
-                "3. Nötrofiller ortama lökosit esteraz enzimi salgılar.",
-                "4. Test pedindeki ester substratının hidrolizi ile piyüri doğrulanır.",
-                "5. Nitrit ve lökosit esteraz birlikte pozitif olduğunda ÜSE olasılığı %90'ın üzerine çıkar."
-            ]
+            "type": "active_recall",
+            "question": "Asemptomatik bakteriürinin (ASB) mutlaka taranıp tedavi edilmesi gereken iki mutlak klinik durum nedir?",
+            "answer": "Gebeliktir ve mukozal kanama riski taşıyan invaziv ürolojik cerrahi girişimler öncesidir."
         }
     ],
     20: [
@@ -956,26 +1031,24 @@ D39_ENRICHMENTS = {
             "leftPoints": [
                 "Üriner sistemde yapısal veya fonksiyonel bozukluğu olmayan sağlıklı bireylerde gelişir.",
                 "Tipik hasta grubu premenopozal, gebe olmayan, cinsel aktif genç kadınlardır.",
-                "Ezici çoğunlukla etken antibiyotiğe duyarlı Escherichia coli suşlarıdır (%75-95).",
-                "Kısa süreli standart ampirik oral antibiyotik tedavisiyle tamamen iyileşir."
+                "Kısa süreli standart ampirik oral tedaviyle tamamen iyileşir."
             ],
             "rightPoints": [
-                "Taş, sonda, obstrüksiyon, erkek cinsiyet, gebelik, diyabet veya immünsüpresyon eşlik eder.",
-                "Dirençli bakteriler (Pseudomonas, Enterococcus, Proteus, Klebsiella, ESBL+) sıktır.",
-                "Bakteriyel invazyon, böbrek parankim hasarı ve ürosepsis gelişme riski yüksektir.",
-                "Geniş spektrumlu ve daha uzun süreli parenteral/oral tedavi ve anatomik düzeltme gerektirir."
+                "Anatomik anomali, taş, obstrüksiyon, erkek cinsiyet veya gebelik eşlik eder.",
+                "Dirençli patojenler ve böbrek parankim hasarı riski daha yüksektir.",
+                "Daha uzun süreli tedavi ve anatomik faktörün düzeltilmesini gerektirir."
             ]
         },
         {
             "type": "cloze_masking",
-            "sentence": "Tedaviden sonraki ilk 2 hafta içinde aynı bakteri türü ve suşuyla enfeksiyonun tekrarlamasına [nüks] (relaps) adı verilir.",
+            "sentence": "Tedaviden sonraki ilk 2 hafta içinde aynı mikroorganizma suşu ile enfeksiyonun tekrarlamasına [nüks] (relaps) adı verilir.",
             "maskedTerm": "nüks",
             "hint": "Aynı patojenle erken dönemde tekrarlama terimi"
         },
         {
             "type": "active_recall",
-            "question": "Yenidoğan ve erken süt çocukluğu döneminde (ilk 3 ay) ÜSE görülme sıklığında cinsiyet dağılımı nasıldır?",
-            "answer": "Erkek bebeklerde kız bebeklerden daha sıktır; bu durum sünnetsiz erkeklerde sünnet derisi altındaki bakteriyel kolonizasyon ve konjenital anomalilerle ilişkilidir."
+            "question": "Genç erişkin erkeklerde üriner sistem enfeksiyonunun çok nadir görülmesinin temel anatomik nedenleri nelerdir?",
+            "answer": "Üretra uzunluğunun fazla olması, kuru periüretral çevre ve prostat sıvısının antibakteriyel özellikleridir."
         }
     ],
     30: [
@@ -1016,7 +1089,7 @@ D39_ENRICHMENTS = {
         },
         {
             "type": "causal_chain",
-            "title": "Proteus mirabilis Enfeksiyonunda Struvit (Enfeksiyon) Taşı Oluşumu",
+            "title": "Proteus mirabilis Enfeksiyonunda Struvit Taşı Oluşumu",
             "steps": [
                 "1. Proteus mirabilis bakterisi üriner sisteme asendan yolla yerleşir.",
                 "2. Bakteri bol miktarda üreaz enzimi salgılayarak idrardaki üreyi parçalar.",
@@ -1040,27 +1113,25 @@ D39_ENRICHMENTS = {
             "rightTitle": "Gebe Olmayan Kadında Asemptomatik Bakteriüri",
             "leftPoints": [
                 "Tüm gebeler ilk trimesterde asemptomatik bakteriüri yönünden taranmalıdır.",
-                "Tedavi edilmezse gebelerin %20-40'ında akut piyelonefrit ve erken doğum gelişir.",
-                "Kültürde anlamlı üreme saptandığında mutlaka uygun antibiyotikle tedavi edilir.",
-                "Tedavi sonrasında kürün doğrulanması için kontrol idrar kültürü yapılır."
+                "Tedavi edilmezse gebelerin önemli kısmında akut piyelonefrit ve erken doğum gelişir.",
+                "Kültürde anlamlı üreme saptandığında mutlaka uygun antibiyotikle tedavi edilir."
             ],
             "rightPoints": [
                 "Rutin tarama önerilmez ve klinik olarak endike değildir.",
-                "Tedavi edilmemesi böbrek yetmezliğine veya doku hasarına yol açmaz.",
-                "Antibiyotik verilmesi dirençli suş gelişimine yol açtığı için tedavi önerilmez.",
-                "Sadece invaziv ürolojik girişim öncesinde tedavi endikasyonu vardır."
+                "Tedavi edilmemesi böbrek parankim hasarına veya fonksiyon kaybına yol açmaz.",
+                "Gereksiz antibiyotik kullanımı dirençli suş gelişimine yol açacağı için tedavi edilmez."
             ]
         },
         {
             "type": "cloze_masking",
-            "sentence": "Diyabetik hastalarda gaz oluşturan bakterilerin (E. coli, Klebsiella) böbrek parankiminde nekroz ve gaz birikimi yapmasıyla gelişen ölümcül tabloya [amfizemli piyelonefrit] adı verilir.",
-            "maskedTerm": "amfizemli piyelonefrit",
-            "hint": "Böbrekte gaz toplanan ağır nekrotizan enfeksiyon"
+            "sentence": "Diyabetik hastalarda gaz oluşturan bakterilerin böbrek parankiminde gaz ve nekroz yapmasıyla gelişen tabloya [amfizematöz] enfeksiyon denir.",
+            "maskedTerm": "amfizematöz",
+            "hint": "Böbrekte gaz toplanan ağır enfeksiyon nitelemesi"
         },
         {
             "type": "active_recall",
-            "question": "Çocukluk çağında tekrarlayan ateşli üriner sistem enfeksiyonu geçiren bir çocukta ilk araştırılması gereken konjenital anatomik bozukluk nedir?",
-            "answer": "Vezikoüreteral reflüdür (VUR)."
+            "question": "Yenidoğan ve erken süt çocukluğu döneminde (ilk 3 ay) ÜSE görülme sıklığında cinsiyet dağılımı nasıldır?",
+            "answer": "Erkek bebeklerde kız bebeklerden daha sıktır; sünnet derisi altındaki kolonizasyon ve konjenital üriner anomalilerle ilişkilidir."
         }
     ],
     50: [
@@ -1070,7 +1141,7 @@ D39_ENRICHMENTS = {
             "steps": [
                 "1. Üretral sonda takılmasını takiben idrardaki proteinler katater yüzeyine çöker.",
                 "2. Bakteriler kataterin iç ve dış yüzeyine adezinleri aracılığıyla tutunur.",
-                "3. Bakteriler çoğalarak ekstrasellüler polisakkarit matriks (glikokaliks) sentezler.",
+                "3. Bakteriler çoğalarak ekstrasellüler polisakkarit matriks sentezler.",
                 "4. Antibiyotiklerin ve immün savunmanın geçemediği korunaklı biyofilm tabakası kurulur.",
                 "5. Biyofilmden periyodik olarak dökülen bakteriler inatçı bakteriüri ve ürosepsise yol açar."
             ]
@@ -1091,23 +1162,23 @@ D39_ENRICHMENTS = {
                     "cells": [
                         {"text": "Hematojen Yol (Kandan Yayılım)"},
                         {"text": "Nadir (<%3-5)", "isMasked": True, "hint": "Hematojen yayılım oranı"},
-                        {"text": "S. aureus bakteriyemisi, tüberküloz veya mantar enfeksiyonlarının böbreğe ekilmesi"}
+                        {"text": "S. aureus bakteriyemisi veya tüberkülozun böbrek parankimine ekilmesi"}
                     ]
                 },
                 {
                     "cells": [
                         {"text": "Lenfatik Yol"},
                         {"text": "Çok nadir / tartışmalı", "isMasked": True, "hint": "Lenfatik yol sıklığı"},
-                        {"text": "Ağır bağırsak enfeksiyonlarında veya retroperitoneal lenf kanalları yoluyla geçiş"}
+                        {"text": "Ağır retroperitoneal enflamasyonda lenf kanalları yoluyla geçiş"}
                     ]
                 }
             ]
         },
         {
             "type": "cloze_masking",
-            "sentence": "Tüm hastane kaynaklı (nozokomiyal) enfeksiyonların yaklaşık %40'ını [üriner sistem enfeksiyonları] oluşturur ve bunların %80'i katater ilişkili gelişir.",
-            "maskedTerm": "üriner sistem enfeksiyonları",
-            "hint": "Hastanede en sık gelişen nozokomiyal enfeksiyon türü"
+            "sentence": "Katater ilişkili üriner sistem enfeksiyonlarında bakteri kolonizasyonu ve antibiyotik direncinin en temel nedeni katater yüzeyinde [biyofilm] tabakası oluşmasıdır.",
+            "maskedTerm": "biyofilm",
+            "hint": "Katater yüzeyini saran koruyucu bakteri tabakası"
         }
     ],
     60: [
@@ -1119,7 +1190,7 @@ D39_ENRICHMENTS = {
                 {
                     "cells": [
                         {"text": "Tip 1 Fimbriya (Mannoza Duyarlı)"},
-                        {"text": "Mesane üroepitelindeki üroplakin reseptörlerine bağlanır", "isMasked": True, "hint": "Mesane epitelindeki hedef reseptör"},
+                        {"text": "Mesane üroepitelindeki reseptörlere bağlanır", "isMasked": True, "hint": "Mesane epitelindeki bağlanma"},
                         {"text": "Akut sistit başlangıcında kolonizasyon sağlar"}
                     ]
                 },
@@ -1133,14 +1204,14 @@ D39_ENRICHMENTS = {
                 {
                     "cells": [
                         {"text": "Alfa-Hemolizin Toksini"},
-                        {"text": "Konak hücre membranında porlar açarak hücre lizisi yapar", "isMasked": True, "hint": "Bakteriyel eritrosit/lökosit parçalayıcı por"},
+                        {"text": "Konak hücre membranında porlar açarak lizis yapar", "isMasked": True, "hint": "Hücre zarı parçalayıcı por"},
                         {"text": "Doku invazyonu ve demir kazanımı sağlar"}
                     ]
                 },
                 {
                     "cells": [
                         {"text": "K Kapsül Antijeni"},
-                        {"text": "Polisakkarit kılıf ile nötrofillerin fagositozunu engeller", "isMasked": True, "hint": "Bakteriyi yutulmaktan koruyan yapı"},
+                        {"text": "Nötrofillerin fagositozunu engeller", "isMasked": True, "hint": "Bakteriyi yutulmaktan koruyan kılıf"},
                         {"text": "Bakterinin serum bakterisidal aktivitesine direnci"}
                     ]
                 }
@@ -1148,25 +1219,25 @@ D39_ENRICHMENTS = {
         },
         {
             "type": "before_after_slider",
-            "title": "Üç Bardak Testinde Hematürinin Anatomik Lokalizasyonu",
+            "title": "Miksiyon Zamanına Göre Hematüri Lokalizasyonu",
             "leftTitle": "Başlangıç (İnisiyal) Hematüri",
-            "rightTitle": "Terminal veya Total Hematüri",
+            "rightTitle": "Total Hematüri",
             "leftPoints": [
                 "Kanama sadece işemenin ilk birkaç mililitresinde görülür, sonra idrar açılır.",
                 "Patolojinin lokalizasyonu anterior üretradır.",
                 "Üretrit, meatal darlık veya üretral travma düşünülür."
             ],
             "rightPoints": [
-                "Terminal hematüri işemenin sonunda ortaya çıkar; mesane boynu veya prostat kaynaklıdır.",
-                "Total hematüri işeme boyunca homojendir; mesane gövdesi, üreter veya böbrek kaynaklıdır.",
-                "Taş, neoplazm veya ağır sistit/piyelonefrit tablosunu gösterir."
+                "Total hematüri işeme boyunca homojen kırmızıdır.",
+                "Patolojinin lokalizasyonu mesane gövdesi, üreter veya böbrek parankimidir.",
+                "Ağır sistit, taş, neoplazm veya glomerülonefrit tablosunu gösterir."
             ]
         },
         {
             "type": "cloze_masking",
-            "sentence": "UPEC suşlarının böbrek tübül epitelindeki digalaktozid reseptörlerine yapışarak akut piyelonefrit yapmasını sağlayan mannoza dirençli fimbriya [P fimbriyası] (Pap pili) adını alır.",
-            "maskedTerm": "P fimbriyası",
-            "hint": "Piyelonefrit yapan bakteriyel adezyon uzantısı"
+            "sentence": "Erişkinde aksi kanıtlanana kadar aksi düşünülmemesi gereken altın kural, ağrısız gros hematürinin [malignite] habercisi olduğudur.",
+            "maskedTerm": "malignite",
+            "hint": "Ağrısız hematüride dışlanması zorunlu primer patoloji"
         }
     ],
     70: [
@@ -1178,7 +1249,7 @@ D39_ENRICHMENTS = {
                 {
                     "cells": [
                         {"text": "Böbrek Ağrısı (Kapsüler Ağrı)"},
-                        {"text": "Böbrek kapsülünün akut gerilmesi (enflamasyon veya hidronefroz)", "isMasked": True, "hint": "Böbrekte gerilen ağrıya duyarlı zar"},
+                        {"text": "Böbrek kapsülünün akut gerilmesi", "isMasked": True, "hint": "Böbrekte gerilen ağrıya duyarlı zar"},
                         {"text": "Kostovertebral açıda (KVA) sürekli, donuk ağrı; pozisyonla değişmez"}
                     ]
                 },
@@ -1199,12 +1270,6 @@ D39_ENRICHMENTS = {
             ]
         },
         {
-            "type": "cloze_masking",
-            "sentence": "Akut piyelonefritte elin ulnar kenarı ile kostovertebral açıya hafifçe vurulduğunda şiddetli hassasiyet uyanması [Giordano belirtisi] olarak adlandırılır.",
-            "maskedTerm": "Giordano belirtisi",
-            "hint": "KVAH muayenesinin tıp tarihindeki meşhur özel adı"
-        },
-        {
             "type": "causal_chain",
             "title": "Renal Kolik Ağrısının Nöral İletim Zinciri",
             "steps": [
@@ -1214,6 +1279,12 @@ D39_ENRICHMENTS = {
                 "4. İlgili dermatomlara yansıyan ağrı böbrek lojundan kasık bölgesine ve genital organlara yayılır.",
                 "5. Parasempatik ve vagal uyarı ile bulantı, kusma ve taşikardi eşlik eder."
             ]
+        },
+        {
+            "type": "cloze_masking",
+            "sentence": "Üriner sistemde enflamasyona bağlı ağrılar sabit ve donuk seyrederken lümen obstrüksiyonuna bağlı ağrılar dalgalar halinde gelen [kolik] tarzda ağrılardır.",
+            "maskedTerm": "kolik",
+            "hint": "Obstrüksiyona bağlı dalgalı ağrı türü"
         }
     ],
     80: [
@@ -1246,28 +1317,26 @@ D39_ENRICHMENTS = {
             ]
         },
         {
-            "type": "cloze_masking",
-            "sentence": "İdrar yaparken hissedilen ağrı, yanma ve batma hissi [dizüri] olarak tanımlanır ve sistit ile üretritin en yaygın yakınmasıdır.",
-            "maskedTerm": "dizüri",
-            "hint": "Ağrılı işemenin tıbbi terminolojideki adı"
-        },
-        {
             "type": "before_after_slider",
-            "title": "Akut Sistit ile Akut Üretrit Klinik Farkları",
-            "leftTitle": "Akut Sistit",
-            "rightTitle": "Akut Üretrit",
+            "title": "Depolama (İrritatif) ile İşeme (Obstrüktif) Semptomları",
+            "leftTitle": "Depolama Semptomları",
+            "rightTitle": "İşeme Semptomları",
             "leftPoints": [
-                "Baskın yakınmalar dizüri, sık idrara çıkma (pollaküri) ve suprapubik ağrıdır.",
-                "Gözle görülür üretral pürülan akıntı genellikle bulunmaz.",
-                "Etken çoğunlukla gastrointestinal kökenli E. coli ve diğer gram-negatif basillerdir.",
-                "İdrar kültüründe klasik Kass kriterine göre anlamlı bakteriüri saptanır."
+                "Pollaküri (gündüz sık idrara çıkma) ve noktüri (gece uyanıp idrar yapma).",
+                "Acil sıkışma hissi (urgency) ve sıkışma inkontinansı.",
+                "Enflamasyon ve enfeksiyöz sistitte ön plandadır."
             ],
             "rightPoints": [
-                "Baskın yakınma üretral akıntı (pürülan veya müköz) ve meatus çevresinde kaşıntıdır.",
-                "Cinsel yolla bulaşan enfeksiyonlar (N. gonorrhoeae, C. trachomatis) önde gelir.",
-                "İdrar analizinde piyüri olabilir fakat standart idrar kültüründe üreme olmaz (steril piyüri).",
-                "Tanı üretral sürüntü veya ilk idrar örneğinde PCR testleri ile konur."
+                "İdrara başlamada tereddüt (hesitancy) ve zayıf idrar akımı.",
+                "Kesik kesik işeme ve işemek için karın kaslarını kullanarak ıkınma.",
+                "Prostat hiperplazisi veya üretral darlık gibi mekanik engellerde görülür."
             ]
+        },
+        {
+            "type": "cloze_masking",
+            "sentence": "Mesanenin enflamatuar irritasyonu veya detrüsör aşırı duyarlılığı sonucu aniden gelişen şiddetli ve ertelenemez işeme hissine [urgency] (acil sıkışma) denir.",
+            "maskedTerm": "urgency",
+            "hint": "Acil sıkışma semptomunun tıbbi adı"
         }
     ],
     90: [
@@ -1296,13 +1365,6 @@ D39_ENRICHMENTS = {
                         {"text": "Yoktur; genel durum iyidir", "isMasked": True, "hint": "Alt ÜSE'de genel durum"},
                         {"text": "Bulantı, kusma, halsizlik, hipotansiyon ve ürosepsis riski vardır"}
                     ]
-                },
-                {
-                    "cells": [
-                        {"text": "İdrar Sedimentinde Silendir"},
-                        {"text": "Silendir bulunmaz (yalnızca lökosit ve bakteri)", "isMasked": True, "hint": "Sistitte silendir varlığı"},
-                        {"text": "Lökosit silendirleri (WBC casts) patognomoniktir"}
-                    ]
                 }
             ]
         },
@@ -1329,9 +1391,9 @@ D39_ENRICHMENTS = {
         },
         {
             "type": "cloze_masking",
-            "sentence": "Menide kan görülmesi anlamına gelen [hematospermi] olgularının büyük kısmı prostat ve seminal veziküllerin benign enflamatuar veya enfeksiyöz süreçlerine bağlıdır.",
-            "maskedTerm": "hematospermi",
-            "hint": "Ejakülatta kan bulunması semptomunun tıbbi adı"
+            "sentence": "Akut piyelonefritte böbrek kapsül gerilmesine bağlı olarak kostovertebral açıya hafif darbeyle şiddetli ağrı uyanması [Giordano belirtisi] olarak adlandırılır.",
+            "maskedTerm": "Giordano belirtisi",
+            "hint": "KVAH muayenesinin tıp tarihindeki meşhur özel adı"
         }
     ],
     100: [
@@ -1351,9 +1413,9 @@ D39_ENRICHMENTS = {
                 {
                     "cells": [
                         {"text": "Akut Piyelonefrit"},
-                        {"text": "Böbrek tübülleri ve interstisyumu", "isMasked": True, "hint": "Piyelonefrit parankimal anatomik tutulumu"},
+                        {"text": "Böbrek tübülleri ve interstisyumu", "isMasked": True, "hint": "Piyelonefrit parankimal tutulumu"},
                         {"text": "Yüksek ateş, titreme, kostovertebral açı hassasiyeti, bulantı/kusma"},
-                        {"text": "İdrarda lökosit silendirleri ve kültürde üreme"}
+                        {"text": "Klinik KVAH hassasiyeti ve kültürde üreme"}
                     ]
                 },
                 {
@@ -1368,100 +1430,231 @@ D39_ENRICHMENTS = {
         },
         {
             "type": "active_recall",
-            "question": "İdrar sedimentinde saptandığında enfeksiyonun alt üriner sistemde (sistit) değil, böbrek parankiminde (piyelonefrit) olduğunu kesinleştiren silendir türü hangisidir?",
-            "answer": "Lökosit silendirleridir (WBC casts)."
-        },
-        {
-            "type": "before_after_slider",
-            "title": "Ürosepsis Erken Uyarı Kriterleri (qSOFA) vs Standart Komplike ÜSE",
-            "leftTitle": "Standart Piyelonefrit / Komplike ÜSE",
-            "rightTitle": "Ürosepsis (Hayatı Tehdit Eden Organ Yetmezliği)",
-            "leftPoints": [
-                "Böbrek lojunda ağrı, ateş ve lökositoz mevcuttur ancak vital bulgular stabildir.",
-                "Kan basıncı normal sınırlardadır ve doku perfüzyonu korunmuştur.",
-                "Bilinç durumu tamamen açıktır ve oryantasyon tamdır.",
-                "Standart servis yatışı veya ayaktan parenteral tedavi ile kontrol altına alınır."
-            ],
-            "rightPoints": [
-                "qSOFA kriterlerinden en az ikisi pozitiftir (Solunum hızı ≥22/dk, Değişmiş mental durum, Sistolik KB ≤100 mmHg).",
-                "Doku hipoperfüzyonuna bağlı serum laktat düzeyi belirgin şekilde yükselir (>2 mmol/L).",
-                "Septik şok riski nedeniyle acil yoğun bakım izlemi, sıvı resüsitasyonu ve vazopressör gerekir.",
-                "Mortalite riski yüksektir; ilk 1 saat içinde geniş spektrumlu antibiyotik şarttır."
-            ]
+            "question": "Akut bakteriyel prostatit düşünülen bir hastada bakteriyemiyi ve sepsisi tetikleme riski nedeniyle kesinlikle KONTRENDİKE olan tanısal manevra nedir?",
+            "answer": "Prostat masajı ve sert rektal tuşedir."
         }
     ]
 }
 
-# Additions for Deck 40 (Checkpoints 80, 90) and Deck 41 (Checkpoints 70, 80, 90)
 D40_ENRICHMENTS = {
-    80: [
+    20: [
         {
-            "type": "causal_chain",
-            "title": "CYBH Tarama ve Partner Bildirimi Döngüsü",
-            "steps": [
-                "1. İndeks olguda cinsel yolla bulaşan enfeksiyon tanısı mikrobiyolojik olarak doğrulanır.",
-                "2. İndeks olgunun son 60 gün içindeki tüm cinsel temaslıları belirlenir.",
-                "3. Partnerlere asemptomatik olsalar dahi temas ve tarama bildirimi yapılır.",
-                "4. Partnerler eşzamanlı olarak epidemiyolojik tedavi protokolüne alınır.",
-                "5. Eşzamanlı tedavi tamamlanana kadar cinsel perhiz uygulanarak pinpon bulaşı engellenir."
-            ]
-        },
+            "type": "cloze_masking",
+            "sentence": "Cinsel yolla bulaşan enfeksiyonların kontrolünde bulaş zincirini kırmak ve yeniden enfeksiyonu önlemek için cinsel eşin eş zamanlı tedavisi şarttır.",
+            "maskedTerm": "cinsel eşin",
+            "hint": "Bulaş zincirini kırmada partner yaklaşımı"
+        }
+    ],
+    30: [
         {
             "type": "interactive_table",
-            "title": "Başlıca CYBH'lerde Temas Sonrası Profilaksi (PEP) Prensipleri",
-            "tableHeaders": ["Patojen / Enfeksiyon", "Profilaktik Yaklaşım", "Kritik Başlama Zamanı"],
+            "title": "HPV Tipleri, Onkojenik Risk ve Aşı Kapsamı",
+            "tableHeaders": ["HPV Tipi", "Onkojenik Risk", "İlişkili Klinik Tablo / Aşı"],
             "tableRows": [
                 {
                     "cells": [
-                        {"text": "HIV Temas Sonrası Profilaksi (PEP)"},
-                        {"text": "Üçlü antiretroviral kombinasyon (28 gün)", "isMasked": True, "hint": "HIV profilaksi rejim süresi"},
-                        {"text": "İlk 72 saat içinde (mümkünse ilk 2-4 saatte)"}
+                        {"text": "HPV Tip 6 ve 11"},
+                        {"text": "Düşük Risk", "isMasked": False},
+                        {"text": "Kondiloma aküminata (anogenital siğil)", "isMasked": True, "hint": "Benign genital siğil tablosu"}
                     ]
                 },
                 {
                     "cells": [
-                        {"text": "Hepatit B Teması (Aşısız Kişi)"},
-                        {"text": "Hepatit B İmmünglobulin (HBIG) + Aşı serisi", "isMasked": True, "hint": "Pasif ve aktif immünizasyon bileşeni"},
-                        {"text": "İlk 24 saat içinde (en geç 7 gün içinde)"}
+                        {"text": "HPV Tip 16 ve 18"},
+                        {"text": "Yüksek Risk", "isMasked": False},
+                        {"text": "Serviks kanseri ve premalign lezyonlar", "isMasked": True, "hint": "En sık servikal kanser etkeni"}
                     ]
                 },
                 {
                     "cells": [
-                        {"text": "Sifilis Teması"},
-                        {"text": "Tek doz Benzatin Penisilin G (2,4 milyon ünite İM)", "isMasked": True, "hint": "Sifilis temasındaki standart antibiyotik dozu"},
-                        {"text": "Temas sonrası ilk 90 gün içinde"}
+                        {"text": "9'lu Aşı (Gardasil 9)"},
+                        {"text": "Genişletilmiş Koruma", "isMasked": False},
+                        {"text": "HPV 6, 11, 16, 18, 31, 33, 45, 52, 58", "isMasked": True, "hint": "Aşının kapsadığı dokuz tip"}
                     ]
                 }
             ]
         }
     ],
-    90: [
+    40: [
         {
             "type": "before_after_slider",
-            "title": "CYBH'lerde Birincil Korunma ile İkincil Korunma Ayrımı",
-            "leftTitle": "Birincil Korunma (Primer)",
-            "rightTitle": "İkincil Korunma (Sekonder)",
+            "title": "Hepatit B Profilaksisinde Aktif vs Pasif Bağışıklama",
+            "leftTitle": "Hepatit B Aşısı (Aktif)",
+            "rightTitle": "Hepatit B İmmünglobulini (HBIG - Pasif)",
             "leftPoints": [
-                "Hastalık henüz bulaşmadan önce sağlıklı bireyleri korumayı hedefler.",
-                "Kondom kullanımı, sağlık eğitimi ve riskli cinsel davranışların azaltılması esastır.",
-                "HPV ve HBV aşılamaları ile HIV PrEP (temas öncesi profilaksi) uygulanır."
+                "Rekombinant HBsAg antijeni içerir.",
+                "Uzun süreli ve kalıcı koruyucu antikor yanıtı (anti-HBs) uyarır.",
+                "Koruyucu titreye ulaşması haftalar/aylar alır."
             ],
             "rightPoints": [
-                "Bulaşmış olan enfeksiyonun erken evrede taranıp saptanmasını hedefler.",
-                "Asemptomatik risk gruplarında serolojik testler ve PCR taramaları yapılır.",
-                "Erken tedavi ile bulaştırıcılık süresi kısaltılır ve komplikasyonlar önlenir."
+                "Yüksek titrede hazır insan kaynaklı anti-HBs antikoru içerir.",
+                "Hemen ve geçici (anlık) koruma sağlar.",
+                "Yarı ömrü sınırlıdır, kalıcı immün bellek bırakmaz."
+            ]
+        }
+    ],
+    45: [
+        {
+            "type": "cloze_masking",
+            "sentence": "Üç doz standart Hepatit B aşısı yapılmasına rağmen anti-HBs düzeyi 10 mIU/mL altında kalan bireyler aşıya yanıtsız olarak kabul edilir.",
+            "maskedTerm": "yanıtsız",
+            "hint": "Non-responder birey tanımı"
+        }
+    ],
+    50: [
+        {
+            "type": "causal_chain",
+            "title": "HBsAg Pozitif Kaynakla Temas Sonrası Yönetim Zinciri",
+            "steps": [
+                "1. Maruziyetin Değerlendirilmesi: Kaynağın HBsAg durumu ve temas türü hızla doğrulanır.",
+                "2. Maruz Kalanın Bağışıklık Kontrolü: Aşılama öyküsü ve belgelenmiş anti-HBs titresi sorgulanır.",
+                "3. HBIG Uygulaması: Aşısız veya yanıtsız kişiye ilk 24 saat içinde tek doz HBIG intramüsküler verilir.",
+                "4. Aşı Serisinin Başlatılması: HBIG ile aynı anda fakat farklı ekstremiteden Hepatit B aşı serisi başlatılır."
+            ]
+        }
+    ],
+    60: [
+        {
+            "type": "cloze_masking",
+            "sentence": "Hepatit C virüsüne karşı koruyucu bir aşı veya immünglobulin bulunmadığından temas sonrası aktif takip ve erken DAA tedavisi esastır.",
+            "maskedTerm": "aşı veya immünglobulin",
+            "hint": "Spesifik immünoprofilaksi ajanı eksikliği"
+        }
+    ],
+    70: [
+        {
+            "type": "branching_logic",
+            "scenario": "HIV-seronegatif bir birey, partnerinin HIV-pozitif olduğunu belirterek korunma talebiyle başvuruyor. Bu olguda temas öncesi profilaksi (PrEP) için en uygun yaklaşım hangisidir?",
+            "options": [
+                {
+                    "text": "HIV serolojisi ve böbrek fonksiyonları değerlendirilerek günlük Tenofovir + Emtrisitabin (TDF/FTC) PrEP rejimi başlamak",
+                    "isCorrect": True,
+                    "feedback": "Doğru! HIV temas öncesi profilakside (PrEP) standart yaklaşım, negatif seroloji teyit edildikten sonra günlük oral TDF/FTC başlanmasıdır."
+                },
+                {
+                    "text": "Sadece şüpheli cinsel temas geliştikten sonra ilk 72 saatte acil servise başvurmasını önermek",
+                    "isCorrect": False,
+                    "feedback": "Yanlış. Bu yaklaşım temas sonrası profilaksidir (PEP); düzenli yüksek risk altında yaşayan serodiskordan partnerlerde PrEP endikedir."
+                },
+                {
+                    "text": "Tek başına haftalık intramüsküler penisilin profilaksisi vermek",
+                    "isCorrect": False,
+                    "feedback": "Yanlış. Penisilin sifiliz profilaksisinde kullanılır; HIV bulaşını önlemede hiçbir etkinliği yoktur."
+                }
+            ]
+        }
+    ],
+    80: [
+        {
+            "type": "interactive_table",
+            "title": "Maruziyette Sıvıların HIV Bulaş Riski Düzeyi",
+            "tableHeaders": ["Sıvı Türü", "Bulaş Riski Düzeyi", "Klinik Açıklama ve Kural"],
+            "tableRows": [
+                {
+                    "cells": [
+                        {"text": "Kan ve Kanlı Sıvılar"},
+                        {"text": "Yüksek bulaş riski taşır", "isMasked": True, "hint": "En riskli biyolojik sıvı"},
+                        {"text": "İğne batması ve mukozal maruziyette en kritik bulaş kaynağıdır"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "Genital Sıvılar (Semen, Vajinal Salgı)"},
+                        {"text": "Yüksek bulaş riski taşır", "isMasked": True, "hint": "Cinsel bulaş sıvıları"},
+                        {"text": "Cinsel temas maruziyetlerinde temel bulaş kaynağıdır"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "Derin Vücut Sıvıları (BOS, Plevra, Periton)"},
+                        {"text": "Potansiyel bulaş riski taşır", "isMasked": True, "hint": "Steril vücut boşluğu sıvıları"},
+                        {"text": "Girişimsel işlemlerde maruziyette profilaksi değerlendirilir"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "Ter, Tükürük, Gözyaşı, İdrar, Feçes (Kansız)"},
+                        {"text": "Bulaş riski taşımaz", "isMasked": True, "hint": "Kansız doğal salgılar"},
+                        {"text": "Gözle görülür kan içermedikçe profilaksi endikasyonu doğurmaz"}
+                    ]
+                }
             ]
         },
         {
+            "type": "causal_chain",
+            "title": "Kesici-Delici Alet Maruziyetinde İlk Bakım Zinciri",
+            "steps": [
+                "1. Maruz kalan cilt bölgesi derhal bol su ve sabunla nazikçe yıkanır.",
+                "2. Doku hasarını ve viral inokülasyonu artırmamak için yara yeri kesinlikle sıkılmaz veya kanatılmaz.",
+                "3. Mukozal temas varsa göz ve ağız bol serum fizyolojik veya temiz suyla yıkanır.",
+                "4. Olayın saati, kaynak hastanın bilinen durumları ve maruziyet şekli derhal kayıt altına alınır.",
+                "5. Temas sonrası profilaksi değerlendirmesi için enfeksiyon kontrol birimine başvurulur."
+            ]
+        },
+        {
+            "type": "cloze_masking",
+            "sentence": "Enfeksiyöz maruziyet sonrası yara bakımı yapılırken doku hasarını artırarak virüsün daha derin dokulara yayılmasını kolaylaştırdığı için yara yerini [sıkmak] kesinlikle yasaktır.",
+            "maskedTerm": "sıkmak",
+            "hint": "Yara bakımında kesinlikle yapılmaması gereken mekanik işlem"
+        }
+    ],
+    90: [
+        {
+            "type": "before_after_slider",
+            "title": "HIV PEP Zaman Penceresi ve Etkinlik",
+            "leftTitle": "İlk 72 Saat İçinde Başlama",
+            "rightTitle": "72 Saat Sonrası",
+            "leftPoints": [
+                "En yüksek koruyucu etkinlik ilk 2-4 saatte başlandığında elde edilir.",
+                "Zamanında başlanan 28 günlük rejim HIV bulaş riskini en az %80 oranında azaltır.",
+                "Profilaksi protokolü eksiksiz tamamlanır ve takip testleri yapılır."
+            ],
+            "rightPoints": [
+                "72 saat aşıldığında virüs lenf nodlarına ve hedef dokulara yerleşir.",
+                "72 saat sonrasında profilaksinin koruyucu etkisi gösterilememiştir.",
+                "Rutin profilaksi önerilmez; izlem ve tanısal test protokolüne geçilir."
+            ]
+        },
+        {
+            "type": "cloze_masking",
+            "sentence": "HIV temas sonrası profilaksisi (PEP) başlanabilmesi için temastan sonra geçmesi gereken azami kritik süre [72 saat]'tir.",
+            "maskedTerm": "72 saat",
+            "hint": "HIV PEP için kritik azami zaman eşiği"
+        },
+        {
             "type": "active_recall",
-            "question": "HIV Temas Öncesi Profilaksisi (PrEP) kimlere önerilir ve hangi ilaç ikilisini içerir?",
-            "answer": "Yüksek riskli cinsel davranışları olan HIV-negatif bireylere önerilir; Tenofovir disoproksil fumarat + Emtrisitabin (TDF/FTC) günlük oral kombinasyonunu içerir."
+            "question": "Standart HIV temas sonrası profilaksisi (PEP) protokolü kaç gün uygulanır ve hangi ilaç sınıfı bileşenlerini içerir?",
+            "answer": "28 gün boyunca aralıksız uygulanır; 2 adet NRTI (Tenofovir + Emtrisitabin) ile 1 adet İntegraz inhibitörü (Raltegravir veya Dolutegravir) kombinasyonunu içerir."
         }
     ]
 }
 
 D41_ENRICHMENTS = {
-    70: [
+    14: [
+        {
+            "type": "cloze_masking",
+            "sentence": "Diyabetik nefropatide mezanjiyal matriks artışı ve bazal membran kalınlaşması ile karakterize yaygın lezyona [difüz mezangiyal skleroz] denir.",
+            "maskedTerm": "difüz mezangiyal skleroz",
+            "hint": "Yaygın mezanjiyal matriks genişlemesi"
+        }
+    ],
+    25: [
+        {
+            "type": "cloze_masking",
+            "sentence": "Kongo kırmızısı ile boyanan amiloid birikintileri polarize ışık mikroskobunda karakteristik [elma yeşili çift kırınım] gösterir.",
+            "maskedTerm": "elma yeşili çift kırınım",
+            "hint": "Polarize mikroskopta patognomonik yansıma"
+        }
+    ],
+    33: [
+        {
+            "type": "cloze_masking",
+            "sentence": "Eozinofilik granülomatoz polianjiyitte (Churg-Strauss) astım ve doku eozinofilisinin yanı sıra olguların yaklaşık yarısında [p-ANCA] pozitifliği saptanır.",
+            "maskedTerm": "p-ANCA",
+            "hint": "Perinükleer antinötrofil sitoplazmik antikor"
+        }
+    ],
+    40: [
         {
             "type": "interactive_table",
             "title": "ANCA İlişkili Vaskülitlerde Böbrek Tutulumu ve Ayırıcı Tanı",
@@ -1469,7 +1662,7 @@ D41_ENRICHMENTS = {
             "tableRows": [
                 {
                     "cells": [
-                        {"text": "Granülomatoz Polianjiitis (GPA - Wegener)"},
+                        {"text": "Granülomatozisli Polianjiyit (GPA / Wegener)"},
                         {"text": "c-ANCA (PR3-ANCA)", "isMasked": True, "hint": "Wegener'deki ana serolojik belirteç"},
                         {"text": "Üst ve alt solunum yolu nekrotizan granülomları, sinüzit, kavitasyon"},
                         {"text": "Nekrotizan kresentik glomerülonefrit (pauci-immün)"}
@@ -1477,7 +1670,7 @@ D41_ENRICHMENTS = {
                 },
                 {
                     "cells": [
-                        {"text": "Mikroskopik Polianjiitis (MPA)"},
+                        {"text": "Mikroskopik Polianjiyit (MPA)"},
                         {"text": "p-ANCA (MPO-ANCA)", "isMasked": True, "hint": "MPA'daki ana serolojik belirteç"},
                         {"text": "Granülom yoktur; akciğer kapillariti ve alveolar kanama"},
                         {"text": "Nekrotizan kresentik glomerülonefrit (pauci-immün)"}
@@ -1485,7 +1678,7 @@ D41_ENRICHMENTS = {
                 },
                 {
                     "cells": [
-                        {"text": "Eozinofilik Granülomatoz Polianjiitis (EGPA)"},
+                        {"text": "Eozinofilik Granülomatozisli Polianjiyit (EGPA)"},
                         {"text": "p-ANCA (%40-50 olguda)", "isMasked": True, "hint": "Churg-Strauss antikor sıklığı"},
                         {"text": "Ağır astım, periferik eozinofili, alerjik rinit, kardiyak tutulum"},
                         {"text": "Fokal nekrotizan nefrit (nadir seyreder)"}
@@ -1498,93 +1691,162 @@ D41_ENRICHMENTS = {
             "sentence": "ANCA ilişkili vaskülitlerin böbrek biyopsisinde glomerüllerde nekroz ve hilaller görülürken immünfloresan mikroskopisinde immün birikimin olmamasına [pauci-immün] glomerülonefrit denir.",
             "maskedTerm": "pauci-immün",
             "hint": "İmmün depozitlerin yokluğunu belirten terim"
-        }
-    ],
-    80: [
-        {
-            "type": "causal_chain",
-            "title": "Multipl Miyelomda Kast Nefropatisi Mekanizması",
-            "steps": [
-                "1. Malign plazma hücreleri aşırı miktarda monoklonal immünglobulin hafif zinciri (kappa veya lambda) üretir.",
-                "2. Serbest hafif zincirler glomerülden süzülerek distal tübül lümenine ulaşır.",
-                "3. Distal tübülde hafif zincirler Henle kulpu epitelinden salgılanan Tamm-Horsfall proteini ile birleşir.",
-                "4. Lümen içinde sert, amorf, eozinofilik protein tıkaçları (kastlar) çöker.",
-                "5. Tıkaçların çevresinde dev hücreli yabancı cisim reaksiyonu gelişerek tübülleri tıkar ve akut böbrek hasarı yapar."
-            ]
         },
         {
-            "type": "before_after_slider",
-            "title": "Multipl Miyelomda Kast Nefropatisi ile AL Tipi Amiloidoz Ayrımı",
-            "leftTitle": "Miyelom Kast Nefropatisi",
-            "rightTitle": "AL Tipi Renal Amiloidoz",
-            "leftPoints": [
-                "Hasar distal tübül lümenindeki protein tıkaçlarına ve direkt tübülotoksisiteye bağlıdır.",
-                "Klinik tablo akut böbrek hasarı veya ilerleyici kronik tübüler yetmezliktir.",
-                "Standart idrar dipstick testi hafifi zincirleri yakalayamaz (yalancı negatif proteinüri)."
-            ],
-            "rightPoints": [
-                "Hafif zincirlerin fibriler formda glomerül mezanjiyumunda ve damarlarda birikimidir.",
-                "Klinik tablo masif albüminüri ve ağır nefrotik sendromdur.",
-                "Kongo kırmızısı boyasında polarize mikroskopta elma yeşili çift kırınım verir."
-            ]
+            "type": "active_recall",
+            "question": "Granülomatozisli Polianjiyitiste (GPA / Wegener) hedef antijen ve serolojik belirteç nedir?",
+            "answer": "Proteinaz 3 ve c-ANCA'dır (PR3-ANCA)."
         }
     ],
-    90: [
+    54: [
+        {
+            "type": "cloze_masking",
+            "sentence": "Atipik hemolitik üremik sendrom tedavisinde kontrolsüz kompleman aktivasyonunu durdurmak amacıyla monoklonal C5 inhibitörü [ekulizumab] kullanılır.",
+            "maskedTerm": "ekulizumab",
+            "hint": "Terminal kompleman bloker antikoru"
+        }
+    ],
+    60: [
         {
             "type": "interactive_table",
             "title": "Trombotik Mikroanjiyopatiler (TMA): TTP ile HÜS Ayrımı",
-            "tableHeaders": ["Özellik", "Trombotik Trombositopenik Purpura (TTP)", "Hemolitik Üremik Sendrom (HÜS)"],
+            "tableHeaders": ["Klinik / Laboratuvar Parametre", "Trombotik Trombositopenik Purpura (TTP)", "Hemolitik Üremik Sendrom (HÜS)"],
             "tableRows": [
                 {
                     "cells": [
-                        {"text": "Temel Enzim / Toksin Defekti"},
-                        {"text": "ADAMTS13 metaloproteaz eksikliği (<%10)", "isMasked": True, "hint": "TTP'deki von Willebrand faktör parçalayıcı enzim"},
-                        {"text": "Shiga benzeri toksin (E. coli O157:H7) veya alternatif kompleman regülasyon defekti"}
+                        {"text": "Primer Patofizyolojik Mekanizma"},
+                        {"text": "ADAMTS13 metalloproteinaz enzim eksikliği", "isMasked": True, "hint": "vWF parçalayıcı enzim kusuru"},
+                        {"text": "Şiga toksini (Tipik) veya kompleman regülasyon defekti (Atipik)"}
                     ]
                 },
                 {
                     "cells": [
                         {"text": "Baskın Organ Tutulumu"},
-                        {"text": "Nörolojik semptomlar (konfüzyon, koma, nöbet)", "isMasked": True, "hint": "TTP'deki birincil klinik organ"},
-                        {"text": "Akut böbrek yetmezliği (oligüri, azotemi) ön plandadır"}
+                        {"text": "Nörolojik semptomlar ve konfüzyon ön planda", "isMasked": True, "hint": "Santral sinir sistemi bulguları"},
+                        {"text": "Akut böbrek hasarı ve anüri belirgin ön planda"}
                     ]
                 },
                 {
                     "cells": [
-                        {"text": "Hasta Demografisi"},
-                        {"text": "Daha çok genç erişkin kadınlar", "isMasked": True, "hint": "TTP tipik demografisi"},
-                        {"text": "Tipik form çocuklarda kanlı ishal sonrası gelişir"}
-                    ]
-                },
-                {
-                    "cells": [
-                        {"text": "İlk Basamak Tedavi"},
-                        {"text": "Acil Terapötik Plazmaferez (TPE)", "isMasked": True, "hint": "TTP'deki hayat kurtaran plazma işlemi"},
-                        {"text": "Destek tedavisi, hemodiyaliz; atipik HÜS'te Eculizumab (anti-C5)"}
+                        {"text": "Birincil Tedavi Yaklaşımı"},
+                        {"text": "Acil plazma değişimi (plazmaferez)", "isMasked": True, "hint": "Antikorları temizleyen yöntem"},
+                        {"text": "Destek tedavisi / Kompleman ilişkili formda Ekulizumab"}
                     ]
                 }
             ]
         },
         {
-            "type": "branching_logic",
-            "scenario": "4 yaşında çocuk, kanlı ishal atağından 5 gün sonra solukluk, halsizlik, idrar çıkışında belirgin azalma (oligüri) ve peteşi döküntüleri ile acil servise getiriliyor. Laboratuvarda hemoglobin 7 g/dL, trombosit 28.000/mm³, kanda şistositler (parçalanmış eritrositler) ve serum kreatinininde belirgin yükseklik saptanıyor. Bu hastada tanı ve ilk yaklaşım ne olmalıdır?",
-            "options": [
+            "type": "cloze_masking",
+            "sentence": "Trombotik trombositopenik purpura (TTP) patogenezinde von Willebrand faktör multimerlerini parçalayan [ADAMTS13] enzim aktivitesinin yetersizliği yatar.",
+            "maskedTerm": "ADAMTS13",
+            "hint": "vWF parçalayan metalloproteinaz"
+        }
+    ],
+    70: [
+        {
+            "type": "causal_chain",
+            "title": "Benign Hipertansiyonda Hiyalin Arteriyoloskleroz Zinciri",
+            "steps": [
+                "1. Kronik ve orta dereceli hemodinamik basınç artışı arteriyol endotelinde hasar oluşturur.",
+                "2. Plazma proteinleri damar duvarına sızar ve damar düz kas hücreleri ekstrasellüler matriks üretir.",
+                "3. Afferent arteriyol duvarında homojen pembe hiyalin kalınlaşma meydana gelir.",
+                "4. Damar lümeni daralarak glomerül ve tübüllerde kronik iskemiye yol açar.",
+                "5. Glomerüllerde iskemi ve tübüler atrofi ile simetrik ince granüler böbrek yüzeyi gelişir."
+            ]
+        },
+        {
+            "type": "cloze_masking",
+            "sentence": "Benign nefrosklerozun histopatolojik damgası olan afferent arteriyol lezyonu [hiyalin arteriyoloskleroz] olarak adlandırılır.",
+            "maskedTerm": "hiyalin arteriyoloskleroz",
+            "hint": "Afferent arteriyoldeki tipik vasküler lezyon adı"
+        },
+        {
+            "type": "active_recall",
+            "question": "Benign nefrosklerozda böbreklerin makroskopik dış yüzey görünümü nasıldır?",
+            "answer": "Simetrik, her iki böbrekte eşit derecede ince granüler (deri benzeri / leather-grain) bir yüzey izlenir."
+        }
+    ],
+    80: [
+        {
+            "type": "before_after_slider",
+            "title": "Benign Nefroskleroz ile Malign Nefroskleroz Ayrımı",
+            "leftTitle": "Benign Nefroskleroz",
+            "rightTitle": "Malign Nefroskleroz",
+            "leftPoints": [
+                "Hafif-orta kronik hipertansiyon zemininde yıllar içinde yavaş gelişir.",
+                "Temel histopatolojik lezyon afferent arteriyolde hiyalin arteriyolosklerozdur.",
+                "Makroskopide simetrik ince granüler yüzey izlenir; üremi ve böbrek yetmezliği nadirdir."
+            ],
+            "rightPoints": [
+                "Akut dramatik tansiyon fırlaması (Diyastolik >120 mmHg) ve papilödemle acil seyreder.",
+                "Damarlarda fibrinoid nekroz ve 'soğan zarı' (onion-skinning) hiperplastik lezyonları görülür.",
+                "Makroskopide peteşiyal 'pire ısırığı' görünümü vardır; hızla böbrek yetmezliğine ilerler."
+            ]
+        },
+        {
+            "type": "cloze_masking",
+            "sentence": "Malign nefrosklerozda interlobüler arterlerde proliferatif düz kas ve kollajen tabakalarının oluşturduğu konsantrik lüminal daralmaya [soğan zarı] (onion-skin) lezyonu denir.",
+            "maskedTerm": "soğan zarı",
+            "hint": "Malign hipertansiyondaki konsantrik lüminal tabakalanma nitelemesi"
+        },
+        {
+            "type": "active_recall",
+            "question": "Malign nefrosklerozda subkapsüler kortikal peteşiyal kanamaların oluşturduğu karakteristik makroskopik görünüm hangisidir?",
+            "answer": "'Pire ısırığı' (flea-bitten) böbrek görünümüdür."
+        }
+    ],
+    90: [
+        {
+            "type": "causal_chain",
+            "title": "Kronik Böbrek Hastalığında Kendi Kendini Besleyen Kısır Döngü",
+            "steps": [
+                "1. Primer renal hasar ilerleyici nefron kitle kaybına yol açar.",
+                "2. Kalan sağlam nefronlarda adaptif hipertrofi ve intrakapiller hiperfiltrasyon başlar.",
+                "3. Yüksek intrakapiller hidrostatik basınç sağlam glomerüllerde endotel ve podosit hasarı yaratır.",
+                "4. Sağlam nefronlar da sekonder fokal glomerüloskleroza ve tübüler atrofiye uğrar.",
+                "5. Kısır döngü ilerleyerek nefron kitlesini tüketir ve son dönem böbrek yetmezliğini kurar."
+            ]
+        },
+        {
+            "type": "interactive_table",
+            "title": "Son Dönem Kronik Böbrek Hastalığı Morfolojik Özellikleri",
+            "tableHeaders": ["Doku Bölgesi", "Karakteristik Histopatolojik Değişiklik", "Klinik Açıklama"],
+            "tableRows": [
                 {
-                    "text": "Shiga toksin ilişkili tipik Hemolitik Üremik Sendrom (HÜS); destek tedavisi, sıvı-elektrolit dengesi ve gerekirse diyaliz uygulanmalıdır; antibiyotik ve trombosit transfüzyonundan kaçınılmalıdır.",
-                    "isCorrect": True,
-                    "feedback": "Doğrudur; mikroanjiyopatik hemolitik anemi, trombositopeni ve akut böbrek hasarı HÜS triadıdır; çocuklarda kanlı ishal sonrası gelişir, gereksiz antibiyotik toksin salınımını artırabilir."
+                    "cells": [
+                        {"text": "Glomerüller"},
+                        {"text": "Global glomerüloskleroz (tam hyalinizasyon)", "isMasked": True, "hint": "Glomerüllerin tamamen sertleşmesi"},
+                        {"text": "Glomerül yumağı asellüler pembe skar dokusuna dönüşür"}
+                    ]
                 },
                 {
-                    "text": "Akut viral gastroenterit kabul edilerek sadece oral rehidrasyon verilip taburcu edilmelidir.",
-                    "isCorrect": False,
-                    "feedback": "Yanlıştır; ağır anemi, derin trombositopeni ve akut böbrek hasarı tablosu mevcuttur, acil hastane yatışı şarttır."
+                    "cells": [
+                        {"text": "Tübüller"},
+                        {"text": "Tübüler atrofi ve 'tiroidizasyon'", "isMasked": True, "hint": "Tiroid folliküllerine benzeme"},
+                        {"text": "Genişlemiş tübüller eozinofilik silendirlerle dolarak tiroid dokusunu andırır"}
+                    ]
                 },
                 {
-                    "text": "İmmün trombositopenik purpura (ITP) düşünülerek acil splenektomi yapılmalıdır.",
-                    "isCorrect": False,
-                    "feedback": "Yanlıştır; ITP'de böbrek yetmezliği ve anemi eşlik etmez, cerrahi kontrendikedir."
+                    "cells": [
+                        {"text": "İnterstisyum"},
+                        {"text": "İleri derecede interstisyel fibrozis", "isMasked": True, "hint": "Kollajen ve bağ dokusu artışı"},
+                        {"text": "Lenfosit infiltrasyonu ve diffüz skar dokusu yerleşir"}
+                    ]
+                },
+                {
+                    "cells": [
+                        {"text": "Makroskopik Görünüm"},
+                        {"text": "Simetrik küçülmüş, büzük ve diffüz granüler böbrek", "isMasked": True, "hint": "Son dönem böbrek makroskopisi"},
+                        {"text": "Korteks incelmiş ve böbrek ağırlığı belirgin azalmıştır"}
+                    ]
                 }
             ]
+        },
+        {
+            "type": "cloze_masking",
+            "sentence": "İleri evre kronik böbrek hastalığında atrofik tübüllerin pembe eozinofilik kastlarla dolarak tiroid folliküllerini andırması manzarasına [tiroidizasyon] adı verilir.",
+            "maskedTerm": "tiroidizasyon",
+            "hint": "Tübüllerin tiroid dokusuna benzediği morfolojik terim"
         }
     ]
 }

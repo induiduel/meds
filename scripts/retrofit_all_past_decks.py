@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Retrofit and normalize all past decks (12-41) to ensure full interactiveElements coverage,
-canonical schema compliance, and zero validation errors.
+canonical schema compliance, strict chronological alignment (zero forward leaks),
+and zero validation errors.
 """
 
 import json, os, sys, copy, re
@@ -93,6 +94,205 @@ def sanitize_element(el):
                     c['hint'] = clean_hint(c['hint'], c.get('text', ''))
     return el
 
+def realign_deck_25(deck):
+    # First, gather all slides and sanitize existing elements
+    for s in deck['slides']:
+        elems = s.get('elements') or ([s['interaction']] if 'interaction' in s else s.get('interactiveElements', []))
+        s['interactiveElements'] = [sanitize_element(copy.deepcopy(x)) for x in elems]
+
+    # Stash misplaced branchings and sliders
+    branchings_to_move = {}
+    sliders_to_move = {}
+
+    # Extract branchings
+    for snum, target in [(46, 66), (48, 72), (52, 75), (54, 76), (56, 77), (58, 81), (62, 82), (64, 84)]:
+        s = deck['slides'][snum - 1]
+        kept = []
+        for e in s.get('interactiveElements', []):
+            if e.get('type') == 'branching_logic':
+                branchings_to_move[target] = e
+            else:
+                kept.append(e)
+        s['interactiveElements'] = kept
+
+    # Extract sliders
+    for snum, target in [(72, 83), (74, 31), (82, 21), (84, 85), (97, 54)]:
+        s = deck['slides'][snum - 1]
+        kept = []
+        for e in s.get('interactiveElements', []):
+            if e.get('type') == 'before_after_slider':
+                sliders_to_move[target] = e
+            else:
+                kept.append(e)
+        s['interactiveElements'] = kept
+
+    # In-situ clozes for Deck 25
+    cloze_replacements = {
+        25: {
+            "type": "cloze_masking",
+            "sentence": "Tüberküloz gibi persistan antijenlere karşı gelişen granülomatöz yanıtta epitelioid histiyositlerin birleşmesiyle Langhans tipi dev hücreler ve doku harabiyetiyle [kazeöz nekroz] oluşur.",
+            "maskedTerm": "kazeöz nekroz",
+            "hint": "Granülom merkezindeki peynirimsi nekroz"
+        },
+        35: {
+            "type": "cloze_masking",
+            "sentence": "Düzenleyici T lenfositlerinin (Treg) gelişimi ve baskılayıcı fonksiyonları için vazgeçilmez anahtar transkripsiyon faktörü [FoxP3] molekülüdür.",
+            "maskedTerm": "FoxP3",
+            "hint": "Treg hücrelerinin temel transkripsiyon faktörü"
+        },
+        45: {
+            "type": "cloze_masking",
+            "sentence": "Lupus nefritinde en sık görülen ve en ağır böbrek hasarı oluşturan Sınıf IV diffüz lupus nefritinde kapiller duvarlarda [tel halkası] lezyonları karakteristiktir.",
+            "maskedTerm": "tel halkası",
+            "hint": "Wire-loop kapiller duvar kalınlaşması"
+        },
+        55: {
+            "type": "cloze_masking",
+            "sentence": "Sınırlı sistemik skleroz ve CREST sendromlu olguların ezici çoğunluğunda yüksek özgüllükle saptanan serolojik belirteç [antikentromer] antikorudur.",
+            "maskedTerm": "antikentromer",
+            "hint": "Kromozom sentromerine karşı otoantikor"
+        },
+        65: {
+            "type": "cloze_masking",
+            "sentence": "Kronik transplant reddinde donör damar endotelinin sitokinlerle uyarılması sonucu intimada düz kas proliferasyonu ve luminal daralmayla karakterize [greft arteriosklerozu] gelişir.",
+            "maskedTerm": "greft arteriosklerozu",
+            "hint": "Kronik vasküler lümen daralması tablosu"
+        },
+        75: {
+            "type": "cloze_masking",
+            "sentence": "DiGeorge sendromunda 3. ve 4. faringeal ceplerin embriyolojik gelişim defektine ve timik aplaziye yol açan temel sitogenetik lezyon [22q11.2 mikrodelesyonu] anomalisidir.",
+            "maskedTerm": "22q11.2 mikrodelesyonu",
+            "hint": "Kromozom 22 üzerindeki kritik delesyon"
+        },
+        85: {
+            "type": "cloze_masking",
+            "sentence": "Farklı prekürsör proteinlerden kaynaklansa da tüm amiloid fibrillerinin ortak fiziksel ve boyanma özelliklerini belirleyen üçüncül yapı [beta-kırmalı tabaka] konfigürasyonudur.",
+            "maskedTerm": "beta-kırmalı tabaka",
+            "hint": "Cross-beta-pleated sheet yapısı"
+        }
+    }
+
+    for snum, new_cloze in cloze_replacements.items():
+        s = deck['slides'][snum - 1]
+        elems = [e for e in s.get('interactiveElements', []) if e.get('type') != 'cloze_masking']
+        elems.append(sanitize_element(copy.deepcopy(new_cloze)))
+        s['interactiveElements'] = elems
+
+    # Slide 95: deduplicate cloze
+    s95 = deck['slides'][94]
+    seen_cloze = False
+    s95_kept = []
+    for e in s95.get('interactiveElements', []):
+        if e.get('type') == 'cloze_masking':
+            if not seen_cloze:
+                s95_kept.append(e)
+                seen_cloze = True
+        else:
+            s95_kept.append(e)
+    s95['interactiveElements'] = s95_kept
+
+    # Move extracted branchings to target slides
+    for target_snum, el in branchings_to_move.items():
+        ts = deck['slides'][target_snum - 1]
+        ts['interactiveElements'].append(sanitize_element(copy.deepcopy(el)))
+
+    # Move extracted sliders to target slides
+    for target_snum, el in sliders_to_move.items():
+        ts = deck['slides'][target_snum - 1]
+        ts['interactiveElements'].append(sanitize_element(copy.deepcopy(el)))
+
+def realign_deck_26(deck):
+    # S25, S55, S65 in-situ cloze fixes
+    fixes = {
+        25: {
+            "type": "cloze_masking",
+            "sentence": "Kistik fibrozis akciğer tutulumunda biriken koyu mukus tıkaçları zemininde özellikle [Pseudomonas aeruginosa] kolonizasyonu ve kronik bronşiektazi gelişir.",
+            "maskedTerm": "Pseudomonas aeruginosa",
+            "hint": "Fırsatçı mukoid fenotipli patojen"
+        },
+        55: {
+            "type": "cloze_masking",
+            "sentence": "Sigara dumanındaki reaktif oksijen partikülleri nitrik oksit biyoyararlanımını tüketerek [endotel disfonksiyonuna] ve aterosklerozun hızlanmasına yol açar.",
+            "maskedTerm": "endotel disfonksiyonuna",
+            "hint": "Vasküler iç yüzey hasarı"
+        },
+        65: {
+            "type": "cloze_masking",
+            "sentence": "Kwashiorkor olgularında protein yokluğuna bağlı ağır hipoalbüminemi ve onkotik basınç düşüşü sonucunda visseral organ tutulumu ve yaygın [ödem] gelişir.",
+            "maskedTerm": "ödem",
+            "hint": "Plazma onkotik basınç kaybı sonucu şişlik"
+        }
+    }
+    for s in deck['slides']:
+        snum = s['slideNumber']
+        if snum in fixes:
+            elems = [e for e in s.get('interactiveElements', []) if e.get('type') != 'cloze_masking']
+            elems.append(sanitize_element(copy.deepcopy(fixes[snum])))
+            s['interactiveElements'] = elems
+
+def realign_deck_40(deck):
+    for s in deck['slides']:
+        snum = s['slideNumber']
+        # Extract existing micro_quiz
+        quizzes = [e for e in s.get('interactiveElements', []) if e.get('type') == 'micro_quiz']
+        if not quizzes and 'microQuiz' in s:
+            mq = s['microQuiz']
+            quizzes.append(sanitize_element({
+                'type': 'micro_quiz',
+                'question': mq.get('question', ''),
+                'options': mq.get('options', []),
+                'microQuizOptions': mq.get('options', [])
+            }))
+        
+        non_quiz = []
+        if snum in ed.D40_ENRICHMENTS:
+            non_quiz = [sanitize_element(copy.deepcopy(x)) for x in ed.D40_ENRICHMENTS[snum]]
+        elif snum == 10:
+            # Keep S10 slider
+            for e in s.get('interactiveElements', []):
+                if e.get('type') == 'before_after_slider':
+                    non_quiz.append(sanitize_element(copy.deepcopy(e)))
+                    break
+        elif snum == 100:
+            # Keep S100 table
+            for e in s.get('interactiveElements', []):
+                if e.get('type') == 'interactive_table':
+                    non_quiz.append(sanitize_element(copy.deepcopy(e)))
+                    break
+        
+        s['interactiveElements'] = quizzes + non_quiz
+
+def realign_deck_41(deck):
+    for s in deck['slides']:
+        snum = s['slideNumber']
+        # Extract existing micro_quiz
+        quizzes = [e for e in s.get('interactiveElements', []) if e.get('type') == 'micro_quiz']
+        if not quizzes and 'microQuiz' in s:
+            mq = s['microQuiz']
+            quizzes.append(sanitize_element({
+                'type': 'micro_quiz',
+                'question': mq.get('question', ''),
+                'options': mq.get('options', []),
+                'microQuizOptions': mq.get('options', [])
+            }))
+        
+        non_quiz = []
+        if snum in ed.D41_ENRICHMENTS:
+            non_quiz = [sanitize_element(copy.deepcopy(x)) for x in ed.D41_ENRICHMENTS[snum]]
+        elif snum == 58:
+            # Keep S58 TTP clinical pentad branching
+            for e in s.get('interactiveElements', []):
+                if e.get('type') == 'branching_logic':
+                    non_quiz.append(sanitize_element(copy.deepcopy(e)))
+                    break
+        elif snum in [10, 20, 30, 50, 100]:
+            # Keep existing valid checkpoint elements
+            for e in s.get('interactiveElements', []):
+                if e.get('type') in ['interactive_table', 'causal_chain', 'before_after_slider']:
+                    non_quiz.append(sanitize_element(copy.deepcopy(e)))
+        
+        s['interactiveElements'] = quizzes + non_quiz
+
 def main():
     print(f"Loading decks from {SRC_DECKS_PATH}...")
     with open(SRC_DECKS_PATH, 'r', encoding='utf-8') as f:
@@ -101,6 +301,10 @@ def main():
     modified_deck_ids = set()
 
     for d in decks:
+        # Guarantee slideNumber on all slides
+        for idx, s in enumerate(d.get('slides', [])):
+            s['slideNumber'] = idx + 1
+
         did = d.get('id', '')
         if not did.startswith('k1p-k1-'):
             continue
@@ -110,11 +314,21 @@ def main():
             continue
 
         if 12 <= num <= 36:
-            for s in d['slides']:
-                if 'elements' in s:
-                    s['interactiveElements'] = [sanitize_element(copy.deepcopy(x)) for x in s['elements']]
-                elif 'interaction' in s:
-                    s['interactiveElements'] = [sanitize_element(copy.deepcopy(s['interaction']))]
+            if num == 25:
+                realign_deck_25(d)
+            elif num == 26:
+                for s in d['slides']:
+                    if 'elements' in s:
+                        s['interactiveElements'] = [sanitize_element(copy.deepcopy(x)) for x in s['elements']]
+                    elif 'interaction' in s:
+                        s['interactiveElements'] = [sanitize_element(copy.deepcopy(s['interaction']))]
+                realign_deck_26(d)
+            else:
+                for s in d['slides']:
+                    if 'elements' in s:
+                        s['interactiveElements'] = [sanitize_element(copy.deepcopy(x)) for x in s['elements']]
+                    elif 'interaction' in s:
+                        s['interactiveElements'] = [sanitize_element(copy.deepcopy(s['interaction']))]
             modified_deck_ids.add(did)
 
         elif num in [37, 38, 39]:
@@ -137,23 +351,11 @@ def main():
             modified_deck_ids.add(did)
 
         elif num == 40:
-            for s in d['slides']:
-                snum = s['slideNumber']
-                if snum in ed.D40_ENRICHMENTS:
-                    elems = s.get('interactiveElements', [])
-                    for el in ed.D40_ENRICHMENTS[snum]:
-                        elems.append(sanitize_element(copy.deepcopy(el)))
-                    s['interactiveElements'] = elems
+            realign_deck_40(d)
             modified_deck_ids.add(did)
 
         elif num == 41:
-            for s in d['slides']:
-                snum = s['slideNumber']
-                if snum in ed.D41_ENRICHMENTS:
-                    elems = s.get('interactiveElements', [])
-                    for el in ed.D41_ENRICHMENTS[snum]:
-                        elems.append(sanitize_element(copy.deepcopy(el)))
-                    s['interactiveElements'] = elems
+            realign_deck_41(d)
             modified_deck_ids.add(did)
 
     # Validate all decks
