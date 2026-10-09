@@ -6,6 +6,7 @@
  "konu": "Emboli, Enfarktüs ve Şok",
  "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
  "tarih": null,
+ "soru_sayisi": 145,
  "kazanimlar": [
   {
    "no": 1,
@@ -93,6 +94,218 @@
      "benzer_cikmis": [
       "b49a246fe858"
      ]
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Uzun süreli yatak istirahati sonrası ani nefes darlığı ve göğüs ağrısıyla getirilen 68 yaşındaki hastada tromboemboli düşünülmektedir. Emboli tanımı ve klinik önemiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Emboli yalnızca gaz kabarcıklarından oluşur; trombüs kaynaklı emboli yoktur.",
+      "B": "Emboli, kaynak noktasından kopmuş kan akımıyla taşınan katı, sıvı veya gaz kitledir; çoğu trombüsten köken alır.",
+      "C": "Sistemik emboli enfarktüs yapmaz; pulmoner emboli ise sağ kalp yetmezliği yapmaz.",
+      "D": "Emboli tanımı için kitlenin damar dışında oluşması şarttır.",
+      "E": "Tromboembolinin klinik önemi yoktur; her zaman sessiz seyreder."
+     },
+     "dogru": "B",
+     "aciklama": "Emboli; kaynaktan kopmuş, kanla taşınan katı/sıvı/gaz kitledir, çoğu trombüsten köken alır; sistemik emboli enfarktüs, pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; çoğu emboli trombüsten köken alır.",
+      "B": "Doğru. Tanım ve köken birlikte doğrudur.",
+      "C": "Yanlış; sistemik emboli enfarktüs, pulmoner emboli sağ kalp yetmezliği yapar.",
+      "D": "Yanlış; kaynak damar içi trombüstür.",
+      "E": "Yanlış; ani ölüm dahil ciddi sonuçları vardır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Uzun yatak istirahatli hastada ani dispne gelişen olguda tromboembolik süreç irdelenirken emboli ve tromboembolinin klinik sonuçlarıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sistemik emboli arter yatağını tıkayarak enfarktüs yapabilir.",
+      "B": "Pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüme yol açabilir.",
+      "C": "Embolilerin çoğu trombüsten köken alır.",
+      "D": "Tromboemboli her zaman zararsızdır ve hiçbir organda iskemik nekroza yol açmaz.",
+      "E": "Emboli katı, sıvı veya gaz yapıda olabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Sistemik emboli enfarktüs, pulmoner emboli hipoksi/sağ kalp yetmezliği/ani ölüm yapar; tromboemboli ciddi ve ölümcül olabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Yanlış ifade (aranan cevap). Tromboemboli iskemik nekroz ve ölüme yol açabilir.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Emboli tanımı ve tromboemboli kavramıyla ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Emboli damarda oluşan pıhtıdır",
+      "B": "Taşınan kitle; çoğu trombüs parçası",
+      "C": "Emboli yalnızca gazdan oluşur",
+      "D": "Emboli damarları genişletir",
+      "E": "Tromboemboli terimi kullanılmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Emboli, kaynağından kopup kan akımıyla taşınan katı, sıvı veya gaz kitlesidir; pratikte çoğu kopmuş trombüs parçasıdır, bu yüzden tromboemboli denir. Sürüklenen kitle çapına uygun küçük damarlara takılarak parsiyel ya da tam tıkanma yapar. Tıkanan yatak arteriyelse doku iskemisi, pulmonerse gaz değişim bozukluğu doğar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; damarda oluşan pıhtı trombüstür, embolus taşınan kitledir.",
+      "B": "Doğru; tanım ve tromboemboli ağırlığını birlikte verir.",
+      "C": "Yanlış; katı, sıvı veya gaz olabilir.",
+      "D": "Yanlış; emboli küçük damarları tıkar, genişletmez.",
+      "E": "Yanlış; çoğu emboli trombüs kökenli olduğundan terim kullanılır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": [
+      "39be21ebc522"
+     ]
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Sistemik ve pulmoner embolinin klinik sonuçları nasıl farklılaşır?",
+     "secenekler": {
+      "A": "Sistemik emboli kanamaya yol açar",
+      "B": "Pulmoner emboli sol kalp güçlendirir",
+      "C": "Emboli klinik sonuç doğurmaz",
+      "D": "Sistemik enfarktüs; pulmoner hipoksi ve ani ölüm",
+      "E": "Pulmoner emboli enfarktüs yapamaz"
+     },
+     "dogru": "D",
+     "aciklama": "Sistemik emboli arteriyel yatağı tıkadığı için hedef dokuda iskemi ve enfarktüs oluşturur. Pulmoner emboli ise akciğer dolaşımını tıkayarak ventilasyon-perfüzyon uyumsuzluğuyla hipoksi yapar; sağ ventrikül afterloadu artar ve sağ kalp yetmezliği ile ani ölüm gelişebilir. Bu iki farklı yatak-tıkanma sonucu, embolinin klinik önemini belirler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sistemik emboli arter tıkanmasıyla enfarktüs yapar.",
+      "B": "Yanlış; pulmoner emboli sağ kalbi zorlar, yetmezliğe götürür.",
+      "C": "Yanlış; tıkanan yatağa göre enfarktüs, hipoksi ve ölüm olur.",
+      "D": "Doğru; iki yatağın farklı sonuçlarını özetler.",
+      "E": "Yanlış; distal küçük emboliler pulmoner enfarktüs yapabilir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k01-q08",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Kardiyojenik şok\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "C": "Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+      "D": "Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "E": "Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "B": "Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "A": "Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+      "D": "Yanlış. Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "E": "Yanlış. Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "B": "Yanlış. Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "A": "Yanlış. Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k01-q09",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Septik enfarktüs\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur.",
+      "D": "Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "E": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "C": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "A": "Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur.",
+      "D": "Yanlış. Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "E": "Yanlış. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "C": "Yanlış. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "A": "Yanlış. Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k01-q10",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Hipoksiye duyarlılık\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "C": "Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür.",
+      "B": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "A": "Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar.",
+      "E": "En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "C": "Yanlış. Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür.",
+      "B": "Yanlış. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "A": "Yanlış. Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar.",
+      "E": "Yanlış. En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k01-q11",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Dekompresyon tedavisi\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "E": "Hipotansiyon, ödem ve tromboz hücresel hipoksiye yol açar; böbrekte ATN, karaciğer disfonksiyonu, akciğerde ARDS, kalpte miyokard depresyonu gelişir.",
+      "C": "Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "D": "1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "B": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "E": "Yanlış. Hipotansiyon, ödem ve tromboz hücresel hipoksiye yol açar; böbrekte ATN, karaciğer disfonksiyonu, akciğerde ARDS, kalpte miyokard depresyonu gelişir.",
+      "C": "Yanlış. Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "D": "Yanlış. 1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "B": "Yanlış. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -193,6 +406,219 @@
       17
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Femur kırığı sonrası alçıda kalan 55 yaşındaki hastada 10. günde ani dispne, taşikardi ve senkop gelişmiştir. Öyküde diz üstü derin bacak venlerinde trombüs saptanmıştır. Pulmoner emboli kaynağı ve klinik biçimleriyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Pulmoner embolilerin >%95'i derin ven trombozundan, özellikle diz üstü derin bacak venlerinden (popliteal, femoral, iliak) kaynaklanır.",
+      "B": "Pulmoner emboli en sık yüzeyel kol venlerinden kaynaklanır.",
+      "C": "Büyük (eyer) emboli ana pulmoner arteri tıkasa bile klinik bulgu vermez.",
+      "D": "Orta boy embolilerde akciğerin çift dolaşımı enfarktüs riskini artırır.",
+      "E": "Küçük emboliler her zaman ölümcüldür ve organize olmaz."
+     },
+     "dogru": "A",
+     "aciklama": "Pulmoner embolilerin >%95'i DVT'den, özellikle diz üstü derin bacak venlerinden kaynaklanır; küçük emboli sessiz kalıp organize olabilir, büyük emboli ana arteri tıkar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kaynak ve yayılım bilgisi doğrudur.",
+      "B": "Yanlış; kaynak diz üstü derin venlerdir.",
+      "C": "Yanlış; büyük emboli ani ölüm yapabilir.",
+      "D": "Yanlış; çift dolaşım enfarkt riskini azaltır.",
+      "E": "Yanlış; küçük emboli sessizdir ve organize olur."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Alçılı bacakta DVT saptanan hastada ani dispne-senkop tablosu değerlendirilirken pulmoner emboli klinik-patolojik özellikleriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Küçük emboli sessiz kalabilir ve organize olur.",
+      "B": "Büyük emboli ana pulmoner arteri veya bifürkasyonu tıkayabilir (eyer emboli).",
+      "C": "Tekrarlayan küçük emboliler enfarktüs oluşturmaz ve pulmoner hipertansiyonla hiçbir ilişkisi yoktur.",
+      "D": "Distal arteriyollere yerleşen tekrarlayan küçük emboliler pulmoner hipertansiyona yol açabilir.",
+      "E": "Orta boy emboli akciğerin çift dolaşımı nedeniyle genellikle enfarkt yapmaz."
+     },
+     "dogru": "C",
+     "aciklama": "Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturabilir (enfeksiyonla karışabilir) ve tekrarlayanlar pulmoner hipertansiyona yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Yanlış ifade (aranan cevap). Tekrarlayan küçük emboliler PH yapabilir.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade; çift dolaşım koruyucudur."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Pulmoner tromboembolizmin en sık kaynağı ve izlediği yol nedir?",
+     "secenekler": {
+      "A": "%95 DVT; diz üstü venler, sağ kalp",
+      "B": "Kaynak sol ventrikül trombüsüdür",
+      "C": "Kaynak koroner aterom plağıdır",
+      "D": "Yayılım aort yoluyla olur",
+      "E": "Tekrar riski artmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Pulmoner embolilerin %95'ten fazlası derin ven trombozundan, özellikle diz üstü derin bacak venlerinden (popliteal, femoral, iliak) kopan pıhtılardan kaynaklanır. Kopan trombüs venöz sistemle sağ kalbe ulaşır ve pulmoner artere pompalanır. Bir kez pulmoner emboli geçiren hastada rezidü venöz trombüs nedeniyle yeni emboli riski artar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; kaynak, riskli ven segmentleri ve izlenen yolu verir.",
+      "B": "Yanlış; sol ventrikül trombüsü sistemik emboliye yol açar.",
+      "C": "Yanlış; koroner plak rüptürü miyokart enfarktüsü yapar.",
+      "D": "Yanlış; yayılım venöz sistem ve sağ kalple pulmoner arteredir.",
+      "E": "Yanlış; geçirenlerde yeni emboli riski artar."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Emboli boyutuyla klinik sonuç arasındaki ilişki nasıldır?",
+     "secenekler": {
+      "A": "Eyer embolisi her zaman sessizdir",
+      "B": "Küçük emboliler hep öldürür",
+      "C": "Eyer ani ölüm; tekrarlayanlar pulmoner hipertansiyon",
+      "D": "Orta emboliler daima enfarkt yapar",
+      "E": "Tekrarlayan emboli kor pulmonale yapmaz"
+     },
+     "dogru": "C",
+     "aciklama": "Çoğu küçük emboli klinik sessiz kalır; organize olup damar duvarına katılır. Ana pulmoner arteri veya bifürkasyonu tıkayan büyük eyer embolisi ani ölüm veya akut sağ kalp yetmezliği yapar. Orta boy emboliler akciğerin çift dolaşımı (bronşiyal + pulmoner) sayesinde enfarktüs oluşturmayabilir; ancak sol kalp yetmezliği gibi hipoperfüzyonda pulmoner enfarkt gelişir. Tekrarlayan küçük emboliler kronik tromboembolik pulmoner hipertansiyon ve kor pulmonaleye ilerler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; eyer embolisi ani ölüm ve sağ kalp yetmezliği yapar.",
+      "B": "Yanlış; küçük embolilerin çoğu sessizdir ve organize olur.",
+      "C": "Doğru; boyut-sonuç ilişkisini ve kronik sonucu verir.",
+      "D": "Yanlış; çift dolaşım nedeniyle enfarktüs oluşmayabilir.",
+      "E": "Yanlış; tekrarlayanlar pulmoner hipertansiyon ve kor pulmonale yapar."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": [
+      "9f4f183e38ee"
+     ]
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k02-q08",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "\"Beyaz (anemik) enfarkt\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "C": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "B": "Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "D": "Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+      "E": "Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "C": "Yanlış. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "B": "Yanlış. Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "D": "Yanlış. Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+      "E": "Yanlış. Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k02-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Tıkanma hızı faktörü\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar.",
+      "D": "Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "B": "Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir.",
+      "A": "Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "E": "En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar.",
+      "D": "Yanlış. Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "B": "Yanlış. Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir.",
+      "A": "Yanlış. Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "E": "Yanlış. En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k02-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Yağ embolisi sendromu\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür.",
+      "D": "Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "A": "Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "C": "Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4).",
+      "E": "Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür.",
+      "D": "Yanlış. Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "A": "Yanlış. Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "C": "Yanlış. Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4).",
+      "E": "Yanlış. Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k02-q11",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Hipovolemik şok\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "E": "Pulmoner embolilerin >%95'i DVT'den, özellikle diz üstü derin bacak venlerinden (popliteal, femoral, iliak) kaynaklanır.",
+      "C": "Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "A": "Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "D": "Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "E": "Yanlış. Pulmoner embolilerin >%95'i DVT'den, özellikle diz üstü derin bacak venlerinden (popliteal, femoral, iliak) kaynaklanır.",
+      "C": "Yanlış. Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "A": "Yanlış. Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "D": "Yanlış. Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -276,6 +702,216 @@
      },
      "bilgi": [
       6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Sol ventrikül ön duvar enfarktüsü geçiren 62 yaşındaki hastada 1 hafta sonra sağ bacakta ani soğukluk, solukluk ve nabızsızlık gelişmiştir. Sistemik emboli kaynağı ve hedefleriyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Böbrek, dalak ve mezenterik damarlar hiçbir zaman tutulmaz.",
+      "B": "Sistemik emboli en sık venöz sistemden kaynaklanır.",
+      "C": "En sık hedef üst ekstremite toplardamarlarıdır.",
+      "D": "Miyokard enfarktüsü sonrası mural trombüs emboli kaynağı olamaz.",
+      "E": "Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4); uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75)."
+     },
+     "dogru": "E",
+     "aciklama": "Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten (LV enfarktüsü ~2/3, dilate sol atriyum ~1/4) köken alır; en sık hedef alt ekstremite arterleridir (~%75), diğerleri mezenterik, böbrek ve dalaktır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; mezenterik, böbrek ve dalak da tutulur.",
+      "B": "Yanlış; kaynak intrakardiyak mural trombüstür.",
+      "C": "Yanlış; en sık hedef alt ekstremite arterleridir.",
+      "D": "Yanlış; MI sonrası mural trombüs başlıca kaynaktır.",
+      "E": "Doğru. Kaynak ve hedef dağılımı doğrudur."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Mİ sonrası mural trombüslü hastada sistemik emboli riski değerlendirilirken sistemik tromboembolizmle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kaynakların ~%80'i intrakardiyak mural trombüstür.",
+      "B": "Sistemik emboliler en sık akciğer arterlerine yerleşir ve alt ekstremite tutulumu nadirdir.",
+      "C": "En sık yerleşim alt ekstremite arterleridir (~%75).",
+      "D": "Mezenterik damarlar, böbrek ve dalak da tutulabilir.",
+      "E": "Sol ventrikül enfarktüsü mural trombüslerin ~2/3'ünü, dilate sol atriyum ~1/4'ünü oluşturur."
+     },
+     "dogru": "B",
+     "aciklama": "Akciğer tutulumu pulmoner (venöz) embolinin alanıdır; sistemik embolide en sık hedef alt ekstremite arterleridir (~%75).",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Yanlış ifade (aranan cevap). Akciğer-sistemik ayrımı karıştırılmıştır.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Sistemik tromboembolizmin başlıca kaynakları hangileridir?",
+     "secenekler": {
+      "A": "Kaynak hep derin venlerdir",
+      "B": "Mural trombüs kaynak olmaz",
+      "C": "Paradoksal emboli arter kaynaklıdır",
+      "D": "Vejetasyonlar emboli yapmaz",
+      "E": "%80 mural trombüs; SV enfarktüsü, dilate LA"
+     },
+     "dogru": "E",
+     "aciklama": "Sistemik embolilerin yaklaşık %80'i intrakardiyak mural trombüslerden kopar; bunların üçte ikisi sol ventrikül enfarktüsü zemininde, dörtte biri mitral stenozlu dilate sol atriyumdadır. Diğer kaynaklar aort anevrizması, ülserleşmiş aterom plağı ve kapak vejetasyonlarıdır. Venöz sistemden kopan pıhtının foramen ovale gibi sağ-sol şantla sistemik dolaşıma geçmesi paradoksal emboli adını alır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; derin venler pulmoner embolinin kaynağıdır.",
+      "B": "Yanlış; mural trombüsler en sık sistemik kaynaktır.",
+      "C": "Yanlış; paradoksal emboli venöz kaynaklı sistemik embolidir.",
+      "D": "Yanlış; kapak vejetasyonları septik sistemik emboli yapar.",
+      "E": "Doğru; başlıca kaynak dağılımını ve paradoksal mekanizmayı özetler."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Sistemik embolilerin en sık yerleştiği bölgeler ve sonucu nedir?",
+     "secenekler": {
+      "A": "En sık hedef akciğerdir",
+      "B": "%75 alt ekstremite; böbrek, dalak, mezenterik",
+      "C": "Uç arterlerde enfarktüs olmaz",
+      "D": "Üst ekstremite en sıktır",
+      "E": "Emboliler beyne hiç gitmez"
+     },
+     "dogru": "B",
+     "aciklama": "Sistemik emboliler en sık alt ekstremite arterlerine yerleşir (~%75); çünkü akımın büyük kısmı bu yatağa gider. Diğer hedefler mezenterik damarlar, böbrek ve dalaktır. Bu organlar uç arter dolaşımına sahip olduğundan tıkanan dalın beslediği alan kollateralden beslenemez ve enfarktüs sık gelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; akciğer venöz embolinin hedefidir.",
+      "B": "Doğru; hedef dağılımı ve uç arter sonucunu verir.",
+      "C": "Yanlış; uç arter tıkanması enfarktüsü kolaylaştırır.",
+      "D": "Yanlış; en sık hedef alt ekstremite arterleridir.",
+      "E": "Yanlış; beyin de sistemik embolinin hedefi olabilir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k03-q08",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "\"Septik enfarktüs\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur.",
+      "E": "Uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidleri yırtılır ve yağ kürecikleri dolaşıma karışır.",
+      "C": "1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "D": "Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "A": "Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur.",
+      "E": "Yanlış. Uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidleri yırtılır ve yağ kürecikleri dolaşıma karışır.",
+      "C": "Yanlış. 1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "D": "Yanlış. Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "A": "Yanlış. Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k03-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Hipoksiye duyarlılık\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "D": "Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4).",
+      "B": "Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "C": "Doku faktörü artar; TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artar ve fibrinoliz baskılanır.",
+      "E": "Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "D": "Yanlış. Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4).",
+      "B": "Yanlış. Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "C": "Yanlış. Doku faktörü artar; TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artar ve fibrinoliz baskılanır.",
+      "E": "Yanlış. Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k03-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Sistemik emboli hedefleri\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "B": "Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "C": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "D": "Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir.",
+      "A": "Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "B": "Yanlış. Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "C": "Yanlış. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "D": "Yanlış. Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir.",
+      "A": "Yanlış. Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k03-q11",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"Enfarktüs nedenleri\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "E": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "A": "Bir doku veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır.",
+      "D": "Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür.",
+      "C": "Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "B": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+     "sik_aciklamalari": {
+      "E": "Doğru. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "A": "Yanlış. Bir doku veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır.",
+      "D": "Yanlış. Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür.",
+      "C": "Yanlış. Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "B": "Yanlış. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur."
+     },
+     "bilgi": [
+      16
      ],
      "benzer_cikmis": []
     }
@@ -364,6 +1000,216 @@
       9
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Femur cisim kırığı nedeniyle intramedüller çivi takılan 25 yaşındaki hastada ameliyattan 2 gün sonra ani solunum sıkıntısı, konfüzyon ve gövde-aksillada peteşiyal döküntü gelişmiştir. En olası tanı ve mekanizmayla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yağ embolisi yalnızca kafa travmalarında görülür.",
+      "B": "Tablo hava embolisidir; yağ ile ilişkisi yoktur.",
+      "C": "Peteşiyal döküntü yağ embolisini dışlar.",
+      "D": "Uzun kemik kırığı/ezilmede kemik iliği sinüzoidleri yırtılır, yağ kürecikleri dolaşıma karışır; 1-3 gün sonra solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntü triadıyla yağ embolisi sendromu gelişir.",
+      "E": "Sendrom travmadan aylar sonra ortaya çıkar."
+     },
+     "dogru": "D",
+     "aciklama": "Yağ embolisi: uzun kemik kırığı ve yumuşak doku ezilmesinde sinüzoid yırtılmasıyla yağ kürecikleri dolaşıma karışır; 1-3 gün sonra triad (solunum yetmezliği, nörolojik belirtiler, peteşiyal döküntü) gelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; uzun kemik kırığı tipik nedendir.",
+      "B": "Yanlış; tablo yağ embolisi sendromudur.",
+      "C": "Yanlış; peteşi triadın parçasıdır.",
+      "D": "Doğru. Mekanizma, zamanlama ve triad doğrudur.",
+      "E": "Yanlış; 1-3 günde gelişir."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Femur kırıklı hastada postoperatif 2. günde gelişen solunum-nörolojik-peteşial tablo tartışılırken yağ embolisi ve sendromuyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Yağ embolisi sendromu travmadan dakikalar içinde gelişir ve peteşi hiçbir zaman görülmez.",
+      "B": "Mekanizma kemik iliği sinüzoidlerinin yırtılmasıyla yağ küreciklerinin dolaşıma karışmasıdır.",
+      "C": "Sendrom travmadan 1-3 gün sonra gelişir.",
+      "D": "Triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür.",
+      "E": "Kaynak genellikle uzun kemik kırıkları ve yumuşak doku ezilmesidir."
+     },
+     "dogru": "A",
+     "aciklama": "Sendrom 1-3 gün sonra gelişir ve peteşiyal döküntü triadın bileşenidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış ifade (aranan cevap). Zamanlama ve peteşi bilgisi hatalıdır.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yağ embolisinin oluşum mekanizması ve sıklığıyla ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Kırıkta sinüzoid yırtılması; çoğu sessiz",
+      "B": "Yağ embolisi yalnızca yanıkta olur",
+      "C": "Kemik iliği kana hiç karışmaz",
+      "D": "Her yağ embolisi sendromdur",
+      "E": "Yağ kürecikleri arterde oluşur"
+     },
+     "dogru": "A",
+     "aciklama": "Uzun kemik kırıkları ve yumuşak doku ezilmelerinde kemik iliği sinüzoidleri yırtılır; buradan yağ kürecikleri venöz dolaşıma karışır. Travma sonrası mikroskobik düzeyde yağ embolisi sıktır ve çoğu hastada sessiz seyreder. Klinik sendroma dönüşmesi için mekanik tıkanmaya ek olarak yağ asidi toksisitesi ve inflamatuvar yanıt gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; kaynak mekanizmayı ve sessiz sıklığı verir.",
+      "B": "Yanlış; klasik neden uzun kemik kırığı ve ezilmedir.",
+      "C": "Yanlış; yırtılan sinüzoidlerden yağ dolaşıma geçer.",
+      "D": "Yanlış; mikroskobik emboliler genellikle sessizdir.",
+      "E": "Yanlış; yağ kemik iliğinden venöz dolaşıma karışır."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yağ embolisi sendromunun zamanlaması ve klinik triadı nedir?",
+     "secenekler": {
+      "A": "Sendrom travma anında başlar",
+      "B": "Triad ateş, kusma, ishaldir",
+      "C": "Peteşi hiç görülmez",
+      "D": "1-3 gün; solunum, nörolojik, peteşi",
+      "E": "Trombositopeni eşlik etmez"
+     },
+     "dogru": "D",
+     "aciklama": "Yağ embolisi sendromu travmadan 1-3 gün sonra ortaya çıkar; bu gecikme yağ asitlerinin salınımı ve inflamatuvar yanıtın olgunlaşmasıyla açıklanır. Triad solunum yetmezliği, nörolojik belirtiler ve gövde-konjonktivada peteşiyal döküntüdür. Trombosit aktivasyonu ve tüketimiyle anemi ile trombositopeni tabloya eşlik eder; mekanik tıkanma, yağ asidi toksisitesi ve endotel hasarı birlikte rol oynar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sendrom 1-3 gün sonra gelişir.",
+      "B": "Yanlış; triad solunum yetmezliği, nörolojik bulgu ve peteşidir.",
+      "C": "Yanlış; gövde ve konjonktivada peteşi tipiktir.",
+      "D": "Doğru; zamanlama ve triadı birlikte verir.",
+      "E": "Yanlış; trombosit aktivasyonuyla trombositopeni ve anemi olur."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k04-q08",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "\"Yağ embolisi\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidleri yırtılır ve yağ kürecikleri dolaşıma karışır.",
+      "E": "Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "C": "Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür.",
+      "B": "Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "D": "Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidleri yırtılır ve yağ kürecikleri dolaşıma karışır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidleri yırtılır ve yağ kürecikleri dolaşıma karışır.",
+      "E": "Yanlış. Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "C": "Yanlış. Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür.",
+      "B": "Yanlış. Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "D": "Yanlış. Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k04-q09",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Sistemik emboli hedefleri\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "D": "En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "C": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "B": "Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "A": "Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "D": "Yanlış. En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "C": "Yanlış. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "B": "Yanlış. Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "A": "Yanlış. Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k04-q10",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Emboli tanımı\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "C": "Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "A": "Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk cilt; septik şokta erken dönemde sıcak-kızarık cilt. Hipovolemik şokta sağkalım >%90, kardiyojenik/septik şokta mortalite yüksektir.",
+      "D": "Doku faktörü artar; TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artar ve fibrinoliz baskılanır.",
+      "B": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "E": "Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "A": "Yanlış. Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk cilt; septik şokta erken dönemde sıcak-kızarık cilt. Hipovolemik şokta sağkalım >%90, kardiyojenik/septik şokta mortalite yüksektir.",
+      "D": "Yanlış. Doku faktörü artar; TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artar ve fibrinoliz baskılanır.",
+      "B": "Yanlış. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "E": "Yanlış. Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k04-q11",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Enfarktüs nedenleri\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "D": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "A": "Hipotansiyon, ödem ve tromboz hücresel hipoksiye yol açar; böbrekte ATN, karaciğer disfonksiyonu, akciğerde ARDS, kalpte miyokard depresyonu gelişir.",
+      "E": "Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "B": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "C": "Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+     "sik_aciklamalari": {
+      "D": "Doğru. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "A": "Yanlış. Hipotansiyon, ödem ve tromboz hücresel hipoksiye yol açar; böbrekte ATN, karaciğer disfonksiyonu, akciğerde ARDS, kalpte miyokard depresyonu gelişir.",
+      "E": "Yanlış. Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "B": "Yanlış. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "C": "Yanlış. Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -448,6 +1294,216 @@
      "bilgi": [
       10,
       11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Güçlü uterus kontraksiyonları sırasında doğum yapan 30 yaşındaki kadında ani dispne, siyanoz, hipotansiyon ve yaygın kanama gelişmiş; hasta kısa sürede kaybedilmiştir (insidans ~1/40.000, mortalite ~%80). Otopside akciğer damarlarında fetal skuamöz hücreler ve verniks kazeoza saptanmıştır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Amniyotik sıvı embolisinde mortalite düşüktür ve tanı için morfoloji gerekmez.",
+      "B": "Tablo pulmoner tromboembolidir; fetal hücrelerin bulunması tesadüfidir.",
+      "C": "Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçmiştir; akciğerde fetal skuamöz hücreler, lanugo, verniks, mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri amniyotik sıvı embolisini destekler.",
+      "D": "Amniyotik sıvı anne dolaşımına geçemez.",
+      "E": "Akciğerde fetal hücre görülmesi normaldir."
+     },
+     "dogru": "C",
+     "aciklama": "Amniyotik sıvı embolisi: plasenta/uterin damar yırtığıyla fetal içerik anne dolaşımına geçer; akciğerde fetal skuamöz hücreler, lanugo, verniks, mukus + ödem, DAH ve fibrin trombüsleri görülür; mortalite ~%80'dir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; mortalite ~%80'dir.",
+      "B": "Yanlış; fetal hücreler tanısal morfolojidir.",
+      "C": "Doğru. Patogenez, klinik ağırlık ve morfoloji doğrudur.",
+      "D": "Yanlış; yırtıkla geçiş olur.",
+      "E": "Yanlış; fetal hücre patolojiktir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Doğum sırasında ani kollaps gelişen olgunun ayırıcı tanısı yapılırken amniyotik sıvı embolisiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Plasenta veya uterin damar yırtığıyla amniyotik sıvı anne dolaşımına geçer.",
+      "B": "İnsidans ~1/40.000, mortalite ~%80'dir.",
+      "C": "Akciğer morfolojisinde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus görülür.",
+      "D": "Ödem, diffüz alveoler hasar ve fibrin trombüsleri eşlik edebilir.",
+      "E": "Bu tabloda mortalite %5'in altındadır ve akciğerde fetal kökenli materyal bulunmaz."
+     },
+     "dogru": "E",
+     "aciklama": "Amniyotik sıvı embolisinde mortalite ~%80'dir ve akciğerde fetal hücreler, lanugo, verniks ve mukus saptanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Yanlış ifade (aranan cevap). Mortalite ve morfoloji bilgisi hatalıdır."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Amniyotik sıvı embolisinin patogenezi ve klinik ağırlığıyla ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Amniyon sıvısı fetüse kaçar",
+      "B": "Mortalite %1'in altındadır",
+      "C": "Zar yırtığı; 1/40.000, %80 mortalite",
+      "D": "DIC hiç gelişmez",
+      "E": "Klinik yavaş ve hafiftir"
+     },
+     "dogru": "C",
+     "aciklama": "Plasenta zarlarında veya uterin damarlarda oluşan yırtık, amniyon sıvısı ve içindeki fetal hücrelerin anne venöz dolaşımına geçmesine yol açar. Olgu ~40.000 doğumda bir görülür ancak mortalite ~%80 ile çok yüksektir. Ani dispne, siyanoz, hipotansiyon, şok, nöbet ve koma gelişir; yaygın endotel hasarı ve doku faktörü salınımı sıklıkla DIC'i tetikler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sıvı ve fetal hücreler anne dolaşımına geçer.",
+      "B": "Yanlış; mortalite ~%80 ile çok yüksektir.",
+      "C": "Doğru; patogenez, sıklık ve ağırlığı özetler.",
+      "D": "Yanlış; tabloya sıklıkla DIC eşlik eder.",
+      "E": "Yanlış; ani dispne, şok ve koma gelişir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Amniyotik sıvı embolisinde akciğerde görülen morfolojik bulgular hangileridir?",
+     "secenekler": {
+      "A": "Akciğerde bakteri kümeleri tipiktir",
+      "B": "Fetal skuamöz hücre, lanugo, verniks, mukus",
+      "C": "Alveoler hasar hiç oluşmaz",
+      "D": "Fibrin trombüsü görülmez",
+      "E": "Lanugo erişkin kılıdır"
+     },
+     "dogru": "B",
+     "aciklama": "Akciğer damarlarında ve alveollerde fetal skuamöz hücreler, lanugo (fetal ince tüyler), verniks kazeoza yağı ve mukus saptanması tanıyı morfolojik olarak destekler. Bunlara ödem, diffüz alveoler hasar ve fibrin trombüsleri eşlik eder. Fetal debris doğrudan mekanik tıkanma yaparken, amniyon sıvısındaki prokoagülan maddeler yaygın trombüs oluşumunu körükler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; tipik bulgu fetal hücre ve debrislerdir, bakteri değil.",
+      "B": "Doğru; morfolojik tanı ölçütlerini sıralar.",
+      "C": "Yanlış; ödem ve diffüz alveoler hasar eşlik eder.",
+      "D": "Yanlış; fibrin trombüsleri tablonun parçasıdır.",
+      "E": "Yanlış; lanugo fetüsü kaplayan ince tüylerdir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k05-q08",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "\"Beyaz (anemik) enfarkt\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "B": "Hipotansiyon, ödem ve tromboz hücresel hipoksiye yol açar; böbrekte ATN, karaciğer disfonksiyonu, akciğerde ARDS, kalpte miyokard depresyonu gelişir.",
+      "D": "Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir.",
+      "E": "Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "C": "Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "B": "Yanlış. Hipotansiyon, ödem ve tromboz hücresel hipoksiye yol açar; böbrekte ATN, karaciğer disfonksiyonu, akciğerde ARDS, kalpte miyokard depresyonu gelişir.",
+      "D": "Yanlış. Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir.",
+      "E": "Yanlış. Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "C": "Yanlış. Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k05-q09",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Embolinin klinik önemi\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+      "A": "Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "E": "Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "B": "Uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidleri yırtılır ve yağ kürecikleri dolaşıma karışır.",
+      "D": "Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+      "A": "Yanlış. Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "E": "Yanlış. Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "B": "Yanlış. Uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidleri yırtılır ve yağ kürecikleri dolaşıma karışır.",
+      "D": "Yanlış. Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k05-q10",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Enfarktüs tanımı\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "C": "Bir doku veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır.",
+      "D": "Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "E": "Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "A": "Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "B": "Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Bir doku veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Bir doku veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır.",
+      "D": "Yanlış. Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "E": "Yanlış. Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "A": "Yanlış. Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "B": "Yanlış. Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k05-q11",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"Kardiyojenik şok\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "C": "Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+      "D": "Doku faktörü artar; TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artar ve fibrinoliz baskılanır.",
+      "B": "Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "E": "Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "A": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+      "D": "Yanlış. Doku faktörü artar; TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artar ve fibrinoliz baskılanır.",
+      "B": "Yanlış. Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "E": "Yanlış. Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "A": "Yanlış. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür."
+     },
+     "bilgi": [
+      27
      ],
      "benzer_cikmis": []
     }
@@ -536,6 +1592,219 @@
       14
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Beyin cerrahisi sırasında oturur pozisyonda opere edilen hastada ani hipotansiyon ve 'değirmen çarkı' üfürümü duyulmuştur; öyküde santral venöz kateter uygulaması da vardır. Bir başka olguda ise tüplü dalıştan hızla yüzeye çıkan dalgıçta eklem ağrısı ve nörolojik bulgular gelişmiştir. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Her iki tablo da yağ embolisidir.",
+      "B": "İlk olgu cerrahi/kateterle damara giren havanın kabarcık birleşmesiyle akımı tıkaması (hava embolisi); ikinci olgu basıncın ani azalmasıyla çözünmüş azotun kabarcık oluşturmasıdır (dekompresyon hastalığı).",
+      "C": "Hava embolisinde kabarcıklar akımı tıkamaz.",
+      "D": "Dekompresyonda azotun rolü yoktur.",
+      "E": "Her iki durumda da tedavi cerrahidir."
+     },
+     "dogru": "B",
+     "aciklama": "Hava embolisi: cerrahi (obstetrik, laparoskopik), göğüs travması, santral kateterle hava girer; kabarcıklar birleşerek akımı tıkar. Dekompresyon: ani basınç azalmasıyla çözünmüş azot kabarcık oluşturur; tedavi yüksek basınç odasıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; yağ embolisiyle ilişkisizdir.",
+      "B": "Doğru. İki tablonun mekanizması doğru ayrılmıştır.",
+      "C": "Yanlış; kabarcık birleşmesi akımı tıkar.",
+      "D": "Yanlış; azot kabarcığı esastır.",
+      "E": "Yanlış; dekompresyon tedavisi yüksek basınç odasıdır."
+     },
+     "bilgi": [
+      12,
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Oturur pozisyonda opere edilen kateterli hastayla hızla yükselen dalgıç olgusu karşılaştırılırken hava embolisi ve dekompresyon hastalığının tedavisiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hava damara cerrahi, travma veya santral venöz kateter yoluyla girebilir.",
+      "B": "Kabarcıkların birleşmesi damar akımını tıkar.",
+      "C": "Dekompresyon hastalığı ortam basıncının ani azalmasıyla çözünmüş azotun kabarcık oluşturmasıdır.",
+      "D": "Dekompresyon hastalığında basınç odası kontrendikedir; hasta hızla düşük basınca alınmalıdır.",
+      "E": "Dekompresyon tedavisinde hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır, gaz yeniden çözülür, sonra basınç yavaşça düşürülür."
+     },
+     "dogru": "D",
+     "aciklama": "Tedavi yüksek basınç odasıdır: gaz yeniden çözülür, ardından basınç yavaşça düşürülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Yanlış ifade (aranan cevap). Basınç odası tedavidir, kontrendike değildir.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      12,
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Hava embolisinin giriş yolları ve ölümcül mekanizması nedir?",
+     "secenekler": {
+      "A": "Hava embolisi yalnızca dalışta olur",
+      "B": "Küçük hava miktarı zararsızdır daima",
+      "C": "Hava kilidi sol ventriküldedir",
+      "D": "Kateterler hava embolisi yapmaz",
+      "E": "Cerrahi-travma-kateter; hava kilidi ölümcül"
+     },
+     "dogru": "E",
+     "aciklama": "Obstetrik ve laparoskopik cerrahi, göğüs travması ve santral venöz kateter uygulamalarında hava venöz sisteme girebilir. Kabarcıklar birleşerek pulmoner dolaşımı tıkar; ventilasyon-perfüzyon bozulmasıyla hipoksi doğar. Büyük miktarda hava sağ kalpte birikerek hava kilidi oluşturur; pompa işlevi durur ve ölüm gelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; cerrahi, travma ve kateter de nedendir.",
+      "B": "Yanlış; birleşen kabarcıklar pulmoner akımı tıkar.",
+      "C": "Yanlış; hava kilidi sağ kalpte pompa durmasına yol açar.",
+      "D": "Yanlış; santral venöz kateter klasik giriş yoludur.",
+      "E": "Doğru; kaynakları ve ölümcül mekanizmayı verir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Dekompresyon hastalığının mekanizması, formları ve tedavisi nedir?",
+     "secenekler": {
+      "A": "Azot kabarcığı; bends, chokes, Caisson",
+      "B": "Oksijen kabarcığı kas yırtar",
+      "C": "Yavaş çıkış hastalığı başlatır",
+      "D": "Tedavi ani basınç düşürmedir",
+      "E": "Kemik nekrozu hiç olmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Derin dalışta yüksek basınç altında dokularda çözünen azot, hızlı yüzeye çıkışta ortam basıncı ani düşünce kabarcık oluşturur. Eklem-kas ağrısı (bends), akciğer tutulumu (chokes: ödem, kanama, dispne) ve nörolojik defisit-koma akut tablolardır. Kronik formda (Caisson hastalığı) uzun kemik epifizlerinde iskemik nekroz gelişir; tedavi yüksek basınç odasıyla gazı yeniden çözüp basıncı yavaşça düşürmektir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; gazın cinsi, klinik formları ve kronik sonucu verir.",
+      "B": "Yanlış; kabarcıkları oluşturan çözünmüş azottur.",
+      "C": "Yanlış; hastalık ani basınç azalmasıyla tetiklenir.",
+      "D": "Yanlış; tedavi yüksek basınç odası ve yavaş basınç azaltmadır.",
+      "E": "Yanlış; kronik Caisson hastalığında epifiz nekrozu olur."
+     },
+     "bilgi": [
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k06-q08",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Şokta morfoloji\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "C": "En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "A": "Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür.",
+      "D": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "B": "Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir.",
+      "E": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+     "sik_aciklamalari": {
+      "C": "Doğru. En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "A": "Yanlış. Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür.",
+      "D": "Yanlış. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "B": "Yanlış. Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir.",
+      "E": "Yanlış. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k06-q09",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Kırmızı (hemorajik) enfarkt\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür.",
+      "B": "Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "D": "Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir.",
+      "A": "En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "E": "Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4)."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür.",
+      "B": "Yanlış. Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "D": "Yanlış. Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir.",
+      "A": "Yanlış. En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "E": "Yanlış. Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4)."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k06-q10",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Embolinin klinik önemi\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+      "C": "Hipotansiyon, ödem ve tromboz hücresel hipoksiye yol açar; böbrekte ATN, karaciğer disfonksiyonu, akciğerde ARDS, kalpte miyokard depresyonu gelişir.",
+      "E": "Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "D": "Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "B": "Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+      "C": "Yanlış. Hipotansiyon, ödem ve tromboz hücresel hipoksiye yol açar; böbrekte ATN, karaciğer disfonksiyonu, akciğerde ARDS, kalpte miyokard depresyonu gelişir.",
+      "E": "Yanlış. Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "D": "Yanlış. Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "B": "Yanlış. Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k06-q11",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"Vasküler anatomi faktörü\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "A": "Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir.",
+      "D": "Mikrobiyal ürünler TLR, G-proteinli ve C-tip lektin reseptörleriyle tanınır; TNF, IL-1, tip I IFN, PG, LT, ROS ve PAF salınır; kompleman aktive olur.",
+      "C": "Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "E": "En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "A": "Yanlış. Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir.",
+      "D": "Yanlış. Mikrobiyal ürünler TLR, G-proteinli ve C-tip lektin reseptörleriyle tanınır; TNF, IL-1, tip I IFN, PG, LT, ROS ve PAF salınır; kompleman aktive olur.",
+      "C": "Yanlış. Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "E": "Yanlış. En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -620,6 +1889,216 @@
      "bilgi": [
       16,
       17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Atriyal fibrilasyonu olan 70 yaşındaki hastada ani karın ağrısı ve kanlı dışkılama gelişmiş; mezenterik arterde emboli saptanmış, bağırsak segmentinde iskemik nekroz alanı görülmüştür. Enfarktüs tanımı ve nedenleriyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Enfarktüs, bir doku veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır; en sık nedenler arteriyel tromboz ve embolidir.",
+      "B": "Enfarktüs yalnızca venöz tıkanmayla oluşur.",
+      "C": "Vazospazm, dıştan bası, torsiyon ve travmatik rüptür enfarktüs nedeni olamaz.",
+      "D": "İskemik nekroz enfarktüsle ilişkisizdir.",
+      "E": "Emboli hiçbir zaman enfarktüs yapmaz."
+     },
+     "dogru": "A",
+     "aciklama": "Enfarktüs: kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır; en sık arteriyel tromboz ve emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Tanım ve sık nedenler doğrudur.",
+      "B": "Yanlış; en sık arteriyel nedenlerdir.",
+      "C": "Yanlış; sayılanlar nadir nedenlerdir.",
+      "D": "Yanlış; iskemik nekroz tanımın parçasıdır.",
+      "E": "Yanlış; emboli başlıca nedendir."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Mezenterik embolili hastada bağırsak nekrozunun nedeni irdelenirken enfarktüs nedenleriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "En sık nedenler arteriyel tromboz ve arteriyel embolidir.",
+      "B": "Vazospazm ve plak içi kanama nadir nedenlerdendir.",
+      "C": "Enfarktüsün tek nedeni venöz trombozdur; arteriyel tıkanma enfarktüs oluşturmaz.",
+      "D": "Dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptür enfarktüs yapabilir.",
+      "E": "Tanım kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır."
+     },
+     "dogru": "C",
+     "aciklama": "En sık nedenler arteriyeldir (tromboz, emboli); venöz tıkanma tek neden değildir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Yanlış ifade (aranan cevap). Arteriyel nedenler başlıcadır.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Enfarktüsün patolojik tanımıyla ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Enfarktüs kanama alanıdır",
+      "B": "Enfarktüs yavaş gelişen fibrozistir",
+      "C": "Ani kesintiye bağlı iskemik nekroz",
+      "D": "Enfarktüs yalnızca kalpte olur",
+      "E": "İskemi nekroz yapmaz"
+     },
+     "dogru": "C",
+     "aciklama": "Enfarktüs, bir doku veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır. Ani kesinti vurgusu önemlidir; yavaş gelişen darlıklarda kollateral dolaşım dokuyu koruyabilir. Kalp ve beyin enfarktüsleri en sık ölüm nedenleri arasındadır; akciğer, bağırsak enfarktüsleri ve diyabette ekstremite gangreni diğer örneklerdir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; enfarktüs iskemik nekrozdur, kanama değil.",
+      "B": "Yanlış; ani kan akımı kesintisi esastır.",
+      "C": "Doğru; tanımın üç öğesini (ani, iskemi, nekroz) verir.",
+      "D": "Yanlış; beyin, akciğer, bağırsak ve ekstremitede de olur.",
+      "E": "Yanlış; süren iskemi hücre ölümüne ilerler."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Enfarktüsün nedenleri ve sınıflamasıyla ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "En sık neden venöz yetmezliktir",
+      "B": "Arteriyel tromboz ve emboli en sık",
+      "C": "Torsiyon enfarktüs yapmaz",
+      "D": "Septik-aseptik ayrımı yoktur",
+      "E": "Vazospazm en sık nedendir"
+     },
+     "dogru": "B",
+     "aciklama": "Enfarktüsün en sık iki nedeni arteriyel tromboz ve arteriyel embolidir; aterosklerotik zeminde trombüs veya uzak kaynaklı embolus lümeni tıkar. Daha nadir nedenler vazospazm, plak içi kanamayla aterom genişlemesi, tümör ve ödemle dıştan bası, testis torsiyonu-volvulus gibi vasküler torsiyon, fıtık kesesinde sıkışma ve travmatik damar rüptürüdür. Enfarktüsler enfeksiyon varlığına göre septik ve aseptik olarak da sınıflanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; venöz tıkanma kırmızı enfarktüsün bir nedenidir.",
+      "B": "Doğru; sık ve nadir nedenlerle sınıflamayı özetler.",
+      "C": "Yanlış; testis torsiyonu ve volvulus klasik nedenlerdir.",
+      "D": "Yanlış; enfeksiyona göre septik-aseptik ayrımı yapılır.",
+      "E": "Yanlış; vazospazm nadir nedenlerdendir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k07-q08",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Amniyotik sıvı embolisi\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "B": "Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir.",
+      "D": "Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "A": "Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür.",
+      "C": "Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "E": "Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir.",
+      "D": "Yanlış. Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "A": "Yanlış. Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür.",
+      "C": "Yanlış. Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "E": "Yanlış. Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k07-q09",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Hava (gaz) embolisi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "C": "1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "D": "Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "E": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "A": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "C": "Yanlış. 1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "D": "Yanlış. Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "E": "Yanlış. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "A": "Yanlış. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k07-q10",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Şokta morfoloji\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "D": "Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "B": "Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "C": "Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "E": "Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "D": "Yanlış. Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "B": "Yanlış. Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "C": "Yanlış. Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "E": "Yanlış. Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k07-q11",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Şokun evreleri\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "D": "1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "C": "Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür.",
+      "B": "Hipotansiyon, ödem ve tromboz hücresel hipoksiye yol açar; böbrekte ATN, karaciğer disfonksiyonu, akciğerde ARDS, kalpte miyokard depresyonu gelişir.",
+      "E": "Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "A": "Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: 1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+     "sik_aciklamalari": {
+      "D": "Doğru. 1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "C": "Yanlış. Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür.",
+      "B": "Yanlış. Hipotansiyon, ödem ve tromboz hücresel hipoksiye yol açar; böbrekte ATN, karaciğer disfonksiyonu, akciğerde ARDS, kalpte miyokard depresyonu gelişir.",
+      "E": "Yanlış. Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "A": "Yanlış. Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür."
+     },
+     "bilgi": [
+      35
      ],
      "benzer_cikmis": []
     }
@@ -708,6 +2187,216 @@
       18
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Otopside iki farklı enfarktüs görülmüştür: akciğerde kanamalı, kırmızı görünümde lezyon; böbrekte soluk, kama şeklinde, sınırları belirgin lezyon. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Her iki lezyon da enfarktüs değildir.",
+      "B": "Akciğerdeki beyaz, böbrekteki kırmızı enfarkttır.",
+      "C": "Kırmızı enfarkt katı organlara özgüdür.",
+      "D": "Beyaz enfarkt çift dolaşımlı dokularda görülür.",
+      "E": "Akciğerdeki kırmızı (hemorajik) enfarkttır; venöz tıkanma, çift dolaşımlı dokular, konjesyonlu doku ve reperfüzyonda görülür. Böbrekteki beyaz (anemik) enfarkttır; katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür."
+     },
+     "dogru": "E",
+     "aciklama": "Kırmızı: venöz tıkanma, çift dolaşım (akciğer, ince bağırsak), konjesyon, reperfüzyon. Beyaz: katı uç arter organları (kalp, dalak, böbrek); soluk, kama şeklinde, belirgin sınırlı.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; her ikisi de enfarkttır.",
+      "B": "Yanlış; tipler ters verilmiştir.",
+      "C": "Yanlış; kırmızı çift dolaşımlı/konjesyonlu dokudadır.",
+      "D": "Yanlış; beyaz uç arter organlarındadır.",
+      "E": "Doğru. İki tipin özellikleri doğru eşleştirilmiştir."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Otopside akciğerde kırmızı, böbrekte soluk kama lezyon görülen olguda kırmızı ve beyaz enfarktüsle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kırmızı enfarkt venöz tıkanmada görülür.",
+      "B": "Beyaz enfarkt akciğerde tipiktir; kırmızı enfarkt böbrekte tipiktir.",
+      "C": "Beyaz enfarkt kalp, dalak ve böbrek gibi uç arter dolaşımlı organlarda görülür.",
+      "D": "Beyaz enfarktın sınırları belirgin, görünümü soluk ve kama şeklindedir.",
+      "E": "Çift dolaşımlı dokular (akciğer, ince bağırsak) kırmızı enfarkta yatkındır."
+     },
+     "dogru": "B",
+     "aciklama": "Akciğer kırmızı, böbrek beyaz enfarktın tipik örnekleridir; E seçeneği tersini söylemektedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Yanlış ifade (aranan cevap). Organ-tip eşleşmesi terstir.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Kırmızı (hemorajik) enfarktüsün görüldüğü durumlar hangileridir?",
+     "secenekler": {
+      "A": "Kırmızı enfarktüs kalp tipiktir",
+      "B": "Kırmızı enfarktüs kansız dokudur",
+      "C": "Reperfüzyon beyaz yapar",
+      "D": "Venöz tıkanma, çift dolaşım, reperfüzyon",
+      "E": "Konjesyon kırmızıdan korur"
+     },
+     "dogru": "D",
+     "aciklama": "Kırmızı enfarktüs dokuda yaygın hemorajiyle karakterlidir; venöz tıkanma (testis torsiyonu), akciğer ve ince bağırsak gibi çift dolaşımlı dokular, önceden konjesyone dokular, tıkalı alanda reperfüzyon ve gevşek dokular bu tipe yatkındır. Çift dolaşımda kollateral kanama alana dolar; reperfüzyonda hasarlı kapillerlerden kan sızar. Bu yüzden kırmızı görünüm kanlanmanın sürdüğünün değil, kanamanın göstergesidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; kalp uç arterli olduğundan beyaz enfarktüs yapar.",
+      "B": "Yanlış; kırmızı enfarktüste yaygın hemoraji vardır.",
+      "C": "Yanlış; reperfüzyon hasarlı damarlarda kırmızı enfarktüs oluşturur.",
+      "D": "Doğru; kırmızı enfarktüsün dört yatkınlık durumunu verir.",
+      "E": "Yanlış; önceden konjesyone doku kırmızıya yatkındır."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Beyaz (anemik) enfarktüsün organ dağılımı ve morfolojisi nasıldır?",
+     "secenekler": {
+      "A": "Kalp-dalak-böbrek; soluk, kama şekli",
+      "B": "Akciğer beyaz enfarktüs tipiktir",
+      "C": "Beyaz enfarktüs kanamalıdır",
+      "D": "Sınırları belirsiz ve kırmızıdır",
+      "E": "Uç arterlerde beyaz olmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Beyaz enfarktüs kalp, dalak ve böbrek gibi katı, uç arter dolaşımına sahip organlarda görülür; kollateral olmadığı için tıkanan alan kansız kalır. Lezyon sınırları belirgin, soluk renklidir ve kama şeklindedir; kama tabanı organ yüzeyinde, ucu tıkalı damara dönüktür. Bu geometri, tek besleyici damarın dağılım alanını yansıtır.",
+     "sik_aciklamalari": {
+      "A": "Doğru; organ grubu, görünüm ve şekli birlikte verir.",
+      "B": "Yanlış; akciğer çift dolaşımlı olduğundan kırmızı yapar.",
+      "C": "Yanlış; beyaz enfarktüs anemik-soluktur, kanamasızdır.",
+      "D": "Yanlış; zamanla sınırları belirginleşir ve soluklaşır.",
+      "E": "Yanlış; uç arter dolaşımı beyaz enfarktüsün koşuludur."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k08-q08",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "\"Şok tipleri\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "E": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "B": "Pulmoner embolilerin >%95'i DVT'den, özellikle diz üstü derin bacak venlerinden (popliteal, femoral, iliak) kaynaklanır.",
+      "C": "Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür.",
+      "A": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "E": "Yanlış. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "B": "Yanlış. Pulmoner embolilerin >%95'i DVT'den, özellikle diz üstü derin bacak venlerinden (popliteal, femoral, iliak) kaynaklanır.",
+      "C": "Yanlış. Venöz tıkanma, çift dolaşımlı dokular (akciğer, ince bağırsak), konjesyonlu doku ve reperfüzyonda görülür.",
+      "A": "Yanlış. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k08-q09",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Şokta morfoloji\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "A": "Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "E": "Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "B": "Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+      "C": "Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+     "sik_aciklamalari": {
+      "D": "Doğru. En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "A": "Yanlış. Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "E": "Yanlış. Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "B": "Yanlış. Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+      "C": "Yanlış. Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k08-q10",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Tekrarlayan küçük pulmoner emboliler\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "E": "Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "A": "Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur.",
+      "D": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "C": "Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "E": "Yanlış. Kardiyojenik (pompa yetmezliği), hipovolemik (hacim kaybı) ve septik (enfeksiyon/SIRS) başlıca tiplerdir.",
+      "A": "Yanlış. Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur.",
+      "D": "Yanlış. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "C": "Yanlış. Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k08-q11",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "\"Septik şok epidemiyolojisi\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "E": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "B": "Bir doku veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır.",
+      "D": "Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "C": "Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "A": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "B": "Yanlış. Bir doku veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır.",
+      "D": "Yanlış. Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "C": "Yanlış. Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "A": "Yanlış. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -791,6 +2480,218 @@
      },
      "bilgi": [
       21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Enfektif endokarditli hastada dalakta enfarktüs gelişmiş; lezyonda mikroorganizmalar saptanmıştır. Öte yandan 3 günlük miyokard enfarktüsünde kenarlarda inflamasyon ve makrofaj infiltrasyonu izlenmiştir. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Makrofajlar nekrozu temizlemez.",
+      "B": "Septik enfarktüs steril emboliyle oluşur.",
+      "C": "Enfarktüs kenarında inflamasyon hiçbir zaman görülmez.",
+      "D": "Enfekte tromboemboli veya nekrotik alana mikrobiyal yerleşim septik enfarktüstür; enfarktüs erken dönemde kızarık-sınırları belirsizdir, zamanla belirginleşir; kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir, makrofajlar temizler ve granülasyon dokusu gelişir.",
+      "E": "Erken dönem morfolojisi geç dönemle aynıdır."
+     },
+     "dogru": "D",
+     "aciklama": "Septik enfarktüs: enfekte tromboemboli (endokardit vejetasyonu) veya nekrotik alana mikrop yerleşimi. Morfoloji: erken kızarık-belirsiz sınırlı; zamanla belirginleşir. İyileşme: saatler içinde kenar inflamasyonu, 1-2 günde belirgin, makrofaj temizliği + granülasyon.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; makrofajlar nekrotik alanı temizler.",
+      "B": "Yanlış; septik enfarktüs enfektedir.",
+      "C": "Yanlış; kenar inflamasyonu saatler içinde başlar.",
+      "D": "Doğru. Üç başlık birlikte doğru verilmiştir.",
+      "E": "Yanlış; zamanla sınırlar belirginleşir."
+     },
+     "bilgi": [
+      19,
+      20,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Endokarditli hastada dalak enfarktı ile üç günlük miyokard enfarktı birlikte incelenirken enfarktüs morfolojisi ve iyileşmesiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Enfarktüs alanı ilk andan itibaren soluk-sert ve keskin sınırlıdır; hiçbir zaman inflamasyon gelişmez.",
+      "B": "Zamanla sınırlar belirginleşir; anemik enfarktlar soluk-sert olur.",
+      "C": "Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir.",
+      "D": "Makrofajlar nekrotik debris temizler ve granülasyon dokusu gelişir.",
+      "E": "Erken dönemde lezyon kızarık ve sınırları belirsizdir."
+     },
+     "dogru": "A",
+     "aciklama": "Erken dönem kızarık-belirsiz sınırlıdır; sınırlar zamanla belirginleşir ve kenar inflamasyonu gelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış ifade (aranan cevap). Erken morfoloji ve inflamasyon bilgisi hatalıdır.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Enfarktüsün morfolojik seyri ve beyne özgü nekroz tipi nedir?",
+     "secenekler": {
+      "A": "Erken sınırlar her zaman belirgindir",
+      "B": "Beyinde koagülatif nekroz olur",
+      "C": "Enfarktüs rejenerasyonla iz bırakmaz",
+      "D": "İnflamasyon haftalar sonra başlar",
+      "E": "Erken kızarık; beyinde sıvılaşma nekrozu"
+     },
+     "dogru": "E",
+     "aciklama": "Erken dönemde enfarktüs alanı kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk ve sert bir görünüm alır. Mikroskopta çoğu organda koagülatif nekroz izlenirken beyinde her zaman sıvılaşma nekrozu gelişir; bu fark beynin yüksek lipid ve düşük protein içeriğinden kaynaklanır. İyileşmede kenarlardan saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar debris temizler, granülasyon dokusu skar bırakır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; erken dönemde kızarık ve sınırları belirsizdir.",
+      "B": "Yanlış; beyinde her zaman sıvılaşma nekrozu gelişir.",
+      "C": "Yanlış; çoğu organda skar kalır, rejenerasyon sınırlıdır.",
+      "D": "Yanlış; inflamasyon saatler içinde başlar, 1-2 günde belirginleşir.",
+      "E": "Doğru; erken görünüm ve beyne özgü nekroz tipini verir."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Septik enfarktüs nasıl oluşur ve nasıl seyreder?",
+     "secenekler": {
+      "A": "Septik enfarktüs daima sterildir",
+      "B": "Enfekte embolus veya sonradan yerleşim; apse",
+      "C": "Vejetasyonlar emboli yapmaz",
+      "D": "İnflamasyon septikte daha azdır",
+      "E": "Apseye dönüşüm hiç olmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Septik enfarktüs, enfekte tromboembolinin (örneğin enfektif endokardit vejetasyonunun) kopup damar tıkamasıyla ya da nekrotik alana sonradan mikrobiyal yerleşimle oluşur. Bakteri yükü nedeniyle yoğun nötrofilik inflamasyon gelişir ve nekrotik odak apseye dönüşebilir. Bu yüzden septik enfarktüs, steril iskemik nekrozdan farklı olarak antimikrobiyal tedavi gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; septik enfarktüs tanım gereği enfektedir.",
+      "B": "Doğru; iki oluşum yolunu ve apse sonucunu verir.",
+      "C": "Yanlış; endokardit vejetasyonları klasik enfekte embolus kaynağıdır.",
+      "D": "Yanlış; mikrobiyal yük yoğun inflamasyon doğurur.",
+      "E": "Yanlış; nekrotik alan apseye dönüşebilir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k09-q08",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "\"Şokta klinik ve prognoz\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk cilt; septik şokta erken dönemde sıcak-kızarık cilt. Hipovolemik şokta sağkalım >%90, kardiyojenik/septik şokta mortalite yüksektir.",
+      "A": "Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "D": "Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "E": "Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "B": "Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk cilt; septik şokta erken dönemde sıcak-kızarık cilt. Hipovolemik şokta sağkalım >%90, kardiyojenik/septik şokta mortalite yüksektir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk cilt; septik şokta erken dönemde sıcak-kızarık cilt. Hipovolemik şokta sağkalım >%90, kardiyojenik/septik şokta mortalite yüksektir.",
+      "A": "Yanlış. Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "D": "Yanlış. Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "E": "Yanlış. Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "B": "Yanlış. Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k09-q09",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "\"Kardiyojenik şok\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+      "D": "Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk cilt; septik şokta erken dönemde sıcak-kızarık cilt. Hipovolemik şokta sağkalım >%90, kardiyojenik/septik şokta mortalite yüksektir.",
+      "A": "Mikrobiyal ürünler TLR, G-proteinli ve C-tip lektin reseptörleriyle tanınır; TNF, IL-1, tip I IFN, PG, LT, ROS ve PAF salınır; kompleman aktive olur.",
+      "E": "Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "C": "Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+      "D": "Yanlış. Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk cilt; septik şokta erken dönemde sıcak-kızarık cilt. Hipovolemik şokta sağkalım >%90, kardiyojenik/septik şokta mortalite yüksektir.",
+      "A": "Yanlış. Mikrobiyal ürünler TLR, G-proteinli ve C-tip lektin reseptörleriyle tanınır; TNF, IL-1, tip I IFN, PG, LT, ROS ve PAF salınır; kompleman aktive olur.",
+      "E": "Yanlış. Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "C": "Yanlış. Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k09-q10",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "\"Septik şok epidemiyolojisi\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "C": "Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "D": "Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "E": "Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "A": "Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "C": "Yanlış. Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "D": "Yanlış. Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "E": "Yanlış. Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "A": "Yanlış. Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k09-q11",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "\"Vasküler anatomi faktörü\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "B": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "A": "Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "E": "1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "D": "Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Çift dolaşım (akciğer, karaciğer) enfarkt riskini azaltır; uç arter dolaşımı (böbrek, dalak) artırır.",
+      "B": "Yanlış. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "A": "Yanlış. Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "E": "Yanlış. 1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "D": "Yanlış. Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür."
+     },
+     "bilgi": [
+      22
      ],
      "benzer_cikmis": []
     }
@@ -880,6 +2781,219 @@
       24
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k10-q04",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "İki hasta karşılaştırılmaktadır: birinde beyin iskemisi 5 dakikada kalıcı hasar bırakmış; diğerinde yavaş gelişen koroner darlık kollateral gelişimi sayesinde enfarktsız seyretmiştir. Enfarkt gelişimini etkileyen faktörlerle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tıkanma hızı riski etkilemez.",
+      "B": "Vasküler anatominin enfarkt riskiyle ilişkisi yoktur.",
+      "C": "Çift dolaşım (akciğer, karaciğer) riski azaltır, uç arter dolaşımı (böbrek, dalak) artırır; yavaş tıkanmada kollateral gelişir risk azalır, ani tıkanmada artar; nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür, fibroblastlar saatlerce tolere eder.",
+      "D": "Nöronlar saatlerce iskemiyi tolere eder.",
+      "E": "Çift dolaşım enfarkt riskini artırır."
+     },
+     "dogru": "C",
+     "aciklama": "Anatomi (çift dolaşım koruyucu, uç arter riskli), tıkanma hızı (yavaş koruyucu, ani riskli) ve hipoksi duyarlılığı (nöron 3-4 dk, miyokard 20-30 dk, fibroblast saatler) üç faktördür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; hız kollateral gelişimini belirler.",
+      "B": "Yanlış; anatomi belirleyicidir.",
+      "C": "Doğru. Üç faktör birlikte doğru verilmiştir.",
+      "D": "Yanlış; nöronlar 3-4 dakikada hasarlanır.",
+      "E": "Yanlış; çift dolaşım koruyucudur."
+     },
+     "bilgi": [
+      22,
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k10-q05",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Beş dakikada hasarlanan beyin iskemisiyle kollateral geliştiren koroner darlık karşılaştırılırken enfarkt gelişimini etkileyen faktörlerle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Akciğer ve karaciğerin çift dolaşımı enfarkt riskini azaltır.",
+      "B": "Böbrek ve dalağın uç arter dolaşımı riski artırır.",
+      "C": "Yavaş tıkanmada kollateral gelişimi riski azaltır.",
+      "D": "Miyokard 20-30 dakikada, nöronlar 3-4 dakikada geri dönüşümsüz hasar görür.",
+      "E": "Ani tıkanma kollateral gelişimini artırarak enfarkt riskini azaltır; fibroblastlar iskemiye en duyarlı hücrelerdir."
+     },
+     "dogru": "E",
+     "aciklama": "Ani tıkanma riski artırır (kollateral gelişemez); fibroblastlar en dirençli hücrelerdendir (saatlerce tolere eder).",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Yanlış ifade (aranan cevap). Hız etkisi ve duyarlılık sıralaması terstir."
+     },
+     "bilgi": [
+      22,
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k10-q06",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Vasküler anatomi ve tıkanma hızı enfarktüs riskini nasıl etkiler?",
+     "secenekler": {
+      "A": "Çift dolaşım riski artırır",
+      "B": "Yavaş tıkanma riski artırır",
+      "C": "Uç arterler enfarktüsten korur",
+      "D": "Çift dolaşım ve yavaş tıkanma korur",
+      "E": "Kollateraller riski artırır"
+     },
+     "dogru": "D",
+     "aciklama": "Akciğer ve karaciğer gibi çift dolaşımlı organlarda bir yatak tıkansa bile diğeri dokuyu beslemeye devam eder; bu yüzden enfarktüs riski düşüktür. Böbrek ve dalak gibi uç arterli organlarda ise kollateral yoktur, risk yüksektir. Tıkanma yavaş gelişirse kollateral damarlar açılır ve risk azalır; ani tıkanmada bu adaptasyon için zaman kalmaz.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; çift dolaşım yedek akım sağlayarak riski azaltır.",
+      "B": "Yanlış; yavaş tıkanma kollateral gelişimine zaman tanır.",
+      "C": "Yanlış; uç arterli böbrek ve dalak riski yüksektir.",
+      "D": "Doğru; anatomi ve hız faktörlerinin koruyucu yönünü verir.",
+      "E": "Yanlış; kollateral gelişimi dokuyu kurtaran adaptasyondur."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Hücre tiplerinin hipoksiye duyarlılık süreleri nasıldır?",
+     "secenekler": {
+      "A": "Nöron 3-4 dk, miyokard 20-30 dk",
+      "B": "Fibroblast dakikalar içinde ölür",
+      "C": "Nöronlar en dayanıklıdır",
+      "D": "Miyokard saatlerce dayanır",
+      "E": "Tüm hücreler eşit duyarlıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Hipoksiye duyarlılık hücre tipine göre değişir: nöronlar yalnızca 3-4 dakikada, miyokard hücreleri 20-30 dakikada geri dönüşümsüz hasar görür. Fibroblastlar gibi metabolik hızı düşük hücreler saatlerce iskemiyi tolere eder. Bu süre farkları, inme ve miyokart enfarktüsünde erken reperfüzyonun neden kritik olduğunu açıklar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; iki kritik hücrenin tolerans sürelerini verir.",
+      "B": "Yanlış; fibroblastlar saatlerce tolere eder.",
+      "C": "Yanlış; nöronlar hipoksiye en duyarlı hücrelerdir.",
+      "D": "Yanlış; miyokard 20-30 dakikada geri dönüşümsüz hasarlanır.",
+      "E": "Yanlış; duyarlılık metabolik hıza göre belirgin değişir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k10-q08",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "\"Amniyotik sıvı embolisi morfolojisi\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "D": "Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4).",
+      "A": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "C": "Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "B": "Bir doku veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "D": "Yanlış. Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4).",
+      "A": "Yanlış. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "C": "Yanlış. Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "B": "Yanlış. Bir doku veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k10-q09",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "\"Pulmoner emboli kaynağı\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Pulmoner embolilerin >%95'i DVT'den, özellikle diz üstü derin bacak venlerinden (popliteal, femoral, iliak) kaynaklanır.",
+      "D": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "A": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "B": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "C": "Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Pulmoner embolilerin >%95'i DVT'den, özellikle diz üstü derin bacak venlerinden (popliteal, femoral, iliak) kaynaklanır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Pulmoner embolilerin >%95'i DVT'den, özellikle diz üstü derin bacak venlerinden (popliteal, femoral, iliak) kaynaklanır.",
+      "D": "Yanlış. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "A": "Yanlış. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "B": "Yanlış. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "C": "Yanlış. Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k10-q10",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "\"Enfarktüs morfolojisi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur.",
+      "C": "Uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidleri yırtılır ve yağ kürecikleri dolaşıma karışır.",
+      "E": "Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir.",
+      "B": "Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk cilt; septik şokta erken dönemde sıcak-kızarık cilt. Hipovolemik şokta sağkalım >%90, kardiyojenik/septik şokta mortalite yüksektir.",
+      "A": "Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur.",
+      "C": "Yanlış. Uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidleri yırtılır ve yağ kürecikleri dolaşıma karışır.",
+      "E": "Yanlış. Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir.",
+      "B": "Yanlış. Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk cilt; septik şokta erken dönemde sıcak-kızarık cilt. Hipovolemik şokta sağkalım >%90, kardiyojenik/septik şokta mortalite yüksektir.",
+      "A": "Yanlış. Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k10-q11",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "\"Emboli tanımı\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "A": "Doku faktörü artar; TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artar ve fibrinoliz baskılanır.",
+      "D": "Pulmoner embolilerin >%95'i DVT'den, özellikle diz üstü derin bacak venlerinden (popliteal, femoral, iliak) kaynaklanır.",
+      "B": "Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar.",
+      "C": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "A": "Yanlış. Doku faktörü artar; TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artar ve fibrinoliz baskılanır.",
+      "D": "Yanlış. Pulmoner embolilerin >%95'i DVT'den, özellikle diz üstü derin bacak venlerinden (popliteal, femoral, iliak) kaynaklanır.",
+      "B": "Yanlış. Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar.",
+      "C": "Yanlış. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -966,6 +3080,221 @@
       27,
       28,
       26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k11-q04",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Masif miyokard enfarktüsü sonrası hipotansif seyreden hasta ile masif kanamalı travma hastası ve gram-negatif sepsili üçüncü hasta karşılaştırılmaktadır. Şok tanımı ve tipleriyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Şok yalnızca kan basıncı yüksekliğidir.",
+      "B": "Şok, azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir; başlıca tipler kardiyojenik (pompa yetmezliği: MI, aritmi, tamponad, masif PE), hipovolemik (kan/plazma kaybı) ve septik (enfeksiyon/SIRS) şoktur.",
+      "C": "Kardiyojenik şok hacim kaybıyla oluşur.",
+      "D": "Hipovolemik şok enfeksiyonla oluşur.",
+      "E": "Septik şok pompa yetmezliğidir."
+     },
+     "dogru": "B",
+     "aciklama": "Şok tanımı + üç tip ve örnekleri (kardiyojenik: MI, aritmi, tamponad, masif PE; hipovolemik: kanama, yanık, sıvı kaybı; septik: enfeksiyon/SIRS) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; şok perfüzyon bozukluğu ve hücresel hipoksidir.",
+      "B": "Doğru. Tanım ve tip-neden eşleşmeleri doğrudur.",
+      "C": "Yanlış; kardiyojenik pompa yetmezliğidir.",
+      "D": "Yanlış; hipovolemik hacim kaybıdır.",
+      "E": "Yanlış; septik enfeksiyon/SIRS kaynaklıdır."
+     },
+     "bilgi": [
+      25,
+      26,
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k11-q05",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Mİ'li, kanamalı ve sepsisli üç şok hastası karşılaştırılırken şok tipleri ve nedenleriyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kardiyojenik şok - miyokard enfarktüsü, aritmi, kardiyak tamponad, masif pulmoner emboli",
+      "B": "Hipovolemik şok - masif kanama, ciddi yanık, sıvı kaybı",
+      "C": "Septik şok - enfeksiyon/SIRS",
+      "D": "Kardiyojenik şok - masif kanama; hipovolemik şok - miyokard enfarktüsü",
+      "E": "Üç başlıca tip kardiyojenik, hipovolemik ve septiktir."
+     },
+     "dogru": "D",
+     "aciklama": "Masif kanama hipovolemik, MI kardiyojenik şok nedenidir; D seçeneği ters eşleştirmiştir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme.",
+      "B": "Doğru eşleştirme.",
+      "C": "Doğru eşleştirme.",
+      "D": "Yanlış eşleştirme (aranan cevap). Neden-tip ilişkisi terstir.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      26,
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k11-q06",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Şokun patolojik tanımı ve seyrinin özelliği nedir?",
+     "secenekler": {
+      "A": "Şok yüksek tansiyon demektir",
+      "B": "Şok yalnızca psikolojiktir",
+      "C": "Perfüzyon bozukluğu; erken geri dönüşümlü",
+      "D": "Hipoksi şokta görülmez",
+      "E": "Şokta perfüzyon artmıştır"
+     },
+     "dogru": "C",
+     "aciklama": "Şok, azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyonunun bozulması ve yaygın hücresel hipoksi tablosudur. Başlangıçta hücresel hasar geri dönüşümlüdür; perfüzyon hızla düzeltilirse organlar toparlanır. Hipoperfüzyon uzarsa geri dönüşümsüz doku hasarı ve ölüm gelişir; bu yüzden şok zamana karşı yarışılan bir tablodur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; şok doku perfüzyon bozukluğudur, tek başına tansiyon değil.",
+      "B": "Yanlış; şok generalize hücresel hipoksi tablosudur.",
+      "C": "Doğru; tanımı ve zamanla geri dönüşümsüzleşmeyi verir.",
+      "D": "Yanlış; hücresel hipoksi tanımın parçasıdır.",
+      "E": "Yanlış; perfüzyon bozulmuş, azalmıştır."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k11-q07",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Şok tipleri ve ayırt edici mekanizmaları hangileridir?",
+     "secenekler": {
+      "A": "MI hipovolemik şok yapar",
+      "B": "Hemoraji kardiyojenik şoktur",
+      "C": "Septik şok hacim fazlalığıdır",
+      "D": "Anafilaksi vazokonstriksiyondur",
+      "E": "Pompa, hacim, enfeksiyon, tonus, IgE"
+     },
+     "dogru": "E",
+     "aciklama": "Kardiyojenik şokta pompa yetmezliği vardır (MI, aritmi, tamponad, masif pulmoner emboli); hipovolemikte kan-plazma hacmi kaybı (hemoraji, yanık, kusma-ishal) rol oynar. Septik şokta yaygın enfeksiyon sitokin kaskadıyla vazodilatasyon ve kapiller sızıntı yapar. Nörojenik şokta damar tonusu kaybı (anestezi, omurilik yaralanması), anafilaktikte IgE aracılı yaygın vazodilatasyon ve permeabilite artışı sorumludur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; MI pompa yetmezliğiyle kardiyojenik şok yapar.",
+      "B": "Yanlış; hemoraji hacim kaybıyla hipovolemik şoktur.",
+      "C": "Yanlış; septik şok vazodilatasyon ve göllenme tablosudur.",
+      "D": "Yanlış; anafilakside yaygın vazodilatasyon ve permeabilite artışı olur.",
+      "E": "Doğru; beş tipin ayırt edici mekanizmalarını özetler."
+     },
+     "bilgi": [
+      26,
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k11-q08",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "\"Şokta morfoloji\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "A": "Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "C": "Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur.",
+      "E": "Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "B": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+     "sik_aciklamalari": {
+      "D": "Doğru. En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir; glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "A": "Yanlış. Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "C": "Yanlış. Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur.",
+      "E": "Yanlış. Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir.",
+      "B": "Yanlış. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k11-q09",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "\"Tıkanma hızı faktörü\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar.",
+      "C": "Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "A": "Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "B": "Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "E": "Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Yavaş tıkanmada kollateral gelişir ve risk azalır; ani tıkanmada risk artar.",
+      "C": "Yanlış. Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "A": "Yanlış. Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "B": "Yanlış. Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "E": "Yanlış. Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k11-q10",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "\"Sistemik emboli hedefleri\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "C": "Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "D": "Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "B": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "A": "Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "E": "Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "D": "Yanlış. Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "B": "Yanlış. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "A": "Yanlış. Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "E": "Yanlış. Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k11-q11",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "\"Tekrarlayan küçük pulmoner emboliler\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "A": "Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "D": "Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "C": "Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk cilt; septik şokta erken dönemde sıcak-kızarık cilt. Hipovolemik şokta sağkalım >%90, kardiyojenik/septik şokta mortalite yüksektir.",
+      "E": "Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Distal arteriyollere yerleşen küçük emboliler enfarktüs oluşturur ve enfeksiyonla karışabilir; tekrarlayanlar pulmoner hipertansiyona yol açar.",
+      "A": "Yanlış. Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "D": "Yanlış. Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "C": "Yanlış. Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk cilt; septik şokta erken dönemde sıcak-kızarık cilt. Hipovolemik şokta sağkalım >%90, kardiyojenik/septik şokta mortalite yüksektir.",
+      "E": "Yanlış. Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur."
+     },
+     "bilgi": [
+      5
      ],
      "benzer_cikmis": []
     }
@@ -1081,6 +3410,226 @@
       34
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k12-q05",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Yoğun bakımda gram-negatif sepsili hastada hipotansiyon, yaygın ödem, DİK bulguları, hiperglisemi ardından böbrekte ATN, akciğerde ARDS ve miyokard depresyonu gelişmiştir. Septik şok patofizyolojisiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Mikrobiyal ürünler TLR ve diğer reseptörlerle tanınır; TNF, IL-1, IFN, PG, LT, ROS, PAF salınır, kompleman aktive olur; endotel hasarıyla protein zengin ödem birikir; doku faktörü artar, TFPI/trombomodulin/protein C azalır, PAI-1 artar; sitokin ve stres hormonlarıyla glukoneogenez artar, GLUT-4 azalır; hipotansiyon-ödem-tromboz hipoksiye yol açar: ATN, karaciğer disfonksiyonu, ARDS, miyokard depresyonu.",
+      "B": "Septik şokta inflamatuar mediyatör salınmaz.",
+      "C": "Endotel hasarı ve ödem septik şokta görülmez.",
+      "D": "Pıhtılaşma sistemi aktive olmaz.",
+      "E": "Organ disfonksiyonu septik şokun parçası değildir."
+     },
+     "dogru": "A",
+     "aciklama": "İnflamasyon (TLR→sitokin fırtınası+kompleman), endotel hasarı (adezyon artışı, sıkı bağlantı zayıflığı, proteinöz ödem), pıhtılaşma (TF artışı, antikoagülan azalış, PAI-1 artışı), metabolik bozukluklar ve çoklu organ disfonksiyonu (ATN, ARDS, miyokard depresyonu) septik şokun bileşenleridir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Mekanizmalar ve organ sonuçları birlikte doğrudur.",
+      "B": "Yanlış; TNF, IL-1, ROS vb. salınır.",
+      "C": "Yanlış; protein zengin ödem birikir.",
+      "D": "Yanlış; TF artar, fibrinoliz baskılanır.",
+      "E": "Yanlış; ATN, ARDS, miyokard depresyonu tipiktir."
+     },
+     "bilgi": [
+      30,
+      31,
+      32,
+      33,
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k12-q06",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Yoğun bakımdaki gram-negatif sepsisli hastada DİK ve çoklu organ bulguları izlenirken septik şokta pıhtılaşma ve metabolik bozukluklarla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Doku faktörü artar; TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artar ve fibrinoliz baskılanır.",
+      "B": "Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır.",
+      "C": "Septik şokta pıhtılaşma baskılanır ve kanama eğilimi azalır; metabolizma tamamen normal kalır.",
+      "D": "Başta glukokortikoid artar, sonra adrenal yetersizlik (Waterhouse-Friderichsen) gelişebilir; anaerobik glikolizle laktik asidoz olur.",
+      "E": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si septik şok tablosundadır; ABD'de yılda ~750.000 olgu, mortalite %20-30'dur."
+     },
+     "dogru": "C",
+     "aciklama": "Septik şokta prokoagülan durum (TF artışı, fibrinoliz baskılanması) ve metabolik bozukluklar (hiperglisemi, adrenal yetersizlik, laktik asidoz) vardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Yanlış ifade (aranan cevap). Pıhtılaşma ve metabolizma bilgileri terstir.",
+      "D": "Doğru ifade.",
+      "E": "Doğru epidemiyolojik ifade."
+     },
+     "bilgi": [
+      29,
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k12-q07",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Septik şokta inflamasyon, endotel ve pıhtılaşma değişiklikleri nasıldır?",
+     "secenekler": {
+      "A": "Septik şokta inflamasyon baskılanır",
+      "B": "Sitokin kaskadı, sızıntı, DIC üçlüsü",
+      "C": "Endotel geçirgenliği azalır",
+      "D": "PAI-1 azalır, fibrinoliz artar",
+      "E": "En sık etken virüslerdir"
+     },
+     "dogru": "B",
+     "aciklama": "Septik şokta mikrobiyal ürünler (PAMP) makrofaj, nötrofil ve endotel üzerindeki TLR ve benzeri reseptörlerce tanınır; TNF, IL-1, kompleman ürünleri ve ROS salınımıyla kontrolsüz sistemik inflamasyon başlar. Endotel adezyon molekülleri artar, sıkı bağlantılar zayıflar; protein zengin kapiller sızıntı ve venöz göllenmeyle doku hipoperfüzyonu derinleşir. Pıhtılaşmada doku faktörü ve PAI-1 artarken trombomodulin ve protein C yolu baskılanır; sonuç mikrotrombüslerle kanama eğiliminin bir arada görüldüğü DIC'tir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; kontrolsüz sistemik immün aktivasyon esastır.",
+      "B": "Doğru; inflamasyon, endotel ve pıhtılaşma kollarını özetler.",
+      "C": "Yanlış; permeabilite artar, protein zengin ödem birikir.",
+      "D": "Yanlış; PAI-1 artar ve fibrinoliz baskılanır.",
+      "E": "Yanlış; en sık gram-pozitif bakteriler, sonra gram-negatif ve mantarlardır."
+     },
+     "bilgi": [
+      29,
+      30,
+      31,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k12-q08",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Septik şokta metabolik bozukluklar ve organ disfonksiyonları nelerdir?",
+     "secenekler": {
+      "A": "Septik şokta hipoglisemi tipiktir",
+      "B": "Laktik asidoz oluşmaz",
+      "C": "Adrenal yetmezlik görülmez",
+      "D": "İnsülin direnci, laktik asidoz, ATN-ARDS",
+      "E": "Organ disfonksiyonu gelişmez"
+     },
+     "dogru": "D",
+     "aciklama": "Sitokinler ve stres hormonları glukoneogenezi artırırken GLUT-4 azalır; insülin direnci ve hiperglisemi gelişir. Enerji üretimi oksidatif fosforilasyondan anaerobik glikolize kayınca laktik asidoz oluşur. Adrenal önce aşırı glukokortikoid salgılar, sonra yetmezliğe girer (Waterhouse-Friderichsen). Hipotansiyon, ödem ve mikrotrombüslerin ortak sonucu böbrekte akut tübüler nekroz, akciğerde ARDS, karaciğer disfonksiyonu ve miyokard depresyonuyla çoklu organ yetmezliğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; insülin direnciyle hiperglisemi gelişir.",
+      "B": "Yanlış; anaerobik kayma laktik asidoz yapar.",
+      "C": "Yanlış; Waterhouse-Friderichsen adrenal yetmezliğidir.",
+      "D": "Doğru; metabolik ve organ sonuçlarını birlikte verir.",
+      "E": "Yanlış; tablo çoklu organ yetmezliğine ilerler."
+     },
+     "bilgi": [
+      33,
+      34
+     ],
+     "benzer_cikmis": [
+      "c442df7ae10f"
+     ]
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k12-q09",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "\"Septik şok epidemiyolojisi\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "B": "Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "C": "Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "E": "Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "D": "Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur.",
+      "B": "Yanlış. Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "C": "Yanlış. Nöronlar 3-4 dakikada, miyokard 20-30 dakikada geri dönüşümsüz hasar görür; fibroblastlar saatlerce tolere eder.",
+      "E": "Yanlış. Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "D": "Yanlış. Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k12-q10",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "\"Hipovolemik şok\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "C": "Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir.",
+      "B": "Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "A": "Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "E": "Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "C": "Yanlış. Azalmış kalp debisi veya etkin dolaşan kan hacminin azalması sonucu doku perfüzyon bozukluğu ve generalize hücresel hipoksidir.",
+      "B": "Yanlış. Katı, uç arter dolaşımlı organlarda (kalp, dalak, böbrek) görülür; sınırları belirgin, soluk ve kama şeklindedir.",
+      "A": "Yanlış. Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "E": "Yanlış. Travmadan 1-3 gün sonra gelişir; triad solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntüdür."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k12-q11",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "\"Şokun evreleri\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "A": "Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "E": "Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "C": "Uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidleri yırtılır ve yağ kürecikleri dolaşıma karışır.",
+      "D": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: 1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+     "sik_aciklamalari": {
+      "B": "Doğru. 1. kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), 2. ilerleyici (laktik asidoz, göllenme), 3. geri dönüşümsüz (yaygın hasar, ölüm).",
+      "A": "Yanlış. Uç arter tıkanması nedeniyle en sık hedef alt ekstremite arterleridir (~%75); diğerleri mezenterik damarlar, böbrek ve dalaktır.",
+      "E": "Yanlış. Akciğerde fetal skuamöz hücreler, lanugo, verniks kazeoza yağı ve mukus ile ödem, diffüz alveoler hasar ve fibrin trombüsleri görülür.",
+      "C": "Yanlış. Uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidleri yırtılır ve yağ kürecikleri dolaşıma karışır.",
+      "D": "Yanlış. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k12-q12",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "\"Sistemik emboli kaynakları\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4).",
+      "A": "Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "E": "Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "B": "Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "C": "Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4).",
+     "sik_aciklamalari": {
+      "D": "Doğru. Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4).",
+      "A": "Yanlış. Kaynak noktasından kopmuş, kan akımı ile taşınan katı, sıvı veya gaz kitlelerdir; çoğu trombüsten köken alır.",
+      "E": "Yanlış. Adezyon molekülleri artar, sıkı bağlantılar zayıflar ve protein zengin ödem birikir; IV sıvı tedavisi ödemi artırabilir.",
+      "B": "Yanlış. Sitokinler ve stres hormonları glukoneogenezi artırır, GLUT-4 azalır; başta glukokortikoid artar sonra adrenal yetersizlik (Waterhouse-Friderichsen) olur; anaerobik glikoliz laktik asidoz yapar.",
+      "C": "Yanlış. Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1193,12 +3742,221 @@
       37
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k13-q05",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Kanamalık hastada önce taşikardi ve vazokonstriksiyonla kompanse seyir, ardından laktik asidoz ve göllenme, son olarak yaygın organ hasarı izlenmiştir. Cilt soğuk-nemli-soluktur. Şok evreleri ve kliniğiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Morfolojide hiçbir organ etkilenmez.",
+      "B": "Şokun evresi yoktur; tek fazlıdır.",
+      "C": "Kompansasyonda bradikardi ve vazodilatasyon olur.",
+      "D": "Septik şokta erken cilt her zaman soğuk-soluktur.",
+      "E": "Evreler: kompansasyonlu (baroreseptör, katekolamin, ADH, RAAS; taşikardi, vazokonstriksiyon), ilerleyici (laktik asidoz, göllenme), geri dönüşümsüz (yaygın hasar). Hipovolemik/kardiyojenik şokta cilt soğuk-nemli-soluk, septik şokta erken dönemde sıcak-kızarıktır."
+     },
+     "dogru": "E",
+     "aciklama": "Üç evre (kompansasyonlu, ilerleyici, geri dönüşümsüz) + cilt bulguları (hipovolemik/kardiyojenik soğuk-nemli-soluk; septik erken sıcak-kızarık) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; beyin, kalp, böbrek, adrenal, GİS etkilenir.",
+      "B": "Yanlış; üç evre vardır.",
+      "C": "Yanlış; taşikardi ve vazokonstriksiyon olur.",
+      "D": "Yanlış; septik erken dönem sıcak-kızarıktır.",
+      "E": "Doğru. Evreler ve cilt ayrımı doğrudur."
+     },
+     "bilgi": [
+      35,
+      36,
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k13-q06",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Kanamalık hastada evreler, organ bulguları ve prognoz değerlendirilirken şokta morfoloji ve prognozla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "En sık beyin, kalp, böbrek, adrenal ve GİS etkilenir.",
+      "B": "Şokta hiçbir organda morfolojik değişiklik olmaz ve tüm şok tiplerinde sağkalım %100'dür.",
+      "C": "Hipovolemik şokta sağkalım >%90 iken kardiyojenik/septik şokta prognoz daha kötüdür.",
+      "D": "Glomerülde fibrin trombüsü, adrenal kortekste lipid tükenmesi, akciğerde ARDS (şok akciğeri) görülür.",
+      "E": "Hipovolemik/kardiyojenik şokta soğuk-nemli-soluk, septik şokta erken dönemde sıcak-kızarık cilt görülür."
+     },
+     "dogru": "B",
+     "aciklama": "Şokta çoklu organ morfolojisi (fibrin trombüsü, lipid tükenmesi, ARDS) gelişir ve prognoz tipe göre değişir (hipovolemik >%90 sağkalım).",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Yanlış ifade (aranan cevap). Morfoloji ve prognoz bilgisi hatalıdır.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      36,
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k13-q07",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Şokun evreleri ve her evrenin belirleyici özelliği nedir?",
+     "secenekler": {
+      "A": "Kompansasyon, laktik asidozlu ilerleme, geri dönüşümsüz",
+      "B": "Şok tek evrelidir",
+      "C": "İlk evrede vazodilatasyon olur",
+      "D": "RAAS şokta baskılanır",
+      "E": "Geri dönüşümsüz evre iyileşir"
+     },
+     "dogru": "A",
+     "aciklama": "Kompansasyonlu evrede baroreseptör refleksleri, katekolamin, ADH ve RAAS devreye girer; taşikardi, periferik vazokonstriksiyon ve böbrekte sıvı tutulumu perfüzyonu korur. Perfüzyon açığı sürerse ilerleyici evrede laktik asidoz birikir, vazomotor yanıt bozulur ve mikrosirkülasyonda kan göllenir. Geri dönüşümsüz evrede yaygın hücre ölümüyle organ işlevleri tedaviye rağmen toparlanamaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru; üç evrenin ayırt edici özelliklerini sıralar.",
+      "B": "Yanlış; şok üç evrede ilerler.",
+      "C": "Yanlış; kompansasyonda vazokonstriksiyon ve taşikardi vardır.",
+      "D": "Yanlış; RAAS sıvı tutulumuyla kompansasyona katılır.",
+      "E": "Yanlış; bu evrede hasar kalıcıdır, ölüm kaçınılmazdır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k13-q08",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Şokta cilt bulguları, organ morfolojisi ve prognoz nasıldır?",
+     "secenekler": {
+      "A": "Septik şokta cilt soğuktur",
+      "B": "Hipovolemikte cilt sıcak-kızarıktır",
+      "C": "Soğuk-soluk ya da sıcak-kızarık; ARDS, ATN",
+      "D": "Adrenal lipid artışı tipiktir",
+      "E": "Hipovolemik şok hep öldürür"
+     },
+     "dogru": "C",
+     "aciklama": "Hipovolemik ve kardiyojenik şokta sempatik vazokonstriksiyonla cilt soğuk, nemli, soluk-siyanotik olur; septik şokta ise erken vazodilatasyonla cilt sıcak ve kızarıktır. Morfolojide glomerüllerde fibrin trombüsleri, adrenal kortekste lipid tükenmesi, beyin-kalpte diffüz hipoksik değişiklik ve akciğerde ARDS (şok akciğeri) izlenir. Genç sağlıklı bireyde uygun tedaviyle hipovolemik şokta sağkalım %90'ı aşarken kardiyojenik ve septik şokta mortalite yüksektir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; septik şokta erken cilt sıcak ve kızarıktır.",
+      "B": "Yanlış; hipovolemikte cilt soğuk, nemli ve soluktur.",
+      "C": "Doğru; klinik ayrımı ve organ morfolojisini özetler.",
+      "D": "Yanlış; adrenal kortekste lipid tükenmesi izlenir.",
+      "E": "Yanlış; genç sağlıklı bireyde sağkalım %90'ı aşar."
+     },
+     "bilgi": [
+      36,
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k13-q09",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "\"Septik enfarktüs\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur.",
+      "E": "Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "C": "Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir.",
+      "A": "Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "D": "Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Enfekte tromboemboli (enfektif endokardit vejetasyonu) veya nekrotik alana mikrobiyal yerleşimle oluşur.",
+      "E": "Yanlış. Kan veya plazma hacmi kaybı (masif kanama, ciddi yanık, sıvı kaybı) sonucu gelişir.",
+      "C": "Yanlış. Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir.",
+      "A": "Yanlış. Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "D": "Yanlış. Küçük emboli sessizdir ve organize olur; büyük emboli ana pulmoner arter/bifürkasyonu tıkar (eyer emboli); orta boy emboli çift dolaşım nedeniyle enfarkt yapmayabilir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k13-q10",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "\"Amniyotik sıvı embolisi\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir.",
+      "D": "Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "A": "En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "C": "Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4).",
+      "B": "Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir.",
+      "D": "Yanlış. Ortam basıncının ani azalmasıyla çözünmüş azot kabarcık oluşturur.",
+      "A": "Yanlış. En sık arteriyel tromboz ve arteriyel emboli; daha nadir vazospazm, plak içi kanama, dıştan bası, torsiyon, fıtıkta sıkışma ve travmatik rüptürdür.",
+      "C": "Yanlış. Sistemik embolilerin ~%80'i intrakardiyak mural trombüsten köken alır (sol ventrikül enfarktüsü ~2/3, dilate sol atriyum ~1/4).",
+      "B": "Yanlış. Hastane yatışlarının ~%2'si, yoğun bakım hastalarının ~%50'si; ABD'de yılda ~750.000 olgu; mortalite %20-30'dur."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k13-q11",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "\"Embolinin klinik önemi\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+      "C": "Doku faktörü artar; TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artar ve fibrinoliz baskılanır.",
+      "D": "Mikrobiyal ürünler TLR, G-proteinli ve C-tip lektin reseptörleriyle tanınır; TNF, IL-1, tip I IFN, PG, LT, ROS ve PAF salınır; kompleman aktive olur.",
+      "B": "Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir.",
+      "A": "Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Sistemik emboli arter yatağını tıkayıp enfarktüs yapar; pulmoner emboli hipoksi, sağ kalp yetmezliği ve ani ölüm yapar.",
+      "C": "Yanlış. Doku faktörü artar; TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artar ve fibrinoliz baskılanır.",
+      "D": "Yanlış. Mikrobiyal ürünler TLR, G-proteinli ve C-tip lektin reseptörleriyle tanınır; TNF, IL-1, tip I IFN, PG, LT, ROS ve PAF salınır; kompleman aktive olur.",
+      "B": "Yanlış. Kenarlarda saatler içinde inflamasyon başlar, 1-2 günde belirginleşir; makrofajlar temizler ve granülasyon dokusu gelişir.",
+      "A": "Yanlış. Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-24-emboli-enfarktus-ve-sok-k13-q12",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "\"Kardiyojenik şok\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "A": "Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+      "D": "Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur.",
+      "C": "Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "B": "Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "E": "Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Miyokard pompa yetmezliği; nedenleri miyokard enfarktüsü, aritmi, kardiyak tamponad ve masif pulmoner embolidir.",
+      "D": "Yanlış. Erken dönemde kızarık ve sınırları belirsizdir; zamanla sınırlar belirginleşir, anemik enfarktlar soluk-sert olur.",
+      "C": "Yanlış. Hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; gaz yeniden çözülür, sonra basınç yavaşça düşürülür.",
+      "B": "Yanlış. Cerrahi (obstetrik, laparoskopik), göğüs travması ve santral venöz kateter ile hava damara girer; kabarcıklar birleşerek akımı tıkar.",
+      "E": "Yanlış. Plasenta/uterin damar yırtığıyla amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; insidans ~1/40.000, mortalite ~%80'dir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 41,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:14"
+ ]
 }

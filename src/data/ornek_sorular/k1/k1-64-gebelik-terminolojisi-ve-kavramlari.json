@@ -6,6 +6,7 @@
  "konu": "Gebelik Terminolojisi ve Kavramları",
  "ogretim_uyesi": "Dr. Öğr. Üyesi Hilal Ezgi Türkmen",
  "tarih": "2026-10-16",
+ "soru_sayisi": 92,
  "kazanimlar": [
   {
    "no": 1,
@@ -86,6 +87,116 @@
      },
      "bilgi": [
       9,
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Adet gecikmeli hastada gebelik şüphesi ve kesin tanı basamakları soruluyor. Hangi plan doğrudur?",
+     "secenekler": {
+      "A": "Bulantı gebelik tanısı koydurur",
+      "B": "İdrar testi serumdan duyarlıdır",
+      "C": "USG tanıda kullanılmaz",
+      "D": "Adet gecikmeli hastada idrar (20-25) ve serum (5 mIU/mL) beta-hCG ile USG'de kese-embriyo-kalp atımı aranır; önce intrauterin yerleşim (%98), sonra viabilite değerlendirilir",
+      "E": "Tüm gebelikler ektopiktir"
+     },
+     "dogru": "D",
+     "aciklama": "Sekonder amenore düşündürür; idrar 20-25, serum 5 mIU/mL eşik; USG'de kese-embriyo-kalp atımı tanı koydurur; %98 intrauterin, sonra viabilite sorgulanır.",
+     "sik_aciklamalari": {
+      "A": "Semptomlar düşündürür, tanı koydurmaz.",
+      "B": "Serum eşiği daha düşüktür.",
+      "C": "Kesin tanı sağlar.",
+      "D": "Doğru: eşik-görüntü-sıra üçlüsü tamdır.",
+      "E": "%98'i intrauterindir."
+     },
+     "bilgi": [
+      9,
+      10,
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Seri beta-hCG'si plato çizen kanamalı hastada kinetik yorumlanıyor. Hangi yorum doğrudur?",
+     "secenekler": {
+      "A": "Beta-hCG katlanması tanıdışıdır",
+      "B": "48 saatte artmayan beta-hCG ve boş kavite ektopik-anormal gebeliği düşündürür; normalde 1,4-2,1 günde katlanır ve 8-10. haftada pik yapar",
+      "C": "Pik 20. haftadadır",
+      "D": "Beta-hCG doğuma kadar yükselir",
+      "E": "Yetersiz artış normaldir"
+     },
+     "dogru": "B",
+     "aciklama": "Beta-hCG 1,4-2,1 günde ikiye katlanır, 8-10. haftada 50-100 bin pik, 18-20. haftada 10-20 bine iner; yetersiz katlanma ektopik-anormali düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Kinetik tanı koydurur.",
+      "B": "Doğru: katlanma-pik-anormallik üçlüsü tamdır.",
+      "C": "8-10. haftadadır.",
+      "D": "18-20. haftada iner.",
+      "E": "Anormalliği düşündürür."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Gebelik şüphesi ve kesin tanı basamakları nelerdir?",
+     "secenekler": {
+      "A": "Amenore düşündürür; hCG ve USG tanı koydurur",
+      "B": "Amenore dışlar",
+      "C": "hCG tanı koydurmaz",
+      "D": "USG gerekmez",
+      "E": "Serum eşiği 100'dür"
+     },
+     "dogru": "A",
+     "aciklama": "Sekonder amenore gebeliği düşündürür; beta-hCG pozitifliği ve USG'de kese-embriyo-kalp atımı tanı koydurur. İdrarda eşik 20-25, serumda 5 mIU/mL'dir; sağlıklı gebelikte 1,4-2,1 günde ikiye katlanır, 8-10. haftada 50-100 bin pik yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: şüphe bulgusu ve tanı basamakları birlikte doğru verilmiştir.",
+      "B": "Sekonder amenore ilk düşündürücüdür.",
+      "C": "Beta-hCG pozitifliği tanı basamağıdır.",
+      "D": "Kese-embriyo-kalp atımı USG ile gösterilir.",
+      "E": "Serumda 5 mIU/mL yeterlidir."
+     },
+     "bilgi": [
+      9,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "hCG sonrası ayrım sırası ve semptomlar nelerdir?",
+     "secenekler": {
+      "A": "Önce viabilite bakılır",
+      "B": "Gebeliklerin yarısı ektopiktir",
+      "C": "Önce yerleşim sonra viabilite ayrılır; %98 intrauterindir",
+      "D": "Senkop gebelikte olmaz",
+      "E": "Bulantı dışlar"
+     },
+     "dogru": "C",
+     "aciklama": "hCG pozitifliğinden sonra önce intrauterin yerleşim, sonra viabilite (kalp atımı) ayrılır; gebeliklerin %98'i intrauterindir. Amenore-dismenore, ağrı, senkop-hipotansiyon-taşikardi, bulantı-kusma ve üriner semptomlar görülür.",
+     "sik_aciklamalari": {
+      "A": "Önce intrauterin olup olmadığı ayrılır.",
+      "B": "%98'i intrauterindir.",
+      "C": "Doğru: sıralama ve oran birlikte doğru verilmiştir.",
+      "D": "Senkop-sersemlik-hipotansiyon semptomlardandır.",
+      "E": "Bulantı-kusma %70'ten fazlada görülür."
+     },
+     "bilgi": [
       11,
       12
      ],
@@ -205,6 +316,115 @@
       26
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k02-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "38+3, 39+5 ve 42+1 haftadaki üç doğum sınıflandırılıyor. Hangi sınıflama doğrudur?",
+     "secenekler": {
+      "A": "38+3 haftadaki doğum erken term, 39+5 tam term ve 42+1 postterm olarak sınıflanır; preterm sınırı 37+0'dır",
+      "B": "38. hafta tam termdir",
+      "C": "41. hafta posttermdir",
+      "D": "Preterm 39 haftadır",
+      "E": "Term ayrımı perinatalı etkilemez"
+     },
+     "dogru": "A",
+     "aciklama": "Preterm <37+0, erken term 37-38+6, tam term 39-40+6, geç term 41-41+6, postterm ≥42.",
+     "sik_aciklamalari": {
+      "A": "Doğru: üç örnek-sınır eşleşmesi tamdır.",
+      "B": "Erken termdir.",
+      "C": "Geç termdir.",
+      "D": "<37+0'dır.",
+      "E": "Sonuçları etkiler."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k02-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "24 haftalık gebenin TA düşüklüğü, dispnesi ve düşük kreatinini yorumlanıyor. Hangi yorum doğrudur?",
+     "secenekler": {
+      "A": "Gebelikte TA yükselir",
+      "B": "Kreatinin gebelikte yükselir",
+      "C": "24. haftada TA en düşük, kardiyak output maksimuma yakın, GFR %50 artmış ve kreatinin düşük, PaCO2 30'a inmiş gebenin dispnesi fizyolojik olabilir (%60-70)",
+      "D": "GFR gebelikte azalır",
+      "E": "Dispne daima patolojiktir"
+     },
+     "dogru": "C",
+     "aciklama": "Kardiyak output %30-60 artar (20-24. hafta maks), TA 24. haftada en düşük; GFR %50 artar, kreatinin %25 düşer; PaCO2 40-30, dispne %60-70.",
+     "sik_aciklamalari": {
+      "A": "24. haftada en düşüktür.",
+      "B": "%25 azalır.",
+      "C": "Doğru: trimester fizyolojisi bütünü tamdır.",
+      "D": "%50 artar.",
+      "E": "%60-70 fizyolojiktir."
+     },
+     "bilgi": [
+      21,
+      24,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Miad süresi ve embriyo-fetüs ayrımı nedir?",
+     "secenekler": {
+      "A": "Miad 300 gündür",
+      "B": "Miad 40 hafta; embriyo 8 haftaya, fetüs doğuma kadardır",
+      "C": "Embriyo doğuma kadardır",
+      "D": "Gestasyonel daha kısadır",
+      "E": "Konsepsiyonel SAT'tandır"
+     },
+     "dogru": "B",
+     "aciklama": "Miad 280 gün-40 haftadır; fertilizasyondan 8. hafta sonuna embriyo (~10. gestasyonel hafta), sonra fetüs denir. Gestasyonel yaş SAT'tan, konsepsiyonel döllenmeden hesaplanır ve ~2 hafta kısadır.",
+     "sik_aciklamalari": {
+      "A": "Miad 280 gün-40 haftadır.",
+      "B": "Doğru: süre ve dönem adları birlikte doğru verilmiştir.",
+      "C": "8. haftadan doğuma fetüs denir.",
+      "D": "Konsepsiyonel ~2 hafta kısadır.",
+      "E": "Gestasyonel SAT ilk günündendir."
+     },
+     "bilgi": [
+      1,
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k02-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Term tanımları ve abortus-doğum sınırı nedir?",
+     "secenekler": {
+      "A": "Tam term 37. haftadır",
+      "B": "Postterm 41'dir",
+      "C": "Preterm 38'dir",
+      "D": "Tam term 39-40+6, postterm 42 ve sonradır",
+      "E": "Abortus 24. haftadır"
+     },
+     "dogru": "D",
+     "aciklama": "Preterm 37 hafta 0 günden önce, erken term 37-38+6, tam term 39-40+6, geç term 41-41+6, postterm 42 hafta ve sonradır. Abortus 20 hafta-500 gram öncesi, doğum sonrasıdır.",
+     "sik_aciklamalari": {
+      "A": "Tam term 39-40 hafta 6 gündür.",
+      "B": "Postterm 42 hafta ve üzeridir.",
+      "C": "Preterm 37 hafta 0 günden öncedir.",
+      "D": "Doğru: iki tanım birlikte doğru verilmiştir.",
+      "E": "Sınır 20. hafta ve 500 gramdır."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -306,6 +526,121 @@
       5
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Bir düşük ve bir ikiz doğum öykülü gebenin obstetrik öyküsü kodlanıyor. Hangi kodlama doğrudur?",
+     "secenekler": {
+      "A": "Gravida doğum sayısıdır",
+      "B": "Parite gebelik sayısıdır",
+      "C": "Abortus 28 haftadır",
+      "D": "İkiz pariteyi 2 yapar",
+      "E": "Bir düşük+bir ikiz doğum öykülü gebe G2P1'dir (ikiz 1 sayılır, düşük pariteye girmez); abortus-doğum sınırı 20 hafta-500 gramdır"
+     },
+     "dogru": "E",
+     "aciklama": "Gravida gebelik sayısı (sonuca bakılmaz), parite 20. hafta sonrası doğum; abortus <20 hafta/<500 g; çoğul G-P'de 1 sayılır.",
+     "sik_aciklamalari": {
+      "A": "Gebelik sayısıdır.",
+      "B": "20. hafta sonrası doğumdur.",
+      "C": "<20 hafta-<500 g'dır.",
+      "D": "1 sayılır.",
+      "E": "Doğru: sayım ve sınır birlikte doğru."
+     },
+     "bilgi": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Öğrenci obstetrik terimleri tanımlıyor. Hangi tanım dizisi doğrudur?",
+     "secenekler": {
+      "A": "Primigravid çok doğurmuştur",
+      "B": "Hiç gebe kalmamış nulligravid, ilk gebeliğindeki primigravid, üç doğumlu multipardır; miad 280 gün=40 haftadır",
+      "C": "Multipar hiç doğurmamıştır",
+      "D": "Miad 36 haftadır",
+      "E": "Nullipar çok doğurmuştur"
+     },
+     "dogru": "B",
+     "aciklama": "Nulligravid hiç gebe kalmamış, primigravid ilk, multigravid çok gebelikli; nullipar doğurmamış; miad 280 gün=40 hafta.",
+     "sik_aciklamalari": {
+      "A": "İlk gebeliktir.",
+      "B": "Doğru: tanım-süre ikilisi tamdır.",
+      "C": "Birden fazla doğurmuştur.",
+      "D": "40 haftadır.",
+      "E": "Doğurmamıştır."
+     },
+     "bilgi": [
+      1,
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Gravida ve parite tanımları ile ikiz sayımı nasıldır?",
+     "secenekler": {
+      "A": "Gravida gebelik sayısı, parite 20. hafta sonrası doğumdur",
+      "B": "Gravida doğum sayısıdır",
+      "C": "Parite tüm gebeliktir",
+      "D": "İkiz 2 sayılır",
+      "E": "Sonuç gravidayı değiştirir"
+     },
+     "dogru": "A",
+     "aciklama": "Gravida sonuca bakılmaksızın gebelik sayısıdır (nulli-primi-multi). Parite 20. hafta sonrası doğumları niteler; çoğul gebelik G-P'de 1 sayılır (G1P1Y2 ikiz).",
+     "sik_aciklamalari": {
+      "A": "Doğru: iki kavramın tanımı birlikte doğru verilmiştir.",
+      "B": "Gravida gebelik sayısıdır.",
+      "C": "Parite 20. hafta sonrası doğumlardır.",
+      "D": "Çoğul gebelikler 1 sayılır.",
+      "E": "Sonuca bakılmaz."
+     },
+     "bilgi": [
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": [
+      "eb6ac65cde86"
+     ]
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Gravida-parite ön ekleri ne anlama gelir?",
+     "secenekler": {
+      "A": "Nullipar çok doğurmuştur",
+      "B": "Primipar hiç doğurmamıştır",
+      "C": "Nulli-primi-multi ön ekleri sayı basamağını verir",
+      "D": "Multipar bir doğumdur",
+      "E": "Abortus doğumdur"
+     },
+     "dogru": "C",
+     "aciklama": "Nulligravid hiç gebe kalmamış, primigravid ilk, multigravid çok gebeliklidir; nullipar doğurmamış, primipar bir, multipar çok doğurmuştur. Abortus 20 hafta-500 gram öncesi atılmadır.",
+     "sik_aciklamalari": {
+      "A": "Nullipar doğum yapmamıştır.",
+      "B": "Primipar bir doğum yapmıştır.",
+      "C": "Doğru: ön eklerin anlamı doğru verilmiştir.",
+      "D": "Multipar birden fazla doğurmuştur.",
+      "E": "Abortus 20 hafta öncesi atılmadır."
+     },
+     "bilgi": [
+      4,
+      5,
+      7
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -393,6 +728,118 @@
      },
      "bilgi": [
       3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "SAT 15/10/2025 olan gebenin EDD'si ve 9. haftadaki adlandırma soruluyor. Hangi yanıt doğrudur?",
+     "secenekler": {
+      "A": "Naegele SAT'tan 1 ay çıkarır",
+      "B": "SAT 15/10/2025 EDD 15/07/2026'dır",
+      "C": "Konsepsiyonel gestasyonelden uzundur",
+      "D": "SAT 15/10/2025 olan gebenin EDD'si 22/07/2026'dır; 9. gestasyonel haftadaki yapı embriyodur ve konsepsiyonel yaş ~2 hafta kısadır",
+      "E": "Embriyo 20. haftaya kadardır"
+     },
+     "dogru": "D",
+     "aciklama": "EDD=SAT+7 gün-3 ay+1 yıl; SAT 15/10/2025-22/07/2026; embriyo 8. haftaya, sonra fetüs; konsepsiyonel ~2 hafta kısadır.",
+     "sik_aciklamalari": {
+      "A": "+7 gün-3 ay+1 yıldır.",
+      "B": "22/07/2026'dır.",
+      "C": "~2 hafta kısadır.",
+      "D": "Doğru: hesap-dönem-fark üçlüsü tamdır.",
+      "E": "8. haftayadır."
+     },
+     "bilgi": [
+      2,
+      3,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Düzensiz sikluslu gebenin SAT ve USG haftası uyuşmuyor. Hangi yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "Ovulasyonu geciken kadında SAT-temelli hafta ile USG haftası çelişirse USG biyometrisi (FL-AC-BPD) tarihlendirmede kullanılır; gestasyonel yaş klinikte esastır",
+      "B": "SAT her zaman doğrudur",
+      "C": "USG tarihlendirmede kullanılmaz",
+      "D": "Konsepsiyonel klinikte esastır",
+      "E": "EDD takibi etkilemez"
+     },
+     "dogru": "A",
+     "aciklama": "Gestasyonel SAT'tan, konsepsiyonel döllenmeden; klinikte gestasyonel kullanılır; çelişirse USG biyometrisi (FL-AC-BPD) kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: çelişki çözümü ve ölçüt birlikte doğru.",
+      "B": "Ovulasyon kayması yanıltır.",
+      "C": "Biyometri kullanılır.",
+      "D": "Gestasyonel kullanılır.",
+      "E": "Zamanlamayı belirler."
+     },
+     "bilgi": [
+      3,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Naegele kuralı ve fundus seviyeleri nedir?",
+     "secenekler": {
+      "A": "Formül +7 gün +3 aydır",
+      "B": "SAT +7 gün -3 ay +1 yıl doğumu verir",
+      "C": "SAT 15/10 ise doğum 15/07'dir",
+      "D": "Fundus 20'de ksifoiddedir",
+      "E": "Olay amniyonla başlar"
+     },
+     "dogru": "B",
+     "aciklama": "Naegele SAT + 7 gün - 3 ay + 1 yıldır; SAT 15/10/2025 ise EDD 22/07/2026'dır. Erken olay sırası kese-yolk-embriyo-amniyondur; fundus 12. haftada pelvis, 20'de umblikus, 36'da ksifoiddedir.",
+     "sik_aciklamalari": {
+      "A": "-3 ay +1 yıl doğrudur.",
+      "B": "Doğru: formül ve örnek sonuç birlikte doğru verilmiştir.",
+      "C": "22/07/2026 hesaplanır.",
+      "D": "20. haftada umblikus düzeyindedir.",
+      "E": "Önce kese, sonra yolk-embriyo-amniyon görülür."
+     },
+     "bilgi": [
+      13,
+      16,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Fetal biyometri ve USG prob özellikleri nelerdir?",
+     "secenekler": {
+      "A": "Biyometri tek ölçümdür",
+      "B": "TA yüksek frekanstır",
+      "C": "TV dolu mesaneyledir",
+      "D": "FL-AC-BPD ölçülür; TA düşük, TV yüksek frekanstır",
+      "E": "Uterus sinistrorotedir"
+     },
+     "dogru": "D",
+     "aciklama": "Fetal biyometride FL-AC-BPD ölçülür. Transabdominal düşük frekans-düşük rezolüsyon (3-5 MHz) dolu mesaneyle, transvajinal yüksek (5-10 MHz) boş mesaneyle yapılır; uterus dekstrorotedir.",
+     "sik_aciklamalari": {
+      "A": "Femur, karın çevresi ve BPD ölçülür.",
+      "B": "TA 3-5 MHz düşük frekanstır.",
+      "C": "TV boş mesaneyle yapılır.",
+      "D": "Doğru: ölçümler ve prob özellikleri birlikte doğru verilmiştir.",
+      "E": "Uterus dekstrorotedir."
+     },
+     "bilgi": [
+      14,
+      15,
+      17,
+      18
      ],
      "benzer_cikmis": []
     }
@@ -493,6 +940,114 @@
       19
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Miad gebede fundusta makat hissediliyor. Manevra sırası soruluyor. Hangi açıklama doğrudur?",
+     "secenekler": {
+      "A": "Leopold tek manevradır",
+      "B": "3. manevra inişi gösterir",
+      "C": "Fundusta makat hissedilen, yanda sırtı bulunan fetüste 1. manevra podalik gelişi, 2. manevra yönelimi gösterir; 3. manevra prezentasyonu, 4. manevra inişi belirler",
+      "D": "Fundus 20. haftada ksifoiddir",
+      "E": "Uterus sinistrorotedir"
+     },
+     "dogru": "C",
+     "aciklama": "1. fundus (sefalik-podalik?), 2. sırt-ekstremite, 3. prezentasyon, 4. iniş; fundus 12 pelvis, 20 umblikus, 36 ksifoid; uterus dekstrorote.",
+     "sik_aciklamalari": {
+      "A": "Dört manevradır.",
+      "B": "Prezentasyonu belirler.",
+      "C": "Doğru: sıra-işlev eşleşmesi tamdır.",
+      "D": "Umblikustadır.",
+      "E": "Dekstrorotedir."
+     },
+     "bilgi": [
+      18,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Fundus seviyesi ve USG prob seçimi birlikte soruluyor. Hangi bütün doğrudur?",
+     "secenekler": {
+      "A": "Fundus 36. haftada umblikustadır",
+      "B": "Transvaginal dolu mesaneyle yapılır",
+      "C": "Leopold gereksizdir",
+      "D": "Prezentasyon saptanamaz",
+      "E": "20. haftada umblikusta, 36. haftada ksifoidde fundus palpe edilir; transabdominal dolu mesane (3-5 MHz), transvaginal boş mesane (5-10 MHz) ile yapılır"
+     },
+     "dogru": "E",
+     "aciklama": "Fundus haftayla yükselir; transabdominal dolu (3-5 MHz), transvaginal boş (5-10 MHz) mesaneyle yapılır.",
+     "sik_aciklamalari": {
+      "A": "Ksifoiddedir.",
+      "B": "Boş mesaneyle yapılır.",
+      "C": "Klinik saptamada esastır.",
+      "D": "3. manevra belirler.",
+      "E": "Doğru: seviye-prob ikilisi tamdır."
+     },
+     "bilgi": [
+      14,
+      15,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Leopold manevraları ve uterus büyümesi nedir?",
+     "secenekler": {
+      "A": "Dört manevra fundus-yönelim-prezentasyon-inişi değerlendirir",
+      "B": "Leopold tek manevradır",
+      "C": "İlk manevra iniştir",
+      "D": "Uterus büyümez",
+      "E": "Chadwick fetaldir"
+     },
+     "dogru": "A",
+     "aciklama": "Leopold 1 fundus (sefalik-podalik), 2 sırt-ekstremite-yönelim, 3 prezentasyon, 4 iniş derecesidir. Uterus 50-70 gramdan 800-1200 grama, kavite 10 mL'den 5 litreye çıkar; Chadwick-Goodell-nişane oluşur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: dört basamağın sırası ve içeriği doğru verilmiştir.",
+      "B": "Dört manevra tanımlanmıştır.",
+      "C": "Birinci fundusu değerlendirir.",
+      "D": "Ağırlık ve kavite katlanarak artar.",
+      "E": "Chadwick mavimsi serviks, Goodell yumuşama, nişanedir."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Leopold üçüncü ve dördüncü manevraları neyi değerlendirir?",
+     "secenekler": {
+      "A": "Üçüncü manevra fundusu değerlendirir",
+      "B": "Dördüncü manevra yönelimi belirler",
+      "C": "Üçüncü prezentasyonu, dördüncü iniş derecesini değerlendirir",
+      "D": "İkinci manevra inişi ölçer",
+      "E": "Leopold yalnızca fundusa bakılır"
+     },
+     "dogru": "C",
+     "aciklama": "Üçüncü manevra prezente olan kısmı (sefalik-podalik), dördüncü manevra prezente kısmın pelvise iniş derecesini değerlendirir. İkinci manevrada fetal sırt ve ekstremiteler palpe edilerek yönelim belirlenir; böylece doğum planı için prezentasyon ve iniş bilgisi elde edilir.",
+     "sik_aciklamalari": {
+      "A": "Birinci manevra fundusu değerlendirir.",
+      "B": "Yönelim ikinci manevrada sırt-ekstremiteyle belirlenir.",
+      "C": "Doğru: üçüncü ve dördüncü manevranın işlevleri doğru verilmiştir.",
+      "D": "İkinci manevra fetal sırt ve yönelime bakılır.",
+      "E": "Dört basamak farklı yapıları değerlendirir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -577,6 +1132,114 @@
      },
      "bilgi": [
       2,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Erken USG sırası, fetal ölçümler ve uterus büyümesi soruluyor. Hangi dizi doğrudur?",
+     "secenekler": {
+      "A": "Amniyon keseden önce görülür",
+      "B": "USG'de önce kese, sonra yolk sac-embriyo-amniyon izlenir; büyüme FL-AC-BPD ile izlenir; uterus 50-70 g'dan 800-1200 g'a, kavite 10 mL'den 5 L'ye çıkar",
+      "C": "BPD kullanılmaz",
+      "D": "Uterus küçülür",
+      "E": "Goodell mavimsi servikstir"
+     },
+     "dogru": "B",
+     "aciklama": "Sıra kese-yolk-embriyo-amniyon; FL-AC-BPD biyometride; uterus 50-70 g-800-1200 g, kavite 10 mL-5 L.",
+     "sik_aciklamalari": {
+      "A": "Kese ilktir.",
+      "B": "Doğru: sıra-ölçüm-büyüme üçlüsü tamdır.",
+      "C": "Temel ölçümlerdendir.",
+      "D": "Büyür.",
+      "E": "Yumuşamadır; mavimsi Chadwick'tir."
+     },
+     "bilgi": [
+      16,
+      17,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Miadde servikal bulgular ve uterin kan akımı soruluyor. Hangi açıklama doğrudur?",
+     "secenekler": {
+      "A": "Nişane fetal bulgudur",
+      "B": "Chadwick yumuşamadır",
+      "C": "Uterin kan akımı azalmıştır",
+      "D": "Mavimsi serviks (Chadwick), yumuşamış serviks (Goodell) ve nişane doğuma hazırlığı yansıtır; uterin kan akımı 500-1000 mL/dk olup %85'i plasentayadır",
+      "E": "Goodell kanamadır"
+     },
+     "dogru": "D",
+     "aciklama": "Chadwick mavimsi, Goodell yumuşama, nişane servikal hazırlıktır; kanın %85'i plasentaya gider.",
+     "sik_aciklamalari": {
+      "A": "Servikal-mukus bulgusudur.",
+      "B": "Mavimsiliktir.",
+      "C": "Artmıştır.",
+      "D": "Doğru: üçlü bulgu ve akım birlikte doğru.",
+      "E": "Yumuşamadır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Fetüs kavramı ve değerlendirmesi nasıldır?",
+     "secenekler": {
+      "A": "Fetüs dönemi doğumda başlar",
+      "B": "Fetüs kalp atımı ve FL-AC-BPD ile değerlendirilir",
+      "C": "Viabilite keseyle kanıtlanır",
+      "D": "Gebeliklerin yarısı ekstrauterindir",
+      "E": "Fetal ölçüm yapılmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Sekizinci haftadan doğuma kadar fetüs denir; fetüs USG'de fetal pol, kalp atımı ve FL-AC-BPD ölçümleriyle değerlendirilir. Kalp atımının gösterilmesi viabilitenin kanıtıdır ve gebeliklerin %98'i intrauterindir.",
+     "sik_aciklamalari": {
+      "A": "8. haftadan doğuma fetüs denir.",
+      "B": "Doğru: fetüs değerlendirme ölçütleri birlikte doğru verilmiştir.",
+      "C": "Viabilite fetal kalp atımıyla ayrılır.",
+      "D": "%98'i intrauterindir.",
+      "E": "FL, AC ve BPD fetal biyometridir."
+     },
+     "bilgi": [
+      2,
+      11,
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Plasenta ve amnion kavramları nedir?",
+     "secenekler": {
+      "A": "Plasentaya kan gitmez",
+      "B": "Amniyon ilk görülür",
+      "C": "Plasenta mozaisizmi CVS'i etkilemez",
+      "D": "Kan akımının çoğu plasentaya gider; amniyon son görülür",
+      "E": "Amniyon fetüs dışıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Term uterusta kan akımının %85'i plasentaya gider; plasenta fetomaternal alışveriş organıdır. Amniyon olay sırasında kese-yolk-embriyodan sonra görülür ve fetüsü çevreler; CVS'te %1-2 sınırlı plasenta mozaisizmi dezavantajdır.",
+     "sik_aciklamalari": {
+      "A": "Kanın %85'i plasentaya gider.",
+      "B": "Sıra kese-yolk-embriyo-amniyondur.",
+      "C": "%1-2 sınırlı plasenta mozaisizmi CVS dezavantajıdır.",
+      "D": "Doğru: plasenta perfüzyonu ve amniyon sırası birlikte doğru verilmiştir.",
+      "E": "Amniyon fetüsü çevreleyen kesedir."
+     },
+     "bilgi": [
       16
      ],
      "benzer_cikmis": []
@@ -666,6 +1329,111 @@
       17
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "hCG 2500 mIU/mL ve boş kavite saptanan hastada eşik ve normal sıra soruluyor. Hangi yorum doğrudur?",
+     "secenekler": {
+      "A": "hCG 2500 ve boş kavitede ektopik uyarısı vardır; normalde transvajinal 4-5. haftada kese, 5. haftada yüzük yolk sac ve 6. haftada fetal pole-kalp atımı izlenir",
+      "B": "hCG 2500'de kese görülmemesi normaldir",
+      "C": "Yolk sac 8. haftadadır",
+      "D": "Kalp atımı keseden öncedir",
+      "E": "Kese büyümesi izlenmez"
+     },
+     "dogru": "A",
+     "aciklama": "Transvajinal 4-5. haftada kese, 5. haftada yolk, 6. haftada pole-kalp atımı; hCG>2000'de kese görülmeli.",
+     "sik_aciklamalari": {
+      "A": "Doğru: eşik-sıra üçlüsü tamdır.",
+      "B": ">2000'de görülmelidir.",
+      "C": "5. haftadadır.",
+      "D": "Polden sonradır.",
+      "E": "Günde 1 mm'dir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "CRL 15 mm olguda tarihlendirme ve tolerans soruluyor. Hangi hesap doğrudur?",
+     "secenekler": {
+      "A": "CRL 20. haftadadır",
+      "B": "CRL ekstremite dahildir",
+      "C": "CRL 15 mm embriyoda hafta ~6 hafta+CRL(mm) ile bulunur; SAT-USG arası 1. trimesterde 7 günlük fark önemsizdir ve fetal büyüme FL-AC-BPD ile izlenir",
+      "D": "7 günlük fark daima revizyon gerektirir",
+      "E": "Biyometri tarihlendirmez"
+     },
+     "dogru": "C",
+     "aciklama": "CRL 7-14. haftada, 6 hafta+CRL(mm); 1. trimester 7 gün, 2. trimester 10 gün fark önemsizdir.",
+     "sik_aciklamalari": {
+      "A": "7-14. haftadadır.",
+      "B": "Dışlanır.",
+      "C": "Doğru: formül-tolerans-ölçüm üçlüsü tamdır.",
+      "D": "Önemsizdir.",
+      "E": "Tarihlendirir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Gestasyonel kesenin morfolojisi ve görülme haftaları nedir?",
+     "secenekler": {
+      "A": "Kese TV 4-5. haftada halkalıdır, günde 1 mm büyür",
+      "B": "Kese TA'da daha erken görülür",
+      "C": "Kese ekojen iç yapıdır",
+      "D": "Kese haftada 1 mm büyür",
+      "E": "Kese viabiliteyi gösterir"
+     },
+     "dogru": "A",
+     "aciklama": "Gestasyonel kese uterus kavitesinde ekojen halka içinde anekoik alandır; TV-USG'de 4-5. haftalarda, TA-USG'de 6. haftada görülür ve erken gebelikte günde 1 mm büyür. Bu görünüm intrauterin yerleşimin ilk kanıtıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kese morfolojisi, haftaları ve büyüme hızı birlikte doğru verilmiştir.",
+      "B": "TV 4-5, TA 6. haftadadır.",
+      "C": "Ekojen halka içinde anekoik alandır.",
+      "D": "Günde 1 mm büyür.",
+      "E": "Viabilite kalp atımıyla ayrılır."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Yolk sak, fetal pol ve kalp atımı sırası nedir?",
+     "secenekler": {
+      "A": "Yolk 8. haftadadır",
+      "B": "Pol keseden öncedir",
+      "C": "Yolk 5, pol 6. haftadadır; kalp polden sonradır",
+      "D": "Kalp atımı yolktan öncedir",
+      "E": "Amniyon ilk görülür"
+     },
+     "dogru": "C",
+     "aciklama": "Yolk sak 5. haftadan itibaren kese içinde yüzük şeklinde, fetal pol 6. haftada yolk kenarında kalınlaşma olarak belirir; fetal kalp atımı pol görüntülendikten sonra saptanır. Olay sırası kese-yolk-embriyo-amniyondur.",
+     "sik_aciklamalari": {
+      "A": "5. haftadan itibaren yüzük şeklindedir.",
+      "B": "Önce kese görülür.",
+      "C": "Doğru: üç yapının sırası ve haftaları doğru verilmiştir.",
+      "D": "Kalp atımı pol görüntülendikten sonra başlar.",
+      "E": "Sıra kese-yolk-embriyo-amniyondur."
+     },
+     "bilgi": [
+      16,
+      23
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -746,6 +1514,110 @@
       "C": "Risk grubu olduğundan tarama gerekir.",
       "D": "Tanı olmadan tedavi başlanmaz.",
       "E": "Gebelikte tarama ertelenmez."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "İlk prenatal vizitte laboratuvar paneli ve idrar kültürü endikasyonu soruluyor. Hangi panel doğrudur?",
+     "secenekler": {
+      "A": "İlk vizitte test gerekmez",
+      "B": "İdrar kültürü gereksizdir",
+      "C": "Baba kan grubu önemsizdir",
+      "D": "HBsAg aşılıda bakılmaz",
+      "E": "İlk 14 haftada TİT-idrar kültürü, anne-baba kan grubu, indirekt Coombs, HBsAg-HIV-sifiliz ve TSH istenir; asemptomatik bakteriüri tedavi edilir"
+     },
+     "dogru": "E",
+     "aciklama": "TİT-kültür, anne-baba kan grubu, Coombs, HBsAg, HIV, sifiliz, TSH; asemptomatik bakteriüri tedavi edilir.",
+     "sik_aciklamalari": {
+      "A": "Kapsamlı panel istenir.",
+      "B": "Piyelonefriti önler.",
+      "C": "Uyuşmazlık için gerekir.",
+      "D": "Aşılı olsa da bakılır.",
+      "E": "Doğru: panel-endikasyon ikilisi tamdır."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Riskli gebenin ilk vizit glukozu 110 mg/dl bulunuyor. Algoritmaya göre hangi adım doğrudur?",
+     "secenekler": {
+      "A": "Gebelikte glukoz bakılmaz",
+      "B": "Riskli gebede AKŞ 126 altı OGTT gerektirir; 75 g OGTT negatifse 24-28. haftada tekrarlanır; eşik üstü (126/200) DM tanısı koydurur",
+      "C": "OGTT yapılmaz",
+      "D": "Tekrar gerekmez",
+      "E": "Eşik 200/300'dür"
+     },
+     "dogru": "B",
+     "aciklama": "AKŞ≥126 veya KŞ≥200 DM'dir; altında 75 g OGTT, negatifse 24-28. haftada tekrar.",
+     "sik_aciklamalari": {
+      "A": "Tarama esastır.",
+      "B": "Doğru: eşik-yöntem-tekrar üçlüsü tamdır.",
+      "C": "75 g OGTT yapılır.",
+      "D": "Negatifse tekrarlanır.",
+      "E": "126/200'dür."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "İlk başvuruda istenen laboratuvar testleri nelerdir?",
+     "secenekler": {
+      "A": "Yalnızca hCG yeterlidir",
+      "B": "İdrar kültürü, kan grubu, HBsAg-HIV-sifiliz ve TSH istenir",
+      "C": "Coombs her gebeye şarttır",
+      "D": "TSH bakılmaz",
+      "E": "Baba kan grubu gerekmez"
+     },
+     "dogru": "B",
+     "aciklama": "İlk izlem laboratuvarında TİT ve idrar kültürü, anne-baba kan grubu, gerekirse indirekt Coombs, HBsAg, HIV, sifiliz taraması ve TSH istenir. Bu panel enfeksiyon, alloimmünizasyon ve tiroid taramasını kapsar.",
+     "sik_aciklamalari": {
+      "A": "Tam panel gerekir.",
+      "B": "Doğru: ilk başvuru laboratuvar paneli eksiksiz verilmiştir.",
+      "C": "Gerekirse indirekt Coombs bakılır.",
+      "D": "TSH paneldedir.",
+      "E": "Anne-baba kan grubu istenir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Gestasyonel diyabet tarama basamakları nelerdir?",
+     "secenekler": {
+      "A": "AKŞ 200 tanı koydurur",
+      "B": "OGTT ilk basamaktır",
+      "C": "Tekrar gerekmez",
+      "D": "Eşik üstü DM, altı OGTT ve 24-28. hafta tekrar gerekir",
+      "E": "Tarama doğumda yapılır"
+     },
+     "dogru": "D",
+     "aciklama": "Risk grubunda AKŞ 126 veya rastgele 200 mg/dl üzerindeyse DM tanısı konur; altındaysa 75 gr OGTT yapılır, negatifse 24-28. haftada tekrarlanır. Bu protokol gestasyonel diyabetin iki basamaklı taramasıdır.",
+     "sik_aciklamalari": {
+      "A": "Eşik AKŞ 126, rastgele 200'dür.",
+      "B": "Önce AKŞ-rastgele bakılır.",
+      "C": "Negatifse 24-28. haftada tekrarlanır.",
+      "D": "Doğru: tarama basamakları ve eşikler birlikte doğru verilmiştir.",
+      "E": "24-28. hafta tekrarı esastır."
      },
      "bilgi": [
       31
@@ -836,6 +1708,112 @@
       36
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "İlk gebelik muayenesinin basamakları ve riskli gebenin sevki soruluyor. Hangi yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "İlk izlem ilk 14 haftada iletişim-öykü-muayene-laboratuvar-danışmanlık-sevk-kayıt basamaklarını içerir; risk formunda bir evet yanıtı uzman kuruma sevki gerektirir",
+      "B": "İlk izlem 30. haftadadır",
+      "C": "Risk formu sevki etkilemez",
+      "D": "Öykü ilk izlemde alınmaz",
+      "E": "Sevk yalnızca doğumda yapılır"
+     },
+     "dogru": "A",
+     "aciklama": "İlk 14 haftada iletişim-öykü-muayene-lab-destek-danışmanlık-sevk-kayıt; bir kriterde evet uzman sevki gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: basamak-sevk ikilisi tamdır.",
+      "B": "İlk 14 haftadadır.",
+      "C": "Bir evet sevki gerektirir.",
+      "D": "Öykü temeldir.",
+      "E": "Erken yönlendirme sonuçları iyileştirir."
+     },
+     "bilgi": [
+      29,
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "TA 170/115 mm Hg, baş ağrılı gebenin yönlendirilmesi soruluyor. Hangi karar doğrudur?",
+     "secenekler": {
+      "A": "160/110 TA normaldir",
+      "B": "Konvülsiyon bekletilir",
+      "C": "TA 170/115, baş ağrısı ve görme bulanıklığı olan gebede ağır hipertansiyon nedeniyle acil sevk gerekir; konvülsiyon-şok-solunum güçlüğü de acil sevk nedenidir",
+      "D": "Hipertansiyon sevki etkilemez",
+      "E": "Acil sevk kavramı yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Ağır hipertansiyon (≥160/110), konvülsiyon, şok, solunum güçlüğü acil sevk; ağır kansızlık-sistemik hastalık uzman yönlendirmesi gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Ağır hipertansiyondur.",
+      "B": "Acil sevktir.",
+      "C": "Doğru: eşik-acil liste ikilisi tamdır.",
+      "D": "Belirleyicidir.",
+      "E": "Tanımlıdır."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "İlk gebelik izleminin zamanı ve basamakları nelerdir?",
+     "secenekler": {
+      "A": "İlk izlem ilk 14 haftada sekiz basamakla yapılır",
+      "B": "İlk izlem 28. haftadadır",
+      "C": "Öykü alınmaz",
+      "D": "Kayıt gerekmez",
+      "E": "Destek verilmez"
+     },
+     "dogru": "A",
+     "aciklama": "İlk izlem ilk 14 haftada iletişim, öykü, fizik muayene, laboratuvar, destek-bağışıklama, danışmanlık, sevk ve kayıt basamaklarını içerir. Öyküde riskli durumlar saptanıp yönlendirme yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: zamanlama ve basamaklar birlikte doğru verilmiştir.",
+      "B": "İlk 14 haftada yapılır.",
+      "C": "Öykü risk saptamada esastır.",
+      "D": "Kayıt basamaklardandır.",
+      "E": "Destek-bağışıklama basamaklardandır."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Riskli gebe sevk ölçütü ve cilt bilgilendirmesi nedir?",
+     "secenekler": {
+      "A": "Tek evet sevk gerektirmez",
+      "B": "160/110 acil değildir",
+      "C": "Tek evet sevk ettirir; cilt değişimleri fizyolojiktir",
+      "D": "Konvülsiyon beklenir",
+      "E": "Cilt değişimi patolojiktir"
+     },
+     "dogru": "C",
+     "aciklama": "Risk formunda bir ölçütte bile evet varsa uzman kuruma sevk yapılır; ağır hipertansiyon (160/110 ve üstü), konvülsiyon, şok ve solunum güçlüğü acil sevk gerektirir. Ciltte linea nigra, kloazma, telenjiektazi ve stria gibi fizyolojik değişimler danışmanlıkta anlatılır.",
+     "sik_aciklamalari": {
+      "A": "Bir kriterde evet sevk ettirir.",
+      "B": "Ağır hipertansiyon acil sevktir.",
+      "C": "Doğru: sevk kuralı ve cilt bilgilendirmesi birlikte doğru verilmiştir.",
+      "D": "Konvülsiyon acil sevk gerektirir.",
+      "E": "Hiperpigmentasyon ve stria fizyolojiktir."
+     },
+     "bilgi": [
+      27,
+      36
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -920,6 +1898,112 @@
      "bilgi": [
       35,
       30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k10-q04",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Rh negatif gebenin izleminde Anti-D profilaksi basamakları soruluyor. Hangi bilgi doğrudur?",
+     "secenekler": {
+      "A": "Rh uyuşmazlığı yalnızca doğumda önemlidir",
+      "B": "Profilaksi riski artırır",
+      "C": "28. hafta dozu gereksizdir",
+      "D": "Anti-D duyarlıyı tedavi eder",
+      "E": "Rh negatif anne-Rh pozitif bebekte fetomaternal hemoraji Anti-D oluşturur; profilaksisiz risk %13, doğumda profilaksiyle %2, 28. hafta eklenince %0,1'dir"
+     },
+     "dogru": "E",
+     "aciklama": "Fetomaternal hemoraji D antijeni geçirip Anti-D oluşturur; risk girişimsiz %13, doğum profilaksisiyle %2, 28. hafta eklenince %0,1.",
+     "sik_aciklamalari": {
+      "A": "Düşük-girişim de duyarlandırır.",
+      "B": "Riski azaltır.",
+      "C": "%0,1'e indirir.",
+      "D": "Profilaksidir.",
+      "E": "Doğru: mekanizma-risk basamakları tamdır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k10-q05",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Coombs pozitif Rh negatif gebenin yönetimi ile Coombs negatif gebenin profilaksisi karşılaştırılıyor. Hangi ayrım doğrudur?",
+     "secenekler": {
+      "A": "Baba kan grubu bakılmaz",
+      "B": "Baba Rh pozitif, anne Rh negatif ve Coombs negatif gebede 28. hafta ve doğumda Anti-D profilaksisi uygulanır; Coombs pozitif-duyarlanmış gebede profilaksi etkisizdir ve titre-fetal izlem gerekir",
+      "C": "Duyarlanmışa Anti-D kür sağlar",
+      "D": "Coombs izlemde kullanılmaz",
+      "E": "Profilaksi doğumdan sonra yeterlidir"
+     },
+     "dogru": "B",
+     "aciklama": "Baba kan grubu ve indirekt Coombs izlemde esastır; duyarlanmışta titre takibi ve fetal anemi izlemi gerekir; profilaksi duyarlanmadan önce etkilidir.",
+     "sik_aciklamalari": {
+      "A": "Uyuşmazlık için gerekir.",
+      "B": "Doğru: profilaksi-duyarlılık ayrımı tamdır.",
+      "C": "Etkisizdir.",
+      "D": "Esastır.",
+      "E": "28. hafta da gerekir."
+     },
+     "bilgi": [
+      30,
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k10-q06",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Rh uyuşmazlığı mekanizması ve profilaksi etkisi nedir?",
+     "secenekler": {
+      "A": "Antikor fetüsten geçer",
+      "B": "D antijeni anneye geçer; profilaksi riski %0,1'e indirir",
+      "C": "Profilaksi etkisizdir",
+      "D": "Risk %50'dir",
+      "E": "28. hafta dozu gereksizdir"
+     },
+     "dogru": "B",
+     "aciklama": "Fetomaternal hemorajiyle D antijeni anneye geçer ve anti-D antikorları oluşur. İmmünizasyon riski girişimsiz %13, doğumda profilaksiyle %2, ek 28. hafta dozyla %0,1'e iner.",
+     "sik_aciklamalari": {
+      "A": "D antijeni fetüsten anneye geçer.",
+      "B": "Doğru: mekanizma ve basamaklı risk azalışı birlikte doğru verilmiştir.",
+      "C": "Doğumda %2'ye indirir.",
+      "D": "Girişimsiz %13'tür.",
+      "E": "Ek doz %0,1'e indirir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Rh izlemi ve profilaksi zamanlaması nasıldır?",
+     "secenekler": {
+      "A": "Coombs tanı koydurur",
+      "B": "Anti-D tedavi edicidir",
+      "C": "Baba grubu önemsizdir",
+      "D": "Coombs izler, anti-D önler; baba grubu bakılır",
+      "E": "Profilaksi doğumla sınırlıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Anne-baba kan grubu ilk laboratuvardadır; gerekirse indirekt Coombs bakılır. Anti-D profilaksisi riskli durumlarda ve 28. haftada uygulanır; oluşmuş yanıtı geri döndürmez, önler.",
+     "sik_aciklamalari": {
+      "A": "İndirekt Coombs izlem testidir.",
+      "B": "Uygulama profilaktiktir.",
+      "C": "Anne-baba kan grubu istenir.",
+      "D": "Doğru: izlem ve profilaksi ilkeleri birlikte doğru verilmiştir.",
+      "E": "28. haftada da uygulanır."
+     },
+     "bilgi": [
+      30,
+      35
      ],
      "benzer_cikmis": []
     }
@@ -1007,6 +2091,111 @@
       34
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k11-q04",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Gebenin izlem sıklığı rehberlere göre danışılıyor. Hangi karşılaştırma doğrudur?",
+     "secenekler": {
+      "A": "Tüm rehberler 4 izlem önerir",
+      "B": "WHO 4 izlem önerir",
+      "C": "NICE multipara 10 önerir",
+      "D": "T.C. SB en az 4, WHO en az 8, NICE nullipar 10-multipar 7, ACOG 12-14 izlem önerir; ACOG 28. haftaya kadar 4 haftada bir, 36'dan sonra haftalık izler",
+      "E": "ACOG tek izlem önerir"
+     },
+     "dogru": "D",
+     "aciklama": "T.C. SB ≥4, WHO ≥8, NICE nullipar 10/multipar 7, ACOG 12-14 izlem; SB: 1-14, 18-24, 28-32, 36-38. haftalar.",
+     "sik_aciklamalari": {
+      "A": "Rehberler farklıdır.",
+      "B": "En az 8'dir.",
+      "C": "7'dir.",
+      "D": "Doğru: dörtlü karşılaştırma tamdır.",
+      "E": "12-14'tür."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k11-q05",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Rutin destek ve bağışıklama danışmanlığı soruluyor. Hangi şema doğrudur?",
+     "secenekler": {
+      "A": "Anemisiz gebeye 16. haftadan 40-60 mg/gün demir, 400-800 mcg/gün folik asit (yüksek riskte 4 mg), 12. haftadan 1200 IU vitamin D ve en az 2 doz Td uygulanır; grip-Hepatit B aşısı önerilir",
+      "B": "Demir doğumda başlanır",
+      "C": "Folik asit 3. trimesterde başlar",
+      "D": "Aşı gebelikte kontrendikedir",
+      "E": "Vitamin D verilmez"
+     },
+     "dogru": "A",
+     "aciklama": "Demir yoksa 16. haftadan 40-60 mg/gün (anemide 100-120), folik asit 400-800 mcg (yüksek risk 4 mg), vit D 12. haftadan 1200 IU; Td ≥2 doz, Hepatit B-grip aşısı.",
+     "sik_aciklamalari": {
+      "A": "Doğru: destek-aşı dörtlüsü tamdır.",
+      "B": "16. haftadandır.",
+      "C": "Prekonsepsiyonel-erken başlar.",
+      "D": "Td-grip-Hepatit B önerilir.",
+      "E": "1200 IU verilir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k11-q06",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "İzlem sayıları ve mikrobesin desteği nedir?",
+     "secenekler": {
+      "A": "SB 4, WHO 8 izlem; demir-folat-D vitamini desteklenir",
+      "B": "SB 14 izlemdir",
+      "C": "Destek gerekmez",
+      "D": "Folat 4 mcg'dir",
+      "E": "Demir 12. haftadadır"
+     },
+     "dogru": "A",
+     "aciklama": "SB en az 4, WHO en az 8, NICE nullipar 10-multipar 7, ACOG 12-14 izlem önerir. Destekte anemide demir 100-120 mg, yoksa 16. haftadan 40-60 mg; folat 400-800 mcg (yüksek risk 4 mg), D vitamini 12. haftadan 1200 IU verilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: izlem sayıları ve destek dozları birlikte doğru verilmiştir.",
+      "B": "SB en az 4 önerir.",
+      "C": "Demir, folat ve D vitamini protokollüdür.",
+      "D": "400-800 mcg, yüksek riskte 4 mg'dır.",
+      "E": "Yoksa 16. haftadan başlanır."
+     },
+     "bilgi": [
+      28,
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k11-q07",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Gebelikte bağışıklama ve danışmanlık nedir?",
+     "secenekler": {
+      "A": "Aşı kontrendikedir",
+      "B": "Tetanoz tek dozdur",
+      "C": "Td-HBV-grip aşılanır; fizyolojik yakınmalar anlatılır",
+      "D": "Grip aşısı yapılmaz",
+      "E": "Danışmanlık gerekmez"
+     },
+     "dogru": "C",
+     "aciklama": "Tetanoz en az 2 doz (Td), hepatit B ve grip aşısı yapılır. Danışmanlıkta fizyolojik dispne, bulantı seyri ve cilt değişimleri anlatılarak anksiyete azaltılır.",
+     "sik_aciklamalari": {
+      "A": "Td, HBV ve grip aşısı yapılır.",
+      "B": "En az 2 doz gerekir.",
+      "C": "Doğru: bağışıklama ve danışmanlık birlikte doğru verilmiştir.",
+      "D": "Grip aşısı destek-bağışıklamadadır.",
+      "E": "Danışmanlık izlem basamaklarındandır."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1087,6 +2276,110 @@
       "C": "32. hafta öncesi 10/10 yeterlidir.",
       "D": "Normal variyabilite reaktiviteye eşlik eder.",
       "E": "170 atım/dk taşikardidir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k12-q04",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "34 haftalık fetüsün NST trasesi yorumlanıyor. Hangi yorum doğrudur?",
+     "secenekler": {
+      "A": "Reaktif NST tek akselerasyondur",
+      "B": "Non-reaktif 20 dkdadır",
+      "C": "34 haftalık fetüste 20 dakikada 15 sn-15 atımlık iki akselerasyon reaktif NST'dir; 40 dakikada yeterli akselerasyon yokluğu non-reaktiftir; başlangıç-pik değişimi 30 sn'den fazla olan yavaşlama deselerasyondur",
+      "D": "Deselerasyon 10 sn'dir",
+      "E": "Variyabilite aranmaz"
+     },
+     "dogru": "C",
+     "aciklama": "Reaktif: 120-160 atım, normal variyabilite, 20 dk'da ≥2 akselerasyon (≥15 sn/15 atım; <32 hafta 10/10); non-reaktif 40 dk'da yetersiz; deselerasyon başlangıç-pik >30 sn.",
+     "sik_aciklamalari": {
+      "A": "En az 2 gerekir.",
+      "B": "40 dakikadadır.",
+      "C": "Doğru: reaktif-nonreaktif-deselerasyon üçlüsü tamdır.",
+      "D": ">30 sn'dir.",
+      "E": "Normal variyabilite şarttır."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k12-q05",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "30 haftalık fetüste reaktivite kriteri ve BPP eşiği soruluyor. Hangi bilgi doğrudur?",
+     "secenekler": {
+      "A": "Pretermde kriter aynıdır",
+      "B": "BPP maks 8/10'dur",
+      "C": "4/10 normaldir",
+      "D": "CST NST ile aynıdır",
+      "E": "30 haftalık fetüste 10 sn-10 atımlık akselerasyonlar reaktiflik için yeterlidir; BPP 10 üzerinden değerlendirilir ve <4/10 anormaldir"
+     },
+     "dogru": "E",
+     "aciklama": "<32 haftada 10 sn/10 atım yeterlidir; BPP maks 10/10 (NST hariç 8/10), <4/10 anormal; modifiye BPP AFİ+NST'dir.",
+     "sik_aciklamalari": {
+      "A": "10 sn/10 atım yeterlidir.",
+      "B": "Maks 10/10'dur.",
+      "C": "Anormaldir.",
+      "D": "Kontraksiyonla yapılır.",
+      "E": "Doğru: preterm kriter-BPP eşiği ikilisi tamdır."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k12-q06",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Reaktif NST ölçütleri ve deselerasyon nedir?",
+     "secenekler": {
+      "A": "Reaktivite tek akselerasyondur",
+      "B": "32. hafta sonrası 15'e 15 iki akselerasyon reaktiftir",
+      "C": "Frekans 100'dür",
+      "D": "Deselerasyon 10 sn'dir",
+      "E": "Erken haftada eşik yüksektir"
+     },
+     "dogru": "B",
+     "aciklama": "Reaktif NST 32. haftadan sonra 120-160 atım, normal variyabilite ve 20 dakikada en az 15 sn-15 atımlık iki akselerasyondur; 32. haftadan önce 10 sn-10 atım yeterlidir. Deselerasyonda başlangıç-pik 30 sn'den fazladır.",
+     "sik_aciklamalari": {
+      "A": "En az iki akselerasyon gerekir.",
+      "B": "Doğru: reaktivite ölçütleri birlikte doğru verilmiştir.",
+      "C": "120-160 atım/dk normaldir.",
+      "D": "Başlangıç-pik 30 sn'den fazladır.",
+      "E": "Erken haftada 10'a 10 yeterlidir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k12-q07",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "NST amacı ve deselerasyon eşiği nedir?",
+     "secenekler": {
+      "A": "NST maternaldir",
+      "B": "Nonreaktif normaldir",
+      "C": "Akselerasyon patolojiktir",
+      "D": "NST fetal iyiliği gösterir; deselerasyon 30 sn üzeridir",
+      "E": "Variyabilite önemsizdir"
+     },
+     "dogru": "D",
+     "aciklama": "NST fetal iyilik halini değerlendirir; nonreaktif sonuçta ileri değerlendirme gerekir. Akselerasyon sempatik yanıtı, deselerasyon uteroplasental-parasempatik mekanizmaları yansıtır; 30 sn üzeri başlangıç-pik değişimi anlamlıdır.",
+     "sik_aciklamalari": {
+      "A": "Fetal kalp atımı değerlendirilir.",
+      "B": "Nonreaktifte ileri değerlendirme gerekir.",
+      "C": "Akselerasyon reaktivite ölçütüdür.",
+      "D": "Doğru: NST amacı ve deselerasyon eşiği birlikte doğru verilmiştir.",
+      "E": "Normal variyabilite reaktivite koşuludur."
      },
      "bilgi": [
       37
@@ -1178,12 +2471,115 @@
       33
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k13-q04",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "12 haftalık gebenin tarama takvimi planlanıyor. Hangi sıra doğrudur?",
+     "secenekler": {
+      "A": "NIPT tanı testidir",
+      "B": "11-14. haftada NT-ikili test, 15-18. haftada üçlü-dörtlü, 18-22. haftada USG anomali taraması yapılır; NIPT taramadır, tanı koydurmaz",
+      "C": "İkili test 20. haftadadır",
+      "D": "USG taraması 10. haftadadır",
+      "E": "AFP 30. haftadadır"
+     },
+     "dogru": "B",
+     "aciklama": "NIPT, 11-14 NT-ikili, 15-18 üçlü-dörtlü, 16-20 AFP, 18-22 USG anomali taraması; NIPT tarama, tanı değil.",
+     "sik_aciklamalari": {
+      "A": "Taramadır.",
+      "B": "Doğru: zaman-test dizisi tamdır.",
+      "C": "11-14. haftadadır.",
+      "D": "18-22. haftadadır.",
+      "E": "16-20. haftadadır."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k13-q05",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Yüksek riskli taramalı gebenin girişimsel tanı danışmanlığı soruluyor. Hangi bilgi doğrudur?",
+     "secenekler": {
+      "A": "CVS 2. trimesterdir",
+      "B": "Amniyosentez 10. haftadadır",
+      "C": "CVS riski amniyosentezden düşüktür",
+      "D": "İlk trimesterde CVS (kayıp 455'te 1), 15. haftadan sonra amniyosentez (kayıp 900'de 1) tek tanı testidir; riskler hastaya anlatılır",
+      "E": "Girişimsel tanı risksizdir"
+     },
+     "dogru": "D",
+     "aciklama": "CVS ilk trimester tek tanı testi (kayıp 455'te 1), amniyosentez 15. haftadan sonra (900'de 1); endikasyon-risk anlatılır.",
+     "sik_aciklamalari": {
+      "A": "İlk trimesterdir.",
+      "B": "15. haftadan sonradır.",
+      "C": "CVS riski daha yüksektir.",
+      "D": "Doğru: zaman-risk ikilisi tamdır.",
+      "E": "Kayıp riski vardır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k13-q06",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Prenatal tarama ve tanı testleri nasıl ayrılır?",
+     "secenekler": {
+      "A": "Tarama NIPT-ikili-üçlü-USG, tanı CVS-amniyosentezdir",
+      "B": "NIPT tanı testidir",
+      "C": "CVS üçüncü trimesterdir",
+      "D": "Amniyosentez 10. haftadadır",
+      "E": "Kayıp riski eşittir"
+     },
+     "dogru": "A",
+     "aciklama": "Tarama NIPT, 11-14 NT-ikili, 15-18 üçlü-dörtlü, 16-20 maternal AFP ve 18-22 USG anomali taramasıdır. Tanı CVS (ilk trimester) ve amniyosentezdir (15. haftadan sonra tek tanı testi); kayıp riski CVS'de 455'te 1, amniyosentezde 900'de 1'dir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tarama-tanı ayrımı ve zamanlamalar doğru verilmiştir.",
+      "B": "NIPT tarama testidir.",
+      "C": "CVS ilk trimesterdedir.",
+      "D": "15. haftadan sonra yapılır.",
+      "E": "CVS 455'te 1, amniyosentez 900'de 1'dir."
+     },
+     "bilgi": [
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-64-gebelik-terminolojisi-ve-kavramlari-k13-q07",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "CVS-amniyosentez riski ve AFP-USG zamanlaması nedir?",
+     "secenekler": {
+      "A": "Amniyosentez riski yüksektir",
+      "B": "AFP ilk trimesterdir",
+      "C": "CVS erken ama riskli; AFP-USG yapısal taramadadır",
+      "D": "USG tanı testidir",
+      "E": "CVS risksizdir"
+     },
+     "dogru": "C",
+     "aciklama": "CVS daha erken sonuç verir ancak kayıp riski amniyosentezden yüksektir (455'te 1'e 900'de 1). Maternal AFP 16-20. haftada nöral tüp defekti taramasında, 18-22 USG yapısal anomali taramasında kullanılır.",
+     "sik_aciklamalari": {
+      "A": "CVS riski daha yüksektir.",
+      "B": "Maternal AFP 16-20. haftadadır.",
+      "C": "Doğru: risk karşılaştırması ve tarama zamanları birlikte doğru verilmiştir.",
+      "D": "USG anomali taramasıdır.",
+      "E": "455'te 1 kayıp riski vardır."
+     },
+     "bilgi": [
+      32,
+      33
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 40,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:56:11"
+ ]
 }

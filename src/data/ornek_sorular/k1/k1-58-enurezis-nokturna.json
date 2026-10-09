@@ -6,6 +6,7 @@
  "konu": "Enürezis Nokturna",
  "ogretim_uyesi": "Dr. Öğr. Üyesi Salih Bürlükkara",
  "tarih": "2026-10-13",
+ "soru_sayisi": 105,
  "kazanimlar": [
   {
    "no": 1,
@@ -89,6 +90,271 @@
       4
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "6 yaşındaki erkek çocuk, doğumundan beri neredeyse her gece yatağını ıslatıyor; son 4 ayda haftada 3-4 kez. Gündüz idrar kaçırma, aciliyet veya işeme güçlüğü yok. Üriner enfeksiyon öyküsü yok. Bu tablonun sınıflaması hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "3 yaşındaki haftada bir ıslatma enürezistir",
+      "B": "Sekonder enüreziste kuru dönem aranmaz",
+      "C": "6 yaşında, 4 aydır haftada 3 gece ıslatan, gündüz semptomu olmayan çocuk primer monosemptomatik enürezistir",
+      "D": "Gündüz inkontinansı olan çocuk monosemptomatiktir",
+      "E": "Tıbbi hastalığa bağlı ıslatma enürezis tanımına girer"
+     },
+     "dogru": "C",
+     "aciklama": "EN ≥5 yaşta, ≥3 ay süreyle haftada ≥2 gece ıslatmadır; primer hiç kuru kalamama, sekonder ≥6 ay kuru dönemdir; MNE yalnız gece, MoNE gece+gündüz semptomlarıdır.",
+     "sik_aciklamalari": {
+      "A": "Tanı ≥5 yaş ve haftada ≥2, ≥3 ay gerektirir.",
+      "B": "Sekonderde ≥6 ay kuru dönem şarttır.",
+      "C": "Doğru: yaş, sıklık, süre ve semptom örüntüsü birlikte PMNE'yi tanımlar.",
+      "D": "Gündüz semptomu MoNE yapar.",
+      "E": "Organik nedene bağlı olmama tanı ölçütüdür."
+     },
+     "bilgi": [
+      1,
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "8 yaşındaki kız, 2 yıl tamamen kuru kaldıktan sonra anne-baba ayrılığı sonrası hem gece hem gündüz kaçırmaya başlıyor; gündüz ani sıkışma ve günde 9 kez işeme tarifleniyor. Bu olgunun sınıflaması ve anlamı hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "2 yıl kuru kaldıktan sonra boşanma sonrası yeniden ıslatmaya başlayan, ayrıca gündüz aciliyet ve günde 9 kez işemesi olan 8 yaşındaki çocuk sekonder monosemptomatik olmayan enürezistir ve prognoz-tedavisi PMNE'den farklıdır",
+      "B": "Gündüz semptomlu olgu da PMNE sayılır",
+      "C": "Sekonder enürezis en sık formdur",
+      "D": "Günde 5-6 kez işeme anormaldir",
+      "E": "MoNE ile MNE tedavisi aynıdır"
+     },
+     "dogru": "A",
+     "aciklama": "PMNE en sık formdur; MoNE'de gündüz inkontinansı, aciliyet, işeme güçlüğü ve anormal sıklık (<4 veya >7/gün) vardır; tedavi ve prognoz farklıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kuru dönem, gündüz semptomları ve sıklık eşiği birlikte sekonder MoNE'yi tanımlar.",
+      "B": "Gündüz semptomu MoNE yapar.",
+      "C": "En sık form PMNE'dir.",
+      "D": "Normal gündüz sıklığı 4-7'dir.",
+      "E": "Tedavi ve prognoz farklıdır."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Enürezis nokturna tanımı ve primer-sekonder ayrımı nasıldır?",
+     "secenekler": {
+      "A": "Beş yaş üstü haftada 2 kez 3 ay kaçırma primerdir",
+      "B": "Üç yaş üstü ayda bir kaçırma tanı koydurur",
+      "C": "Primer enüreziste 6 aylık kuru dönem vardır",
+      "D": "Tıbbi hastalığa bağlı kaçırma enürezistir",
+      "E": "Gündüz kaçırma nokturna tanımıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Enürezis nokturna 5 yaş ve üzeri çocukta uykuda tekrarlayıcı istemsiz idrar kaçırmadır; 3 ay süreyle haftada en az 2 kez olmalı, sosyal-okul sıkıntısı yaratmalı ve tıbbi hastalığa bağlı olmamalıdır. Primer formda hiç kuru kalınamamış, sekonder formda en az 6 aylık kuru dönem vardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tanı ölçütleri ve primer tanımı birlikte doğru verilmiştir.",
+      "B": "Sınır 5 yaş ve haftada en az 2 kez, 3 ay süredir.",
+      "C": "En az 6 aylık kuru dönem sekonder enürezisi tanımlar.",
+      "D": "Tıbbi hastalığa bağlı olmama tanı koşuludur.",
+      "E": "Nokturna uykuda kaçırmadır; gündüz semptomlar MoNE ayrımında kullanılır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Monosemptomatik ve monosemptomatik olmayan enürezis nasıl ayrılır?",
+     "secenekler": {
+      "A": "MNE'de gündüz inkontinansı vardır",
+      "B": "MoNE'de gündüz işeme normaldir",
+      "C": "En sık form sekonder MoNE'dir",
+      "D": "MNE yalnızca gece ıslatmadır; MoNE'de gündüz semptomlar vardır",
+      "E": "Günde 5 kez işeme MoNE ölçütüdür"
+     },
+     "dogru": "D",
+     "aciklama": "Monosemptomatik formda yalnızca gece yatağı ıslatma vardır, alt üriner semptom yoktur. Monosemptomatik olmayanda gündüz inkontinansı, aciliyet, işeme güçlüğü ve anormal gündüz sıklığı (günde 4'ten az veya 7'den çok) bulunur; en sık form primer monosemptomatik olandır.",
+     "sik_aciklamalari": {
+      "A": "MNE'de noktüri hariç alt üriner semptom yoktur.",
+      "B": "MoNE'de gündüz inkontinansı, aciliyet ve işeme güçlüğü bulunur.",
+      "C": "En sık form primer monosemptomatik noktürnal enürezistir.",
+      "D": "Doğru: iki formun semptom ayrımı doğru verilmiştir.",
+      "E": "Anormal gündüz sıklığı günde 4'ten az veya 7'den çoktur."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k01-q08",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"Roma IV kabızlık kriterleri\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "A": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "C": "Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "E": "Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "B": "ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+     "sik_aciklamalari": {
+      "D": "Doğru. En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "A": "Yanlış. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "C": "Yanlış. Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "E": "Yanlış. Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "B": "Yanlış. ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k01-q09",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"Diyet ve uyku apnesi\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "C": "Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "A": "Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir.",
+      "D": "Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "B": "Strateji A: noktürnal poliüri + normal gündüz hacimleri → desmopressin; normal gece hacmi + düşük maksimum işeme hacmi → alarm; her ikisi de varsa kombinasyon. Strateji B: bilgilendirilen ailenin seçimi."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "C": "Yanlış. Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "A": "Yanlış. Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir.",
+      "D": "Yanlış. Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "B": "Yanlış. Strateji A: noktürnal poliüri + normal gündüz hacimleri → desmopressin; normal gece hacmi + düşük maksimum işeme hacmi → alarm; her ikisi de varsa kombinasyon. Strateji B: bilgilendirilen ailenin seçimi."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k01-q10",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Noktürnal poliürinin mekanizması\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "D": "Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "A": "Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "E": "MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "C": "Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "D": "Yanlış. Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "A": "Yanlış. Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "E": "Yanlış. MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "C": "Yanlış. Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k01-q11",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Roma IV kabızlık kriterleri\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "E": "Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "C": "(Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "D": "Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir.",
+      "B": "ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+     "sik_aciklamalari": {
+      "A": "Doğru. En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "E": "Yanlış. Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "C": "Yanlış. (Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "D": "Yanlış. Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir.",
+      "B": "Yanlış. ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k01-q12",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Görüntüleme endikasyonları\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "C": "MNE'li çocukların fizik bakısı normaldir; büyüme-gelişme, ürogenital bölge (vulvit, labial yapışıklık, ektopik üreter, meatal stenoz, hipospadias), sırt (spinal disrafizm bulguları) ve nörolojik muayene (sakral refleks arkı, yürüyüş) değerlendirilir.",
+      "A": "(Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "B": "Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "E": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "C": "Yanlış. MNE'li çocukların fizik bakısı normaldir; büyüme-gelişme, ürogenital bölge (vulvit, labial yapışıklık, ektopik üreter, meatal stenoz, hipospadias), sırt (spinal disrafizm bulguları) ve nörolojik muayene (sakral refleks arkı, yürüyüş) değerlendirilir.",
+      "A": "Yanlış. (Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "B": "Yanlış. Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "E": "Yanlış. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k01-q13",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Enürezis nokturna tanımı\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "A": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "C": "Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "E": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "D": "Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "B": "Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "C": "Yanlış. Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "E": "Yanlış. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "D": "Yanlış. Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "B": "Yanlış. Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -169,6 +435,268 @@
       "C": "Ergenlerde ~%3 görülür.",
       "D": "Doğru: sıklık prognozu belirler.",
       "E": "Ters ilişki vardır; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aile, 14 yaşındaki çocuklarının ıslatmasının kendiliğinden geçip geçmeyeceğini soruyor. Çocuk haftada 5 gece ıslatıyor. Epidemiyolojik verilere dayanan doğru danışmanlık hangisidir?",
+     "secenekler": {
+      "A": "Ergen prevalansı %30'dur",
+      "B": "Yıllık spontan remisyon %90'dır",
+      "C": "Sıklık prognozu etkilemez",
+      "D": "Enürezis erişkinde çocukluktan sıktır",
+      "E": "14 yaşındaki adolesanda devam eden ıslatma %3'lük ergen prevalansına uyar; yıllık %15 spontan remisyon nedeniyle sık ıslatan çocukta bekle-gör ile düzelme şansı düşüktür"
+     },
+     "dogru": "E",
+     "aciklama": "Ergen prevalansı ~%3, yıllık spontan remisyon ~%15'tir; sık ıslatan çocukta kendiliğinden düzelme şansı belirgin düşer.",
+     "sik_aciklamalari": {
+      "A": "Ergen prevalansı ~%3'tür.",
+      "B": "Remisyon ~%15'tir.",
+      "C": "Sıklık arttıkça kuru kalma şansı azalır.",
+      "D": "Yaşla sıklık azalır.",
+      "E": "Doğru: prevalans ve remisyon birlikte yorumlanmıştır."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "7 yaşındaki çocuk haftada 6 gece ıslatıyor ve okulda alay konusu oluyor. Aile 'nasıl olsa geçer' diyerek beklemek istiyor. Epidemiyoloji ve tedavi zamanlamasına göre doğru yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Her çocukta ergenliğe kadar beklenmelidir",
+      "B": "Haftada 6 kez ıslatan 7 yaşındaki çocukta %15'lik yıllık remisyon düşük kaldığından 6 yaş civarında aktif tedavi endikedir; tedavinin ana gerekçesi psikolojik-sosyal etkilerdir",
+      "C": "Sık ıslatma spontan remisyonu artırır",
+      "D": "Tedavi yalnızca erişkin yaşta başlar",
+      "E": "Psikososyal etkiler tedavi endikasyonu değildir"
+     },
+     "dogru": "B",
+     "aciklama": "Aktif tedavi genellikle 6 yaş civarında başlar çünkü bekle-gör yetersizdir; tedavi nedenleri psikolojik-sosyaldir; gündüz inkontinansı daha erken tedavi edilir.",
+     "sik_aciklamalari": {
+      "A": "Bekle-gör yeterli değildir.",
+      "B": "Doğru: remisyon-sıklık ilişkisi ve tedavi zamanlaması birlikte doğru.",
+      "C": "Sıklık remisyon şansını azaltır.",
+      "D": "Aktif tedavi ~6 yaşta başlar.",
+      "E": "Ana nedenler psikolojik-sosyaldir."
+     },
+     "bilgi": [
+      7,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Enürezis nokturnanın ergen prevalansı ve spontan remisyonu nedir?",
+     "secenekler": {
+      "A": "Ergen prevalansı %30, remisyon %50'dir",
+      "B": "Ergen prevalansı %3, yıllık spontan remisyon %15'tir",
+      "C": "Ergenlikte enürezis kalmaz",
+      "D": "Spontan remisyon %80'dir",
+      "E": "Prevalans yaşla artar"
+     },
+     "dogru": "B",
+     "aciklama": "Enürezis yaygındır; ergen prevalansı yaklaşık %3, yıllık spontan remisyon %15'tir. Bu oranlar 'bekle gör' tutumunun yetersizliğini ve genellikle 6 yaş civarında aktif tedavi gerekliliğini destekler.",
+     "sik_aciklamalari": {
+      "A": "Ergen prevalansı yaklaşık %3'tür.",
+      "B": "Doğru: prevalans ve remisyon oranları ders notuyla uyumludur.",
+      "C": "Ergenlerde %3 prevalans sürmektedir.",
+      "D": "Yıllık spontan remisyon yalnızca %15'tir.",
+      "E": "Prevalans yaşla azalır ancak ergenlikte sürer."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Spontan remisyon tedavi kararını nasıl etkiler?",
+     "secenekler": {
+      "A": "Bekle gör tutumu yeterlidir",
+      "B": "Tedavinin ana nedeni böbrek korumadır",
+      "C": "Tedavi ergenliğe ertelenir",
+      "D": "Gündüz inkontinansı geç tedavi edilir",
+      "E": "Remisyona rağmen 6 yaş civarında aktif tedavi gerekir"
+     },
+     "dogru": "E",
+     "aciklama": "Yıllık %15 spontan remisyon tedavinin ana gerekçelerinin psikolojik ve sosyal olduğunu değiştirmez; 'bekle gör' yeterli değildir. Gündüz inkontinansı daha erken, gece ıslatma genellikle 6 yaş civarında aktif tedavi edilir.",
+     "sik_aciklamalari": {
+      "A": "Bekle gör tutumu yeterli değildir.",
+      "B": "Tedavinin ana nedenleri psikolojik ve sosyaldir.",
+      "C": "Genellikle 6 yaş civarında aktif tedavi gerekir.",
+      "D": "Gündüz inkontinansı daha erken tedavi edilir.",
+      "E": "Doğru: remisyon oranı ve tedavi zamanlaması birlikte doğru verilmiştir."
+     },
+     "bilgi": [
+      7,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k02-q08",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "\"Enürezis nokturna tanımı\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "B": "Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "D": "İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "C": "Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "E": "MNE: sadece gece yatağı ıslatma (noktüri hariç alt üriner semptom yok); MoNE: gündüz inkontinansı, aciliyet, işeme güçlükleri ve anormal gündüz işeme sıklığı (günde <4 veya >7)."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "B": "Yanlış. Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "D": "Yanlış. İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "C": "Yanlış. Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "E": "Yanlış. MNE: sadece gece yatağı ıslatma (noktüri hariç alt üriner semptom yok); MoNE: gündüz inkontinansı, aciliyet, işeme güçlükleri ve anormal gündüz işeme sıklığı (günde <4 veya >7)."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k02-q09",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "\"Tedavinin amacı ve zamanlaması\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+      "D": "MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "B": "Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "C": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "E": "(Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+      "D": "Yanlış. MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "B": "Yanlış. Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "C": "Yanlış. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "E": "Yanlış. (Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k02-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Uyarı işaretleri ve eylemleri\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "C": "ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "B": "Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+      "D": "(Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "E": "En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "C": "Yanlış. ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "B": "Yanlış. Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+      "D": "Yanlış. (Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "E": "Yanlış. En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k02-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"İlk tedavi (MoNE)\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Kabızlık tedavi edilir, davranış sorunları için gerektiğinde psikolog/psikiyatrist desteği alınır, gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir; günde ~6 kez işeme, yeterli sıvı alımı ve iyi işeme postürü önerilir.",
+      "A": "ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "E": "İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "B": "Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür.",
+      "D": "Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Kabızlık tedavi edilir, davranış sorunları için gerektiğinde psikolog/psikiyatrist desteği alınır, gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir; günde ~6 kez işeme, yeterli sıvı alımı ve iyi işeme postürü önerilir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Kabızlık tedavi edilir, davranış sorunları için gerektiğinde psikolog/psikiyatrist desteği alınır, gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir; günde ~6 kez işeme, yeterli sıvı alımı ve iyi işeme postürü önerilir.",
+      "A": "Yanlış. ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "E": "Yanlış. İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "B": "Yanlış. Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür.",
+      "D": "Yanlış. Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k02-q12",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Noktürnal poliüri\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+      "E": "En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "C": "Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "B": "Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir.",
+      "A": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+     "sik_aciklamalari": {
+      "D": "Doğru. Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+      "E": "Yanlış. En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "C": "Yanlış. Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "B": "Yanlış. Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir.",
+      "A": "Yanlış. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k02-q13",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Epidemiyoloji\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "C": "Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "D": "MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "E": "Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "B": "Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+      "A": "Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "D": "Yanlış. MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "E": "Yanlış. Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "B": "Yanlış. Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+      "A": "Yanlış. Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir."
      },
      "bilgi": [
       7
@@ -260,6 +788,218 @@
       6
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "8 yaşındaki çocuğun işeme çizelgesinde gündüz maksimum hacim 250 mL, gece toplam 360 mL ölçülüyor. Klinisyen noktürnal poliüriyi değerlendiriyor. Hangi hesaplama ve yorum doğrudur?",
+     "secenekler": {
+      "A": "EBC yaşla değişmez, herkeste 400 mL'dir",
+      "B": "Noktürnal poliüri gece hacminin EBC'nin %50'sidir",
+      "C": "8 yaşındaki EBC 400 mL'dir",
+      "D": "8 yaşındaki çocukta EBC (8×30)+30=270 mL'dir; gece 360 mL idrar noktürnal poliüridir (≥%130); ölçüm bez ağırlığı+sabah ilk idrarla yapılır",
+      "E": "Noktürnal poliüri gündüz hacmiyle tanımlanır"
+     },
+     "dogru": "D",
+     "aciklama": "EBC=(yaş×30)+30 mL, 400 mL'ye kadar geçerlidir; noktürnal poliüri gece hacminin EBC'nin ≥%130'u olmasıdır.",
+     "sik_aciklamalari": {
+      "A": "EBC yaş formülüyle hesaplanır.",
+      "B": "Eşik ≥%130'dur.",
+      "C": "8 yaşta 270 mL'dir.",
+      "D": "Doğru: hesap, eşik ve ölçüm yöntemi birlikte doğru.",
+      "E": "Gece hacmi esas alınır."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "7 yaşındaki çocuğun 2 günlük çizelgesinde gece hacmi 350 mL, maksimum gündüz hacmi 150 mL bulunuyor (EBC 240 mL). Birinci basamak seçimi tartışılıyor. Hangi yorum doğrudur?",
+     "secenekler": {
+      "A": "Gece 350 mL, gündüz maksimum 240 mL olan 7 yaşındaki çocukta (EBC 240 mL) hem noktürnal poliüri hem düşük MVV eşiği tartışılır ve kombinasyon gündeme gelir; hesaplama çizelgeye dayanır",
+      "B": "Gece hacmi gündüz hacminden her zaman düşüktür",
+      "C": "MVV düşüklüğü desmopressin endikasyonudur",
+      "D": "Poliüri alarm endikasyonudur",
+      "E": "Çizelge tedavi seçiminde kullanılmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Strateji A: poliüri+normal gündüz hacmi→desmopressin; normal gece+düşük MVV→alarm; ikisi birlikte→kombinasyon; eşik MVV<EBC'nin %65-70'idir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: EBC hesabı, iki eşik ve kombinasyon mantığı birlikte doğru.",
+      "B": "Poliüride gece hacmi kapasiteyi aşar.",
+      "C": "Poliüri desmopressine, düşük MVV alarma yönlendirir.",
+      "D": "Poliüri desmopressin endikasyonudur.",
+      "E": "Strateji A çizelgeye dayanır."
+     },
+     "bilgi": [
+      6,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Beklenen mesane kapasitesi ve noktürnal poliüri nasıl hesaplanır?",
+     "secenekler": {
+      "A": "Beklenen kapasite yaş × 50 mL'dir",
+      "B": "Noktürnal poliüri beklenenin %50'sidir",
+      "C": "Beklenen kapasite (yaş×30)+30 mL; poliüri beklenenin %130'udur",
+      "D": "Formül erişkinde de kullanılır",
+      "E": "Bez ağırlığı hesaplamaya katılmaz"
+     },
+     "dogru": "C",
+     "aciklama": "Beklenen mesane kapasitesi (yaş × 30) + 30 mL formülüyle hesaplanır ve 400 mL yetişkin kapasitesine ulaşılana kadar geçerlidir. Noktürnal poliüri, enüretik gecede beklenen kapasitenin en az %130'u idrar hacmidir (bez ağırlığı + sabah ilk idrar).",
+     "sik_aciklamalari": {
+      "A": "Formül (yaş × 30) + 30 mL'dir.",
+      "B": "Eşik beklenen kapasitenin en az %130'udur.",
+      "C": "Doğru: formül ve poliüri eşiği birlikte doğru verilmiştir.",
+      "D": "Formül 400 mL yetişkin kapasitesine kadar geçerlidir.",
+      "E": "Islanan bez ağırlığı ile sabah ilk idrar toplanır."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Yedi yaşındaki çocukta beklenen kapasite ve poliüri mekanizması nedir?",
+     "secenekler": {
+      "A": "Yedi yaşta 240 mL beklenir; fazlası ADH bozukluğundandır",
+      "B": "Yedi yaşta 400 mL beklenir",
+      "C": "Gece ADH gündüzden düşüktür",
+      "D": "Poliüri eşiği %100'dür",
+      "E": "ADH ritmi enüreziste artmıştır"
+     },
+     "dogru": "A",
+     "aciklama": "Yedi yaşındaki çocukta beklenen kapasite (7×30)+30=240 mL'dir; 312 mL ve üzeri gece idrarı noktürnal poliüridir. Normalde gece ADH gündüze göre yüksektir ve %50 daha az idrar çıkar; bu ritmin bozulması kapasitenin aşılmasına yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: hesaplama ve ADH mekanizması birlikte doğru verilmiştir.",
+      "B": "400 mL yetişkin üst sınırıdır.",
+      "C": "Normalde gece ADH yüksektir ve idrar %50 azalır.",
+      "D": "Eşik %130'dur.",
+      "E": "Döngüsel ADH ritminin bozulması poliüriye yol açar."
+     },
+     "bilgi": [
+      5,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k03-q08",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Oluş zamanına göre sınıflama\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "E": "Primer NE: yaşamı boyunca hiç kuru kalamamış; sekonder NE: en az 6 aylık kuru dönem varlığı.",
+      "A": "Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "D": "Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir.",
+      "B": "İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "C": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Primer NE: yaşamı boyunca hiç kuru kalamamış; sekonder NE: en az 6 aylık kuru dönem varlığı.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Primer NE: yaşamı boyunca hiç kuru kalamamış; sekonder NE: en az 6 aylık kuru dönem varlığı.",
+      "A": "Yanlış. Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "D": "Yanlış. Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir.",
+      "B": "Yanlış. İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "C": "Yanlış. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k03-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Desmopressin dozu ve süresi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir.",
+      "C": "Strateji A: noktürnal poliüri + normal gündüz hacimleri → desmopressin; normal gece hacmi + düşük maksimum işeme hacmi → alarm; her ikisi de varsa kombinasyon. Strateji B: bilgilendirilen ailenin seçimi.",
+      "E": "En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "A": "İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "D": "Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi)."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir.",
+      "C": "Yanlış. Strateji A: noktürnal poliüri + normal gündüz hacimleri → desmopressin; normal gece hacmi + düşük maksimum işeme hacmi → alarm; her ikisi de varsa kombinasyon. Strateji B: bilgilendirilen ailenin seçimi.",
+      "E": "Yanlış. En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "A": "Yanlış. İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "D": "Yanlış. Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi)."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k03-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"İşeme çizelgesi\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "D": "Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "B": "Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "A": "Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "C": "Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "D": "Yanlış. Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "B": "Yanlış. Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "A": "Yanlış. Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "C": "Yanlış. Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k03-q11",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"Beklenen mesane kapasitesi\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "(Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "E": "Strateji A: noktürnal poliüri + normal gündüz hacimleri → desmopressin; normal gece hacmi + düşük maksimum işeme hacmi → alarm; her ikisi de varsa kombinasyon. Strateji B: bilgilendirilen ailenin seçimi.",
+      "D": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "A": "ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "B": "Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: (Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. (Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "E": "Yanlış. Strateji A: noktürnal poliüri + normal gündüz hacimleri → desmopressin; normal gece hacmi + düşük maksimum işeme hacmi → alarm; her ikisi de varsa kombinasyon. Strateji B: bilgilendirilen ailenin seçimi.",
+      "D": "Yanlış. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "A": "Yanlış. ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "B": "Yanlış. Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -346,6 +1086,272 @@
       11,
       12,
       13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Her iki ebeveyni de çocukluğunda enürezisli olan 7 yaşındaki çocuk derin uyuyor ve uyandırılamıyor. Aile 'çok iyi uyuyor' diye seviniyor. Genetik ve uyku patogenezine göre doğru açıklama hangisidir?",
+     "secenekler": {
+      "A": "Genetik rol oynamaz",
+      "B": "Uyanma eşiği artışı iyi uyku göstergesidir",
+      "C": "Anne ve babası da çocukken ıslatan çocukta risk %77'dir; monozigotik ikiz uyumu %65-70'tir; derin uyuyup uyandırılamama iyi uyku değil artmış uyarılma eşiğidir",
+      "D": "Tek ebeveyn öyküsünde risk %77'dir",
+      "E": "İkiz uyumu monozigotikte dizigotikten düşüktür"
+     },
+     "dogru": "C",
+     "aciklama": "İki ebeveynde öykü %77, birinde %44; monozigotik %65-70; kromozom 5,11,12,13,22; uyanma eşiği artmıştır ama bu iyi uyku değildir.",
+     "sik_aciklamalari": {
+      "A": "Aile öyküsü güçlü risk faktörüdür.",
+      "B": "Artmış eşik kötü uyku ve algı gecikmesidir.",
+      "C": "Doğru: risk oranları ve uyanma yorumu birlikte doğru.",
+      "D": "Tek ebeveynde %44'tür.",
+      "E": "Monozigotik uyum daha yüksektir."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Ürodinamide total kapasitesi normal, fonksiyonel kapasitesi düşük bulunan; gece idrarı fazla olan ve kabızlığı bulunan çocukta tedavi mantığı tartışılıyor. Hangi bütüncül açıklama doğrudur?",
+     "secenekler": {
+      "A": "Noktürnal poliüri gündüz ADH fazlalığındandır",
+      "B": "Detrusor aktivitesinde total kapasite düşer",
+      "C": "Kabızlık enürezisle ilişkisizdir",
+      "D": "DEHB alarm başarısını artırır",
+      "E": "Gece ADH ritmi bozulup idrar kapasiteyi aşınca desmopressin mantıklı olur; ürodinamide total kapasite normalken fonksiyonel kapasite düşükse antikolinerjik gündeme gelir; eşlik eden kabızlık önce tedavi edilmelidir"
+     },
+     "dogru": "E",
+     "aciklama": "Gece ADH yüksekliği %50 daha az idrar sağlar; ritim bozulunca kapasite aşılır (desmopressin rasyoneli); total kapasite normalken FMK düşüktür (antikolinerjik rasyoneli); kabızlık detrusor aşırı aktivitesiyle ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Gece ADH ritminin bozulmasıdır.",
+      "B": "Total normal, fonksiyonel kapasite düşüktür.",
+      "C": "Kabızlık detrusor aşırı aktivitesiyle güçlü ilişkilidir.",
+      "D": "DEHB alarm başarısını azaltır.",
+      "E": "Doğru: üç mekanizma-tedavi bağı birlikte doğru."
+     },
+     "bilgi": [
+      10,
+      11,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Enüreziste genetik ve uyanma bozukluğunun rolü nedir?",
+     "secenekler": {
+      "A": "Genetik rol oynamaz",
+      "B": "İki ebeveynde öykü riski azaltır",
+      "C": "Uyanma eşiği düşüklüğü iyi uykudur",
+      "D": "Aile öyküsü riski katlar; uyanma bozukluğu algılama gecikmesidir",
+      "E": "Tek yumurta ikiz uyumu %30'dur"
+     },
+     "dogru": "D",
+     "aciklama": "Genetik güçlüdür: anne-babada öykü varsa %77, birinde varsa %44; monozigot ikizde %65-70, dizigotta %31-44; özellikle 5, 11, 12, 13 ve 22. kromozomlar ilişkilidir. Enüretik çocuklar uyarılara az yanıt verir; artmış uyarılma eşiği iyi uyku değil, mesane doluluğunu algılamada gecikmedir.",
+     "sik_aciklamalari": {
+      "A": "Aile ve ikiz verileri güçlü genetik geçişi gösterir.",
+      "B": "İki ebeveynde öykü riski %77'ye çıkarır.",
+      "C": "Artmış uyarılma eşiği iyi uyku anlamına gelmez.",
+      "D": "Doğru: genetik oranlar ve uyanma bozukluğu tanımı birlikte doğrudur.",
+      "E": "Monozigot uyum %65-70'tir."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Detrusor aktivitesi ve çevresel faktörler enürezisi nasıl etkiler?",
+     "secenekler": {
+      "A": "Total kapasite azalmıştır",
+      "B": "Detrusor instabilitesi fonksiyonel kapasiteyi düşürür; kabızlık ve apne poliüriyi artırır",
+      "C": "Kafein enürezisi azaltır",
+      "D": "Kabızlık enürezisten bağımsızdır",
+      "E": "Apne idrar çıkışını azaltır"
+     },
+     "dogru": "B",
+     "aciklama": "Ürodinamide total kapasite normalken fonksiyonel kapasite düşüktür; detrusor instabilitesi ve uzun süreli yüksek basınçlı kontraksiyonlar buna yol açar. Kafein, kakao, turunçgiller ve uyku apnesinde artan ANP sodyum-su atılımını artırır; kabızlık detrusor aşırı aktivitesiyle güçlü ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Total kapasite normal, fonksiyonel kapasite düşüktür.",
+      "B": "Doğru: detrusor mekanizması ve artırıcı faktörler birlikte doğru verilmiştir.",
+      "C": "Kafeinli içecekler noktürnal poliüriye neden olabilir.",
+      "D": "Kabızlık-detrusor aşırı aktivitesi güçlü ilişkilidir.",
+      "E": "Apnede artan ANP sodyum ve su atılımını artırır."
+     },
+     "bilgi": [
+      11,
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k04-q08",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "\"Uyarı işaretleri ve eylemleri\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "B": "Anne ve babada NE öyküsü varsa %77, birinde varsa %44; monozigotik ikizde %65-70, dizigotik ikizde %31-44. 10'dan fazla kromozom ilişkilidir (özellikle 5, 11, 12, 13 ve 22).",
+      "D": "MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "C": "Ürodinamik çalışmalarda total mesane kapasitesi normal ancak fonksiyonel mesane kapasitesi (FMK) düşük bulunur; detrusor instabilitesi ve uzun süreli yüksek basınçlı kontraksiyonlar FMK azalmasına neden olur.",
+      "E": "Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "B": "Yanlış. Anne ve babada NE öyküsü varsa %77, birinde varsa %44; monozigotik ikizde %65-70, dizigotik ikizde %31-44. 10'dan fazla kromozom ilişkilidir (özellikle 5, 11, 12, 13 ve 22).",
+      "D": "Yanlış. MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "C": "Yanlış. Ürodinamik çalışmalarda total mesane kapasitesi normal ancak fonksiyonel mesane kapasitesi (FMK) düşük bulunur; detrusor instabilitesi ve uzun süreli yüksek basınçlı kontraksiyonlar FMK azalmasına neden olur.",
+      "E": "Yanlış. Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k04-q09",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Noktürnal poliürinin mekanizması\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "A": "Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "C": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "B": "Primer NE: yaşamı boyunca hiç kuru kalamamış; sekonder NE: en az 6 aylık kuru dönem varlığı.",
+      "E": "Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "D": "Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "C": "Yanlış. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "B": "Yanlış. Primer NE: yaşamı boyunca hiç kuru kalamamış; sekonder NE: en az 6 aylık kuru dönem varlığı.",
+      "E": "Yanlış. Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "D": "Yanlış. Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k04-q10",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Fizik bakı\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "MNE'li çocukların fizik bakısı normaldir; büyüme-gelişme, ürogenital bölge (vulvit, labial yapışıklık, ektopik üreter, meatal stenoz, hipospadias), sırt (spinal disrafizm bulguları) ve nörolojik muayene (sakral refleks arkı, yürüyüş) değerlendirilir.",
+      "C": "Anne ve babada NE öyküsü varsa %77, birinde varsa %44; monozigotik ikizde %65-70, dizigotik ikizde %31-44. 10'dan fazla kromozom ilişkilidir (özellikle 5, 11, 12, 13 ve 22).",
+      "A": "Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "B": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "E": "Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: MNE'li çocukların fizik bakısı normaldir; büyüme-gelişme, ürogenital bölge (vulvit, labial yapışıklık, ektopik üreter, meatal stenoz, hipospadias), sırt (spinal disrafizm bulguları) ve nörolojik muayene (sakral refleks arkı, yürüyüş) değerlendirilir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. MNE'li çocukların fizik bakısı normaldir; büyüme-gelişme, ürogenital bölge (vulvit, labial yapışıklık, ektopik üreter, meatal stenoz, hipospadias), sırt (spinal disrafizm bulguları) ve nörolojik muayene (sakral refleks arkı, yürüyüş) değerlendirilir.",
+      "C": "Yanlış. Anne ve babada NE öyküsü varsa %77, birinde varsa %44; monozigotik ikizde %65-70, dizigotik ikizde %31-44. 10'dan fazla kromozom ilişkilidir (özellikle 5, 11, 12, 13 ve 22).",
+      "A": "Yanlış. Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "B": "Yanlış. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "E": "Yanlış. Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k04-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Uyarı işaretleri ve eylemleri\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "A": "Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "E": "En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "C": "Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "D": "Primer NE: yaşamı boyunca hiç kuru kalamamış; sekonder NE: en az 6 aylık kuru dönem varlığı."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "A": "Yanlış. Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "E": "Yanlış. En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "C": "Yanlış. Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "D": "Yanlış. Primer NE: yaşamı boyunca hiç kuru kalamamış; sekonder NE: en az 6 aylık kuru dönem varlığı."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k04-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Genel tavsiyeler\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "D": "Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "E": "Kabızlık tedavi edilir, davranış sorunları için gerektiğinde psikolog/psikiyatrist desteği alınır, gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir; günde ~6 kez işeme, yeterli sıvı alımı ve iyi işeme postürü önerilir.",
+      "C": "Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "B": "Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "D": "Yanlış. Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "E": "Yanlış. Kabızlık tedavi edilir, davranış sorunları için gerektiğinde psikolog/psikiyatrist desteği alınır, gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir; günde ~6 kez işeme, yeterli sıvı alımı ve iyi işeme postürü önerilir.",
+      "C": "Yanlış. Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "B": "Yanlış. Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k04-q13",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Tedavinin amacı ve zamanlaması\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+      "A": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "C": "En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "B": "MNE'li çocukların fizik bakısı normaldir; büyüme-gelişme, ürogenital bölge (vulvit, labial yapışıklık, ektopik üreter, meatal stenoz, hipospadias), sırt (spinal disrafizm bulguları) ve nörolojik muayene (sakral refleks arkı, yürüyüş) değerlendirilir.",
+      "E": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+      "A": "Yanlış. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "C": "Yanlış. En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "B": "Yanlış. MNE'li çocukların fizik bakısı normaldir; büyüme-gelişme, ürogenital bölge (vulvit, labial yapışıklık, ektopik üreter, meatal stenoz, hipospadias), sırt (spinal disrafizm bulguları) ve nörolojik muayene (sakral refleks arkı, yürüyüş) değerlendirilir.",
+      "E": "Yanlış. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri."
+     },
+     "bilgi": [
+      22
      ],
      "benzer_cikmis": []
     }
@@ -435,6 +1441,220 @@
      "benzer_cikmis": [
       "58323383fc5c"
      ]
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "8 yaşındaki çocukta gece ıslatmayla birlikte şiddetli horlama, ağzı açık uyuma ve gündüz uykululuk var. Başka bir olguda zayıf idrar akımı ve kesik kesik işeme tarifleniyor. Hangi yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "Ağır horlama enürezis değerlendirmesinde önemsizdir",
+      "B": "Şiddetli horlayan ve gündüz uykulu çocukta uyku apnesine bağlı ANP artışı-noktürnal poliüri mekanizması nedeniyle KBB yönlendirmesi gerekir; işeme güçlüğünde üroflow ve rezidü bakılır",
+      "C": "Kilo kaybı enüreziste uyarı işareti değildir",
+      "D": "Yeni sekonder enüreziste ek tetkik gerekmez",
+      "E": "Aşırı susuzlukta sıvı listesi gereksizdir"
+     },
+     "dogru": "B",
+     "aciklama": "Ağır horlama/apne→KBB; işeme güçlüğü→üroflow+rezidü; kilo kaybı→kreatinin+idrar glukozu; yeni sekonder→idrar glukozu; aşırı susuzluk→ozmolalite.",
+     "sik_aciklamalari": {
+      "A": "Horlama/apne KBB endikasyonudur.",
+      "B": "Doğru: iki uyarı-eylem eşleşmesi birlikte doğru.",
+      "C": "Büyüme geriliği kreatinin ve idrar glukozu gerektirir.",
+      "D": "Yeni sekonderde idrar glukozu ve fizik bakı gerekir.",
+      "E": "Ozmolalite ve sıvı listesi gerekir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Gündüz kaçırması da olan çocukta altta yatan neden araştırılıyor. Aile yalnızca gece ıslatmaya odaklanılmasını istiyor. Değerlendirme basamaklarına göre doğru yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Öykü enüreziste gereksizdir",
+      "B": "İşeme çizelgesi hiçbir olguda gerekmez",
+      "C": "Dışkılama kaydı çizelgede yer almaz",
+      "D": "Ayrıntılı öykü değerlendirmenin en önemli kısmıdır; işeme çizelgesi (2 gün idrar, 1 hafta dışkılama) MoNE şüphesinde zorunludur ve kabızlık Roma IV ile (≥2 kriter, ≥4 hafta) değerlendirilir",
+      "E": "Roma kriterleri bir haftalık yakınmayla tanı koydurur"
+     },
+     "dogru": "D",
+     "aciklama": "Öykü en önemli basamaktır; çizelge ilk değerlendirmede önerilir, MoNE'de zorunludur; ardışık 2 gün idrar + 1 hafta dışkılama kaydedilir; Roma IV ≥2 kriter ≥4 hafta kabızlıktır.",
+     "sik_aciklamalari": {
+      "A": "Öykü bazen tek gerekli basamaktır.",
+      "B": "MoNE'de zorunludur.",
+      "C": "Dışkılama en az 1 hafta kaydedilir.",
+      "D": "Doğru: öykü, çizelge ve Roma süresi birlikte doğru.",
+      "E": "En az 4 hafta gerekir."
+     },
+     "bilgi": [
+      16,
+      17,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Enüreziste uyarı işaretleri ve işeme çizelgesi nedir?",
+     "secenekler": {
+      "A": "Kilo kaybı uyarı işareti değildir",
+      "B": "Aşırı susuzluk normaldir",
+      "C": "İşeme çizelgesi gerekmez",
+      "D": "Sekonder enürezis uyarı işareti değildir",
+      "E": "Kilo kaybı, susuzluk ve horlama uyarı işaretidir; çizelge ilk basamaktır"
+     },
+     "dogru": "E",
+     "aciklama": "Uyarı işaretleri kilo kaybı-büyüme geriliği, gece içme ihtiyacıyla aşırı susuzluk, işeme güçlükleri, yakın başlangıçlı sekonder enürezis ile ağır horlama-apnelerdir. ICCS işeme çizelgesi ilk değerlendirmede önerilir, MoNE şüphesinde zorunludur; pratikte 2 gün tutulur.",
+     "sik_aciklamalari": {
+      "A": "Kilo kaybı ve büyüme geriliği uyarı işaretidir.",
+      "B": "Gece içme ihtiyacıyla aşırı susuzluk uyarı işaretidir.",
+      "C": "Çizelge ilk değerlendirmede tavsiye edilir.",
+      "D": "Yakın başlangıçlı sekonder enürezis uyarı işaretidir.",
+      "E": "Doğru: uyarı işaretleri ve çizelgenin rolü birlikte doğru verilmiştir."
+     },
+     "bilgi": [
+      15,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Enüretik çocukta öykünün yeri ve bağırsak değerlendirmesi nasıldır?",
+     "secenekler": {
+      "A": "Öykü en önemli basamaktır; bağırsak alışkanlığı 1 hafta izlenir",
+      "B": "Öykü gereksizdir, doğrudan görüntüleme yapılır",
+      "C": "Dışkılama kaydı gerekmez",
+      "D": "Roma IV tek ölçütle tanı koydurur",
+      "E": "Önceki tedaviler sorgulanmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Tıbbi öykü değerlendirmenin en önemli, bazen tek gerekli kısmıdır; enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır. Dışkılama alışkanlıkları en az 1 hafta kaydedilir; Roma IV'e göre 4 haftada en az 2 ölçüt kabızlığı gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: öykünün önceliği ve bağırsak kaydı süresi doğru verilmiştir.",
+      "B": "Öykü en önemli ve bazen tek gerekli kısımdır.",
+      "C": "Dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "D": "En az 4 haftada en az 2 ölçüt gerekir.",
+      "E": "Önceki tedaviler öyküde sorgulanır."
+     },
+     "bilgi": [
+      16,
+      17
+     ],
+     "benzer_cikmis": [
+      "96a7b76c6e12"
+     ]
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k05-q08",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "\"Roma IV kabızlık kriterleri\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "E": "Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "B": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "A": "Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir.",
+      "C": "Primer monosemptomatik noktürnal enürezis (PMNE) en sık görülen formdur; altta yatan sebepler, tedavi ve prognozu MoNE'den farklıdır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+     "sik_aciklamalari": {
+      "D": "Doğru. En az 4 hafta süreyle şu kriterlerden en az ikisi: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert bağırsak hareketi, tuvaleti tıkayan geniş dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
+      "E": "Yanlış. Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "B": "Yanlış. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "A": "Yanlış. Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir.",
+      "C": "Yanlış. Primer monosemptomatik noktürnal enürezis (PMNE) en sık görülen formdur; altta yatan sebepler, tedavi ve prognozu MoNE'den farklıdır."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k05-q09",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"İmipramin (üçüncü basamak)\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "A": "Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+      "C": "MNE'li çocukların fizik bakısı normaldir; büyüme-gelişme, ürogenital bölge (vulvit, labial yapışıklık, ektopik üreter, meatal stenoz, hipospadias), sırt (spinal disrafizm bulguları) ve nörolojik muayene (sakral refleks arkı, yürüyüş) değerlendirilir.",
+      "B": "Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "D": "MNE: sadece gece yatağı ıslatma (noktüri hariç alt üriner semptom yok); MoNE: gündüz inkontinansı, aciliyet, işeme güçlükleri ve anormal gündüz işeme sıklığı (günde <4 veya >7)."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "A": "Yanlış. Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+      "C": "Yanlış. MNE'li çocukların fizik bakısı normaldir; büyüme-gelişme, ürogenital bölge (vulvit, labial yapışıklık, ektopik üreter, meatal stenoz, hipospadias), sırt (spinal disrafizm bulguları) ve nörolojik muayene (sakral refleks arkı, yürüyüş) değerlendirilir.",
+      "B": "Yanlış. Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "D": "Yanlış. MNE: sadece gece yatağı ıslatma (noktüri hariç alt üriner semptom yok); MoNE: gündüz inkontinansı, aciliyet, işeme güçlükleri ve anormal gündüz işeme sıklığı (günde <4 veya >7)."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k05-q10",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Uyanma bozukluğu\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "D": "Primer monosemptomatik noktürnal enürezis (PMNE) en sık görülen formdur; altta yatan sebepler, tedavi ve prognozu MoNE'den farklıdır.",
+      "B": "MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "C": "(Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "A": "Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "D": "Yanlış. Primer monosemptomatik noktürnal enürezis (PMNE) en sık görülen formdur; altta yatan sebepler, tedavi ve prognozu MoNE'den farklıdır.",
+      "B": "Yanlış. MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "C": "Yanlış. (Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "A": "Yanlış. Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k05-q11",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"Noktürnal poliürinin mekanizması\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "B": "Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "D": "MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "A": "Ürodinamik çalışmalarda total mesane kapasitesi normal ancak fonksiyonel mesane kapasitesi (FMK) düşük bulunur; detrusor instabilitesi ve uzun süreli yüksek basınçlı kontraksiyonlar FMK azalmasına neden olur.",
+      "E": "Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Normalde gece ADH salgısı gündüze göre yüksektir ve %50 daha az idrar çıkışına neden olur; bu döngüsel ritmin bozulması fonksiyonel kapasitenin aşılmasına yol açar; ritim eksikliği gelişimsel gecikmeye bağlanır.",
+      "B": "Yanlış. Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "D": "Yanlış. MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "A": "Yanlış. Ürodinamik çalışmalarda total mesane kapasitesi normal ancak fonksiyonel mesane kapasitesi (FMK) düşük bulunur; detrusor instabilitesi ve uzun süreli yüksek basınçlı kontraksiyonlar FMK azalmasına neden olur.",
+      "E": "Yanlış. Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -535,6 +1755,219 @@
      "bilgi": [
       14,
       17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Tipik primer monosemptomatik tablolu çocukta aile kapsamlı kan tetkikleri ve MRG istiyor. Kanıta dayalı değerlendirmeye göre doğru yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Gündüz semptomu olmayan, fizik bakısı normal 7 yaşındaki çocukta tam idrar tetkiki yeterlidir; ürogenital, sırt ve nörolojik muayene normal olmalıdır",
+      "B": "MNE'de rutin spinal MRG gerekir",
+      "C": "MNE'de ürodinami zorunludur",
+      "D": "Tam idrar tetkiki MNE'de gereksizdir",
+      "E": "Fizik bakı MNE'de daima patolojiktir"
+     },
+     "dogru": "A",
+     "aciklama": "MNE'de fizik bakı normaldir; tek laboratuvar tam idrar tetkikidir; ürogenital, sırt ve nörolojik muayene organik nedeni dışlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: MNE'de normal bakı ve tek laboratuvar birlikte doğru.",
+      "B": "MRG yalnızca nörolojik bulguda gerekir.",
+      "C": "Ürodinami komplike olgulardadır.",
+      "D": "Tam idrar tek önerilen incelemedir.",
+      "E": "MNE'de bakı normaldir."
+     },
+     "bilgi": [
+      18,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Gündüz kaçırması, kabızlık ve sırtında kıllanma artışı olan çocuk değerlendiriliyor. Görüntüleme sırası tartışılıyor. Hangi plan doğrudur?",
+     "secenekler": {
+      "A": "Tüm enüretik çocuklara sistoskopi yapılır",
+      "B": "Rezidü idrar hiçbir olguda bakılmaz",
+      "C": "Gündüz inkontinanslı ve kabız çocukta önce USG ile mesane duvarı ve rezidü değerlendirilir; sakral kıllanma ve yürüyüş bozukluğu varsa spinal MRG gündeme gelir; ürodinami seçilmiş olgulardadır",
+      "D": "Görüntüleme MNE'de ilk basamaktır",
+      "E": "Nörolojik bulgu görüntüleme gerektirmez"
+     },
+     "dogru": "C",
+     "aciklama": "Gündüz semptomunda USG ile duvar kalınlığı ve rezidü; gerektiğinde sistogram, sistoskopi, ürodinami; nörolojik bulguda spinal MRG yapılır.",
+     "sik_aciklamalari": {
+      "A": "İleri tetkik yalnız komplike olgulardadır.",
+      "B": "Rezidü işeme güçlüğünde bakılır.",
+      "C": "Doğru: basamaklı görüntüleme endikasyonları birlikte doğru.",
+      "D": "MNE'de ileri tetkik gerekmez.",
+      "E": "Spinal MRG nörolojik bulguda gerekir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "MNE'de fizik bakı ve laboratuvar yaklaşımı nasıldır?",
+     "secenekler": {
+      "A": "MNE'de bakı daima patolojiktir",
+      "B": "Rutin kan şekeri tüm olgularda şarttır",
+      "C": "MNE'de bakı normaldir; tek önerilen test tam idrar bakısıdır",
+      "D": "İdrar bakısı gereksizdir",
+      "E": "Nörolojik muayene yapılmaz"
+     },
+     "dogru": "C",
+     "aciklama": "MNE'de fizik bakı normaldir; büyüme, ürogenital bölge, sırt ve nörolojik muayene yapılır. Tek önerilen laboratuvar tam idrar bakısıdır; diyabet, diabetes insipidus, idrar yolu enfeksiyonu ve kronik böbrek yetmezliği ayırt edilir.",
+     "sik_aciklamalari": {
+      "A": "MNE'li çocukların fizik bakısı normaldir.",
+      "B": "Tek önerilen laboratuvar tam idrar bakısıdır.",
+      "C": "Doğru: bakı normalliği ve idrar bakısının yeterliliği birlikte doğru verilmiştir.",
+      "D": "İdrar bakısıyla diyabet ve enfeksiyon ayırt edilir.",
+      "E": "Sakral refleks arkı ve yürüyüş değerlendirilir."
+     },
+     "bilgi": [
+      18,
+      20
+     ],
+     "benzer_cikmis": [
+      "0a5e61406257",
+      "5d899b60d372"
+     ]
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Enüreziste görüntüleme endikasyonları nelerdir?",
+     "secenekler": {
+      "A": "Tüm MNE olgularında sistoskopi şarttır",
+      "B": "Gündüz semptomda USG, nörolojik bulguda spinal MRG yapılır",
+      "C": "MNE'de rutin spinal MRG gerekir",
+      "D": "Rezidüel idrar ölçümü gereksizdir",
+      "E": "Ürodinami ilk basamaktır"
+     },
+     "dogru": "B",
+     "aciklama": "Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçülür; gerektiğinde işeme sistogramı, sistoskopi ve ürodinami yapılır. Nörolojik bulguda spinal MRG çekilir; MNE'de rutin görüntüleme gerekmez.",
+     "sik_aciklamalari": {
+      "A": "Görüntüleme endikasyonla yapılır.",
+      "B": "Doğru: endikasyona göre görüntüleme basamakları doğru verilmiştir.",
+      "C": "MNE'de rutin görüntüleme önerilmez.",
+      "D": "USG ile duvar kalınlığı ve rezidü ölçülür.",
+      "E": "Ürodinami gerektiğinde ileri basamaktır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k06-q08",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Epidemiyoloji\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "C": "Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "A": "Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+      "D": "İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "B": "MNE: sadece gece yatağı ıslatma (noktüri hariç alt üriner semptom yok); MoNE: gündüz inkontinansı, aciliyet, işeme güçlükleri ve anormal gündüz işeme sıklığı (günde <4 veya >7).",
+      "E": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "A": "Yanlış. Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+      "D": "Yanlış. İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "B": "Yanlış. MNE: sadece gece yatağı ıslatma (noktüri hariç alt üriner semptom yok); MoNE: gündüz inkontinansı, aciliyet, işeme güçlükleri ve anormal gündüz işeme sıklığı (günde <4 veya >7).",
+      "E": "Yanlış. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k06-q09",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Uyarı işaretleri ve eylemleri\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "C": "Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "D": "Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "E": "Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "B": "Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "C": "Yanlış. Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "D": "Yanlış. Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "E": "Yanlış. Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "B": "Yanlış. Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k06-q10",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Epidemiyoloji\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "A": "Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "C": "Primer NE: yaşamı boyunca hiç kuru kalamamış; sekonder NE: en az 6 aylık kuru dönem varlığı.",
+      "B": "(Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "E": "Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "A": "Yanlış. Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "C": "Yanlış. Primer NE: yaşamı boyunca hiç kuru kalamamış; sekonder NE: en az 6 aylık kuru dönem varlığı.",
+      "B": "Yanlış. (Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "E": "Yanlış. Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k06-q11",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"Görüntüleme endikasyonları\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "E": "(Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "D": "Strateji A: noktürnal poliüri + normal gündüz hacimleri → desmopressin; normal gece hacmi + düşük maksimum işeme hacmi → alarm; her ikisi de varsa kombinasyon. Strateji B: bilgilendirilen ailenin seçimi.",
+      "B": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "C": "Ürodinamik çalışmalarda total mesane kapasitesi normal ancak fonksiyonel mesane kapasitesi (FMK) düşük bulunur; detrusor instabilitesi ve uzun süreli yüksek basınçlı kontraksiyonlar FMK azalmasına neden olur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Gündüz semptomu olanlarda USG ile mesane duvar kalınlığı ve rezidüel idrar ölçümü; gerektiğinde işeme sistogramı, sistoskopi, ürodinami; nörolojik bulgusu olanlarda spinal MRG.",
+      "E": "Yanlış. (Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "D": "Yanlış. Strateji A: noktürnal poliüri + normal gündüz hacimleri → desmopressin; normal gece hacmi + düşük maksimum işeme hacmi → alarm; her ikisi de varsa kombinasyon. Strateji B: bilgilendirilen ailenin seçimi.",
+      "B": "Yanlış. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri.",
+      "C": "Yanlış. Ürodinamik çalışmalarda total mesane kapasitesi normal ancak fonksiyonel mesane kapasitesi (FMK) düşük bulunur; detrusor instabilitesi ve uzun süreli yüksek basınçlı kontraksiyonlar FMK azalmasına neden olur."
+     },
+     "bilgi": [
+      21
      ],
      "benzer_cikmis": []
     }
@@ -655,6 +2088,217 @@
      "benzer_cikmis": [
       "58323383fc5c"
      ]
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Gündüz idrar kaçıran ve haftada bir dışkılayan 8 yaşındaki çocukta aile yalnızca gece ıslatmanın ilaçla kesilmesini istiyor. Doğru tedavi önceliği hangisidir?",
+     "secenekler": {
+      "A": "MoNE'de doğrudan desmopressin başlanır",
+      "B": "Kabızlık varken antienüretik tedavi önceliklidir",
+      "C": "Gündüz semptomlar tedavi edilmeden gece tedavisi tamamlanır",
+      "D": "Sıvı kısıtlaması gündüz önerilir",
+      "E": "Gündüz kaçırmalı ve kabız çocukta önce kabızlık tedavi edilir ve gündüz işeme düzeni (günde ~6 kez, iyi postür) sağlanır; antienüretik tedavi sonraya bırakılır"
+     },
+     "dogru": "E",
+     "aciklama": "MoNE'de önce kabızlık tedavi edilir, gündüz semptomlar geceye yönelmeden önce düzeltilir; günde ~6 kez işeme, yeterli sıvı ve iyi postür önerilir.",
+     "sik_aciklamalari": {
+      "A": "Önce kabızlık ve gündüz semptomlar düzeltilir.",
+      "B": "Kabızlık ekarte-tedavi edilmeden başlanmaz.",
+      "C": "Gündüz semptomlar önce tedavi edilir.",
+      "D": "Gündüz yeterli sıvı önerilir.",
+      "E": "Doğru: öncelik sırası birlikte doğru."
+     },
+     "bilgi": [
+      24,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Aile her gece çocuğu uyandırıyor ve akşam hiç sıvı vermiyor; çocuk suçluluk hissediyor. Genel yaklaşım danışmanlığında hangi ifade doğrudur?",
+     "secenekler": {
+      "A": "Gece uyandırma en etkili tedavidir",
+      "B": "Çocuğa hatanın kendisinde olmadığı anlatılır, gece uyandırmanın iyileştirici olmadığı açıklanır ve akşam sıvı kısıtlaması faydasızsa sürdürülmez; gündüz fazla sıvının kanıtı zayıftır",
+      "C": "Çocuk cezalandırılmalıdır",
+      "D": "Akşam sıvı kısıtlaması her olguda zorunludur",
+      "E": "Tedavi kararı yalnızca hekim tarafından verilir"
+     },
+     "dogru": "B",
+     "aciklama": "Gece uyandırma iyileştirici değildir; akşam sıvı kısıtlamasının net faydası yoksa bırakılır; ana nedenler psikososyaldir; çocuk ürün seçiminde söz sahibidir.",
+     "sik_aciklamalari": {
+      "A": "Uyandırma motive edici/iyileştirici değildir.",
+      "B": "Doğru: bilgilendirme ve genel önlemlerin sınırları birlikte doğru.",
+      "C": "Suçluluk giderilmelidir.",
+      "D": "Net fayda yoksa bırakılır.",
+      "E": "Çocuk ürün seçiminde söz sahibidir."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "MoNE'de tedavi öncelikleri nelerdir?",
+     "secenekler": {
+      "A": "MoNE'de gece kaçırma önce tedavi edilir",
+      "B": "Kabızlık tedavi edilmeden başlanır",
+      "C": "Gece uyandırma iyileştiricidir",
+      "D": "MoNE'de önce kabızlık ve gündüz semptomlar tedavi edilir",
+      "E": "Çocuk suçlanmalıdır"
+     },
+     "dogru": "D",
+     "aciklama": "MoNE'de önce kabızlık tedavi edilir, gündüz semptomlar gece kaçırmadan önce giderilir; günde ~6 kez işeme, yeterli sıvı ve iyi postür önerilir. Genel tavsiyelerde çocuğa hatanın kendisinde olmadığı anlatılır; gece uyandırma iyileştirici değildir.",
+     "sik_aciklamalari": {
+      "A": "Gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir.",
+      "B": "Kabızlık ekarte edilmeden MoNE tedavisi başlatılmaz.",
+      "C": "Gece uyandırma tıbbi olarak iyileştirici değildir.",
+      "D": "Doğru: MoNE tedavi öncelikleri doğru sıralanmıştır.",
+      "E": "Hastalığın çocuğun hatası olmadığı anlatılır."
+     },
+     "bilgi": [
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Enüreziste genel tavsiyelerin ilkeleri nelerdir?",
+     "secenekler": {
+      "A": "Faydasız sıvı kısıtlaması bırakılır; çocuk ürün seçimine katılır",
+      "B": "Sıvı kısıtlaması mutlaka sürdürülür",
+      "C": "Gündüz sıvısı kısıtlanmalıdır",
+      "D": "Çocuğun görüşü alınmaz",
+      "E": "Psikolojik destek kontrendikedir"
+     },
+     "dogru": "A",
+     "aciklama": "Akşam sıvı kısıtlamasının net faydası yoksa bırakılır; gündüz fazla sıvı alımının kanıt düzeyi IV'tür. Çocuk ürün seçiminde söz sahibidir; davranış sorunlarında psikolog-psikiyatrist desteği alınır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: genel tavsiyelerin iki ilkesi birlikte doğru verilmiştir.",
+      "B": "Net fayda yoksa akşam sıvı kısıtlaması bırakılır.",
+      "C": "Günde yeterli sıvı ve ~6 kez işeme önerilir.",
+      "D": "Çocuk ürün seçiminde söz sahibidir.",
+      "E": "Gerektiğinde psikolog-psikiyatrist desteği alınır."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k07-q08",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "\"Desmopressin\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "C": "Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+      "E": "Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "D": "ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "A": "Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "B": "Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+      "E": "Yanlış. Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "D": "Yanlış. ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "A": "Yanlış. Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "B": "Yanlış. Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k07-q09",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Diyet ve uyku apnesi\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "C": "Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "E": "Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+      "D": "Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "B": "Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "A": "İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "E": "Yanlış. Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+      "D": "Yanlış. Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "B": "Yanlış. Enüretik çocukların uyku kalitesi kötüdür ve uyandırma uyarılarına az yanıt verirler; artan uyarılma eşiği iyi uyku anlamına gelmez; mesane doluluk/ kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.",
+      "A": "Yanlış. İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k07-q10",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Enürezis alarmı\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "E": "(Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "B": "Anne ve babada NE öyküsü varsa %77, birinde varsa %44; monozigotik ikizde %65-70, dizigotik ikizde %31-44. 10'dan fazla kromozom ilişkilidir (özellikle 5, 11, 12, 13 ve 22).",
+      "D": "ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "C": "Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. İdrarın detektörü harekete geçirmesiyle akustik uyarı veren cihaz; başarı oranı %50-70; iyi motive aile gerektirir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru geceye kadar sürdürülür.",
+      "E": "Yanlış. (Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "B": "Yanlış. Anne ve babada NE öyküsü varsa %77, birinde varsa %44; monozigotik ikizde %65-70, dizigotik ikizde %31-44. 10'dan fazla kromozom ilişkilidir (özellikle 5, 11, 12, 13 ve 22).",
+      "D": "Yanlış. ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "C": "Yanlış. Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k07-q11",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Genel tavsiyeler\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "C": "Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+      "B": "Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "D": "MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "E": "Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Çocuğa hastalığın kendi hatası olmadığı anlatılır; gece uyandırma tıbbi olarak iyileştirici değildir; akşam sıvı kısıtlaması net fayda yoksa bırakılır; gündüz fazla sıvı alma kanıt düzeyi IV; çocuk ürün seçiminde söz sahibidir.",
+      "C": "Yanlış. Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+      "B": "Yanlış. Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "D": "Yanlış. MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "E": "Yanlış. Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -779,6 +2423,220 @@
       27
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "9 yaşındaki MNE'li çocukta aile ilaçsız ve ilaçlı seçenekleri soruyor. İşeme çizelgesinde noktürnal poliüri yok, maksimum gündüz hacmi düşük. Hangi danışmanlık doğrudur?",
+     "secenekler": {
+      "A": "Alarm ikinci basamaktır",
+      "B": "Desmopressin yalnızca gündüz semptomunda kullanılır",
+      "C": "Alarmda 6 haftada ilerleme olmasa da sürdürülür",
+      "D": "Motive ailede alarm (%50-70 başarı, 6 hafta/14 gece kuralı) veya desmopressin (tablet 0,2-0,4 mg, ~1/3 kuru, 1-2 haftada yanıtsızsa kesilir) birinci basamaktır; seçim poliüri-gündüz hacmine veya aile tercihine göre yapılır",
+      "E": "Desmopressin dozu kiloya göre sınırsız artırılır"
+     },
+     "dogru": "D",
+     "aciklama": "Her ikisi de birinci basamak, kanıt Ia; alarm %50-70 başarılı, 6 haftada ilerleme yoksa durdurulur, hedef 14 kuru gece; desmopressin 1/3 kuru, 1-2 haftada yanıtsızsa kesilir.",
+     "sik_aciklamalari": {
+      "A": "Her ikisi de birinci basamaktır (Ia).",
+      "B": "MNE'de birinci basamak ilaçtır.",
+      "C": "6 haftada ilerleme yoksa durdurulur.",
+      "D": "Doğru: etkinlik, doz, süre ve seçim stratejisi birlikte doğru.",
+      "E": "Doz aralığı tanımlıdır."
+     },
+     "bilgi": [
+      25,
+      26,
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Günde 4 litre su içen, gece de yatmadan önce bol sıvı alan çocukta desmopressin düşünülüyor. Güvenlik açısından doğru yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Aşırı su içen ve gece de çok sıvı alan çocukta desmopressin kontrendikedir ve hiponatremi riski nedeniyle sıvı kısıtlaması gerekir; en iyi yanıt noktürnal poliürili ve gündüz hacimleri normal olgudadır",
+      "B": "Desmopressin polidipside ilk tercihtir",
+      "C": "Hiponatremi desmopressinde görülmez",
+      "D": "Desmopressin yanıtı poliüriden bağımsızdır",
+      "E": "Sıvı kısıtlaması desmopressinde gereksizdir"
+     },
+     "dogru": "A",
+     "aciklama": "Desmopressin ADH analoğudur; habitüel polidipside kontrendike, sıvı kısıtlaması gerekir (dilüsyonel hiponatremi); yanıt poliürili ve gündüz hacmi normal olguda en yüksektir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kontrendikasyon, güvenlik ve yanıt öngörüsü birlikte doğru.",
+      "B": "Habitüel polidipsi kontrendikasyondur.",
+      "C": "Aşırı sıvı dilüsyonel hiponatremi yapar.",
+      "D": "Poliürililerde yanıt şansı en yüksektir.",
+      "E": "Sıvı kısıtlanmalıdır."
+     },
+     "bilgi": [
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Enürezis alarmının etkinliği ve kullanım kuralları nelerdir?",
+     "secenekler": {
+      "A": "Alarm başarısı %10'dur",
+      "B": "Alarm aralıklı kullanılır",
+      "C": "Alarm %50-70 başarılıdır; yanıtsızlıkta 6. haftada kesilir",
+      "D": "Alarm poliüride ilk seçenektir",
+      "E": "Alarm 6 günden sonra kesilir"
+     },
+     "dogru": "C",
+     "aciklama": "Alarm idrarla akustik uyarı verir; başarı %50-70'tir, motive aile gerekir, her gece kesintisiz kullanılır, 6 haftada ilerleme yoksa durdurulur, ilerleme varsa 14 kuru geceye dek sürdürülür. Strateji A'da normal gece hacmi ve düşük gündüz hacminde alarm seçilir.",
+     "sik_aciklamalari": {
+      "A": "Başarı oranı %50-70'tir.",
+      "B": "Her gece kesintisiz kullanım gerekir.",
+      "C": "Doğru: etkinlik ve kesilme kuralı birlikte doğru verilmiştir.",
+      "D": "Poliüri ve normal gündüz hacminde desmopressin seçilir.",
+      "E": "Altı haftada ilerleme yoksa durdurulur."
+     },
+     "bilgi": [
+      25,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Desmopressinin etkisi, dozu ve kesilme kuralı nedir?",
+     "secenekler": {
+      "A": "Desmopressin diürezi artırır",
+      "B": "Desmopressin idrarı konsantre eder; yanıtsızlıkta 1-2 haftada kesilir",
+      "C": "Tüm hastalar tam yanıt verir",
+      "D": "Etkinlik aylarda başlar",
+      "E": "Doz tablet 2 mg'dır"
+     },
+     "dogru": "B",
+     "aciklama": "Desmopressin vazopressin analoğudur; idrar üretimini azaltıp konsantrasyonu artırır; üçte biri kuru kalır, üçte biri yanıtsızdır. Tablet 0,2-0,4 mg, liyofilizat 120-240 µg kullanılır; etkinlik hemen başlar, 1-2 haftada yanıt yoksa kesilir.",
+     "sik_aciklamalari": {
+      "A": "Antidiüretik etkiyle idrar üretimini azaltır.",
+      "B": "Doğru: etki mekanizması ve kesilme kuralı birlikte doğru verilmiştir.",
+      "C": "Üçte biri kuru kalır, üçte biri fayda görmez.",
+      "D": "Etkinlik hemen ortaya çıkar.",
+      "E": "Tablet dozu 0,2-0,4 mg'dır."
+     },
+     "bilgi": [
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k08-q08",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Diyet ve uyku apnesi\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "E": "Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "D": "Anne ve babada NE öyküsü varsa %77, birinde varsa %44; monozigotik ikizde %65-70, dizigotik ikizde %31-44. 10'dan fazla kromozom ilişkilidir (özellikle 5, 11, 12, 13 ve 22).",
+      "C": "Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "B": "Kabızlık tedavi edilir, davranış sorunları için gerektiğinde psikolog/psikiyatrist desteği alınır, gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir; günde ~6 kez işeme, yeterli sıvı alımı ve iyi işeme postürü önerilir.",
+      "A": "Primer NE: yaşamı boyunca hiç kuru kalamamış; sekonder NE: en az 6 aylık kuru dönem varlığı."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "D": "Yanlış. Anne ve babada NE öyküsü varsa %77, birinde varsa %44; monozigotik ikizde %65-70, dizigotik ikizde %31-44. 10'dan fazla kromozom ilişkilidir (özellikle 5, 11, 12, 13 ve 22).",
+      "C": "Yanlış. Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "B": "Yanlış. Kabızlık tedavi edilir, davranış sorunları için gerektiğinde psikolog/psikiyatrist desteği alınır, gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir; günde ~6 kez işeme, yeterli sıvı alımı ve iyi işeme postürü önerilir.",
+      "A": "Yanlış. Primer NE: yaşamı boyunca hiç kuru kalamamış; sekonder NE: en az 6 aylık kuru dönem varlığı."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k08-q09",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Epidemiyoloji\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "A": "Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir.",
+      "B": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "E": "Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "C": "MNE: sadece gece yatağı ıslatma (noktüri hariç alt üriner semptom yok); MoNE: gündüz inkontinansı, aciliyet, işeme güçlükleri ve anormal gündüz işeme sıklığı (günde <4 veya >7)."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "A": "Yanlış. Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir.",
+      "B": "Yanlış. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "E": "Yanlış. Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "C": "Yanlış. MNE: sadece gece yatağı ıslatma (noktüri hariç alt üriner semptom yok); MoNE: gündüz inkontinansı, aciliyet, işeme güçlükleri ve anormal gündüz işeme sıklığı (günde <4 veya >7)."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k08-q10",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Öykünün rolü\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "A": "MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "D": "Ürodinamik çalışmalarda total mesane kapasitesi normal ancak fonksiyonel mesane kapasitesi (FMK) düşük bulunur; detrusor instabilitesi ve uzun süreli yüksek basınçlı kontraksiyonlar FMK azalmasına neden olur.",
+      "B": "Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+      "C": "Kabızlık tedavi edilir, davranış sorunları için gerektiğinde psikolog/psikiyatrist desteği alınır, gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir; günde ~6 kez işeme, yeterli sıvı alımı ve iyi işeme postürü önerilir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "A": "Yanlış. MNE'li çocuklarda tam idrar bakısı tek önerilen laboratuvar incelemesidir; diabetes mellitus, diabetes insipidus, üriner enfeksiyon ve kronik renal yetmezlik ayırt edilir.",
+      "D": "Yanlış. Ürodinamik çalışmalarda total mesane kapasitesi normal ancak fonksiyonel mesane kapasitesi (FMK) düşük bulunur; detrusor instabilitesi ve uzun süreli yüksek basınçlı kontraksiyonlar FMK azalmasına neden olur.",
+      "B": "Yanlış. Tedavinin ana nedenleri psikolojik ve sosyaldir; 'bekle gör' tutumu yeterli değildir ve genellikle altı yaş civarında aktif tedavi gerekir; gündüz inkontinansı daha erken tedavi edilir.",
+      "C": "Yanlış. Kabızlık tedavi edilir, davranış sorunları için gerektiğinde psikolog/psikiyatrist desteği alınır, gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir; günde ~6 kez işeme, yeterli sıvı alımı ve iyi işeme postürü önerilir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k08-q11",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "\"Desmopressin dozu ve süresi\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "E": "Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir.",
+      "C": "Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "A": "ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "D": "Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "B": "Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Tablet 0,2-0,4 mg, liyofilizat 120-240 µg; tedavi tam dozla başlanabilir veya doz titre edilebilir; etkinlik hemen ortaya çıkar; 1-2 hafta içinde yanıt alınmazsa tedavi kesilir.",
+      "C": "Yanlış. Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "A": "Yanlış. ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir.",
+      "D": "Yanlış. Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "B": "Yanlış. Psikopatolojik bozukluklar etyolojik kabul edilmez; 2-4 yaşlar arası anksiyeteye yol açan faktörler sekonder enürezise neden olabilir; on yaş ve üzeri primer NE'li çocukların önemli kısmında DEHB ilişkili semptomlar ve alarm başarısında azalma görülür."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -864,12 +2722,219 @@
       30
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Alarm ve desmopressine yanıt vermeyen, fonksiyonel kapasitesi düşük çocukta ek tedavi tartışılıyor. Kabızlığı tedavi edilmiş, rezidü idrarı yok. Hangi yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "Antikolinerjikler birinci basamak monoterapidir",
+      "B": "Kabızlık varken antikolinerjik başlanır",
+      "C": "Alarm ve desmopressine yanıtsız, kabızlığı tedavi edilmiş ve rezidüsü olmayan çocukta desmopressine antikolinerjik eklenebilir; yan etkiler kabızlık, rezidü artışı ve ağız kuruluğudur",
+      "D": "Rezidü idrarı olan çocukta ilk tercihtir",
+      "E": "Gündüz verilir"
+     },
+     "dogru": "C",
+     "aciklama": "Antikolinerjikler ikinci basamak, desmopressinle kombinasyon; koşul rezidü yokluğu ve kabızlığın dışlanması; yan etkiler kabızlık, rezidü, ağız kuruluğu; yatmadan 1 saat önce verilir.",
+     "sik_aciklamalari": {
+      "A": "İkinci basamak kombinasyon tedavisidir.",
+      "B": "Kabızlık önce dışlanmalı-tedavi edilmelidir.",
+      "C": "Doğru: endikasyon koşulları ve yan etkiler birlikte doğru.",
+      "D": "Rezidü yokluğu şarttır.",
+      "E": "Yatmadan 1 saat önce verilir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Tüm birinci ve ikinci basamaklara yanıtsız 11 yaşındaki çocukta aile trisiklik bir ilacı duyduğunu söylüyor. Kardiyak öykü normal. Hangi bilgi doğrudur?",
+     "secenekler": {
+      "A": "İmipramin birinci basamaktır",
+      "B": "İmipramin kardiyak açıdan risksizdir",
+      "C": "Yanıt ilk gecede değerlendirilir",
+      "D": "Dirençli olguda etkisizdir",
+      "E": "Desmopressin, alarm ve antikolinerjik başarısızlığında imipramin 25-50 mg yatmadan ~1 saat önce başlanabilir; yanıt 1 ay sonra değerlendirilir ve kardiyotoksisite nedeniyle dikkat gerekir; dirençlilerin %30-50'si yararlanır"
+     },
+     "dogru": "E",
+     "aciklama": "İmipramin üçüncü basamak (Ia), 25-50 mg yatmadan ~1 saat önce, yanıt 1 ayda değerlendirilir; dirençlilerin %30-50'si yararlanır; kısıtlayıcı faktör kardiyotoksisitedir.",
+     "sik_aciklamalari": {
+      "A": "Üçüncü basamaktır.",
+      "B": "En önemli kısıt kardiyotoksisitedir.",
+      "C": "Yanıt 1 ay sonra değerlendirilir.",
+      "D": "%30-50 yararlanır, desmopressin eklenirse artar.",
+      "E": "Doğru: basamak, doz, süre ve risk birlikte doğru."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Dirençli enüreziste antikolinerjik ve imipraminin basamakları nelerdir?",
+     "secenekler": {
+      "A": "Antikolinerjik monoterapi birinci basamaktır",
+      "B": "Rezidü idrarda antikolinerjik verilir",
+      "C": "Kabızlık varken antikolinerjik başlanır",
+      "D": "Antikolinerjik ikinci basamak kombinasyondur; imipramin üçüncü basamaktır",
+      "E": "Antikolinerjik sabah verilir"
+     },
+     "dogru": "D",
+     "aciklama": "Antikolinerjikler rezidü idrar yokluğunda ve kabızlık dışlanıp tedavi edildikten sonra desmopressinle kombinasyonda ikinci basamaktır; yatmadan 1 saat önce verilir. İmipramin desmopressin, alarm ve antikolinerjik başarısızlığında üçüncü basamaktır.",
+     "sik_aciklamalari": {
+      "A": "İkinci basamakta desmopressinle kombinasyon halinde kullanılır.",
+      "B": "Rezidü idrar olmaması koşuldur.",
+      "C": "Kabızlığın dışlanması ve tedavisi şarttır.",
+      "D": "Doğru: iki basamağın yeri birlikte doğru verilmiştir.",
+      "E": "Yatmadan 1 saat önce verilir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "İmipramin tedavisinin dozu ve değerlendirme süresi nedir?",
+     "secenekler": {
+      "A": "İmipramin 25-50 mg gece verilir, yanıt 1 ayda değerlendirilir",
+      "B": "İmipramin birinci basamaktır",
+      "C": "İmipramin sabah verilir",
+      "D": "Antikolinerjik imipraminden sonra kullanılır",
+      "E": "İmipramin dozu 200 mg'dır"
+     },
+     "dogru": "A",
+     "aciklama": "İmipramin trisiklik antidepresandır (kanıt Ia); 25-50 mg yatmadan ~1 saat önce verilir, yanıt 1 ay sonra değerlendirilir. Antikolinerjik yatmadan 1 saat önce verilir; her iki basamak da birinci basamak başarısızlığında kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: imipramin dozu, zamanlaması ve değerlendirme süresi doğru verilmiştir.",
+      "B": "Üçüncü basamakta, diğerleri başarısız veya kontrendike olduğunda kullanılır.",
+      "C": "Yatmadan ~1 saat önce verilir.",
+      "D": "Antikolinerjik ikinci, imipramin üçüncü basamaktır.",
+      "E": "Doz 25-50 mg'dır."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k09-q08",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "\"Desmopressin\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+      "A": "Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+      "C": "Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "D": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "E": "Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+      "A": "Yanlış. Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+      "C": "Yanlış. Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "D": "Yanlış. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "E": "Yanlış. Kilo kaybı/büyüme geriliği ve/veya mide bulantısı; gece içme ihtiyacıyla aşırı susuzluk; işeme güçlükleri; yakın başlangıçlı sekonder enürezis; ağır horlama veya uyku apneleri."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k09-q09",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "\"Antikolinerjik tedavi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir.",
+      "A": "Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "E": "Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+      "B": "Kabızlık tedavi edilir, davranış sorunları için gerektiğinde psikolog/psikiyatrist desteği alınır, gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir; günde ~6 kez işeme, yeterli sıvı alımı ve iyi işeme postürü önerilir.",
+      "D": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Rezidü idrar olmaması ve kabızlığın dışlanması/tedavi edilmesi koşuluyla desmopressinle kombinasyon halinde ikinci basamak; yatmadan 1 saat önce verilir.",
+      "A": "Yanlış. Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır.",
+      "E": "Yanlış. Arginin vazopressin analoğu; antidiüretik etkisiyle idrar üretimini azaltır ve konsantrasyonu artırır; ~1/3 kuru kalır, 1/3 fayda görmez, 1/3 orta yanıt verir.",
+      "B": "Yanlış. Kabızlık tedavi edilir, davranış sorunları için gerektiğinde psikolog/psikiyatrist desteği alınır, gündüz semptomlar gece kaçırmaya yönelmeden önce tedavi edilir; günde ~6 kez işeme, yeterli sıvı alımı ve iyi işeme postürü önerilir.",
+      "D": "Yanlış. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k09-q10",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "\"Noktürnal poliüri\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+      "A": "(Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "D": "Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "B": "Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "E": "Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+     "sik_aciklamalari": {
+      "C": "Doğru. Enürezisli bir gecede yaşa göre beklenen mesane kapasitesinin en az %130'u olan idrar hacmi (ıslanan çarşaf/yatak koruyucu bez ağırlığı + sabah ilk idrar hacmi).",
+      "A": "Yanlış. (Yaş (yıl) × 30) + 30 mL; formül yetişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
+      "D": "Yanlış. Enürezis yaygındır; ergenlerde prevalans yaklaşık %3, yıllık spontan remisyon oranı %15'tir.",
+      "B": "Yanlış. Beş yaş ve üzeri çocuklarda uyku sırasında tekrarlayıcı istemsiz idrar kaçırma; davranışın 3 ay süreyle en az haftada 2 kez olması, sosyal/okul sıkıntısı yaratması ve tıbbi hastalığa bağlı olmaması.",
+      "E": "Yanlış. Tıbbi geçmiş enüretik çocuğun değerlendirmesinin en önemli ve bazen tek gerekli kısmıdır; genel sağlık, enürezis özellikleri, gündüz işeme, uyku, davranış, bağırsak alışkanlıkları ve önceki tedaviler sorgulanır."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-58-enurezis-nokturna-k09-q11",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "\"Diyet ve uyku apnesi\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "D": "MNE'li çocukların fizik bakısı normaldir; büyüme-gelişme, ürogenital bölge (vulvit, labial yapışıklık, ektopik üreter, meatal stenoz, hipospadias), sırt (spinal disrafizm bulguları) ve nörolojik muayene (sakral refleks arkı, yürüyüş) değerlendirilir.",
+      "A": "Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "C": "Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "E": "ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Kafeinli içecekler, kakao ve turunçgiller noktürnal poliüriye neden olabilir; üst hava yolu obstrüksiyonu ve uyku apnesi atrial natriüretik peptidin gece salınımını artırarak sodyum ve su atılımını artırır ve sıklıkla sekonder enürezise yol açar.",
+      "D": "Yanlış. MNE'li çocukların fizik bakısı normaldir; büyüme-gelişme, ürogenital bölge (vulvit, labial yapışıklık, ektopik üreter, meatal stenoz, hipospadias), sırt (spinal disrafizm bulguları) ve nörolojik muayene (sakral refleks arkı, yürüyüş) değerlendirilir.",
+      "A": "Yanlış. Trisiklik antidepresan; desmopressin, alarm ve antikolinerjikler başarısız/kontrendike olduğunda kullanılır (kanıt düzeyi Ia); 25-50 mg, yatmadan ~1 saat önce; yanıt 1 ay sonra değerlendirilir.",
+      "C": "Yanlış. Kabızlık gündüz inkontinansı olan çocuklarda çok yaygındır; kabızlık ve detrüsör aşırı aktivitesi güçlü şekilde ilişkilidir; MoNE'de tedavi kabızlık ekarte edilmeden başlatılmamalıdır.",
+      "E": "Yanlış. ICCS tanımlı çizelge ilk değerlendirmede tavsiye edilir, MoNE düşündüren bulgu varsa zorunludur; pratikte ardışık iki gün tutulur ve dışkılama alışkanlıkları en az 1 hafta kaydedilir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 27,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:56:03"
+ ]
 }

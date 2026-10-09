@@ -6,6 +6,7 @@
  "konu": "Bağışıklığı Baskılı Hastalarda Enfeksiyon",
  "ogretim_uyesi": "Uz. Dr. Merve Kaçar",
  "tarih": "2026-10-06",
+ "soru_sayisi": 105,
  "kazanimlar": [
   {
    "no": 1,
@@ -86,6 +87,113 @@
      },
      "bilgi": [
       3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Kemoterapi alan hastada ateş gelişiyor; immünkompromize konak kavramı tartışılıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bağışıklık yalnızca antikorlardan oluşur",
+      "B": "Primer yetmezlik sonradan kazanılır",
+      "C": "Sekonder yetmezlik genetiktir",
+      "D": "İmmün yetmezlik enfeksiyon riskini azaltır",
+      "E": "İmmünkompromize konakta fagositoz, kompleman, hümoral/hücresel yanıttan bir veya birkaçının bozulması enfeksiyon riskini artırır"
+     },
+     "dogru": "E",
+     "aciklama": "Savunmanın alt birimlerindeki primer (genetik) veya sekonder (kazanılmış) yetmezlik riski artırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'İmmünkompromize konakta fagositoz, kompleman, hümoral/hücresel yanıttan bir veya birkaçının bozulması enfeksiyon riskini artırır' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'İmmünkompromize konakta fagositoz, kompleman, hümoral/hücresel yanıttan bir veya birkaçının bozulması enfeksiyon riskini artırır' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'İmmünkompromize konakta fagositoz, kompleman, hümoral/hücresel yanıttan bir veya birkaçının bozulması enfeksiyon riskini artırır' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'İmmünkompromize konakta fagositoz, kompleman, hümoral/hücresel yanıttan bir veya birkaçının bozulması enfeksiyon riskini artırır' seçeneğidir.",
+      "E": "Doğru: Savunmanın alt birimlerindeki primer (genetik) veya sekonder (kazanılmış) yetmezlik riski artırır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Primer-sekonder ayrımı soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sekonder yetmezlik kemoterapi, nakil, splenektomi gibi sonradan nedenlerle olur",
+      "B": "Primer yetmezlik genetik bozukluğa bağlıdır",
+      "C": "Bozulmuş savunma enfeksiyonları ağırlaştırır",
+      "D": "Primer yetmezlik bulaşıcıdır ve sekonder yetmezlik enfeksiyona direnç sağlar",
+      "E": "Akciğer enfeksiyonları immünkompromizede sıktır"
+     },
+     "dogru": "B",
+     "aciklama": "Primer genetik, sekonder kazanılmıştır; direnç sağlamaz.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Primer yetmezlik genetik bozukluğa bağlıdır' seçeneğidir.",
+      "B": "Doğru: Primer genetik, sekonder kazanılmıştır; direnç sağlamaz.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Primer yetmezlik genetik bozukluğa bağlıdır' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Primer yetmezlik genetik bozukluğa bağlıdır' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Primer yetmezlik genetik bozukluğa bağlıdır' seçeneğidir."
+     },
+     "bilgi": [
+      1,
+      2,
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bağışıklığı baskılı hastayı tanımlayan temel immünolojik özellik nedir?",
+     "secenekler": {
+      "A": "Fagositoz, kompleman, hümoral veya hücresel yanıtta yetmezlik",
+      "B": "Yalnızca ateş yüksekliği ve lökositoz varlığı",
+      "C": "Yalnızca alerji öyküsü ve eozinofili",
+      "D": "Sadece cerrahi yara ve dikiş varlığı",
+      "E": "Yalnızca aşılanmamış olmak ve yaşlılık"
+     },
+     "dogru": "A",
+     "aciklama": "İmmünkompromize konakta fagositoz, kompleman, hümoral ve hücresel yanıt eksenlerinden birinde yetmezlik vardır. Yetmezlik genetik (primer) veya sonradan kazanılmış (sekonder) olabilir. Hangi eksenin bozuk olduğu patojen spektrumunu belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Savunma eksenlerinden birindeki yetmezlik immünsüpresyonu tanımlar.",
+      "B": "Yanlış: Ateş ve lökositoz enfeksiyon yanıtıdır, tanım değildir.",
+      "C": "Yanlış: Alerji immün yetmezlik ölçütü değildir.",
+      "D": "Yanlış: Cerrahi yara bariyer bozukluğudur, immün tanım değildir.",
+      "E": "Yanlış: Aşısızlık ve yaş tek başına immünsüpresyon tanımlamaz."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bağışıklığı baskılayan durumlara örnek olan grup hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca mevsimsel alerji ve migren",
+      "B": "Hipertansiyon ve basit guatr varlığı",
+      "C": "Malignite, nakil, steroid ve aspleni gibi durumlar",
+      "D": "Düzenli spor ve dengeli beslenme",
+      "E": "Yalnızca çocukluk aşılarının tamamlanması"
+     },
+     "dogru": "C",
+     "aciklama": "Hematolojik maligniteler, HIV, nakiller, splenektomi, uzun süreli kortikosteroid, diyabet, KBY ve malnütrisyon immünsüpresyon nedenleridir. Bu durumlar farklı savunma eksenlerini bozar. Risk değerlendirmesi nedene göre yapılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Bunlar immünsüpresyon nedeni değildir.",
+      "B": "Yanlış: Hipertansiyon ve guatr savunmayı baskılamaz.",
+      "C": "Doğru: Bu durumlar farklı immün eksenleri bozar.",
+      "D": "Yanlış: Bunlar koruyucu yaşam özellikleridir.",
+      "E": "Yanlış: Aşılanma immünsüpresyon nedeni değildir."
+     },
+     "bilgi": [
+      4
      ],
      "benzer_cikmis": []
     }
@@ -171,6 +279,111 @@
      },
      "bilgi": [
       33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Nakil alıcısında toplum kökenli pnömoni ağır seyrediyor; genel özellikler hatırlanıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Enfeksiyonlar hep hafiftir",
+      "B": "Toplum etkenleriyle daha ağır seyir, fırsatçı ve çoklu ilaç dirençli patojen riski artar; prognoz kötüdür, erken tanı-tedavi gerekir",
+      "C": "Fırsatçı patojen riski azalmıştır",
+      "D": "Dirençli patojen görülmez",
+      "E": "Tedavi geciktirilmelidir"
+     },
+     "dogru": "B",
+     "aciklama": "Ağır seyir, fırsatçı/dirençli patojen artışı ve yüksek mortalite tipiktir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Toplum etkenleriyle daha ağır seyir, fırsatçı ve çoklu ilaç dirençli patojen riski artar; prognoz kötüdür, erken tanı-tedavi gerekir' seçeneğidir.",
+      "B": "Doğru: Ağır seyir, fırsatçı/dirençli patojen artışı ve yüksek mortalite tipiktir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Toplum etkenleriyle daha ağır seyir, fırsatçı ve çoklu ilaç dirençli patojen riski artar; prognoz kötüdür, erken tanı-tedavi gerekir' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Toplum etkenleriyle daha ağır seyir, fırsatçı ve çoklu ilaç dirençli patojen riski artar; prognoz kötüdür, erken tanı-tedavi gerekir' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Toplum etkenleriyle daha ağır seyir, fırsatçı ve çoklu ilaç dirençli patojen riski artar; prognoz kötüdür, erken tanı-tedavi gerekir' seçeneğidir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Akciğer tutulumunun sıklığı ve acil durumlar soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nötropeni ve/veya aspleni + ateş acil durumdur",
+      "B": "Erken tanı mortaliteyi azaltır",
+      "C": "İmmünkompromizede enfeksiyonlar selimdir ve ateş acil değildir; akciğer nadiren tutulur",
+      "D": "Mortalite yüksektir",
+      "E": "Akciğer enfeksiyonları sık görülür"
+     },
+     "dogru": "E",
+     "aciklama": "Akciğer sık tutulur; nötropeni/aspleni + ateş acildir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Akciğer enfeksiyonları sık görülür' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Akciğer enfeksiyonları sık görülür' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Akciğer enfeksiyonları sık görülür' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Akciğer enfeksiyonları sık görülür' seçeneğidir.",
+      "E": "Doğru: Akciğer sık tutulur; nötropeni/aspleni + ateş acildir."
+     },
+     "bilgi": [
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İmmünkompromize hastada enfeksiyonların genel seyir özellikleri nelerdir?",
+     "secenekler": {
+      "A": "Enfeksiyonlar hep hafif ve kendini sınırlar",
+      "B": "Fırsatçı patojen riski tamamen yoktur",
+      "C": "Dirençli patojenler bu grupta görülmez",
+      "D": "Akciğer tutulumu bu grupta nadirdir",
+      "E": "Akciğer sık tutulur; fırsatçı ve dirençli etken artar"
+     },
+     "dogru": "E",
+     "aciklama": "İmmünkompromize hastada akciğer enfeksiyonları sık görülür; toplum etkenleri daha ağır seyreder. Fırsatçı patojenler ve çoklu ilaç dirençli mikroorganizmalar riski artırır. Bu nedenle ampirik tedavi geniş spektrumlu başlanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Enfeksiyonlar ağır ve hızlı ilerler.",
+      "B": "Yanlış: Fırsatçı patojenler bu grubun başlıca tehdididir.",
+      "C": "Yanlış: Dirençli nozokomiyal etkenler sıktır.",
+      "D": "Yanlış: Akciğer en sık tutulan organdır.",
+      "E": "Doğru: Ağır seyir ve fırsatçı etkenler tipiktir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Nötropeni veya aspleni varlığında ateşin acil kabul edilme nedeni nedir?",
+     "secenekler": {
+      "A": "Ateş yalnızca izlenir; antibiyotik geciktirilir",
+      "B": "Nötropeni veya aspleniyle ateş acil durumdur",
+      "C": "Ateş bu grupta hep viraldir",
+      "D": "Kültür sonucu beklenmeden tedavi verilmez",
+      "E": "Ateş düşürücü tek başına yeterlidir"
+     },
+     "dogru": "B",
+     "aciklama": "Nötropeni ve/veya aspleni ile birlikte ateş acil durumdur; saatler içinde geniş spektrumlu antibiyotik başlanmalıdır. Nötropenik hastada inflamasyon yanıtı baskılandığından ateş tek bulgu olabilir. Gecikme mortaliteyi artırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Gecikme mortaliteyi artırır, hemen tedavi başlanır.",
+      "B": "Doğru: Baskılanmış inflamasyonda ateş sepsis habercisidir.",
+      "C": "Yanlış: Bakteriyel ve fungal etkenler sıktır.",
+      "D": "Yanlış: Kültür alınır ama sonuç beklenmez.",
+      "E": "Yanlış: Antipiretik etkeni ortadan kaldırmaz."
+     },
+     "bilgi": [
+      3
      ],
      "benzer_cikmis": []
     }
@@ -261,6 +474,113 @@
      ],
      "benzer_cikmis": [
       "09c542e5a38a"
+     ]
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Tekrarlayan enfeksiyonlu çocukta kalıtsal yetmezlik, erişkinde kemoterapi sonrası yetmezlik karşılaştırılıyor. Aşağıdakilerden hangisi primer immün yetmezliktir?",
+     "secenekler": {
+      "A": "Kanser kemoterapisi",
+      "B": "Solid organ nakli",
+      "C": "Splenektomi",
+      "D": "Antikor, T hücresi, kombine, kompleman ve fagositer sistemin genetik defektleri",
+      "E": "Kortikosteroid kullanımı"
+     },
+     "dogru": "D",
+     "aciklama": "Primer grup genetik defektlerdir; diğerleri sekonder nedenlerdir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Antikor, T hücresi, kombine, kompleman ve fagositer sistemin genetik defektleri' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Antikor, T hücresi, kombine, kompleman ve fagositer sistemin genetik defektleri' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Antikor, T hücresi, kombine, kompleman ve fagositer sistemin genetik defektleri' seçeneğidir.",
+      "D": "Doğru: Primer grup genetik defektlerdir; diğerleri sekonder nedenlerdir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Antikor, T hücresi, kombine, kompleman ve fagositer sistemin genetik defektleri' seçeneğidir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Sekonder neden listesi çıkarılıyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kanser kemoterapisi, nakil/GVHH, immünmodülatörler ve splenektomi sekonderdir",
+      "B": "Siroz, KBY, malnütrisyon ve AIDS sekonderdir",
+      "C": "Sekonder nedenler primerden çok daha sıktır",
+      "D": "Bebeklik, gebelik ve yaşlılık fizyolojik risk durumlarıdır",
+      "E": "Kemoterapi primer genetik yetmezliktir ve sekonder nedenler enfeksiyon yapmaz"
+     },
+     "dogru": "C",
+     "aciklama": "Kemoterapi sekonderdir; sekonder nedenler sıktır ve enfeksiyona yol açar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Sekonder nedenler primerden çok daha sıktır' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Sekonder nedenler primerden çok daha sıktır' seçeneğidir.",
+      "C": "Doğru: Kemoterapi sekonderdir; sekonder nedenler sıktır ve enfeksiyona yol açar.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Sekonder nedenler primerden çok daha sıktır' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Sekonder nedenler primerden çok daha sıktır' seçeneğidir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Primer immün yetmezlikleri oluşturan genetik defekt grupları hangileridir?",
+     "secenekler": {
+      "A": "Kemoterapi ve nakil ilaçları",
+      "B": "Siroz, KBY ve malnütrisyon",
+      "C": "Gebelik, yaşlılık ve yanık",
+      "D": "Antikor, T hücresi, kompleman ve fagosit defektleri",
+      "E": "Alkolizm, AIDS ve steroid kullanımı"
+     },
+     "dogru": "D",
+     "aciklama": "Primer yetmezlikler genetik bozukluklara bağlıdır: antikor, T hücresi, kombine, kompleman ve fagositer sistem defektleri. Bu defektler doğuştan savunma eksikliği yaratır. Tekrarlayan enfeksiyonlar erken yaşta başlar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Bunlar sekonder (kazanılmış) nedenlerdir.",
+      "B": "Yanlış: Bunlar sekonder nedenler grubundadır.",
+      "C": "Yanlış: Bunlar fizyolojik ve edinsel durumlardır.",
+      "D": "Doğru: Genetik defektler primer yetmezliği oluşturur.",
+      "E": "Yanlış: Bunlar sekonder nedenlerdir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Sekonder immün yetmezliğe yol açan edinsel nedenler hangileridir?",
+     "secenekler": {
+      "A": "Kemoterapi, nakil, siroz, AIDS ve yanık",
+      "B": "Antikor ve kompleman gen mutasyonları",
+      "C": "T hücresi ve fagosit gen defektleri",
+      "D": "Kombine immün yetmezlik mutasyonları",
+      "E": "Doğuştan B hücresi yokluğu"
+     },
+     "dogru": "A",
+     "aciklama": "Sekonder yetmezlikler kanser kemoterapisi, nakil, splenektomi, siroz, KBY, AIDS, gebelik-yaşlılık ve yanık gibi edinsel nedenlerle gelişir. Altta yatan hastalık veya ilaç savunmayı baskılar. Neden ortadan kalkarsa bağışıklık kısmen düzelebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Bunlar sonradan kazanılmış baskılanma nedenleridir.",
+      "B": "Yanlış: Gen mutasyonları primer gruba girer.",
+      "C": "Yanlış: Bunlar kalıtsal primer defektlerdir.",
+      "D": "Yanlış: Kombine yetmezlik genetik ve primerdir.",
+      "E": "Yanlış: Doğuştan yokluk primer defekttir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": [
+      "2d0a26bc563e"
      ]
     }
    ],
@@ -364,6 +684,110 @@
       17
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "ALL'li hastada nötrofil düşüklüğü, KLL'li hastada antikor eksikliği, GVHH'li hastada T hücre bozukluğu tartışılıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Nötropeni nötrofil azalmasıdır; hücresel yetmezlik T, hümoral yetmezlik B lenfosit bozukluğudur; her eksen farklı patojene yatkınlık yaratır",
+      "B": "Nötropeni B hücre artışıdır",
+      "C": "Hümoral yetmezlik T hücre bozukluğudur",
+      "D": "Hücresel yetmezlik nötrofil artışıdır",
+      "E": "Eksenler patojeni etkilemez"
+     },
+     "dogru": "A",
+     "aciklama": "Üç eksen (nötropeni, T, B) farklı patojen paternleri doğurur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Üç eksen (nötropeni, T, B) farklı patojen paternleri doğurur.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nötropeni nötrofil azalmasıdır; hücresel yetmezlik T, hümoral yetmezlik B lenfosit bozukluğudur; her eksen farklı patojene yatkınlık yaratır' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nötropeni nötrofil azalmasıdır; hücresel yetmezlik T, hümoral yetmezlik B lenfosit bozukluğudur; her eksen farklı patojene yatkınlık yaratır' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nötropeni nötrofil azalmasıdır; hücresel yetmezlik T, hümoral yetmezlik B lenfosit bozukluğudur; her eksen farklı patojene yatkınlık yaratır' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nötropeni nötrofil azalmasıdır; hücresel yetmezlik T, hümoral yetmezlik B lenfosit bozukluğudur; her eksen farklı patojene yatkınlık yaratır' seçeneğidir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Hangi malignitenin hangi ekseni bozduğu soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nötropeni: hematolojik malignite ve kemoterapi ile ilişkilidir",
+      "B": "Hücresel yetmezlik: GVHH ile ilişkilidir",
+      "C": "Hümoral yetmezlik: KLL, lenfoma, multipl myelom ve splenektomi ile ilişkilidir",
+      "D": "Hümoral yetmezlik nötrofil artışıyla, hücresel yetmezlik antikor artışıyla tanımlanır",
+      "E": "500/mm³ nötrofil eşiği öngörüde kullanılır"
+     },
+     "dogru": "A",
+     "aciklama": "Tanımlar hücre tipine göredir; son ifade karıştırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Tanımlar hücre tipine göredir; son ifade karıştırır.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nötropeni: hematolojik malignite ve kemoterapi ile ilişkilidir' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nötropeni: hematolojik malignite ve kemoterapi ile ilişkilidir' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nötropeni: hematolojik malignite ve kemoterapi ile ilişkilidir' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nötropeni: hematolojik malignite ve kemoterapi ile ilişkilidir' seçeneğidir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İmmün yetmezliğin üç temel mekanik ekseni hangileridir?",
+     "secenekler": {
+      "A": "Yalnızca eozinofil ve bazofil azalması",
+      "B": "Sadece kompleman ve fagosit artışı",
+      "C": "Nötropeni, T hücresi ve B hücresi bozukluğu",
+      "D": "Yalnızca trombosit ve eritrosit azalması",
+      "E": "Sadece IgE yüksekliği ve mast hücresi artışı"
+     },
+     "dogru": "C",
+     "aciklama": "Üç temel eksen nötropeni (nötrofil azalması), hücresel yetmezlik (T lenfosit bozukluğu) ve hümoral yetmezliktir (B lenfosit bozukluğu). Her eksen farklı patojen grubuna yatkınlık yaratır. Eksen tayini etken tahminini yönlendirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Temel eksenler nötrofil, T ve B hücreleridir.",
+      "B": "Yanlış: Artış değil, fonksiyon bozukluğu söz konusudur.",
+      "C": "Doğru: Üç eksen farklı patojen yatkınlığı doğurur.",
+      "D": "Yanlış: Trombosit-eritrosit immün eksen değildir.",
+      "E": "Yanlış: IgE yüksekliği alerjiyi gösterir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Granülosit fonksiyon bozukluğunun sonucu ve nedenleri nelerdir?",
+     "secenekler": {
+      "A": "Yalnızca viral klirensi bozar",
+      "B": "Sadece parazit savunmasını etkiler",
+      "C": "Antikor üretimini doğrudan artırır",
+      "D": "Kompleman sentezini tamamen düzeltir",
+      "E": "Bakteri-mantar savunmasını bozar; ilaç ve radyasyon nedenlidir"
+     },
+     "dogru": "E",
+     "aciklama": "Granülosit fonksiyon bozukluğu bakteri ve mantar savunmasını bozar; nedenleri miyeloid hastalıklar, sitotoksik ilaçlar, steroid ve radyasyondur. Fagositoz ve öldürme kusuru patojen klirensini engeller. Bu grupta katalaz pozitif organizmalar öne çıkar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Viral savunma hücresel eksene aittir.",
+      "B": "Yanlış: Parazit savunması farklı mekanizmalarla yürür.",
+      "C": "Yanlış: Granülosit defekti antikor üretimini artırmaz.",
+      "D": "Yanlış: Kompleman karaciğerde sentezlenir.",
+      "E": "Doğru: Fagositoz kusuru bakteri ve mantara yatkınlık verir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -464,6 +888,114 @@
       10
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Nötropenik hastada Aspergillus, B hücre defektinde kapsüllü bakteri, T hücre defektinde P. jirovecii görülüyor. Fagosit/nötropeni defektinde öne çıkan patojenler hangileridir?",
+     "secenekler": {
+      "A": "Yalnızca virüsler",
+      "B": "Yalnızca parazitler",
+      "C": "S. aureus, P. aeruginosa, K. pneumoniae, E. coli ile Aspergillus ve Candida",
+      "D": "Sadece mikobakteriler",
+      "E": "Sadece helmintler"
+     },
+     "dogru": "C",
+     "aciklama": "Nötropenide bakteriyel ve fungal (Aspergillus, Candida) enfeksiyonlar ön plandadır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'S. aureus, P. aeruginosa, K. pneumoniae, E. coli ile Aspergillus ve Candida' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'S. aureus, P. aeruginosa, K. pneumoniae, E. coli ile Aspergillus ve Candida' seçeneğidir.",
+      "C": "Doğru: Nötropenide bakteriyel ve fungal (Aspergillus, Candida) enfeksiyonlar ön plandadır.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'S. aureus, P. aeruginosa, K. pneumoniae, E. coli ile Aspergillus ve Candida' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'S. aureus, P. aeruginosa, K. pneumoniae, E. coli ile Aspergillus ve Candida' seçeneğidir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "B ve T defekti patojenleri eşleştiriliyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "T hücre defektinde Legionella, Nocardia, mikobakteriler ve P. jirovecii görülür",
+      "B": "T defektinde CMV/VZV/HSV ve Toxoplasma riski artar",
+      "C": "Nötropenide viral patojenler baskındır ve mantar riski azalmıştır; B defektinde hücre içi patojenler ön plandadır",
+      "D": "B hücre defektinde S. pneumoniae, H. influenzae gibi kapsüllü bakteriler ön plandadır",
+      "E": "AIDS evresinde PCP ve toksoplazma ensefaliti görülür"
+     },
+     "dogru": "D",
+     "aciklama": "Nötropenide mantar riski artar; B defektinde kapsüllü bakteriler öncedir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'B hücre defektinde S. pneumoniae, H. influenzae gibi kapsüllü bakteriler ön plandadır' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'B hücre defektinde S. pneumoniae, H. influenzae gibi kapsüllü bakteriler ön plandadır' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'B hücre defektinde S. pneumoniae, H. influenzae gibi kapsüllü bakteriler ön plandadır' seçeneğidir.",
+      "D": "Doğru: Nötropenide mantar riski artar; B defektinde kapsüllü bakteriler öncedir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'B hücre defektinde S. pneumoniae, H. influenzae gibi kapsüllü bakteriler ön plandadır' seçeneğidir."
+     },
+     "bilgi": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Fagosit ve nötropeni defektinde beklenen patojen grubu hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca viruslar ve parazitler",
+      "B": "S. aureus, Pseudomonas, E. coli ve mantarlar",
+      "C": "Yalnızca mikobakteriler ve nokardiya",
+      "D": "Sadece kapsüllü bakteriler ve toksoplazma",
+      "E": "Yalnızca CMV ve EBV"
+     },
+     "dogru": "B",
+     "aciklama": "Fagosit ve nötropeni defektinde S. aureus, P. aeruginosa, K. pneumoniae, E. coli ile Aspergillus ve Candida öne çıkar. Fagositoz kusuru bakteri ve mantar klirensini engeller. Bu spektrum ampirik tedaviyi belirler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Virus-parazit hücresel eksene aittir.",
+      "B": "Doğru: Fagositoz kusuru bakteri ve mantara yatkınlık verir.",
+      "C": "Yanlış: Mikobakteriler T hücresi defektine aittir.",
+      "D": "Yanlış: Kapsüllüler hümoral eksene aittir.",
+      "E": "Yanlış: Herpesvirusler hücresel eksene aittir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "T hücresi ve B hücresi defektlerinin patojen spektrumu nasıl ayrılır?",
+     "secenekler": {
+      "A": "T defektinde yalnızca E. coli görülür",
+      "B": "B defektinde yalnızca viruslar görülür",
+      "C": "Her iki defektte de etkenler aynıdır",
+      "D": "T defektinde hücre içi; B defektinde kapsüllü etkenler",
+      "E": "T defektinde yalnızca mantar; B'de parazit"
+     },
+     "dogru": "D",
+     "aciklama": "T hücresi defektinde Legionella, Nocardia, mikobakteriler, P. jirovecii, kriptokok, CMV-VZV-HSV, toksoplazma ve Strongyloides görülür. Hücre içi patojen klirensi T lenfositlere bağımlıdır. B hücresi defektinde ise kapsüllü bakteriler (pnömokok, H. influenzae) öne çıkar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: E. coli fagosit defektine aittir.",
+      "B": "Yanlış: B defektinde kapsüllü bakteriler öne çıkar.",
+      "C": "Yanlış: Eksenler farklı patojen spektrumu doğurur.",
+      "D": "Doğru: Hücre içi klirensi T, kapsüllü klirensi B sağlar.",
+      "E": "Yanlış: Her iki eksende de karışık spektrum vardır."
+     },
+     "bilgi": [
+      9,
+      10
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -544,6 +1076,110 @@
       "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
       "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
       "E": "Yanlış eşleştirme (aranan cevap): Klebsiella nodüler infiltrat yapar."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Nötropenik hastanın BT'sinde halo belirtili nodüler infiltratlar var. Nodüler infiltratta düşünülmesi gerekenler hangileridir?",
+     "secenekler": {
+      "A": "Yalnızca ödem",
+      "B": "Yalnızca ARDS",
+      "C": "Yalnızca ilaç toksisitesi",
+      "D": "Yalnızca hemoraji",
+      "E": "Bakteriyel enfeksiyon (Klebsiella, Pseudomonas), tüberküloz, nokardiya ve mantar"
+     },
+     "dogru": "E",
+     "aciklama": "Nodüler patern bakteri, Tbc, nokardiya ve mantarı düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Bakteriyel enfeksiyon (Klebsiella, Pseudomonas), tüberküloz, nokardiya ve mantar' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Bakteriyel enfeksiyon (Klebsiella, Pseudomonas), tüberküloz, nokardiya ve mantar' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Bakteriyel enfeksiyon (Klebsiella, Pseudomonas), tüberküloz, nokardiya ve mantar' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Bakteriyel enfeksiyon (Klebsiella, Pseudomonas), tüberküloz, nokardiya ve mantar' seçeneğidir.",
+      "E": "Doğru: Nodüler patern bakteri, Tbc, nokardiya ve mantarı düşündürür."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Fokal ve diffüz paternler karşılaştırılıyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Diffüz interstisyel: virüsler, ARDS, ilaç toksisitesi, ödem, alveoler hemoraji",
+      "B": "Fokal infiltrat: PCP ve nokardiyoz",
+      "C": "Nodüler: bakteri, Tbc, nokardiya, mantar",
+      "D": "Diffüz patern yalnızca bakteriyeldir ve nodüler patern yalnızca viraldir",
+      "E": "Patern ampirik yaklaşımı yönlendirir"
+     },
+     "dogru": "B",
+     "aciklama": "Diffüz patern viral ve non-enfeksiyöz nedenleri içerir; son ifade terstir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Fokal infiltrat: PCP ve nokardiyoz' seçeneğidir.",
+      "B": "Doğru: Diffüz patern viral ve non-enfeksiyöz nedenleri içerir; son ifade terstir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Fokal infiltrat: PCP ve nokardiyoz' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Fokal infiltrat: PCP ve nokardiyoz' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Fokal infiltrat: PCP ve nokardiyoz' seçeneğidir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Akciğerde nodüler infiltrat paterni hangi etkenleri düşündürür?",
+     "secenekler": {
+      "A": "Bakteri, tüberküloz, nokardiya ve mantar",
+      "B": "Yalnızca viral pnömoni ve ARDS",
+      "C": "Sadece akciğer ödemi ve hemoraji",
+      "D": "Yalnızca ilaç toksisitesi",
+      "E": "Sadece atelektazi ve efüzyon"
+     },
+     "dogru": "A",
+     "aciklama": "Nodüler infiltrat bakteriyel enfeksiyon (Klebsiella, Pseudomonas), tüberküloz, nokardiya ve mantarları düşündürür. Nodül granülomatöz veya septik embolik odakları yansıtır. Bu paternde invaziv tanı düşünülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Nodül granülomatöz ve septik odakları yansıtır.",
+      "B": "Yanlış: Viruslar diffüz interstisyel patern yapar.",
+      "C": "Yanlış: Ödem ve hemoraji diffüz paterndedir.",
+      "D": "Yanlış: İlaç toksisitesi diffüz interstisyeldir.",
+      "E": "Yanlış: Atelektazi nodüler patern oluşturmaz."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Diffüz interstisyel ve fokal infiltrat paternlerinin etken karşılıkları nedir?",
+     "secenekler": {
+      "A": "Diffüz patern hep bakteriyeldir",
+      "B": "Fokal infiltrat yalnızca ödemdir",
+      "C": "Diffüzde virus-ödem; fokalde PCP-nokardiya",
+      "D": "Nodüler patern yalnızca viraldir",
+      "E": "Patern ayrımı tanıda değersizdir"
+     },
+     "dogru": "C",
+     "aciklama": "Diffüz interstisyel infiltrat virusları, ARDS'yi, ilaç toksisitesini, akciğer ödemini ve alveoler hemorajiyi düşündürür. Fokal infiltrat ise PCP ve nokardiyozla ilişkilidir. Patern ayrımı ampirik tedaviyi yönlendirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Bakteriler nodüler veya lober tutulum yapar.",
+      "B": "Yanlış: Fokal infiltrat PCP ve nokardiyada görülür.",
+      "C": "Doğru: Diffüz interstisyel ve fokal paternler farklı etkenlidir.",
+      "D": "Yanlış: Nodül bakteri, mikobakteri ve mantardadır.",
+      "E": "Yanlış: Patern ampirik tedavi seçimini yönlendirir."
      },
      "bilgi": [
       12
@@ -634,6 +1270,111 @@
       13
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Uzun süreli yüksek doz steroid alan hastada enfeksiyon profilaksisi planlanıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Steroid yalnızca hümoral yanıtı artırır",
+      "B": "Ana etki hücresel immünite üzerinedir; T-B yanıtı ve alveoler makrofaj fagositozu baskılanır; uzun kullanımda P. jirovecii profilaksisi ve latent Tbc tedavisi gerekir",
+      "C": "Enfeksiyon riski azalmıştır",
+      "D": "Profilaksi gerekmez",
+      "E": "Steroid fagositozu artırır"
+     },
+     "dogru": "B",
+     "aciklama": "Steroid hücresel yanıtı baskılar; PCP profilaksisi ve latent Tbc tedavisi gerekir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Ana etki hücresel immünite üzerinedir; T-B yanıtı ve alveoler makrofaj fagositozu baskılanır; uzun kullanımda P. jirovecii profilaksisi ve latent Tbc tedavisi gerekir' seçeneğidir.",
+      "B": "Doğru: Steroid hücresel yanıtı baskılar; PCP profilaksisi ve latent Tbc tedavisi gerekir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Ana etki hücresel immünite üzerinedir; T-B yanıtı ve alveoler makrofaj fagositozu baskılanır; uzun kullanımda P. jirovecii profilaksisi ve latent Tbc tedavisi gerekir' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Ana etki hücresel immünite üzerinedir; T-B yanıtı ve alveoler makrofaj fagositozu baskılanır; uzun kullanımda P. jirovecii profilaksisi ve latent Tbc tedavisi gerekir' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Ana etki hücresel immünite üzerinedir; T-B yanıtı ve alveoler makrofaj fagositozu baskılanır; uzun kullanımda P. jirovecii profilaksisi ve latent Tbc tedavisi gerekir' seçeneğidir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Baskılanan hücreler sıralanıyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bakteriyel, viral ve fungal risk artar",
+      "B": "P. jirovecii profilaksisi gerekir",
+      "C": "Steroidler immüniteyi güçlendirir ve enfeksiyonları önler; profilaksi kontrendikedir",
+      "D": "Alveoler makrofaj fagositozu azalır",
+      "E": "Monosit, lenfosit ve eozinofiller baskılanır"
+     },
+     "dogru": "E",
+     "aciklama": "Steroid immüniteyi baskılar; son ifade terstir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Monosit, lenfosit ve eozinofiller baskılanır' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Monosit, lenfosit ve eozinofiller baskılanır' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Monosit, lenfosit ve eozinofiller baskılanır' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Monosit, lenfosit ve eozinofiller baskılanır' seçeneğidir.",
+      "E": "Doğru: Steroid immüniteyi baskılar; son ifade terstir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Glukokortikoidlerin bağışıklık üzerindeki temel baskılayıcı etkisi nedir?",
+     "secenekler": {
+      "A": "Yalnızca nötrofil sayısını artırarak korur",
+      "B": "Sadece antikor üretimini güçlendirir",
+      "C": "Kompleman düzeyini yükselterek korur",
+      "D": "Fagositozu artırıp enfeksiyonu önler",
+      "E": "Hücresel yanıtı ve makrofaj fagositozunu baskılar"
+     },
+     "dogru": "E",
+     "aciklama": "Glukokortikoidlerin ana etkisi hücresel immünite üzerinedir; T-B hücre yanıtını baskılar, alveoler makrofaj fagositozunu azaltır. Monosit, lenfosit ve eozinofiller baskılanır. Bu baskılanma hücre içi patojen ve mantar riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Demarginasyonla sayı artar ama işlev baskılanır.",
+      "B": "Yanlış: Steroid T-B yanıtını baskılar.",
+      "C": "Yanlış: Kompleman üzerinde koruyucu etkisi yoktur.",
+      "D": "Yanlış: Makrofaj fagositozu azalır.",
+      "E": "Doğru: Hücresel baskılanma fırsatçı riskini artırır."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Uzun süreli steroid kullanan hastada hangi koruyucu yaklaşım gerekir?",
+     "secenekler": {
+      "A": "Profilaksi hiçbir hastada gerekmez",
+      "B": "PCP profilaksisi ve latent enfeksiyon taraması gerekir",
+      "C": "Yalnızca ateş düşürücü profilaksisi yeterlidir",
+      "D": "Steroid kesilmeden aşı yapılmalıdır",
+      "E": "Antibiyotik profilaksisi hep zararlıdır"
+     },
+     "dogru": "B",
+     "aciklama": "Uzun süreli steroid kullananlarda Pneumocystis ve mantar profilaksisi ile latent tüberküloz ve hepatit taraması gerekir. Hücresel baskılanma reaktivasyon riskini artırır. Profilaksi kararı doz ve süreye göre verilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Yüksek riskli grupta profilaksi mortaliteyi azaltır.",
+      "B": "Doğru: Hücresel baskılanma PCP ve reaktivasyon riski doğurur.",
+      "C": "Yanlış: Antipiretik profilaksi kavramı yoktur.",
+      "D": "Yanlış: Canlı aşılar baskılanmada kontrendikedir.",
+      "E": "Yanlış: Seçilmiş grupta profilaksi yaşam kurtarır."
+     },
+     "bilgi": [
+      13,
+      33
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -720,6 +1461,114 @@
       14
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "CD4 düşüklüğü olan hastada oral kandidiyazis ve PCP gelişiyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Fırsatçı enfeksiyon olmaz",
+      "B": "CD4 düzeyi ilişkisizdir",
+      "C": "Yalnızca bakteriyel enfeksiyon olur",
+      "D": "AIDS evresinde PCP, toksoplazma ensefaliti, kriptokokkoz, CMV ve lenfomalar görülür; komplikasyonlar sıklıkla belirli CD4 düzeylerinde gelişse de farklı düzeylerde de görülebilir",
+      "E": "Kaposi sarkomu HIV ile ilişkisizdir"
+     },
+     "dogru": "D",
+     "aciklama": "CD4 düşüşü fırsatçı hastalıkları tetikler; düzey mutlak değildir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'AIDS evresinde PCP, toksoplazma ensefaliti, kriptokokkoz, CMV ve lenfomalar görülür; komplikasyonlar sıklıkla belirli CD4 düzeylerinde gelişse de farklı düzeylerde de görülebilir' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'AIDS evresinde PCP, toksoplazma ensefaliti, kriptokokkoz, CMV ve lenfomalar görülür; komplikasyonlar sıklıkla belirli CD4 düzeylerinde gelişse de farklı düzeylerde de görülebilir' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'AIDS evresinde PCP, toksoplazma ensefaliti, kriptokokkoz, CMV ve lenfomalar görülür; komplikasyonlar sıklıkla belirli CD4 düzeylerinde gelişse de farklı düzeylerde de görülebilir' seçeneğidir.",
+      "D": "Doğru: CD4 düşüşü fırsatçı hastalıkları tetikler; düzey mutlak değildir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'AIDS evresinde PCP, toksoplazma ensefaliti, kriptokokkoz, CMV ve lenfomalar görülür; komplikasyonlar sıklıkla belirli CD4 düzeylerinde gelişse de farklı düzeylerde de görülebilir' seçeneğidir."
+     },
+     "bilgi": [
+      11,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "CD4-fırsatçı ilişkisinin mutlak olmadığı vurgulanıyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Orofarengeal kandidiyaz, zona ve tüberküloz görülebilir",
+      "B": "Kaposi sarkomu ve lenfomalar görülebilir",
+      "C": "Toxoplasma ensefaliti ve PCP tipik fırsatçı enfeksiyonlardır",
+      "D": "HIV'de fırsatçı hastalıklar yalnızca tek bir CD4 değerinde olur ve başka düzeyde asla görülmez",
+      "E": "Kandida özefajiti sıktır"
+     },
+     "dogru": "C",
+     "aciklama": "Komplikasyonlar farklı CD4 düzeylerinde de görülebilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Toxoplasma ensefaliti ve PCP tipik fırsatçı enfeksiyonlardır' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Toxoplasma ensefaliti ve PCP tipik fırsatçı enfeksiyonlardır' seçeneğidir.",
+      "C": "Doğru: Komplikasyonlar farklı CD4 düzeylerinde de görülebilir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Toxoplasma ensefaliti ve PCP tipik fırsatçı enfeksiyonlardır' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Toxoplasma ensefaliti ve PCP tipik fırsatçı enfeksiyonlardır' seçeneğidir."
+     },
+     "bilgi": [
+      11,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "AIDS evresinde görülen tipik fırsatçı enfeksiyonlar hangileridir?",
+     "secenekler": {
+      "A": "Yalnızca üst solunum yolu virusları",
+      "B": "Sadece idrar yolu koliformları",
+      "C": "Yalnızca deri stafilokokları",
+      "D": "Toksoplazma ensefaliti ve PCP gibi fırsatçılar",
+      "E": "Sadece gıda kaynaklı salmonella"
+     },
+     "dogru": "D",
+     "aciklama": "AIDS evresinde Toxoplasma ensefaliti ve Pneumocystis pnömonisi gibi fırsatçı enfeksiyonlar görülür. CD4 düşüşüyle hücre içi patojen kontrolü kaybolur. Bu tablolar ileri immünsüpresyonun göstergesidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: AIDS'te fırsatçı patojenler belirgindir.",
+      "B": "Yanlış: Koliformlar fagosit defektine aittir.",
+      "C": "Yanlış: Deri etkenleri AIDS'i tanımlamaz.",
+      "D": "Doğru: CD4 kaybı toksoplazma ve PCP'ye yol açar.",
+      "E": "Yanlış: Salmonella tek başına AIDS göstergesi değildir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "CD4 düzeyi düştükçe HIV hastasında hangi tablolar ortaya çıkar?",
+     "secenekler": {
+      "A": "Zona, kandidiyaz, Kaposi ve kriptokokkoz sırayla belirir",
+      "B": "CD4 düştükçe enfeksiyon riski azalır",
+      "C": "Fırsatçılar yalnızca CD4 yüksekken görülür",
+      "D": "Kandidiyaz hücresel değil nötropeniye bağlıdır",
+      "E": "Kaposi sarkomu bakteriyel enfeksiyondur"
+     },
+     "dogru": "A",
+     "aciklama": "CD4 düşüşüyle zona, orofarengeal kandidiyaz, Kaposi sarkomu, kriptokokkoz ve dissemine herpes gibi tablolar sırayla belirir. Her basamak hücresel kontrolün daha derin kaybını yansıtır. CD4 düzeyi profilaksi eşiğini belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru: CD4 kaybı mukokutanöz ve sistemik fırsatçıları artırır.",
+      "B": "Yanlış: CD4 azaldıkça risk artar.",
+      "C": "Yanlış: Fırsatçılar derin CD4 kaybında ortaya çıkar.",
+      "D": "Yanlış: Mukozal kandidiyaz T hücresi kontrol kaybındandır.",
+      "E": "Yanlış: Kaposi HHV-8 ilişkili vasküler tümördür."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": [
+      "22aa1354fc46"
+     ]
     }
    ],
    "ilgili_cikmis": []
@@ -804,6 +1653,112 @@
      },
      "bilgi": [
       15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Splenektomili hastada aşılama ve profilaksi danışmanlığı veriliyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Dalak opsonize olmamış kapsüllü bakterileri temizler; eksikliğinde S. pneumoniae, H. influenzae ve N. meningitidis riski artar",
+      "B": "Aspleni viral riski artırır",
+      "C": "Hümoral yanıt T hücre ile yürütülür",
+      "D": "Kapsüllü bakteriler hücresel defektle ilişkilidir",
+      "E": "Splenektomide aşı gerekmez"
+     },
+     "dogru": "A",
+     "aciklama": "Hümoral (B hücre) eksiklik ve asplenide kapsüllü bakteriler ön plandadır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Hümoral (B hücre) eksiklik ve asplenide kapsüllü bakteriler ön plandadır.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Dalak opsonize olmamış kapsüllü bakterileri temizler; eksikliğinde S. pneumoniae, H. influenzae ve N. meningitidis riski artar' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Dalak opsonize olmamış kapsüllü bakterileri temizler; eksikliğinde S. pneumoniae, H. influenzae ve N. meningitidis riski artar' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Dalak opsonize olmamış kapsüllü bakterileri temizler; eksikliğinde S. pneumoniae, H. influenzae ve N. meningitidis riski artar' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Dalak opsonize olmamış kapsüllü bakterileri temizler; eksikliğinde S. pneumoniae, H. influenzae ve N. meningitidis riski artar' seçeneğidir."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "IgM/IgG'nin opsanizasyon ve kompleman rolü soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hümoral sistem B hücre aracılıklıdır; IgM/IgG nötralizasyon, kompleman ve opsanizasyon sağlar",
+      "B": "Eksiklikte hücre dışı mikroorganizma riski artar",
+      "C": "Asplenide kapsüllü bakteri riski artar",
+      "D": "Aspleni hücre içi parazit riskini artırır ve hümoral yanıt T hücreyle yürütülür; kapsüllü bakteri riski azalmıştır",
+      "E": "Nedenler arasında lenfositer seri hastalıkları ve protein eksikliği vardır"
+     },
+     "dogru": "A",
+     "aciklama": "Hümoral yanıt B hücreyle yürütülür; asplenide kapsüllü bakteri riski artar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Hümoral yanıt B hücreyle yürütülür; asplenide kapsüllü bakteri riski artar.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hümoral sistem B hücre aracılıklıdır; IgM/IgG nötralizasyon, kompleman ve opsanizasyon sağlar' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hümoral sistem B hücre aracılıklıdır; IgM/IgG nötralizasyon, kompleman ve opsanizasyon sağlar' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hümoral sistem B hücre aracılıklıdır; IgM/IgG nötralizasyon, kompleman ve opsanizasyon sağlar' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hümoral sistem B hücre aracılıklıdır; IgM/IgG nötralizasyon, kompleman ve opsanizasyon sağlar' seçeneğidir."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Hümoral immünitenin kapsüllü bakterilere karşı mekanizması nedir?",
+     "secenekler": {
+      "A": "T hücresi virusla enfekte hücreyi öldürür",
+      "B": "Makrofajlar antikor üretimini üstlenir",
+      "C": "B hücresi antikoru kapsüllüyü opsonize eder",
+      "D": "Kompleman yalnızca alerjide görevlidir",
+      "E": "Nötrofiller immünglobulin sentezler"
+     },
+     "dogru": "C",
+     "aciklama": "Hümoral yanıt B hücre aracılıklıdır; IgM ve IgG nötralizasyon, kompleman aktivasyonu ve opsonizasyon sağlar. Özellikle hücre dışı ve kapsüllü mikroorganizmaların temizlenmesinde görevlidir. Antikor yokluğunda kapsüllüler klirensi bozulur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Bu hücresel yanıtın görevidir.",
+      "B": "Yanlış: Antikor üretimi B hücrelerine aittir.",
+      "C": "Doğru: Opsonizasyon kapsüllü klirensin anahtarıdır.",
+      "D": "Yanlış: Kompleman opsonizasyon ve lizizde görevlidir.",
+      "E": "Yanlış: Nötrofiller antikor sentezlemez."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Asplenide artan enfeksiyon riski hangi bakterilere yöneliktir?",
+     "secenekler": {
+      "A": "Aspleni viral riski artırır; bakteri riski değişmez",
+      "B": "Dalak yalnızca eritrosit yıkar; enfeksiyonla ilgisizdir",
+      "C": "Asplenide aşılar kontrendikedir",
+      "D": "Kapsülsüz bakteriler asplenide daha sık etkendir",
+      "E": "Asplenide pnömokok, H. influenzae ve meningokok artar"
+     },
+     "dogru": "E",
+     "aciklama": "Dalak opsonize olmamış kapsüllü bakterileri elimine eder; asplenide S. pneumoniae, H. influenzae ve N. meningitidis riski artar. Bu nedenle asplenik hastalara kapsüllü aşıları yapılır. Ateş bu grupta acil değerlendirilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Asıl artan risk kapsüllü bakterileredir.",
+      "B": "Yanlış: Dalak kapsüllü klirensinde kritik filtredir.",
+      "C": "Yanlış: Kapsüllü aşıları asplenide zorunludur.",
+      "D": "Yanlış: Kapsüllüler dalak yokluğunda klirenssiz kalır.",
+      "E": "Doğru: Opsonizasyonsuz klirens kaybı bu üç etkeni artırır."
+     },
+     "bilgi": [
       16
      ],
      "benzer_cikmis": []
@@ -893,6 +1848,113 @@
       17
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k10-q04",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "HIV'li hastada CMV retiniti, steroidli hastada aspergilloz gelişiyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hücresel yanıt B hücreyle yürütülür",
+      "B": "Eksiklikte hücre dışı bakteriler öncedir",
+      "C": "Hücresel sistem T lenfosit aracılıklıdır; eksiklikte hücre içi patojen/reaktivasyon riski artar (CMV, mikobakteri, P. jirovecii, Toxoplasma)",
+      "D": "Granülosit bozukluğu viral riski artırır",
+      "E": "Steroid hücresel yanıtı güçlendirir"
+     },
+     "dogru": "C",
+     "aciklama": "T hücre defektinde hücre içi patojenler; granülosit bozukluğunda bakteri-mantar riski artar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hücresel sistem T lenfosit aracılıklıdır; eksiklikte hücre içi patojen/reaktivasyon riski artar (CMV, mikobakteri, P. jirovecii, Toxoplasma)' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hücresel sistem T lenfosit aracılıklıdır; eksiklikte hücre içi patojen/reaktivasyon riski artar (CMV, mikobakteri, P. jirovecii, Toxoplasma)' seçeneğidir.",
+      "C": "Doğru: T hücre defektinde hücre içi patojenler; granülosit bozukluğunda bakteri-mantar riski artar.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hücresel sistem T lenfosit aracılıklıdır; eksiklikte hücre içi patojen/reaktivasyon riski artar (CMV, mikobakteri, P. jirovecii, Toxoplasma)' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hücresel sistem T lenfosit aracılıklıdır; eksiklikte hücre içi patojen/reaktivasyon riski artar (CMV, mikobakteri, P. jirovecii, Toxoplasma)' seçeneğidir."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k10-q05",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Granülosit bozukluğu nedenleri (ilaç, radyasyon, hematolojik hastalık) soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İlişkili patojenler: Listeria, Nocardia, M. tuberculosis, Aspergillus, Cryptococcus",
+      "B": "Granülosit bozukluğu bakteri-mantar savunmasını bozar",
+      "C": "Granülosit bozukluğu yalnızca viral savunmayı bozar ve T hücre defekti kapsüllü bakterilerle seyreder",
+      "D": "Nedenler: myelositer seri hastalıkları, sitotoksik/antiproliferatif ilaçlar, steroid ve radyasyon",
+      "E": "Alemtuzumab hücresel yetmezlik nedenlerindendir"
+     },
+     "dogru": "D",
+     "aciklama": "Granülosit bozukluğu bakteriyel-fungal riski artırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nedenler: myelositer seri hastalıkları, sitotoksik/antiproliferatif ilaçlar, steroid ve radyasyon' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nedenler: myelositer seri hastalıkları, sitotoksik/antiproliferatif ilaçlar, steroid ve radyasyon' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nedenler: myelositer seri hastalıkları, sitotoksik/antiproliferatif ilaçlar, steroid ve radyasyon' seçeneğidir.",
+      "D": "Doğru: Granülosit bozukluğu bakteriyel-fungal riski artırır.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nedenler: myelositer seri hastalıkları, sitotoksik/antiproliferatif ilaçlar, steroid ve radyasyon' seçeneğidir."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k10-q06",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Hücresel immünitenin temel hedefi ve işlevi nedir?",
+     "secenekler": {
+      "A": "Hücre dışı kapsüllüleri opsonize eder",
+      "B": "Hücre içi patojen ve enfekte hücreyi temizler",
+      "C": "Antikor üretip komplemanı aktive eder",
+      "D": "Eritrositleri fagosite ederek anemiyi düzeltir",
+      "E": "Trombositleri artırarak kanamayı durdurur"
+     },
+     "dogru": "B",
+     "aciklama": "Hücresel yanıt T lenfosit aracılıklıdır; hücre içi mikroorganizmaları ve virusla enfekte hücreleri elimine eder. Sitotoksik T hücreleri enfekte hücreyi apoptoza götürür. Bu eksen kaybında hücre içi patojenler yayılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Opsonizasyon hümoral eksene aittir.",
+      "B": "Doğru: T hücreleri hücre içi tehdidi ortadan kaldırır.",
+      "C": "Yanlış: Antikor üretimi B hücrelerinindir.",
+      "D": "Yanlış: Eritrosit fagositozu hücresel yanıt değildir.",
+      "E": "Yanlış: Trombosit hemostaz hücresidir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Mukozit gelişiminin enfeksiyon riskiyle ilişkisi nedir?",
+     "secenekler": {
+      "A": "Mukozit yalnızca cerrahi dikişlerde görülür",
+      "B": "Bariyer kaybı enfeksiyon riskini azaltır",
+      "C": "Oral flora dokuya girse de zararsızdır",
+      "D": "Mukozit bariyeri bozup endojen bakteriyemi yapar",
+      "E": "Kemoterapi mukozayı güçlendirerek korur"
+     },
+     "dogru": "D",
+     "aciklama": "Mukoza bariyeri oral ve intestinal florayı dokudan uzak tutar; kemoterapi ve radyoterapi mukoziti en sık komplikasyon olarak doğurur. Mukozit dil, dudak ve yanakta sık görülür. Bariyer kaybı endojen florayla bakteriyemi riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Mukozit kemoterapi ve radyoterapi komplikasyonudur.",
+      "B": "Yanlış: Bariyer kaybı translokasyonu artırır.",
+      "C": "Yanlış: Nötropenide endojen flora invaziv olur.",
+      "D": "Doğru: Ülserli mukoza floranın kana geçişine izin verir.",
+      "E": "Yanlış: Kemoterapi mukozayı inceltip ülserleştirir."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -977,6 +2039,112 @@
      "bilgi": [
       19,
       22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k11-q04",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Baş-boyun radyoterapisi alan hastada oral ülserler ve disfaji gelişiyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Mukozit nadirdir",
+      "B": "Bariyer bozukluğu koruyucudur",
+      "C": "Oral florada patojen yoktur",
+      "D": "Disfaji mukoziti dışlar",
+      "E": "Mukozit sistemik kemoterapi ve baş-boyun radyoterapisinin en sık komplikasyonudur; lezyonlara sekonder fungal/herpetik enfeksiyon eklenebilir ve kandidemi riski artar"
+     },
+     "dogru": "E",
+     "aciklama": "Mukozit dil-dudak-yanakta sık; eritem, ödem, ülser ve disfaji yapar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Mukozit sistemik kemoterapi ve baş-boyun radyoterapisinin en sık komplikasyonudur; lezyonlara sekonder fungal/herpetik enfeksiyon eklenebilir ve kandidemi riski artar' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Mukozit sistemik kemoterapi ve baş-boyun radyoterapisinin en sık komplikasyonudur; lezyonlara sekonder fungal/herpetik enfeksiyon eklenebilir ve kandidemi riski artar' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Mukozit sistemik kemoterapi ve baş-boyun radyoterapisinin en sık komplikasyonudur; lezyonlara sekonder fungal/herpetik enfeksiyon eklenebilir ve kandidemi riski artar' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Mukozit sistemik kemoterapi ve baş-boyun radyoterapisinin en sık komplikasyonudur; lezyonlara sekonder fungal/herpetik enfeksiyon eklenebilir ve kandidemi riski artar' seçeneğidir.",
+      "E": "Doğru: Mukozit dil-dudak-yanakta sık; eritem, ödem, ülser ve disfaji yapar."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k11-q05",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Oral ve intestinal flora üyeleri soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İntestinal florada Clostridium, P. aeruginosa ve enterik basiller bulunur",
+      "B": "Oral florada viridans streptokoklar, Capnocytophaga, Fusobacterium ve Candida bulunur",
+      "C": "Epitel bozulunca organizmalar giriş yapar",
+      "D": "Mukozal florada mikroorganizma yoktur ve bariyer bozukluğu enfeksiyonu önler",
+      "E": "Mukozit kandidemi riskini artırır"
+     },
+     "dogru": "B",
+     "aciklama": "Flora üyeleri bariyer bozulunca invaze olur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Oral florada viridans streptokoklar, Capnocytophaga, Fusobacterium ve Candida bulunur' seçeneğidir.",
+      "B": "Doğru: Flora üyeleri bariyer bozulunca invaze olur.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Oral florada viridans streptokoklar, Capnocytophaga, Fusobacterium ve Candida bulunur' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Oral florada viridans streptokoklar, Capnocytophaga, Fusobacterium ve Candida bulunur' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Oral florada viridans streptokoklar, Capnocytophaga, Fusobacterium ve Candida bulunur' seçeneğidir."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k11-q06",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Oral ve intestinal mukoza florasının tipik üyeleri hangileridir?",
+     "secenekler": {
+      "A": "Oralde viridans; barsakta enterik basil ve anaerop",
+      "B": "Oralde yalnızca mikobakteri; barsakta virus",
+      "C": "Her iki florada da sadece mantar bulunur",
+      "D": "Florada patojen bakteri hiç bulunmaz",
+      "E": "Oral ve barsak florası tamamen aynıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Oral florada viridans streptokoklar, enterokoklar ve Candida; intestinal florada Clostridium, Pseudomonas ve enterik basiller bulunur. Bariyer sağlamken bu flora kommensaldir. Nötropeni ve mukozitte aynı flora patojen olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Bölgesel flora bariyer kaybında etken olur.",
+      "B": "Yanlış: Mikobakteri ve virus normal flora üyesi değildir.",
+      "C": "Yanlış: Floranın çoğunluğu bakteriyeldir.",
+      "D": "Yanlış: Flora fırsatçı patojenler içerir.",
+      "E": "Yanlış: Oral ve intestinal flora bileşimi farklıdır."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k11-q07",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Kemoterapi ve radyoterapiye bağlı mukozitin en sık yerleşimi ve sonucu nedir?",
+     "secenekler": {
+      "A": "Mukozit yalnızca ciltte görülür",
+      "B": "Radyoterapi mukozayı kalınlaştırarak korur",
+      "C": "Kemoterapi-radyoterapi mukozit yapıp bakteriyemiye açar",
+      "D": "Ülserler florayı tamamen sterilize eder",
+      "E": "Mukozit enfeksiyon riskini ortadan kaldırır"
+     },
+     "dogru": "C",
+     "aciklama": "Sistemik kemoterapi ve baş-boyun radyoterapisinin en sık komplikasyonu mukozittir; dil, dudak ve yanak mukozasında ülserler oluşur. Ülserler oral floranın kana geçişine izin verir. Bu nedenle oral bakım ve erken tedavi önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Mukozit ağız ve barsak mukozasındadır.",
+      "B": "Yanlış: Radyoterapi mukozayı inceltip ülserleştirir.",
+      "C": "Doğru: Bariyer kaybı endojen bakteriyemiye yol açar.",
+      "D": "Yanlış: Ülser florayı artırır, sterilize etmez.",
+      "E": "Yanlış: Mukozit riski belirgin artırır."
+     },
+     "bilgi": [
+      20
      ],
      "benzer_cikmis": []
     }
@@ -1069,6 +2237,117 @@
      ],
      "benzer_cikmis": [
       "9405722feddc"
+     ]
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k12-q04",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Kemoterapili hastada nötrofil 300/mm³ ve ateş 38,5 °C ölçülüyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Eşik 1500/mm³'tür",
+      "B": "Febril nötropeni: nötrofil <500/mm³ + bir kez ≥38,3 °C veya 1 saat ≥38 °C; 1 saat içinde antipsödomonal antibiyotik başlanır",
+      "C": "Tedavi 48 saat beklenir",
+      "D": "Ateş olmadan tanı konamaz her zaman",
+      "E": "Antipsödomonal kapsama gerekmez"
+     },
+     "dogru": "B",
+     "aciklama": "Tanım sayı + sıcaklıktır; ampirik tedavi 1 saat içinde başlar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Febril nötropeni: nötrofil <500/mm³ + bir kez ≥38,3 °C veya 1 saat ≥38 °C; 1 saat içinde antipsödomonal antibiyotik başlanır' seçeneğidir.",
+      "B": "Doğru: Tanım sayı + sıcaklıktır; ampirik tedavi 1 saat içinde başlar.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Febril nötropeni: nötrofil <500/mm³ + bir kez ≥38,3 °C veya 1 saat ≥38 °C; 1 saat içinde antipsödomonal antibiyotik başlanır' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Febril nötropeni: nötrofil <500/mm³ + bir kez ≥38,3 °C veya 1 saat ≥38 °C; 1 saat içinde antipsödomonal antibiyotik başlanır' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Febril nötropeni: nötrofil <500/mm³ + bir kez ≥38,3 °C veya 1 saat ≥38 °C; 1 saat içinde antipsödomonal antibiyotik başlanır' seçeneğidir."
+     },
+     "bilgi": [
+      21,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k12-q05",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Düşük/yüksek risk rejimleri ve glikopeptit endikasyonları soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Yüksek riskli: sefepim/piperasilin-tazobaktam/meropenem/imipenem iv",
+      "B": "Kateter enfeksiyonu ve instabilitede glikopeptit eklenir",
+      "C": "Febril nötropenide antibiyotik yalnızca kültür sonrası başlanır ve dar spektrumlu olmalıdır",
+      "D": "En sık etkenler E. coli, K. pneumoniae ve KNS'lerdir",
+      "E": "Düşük riskli: amoksisilin/klavulanat + siprofloksasin oral"
+     },
+     "dogru": "E",
+     "aciklama": "Ampirik tedavi kültür beklenmeden 1 saat içinde başlanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Düşük riskli: amoksisilin/klavulanat + siprofloksasin oral' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Düşük riskli: amoksisilin/klavulanat + siprofloksasin oral' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Düşük riskli: amoksisilin/klavulanat + siprofloksasin oral' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Düşük riskli: amoksisilin/klavulanat + siprofloksasin oral' seçeneğidir.",
+      "E": "Doğru: Ampirik tedavi kültür beklenmeden 1 saat içinde başlanır."
+     },
+     "bilgi": [
+      22,
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k12-q06",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Febril nötropeninin tanı ölçütleri nelerdir?",
+     "secenekler": {
+      "A": "Nötrofil <5000 ve ateş 37 °C'dir",
+      "B": "Nötrofil normalken tek başına taşikardidir",
+      "C": "Yalnızca lökositoz ve hipotansiyon gerekir",
+      "D": "Nötropeni olmadan ateş yeterlidir",
+      "E": "Nötrofil <500 ve ≥38,3 °C tek ölçüm veya ≥38 °C"
+     },
+     "dogru": "E",
+     "aciklama": "Febril nötropeni nötrofil <500/mm³ ile bir kez ≥38,3 °C veya bir saat ≥38 °C ateştir. Nötropenide inflamasyon baskılandığından ateş tek bulgu olabilir. Tanım ampirik tedaviyi tetikler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Eşik 500/mm³ ve 38,3 °C'dir.",
+      "B": "Yanlış: Nötropeni olmadan tanım karşılanmaz.",
+      "C": "Yanlış: Tanım nötropeni ve ateşe dayanır.",
+      "D": "Yanlış: Nötropeni tanının zorunlu bileşenidir.",
+      "E": "Doğru: Sayı ve ateş eşiği birlikte tanı koydurur."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k12-q07",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Febril nötropenide ampirik tedavinin zamanlaması ve seçimi nasıldır?",
+     "secenekler": {
+      "A": "Kültür sonucu haftalarca beklenir",
+      "B": "Bir saatte antipsödomonal başlanır; riske göre seçilir",
+      "C": "Yalnızca ateş düşürücü verilir",
+      "D": "Antibiyotik yalnızca ateşi geçene ertelenir",
+      "E": "Hep tek doz oral penisilin yeterlidir"
+     },
+     "dogru": "B",
+     "aciklama": "Febril nötropenide bir saat içinde antipsödomonal antibiyotik başlanır; düşük risklide oral amoksisilin-klavulanat + siprofloksasin, yüksek risklide sefepim, piperasilin-tazobaktam veya karbapenem intravenöz verilir. En sık etkenler E. coli, K. pneumoniae ve KNS'dir. Kateter ve cilt tutulumunda glikopeptit eklenir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Kültür alınır ama tedavi beklenmez.",
+      "B": "Doğru: Erken geniş spektrum mortaliteyi azaltır.",
+      "C": "Yanlış: Antipiretik etkeni ortadan kaldırmaz.",
+      "D": "Yanlış: Gecikme sepsis mortalitesini artırır.",
+      "E": "Yanlış: Pseudomonas kapsamı zorunludur."
+     },
+     "bilgi": [
+      22,
+      23,
+      24
+     ],
+     "benzer_cikmis": [
+      "efbf977ee90c"
      ]
     }
    ],
@@ -1184,6 +2463,115 @@
       27
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k13-q04",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Uzamış nötropenili hastada BT'de halo ve hava-hilal belirtili nodüller var. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Etken bakteridir",
+      "B": "Halo belirtisi mantarı dışlar",
+      "C": "Nötropeni riski azaltır",
+      "D": "En sık etken A. fumigatus'tur; inhalasyonla bulaşır; BT'de halo ve hava-hilal tipiktir; uzamış nötropeni (>7 gün) riski artırır",
+      "E": "İnşaat alanları risksizdir"
+     },
+     "dogru": "D",
+     "aciklama": "Aspergilloz küf inhalasyonudur; halo/hilal tanısaldır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'En sık etken A. fumigatus'tur; inhalasyonla bulaşır; BT'de halo ve hava-hilal tipiktir; uzamış nötropeni (>7 gün) riski artırır' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'En sık etken A. fumigatus'tur; inhalasyonla bulaşır; BT'de halo ve hava-hilal tipiktir; uzamış nötropeni (>7 gün) riski artırır' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'En sık etken A. fumigatus'tur; inhalasyonla bulaşır; BT'de halo ve hava-hilal tipiktir; uzamış nötropeni (>7 gün) riski artırır' seçeneğidir.",
+      "D": "Doğru: Aspergilloz küf inhalasyonudur; halo/hilal tanısaldır.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'En sık etken A. fumigatus'tur; inhalasyonla bulaşır; BT'de halo ve hava-hilal tipiktir; uzamış nötropeni (>7 gün) riski artırır' seçeneğidir."
+     },
+     "bilgi": [
+      22,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k13-q05",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Mukormikoz (vasküler invazyon, rinoserebral, diyabet) ile kandida özefajiti karşılaştırılıyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "En sık rinoserebral tutulum; kontrolsüz diyabet ve steroid zemininde ağırdır",
+      "B": "Kandida özefajiti disfaji yapar ve endoskopide saptanır",
+      "C": "Mukormikoz vasküler invazyon ve doku nekrozu yapar",
+      "D": "Mukormikoz yüksek virülanslıdır ve immün sağlamlarda ağır seyreder; aspergillozda halo görülmez",
+      "E": "Mukorales düşük virülanslıdır ancak baskılanmışta ağırdır"
+     },
+     "dogru": "C",
+     "aciklama": "Mukorales düşük virülanslı ama baskılanmışta ağırdır; halo aspergillozundur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Mukormikoz vasküler invazyon ve doku nekrozu yapar' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Mukormikoz vasküler invazyon ve doku nekrozu yapar' seçeneğidir.",
+      "C": "Doğru: Mukorales düşük virülanslı ama baskılanmışta ağırdır; halo aspergillozundur.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Mukormikoz vasküler invazyon ve doku nekrozu yapar' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Mukormikoz vasküler invazyon ve doku nekrozu yapar' seçeneğidir."
+     },
+     "bilgi": [
+      25,
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k13-q06",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "İmmünsüpresyonda kandida ve aspergillus tutulumunun özellikleri nelerdir?",
+     "secenekler": {
+      "A": "Kandida yalnızca ciltte sınırlıdır",
+      "B": "Özefajit mukozal kandidiyazisle hiç ilişkisizdir",
+      "C": "Nötropeni mantar riskini azaltır",
+      "D": "Oral-özefageal kandidiyazis; uzamış nötropenide aspergillus",
+      "E": "Mantarlar immünsüpresyonda hiç görülmez"
+     },
+     "dogru": "D",
+     "aciklama": "Oral kandidiyazis ve kandida özefajiti immünsüpresyonda sık görülür; özefajit oral tutulumla birlikte veya ayrı olabilir. Mukozit ve nötropeni kandidemiye zemin hazırlar. Uzamış nötropenide (>7 gün) aspergilloz riski artar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Mukozal kandidiyazis sıktır.",
+      "B": "Yanlış: Özefajit oral tutulumla birlikte olabilir.",
+      "C": "Yanlış: Nötropeni mantar riskini artırır.",
+      "D": "Doğru: Süre uzadıkça küf riski belirginleşir.",
+      "E": "Yanlış: Mantarlar başlıca fırsatçılardandır."
+     },
+     "bilgi": [
+      25,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k13-q07",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Aspergilloz ve mukormikozun bulaş ve doku özellikleri nasıl ayrılır?",
+     "secenekler": {
+      "A": "Aspergillus inhalasyonla; mukor anjiyoinvaziv nekroz yapar",
+      "B": "Her ikisi de yalnızca cinsel yolla bulaşır",
+      "C": "Küfler hep kendini sınırlayan alerji yapar",
+      "D": "Anjiyoinvazyon mantarlarda hiç görülmez",
+      "E": "Mukormikoz yalnızca sağlıklı bireyde görülür"
+     },
+     "dogru": "A",
+     "aciklama": "Aspergilloz toprak ve çürüyen bitkideki küflerin inhalasyonuyla bulaşır; en sık etken A. fumigatus'tur. Mukormikoz vasküler invazyon ve doku nekrozuyla seyreder. Anjiyoinvazyon infarkt ve siyah nekrotik doku oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: İnhalasyon ve damar invazyonu tipik yollardır.",
+      "B": "Yanlış: Bulaş çevresel spor inhalasyonuyladır.",
+      "C": "Yanlış: İnvaziv hastalık mortalitesi yüksektir.",
+      "D": "Yanlış: Anjiyoinvazyon mukormikozun imzasıdır.",
+      "E": "Yanlış: Mukormikoz immünsüprese ve diyabetikte görülür."
+     },
+     "bilgi": [
+      26,
+      27
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -1283,6 +2671,112 @@
       29
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k14-q04",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Allojenik nakil sonrası 3. haftada cilt döküntüsü, ishal ve karaciğer test bozukluğu gelişiyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "GVHH donör T lenfositlerinin cilt-karaciğer-GİS'i tutan immün reaksiyonudur; en yüksek enfeksiyon riski allojenik alıcılardadır; engraftman 2-3 hafta sürer",
+      "B": "GVHH alıcı hücrelerin donörü tutmasıdır",
+      "C": "En yüksek risk otologdadır",
+      "D": "Engraftman 1 günde olur",
+      "E": "GVHH enfeksiyon riskini azaltır"
+     },
+     "dogru": "A",
+     "aciklama": "GVHH donör T hücre reaksiyonudur; allojenik risk en yüksektir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: GVHH donör T hücre reaksiyonudur; allojenik risk en yüksektir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'GVHH donör T lenfositlerinin cilt-karaciğer-GİS'i tutan immün reaksiyonudur; en yüksek enfeksiyon riski allojenik alıcılardadır; engraftman 2-3 hafta sürer' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'GVHH donör T lenfositlerinin cilt-karaciğer-GİS'i tutan immün reaksiyonudur; en yüksek enfeksiyon riski allojenik alıcılardadır; engraftman 2-3 hafta sürer' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'GVHH donör T lenfositlerinin cilt-karaciğer-GİS'i tutan immün reaksiyonudur; en yüksek enfeksiyon riski allojenik alıcılardadır; engraftman 2-3 hafta sürer' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'GVHH donör T lenfositlerinin cilt-karaciğer-GİS'i tutan immün reaksiyonudur; en yüksek enfeksiyon riski allojenik alıcılardadır; engraftman 2-3 hafta sürer' seçeneğidir."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k14-q05",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Hazırlık rejimi ve enfeksiyon kaynakları soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kaynaklar kemik iliği, periferik kan ve kord kanıdır",
+      "B": "Hazırlık yüksek doz KT + tüm vücut RT'dir",
+      "C": "Alıcı-vericideki geçirilmiş enfeksiyonlar reaktivasyon/bulaş riski taşır",
+      "D": "Nakil enfeksiyon riskini ortadan kaldırır ve GVHH yalnızca böbreği tutar",
+      "E": "Engraftman 2-3 haftadır"
+     },
+     "dogru": "A",
+     "aciklama": "Nakil riski artırır; GVHH cilt-karaciğer-GİS tutar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Nakil riski artırır; GVHH cilt-karaciğer-GİS tutar.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kaynaklar kemik iliği, periferik kan ve kord kanıdır' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kaynaklar kemik iliği, periferik kan ve kord kanıdır' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kaynaklar kemik iliği, periferik kan ve kord kanıdır' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kaynaklar kemik iliği, periferik kan ve kord kanıdır' seçeneğidir."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k14-q06",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Kök hücre naklinin kaynakları ve engraftman süresi nedir?",
+     "secenekler": {
+      "A": "Kaynak yalnızca dalak dokusudur",
+      "B": "Hazırlık rejimi gerekmeden nakil yapılır",
+      "C": "Kaynak ilik-kan-kord; engraftman 2-3 haftadır",
+      "D": "Engraftman saatler içinde tamamlanır",
+      "E": "Radyoterapi nakilde hiç kullanılmaz"
+     },
+     "dogru": "C",
+     "aciklama": "Kök hücre kaynakları kemik iliği, periferik kan ve kord kanıdır; hazırlık rejimi yüksek doz kemoterapi ve tüm vücut radyoterapisidir. Engraftman süresi 2-3 haftadır. Bu dönem derin nötropeniyle geçer.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Kaynaklar ilik, periferik kan ve korddur.",
+      "B": "Yanlış: Miyeloablatif hazırlık rejimi zorunludur.",
+      "C": "Doğru: Hazırlık sonrası 2-3 haftada engraftman olur.",
+      "D": "Yanlış: Engraftman haftalar sürer.",
+      "E": "Yanlış: Tüm vücut radyoterapisi rejim bileşenidir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k14-q07",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Graft versus host hastalığının mekanizması ve tutulum bölgeleri nelerdir?",
+     "secenekler": {
+      "A": "Alıcının kendi hücreleri donörü reddeder",
+      "B": "Yalnızca böbrek tutulumuyla seyreder",
+      "C": "Antikor eksikliğinden kaynaklanan enfeksiyondur",
+      "D": "Nakil sonrası hiç immünsüpresyon gerekmez",
+      "E": "Donör T hücreleri cilt-karaciğer-GIS'e saldırır"
+     },
+     "dogru": "E",
+     "aciklama": "GVHH donör sağlıklı T lenfositlerinin alıcı dokularına saldırısıyla organ bozukluğu yapar; sıklıkla cilt, karaciğer ve GIS tutulur. Şiddetli immünolojik reaksiyon nakil mortalitesini artırır. İmmünsüpresyonla kontrol edilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: GVHH donör hücrelerinin alıcıya saldırısıdır.",
+      "B": "Yanlış: Başlıca hedefler cilt, karaciğer ve GIS'tir.",
+      "C": "Yanlış: GVHH immünolojik reaksiyondur, enfeksiyon değildir.",
+      "D": "Yanlış: GVHH profilaksi ve tedavisi immünsüpresiftir.",
+      "E": "Doğru: Donör T hücreleri alıcı epitelini hedefler."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1368,12 +2862,119 @@
       32
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k15-q04",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Böbrek nakilli hastada 3. ayda CMV ve PCP gelişiyor; profilaksi sorgulanıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İlk ay fırsatçı dönemdir",
+      "B": "6. aydan sonra risk sıfırdır",
+      "C": "1-6. aylar fırsatçı enfeksiyonların zirvesidir (CMV, PCP, invaziv mantar); PCP için TMP/SMZ profilaksisi kullanılır",
+      "D": "Profilaksi gerekmez",
+      "E": "CMV nakilde görülmez"
+     },
+     "dogru": "C",
+     "aciklama": "Yoğun immünsüpresyonun 1-6. ayında fırsatçılar zirve yapar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '1-6. aylar fırsatçı enfeksiyonların zirvesidir (CMV, PCP, invaziv mantar); PCP için TMP/SMZ profilaksisi kullanılır' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '1-6. aylar fırsatçı enfeksiyonların zirvesidir (CMV, PCP, invaziv mantar); PCP için TMP/SMZ profilaksisi kullanılır' seçeneğidir.",
+      "C": "Doğru: Yoğun immünsüpresyonun 1-6. ayında fırsatçılar zirve yapar.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '1-6. aylar fırsatçı enfeksiyonların zirvesidir (CMV, PCP, invaziv mantar); PCP için TMP/SMZ profilaksisi kullanılır' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '1-6. aylar fırsatçı enfeksiyonların zirvesidir (CMV, PCP, invaziv mantar); PCP için TMP/SMZ profilaksisi kullanılır' seçeneğidir."
+     },
+     "bilgi": [
+      30,
+      31,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k15-q05",
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "Dönemsel enfeksiyonlar (<1 ay, 1-6 ay, >6 ay) sıralanıyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "1-6 ay: CMV, BKV, EBV/VZV/HSV reaktivasyonu, mantar, PCP, toksoplazma, Tbc",
+      "B": "Kalp naklinde TMP/SMZ profilaksisi uygulanır",
+      "C": ">6 ay greft fonksiyonuna göre risk değişir",
+      "D": "<1 ay: cerrahi alan, nozokomiyal, aspirasyon, kateter ilişkili",
+      "E": "Nakilde ilk ay fırsatçı enfeksiyon zirvesidir ve PCP profilaksisi kontrendikedir"
+     },
+     "dogru": "D",
+     "aciklama": "Zirve 1-6. aylardır; TMP/SMZ profilaksisi uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '<1 ay: cerrahi alan, nozokomiyal, aspirasyon, kateter ilişkili' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '<1 ay: cerrahi alan, nozokomiyal, aspirasyon, kateter ilişkili' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '<1 ay: cerrahi alan, nozokomiyal, aspirasyon, kateter ilişkili' seçeneğidir.",
+      "D": "Doğru: Zirve 1-6. aylardır; TMP/SMZ profilaksisi uygulanır.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '<1 ay: cerrahi alan, nozokomiyal, aspirasyon, kateter ilişkili' seçeneğidir."
+     },
+     "bilgi": [
+      30,
+      31,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k15-q06",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Solid organ naklinde dönemlere göre enfeksiyon dağılımı nasıldır?",
+     "secenekler": {
+      "A": "Her dönemde yalnızca cerrahi enfeksiyon görülür",
+      "B": "Erken nozokomiyal; 1-6. ayda fırsatçı enfeksiyonlar",
+      "C": "Fırsatçılar yalnızca ilk haftada görülür",
+      "D": "CMV nakil hastasında hiç reaktive olmaz",
+      "E": "Zamanlama enfeksiyon tipini hiç etkilemez"
+     },
+     "dogru": "B",
+     "aciklama": "İlk ayda cerrahi alan, nozokomiyal, aspirasyon ve kateter ilişkili enfeksiyonlar; 1-6. ayda CMV, BKV, EBV-VZV-HSV reaktivasyonu, invaziv mantar, PCP ve toksoplazmozis gibi fırsatçılar görülür. Zamanlama immünsüpresyon yoğunluğunu yansıtır. Profilaksi bu takvime göre planlanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Geç dönemde fırsatçılar baskındır.",
+      "B": "Doğru: Erken anatomik, geç immünolojik risk belirgindir.",
+      "C": "Yanlış: Fırsatçılar 1-6. ayda yoğunlaşır.",
+      "D": "Yanlış: CMV reaktivasyonu tipik geç dönem sorunudur.",
+      "E": "Yanlış: Zamanlama etken tahmininin temelidir."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon-k15-q07",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Solid organ naklinde PCP profilaksisinin standardı nedir?",
+     "secenekler": {
+      "A": "PCP profilaksisi nakilde kontrendikedir",
+      "B": "TMP/SMZ mantarları tedavi etmek için verilir",
+      "C": "Profilakside ateş düşürücü yeterlidir",
+      "D": "Kalp naklinde PCP için TMP/SMZ profilaksisi verilir",
+      "E": "Profilaksi sorgulanmadan antibiyotik başlanır"
+     },
+     "dogru": "D",
+     "aciklama": "Kalp nakli alıcılarında PCP'ye karşı profilaktik TMP/SMZ kullanılır. TMP/SMZ Pneumocystis'in folat sentezini bloke ederek profilaksi sağlar. Yaklaşımda immünsüpresyon nedeni, etkilenen yanıt ve profilaksi durumu sorgulanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: TMP/SMZ profilaksisi standarttır.",
+      "B": "Yanlış: TMP/SMZ Pneumocystis ve bazı bakterilere etkilidir.",
+      "C": "Yanlış: Antipiretik profilaksi sağlamaz.",
+      "D": "Doğru: Folat blokajı PCP gelişimini engeller.",
+      "E": "Yanlış: Profilaksi durumu mutlaka sorgulanır."
+     },
+     "bilgi": [
+      32,
+      33
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 45,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:48"
+ ]
 }

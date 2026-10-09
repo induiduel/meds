@@ -7,6 +7,9 @@ Temel İlkeler:
 2. "Her kazanımın illa bir sorusu olmak zorunda değil, aynısı örnek sorular için de geçerli" (Sorusu olmayan kazanım temiz [] kalır).
 3. "Kazanımlarda uygun kazanımın altına uygun çıkmışı ekle" (Sorular veritabanındaki eşleşmelere ve anlamsal örtüşmeye göre en uygun tekil kazanıma bağlanır).
 4. Müfredat paketi (Kurul -> Ders -> Konu) hiyerarşisi korunur.
+   (Düzeltme 2026-10-09: aday havuzunda DERS eşleşmesi zorunlu; atamada konu
+   ayırt edici kök eşiği aranır; ilk-kazanıma zorla atama kaldırıldı; kurul-dışı
+   sorular elenir; Faz8 zenginleştirmesi yalnız ders uyumluysa kullanılır.)
 
 Kaynaklar:
 1. meds_database/ortak/veri/mufredat_baglantilari/mufredat_paketi.json (Resmî müfredat ağacı)
@@ -44,6 +47,79 @@ def norm_key(s: str) -> str:
     s = s.lower().replace("’", "'").replace("`", "'").replace("–", "-").replace("—", "-")
     s = s.replace("ı", "i").replace("ö", "o").replace("ü", "u").replace("ş", "s").replace("ç", "c").replace("ğ", "g")
     return re.sub(r"[^a-z0-9]", "", s)
+
+# --- Düzeltme 2026-10-09 (kazanım→çıkmış denetimi): ders filtresi + ayırt edici kök eşiği ---
+# Sorun: aday havuzu yalnız konuya bakıyordu (ders yok) ve K2-6'da ilk kazanım
+# örtüşme 0 olsa bile ilk adayı alıyordu (zorla atama). Ayrıca Faz8'in jenerik
+# sözcük çakışmalı eşleşmeleri ve pastQuestions topic etiket hataları aynen taşınıyordu.
+KURUL_CODE_MAP = {1: "TIP310", 2: "TIP320", 3: "TIP330", 4: "TIP340", 5: "TIP350", 6: "TIP360"}
+CID_TO_KURUL = {}
+for _k, _c in KURUL_CODE_MAP.items():
+    CID_TO_KURUL[f"donem3-kurul{_k}"] = _k
+    CID_TO_KURUL[_c] = _k
+
+def _kanonik_ders_key(s: str) -> str:
+    k = norm_key(s).replace("anesteziyoloji", "anestezi")
+    return k
+
+def ders_eslesiyor(ders_a: str, ders_b: str) -> bool:
+    ka, kb = _kanonik_ders_key(ders_a), _kanonik_ders_key(ders_b)
+    if not ka or not kb:
+        return False
+    if ka == kb or ka in kb or kb in ka:
+        return True
+    # Komşu disiplin eşdeğerliği (çift yönlü)
+    return DERS_ESDEGER.get(ka) == kb or DERS_ESDEGER.get(kb) == ka
+
+def kurul_eslesiyor(committee_id: str, k_num: int) -> bool:
+    if not committee_id:
+        return False
+    if committee_id in ("donem3-final", "donem3-butunleme"):
+        return True
+    return CID_TO_KURUL.get(committee_id) == k_num
+
+def kok6(s: str) -> set:
+    if not s:
+        return set()
+    s = s.lower().replace("’", "'").replace("`", "'").replace("–", "-").replace("—", "-")
+    s = s.replace("ı", "i").replace("ö", "o").replace("ü", "u").replace("ş", "s").replace("ç", "c").replace("ğ", "g")
+    return {w[:6] for w in re.findall(r"[a-z0-9]{3,}", s) if len(w) >= 4}
+
+# Jenerik akademik sözcük kökleri (ayırt edici değildir, eşikten düşülür)
+JENERIK_KOKLER = {
+    "tani", "tanim", "tedavi", "klinik", "temel", "kavram", "mekani", "etiyol", "etyolo",
+    "patofi", "sempto", "belirt", "bulgu", "yaklas", "yoneti", "genel", "hasta", "hastal",
+    "hastay", "sendro", "sistem", "bozukl", "yontem", "ozelli", "neden", "sonuc",
+    "faktor", "olcum", "degerl", "nedenl", "iliskili", "iliski",
+    "fizik", "muayen",
+    # Görev/jenerik fiil ve laboratuvar kalıpları (yanlış köprü kuruyordu:
+    # "fizik muayene"→entübasyon, "düzey/normal"→PCOS, "hastada kullanılan"→entübasyon)
+    "duzeyl", "normal", "sirala", "hastad", "kullan", "acikla", "bilir", "leri", "risk",
+}
+
+# Komşu disiplin eşdeğerlikleri (müfredatta ayrı ders yok; Faz8 de aynı derse bağlıyor)
+DERS_ESDEGER = {
+    "tibbimikrobiyoloji": "enfeksiyonhastaliklari",
+}
+
+def ayirt_edici_konu_kokleri(konu_adi: str, ders_adi: str) -> set:
+    kokler = kok6(konu_adi) - JENERIK_KOKLER - kok6(ders_adi or "")
+    return kokler
+
+# Doğrulanmış yanlışlar için karantina (kök-okumalı hükümle; 2026-10-09).
+# 063f26d23675: kolon divertiküler hastalığı sorusu; Faz8 sm/sk "Mesane" diyor ama
+# kök kolon-divertikül (ürogenital kurulda kolon konusu yok) → kurul-dışı şüphesiyle karantina.
+Q_KARANTINA = {
+    "063f26d23675": "kolon-divertikul sorusu mesane kazanımına Faz8 hatasıyla bağlanmış; kurul/konu dışı",
+}
+Q_ETIKET_DUZELTME = {
+    # pastQuestions'taki kanıtlı yanlış topic/discipline etiketleri için yerel düzeltme
+    # (kaynak dosyaya dokunulmaz; yalnız bu katalogun eşleşmesinde geçerli).
+    # past-q-...-136: parotis (tükrük bezi) adenomu "Ürogenital..." diye etiketlenmişti.
+    "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-136": {
+        "topic": "Tükrük Bezi Tümörleri",
+    },
+}
 
 print("1. Veri kaynakları ve soru haritaları yükleniyor...")
 
@@ -125,6 +201,10 @@ with open(ROOT / "meds_database/ortak/veri/mufredat_baglantilari/soru_mufredat.j
 # 7. Çıkmış Sorular Kataloğu
 with open(DATA_DIR / "pastQuestions.json", encoding="utf-8") as f:
     past_questions = json.load(f)
+for q in past_questions:
+    duz = Q_ETIKET_DUZELTME.get(q.get("id", ""))
+    if duz:
+        q.update(duz)
 pq_by_id = {q["id"]: q for q in past_questions}
 
 # 8. Ders Özetleri
@@ -193,7 +273,7 @@ for kurul_info in mufredat_pkg["kurullar"]:
         if q.get("committeeId") in (cid, k_code) and q["id"] not in assigned_question_ids
     ]
 
-    for d in kurul_info["dersler"]:
+    for d_idx, d in enumerate(kurul_info["dersler"]):
         ders_name = d["ders"].strip()
         ders_norm = norm_key(ders_name)
         konular = d["konular"]
@@ -259,35 +339,71 @@ for kurul_info in mufredat_pkg["kurullar"]:
                 })
 
             # Bu konu altındaki aday soruları belirle (soru_mufredat, soru_kazanim, pastQuestions)
+            # Düzeltme 2026-10-09: konu eşleşmesine ek olarak DERS eşleşmesi zorunlu.
             candidate_topic_questions = []
             for q in available_kurul_questions:
                 if q["id"] in assigned_question_ids:
                     continue
+                if q["id"] in Q_KARANTINA:
+                    continue
                 qid = q["id"]
                 is_match = False
 
-                # 1. soru_muf kontrolü
+                # 1. soru_muf kontrolü (konu + ders)
                 sm_info = soru_muf.get(qid)
-                if sm_info and norm_key(sm_info.get("konu", "")) == konu_norm:
+                if (sm_info and norm_key(sm_info.get("konu", "")) == konu_norm
+                        and ders_eslesiyor(sm_info.get("ders", ""), ders_name)):
                     is_match = True
-                
-                # 2. soru_kazanim kontrolü
+
+                # 2. soru_kazanim kontrolü (konu + ders + Faz8 konusunun soru topiğiyle tutarlılığı).
+                # Son şart, Faz8'in yanlış konuya kancaladığı soruların (örn. parotis→ürogenital)
+                # aday havuzuna sızmasını engeller.
                 sk_info = q_to_soru_kazanim.get(qid)
-                if not is_match and sk_info and norm_key(sk_info.get("konu", "")) == konu_norm:
-                    is_match = True
+                if (not is_match and sk_info and norm_key(sk_info.get("konu", "")) == konu_norm
+                        and ders_eslesiyor(sk_info.get("ders", ""), ders_name)):
+                    sk_konu_norm = norm_key(sk_info.get("konu", ""))
+                    if (not q_top_norm or sk_konu_norm in q_top_norm or q_top_norm in sk_konu_norm
+                            or ders_eslesiyor(q.get("discipline", ""), sk_info.get("ders", ""))):
+                        is_match = True
 
-                # 3. archive kontrolü
+                # 3. archive kontrolü (konu + ders; arşivde ders boşsa konu yeterli)
                 arch_info = q_to_archive_kazanim.get(qid)
-                if not is_match and arch_info and norm_key(arch_info.get("konu", "")) == konu_norm:
+                if (not is_match and arch_info and norm_key(arch_info.get("konu", "")) == konu_norm
+                        and (not arch_info.get("ders") or ders_eslesiyor(arch_info.get("ders", ""), ders_name))):
                     is_match = True
 
-                # 4. pastQuestions topic kontrolü
+                # 4. pastQuestions topic kontrolü (konu alt-dizgi + soru disiplini dersle uyumlu olmalı)
                 q_top_norm = norm_key(q.get("topic", ""))
-                if not is_match and q_top_norm and (q_top_norm == konu_norm or q_top_norm in konu_norm or konu_norm in q_top_norm):
+                if (not is_match and q_top_norm
+                        and (q_top_norm == konu_norm or q_top_norm in konu_norm or konu_norm in q_top_norm)
+                        and ders_eslesiyor(q.get("discipline", ""), ders_name)):
                     is_match = True
 
                 if is_match:
                     candidate_topic_questions.append(q)
+
+            # Konu düzeyinde ayırt edici kök eşiği soru_kabul içinde
+            # (konu + kazanım metni birleşimiyle) hesaplanır.
+
+            def soru_konu_destegi(q: dict, kaz_text: str = "") -> int:
+                # Birincil kanıt: kök + açıklama + topic + disiplin.
+                # Konu kökleri YETERSİZSE kazanım metni kökleri de katılır
+                # (K1'in özgül kazanım cümleleri; K2-6 şablonları zaten konu köklerine indirgenir).
+                # Faz8/arşiv kazanım metinleri DAHİL EDİLMEZ (döngüsel kanıt olur).
+                kokler = (kok6(konu_name) | kok6(kaz_text or "")) - JENERIK_KOKLER - kok6(ders_name)
+                sinyal = kok6(q.get("stem", "") + " " + (q.get("explanation") or "")
+                              + " " + q.get("topic", "") + " " + q.get("discipline", ""))
+                return len(kokler.intersection(sinyal)), len(kokler)
+
+            def soru_kabul(q: dict, kaz_text: str = "") -> bool:
+                if not kurul_eslesiyor(q.get("committeeId", ""), k_num):
+                    return False
+                destek, kok_sayisi = soru_konu_destegi(q, kaz_text)
+                if kok_sayisi == 0:
+                    # Ne konu ne kazanım ayırt edici kök vermiyorsa (tamamen jenerik
+                    # başlık) metadata tek başına yeterli sayılmaz; boş bırakılır.
+                    return False
+                return destek >= min(2, kok_sayisi)
 
             # Kazanımları üret
             kazanim_items = []
@@ -340,8 +456,11 @@ for kurul_info in mufredat_pkg["kurullar"]:
                     kazanim_cikmis = []
 
                     # 1. Öncelik: ornek_sorular'da doğrudan bu kazanım no'ya eşlenmiş çıkmış sorular
+                    # (manuel kürasyon; yalnız kurul filtresi uygulanır)
                     for q in list(candidate_topic_questions):
                         if q["id"] in assigned_question_ids:
+                            continue
+                        if not kurul_eslesiyor(q.get("committeeId", ""), k_num):
                             continue
                         exp_map = q_to_k1_explicit_kazanim.get(q["id"])
                         if exp_map and exp_map[0] == konu_norm and exp_map[1] == k_idx_num:
@@ -349,30 +468,20 @@ for kurul_info in mufredat_pkg["kurullar"]:
                             assigned_question_ids.add(q["id"])
                             candidate_topic_questions.remove(q)
 
-                    # 2. Öncelik: Bu konunun diğer aday sorularından en yüksek benzerliğe sahip olanlar
-                    # Her kazanım en fazla 3 soru alabilir, eğer benzerlik yüksekse (skor >= 2)
+                    # 2. Öncelik: ayırt edici konu kökleriyle desteklenen adaylar (en fazla 3 soru).
+                    # Jenerik şablon sözcükleriyle gelen sahte örtüşmeler elenir.
                     for q in list(candidate_topic_questions):
                         if len(kazanim_cikmis) >= 3:
                             break
                         if q["id"] in assigned_question_ids:
                             continue
-
-                        q_text = (q.get("stem", "") + " " + q.get("explanation", ""))
-                        q_tokens = norm_tokens(q_text)
-                        
-                        # soru_kazanim metni varsa onu da hesaba kat
-                        sk = q_to_soru_kazanim.get(q["id"])
-                        if sk and sk.get("kazanim_text"):
-                            q_tokens.update(norm_tokens(sk["kazanim_text"]))
-
-                        overlap = len(kaz_tokens.intersection(q_tokens))
-                        if overlap >= 2:
+                        if soru_kabul(q, kaz_text):
                             kazanim_cikmis.append(format_question(q))
                             assigned_question_ids.add(q["id"])
                             candidate_topic_questions.remove(q)
 
                     kazanim_items.append({
-                        "id": f"k{k_num}-{c_idx+1}-kz-{k_idx_num}",
+                        "id": f"k{k_num}-d{d_idx+1}-c{c_idx+1}-kz-{k_idx_num}",
                         "metin": kaz_text,
                         "slaytlar": slaytlar if k_idx_num <= 2 else slaytlar[:1],
                         "cikmisSorular": kazanim_cikmis,
@@ -398,31 +507,23 @@ for kurul_info in mufredat_pkg["kurullar"]:
                             base_objectives.append(f"{kp_clean} mekanizmasını ve klinik önemini analiz eder.")
 
                 for k_idx_num, kaz_text in enumerate(base_objectives, 1):
-                    kaz_tokens = norm_tokens(kaz_text)
                     kazanim_cikmis = []
 
-                    # Bu kazanıma en uygun aday soruları tekil ata (en fazla 3 soru)
+                    # Bu kazanıma en uygun aday soruları tekil ata (en fazla 3 soru).
+                    # Düzeltme 2026-10-09: ilk-kazanıma zorla atama kaldırıldı;
+                    # desteklenmeyen kazanım boş kalır (ilke 2).
                     for q in list(candidate_topic_questions):
                         if len(kazanim_cikmis) >= 3:
                             break
                         if q["id"] in assigned_question_ids:
                             continue
-
-                        q_text = (q.get("stem", "") + " " + q.get("explanation", ""))
-                        q_tokens = norm_tokens(q_text)
-
-                        sk = q_to_soru_kazanim.get(q["id"]) or q_to_archive_kazanim.get(q["id"])
-                        if sk and sk.get("kazanim_text"):
-                            q_tokens.update(norm_tokens(sk["kazanim_text"]))
-
-                        overlap = len(kaz_tokens.intersection(q_tokens))
-                        if overlap >= 2 or (k_idx_num == 1 and len(kazanim_cikmis) == 0):
+                        if soru_kabul(q, kaz_text):
                             kazanim_cikmis.append(format_question(q))
                             assigned_question_ids.add(q["id"])
                             candidate_topic_questions.remove(q)
 
                     kazanim_items.append({
-                        "id": f"k{k_num}-{c_idx+1}-kz-{k_idx_num}",
+                        "id": f"k{k_num}-d{d_idx+1}-c{c_idx+1}-kz-{k_idx_num}",
                         "metin": kaz_text,
                         "slaytlar": slaytlar if k_idx_num == 1 else [],
                         "cikmisSorular": kazanim_cikmis,

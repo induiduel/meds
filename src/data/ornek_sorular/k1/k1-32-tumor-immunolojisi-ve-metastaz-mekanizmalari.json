@@ -6,6 +6,7 @@
  "konu": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
  "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
  "tarih": "2026-09-29",
+ "soru_sayisi": 107,
  "kazanimlar": [
   {
    "no": 1,
@@ -117,6 +118,276 @@
       6
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k01-q05",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Melanomlu hastada BRAF-mutant neoantijenler, testis dışı dokuda MAGE ekspresyonu ve HPV pozitif serviks tümöründe viral proteinler saptanmıştır. Gözetim ve antijenlerle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Gözetim yoktur.",
+      "B": "Neoantijenler tolerandır.",
+      "C": "Testis antijenleri her dokuda ekspresedir.",
+      "D": "Viral antijen sunulmaz.",
+      "E": "Gözetim: bağışıklığın sürekli malign hücreyi tanıyıp yok etmesidir. Kaynaklar: neoantijenler (sürücü/yolcu mutasyon-yeni peptit, tolerans yok, immünojenik), kanser-testis (testiste MHC-I düşük, diğer dokuda sessiz), diferansiyasyon, aşırı/anormal ekspresyon (HER2, glikozilasyon-fosforilasyon değişimi), viral (HPV, EBV, HBV, HCV, KSHV; MHC-I sunumu)."
+     },
+     "dogru": "E",
+     "aciklama": "Gözetim tanımı ve beş antijen kaynağı doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; gözetim tanımlıdır.",
+      "B": "Yanlış; tolerans gelişmemiştir.",
+      "C": "Yanlış; diğer dokuda sessizdir.",
+      "D": "Yanlış; MHC-I ile sunulur.",
+      "E": "Doğru. Gözetim ve kaynaklar doğrudur."
+     },
+     "bilgi": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k01-q06",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "BRAF-mutant melanom, MAGE ekspresyonlu tümör ve HPV pozitif serviks olgusunda tümör antijenleriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Neoantijenler mutasyonla yeni peptit oluşturur.",
+      "B": "Neoantijenler öz toleranslıdır ve viral antijenler sunulmaz; gözetim tümörü destekler.",
+      "C": "HER2 aşırı ekspresyonu antijen kaynağıdır.",
+      "D": "Onkojenik virüs proteinleri MHC-I ile sunulur.",
+      "E": "Kanser-testis antijenleri normalde testis germ hücrelerindedir."
+     },
+     "dogru": "B",
+     "aciklama": "Neoantijenler toleranssız-immünojeniktir; viral antijenler sunulur; gözetim yok eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Yanlış ifade (aranan cevap). Üç bilgi de terstir.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bağışıklık gözetimi kavramı ve neoantijenlerin kaynağı nedir?",
+     "secenekler": {
+      "A": "Gözetim tümörü korumaktadır",
+      "B": "Neoantijen öz proteindir",
+      "C": "Gözetim yok etme; neoantijen mutasyon-yüksek yük",
+      "D": "Mutasyon yükü antijeni azaltır",
+      "E": "İnfiltrasyon prognozu değiştirmez"
+     },
+     "dogru": "C",
+     "aciklama": "Bağışıklık gözetimi, sürekli ortaya çıkan malign hücrelerin bağışıklık sistemince saptanıp yok edilmesidir. Kanıtları tümör infiltrasyonunun prognozla ilişkisi, immün yetmezlikte artan tümör riski ve immünoterapi yanıtlarıdır. Neoantijenler sürücü-yolcu mutasyonlarla oluşan yeni peptitlerdir; öz tolerans gelişmemiştir ve yüksek mutasyon yükünde (sigara-akciğer, UV-melanom, MMR kusuru) fazladır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; gözetim malign hücreleri tespit edip yok eder.",
+      "B": "Yanlış; neoantijenler mutasyonla oluşan yeni peptitlerdir.",
+      "C": "Doğru; kavramı, kanıtları ve neoantijen kaynağını verir.",
+      "D": "Yanlış; yüksek mutasyon yükünde neoantijen fazladır.",
+      "E": "Yanlış; infiltrasyon prognozla ilişkilidir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k01-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Kanser-testis, diferansiyasyon, viral ve aşırı ekspresyon antijenleri nelerdir?",
+     "secenekler": {
+      "A": "Kanser-testis her dokudadır",
+      "B": "Tirozinaz yalnızca tümördedir",
+      "C": "Viral antijen MHC II sunulur",
+      "D": "HER2 ekspresyonu azalmıştır",
+      "E": "Testis-tirozinaz-viral-HER2 kaynakları"
+     },
+     "dogru": "E",
+     "aciklama": "Kanser-testis antijenleri normalde yalnız testis germ hücrelerindedir (MHC I düşük, tolerans gelişmeyebilir) ve solid tümörlerde yeniden ifade edilir. Diferansiyasyon antijeni tirozinaz melanosit ve melanomda bulunur. Viral antijenler MHC I ile sunulur: HPV E6/E7, EBV LMP1/EBNA. Aşırı ekspresyon örneği HER2/neu, anormal glikozilasyon-fosforilasyon da antijenik hedef oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; normalde yalnız testis germ hücrelerindedir.",
+      "B": "Yanlış; tirozinaz normal melanosit ve melanomda vardır.",
+      "C": "Yanlış; viral antijenler MHC I ile sunulur.",
+      "D": "Yanlış; HER2/neu aşırı eksprese olur.",
+      "E": "Doğru; dört antijen kaynağını örnekleriyle verir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k01-q09",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"ECM ve bazal membranın yıkımı\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar.",
+      "C": "Bağışıklık sisteminin sürekli ortaya çıkan kötü huylu hücreleri tespit edip yok ettiği süreçtir; bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+      "D": "Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "A": "Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "E": "Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar.",
+      "C": "Yanlış. Bağışıklık sisteminin sürekli ortaya çıkan kötü huylu hücreleri tespit edip yok ettiği süreçtir; bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+      "D": "Yanlış. Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "A": "Yanlış. Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "E": "Yanlış. Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k01-q10",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"PD-L1/PD-1 ekseni\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir.",
+      "D": "Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme.",
+      "E": "Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "C": "Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "B": "Onkojenik virüsler (HPV, EBV, HBV, HCV, KSHV/HHV-8) viral proteinleri tümör hücrelerinde MHC sınıf I ile sunar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir.",
+      "D": "Yanlış. Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme.",
+      "E": "Yanlış. Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "C": "Yanlış. Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "B": "Yanlış. Onkojenik virüsler (HPV, EBV, HBV, HCV, KSHV/HHV-8) viral proteinleri tümör hücrelerinde MHC sınıf I ile sunar."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k01-q11",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Metastaza özgü moleküler değişiklikler\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "E": "Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler.",
+      "D": "İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur.",
+      "C": "İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "A": "Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "E": "Yanlış. Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler.",
+      "D": "Yanlış. İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur.",
+      "C": "Yanlış. İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "A": "Yanlış. Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k01-q12",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Kontrol noktası blokajının avantaj ve sınırları\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "C": "Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "A": "Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "D": "Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "E": "Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "B": "Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "A": "Yanlış. Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "D": "Yanlış. Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "E": "Yanlış. Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "B": "Yanlış. Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k01-q13",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Metastaz potansiyelindeki farklılıklar\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir.",
+      "E": "Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "A": "T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "D": "Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "C": "Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir.",
+      "E": "Yanlış. Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "A": "Yanlış. T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "D": "Yanlış. Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "C": "Yanlış. Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k01-q14",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Kimerik antijen reseptör T hücreleri (CAR-T)\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "B": "MHC sınıf I ekspresyonu β2-mikroglobulin mutasyonları ve antijen sunma yolunun diğer bileşenlerindeki kusurlarla azalır.",
+      "C": "PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir.",
+      "A": "Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "E": "Sürücü veya yolcu mutasyonlar sonucu protein dizisinde yeni peptit oluşumudur; bağışıklık sistemiyle daha önce tanışmadıkları için öz tolerans gelişmemiştir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+     "sik_aciklamalari": {
+      "D": "Doğru. T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "B": "Yanlış. MHC sınıf I ekspresyonu β2-mikroglobulin mutasyonları ve antijen sunma yolunun diğer bileşenlerindeki kusurlarla azalır.",
+      "C": "Yanlış. PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir.",
+      "A": "Yanlış. Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "E": "Yanlış. Sürücü veya yolcu mutasyonlar sonucu protein dizisinde yeni peptit oluşumudur; bağışıklık sistemiyle daha önce tanışmadıkları için öz tolerans gelişmemiştir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -204,6 +475,271 @@
      "bilgi": [
       7,
       10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Tümörde CD8 infiltrasyonu ve IFN-γ üreten Th1 yanıtı izlenen hastada makrofaj aktivasyonu ve ADCC de gösterilmiştir. Efektörlerle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "ADCC T hücre yapar.",
+      "B": "Temel efektör B hücresidir.",
+      "C": "Th1 makrofajı baskılar.",
+      "D": "Temel efektör CD8 CTL + CD4 Th1; NK, makrofaj, ADCC katkıda bulunur. CTL: dendritik çapraz sunum (MHC-I) → klonal genişleme → MHC-I-antijen tanıma → öldürme. Th1 IFN-γ ile makrofaj aktive eder (radikal, NO, lizozomal enzim). Antikor ADCC ve kompleman yapar.",
+      "E": "Çapraz sunum yoktur."
+     },
+     "dogru": "D",
+     "aciklama": "Efektörler ve mekanizmaları (çapraz sunum, IFN-γ, ADCC) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ADCC antikor-NK/makrofajdır.",
+      "B": "Yanlış; temel CD8+Th1'dir.",
+      "C": "Yanlış; Th1 aktive eder.",
+      "D": "Doğru. Efektör mekanizmalar doğrudur.",
+      "E": "Yanlış; dendritik çapraz sunar."
+     },
+     "bilgi": [
+      7,
+      8,
+      9,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "CD8 infiltrasyonlu ve Th1 yanıtlı tümörün efektörleri incelenirken antitümör bağışıklıkla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "CTL MHC-II tanır; Th1 IFN-γ'yı baskılar; makrofajlar antijeni sunamaz.",
+      "B": "Th1 IFN-γ üretir.",
+      "C": "Aktive makrofajlar radikal, NO ve enzim üretir.",
+      "D": "Antikorlar ADCC ve komplemanla etkilidir.",
+      "E": "Dendritik hücreler antijeni MHC-I bağlamında çapraz sunar."
+     },
+     "dogru": "A",
+     "aciklama": "CTL MHC-I tanır; Th1 IFN-γ üretir; makrofaj efektördür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış ifade (aranan cevap). Üç bilgi de hatalıdır.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      8,
+      9,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "CD8+ CTL ve CD4+ Th1-makrofaj kollarının mekanizmaları nelerdir?",
+     "secenekler": {
+      "A": "CTL MHC II tanır",
+      "B": "Çapraz sunum-CTL apoptoz; Th1-makrofaj aktivasyonu",
+      "C": "Th1 doğrudan öldürür",
+      "D": "Makrofajlar antikor üretir",
+      "E": "CTL humoraldir"
+     },
+     "dogru": "B",
+     "aciklama": "Dendritik hücreler tümör antijenini MHC sınıf I ile çapraz sunar; çoğalan tümöre özgü CD8+ CTL klonları MHC I-antijen kompleksini tanıyıp perforin-granzim ve Fas-FasL ile apoptoz yapar. CD4+ Th1 hücreleri IFN-γ ile makrofajları aktive eder; aktive makrofajlar serbest radikal, nitrik oksit ve lizozomal enzimlerle öldürür. Temel efektör CTL'dir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; CTL MHC sınıf I-antijen kompleksini tanır.",
+      "B": "Doğru; iki hücresel kolun mekanizmasını verir.",
+      "C": "Yanlış; Th1 IFN-γ ile makrofajları aktive eder.",
+      "D": "Yanlış; antikorları B hücreleri üretir.",
+      "E": "Yanlış; CTL hücresel bağışıklığın efektörüdür."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "NK hücreleri ve antikorların antitümör mekanizmaları nelerdir?",
+     "secenekler": {
+      "A": "NK MHC varlığında çalışır",
+      "B": "ADCC T hücre yapar",
+      "C": "Antikor solidde temel silahtır",
+      "D": "NK MHC kaybında; antikor ADCC-kompleman",
+      "E": "Humoral hücreselin yerini tutar"
+     },
+     "dogru": "D",
+     "aciklama": "NK hücreleri doğal öldürücüdür; MHC I kaybında devreye girerek CTL'nin göremediği hücreleri yakalayabilir. Antikorlar ADCC (NK, makrofaj) ve kompleman aktivasyonuyla öldürür; solid tümörlerde etkisi sınırlı, bazı hematolojik malignitelerde daha önemlidir. Bu yüzden humoral yanıt hücresel yanıtın tamamlayıcısıdır, yerini tutmaz.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; NK özellikle MHC kaybında devreye girer.",
+      "B": "Yanlış; ADCC'yi NK ve makrofajlar yapar.",
+      "C": "Yanlış; solid tümörlerde antikor etkisi sınırlıdır.",
+      "D": "Doğru; NK tetikleyicisini ve antikor mekanizmalarını verir.",
+      "E": "Yanlış; humoral yanıt tamamlayıcıdır, temel CTL'dir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k02-q08",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"CTLA-4\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "A": "Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "E": "Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "B": "Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "D": "Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "C": "PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "E": "Yanlış. Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "B": "Yanlış. Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "D": "Yanlış. Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "C": "Yanlış. PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k02-q09",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "\"Diğer immünoterapi yaklaşımları\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tümör spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşıları ve tümöre spesifik T hücrelerin in vitro çoğaltılıp geri verildiği adaptif T hücre transferi uygulanır.",
+      "B": "Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "C": "Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "D": "Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "E": "Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Tümör spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşıları ve tümöre spesifik T hücrelerin in vitro çoğaltılıp geri verildiği adaptif T hücre transferi uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Tümör spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşıları ve tümöre spesifik T hücrelerin in vitro çoğaltılıp geri verildiği adaptif T hücre transferi uygulanır.",
+      "B": "Yanlış. Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "C": "Yanlış. Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "D": "Yanlış. Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "E": "Yanlış. Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k02-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Kanser-bağışıklık-metastaz ilişkisi\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "B": "Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar.",
+      "D": "Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "C": "PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir.",
+      "A": "Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "B": "Yanlış. Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar.",
+      "D": "Yanlış. Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "C": "Yanlış. PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir.",
+      "A": "Yanlış. Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k02-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Th1 ve makrofajlar\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "A": "Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler.",
+      "D": "T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "B": "Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "C": "Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "A": "Yanlış. Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler.",
+      "D": "Yanlış. T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "B": "Yanlış. Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "C": "Yanlış. Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k02-q12",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Kontrol noktası blokajının yan etkileri\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler.",
+      "E": "Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "C": "Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "A": "Normalde testis germ hücrelerinde ifade edilir ve diğer dokularda sessizdir; testis hücrelerinde MHC sınıf I ekspresyonu düşüktür.",
+      "D": "Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler.",
+      "E": "Yanlış. Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "C": "Yanlış. Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "A": "Yanlış. Normalde testis germ hücrelerinde ifade edilir ve diğer dokularda sessizdir; testis hücrelerinde MHC sınıf I ekspresyonu düşüktür.",
+      "D": "Yanlış. Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k02-q13",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Tümör hücre göçü\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "E": "Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "B": "İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "A": "Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+      "C": "MHC sınıf I ekspresyonu β2-mikroglobulin mutasyonları ve antijen sunma yolunun diğer bileşenlerindeki kusurlarla azalır.",
+      "D": "Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "B": "Yanlış. İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "A": "Yanlış. Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+      "C": "Yanlış. MHC sınıf I ekspresyonu β2-mikroglobulin mutasyonları ve antijen sunma yolunun diğer bileşenlerindeki kusurlarla azalır.",
+      "D": "Yanlış. Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler."
+     },
+     "bilgi": [
+      26
      ],
      "benzer_cikmis": []
     }
@@ -332,6 +868,273 @@
       15
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k03-q05",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "CD8 infiltrasyonuna rağmen ilerleyen tümörde β2-mikroglobulin mutasyonu, PD-L1 ekspresyonu ve Treg-MDSC birikimi saptanmıştır. Kaçışla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "PD-L1 T'yi aktive eder.",
+      "B": "MHC-I kaybı tanınmayı artırır.",
+      "C": "İmmünoediting kaçış yeteneği yüksek klonları seçer. MHC-I kaybı (β2-m mutasyonu, sunum kusuru) tanınmayı engeller. PD-L1 (tümör-miyeloid) - PD-1 (aktive T) ve CTLA-4 (negatif düzenleyici) fren yapar. TGF-β, Treg-MDSC baskılar; antijen kaybeden klonlar ve işleme kusuru seçilir.",
+      "D": "Treg immüniteyi güçlendirir.",
+      "E": "Editing yoktur."
+     },
+     "dogru": "C",
+     "aciklama": "Kaçış mekanizmaları (MHC kaybı, kontrol noktaları, baskılayıcılar, antijen kaybı) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; PD-1 fren yapar.",
+      "B": "Yanlış; kayıp tanınmayı engeller.",
+      "C": "Doğru. Kaçış mekanizmaları doğrudur.",
+      "D": "Yanlış; Treg baskılayıcıdır.",
+      "E": "Yanlış; editing tanımlıdır."
+     },
+     "bilgi": [
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k03-q06",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "CD8 infiltrasyonuna rağmen ilerleyen beta2-m mutant, PD-L1'li tümörde bağışıklık kaçışıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "β2-mikroglobulin mutasyonu MHC-I'ı azaltır.",
+      "B": "PD-L1 tümör ve miyeloid hücrelerde, PD-1 aktive T'dedir.",
+      "C": "CTLA-4 T aktivasyonunu negatif düzenler.",
+      "D": "TGF-β, Treg ve MDSC baskılayıcıdır.",
+      "E": "MHC-I kaybı CTL'yi güçlendirir; CTLA-4 aktive eder; Treg-MDSC efektördür."
+     },
+     "dogru": "E",
+     "aciklama": "MHC-I kaybı kaçırır; CTLA-4 frenler; Treg-MDSC baskılar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Yanlış ifade (aranan cevap). Üç yön terstir."
+     },
+     "bilgi": [
+      12,
+      13,
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "MHC I kaybı ve kontrol noktası kaçış mekanizmaları nasıl işler?",
+     "secenekler": {
+      "A": "MHC I kaybı-CTL körlüğü; PD-L1/PD-1 fren",
+      "B": "MHC kaybı CTL'yi güçlendirir",
+      "C": "PD-1 aktivasyonu artırır",
+      "D": "CTLA-4 kostimülatördür",
+      "E": "Kaçış klon seçmez"
+     },
+     "dogru": "A",
+     "aciklama": "β2-mikroglobulin mutasyonları ve sunum yolu kusurlarıyla MHC I kaybı CTL tanımasını engeller; MHC kaybı NK öldürmesini artırabilir ama tümörler NK'yı da baskılar. Tümör ve miyeloid hücrelerdeki PD-L1, aktive T hücredeki PD-1'e bağlanıp aktiviteyi baskılar; CTL tükenmiş fenotipe geçer. CTLA-4 T hücre aktivasyonunu negatif düzenler; bu frenler immün düzenleme (immunoediting) ile kaçış yeteneği en yüksek klonları seçer.",
+     "sik_aciklamalari": {
+      "A": "Doğru; sunum kaybını ve checkpoint frenini özetler.",
+      "B": "Yanlış; MHC I kaybı CTL tanımasını engeller.",
+      "C": "Yanlış; PD-1/PD-L1 T aktivitesini baskılar.",
+      "D": "Yanlış; CTLA-4 aktivasyonu negatif düzenler.",
+      "E": "Yanlış; immunoediting kaçışçı klonları seçer."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k03-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Sitokin-hücre ve antijen kollarındaki kaçış mekanizmaları nelerdir?",
+     "secenekler": {
+      "A": "TGF-β immüniteyi artırır",
+      "B": "Treg efektörü aktive eder",
+      "C": "TGF-β-Treg-MDSC; antijen kaybı-işleme kusuru",
+      "D": "TAP kusuru sunumu artırır",
+      "E": "Antijen kaybı tanımayı artırır"
+     },
+     "dogru": "C",
+     "aciklama": "TGF-β immünsüpresif sitokin olarak T hücre yanıtını baskılar; Treg ve MDSC hücreleri mikroçevrede baskıyı kurumsallaştırır. Hedeflenen antijeni kaybeden alt klonların seçilimi (antijen kaybı) ve proteazom-TAP kusurlarıyla antijen işleme bozukluğu tanımayı kırar. Bu dört kol birlikte tümörün hem görünürlüğünü azaltır hem de gören efektörü felç eder.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; TGF-β immünsüpresif sitokindir.",
+      "B": "Yanlış; Treg baskılayıcı hücredir.",
+      "C": "Doğru; sitokin-hücre ve antijen kollarını verir.",
+      "D": "Yanlış; TAP kusuru işlemeyi bozar.",
+      "E": "Yanlış; kayıp hedefi ortadan kaldırır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k03-q09",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Antitümör bağışıklığın efektörleri\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "E": "Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar.",
+      "B": "PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir.",
+      "C": "Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "A": "Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "D": "Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar.",
+      "B": "Yanlış. PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir.",
+      "C": "Yanlış. Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "A": "Yanlış. Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "D": "Yanlış. Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k03-q10",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "\"Diğer tümör antijeni kaynakları\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "E": "Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "B": "Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "D": "T hücreler üzerindeki \"frenleri\" kaldırma stratejisidir; PD-1 ve PD-L1'e karşı ve CTLA-4'e karşı monoklonal antikorlar kullanılır.",
+      "C": "Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+     "sik_aciklamalari": {
+      "A": "Doğru. Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "E": "Yanlış. Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "B": "Yanlış. Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "D": "Yanlış. T hücreler üzerindeki \"frenleri\" kaldırma stratejisidir; PD-1 ve PD-L1'e karşı ve CTLA-4'e karşı monoklonal antikorlar kullanılır.",
+      "C": "Yanlış. Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k03-q11",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Hücreler arası bağların kaybı\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "E": "İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "C": "Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "B": "Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "D": "Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "E": "Yanlış. İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "C": "Yanlış. Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "B": "Yanlış. Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "D": "Yanlış. Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k03-q12",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"CTLA-4\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "A": "Bağışıklık sisteminin sürekli ortaya çıkan kötü huylu hücreleri tespit edip yok ettiği süreçtir; bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+      "E": "Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "D": "Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar.",
+      "C": "İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "A": "Yanlış. Bağışıklık sisteminin sürekli ortaya çıkan kötü huylu hücreleri tespit edip yok ettiği süreçtir; bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+      "E": "Yanlış. Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "D": "Yanlış. Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar.",
+      "C": "Yanlış. İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k03-q13",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"CTL'nin temel mekanizması\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "C": "Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "A": "MHC sınıf I ekspresyonu β2-mikroglobulin mutasyonları ve antijen sunma yolunun diğer bileşenlerindeki kusurlarla azalır.",
+      "D": "Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "B": "Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "E": "Antikorlar tümör antijenlerine bağlanır; olası etkileri antikor-bağlı hücre aracılı sitotoksisite (ADCC) ve kompleman aktivasyonudur."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "A": "Yanlış. MHC sınıf I ekspresyonu β2-mikroglobulin mutasyonları ve antijen sunma yolunun diğer bileşenlerindeki kusurlarla azalır.",
+      "D": "Yanlış. Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "B": "Yanlış. Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "E": "Yanlış. Antikorlar tümör antijenlerine bağlanır; olası etkileri antikor-bağlı hücre aracılı sitotoksisite (ADCC) ve kompleman aktivasyonudur."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k03-q14",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"Tümör antijenleri\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+      "C": "Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "D": "Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "A": "Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "B": "Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+      "C": "Yanlış. Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "D": "Yanlış. Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "A": "Yanlış. Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "B": "Yanlış. Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -445,6 +1248,273 @@
       17
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k04-q05",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Metastatik melanomda anti-PD-1 ile uzun remisyon sağlanan hastada kolit gelişmiş; B-ALL'li çocukta CAR-T planlanmıştır. Yaklaşımlarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İnhibitörler freni güçlendirir.",
+      "B": "Prensip T'deki frenleri kaldırmaktır (anti-PD-1/PD-L1, anti-CTLA-4). Avantaj uzun remisyon-kür potansiyeli-hafıza; sınır yalnızca bir kısmında yanıt. Yan etki otoimmün-benzeri: kolit, dermatit, pnömonit, endokrinopati. Diğer: kişiselleştirilmiş neoantijen aşıları, adaptif T transferi, CAR-T (yapay reseptör; B-ALL ve bazı lenfomalarda başarılı).",
+      "C": "Hafıza oluşmaz.",
+      "D": "Yan etki yoktur.",
+      "E": "CAR-T antikordur."
+     },
+     "dogru": "B",
+     "aciklama": "Prensip-avantaj-sınır-yan etki ve diğer yaklaşımlar doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; fren kaldırılır.",
+      "B": "Doğru. İmmünoterapiler doğrudur.",
+      "C": "Yanlış; hafıza avantajdır.",
+      "D": "Yanlış; otoimmün toksisite vardır.",
+      "E": "Yanlış; CAR-T yapay reseptörlü T'dir."
+     },
+     "bilgi": [
+      16,
+      17,
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k04-q06",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Anti-PD-1'li melanomda remisyon-kolit ile B-ALL'de CAR-T planlanan olgularda i̇mmünoterapiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Anti-PD-1/PD-L1 ve anti-CTLA-4 monoklonal antikordur.",
+      "B": "Uzun remisyon ve hafıza yanıtı avantajdır.",
+      "C": "Tümörlerin yalnızca bir kısmı yanıt verir.",
+      "D": "Kontrol blokajı tüm tümörleri kür eder ve yan etkisizdir; CAR-T yalnızca solid tümörde kullanılır.",
+      "E": "Kolit, dermatit, pnömonit ve endokrinopati görülebilir."
+     },
+     "dogru": "D",
+     "aciklama": "Yanıt sınırlıdır, toksisite vardır; CAR-T B-ALL ve bazı lenfomalarda başarılıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Yanlış ifade (aranan cevap). Etki ve endikasyon abartılmıştır.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      16,
+      17,
+      18,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kontrol noktası inhibitörlerinin ilkesi ve yanıt özellikleri nelerdir?",
+     "secenekler": {
+      "A": "İnhibitörler T hücreyi baskılar",
+      "B": "Tüm tümörler yanıt verir",
+      "C": "Mutasyon yükü yanıtı azaltır",
+      "D": "Hafıza yanıtı oluşmaz",
+      "E": "Fren kaldırma; melanom-akciğer; mutasyon yükü"
+     },
+     "dogru": "E",
+     "aciklama": "Kontrol noktası inhibitörleri T hücredeki frenleri kaldırır: anti-PD-1, anti-PD-L1 ve anti-CTLA-4 monoklonal antikorlar. Yüksek yanıt melanom, akciğer, mesane karsinomu ve Hodgkin lenfomadadır; avantaj uzun süreli remisyon ve hafıza T ile kalıcı yanıttır. Sınırlama yalnız küçük bir kısmın yanıt vermesidir; yanıt yüksek mutasyon yükü-neoantijen sayısıyla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; inhibitörler freni kaldırarak aktiviteyi artırır.",
+      "B": "Yanlış; tümörlerin yalnız küçük kısmı yanıt verir.",
+      "C": "Yanlış; yüksek yük ve neoantijen yanıtı artırır.",
+      "D": "Yanlış; hafıza T hücreleriyle kalıcı yanıt sağlanır.",
+      "E": "Doğru; ilkeyi, yanıt verenleri ve koşulu verir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k04-q08",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İmmünoterapinin yan etkileri ve diğer hücre-aşı yaklaşımları nelerdir?",
+     "secenekler": {
+      "A": "Yan etki enfeksiyondur yalnızca",
+      "B": "Otoimmün yan etki; aşı-transfer-CAR-T",
+      "C": "CAR-T solidde birincidir",
+      "D": "Sitokin sendromu risksizdir",
+      "E": "Aşılar neoantijenden bağımsızdır"
+     },
+     "dogru": "B",
+     "aciklama": "Yan etkiler otoimmünite benzeridir: kolit, dermatit, pnömonit ve endokrinopatiler; kortikosteroid ve immünsüpresanlarla yönetilir. Tümör aşıları neoantijenleri hedefleyen kişiselleştirilmiş yaklaşımdır. Adaptif T transferinde tümöre özgü T hücreleri çoğaltılıp geri verilir. CAR-T'de yapay reseptörlü T hücreleri B-ALL ve bazı lenfomalarda başarılıdır; ciddi sitokin salınım sendromu riski taşır ve çoğunlukla hematolojide ikinci basamaktır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; kolit-pnömonit-endokrinopati otoimmün benzeridir.",
+      "B": "Doğru; yan etki profilini ve üç yaklaşımı özetler.",
+      "C": "Yanlış; CAR-T hematolojide ikinci basamaktır.",
+      "D": "Yanlış; ciddi sitokin salınım sendromu riski vardır.",
+      "E": "Yanlış; aşılar neoantijenleri hedefler."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k04-q09",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "\"Kanser immün düzenlemesi (immunoediting)\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "C": "Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "D": "PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir.",
+      "A": "Tümör spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşıları ve tümöre spesifik T hücrelerin in vitro çoğaltılıp geri verildiği adaptif T hücre transferi uygulanır.",
+      "E": "İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "C": "Yanlış. Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "D": "Yanlış. PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir.",
+      "A": "Yanlış. Tümör spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşıları ve tümöre spesifik T hücrelerin in vitro çoğaltılıp geri verildiği adaptif T hücre transferi uygulanır.",
+      "E": "Yanlış. İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k04-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "\"ECM'ye bağlanmadaki değişiklikler\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "E": "Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "A": "MHC sınıf I ekspresyonu β2-mikroglobulin mutasyonları ve antijen sunma yolunun diğer bileşenlerindeki kusurlarla azalır.",
+      "B": "Tümör spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşıları ve tümöre spesifik T hücrelerin in vitro çoğaltılıp geri verildiği adaptif T hücre transferi uygulanır.",
+      "C": "Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "E": "Yanlış. Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "A": "Yanlış. MHC sınıf I ekspresyonu β2-mikroglobulin mutasyonları ve antijen sunma yolunun diğer bileşenlerindeki kusurlarla azalır.",
+      "B": "Yanlış. Tümör spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşıları ve tümöre spesifik T hücrelerin in vitro çoğaltılıp geri verildiği adaptif T hücre transferi uygulanır.",
+      "C": "Yanlış. Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k04-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"ECM'ye bağlanmadaki değişiklikler\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "D": "Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "E": "Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar.",
+      "A": "Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "C": "Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "B": "İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "E": "Yanlış. Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar.",
+      "A": "Yanlış. Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "C": "Yanlış. Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "B": "Yanlış. İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k04-q12",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Tümör hücre göçü\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "B": "T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "D": "Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme.",
+      "C": "Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "A": "Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "B": "Yanlış. T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "D": "Yanlış. Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme.",
+      "C": "Yanlış. Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "A": "Yanlış. Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k04-q13",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Viral tümör antijenleri\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "C": "Onkojenik virüsler (HPV, EBV, HBV, HCV, KSHV/HHV-8) viral proteinleri tümör hücrelerinde MHC sınıf I ile sunar.",
+      "B": "Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme.",
+      "D": "Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "E": "İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "A": "Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Onkojenik virüsler (HPV, EBV, HBV, HCV, KSHV/HHV-8) viral proteinleri tümör hücrelerinde MHC sınıf I ile sunar.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Onkojenik virüsler (HPV, EBV, HBV, HCV, KSHV/HHV-8) viral proteinleri tümör hücrelerinde MHC sınıf I ile sunar.",
+      "B": "Yanlış. Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme.",
+      "D": "Yanlış. Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "E": "Yanlış. İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "A": "Yanlış. Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k04-q14",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Ekstravazasyon, organ tropizmi ve kolonizasyon\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "E": "Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "C": "Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "A": "T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "B": "İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "D": "Normalde testis germ hücrelerinde ifade edilir ve diğer dokularda sessizdir; testis hücrelerinde MHC sınıf I ekspresyonu düşüktür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "C": "Yanlış. Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "A": "Yanlış. T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "B": "Yanlış. İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "D": "Yanlış. Normalde testis germ hücrelerinde ifade edilir ve diğer dokularda sessizdir; testis hücrelerinde MHC sınıf I ekspresyonu düşüktür."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -554,6 +1624,272 @@
      },
      "bilgi": [
       28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k05-q05",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Primer melanom eksize edilen hastada 2 yıl sonra akciğerde makroskopik metastaz saptanmıştır. Basamaklarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Metastaz kanser ölümünün başlıca nedeni ve M belirleyicisidir. Sıra: ayrılma → ECM-bazal membran invazyonu → intravazasyon (tümör-makrofaj-endotel) → dolaşımda sağkalım (tek/agregat) → ekstravazasyon → mikrometastaz → makroskopik kolonizasyon.",
+      "B": "Metastaz mortaliteyle ilişkisizdir.",
+      "C": "İntravazasyon ekstravazasyondan sonradır.",
+      "D": "Dolaşımda sağkalım basamağı yoktur.",
+      "E": "Kolonizasyon ilk basamaktır."
+     },
+     "dogru": "A",
+     "aciklama": "Önem ve basamak sırası doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Önem ve sıra doğrudur.",
+      "B": "Yanlış; başlıca ölüm nedenidir.",
+      "C": "Yanlış; intra önce, ekstra sonradır.",
+      "D": "Yanlış; sağkalım basamağı vardır.",
+      "E": "Yanlış; kolonizasyon sondur."
+     },
+     "bilgi": [
+      21,
+      22,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k05-q06",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Primeri eksize edilip 2 yıl sonra akciğer metastazı gelişen melanom olgusunda metastaz basamaklarıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İlk olay primerden ayrılma ve invazyondur.",
+      "B": "İntravazasyonda makrofaj-endotel etkileşimi rol oynar.",
+      "C": "Metastaz evrelemede önemsizdir ve intravazasyon kolonizasyondan sonra olur.",
+      "D": "Ekstravazasyon sonrası mikro, ardından makro metastaz olur.",
+      "E": "Dolaşımda tek hücre veya agregatlar bulunur."
+     },
+     "dogru": "C",
+     "aciklama": "Metastaz M belirleyicisidir; intra erken, kolonizasyon geçtir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Yanlış ifade (aranan cevap). Önem ve sıra hatalıdır.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      21,
+      22,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Metastazın klinik önemi ve ardışık basamakları nelerdir?",
+     "secenekler": {
+      "A": "Metastaz mortaliteyi azaltır",
+      "B": "Metastaz lokal tedaviyle biter",
+      "C": "Basamaklar rastgele işler",
+      "D": "Ölüm nedeni-M; ayrılma-invazyon-dolaşım-kolonizasyon",
+      "E": "Evrelemede M önemsizdir"
+     },
+     "dogru": "D",
+     "aciklama": "Metastaz kanser ilişkili ölümün başlıca nedenidir; evrelemede M durumunu belirler, lokal tedavilerle eradikasyonu zorlaştırıp sistemik tedavi gerektirir. Ardışık basamaklar primerden ayrılma, ECM-bazal membran invazyonu, intravazasyon, dolaşımda sağkalım (tümör embolileri), ekstravazasyon, mikrometastaz ve anjiyogenezle makroskopik kolonizasyondur. Her basamak bir darboğazdır; bu yüzden dolaşıma giren az hücre koloni kurar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; metastaz ölümün başlıca nedenidir.",
+      "B": "Yanlış; sistemik tedavi gerektirir.",
+      "C": "Yanlış; basamaklar ardışık darboğazlardır.",
+      "D": "Doğru; klinik önemi ve basamak sırasını verir.",
+      "E": "Yanlış; M durumu evrelemenin parçasıdır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k05-q08",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "İntravazasyon, dolaşım ve kolonizasyon mekanizmaları nelerdir?",
+     "secenekler": {
+      "A": "Makrofaj-intravazasyon; trombosit koruma; stroma-kolonizasyon",
+      "B": "Trombosit tümörü öldürür",
+      "C": "Ekstravazyon rastgeledir",
+      "D": "Kolonizasyon desteksiz büyür",
+      "E": "Dolaşımda sağkalım garantidir"
+     },
+     "dogru": "A",
+     "aciklama": "İntravazasyonda tümör, makrofaj ve endotel etkileşimiyle hücre damara girer; dolaşımda tek tek veya trombosit-lökosit agregatlarıyla seyreder. Trombositler tümör hücresini mekanik ve immün saldırıdan korur. Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri hedefe çıkışı yönlendirir; kolonizasyon uygun stromal destek ve anjiyogenez olmadan büyümez.",
+     "sik_aciklamalari": {
+      "A": "Doğru; damar içi-dışı geçiş mekanizmalarını özetler.",
+      "B": "Yanlış; trombositler koruma agregatı oluşturur.",
+      "C": "Yanlış; adezyon ve kemokin reseptörleri yönlendirir.",
+      "D": "Yanlış; stromal destek ve anjiyogenez şarttır.",
+      "E": "Yanlış; dolaşım immün-mekanik darboğazdır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": [
+      "b376b83ec304"
+     ]
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k05-q09",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "\"Ekstravazasyon, organ tropizmi ve kolonizasyon\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "C": "Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "A": "Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "E": "Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+      "B": "Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "C": "Yanlış. Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "A": "Yanlış. Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "E": "Yanlış. Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+      "B": "Yanlış. Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k05-q10",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "\"Metastaza özgü moleküler değişiklikler\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "C": "Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "E": "T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "A": "Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme.",
+      "B": "Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "C": "Yanlış. Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "E": "Yanlış. T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "A": "Yanlış. Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme.",
+      "B": "Yanlış. Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k05-q11",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Kanser-bağışıklık-metastaz ilişkisi\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "A": "Bağışıklık sisteminin sürekli ortaya çıkan kötü huylu hücreleri tespit edip yok ettiği süreçtir; bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+      "E": "Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "D": "Antikorlar tümör antijenlerine bağlanır; olası etkileri antikor-bağlı hücre aracılı sitotoksisite (ADCC) ve kompleman aktivasyonudur.",
+      "C": "Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "A": "Yanlış. Bağışıklık sisteminin sürekli ortaya çıkan kötü huylu hücreleri tespit edip yok ettiği süreçtir; bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+      "E": "Yanlış. Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "D": "Yanlış. Antikorlar tümör antijenlerine bağlanır; olası etkileri antikor-bağlı hücre aracılı sitotoksisite (ADCC) ve kompleman aktivasyonudur.",
+      "C": "Yanlış. Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k05-q12",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Hücreler arası bağların kaybı\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "E": "Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "D": "Onkojenik virüsler (HPV, EBV, HBV, HCV, KSHV/HHV-8) viral proteinleri tümör hücrelerinde MHC sınıf I ile sunar.",
+      "A": "Bağışıklık sisteminin sürekli ortaya çıkan kötü huylu hücreleri tespit edip yok ettiği süreçtir; bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+      "B": "Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur.",
+      "E": "Yanlış. Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "D": "Yanlış. Onkojenik virüsler (HPV, EBV, HBV, HCV, KSHV/HHV-8) viral proteinleri tümör hücrelerinde MHC sınıf I ile sunar.",
+      "A": "Yanlış. Bağışıklık sisteminin sürekli ortaya çıkan kötü huylu hücreleri tespit edip yok ettiği süreçtir; bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+      "B": "Yanlış. Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k05-q13",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"Tümör antijenleri\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+      "E": "İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "A": "Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "C": "Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "D": "Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+      "E": "Yanlış. İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "A": "Yanlış. Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "C": "Yanlış. Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "D": "Yanlış. Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k05-q14",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"Diğer immün kaçış yolları\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "E": "İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "D": "Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "B": "Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "C": "Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar.",
+      "A": "Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+     "sik_aciklamalari": {
+      "E": "Doğru. İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "D": "Yanlış. Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "B": "Yanlış. Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "C": "Yanlış. Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar.",
+      "A": "Yanlış. Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır."
+     },
+     "bilgi": [
+      15
      ],
      "benzer_cikmis": []
     }
@@ -669,6 +2005,272 @@
       26
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k06-q05",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "İnvaziv duktal karsinomda E-kadherin kaybı, MMP artışı, integrin değişimi ve vimentin artışı izlenmiştir. Mekanizmalarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Göç invazyondan bağımsızdır.",
+      "B": "E-kadherin kaybı adezyonu artırır.",
+      "C": "MMP ECM'yi güçlendirir.",
+      "D": "EMT'de vimentin azalır.",
+      "E": "E-kadherin kaybı (mutasyon, β-katenin, SNAIL/TWIST) bağlantıyı bozar. MMP-katepsin D-uPA ECM-bazal membranı yıkar. İntegrin-adezyon örüntüsü değişir, değişmiş ECM'ye tutunma olur. Göçte aktin yeniden düzenlenir (ön adezyon-arka çözülme, kemo-motijenik sinyal). EMT'de E-kadherin-epitel belirteç azalır, vimentin-düz kas aktini artar; SNAIL/TWIST E-kadherini baskılar."
+     },
+     "dogru": "E",
+     "aciklama": "Dört mekanizma (bağ kaybı, yıkım, adezyon değişimi, göç-EMT) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; göç invazyonun son basamağıdır.",
+      "B": "Yanlış; kayıp bağlantıyı bozar.",
+      "C": "Yanlış; MMP yıkar.",
+      "D": "Yanlış; vimentin artar.",
+      "E": "Doğru. Mekanizmalar doğrudur."
+     },
+     "bilgi": [
+      23,
+      24,
+      25,
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k06-q06",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "E-kadherin kayıplı, MMP artışlı invaziv duktal karsinom incelenirken i̇nvazyon mekanizmalarıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "SNAIL/TWIST E-kadherini baskılar.",
+      "B": "E-kadherin kaybı polariteyi güçlendirir; MMP'ler membranı onarır; EMT'de E-kadherin artar.",
+      "C": "EMT'de epitel belirteçler azalır.",
+      "D": "Göçte aktin yeniden düzenlenir.",
+      "E": "MMP, katepsin D ve uPA yıkım yapar."
+     },
+     "dogru": "B",
+     "aciklama": "Kayıp polarite-temas inhibisyonunu bozar; MMP yıkar; EMT'de E-kadherin azalır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Yanlış ifade (aranan cevap). Üç yön terstir.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      23,
+      24,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "E-kadherin kaybı ve matriks yıkımının invazyondaki rolleri nelerdir?",
+     "secenekler": {
+      "A": "E-kadherin kaybı kohezyonu artırır",
+      "B": "MMP'ler matriksi güçlendirir",
+      "C": "E-kadherin kaybı; MMP-katepsin-uPA yıkımı; integrin",
+      "D": "Yıkım ürünleri göçü durdurur",
+      "E": "İntegrinler değişmez"
+     },
+     "dogru": "C",
+     "aciklama": "Normal epitelde E-kadherin bağları kohezyonu sağlar; gen mutasyonu, β-katenin aktivasyonu ve SNAIL-TWIST baskısıyla E-kadherin kaybı kohezyonu azaltır. Tümör ve stromal proteazlar (MMP, katepsin D, uPA) kollajen ve laminini yıkar; yıkım ürünleri göçü kolaylaştırır. Tümörde integrin örüntüsü değişir; bazı ECM parçaları kemotaktik ve büyüme uyarıcıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; kayıp kohezyonu azaltır.",
+      "B": "Yanlış; MMP'ler kollajen-laminini yıkar.",
+      "C": "Doğru; üç invazyon kolunu sıralar.",
+      "D": "Yanlış; yıkım ürünleri göçü kolaylaştırır.",
+      "E": "Yanlış; tümörde integrin örüntüsü değişir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k06-q08",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "EMT programı ve tümör hücre göçünün mekaniği nasıldır?",
+     "secenekler": {
+      "A": "EMT'de E-kadherin artar",
+      "B": "Vimentin epitel belirtecidir",
+      "C": "SNAIL hareketliliği azaltır",
+      "D": "Göç ilk basamaktır",
+      "E": "EMT vimentin; SNAIL-TWIST; aktin göçü"
+     },
+     "dogru": "E",
+     "aciklama": "EMT'de epitel hücreleri mezenkimal fenotipe geçer; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar. SNAIL ve TWIST E-kadherini baskılayarak hareketlilik ve invazyonu artırır. Göç invazyonun son basamağıdır: aktin iskeleti yeniden düzenlenir, ön uç adezyon, arka uç çözülme yapar; HGF ile makrofaj-fibroblast kemokinleri göçü sürükler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; EMT'de E-kadherin azalır.",
+      "B": "Yanlış; vimentin mezenkimal belirteçtir.",
+      "C": "Yanlış; SNAIL-TWIST invazyonu artırır.",
+      "D": "Yanlış; göç invazyonun son basamağıdır.",
+      "E": "Doğru; EMT programını ve göç mekaniğini verir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k06-q09",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "\"CTLA-4\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "E": "Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "A": "Sürücü veya yolcu mutasyonlar sonucu protein dizisinde yeni peptit oluşumudur; bağışıklık sistemiyle daha önce tanışmadıkları için öz tolerans gelişmemiştir.",
+      "B": "Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar.",
+      "D": "Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "C": "Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "A": "Yanlış. Sürücü veya yolcu mutasyonlar sonucu protein dizisinde yeni peptit oluşumudur; bağışıklık sistemiyle daha önce tanışmadıkları için öz tolerans gelişmemiştir.",
+      "B": "Yanlış. Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar.",
+      "D": "Yanlış. Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "C": "Yanlış. Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k06-q10",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"İmmün kontrol noktası inhibitörlerinin prensibi\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "C": "T hücreler üzerindeki \"frenleri\" kaldırma stratejisidir; PD-1 ve PD-L1'e karşı ve CTLA-4'e karşı monoklonal antikorlar kullanılır.",
+      "A": "Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "B": "İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur.",
+      "D": "Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "E": "PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: T hücreler üzerindeki \"frenleri\" kaldırma stratejisidir; PD-1 ve PD-L1'e karşı ve CTLA-4'e karşı monoklonal antikorlar kullanılır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. T hücreler üzerindeki \"frenleri\" kaldırma stratejisidir; PD-1 ve PD-L1'e karşı ve CTLA-4'e karşı monoklonal antikorlar kullanılır.",
+      "A": "Yanlış. Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "B": "Yanlış. İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur.",
+      "D": "Yanlış. Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "E": "Yanlış. PD-L1 tümör ve tümör çevresindeki miyeloid hücrelerde, PD-1 ise aktive T lenfositlerinde ifade edilir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k06-q11",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Epitel-mezenkimal geçiş (EMT)\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "A": "Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "E": "Bağışıklık sisteminin sürekli ortaya çıkan kötü huylu hücreleri tespit edip yok ettiği süreçtir; bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+      "D": "Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "C": "Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "A": "Yanlış. Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "E": "Yanlış. Bağışıklık sisteminin sürekli ortaya çıkan kötü huylu hücreleri tespit edip yok ettiği süreçtir; bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+      "D": "Yanlış. Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "C": "Yanlış. Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k06-q12",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Kanser immün düzenlemesi (immunoediting)\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "C": "Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "E": "Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir.",
+      "D": "İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur.",
+      "A": "Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "B": "Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "E": "Yanlış. Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir.",
+      "D": "Yanlış. İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur.",
+      "A": "Yanlış. Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "B": "Yanlış. Temel efektörler CD8+ sitotoksik T lenfositleri (CTL) ve CD4+ T yardımcı hücre tip 1 (Th1) hücrelerdir; NK hücreler, makrofajlar ve ADCC diğer katkıları sağlar."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k06-q13",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"Diğer tümör antijeni kaynakları\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "E": "Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "C": "Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "A": "Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler.",
+      "D": "Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+     "sik_aciklamalari": {
+      "B": "Doğru. Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "E": "Yanlış. Avantajı uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleriyle kalıcı bağışıklık yanıtıdır; sınırlamaları tümörlerin yalnızca küçük bir kısmının yanıt vermesi ve yanıtın yüksek mutasyon yükü ile neoantijen sayısına bağlı olmasıdır.",
+      "C": "Yanlış. Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "A": "Yanlış. Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler.",
+      "D": "Yanlış. Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k06-q14",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"CTL'nin temel mekanizması\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "B": "Sürücü veya yolcu mutasyonlar sonucu protein dizisinde yeni peptit oluşumudur; bağışıklık sistemiyle daha önce tanışmadıkları için öz tolerans gelişmemiştir.",
+      "C": "Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "D": "Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "A": "Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "B": "Yanlış. Sürücü veya yolcu mutasyonlar sonucu protein dizisinde yeni peptit oluşumudur; bağışıklık sistemiyle daha önce tanışmadıkları için öz tolerans gelişmemiştir.",
+      "C": "Yanlış. Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "D": "Yanlış. Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "A": "Yanlış. Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -753,6 +2355,216 @@
      "bilgi": [
       29,
       30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Primeri kontrol altında hastada kemik iliğinde moleküler düzeyde tümör hücresi saptanmış ancak görüntüleme negatiftir; yıllar sonra kemik metastazı gelişmiştir. Kavramlarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Dormansi hızlı bölünmedir.",
+      "B": "Tropizm rastgeledir.",
+      "C": "Mikrometastaz görüntülemede görülür.",
+      "D": "Ekstravazasyonda endotel adezyon-kemokin reseptörleri rol oynar; tümör kemokin reseptörü-hedef stroma kemokini tropizmi belirler (tohum-toprak). Mikrometastaz histolojik-moleküler sessiz odaktır; dormansi bölünmeden uzun süre kalıştır; uyanışla makro metastaz olur.",
+      "E": "Kemokinlerin rolü yoktur."
+     },
+     "dogru": "D",
+     "aciklama": "Tropizm-mikrometastaz-dormansi tanımları doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bölünmeden kalıştır.",
+      "B": "Yanlış; tohum-toprak belirler.",
+      "C": "Yanlış; klinik sessizdir.",
+      "D": "Doğru. Kavramlar doğrudur.",
+      "E": "Yanlış; kemokin-reseptör rol oynar."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Görüntülemesi negatif ancak ilikte moleküler tümör hücreli hastada yıllar sonra kemik metastazı gelişen olguda tropizm ve dormansiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Mikrometastaz her zaman makroskopiktir ve dormansi sürekli proliferasyondur.",
+      "B": "Mikrometastaz klinik sessizdir.",
+      "C": "Dormansi bölünmeden uzun süre kalıştır.",
+      "D": "Tohum-toprak hipotezi seçici yerleşimi açıklar.",
+      "E": "Kemokin reseptör-stroma kemokini tropizmi belirler."
+     },
+     "dogru": "A",
+     "aciklama": "Mikro sessiz-küçük, dormansi bölünmesizdir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış ifade (aranan cevap). Tanımlar terstir.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Tohum-toprak hipotezi ve organ tropizmi nasıl açıklanır?",
+     "secenekler": {
+      "A": "Metastaz tamamen rastgeledir",
+      "B": "Kemokin uyumu; tohum-toprak; niş hazırlığı",
+      "C": "Stroma metastazı engeller",
+      "D": "Tropizm reseptörsüzdür",
+      "E": "Niş hazırlığı yoktur"
+     },
+     "dogru": "B",
+     "aciklama": "Organ tropizminde tümör hücresindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir; tümör-stroma uyumu tohum ve toprak hipotezidir. Uyumsuz nişte koloni kurulamaz; bu yüzden metastaz rastgele değil seçicidir. Tümörle ilişkili fibroblastlar, M2 makrofajlar ve endotel-perisitler metastatik nişin hazırlanmasına katılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; tropizm seçici organ tutulumudur.",
+      "B": "Doğru; hipotezi ve niş bileşenlerini verir.",
+      "C": "Yanlış; stroma kolonizasyonu destekler.",
+      "D": "Yanlış; kemokin reseptörleri hedefi belirler.",
+      "E": "Yanlış; fibroblast-makrofaj nişi hazırlar."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Mikrometastaz ve dormansi kavramları ve geç nüks ilişkisi nedir?",
+     "secenekler": {
+      "A": "Mikrometastaz klinikte aşikardır",
+      "B": "Dormansi hızlı bölünmedir",
+      "C": "Anjiyogenez dormansiyi bitirmez",
+      "D": "Mikrometastaz sessiz; dormansi anjiyogenez-niş-bağışıklık",
+      "E": "Geç nüks imkansızdır"
+     },
+     "dogru": "D",
+     "aciklama": "Mikrometastaz histolojik-moleküler düzeyde saptanan, klinik sessiz küçük odaklardır. Dormanside hücreler uzun süre bölünmeden canlı kalır; nedenleri yetersiz anjiyogenez, uygun niş yokluğu ve konak bağışıklık baskısıdır. Yıllar sonra geç metastaz veya nüks görülebilir; bu, takipte geç nükslerin biyolojik açıklamasıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; mikrometastaz klinik olarak sessizdir.",
+      "B": "Yanlış; dormansi bölünmeden canlı kalmadır.",
+      "C": "Yanlış; anjiyogenez kolonizasyonu başlatır.",
+      "D": "Doğru; iki kavramı ve dormansi nedenlerini verir.",
+      "E": "Yanlış; yıllar sonra geç nüks görülebilir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k07-q08",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "\"Th1 ve makrofajlar\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "D": "Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "A": "Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "C": "Tümör spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşıları ve tümöre spesifik T hücrelerin in vitro çoğaltılıp geri verildiği adaptif T hücre transferi uygulanır.",
+      "E": "Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "D": "Yanlış. Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "A": "Yanlış. Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "C": "Yanlış. Tümör spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşıları ve tümöre spesifik T hücrelerin in vitro çoğaltılıp geri verildiği adaptif T hücre transferi uygulanır.",
+      "E": "Yanlış. Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k07-q09",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Kanser immün düzenlemesi (immunoediting)\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "A": "Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "D": "İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "E": "Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler.",
+      "C": "Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "A": "Yanlış. Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "D": "Yanlış. İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "E": "Yanlış. Otoimmünite benzeri toksisiteler gelişir: kolit, dermatit, pnömonit ve endokrinopatiler.",
+      "C": "Yanlış. Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k07-q10",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Metastazın klinik önemi\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "C": "Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "B": "Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "E": "Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "A": "Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "C": "Yanlış. Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "B": "Yanlış. Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "E": "Yanlış. Metastatik potansiyeli artıran genler EMT transkripsiyon faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir; ancak \"saf\" metastaz onkogenlerini tanımlamak zordur.",
+      "A": "Yanlış. Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k07-q11",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Tümör hücre göçü\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "B": "Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir.",
+      "E": "Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "D": "Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "A": "Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "B": "Yanlış. Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir.",
+      "E": "Yanlış. Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "D": "Yanlış. Epitel hücrelerinin mezenkimal fenotipe geçişidir; E-kadherin ve epitel belirteçleri azalır, vimentin ve düz kas aktini artar; SNAIL ve TWIST E-kadherin ekspresyonunu baskılar.",
+      "A": "Yanlış. Primer tümörden ayrılma, ECM ve bazal membran invazyonu, intravazasyon, dolaşımda sağkalım, ekstravazasyon, mikrometatastaz oluşumu ve makroskopik metastaza büyüme."
+     },
+     "bilgi": [
+      26
      ],
      "benzer_cikmis": []
     }
@@ -841,12 +2653,272 @@
       33
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Küçük hücreli akciğer karsinomlu hastada erken yaygın metastaz, bazal hücreli karsinomlu hastada ise invazyona rağmen metastazsız seyir izlenmiştir. Farklarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bazal hücreli sık metastaz yapar.",
+      "B": "Tüm tümörler eşit metastaz yapar.",
+      "C": "Küçük hücreli erken-sık, bazal hücreli ve birçok primer beyin tümörü nadiren metastaz yapar. Metastatik potansiyeli artıranlar EMT faktörleri (SNAIL/TWIST), adezyon molekülleri ve kemokin reseptörleridir; saf metastaz geni yoktur. İleri tümörler invazyon-metastaz profiline ve güçlü kaçışa sahiptir; mikroçevre (TAM, MDSC, Treg) destekler.",
+      "D": "Saf metastaz geni tanımlıdır.",
+      "E": "Mikroçevre rol oynamaz."
+     },
+     "dogru": "C",
+     "aciklama": "Potansiyel farkları, moleküler değişiklikler ve mikroçevre-kanser-bağışıklık ilişkisi doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; çok nadiren yapar.",
+      "B": "Yanlış; farklılıklar belirgindir.",
+      "C": "Doğru. Farklar ve mekanizmalar doğrudur.",
+      "D": "Yanlış; saf gen yoktur.",
+      "E": "Yanlış; TAM-MDSC-Treg destekler."
+     },
+     "bilgi": [
+      31,
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Erken yaygın küçük hücreli ile metastazsız bazal hücreli olgular karşılaştırılırken metastaz potansiyeliyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Küçük hücreli akciğer karsinomu erken-sık metastaz yapar.",
+      "B": "Bazal hücreli karsinom çok nadiren metastaz yapar.",
+      "C": "SNAIL/TWIST metastatik potansiyeli artırır.",
+      "D": "Saf metastaz geni yoktur.",
+      "E": "Bazal hücreli erken metastaz yapar; küçük hücreli lokal kalır; metastaza özgü moleküler değişiklik yoktur."
+     },
+     "dogru": "E",
+     "aciklama": "Küçük hücreli erken-sık, bazal hücreli nadir; EMT-kemokin değişiklikleri vardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Yanlış ifade (aranan cevap). Davranışlar ters verilmiştir."
+     },
+     "bilgi": [
+      31,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Tümörler arası metastaz potansiyeli farkları ve boyutun rolü nedir?",
+     "secenekler": {
+      "A": "KHAK erken-sık; BCC-SSS nadir; boyut tek değil",
+      "B": "BCC sık metastaz yapar",
+      "C": "Küçük tümör metastaz yapmaz",
+      "D": "SSS tümörleri sık yayılır",
+      "E": "Boyut tek belirleyicidir"
+     },
+     "dogru": "A",
+     "aciklama": "Küçük hücreli akciğer karsinomu erken ve sık metastaz yaparken bazal hücreli karsinom ve birçok primer SSS tümörü çok nadir metastaz yapar. Büyüklükle olasılık artar ama çok küçük tümörler de metastaz yapabilir; boyut tek belirleyici değildir. Bu fark, tümörün invazyon programı ve damar erişiminin bileşkesidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; iki uç örneği ve boyutun rolünü verir.",
+      "B": "Yanlış; BCC lokal invaziv, nadiren metastatiktir.",
+      "C": "Yanlış; çok küçük tümörler de metastaz yapabilir.",
+      "D": "Yanlış; primer SSS tümörleri nadiren metastaz yapar.",
+      "E": "Yanlış; olasılık artsa da tek belirleyici değildir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Metastaza özgü moleküler değişiklikler ve mikroçevre katkısı nelerdir?",
+     "secenekler": {
+      "A": "Saf metastaz onkogeni vardır",
+      "B": "EMT genleri metastazı azaltır",
+      "C": "SNAIL-TWIST-kemokin; saf onkogen yok; niş",
+      "D": "Mikroçevre önemsizdir",
+      "E": "Tedavi yalnızca hücreyedir"
+     },
+     "dogru": "C",
+     "aciklama": "Metastatik potansiyeli artıran genler EMT faktörleri (SNAIL, TWIST), adezyon molekülleri ve kemokin reseptörleridir. Saf metastaz onkogeni tanımlamak zordur çünkü aynı genler primer büyümeyi de destekler. Tümör mikroçevresi (fibroblastlar, M2 makrofajlar, endotel-perisitler) niş hazırlığıyla potansiyeli artırır; tedavi hem hücreyi hem immün yanıtı ve mikroçevreyi hedeflemelidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; saf metastaz onkogeni tanımlamak zordur.",
+      "B": "Yanlış; EMT faktörleri potansiyeli artırır.",
+      "C": "Doğru; gen gruplarını ve mikroçevre katkısını verir.",
+      "D": "Yanlış; mikroçevre niş hazırlığıyla katkı verir.",
+      "E": "Yanlış; immün yanıt ve mikroçevre de hedeflenmelidir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k08-q08",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "\"Kimerik antijen reseptör T hücreleri (CAR-T)\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "E": "T hücreler üzerindeki \"frenleri\" kaldırma stratejisidir; PD-1 ve PD-L1'e karşı ve CTLA-4'e karşı monoklonal antikorlar kullanılır.",
+      "D": "Tümör spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşıları ve tümöre spesifik T hücrelerin in vitro çoğaltılıp geri verildiği adaptif T hücre transferi uygulanır.",
+      "C": "İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur.",
+      "B": "Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+      "E": "Yanlış. T hücreler üzerindeki \"frenleri\" kaldırma stratejisidir; PD-1 ve PD-L1'e karşı ve CTLA-4'e karşı monoklonal antikorlar kullanılır.",
+      "D": "Yanlış. Tümör spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşıları ve tümöre spesifik T hücrelerin in vitro çoğaltılıp geri verildiği adaptif T hücre transferi uygulanır.",
+      "C": "Yanlış. İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur.",
+      "B": "Yanlış. Normal epitelde E-kadherin aracılı bağlantılar vardır; metastaz başlangıcında E-kadherin fonksiyonu gen mutasyonu, β-katenin aktivasyonu veya SNAIL/TWIST ile baskılanma sonucu kaybolur."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k08-q09",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Kanser-testis antijenleri\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "B": "Normalde testis germ hücrelerinde ifade edilir ve diğer dokularda sessizdir; testis hücrelerinde MHC sınıf I ekspresyonu düşüktür.",
+      "A": "Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "C": "Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "D": "İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "E": "Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Normalde testis germ hücrelerinde ifade edilir ve diğer dokularda sessizdir; testis hücrelerinde MHC sınıf I ekspresyonu düşüktür.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Normalde testis germ hücrelerinde ifade edilir ve diğer dokularda sessizdir; testis hücrelerinde MHC sınıf I ekspresyonu düşüktür.",
+      "A": "Yanlış. Th1 hücreleri IFN-γ üretir ve makrofajları aktive eder; aktive makrofajlar serbest radikaller, azot oksit ve lizozomal enzimler üretir.",
+      "C": "Yanlış. Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler.",
+      "D": "Yanlış. İmmün baskılayıcı sitokin TGF-β, immün baskılayıcı hücreler (Treg, MDSC), hedef antijenlerini kaybeden alt klonların seçilimi ve antijen işlenmesinde bozukluk (proteazom, TAP kusurları).",
+      "E": "Yanlış. Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k08-q10",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Viral tümör antijenleri\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Onkojenik virüsler (HPV, EBV, HBV, HCV, KSHV/HHV-8) viral proteinleri tümör hücrelerinde MHC sınıf I ile sunar.",
+      "E": "Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "A": "Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+      "D": "İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur.",
+      "B": "Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Onkojenik virüsler (HPV, EBV, HBV, HCV, KSHV/HHV-8) viral proteinleri tümör hücrelerinde MHC sınıf I ile sunar.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Onkojenik virüsler (HPV, EBV, HBV, HCV, KSHV/HHV-8) viral proteinleri tümör hücrelerinde MHC sınıf I ile sunar.",
+      "E": "Yanlış. Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "A": "Yanlış. Tümör hücrelerinde ekspresyonu artmış ya da sadece tümörde ifade edilen ve bağışıklık sistemi tarafından yabancı olarak algılanabilen moleküllerdir; kaynakları mutasyona uğramış proteinler, sınırlı doku proteinleri, viral proteinler ve anormal ifade edilen öz proteinlerdir.",
+      "D": "Yanlış. İntravazasyonda tümör hücreleri, makrofajlar ve endotel etkileşimiyle damara girer; dolaşımda tek tek veya trombosit ve lökositlerle agregatlar oluşturur.",
+      "B": "Yanlış. Dendritik hücreler tümör antijenini MHC sınıf I bağlamında çapraz sunar; tümöre özgü CD8+ CTL klonları genişler; CTL tümör hücresindeki MHC sınıf I-antijen kompleksini tanır ve perforin-granzim ile Fas-FasL yoluyla apoptoz indükler."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k08-q11",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Kanser-bağışıklık-metastaz ilişkisi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "C": "Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "A": "Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "B": "Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "E": "Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. İleri tümörler invazyon ve metastaz için özel gen ekspresyon profiline ve güçlü bağışıklık kaçış mekanizmalarına sahiptir; tümör mikroçevresi (tümörle ilişkili fibroblastlar, M2 fenotipli makrofajlar, endotel ve perisitler) metastatik nişin hazırlanmasına katkı verir.",
+      "C": "Yanlış. Sitotoksik T Lenfosit Antijeni 4, T hücre aktivasyonunu negatif düzenleyen bir immün kontrol noktasıdır.",
+      "A": "Yanlış. Mikrometastaz histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaklardır; dormansi tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır.",
+      "B": "Yanlış. Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "E": "Yanlış. Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k08-q12",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "\"ECM'ye bağlanmadaki değişiklikler\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "E": "Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "D": "Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "C": "Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "B": "Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Normal epitel bazal kutupta integrinlerle sıkı bağlıyken tümör hücrelerinde integrin ve adezyon molekülü örüntüsü değişir ve değişmiş ECM bileşenlerine bağlanabilir.",
+      "E": "Yanlış. Göç invazyonun son basamağıdır; aktin hücre iskeleti yeniden düzenlenir, ön uçta adezyon ve arka uçta çözülme olur, kemotaktik ve motijenik sinyallere yanıt gelişir.",
+      "D": "Yanlış. Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "C": "Yanlış. Bağışıklık sistemi bağışıklık kaçış yeteneği en yüksek alt klonları seçer.",
+      "B": "Yanlış. Bazı tümörler erken ve sık metastaz yapar (küçük hücreli akciğer karsinomu), bazıları çok nadiren metastaz yapar (bazal hücreli karsinom, birçok primer SSS tümörü); tümör boyutu büyüdükçe olasılık artar ancak çok küçük tümörler de metastaz yapabilir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari-k08-q13",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "\"Metastazın klinik önemi\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "D": "Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "B": "Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar.",
+      "C": "Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "E": "T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Metastaz kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde (M durumu) belirleyicidir.",
+      "D": "Yanlış. Aşırı/anormal ekspresyon (HER2/neu), normal doku antijeninin anormal formu (glikozilasyon veya fosforilasyon değişiklikleri) ve diferansiyasyon antijenleri (melanosit antijeni tirozinaz).",
+      "B": "Yanlış. Tümör veya stromal hücreler MMP'ler, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılar.",
+      "C": "Yanlış. Ekstravazasyonda endotel adezyon molekülleri ve kemokin reseptörleri rol oynar; tümör hücrelerindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir.",
+      "E": "Yanlış. T hücrelerine yapay reseptörler eklenir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 29,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:25"
+ ]
 }

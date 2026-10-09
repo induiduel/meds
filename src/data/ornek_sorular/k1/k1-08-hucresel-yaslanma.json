@@ -6,6 +6,7 @@
  "konu": "Hücresel Yaşlanma",
  "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
  "tarih": null,
+ "soru_sayisi": 102,
  "kazanimlar": [
   {
    "no": 1,
@@ -90,6 +91,353 @@
       2,
       28,
       29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Yaşlı bir hastada dokuların yenilenme yeteneğinin azaldığı, organ fonksiyon rezervlerinin daraldığı ve kronik hastalıkların sıklaştığı gözlenmektedir. Bu süreci tanımlayan kavram aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hücre sayısında hızlı artış",
+      "B": "Fonksiyonel aktivitede geçici dalgalanma",
+      "C": "Çoğalma kapasitesi ve fonksiyonel aktivitede ilerleyici azalma",
+      "D": "Yalnızca organizma düzeyinde görülen değişim",
+      "E": "Homeostazın güçlenmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Hücresel yaşlanma çoğalma kapasitesi ve fonksiyonel aktivitede ilerleyici azalmadır; hücreden organizmaya tüm düzeylerde görülür. Sonuçta homeostaz bozulur ve kronik hastalık riski artar.",
+     "sik_aciklamalari": {
+      "A": "Yaşlanmada çoğalma kapasitesi azalır.",
+      "B": "Azalma geçici değil ilerleyicidir.",
+      "C": "Doğru. Hücre, doku, organ ve organizma düzeyinde izlenir.",
+      "D": "Tüm düzeylerde görülür.",
+      "E": "Homeostaz bozulur."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Toplumun yaşlanmasıyla kanser ve demans yükünün arttığı, bazı deney modellerinde ise yaşam süresinin uzatılabildiği bir derlemede tartışılmaktadır. Bu konuyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yaş kronik hastalıklar için koruyucu faktördür",
+      "B": "Yaşlanma genler ve sinyal yollarınca düzenlenen, klinik açıdan kritik bir süreçtir",
+      "C": "Yaşlanma yalnızca zaman geçişidir ve biyolojik düzenlemesi yoktur",
+      "D": "Kronik hastalık yükü toplum yaşlanmasından etkilenmez",
+      "E": "Yaşlanma mekanizmalarını anlamak klinik pratikte gereksizdir"
+     },
+     "dogru": "B",
+     "aciklama": "Yaş kanser, ateroskleroz ve Alzheimer gibi hastalıklar için güçlü bağımsız risk faktörüdür. Yaşlanma eskiden enerji tükenmesi sanılırken güncel bilgiye göre genler ve sinyal yollarınca düzenlenir; bazı modellerde yavaşlatılabilir.",
+     "sik_aciklamalari": {
+      "A": "Yaş güçlü bir risk faktörüdür.",
+      "B": "Doğru. Deneysel modellerde bazı müdahaleler yaşlanmayı yavaşlatabilmiştir.",
+      "C": "Belirli genler ve yollar süreci yönetir.",
+      "D": "Toplum yaşlandıkça yük artar.",
+      "E": "Mekanizmaları anlamak klinik için kritiktir."
+     },
+     "bilgi": [
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hücresel yaşlanmanın tanımını doğru veren seçenek hangisidir?",
+     "secenekler": {
+      "A": "Çoğalma ve işlevde ilerleyici azalma",
+      "B": "Enerjinin tükenmesidir",
+      "C": "Yalnızca zaman geçişidir",
+      "D": "Hücre sayısında artıştır",
+      "E": "Mutasyonların tümüyle onarımıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Hücresel yaşlanma, hücrelerin çoğalma kapasitesi ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır. Hücre, doku, organ ve organizma düzeyinde homeostazı bozar. Yaş, kanser, ateroskleroz ve Alzheimer gibi hastalıklar için güçlü ve bağımsız bir risk faktörüdür; toplum yaşlandıkça kronik hastalık yükü artar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kapasite ve aktivite kaybı homeostazı bozar, hastalık riskini artırır.",
+      "B": "Enerji tükenmesi eski ve yetersiz bir açıklamadır.",
+      "C": "Yaşlanma genler ve sinyal yollarıyla düzenlenen aktif bir süreçtir.",
+      "D": "Yaşlanmada çoğalma azalır, artmaz.",
+      "E": "Mutasyonlar birikir, tümüyle onarılmaz."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Yaşlanmanın doğasına ilişkin güncel görüş nedir?",
+     "secenekler": {
+      "A": "Yaşlanma rastgeledir",
+      "B": "Müdahale imkânsızdır",
+      "C": "Genlerin rolü yoktur",
+      "D": "Yalnızca çevresel etkidir",
+      "E": "Genlerle düzenlenir, yavaşlatılabilir"
+     },
+     "dogru": "E",
+     "aciklama": "Yaşlanma mayadan memeliye kadar belirli genler ve sinyal yolları tarafından düzenlenir, basit bir zaman geçişi değildir. Deneysel modellerde kalori kısıtlaması ve mTOR baskılanması gibi müdahalelerin yaşlanmayı yavaşlatabildiği gösterilmiştir. Bu düzenlenebilirlik, yaşlanmanın bazı bileşenlerinin hedeflenebilir olduğunu düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Düzenleyici genler ve yollar tanımlanmıştır.",
+      "B": "Deneysel müdahaleler yaşlanmayı yavaşlatabilmiştir.",
+      "C": "Sinyal yolları yaşlanmanın merkezindedir.",
+      "D": "Genetik program ve çevre birlikte rol oynar.",
+      "E": "Doğru. Düzenlenmiş süreç olması hedefe yönelik stratejilere kapı açar."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": [
+      "b8119da3464a"
+     ]
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hücresel yaşlanmanın (cellular senescence) tanımı ve klinik önemi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "secenekler": {
+      "A": "Hücrelerin kontrolsüz ve sınırsız çoğalma yeteneği kazanarak malign transformasyona uğramasıdır.",
+      "B": "Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; yaşlanma ateroskleroz, kanser ve Alzheimer gibi birçok kronik hastalık için en güçlü bağımsız risk faktörüdür.",
+      "C": "Sadece akut toksin maruziyeti sonucu hücrelerin saniyeler içinde lizise uğramasıdır.",
+      "D": "Tüm dokularda aynı hızda gerçekleşen ve genetik kontrolü olmayan tamamen rastlantısal pasif bir süreçtir.",
+      "E": "Hücre yaşlanması sadece eritrositlerde görülür; çekirdekli somatik hücrelerde yaşlanma meydana gelmez."
+     },
+     "dogru": "B",
+     "aciklama": "Hücresel yaşlanma, hücrelerin çoğalma kapasitesinde ve metabolik/fonksiyonel aktivitelerinde zamanla meydana gelen ilerleyici azalmadır. Basit bir 'zaman geçişi' veya pasif yıpranma olmayıp; genetik programlar, sinyal iletim yolları ve epigenetik faktörlerle düzenlenir. Yaş, kardiyovasküler hastalıklar, kanserler ve nörodejeneratif bozukluklar için en güçlü bağımsız risk faktörüdür.",
+     "sik_aciklamalari": {
+      "A": "Sınırsız çoğalma ve ölümsüzlük yaşlanmanın değil, kanserleşmenin tanımıdır.",
+      "B": "Doğru. Fonksiyon ve çoğalma kaybıdır; kronik hastalıklar için en güçlü bağımsız risk faktörüdür.",
+      "C": "Akut lizis nekrozdur.",
+      "D": "Yaşlanma genetik yollarla (IGF-1, mTOR, sirtuinler) sıkı kontrol edilen biyolojik bir süreçtir.",
+      "E": "Tüm ökaryotik çekirdekli hücrelerde yaşlanma süreçleri tanımlanmıştır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q09",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Yaşlanma sürecinde organ fonksiyon rezervinin azalması ve doku homeostazının bozulması klinik olarak aşağıdaki tablolardan hangisinin insidansında belirgin ARTIŞA yol açmaz?",
+     "secenekler": {
+      "A": "Ateroskleroz ve koroner arter hastalığı",
+      "B": "Alzheimer hastalığı ve Parkinsonizm gibi nörodejeneratif süreçler",
+      "C": "Malign neoplaziler (karsinomlar)",
+      "D": "Konjenital nöral tüp defektleri (spina bifida)",
+      "E": "Tip 2 diabetes mellitus ve metabolik sendrom"
+     },
+     "dogru": "D",
+     "aciklama": "Ateroskleroz, kanser, demans, osteoartrit, sarkopeni ve tip 2 diyabet yaşa bağımlı olarak insidansı katlanarak artan edinsel kronik dejeneratif hastalıklardır. Buna karşılık konjenital nöral tüp defektleri (spina bifida, anensefali) embriyolojik dönemde (ilk 4 hafta) folik asit yetersizliği veya genetik nedenlerle oluşan fetal anomalilerdir; bireyin ilerleyen yaşlanması ile insidansı artmaz.",
+     "sik_aciklamalari": {
+      "A": "Ateroskleroz yaşla endotel disfonksiyonu ve lipid birikimi ile artar.",
+      "B": "Alzheimer yaşa en bağımlı nörodejeneratif hastalıktır.",
+      "C": "Kanser mutasyon birikimi ve telomeraz aktivasyonu ile ileri yaşta katlanır.",
+      "D": "Doğru (artışa yol açmaz). Nöral tüp defekti intrauterin konjenital malformasyondur.",
+      "E": "Tip 2 diyabet insülin direnci ve beta hücre senesensi ile yaşla artar."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q10",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Yaşlanan organizmalarda hücre senesensinin (hücresel yaşlanma) iki ucu keskin bir kılıç (antagonist pleiotropi) olarak tanımlanmasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hücrenin hem ATP üretip hem glukoz tüketmesi",
+      "B": "Genç yaşlarda hasarlı hücrelerin bölünmesini durdurarak tümör gelişimini (kanser) engellemesi; ancak ileri yaşlarda biriken senesent hücrelerin salgıladığı proinflamatuar moleküllerle doku yıkımını ve yaşlanmayı hızlandırması",
+      "C": "DNA'nın hem adenin hem timin bazı içermesi",
+      "D": "Senesensin sadece virüsle enfekte hücrelerde görülmesi",
+      "E": "Senesent hücrelerin anında apoptoza giderek hiç dokuda kalmaması"
+     },
+     "dogru": "B",
+     "aciklama": "Hücresel senesens 'antagonist pleiotropi' teorisinin mükemmel bir örneğidir. Genç organizmada mutasyon taşıyan veya aşırı stres gören hücreler kalıcı hücre döngüsü duraklamasına (senesens) girerek kontrolsüz çoğalmayı ve kanseri önler (faydalı etki). Ancak yaşla birlikte bu senesent hücreler temizlenemez, dokularda birikir ve SASP (senesens ilişkili sekretuvar fenotip) faktörleri (IL-6, IL-1, MMP'ler) salgılayarak kronik inflamasyona, doku yıkımına ve komşu hücrelerin de yaşlanmasına yol açar (zararlı etki).",
+     "sik_aciklamalari": {
+      "A": "ATP ve glukoz temel metabolizmadır, antagonist pleiotropi değildir.",
+      "B": "Doğru. Gençlikte tümör baskılayıcı koruma, yaşlılıkta kronik inflamasyon ve fonksiyon kaybı yaratmasıdır.",
+      "C": "Baz eşleşmesi genel moleküler biyolojidir.",
+      "D": "Senesens replikatif ve onkogenik stresle de oluşur.",
+      "E": "Senesent hücreler apoptoza dirençlidir ve dokuda uzun süre kalır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q11",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Senesense giren (yaşlanan) hücrelerin doku mikroçevresine salgıladıkları ve komşu hücrelerde inflamasyon, matriks yıkımı ve sekonder yaşlanmaya neden olan sitokin, kemokin ve matriks metalloproteinazlarından (MMP) zengin salgı profiline ne ad verilir?",
+     "secenekler": {
+      "A": "SASP (Senescence-Associated Secretory Phenotype / Senesens İlişkili Salgısal Fenotip)",
+      "B": "DAMP (Damage-Associated Molecular Pattern)",
+      "C": "PAMP (Pathogen-Associated Molecular Pattern)",
+      "D": "MHC (Major Histocompatibility Complex)",
+      "E": "DISC (Death-Inducing Signaling Complex)"
+     },
+     "dogru": "A",
+     "aciklama": "Senesent hücreler metabolik olarak canlıdır ancak bölünmezler. Bu hücreler çevrelerine bol miktarda interlökin (özellikle IL-6, IL-1beta), kemokinler (IL-8), büyüme faktörleri ve ekstraselüler matriksi parçalayan matriks metalloproteinazlar (MMP-1, MMP-3) salgılarlar. Bu sekretuvar profile SASP (Senescence-Associated Secretory Phenotype) denir. SASP, 'inflammaging' sürecinin ve yaşa bağlı doku dejenerasyonunun ana nedenidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Senesent hücrelerin proinflamatuar salgı profili SASP olarak adlandırılır.",
+      "B": "DAMP nekrotik hücrelerden sızan hasar molekülleridir (HMGB1, ATP).",
+      "C": "PAMP mikrobiyal patojenlere özgü moleküllerdir (LPS, peptidoglikan).",
+      "D": "MHC antijen sunum kompleksidir.",
+      "E": "DISC ölüm reseptörü yolağında kaspaz-8'i toplayan komplekstir."
+     },
+     "bilgi": [
+      2,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q12",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "İnsanlarda yaşlanmayı geciktirme veya hücresel hasarı tersine çevirme iddiasıyla yürütülen klinik çalışmalar düşünüldüğünde, günümüz tıp bilimi ve kanıta dayalı tıp açısından aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "secenekler": {
+      "A": "Piyasada bulunan kolajen hapları ve vitamin karışımları hücresel yaşlanmayı kesin olarak durdurmaktadır.",
+      "B": "İnsanlarda telomerleri uzatarak ömrü 150 yıla çıkardığı kanıtlanmış onaylı bir ilaç tedavisi mevcuttur.",
+      "C": "Günümüzde insanlarda yaşlanmayı tamamen durduran veya geri çeviren kanıtlanmış bir 'anti-aging' farmakolojik tedavi henüz yoktur; ancak kalori kısıtlaması, egzersiz ve metabolik kontrol süreci yavaşlatabilmektedir.",
+      "D": "Yaşlanma genetik olarak kontrol edilmediği için tıbbi araştırmaların konusu olamaz.",
+      "E": "Kök hücre enjeksiyonları tüm insan organlarını 20 yaş düzeyine kalıcı olarak gençleştirmektedir."
+     },
+     "dogru": "C",
+     "aciklama": "Moleküler biyoloji ve patoloji araştırmaları mayalarda, nematodlarda ve kemirgenlerde sirtuin aktivasyonu, kalori kısıtlaması ve mTOR inhibisyonunun yaşam süresini uzattığını göstermiştir. Ancak günümüz itibarıyla insanlarda klinik olarak kanıtlanmış, FDA onaylı bir 'anti-aging' kür veya ilaç bulunmamaktadır. Sağlıklı beslenme, egzersiz ve risk faktörlerinin kontrolü süreci modüle edebilen en kanıta dayalı yaklaşımlardır.",
+     "sik_aciklamalari": {
+      "A": "Besin takviyelerinin hücresel yaşlanmayı durdurduğuna dair bilimsel kanıt yoktur.",
+      "B": "Kanıtlanmış bir telomer uzatıcı insan ilacı yoktur.",
+      "C": "Doğru. İnsanlarda kesin kanıtlanmış anti-aging tedavi yoktur, mekanistik çalışmalar sürmektedir.",
+      "D": "Yaşlanma genetik ve metabolik sinyal yollarıyla düzenlenir, yoğun araştırma konusudur.",
+      "E": "Kök hücre ile toptan gençleşme iddiası bilimsel temelden yoksundur."
+     },
+     "bilgi": [
+      3,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q13",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"Klinik perspektif ve anti-aging\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+      "B": "Yaş, kanserler, ateroskleroz/iskemik kalp hastalığı ve nörodejeneratif hastalıklar (Alzheimer vb.) için güçlü bağımsız risk faktörüdür.",
+      "A": "IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "C": "Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "D": "Başlıca ROS süperoksit (O₂•⁻), hidrojen peroksit (H₂O₂) ve hidroksil radikalidir (•OH); kaynakları mitokondriyal oksidatif fosforilasyon, iltihap hücrelerinin solunum patlaması, radyasyon ve bazı toksinlerdir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+      "B": "Yanlış. Yaş, kanserler, ateroskleroz/iskemik kalp hastalığı ve nörodejeneratif hastalıklar (Alzheimer vb.) için güçlü bağımsız risk faktörüdür.",
+      "A": "Yanlış. IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "C": "Yanlış. Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "D": "Yanlış. Başlıca ROS süperoksit (O₂•⁻), hidrojen peroksit (H₂O₂) ve hidroksil radikalidir (•OH); kaynakları mitokondriyal oksidatif fosforilasyon, iltihap hücrelerinin solunum patlaması, radyasyon ve bazı toksinlerdir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q14",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Kalori kısıtlaması\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+      "A": "DNA hasarı ve onarım yetersizliği, replikatif yaşlanma, protein homeostazında bozulma, mitokondriyal disfonksiyon/ROS birikimi, IGF-1 ve mTOR sinyal değişiklikleri ve kalıcı düşük dereceli inflamasyondur.",
+      "E": "Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "C": "Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "D": "DNA spontan baz değişimleri, ROS, radyasyon ve kimyasal ajanlarla sürekli hasara uğrar; onarım sistemleri çoğu hasarı düzeltir ancak zamanla mutasyonlar birikir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+      "A": "Yanlış. DNA hasarı ve onarım yetersizliği, replikatif yaşlanma, protein homeostazında bozulma, mitokondriyal disfonksiyon/ROS birikimi, IGF-1 ve mTOR sinyal değişiklikleri ve kalıcı düşük dereceli inflamasyondur.",
+      "E": "Yanlış. Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "C": "Yanlış. Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "D": "Yanlış. DNA spontan baz değişimleri, ROS, radyasyon ve kimyasal ajanlarla sürekli hasara uğrar; onarım sistemleri çoğu hasarı düzeltir ancak zamanla mutasyonlar birikir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q15",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Yaşlanma ve hastalıklar\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Kanser DNA hasarı + telomer kısalması + telomeraz aktivasyonu; kardiyovasküler hastalık endotel disfonksiyonu, ateroskleroz ve ROS; nörodejeneratif hastalıklar protein agregatları ve mitokondriyal disfonksiyon ile ilişkilidir; osteoartrit ve sarkopeni hücre yenilenmesinin azalması sonucudur.",
+      "C": "IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "E": "ATP azalması nekroz eğilimine; zar geçirgenliği artışı apoptoza yol açar. Zar geçirgenliği artınca sitokrom c ve proapoptotik proteinler sitozole sızar.",
+      "D": "Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+      "A": "DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Kanser DNA hasarı + telomer kısalması + telomeraz aktivasyonu; kardiyovasküler hastalık endotel disfonksiyonu, ateroskleroz ve ROS; nörodejeneratif hastalıklar protein agregatları ve mitokondriyal disfonksiyon ile ilişkilidir; osteoartrit ve sarkopeni hücre yenilenmesinin azalması sonucudur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Kanser DNA hasarı + telomer kısalması + telomeraz aktivasyonu; kardiyovasküler hastalık endotel disfonksiyonu, ateroskleroz ve ROS; nörodejeneratif hastalıklar protein agregatları ve mitokondriyal disfonksiyon ile ilişkilidir; osteoartrit ve sarkopeni hücre yenilenmesinin azalması sonucudur.",
+      "C": "Yanlış. IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "E": "Yanlış. ATP azalması nekroz eğilimine; zar geçirgenliği artışı apoptoza yol açar. Zar geçirgenliği artınca sitokrom c ve proapoptotik proteinler sitozole sızar.",
+      "D": "Yanlış. Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+      "A": "Yanlış. DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k01-q16",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Telomeraz ve kanser\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+      "D": "Başlıca ROS süperoksit (O₂•⁻), hidrojen peroksit (H₂O₂) ve hidroksil radikalidir (•OH); kaynakları mitokondriyal oksidatif fosforilasyon, iltihap hücrelerinin solunum patlaması, radyasyon ve bazı toksinlerdir.",
+      "C": "DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "E": "IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "A": "Üretim mitokondriyal solunum zinciri, fagositoz yapan lökositler (nötrofiller) ile X-ışınları/bazı ilaçlarla artar; temizlenme SOD, katalaz (peroksizomlarda) ve glutatyon peroksidaz ile sağlanır."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+      "D": "Yanlış. Başlıca ROS süperoksit (O₂•⁻), hidrojen peroksit (H₂O₂) ve hidroksil radikalidir (•OH); kaynakları mitokondriyal oksidatif fosforilasyon, iltihap hücrelerinin solunum patlaması, radyasyon ve bazı toksinlerdir.",
+      "C": "Yanlış. DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "E": "Yanlış. IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "A": "Yanlış. Üretim mitokondriyal solunum zinciri, fagositoz yapan lökositler (nötrofiller) ile X-ışınları/bazı ilaçlarla artar; temizlenme SOD, katalaz (peroksizomlarda) ve glutatyon peroksidaz ile sağlanır."
+     },
+     "bilgi": [
+      19
      ],
      "benzer_cikmis": []
     }
@@ -184,6 +532,350 @@
      "benzer_cikmis": [
       "d3-f-111"
      ]
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Yaşlanan bir dokuda DNA mutasyonlarının biriktiği, proteinlerin yanlış katlandığı, mitokondriyal verimin düştüğü ve düşük dereceli inflamasyonun sürdüğü saptanmıştır. Bu tabloya uyan mekanizma grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca telomer kısalması",
+      "B": "Yalnızca kalsiyum birikimi",
+      "C": "Yalnızca apoptoz artışı",
+      "D": "DNA hasarı, replikatif yaşlanma, protein homeostaz bozukluğu, mitokondriyal disfonksiyon ve kronik inflamasyon",
+      "E": "Yalnızca otofaji azalması"
+     },
+     "dogru": "D",
+     "aciklama": "Başlıca mekanizmalar DNA hasarı-onarım yetersizliği, replikatif yaşlanma, protein homeostaz bozukluğu, mitokondriyal disfonksiyon-ROS, IGF-1-mTOR dengesizliği ve kronik inflamasyondur. Birden fazla mekanizma bir arada katkıda bulunur.",
+     "sik_aciklamalari": {
+      "A": "Telomer yalnızca bir mekanizmadır.",
+      "B": "Kalsiyum hasar mediyatörüdür, tek mekanizma değildir.",
+      "C": "Apoptoz sonuçlardan biridir.",
+      "D": "Doğru. Yaşlanma çok mekanizmalı bir süreçtir.",
+      "E": "Otofaji tek başına süreci tanımlamaz."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Genç yaşta saç beyazlaması, katarakt ve ateroskleroz gelişen bir hastada DNA onarım geninde mutasyon saptanmıştır. Bu tabloyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "DNA onarım geni mutasyonları erken yaşlanma fenotipi yapabilir",
+      "B": "DNA hasarı onarım sistemlerince hiçbir zaman düzeltilemez",
+      "C": "Mutasyon birikimi hücreleri gençleştirir",
+      "D": "Werner sendromunda çoğalma kapasitesi artmıştır",
+      "E": "DNA hasarı yaşlanmayla ilişkisizdir"
+     },
+     "dogru": "A",
+     "aciklama": "Werner sendromu DNA onarım genlerindeki mutasyona bağlı progeroid sendromdur; erken yaşlanma fenotipi ve çoğalma kapasitesinde azalma görülür. Bu, DNA onarım yetersizliğinin yaşlanmayı hızlandırdığını gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Onarım yetersizliğinde mutasyonlar birikir, hücreler senesense girer.",
+      "B": "Sistemler çoğu hasarı düzeltir ancak zamanla yetersiz kalır.",
+      "C": "Mutasyon birikimi gen ekspresyonunu bozar.",
+      "D": "Çoğalma kapasitesi belirgin azalır.",
+      "E": "DNA hasarı ana mekanizmalardandır."
+     },
+     "bilgi": [
+      6,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Hücresel yaşlanmanın başlıca mekanizmalarını doğru sıralayan seçenek hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca telomer kısalması",
+      "B": "DNA, telomer, protein, mitokondri, sinyal, inflamasyon",
+      "C": "Yalnızca enfeksiyonlar",
+      "D": "Yalnızca beslenme eksikliği",
+      "E": "Yalnızca travmalar"
+     },
+     "dogru": "B",
+     "aciklama": "Yaşlanmaya DNA hasarı ve onarım yetersizliği, replikatif yaşlanma (telomer kısalması), protein homeostazı bozulması, mitokondriyal disfonksiyon ve ROS birikimi, IGF-1/mTOR sinyal değişiklikleri ile kalıcı düşük dereceli inflamasyon birlikte katkıda bulunur. Bu mekanizmalar birbirini besleyen bir ağ oluşturur. Werner sendromu gibi DNA onarım kusurlarında erken yaşlanma fenotipi görülmesi, listenin klinik karşılığını doğrular.",
+     "sik_aciklamalari": {
+      "A": "Telomer yalnızca altı mekanizmadan biridir.",
+      "B": "Doğru. Altı mekanizma bir arada yaşlanma fenotipini oluşturur.",
+      "C": "Enfeksiyonlar mekanizma listesinde yer almaz.",
+      "D": "Beslenme yalnızca modülatör bir faktördür.",
+      "E": "Travma yaşlanma mekanizması değildir."
+     },
+     "bilgi": [
+      4,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Werner sendromunun yaşlanmayla ilişkili genetik mekanizması nedir?",
+     "secenekler": {
+      "A": "Telomeraz fazlalığıdır",
+      "B": "Onkogen aktivasyonudur",
+      "C": "Mitokondri artışıdır",
+      "D": "DNA onarım kusuru, erken yaşlanma",
+      "E": "Protein sentez artışıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Werner sendromunda DNA onarım proteinlerini kodlayan genler mutanttır, bu yüzden spontan baz değişimleri ve kırıklar düzeltilemez. Biriken mutasyonlar gen ekspresyonunu değiştirir, hücreler senesense girer ve çoğalma kapasitesi belirgin azalır. Sonuç, genç yaşta ortaya çıkan progeroid (erken yaşlanma) fenotipidir.",
+     "sik_aciklamalari": {
+      "A": "Telomeraz fazlalığı kanser hücrelerindedir.",
+      "B": "Onkogen aktivasyonu transformasyona yol açar.",
+      "C": "Mitokondri sayısı değil işlevi bozulur.",
+      "D": "Doğru. Onarılamayan hasar birikimi progeroid tablo yapar.",
+      "E": "Protein sentezi değil homeostazı bozulur."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Hücresel yaşlanmanın patogenezinde rol oynayan BAŞLICA hücresel ve moleküler mekanizmalar arasında aşağıdakilerden hangisi YER ALMAZ?",
+     "secenekler": {
+      "A": "DNA hasarının birikmesi ve DNA onarım sistemlerinin yetersiz kalması",
+      "B": "Her hücre bölünmesinde telomerlerin kademeli kısalması (replikatif senesens)",
+      "C": "Şaperon ve proteazom disfonksiyonuna bağlı protein homeostazının bozulması",
+      "D": "Mitokondri disfonksiyonu ve artmış Reaktif Oksijen Türleri (ROS) üretimi",
+      "E": "Hücre zarlarındaki sodyum-potasyum ATPaz pompalarının sayısının katlanarak artması ve hücre içi sodyumun tamamen tükenmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Hücresel yaşlanmanın 6 temel mekanizması şunlardır:\n1. DNA hasarının birikimi,\n2. Replikatif yaşlanma (telomer kısalması),\n3. Protein homeostazının (proteostaz) bozulması,\n4. Mitokondri disfonksiyonu ve ROS hasarı,\n5. Besin algılama yollarındaki değişiklikler (IGF-1 / mTOR),\n6. Kronik düşük dereceli inflamasyon (inflammaging).\nNa+/K+ pompasının katlanarak artması ve sodyumun tükenmesi yaşlanma mekanizması değildir.",
+     "sik_aciklamalari": {
+      "A": "DNA hasar birikimi temel yaşlanma nedenidir.",
+      "B": "Telomer kısalması replikatif senesensi doğurur.",
+      "C": "Proteostaz kaybı yaşlı hücrelerin belirtecidir.",
+      "D": "Mitokondri disfonksiyonu ve ROS artışı serbest radikal teorisinin temelidir.",
+      "E": "Doğru (yer almaz). Na/K pompasının aşırı artışı yaşlanma patolojisi değildir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Normal insan embriyonik fibroblastlarının in vitro hücre kültüründe belirli bir bölünme sayısına (yaklaşık 50-60 pasaj) ulaştıktan sonra bölünmeyi kalıcı olarak durdurduğunu ve senesense girdiğini ilk kez deneysel olarak kanıtlayan bilim insanı kimdir?",
+     "secenekler": {
+      "A": "Leonard Hayflick (Hayflick Limiti)",
+      "B": "Alexander Fleming",
+      "C": "Louis Pasteur",
+      "D": "Robert Koch",
+      "E": "Rudolf Virchow"
+     },
+     "dogru": "A",
+     "aciklama": "Leonard Hayflick 1961 yılında yaptığı çalışmada, normal fetal insan hücrelerinin kültürde sonsuza kadar bölünemeyeceğini, yaklaşık 50-60 bölünme döngüsünden sonra kalıcı olarak durakladığını (replikatif senesens) göstermiştir. Bu replikasyon sınırına 'Hayflick Limiti' adı verilir ve hücresel yaşlanmanın telomer kısalması temeline dayandığı sonradan anlaşılmıştır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Replikasyon sınırını keşfeden Leonard Hayflick'tir (Hayflick limiti).",
+      "B": "Alexander Fleming penisilini keşfetmiştir.",
+      "C": "Louis Pasteur kuduz aşısını ve fermantasyonu bulmuştur.",
+      "D": "Robert Koch bakteriyoloji postülatlarını kurmuştur.",
+      "E": "Rudolf Virchow hücresel patolojinin babasıdır."
+     },
+     "bilgi": [
+      4,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q10",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Yaşlanan hücrelerde hücre döngüsünü G1 fazında kalıcı olarak durduran (senesensi başlatan ve sürdüren) TEMEL siklin bağımlı kinaz inhibitörleri (CDKI) ve ilişkili tümör baskılayıcı yolaklar aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "p53 / p21(CIP1) yolağı ve p16(INK4a) / Retinoblastoma (Rb) yolağı",
+      "B": "Siklin D1 ve CDK4 kompleksleri",
+      "C": "c-Myc ve K-Ras protoonkojenleri",
+      "D": "BCL-2 ve BCL-XL anti-apoptotik ekseni",
+      "E": "Wnt / beta-katenin proliferatif yolağı"
+     },
+     "dogru": "A",
+     "aciklama": "Replikatif veya stres kaynaklı senesens iki temel CDKI yolağı üzerinden yürütülür:\n1) p53 -> p21 (CIP1): DNA hasarı veya telomer aşınması p53'ü uyarır, p53 transkripsiyonel olarak p21'i artırır. p21 siklin-CDK komplekslerini inhibe ederek G1 arresti yapar.\n2) p16 (INK4a) -> Rb: INK4a/ARF lokusundan kodlanan p16, CDK4/6'yı inhibe eder. Bu durum Retinoblastoma (Rb) proteininin hipofosforile (aktif) kalmasını sağlar; aktif Rb transkripsiyon faktörü E2F'yi bağlayarak hücrenin S fazına geçişini kalıcı olarak bloke eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru. p53/p21 ve p16/Rb yolakları senesensin ana moleküler yürütücüleridir.",
+      "B": "Siklin D1/CDK4 hücreyi böler, senesensi değil proliferasyonu uyarır.",
+      "C": "Myc ve Ras mitojenik onkogenlerdir.",
+      "D": "BCL-2 apoptozu engeller, senesens siklin inhibitörü değildir.",
+      "E": "Wnt proliferatif kök hücre yolağıdır."
+     },
+     "bilgi": [
+      4,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Hücresel yaşlanma sırasında senesent hücrelerin morfolojik ve histokimyasal özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "secenekler": {
+      "A": "Hücreler aşırı küçülür ve saniyeler içinde apoptotik cisimciklere ayrılır.",
+      "B": "Hücreler genişler, yassılaşır, sitoplazmaları büyür ve pH 6.0'da 'Senesens İlişkili Beta-Galaktozidaz' (SA-β-gal) pozitifliği gösterirler.",
+      "C": "Senesent hücrelerde nükleus tamamen kaybolur ve hücreler eritrosite dönüşür.",
+      "D": "Senesent hücrelerin yüzeyinde telomeraz enzimi 100 kat artar.",
+      "E": "Hücreler hızla interfazdan mitoza geçerek poliploidi oluşturur."
+     },
+     "dogru": "B",
+     "aciklama": "Senesent hücreler morfolojik olarak belirgin şekilde değişir: Boyutları büyür, yassılaşır, sitoplazmaları genişler (fried-egg / sahanda yumurta görünümü). Lizozomal içerikleri ve biyogenezleri artar; bu nedenle asidik lizozomal enzim olan beta-galaktozidazın pH 6.0 gibi sub-optimal bir pH'ta bile boyanabilmesi (SA-β-gal: Senescence-Associated Beta-Galactosidase) senesent hücrelerin en klasik laboratuvar belirtecidir.",
+     "sik_aciklamalari": {
+      "A": "Küçülme ve apoptotik cisimcikler apoptozun özelliğidir; senesent hücre genişler.",
+      "B": "Doğru. Hücre genişler, yassılaşır ve SA-β-gal pozitifliği gösterir.",
+      "C": "Nükleus korunur, kaybolmaz.",
+      "D": "Somatik senesent hücrede telomeraz aktif değildir.",
+      "E": "Hücre bölünmesi kalıcı olarak durmuştur (G0/G1 arrest)."
+     },
+     "bilgi": [
+      4,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q12",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Hücresel düzeyde metabolik sensör olarak işlev gören ve NAD+ bağımlı deasetilaz aktivitesi gösteren, kalori kısıtlaması ile aktive olarak DNA onarımını ve antioksidan gen ekspresyonunu artıran protein ailesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sirtuinler (SIRT1 - SIRT7)",
+      "B": "Kaspazlar",
+      "C": "MMP'ler",
+      "D": "Siklinler",
+      "E": "İnterlökinler"
+     },
+     "dogru": "A",
+     "aciklama": "Sirtuinler (SIRT1-7), hücre içi enerji düzeyini (NAD+/NADH oranını) algılayan NAD+ bağımlı protein deasetilazlardır. Kalori kısıtlamasında ve egzersizde NAD+ yükseldiğinde sirtuinler aktive olur. Histonları, p53'ü ve PGC-1alfa'yı deasetile ederek DNA onarımını artırır, mitokondri biyogenezini uyarır, antioksidan savunmayı güçlendirir ve yaşam süresini uzatmaya katkı sağlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. NAD+ bağımlı deasetilazlar olan Sirtuinler yaşlanmayı geciktirici adaptasyonları koordine eder.",
+      "B": "Kaspazlar apoptoz proteazlarıdır.",
+      "C": "MMP'ler matriks yıkan metalloproteinazlardır.",
+      "D": "Siklinler hücre döngüsü aktivatörleridir.",
+      "E": "İnterlökinler inflamatuar sitokinlerdir."
+     },
+     "bilgi": [
+      4,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q13",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "\"Telomer kısalması ve hücre döngüsü\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "C": "Kısa telomer kromozom uçlarının 'kırık DNA' gibi algılanmasına yol açar; hücre döngüsü durdurulur ve hücre replikatif senesense girer.",
+      "B": "Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+      "E": "İnflamatuar sitokinler insülin direnci, katabolik durum ve hücrelerde ek DNA-protein hasarı yapar.",
+      "A": "Başlıca ROS süperoksit (O₂•⁻), hidrojen peroksit (H₂O₂) ve hidroksil radikalidir (•OH); kaynakları mitokondriyal oksidatif fosforilasyon, iltihap hücrelerinin solunum patlaması, radyasyon ve bazı toksinlerdir.",
+      "D": "Telomerler kromozom uçlarındaki tekrarlayan DNA dizileridir (TTAGGG); kromozom uçlarını korur, uçların yapışmasını engeller ve tam replikasyonu kolaylaştırır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Kısa telomer kromozom uçlarının 'kırık DNA' gibi algılanmasına yol açar; hücre döngüsü durdurulur ve hücre replikatif senesense girer.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Kısa telomer kromozom uçlarının 'kırık DNA' gibi algılanmasına yol açar; hücre döngüsü durdurulur ve hücre replikatif senesense girer.",
+      "B": "Yanlış. Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+      "E": "Yanlış. İnflamatuar sitokinler insülin direnci, katabolik durum ve hücrelerde ek DNA-protein hasarı yapar.",
+      "A": "Yanlış. Başlıca ROS süperoksit (O₂•⁻), hidrojen peroksit (H₂O₂) ve hidroksil radikalidir (•OH); kaynakları mitokondriyal oksidatif fosforilasyon, iltihap hücrelerinin solunum patlaması, radyasyon ve bazı toksinlerdir.",
+      "D": "Yanlış. Telomerler kromozom uçlarındaki tekrarlayan DNA dizileridir (TTAGGG); kromozom uçlarını korur, uçların yapışmasını engeller ve tam replikasyonu kolaylaştırır."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q14",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Klinik perspektif ve anti-aging\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+      "C": "Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+      "B": "Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "E": "Kanser DNA hasarı + telomer kısalması + telomeraz aktivasyonu; kardiyovasküler hastalık endotel disfonksiyonu, ateroskleroz ve ROS; nörodejeneratif hastalıklar protein agregatları ve mitokondriyal disfonksiyon ile ilişkilidir; osteoartrit ve sarkopeni hücre yenilenmesinin azalması sonucudur.",
+      "A": "Telomeraz aktivitesindeki kalıtsal eksiklikler telomerlerin hızla kısalmasına yol açar."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+      "C": "Yanlış. Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+      "B": "Yanlış. Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "E": "Yanlış. Kanser DNA hasarı + telomer kısalması + telomeraz aktivasyonu; kardiyovasküler hastalık endotel disfonksiyonu, ateroskleroz ve ROS; nörodejeneratif hastalıklar protein agregatları ve mitokondriyal disfonksiyon ile ilişkilidir; osteoartrit ve sarkopeni hücre yenilenmesinin azalması sonucudur.",
+      "A": "Yanlış. Telomeraz aktivitesindeki kalıtsal eksiklikler telomerlerin hızla kısalmasına yol açar."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q15",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"DNA hasarı ve onarım\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "DNA spontan baz değişimleri, ROS, radyasyon ve kimyasal ajanlarla sürekli hasara uğrar; onarım sistemleri çoğu hasarı düzeltir ancak zamanla mutasyonlar birikir.",
+      "D": "Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "E": "Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "A": "Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "B": "Anormal proteinler hücre fonksiyonlarını bozar ve hücre içi agregatlar oluşturur; Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında α-sinüklein birikir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: DNA spontan baz değişimleri, ROS, radyasyon ve kimyasal ajanlarla sürekli hasara uğrar; onarım sistemleri çoğu hasarı düzeltir ancak zamanla mutasyonlar birikir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. DNA spontan baz değişimleri, ROS, radyasyon ve kimyasal ajanlarla sürekli hasara uğrar; onarım sistemleri çoğu hasarı düzeltir ancak zamanla mutasyonlar birikir.",
+      "D": "Yanlış. Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "E": "Yanlış. Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "A": "Yanlış. Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "B": "Yanlış. Anormal proteinler hücre fonksiyonlarını bozar ve hücre içi agregatlar oluşturur; Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında α-sinüklein birikir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k02-q16",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Klinik perspektif ve anti-aging\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+      "C": "IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "E": "Yaş, kanserler, ateroskleroz/iskemik kalp hastalığı ve nörodejeneratif hastalıklar (Alzheimer vb.) için güçlü bağımsız risk faktörüdür.",
+      "A": "Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir.",
+      "D": "Kanser DNA hasarı + telomer kısalması + telomeraz aktivasyonu; kardiyovasküler hastalık endotel disfonksiyonu, ateroskleroz ve ROS; nörodejeneratif hastalıklar protein agregatları ve mitokondriyal disfonksiyon ile ilişkilidir; osteoartrit ve sarkopeni hücre yenilenmesinin azalması sonucudur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+      "C": "Yanlış. IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "E": "Yanlış. Yaş, kanserler, ateroskleroz/iskemik kalp hastalığı ve nörodejeneratif hastalıklar (Alzheimer vb.) için güçlü bağımsız risk faktörüdür.",
+      "A": "Yanlış. Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir.",
+      "D": "Yanlış. Kanser DNA hasarı + telomer kısalması + telomeraz aktivasyonu; kardiyovasküler hastalık endotel disfonksiyonu, ateroskleroz ve ROS; nörodejeneratif hastalıklar protein agregatları ve mitokondriyal disfonksiyon ile ilişkilidir; osteoartrit ve sarkopeni hücre yenilenmesinin azalması sonucudur."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -311,6 +1003,353 @@
       11
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q05",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Yaşlı bir dokuda serbest radikal üretiminin arttığı, antioksidan enzimlerin ise görece yetersiz kaldığı saptanmıştır. Bu dengesizlikte rol oynayan reaktif türler aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Süperoksit, nitrik oksit ve karbon monoksit",
+      "B": "Süperoksit, hidrojen peroksit ve hidroksil radikali",
+      "C": "İnsülin, glukagon ve kortizol",
+      "D": "Kollajen, elastin ve fibronektin",
+      "E": "Sodyum, potasyum ve kalsiyum"
+     },
+     "dogru": "B",
+     "aciklama": "Başlıca ROS süperoksit, hidrojen peroksit ve hidroksil radikalidir; kaynakları mitokondriyal solunum, lökositler ve radyasyondur. Temizlenme SOD, katalaz ve glutatyonla sağlanır; vitaminler de katkıda bulunur.",
+     "sik_aciklamalari": {
+      "A": "Nitrik oksit ve CO bu gruba girmez.",
+      "B": "Doğru. Üretim solunum zinciri ve fagositozla artar, SOD ve katalazla temizlenir.",
+      "C": "Bunlar hormonlardır.",
+      "D": "Bunlar matriks proteinleridir.",
+      "E": "Bunlar elektrolitlerdir."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q06",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Yaşlı karaciğer hücrelerinde lipofusin birikimi, zar lipidlerinde peroksidasyon ürünleri ve baz modifikasyonları saptanmıştır. Mitokondriyal verimin düştüğü belirtilmiştir. Bu tabloyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "ROS yalnızca protein sentezini artırır",
+      "B": "Lipid peroksidasyonu zarları güçlendirir",
+      "C": "Oksidatif stres yaşlanmayı yavaşlatır",
+      "D": "Lipofusin antioksidan bir pigmenttir",
+      "E": "Yaşlı hücrede artan ROS DNA-protein hasarı biriktirir ve fonksiyon rezervini azaltır"
+     },
+     "dogru": "E",
+     "aciklama": "ROS lipid peroksidasyonu, protein oksidasyonu ve DNA hasarı yapar; sonuçta nekroz, apoptoz ve yaşlanma hızlanır. Yaşlı hücrelerde mitokondriyal verim düşer, ROS artar ve lipofusin gibi pigmentler birikir.",
+     "sik_aciklamalari": {
+      "A": "ROS çapraz bağlanma ve aktivite kaybı yapar.",
+      "B": "Peroksidasyon zincirleme zar hasarıdır.",
+      "C": "Oksidatif stres yaşlanmayı hızlandırır.",
+      "D": "Lipofusin aşınma pigmentidir.",
+      "E": "Doğru. Üretim temizlemeyi aşınca oksidatif stres gelişir."
+     },
+     "bilgi": [
+      9,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Oksidatif stresin tanımı ve hücresel hedefleri nelerdir?",
+     "secenekler": {
+      "A": "ROS yalnızca yararlıdır",
+      "B": "Antioksidanlar ROS üretir",
+      "C": "Üretim-temizleme dengesizliği, lipid-protein-DNA",
+      "D": "ROS çekirdeğe giremez",
+      "E": "Oksidatif stres yaşlanmayı yavaşlatır"
+     },
+     "dogru": "C",
+     "aciklama": "Süperoksit, hidrojen peroksit ve hidroksil radikali mitokondriyal solunum zinciri kaçağı, nötrofil solunum patlaması ve radyasyondan kaynaklanır. SOD, katalaz, glutatyon peroksidaz ve vitamin içerikli antioksidanlar bu radikalleri temizler. Üretim temizlemeyi aştığında oksidatif stres gelişir; zar fosfolipidlerinde zincirleme lipid peroksidasyonu, proteinlerde çapraz bağlanma ve DNA'da kırıklar oluşur.",
+     "sik_aciklamalari": {
+      "A": "Aşırı ROS hasar vericidir.",
+      "B": "Antioksidanlar ROS'u temizler.",
+      "C": "Doğru. Dengesizlik üç hedefte birden hasar yapar.",
+      "D": "Hidroksil radikali DNA'yı doğrudan zedeler.",
+      "E": "Oksidatif stres yaşlanmayı hızlandırır."
+     },
+     "bilgi": [
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Yaşlı hücrede ROS dengesinin bozulma mekanizması nedir?",
+     "secenekler": {
+      "A": "Verim düşer, ROS artar, lipofusin birikir",
+      "B": "Mitokondri gençleşir",
+      "C": "ROS üretimi durur",
+      "D": "Lipofusin azalır",
+      "E": "Rezerv artar"
+     },
+     "dogru": "A",
+     "aciklama": "Yaşlı hücrede mitokondriyal verim düşer ve elektron taşıma zincirinden kaçan elektronlar süperoksit üretimini artırır. Eş zamanlı olarak antioksidan savunma zayıflayabilir, bu yüzden hasarlı lipid ve proteinler temizlenemez. Biriken oksidatif atıklar lipofusin gibi aşınma pigmentlerini oluşturur, fonksiyonel rezerv azalır ve yaşlanma hızlanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Enerji-hasar döngüsü yaşlı hücrede ROS lehine döner.",
+      "B": "Mitokondriyal DNA mutasyonları birikir.",
+      "C": "Kaçak elektronlar ROS üretimini artırır.",
+      "D": "Lipofusin yaşla birikir.",
+      "E": "Fonksiyonel rezerv azalır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": [
+      "409a6dd83207"
+     ]
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Serbest Oksijen Radikalleri (ROS) ve oksidatif stresin yaşlanma sürecindeki etkileri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Mitokondriyal elektron transport zincirinden kaçan elektronlar primer olarak süperoksit (O2•-) radikalini üretir.",
+      "B": "ROS, hücresel membranlardaki çoklu doymamış yağ asitlerine saldırarak lipid peroksidasyonunu başlatır.",
+      "C": "ROS tarafından okside edilen proteinlerin ve nükleer DNA hasarlarının birikmesi fonksiyonel rezervi azaltır.",
+      "D": "Hücre yaşlandıkça mitokondri verimi artar ve hücre içi ROS üretimi tamamen sıfırlanır.",
+      "E": "Lipid peroksidasyonunun sindirilemeyen son ürünü olan lipofusin pigmenti yaşlı kalp ve karaciğer hücrelerinde birikir."
+     },
+     "dogru": "D",
+     "aciklama": "Yaşlanma sürecinde mitokondriyal genom (mtDNA) mutasyonları birikir, oksidatif fosforilasyon komplekslerinin yapısı bozulur ve elektron kaçakları artar. Sonuç olarak yaşlanan hücrelerde ROS üretimi SIFIRLANMAZ; tam aksine belirgin şekilde ARTAR ve antioksidan enzim kapasitesi azaldığı için hücre ağır bir kronik oksidatif stres altında kalır.",
+     "sik_aciklamalari": {
+      "A": "Elektron kaçakları kompleks I ve III'ten O2'ye elektron aktararak süperoksit oluşturur, doğrudur.",
+      "B": "Lipid peroksidasyonu ROS'un plazma zarına en yıkıcı etkisidir, doğrudur.",
+      "C": "Oksidatif DNA ve protein modifikasyonu hücresel yetmezliği hızlandırır, doğrudur.",
+      "D": "Yanlış ifade (sorunun doğru yanıtı). ROS üretimi sıfırlanmaz, aksine artar.",
+      "E": "Lipofusin yaşlanmanın ve lipid peroksidasyonunun karakteristik pigmentidir, doğrudur."
+     },
+     "bilgi": [
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q10",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Otozomal resesif geçişli erken yaşlanma tablosu olan WERNER SENDROMU'nda (yetişkin progeriası), DNA helikaz enzimini kodlayan WRN genindeki mutasyonun hücre düzeyinde yol açtığı temel patoloji aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "DNA replikasyonunun aşırı hızlanması ve dev hücreler oluşması",
+      "B": "Hatalı baz onarımı ve homolog rekombinasyon defekti nedeniyle DNA hasarlarının hızla birikmesi ve hücrelerin erken replikatif senesense girmesi",
+      "C": "Mitokondrilerin tamamen yok olması",
+      "D": "Hücre zarlarının lipid yerine saf kalsiyumdan üretilmesi",
+      "E": "Lizozom enzimlerinin ekstraselüler alana salınamaması"
+     },
+     "dogru": "B",
+     "aciklama": "Werner sendromu, WRN gen mutasyonu sonucu gelişen bir progeroid (erken yaşlanma) sendromudur. WRN geni bir DNA helikaz/ekzonükleaz kodlar ve DNA çift zincir kırıklarının onarımında, homolog rekombinasyonda ve telomer bakımında kritik rol oynar. Bu enzim bozulduğunda genoma binen hasarlar tamir edilemez, genomik instabilite artar, telomerler hızla aşınır ve hücreler genç yaşta senesense girer. Hastalarda 20'li-30'lu yaşlarda katarakt, saç beyazlaması, osteoporoz, ateroskleroz ve erken ölüm görülür.",
+     "sik_aciklamalari": {
+      "A": "Replikasyon hızlanmaz, tam aksine hücreler bölünemez hale gelir.",
+      "B": "Doğru. DNA helikaz defekti nedeniyle DNA hasar onarımı bozulur ve erken senesens gelişir.",
+      "C": "Mitokondri yokluğu değildir.",
+      "D": "Zar kalsiyumdan oluşmaz.",
+      "E": "Lizozom salgı defekti değildir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q11",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Mitokondride üretilen süperoksit anyonunu (O2•-) hidrojen peroksite (H2O2) dönüştürerek hücreyi serbest radikal hasarından koruyan İLK BASAMAK antioksidan enzim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Süperoksit Dismutaz (SOD)",
+      "B": "Katalaz",
+      "C": "Glutatyon peroksidaz",
+      "D": "Miyeloperoksidaz",
+      "E": "Ksantin oksidaz"
+     },
+     "dogru": "A",
+     "aciklama": "Süperoksit dismutaz (SOD), solunum zincirinde oluşan süperoksit radikallerini yakalayarak oksijen ve hidrojen peroksite dönüştüren (2O2•- + 2H+ -> H2O2 + O2) temel antioksidandır. Mitokondride manganez bağımlı (Mn-SOD / SOD2), sitozolde ise bakır-çinko bağımlı (Cu/Zn-SOD / SOD1) izoformları bulunur. Oluşan H2O2 daha sonra peroksizomlardaki Katalaz veya sitozoldeki Glutatyon Peroksidaz ile suya indirgenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Süperoksiti hidrojen peroksite çeviren ilk basamak enzimi Süperoksit Dismutaz'dır.",
+      "B": "Katalaz H2O2'yi suya ve oksijene yıkar (ikinci basamak).",
+      "C": "Glutatyon peroksidaz H2O2 ve lipid peroksitlerini glutatyon kullanarak suya indirger.",
+      "D": "Miyeloperoksidaz nötrofillerde H2O2'den HOCl üreten pro-oksidan/bakterisid enzimdir.",
+      "E": "Ksantin oksidaz pürin yıkımında ROS üreten bir enzimdir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q12",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Oksidatif DNA hasarı sırasında guanin bazının reaktif oksijen radikalleri ile modifiye edilmesi sonucu oluşan ve hem deneysel çalışmalarda hem de klinik araştırmalarda hücresel 'oksidatif DNA hasarının altın standart biyobelirteci' olarak idrarda ve dokuda ölçülen molekül aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "8-hidroksi-2'-deoksiguanozin (8-OHdG)",
+      "B": "Malondialdehit (MDA)",
+      "C": "Lipofusin",
+      "D": "Homosistein",
+      "E": "Ürik asit"
+     },
+     "dogru": "A",
+     "aciklama": "Guanin, DNA'da oksidasyon potansiyeli en düşük (yani oksidasyona en duyarlı) bazdır. Hidroksil radikali guanin bazının C-8 pozisyonuna saldırarak 8-hidroksi-2'-deoksiguanozin (8-OHdG veya 8-oxo-dG) oluşturur. 8-OHdG adenin ile yanlış eşleşerek G:C -> T:A transversiyon mutasyonlarına yol açar. Dokuda veya idrarda 8-OHdG düzeyinin ölçülmesi hücre içi oksidatif DNA hasarının en güvenilir ve evrensel göstergesidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. 8-OHdG oksidatif DNA hasarının altın standart biyobelirtecidir.",
+      "B": "Malondialdehit (MDA) lipid peroksidasyonu belirtecidir, DNA değil.",
+      "C": "Lipofusin aşınma pigmentidir.",
+      "D": "Homosistein vasküler risk aminoasididir.",
+      "E": "Ürik asit pürin son ürünüdür."
+     },
+     "bilgi": [
+      5,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q13",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Hücre zarlarındaki lipid peroksidasyon zincir reaksiyonunu hidrofobik fazda kırarak sonlandıran (zincir kırıcı antioksidan) ve yaşlanmaya karşı hücre membran bütünlüğünü koruyan EN ÖNEMLİ yağda eriyen vitamin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "E Vitamini (Alfa-tokoferol)",
+      "B": "C Vitamini (Askorbik asit)",
+      "C": "B12 Vitamini (Kobalamin)",
+      "D": "K Vitamini",
+      "E": "Folik asit"
+     },
+     "dogru": "A",
+     "aciklama": "E vitamini (alfa-tokoferol), vücuttaki en güçlü ve başlıca yağda eriyen lipid fazı antioksidanıdır. Membran lipid çift tabakası içine yerleşir ve lipid peroksil radikallerine hidrojen vererek peroksidasyon zincir reaksiyonunu durdurur (chain-breaking antioxidant). Okside olan E vitamini ise sitozolik C vitamini tarafından tekrar indirgenerek rejenere edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Membranda lipid peroksidasyonunu kıran başlıca yağda çözünen antioksidan E vitaminidir.",
+      "B": "C vitamini suda eriyen sitoplazmik antioksidandır.",
+      "C": "B12 tek karbon metabolizmasında rol alır.",
+      "D": "K vitamini koagülasyon faktörlerinin karboksilasyonunda kofaktördür.",
+      "E": "Folik asit nükleotid sentezinde görevlidir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q14",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Klinik perspektif ve anti-aging\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "A": "Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+      "E": "Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "D": "Telomeraz aktivitesindeki kalıtsal eksiklikler telomerlerin hızla kısalmasına yol açar.",
+      "B": "Mitokondri ATP üretimi için gereklidir ve ROS üretiminin ana kaynağıdır; yaşlanmayla mitokondriyal DNA mutasyonları artar ve oksidatif fosforilasyon etkinliği azalır.",
+      "C": "Kısa telomer kromozom uçlarının 'kırık DNA' gibi algılanmasına yol açar; hücre döngüsü durdurulur ve hücre replikatif senesense girer."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+      "E": "Yanlış. Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "D": "Yanlış. Telomeraz aktivitesindeki kalıtsal eksiklikler telomerlerin hızla kısalmasına yol açar.",
+      "B": "Yanlış. Mitokondri ATP üretimi için gereklidir ve ROS üretiminin ana kaynağıdır; yaşlanmayla mitokondriyal DNA mutasyonları artar ve oksidatif fosforilasyon etkinliği azalır.",
+      "C": "Yanlış. Kısa telomer kromozom uçlarının 'kırık DNA' gibi algılanmasına yol açar; hücre döngüsü durdurulur ve hücre replikatif senesense girer."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q15",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"İnflamasyon-yaşlanma döngüsü\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "İnflamatuar sitokinler insülin direnci, katabolik durum ve hücrelerde ek DNA-protein hasarı yapar.",
+      "C": "Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "A": "Yaş, kanserler, ateroskleroz/iskemik kalp hastalığı ve nörodejeneratif hastalıklar (Alzheimer vb.) için güçlü bağımsız risk faktörüdür.",
+      "E": "Anormal proteinler hücre fonksiyonlarını bozar ve hücre içi agregatlar oluşturur; Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında α-sinüklein birikir.",
+      "D": "Lipid peroksidasyonu (zar fosfolipidlerinde zincirleme hasar), protein oksidasyonu (çapraz bağlanma, aktivite kaybı) ve DNA hasarı (baz modifikasyonu, tek/çift zincir kırıkları) oluşur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: İnflamatuar sitokinler insülin direnci, katabolik durum ve hücrelerde ek DNA-protein hasarı yapar.",
+     "sik_aciklamalari": {
+      "B": "Doğru. İnflamatuar sitokinler insülin direnci, katabolik durum ve hücrelerde ek DNA-protein hasarı yapar.",
+      "C": "Yanlış. Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "A": "Yanlış. Yaş, kanserler, ateroskleroz/iskemik kalp hastalığı ve nörodejeneratif hastalıklar (Alzheimer vb.) için güçlü bağımsız risk faktörüdür.",
+      "E": "Yanlış. Anormal proteinler hücre fonksiyonlarını bozar ve hücre içi agregatlar oluşturur; Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında α-sinüklein birikir.",
+      "D": "Yanlış. Lipid peroksidasyonu (zar fosfolipidlerinde zincirleme hasar), protein oksidasyonu (çapraz bağlanma, aktivite kaybı) ve DNA hasarı (baz modifikasyonu, tek/çift zincir kırıkları) oluşur."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q16",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"ROS türleri ve kaynakları\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Başlıca ROS süperoksit (O₂•⁻), hidrojen peroksit (H₂O₂) ve hidroksil radikalidir (•OH); kaynakları mitokondriyal oksidatif fosforilasyon, iltihap hücrelerinin solunum patlaması, radyasyon ve bazı toksinlerdir.",
+      "B": "DNA spontan baz değişimleri, ROS, radyasyon ve kimyasal ajanlarla sürekli hasara uğrar; onarım sistemleri çoğu hasarı düzeltir ancak zamanla mutasyonlar birikir.",
+      "D": "Lipid peroksidasyonu (zar fosfolipidlerinde zincirleme hasar), protein oksidasyonu (çapraz bağlanma, aktivite kaybı) ve DNA hasarı (baz modifikasyonu, tek/çift zincir kırıkları) oluşur.",
+      "E": "Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+      "C": "IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Başlıca ROS süperoksit (O₂•⁻), hidrojen peroksit (H₂O₂) ve hidroksil radikalidir (•OH); kaynakları mitokondriyal oksidatif fosforilasyon, iltihap hücrelerinin solunum patlaması, radyasyon ve bazı toksinlerdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Başlıca ROS süperoksit (O₂•⁻), hidrojen peroksit (H₂O₂) ve hidroksil radikalidir (•OH); kaynakları mitokondriyal oksidatif fosforilasyon, iltihap hücrelerinin solunum patlaması, radyasyon ve bazı toksinlerdir.",
+      "B": "Yanlış. DNA spontan baz değişimleri, ROS, radyasyon ve kimyasal ajanlarla sürekli hasara uğrar; onarım sistemleri çoğu hasarı düzeltir ancak zamanla mutasyonlar birikir.",
+      "D": "Yanlış. Lipid peroksidasyonu (zar fosfolipidlerinde zincirleme hasar), protein oksidasyonu (çapraz bağlanma, aktivite kaybı) ve DNA hasarı (baz modifikasyonu, tek/çift zincir kırıkları) oluşur.",
+      "E": "Yanlış. Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+      "C": "Yanlış. IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k03-q17",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"Hücresel yaşlanmanın tanımı\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "C": "Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "A": "Lipid peroksidasyonu (zar fosfolipidlerinde zincirleme hasar), protein oksidasyonu (çapraz bağlanma, aktivite kaybı) ve DNA hasarı (baz modifikasyonu, tek/çift zincir kırıkları) oluşur.",
+      "B": "Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir.",
+      "E": "Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "D": "ATP azalması nekroz eğilimine; zar geçirgenliği artışı apoptoza yol açar. Zar geçirgenliği artınca sitokrom c ve proapoptotik proteinler sitozole sızar."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Hücrelerin çoğalma kapasitesinde ve fonksiyonel aktivitesinde zamanla ortaya çıkan ilerleyici azalmadır; hücre, doku, organ ve organizma düzeyinde görülür.",
+      "A": "Yanlış. Lipid peroksidasyonu (zar fosfolipidlerinde zincirleme hasar), protein oksidasyonu (çapraz bağlanma, aktivite kaybı) ve DNA hasarı (baz modifikasyonu, tek/çift zincir kırıkları) oluşur.",
+      "B": "Yanlış. Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir.",
+      "E": "Yanlış. Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "D": "Yanlış. ATP azalması nekroz eğilimine; zar geçirgenliği artışı apoptoza yol açar. Zar geçirgenliği artınca sitokrom c ve proapoptotik proteinler sitozole sızar."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -396,6 +1435,352 @@
      "bilgi": [
       13,
       14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yaşlı bir hastanın kas biyopsisinde mitokondriyal DNA mutasyonları, ATP üretiminde azalma ve ROS artışı saptanmıştır. Bazı hücrelerde sitokrom c salınımıyla apoptoz başlamıştır. Bu tabloya uyan süreç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Enerji azalması ve ROS artışıyla nekroz-apoptoz eğilimi – mitokondriyal disfonksiyon",
+      "B": "Artmış ATP ve azalmış ROS – mitokondriyal disfonksiyon",
+      "C": "Mitokondriyal DNA mutasyonlarında azalma – yaşlanma",
+      "D": "Oksidatif fosforilasyonda artış – yaşlanma",
+      "E": "Zar geçirgenliğinde azalma – apoptoz"
+     },
+     "dogru": "A",
+     "aciklama": "Mitokondri ATP üretir ve ROS'un ana kaynağıdır; yaşlanmayla mitokondriyal DNA mutasyonları artar, enerji azalır ve ROS artışıyla hasar döngüsü oluşur. ATP azalması nekroza, zar geçirgenliği artışı apoptoza yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sitokrom c salınımı içsel apoptoz yolunu başlatır.",
+      "B": "Enerji azalır, ROS artar.",
+      "C": "Mutasyonlar yaşla artar.",
+      "D": "Fosforilasyon etkinliği düşer.",
+      "E": "Geçirgenlik artışı apoptoza yol açar."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "DNA hasarlı yaşlı bir hücrede BH3-only proteinlerin arttığı, BAX-BAK kanallarıyla sitokrom c salındığı ve kaspaz-3 aktivasyonuyla apoptotik cisimler oluştuğu izlenmiştir. Bu yolla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sitokrom c kaspaz-8'i aktive eder",
+      "B": "BCL-2 pro-apoptotik efektördür",
+      "C": "BH3-only sensörler BAX-BAK'ı aktive eder, sitokrom c kaspaz-9 üzerinden apoptozu başlatır",
+      "D": "p53 mitokondriyal yolu baskılar",
+      "E": "Kaspaz-3 başlatıcı, kaspaz-9 efektördür"
+     },
+     "dogru": "C",
+     "aciklama": "Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only sensörler, BAX-BAK efektörler, BCL-2 anti-apoptotiktir. Sitokrom c kaspaz-9'u, ardından kaspaz-3'ü aktive eder; p53 BAX-BAK üzerinden yolu tetikleyebilir.",
+     "sik_aciklamalari": {
+      "A": "Sitokrom c kaspaz-9'u aktive eder.",
+      "B": "BCL-2 anti-apoptotiktir.",
+      "C": "Doğru. p53 hasarı algılayıp bu yolu aktive edebilir.",
+      "D": "p53 yolu aktive eder.",
+      "E": "Kaspaz-9 başlatıcı, kaspaz-3 efektördür."
+     },
+     "bilgi": [
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Mitokondriyal disfonksiyonun yaşlanmadaki kısır döngüsü nedir?",
+     "secenekler": {
+      "A": "Mitokondri ROS üretmez",
+      "B": "mtDNA hasarlanmaz",
+      "C": "Enerji artar, ROS azalır",
+      "D": "Döngü diye bir şey yoktur",
+      "E": "ATP azalır, ROS artar, döngü"
+     },
+     "dogru": "E",
+     "aciklama": "Mitokondri hem ATP üretiminin merkezi hem de ROS'un ana kaynağıdır; yaşla mitokondriyal DNA mutasyonları birikerek oksidatif fosforilasyon verimini düşürür. Enerji üretimi azalırken ROS artar ve artan ROS yeni mitokondriyal hasar yapar. Bu kendini besleyen döngü, hücresel yaşlanmanın motorlarından biridir.",
+     "sik_aciklamalari": {
+      "A": "Solunum zinciri ROS'un ana kaynağıdır.",
+      "B": "mtDNA mutasyonları yaşla birikir.",
+      "C": "Verim düşer, ROS artar.",
+      "D": "Enerji-hasar kısır döngüsü tanımlanmıştır.",
+      "E": "Doğru. Azalan enerji ve artan hasar birbirini büyütür."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Mitokondri hasarının iki farklı ölüm sonucunu ayıran mekanizma nedir?",
+     "secenekler": {
+      "A": "ATP azalması apoptoz yapar",
+      "B": "ATP azalması nekroz, sitokrom c apoptoz",
+      "C": "Sitokrom c nekroz yapar",
+      "D": "p53 yolu baskılar",
+      "E": "Kaspaz-9 dışsaldır"
+     },
+     "dogru": "B",
+     "aciklama": "Mitokondri hasarında ATP azalması iyon pompalarını durdurarak nekroz eğilimi yaratır. Zar geçirgenliği artarsa sitokrom c sitozole sızar, kaspaz-9 ve ardından kaspaz-3 aktive olur ve apoptoz gerçekleşir. Yaşlanan hücrede biriken DNA hasarını algılayan p53, BAX ve BAK üzerinden bu mitokondriyal yolu tetikleyerek işlevsiz hücreleri temizler.",
+     "sik_aciklamalari": {
+      "A": "ATP azalması nekroz eğilimidir.",
+      "B": "Doğru. Enerji çöküşü şişme-yıkıma, sitokrom c programlı ölüme götürür.",
+      "C": "Sitokrom c içsel apoptozun anahtarıdır.",
+      "D": "p53 BAX/BAK ile yolu aktive eder.",
+      "E": "Kaspaz-9 içsel yolun başlatıcısıdır."
+     },
+     "bilgi": [
+      12,
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q08",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yaşlanma sürecinde mitokondriyal disfonksiyonun hücresel kader üzerindeki iki temel sonucu aşağıdakilerden hangisinde doğru özetlenmiştir?",
+     "secenekler": {
+      "A": "ATP üretiminin durması sonucu nekroz eğilimi VE mitokondri dış zar geçirgenliğinin artmasıyla sitokrom c sızıntısı sonucu içsel apoptoz",
+      "B": "Aşırı glikojen sentezi ve hücrenin bölünerek çoğalması",
+      "C": "Mitokondrilerin çekirdeğe dönüşmesi ve DNA üretimini devralması",
+      "D": "Hücre zarının tamamen kalsifiye olup taşlaşması",
+      "E": "Hücrenin sınırsız proliferasyon yeteneği kazanarak ölümsüzleşmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Mitokondri disfonksiyonu hücreyi iki temel ölüm yoluna iter: 1) Oksidatif fosforilasyon yetmezliği nedeniyle ATP tükenmesi; bu durum iyon pompalarını bozar ve hücreyi şişme ve nekroza yatkın kılar. 2) Dış zarın geçirgenleşmesi (MOMP); pro-apoptotik faktörler olan Sitokrom c ve Smac/DIABLO sitoplazmaya sızarak kaspaz kaskadını başlatır ve içsel apoptoza yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Mitokondri hasarı ATP azalmasıyla nekroza, sitokrom c salınımıyla apoptoza yol açar.",
+      "B": "Mitokondri hasarında proliferasyon durur.",
+      "C": "Mitokondri çekirdeğe dönüşmez.",
+      "D": "Hücre taşı kalsifikasyondur, mitokondrinin doğrudan kaderi değildir.",
+      "E": "Ölümsüzleşme kanserde görülür; yaşlanan mitokondri hücreyi ölüme götürür."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q09",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Mitokondriyal DNA'nın (mtDNA), nükleer DNA'ya kıyasla serbest oksijen radikallerine (ROS) ve mutasyonlara ÇOK DAHA DUYARLI olmasının temel nedenleri arasında aşağıdakilerden hangisi YER ALMAZ?",
+     "secenekler": {
+      "A": "mtDNA'nın koruyucu histon proteinlerinden yoksun olması",
+      "B": "mtDNA'nın ROS üretiminin tam kaynağı olan iç mitokondri zarının hemen bitişiğinde (matrikste) yer alması",
+      "C": "Mitokondrinin nükleus kadar gelişmiş kompleks DNA onarım mekanizmalarına sahip olmaması",
+      "D": "mtDNA'nın nükleer DNA'dan 1000 kat daha kalın bir lipid zarla çevrili olması",
+      "E": "Solunum zincirindeki kaçak elektronların ilk olarak matriks kompartımanını etkilemesi"
+     },
+     "dogru": "D",
+     "aciklama": "mtDNA nükleer DNA'dan katbekat daha hızlı mutasyona uğrar çünkü: 1) Koruyucu histon proteinleri yoktur, çıplaktır. 2) ROS'un üretildiği iç mitokondri membranına fiziksel olarak çok yakındır. 3) DNA onarım mekanizmaları nükleusa göre oldukça sınırlıdır. mtDNA'nın '1000 kat kalın lipid zarla çevrili olması' diye bir durum biyolojik olarak söz konusu değildir.",
+     "sik_aciklamalari": {
+      "A": "Histon yokluğu mtDNA'yı savunmasız bırakır, doğrudur.",
+      "B": "Kaynakta bulunması doğrudan vurulmasına yol açar, doğrudur.",
+      "C": "Onarım kısıtlılığı mutasyon birikimini hızlandırır, doğrudur.",
+      "D": "Doğru (yer almaz). Böyle bir anatomik yapı yoktur.",
+      "E": "Matriks doğrudan ROS bombardımanına maruz kalır, doğrudur."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q10",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İçsel (mitokondriyal) apoptoz yolağında, mitokondri dış zar geçirgenliğini artırarak sitokrom c'nin sitoplazmaya sızmasını sağlayan KANAL OLUŞTURUCU pro-apoptotik protein çifti aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "BCL-2 ve BCL-XL",
+      "B": "BAX ve BAK",
+      "C": "MCL-1 ve BCL-W",
+      "D": "APAF-1 ve Kaspaz-9",
+      "E": "FADD ve TRADD"
+     },
+     "dogru": "B",
+     "aciklama": "Mitokondriyal apoptozun efektörleri BAX ve BAK'tır. Hücresel hasar durumunda aktive olan BAX ve BAK mitokondri dış zarında oligomerize olarak kanallar/gözenekler açarlar (MOMP - Mitochondrial Outer Membrane Permeabilization). Bu gözeneklerden intermembran aralıkta bulunan sitokrom c sitoplazmaya fışkırır.",
+     "sik_aciklamalari": {
+      "A": "BCL-2 ve BCL-XL anti-apoptotiktir, zarı korurlar.",
+      "B": "Doğru. BAX ve BAK zarda gözenek açan pro-apoptotik efektörlerdir.",
+      "C": "MCL-1 anti-apoptotiktir.",
+      "D": "APAF-1 sitoplazmada apoptozomu oluşturur.",
+      "E": "FADD ve TRADD dışsal ölüm reseptörü adaptörleridir."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q11",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Sitoplazmaya salınan Sitokrom c, apoptozom kompleksi aracılığıyla başlatıcı Kaspaz-9'u aktive ettikten sonra; Kaspaz-9 doğrudan aşağıdaki infazcı (efektör) kaspazlardan hangisini keserek aktif hale getirir?",
+     "secenekler": {
+      "A": "Kaspaz-1",
+      "B": "Kaspaz-3",
+      "C": "Kaspaz-8",
+      "D": "Kaspaz-5",
+      "E": "Kaspaz-12"
+     },
+     "dogru": "B",
+     "aciklama": "Apoptotik kaskadda başlatıcı kaspazlar (kaspaz-9 ve kaspaz-8), infazcı (efektör) kaspazlar olan prokaspaz-3, -6 ve -7'yi spesifik aspartat rezidülerinden proteolitik olarak keserler. Aktive olan efektör Kaspaz-3 hücredeki temel yapısal proteinleri, nükleer iskeleti (laminleri) ve ICAD'ı (CAD inhibitörü) yıkarak hücresel parçalanmayı tamamlar.",
+     "sik_aciklamalari": {
+      "A": "Kaspaz-1 piroptozda IL-1 olgunlaştıran inflamatuar kaspazdır.",
+      "B": "Doğru. Kaspaz-3 temel infazcı (efektör) kaspazdır.",
+      "C": "Kaspaz-8 dışsal yol başlatıcısıdır.",
+      "D": "Kaspaz-5 inflamozom kaspazıdır.",
+      "E": "Kaspaz-12 ER stresiyle ilişkilendirilmiştir."
+     },
+     "bilgi": [
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Hasarlı, yaşlanmış ve aşırı ROS üreten işlevsiz mitokondrilerin otofaji yolağı ile seçici olarak lizozomlarda sindirilip ortadan kaldırılması sürecine ne ad verilir?",
+     "secenekler": {
+      "A": "Mitofaji",
+      "B": "Piroptoz",
+      "C": "Replikasyon",
+      "D": "Mitotik felç",
+      "E": "Heterofaji"
+     },
+     "dogru": "A",
+     "aciklama": "Mitofaji, hasarlı mitokondrilerin hücre tarafından spesifik olarak tanınıp çift katlı zarla çevrilerek otofagolizozomda yıkılmasıdır (seçici organel otofajisi). Bu süreçte PINK1 ve Parkin proteinleri görev alır. Yaşlanmayla birlikte mitofaji etkinliği azalır; bu da disfonksiyonel mitokondrilerin hücrede birikmesine ve ROS patlamasına yol açar (Parkinson hastalığı patogenezinde kritik rol oynar).",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hasarlı mitokondrilerin seçici otofajik yıkımı mitofajidir.",
+      "B": "Piroptoz inflamozom aracılı hücre ölümüdür.",
+      "C": "Replikasyon DNA çoğalmasıdır.",
+      "D": "Mitotik felç iğ iplikçiği bozukluğudur.",
+      "E": "Heterofaji dışarıdan alınan maddelerin sindirimidir."
+     },
+     "bilgi": [
+      10,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q13",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"p53 ve mitokondriyal yol\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "A": "Yaşlanan hücrelerde DNA hasarı ve yanlış katlanmış proteinler artar; p53 hasarı algılayıp BAX/BAK üzerinden mitokondriyal yolu aktive edebilir.",
+      "E": "Kısa telomer kromozom uçlarının 'kırık DNA' gibi algılanmasına yol açar; hücre döngüsü durdurulur ve hücre replikatif senesense girer.",
+      "D": "Telomeraz aktivitesindeki kalıtsal eksiklikler telomerlerin hızla kısalmasına yol açar.",
+      "B": "Başlıca ROS süperoksit (O₂•⁻), hidrojen peroksit (H₂O₂) ve hidroksil radikalidir (•OH); kaynakları mitokondriyal oksidatif fosforilasyon, iltihap hücrelerinin solunum patlaması, radyasyon ve bazı toksinlerdir.",
+      "C": "IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Yaşlanan hücrelerde DNA hasarı ve yanlış katlanmış proteinler artar; p53 hasarı algılayıp BAX/BAK üzerinden mitokondriyal yolu aktive edebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Yaşlanan hücrelerde DNA hasarı ve yanlış katlanmış proteinler artar; p53 hasarı algılayıp BAX/BAK üzerinden mitokondriyal yolu aktive edebilir.",
+      "E": "Yanlış. Kısa telomer kromozom uçlarının 'kırık DNA' gibi algılanmasına yol açar; hücre döngüsü durdurulur ve hücre replikatif senesense girer.",
+      "D": "Yanlış. Telomeraz aktivitesindeki kalıtsal eksiklikler telomerlerin hızla kısalmasına yol açar.",
+      "B": "Yanlış. Başlıca ROS süperoksit (O₂•⁻), hidrojen peroksit (H₂O₂) ve hidroksil radikalidir (•OH); kaynakları mitokondriyal oksidatif fosforilasyon, iltihap hücrelerinin solunum patlaması, radyasyon ve bazı toksinlerdir.",
+      "C": "Yanlış. IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q14",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Telomeraz enzimi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Telomer uçlarına nükleotid ekleyen RNA-protein kompleksidir; germ hücrelerinde yüksek, bazı kök hücrelerde düşük-orta düzeyde etkindir; çoğu somatik hücrede aktivitesi yok veya çok düşüktür.",
+      "B": "DNA hasarı ve onarım yetersizliği, replikatif yaşlanma, protein homeostazında bozulma, mitokondriyal disfonksiyon/ROS birikimi, IGF-1 ve mTOR sinyal değişiklikleri ve kalıcı düşük dereceli inflamasyondur.",
+      "E": "Lipid peroksidasyonu (zar fosfolipidlerinde zincirleme hasar), protein oksidasyonu (çapraz bağlanma, aktivite kaybı) ve DNA hasarı (baz modifikasyonu, tek/çift zincir kırıkları) oluşur.",
+      "C": "Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir.",
+      "D": "Telomerler kromozom uçlarındaki tekrarlayan DNA dizileridir (TTAGGG); kromozom uçlarını korur, uçların yapışmasını engeller ve tam replikasyonu kolaylaştırır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Telomer uçlarına nükleotid ekleyen RNA-protein kompleksidir; germ hücrelerinde yüksek, bazı kök hücrelerde düşük-orta düzeyde etkindir; çoğu somatik hücrede aktivitesi yok veya çok düşüktür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Telomer uçlarına nükleotid ekleyen RNA-protein kompleksidir; germ hücrelerinde yüksek, bazı kök hücrelerde düşük-orta düzeyde etkindir; çoğu somatik hücrede aktivitesi yok veya çok düşüktür.",
+      "B": "Yanlış. DNA hasarı ve onarım yetersizliği, replikatif yaşlanma, protein homeostazında bozulma, mitokondriyal disfonksiyon/ROS birikimi, IGF-1 ve mTOR sinyal değişiklikleri ve kalıcı düşük dereceli inflamasyondur.",
+      "E": "Yanlış. Lipid peroksidasyonu (zar fosfolipidlerinde zincirleme hasar), protein oksidasyonu (çapraz bağlanma, aktivite kaybı) ve DNA hasarı (baz modifikasyonu, tek/çift zincir kırıkları) oluşur.",
+      "C": "Yanlış. Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir.",
+      "D": "Yanlış. Telomerler kromozom uçlarındaki tekrarlayan DNA dizileridir (TTAGGG); kromozom uçlarını korur, uçların yapışmasını engeller ve tam replikasyonu kolaylaştırır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q15",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Kalori kısıtlaması\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+      "C": "IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "D": "Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+      "E": "Yaş, kanserler, ateroskleroz/iskemik kalp hastalığı ve nörodejeneratif hastalıklar (Alzheimer vb.) için güçlü bağımsız risk faktörüdür.",
+      "A": "Telomer uçlarına nükleotid ekleyen RNA-protein kompleksidir; germ hücrelerinde yüksek, bazı kök hücrelerde düşük-orta düzeyde etkindir; çoğu somatik hücrede aktivitesi yok veya çok düşüktür."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+      "C": "Yanlış. IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "D": "Yanlış. Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+      "E": "Yanlış. Yaş, kanserler, ateroskleroz/iskemik kalp hastalığı ve nörodejeneratif hastalıklar (Alzheimer vb.) için güçlü bağımsız risk faktörüdür.",
+      "A": "Yanlış. Telomer uçlarına nükleotid ekleyen RNA-protein kompleksidir; germ hücrelerinde yüksek, bazı kök hücrelerde düşük-orta düzeyde etkindir; çoğu somatik hücrede aktivitesi yok veya çok düşüktür."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k04-q16",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Replikatif yaşlanma\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "E": "Mitokondri ATP üretimi için gereklidir ve ROS üretiminin ana kaynağıdır; yaşlanmayla mitokondriyal DNA mutasyonları artar ve oksidatif fosforilasyon etkinliği azalır.",
+      "B": "IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "C": "Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir.",
+      "A": "Yaşla hasarlı hücreler, lipitler ve DNA artıkları birikir; doğuştan immün sistem hafif ama sürekli aktive olur ve düşük dereceli kronik inflamasyon gelişir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "E": "Yanlış. Mitokondri ATP üretimi için gereklidir ve ROS üretiminin ana kaynağıdır; yaşlanmayla mitokondriyal DNA mutasyonları artar ve oksidatif fosforilasyon etkinliği azalır.",
+      "B": "Yanlış. IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "C": "Yanlış. Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir.",
+      "A": "Yanlış. Yaşla hasarlı hücreler, lipitler ve DNA artıkları birikir; doğuştan immün sistem hafif ama sürekli aktive olur ve düşük dereceli kronik inflamasyon gelişir."
+     },
+     "bilgi": [
+      15
      ],
      "benzer_cikmis": []
     }
@@ -511,6 +1896,357 @@
      },
      "bilgi": [
       20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q05",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Çocuklardan alınan fibroblastların kültürde belirli sayıda bölündükten sonra durduğu, yaşlı donörlerden alınanların ise daha erken durduğu gözlenmiştir. Kromozom uçlarının kısalmasıyla ilişkili bu süreç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Somatik hücreler sınırsız bölünebilir",
+      "B": "Telomer kısalması hücre döngüsünü durdurarak replikatif senesense yol açar",
+      "C": "Kısa telomer proliferasyonu hızlandırır",
+      "D": "Senesens dokuların yenilenmesini artırır",
+      "E": "Telomerler her bölünmede uzar"
+     },
+     "dogru": "B",
+     "aciklama": "Normal somatik hücreler sınırlı bölünme kapasitesine sahiptir; telomerler her bölünmede kısalır. Kısa telomer kırık DNA gibi algılanır, döngü durdurulur ve hücre senesense girer; bu yenilenmeyi düşürür.",
+     "sik_aciklamalari": {
+      "A": "Bölünme kapasitesi sınırlıdır.",
+      "B": "Doğru. Amaç hasarlı genomlu hücrelerin kontrolsüz çoğalmasını sınırlamaktır.",
+      "C": "Kısa telomer döngüyü durdurur.",
+      "D": "Yenilenme yeteneği düşer.",
+      "E": "Telomerler kademeli kısalır."
+     },
+     "bilgi": [
+      15,
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q06",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Aplastik anemisi, pulmoner fibrozisi ve erken saç beyazlaması olan bir hastada telomeraz mutasyonu saptanmış; başka bir hastada ise tümör hücrelerinde telomeraz aktivitesi yüksek bulunmuştur. Bu iki gözlemle ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Telomeraz tüm somatik hücrelerde yüksektir",
+      "B": "Kanserlerde telomeraz her zaman baskılanır",
+      "C": "Telomeropatilerde telomerler uzar",
+      "D": "Telomeraz eksikliği kök hücre yetmezliği ve fibrozis yapabilir; kanserlerde yeniden aktive olabilir",
+      "E": "Telomer kısalması kanser riskini ortadan kaldırır"
+     },
+     "dogru": "D",
+     "aciklama": "Telomeraz germ hücrelerinde yüksek, çoğu somatik hücrede düşüktür; bu nedenle telomerler yaşla kısalır. Kanserlerde telomeraz yeniden aktive olur ve hücreler ölümsüzleşebilir. Telomeraz eksikliğinde aplastik anemi, fibrozis ve erken beyazlama görülür.",
+     "sik_aciklamalari": {
+      "A": "Çoğu somatik hücrede telomeraz düşüktür.",
+      "B": "Birçok kanserde telomeraz yeniden aktive olur.",
+      "C": "Eksiklikte telomerler hızla kısalır.",
+      "D": "Doğru. Aplastik anemi ve pulmoner fibrozis telomeropati örnekleridir.",
+      "E": "Kısalma koruyucudur ancak kanser başka yollarla gelişebilir."
+     },
+     "bilgi": [
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Telomer kısalmasının replikatif senesense yol açma mekanizması nedir?",
+     "secenekler": {
+      "A": "Telomer uzar, bölünme artar",
+      "B": "Kısalma kanseri artırır doğrudan",
+      "C": "Telomer sentromerdedir",
+      "D": "TTAGGG kısalır, kırık algısı, senesens",
+      "E": "Senesens bölünmeyi artırır"
+     },
+     "dogru": "D",
+     "aciklama": "Telomerler kromozom uçlarındaki TTAGGG tekrarlarıdır ve uçların yapışmasını engelleyerek genom bütünlüğünü korur. DNA polimeraz uçları tam kopyalayamadığı için her bölünmede telomer kısalır. Kritik kısalıkta uçlar kırık DNA gibi algılanır, hücre döngüsü durur ve replikatif senesens gelişir; bu, hasarlı genomlu hücrelerin çoğalmasını sınırlayan antikanser bir fren görevi görür.",
+     "sik_aciklamalari": {
+      "A": "Telomer her bölünmede kısalır.",
+      "B": "Kısalma çoğalmayı durduran koruyucu frendir.",
+      "C": "Telomer kromozom uçlarındadır.",
+      "D": "Doğru. Uç kısalması DNA hasar yanıtını tetikler.",
+      "E": "Senesens çoğalmanın durmasıdır."
+     },
+     "bilgi": [
+      15,
+      16,
+      17
+     ],
+     "benzer_cikmis": [
+      "9a3ca16b844b"
+     ]
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q08",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Telomeraz aktivitesinin hücre tiplerine göre dağılımı ve klinik sonuçları nedir?",
+     "secenekler": {
+      "A": "Germ yüksek, somatik düşük, kanser aktif, eksiklik anemi",
+      "B": "Her hücrede aynıdır",
+      "C": "Kanserde telomeraz kapanır",
+      "D": "Eksiklik kanseri önler tamamen",
+      "E": "Telomeraz DNA'yı keser"
+     },
+     "dogru": "A",
+     "aciklama": "Telomeraz, telomer uçlarına nükleotid ekleyen RNA-protein kompleksidir; germ hücrelerinde yüksek, çoğu somatik hücrede yok veya çok düşüktür, bu yüzden somatik telomerler yaşla kısalır. Kanser hücrelerinde telomeraz yeniden aktive olarak telomer uzunluğunu sabitler ve hücrelere sınırsız bölünme olanağı verir. Kalıtsal telomeraz eksikliğinde ise telomerler hızla kısalır; hematopoetik kök hücre yetmezliğiyle aplastik anemi, ayrıca pulmoner ve hepatik fibrozis gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hücre tipine göre aktivite farkı yaşam süresi ve hastalık örüntüsünü belirler.",
+      "B": "Aktivite hücre tipine göre değişir.",
+      "C": "Kanserde telomeraz yeniden aktive olur.",
+      "D": "Eksiklik kök hücre yetmezliği yapar.",
+      "E": "Telomeraz nükleotid ekler, kesmez."
+     },
+     "bilgi": [
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q09",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Ökaryotik kromozomların uçlarında yer alan, DNA'yı uç uca füzyondan ve nükleolitik parçalanmadan koruyan özelleşmiş nükleotid dizisi (insan telomerik tekrarı) aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "TTAGGG",
+      "B": "AATAAA",
+      "C": "TATAAA",
+      "D": "CCGCCA",
+      "E": "AGCTAG"
+     },
+     "dogru": "A",
+     "aciklama": "İnsan kromozomlarının uçlarında binlerce kez tekrarlayan hekzanükleotid dizisi 5'-TTAGGG-3' tekrarıdır. Bu tekrarlayan dizi 'shelterin' adı verilen 6 proteinlik özel bir koruyucu kompleksle sarılarak T-loop ve D-loop yapıları oluşturur. Hücrenin DNA onarım mekanizmalarının kromozom uçlarını 'çift zincir kırığı' sanıp birbirine yapıştırmasını (füzyon) engeller.",
+     "sik_aciklamalari": {
+      "A": "Doğru. İnsan telomerik tekrar dizisi TTAGGG'dir.",
+      "B": "AATAAA poliadenilasyon sinyal dizisidir.",
+      "C": "TATAAA TATA kutusu promotorudur.",
+      "D": "Kozak sekansı translasyon başlatıcıdır.",
+      "E": "Rastgele nükleotid dizisidir."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q10",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Somatik hücrelerin her mitoz bölünmesinde telomerlerin kademeli olarak kısalmasının (son replikasyon problemi - end replication problem) TEMEL moleküler nedeni nedir?",
+     "secenekler": {
+      "A": "DNA polimerazın RNA primerinin kalktığı en uç 5' ucunu de novo sentezleyememesi",
+      "B": "Helikaz enziminin kromozom uçlarında DNA'yı açamaması",
+      "C": "DNA ligazın kromozom uçlarını kesmesi",
+      "D": "Mitozda sentriyollerin telomerleri çekerek koparması",
+      "E": "Topoisomeraz enziminin telomerleri sindirmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Standart DNA polimeraz enzimleri sentezi sadece 5' -> 3' yönünde yapabilir ve serbest bir 3'-OH ucuna (primer) ihtiyaç duyar. Kesintili (lagging) zincirde en uçtaki RNA primeri uzaklaştırıldığında, DNA polimerazın önünde uzatabileceği bir kalıp/primer kalmaz. Bu nedenle her replikasyon döngüsünde uçtan 50-100 baz çifti kaybolur ('end-replication problem'). Bu durum somatik hücrelerde telomer aşınmasına ve en sonunda senesense yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. DNA polimerazın uçtaki primer boşluğunu dolduramaması telomer kısalmasının nedenidir.",
+      "B": "Helikaz açılmayı sağlar, telomer kaybı yapmaz.",
+      "C": "DNA ligaz kırıkları birleştirir, telomeri kesmez.",
+      "D": "Sentriyoller kinetokora bağlanır, telomere değil.",
+      "E": "Topoisomeraz süperkıvrımları çözer."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q11",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Telomeraz enziminin yapısı ve farklı insan hücre tiplerindeki aktivite düzeyi ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+     "secenekler": {
+      "A": "Erişkin somatik hücreler (örn. fibroblastlar) - Aşırı yüksek telomeraz aktivitesi",
+      "B": "Germ hücreleri (gametler) ve embriyonik kök hücreler - Yüksek telomeraz aktivitesi",
+      "C": "Malign tümör hücrelerinin %90'ı - Sıfır telomeraz aktivitesi",
+      "D": "Eritrositler - Çok yüksek telomeraz aktivitesi",
+      "E": "Senesent hücreler - Sürekli artan telomeraz aktivitesi"
+     },
+     "dogru": "B",
+     "aciklama": "Telomeraz; bir ters transkriptaz protein alt birimi (TERT) ve bir RNA kalıp alt birimi (TERC) içeren bir ribonükleoproteindir. Germ (üreme) hücrelerinde ve embriyonik kök hücrelerde aktivitesi çok YÜKSEKTİR; bu sayede nesilden nesile telomer uzunluğu korunur. Somatik hücrelerde neredeyse YOKTUR (bu yüzden yaşlanırlar). Kanser hücrelerinin ise yaklaşık %90'ında telomeraz yeniden aktive olarak hücreye replikatif ölümsüzlük (immortality) kazandırır.",
+     "sik_aciklamalari": {
+      "A": "Somatik hücrelerde telomeraz aktivitesi yok denecek kadar düşüktür.",
+      "B": "Doğru. Germ ve embriyonik kök hücrelerde yüksek telomeraz aktivitesi bulunur.",
+      "C": "Kanser hücrelerinin %85-90'ında telomeraz yeniden aktive olmuştur.",
+      "D": "Eritrositler anükleerdir, telomer/telomeraz içermez.",
+      "E": "Senesent hücrelerde telomeraz inaktiftir."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q12",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Telomeraz enzim kompleksini (TERT veya TERC) veya shelterin ilişkili proteinleri kodlayan genlerdeki kalıtsal mutasyonlar sonucu telomerlerin patolojik olarak çok hızlı kısalmasıyla seyreden ve aplastik anemi, idiyopatik pulmoner fibrozis, karaciğer sirozu ve diskeratozis konjenita gibi klinik tablolara yol açan hastalık grubuna ne ad verilir?",
+     "secenekler": {
+      "A": "Telomeropatiler (Telomer biyolojisi bozuklukları)",
+      "B": "Glikojenozlar",
+      "C": "Lipidozlar",
+      "D": "Amiloidozlar",
+      "E": "Kanalopatiler"
+     },
+     "dogru": "A",
+     "aciklama": "Telomeropatiler (telomere biology disorders); TERT, TERC, DKC1 veya TINF2 gibi telomeraz veya telomer bakım genlerindeki mutasyonlardan kaynaklanır. Kök hücre telomerleri aşırı hızla tükenir. En çok bölünen dokular çöker: Kemik iliği yetmezliği (aplastik anemi), akciğer kök hücre kaybı (pulmoner fibrozis), karaciğer fibrozisi, erken saç beyazlaması, tırnak distrofisi ve lökoplaki (Diskeratozis Konjenita).",
+     "sik_aciklamalari": {
+      "A": "Doğru. Telomeraz ve telomer mutasyonları telomeropatiler olarak adlandırılır.",
+      "B": "Glikojenozlar glikojen metabolizma bozukluğudur.",
+      "C": "Lipidozlar lipid depo hastalıklarıdır.",
+      "D": "Amiloidozlar protein birikimleridir.",
+      "E": "Kanalopatiler iyon kanalı hastalıklarıdır."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q13",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Bir somatik hücrede telomerlerin kritik eşiğin altına inmesi durumunda 'Kriz' (Crisis) evresine girilmesini ve köprü-füzyon-kırılma (bridge-fusion-breakage) döngüsüyle hücrenin apoptoza veya mitotik ölüme gitmesini engelleyen; kaybı durumunda ise hücrenin telomerazı aktive ederek karsinom geliştirmesine zemin hazırlayan EN KRİTİK tümör baskılayıcı kontrol noktası proteini aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "p53",
+      "B": "Kaspaz-8",
+      "C": "Albumin",
+      "D": "Hemoglobin",
+      "E": "Troponin T"
+     },
+     "dogru": "A",
+     "aciklama": "Kritik telomer kısalmasında kromozom uçları çıplak kalır ve serbest kırık gibi algılanır. Normal bir hücrede sağlam p53 bu hasarı algılar ve hücreyi senesense sokar veya apoptozla öldürür. Eğer p53 (ve Rb) mutasyonla inaktive ise, hücre bölünmeye devam eder; çıplak kromozom uçları birbirine yapışır (dikentrik kromozomlar), anafazda kopar ve masif genomik kriz gelişir. Bu krizden kurtulmanın tek yolu telomerazı yeniden aktive etmektir; telomerazı açan hücre karsinoma dönüşür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. p53 kaybı kriz döngüsünü aşarak telomeraz reaktivasyonu ve kansere yol açar.",
+      "B": "Kaspaz-8 ölüm reseptörü kaspazıdır.",
+      "C": "Albumin plazma proteinidir.",
+      "D": "Hemoglobin oksijen taşır.",
+      "E": "Troponin kas kasılmasında rol alır."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q14",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"IGF-1 ve mTOR ekseni\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "D": "IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "A": "Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "C": "DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "E": "Üretim mitokondriyal solunum zinciri, fagositoz yapan lökositler (nötrofiller) ile X-ışınları/bazı ilaçlarla artar; temizlenme SOD, katalaz (peroksizomlarda) ve glutatyon peroksidaz ile sağlanır.",
+      "B": "Lipid peroksidasyonu (zar fosfolipidlerinde zincirleme hasar), protein oksidasyonu (çapraz bağlanma, aktivite kaybı) ve DNA hasarı (baz modifikasyonu, tek/çift zincir kırıkları) oluşur."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+     "sik_aciklamalari": {
+      "D": "Doğru. IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "A": "Yanlış. Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "C": "Yanlış. DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "E": "Yanlış. Üretim mitokondriyal solunum zinciri, fagositoz yapan lökositler (nötrofiller) ile X-ışınları/bazı ilaçlarla artar; temizlenme SOD, katalaz (peroksizomlarda) ve glutatyon peroksidaz ile sağlanır.",
+      "B": "Yanlış. Lipid peroksidasyonu (zar fosfolipidlerinde zincirleme hasar), protein oksidasyonu (çapraz bağlanma, aktivite kaybı) ve DNA hasarı (baz modifikasyonu, tek/çift zincir kırıkları) oluşur."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q15",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"İnflamasyon-yaşlanma döngüsü\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "İnflamatuar sitokinler insülin direnci, katabolik durum ve hücrelerde ek DNA-protein hasarı yapar.",
+      "C": "Bazı organizmalarda IGF-1 sinyali ve mTOR aktivitesinin kısmi baskılanması yaşam süresini uzatmıştır; olası mekanizma büyümeden bakım/onarıma geçişin artmasıdır.",
+      "A": "DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "D": "Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir.",
+      "B": "Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: İnflamatuar sitokinler insülin direnci, katabolik durum ve hücrelerde ek DNA-protein hasarı yapar.",
+     "sik_aciklamalari": {
+      "E": "Doğru. İnflamatuar sitokinler insülin direnci, katabolik durum ve hücrelerde ek DNA-protein hasarı yapar.",
+      "C": "Yanlış. Bazı organizmalarda IGF-1 sinyali ve mTOR aktivitesinin kısmi baskılanması yaşam süresini uzatmıştır; olası mekanizma büyümeden bakım/onarıma geçişin artmasıdır.",
+      "A": "Yanlış. DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "D": "Yanlış. Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir.",
+      "B": "Yanlış. Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q16",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Mitokondriyal apoptoz yolunun özeti\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "D": "IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "C": "Bazı organizmalarda IGF-1 sinyali ve mTOR aktivitesinin kısmi baskılanması yaşam süresini uzatmıştır; olası mekanizma büyümeden bakım/onarıma geçişin artmasıdır.",
+      "A": "Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir.",
+      "E": "Üretim mitokondriyal solunum zinciri, fagositoz yapan lökositler (nötrofiller) ile X-ışınları/bazı ilaçlarla artar; temizlenme SOD, katalaz (peroksizomlarda) ve glutatyon peroksidaz ile sağlanır."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "D": "Yanlış. IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "C": "Yanlış. Bazı organizmalarda IGF-1 sinyali ve mTOR aktivitesinin kısmi baskılanması yaşam süresini uzatmıştır; olası mekanizma büyümeden bakım/onarıma geçişin artmasıdır.",
+      "A": "Yanlış. Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir.",
+      "E": "Yanlış. Üretim mitokondriyal solunum zinciri, fagositoz yapan lökositler (nötrofiller) ile X-ışınları/bazı ilaçlarla artar; temizlenme SOD, katalaz (peroksizomlarda) ve glutatyon peroksidaz ile sağlanır."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k05-q17",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"Werner sendromu\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "A": "Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "D": "IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "E": "Bazı organizmalarda IGF-1 sinyali ve mTOR aktivitesinin kısmi baskılanması yaşam süresini uzatmıştır; olası mekanizma büyümeden bakım/onarıma geçişin artmasıdır.",
+      "C": "Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "A": "Yanlış. Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "D": "Yanlış. IGF-1 büyüme ve anabolizmayı destekler; mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenler. Yüksek IGF-1/mTOR aktivitesi hızlı büyüme ve çoğalmaya yol açar.",
+      "E": "Yanlış. Bazı organizmalarda IGF-1 sinyali ve mTOR aktivitesinin kısmi baskılanması yaşam süresini uzatmıştır; olası mekanizma büyümeden bakım/onarıma geçişin artmasıdır.",
+      "C": "Yanlış. Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir."
+     },
+     "bilgi": [
+      6
      ],
      "benzer_cikmis": []
     }
@@ -668,12 +2404,412 @@
       29
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Alzheimer hastasının beyninde β-amiloid plakları ve tau yumakları, Parkinson hastasınınkinde α-sinüklein agregatları saptanmıştır. Bu birikimlerle ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yaşla şaperon-proteazom etkinliği azalır ve anormal proteinler birikir",
+      "B": "Protein agregatları hücre fonksiyonunu güçlendirir",
+      "C": "β-amiloid birikimi nöronları korur",
+      "D": "ER stresi apoptozu engeller",
+      "E": "Yaşlanmada protein homeostazı güçlenir"
+     },
+     "dogru": "A",
+     "aciklama": "Yaşla şaperon ve proteazom etkinliği azalır, yanlış katlanmış proteinler birikir; Alzheimer'da β-amiloid-tau, Parkinson'da α-sinüklein agregatları oluşur. Aşırı yanlış katlanma ER stresi ve apoptoz yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Birikim fonksiyon kaybı ve ER stresi yapar.",
+      "B": "Agregatlar fonksiyonu bozar.",
+      "C": "β-amiloid nörodejenerasyonla ilişkilidir.",
+      "D": "Aşırı yanlış katlanma apoptoza yol açabilir.",
+      "E": "Homeostaz yaşla bozulur."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q07",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Deney modelinde mTOR inhibitörü verilen hayvanlarda yaşam süresinin uzadığı, yaşlı bireylerde ise düşük dereceli kronik inflamasyonun diyabet ve aterosklerozla ilişkili olduğu gözlenmiştir. Bu gözlemlerle ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yüksek mTOR aktivitesi onarımı artırır",
+      "B": "Kalori kısıtlaması ROS üretimini artırır",
+      "C": "İnflammaging anti-inflamatuvar bir süreçtir",
+      "D": "IGF-1 baskılanması yaşamı kısaltır",
+      "E": "mTOR baskılanması ve kalori kısıtlaması bakım-onarımı destekleyebilir; kronik düşük dereceli inflamasyon yaşlanmayı hızlandırır"
+     },
+     "dogru": "E",
+     "aciklama": "Yüksek IGF-1-mTOR büyüme lehine program oluşturur; kısmi baskılanması bakım-onarıma geçişle yaşamı uzatabilir. Kalori kısıtlaması IGF-1'i azaltır, mTOR'u baskılar ve otofajiyi artırır. İnflammaging ateroskleroz ve diyabete zemin hazırlar.",
+     "sik_aciklamalari": {
+      "A": "Yüksek aktivite büyüme lehine, onarım aleyhinedir.",
+      "B": "Kısıtlama ROS'u azaltır ve otofajiyi artırır.",
+      "C": "İnflammaging kronik inflamatuvar süreçtir.",
+      "D": "Kısmi baskılanma yaşamı uzatabilir.",
+      "E": "Doğru. Sitokinler insülin direnci ve ek hasarla kısır döngü oluşturur."
+     },
+     "bilgi": [
+      23,
+      24,
+      25,
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q08",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Protein homeostazı bozulmasının nörodejenerasyona yol açma mekanizması nedir?",
+     "secenekler": {
+      "A": "Proteazom yaşla hızlanır",
+      "B": "Agregatlar yararlıdır",
+      "C": "Şaperon-proteazom zayıflar, amiloid-sinüklein",
+      "D": "ER stresi koruyucudur hep",
+      "E": "Agregat yalnızca kastadır"
+     },
+     "dogru": "C",
+     "aciklama": "Yaşla şaperon fonksiyonu ve proteazom etkinliği azalır, yanlış katlanmış proteinler temizlenemez ve hücre içi agregatlar oluşturur. Alzheimer'da β-amiloid ve tau, Parkinson'da α-sinüklein birikimi nöron işlevini bozar. Aşırı yanlış katlanma ER stresini tetikleyerek apoptoza yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Proteazom etkinliği yaşla azalır.",
+      "B": "Agregatlar nöron işlevini bozar.",
+      "C": "Doğru. Temizleme yetmezliği birikim ve nörodejenerasyon yapar.",
+      "D": "Aşırı ER stresi apoptozu tetikler.",
+      "E": "Beyin başlıca tutulum yeridir."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q09",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "IGF-1/mTOR ekseni, kalori kısıtlaması ve inflammaging ilişkisini veren seçenek hangisidir?",
+     "secenekler": {
+      "A": "mTOR artışı ömrü uzatır",
+      "B": "Eksen baskılanması ömür, inflamasyon hızlandırır",
+      "C": "Kalori kısıtlaması otofajiyi durdurur",
+      "D": "İnflammaging akut enfeksiyondur",
+      "E": "IGF-1 onarımı artırır"
+     },
+     "dogru": "B",
+     "aciklama": "IGF-1 ve mTOR büyüme ile protein sentezini desteklerken onarım programlarını geri plana iter. Bu eksenin kısmi baskılanması, kalori kısıtlaması ve rapamisin gibi müdahalelerle deneysel olarak yaşam süresini uzatmıştır. Kalori kısıtlaması IGF-1'i düşürür, mTOR'u baskılar, ROS üretimini azaltır ve otofajiyi artırır. Yaşla biriken hücre artıkları ise doğuştan immün sistemi sürekli uyararak inflammaging denen düşük dereceli kronik inflamasyonu ve insülin direncini körükler.",
+     "sik_aciklamalari": {
+      "A": "mTOR baskılanması ömrü uzatır, artışı değil.",
+      "B": "Doğru. Büyümeden bakıma geçiş ömrü uzatır, kronik inflamasyon kısır döngüyle hızlandırır.",
+      "C": "Kalori kısıtlaması otofajiyi artırır.",
+      "D": "İnflammaging düşük dereceli kronik inflamasyondur.",
+      "E": "IGF-1 büyümeyi destekler, onarımı geri plana iter."
+     },
+     "bilgi": [
+      23,
+      24,
+      25,
+      26,
+      27
+     ],
+     "benzer_cikmis": [
+      "388cd9bcf306"
+     ]
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q10",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yaşlanma sürecinde protein homeostazının (proteostaz) bozulması ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "secenekler": {
+      "A": "Yaşlandıkça moleküler şaperon aktivitesi ve ubikitin-proteazom sistemi kapasitesi belirgin şekilde artar.",
+      "B": "Yaşlanmayla birlikte şaperonların katlama kapasitesi ve proteazomların hatalı proteinleri yıkım etkinliği azalır; bu durum ER stresine, yanlış katlanmış protein agregatlarının birikmesine ve nörodejenerasyona zemin hazırlar.",
+      "C": "Protein homeostazının bozulması sadece bakteriyel enfeksiyonlarda görülür.",
+      "D": "Yaşlanan nöronlarda protein sentezi tamamen sıfırlandığı için hiçbir protein birikimi izlenmez.",
+      "E": "Proteostaz kaybı insan yaşam süresini 2 katına çıkarır."
+     },
+     "dogru": "B",
+     "aciklama": "Proteostaz; protein sentezi, doğru katlanması (şaperonlar) ve yıkımının (ubikitin-proteazom ve otofaji) dengesidir. Yaşlanma sırasında şaperon protein düzeyleri düşer, proteazomal klerens zayıflar ve otofaji azalır. Sonuçta hücrede yanlış katlanmış proteinler birikir; kronik ER stresi, proteotoksisite ve nörodejeneratif hastalıklar (Alzheimer'da Aβ/tau, Parkinson'da alfa-sinüklein) gelişir.",
+     "sik_aciklamalari": {
+      "A": "Şaperon ve proteazom kapasitesi yaşla artmaz, aksine azalır.",
+      "B": "Doğru. Şaperon ve proteazom yetersizliği protein agregatlarına ve nörodejenerasyona yol açar.",
+      "C": "Proteostaz bozulması yaşlanmanın evrensel bir mekanizmasıdır.",
+      "D": "Yanlış katlanan proteinler yıkılamadığı için agregatlar birikir.",
+      "E": "Proteostaz kaybı ömrü uzatmaz, doku yetmezliği ve ölüm yapar."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q11",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Çeşitli model organizmalarda (maya, nematod, fare) yaşam süresini belirgin şekilde uzattığı kanıtlanan 'Besin Algılama ve Sinyal İletim Yolları' modülasyonu düşünüldüğünde; uzun yaşamı (longevity) destekleyen metabolik değişim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IGF-1 ve mTOR sinyal yollarının aşırı aktivasyonu",
+      "B": "IGF-1 / AKT / mTOR yolağının KISMİ BASKILANMASI ve AMPK ile Sirtuin yollarının UYARILMASI",
+      "C": "Otofajinin tamamen genetik olarak susturulması",
+      "D": "Sürekli hiperglisemi ve kronik insülin infüzyonu",
+      "E": "Mitokondriyal antioksidan enzimlerin baskılanması"
+     },
+     "dogru": "B",
+     "aciklama": "Besin bolluğu (bol glukoz, aminoasit) IGF-1 ve mTOR'u aktive eder. mTOR hücreyi büyümeye, çoğalmaya ve protein sentezine zorlar; otofajiyi ve hücresel onarımı baskılar. Tersine, besin kısıtlamasında (kalori kısıtlaması) veya rapamisin uygulamasında mTOR ve IGF-1 baskılanır; enerji sensörü AMPK ve Sirtuinler uyarılır. Hücre 'büyüme modundan' 'bakım, onarım ve otofaji moduna' geçer ve bu durum organizmanın ömrünü belirgin uzatır.",
+     "sik_aciklamalari": {
+      "A": "IGF-1/mTOR aşırı aktivasyonu hücreyi yorar, hasarı artırır ve ömrü kısaltır.",
+      "B": "Doğru. IGF-1/mTOR baskılanması + AMPK/Sirtuin aktivasyonu yaşam süresini uzatır.",
+      "C": "Otofajinin susturulması hücreyi hızla öldürür.",
+      "D": "Kronik hiperglisemi ve insülin yaşlanmayı hızlandırır.",
+      "E": "Antioksidanların baskılanması oksidatif hasarı artırır."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q12",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Kalori kısıtlamasının (enerji alımının malnütrisyon yaratmadan %30 oranında azaltılması) deneysel modellerde yaşam süresini uzatmasında rol oynayan hücresel adaptasyonlar arasında aşağıdakilerden hangisi YER ALMAZ?",
+     "secenekler": {
+      "A": "İnsülin ve IGF-1 düzeylerinde azalma",
+      "B": "mTOR aktivitesinin baskılanması",
+      "C": "Otofajinin uyarılması ve hasarlı organellerin temizlenmesi",
+      "D": "Mitokondriyal serbest radikal (ROS) üretiminin azalması",
+      "E": "Doku düzeyinde kronik TNF-alfa ve IL-6 üretiminin 100 katına çıkması"
+     },
+     "dogru": "E",
+     "aciklama": "Kalori kısıtlaması metabolik hızı ve elektron kaçağını optimize ederek ROS üretimini azaltır, IGF-1/mTOR aksını kısar, otofajiyi uyarır ve sistemik inflamasyonu BASKILAR. İnflamatuar sitokinlerin (TNF-alfa, IL-6) 100 kat artması kalori kısıtlamasının değil, şiddetli sepsisin veya aşırı yaşlanmanın (inflammaging) bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "IGF-1 azalması onarıma odaklanmayı sağlar, doğrudur.",
+      "B": "mTOR baskılanması anabolik stresi azaltır, doğrudur.",
+      "C": "Otofaji artışı hücresel temizliği sağlar, doğrudur.",
+      "D": "ROS üretimi azalır ve DNA hasarı yavaşlar, doğrudur.",
+      "E": "Doğru (yer almaz). Kalori kısıtlaması proinflamatuar sitokinleri artırmaz, tam tersine azaltır."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q13",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yaşlanma sürecinde belirginleşen, belirgin bir mikrobiyal enfeksiyon olmaksızın dokularda biriken hücresel artıklar ve senesent hücrelerin salgılarıyla tetiklenen kalıcı, steril, düşük dereceli kronik inflamasyon tablosuna gerontolojide ne ad verilir?",
+     "secenekler": {
+      "A": "Inflammaging (Enflamatuar Yaşlanma)",
+      "B": "Akut flegmonöz apandisit",
+      "C": "Anafilaktik şok",
+      "D": "Lobar pnömoni",
+      "E": "Süpüratif lenfadenit"
+     },
+     "dogru": "A",
+     "aciklama": "Inflammaging (enflamatuar yaşlanma), yaşlanma ile birlikte immün sistemin ve doku mikroçevresinin kazandığı steril, düşük dereceli, kronik sistemik inflamatuar durumdur. Temel kaynakları: Senesent hücrelerin SASP salgıları, mitokondri disfonksiyonuyla sitozole kaçan mtDNA'nın cGAS-STING yolağını uyarması ve DAMP birikimidir. Bu tablo ateroskleroz, tip 2 diyabet, osteoartrit ve Alzheimer patogenezini besler.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Düşük dereceli steril kronik yaşlanma inflamasyonu 'inflammaging'dir.",
+      "B": "Apandisit akut piyojenik bakteriyel tablodur.",
+      "C": "Anafilaksi Tip I ani IgE aracılı hipersensitivitedir.",
+      "D": "Lobar pnömoni akut akciğer enfeksiyonudur.",
+      "E": "Süpüratif lenfadenit akut bakteriyel püy toplanmasıdır."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q14",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Deneysel çalışmalarda mTOR sinyal yolağını doğrudan inhibe ederek farelerde yaşam süresini uzattığı gösterilen, klinikte ise immünsüpresif ve antineoplastik amaçla kullanılan makrolid yapılı farmakolojik ajan aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Rapamisin (Sirolimus)",
+      "B": "Penisilin G",
+      "C": "Aspirin",
+      "D": "Morfin",
+      "E": "Parasetamol"
+     },
+     "dogru": "A",
+     "aciklama": "Rapamisin (Sirolimus), adını Rapa Nui (Paskalya Adası) toprağında bulunan Streptomyces hygroscopicus bakterisinden alan bir makroliddir. İntraselüler FKBP12 proteinine bağlanarak mTOR kompleks 1'i (mTORC1) spesifik olarak inhibe eder. mTORC1 inhibisyonu protein translasyonunu yavaşlatır, otofajiyi güçlü şekilde tetikler ve mayalardan memelilere kadar yaşam süresini uzattığı kanıtlanan başlıca moleküldür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. mTOR inhibitörü ve yaşam süresi uzatıcı ajan Rapamisin'dir (Sirolimus).",
+      "B": "Penisilin bakteriyel hücre duvarı sentez inhibitörüdür.",
+      "C": "Aspirin siklooksijenaz (COX) inhibitörüdür.",
+      "D": "Morfin opioid reseptör agonistidir.",
+      "E": "Parasetamol santral analjeziktir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q15",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "\"Protein homeostazında bozulma\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir.",
+      "B": "Telomer uçlarına nükleotid ekleyen RNA-protein kompleksidir; germ hücrelerinde yüksek, bazı kök hücrelerde düşük-orta düzeyde etkindir; çoğu somatik hücrede aktivitesi yok veya çok düşüktür.",
+      "D": "Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir.",
+      "E": "Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "C": "Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir.",
+      "B": "Yanlış. Telomer uçlarına nükleotid ekleyen RNA-protein kompleksidir; germ hücrelerinde yüksek, bazı kök hücrelerde düşük-orta düzeyde etkindir; çoğu somatik hücrede aktivitesi yok veya çok düşüktür.",
+      "D": "Yanlış. Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir.",
+      "E": "Yanlış. Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "C": "Yanlış. Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "\"Protein agregatları ve nörodejenerasyon\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Anormal proteinler hücre fonksiyonlarını bozar ve hücre içi agregatlar oluşturur; Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında α-sinüklein birikir.",
+      "A": "DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "E": "Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "C": "Telomer uçlarına nükleotid ekleyen RNA-protein kompleksidir; germ hücrelerinde yüksek, bazı kök hücrelerde düşük-orta düzeyde etkindir; çoğu somatik hücrede aktivitesi yok veya çok düşüktür.",
+      "B": "Eskiden hücrelerin zamanla enerjisinin tükenmesi olarak düşünülürken, güncel bilgiye göre mayadan memeliye kadar belirli genler ve sinyal yolları tarafından düzenlenir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Anormal proteinler hücre fonksiyonlarını bozar ve hücre içi agregatlar oluşturur; Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında α-sinüklein birikir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Anormal proteinler hücre fonksiyonlarını bozar ve hücre içi agregatlar oluşturur; Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında α-sinüklein birikir.",
+      "A": "Yanlış. DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "E": "Yanlış. Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "C": "Yanlış. Telomer uçlarına nükleotid ekleyen RNA-protein kompleksidir; germ hücrelerinde yüksek, bazı kök hücrelerde düşük-orta düzeyde etkindir; çoğu somatik hücrede aktivitesi yok veya çok düşüktür.",
+      "B": "Yanlış. Eskiden hücrelerin zamanla enerjisinin tükenmesi olarak düşünülürken, güncel bilgiye göre mayadan memeliye kadar belirli genler ve sinyal yolları tarafından düzenlenir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Replikatif yaşlanma\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "E": "Eskiden hücrelerin zamanla enerjisinin tükenmesi olarak düşünülürken, güncel bilgiye göre mayadan memeliye kadar belirli genler ve sinyal yolları tarafından düzenlenir.",
+      "B": "DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "C": "Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir.",
+      "D": "İnflamatuar sitokinler insülin direnci, katabolik durum ve hücrelerde ek DNA-protein hasarı yapar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "E": "Yanlış. Eskiden hücrelerin zamanla enerjisinin tükenmesi olarak düşünülürken, güncel bilgiye göre mayadan memeliye kadar belirli genler ve sinyal yolları tarafından düzenlenir.",
+      "B": "Yanlış. DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "C": "Yanlış. Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir.",
+      "D": "Yanlış. İnflamatuar sitokinler insülin direnci, katabolik durum ve hücrelerde ek DNA-protein hasarı yapar."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q18",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"IGF-1/mTOR baskılanması ve yaşam süresi\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Bazı organizmalarda IGF-1 sinyali ve mTOR aktivitesinin kısmi baskılanması yaşam süresini uzatmıştır; olası mekanizma büyümeden bakım/onarıma geçişin artmasıdır.",
+      "D": "DNA spontan baz değişimleri, ROS, radyasyon ve kimyasal ajanlarla sürekli hasara uğrar; onarım sistemleri çoğu hasarı düzeltir ancak zamanla mutasyonlar birikir.",
+      "B": "Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir.",
+      "C": "Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "A": "Eskiden hücrelerin zamanla enerjisinin tükenmesi olarak düşünülürken, güncel bilgiye göre mayadan memeliye kadar belirli genler ve sinyal yolları tarafından düzenlenir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Bazı organizmalarda IGF-1 sinyali ve mTOR aktivitesinin kısmi baskılanması yaşam süresini uzatmıştır; olası mekanizma büyümeden bakım/onarıma geçişin artmasıdır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Bazı organizmalarda IGF-1 sinyali ve mTOR aktivitesinin kısmi baskılanması yaşam süresini uzatmıştır; olası mekanizma büyümeden bakım/onarıma geçişin artmasıdır.",
+      "D": "Yanlış. DNA spontan baz değişimleri, ROS, radyasyon ve kimyasal ajanlarla sürekli hasara uğrar; onarım sistemleri çoğu hasarı düzeltir ancak zamanla mutasyonlar birikir.",
+      "B": "Yanlış. Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir.",
+      "C": "Yanlış. Normal somatik hücreler sınırlı sayıda bölünme kapasitesine sahiptir; bir süre sonra hücre döngüsünden çıkarak senesens durumuna geçer. Çocuklardan alınan hücreler daha fazla, yaşlılardan alınanlar daha az bölünür.",
+      "A": "Yanlış. Eskiden hücrelerin zamanla enerjisinin tükenmesi olarak düşünülürken, güncel bilgiye göre mayadan memeliye kadar belirli genler ve sinyal yolları tarafından düzenlenir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q19",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"Telomeraz ve kanser\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+      "D": "DNA hasarı ve onarım yetersizliği, replikatif yaşlanma, protein homeostazında bozulma, mitokondriyal disfonksiyon/ROS birikimi, IGF-1 ve mTOR sinyal değişiklikleri ve kalıcı düşük dereceli inflamasyondur.",
+      "B": "Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+      "E": "Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+      "C": "Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Birçok kanser hücresinde telomeraz yeniden aktive olur; telomer uzunluğu stabilize edilir ve hücreler 'ölümsüz' hale gelebilir.",
+      "D": "Yanlış. DNA hasarı ve onarım yetersizliği, replikatif yaşlanma, protein homeostazında bozulma, mitokondriyal disfonksiyon/ROS birikimi, IGF-1 ve mTOR sinyal değişiklikleri ve kalıcı düşük dereceli inflamasyondur.",
+      "B": "Yanlış. Yaşlanma tamamen durdurulamasa da bazı bileşenleri hedeflenebilir; potansiyel stratejiler oksidatif stresin azaltılması, metabolik-hormonal dengenin düzeltilmesi, inflamasyonun kontrolü ve otofaji/onarım mekanizmalarının desteklenmesidir.",
+      "E": "Yanlış. Birçok türde (hayvan modelleri) ömrü uzatır; mekanizmaları IGF-1 düzeylerinde azalma, mTOR yolağının baskılanması, ROS üretiminin azalması ve otofajinin artmasıdır.",
+      "C": "Yanlış. Normalde şaperonlar doğru katlanmayı destekler ve uygunsuz proteinler proteazomlarda parçalanır; yaşla şaperon fonksiyonu ve proteazom etkinliği azalabilir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-08-hucresel-yaslanma-k06-q20",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"Telomer kısalması ve hücre döngüsü\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "Kısa telomer kromozom uçlarının 'kırık DNA' gibi algılanmasına yol açar; hücre döngüsü durdurulur ve hücre replikatif senesense girer.",
+      "D": "Yaşlanan hücrelerde DNA hasarı ve yanlış katlanmış proteinler artar; p53 hasarı algılayıp BAX/BAK üzerinden mitokondriyal yolu aktive edebilir.",
+      "C": "DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "A": "Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "E": "Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Kısa telomer kromozom uçlarının 'kırık DNA' gibi algılanmasına yol açar; hücre döngüsü durdurulur ve hücre replikatif senesense girer.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Kısa telomer kromozom uçlarının 'kırık DNA' gibi algılanmasına yol açar; hücre döngüsü durdurulur ve hücre replikatif senesense girer.",
+      "D": "Yanlış. Yaşlanan hücrelerde DNA hasarı ve yanlış katlanmış proteinler artar; p53 hasarı algılayıp BAX/BAK üzerinden mitokondriyal yolu aktive edebilir.",
+      "C": "Yanlış. DNA onarım proteinlerini kodlayan genlerin mutasyona uğradığı kalıtsal bir progeroid sendromdur.",
+      "A": "Yanlış. Tetikleyiciler DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS'tur; BH3-only proteinler sensör görevi görür, BCL-2/BCL-XL anti-apoptotik ve BAX/BAK pro-apoptotiktir. BAX/BAK gözenek açar, sitokrom c salınır.",
+      "E": "Yanlış. Yaşlanmış hücrelerde mitokondriyal verim düşer, kaçak elektronlardan ROS üretimi artar ve antioksidan savunma zayıflayabilir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 22,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:54:42"
+ ]
 }

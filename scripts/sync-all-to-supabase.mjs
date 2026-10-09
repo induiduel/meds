@@ -303,15 +303,89 @@ async function syncQuestions() {
   console.log(`\n✅ Toplam ${successCount} aktif soru Supabase'e başarıyla aktarıldı!`);
 }
 
+// 5. Kazanım Odaklı Örnek Sorular (practice_questions)
+async function syncPracticeQuestions() {
+  console.log('\n🎯 5/5 Örnek Sorular Supabase\'e yazılıyor...');
+  const dataDir = path.join(ROOT_DIR, 'src', 'data', 'ornek_sorular', 'k1');
+  if (!fs.existsSync(dataDir)) {
+    console.warn('⚠️ ornek_sorular/k1 klasörü bulunamadı!');
+    return;
+  }
+
+  const files = fs.readdirSync(dataDir).filter(f => f.startsWith('k1-') && f.endsWith('.json'));
+  const rows = [];
+  for (const f of files) {
+    const content = JSON.parse(fs.readFileSync(path.join(dataDir, f), 'utf-8'));
+    const lessonId = content.id;
+    const kurul = content.kurul || 1;
+    const ders = content.ders;
+    const konu = content.konu;
+    const ogretimUyesi = content.ogretim_uyesi;
+
+    for (const kaz of (content.kazanimlar || [])) {
+      const kazNo = kaz.no;
+      const kazMetin = kaz.metin;
+
+      for (const q of (kaz.sorular || [])) {
+        rows.push({
+          id: q.id,
+          kurul,
+          lesson_id: lessonId,
+          ders,
+          konu,
+          ogretim_uyesi: ogretimUyesi,
+          kazanim_no: kazNo,
+          kazanim_metin: kazMetin,
+          zorluk: q.zorluk || 'orta',
+          soru: q.soru,
+          secenekler: q.secenekler || {},
+          dogru: q.dogru,
+          aciklama: q.aciklama || '',
+          sik_aciklamalari: q.sik_aciklamalari || {},
+          bilgi: q.bilgi || [],
+          benzer_cikmis: q.benzer_cikmis || [],
+          data: {
+            lesson_id: lessonId,
+            ders,
+            konu,
+            ogretim_uyesi: ogretimUyesi,
+            kazanim_no: kazNo,
+            kazanim_metin: kazMetin,
+            ...q
+          },
+          updated_at: new Date().toISOString()
+        });
+      }
+    }
+  }
+
+  console.log(`Toplam ${rows.length} örnek soru bulundu. Partiler halinde (50'şerli) yükleniyor...`);
+  const BATCH_SIZE = 50;
+  let successCount = 0;
+  for (let i = 0; i < rows.length; i += BATCH_SIZE) {
+    const chunk = rows.slice(i, i + BATCH_SIZE);
+    const { error } = await supabase.from('practice_questions').upsert(cleanForPostgres(chunk), { onConflict: 'id' });
+    if (error) {
+      console.warn(`Örnek soru parti [${i}] hatası:`, error.message);
+    } else {
+      successCount += chunk.length;
+      process.stdout.write(`\rİlerleme: ${successCount} / ${rows.length} örnek soru aktarıldı...`);
+    }
+  }
+  console.log(`\n✅ Toplam ${successCount} örnek soru Supabase'e başarıyla aktarıldı!`);
+}
+
 async function main() {
   await syncCommittees();
   await syncQuestions();
   await syncPastQuestions();
   await syncLectureNotes();
-  console.log('\n🎉 [TAMAMLANDI] Supabase artık tüm kurullar, aktif sorular, çıkmış sorular ve ders notları ile hazır!');
+  await syncPracticeQuestions();
+  console.log('\n🎉 [TAMAMLANDI] Supabase artık tüm kurullar, aktif sorular, çıkmış sorular, ders notları ve örnek sorular ile hazır!');
   console.log('Firebase Spark devre dışı kaldığında MedSoru otomatik olarak Supabase üzerinden çalışmaya devam edecektir.');
 }
 
 main().catch(err => {
   console.error('Kritik senkronizasyon hatası:', err);
 });
+

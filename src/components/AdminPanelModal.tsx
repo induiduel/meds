@@ -2378,7 +2378,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   onClose={() => setShowMobileNotificationSettings(false)}
                   onOpenQuestion={(qId) => {
                     onClose();
-                    window.location.hash = '#past-exams';
+                    window.location.assign(`/cikmis/${encodeURIComponent(qId)}`);
                   }}
                 />
               </div>

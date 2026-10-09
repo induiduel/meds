@@ -6,6 +6,7 @@
  "konu": "Üriner Sistem Enfeksiyonları: Laboratuvar Bulguları ve Tedavi",
  "ogretim_uyesi": "Doç. Dr. Özer Baran",
  "tarih": "2026-10-08",
+ "soru_sayisi": 134,
  "kazanimlar": [
   {
    "no": 1,
@@ -86,6 +87,217 @@
      },
      "bilgi": [
       4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Dizürili kadında idrarda bakteri + enflamatuvar reaksiyon saptanıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tanım yalnızca sepsistir",
+      "B": "ÜSİ nadirdir",
+      "C": "Enflamasyon şart değildir",
+      "D": "ÜSİ idrarda bakteri + enflamatuvar reaksiyondur; asemptomatik bakteriüriden sepsise uzanır; en sık doktora başvuran bakteriyel enfeksiyondur",
+      "E": "Viral enfeksiyondur"
+     },
+     "dogru": "D",
+     "aciklama": "ABD'de yıllık >7 milyon olgu; %21 acil başvurusu.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ÜSİ idrarda bakteri + enflamatuvar reaksiyondur; asemptomatik bakteriüriden sepsise uzanır; en sık doktora başvuran bakteriyel enfeksiyondur' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ÜSİ idrarda bakteri + enflamatuvar reaksiyondur; asemptomatik bakteriüriden sepsise uzanır; en sık doktora başvuran bakteriyel enfeksiyondur' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ÜSİ idrarda bakteri + enflamatuvar reaksiyondur; asemptomatik bakteriüriden sepsise uzanır; en sık doktora başvuran bakteriyel enfeksiyondur' seçeneğidir.",
+      "D": "Doğru: ABD'de yıllık >7 milyon olgu; %21 acil başvurusu.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ÜSİ idrarda bakteri + enflamatuvar reaksiyondur; asemptomatik bakteriüriden sepsise uzanır; en sık doktora başvuran bakteriyel enfeksiyondur' seçeneğidir."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Maliyet ve yatış yükü soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "ABD'de >7 milyon olgu ve >1 milyar dolar maliyet",
+      "B": "Akut pyelonefritle >100.000 yatış",
+      "C": "En sık başvuru gerektiren bakteriyel enfeksiyondur",
+      "D": "ÜSİ nadirdir ve hastaneye yatış gerektirmez",
+      "E": "Spektrum geniştir"
+     },
+     "dogru": "A",
+     "aciklama": "ÜSİ yaygın ve yüksek maliyetlidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ÜSİ yaygın ve yüksek maliyetlidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ABD'de >7 milyon olgu ve >1 milyar dolar maliyet' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ABD'de >7 milyon olgu ve >1 milyar dolar maliyet' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ABD'de >7 milyon olgu ve >1 milyar dolar maliyet' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ABD'de >7 milyon olgu ve >1 milyar dolar maliyet' seçeneğidir."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Üriner sistem enfeksiyonunun tanımı nedir?",
+     "secenekler": {
+      "A": "Bakteriüri ve enflamatuar reaksiyon birlikteliğidir",
+      "B": "Yalnızca steril idrar varlığıdır",
+      "C": "Sadece idrar pH değişikliğidir",
+      "D": "Yalnızca kristalüri varlığıdır",
+      "E": "Sadece proteinüri varlığıdır"
+     },
+     "dogru": "A",
+     "aciklama": "ÜSİ üriner sistem yapılarının bakteriyel enfeksiyonudur; idrarda bakteri enflamatuar reaksiyonla birliktedir. Bakteriüri tek başına enfeksiyon demek değildir. Enflamasyon varlığı tanıyı tamamlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Bakteri ve inflamasyon birlikteliği enfeksiyonu tanımlar.",
+      "B": "Yanlış: Steril idrar enfeksiyonu dışlar.",
+      "C": "Yanlış: pH değişimi nonspesifiktir.",
+      "D": "Yanlış: Kristal taş hastalığına aittir.",
+      "E": "Yanlış: Proteinüri glomerüler hastalığı düşündürür."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "ÜSİ'nin epidemiyolojik büyüklüğü ve cinsiyet dağılımı nasıldır?",
+     "secenekler": {
+      "A": "Yılda yalnızca yüzlerce olgu görülür",
+      "B": "Maliyet önemsiz düzeydedir",
+      "C": "Yılda milyonlarca olgu; kadınların yarısını etkiler",
+      "D": "Erkeklerde kadınlardan daha sıktır",
+      "E": "Yatış gerektiren form hiç yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "ABD'de yılda 7 milyondan fazla ÜSİ görülür; %21'i acil başvurusu, 100 binden fazla piyelonefrit yatışı ve 1 milyar doları aşan maliyet vardır. Kadınların %50'si yaşam boyu en az bir kez geçirir. Bu yük ampirik tedavi kılavuzlarını gerekli kılar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Yıllık olgu milyonlarcadır.",
+      "B": "Yanlış: Maliyet milyar dolar düzeyindedir.",
+      "C": "Doğru: Yüksek insidans ve kadın baskınlığı tipiktir.",
+      "D": "Yanlış: Yenidoğan-yaşlılık dışı kadın baskındır.",
+      "E": "Yanlış: Piyelonefrit yatışları yaygındır."
+     },
+     "bilgi": [
+      2,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k01-q08",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"Sistit ve komplike sistit tedavisi\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Komplike olmayan sistitte TMP-SMZ 3 gün, fosfomisin tek doz veya pivmesillinam 5 gün; allerji/dirençte kinolon 3 gün veya beta laktam 7 gün. Komplike sistitte süre 7 gün, gebelerde beta laktam seçilir.",
+      "A": "İdrar mümkünse 1 saat içinde tetkik edilmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır.",
+      "D": "Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+      "B": "Kadınlarda akut komplike olmayan sistit ve pyelonefrit, komplike ÜSE ve erkeklerde ÜSE, asemptomatik bakteriüri ve tekrarlayan ÜSE (relaps/reenfeksiyon) olarak sınıflanır.",
+      "C": "Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Komplike olmayan sistitte TMP-SMZ 3 gün, fosfomisin tek doz veya pivmesillinam 5 gün; allerji/dirençte kinolon 3 gün veya beta laktam 7 gün. Komplike sistitte süre 7 gün, gebelerde beta laktam seçilir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Komplike olmayan sistitte TMP-SMZ 3 gün, fosfomisin tek doz veya pivmesillinam 5 gün; allerji/dirençte kinolon 3 gün veya beta laktam 7 gün. Komplike sistitte süre 7 gün, gebelerde beta laktam seçilir.",
+      "A": "Yanlış. İdrar mümkünse 1 saat içinde tetkik edilmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır.",
+      "D": "Yanlış. Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+      "B": "Yanlış. Kadınlarda akut komplike olmayan sistit ve pyelonefrit, komplike ÜSE ve erkeklerde ÜSE, asemptomatik bakteriüri ve tekrarlayan ÜSE (relaps/reenfeksiyon) olarak sınıflanır.",
+      "C": "Yanlış. Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k01-q09",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Virülans faktörleri\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması.",
+      "D": "Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "E": "Komplike olmayan sistitte TMP-SMZ 3 gün, fosfomisin tek doz veya pivmesillinam 5 gün; allerji/dirençte kinolon 3 gün veya beta laktam 7 gün. Komplike sistitte süre 7 gün, gebelerde beta laktam seçilir.",
+      "B": "Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "A": "Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması.",
+      "D": "Yanlış. Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "E": "Yanlış. Komplike olmayan sistitte TMP-SMZ 3 gün, fosfomisin tek doz veya pivmesillinam 5 gün; allerji/dirençte kinolon 3 gün veya beta laktam 7 gün. Komplike sistitte süre 7 gün, gebelerde beta laktam seçilir.",
+      "B": "Yanlış. Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "A": "Yanlış. Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k01-q10",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"İdrar kültürü ve tanısal eşikler\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır.",
+      "B": "Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "E": "Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "D": "ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "A": "İdrar mümkünse 1 saat içinde tetkik edilmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır.",
+      "B": "Yanlış. Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "E": "Yanlış. Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "D": "Yanlış. ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "A": "Yanlış. İdrar mümkünse 1 saat içinde tetkik edilmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k01-q11",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Komplike olmayan sistit\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "C": "Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "B": "ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "E": "50 yaş altında sünnet olmama, homoseksüel ilişki, AIDS ve vajinal E. coli kolonizasyonu; 50 yaş üzerinde prostat hipertrofisi, prostat sekresyonunun azalması ve prezervatif sonda.",
+      "A": "İdrar akımı, idrarın ozmolaritesi, yüksek üre konsantrasyonu, düşük pH, Tamm-Horsfall proteinleri ve erkeklerde prostat salgısı savunmada rol oynar."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "C": "Yanlış. Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "B": "Yanlış. ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "E": "Yanlış. 50 yaş altında sünnet olmama, homoseksüel ilişki, AIDS ve vajinal E. coli kolonizasyonu; 50 yaş üzerinde prostat hipertrofisi, prostat sekresyonunun azalması ve prezervatif sonda.",
+      "A": "Yanlış. İdrar akımı, idrarın ozmolaritesi, yüksek üre konsantrasyonu, düşük pH, Tamm-Horsfall proteinleri ve erkeklerde prostat salgısı savunmada rol oynar."
+     },
+     "bilgi": [
+      17
      ],
      "benzer_cikmis": []
     }
@@ -174,6 +386,216 @@
       12
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kateterli, taşlı ve diyabetik hastada tekrarlayan ÜSE görülüyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Genel: kateter, obstrüksiyon, enstrüman/girişim, nörolojik mesane, VUR, nakil; sistemik: DM, immünsupresyon, malnütrisyon; lokal: staz, yabancı cisim, tümör/nekroz, travma",
+      "B": "Risk faktörü yoktur",
+      "C": "Yalnızca yaş etkilidir",
+      "D": "Kateter koruyucudur",
+      "E": "DM riski azaltır"
+     },
+     "dogru": "A",
+     "aciklama": "Bu faktörler sıklıkla komplike ÜSE ile ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Bu faktörler sıklıkla komplike ÜSE ile ilişkilidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Genel: kateter, obstrüksiyon, enstrüman/girişim, nörolojik mesane, VUR, nakil; sistemik: DM, immünsupresyon, malnütrisyon; lokal: staz, yabancı cisim, tümör/nekroz, travma' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Genel: kateter, obstrüksiyon, enstrüman/girişim, nörolojik mesane, VUR, nakil; sistemik: DM, immünsupresyon, malnütrisyon; lokal: staz, yabancı cisim, tümör/nekroz, travma' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Genel: kateter, obstrüksiyon, enstrüman/girişim, nörolojik mesane, VUR, nakil; sistemik: DM, immünsupresyon, malnütrisyon; lokal: staz, yabancı cisim, tümör/nekroz, travma' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Genel: kateter, obstrüksiyon, enstrüman/girişim, nörolojik mesane, VUR, nakil; sistemik: DM, immünsupresyon, malnütrisyon; lokal: staz, yabancı cisim, tümör/nekroz, travma' seçeneğidir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Sistemik-lokal ayrımı soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Obstrüksiyon, staz ve VUR lokaldir",
+      "B": "Kateter ve yabancı cisim riski artırır",
+      "C": "Kateter riski azaltır ve DM koruyucudur",
+      "D": "DM, immünsupresyon ve malnütrisyon sistemiktir",
+      "E": "Tümör/nekrotik doku lokal risktir"
+     },
+     "dogru": "D",
+     "aciklama": "Kateter ve DM riski artırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'DM, immünsupresyon ve malnütrisyon sistemiktir' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'DM, immünsupresyon ve malnütrisyon sistemiktir' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'DM, immünsupresyon ve malnütrisyon sistemiktir' seçeneğidir.",
+      "D": "Doğru: Kateter ve DM riski artırır.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'DM, immünsupresyon ve malnütrisyon sistemiktir' seçeneğidir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "ÜSİ için genel risk faktörleri hangileridir?",
+     "secenekler": {
+      "A": "Yalnızca mevsimsel alerji varlığı",
+      "B": "Düzenli egzersiz ve bol sıvı",
+      "C": "Sebze diyeti ve erken uyku",
+      "D": "Aşılanma ve el hijyeni",
+      "E": "Kateter, obstrüksiyon, VUR ve nakil"
+     },
+     "dogru": "E",
+     "aciklama": "Genel riskler kateterizasyon, obstrüksiyon (taş-tümör), enstrümantasyon, nörolojik mesane, VUR ve böbrek naklidir. Kateter biyofilm oluşturarak bakteri kolonizasyonunu kolaylaştırır. Obstrüksiyon staz yoluyla klirensi bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Alerji ÜSİ riski değildir.",
+      "B": "Yanlış: Bunlar koruyucu davranışlardır.",
+      "C": "Yanlış: Diyet ve uyku risk değildir.",
+      "D": "Yanlış: Bunlar koruyucu önlemlerdir.",
+      "E": "Doğru: Staz ve yabancı cisim riski artırır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "ÜSİ'nin sistemik ve lokal predispozan faktör ayrımı nasıldır?",
+     "secenekler": {
+      "A": "Sistemik risk yoktur; yalnızca lokal vardır",
+      "B": "DM-immünsüpresyon sistemik; staz-obstrüksiyon lokaldir",
+      "C": "Malnütrisyon riski tamamen azaltır",
+      "D": "Yabancı cisim koruyucu etki yapar",
+      "E": "Travma enfeksiyona karşı korur"
+     },
+     "dogru": "B",
+     "aciklama": "Sistemik faktörler DM, immünsüpresyon ve malnütrisyondur; lokal faktörler obstrüksiyon, staz, VUR, yabancı cisim, tümör-nekrotik doku ve travmadır. Hiperglisemi nötrofil işlevini bozar, staz bakteriyel klirensi engeller. İki grup birlikte riski katlar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Her iki grup da riski artırır.",
+      "B": "Doğru: Sistemik savunma ve lokal klirens ayrı eksenlerdir.",
+      "C": "Yanlış: Malnütrisyon savunmayı bozar.",
+      "D": "Yanlış: Yabancı cisim biyofilm odağıdır.",
+      "E": "Yanlış: Travma bariyeri bozarak risk yaratır."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k02-q08",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "\"Görüntüleme\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "E": "ÜSE'lerin çoğunda görüntüleme gerekmez; sepsis, cerrahi gerektiren enfeksiyonlar, renal abse, amfizematöz enfeksiyonlar, nefrolitiyazis, rekürren enfeksiyonlar ve şiddetli olgularda istenir.",
+      "B": "Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır.",
+      "A": "Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "D": "Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+      "C": "Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: ÜSE'lerin çoğunda görüntüleme gerekmez; sepsis, cerrahi gerektiren enfeksiyonlar, renal abse, amfizematöz enfeksiyonlar, nefrolitiyazis, rekürren enfeksiyonlar ve şiddetli olgularda istenir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. ÜSE'lerin çoğunda görüntüleme gerekmez; sepsis, cerrahi gerektiren enfeksiyonlar, renal abse, amfizematöz enfeksiyonlar, nefrolitiyazis, rekürren enfeksiyonlar ve şiddetli olgularda istenir.",
+      "B": "Yanlış. Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır.",
+      "A": "Yanlış. Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "D": "Yanlış. Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+      "C": "Yanlış. Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k02-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Lökosit silendirleri ve bakteriüri\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir.",
+      "B": "50 yaş altında sünnet olmama, homoseksüel ilişki, AIDS ve vajinal E. coli kolonizasyonu; 50 yaş üzerinde prostat hipertrofisi, prostat sekresyonunun azalması ve prezervatif sonda.",
+      "D": "Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "E": "Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "C": "ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir.",
+      "B": "Yanlış. 50 yaş altında sünnet olmama, homoseksüel ilişki, AIDS ve vajinal E. coli kolonizasyonu; 50 yaş üzerinde prostat hipertrofisi, prostat sekresyonunun azalması ve prezervatif sonda.",
+      "D": "Yanlış. Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "E": "Yanlış. Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "C": "Yanlış. ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k02-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"ÜSİ tanımı\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+      "E": "ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "D": "ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "B": "Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "C": "Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+      "E": "Yanlış. ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "D": "Yanlış. ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "B": "Yanlış. Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "C": "Yanlış. Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k02-q11",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Reenfeksiyon\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "A": "Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar.",
+      "D": "TMP-SMX gebelerde/varfarin kullananlarda kontrendike; nitrofurantoin komplike ve üst sistem İYE'de kullanılmaz, G6PD eksikliğinde hemoliz; sefalosporinler gebelikte güvenli; florokinolonlar çocuk/gebelede kontrendike; aminoglikozidler nefrotoksik-ototoksik; fosfomisin gebelik kategorisi B.",
+      "E": "ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "C": "Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "B": "Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar.",
+      "D": "Yanlış. TMP-SMX gebelerde/varfarin kullananlarda kontrendike; nitrofurantoin komplike ve üst sistem İYE'de kullanılmaz, G6PD eksikliğinde hemoliz; sefalosporinler gebelikte güvenli; florokinolonlar çocuk/gebelede kontrendike; aminoglikozidler nefrotoksik-ototoksik; fosfomisin gebelik kategorisi B.",
+      "E": "Yanlış. ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "C": "Yanlış. Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "B": "Yanlış. Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -259,6 +681,219 @@
       7
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Postmenopozal kadında tekrarlayan ÜSE ile 60 yaşında prostat hipertrofili erkek karşılaştırılıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Cinsiyet riski etkilemez",
+      "B": "Östrojen eksikliği koruyucudur",
+      "C": "Kadında: sık ilişki, spermisid/diyafram, gebelik, postmenopozal östrojen eksikliği (laktobasil kaybı), sistosel; erkekte: <50 sünnetsizlik/AIDS, >50 prostat hipertrofisi ve sekresyon azalması",
+      "D": "Prostat hipertrofisi koruyucudur",
+      "E": "Gebelik riski azaltır"
+     },
+     "dogru": "C",
+     "aciklama": "Yaşam dönemine göre risk profili değişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kadında: sık ilişki, spermisid/diyafram, gebelik, postmenopozal östrojen eksikliği (laktobasil kaybı), sistosel; erkekte: <50 sünnetsizlik/AIDS, >50 prostat hipertrofisi ve sekresyon azalması' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kadında: sık ilişki, spermisid/diyafram, gebelik, postmenopozal östrojen eksikliği (laktobasil kaybı), sistosel; erkekte: <50 sünnetsizlik/AIDS, >50 prostat hipertrofisi ve sekresyon azalması' seçeneğidir.",
+      "C": "Doğru: Yaşam dönemine göre risk profili değişir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kadında: sık ilişki, spermisid/diyafram, gebelik, postmenopozal östrojen eksikliği (laktobasil kaybı), sistosel; erkekte: <50 sünnetsizlik/AIDS, >50 prostat hipertrofisi ve sekresyon azalması' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kadında: sık ilişki, spermisid/diyafram, gebelik, postmenopozal östrojen eksikliği (laktobasil kaybı), sistosel; erkekte: <50 sünnetsizlik/AIDS, >50 prostat hipertrofisi ve sekresyon azalması' seçeneğidir."
+     },
+     "bilgi": [
+      3,
+      4,
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Erkeklerde 1-50 yaş sıklığı soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nedeni uzun üretra ve bakterisidal prostat sıvısıdır",
+      "B": "Erkekte 1-50 yaş sıklık %1'in altındadır",
+      "C": "Kadınlarda pik 18-24 cinsel aktif dönemdir",
+      "D": "Erkeklerde ÜSE kadınlardan sıktır ve prostat sıvısı enfeksiyonu artırır",
+      "E": "Yineleyen ÜSE kadınların %10-20'sini etkiler"
+     },
+     "dogru": "B",
+     "aciklama": "ÜSE esas olarak kadınları etkiler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Erkekte 1-50 yaş sıklık %1'in altındadır' seçeneğidir.",
+      "B": "Doğru: ÜSE esas olarak kadınları etkiler.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Erkekte 1-50 yaş sıklık %1'in altındadır' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Erkekte 1-50 yaş sıklık %1'in altındadır' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Erkekte 1-50 yaş sıklık %1'in altındadır' seçeneğidir."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kadınlarda ÜSİ'ye özgü ek risk faktörleri hangileridir?",
+     "secenekler": {
+      "A": "Uzun üretra ve prostat salgısı",
+      "B": "Sünnetli olmak ve az sıvı",
+      "C": "Prostat hipertrofisi varlığı",
+      "D": "Sık ilişki, spermisid, gebelik ve östrojen eksikliği",
+      "E": "Prezervatif sonda kullanımı"
+     },
+     "dogru": "D",
+     "aciklama": "Premenopozal riskler genetik yatkınlık, geçirilmiş ÜSİ, sık ilişki, yeni eş, koit sonrası miksiyon yapmama, spermisid-diyafram, gebelik ve DM'dir. Postmenopozal dönemde östrojen eksikliği vajinal laktobasil kaybına yol açar. Laktobasil kaybı patojen kolonizasyonu kolaylaştırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Bunlar erkek koruyucu özellikleridir.",
+      "B": "Yanlış: Sünnet riski azaltır.",
+      "C": "Yanlış: Prostat hipertrofisi erkek riskidir.",
+      "D": "Doğru: Kolonizasyon ve flora kaybı riski artırır.",
+      "E": "Yanlış: Sonda erkek yaşlı riskidir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Erkeklerde ÜSİ'ye özgü ek risk faktörleri hangileridir?",
+     "secenekler": {
+      "A": "Sünnetsizlik, prostat hipertrofisi ve sonda kullanımı",
+      "B": "Östrojen eksikliği ve spermisid kullanımı",
+      "C": "Gebelik ve sık cinsel ilişki",
+      "D": "Kısa üretra ve laktobasil kaybı",
+      "E": "Diyafram kullanımı ve yeni eş"
+     },
+     "dogru": "A",
+     "aciklama": "50 yaş altında sünnetsizlik, homoseksüel ilişki, AIDS ve vajinal E. coli kolonizasyonu riski artırır. 50 yaş üstünde prostat hipertrofisi, sekresyon azalması ve prezervatif sonda obstrüksiyon yapar. Uzun üretra ve bakterisidal prostat sıvısı 1-50 yaşta sıklığı %1'in altında tutar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Obstrüksiyon ve kolonizasyon erkek riskini oluşturur.",
+      "B": "Yanlış: Bunlar kadın riskleridir.",
+      "C": "Yanlış: Gebelik kadın riskidir.",
+      "D": "Yanlış: Kısa üretra kadın anatomisidir.",
+      "E": "Yanlış: Bunlar kadın riskleridir."
+     },
+     "bilgi": [
+      8,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k03-q08",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "\"Epidemiyoloji\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "E": "Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+      "A": "Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar.",
+      "D": "Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir.",
+      "B": "50 yaş altında sünnet olmama, homoseksüel ilişki, AIDS ve vajinal E. coli kolonizasyonu; 50 yaş üzerinde prostat hipertrofisi, prostat sekresyonunun azalması ve prezervatif sonda."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+     "sik_aciklamalari": {
+      "C": "Doğru. ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "E": "Yanlış. Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+      "A": "Yanlış. Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar.",
+      "D": "Yanlış. Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir.",
+      "B": "Yanlış. 50 yaş altında sünnet olmama, homoseksüel ilişki, AIDS ve vajinal E. coli kolonizasyonu; 50 yaş üzerinde prostat hipertrofisi, prostat sekresyonunun azalması ve prezervatif sonda."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k03-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Genel risk faktörleri\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "B": "Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "D": "Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "A": "Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir.",
+      "C": "Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "B": "Yanlış. Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "D": "Yanlış. Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "A": "Yanlış. Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir.",
+      "C": "Yanlış. Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k03-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Cinsiyet dağılımı\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "D": "Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "C": "Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "A": "Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir.",
+      "E": "Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "D": "Yanlış. Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "C": "Yanlış. Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "A": "Yanlış. Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir.",
+      "E": "Yanlış. Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k03-q11",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"Antibakteriyel ajanların özellikleri\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "TMP-SMX gebelerde/varfarin kullananlarda kontrendike; nitrofurantoin komplike ve üst sistem İYE'de kullanılmaz, G6PD eksikliğinde hemoliz; sefalosporinler gebelikte güvenli; florokinolonlar çocuk/gebelede kontrendike; aminoglikozidler nefrotoksik-ototoksik; fosfomisin gebelik kategorisi B.",
+      "B": "Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir.",
+      "D": "Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "C": "Kadınlarda akut komplike olmayan sistit ve pyelonefrit, komplike ÜSE ve erkeklerde ÜSE, asemptomatik bakteriüri ve tekrarlayan ÜSE (relaps/reenfeksiyon) olarak sınıflanır.",
+      "E": "ÜSE'lerin çoğunda görüntüleme gerekmez; sepsis, cerrahi gerektiren enfeksiyonlar, renal abse, amfizematöz enfeksiyonlar, nefrolitiyazis, rekürren enfeksiyonlar ve şiddetli olgularda istenir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: TMP-SMX gebelerde/varfarin kullananlarda kontrendike; nitrofurantoin komplike ve üst sistem İYE'de kullanılmaz, G6PD eksikliğinde hemoliz; sefalosporinler gebelikte güvenli; florokinolonlar çocuk/gebelede kontrendike; aminoglikozidler nefrotoksik-ototoksik; fosfomisin gebelik kategorisi B.",
+     "sik_aciklamalari": {
+      "A": "Doğru. TMP-SMX gebelerde/varfarin kullananlarda kontrendike; nitrofurantoin komplike ve üst sistem İYE'de kullanılmaz, G6PD eksikliğinde hemoliz; sefalosporinler gebelikte güvenli; florokinolonlar çocuk/gebelede kontrendike; aminoglikozidler nefrotoksik-ototoksik; fosfomisin gebelik kategorisi B.",
+      "B": "Yanlış. Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir.",
+      "D": "Yanlış. Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "C": "Yanlış. Kadınlarda akut komplike olmayan sistit ve pyelonefrit, komplike ÜSE ve erkeklerde ÜSE, asemptomatik bakteriüri ve tekrarlayan ÜSE (relaps/reenfeksiyon) olarak sınıflanır.",
+      "E": "Yanlış. ÜSE'lerin çoğunda görüntüleme gerekmez; sepsis, cerrahi gerektiren enfeksiyonlar, renal abse, amfizematöz enfeksiyonlar, nefrolitiyazis, rekürren enfeksiyonlar ve şiddetli olgularda istenir."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -340,6 +975,219 @@
       "C": "Lenfojen yol tartışmalıdır.",
       "D": "Üretral asendan yol fistülü açıklamaz.",
       "E": "Doğru: komşuluk/fistül yoluyla direkt yayılımdır."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Sistoskopi sonrası sistit ile S. aureus bakteriyemisinde böbrek apsesi karşılaştırılıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hematojen en sıktır",
+      "B": "Asendan nadirdir",
+      "C": "Lenfojen kanıtlanmıştır",
+      "D": "Direkt yol imkansızdır",
+      "E": "Asendan yol %99 ile en sık-önemlidir; hematojen <%2'dir (S. aureus, Candida, Salmonella, Tbc); direkt fistülle olur"
+     },
+     "dogru": "E",
+     "aciklama": "Kadında kısa üretra asendanı kolaylaştırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Asendan yol %99 ile en sık-önemlidir; hematojen <%2'dir (S. aureus, Candida, Salmonella, Tbc); direkt fistülle olur' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Asendan yol %99 ile en sık-önemlidir; hematojen <%2'dir (S. aureus, Candida, Salmonella, Tbc); direkt fistülle olur' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Asendan yol %99 ile en sık-önemlidir; hematojen <%2'dir (S. aureus, Candida, Salmonella, Tbc); direkt fistülle olur' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Asendan yol %99 ile en sık-önemlidir; hematojen <%2'dir (S. aureus, Candida, Salmonella, Tbc); direkt fistülle olur' seçeneğidir.",
+      "E": "Doğru: Kadında kısa üretra asendanı kolaylaştırır."
+     },
+     "bilgi": [
+      9,
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Hematojen etkenler soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hematojen <%2'dir",
+      "B": "Asendan Enterobacteriaceae ile olur",
+      "C": "Asendan <%2'dir ve hematojen %99'dur",
+      "D": "Direkt fistül/apse ile olur",
+      "E": "Hematojen tipik: S. aureus, Candida, Salmonella, M. tuberculosis"
+     },
+     "dogru": "E",
+     "aciklama": "Asendan %99, hematojen <%2'dir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hematojen tipik: S. aureus, Candida, Salmonella, M. tuberculosis' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hematojen tipik: S. aureus, Candida, Salmonella, M. tuberculosis' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hematojen tipik: S. aureus, Candida, Salmonella, M. tuberculosis' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Hematojen tipik: S. aureus, Candida, Salmonella, M. tuberculosis' seçeneğidir.",
+      "E": "Doğru: Asendan %99, hematojen <%2'dir."
+     },
+     "bilgi": [
+      9,
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "ÜSİ'lerin en sık yayılım yolu ve oranı nedir?",
+     "secenekler": {
+      "A": "Hematojen yol olguların %99'udur",
+      "B": "Lenfojen yol en sık yoldur",
+      "C": "Asendan yol %99 ile en sık yoldur",
+      "D": "Direkt yayılım tek yoldur",
+      "E": "Asendan yol hiç görülmez"
+     },
+     "dogru": "C",
+     "aciklama": "Enterobacteriaceae ile asendan yol ÜSİ'lerin %99'unu oluşturur; en sık ve önemli yoldur. Kadında kısa üretra, vajinal-periüretral kolonizasyon ve prostat sekresyon yokluğu yatkınlık yaratır. Bakteri üretra-mesane-üreter-böbrek hattında yükselir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Hematojen yol S. aureus gibi özeldir.",
+      "B": "Yanlış: Lenfojen yol tartışmalıdır.",
+      "C": "Doğru: Perineal kolonizasyonun yükselmesi baskın yoldur.",
+      "D": "Yanlış: Direkt yayılım fistül-apseyle sınırlıdır.",
+      "E": "Yanlış: Asendan yol neredeyse tüm olgulardandır."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hematojen, lenfojen ve direkt yayılımın özellikleri nelerdir?",
+     "secenekler": {
+      "A": "Hematojen yol E. coli ile olur",
+      "B": "Lenfojen yol kanıtlanmış ana yoldur",
+      "C": "Direkt yayılım en sık mekanizmadır",
+      "D": "Tüberküloz asendan yolla yayılır",
+      "E": "Hematojen S. aureus-Candida; direkt fistül-apsedendir"
+     },
+     "dogru": "E",
+     "aciklama": "Hematojen yol S. aureus, Candida, Salmonella ve M. tuberculosis ile olur. Lenfojen yol tartışmalı, direkt yayılım apse, inflamatuar barsak hastalığı ve fistüllerledir. Bu yollar asendana göre nadirdir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: E. coli asendan yolun etkenidir.",
+      "B": "Yanlış: Lenfojen yol tartışmalıdır.",
+      "C": "Yanlış: Direkt yayılım nadir ve lokaldir.",
+      "D": "Yanlış: Tüberküloz hematojen yayılır.",
+      "E": "Doğru: Primer odaklı bakteriyemi ve komşuluk yayılımı nadirdir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k04-q08",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Cinsiyet dağılımı\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "A": "ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "E": "S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür.",
+      "C": "ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "B": "Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "D": "ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "E": "Yanlış. S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür.",
+      "C": "Yanlış. ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "B": "Yanlış. Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "D": "Yanlış. ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k04-q09",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Sistemik ve lokal predispozan faktörler\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "E": "ÜSE'lerin çoğunda görüntüleme gerekmez; sepsis, cerrahi gerektiren enfeksiyonlar, renal abse, amfizematöz enfeksiyonlar, nefrolitiyazis, rekürren enfeksiyonlar ve şiddetli olgularda istenir.",
+      "C": "Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir.",
+      "A": "TMP-SMX gebelerde/varfarin kullananlarda kontrendike; nitrofurantoin komplike ve üst sistem İYE'de kullanılmaz, G6PD eksikliğinde hemoliz; sefalosporinler gebelikte güvenli; florokinolonlar çocuk/gebelede kontrendike; aminoglikozidler nefrotoksik-ototoksik; fosfomisin gebelik kategorisi B.",
+      "D": "Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "E": "Yanlış. ÜSE'lerin çoğunda görüntüleme gerekmez; sepsis, cerrahi gerektiren enfeksiyonlar, renal abse, amfizematöz enfeksiyonlar, nefrolitiyazis, rekürren enfeksiyonlar ve şiddetli olgularda istenir.",
+      "C": "Yanlış. Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir.",
+      "A": "Yanlış. TMP-SMX gebelerde/varfarin kullananlarda kontrendike; nitrofurantoin komplike ve üst sistem İYE'de kullanılmaz, G6PD eksikliğinde hemoliz; sefalosporinler gebelikte güvenli; florokinolonlar çocuk/gebelede kontrendike; aminoglikozidler nefrotoksik-ototoksik; fosfomisin gebelik kategorisi B.",
+      "D": "Yanlış. Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k04-q10",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Komplike ÜSE\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "B": "Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "C": "Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "D": "Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır.",
+      "E": "Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "B": "Yanlış. Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "C": "Yanlış. Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "D": "Yanlış. Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır.",
+      "E": "Yanlış. Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k04-q11",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Lenfojen ve direkt yayılım\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "C": "Lenfojen yol rektal/kolonik ve periuterin lenfatikler üzerinden tartışmalıdır; direkt yayılma intraperitoneal apseler, inflamatuar barsak hastalıkları ve vezikovaginal-vezikointestinal fistüllerle olur.",
+      "A": "Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "E": "Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "D": "Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar.",
+      "B": "Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Lenfojen yol rektal/kolonik ve periuterin lenfatikler üzerinden tartışmalıdır; direkt yayılma intraperitoneal apseler, inflamatuar barsak hastalıkları ve vezikovaginal-vezikointestinal fistüllerle olur.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Lenfojen yol rektal/kolonik ve periuterin lenfatikler üzerinden tartışmalıdır; direkt yayılma intraperitoneal apseler, inflamatuar barsak hastalıkları ve vezikovaginal-vezikointestinal fistüllerle olur.",
+      "A": "Yanlış. Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "E": "Yanlış. Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "D": "Yanlış. Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar.",
+      "B": "Yanlış. Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir."
      },
      "bilgi": [
       11
@@ -431,6 +1279,214 @@
       13
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Tekrarlayan ÜSE'li hastada savunma ve bakteri virülansı tartışılıyor. Konak savunmasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "İdrar stazı",
+      "B": "İdrar akımı, ozmolarite, yüksek üre, düşük pH, Tamm-Horsfall proteinleri ve prostat salgısı",
+      "C": "Düşük üre",
+      "D": "Yüksek pH",
+      "E": "Prostat salgısının yokluğu"
+     },
+     "dogru": "B",
+     "aciklama": "Bu mekanizmaların bozulması riski artırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'İdrar akımı, ozmolarite, yüksek üre, düşük pH, Tamm-Horsfall proteinleri ve prostat salgısı' seçeneğidir.",
+      "B": "Doğru: Bu mekanizmaların bozulması riski artırır.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'İdrar akımı, ozmolarite, yüksek üre, düşük pH, Tamm-Horsfall proteinleri ve prostat salgısı' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'İdrar akımı, ozmolarite, yüksek üre, düşük pH, Tamm-Horsfall proteinleri ve prostat salgısı' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'İdrar akımı, ozmolarite, yüksek üre, düşük pH, Tamm-Horsfall proteinleri ve prostat salgısı' seçeneğidir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Virülans faktörleri (adherens, kapsül, hemolizin) soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kapsül fagositozdan korur",
+      "B": "Hemolizin/aerobaktin doku invazyonu yapar",
+      "C": "Artmış adherens yerleşmeyi kolaylaştırır",
+      "D": "Endotoksin peristaltizmi azaltır",
+      "E": "Kapsül fagositozu artırır ve adherens koruyucudur"
+     },
+     "dogru": "C",
+     "aciklama": "Kapsül korunma, adherens tutunma sağlar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Artmış adherens yerleşmeyi kolaylaştırır' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Artmış adherens yerleşmeyi kolaylaştırır' seçeneğidir.",
+      "C": "Doğru: Kapsül korunma, adherens tutunma sağlar.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Artmış adherens yerleşmeyi kolaylaştırır' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Artmış adherens yerleşmeyi kolaylaştırır' seçeneğidir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Konağın üriner savunma mekanizmaları hangileridir?",
+     "secenekler": {
+      "A": "Staz ve obstrüksiyon savunmayı güçlendirir",
+      "B": "Akım, üre, düşük pH ve Tamm-Horsfall korur",
+      "C": "Yüksek pH bakteriyi öldürür",
+      "D": "Kateter savunma bariyeridir",
+      "E": "VUR bakteriyi yıkayarak atar"
+     },
+     "dogru": "B",
+     "aciklama": "Savunmada idrar akımı, ozmolarite, yüksek üre, düşük pH, Tamm-Horsfall proteini ve prostat salgısı rol oynar. Akım bakteriyi mekanik yıkar, Tamm-Horsfall adezyonu engeller. Bu bariyerler asendan kolonizasyonu sınırlar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Staz klirensi bozar.",
+      "B": "Doğru: Mekanik ve kimyasal bariyerler kolonizasyonu engeller.",
+      "C": "Yanlış: Koruyucu olan düşük pH'tır.",
+      "D": "Yanlış: Kateter biyofilm odağıdır.",
+      "E": "Yanlış: VUR enfekte idrarı böbreğe taşır."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Üropatojenlerin başlıca virülans faktörleri hangileridir?",
+     "secenekler": {
+      "A": "Adezyon kaybı virülansı artırır",
+      "B": "Kapsül fagositozu kolaylaştırır",
+      "C": "Endotoksin peristaltizmi hızlandırır",
+      "D": "Adezyon, kapsül, toksin ve peristaltizm baskılanması",
+      "E": "Hemolizin dokuyu koruyarak iyileştirir"
+     },
+     "dogru": "D",
+     "aciklama": "Virülans faktörleri artmış adezyon, kapsülle fagositozdan korunma ve hemolizin-aerobaktinle invazyondur. CNF-1 toksisitesi hücre iskeletini bozar, endotoksin üreter peristaltizmini azaltır. Adezyon yıkamaya direnç sağlar, endotoksin üreter peristaltizmini bozarak yükselime izin verir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Adezyon kolonizasyonun anahtarıdır.",
+      "B": "Yanlış: Kapsül fagositozdan korur.",
+      "C": "Yanlış: Endotoksin peristaltizmi azaltır.",
+      "D": "Doğru: Tutunma, korunma ve yayılma faktörleri birlikte işler.",
+      "E": "Yanlış: Hemolizin doku hasarı yapar."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k05-q08",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Virülans faktörleri\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "D": "Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması.",
+      "E": "Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır.",
+      "C": "Kadınlarda akut komplike olmayan sistit ve pyelonefrit, komplike ÜSE ve erkeklerde ÜSE, asemptomatik bakteriüri ve tekrarlayan ÜSE (relaps/reenfeksiyon) olarak sınıflanır.",
+      "A": "ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "B": "Lenfojen yol rektal/kolonik ve periuterin lenfatikler üzerinden tartışmalıdır; direkt yayılma intraperitoneal apseler, inflamatuar barsak hastalıkları ve vezikovaginal-vezikointestinal fistüllerle olur."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması.",
+      "E": "Yanlış. Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır.",
+      "C": "Yanlış. Kadınlarda akut komplike olmayan sistit ve pyelonefrit, komplike ÜSE ve erkeklerde ÜSE, asemptomatik bakteriüri ve tekrarlayan ÜSE (relaps/reenfeksiyon) olarak sınıflanır.",
+      "A": "Yanlış. ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "B": "Yanlış. Lenfojen yol rektal/kolonik ve periuterin lenfatikler üzerinden tartışmalıdır; direkt yayılma intraperitoneal apseler, inflamatuar barsak hastalıkları ve vezikovaginal-vezikointestinal fistüllerle olur."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k05-q09",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Virülans faktörleri\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması.",
+      "D": "Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "A": "Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "B": "Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "E": "Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması.",
+      "D": "Yanlış. Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "A": "Yanlış. Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "B": "Yanlış. Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "E": "Yanlış. Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k05-q10",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Epidemiyoloji\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "E": "Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "C": "Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar.",
+      "A": "Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "B": "S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+     "sik_aciklamalari": {
+      "D": "Doğru. ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "E": "Yanlış. Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "C": "Yanlış. Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar.",
+      "A": "Yanlış. Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "B": "Yanlış. S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k05-q11",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"Kadınlarda ek risk faktörleri\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "A": "Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "B": "50 yaş altında sünnet olmama, homoseksüel ilişki, AIDS ve vajinal E. coli kolonizasyonu; 50 yaş üzerinde prostat hipertrofisi, prostat sekresyonunun azalması ve prezervatif sonda.",
+      "D": "ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur.",
+      "C": "S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür.",
+      "E": "Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "B": "Yanlış. 50 yaş altında sünnet olmama, homoseksüel ilişki, AIDS ve vajinal E. coli kolonizasyonu; 50 yaş üzerinde prostat hipertrofisi, prostat sekresyonunun azalması ve prezervatif sonda.",
+      "D": "Yanlış. ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur.",
+      "C": "Yanlış. S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür.",
+      "E": "Yanlış. Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -516,6 +1572,222 @@
      "bilgi": [
       14,
       15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Genç kadında akut sistit etkeni ve sınıflama tartışılıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "En sık Proteus'tur",
+      "B": "Polimikrobiyal tipiktir",
+      "C": "Erkekte hep komplike olmayandır",
+      "D": "ÜSE'lerin %95'inde tek bakteri; en sık E. coli (%70-90); S. saprophyticus genç aktif kadında; erkekte ÜSE aksi ispatlanmadıkça komplike kabul edilir",
+      "E": "Candida kateterle ilişkisizdir"
+     },
+     "dogru": "D",
+     "aciklama": "Ampirik tedavi E. coli'yi hedefler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ÜSE'lerin %95'inde tek bakteri; en sık E. coli (%70-90); S. saprophyticus genç aktif kadında; erkekte ÜSE aksi ispatlanmadıkça komplike kabul edilir' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ÜSE'lerin %95'inde tek bakteri; en sık E. coli (%70-90); S. saprophyticus genç aktif kadında; erkekte ÜSE aksi ispatlanmadıkça komplike kabul edilir' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ÜSE'lerin %95'inde tek bakteri; en sık E. coli (%70-90); S. saprophyticus genç aktif kadında; erkekte ÜSE aksi ispatlanmadıkça komplike kabul edilir' seçeneğidir.",
+      "D": "Doğru: Ampirik tedavi E. coli'yi hedefler.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ÜSE'lerin %95'inde tek bakteri; en sık E. coli (%70-90); S. saprophyticus genç aktif kadında; erkekte ÜSE aksi ispatlanmadıkça komplike kabul edilir' seçeneğidir."
+     },
+     "bilgi": [
+      14,
+      15,
+      16,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Özel etken-konak eşleştirmesi soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Adenovirus tip 11 çocukta hemorajik sistit yapar",
+      "B": "Candida kateter + antibiyotikte görülür",
+      "C": "Klebsiella/Proteus/Enterococcus görülür",
+      "D": "E. coli nadirdir ve erkekte ÜSE hep komplike olmayandır",
+      "E": "Sınıflama tedaviyi belirler"
+     },
+     "dogru": "A",
+     "aciklama": "E. coli en sıktır; erkekte komplike kabul edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: E. coli en sıktır; erkekte komplike kabul edilir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Adenovirus tip 11 çocukta hemorajik sistit yapar' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Adenovirus tip 11 çocukta hemorajik sistit yapar' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Adenovirus tip 11 çocukta hemorajik sistit yapar' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Adenovirus tip 11 çocukta hemorajik sistit yapar' seçeneğidir."
+     },
+     "bilgi": [
+      14,
+      15,
+      16,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "ÜSİ etkenlerinin dağılımı ve ilk sıradaki patojen nedir?",
+     "secenekler": {
+      "A": "Tek bakteri baskın; E. coli %70-90 ile ilk sırada",
+      "B": "Polimikrobiyal flora her zaman vardır",
+      "C": "En sık etken Pseudomonas'tır",
+      "D": "E. coli nadir etkendir",
+      "E": "Mantarlar ilk sırada yer alır"
+     },
+     "dogru": "A",
+     "aciklama": "ÜSİ'lerin %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90). Diğerleri Klebsiella, Proteus ve Enterococcus'tur. S. saprophyticus genç cinsel aktif kadınlarda, adenovirus çocukta hemorajik sistit yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Monomikrobiyal E. coli enfeksiyonu tipiktir.",
+      "B": "Yanlış: Polimikrobiyal üreme kontaminasyonu düşündürür.",
+      "C": "Yanlış: Pseudomonas nozokomiyal-kateter etkenidir.",
+      "D": "Yanlış: E. coli açık ara ilk sıradadır.",
+      "E": "Yanlış: Candida kateter-antibiyotikli gruptadır."
+     },
+     "bilgi": [
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "ÜSİ klinik sınıflamasının temel grupları nelerdir?",
+     "secenekler": {
+      "A": "Erkekte ÜSİ hep komplike olmayandır",
+      "B": "Sınıflama tedaviyi hiç etkilemez",
+      "C": "Kadın sistit-piyelonefrit; erkek hep komplike sayılır",
+      "D": "Asemptomatik bakteriüri hep tedavi edilir",
+      "E": "Tekrarlayan sınıfı tanımlanmamıştır"
+     },
+     "dogru": "C",
+     "aciklama": "Sınıflama kadınlarda akut komplike olmayan sistit-piyelonefrit, komplike ÜSİ, erkeklerde ÜSİ, asemptomatik bakteriüri ve tekrarlayandır. Erkekte ÜSİ aksi ispatlanmadıkça komplike kabul edilir. Sınıf tedavi süresini belirler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Erkek anatomisi komplikasyon sayılır.",
+      "B": "Yanlış: Sınıf süre ve ajan seçimini belirler.",
+      "C": "Doğru: Yapısal risk sınıflamayı yönlendirir.",
+      "D": "Yanlış: Yalnızca gebe ve girişim öncesi tedavi edilir.",
+      "E": "Yanlış: Relaps-reenfeksiyon tanımlıdır."
+     },
+     "bilgi": [
+      16,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k06-q08",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "\"Pyelonefrit ve komplike İYE tedavisi\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "D": "Komplike olmayan sistitte TMP-SMZ 3 gün, fosfomisin tek doz veya pivmesillinam 5 gün; allerji/dirençte kinolon 3 gün veya beta laktam 7 gün. Komplike sistitte süre 7 gün, gebelerde beta laktam seçilir.",
+      "B": "Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar.",
+      "A": "Lenfojen yol rektal/kolonik ve periuterin lenfatikler üzerinden tartışmalıdır; direkt yayılma intraperitoneal apseler, inflamatuar barsak hastalıkları ve vezikovaginal-vezikointestinal fistüllerle olur.",
+      "C": "Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "D": "Yanlış. Komplike olmayan sistitte TMP-SMZ 3 gün, fosfomisin tek doz veya pivmesillinam 5 gün; allerji/dirençte kinolon 3 gün veya beta laktam 7 gün. Komplike sistitte süre 7 gün, gebelerde beta laktam seçilir.",
+      "B": "Yanlış. Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar.",
+      "A": "Yanlış. Lenfojen yol rektal/kolonik ve periuterin lenfatikler üzerinden tartışmalıdır; direkt yayılma intraperitoneal apseler, inflamatuar barsak hastalıkları ve vezikovaginal-vezikointestinal fistüllerle olur.",
+      "C": "Yanlış. Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k06-q09",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Sistit ve komplike sistit tedavisi\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Komplike olmayan sistitte TMP-SMZ 3 gün, fosfomisin tek doz veya pivmesillinam 5 gün; allerji/dirençte kinolon 3 gün veya beta laktam 7 gün. Komplike sistitte süre 7 gün, gebelerde beta laktam seçilir.",
+      "C": "Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "B": "Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "D": "Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır.",
+      "E": "Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Komplike olmayan sistitte TMP-SMZ 3 gün, fosfomisin tek doz veya pivmesillinam 5 gün; allerji/dirençte kinolon 3 gün veya beta laktam 7 gün. Komplike sistitte süre 7 gün, gebelerde beta laktam seçilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Komplike olmayan sistitte TMP-SMZ 3 gün, fosfomisin tek doz veya pivmesillinam 5 gün; allerji/dirençte kinolon 3 gün veya beta laktam 7 gün. Komplike sistitte süre 7 gün, gebelerde beta laktam seçilir.",
+      "C": "Yanlış. Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "B": "Yanlış. Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "D": "Yanlış. Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır.",
+      "E": "Yanlış. Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k06-q10",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Lökosit esteraz\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir.",
+      "A": "ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "B": "Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "E": "Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği.",
+      "D": "ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir.",
+      "A": "Yanlış. ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "B": "Yanlış. Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "E": "Yanlış. Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği.",
+      "D": "Yanlış. ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k06-q11",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"Asendan yol\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır.",
+      "A": "ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "D": "Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar.",
+      "C": "Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "B": "Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır.",
+      "A": "Yanlış. ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "D": "Yanlış. Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar.",
+      "C": "Yanlış. Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "B": "Yanlış. Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır."
+     },
+     "bilgi": [
+      9
      ],
      "benzer_cikmis": []
     }
@@ -606,6 +1878,222 @@
       20,
       21,
       39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Tedaviden 10 gün sonra aynı bakteri üreyen hasta ile 4 ay sonra farklı bakteri üreyen hasta karşılaştırılıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Relaps: 2 hafta içinde aynı bakteri (odak/yetersiz tedavi); reenfeksiyon: 6 ay içinde farklı bakteri/suş; ABU: 24 saat arayla 2 kültürde 100.000 KOB/ml aynı bakteri",
+      "B": "Relaps farklı bakteridir",
+      "C": "Reenfeksiyon aynı bakteridir",
+      "D": "ABU tek kültürle tanımlanır",
+      "E": "Süreler önemsizdir"
+     },
+     "dogru": "A",
+     "aciklama": "Relaps odak kaynaklı, reenfeksiyon ekzojendir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Relaps odak kaynaklı, reenfeksiyon ekzojendir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Relaps: 2 hafta içinde aynı bakteri (odak/yetersiz tedavi); reenfeksiyon: 6 ay içinde farklı bakteri/suş; ABU: 24 saat arayla 2 kültürde 100.000 KOB/ml aynı bakteri' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Relaps: 2 hafta içinde aynı bakteri (odak/yetersiz tedavi); reenfeksiyon: 6 ay içinde farklı bakteri/suş; ABU: 24 saat arayla 2 kültürde 100.000 KOB/ml aynı bakteri' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Relaps: 2 hafta içinde aynı bakteri (odak/yetersiz tedavi); reenfeksiyon: 6 ay içinde farklı bakteri/suş; ABU: 24 saat arayla 2 kültürde 100.000 KOB/ml aynı bakteri' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Relaps: 2 hafta içinde aynı bakteri (odak/yetersiz tedavi); reenfeksiyon: 6 ay içinde farklı bakteri/suş; ABU: 24 saat arayla 2 kültürde 100.000 KOB/ml aynı bakteri' seçeneğidir."
+     },
+     "bilgi": [
+      20,
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "ABU tanımı soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "24 saat arayla iki kültür gerekir",
+      "B": "Aynı bakteri 100.000 KOB/ml ürer",
+      "C": "ABU ateşli piyelonefrit demektir ve tek idrarda lökosit yeterlidir",
+      "D": "ABU semptom/bulgu olmadan tanımlanır",
+      "E": "Çoğunda tedavi gerekmez"
+     },
+     "dogru": "D",
+     "aciklama": "ABU asemptomatiktir ve iki kültür gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ABU semptom/bulgu olmadan tanımlanır' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ABU semptom/bulgu olmadan tanımlanır' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ABU semptom/bulgu olmadan tanımlanır' seçeneğidir.",
+      "D": "Doğru: ABU asemptomatiktir ve iki kültür gerektirir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'ABU semptom/bulgu olmadan tanımlanır' seçeneğidir."
+     },
+     "bilgi": [
+      20,
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Relaps ve reenfeksiyonun zaman ve etken farkı nedir?",
+     "secenekler": {
+      "A": "Relaps farklı bakteriyledir",
+      "B": "Reenfeksiyon 2 haftada aynı bakteriyledir",
+      "C": "İkisi arasında zaman farkı yoktur",
+      "D": "Odak varlığı ayrımı etkilemez",
+      "E": "Relaps 2 haftada aynı; reenfeksiyon 6 ayda farklıdır"
+     },
+     "dogru": "E",
+     "aciklama": "Relaps tedavi bitiminden 2 hafta içinde aynı bakteriyledir; yetersiz tedavi veya taş-kateter gibi odaktan kaynaklanır. Reenfeksiyon ilk 6 ayda farklı bakteri veya suşladır. Ayrım tedavi süresini değiştirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Relaps aynı bakteriyledir.",
+      "B": "Yanlış: Bu tanım relapsa aittir.",
+      "C": "Yanlış: Zaman ve etken farkı esastır.",
+      "D": "Yanlış: Odak relapsı düşündürür.",
+      "E": "Doğru: Zaman-etken eşleşmesi ayrımı koydurur."
+     },
+     "bilgi": [
+      20,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Asemptomatik bakteriürinin tanı ölçütü ve tedavi endikasyonu nedir?",
+     "secenekler": {
+      "A": "Tek kültürde 1000 KOB yeterlidir",
+      "B": "İki kültürde 10⁵ KOB; gebe-girişimde tedavi edilir",
+      "C": "Semptomatik hastalığı tanımlar",
+      "D": "Herkeste uzun tedavi gerekir",
+      "E": "Kültür eşiği aranmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Asemptomatik bakteriüri semptom olmadan 24 saat arayla iki kültürde aynı bakterinin 100.000 KOB/ml üremesidir. Yalnızca gebelerde ve invaziv girişim öncesi 3-7 gün tedavi edilir. Diğer gruplarda tedavi direnci artırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Eşik iki örnekte 10⁵ KOB'dur.",
+      "B": "Doğru: Tanım ve sınırlı tedavi endikasyonu tipiktir.",
+      "C": "Yanlış: Tanımı gereği asemptomatiktir.",
+      "D": "Yanlış: Gereksiz tedavi direnç doğurur.",
+      "E": "Yanlış: Kantitatif eşik tanı koydurur."
+     },
+     "bilgi": [
+      22,
+      39
+     ],
+     "benzer_cikmis": [
+      "0b26a85fe1d3"
+     ]
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k07-q08",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "\"Konak savunma mekanizmaları\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "İdrar akımı, idrarın ozmolaritesi, yüksek üre konsantrasyonu, düşük pH, Tamm-Horsfall proteinleri ve erkeklerde prostat salgısı savunmada rol oynar.",
+      "B": "Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "E": "Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "A": "Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur.",
+      "C": "Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: İdrar akımı, idrarın ozmolaritesi, yüksek üre konsantrasyonu, düşük pH, Tamm-Horsfall proteinleri ve erkeklerde prostat salgısı savunmada rol oynar.",
+     "sik_aciklamalari": {
+      "D": "Doğru. İdrar akımı, idrarın ozmolaritesi, yüksek üre konsantrasyonu, düşük pH, Tamm-Horsfall proteinleri ve erkeklerde prostat salgısı savunmada rol oynar.",
+      "B": "Yanlış. Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "E": "Yanlış. Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "A": "Yanlış. Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur.",
+      "C": "Yanlış. Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k07-q09",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"ÜSİ tanımı\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+      "B": "Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "C": "Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "D": "ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "E": "Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+      "B": "Yanlış. Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "C": "Yanlış. Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "D": "Yanlış. ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "E": "Yanlış. Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k07-q10",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Asemptomatik bakteriüri tanımı\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "D": "Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir.",
+      "C": "Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "B": "ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "A": "Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "D": "Yanlış. Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir.",
+      "C": "Yanlış. Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "B": "Yanlış. ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "A": "Yanlış. Geçirilmiş ÜSE'yi takiben ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşu ile ÜSE gelişmesidir; kadınlarda genetik faktörler, fistül ve üropatojen kolonizasyonu rol oynar."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k07-q11",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Komplike ÜSE\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "D": "Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "C": "İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır.",
+      "E": "Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır.",
+      "A": "ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "D": "Yanlış. Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "C": "Yanlış. İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır.",
+      "E": "Yanlış. Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır.",
+      "A": "Yanlış. ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur."
+     },
+     "bilgi": [
+      19
      ],
      "benzer_cikmis": []
     }
@@ -708,6 +2196,216 @@
       34
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Kültür için doğru örnekleme anlatılıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Torba örneği altın standarttır",
+      "B": "İdrar oda ısısında günlerce bekletilir",
+      "C": "Temiz orta akım (sabah ilk idrar) rutindir; suprapubik aspirasyon kontaminasyonsuz altın standarttır ancak rutinde kullanılmaz; idrar 1 saatte incelenmeli, bekleyecekse 4°C'de 24 saat saklanmalı",
+      "D": "Orta akım kontaminedir hep",
+      "E": "Aspirasyon rutindir"
+     },
+     "dogru": "C",
+     "aciklama": "Doğru örnekleme kontaminasyonu azaltır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Temiz orta akım (sabah ilk idrar) rutindir; suprapubik aspirasyon kontaminasyonsuz altın standarttır ancak rutinde kullanılmaz; idrar 1 saatte incelenmeli, bekleyecekse 4°C'de 24 saat saklanmalı' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Temiz orta akım (sabah ilk idrar) rutindir; suprapubik aspirasyon kontaminasyonsuz altın standarttır ancak rutinde kullanılmaz; idrar 1 saatte incelenmeli, bekleyecekse 4°C'de 24 saat saklanmalı' seçeneğidir.",
+      "C": "Doğru: Doğru örnekleme kontaminasyonu azaltır.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Temiz orta akım (sabah ilk idrar) rutindir; suprapubik aspirasyon kontaminasyonsuz altın standarttır ancak rutinde kullanılmaz; idrar 1 saatte incelenmeli, bekleyecekse 4°C'de 24 saat saklanmalı' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Temiz orta akım (sabah ilk idrar) rutindir; suprapubik aspirasyon kontaminasyonsuz altın standarttır ancak rutinde kullanılmaz; idrar 1 saatte incelenmeli, bekleyecekse 4°C'de 24 saat saklanmalı' seçeneğidir."
+     },
+     "bilgi": [
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Saklama koşulu soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "4°C'de en fazla 24 saat saklanır",
+      "B": "1 saat içinde tetkik edilmeli",
+      "C": "Gecikme hücre parçalanması yapar",
+      "D": "Oda ısısında 48 saat bekletme uygundur ve torba örneği en güvenilirdir",
+      "E": "Sabah ilk idrar uygundur"
+     },
+     "dogru": "B",
+     "aciklama": "Gecikme yanlış sonuç verir; torba örneği güvenilmezdir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '1 saat içinde tetkik edilmeli' seçeneğidir.",
+      "B": "Doğru: Gecikme yanlış sonuç verir; torba örneği güvenilmezdir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '1 saat içinde tetkik edilmeli' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '1 saat içinde tetkik edilmeli' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt '1 saat içinde tetkik edilmeli' seçeneğidir."
+     },
+     "bilgi": [
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "İdrar toplamada uygun yöntemler hangileridir?",
+     "secenekler": {
+      "A": "İlk damla idrar en uygunudur",
+      "B": "Torba örneği erişkinde standarttır",
+      "C": "Suprapubik aspirasyon kontaminedir",
+      "D": "Orta akım sabah; suprapubik altın standarttır",
+      "E": "Beklemiş gece idrarı tercih edilir"
+     },
+     "dogru": "D",
+     "aciklama": "Temiz orta akım idrarı en uygun sabah ilk idrardır; suprapubik aspirasyon kontaminasyonsuz altın standarttır ama rutinde kullanılmaz. Çocuklarda torba örneği alınır. Yöntem kontaminasyonu en aza indirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Üretral flora ilk damlayı kontamine eder.",
+      "B": "Yanlış: Torba çocuklarda kullanılır.",
+      "C": "Yanlış: Suprapubik kontaminasyonsuzdur.",
+      "D": "Doğru: Orta akım pratik, suprapubik kesindir.",
+      "E": "Yanlış: Taze sabah idrarı uygundur."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "İdrar örneğinin inceleme ve saklama zaman kuralı nedir?",
+     "secenekler": {
+      "A": "1 saatte incelenir; 4°C'de 24 saate saklanır",
+      "B": "Oda ısısında günlerce bekletilir",
+      "C": "Saklama koşulu sonucu etkilemez",
+      "D": "Dondurularak aylarca saklanır",
+      "E": "Güneşte bekletilerek yoğunlaştırılır"
+     },
+     "dogru": "A",
+     "aciklama": "İdrar 1 saat içinde incelenmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır. Oda ısısında bakteri üremesi yalancı yüksek sayıma yol açar. Soğuk zincir üremeyi durdurarak sayımı korur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Hızlı inceleme ve soğuk saklama yalancılığı önler.",
+      "B": "Yanlış: Oda ısısı üremeyi artırır.",
+      "C": "Yanlış: Saklama sayımı doğrudan etkiler.",
+      "D": "Yanlış: Dondurma hücreleri parçalar.",
+      "E": "Yanlış: Isı ve ışık örneği bozar."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k08-q08",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "\"Komplike ÜSE\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "C": "Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır.",
+      "D": "Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir.",
+      "E": "ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "A": "Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Erkeklerde aksi ispatlanmadıkça ÜSE komplike kabul edilir; semptomlar daha alevlidir ve yapısal/fonksiyonel komplike edici faktör eşlik eder.",
+      "C": "Yanlış. Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır.",
+      "D": "Yanlış. Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir.",
+      "E": "Yanlış. ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "A": "Yanlış. Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k08-q09",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Ampirik tedavi ilkesi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "D": "İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır.",
+      "A": "Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "C": "S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür.",
+      "B": "Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "D": "Yanlış. İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır.",
+      "A": "Yanlış. Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "C": "Yanlış. S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür.",
+      "B": "Yanlış. Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k08-q10",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Pyelonefrit ve komplike İYE tedavisi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "E": "Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "C": "Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "B": "Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır.",
+      "A": "Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "E": "Yanlış. Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "C": "Yanlış. Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "B": "Yanlış. Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır.",
+      "A": "Yanlış. Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k08-q11",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "\"Kontaminasyon ve kültür endikasyonları\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "C": "S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür.",
+      "B": "Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "E": "Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "D": "Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "C": "Yanlış. S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür.",
+      "B": "Yanlış. Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "E": "Yanlış. Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "D": "Yanlış. Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -802,6 +2500,228 @@
      "benzer_cikmis": [
       "904c0d075e76"
      ]
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Dipstikte nitrit ve lökosit esteraz pozitif hasta değerlendiriliyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Nitrit piyüriyi gösterir",
+      "B": "Esteraz bakteriüriyi gösterir",
+      "C": "Negatif sonuç dışlar hep",
+      "D": "4 saat gerekmez",
+      "E": "Lökosit esteraz piyüriyi, nitrit bakteriüriyi gösterir; ikisi pozitif İYE lehine güçlü, ikisi negatif İYE'den uzaklaştırır; nitrit için mesanede ≥4 saat gerekir"
+     },
+     "dogru": "E",
+     "aciklama": "Nitrit gram negatiflerin nitratı indirgemesidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Lökosit esteraz piyüriyi, nitrit bakteriüriyi gösterir; ikisi pozitif İYE lehine güçlü, ikisi negatif İYE'den uzaklaştırır; nitrit için mesanede ≥4 saat gerekir' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Lökosit esteraz piyüriyi, nitrit bakteriüriyi gösterir; ikisi pozitif İYE lehine güçlü, ikisi negatif İYE'den uzaklaştırır; nitrit için mesanede ≥4 saat gerekir' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Lökosit esteraz piyüriyi, nitrit bakteriüriyi gösterir; ikisi pozitif İYE lehine güçlü, ikisi negatif İYE'den uzaklaştırır; nitrit için mesanede ≥4 saat gerekir' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Lökosit esteraz piyüriyi, nitrit bakteriüriyi gösterir; ikisi pozitif İYE lehine güçlü, ikisi negatif İYE'den uzaklaştırır; nitrit için mesanede ≥4 saat gerekir' seçeneğidir.",
+      "E": "Doğru: Nitrit gram negatiflerin nitratı indirgemesidir."
+     },
+     "bilgi": [
+      26,
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Yanlış negatif nedenleri ve piyüri eşiği soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Lökosit silendirleri böbrek hasarını gösterir",
+      "B": "Gramda her alanda 1 bakteri ~10⁵ KOB/ml'ye karşılık gelir",
+      "C": "Piyüri eşiği 1000/mm³'tür ve silendirler mesane hasarını gösterir",
+      "D": "Dilüe idrar, vitamin C ve gram pozitifler yanlış negatif yapar",
+      "E": "Santrifüj edilmemiş idrarda >10/mm³ lökosit piyüridir"
+     },
+     "dogru": "E",
+     "aciklama": "Piyüri eşiği >10/mm³; silendir renal tutulumdur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Santrifüj edilmemiş idrarda >10/mm³ lökosit piyüridir' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Santrifüj edilmemiş idrarda >10/mm³ lökosit piyüridir' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Santrifüj edilmemiş idrarda >10/mm³ lökosit piyüridir' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Santrifüj edilmemiş idrarda >10/mm³ lökosit piyüridir' seçeneğidir.",
+      "E": "Doğru: Piyüri eşiği >10/mm³; silendir renal tutulumdur."
+     },
+     "bilgi": [
+      26,
+      27,
+      28,
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Nitrit testinin pozitiflik mekanizması ve kısıtları nelerdir?",
+     "secenekler": {
+      "A": "Nitrit lökosit varlığını gösterir",
+      "B": "Bekleme süresi sonucu etkilemez",
+      "C": "Enterik Gram negatif; 4 saat mesane kalışı gerekir",
+      "D": "Gram pozitifler nitriti hep pozitiftir",
+      "E": "C vitamini duyarlılığı artırır"
+     },
+     "dogru": "C",
+     "aciklama": "Gram negatif enterikler nitratı nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir. Çocukta sık boşalma duyarlılığı düşürür. Diyet nitratı, dilüsyon, C vitamini ve Gram pozitifler yalancı negatif yapar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Nitrit bakteriyel redüksiyonu gösterir.",
+      "B": "Yanlış: 4 saatten kısa kalış yalancı negatiftir.",
+      "C": "Doğru: Enzimatik redüksiyon zaman ve substrat ister.",
+      "D": "Yanlış: Gram pozitifler nitratı indirgeyemez.",
+      "E": "Yanlış: C vitamini yalancı negatif yapar."
+     },
+     "bilgi": [
+      26,
+      27
+     ],
+     "benzer_cikmis": [
+      "374f9bcd43fa"
+     ]
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Lökosit esteraz, piyüri ve silendir bulgularının yorumu nasıldır?",
+     "secenekler": {
+      "A": "Esteraz bakteriüriyi doğrudan gösterir",
+      "B": "Piyüri sayısal eşikle tanımlanmaz",
+      "C": "Silendirler alt sistem hastalığıdır",
+      "D": "Steril piyüri tanıda değersizdir",
+      "E": "Esteraz piyüriyi; silendir böbreği; steril tüberkülozdur"
+     },
+     "dogru": "E",
+     "aciklama": "Lökosit esteraz piyüriyi gösterir; klinikle duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir. Piyüri santrifüjsüzde >10/mm³ veya 40x'te 5-10/sahadır. Lökosit silendirleri böbrek hasarını, steril piyüri taş-tüberküloz-maligniteyi düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Esteraz lökosit enzimidir.",
+      "B": "Yanlış: Eşikler mikroskopiyle tanımlıdır.",
+      "C": "Yanlış: Silendir renal tübüler kaynaklıdır.",
+      "D": "Yanlış: Steril piyüri taş ve tüberkülozu düşündürür.",
+      "E": "Doğru: Üç bulgunun yorumu lokalizasyonu belirler."
+     },
+     "bilgi": [
+      28,
+      29,
+      30,
+      31
+     ],
+     "benzer_cikmis": [
+      "622489bc5505"
+     ]
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k09-q08",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Kontaminasyon ve kültür endikasyonları\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "D": "Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "C": "ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur.",
+      "E": "Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "A": "İdrar mümkünse 1 saat içinde tetkik edilmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır.",
+      "B": "Asemptomatik bakteriüri yalnızca gebelerde ve invaziv girişim yapılacak hastalarda 3-7 gün tedavi edilir; relapsta en az 4 hafta tedavi, reenfeksiyonda postkoital profilaksi veya uzun süreli düşük doz profilaksi uygulanır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "C": "Yanlış. ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur.",
+      "E": "Yanlış. Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "A": "Yanlış. İdrar mümkünse 1 saat içinde tetkik edilmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır.",
+      "B": "Yanlış. Asemptomatik bakteriüri yalnızca gebelerde ve invaziv girişim yapılacak hastalarda 3-7 gün tedavi edilir; relapsta en az 4 hafta tedavi, reenfeksiyonda postkoital profilaksi veya uzun süreli düşük doz profilaksi uygulanır."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k09-q09",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "\"İdrarda eritrosit\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+      "B": "Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur.",
+      "A": "Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "D": "Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "C": "İdrar mümkünse 1 saat içinde tetkik edilmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+      "B": "Yanlış. Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur.",
+      "A": "Yanlış. Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "D": "Yanlış. Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "C": "Yanlış. İdrar mümkünse 1 saat içinde tetkik edilmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k09-q10",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "\"İdrarda eritrosit\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+      "E": "Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "A": "Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+      "C": "Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar.",
+      "D": "Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Her sahada 2-3'ten fazla eritrosit patolojiktir; renal kökenli eritrositler dismorfiktir; akut sistit olgularının %20-25'i makroskobiktir; varlığı İYE için tanısal değildir.",
+      "E": "Yanlış. Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "A": "Yanlış. Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+      "C": "Yanlış. Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar.",
+      "D": "Yanlış. Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k09-q11",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "\"İdrar 1 saat kuralı\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "İdrar mümkünse 1 saat içinde tetkik edilmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır.",
+      "A": "Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+      "D": "ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "E": "Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "B": "Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: İdrar mümkünse 1 saat içinde tetkik edilmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. İdrar mümkünse 1 saat içinde tetkik edilmeli; bekleyecekse kültür örneği 4°C'de en fazla 24 saat saklanmalıdır.",
+      "A": "Yanlış. Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+      "D": "Yanlış. ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "E": "Yanlış. Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "B": "Yanlış. Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -914,6 +2834,217 @@
       36
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k10-q04",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Diyabetik gebede tekrarlayan ÜSE'de kültür endikasyonu tartışılıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kültür gerekmez",
+      "B": "Kültür altın standarttır; semptomatikte tek organizma 10⁵ cfu/ml (%95), asemptomatikte iki örnekte 10⁵ tanısaldır; diyabet, gebelik, pyelonefrit, çocuk, komplike/tekrarlayan ÜSE'de endikedir",
+      "C": "Eşik 10 cfu/ml'dir",
+      "D": "Kontaminasyon tanısaldır",
+      "E": "Kültür erken tedaviyi geciktirmelidir"
+     },
+     "dogru": "B",
+     "aciklama": "Kültür kesin tanı sağlar; ampirik tedavi beklenmeden başlanabilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kültür altın standarttır; semptomatikte tek organizma 10⁵ cfu/ml (%95), asemptomatikte iki örnekte 10⁵ tanısaldır; diyabet, gebelik, pyelonefrit, çocuk, komplike/tekrarlayan ÜSE'de endikedir' seçeneğidir.",
+      "B": "Doğru: Kültür kesin tanı sağlar; ampirik tedavi beklenmeden başlanabilir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kültür altın standarttır; semptomatikte tek organizma 10⁵ cfu/ml (%95), asemptomatikte iki örnekte 10⁵ tanısaldır; diyabet, gebelik, pyelonefrit, çocuk, komplike/tekrarlayan ÜSE'de endikedir' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kültür altın standarttır; semptomatikte tek organizma 10⁵ cfu/ml (%95), asemptomatikte iki örnekte 10⁵ tanısaldır; diyabet, gebelik, pyelonefrit, çocuk, komplike/tekrarlayan ÜSE'de endikedir' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kültür altın standarttır; semptomatikte tek organizma 10⁵ cfu/ml (%95), asemptomatikte iki örnekte 10⁵ tanısaldır; diyabet, gebelik, pyelonefrit, çocuk, komplike/tekrarlayan ÜSE'de endikedir' seçeneğidir."
+     },
+     "bilgi": [
+      33,
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k10-q05",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Kontaminasyon göstergeleri soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Skuamöz epitel kontaminasyondur",
+      "B": "Laktobasil kontaminasyondur",
+      "C": "Çoklu morfoloji kontaminasyondur",
+      "D": "Skuamöz epitel ve çoklu üreme tanısaldır; kültür yalnızca asemptomatikte endikedir",
+      "E": "Suprapubikte gram negatif üreme anlamlıdır"
+     },
+     "dogru": "C",
+     "aciklama": "Kontaminasyon bulguları tanısal değildir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Çoklu morfoloji kontaminasyondur' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Çoklu morfoloji kontaminasyondur' seçeneğidir.",
+      "C": "Doğru: Kontaminasyon bulguları tanısal değildir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Çoklu morfoloji kontaminasyondur' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Çoklu morfoloji kontaminasyondur' seçeneğidir."
+     },
+     "bilgi": [
+      33,
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k10-q06",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "İdrar kültüründe tanısal üreme eşikleri nelerdir?",
+     "secenekler": {
+      "A": "Her üreme düzeyi tanısaldır",
+      "B": "Semptomatikte 10⁵; suprapubikte her üreme tanısaldır",
+      "C": "Kültür tanıda hiç kullanılmaz",
+      "D": "Polimikrobiyal üreme hep tanısaldır",
+      "E": "Eşik aranmadan tedavi başlanır"
+     },
+     "dogru": "B",
+     "aciklama": "Kültür altın standarttır; suprapubikte herhangi Gram negatif basil tanısaldır. Semptomatikte tek organizmayla 10⁵ cfu/ml (%95), asemptomatikte iki örnekte 10⁵ anlamlıdır. Santrifüjsüz Gram'da her alanda bakteri 10⁵ KOB'a karşılık gelir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Kantitatif eşikler kontaminasyonu eler.",
+      "B": "Doğru: Eşikler örnek yöntemine göre değişir.",
+      "C": "Yanlış: Kültür altın standarttır.",
+      "D": "Yanlış: Polimikrobiyal üreme kontaminasyondur.",
+      "E": "Yanlış: Eşik tanısal kesinlik sağlar."
+     },
+     "bilgi": [
+      33,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Kültürde kontaminasyon ölçütleri ve endikasyon grupları nelerdir?",
+     "secenekler": {
+      "A": "Skuamöz epitel üst sistem kaynağıdır",
+      "B": "Laktobasil patojen üremedir",
+      "C": "Kültür hiçbir grupta gerekmez",
+      "D": "Polimikrobiyal-skuamöz kontaminasyon; risklide kültür gerekir",
+      "E": "Komplike olmayanda kültür zorunludur"
+     },
+     "dogru": "D",
+     "aciklama": "Çok morfolojili bakteri, skuamöz epitel ve laktobasil kontaminasyonu gösterir. Kültür diyabet, gebelik, piyelonefrit, çocuk, komplike ve tekrarlayan ÜSİ'de endikedir. Komplike olmayan sistitte ampirik tedavi yeterlidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Skuamöz epitel perineal kontaminasyondur.",
+      "B": "Yanlış: Laktobasil vajinal kontaminasyondur.",
+      "C": "Yanlış: Risk gruplarında kültür endikedir.",
+      "D": "Doğru: Kontaminasyon ve endikasyon ayrımı kaynak israfını önler.",
+      "E": "Yanlış: Komplike olmayanda ampirik tedavi yeterlidir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k10-q08",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Ampirik tedavi ilkesi\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "D": "Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "E": "Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "A": "Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır.",
+      "B": "Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "C": "Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "E": "Yanlış. Fiziksel (görünüm, volüm, dansite), kimyasal (pH, protein, glukoz, keton, gizli kan, bilirubin, ürobilinojen, nitrit) ve mikroskopik (lökosit, eritrosit, silendir, kristaller) incelemeleri içerir.",
+      "A": "Yanlış. Temiz orta akım idrarı (en uygun sabah ilk idrar), suprapubik aspirasyon (altın standart, kontaminasyonsuz, rutinde kullanılmaz) ve çocuklarda torba örneği kullanılır.",
+      "B": "Yanlış. Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "C": "Yanlış. Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k10-q09",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "\"Kontaminasyon ve kültür endikasyonları\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "D": "ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "B": "Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar.",
+      "C": "Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir.",
+      "A": "Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "D": "Yanlış. ÜSE semptom/bulgu olmadan, 24 saat ara ile alınan iki idrar kültüründe aynı bakterinin 100.000 KOB/ml üretilmesidir.",
+      "B": "Yanlış. Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar.",
+      "C": "Yanlış. Vücudun herhangi bir yerinde primer enfeksiyon oluşturan Staf aureus, Candida suşları, Salmonella ve M. tuberculosis hematojen yolun tipik örneğidir.",
+      "A": "Yanlış. Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k10-q10",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "\"Ampirik tedavi ilkesi\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "C": "Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir.",
+      "E": "Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "B": "Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "D": "İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "C": "Yanlış. Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir.",
+      "E": "Yanlış. Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "B": "Yanlış. Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "D": "Yanlış. İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k10-q11",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "\"Komplike olmayan pyelonefrit\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği.",
+      "E": "İdrar akımı, idrarın ozmolaritesi, yüksek üre konsantrasyonu, düşük pH, Tamm-Horsfall proteinleri ve erkeklerde prostat salgısı savunmada rol oynar.",
+      "B": "Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "A": "Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+      "D": "İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği.",
+      "E": "Yanlış. İdrar akımı, idrarın ozmolaritesi, yüksek üre konsantrasyonu, düşük pH, Tamm-Horsfall proteinleri ve erkeklerde prostat salgısı savunmada rol oynar.",
+      "B": "Yanlış. Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır.",
+      "A": "Yanlış. Üriner sistemin bir veya daha fazla yapısının bakteriyel enfeksiyonudur; idrarda bakterinin enflamatuar reaksiyonla birlikte bulunmasıdır.",
+      "D": "Yanlış. İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1000,6 +3131,215 @@
      "bilgi": [
       35,
       38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k11-q04",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Ateşi 4. günde süren pyelonefritlide görüntüleme isteniyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Her ÜSE'de BT şarttır",
+      "B": "Görüntüleme taşı göstermez",
+      "C": "Abse drenaj gerektirmez",
+      "D": "Çoğunda görüntüleme gerekmez; sepsis, abse, amfizematöz enfeksiyon, taş, rekürren/şiddetli olgularda USG/BT kalkül, obstrüksiyon, abse ve anomaliyi gösterir",
+      "E": "Ateş sürmesi önemsizdir"
+     },
+     "dogru": "D",
+     "aciklama": "3-4. gün süren ateş komplikasyon düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Çoğunda görüntüleme gerekmez; sepsis, abse, amfizematöz enfeksiyon, taş, rekürren/şiddetli olgularda USG/BT kalkül, obstrüksiyon, abse ve anomaliyi gösterir' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Çoğunda görüntüleme gerekmez; sepsis, abse, amfizematöz enfeksiyon, taş, rekürren/şiddetli olgularda USG/BT kalkül, obstrüksiyon, abse ve anomaliyi gösterir' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Çoğunda görüntüleme gerekmez; sepsis, abse, amfizematöz enfeksiyon, taş, rekürren/şiddetli olgularda USG/BT kalkül, obstrüksiyon, abse ve anomaliyi gösterir' seçeneğidir.",
+      "D": "Doğru: 3-4. gün süren ateş komplikasyon düşündürür.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Çoğunda görüntüleme gerekmez; sepsis, abse, amfizematöz enfeksiyon, taş, rekürren/şiddetli olgularda USG/BT kalkül, obstrüksiyon, abse ve anomaliyi gösterir' seçeneğidir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k11-q05",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Hangi durumlarda istendiği soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Renal/perirenal abse drenaj gerektirir",
+      "B": "Nefrolitiazis ve obstrüksiyonda istenir",
+      "C": "Şiddetli/rekürren olguda istenir",
+      "D": "Basit sistitte rutin BT gerekir ve abse antibiyotikle asla düzelmez",
+      "E": "USG/BT yapısal nedeni gösterir"
+     },
+     "dogru": "A",
+     "aciklama": "Basit olgularda görüntüleme gerekmez.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Basit olgularda görüntüleme gerekmez.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Renal/perirenal abse drenaj gerektirir' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Renal/perirenal abse drenaj gerektirir' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Renal/perirenal abse drenaj gerektirir' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Renal/perirenal abse drenaj gerektirir' seçeneğidir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k11-q06",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "ÜSİ'de görüntüleme ne zaman endikedir?",
+     "secenekler": {
+      "A": "Çoğunda gerekmez; sepsis-abse-taş-rekürenste istenir",
+      "B": "Her sistitte BT zorunludur",
+      "C": "Görüntüleme etkeni doğrudan üretir",
+      "D": "Taş görüntülemede hiç görülmez",
+      "E": "Abse tanısı yalnızca muayeneyle konur"
+     },
+     "dogru": "A",
+     "aciklama": "ÜSİ'lerin çoğunda görüntüleme gerekmez; sepsis, cerrahi gerektiren enfeksiyon, renal abse, amfizematöz enfeksiyon, taş, rekürren ve şiddetli olgularda istenir. Görüntüleme obstrüksiyon ve komplikasyonu ortaya koyar. Rutin kullanım radyasyon ve maliyet artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: Endikasyon komplikasyon ve nüksle sınırlıdır.",
+      "B": "Yanlış: Basit sistitte görüntüleme gerekmez.",
+      "C": "Yanlış: Görüntüleme anatomiyi gösterir, kültür üretmez.",
+      "D": "Yanlış: Taş görüntülemenin başlıca hedefidir.",
+      "E": "Yanlış: Abse görüntülemeyle doğrulanır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k11-q07",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Sistit ile piyelonefritin klinik-laboratuvar ayrımı nasıldır?",
+     "secenekler": {
+      "A": "Sistitte yüksek ateş tipiktir",
+      "B": "Piyelonefritte ateş hiç görülmez",
+      "C": "Sistit afebril lokal; piyelonefrit febril sistemiktir",
+      "D": "CRP alt-üst ayrımında değersizdir",
+      "E": "Böğür ağrısı sistiti tanımlar"
+     },
+     "dogru": "C",
+     "aciklama": "Komplike olmayan sistitte ateş saptanmaz, suprapubik hassasiyet olur; yaşlıda asemptomatik seyredebilir. Piyelonefritte ateş, böğür ağrısı, bulantı-kusma, kostavertebral hassasiyet, lökositoz ve CRP yüksekliği vardır. Sistemik bulgu üst sistemi gösterir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Komplike olmayan sistit afebrildir.",
+      "B": "Yanlış: Ateş piyelonefritin ana bulgusudur.",
+      "C": "Doğru: Sistemik yanıt üst sistem tutulumunu gösterir.",
+      "D": "Yanlış: CRP-sedim lökositoz üst sistemi destekler.",
+      "E": "Yanlış: Böğür ağrısı renal tutulumdur."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k11-q08",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "\"İdrar mikroskopisi: piyüri\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "B": "Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur.",
+      "E": "Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "C": "ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur.",
+      "A": "Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "B": "Yanlış. Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur.",
+      "E": "Yanlış. Sık idrara çıkma, ağrılı/bulanık/kanlı idrar ve suprapubik dolgunluk; fizik muayenede suprapubik hassasiyet olur ancak ateş saptanmaz; yaşlılarda asemptomatik seyredebilir.",
+      "C": "Yanlış. ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur.",
+      "A": "Yanlış. Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k11-q09",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "\"Steril piyüri\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "B": "İdrar akımı, idrarın ozmolaritesi, yüksek üre konsantrasyonu, düşük pH, Tamm-Horsfall proteinleri ve erkeklerde prostat salgısı savunmada rol oynar.",
+      "A": "Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması.",
+      "D": "Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "C": "Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "B": "Yanlış. İdrar akımı, idrarın ozmolaritesi, yüksek üre konsantrasyonu, düşük pH, Tamm-Horsfall proteinleri ve erkeklerde prostat salgısı savunmada rol oynar.",
+      "A": "Yanlış. Üroepitelyal hücrelere artmış adherens, kapsülle fagositozdan korunma, hemolizin/aerobaktin ile doku invazyonu, sitotoksik nekrotizan faktör tip 1, bakterisidal etkiye direnç ve endotoksinle peristaltizm azalması.",
+      "D": "Yanlış. Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "C": "Yanlış. Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k11-q10",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "\"Görüntüleme\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "ÜSE'lerin çoğunda görüntüleme gerekmez; sepsis, cerrahi gerektiren enfeksiyonlar, renal abse, amfizematöz enfeksiyonlar, nefrolitiyazis, rekürren enfeksiyonlar ve şiddetli olgularda istenir.",
+      "C": "Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği.",
+      "D": "Asemptomatik bakteriüri yalnızca gebelerde ve invaziv girişim yapılacak hastalarda 3-7 gün tedavi edilir; relapsta en az 4 hafta tedavi, reenfeksiyonda postkoital profilaksi veya uzun süreli düşük doz profilaksi uygulanır.",
+      "E": "ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "A": "TMP-SMX gebelerde/varfarin kullananlarda kontrendike; nitrofurantoin komplike ve üst sistem İYE'de kullanılmaz, G6PD eksikliğinde hemoliz; sefalosporinler gebelikte güvenli; florokinolonlar çocuk/gebelede kontrendike; aminoglikozidler nefrotoksik-ototoksik; fosfomisin gebelik kategorisi B."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: ÜSE'lerin çoğunda görüntüleme gerekmez; sepsis, cerrahi gerektiren enfeksiyonlar, renal abse, amfizematöz enfeksiyonlar, nefrolitiyazis, rekürren enfeksiyonlar ve şiddetli olgularda istenir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. ÜSE'lerin çoğunda görüntüleme gerekmez; sepsis, cerrahi gerektiren enfeksiyonlar, renal abse, amfizematöz enfeksiyonlar, nefrolitiyazis, rekürren enfeksiyonlar ve şiddetli olgularda istenir.",
+      "C": "Yanlış. Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği.",
+      "D": "Yanlış. Asemptomatik bakteriüri yalnızca gebelerde ve invaziv girişim yapılacak hastalarda 3-7 gün tedavi edilir; relapsta en az 4 hafta tedavi, reenfeksiyonda postkoital profilaksi veya uzun süreli düşük doz profilaksi uygulanır.",
+      "E": "Yanlış. ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar.",
+      "A": "Yanlış. TMP-SMX gebelerde/varfarin kullananlarda kontrendike; nitrofurantoin komplike ve üst sistem İYE'de kullanılmaz, G6PD eksikliğinde hemoliz; sefalosporinler gebelikte güvenli; florokinolonlar çocuk/gebelede kontrendike; aminoglikozidler nefrotoksik-ototoksik; fosfomisin gebelik kategorisi B."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k11-q11",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "\"Kadınlarda ek risk faktörleri\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "C": "ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "E": "50 yaş altında sünnet olmama, homoseksüel ilişki, AIDS ve vajinal E. coli kolonizasyonu; 50 yaş üzerinde prostat hipertrofisi, prostat sekresyonunun azalması ve prezervatif sonda.",
+      "B": "Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur.",
+      "D": "ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "C": "Yanlış. ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "E": "Yanlış. 50 yaş altında sünnet olmama, homoseksüel ilişki, AIDS ve vajinal E. coli kolonizasyonu; 50 yaş üzerinde prostat hipertrofisi, prostat sekresyonunun azalması ve prezervatif sonda.",
+      "B": "Yanlış. Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur.",
+      "D": "Yanlış. ABD'de yıllık >7 milyon ÜSE; %21'i acil başvurusu; akut pyelonefrit nedeniyle >100.000 yatış; maliyet >1 milyar dolar."
+     },
+     "bilgi": [
+      7
      ],
      "benzer_cikmis": []
     }
@@ -1103,12 +3443,278 @@
       40
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k12-q04",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Komplike olmayan sistitli kadında kısa süreli tedavi başlanıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kültür beklenmeden ampirik başlanır; toplumda >%20 dirençli ajandan kaçınılır; komplike olmayan sistitte TMP-SMZ 3 gün/fosfomisin tek doz; pyelonefritte kinolonla 7, diğerleriyle 14 gün; komplike İYE ≥2 hafta",
+      "B": "Kültür sonucu beklenir",
+      "C": "Direnç önemsizdir",
+      "D": "Sistitte 1 ay tedavi gerekir",
+      "E": "Pyelonefritte 1 gün yeterlidir"
+     },
+     "dogru": "A",
+     "aciklama": "ABU yalnızca gebe ve invaziv girişimde tedavi edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ABU yalnızca gebe ve invaziv girişimde tedavi edilir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kültür beklenmeden ampirik başlanır; toplumda >%20 dirençli ajandan kaçınılır; komplike olmayan sistitte TMP-SMZ 3 gün/fosfomisin tek doz; pyelonefritte kinolonla 7, diğerleriyle 14 gün; komplike İYE ≥2 hafta' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kültür beklenmeden ampirik başlanır; toplumda >%20 dirençli ajandan kaçınılır; komplike olmayan sistitte TMP-SMZ 3 gün/fosfomisin tek doz; pyelonefritte kinolonla 7, diğerleriyle 14 gün; komplike İYE ≥2 hafta' seçeneğidir.",
+      "D": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kültür beklenmeden ampirik başlanır; toplumda >%20 dirençli ajandan kaçınılır; komplike olmayan sistitte TMP-SMZ 3 gün/fosfomisin tek doz; pyelonefritte kinolonla 7, diğerleriyle 14 gün; komplike İYE ≥2 hafta' seçeneğidir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Kültür beklenmeden ampirik başlanır; toplumda >%20 dirençli ajandan kaçınılır; komplike olmayan sistitte TMP-SMZ 3 gün/fosfomisin tek doz; pyelonefritte kinolonla 7, diğerleriyle 14 gün; komplike İYE ≥2 hafta' seçeneğidir."
+     },
+     "bilgi": [
+      36,
+      37,
+      38,
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k12-q05",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Ajan özellikleri (nitrofurantoin, TMP-SMX, florokinolon) soruluyor. Aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "TMP-SMX gebe/varfarinlide kullanılmaz",
+      "B": "Florokinolon çocuk/gebede kontrendikedir",
+      "C": "Nitrofurantoin üst sistemde ilk tercihtir ve florokinolon gebede güvenlidir",
+      "D": "Nitrofurantoin komplike/üst sistemde kullanılmaz; G6PD'de hemoliz yapar",
+      "E": "Amfizematöz pyelonefritte nefrektomi yapılır"
+     },
+     "dogru": "D",
+     "aciklama": "Nitrofurantoin alt sisteme sınırlıdır; florokinolon gebede kontrendikedir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nitrofurantoin komplike/üst sistemde kullanılmaz; G6PD'de hemoliz yapar' seçeneğidir.",
+      "B": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nitrofurantoin komplike/üst sistemde kullanılmaz; G6PD'de hemoliz yapar' seçeneğidir.",
+      "C": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nitrofurantoin komplike/üst sistemde kullanılmaz; G6PD'de hemoliz yapar' seçeneğidir.",
+      "D": "Doğru: Nitrofurantoin alt sisteme sınırlıdır; florokinolon gebede kontrendikedir.",
+      "E": "Yanlış: bu seçenek vakadaki tabloyla uyumlu değildir; doğru yanıt 'Nitrofurantoin komplike/üst sistemde kullanılmaz; G6PD'de hemoliz yapar' seçeneğidir."
+     },
+     "bilgi": [
+      36,
+      37,
+      38,
+      39,
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k12-q06",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Ampirik tedavi ilkesi ve sistit rejim süreleri nelerdir?",
+     "secenekler": {
+      "A": "Kültür sonucu haftalarca beklenir",
+      "B": "Dirençli antibiyotik ısrarla kullanılır",
+      "C": "Sistit tedavisi hep 14 gündür",
+      "D": "Ampirik tedavi hiç başlanmaz",
+      "E": "%20 direnç eşiği; sistitte kısa rejim yeterlidir"
+     },
+     "dogru": "E",
+     "aciklama": "Kültür beklenmeden ampirik başlanır; toplumda %20 üzeri dirençli antibiyotikten kaçınılır. Komplike olmayan sistitte TMP-SMZ 3 gün, fosfomisin tek doz veya pivmesillinam 5 gün verilir. Direnç eşiği ampirik başarıyı korur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Ampirik tedavi hemen başlanır.",
+      "B": "Yanlış: %20 üzeri dirençte ajan değiştirilir.",
+      "C": "Yanlış: Komplike olmayan sistit 1-5 gündür.",
+      "D": "Yanlış: Ampirik başlama standarttır.",
+      "E": "Doğru: Kısa rejim direnç ve yan etkiyi azaltır."
+     },
+     "bilgi": [
+      36,
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k12-q07",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Piyelonefrit ve komplike ÜSİ tedavi süreleri ve kısıtlar nelerdir?",
+     "secenekler": {
+      "A": "Piyelonefrit tek dozla tedavi edilir",
+      "B": "Piyelonefrit 7-14 gün; komplike en az 2 haftadır",
+      "C": "Süren ateş görüntüleme gerektirmez",
+      "D": "Nitrofurantoin piyelonefritte ilk seçenektir",
+      "E": "Gebede TMP-SMX güvenle kullanılır"
+     },
+     "dogru": "B",
+     "aciklama": "Piyelonefritte kinolonla 7, diğerleriyle 14 gün; 3-4. gün süren ateşte görüntüleme, sepsisde yatış ve parenteral tedavi gerekir. Komplike ÜSİ'de süre en az 2 (4-6) haftadır. Nitrofurantoin üst sistemde kullanılmaz; TMP-SMX gebede, florokinolon çocuk-gebede kontrendikedir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış: Üst sistem uzun tedavi gerektirir.",
+      "B": "Doğru: Doku penetrasyonu ve yük süreleri belirler.",
+      "C": "Yanlış: Persistan ateş obstrüksiyon-absedendir.",
+      "D": "Yanlış: Nitrofurantoin renal parankime geçmez.",
+      "E": "Yanlış: TMP-SMX gebede kontrendikedir."
+     },
+     "bilgi": [
+      38,
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k12-q08",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "\"Kadınlarda yineleyen ÜSE\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir.",
+      "B": "ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur.",
+      "E": "Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "A": "Lenfojen yol rektal/kolonik ve periuterin lenfatikler üzerinden tartışmalıdır; direkt yayılma intraperitoneal apseler, inflamatuar barsak hastalıkları ve vezikovaginal-vezikointestinal fistüllerle olur.",
+      "D": "S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir.",
+      "B": "Yanlış. ÜSE'larının %95'inde tek bakteri bulunur; en sık üropatojen E. coli'dir (%70-90); diğerleri Klebsiella, Proteus ve Enterococcus'tur.",
+      "E": "Yanlış. Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü.",
+      "A": "Yanlış. Lenfojen yol rektal/kolonik ve periuterin lenfatikler üzerinden tartışmalıdır; direkt yayılma intraperitoneal apseler, inflamatuar barsak hastalıkları ve vezikovaginal-vezikointestinal fistüllerle olur.",
+      "D": "Yanlış. S. saprophyticus genç cinsel aktif kadınlarda; Adenovirus tip 11 çocuklarda hemorajik sistit; Corynebacterium urealyticum ve S. epidermidis immünsupresif/yatan hastalarda; Candida üriner kateteri olan ve antibiyotik alan hastalarda görülür."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k12-q09",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "\"Kontaminasyon ve kültür endikasyonları\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "B": "Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği.",
+      "C": "Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "E": "Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "D": "Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "B": "Yanlış. Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği.",
+      "C": "Yanlış. Komplike olmayan pyelonefritte süre kinolonla 7 gün, diğerlerinde 14 gün; 3-4. gün ateş sürerse görüntüleme; şiddetli/sepsis bulgularında yatış ve parenteral tedavi. Komplike İYE'de süre en az 2 hafta (4-6 hafta), çoklu dirençte kolistin/tigesiklin/fosfomisin.",
+      "E": "Yanlış. Sistemik faktörler DM, immünsupresyon ve malnütrisyondur; lokal faktörler organik/fonksiyonel obstrüksiyon, üriner staz, VUR, yabancı cisim, tümör/nekrotik doku ve travmadır.",
+      "D": "Yanlış. Premenopozal dönemde genetik yatkınlık, geçirilmiş ÜSE, sık cinsel ilişki, yeni eş, koit sonrası miksiyon yapılmaması, spermisid/diyafram, hamilelik, düşük sosyoekonomik durum ve DM; postmenopozal dönemde östrojen eksikliği (vajinal laktobasil kaybı), sistosel, rektosel ve mesane divertikülü."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k12-q10",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "\"İdrar mikroskopisi: piyüri\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "B": "Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur.",
+      "C": "Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "A": "Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "E": "Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "B": "Yanlış. Tedavi bitimini takiben iki hafta içinde aynı bakteri ile ÜSE gelişmesidir; yetersiz tedavi ya da enfekte taş, kateter gibi bir odak nedeniyle olur.",
+      "C": "Yanlış. Piyüri pozitif, bakteri negatif durumudur; antibakteriyel tedavi, kateterizasyon, taş, mesane malinitesi, genital kökenli enfeksiyonlar, zor üreyen etkenler ve tüberküloz neden olabilir.",
+      "A": "Yanlış. Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "E": "Yanlış. Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k12-q11",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "\"İdrar kültürü ve tanısal eşikler\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır.",
+      "C": "Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar.",
+      "B": "Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır.",
+      "D": "Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "E": "Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. İdrar kültürü altın standarttır; suprapubik aspirasyonda herhangi bir gram negatif basil, semptomatik hastada tek organizma ile 10⁵ cfu/ml (%95), asemptomatik hastada iki örnekte 10⁵ cfu/ml tanısaldır.",
+      "C": "Yanlış. Diyetle yetersiz nitrat alımı, hızlı idrar örneği alınması, dilüe idrar, yüksek doz vitamin C ve nitratı indirgeyemeyen gram pozitif bakteriler yanlış negatifliğe yol açar.",
+      "B": "Yanlış. Enterobacteriaceae ile oluşan asendan yol, ÜSE'lerin %99'unu oluşturur ve en sık/en önemli yoldur; kadınlarda üretranın kısa olması, vajinal/periüretral kolonizasyon ve prostatik sekresyonların olmaması yatkınlık yaratır.",
+      "D": "Yanlış. Kültür şartı aranmadan tedavi ampirik başlanır ve toplumda %20'nin üzerinde direnç varsa o antibiyotikten kaçınılır.",
+      "E": "Yanlış. Üretral kateterizasyon, üriner obstrüksiyon (taş, tümör), ürolojik enstrüman, ürolojik girişim, nörolojik mesane, veziküloüreteral reflü ve böbrek nakli riski artırır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k12-q12",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "\"Kadınlarda yineleyen ÜSE\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir.",
+      "A": "Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir.",
+      "C": "Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "E": "ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "B": "Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Kadınların %50'si yaşamı boyunca en az bir kez ÜSE geçirir; yineleyen ÜSE kadınların %10-20'sini etkiler ve ilk ÜSİ'yi takiben 6 ay içinde 1/4'ünde ikinci, %3'ünde üçüncü ÜSE gelişir.",
+      "A": "Yanlış. Piyüri varlığına işaret eder; klinik bulgularla duyarlılığı %94'e çıkar, asemptomatik bakteriüride negatiftir.",
+      "C": "Yanlış. Santrifüj edilmemiş idrarda mm³'de >10 lökosit, lam-lamel arasında her sahada 1-2 lökosit veya santrifüj edilmiş idrarın 40x büyütmede her sahasında 5-10 lökosit piyüridir.",
+      "E": "Yanlış. ÜSE yenidoğan ve yaşlılık dışında esas olarak kadınları etkiler; erkeklerde üretranın uzun olması ve prostat sıvısının bakterisidal özelliği nedeniyle 1-50 yaş sıklığı %1'in altındadır.",
+      "B": "Yanlış. Ateş, bel/böğür ağrısı, bulantı-kusma ile sistit bulguları; fizik muayenede ateş ve kostavertebral açı hassasiyeti; lökositoz, sedimantasyon ve CRP yüksekliği."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari-k12-q13",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "\"Lökosit silendirleri ve bakteriüri\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir.",
+      "A": "TMP-SMX gebelerde/varfarin kullananlarda kontrendike; nitrofurantoin komplike ve üst sistem İYE'de kullanılmaz, G6PD eksikliğinde hemoliz; sefalosporinler gebelikte güvenli; florokinolonlar çocuk/gebelede kontrendike; aminoglikozidler nefrotoksik-ototoksik; fosfomisin gebelik kategorisi B.",
+      "B": "Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "E": "Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "C": "İdrar akımı, idrarın ozmolaritesi, yüksek üre konsantrasyonu, düşük pH, Tamm-Horsfall proteinleri ve erkeklerde prostat salgısı savunmada rol oynar."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Lökosit silendirleri böbrek hasarını gösterir; santrifüj edilmemiş idrarın gram boyasında her alanda bir bakteri görülmesi kültürde 10⁵ KOB/ml üremeyi gösterir.",
+      "A": "Yanlış. TMP-SMX gebelerde/varfarin kullananlarda kontrendike; nitrofurantoin komplike ve üst sistem İYE'de kullanılmaz, G6PD eksikliğinde hemoliz; sefalosporinler gebelikte güvenli; florokinolonlar çocuk/gebelede kontrendike; aminoglikozidler nefrotoksik-ototoksik; fosfomisin gebelik kategorisi B.",
+      "B": "Yanlış. Gram negatif enterik bakteriler nitratları nitrite çevirir; bunun için bakterinin mesanede en az 4 saat kalması gerekir; çocuklarda mesane sık boşaldığından duyarlılık yoktur.",
+      "E": "Yanlış. Birden fazla farklı morfolojide bakteri, skuamöz epitel hücreleri ve laktobasil kontaminasyonu gösterir; kültür diyabet, hamilelik, pyelonefrit, çocuklar, komplike ve tekrarlayan ÜSİ'de endikedir.",
+      "C": "Yanlış. İdrar akımı, idrarın ozmolaritesi, yüksek üre konsantrasyonu, düşük pH, Tamm-Horsfall proteinleri ve erkeklerde prostat salgısı savunmada rol oynar."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 36,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:55"
+ ]
 }

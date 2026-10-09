@@ -60,7 +60,11 @@ self.addEventListener('notificationclick', (event) => {
 
   const notificationData = event.notification.data || {};
   let targetUrl = 'https://nofrostlife.com.tr/cikmis';
-  if (notificationData.questionId) {
+  // Sunucu bağlantıyı hazırladıysa (ör. Öğren hata bildirimi → /ogren/<deste>?adim=&hedef=) doğrudan oraya git
+  const hasDeepLink = notificationData.url && /\/(ogren|cikmis)\b/.test(notificationData.url);
+  if (hasDeepLink) {
+    targetUrl = notificationData.url;
+  } else if (notificationData.questionId) {
     targetUrl = `https://nofrostlife.com.tr/cikmis/${encodeURIComponent(notificationData.questionId)}`;
   } else if (notificationData.url) {
     targetUrl = notificationData.url;

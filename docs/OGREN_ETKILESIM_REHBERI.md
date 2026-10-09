@@ -105,10 +105,16 @@ Kurallar:
 
 Ana içerikte yalnız ders anlatılır; kaynak, terim listesi, kazanım ve sayılar bilgi bölmesine aittir. Anlatıma "PDF'te aç", "Panelde oku", "Kapsamlı ders notu" gibi başlığa ait olmayan satırlar **yazılmaz**.
 
----
+## 4. Metin Biçimi, Sayfa Düzeni ve Tekrarı Önleme Kuralları
 
-## 4. Metin biçimi (synthesisNarrative ve tüm metin alanları)
-
+- **Bitişik Blok Metin Yasağı & Madde İmleri:** Asla 80-130 kelimelik tek bir bitişik blok paragraf yazılmamalıdır. İçerik gözü dinlendiren, nefes alan bir sayfa mimarisine sahip olmalıdır:
+  * **1-2 Cümlelik Giriş:** Konunun ana eksenini belirten net başlangıç.
+  * **Maddeler Halinde Aşamalar:** Biyokimyasal veya fizyopatolojik aşamalar `- **Aşama / Kavram:** Açıklama` biçiminde maddeli yazılmalıdır.
+  * **Paragraf Boşlukları:** Bloklar arasında çift satır kırılımı (`\n\n`) olmalı, metin parçalı ve tane tane okunmalıdır.
+  * **Vurgu Kutusu:** Önemli sınav spotu veya klinik kural `> [!NOTE]` veya `> [!IMPORTANT]` içinde ayrı bir kutu olarak verilmelidir.
+- **Adımlar Arası Tekrarı Önleme (Sıfır Tekrar):** Her slayt zincirde yeni ve özgün bir bilgi sunmalıdır. Önceki veya sonraki adımlarda anlatılan genel tanımlar (örneğin "Anöploidi nedir...", "En sık anne yaşından kaynaklanır...") her slaytın başında kopyala-yapıştır yapılarak tekrarlanamaz. Her slayt sadece kendi spesifik alt başlığına odaklanmalıdır.
+- **Asgari Kelime Yoğunluğu (Orta Yoğunluk):** Her slaytın anlatım metni (`synthesisNarrative` veya `content`) **EN AZ 60 KELİME** (ideal orta yoğunluk: **70 - 150 kelime**) içermelidir. Sayfalar asla boş, tek cümlelik veya 20-30 kelimelik yüzeysel özetlerle geçiştirilemez. Tıbbi mekanizmalar, hücresel/organ düzeyindeki süreçler ve klinik bağlantılar tam cümlelerle anlatılmalıdır.
+- **Müfredat ve Ders Özeti Sadakati (Örnek Sorular):** Örnek sorular (`ornek_sorular/` ve destelerdeki soru havuzu) oluşturulurken **YALNIZCA müfredat ve ilgili amfi ders özetinde (`meds_database_v2/ders_notlari_k*/`) yer alan bilgiler** kullanılmalıdır. Müfredat dışı, kaynakta geçmeyen afaki/spekülatif bilgilerle soru yazılamaz; sorular doğrudan dersin öğrenim hedefleriyle örtüşmelidir.
 - Markdown: `**kalın**`, `==vurgu==` (sarı işaret; paragraf başına en fazla 2), `- madde` ve iki boşlukla alt madde, `### Ara başlık`, `> Temel ilke…` (mavi kutu; içinde UYARI/DİKKAT/TUZAK/KRİTİK geçerse turuncu).
 - Tablolar `| a | b |` biçiminde yazılabilir; ekrana sığan tabloya çevrilir (dar ekranda kartlara dönüşür). Sütun sayısı 2–4 arası tutulmalı.
 - Etiketler: `[SINAV SPOTU]`, `[KRİTİK UYARI]`, `[KLİNİK İPUCU]`, `[YÜKSEK VERİM]` (4+ büyük harf, köşeli parantez) renkli etikete dönüşür. Başka amaçla köşeli parantez içinde **büyük harfli 4+ karakter** kullanma.
@@ -241,6 +247,8 @@ Dosyalar: `src/components/learn/lesson/`
 - İkincil özellikler **Araçlar** menüsündedir: Düzen, Görünüm (Ders / Yan yana / PDF), Okuma (Sayfa sayfa / Kaydırarak), Hatırlama modu, Fosforlu kalem + Kalem modu, Ders notları, Asistana sor, Tıbbi sözlük, Tam ekran, Bu adımı PDF yap, Klasik görünüm.
 - Tam ekran belge kökünü tam ekrana alır; API yoksa/yanıtsızsa (iPhone) odak moduna düşer.
 - Kalem/çizim katmanı (`SlideDrawingCanvas`) CSS pikseliyle çizer; DPR ile ikinci kez çarpma (telefonda çizgiler kayıyordu).
+- **Kalem algılama** (`src/components/ui/penInput.ts`): bir kez `pointerType: "pen"` görülünce cihaz kalemli sayılır (oturum boyunca). Kalemli cihazda marker ve çizim yalnız kalemle yazar; parmak sayfayı kaydırır (`startFingerPan`). Kalem hiç görülmezse parmak yazar. Yüzen çubuktaki "Parmakla yaz" algılamayı sıfırlar.
+- **Araçlar menüsü** her seçimden sonra kapanır. Marker ve Kalem seçilince ekranın tepesinde yüzen çubuk açılır: marker için 4 renk + silgi; kalem için Kalem/Marker/Silgi, 6 renk, 3 kalınlık; kalem/parmak durumu ve kapatma. İşaretlerken bilgi çekmecesi gizlenir.
 - Kalıcı tercih anahtarları: `medsoru_learn_layout`, `medsoru_learn_mode`, `medsoru_learn_toc`, `medsoru_learn_done_v1`, `medsoru_learn_progress_v1`, `medsoru_learn_voter_id`.
 
 ---
@@ -256,3 +264,7 @@ Dosyalar: `src/components/learn/lesson/`
 - [ ] Her 6–12 adımda bir tekrar sayfası ya da tutarlı `badge` ile bölümleme.
 - [ ] `python3 scripts/build_kazanim_deck_index.py` çalıştırıldı.
 - [ ] `npm run lint` 0 hata; ekranda Akış ve Stüdyo'da göz kontrolü.
+
+## Not kutuları (anlatım içinde `>`)
+
+Ardışık `>` satırları tek not kutusu (`ls-note`) olur. İlk satır `[!NOTE]`/`[!IMPORTANT]`/`[!WARNING]`/`[!TIP]` ya da `[TEMEL İLKE]`, `[SINAV SPOTU]`, `[KRİTİK UYARI]` gibi büyük harfli bir etiketse etiket notun başlığına taşınır. Ton etiketten seçilir (kritik/uyarı → kırmızı, sınav/spot → turuncu, klinik/önemli/ipucu → mavi, özet/yüksek verim → yeşil, diğerleri nötr). `> [!NOTE]` satırını tek başına bırakıp metni sonraki `>` satırına yazmak doğrudur.

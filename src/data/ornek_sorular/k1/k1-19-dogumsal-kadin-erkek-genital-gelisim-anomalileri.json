@@ -6,6 +6,7 @@
  "konu": "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
  "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
  "tarih": "2026-09-22",
+ "soru_sayisi": 99,
  "kazanimlar": [
   {
    "no": 1,
@@ -90,6 +91,112 @@
       2
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "27 yaşındaki bir hasta akut başvuru yapan ve laboratuvar-görüntüleme bulguları birlikte değerlendirilen bir olguda hekime başvuruyor. Değerlendirmede \"Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur; fertilizasyon sperm haploid kromozom takımını verir, cinsiyeti belirler ve embriyonik gelişimi başlatır.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Fertilizasyonu ve fertilizasyonun üç temel görevini açıklayabilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur; fertilizasyon sperm… ilkesinin tam tersi geçerlidir ve Fenotip hafiftir ve sıklıkla tanı almayabilir. gözlenmez",
+      "B": "Bu tablodan sorumlu temel mekanizma 47,XYY ve 47,XXX olup \"Fertilizasyonu ve fertilizasyonun üç temel görevini…\" ile ilişkisizdir",
+      "C": "Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur; fertilizasyon sperm haploid kromozom takımını verir, cinsiyeti belirler ve… Bu nedenle Cinsiyet daha fertilizasyon anında belirlenir ve embriyonik gelişim başlar.",
+      "D": "Bulgular \"Fertilizasyonu ve fertilizasyonun üç temel görevini açıklayabilmek\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "E": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"Fertilizasyon ve görevleri\" ile açıklanamaz"
+     },
+     "dogru": "C",
+     "aciklama": "Robbins/Harrison mantığıyla: Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur; fertilizasyon sperm haploid kromozom takımını verir, cinsiyeti belirler ve… Doğrudan sonucu \"Cinsiyet daha fertilizasyon anında belirlenir ve embriyonik gelişim başlar.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"Fertilizasyon ve görevleri\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"Fertilizasyon ve görevleri\" bilgisiyle çelişir.",
+      "C": "Doğru; Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur; fertilizasyon sperm haploid…",
+      "D": "Yanlış; ders paketindeki \"Fertilizasyon ve görevleri\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"Fertilizasyon ve görevleri\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      1,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta hastalığın seyri ve prognozunun değerlendirildiği ayrı bir vakada ele alınıyor. Öyküde \"47,XYY ve 47,XXX\" vurgulanıyor ve hekim \"Fertilizasyonu ve fertilizasyonun üç temel görevini açıklayabilmek\" kazanımındaki \"Her ikisi de 1/1000 doğum; 47,XYY genellikle normal ve aktif, hafif öğrenme güçlüğü, fertil; 47,XXX pasif-sessiz, motor/dil geriliği, fertilite normal.\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Fenotip hafiftir ve sıklıkla tanı almayabilir. hiçbir koşulda gözlenmez ve Fertilizasyon ve görevleri tek belirleyicidir",
+      "B": "Bu süreçte \"Fertilizasyon ve görevleri\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "C": "Benzer tabloların tamamı aynı nedene bağlıdır; \"47,XYY ve 47,XXX\" ayırıcı tanıda gereksizdir",
+      "D": "Fenotip hafiftir ve sıklıkla tanı almayabilir. Çünkü Her ikisi de 1/1000 doğum; 47,XYY genellikle normal ve aktif, hafif öğrenme güçlüğü, fertil; 47,XXX…",
+      "E": "Bu olguda izlem gerekmez; \"Fertilizasyonu ve fertilizasyonun üç temel görevini açıklayabilmek\" yalnızca teorik bir bilgidir"
+     },
+     "dogru": "D",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Her ikisi de 1/1000 doğum; 47,XYY genellikle normal ve aktif, hafif öğrenme güçlüğü, fertil; 47,XXX pasif-sessiz, motor/dil geriliği, fertilite normal. sonucu \"Fenotip hafiftir ve sıklıkla tanı almayabilir.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"Fertilizasyon ve görevleri\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"Fertilizasyon ve görevleri\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"Fertilizasyon ve görevleri\" bilgisiyle çelişir.",
+      "D": "Doğru; Fenotip hafiftir ve sıklıkla tanı almayabilir. Çünkü Her ikisi de 1/1000 doğum; 47,XYY genellikle normal ve…",
+      "E": "Yanlış; ders paketindeki \"Fertilizasyon ve görevleri\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      13,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Fertilizasyon ve görevleri: Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Heterozigot LOF 46,XY CGB ve kampomelik displazi",
+      "B": "Kolesterol metabolizması defektleri CGB ile sonuçlanır",
+      "C": "Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir",
+      "D": "Cinsiyet daha fertilizasyon anında belirlenir ve embriyonik gelişim başlar",
+      "E": "Kortizol yapımı yetersizse ACTH artar ve adrenal hiperplazi olur"
+     },
+     "dogru": "D",
+     "aciklama": "Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur. Cinsiyet daha fertilizasyon anında belirlenir ve embriyonik gelişim başlar. Fizyopatolojik sıra bu yönde ilerlediğinden Spermin ovuma girmesiyle dişi ve erkek pronükleus varlığında Cinsiyet daha fertilizasyon anında belirlenir ve embriyonik beklenir. Diğer seçenekler bu düzeneğin parçası değildir ve sorudaki tabloyu açıklayamaz. Bu nedenle doğru yanıt D seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade SOX9 sürecine ait bir özelliktir ve fertilizasyon ve görevleri düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade Kolesterol defekti ve CGB sürecine ait bir özelliktir ve fertilizasyon ve görevleri düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Miks gonadal disgenezi sürecine ait bir özelliktir ve fertilizasyon ve görevleri düzeneğini tanımlamaz.",
+      "D": "Doğru; Cinsiyet daha fertilizasyon anında belirlenir ve embriyonik gelişim başlar çünkü Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek düzeneği bu sonucu üretir.",
+      "E": "Yanlış; bu ifade KAH ve mekanizması sürecine ait bir özelliktir ve fertilizasyon ve görevleri düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Fertilizasyon ve görevleri düzeneğinin temel mekanizması aşağıdakilerden hangisinde doğru tanımlanmıştır?",
+     "secenekler": {
+      "A": "Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur",
+      "B": "FOXL2 over gelişiminde önemlidir",
+      "C": "Her ikisi de 1/1000 doğum",
+      "D": "Nadiren inmemiş testisler kanseröz hale dönüşebilir",
+      "E": "Genetik cinsiyet, gonadal cinsiyet, iç-dış genitalya, pubertede ikincil seks karakterleri"
+     },
+     "dogru": "A",
+     "aciklama": "Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur. Cinsiyet daha fertilizasyon anında belirlenir ve embriyonik gelişim başlar. Bu ilişki Tıbbi Genetik fizyolojisinin temel düzeneklerinden biridir: Spermin ovuma girmesiyle dişi ve erkek pronükleus doğrudan Cinsiyet daha fertilizasyon anında belirlenir ve embriyonik doğurur. Diğer seçeneklerdeki süreçler farklı yolaklara aittir ve bu tabloda beklenen sonucu vermez. Bu nedenle doğru yanıt A seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur. Bu mekanizma cinsiyet daha fertilizasyon anında belirlenir ve embriyonik gelişim sonucunu doğurur.",
+      "B": "Yanlış; bu ifade FOXL2 ve BPES sürecine ait bir özelliktir ve fertilizasyon ve görevleri düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade 47,XYY ve 47,XXX sürecine ait bir özelliktir ve fertilizasyon ve görevleri düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade CAIS testis kanser riski sürecine ait bir özelliktir ve fertilizasyon ve görevleri düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade Cinsiyet farklılaşma düzeyleri sürecine ait bir özelliktir ve fertilizasyon ve görevleri düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -170,6 +277,112 @@
       "C": "İmplantasyon blastosist evresinde olur.",
       "D": "Doğru: verilen zamanlamadır.",
       "E": "Zigot implante olmaz."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "34 yaşındaki bir hasta ayırıcı tanısı tartışılan ve öyküsü derinleştirilen bir hastada hekime başvuruyor. Değerlendirmede \"Konseptus genleri 4-8 hücreli aşamada aktifleşir; 16 hücreli aşama morula, 32 hücreli aşama blastosisttir.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Erken embriyonik gelişim basamaklarını (morula, blastosist, implantasyon) özetleyebilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Konseptus genleri 4-8 hücreli aşamada aktifleşir; 16 hücreli aşama morula, 32 hücreli aşama… ilkesinin tam tersi geçerlidir ve DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden… gözlenmez",
+      "B": "Bu tablodan sorumlu temel mekanizma Dış genitalya ve DHT olup \"Erken embriyonik gelişim basamaklarını (morula, blastosist,…\" ile ilişkisizdir",
+      "C": "Bulgular \"Erken embriyonik gelişim basamaklarını (morula, blastosist,…\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "D": "Konseptus genleri 4-8 hücreli aşamada aktifleşir; 16 hücreli aşama morula, 32 hücreli aşama blastosisttir. Bu nedenle 6. günde hCG pozitifleşir ve implantasyon gerçekleşir.",
+      "E": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"Erken embriyonik aşamalar\" ile açıklanamaz"
+     },
+     "dogru": "D",
+     "aciklama": "Robbins/Harrison mantığıyla: Konseptus genleri 4-8 hücreli aşamada aktifleşir; 16 hücreli aşama morula, 32 hücreli aşama blastosisttir. Doğrudan sonucu \"6. günde hCG pozitifleşir ve implantasyon gerçekleşir.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "D": "Doğru; Konseptus genleri 4-8 hücreli aşamada aktifleşir; 16 hücreli aşama morula, 32 hücreli aşama blastosisttir. Bu…",
+      "E": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      2,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta tanısal test sonucunun yorumlandığı bağımsız bir olguda ele alınıyor. Öyküde \"Dış genitalya ve DHT\" vurgulanıyor ve hekim \"Erken embriyonik gelişim basamaklarını (morula, blastosist, implantasyon) özetleyebilmek\" kazanımındaki \"Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir; DHT eksikliğinde genital tüberkül klitoris, labioskrotal kabartı labia majör, ürogenital…\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur. hiçbir koşulda gözlenmez ve Erken embriyonik aşamalar tek belirleyicidir",
+      "B": "Bu süreçte \"Erken embriyonik aşamalar\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "C": "Benzer tabloların tamamı aynı nedene bağlıdır; \"Dış genitalya ve DHT\" ayırıcı tanıda gereksizdir",
+      "D": "Bu olguda izlem gerekmez; \"Erken embriyonik gelişim basamaklarını (morula, blastosist,…\" yalnızca teorik bir bilgidir",
+      "E": "DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur. Çünkü Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir; DHT eksikliğinde genital tüberkül klitoris,…"
+     },
+     "dogru": "E",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir; DHT eksikliğinde genital tüberkül klitoris, labioskrotal kabartı labia majör, ürogenital… sonucu \"DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "E": "Doğru; DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur. Çünkü Dış genitalya…"
+     },
+     "bilgi": [
+      13,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Erken embriyonik aşamalar: Konseptus genleri 4-8 hücreli aşamada aktifleşir. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bu genlerin bozuklukları over gelişimini ve Müller kanal oluşumunu etkiler",
+      "B": "Meme gelişimi, geniş kalça, uzun boy, öğrenme güçlüğü",
+      "C": "Değişik derecede yetersiz virilizasyon",
+      "D": "46,XX CGB'de önce KAH",
+      "E": "6. günde hCG pozitifleşir ve implantasyon gerçekleşir"
+     },
+     "dogru": "E",
+     "aciklama": "Konseptus genleri 4-8 hücreli aşamada aktifleşir. 6. Bu ilişki Tıbbi Genetik fizyolojisinin temel düzeneklerinden biridir: Konseptus genleri 4-8 hücreli aşamada aktifleşir doğrudan 6. günde hCG pozitifleşir ve implantasyon gerçekleşir doğurur. Diğer seçeneklerdeki süreçler farklı yolaklara aittir ve bu tabloda beklenen sonucu vermez. Bu nedenle doğru yanıt E seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Over genleri sürecine ait bir özelliktir ve erken embriyonik aşamalar düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade Klinefelter (47,XXY) sürecine ait bir özelliktir ve erken embriyonik aşamalar düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Androjen duyarsızlık sendromu sürecine ait bir özelliktir ve erken embriyonik aşamalar düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade CGB'ye genel yaklaşım sürecine ait bir özelliktir ve erken embriyonik aşamalar düzeneğini tanımlamaz.",
+      "E": "Doğru; 6 çünkü Konseptus genleri 4-8 hücreli aşamada aktifleşir düzeneği bu sonucu üretir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Erken embriyonik aşamalar düzeneğinin temel mekanizması aşağıdakilerden hangisinde doğru tanımlanmıştır?",
+     "secenekler": {
+      "A": "CGB cinsiyet kromozom CGB, 46,XX CGB ve 46,XY CGB olarak",
+      "B": "Konseptus genleri 4-8 hücreli aşamada aktifleşir",
+      "C": "SRD5A2 mutasyonu (p.L55Q)",
+      "D": "Klasik KAH prenatal başlangıçlıdır",
+      "E": "1947'de Alfred Jost'un tavşan deneyi kadın gelişiminin (overler hariç) spesifik"
+     },
+     "dogru": "B",
+     "aciklama": "Tıbbi Genetik düzeneğinde Konseptus genleri 4-8 hücreli aşamada aktifleşir bilinir. 6. Mekanizma bu sırayla işlediği için beklenen sonuç 6. günde hCG pozitifleşir ve implantasyon gerçekleşir olur; çeldiricilerdeki olaylar farklı basamaklara aittir ve aynı sonucu üretmez. Bu nedenle doğru yanıt B seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade CGB sınıflaması ve terimler sürecine ait bir özelliktir ve erken embriyonik aşamalar düzeneğini tanımlamaz.",
+      "B": "Doğru; Konseptus genleri 4-8 hücreli aşamada aktifleşir. Bu mekanizma 6. günde hcg pozitifleşir ve implantasyon gerçekleşir sonucunu doğurur.",
+      "C": "Yanlış; bu ifade 5α-redüktaz eksikliği sürecine ait bir özelliktir ve erken embriyonik aşamalar düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade KAH formları sürecine ait bir özelliktir ve erken embriyonik aşamalar düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade Jost deneyi sürecine ait bir özelliktir ve erken embriyonik aşamalar düzeneğini tanımlamaz."
      },
      "bilgi": [
       2
@@ -260,6 +473,112 @@
       6
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "41 yaşındaki bir hasta tedavi yanıtı izlenen ve kliniği yeniden değerlendirilen bir olguda hekime başvuruyor. Değerlendirmede \"Normal cinsiyet gelişimi fertilizasyon/genetik cinsiyet, ortak organların gelişimi, gonadal farklılaşma ve iç-dış genitalya gelişimi aşamalarından geçer.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Normal cinsiyet farklılaşmasının düzeylerini ve dört ana aşamasını sıralayabilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Normal cinsiyet gelişimi fertilizasyon/genetik cinsiyet, ortak organların gelişimi, gonadal… ilkesinin tam tersi geçerlidir ve En az bir Y kromozomu olan embriyo erkek olarak gelişir. gözlenmez",
+      "B": "Bu tablodan sorumlu temel mekanizma SRY ve TDF olup \"Normal cinsiyet farklılaşmasının düzeylerini ve dört ana…\" ile ilişkisizdir",
+      "C": "Bulgular \"Normal cinsiyet farklılaşmasının düzeylerini ve dört ana aşamasını…\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "D": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"Dört ana aşama\" ile açıklanamaz",
+      "E": "Normal cinsiyet gelişimi fertilizasyon/genetik cinsiyet, ortak organların gelişimi, gonadal farklılaşma ve iç-dış genitalya gelişimi aşamalarından… Bu nedenle Herhangi bir aşamadaki bozukluk CGB ile sonuçlanabilir."
+     },
+     "dogru": "E",
+     "aciklama": "Robbins/Harrison mantığıyla: Normal cinsiyet gelişimi fertilizasyon/genetik cinsiyet, ortak organların gelişimi, gonadal farklılaşma ve iç-dış genitalya gelişimi aşamalarından geçer. Doğrudan sonucu \"Herhangi bir aşamadaki bozukluk CGB ile sonuçlanabilir.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"Dört ana aşama\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"Dört ana aşama\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"Dört ana aşama\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"Dört ana aşama\" bilgisiyle çelişir.",
+      "E": "Doğru; Normal cinsiyet gelişimi fertilizasyon/genetik cinsiyet, ortak organların gelişimi, gonadal farklılaşma ve…"
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta aynı konunun farklı bir yönünü aydınlatmak için ele alınan ikinci bir olguda ele alınıyor. Öyküde \"SRY ve TDF\" vurgulanıyor ve hekim \"Normal cinsiyet farklılaşmasının düzeylerini ve dört ana aşamasını sıralayabilmek\" kazanımındaki \"Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır.\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "En az bir Y kromozomu olan embriyo erkek olarak gelişir. Çünkü Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır.",
+      "B": "En az bir Y kromozomu olan embriyo erkek olarak gelişir. hiçbir koşulda gözlenmez ve Dört ana aşama tek belirleyicidir",
+      "C": "Bu süreçte \"Dört ana aşama\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "D": "Benzer tabloların tamamı aynı nedene bağlıdır; \"SRY ve TDF\" ayırıcı tanıda gereksizdir",
+      "E": "Bu olguda izlem gerekmez; \"Normal cinsiyet farklılaşmasının düzeylerini ve dört ana aşamasını…\" yalnızca teorik bir bilgidir"
+     },
+     "dogru": "A",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır. sonucu \"En az bir Y kromozomu olan embriyo erkek olarak gelişir.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; En az bir Y kromozomu olan embriyo erkek olarak gelişir. Çünkü Y kromozomunun kısa kolundaki (Yp11.3) SRY,…",
+      "B": "Yanlış; ders paketindeki \"Dört ana aşama\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"Dört ana aşama\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"Dört ana aşama\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"Dört ana aşama\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Cinsiyet farklılaşma düzeyleri: Genetik cinsiyet, gonadal cinsiyet, iç-dış genitalya, pubertede ikincil seks karakterleri ve toplumun yüklediği rol sıralanır. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Cinsiyet biyolojik ve toplumsal boyutları olan çok basamaklı bir süreçtir",
+      "B": "DHT varlığında penis ve skrotum gelişir",
+      "C": "Aile öyküsü genellikle pozitiftir",
+      "D": "PAIS klinik olarak daha kolay tanınır",
+      "E": "Genotipik-fenotipik cinsiyet farkı seks kromatini ile ayırt edilebilir"
+     },
+     "dogru": "A",
+     "aciklama": "Tıbbi Genetik düzeneğinde Genetik cinsiyet, gonadal cinsiyet, iç-dış genitalya, pubertede bilinir. Cinsiyet biyolojik ve toplumsal boyutları olan çok basamaklı bir süreçtir. Mekanizma bu sırayla işlediği için beklenen sonuç Cinsiyet biyolojik ve toplumsal boyutları olan çok olur; çeldiricilerdeki olaylar farklı basamaklara aittir ve aynı sonucu üretmez. Bu nedenle doğru yanıt A seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; Cinsiyet biyolojik ve toplumsal boyutları olan çok basamaklı bir süreçtir çünkü Genetik cinsiyet, gonadal cinsiyet, iç-dış genitalya, pubertede ikincil düzeneği bu sonucu üretir.",
+      "B": "Yanlış; bu ifade Dış genitalya ve DHT sürecine ait bir özelliktir ve cinsiyet farklılaşma düzeyleri düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Gen mutasyonları sürecine ait bir özelliktir ve cinsiyet farklılaşma düzeyleri düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade PAIS ve MAIS sürecine ait bir özelliktir ve cinsiyet farklılaşma düzeyleri düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade Cinsiyet ayrımı ve Barr cisimciği sürecine ait bir özelliktir ve cinsiyet farklılaşma düzeyleri düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aynı kazanımın farklı bir yönü: Dört ana aşama mekanizması açısından aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tek X, Y yok",
+      "B": "Dış genitalya normal dişi görünümünde",
+      "C": "Normal cinsiyet gelişimi fertilizasyon/genetik cinsiyet, ortak organların gelişimi, gonadal farklılaşma",
+      "D": "Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur",
+      "E": "Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar"
+     },
+     "dogru": "C",
+     "aciklama": "Normal cinsiyet gelişimi fertilizasyon/genetik cinsiyet, ortak organların gelişimi, gonadal farklılaşma ve iç-dış genitalya gelişimi aşamalarından geçer. Herhangi bir aşamadaki bozukluk CGB ile sonuçlanabilir. Fizyopatolojik sıra bu yönde ilerlediğinden Normal cinsiyet gelişimi fertilizasyon/genetik cinsiyet, ortak organların varlığında Herhangi bir aşamadaki bozukluk CGB ile sonuçlanabilir beklenir. Diğer seçenekler bu düzeneğin parçası değildir ve sorudaki tabloyu açıklayamaz. Bu nedenle doğru yanıt C seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Turner (45,X) sürecine ait bir özelliktir ve dört ana aşama düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade CAIS sürecine ait bir özelliktir ve dört ana aşama düzeneğini tanımlamaz.",
+      "C": "Doğru; Normal cinsiyet gelişimi fertilizasyon/genetik cinsiyet, ortak organların gelişimi, gonadal farklılaşma ve iç-dış genitalya gelişimi aşamalarından geçer. Bu mekanizma herhangi bir aşamadaki bozukluk cgb ile sonuçlanabilir sonucunu doğurur.",
+      "D": "Yanlış; bu ifade Fertilizasyon ve görevleri sürecine ait bir özelliktir ve dört ana aşama düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade AMH ve testosteron sürecine ait bir özelliktir ve dört ana aşama düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -347,6 +666,110 @@
       20
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "48 yaşındaki bir hasta tarama sırasında saptanan ve ileri incelemeye alınan bir kişide hekime başvuruyor. Değerlendirmede \"Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49 görülür.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Kromozomal cinsiyet belirteçlerini ve Barr cisimciğini açıklayabilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49 görülür. Bu nedenle Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir.",
+      "B": "Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom,… ilkesinin tam tersi geçerlidir ve Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir. gözlenmez",
+      "C": "Bu tablodan sorumlu temel mekanizma Kromozomal varyantlar olup \"Kromozomal cinsiyet belirteçlerini ve Barr cisimciğini…\" ile ilişkisizdir",
+      "D": "Bulgular \"Kromozomal cinsiyet belirteçlerini ve Barr cisimciğini açıklayabilmek\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "E": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"Kromozomal varyantlar\" ile açıklanamaz"
+     },
+     "dogru": "A",
+     "aciklama": "Robbins/Harrison mantığıyla: Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49 görülür. Doğrudan sonucu \"Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49…",
+      "B": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta komplikasyon gelişen ve mekanizması sorgulanan başka bir hastada ele alınıyor. Öyküde \"Kromozomal varyantlar\" vurgulanıyor ve hekim \"Kromozomal cinsiyet belirteçlerini ve Barr cisimciğini açıklayabilmek\" kazanımındaki \"Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49 görülür.\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir. hiçbir koşulda gözlenmez ve Kromozomal varyantlar tek belirleyicidir",
+      "B": "Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir. Çünkü Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49…",
+      "C": "Bu süreçte \"Kromozomal varyantlar\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "D": "Benzer tabloların tamamı aynı nedene bağlıdır; \"Kromozomal varyantlar\" ayırıcı tanıda gereksizdir",
+      "E": "Bu olguda izlem gerekmez; \"Kromozomal cinsiyet belirteçlerini ve Barr cisimciğini açıklayabilmek\" yalnızca teorik bir bilgidir"
+     },
+     "dogru": "B",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49 görülür. sonucu \"Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "B": "Doğru; Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir. Çünkü Seks kromozomlarının sayısal…",
+      "C": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Cinsiyet ayrımı ve Barr cisimciği: Dişide XX simetrik, erkekte XY farklıdır. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Y kromozomu varsa kişi internal ve eksternal olarak erkektir",
+      "B": "Genotipik-fenotipik cinsiyet farkı seks kromatini ile ayırt edilebilir",
+      "C": "Erkek görünümü ortaya çıkar",
+      "D": "Etkilenmiş kız fetusta tedavi gebelik sonuna kadar sürer",
+      "E": "En az bir Y kromozomu olan embriyo erkek olarak gelişir"
+     },
+     "dogru": "B",
+     "aciklama": "Dişide XX simetrik, erkekte XY farklıdır. Genotipik-fenotipik cinsiyet farkı seks kromatini ile ayırt edilebilir. Fizyopatolojik sıra bu yönde ilerlediğinden Dişide XX simetrik, erkekte XY farklıdır varlığında Genotipik-fenotipik cinsiyet farkı seks kromatini ile ayırt beklenir. Diğer seçenekler bu düzeneğin parçası değildir ve sorudaki tabloyu açıklayamaz. Bu nedenle doğru yanıt B seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Kromozomal varyantlar sürecine ait bir özelliktir ve cinsiyet ayrımı ve barr cisimciği düzeneğini tanımlamaz.",
+      "B": "Doğru; Genotipik-fenotipik cinsiyet farkı seks kromatini ile ayırt edilebilir çünkü Dişide XX simetrik, erkekte XY farklıdır düzeneği bu sonucu üretir.",
+      "C": "Yanlış; bu ifade 5-ARD pubertesi sürecine ait bir özelliktir ve cinsiyet ayrımı ve barr cisimciği düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade KAH prenatal yönetim sürecine ait bir özelliktir ve cinsiyet ayrımı ve barr cisimciği düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade SRY ve TDF sürecine ait bir özelliktir ve cinsiyet ayrımı ve barr cisimciği düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aynı kazanımın farklı bir yönü: Kromozomal varyantlar mekanizması açısından aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "45,X/46,XY mozaik karyotip",
+      "B": "46,XX CGB'de kuşkulu genitalyanın en önemli nedeni",
+      "C": "Dişide XX simetrik, erkekte XY farklıdır",
+      "D": "Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır",
+      "E": "SF1 (NR5A1) hipotalamo-hipofizer-gonadal aks ve steroid sentezinden sorumludur"
+     },
+     "dogru": "D",
+     "aciklama": "Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır. Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir. Bu ilişki Tıbbi Genetik fizyolojisinin temel düzeneklerinden biridir: Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır doğrudan Y kromozomu varsa kişi internal ve eksternal doğurur. Diğer seçeneklerdeki süreçler farklı yolaklara aittir ve bu tabloda beklenen sonucu vermez. Bu nedenle doğru yanıt D seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Miks gonadal disgenezi sürecine ait bir özelliktir ve kromozomal varyantlar düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade KAH ve mekanizması sürecine ait bir özelliktir ve kromozomal varyantlar düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Cinsiyet ayrımı ve Barr cisimciği sürecine ait bir özelliktir ve kromozomal varyantlar düzeneğini tanımlamaz.",
+      "D": "Doğru; Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır. Bu mekanizma y kromozomu varsa kişi internal ve eksternal olarak sonucunu doğurur.",
+      "E": "Yanlış; bu ifade SF1 ve WT1 sürecine ait bir özelliktir ve kromozomal varyantlar düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -431,6 +854,112 @@
      },
      "bilgi": [
       8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "55 yaşındaki bir hasta yıllardır süren yakınmalarla başvuran ve fizik muayenede tipik bulguları saptanan bir hastada hekime başvuruyor. Değerlendirmede \"Mezonefrik (Wolffian) kanal erkek, paramezonefrik (Mülleryan) kanal dişi üreme sistemini geliştirir.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Genital sistemin embriyolojik gelişimini ve mezonefrik ile paramezonefrik kanalların kaderini açıklayabilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Mezonefrik (Wolffian) kanal erkek, paramezonefrik (Mülleryan) kanal dişi üreme sistemini geliştirir. ilkesinin tam tersi geçerlidir ve DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden… gözlenmez",
+      "B": "Mezonefrik (Wolffian) kanal erkek, paramezonefrik (Mülleryan) kanal dişi üreme sistemini geliştirir. Bu nedenle Testisten salınan testosteron ve AMH hangi kanalın gelişeceğini belirler.",
+      "C": "Bu tablodan sorumlu temel mekanizma Dış genitalya ve DHT olup \"Genital sistemin embriyolojik gelişimini ve mezonefrik ile…\" ile ilişkisizdir",
+      "D": "Bulgular \"Genital sistemin embriyolojik gelişimini ve mezonefrik ile…\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "E": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"Wolff ve Müller kanalları\" ile açıklanamaz"
+     },
+     "dogru": "B",
+     "aciklama": "Robbins/Harrison mantığıyla: Mezonefrik (Wolffian) kanal erkek, paramezonefrik (Mülleryan) kanal dişi üreme sistemini geliştirir. Doğrudan sonucu \"Testisten salınan testosteron ve AMH hangi kanalın gelişeceğini belirler.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"Wolff ve Müller kanalları\" bilgisiyle çelişir.",
+      "B": "Doğru; Mezonefrik (Wolffian) kanal erkek, paramezonefrik (Mülleryan) kanal dişi üreme sistemini geliştirir. Bu…",
+      "C": "Yanlış; ders paketindeki \"Wolff ve Müller kanalları\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"Wolff ve Müller kanalları\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"Wolff ve Müller kanalları\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta tedavi seçeneğinin tartışıldığı farklı bir klinik senaryoda ele alınıyor. Öyküde \"Dış genitalya ve DHT\" vurgulanıyor ve hekim \"Genital sistemin embriyolojik gelişimini ve mezonefrik ile paramezonefrik kanalların kaderini açıklayabilmek\" kazanımındaki \"Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir; DHT eksikliğinde genital tüberkül klitoris, labioskrotal kabartı labia majör, ürogenital…\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur. hiçbir koşulda gözlenmez ve Wolff ve Müller kanalları tek belirleyicidir",
+      "B": "Bu süreçte \"Wolff ve Müller kanalları\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "C": "DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur. Çünkü Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir; DHT eksikliğinde genital tüberkül klitoris,…",
+      "D": "Benzer tabloların tamamı aynı nedene bağlıdır; \"Dış genitalya ve DHT\" ayırıcı tanıda gereksizdir",
+      "E": "Bu olguda izlem gerekmez; \"Genital sistemin embriyolojik gelişimini ve mezonefrik ile…\" yalnızca teorik bir bilgidir"
+     },
+     "dogru": "C",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir; DHT eksikliğinde genital tüberkül klitoris, labioskrotal kabartı labia majör, ürogenital… sonucu \"DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"Wolff ve Müller kanalları\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"Wolff ve Müller kanalları\" bilgisiyle çelişir.",
+      "C": "Doğru; DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur. Çünkü Dış genitalya…",
+      "D": "Yanlış; ders paketindeki \"Wolff ve Müller kanalları\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"Wolff ve Müller kanalları\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      9,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Dış genitalya ve DHT: Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fenotip hafiftir ve sıklıkla tanı almayabilir",
+      "B": "Testislerin cerrahi olarak çıkarılması gerekir",
+      "C": "DHT varlığında penis ve skrotum gelişir",
+      "D": "6. günde hCG pozitifleşir ve implantasyon gerçekleşir",
+      "E": "Erkek yönde iç genitalya gelişimi bu iki faktöre bağlıdır"
+     },
+     "dogru": "C",
+     "aciklama": "Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir. DHT varlığında penis ve skrotum gelişir. Bu ilişki Tıbbi Genetik fizyolojisinin temel düzeneklerinden biridir: Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir doğrudan DHT varlığında penis ve skrotum gelişir doğurur. Diğer seçeneklerdeki süreçler farklı yolaklara aittir ve bu tabloda beklenen sonucu vermez. Bu nedenle doğru yanıt C seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade 47,XYY ve 47,XXX sürecine ait bir özelliktir ve dış genitalya ve dht düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade CAIS testis kanser riski sürecine ait bir özelliktir ve dış genitalya ve dht düzeneğini tanımlamaz.",
+      "C": "Doğru; DHT varlığında penis ve skrotum gelişir çünkü Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir düzeneği bu sonucu üretir.",
+      "D": "Yanlış; bu ifade Erken embriyonik aşamalar sürecine ait bir özelliktir ve dış genitalya ve dht düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade AMH ve testosteron sürecine ait bir özelliktir ve dış genitalya ve dht düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aynı kazanımın farklı bir yönü: AMH ve testosteron mekanizması açısından aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "X'e bağlı AR geni LOF mutasyonu",
+      "B": "İlk analiz karyotip (klasik karyotipleme atlanmamalı)",
+      "C": "Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini",
+      "D": "FOXL2 over gelişiminde önemlidir",
+      "E": "Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar"
+     },
+     "dogru": "E",
+     "aciklama": "Tıbbi Genetik düzeneğinde Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları bilinir. Erkek yönde iç genitalya gelişimi bu iki faktöre bağlıdır. Mekanizma bu sırayla işlediği için beklenen sonuç Erkek yönde iç genitalya gelişimi bu iki olur; çeldiricilerdeki olaylar farklı basamaklara aittir ve aynı sonucu üretmez. Bu nedenle doğru yanıt E seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Androjen duyarsızlık sendromu sürecine ait bir özelliktir ve amh ve testosteron düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade CGB'ye genel yaklaşım sürecine ait bir özelliktir ve amh ve testosteron düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade SRY ve TDF sürecine ait bir özelliktir ve amh ve testosteron düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade FOXL2 ve BPES sürecine ait bir özelliktir ve amh ve testosteron düzeneğini tanımlamaz.",
+      "E": "Doğru; Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar. Bu mekanizma erkek yönde iç genitalya gelişimi bu iki faktöre sonucunu doğurur."
+     },
+     "bilgi": [
       9
      ],
      "benzer_cikmis": []
@@ -549,6 +1078,110 @@
       12
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k06-q05",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "62 yaşındaki bir hasta akut başvuru yapan ve laboratuvar-görüntüleme bulguları birlikte değerlendirilen bir olguda hekime başvuruyor. Değerlendirmede \"Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Gonadal farklılaşmada rol alan genleri (SRY, SOX9, SF1, WT1, DAX1, WNT4, FOXL2, FGF9, DMRT1) ve işlevlerini…\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır. ilkesinin tam tersi geçerlidir ve En az bir Y kromozomu olan embriyo erkek olarak gelişir. gözlenmez",
+      "B": "Bu tablodan sorumlu temel mekanizma SRY ve TDF olup \"Gonadal farklılaşmada rol alan genleri (SRY, SOX9, SF1,…\" ile ilişkisizdir",
+      "C": "Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır. Bu nedenle En az bir Y kromozomu olan embriyo erkek olarak gelişir.",
+      "D": "Bulgular \"Gonadal farklılaşmada rol alan genleri (SRY, SOX9, SF1, WT1, DAX1,…\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "E": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"SRY ve TDF\" ile açıklanamaz"
+     },
+     "dogru": "C",
+     "aciklama": "Robbins/Harrison mantığıyla: Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır. Doğrudan sonucu \"En az bir Y kromozomu olan embriyo erkek olarak gelişir.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"SRY ve TDF\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"SRY ve TDF\" bilgisiyle çelişir.",
+      "C": "Doğru; Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır. Bu nedenle En…",
+      "D": "Yanlış; ders paketindeki \"SRY ve TDF\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"SRY ve TDF\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k06-q06",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta hastalığın seyri ve prognozunun değerlendirildiği ayrı bir vakada ele alınıyor. Öyküde \"SRY ve TDF\" vurgulanıyor ve hekim \"Gonadal farklılaşmada rol alan genleri (SRY, SOX9, SF1, WT1, DAX1, WNT4, FOXL2, FGF9, DMRT1) ve işlevlerini…\" kazanımındaki \"Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır.\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "En az bir Y kromozomu olan embriyo erkek olarak gelişir. hiçbir koşulda gözlenmez ve SRY ve TDF tek belirleyicidir",
+      "B": "Bu süreçte \"SRY ve TDF\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "C": "Benzer tabloların tamamı aynı nedene bağlıdır; \"SRY ve TDF\" ayırıcı tanıda gereksizdir",
+      "D": "En az bir Y kromozomu olan embriyo erkek olarak gelişir. Çünkü Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır.",
+      "E": "Bu olguda izlem gerekmez; \"Gonadal farklılaşmada rol alan genleri (SRY, SOX9, SF1, WT1, DAX1,…\" yalnızca teorik bir bilgidir"
+     },
+     "dogru": "D",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır. sonucu \"En az bir Y kromozomu olan embriyo erkek olarak gelişir.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"SRY ve TDF\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"SRY ve TDF\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"SRY ve TDF\" bilgisiyle çelişir.",
+      "D": "Doğru; En az bir Y kromozomu olan embriyo erkek olarak gelişir. Çünkü Y kromozomunun kısa kolundaki (Yp11.3) SRY,…",
+      "E": "Yanlış; ders paketindeki \"SRY ve TDF\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Miks gonadal disgenezi: 45,X/46,XY mozaik karyotip. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "DHT düşük, testosteron normal/yüksek",
+      "B": "Enzim aktivitesi %10'un altına düşerse klasik, %20-50 düşerse nonklasik tablo",
+      "C": "Herhangi bir aşamadaki bozukluk CGB ile sonuçlanabilir",
+      "D": "Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir",
+      "E": "Kopya sayısı artışı XY CGB"
+     },
+     "dogru": "D",
+     "aciklama": "Tıbbi Genetik düzeneğinde 45,X/46,XY mozaik karyotip bilinir. Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir. Mekanizma bu sırayla işlediği için beklenen sonuç Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar olur; çeldiricilerdeki olaylar farklı basamaklara aittir ve aynı sonucu üretmez. Bu nedenle doğru yanıt D seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade 5α-redüktaz eksikliği sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade KAH formları sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Dört ana aşama sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "D": "Doğru; Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir çünkü 45,X/46,XY mozaik karyotip düzeneği bu sonucu üretir.",
+      "E": "Yanlış; bu ifade DAX1 sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k06-q08",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aynı kazanımın farklı bir yönü: FOXL2 ve BPES mekanizması açısından aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "FOXL2 over gelişiminde önemlidir",
+      "B": "PAIS (Reifenstein) geniş yelpazede ambigus genitalya ile gelir",
+      "C": "Genetik cinsiyet, gonadal cinsiyet, iç-dış genitalya, pubertede ikincil seks karakterleri",
+      "D": "Otozomal testis belirleyici gendir (17q34)",
+      "E": "CGB cinsiyet kromozom CGB, 46,XX CGB ve 46,XY CGB olarak"
+     },
+     "dogru": "A",
+     "aciklama": "FOXL2 over gelişiminde önemlidir. Heterozigot mutasyon BPES (blefarofimozis, pitozis, epikantus inversus) yapar. Fizyopatolojik sıra bu yönde ilerlediğinden FOXL2 over gelişiminde önemlidir varlığında Heterozigot mutasyon BPES (blefarofimozis, pitozis, epikantus inversus) beklenir. Diğer seçenekler bu düzeneğin parçası değildir ve sorudaki tabloyu açıklayamaz. Bu nedenle doğru yanıt A seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; FOXL2 over gelişiminde önemlidir. Bu mekanizma heterozigot mutasyon bpes (blefarofimozis, pitozis, epikantus inversus) yapar sonucunu doğurur.",
+      "B": "Yanlış; bu ifade PAIS ve MAIS sürecine ait bir özelliktir ve foxl2 ve bpes düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Cinsiyet farklılaşma düzeyleri sürecine ait bir özelliktir ve foxl2 ve bpes düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade SOX9 sürecine ait bir özelliktir ve foxl2 ve bpes düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade CGB sınıflaması ve terimler sürecine ait bir özelliktir ve foxl2 ve bpes düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -634,6 +1267,112 @@
       7,
       10,
       11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "69 yaşındaki bir hasta ayırıcı tanısı tartışılan ve öyküsü derinleştirilen bir hastada hekime başvuruyor. Değerlendirmede \"FOXL2 over gelişiminde önemlidir; fetal ürogenital katlantıda, postnatal over ve göz kapağında eksprese olur.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Gonadal disgenezi genetiğini ve pür gonadal disgeneziyi açıklayabilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "FOXL2 over gelişiminde önemlidir; fetal ürogenital katlantıda, postnatal over ve göz kapağında… ilkesinin tam tersi geçerlidir ve Kolesterol metabolizması defektleri CGB ile sonuçlanır. gözlenmez",
+      "B": "Bu tablodan sorumlu temel mekanizma Kolesterol defekti ve CGB olup \"Gonadal disgenezi genetiğini ve pür gonadal disgeneziyi…\" ile ilişkisizdir",
+      "C": "Bulgular \"Gonadal disgenezi genetiğini ve pür gonadal disgeneziyi açıklayabilmek\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "D": "FOXL2 over gelişiminde önemlidir; fetal ürogenital katlantıda, postnatal over ve göz kapağında eksprese olur. Bu nedenle Heterozigot mutasyon BPES (blefarofimozis, pitozis, epikantus inversus) yapar.",
+      "E": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"FOXL2 ve BPES\" ile açıklanamaz"
+     },
+     "dogru": "D",
+     "aciklama": "Robbins/Harrison mantığıyla: FOXL2 over gelişiminde önemlidir; fetal ürogenital katlantıda, postnatal over ve göz kapağında eksprese olur. Doğrudan sonucu \"Heterozigot mutasyon BPES (blefarofimozis, pitozis, epikantus inversus) yapar.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"FOXL2 ve BPES\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"FOXL2 ve BPES\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"FOXL2 ve BPES\" bilgisiyle çelişir.",
+      "D": "Doğru; FOXL2 over gelişiminde önemlidir; fetal ürogenital katlantıda, postnatal over ve göz kapağında eksprese olur.…",
+      "E": "Yanlış; ders paketindeki \"FOXL2 ve BPES\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta tanısal test sonucunun yorumlandığı bağımsız bir olguda ele alınıyor. Öyküde \"Kolesterol defekti ve CGB\" vurgulanıyor ve hekim \"Gonadal disgenezi genetiğini ve pür gonadal disgeneziyi açıklayabilmek\" kazanımındaki \"Testosteron kolesterol türevidir; Smith-Lemli-Opitz sendromu (DHCR7 mutasyonu) kolesterol metabolizmasını etkiler.\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kolesterol metabolizması defektleri CGB ile sonuçlanır. hiçbir koşulda gözlenmez ve FOXL2 ve BPES tek belirleyicidir",
+      "B": "Bu süreçte \"FOXL2 ve BPES\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "C": "Benzer tabloların tamamı aynı nedene bağlıdır; \"Kolesterol defekti ve CGB\" ayırıcı tanıda gereksizdir",
+      "D": "Bu olguda izlem gerekmez; \"Gonadal disgenezi genetiğini ve pür gonadal disgeneziyi açıklayabilmek\" yalnızca teorik bir bilgidir",
+      "E": "Kolesterol metabolizması defektleri CGB ile sonuçlanır. Çünkü Testosteron kolesterol türevidir; Smith-Lemli-Opitz sendromu (DHCR7 mutasyonu) kolesterol metabolizmasını…"
+     },
+     "dogru": "E",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Testosteron kolesterol türevidir; Smith-Lemli-Opitz sendromu (DHCR7 mutasyonu) kolesterol metabolizmasını etkiler. sonucu \"Kolesterol metabolizması defektleri CGB ile sonuçlanır.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"FOXL2 ve BPES\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"FOXL2 ve BPES\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"FOXL2 ve BPES\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"FOXL2 ve BPES\" bilgisiyle çelişir.",
+      "E": "Doğru; Kolesterol metabolizması defektleri CGB ile sonuçlanır. Çünkü Testosteron kolesterol türevidir;…"
+     },
+     "bilgi": [
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Miks gonadal disgenezi: 45,X/46,XY mozaik karyotip. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Uterus, tüpler ve üst vajina yok",
+      "B": "Cinsiyet daha fertilizasyon anında belirlenir ve embriyonik gelişim başlar",
+      "C": "Testisten salınan testosteron ve AMH hangi kanalın gelişeceğini belirler",
+      "D": "Heterozigot mutasyon BPES (blefarofimozis, pitozis, epikantus inversus) yapar",
+      "E": "Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir"
+     },
+     "dogru": "E",
+     "aciklama": "45,X/46,XY mozaik karyotip. Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir. Fizyopatolojik sıra bu yönde ilerlediğinden 45,X/46,XY mozaik karyotip varlığında Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar beklenir. Diğer seçenekler bu düzeneğin parçası değildir ve sorudaki tabloyu açıklayamaz. Bu nedenle doğru yanıt E seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade CAIS sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade Fertilizasyon ve görevleri sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Wolff ve Müller kanalları sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade FOXL2 ve BPES sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "E": "Doğru; Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir çünkü 45,X/46,XY mozaik karyotip düzeneği bu sonucu üretir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Miks gonadal disgenezi düzeneğinin temel mekanizması aşağıdakilerden hangisinde doğru tanımlanmıştır?",
+     "secenekler": {
+      "A": "Riskli aileler gebelik öncesi danışma almalı",
+      "B": "45,X/46,XY mozaik karyotip",
+      "C": "1947'de Alfred Jost'un tavşan deneyi kadın gelişiminin (overler hariç) spesifik",
+      "D": "RSPO1, WNT4, CTNNB1 ve FOXL2 birlikte çalışır",
+      "E": "En sık seks kromozom varyantı (1/500 erkek doğum)"
+     },
+     "dogru": "B",
+     "aciklama": "45,X/46,XY mozaik karyotip. Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir. Bu ilişki Tıbbi Genetik fizyolojisinin temel düzeneklerinden biridir: 45,X/46,XY mozaik karyotip doğrudan Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar doğurur. Diğer seçeneklerdeki süreçler farklı yolaklara aittir ve bu tabloda beklenen sonucu vermez. Bu nedenle doğru yanıt B seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade KAH prenatal yönetim sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "B": "Doğru; 45,X/46,XY mozaik karyotip. Bu mekanizma fenotip ambigus genitalyadan turner/normal kadın-erkek fenotipine kadar değişir sonucunu doğurur.",
+      "C": "Yanlış; bu ifade Jost deneyi sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade Over genleri sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade Klinefelter (47,XXY) sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      24
      ],
      "benzer_cikmis": []
     }
@@ -722,6 +1461,112 @@
       16
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "26 yaşındaki bir hasta tedavi yanıtı izlenen ve kliniği yeniden değerlendirilen bir olguda hekime başvuruyor. Değerlendirmede \"Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar; Leydig hücrelerinden testosteron salınır.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"İç ve dış genital organ gelişiminde testosteron, AMH ve DHT'nin rolünü açıklayabilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar; Leydig hücrelerinden… ilkesinin tam tersi geçerlidir ve Fenotip hafiftir ve sıklıkla tanı almayabilir. gözlenmez",
+      "B": "Bu tablodan sorumlu temel mekanizma 47,XYY ve 47,XXX olup \"İç ve dış genital organ gelişiminde testosteron, AMH ve…\" ile ilişkisizdir",
+      "C": "Bulgular \"İç ve dış genital organ gelişiminde testosteron, AMH ve DHT'nin…\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "D": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"AMH ve testosteron\" ile açıklanamaz",
+      "E": "Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar; Leydig hücrelerinden testosteron salınır. Bu nedenle Erkek yönde iç genitalya gelişimi bu iki faktöre bağlıdır."
+     },
+     "dogru": "E",
+     "aciklama": "Robbins/Harrison mantığıyla: Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar; Leydig hücrelerinden testosteron salınır. Doğrudan sonucu \"Erkek yönde iç genitalya gelişimi bu iki faktöre bağlıdır.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "E": "Doğru; Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar; Leydig hücrelerinden testosteron…"
+     },
+     "bilgi": [
+      9,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta aynı konunun farklı bir yönünü aydınlatmak için ele alınan ikinci bir olguda ele alınıyor. Öyküde \"47,XYY ve 47,XXX\" vurgulanıyor ve hekim \"İç ve dış genital organ gelişiminde testosteron, AMH ve DHT'nin rolünü açıklayabilmek\" kazanımındaki \"Her ikisi de 1/1000 doğum; 47,XYY genellikle normal ve aktif, hafif öğrenme güçlüğü, fertil; 47,XXX pasif-sessiz, motor/dil geriliği, fertilite normal.\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Fenotip hafiftir ve sıklıkla tanı almayabilir. Çünkü Her ikisi de 1/1000 doğum; 47,XYY genellikle normal ve aktif, hafif öğrenme güçlüğü, fertil; 47,XXX…",
+      "B": "Fenotip hafiftir ve sıklıkla tanı almayabilir. hiçbir koşulda gözlenmez ve AMH ve testosteron tek belirleyicidir",
+      "C": "Bu süreçte \"AMH ve testosteron\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "D": "Benzer tabloların tamamı aynı nedene bağlıdır; \"47,XYY ve 47,XXX\" ayırıcı tanıda gereksizdir",
+      "E": "Bu olguda izlem gerekmez; \"İç ve dış genital organ gelişiminde testosteron, AMH ve DHT'nin…\" yalnızca teorik bir bilgidir"
+     },
+     "dogru": "A",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Her ikisi de 1/1000 doğum; 47,XYY genellikle normal ve aktif, hafif öğrenme güçlüğü, fertil; 47,XXX pasif-sessiz, motor/dil geriliği, fertilite normal. sonucu \"Fenotip hafiftir ve sıklıkla tanı almayabilir.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; Fenotip hafiftir ve sıklıkla tanı almayabilir. Çünkü Her ikisi de 1/1000 doğum; 47,XYY genellikle normal ve…",
+      "B": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      16,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "AMH ve testosteron: Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Erkek yönde iç genitalya gelişimi bu iki faktöre bağlıdır",
+      "B": "Kortizol yapımı yetersizse ACTH artar ve adrenal hiperplazi olur",
+      "C": "Genotipik-fenotipik cinsiyet farkı seks kromatini ile ayırt edilebilir",
+      "D": "Kopya sayısı artışı XY CGB",
+      "E": "Y kromozomu varsa kişi internal ve eksternal olarak erkektir"
+     },
+     "dogru": "A",
+     "aciklama": "Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar. Erkek yönde iç genitalya gelişimi bu iki faktöre bağlıdır. Bu ilişki Tıbbi Genetik fizyolojisinin temel düzeneklerinden biridir: Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları doğrudan Erkek yönde iç genitalya gelişimi bu iki doğurur. Diğer seçeneklerdeki süreçler farklı yolaklara aittir ve bu tabloda beklenen sonucu vermez. Bu nedenle doğru yanıt A seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; Erkek yönde iç genitalya gelişimi bu iki faktöre bağlıdır çünkü Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar düzeneği bu sonucu üretir.",
+      "B": "Yanlış; bu ifade KAH ve mekanizması sürecine ait bir özelliktir ve amh ve testosteron düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Cinsiyet ayrımı ve Barr cisimciği sürecine ait bir özelliktir ve amh ve testosteron düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade DAX1 sürecine ait bir özelliktir ve amh ve testosteron düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade Kromozomal varyantlar sürecine ait bir özelliktir ve amh ve testosteron düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aynı kazanımın farklı bir yönü: SRY ve TDF mekanizması açısından aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Konseptus genleri 4-8 hücreli aşamada aktifleşir",
+      "B": "Otozomal testis belirleyici gendir (17q34)",
+      "C": "Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini",
+      "D": "Testosteron kolesterol türevidir",
+      "E": "45,X/46,XY mozaik karyotip"
+     },
+     "dogru": "C",
+     "aciklama": "Tıbbi Genetik düzeneğinde Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış bilinir. En az bir Y kromozomu olan embriyo erkek olarak gelişir. Mekanizma bu sırayla işlediği için beklenen sonuç En az bir Y kromozomu olan embriyo olur; çeldiricilerdeki olaylar farklı basamaklara aittir ve aynı sonucu üretmez. Bu nedenle doğru yanıt C seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Erken embriyonik aşamalar sürecine ait bir özelliktir ve sry ve tdf düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade SOX9 sürecine ait bir özelliktir ve sry ve tdf düzeneğini tanımlamaz.",
+      "C": "Doğru; Y kromozomunun kısa kolundaki (Yp11.3) SRY, farklılaşmamış gonaddan testis gelişimini başlatır. Bu mekanizma en az bir y kromozomu olan embriyo erkek sonucunu doğurur.",
+      "D": "Yanlış; bu ifade Kolesterol defekti ve CGB sürecine ait bir özelliktir ve sry ve tdf düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade Miks gonadal disgenezi sürecine ait bir özelliktir ve sry ve tdf düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -806,6 +1651,112 @@
      "bilgi": [
       19,
       23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "33 yaşındaki bir hasta tarama sırasında saptanan ve ileri incelemeye alınan bir kişide hekime başvuruyor. Değerlendirmede \"Konseptus genleri 4-8 hücreli aşamada aktifleşir; 16 hücreli aşama morula, 32 hücreli aşama blastosisttir.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Cinsiyet gelişim bozukluklarını (CGB) sınıflandırabilmek ve temel terimleri tanımlayabilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Konseptus genleri 4-8 hücreli aşamada aktifleşir; 16 hücreli aşama morula, 32 hücreli aşama blastosisttir. Bu nedenle 6. günde hCG pozitifleşir ve implantasyon gerçekleşir.",
+      "B": "Konseptus genleri 4-8 hücreli aşamada aktifleşir; 16 hücreli aşama morula, 32 hücreli aşama… ilkesinin tam tersi geçerlidir ve DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden… gözlenmez",
+      "C": "Bu tablodan sorumlu temel mekanizma Dış genitalya ve DHT olup \"Cinsiyet gelişim bozukluklarını (CGB) sınıflandırabilmek ve…\" ile ilişkisizdir",
+      "D": "Bulgular \"Cinsiyet gelişim bozukluklarını (CGB) sınıflandırabilmek ve temel…\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "E": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"Erken embriyonik aşamalar\" ile açıklanamaz"
+     },
+     "dogru": "A",
+     "aciklama": "Robbins/Harrison mantığıyla: Konseptus genleri 4-8 hücreli aşamada aktifleşir; 16 hücreli aşama morula, 32 hücreli aşama blastosisttir. Doğrudan sonucu \"6. günde hCG pozitifleşir ve implantasyon gerçekleşir.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; Konseptus genleri 4-8 hücreli aşamada aktifleşir; 16 hücreli aşama morula, 32 hücreli aşama blastosisttir. Bu…",
+      "B": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      2,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta komplikasyon gelişen ve mekanizması sorgulanan başka bir hastada ele alınıyor. Öyküde \"Dış genitalya ve DHT\" vurgulanıyor ve hekim \"Cinsiyet gelişim bozukluklarını (CGB) sınıflandırabilmek ve temel terimleri tanımlayabilmek\" kazanımındaki \"Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir; DHT eksikliğinde genital tüberkül klitoris, labioskrotal kabartı labia majör, ürogenital…\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur. hiçbir koşulda gözlenmez ve Erken embriyonik aşamalar tek belirleyicidir",
+      "B": "DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur. Çünkü Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir; DHT eksikliğinde genital tüberkül klitoris,…",
+      "C": "Bu süreçte \"Erken embriyonik aşamalar\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "D": "Benzer tabloların tamamı aynı nedene bağlıdır; \"Dış genitalya ve DHT\" ayırıcı tanıda gereksizdir",
+      "E": "Bu olguda izlem gerekmez; \"Cinsiyet gelişim bozukluklarını (CGB) sınıflandırabilmek ve temel…\" yalnızca teorik bir bilgidir"
+     },
+     "dogru": "B",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Dış genitalya farklılaşması DHT varlığı/yokluğu ile ilişkilidir; DHT eksikliğinde genital tüberkül klitoris, labioskrotal kabartı labia majör, ürogenital… sonucu \"DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "B": "Doğru; DHT varlığında penis ve skrotum gelişir; DHT ayrıca erkek tipi kelliğe neden olur. Çünkü Dış genitalya…",
+      "C": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"Erken embriyonik aşamalar\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      13,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Cinsiyet ayrımı ve Barr cisimciği: Dişide XX simetrik, erkekte XY farklıdır. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "46,XX CGB'de önce KAH",
+      "B": "Genotipik-fenotipik cinsiyet farkı seks kromatini ile ayırt edilebilir",
+      "C": "Testisten salınan testosteron ve AMH hangi kanalın gelişeceğini belirler",
+      "D": "Heterozigot mutasyon BPES (blefarofimozis, pitozis, epikantus inversus) yapar",
+      "E": "Fenotip hafiftir ve sıklıkla tanı almayabilir"
+     },
+     "dogru": "B",
+     "aciklama": "Tıbbi Genetik düzeneğinde Dişide XX simetrik, erkekte XY farklıdır bilinir. Genotipik-fenotipik cinsiyet farkı seks kromatini ile ayırt edilebilir. Mekanizma bu sırayla işlediği için beklenen sonuç Genotipik-fenotipik cinsiyet farkı seks kromatini ile ayırt olur; çeldiricilerdeki olaylar farklı basamaklara aittir ve aynı sonucu üretmez. Bu nedenle doğru yanıt B seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade CGB'ye genel yaklaşım sürecine ait bir özelliktir ve cinsiyet ayrımı ve barr cisimciği düzeneğini tanımlamaz.",
+      "B": "Doğru; Genotipik-fenotipik cinsiyet farkı seks kromatini ile ayırt edilebilir çünkü Dişide XX simetrik, erkekte XY farklıdır düzeneği bu sonucu üretir.",
+      "C": "Yanlış; bu ifade Wolff ve Müller kanalları sürecine ait bir özelliktir ve cinsiyet ayrımı ve barr cisimciği düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade FOXL2 ve BPES sürecine ait bir özelliktir ve cinsiyet ayrımı ve barr cisimciği düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade 47,XYY ve 47,XXX sürecine ait bir özelliktir ve cinsiyet ayrımı ve barr cisimciği düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Aynı kazanımın farklı bir yönü: Cinsiyet farklılaşma düzeyleri mekanizması açısından aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "1947'de Alfred Jost'un tavşan deneyi kadın gelişiminin (overler hariç) spesifik",
+      "B": "RSPO1, WNT4, CTNNB1 ve FOXL2 birlikte çalışır",
+      "C": "En sık seks kromozom varyantı (1/500 erkek doğum)",
+      "D": "Genetik cinsiyet, gonadal cinsiyet, iç-dış genitalya, pubertede ikincil seks karakterleri",
+      "E": "X'e bağlı AR geni LOF mutasyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Genetik cinsiyet, gonadal cinsiyet, iç-dış genitalya, pubertede ikincil seks karakterleri ve toplumun yüklediği rol sıralanır. Cinsiyet biyolojik ve toplumsal boyutları olan çok basamaklı bir süreçtir. Fizyopatolojik sıra bu yönde ilerlediğinden Genetik cinsiyet, gonadal cinsiyet, iç-dış genitalya, pubertede varlığında Cinsiyet biyolojik ve toplumsal boyutları olan çok beklenir. Diğer seçenekler bu düzeneğin parçası değildir ve sorudaki tabloyu açıklayamaz. Bu nedenle doğru yanıt D seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Jost deneyi sürecine ait bir özelliktir ve cinsiyet farklılaşma düzeyleri düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade Over genleri sürecine ait bir özelliktir ve cinsiyet farklılaşma düzeyleri düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Klinefelter (47,XXY) sürecine ait bir özelliktir ve cinsiyet farklılaşma düzeyleri düzeneğini tanımlamaz.",
+      "D": "Doğru; Genetik cinsiyet, gonadal cinsiyet, iç-dış genitalya, pubertede ikincil seks karakterleri ve toplumun yüklediği rol sıralanır. Bu mekanizma cinsiyet biyolojik ve toplumsal boyutları olan çok basamaklı sonucunu doğurur.",
+      "E": "Yanlış; bu ifade Androjen duyarsızlık sendromu sürecine ait bir özelliktir ve cinsiyet farklılaşma düzeyleri düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      3
      ],
      "benzer_cikmis": []
     }
@@ -896,6 +1847,110 @@
       22
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k10-q04",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "40 yaşındaki bir hasta yıllardır süren yakınmalarla başvuran ve fizik muayenede tipik bulguları saptanan bir hastada hekime başvuruyor. Değerlendirmede \"Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49 görülür.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Kromozomal CGB'leri (Klinefelter, Turner, 47,XYY, 47,XXX) açıklayabilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom,… ilkesinin tam tersi geçerlidir ve Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir. gözlenmez",
+      "B": "Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49 görülür. Bu nedenle Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir.",
+      "C": "Bu tablodan sorumlu temel mekanizma Kromozomal varyantlar olup \"Kromozomal CGB'leri (Klinefelter, Turner, 47,XYY, 47,XXX)…\" ile ilişkisizdir",
+      "D": "Bulgular \"Kromozomal CGB'leri (Klinefelter, Turner, 47,XYY, 47,XXX)…\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "E": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"Kromozomal varyantlar\" ile açıklanamaz"
+     },
+     "dogru": "B",
+     "aciklama": "Robbins/Harrison mantığıyla: Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49 görülür. Doğrudan sonucu \"Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "B": "Doğru; Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49…",
+      "C": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k10-q05",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta tedavi seçeneğinin tartışıldığı farklı bir klinik senaryoda ele alınıyor. Öyküde \"Kromozomal varyantlar\" vurgulanıyor ve hekim \"Kromozomal CGB'leri (Klinefelter, Turner, 47,XYY, 47,XXX) açıklayabilmek\" kazanımındaki \"Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49 görülür.\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir. hiçbir koşulda gözlenmez ve Kromozomal varyantlar tek belirleyicidir",
+      "B": "Bu süreçte \"Kromozomal varyantlar\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "C": "Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir. Çünkü Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49…",
+      "D": "Benzer tabloların tamamı aynı nedene bağlıdır; \"Kromozomal varyantlar\" ayırıcı tanıda gereksizdir",
+      "E": "Bu olguda izlem gerekmez; \"Kromozomal CGB'leri (Klinefelter, Turner, 47,XYY, 47,XXX)…\" yalnızca teorik bir bilgidir"
+     },
+     "dogru": "C",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır; en sık 45 veya 47 kromozom, nadir 48-49 görülür. sonucu \"Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "C": "Doğru; Genel kural: Y kromozomu varsa kişi internal ve eksternal olarak erkektir. Çünkü Seks kromozomlarının sayısal…",
+      "D": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"Kromozomal varyantlar\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k10-q06",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Turner (45,X): Tek X, Y yok. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Cinsiyet biyolojik ve toplumsal boyutları olan çok basamaklı bir süreçtir",
+      "B": "Heterozigot LOF 46,XY CGB ve kampomelik displazi",
+      "C": "Sterilite, pubertede sekonder seks özelliği gelişmez",
+      "D": "Kolesterol metabolizması defektleri CGB ile sonuçlanır",
+      "E": "DHT düşük, testosteron normal/yüksek"
+     },
+     "dogru": "C",
+     "aciklama": "Tek X, Y yok. Sterilite, pubertede sekonder seks özelliği gelişmez. Fizyopatolojik sıra bu yönde ilerlediğinden Tek X, Y yok varlığında Sterilite, pubertede sekonder seks özelliği gelişmez beklenir. Diğer seçenekler bu düzeneğin parçası değildir ve sorudaki tabloyu açıklayamaz. Bu nedenle doğru yanıt C seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Cinsiyet farklılaşma düzeyleri sürecine ait bir özelliktir ve turner (45,x) düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade SOX9 sürecine ait bir özelliktir ve turner (45,x) düzeneğini tanımlamaz.",
+      "C": "Doğru; Sterilite, pubertede sekonder seks özelliği gelişmez çünkü Tek X, Y yok düzeneği bu sonucu üretir.",
+      "D": "Yanlış; bu ifade Kolesterol defekti ve CGB sürecine ait bir özelliktir ve turner (45,x) düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade 5α-redüktaz eksikliği sürecine ait bir özelliktir ve turner (45,x) düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Aynı kazanımın farklı bir yönü: Klinefelter (47,XXY) mekanizması açısından aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Mezonefrik (Wolffian) kanal erkek, paramezonefrik (Mülleryan) kanal dişi üreme sistemini",
+      "B": "FOXL2 over gelişiminde önemlidir",
+      "C": "Sıklığı kromozom anomalilerine göre daha azdır (1/10.000)",
+      "D": "PAIS (Reifenstein) geniş yelpazede ambigus genitalya ile gelir",
+      "E": "En sık seks kromozom varyantı (1/500 erkek doğum)"
+     },
+     "dogru": "E",
+     "aciklama": "En sık seks kromozom varyantı (1/500 erkek doğum). Meme gelişimi, geniş kalça, uzun boy, öğrenme güçlüğü. Bu ilişki Tıbbi Genetik fizyolojisinin temel düzeneklerinden biridir: En sık seks kromozom varyantı (1/500 erkek doğrudan Meme gelişimi, geniş kalça, uzun boy, öğrenme doğurur. Diğer seçeneklerdeki süreçler farklı yolaklara aittir ve bu tabloda beklenen sonucu vermez. Bu nedenle doğru yanıt E seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Wolff ve Müller kanalları sürecine ait bir özelliktir ve klinefelter (47,xxy) düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade FOXL2 ve BPES sürecine ait bir özelliktir ve klinefelter (47,xxy) düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Gen mutasyonları sürecine ait bir özelliktir ve klinefelter (47,xxy) düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade PAIS ve MAIS sürecine ait bir özelliktir ve klinefelter (47,xxy) düzeneğini tanımlamaz.",
+      "E": "Doğru; En sık seks kromozom varyantı (1/500 erkek doğum). Bu mekanizma meme gelişimi, geniş kalça, uzun boy, öğrenme güçlüğü sonucunu doğurur."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -976,6 +2031,112 @@
       "C": "Her olgu doğumda fark edilmez.",
       "D": "İnfertilite sık tanı nedenidir.",
       "E": "Karyotip 45,X/46,XY'dir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k11-q04",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "47 yaşındaki bir hasta akut başvuru yapan ve laboratuvar-görüntüleme bulguları birlikte değerlendirilen bir olguda hekime başvuruyor. Değerlendirmede \"SRD5A2 mutasyonu (p.L55Q); 5α-redüktaz testosteronu DHT'ye çevirir; otozomal resesif.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Miks gonadal disgeneziyi tanımlayabilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "SRD5A2 mutasyonu (p.L55Q); 5α-redüktaz testosteronu DHT'ye çevirir; otozomal resesif. ilkesinin tam tersi geçerlidir ve Erkek görünümü ortaya çıkar; cinsiyet kimliği bazen değişir. gözlenmez",
+      "B": "Bu tablodan sorumlu temel mekanizma 5-ARD pubertesi olup \"Miks gonadal disgeneziyi tanımlayabilmek\" ile ilişkisizdir",
+      "C": "SRD5A2 mutasyonu (p.L55Q); 5α-redüktaz testosteronu DHT'ye çevirir; otozomal resesif. Bu nedenle DHT düşük, testosteron normal/yüksek; genitalya dişi-ambiguus arası, genellikle kız olarak yetiştirilir.",
+      "D": "Bulgular \"Miks gonadal disgeneziyi tanımlayabilmek\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "E": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"5α-redüktaz eksikliği\" ile açıklanamaz"
+     },
+     "dogru": "C",
+     "aciklama": "Robbins/Harrison mantığıyla: SRD5A2 mutasyonu (p.L55Q); 5α-redüktaz testosteronu DHT'ye çevirir; otozomal resesif. Doğrudan sonucu \"DHT düşük, testosteron normal/yüksek; genitalya dişi-ambiguus arası, genellikle kız olarak yetiştirilir.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"5α-redüktaz eksikliği\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"5α-redüktaz eksikliği\" bilgisiyle çelişir.",
+      "C": "Doğru; SRD5A2 mutasyonu (p.L55Q); 5α-redüktaz testosteronu DHT'ye çevirir; otozomal resesif. Bu nedenle DHT düşük,…",
+      "D": "Yanlış; ders paketindeki \"5α-redüktaz eksikliği\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"5α-redüktaz eksikliği\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k11-q05",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta hastalığın seyri ve prognozunun değerlendirildiği ayrı bir vakada ele alınıyor. Öyküde \"5-ARD pubertesi\" vurgulanıyor ve hekim \"Miks gonadal disgeneziyi tanımlayabilmek\" kazanımındaki \"Pubertede testosteron üretimi artar; testisler iner, penis genişler, fasial kıllanma olur, ses kalınlaşır, kaslar gelişir.\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Erkek görünümü ortaya çıkar; cinsiyet kimliği bazen değişir. hiçbir koşulda gözlenmez ve 5α-redüktaz eksikliği tek belirleyicidir",
+      "B": "Bu süreçte \"5α-redüktaz eksikliği\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "C": "Benzer tabloların tamamı aynı nedene bağlıdır; \"5-ARD pubertesi\" ayırıcı tanıda gereksizdir",
+      "D": "Erkek görünümü ortaya çıkar; cinsiyet kimliği bazen değişir. Çünkü Pubertede testosteron üretimi artar; testisler iner, penis genişler, fasial kıllanma olur, ses kalınlaşır,…",
+      "E": "Bu olguda izlem gerekmez; \"Miks gonadal disgeneziyi tanımlayabilmek\" yalnızca teorik bir bilgidir"
+     },
+     "dogru": "D",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Pubertede testosteron üretimi artar; testisler iner, penis genişler, fasial kıllanma olur, ses kalınlaşır, kaslar gelişir. sonucu \"Erkek görünümü ortaya çıkar; cinsiyet kimliği bazen değişir.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"5α-redüktaz eksikliği\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"5α-redüktaz eksikliği\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"5α-redüktaz eksikliği\" bilgisiyle çelişir.",
+      "D": "Doğru; Erkek görünümü ortaya çıkar; cinsiyet kimliği bazen değişir. Çünkü Pubertede testosteron üretimi artar;…",
+      "E": "Yanlış; ders paketindeki \"5α-redüktaz eksikliği\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k11-q06",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Miks gonadal disgenezi: 45,X/46,XY mozaik karyotip. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Overlerin varlığı fetal genital farklılaşmayı etkilemez",
+      "B": "Bu genlerin bozuklukları over gelişimini ve Müller kanal oluşumunu etkiler",
+      "C": "Meme gelişimi, geniş kalça, uzun boy, öğrenme güçlüğü",
+      "D": "Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir",
+      "E": "Uterus, tüpler ve üst vajina yok"
+     },
+     "dogru": "D",
+     "aciklama": "45,X/46,XY mozaik karyotip. Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir. Bu ilişki Tıbbi Genetik fizyolojisinin temel düzeneklerinden biridir: 45,X/46,XY mozaik karyotip doğrudan Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar doğurur. Diğer seçeneklerdeki süreçler farklı yolaklara aittir ve bu tabloda beklenen sonucu vermez. Bu nedenle doğru yanıt D seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Jost deneyi sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade Over genleri sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Klinefelter (47,XXY) sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "D": "Doğru; Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir çünkü 45,X/46,XY mozaik karyotip düzeneği bu sonucu üretir.",
+      "E": "Yanlış; bu ifade CAIS sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k11-q07",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Miks gonadal disgenezi düzeneğinin temel mekanizması aşağıdakilerden hangisinde doğru tanımlanmıştır?",
+     "secenekler": {
+      "A": "45,X/46,XY mozaik karyotip",
+      "B": "SF1 (NR5A1) hipotalamo-hipofizer-gonadal aks ve steroid sentezinden sorumludur",
+      "C": "CGB cinsiyet kromozom CGB, 46,XX CGB ve 46,XY CGB olarak",
+      "D": "Pubertede testosteron üretimi artar",
+      "E": "Riskli aileler gebelik öncesi danışma almalı"
+     },
+     "dogru": "A",
+     "aciklama": "Tıbbi Genetik düzeneğinde 45,X/46,XY mozaik karyotip bilinir. Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar değişir. Mekanizma bu sırayla işlediği için beklenen sonuç Fenotip ambigus genitalyadan Turner/normal kadın-erkek fenotipine kadar olur; çeldiricilerdeki olaylar farklı basamaklara aittir ve aynı sonucu üretmez. Bu nedenle doğru yanıt A seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; 45,X/46,XY mozaik karyotip. Bu mekanizma fenotip ambigus genitalyadan turner/normal kadın-erkek fenotipine kadar değişir sonucunu doğurur.",
+      "B": "Yanlış; bu ifade SF1 ve WT1 sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade CGB sınıflaması ve terimler sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade 5-ARD pubertesi sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade KAH prenatal yönetim sürecine ait bir özelliktir ve miks gonadal disgenezi düzeneğini tanımlamaz."
      },
      "bilgi": [
       24
@@ -1070,6 +2231,112 @@
       30
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k12-q04",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "54 yaşındaki bir hasta ayırıcı tanısı tartışılan ve öyküsü derinleştirilen bir hastada hekime başvuruyor. Değerlendirmede \"Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar; Leydig hücrelerinden testosteron salınır.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Gen mutasyonlarına bağlı CGB'leri (5α-redüktaz eksikliği, androjen duyarsızlık sendromu, KAH) açıklayabilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar; Leydig hücrelerinden… ilkesinin tam tersi geçerlidir ve Aile öyküsü genellikle pozitiftir; genetik danışma önemlidir. gözlenmez",
+      "B": "Bu tablodan sorumlu temel mekanizma Gen mutasyonları olup \"Gen mutasyonlarına bağlı CGB'leri (5α-redüktaz eksikliği,…\" ile ilişkisizdir",
+      "C": "Bulgular \"Gen mutasyonlarına bağlı CGB'leri (5α-redüktaz eksikliği, androjen…\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "D": "Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar; Leydig hücrelerinden testosteron salınır. Bu nedenle Erkek yönde iç genitalya gelişimi bu iki faktöre bağlıdır.",
+      "E": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"AMH ve testosteron\" ile açıklanamaz"
+     },
+     "dogru": "D",
+     "aciklama": "Robbins/Harrison mantığıyla: Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar; Leydig hücrelerinden testosteron salınır. Doğrudan sonucu \"Erkek yönde iç genitalya gelişimi bu iki faktöre bağlıdır.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "D": "Doğru; Sertoli hücrelerinden AMH/MİF salınır ve Mülleryan kanalları baskılar; Leydig hücrelerinden testosteron…",
+      "E": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      9,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k12-q05",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta tanısal test sonucunun yorumlandığı bağımsız bir olguda ele alınıyor. Öyküde \"Gen mutasyonları\" vurgulanıyor ve hekim \"Gen mutasyonlarına bağlı CGB'leri (5α-redüktaz eksikliği, androjen duyarsızlık sendromu, KAH) açıklayabilmek\" kazanımındaki \"Sıklığı kromozom anomalilerine göre daha azdır (1/10.000); kromozomal varyantlar sporadik, gen mutasyonları genellikle kalıtsaldır.\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Aile öyküsü genellikle pozitiftir; genetik danışma önemlidir. hiçbir koşulda gözlenmez ve AMH ve testosteron tek belirleyicidir",
+      "B": "Bu süreçte \"AMH ve testosteron\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "C": "Benzer tabloların tamamı aynı nedene bağlıdır; \"Gen mutasyonları\" ayırıcı tanıda gereksizdir",
+      "D": "Bu olguda izlem gerekmez; \"Gen mutasyonlarına bağlı CGB'leri (5α-redüktaz eksikliği, androjen…\" yalnızca teorik bir bilgidir",
+      "E": "Aile öyküsü genellikle pozitiftir; genetik danışma önemlidir. Çünkü Sıklığı kromozom anomalilerine göre daha azdır (1/10.000); kromozomal varyantlar sporadik, gen mutasyonları…"
+     },
+     "dogru": "E",
+     "aciklama": "Guyton/Robbins bütünlüğünde: Sıklığı kromozom anomalilerine göre daha azdır (1/10.000); kromozomal varyantlar sporadik, gen mutasyonları genellikle kalıtsaldır. sonucu \"Aile öyküsü genellikle pozitiftir; genetik danışma önemlidir.\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"AMH ve testosteron\" bilgisiyle çelişir.",
+      "E": "Doğru; Aile öyküsü genellikle pozitiftir; genetik danışma önemlidir. Çünkü Sıklığı kromozom anomalilerine göre daha…"
+     },
+     "bilgi": [
+      16,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k12-q06",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Androjen duyarsızlık sendromu: X'e bağlı AR geni LOF mutasyonu. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Erkek yönde iç genitalya gelişimi bu iki faktöre bağlıdır",
+      "B": "DHT varlığında penis ve skrotum gelişir",
+      "C": "Aile öyküsü genellikle pozitiftir",
+      "D": "Kortizol yapımı yetersizse ACTH artar ve adrenal hiperplazi olur",
+      "E": "Değişik derecede yetersiz virilizasyon"
+     },
+     "dogru": "E",
+     "aciklama": "Tıbbi Genetik düzeneğinde X'e bağlı AR geni LOF mutasyonu bilinir. Değişik derecede yetersiz virilizasyon. Mekanizma bu sırayla işlediği için beklenen sonuç Değişik derecede yetersiz virilizasyon olur; çeldiricilerdeki olaylar farklı basamaklara aittir ve aynı sonucu üretmez. Bu nedenle doğru yanıt E seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade AMH ve testosteron sürecine ait bir özelliktir ve androjen duyarsızlık sendromu düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade Dış genitalya ve DHT sürecine ait bir özelliktir ve androjen duyarsızlık sendromu düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Gen mutasyonları sürecine ait bir özelliktir ve androjen duyarsızlık sendromu düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade KAH ve mekanizması sürecine ait bir özelliktir ve androjen duyarsızlık sendromu düzeneğini tanımlamaz.",
+      "E": "Doğru; Değişik derecede yetersiz virilizasyon çünkü X'e bağlı AR geni LOF mutasyonu düzeneği bu sonucu üretir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k12-q07",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Aynı kazanımın farklı bir yönü: 5α-redüktaz eksikliği mekanizması açısından aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "WNT4 heterozigot mutasyonunda Mülleriyan aplazi, overyan disfonksiyon ve androjen fazlalığı",
+      "B": "SRD5A2 mutasyonu (p.L55Q)",
+      "C": "Tek X, Y yok",
+      "D": "Nadiren inmemiş testisler kanseröz hale dönüşebilir",
+      "E": "Konseptus genleri 4-8 hücreli aşamada aktifleşir"
+     },
+     "dogru": "B",
+     "aciklama": "SRD5A2 mutasyonu (p.L55Q). DHT düşük, testosteron normal/yüksek. Fizyopatolojik sıra bu yönde ilerlediğinden SRD5A2 mutasyonu (p.L55Q) varlığında DHT düşük, testosteron normal/yüksek beklenir. Diğer seçenekler bu düzeneğin parçası değildir ve sorudaki tabloyu açıklayamaz. Bu nedenle doğru yanıt B seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade WNT4 ve SERKAL sürecine ait bir özelliktir ve 5α-redüktaz eksikliği düzeneğini tanımlamaz.",
+      "B": "Doğru; SRD5A2 mutasyonu (p.L55Q). Bu mekanizma dht düşük, testosteron normal/yüksek sonucunu doğurur.",
+      "C": "Yanlış; bu ifade Turner (45,X) sürecine ait bir özelliktir ve 5α-redüktaz eksikliği düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade CAIS testis kanser riski sürecine ait bir özelliktir ve 5α-redüktaz eksikliği düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade Erken embriyonik aşamalar sürecine ait bir özelliktir ve 5α-redüktaz eksikliği düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1154,6 +2421,112 @@
      },
      "bilgi": [
       33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k13-q04",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "61 yaşındaki bir hasta tedavi yanıtı izlenen ve kliniği yeniden değerlendirilen bir olguda hekime başvuruyor. Değerlendirmede \"PAIS (Reifenstein) geniş yelpazede ambigus genitalya ile gelir; MAIS'te tamamen erkek görünüm vardır.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"Konjenital adrenal hiperplazinin mekanizmasını, formlarını ve prenatal yönetimini açıklayabilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "PAIS (Reifenstein) geniş yelpazede ambigus genitalya ile gelir; MAIS'te tamamen erkek görünüm… ilkesinin tam tersi geçerlidir ve Kortizol yapımı yetersizse ACTH artar ve adrenal hiperplazi olur; gonadların… gözlenmez",
+      "B": "Bu tablodan sorumlu temel mekanizma KAH ve mekanizması olup \"Konjenital adrenal hiperplazinin mekanizmasını, formlarını…\" ile ilişkisizdir",
+      "C": "Bulgular \"Konjenital adrenal hiperplazinin mekanizmasını, formlarını ve…\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "D": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"PAIS ve MAIS\" ile açıklanamaz",
+      "E": "PAIS (Reifenstein) geniş yelpazede ambigus genitalya ile gelir; MAIS'te tamamen erkek görünüm vardır. Bu nedenle PAIS klinik olarak daha kolay tanınır; MAIS'te pubertede maskulinizasyon düzensizlikleri görülür."
+     },
+     "dogru": "E",
+     "aciklama": "Robbins/Harrison mantığıyla: PAIS (Reifenstein) geniş yelpazede ambigus genitalya ile gelir; MAIS'te tamamen erkek görünüm vardır. Doğrudan sonucu \"PAIS klinik olarak daha kolay tanınır; MAIS'te pubertede maskulinizasyon düzensizlikleri görülür.\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"PAIS ve MAIS\" bilgisiyle çelişir.",
+      "B": "Yanlış; ders paketindeki \"PAIS ve MAIS\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"PAIS ve MAIS\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"PAIS ve MAIS\" bilgisiyle çelişir.",
+      "E": "Doğru; PAIS (Reifenstein) geniş yelpazede ambigus genitalya ile gelir; MAIS'te tamamen erkek görünüm vardır. Bu…"
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k13-q05",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta aynı konunun farklı bir yönünü aydınlatmak için ele alınan ikinci bir olguda ele alınıyor. Öyküde \"KAH ve mekanizması\" vurgulanıyor ve hekim \"Konjenital adrenal hiperplazinin mekanizmasını, formlarını ve prenatal yönetimini açıklayabilmek\" kazanımındaki \"46,XX CGB'de kuşkulu genitalyanın en önemli nedeni; steroid biyosentez bozukluğu ile fetal androjen fazlalığı; %90-95 21-hidroksilaz (CYP21A2).\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kortizol yapımı yetersizse ACTH artar ve adrenal hiperplazi olur; gonadların palpe edilememesi, Mülleryan yapılar ve 17-OH progesteron yüksekliği tanı… Çünkü 46,XX CGB'de kuşkulu genitalyanın en önemli nedeni; steroid biyosentez bozukluğu ile fetal androjen…",
+      "B": "Kortizol yapımı yetersizse ACTH artar ve adrenal hiperplazi olur; gonadların palpe edilememesi, Mülleryan yapılar ve… hiçbir koşulda gözlenmez ve PAIS ve MAIS tek belirleyicidir",
+      "C": "Bu süreçte \"PAIS ve MAIS\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "D": "Benzer tabloların tamamı aynı nedene bağlıdır; \"KAH ve mekanizması\" ayırıcı tanıda gereksizdir",
+      "E": "Bu olguda izlem gerekmez; \"Konjenital adrenal hiperplazinin mekanizmasını, formlarını ve…\" yalnızca teorik bir bilgidir"
+     },
+     "dogru": "A",
+     "aciklama": "Guyton/Robbins bütünlüğünde: 46,XX CGB'de kuşkulu genitalyanın en önemli nedeni; steroid biyosentez bozukluğu ile fetal androjen fazlalığı; %90-95 21-hidroksilaz (CYP21A2). sonucu \"Kortizol yapımı yetersizse ACTH artar ve adrenal hiperplazi olur; gonadların palpe edilememesi, Mülleryan yapılar ve 17-OH progesteron…\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; Kortizol yapımı yetersizse ACTH artar ve adrenal hiperplazi olur; gonadların palpe edilememesi, Mülleryan…",
+      "B": "Yanlış; ders paketindeki \"PAIS ve MAIS\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"PAIS ve MAIS\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"PAIS ve MAIS\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"PAIS ve MAIS\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k13-q06",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "KAH prenatal yönetim: Riskli aileler gebelik öncesi danışma almalı. Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Etkilenmiş kız fetusta tedavi gebelik sonuna kadar sürer",
+      "B": "Kopya sayısı artışı XY CGB",
+      "C": "Y kromozomu varsa kişi internal ve eksternal olarak erkektir",
+      "D": "Erkek görünümü ortaya çıkar",
+      "E": "46,XX CGB'de önce KAH"
+     },
+     "dogru": "A",
+     "aciklama": "Riskli aileler gebelik öncesi danışma almalı. Etkilenmiş kız fetusta tedavi gebelik sonuna kadar sürer. Fizyopatolojik sıra bu yönde ilerlediğinden Riskli aileler gebelik öncesi danışma almalı varlığında Etkilenmiş kız fetusta tedavi gebelik sonuna kadar beklenir. Diğer seçenekler bu düzeneğin parçası değildir ve sorudaki tabloyu açıklayamaz. Bu nedenle doğru yanıt A seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; Etkilenmiş kız fetusta tedavi gebelik sonuna kadar sürer çünkü Riskli aileler gebelik öncesi danışma almalı düzeneği bu sonucu üretir.",
+      "B": "Yanlış; bu ifade DAX1 sürecine ait bir özelliktir ve kah prenatal yönetim düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Kromozomal varyantlar sürecine ait bir özelliktir ve kah prenatal yönetim düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade 5-ARD pubertesi sürecine ait bir özelliktir ve kah prenatal yönetim düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade CGB'ye genel yaklaşım sürecine ait bir özelliktir ve kah prenatal yönetim düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k13-q07",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Aynı kazanımın farklı bir yönü: KAH formları mekanizması açısından aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Testosteron kolesterol türevidir",
+      "B": "45,X/46,XY mozaik karyotip",
+      "C": "Klasik KAH prenatal başlangıçlıdır",
+      "D": "46,XX CGB'de kuşkulu genitalyanın en önemli nedeni",
+      "E": "Normal cinsiyet gelişimi fertilizasyon/genetik cinsiyet, ortak organların gelişimi, gonadal farklılaşma"
+     },
+     "dogru": "C",
+     "aciklama": "Klasik KAH prenatal başlangıçlıdır. Enzim aktivitesi %10'un altına düşerse klasik, %20-50 düşerse nonklasik tablo oluşur. Bu ilişki Tıbbi Genetik fizyolojisinin temel düzeneklerinden biridir: Klasik KAH prenatal başlangıçlıdır doğrudan Enzim aktivitesi %10'un altına düşerse klasik, %20-50 doğurur. Diğer seçeneklerdeki süreçler farklı yolaklara aittir ve bu tabloda beklenen sonucu vermez. Bu nedenle doğru yanıt C seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Kolesterol defekti ve CGB sürecine ait bir özelliktir ve kah formları düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade Miks gonadal disgenezi sürecine ait bir özelliktir ve kah formları düzeneğini tanımlamaz.",
+      "C": "Doğru; Klasik KAH prenatal başlangıçlıdır. Bu mekanizma enzim aktivitesi %10'un altına düşerse klasik, %20-50 düşerse sonucunu doğurur.",
+      "D": "Yanlış; bu ifade KAH ve mekanizması sürecine ait bir özelliktir ve kah formları düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade Dört ana aşama sürecine ait bir özelliktir ve kah formları düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      32
      ],
      "benzer_cikmis": []
     }
@@ -1243,12 +2616,113 @@
       34
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k14-q04",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "68 yaşındaki bir hasta tarama sırasında saptanan ve ileri incelemeye alınan bir kişide hekime başvuruyor. Değerlendirmede \"İlk analiz karyotip (klasik karyotipleme atlanmamalı); pelvik USG, plazma 17-OH progesteron ve testosteron değerlendirilir.\" bulgusuna ulaşılıyor. Bu dersin (Tıbbi Genetik – Doğumsal Kadın/Erkek Genital Gelişim Anomalileri) kapsamındaki \"CGB'ye tanısal yaklaşım algoritmasını özetleyebilmek\" kazanımı çerçevesinde aşağıdaki yargılardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "İlk analiz karyotip (klasik karyotipleme atlanmamalı); pelvik USG, plazma 17-OH progesteron ve testosteron değerlendirilir. Bu nedenle 46,XX CGB'de önce KAH; 46,XY CGB'de androjen biyosentez defektleri ve 5α-redüktaz eksikliği akla gelir; %20-25 olguda…",
+      "B": "İlk analiz karyotip (klasik karyotipleme atlanmamalı); pelvik USG, plazma 17-OH progesteron ve… ilkesinin tam tersi geçerlidir ve 46,XX CGB'de önce KAH; 46,XY CGB'de androjen biyosentez defektleri ve… gözlenmez",
+      "C": "Bu tablodan sorumlu temel mekanizma CGB'ye genel yaklaşım olup \"CGB'ye tanısal yaklaşım algoritmasını özetleyebilmek\" ile ilişkisizdir",
+      "D": "Bulgular \"CGB'ye tanısal yaklaşım algoritmasını özetleyebilmek\" kapsamında tesadüfidir ve klinik kararı değiştirmez",
+      "E": "Bu durum yalnızca laboratuvar artefaktına bağlıdır ve \"CGB'ye genel yaklaşım\" ile açıklanamaz"
+     },
+     "dogru": "A",
+     "aciklama": "Robbins/Harrison mantığıyla: İlk analiz karyotip (klasik karyotipleme atlanmamalı); pelvik USG, plazma 17-OH progesteron ve testosteron değerlendirilir. Doğrudan sonucu \"46,XX CGB'de önce KAH; 46,XY CGB'de androjen biyosentez defektleri ve 5α-redüktaz eksikliği akla gelir; %20-25 olguda genetik tanı…\" doğurur; diğer seçenekler bu bilgi paketiyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; İlk analiz karyotip (klasik karyotipleme atlanmamalı); pelvik USG, plazma 17-OH progesteron ve testosteron…",
+      "B": "Yanlış; ders paketindeki \"CGB'ye genel yaklaşım\" bilgisiyle çelişir.",
+      "C": "Yanlış; ders paketindeki \"CGB'ye genel yaklaşım\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"CGB'ye genel yaklaşım\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"CGB'ye genel yaklaşım\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k14-q05",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Farklı bir hasta komplikasyon gelişen ve mekanizması sorgulanan başka bir hastada ele alınıyor. Öyküde \"CGB'ye genel yaklaşım\" vurgulanıyor ve hekim \"CGB'ye tanısal yaklaşım algoritmasını özetleyebilmek\" kazanımındaki \"İlk analiz karyotip (klasik karyotipleme atlanmamalı); pelvik USG, plazma 17-OH progesteron ve testosteron değerlendirilir.\" mekanizmasını sorguluyor. Bu hastada beklenen/hatalı olan yorumu bulmak için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "46,XX CGB'de önce KAH; 46,XY CGB'de androjen biyosentez defektleri ve 5α-redüktaz eksikliği akla gelir; %20-25 olguda… hiçbir koşulda gözlenmez ve CGB'ye genel yaklaşım tek belirleyicidir",
+      "B": "46,XX CGB'de önce KAH; 46,XY CGB'de androjen biyosentez defektleri ve 5α-redüktaz eksikliği akla gelir; %20-25 olguda genetik tanı konulamaz. Çünkü İlk analiz karyotip (klasik karyotipleme atlanmamalı); pelvik USG, plazma 17-OH progesteron ve testosteron…",
+      "C": "Bu süreçte \"CGB'ye genel yaklaşım\" tümüyle etkisizdir ve yerini tamamen farklı bir yolak alır",
+      "D": "Benzer tabloların tamamı aynı nedene bağlıdır; \"CGB'ye genel yaklaşım\" ayırıcı tanıda gereksizdir",
+      "E": "Bu olguda izlem gerekmez; \"CGB'ye tanısal yaklaşım algoritmasını özetleyebilmek\" yalnızca teorik bir bilgidir"
+     },
+     "dogru": "B",
+     "aciklama": "Guyton/Robbins bütünlüğünde: İlk analiz karyotip (klasik karyotipleme atlanmamalı); pelvik USG, plazma 17-OH progesteron ve testosteron değerlendirilir. sonucu \"46,XX CGB'de önce KAH; 46,XY CGB'de androjen biyosentez defektleri ve 5α-redüktaz eksikliği akla gelir; %20-25 olguda genetik tanı…\" verir; çeldiriciler ders paketindeki bu nedenselliği bozar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ders paketindeki \"CGB'ye genel yaklaşım\" bilgisiyle çelişir.",
+      "B": "Doğru; 46,XX CGB'de önce KAH; 46,XY CGB'de androjen biyosentez defektleri ve 5α-redüktaz eksikliği akla gelir;…",
+      "C": "Yanlış; ders paketindeki \"CGB'ye genel yaklaşım\" bilgisiyle çelişir.",
+      "D": "Yanlış; ders paketindeki \"CGB'ye genel yaklaşım\" bilgisiyle çelişir.",
+      "E": "Yanlış; ders paketindeki \"CGB'ye genel yaklaşım\" bilgisiyle çelişir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k14-q06",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "CGB'ye genel yaklaşım: İlk analiz karyotip (klasik karyotipleme atlanmamalı). Buna göre beklenen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Heterozigot mutasyon BPES (blefarofimozis, pitozis, epikantus inversus) yapar",
+      "B": "46,XX CGB'de önce KAH",
+      "C": "Fenotip hafiftir ve sıklıkla tanı almayabilir",
+      "D": "Testislerin cerrahi olarak çıkarılması gerekir",
+      "E": "Cinsiyet biyolojik ve toplumsal boyutları olan çok basamaklı bir süreçtir"
+     },
+     "dogru": "B",
+     "aciklama": "İlk analiz karyotip (klasik karyotipleme atlanmamalı). 46,XX CGB'de önce KAH. Bu ilişki Tıbbi Genetik fizyolojisinin temel düzeneklerinden biridir: İlk analiz karyotip (klasik karyotipleme atlanmamalı) doğrudan 46,XX CGB'de önce KAH doğurur. Diğer seçeneklerdeki süreçler farklı yolaklara aittir ve bu tabloda beklenen sonucu vermez. Bu nedenle doğru yanıt B seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade FOXL2 ve BPES sürecine ait bir özelliktir ve cgb'ye genel yaklaşım düzeneğini tanımlamaz.",
+      "B": "Doğru; 46,XX CGB'de önce KAH çünkü İlk analiz karyotip (klasik karyotipleme atlanmamalı) düzeneği bu sonucu üretir.",
+      "C": "Yanlış; bu ifade 47,XYY ve 47,XXX sürecine ait bir özelliktir ve cgb'ye genel yaklaşım düzeneğini tanımlamaz.",
+      "D": "Yanlış; bu ifade CAIS testis kanser riski sürecine ait bir özelliktir ve cgb'ye genel yaklaşım düzeneğini tanımlamaz.",
+      "E": "Yanlış; bu ifade Cinsiyet farklılaşma düzeyleri sürecine ait bir özelliktir ve cgb'ye genel yaklaşım düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-k14-q07",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "CGB'ye genel yaklaşım düzeneğinin temel mekanizması aşağıdakilerden hangisinde doğru tanımlanmıştır?",
+     "secenekler": {
+      "A": "En sık seks kromozom varyantı (1/500 erkek doğum)",
+      "B": "X'e bağlı AR geni LOF mutasyonu",
+      "C": "Spermin ovuma girmesiyle dişi ve erkek pronükleus birleşerek zigot oluşur",
+      "D": "İlk analiz karyotip (klasik karyotipleme atlanmamalı)",
+      "E": "Mezonefrik (Wolffian) kanal erkek, paramezonefrik (Mülleryan) kanal dişi üreme sistemini"
+     },
+     "dogru": "D",
+     "aciklama": "Tıbbi Genetik düzeneğinde İlk analiz karyotip (klasik karyotipleme atlanmamalı) bilinir. 46,XX CGB'de önce KAH. Mekanizma bu sırayla işlediği için beklenen sonuç 46,XX CGB'de önce KAH olur; çeldiricilerdeki olaylar farklı basamaklara aittir ve aynı sonucu üretmez. Bu nedenle doğru yanıt D seçeneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu ifade Klinefelter (47,XXY) sürecine ait bir özelliktir ve cgb'ye genel yaklaşım düzeneğini tanımlamaz.",
+      "B": "Yanlış; bu ifade Androjen duyarsızlık sendromu sürecine ait bir özelliktir ve cgb'ye genel yaklaşım düzeneğini tanımlamaz.",
+      "C": "Yanlış; bu ifade Fertilizasyon ve görevleri sürecine ait bir özelliktir ve cgb'ye genel yaklaşım düzeneğini tanımlamaz.",
+      "D": "Doğru; İlk analiz karyotip (klasik karyotipleme atlanmamalı). Bu mekanizma 46,xx cgb'de önce kah sonucunu doğurur.",
+      "E": "Yanlış; bu ifade Wolff ve Müller kanalları sürecine ait bir özelliktir ve cgb'ye genel yaklaşım düzeneğini tanımlamaz."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 43,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:05"
+ ]
 }

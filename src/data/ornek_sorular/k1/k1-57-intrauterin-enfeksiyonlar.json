@@ -6,6 +6,7 @@
  "konu": "İntrauterin Enfeksiyonlar",
  "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
  "tarih": "2026-10-13",
+ "soru_sayisi": 70,
  "kazanimlar": [
   {
    "no": 1,
@@ -89,6 +90,115 @@
       8
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Gebe eğitim polikliniğinde bir öğrenci, konjenital enfeksiyonların ne zaman edinildiğini ve geçiş yollarını anlatıyor. Listeria, grup B streptokok ve HSV örneklerini yollara yerleştiriyor. Hangi anlatım doğrudur?",
+     "secenekler": {
+      "A": "İntrauterin enfeksiyon yalnızca doğumdan sonra edinilir",
+      "B": "Fetüs organogenezde enfeksiyonlara çok duyarlıdır; bulaş transplasental, asendan ve doğum sırasında olur; asendan yolda grup B streptokok, gonokok ve klamidya yer alır",
+      "C": "Asendan yolla yalnızca virüsler bulaşır",
+      "D": "Transplasental yolla yalnızca bakteriler bulaşır",
+      "E": "Doğum sırasında geçişte yalnızca protozoalar bulaşır"
+     },
+     "dogru": "B",
+     "aciklama": "İntrauterin enfeksiyonlar anne karnında veya doğum sürecinde edinilir; transplasental (virüs, bakteri, protozoa), asendan (bakteriler) ve doğum sırasında (bakteri+virüs) üç yolla bulaşır.",
+     "sik_aciklamalari": {
+      "A": "Anne karnında veya doğum sürecinde edinilir.",
+      "B": "Doğru: duyarlılık ve üç yolun etken spektrumu birlikte doğru.",
+      "C": "Asendan yol bakterilerle olur.",
+      "D": "Transplasental yolda virüs, bakteri ve protozoa vardır.",
+      "E": "Doğum sırasında bakteri ve virüsler (HSV, CMV, HIV, HBV) bulaşır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Doğumhanede miad gebede aktif genital HSV lezyonları fark ediliyor. Asistan, sezaryen endikasyonunu tartışırken diğer doğum-sırası etkenlerini de sıralıyor. Hangi bilgi bütünü doğrudur?",
+     "secenekler": {
+      "A": "HSV yalnızca transplasental yolla bulaşır",
+      "B": "HIV asendan yolla bulaşan tipik etkendir",
+      "C": "Grup B streptokok yalnızca transplasental bulaşır",
+      "D": "HPV transplasental yolun tipik etkenidir",
+      "E": "Doğum kanalından geçişte HSV, CMV, HIV, HBV ve HPV riski vardır; Listeria hem transplasental hem doğum sırasında bulaşabilir; transplasental yol virüs, bakteri ve protozoayı kapsar"
+     },
+     "dogru": "E",
+     "aciklama": "HSV, CMV, HIV, HBV ve HPV doğum sırasında; Listeria transplasental ve doğum sırasında; GBS asendan ve doğum sırasında bulaşır; transplasental yol tüm etken gruplarını kapsar.",
+     "sik_aciklamalari": {
+      "A": "HSV tipik olarak doğum sırasında bulaşır.",
+      "B": "HIV doğum sırasında bulaşan virüstür.",
+      "C": "GBS asendan ve doğum sırasında bulaşır.",
+      "D": "HPV doğum sırasında bulaşır.",
+      "E": "Doğru: doğum sırası etkenleri ve Listeria'nın iki yolu birlikte doğru."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "İntrauterin enfeksiyonların tanımı ve bulaş yolları için doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Asendan yolla yalnızca virüsler geçer",
+      "B": "Transplasental geçiş yalnızca bakterilerle olur",
+      "C": "Transplasental, asendan ve doğum sırası geçiş üç bulaş yoludur",
+      "D": "Doğum sırasında geçiş yalnızca protozoalarla olur",
+      "E": "Fetüs intrauterin enfeksiyonlara dirençlidir"
+     },
+     "dogru": "C",
+     "aciklama": "İntrauterin enfeksiyonlar anne karnında veya doğum sürecinde edinilir; fetüs bu dönemde enfeksiyonlara çok duyarlıdır. Transplasental yolla virüs, bakteri ve protozoalar; asendan yolla bakteriler; doğum sırasında bakteri ve virüsler geçer.",
+     "sik_aciklamalari": {
+      "A": "Asendan geçiş bakterilerle olur.",
+      "B": "Transplasental yolla virüs, bakteri ve protozoalar geçebilir.",
+      "C": "Doğru: üç bulaş yolu ve etken grupları doğru eşleştirilmiştir.",
+      "D": "Doğum sırasında bakteri ve virüsler geçer.",
+      "E": "Fetüs intrauterin dönemde enfeksiyonlara çok duyarlıdır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Enfeksiyon zamanlamasının fetüs üzerindeki etkisi nasıldır?",
+     "secenekler": {
+      "A": "Organogenez dönemi enfeksiyonları teratojen etkiyle organ bozukluğu yapar",
+      "B": "Transplasental geçiş yalnızca pnömoni yapar",
+      "C": "Asendan geçişin fetüse etkisi yoktur",
+      "D": "Geç gebelik enfeksiyonları daha teratojendir",
+      "E": "Transplasental geçiş prematüriteye yol açmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Özellikle organogenez döneminde geçirilen enfeksiyonlar teratojen etki göstererek organ gelişim bozukluklarına yol açar. Transplasental geçiş abortus, gelişme geriliği, düşük doğum ağırlığı ve prematüriteye; asendan geçiş erken membran rüptürü ve sepsise neden olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: organogenez dönemi duyarlılığı ve teratojen etki doğru verilmiştir.",
+      "B": "Transplasental geçiş abortus, gelişme geriliği ve çoklu organ tutulumu yapar.",
+      "C": "Asendan geçiş abortus, membran rüptürü, pnömoni, menenjit ve sepsise yol açar.",
+      "D": "Teratojen etki özellikle organogenez dönemindedir.",
+      "E": "Transplasental geçiş düşük doğum ağırlığı ve prematürite nedenidir."
+     },
+     "bilgi": [
+      3,
+      6
+     ],
+     "benzer_cikmis": [
+      "b6079d34889d"
+     ]
     }
    ],
    "ilgili_cikmis": []
@@ -169,6 +279,111 @@
       "C": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
       "D": "Doğru eşleştirme; bu nedenle doğru seçenek değildir.",
       "E": "Yanlış eşleştirme (aranan cevap): Listeria bakteridir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Mikrobiyoloji laboratuvarında konjenital enfeksiyon paneli kuruluyor. TORCH başlığı ve etken grupları tanımlanacak. Hangi tanımlama doğrudur?",
+     "secenekler": {
+      "A": "TORCH yalnızca bakteriyel etkenleri kapsar",
+      "B": "Toksoplazma bir virüstür",
+      "C": "Treponema pallidum viral etkendir",
+      "D": "TORCH; Toxoplasma, Rubella, CMV, Herpes/HSV ve diğer konjenital etkenleri kapsar; protozoa grubunda Toxoplasma gondii ve Trypanosoma cruzi yer alır",
+      "E": "CMV bakteriyel etkendir"
+     },
+     "dogru": "D",
+     "aciklama": "TORCH; Toxoplasma, Rubella, CMV, Herpes/HSV ve diğerleridir; protozoalar T. gondii ve T. cruzi, bakteriler T. pallidum, M. tuberculosis ve L. monocytogenes'i içerir.",
+     "sik_aciklamalari": {
+      "A": "TORCH virüs, bakteri ve protozoayı kapsayan klasik gruptur.",
+      "B": "Toksoplazma protozoondur.",
+      "C": "T. pallidum bakteridir.",
+      "D": "Doğru: açılım ve protozoa üyeleri birlikte doğru.",
+      "E": "CMV herpes virüstür."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Enfeksiyon hastalıkları uzmanı, tüberkülozlu gebenin bebeğindeki konjenital risk ile suçiçeği geçiren gebenin riskini aynı çerçevede değerlendiriyor. Etken gruplandırmasına ilişkin hangi ifade doğrudur?",
+     "secenekler": {
+      "A": "Konjenital viral etkenler arasında CMV, HSV, VZV, rubella, enterovirüsler ve HIV-1/2 sayılır; bakteriyel etkenler arasında Treponema pallidum, Mycobacterium tuberculosis, Listeria monocytogenes, Campylobacter fetus ve Borrelia burgdorferi sayılır",
+      "B": "Listeria bir virüstür ve yalnızca asendan bulaşır",
+      "C": "VZV bakteriyel etkendir",
+      "D": "Mycobacterium tuberculosis konjenital etken değildir",
+      "E": "Enterovirüsler protozoa grubundadır"
+     },
+     "dogru": "A",
+     "aciklama": "Virüsler herpes ailesi (CMV, HSV, VZV), rubella, enterovirüsler, HIV, HBV'yi; bakteriler sifiliz, tüberküloz, listeria, Campylobacter, Salmonella, Borrelia'yı kapsar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: viral ve bakteriyel listeler paketteki gruplandırmayla uyumludur.",
+      "B": "Listeria bakteridir, transplasental bulaşır.",
+      "C": "VZV herpes virüstür.",
+      "D": "M. tuberculosis bakteriyel listededir.",
+      "E": "Enterovirüsler viral gruptadır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "TORCH grubunu oluşturan etkenler hangileridir?",
+     "secenekler": {
+      "A": "TORCH yalnızca bakteriyel etkenleri kapsar",
+      "B": "Toksoplazma TORCH grubunda değildir",
+      "C": "TORCH grubunda hepatit virüsleri bulunur",
+      "D": "TORCH; Toxoplasma, Rubella, CMV ve Herpes benzeri etkenleri kapsar",
+      "E": "TORCH grubunda protozoa yoktur"
+     },
+     "dogru": "D",
+     "aciklama": "TORCH klasik konjenital enfeksiyon grubudur: Toxoplasma, Rubella, CMV, Herpes/HSV ve benzeri etkenleri kapsar. Virüsler, bakteriler (T. pallidum, L. monocytogenes gibi) ve protozoalar (T. gondii) intrauterin enfeksiyon etkenleridir.",
+     "sik_aciklamalari": {
+      "A": "TORCH parazit, virüs ve herpes grubu etkenleri içerir.",
+      "B": "Toksoplazma grubun ilk harfidir.",
+      "C": "Hepatit virüsleri TORCH dışında ayrıca ele alınır.",
+      "D": "Doğru: klasik TORCH bileşenleri eksiksiz verilmiştir.",
+      "E": "Toxoplasma bir protozoadır ve gruptadır."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İntrauterin etkenlerin grup sınıflaması için doğru eşleşme hangisidir?",
+     "secenekler": {
+      "A": "Listeria bir virüstür",
+      "B": "T. gondii protozoa, L. monocytogenes bakteri, CMV virüstür",
+      "C": "T. pallidum bir virüstür",
+      "D": "CMV bir bakteridir",
+      "E": "HIV bir protozoadır"
+     },
+     "dogru": "B",
+     "aciklama": "İntrauterin etkenler üç gruptadır: virüsler (CMV, HSV, VZV, kızamık, rubella, HIV, HBV), bakteriler (T. pallidum, M. tuberculosis, L. monocytogenes, Campylobacter, Salmonella, Borrelia) ve protozoalar (T. gondii, T. cruzi).",
+     "sik_aciklamalari": {
+      "A": "Listeria monocytogenes bir bakteridir.",
+      "B": "Doğru: üç etkenin grup eşleşmesi doğrudur.",
+      "C": "T. pallidum bakteriyel etkendir.",
+      "D": "CMV viral etkendir.",
+      "E": "HIV viral etkendir."
      },
      "bilgi": [
       5
@@ -259,6 +474,113 @@
       6
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "8. gebelik haftasında döküntülü ateşli hastalık geçiren gebenin fetüsünde kardiyak anomali ve katarakt saptanıyor. Öğrenci bu tablonun dönem-etki ilişkisini açıklıyor. Hangi açıklama doğrudur?",
+     "secenekler": {
+      "A": "Organogenezdeki enfeksiyonun teratojen etkisi yoktur",
+      "B": "Transplasental geçiş yalnızca menenjitle sonuçlanır",
+      "C": "İlk trimesterde geçirilen transplasental enfeksiyon abortus, fetal gelişme geriliği ve organ gelişim bozukluklarına yol açabilir; SSS, göz, karaciğer, dalak, kalp ve cilt tutulabilir",
+      "D": "Transplasental enfeksiyon prematürite yapmaz",
+      "E": "Organotrofi kavramı intrauterin enfeksiyonlarda geçersizdir"
+     },
+     "dogru": "C",
+     "aciklama": "Organogenezdeki enfeksiyon teratojen etkiyle organ gelişim bozukluğu yapar; transplasental geçişte abortus, gelişme geriliği, düşük doğum ağırlığı ve çoklu organ tutulumu görülür.",
+     "sik_aciklamalari": {
+      "A": "Organogenez enfeksiyonları teratojendir.",
+      "B": "Çoklu organ ve gebelik kaybı tablosu yapar.",
+      "C": "Doğru: zamanlama, teratojenite ve tutulum örüntüsü birlikte doğru.",
+      "D": "Düşük doğum ağırlığı ve prematürite tipiktir.",
+      "E": "Mikroorganizmanın organotrofisi tutulumu belirler."
+     },
+     "bilgi": [
+      3,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "32 haftalık, membran rüptürü sonrası ateşli anneden doğan bebekte solunum sıkıntısı ve sepsis bulguları gelişiyor. Başka bir olguda doğum kanalından geçen bebekte konjonktivit ve hepatit izleniyor. Bu iki tablonun yol-etki eşleşmesi hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Asendan geçişte yalnızca hepatit görülür",
+      "B": "Doğum sırası geçişte organ gelişim bozukluğu tipiktir",
+      "C": "Asendan geçişte serebral palsi görülmez",
+      "D": "Doğum sırasında geçişte en yüksek olasılık teratojenitedir",
+      "E": "Erken membran rüptürü ve ateşli anneden doğan preterm bebekte asendan geçişe bağlı sepsis-menenjit-pnömoni beklenir; doğum kanalı geçişinde ise göz enfeksiyonları ve hepatit de tabloya eklenir"
+     },
+     "dogru": "E",
+     "aciklama": "Asendan geçişte abortus, erken membran rüptürü, prematürite, serebral palsi, pnömoni, menenjit ve sepsis; doğum sırasında pnömoni, menenjit, sepsis, göz enfeksiyonları, hepatit ve HIV görülür.",
+     "sik_aciklamalari": {
+      "A": "Asendan tabloda sepsis-menenjit zinciri ve serebral palsi vardır.",
+      "B": "Teratojenite transplasental-organogenez dönemine aittir.",
+      "C": "Serebral palsi asendan etkiler arasındadır.",
+      "D": "Doğum sırasında vertikal geçiş olasılığı en yüksektir, teratojenite değil.",
+      "E": "Doğru: iki yolun etki örüntüsü birlikte doğru verilmiştir."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Asendan ve doğum sırası geçişin etkileri nasıl ayrılır?",
+     "secenekler": {
+      "A": "Asendan geçiş yalnızca göz enfeksiyonu yapar",
+      "B": "Erken membran rüptürü transplasental geçişe bağlıdır",
+      "C": "Asendan geçişte serebral palsi görülmez",
+      "D": "Doğum sırası geçişte menenjit olmaz",
+      "E": "Asendan rüptür-sepsis, doğum yolu göz-hepatit yapar"
+     },
+     "dogru": "E",
+     "aciklama": "Asendan geçiş abortus, erken membran rüptürü, prematürite, düşük doğum ağırlığı, serebral palsi, pnömoni, menenjit ve sepsise yol açar. Doğum sırasında geçiş ise pnömoni, menenjit, sepsis, göz enfeksiyonları, hepatit ve HIV enfeksiyonuna neden olur.",
+     "sik_aciklamalari": {
+      "A": "Asendan geçiş abortus, rüptür, pnömoni, menenjit ve sepsis yapar.",
+      "B": "Erken membran rüptürü asendan geçişin etkisidir.",
+      "C": "Serebral palsi asendan geçiş etkileri arasındadır.",
+      "D": "Doğum sırasında geçiş menenjit ve sepsise yol açar.",
+      "E": "Doğru: iki yolun etki profilleri doğru ayrılmıştır."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Transplasental ve doğum sırası geçişin yenidoğan etkileri nelerdir?",
+     "secenekler": {
+      "A": "Transplasental organ bozar; doğum yolu pnömoni-sepsis yapar",
+      "B": "Transplasental geçişte SSS tutulumu olmaz",
+      "C": "Doğum sırası geçişte hepatit görülmez",
+      "D": "Transplasental geçiş yalnızca termde etkilidir",
+      "E": "İki yolun etkileri aynıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Transplasental geçiş abortus, fetal gelişme geriliği, organogenezde organ bozuklukları, düşük doğum ağırlığı ve prematürite yapar; SSS, göz, karaciğer, dalak, kalp ve cilt tutulur. Doğum sırası geçişte pnömoni, menenjit, sepsis, göz enfeksiyonları, hepatit ve HIV görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru: transplasental yolun teratojen-SSS profili ile doğum yolu enfeksiyonları doğru ayrılmıştır.",
+      "B": "SSS, göz, karaciğer, dalak, kalp ve cilt transplasental tutulum alanlarıdır.",
+      "C": "Hepatit ve HIV doğum sırası geçiş etkilerindendir.",
+      "D": "Transplasental etki özellikle organogenez dönemindedir.",
+      "E": "Yolların etki spektrumları farklıdır."
+     },
+     "bilgi": [
+      6,
+      8
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -346,6 +668,117 @@
      },
      "bilgi": [
       9,
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Doğumun 2. gününde solunum sıkıntısı ve sepsis gelişen term bebek ile 5 haftalıkken ateş ve menenjit bulguları gelişen başka bir bebek karşılaştırılıyor. Annelerin GBS taraması sorgulanıyor. Hangi bilgi doğrudur?",
+     "secenekler": {
+      "A": "GBS kolonizasyonu gebelerde %1'in altındadır",
+      "B": "GBS kolonizasyonu gebelerin %20-25'inde bulunur; erken başlangıçlı hastalık ilk haftada ağır pnömoni-sepsisle, geç başlangıçlı hastalık 2. hafta-3. ayda menenjit-bakteriyemiyle seyreder",
+      "C": "Erken başlangıçlı GBS daima menenjitle başlar",
+      "D": "Geç başlangıçlı GBS ilk 3 günde görülür",
+      "E": "Yenidoğan GBS enfeksiyonu 50/1000 sıklıktadır"
+     },
+     "dogru": "B",
+     "aciklama": "Gebelerde %20-25 rektal-vajinal GBS kolonizasyonu, yenidoğanda 0,5/1000 enfeksiyon; erken başlangıç ilk haftada pnömoni-sepsis, geç başlangıç 2. hafta-3. ayda menenjit-bakteriyemi yapar.",
+     "sik_aciklamalari": {
+      "A": "Kolonizasyon %20-25'tir.",
+      "B": "Doğru: kolonizasyon oranı ve iki dönemin klinik örüntüsü birlikte doğru.",
+      "C": "Erken dönemde pnömoni-sepsis öne çıkar.",
+      "D": "Geç başlangıç 2. hafta-3. aydır.",
+      "E": "Yenidoğan enfeksiyonu 0,5/1000'dir."
+     },
+     "bilgi": [
+      9,
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "30 haftalık preterm doğum yapan, GBS taraması yapılmamış bir gebenin bebeği ilk gün ağır sepsis tablosuna giriyor. Geriye dönük değerlendirmede korunma basamağı tartışılıyor. Hangi ifade doğrudur?",
+     "secenekler": {
+      "A": "Erken başlangıçlı GBS'de mortalite preterm ve termde eşittir",
+      "B": "GBS taraması doğum eyleminde ilk kez yapılır",
+      "C": "GBS profilaksisi postpartum başlanır",
+      "D": "Preterm bebekte erken başlangıçlı GBS mortalitesi %25'e ulaşır (termde %5); korunmada gebeliğin 35-37. haftasında kültür alınır ve pozitiflikte intrapartum profilaksi uygulanır",
+      "E": "GBS annede enfeksiyon yapmaz"
+     },
+     "dogru": "D",
+     "aciklama": "Erken başlangıç mortalitesi pretermde %25, termde %5'tir; korunma 35-37. haftada kültür ve intrapartum profilaksidir; annede endometrit ve ÜSE de yapar.",
+     "sik_aciklamalari": {
+      "A": "Preterm mortalite belirgin yüksektir.",
+      "B": "Tarama 35-37. haftada yapılır.",
+      "C": "Profilaksi intrapartumdur.",
+      "D": "Doğru: mortalite farkı ve tarama zamanlaması birlikte doğru.",
+      "E": "Endometrit ve ÜSE yapar."
+     },
+     "bilgi": [
+      10,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Grup B streptokok kolonizasyonu ve erken başlangıçlı hastalık nasıldır?",
+     "secenekler": {
+      "A": "GBS kolonizasyonu gebelerde %1'dir",
+      "B": "Erken başlangıçlı GBS ikinci aydan sonra görülür",
+      "C": "GBS kolonizasyonu %20-25'tir; erken hastalık ilk haftada pnömoniyle sepsise ilerler",
+      "D": "Erken GBS mortalitesi termde pretermden yüksektir",
+      "E": "GBS yenidoğanda yalnızca menenjit yapar"
+     },
+     "dogru": "C",
+     "aciklama": "Streptococcus agalactiae gebelerin %20-25'inde rektal-vajinal kolonizasyon yapar; yenidoğan enfeksiyonu 0,5/1000 canlı doğumdur. Erken başlangıçlı hastalık ilk haftada ağır pnömoniyle sepsise ilerler; mortalite pretermde %25, termde %5'tir.",
+     "sik_aciklamalari": {
+      "A": "Rektal-vajinal kolonizasyon %20-25 oranındadır.",
+      "B": "Erken başlangıçlı hastalık ilk haftada görülür (%80-85).",
+      "C": "Doğru: kolonizasyon oranı ve erken hastalık seyri birlikte doğru verilmiştir.",
+      "D": "Mortalite pretermde %25, termde %5'tir.",
+      "E": "Erken hastalık pnömoni-sepsis, geç hastalık menenjit-bakteriyemi yapar."
+     },
+     "bilgi": [
+      9,
+      10
+     ],
+     "benzer_cikmis": [
+      "95e9f345f0ab"
+     ]
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Geç başlangıçlı GBS ve korunma yaklaşımı nasıldır?",
+     "secenekler": {
+      "A": "Geç GBS ilk haftada pnömoni yapar",
+      "B": "Geç GBS menenjit yapar; korunma 35-37. hafta kültürüdür",
+      "C": "GBS'de anne enfeksiyonu olmaz",
+      "D": "Korunmada doğumda ilk kez kültür alınır",
+      "E": "Geç GBS mortalitesi erken GBS'den yüksektir"
+     },
+     "dogru": "B",
+     "aciklama": "Geç başlangıçlı GBS 2. hafta ile 3. ay arasında menenjit ve bakteriyemiyle seyreder. Annede doğum sonu endometrit, sezaryen alan ve idrar yolu enfeksiyonu görülür; korunmada gebeliğin 35-37. haftasında kültür alınır.",
+     "sik_aciklamalari": {
+      "A": "İlk hafta pnömoni-sepsis erken başlangıçlı hastalığa aittir.",
+      "B": "Doğru: geç hastalık zamanlaması-kliniği ve korunma haftası birlikte doğrudur.",
+      "C": "Annede endometrit, cerrahi alan ve idrar yolu enfeksiyonu görülür.",
+      "D": "Korunma için 35-37. haftada kültür önerilir.",
+      "E": "Mortalite verileri erken hastalık için pretermde %25, termde %5'tir."
+     },
+     "bilgi": [
       11,
       12
      ],
@@ -460,6 +893,110 @@
       14
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "28. haftadaki gebe, pastörize edilmemiş peynir tükettikten sonra ateş ve sırt ağrısı tarifliyor. Birkaç gün sonra durumunda düzelme oluyor ancak fetal takipte sorun saptanıyor. Bu tabloya ilişkin doğru açıklama hangisidir?",
+     "secenekler": {
+      "A": "Pastörize edilmemiş süt ve iyi yıkanmamış sebzelerle bulaşan Listeria, 26-30. haftalarda hücresel bağışıklık değişikliği nedeniyle gebe için artmış risk oluşturur ve transplasental geçiş yapar",
+      "B": "Listeria yalnızca cinsel yolla bulaşır",
+      "C": "Listeria gebelikte risk oluşturmaz",
+      "D": "Listeria yalnızca doğum sonrası bulaşır",
+      "E": "Listeria enfeksiyonu annede ağır seyreder, bebek etkilenmez"
+     },
+     "dogru": "A",
+     "aciklama": "Listeria kontamine süt-sebzeyle bulaşır; 26-30. haftada hücresel bağışıklık nedeniyle duyarlılık artar; annede bakteriyemiyle transplasental veya doğumda bulaşır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kaynak, risk penceresi ve geçiş yolu birlikte doğru.",
+      "B": "Gıda kaynaklıdır.",
+      "C": "Gebelikte duyarlılık artmıştır.",
+      "D": "Transplasental ve doğumda bulaşır.",
+      "E": "Anne hafif seyreder, fetüs ağır etkilenir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Ateş ve sırt ağrısı geçirip iyileşen gebenin 34 haftada ölü doğumu oluyor. Otopside karaciğer ve dalakta yaygın mikroabseler ve granülomlar rapor ediliyor. Yenidoğan yoğun bakımındaki başka bir bebekte sepsis ve menenjit izleniyor. En olası etken ve tablo hangisidir?",
+     "secenekler": {
+      "A": "Granulomatosis infantiseptica akciğerde kist hidatikle karakterizedir",
+      "B": "Listeriyozda fetal kayıp görülmez",
+      "C": "Ateşli anne öyküsü sonrası ölü doğan bebeğin otopsisinde karaciğer ve dalakta yaygın mikroabse ve granülomlar (granulomatosis infantiseptica) saptanması listeriyozu düşündürür; fetal kayıp oranı %20'dir",
+      "D": "Granulomatosis infantiseptica toksoplazmanın patognomonik bulgusudur",
+      "E": "Listeriyoz yenidoğanda yalnızca cilt bulgusu yapar"
+     },
+     "dogru": "C",
+     "aciklama": "Annede üşüme-titreme-ateş kendiliğinden iyileşir; %20 abortus/ölü doğum/neonatal ölüm; yenidoğanda karaciğer-dalakta mikroabse ve granülomlarla granulomatosis infantiseptica gelişir.",
+     "sik_aciklamalari": {
+      "A": "Karaciğer-dalak mikroabse ve granülomlarıdır.",
+      "B": "%20 fetal kayıp vardır.",
+      "C": "Doğru: otopsi bulgusu, oran ve klinik bağ birlikte doğru.",
+      "D": "Listeria tablosudur.",
+      "E": "Sepsis ve menenjit yapar."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Listeriyozun bulaş yolu ve gebelikteki duyarlılık artışı nasıldır?",
+     "secenekler": {
+      "A": "Listeria solunum yoluyla bulaşır",
+      "B": "Gebelikte listeriyoz riski azalır",
+      "C": "Bulaş yalnızca doğum sırasındadır",
+      "D": "Kontamine gıdayla bulaşır; 26-30. haftalarda duyarlılık artar",
+      "E": "Annede bakteriyemi bulaşta rol oynamaz"
+     },
+     "dogru": "D",
+     "aciklama": "Listeria kontamine gıdalarla (süt, sebze) bulaşır; hücresel bağışıklığın baskılanması nedeniyle gebelikte özellikle 26-30. haftalarda duyarlılık artar. Annede bakteriyemi sonrası transplasental veya doğum sırasında bulaş olur.",
+     "sik_aciklamalari": {
+      "A": "Bulaş kontamine süt ve sebze gibi gıdalarladır.",
+      "B": "Hücresel bağışıklık nedeniyle gebelikte duyarlılık artar.",
+      "C": "Annedeki bakteriyemi sonrası transplasental veya doğum sırası bulaş olur.",
+      "D": "Doğru: bulaş kaynağı ve riskli haftalar birlikte doğru verilmiştir.",
+      "E": "Anne bakteriyemisi fetal bulaşın kaynağıdır."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Listeriyozda anne kliniği ve granulomatosis infantiseptica nedir?",
+     "secenekler": {
+      "A": "Annede hafif seyrederken fetüste %20 kayıp ve mikroabseli granülomlar yapar",
+      "B": "Annede ağır seyreder, fetüs etkilenmez",
+      "C": "Granulomatosis infantiseptica akciğerle sınırlıdır",
+      "D": "Listeriyozda abortus riski yoktur",
+      "E": "Granülomlar yalnızca deride görülür"
+     },
+     "dogru": "A",
+     "aciklama": "Annede üşüme, titreme, ateş ve sırt ağrısı kendiliğinden iyileşir; ancak %20 abortus, ölü doğum veya neonatal ölüm görülür. Bebekte karaciğer ve dalakta yaygın mikroabse ve granülomlarla seyreden tablo granulomatosis infantiseptica'dır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: anne kliniği, fetal kayıp oranı ve granülomatöz tablo birlikte doğru verilmiştir.",
+      "B": "Anne tablosu kendiliğinden iyileşirken fetal sonuçlar ağırdır.",
+      "C": "Yaygın mikroabse ve granülomlar karaciğer ve dalaktadır.",
+      "D": "Abortus, ölü doğum veya neonatal ölüm %20'dir.",
+      "E": "Granülomlar karaciğer ve dalaktaki mikroabselerle tanımlanır."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -543,6 +1080,111 @@
      },
      "bilgi": [
       15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "HIV pozitif gebenin danışmanlığında vertikal geçişi artıran durumlar ve doğum şekli tartışılıyor. Viral yükü 5000 kopya/ml olan hastada hangi yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "Yüksek CD4 vertikal geçiş riskini artırır",
+      "B": "Emzirme vertikal geçişi azaltır",
+      "C": "Düşük viral yük sezaryen endikasyonudur",
+      "D": "İkiz gebelik riski azaltır",
+      "E": "Düşük CD4, yüksek viral yük, koryoamniyonit, erken membran rüptürü ve emzirme vertikal geçişi artırır; viral yük >1000 kopya/ml ise 38. haftada sezaryen önerilir"
+     },
+     "dogru": "E",
+     "aciklama": "Riski AIDS, düşük CD4, yüksek viral yük, ikiz gebelik, koryoamniyonit, erken membran rüptürü ve emzirme artırır; yük >1000 ise 38. haftada sezaryen önerilir.",
+     "sik_aciklamalari": {
+      "A": "Düşük CD4 riski artırır.",
+      "B": "Emzirme riski artırır.",
+      "C": "Eşik >1000 kopyadır.",
+      "D": "İkiz gebelik riski artırır.",
+      "E": "Doğru: risk faktörleri ve sezaryen eşiği birlikte doğru."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Viral yükü bilinmeyen HIV pozitif gebenin doğumu planlanıyor. Neonatoloji ile perinatal profilaksi ve bebek izlemi konuşuluyor. Hangi plan doğrudur?",
+     "secenekler": {
+      "A": "Bebek tanısında antikor taraması yeterlidir",
+      "B": "Anneye doğum esnasında IV zidovudin, bebeğe 1 ay zidovudin şurup verilir; vertikal geçişi artırıcı müdahalelerden kaçınılır ve bebekte tanı PCR ile konur",
+      "C": "Emzirme HIV pozitif annede önerilir",
+      "D": "Zidovudin yalnızca gebeliğin ilk trimesterinde verilir",
+      "E": "Sezaryen viral yükten bağımsız her HIV gebede 40. haftada yapılır"
+     },
+     "dogru": "B",
+     "aciklama": "Anneye doğumda/sezaryandan 3 saat önce IV zidovudin, bebeğe 1 ay zidovudin şurup verilir; müdahalelerden kaçınılır; bebek tanısında PCR kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Maternal antikor geçtiğinden PCR gerekir.",
+      "B": "Doğru: anne-bebek profilaksisi ve tanı yöntemi birlikte doğru.",
+      "C": "Emzirme geçişi artırır, önerilmez.",
+      "D": "Profilaksi doğum ve neonatal dönemdedir.",
+      "E": "Eşik >1000 veya bilinmeyen yükte 38. haftadır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "HIV'de vertikal geçiş riskini artıran faktörler hangileridir?",
+     "secenekler": {
+      "A": "Düşük viral yük geçişi artırır",
+      "B": "Yüksek CD4 geçişi artırır",
+      "C": "Sezaryen geçişi artırır",
+      "D": "Emzirme geçişi azaltır",
+      "E": "Yüksek viral yük, koryoamniyonit ve emzirme geçişi artırır"
+     },
+     "dogru": "E",
+     "aciklama": "Vertikal geçişi artıran faktörler AIDS varlığı, düşük CD4, yüksek viral yük, ikiz gebelik, koryoamniyonit, erken membran rüptürü ve emzirmedir. Viral yük 1000 kopya/ml üzerindeyse veya bilinmiyorsa 38. haftada sezaryen önerilir.",
+     "sik_aciklamalari": {
+      "A": "Viral yükün yüksek olması geçişi artırır.",
+      "B": "CD4 düşüklüğü ve AIDS varlığı riski artırır.",
+      "C": "Yüksek viral yükte 38. haftada sezaryen önerilir.",
+      "D": "Emzirme vertikal geçişi artıran faktörlerdendir.",
+      "E": "Doğru: üç risk faktörü birlikte doğru verilmiştir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "HIV'de anne ve bebek perinatal kemoprofilaksisi nasıldır?",
+     "secenekler": {
+      "A": "Bebek tanısında antikor testi yeterlidir",
+      "B": "Anneye IV zidovudin, bebeğe bir ay zidovudin şurup verilir",
+      "C": "Bebeğe tek doz zidovudin yeterlidir",
+      "D": "Geçişi artırıcı müdahaleler önerilir",
+      "E": "Anneye doğumda profilaksi gerekmez"
+     },
+     "dogru": "B",
+     "aciklama": "Anneye doğum esnasında veya sezaryenden 3 saat önce zidovudin IV, bebeğe bir ay zidovudin şurup verilir; bebek tanısında PCR kullanılır. Geçişi artırıcı müdahalelerden kaçınılır.",
+     "sik_aciklamalari": {
+      "A": "Bebek testinde maternal antikorlar yanıltır; PCR kullanılır.",
+      "B": "Doğru: anne ve bebek kemoprofilaksi şeması doğru verilmiştir.",
+      "C": "Bebeğe bir ay süreyle zidovudin şurup verilir.",
+      "D": "Vertikal geçişi artırıcı müdahalelerden kaçınılır.",
+      "E": "Anneye doğum esnasında veya sezaryenden 3 saat önce IV zidovudin verilir."
+     },
+     "bilgi": [
       16
      ],
      "benzer_cikmis": []
@@ -632,6 +1274,116 @@
      },
      "bilgi": [
       18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "HBsAg pozitif gebenin bebeği için neonatoloji konsültasyonu isteniyor. Kronikleşme riski ve korunma tartışılıyor. Hangi ifade doğrudur?",
+     "secenekler": {
+      "A": "HBV vertikal bulaşta nadiren kronikleşir",
+      "B": "HBV'de en yüksek bulaş ilk trimesterdedir",
+      "C": "HBV pozitif gebede bağışıklama etkisizdir",
+      "D": "HBsAg pozitif anneden doğan bebekte kronikleşme %85-90'dır; bulaş en sık doğum sırasındadır ve doğumda pasif+aktif bağışıklama ile %94 önlenebilir",
+      "E": "Her gebeye HBV testi gerekmez"
+     },
+     "dogru": "D",
+     "aciklama": "HBV vertikal bulaşta %85-90 kronikleşir; en yüksek risk doğum sırasındadır; her gebeye test yapılır, pasif+aktif bağışıklama %94 önler.",
+     "sik_aciklamalari": {
+      "A": "Kronikleşme %85-90 ile çok yüksektir.",
+      "B": "En yüksek olasılık doğum sırasındadır.",
+      "C": "Pasif+aktif bağışıklama %94 korur.",
+      "D": "Doğru: kronikleşme, zamanlama ve korunma birlikte doğru.",
+      "E": "Her gebenin testi yapılmalıdır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Farklı hepatitli üç gebe değerlendiriliyor: 3. trimesterde fulminant hepatit (HEV şüphesi), HCV-RNA pozitif gebe ve HDV riski olan aşısız gebe. Ayrıca HBV-DNA'sı 10^7 üstünde bir gebe var. Hangi bütüncül yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "Üçüncü trimesterde sarılık ve karaciğer yetmezliği gelişen gebede HEV fulminant seyir (%20 mortalite) akla gelmelidir; HCV'de bulaş RNA yüküyle orantılı olup profilaksisi yoktur; HDV'den korunmada HBV aşısı yeterlidir; HBV-DNA 10^7 ve üstünde gebeye lamivudin/tenofovir başlanır",
+      "B": "HEV gebelikte mortaliteyi artırmaz",
+      "C": "HCV'de sezaryen bulaşı önler",
+      "D": "HDV aşısı ayrı bir aşıdır",
+      "E": "Yüksek HBV-DNA'da antiviral kontrendikedir"
+     },
+     "dogru": "A",
+     "aciklama": "HEV 3. trimesterde %20 fulminant mortalite yapar; HCV bulaşı RNA yüküyle orantılı, önleyici yöntem yok; HDV'de HBV aşısı yeterlidir; yüksek HBV-DNA'da lamivudin/tenofovir başlanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: dört hepatit tipinin kritik noktaları birlikte doğru verilmiştir.",
+      "B": "HEV 3. trimesterde %20 fulminant mortalitelidir.",
+      "C": "HCV'de önleyici yöntem yoktur.",
+      "D": "HDV için HBV aşısı yeterlidir.",
+      "E": "Eşikte antiviral başlanır ve bebeğe immünglobulin verilir."
+     },
+     "bilgi": [
+      17,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "HBV vertikal bulaş özellikleri ve korunması nasıldır?",
+     "secenekler": {
+      "A": "HBV doğumda bulaşır, %85-90 kronikleşir; aktif-pasif bağışıklama %94 korur",
+      "B": "HBV vertikal bulaş sonrası nadiren kronikleşir",
+      "C": "Bağışıklama HBV bulaşını önlemez",
+      "D": "En yüksek bulaş ilk trimesterdedir",
+      "E": "Gebelerde HBV taraması gerekmez"
+     },
+     "dogru": "A",
+     "aciklama": "HBV vertikal bulaş sonrası %85-90 kronikleşir; en yüksek bulaş olasılığı doğum sırasındadır. Pasif ve aktif bağışıklama ile bulaş %94 önlenebilir; her gebenin HBV testi yapılmalı, duyarlı risk grubundakiler aşılanmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: bulaş zamanlaması, kronikleşme oranı ve korunma etkinliği birlikte doğrudur.",
+      "B": "Vertikal bulaş sonrası kronikleşme %85-90'dır.",
+      "C": "Pasif ve aktif bağışıklama %94 önler.",
+      "D": "En yüksek bulaş olasılığı doğum sırasındadır.",
+      "E": "Her gebenin HBV testi yapılmalıdır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [
+      "cdcd3f642057"
+     ]
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "HEV, HCV ve HDV'nin gebelikteki özellikleri nelerdir?",
+     "secenekler": {
+      "A": "HEV gebelikte zararsızdır",
+      "B": "HCV bulaşını önleyen aşı vardır",
+      "C": "HDV için özel aşı gerekir",
+      "D": "HEV 3. trimesterde öldürücüdür; HCV önlenemez; HDV'ye HBV aşısı yeter",
+      "E": "Kronik HBV'de antiviral profilaksi ilk trimesterde başlanır"
+     },
+     "dogru": "D",
+     "aciklama": "Hepatit E 3. trimesterde %20 fulminant mortaliteyle en çok anne ölümüne yol açar. HCV bulaşı HCV-RNA yüküyle orantılıdır ve önleyici yöntemi yoktur; HDV için hepatit B aşısı yeterlidir. Kronik HBV'de 30-34. haftada viral yük bakılır, 10^7 kopya/ml üzerinde lamivudin/tenofovir başlanır.",
+     "sik_aciklamalari": {
+      "A": "HEV 3. trimesterde %20 mortaliteyle fulminant seyreder.",
+      "B": "HCV peripartum-intrauterin bulaşır ve önleyici yöntemi yoktur.",
+      "C": "HDV enfeksiyonu için hepatit B aşılanması yeterlidir.",
+      "D": "Doğru: üç hepatitin kritik özellikleri birlikte doğru verilmiştir.",
+      "E": "Viral yük 30-34. haftada bakılır, yüksekse antiviral başlanır."
+     },
+     "bilgi": [
+      17,
       19,
       20
      ],
@@ -748,6 +1500,116 @@
       30
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Kedi besleyen ve çiğ et tüketen gebenin toksoplazma serolojisi tartışılıyor. Enfeksiyonun ne zaman geçirildiğinin önemi vurgulanıyor. Hangi açıklama doğrudur?",
+     "secenekler": {
+      "A": "Toksoplazma yalnızca cinsel yolla bulaşır",
+      "B": "Gebelikte geçirilen her toksoplazma konjenital hastalık yapar",
+      "C": "Çiğ et ve iyi yıkanmamış sebzeyle bulaşan toksoplazmada gebelikten 6-8 hafta önce geçirilmiş enfeksiyon konjenital hastalık oluşturmaz; konjenital tabloda koryoretinit, ventrikülomegali ve nöbetler görülür",
+      "D": "Toksoplazma koryoretinit yapmaz",
+      "E": "Ookistler yalnızca su ile bulaşır"
+     },
+     "dogru": "C",
+     "aciklama": "Toksoplazma doku kisti/ookistle bulaşır, gebelikten 6-8 hafta önce geçirilmişse konjenital hastalık olmaz; klinik döküntü, hepatomegali, koryoretinit, ventrikülomegali ve nöbetlerdir.",
+     "sik_aciklamalari": {
+      "A": "Doku kistleri ve ookistlerle bulaşır.",
+      "B": "6-8 hafta kuralı koruyucudur.",
+      "C": "Doğru: kaynak, zaman kuralı ve klinik birlikte doğru.",
+      "D": "Koryoretinit ve üveit tipiktir.",
+      "E": "Et ve sebze kaynaklıdır."
+     },
+     "bilgi": [
+      21,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Üç gebe karşılaştırılıyor: 13. haftada rubella geçiren, 3. trimesterde primer CMV geçiren ve doğuma yakın primer genital HSV'si olan. Fetal riskler ve tedavi sınırları tartışılıyor. Hangi değerlendirme doğrudur?",
+     "secenekler": {
+      "A": "Rubella riski gebelik ilerledikçe artar",
+      "B": "CMV'de en yüksek bulaş ilk trimesterdedir",
+      "C": "Gansiklovir intrauterin CMV'yi önler",
+      "D": "HSV intrauterin enfeksiyonu sıktır",
+      "E": "13. haftada rubella geçiren fetüste katarakt, kalp anomalisi ve sağırlık riski %54'tür; 5. aydan sonra yalnız sağırlık riski %10 kalır; CMV'de en yüksek bulaş 3. trimesterdedir ve gansiklovir fetal enfeksiyonu önlemez; doğuma yakın primer genital HSV'de bulaş %50'dir"
+     },
+     "dogru": "E",
+     "aciklama": "Rubella riski 13-14. haftada %54, 2. trimester sonu %25, 4. aydan sonra %10 (yalnız sağırlık); CMV'de en yüksek bulaş 3. trimesterde, gansiklovir fetal enfeksiyonu önlemez; HSV intrauterin 1/200.000, primer genitalde %50 bulaşır.",
+     "sik_aciklamalari": {
+      "A": "Risk hafta ilerledikçe azalır.",
+      "B": "En yüksek bulaş 3. trimesterdedir.",
+      "C": "Gansiklovir intrauterin enfeksiyonu önlemez.",
+      "D": "İntrauterin HSV 1/200.000 ile nadirdir.",
+      "E": "Doğru: üç etkenin kritik sayıları birlikte doğru."
+     },
+     "bilgi": [
+      29,
+      31,
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Toksoplazma, rubella ve CMV'nin ayırt edici konjenital bulguları nelerdir?",
+     "secenekler": {
+      "A": "Toksoplazmozda katarakt tipiktir",
+      "B": "Rubellada koryoretinit tipiktir",
+      "C": "Toksoplazmozda koryoretinit, rubellada katarakt, CMV'de kalsifikasyon görülür",
+      "D": "CMV'de kalp anomalisi tipiktir",
+      "E": "Üçünde de klinik aynıdır"
+     },
+     "dogru": "C",
+     "aciklama": "Konjenital toksoplazmozda döküntü, hepatomegali, koryoretinit, ventrikülomegali, nöbetler ve mental retardasyon görülür. Konjenital rubellada sağırlık, katarakt, glokom, konjenital kalp hastalığı ve mental retardasyon; CMV'de sarılık, mikrosefali, sağırlık ve serebral kalsifikasyon izlenir.",
+     "sik_aciklamalari": {
+      "A": "Katarakt ve kalp anomalisi konjenital rubella sendromuna aittir.",
+      "B": "Koryoretinit toksoplazmoz ve CMV bulgusudur.",
+      "C": "Doğru: üç enfeksiyonun ayırt edici bulguları doğru eşleştirilmiştir.",
+      "D": "CMV'de mikrosefali, sağırlık ve serebral kalsifikasyon tipiktir.",
+      "E": "Her enfeksiyonun karakteristik bulgu örüntüsü farklıdır."
+     },
+     "bilgi": [
+      23,
+      29,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Konjenital HSV enfeksiyonunun bulaş ve tedavisi nasıldır?",
+     "secenekler": {
+      "A": "HSV intrauterin enfeksiyonu sıktır",
+      "B": "HSV asendan bulaşır, primer enfeksiyonda bulaş %50'dir, asiklovirle tedavi edilir",
+      "C": "HSV yalnızca transplasental bulaşır",
+      "D": "HSV'de antiviral tedavi kontrendikedir",
+      "E": "Rekürrens primerden daha bulaştırıcıdır"
+     },
+     "dogru": "B",
+     "aciklama": "HSV intrauterin enfeksiyonu nadirdir (1/200.000); HSV-2 serviksten asendan geçer ve primer genital enfeksiyonluda bebeğe bulaşma %50'dir. Tedavide asiklovir, valasiklovir ve famsiklovir kullanılır; tanıda seroloji ve PCR yer alır.",
+     "sik_aciklamalari": {
+      "A": "İntrauterin HSV 1/200.000 ile nadirdir.",
+      "B": "Doğru: bulaş yolu, bulaş oranı ve tedavi birlikte doğru verilmiştir.",
+      "C": "HSV-2 serviksten asendan yolla geçer.",
+      "D": "Asiklovir, valasiklovir ve famsiklovir tedavide kullanılır.",
+      "E": "Primer genital enfeksiyonda bulaşma riski %50 ile en yüksektir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -830,6 +1692,114 @@
       "C": "Tedavi edilir; bu nedenle doğru seçenek değildir.",
       "D": "Antifungaldir; bu nedenle doğru seçenek değildir.",
       "E": "Antiviraldir; bu nedenle doğru seçenek değildir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "10 haftalık gebenin toksoplazma IgM ve IgG'si pozitif bulunuyor. Klinisyen enfeksiyonun ne zaman geçirildiğini belirlemek istiyor. Hangi yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "IgM pozitifliği daima akut enfeksiyonu gösterir",
+      "B": "Toksoplazma IgM ve IgG pozitif gebede yeni-eski ayrımı için IgG avidite bakılır; >%30 yüksek avidite eski (4 ay önce), <%20 düşük avidite yeni enfeksiyonu düşündürür; IgM çapraz pozitifliği sıktır",
+      "C": "Avidite testi yalnızca bebekte kullanılır",
+      "D": "IgG'de 4 kat artış tanıdışıdır",
+      "E": "IgM 2 haftada negatifleşir"
+     },
+     "dogru": "B",
+     "aciklama": "IgM çapraz pozitifliği sık, 2 yıla kadar pozitif kalabilir; IgG'de 4 kat artış değerlidir; avidite >%30 eski, <%20 yeni enfeksiyonu gösterir.",
+     "sik_aciklamalari": {
+      "A": "IgM çapraz pozitifliği sık ve uzun sürelidir.",
+      "B": "Doğru: avidite eşikleri ve IgM sınırlılığı birlikte doğru.",
+      "C": "Annede yeni-eski ayrımında kullanılır.",
+      "D": "2 hafta arayla 4 kat artış değerlidir.",
+      "E": "IgM 2 yıla kadar pozitif kalabilir."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "12 haftalık gebede düşük aviditeyle akut toksoplazma tanısı konuyor. Fetal geçiş henüz gösterilememiş. Maternal-fetal tedavi planı tartışılıyor. Hangi plan doğrudur?",
+     "secenekler": {
+      "A": "Gebelikte toksoplazma tedavi edilmez",
+      "B": "Her trimesterde spiramisin yeterlidir",
+      "C": "Pirimetamin ilk trimesterde ilk tercihtir",
+      "D": "12. haftada akut toksoplazma saptanan gebeye 18. haftaya kadar spiramisin başlanır; 2. trimesterde pirimetamin+sulfadiazine geçilir; doğan bebeğe 1 yıl pirimetamin+sulfadiazin+lökoverin verilir; fetal tutulum amniyosentez ve PCR ile araştırılır",
+      "E": "Bebek tedavisi doğumda sonlandırılır"
+     },
+     "dogru": "D",
+     "aciklama": "16-18. haftadan önce tanıdaysa 18. haftaya kadar spiramisin, 2. trimesterde pirimetamin+sulfadiazin, bebeğe 1 yıl üçlü tedavi verilir; antenatal tanıda amniyosentez/kordosentez ve PCR kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Gebelikte geçirilen hastalık tedavi edilir.",
+      "B": "2. trimesterde pirimetamin+sulfadiazin kullanılır.",
+      "C": "Erken dönemde spiramisin tercih edilir.",
+      "D": "Doğru: trimester-temelli tedavi ve antenatal tanı birlikte doğru.",
+      "E": "Bebeğe 1 yıl tedavi verilir."
+     },
+     "bilgi": [
+      24,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Toksoplazmozda IgM ve IgG avidite testinin yorumu nasıldır?",
+     "secenekler": {
+      "A": "IgM akutluğu göstermez; düşük avidite yeniliği gösterir",
+      "B": "IgM pozitifliği daima akut enfeksiyondur",
+      "C": "Yüksek avidite yeni enfeksiyonu gösterir",
+      "D": "IgG artışı tanıda değersizdir",
+      "E": "Avidite testi kullanılmaz"
+     },
+     "dogru": "A",
+     "aciklama": "IgM'de çapraz pozitiflik sıktır, 2 yıla kadar pozitif kalabilir ve akut enfeksiyonu göstermez; IgG'nin 2 hafta arayla 4 kat artışı değerlidir. Avidite %30 üzeri eski (4 ay önce), %20-30 şüpheli, %20 altı yeni enfeksiyonu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: IgM kısıtlılığı ve avidite yorumu birlikte doğru verilmiştir.",
+      "B": "IgM'de çapraz pozitiflik sıktır ve 2 yıl pozitif kalabilir.",
+      "C": ">%30 avidite 4 ay önce geçirilmiş eski enfeksiyonu gösterir.",
+      "D": "IgG'nin 2 hafta arayla 4 kat artışı tanıda değerlidir.",
+      "E": "Avidite yeni-eski enfeksiyon ayrımında kullanılır."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": [
+      "38285547249d"
+     ]
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Gebelikte ve yenidoğanda toksoplazma tedavisi nasıldır?",
+     "secenekler": {
+      "A": "Gebelikte toksoplazma tedavi edilmez",
+      "B": "Tüm gebelikte yalnızca spiramisin kullanılır",
+      "C": "Pirimetamin ilk trimesterde başlanır",
+      "D": "Erken tanıda spiramisin, sonra pirimetamin-sulfadiazin; bebeğe bir yıl üçlü tedavi",
+      "E": "Bebekte tedavi gerekmez"
+     },
+     "dogru": "D",
+     "aciklama": "Gebelikte geçirilen hastalık tedavi edilir; 16-18. haftadan önce tanı konulmuşsa 18. haftaya kadar spiramisin verilir, 2. trimesterde pirimetamin + sulfadiazin başlanır. Doğan bebeğe bir yıl pirimetamin + sulfadiazin + lökoverin uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Gebelik sırasında geçirilen hastalık tedavi edilir.",
+      "B": "Spiramisin 18. haftaya kadar kullanılır, sonra rejim değişir.",
+      "C": "Pirimetamin + sulfadiazin 2. trimesterde başlanır.",
+      "D": "Doğru: anne ve bebek tedavi şeması birlikte doğru verilmiştir.",
+      "E": "Doğan bebeğe bir yıl pirimetamin + sulfadiazin + lökoverin verilir."
      },
      "bilgi": [
       26
@@ -933,12 +1903,113 @@
       34
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k10-q04",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Aşısız gebe kızamıklı biriyle temas ediyor; başka bir gebe suçiçeği geçiriyor. Her iki durumda riskler ve korunma tartışılıyor. Hangi ifade doğrudur?",
+     "secenekler": {
+      "A": "Kızamık geçiren gebede pnömoni 3 kat, ölüm 6 kat artar ve %20-60 düşük riski vardır; suçiçeğinde ölü ve erken doğum görülebilir; her ikisinde de korunmanın temeli gebelik öncesi aşılamadır",
+      "B": "Kızamık gebelikte risksizdir",
+      "C": "Suçiçeği aşısı gebelikte yapılır",
+      "D": "Kızamıkta konjenital risk %90'dır",
+      "E": "Suçiçeği tedavisi yoktur"
+     },
+     "dogru": "A",
+     "aciklama": "Kızamıkta pnömoni 3 kat, ölüm 6 kat artar, %20-60 düşük riski; suçiçeğinde ölü/erken doğum olur; korunmada gebelik öncesi aşı esastır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: risk katları ve aşı vurgusu birlikte doğru.",
+      "B": "Maternal morbidite belirgin artar.",
+      "C": "Aşı gebelik öncesinde önerilir.",
+      "D": "Konjenital kızamık riski <%25'tir.",
+      "E": "Oral asiklovir/valasiklovir kullanılır."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k10-q05",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Kreşe giden çocuğu olan gebe parvovirus temasıyla, endemik bölgeye seyahat edecek başka bir gebe sıtma profilaksisiyle ve grip semptomlu üçüncü bir gebe tedavi zamanlamasıyla değerlendiriliyor. Hangi bütüncül yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "Parvovirus B19'un fetal etkisi yoktur",
+      "B": "Sıtmada klorokin gebelikte kontrendikedir",
+      "C": "Parvovirus B19 temaslı seronegatif gebede hidrops ve trombositopeni izlenir; endemik bölgeye gidecek gebeye ilk 4 ay klorokin, sonraki aylarda meflokin profilaksisi verilir; influenza düşünülen gebede tedavi geciktirilmez",
+      "D": "İnfluenza gebelikte tedavi edilmez",
+      "E": "Sıtma gebelikte yalnızca annede ateş yapar"
+     },
+     "dogru": "C",
+     "aciklama": "Parvovirus B19 fetüste hidrops ve trombositopeni yapar; sıtma IUGR ve erken doğuma yol açar (ilk 4 ay klorokin, sonra meflokin); influenza gecikmeden tedavi edilir.",
+     "sik_aciklamalari": {
+      "A": "Hidrops ve trombositopeni tipiktir.",
+      "B": "İlk 4 ay klorokin kullanılır.",
+      "C": "Doğru: üç etkenin kritik yönetimi birlikte doğru.",
+      "D": "Erken doğum ve ölüm riski nedeniyle gecikmeden tedavi verilir.",
+      "E": "Plasenta yetmezliğiyle IUGR ve erken doğum yapar."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k10-q06",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Kızamık ve suçiçeğinin gebelikteki etkileri ve yönetimi nasıldır?",
+     "secenekler": {
+      "A": "Kızamık gebelikte risksizdir",
+      "B": "Kızamıkta maternal ölüm artar; suçiçeğinde asiklovir verilir, aşı korunur",
+      "C": "Suçiçeğinde antiviral kontrendikedir",
+      "D": "Kızamıkta düşük riski yoktur",
+      "E": "Gebelikte suçiçeği aşısı yapılır"
+     },
+     "dogru": "B",
+     "aciklama": "Kızamık geçiren gebede pnömoni 3 kat, ölüm 6 kat artar; %20-60 düşük riski vardır. Suçiçeğinde ölü doğum ve erken doğum görülür; gebeye oral asiklovir/valasiklovir, pnömonide IV asiklovir verilir ve en iyi korunma aşıdır.",
+     "sik_aciklamalari": {
+      "A": "Pnömoni 3 kat, ölüm 6 kat artar ve düşük riski %20-60'tır.",
+      "B": "Doğru: kızamık riskleri ile suçiçeği tedavi-korunması birlikte doğru verilmiştir.",
+      "C": "Gebelere oral asiklovir/valasiklovir, pnömonide IV asiklovir verilir.",
+      "D": "%20-60 düşük ve <%25 konjenital kızamık riski vardır.",
+      "E": "Korunmada en iyi yöntem gebelik öncesi aşılamadır."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-57-intrauterin-enfeksiyonlar-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "İnfluenza, parvovirus B19 ve sıtmanın gebelik yönetimi nasıldır?",
+     "secenekler": {
+      "A": "İnfluenza tedavisi doğuma ertelenir",
+      "B": "Parvovirus B19 hidrops yapmaz",
+      "C": "Sıtma fetüsü etkilemez",
+      "D": "Sıtma profilaksisi tüm gebelikte aynıdır",
+      "E": "İnfluenza acil tedavi; parvovirus hidrops; sıtma dönemsel profilaksi"
+     },
+     "dogru": "E",
+     "aciklama": "İnfluenzadan şüphelenilen gebe gecikmeden tedavi edilir. Parvovirus B19 temasında seroloji ve DNA bakılır, negatif kadında 3 hafta sonra tekrarlanır; fetal hidrops ve trombositopeni yapar. Sıtma plasenta yetmezliğiyle gelişme geriliği ve erken doğuma yol açar; ilk 4 ay klorokin, sonra meflokin profilaksisi uygulanır.",
+     "sik_aciklamalari": {
+      "A": "İnfluenza düşünülen gebede gecikmeden tedavi verilir.",
+      "B": "İntrauterin enfeksiyonda hidrops ve trombositopeni görülür.",
+      "C": "Parazitemi gelişme geriliği ve erken doğuma yol açar.",
+      "D": "İlk 4 ay klorokin, sonraki aylarda meflokin uygulanır.",
+      "E": "Doğru: üç enfeksiyonun yönetim ilkeleri birlikte doğru verilmiştir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 30,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:56:02"
+ ]
 }

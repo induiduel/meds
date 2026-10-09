@@ -6,6 +6,7 @@
  "konu": "Genetik, Pediatrik ve Çevresel Patoloji",
  "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
  "tarih": "2026-09-25",
+ "soru_sayisi": 111,
  "kazanimlar": [
   {
    "no": 1,
@@ -87,6 +88,273 @@
      "bilgi": [
       1,
       39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Ailesinde kolon kanseri olan, sigara içen ve liften fakir beslenen 45 yaşındaki hastada hastalık riskini belirleyen etkenler tartışılmaktadır. 'Üçlü çerçeve'ye göre aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Beslenme hastalık şiddetini etkilemez.",
+      "B": "Hastalık yalnızca genetikle belirlenir; çevre ve beslenmenin etkisi yoktur.",
+      "C": "Çevresel etkenler yalnızca enfeksiyonlardır.",
+      "D": "Hastalık çoğu zaman genetik zemin, çevresel faktörler ve yaşam tarzı/beslenme etkileşiminden doğar; genetik yatkınlık zemini, çevre ve beslenme zamanlama-şiddeti belirler.",
+      "E": "Genetik zemin çevresel hastalıklarda rol oynamaz."
+     },
+     "dogru": "D",
+     "aciklama": "Üçlü çerçeve: genetik zemin + çevre + yaşam tarzı/beslenme; genetik yatkınlık sağlar, çevre-beslenme zamanlama ve şiddeti belirler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; beslenme şiddet-zamanlamayı belirler.",
+      "B": "Yanlış; çevre ve beslenme de belirleyicidir.",
+      "C": "Yanlış; çevre kimyasal/fiziksel ajanları kapsar.",
+      "D": "Doğru. Üçlü çerçeve ve entegre bakış doğrudur.",
+      "E": "Yanlış; genetik zemin hazırlar."
+     },
+     "bilgi": [
+      1,
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Ailesel kolon kanserli, sigara içen ve liften fakir beslenen hastada risk etkenleri tartışılırken üçlü çerçeve ve entegre bakışla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Çevresel maruziyet tüm bireylerde eşittir; sosyal eşitsizliklerin maruziyet ve erişimle ilişkisi yoktur.",
+      "B": "Çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+      "C": "Kişisel çevre tütün, alkol, ilaçlar ve beslenmeyi; ayrıca cinsiyet ve sosyal sınıf gibi sosyal belirleyicileri içerir.",
+      "D": "Hastalık gelişimi genetik, çevresel ve yaşam tarzı/beslenme etkileşiminden doğar.",
+      "E": "Genetik hastalık için yatkınlık zemini sağlar."
+     },
+     "dogru": "A",
+     "aciklama": "Dezavantajlı gruplar kirliliğe daha fazla maruz kalır, kalabalık konutta yaşar, hizmete geç erişir; maruziyet eşit değildir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış ifade (aranan cevap). Eşitsizlik-maruziyet ilişkisi yok sayılmıştır.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      1,
+      18,
+      19,
+      20,
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hastalık gelişimini açıklayan üçlü çerçevenin bileşenleri nelerdir?",
+     "secenekler": {
+      "A": "Hastalık daima tek genle oluşur",
+      "B": "Genetik zemin, çevre, yaşam tarzı-beslenme",
+      "C": "Çevre hastalıkta rol oynamaz",
+      "D": "Beslenme hastalık şiddetini değiştirmez",
+      "E": "Yalnızca mikroplar hastalık yapar"
+     },
+     "dogru": "B",
+     "aciklama": "Hastalıkların çoğu tek bir nedenle değil, genetik yatkınlık zemini ile çevresel maruziyetlerin ve yaşam tarzı-beslenme alışkanlıklarının etkileşimiyle gelişir. Genetik bileşen zamanlamayı ve duyarlılığı, çevre ve beslenme ise hastalığın ortaya çıkışını ve şiddetini belirler. Bu yüzden hasta biyopsikososyal ve çevresel bağlamıyla birlikte değerlendirilmelidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; çoğu hastalık çok etkenli etkileşimle gelişir.",
+      "B": "Doğru; üç bileşenin birlikte değerlendirilmesini verir.",
+      "C": "Yanlış; çevresel faktörler zamanlama ve şiddeti belirler.",
+      "D": "Yanlış; beslenme hastalığın şiddetini ve seyrini etkiler.",
+      "E": "Yanlış; genetik zemin ve yaşam tarzı da belirleyicidir."
+     },
+     "bilgi": [
+      1,
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Üçlü çerçevede genetik zemin ile çevre-beslenmenin rolleri nasıl ayrışır?",
+     "secenekler": {
+      "A": "Genetik zemin tek başına yeterlidir",
+      "B": "Çevre yalnızca enfeksiyon demektir",
+      "C": "Yaşam tarzı değiştirilemez yazgıdır",
+      "D": "Zemin yatkınlık; çevre-beslenme zamanlama-şiddet",
+      "E": "Üç bileşen birbirinden bağımsızdır"
+     },
+     "dogru": "D",
+     "aciklama": "Üçlü çerçevenin klinik karşılığı, aynı genetik riske sahip bireylerde çevresel maruziyet ve beslenme farklarının farklı sonuçlar doğurmasıdır. Çevre ve beslenme genetik zeminin üzerine eklenerek hastalığın başlama yaşını öne çeker veya şiddetini artırır. Entegre bakış, koruyucu hekimlikte değiştirilebilir etkenlere (tütün, beslenme, maruziyet) müdahale gerekçesini oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; zemin tek başına hastalığı belirlemez.",
+      "B": "Yanlış; çevre kirleticiler, maruziyet ve sosyal bağlamı kapsar.",
+      "C": "Yanlış; yaşam tarzı ve beslenme değiştirilebilir etkenlerdir.",
+      "D": "Doğru; bileşenlerin rollerini ve klinik anlamını verir.",
+      "E": "Yanlış; üçü etkileşim halinde hastalığı oluşturur."
+     },
+     "bilgi": [
+      1,
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k01-q08",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"İklim değişikliği ve sağlık\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "C": "Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "E": "Anoreksiya nervozada kişinin kendine uyguladığı açlık, belirgin kilo kaybı ve düşük vücut ağırlığı vardır; gonadotropin salınımı azalır, amenore sık görülür ve bradikardi, hipotansiyon, osteopeni/osteoporoz ve hipokalemi izlenir. Bulimia nervozada tekrarlayan aşırı yeme atakları ve ardından kendini kusturma, müshil/diüretik kötüye kullanımı vardır.",
+      "D": "Sağlık eşitsizliği hastalık insidansı, prevalansı, morbidite ve mortalitede topluluklar arası sistematik farklılıktır; modern genetik biyolojik olarak keskin \"ırklar\" olmadığını göstermiştir.",
+      "B": "ABD EPA ana kirleticileri SO₂, CO, NO₂, ozon (O₃) ve partikül maddedir; \"smog\" ozon ve ince partiküllerle ilişkilidir. Ozon otomobil egzozu ve güneş ışığıyla oluşur, serbest radikal üretir ve solunum epiteline zarar verir. Partikül madde <10 µm ise alt solunum yollarına ulaşır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: 20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+     "sik_aciklamalari": {
+      "A": "Doğru. 20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "C": "Yanlış. Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "E": "Yanlış. Anoreksiya nervozada kişinin kendine uyguladığı açlık, belirgin kilo kaybı ve düşük vücut ağırlığı vardır; gonadotropin salınımı azalır, amenore sık görülür ve bradikardi, hipotansiyon, osteopeni/osteoporoz ve hipokalemi izlenir. Bulimia nervozada tekrarlayan aşırı yeme atakları ve ardından kendini kusturma, müshil/diüretik kötüye kullanımı vardır.",
+      "D": "Yanlış. Sağlık eşitsizliği hastalık insidansı, prevalansı, morbidite ve mortalitede topluluklar arası sistematik farklılıktır; modern genetik biyolojik olarak keskin \"ırklar\" olmadığını göstermiştir.",
+      "B": "Yanlış. ABD EPA ana kirleticileri SO₂, CO, NO₂, ozon (O₃) ve partikül maddedir; \"smog\" ozon ve ince partiküllerle ilişkilidir. Ozon otomobil egzozu ve güneş ışığıyla oluşur, serbest radikal üretir ve solunum epiteline zarar verir. Partikül madde <10 µm ise alt solunum yollarına ulaşır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k01-q09",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Sosyal ırk ve çevresel maruziyet\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "C": "Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "E": "Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "A": "Düz yüz profili, epikantus, yukarı eğimli palpebral fissürler, zihinsel gerilik (IQ çoğunlukla 25-50), hipotoni ve gelişimsel gecikme görülür.",
+      "D": "Marasmus'ta kalori eksikliği baskındır (büyüme geriliği, kas ve subkutan yağ kaybı, \"zayıf çomak\" görünümü; somatik bölme tükenir, viseral bölme korunur). Kwashiorkor'da protein yoksunluğu daha fazladır (erken sütten kesilme, karbonhidrat ağırlıklı diyet) ve ödem, karaciğer yağlanması, deride mozaik pigmentasyon ve saçta \"bayrak işareti\" görülür.",
+      "B": "Fenotip her iki alel mutasyonlu (homozigot) olduğunda ortaya çıkar; ebeveynler genellikle asemptomatik taşıyıcıdır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "E": "Yanlış. Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "A": "Yanlış. Düz yüz profili, epikantus, yukarı eğimli palpebral fissürler, zihinsel gerilik (IQ çoğunlukla 25-50), hipotoni ve gelişimsel gecikme görülür.",
+      "D": "Yanlış. Marasmus'ta kalori eksikliği baskındır (büyüme geriliği, kas ve subkutan yağ kaybı, \"zayıf çomak\" görünümü; somatik bölme tükenir, viseral bölme korunur). Kwashiorkor'da protein yoksunluğu daha fazladır (erken sütten kesilme, karbonhidrat ağırlıklı diyet) ve ödem, karaciğer yağlanması, deride mozaik pigmentasyon ve saçta \"bayrak işareti\" görülür.",
+      "B": "Yanlış. Fenotip her iki alel mutasyonlu (homozigot) olduğunda ortaya çıkar; ebeveynler genellikle asemptomatik taşıyıcıdır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k01-q10",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"DNA metilasyonu ve histon modifikasyonları\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Promotör bölgelerdeki sitozin metilasyonu ağırsa gen susturulur; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
+      "C": "Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir.",
+      "A": "Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "B": "Fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler; mutasyonla elastik lif bütünlüğü bozulur ve TGF-β sinyal aktivitesi artar.",
+      "D": "DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Promotör bölgelerdeki sitozin metilasyonu ağırsa gen susturulur; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Promotör bölgelerdeki sitozin metilasyonu ağırsa gen susturulur; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
+      "C": "Yanlış. Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir.",
+      "A": "Yanlış. Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "B": "Yanlış. Fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler; mutasyonla elastik lif bütünlüğü bozulur ve TGF-β sinyal aktivitesi artar.",
+      "D": "Yanlış. DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k01-q11",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Moleküler tanı: temel araçlar\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "C": "Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir.",
+      "B": "En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar.",
+      "D": "Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+      "A": "Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "C": "Yanlış. Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir.",
+      "B": "Yanlış. En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar.",
+      "D": "Yanlış. Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+      "A": "Yanlış. Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k01-q12",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Otozomal dominant kalıtım\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "E": "Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "B": "Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+      "A": "Kaynakları eski kurşun bazlı boyalar, su boruları ve kirli topraktır; çocuklarda oral emilim artmıştır ve kan-beyin bariyeri daha geçirgendir.",
+      "D": "Alkol kullanım bozukluğu erişkinlerin önemli bir kısmını etkiler; akut toksisite SSS depresyonu ve solunum baskılanması yapar, kronik kullanım hepatik, pankreatik, kardiyak ve nörolojik hasara yol açar. Ana metabolizma yolu alkol dehidrojenaz ile asetaldehit oluşumudur; yüksek dozda MEOS ve sitokrom P-450 devreye girer."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "E": "Yanlış. Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "B": "Yanlış. Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+      "A": "Yanlış. Kaynakları eski kurşun bazlı boyalar, su boruları ve kirli topraktır; çocuklarda oral emilim artmıştır ve kan-beyin bariyeri daha geçirgendir.",
+      "D": "Yanlış. Alkol kullanım bozukluğu erişkinlerin önemli bir kısmını etkiler; akut toksisite SSS depresyonu ve solunum baskılanması yapar, kronik kullanım hepatik, pankreatik, kardiyak ve nörolojik hasara yol açar. Ana metabolizma yolu alkol dehidrojenaz ile asetaldehit oluşumudur; yüksek dozda MEOS ve sitokrom P-450 devreye girer."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k01-q13",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Obezite, enerji homeostazı ve adipokinler\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "E": "Obezite vücut kitle indeksi (BKİ) ile ölçülür; klinik açıdan önemli olan özellikle viseral (karın içi) yağdır ve metabolik sendrom/kardiyovasküler riskle daha yakından ilişkilidir. Lipostat sistemi afferent sinyaller (leptin, ghrelin, insülin, PYY, GLP-1) → hipotalamus arkuat çekirdek (POMC/CART iştahı azaltır; NPY/AgRP artırır) → katabolik/anabolik yanıtla vücut ağırlığını dar aralıkta tutar. Leptin yağ dokusundan salgılanır ve obezitede yüksek olmakla birlikte leptin direnci vardır; adiponektin yağ oksidasyonunu ve insülin duyarlılığını artırır ve obezlerde düşüktür.",
+      "D": "Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "B": "Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+      "A": "Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\".",
+      "C": "Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Obezite vücut kitle indeksi (BKİ) ile ölçülür; klinik açıdan önemli olan özellikle viseral (karın içi) yağdır ve metabolik sendrom/kardiyovasküler riskle daha yakından ilişkilidir. Lipostat sistemi afferent sinyaller (leptin, ghrelin, insülin, PYY, GLP-1) → hipotalamus arkuat çekirdek (POMC/CART iştahı azaltır; NPY/AgRP artırır) → katabolik/anabolik yanıtla vücut ağırlığını dar aralıkta tutar. Leptin yağ dokusundan salgılanır ve obezitede yüksek olmakla birlikte leptin direnci vardır; adiponektin yağ oksidasyonunu ve insülin duyarlılığını artırır ve obezlerde düşüktür.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Obezite vücut kitle indeksi (BKİ) ile ölçülür; klinik açıdan önemli olan özellikle viseral (karın içi) yağdır ve metabolik sendrom/kardiyovasküler riskle daha yakından ilişkilidir. Lipostat sistemi afferent sinyaller (leptin, ghrelin, insülin, PYY, GLP-1) → hipotalamus arkuat çekirdek (POMC/CART iştahı azaltır; NPY/AgRP artırır) → katabolik/anabolik yanıtla vücut ağırlığını dar aralıkta tutar. Leptin yağ dokusundan salgılanır ve obezitede yüksek olmakla birlikte leptin direnci vardır; adiponektin yağ oksidasyonunu ve insülin duyarlılığını artırır ve obezlerde düşüktür.",
+      "D": "Yanlış. Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "B": "Yanlış. Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+      "A": "Yanlış. Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\".",
+      "C": "Yanlış. Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır."
+     },
+     "bilgi": [
+      34
      ],
      "benzer_cikmis": []
     }
@@ -172,6 +440,216 @@
      },
      "bilgi": [
       3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Genetik danışmada bir çift, 'genomumuzun ne kadarının protein kodladığını ve geri kalan DNA'nın işlevsiz olup olmadığını' sormaktadır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kodlamayan DNA işlevsiz 'çöp' DNA'dır.",
+      "B": "Genomun tamamı protein kodlar.",
+      "C": "Genom ~3,3 milyar baz çifti, ~19.000 protein kodlayan gen içerir; kodlayan kısım yalnızca ~%1,5'tir. Kodlamayan DNA promotör/enhancer, kromatin düzenleyici diziler ve düzenleyici RNA'ları (miRNA, lncRNA) içerir; ökromatin dağınık-aktif, heterokromatin yoğun-sessizdir.",
+      "D": "Gen sayısı 100.000'in üzerindedir.",
+      "E": "Ökromatin sessiz, heterokromatin aktiftir."
+     },
+     "dogru": "C",
+     "aciklama": "Genom özellikleri ve kodlamayan DNA işlevleri (düzenleyici bölgeler, miRNA/lncRNA, kromatin) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; düzenleyici işlevleri vardır.",
+      "B": "Yanlış; kodlayan kısım ~%1,5'tir.",
+      "C": "Doğru. Sayılar ve işlevler doğrudur.",
+      "D": "Yanlış; ~19.000 gendir.",
+      "E": "Yanlış; ökromatin aktif, heterokromatin sessizdir."
+     },
+     "bilgi": [
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Genetik danışmada genomun yapısı ve kodlamayan DNA'nın işlevi sorulurken genom ve kromatinle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Toplam uzunluk ~3,3 milyar baz çifti, protein kodlayan gen ~19.000'dir.",
+      "B": "Protein kodlayan kısım genomun ~%1,5'idir.",
+      "C": "Kodlamayan DNA promotör, enhancer, kromatin düzenleyici diziler ve miRNA/lncRNA içerir.",
+      "D": "Ökromatin dağınık ve transkripsiyonel aktiftir; heterokromatin yoğun ve sessizdir.",
+      "E": "Kodlamayan DNA protein kodlar ve genomun %90'ından fazlasını oluşturur; ökromatin inaktiftir."
+     },
+     "dogru": "E",
+     "aciklama": "Kodlamayan DNA protein kodlamaz (düzenleyicidir); ökromatin aktiftir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Yanlış ifade (aranan cevap). Kodlama ve kromatin bilgileri terstir."
+     },
+     "bilgi": [
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İnsan genomunun ölçek özellikleriyle ilgili doğru sayılar hangileridir?",
+     "secenekler": {
+      "A": "3,3 milyar bç; 19.000 gen; %1,5 kodlayan",
+      "B": "100 milyon bç; 100.000 gen",
+      "C": "Kodlayan kısım %90'dır",
+      "D": "Bireyler %50 farklıdır",
+      "E": "Gen sayısı 1.000'dir"
+     },
+     "dogru": "A",
+     "aciklama": "İnsan genomu ~3,3 milyar baz çiftinden oluşur ve yalnızca ~19.000 protein kodlayan gen içerir. Protein kodlayan kısım genomun %1,5'i kadardır; geri kalan büyük bölüm kodlamayan DNA'dır. Bireyler arası dizi farkı %0,5'in altındadır; bu küçük fark varyasyon ve hastalık yatkınlığının kaynağıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru; genomun ölçek sayılarını birlikte verir.",
+      "B": "Yanlış; uzunluk milyar, gen sayısı binler düzeyindedir.",
+      "C": "Yanlış; kodlayan kısım yalnızca %1,5'tir.",
+      "D": "Yanlış; bireysel fark %0,5'in altındadır.",
+      "E": "Yanlış; protein kodlayan gen ~19.000'dir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kodlamayan DNA'nın düzenleyici öğeleri ve kromatin durumları nelerdir?",
+     "secenekler": {
+      "A": "Kodlamayan DNA işlevsiz çöptür",
+      "B": "Promotör genin sonunda bulunur",
+      "C": "Promotör-enhancer-RNA; ökromatin aktif",
+      "D": "Heterokromatin transkripsiyon yapar",
+      "E": "Enhancer yalnızca komşu bazı etkiler"
+     },
+     "dogru": "C",
+     "aciklama": "Kodlamayan DNA; promotör ve güçlendirici bölgeler, kromatin düzenleyici diziler ile miRNA ve lncRNA gibi düzenleyici RNA'ları içerir. Promotör genin hemen yukarısında transkripsiyonu başlatır; güçlendiriciler 100 kb ve ötesinden ekspresyonu ayarlar. Ökromatin dağınık ve transkripsiyonel aktifken heterokromatin yoğun ve inaktiftir; bu yapı hücre tipine özgü ekspresyonu sağlar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; kodlamayan DNA gen ekspresyonunu düzenler.",
+      "B": "Yanlış; promotör genin yukarısında başlatıcıdır.",
+      "C": "Doğru; düzenleyici öğeleri ve kromatin durumlarını özetler.",
+      "D": "Yanlış; heterokromatin yoğun ve inaktiftir.",
+      "E": "Yanlış; güçlendiriciler 100 kb ötesinden düzenleyebilir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k02-q08",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"İnsan genomunun temel özellikleri\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "C": "Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "B": "Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+      "E": "Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "D": "Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+      "A": "SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "B": "Yanlış. Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+      "E": "Yanlış. Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "D": "Yanlış. Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+      "A": "Yanlış. SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k02-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Down sendromu klinik özellikleri\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "Düz yüz profili, epikantus, yukarı eğimli palpebral fissürler, zihinsel gerilik (IQ çoğunlukla 25-50), hipotoni ve gelişimsel gecikme görülür.",
+      "A": "Ortam, işyeri veya kişisel çevredeki kimyasal veya fiziksel ajan maruziyeti sonucu gelişen klinik bozukluktur; hava, su, toprak kirliliği, mesleki toksinler, radyasyon ve fiziksel ajanları kapsar.",
+      "C": "Promotör bölgelerdeki sitozin metilasyonu ağırsa gen susturulur; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
+      "D": "Yağda çözünen vitaminler ve B vitaminleri eksiklikleri; T hücre aracılı immünitede belirgin azalma ve sık fırsatçı/ağır enfeksiyonlar; erken dönemde ağır malnütrisyonda serebral atrofi, miyelinizasyon bozukluğu ve uzun dönem nörokognitif etkiler görülür.",
+      "E": "Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\"."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Düz yüz profili, epikantus, yukarı eğimli palpebral fissürler, zihinsel gerilik (IQ çoğunlukla 25-50), hipotoni ve gelişimsel gecikme görülür.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Düz yüz profili, epikantus, yukarı eğimli palpebral fissürler, zihinsel gerilik (IQ çoğunlukla 25-50), hipotoni ve gelişimsel gecikme görülür.",
+      "A": "Yanlış. Ortam, işyeri veya kişisel çevredeki kimyasal veya fiziksel ajan maruziyeti sonucu gelişen klinik bozukluktur; hava, su, toprak kirliliği, mesleki toksinler, radyasyon ve fiziksel ajanları kapsar.",
+      "C": "Yanlış. Promotör bölgelerdeki sitozin metilasyonu ağırsa gen susturulur; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
+      "D": "Yanlış. Yağda çözünen vitaminler ve B vitaminleri eksiklikleri; T hücre aracılı immünitede belirgin azalma ve sık fırsatçı/ağır enfeksiyonlar; erken dönemde ağır malnütrisyonda serebral atrofi, miyelinizasyon bozukluğu ve uzun dönem nörokognitif etkiler görülür.",
+      "E": "Yanlış. Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\"."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k02-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Kistik fibrozis klinik tutulumları\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "D": "Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+      "E": "Kaynakları eski kurşun bazlı boyalar, su boruları ve kirli topraktır; çocuklarda oral emilim artmıştır ve kan-beyin bariyeri daha geçirgendir.",
+      "C": "SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+      "B": "Yağda çözünen vitaminler ve B vitaminleri eksiklikleri; T hücre aracılı immünitede belirgin azalma ve sık fırsatçı/ağır enfeksiyonlar; erken dönemde ağır malnütrisyonda serebral atrofi, miyelinizasyon bozukluğu ve uzun dönem nörokognitif etkiler görülür.",
+      "A": "Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aktivitesi artar; su emilimi artar ve mukus dehidrate ve visköz hale gelir. Ter bezlerinde NaCl geri emilimi azalır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+      "E": "Yanlış. Kaynakları eski kurşun bazlı boyalar, su boruları ve kirli topraktır; çocuklarda oral emilim artmıştır ve kan-beyin bariyeri daha geçirgendir.",
+      "C": "Yanlış. SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+      "B": "Yanlış. Yağda çözünen vitaminler ve B vitaminleri eksiklikleri; T hücre aracılı immünitede belirgin azalma ve sık fırsatçı/ağır enfeksiyonlar; erken dönemde ağır malnütrisyonda serebral atrofi, miyelinizasyon bozukluğu ve uzun dönem nörokognitif etkiler görülür.",
+      "A": "Yanlış. Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aktivitesi artar; su emilimi artar ve mukus dehidrate ve visköz hale gelir. Ter bezlerinde NaCl geri emilimi azalır."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k02-q11",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Yetersiz beslenme ve SAM\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+      "B": "Hastalık gelişimi çoğu zaman genetik zemin, çevresel faktörler ve yaşam tarzı ile beslenmenin etkileşiminden doğar.",
+      "C": "Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "A": "Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "E": "Promotör bölgelerdeki sitozin metilasyonu ağırsa gen susturulur; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+      "B": "Yanlış. Hastalık gelişimi çoğu zaman genetik zemin, çevresel faktörler ve yaşam tarzı ile beslenmenin etkileşiminden doğar.",
+      "C": "Yanlış. Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "A": "Yanlış. Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "E": "Yanlış. Promotör bölgelerdeki sitozin metilasyonu ağırsa gen susturulur; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir."
+     },
+     "bilgi": [
+      30
      ],
      "benzer_cikmis": []
     }
@@ -260,6 +738,219 @@
       6
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aynı ilacı kullanan iki hastadan biri standart dozda toksisite geliştirmiştir; farmakogenomik incelemede tek baz farkı saptanmış, ayrıca tümörde promotör metilasyonuyla gen susturulması görülmüştür. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "SNP kromozom kaybıdır.",
+      "B": "SNP tek baz pozisyonundaki kalıcı varyasyondur; ilaç metabolizmasını ve kompleks hastalık riskini etkiler (farmakogenomik). CNV kopya sayısı değişimidir. Epigenetik, dizi değişmeden kalıcı ekspresyon düzenlemesidir: promotör sitozin metilasyonu ağırsa gen susturulur; histon asetilasyon/metilasyon/fosforilasyon kromatin erişilebilirliğini düzenler.",
+      "C": "Metilasyon geni aktive eder.",
+      "D": "Histon modifikasyonları ekspresyonu etkilemez.",
+      "E": "Farmakogenomik varyasyonla ilişkisizdir."
+     },
+     "dogru": "B",
+     "aciklama": "SNP/CNV tanımları ile epigenetik mekanizmalar (metilasyon susturur, histon modifikasyonları erişilebilirliği düzenler) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; SNP tek baz varyasyonudur.",
+      "B": "Doğru. Varyasyon ve epigenetik birlikte doğrudur.",
+      "C": "Yanlış; ağır metilasyon susturur.",
+      "D": "Yanlış; histon modifikasyonları düzenleyicidir.",
+      "E": "Yanlış; SNP ilaç yanıtını etkiler."
+     },
+     "bilgi": [
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "İlaç toksisiteli hastada farmakogenomik varyasyon ve tümör metilasyonu tartışılırken varyasyon ve epigenetikle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "SNP kodlayan veya kodlamayan bölgelerde bulunur ve ilaç metabolizmasını etkileyebilir.",
+      "B": "Promotör sitozin metilasyonu ağırsa gen susturulur.",
+      "C": "Histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını düzenler.",
+      "D": "SNP yalnızca protein kodlayan bölgede bulunur ve ekspresyonu etkilemez; metilasyon geni aktive eder.",
+      "E": "Epigenetik düzenlemede DNA dizisi değişmez; düzenleme kalıcı olabilir."
+     },
+     "dogru": "D",
+     "aciklama": "SNP kodlamayan bölgede de bulunur ve etkilidir; ağır metilasyon susturur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Yanlış ifade (aranan cevap). Yerleşim ve metilasyon etkisi hatalıdır.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      4,
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "SNP ve CNV varyasyonlarının tanım ve klinik önem farkı nedir?",
+     "secenekler": {
+      "A": "SNP uzun segment delesyonudur",
+      "B": "CNV tek baz değişimidir",
+      "C": "SNP ilaç yanıtını etkilemez",
+      "D": "CNV yalnızca kanserde olur",
+      "E": "SNP tek baz-farmakogenomik; CNV segment-otizm"
+     },
+     "dogru": "E",
+     "aciklama": "SNP tek baz pozisyonundaki kalıcı varyasyondur; kodlayan ve kodlamayan bölgelerde bulunur, ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini hafifçe değiştirir. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir. Ölçek farkı (tek baz-uzun segment) klinik etki biçimini belirler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; uzun segment değişimi CNV'dir.",
+      "B": "Yanlış; tek baz değişimi SNP'dir.",
+      "C": "Yanlış; SNP farmakogenomik yanıtı belirler.",
+      "D": "Yanlış; CNV otizm ve gelişimsel gerilikte de rol oynar.",
+      "E": "Doğru; iki varyasyonun ölçek ve klinik karşılığını verir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Epigenetik düzenlemenin temel mekanizmaları ve etkileri nelerdir?",
+     "secenekler": {
+      "A": "Epigenetik dizi değişimi demektir",
+      "B": "Metilasyon susturur; histon erişilebilirliği ayarlar",
+      "C": "Metilasyon geni aktive eder",
+      "D": "Histonlar düzenlemeye katılmaz",
+      "E": "Epigenetik kalıcı değildir"
+     },
+     "dogru": "B",
+     "aciklama": "Epigenetik, DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir ve hücre tipine özgü ekspresyonu sağlar. Promotörlerdeki ağır sitozin metilasyonu geni susturur. Histon asetilasyon, metilasyon ve fosforilasyonu kromatin erişilebilirliğini değiştirir; kodlamayan RNA'lar da düzenlemeye katılır. Kanserde tümör baskılayıcı promotörlerin anormal metilasyonu klinik örneğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; epigenetik dizi değişmeden ekspresyon düzenlemesidir.",
+      "B": "Doğru; iki ana mekanizmanın etkisini özetler.",
+      "C": "Yanlış; ağır promotör metilasyonu susturucudur.",
+      "D": "Yanlış; histon modifikasyonları kromatini açıp kapatır.",
+      "E": "Yanlış; düzenleme kalıcı ve hücresel kimliğin temelidir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k03-q08",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Yetersiz beslenme ve SAM\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "A": "Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+      "D": "20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "B": "Fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler; mutasyonla elastik lif bütünlüğü bozulur ve TGF-β sinyal aktivitesi artar.",
+      "C": "Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "E": "Alkol kullanım bozukluğu erişkinlerin önemli bir kısmını etkiler; akut toksisite SSS depresyonu ve solunum baskılanması yapar, kronik kullanım hepatik, pankreatik, kardiyak ve nörolojik hasara yol açar. Ana metabolizma yolu alkol dehidrojenaz ile asetaldehit oluşumudur; yüksek dozda MEOS ve sitokrom P-450 devreye girer."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+      "D": "Yanlış. 20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "B": "Yanlış. Fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler; mutasyonla elastik lif bütünlüğü bozulur ve TGF-β sinyal aktivitesi artar.",
+      "C": "Yanlış. Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "E": "Yanlış. Alkol kullanım bozukluğu erişkinlerin önemli bir kısmını etkiler; akut toksisite SSS depresyonu ve solunum baskılanması yapar, kronik kullanım hepatik, pankreatik, kardiyak ve nörolojik hasara yol açar. Ana metabolizma yolu alkol dehidrojenaz ile asetaldehit oluşumudur; yüksek dozda MEOS ve sitokrom P-450 devreye girer."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k03-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Diyet, ateroskleroz ve kanser\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Doymuş yağ ve kolesterol kısıtlanması serum kolesterolünü düşürebilir; lifli gıdalar dışkı hacmini ve geçiş hızını artırarak divertiküloz ve kolorektal kanser için olası koruyucu etki sağlar.",
+      "D": "Sağlık eşitsizliği hastalık insidansı, prevalansı, morbidite ve mortalitede topluluklar arası sistematik farklılıktır; modern genetik biyolojik olarak keskin \"ırklar\" olmadığını göstermiştir.",
+      "A": "Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "B": "ABD EPA ana kirleticileri SO₂, CO, NO₂, ozon (O₃) ve partikül maddedir; \"smog\" ozon ve ince partiküllerle ilişkilidir. Ozon otomobil egzozu ve güneş ışığıyla oluşur, serbest radikal üretir ve solunum epiteline zarar verir. Partikül madde <10 µm ise alt solunum yollarına ulaşır.",
+      "C": "Düz yüz profili, epikantus, yukarı eğimli palpebral fissürler, zihinsel gerilik (IQ çoğunlukla 25-50), hipotoni ve gelişimsel gecikme görülür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Doymuş yağ ve kolesterol kısıtlanması serum kolesterolünü düşürebilir; lifli gıdalar dışkı hacmini ve geçiş hızını artırarak divertiküloz ve kolorektal kanser için olası koruyucu etki sağlar.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Doymuş yağ ve kolesterol kısıtlanması serum kolesterolünü düşürebilir; lifli gıdalar dışkı hacmini ve geçiş hızını artırarak divertiküloz ve kolorektal kanser için olası koruyucu etki sağlar.",
+      "D": "Yanlış. Sağlık eşitsizliği hastalık insidansı, prevalansı, morbidite ve mortalitede topluluklar arası sistematik farklılıktır; modern genetik biyolojik olarak keskin \"ırklar\" olmadığını göstermiştir.",
+      "A": "Yanlış. Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "B": "Yanlış. ABD EPA ana kirleticileri SO₂, CO, NO₂, ozon (O₃) ve partikül maddedir; \"smog\" ozon ve ince partiküllerle ilişkilidir. Ozon otomobil egzozu ve güneş ışığıyla oluşur, serbest radikal üretir ve solunum epiteline zarar verir. Partikül madde <10 µm ise alt solunum yollarına ulaşır.",
+      "C": "Yanlış. Düz yüz profili, epikantus, yukarı eğimli palpebral fissürler, zihinsel gerilik (IQ çoğunlukla 25-50), hipotoni ve gelişimsel gecikme görülür."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k03-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Kişisel çevre ve yaşam tarzı\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+      "E": "Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "D": "NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir.",
+      "C": "Genetik hastalık için yatkınlık zemini sağlar; çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+      "B": "Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+      "E": "Yanlış. Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "D": "Yanlış. NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir.",
+      "C": "Yanlış. Genetik hastalık için yatkınlık zemini sağlar; çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+      "B": "Yanlış. Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k03-q11",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"DNA metilasyonu ve histon modifikasyonları\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Promotör bölgelerdeki sitozin metilasyonu ağırsa gen susturulur; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
+      "C": "20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "E": "Genetik hastalık için yatkınlık zemini sağlar; çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+      "A": "En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar.",
+      "D": "Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Promotör bölgelerdeki sitozin metilasyonu ağırsa gen susturulur; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Promotör bölgelerdeki sitozin metilasyonu ağırsa gen susturulur; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
+      "C": "Yanlış. 20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "E": "Yanlış. Genetik hastalık için yatkınlık zemini sağlar; çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+      "A": "Yanlış. En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar.",
+      "D": "Yanlış. Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -345,6 +1036,220 @@
       7,
       8,
       9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Bir ailede baba ve kız çocuğu etkilenmiş, anne sağlıklıdır; başka bir ailede her iki ebeveyn sağlıklı taşıyıcı iken çocuklardan biri hastadır. Kalıtımla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Birinci tablo otozomal dominantla uyumludur: heterozigotta fenotip görülür, her iki cinsiyette eşittir, ebeveynlerden biri etkilenmiş olabilir. İkinci tablo otozomal resesiftir: fenotip homozigot (iki mutant alel) iken ortaya çıkar, ebeveynler genellikle asemptomatik taşıyıcıdır.",
+      "B": "Dominant kalıtımda yalnızca homozigotlar hastadır.",
+      "C": "Resesif kalıtımda taşıyıcı ebeveynler her zaman hastadır.",
+      "D": "Her iki tablo da X'e bağlıdır.",
+      "E": "Tek gen hastalıklarında kalıtım paterni yoktur."
+     },
+     "dogru": "A",
+     "aciklama": "OD (heterozigot etkilenir, iki cins eşit, ebeveynlerden biri etkilenmiş) ve OR (iki mutant alel, ebeveyn taşıyıcı-asemptomatik) ayrımı doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. İki paternin ölçütleri doğrudur.",
+      "B": "Yanlış; dominantta heterozigot yeterlidir.",
+      "C": "Yanlış; resesifte ebeveyn taşıyıcı-asemptomatiktir.",
+      "D": "Yanlış; tablolar otozomal paterndir.",
+      "E": "Yanlış; OD ve OR paternleri tanımlıdır."
+     },
+     "bilgi": [
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Etkilenmiş baba-kız ile taşıyıcı ebeveynlerin hasta çocuğu olan iki aile değerlendirilirken otozomal kalıtımla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "OD'da heterozigot bireyde fenotip görülür.",
+      "B": "OD her iki cinsiyette eşit sıklıktadır.",
+      "C": "OD'da fenotip için iki mutant alel şarttır ve yalnızca erkekler etkilenir; OR'da taşıyıcı ebeveynler her zaman hasta olur.",
+      "D": "OR'da ebeveynler genellikle asemptomatik taşıyıcıdır.",
+      "E": "OR'da fenotip her iki alel mutasyonlu olduğunda ortaya çıkar."
+     },
+     "dogru": "C",
+     "aciklama": "OD'da tek mutant alel yeterlidir ve iki cins eşit etkilenir; OR ebeveynleri asemptomatik taşıyıcıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Yanlış ifade (aranan cevap). Alel sayısı ve cinsiyet bilgisi hatalıdır.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Otozomal dominant kalıtımın ayırt edici özellikleri nelerdir?",
+     "secenekler": {
+      "A": "Dominant fenotip homozigot ister",
+      "B": "Risk her gebelikte %25'tir",
+      "C": "Yalnızca erkekler etkilenir",
+      "D": "Heterozigot fenotip; %50 risk; yapısal protein",
+      "E": "Örneği kistik fibrozistir"
+     },
+     "dogru": "D",
+     "aciklama": "Otozomal dominant kalıtımda heterozigot bireyde fenotip görülür; etkilenmiş ebeveynle her gebelikte %50 risk vardır ve iki cinsiyet eşit etkilenir. Kodlanan ürünler çoğunlukla reseptör, yapısal protein ve tümör baskılayıcılardır; örneği Marfan sendromudur. Tek gendeki mutasyon yüksek penetransla belirleyicidir ve aile öyküsü güçlüdür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; heterozigotta fenotip görülür.",
+      "B": "Yanlış; %50 risk dominant, %25 resesif örüntüdür.",
+      "C": "Yanlış; otozomal kalıtımda cinsiyetler eşit etkilenir.",
+      "D": "Doğru; dominant kalıtımın üç özelliğini verir.",
+      "E": "Yanlış; kistik fibrozis otozomal resesiftir."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Otozomal resesif kalıtımın ayırt edici özellikleri nelerdir?",
+     "secenekler": {
+      "A": "Homozigot fenotip; taşıyıcı ebeveyn; enzim; akrabalık",
+      "B": "Heterozigot fenotip verir",
+      "C": "Ebeveynler hep hastadır",
+      "D": "Ürünler yapısal proteindir",
+      "E": "Akrabalık riski azaltır"
+     },
+     "dogru": "A",
+     "aciklama": "Otozomal resesif kalıtımda fenotip iki alel de mutant olduğunda (homozigot) ortaya çıkar; ebeveynler genellikle asemptomatik taşıyıcıdır. Kodlanan ürünler çoğunlukla enzimlerdir ve hastalık çocuklukta başlama eğilimindedir; örneği kistik fibrozistir. Akraba evliliği iki taşıyıcının birleşme olasılığını artırdığından resesif hastalık sıklığını yükseltir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; resesif kalıtımın dört özelliğini özetler.",
+      "B": "Yanlış; heterozigotlar asemptomatik taşıyıcıdır.",
+      "C": "Yanlış; ebeveynler genellikle sağlıklı taşıyıcıdır.",
+      "D": "Yanlış; resesif ürünler çoğunlukla enzimlerdir.",
+      "E": "Yanlış; akraba evliliği resesif sıklığı artırır."
+     },
+     "bilgi": [
+      7,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k04-q08",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "\"İklim değişikliği ve sağlık\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "E": "Kaynakları eski kurşun bazlı boyalar, su boruları ve kirli topraktır; çocuklarda oral emilim artmıştır ve kan-beyin bariyeri daha geçirgendir.",
+      "B": "Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "C": "ABD EPA ana kirleticileri SO₂, CO, NO₂, ozon (O₃) ve partikül maddedir; \"smog\" ozon ve ince partiküllerle ilişkilidir. Ozon otomobil egzozu ve güneş ışığıyla oluşur, serbest radikal üretir ve solunum epiteline zarar verir. Partikül madde <10 µm ise alt solunum yollarına ulaşır.",
+      "A": "Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: 20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+     "sik_aciklamalari": {
+      "D": "Doğru. 20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "E": "Yanlış. Kaynakları eski kurşun bazlı boyalar, su boruları ve kirli topraktır; çocuklarda oral emilim artmıştır ve kan-beyin bariyeri daha geçirgendir.",
+      "B": "Yanlış. Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "C": "Yanlış. ABD EPA ana kirleticileri SO₂, CO, NO₂, ozon (O₃) ve partikül maddedir; \"smog\" ozon ve ince partiküllerle ilişkilidir. Ozon otomobil egzozu ve güneş ışığıyla oluşur, serbest radikal üretir ve solunum epiteline zarar verir. Partikül madde <10 µm ise alt solunum yollarına ulaşır.",
+      "A": "Yanlış. Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k04-q09",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Kurşun toksisitesi klinik bulguları\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\".",
+      "E": "Marasmus'ta kalori eksikliği baskındır (büyüme geriliği, kas ve subkutan yağ kaybı, \"zayıf çomak\" görünümü; somatik bölme tükenir, viseral bölme korunur). Kwashiorkor'da protein yoksunluğu daha fazladır (erken sütten kesilme, karbonhidrat ağırlıklı diyet) ve ödem, karaciğer yağlanması, deride mozaik pigmentasyon ve saçta \"bayrak işareti\" görülür.",
+      "C": "Fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler; mutasyonla elastik lif bütünlüğü bozulur ve TGF-β sinyal aktivitesi artar.",
+      "B": "DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır.",
+      "A": "Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\".",
+     "sik_aciklamalari": {
+      "D": "Doğru. Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\".",
+      "E": "Yanlış. Marasmus'ta kalori eksikliği baskındır (büyüme geriliği, kas ve subkutan yağ kaybı, \"zayıf çomak\" görünümü; somatik bölme tükenir, viseral bölme korunur). Kwashiorkor'da protein yoksunluğu daha fazladır (erken sütten kesilme, karbonhidrat ağırlıklı diyet) ve ödem, karaciğer yağlanması, deride mozaik pigmentasyon ve saçta \"bayrak işareti\" görülür.",
+      "C": "Yanlış. Fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler; mutasyonla elastik lif bütünlüğü bozulur ve TGF-β sinyal aktivitesi artar.",
+      "B": "Yanlış. DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır.",
+      "A": "Yanlış. Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k04-q10",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Obezitenin klinik sonuçları ve kanser riski\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "E": "Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+      "D": "Kodlamayan DNA promotör ve güçlendirici (enhancer) bölgeler, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir. Ökromatin dağınık ve transkripsiyonel olarak aktif, heterokromatin yoğun ve inaktiftir; promotör transkripsiyonu başlatır, güçlendiriciler 100 kb veya daha uzaktan gen ekspresyonunu düzenleyebilir.",
+      "B": "Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "A": "Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "E": "Yanlış. Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+      "D": "Yanlış. Kodlamayan DNA promotör ve güçlendirici (enhancer) bölgeler, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir. Ökromatin dağınık ve transkripsiyonel olarak aktif, heterokromatin yoğun ve inaktiftir; promotör transkripsiyonu başlatır, güçlendiriciler 100 kb veya daha uzaktan gen ekspresyonunu düzenleyebilir.",
+      "B": "Yanlış. Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "A": "Yanlış. Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k04-q11",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Kurşun toksisitesi klinik bulguları\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "D": "Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\".",
+      "C": "Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "E": "En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar.",
+      "A": "Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+      "B": "DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\".",
+     "sik_aciklamalari": {
+      "D": "Doğru. Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\".",
+      "C": "Yanlış. Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "E": "Yanlış. En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar.",
+      "A": "Yanlış. Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+      "B": "Yanlış. DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır."
+     },
+     "bilgi": [
+      25
      ],
      "benzer_cikmis": []
     }
@@ -463,6 +1368,227 @@
      "benzer_cikmis": [
       "d3-f-136"
      ]
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k05-q05",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Uzun boy, aort kökü genişlemesi ve lens dislokasyonlu 16 yaşındaki hasta ile tekrarlayan Pseudomonas akciğer enfeksiyonu, pankreatik yetmezlik ve terde tuzluluk öykülü 6 yaşındaki hasta değerlendirilmektedir. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Her iki hastalık da X'e bağlıdır.",
+      "B": "Marfan CFTR, kistik fibrozis FBN1 mutasyonudur.",
+      "C": "Marfanda TGF-β aktivitesi azalır.",
+      "D": "Kistik fibroziste mukus sulanır.",
+      "E": "Birinci hasta Marfan'dır: FBN1 (fibrillin-1) mutasyonu; fibrillin mikrofibril bileşeni ve TGF-β düzenleyicisidir, mutasyonda elastik lif bozulur, TGF-β aktivitesi artar (aort, bağ, lens-siliyer zonül). İkinci hasta kistik fibrozistir: CFTR (klorür-bikarbonat kanalı) mutasyonu; klorür sekresyonu azalır, ENaC artar, mukus dehidrate-visköz olur; akciğerde tıkaç-enfeksiyon-bronşiektazi (S. aureus, Pseudomonas, NTM, Burkholderia)."
+     },
+     "dogru": "E",
+     "aciklama": "Marfan (FBN1, TGF-β artışı, aort-lens-bağ) ve KF (CFTR, ENaC artışı, visköz mukus, tipik mikrobiyoloji) bilgileri doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; Marfan OD, KF OR'dir.",
+      "B": "Yanlış; genler ters verilmiştir.",
+      "C": "Yanlış; TGF-β aktivitesi artar.",
+      "D": "Yanlış; mukus dehidrate-visköz olur.",
+      "E": "Doğru. İki hastalığın gen-patogenez-kliniği doğrudur."
+     },
+     "bilgi": [
+      10,
+      11,
+      12,
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k05-q06",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Aort genişlemeli adolesan ile tekrarlayan Pseudomonas enfeksiyonlu çocuk karşılaştırılırken marfan ve kistik fibrozisle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Marfan sistemik bağ dokusu hastalığıdır (FBN1).",
+      "B": "Marfanda elastik lifler güçlenir ve TGF-β baskılanır; KF'de ter bezi tuzu azalır ve mukus hidrasyonu artar.",
+      "C": "KF'de CFTR kanal kusuruyla klorür sekresyonu azalır, ENaC aktivitesi artar.",
+      "D": "KF akciğerinde kalın mukus, tekrarlayan enfeksiyon ve bronşiektazi görülür.",
+      "E": "Fibrillin-1 mikrofibrillerin bileşeni olup TGF-β bağlanmasını düzenler."
+     },
+     "dogru": "B",
+     "aciklama": "Marfanda elastik lif bütünlüğü bozulur ve TGF-β artar; KF'de ter tuzu artar ve mukus dehidratedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Yanlış ifade (aranan cevap). Yön bilgileri terstir.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      10,
+      11,
+      12,
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Marfan sendromunun genetik temeli ve doku sonuçları nasıl açıklanır?",
+     "secenekler": {
+      "A": "Marfan enzim eksikliğidir",
+      "B": "TGF-β sinyali azalır",
+      "C": "FBN1; TGF-β artışı; aort-lens-iskelet",
+      "D": "Lens tutulumu olmaz",
+      "E": "Aort duvarı güçlenir"
+     },
+     "dogru": "C",
+     "aciklama": "Marfan sistemik bağ dokusu hastalığıdır; FBN1 genindeki fibrillin-1 mutasyonu mikrofibril yapısını bozar. Sağlam fibrillin-1 TGF-β'yi bağlayıp sinyalini dengeler; mutasyonda elastik lif bütünlüğü bozulur ve TGF-β sinyali artarak matriksi zayıflatır. Sonuç aort duvarı, bağlar ve lensi tutan siliyer zonüllerde yetmezliktir: aort kök dilatasyonu-diseksiyon, araknodaktili ve lens subluksasyonu (ektopia lentis) gelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; Marfan yapısal protein (fibrillin-1) hastalığıdır.",
+      "B": "Yanlış; mutasyonda TGF-β sinyal aktivitesi artar.",
+      "C": "Doğru; gen, sinyal mekanizma ve üç doku sonucunu verir.",
+      "D": "Yanlış; ektopia lentis tipik göz bulgusudur.",
+      "E": "Yanlış; matriks zayıflar, anevrizma-diseksiyon gelişir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k05-q08",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kistik fibrozisin iyon kanalı bozukluğu ve doku sonuçları nelerdir?",
+     "secenekler": {
+      "A": "CFTR sodyum kanalıdır",
+      "B": "Mukus sulu ve akışkandır",
+      "C": "Ter tuzu azalmıştır",
+      "D": "Pankreas hiperfonksiyonludur",
+      "E": "CFTR-ENaC; viskoz mukus; tuzlu ter"
+     },
+     "dogru": "E",
+     "aciklama": "Kistik fibrozis CFTR klorür-bikarbonat kanalı mutasyonuyla gelişen epitel iyon kanalı hastalığıdır. Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aracılı sodyum-su emilimi artar; mukus dehidrate ve viskoz hale gelip mukosiliyer işlev bozulur. Ter bezinde NaCl geri emilimi azaldığından tuzlu ter tipiktir; akciğerde Pseudomonas enfeksiyonları ve bronşiektazi, pankreasta kanal tıkanmasıyla ekzokrin yetmezlik, erkekte vas deferens agenezisi gelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; CFTR klorür-bikarbonat kanalıdır.",
+      "B": "Yanlış; mukus dehidrate ve viskoz hale gelir.",
+      "C": "Yanlış; NaCl geri emilimi azaldığından ter tuzludur.",
+      "D": "Yanlış; kanal tıkanması ekzokrin yetmezlik yapar.",
+      "E": "Doğru; kanal dengesizliği ve üç doku sonucunu özetler."
+     },
+     "bilgi": [
+      12,
+      13,
+      14
+     ],
+     "benzer_cikmis": [
+      "73cb46c61534"
+     ]
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k05-q09",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "\"Sosyal ırk ve çevresel maruziyet\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "E": "Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "A": "Sıcak hava dalgaları kardiyovasküler/solunum mortalitesini artırır; sel ve altyapı bozulması su ve gıda kaynaklı enfeksiyonları artırır; vektör ekolojisi değişir (sıtma, dang gibi hastalıkların yayılımı); tarım verimi düşer.",
+      "C": "Anoreksiya nervozada kişinin kendine uyguladığı açlık, belirgin kilo kaybı ve düşük vücut ağırlığı vardır; gonadotropin salınımı azalır, amenore sık görülür ve bradikardi, hipotansiyon, osteopeni/osteoporoz ve hipokalemi izlenir. Bulimia nervozada tekrarlayan aşırı yeme atakları ve ardından kendini kusturma, müshil/diüretik kötüye kullanımı vardır.",
+      "B": "Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "E": "Yanlış. Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "A": "Yanlış. Sıcak hava dalgaları kardiyovasküler/solunum mortalitesini artırır; sel ve altyapı bozulması su ve gıda kaynaklı enfeksiyonları artırır; vektör ekolojisi değişir (sıtma, dang gibi hastalıkların yayılımı); tarım verimi düşer.",
+      "C": "Yanlış. Anoreksiya nervozada kişinin kendine uyguladığı açlık, belirgin kilo kaybı ve düşük vücut ağırlığı vardır; gonadotropin salınımı azalır, amenore sık görülür ve bradikardi, hipotansiyon, osteopeni/osteoporoz ve hipokalemi izlenir. Bulimia nervozada tekrarlayan aşırı yeme atakları ve ardından kendini kusturma, müshil/diüretik kötüye kullanımı vardır.",
+      "B": "Yanlış. Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k05-q10",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Sosyal ırk ve çevresel maruziyet\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "E": "Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "D": "Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+      "A": "Ortam, işyeri veya kişisel çevredeki kimyasal veya fiziksel ajan maruziyeti sonucu gelişen klinik bozukluktur; hava, su, toprak kirliliği, mesleki toksinler, radyasyon ve fiziksel ajanları kapsar.",
+      "B": "Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "E": "Yanlış. Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "D": "Yanlış. Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır.",
+      "A": "Yanlış. Ortam, işyeri veya kişisel çevredeki kimyasal veya fiziksel ajan maruziyeti sonucu gelişen klinik bozukluktur; hava, su, toprak kirliliği, mesleki toksinler, radyasyon ve fiziksel ajanları kapsar.",
+      "B": "Yanlış. Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k05-q11",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Genetik varyasyon: SNP ve CNV\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+      "A": "Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "C": "Düz yüz profili, epikantus, yukarı eğimli palpebral fissürler, zihinsel gerilik (IQ çoğunlukla 25-50), hipotoni ve gelişimsel gecikme görülür.",
+      "B": "Marasmus'ta kalori eksikliği baskındır (büyüme geriliği, kas ve subkutan yağ kaybı, \"zayıf çomak\" görünümü; somatik bölme tükenir, viseral bölme korunur). Kwashiorkor'da protein yoksunluğu daha fazladır (erken sütten kesilme, karbonhidrat ağırlıklı diyet) ve ödem, karaciğer yağlanması, deride mozaik pigmentasyon ve saçta \"bayrak işareti\" görülür.",
+      "E": "DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+      "A": "Yanlış. Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "C": "Yanlış. Düz yüz profili, epikantus, yukarı eğimli palpebral fissürler, zihinsel gerilik (IQ çoğunlukla 25-50), hipotoni ve gelişimsel gecikme görülür.",
+      "B": "Yanlış. Marasmus'ta kalori eksikliği baskındır (büyüme geriliği, kas ve subkutan yağ kaybı, \"zayıf çomak\" görünümü; somatik bölme tükenir, viseral bölme korunur). Kwashiorkor'da protein yoksunluğu daha fazladır (erken sütten kesilme, karbonhidrat ağırlıklı diyet) ve ödem, karaciğer yağlanması, deride mozaik pigmentasyon ve saçta \"bayrak işareti\" görülür.",
+      "E": "Yanlış. DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k05-q12",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"Marfan sendromu\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "E": "Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+      "D": "Doymuş yağ ve kolesterol kısıtlanması serum kolesterolünü düşürebilir; lifli gıdalar dışkı hacmini ve geçiş hızını artırarak divertiküloz ve kolorektal kanser için olası koruyucu etki sağlar.",
+      "B": "Alkol kullanım bozukluğu erişkinlerin önemli bir kısmını etkiler; akut toksisite SSS depresyonu ve solunum baskılanması yapar, kronik kullanım hepatik, pankreatik, kardiyak ve nörolojik hasara yol açar. Ana metabolizma yolu alkol dehidrojenaz ile asetaldehit oluşumudur; yüksek dozda MEOS ve sitokrom P-450 devreye girer.",
+      "A": "Anoreksiya nervozada kişinin kendine uyguladığı açlık, belirgin kilo kaybı ve düşük vücut ağırlığı vardır; gonadotropin salınımı azalır, amenore sık görülür ve bradikardi, hipotansiyon, osteopeni/osteoporoz ve hipokalemi izlenir. Bulimia nervozada tekrarlayan aşırı yeme atakları ve ardından kendini kusturma, müshil/diüretik kötüye kullanımı vardır.",
+      "C": "Fenotip her iki alel mutasyonlu (homozigot) olduğunda ortaya çıkar; ebeveynler genellikle asemptomatik taşıyıcıdır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+      "D": "Yanlış. Doymuş yağ ve kolesterol kısıtlanması serum kolesterolünü düşürebilir; lifli gıdalar dışkı hacmini ve geçiş hızını artırarak divertiküloz ve kolorektal kanser için olası koruyucu etki sağlar.",
+      "B": "Yanlış. Alkol kullanım bozukluğu erişkinlerin önemli bir kısmını etkiler; akut toksisite SSS depresyonu ve solunum baskılanması yapar, kronik kullanım hepatik, pankreatik, kardiyak ve nörolojik hasara yol açar. Ana metabolizma yolu alkol dehidrojenaz ile asetaldehit oluşumudur; yüksek dozda MEOS ve sitokrom P-450 devreye girer.",
+      "A": "Yanlış. Anoreksiya nervozada kişinin kendine uyguladığı açlık, belirgin kilo kaybı ve düşük vücut ağırlığı vardır; gonadotropin salınımı azalır, amenore sık görülür ve bradikardi, hipotansiyon, osteopeni/osteoporoz ve hipokalemi izlenir. Bulimia nervozada tekrarlayan aşırı yeme atakları ve ardından kendini kusturma, müshil/diüretik kötüye kullanımı vardır.",
+      "C": "Yanlış. Fenotip her iki alel mutasyonlu (homozigot) olduğunda ortaya çıkar; ebeveynler genellikle asemptomatik taşıyıcıdır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -560,6 +1686,216 @@
      },
      "bilgi": [
       16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "38 yaşında gebe, taramada yüksek risk saptanması üzerine danışmanlık istemektedir; doğan bebekte düz yüz profili, epikantus, yukarı eğimli palpebral fissür, hipotoni ve gelişimsel gecikme vardır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Zihinsel etkilenme Down'da görülmez.",
+      "B": "Down sendromu tek gen hastalığıdır.",
+      "C": "Anne yaşıyla risk azalır.",
+      "D": "Down sendromu en sık sayısal kromozom anomalisidir; genellikle maternal mayoz nondisjunction ile gelişir ve anne yaşıyla risk artar. Klinikte düz yüz, epikantus, yukarı eğimli fissür, IQ çoğunlukla 25-50, hipotoni ve gelişimsel gecikme görülür.",
+      "E": "Nondisjunction Down ile ilişkisizdir."
+     },
+     "dogru": "D",
+     "aciklama": "Patogenez (maternal nondisjunction, ileri anne yaşı) ve klinik (fasial bulgular, IQ 25-50, hipotoni) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; zihinsel gerilik tipiktir.",
+      "B": "Yanlış; kromozom sayısal anomalisidir.",
+      "C": "Yanlış; anne yaşıyla risk artar.",
+      "D": "Doğru. Patogenez ve klinik birlikte doğrudur.",
+      "E": "Yanlış; nondisjunction başlıca mekanizmadır."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "38 yaşındaki gebenin danışmanlığında ve yenidoğanda gözlenen bulgular değerlendirilirken down sendromuyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "En sık yapısal kromozom delesyonudur; paternal yaş belirleyicidir ve zihinsel gelişim her zaman normaldir.",
+      "B": "Genellikle maternal mayoz ayrılamamasıyla gelişir.",
+      "C": "Anne yaşı ilerledikçe risk artar.",
+      "D": "Düz yüz profili, epikantus, yukarı eğimli palpebral fissür, hipotoni ve IQ 25-50 aralığı tipiktir.",
+      "E": "En sık kromozom sayısal anomalisidir."
+     },
+     "dogru": "A",
+     "aciklama": "Down sayısal anomali (trizomi 21), maternal yaş belirleyicidir ve zihinsel gerilik tipiktir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış ifade (aranan cevap). Tip, yaş etkisi ve klinik hatalıdır.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Down sendromunun sitogenetik mekanizması ve risk etkeni nedir?",
+     "secenekler": {
+      "A": "En sık yapısal anomalidir",
+      "B": "Maternal nondisjunction; anne yaşıyla artar",
+      "C": "Baba yaşıyla ilişkilidir",
+      "D": "Mitoz hatası babadandır",
+      "E": "Anne yaşı riski azaltır"
+     },
+     "dogru": "B",
+     "aciklama": "Down sendromu en sık kromozom sayısal anomalisidir; genellikle maternal mayozda ayrılamama (nondisjunction) ile fazla kromozom 21 oluşur. Ayrılamama riski anne yaşıyla artar; bu yüzden ileri anne yaşı tarama endikasyonudur. Ekstra kromozomun gen doz artışı, çok sistemli fenotipi doğurur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; en sık sayısal anomalidir.",
+      "B": "Doğru; mekanizmayı ve yaş ilişkisini verir.",
+      "C": "Yanlış; risk belirleyicisi anne yaşıdır.",
+      "D": "Yanlış; klasik mekanizma maternal mayoz ayrılamamasıdır.",
+      "E": "Yanlış; anne yaşıyla risk artar."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Down sendromunun klinik özellikleriyle ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Aşağı eğimli fissür tipiktir",
+      "B": "IQ daima normaldir",
+      "C": "Kalp defekti hiç görülmez",
+      "D": "Epikantus, IQ 25-50, %40 kalp defekti",
+      "E": "Hipotoni eşlik etmez"
+     },
+     "dogru": "D",
+     "aciklama": "Klinikte düz yüz profili, epikantus ve yukarı eğimli palpebral fissürler tipiktir; hipotoni ve gelişimsel gecikme eşlik eder. Zihinsel gerilikte IQ çoğunlukla 25-50 aralığındadır. Konjenital kalp defekti ~%40 hastada bulunur; ayrıca lösemi ve Alzheimer benzeri nöropatoloji riski artmıştır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; fissürler yukarı eğimlidir.",
+      "B": "Yanlış; IQ çoğunlukla 25-50 aralığındadır.",
+      "C": "Yanlış; konjenital kalp defekti ~%40'tır.",
+      "D": "Doğru; dismorfik, nörolojik ve kardiyak özellikleri özetler.",
+      "E": "Yanlış; hipotoni ve gelişimsel gecikme tipiktir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k06-q08",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Sağlık eşitsizlikleri ve \"ırk\"\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "E": "Sağlık eşitsizliği hastalık insidansı, prevalansı, morbidite ve mortalitede topluluklar arası sistematik farklılıktır; modern genetik biyolojik olarak keskin \"ırklar\" olmadığını göstermiştir.",
+      "B": "Tütün kanserler için en yaygın dış kaynaklı nedendir ve akciğer kanserlerinin %80-90'ından sorumludur (1,3 milyar kullanıcı, yılda >8 milyon ölüm). Duman ~2000 kimyasal içerir (nikotin, polisiklik aromatik hidrokarbonlar, nitrozaminler, aromatik aminler, CO) ve kanserojen, aterojen ve trombojendir.",
+      "C": "Sıcak hava dalgaları kardiyovasküler/solunum mortalitesini artırır; sel ve altyapı bozulması su ve gıda kaynaklı enfeksiyonları artırır; vektör ekolojisi değişir (sıtma, dang gibi hastalıkların yayılımı); tarım verimi düşer.",
+      "D": "Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "A": "Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Sağlık eşitsizliği hastalık insidansı, prevalansı, morbidite ve mortalitede topluluklar arası sistematik farklılıktır; modern genetik biyolojik olarak keskin \"ırklar\" olmadığını göstermiştir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Sağlık eşitsizliği hastalık insidansı, prevalansı, morbidite ve mortalitede topluluklar arası sistematik farklılıktır; modern genetik biyolojik olarak keskin \"ırklar\" olmadığını göstermiştir.",
+      "B": "Yanlış. Tütün kanserler için en yaygın dış kaynaklı nedendir ve akciğer kanserlerinin %80-90'ından sorumludur (1,3 milyar kullanıcı, yılda >8 milyon ölüm). Duman ~2000 kimyasal içerir (nikotin, polisiklik aromatik hidrokarbonlar, nitrozaminler, aromatik aminler, CO) ve kanserojen, aterojen ve trombojendir.",
+      "C": "Yanlış. Sıcak hava dalgaları kardiyovasküler/solunum mortalitesini artırır; sel ve altyapı bozulması su ve gıda kaynaklı enfeksiyonları artırır; vektör ekolojisi değişir (sıtma, dang gibi hastalıkların yayılımı); tarım verimi düşer.",
+      "D": "Yanlış. Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "A": "Yanlış. Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k06-q09",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Kistik fibrozis patofizyolojisi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aktivitesi artar; su emilimi artar ve mukus dehidrate ve visköz hale gelir. Ter bezlerinde NaCl geri emilimi azalır.",
+      "D": "Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "B": "Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+      "C": "Fenotip her iki alel mutasyonlu (homozigot) olduğunda ortaya çıkar; ebeveynler genellikle asemptomatik taşıyıcıdır.",
+      "A": "Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aktivitesi artar; su emilimi artar ve mukus dehidrate ve visköz hale gelir. Ter bezlerinde NaCl geri emilimi azalır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aktivitesi artar; su emilimi artar ve mukus dehidrate ve visköz hale gelir. Ter bezlerinde NaCl geri emilimi azalır.",
+      "D": "Yanlış. Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "B": "Yanlış. Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+      "C": "Yanlış. Fenotip her iki alel mutasyonlu (homozigot) olduğunda ortaya çıkar; ebeveynler genellikle asemptomatik taşıyıcıdır.",
+      "A": "Yanlış. Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k06-q10",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Genetik varyasyon: SNP ve CNV\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+      "A": "20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "C": "Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "E": "Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "B": "Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+      "A": "Yanlış. 20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "C": "Yanlış. Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "E": "Yanlış. Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "B": "Yanlış. Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k06-q11",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"Epigenetik düzenleme\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "D": "DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır.",
+      "A": "Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "C": "Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "B": "Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir.",
+      "E": "Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aktivitesi artar; su emilimi artar ve mukus dehidrate ve visköz hale gelir. Ter bezlerinde NaCl geri emilimi azalır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır.",
+     "sik_aciklamalari": {
+      "D": "Doğru. DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır.",
+      "A": "Yanlış. Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "C": "Yanlış. Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "B": "Yanlış. Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir.",
+      "E": "Yanlış. Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aktivitesi artar; su emilimi artar ve mukus dehidrate ve visköz hale gelir. Ter bezlerinde NaCl geri emilimi azalır."
+     },
+     "bilgi": [
+      5
      ],
      "benzer_cikmis": []
     }
@@ -734,6 +2070,282 @@
       36
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Eski boyalı evde oturan 4 yaşındaki çocukta düşük IQ ve davranış bozukluğu, mikrositer anemi ve bazofilik noktalanma; 50 yaşında sigara içicisinde KOAH ve ateroskleroz; kronik alkol kullanan hastada steatoz-siroz ve Wernicke bulguları vardır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tütün kardiyovasküler riski azaltır.",
+      "B": "Kurşun çocukta zararsızdır.",
+      "C": "Çevresel hastalık ortam/işyeri/kişisel çevredeki kimyasal-fiziksel maruziyetle gelişir. Kurşun (eski boya, su borusu, kirli toprak; çocukta emilim artar, KBB geçirgen) düşük IQ, nöbet, periferik nöropati, bilek-ayak düşmesi, mikrositer anemi yapar. Tütün akciğer kanserlerinin %80-90'ından sorumludur; aterosklerozda majör bağımsız risk, trombosit agregasyonu artar, miyokard O2 sunumu azalır. Kronik alkol steatoz-steatohepatit-siroz, pankreatit ve tiamin eksikliğiyle Wernicke-Korsakoff yapar.",
+      "D": "Alkol karaciğeri korumaktadır.",
+      "E": "Çevre yalnızca doğal afetlerdir."
+     },
+     "dogru": "C",
+     "aciklama": "Çevresel hastalık tanımı ve kurşun-tütün-alkol etkileri doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; aterosklerozda majör risktir.",
+      "B": "Yanlış; çocukta emilim artar ve nörotoksiktir.",
+      "C": "Doğru. Üç maruziyetin etkileri doğrudur.",
+      "D": "Yanlış; steatoz-siroz yapar.",
+      "E": "Yanlış; kimyasal-fiziksel ajanları kapsar."
+     },
+     "bilgi": [
+      17,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k07-q08",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Kurşun maruziyetli çocuk, sigara içicisi ve kronik alkol kullanan hasta birlikte değerlendirilirken çevre sağlığıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "EPA ana kirleticileri SO2, CO, NO2, O3 ve partiküllerdir; smog ozon ve ince partiküllerle ilişkilidir.",
+      "B": "Sıcak dalgaları kardiyovasküler/solunum mortalitesini artırır; sel su-gıda enfeksiyonlarını artırır; vektör ekolojisi değişir.",
+      "C": "Tütün 1,3 milyar kullanıcı ve yılda >8 milyon ölümle kanserlerin en yaygın dış kaynaklı nedenidir.",
+      "D": "Alkol akut SSS depresyonu-solunum baskılanması, kronik hepatik-pankreatik-nörolojik hasar yapar.",
+      "E": "Hava kirliliği yalnızca oksijenden ibarettir ve sağlığa zararsızdır; iklim değişikliğinin hastalık yükü yoktur; kurşun çocuklarda IQ'yu artırır."
+     },
+     "dogru": "E",
+     "aciklama": "Hava kirleticileri akciğerde hasar yapar; iklim değişikliği mortalite-enfeksiyon-vektör yükünü artırır; kurşun IQ'yu düşürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Yanlış ifade (aranan cevap). Üç bilgi de hatalıdır."
+     },
+     "bilgi": [
+      21,
+      22,
+      23,
+      26,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k07-q09",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Çevresel hastalık kavramı, kurşun ve hava kirliliği etkileri nelerdir?",
+     "secenekler": {
+      "A": "Maruziyet bozukluğu; kurşun IQ-anemi; PM inflamasyon",
+      "B": "Çevre yalnızca radyasyondur",
+      "C": "Kurşun erişkinde IQ düşürür yalnızca",
+      "D": "Partiküller üst yolda kalır",
+      "E": "Bazofilik beneklenme demir eksikliğidir"
+     },
+     "dogru": "A",
+     "aciklama": "Çevresel hastalık, ortam-işyeri-kişisel çevredeki kimyasal veya fiziksel ajan maruziyetiyle gelişen bozukluktur; hava-su-toprak kirliliği, mesleki toksinler, radyasyon, tütün, alkol ve beslenme bu kapsamdadır. Kurşunda çocuklarda oral emilim artmış, kan-beyin bariyeri geçirgendir; düşük IQ, davranış bozukluğu, mikrositer anemi ve bazofilik beneklenme yapar. Hava kirliliğinde 10 µm altı partiküller alt solunum yoluna ulaşıp makrofaj-nötrofil inflamasyonu başlatır; ozon serbest radikal üretir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; kavramı ve iki kirleticinin mekanizmalarını verir.",
+      "B": "Yanlış; kimyasal, fiziksel ve yaşam tarzı etkenleri dahildir.",
+      "C": "Yanlış; çocukta düşük IQ, erişkinde periferik nöropatidir.",
+      "D": "Yanlış; 10 µm altı partiküller alt yollara ulaşır.",
+      "E": "Yanlış; beneklenme kurşunun eritrosit bulgusudur."
+     },
+     "bilgi": [
+      17,
+      23,
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k07-q10",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Tütün ve kronik alkolün başlıca sistemik etkileri nelerdir?",
+     "secenekler": {
+      "A": "Tütün akciğer kanserinde önemsizdir",
+      "B": "CO oksijen sunumunu artırır",
+      "C": "Tütün %80-90 akciğer ca; alkol steatoz-siroz",
+      "D": "Alkol karaciğeri korumaktadır",
+      "E": "Wernicke B12 eksikliğidir"
+     },
+     "dogru": "C",
+     "aciklama": "Tütün, kanserlerin en yaygın dış kaynaklı nedenidir; akciğer kanserlerinin %80-90'ından sorumludur ve ateroskleroz için majör bağımsız risk faktörüdür. Duman trombosit agregasyonunu artırır, CO ile miyokard oksijen sunumunu azaltırken talebi artırır; bu ikili miyokart enfarktüsü ve inmeyi kolaylaştırır. Kronik alkolde ADH ile asetaldehit oluşur, NADH/NAD+ artışı yağ asidi oksidasyonunu baskılayıp hepatik steatoz yapar; tablo steatohepatit-siroz, pankreatit, tiamin eksikliğinde Wernicke-Korsakoff ve dilate kardiyomiyopatiye ilerler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; tütün en yaygın dış kaynaklı kanser nedenidir.",
+      "B": "Yanlış; CO oksijen sunumunu azaltır, talebi artırır.",
+      "C": "Doğru; tütünün iki ana sonucunu ve alkolün karaciğer zincirini verir.",
+      "D": "Yanlış; kronik alkol steatoz-siroz zincirini başlatır.",
+      "E": "Yanlış; Wernicke-Korsakoff tiamin eksikliğindendir."
+     },
+     "bilgi": [
+      26,
+      27,
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k07-q11",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "\"Hava kirliliği: kirleticiler ve akciğer etkileri\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "ABD EPA ana kirleticileri SO₂, CO, NO₂, ozon (O₃) ve partikül maddedir; \"smog\" ozon ve ince partiküllerle ilişkilidir. Ozon otomobil egzozu ve güneş ışığıyla oluşur, serbest radikal üretir ve solunum epiteline zarar verir. Partikül madde <10 µm ise alt solunum yollarına ulaşır.",
+      "E": "Anoreksiya nervozada kişinin kendine uyguladığı açlık, belirgin kilo kaybı ve düşük vücut ağırlığı vardır; gonadotropin salınımı azalır, amenore sık görülür ve bradikardi, hipotansiyon, osteopeni/osteoporoz ve hipokalemi izlenir. Bulimia nervozada tekrarlayan aşırı yeme atakları ve ardından kendini kusturma, müshil/diüretik kötüye kullanımı vardır.",
+      "B": "Sıcak hava dalgaları kardiyovasküler/solunum mortalitesini artırır; sel ve altyapı bozulması su ve gıda kaynaklı enfeksiyonları artırır; vektör ekolojisi değişir (sıtma, dang gibi hastalıkların yayılımı); tarım verimi düşer.",
+      "C": "Kodlamayan DNA promotör ve güçlendirici (enhancer) bölgeler, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir. Ökromatin dağınık ve transkripsiyonel olarak aktif, heterokromatin yoğun ve inaktiftir; promotör transkripsiyonu başlatır, güçlendiriciler 100 kb veya daha uzaktan gen ekspresyonunu düzenleyebilir.",
+      "D": "Ortam, işyeri veya kişisel çevredeki kimyasal veya fiziksel ajan maruziyeti sonucu gelişen klinik bozukluktur; hava, su, toprak kirliliği, mesleki toksinler, radyasyon ve fiziksel ajanları kapsar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: ABD EPA ana kirleticileri SO₂, CO, NO₂, ozon (O₃) ve partikül maddedir; \"smog\" ozon ve ince partiküllerle ilişkilidir. Ozon otomobil egzozu ve güneş ışığıyla oluşur, serbest radikal üretir ve solunum epiteline zarar verir. Partikül madde <10 µm ise alt solunum yollarına ulaşır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. ABD EPA ana kirleticileri SO₂, CO, NO₂, ozon (O₃) ve partikül maddedir; \"smog\" ozon ve ince partiküllerle ilişkilidir. Ozon otomobil egzozu ve güneş ışığıyla oluşur, serbest radikal üretir ve solunum epiteline zarar verir. Partikül madde <10 µm ise alt solunum yollarına ulaşır.",
+      "E": "Yanlış. Anoreksiya nervozada kişinin kendine uyguladığı açlık, belirgin kilo kaybı ve düşük vücut ağırlığı vardır; gonadotropin salınımı azalır, amenore sık görülür ve bradikardi, hipotansiyon, osteopeni/osteoporoz ve hipokalemi izlenir. Bulimia nervozada tekrarlayan aşırı yeme atakları ve ardından kendini kusturma, müshil/diüretik kötüye kullanımı vardır.",
+      "B": "Yanlış. Sıcak hava dalgaları kardiyovasküler/solunum mortalitesini artırır; sel ve altyapı bozulması su ve gıda kaynaklı enfeksiyonları artırır; vektör ekolojisi değişir (sıtma, dang gibi hastalıkların yayılımı); tarım verimi düşer.",
+      "C": "Yanlış. Kodlamayan DNA promotör ve güçlendirici (enhancer) bölgeler, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir. Ökromatin dağınık ve transkripsiyonel olarak aktif, heterokromatin yoğun ve inaktiftir; promotör transkripsiyonu başlatır, güçlendiriciler 100 kb veya daha uzaktan gen ekspresyonunu düzenleyebilir.",
+      "D": "Yanlış. Ortam, işyeri veya kişisel çevredeki kimyasal veya fiziksel ajan maruziyeti sonucu gelişen klinik bozukluktur; hava, su, toprak kirliliği, mesleki toksinler, radyasyon ve fiziksel ajanları kapsar."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k07-q12",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "\"Yeni nesil dizileme ve hedefe yönelik tedavi\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir.",
+      "A": "Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "E": "Genetik hastalık için yatkınlık zemini sağlar; çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+      "B": "SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+      "D": "Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir.",
+      "A": "Yanlış. Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "E": "Yanlış. Genetik hastalık için yatkınlık zemini sağlar; çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+      "B": "Yanlış. SNP tek baz pozisyonundaki kalıcı varyasyondur ve kodlayan/kodlamayan bölgelerde bulunur; ilaç metabolizmasını (farmakogenomik) ve kompleks hastalık riskini etkiler. CNV binlerce-milyonlarca bazlık segmentin delesyon veya duplikasyonudur; otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+      "D": "Yanlış. Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k07-q13",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Moleküler tanı: temel araçlar\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "D": "Anoreksiya nervozada kişinin kendine uyguladığı açlık, belirgin kilo kaybı ve düşük vücut ağırlığı vardır; gonadotropin salınımı azalır, amenore sık görülür ve bradikardi, hipotansiyon, osteopeni/osteoporoz ve hipokalemi izlenir. Bulimia nervozada tekrarlayan aşırı yeme atakları ve ardından kendini kusturma, müshil/diüretik kötüye kullanımı vardır.",
+      "E": "Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "B": "Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "C": "Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "D": "Yanlış. Anoreksiya nervozada kişinin kendine uyguladığı açlık, belirgin kilo kaybı ve düşük vücut ağırlığı vardır; gonadotropin salınımı azalır, amenore sık görülür ve bradikardi, hipotansiyon, osteopeni/osteoporoz ve hipokalemi izlenir. Bulimia nervozada tekrarlayan aşırı yeme atakları ve ardından kendini kusturma, müshil/diüretik kötüye kullanımı vardır.",
+      "E": "Yanlış. Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "B": "Yanlış. Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "C": "Yanlış. Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k07-q14",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Kişisel çevre ve yaşam tarzı\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+      "E": "Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "C": "Doymuş yağ ve kolesterol kısıtlanması serum kolesterolünü düşürebilir; lifli gıdalar dışkı hacmini ve geçiş hızını artırarak divertiküloz ve kolorektal kanser için olası koruyucu etki sağlar.",
+      "B": "Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "D": "Yağda çözünen vitaminler ve B vitaminleri eksiklikleri; T hücre aracılı immünitede belirgin azalma ve sık fırsatçı/ağır enfeksiyonlar; erken dönemde ağır malnütrisyonda serebral atrofi, miyelinizasyon bozukluğu ve uzun dönem nörokognitif etkiler görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Tütün kullanımı, alkol tüketimi, tedavi amaçlı ve tedavi dışı ilaçlar ve beslenme alışkanlıklarını içerir; cinsiyet, sosyal sınıf ve sosyal olarak tanımlanan ırkla yakından ilişkilidir.",
+      "E": "Yanlış. Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "C": "Yanlış. Doymuş yağ ve kolesterol kısıtlanması serum kolesterolünü düşürebilir; lifli gıdalar dışkı hacmini ve geçiş hızını artırarak divertiküloz ve kolorektal kanser için olası koruyucu etki sağlar.",
+      "B": "Yanlış. Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "D": "Yanlış. Yağda çözünen vitaminler ve B vitaminleri eksiklikleri; T hücre aracılı immünitede belirgin azalma ve sık fırsatçı/ağır enfeksiyonlar; erken dönemde ağır malnütrisyonda serebral atrofi, miyelinizasyon bozukluğu ve uzun dönem nörokognitif etkiler görülür."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k07-q15",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Kronik alkol kullanımının organ etkileri\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "D": "Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "E": "Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "A": "Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "B": "Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "D": "Yanlış. Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "E": "Yanlış. Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "A": "Yanlış. Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "B": "Yanlış. Primer yetersiz beslenme diyette makro/mikro besin alımının yetersizliğidir; sekonder (koşullu) yetersiz beslenme emilim, kullanım/depolama bozukluğu ya da artmış kayıp/gereksinimden doğar. Şiddetli akut yetersiz beslenmede (SAM, DSÖ) ağırlık-boy oranı medyanın ≥3 SD altındadır veya belirgin zayıflık/beslenme ödemi vardır."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k07-q16",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Kistik fibrozis: gen ve CFTR\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "E": "Ortam, işyeri veya kişisel çevredeki kimyasal veya fiziksel ajan maruziyeti sonucu gelişen klinik bozukluktur; hava, su, toprak kirliliği, mesleki toksinler, radyasyon ve fiziksel ajanları kapsar.",
+      "D": "Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "C": "20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "A": "Kodlamayan DNA promotör ve güçlendirici (enhancer) bölgeler, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir. Ökromatin dağınık ve transkripsiyonel olarak aktif, heterokromatin yoğun ve inaktiftir; promotör transkripsiyonu başlatır, güçlendiriciler 100 kb veya daha uzaktan gen ekspresyonunu düzenleyebilir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "E": "Yanlış. Ortam, işyeri veya kişisel çevredeki kimyasal veya fiziksel ajan maruziyeti sonucu gelişen klinik bozukluktur; hava, su, toprak kirliliği, mesleki toksinler, radyasyon ve fiziksel ajanları kapsar.",
+      "D": "Yanlış. Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "C": "Yanlış. 20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "A": "Yanlış. Kodlamayan DNA promotör ve güçlendirici (enhancer) bölgeler, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir. Ökromatin dağınık ve transkripsiyonel olarak aktif, heterokromatin yoğun ve inaktiftir; promotör transkripsiyonu başlatır, güçlendiriciler 100 kb veya daha uzaktan gen ekspresyonunu düzenleyebilir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -872,6 +2484,281 @@
       34
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşırı zayıf, kas-yağ kaybı belirgin ('zayıf çomak') 2 yaşındaki çocuk ile ödemli, karaciğer büyük, saç-değişiklikli başka bir çocuk; üçüncü olguda kendini aç bırakan amenoreli adolesan; dördüncüde viseral yağlı, insülin dirençli erişkin değerlendirilmektedir. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Marasmus protein, kwashiorkor kalori eksikliğidir.",
+      "B": "Marasmus kalori eksikliği (somatik bölme tükenir, viseral korunur; büyüme geriliği, kas-yağ kaybı); kwashiorkor protein eksikliği (ödem, karaciğer yağlanması). İkisinde de A-D-E-K ve B vitamini eksiklikleri, T hücre immünitesinde azalma ve ağır enfeksiyonlar. Anoreksiyada açlık-kilo kaybı, gonadotropin azalması, amenore. Obezitede viseral yağ metabolik sendrom/KVH riski; insülin direnci, tip 2 diyabet, hipertrigliseridemi, düşük HDL, HT, KAH, hepatobilier sorunlar ve kanser riski artar.",
+      "C": "Yetersiz beslenmede immünite artar.",
+      "D": "Anoreksiyada gonadotropin artar.",
+      "E": "Viseral yağ metabolik açıdan zararsızdır."
+     },
+     "dogru": "B",
+     "aciklama": "Marasmus-kwashiorkor ayrımı, ortak sistemik etkiler, anoreksiya ve obezite sonuçları doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; marasmus kalori, kwashiorkor protein eksikliğidir.",
+      "B": "Doğru. Dört tablo birlikte doğru tanımlanmıştır.",
+      "C": "Yanlış; T hücre immünitesi azalır.",
+      "D": "Yanlış; gonadotropin azalır, amenore olur.",
+      "E": "Yanlış; viseral yağ risklidir."
+     },
+     "bilgi": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k08-q07",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Zayıf çomak görünümlü çocuk, ödemli çocuk, amenoreli adolesan ve viseral yağlı erişkin tartışılırken beslenme patolojisiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Primer yetersiz beslenme makro/mikro besin alım yetersizliği; sekonder emilim-kullanım-depolama bozukluğudur.",
+      "B": "SAM'da yağda çözünen ve B vitamini eksiklikleri ile fırsatçı/ağır enfeksiyonlar sıktır.",
+      "C": "Obezite BKİ ile ölçülür; viseral yağ metabolik sendrom ve KVH riskidir.",
+      "D": "Kwashiorkorda ödem olmaz ve viseral bölme tükenir; marasmusta viseral bölme korunurken ödem tipiktir; obezite diyabete karşı korur.",
+      "E": "Doymuş yağ-kolesterol kısıtlanması kolesterolü düşürebilir; lif divertiküloz-kolorektal riski azaltabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Kwashiorkorda ödem vardır; marasmusta somatik bölme tükenir, viseral korunur; obezite diyabet riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Yanlış ifade (aranan cevap). Bölme ve ödem bilgileri terstir.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      30,
+      31,
+      32,
+      34,
+      35,
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k08-q08",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Marasmus ve kwashiorkorun eksiklik türü ve bulguları nasıl ayrışır?",
+     "secenekler": {
+      "A": "Marasmusta ödem tipiktir",
+      "B": "Kwashiorkorda yağ dokusu erir",
+      "C": "Bayrak işareti marasmus bulgusudur",
+      "D": "İmmünite her ikisinde artar",
+      "E": "Marasmus kalori-çomak; kwashiorkor protein-ödem"
+     },
+     "dogru": "E",
+     "aciklama": "Marasmusta kalori eksikliği baskındır; kas ve deri altı yağ erir (zayıf çomak), büyüme geriler; somatik protein bölmesi tükenirken viseral bölme görece korunur. Kwashiorkorda diyet karbonhidrat ağırlıklı, protein yoksundur; ödem, karaciğer yağlanması, mozaik pigmentasyon ve saçta bayrak işareti gelişir. Her ikisinde de T hücre immünitesi baskılanır; ağır ve fırsatçı enfeksiyonlar ile nörokognitif etkiler ortak sonuçtur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ödem kwashiorkorun, erime marasmusun bulgusudur.",
+      "B": "Yanlış; yağ-kas erimesi marasmusta baskındır.",
+      "C": "Yanlış; bayrak işareti kwashiorkorda saç bulgusudur.",
+      "D": "Yanlış; T hücre immünitesi belirgin azalır.",
+      "E": "Doğru; eksiklik türü ve ayırt edici bulguları verir."
+     },
+     "bilgi": [
+      30,
+      31,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k08-q09",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Obezitede adipokin değişiklikleri ve metabolik sonuçları nelerdir?",
+     "secenekler": {
+      "A": "Obezitede leptin düşüktür",
+      "B": "Leptin direnci; adiponektin düşük; insülin direnci",
+      "C": "Adiponektin obezitede yükselir",
+      "D": "Viseral yağ risksizdir",
+      "E": "Obezite kanser riskini azaltır"
+     },
+     "dogru": "B",
+     "aciklama": "Enerji homeostazında yağ dokusundan salgılanan leptin yükselince hipotalamusta POMC/CART aktive, NPY/AgRP inhibe olur; obezitede leptin yüksek olmasına rağmen direnç nedeniyle bu fren çalışmaz. Adiponektin yağ oksidasyonunu ve insülin duyarlılığını artırır; obezlerde düşüktür. Sonuç insülin direnci-tip 2 diyabet, hipertrigliseridemi-düşük HDL, hipertansiyon ve yağlı karaciğerdir; hiperinsülinemi ve IGF-1 artışıyla kanser riski de yükselir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; leptin yüksektir ama direnç vardır.",
+      "B": "Doğru; adipokin dengesizliği ve metabolik sonuçları özetler.",
+      "C": "Yanlış; adiponektin obezlerde düşüktür.",
+      "D": "Yanlış; viseral yağ metabolik-kardiyovasküler riskle ilişkilidir.",
+      "E": "Yanlış; hiperinsülinemi ve inflamasyon kanser riskini artırır."
+     },
+     "bilgi": [
+      34,
+      35
+     ],
+     "benzer_cikmis": [
+      "062c2f422fcb"
+     ]
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k08-q10",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "\"Mendel tipi tek gen hastalıkları\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "C": "Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir.",
+      "D": "Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+      "E": "Genetik hastalık için yatkınlık zemini sağlar; çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+      "A": "Sıcak hava dalgaları kardiyovasküler/solunum mortalitesini artırır; sel ve altyapı bozulması su ve gıda kaynaklı enfeksiyonları artırır; vektör ekolojisi değişir (sıtma, dang gibi hastalıkların yayılımı); tarım verimi düşer.",
+      "B": "En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir.",
+      "D": "Yanlış. Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+      "E": "Yanlış. Genetik hastalık için yatkınlık zemini sağlar; çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+      "A": "Yanlış. Sıcak hava dalgaları kardiyovasküler/solunum mortalitesini artırır; sel ve altyapı bozulması su ve gıda kaynaklı enfeksiyonları artırır; vektör ekolojisi değişir (sıtma, dang gibi hastalıkların yayılımı); tarım verimi düşer.",
+      "B": "Yanlış. En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k08-q11",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "\"Entegre bakış açısı\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Genetik hastalık için yatkınlık zemini sağlar; çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+      "E": "Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+      "C": "Kodlamayan DNA promotör ve güçlendirici (enhancer) bölgeler, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir. Ökromatin dağınık ve transkripsiyonel olarak aktif, heterokromatin yoğun ve inaktiftir; promotör transkripsiyonu başlatır, güçlendiriciler 100 kb veya daha uzaktan gen ekspresyonunu düzenleyebilir.",
+      "D": "Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+      "B": "Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Genetik hastalık için yatkınlık zemini sağlar; çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Genetik hastalık için yatkınlık zemini sağlar; çevre ve beslenme bu zeminde hastalığın zamanlamasını ve şiddetini belirler.",
+      "E": "Yanlış. Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+      "C": "Yanlış. Kodlamayan DNA promotör ve güçlendirici (enhancer) bölgeler, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir. Ökromatin dağınık ve transkripsiyonel olarak aktif, heterokromatin yoğun ve inaktiftir; promotör transkripsiyonu başlatır, güçlendiriciler 100 kb veya daha uzaktan gen ekspresyonunu düzenleyebilir.",
+      "D": "Yanlış. Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+      "B": "Yanlış. Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k08-q12",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Marfan sendromu\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+      "E": "Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "A": "Tütün kanserler için en yaygın dış kaynaklı nedendir ve akciğer kanserlerinin %80-90'ından sorumludur (1,3 milyar kullanıcı, yılda >8 milyon ölüm). Duman ~2000 kimyasal içerir (nikotin, polisiklik aromatik hidrokarbonlar, nitrozaminler, aromatik aminler, CO) ve kanserojen, aterojen ve trombojendir.",
+      "B": "Hastalık gelişimi çoğu zaman genetik zemin, çevresel faktörler ve yaşam tarzı ile beslenmenin etkileşiminden doğar.",
+      "D": "DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Sistemik bağ dokusu hastalığıdır; FBN1 (fibrillin-1) gen mutasyonu ile gelişir. Etkilenen dokular aort duvarı, bağlar ve göz merceğini tutan siliyer zonüllerdir.",
+      "E": "Yanlış. Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "A": "Yanlış. Tütün kanserler için en yaygın dış kaynaklı nedendir ve akciğer kanserlerinin %80-90'ından sorumludur (1,3 milyar kullanıcı, yılda >8 milyon ölüm). Duman ~2000 kimyasal içerir (nikotin, polisiklik aromatik hidrokarbonlar, nitrozaminler, aromatik aminler, CO) ve kanserojen, aterojen ve trombojendir.",
+      "B": "Yanlış. Hastalık gelişimi çoğu zaman genetik zemin, çevresel faktörler ve yaşam tarzı ile beslenmenin etkileşiminden doğar.",
+      "D": "Yanlış. DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesidir; temel mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA'lardır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k08-q13",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"İklim değişikliğinin hastalık yükü\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Sıcak hava dalgaları kardiyovasküler/solunum mortalitesini artırır; sel ve altyapı bozulması su ve gıda kaynaklı enfeksiyonları artırır; vektör ekolojisi değişir (sıtma, dang gibi hastalıkların yayılımı); tarım verimi düşer.",
+      "A": "NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir.",
+      "B": "Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "C": "Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aktivitesi artar; su emilimi artar ve mukus dehidrate ve visköz hale gelir. Ter bezlerinde NaCl geri emilimi azalır.",
+      "E": "En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Sıcak hava dalgaları kardiyovasküler/solunum mortalitesini artırır; sel ve altyapı bozulması su ve gıda kaynaklı enfeksiyonları artırır; vektör ekolojisi değişir (sıtma, dang gibi hastalıkların yayılımı); tarım verimi düşer.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Sıcak hava dalgaları kardiyovasküler/solunum mortalitesini artırır; sel ve altyapı bozulması su ve gıda kaynaklı enfeksiyonları artırır; vektör ekolojisi değişir (sıtma, dang gibi hastalıkların yayılımı); tarım verimi düşer.",
+      "A": "Yanlış. NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir.",
+      "B": "Yanlış. Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "C": "Yanlış. Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aktivitesi artar; su emilimi artar ve mukus dehidrate ve visköz hale gelir. Ter bezlerinde NaCl geri emilimi azalır.",
+      "E": "Yanlış. En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k08-q14",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "\"Moleküler tanı: temel araçlar\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "C": "Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir.",
+      "D": "Tütün kanserler için en yaygın dış kaynaklı nedendir ve akciğer kanserlerinin %80-90'ından sorumludur (1,3 milyar kullanıcı, yılda >8 milyon ölüm). Duman ~2000 kimyasal içerir (nikotin, polisiklik aromatik hidrokarbonlar, nitrozaminler, aromatik aminler, CO) ve kanserojen, aterojen ve trombojendir.",
+      "A": "Obezite vücut kitle indeksi (BKİ) ile ölçülür; klinik açıdan önemli olan özellikle viseral (karın içi) yağdır ve metabolik sendrom/kardiyovasküler riskle daha yakından ilişkilidir. Lipostat sistemi afferent sinyaller (leptin, ghrelin, insülin, PYY, GLP-1) → hipotalamus arkuat çekirdek (POMC/CART iştahı azaltır; NPY/AgRP artırır) → katabolik/anabolik yanıtla vücut ağırlığını dar aralıkta tutar. Leptin yağ dokusundan salgılanır ve obezitede yüksek olmakla birlikte leptin direnci vardır; adiponektin yağ oksidasyonunu ve insülin duyarlılığını artırır ve obezlerde düşüktür.",
+      "E": "NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Kromozom düzeyinde karyotip, FISH ve dizi tabanlı karşılaştırmalı genomik hibridizasyon (array CGH); gen düzeyinde PCR ve RT-PCR kullanılır.",
+      "C": "Yanlış. Tek bir gendeki mutasyon belirleyicidir; kalıtım paternleri otozomal dominant ve otozomal resesiftir.",
+      "D": "Yanlış. Tütün kanserler için en yaygın dış kaynaklı nedendir ve akciğer kanserlerinin %80-90'ından sorumludur (1,3 milyar kullanıcı, yılda >8 milyon ölüm). Duman ~2000 kimyasal içerir (nikotin, polisiklik aromatik hidrokarbonlar, nitrozaminler, aromatik aminler, CO) ve kanserojen, aterojen ve trombojendir.",
+      "A": "Yanlış. Obezite vücut kitle indeksi (BKİ) ile ölçülür; klinik açıdan önemli olan özellikle viseral (karın içi) yağdır ve metabolik sendrom/kardiyovasküler riskle daha yakından ilişkilidir. Lipostat sistemi afferent sinyaller (leptin, ghrelin, insülin, PYY, GLP-1) → hipotalamus arkuat çekirdek (POMC/CART iştahı azaltır; NPY/AgRP artırır) → katabolik/anabolik yanıtla vücut ağırlığını dar aralıkta tutar. Leptin yağ dokusundan salgılanır ve obezitede yüksek olmakla birlikte leptin direnci vardır; adiponektin yağ oksidasyonunu ve insülin duyarlılığını artırır ve obezlerde düşüktür.",
+      "E": "Yanlış. NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k08-q15",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "\"Hastalıkta \"üçlü çerçeve\"\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Hastalık gelişimi çoğu zaman genetik zemin, çevresel faktörler ve yaşam tarzı ile beslenmenin etkileşiminden doğar.",
+      "C": "En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar.",
+      "D": "Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "E": "Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "A": "NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Hastalık gelişimi çoğu zaman genetik zemin, çevresel faktörler ve yaşam tarzı ile beslenmenin etkileşiminden doğar.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Hastalık gelişimi çoğu zaman genetik zemin, çevresel faktörler ve yaşam tarzı ile beslenmenin etkileşiminden doğar.",
+      "C": "Yanlış. En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar.",
+      "D": "Yanlış. Metabolik: insülin direnci ve tip 2 diyabet, hipertrigliseridemi, düşük HDL. Kardiyovasküler: hipertansiyon, koroner arter hastalığı. Hepatobilier: alkolsüz yağlı karaciğer hastalığı (siroz ve hepatoselüler karsinom riski), safra taşları. Kanser riski erkekte özofagus, tiroid, kolon, böbrek; kadında özofagus, endometrium, safra kesesi, böbrek artar.",
+      "E": "Yanlış. Karaciğer: steatoz → alkolik steatohepatit → siroz. Pankreas: akut ve kronik pankreatit. Nörolojik: tiamin eksikliğine bağlı Wernicke-Korsakoff sendromu. Kardiyovasküler: dilate kardiyomiyopati ve hipertansiyon.",
+      "A": "Yanlış. NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -957,12 +2844,221 @@
       38
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Nadir Mendel bozukluğu düşünülen çocukta tanı, kanserli hastada somatik mutasyon paneli ve lösemili hastada klonalite değerlendirmesi planlanmaktadır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kromozom düzeyinde karyotip, FISH, array CGH; gen düzeyinde PCR/RT-PCR kullanılır. NGS tek platformda çok gen/ekzom/genom dizer; nadir Mendel tanısı, kanser somatik paneli ve hedefe yönelik tedavi seçiminde kullanılır.",
+      "B": "FISH gen düzeyinde dizilemedir.",
+      "C": "NGS tek gen inceler.",
+      "D": "PCR kromozom sayısını gösterir.",
+      "E": "Moleküler tanı tedaviyi yönlendirmez."
+     },
+     "dogru": "A",
+     "aciklama": "Araçlar (karyotip/FISH/array CGH; PCR/RT-PCR; NGS) ve kullanım alanları doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Yöntem-kullanım eşleşmeleri doğrudur.",
+      "B": "Yanlış; FISH kromozom düzeyindedir.",
+      "C": "Yanlış; NGS çok gen/ekzom/genom dizer.",
+      "D": "Yanlış; PCR gen düzeyindedir.",
+      "E": "Yanlış; hedefe yönelik tedaviyi yönlendirir."
+     },
+     "bilgi": [
+      37,
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Nadir Mendel bozukluklu çocuk ile somatik panelli kanser hastasında yöntem seçilirken moleküler tanı ve hedefe yönelik tedaviyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Array CGH dizi tabanlı karşılaştırmalı genomik hibridizasyondur.",
+      "B": "RT-PCR gen ekspresyon/mutasyon analizinde kullanılır.",
+      "C": "Karyotip tek baz mutasyonu gösterir; NGS yalnızca tek geni inceler ve tedaviyle ilişkisizdir.",
+      "D": "Moleküler değişiklikler hedefe yönelik tedavi seçimine katkı sağlar.",
+      "E": "NGS nadir Mendel bozuklukları ve kanser somatik panellerinde kullanılır."
+     },
+     "dogru": "C",
+     "aciklama": "Karyotip kromozom düzeyindedir; NGS çok gen/ekzom/genom düzeyindedir ve tedaviyi yönlendirir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Yanlış ifade (aranan cevap). Düzey ve kapsam bilgileri hatalıdır.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      37,
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Moleküler tanı yöntemleri düzeylerine göre nasıl sınıflanır?",
+     "secenekler": {
+      "A": "FISH gen diziler",
+      "B": "PCR kromozom sayar",
+      "C": "NGS tek gen bakar",
+      "D": "Karyotip-FISH-CGH; PCR; NGS ekzom-genom",
+      "E": "Moleküler tanı gerekmez"
+     },
+     "dogru": "D",
+     "aciklama": "Kromozom düzeyinde karyotip, FISH ve array CGH; gen düzeyinde PCR ve RT-PCR kullanılır. Yeni nesil dizileme tek platformda çok gen, tüm ekzom veya tüm genomu diziler; nadir Mendel hastalıkları, kanser somatik panelleri ve farmakogenomikte biyoenformatik analizle klinik korelasyon gerektirir. Yöntem seçimi aranan değişikliğin ölçeğine (kromozom-gen-genom) göre yapılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; FISH kromozom düzeyinde hedef bölge gösterir.",
+      "B": "Yanlış; PCR gen düzeyinde amplifikasyon yapar.",
+      "C": "Yanlış; NGS çok gen, ekzom veya genomu diziler.",
+      "D": "Doğru; üç düzeyi ve yöntem eşleşmelerini verir.",
+      "E": "Yanlış; tanı, prognoz ve tedavi seçiminde gereklidir."
+     },
+     "bilgi": [
+      37,
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Moleküler değişiklik-hedefe yönelik tedavi eşleşmeleri hangileridir?",
+     "secenekler": {
+      "A": "EGFR-TKI; BRAF-inhibitör; HER2-trastuzumab",
+      "B": "Trastuzumab EGFR'yi bloke eder",
+      "C": "Aflatoksin mide kanseri yapar",
+      "D": "Nitrozamin karaciğer kanseridir",
+      "E": "Hedef tedavi seçici değildir"
+     },
+     "dogru": "A",
+     "aciklama": "Hedefe yönelik tedavide EGFR mutasyonlarına tirozin kinaz inhibitörleri, BRAF V600E'ye BRAF inhibitörleri, HER2 amplifikasyonuna trastuzumab verilir. Ortak mantık, tümörün bağımlı olduğu sürücü molekülü bloke ederek seçici öldürmedir. Diyet-kanser ilişkisinde aflatoksin hepatoselüler karsinom, nitrozaminler mide kanseri yapar; lifli gıdalar kolorektal kansere karşı olası koruma sağlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; üç moleküler değişiklik-tedavi eşleşmesini verir.",
+      "B": "Yanlış; trastuzumab HER2 amplifikasyonunu hedefler.",
+      "C": "Yanlış; aflatoksin hepatoselüler karsinom yapar.",
+      "D": "Yanlış; nitrozaminler mide kanseriyle ilişkilidir.",
+      "E": "Yanlış; sürücü molekül blokajı seçici etki sağlar."
+     },
+     "bilgi": [
+      36,
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k09-q08",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Marasmus ve kwashiorkor\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "D": "Marasmus'ta kalori eksikliği baskındır (büyüme geriliği, kas ve subkutan yağ kaybı, \"zayıf çomak\" görünümü; somatik bölme tükenir, viseral bölme korunur). Kwashiorkor'da protein yoksunluğu daha fazladır (erken sütten kesilme, karbonhidrat ağırlıklı diyet) ve ödem, karaciğer yağlanması, deride mozaik pigmentasyon ve saçta \"bayrak işareti\" görülür.",
+      "E": "20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "C": "Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "B": "NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir.",
+      "A": "Kodlamayan DNA promotör ve güçlendirici (enhancer) bölgeler, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir. Ökromatin dağınık ve transkripsiyonel olarak aktif, heterokromatin yoğun ve inaktiftir; promotör transkripsiyonu başlatır, güçlendiriciler 100 kb veya daha uzaktan gen ekspresyonunu düzenleyebilir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Marasmus'ta kalori eksikliği baskındır (büyüme geriliği, kas ve subkutan yağ kaybı, \"zayıf çomak\" görünümü; somatik bölme tükenir, viseral bölme korunur). Kwashiorkor'da protein yoksunluğu daha fazladır (erken sütten kesilme, karbonhidrat ağırlıklı diyet) ve ödem, karaciğer yağlanması, deride mozaik pigmentasyon ve saçta \"bayrak işareti\" görülür.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Marasmus'ta kalori eksikliği baskındır (büyüme geriliği, kas ve subkutan yağ kaybı, \"zayıf çomak\" görünümü; somatik bölme tükenir, viseral bölme korunur). Kwashiorkor'da protein yoksunluğu daha fazladır (erken sütten kesilme, karbonhidrat ağırlıklı diyet) ve ödem, karaciğer yağlanması, deride mozaik pigmentasyon ve saçta \"bayrak işareti\" görülür.",
+      "E": "Yanlış. 20. yüzyıl başından beri sıcaklık artmaktadır; sera gazları arasında troposferik ozon yer alır ve CO₂ düzeyi ile küresel sıcaklık güçlü korelasyon gösterir (21. yüzyılda 2-5 °C artış öngörüsü).",
+      "C": "Yanlış. Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "B": "Yanlış. NGS tek platformda birçok gen, tüm ekzom veya tüm genomu dizileyebilir; nadir Mendel bozukluklarının tanısında, kanserde somatik mutasyon panelinde ve farmakogenomik profillemede kullanılır (biyoenformatik analiz ve klinik korelasyon gerektirir). Onkolojide EGFR mutasyonları tirozin kinaz inhibitörleriyle, BRAF V600E seçilmiş BRAF inhibitörleriyle, HER2 amplifikasyonu trastuzumabla hedeflenir.",
+      "A": "Yanlış. Kodlamayan DNA promotör ve güçlendirici (enhancer) bölgeler, kromatin düzenleyici diziler ve düzenleyici RNA'lar (miRNA, lncRNA) içerir. Ökromatin dağınık ve transkripsiyonel olarak aktif, heterokromatin yoğun ve inaktiftir; promotör transkripsiyonu başlatır, güçlendiriciler 100 kb veya daha uzaktan gen ekspresyonunu düzenleyebilir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k09-q09",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "\"Kistik fibrozis klinik tutulumları\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+      "D": "Alkol kullanım bozukluğu erişkinlerin önemli bir kısmını etkiler; akut toksisite SSS depresyonu ve solunum baskılanması yapar, kronik kullanım hepatik, pankreatik, kardiyak ve nörolojik hasara yol açar. Ana metabolizma yolu alkol dehidrojenaz ile asetaldehit oluşumudur; yüksek dozda MEOS ve sitokrom P-450 devreye girer.",
+      "C": "Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "B": "Obezite vücut kitle indeksi (BKİ) ile ölçülür; klinik açıdan önemli olan özellikle viseral (karın içi) yağdır ve metabolik sendrom/kardiyovasküler riskle daha yakından ilişkilidir. Lipostat sistemi afferent sinyaller (leptin, ghrelin, insülin, PYY, GLP-1) → hipotalamus arkuat çekirdek (POMC/CART iştahı azaltır; NPY/AgRP artırır) → katabolik/anabolik yanıtla vücut ağırlığını dar aralıkta tutar. Leptin yağ dokusundan salgılanır ve obezitede yüksek olmakla birlikte leptin direnci vardır; adiponektin yağ oksidasyonunu ve insülin duyarlılığını artırır ve obezlerde düşüktür.",
+      "E": "Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Akciğerde kalın mukus tıkaçları, tekrarlayan enfeksiyonlar ve bronşiektazi (S. aureus, Pseudomonas aeruginosa, tüberküloz dışı mikobakteriler, Burkholderia cepacia); pankreasta kanal tıkanması, ekzokrin yetmezlik ve malabsorpsiyon; erkek üremede vas deferens agenezisi görülür.",
+      "D": "Yanlış. Alkol kullanım bozukluğu erişkinlerin önemli bir kısmını etkiler; akut toksisite SSS depresyonu ve solunum baskılanması yapar, kronik kullanım hepatik, pankreatik, kardiyak ve nörolojik hasara yol açar. Ana metabolizma yolu alkol dehidrojenaz ile asetaldehit oluşumudur; yüksek dozda MEOS ve sitokrom P-450 devreye girer.",
+      "C": "Yanlış. Heterozigot bireyde fenotip görülür; her iki cinsiyette eşit sıklıktadır ve anne veya baba etkilenmiş olabilir.",
+      "B": "Yanlış. Obezite vücut kitle indeksi (BKİ) ile ölçülür; klinik açıdan önemli olan özellikle viseral (karın içi) yağdır ve metabolik sendrom/kardiyovasküler riskle daha yakından ilişkilidir. Lipostat sistemi afferent sinyaller (leptin, ghrelin, insülin, PYY, GLP-1) → hipotalamus arkuat çekirdek (POMC/CART iştahı azaltır; NPY/AgRP artırır) → katabolik/anabolik yanıtla vücut ağırlığını dar aralıkta tutar. Leptin yağ dokusundan salgılanır ve obezitede yüksek olmakla birlikte leptin direnci vardır; adiponektin yağ oksidasyonunu ve insülin duyarlılığını artırır ve obezlerde düşüktür.",
+      "E": "Yanlış. Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k09-q10",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "\"Alkol: genel çerçeve ve metabolizma\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Alkol kullanım bozukluğu erişkinlerin önemli bir kısmını etkiler; akut toksisite SSS depresyonu ve solunum baskılanması yapar, kronik kullanım hepatik, pankreatik, kardiyak ve nörolojik hasara yol açar. Ana metabolizma yolu alkol dehidrojenaz ile asetaldehit oluşumudur; yüksek dozda MEOS ve sitokrom P-450 devreye girer.",
+      "D": "Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "C": "Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "A": "Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aktivitesi artar; su emilimi artar ve mukus dehidrate ve visköz hale gelir. Ter bezlerinde NaCl geri emilimi azalır.",
+      "B": "Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\"."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Alkol kullanım bozukluğu erişkinlerin önemli bir kısmını etkiler; akut toksisite SSS depresyonu ve solunum baskılanması yapar, kronik kullanım hepatik, pankreatik, kardiyak ve nörolojik hasara yol açar. Ana metabolizma yolu alkol dehidrojenaz ile asetaldehit oluşumudur; yüksek dozda MEOS ve sitokrom P-450 devreye girer.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Alkol kullanım bozukluğu erişkinlerin önemli bir kısmını etkiler; akut toksisite SSS depresyonu ve solunum baskılanması yapar, kronik kullanım hepatik, pankreatik, kardiyak ve nörolojik hasara yol açar. Ana metabolizma yolu alkol dehidrojenaz ile asetaldehit oluşumudur; yüksek dozda MEOS ve sitokrom P-450 devreye girer.",
+      "D": "Yanlış. Epitel iyon kanalı hastalığıdır; CFTR geni mutasyonu ile gelişir. CFTR bir klorür ve bikarbonat kanalıdır ve epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.",
+      "C": "Yanlış. Dezavantajlı gruplar hava ve su kirliliğine daha fazla maruz kalır, yetersiz ve kalabalık konutlarda yaşar ve sağlık hizmetine daha geç/zor erişir.",
+      "A": "Yanlış. Solunum ve bağırsak epitelinde klorür sekresyonu azalırken ENaC aktivitesi artar; su emilimi artar ve mukus dehidrate ve visköz hale gelir. Ter bezlerinde NaCl geri emilimi azalır.",
+      "B": "Yanlış. Sinir sistemi: çocukta düşük IQ, davranış bozuklukları, nöbet; erişkinde periferik nöropati, bilek ve ayak düşmesi. Kan: mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme. Kemik: büyüme plağında radyo-opak \"kurşun çizgileri\"."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji-k09-q11",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "\"İnsan genomunun temel özellikleri\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "A": "Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "B": "Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "C": "Yağda çözünen vitaminler ve B vitaminleri eksiklikleri; T hücre aracılı immünitede belirgin azalma ve sık fırsatçı/ağır enfeksiyonlar; erken dönemde ağır malnütrisyonda serebral atrofi, miyelinizasyon bozukluğu ve uzun dönem nörokognitif etkiler görülür.",
+      "D": "En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar.",
+      "E": "Kaynakları eski kurşun bazlı boyalar, su boruları ve kirli topraktır; çocuklarda oral emilim artmıştır ve kan-beyin bariyeri daha geçirgendir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Toplam uzunluk yaklaşık 3,3 milyar baz çifti; protein kodlayan gen sayısı ~19.000; protein kodlayan kısım genomun yalnızca %1,5'i kadardır.",
+      "B": "Yanlış. Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonu artar, miyokard oksijen sunumu azalır (CO ve akciğer hastalığı) ve miyokard oksijen talebi artar.",
+      "C": "Yanlış. Yağda çözünen vitaminler ve B vitaminleri eksiklikleri; T hücre aracılı immünitede belirgin azalma ve sık fırsatçı/ağır enfeksiyonlar; erken dönemde ağır malnütrisyonda serebral atrofi, miyelinizasyon bozukluğu ve uzun dönem nörokognitif etkiler görülür.",
+      "D": "Yanlış. En sık kromozom sayısal anomalisidir; genellikle maternal mayoz ayrılamaması (nondisjunction) ile gelişir ve anne yaşıyla risk artar.",
+      "E": "Yanlış. Kaynakları eski kurşun bazlı boyalar, su boruları ve kirli topraktır; çocuklarda oral emilim artmıştır ve kan-beyin bariyeri daha geçirgendir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 33,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:17"
+ ]
 }

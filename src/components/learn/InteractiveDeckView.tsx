@@ -63,7 +63,9 @@ import { SlideDrawingCanvas, DrawingModeToolbarTrigger, useDrawingGlobalState, s
 import { toast } from '../ui/Toast';
 import { safeJsonFetch } from '../../services/api';
 import { QuestionFocus, focusMarks } from '../../services/questionFocus';
+import { InteractiveStepRenderer } from './InteractiveStepElements';
 import { LessonPlayer } from './lesson/LessonPlayer';
+import { LearnHub, touchRecent } from './LearnHub';
 
 // ---------------------------------------------------------------------------
 // Data types (shape of interactive_learning_decks.json)
@@ -84,6 +86,7 @@ export interface TranscriptUtterance {
 export interface SlideFlashcard {
   id: string;
   category?: string;
+  subtopic?: string;
   front?: string;
   back?: string;
   question?: string;
@@ -128,6 +131,35 @@ export interface SlideContentInfographic {
   items: Array<{ label: string; value: string; detail: string; color?: string }>;
 }
 
+export interface SlideMedicalTerm {
+  term: string;
+  explanation: string;
+}
+
+export interface SlideLayoutBlock {
+  id: string;
+  type:
+    | 'header'
+    | 'professor_pearl'
+    | 'narrative'
+    | 'key_bullets'
+    | 'table'
+    | 'medical_terms'
+    | 'interactive_element'
+    | 'spot_pearls'
+    | 'flashcards'
+    | 'related_questions';
+  order: number;
+  visible?: boolean;
+  styleConfig?: {
+    size?: 'compact' | 'normal' | 'large';
+    tone?: 'default' | 'accent' | 'amber' | 'emerald' | 'rose' | 'indigo' | 'teal' | 'violet';
+    title?: string;
+    containerClass?: string;
+    borderStyle?: 'solid' | 'dashed' | 'subtle' | 'none';
+  };
+}
+
 export interface SlideItem {
   slideNumber: number;
   title: string;
@@ -150,6 +182,10 @@ export interface SlideItem {
   spotPearls: string[];
   relatedQuestions: SlideRelatedQuestion[];
   aiPromptSuggestions: string[];
+  medicalTerms?: SlideMedicalTerm[];
+  interactiveElement?: any;
+  interactiveElements?: any[];
+  layoutBlocks?: SlideLayoutBlock[];
   sourcePdf?: {
     fileName: string;
     fileId?: string;
@@ -196,6 +232,7 @@ interface InteractiveDeckViewProps {
   /** Çıkmış sorudan gelindiyse: sorunun ifadeleri ve doğru şık slaytta işaretlenir */
   questionFocus?: QuestionFocus | null;
   onClearQuestionFocus?: () => void;
+  isAdmin?: boolean;
 }
 
 // ---------------------------------------------------------------------------
@@ -231,204 +268,215 @@ const Rich: React.FC<{ text: string; className?: string }> = ({ text, className 
 const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
   if (!text) return null;
 
-  // Split into lines
-  const lines = text.split('\n');
+  // Satırları gruplayalım: tabloları ve normal blokları ayırt edelim
+  const rawLines = text.split('\n');
+  const elements: React.ReactNode[] = [];
+  let i = 0;
 
-  return (
-    <div className="flex flex-col gap-2 sm:gap-2.5">
-      {lines.map((rawLine, idx) => {
-        const line = rawLine.trim();
-        if (!line) {
-          return <div key={idx} className="h-1" />;
-        }
+  while (i < rawLines.length) {
+    const rawLine = rawLines[i];
+    const line = rawLine.trim();
 
-        // Section Heading (### Başlık)
-        if (line.startsWith('### ')) {
-          return (
-            <h4
-              key={idx}
-              className="m-0 pt-2.5 pb-1 border-b border-line-soft text-[14px] sm:text-[15px] font-bold text-ink flex items-center gap-2"
-            >
-              <span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-2xs" />
-              <Rich text={line.slice(4)} />
-            </h4>
-          );
-        }
+    // 1. Tablo Bloğu Tespiti (| col1 | col2 |)
+    if (line.startsWith('|') && line.endsWith('|')) {
+      const tableLines: string[] = [];
+      while (i < rawLines.length && rawLines[i].trim().startsWith('|') && rawLines[i].trim().endsWith('|')) {
+        tableLines.push(rawLines[i].trim());
+        i++;
+      }
 
-        // Sub-heading (#### Alt Başlık)
-        if (line.startsWith('#### ')) {
-          return (
-            <h5
-              key={idx}
-              className="m-0 pt-1 text-[12px] sm:text-[12.5px] font-bold uppercase tracking-wider text-accent flex items-center gap-2"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0" />
-              <Rich text={line.slice(5)} />
-            </h5>
-          );
-        }
+      // Tabloyu parse et
+      if (tableLines.length >= 2) {
+        const parseRow = (rowStr: string) =>
+          rowStr
+            .slice(1, -1)
+            .split('|')
+            .map((c) => c.trim());
 
-        // Callout (> veya veya veya veya )
-        if (
-          line.startsWith('> ') ||
-          line.startsWith('') ||
-          line.startsWith('') ||
-          line.startsWith('') ||
-          line.startsWith('')
-        ) {
-          const isRed =
-            line.startsWith('') ||
-            line.startsWith('') ||
-            line.startsWith('') ||
-            /(?:ölümcül|asla|acil|hayati|kritik|kontrendike|sınav tuzağı)/i.test(line);
+        const headers = parseRow(tableLines[0]);
+        // İkinci satır genellikle |---|---| ayracıdır
+        const dataRows = tableLines.slice(1).filter((r) => !/^\|[\s\-:|]+\|$/.test(r)).map(parseRow);
 
-          const icon = line.startsWith('')
-            ? ''
-            : line.startsWith('')
-              ? ''
-              : line.startsWith('')
-                ? ''
-                : isRed
-                  ? ''
-                  : '';
-
-          const content = (line.startsWith('> ') ? line.slice(2) : line).replace(
-            /^\s*(|||)\s*/u,
-            ''
-          );
-
-          return (
-            <div
-              key={idx}
-              className={`p-2.5 sm:p-3 my-1 rounded-xl border text-[12px] sm:text-[12.5px] leading-relaxed flex items-center gap-2.5 shadow-2xs ${
-                isRed
-                  ? 'bg-red-500/10 dark:bg-red-500/20 border-red-500 text-red-950 dark:text-red-200'
-                  : 'bg-accent-soft/30 border-accent text-ink'
-              }`}
-            >
-              <span className="text-[14px] select-none shrink-0" aria-hidden="true">
-                {icon}
-              </span>
-              <div className="min-w-0 flex-1">
-                <Rich text={content} />
-              </div>
+        elements.push(
+          <div key={`table-${i}`} className="my-3 overflow-hidden rounded-xl border border-line bg-white dark:bg-zinc-900 shadow-2xs">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-[12.5px] sm:text-[13px] border-collapse">
+                <thead>
+                  <tr className="bg-accent/10 border-b border-line text-accent font-bold">
+                    {headers.map((h, hIdx) => (
+                      <th key={hIdx} className="px-3.5 py-2.5 whitespace-nowrap">
+                        <Rich text={h} />
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-line/60">
+                  {dataRows.map((row, rIdx) => (
+                    <tr
+                      key={rIdx}
+                      className={rIdx % 2 === 1 ? 'bg-canvas/50 hover:bg-accent-soft/20 transition-colors' : 'hover:bg-accent-soft/20 transition-colors'}
+                    >
+                      {row.map((cell, cIdx) => (
+                        <td key={cIdx} className="px-3.5 py-2.5 text-ink-2 align-top leading-relaxed">
+                          <Rich text={cell} />
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          );
-        }
-
-        // Sub-bullet (girintili alt madde)
-        if (rawLine.startsWith('  - ') || rawLine.startsWith('  • ') || rawLine.startsWith('\t- ') || rawLine.startsWith('\t• ')) {
-          const cleanText = line.replace(/^[•\-\*]\s*/, '');
-          return (
-            <div
-              key={idx}
-              className="flex items-start gap-2 ml-4.5 my-0.5 text-[11.5px] sm:text-[12px] text-ink-3 leading-relaxed"
-            >
-              <span className="mt-1.5 w-1 h-1 rounded-full bg-ink-4 shrink-0" />
-              <div className="min-w-0 flex-1">
-                <Rich text={cleanText} />
-              </div>
-            </div>
-          );
-        }
-
-        // Numbered list item (1. 2. 3.)
-        const numMatch = line.match(/^(\d+)\.\s+(.*)$/);
-        if (numMatch) {
-          return (
-            <div
-              key={idx}
-              className="flex items-start gap-2.5 my-1 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.68]"
-            >
-              <span className="shrink-0 w-4.5 h-4.5 rounded-full bg-accent-soft text-accent text-[11.5px] font-bold flex items-center justify-center mt-0.5 border border-accent/20 shadow-2xs">
-                {numMatch[1]}
-              </span>
-              <div className="min-w-0 flex-1">
-                <Rich text={numMatch[2]} />
-              </div>
-            </div>
-          );
-        }
-
-        // Top-level Bullet item (• veya - veya *)
-        if (line.startsWith('• ') || line.startsWith('- ') || line.startsWith('* ')) {
-          const cleanText = line.replace(/^[•\-\*]\s*/, '');
-          return (
-            <div
-              key={idx}
-              className="flex items-start gap-2.5 my-1 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.68]"
-            >
-              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-              <div className="min-w-0 flex-1">
-                <Rich text={cleanText} />
-              </div>
-            </div>
-          );
-        }
-
-        // Check if paragraph contains semicolon-separated bold points (e.g. "...; **Title**: desc")
-        if (line.includes('; **') || line.includes(': **')) {
-          const parts = line.split(/(?<=[;:])\s+(?=\*\*)/g);
-          if (parts.length > 1) {
-            return (
-              <div key={idx} className="flex flex-col gap-1 my-1">
-                {parts.map((p, pIdx) => {
-                  const cleanP = p.replace(/^;\s*/, '').trim();
-                  if (pIdx === 0 && !cleanP.startsWith('**')) {
-                    return (
-                      <p key={pIdx} className="m-0 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.72] font-normal mb-1">
-                        <Rich text={cleanP} />
-                      </p>
-                    );
-                  }
-                  return (
-                    <div key={pIdx} className="flex items-start gap-2.5 my-1 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.68]">
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                      <div className="min-w-0 flex-1">
-                        <Rich text={cleanP} />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          }
-        }
-
-        // Check if a long continuous paragraph has multiple distinct sentences (> 120 chars)
-        if (line.length > 120) {
-          const sentences = line.split(/(?<=[.!?])\s+(?=[A-ZÇĞİÖŞÜ0-9\*\*])/g);
-          if (sentences.length > 1) {
-            return (
-              <div key={idx} className="flex flex-col gap-1 my-1">
-                <p className="m-0 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.72] font-normal mb-1">
-                  <Rich text={sentences[0]} />
-                </p>
-                {sentences.slice(1).map((s, sIdx) => (
-                  <div key={sIdx} className="flex items-start gap-2.5 my-1 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.68]">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                    <div className="min-w-0 flex-1">
-                      <Rich text={s} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            );
-          }
-        }
-
-        // Regular narrative paragraph
-        return (
-          <p
-            key={idx}
-            className="m-0 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.72] font-normal my-1"
-          >
-            <Rich text={line} />
-          </p>
+          </div>
         );
-      })}
-    </div>
-  );
+        continue;
+      }
+    }
+
+    if (!line) {
+      elements.push(<div key={`spacer-${i}`} className="h-1.5" />);
+      i++;
+      continue;
+    }
+
+    // 2. Section Heading (### Başlık)
+    if (line.startsWith('### ')) {
+      elements.push(
+        <h4
+          key={`h3-${i}`}
+          className="m-0 pt-3 pb-1 border-b border-line-soft text-[14.5px] sm:text-[15.5px] font-bold text-ink flex items-center gap-2"
+        >
+          <span className="w-2.5 h-2.5 rounded-full bg-accent shrink-0 shadow-2xs" />
+          <Rich text={line.slice(4)} />
+        </h4>
+      );
+      i++;
+      continue;
+    }
+
+    // 3. Sub-heading (#### Alt Başlık)
+    if (line.startsWith('#### ')) {
+      elements.push(
+        <h5
+          key={`h4-${i}`}
+          className="m-0 pt-2 text-[12.5px] sm:text-[13px] font-bold uppercase tracking-wider text-accent flex items-center gap-2"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0" />
+          <Rich text={line.slice(5)} />
+        </h5>
+      );
+      i++;
+      continue;
+    }
+
+    // 4. Callout (> veya Özel İpuçları)
+    if (line.startsWith('> ') || line.startsWith('📌') || line.startsWith('⚠️') || line.startsWith('💡') || line.startsWith('🚨')) {
+      const isRed = line.startsWith('🚨') || line.startsWith('⚠️') || /(?:ölümcül|asla|acil|hayati|kritik|kontrendike|sınav tuzağı)/i.test(line);
+      const icon = line.startsWith('💡') ? '💡' : line.startsWith('📌') ? '📌' : line.startsWith('⚠️') ? '⚠️' : isRed ? '🚨' : 'ℹ️';
+      const content = (line.startsWith('> ') ? line.slice(2) : line).replace(/^\s*(?:💡|📌|⚠️|🚨|ℹ️)\s*/u, '');
+
+      elements.push(
+        <div
+          key={`callout-${i}`}
+          className={`p-3 sm:p-3.5 my-2 rounded-xl border text-[12.5px] sm:text-[13px] leading-relaxed flex items-start gap-2.5 shadow-2xs ${
+            isRed
+              ? 'bg-rose-50/90 dark:bg-rose-950/30 border-rose-300 dark:border-rose-800 text-rose-950 dark:text-rose-200'
+              : 'bg-accent-soft/40 dark:bg-accent-soft/10 border-accent/40 text-ink'
+          }`}
+        >
+          <span className="text-[15px] select-none shrink-0 mt-0.5" aria-hidden="true">{icon}</span>
+          <div className="min-w-0 flex-1 leading-relaxed">
+            <Rich text={content} />
+          </div>
+        </div>
+      );
+      i++;
+      continue;
+    }
+
+    // 5. İkinci Seviye İç İçe Alt Madde (4 boşluk veya 2 boşluklu girinti)
+    if (rawLine.startsWith('    - ') || rawLine.startsWith('    • ') || rawLine.startsWith('\t\t- ')) {
+      const cleanText = line.replace(/^[•\-\*]\s*/, '');
+      elements.push(
+        <div
+          key={`subsub-${i}`}
+          className="ml-7 sm:ml-10 my-1 p-2 sm:p-2.5 rounded-lg bg-slate-50/80 dark:bg-zinc-850/60 border-l-2 border-accent/40 border-t border-r border-b border-line-soft/80 text-[12.5px] text-ink-3 leading-relaxed flex items-start gap-2.5 shadow-2xs hover:border-accent/60 transition-colors"
+        >
+          <span className="text-accent text-[12px] select-none shrink-0 mt-0.5 font-bold">↳</span>
+          <div className="min-w-0 flex-1 leading-relaxed">
+            <Rich text={cleanText} />
+          </div>
+        </div>
+      );
+      i++;
+      continue;
+    }
+
+    // 6. Birinci Seviye İç İçe Alt Madde (2 boşluklu girinti)
+    if (rawLine.startsWith('  - ') || rawLine.startsWith('  • ') || rawLine.startsWith('\t- ') || rawLine.startsWith('\t• ')) {
+      const cleanText = line.replace(/^[•\-\*]\s*/, '');
+      elements.push(
+        <div
+          key={`sub-${i}`}
+          className="ml-3 sm:ml-5 my-1.5 p-2.5 sm:p-3 rounded-xl bg-slate-50/90 dark:bg-zinc-850/80 border-l-3 border-accent border-t border-r border-b border-line-soft text-[13px] sm:text-[13.5px] text-ink-2 leading-relaxed flex items-start gap-3 shadow-2xs hover:border-accent transition-all"
+        >
+          <span className="mt-2 w-2 h-2 rounded-sm bg-accent/80 shrink-0 rotate-45" />
+          <div className="min-w-0 flex-1 leading-relaxed">
+            <Rich text={cleanText} />
+          </div>
+        </div>
+      );
+      i++;
+      continue;
+    }
+
+    // 7. Numaralı Liste (1. 2. 3.)
+    const numMatch = line.match(/^(\d+)\.\s+(.*)$/);
+    if (numMatch) {
+      elements.push(
+        <div
+          key={`num-${i}`}
+          className="my-1.5 p-3 sm:p-3.5 rounded-xl bg-white dark:bg-zinc-850 border border-line-soft hover:border-accent/40 text-[13.5px] text-ink leading-relaxed flex items-start gap-3 shadow-2xs transition-all"
+        >
+          <span className="shrink-0 w-5.5 h-5.5 rounded-lg bg-accent text-white text-[11.5px] font-bold flex items-center justify-center mt-0.5 shadow-xs">
+            {numMatch[1]}
+          </span>
+          <div className="min-w-0 flex-1 leading-relaxed">
+            <Rich text={numMatch[2]} />
+          </div>
+        </div>
+      );
+      i++;
+      continue;
+    }
+
+    // 8. Ana Madde (• veya - veya *)
+    if (line.startsWith('• ') || line.startsWith('- ') || line.startsWith('* ')) {
+      const cleanText = line.replace(/^[•\-\*]\s*/, '');
+      elements.push(
+        <div
+          key={`bullet-${i}`}
+          className="my-2 p-3 sm:p-3.5 rounded-xl bg-white dark:bg-zinc-850 border border-line-soft hover:border-accent/50 text-[13.5px] sm:text-[14px] text-ink leading-relaxed flex items-start gap-3 shadow-2xs transition-all"
+        >
+          <span className="mt-2 w-2.5 h-2.5 rounded-full bg-accent shrink-0 shadow-xs ring-4 ring-accent/15" />
+          <div className="min-w-0 flex-1 leading-relaxed">
+            <Rich text={cleanText} />
+          </div>
+        </div>
+      );
+      i++;
+      continue;
+    }
+
+    // 9. Normal Paragraf
+    elements.push(
+      <p key={`p-${i}`} className="m-0 text-[13.5px] sm:text-[14px] text-ink-2 leading-[1.8] font-normal my-1.5">
+        <Rich text={line} />
+      </p>
+    );
+    i++;
+  }
+
+  return <div className="flex flex-col gap-1">{elements}</div>;
 };
 
 /** Soft badge palette keyed by the colour names used in the data. */
@@ -466,6 +514,7 @@ const isTyping = (t: EventTarget | null) => {
 export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [showHint, setShowHint] = useState(false);
+  const [status, setStatus] = useState<'none' | 'learned' | 'review'>('none');
 
   const frontText = card.front || card.question || '';
   const backText = card.back || card.answer || '';
@@ -487,7 +536,13 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
       aria-label={`${frontText || 'Akıl Kartı'} akıl kartı`}
     >
       <div
-        className="w-full grid rounded-2xl transition-all duration-500 ease-out shadow-xs hover:shadow-md min-h-[160px]"
+        className={`w-full grid rounded-2xl transition-all duration-500 ease-out shadow-xs hover:shadow-md min-h-[175px] border ${
+          status === 'learned'
+            ? 'border-emerald-400 dark:border-emerald-700 bg-emerald-50/20'
+            : status === 'review'
+            ? 'border-amber-400 dark:border-amber-700 bg-amber-50/20'
+            : 'border-line hover:border-accent/40 bg-canvas'
+        }`}
         style={{
           transformStyle: 'preserve-3d',
           transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
@@ -495,32 +550,43 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
       >
         {/* FRONT FACE */}
         <div
-          className={`[grid-area:1/1] min-w-0 select-none rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-canvas shadow-xs hover:border-accent/40 transition-colors ${
+          className={`[grid-area:1/1] min-w-0 select-none rounded-2xl p-4 sm:p-5 flex flex-col justify-between ${
             isFlipped ? 'pointer-events-none' : ''
           }`}
           style={{
             backfaceVisibility: 'hidden',
-            borderColor: 'var(--color-line)',
           }}
         >
           <div className="flex items-start justify-between gap-2 shrink-0">
-            <span className="min-w-0 min-h-6 px-2 py-1 rounded-lg text-[11.5px] leading-tight font-semibold bg-amber-100 text-amber-900 uppercase tracking-[0.04em] inline-flex items-start gap-1.5 border border-amber-200/80 break-words">
-              <BrainCircuit className="w-3.5 h-3.5 shrink-0 text-amber-700" />
-              <span className="min-w-0">{card.category || 'Akıl Kartı'}</span>
+            <span className="min-w-0 min-h-6 px-2.5 py-1 rounded-lg text-[11.5px] leading-tight font-semibold bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-200 uppercase tracking-[0.04em] inline-flex items-center gap-1.5 border border-amber-200/80 dark:border-amber-800">
+              <BrainCircuit className="w-3.5 h-3.5 shrink-0 text-amber-700 dark:text-amber-400" />
+              <span className="min-w-0">{card.category || card.subtopic || 'Klinik Spot'}</span>
             </span>
-            <span aria-hidden="true" className="shrink-0 w-8 h-8 -mt-1 -mr-1 rounded-full flex items-center justify-center bg-canvas text-accent">
-              <RefreshCw className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
-            </span>
+            <div className="flex items-center gap-1.5">
+              {status === 'learned' && (
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                  Öğrenildi ✓
+                </span>
+              )}
+              {status === 'review' && (
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                  Tekrar Edilecek
+                </span>
+              )}
+              <span aria-hidden="true" className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-canvas text-accent shadow-2xs border border-line-soft">
+                <RefreshCw className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
+              </span>
+            </div>
           </div>
 
-          <div className="my-2 flex-1 flex flex-col justify-center">
-            <h4 className="m-0 text-[13.5px] sm:text-[14.5px] font-semibold text-ink leading-snug tracking-[-0.01em] break-words">
+          <div className="my-2.5 flex-1 flex flex-col justify-center">
+            <h4 className="m-0 text-[13.5px] sm:text-[14.5px] font-bold text-ink leading-snug tracking-[-0.01em] break-words">
               {frontText}
             </h4>
             {card.hint && (
               <div className="mt-2.5">
                 {showHint ? (
-                  <p className="m-0 text-[12px] text-amber-950 bg-amber-50 border border-amber-200 rounded-xl p-2.5 leading-relaxed shadow-2xs">
+                  <p className="m-0 text-[12px] text-amber-950 dark:text-amber-200 bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800 rounded-xl p-2.5 leading-relaxed shadow-2xs">
                     <strong>İpucu:</strong> {card.hint}
                   </p>
                 ) : (
@@ -539,11 +605,18 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
             )}
           </div>
 
+          <div className="pt-2 border-t border-line-soft/60 flex items-center justify-between text-[11px] text-ink-3">
+            <span>Kafanda yanıtla</span>
+            <span className="font-semibold text-accent flex items-center gap-1">
+              <span>Cevabı Gör (Tıkla)</span>
+              <ArrowRight className="w-3 h-3" />
+            </span>
+          </div>
         </div>
 
         {/* BACK FACE */}
         <div
-          className={`[grid-area:1/1] min-w-0 rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-canvas border-emerald-300 shadow-sm ${
+          className={`[grid-area:1/1] min-w-0 rounded-2xl p-4 sm:p-5 flex flex-col justify-between bg-canvas ${
             !isFlipped ? 'pointer-events-none' : ''
           }`}
           style={{
@@ -552,17 +625,47 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
           }}
         >
           <div className="flex items-start justify-between gap-2 shrink-0 select-none">
-            <span className="min-w-0 min-h-6 px-2 py-1 rounded-lg text-[11px] leading-tight font-semibold bg-emerald-100 text-emerald-900 uppercase tracking-[0.04em] inline-flex items-start gap-1.5 border border-emerald-300/80">
-              <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-emerald-700" />
-              <span className="min-w-0">Cevap</span>
+            <span className="min-w-0 min-h-6 px-2.5 py-1 rounded-lg text-[11.5px] leading-tight font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200 uppercase tracking-[0.04em] inline-flex items-center gap-1.5 border border-emerald-300/80 dark:border-emerald-800">
+              <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-emerald-700 dark:text-emerald-400" />
+              <span className="min-w-0">Çözüm & Mekanizma</span>
             </span>
-            <span aria-hidden="true" className="shrink-0 w-8 h-8 -mt-1 -mr-1 rounded-full flex items-center justify-center bg-white/80 text-emerald-700 border border-emerald-200">
+            <span aria-hidden="true" className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-white/80 dark:bg-zinc-800 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 shadow-2xs">
               <RefreshCw className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
             </span>
           </div>
 
-          <div className="my-2 flex-1 text-[12.5px] sm:text-[13px] font-medium text-ink leading-relaxed whitespace-pre-line break-words select-text">
+          <div className="my-2.5 flex-1 text-[12.5px] sm:text-[13.5px] font-medium text-ink leading-relaxed whitespace-pre-line break-words select-text">
             <Rich text={backText} />
+          </div>
+
+          <div className="pt-2.5 border-t border-line-soft/80 flex items-center justify-between gap-2" onClick={(e) => e.stopPropagation()}>
+            <span className="text-[11px] font-medium text-ink-3">Hafıza Durumu:</span>
+            <div className="flex items-center gap-1.5">
+              <button
+                type="button"
+                onClick={() => setStatus('learned')}
+                className={`px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer flex items-center gap-1 ${
+                  status === 'learned'
+                    ? 'bg-emerald-600 text-white shadow-xs ring-2 ring-emerald-300'
+                    : 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100'
+                }`}
+              >
+                <Check className="w-3 h-3" />
+                <span>Biliyorum</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setStatus('review')}
+                className={`px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer flex items-center gap-1 ${
+                  status === 'review'
+                    ? 'bg-amber-600 text-white shadow-xs ring-2 ring-amber-300'
+                    : 'bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 hover:bg-amber-100'
+                }`}
+              >
+                <RotateCcw className="w-3 h-3" />
+                <span>Tekrar Et</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -574,90 +677,14 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
 // Hub (deck catalogue)
 // ---------------------------------------------------------------------------
 
-/**
- * Deck data spells the same branch several ways ("Enfeksiyon Hastalıkları / Klinik Mikrobiyoloji",
- * "… ve Klinik Mikrobiyoloji", "Üroloji / Nefroloji"). The catalogue groups by the primary branch.
- */
-export const disciplineGroup = (raw: string) => {
-  const first = (raw || 'Diğer').split(/\s*(?:\/|&|,|\sve\s)\s*/)[0].trim();
-  return first || 'Diğer';
-};
-
-const GROUP_DOTS: Record<string, string> = {
-  'Tıbbi Patoloji': '#E0566E',
-  'Enfeksiyon Hastalıkları': '#1F9D55',
-  'Halk Sağlığı': '#2B8BC6',
-  'Tıbbi Genetik': '#6D5BD0',
-  Üroloji: '#E0952B',
-};
-const FALLBACK_DOTS = ['#0F7A5F', '#B4233C', '#4A5868', '#9A4D06', '#1E4FD8'];
-const groupDot = (g: string) =>
-  GROUP_DOTS[g] || FALLBACK_DOTS[[...g].reduce((n, ch) => n + ch.charCodeAt(0), 0) % FALLBACK_DOTS.length];
-
-/** Horizontally scrolling chip row: wheel scrolls sideways, arrow buttons appear when it overflows. */
-const ScrollRow: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [edges, setEdges] = useState({ left: false, right: false });
-
-  const update = useCallback(() => {
-    const el = ref.current;
-    if (!el) return;
-    setEdges({ left: el.scrollLeft > 4, right: el.scrollLeft + el.clientWidth < el.scrollWidth - 4 });
-  }, []);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    update();
-    const ro = new ResizeObserver(update);
-    ro.observe(el);
-    const onWheel = (e: WheelEvent) => {
-      if (el.scrollWidth <= el.clientWidth || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-      e.preventDefault();
-      el.scrollLeft += e.deltaY;
-    };
-    el.addEventListener('wheel', onWheel, { passive: false });
-    return () => {
-      ro.disconnect();
-      el.removeEventListener('wheel', onWheel);
-    };
-  }, [update]);
-
-  const nudge = (dir: 1 | -1) => ref.current?.scrollBy({ left: dir * Math.max(200, (ref.current.clientWidth || 400) * 0.7), behavior: 'smooth' });
-  const arrow = 'absolute top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white border border-line shadow-sm hidden sm:flex items-center justify-center text-ink cursor-pointer hover:border-line-2';
-
-  return (
-    <div className="relative -mx-3 sm:mx-0">
-      {edges.left && (
-        <>
-          <span className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-canvas to-transparent z-[5]" aria-hidden="true" />
-          <button type="button" onClick={() => nudge(-1)} aria-label="Sola kaydır" className={`${arrow} left-0`}>
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-        </>
-      )}
-      <div ref={ref} onScroll={update} role="radiogroup" aria-label={label} className="flex gap-1.5 overflow-x-auto no-scrollbar px-3 sm:px-0 scroll-smooth">
-        {children}
-      </div>
-      {edges.right && (
-        <>
-          <span className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-canvas to-transparent z-[5]" aria-hidden="true" />
-          <button type="button" onClick={() => nudge(1)} aria-label="Sağa kaydır" className={`${arrow} right-0`}>
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </>
-      )}
-    </div>
-  );
-};
-
-export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange, onOpenPdfModal, questionFocus, onClearQuestionFocus }) => {
+export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange, onOpenPdfModal, questionFocus, onClearQuestionFocus, isAdmin = false }) => {
   // Yeni ders ekranı varsayılan; klasik slayt ekranı Araçlar menüsünden açılır ve deste kapanınca sıfırlanır
   const [classicPlayer, setClassicPlayer] = useState(false);
   // Liste hafif katalogdan gelir; slaytlar yalnızca açılan deste için yüklenir (12 MB tek parça yerine)
   const allDecks = DECK_CATALOG;
   const [deckId, setDeckId] = useState<string | null>(initialDeckId || null);
   const [playerViewMode, setPlayerViewMode] = useState<DeckViewMode>('interactive');
+  const [adminArchiveFilter, setAdminArchiveFilter] = useState<'new_only' | 'all' | 'legacy_only'>('new_only');
 
   useEffect(() => {
     if (initialDeckId) {
@@ -665,28 +692,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     }
   }, [initialDeckId]);
 
-  const [query, setQuery] = useState('');
-  const [discipline, setDiscipline] = useState('all');
   const [progress, setProgress] = useState<DeckProgress>(readProgress);
-
-  const disciplines = useMemo(() => {
-    const m: Record<string, number> = {};
-    (allDecks || []).forEach((d) => {
-      const g = disciplineGroup(d.discipline);
-      m[g] = (m[g] || 0) + 1;
-    });
-    // Biggest groups first, then alphabetical
-    return Object.entries(m).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'tr'));
-  }, [allDecks]);
-
-  const visible = useMemo(() => {
-    const q = query.trim().toLocaleLowerCase('tr-TR');
-    return (allDecks || []).filter((d) => {
-      if (discipline !== 'all' && disciplineGroup(d.discipline) !== discipline) return false;
-      if (!q) return true;
-      return [d.title, d.discipline, d.instructor, d.overview, ...(d.highYieldPearls || [])].join(' ').toLocaleLowerCase('tr-TR').includes(q);
-    });
-  }, [allDecks, discipline, query]);
 
   const [activeDeck, setActiveDeck] = useState<InteractiveDeck | null>(null);
   const [deckLoading, setDeckLoading] = useState(false);
@@ -701,153 +707,22 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     });
     return () => { alive = false; };
   }, [deckId]);
-  const { isV3 } = useUiVersion();
-  const totalSlides = (allDecks || []).reduce((n, d) => n + (d.slideCount || 0), 0);
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
-      <PageHeader
-        eyebrow="Ders anlatımı"
-        title="Öğren"
-        description="Hocanın vurguları, ders notları ve çıkmış sorularla slayt slayt çalış."
-        stats={[
-          { label: 'Ders', value: allDecks.length },
-          { label: 'Slayt', value: totalSlides.toLocaleString('tr-TR'), tone: 'accent' },
-        ]}
-        actions={
-          <label className="flex items-center gap-2 h-10 w-full sm:w-[300px] px-3 border border-line rounded-[10px] bg-white focus-within:border-accent focus-within:ring-2 focus-within:ring-accent-soft">
-            <Search className="w-4 h-4 text-ink-3 shrink-0" />
-            <span className="sr-only">Derslerde ara</span>
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Ders ya da konu ara"
-              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] md:text-[14px] placeholder:text-ink-3"
-            />
-          </label>
-        }
+      <LearnHub
+        decks={allDecks}
+        progress={progress}
+        isAdmin={isAdmin}
+        archive={adminArchiveFilter}
+        onArchive={setAdminArchiveFilter}
+        onOpen={(id, pdf) => {
+          touchRecent(id);
+          setPlayerViewMode(pdf ? 'pdf' : 'interactive');
+          setDeckId(id);
+          onDeckChange?.(id);
+        }}
       />
-
-      <ScrollRow label="Ders">
-        {[['all', allDecks.length] as [string, number], ...disciplines].map(([d, n]) => {
-          const on = discipline === d;
-          const dot = d === 'all' ? '#0E1A26' : groupDot(d);
-          return (
-            <button
-              key={d}
-              type="button"
-              role="radio"
-              aria-checked={on}
-              onClick={() => setDiscipline(d)}
-              className={`shrink-0 h-9 px-3.5 rounded-full text-[13.5px] whitespace-nowrap cursor-pointer inline-flex items-center gap-1.5 transition-colors ${
-                on ? 'bg-ink text-white font-semibold' : 'bg-white border border-line text-ink hover:border-line-2'
-              }`}
-            >
-              <span className="w-2 h-2 rounded-full shrink-0" style={{ background: on && d === 'all' ? '#fff' : dot }} aria-hidden="true" />
-              {d === 'all' ? 'Tümü' : d}
-              <span className={`font-mono text-[12px] ${on ? 'text-white/70' : 'text-ink-3'}`}>{n}</span>
-            </button>
-          );
-        })}
-      </ScrollRow>
-
-      {visible.length === 0 ? (
-        <div className="bg-white border border-line rounded-2xl px-6 py-12 text-center">
-          <p className="m-0 font-display text-[20px] font-bold">Bu aramada ders yok</p>
-          <p className="m-0 mt-1 text-[14px] text-ink-2">Aramayı temizleyip başka bir ders seçebilirsin.</p>
-        </div>
-      ) : isV3 ? (
-        <V3DeckList
-          decks={visible}
-          progress={progress}
-          onOpen={(id, pdf) => {
-            setPlayerViewMode(pdf ? 'pdf' : 'interactive');
-            setDeckId(id);
-            onDeckChange?.(id);
-          }}
-        />
-      ) : (
-        <ul className="list-none m-0 p-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
-          {visible.map((d) => {
-            const pr = progress[d.id];
-            const seen = pr?.seen?.length || 0;
-            const pct = Math.round((seen / d.slideCount) * 100);
-            const qCount = d.questionCount;
-            const cardCount = d.cardCount;
-            const started = seen > 0;
-            const done = seen >= d.slideCount;
-            const group = disciplineGroup(d.discipline);
-            return (
-              <li key={d.id} className="min-w-0">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setPlayerViewMode('interactive');
-                    setDeckId(d.id);
-                    onDeckChange?.(d.id);
-                  }}
-                  className="ms-lift w-full h-full text-left bg-white border border-line rounded-2xl p-4 flex flex-col gap-2.5 cursor-pointer group"
-                >
-                  <span className="flex items-center gap-2 min-w-0 text-[12.5px] text-ink-3">
-                    <span className="w-2 h-2 rounded-full shrink-0" style={{ background: groupDot(group) }} aria-hidden="true" />
-                    <span className="truncate" title={d.discipline}>{group}</span>
-                    <span className="shrink-0 ml-auto font-mono text-[12px]">{d.slideCount} slayt</span>
-                  </span>
-                  <span className="text-[16.5px] font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2 min-h-[2.6em]">{d.title}</span>
-                  <span className="flex flex-wrap gap-1.5">
-                    {d.instructor && (
-                      <span className="max-w-full h-6 px-2 rounded-md bg-canvas text-[12px] text-ink-2 inline-flex items-center gap-1 min-w-0">
-                        <User className="w-3 h-3 shrink-0" />
-                        <span className="truncate">{d.instructor}</span>
-                      </span>
-                    )}
-                    {cardCount > 0 && (
-                      <span className="h-6 px-2 rounded-md bg-amber-100 text-[12px] text-amber-800 inline-flex items-center">{cardCount} kart</span>
-                    )}
-                    {qCount > 0 && (
-                      <span className="h-6 px-2 rounded-md bg-accent-soft text-[12px] text-accent inline-flex items-center">{qCount} soru</span>
-                    )}
-                  </span>
-                  <span className="mt-auto pt-2.5 border-t border-line-soft flex items-center gap-3">
-                    <span className="flex-1 min-w-0 flex flex-col gap-1">
-                      <span className="text-[12px] text-ink-3">
-                        {done ? 'Tamamlandı' : started ? `${(pr?.last ?? 0) + 1} / ${d.slideCount} slayt` : 'Başlanmadı'}
-                      </span>
-                      <span className="h-[5px] rounded-full bg-line-soft overflow-hidden" aria-hidden="true">
-                        <span className="block h-full bg-accent rounded-full" style={{ width: `${pct}%` }} />
-                      </span>
-                    </span>
-                    <span className="flex items-center gap-1.5 shrink-0">
-                      <span
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setPlayerViewMode('pdf');
-                          setDeckId(d.id);
-                          onDeckChange?.(d.id);
-                        }}
-                        title="Orijinal PDF Slaytını Aç"
-                        className="h-[34px] px-2.5 rounded-[10px] inline-flex items-center gap-1 text-[12px] font-semibold text-rose-700 bg-rose-50 hover:bg-rose-100 border border-rose-200 transition-colors"
-                      >
-                        <FileText className="w-3.5 h-3.5" />
-                        <span>PDF</span>
-                      </span>
-                      <span
-                        className={`h-[34px] px-3 rounded-[10px] inline-flex items-center gap-1.5 text-[13px] font-semibold ${
-                          started ? 'bg-accent text-white' : 'bg-accent-soft text-accent'
-                        }`}
-                      >
-                        <Play className="w-3 h-3 fill-current" />
-                        {done ? 'Tekrar' : started ? 'Devam et' : 'Başla'}
-                      </span>
-                    </span>
-                  </span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      )}
 
       {deckId && deckLoading && !activeDeck && (
         <div className="fixed inset-0 z-[60] bg-canvas flex items-center justify-center" role="status" aria-live="polite">
@@ -1089,22 +964,60 @@ const DeckPlayer: React.FC<{
     }
   }, [mode]);
 
-  // Native fullscreen on top of the overlay (the overlay already fills the viewport)
+  // Native fullscreen on top of the overlay (with cross-browser & mobile/tablet support)
   useEffect(() => {
-    const onFs = () => setIsFs(document.fullscreenElement === rootRef.current);
+    const onFs = () => {
+      const doc = document as any;
+      const fsEl = doc.fullscreenElement || doc.webkitFullscreenElement || doc.mozFullScreenElement || doc.msFullscreenElement;
+      setIsFs(fsEl === rootRef.current);
+    };
     document.addEventListener('fullscreenchange', onFs);
-    return () => document.removeEventListener('fullscreenchange', onFs);
+    document.addEventListener('webkitfullscreenchange', onFs);
+    document.addEventListener('mozfullscreenchange', onFs);
+    document.addEventListener('MSFullscreenChange', onFs);
+    return () => {
+      document.removeEventListener('fullscreenchange', onFs);
+      document.removeEventListener('webkitfullscreenchange', onFs);
+      document.removeEventListener('mozfullscreenchange', onFs);
+      document.removeEventListener('MSFullscreenChange', onFs);
+    };
   }, []);
-  // Tarayıcı tam ekranı yoksa (iPhone Safari) ya da reddedilirse "odak" moduna geçilir:
-  // üst araç çubuğu gizlenir, yalnızca küçük bir çıkış düğmesi kalır.
+  // Tarayıcı tam ekranı yoksa (iPhone Safari vb.) ya da reddedilirse "odak / immersive" moduna geçilir:
+  // üst araç çubuğu gizlenir, slayt tüm ekrana (100dvh x 100vw) yayılır, yalnızca küçük bir çıkış düğmesi kalır.
   const [immersive, setImmersive] = useState(false);
   const canFullscreen = true;
   const toggleFullscreen = () => {
     if (!rootRef.current) return;
-    if (immersive) { setImmersive(false); return; }
-    if (document.fullscreenElement) { document.exitFullscreen().catch(() => {}); return; }
-    if (document.fullscreenEnabled && rootRef.current.requestFullscreen) {
-      rootRef.current.requestFullscreen().catch(() => setImmersive(true));
+    if (immersive) {
+      setImmersive(false);
+      return;
+    }
+    const doc = document as any;
+    const fsEl = doc.fullscreenElement || doc.webkitFullscreenElement || doc.mozFullScreenElement || doc.msFullscreenElement;
+    if (fsEl) {
+      if (doc.exitFullscreen) {
+        doc.exitFullscreen().catch(() => {});
+      } else if (doc.webkitExitFullscreen) {
+        doc.webkitExitFullscreen();
+      } else if (doc.mozCancelFullScreen) {
+        doc.mozCancelFullScreen();
+      } else if (doc.msExitFullscreen) {
+        doc.msExitFullscreen();
+      }
+      setIsFs(false);
+      return;
+    }
+    const elem: any = rootRef.current;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen().catch(() => setImmersive(true));
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    } else if (elem.webkitEnterFullscreen) {
+      elem.webkitEnterFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
     } else {
       setImmersive(true);
     }
@@ -1536,6 +1449,8 @@ const DeckPlayer: React.FC<{
                   onNext={next}
                   onPrev={prev}
                   onOpenPdfAtPage={handleOpenPdfAtPage}
+                  onToggleFullscreen={toggleFullscreen}
+                  isFullscreen={isFs || immersive}
                   onOpenQuestions={() => {
                     setTab('questions');
                     setPanelOpen(true);
@@ -1564,7 +1479,7 @@ const DeckPlayer: React.FC<{
               </div>
             </div>
           ) : mode === 'paged' ? (
-            <div className="ms-swipe-stage absolute inset-0 p-2 sm:p-4 lg:p-6 flex" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+            <div className="ms-swipe-stage absolute inset-0 p-1 sm:p-2.5 lg:p-3 flex bg-slate-50/70 dark:bg-zinc-950" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
               <SlideCanvas
                 key={index}
                 deckId={deck.id}
@@ -1576,6 +1491,8 @@ const DeckPlayer: React.FC<{
                 onNext={next}
                 onPrev={prev}
                 onOpenPdfAtPage={handleOpenPdfAtPage}
+                onToggleFullscreen={toggleFullscreen}
+                isFullscreen={isFs || immersive}
                 onOpenQuestions={() => {
                   setTab('questions');
                   setPanelOpen(true);
@@ -1591,7 +1508,7 @@ const DeckPlayer: React.FC<{
               />
             </div>
           ) : (
-            <div ref={scrollRef} className="absolute inset-0 overflow-y-auto snap-y snap-proximity overscroll-contain" aria-label="Slaytlar">
+            <div ref={scrollRef} className="absolute inset-0 overflow-y-auto snap-y snap-proximity overscroll-contain bg-slate-50/70 dark:bg-zinc-950" aria-label="Slaytlar">
               {slides.map((s, i) => (
                 <section
                   key={i}
@@ -1600,7 +1517,7 @@ const DeckPlayer: React.FC<{
                     sectionRefs.current[i] = el;
                   }}
                   aria-label={`Slayt ${i + 1}`}
-                  className="min-h-full snap-start p-2 sm:p-4 lg:p-6 flex"
+                  className="min-h-full snap-start p-1 sm:p-2.5 lg:p-3 flex"
                 >
                   <SlideCanvas
                     deckId={deck.id}
@@ -1609,6 +1526,8 @@ const DeckPlayer: React.FC<{
                     index={i}
                     total={n}
                     onOpenPdfAtPage={handleOpenPdfAtPage}
+                    onToggleFullscreen={toggleFullscreen}
+                    isFullscreen={isFs || immersive}
                     onOpenQuestions={() => {
                       setTab('questions');
                       setPanelOpen(true);
@@ -2202,7 +2121,23 @@ const SlideCanvas: React.FC<{
   paged?: boolean;
   /** Storage key for the student's own highlights on this slide */
   highlightScope?: string;
-}> = ({ deckId = '', slide, index, total, onOpenQuestions, onOpenFlashcards, onOpenNotes, onOpenPdfAtPage, onNext, paged = false, highlightScope }) => {
+  onToggleFullscreen?: () => void;
+  isFullscreen?: boolean;
+}> = ({
+  deckId = '',
+  slide,
+  index,
+  total,
+  onOpenQuestions,
+  onOpenFlashcards,
+  onOpenNotes,
+  onOpenPdfAtPage,
+  onNext,
+  paged = false,
+  highlightScope,
+  onToggleFullscreen,
+  isFullscreen = false,
+}) => {
   const [copied, setCopied] = useState(false);
   const containerRef = useRef<HTMLElement>(null);
 
@@ -2222,6 +2157,9 @@ const SlideCanvas: React.FC<{
   const flashcards = slide.flashcards || [];
   const narrative = slide.synthesisNarrative || (slide as any).content || '';
   const spots = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
+  const interactiveData = slide.interactiveElements && slide.interactiveElements.length > 0
+    ? slide.interactiveElements
+    : slide.interactiveElement;
 
   const copyQuote = () => {
     if (!hl?.quote) return;
@@ -2231,308 +2169,417 @@ const SlideCanvas: React.FC<{
     });
   };
 
+  // Modular Block Renderers
+  const renderHeader = (config?: SlideLayoutBlock['styleConfig']) => (
+    <header className="ms-slide-head flex flex-col gap-2.5 pb-2 border-b border-line-soft">
+      {/* Üst Başlık (Eyebrow & Metadata) */}
+      <div className="ms-slide-meta flex items-center gap-2 flex-wrap text-[12px]">
+        <span className="font-mono font-bold text-accent bg-accent-soft px-2.5 py-1 rounded-lg border border-accent/20 flex items-center gap-1.5 shadow-2xs">
+          <GraduationCap className="w-3.5 h-3.5" />
+          <span>Slayt {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}</span>
+        </span>
+        {slide.badge && (
+          <span className="h-7 px-3 rounded-lg text-[12px] font-bold tracking-[0.03em] inline-flex items-center shadow-2xs" style={{ background: badge.bg, color: badge.fg }}>
+            {slide.badge}
+          </span>
+        )}
+        {/* Orijinal Ders PDF'i Kaynak Çipi / Butonu */}
+        <button
+          type="button"
+          onClick={() => onOpenPdfAtPage?.(slidePdfLoc.startPage)}
+          title={`Orijinal ders sunumunda ${slidePdfLoc.citation} bölümünü yan ekranda aç`}
+          className="h-7 px-2.5 rounded-lg text-[11.5px] font-semibold bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-500/25 inline-flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer group active:scale-95"
+        >
+          <FileText className="w-3.5 h-3.5 text-amber-600 group-hover:scale-110 transition-transform" />
+          <span>Ders Notu: <strong>{slidePdfLoc.citation}</strong></span>
+          <ArrowRight className="w-3 h-3 text-amber-500/70 group-hover:translate-x-0.5 transition-transform" />
+        </button>
+        {/* 1-Tap Tam Ekran / Odak Modu Butonu */}
+        {onToggleFullscreen && (
+          <button
+            type="button"
+            onClick={onToggleFullscreen}
+            title={isFullscreen ? 'Tam ekrandan çık' : 'Tüm ekrana yay / Tam ekran oku'}
+            className="h-7 px-2.5 rounded-lg text-[11.5px] font-semibold bg-accent-soft hover:bg-accent/20 text-accent border border-accent/25 inline-flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer group active:scale-95 ml-auto sm:ml-0"
+          >
+            {isFullscreen ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5" />}
+            <span className="hidden sm:inline">{isFullscreen ? 'Küçült' : 'Tam Ekran Oku'}</span>
+          </button>
+        )}
+      </div>
+
+      {/* Köken açıklaması */}
+      <div className="ms-origin-legend" aria-label="İçerik kaynağı">
+        <span data-o="hoca">Hoca / ders notu</span>
+        <span data-o="ai">Yapay zekâ özeti</span>
+      </div>
+      {/* Büyük Ana Başlık */}
+      <h2 className="ms-slide-title m-0 font-display font-extrabold tracking-[-0.025em] leading-[1.18] text-[20px] sm:text-[24px] lg:text-[27px] text-ink">
+        {slide.title}
+      </h2>
+
+      {/* Vurgulu Alt Başlık */}
+      {slide.subtitle && (
+        <div className="ms-slide-lead p-2.5 sm:p-3 rounded-xl bg-canvas border border-accent/20 flex items-start gap-2.5 shadow-2xs">
+          <span className="ms-slide-emoji text-[14px] shrink-0 select-none mt-0.5"></span>
+          <div className="flex flex-col gap-0.5 min-w-0">
+            <span className="ms-slide-eyebrow text-[11.5px] font-bold uppercase tracking-wider text-accent">Kavram & Odak Özeti</span>
+            <p className="m-0 text-[12.5px] sm:text-[13.5px] font-medium text-ink-2 leading-[1.55]">
+              {slide.subtitle}
+            </p>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+
+  const renderProfessorPearl = () => {
+    if (!hl || !emph) return null;
+    return (
+      <figure data-origin="hoca" className="ms-slide-pearl m-0 rounded-2xl border-2 border-accent/20 bg-canvas p-3.5 sm:p-4.5 flex flex-col gap-2 shadow-xs">
+        <figcaption className="flex items-center gap-2">
+          <span
+            className="h-6 px-2.5 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1.5 shadow-2xs"
+            style={{ background: tone(emph.c).bg, color: tone(emph.c).fg }}
+          >
+            <emph.icon className="w-3.5 h-3.5" />
+            {emph.label}
+          </span>
+          <span className="ms-slide-eyebrow text-[11.5px] font-semibold text-accent uppercase tracking-wider">
+            Klinik & Sınav Kritik Vurgusu
+          </span>
+          <button
+            type="button"
+            onClick={copyQuote}
+            aria-label="Alıntıyı kopyala"
+            className="ml-auto h-7 px-2 rounded-lg flex items-center gap-1 text-[11.5px] text-ink-2 hover:bg-white border border-transparent hover:border-line cursor-pointer transition-colors"
+          >
+            {copied ? <Check className="w-3.5 h-3.5 text-ok" /> : <Copy className="w-3.5 h-3.5" />}
+            <span className="hidden sm:inline">{copied ? 'Kopyalandı' : 'Kopyala'}</span>
+          </button>
+        </figcaption>
+        <blockquote className="m-0 text-[13.5px] sm:text-[14.5px] font-medium leading-[1.6] text-ink border-l-3 border-accent pl-3.5 italic">
+          “{hl.quote}”
+        </blockquote>
+        {hl.note && (
+          <p className="m-0 text-[12px] sm:text-[12.5px] text-ink-2 leading-[1.55] bg-white/60 p-2 sm:p-2.5 rounded-xl border border-line-soft">
+            <strong>Klinik Yaklaşım:</strong> {hl.note}
+          </p>
+        )}
+      </figure>
+    );
+  };
+
+  const renderNarrative = () => {
+    if (!narrative) return null;
+    return (
+      <section data-origin="ai" className="ms-slide-narr rounded-2xl border border-line bg-canvas p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
+        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line pb-2.5">
+          <div className="flex items-center gap-2.5 min-w-[min(100%,220px)] flex-1">
+            <span className="ms-slide-badgeicon w-7 h-7 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-xs">
+              <BookOpen className="w-4 h-4" />
+            </span>
+            <div className="min-w-0">
+              <span className="ms-slide-eyebrow text-[11.5px] font-bold uppercase tracking-wider text-accent block">
+                Öğrenim Bölümü • Detaylı Müfredat Analizi
+              </span>
+              <h3 className="m-0 text-[14.5px] sm:text-[15.5px] font-bold text-ink">
+                {slide.discipline?.toLowerCase().includes('patoloji')
+                  ? 'Kapsamlı Ders Notu ve Patoloji Sentezi'
+                  : `Kapsamlı Ders Notu ve ${slide.discipline || 'Müfredat'} Sentezi`}
+              </h3>
+            </div>
+          </div>
+          <div className="flex items-center gap-1.5 shrink-0">
+            {onOpenPdfAtPage && (
+              <button
+                type="button"
+                onClick={() => onOpenPdfAtPage(slidePdfLoc.startPage)}
+                title={`Orijinal ders sunumunun ${slidePdfLoc.citation} sayfalarını yan ekranda aç`}
+                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/25 text-[11.5px] font-semibold text-amber-800 dark:text-amber-300 inline-flex items-center gap-1.5 cursor-pointer transition-colors shadow-2xs active:scale-95"
+              >
+                <BookOpen className="w-3.5 h-3.5 text-amber-600" />
+                <span className="hidden sm:inline">PDF'te Aç</span>
+                <span>({slidePdfLoc.citation})</span>
+              </button>
+            )}
+            {onOpenNotes && (
+              <button
+                type="button"
+                onClick={onOpenNotes}
+                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-white border border-line text-[11.5px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+              >
+                <FileText className="w-3.5 h-3.5" />
+                <span>Panelde Oku</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            )}
+          </div>
+        </div>
+
+        <StructuredSynthesisRenderer text={narrative} />
+      </section>
+    );
+  };
+
+  const renderTable = () => {
+    if (!c.table || !c.table.headers?.length) return null;
+    return <EnhancedDifferentialTable table={c.table} />;
+  };
+
+  const renderInteractive = () => {
+    if (!interactiveData) return null;
+    return <InteractiveStepRenderer data={interactiveData} />;
+  };
+
+  const renderSpots = () => {
+    if (spots.length === 0) return null;
+    return (
+      <div data-origin="ai" className="mt-1">
+        <SpotList items={spots} />
+      </div>
+    );
+  };
+
+  const renderKeyBullets = () => {
+    if (!c.keyBullets || c.keyBullets.length === 0) return null;
+    return <KeyBulletsRenderer bullets={c.keyBullets} />;
+  };
+
+  const renderFlashcards = () => {
+    if (flashcards.length === 0) return null;
+    const isCheckpoint =
+      slide.badge === 'Tekrar Sayfası' ||
+      slide.title.includes('TEKRAR SAYFASI') ||
+      slide.title.includes('BÜYÜK FİNAL');
+
+    return (
+      <section
+        data-origin="ai"
+        className={`flex flex-col gap-3 pt-1 transition-all ${
+          isCheckpoint
+            ? 'p-4 sm:p-5 rounded-2xl bg-amber-50/50 dark:bg-amber-950/25 border-2 border-amber-300/80 dark:border-amber-800/60 shadow-sm'
+            : ''
+        }`}
+      >
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <span
+              className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 shadow-xs ${
+                isCheckpoint ? 'bg-amber-600 text-white' : 'bg-amber-500 text-white'
+              }`}
+            >
+              <BrainCircuit className="w-4.5 h-4.5" />
+            </span>
+            <div>
+              <h3 className="m-0 text-[14.5px] sm:text-[15.5px] font-bold text-ink flex flex-wrap items-center gap-x-2 gap-y-1">
+                <span>
+                  {isCheckpoint ? '🎯 Pekiştirme Akıl Kartları İstasyonu' : 'Akıl Kartları (Tıkla & Çevir)'}
+                </span>
+                <span className="shrink-0 whitespace-nowrap font-mono text-[11px] font-bold text-amber-900 dark:text-amber-200 bg-amber-200/80 dark:bg-amber-900/60 px-2.5 py-0.5 rounded-full border border-amber-300 dark:border-amber-700">
+                  {flashcards.length} Hafıza Kartı
+                </span>
+              </h3>
+              <p className="m-0 text-[12px] text-ink-3">
+                {isCheckpoint
+                  ? 'Bölümün kilit sınav spotlarını ve fizyopatolojik mekanizmalarını kartları çevirerek zihninizde sınayın'
+                  : 'Kafanda yanıtla, ardından karta tıklayarak cevabı ve amfi ipucunu aç'}
+              </p>
+            </div>
+          </div>
+
+          {onOpenFlashcards && (
+            <button
+              type="button"
+              onClick={onOpenFlashcards}
+              className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[11.5px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
+            >
+              <span>Panelde Çalış</span>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </button>
+          )}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
+          {flashcards.map((card) => (
+            <FlashcardComponent key={card.id} card={card} />
+          ))}
+        </div>
+      </section>
+    );
+  };
+
+  const renderQuestions = () => {
+    const validQuestions = (slide.relatedQuestions || []).filter((q: any) => String(q?.stem || q?.question || '').trim().length > 10);
+    if (validQuestions.length === 0) return null;
+    return (
+      <section id={`slide-questions-${slide.slideNumber}`} className="flex flex-col gap-2.5 pt-1 scroll-mt-6">
+        <div className="flex items-center justify-between gap-2 border-b border-line-soft pb-2">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-2xs">
+              <CheckCircle2 className="w-4 h-4" />
+            </span>
+            <div>
+              <h3 className="m-0 text-[14px] sm:text-[14.5px] font-bold text-ink flex items-center gap-2">
+                <span>Eşleşen Kurul & Çıkmış Sorular</span>
+                <span className="shrink-0 font-mono text-[11px] font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
+                  {validQuestions.length} Soru
+                </span>
+              </h3>
+              <p className="m-0 text-[11.5px] text-ink-3">
+                Paneli açmaya gerek kalmadan doğrudan bu slayt üzerinden çözebilirsiniz
+              </p>
+            </div>
+          </div>
+
+          {onOpenQuestions && (
+            <button
+              type="button"
+              onClick={onOpenQuestions}
+              className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[11.5px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
+            >
+              <span>Panelde Aç</span>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </button>
+          )}
+        </div>
+
+        <div className="grid grid-cols-1 gap-3">
+          {validQuestions.map((q, i) => (
+            <QuizCard key={`canvas-${slide.slideNumber}-${q.id || i}`} q={q} n={i + 1} />
+          ))}
+        </div>
+      </section>
+    );
+  };
+
+  // Kritik Tıbbi Terimler - Kullanıcı talimatı: Slaytın en altında yer alır
+  const renderMedicalTerms = () => {
+    if (!slide.medicalTerms || slide.medicalTerms.length === 0) return null;
+    return (
+      <section data-origin="ders" className="mt-4 pt-3.5 border-t border-line-soft">
+        <div className="text-[11.5px] font-bold uppercase tracking-wider text-teal-800 dark:text-teal-300 mb-2.5 flex items-center gap-1.5">
+          <BookOpen className="w-3.5 h-3.5 text-teal-600" />
+          <span>Kritik Tıbbi Terimler & Sözlük Kartları</span>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {slide.medicalTerms.map((t, idx) => (
+            <div key={idx} className="p-2.5 rounded-xl bg-teal-50/30 dark:bg-zinc-800/80 border border-teal-200/50 text-[12px] shadow-2xs">
+              <strong className="text-teal-900 dark:text-teal-300 block font-bold text-[12.5px] mb-0.5">{t.term}</strong>
+              <span className="text-ink-2 leading-relaxed">{t.explanation}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  };
+
+  const sortedBlocks = useMemo(() => {
+    if (!slide.layoutBlocks || slide.layoutBlocks.length === 0) return null;
+    return [...slide.layoutBlocks].filter((b) => b.visible !== false).sort((a, b) => a.order - b.order);
+  }, [slide.layoutBlocks]);
+
+  const renderBlockItem = (block: SlideLayoutBlock) => {
+    const bType = (block.type || '').toLowerCase();
+    switch (bType) {
+      case 'header':
+        return <React.Fragment key={block.id}>{renderHeader(block.styleConfig)}</React.Fragment>;
+      case 'professor_pearl':
+      case 'pearl':
+        return <React.Fragment key={block.id}>{renderProfessorPearl()}</React.Fragment>;
+      case 'narrative':
+      case 'content':
+        return <React.Fragment key={block.id}>{renderNarrative()}</React.Fragment>;
+      case 'table':
+      case 'table_block':
+        return <React.Fragment key={block.id}>{renderTable()}</React.Fragment>;
+      case 'interactive':
+      case 'interactive_element':
+      case 'interactive_elements':
+      case 'interactives':
+        return <React.Fragment key={block.id}>{renderInteractive()}</React.Fragment>;
+      case 'spots':
+      case 'spot_pearls':
+      case 'spot_list':
+      case 'spotpearls':
+        return <React.Fragment key={block.id}>{renderSpots()}</React.Fragment>;
+      case 'key_bullets':
+      case 'bullets':
+        return <React.Fragment key={block.id}>{renderKeyBullets()}</React.Fragment>;
+      case 'flashcards':
+      case 'flashcard':
+        return <React.Fragment key={block.id}>{renderFlashcards()}</React.Fragment>;
+      case 'questions':
+      case 'related_questions':
+      case 'relatedquestions':
+        return <React.Fragment key={block.id}>{renderQuestions()}</React.Fragment>;
+      case 'terms':
+      case 'medical_terms':
+      case 'medicalterms':
+        return <React.Fragment key={block.id}>{renderMedicalTerms()}</React.Fragment>;
+      default:
+        return null;
+    }
+  };
+
   return (
     <article
+      key={slide.slideNumber}
       ref={containerRef}
-      className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-2xl shadow-md flex flex-col min-h-0 custom-scrollbar relative ms-slide`}
+      className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1720px] 2xl:max-w-none mx-auto bg-white dark:bg-zinc-900 border border-line/80 rounded-2xl shadow-sm flex flex-col min-h-0 custom-scrollbar relative ms-slide ms-view-enter transition-all duration-300`}
     >
       {/* Çizim katmanı içeriğin tamamını kaplar (kaydırılan kutunun yalnız ilk ekranını değil) */}
       <div className="relative min-w-0">
-      <SlideDrawingCanvas scope={highlightScope || `slide:${slide.slideNumber}`} />
-      <Highlightable
-        scope={highlightScope || `slide:${slide.slideNumber}:${slide.title}`}
-        className="px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 flex flex-col gap-4 sm:gap-6"
-      >
-        {/* Slide header */}
-        <header className="ms-slide-head flex flex-col gap-2.5 pb-2 border-b border-line-soft">
-          {/* Üst Başlık (Eyebrow & Metadata) */}
-          <div className="ms-slide-meta flex items-center gap-2 flex-wrap text-[12px]">
-            <span className="font-mono font-bold text-accent bg-accent-soft px-2.5 py-1 rounded-lg border border-accent/20 flex items-center gap-1.5 shadow-2xs">
-              <GraduationCap className="w-3.5 h-3.5" />
-              <span>Slayt {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}</span>
-            </span>
-            {slide.badge && (
-              <span className="h-7 px-3 rounded-lg text-[12px] font-bold tracking-[0.03em] inline-flex items-center shadow-2xs" style={{ background: badge.bg, color: badge.fg }}>
-                {slide.badge}
-              </span>
-            )}
-            {/* Orijinal Ders PDF'i Kaynak Çipi / Butonu */}
-            <button
-              type="button"
-              onClick={() => onOpenPdfAtPage?.(slidePdfLoc.startPage)}
-              title={`Orijinal ders sunumunda ${slidePdfLoc.citation} bölümünü yan ekranda aç`}
-              className="h-7 px-2.5 rounded-lg text-[11.5px] font-semibold bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-500/25 inline-flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer group active:scale-95"
-            >
-              <FileText className="w-3.5 h-3.5 text-amber-600 group-hover:scale-110 transition-transform" />
-              <span>Ders Notu: <strong>{slidePdfLoc.citation}</strong></span>
-              <ArrowRight className="w-3 h-3 text-amber-500/70 group-hover:translate-x-0.5 transition-transform" />
-            </button>
-          </div>
-
-          {/* Köken açıklaması: hangi bölüm hocanın, hangisi yapay zekânın */}
-          <div className="ms-origin-legend" aria-label="İçerik kaynağı">
-            <span data-o="hoca">Hoca / ders notu</span>
-            <span data-o="ai">Yapay zekâ özeti</span>
-          </div>
-          {/* Büyük Ana Başlık */}
-          <h2 className="ms-slide-title m-0 font-display font-extrabold tracking-[-0.025em] leading-[1.18] text-[20px] sm:text-[24px] lg:text-[27px] text-ink">
-            {slide.title}
-          </h2>
-
-          {/* Vurgulu Alt Başlık */}
-          {slide.subtitle && (
-            <div className="ms-slide-lead p-2.5 sm:p-3 rounded-xl bg-canvas border border-accent/20 flex items-start gap-2.5 shadow-2xs">
-              <span className="ms-slide-emoji text-[14px] shrink-0 select-none mt-0.5"></span>
-              <div className="flex flex-col gap-0.5 min-w-0">
-                <span className="ms-slide-eyebrow text-[11.5px] font-bold uppercase tracking-wider text-accent">Kavram & Odak Özeti</span>
-                <p className="m-0 text-[12.5px] sm:text-[13.5px] font-medium text-ink-2 leading-[1.55]">
-                  {slide.subtitle}
-                </p>
-              </div>
-            </div>
+        <SlideDrawingCanvas scope={highlightScope || `slide:${slide.slideNumber}`} />
+        <Highlightable
+          scope={highlightScope || `slide:${slide.slideNumber}:${slide.title}`}
+          className="px-4 py-4 sm:px-8 sm:py-6 lg:px-12 lg:py-7 flex flex-col gap-4 sm:gap-6 w-full max-w-full"
+        >
+          {sortedBlocks ? (
+            <>
+              {sortedBlocks.map(renderBlockItem)}
+              {/* Güvenlik Ağı 1: Eğer sortedBlocks içinde interactive bloğu yoksa ama slaytta interaktif ögeler varsa MUTLAKA render et */}
+              {!sortedBlocks.some((b) =>
+                ['interactive', 'interactive_element', 'interactive_elements', 'interactives'].includes(b.type?.toLowerCase())
+              ) && renderInteractive()}
+              {/* Güvenlik Ağı 2: Eğer sortedBlocks içinde soru bloğu yoksa ama slaytta sorular varsa render et */}
+              {!sortedBlocks.some((b) =>
+                ['questions', 'related_questions', 'relatedquestions'].includes(b.type?.toLowerCase())
+              ) && renderQuestions()}
+              {/* Güvenlik Ağı 3: Eğer sortedBlocks içinde terim bloğu yoksa ama tıbbi terimler varsa en altta render et */}
+              {!sortedBlocks.some((b) =>
+                ['terms', 'medical_terms', 'medicalterms'].includes(b.type?.toLowerCase())
+              ) && renderMedicalTerms()}
+            </>
+          ) : (
+            <>
+              {renderHeader()}
+              {renderProfessorPearl()}
+              {renderNarrative()}
+              {renderTable()}
+              {renderInteractive()}
+              {renderSpots()}
+              {renderKeyBullets()}
+              {renderFlashcards()}
+              {renderQuestions()}
+              {renderMedicalTerms()}
+            </>
           )}
-        </header>
 
-        {/* 1. Clinical & Exam Critical Pearl */}
-        {hl && emph && (
-          <figure data-origin="hoca" className="ms-slide-pearl m-0 rounded-2xl border-2 border-accent/20 bg-canvas p-3.5 sm:p-4.5 flex flex-col gap-2 shadow-xs">
-            <figcaption className="flex items-center gap-2">
-              <span
-                className="h-6 px-2.5 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1.5 shadow-2xs"
-                style={{ background: tone(emph.c).bg, color: tone(emph.c).fg }}
-              >
-                <emph.icon className="w-3.5 h-3.5" />
-                {emph.label}
-              </span>
-              <span className="ms-slide-eyebrow text-[11.5px] font-semibold text-accent uppercase tracking-wider">
-                Klinik & Sınav Kritik Vurgusu
-              </span>
+          {paged && index < total - 1 && onNext && (
+            <div className="mt-2 pt-3.5 border-t border-line-soft flex items-center justify-between text-[12.5px] text-ink-3">
+              <span>Slayt {index + 1} / {total} · Aşağı kaydırarak tamamını okuyabilirsiniz</span>
               <button
                 type="button"
-                onClick={copyQuote}
-                aria-label="Alıntıyı kopyala"
-                className="ml-auto h-7 px-2 rounded-lg flex items-center gap-1 text-[11.5px] text-ink-2 hover:bg-white border border-transparent hover:border-line cursor-pointer transition-colors"
+                onClick={onNext}
+                className="shrink-0 whitespace-nowrap h-8 px-3 rounded-lg bg-accent-soft hover:bg-accent hover:text-white text-accent font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
               >
-                {copied ? <Check className="w-3.5 h-3.5 text-ok" /> : <Copy className="w-3.5 h-3.5" />}
-                <span className="hidden sm:inline">{copied ? 'Kopyalandı' : 'Kopyala'}</span>
+                <span>Sonraki Slayta Geç</span>
+                <ChevronRight className="w-4 h-4" />
               </button>
-            </figcaption>
-            <blockquote className="m-0 text-[13.5px] sm:text-[14.5px] font-medium leading-[1.6] text-ink border-l-3 border-accent pl-3.5 italic">
-              “{hl.quote}”
-            </blockquote>
-            {hl.note && (
-              <p className="m-0 text-[12px] sm:text-[12.5px] text-ink-2 leading-[1.55] bg-white/60 p-2 sm:p-2.5 rounded-xl border border-line-soft">
-                <strong>Klinik Yaklaşım:</strong> {hl.note}
-              </p>
-            )}
-          </figure>
-        )}
-
-        {/* 2. Fluid Synthesized Narrative (Kapsamlı Ders Notu Sentezi) */}
-        {narrative && (
-          <section data-origin="ai" className="ms-slide-narr rounded-2xl border border-line bg-canvas p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line pb-2.5">
-              <div className="flex items-center gap-2.5 min-w-[min(100%,220px)] flex-1">
-                <span className="ms-slide-badgeicon w-7 h-7 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-xs">
-                  <BookOpen className="w-4 h-4" />
-                </span>
-                <div className="min-w-0">
-                  <span className="ms-slide-eyebrow text-[11.5px] font-bold uppercase tracking-wider text-accent block">
-                    Öğrenim Bölümü • Detaylı Müfredat Analizi
-                  </span>
-                  <h3 className="m-0 text-[14.5px] sm:text-[15.5px] font-bold text-ink">
-                    {slide.discipline?.toLowerCase().includes('patoloji')
-                      ? 'Kapsamlı Ders Notu ve Patoloji Sentezi'
-                      : `Kapsamlı Ders Notu ve ${slide.discipline || 'Müfredat'} Sentezi`}
-                  </h3>
-                </div>
-              </div>
-              <div className="flex items-center gap-1.5 shrink-0">
-                {onOpenPdfAtPage && (
-                  <button
-                    type="button"
-                    onClick={() => onOpenPdfAtPage(slidePdfLoc.startPage)}
-                    title={`Orijinal ders sunumunun ${slidePdfLoc.citation} sayfalarını yan ekranda aç`}
-                    className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/25 text-[11.5px] font-semibold text-amber-800 dark:text-amber-300 inline-flex items-center gap-1.5 cursor-pointer transition-colors shadow-2xs active:scale-95"
-                  >
-                    <BookOpen className="w-3.5 h-3.5 text-amber-600" />
-                    <span className="hidden sm:inline">PDF'te Aç</span>
-                    <span>({slidePdfLoc.citation})</span>
-                  </button>
-                )}
-                {onOpenNotes && (
-                  <button
-                    type="button"
-                    onClick={onOpenNotes}
-                    className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-white border border-line text-[11.5px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
-                  >
-                    <FileText className="w-3.5 h-3.5" />
-                    <span>Panelde Oku</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
-                  </button>
-                )}
-              </div>
             </div>
-            {/* Quick Medical Terms Pills for This Slide */}
-            <SlideTermsPills
-              textToScan={`${slide.title || ''} ${narrative} ${((slide as any).keyConcepts || []).join(' ')}`}
-              className="mb-1"
-            />
-            
-            <StructuredSynthesisRenderer text={narrative} />
-
-            {/* Categorized Key Bullets with Colors & Icons */}
-            {c.keyBullets && c.keyBullets.length > 0 && (
-              <KeyBulletsRenderer bullets={c.keyBullets} />
-            )}
-
-            {/* Comparison / Classification Table on Slide Canvas */}
-            {c.table && (
-              <EnhancedDifferentialTable table={c.table} />
-            )}
-          </section>
-        )}
-
-        {/* 3. Interactive 3D Flashcards (Akıl Kartları Atölyesi) */}
-        {flashcards.length > 0 && (
-          <section data-origin="ai" className="flex flex-col gap-2.5 pt-1">
-            <div className="flex items-center justify-between gap-2">
-              <div className="flex items-center gap-2.5 min-w-0">
-                <span className="w-7 h-7 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0">
-                  <BrainCircuit className="w-4 h-4" />
-                </span>
-                <div>
-                  <h3 className="m-0 text-[14px] sm:text-[14.5px] font-bold text-ink flex flex-wrap items-center gap-x-2 gap-y-1">
-                    <span>Akıl Kartları (Tıkla & Çevir)</span>
-                    <span className="shrink-0 whitespace-nowrap font-mono text-[11px] font-semibold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full">
-                      {flashcards.length} Kart
-                    </span>
-                  </h3>
-                  <p className="m-0 text-[11.5px] text-ink-3">
-                    Kafanda yanıtla, ardından karta tıklayarak cevabı ve amfi ipucunu aç
-                  </p>
-                </div>
-              </div>
-
-              {onOpenFlashcards && (
-                <button
-                  type="button"
-                  onClick={onOpenFlashcards}
-                  className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[11.5px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
-                >
-                  <span>Panelde Çalış</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              )}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-3.5">
-              {flashcards.map((card) => (
-                <FlashcardComponent key={card.id} card={card} />
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* 4. Interactive Questions (Doğrudan Slayt Üzerinde Çözülebilir Sorular) */}
-        {(slide.relatedQuestions || []).some((q: any) => String(q?.stem || q?.question || '').trim().length > 10) && (
-          <section id={`slide-questions-${slide.slideNumber}`} className="flex flex-col gap-2.5 pt-1 scroll-mt-6">
-            <div className="flex items-center justify-between gap-2 border-b border-line-soft pb-2">
-              <div className="flex items-center gap-2 min-w-0">
-                <span className="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-2xs">
-                  <CheckCircle2 className="w-4 h-4" />
-                </span>
-                <div>
-                  <h3 className="m-0 text-[14px] sm:text-[14.5px] font-bold text-ink flex items-center gap-2">
-                    <span>Eşleşen Kurul & Çıkmış Sorular</span>
-                    <span className="shrink-0 font-mono text-[11px] font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
-                      {(slide.relatedQuestions || []).length} Soru
-                    </span>
-                  </h3>
-                  <p className="m-0 text-[11.5px] text-ink-3">
-                    Paneli açmaya gerek kalmadan doğrudan bu slayt üzerinden çözebilirsiniz
-                  </p>
-                </div>
-              </div>
-
-              {onOpenQuestions && (
-                <button
-                  type="button"
-                  onClick={onOpenQuestions}
-                  className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[11.5px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
-                >
-                  <span>Panelde Aç</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              )}
-            </div>
-
-            <div className="grid grid-cols-1 gap-3">
-              {(slide.relatedQuestions || []).map((q, i) => (
-                <QuizCard key={`canvas-${slide.slideNumber}-${q.id || i}`} q={q} n={i + 1} />
-              ))}
-            </div>
-          </section>
-        )}
-
-
-        {/* 6. Core content: formulas, tables, bullets, infographics */}
-        <div className={`grid grid-cols-1 ${c.table && c.table.headers?.length > 0 ? '' : 'lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]'} gap-4 sm:gap-5 lg:gap-7 items-start`}>
-          {/* Main content: slayt/PDF'ten gelen ders içeriği (hocanın materyali) */}
-          <div data-origin="ders" className="flex flex-col gap-4 min-w-0">
-            {c.keyBullets && c.keyBullets.length > 0 && (
-              <KeyBulletsRenderer bullets={c.keyBullets} />
-            )}
-
-            {c.infographic?.items?.length ? (
-              <div className={`grid gap-2 ${c.infographic.items.length >= 3 ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-1 sm:grid-cols-2'}`}>
-                {c.infographic.items.map((it, i) => {
-                  const t = tone(it.color);
-                  return (
-                    <div key={i} className="rounded-xl border border-line p-3 flex flex-col gap-1 min-w-0" style={{ background: t.bg }}>
-                      <span className="text-[12px] font-semibold" style={{ color: t.fg }}>
-                        {it.label}
-                      </span>
-                      <span className="font-display text-[17px] sm:text-[18px] font-semibold text-ink leading-snug [overflow-wrap:anywhere] [hyphens:auto]" lang="tr">{it.value}</span>
-                      {it.detail && <span className="text-[13px] text-ink-2 leading-snug [overflow-wrap:anywhere]">{it.detail}</span>}
-                    </div>
-                  );
-                })}
-              </div>
-            ) : null}
-
-            {c.formulaBox && (
-              <div className="rounded-xl bg-accent-soft p-3.5 sm:p-4 flex flex-col gap-1.5">
-                <span className="text-[12px] font-semibold uppercase tracking-[0.06em] text-accent">{c.formulaBox.title}</span>
-                <code className="font-mono text-[14px] sm:text-[16px] text-ink whitespace-pre-wrap break-words">{c.formulaBox.formula}</code>
-                {c.formulaBox.explanation && <Rich text={c.formulaBox.explanation} className="text-[13px] text-ink-2 leading-[1.55]" />}
-              </div>
-            )}
-
-            {c.table && c.table.headers?.length > 0 && (
-              <EnhancedDifferentialTable table={c.table} />
-            )}
-          </div>
-
-          {/* Side: spot pearls (yapay zekâ özeti) */}
-          <div data-origin="ai" className="flex flex-col gap-3 min-w-0">
-            {spots.length > 0 && <SpotList items={spots} />}
-          </div>
-        </div>
-        {paged && index < total - 1 && onNext && (
-          <div className="mt-2 pt-3.5 border-t border-line-soft flex items-center justify-between text-[12.5px] text-ink-3">
-            <span>Slayt {index + 1} / {total} · Aşağı kaydırarak tamamını okuyabilirsiniz</span>
-            <button
-              type="button"
-              onClick={onNext}
-              className="shrink-0 whitespace-nowrap h-8 px-3 rounded-lg bg-accent-soft hover:bg-accent hover:text-white text-accent font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
-            >
-              <span>Sonraki Slayta Geç</span>
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-        )}
-      </Highlightable>
+          )}
+        </Highlightable>
       </div>
     </article>
   );
@@ -2548,19 +2595,28 @@ const SlideCanvas: React.FC<{
 // ---------------------------------------------------------------------------
 export const SpotList: React.FC<{ items: Array<string | any>; title?: string; note?: string; compact?: boolean }> = ({
   items,
-  title = 'Akılda tut',
+  title = 'YÜKSEK VERİM (HIGH-YIELD) · AKILDA TUT',
   note,
   compact = false,
 }) => (
-  <section className={`rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950 dark:border-amber-900 flex flex-col ${compact ? 'p-3 gap-2.5' : 'p-3.5 sm:p-4 gap-3'}`}>
-    <header className="flex items-center gap-2">
-      <span className="w-7 h-7 rounded-lg bg-amber-200 dark:bg-amber-950 text-amber-800 dark:text-amber-500 flex items-center justify-center shrink-0" aria-hidden="true">
-        <Lightbulb className="w-4 h-4" />
+  <section className={`rounded-2xl border-2 border-amber-300/90 dark:border-amber-700/60 bg-gradient-to-br from-amber-50/95 via-amber-50/40 to-orange-50/60 dark:from-amber-950/40 dark:via-zinc-900 dark:to-orange-950/20 shadow-sm flex flex-col ${compact ? 'p-3 gap-2.5' : 'p-4 sm:p-5 gap-3.5'}`}>
+    <header className="flex items-center gap-2.5 pb-2.5 border-b border-amber-200/80 dark:border-amber-800/40">
+      <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 text-white flex items-center justify-center shrink-0 shadow-xs" aria-hidden="true">
+        <Lightbulb className="w-4.5 h-4.5" />
       </span>
-      <span className="text-[13.5px] font-semibold text-amber-800 dark:text-amber-500">{title}</span>
-      <span className="ml-auto text-[12px] font-mono text-amber-800/70 dark:text-amber-500/70">{items.length}</span>
+      <div className="min-w-0">
+        <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-wider text-amber-900 dark:text-amber-300 block">
+          {title}
+        </span>
+        <span className="text-[11px] text-amber-800/80 dark:text-amber-400 font-medium">
+          Komite ve kurul sınavlarında doğrudan puan getiren kilit prensipler
+        </span>
+      </div>
+      <span className="ml-auto font-mono text-[11.5px] font-bold text-amber-900 bg-amber-200/80 dark:bg-amber-900/60 px-2.5 py-0.5 rounded-full border border-amber-300 dark:border-amber-700">
+        {items.length} Spot
+      </span>
     </header>
-    {note && <p className="m-0 -mt-1 text-[13px] text-amber-800/80 dark:text-amber-500/80">{note}</p>}
+    {note && <p className="m-0 -mt-1 text-[13px] text-amber-900/80 dark:text-amber-300/80 font-medium">{note}</p>}
     <ol className={`list-none m-0 p-0 flex flex-col ${compact ? 'gap-2' : 'gap-2.5'}`}>
       {items.map((p, i) => {
         const isObj = p && typeof p === 'object';
@@ -2569,78 +2625,55 @@ export const SpotList: React.FC<{ items: Array<string | any>; title?: string; no
         const pType: string = isObj ? (p.type || '') : '';
         const pColor: string = isObj ? (p.color || '') : '';
 
-        const isRed = pType === 'warning' || pColor === 'rose' || pBadge.includes('') || /(?:|||ölümcül|asla|acil|hayati|kritik|kontrendike|\[kırmızı|\[red|önemli)/i.test(pText);
-        const isBlue = !isRed && (pType === 'exam' || pColor === 'sky' || pBadge.includes('') || /(?:|||çıkmış soru|çıkmış|komite sorusu|tus sorusu|soruldu|ösym|\[mavi|\[blue|\[çıkmış|soru:)/i.test(pText));
+        const isRed = pType === 'warning' || pColor === 'rose' || pBadge.includes('🚨') || /(?:ölümcül|asla|acil|hayati|kritik|kontrendike|\[kırmızı|\[red|önemli)/i.test(pText);
+        const isBlue = !isRed && (pType === 'exam' || pColor === 'sky' || pBadge.includes('❓') || /(?:çıkmış soru|çıkmış|komite sorusu|tus sorusu|soruldu|ösym|\[mavi|\[blue|\[çıkmış|soru:)/i.test(pText));
 
-        // Split multi-line spot pearls to support main bullets and sub-bullets
         const rawLines = pText.split('\n');
 
         return (
           <li
             key={i}
-            className={`rounded-xl transition-all shadow-xs border flex flex-col ${
+            className={`rounded-xl transition-all shadow-2xs border-l-4 border-t border-r border-b ${
               isRed
-                ? 'bg-red-50/80 dark:bg-red-950/25 border-red-200/90 dark:border-red-900/40 text-red-950 dark:text-red-100'
+                ? 'border-l-red-600 bg-red-50/90 dark:bg-red-950/30 border-red-200 dark:border-red-900/50 text-red-950 dark:text-red-100'
                 : isBlue
-                ? 'bg-blue-50/80 dark:bg-blue-950/25 border-blue-200/90 dark:border-blue-900/40 text-blue-950 dark:text-blue-100'
-                : 'bg-white dark:bg-surface-elevated border-line-soft text-ink'
-            } ${compact ? 'p-2.5 text-[13.5px]' : 'p-3 text-[14.5px]'} leading-[1.6]`}
+                ? 'border-l-blue-600 bg-blue-50/90 dark:bg-blue-950/30 border-blue-200 dark:border-blue-900/50 text-blue-950 dark:text-blue-100'
+                : 'border-l-amber-500 bg-white dark:bg-zinc-800/90 border-amber-200/80 dark:border-zinc-700 text-ink'
+            } p-3 sm:p-3.5 text-[13px] sm:text-[13.5px] leading-[1.65]`}
           >
-            {/* Top header row: Pill + Badge Icon */}
             <div className="flex items-center justify-between gap-2 mb-1.5 pb-1 border-b border-inherit/20">
               <span className="inline-flex items-center gap-1.5">
                 {isRed ? (
-                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[11.5px] font-bold bg-red-100 dark:bg-red-900/60 text-red-700 dark:text-red-200">
-                    <AlertCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[]\s*/, '') : 'ÖNEMLİ'}
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-bold bg-red-100 dark:bg-red-900/60 text-red-700 dark:text-red-200">
+                    <AlertCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[🚨]\s*/, '') : 'KRİTİK UYARI'}
                   </span>
                 ) : isBlue ? (
-                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[11.5px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-200">
-                    <HelpCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[]\s*/, '') : 'ÇIKMIŞ SORU'}
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-200">
+                    <HelpCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[❓]\s*/, '') : 'ÇIKMIŞ SORU ODAĞI'}
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[11.5px] font-semibold bg-amber-100/70 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300">
-                    {pBadge ? pBadge.replace(/^[]\s*/, '') : 'SPOT BİLGİ'}
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-bold bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300">
+                    <Lightbulb className="w-3 h-3 text-amber-600" /> {pBadge ? pBadge.replace(/^[💡]\s*/, '') : 'SINAV SPOTU'}
                   </span>
                 )}
               </span>
-              <span
-                className={`w-[20px] h-[20px] rounded-full font-mono text-[11px] font-semibold flex items-center justify-center ${
-                  isRed
-                    ? 'bg-red-200 text-red-800 dark:bg-red-900/80 dark:text-red-100'
-                    : isBlue
-                    ? 'bg-blue-200 text-blue-800 dark:bg-blue-900/80 dark:text-blue-100'
-                    : 'bg-amber-200 text-amber-800 dark:bg-amber-950/60 dark:text-amber-200'
-                }`}
-              >
-                {isRed ? '!' : isBlue ? '?' : i + 1}
-              </span>
+              <span className="font-mono text-[11px] font-bold text-ink-3">#{i + 1}</span>
             </div>
 
-            {/* Lines rendering: upper-bullets, sub-bullets, and paragraphs */}
             <div className="flex flex-col gap-1 min-w-0 break-words">
               {rawLines.map((line, lIdx) => {
                 const trimmed = line.trim();
                 if (!trimmed) return null;
 
-                const isSubBullet =
-                  (line.startsWith('  ') || line.startsWith('\t')) &&
-                  (trimmed.startsWith('- ') || trimmed.startsWith('• ') || trimmed.startsWith('* ') || trimmed.startsWith('→ '));
-
-                const isUpperBullet =
-                  !isSubBullet &&
-                  (trimmed.startsWith('• ') || trimmed.startsWith('* ') || /^[0-9]+\.\s/.test(trimmed));
+                const isSubBullet = (line.startsWith('  ') || line.startsWith('\t')) && (trimmed.startsWith('- ') || trimmed.startsWith('• ') || trimmed.startsWith('* ') || trimmed.startsWith('→ '));
+                const isUpperBullet = !isSubBullet && (trimmed.startsWith('• ') || trimmed.startsWith('* ') || /^[0-9]+\.\s/.test(trimmed));
 
                 if (isSubBullet) {
                   const cleanText = trimmed.replace(/^[-•*→]\s*/, '');
                   return (
-                    <div
-                      key={lIdx}
-                      className="ml-3.5 pl-2.5 py-0.5 border-l-2 border-inherit/40 text-[13px] flex items-start gap-1.5"
-                    >
-                      <span className="text-[11px] opacity-70 mt-1 select-none">▫</span>
-                      <span className="min-w-0 flex-1">
-                        <Rich text={cleanText} />
-                      </span>
+                    <div key={lIdx} className="ml-3 pl-2.5 py-0.5 border-l-2 border-amber-300 dark:border-amber-700 text-[12.5px] flex items-start gap-1.5 text-ink-2">
+                      <span className="text-[10px] opacity-70 mt-1 select-none">▫</span>
+                      <span className="min-w-0 flex-1"><Rich text={cleanText} /></span>
                     </div>
                   );
                 }
@@ -2648,17 +2681,15 @@ export const SpotList: React.FC<{ items: Array<string | any>; title?: string; no
                 if (isUpperBullet) {
                   const cleanText = trimmed.replace(/^([•*]|\d+\.)\s*/, '');
                   return (
-                    <div key={lIdx} className="font-semibold flex items-start gap-2 pt-0.5">
-                      <span className="text-accent mt-0.5 select-none">▸</span>
-                      <span className="min-w-0 flex-1">
-                        <Rich text={cleanText} />
-                      </span>
+                    <div key={lIdx} className="font-semibold flex items-start gap-2 pt-0.5 text-ink">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
+                      <span className="min-w-0 flex-1"><Rich text={cleanText} /></span>
                     </div>
                   );
                 }
 
                 return (
-                  <div key={lIdx}>
+                  <div key={lIdx} className="text-ink font-medium leading-relaxed">
                     <Rich text={trimmed} />
                   </div>
                 );
@@ -3146,74 +3177,6 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
           </div>
         </div>
       )}
-    </div>
-  );
-};
-
-
-// ---------------------------------------------------------------------------
-// v3 · minimal katalog: "Kaldığın yer" kartı + sade ders listesi
-// ---------------------------------------------------------------------------
-const V3DeckList: React.FC<{
-  decks: DeckCatalogEntry[];
-  progress: Record<string, { seen?: number[]; last?: number } | undefined>;
-  onOpen: (id: string, pdf?: boolean) => void;
-}> = ({ decks, progress, onOpen }) => {
-  const resume = decks.find((d) => {
-    const seen = progress[d.id]?.seen?.length || 0;
-    return seen > 0 && seen < d.slideCount;
-  });
-  return (
-    <div className="flex flex-col gap-4 w-full">
-      {resume && (
-        <button
-          type="button"
-          onClick={() => onOpen(resume.id)}
-          className="ms-pop-in w-full text-left bg-white rounded-2xl shadow-sm px-5 py-4 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow"
-        >
-          <span className="flex-1 min-w-0 flex flex-col gap-1.5">
-            <span className="text-[12.5px] text-ink-3">Kaldığın yer · {disciplineGroup(resume.discipline)}</span>
-            <span className="text-[16px] font-semibold text-ink truncate">{resume.shortTitle || resume.title}</span>
-            <span className="h-1 rounded-full bg-line overflow-hidden">
-              <span
-                className="block h-full bg-accent rounded-full"
-                style={{ width: `${Math.round(((progress[resume.id]?.seen?.length || 0) / resume.slideCount) * 100)}%` }}
-              />
-            </span>
-          </span>
-          <span className="h-10 px-5 rounded-full bg-accent text-white text-[14px] font-semibold inline-flex items-center shrink-0">Devam et</span>
-        </button>
-      )}
-      <ul className="list-none m-0 p-0 grid grid-cols-1 lg:grid-cols-2 gap-x-2">
-        {decks.map((d, i) => {
-          const seen = progress[d.id]?.seen?.length || 0;
-          const done = seen >= d.slideCount;
-          const qCount = d.questionCount;
-          return (
-            <li key={d.id} className="ms-pop-in" style={{ animationDelay: `${Math.min(i, 12) * 30}ms` }}>
-              <button
-                type="button"
-                onClick={() => onOpen(d.id)}
-                className="w-full text-left px-4 py-3 rounded-2xl hover:bg-field flex items-center gap-3 cursor-pointer transition-colors"
-              >
-                <span className="flex-1 min-w-0">
-                  <span className="block text-[15px] font-medium text-ink truncate" title={d.title}>{d.title}</span>
-                  <span className="block text-[12.5px] text-ink-3 truncate">
-                    {disciplineGroup(d.discipline)} · {d.slideCount} slayt{qCount ? ` · ${qCount} soru` : ''}
-                  </span>
-                </span>
-                <span
-                  className={`shrink-0 h-6 px-2.5 rounded-full text-[12px] font-semibold inline-flex items-center ${
-                    done ? 'bg-ok-soft text-ok' : seen ? 'bg-accent-soft text-accent' : 'bg-field text-ink-3'
-                  }`}
-                >
-                  {done ? 'Bitti' : seen ? `%${Math.round((seen / d.slideCount) * 100)}` : 'Yeni'}
-                </span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 };

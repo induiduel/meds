@@ -10360,7 +10360,7 @@
       "discipline": "Tıbbi Patoloji",
       "topic": "Endometriyuma ait dokuların, myometrium içine...",
       "status": "completed",
-      "claimedAnswer": "A",
+      "claimedAnswer": "D",
       "upvotes": 0,
       "likedBy": [],
       "tags": [
@@ -10368,92 +10368,111 @@
         "Çıkmış Soru",
         "Tıbbi Patoloji"
       ],
-      "createdAt": "2026-10-08T16:57:53.095Z",
-      "updatedAt": "2026-10-08T16:57:58.311Z",
+      "createdAt": "2026-10-08T17:32:28.510437+00:00",
+      "updatedAt": "2026-10-09T08:34:37.681Z",
       "contributedByName": "Yönetici (2023-2024 Arşivi)",
       "fragments": [
         {
           "id": "frag-1791478673095-n0fxc9",
-          "author": "Çıkmış Soru (2023-2024)",
           "text": "Endometriyuma ait dokuların, myometrium içine doğru büyümesine\nne ad verilir?",
           "type": "stem",
-          "timestamp": "2026-10-08T16:57:53.095Z",
+          "author": "Çıkmış Soru (2023-2024)",
+          "likedBy": [],
           "upvotes": 0,
-          "likedBy": []
+          "timestamp": "2026-10-08T16:57:53.095Z"
         }
       ],
       "options": [
         {
           "key": "A",
           "text": "Şık A",
-          "suggestedBy": "Çıkmış (2023-2024)",
+          "likedBy": [],
           "upvotes": 0,
-          "likedBy": []
+          "suggestedBy": "Çıkmış (2023-2024)"
         },
         {
           "key": "B",
           "text": "Şık B",
-          "suggestedBy": "Çıkmış (2023-2024)",
+          "likedBy": [],
           "upvotes": 0,
-          "likedBy": []
+          "suggestedBy": "Çıkmış (2023-2024)"
         },
         {
           "key": "C",
           "text": "Şık C",
-          "suggestedBy": "Çıkmış (2023-2024)",
+          "likedBy": [],
           "upvotes": 0,
-          "likedBy": []
+          "suggestedBy": "Çıkmış (2023-2024)"
         },
         {
           "key": "D",
           "text": "Şık D",
-          "suggestedBy": "Çıkmış (2023-2024)",
+          "likedBy": [],
           "upvotes": 0,
-          "likedBy": []
+          "suggestedBy": "Çıkmış (2023-2024)"
         },
         {
           "key": "E",
           "text": "Şık E",
-          "suggestedBy": "Çıkmış (2023-2024)",
+          "likedBy": [],
           "upvotes": 0,
-          "likedBy": []
+          "suggestedBy": "Çıkmış (2023-2024)"
         }
       ],
       "reconstruction": {
-        "stem": "Endometriyuma ait dokuların, myometrium içine doğru büyümesine\nne ad verilir?",
+        "stem": "Endometriyuma ait dokuların myometrium içine doğru büyümesine ne ad verilir?",
         "options": [
           {
             "key": "A",
-            "text": "Şık A",
+            "text": "Endometriozis",
             "isAiFilled": false
           },
           {
             "key": "B",
-            "text": "Şık B",
+            "text": "Endometrit",
             "isAiFilled": false
           },
           {
             "key": "C",
-            "text": "Şık C",
+            "text": "Ektopik gebelik",
             "isAiFilled": false
           },
           {
             "key": "D",
-            "text": "Şık D",
+            "text": "Adenomyozis",
             "isAiFilled": false
           },
           {
             "key": "E",
-            "text": "Şık E",
+            "text": "Leiyomyoma uteri",
             "isAiFilled": false
           }
         ],
-        "correctAnswer": "A",
-        "explanation": "Soru metni doğrudan belgeden aktarıldı.",
-        "confidenceScore": 85,
-        "notesAndDiscrepancies": "Geçmiş yıl çıkmış soru dosyasından AI tarafından ayrıştırıldı. Öğrenciler tarafından düzenlenebilir.",
-        "lastUpdated": "2026-10-08T16:57:53.095Z"
-      }
+        "correctAnswer": "D",
+        "explanation": "Adenomyozis, endometrial bez ve stromanın myometrium içine göç ederek burada proliferatif odaklar oluşturmasıyla tanımlanan benign bir hastalıktır. Endometriozis uterus dışındaki lokasyonları ifade eder; endometrit inflamasyon, ektopik gebelik ise gebeliğin uterus dışına yerleşmesi, leiomyoma ise düz kas kökenli iyi huylu tümördür. Bu nedenle doğru seçenek D'dir. [Kaynak 1, Kaynak 2]",
+        "confidenceScore": 95,
+        "notesAndDiscrepancies": "Kaynak 5 aynı konuyu farklı seçenek sıralamasıyla (adenomyozis E şıkkı) sunmuş, ancak en tutarlı ve doğrudan eşleşen kaynaklar 1 ve 2'dir; bu yüzden orijinal sınav sorusu olarak kaynak 1/2'deki biçim tercih edilmiştir.",
+        "sources": [
+          {
+            "documentId": "past-1790877034805-445847",
+            "documentType": "past_question",
+            "title": "⭐ [Denetleyici Onaylı] Tıbbi Patoloji - İnvaziv Serviks Kanseri ve Endometriyozis (2021-2022)",
+            "discipline": "Tıbbi Patoloji",
+            "pageNumber": 43,
+            "snippet": "[DENETLEYİCİ ONAYLI ÇIKMIŞ SINAV SORUSU - ALTIN STANDART] Ders / Branş: Tıbbi Patoloji Kurul: donem3-kurul1 Sınav Yılı: 2021-2022 Konu: İnvaziv Serviks Kanseri ve Endometriyozis Denetim Statüsü: Denetleyici Onayı (Doğrul"
+          },
+          {
+            "documentId": "d3-k1-pat-056",
+            "documentType": "past_question",
+            "title": "⭐ [Denetleyici Onaylı] Tıbbi Patoloji - İnvaziv Serviks Kanseri ve Endometriyozis (2021-2022)",
+            "discipline": "Tıbbi Patoloji",
+            "pageNumber": 56,
+            "snippet": "[DENETLEYİCİ ONAYLI ÇIKMIŞ SINAV SORUSU - ALTIN STANDART] Ders / Branş: Tıbbi Patoloji Kurul: donem3-kurul1 Sınav Yılı: 2021-2022 Konu: İnvaziv Serviks Kanseri ve Endometriyozis Denetim Statüsü: Denetleyici Onayı (Doğrul"
+          }
+        ],
+        "lastUpdated": "2026-10-09T08:34:37.449Z"
+      },
+      "isUnassignedNumber": false
     },
     {
       "id": "past-donem3-kurul1-84-3082",
@@ -12188,6 +12207,1712 @@
         "notesAndDiscrepancies": "Geçmiş yıl çıkmış soru dosyasından AI tarafından ayrıştırıldı. Öğrenciler tarafından düzenlenebilir.",
         "lastUpdated": "2026-10-08T16:57:53.095Z"
       }
+    },
+    {
+      "id": "past-1790877466978-25373",
+      "stem": "Yenidoğanda transplasental geçişle dissemine granülomlar, yaygın mikroapseler ve yüksek mortalite ile seyreden 'granulomatosis infantiseptica' tablosuna yol açan patojen mikroorganizma aşağıdakilerden hangisidir?",
+      "tags": [
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "dogrulanmis_soru",
+        "faz15_onaylandi",
+        "Çıkmış Sınav",
+        "altin_standart"
+      ],
+      "donem": 3,
+      "kurul": 5,
+      "topic": "Pediatri",
+      "status": "verified",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Escherichia coli",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Neisseria meningitidis",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Listeria monocytogenes",
+          "isCorrect": true
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Legionella pneumophila",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "Erysipelothrix rhusiopathiae",
+          "isCorrect": false
+        }
+      ],
+      "examYear": "2020-2021",
+      "createdAt": "2026-10-01T18:25:55.401Z",
+      "isSuspect": false,
+      "updatedAt": "2026-10-09T17:46:56.812Z",
+      "discipline": "Çocuk Sağlığı ve Hastalıkları",
+      "isPastExam": true,
+      "slideAudit": {
+        "score": 55,
+        "status": "verified",
+        "auditedAt": "2026-10-02T13:39:25.803217",
+        "matchedTermsCount": 2
+      },
+      "sourceFile": "tüm sorular.txt",
+      "sourceNote": "Dönem 3 donem3-kurul5 Sınavı",
+      "committeeId": "donem3-kurul5",
+      "explanation": "• Listeria monocytogenes: +4°C'de üreyebilen, gıdalarla (pastörize edilmemiş süt, peynir) bulaşan ve gebelerde grip benzeri tablo yaparken fetüste öldürücü 'granulomatosis infantiseptica' tablosuna yol açan etkendir.",
+      "isAmbiguous": false,
+      "rawQuestion": {
+        "stem": "Yenidoğanda granülomatozis infantiseptica tablosuna neden olan patojen hangisidir.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Escherichia coli"
+          },
+          {
+            "key": "B",
+            "text": "Neisseria meningitis"
+          },
+          {
+            "key": "C",
+            "text": "Listeria monositogenes"
+          },
+          {
+            "key": "D",
+            "text": "Legionella pneumophilia"
+          },
+          {
+            "key": "E",
+            "text": "Erysipelotrix rhusipathiae"
+          }
+        ],
+        "claimedAnswer": "A"
+      },
+      "claimedAnswer": "A",
+      "correctAnswer": "C",
+      "questionNumber": 71,
+      "reconstruction": {
+        "stem": "Yenidoğanda granülomatozis infantiseptica tablosuna neden olan patojen hangisidir.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Escherichia coli",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "text": "Neisseria meningitis",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Listeria monositogenes",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Legionella pneumophilia",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Erysipelotrix rhusipathiae",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 1)DİSMORFOLOJİDE GENETİK TERMİNOLOJİ kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır.",
+        "isAiRefined": true,
+        "lastUpdated": "2026-10-02T13:39:25.803217",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "matchedSlideTitle": "1)DİSMORFOLOJİDE GENETİK TERMİNOLOJİ",
+        "notesAndDiscrepancies": "Amfi ders notları ve tıp fakültesi kurul sınav arşivi ile tam doğrulanmıştır.",
+        "reconstructionQuality": "verified"
+      },
+      "lectureReference": {
+        "noteId": "knote-donem3-kurul5-17rqfYLgmpol",
+        "noteTitle": "Kan Hastalıkları Genetiği",
+        "reasoning": "Amfi Slayt Eşleştirme Motoru: \"Kan Hastalıkları Genetiği\" slayt #40 (Tıbbi Genetik) içeriğiyle %55 güven skoruyla doğrulanmıştır.",
+        "discipline": "Tıbbi Genetik",
+        "pageNumber": 40,
+        "committeeId": "donem3-kurul5",
+        "totalSlides": 57,
+        "matchedSnippet": "Talasemi Taşıyıcılığı oβ talasemi (HBB) geninde, 800 fazla mutasyon tanımlı, o200 kadarı talasemi tablosuna neden olur, oSıklıkla Nokta mutasyonları, oNadiren del ve ins, oTürk toplumunda en sık→ IVS-1-110 mut görülür, o",
+        "confidenceScore": 55
+      },
+      "matchedNoteTitle": "Kan Hastalıkları Genetiği",
+      "matchedSlidePage": 40,
+      "database_origin": "legacy_supabase",
+      "is_legacy": true,
+      "pipeline_generation": "v2_supabase_merged",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "YANLIŞ: E. coli yenidoğan sepsisi ve menenjitinin en sık gram negatif etkenidir ancak kazeifiye olmayan granülomatöz mikroapselerle seyreden granulomatosis infantiseptica tablosunu oluşturmaz.",
+        "B": "YANLIŞ: Neisseria meningitidis peteşiyal-purpurik döküntüler ve adrenal kanamayla giden Waterhouse-Friderichsen sendromuna yol açar.",
+        "C": "DOĞRU: Listeria monocytogenes, gebelikte plasental bariyeri aşarak fetüse geçen gram pozitif, fakültatif intrasellüler bir basildir; fetüs ve yenidoğanda karaciğer, dalak, akciğer ve beyinde yaygın granülomatöz mikroapselerle seyreden ve 'granulomatosis infantiseptica' adı verilen ağır fatal sendromun spesifik etkenidir.",
+        "D": "YANLIŞ: Legionella pneumophila inhalasyon yoluyla bulaşan atipik pnömoni etkenidir; neonatal granülomatozise neden olmaz.",
+        "E": "YANLIŞ: Erysipelothrix rhusiopathiae et/balık işleyenlerde erizipeloid deri lezyonlarına neden olur."
+      },
+      "referans_kaynaklar": "Murray Medical Microbiology 9th Ed., Robbins Pathologic Basis of Disease 10th Ed."
+    },
+    {
+      "id": "past-1790877045460-967594",
+      "stem": "T.C. Sağlık Bakanlığı Genişletilmiş Bağışıklama Programı (GBP) rutin çocukluk çağı aşı takviminde yer almayan aşı aşağıdakilerden hangisidir?",
+      "tags": [
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "dogrulanmis_soru",
+        "faz15_onaylandi",
+        "Çıkmış Sınav",
+        "altin_standart"
+      ],
+      "donem": 3,
+      "kurul": 6,
+      "topic": "Halk Sağlığı",
+      "status": "verified",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "DaBT-İPA-Hib (Beşli karma aşı)",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "KKK (Kızamık-Kızamıkçık-Kabakulak aşısı)",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Varisella (Suçiçeği aşısı)",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Rotavirüs aşısı",
+          "isCorrect": true
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "KPA (Konjuge Pnömokok Aşısı)",
+          "isCorrect": false
+        }
+      ],
+      "examYear": "2021-2022",
+      "createdAt": "2026-10-01T18:25:00.839Z",
+      "isSuspect": false,
+      "updatedAt": "2026-10-09T17:46:56.817Z",
+      "discipline": "Halk Sağlığı",
+      "isPastExam": true,
+      "slideAudit": {
+        "score": 90,
+        "status": "verified",
+        "auditedAt": "2026-10-02T13:39:25.803217",
+        "matchedTermsCount": 3
+      },
+      "sourceFile": "Kurul 6 Çıkmışı (düzeltilmiş).txt",
+      "sourceNote": "Dönem 3 donem3-kurul6 Sınavı",
+      "committeeId": "donem3-kurul6",
+      "explanation": "• Türkiye Genişletilmiş Bağışıklama Programı (GBP) rutin aşıları: Hepatit B, BCG, DaBT-İPA-Hib, KPA, KKK, OPA, Suçiçeği, Hepatit A ve Td'dir.\n• Rotavirüs, Menengokok ve HPV aşıları takvim dışı özel aşılardır.",
+      "isAmbiguous": false,
+      "rawQuestion": {
+        "stem": "Genişletilmiş bağışıklama programında olmayan aşı?",
+        "options": [
+          {
+            "key": "A",
+            "text": "dabt,ipa,hib"
+          },
+          {
+            "key": "B",
+            "text": "KKK"
+          },
+          {
+            "key": "C",
+            "text": "varisella"
+          },
+          {
+            "key": "D",
+            "text": "rotavirus"
+          },
+          {
+            "key": "E",
+            "text": "Kpa"
+          }
+        ],
+        "claimedAnswer": "A"
+      },
+      "claimedAnswer": "A",
+      "correctAnswer": "D",
+      "questionNumber": 7,
+      "reconstruction": {
+        "stem": "Genişletilmiş bağışıklama programında olmayan aşı?",
+        "options": [
+          {
+            "key": "A",
+            "text": "dabt,ipa,hib",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "text": "KKK",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "varisella",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "rotavirus",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Kpa",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 1) Patolojiye Giriş kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır.",
+        "isAiRefined": true,
+        "lastUpdated": "2026-10-02T13:39:25.803217",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "matchedSlideTitle": "1) Patolojiye Giriş",
+        "notesAndDiscrepancies": "Amfi ders notları ve tıp fakültesi kurul sınav arşivi ile tam doğrulanmıştır.",
+        "reconstructionQuality": "verified"
+      },
+      "lectureReference": {
+        "noteId": "knote-donem3-kurul6-1-unCOowOeks",
+        "noteTitle": "3. Bağışıklama",
+        "reasoning": "Amfi Slayt Eşleştirme Motoru: \"3. Bağışıklama\" slayt #3 (Halk Sağlığı) içeriğiyle %62 güven skoruyla doğrulanmıştır.",
+        "discipline": "Halk Sağlığı",
+        "pageNumber": 3,
+        "committeeId": "donem3-kurul6",
+        "totalSlides": 179,
+        "matchedSnippet": "Genişletilmiş Bağışıklama Programı (GBP) Genişletilmiş Bağışıklama Programının (GBP) amacı; hassas yaş gruplarının enfeksiyona yakalanma riskinin en yüksek olduğu dönemden önce bağışıklanmalarını sağlamak ve aşı ile koru",
+        "confidenceScore": 62
+      },
+      "matchedNoteTitle": "3. Bağışıklama",
+      "matchedSlidePage": 3,
+      "database_origin": "legacy_supabase",
+      "is_legacy": true,
+      "pipeline_generation": "v2_supabase_merged",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "YANLIŞ: DaBT-İPA-Hib 2, 4, 6 ve 18. aylarda uygulanan temel GBP rutin aşısıdır.",
+        "B": "YANLIŞ: KKK aşısı 12. ayda rutin aşı takviminde ücretsiz olarak uygulanmaktadır.",
+        "C": "YANLIŞ: Suçiçeği (Varisella) aşısı 12. ayda rutin takvim kapsamında uygulanır.",
+        "D": "DOĞRU: Rotavirüs aşısı (ve Meningokok aşıları), çocukluk çağı gastroenteritlerinden korunmada önerilmesine rağmen Türkiye Sağlık Bakanlığı rutin GBP takviminde yer almamaktadır; özel aşı statüsündedir.",
+        "E": "YANLIŞ: KPA (13 valanlı konjuge pnömokok) 2, 4 ve 12. aylarda rutin takvimde yer alır."
+      },
+      "referans_kaynaklar": "T.C. Sağlık Bakanlığı Aşı Portalı ve Genişletilmiş Bağışıklama Programı Genelgesi."
+    },
+    {
+      "id": "past-1790877045489-277118",
+      "stem": "Açık ve kontamine bir yara ile acil servise başvuran ve anamnezinde 7 yıl önce 3 dozluk tam primer tetanoz aşılama serisini tamamladığı öğrenilen bir erişkin hastada uygulanması gereken en uygun profilaksi yaklaşımı aşağıdakilerden hangisidir?",
+      "tags": [
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "dogrulanmis_soru",
+        "faz15_onaylandi",
+        "Çıkmış Sınav",
+        "altin_standart"
+      ],
+      "donem": 3,
+      "kurul": 6,
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "status": "verified",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Hem Tetanoz aşısı (Td) hem de Tetanoz İmmünglobulini (TİG / TAT) birlikte uygulanmalıdır",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Yalnızca yara temizliği yeterlidir, herhangi bir aşı veya immünglobulin verilmez",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Aşı yapılmaksızın yalnızca Tetanoz İmmünglobulini (TİG / TAT) uygulanmalıdır",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Aşı ve immünglobulin ertelenerek geniş spektrumlu profilaktik antibiyotik başlanmalıdır",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "Yalnızca tek doz Tetanoz aşısı (Td rapel dozu) uygulanmalıdır",
+          "isCorrect": true
+        }
+      ],
+      "examYear": "2021-2022",
+      "createdAt": "2026-10-01T18:25:01.038Z",
+      "isSuspect": false,
+      "updatedAt": "2026-10-09T17:46:56.821Z",
+      "discipline": "Tıbbi Patoloji",
+      "isPastExam": true,
+      "slideAudit": {
+        "score": 120,
+        "status": "verified",
+        "auditedAt": "2026-10-02T13:39:25.803217",
+        "matchedTermsCount": 5
+      },
+      "sourceFile": "Kurul 6 Çıkmışı (düzeltilmiş).txt",
+      "sourceNote": "Dönem 3 donem3-kurul6 Sınavı",
+      "committeeId": "donem3-kurul6",
+      "explanation": "• Tetanoz Profilaksi Kılavuzu:\n- Tam aşılı (≥3 doz) + Temiz yara: Son aşı >10 yıl ise YALNIZ AŞI.\n- Tam aşılı (≥3 doz) + Kirli yara: Son aşı >5 yıl ise YALNIZ AŞI (TİG VERİLMEZ).\n- Aşısız / Eksik aşılı (<3 doz) + Kirli yara: AŞI + TİG BİRLİKTE.",
+      "isAmbiguous": false,
+      "rawQuestion": {
+        "stem": "Açık kontamine yara ile hasta geldi. 7 yıl önce tetanoz aşılarını tamamlamış. Hastaya hangisi yapılmalı?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Tetanoz aşısı + Tetanoz antitoksini (TAT)"
+          },
+          {
+            "key": "B",
+            "text": "Hiç bir şey verilmez"
+          },
+          {
+            "key": "C",
+            "text": "Sadece İg verilir"
+          },
+          {
+            "key": "D",
+            "text": "Sadece tetanoz antitoksin (TAT)"
+          },
+          {
+            "key": "E",
+            "text": "Sadece Tetanoz aşısı"
+          }
+        ],
+        "claimedAnswer": "A"
+      },
+      "claimedAnswer": "A",
+      "correctAnswer": "E",
+      "questionNumber": 15,
+      "reconstruction": {
+        "stem": "Açık kontamine yara ile hasta geldi. 7 yıl önce tetanoz aşılarını tamamlamış. Hastaya hangisi yapılmalı?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Tetanoz aşısı + Tetanoz antitoksini (TAT)",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "text": "Hiç bir şey verilmez",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Sadece İg verilir",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Sadece tetanoz antitoksin (TAT)",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Sadece Tetanoz aşısı",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 3. Bağışıklama kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır.",
+        "isAiRefined": true,
+        "lastUpdated": "2026-10-02T13:39:25.803217",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "matchedSlideTitle": "3. Bağışıklama",
+        "notesAndDiscrepancies": "Amfi ders notları ve tıp fakültesi kurul sınav arşivi ile tam doğrulanmıştır.",
+        "reconstructionQuality": "verified"
+      },
+      "lectureReference": {
+        "noteId": "note-872fd5f36c",
+        "noteTitle": "Kurul 6 Çıkmışı (düzeltilmiş)",
+        "reasoning": "Amfi Slayt Eşleştirme Motoru: \"Kurul 6 Çıkmışı (düzeltilmiş)\" slayt #11 (İç Hastalıkları) içeriğiyle %84 güven skoruyla doğrulanmıştır.",
+        "discipline": "İç Hastalıkları",
+        "pageNumber": 11,
+        "committeeId": "donem3-kurul1",
+        "totalSlides": 12,
+        "matchedSnippet": "10. Tarama testinin sensitivitesi kaç? %20 11. Ahmet 10000 kişilik popülasyonda prevelans yüzde 1 yüzde doksan sensitivite yüzde doksan spesifite. Ahmetin testi pozitif olma ihtimali ? % 8 12. Akılcı ilaçlar oranı ile il",
+        "confidenceScore": 84
+      },
+      "matchedNoteTitle": "Kurul 6 Çıkmışı (düzeltilmiş)",
+      "matchedSlidePage": 11,
+      "database_origin": "legacy_supabase",
+      "is_legacy": true,
+      "pipeline_generation": "v2_supabase_merged",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "YANLIŞ: Primer serisi tam (≥3 doz) olan bireylerde kirli yara dahi olsa TİG/TAT endikasyonu yoktur; immünolojik hafıza rapel aşı ile yeterli koruyucu titreye hızla ulaşır.",
+        "B": "YANLIŞ: Kirli/kontamine yaralarda son aşının üzerinden >5 yıl geçmişse aşı rapeli yapılmalıdır; hiçbir şey yapmamak riski artırır.",
+        "C": "YANLIŞ: Pasif immünizasyon (TİG/TAT) tek başına verilmez; primer serisi tam olanlarda zaten gerekmez.",
+        "D": "YANLIŞ: Antibiyotikler tetanoz toksinine karşı nötralizan antikor oluşturamaz; profilakside aşının alternatifi değildir.",
+        "E": "DOĞRU: Sağlık Bakanlığı ve CDC kılavuzlarına göre, tam primer aşı serisi (≥3 doz) olan bir kişide kirli/kontamine yara varlığında son aşı üzerinden >5 yıl geçmişse YALNIZCA TETANOZ AŞISI (Td rapel) yapılır; pasif antikor (TİG / TAT) GEREKMEZ."
+      },
+      "referans_kaynaklar": "CDC Pinkbook: Tetanus, T.C. Sağlık Bakanlığı Tetanoz Profilaksi Rehberi."
+    },
+    {
+      "id": "e65ebc557399",
+      "committeeId": "donem3-kurul1",
+      "donem": "Dönem 3",
+      "kurul": 1,
+      "questionNumber": 690,
+      "discipline": "Acil Tıp",
+      "topic": "Acil Tıp Kurul Sorusu",
+      "stem": "Acil serviste etiyolojisi bilinmeyen akut bilinç kaybı ve koma tablosu ile getirilen bir hastada ampirik olarak uygulanan klasik 'Koma Kokteyli' protokolünün temel bileşenleri arasında aşağıdakilerden hangisi yer alır?",
+      "reconstruction": {
+        "stem": "Acil Tıp Acil Tıp Koma Koma Kokteylinde aşağıdakilerden hangisi yer alır?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Ranitidin (Ulcuran®)",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "text": "Metaklopramid (Metpamid®)",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Nalokson",
+            "isCorrect": true
+          },
+          {
+            "key": "D",
+            "text": "Serum Fizyolojik",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Askorbik Asit (C vitamini)",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "",
+        "reconstructionQuality": "verified_evidence"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Ranitidin",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Metoklopramid",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Nalokson",
+          "isCorrect": true
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Serum Fizyolojik infüzyonu",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "Askorbik Asit (C vitamini)",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "claimedAnswer": "C",
+      "explanation": "• Koma Kokteyli 'DONT' Kuralı:\n- D: Dextrose (%50 Dekstroz - Hipoglisemi)\n- O: Oxygen (Hipoksi)\n- N: Naloxone (Opioid toksisitesi)\n- T: Thiamine (Tiamin/B1 - Wernicke ensefalopatisi).",
+      "examYear": "2023-2024",
+      "sourceFile": "c4259dc9087e",
+      "sourceNote": "Dönem 3 Kurul 1 Doğrulanmış Sınavı",
+      "status": "verified",
+      "isSuspect": false,
+      "isAmbiguous": false,
+      "isPastExam": true,
+      "tags": [
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "dogrulanmis_soru",
+        "faz15_onaylandi",
+        "Çıkmış Sınav",
+        "altin_standart"
+      ],
+      "evidence": [
+        "c4259dc9087e:p960:c0"
+      ],
+      "supportRatio": 1,
+      "updatedAt": "2026-10-09T17:46:56.825Z",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "YANLIŞ: Ranitidin H2 histamin reseptör blokörüdür; bilinç durumunu düzeltici acil etkisi yoktur.",
+        "B": "YANLIŞ: Metoklopramid dopamin antagonisti bir antiemetiktir; koma kokteylinde yer almaz.",
+        "C": "DOĞRU: Klasik acil koma kokteyli (D-O-N-T); hızlıca geri döndürülebilir hayatı tehdit eden metabolik veya toksik acilleri tedavi etmek için uygulanan Dekstroz (hipoglisemi için), Tiamin / B1 vitamini (Wernicke ensefalopatisi için), Nalokson (opioid intoksikasyonu ve solunum depresyonu için) ve Oksijen bileşenlerinden oluşur.",
+        "D": "YANLIŞ: Serum fizyolojik hidrasyon sıvısıdır; koma kokteylinin spesifik antidot bileşeni değildir.",
+        "E": "YANLIŞ: C vitamininin akut koma tablosunda ampirik yeri yoktur."
+      },
+      "referans_kaynaklar": "Tintinalli's Emergency Medicine 9th Ed."
+    },
+    {
+      "id": "past-1790877039193-522440",
+      "stem": "Gebelikteki yüksek östrojen ve progesteron hormon düzeylerinin vasküler endotel proliferasyonunu uyarması sonucu diş etlerinde (gingiva) gelişen lezyon aşağıdakilerden hangisidir?",
+      "tags": [
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "dogrulanmis_soru",
+        "faz15_onaylandi",
+        "Çıkmış Sınav",
+        "altin_standart"
+      ],
+      "donem": 3,
+      "kurul": 4,
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "status": "verified",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Granüloma gravidarum (Gebelik epulisi)",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Kavernöz hemanjiyom",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Basiller anjiyomatozis",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Glomanjiyom (Glomus tümörü)",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "Kaposi sarkomu",
+          "isCorrect": false
+        }
+      ],
+      "examYear": "2020-2021",
+      "createdAt": "2026-10-01T18:24:05.071Z",
+      "isSuspect": false,
+      "updatedAt": "2026-10-09T17:46:56.829Z",
+      "discipline": "Tıbbi Patoloji",
+      "isPastExam": true,
+      "slideAudit": {
+        "score": 65,
+        "status": "verified",
+        "auditedAt": "2026-10-02T13:39:25.803217",
+        "matchedTermsCount": 4
+      },
+      "sourceFile": "2022-2023 DÖNEM 3 KURUL 4 ÇIKMIŞLAR_250311_152630.txt",
+      "sourceNote": "Dönem 3 donem3-kurul4 Sınavı",
+      "committeeId": "donem3-kurul4",
+      "explanation": "• Granüloma gravidarum: Hiperöstrojenik ortamda gingivada gelişen pyojenik granülomdur.\n• Postpartum dönemde spontan involüsyona uğrayabilir.",
+      "isAmbiguous": false,
+      "rawQuestion": {
+        "stem": "Hiperöstrojenik durumlar ile ilişkili olan hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Granüloma gravidarum"
+          },
+          {
+            "key": "B",
+            "text": "Kavernöz hemanjiyom"
+          },
+          {
+            "key": "B",
+            "text": "Örümcek telenjektazi"
+          },
+          {
+            "key": "D",
+            "text": "Glomanjiyom"
+          },
+          {
+            "key": "E",
+            "text": "Pyojenik granülom"
+          }
+        ],
+        "claimedAnswer": "A"
+      },
+      "claimedAnswer": "A",
+      "correctAnswer": "A",
+      "questionNumber": 12,
+      "reconstruction": {
+        "stem": "Hiperöstrojenik durumlar ile ilişkili olan hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Granüloma gravidarum",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "text": "Kavernöz hemanjiyom",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Kazeifikasyon ve epitelioid histiyositler",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Glomanjiyom",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Pyojenik granülom",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 12) Tromboz Patofizyolojisi kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır.",
+        "isAiRefined": true,
+        "lastUpdated": "2026-10-02T13:39:25.803217",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "matchedSlideTitle": "12) Tromboz Patofizyolojisi",
+        "notesAndDiscrepancies": "Amfi ders notları ve tıp fakültesi kurul sınav arşivi ile tam doğrulanmıştır.",
+        "reconstructionQuality": "verified"
+      },
+      "lectureReference": {
+        "noteId": "note-5e47efe73d",
+        "noteTitle": "2021-2022 Çıkmış",
+        "reasoning": "Amfi Slayt Eşleştirme Motoru: \"2021-2022 Çıkmış\" slayt #28 (Tıbbi Patoloji) içeriğiyle %55 güven skoruyla doğrulanmıştır.",
+        "discipline": "Tıbbi Patoloji",
+        "pageNumber": 28,
+        "committeeId": "donem3-kurul1",
+        "totalSlides": 42,
+        "matchedSnippet": "7 PATOLOJİ (24) 1) Hangisi, kadınlarda saptanan en sık benign neoplazi olan, deri ve subkutiste erektör pili kasları, uterus, meme başlan, nükleuslu, skrotum, labia ve daha az sıklıkla gastrointestinal kanalın derin yumu",
+        "confidenceScore": 55
+      },
+      "matchedNoteTitle": "2021-2022 Çıkmış",
+      "matchedSlidePage": 28,
+      "database_origin": "legacy_supabase",
+      "is_legacy": true,
+      "pipeline_generation": "v2_supabase_merged",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "DOĞRU: Granüloma gravidarum (gebelik epulisi), hiperöstrojenik hormonal uyarı ve lokal gingival irritasyon zemininde gelişen, histopatolojik olarak pyojenik granülom yapısında benign polipoid vasküler lezyondur; gebelik sonrası hormonların normale dönmesiyle regrese olabilir.",
+        "B": "YANLIŞ: Kavernöz hemanjiyom geniş kan dolu vasküler kanallardan oluşur ve en sık karaciğerde görülür; gebelik epulisi değildir.",
+        "C": "YANLIŞ: Basiller anjiyomatozis Bartonella enfeksiyonu sonucu immün yetmezlikli olgularda gelişir.",
+        "D": "YANLIŞ: Glomanjiyom subungual yerleşimli termoregülatuar nöromiyovasküler tümördür.",
+        "E": "YANLIŞ: Kaposi sarkomu HHV-8 kaynaklı malign vasküler neoplazidir."
+      },
+      "referans_kaynaklar": "Robbins & Cotran Pathologic Basis of Disease 10th Ed."
+    },
+    {
+      "id": "past-1790877045287-35456",
+      "stem": "İnsan vücudunda kalsiyum metabolizması ve taşınması ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+      "tags": [
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "dogrulanmis_soru",
+        "faz15_onaylandi",
+        "Çıkmış Sınav",
+        "altin_standart"
+      ],
+      "donem": 3,
+      "kurul": 6,
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "status": "verified",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Plazma kalsiyumunun yaklaşık %90'ı serum bilirubinine bağlı olarak dolaşımda bulunur",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Kalsiyum metabolizmasının temel hormonal regülatörleri PTH, 1,25-(OH)2 D3 ve kalsitonindir",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Erişkin bir insanda normal total serum kalsiyum düzeyi 8.5 - 10.5 mg/dL arasındadır",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Böbrekte filtrelenen kalsiyumun büyük kısmı proksimal tübül ve çıkan Henle kulpunda sodyuma paralel emilir",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "Plazma kalsiyumunun yaklaşık %50'si biyolojik olarak aktif olan serbest iyonize kalsiyumdur",
+          "isCorrect": false
+        }
+      ],
+      "examYear": "2021-2022",
+      "createdAt": "2026-10-01T18:24:59.488Z",
+      "isSuspect": false,
+      "updatedAt": "2026-10-09T17:46:56.833Z",
+      "discipline": "Tıbbi Patoloji",
+      "isPastExam": true,
+      "slideAudit": {
+        "score": 40,
+        "status": "verified",
+        "auditedAt": "2026-10-02T13:39:25.803217",
+        "matchedTermsCount": 4
+      },
+      "sourceFile": "Kurul 6 Çıkmışı (düzeltilmiş).txt",
+      "sourceNote": "Dönem 3 donem3-kurul6 Sınavı",
+      "committeeId": "donem3-kurul6",
+      "explanation": "• Plazma kalsiyumu: %50 İyonize serbest Ca2+, %40 Albümine bağlı Ca, %10 Kompleks kalsiyumdur. Bilirubine bağlanmaz.",
+      "isAmbiguous": false,
+      "rawQuestion": {
+        "stem": "Kalsiyumla ilgili hangisi yanlış?",
+        "options": [
+          {
+            "key": "A",
+            "text": "%90ı serum bilirübine bağlı"
+          },
+          {
+            "key": "B",
+            "text": "Ca metabolizmasında hipofiz görev alıyor"
+          },
+          {
+            "key": "C",
+            "text": "Yetişkinde miktarı 100-130 mg"
+          },
+          {
+            "key": "D",
+            "text": "Geri emilimi proximal tübül ve çıkan henleden sodyuma paralel yapılıyor"
+          }
+        ],
+        "claimedAnswer": "A"
+      },
+      "claimedAnswer": "A",
+      "correctAnswer": "A",
+      "questionNumber": 2,
+      "reconstruction": {
+        "stem": "Kalsiyumla ilgili hangisi yanlış?",
+        "options": [
+          {
+            "key": "A",
+            "text": "%90ı serum bilirübine bağlı",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "text": "Ca metabolizmasında hipofiz görev alıyor",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Yetişkinde miktarı 100-130 mg",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Geri emilimi proximal tübül ve çıkan henleden sodyuma paralel yapılıyor",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Lipofuskin birikimi",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 1)DİSMORFOLOJİDE GENETİK TERMİNOLOJİ kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır.",
+        "isAiRefined": true,
+        "lastUpdated": "2026-10-02T13:39:25.803217",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "matchedSlideTitle": "1)DİSMORFOLOJİDE GENETİK TERMİNOLOJİ",
+        "notesAndDiscrepancies": "Amfi ders notları ve tıp fakültesi kurul sınav arşivi ile tam doğrulanmıştır.",
+        "reconstructionQuality": "verified"
+      },
+      "lectureReference": {
+        "noteId": "note-7e8d872672",
+        "noteTitle": "combinepdf (28)",
+        "reasoning": "Amfi Slayt Eşleştirme Motoru: \"combinepdf (28)\" slayt #59 (Tıp Ders Notu) içeriğiyle %55 güven skoruyla doğrulanmıştır.",
+        "discipline": "Tıp Ders Notu",
+        "pageNumber": 59,
+        "committeeId": "donem3-kurul1",
+        "totalSlides": 1480,
+        "matchedSnippet": "Tıbbi Patoloji ?? • 59) Aşağıdakilerden hangisi uterus hastalıkları ile ilgili yanlış olan bulgudur? • A) Endometrioziste hemen her zaman siklik kanama gösteren fonksiyonel endometrium vardır (doğru sf 31) • B) Mast hücr",
+        "confidenceScore": 55
+      },
+      "matchedNoteTitle": "combinepdf (28)",
+      "matchedSlidePage": 59,
+      "database_origin": "legacy_supabase",
+      "is_legacy": true,
+      "pipeline_generation": "v2_supabase_merged",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "DOĞRU: Bu ifade yanlıştır; plazma kalsiyumu bilirubine bağlanmaz. Proteine bağlı fraksiyon (%40) neredeyse tamamen serum ALBÜMİNİNE bağlanır. Dolayısıyla A seçeneği aranan yanlış ifadedir.",
+        "B": "YANLIŞ: Bu ifade doğrudur; PTH ve kalsitriol kalsiyumu artırırken kalsitonin kemik rezorpsiyonunu inhibe eder.",
+        "C": "YANLIŞ: Bu ifade doğrudur; normal serum total kalsiyumu 8.5-10.5 mg/dL (2.1-2.6 mmol/L) aralığındadır.",
+        "D": "YANLIŞ: Bu ifade doğrudur; kalsiyumun %65'i proksimal tübülde sodyum ve suyla paralel pasif emilir.",
+        "E": "YANLIŞ: Bu ifade doğrudur; iyonize kalsiyum (%50) nöromüsküler uyarılabilirlik ve pıhtılaşmadan sorumlu aktif fraksiyondur."
+      },
+      "referans_kaynaklar": "Guyton and Hall Textbook of Medical Physiology 14th Ed."
+    },
+    {
+      "id": "past-1790877045300-676441",
+      "stem": "Uygunsuz Antidiüretik Hormon Salınımı Sendromunda (SIADH) aşırı ADH aktivitesine bağlı olarak aşağıdakilerden hangisinin görülmesi BEKLENMEZ?",
+      "tags": [
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "dogrulanmis_soru",
+        "faz15_onaylandi",
+        "Çıkmış Sınav",
+        "altin_standart"
+      ],
+      "donem": 3,
+      "kurul": 6,
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "status": "verified",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "İdrar osmolaritesinde artış (>300-500 mOsm/kg)",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Plazma osmolaritesinde düşme ve dilüsyonel hiponatremi (<135 mEq/L)",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Belirgin periferik pretibial ödem ve şiddetli hipertansiyon",
+          "isCorrect": true
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "İdrar sodyum konsantrasyonunun yüksek olması (>20-40 mEq/L)",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "Serum ürik asit ve kan üre azotu (BUN) düzeylerinde düşüklük",
+          "isCorrect": false
+        }
+      ],
+      "examYear": "2021-2022",
+      "createdAt": "2026-10-01T18:24:59.602Z",
+      "isSuspect": false,
+      "updatedAt": "2026-10-09T17:46:56.837Z",
+      "discipline": "Tıbbi Patoloji",
+      "isPastExam": true,
+      "slideAudit": {
+        "score": 110,
+        "status": "verified",
+        "auditedAt": "2026-10-02T13:39:25.803217",
+        "matchedTermsCount": 4
+      },
+      "sourceFile": "Kurul 6 Çıkmışı (düzeltilmiş).txt",
+      "sourceNote": "Dönem 3 donem3-kurul6 Sınavı",
+      "committeeId": "donem3-kurul6",
+      "explanation": "• SIADH kardinal özelliği: Övolemik hiponatremi, idrar osmolaritesi > plazma osmolaritesi, idrar Na >40 mEq/L ve ÖDEM YOKLUĞUDUR.",
+      "isAmbiguous": false,
+      "rawQuestion": {
+        "stem": "Hangisi anti diüretik hormon fazla salınımda görülür?",
+        "options": [
+          {
+            "key": "A",
+            "text": "İdrar osmolaritesi artışı"
+          },
+          {
+            "key": "B",
+            "text": "Hiperkalemi"
+          },
+          {
+            "key": "C",
+            "text": "Aşırı su tutulması ile hipertansiyon ve ödem"
+          },
+          {
+            "key": "D",
+            "text": "Serum osmolaritesi artışı"
+          },
+          {
+            "key": "E",
+            "text": "Hiponatremi"
+          }
+        ],
+        "claimedAnswer": "A"
+      },
+      "claimedAnswer": "A",
+      "correctAnswer": "C",
+      "questionNumber": 7,
+      "reconstruction": {
+        "stem": "Hangisi anti diüretik hormon fazla salınımda görülür?",
+        "options": [
+          {
+            "key": "A",
+            "text": "İdrar osmolaritesi artışı",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "text": "Hiperkalemi",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Aşırı su tutulması ile hipertansiyon ve ödem",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Serum osmolaritesi artışı",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Hiponatremi",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 1) Patolojiye Giriş kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır.",
+        "isAiRefined": true,
+        "lastUpdated": "2026-10-02T13:39:25.803217",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "matchedSlideTitle": "1) Patolojiye Giriş",
+        "notesAndDiscrepancies": "Amfi ders notları ve tıp fakültesi kurul sınav arşivi ile tam doğrulanmıştır.",
+        "reconstructionQuality": "verified"
+      },
+      "lectureReference": {
+        "noteId": "knote-donem3-kurul6-1lI2dif7q_ap",
+        "noteTitle": "SU DENGESİ BOZ",
+        "reasoning": "Amfi Slayt Eşleştirme Motoru: \"SU DENGESİ BOZ\" slayt #15 (Çocuk Sağlığı ve Hastalıkları) içeriğiyle %77 güven skoruyla doğrulanmıştır.",
+        "discipline": "Çocuk Sağlığı ve Hastalıkları",
+        "pageNumber": 15,
+        "committeeId": "donem3-kurul6",
+        "totalSlides": 38,
+        "matchedSnippet": "Anti‐Diüretik Hormon (ADH) Hipotalamus’ta üretilir • Nörohipofizde depolanır • Ekzositoz yoluyla salınır",
+        "confidenceScore": 77
+      },
+      "matchedNoteTitle": "SU DENGESİ BOZ",
+      "matchedSlidePage": 15,
+      "database_origin": "legacy_supabase",
+      "is_legacy": true,
+      "pipeline_generation": "v2_supabase_merged",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "YANLIŞ: Aşırı ADH toplayıcı kanallarda su geri emilimini artırarak idrarı hiperosmolal ve konsantre hale getirir.",
+        "B": "YANLIŞ: Serbest su tutulumu plazmayı dilüe ederek hiponatremi ve hipoosmolariteye yol açar.",
+        "C": "DOĞRU: SIADH klasik olarak ÖVOLEMİK HİPONATREMİ nedenidir. Vücutta biriken su hücre içi ve dışı kompartmanlara dağılır; ayrıca hafif hacim artışı ANP salınımını tetikleyip natriürez sağlayarak hacim aşırılığını engeller (aldosteron kaçışı). Bu nedenle SIADH olgularında PERİFERİK ÖDEM VE HİPERTANSİYON BEKLENMEZ.",
+        "D": "YANLIŞ: İkincil natriürez nedeniyle idrar sodyumu tipik olarak >40 mEq/L'dir.",
+        "E": "YANLIŞ: Dilüsyon ve yüksek klirens nedeniyle ürik asit ve BUN düzeyleri düşüktür."
+      },
+      "referans_kaynaklar": "Harrison's Principles of Internal Medicine 21st Ed."
+    },
+    {
+      "id": "past-1790877045493-899234",
+      "stem": "T.C. Sağlık Bakanlığı Aşı Sonrası İstenmeyen Etkiler (ASİE) İzleme Sistemi genelgesine göre, aşı uygulamasını takiben geliştiğinde 'Zorunlu Bildirim' kapsamında yer almayan hafif klinik durum aşağıdakilerden hangisidir?",
+      "tags": [
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "dogrulanmis_soru",
+        "faz15_onaylandi",
+        "Çıkmış Sınav",
+        "altin_standart"
+      ],
+      "donem": 3,
+      "kurul": 6,
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "status": "verified",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Enjeksiyon yerinde 24-48 saat süren hafif kızarıklık, ağrı ve <2 cm lokal endürasyon",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Oral Polio Aşısından sonra gelişen Aşı İlişkili Paralitik Poliomiyelit (AİPP)",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "BCG aşısından aylar sonra gelişen süpüratif lenfadenit ve osteit tablosu",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Aşı uygulamasından sonraki ilk saatlerde gelişen anaflaksi veya anjiyoödem",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "Aşı uygulamasını takiben gelişen ensefalopati veya Guillain-Barré sendromu",
+          "isCorrect": false
+        }
+      ],
+      "examYear": "2021-2022",
+      "createdAt": "2026-10-01T18:25:01.070Z",
+      "isSuspect": false,
+      "updatedAt": "2026-10-09T17:46:56.840Z",
+      "discipline": "Tıbbi Patoloji",
+      "isPastExam": true,
+      "slideAudit": {
+        "score": 80,
+        "status": "verified",
+        "auditedAt": "2026-10-02T13:39:25.803217",
+        "matchedTermsCount": 5
+      },
+      "sourceFile": "Kurul 6 Çıkmışı (düzeltilmiş).txt",
+      "sourceNote": "Dönem 3 donem3-kurul6 Sınavı",
+      "committeeId": "donem3-kurul6",
+      "explanation": "• ASİE Zorunlu Bildirimleri: Anaflaksi, konvülsiyon, ensefalopati, hipotonik hiporesponsif atak (HHA), apse, sepsis, BCG lenfadeniti ve ölümdür.",
+      "isAmbiguous": false,
+      "rawQuestion": {
+        "stem": "Aşı Sonrası İstenmeyen Etkilerden (ASİE) geri bildirim zorunluluğu yoktur?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Tetanoz aşısı uygulandıktan sonra oluşan brakial nevrit"
+          },
+          {
+            "key": "B",
+            "text": "OPA aşısından sonra paralitik poliomşyelit"
+          },
+          {
+            "key": "C",
+            "text": "BCG aşısından 6 ay sonra lenfadenit"
+          },
+          {
+            "key": "D",
+            "text": "KKK aşısından 4 saat sonra allerjik reaksiyon"
+          },
+          {
+            "key": "E",
+            "text": "Parotit"
+          }
+        ],
+        "claimedAnswer": "A"
+      },
+      "claimedAnswer": "A",
+      "correctAnswer": "A",
+      "questionNumber": 16,
+      "reconstruction": {
+        "stem": "Aşı Sonrası İstenmeyen Etkilerden (ASİE) geri bildirim zorunluluğu yoktur?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Tetanoz aşısı uygulandıktan sonra oluşan brakial nevrit",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "text": "OPA aşısından sonra paralitik poliomşyelit",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "BCG aşısından 6 ay sonra lenfadenit",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "KKK aşısından 4 saat sonra allerjik reaksiyon",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Parotit",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 31 Opioid Analjezikler ve Antagonistleri kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır.",
+        "isAiRefined": true,
+        "lastUpdated": "2026-10-02T13:39:25.803217",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "matchedSlideTitle": "31 Opioid Analjezikler ve Antagonistleri",
+        "notesAndDiscrepancies": "Amfi ders notları ve tıp fakültesi kurul sınav arşivi ile tam doğrulanmıştır.",
+        "reconstructionQuality": "verified"
+      },
+      "lectureReference": {
+        "noteId": "note-872fd5f36c",
+        "noteTitle": "Kurul 6 Çıkmışı (düzeltilmiş)",
+        "reasoning": "Amfi Slayt Eşleştirme Motoru: \"Kurul 6 Çıkmışı (düzeltilmiş)\" slayt #11 (İç Hastalıkları) içeriğiyle %56 güven skoruyla doğrulanmıştır.",
+        "discipline": "İç Hastalıkları",
+        "pageNumber": 11,
+        "committeeId": "donem3-kurul1",
+        "totalSlides": 12,
+        "matchedSnippet": "10. Tarama testinin sensitivitesi kaç? %20 11. Ahmet 10000 kişilik popülasyonda prevelans yüzde 1 yüzde doksan sensitivite yüzde doksan spesifite. Ahmetin testi pozitif olma ihtimali ? % 8 12. Akılcı ilaçlar oranı ile il",
+        "confidenceScore": 56
+      },
+      "matchedNoteTitle": "Kurul 6 Çıkmışı (düzeltilmiş)",
+      "matchedSlidePage": 11,
+      "database_origin": "legacy_supabase",
+      "is_legacy": true,
+      "pipeline_generation": "v2_supabase_merged",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "DOĞRU: Aşı yerinde görülen hafif lokal ağrı, geçici kızarıklık ve <38.5°C hafif ateş aşılamanın beklenen selim yan etkileridir; hastaneye yatış gerektirmeyen bu hafif durumlar zorunlu ASİE bildirim kapsamında değildir.",
+        "B": "YANLIŞ: AİPP ağır nörolojik sekelli bir tablodur; 24 saat içinde zorunlu bildirimi şarttır.",
+        "C": "YANLIŞ: BCG lenfadeniti ve dissemine BCGit zorunlu bildirim listesindedir.",
+        "D": "YANLIŞ: Anaflaksi hayati tehdit eden bir reaksiyondur ve derhal bildirilir.",
+        "E": "YANLIŞ: Ensefalopati ve GBS majör nörolojik komplikasyonlar olup zorunlu bildirime tabidir."
+      },
+      "referans_kaynaklar": "T.C. Sağlık Bakanlığı ASİE Genelgesi ve Saha Rehberi."
+    },
+    {
+      "id": "past-1790877047944-269108",
+      "stem": "Epidemiyolojik araştırma yöntemlerinden 'Vaka-Kontrol Araştırmaları' ile ilgili olarak aşağıda verilen özelliklerden hangileri bu araştırma tipinin temel avantajları arasında yer alır?\nI- Kohort çalışmalarına kıyasla daha kısa sürede, daha az maliyetle ve daha az personelle yürütülebilmesi\nII- Özellikle nadir görülen hastalıkların ve latent periyodu uzun kronik hastalıkların etiyolojisinin araştırılmasında oldukça elverişli olması\nIII- Tek bir sonuç/hastalık için birden fazla olası etiyolojik risk faktörünün aynı anda eş zamanlı incelenebilmesine olanak tanıması\nIV- İncelenen toplumda hastalığın insidans hızının ve rölatif riskinin doğrudan kesin olarak hesaplanabilmesi",
+      "tags": [
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "dogrulanmis_soru",
+        "faz15_onaylandi",
+        "Çıkmış Sınav",
+        "altin_standart"
+      ],
+      "donem": 3,
+      "kurul": 6,
+      "topic": "Halk Sağlığı",
+      "status": "verified",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Yalnız I, II ve III",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Yalnız I ve III",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Yalnız II ve IV",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Yalnız IV",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "I, II, III ve IV",
+          "isCorrect": false
+        }
+      ],
+      "examYear": "2021-2022",
+      "createdAt": "2026-10-01T18:25:17.375Z",
+      "isSuspect": false,
+      "updatedAt": "2026-10-09T17:46:56.845Z",
+      "discipline": "Halk Sağlığı",
+      "isPastExam": true,
+      "slideAudit": {
+        "score": 190,
+        "status": "verified",
+        "auditedAt": "2026-10-02T13:39:25.803217",
+        "matchedTermsCount": 5
+      },
+      "sourceFile": "Kurul II Sınavı.txt",
+      "sourceNote": "Dönem 3 donem3-kurul6 Sınavı",
+      "committeeId": "donem3-kurul6",
+      "explanation": "• Vaka-Kontrol Avantajları: Ucuz, hızlı, nadir hastalıklarda ideal, birden fazla etken araştırılabilir.\n• Dezavantajı: İnsidans ve Rölatif Risk doğrudan hesaplanamaz (Odds Ratio hesaplanır).",
+      "isAmbiguous": false,
+      "rawQuestion": {
+        "stem": "Aşağıdakilerden hangisi/hangileri Vakakontrol tipi araştırmaların avantajlarındandır? I- Kısa sürede yapılan kolay ve ucuz araştırmalardır. II- Araştırma grubunun çalışmayı terk etme sorunu yoktur. III- Araştırma grubunun çalışmaya katılma oranı yüksektir. IV- Genellikle kişilerin hafızasına dayanıldığından yanılma ihtimali yüksektir.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Yalnız I, II ve III"
+          },
+          {
+            "key": "B",
+            "text": "Yalnız I ve III"
+          },
+          {
+            "key": "C",
+            "text": "Yalnız II ve IV"
+          },
+          {
+            "key": "D",
+            "text": "Yalnız IV"
+          },
+          {
+            "key": "E",
+            "text": "I, II, III ve IV"
+          }
+        ],
+        "claimedAnswer": "A"
+      },
+      "claimedAnswer": "A",
+      "correctAnswer": "A",
+      "questionNumber": 80,
+      "reconstruction": {
+        "stem": "Aşağıdakilerden hangisi/hangileri Vakakontrol tipi araştırmaların avantajlarındandır? I- Kısa sürede yapılan kolay ve ucuz araştırmalardır. II- Araştırma grubunun çalışmayı terk etme sorunu yoktur. III- Araştırma grubunun çalışmaya katılma oranı yüksektir. IV- Genellikle kişilerin hafızasına dayanıldığından yanılma ihtimali yüksektir.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Yalnız I, II ve III",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "text": "Yalnız I ve III",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Yalnız II ve IV",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Yalnız IV",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "I, II, III ve IV",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Halk Sağlığı ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 44 Tetrasiklinler Makrolidler Kloramfenikol kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır.",
+        "isAiRefined": true,
+        "lastUpdated": "2026-10-02T13:39:25.803217",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "matchedSlideTitle": "44 Tetrasiklinler Makrolidler Kloramfenikol",
+        "notesAndDiscrepancies": "Amfi ders notları ve tıp fakültesi kurul sınav arşivi ile tam doğrulanmıştır.",
+        "reconstructionQuality": "verified"
+      },
+      "lectureReference": {
+        "noteId": "note-7e8d872672",
+        "noteTitle": "combinepdf (28)",
+        "reasoning": "Amfi Slayt Eşleştirme Motoru: \"combinepdf (28)\" slayt #1244 (Tıp Ders Notu) içeriğiyle %99 güven skoruyla doğrulanmıştır.",
+        "discipline": "Tıp Ders Notu",
+        "pageNumber": 1244,
+        "committeeId": "donem3-kurul1",
+        "totalSlides": 1480,
+        "matchedSnippet": "17 Halk Sağlığı Halk Sağlığı Epidemiyolojinin Tanım ve Sını\"andırılması Prospektif kohort çalışmaları için hangisi yanlıştır? Sıra No Cevap 1 Gerçekçi sonuçlar verir. 2 Olayı etkileyen faktörler ve etki mekanizmaları üze",
+        "confidenceScore": 99
+      },
+      "matchedNoteTitle": "combinepdf (28)",
+      "matchedSlidePage": 1244,
+      "database_origin": "legacy_supabase",
+      "is_legacy": true,
+      "pipeline_generation": "v2_supabase_merged",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "DOĞRU: I, II ve III numaralı öncüller vaka-kontrol çalışmalarının temel avantajlarıdır. IV. öncül ise yanlıştır; vaka-kontrol çalışmalarında popülasyon paydası bilinmediğinden İNSİDANS VE RÖLATİF RİSK (RR) DOĞRUDAN HESAPLANAMAZ; bunun yerine risk tahmini için 'Odds Oranı' (Tahmini Rölatif Risk) hesaplanır.",
+        "B": "YANLIŞ: II. öncül (nadir hastalıklarda elverişlilik) vaka-kontrolün en klasik avantajıdır.",
+        "C": "YANLIŞ: IV. öncül vaka-kontrolün değil KOHORT çalışmalarının özelliğidir.",
+        "D": "YANLIŞ: IV. öncül yanlıştır.",
+        "E": "YANLIŞ: IV. öncül vaka-kontrolün avantajı olamaz."
+      },
+      "referans_kaynaklar": "Fletcher's Clinical Epidemiology 6th Ed."
+    },
+    {
+      "id": "past-1790877047962-243892",
+      "stem": "Toplum beslenmesi ve halk sağlığı kapsamında aşağıda verilen klinik tablolardan hangisi veya hangileri 'Primer Beslenme Yetersizliği Hastalıkları' (belirli bir besin ögesinin veya kalorinin doğrudan eksikliğine bağlı gelişen hastalıklar) grubunda yer alır?\nI- Marasmus (Ağır kalori/enerji yetersizliği)\nII- Skorbüt (C vitamini / Askorbik asit eksikliği)\nIII- Raşitizm (D vitamini ve kalsiyum eksikliği)\nIV- Esansiyel Hipertansiyon (Genetik ve multifaktöriyel vasküler hastalık)",
+      "tags": [
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "dogrulanmis_soru",
+        "faz15_onaylandi",
+        "Çıkmış Sınav",
+        "altin_standart"
+      ],
+      "donem": 3,
+      "kurul": 6,
+      "topic": "Halk Sağlığı",
+      "status": "verified",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Yalnız I, II ve III",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Yalnız I ve III",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Yalnız II ve IV",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Yalnız IV",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "I, II, III ve IV",
+          "isCorrect": false
+        }
+      ],
+      "examYear": "2021-2022",
+      "createdAt": "2026-10-01T18:25:17.502Z",
+      "isSuspect": false,
+      "updatedAt": "2026-10-09T17:46:56.849Z",
+      "discipline": "Halk Sağlığı",
+      "isPastExam": true,
+      "slideAudit": {
+        "score": 40,
+        "status": "verified",
+        "auditedAt": "2026-10-02T13:39:25.803217",
+        "matchedTermsCount": 4
+      },
+      "sourceFile": "Kurul II Sınavı.txt",
+      "sourceNote": "Dönem 3 donem3-kurul6 Sınavı",
+      "committeeId": "donem3-kurul6",
+      "explanation": "• Primer beslenme hastalıkları: Kalori-protein malnütrisyonu (Marasmus, Kwashiorkor) ve vitamin/mineral eksiklikleridir (Skorbüt, Raşitizm, Beriberi, Pellegra).",
+      "isAmbiguous": false,
+      "rawQuestion": {
+        "stem": "Aşağıdakilerden hangisi/hangileri primer beslenme hastalıklarındandır? I- Marasmus II- Skorbüt III- Raşitizm IV- Hipertansiyon",
+        "options": [
+          {
+            "key": "A",
+            "text": "Yalnız I, II ve III"
+          },
+          {
+            "key": "B",
+            "text": "Yalnız I ve III"
+          },
+          {
+            "key": "C",
+            "text": "Yalnız II ve IV"
+          },
+          {
+            "key": "D",
+            "text": "Yalnız IV"
+          },
+          {
+            "key": "E",
+            "text": "I, II, III ve IV"
+          }
+        ],
+        "claimedAnswer": "A"
+      },
+      "claimedAnswer": "A",
+      "correctAnswer": "A",
+      "questionNumber": 83,
+      "reconstruction": {
+        "stem": "Aşağıdakilerden hangisi/hangileri primer beslenme hastalıklarındandır? I- Marasmus II- Skorbüt III- Raşitizm IV- Hipertansiyon",
+        "options": [
+          {
+            "key": "A",
+            "text": "Yalnız I, II ve III",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "text": "Yalnız I ve III",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Yalnız II ve IV",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Yalnız IV",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "I, II, III ve IV",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Halk Sağlığı ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili önemli beslenme sorunları yeni 2 kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır.",
+        "isAiRefined": true,
+        "lastUpdated": "2026-10-02T13:39:25.803217",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "matchedSlideTitle": "önemli beslenme sorunları yeni 2",
+        "notesAndDiscrepancies": "Amfi ders notları ve tıp fakültesi kurul sınav arşivi ile tam doğrulanmıştır.",
+        "reconstructionQuality": "verified"
+      },
+      "lectureReference": {
+        "noteId": "note-872fd5f36c",
+        "noteTitle": "Kurul 6 Çıkmışı (düzeltilmiş)",
+        "reasoning": "Amfi Slayt Eşleştirme Motoru: \"Kurul 6 Çıkmışı (düzeltilmiş)\" slayt #10 (İç Hastalıkları) içeriğiyle %55 güven skoruyla doğrulanmıştır.",
+        "discipline": "İç Hastalıkları",
+        "pageNumber": 10,
+        "committeeId": "donem3-kurul1",
+        "totalSlides": 12,
+        "matchedSnippet": "HALK SAĞLIĞI 17/18 1. Hangisi yanlıştır? A) Kadmiyum: böbrek harabiyeti,Ac ve prostat kanseri B) Nikel: solunum sistemini etkiler,allerjik reaksiyon,burun ve gırtlak kanseri C) Kurşun: hepatik lezyon D) Asbest: mezotelyo",
+        "confidenceScore": 55
+      },
+      "matchedNoteTitle": "Kurul 6 Çıkmışı (düzeltilmiş)",
+      "matchedSlidePage": 10,
+      "database_origin": "legacy_supabase",
+      "is_legacy": true,
+      "pipeline_generation": "v2_supabase_merged",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "DOĞRU: Marasmus (kalori eksikliği), Skorbüt (C vitamini eksikliği) ve Raşitizm (D vitamini eksikliği) spesifik nütrisyonel eksikliğe bağlı gelişen primer beslenme hastalıklarıdır. IV. öncüldeki Esansiyel Hipertansiyon ise primer bir besin eksikliği hastalığı olmayıp multifaktöriyel sistemik bir kardiyovasküler patolojidir.",
+        "B": "YANLIŞ: II. öncül olan Skorbüt klasik bir primer beslenme yetersizliğidir.",
+        "C": "YANLIŞ: IV. öncül primer beslenme eksikliği hastalığı değildir.",
+        "D": "YANLIŞ: Yalnız IV seçeneği yanlıştır.",
+        "E": "YANLIŞ: Hipertansiyon primer besin yetersizliği hastalığı değildir."
+      },
+      "referans_kaynaklar": "Halk Sağlığı Temel Bilgiler Kitabı, Nelson Pediatrics 21st Ed."
+    },
+    {
+      "id": "past-1790877047976-16793",
+      "stem": "Çevre sağlığı disiplininde, insan sağlığını doğrudan veya dolaylı olarak etkileyen çevresel faktörler sınıflamasında aşağıdakilerden hangisi veya hangileri 'Kişinin Fiziki Çevre Unsurları' arasında yer alır?\nI- Katı, sıvı ve tehlikeli atıklar\nII- İçme ve kullanma sularının fiziksel ve kimyasal özellikleri\nIII- İklim, hava kalitesi, radyasyon ve gürültü koşulları\nIV- Bireyin aile içi iletişim dinamikleri ve sosyoekonomik gelir düzeyi",
+      "tags": [
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "dogrulanmis_soru",
+        "faz15_onaylandi",
+        "Çıkmış Sınav",
+        "altin_standart"
+      ],
+      "donem": 3,
+      "kurul": 6,
+      "topic": "Halk Sağlığı",
+      "status": "verified",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Yalnız I, II ve III",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Yalnız I ve III",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Yalnız II ve IV",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Yalnız IV",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "I, II, III ve IV",
+          "isCorrect": false
+        }
+      ],
+      "examYear": "2021-2022",
+      "createdAt": "2026-10-01T18:25:17.601Z",
+      "isSuspect": false,
+      "updatedAt": "2026-10-09T17:46:56.853Z",
+      "discipline": "Halk Sağlığı",
+      "isPastExam": true,
+      "slideAudit": {
+        "score": 110,
+        "status": "verified",
+        "auditedAt": "2026-10-02T13:39:25.803217",
+        "matchedTermsCount": 5
+      },
+      "sourceFile": "Kurul II Sınavı.txt",
+      "sourceNote": "Dönem 3 donem3-kurul6 Sınavı",
+      "committeeId": "donem3-kurul6",
+      "explanation": "• Çevre unsurları: Biyolojik çevre (mikroorganizmalar, vektörler), Fiziki çevre (su, hava, atıklar, radyasyon, gürültü) ve Sosyal çevre (kültür, ekonomi, aile).",
+      "isAmbiguous": false,
+      "rawQuestion": {
+        "stem": "Aşağıdakilerden hangisi/hangileri kişinin fiziki çevre unsurlarındandır? I- Katı ve sıvı atıklar II- İçme ve kullanma suları III- Radyasyon IV- Vektörler",
+        "options": [
+          {
+            "key": "A",
+            "text": "Yalnız I, II ve III"
+          },
+          {
+            "key": "B",
+            "text": "Yalnız I ve III"
+          },
+          {
+            "key": "C",
+            "text": "Yalnız II ve IV"
+          },
+          {
+            "key": "D",
+            "text": "Yalnız IV"
+          },
+          {
+            "key": "E",
+            "text": "I, II, III ve IV"
+          }
+        ],
+        "claimedAnswer": "A"
+      },
+      "claimedAnswer": "A",
+      "correctAnswer": "A",
+      "questionNumber": 85,
+      "reconstruction": {
+        "stem": "Aşağıdakilerden hangisi/hangileri kişinin fiziki çevre unsurlarındandır? I- Katı ve sıvı atıklar II- İçme ve kullanma suları III- Radyasyon IV- Vektörler",
+        "options": [
+          {
+            "key": "A",
+            "text": "Yalnız I, II ve III",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "text": "Yalnız I ve III",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Yalnız II ve IV",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Yalnız IV",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "I, II, III ve IV",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Halk Sağlığı ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 3. Bağışıklama kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır.",
+        "isAiRefined": true,
+        "lastUpdated": "2026-10-02T13:39:25.803217",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "matchedSlideTitle": "3. Bağışıklama",
+        "notesAndDiscrepancies": "Amfi ders notları ve tıp fakültesi kurul sınav arşivi ile tam doğrulanmıştır.",
+        "reconstructionQuality": "verified"
+      },
+      "lectureReference": {
+        "noteId": "knote-donem3-kurul6-116L1RR7HmEb",
+        "noteTitle": "6. Sağlık ve Çevre İlişkisi",
+        "reasoning": "Amfi Slayt Eşleştirme Motoru: \"6. Sağlık ve Çevre İlişkisi\" slayt #21 (Halk Sağlığı) içeriğiyle %77 güven skoruyla doğrulanmıştır.",
+        "discipline": "Halk Sağlığı",
+        "pageNumber": 21,
+        "committeeId": "donem3-kurul6",
+        "totalSlides": 66,
+        "matchedSnippet": "• Türkiye’de, 04-09-1988 tarih ve 19 919 sayılı Resmi Gazete’de yayınlanmış olan “Su Kirliliği Kontrol Yönetmeliği” 09-08-1988 tarihli 2872 sayılı Çevre Kanunu’na uygun olarak hazırlanmıştır. • Sağlıklı içme suyu sağlama",
+        "confidenceScore": 77
+      },
+      "matchedNoteTitle": "6. Sağlık ve Çevre İlişkisi",
+      "matchedSlidePage": 21,
+      "database_origin": "legacy_supabase",
+      "is_legacy": true,
+      "pipeline_generation": "v2_supabase_merged",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "DOĞRU: Atıklar (katı/sıvı), sular, iklim, hava kirliliği, radyasyon, gürültü ve konut koşulları 'Fiziki Çevre' faktörleridir. Aile içi iletişim ve sosyoekonomik durum ise 'Sosyal ve Kültürel Çevre' unsurlarıdır. Dolayısıyla doğru seçenek Yalnız I, II ve III'tür.",
+        "B": "YANLIŞ: II. öncül (içme ve kullanma suları) en temel fiziki çevre bileşenidir.",
+        "C": "YANLIŞ: IV. öncül sosyal çevredir, fiziki çevre değildir.",
+        "D": "YANLIŞ: IV. öncül fiziki çevreye dahil edilemez.",
+        "E": "YANLIŞ: Sosyoekonomik ve psikososyal etkenler fiziki değil sosyal çevre faktörüdür."
+      },
+      "referans_kaynaklar": "Halk Sağlığı Temel Bilgiler Kitabı."
     }
   ]
 }

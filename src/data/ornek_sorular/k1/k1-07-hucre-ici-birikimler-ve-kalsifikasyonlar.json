@@ -6,6 +6,7 @@
  "konu": "Hücre İçi Birikimler ve Kalsifikasyonlar",
  "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
  "tarih": "2026-09-16",
+ "soru_sayisi": 116,
  "kazanimlar": [
   {
    "no": 1,
@@ -91,6 +92,356 @@
      "bilgi": [
       2,
       14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Karaciğerinde trigliserid biriken bir hastada yıkım ve sekresyonun bozulduğu, başka bir hastada ise kömür tozunun makrofajlarda biriktiği saptanmıştır. Hücre içi birikimlerin dört temel mekanizması aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Artmış mitokondriyal ATP üretimi",
+      "B": "Yetersiz uzaklaştırma, anormal endojen madde, eksojen madde alımı ve lizozomal yıkım bozukluğu",
+      "C": "Artmış apoptoz, nekroz ve otofaji",
+      "D": "Telomer kısalması ve replikatif senesens",
+      "E": "Artmış protein sentezi ve hücre proliferasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "Dört mekanizma yetersiz uzaklaştırma, anormal endojen madde üretimi, eksojen madde alımı ve lizozomal yıkım bozukluğudur. Yağlı karaciğer yetersiz uzaklaştırmaya, karbon birikimi eksojen maddeye örnektir.",
+     "sik_aciklamalari": {
+      "A": "ATP üretimi birikim mekanizması değildir.",
+      "B": "Doğru. Bu dört mekanizma tüm birikimlerin temelidir.",
+      "C": "Bunlar hücre ölümü ve adaptasyon süreçleridir.",
+      "D": "Bunlar yaşlanma mekanizmalarıdır.",
+      "E": "Bunlar büyüme yanıtlarıdır."
+     },
+     "bilgi": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "α1-antitripsin eksikliği olan bir hastada karaciğerde protein birikimine bağlı siroz, akciğerde ise proteaz inhibitörü yokluğuna bağlı amfizem gelişmiştir. Bu tabloyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Lizozomal enzim eksikliğinde birikim görülmez",
+      "B": "Anormal proteinler her zaman tam parçalanır",
+      "C": "α1-antitripsin birikimi yalnızca akciğerde görülür",
+      "D": "Mutant protein birikimi karaciğerde hasar, akciğerde fonksiyon eksikliği yapabilir",
+      "E": "Eksojen maddeler hiçbir zaman hücrede birikmez"
+     },
+     "dogru": "D",
+     "aciklama": "Mutant α1-antitripsin karaciğerde birikirken akciğerde eksikliği hissedilir; lizozomal enzim eksikliğinde Tay-Sachs ve mukopolisakkaridozlar gelişir. Biriken madde zararsız olabilir veya hasara katkıda bulunabilir.",
+     "sik_aciklamalari": {
+      "A": "Hidrolaz eksikliğinde kısmen parçalanmış ürünler birikir.",
+      "B": "Anormal proteinler yıkımdan kaçarak agregat oluşturur.",
+      "C": "Birikim karaciğerdedir, eksiklik akciğerdedir.",
+      "D": "Doğru. Aynı mutant protein iki organda farklı sonuç doğurur.",
+      "E": "Karbon ve silika eksojen birikim örnekleridir."
+     },
+     "bilgi": [
+      3,
+      5,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Yetersiz uzaklaştırma ile anormal endojen madde birikimi arasındaki fark nedir?",
+     "secenekler": {
+      "A": "İkisi de eksojendir",
+      "B": "İkisi de lizozomaldir",
+      "C": "Normal madde yıkılamaz, anormal madde parçalanamaz",
+      "D": "İkisi de zararsızdır",
+      "E": "Mekanizma yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Yetersiz uzaklaştırmada hücre normal yapıda bir maddeyi üretir ancak yıkım veya sekresyon bozukluğu nedeniyle biriktirir; yağlı karaciğerde trigliserid birikimi bunun örneğidir. Anormal endojen maddede ise mutant protein normal yıkım yollarıyla parçalanamaz ve çöker. İki mekanizma da endojen kaynaklıdır ancak birinde madde normal, diğerinde yapısal olarak bozuktur.",
+     "sik_aciklamalari": {
+      "A": "Her iki mekanizma da endojen maddeyle ilgilidir.",
+      "B": "Lizozomal yıkım bozukluğu ayrı bir dördüncü mekanizmadır.",
+      "C": "Doğru. Birinde yıkım-sekresyon, diğerinde proteinin kendisi kusurludur.",
+      "D": "Birikimler hasara katkıda bulunabilir.",
+      "E": "Dört tanımlı mekanizma vardır."
+     },
+     "bilgi": [
+      2,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Eksojen madde birikimi ile lizozomal yıkım bozukluğu arasındaki fark nedir?",
+     "secenekler": {
+      "A": "İkisi de genetiktir",
+      "B": "Yabancı madde sindirilemez, enzim eksik",
+      "C": "İkisi de endojendir",
+      "D": "Lizozom katılmaz",
+      "E": "Makrofaj rol almaz"
+     },
+     "dogru": "B",
+     "aciklama": "Eksojen birikimde hücre, karbon ve silika gibi parçalayamadığı yabancı partikülleri fagosite eder ve bunlar lizozom veya makrofajlarda kalır. Lizozomal yıkım bozukluğunda ise özgül bir hidrolaz enziminin eksikliği, normalde yıkılması gereken sfingolipid ve mukopolisakkaritlerin lizozomda birikmesine yol açar. Birinde sorun dışarıdan gelen maddenin sindirilememesi, diğerinde hücrenin kendi enzim eksikliğidir.",
+     "sik_aciklamalari": {
+      "A": "Eksojen birikim çevresel maruziyettir, genetik değildir.",
+      "B": "Doğru. Biri alınan maddenin, diğeri yıkım aygıtının kusurudur.",
+      "C": "Eksojen madde dışarıdan gelir.",
+      "D": "Her ikisinde de lizozom merkezi rol oynar.",
+      "E": "Makrofajlar eksojen partikülleri fagosite eder."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hücre içi birikimlerin patogenezinde rol oynayan dört temel mekanizma düşünüldüğünde; kronik alkol kullanımında hepatositlerde trigliserit birikmesi (steatoz) ve nefrotik sendromda böbrek proksimal tübül epitel hücrelerinde eozinofilik protein damlacıklarının oluşması aşağıdaki mekanizmalardan hangisine örnektir?",
+     "secenekler": {
+      "A": "Hücrenin metabolize edemediği eksojen bir partikülü kontrolsüz fagositozla alması",
+      "B": "Genetik mutasyon sonucu katlanması bozuk anormal endojen bir proteinin ER'de birikmesi",
+      "C": "Normal bir endojen maddenin normal veya artmış hızda üretilmesine karşın, metabolizma veya uzaklaştırılma (klirens/sekresyon) hızının yetersiz kalması",
+      "D": "Lizozomal bir hidrolaz enziminin kalıtsal eksikliğine bağlı primer substrat depolanması",
+      "E": "Ekstraselüler matriks proteinlerinin fibriler konformasyona geçerek doku aralığında birikmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Hücre içi birikimlerin 1. mekanizması: Normal bir endojen maddenin yetersiz uzaklaştırılmasıdır. Yağlı karaciğerde (steatoz) trigliserit sentezi artmış veya VLDL sekresyonu bozulmuştur. Nefrotik sendromda ise glomerülden aşırı filtre edilen normal plazma albuminini proksimal tübül hücreleri pinositozla geri emer, lizozomal sindirim kapasitesi aşılınca sitoplazmada protein damlacıkları şeklinde birikir. Her iki durumda da madde normal endojendir ancak klirens yetersizdir.",
+     "sik_aciklamalari": {
+      "A": "Eksojen partikül birikimi karbon (antrakosis) veya silika gibi yabancı maddeleri tanımlar.",
+      "B": "Anormal endojen protein birikimi mutant alfa-1 antitripsin veya amiloid prekürsörlerini tanımlar.",
+      "C": "Doğru. Normal endojen maddelerin klirens yetersizliğine bağlı birikimidir.",
+      "D": "Lizozomal hidrolaz eksikliği depo hastalıklarını (Tay-Sachs, Gaucher) tanımlar.",
+      "E": "Ekstraselüler birikim amiloidoz gibi hücre dışı patolojileri tanımlar."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q09",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "SERPINA1 geninde meydana gelen mutasyon sonucunda proteinin üçüncül yapısının hatalı katlanması, endoplazmik retikulumdan Golgi'ye taşınamaması ve hepatosit sitoplazmasında granüler PAS pozitif, diastaz dirençli globüller halinde birikmesi; aynı zamanda plazmada eksikliği nedeniyle akciğerde kontrolsüz nötrofil elastaz aktivitesine bağlı panasinik amfizem gelişmesi hangi birikim mekanizmasının klasik örneğidir?",
+     "secenekler": {
+      "A": "Anormal (yanlış katlanmış) endojen bir maddenin intraselüler taşınma/katlanma defekti nedeniyle birikmesi",
+      "B": "Eksojen mineral tozlarının lizozomal membranları parçalaması",
+      "C": "Ekstraselüler kalsiyum tuzlarının nekrotik odakta çökmesi",
+      "D": "Lizozomal glikozidaz enzim eksikliğine bağlı sfingolipid depolanması",
+      "E": "Mitokondriyal yağ asidi oksidasyonunun fizyolojik aktivasyonu"
+     },
+     "dogru": "A",
+     "aciklama": "Alfa-1 antitripsin (AAT) eksikliği, hücre içi birikimlerin 2. mekanizması olan 'anormal endojen madde birikimi'nin en çarpıcı örneğidir. En sık görülen PiZZ genotipinde, tek aminoasit değişimi (Glu342Lys) proteinin ER'de yanlış katlanmasına ve polimerleşmesine yol açar. Katlanamayan protein hepatosit ER'sinde hapsolarak birikir (kronik hepatit ve siroz); dolaşıma salınamadığı için akciğerde elastazı inhibe edemez ve panasinik amfizem gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Yanlış katlanan anormal endojen proteinin (mutant AAT) ER'de birikmesidir.",
+      "B": "Eksojen mineral tozları antrakosilikozis tablosudur.",
+      "C": "Kalsiyum çökmesi patolojik kalsifikasyondur, protein katlanma defekti değildir.",
+      "D": "Lizozomal depo hastalıkları hidrolaz eksikliğiyle seyreder (örn. Gaucher, Fabry).",
+      "E": "Mitokondriyal yağ asidi oksidasyonu lipid metabolizmasıdır."
+     },
+     "bilgi": [
+      3,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q10",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Şehir ortamında yaşayan bireylerin ve kömür madeni işçilerinin akciğer parankiminde ve hiler lenf düğümlerinde alveoler makrofajların sitoplazmasında siyah renkli partiküllerin birikmesi (antrakosis) hücre içi birikim mekanizmalarından hangisiyle açıklanır?",
+     "secenekler": {
+      "A": "Normal endojen glikojenin aşırı depolanması",
+      "B": "Hücrenin sindirecek enzimatik donanıma sahip olmadığı veya dolaşıma taşıyamadığı EKSOJEN anormal bir maddenin birikmesi",
+      "C": "Lizozomal heksozaminidaz A enziminin mutasyonu",
+      "D": "Hücre zarı fosfolipidlerinin aşırı sentezi",
+      "E": "Tübül epitelinde aşırı albümin geri emilimi"
+     },
+     "dogru": "B",
+     "aciklama": "Antrakosis, en sık görülen eksojen pigment birikimidir. Solunan kömür tozu veya hava kirliliğine bağlı karbon partikülleri akciğer alveollerine ulaşır. İnsan hücrelerinde karbon atomlarını parçalayacak hiçbir litik enzim sistemi bulunmadığı için alveoler makrofajlar bu partikülleri fagosite eder ve sindiremez; makrofaj içinde ömür boyu kalır ve lenfatiklerle hiler lenf bezlerine taşınır.",
+     "sik_aciklamalari": {
+      "A": "Karbon birikimi glikojen ile ilişkili değildir.",
+      "B": "Doğru. Parçalanamayan ve metabolize edilemeyen eksojen yabancı maddenin (karbon) birikimidir.",
+      "C": "Heksozaminidaz A eksikliği Tay-Sachs hastalığıdır.",
+      "D": "Fosfolipidler endojen moleküllerdir.",
+      "E": "Albümin geri emilimi böbrekte endojen protein birikimidir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q11",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Gaucher hastalığı ve Tay-Sachs hastalığı gibi kalıtsal metabolik depo hastalıklarında substratların (glukoserebrozid, GM2 gangliozid) hücre içinde aşırı birikmesine yol açan temel patolojik mekanizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Endoplazmik retikulumda protein translasyonunun kalıcı olarak durması",
+      "B": "Genetik enzim defektine bağlı olarak lizozomlarda spesifik hidrolitik enzimlerin eksikliği ve substratların metabolize edilememesi (lizozomal yıkım bozukluğu)",
+      "C": "Hücre dışı matriksten aşırı kalsiyum difüzyonu",
+      "D": "Mitokondriyal iç zardaki ATP sentaz pompasının blokajı",
+      "E": "Hücre nükleusunda RNA polimeraz II enziminin aşırı çalışması"
+     },
+     "dogru": "B",
+     "aciklama": "Hücre içi birikimlerin 4. mekanizması 'lizozomal yıkım defektleridir' (lizozomal depo hastalıkları). Lizozomlarda kompleks lipid veya polisakkaritleri yıkan özgül bir asit hidrolaz enzimi genetik mutasyonla eksik olduğunda, o enzimin substratı parçalanamaz ve lizozomlar içinde aşırı miktarda birikerek hücreyi şişirir (köpüksü histiyositler/nöronal şişme). Örn: Gaucher'de glukoserebrozidaz eksikliği, Tay-Sachs'ta heksozaminidaz A eksikliği.",
+     "sik_aciklamalari": {
+      "A": "ER translasyon durması değil, lizozomal hidrolaz eksikliğidir.",
+      "B": "Doğru. Spesifik hidrolaz eksikliğine bağlı lizozomal substrat metabolize edilememesidir.",
+      "C": "Kalsiyum difüzyonu kalsifikasyon mekanizmasıdır.",
+      "D": "ATP sentaz blokajı iskemi/hipoksiye benzer, lizozomal depo yapmaz.",
+      "E": "RNA polimeraz aşırı çalışması depo hastalığı nedeni değildir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q12",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki hücre içi birikim ve mekanizma eşleştirmelerinden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Alkolik steatoz - Normal endojen maddenin yetersiz uzaklaştırılması / sentez artışı",
+      "B": "Alfa-1 antitripsin eksikliği - Anormal katlanmış endojen protein birikimi",
+      "C": "Silikozis - Parçalanamayan eksojen partikül birikimi",
+      "D": "Niemann-Pick hastalığı - Lizozomal hidrolaz (sfingomiyelinaz) enzim eksikliği",
+      "E": "Multipl miyelomda Russell cisimcikleri - Parçalanamayan eksojen ağır metal birikimi"
+     },
+     "dogru": "E",
+     "aciklama": "Russell cisimcikleri kesinlikle eksojen ağır metal birikimi değildir! Plazma hücrelerinin granüllü endoplazmik retikulumunda aşırı miktarda sentezlenen ve sekrete edilemeyip biriken endojen immünoglobulin (antikor) globülleridir. Işık mikroskobunda plazmasit sitoplazmasında parlak eozinofilik, homojen yuvarlak yapılar olarak izlenir.",
+     "sik_aciklamalari": {
+      "A": "Steatoz normal trigliseritin klirens azlığı veya sentez fazlalığıdır, doğrudur.",
+      "B": "AAT katlanma defekti gösteren endojen mutant proteindir, doğrudur.",
+      "C": "Silika eksojen mineral tozudur, makrofajda birikir, doğrudur.",
+      "D": "Niemann-Pick sfingomiyelinaz eksikliğinde sfingomiyelin depolanmasıdır, doğrudur.",
+      "E": "Yanlış eşleştirme (sorunun doğru yanıtı). Russell cisimciği eksojen metal değil, endojen immünoglobulin birikimidir."
+     },
+     "bilgi": [
+      2,
+      3,
+      4,
+      5,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q13",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"Hemosiderin ve demir depolanması\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hemoglobinden türeyen demir içeren pigmenttir; normalde az miktarda karaciğer, dalak ve kemik iliği makrofajlarında bulunur. Işık mikroskobunda altın sarısı-kahverengi granüller görünür; demir varlığı Prusya mavisi boyası ile mavi renkte gösterilir.",
+      "E": "Anormal kalsiyum tuzu birikimidir; iki temel formu distrofik ve metastatik kalsifikasyondur.",
+      "B": "Hiperkalsemi eşliğinde normal dokularda oluşur; nedenleri primer hiperparatiroidizm (PTH fazlalığı), sekonder hiperparatiroidizm (kronik böbrek yetmezliği), artmış kemik rezorpsiyonu (Paget, kemik metastazları, tümör lizis sendromu) ve D vitamini fazlalığıdır (intoksikasyon, sarkoidoz).",
+      "C": "Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "D": "En sık biriken lipidler trigliseridler, kolesterol/kolesteril esterler ve fosfolipidlerdir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Hemoglobinden türeyen demir içeren pigmenttir; normalde az miktarda karaciğer, dalak ve kemik iliği makrofajlarında bulunur. Işık mikroskobunda altın sarısı-kahverengi granüller görünür; demir varlığı Prusya mavisi boyası ile mavi renkte gösterilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hemoglobinden türeyen demir içeren pigmenttir; normalde az miktarda karaciğer, dalak ve kemik iliği makrofajlarında bulunur. Işık mikroskobunda altın sarısı-kahverengi granüller görünür; demir varlığı Prusya mavisi boyası ile mavi renkte gösterilir.",
+      "E": "Yanlış. Anormal kalsiyum tuzu birikimidir; iki temel formu distrofik ve metastatik kalsifikasyondur.",
+      "B": "Yanlış. Hiperkalsemi eşliğinde normal dokularda oluşur; nedenleri primer hiperparatiroidizm (PTH fazlalığı), sekonder hiperparatiroidizm (kronik böbrek yetmezliği), artmış kemik rezorpsiyonu (Paget, kemik metastazları, tümör lizis sendromu) ve D vitamini fazlalığıdır (intoksikasyon, sarkoidoz).",
+      "C": "Yanlış. Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "D": "Yanlış. En sık biriken lipidler trigliseridler, kolesterol/kolesteril esterler ve fosfolipidlerdir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q14",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Mekanizma 3: Eksojen anormal madde\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+      "C": "Protein birikimleri lipid birikiminden daha az yaygındır; nedenleri artmış hücre içi alım, artmış sentez ve yetersiz katlanma/yıkımdır.",
+      "A": "Eksojen pigmenttir; hava kirliliği ve kömür tozundan kaynaklanır, akciğerde alveoler makrofajlarca fagosite edilir ve lenfatiklerle lenf düğümlerine taşınır.",
+      "B": "Anormal kalsiyum tuzu birikimidir; iki temel formu distrofik ve metastatik kalsifikasyondur.",
+      "D": "Hemoglobinden türeyen demir içeren pigmenttir; normalde az miktarda karaciğer, dalak ve kemik iliği makrofajlarında bulunur. Işık mikroskobunda altın sarısı-kahverengi granüller görünür; demir varlığı Prusya mavisi boyası ile mavi renkte gösterilir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+      "C": "Yanlış. Protein birikimleri lipid birikiminden daha az yaygındır; nedenleri artmış hücre içi alım, artmış sentez ve yetersiz katlanma/yıkımdır.",
+      "A": "Yanlış. Eksojen pigmenttir; hava kirliliği ve kömür tozundan kaynaklanır, akciğerde alveoler makrofajlarca fagosite edilir ve lenfatiklerle lenf düğümlerine taşınır.",
+      "B": "Yanlış. Anormal kalsiyum tuzu birikimidir; iki temel formu distrofik ve metastatik kalsifikasyondur.",
+      "D": "Yanlış. Hemoglobinden türeyen demir içeren pigmenttir; normalde az miktarda karaciğer, dalak ve kemik iliği makrofajlarında bulunur. Işık mikroskobunda altın sarısı-kahverengi granüller görünür; demir varlığı Prusya mavisi boyası ile mavi renkte gösterilir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q15",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Mekanizma 1: Yetersiz uzaklaştırma\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu).",
+      "C": "Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "A": "Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "E": "Deri ve tendonlarda makrofajlarda kolesterol birikerek sarımsı nodül ve plaklar oluşur; nedeni hiperlipidemi ve hiperkolesterolemidir.",
+      "D": "Yapısal olarak anormal bir protein normal yıkım yollarıyla tam parçalanamaz; nedeni genetik mutasyon veya post-translasyonel hatalardır."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu).",
+     "sik_aciklamalari": {
+      "B": "Doğru. Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu).",
+      "C": "Yanlış. Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "A": "Yanlış. Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "E": "Yanlış. Deri ve tendonlarda makrofajlarda kolesterol birikerek sarımsı nodül ve plaklar oluşur; nedeni hiperlipidemi ve hiperkolesterolemidir.",
+      "D": "Yanlış. Yapısal olarak anormal bir protein normal yıkım yollarıyla tam parçalanamaz; nedeni genetik mutasyon veya post-translasyonel hatalardır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k01-q16",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Yanlış katlanmış protein hastalıkları: eksiklik yapanlar\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "Mutant proteinin yıkımı ve eksikliğine yol açanlar kistik fibrozis (CFTR; iyon taşınması bozulur), ailesel hiperkolesterolemi (LDL reseptörü; LDL klirensi bozulur) ve Tay-Sachs'tır (heksozaminidaz α-alt birimi; GM2 gangliozid depolanması).",
+      "A": "ER stresi kaynaklı hücre kaybına yol açanlar retinitis pigmentosa (rodopsin; fotoreseptör kaybı ve körlük) ve Creutzfeldt-Jakob hastalığıdır (prion proteini PrPᶜ → PrPˢᶜ; nöron ölümü).",
+      "D": "Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür.",
+      "C": "Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur.",
+      "E": "Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Mutant proteinin yıkımı ve eksikliğine yol açanlar kistik fibrozis (CFTR; iyon taşınması bozulur), ailesel hiperkolesterolemi (LDL reseptörü; LDL klirensi bozulur) ve Tay-Sachs'tır (heksozaminidaz α-alt birimi; GM2 gangliozid depolanması).",
+     "sik_aciklamalari": {
+      "B": "Doğru. Mutant proteinin yıkımı ve eksikliğine yol açanlar kistik fibrozis (CFTR; iyon taşınması bozulur), ailesel hiperkolesterolemi (LDL reseptörü; LDL klirensi bozulur) ve Tay-Sachs'tır (heksozaminidaz α-alt birimi; GM2 gangliozid depolanması).",
+      "A": "Yanlış. ER stresi kaynaklı hücre kaybına yol açanlar retinitis pigmentosa (rodopsin; fotoreseptör kaybı ve körlük) ve Creutzfeldt-Jakob hastalığıdır (prion proteini PrPᶜ → PrPˢᶜ; nöron ölümü).",
+      "D": "Yanlış. Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür.",
+      "C": "Yanlış. Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur.",
+      "E": "Yanlış. Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir."
+     },
+     "bilgi": [
+      17
      ],
      "benzer_cikmis": []
     }
@@ -208,6 +559,356 @@
      "bilgi": [
       12,
       17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Alkol kullanımı olan bir hastanın karaciğeri büyümüş, sarımsı ve parlak bulunmuş, mikroskopta hepatositlerde birleşen lipid vakuolleri izlenmiştir. Bu tabloya uyan birikim tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Miyokardda kolesterol kristali birikimi",
+      "B": "Damar duvarında immün kompleks birikimi",
+      "C": "Karaciğerde trigliserid birikimiyle büyümüş, sarımsı ve parlak görünüm",
+      "D": "Böbrekte glikojen birikimi",
+      "E": "Akciğerde karbon birikimi"
+     },
+     "dogru": "C",
+     "aciklama": "Steatoz parankimal hücrelerde trigliserid birikimidir; en sık karaciğerde görülür. Nedenleri alkol, obezite, diyabet, hipoksi ve toksinlerdir; makroskopide karaciğer büyümüş, sarımsı ve parlaktır.",
+     "sik_aciklamalari": {
+      "A": "Bu ateroskleroz paternidir.",
+      "B": "Bu fibrinoid nekroz paternidir.",
+      "C": "Doğru. Mikroskopta lipid vakuolleri birleşir; ileri evrede fibrozis ve siroz gelişebilir.",
+      "D": "Glikojen birikimi PAS pozitif boşluklardır.",
+      "E": "Karbon eksojen pigment birikimidir."
+     },
+     "bilgi": [
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Ailesel hiperkolesterolemili bir hastada aşil tendonunda sarımsı nodüller ve koroner arterlerde darlık saptanmıştır. Patolog her iki lezyonda da kolesterol birikiminin rolünü vurgulamıştır. Bu tabloyla ilgili eşleştirme aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aşil tendonunda sarımsı nodül ve arter intimasında köpük hücreleri – kolesterol birikimi",
+      "B": "Karaciğerde trigliserid vakuolleri – kolesterol birikimi",
+      "C": "Akciğerde siyah pigment – kolesterol birikimi",
+      "D": "Böbrekte protein damlacıkları – kolesterol birikimi",
+      "E": "Plazma hücresinde Russell cisimciği – kolesterol birikimi"
+     },
+     "dogru": "A",
+     "aciklama": "Aterosklerozda intimadaki makrofajlar kolesteril esterle dolarak köpük hücresi olur; ksantomlar hiperlipidemide deri ve tendonlarda sarımsı nodüllerdir. Aşil tendonu ksantomu ailesel hiperkolesteroleminin tipik bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Her iki bulgu da kolesterol-kolesteril ester birikiminin klinik örnekleridir.",
+      "B": "Bu steatoz paternidir.",
+      "C": "Bu antrakosis paternidir.",
+      "D": "Bu protein birikimidir.",
+      "E": "Bu immünoglobulin birikimidir."
+     },
+     "bilgi": [
+      10,
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Steatozun (yağlı değişim) lipid türü ve patogenetik mekanizması nedir?",
+     "secenekler": {
+      "A": "Trigliserid, alım-sentez artar sekresyon azalır",
+      "B": "Kolesterol, damar duvarında birikir",
+      "C": "Fosfolipid, lizozomda birikir",
+      "D": "Yağ asidi, mitokondride yanar",
+      "E": "Lipoprotein, kanda artar"
+     },
+     "dogru": "A",
+     "aciklama": "Steatozda serbest yağ asidi alımı ve trigliserid sentezi artarken lipoprotein paketlenmesi ve sekresyonu azalır, bu dengesizlik hepatositte trigliserid birikimine yol açar. Alkol, obezite, diyabet, hipoksi ve toksinler bu dengeyi bozar. Makroskopide karaciğer büyümüş, sarımsı ve parlak görünür; süreç sürerse fibrozis ve siroza ilerler.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Üçlü dengesizlik hepatositte yağ birikimini açıklar.",
+      "B": "Bu aterosklerozun mekanizmasıdır.",
+      "C": "Lizozomal fosfolipid birikimi ilaçlara bağlıdır.",
+      "D": "Oksidasyonun artması birikimi azaltır.",
+      "E": "Kandaki artış doku birikimini tek başına açıklamaz."
+     },
+     "bilgi": [
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Ateroskleroz ve ksantomdaki biriken hücre ile klinik ipucunu veren seçenek hangisidir?",
+     "secenekler": {
+      "A": "İkisi de trigliseriddir",
+      "B": "Köpük hücre lenfosittir",
+      "C": "Ksantom arterde olur",
+      "D": "Köpük hücre makrofaj, Aşil ailesel",
+      "E": "Kolesterol zararsızdır"
+     },
+     "dogru": "D",
+     "aciklama": "Aterosklerozda büyük arter intimasındaki makrofajlar okside LDL'yi kontrolsüzce içselleştirir ve kolesteril esterle dolarak köpük hücrelerine dönüşür. Ksantomlarda ise hiperlipidemide deri ve tendon makrofajları kolesterol biriktirerek sarımsı nodüller oluşturur. Aşil tendonu ksantomu, LDL reseptör kusuruna bağlı ailesel hiperkolesteroleminin tipik bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Biriken lipid kolesterol ve kolesteril esterdir.",
+      "B": "Köpük hücre kolesteril ester dolu makrofajdır.",
+      "C": "Ksantom deri ve tendonlarda görülür.",
+      "D": "Doğru. İntimal makrofajlar köpükleşir, tendon ksantomu genetik hiperkolesterolemiyi işaret eder.",
+      "E": "Birikmiş kolesterol plak ve ksantom oluşturur."
+     },
+     "bilgi": [
+      10,
+      11,
+      12
+     ],
+     "benzer_cikmis": [
+      "2a3c49d68674"
+     ]
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Karaciğer parankim hücrelerinde (hepatositlerde) gelişen yağlı değişim (steatoz) patogenezinde rol oynayan aşağıdaki mekanizmalardan hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Dolaşımdan karaciğere serbest yağ asidi (FFA) akışının artması",
+      "B": "Asetil-KoA'dan yağ asidi sentezinin (lipogenez) uyarılması",
+      "C": "Hepatik trigliseritlerin Çok Düşük Yoğunluklu Lipoprotein (VLDL) halinde kana salınmasının azalması",
+      "D": "Mitokondriyal yağ asidi beta-oksidasyon kapasitesinin normalin 10 katına çıkarak tüm lipidleri tamamen karbondioksite yakması",
+      "E": "Apolipoprotein sentezinin azalması (örneğin protein-kalori malnütrisyonunda)"
+     },
+     "dogru": "D",
+     "aciklama": "Steatozda yağ asidi oksidasyonu artmaz, aksine alkol toksisitesi veya hipoksi nedeniyle mitokondri hasarlanır ve beta-oksidasyon BASKILANIR (azalır). Okside edilemeyen serbest yağ asitleri esterleşerek trigliseritlere dönüşür. Dolaşıma salınım için gerekli apoprotein sentezi de yetersizse trigliseritler hepatosit sitoplazmasında vakuoller halinde birikerek steatoza yol açar.",
+     "sik_aciklamalari": {
+      "A": "Diyabette veya açlıkta lipoliz artar ve karaciğere FFA girişi yükselir, doğrudur.",
+      "B": "Alkolde aşırı NADH oluşumu yağ asidi sentezini uyarır, doğrudur.",
+      "C": "VLDL paketlenmesi/sekresyonu bozulduğunda yağ karaciğerde hapsolur, doğrudur.",
+      "D": "Yanlış (sorunun doğru yanıtı). Beta-oksidasyon artmaz; azalması steatozun ana motorudur.",
+      "E": "Kwashiorkor'da apoprotein sentezlenemediği için yağlar taşınamaz ve masif yağlı karaciğer oluşur, doğrudur."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q10",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Ateroskleroz patogenezinde, damar intimasında biriken modifiye LDL (oksidize LDL) partiküllerinin makrofajlar tarafından kontrolsüzce fagosite edilmesi sürecinde görev alan ve klasik LDL reseptöründen farklı olarak hücre içi kolesterol seviyesi arttığında 'down-regüle OLMAYAN' yüzey reseptörü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Çöpçü (Scavenger) reseptörler (SR-A / CD36)",
+      "B": "İnsülin reseptörü",
+      "C": "Fas (CD95) reseptörü",
+      "D": "Transferrin reseptörü",
+      "E": "Mannoz-6-fosfat reseptörü"
+     },
+     "dogru": "A",
+     "aciklama": "Klasik LDL reseptörü hücre içi kolesterol arttığında negatif feedback ile baskılanır ve hücrenin aşırı kolesterol alması engellenir. Ancak makrofajlar üzerindeki Çöpçü (Scavenger) reseptörler (SR-A ve CD36), okside LDL'yi tanır ve intraselüler kolesterol ne kadar artarsa artsın reseptör ekspresyonu down-regüle olmaz. Makrofaj kontrolsüz şekilde okside kolesteril esterleri yutmaya devam eder, sitoplazması köpüksü lipid damlacıklarıyla dolar ve 'köpük hücreye' (foam cell) dönüşür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Down-regüle olmayan çöpçü (scavenger) reseptörler köpük hücre oluşumunun temelidir.",
+      "B": "İnsülin reseptörü glikoz alımı ile ilişkilidir.",
+      "C": "Fas reseptörü ölüm yolağını uyarır.",
+      "D": "Transferrin reseptörü demir alımıyla regüle edilir.",
+      "E": "Mannoz-6-fosfat lizozomal enzimleri yönlendirir."
+     },
+     "bilgi": [
+      6,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Genç yaşta miyokard enfarktüsü geçiren 28 yaşındaki bir erkeğin fizik muayenesinde bilateral Aşil tendonlarında sert nodüller ve göz kapaklarında sarımsı plaklar (ksantelezma) saptanıyor. Biyopside tendon ve dermiste kolesteril ester dolu köpüksü histiyosit kümeleri izleniyor. Bu klinik tablo aşağıdaki genetik bozukluklardan hangisinin en karakteristik bulgusudur?",
+     "secenekler": {
+      "A": "Ailesel Hiperkolesterolemi (LDL reseptör mutasyonu)",
+      "B": "Kistik Fibrozis (CFTR mutasyonu)",
+      "C": "Alfa-1 Antitripsin Eksikliği (SERPINA1 mutasyonu)",
+      "D": "Tay-Sachs Hastalığı (Heksozaminidaz mutasyonu)",
+      "E": "Wilson Hastalığı (ATP7B mutasyonu)"
+     },
+     "dogru": "A",
+     "aciklama": "Ailesel Hiperkolesterolemi (Tip IIa), LDL reseptör genindeki mutasyonlar sonucu gelişir. Plazmadan LDL klirensi bozulduğu için serum kolesterolü aşırı yükselir. Dolaşımdaki yüksek kolesterol doku makrofajlarınca yutulur; Aşil tendonu ve ekstansör tendonlarda 'tendon ksantomları', ciltte ve göz kapaklarında 'ksantelezma' oluşturur. Erken yaşta ağır koroner ateroskleroz ve MI ile seyreder.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Aşil tendon ksantomu ve ksantelezma Ailesel Hiperkolesterolemi için patognomoniktir.",
+      "B": "Kistik fibrozis akciğer ve pankreasta müköz tıkaçlar yapar.",
+      "C": "AAT eksikliği karaciğer sirozu ve akciğer amfizemidir.",
+      "D": "Tay-Sachs santral sinir sistemi lipidozudur, tendon ksantomu yapmaz.",
+      "E": "Wilson bakır birikimidir (Kayser-Fleischer halkası)."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q12",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Safra kesesi mukozasında lamina propriada kolesteril ester yüklü köpüksü makrofajların birikmesi sonucu makroskopik olarak çilek benzeri sarı benekli mukoza görünümü oluşturan tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kolesterolozis ('Çilek' safra kesesi)",
+      "B": "Safra kesesi adenokarsinomu",
+      "C": "Koledok kisti",
+      "D": "Akut kalküloz kolesistit",
+      "E": "Porselen safra kesesi"
+     },
+     "dogru": "A",
+     "aciklama": "Kolesterolozis (çilek safra kesesi - strawberry gallbladder), safradaki kolesterol konsantrasyonunun aşırı artması sonucu safra kesesi mukozasındaki makrofajların kolesterolü fagosite etmesiyle oluşur. Lamina propriada biriken bu köpüksü histiyositler makroskopide kırmızı hiperemik mukoza üzerinde noktasal sarı benekler şeklinde çilek yüzeyini andıran tipik bir görünüm verir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Mukozal makrofajlarda kolesterol birikimi kolesterolozisdir.",
+      "B": "Adenokarsinom malign epitelyal neoplazidir.",
+      "C": "Koledok kisti konjenital safra yolu dilatasyonudur.",
+      "D": "Akut kolesistit nötrofil infiltrasyonu ve transmural inflamasyondur.",
+      "E": "Porselen safra kesesi duvarda yaygın distrofik kalsifikasyondur."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q13",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Patoloji laboratuvarında dondurulmuş (frozen) doku kesitlerinde hücre içi nötral lipid ve trigliserit varlığını mikroskobik olarak kanıtlamak için kullanılan ÖZEL HİSTOKİMYASAL boya aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yağ Kırmızısı O (Oil Red O) veya Sudan IV",
+      "B": "Prusya Mavisi (Perls)",
+      "C": "Kongo Kırmızısı (Congo Red)",
+      "D": "Masson Trikrom",
+      "E": "Periyodik Asit-Schiff (PAS)"
+     },
+     "dogru": "A",
+     "aciklama": "Rutin parafin blok hazırlığında ksilol ve alkol gibi organik çözücüler kullanıldığı için hücre içi nötral lipidler erir ve rutin hematoksilen-eozin (HE) kesitlerinde içi boş, şeffaf vakuoller olarak kalır. Yağların varlığını mikroskopta göstermek için taze doku dondurulur (frozen kesit) ve Oil Red O veya Sudan III/IV gibi lipidde çözünen boyalarla boyanır; lipid damlacıkları parlak turuncu-kırmızı renkte parlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Oil Red O ve Sudan boyaları nötral yağları (trigliseritleri) boyar.",
+      "B": "Prusya mavisi demiri (hemosiderin) maviye boyar.",
+      "C": "Kongo kırmızısı amiloidi polarize mikroskopta elma yeşili yansıtır.",
+      "D": "Masson trikrom kollajen lifleri (fibrozisi) mavi/yeşil boyar.",
+      "E": "PAS glikojeni ve müsinleri mor-pembe boyar."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q14",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "\"Mekanizma 4: Lizozomal yıkım bozukluğu\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "Özgül hidrolaz enzim eksikliğinde kısmen parçalanmış ürünler lizozomda birikir.",
+      "C": "En sık arter duvarları (özellikle orta çaplı arterler), böbrek interstisyumu, akciğer alveol septaları ve mide mukozası tutulur.",
+      "D": "Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu).",
+      "E": "Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir.",
+      "A": "Hemoglobinden türeyen demir içeren pigmenttir; normalde az miktarda karaciğer, dalak ve kemik iliği makrofajlarında bulunur. Işık mikroskobunda altın sarısı-kahverengi granüller görünür; demir varlığı Prusya mavisi boyası ile mavi renkte gösterilir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Özgül hidrolaz enzim eksikliğinde kısmen parçalanmış ürünler lizozomda birikir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Özgül hidrolaz enzim eksikliğinde kısmen parçalanmış ürünler lizozomda birikir.",
+      "C": "Yanlış. En sık arter duvarları (özellikle orta çaplı arterler), böbrek interstisyumu, akciğer alveol septaları ve mide mukozası tutulur.",
+      "D": "Yanlış. Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu).",
+      "E": "Yanlış. Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir.",
+      "A": "Yanlış. Hemoglobinden türeyen demir içeren pigmenttir; normalde az miktarda karaciğer, dalak ve kemik iliği makrofajlarında bulunur. Işık mikroskobunda altın sarısı-kahverengi granüller görünür; demir varlığı Prusya mavisi boyası ile mavi renkte gösterilir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q15",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Lipofusin (aşınma pigmenti)\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür.",
+      "D": "İmmünoglobulinler granüllü endoplazmik retikulumda birikerek büyük, eozinofilik Russell cisimcikleri oluşturur.",
+      "E": "Hücreler bazı maddeleri anormal miktarlarda biriktirir; birikim sitoplazmada, organellerde (özellikle lizozomlar) ve çekirdekte olur.",
+      "C": "Glikojen birikimi PAS pozitif, vakuole benzer boşluklar şeklinde görülür.",
+      "B": "Nedenler alkol, obezite ve tip 2 diyabet, protein-kalori yetersizliği, hipoksi, toksin ve ilaçlardır; patogenezde serbest yağ asidi alımı ve trigliserid sentezi artar, lipoprotein paketlenmesi/sekresyonu azalır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür.",
+      "D": "Yanlış. İmmünoglobulinler granüllü endoplazmik retikulumda birikerek büyük, eozinofilik Russell cisimcikleri oluşturur.",
+      "E": "Yanlış. Hücreler bazı maddeleri anormal miktarlarda biriktirir; birikim sitoplazmada, organellerde (özellikle lizozomlar) ve çekirdekte olur.",
+      "C": "Yanlış. Glikojen birikimi PAS pozitif, vakuole benzer boşluklar şeklinde görülür.",
+      "B": "Yanlış. Nedenler alkol, obezite ve tip 2 diyabet, protein-kalori yetersizliği, hipoksi, toksin ve ilaçlardır; patogenezde serbest yağ asidi alımı ve trigliserid sentezi artar, lipoprotein paketlenmesi/sekresyonu azalır."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q16",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Aterosklerozda lipid birikimi\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "B": "Glikojen normalde sitoplazmada granüler formda bulunur; patolojik birikimi kötü kontrollü diabetes mellitus ve glikojen depo hastalıklarında (glikojenozlar) olur.",
+      "D": "Anormal kalsiyum tuzu birikimidir; iki temel formu distrofik ve metastatik kalsifikasyondur.",
+      "C": "Eksojen pigmenttir; hava kirliliği ve kömür tozundan kaynaklanır, akciğerde alveoler makrofajlarca fagosite edilir ve lenfatiklerle lenf düğümlerine taşınır.",
+      "E": "Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "B": "Yanlış. Glikojen normalde sitoplazmada granüler formda bulunur; patolojik birikimi kötü kontrollü diabetes mellitus ve glikojen depo hastalıklarında (glikojenozlar) olur.",
+      "D": "Yanlış. Anormal kalsiyum tuzu birikimidir; iki temel formu distrofik ve metastatik kalsifikasyondur.",
+      "C": "Yanlış. Eksojen pigmenttir; hava kirliliği ve kömür tozundan kaynaklanır, akciğerde alveoler makrofajlarca fagosite edilir ve lenfatiklerle lenf düğümlerine taşınır.",
+      "E": "Yanlış. Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k02-q17",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Melanin\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur.",
+      "E": "Eksojen pigmenttir; hava kirliliği ve kömür tozundan kaynaklanır, akciğerde alveoler makrofajlarca fagosite edilir ve lenfatiklerle lenf düğümlerine taşınır.",
+      "D": "Mutant proteinin yıkımı ve eksikliğine yol açanlar kistik fibrozis (CFTR; iyon taşınması bozulur), ailesel hiperkolesterolemi (LDL reseptörü; LDL klirensi bozulur) ve Tay-Sachs'tır (heksozaminidaz α-alt birimi; GM2 gangliozid depolanması).",
+      "B": "Hiperkalsemi eşliğinde normal dokularda oluşur; nedenleri primer hiperparatiroidizm (PTH fazlalığı), sekonder hiperparatiroidizm (kronik böbrek yetmezliği), artmış kemik rezorpsiyonu (Paget, kemik metastazları, tümör lizis sendromu) ve D vitamini fazlalığıdır (intoksikasyon, sarkoidoz).",
+      "C": "Nefrotik sendromda glomerülden aşırı protein kaçağı olur; proksimal tübül hücreleri proteinleri endositozla geri emer ve sitoplazmada eozinofilik damlacıklar oluşur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur.",
+      "E": "Yanlış. Eksojen pigmenttir; hava kirliliği ve kömür tozundan kaynaklanır, akciğerde alveoler makrofajlarca fagosite edilir ve lenfatiklerle lenf düğümlerine taşınır.",
+      "D": "Yanlış. Mutant proteinin yıkımı ve eksikliğine yol açanlar kistik fibrozis (CFTR; iyon taşınması bozulur), ailesel hiperkolesterolemi (LDL reseptörü; LDL klirensi bozulur) ve Tay-Sachs'tır (heksozaminidaz α-alt birimi; GM2 gangliozid depolanması).",
+      "B": "Yanlış. Hiperkalsemi eşliğinde normal dokularda oluşur; nedenleri primer hiperparatiroidizm (PTH fazlalığı), sekonder hiperparatiroidizm (kronik böbrek yetmezliği), artmış kemik rezorpsiyonu (Paget, kemik metastazları, tümör lizis sendromu) ve D vitamini fazlalığıdır (intoksikasyon, sarkoidoz).",
+      "C": "Yanlış. Nefrotik sendromda glomerülden aşırı protein kaçağı olur; proksimal tübül hücreleri proteinleri endositozla geri emer ve sitoplazmada eozinofilik damlacıklar oluşur."
+     },
+     "bilgi": [
+      24
      ],
      "benzer_cikmis": []
     }
@@ -348,6 +1049,351 @@
       19
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q05",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Nefrotik sendromlu bir hastanın böbrek biyopsisinde proksimal tübül hücrelerinde eozinofilik sitoplazmik damlacıklar izlenmiş, proteinüri düzelince damlacıkların kaybolduğu gözlenmiştir. Bu bulguya uyan birikim tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karaciğerde trigliserid vakuolleri",
+      "B": "Proksimal tübülde eozinofilik protein damlacıkları",
+      "C": "Arter intimasında köpük hücreleri",
+      "D": "Akciğerde siyah karbon pigmenti",
+      "E": "Kalpte lipofusin granülleri"
+     },
+     "dogru": "B",
+     "aciklama": "Nefrotik sendromda glomerülden kaçan proteinler proksimal tübülde endositozla geri emilir ve eozinofilik damlacıklar oluşturur; proteinüri düzelirse kaybolur. Plazma hücrelerinde immünoglobulinler Russell cisimcikleri yapar.",
+     "sik_aciklamalari": {
+      "A": "Bu lipid birikimidir.",
+      "B": "Doğru. Birikim sitoplazmada eozinofilik damlacık görünümündedir ve geri dönüşümlüdür.",
+      "C": "Bu kolesterol birikimidir.",
+      "D": "Bu eksojen pigmenttir.",
+      "E": "Bu yaşlanma pigmentidir."
+     },
+     "bilgi": [
+      13,
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q06",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Kistik fibrozisli bir çocukta iyon taşınma bozukluğu, retinitis pigmentozalı başka bir hastada ise fotoreseptör kaybı izlenmiştir. Her iki tabloda da yanlış katlanmış proteinlerin rolü vurgulanmıştır. Bu mekanizmalarla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kistik fibroziste mutant protein birikimi akciğeri korur",
+      "B": "Ailesel hiperkolesterolemi protein fazlalığına bağlıdır",
+      "C": "Retinitis pigmentosada fotoreseptörler korunur",
+      "D": "Alkolik hiyalin lipid birikimidir",
+      "E": "Kistik fibrozis eksiklik, retinitis pigmentosa ER stresi mekanizmasıyla hastalık yapar"
+     },
+     "dogru": "E",
+     "aciklama": "Kistik fibroziste CFTR yıkımı iyon taşınmasını bozar, ailesel hiperkolesterolemide LDL reseptörü yıkımı erken ateroskleroza yol açar; retinitis pigmentosada rodopsin birikimi fotoreseptör kaybı yapar. Alkolik hiyalin ve nörofibriler yumaklar agregat örnekleridir.",
+     "sik_aciklamalari": {
+      "A": "CFTR yıkımı iyon taşınmasını bozar.",
+      "B": "LDL reseptörü eksikliği LDL klirensini bozar.",
+      "C": "Rodopsin birikimi körlüğe yol açar.",
+      "D": "Alkolik hiyalin anormal protein agregatıdır.",
+      "E": "Doğru. Yanlış katlanmış proteinler eksiklik veya ER stresi yoluyla hastalık yapar."
+     },
+     "bilgi": [
+      17,
+      18,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Böbrek tübülü ve plazma hücresindeki protein birikimlerinin görünümü nedir?",
+     "secenekler": {
+      "A": "İkisi de geri dönüşümsüzdür",
+      "B": "Tübülde immünoglobulin birikir",
+      "C": "Plazmada albümin birikir",
+      "D": "Birikim bazofiliktir",
+      "E": "Tübül damlacık, plazma Russell"
+     },
+     "dogru": "E",
+     "aciklama": "Nefrotik sendromda glomerülden sızan proteinler proksimal tübül hücrelerince endositozla geri alınır ve sitoplazmada eozinofilik damlacıklar oluşturur. Proteinüri düzelince damlacıklar kaybolduğu için tablo geri dönüşümlüdür. Plazma hücrelerinde ise immünoglobulinler granüllü ER'de birikerek Russell cisimciklerini oluşturur ve kronik inflamasyon ile miyelomda görülür.",
+     "sik_aciklamalari": {
+      "A": "Tübül damlacıkları proteinüri düzelince kaybolur.",
+      "B": "Tübülde sızan plazma proteinleri birikir.",
+      "C": "Plazma hücresinde immünoglobulin birikir.",
+      "D": "Protein birikimleri eozinofilik görünür.",
+      "E": "Doğru. Alım artışı ve sentez artışı iki farklı birikim örüntüsü verir."
+     },
+     "bilgi": [
+      13,
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "α1-antitripsin eksikliğinde karaciğer ve akciğer tutulum mekanizması nedir?",
+     "secenekler": {
+      "A": "Her iki organda da eksiklik",
+      "B": "Karaciğerde birikim, akciğerde eksiklik",
+      "C": "Her iki organda birikim",
+      "D": "Akciğerde birikim, karaciğerde eksiklik",
+      "E": "İkisi de etkilenmez"
+     },
+     "dogru": "B",
+     "aciklama": "α1-antitripsin mutant formu hepatositte yanlış katlanarak ER'de birikir, ER stresi ve apoptozla karaciğer hasarı ve siroza yol açar. Aynı proteinin akciğerdeki eksikliği, nötrofil elastazını frenleyecek inhibitör kalmaması anlamına gelir ve alveol duvarları yıkılarak amfizem gelişir. Böylece tek bir mutasyon, birikim yaptığı organda toksik, eksik kaldığı organda fonksiyon kaybı etkisi gösterir.",
+     "sik_aciklamalari": {
+      "A": "Karaciğerde protein birikir, eksilmez.",
+      "B": "Doğru. ER stresi siroz, proteaz dengesizliği amfizem yapar.",
+      "C": "Akciğerde birikim değil inhibitör yokluğu vardır.",
+      "D": "Organ rolleri terstir.",
+      "E": "Her iki organ da tutulur."
+     },
+     "bilgi": [
+      19,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Nefrotik sendromlu bir hastada glomerüler filtrasyon bariyerinin bozulması sonucu masif proteinüri geliştiğinde, proksimal renal tübül epitel hücrelerinde görülen mikroskobik değişiklik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sitoplazmada pinositozla geri emilen proteinlere bağlı pembe (eozinofilik) hiyalin damlacıklar",
+      "B": "Çekirdekte kalsiyum fosfat kristalleri",
+      "C": "Lizozomlarda nötral lipid depolanması",
+      "D": "Endoplazmik retikulumda glikojen granülleri",
+      "E": "Plazma membranında melanin birikimi"
+     },
+     "dogru": "A",
+     "aciklama": "Nefrotik sendromda glomerülden aşırı miktarda albümin idrara sızar. Proksimal tübül hücreleri bu aşırı protein yükünü pinositoz (endositoz) vezikülleriyle geri emer. Bu veziküller lizozomlarla birleşir; sindirim kapasitesi aşıldığında tübül epitel hücre sitoplazmasında ışık mikroskobunda pembe, parlak eozinofilik 'hiyalin damlacıklar' (reabsorpsiyon damlacıkları) halinde görülür. Proteinüri durdurulursa bu birikim tamamen geri döner.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Proksimal tübül epitelinde eozinofilik protein reabsorpsiyon damlacıkları oluşur.",
+      "B": "Çekirdekte kalsiyum çökmesi görülmez.",
+      "C": "Nefrotik sendromda primer tübüler olay lipid değil protein reabsorpsiyonudur.",
+      "D": "ER'de glikojen depolanmaz.",
+      "E": "Melanin deride ve melanositlerde bulunur, tübülde birikmez."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kronik inflamasyon alanlarında veya multipl miyelom olgularında, aşırı immünoglobulin sentezleyen plazma hücrelerinin granüllü endoplazmik retikulumunda biriken homojen, yuvarlak ve eozinofilik protein globüllerine ne ad verilir?",
+     "secenekler": {
+      "A": "Mallory-Denk cisimcikleri",
+      "B": "Russell cisimcikleri",
+      "C": "Lewy cisimcikleri",
+      "D": "Aschoff cisimcikleri",
+      "E": "Negri cisimcikleri"
+     },
+     "dogru": "B",
+     "aciklama": "Plazma hücrelerinde granüllü endoplazmik retikulumun aşırı genişleyip büyük miktarda immünoglobulin proteini depolamasıyla oluşan eozinofilik intraselüler inklüzyonlara 'Russell cisimciği' denir. Eğer bu birikim nükleusta izlenirse (nükleer psödo-inklüzyon) 'Dutcher cisimciği' adını alır. Her ikisi de plazma hücresi diskrazilerinde ve kronik plazmositer inflamasyonda sık görülür.",
+     "sik_aciklamalari": {
+      "A": "Mallory-Denk cisimcikleri hepatositlerde sitokeratin ara filaman birikimidir.",
+      "B": "Doğru. Plazma hücrelerinde immünoglobulin birikintileri Russell cisimcikleridir.",
+      "C": "Lewy cisimcikleri Parkinson hastalığında alfa-sinüklein birikimidir.",
+      "D": "Aschoff cisimcikleri akut romatizmal kardit granülomlarıdır.",
+      "E": "Negri cisimcikleri kuduz virüsü inklüzyonlarıdır."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q11",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Kronik alkolizm veya alkohol dışı steatohepatit (NASH) hastalarının karaciğer biyopsisinde, balonlaşmış dejenere hepatositlerin sitoplazmasında karmaşık kıvrılmış kordonlar şeklinde izlenen eozinofilik 'Mallory-Denk cisimcikleri'nin temel biyokimyasal içeriği aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fosforillenmiş ve ubikitinlenmiş sitokeratin ara filamanları (sitokeratin 8 ve 18)",
+      "B": "Glikojen polimerleri",
+      "C": "Demir oksit kristalleri",
+      "D": "Kolesteril palmitat damlacıkları",
+      "E": "Alfa-sinüklein agregatları"
+     },
+     "dogru": "A",
+     "aciklama": "Mallory-Denk cisimcikleri (alkolik hiyalin), hepatositlerde hücre iskeleti hasarı sonucu oluşur. Başlıca sitokeratin 8 ve 18 ara filamanları (keratinler), şaperonlar (Hsp70) ve ubikitin moleküllerinin çapraz bağlanarak parçalanamaz yumaklar oluşturmasıyla meydana gelir. Özellikle alkolik hepatitte, NASH'ta ve Wilson hastalığında balonlaşmış dejeneratif hepatositlerde izlenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Mallory-Denk cisimcikleri sitokeratin ara filamanlarının (CK8/18) ve ubikitin komplekslerinin birikimidir.",
+      "B": "Glikojen Mallory cisimciği oluşturmaz.",
+      "C": "Demir hemosiderin oluşturur.",
+      "D": "Kolesterol köpük hücre yapar.",
+      "E": "Alfa-sinüklein Lewy cisimciğinde bulunur."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q12",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Yanlış katlanmış protein hastalıkları (protein katlanma patolojileri) incelendiğinde; kistik fibrozis ve ailesel hiperkolesterolemi hastalıklarında doku hasarının ve klinik tablonun ortaya çıkmasındaki TEMEL patolojik mekanizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yanlış katlanan mutant proteinin hücre içinde birikerek toksik kitle etkisi yaratması",
+      "B": "Mutant proteinin ER kalite kontrol mekanizması tarafından saptanıp hızla proteazomlarda yıkılması (aşırı ERAD) ve hücre yüzeyinde işlevsel proteinin EKSİKLİĞİNİN oluşması",
+      "C": "Proteinin lizozomal zarları doğrudan delerek apoptozu engellemesi",
+      "D": "Hücre zarında aşırı kalsiyum kanalları açması",
+      "E": "Mutant proteinin hücre dışı matrikste amiloid plağına dönüşmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Yanlış katlanmış protein patolojileri iki ana mekanizmayla hastalık yapar:\n1) Fonksiyon kaybı (protein eksikliği): Kistik fibroziste (CFTR ΔF508) ve Ailesel Hiperkolesterolemide mutant protein hafifçe yanlış katlanır; ER kalite kontrol mekanizması bu proteini hatalı kabul eder ve hücre yüzeyine göndermeden ubikitin-proteazom yolağıyla (ERAD) yıkar. Sonuçta hücre zarında kanal/reseptör EKSİKLİĞİ doğar.\n2) Toksik kazanç / ER stresi: Alzheimer (Aβ, tau), Creutzfeldt-Jakob (PrPSc) ve alfa-1 antitripsinde ise biriken agregatlar doğrudan hücre ölümüne yol açar.",
+     "sik_aciklamalari": {
+      "A": "Toksik kitle etkisi Alzheimer veya prionda baskındır; kistik fibroziste temel olay proteinin zara ulaşamaması ve yokluğudur.",
+      "B": "Doğru. Kistik fibrozis ve FH'de mutant protein erken yıkıma uğradığından fonksiyonel eksiklik hastalığı belirler.",
+      "C": "Lizozomal zarı delmez.",
+      "D": "Kalsiyum kanalı açmaz.",
+      "E": "CFTR amiloid oluşturmaz."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q13",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Alzheimer hastalığı patolojisinde serebral korteks nöronlarının gövdesinde intraselüler olarak biriken nörofibriler yumaklar (neurofibrillary tangles) temel olarak hangi proteinin hiperfosforilasyonu sonucu meydana gelir?",
+     "secenekler": {
+      "A": "Tau proteini",
+      "B": "Alfa-sinüklein",
+      "C": "Amiloid beta (Aβ)",
+      "D": "Huntingtin",
+      "E": "Superoksit dismutaz 1 (SOD1)"
+     },
+     "dogru": "A",
+     "aciklama": "Alzheimer hastalığının iki temel nöropatolojik bulgusu vardır:\n1) Ekstraselüler senil (nöritik) plaklar: Amiloid beta (Aβ) peptid birikimidir.\n2) İntraselüler nörofibriler yumaklar: Mikrotübül ilişkili bir protein olan TAU proteininin anormal hiperfosforilasyonu sonucu hücre iskeletinden ayrılarak nöron sitoplazmasında helikal filaman yumakları oluşturmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Nörofibriler yumaklar hiperfosforile Tau proteininden oluşur.",
+      "B": "Alfa-sinüklein Parkinson ve Lewy cisimcikli demansta birikir.",
+      "C": "Amiloid beta hücre DIŞINDA senil plakları oluşturur.",
+      "D": "Huntingtin Huntington koresinde birikir.",
+      "E": "SOD1 amyotrofik lateral sklerozda (ALS) rol oynar."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q14",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "\"Ksantomlar\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Deri ve tendonlarda makrofajlarda kolesterol birikerek sarımsı nodül ve plaklar oluşur; nedeni hiperlipidemi ve hiperkolesterolemidir.",
+      "E": "Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür.",
+      "C": "Bazı maddeler hücre dışı matrikste birikir: amiloid (amiloidoz), hiyalinize skar dokusu ve kalsiyum tuzları.",
+      "A": "İmmünoglobulinler granüllü endoplazmik retikulumda birikerek büyük, eozinofilik Russell cisimcikleri oluşturur.",
+      "B": "ER stresi kaynaklı hücre kaybına yol açanlar retinitis pigmentosa (rodopsin; fotoreseptör kaybı ve körlük) ve Creutzfeldt-Jakob hastalığıdır (prion proteini PrPᶜ → PrPˢᶜ; nöron ölümü)."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Deri ve tendonlarda makrofajlarda kolesterol birikerek sarımsı nodül ve plaklar oluşur; nedeni hiperlipidemi ve hiperkolesterolemidir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Deri ve tendonlarda makrofajlarda kolesterol birikerek sarımsı nodül ve plaklar oluşur; nedeni hiperlipidemi ve hiperkolesterolemidir.",
+      "E": "Yanlış. Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür.",
+      "C": "Yanlış. Bazı maddeler hücre dışı matrikste birikir: amiloid (amiloidoz), hiyalinize skar dokusu ve kalsiyum tuzları.",
+      "A": "Yanlış. İmmünoglobulinler granüllü endoplazmik retikulumda birikerek büyük, eozinofilik Russell cisimcikleri oluşturur.",
+      "B": "Yanlış. ER stresi kaynaklı hücre kaybına yol açanlar retinitis pigmentosa (rodopsin; fotoreseptör kaybı ve körlük) ve Creutzfeldt-Jakob hastalığıdır (prion proteini PrPᶜ → PrPˢᶜ; nöron ölümü)."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q15",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Hemosiderin ve demir depolanması\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "Hemoglobinden türeyen demir içeren pigmenttir; normalde az miktarda karaciğer, dalak ve kemik iliği makrofajlarında bulunur. Işık mikroskobunda altın sarısı-kahverengi granüller görünür; demir varlığı Prusya mavisi boyası ile mavi renkte gösterilir.",
+      "D": "Serum kalsiyum düzeyi normaldir; birikim hasarlı/nekrotik dokularda olur. Başlangıç noktaları hücre içinde nekrotik hücrelerin mitokondrileri, hücre dışında hasarlı membranlardan kopan veziküllerdir; kalsiyum ve fosfat kristalleri çökerek büyür.",
+      "A": "Bazı birikimler tanıda ipucu sağlar (hemosiderin, lipofusin); bazıları doğrudan organ disfonksiyonu nedenidir (yağlı karaciğer → siroz; kalsifiye kapak → kalp yetersizliği).",
+      "E": "ER stresi kaynaklı hücre kaybına yol açanlar retinitis pigmentosa (rodopsin; fotoreseptör kaybı ve körlük) ve Creutzfeldt-Jakob hastalığıdır (prion proteini PrPᶜ → PrPˢᶜ; nöron ölümü).",
+      "C": "Anormal kalsiyum tuzu birikimidir; iki temel formu distrofik ve metastatik kalsifikasyondur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Hemoglobinden türeyen demir içeren pigmenttir; normalde az miktarda karaciğer, dalak ve kemik iliği makrofajlarında bulunur. Işık mikroskobunda altın sarısı-kahverengi granüller görünür; demir varlığı Prusya mavisi boyası ile mavi renkte gösterilir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Hemoglobinden türeyen demir içeren pigmenttir; normalde az miktarda karaciğer, dalak ve kemik iliği makrofajlarında bulunur. Işık mikroskobunda altın sarısı-kahverengi granüller görünür; demir varlığı Prusya mavisi boyası ile mavi renkte gösterilir.",
+      "D": "Yanlış. Serum kalsiyum düzeyi normaldir; birikim hasarlı/nekrotik dokularda olur. Başlangıç noktaları hücre içinde nekrotik hücrelerin mitokondrileri, hücre dışında hasarlı membranlardan kopan veziküllerdir; kalsiyum ve fosfat kristalleri çökerek büyür.",
+      "A": "Yanlış. Bazı birikimler tanıda ipucu sağlar (hemosiderin, lipofusin); bazıları doğrudan organ disfonksiyonu nedenidir (yağlı karaciğer → siroz; kalsifiye kapak → kalp yetersizliği).",
+      "E": "Yanlış. ER stresi kaynaklı hücre kaybına yol açanlar retinitis pigmentosa (rodopsin; fotoreseptör kaybı ve körlük) ve Creutzfeldt-Jakob hastalığıdır (prion proteini PrPᶜ → PrPˢᶜ; nöron ölümü).",
+      "C": "Yanlış. Anormal kalsiyum tuzu birikimidir; iki temel formu distrofik ve metastatik kalsifikasyondur."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q16",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Steatoz (yağlı değişim) tanımı ve yerleşimi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür.",
+      "D": "Mutant proteinin yıkımı ve eksikliğine yol açanlar kistik fibrozis (CFTR; iyon taşınması bozulur), ailesel hiperkolesterolemi (LDL reseptörü; LDL klirensi bozulur) ve Tay-Sachs'tır (heksozaminidaz α-alt birimi; GM2 gangliozid depolanması).",
+      "C": "Aterosklerotik plakta arter duvarı sertleşir ve lümen daralır; kalsifiye kalp kapaklarında (özellikle aort ve mitral) kapak hareketi bozulur; tüberküloz lenf düğümleri neredeyse tamamen kalsifiye olabilir.",
+      "A": "ER stresi kaynaklı hücre kaybına yol açanlar retinitis pigmentosa (rodopsin; fotoreseptör kaybı ve körlük) ve Creutzfeldt-Jakob hastalığıdır (prion proteini PrPᶜ → PrPˢᶜ; nöron ölümü).",
+      "B": "Eksojen pigmenttir; hava kirliliği ve kömür tozundan kaynaklanır, akciğerde alveoler makrofajlarca fagosite edilir ve lenfatiklerle lenf düğümlerine taşınır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür.",
+      "D": "Yanlış. Mutant proteinin yıkımı ve eksikliğine yol açanlar kistik fibrozis (CFTR; iyon taşınması bozulur), ailesel hiperkolesterolemi (LDL reseptörü; LDL klirensi bozulur) ve Tay-Sachs'tır (heksozaminidaz α-alt birimi; GM2 gangliozid depolanması).",
+      "C": "Yanlış. Aterosklerotik plakta arter duvarı sertleşir ve lümen daralır; kalsifiye kalp kapaklarında (özellikle aort ve mitral) kapak hareketi bozulur; tüberküloz lenf düğümleri neredeyse tamamen kalsifiye olabilir.",
+      "A": "Yanlış. ER stresi kaynaklı hücre kaybına yol açanlar retinitis pigmentosa (rodopsin; fotoreseptör kaybı ve körlük) ve Creutzfeldt-Jakob hastalığıdır (prion proteini PrPᶜ → PrPˢᶜ; nöron ölümü).",
+      "B": "Yanlış. Eksojen pigmenttir; hava kirliliği ve kömür tozundan kaynaklanır, akciğerde alveoler makrofajlarca fagosite edilir ve lenfatiklerle lenf düğümlerine taşınır."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k03-q17",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"Metastatik kalsifikasyonun yerleşimi\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "D": "En sık arter duvarları (özellikle orta çaplı arterler), böbrek interstisyumu, akciğer alveol septaları ve mide mukozası tutulur.",
+      "B": "Yanlış katlanmış proteinler eritilemeyen agregatlar oluşturabilir; örnekler alkolik hiyalin (hepatositlerde) ve nörofibriler yumaklardır (Alzheimer).",
+      "A": "Serum kalsiyum düzeyi normaldir; birikim hasarlı/nekrotik dokularda olur. Başlangıç noktaları hücre içinde nekrotik hücrelerin mitokondrileri, hücre dışında hasarlı membranlardan kopan veziküllerdir; kalsiyum ve fosfat kristalleri çökerek büyür.",
+      "E": "Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+      "C": "İmmünoglobulinler granüllü endoplazmik retikulumda birikerek büyük, eozinofilik Russell cisimcikleri oluşturur."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: En sık arter duvarları (özellikle orta çaplı arterler), böbrek interstisyumu, akciğer alveol septaları ve mide mukozası tutulur.",
+     "sik_aciklamalari": {
+      "D": "Doğru. En sık arter duvarları (özellikle orta çaplı arterler), böbrek interstisyumu, akciğer alveol septaları ve mide mukozası tutulur.",
+      "B": "Yanlış. Yanlış katlanmış proteinler eritilemeyen agregatlar oluşturabilir; örnekler alkolik hiyalin (hepatositlerde) ve nörofibriler yumaklardır (Alzheimer).",
+      "A": "Yanlış. Serum kalsiyum düzeyi normaldir; birikim hasarlı/nekrotik dokularda olur. Başlangıç noktaları hücre içinde nekrotik hücrelerin mitokondrileri, hücre dışında hasarlı membranlardan kopan veziküllerdir; kalsiyum ve fosfat kristalleri çökerek büyür.",
+      "E": "Yanlış. Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+      "C": "Yanlış. İmmünoglobulinler granüllü endoplazmik retikulumda birikerek büyük, eozinofilik Russell cisimcikleri oluşturur."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -432,6 +1478,347 @@
      "bilgi": [
       20,
       21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kötü kontrollü diyabeti olan bir hastanın böbrek biyopsisinde tübül epitelinde PAS pozitif vakuol benzeri boşluklar izlenmiştir. Bu bulguya uyan birikim tipi ve nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Trigliserid vakuolleri – glikojen birikimi",
+      "B": "Eozinofilik protein damlacıkları – glikojen birikimi",
+      "C": "Köpük hücreleri – glikojen birikimi",
+      "D": "Böbrek tübül epitelinde PAS pozitif boşluklar – glikojen birikimi",
+      "E": "Russell cisimcikleri – glikojen birikimi"
+     },
+     "dogru": "D",
+     "aciklama": "Patolojik glikojen birikimi kötü kontrollü diyabet ve glikojen depo hastalıklarında görülür; diyabette böbrek tübül epiteli, kalp kası ve beta hücreleri tutulur. Mikroskopta PAS pozitif vakuol benzeri boşluklar izlenir.",
+     "sik_aciklamalari": {
+      "A": "Bunlar steatoz bulgusudur.",
+      "B": "Bunlar protein birikimidir.",
+      "C": "Bunlar kolesterol birikimidir.",
+      "D": "Doğru. PAS boyası glikojenin tanınmasında kullanılır.",
+      "E": "Bunlar immünoglobulin birikimidir."
+     },
+     "bilgi": [
+      20,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Hepatomegalisi ve kas güçsüzlüğü olan bir çocukta glikojen depo hastalığı, kontrolsüz diyabetli başka bir hastada ise böbrek tübüllerinde glikojen birikimi saptanmıştır. Bu iki tabloyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Glikojenozlarda yalnızca böbrek tutulur",
+      "B": "Glikojenozlarda karaciğer, kalp ve iskelet kası tutulur; diyabette böbrek, kalp ve beta hücreleri tutulur",
+      "C": "Diyabette glikojen birikimi enzim eksikliğine bağlıdır",
+      "D": "Glikojen birikimi PAS negatiftir",
+      "E": "Glikojenozlarda tutulum yalnızca erişkin dönemde başlar"
+     },
+     "dogru": "B",
+     "aciklama": "Glikojenozlarda karaciğer, kalp, iskelet kası ve lökositler tutulur; depo hastalığı enzim eksikliğine bağlıdır. Diyabette birikim hiperglisemiye sekonderdir ve tutulan dokular farklıdır.",
+     "sik_aciklamalari": {
+      "A": "Glikojenozlarda çoklu organ tutulumu vardır.",
+      "B": "Doğru. Etkilenen doku paterni etiyolojiyi ayırt eder.",
+      "C": "Diyabette birikim hiperglisemiye sekonderdir.",
+      "D": "Glikojen PAS pozitiftir.",
+      "E": "Glikojenozlar genellikle çocuklukta bulgu verir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Diyabet ve glikojenozlardaki glikojen birikiminin nedenleri nasıl ayrılır?",
+     "secenekler": {
+      "A": "Diyabet edinsel, glikojenoz doğumsal enzim",
+      "B": "İkisi de enfeksiyondur",
+      "C": "İkisi de otoimmündür",
+      "D": "Glikojen yalnızca karaciğerde",
+      "E": "Diyabette glikojen azalır"
+     },
+     "dogru": "A",
+     "aciklama": "Kötü kontrollü diyabette hiperglisemi, böbrek tübül epiteli ve kalp kası gibi insülinden bağımsız glikoz alan hücrelerde glikojen birikimine yol açar. Glikojenozlarda ise glikojen metabolizması enzimlerinin doğumsal eksikliği karaciğer, kalp ve iskelet kasında depolanmaya neden olur. İki durumda da ortak nokta, glikoz-glikojen döngüsünün hücresel düzeyde tıkanmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Biri metabolik kontrol bozukluğu, diğeri enzim eksikliğidir.",
+      "B": "Enfeksiyon glikojen birikimi yapmaz.",
+      "C": "Otoimmünite glikojen metabolizmasını bozmaz.",
+      "D": "Kalp, kas ve böbrek de tutulur.",
+      "E": "Diyabette glikojen birikir, azalmaz."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Glikojen birikiminin histokimyasal tanısında kullanılan boya ve görünüm nedir?",
+     "secenekler": {
+      "A": "HE ile mavi boyanır",
+      "B": "Oil Red O ile boyanır",
+      "C": "PAS ile magenta, vakuol görünüm",
+      "D": "Prusya mavisi ile boyanır",
+      "E": "Gümüşleme ile siyah"
+     },
+     "dogru": "C",
+     "aciklama": "PAS boyası glikojenin glikol gruplarını oksitleyerek oluşturduğu aldehitlerle reaksiyona girer ve magenta renk verir. Glikojen birikimi mikroskopide sitoplazmada vakuole benzer boşluklar şeklinde görülür. Bu boyanma, glikojenozların ve diyabetik tübül lezyonlarının tanınmasında kullanılır.",
+     "sik_aciklamalari": {
+      "A": "HE glikojeni özgül göstermez.",
+      "B": "Oil Red O lipid boyasıdır.",
+      "C": "Doğru. PAS glikojeni magenta boyar, birikim vakuol benzeri izlenir.",
+      "D": "Prusya mavisi demir boyasıdır.",
+      "E": "Gümüşleme retikülin ve mantar içindir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q08",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kötü kontrollü diabetes mellitus hastalarında hiperglisemiye bağlı olarak dokularda aşırı glikojen depolanması en sık hangi anatomik bölgelerde ve hücrelerde izlenir?",
+     "secenekler": {
+      "A": "Böbrek proksimal tübül epiteli (Armanni-Ebstein lezyonu), karaciğer, kalp kası ve pankreas beta hücreleri",
+      "B": "Deri keratinositleri ve sebase bezler",
+      "C": "Kemik osteoblastları ve kondrositler",
+      "D": "Dalak kırmızı pulpa sinüzoidleri",
+      "E": "Göz kornea epiteli ve sklera"
+     },
+     "dogru": "A",
+     "aciklama": "Diabetes mellitusta kontrolsüz hiperglisemi durumunda glikoz, insülinden bağımsız glukoz taşıyıcıları (GLUT) ile bazı hücrelere aşırı girer ve glikojene dönüştürülerek depolanır. Böbrek tübül epitelinde (özellikle Henley kulpu ve proksimal tübülde) aşırı glikojen birikimi 'Armanni-Ebstein lezyonu' olarak adlandırılır. Ayrıca hepatosit çekirdeğinde glikojen vakuolleri (glikojenli vakuole nükleus), kardiyomiyositlerde ve pankreas Langerhans beta hücrelerinde belirgin glikojen birikimi görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Böbrek tübülü (Armanni-Ebstein), hepatosit, kalp kası ve adacık beta hücreleri diyabette glikojen depolar.",
+      "B": "Keratinositlerde patolojik glikojen birikimi diyabetik hedef değildir.",
+      "C": "Kemik osteoblastları glikojen depolama alanı değildir.",
+      "D": "Dalak sinüzoidleri kan filtre eder, glikojen biriktirmez.",
+      "E": "Kornea ve sklera diyabetik glikojenozis bölgeleri değildir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q09",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Işık mikroskobunda sitoplazmada berrak vakuoller gösteren bir doku kesitinde, vakuolün içindeki maddenin glikojen mi yoksa lipid mi olduğunu ayırt etmek için uygulanan Periyodik Asit-Schiff (PAS) boyama ve Diastaz enzimi sindirim testi sonucunda GLİKOJEN varlığı nasıl kanıtlanır?",
+     "secenekler": {
+      "A": "PAS ile negatif boyanır, diastaz sindiriminden etkilenmez.",
+      "B": "PAS ile parlak macenta/pembe boyanır; diastaz enzimi uygulandığında ise glikojen sindirildiği için boyanma tamamen kaybolur (PAS pozitif, Diastaz duyarlı).",
+      "C": "PAS ile boyanmaz, sadece Prusya mavisi ile boyanır.",
+      "D": "Diastaz uygulandıktan sonra boyanma şiddeti 10 katına çıkar.",
+      "E": "Kongo kırmızısı ile elma yeşili refle verir."
+     },
+     "dogru": "B",
+     "aciklama": "Glikojen, Periyodik Asit-Schiff (PAS) yöntemiyle parlak gül-pembe/macenta rengine boyanır. Ancak müsin ve glikoproteinler de PAS pozitiftir. Birikimin glikojen olduğunu kesinleştirmek için kesit diastaz (veya tükürük amilazı) enzimi ile inkübe edilir. Diastaz glikojeni parçalar; enzim sonrası yapılan PAS boyamasında renk reaksiyonu kayboluyorsa (PAS pozitif, diastaza duyarlı) maddenin glikojen olduğu kanıtlanmış olur. Lipidler ise PAS negatiftir.",
+     "sik_aciklamalari": {
+      "A": "Glikojen PAS ile kuvvetli pozitif boyanır.",
+      "B": "Doğru. PAS pozitifliği ve diastaz sindirimi ile kaybolması glikojeni kanıtlar.",
+      "C": "Prusya mavisi demir boyasıdır.",
+      "D": "Diastaz sindirir, boyanmayı artırmaz siler.",
+      "E": "Elma yeşili çift kırıcılık amiloidozun polarizasyon bulgusudur."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q10",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Glikojen Depo Hastalıkları (Glikojenozlar) ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "secenekler": {
+      "A": "Sadece ileri yaşlarda ortaya çıkan akkiz enfeksiyöz hastalıklardır.",
+      "B": "Glikojen sentezinde veya yıkımında görevli spesifik enzimlerin kalıtsal eksikliğine bağlı olarak karaciğer, kas veya kalpte aşırı glikojen depolanmasıyla seyrederler.",
+      "C": "Bu hastalıklarda glikojen hiçbir dokuda depolanamaz, kanda serbest uçar.",
+      "D": "Glikojen depo hastalıklarında lizozomlar hiçbir zaman tutulmaz.",
+      "E": "Tedavide hastalara günde 10 kg saf glukoz infüzyonu önerilir."
+     },
+     "dogru": "B",
+     "aciklama": "Glikojen depo hastalıkları (glikojenozlar), glikojen metabolizmasında rol alan enzimlerin (glukoz-6-fosfataz, lizozomal asit maltaz, kas fosforilazı vb.) otozomal resesif kalıtılan eksiklikleridir. Enzim blokajı nedeniyle glikojen glukoza yıkılamaz; hepatik formlarda (Von Gierke) karaciğerde ve böbrekte, miyopatik formlarda (McArdle) iskelet kasında, generalize formlarda (Pompe) kardiyak lizozomlarda masif glikojen birikir.",
+     "sik_aciklamalari": {
+      "A": "Akkiz enfeksiyon değil, konjenital kalıtsal metabolik hastalıklardır.",
+      "B": "Doğru. Spesifik enzim eksikliği sonucu hedef organlarda glikojen birikimidir.",
+      "C": "Glikojen hücre içinde masif şekilde depolanır.",
+      "D": "Pompe hastalığında (Tip II) lizozomal alfa-glukozidaz (asit maltaz) eksiktir ve glikojen doğrudan lizozomlarda birikir.",
+      "E": "Böyle bir tedavi yaklaşımı yoktur."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q11",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Lizozomal asit alfa-glukozidaz (asit maltaz) enzim eksikliği nedeniyle lizozomlarda glikojen birikimi ile karakterize olan, hem bir lizozomal depo hastalığı hem de glikojen depo hastalığı (Tip II) sınıfına giren ve infantil formunda masif kardiyomegali ve kalp yetmezliği ile ölümcül seyreden hastalık aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Von Gierke hastalığı (Tip I)",
+      "B": "Pompe hastalığı (Tip II)",
+      "C": "Cori hastalığı (Tip III)",
+      "D": "McArdle hastalığı (Tip V)",
+      "E": "Gaucher hastalığı"
+     },
+     "dogru": "B",
+     "aciklama": "Pompe hastalığı (Glikojenoz Tip II), diğer glikojen depo hastalıklarından farklı olarak sitozolik değil LİZOZOMAL bir enzim olan asit alfa-glukozidaz (asit maltaz) eksikliğinden kaynaklanır. Bu nedenle hem glikojen depo hastalığı hem de lizozomal depo hastalığıdır. Kalp kası, iskelet kası ve karaciğer lizozomlarında masif glikojen depolanır; infantil formu ağır kardiyomegali, hipotoni ve erken kardiyorespiratuar ölümle sonuçlanır.",
+     "sik_aciklamalari": {
+      "A": "Von Gierke (Tip I) glukoz-6-fosfataz eksikliğidir; hepatomegali ve ağır açlık hipoglisemisi yapar.",
+      "B": "Doğru. Lizozomal asit maltaz eksikliği ve kardiyomegali ile giden Pompe hastalığıdır.",
+      "C": "Cori (Tip III) dal kırıcı enzim eksikliğidir.",
+      "D": "McArdle (Tip V) iskelet kası glikojen fosforilazı eksikliğidir, egzersiz krampları yapar.",
+      "E": "Gaucher sfingolipid (glukoserebrozid) depo hastalığıdır."
+     },
+     "bilgi": [
+      5,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q12",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Karaciğer biyopsisinde glikojen birikimi ile lipid birikiminin rutin ışık mikroskobundaki optik görünümleri arasındaki temel fark aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lipid damlacıkları çekirdeği hücre kenarına iterken, glikojen sitoplazmaya homojen yayılır veya çekirdekte vakuolizasyon yapabilir.",
+      "B": "Lipid Prusya mavisi ile boyanırken glikojen boyanmaz.",
+      "C": "Glikojen rutin hematoksilen boyasında parlak mavi görünür.",
+      "D": "Lipid polarize mikroskopta elma yeşili parlar.",
+      "E": "Glikojen sadece lizozomlarda, lipid ise sadece mitokondride bulunur."
+     },
+     "dogru": "A",
+     "aciklama": "Rutin HE kesitlerinde hem lipid hem glikojen eridiği için berrak/boş vakuol olarak izlenir. Ancak makroveziküler steatozda lipid damlası tektir, yuvarlaktır ve çekirdeği kenara itip yassılaştırır (taşlı yüzük benzeri). Glikojen birikiminde ise hücre sınırları belirginleşir, sitoplazma soluk/ince granülerdir ve çekirdek ortada kalır; bazen de glikojen doğrudan çekirdek içine girerek nükleer vakuolizasyona yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Lipid çekirdeği kenara iter; glikojen granüler dağılır veya nükleer glikojenizasyon yapar.",
+      "B": "Prusya mavisi demir boyasıdır, lipid boyamaz.",
+      "C": "Glikojen HE ile berrak/boş kalır, mavi boyanmaz.",
+      "D": "Elma yeşili yansıma amiloidozun özelliğidir.",
+      "E": "Lipid sitozolik damlacıklarda, glikojen sitozolde dağılır."
+     },
+     "bilgi": [
+      7,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q13",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Steatoz morfolojisi\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "D": "Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "E": "Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "C": "Protein birikimleri lipid birikiminden daha az yaygındır; nedenleri artmış hücre içi alım, artmış sentez ve yetersiz katlanma/yıkımdır.",
+      "A": "Nefrotik sendromda glomerülden aşırı protein kaçağı olur; proksimal tübül hücreleri proteinleri endositozla geri emer ve sitoplazmada eozinofilik damlacıklar oluşur.",
+      "B": "Zamanla DNA hasarı birikir, protein homeostazı bozulur ve lipofusin gibi atık pigmentler birikir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "E": "Yanlış. Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "C": "Yanlış. Protein birikimleri lipid birikiminden daha az yaygındır; nedenleri artmış hücre içi alım, artmış sentez ve yetersiz katlanma/yıkımdır.",
+      "A": "Yanlış. Nefrotik sendromda glomerülden aşırı protein kaçağı olur; proksimal tübül hücreleri proteinleri endositozla geri emer ve sitoplazmada eozinofilik damlacıklar oluşur.",
+      "B": "Yanlış. Zamanla DNA hasarı birikir, protein homeostazı bozulur ve lipofusin gibi atık pigmentler birikir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q14",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"α1-antitripsin eksikliği\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "E": "Bazı birikimler tanıda ipucu sağlar (hemosiderin, lipofusin); bazıları doğrudan organ disfonksiyonu nedenidir (yağlı karaciğer → siroz; kalsifiye kapak → kalp yetersizliği).",
+      "D": "Yanlış katlanmış proteinler eritilemeyen agregatlar oluşturabilir; örnekler alkolik hiyalin (hepatositlerde) ve nörofibriler yumaklardır (Alzheimer).",
+      "B": "Glikojen normalde sitoplazmada granüler formda bulunur; patolojik birikimi kötü kontrollü diabetes mellitus ve glikojen depo hastalıklarında (glikojenozlar) olur.",
+      "C": "Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu)."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "E": "Yanlış. Bazı birikimler tanıda ipucu sağlar (hemosiderin, lipofusin); bazıları doğrudan organ disfonksiyonu nedenidir (yağlı karaciğer → siroz; kalsifiye kapak → kalp yetersizliği).",
+      "D": "Yanlış. Yanlış katlanmış proteinler eritilemeyen agregatlar oluşturabilir; örnekler alkolik hiyalin (hepatositlerde) ve nörofibriler yumaklardır (Alzheimer).",
+      "B": "Yanlış. Glikojen normalde sitoplazmada granüler formda bulunur; patolojik birikimi kötü kontrollü diabetes mellitus ve glikojen depo hastalıklarında (glikojenozlar) olur.",
+      "C": "Yanlış. Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu)."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q15",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"α1-antitripsin eksikliği\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "C": "Özgül hidrolaz enzim eksikliğinde kısmen parçalanmış ürünler lizozomda birikir.",
+      "E": "Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür.",
+      "D": "Zamanla DNA hasarı birikir, protein homeostazı bozulur ve lipofusin gibi atık pigmentler birikir.",
+      "B": "En sık biriken lipidler trigliseridler, kolesterol/kolesteril esterler ve fosfolipidlerdir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "C": "Yanlış. Özgül hidrolaz enzim eksikliğinde kısmen parçalanmış ürünler lizozomda birikir.",
+      "E": "Yanlış. Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür.",
+      "D": "Yanlış. Zamanla DNA hasarı birikir, protein homeostazı bozulur ve lipofusin gibi atık pigmentler birikir.",
+      "B": "Yanlış. En sık biriken lipidler trigliseridler, kolesterol/kolesteril esterler ve fosfolipidlerdir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k04-q16",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Mekanizma 3: Eksojen anormal madde\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "E": "Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+      "C": "Hücreler bazı maddeleri anormal miktarlarda biriktirir; birikim sitoplazmada, organellerde (özellikle lizozomlar) ve çekirdekte olur.",
+      "A": "Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "B": "Özgül hidrolaz enzim eksikliğinde kısmen parçalanmış ürünler lizozomda birikir.",
+      "D": "Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+      "C": "Yanlış. Hücreler bazı maddeleri anormal miktarlarda biriktirir; birikim sitoplazmada, organellerde (özellikle lizozomlar) ve çekirdekte olur.",
+      "A": "Yanlış. Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "B": "Yanlış. Özgül hidrolaz enzim eksikliğinde kısmen parçalanmış ürünler lizozomda birikir.",
+      "D": "Yanlış. Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür."
+     },
+     "bilgi": [
+      4
      ],
      "benzer_cikmis": []
     }
@@ -552,6 +1939,349 @@
      "benzer_cikmis": [
       "29139a12fa8b"
      ]
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q05",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Tekrarlayan transfüzyon alan bir hastanın karaciğer biyopsisinde altın sarısı-kahverengi demir içeren granüller saptanmıştır. Bu pigmente uyan tanım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karbon – hemoglobinden türeyen demir pigmentidir",
+      "B": "Lipofusin – melanositlerce üretilen koruyucu pigmenttir",
+      "C": "Hemosiderin – hemoglobinden türeyen demir içeren pigmenttir",
+      "D": "Melanin – serbest radikal aracılı aşınma pigmentidir",
+      "E": "Hemosiderin – eksojen kömür tozu pigmentidir"
+     },
+     "dogru": "C",
+     "aciklama": "Hemosiderin hemoglobinden türeyen demir içeren pigmenttir; normalde karaciğer, dalak ve kemik iliği makrofajlarında bulunur. Aşırı birikim lokal kanamaya veya sistemik transfüzyon-hemoliz-hemokromatoza bağlı olabilir.",
+     "sik_aciklamalari": {
+      "A": "Karbon eksojen pigmenttir.",
+      "B": "Lipofusin aşınma pigmenti, melanin koruyucu pigmenttir.",
+      "C": "Doğru. Işık mikroskobunda altın sarısı-kahverengi granüller halinde izlenir.",
+      "D": "Melanin UV bariyeridir.",
+      "E": "Hemosiderin endojen demir pigmentidir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q06",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Kömür madeninde çalışan bir hastanın akciğer ve lenf düğümlerinde siyah noktalar, yaşlı başka bir hastanın kalbinde sarı-kahverengi granüller saptanmıştır. Bu iki pigmentle ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Akciğerde siyah noktalar genellikle zararsız antrakosisi, kalpte sarı-kahve granüller yaşlanmayı gösterir",
+      "B": "Lipofusin ciddi organ disfonksiyonu yapar",
+      "C": "Karbon birikimi her zaman fibrozis yapar",
+      "D": "Melanin demir içeren bir pigmenttir",
+      "E": "Antrakosis yalnızca sigara içenlerde görülür"
+     },
+     "dogru": "A",
+     "aciklama": "Karbon alveoler makrofajlarca fagosite edilir ve lenfatiklerle düğümlere taşınır; genellikle zararsızdır. Lipofusin yaşlanmanın göstergesidir ve fonksiyonel sorun oluşturmaz; melanin patolojik olarak nevus ve melanomda izlenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Antrakosis hava kirliliği ve kömür tozundandır; lipofusin lipid-protein kompleksidir.",
+      "B": "Lipofusin genellikle fonksiyonel sorun oluşturmaz.",
+      "C": "Ağır maruziyet fibrozisle birliktedir, her zaman değil.",
+      "D": "Melanin kahverengi-siyah endojen pigmenttir.",
+      "E": "Hava kirliliği de nedendir."
+     },
+     "bilgi": [
+      22,
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Lipofusin pigmentinin kaynağı ve klinik anlamı nedir?",
+     "secenekler": {
+      "A": "Demir içeren pigmenttir",
+      "B": "Lipid peroksidasyon, yaşlanma göstergesi",
+      "C": "Kömür tozudur",
+      "D": "Melanosit ürünüdür",
+      "E": "Hemoglobin yıkımıdır"
+     },
+     "dogru": "B",
+     "aciklama": "Lipofusin, serbest radikal aracılı lipid peroksidasyonuyla oluşan sindirilemeyen lipid-protein komplekslerinin lizozomlarda birikmesidir. Altın sarısı-kahverengi granüller özellikle kalp, karaciğer ve beyin gibi bölünmeyen hücrelerde yaşla artar. Hücre yaşlanmasının göstergesi kabul edilir ve genellikle fonksiyonel sorun oluşturmaz.",
+     "sik_aciklamalari": {
+      "A": "Demir içeren pigment hemosiderindir.",
+      "B": "Doğru. Oksidatif atıkların birikimi aşınma pigmentini oluşturur.",
+      "C": "Kömür tozu karbon pigmentidir.",
+      "D": "Melanosit ürünü melanindir.",
+      "E": "Hemoglobin yıkımı hemosiderin verir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q08",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Hemosiderini karbon pigmentinden ayıran özellik nedir?",
+     "secenekler": {
+      "A": "Karbon demir içerir",
+      "B": "Hemosiderin eksojendir",
+      "C": "Prusya mavisi karbonu boyar",
+      "D": "Hemosiderin demirli, Prusya mavisi pozitif",
+      "E": "Hemosiderin hep zararsızdır"
+     },
+     "dogru": "D",
+     "aciklama": "Hemosiderin, hemoglobinden türeyen demir içeren bir pigmenttir ve Prusya mavisi boyasıyla mavi renk verir. Eski kanama alanlarında lokal, tekrarlayan transfüzyon ve hemolizde sistemik birikir. Uzamış birikim kalp ve karaciğerde fonksiyon bozukluğu yapabilir; karbon pigmenti ise siyah renkli ve genellikle zararsızdır.",
+     "sik_aciklamalari": {
+      "A": "Karbon eksojen toz partikülüdür, demir içermez.",
+      "B": "Hemosiderin endojen hemoglobin yıkım ürünüdür.",
+      "C": "Prusya mavisi demiri boyar, karbon siyah izlenir.",
+      "D": "Doğru. Demir içeriği ve boya reaksiyonu tanıyı koydurur.",
+      "E": "Uzamış sistemik birikim organ disfonksiyonu yapar."
+     },
+     "bilgi": [
+      25,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q09",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Yaşlı bir hastanın otopsisinde kalp kası ve karaciğerinin kahverengimsi-koyu bir renk aldığı (kahverengi atrofi) izleniyor. Işık mikroskobunda perinükleer alanda altın sarısı-kahverengi ince granüller saptanıyor. Serbest radikal aracılı lipid peroksidasyonunun kalıntısı olan ve 'yıpranma/yaşlanma pigmenti' (wear and tear pigment) olarak adlandırılan bu pigment aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hemosiderin",
+      "B": "Lipofusin",
+      "C": "Melanin",
+      "D": "Bilirubin",
+      "E": "Karbon"
+     },
+     "dogru": "B",
+     "aciklama": "Lipofusin (lipokrom veya aşınma/yaşlanma pigmenti), hücre zarlarındaki doymamış lipidlerin serbest oksijen radikalleri ile peroksidasyona uğraması sonucu oluşan, sindirilemeyen polimerize lipid ve protein kompleksidir. Lizozomlar içinde rezidüel cisimcikler halinde depolanır. Yaşlanma veya kronik malnütrisyonda kalp ve karaciğerde birikerek 'kahverengi atrofi'ye (brown atrophy) yol açar; hücre için toksik değildir.",
+     "sik_aciklamalari": {
+      "A": "Hemosiderin demir pigmentidir, Prusya mavisi ile boyanır.",
+      "B": "Doğru. Lipid peroksidasyonu ürünü ve yaşlanma göstergesi olan pigment lipofusindir.",
+      "C": "Melanin melanositlerce üretilen UV koruyucu pigmenttir.",
+      "D": "Bilirubin hemoglobin yıkım ürünü sarılık pigmentidir.",
+      "E": "Karbon eksojen siyah pigmenttir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q10",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Tekrarlayan kan transfüzyonları alan bir talasemi majör hastasının karaciğer biyopsisinde hepatositlerde ve Kupffer hücrelerinde altın sarısı-kahverengi granüller saptanmıştır. Bu pigmentin demir içerikli hemosiderin olduğunu kanıtlamak ve lipofusinden ayırt etmek için hangi histokimyasal boyama yöntemi kullanılmalıdır?",
+     "secenekler": {
+      "A": "Prusya Mavisi (Perls reaksiyonu)",
+      "B": "Fontana-Masson boyası",
+      "C": "Grocott gümüşleme",
+      "D": "Ziehl-Neelsen boyası",
+      "E": "Toluidin mavisi"
+     },
+     "dogru": "A",
+     "aciklama": "Hemosiderin, ferritin agregatlarından oluşan ve demir içeren altın sarısı-kahverengi bir pigmenttir. Işık mikroskobunda lipofusine çok benzer. Ancak Prusya mavisi (Perls) boyası uygulandığında, reaktif ferrik demir (Fe3+) potasyum ferrosiyanür ile birleşerek parlak mavi renkli ferrik ferrosiyanür (Turnbull/Prusya mavisi) çökeltisi oluşturur. Lipofusin ise bu boya ile maviye boyanmaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Prusya mavisi (Perls) demiri parlak maviye boyar.",
+      "B": "Fontana-Masson melanin pigmentini siyah boyar.",
+      "C": "Grocott mantarları ve pnömosistisi boyar.",
+      "D": "Ziehl-Neelsen asidorezistan tüberküloz basillerini boyar.",
+      "E": "Toluidin mavisi mast hücre granüllerini metakromatik boyar."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q11",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Deri epidermisinde yer alan melanositlerde tirozinin tirozinaz enzimi aracılığıyla dihidroksifenilalanine (DOPA) dönüştürülmesiyle sentezlenen ve bazal keratinositlerin çekirdeklerinin üzerine yerleşerek nükleer DNA'yı ultraviyole (UV) radyasyonunun mutajenik etkilerinden koruyan endojen kahverengi-siyah pigment aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Melanin",
+      "B": "Bilirubin",
+      "C": "Lipofusin",
+      "D": "Hemosiderin",
+      "E": "Homogentisik asit"
+     },
+     "dogru": "A",
+     "aciklama": "Melanin, nöral krest kökenli melanositler tarafından tirozin aminoasidinden tirozinaz enzimi ile sentezlenen endojen bir pigmenttir. Melanozomlar içinde paketlenip komşu bazal keratinositlere aktarılır. Keratinosit nükleuslarının üzerinde bir şemsiye gibi yerleşerek UV ışınlarını absorbe eder ve DNA fotohasarını/pirimidin dimerlerini önler.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Tirozinaz kaynaklı UV koruyucu pigment melanindir.",
+      "B": "Bilirubin hem yıkımından türer.",
+      "C": "Lipofusin lipid peroksidasyonudur.",
+      "D": "Hemosiderin demir deposudur.",
+      "E": "Homogentisik asit alkaptonüride biriken pigmenttir."
+     },
+     "bilgi": [
+      15,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q12",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Otozomal resesif geçişli Alkaptonüri hastalığında homogentisik asit oksidaz enzim eksikliği nedeniyle kıkırdak, tendon ve eklem kapsülü gibi bağ dokularında siyah-kahverengi pigment birikmesi ve ileri yaşta dejeneratif artrit gelişmesi ile karakterize pigmentasyon tablosuna ne ad verilir?",
+     "secenekler": {
+      "A": "Okronozis",
+      "B": "Hemokromatozis",
+      "C": "Antrakosis",
+      "D": "Dubin-Johnson sendromu",
+      "E": "Sideroblastik anemi"
+     },
+     "dogru": "A",
+     "aciklama": "Alkaptonüri, fenilalanin-tirozin yıkım yolağındaki homogentisik asit oksidaz enziminin kalıtsal eksikliğidir. Homogentisik asit vücutta birikir ve idrarla atılır (idrar havayla temas edince siyahlaşır). Biriken homogentisik asit polimerleri kollajen zengini bağ dokusuna, intervertebral disklere, kulak ve burun kıkırdağına bağlanarak siyah-mavi bir pigmentasyon oluşturur; bu tabloya 'Okronozis' (Ochronosis) denir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Homogentisik asit polimerlerinin bağ dokusunda birikmesi tablosu okronozistir.",
+      "B": "Hemokromatozis aşırı demir birikimidir.",
+      "C": "Antrakosis akciğerde kömür tozu birikimidir.",
+      "D": "Dubin-Johnson hepatik kanaliküler ekskresyon defektidir.",
+      "E": "Sideroblastik anemi kemik iliğinde eritroblast mitokondrilerinde demir birikimidir."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q13",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bir travma sonrası derialtında oluşan bir hematomun (çürük) zamanla kırmızı-mavi renkten sırasıyla yeşil, sarı-kahverengi ve altın sarısına dönüşmesinde rol oynayan hemoglobin türevi pigmentlerin kronolojik sırası aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Hemoglobin (kırmızı-mor) -> Biliverdin (yeşil) -> Bilirubin (sarı) -> Hemosiderin (altın sarısı-kahverengi)",
+      "B": "Hemosiderin -> Bilirubin -> Hemoglobin -> Melanin",
+      "C": "Lipofusin -> Biliverdin -> Melanin -> Hemosiderin",
+      "D": "Karbon -> Bilirubin -> Hemosiderin -> Hemoglobin",
+      "E": "Bilirubin -> Hemoglobin -> Ferritin -> Melanin"
+     },
+     "dogru": "A",
+     "aciklama": "Doku içine kanama (hematom) olduğunda rüptüre eritrositlerden dökülen hemoglobin başlangıçta kırmızı-mor renklidir. Dokudaki makrofajlar hemoglobini fagosite eder; hem oksijenaz enzimi ile hem halkası açılarak demirsiz YEŞİL renkli biliverdin oluşur. Biliverdin redüktaz ile SARI renkli bilirubine indirgenir. Açığa çıkan demir ise ferritin ve hemosiderin agregatlarına bağlanarak ALTIN SARISI-KAHVERENGİ görünüm oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sıralama: Hemoglobin (mor) -> Biliverdin (yeşil) -> Bilirubin (sarı) -> Hemosiderin (kahverengi).",
+      "B": "Hemosiderin ilk basamak değil son basamaktır.",
+      "C": "Lipofusin travmatik hematom pigmenti değildir.",
+      "D": "Karbon dışarıdan solunan pigmenttir.",
+      "E": "Sıralama fizyolojik olarak hatalıdır."
+     },
+     "bilgi": [
+      15,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q14",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Protein birikimlerinin genel ilkeleri\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "E": "Protein birikimleri lipid birikiminden daha az yaygındır; nedenleri artmış hücre içi alım, artmış sentez ve yetersiz katlanma/yıkımdır.",
+      "B": "Mutant proteinin yıkımı ve eksikliğine yol açanlar kistik fibrozis (CFTR; iyon taşınması bozulur), ailesel hiperkolesterolemi (LDL reseptörü; LDL klirensi bozulur) ve Tay-Sachs'tır (heksozaminidaz α-alt birimi; GM2 gangliozid depolanması).",
+      "C": "Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu).",
+      "D": "Nedenler alkol, obezite ve tip 2 diyabet, protein-kalori yetersizliği, hipoksi, toksin ve ilaçlardır; patogenezde serbest yağ asidi alımı ve trigliserid sentezi artar, lipoprotein paketlenmesi/sekresyonu azalır.",
+      "A": "İmmünoglobulinler granüllü endoplazmik retikulumda birikerek büyük, eozinofilik Russell cisimcikleri oluşturur."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Protein birikimleri lipid birikiminden daha az yaygındır; nedenleri artmış hücre içi alım, artmış sentez ve yetersiz katlanma/yıkımdır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Protein birikimleri lipid birikiminden daha az yaygındır; nedenleri artmış hücre içi alım, artmış sentez ve yetersiz katlanma/yıkımdır.",
+      "B": "Yanlış. Mutant proteinin yıkımı ve eksikliğine yol açanlar kistik fibrozis (CFTR; iyon taşınması bozulur), ailesel hiperkolesterolemi (LDL reseptörü; LDL klirensi bozulur) ve Tay-Sachs'tır (heksozaminidaz α-alt birimi; GM2 gangliozid depolanması).",
+      "C": "Yanlış. Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu).",
+      "D": "Yanlış. Nedenler alkol, obezite ve tip 2 diyabet, protein-kalori yetersizliği, hipoksi, toksin ve ilaçlardır; patogenezde serbest yağ asidi alımı ve trigliserid sentezi artar, lipoprotein paketlenmesi/sekresyonu azalır.",
+      "A": "Yanlış. İmmünoglobulinler granüllü endoplazmik retikulumda birikerek büyük, eozinofilik Russell cisimcikleri oluşturur."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q15",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"α1-antitripsin eksikliği\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "A": "Yapısal olarak anormal bir protein normal yıkım yollarıyla tam parçalanamaz; nedeni genetik mutasyon veya post-translasyonel hatalardır.",
+      "C": "En sık biriken lipidler trigliseridler, kolesterol/kolesteril esterler ve fosfolipidlerdir.",
+      "E": "Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir.",
+      "D": "Bazı birikimler tanıda ipucu sağlar (hemosiderin, lipofusin); bazıları doğrudan organ disfonksiyonu nedenidir (yağlı karaciğer → siroz; kalsifiye kapak → kalp yetersizliği)."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "A": "Yanlış. Yapısal olarak anormal bir protein normal yıkım yollarıyla tam parçalanamaz; nedeni genetik mutasyon veya post-translasyonel hatalardır.",
+      "C": "Yanlış. En sık biriken lipidler trigliseridler, kolesterol/kolesteril esterler ve fosfolipidlerdir.",
+      "E": "Yanlış. Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir.",
+      "D": "Yanlış. Bazı birikimler tanıda ipucu sağlar (hemosiderin, lipofusin); bazıları doğrudan organ disfonksiyonu nedenidir (yağlı karaciğer → siroz; kalsifiye kapak → kalp yetersizliği)."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q16",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Glikojen birikimleri\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Glikojen normalde sitoplazmada granüler formda bulunur; patolojik birikimi kötü kontrollü diabetes mellitus ve glikojen depo hastalıklarında (glikojenozlar) olur.",
+      "B": "Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir.",
+      "C": "Yapısal olarak anormal bir protein normal yıkım yollarıyla tam parçalanamaz; nedeni genetik mutasyon veya post-translasyonel hatalardır.",
+      "E": "Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu).",
+      "D": "Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Glikojen normalde sitoplazmada granüler formda bulunur; patolojik birikimi kötü kontrollü diabetes mellitus ve glikojen depo hastalıklarında (glikojenozlar) olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Glikojen normalde sitoplazmada granüler formda bulunur; patolojik birikimi kötü kontrollü diabetes mellitus ve glikojen depo hastalıklarında (glikojenozlar) olur.",
+      "B": "Yanlış. Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir.",
+      "C": "Yanlış. Yapısal olarak anormal bir protein normal yıkım yollarıyla tam parçalanamaz; nedeni genetik mutasyon veya post-translasyonel hatalardır.",
+      "E": "Yanlış. Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu).",
+      "D": "Yanlış. Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k05-q17",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"Lipofusin (aşınma pigmenti)\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "D": "Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür.",
+      "A": "Yanlış katlanmış proteinler eritilemeyen agregatlar oluşturabilir; örnekler alkolik hiyalin (hepatositlerde) ve nörofibriler yumaklardır (Alzheimer).",
+      "C": "Aterosklerotik plakta arter duvarı sertleşir ve lümen daralır; kalsifiye kalp kapaklarında (özellikle aort ve mitral) kapak hareketi bozulur; tüberküloz lenf düğümleri neredeyse tamamen kalsifiye olabilir.",
+      "E": "Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "B": "Eksojen pigmenttir; hava kirliliği ve kömür tozundan kaynaklanır, akciğerde alveoler makrofajlarca fagosite edilir ve lenfatiklerle lenf düğümlerine taşınır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür.",
+      "A": "Yanlış. Yanlış katlanmış proteinler eritilemeyen agregatlar oluşturabilir; örnekler alkolik hiyalin (hepatositlerde) ve nörofibriler yumaklardır (Alzheimer).",
+      "C": "Yanlış. Aterosklerotik plakta arter duvarı sertleşir ve lümen daralır; kalsifiye kalp kapaklarında (özellikle aort ve mitral) kapak hareketi bozulur; tüberküloz lenf düğümleri neredeyse tamamen kalsifiye olabilir.",
+      "E": "Yanlış. Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "B": "Yanlış. Eksojen pigmenttir; hava kirliliği ve kömür tozundan kaynaklanır, akciğerde alveoler makrofajlarca fagosite edilir ve lenfatiklerle lenf düğümlerine taşınır."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -660,6 +2390,347 @@
      },
      "bilgi": [
       28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Doku incelemesinde hücreler dışında matrikste biriken maddeler tartışılmaktadır. Amiloid birikimi ve kalsiyum tuzları bu grupta sayılmaktadır. Hücre dışı birikimlere örnek aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Trigliserid",
+      "B": "Glikojen",
+      "C": "Hemosiderin",
+      "D": "Lipofusin",
+      "E": "Amiloid ve kalsiyum tuzları"
+     },
+     "dogru": "E",
+     "aciklama": "Hücre dışı birikimler amiloid, hiyalinize skar ve kalsiyum tuzlarıdır. Patolojik kalsifikasyon distrofik ve metastatik olmak üzere iki formdadır; bazıları iz bırakırken bazıları organ disfonksiyonu yapar.",
+     "sik_aciklamalari": {
+      "A": "Trigliserid hücre içi birikimdir.",
+      "B": "Glikojen hücre içi birikimdir.",
+      "C": "Hemosiderin hücre içi pigmenttir.",
+      "D": "Lipofusin hücre içi pigmenttir.",
+      "E": "Doğru. Bu derste odak patolojik kalsifikasyondur."
+     },
+     "bilgi": [
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Serum kalsiyumu normal bir hastada eski enfarkt alanında kalsifikasyon, hiperkalsemili başka bir hastada ise normal böbrek ve akciğer dokusunda yaygın kalsifikasyon saptanmıştır. Bu iki tabloyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Distrofik kalsifikasyonda hiperkalsemi şarttır",
+      "B": "Distrofik kalsifikasyonda serum kalsiyumu normaldir, birikim hasarlı dokudadır",
+      "C": "Metastatik kalsifikasyonda serum kalsiyumu normaldir",
+      "D": "Metastatik kalsifikasyon yalnızca nekrotik dokuda olur",
+      "E": "İki form arasında serum kalsiyumu açısından fark yoktur"
+     },
+     "dogru": "B",
+     "aciklama": "Distrofik kalsifikasyonda serum kalsiyumu normaldir ve birikim hasarlı dokudadır; başlangıç noktaları nekrotik mitokondrilerdir. Metastatikte hiperkalsemiyle normal dokularda yaygın birikim olur.",
+     "sik_aciklamalari": {
+      "A": "Distrofikte serum kalsiyumu normaldir.",
+      "B": "Doğru. Enfarkt ve kazeöz odaklar tipik yerleşimlerdir.",
+      "C": "Metastatikte hiperkalsemi vardır.",
+      "D": "Metastatik normal dokularda oluşur.",
+      "E": "Serum kalsiyumu iki formu ayırt eder."
+     },
+     "bilgi": [
+      28,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Hücre dışı matrikste biriken üç madde nedir?",
+     "secenekler": {
+      "A": "Amiloid, hiyalin skar, kalsiyum tuzu",
+      "B": "Trigliserid, glikojen, melanin",
+      "C": "Lipofusin, hemosiderin, karbon",
+      "D": "Russell cisimciği, damlacık",
+      "E": "Köpük hücre, ksantom"
+     },
+     "dogru": "A",
+     "aciklama": "Amiloid, hiyalinize skar ve kalsiyum tuzları hücre dışı matrikste birikir. Amiloid yanlış katlanmış protein fibrillerinin dokular arasında çökmesidir ve organ fonksiyonunu bozar. Hiyalinize skar, onarım sonrası kollajenin yoğunlaşmış halidir; kalsiyum tuzları ise distrofik veya metastatik mekanizmayla çöker.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Üçü de matrikste biriken hücre dışı maddelerdir.",
+      "B": "Bunlar hücre içi birikimlerdir.",
+      "C": "Bunlar hücre içi pigmentlerdir.",
+      "D": "Bunlar hücre içi protein birikimleridir.",
+      "E": "Bunlar lipid yüklü hücrelerdir."
+     },
+     "bilgi": [
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Patolojik kalsifikasyonun iki formunu ayıran temel ölçüt nedir?",
+     "secenekler": {
+      "A": "Her zaman hiperkalsemi vardır",
+      "B": "Her zaman doku hasarlıdır",
+      "C": "Kalsifikasyon fizyolojiktir",
+      "D": "Tek formu vardır",
+      "E": "Distrofik normal Ca, metastatik yüksek Ca"
+     },
+     "dogru": "E",
+     "aciklama": "Patolojik kalsifikasyon, dokularda anormal kalsiyum tuzu birikimidir ve iki forma ayrılır. Distrofik formda serum kalsiyumu normaldir ve birikim hasarlı dokularda olur. Metastatik formda hiperkalsemi vardır ve normal dokulara yaygın birikim olur; bazen yalnızca iz bırakır, bazen organ disfonksiyonuna yol açar.",
+     "sik_aciklamalari": {
+      "A": "Distrofik formda kalsiyum normaldir.",
+      "B": "Metastatik form normal dokularda olur.",
+      "C": "Patolojik kalsifikasyon anormal birikimdir.",
+      "D": "İki temel form vardır.",
+      "E": "Doğru. Serum kalsiyumu iki formu ayıran ilk ölçüttür."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q08",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Hücre dışı (ekstraselüler) alanda birikim gösteren maddeler ve bunların klinik patolojileri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "secenekler": {
+      "A": "Amiloid birikimi daima hücre çekirdeğinde sınırlı kalır.",
+      "B": "Ekstraselüler matrikste amorf, çözünmeyen ve beta-kırmalı tabaka yapısında fibriler protein birikimi amiloidoz tablosunu oluşturur.",
+      "C": "Hücre dışı kalsiyum çökmesi sadece canlı ve metabolik olarak aşırı aktif hücrelerin sitoplazmasında gerçekleşir.",
+      "D": "Hiyalin doku birikimi her zaman bir mantar enfeksiyonunun kesin kanıtıdır.",
+      "E": "Hücre dışı birikimler hiçbir zaman çevre dokuya bası yapmaz veya organ işlevini bozmaz."
+     },
+     "dogru": "B",
+     "aciklama": "Ekstraselüler birikimlerin prototipi amiloidozdur. Amiloidozda çeşitli prekürsör proteinler (AL, AA, Aβ, transtiretin) yanlış katlanarak beta-kırmalı (cross-beta sheet) tabaka yapısında stabil, proteolize dirençli fibriller oluşturur ve ekstraselüler doku aralıklarında birikir. Parankim hücrelerine bası yaparak atrofi ve organ yetmezliğine yol açar.",
+     "sik_aciklamalari": {
+      "A": "Amiloid hücre dışı ekstraselüler birikimdir, çekirdekte birikmez.",
+      "B": "Doğru. Amiloidoz ekstraselüler beta-kırmalı konformasyonda fibriler protein birikimidir.",
+      "C": "Kalsiyum kalsifikasyonda ekstraselüler veziküllerde ve hasarlı dokularda çöker.",
+      "D": "Hiyalin tanımlayıcı morfolojik bir terimdir (camsı pembe), mantar kanıtı değildir.",
+      "E": "Ekstraselüler birikimler bası atrofisi ve yetmezlik yapar."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q09",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Patolojik kalsifikasyonun tanımı ve genel mekanizması düşünüldüğünde, çöken kalsiyum tuzlarının temel kimyasal yapısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kalsiyum karbonat ve kalsiyum glukonat kristalleri",
+      "B": "Kemik mineraline benzer hidroksiapatit kristalleri [Ca10(PO4)6(OH)2]",
+      "C": "Kalsiyum oksalat monohidrat agregatları",
+      "D": "Saf metalik kalsiyum tabakaları",
+      "E": "Kalsiyum laktat kristalleri"
+     },
+     "dogru": "B",
+     "aciklama": "Patolojik kalsifikasyon (ister distrofik ister metastatik olsun), dokularda kalsiyum tuzlarının demir, magnezyum ve diğer minerallerle birlikte anormal çökmesidir. Çöken mineral tuzları kemik mineralizasyonundaki kristal yapıya benzer şekilde primer olarak hidroksiapatit [Ca10(PO4)6(OH)2] kristallerinden oluşur.",
+     "sik_aciklamalari": {
+      "A": "Karbonat eser miktarda bulunabilir ancak temel kristal yapı hidroksiapatittir.",
+      "B": "Doğru. Patolojik kalsifikasyondaki mineral çökeltisi hidroksiapatit kristalleridir.",
+      "C": "Kalsiyum oksalat böbrek taşlarında veya etilen glikol toksisitesinde görülür, patolojik doku kalsifikasyonunun genel formu değildir.",
+      "D": "Vücutta metalik kalsiyum bulunmaz, iyonik tuzlar şeklindedir.",
+      "E": "Laktat kristalleri doku kalsifikasyonunu oluşturmaz."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q10",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Patolojik kalsifikasyonun hücresel düzeydeki başlangıç fazında (inisyasyon/çekirdeklenme), intraselüler kalsiyum birikiminin ilk başladığı organel ile ekstraselüler kalsifikasyonun başladığı yapılar aşağıdakilerin hangisinde doğru eşleştirilmiştir?",
+     "secenekler": {
+      "A": "İntraselüler: Çekirdekçik / Ekstraselüler: Kollajen liflerinin ucu",
+      "B": "İntraselüler: Nekrotik hücrelerin mitokondrileri / Ekstraselüler: Hasarlı hücre membranlarından dökülen zar kaynaklı veziküller",
+      "C": "İntraselüler: Golgi cisimciği / Ekstraselüler: Elastik lifler",
+      "D": "İntraselüler: Serbest ribozomlar / Ekstraselüler: Fibronektin ağları",
+      "E": "İntraselüler: Peroksizomlar / Ekstraselüler: İnterstisyel proteoglikanlar"
+     },
+     "dogru": "B",
+     "aciklama": "Kalsifikasyon iki evrede gelişir: İnisyasyon (çekirdeklenme) ve Propagasyon (kristal büyümesi). İntraselüler inisyasyon, ATP sentezini kaybeden nekrotik hücrelerin MİTOKONDRİLERİNDE kalsiyum birikmesiyle başlar. Ekstraselüler inisyasyon ise hasarlanan plazma membranlarından tomurcuklanan fosfolipit zengini 'membran veziküllerinde' gerçekleşir. Membrandaki asidik fosfolipitler kalsiyumu, membran fosfatazları ise inorganik fosfatı bağlayarak kristal çekirdeğini oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Çekirdekçik kalsifikasyon çekirdeği değildir.",
+      "B": "Doğru. İntraselüler mitokondri, ekstraselüler membran vezikülleri çekirdeklenme alanıdır.",
+      "C": "Golgi ve elastik lifler primer kristal çekirdeklenme odağı değildir.",
+      "D": "Ribozomlar mineral depolamaz.",
+      "E": "Peroksizomlar oksidatif organeldir, kalsiyum çekirdeklenmesi başlatmaz."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q11",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Menenjiyom, tiroid papiller karsinomu ve seröz over karsinomu gibi tümörlerin histopatolojik incelemesinde izlenen, konsantrik tabakalanma gösteren mikroskobik distrofik kalsifikasyon odaklarına ne ad verilir?",
+     "secenekler": {
+      "A": "Psammom cisimcikleri",
+      "B": "Russell cisimcikleri",
+      "C": "Schaumann cisimcikleri",
+      "D": "Asteroid cisimcikleri",
+      "E": "Charcot-Leyden kristalleri"
+     },
+     "dogru": "A",
+     "aciklama": "Psammom cisimcikleri (Yunanca 'psammos' = kum), tek tek nekroze olan tümör hücreleri veya papillaların apeksinde kalsiyum tuzlarının konsantrik halkalar (soğan zarı gibi) şeklinde tabakalanmasıyla oluşan lameller mikroskobik kalsifikasyonlardır. Özellikle tiroid papiller karsinomu, overin seröz karsinomları ve menenjiyomlarda karakteristik distrofik kalsifikasyon bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Konsantrik lameller distrofik kalsifikasyon odakları Psammom cisimcikleridir.",
+      "B": "Russell cisimcikleri plazma hücresinde immünoglobulin globülleridir.",
+      "C": "Schaumann cisimcikleri sarkoidoz granülomlarında görülen kalsiyum/protein inklüzyonlarıdır.",
+      "D": "Asteroid cisimcikleri sarkoidozda dev hücrelerdeki yıldızsı yapılardır.",
+      "E": "Charcot-Leyden kristalleri astım ve eozinofilik inflamasyonda eozinofil kaynaklı kristallerdir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q12",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Rutin Hematoksilen-Eozin (HE) boyalı doku kesitlerinde patolojik kalsifikasyon odakları ışık mikroskobunda tipik olarak nasıl görünür?",
+     "secenekler": {
+      "A": "Açık sarı, şeffaf lipid damlacıkları şeklinde",
+      "B": "Koyu bazofilik (mavi-mor), amorf granüler veya kaba kitleler şeklinde",
+      "C": "Parlak kırmızı, lifsi demetler şeklinde",
+      "D": "Zeytin yeşili intraselüler pigmentler şeklinde",
+      "E": "Gümüş rengi refle veren metalik çubuklar şeklinde"
+     },
+     "dogru": "B",
+     "aciklama": "Kalsiyum fosfat tuzları bazik hematoksilen boyasını güçlü şekilde bağlar. Bu nedenle rutin HE boyamada patolojik kalsifikasyon odakları intraselüler veya ekstraselüler alanda KOYU BAZOFİLİK (koyu mavi-mor), düzensiz sınırlı, amorf, granüler veya kaba kümeler halinde izlenir. Von Kossa histokimyasal boyaması ile kalsiyum tuzları siyaha boyanarak teyit edilir.",
+     "sik_aciklamalari": {
+      "A": "Açık sarı/şeffaf görünüm lipidlere aittir.",
+      "B": "Doğru. HE'de kalsiyum tuzları koyu bazofilik (mavi-mor) granüler kitleler olarak görülür.",
+      "C": "Parlak kırmızı görünüm kollajen veya fibrine aittir.",
+      "D": "Zeytin yeşili pigment bilirubindir.",
+      "E": "Gümüş rengi refle yapay bir tanımdır."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q13",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "\"Hücre dışı birikimler\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Bazı maddeler hücre dışı matrikste birikir: amiloid (amiloidoz), hiyalinize skar dokusu ve kalsiyum tuzları.",
+      "A": "Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "D": "Mutant proteinin yıkımı ve eksikliğine yol açanlar kistik fibrozis (CFTR; iyon taşınması bozulur), ailesel hiperkolesterolemi (LDL reseptörü; LDL klirensi bozulur) ve Tay-Sachs'tır (heksozaminidaz α-alt birimi; GM2 gangliozid depolanması).",
+      "E": "En sık biriken lipidler trigliseridler, kolesterol/kolesteril esterler ve fosfolipidlerdir.",
+      "C": "Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Bazı maddeler hücre dışı matrikste birikir: amiloid (amiloidoz), hiyalinize skar dokusu ve kalsiyum tuzları.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Bazı maddeler hücre dışı matrikste birikir: amiloid (amiloidoz), hiyalinize skar dokusu ve kalsiyum tuzları.",
+      "A": "Yanlış. Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "D": "Yanlış. Mutant proteinin yıkımı ve eksikliğine yol açanlar kistik fibrozis (CFTR; iyon taşınması bozulur), ailesel hiperkolesterolemi (LDL reseptörü; LDL klirensi bozulur) ve Tay-Sachs'tır (heksozaminidaz α-alt birimi; GM2 gangliozid depolanması).",
+      "E": "Yanlış. En sık biriken lipidler trigliseridler, kolesterol/kolesteril esterler ve fosfolipidlerdir.",
+      "C": "Yanlış. Serbest radikal aracılı lipid peroksidasyondan kaynaklanan lipid-protein kompleksleridir; altın sarısı-kahverengi ince granüller halinde kalp, karaciğer ve beyinde görülür."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q14",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"α1-antitripsin eksikliği\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "C": "Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu).",
+      "B": "Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür.",
+      "D": "Zamanla DNA hasarı birikir, protein homeostazı bozulur ve lipofusin gibi atık pigmentler birikir.",
+      "E": "Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "C": "Yanlış. Normal endojen bir madde üretilir ancak yıkım veya sekresyon bozulmuştur (enzim eksikliği veya işlev bozukluğu).",
+      "B": "Yanlış. Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür.",
+      "D": "Yanlış. Zamanla DNA hasarı birikir, protein homeostazı bozulur ve lipofusin gibi atık pigmentler birikir.",
+      "E": "Yanlış. Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q15",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Hücre içi birikim ve kalsifikasyonun klinik önemi\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "Bazı birikimler tanıda ipucu sağlar (hemosiderin, lipofusin); bazıları doğrudan organ disfonksiyonu nedenidir (yağlı karaciğer → siroz; kalsifiye kapak → kalp yetersizliği).",
+      "E": "Yapısal olarak anormal bir protein normal yıkım yollarıyla tam parçalanamaz; nedeni genetik mutasyon veya post-translasyonel hatalardır.",
+      "D": "Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "A": "Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "C": "Serum kalsiyum düzeyi normaldir; birikim hasarlı/nekrotik dokularda olur. Başlangıç noktaları hücre içinde nekrotik hücrelerin mitokondrileri, hücre dışında hasarlı membranlardan kopan veziküllerdir; kalsiyum ve fosfat kristalleri çökerek büyür."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Bazı birikimler tanıda ipucu sağlar (hemosiderin, lipofusin); bazıları doğrudan organ disfonksiyonu nedenidir (yağlı karaciğer → siroz; kalsifiye kapak → kalp yetersizliği).",
+     "sik_aciklamalari": {
+      "B": "Doğru. Bazı birikimler tanıda ipucu sağlar (hemosiderin, lipofusin); bazıları doğrudan organ disfonksiyonu nedenidir (yağlı karaciğer → siroz; kalsifiye kapak → kalp yetersizliği).",
+      "E": "Yanlış. Yapısal olarak anormal bir protein normal yıkım yollarıyla tam parçalanamaz; nedeni genetik mutasyon veya post-translasyonel hatalardır.",
+      "D": "Yanlış. Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "A": "Yanlış. Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "C": "Yanlış. Serum kalsiyum düzeyi normaldir; birikim hasarlı/nekrotik dokularda olur. Başlangıç noktaları hücre içinde nekrotik hücrelerin mitokondrileri, hücre dışında hasarlı membranlardan kopan veziküllerdir; kalsiyum ve fosfat kristalleri çökerek büyür."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k06-q16",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"Anormal protein agregatları\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "C": "Yanlış katlanmış proteinler eritilemeyen agregatlar oluşturabilir; örnekler alkolik hiyalin (hepatositlerde) ve nörofibriler yumaklardır (Alzheimer).",
+      "A": "Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "E": "Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "D": "Hücreler bazı maddeleri anormal miktarlarda biriktirir; birikim sitoplazmada, organellerde (özellikle lizozomlar) ve çekirdekte olur.",
+      "B": "Zamanla DNA hasarı birikir, protein homeostazı bozulur ve lipofusin gibi atık pigmentler birikir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Yanlış katlanmış proteinler eritilemeyen agregatlar oluşturabilir; örnekler alkolik hiyalin (hepatositlerde) ve nörofibriler yumaklardır (Alzheimer).",
+     "sik_aciklamalari": {
+      "C": "Doğru. Yanlış katlanmış proteinler eritilemeyen agregatlar oluşturabilir; örnekler alkolik hiyalin (hepatositlerde) ve nörofibriler yumaklardır (Alzheimer).",
+      "A": "Yanlış. Büyük arterlerin intimasında düz kas ve makrofajlar içinde lipid birikir; kolesteril ester dolu makrofajlar köpük hücrelerdir; ileri lezyonda ekstraselüler kristalize kolesterol ile fibröz kapakla örtülü ateromatöz plak oluşur.",
+      "E": "Yanlış. Yanlış katlanmış α1-antitripsin hepatositlerde birikip ER stresi ve apoptoza yol açar; akciğerlerde proteaz inhibitör aktivitesinin yokluğu nötrofil elastazının kontrolsüz aktivitesine neden olur.",
+      "D": "Yanlış. Hücreler bazı maddeleri anormal miktarlarda biriktirir; birikim sitoplazmada, organellerde (özellikle lizozomlar) ve çekirdekte olur.",
+      "B": "Yanlış. Zamanla DNA hasarı birikir, protein homeostazı bozulur ve lipofusin gibi atık pigmentler birikir."
+     },
+     "bilgi": [
+      16
      ],
      "benzer_cikmis": []
     }
@@ -778,12 +2849,353 @@
       31
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q05",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aort kapağında hareket kısıtlılığına yol açan kalsifikasyon saptanan hastada serum kalsiyumu normal bulunmuştur. Bu tabloya uyan kalsifikasyon tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aort kapağında kalsifik stenoz – metastatik kalsifikasyon",
+      "B": "Böbrek interstisyumunda yaygın kalsifikasyon – distrofik kalsifikasyon",
+      "C": "Kazeöz odakta kalsifikasyon – metastatik kalsifikasyon",
+      "D": "Tüberküloz odağında kalsifikasyon – distrofik kalsifikasyon",
+      "E": "Alveol septalarında yaygın kalsifikasyon – distrofik kalsifikasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Distrofik kalsifikasyon aterosklerotik plakta sertleşme ve lümen daralması, kapaklarda hareket bozukluğu yapar. Metastatikte en sık orta çaplı arterler, böbrek interstisyumu, alveol septaları ve mide mukozası tutulur.",
+     "sik_aciklamalari": {
+      "A": "Kapak kalsifikasyonu distrofik örnektir.",
+      "B": "Yaygın interstisyel tutulum metastatiktir.",
+      "C": "Kazeöz odakta birikim distrofiktir.",
+      "D": "Doğru. Hasarlı dokuda normal serum kalsiyumuyla birikim distrofiktir.",
+      "E": "Alveol septaları metastatik yerleşimdir."
+     },
+     "bilgi": [
+      29,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q06",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Kronik böbrek yetmezliği olan bir hastada hiperkalsemiyle birlikte böbrek, akciğer ve mide mukozasında yaygın kalsifikasyon saptanmıştır. Bu tabloyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kronik böbrek yetmezliğinde yaygın doku kalsifikasyonu – metastatik kalsifikasyon",
+      "B": "Yaşlı kapakta kalsifikasyon – metastatik kalsifikasyon",
+      "C": "Hiperkalsemide kalsifikasyon hasarlı dokuyla sınırlıdır",
+      "D": "Metastatik kalsifikasyon sıklıkla semptomatiktir",
+      "E": "Distrofik kalsifikasyon çoklu organ tutulumu yapar"
+     },
+     "dogru": "A",
+     "aciklama": "Metastatik nedenler hiperparatiroidizm, kronik böbrek yetmezliği ve D vitamini fazlalığıdır; nefrokalsinoz böbrek yetmezliğine yol açabilir. Distrofik kapak kalsifikasyonu stenoz ve yetmezlik yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sekonder hiperparatiroidizmle hiperkalsemi normal dokularda birikim yapar.",
+      "B": "Kapak kalsifikasyonu distrofiktir.",
+      "C": "Metastatik normal dokularda yaygındır.",
+      "D": "Metastatik sıklıkla sessizdir.",
+      "E": "Yaygın çoklu organ tutulumu metastatiktir."
+     },
+     "bilgi": [
+      30,
+      31,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Distrofik kalsifikasyonun çekirdeklenme mekanizması ve yerleşimi nedir?",
+     "secenekler": {
+      "A": "Hiperkalsemi ve normal doku",
+      "B": "Nekrotik mitokondri, hasarlı doku",
+      "C": "PTH fazlalığı ve böbrek",
+      "D": "D vitamini ve akciğer",
+      "E": "Kemik rezorpsiyonu ve mide"
+     },
+     "dogru": "B",
+     "aciklama": "Distrofik kalsifikasyonda başlangıç noktaları nekrotik hücrelerin mitokondrileri ve hasarlı membranlardan kopan veziküllerdir. Bu çekirdekler üzerine kalsiyum ve fosfat çökerek büyür ve makroskopik birikintiler oluşturur. Enfarkt alanları, kazeöz odaklar, yaşlı kalp kapakları ve ileri aterom plakları tipik yerleşimleridir.",
+     "sik_aciklamalari": {
+      "A": "Bu metastatik kalsifikasyonun profilidir.",
+      "B": "Doğru. Ölü hücre kalıntıları kristal çekirdeği oluşturur.",
+      "C": "PTH fazlalığı metastatik nedendir.",
+      "D": "D vitamini intoksikasyonu metastatik yapar.",
+      "E": "Kemik rezorpsiyonu hiperkalsemiyle metastatik yapar."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q08",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Metastatik kalsifikasyonun nedenleri ve tipik yerleşim yerleri nedir?",
+     "secenekler": {
+      "A": "Serum Ca normal, enfarktüs",
+      "B": "Yalnızca kalp kapağı tutulur",
+      "C": "Sessizdir, hiç sorun yapmaz",
+      "D": "Hiperkalsemi, arter-böbrek-akciğer",
+      "E": "Nekrotik dokuya sınırlıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Metastatik kalsifikasyon hiperkalsemi zemininde normal dokulara olur; nedenleri primer hiperparatiroidizm, kronik böbrek yetmezliğine bağlı sekonder hiperparatiroidizm, artmış kemik rezorpsiyonu ve D vitamini fazlalığıdır. En sık orta çaplı arter duvarları, böbrek interstisyumu, akciğer alveol septaları ve mide mukozası tutulur. İleri nefrokalsinoz böbrek yetmezliğine ilerleyebilir.",
+     "sik_aciklamalari": {
+      "A": "Bu distrofik profildir.",
+      "B": "Kapak tutulumu distrofik kalsifikasyondur.",
+      "C": "İleri olgularda böbrek ve solunum yetmezliği olur.",
+      "D": "Doğru. Yüksek kalsiyum normal dokulara yaygın çöker.",
+      "E": "Nekrotik doku distrofik formun yeridir."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q09",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Distrofik ve metastatik kalsifikasyonun ayırt edilmesinde SERUM KALSİYUM DÜZEYİ ve DOKUNUN NİTELİĞİ açısından aşağıdaki karşılaştırmalardan hangisi DOĞRUDUR?",
+     "secenekler": {
+      "A": "Distrofik kalsifikasyon: Serum Ca²⁺ düzeyi normaldir, hasarlı/nekrotik dokuda gelişir / Metastatik kalsifikasyon: Serum Ca²⁺ düzeyi yüksektir (hiperkalsemi), normal dokularda gelişir.",
+      "B": "Distrofik kalsifikasyon: Serum Ca²⁺ daima çok yüksektir / Metastatik kalsifikasyon: Serum Ca²⁺ daima sıfırdır.",
+      "C": "Distrofik kalsifikasyon sadece canlı ve sağlıklı dokularda olur / Metastatik kalsifikasyon sadece nekrotik dokuda olur.",
+      "D": "Her iki tipte de serum kalsiyumu normal olmak zorundadır.",
+      "E": "Distrofik kalsifikasyon sadece kemik dokusunda, metastatik kalsifikasyon ise sadece kıkırdakta görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Patolojik kalsifikasyonun iki tipi arasındaki temel kardinal farklar:\n1. Distrofik Kalsifikasyon: Kalsiyum metabolizması ve SERUM KALSİYUM DÜZEYİ NORMALDİR. Kalsiyum, önceden ölmüş, nekroze olmuş veya ağır hasar görmüş (aterom plağı, kazeöz granülom, hasarlı aort kapağı) dokularda çöker.\n2. Metastatik Kalsifikasyon: Altta yatan bir bozukluğa bağlı HİPERKALSEMİ mevcuttur (PTH fazlalığı, malignite, D vit toksisitesi). Kalsiyum NORMAL canlı dokularda (böbrek tübülleri, akciğer alveol septaları, mide mukozası) çöker.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Distrofik: Ca normal + hasarlı doku; Metastatik: Hiperkalsemi + normal doku.",
+      "B": "Tam tersi veya tutarsız verilmiştir.",
+      "C": "Distrofik hasarlı dokuda, metastatik normal dokuda olur.",
+      "D": "Metastatik kalsifikasyonda hiperkalsemi şarttır.",
+      "E": "Her ikisi de kemik dışı yumuşak dokularda görülür."
+     },
+     "bilgi": [
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q10",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "75 yaşındaki bir hastada ileri derecede kalsifiye olmuş ve stenotik hale gelmiş aort kapak hastalığı saptanıyor. Hastanın yapılan rutin laboratuvar tetkiklerinde serum kalsiyum, fosfor ve paratiroid hormon (PTH) düzeyleri tamamen NORMAL bulunmuştur. Bu hastadaki kapak tutulumu hangi kalsifikasyon tipine örnektir?",
+     "secenekler": {
+      "A": "Distrofik kalsifikasyon",
+      "B": "Metastatik kalsifikasyon",
+      "C": "Kalsifilaksi",
+      "D": "Fizyolojik ossifikasyon",
+      "E": "Tümör kalsinozisi"
+     },
+     "dogru": "A",
+     "aciklama": "Yaşlı popülasyonda sık görülen kalsifik aort stenozunda, mekanik yıpranma ve endotel hasarına uğrayan aort kapak küspislerinde kalsiyum tuzları çöker. Serum kalsiyum ve PTH düzeyleri tamamen normaldir. Bu nedenle yaşlılık kapak dejenerasyonu ve aterosklerotik plak kalsifikasyonu klasik DİSTROFİK kalsifikasyon örnekleridir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Normal serum Ca düzeyi + hasarlı/yıpranmış kapak dokusu distrofik kalsifikasyondur.",
+      "B": "Metastatik kalsifikasyonda hiperkalsemi bulunmalıdır.",
+      "C": "Kalsifilaksi son dönem böbrek yetmezliğinde damar kalsifikasyonu ve iskemik nekrozdur.",
+      "D": "Kapakta fizyolojik kemikleşme olmaz.",
+      "E": "Tümör kalsinozisi periartiküler kalsifikasyonla giden nadir bir tablodur."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q11",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Primer hiperparatiroidizm veya multipl miyelom gibi malignitelerin kemik metastazlarına bağlı olarak gelişen ağır HİPERKALSEMİ tablosunda, metastatik kalsifikasyonun özellikle MİDE MUKOZASI, AKCİĞER ALVEOL SEPTALARI ve BÖBREK İNTERSTİSYUMUNDA yoğunlaşmasının temel biyokimyasal/fizyolojik nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bu dokuların asit salgılaması veya atması nedeniyle doku içi lokal pH'larının nispeten daha ALKALİ olması",
+      "B": "Bu dokularda kalsiyum pompalarının genetik olarak bulunmaması",
+      "C": "Bu dokuların yüksek oranda melanin içermesi",
+      "D": "Bu dokularda kan akımının tamamen sıfır olması",
+      "E": "Bu dokuların sadece nötrofil lökositlerden oluşması"
+     },
+     "dogru": "A",
+     "aciklama": "Metastatik kalsifikasyon tüm vücuda yayılabilmekle birlikte özellikle mide, böbrek ve akciğerleri tercih eder. Bu dokuların ortak fizyolojik özelliği asit sekresyonu veya asit atılımı yapmalarıdır:\n- Mide paryetal hücreleri lümene HCl salgılar, doku tarafında geçici alkali ortam (alkali tide) oluşur.\n- Böbrek tübülleri idrara H+ atar.\n- Akciğerler karbondioksiti (karbonik asit) solunumla dışarı verir.\nAsit kaybeden bu dokularda hücre içi/interstisyel kompartıman rölatif olarak daha ALKALİ hale gelir. Kalsiyum tuzlarının çözünürlüğü alkali pH'ta belirgin derecede düşer ve presipite olarak (çökerek) metastatik kalsifikasyona yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Asit kaybı nedeniyle oluşan rölatif alkaloz kalsiyum tuzlarının çökmesini kolaylaştırır.",
+      "B": "Kalsiyum pompaları tüm ökaryotik hücrelerde vardır.",
+      "C": "Bu dokularda melanin bulunmaz.",
+      "D": "Böbrek ve akciğer en yüksek kan akımına sahip organlardır.",
+      "E": "Parenkimal epitel organlarıdır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q12",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki klinik tablolardan hangisi HİPERKALSEMİ ve METASTATİK kalsifikasyon gelişimine yol açabilen etiyolojik nedenlerden biri DEĞİLDİR?",
+     "secenekler": {
+      "A": "Paratiroid adenomuna bağlı primer hiperparatiroidizm",
+      "B": "Akciğer skuamöz hücreli karsinomunun PTHrP (paratiroid hormon ilişkili protein) salgılaması",
+      "C": "Aşırı D vitamini intoksikasyonu ve sarkoidoz (makrofajik 1-alfa hidroksilaz artışı)",
+      "D": "İleri evre meme karsinomunun yaygın osteolitik kemik metastazları",
+      "E": "Ağır demir eksikliği anemisi"
+     },
+     "dogru": "E",
+     "aciklama": "Hiperkalsemi nedenleri:\n1. Paratiroid hormonu artışı (primer hiperparatiroidizm, ektopik PTHrP üretimi).\n2. Kemik rezorpsiyon artışı (osteolitik kemik metastazları, multipl miyelom, immobilizasyon, Paget hastalığı).\n3. D vitamini ilişkili (intoksikasyon, granülomatöz hastalıklarda [sarkoidoz] makrofajların kontrolsüz kalsitriol sentezlemesi).\n4. Böbrek yetmezliğine bağlı sekonder hiperparatiroidizm.\nDemir eksikliği anemisinde eritrosit ve ferritin azalır; kalsiyum metabolizması ve hiperkalsemi ile hiçbir ilişkisi yoktur.",
+     "sik_aciklamalari": {
+      "A": "PTH artışı hiperkalsemi yapar.",
+      "B": "PTHrP salınımı humoral hiperkalsemi yapar.",
+      "C": "D vitamini ve sarkoidoz bağırsaktan kalsiyum emilimini artırır.",
+      "D": "Osteolitik metastazlar kemiği yıkarak kalsiyumu kana döker.",
+      "E": "Doğru (neden değildir). Demir eksikliği anemisi kalsifikasyon veya hiperkalsemi yapmaz."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q13",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Eski bir primer akciğer tüberkülozu odağının (Ghon odağı) ve mediastinal lenf düğümlerinin akciğer grafisinde radyoopak 'kireçlenmiş taş' benzeri kalsifiye nodüller şeklinde görülmesi hangi tip patolojik kalsifikasyona örnektir?",
+     "secenekler": {
+      "A": "Distrofik kalsifikasyon",
+      "B": "Metastatik kalsifikasyon",
+      "C": "Kalsifilaksi",
+      "D": "Amiloidoz",
+      "E": "Antrakosis"
+     },
+     "dogru": "A",
+     "aciklama": "Tüberküloz lezyonlarında gelişen kazeöz nekroz alanları iyileşirken kalsiyum tuzları nekrotik peynirimsi detritüs üzerinde çöker. Bu esnada hastanın serum kalsiyum düzeyi tamamen normaldir. Nekrotik granülomatöz odakta kalsiyum birikmesi klasik bir DİSTROFİK kalsifikasyondur (Ghon kompleksi / Ranke kompleksi).",
+     "sik_aciklamalari": {
+      "A": "Doğru. Nekrotik tüberküloz granülomunda normal Ca düzeyinde gelişen kireçlenme distrofik kalsifikasyondur.",
+      "B": "Metastatik kalsifikasyon hiperkalsemi eşliğinde normal dokuda olur.",
+      "C": "Kalsifilaksi renal üremik arteriyolopatidir.",
+      "D": "Amiloidoz protein birikimidir.",
+      "E": "Antrakosis karbon pigmentidir, radyoopak kireç taşı oluşturmaz."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q14",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "\"Kolesterol ve kolesteril ester birikimi\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir.",
+      "A": "Hiperkalsemi eşliğinde normal dokularda oluşur; nedenleri primer hiperparatiroidizm (PTH fazlalığı), sekonder hiperparatiroidizm (kronik böbrek yetmezliği), artmış kemik rezorpsiyonu (Paget, kemik metastazları, tümör lizis sendromu) ve D vitamini fazlalığıdır (intoksikasyon, sarkoidoz).",
+      "D": "Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "E": "Bazı birikimler tanıda ipucu sağlar (hemosiderin, lipofusin); bazıları doğrudan organ disfonksiyonu nedenidir (yağlı karaciğer → siroz; kalsifiye kapak → kalp yetersizliği).",
+      "B": "Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir.",
+      "A": "Yanlış. Hiperkalsemi eşliğinde normal dokularda oluşur; nedenleri primer hiperparatiroidizm (PTH fazlalığı), sekonder hiperparatiroidizm (kronik böbrek yetmezliği), artmış kemik rezorpsiyonu (Paget, kemik metastazları, tümör lizis sendromu) ve D vitamini fazlalığıdır (intoksikasyon, sarkoidoz).",
+      "D": "Yanlış. Makroskopide karaciğer büyümüş, sarımsı ve parlak, kesit yüzeyi yağlıdır; mikroskopide sitoplazmada yumuşak yuvarlak lipid vakuolleri zamanla birleşerek büyük yağ kistleri oluşturur.",
+      "E": "Yanlış. Bazı birikimler tanıda ipucu sağlar (hemosiderin, lipofusin); bazıları doğrudan organ disfonksiyonu nedenidir (yağlı karaciğer → siroz; kalsifiye kapak → kalp yetersizliği).",
+      "B": "Yanlış. Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q15",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Distrofik kalsifikasyon: tanım ve mekanizma\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Serum kalsiyum düzeyi normaldir; birikim hasarlı/nekrotik dokularda olur. Başlangıç noktaları hücre içinde nekrotik hücrelerin mitokondrileri, hücre dışında hasarlı membranlardan kopan veziküllerdir; kalsiyum ve fosfat kristalleri çökerek büyür.",
+      "D": "Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir.",
+      "C": "Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+      "B": "Nefrotik sendromda glomerülden aşırı protein kaçağı olur; proksimal tübül hücreleri proteinleri endositozla geri emer ve sitoplazmada eozinofilik damlacıklar oluşur.",
+      "E": "Glikojen birikimi PAS pozitif, vakuole benzer boşluklar şeklinde görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Serum kalsiyum düzeyi normaldir; birikim hasarlı/nekrotik dokularda olur. Başlangıç noktaları hücre içinde nekrotik hücrelerin mitokondrileri, hücre dışında hasarlı membranlardan kopan veziküllerdir; kalsiyum ve fosfat kristalleri çökerek büyür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Serum kalsiyum düzeyi normaldir; birikim hasarlı/nekrotik dokularda olur. Başlangıç noktaları hücre içinde nekrotik hücrelerin mitokondrileri, hücre dışında hasarlı membranlardan kopan veziküllerdir; kalsiyum ve fosfat kristalleri çökerek büyür.",
+      "D": "Yanlış. Kolesterol normalde hücre membranı için gereklidir ve sıkı regüle edilir; patolojik durumlarda birikimi belirginleşir.",
+      "C": "Yanlış. Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+      "B": "Yanlış. Nefrotik sendromda glomerülden aşırı protein kaçağı olur; proksimal tübül hücreleri proteinleri endositozla geri emer ve sitoplazmada eozinofilik damlacıklar oluşur.",
+      "E": "Yanlış. Glikojen birikimi PAS pozitif, vakuole benzer boşluklar şeklinde görülür."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q16",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Steatoz (yağlı değişim) tanımı ve yerleşimi\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür.",
+      "C": "Özgül hidrolaz enzim eksikliğinde kısmen parçalanmış ürünler lizozomda birikir.",
+      "B": "Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+      "D": "Nedenler alkol, obezite ve tip 2 diyabet, protein-kalori yetersizliği, hipoksi, toksin ve ilaçlardır; patogenezde serbest yağ asidi alımı ve trigliserid sentezi artar, lipoprotein paketlenmesi/sekresyonu azalır.",
+      "E": "Deri ve tendonlarda makrofajlarda kolesterol birikerek sarımsı nodül ve plaklar oluşur; nedeni hiperlipidemi ve hiperkolesterolemidir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Parankimal hücrelerde trigliserid birikimidir; en sık lipid metabolizmasının merkezi olan karaciğerde, ayrıca kalp ve iskelet kası ile böbrek tübül epitelinde görülür.",
+      "C": "Yanlış. Özgül hidrolaz enzim eksikliğinde kısmen parçalanmış ürünler lizozomda birikir.",
+      "B": "Yanlış. Hücre, parçalayamadığı veya taşıyamadığı yabancı maddeyi alır; genellikle lizozomlarda veya makrofajlarda birikir.",
+      "D": "Yanlış. Nedenler alkol, obezite ve tip 2 diyabet, protein-kalori yetersizliği, hipoksi, toksin ve ilaçlardır; patogenezde serbest yağ asidi alımı ve trigliserid sentezi artar, lipoprotein paketlenmesi/sekresyonu azalır.",
+      "E": "Yanlış. Deri ve tendonlarda makrofajlarda kolesterol birikerek sarımsı nodül ve plaklar oluşur; nedeni hiperlipidemi ve hiperkolesterolemidir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar-k07-q17",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Melanin\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur.",
+      "D": "Yapısal olarak anormal bir protein normal yıkım yollarıyla tam parçalanamaz; nedeni genetik mutasyon veya post-translasyonel hatalardır.",
+      "C": "Bazı maddeler hücre dışı matrikste birikir: amiloid (amiloidoz), hiyalinize skar dokusu ve kalsiyum tuzları.",
+      "E": "En sık biriken lipidler trigliseridler, kolesterol/kolesteril esterler ve fosfolipidlerdir.",
+      "A": "Deri ve tendonlarda makrofajlarda kolesterol birikerek sarımsı nodül ve plaklar oluşur; nedeni hiperlipidemi ve hiperkolesterolemidir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Endojen kahverengi-siyah pigmenttir; melanositlerce üretilir, UV ışınlarına karşı koruyucu bariyer oluşturur ve bazal keratinositler ile dermal makrofajlarda bulunur.",
+      "D": "Yanlış. Yapısal olarak anormal bir protein normal yıkım yollarıyla tam parçalanamaz; nedeni genetik mutasyon veya post-translasyonel hatalardır.",
+      "C": "Yanlış. Bazı maddeler hücre dışı matrikste birikir: amiloid (amiloidoz), hiyalinize skar dokusu ve kalsiyum tuzları.",
+      "E": "Yanlış. En sık biriken lipidler trigliseridler, kolesterol/kolesteril esterler ve fosfolipidlerdir.",
+      "A": "Yanlış. Deri ve tendonlarda makrofajlarda kolesterol birikerek sarımsı nodül ve plaklar oluşur; nedeni hiperlipidemi ve hiperkolesterolemidir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 25,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:54:41"
+ ]
 }

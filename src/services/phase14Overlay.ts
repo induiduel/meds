@@ -94,6 +94,9 @@ export function applyPhase14Overlay<T extends Record<string, any>>(list: T[]): T
       committeeId: normalizeKurul(p.kurul_adi) || q.committeeId,
       discipline: p.ders_adi || q.discipline,
       topic: p.konu_adi || q.topic,
+      sik_analizi: p.sik_analizi || q.sik_analizi,
+      cevap_gerekcesi: p.cevap_gerekcesi || q.cevap_gerekcesi,
+      referans_kaynaklar: p.YZV?.referans_literatur ? [p.YZV.referans_literatur] : q.referans_kaynaklar,
       phase14Original: q.phase14Original || {
         stem: src.soru_koku, options: Object.entries(src.secenekler || {}).map(([k, v]) => ({ key: k.toUpperCase(), text: v })),
         explanation: src.aciklama, correctAnswer: src.dogru_secenek, committeeId: src.kurul_adi, discipline: src.ders_adi, topic: src.konu_adi,

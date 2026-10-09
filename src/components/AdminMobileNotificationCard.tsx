@@ -38,6 +38,17 @@ interface AdminMobileNotificationCardProps {
   onOpenQuestion?: (questionId: string) => void;
 }
 
+/** Öğren bildirimi: kayıttaki tam adresten (/ogren/<deste>?adim&hedef) bu sitenin yolunu çıkarır */
+const learnPath = (url?: string): string | null => {
+  if (!url) return null;
+  try {
+    const u = new URL(url, window.location.origin);
+    return u.pathname.startsWith('/ogren/') ? `${u.pathname}${u.search}` : null;
+  } catch {
+    return null;
+  }
+};
+
 export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardProps> = ({
   onClose,
   onOpenQuestion
@@ -596,7 +607,16 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
                   </p>
                 </div>
 
-                {notif.questionId && onOpenQuestion && (
+                {learnPath(notif.url) ? (
+                  <a
+                    href={learnPath(notif.url)!}
+                    className="shrink-0 bg-accent-soft hover:bg-accent hover:text-white text-accent text-[11px] font-bold px-2 py-1 rounded flex items-center gap-1 cursor-pointer transition-colors"
+                    title="Derste bildirilen yere git"
+                  >
+                    <span>Derste gör</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                ) : notif.questionId && onOpenQuestion && (
                   <button
                     onClick={() => onOpenQuestion(notif.questionId)}
                     className="shrink-0 bg-accent-soft hover:bg-accent hover:text-white text-accent text-[11px] font-bold px-2 py-1 rounded flex items-center gap-1 cursor-pointer transition-colors"

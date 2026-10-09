@@ -6,6 +6,7 @@
  "konu": "Abortus",
  "ogretim_uyesi": "Dr. Öğr. Üyesi Hilal Ezgi Türkmen",
  "tarih": "2026-10-15",
+ "soru_sayisi": 105,
  "kazanimlar": [
   {
    "no": 1,
@@ -87,6 +88,113 @@
      "bilgi": [
       2,
       6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "10 haftalık ve 16 haftalık iki gebelik kaybı sınıflandırılıyor. Hafta ve ağırlık sınırına göre doğru adlandırma hangisidir?",
+     "secenekler": {
+      "A": "10. haftada gebelik kaybı erken abortus, 16. haftadaki kayıp geç abortus olarak adlandırılır; sınır ilk 20 hafta ve 500 gramdır",
+      "B": "Abortus 28. haftaya kadar olur",
+      "C": "Ağırlık sınırı 1000 gramdır",
+      "D": "Erken-geç ayrımı 20. haftadadır",
+      "E": "12. hafta geç abortustur"
+     },
+     "dogru": "A",
+     "aciklama": "Abortus ilk 20 haftada <500 g ürünün atılmasıdır; ilk 12 hafta erken, 13-20. hafta geç abortustur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: hafta-ağırlık sınırları ve erken-geç eşiği tamdır.",
+      "B": "Sınır 20 haftadır.",
+      "C": "Sınır 500 gramdır.",
+      "D": "Eşik 12. haftadır.",
+      "E": "12. hafta erken dönemin sonudur."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "22 haftalık 600 gramlık kayıp ile 8 haftalık kayıp karşılaştırılıyor. Sınır kavramı ve etiyolojik beklenti hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Erken ve geç abortus etiyolojisi aynıdır",
+      "B": "20. hafta sonrası kayıp abortustur",
+      "C": "22 haftalık 600 gramlık kayıp abortus değil doğum sınırına girer; ilk 12 haftadaki kayıplarda kromozomal nedenler, 13-20. haftada maternal-anatomik nedenler öne çıkar",
+      "D": "500 gram üstü abortustur",
+      "E": "Erken kayıpta anatomik neden baskındır"
+     },
+     "dogru": "C",
+     "aciklama": "Erken kayıplarda kromozomal, geç kayıplarda maternal-anatomik nedenler öne çıkar; tanım sınırı parite-doğum kavramlarıyla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Erkende genetik, geçte maternal-anatomik öne çıkar.",
+      "B": "20. hafta sonrası doğumdur.",
+      "C": "Doğru: sınır uygulaması ve etiyoloji kayması birlikte doğru.",
+      "D": "500 gram üstü doğumdur.",
+      "E": "Erkende kromozomal baskındır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Abortus tanımı ve erken-geç ayrımı nedir?",
+     "secenekler": {
+      "A": "Abortus 24. haftaya kadar tüm kayıplardır",
+      "B": "Ağırlık sınırı 1000 gramdır",
+      "C": "Abortus 20 hafta öncesi 500 gram altı ürünün atılmasıdır",
+      "D": "Erken abortus 20. haftaya kadardır",
+      "E": "Geç abortus 3. trimesterdir"
+     },
+     "dogru": "C",
+     "aciklama": "Abortus ilk 20 haftada, 500 gramdan küçük embriyo-fetüs ve eklerinin tamamının veya bir kısmının uterus dışına atılmasıdır. İlk 12 hafta erken (1. trimester), 13-20. hafta geç (2. trimester) abortustur.",
+     "sik_aciklamalari": {
+      "A": "Sınır ilk 20 gebelik haftasıdır.",
+      "B": "Sınır 500 gramdan küçük ürünlerdir.",
+      "C": "Doğru: hafta ve ağırlık sınırları birlikte doğru verilmiştir.",
+      "D": "Erken abortus ilk 12 haftadır.",
+      "E": "Geç abortus 13-20. haftalardır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Abortus tipleri kaça ayrılır ve neye göre ayrılır?",
+     "secenekler": {
+      "A": "Rekürren abortus tip sayılmaz",
+      "B": "Üç abortus tipi vardır",
+      "C": "Tipler yalnızca haftaya göre ayrılır",
+      "D": "Missed abortus tip değildir",
+      "E": "Altı abortus tipi serviks ve doku durumuna göre ayrılır"
+     },
+     "dogru": "E",
+     "aciklama": "Abortus tipleri imminens, insipiens, inkomplet, komplet, missed ve rekürren olmak üzere altıdır. Tanı ve yönetim bu tiplerin serviks açıklığı, doku atılımı ve ultrason bulgularına göre ayrımına dayanır.",
+     "sik_aciklamalari": {
+      "A": "Rekürren abortus altıncı tiptir.",
+      "B": "Altı tip tanımlanır.",
+      "C": "Serviks açıklığı ve doku atılımı belirleyicidir.",
+      "D": "Missed abortus tiplerdendir.",
+      "E": "Doğru: altı tip ve ayrım ölçütleri doğru verilmiştir."
+     },
+     "bilgi": [
+      13
      ],
      "benzer_cikmis": []
     }
@@ -175,6 +283,112 @@
       4
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Halk sağlığı dersinde abortus sıklığı anlatılıyor. Toplum ve klinik tanınan gebelik ayrımıyla erken kayıpların genetiği soruluyor. Hangi veri bütünü doğrudur?",
+     "secenekler": {
+      "A": "Abortus tüm gebeliklerin %1'idir",
+      "B": "Spontan düşüklerin çoğu ikinci trimesterdedir",
+      "C": "Erken kayıplarda genetik rol küçüktür",
+      "D": "Tanınan gebelikte insidans %50'dir",
+      "E": "Toplum taramasında tüm gebeliklerin %15-20'si, klinik tanınanların %10-12'si abortusla sonlanır; spontan düşüklerin %80'i ilk trimesterde ve bunların %50'si kromozom anomalilidir"
+     },
+     "dogru": "E",
+     "aciklama": "Tüm gebeliklerin %15-20'si, tanınanların %10-12'si abortusla sonlanır; spontanların %80'i ilk trimesterde, bunların %50'si kromozomaldir.",
+     "sik_aciklamalari": {
+      "A": "%15-20'dir.",
+      "B": "%80'i ilk trimesterdedir.",
+      "C": "%50'si kromozomaldır.",
+      "D": "%10-12'dir.",
+      "E": "Doğru: üç insidans verisi birlikte doğru."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "6 haftalık ve 18 haftalık iki gebenin düşük riski karşılaştırılıyor. Riskin zaman eğrisi ve genetik payın değişimi hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Risk 20. haftada en yüksektir",
+      "B": "Abortus riski ilk 8 haftada en yüksektir ve 8. haftadan sonra giderek azalır; genetik bozukluğa bağlı düşüklerin payı da gebelik ilerledikçe düşer",
+      "C": "Risk gebelik boyunca sabittir",
+      "D": "Geç kayıplarda genetik pay artar",
+      "E": "8. haftadan sonra risk artar"
+     },
+     "dogru": "B",
+     "aciklama": "Risk ilk 8 haftada en yüksek, sonra azalır; ilerleyen gebelikte genetik düşükler de azalır; erken takip bu döneme odaklanır.",
+     "sik_aciklamalari": {
+      "A": "En yüksek ilk 8 haftadadır.",
+      "B": "Doğru: risk eğrisi ve genetik payın azalması birlikte doğru.",
+      "C": "Zamanla azalır.",
+      "D": "Genetik pay azalır.",
+      "E": "Azalır."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Abortus insidansı ve en yüksek risk dönemi nedir?",
+     "secenekler": {
+      "A": "Abortus tüm gebeliklerin %5'idir",
+      "B": "Gebeliklerin %15-20'si düşer; risk ilk 8 haftada en yüksektir",
+      "C": "Düşüklerin çoğu ikinci trimesterdedir",
+      "D": "Risk gebelikle birlikte artar",
+      "E": "Klinik gebeliklerin yarısı düşer"
+     },
+     "dogru": "B",
+     "aciklama": "Tüm gebeliklerin %15-20'si, klinik gebeliklerin %10-12'si abortusla sonlanır; spontan düşüklerin %80'i ilk trimesterdedir ve bunların %50'si kromozom anomalilidir. Risk ilk 8 haftada en yüksektir, sonra giderek azalır.",
+     "sik_aciklamalari": {
+      "A": "Tüm gebeliklerin %15-20'si abortusla sonlanır.",
+      "B": "Doğru: insidans ve risk dönemi birlikte doğru verilmiştir.",
+      "C": "Spontan düşüklerin %80'i ilk trimesterdedir.",
+      "D": "8. haftadan sonra risk giderek azalır.",
+      "E": "Klinik gebeliklerin %10-12'si abortusla sonlanır."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Genetik nedenli düşüklerin trimester dağılımı nasıldır?",
+     "secenekler": {
+      "A": "Genetik düşükler gebelikle artar",
+      "B": "İlk trimesterde anomali %30'dur",
+      "C": "İkinci trimesterde anomali %70'tir",
+      "D": "Genetik nedenli düşükler erken dönemde baskındır ve zamanla azalır",
+      "E": "Trimesterler arası fark yoktur"
+     },
+     "dogru": "D",
+     "aciklama": "Gebelik ilerledikçe genetik bozukluklara bağlı düşükler azalır. Kromozomal anomaliler ilk trimester abortuslarında %70, ikinci trimesterde %30 saptanır; bu dağılım erken kayıplarda genetik nedenlerin baskınlığını gösterir.",
+     "sik_aciklamalari": {
+      "A": "Gebelik ilerledikçe genetik düşükler azalır.",
+      "B": "İlk trimester abortuslarında anomali %70'tir.",
+      "C": "İkinci trimesterde %30'dur.",
+      "D": "Doğru: trimester dağılımı ve eğilim birlikte doğru verilmiştir.",
+      "E": "%70'e %30 belirgin fark vardır."
+     },
+     "bilgi": [
+      4,
+      6
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -258,6 +472,112 @@
      },
      "bilgi": [
       8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "İlk prenatal vizitte risk faktörleri sorgulanıyor: sigara, kafein, önceki kayıplar ve diyabet mevcut. Hangi değerlendirme doğrudur?",
+     "secenekler": {
+      "A": "Sigara abortus riskini azaltır",
+      "B": "Ölü doğum öyküsü koruyucudur",
+      "C": "Diyabet risk faktörü değildir",
+      "D": "Sigara içen, aşırı kafein alan, EPL ve ölü doğum öykülü, diyabetik hastada abortus riski artmıştır; yardımcı üreme ve vajinal kanama da riski artırır",
+      "E": "Kafein riski etkilemez"
+     },
+     "dogru": "D",
+     "aciklama": "Sigara, alkol, aşırı kafein, Afrika köken, EPL ve ölü doğum öyküsü, diyabet, yardımcı üreme ve vajinal kanama risk faktörüdür.",
+     "sik_aciklamalari": {
+      "A": "Sigara artırır.",
+      "B": "Öykü riski artırır.",
+      "C": "Diyabet artırır.",
+      "D": "Doğru: faktör listesi tamdır.",
+      "E": "Aşırı kafein artırır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "EPL ve ölü doğum öykülü, güncel vajinal kanamalı gebenin riski tartışılıyor. Hangi yorum doğrudur?",
+     "secenekler": {
+      "A": "Daha önce erken gebelik kaybı ve ölü doğum yapmış, ilk trimesterde vajinal kanaması olan gebenin riski artmıştır; Afrika köken de risk faktörü olarak tanımlanır",
+      "B": "Vajinal kanama riski azaltır",
+      "C": "EPL öyküsü riski değiştirmez",
+      "D": "Etnik köken risk listesinde yoktur",
+      "E": "Yardımcı üreme riski azaltır"
+     },
+     "dogru": "A",
+     "aciklama": "Öyküsel iki güçlü faktör EPL geçirmiş olmak ve ölü doğumdur; vajinal kanama tıbbi komplikasyon olarak riski artırır; etnik köken de listede yer alır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: öyküsel ve güncel risk bileşimi tamdır.",
+      "B": "Kanama artırır.",
+      "C": "EPL güçlü risk faktörüdür.",
+      "D": "Afrika köken listededir.",
+      "E": "Yardımcı üreme artırır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Abortusun davranışsal ve öyküsel risk faktörleri nelerdir?",
+     "secenekler": {
+      "A": "Sigara, alkol, önceki kayıp ve ileri anne yaşı riski artırır",
+      "B": "Sigara riski azaltır",
+      "C": "Önceki kayıp koruyucudur",
+      "D": "Anne yaşı anomaliyi azaltır",
+      "E": "Kafein risksizdir"
+     },
+     "dogru": "A",
+     "aciklama": "Risk faktörleri sigara, alkol, aşırı kafein, Afrika köken, önceki erken kayıp ve ölü doğum öyküsü, diyabet, yardımcı üreme teknikleri ve vajinal kanamadır. Anne yaşı arttıkça kromozomal anomali sıklığı artar.",
+     "sik_aciklamalari": {
+      "A": "Doğru: davranışsal, öyküsel ve yaş faktörleri birlikte doğru verilmiştir.",
+      "B": "Sigara risk faktörlerindendir.",
+      "C": "Önceki erken kayıp ve ölü doğum riski artırır.",
+      "D": "Anne yaşı arttıkça anomali sıklığı artar.",
+      "E": "Aşırı kafein alımı risk faktörüdür."
+     },
+     "bilgi": [
+      5,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kontrolsüz diyabeti ve sistemik lupus eritematozusu olan bir gebenin abortus riski değerlendirilirken, aşağıdaki maternal kronik ve çevresel risk kümelerinden hangisi birlikte doğru verilmiştir?",
+     "secenekler": {
+      "A": "Diyabet riski azaltır",
+      "B": "SLE abortusla ilişkisizdir",
+      "C": "Kronik hastalıklar ve radyasyon abortus riskini artırır",
+      "D": "Radyasyon güvenli sınırlardadır",
+      "E": "Tiroid bozukluğu koruyucudur"
+     },
+     "dogru": "C",
+     "aciklama": "Kontrolsüz diyabette hiperglisemi embriyonik organogenez sırasında oksidatif stres ve yolk sak vaskülopatisine yol açarak erken gebelik kaybını artırır. SLE ve antifosfolipid antikor varlığında desidual damarlarda tromboz ve plasental yetmezlik gelişir, bu da abortus ve geç fetal kayıp riskini yükseltir. Tiroid disfonksiyonu ve çölyak gibi kronik hastalıklarda hormonal ve beslenme eksikliklerine bağlı implantasyon kusurları görülür. 5 rad üzerindeki iyonizan radyasyon ve kemoterapi ise oosit DNA hasarı ve hücre bölünmesi arresti yaparak gebelik kaybına neden olur.",
+     "sik_aciklamalari": {
+      "A": "Diyabet abortusla ilişkilidir.",
+      "B": "SLE maternal kronik nedenlerdendir.",
+      "C": "Doğru: kronik ve çevresel neden grupları birlikte doğru verilmiştir.",
+      "D": "5 rad üstü radyasyon maternal nedendir.",
+      "E": "Tiroid bozuklukları risk grubundadır."
+     },
+     "bilgi": [
+      9,
+      12
      ],
      "benzer_cikmis": []
     }
@@ -350,6 +670,115 @@
       6,
       7,
       8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Düşük materyali sitogenetiği yorumlanıyor: ilk trimester kaybında oran, en sık anomali ve trizomi soruluyor. Hangi yanıt doğrudur?",
+     "secenekler": {
+      "A": "İlk trimesterde kromozomal oran %30'dur",
+      "B": "En sık anomali trizomi 21'dir",
+      "C": "İlk trimester abortuslarında kromozomal anomali %70, ikincide %30'dur; anomalilerde en sık 45,X0, trizomilerde trizomi 16 görülür; materyallerde en sık karyotip normaldir",
+      "D": "Trizomi 16 abortusta görülmez",
+      "E": "En sık karyotip 45,X0'dır"
+     },
+     "dogru": "C",
+     "aciklama": "Kromozomal oran ilk trimesterde %70, ikincide %30; en sık anomali 45,X0, trizomilerden trizomi 16; en sık karyotip normaldir.",
+     "sik_aciklamalari": {
+      "A": "İlk trimesterde %70'tir.",
+      "B": "En sık 45,X0'dır.",
+      "C": "Doğru: oranlar ve sıklık sıralaması tamdır.",
+      "D": "Trizomilerden en sık 16'dır.",
+      "E": "En sık normal karyotiptir."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "İleri anne yaşlı gebenin kaybında sitogenetik beklenirken hiç görülmeyen trizomiler soruluyor. Hangi bilgi doğrudur?",
+     "secenekler": {
+      "A": "Trizomi 1 abortusta sıktır",
+      "B": "Anne yaşı anomaliyi azaltır",
+      "C": "İleri yaş genetik danışmada önemsizdir",
+      "D": "Erken materyal incelemesi verimsizdir",
+      "E": "42 yaşındaki gebenin kaybında kromozomal risk artmıştır; trizomi 1, 3 ve 19 abort materyallerinde hiç görülmez; bu trizomilerin yokluğu laboratuvarın ayırt edici bilgisidir"
+     },
+     "dogru": "E",
+     "aciklama": "Trizomi 1,3,19 abort materyalinde hiç görülmez; anne yaşı arttıkça anomali artar; düşük incelemesi erken kayıpta daha verimlidir.",
+     "sik_aciklamalari": {
+      "A": "Hiç görülmezler.",
+      "B": "Yaşla artar.",
+      "C": "Ayrı risk etmenidir.",
+      "D": "Erken kayıpta verim yüksektir.",
+      "E": "Doğru: yaş etkisi ve hiç görülmeyenler birlikte doğru."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Abort materyallerinde en sık kromozom anomalileri hangileridir?",
+     "secenekler": {
+      "A": "En sık anomali trizomi 21'dir",
+      "B": "En sık anomali 45,X0, trizomilerde trizomi 16'dır",
+      "C": "Trizomi 1 sık görülür",
+      "D": "En sık karyotip trizomidir",
+      "E": "Trizomi 16 hiç görülmez"
+     },
+     "dogru": "B",
+     "aciklama": "Abort materyallerinde en sık karyotip normal karyotiptir; en sık anomali 45,X0 (Turner), trizomilerde en sık trizomi 16'dır. Trizomi 1, 3 ve 19 abort materyallerinde hiç görülmez.",
+     "sik_aciklamalari": {
+      "A": "En sık kromozom anomalisi 45,X0'dır.",
+      "B": "Doğru: en sık anomali ve trizomi birlikte doğru verilmiştir.",
+      "C": "Trizomi 1, 3 ve 19 hiç görülmez.",
+      "D": "En sık karyotip normal karyotiptir.",
+      "E": "Trizomilerden en sık olanı trizomi 16'dır."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": [
+      "80ab29504d2f"
+     ]
+    },
+    {
+     "id": "k1-61-abortus-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Erken kayıplarda genetik baskınlık ve anatomik nedenler nelerdir?",
+     "secenekler": {
+      "A": "Anomali oranı ilk trimesterde düşüktür",
+      "B": "Asherman koruyucudur",
+      "C": "Leiomiyom kesin nedendir",
+      "D": "Erken kayıplarda anomali baskındır; Asherman anatomik nedendir",
+      "E": "Anatomik neden yoktur"
+     },
+     "dogru": "D",
+     "aciklama": "Spontan düşüklerin %50'si kromozom anomalilidir ve ilk trimester kayıplarının %70'inde anomali saptanır. İntrauterin sineşi (Asherman) anatomik nedenlerdendir; leiomiyom, polip ve Müllerian anomalilerin rolü tartışmalıdır.",
+     "sik_aciklamalari": {
+      "A": "İlk trimesterde %70 anomali saptanır.",
+      "B": "Asherman anatomik nedenlerdendir.",
+      "C": "Leiomiyom ve polipin rolü tartışmalıdır.",
+      "D": "Doğru: genetik baskınlık ve anatomik neden birlikte doğru verilmiştir.",
+      "E": "İntrauterin sineşi anatomik nedendir."
+     },
+     "bilgi": [
+      3,
+      10
      ],
      "benzer_cikmis": []
     }
@@ -464,6 +893,114 @@
       12
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Tekrarlayan kayıplı hastada DM, Asherman şüphesi ve vajinozis tartışılıyor. Maternal etiyoloji sınıflamasına göre hangi yorum doğrudur?",
+     "secenekler": {
+      "A": "SLE abortusla ilişkisizdir",
+      "B": "Kontrolsüz diyabet ve SLE maternal risk oluşturur; intrauterin sineşi (Asherman) kesin anatomik nedendir; leiomiyom ve Müllerian anomalilerin rolü tartışmalıdır; bakteriyel vajinozis ve klamidya gibi enfeksiyonların rolü de tartışmalıdır",
+      "C": "Asherman tartışmalıdır",
+      "D": "Leiomiyom kesin nedendir",
+      "E": "Enfeksiyonlar kesin nedendir"
+     },
+     "dogru": "B",
+     "aciklama": "DM, tiroid, çölyak, siyanotik kalp, İBH, SLE, fenilketonüri; Asherman kesin anatomik neden; leiomiyom-polip-Müllerian tartışmalı; enfeksiyonların yeri tartışmalı.",
+     "sik_aciklamalari": {
+      "A": "SLE listededir.",
+      "B": "Doğru: kronik-anatomik-enfeksiyöz üçlü ayrımı tamdır.",
+      "C": "Asherman kesindir.",
+      "D": "Leiomiyom tartışmalıdır.",
+      "E": "Enfeksiyonların yeri tartışmalıdır."
+     },
+     "bilgi": [
+      9,
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Kanser tedavisi planlanan gebenin danışmanlığında radyasyon ve kemoterapi eşiği soruluyor. Hangi bilgi doğrudur?",
+     "secenekler": {
+      "A": "Radyasyon gebelikte risksizdir",
+      "B": "Eşik 50 rad'dır",
+      "C": "Kemoterapi abortusla ilişkisizdir",
+      "D": ">5 rad radyasyon, radyoterapi ve kemoterapi maternal çevresel-iyatrojenik nedenlerdir ve gebelikte bu maruziyetlerden kaçınılır",
+      "E": "Radyoterapi koruyucudur"
+     },
+     "dogru": "D",
+     "aciklama": "Radyasyon >5 rad, radyoterapi ve kemoterapi maternal-çevresel nedendir; gebelikte kaçınılmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Maternal nedendir.",
+      "B": "Eşik >5 rad'dır.",
+      "C": "Kemoterapi listededir.",
+      "D": "Doğru: eşik ve maruziyet üçlüsü tamdır.",
+      "E": "Risk artırır."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Abortusun enfeksiyöz ve anatomik nedenleri nelerdir?",
+     "secenekler": {
+      "A": "BV, klamidya ve listeria suçlanır; Asherman anatomik nedendir",
+      "B": "Enfeksiyonlar kesin nedendir",
+      "C": "Anatomik neden yoktur",
+      "D": "Asherman enfeksiyözdür",
+      "E": "BV abortusla ilişkisizdir"
+     },
+     "dogru": "A",
+     "aciklama": "Enfeksiyöz ajanlar bakteriyel vajinozis (Gardnerella), Mycoplasma genitalium, Ureaplasma, Toksoplazma, Klamidya, Listeria ve HSV'dir; etiyolojideki yerleri tartışmalıdır. Anatomik neden Asherman sendromudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: enfeksiyöz ve anatomik gruplar birlikte doğru verilmiştir.",
+      "B": "Etiyolojideki yerleri tartışmalıdır.",
+      "C": "Asherman anatomik nedenlerdendir.",
+      "D": "Asherman intrauterin sineşidir.",
+      "E": "Gardnerella suçlanan ajanlardandır."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Abortusun çevresel ve endokrin nedenleri nelerdir?",
+     "secenekler": {
+      "A": "Kemoterapi risksizdir",
+      "B": "Kontrolsüz diyabet koruyucudur",
+      "C": "Radyasyon-kemoterapi ve kontrolsüz diyabet abortus nedenidir",
+      "D": "Tiroid bozukluğu ilişkisizdir",
+      "E": "Çevresel neden yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Çevresel nedenler 5 rad üstü radyasyon, radyoterapi ve kemoterapidir. Maternal kronik hastalıklardan kontrolsüz diyabet ve tedavi edilmemiş tiroid bozuklukları tekrarlayan kayıpların kabul edilen etiyolojilerindendir.",
+     "sik_aciklamalari": {
+      "A": "Kemoterapi maternal nedenlerdendir.",
+      "B": "Kontrolsüz diyabet kabul edilen etiyolojilerdendir.",
+      "C": "Doğru: çevresel ve endokrin nedenler birlikte doğru verilmiştir.",
+      "D": "Tedavi edilmemiş hipotiroidizm etiyolojilerdendir.",
+      "E": "Radyasyon ve kemoterapi çevresel nedenlerdir."
+     },
+     "bilgi": [
+      12,
+      30
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -553,6 +1090,115 @@
       15,
       16,
       17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Asistan altı abortus tipini sayıp ayırıcı ölçütleri özetliyor. Hangi özet doğrudur?",
+     "secenekler": {
+      "A": "Altı abortus tipi tanımlanır ve serviksin açık-kapalı olması ile USG'de materyal varlığı ayrımda belirleyicidir",
+      "B": "Üç tip vardır",
+      "C": "Servikal durum ayrımda önemsizdir",
+      "D": "USG tiplendirmede kullanılmaz",
+      "E": "Reküren tip sayılmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Altı tip: imminens, insipiens, inkomplet, komplet, missed, rekürren; servikal os ve USG ayrımda kritiktir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: tip sayısı ve ayırıcı ölçütler tamdır.",
+      "B": "Altı tiptir.",
+      "C": "Osun durumu kritiktir.",
+      "D": "USG belirleyicidir.",
+      "E": "Rekürren altıncı tiptir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Üç olgu karşılaştırılıyor: parça düşüren ve USG'si boş olan, kanamalı-serviksi açık-kavitede elemanlı olan ve haftalardır FKA'sız olan. Hangi eşleşme doğrudur?",
+     "secenekler": {
+      "A": "İnkomplette serviks kapalıdır",
+      "B": "Komplette müdahale şarttır",
+      "C": "Parça düşürüp kanaması azalan, USG'de kavitesi boş hastada komplet (tedavisiz); kanamalı, serviksi açık ve kavitede eleman izlenen hastada inkomplet; haftalardır FKA'sız gebeliği uterusda kalan hastada missed düşünülür",
+      "D": "Missedde FKA pozitiftir",
+      "E": "Komplette kavitede eleman vardır"
+     },
+     "dogru": "C",
+     "aciklama": "İnkomplette serviks açık, kavitede elemanlar; komplette materyal atılmış, USG boş, tedavi gerekmez; missedde viabilite kaybı haftalarca uterusda kalır.",
+     "sik_aciklamalari": {
+      "A": "İnkomplette açıktır.",
+      "B": "Komplette tedavi gerekmez.",
+      "C": "Doğru: üç tipin klinik-USG üçlüsü tamdır.",
+      "D": "Missedde FKA yoktur.",
+      "E": "Komplette materyal izlenmez."
+     },
+     "bilgi": [
+      16,
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "İmminens, insipiens ve inkomplet abortus nasıl ayrılır?",
+     "secenekler": {
+      "A": "Üç tipte de serviks kapalıdır",
+      "B": "İmminensde kalp atımı yoktur",
+      "C": "İnkomplette kavite boştur",
+      "D": "İnsipienste kanama yoktur",
+      "E": "İmminens kapalı-kalp atımı, insipiens açık-atılmamış, inkomplet açık-kalıntılıdır"
+     },
+     "dogru": "E",
+     "aciklama": "İmminensde kanama var, serviks kapalı, kalp atımı izlenir. İnsipiensde serviks açık, kanama fazla, şiddetli ağrı var, doku atılmamıştır. İnkomplette doku kısmen atılmış, serviks açık, kavitede kalıntı izlenir.",
+     "sik_aciklamalari": {
+      "A": "İnsipiens ve inkomplette serviks açıktır.",
+      "B": "İmminensde kalp atımı olan embriyo görülür.",
+      "C": "Kavitede bozulmuş gebelik ve kalıntı izlenir.",
+      "D": "İnsipienste kanama fazla ve ağrı şiddetlidir.",
+      "E": "Doğru: üç tipin serviks-doku-USG üçlüsü doğru ayrılmıştır."
+     },
+     "bilgi": [
+      14,
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Komplet ve missed abortus nasıl ayrılır?",
+     "secenekler": {
+      "A": "Komplette kavitede doku vardır",
+      "B": "Missedde FKA vardır",
+      "C": "Komplette B-HCG daima negatiftir",
+      "D": "Komplette kavite boş, missedde FKA yok ve B-HCG düşer",
+      "E": "İkisi de aynıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Komplette tüm doku atılmış, uterus normal-küçük, serviks kapalı olabilir, USG'de materyal görülmez, B-HCG pozitif kalabilir. Missedde viabilitesiz ürün haftalarca kalır, uterus küçük, B-HCG düşer, FKA yoktur.",
+     "sik_aciklamalari": {
+      "A": "USG'de gebelik materyali gözlenmez.",
+      "B": "FKA yoktur veya ölçümler aynı kalır.",
+      "C": "B-HCG pozitif çıkabilir.",
+      "D": "Doğru: iki tipin USG ve B-HCG ayrımı doğru verilmiştir.",
+      "E": "Doku atılımı ve kavite bulguları farklıdır."
+     },
+     "bilgi": [
+      17,
+      18
      ],
      "benzer_cikmis": []
     }
@@ -654,6 +1300,112 @@
      },
      "bilgi": [
       14,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "9 haftalık iki kanamalı gebe karşılaştırılıyor: birinde serviks kapalı ve USG'de kalp atımı izleniyor, diğerinde serviks açık, şiddetli kasık ağrısı var ancak materyal henüz atılmamış. İmminens-insipiens ayrımı ve yönetimi hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "İmminenste serviks açıktır",
+      "B": "İnsipienste gebelik canlıdır",
+      "C": "İmminens cerrahiyle tedavi edilir",
+      "D": "İnsipiens medikal izlenir",
+      "E": "Kanayıp serviksi kapalı ve kalp atımı izlenen gebede imminens (medikal izlem); kanaması fazla, serviksi açık, şiddetli ağrılı ancak materyal atılmamış gebede insipiens (terminasyon) tanısı konur"
+     },
+     "dogru": "E",
+     "aciklama": "İmminens: <20 hafta kanama, serviks kapalı, USG'de canlı gebelik, tedavi medikal; insipiens: serviks açık, materyal atılmamış, şiddetli ağrı, terminasyon gerekir.",
+     "sik_aciklamalari": {
+      "A": "İmminenste kapalıdır.",
+      "B": "İnsipiens kaçınılmaz kayıptır.",
+      "C": "İmminens medikaldir.",
+      "D": "İnsipiens termine edilir.",
+      "E": "Doğru: iki tipin os-canlılık-tedavi üçlüsü tamdır."
+     },
+     "bilgi": [
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "İki kanamalı gebe karşılaştırılıyor: serviksi kapalı-canlı gebelik ile serviksi açık-atılmamış materyal. Hangi yönetim çifti doğrudur?",
+     "secenekler": {
+      "A": "Her iki tipte de gebelik korunabilir",
+      "B": "İmminenste canlı gebelik izlenir ve progesteron gibi medikal destek tartışılır; insipienste açık serviks ve atılmamış materyalle kayıp kaçınılmaz olduğundan medikal-cerrahi terminasyon uygulanır",
+      "C": "İnsipienste bekle-gör yeterlidir",
+      "D": "İmminenste terminasyon şarttır",
+      "E": "Servikal durum tedaviyi değiştirmez"
+     },
+     "dogru": "B",
+     "aciklama": "İmminens ve insipiens olgularının hastaneye yatış ve takip planı",
+     "sik_aciklamalari": {
+      "A": "İnsipiens korunamaz.",
+      "B": "Doğru: korunabilirlik ve terminasyon ayrımı tamdır.",
+      "C": "Terminasyon gerekir.",
+      "D": "İmminens medikal izlenir.",
+      "E": "Osun durumu belirleyicidir."
+     },
+     "bilgi": [
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Abortus imminensin tanı ölçütleri nelerdir?",
+     "secenekler": {
+      "A": "İmminensde serviks kapalı ve kalp atımı vardır",
+      "B": "İmminensde serviks açıktır",
+      "C": "İmminensde kalp atımı yoktur",
+      "D": "İmminens acil küretaj gerektirir",
+      "E": "İmminens 20. haftadan sonradır"
+     },
+     "dogru": "A",
+     "aciklama": "İmminens 20. haftadan önce vajinal kanamadır; ağrı olabilir veya olmayabilir, serviks kapalıdır ve kalp atımı olan embriyo izlenir. Düşük tehdidi gebelik kaybına ilerleyebilir, yönetimde takip esastır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: imminensin üç ölçütü birlikte doğru verilmiştir.",
+      "B": "Açık serviks insipiens lehinedir.",
+      "C": "Kalp atımı olan embriyo izlenir.",
+      "D": "Takip esastır.",
+      "E": "20. haftadan önceki kanamadır."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Abortus insipiensin imminensden farkı nedir?",
+     "secenekler": {
+      "A": "İnsipienste serviks kapalıdır",
+      "B": "İnsipienste ağrı yoktur",
+      "C": "İnsipiens açık serviks, fazla kanama ve atılmamış dokudur",
+      "D": "İnsipienste uterus küçüktür",
+      "E": "İnsipiens yalnızca takip edilir"
+     },
+     "dogru": "C",
+     "aciklama": "İnsipiens kaybın gerçekleşmek üzere olduğu açık serviks durumudur; kanama fazla, şiddetli kasık ağrısı vardır, doku henüz atılmamıştır ve uterus gebelik büyüklüğündedir. İmminensden farkı açık serviks ve ilerleyici kayıptır.",
+     "sik_aciklamalari": {
+      "A": "Serviks açıktır.",
+      "B": "Şiddetli kasık ağrısı mevcuttur.",
+      "C": "Doğru: insipiensin dört bulgusu birlikte doğru verilmiştir.",
+      "D": "Uterus beklenen gebelik büyüklüğündedir.",
+      "E": "Kayıp gerçekleşmek üzeredir, yönetim gerekir."
+     },
+     "bilgi": [
       15
      ],
      "benzer_cikmis": []
@@ -769,6 +1521,113 @@
       17
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "FKA'sız 8 mm CRL'li ve 26 mm boş keseli iki olguda tanı kesinliği tartışılıyor. Hangi yorum doğrudur?",
+     "secenekler": {
+      "A": "CRL 5 mm kalpsizlik kesin tanıdır",
+      "B": "20 mm boş kese kesin tanıdır",
+      "C": "Şüpheli bulguda hemen küretaj yapılır",
+      "D": "CRL 8 mm ve kalp atımı yokluğu veya 26 mm boş kese missed için kesin tanı koydurur; CRL <7 mm ve 16-24 mm kese yalnızca şüphe uyandırır ve tekrar USG gerekir",
+      "E": "Yolk kesesi değerlendirmesi gereksizdir"
+     },
+     "dogru": "D",
+     "aciklama": "Kesin missed kriterleri: CRL≥7 mm kalpsiz, kese≥25 mm embriyosuz, yolk kesesiz ≥2 hafta veya yolk keseli ≥11 gün sonra embriyosuzluk; şüphelilerde tekrar USG gerekir.",
+     "sik_aciklamalari": {
+      "A": "Eşik ≥7 mm'dir.",
+      "B": "Eşik ≥25 mm'dir.",
+      "C": "Şüphelide tekrar USG yapılır.",
+      "D": "Doğru: kesin-şüpheli eşikleri birlikte doğru.",
+      "E": "Yolk kesesi zaman eşikleri tanıdadır."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "B-HCG eğrisi düşen küçük uteruslu ile parça düşürmüş boş kavite olgusu karşılaştırılıyor. Hangi eşleşme doğrudur?",
+     "secenekler": {
+      "A": "B-HCG'si düşen, uterusu küçük ve haftalardır FKA'sız hastada missed; parçasını düşürmüş, B-HCG'si henüz pozitif ama USG'si boş hastada komplet düşünülür ve komplette tedavi gerekmez",
+      "B": "Missedde B-HCG yükselir",
+      "C": "Komplette uterus gebelik haftasında büyüktür",
+      "D": "Missedde FKA vardır",
+      "E": "Komplette küretaj şarttır"
+     },
+     "dogru": "A",
+     "aciklama": "Missedde uterus küçük, test pozitif ama B-HCG düşer, FKA yok veya 2 hafta ölçümler aynı; komplette B-HCG pozitif kalabilir ama USG boştur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: B-HCG eğrisi, uterus boyutu ve tedavi gereği birlikte doğru.",
+      "B": "Düşer.",
+      "C": "Normal-küçüktür.",
+      "D": "Yoktur.",
+      "E": "Tedavi gerekmez."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "İnkomplet ve komplet abortus nasıl ayrılır?",
+     "secenekler": {
+      "A": "İnkomplette serviks kapalıdır",
+      "B": "İnkomplette kalıntı ve açık serviks, komplette boş kavite vardır",
+      "C": "Komplette kanama fazladır",
+      "D": "İnkomplette kavite boştur",
+      "E": "İkisinde de doku atılmamıştır"
+     },
+     "dogru": "B",
+     "aciklama": "İnkomplette dokunun bir kısmı atılmış, serviks açık, kanama var, uterus haftasında veya küçüktür; spekulumda plasenta parçaları görülebilir. Komplette tüm doku atılmış, kavite boştur.",
+     "sik_aciklamalari": {
+      "A": "Serviks açıktır.",
+      "B": "Doğru: iki tipin doku-kavite-serviks üçlüsü doğru ayrılmıştır.",
+      "C": "Komplette doku tamamen atılmıştır.",
+      "D": "Kavitede fetoplasental elemanlar izlenir.",
+      "E": "İnkomplette kısmi, komplette tam atılım vardır."
+     },
+     "bilgi": [
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Missed abortusun ultrason tanı kriterleri nelerdir?",
+     "secenekler": {
+      "A": "CRL 5 mm tanı koydurur",
+      "B": "Kese 20 mm yeterlidir",
+      "C": "B-HCG yükselir",
+      "D": "Eşik üstü kalpsizlik-embriyosuzluk missed tanısıdır",
+      "E": "FKA varlığı misseddir"
+     },
+     "dogru": "D",
+     "aciklama": "Missed USG kriterleri CRL en az 7 mm ve kalp atımı yokluğu, kese en az 25 mm ve embriyo yokluğu, yolk kesesiz keseden 2 hafta sonra veya yolk keseli keseden 11 gün sonra embriyo-kalp atımı yokluğudur. Uterus küçük, test pozitif, B-HCG düşer.",
+     "sik_aciklamalari": {
+      "A": "Eşik CRL en az 7 mm ve kalp atımı yokluğudur.",
+      "B": "Ortalama kese çapı en az 25 mm ve embriyo yokluğu gerekir.",
+      "C": "B-HCG düşer.",
+      "D": "Doğru: iki ölçüt birlikte doğru verilmiştir.",
+      "E": "FKA yokluğu tanı koydurur."
+     },
+     "bilgi": [
+      18,
+      19
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -852,6 +1711,111 @@
      },
      "bilgi": [
       20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Düşük sonrası ateş ve kötü kokulu akıntılı hastada yönetim sırası tartışılıyor. Hangi sıra doğrudur?",
+     "secenekler": {
+      "A": "Septik düşükte önce küretaj yapılır",
+      "B": "Septik düşükte antibiyotik gerekmez",
+      "C": "Ateş, kötü kokulu akıntı ve hassas uteruslu postabortus hastada önce acil IV antimikrobiyal başlanır, rest varsa uterus cerrahi boşaltılır; tahliye öncesi profilaktik antibiyotik verilir",
+      "D": "Septik düşük sıklığı %20'dir",
+      "E": "Maternal ölüm septik düşükte görülmez"
+     },
+     "dogru": "C",
+     "aciklama": "Abortus sonrası %1-2 enfeksiyon-sepsis; 100.000 medikal düşükte 0,58 ölüm; önce acil IV antibiyotik, rest varsa cerrahi boşaltma; tahliye öncesi profilaksi verilir.",
+     "sik_aciklamalari": {
+      "A": "Önce IV antibiyotik başlanır.",
+      "B": "Acil antibiyotik esastır.",
+      "C": "Doğru: sıra ve profilaksi birlikte doğru.",
+      "D": "%1-2'dir.",
+      "E": "0,58/100.000 ölümdür."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Septik düşükte restin bırakılması ile erken tedavinin mortaliteye etkisi tartışılıyor. Hangi ilke doğrudur?",
+     "secenekler": {
+      "A": "Antibiyotiksiz cerrahi yeterlidir",
+      "B": "Rest bırakılması önerilir",
+      "C": "Profilaksi kontrendikedir",
+      "D": "Septik düşük ayaktan izlenir",
+      "E": "Septik düşükte erken tanı ve agresif tedavi mortaliteyi azaltır; kavitede rest bırakılması sepsisin sürmesine yol açacağından boşaltma gerekir"
+     },
+     "dogru": "E",
+     "aciklama": "Septik tabloda gecikme mortaliteyi artırır; restin bırakılması sepsisi sürdürür; profilaksi cerrahi öncesi standarttır.",
+     "sik_aciklamalari": {
+      "A": "Antibiyotik ilk adımdır.",
+      "B": "Rest boşaltılmalıdır.",
+      "C": "Profilaksi uygulanır.",
+      "D": "Acil müdahale gerekir.",
+      "E": "Doğru: zamanlama ve rest yönetimi birlikte doğru."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Septik düşük sıklığı ve yönetimi nasıldır?",
+     "secenekler": {
+      "A": "Profilaksi gerekmez",
+      "B": "Septik düşükte antibiyotik geciktirilir",
+      "C": "Cerrahi boşaltma kontrendikedir",
+      "D": "Septik düşük sıktır ve zararsızdır",
+      "E": "Septikte acil antibiyotik ve restte boşaltma gerekir"
+     },
+     "dogru": "E",
+     "aciklama": "Abortus sonrası %1-2 enfeksiyon-sepsis gelişir; 100.000 medikal düşükte 0,58 maternal ölüm bildirilmiştir. Tedavide acil IV antimikrobiyal ve rest varsa cerrahi boşaltma gerekir; tahliye öncesi profilaktik antibiyoterapi uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Cerrahi tahliye öncesi profilaktik antibiyoterapi uygulanır.",
+      "B": "Acil intravenöz tedavi gerekir.",
+      "C": "Rest varsa uterusun cerrahi boşaltılması gerekir.",
+      "D": "%1-2 oranında gelişir ve mortalite bildirimi vardır.",
+      "E": "Doğru: sıklık ve iki basamaklı tedavi birlikte doğru verilmiştir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Septik düşük ile erken kaybın yönetim farkı nedir?",
+     "secenekler": {
+      "A": "Yönetim tek tiptir",
+      "B": "Medikal tedavide antibiyotik kullanılır",
+      "C": "Enfeksiyonda acil tedavi, kayıpta bekleme-medikal-cerrahi seçilir",
+      "D": "Vakum aspirasyon kontrendikedir",
+      "E": "Misoprostol antibiyotiktir"
+     },
+     "dogru": "C",
+     "aciklama": "Erken gebelik kaybında bekleme-takip, medikal (misoprostol-mifepriston) ve cerrahi (küretaj-vakum) seçenekler hastaya göre seçilir. Septik düşükte ise acil antibiyoterapi ve rest varsa boşaltma ile enfeksiyon öncelenir.",
+     "sik_aciklamalari": {
+      "A": "Üç yönetim seçeneği vardır.",
+      "B": "Medikalde misoprostol (PGE1) ve mifepriston kullanılır.",
+      "C": "Doğru: septik acil ile kayıp yönetiminin basamakları doğru ayrılmıştır.",
+      "D": "Vakum aspirasyon cerrahi seçeneklerdendir.",
+      "E": "Misoprostol prostaglandin E1 analoğudur."
+     },
+     "bilgi": [
+      20,
+      28
      ],
      "benzer_cikmis": []
     }
@@ -939,6 +1903,112 @@
       21
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k10-q04",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Adet gecikmeli, kanamalı ve ağrılı hastada ilk testler ve ayırıcı plan tartışılıyor. Hangi plan doğrudur?",
+     "secenekler": {
+      "A": "Kanama ilk trimesterde nadirdir",
+      "B": "Adet gecikmeli kanamalı hastada ilk başvuruda CBC, kan grubu, Rh ve hCG istenir; ektopik gebelik seri hCG ve USG ile dışlanır; heterotopik ve çoğulun biri olasılığı akılda tutulur",
+      "C": "hCG ilk başvuruda gereksizdir",
+      "D": "Ektopik ayrıca dışlanmaz",
+      "E": "Heterotopik imkansızdır"
+     },
+     "dogru": "B",
+     "aciklama": "İlk trimesterde gebelerin %20-40'ında görülür; ilk başvuruda CBC, kan grubu, Rh ve hCG istenir; ektopik, abortus ve normal gebelik ayrılır.",
+     "sik_aciklamalari": {
+      "A": "%20-40'ında görülür.",
+      "B": "Doğru: test dörtlüsü ve dışlama planı tamdır.",
+      "C": "hCG esastır.",
+      "D": "Seri hCG+USG ile dışlanır.",
+      "E": "Akılda tutulmalıdır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k10-q05",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "hCG'si yüksek ancak kesesi izlenmeyen kanamalı hastada ektopik şüphesi ve temas kanamalı başka hastada servikal neden tartışılıyor. Hangi yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "Tek hCG ektopiği dışlar",
+      "B": "USG ektopikte gereksizdir",
+      "C": "Kese görülmemesi normaldir",
+      "D": "hCG >2000 mIU/ml'de kese görülmemesi ektopik açıdan uyarıcıdır; ektopik seri hCG ve USG ile dışlanır; postkoital kanamada servikal-vajinal patolojiler spekulumla değerlendirilir",
+      "E": "Spekulum muayenesi kontrendikedir"
+     },
+     "dogru": "D",
+     "aciklama": "Seri hCG artışı ve USG'de kese ilişkisi ektopiği dışlar; hCG>2000'de kese görülmemesi uyarıcıdır; spekulum kanama kaynağını gösterir.",
+     "sik_aciklamalari": {
+      "A": "Seri hCG gerekir.",
+      "B": "USG esastır.",
+      "C": "Eşik üstünde kese görülmelidir.",
+      "D": "Doğru: eşik, dışlama ve spekulum üçlüsü tamdır.",
+      "E": "Kaynağı gösterdiğinden önemlidir."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k10-q06",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Erken gebelik kanamasında ilk başvuru testleri nelerdir?",
+     "secenekler": {
+      "A": "İlk başvuruda test gerekmez",
+      "B": "İlk başvuruda CBC, kan grubu, Rh ve hCG istenir",
+      "C": "Yalnızca USG yeterlidir",
+      "D": "Rh bakılmaz",
+      "E": "Ektopik ayırıcıda değildir"
+     },
+     "dogru": "B",
+     "aciklama": "İlk trimesterde gebelerin %20-40'ında kanama-ağrı-gecikme görülür; ilk başvuruda CBC, kan grubu, Rh ve hCG istenir. Ektopik gebelik, abortus ve normal gebelik birbirinden ayrılmalıdır.",
+     "sik_aciklamalari": {
+      "A": "CBC, kan grubu, Rh ve hCG istenmelidir.",
+      "B": "Doğru: ilk başvuru test paneli eksiksiz verilmiştir.",
+      "C": "Laboratuvar paneli USG ile birlikte gerekir.",
+      "D": "Kan grubu ve Rh paneldedir.",
+      "E": "Ektopik, abortus ve normal gebelik ayrılmalıdır."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Temas kanaması ve erken kanamada ayırıcı tanı nedir?",
+     "secenekler": {
+      "A": "Temas kanaması daima abortustur",
+      "B": "Subkoryonik hematom zararsızdır",
+      "C": "Ektopik düşünülmez",
+      "D": "Temas kanamasında servikal nedenler, kanamada hematom ve ektopik aranır",
+      "E": "USG gerekmez"
+     },
+     "dogru": "D",
+     "aciklama": "Postkoital kanamada servisit, polip, ektropion, displazi veya travma düşünülür; öykü, muayene ve USG ile ayrılır. Subkoryonik hematom vajinal kanamayla seyreder ve düşük tehdidine ilerleyebilir; ektopik ayırıcı tanının parçasıdır.",
+     "sik_aciklamalari": {
+      "A": "Servikal-vajinal patolojiler düşünülmelidir.",
+      "B": "Düşük tehdidi ve kayıp yoluna girebilir.",
+      "C": "Ektopik ayırıcı tanının önemli parçasıdır.",
+      "D": "Doğru: temas kanaması ve kanama ayırıcıları birlikte doğru verilmiştir.",
+      "E": "Ayırıcı öykü, muayene ve ultrasonla yapılır."
+     },
+     "bilgi": [
+      25,
+      27
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1022,6 +2092,113 @@
      },
      "bilgi": [
       22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k11-q04",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Erken gebelik USG'sinde yapıların görülme sırası ve zamanlaması soruluyor. Hangi dizi doğrudur?",
+     "secenekler": {
+      "A": "Transvajinal 5. haftada kese, ardından yüzük şeklinde yolk sac, 6. haftada fetal pole ve sonrasında kalp atımı izlenmesi normal sıradır; kese günde 1 mm büyür",
+      "B": "Fetal pole keseden önce görülür",
+      "C": "Kalp atımı yolk sactan önce başlar",
+      "D": "Kese büyümesi günde 1 cm'dir",
+      "E": "Amniyon keseden önce görülür"
+     },
+     "dogru": "A",
+     "aciklama": "GS transvajinal 4-5, transabdominal 6. haftada; günde 1 mm büyür; yolk sac 5, fetal pole 6. haftada; kalp atımı polden sonra; sıra GS-yolk-embriyo-amniyondur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: sıra ve zamanlar tamdır.",
+      "B": "Kese ilk yapıdır.",
+      "C": "Polden sonra başlar.",
+      "D": "1 mm/gündür.",
+      "E": "Amniyon sondur."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k11-q05",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "SAT'a göre 9 haftalık, CRL'ye göre 8 haftalık gebede tarihlendirme tartışılıyor. Hangi yorum doğrudur?",
+     "secenekler": {
+      "A": "CRL 20. haftada kullanılır",
+      "B": "CRL ekstremiteler dahil ölçülür",
+      "C": "CRL 20 mm ölçülen embriyoda gebelik haftası yaklaşık 6 hafta+CRL(mm) ile hesaplanır; SAT ile USG arası 1. trimesterde 7 günlük fark önemsizdir",
+      "D": "7 günlük fark daima önemlidir",
+      "E": "CRL transabdominalde ölçülmez"
+     },
+     "dogru": "C",
+     "aciklama": "CRL 7-14. haftada, uzun eksen ölçülür, 6 hafta+CRL(mm) haftayı verir; 1. trimesterde 7 gün, 2. trimesterde 10 gün fark önemsizdir.",
+     "sik_aciklamalari": {
+      "A": "7-14. haftadadır.",
+      "B": "Yolk-ekstremite dışlanır.",
+      "C": "Doğru: formül ve tolerans birlikte doğru.",
+      "D": "7 gün önemsizdir.",
+      "E": "Ölçüm yöntemden bağımsızdır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k11-q06",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Erken gebelikte ultrason yapılarının görülme sırası nedir?",
+     "secenekler": {
+      "A": "Kese 4-5, yolk 5, pol 6. haftada görülür",
+      "B": "Kese TA'da daha erken görülür",
+      "C": "Yolk sak 8. haftadadır",
+      "D": "Kalp atımı keseden önce saptanır",
+      "E": "Kese günde 5 mm büyür"
+     },
+     "dogru": "A",
+     "aciklama": "Gestasyonel kese TV-USG'de 4-5. haftalarda, TA-USG'de 6. haftada görülür; ekojen halka içinde anekoik alandır ve günde 1 mm büyür. Yolk sak 5. haftada yüzük şeklinde, fetal pol 6. haftada kalınlaşma olarak belirir, kalp atımı polden sonra saptanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: kese, yolk ve pol sıralaması ve haftaları doğru verilmiştir.",
+      "B": "TV-USG 4-5. haftada, TA-USG 6. haftada gösterir.",
+      "C": "Yolk sak 5. haftadan itibaren yüzük şeklindedir.",
+      "D": "Kalp atımı fetal pol görüntülendikten sonra saptanır.",
+      "E": "Erken gebelikte günde 1 mm büyür."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k11-q07",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "CRL ile hafta tayini ve trofoblastik hastalık bulguları nelerdir?",
+     "secenekler": {
+      "A": "CRL 20. haftada kullanılır",
+      "B": "CRL'ye ekstremiteler dahil edilir",
+      "C": "CRL 7-14. haftada haftayı verir; trofoblastikte beta-hCG çok yüksektir",
+      "D": "Trofoblastikte beta-hCG düşüktür",
+      "E": "Trofoblastikte uterus küçüktür"
+     },
+     "dogru": "C",
+     "aciklama": "CRL 7-14. haftalarda gebelik yaşı ölçümünde kullanılır; yolk sak-ekstremiteler dışlanarak ölçülür ve 6 hafta artı CRL(mm) haftayı verir. Trofoblastik hastalıkta büyük uterus, çok yüksek beta-hCG, hiperemezis ve over kistleri görülür.",
+     "sik_aciklamalari": {
+      "A": "7-14. haftalarda kullanılır.",
+      "B": "Yolk sak veya ekstremiteler ölçüme alınmaz.",
+      "C": "Doğru: CRL kuralı ve trofoblastik tablo birlikte doğru verilmiştir.",
+      "D": "Anormal derecede yüksek beta-hCG tipiktir.",
+      "E": "Beklenenden büyük uterus boyutu izlenir."
+     },
+     "bilgi": [
+      24,
+      26
      ],
      "benzer_cikmis": []
     }
@@ -1110,6 +2287,114 @@
       27
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k12-q04",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Üç kanamalı gebe karşılaştırılıyor: hematomlu, büyük uteruslu-yüksek hCG'li ve postkoital kanamalı. Hangi ayırıcı tanı bütünü doğrudur?",
+     "secenekler": {
+      "A": "Subkoryonik hematom daima masumdur",
+      "B": "Trofoblastik hastalıkta uterus küçüktür",
+      "C": "Yüksek β-hCG trofoblastiği dışlar",
+      "D": "Servikal patoloji kanama yapmaz",
+      "E": "Kanamalı hastada subkoryonik hematom düşük tehdidine ilerleyebilir; beklenenden büyük uterus, anormal yüksek β-hCG ve hiperemezis trofoblastik hastalığı, postkoital kanama servikal-vajinal patolojiyi düşündürür"
+     },
+     "dogru": "E",
+     "aciklama": "Subkoryonik hematom kanama-tehdit-kayıp yoluna girebilir; trofoblastik hastalıkta büyük uterus, yüksek β-hCG, hiperemezis, karışık ekojenite ve over kistleri olur.",
+     "sik_aciklamalari": {
+      "A": "Kayıpla sonuçlanabilir.",
+      "B": "Beklenenden büyüktür.",
+      "C": "Yüksek β-hCG düşündürür.",
+      "D": "Polip-servisit kanatır.",
+      "E": "Doğru: üç ayırıcı tanı üçlüsü tamdır."
+     },
+     "bilgi": [
+      25,
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k12-q05",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Erken kanamada ayırıcı tanı basamakları ve temas kanamasının nedenleri soruluyor. Hangi yanıt doğrudur?",
+     "secenekler": {
+      "A": "Ayırıcı tanı yalnızca hCG ile yapılır",
+      "B": "Erken kanamada ektopik, subkoryonik hematom, trofoblastik hastalık ve servikal-vajinal patolojiler öykü, spekulum ve USG ile ayrılır; temas kanamasında servisit-polip-ektropion-displazi aranır",
+      "C": "Spekulum ayırıcıda kullanılmaz",
+      "D": "Öykü ayırıcıda gereksizdir",
+      "E": "USG ayırıcıda kullanılmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Ayırıcı tanı öykü-fizik-USG ile yapılır; ektopik seri hCG+USG ile dışlanır; kaynak uterus dışı da olabileceğinden spekulum önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Üçlü değerlendirme gerekir.",
+      "B": "Doğru: yöntem ve temas-kanama listesi tamdır.",
+      "C": "Kaynağı gösterir.",
+      "D": "Öykü esastır.",
+      "E": "USG esastır."
+     },
+     "bilgi": [
+      25,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k12-q06",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Erken kanamada ektopik ve hematom yaklaşımı nasıldır?",
+     "secenekler": {
+      "A": "Ektopik ayırıcıda düşünülmez",
+      "B": "Kanama daima abortustur",
+      "C": "Hematom daima gebeliği bitirir",
+      "D": "Yerleşim ayrımı gerekmez",
+      "E": "Ektopik dışlanmalı; hematom tehdit oluşturur"
+     },
+     "dogru": "E",
+     "aciklama": "Ektopik gebelik ayırıcı tanının önemli parçasıdır; beta-hCG pozitifliğinden sonra yerleşimin intrauterin olup olmadığı ve viabilite ayrılmalıdır. Subkoryonik hematom vajinal kanamayla düşük tehdidine ilerleyebilir.",
+     "sik_aciklamalari": {
+      "A": "Ektopik ayırıcı tanının önemli parçasıdır.",
+      "B": "Ektopik, abortus ve normal gebelik ayrılmalıdır.",
+      "C": "Düşük tehdidi yoluna girebilir, her zaman kayıp olmaz.",
+      "D": "Önce intrauterin yerleşim, sonra viabilite ayrılır.",
+      "E": "Doğru: ektopik dışlama ve hematom riski birlikte doğru verilmiştir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k12-q07",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Trofoblastik hastalık ile servikal kanama nasıl ayrılır?",
+     "secenekler": {
+      "A": "Trofoblastikte uterus küçüktür",
+      "B": "Overler normaldir",
+      "C": "Temas kanaması trofoblastiktir",
+      "D": "Trofoblastikte ekojenik patern ve over kistleri; temasta servikal nedenler aranır",
+      "E": "Muayene gerekmez"
+     },
+     "dogru": "D",
+     "aciklama": "Trofoblastik hastalıkta karışık ekojenik patern, büyük uterus ve maternal over kistik büyümesi izlenir. Servikal patolojiler temas kanaması yapar; ayırıcı öykü, muayene ve ultrasonla yapılır.",
+     "sik_aciklamalari": {
+      "A": "Beklenenden büyük uterus tipiktir.",
+      "B": "Maternal overlerde kistik büyüme olur.",
+      "C": "Temas kanamasında servisit-polip-ektropion düşünülür.",
+      "D": "Doğru: iki tablonun ayırt edici bulguları doğru verilmiştir.",
+      "E": "Ayırıcı öykü, muayene ve ultrasonla yapılır."
+     },
+     "bilgi": [
+      26,
+      27
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1192,6 +2477,114 @@
       "E": "Metotreksatın mekanizmasıdır."
      },
      "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k13-q04",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Stabil missed abortuslu hasta seçenekleri soruyor. Danışmanlıkta hangi bilgi doğrudur?",
+     "secenekler": {
+      "A": "Tek seçenek küretajdır",
+      "B": "Misoprostol antiprogesterondur",
+      "C": "Mifepriston prostaglandindir",
+      "D": "Stabil missed abortuslu hastaya bekleme-takip, misoprostol (PGE1)-mifepriston (antiprogesteron) medikal ve D&C-vakum aspirasyon cerrahi seçenekleri hastanın durumu ve tercihine göre sunulur",
+      "E": "Bekleme-takip kontrendikedir"
+     },
+     "dogru": "D",
+     "aciklama": "Seçenekler bekleme-takip, medikal (misoprostol PGE1, mifepriston antiprogesteron) ve cerrahidir (D&C, vakum); seçim duruma-tercihe göre yapılır.",
+     "sik_aciklamalari": {
+      "A": "Üç seçenek vardır.",
+      "B": "Misoprostol PGE1'dir.",
+      "C": "Mifepriston antiprogesterondur.",
+      "D": "Doğru: üçlü ve seçim ilkesi tamdır.",
+      "E": "Seçeneklerden biridir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k13-q05",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Septik inkomplet, stabil komplet ve stabil missed üçlüsünde yönetim farkı soruluyor. Hangi tablo doğrudur?",
+     "secenekler": {
+      "A": "Ateşli-hipotansif inkomplet abortuslu hastada bekleme uygun değildir, IV antibiyotik ve cerrahi boşaltma gerekir; stabil komplette tedavi gerekmez; stabil missedde üç seçenek tartışılır",
+      "B": "Septikte bekleme uygundur",
+      "C": "Komplette küretaj şarttır",
+      "D": "İnkomplette izlem yeterlidir",
+      "E": "Seçimde tercih önemsizdir"
+     },
+     "dogru": "A",
+     "aciklama": "Septik-hemodinamik instabilite bekletemez; komplette tedavi gerekmez; inkomplette kalan materyal temizlenir; seçim klinik+tercihe göredir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: stabiliteye göre üçlü yönetim tamdır.",
+      "B": "Acil müdahale gerekir.",
+      "C": "Tedavi gerekmez.",
+      "D": "Kalan materyal temizlenir.",
+      "E": "Tercih belirleyicidir."
+     },
+     "bilgi": [
+      16,
+      17,
+      20,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k13-q06",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Erken gebelik kaybında yönetim seçenekleri nelerdir?",
+     "secenekler": {
+      "A": "Yönetim bekleme, medikal ve cerrahi üçlüsüdür",
+      "B": "Yalnızca cerrahi yapılır",
+      "C": "Misoprostol antibiyotiktir",
+      "D": "Mifepriston prostaglandindir",
+      "E": "Vakum aspirasyon medikaldir"
+     },
+     "dogru": "A",
+     "aciklama": "Yönetim bekleme-takip, medikal ve cerrahi yaklaşımlardır. Medikalde misoprostol (prostaglandin E1) ve mifepriston (antiprogesteron), cerrahide dilatasyon-küretaj ve vakum aspirasyon kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: üç yönetim basamağı ve ilaç-cerrahi eşleşmesi doğru verilmiştir.",
+      "B": "Bekleme-takip ve medikal de seçeneklerdendir.",
+      "C": "Misoprostol prostaglandin E1 analoğudur.",
+      "D": "Mifepriston antiprogesterondur.",
+      "E": "Vakum aspirasyon cerrahi yaklaşımdır."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k13-q07",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Tahliye öncesi profilaksi ve septik yönetim nedir?",
+     "secenekler": {
+      "A": "Profilaksi gerekmez",
+      "B": "Septikte yalnızca beklenir",
+      "C": "Tahliye öncesi profilaksi verilir; septikte boşaltma eklenir",
+      "D": "Medikal septikte yeterlidir",
+      "E": "Cerrahi her olguda ilk seçenektir"
+     },
+     "dogru": "C",
+     "aciklama": "Cerrahi tahliye öncesinde profilaktik antibiyoterapi uygulanır. Septik tabloda rest varsa cerrahi boşaltma ile acil antibiyoterapi birlikte yürütülür; stabil inkomplette medikal veya cerrahi seçilebilir.",
+     "sik_aciklamalari": {
+      "A": "Tahliye öncesi profilaktik antibiyoterapi uygulanır.",
+      "B": "Septikte acil antibiyoterapi gerekir.",
+      "C": "Doğru: profilaksi kuralı ve septik yönetim birlikte doğru verilmiştir.",
+      "D": "Rest varsa cerrahi boşaltma gerekir.",
+      "E": "Seçim klinik tabloya göre yapılır."
+     },
+     "bilgi": [
+      20,
       28
      ],
      "benzer_cikmis": []
@@ -1281,6 +2674,112 @@
       31
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k14-q04",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "İki kayıplı ve üç ardışık kayıplı iki çiftin tanım ve etiyoloji danışmanlığı soruluyor. Hangi açıklama doğrudur?",
+     "secenekler": {
+      "A": "Tüm kılavuzlar ≥3 kayıp arar",
+      "B": "ESHRE ektopiği dahil eder",
+      "C": "İki kaybı olan çift ASRM'ye göre, üç ardışık kaybı olan RCOG'ya göre değerlendirilir; ESHRE 24 haftadan önceki kayıpları (ektopik-GTN hariç) tanımlar; parental anomaliler, hipotiroidi, kontrolsüz DM, uterin anomali ve APS kabul edilen nedenlerdir",
+      "D": "APS etiyolojide yoktur",
+      "E": "Tüm olgular açıklanır"
+     },
+     "dogru": "C",
+     "aciklama": "ASRM ≥2, RCOG ardışık ≥3, ESHRE 24 haftadan önce (ektopik-GTN-implantasyon hariç); kabul edilenler parental kromozomal, hipotiroidi, kontrolsüz DM, uterin anomali, APS; >%33 açıklanamaz.",
+     "sik_aciklamalari": {
+      "A": "ASRM ≥2'dir.",
+      "B": "Ektopik hariçtir.",
+      "C": "Doğru: tanım üçlüsü ve neden listesi tamdır.",
+      "D": "APS kabul edilen nedendir.",
+      "E": ">%33 açıklanamaz."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k14-q05",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Tekrarlayan kayıplı çiftin test paneli planlanıyor. Kapsamlı değerlendirmeye göre hangi panel doğrudur?",
+     "secenekler": {
+      "A": "Tekrarlayan kayıpta test gerekmez",
+      "B": "Yalnızca enfeksiyon testleri yeterlidir",
+      "C": "Trombofili paneli gereksizdir",
+      "D": "Anatomik değerlendirme yapılmaz",
+      "E": "Değerlendirmede parental karyotip, HSG-histeroskopi, lupus antikoagülan-antikardiyolipin, faktör V Leiden-protrombin-APCR-protein C/S-antitrombin, TSH-HbA1c-prolaktin ve endikasyonda gonore-klamidya kültürleri istenir"
+     },
+     "dogru": "E",
+     "aciklama": "Genetik karyotip, anatomik HSG-sonohisterogram-histeroskopi, immünolojik LA-antikardiyolipin, trombofili paneli, endokrin TSH-glukoz-HbA1c-prolaktin ve endikasyonda enfeksiyöz kültürler istenir.",
+     "sik_aciklamalari": {
+      "A": "Nedene yönelik panel gerekir.",
+      "B": "Çok kategorili panel gerekir.",
+      "C": "Panelin parçasıdır.",
+      "D": "HSG-histeroskopi yapılır.",
+      "E": "Doğru: kategori-test eşleşmesi tamdır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k14-q06",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Tekrarlayan kaybın tanımı ve kabul edilen nedenleri nelerdir?",
+     "secenekler": {
+      "A": "Tüm rehberler üç kayıp ister",
+      "B": "ASRM iki, RCOG üç kayıp der; antifosfolipid etiyolojilerdendir",
+      "C": "Ektopik tanıma dahildir",
+      "D": "Diyabet etiyolojide yoktur",
+      "E": "Uterin anomali ilişkisizdir"
+     },
+     "dogru": "B",
+     "aciklama": "ASRM iki veya daha fazla klinik kaybı, RCOG ardışık üç veya daha fazla kaybı tanımlar; ESHRE 24. haftaya ulaşmadan önceki kayıpları (ektopik, GTN ve implantasyon başarısızlığı hariç) kapsar. Kabul edilen nedenler parental kromozom anomalileri, hipotiroidizm, kontrolsüz diyabet, uterin anomaliler ve antifosfolipid sendromdur.",
+     "sik_aciklamalari": {
+      "A": "ASRM 2012-2013 iki veya daha fazla kayıp der.",
+      "B": "Doğru: tanım farkı ve kabul edilen neden birlikte doğru verilmiştir.",
+      "C": "Ektopik, GTN ve implantasyon başarısızlığı hariçtir.",
+      "D": "Kontrolsüz diyabet kabul edilen nedenlerdendir.",
+      "E": "Belirli uterin anatomik anormallikler etiyolojilerdendir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k14-q07",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Üç kez ilk trimester kaybı olan bir çiftte etiyolojiye yönelik istenecek kapsamlı değerlendirme paneli aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Yalnızca karyotip yeterlidir",
+      "B": "Trombofili bakılmaz",
+      "C": "TSH gereksizdir",
+      "D": "Genetik, anatomik, immün, trombofili ve endokrin panel birlikte istenir",
+      "E": "Enfeksiyon paneli her olguda şarttır"
+     },
+     "dogru": "D",
+     "aciklama": "Tekrarlayan kayıpların önemli bir bölümü dengeli translokasyon taşıyıcılığına bağlı dengesiz gamet oluşumundan kaynaklanır, bu yüzden ebeveyn karyotipi istenir. Uterin septum ve adezyon gibi anatomik nedenler implantasyon yüzeyini bozduğu için HSG veya histeroskopi ile dışlanır. Antifosfolipid sendromda lupus antikoagülan ve antikardiyolipin antikorları plasental tromboza yol açtığından immünolojik panel şarttır. Faktör V Leiden ve protrombin mutasyonu gibi trombofililer ile TSH, HbA1c ve prolaktin bozuklukları da luteal yetmezlik ve erken kayıp yaptığı için taramaya eklenir.",
+     "sik_aciklamalari": {
+      "A": "Anatomik ve immün testler de gerekir.",
+      "B": "Faktör V Leiden ve protrombin mutasyonu bakılır.",
+      "C": "TSH, açlık glukozu ve HbA1c endokrin paneldedir.",
+      "D": "Doğru: beş başlıklı değerlendirme paneli doğru verilmiştir.",
+      "E": "Gonore-klamidya endike ise, Listeria-TORCH ayrıca değerlendirilir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1367,12 +2866,113 @@
       32
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k15-q04",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Rh negatif gebenin 9 haftalık abortusu sonrası kan uyuşmazlığı profilaksisi soruluyor. Hangi uygulama doğrudur?",
+     "secenekler": {
+      "A": "Rh uyuşmazlığı abortus sonrası önemsizdir",
+      "B": "Rh negatif gebenin abortusu sonrası Rh D immün globulin alloimmünizasyonu önlemek için uygulanır",
+      "C": "Rh pozitif anneye uygulanır",
+      "D": "Yalnızca doğumda uygulanır",
+      "E": "Alloimmünizasyonu tedavi eder"
+     },
+     "dogru": "B",
+     "aciklama": "Rh D immün globulin alloimmünizasyonu önler; düşük sonrası Rh negatif annede endikedir.",
+     "sik_aciklamalari": {
+      "A": "Abortus da duyarlandırır.",
+      "B": "Doğru: endikasyon ve amaç tamdır.",
+      "C": "Rh negatif anneye uygulanır.",
+      "D": "Abortus sonrası da uygulanır.",
+      "E": "Önler, tedavi etmez."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k15-q05",
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "Rh negatif gebenin düşük ve amniyosentez sonrası duyarlanma riski ile profilaksi basamakları soruluyor. Hangi bilgi doğrudur?",
+     "secenekler": {
+      "A": "Duyarlanma yalnızca doğumda olur",
+      "B": "Profilaksi riski artırır",
+      "C": "28. hafta dozu gereksizdir",
+      "D": "Düşük, ektopik ve invaziv işlemler de fetomaternal hemorajiyle duyarlandırabilir; doğumda profilaksi riski %2'ye, 28. hafta eklenince %0,1'e indirir",
+      "E": "Anti-D duyarlı hastayı tedavi eder"
+     },
+     "dogru": "D",
+     "aciklama": "Fetomaternal hemoraji D antijeni geçirip Anti-D oluşturur; risk girişimsiz %13, doğum profilaksisiyle %2, 28. hafta eklenince %0,1'dir; düşük-küretaj da duyarlandırır.",
+     "sik_aciklamalari": {
+      "A": "Düşük de duyarlandırır.",
+      "B": "Riski azaltır.",
+      "C": "%0,1'e indirir.",
+      "D": "Doğru: duyarlanma kaynakları ve risk basamakları tamdır.",
+      "E": "Profilaksidir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k15-q06",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Rh profilaksisi immünizasyon riskini nasıl değiştirir?",
+     "secenekler": {
+      "A": "Profilaksi riski %13'ten %0,1'e indirir",
+      "B": "Profilaksi etkisizdir",
+      "C": "28. hafta dozu riski artırır",
+      "D": "Anti-D fetüsten anneye geçer",
+      "E": "Risk zaten %0,1'dir"
+     },
+     "dogru": "A",
+     "aciklama": "Fetomaternal hemorajiyle D antijeninin anneye geçmesi anti-D antikorları oluşturur. İmmünizasyon riski girişimsiz %13, doğumda profilaksiyle %2, ek olarak 28. haftada profilaksiyle %0,1'e iner.",
+     "sik_aciklamalari": {
+      "A": "Doğru: basamaklı profilaksiyle risk azalışı doğru verilmiştir.",
+      "B": "Doğumda profilaksi %2'ye indirir.",
+      "C": "28. hafta ek dozu %0,1'e indirir.",
+      "D": "D antijeni fetüsten anneye geçer, antikor annede oluşur.",
+      "E": "Girişimsiz risk %13'tür."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-61-abortus-k15-q07",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Rh D immün globulin ne zaman verilir ve nasıl izlenir?",
+     "secenekler": {
+      "A": "Anti-D yalnızca doğumdan sonra verilir",
+      "B": "İzlem gerekmez",
+      "C": "Anti-D riskli durumlarda ve 28. haftada verilir, Coombs ile izlenir",
+      "D": "Anti-D sensitizasyonu tedavi eder",
+      "E": "Tüm gebelere verilir"
+     },
+     "dogru": "C",
+     "aciklama": "Rh D immün globulin uygulaması alloimmünizasyonu önler; endike durumlarda (doğum, düşük, girişimler) ve 28. haftada profilaktik verilir. İndirekt Coombs ile izlem, ilk gebelik muayenesi laboratuvarının parçasıdır.",
+     "sik_aciklamalari": {
+      "A": "28. haftada profilaktik doz da uygulanır.",
+      "B": "Gerekirse indirekt Coombs bakılır.",
+      "C": "Doğru: uygulama zamanlaması ve izlem birlikte doğru verilmiştir.",
+      "D": "Uygulama profilaktiktir, oluşmuş yanıtı geri döndürmez.",
+      "E": "Rh uyuşmazlığı riski olan gebelere verilir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 45,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:56:07"
+ ]
 }

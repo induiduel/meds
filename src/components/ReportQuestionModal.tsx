@@ -28,10 +28,12 @@ interface ReportQuestionModalProps {
   onSubmit: (reason: string, details: string) => Promise<void>;
   /** Verilirse pencere "şıkka itiraz" biçiminde açılır */
   objectOption?: { key: string; text: string };
+  /** Soru güncellenince e-postanın gideceği adres (yönetici ve giriş yapmamış kullanıcı için verilmez) */
+  notifyEmail?: string | null;
 }
 
 /** "Hata bildir": pick what is wrong, optionally the right answer and a note. Bottom sheet on phones. */
-export const ReportQuestionModal: React.FC<ReportQuestionModalProps> = ({ question, onClose, onSubmit, objectOption }) => {
+export const ReportQuestionModal: React.FC<ReportQuestionModalProps> = ({ question, onClose, onSubmit, objectOption, notifyEmail }) => {
   const objection = Boolean(objectOption);
   const [reason, setReason] = useState<string | null>(null);
   const [suggested, setSuggested] = useState<string | null>(null);
@@ -244,6 +246,14 @@ export const ReportQuestionModal: React.FC<ReportQuestionModalProps> = ({ questi
                 />
                 <span className="self-end text-[12px] text-ink-3 font-mono">{details.length}/600</span>
               </section>
+
+              <p className="ms-report-queue">
+                <Sparkles aria-hidden />
+                <span>
+                  Bildirimin, yazdığın notla birlikte yapay zekâ inceleme kuyruğuna eklenir; düzeltme gerekirse soru otomatik güncellenir.
+                  {notifyEmail ? <> Güncellenince eski ve yeni hali <b>{notifyEmail}</b> adresine gönderilir.</> : null}
+                </span>
+              </p>
 
               {error && (
                 <div role="alert" className="flex items-start gap-2 px-3 py-2.5 rounded-xl bg-bad-soft text-bad-text text-[14px]">

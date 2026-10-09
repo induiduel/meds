@@ -1,3 +1,4 @@
+import { isPenDevice, notePointer, startFingerPan } from '../ui/penInput';
 import React, { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import {
   PenTool,
@@ -109,7 +110,6 @@ export const SlideDrawingCanvas: React.FC<{
   const [strokes, setStrokes] = useState<DrawingStroke[]>(() => readScopeDrawings(scope));
   const currentStrokeRef = useRef<DrawingStroke | null>(null);
   const isDrawingRef = useRef(false);
-  const penSeenRef = useRef(false);
   const activePointerRef = useRef<number | null>(null);
 
   // Sync with scope changes (when changing slides)
@@ -242,9 +242,12 @@ export const SlideDrawingCanvas: React.FC<{
     if (activeMode === 'none') return;
     const canvas = canvasRef.current;
     if (!canvas) return;
-    // Avuç içi reddi: bir kez kalem görüldüyse parmak/avuç dokunuşu çizmez.
-    if (e.pointerType === 'pen') penSeenRef.current = true;
-    else if (e.pointerType === 'touch' && penSeenRef.current) return;
+    // Kalemli cihaz: kalem yazar, parmak (ve avuç) sayfayı kaydırır. Kalem hiç görülmediyse parmak yazar.
+    notePointer(e);
+    if (e.pointerType === 'touch' && isPenDevice()) {
+      startFingerPan(e.nativeEvent, canvas);
+      return;
+    }
     if (isDrawingRef.current) return;
     activePointerRef.current = e.pointerId;
 

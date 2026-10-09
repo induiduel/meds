@@ -123,7 +123,8 @@ const repairInteractive = (e: any, s: any) => {
 };
 
 export function buildSteps(deck: InteractiveDeck): LessonStep[] {
-  return deck.slides.map((slide, index) => {
+  const rawSlides = (Array.isArray(deck.slides) && deck.slides.length ? deck.slides : (Array.isArray((deck as any).steps) ? (deck as any).steps : [])) as any[];
+  return rawSlides.map((slide, index) => {
     const s: any = slide;
     const cpMatch = String(slide.title || '').match(CP_RE);
     const title = cpMatch ? String(slide.title).slice(cpMatch[0].length) : String(slide.title || `Adım ${index + 1}`);
@@ -133,10 +134,19 @@ export function buildSteps(deck: InteractiveDeck): LessonStep[] {
     const related = (s.relatedQuestions || []).map((q: any, i: number) => normQuestion(q, i)).filter(Boolean) as LessonQuestion[];
     const practice = s.practiceQuestion ? normQuestion(s.practiceQuestion, 99, true) : null;
     const questions = [...related, ...(practice && !related.some((r) => r.stem === practice.stem) ? [practice] : [])];
-    const interactives = (Array.isArray(s.interactiveElements) && s.interactiveElements.length ? s.interactiveElements : s.interactiveElement ? [s.interactiveElement] : [])
+    const interactives = (
+      Array.isArray(s.interactiveElements) && s.interactiveElements.length
+        ? s.interactiveElements
+        : Array.isArray(s.elements) && s.elements.length
+          ? s.elements
+          : s.interactiveElement
+            ? [s.interactiveElement]
+            : []
+    )
       .filter((e: any) => e && typeof e === 'object' && e.type)
       .map((e: any) => repairInteractive(e, s));
     const hl = s.professorAudioHighlight;
+    const narrativeText = String(s.synthesisNarrative || s.content || (cc && typeof cc.text === 'string' ? cc.text : '') || '');
     return {
       index,
       slide,
@@ -146,7 +156,7 @@ export function buildSteps(deck: InteractiveDeck): LessonStep[] {
       subtopic,
       checkpoint: cpMatch ? Number(cpMatch[1]) : s.isCheckpoint ? Number(s.checkpointNumber) || 1 : 0,
       badge: slide.badge,
-      narrative: String(s.synthesisNarrative || s.content || ''),
+      narrative: narrativeText,
       bullets,
       table: cc.table?.rows?.length ? cc.table : undefined,
       formula: cc.formulaBox,
@@ -275,6 +285,16 @@ export const inline = (s: string) => {
   });
   return t.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/==(.+?)==/g, '<mark>$1</mark>').replace(/(?<![*\w])\*(?!\s)([^*]+?)\*(?!\*)/g, '<em>$1</em>');
 };
+const NOTE_LABEL: Record<string, string> = { NOTE: 'Not', IMPORTANT: 'Önemli', CRITICAL: 'Kritik', WARNING: 'Uyarı', CAUTION: 'Dikkat', TIP: 'İpucu' };
+/** Not kutusunun tonu: kritik/uyarı → kırmızı, sınav spotu → turuncu, klinik/önemli → mavi, özet → yeşil, gerisi nötr */
+export const noteTone = (s: string) => {
+  const t = s.toLocaleUpperCase('tr-TR');
+  if (/KRİTİK|UYARI|DİKKAT|TUZAK|HAYATİ/.test(t)) return 'bad';
+  if (/SINAV|SPOT|ÇIKMIŞ/.test(t)) return 'warn';
+  if (/YÜKSEK VERİM|ÖZET|REÇETE/.test(t)) return 'ok';
+  if (/KLİNİK|ÖNEMLİ|İPUCU|TANI/.test(t)) return 'accent';
+  return 'plain';
+};
 export const mdToHtml = (src: string) => {
   const lines = String(src || '').split('\n');
   let out = '';
@@ -295,7 +315,40 @@ export const mdToHtml = (src: string) => {
       .join('')}</tbody></table></div>`;
     tbl = [];
   };
+  // Ardışık "> …" satırları tek not kutusu olur; "[!NOTE]" / "[TEMEL İLKE]" etiketi başlığa taşınır
+  let quote: string[] = [];
+  const flushQuote = () => {
+    if (!quote.length) return;
+    let label = '';
+    const parts = quote.filter(Boolean);
+    const first = parts[0] || '';
+    const gh = first.match(/^\[!([A-Z]+)\]\s*(.*)$/i);
+    if (gh) {
+      label = NOTE_LABEL[gh[1].toUpperCase()] || gh[1];
+      if (gh[2]) parts[0] = gh[2];
+      else parts.shift();
+    } else {
+      const tag = stripEmoji(first).match(/^\[([A-ZÇĞİÖŞÜ ]{4,})\]\s*:?\s*|^([A-ZÇĞİÖŞÜ ]{4,}):\s*/);
+      if (tag) {
+        const k = String(tag[1] || tag[2]).trim();
+        label = k.charAt(0) + k.slice(1).toLocaleLowerCase('tr-TR');
+        parts[0] = stripEmoji(first).slice(tag[0].length);
+      }
+    }
+    const body = parts.join(' ').trim();
+    quote = [];
+    if (!body) return;
+    const tone = noteTone(`${label} ${label ? '' : body.slice(0, 40)}`);
+    out += `<aside class="ls-note is-${tone}">${label ? `<span class="ls-note-k">${esc(label)}</span>` : ''}<p>${inline(body)}</p></aside>`;
+  };
   for (const raw of lines) {
+    if (raw.trim().startsWith('>')) {
+      close(0);
+      flushTable();
+      quote.push(raw.trim().replace(/^>\s?/, '').trim());
+      continue;
+    }
+    flushQuote();
     if (/^\s*\|.*\|\s*$/.test(raw)) {
       close(0);
       tbl.push(raw.trim().slice(1, -1).split('|').map((c) => c.trim()));
@@ -314,12 +367,9 @@ export const mdToHtml = (src: string) => {
     const line = raw.trim();
     if (!line || /^-{3,}$/.test(line)) continue;
     if (/^#{1,4}\s/.test(line)) out += `<h4>${inline(line.replace(/^#+\s*/, ''))}</h4>`;
-    else if (line.startsWith('>')) {
-      const body = line.replace(/^>\s*/, '');
-      const warn = /UYARI|DİKKAT|TUZAK|KRİTİK/i.test(body);
-      out += `<div class="ls-callout ${warn ? 'is-warn' : ''}">${inline(body)}</div>`;
-    } else out += `<p>${inline(line)}</p>`;
+    else out += `<p>${inline(line)}</p>`;
   }
+  flushQuote();
   flushTable();
   close(0);
   return out;

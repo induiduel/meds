@@ -112,25 +112,19 @@ MODEL_PRICING = {  # USD / token (Google Gemini; flash-lite en ucuz)
 # 100 TL/ay) record_usage/paid_allowed ile aynen korunur.
 # Ücretsiz Flash kotası günde model başına yalnız 20 istek → kota bitince Flash-Lite yedek. Lite'ın cevap değişikliği
 # cevap_dogrula'da ancak güçlü bağımsız model (gpt-oss) + açıklama aynı şıkta birleşirse kabul edilir.
-# Flash-Lite Faz 14'te HİÇ kullanılmaz (2026-10-07 testleri: çelişkili şık analizi, yanlış cevap). Güçlü model kotası
-# bitince Faz 14 durur (QuotaExhausted) ve kota yenilenince kaldığı yerden sürer.
-PAID_MODELS = ["gemini-flash-latest", "gemini-3.5-flash"]
-FREE_MODELS = ["gemini-flash-latest", "gemini-3.5-flash"]
-STRONG_GEMINI = ["gemini-flash-latest", "gemini-3.5-flash"]       # düşünen modeller: cevap oyu sayılır
-LITE_MODELS = ["gemini-flash-lite-latest", "gemini-3.5-flash-lite"]
+PAID_MODELS = ["gemini-3.5-flash"]
+FREE_MODELS = ["gemini-3.5-flash"]
+STRONG_GEMINI = ["gemini-3.5-flash"]       # düşünen modeller: cevap oyu sayılır
+LITE_MODELS = []
 FAZ14_AYAR = ROOT.parent / "meds_temp" / "state" / "faz14_ayarlari.json"   # /test/cikmis sayfasından değiştirilir
 
 
 def lite_acik() -> bool:
-    """Flash kotası bitince Flash-Lite ile devam edilsin mi? (varsayılan açık; /test/cikmis → 'Lite yedeği')
-    Lite yalnız soruyu düzeltir; cevap oyu SAYILMAZ (cevabı bağımsız çözücüler belirler)."""
-    try:
-        return bool(json.loads(FAZ14_AYAR.read_text(encoding="utf-8")).get("lite_kullan", True))
-    except Exception:
-        return True
+    """Flash-Lite kesinlikle devre dışıdır; yalnız gemini-3.5-flash kullanılır."""
+    return False
 
 
-WEAK_GEMINI = LITE_MODELS                                      # cevap oyu sayılmayan modeller
+WEAK_GEMINI = []                                      # cevap oyu sayılmayan modeller
 STRONG_VERIFIER = "gpt-oss"                                    # cevap DEĞİŞİKLİĞİNİ yalnız bu doğrulayıcı onaylayabilir
 # Bağımsız cevap doğrulayıcı (farklı model ailesi, ücretsiz Groq): soruyu kayıtlı cevabı görmeden çözer
 VERIFY_MODELS = ["groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b"]
@@ -479,7 +473,7 @@ SCHEMA_HINT = """YANIT ŞEMASI (yalnız JSON):
           "mufredat_atamasi": "...", "cevap_dogrulamasi": "..."}, "referans_literatur": "varsa standart kaynak"}}"""
 
 
-def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> tuple[dict | None, str]:
+def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "", kullanici_notu: str = "") -> tuple[dict | None, str]:
     """Soruyu bulut modeline gönderir. Eski cevap anahtarı verilmez; ders kaynakları (yerel vektör araması) eklenir."""
     # Eski cevap anahtarı modele HİÇ verilmez ve kararda kullanılmaz (kullanıcı kuralı, 2026-10-07)
     girdi = {k: v for k, v in soru.items() if k not in ("dogru_secenek", "aciklama", "kayitli_cevap")}
@@ -488,6 +482,12 @@ def ai_ile_soruyu_duzelt(soru: dict, mufredat_ozeti: str = "") -> tuple[dict | N
         ek = ("\nNOT: Bu sorunun kökü bozuk/eksik (bir şıkkın kopyası ya da çok kısa). Şıklara bakarak sorunun ne sorduğunu "
               "kur; kurduğun kök YALNIZ TEK bir şıkkı doğru kılmalı (diğer dört şık kesinlikle yanlış olmalı). Şıkların tıbbi "
               "anlamını değiştirme. Tek cevaplı bir kök kurulamıyorsa cevap_emin=false.\n")
+    if kullanici_notu:
+        ek += ("\nÖĞRENCİ BİLDİRİMLERİ (bu soru öğrencilerin isteğiyle yeniden inceleniyor):\n" + kullanici_notu +
+               "\nBu bildirimleri İPUCU olarak kullan, doğru kabul etme: söylenen hatayı soru kökü, şıklar ve DERS KAYNAKLARI "
+               "üzerinden tek tek denetle. Bildirim haklıysa düzelt ve degisiklik_ozeti'nde hangi bildirimi neden kabul "
+               "ettiğini yaz; haksızsa değiştirme ve degisiklik_ozeti'nde nedenini kısaca belirt. Önerilen bir cevabı "
+               "yalnız şık analizi ve kaynaklar destekliyorsa seç.\n")
     kaynaklar = kaynaklari_bul(soru.get("soru_koku") or "", soru.get("secenekler") or {})
     soru["_kaynaklar"] = kaynaklar                                # doğrulayıcılar aynı kaynakları görür
     prompt = ("İNCELENECEK SORU:\n" + json.dumps(girdi, ensure_ascii=False, indent=1) + "\n" + ek +
@@ -917,8 +917,7 @@ def kopya_kaydet(kopya_id: str, asil_id: str):
     KOPYA_FILE.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
-GEMINI_COZUCU = ["gemini:gemini-flash-latest", "gemini:gemini-3.5-flash", "gemini:gemini-flash-lite-latest",
-                 "gemini:gemini-3.5-flash-lite"]                 # ücretsiz anahtarlar (cloud_llm); Flash yoksa Lite
+GEMINI_COZUCU = ["gemini:gemini-3.5-flash"]                 # ücretsiz anahtarlar (cloud_llm); yalnız gemini-3.5-flash
 
 
 def belirsizi_gemini_ile_tamamla(soru: dict, res: dict) -> None:
@@ -1241,7 +1240,117 @@ def ucretsiz_paralel(questions: list, limit: int, islenmisler: set, stats: dict)
         t.join()
 
 
+# ---------------------------------------------------------------------------
+# Kullanıcı kuyruğu: sitede "yapay zekâ incelemesine gönder" ve hatalı soru bildirimleri.
+# Kuyruğu sunucu yazar (kullanici_kuyrugu.json); bu kip yalnız okur ve sonuçları kullanici_sonuclari.jsonl'e ekler.
+# İşlenmiş sorular da yeniden incelenir (checkpoint atlanmaz). Yalnız ücretsiz anahtarlar; kota biterse istekler bekler.
+# ---------------------------------------------------------------------------
+KULLANICI_KUYRUGU = OUT_DIR / "kullanici_kuyrugu.json"
+KULLANICI_SONUCLARI = OUT_DIR / "kullanici_sonuclari.jsonl"
+
+
+def _kullanici_notu(notlar: list) -> str:
+    satirlar = []
+    for i, n in enumerate(notlar or [], 1):
+        tur = "Hata bildirimi" if n.get("kind") == "hata" else "İnceleme isteği"
+        parca = [p for p in (n.get("reason"), n.get("message")) if p]
+        satirlar.append(f"{i}. {tur}: " + (" — ".join(str(p) for p in parca) if parca else "(gerekçe yazılmadı; soruyu baştan denetle)"))
+    return "\n".join(satirlar)
+
+
+def _sonuc_yaz(istek: dict, **alanlar) -> None:
+    satir = {"istek_id": istek.get("id"), "question_id": istek.get("questionId"), **alanlar}
+    with dosya_kilidi():
+        with KULLANICI_SONUCLARI.open("a", encoding="utf-8") as fo:
+            fo.write(json.dumps(satir, ensure_ascii=False) + "\n")
+
+
+def _kullanici_kaydi_yaz(istek: dict, src: dict, ai_sonuc: dict, model_used: str) -> dict:
+    s_id = str(istek.get("questionId"))
+    ratio = support_ratio(src, ai_sonuc)
+    record = {
+        "question_id": s_id,
+        "source_hash": hashlib.sha256(json.dumps(src, ensure_ascii=False, sort_keys=True).encode()).hexdigest(),
+        "processed_at": datetime.utcnow().isoformat() + "Z",
+        "model": model_used or "bilinmiyor",
+        "source": src,
+        "proposal": ai_sonuc,
+        "support_ratio": ratio,
+        "status": "review_required",
+        "kaynak": "kullanici",
+        "istek_id": istek.get("id"),
+    }
+    if cevap_uyusmazligi(ai_sonuc):
+        record["answer_doubtful"] = True
+    if ai_sonuc.get("supheli_cevap"):
+        record["suspicious"] = True
+        record["suspicious_at"] = record["processed_at"]
+    with _KILIT, dosya_kilidi():
+        with REVIEWS_FILE.open("a", encoding="utf-8") as fo:
+            fo.write(json.dumps(record, ensure_ascii=False) + "\n")
+        save_checkpoint(load_checkpoints(), s_id)          # otomatik iş bu soruyu yeniden çözmesin
+    logging.info(f"✓ Kullanıcı isteği {istek.get('id')} · soru #{s_id} incelendi ({model_used}).")
+    return record
+
+
+def kullanici_kuyrugu_isle() -> int:
+    import fcntl
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    kilit = open(OUT_DIR / "faz14_kullanici.lock", "w")
+    try:
+        fcntl.flock(kilit, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        logging.info("Kullanıcı kuyruğu zaten işleniyor")
+        return 0
+    global ALLOW_PAID
+    ALLOW_PAID = False                                        # yalnız ücretsiz kuyruk
+    try:
+        kuyruk = json.loads(KULLANICI_KUYRUGU.read_text(encoding="utf-8")) if KULLANICI_KUYRUGU.exists() else []
+    except Exception as e:  # noqa: BLE001
+        logging.error(f"Kullanıcı kuyruğu okunamadı: {e}")
+        return 1
+    bitenler = set()
+    if KULLANICI_SONUCLARI.exists():
+        for satir in KULLANICI_SONUCLARI.read_text(encoding="utf-8").splitlines():
+            try:
+                bitenler.add(json.loads(satir).get("istek_id"))
+            except Exception:  # noqa: BLE001
+                pass
+    bekleyen = [i for i in kuyruk if i.get("status") == "bekliyor" and i.get("id") not in bitenler]
+    if not bekleyen:
+        logging.info("Kullanıcı kuyruğunda bekleyen istek yok")
+        return 0
+    raw = json.loads((ROOT / "data" / "pastQuestions.json").read_text(encoding="utf-8"))
+    sorular = {str(q.get("id")): q for q in (raw if isinstance(raw, list) else raw.get("questions", []))}
+    logging.info(f"Kullanıcı kuyruğu: {len(bekleyen)} istek (yalnız ücretsiz anahtarlar)")
+    for istek in bekleyen:
+        q = sorular.get(str(istek.get("questionId")))
+        if not q:
+            _sonuc_yaz(istek, ok=False, error="Soru veritabanında bulunamadı")
+            continue
+        src = source_view(q)
+        if len(src["soru_koku"].strip()) < 5 or len(src["secenekler"]) < 2:
+            _sonuc_yaz(istek, ok=False, error="Soru kökü ya da şıkları incelenemeyecek kadar eksik")
+            continue
+        try:
+            res, model = ai_ile_soruyu_duzelt(dict(src), "", _kullanici_notu(istek.get("notes") or []))
+        except QuotaExhausted as qe:
+            logging.info(f"Ücretsiz kota bitti ({qe}); kalan istekler kuyrukta bekliyor")
+            break
+        except Exception as e:  # noqa: BLE001
+            logging.warning(f"İstek {istek.get('id')} incelenemedi: {e}")
+            continue                                          # geçici hata: sonraki çalıştırmada yeniden denenir
+        if not res or not isinstance(res, dict):
+            continue
+        kayit = _kullanici_kaydi_yaz(istek, src, res, model)
+        _sonuc_yaz(istek, ok=True, processed_at=kayit["processed_at"], model=model)
+        time.sleep(1)
+    return 0
+
+
 def main() -> int:
+    if "--kullanici-kuyrugu" in sys.argv:
+        return kullanici_kuyrugu_isle()
     parser = argparse.ArgumentParser(description="Faz 14 Bulut Tabanlı Çıkmış Soru İyileştirme")
     parser.add_argument("--limit", type=int, default=10, help="Bu çalıştırmada incelenecek soru sayısı")
     parser.add_argument("--chunk-size", type=int, default=30, help="API'den bir seferde çekilecek soru sayısı")

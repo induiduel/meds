@@ -6,6 +6,7 @@
  "konu": "Üretral Akıntı",
  "ogretim_uyesi": "Uz. Dr. Merve Kaçar",
  "tarih": "2026-10-15",
+ "soru_sayisi": 70,
  "kazanimlar": [
   {
    "no": 1,
@@ -87,6 +88,113 @@
      },
      "bilgi": [
       1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Poliklinikte üç hasta: üretral akıntılı erkek, vajinal akıntılı kadın ve inguinal şişlikli erkek. Asistan sendromik yaklaşımı özetliyor. Hangi özet doğrudur?",
+     "secenekler": {
+      "A": "Erkekte tipik CYBE semptomu vajinal akıntıdır",
+      "B": "Üretral akıntılı erkekte gonore-klamidya, vajinal akıntılı kadında vajinit-servisit, inguinal LAP'lı hastada LGV-şankroid sendromik olarak düşünülür",
+      "C": "Genital ülser CYBE semptomu değildir",
+      "D": "Dizüri CYBE'de görülmez",
+      "E": "Sendromik yaklaşımda etkene göre değil semptoma göre davranılmaz"
+     },
+     "dogru": "B",
+     "aciklama": "Kadında vajinal akıntı-alt abdominal ağrı, erkekte üretral akıntı; her iki cinste ülser, LAP, dizüri; sendrom: üretral akıntı gonore-klamidya, vajinal vajinit-servisit, LAP LGV-şankroid.",
+     "sik_aciklamalari": {
+      "A": "Erkekte üretral akıntı tipiktir.",
+      "B": "Doğru: üç sendrom-neden eşleşmesi tamdır.",
+      "C": "Her iki cinste görülen semptomlardandır.",
+      "D": "Her iki cinste görülür.",
+      "E": "Sendromik yaklaşım ampirik tedaviye olanak verir."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Vajinal akıntılı hastada vajinit-servisit ayrımı ile üretral akıntılı hastanın ön tanıları tartışılıyor. Hangi yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "Vajinal akıntının tek nedeni servisittir",
+      "B": "Üretral akıntının en sık nedeni LGV'dir",
+      "C": "İnguinal LAP vajiniti düşündürür",
+      "D": "Kötü kokulu vajinal akıntılı kadında trikomoniyazis-kandidiyazis-BV (vajinit) ile gonore-klamidya (servisit) ayrımı yapılır; üretral akıntıda ilk akla gonore ve klamidya gelir",
+      "E": "Sendromik yaklaşım yalnızca laboratuvar sonrası uygulanır"
+     },
+     "dogru": "D",
+     "aciklama": "Vajinal akıntıda vajinit (trikomoniyazis, kandidiyazis, BV) ve servisit (gonore, klamidya) ayrımı yapılır; üretral akıntıda gonore-klamidya ilk sıradadır.",
+     "sik_aciklamalari": {
+      "A": "Vajinit ve servisit ayrılır.",
+      "B": "Gonore ve klamidyadır.",
+      "C": "LGV ve şankroidi düşündürür.",
+      "D": "Doğru: vajinit-servisit ayrımı ve üretral nedenler birlikte doğru.",
+      "E": "Etkene gitmeden ampirik tedaviye olanak verir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "CYBE semptomları ve sendromik eşleşmeler nelerdir?",
+     "secenekler": {
+      "A": "Üretral akıntı yalnızca kadında görülür",
+      "B": "Üretral akıntı gonore-klamidya, LAP LGV-şankroid ile eşleşir",
+      "C": "Vajinal akıntı yalnızca servisit yapar",
+      "D": "Genital ülser sendromik yaklaşımda yoktur",
+      "E": "Dizüri CYBE semptomu değildir"
+     },
+     "dogru": "B",
+     "aciklama": "CYBE semptomları kadında vajinal akıntı-alt abdominal ağrı, erkekte üretral akıntı, her iki cinste genital ülser, inguinal LAP, dizüri ile anal-oral lezyonlardır. Sendromik yaklaşımda üretral akıntı gonore-klamidya, vajinal akıntı vajinit-servisit, inguinal LAP LGV-şankroid ile eşleşir.",
+     "sik_aciklamalari": {
+      "A": "Erkeklerde üretral akıntı tipiktir.",
+      "B": "Doğru: semptom-sendrom eşleşmeleri doğru verilmiştir.",
+      "C": "Vajinit (trikomoniyazis, kandidiyazis, BV) ve servisit nedenlerdir.",
+      "D": "Genital ülser ve inguinal LAP sendromlardandır.",
+      "E": "Dizüri her iki cinste görülen semptomlardandır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Üretrit tanımı ve etken dağılımı nedir?",
+     "secenekler": {
+      "A": "Üretrit daima semptomatiktir",
+      "B": "Üretrit kadında daha sıktır",
+      "C": "Gonokoksik üretrit %80'dir",
+      "D": "Üretrit erkekte sık enflamasyondur; %80'i nongonokoksiktir",
+      "E": "Non-enfeksiyöz üretrit yoktur"
+     },
+     "dogru": "D",
+     "aciklama": "Üretrit üretranın sıklıkla enfeksiyöz, bazen non-enfeksiyöz, daha çok erkekte görülen dizüri-kaşıntı-akıntılı veya asemptomatik enflamatuvar hastalığıdır. Gonokoksik üretrit enfeksiyöz üretritlerin %20'si, nongonokoksik %80'idir.",
+     "sik_aciklamalari": {
+      "A": "Asemptomatik seyredebilir.",
+      "B": "Daha çok erkeklerde görülür.",
+      "C": "Gonokoksik %20, nongonokoksik %80'dir.",
+      "D": "Doğru: tanım ve oran dağılımı birlikte doğru verilmiştir.",
+      "E": "Kimyasal-travmatik-atrofik nedenler sayılmıştır."
+     },
+     "bilgi": [
+      4,
+      6
      ],
      "benzer_cikmis": []
     }
@@ -175,6 +283,113 @@
       3
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Tarama amaçlı alınan üretral sürüntüde gram pozitif basiller ve stafilokoklar üreyen asemptomatik hasta endişeleniyor. Doğru açıklama hangisidir?",
+     "secenekler": {
+      "A": "Asemptomatik erkeğin üretral sürüntüsünde laktobasil ve koagülaz-negatif stafilokok görülmesi normal floradır ve patoloji anlamına gelmez; yorum hücre içi diplokok-lökosite dayanır",
+      "B": "Normal üretra sterildir",
+      "C": "Laktobasil üretritte patojendir",
+      "D": "KNS gonore etkenidir",
+      "E": "Flora yalnızca kadın üretrasında bulunur"
+     },
+     "dogru": "A",
+     "aciklama": "Anterior üretrada deri-perine florasının aynıları düşük sayıda bulunur: laktobasil, streptokok, KNS; bunların görülmesi patoloji değildir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: flora üyeleri ve yorum ilkesi birlikte doğru.",
+      "B": "Düşük sayıda saprofit bulunur.",
+      "C": "Saprofitlerdir.",
+      "D": "Patojen N. gonorrhoeae'dir.",
+      "E": "Her iki cinste anterior üretrada bulunur."
+     },
+     "bilgi": [
+      3,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Gram preparatta karışık flora, diplokok yok ve lökosit normal sınırlı hastada antibiyotik ısrarı tartışılıyor. Doğru yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Gramda görülen her bakteri tedavi gerektirir",
+      "B": "Fon florası gonoreyi dışlar",
+      "C": "Gram preparatta karışık gram pozitif-negatif bakteriler görülüp hücre içi diplokok ve lökosit artışı yoksa bu flora kirliliğidir; tanı değeri taşımaz ve üretrit tanısı konmaz",
+      "D": "Lökosit varlığı tanı için yetersizdir",
+      "E": "Distal üretra sterildir"
+     },
+     "dogru": "C",
+     "aciklama": "Distal üretra deri-introital florayla kolonize olduğundan çeşitli bakterilerin görülmesinin tanı değeri yoktur; Gram yorumu diplokok ve lökosite dayanır.",
+     "sik_aciklamalari": {
+      "A": "Yorum diplokok-lökosite dayanır.",
+      "B": "Flora tanıyı dışlamaz, yorumlanmaz.",
+      "C": "Doğru: flora-tanı değersizliği ve üretrit eşiği birlikte doğru.",
+      "D": "Lökosit eşiği tanı koydurur.",
+      "E": "Kolonizedir."
+     },
+     "bilgi": [
+      11,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Normal üretra florası ve tanı değeri nedir?",
+     "secenekler": {
+      "A": "Anterior üretrada laktobasil-streptokok-KNS düşük sayıda bulunur, tanı değeri yoktur",
+      "B": "Üretra sterildir",
+      "C": "Flora yalnızca erkekte vardır",
+      "D": "KNS görülmesi gonore tanısıdır",
+      "E": "Flora bakterileri patojendir"
+     },
+     "dogru": "A",
+     "aciklama": "Her iki cinste anterior üretrada deri-perine mikroorganizmalarının aynıları düşük sayıda bulunur: laktobasiller, streptokoklar ve koagülaz-negatif stafilokoklar. Distal üretra deri-introital florayla kolonize olduğundan bu bakterilerin görülmesinin tanı değeri yoktur.",
+     "sik_aciklamalari": {
+      "A": "Doğru: flora üyeleri ve tanı değersizliği birlikte doğru verilmiştir.",
+      "B": "Anterior üretra düşük sayıda kolonizedir.",
+      "C": "Her iki cinste aynı flora bulunur.",
+      "D": "Çeşitli gram pozitif-negatif bakterilerin tanı değeri yoktur.",
+      "E": "Normal flora üyesidirler."
+     },
+     "bilgi": [
+      3,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Non-enfeksiyöz üretrit nedenleri nelerdir?",
+     "secenekler": {
+      "A": "Non-enfeksiyöz neden yoktur",
+      "B": "Spermisid koruyucudur",
+      "C": "Kimyasal, travmatik ve atrofik nedenler üretrit yapar",
+      "D": "Kateter irritasyon yapmaz",
+      "E": "Atrofik vajinit erkekte görülür"
+     },
+     "dogru": "C",
+     "aciklama": "Non-enfeksiyöz nedenler kronik irritasyon, yoğun kristal, alkol, spermisid gibi kimyasallar, tahriş (dar giysi, sabun), travma (kateter, yabancı cisim) ve atrofik vajinittir. Flora-undışı bu nedenler de üretrit yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Kimyasal-travmatik nedenler tanımlanmıştır.",
+      "B": "Partnerin spermisidi kimyasal nedendir.",
+      "C": "Doğru: üç grup non-enfeksiyöz neden birlikte doğru verilmiştir.",
+      "D": "Kateterizasyon ve enstrümantasyon travmatik nedendir.",
+      "E": "Atrofik vajinit kadın nedenlerdendir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -259,6 +474,114 @@
      },
      "bilgi": [
       7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Yeni sabun kullanımı sonrası üretral yanması başlayan, akıntısız ve kültürleri negatif erkekte etiyoloji tartışılıyor. Hangi açıklama doğrudur?",
+     "secenekler": {
+      "A": "Üretrit yalnızca kadınlarda görülür",
+      "B": "Üretrit daima semptomatiktir",
+      "C": "Non-enfeksiyöz neden yoktur",
+      "D": "CYBE üretritte ikincildir",
+      "E": "Dizüri ve akıntılı erkekte üretrit düşünülür (asemptomatik de olabilir); CYBE birincil nedendir; dar giysi-sabun-spermisit irritasyonu, kateter travması ve yoğun kristalüri non-enfeksiyöz nedenlerdir"
+     },
+     "dogru": "E",
+     "aciklama": "Üretrit daha çok erkekte, dizüri-kaşıntı-akıntılı veya asemptomatik enflamasyondur; CYBE birincil; non-enfeksiyöz: irritasyon, kristalüri, alkol, spermisit, travma, atrofik vajinit.",
+     "sik_aciklamalari": {
+      "A": "Daha çok erkekte görülür.",
+      "B": "Asemptomatik olabilir.",
+      "C": "Tahriş-travma-kimyasallar nedendir.",
+      "D": "CYBE birincildir.",
+      "E": "Doğru: tanım ve iki etiyoloji grubu birlikte doğru."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Tüm mikrobiyolojik testleri negatif üretritli hastada bisiklet kullanımı ve eşinin spermisit kullanımı öğreniliyor. Hangi yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "Steril üretritte non-enfeksiyöz araştırma gereksizdir",
+      "B": "NAAT negatif, lökositli üretritli ve bisiklete binen hastada mekanik irritasyon ve kristalüri gibi non-enfeksiyöz nedenler sorgulanır; olguların yaklaşık yarısında etiyoloji saptanamaz",
+      "C": "Atrofik vajinit üretrit yapmaz",
+      "D": "Spermisit etiyolojide yoktur",
+      "E": "Tüm üretritlerde etken bulunur"
+     },
+     "dogru": "B",
+     "aciklama": "Etken saptanamayan olguda tahriş-travma-spermisit-kristalüri-atrofik vajinit akılda tutulur; vakaların yarısında etiyoloji saptanamaz.",
+     "sik_aciklamalari": {
+      "A": "Non-enfeksiyöz olasılıklar akılda tutulur.",
+      "B": "Doğru: sorgulama listesi ve saptanamama oranı birlikte doğru.",
+      "C": "Menopoz sonrası nedendir.",
+      "D": "Kimyasal irritandır.",
+      "E": "Yaklaşık yarısında saptanamaz."
+     },
+     "bilgi": [
+      5,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "NGU etken sıralaması ve özellikleri nelerdir?",
+     "secenekler": {
+      "A": "NGU'nun en sık nedeni gonokoktur",
+      "B": "NGU'da ilk sırada klamidya, ikinci mikoplazma vardır",
+      "C": "NGU inkübasyonu gonoreden kısadır",
+      "D": "NGU akıntısı pürülandır",
+      "E": "NGU üretritlerin azını oluşturur"
+     },
+     "dogru": "B",
+     "aciklama": "NGU'nun en sık nedeni Chlamydia trachomatis (%15-40, bazı çalışmalarda %48), ikinci Mycoplasma genitalium (%15-20); daha az Trichomonas, HSV, EBV ve adenovirüstür. NGU inkübasyonu 2-35 günle daha uzun, akıntısı mukopürülan-serözdür.",
+     "sik_aciklamalari": {
+      "A": "NGU gonokok dışı etkenlerledir.",
+      "B": "Doğru: iki sık etken ve oranları birlikte doğru verilmiştir.",
+      "C": "İnkübasyon genellikle daha uzundur (2-35 gün).",
+      "D": "Akıntı sıklıkla mukopürülan veya serözdür.",
+      "E": "Üretrit olgularının %50'den fazlasıdır."
+     },
+     "bilgi": [
+      7,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Gonore etkeni, bulaşı ve koinfeksiyonu nedir?",
+     "secenekler": {
+      "A": "Gonokok gram pozitiftir",
+      "B": "Doğal konakçı hayvandır",
+      "C": "İnkübasyon 1 aydır",
+      "D": "Gonokok diplokoktur, inkübasyon 3-10 gün, %40 klamidya eşlik eder",
+      "E": "Oral bulaş sıktır"
+     },
+     "dogru": "D",
+     "aciklama": "Gonore etkeni gram negatif diplokok N. gonorrhoeae'dir; tek konakçı insan, inkübasyon 3-10 gün, bulaş cinsel-perinatal, oral bulaş çok düşüktür. Gonorelilerin %40'ında klamidya koinfeksiyonu vardır.",
+     "sik_aciklamalari": {
+      "A": "Gram negatif diplokoktur.",
+      "B": "Tek doğal konakçı insandır.",
+      "C": "İnkübasyon 3-10 gündür.",
+      "D": "Doğru: etken, süre ve koinfeksiyon birlikte doğru verilmiştir.",
+      "E": "Oral seksle bulaşma çok düşüktür."
+     },
+     "bilgi": [
+      12,
+      13
      ],
      "benzer_cikmis": []
     }
@@ -348,6 +671,116 @@
      },
      "bilgi": [
       24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İki olgu karşılaştırılıyor: 5 günde bol pürülan akıntı gelişen ile 3 haftada az mukoid akıntı gelişen. Klinik-micro epidemiyolojik ayrım hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Üretritlerin çoğu gonokoksiktir",
+      "B": "NGU'nun en sık etkeni gonokoktur",
+      "C": "GU inkübasyonu NGU'dan uzundur",
+      "D": "Bol sarı-yeşil pürülan akıntılı ve 5 günlük kuluçkalı olgu GU'yu (N. gonorrhoeae, ~%20), az mukoid akıntılı ve 3 haftalık kuluçkalı olgu NGU'yu (en sık C. trachomatis) düşündürür",
+      "E": "M. genitalium GU etkenidir"
+     },
+     "dogru": "D",
+     "aciklama": "GU ~%20, NGU ~%80; NGU'da C. trachomatis %15-40 (bazı %48), M. genitalium %15-20; inkübasyon GU 3-10 gün, NGU 2-35 gün; GU bol pürülan, NGU mukoid-seröz akıntı yapar.",
+     "sik_aciklamalari": {
+      "A": "~%80'i nongonokoksiktir.",
+      "B": "C. trachomatis en sıktır.",
+      "C": "GU 3-10, NGU 2-35 gündür.",
+      "D": "Doğru: akıntı-inkübasyon-etken üçlüsü tamdır.",
+      "E": "NGU'nun ikinci sıklıktaki etkenidir."
+     },
+     "bilgi": [
+      6,
+      7,
+      12,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Gramda lökositli-diplokoksuz üretritli hastada test stratejisi ile gonoreli hastada ek test tartışılıyor. Hangi strateji doğrudur?",
+     "secenekler": {
+      "A": "Gramda bol lökosit-diplokok yokluğu NGU lehinedir ve NAAT ile C. trachomatis aranır; gonoreli hastada %40 klamidya koinfeksiyonu nedeniyle iki etken birlikte test edilir",
+      "B": "NGU'da lökosit görülmez",
+      "C": "NGU kültürle kolay tanınır",
+      "D": "Koinfeksiyon nadirdir",
+      "E": "NAAT NGU'da kullanılmaz"
+     },
+     "dogru": "A",
+     "aciklama": "NGU Gramında lökosit var diplokok yok, kültür pratik değil NAAT tercih edilir; gonorede %40 klamidya koinfeksiyonu olduğundan iki etken birlikte aranır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: mikroskopi ayrımı, NAAT tercihi ve koinfeksiyon birlikte doğru.",
+      "B": "Bol lökosit vardır.",
+      "C": "Kültür pratik değildir.",
+      "D": "%40 koinfeksiyon vardır.",
+      "E": "NAAT tercih edilir."
+     },
+     "bilgi": [
+      24,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Gonokoksik ve NGU akıntısı klinik olarak nasıl ayrılır?",
+     "secenekler": {
+      "A": "Gonokoksik pürülan bol akıntı, NGU az mukoid akıntı yapar",
+      "B": "NGU akıntısı daha pürülandır",
+      "C": "Gonokoksikte dizüri olmaz",
+      "D": "NGU'da sabah izi olmaz",
+      "E": "İkisi klinik aynıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Gonokoksik üretritte meatus tutunmasıyla başlayan enfeksiyon subepitelyal dokuya geçer; ana belirti pürülan koyu yeşil-sarı akıntı, yanma-kızarıklık, sonra dizüri-ağrılı ereksiyondur. NGU'da az mukoid akıntı, dizüri-kaşıntı ve sabah iç çamaşır izi tipiktir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: iki tablonun akıntı karakteri doğru karşılaştırılmıştır.",
+      "B": "NGU'da en sık mukoid-saydam az akıntı olur.",
+      "C": "İki-üç günde dizüri ve ağrılı ereksiyon gelişir.",
+      "D": "Meatal kabuklanma ve iç çamaşır izi sabah görülür.",
+      "E": "Akıntı miktarı ve inkübasyon farklıdır."
+     },
+     "bilgi": [
+      16,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kadında gonokok ve klamidya kliniği nasıl ayrılır?",
+     "secenekler": {
+      "A": "Gonokok kadın daima semptomatiktir",
+      "B": "Klamidya servisit yapmaz",
+      "C": "Gonokok kadın asemptomatik, klamidya frajil serviks yapar",
+      "D": "Rektal enfeksiyon daima semptomatiktir",
+      "E": "Erkekte gonokok asemptomatiktir"
+     },
+     "dogru": "C",
+     "aciklama": "Erkekte komplike olmayan gonokok üretrit-dizüri yapar; kadın sıklıkla asemptomatiktir, yarısından azında servisit bulguları olur. Klamidyada kadın servisitinde mukopürülan akıntı ve frajil serviks, üretritte dizüri-piyüri görülür.",
+     "sik_aciklamalari": {
+      "A": "Kadınlarda sıklıkla asemptomatiktir.",
+      "B": "Servisit, üretrit, salpenjit ve PID gelişebilir.",
+      "C": "Doğru: cinsiyete göre iki etkenin kliniği doğru karşılaştırılmıştır.",
+      "D": "Rektal enfeksiyonlar genellikle asemptomatiktir.",
+      "E": "Erkekte akıntı ve dizüriyle üretrit tipiktir."
+     },
+     "bilgi": [
+      14,
+      26
      ],
      "benzer_cikmis": []
     }
@@ -451,6 +884,115 @@
       20
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Akıntılı hastada üretrit laboratuvar doğrulaması ve etken izolasyon basamakları soruluyor. Hangi yanıt doğrudur?",
+     "secenekler": {
+      "A": "Üretrit tanısı yalnızca semptomla konur",
+      "B": "Lökosit eşiği Gramda ≥10'dur",
+      "C": "Akıntılı hastada Gramda her immersiyonda ≥2 lökosit veya ilk akım idrar sedimentinde ≥10 lökosit üretriti belgeler; etken Gram-metilen mavisi, endoüretral kültür ve NAAT ile araştırılır",
+      "D": "Lökosit esteraz tanıdışıdır",
+      "E": "Kültür etken izolasyonunda kullanılmaz"
+     },
+     "dogru": "C",
+     "aciklama": "Üretrit: akıntı varlığı, Gramda immersiyonda ≥2 lökosit, ilk akım idrarda lökosit esteraz veya sedimentte ≥10 lökosit; izolasyon Gram-metilen mavisi, kültür, NAAT ile yapılır.",
+     "sik_aciklamalari": {
+      "A": "Laboratuvar doğrulama gerekir.",
+      "B": "Eşik ≥2'dir.",
+      "C": "Doğru: üç belgelendirme ölçütü ve üç izolasyon yöntemi tamdır.",
+      "D": "Pozitifliği destekler.",
+      "E": "Kültür canlılık sağlar."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Asemptomatik temaslı taraması ile semptomatik erkeğin hızlı tanısında yöntem performansı karşılaştırılıyor. Hangi karşılaştırma doğrudur?",
+     "secenekler": {
+      "A": "Mikroskopi asemptomatikte taramada kullanılır",
+      "B": "Kültür NAAT'tan duyarlıdır",
+      "C": "Rektal örnekte NAAT en duyarlıdır",
+      "D": "Semptomatik erkekte mikroskopi duyarsızdır",
+      "E": "Asemptomatik temaslıda NAAT (idrar, >%90 duyarlı) tercih edilir; semptomatik erkekte mikroskopi %75-95 duyarlıdır ancak asemptomatikte %30-50'ye düşer ve taramada kullanılmaz; kültür %85-95 duyarlıdır"
+     },
+     "dogru": "E",
+     "aciklama": "NAAT duyarlılığı >%90, idrar-vulvovajinal-servikal-üretralde yüksek, rektal-faringealde düşük; kültür %85-95; mikroskopi semptomatik erkekte %75-95, asemptomatikte %30-50 (taramada kullanılmaz).",
+     "sik_aciklamalari": {
+      "A": "Taramada kullanılmamalıdır.",
+      "B": "NAAT en duyarlıdır.",
+      "C": "Rektal-faringealde düşüktür.",
+      "D": "%75-95 ile yüksektir.",
+      "E": "Doğru: üç yöntemin bölge-performans ilişkisi tamdır."
+     },
+     "bilgi": [
+      18,
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Üretrit tanı eşikleri ve NAAT performansı nedir?",
+     "secenekler": {
+      "A": "Lökosit eşiği Gram'da 10'dur",
+      "B": "Gram 2, sediment 10 lökosit tanı; NAAT %90 duyarlıdır",
+      "C": "NAAT duyarsızdır",
+      "D": "Kültür ilk basamaktır",
+      "E": "Esteraz tanı dışıdır"
+     },
+     "dogru": "B",
+     "aciklama": "Üretrit bulguları akıntı varlığı, Gram'da alan başına en az 2 lökosit, ilk idrarda lökosit esteraz veya sedimentte alanda en az 10 lökosittir. Yöntemler Gram-metilen mavisi, endoüretral kültür ve NAAT'tır; NAAT duyarlılığı %90 üzerindedir.",
+     "sik_aciklamalari": {
+      "A": "Gram'da immersiyon alanında en az 2 lökosit eştir.",
+      "B": "Doğru: iki eşik ve NAAT performansı birlikte doğru verilmiştir.",
+      "C": "NAAT duyarlılığı %90 üzeri ve özgüllüğü yüksektir.",
+      "D": "Gram-metilen, kültür ve NAAT birlikte kullanılır.",
+      "E": "İlk akım idrarda esteraz tanı bulgularındandır."
+     },
+     "bilgi": [
+      8,
+      9,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Gonokok kültürü ve NGU'da yöntem seçimi nasıldır?",
+     "secenekler": {
+      "A": "Kültür duyarsızdır",
+      "B": "NGU'da kültür ilk tercihtir",
+      "C": "Besiyeri kanlı agardır",
+      "D": "Gonokok kültürde 48-72 saatte ürer; NGU'da NAAT tercih edilir",
+      "E": "Koloniler saatlerde ürer"
+     },
+     "dogru": "D",
+     "aciklama": "Kültür üretral-endoservikalde %85-95 duyarlıdır; NGU'da kültür pratik değildir, NAAT tercih edilir. Gonokokk izolasyonunda çikolata, Thayer Martin ve modifiye Martin Lewis besiyerleri kullanılır, koloniler 48-72 saatte ürer.",
+     "sik_aciklamalari": {
+      "A": "Üretral-endoservikalde %85-95 duyarlıdır.",
+      "B": "Kültür pratik değildir, NAAT tercih edilir.",
+      "C": "Çikolata ve Thayer Martin türü besiyerleri kullanılır.",
+      "D": "Doğru: üreme süresi ve NGU tercihi birlikte doğru verilmiştir.",
+      "E": "48-72 saatte üreme olur."
+     },
+     "bilgi": [
+      20,
+      24
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -531,6 +1073,113 @@
       "C": "Asemptomatik erkek değeridir.",
       "D": "Yanlıştır; bu nedenle doğru seçenek değildir.",
       "E": "Doğru: semptomatik erkekte değeridir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Gramda hücre içi diplokok görülen akıntılı erkekte bekleme-kültür sonucu tartışılıyor. Doğru yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Gram üretritte duyarsızdır",
+      "B": "Hücre içi gram negatif diplokok görülen semptomatik erkek olası gonore için tedavi edilir; metilen mavisinde pembe diplokoklar da tanısaldır",
+      "C": "Diplokok görülmesi tedaviyi geciktirir",
+      "D": "Gram yalnızca NGU tanısında kullanılır",
+      "E": "Metilen mavisi gonokoku göstermez"
+     },
+     "dogru": "B",
+     "aciklama": "Gram hem üretriti hem gonokoku yüksek duyarlılık-özgüllükle belgeler; hücre içi gram negatif diplokok olası gonokok tanısı koydurur ve tedavi başlatır.",
+     "sik_aciklamalari": {
+      "A": "Yüksek duyarlılık-özgüllüğü vardır.",
+      "B": "Doğru: bulgu-eylem ilişkisi tamdır.",
+      "C": "Ampirik tedaviyi başlatır.",
+      "D": "Her ikisini de belgeler.",
+      "E": "Pembe diplokoklar tanısaldır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Lökositli-diplokoksuz preparat ile kültür istemi yorumlanıyor. Laboratuvar danışmanlığına göre hangi açıklama doğrudur?",
+     "secenekler": {
+      "A": "NGU'da diplokok görülür",
+      "B": "Fon florası tanısaldır",
+      "C": "Koloni sayısı gonorede önemlidir",
+      "D": "Lökositli-diplokoksuz preparat NGU'yu destekler; preparattaki karışık flora bakterileri tanıdışıdır; kültürde çikolata-Thayer Martin besiyerlerinde 48-72 saatte üreme aranır ve üremenin varlığı önemlidir",
+      "E": "Gonokok 24 saatte üretilir"
+     },
+     "dogru": "D",
+     "aciklama": "NGU lökosit var-diplokok yokluğudur; distal flora bakterilerinin tanı değeri yoktur; gonore besiyerleri çikolata-Thayer Martin-modifiye Martin Lewis, 48-72 saatte ürer, üreme varlığı önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Diplokok yokluğu esastır.",
+      "B": "Tanı değeri yoktur.",
+      "C": "Üreme varlığı önemlidir.",
+      "D": "Doğru: NGU tanımı, flora ve kültür üçlüsü tamdır.",
+      "E": "48-72 saatte ürer."
+     },
+     "bilgi": [
+      10,
+      11,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Gram boyamada gonokok-NGU ayrımı nasıldır?",
+     "secenekler": {
+      "A": "Hücre içi diplokok gonokok, bol lökosit-diplokoksuzluk NGU lehinedir",
+      "B": "Gram boyama değersizdir",
+      "C": "Pembe diplokok NGU'dur",
+      "D": "Lökosit görülmesi tanıyı dışlar",
+      "E": "Metilen mavisi kullanılmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Gram boyama hem üretrit hem gonokok varlığını belgelemede yüksek duyarlılık-özgüllüğe sahiptir; hücre içi gram negatif diplokok veya metilen mavisinde pembe diplokok olası gonokok tanısıdır. Bol lökosit-diplokok yokluğu NGU lehinedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: iki tablonun Gram karşılığı doğru eşleştirilmiştir.",
+      "B": "Son derece yüksek duyarlılık-özgüllüğe sahiptir.",
+      "C": "Pembe diplokok olası gonokok tanısıdır.",
+      "D": "Bol lökosit üretriti belgeler.",
+      "E": "Metilen mavisi boyama yöntemlerdendir."
+     },
+     "bilgi": [
+      10,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Mikroskopi performansı örneğe göre nasıl değişir?",
+     "secenekler": {
+      "A": "Mikroskopi her örnekte eşittir",
+      "B": "Asemptomatikte duyarlılık yüksektir",
+      "C": "Semptomatik erkekte yüksek, diğer alanlarda düşük performans vardır",
+      "D": "Servikal örnekte performans artar",
+      "E": "Lökosit semptomatikte saptanmaz"
+     },
+     "dogru": "C",
+     "aciklama": "Semptomatik erkekte hücre içi diplokok %75-95 tanısal, asemptomatikte %30-50'ye düşer; servikal-faringeal-rektal örneklerde performans düşüktür. Semptomatik erkekte lökosit %50-70 saptanır.",
+     "sik_aciklamalari": {
+      "A": "Örnek yerine göre performans değişir.",
+      "B": "Semptomsuz erkekte %30-50'ye düşer.",
+      "C": "Doğru: örneğe göre duyarlılık farkı doğru verilmiştir.",
+      "D": "Servikal-faringeal-rektalde performans düşüktür.",
+      "E": "Semptomatik erkekte %50-70 saptanır."
      },
      "bilgi": [
       19
@@ -624,6 +1273,118 @@
       15
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Temas sonrası 1 haftada akıntı gelişen erkek ile asemptomatik kadın partnerin tablosu birlikte yorumlanıyor. Hangi açıklama doğrudur?",
+     "secenekler": {
+      "A": "3-10 günlük kuluçka sonrası erkekte pürülan akıntı-dizüri, kadında sıklıkla asemptomatik servisit yapan etken N. gonorrhoeae'dir; tek doğal konak insandır ve koruyucu bağışıklık gelişmez",
+      "B": "Gonore inkübasyonu 2-35 gündür",
+      "C": "Kadında gonore daima semptomatiktir",
+      "D": "Gonoreye karşı güçlü bağışıklık gelişir",
+      "E": "Oral seks bulaşta başlıca yoldur"
+     },
+     "dogru": "A",
+     "aciklama": "Etken gram negatif diplokok N. gonorrhoeae, tek konak insan, inkübasyon 3-10 gün, bağışıklık yok; erkekte üretrit-dizüri, kadında sıklıkla asemptomatik servisit; rektal genellikle asemptomatik.",
+     "sik_aciklamalari": {
+      "A": "Doğru: etken-konak-süre-klinik dörtlüsü tamdır.",
+      "B": "NGU 2-35 gündür.",
+      "C": "Yarıdan azında semptom vardır.",
+      "D": "Bağışıklık yok denecek kadar azdır.",
+      "E": "Oral seksle bulaş çok düşüktür."
+     },
+     "bilgi": [
+      12,
+      14,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Tedaviyi reddeden çiftin 6 ay sonraki durumu tartışılıyor: erkek asemptomatik, kadında pelvik ağrı başlamış. Hangi yorum doğrudur?",
+     "secenekler": {
+      "A": "Erkekte en sık prostatit görülür",
+      "B": "Kadında PID infertilite yapmaz",
+      "C": "Tedavisiz kalan gonoreli erkekte epididimit (en sık), kadında PID-infertilite-ektopik gelişebilir; dissemine enfeksiyonda artrit görülür; 6 ayda asemptomatikleşme iyileşme değildir",
+      "D": "Gonore yalnızca lokal kalır",
+      "E": "Asemptomatikleşme kür anlamına gelir"
+     },
+     "dogru": "C",
+     "aciklama": "Erkekte en sık epididimit; kadında PID-infertilite-ektopik; lokal üretrit-servisit-konjonktivit, yayılımda artrit-endokardit; tedavisiz GU ~6 ayda asemptomatikleşir ama komplikasyon sürer.",
+     "sik_aciklamalari": {
+      "A": "En sık epididimittir.",
+      "B": "İnfertilite-ektopik yapar.",
+      "C": "Doğru: komplikasyon dizisi ve seyir birlikte doğru.",
+      "D": "Yayılım olur.",
+      "E": "Bulaş-komplikasyon sürebilir."
+     },
+     "bilgi": [
+      15,
+      17,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Gonorenin cinsiyete göre komplikasyonları nelerdir?",
+     "secenekler": {
+      "A": "Erkekte en sık prostatittir",
+      "B": "Erkekte epididimit, kadında PID ve infertilite gelişir",
+      "C": "Kadında komplikasyon olmaz",
+      "D": "Dissemine enfeksiyon görülmez",
+      "E": "Artrit gonokokka bağlı değildir"
+     },
+     "dogru": "B",
+     "aciklama": "Erkekte en sık akut üretrit ve epididimit (en sık), prostatit, abse, ödem, darlık ve dissemine enfeksiyon gelişir. Kadında PID (endometrit-salpenjit-TOA-peritonit), infertilite ve ektopik; lokal tutulum üretrit-servisit-proktit-konjonktivit-farenjittir.",
+     "sik_aciklamalari": {
+      "A": "En sık akut üretrit, komplikasyonda epididimit en sıktır.",
+      "B": "Doğru: cinsiyete göre komplikasyonlar doğru eşleştirilmiştir.",
+      "C": "PID, infertilite ve ektopik gebelik gelişir.",
+      "D": "Dissemine gonokokal enfeksiyon tanımlanmıştır.",
+      "E": "Artrit komplikasyonlardandır."
+     },
+     "bilgi": [
+      15,
+      17
+     ],
+     "benzer_cikmis": [
+      "bca1e63910db"
+     ]
+    },
+    {
+     "id": "k1-62-uretral-akinti-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Gonokok tablo spektrumu ve doğal seyri nasıldır?",
+     "secenekler": {
+      "A": "Gonokok yalnızca üretrit yapar",
+      "B": "Tedavisiz olgu iyileşmez",
+      "C": "Darlık gelişmez",
+      "D": "Gonokok lokal ve dissemine tablolar yapar; tedavisiz 6 ayda sessizleşir",
+      "E": "Kronik pelvik ağrı ilişkisizdir"
+     },
+     "dogru": "D",
+     "aciklama": "N. gonorrhoeae lokal üretrit-prostatit-servisit-konjonktivit, komplikasyonda artrit-menenjit-endokardit-endometrit-salpenjit-infertilite-kronik pelvik ağrı yapar. Tedavisiz gonokoksik üretrit 6 ayda asemptomatikleşir; epididimit-prostatit-darlık gelişebilir.",
+     "sik_aciklamalari": {
+      "A": "Lokal ve dissemine tablolar tanımlanmıştır.",
+      "B": "Çoğu olgu 6 ayda asemptomatik hale gelir.",
+      "C": "Üretral darlık gelişebilir.",
+      "D": "Doğru: tablo spektrumu ve doğal seyir birlikte doğru verilmiştir.",
+      "E": "Kronik pelvik ağrı komplikasyonlardandır."
+     },
+     "bilgi": [
+      17,
+      30
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -710,6 +1471,113 @@
       29
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Sabah izi olan erkek ile frajil serviksli asemptomatik kadın partnerin tablosu yorumlanıyor. Hangi açıklama doğrudur?",
+     "secenekler": {
+      "A": "Klamidya erkekte bol pürülan akıntı yapar",
+      "B": "Kadında klamidya daima semptomatiktir",
+      "C": "Klamidya epididimit yapmaz",
+      "D": "Akıntı gün içinde en belirgindir",
+      "E": "Sabah iç çamaşırında iz bırakan az mukoid akıntılı erkekte klamidya düşünülür; kadında frajil serviksli asemptomatik servisit sıktır ve tedavisiz epididimit-salpenjit-PID gelişebilir"
+     },
+     "dogru": "E",
+     "aciklama": "Erkekte az mukoid-saydam akıntı, dizüri, sabah iz; kadında asemptomatik servisit-üretrit-salpenjit-PID; yakınmalar yarıda 1-3 ayda geriler; tedavisiz epididimit yapar.",
+     "sik_aciklamalari": {
+      "A": "Az mukoid-saydamdır.",
+      "B": "Genellikle asemptomatiktir.",
+      "C": "Tedavisiz epididimit yapar.",
+      "D": "Sabah ilk idrar öncesi iz verir.",
+      "E": "Doğru: erkek-kadın klinik ikilisi tamdır."
+     },
+     "bilgi": [
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Tedavisiz çiftin uzun dönem üreme sonuçları ile yenidoğan riski tartışılıyor. Hangi danışmanlık doğrudur?",
+     "secenekler": {
+      "A": "NGU kadında nadiren komplikasyon yapar",
+      "B": "Tedavisiz NGU erkekte %1-2 epididimit yaparken kadında %10-40 PID-infertilite-ektopik yapar; yenidoğanda konjonktivit-pnömoni görülür ve rutin göz merhemi insidansı azaltır",
+      "C": "NGU erkekte sıktır kadında nadirdir",
+      "D": "Yenidoğan klamidyadan etkilenmez",
+      "E": "Göz merhemi etkisizdir"
+     },
+     "dogru": "B",
+     "aciklama": "Erkekte nadir (%1-2 epididimit, reaktif artrit, darlık), kadında yaygın (%10-40 PID-infertilite-ektopik), yenidoğanda konjonktivit-pnömoni; NGU kendini sınırlasa da kadın komplikasyonu sıktır.",
+     "sik_aciklamalari": {
+      "A": "Kadında %10-40 yaygındır.",
+      "B": "Doğru: cinsiyet-prognoz ve yenidoğan üçlüsü tamdır.",
+      "C": "Tersi doğrudur.",
+      "D": "Konjonktivit-pnömoni yapar.",
+      "E": "Belirgin azaltmıştır."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Klamidya komplikasyonları ve NGU doğal seyri nedir?",
+     "secenekler": {
+      "A": "Klamidya PID-infertilite yapar; NGU 3 ayda sessizleşir",
+      "B": "Klamidya komplikasyonsuzdur",
+      "C": "Perihepatit gonokokka özgüdür",
+      "D": "NGU tedavisiz iyileşmez",
+      "E": "Yenidoğan etkilenmez"
+     },
+     "dogru": "A",
+     "aciklama": "Klamidya lokal üretrit-servisit-proktit-konjonktivit-farenjit-rinit, komplikasyonda epididimit-endometrit-salpenjit-perihepatit-Reiter, sonra infertilite-ektopik-kronik ağrı yapar; çocukta konjonktivit-pnömoni görülür. Tedavisiz NGU 3 ayda sessizleşir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: komplikasyon spektrumu ve doğal seyir birlikte doğru verilmiştir.",
+      "B": "PID, infertilite ve ektopik gelişir.",
+      "C": "Perihepatit klamidya komplikasyonlarındandır.",
+      "D": "Çoğu NGU 3 ayda asemptomatik hale gelir.",
+      "E": "Yenidoğanda konjonktivit-üretrit-pnömoni gelişebilir."
+     },
+     "bilgi": [
+      27,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "NGU prognozu ve cinsiyet farkı nasıldır?",
+     "secenekler": {
+      "A": "Erkek komplikasyonu sıktır",
+      "B": "Kadın komplikasyonu nadirdir",
+      "C": "NGU kendini sınırlar; kadın komplikasyonu daha yaygındır",
+      "D": "Epididimit %20'dir",
+      "E": "PID gelişmez"
+     },
+     "dogru": "C",
+     "aciklama": "NGU genellikle kendini sınırlar, çoğu tedavisiz iyileşir; erkekte epididimit %1-2, konjonktivit %1-2, prostatit-apS-reaktif artrit-darlık nadirdir. Kadında %10-40 PID-infertilite-ektopik daha yaygındır.",
+     "sik_aciklamalari": {
+      "A": "Erkekte komplikasyonlar nadirdir.",
+      "B": "Kadında %10-40 oranla daha yaygındır.",
+      "C": "Doğru: seyir ve cinsiyet farkı birlikte doğru verilmiştir.",
+      "D": "Epididimit %1-2 oranındadır.",
+      "E": "PID, infertilite ve ektopik gelişir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -794,6 +1662,113 @@
      "bilgi": [
       21,
       22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Gonoreli hastada ampirik reçete ve klamidya kapsamı tartışılıyor. Rehbere göre hangi reçete doğrudur?",
+     "secenekler": {
+      "A": "Kinolon ampirik ilk tercihtir",
+      "B": "Penisilin direnci yoktur",
+      "C": "Klamidya dışlanmadan tek etken tedavi edilir",
+      "D": "Kinolon direnci nedeniyle ampirikte kinolon önerilmez; WHO'ya göre azitromisin 1 g tek doz veya sefiksim 800 mg verilir ve klamidya dışlanmamışsa doksisiklin 2x100 mg 7 gün eklenir",
+      "E": "Diğer CYBE araştırılmaz"
+     },
+     "dogru": "D",
+     "aciklama": "Penisilin-tetrasiklin ve kinolon direnci nedeniyle kinolon ampirik önerilmez; WHO azitromisin 1 g veya sefiksim 800 mg; klamidya dışlanmamışsa doksisiklin eklenir.",
+     "sik_aciklamalari": {
+      "A": "Direnç nedeniyle önerilmez.",
+      "B": "Kromozomal direnç gelişmiştir.",
+      "C": "Her iki etken kapsanır.",
+      "D": "Doğru: direnç-tedavi-kombinasyon üçlüsü tamdır.",
+      "E": "HIV-sifiliz araştırılır."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "NGU'lu hastanın eş yönetimi ve korunma danışmanlığı soruluyor. Hangi plan doğrudur?",
+     "secenekler": {
+      "A": "NGU'lu hastaya doksisiklin 2x100 mg 7 gün başlanır, son 60 gündeki eşleri klamidyaya karşı tedavi edilir ve kondom önerilir",
+      "B": "NGU'da azitromisin birinci tercihtir",
+      "C": "Eş tedavisi gerekmez",
+      "D": "Tedavi sekelsiz iyileştirmez",
+      "E": "Korunmada kondom etkisizdir"
+     },
+     "dogru": "A",
+     "aciklama": "NGU'da 1. tercih doksisiklin 2x100 mg 7 gün, alternatif azitromisin 1 g; son 60 gün eşleri tedavi edilir; kondom ve partner azaltma korunmadır.",
+     "sik_aciklamalari": {
+      "A": "Doğru: ilaç-eş-korunma üçlüsü tamdır.",
+      "B": "Alternatiftir.",
+      "C": "60 günlük eşler tedavi edilir.",
+      "D": "Tedavide iyileşme sekelsizdir.",
+      "E": "Kondom önemlidir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Gonokoksik üretrit rehber tedavisi ve direnç nedir?",
+     "secenekler": {
+      "A": "Kinolon ampirik ilk tercihtir",
+      "B": "Azitromisin tek doz ilk tercih, dışlanmamış klamidyaya doksisiklin eklenir",
+      "C": "Penisilin ilk tercihtir",
+      "D": "Klamidya ekine gerek yoktur",
+      "E": "Direnç yoktur"
+     },
+     "dogru": "B",
+     "aciklama": "Kromozomal mutasyonlarla penisilin-tetrasiklin direnci gelişmiş, kinolonlar ampirik önerilmez. WHO 2021 sefiksim 800 mg alternatifiyle, CDC 2021 azitromisin 1 gr tek dozu birinci tercih eder; klamidya dışlanmamışsa doksisiklin 2x100 mg 7 gün eklenir.",
+     "sik_aciklamalari": {
+      "A": "Artan dirençle ampirik önerilmez.",
+      "B": "Doğru: rehber tercihi ve kombinasyon kuralı birlikte doğru verilmiştir.",
+      "C": "Penisilin-tetrasikline direnç gelişmiştir.",
+      "D": "Klamidya dışlanmamışsa doksisiklin eklenir.",
+      "E": "Kromozomal mutasyonlarla direnç gelişmiştir."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "NGU tedavi rejimi ve eş tedavisi nedir?",
+     "secenekler": {
+      "A": "Klamidyada ilk tercih azitromisindir",
+      "B": "Tedavi sekellidir",
+      "C": "Eş tedavisi gerekmez",
+      "D": "Doksisiklin 7 gün ilk tercih; 60 günlük eş tedavi edilir",
+      "E": "Süre 1 gündür"
+     },
+     "dogru": "D",
+     "aciklama": "Klamidyada birinci tercih doksisiklin 2x100 mg 7 gün, alternatif azitromisin 1 gr tek dozdur; tedavi sekelsiz iyileştirir. NGU'lu erkeğin son 60 gündeki tüm eşleri klamidyaya karşı tedavi edilmelidir.",
+     "sik_aciklamalari": {
+      "A": "Birinci tercih doksisiklin, alternatif azitromisindir.",
+      "B": "Tedavi edildiğinde iyileşme sekelsizdir.",
+      "C": "60 gün içindeki tüm eşler tedavi edilir.",
+      "D": "Doğru: rejim ve eş tedavisi kuralı birlikte doğru verilmiştir.",
+      "E": "Doksisiklin 7 gün kullanılır."
+     },
+     "bilgi": [
+      29
      ],
      "benzer_cikmis": []
     }
@@ -883,6 +1858,113 @@
       30
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k10-q04",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "NGU'lu hastanın asemptomatik partnerleri ne yapılacağı soruluyor. Hangi yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca semptomatik eş tedavi edilir",
+      "B": "Eş tedavisi 1 yıllık partnerleri kapsar",
+      "C": "Son 2 aydaki tüm eşler asemptomatik olsa da tedavi edilir; partner sayısının azaltılması ve kondom reenfeksiyonu önler",
+      "D": "Eş tedavisi reenfeksiyona etkisizdir",
+      "E": "Kondom üretritten korumaz"
+     },
+     "dogru": "C",
+     "aciklama": "NGU'da tanıdan önceki 60 gün eşleri tedavi edilir; korunmada eş tedavisi, partner azaltma ve kondom esastır.",
+     "sik_aciklamalari": {
+      "A": "Tüm eşler tedavi edilir.",
+      "B": "60 günlüktür.",
+      "C": "Doğru: süre-kapsam-korunma üçlüsü tamdır.",
+      "D": "Reenfeksiyonu önler.",
+      "E": "Korunmada önemlidir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k10-q05",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Tedavisiz izlenen olguda semptomların gerilemesi 'iyileşme' sanılıyor. Doğru danışmanlık hangisidir?",
+     "secenekler": {
+      "A": "Asemptomatikleşme kürdür",
+      "B": "Tedavisiz GU 3 ayda düzelir",
+      "C": "Asemptomatik kadın bulaştırmaz",
+      "D": "Komplikasyon yalnızca semptomatikte olur",
+      "E": "Tedavisiz kalan GU ~6 ay, NGU ~3 ayda asemptomatikleşir ancak epididimit-darlık ve bulaş riski sürer; asemptomatik kadınlar zinciri sürdürdüğünden eş tedavisi-taraması şarttır"
+     },
+     "dogru": "E",
+     "aciklama": "Tedavisiz GU ~6 ay, NGU ~3 ayda asemptomatikleşir; bu iyileşme değildir, epididimit-darlık ve bulaş sürer; asemptomatik kadın zinciri sürdürür.",
+     "sik_aciklamalari": {
+      "A": "İyileşme değildir.",
+      "B": "GU 6, NGU 3 aydır.",
+      "C": "Zinciri sürdürür.",
+      "D": "Asemptomatikte de olur.",
+      "E": "Doğru: süre-sonuç-tarama üçlüsü tamdır."
+     },
+     "bilgi": [
+      30,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k10-q06",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Üretritte korunma basamakları nelerdir?",
+     "secenekler": {
+      "A": "Eş tedavisi, partner azaltma ve kondom korunmanın esasıdır",
+      "B": "HIV-sifiliz araştırılmaz",
+      "C": "Kondom etkisizdir",
+      "D": "Tedavisiz olgu sorunsuzdur",
+      "E": "Eş asemptomatikse tedavi gerekmez"
+     },
+     "dogru": "A",
+     "aciklama": "Diğer CYBE'lerin (HIV, sifiliz) araştırılması önemlidir. Korunmada eşlerin tedavisi, partner sayısının azaltılması ve kondom esastır; tedavi edilmeyen olgularda epididimit-prostatit-darlık gelişebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru: üç korunma basamağı birlikte doğru verilmiştir.",
+      "B": "Diğer CYBE'lerin araştırılması önemlidir.",
+      "C": "Kondom korunmada önemlidir.",
+      "D": "Epididimit, prostatit ve darlık gelişebilir.",
+      "E": "NGU'da 60 günlük tüm eşler tedavi edilir."
+     },
+     "bilgi": [
+      21,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-62-uretral-akinti-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Tedavisiz sessizleşen üretritte yönetim neden sürer?",
+     "secenekler": {
+      "A": "Semptom geçince takip bırakılır",
+      "B": "Bulaş riski kalmaz",
+      "C": "Sessizleşme iyileşme değildir; eş tedavisi tamamlanır",
+      "D": "Komplikasyon riski yoktur",
+      "E": "Takip gerekmez"
+     },
+     "dogru": "C",
+     "aciklama": "Tedavi edilmeyen gonokoksik üretrit 6 ayda, NGU 3 ayda asemptomatikleşse de bulaş ve komplikasyon riski sürer. Bu yüzden semptom gerilese bile eş tarama-tedavisi ve takip tamamlanır.",
+     "sik_aciklamalari": {
+      "A": "Asemptomatikleşme bulaşı bitirmez.",
+      "B": "Tedavisiz bulaş ve komplikasyon sürer.",
+      "C": "Doğru: doğal seyir ve yönetim ilkesi birlikte doğru verilmiştir.",
+      "D": "Epididimit ve PID gelişebilir.",
+      "E": "Eş tarama-tedavisi tamamlanır."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -900,8 +1982,5 @@
     }
    ]
   }
- ],
- "soru_sayisi": 30,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:56:08"
+ ]
 }

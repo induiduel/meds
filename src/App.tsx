@@ -258,6 +258,9 @@ export default function App() {
     initialRoute.route === 'learn' ? initialRoute.param : undefined
   );
   const [selectedLearnSlideNumber, setSelectedLearnSlideNumber] = useState<number | undefined>(undefined);
+  // Selected Ornek Sorular lesson and kazanim state
+  const [selectedOrnekLessonId, setSelectedOrnekLessonId] = useState<string | null>(null);
+  const [selectedOrnekKazanimNo, setSelectedOrnekKazanimNo] = useState<number | null>(null);
   // Çıkmış sorudan Öğren'e gelindiyse soru ifadeleri ve doğru şık slaytta işaretlenir
   const [learnQuestionFocus, setLearnQuestionFocus] = useState<QuestionFocus | null>(null);
   const [selectedGlossaryTermId, setSelectedGlossaryTermId] = useState<string | undefined>(() => {
@@ -1239,6 +1242,7 @@ export default function App() {
               onOpenPdf={() => { setPdfSlideTarget(null); setIsPdfModalOpen(true); }}
             >
             <InteractiveDeckView
+              isAdmin={isAdmin}
               initialDeckId={selectedLearnDeckId}
               initialSlideNumber={selectedLearnSlideNumber}
               questionFocus={learnQuestionFocus}
@@ -1491,7 +1495,10 @@ export default function App() {
         {/* TAB: /ornek-sorular — müfredata dayalı örnek çalışma soruları */}
         {activeTab === 'ornek_sorular' && (
           <Suspense fallback={<ViewFallback />}>
-            <PracticeQuestionsView />
+            <PracticeQuestionsView
+              initialLessonId={selectedOrnekLessonId}
+              initialKazanimNo={selectedOrnekKazanimNo}
+            />
           </Suspense>
         )}
 
@@ -1508,7 +1515,9 @@ export default function App() {
                 if (query) setPastExamsSearchQuery(query);
                 setActiveTab('past_exams');
               }}
-              onNavigateToOrnek={() => {
+              onNavigateToOrnek={(lessonId, kazanimNo) => {
+                if (lessonId) setSelectedOrnekLessonId(lessonId);
+                if (kazanimNo) setSelectedOrnekKazanimNo(kazanimNo);
                 setActiveTab('ornek_sorular');
               }}
             />

@@ -6,6 +6,7 @@
  "konu": "Hücresel Adaptasyonlar",
  "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
  "tarih": "2026-09-14",
+ "soru_sayisi": 172,
  "kazanimlar": [
   {
    "no": 1,
@@ -87,6 +88,477 @@
      },
      "bilgi": [
       2,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hafif hipoksiye maruz kalan bir dokuda hücrelerin önce boyut ve fonksiyonlarını değiştirerek uyum sağlamaya çalıştığı, stresin artmasıyla önce şişme ve yağlanma gibi geri dönüşlü değişikliklerin, daha da şiddetlenmesiyle kalıcı hasar ve ölümün ortaya çıktığı anlatılmaktadır. Aşağıdakilerden hangisi bu stres yanıtı basamaklarından biri değildir?",
+     "secenekler": {
+      "A": "Adaptasyon",
+      "B": "Apoptoz",
+      "C": "Geri dönüşümlü hasar",
+      "D": "Geri dönüşümsüz hasar",
+      "E": "Hücre ölümü"
+     },
+     "dogru": "B",
+     "aciklama": "Homeostaz bozulunca hücre önce adaptasyonla yeni denge kurmaya çalışır; stres şiddetlenirse geri dönüşümlü hasar, daha da şiddetlenirse geri dönüşümsüz hasar ve ölüm gelişir. Apoptoz ve nekroz ölüm biçimleridir, adaptasyon basamağı değildir.",
+     "sik_aciklamalari": {
+      "A": "Hücrenin strese verdiği ilk yanıtlardan biridir, ölüm biçimi değildir.",
+      "B": "Doğru cevap. Apoptoz programlı hücre ölümüdür; stres yanıtı basamağı değil ölüm biçimidir.",
+      "C": "Stres yanıtları arasında yer alır, geçicidir.",
+      "D": "Stres yanıtları arasında yer alır, kalıcıdır.",
+      "E": "Şiddetli stresin son basamağıdır ancak apoptoz bu grubun spesifik bir üyesidir ve ilk basamak değildir."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Koroner arterinde geçici vazospazm gelişen bir hastada miyokard hücrelerinde önce hipertrofik uyum, iskemi uzayınca hücresel şişme ve yağlanma, iskemi kalıcı hale gelince koagülatif nekroz geliştiği bir şemayla gösterilmektedir. Hücre stresi yanıtlarıyla ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hafif ve geçici stres adaptasyonla karşılanır",
+      "B": "Şiddetli stres geri dönüşümlü hasara yol açar",
+      "C": "Kalıcı ve ağır stres nekroz veya apoptozla sonuçlanır",
+      "D": "Stresin şiddeti yanıtın tipini belirlemez; her stres aynı yanıtı verir",
+      "E": "Artmış iş yüküne miyokard önce hipertrofiyle yanıt verir"
+     },
+     "dogru": "D",
+     "aciklama": "Aynı etken doz ve süreye bağlı olarak adaptasyondan geri dönüşümlü hasara, oradan nekroz veya apoptoza ilerleyen bir spektrum oluşturur. Miyokard örneğinde artmış yük hipertrofiye, iskemi geri dönüşümlü hasara, kalıcı iskemi koagülatif nekroza yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifadedir; hafif stres adaptasyonla karşılanır.",
+      "B": "Doğru ifadedir; orta şiddette stres geri dönüşümlü hasar yapar.",
+      "C": "Doğru ifadedir; ağır ve kalıcı stres ölümü getirir.",
+      "D": "Doğru cevap. Yanıtın tipi stresin doz ve süresine bağlıdır; aynı etken farklı şiddette farklı yanıt oluşturur.",
+      "E": "Doğru ifadedir; miyokard artmış yüke hipertrofiyle uyum sağlar."
+     },
+     "bilgi": [
+      30,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hücrenin stres şiddetine göre verdiği üç temel yanıt nedir?",
+     "secenekler": {
+      "A": "Yalnızca nekroz olur",
+      "B": "Adaptasyon, geri dönüşümlü, geri dönüşümsüz",
+      "C": "Yalnızca apoptoz olur",
+      "D": "Önce ölüm, sonra adaptasyon",
+      "E": "Yalnızca metaplazi olur"
+     },
+     "dogru": "B",
+     "aciklama": "Hafif ve orta şiddette streslerde hücre sayı, boyut veya fenotipini değiştirerek yeni bir denge kurar ve yaşar. Stres şiddetlendiğinde membran pompaları ve mitokondri işlevleri bozulur, ancak etken ortadan kalkarsa hücre toparlanabilir. Stres şiddetli ve kalıcı olursa membran bütünlüğü tümüyle yitirilir ve hücre nekroz veya apoptozla ölür.",
+     "sik_aciklamalari": {
+      "A": "Nekroz yalnızca şiddetli ve kalıcı stresin sonucudur, tek yanıt değildir.",
+      "B": "Doğru. Stres şiddetine göre adaptasyon, geri dönüşümlü hasar ve ölüm sıralanır.",
+      "C": "Apoptoz ölüm yollarından biridir, tüm yanıt spektrumunu kapsamaz.",
+      "D": "Ölüm geri dönüşsüzdür, adaptasyondan önce gelemez.",
+      "E": "Metaplazi adaptasyon tiplerinden yalnızca biridir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hücresel stres yanıtlarının çıkış noktası olan homeostaz nedir?",
+     "secenekler": {
+      "A": "Hücre ölümüdür",
+      "B": "Sürekli büyümedir",
+      "C": "Sınırsız bölünmedir",
+      "D": "İç dengenin korunmasıdır",
+      "E": "Enerji tüketimidir"
+     },
+     "dogru": "D",
+     "aciklama": "Homeostaz, değişen iç ve dış koşullara rağmen hücre büyüklüğü, sayısı ve fonksiyonunun sınırlar içinde tutulmasıdır. Bu denge bozulduğunda hücre önce adaptasyonla yeni bir denge arar. Adaptasyon yetersiz kalırsa geri dönüşümlü hasar ve ardından ölüm gelir, bu yüzden homeostaz tüm yanıtların çıkış noktasıdır.",
+     "sik_aciklamalari": {
+      "A": "Hücre ölümü homeostazın bozulmasının sonucudur, kendisi değildir.",
+      "B": "Sürekli büyüme neoplazinin özelliğidir, dengenin değil.",
+      "C": "Sınırsız bölünme malignitenin özelliğidir.",
+      "D": "Doğru. Değişen koşullara rağmen büyüklük, sayı ve fonksiyonun dengede tutulmasıdır.",
+      "E": "Enerji tüketimi metabolizmanın parçasıdır, homeostazın tanımı değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bir hücre fizyolojik homeostaz sınırlarını aşan bir strese veya zedeleyici uyarana maruz kaldığında ortaya çıkan hücresel yanıt spektrumu ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hücre hiçbir zaman uyum sağlayamaz, her stres derhal apoptoza yol açar.",
+      "B": "Stres hafif veya kronik olduğunda hücre önce adaptasyon yanıtı verir; stresin adaptif kapasiteyi aşması veya doğrudan şiddetli olması durumunda geri dönüşümlü hasar, uyaran devam ederse geri dönüşümsüz hasar ve hücre ölümü gelişir.",
+      "C": "Hücresel adaptasyon geri dönüşümsüzdür, hücre bir kez adapte olursa asla eski haline dönemez.",
+      "D": "Geri dönüşümlü hasarda plazma zarı parçalanır ve hücre lizise uğrar.",
+      "E": "Nekroz tamamen fizyolojik bir adaptasyon biçimidir."
+     },
+     "dogru": "B",
+     "aciklama": "Normal hücre homeostazdadır. Stres karşısında hücre önce morfolojik ve fonksiyonel adaptasyonla yeni bir denge kurmaya çalışır. Adaptif kapasite aşılırsa veya stres akut/şiddetli ise hücre hasarı gelişir. Hasar hafifse geri dönüşümlüdür; kalıcı ve şiddetliyse ölümle (nekroz/apoptoz) sonuçlanır.",
+     "sik_aciklamalari": {
+      "A": "Hücreler geniş bir adaptasyon kapasitesine sahiptir, hemen ölmezler.",
+      "B": "Doğru. Homeostaz → Adaptasyon → Geri dönüşümlü hasar → Geri dönüşümsüz hasar ve ölüm spektrumudur.",
+      "C": "Adaptasyon kural olarak geri dönüşümlüdür (reversible).",
+      "D": "Plazma zarının parçalanması geri dönüşümsüz nekrozun göstergesidir.",
+      "E": "Nekroz patolojik hücre ölümüdür, adaptasyon değildir."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q09",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Miyokard dokusunda koroner arter lümeninde aterosklerotik plak nedeniyle gelişen kronik hipoperfüzyon ile akut tam trombotik oklüzyonun hücresel yanıtları karşılaştırıldığında Robbins patoloji ilkelerine göre aşağıdakilerden hangisi gerçekleşir?",
+     "secenekler": {
+      "A": "Kronik hipoperfüzyon doğrudan koagülasyon nekrozuna; akut tam tıkanma ise fizyolojik hipertrofiye yol açar.",
+      "B": "Kronik azalmış kan akımı miyositlerde atrofi ve metabolik yavaşlama ile adaptasyon sağlarken; akut tam tıkanma ilk dakikalarda geri dönüşümlü hasar (şişme, glikojen kaybı), 20-30 dakikayı aşan iskemi ise geri dönüşümsüz hasar ve koagülatif nekroz oluşturur.",
+      "C": "Her iki durumda da kalp kasında hiperplazi ile yeni miyositler üretilir.",
+      "D": "İskemiye maruz kalan kalp kasında ilk 24 saat içinde hiçbir morfolojik ve biyokimyasal değişiklik olmaz.",
+      "E": "Akut tam tıkanmada hücreler derhal skuamöz metaplaziye dönüşür."
+     },
+     "dogru": "B",
+     "aciklama": "Zedeleyici etkenin dozu, şiddeti ve süresi hücresel yanıtın niteliğini belirler. Kronik orta derecede iskemi miyositlerde atrofi ve kütle azalmasıyla hayatta kalma adaptasyonuna yol açarken; akut ağır iskemi ilk 20-30 dakika geri dönüşümlü şişme yapar, sonrasında mitokondri ve membran parçalanmasıyla geri dönüşümsüz infarktüs (nekroz) meydana gelir.",
+     "sik_aciklamalari": {
+      "A": "Yanıtların kronik ve akut rolleri ters verilmiştir.",
+      "B": "Doğru. Kronik iskemi atrofi (adaptasyon); akut uzamış iskemi koagülatif nekroz (ölüm) yapar.",
+      "C": "Kardiyak miyositler bölünemez (kalıcı hücredir), hiperplazi yapamaz.",
+      "D": "İlk dakikalarda elektron mikroskobik şişme ve ATP kaybı başlar.",
+      "E": "Miyokartta metaplazi görülmez."
+     },
+     "bilgi": [
+      2,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q10",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Geri dönüşümlü hücre hasarının (reversible cell injury) ışık mikroskobunda tanınabilen en erken ve en tipik iki morfolojik bulgusu hangisidir?",
+     "secenekler": {
+      "A": "Karyoreksis ve piknoz",
+      "B": "Hücresel şişme (hidropik dejenerasyon) ve yağlı değişiklik (steatoz)",
+      "C": "Kalsifikasyon ve kazeifikasyon",
+      "D": "Plazma zarı erimesi ve nükleus kaybı",
+      "E": "Fibrozis ve distrofik kemikleşme"
+     },
+     "dogru": "B",
+     "aciklama": "Geri dönüşümlü hücre zedelenmesinin iki ana ışık mikroskobu bulgusu vardır: 1. Hücresel şişme (ATP azalması sonucu Na+/K+ ATPaz pompasının durması ve hücre içine su girmesi / hidropik dejenerasyon), 2. Yağlı değişiklik (özellikle lipid metabolizmasına bağımlı hepatosit ve miyositlerde trigliserid vakuollerinin birikmesi).",
+     "sik_aciklamalari": {
+      "A, D": "Nükleer erime/parçalanma geri dönüşümsüz hücre ölümüne (nekroz) aittir.",
+      "B": "Doğru. Hücresel şişme ve yağlanma geri dönüşümlü hasarın prototipik bulgularıdır.",
+      "C ve E": "Kronik doku hasarı ve nekroz sonu sekelleridir."
+     },
+     "bilgi": [
+      2,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q11",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Bir hücre hasarının 'geri dönüşümlü' aşamadan 'geri dönüşümsüz' aşamaya (hücre ölümü) geçtiğini kesin olarak gösteren iki temel biyolojik fenomen hangisidir?",
+     "secenekler": {
+      "A": "Glikojen partiküllerinin azalması ve ribozomların endoplazmik retikulumdan ayrılması",
+      "B": "Mitokondriyal disfonksiyonun düzeltilemez hale gelmesi (ATP sentezinin kalıcı çöküşü) ve plazma zarı bütünlüğünün bozulması (ağır membran hasarı)",
+      "C": "Hücrenin hacminin hafifçe artması ve mikrovillusların düzleşmesi",
+      "D": "Sitoplazmada hafif laktik asit birikimi",
+      "E": "Nükleusta kromatofilite artışı"
+     },
+     "dogru": "B",
+     "aciklama": "Robbins Patolojisi'ne göre geri dönüşümsüzlüğü (point of no return) belirleyen iki temel kriter vardır: 1. Oksidatif fosforilasyonun ve mitokondri fonksiyonunun kalıcı olarak çökmesi (MPT porunun açılması), 2. Hücre zarının ve lizozom zarının geçirgenlik bariyerini kalıcı olarak yitirmesi.",
+     "sik_aciklamalari": {
+      "A, C, D, E": "Geri dönüşümlü hasar evresinde görülen ve stres kalktığında düzelebilen değişikliklerdir.",
+      "B": "Doğru. Mitokondriyal çöküş ve membran bütünlüğünün kaybı geri dönüşümsüzlüğün kilit mekanizmalarıdır."
+     },
+     "bilgi": [
+      2,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q12",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Taze miyokard infarktüsü şüphesi olan bir otopside, iskemiye bağlı nekroz gelişip gelişmediğini makroskobik olarak ayırt etmek için doku kesitleri Trifeniltetrazolyum klorür (TTC) ile muamele edilmiştir. Bu testin mekanizması ve canlı/ölü dokudaki boyanma özellikleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Canlı miyokart dokusu laktat dehidrogenaz aktivitesi sayesinde kırmızı-magenta renge boyanırken; nekrotik alanda enzimler sızıp kaybolduğu için boyanma olmaz ve soluk görünür.",
+      "B": "Nekrotik doku aşırı asidofil olduğu için simsiyah boyanır, canlı doku renksiz kalır.",
+      "C": "TTC sadece hücre çekirdeğindeki DNA mutasyonlarını tespit eder.",
+      "D": "Canlı doku tamamen beyaz kalır, enfarkt alanı sarı boyanır.",
+      "E": "TTC yalnızca yağ embolilerini boyamak için kullanılır."
+     },
+     "dogru": "A",
+     "aciklama": "TTC testi, dokudaki intakt laktat dehidrogenaz enzim aktivitesine dayanır. Canlı hücrelerde dehidrogenazlar TTC'yi kırmızı (formazan pigmenti) boyaya indirger. Nekrotik hücrelerde membran parçalandığı için enzimler dokuyu terk etmiştir; bu nedenle nekrotik infarkt alanı boyanmaz (soluk/beyaz) kalır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Canlı doku magenta/kırmızı, nekrotik alan boyanmayan soluk renktedir.",
+      "B, D": "Renk ve mekanizma tam ters ve yanlış verilmiştir.",
+      "C ve E": "TTC enzimatik bir dehidrogenaz canlılık testidir; DNA veya yağ testi değildir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q13",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"Kalp hipertrofisi mekanizması\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+      "B": "Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "D": "Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür.",
+      "E": "Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "C": "Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+      "B": "Yanlış. Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "D": "Yanlış. Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür.",
+      "E": "Yanlış. Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "C": "Yanlış. Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q14",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Otofaji süreci\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir.",
+      "D": "Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar.",
+      "E": "Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "C": "Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "B": "Gebelikte uterus östrojen etkisiyle büyür; düz kas hücrelerinde hem hipertrofi hem hiperplazi görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir.",
+      "D": "Yanlış. Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar.",
+      "E": "Yanlış. Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "C": "Yanlış. Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "B": "Yanlış. Gebelikte uterus östrojen etkisiyle büyür; düz kas hücrelerinde hem hipertrofi hem hiperplazi görülür."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q15",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Normal→adapte→hasarlı→ölü miyosit\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "E": "Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "D": "Kronik gastroözofageal reflüde alt özofagustaki çok katlı yassı epitel kolumnar (Barrett tipi) epitele dönüşür.",
+      "A": "Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar.",
+      "C": "Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi)."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "E": "Yanlış. Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "D": "Yanlış. Kronik gastroözofageal reflüde alt özofagustaki çok katlı yassı epitel kolumnar (Barrett tipi) epitele dönüşür.",
+      "A": "Yanlış. Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar.",
+      "C": "Yanlış. Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi)."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q16",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Metaplazi tanımı\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "E": "Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+      "C": "Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır.",
+      "B": "Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "A": "Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "D": "Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+      "C": "Yanlış. Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır.",
+      "B": "Yanlış. Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "A": "Yanlış. Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "D": "Yanlış. Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q17",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hücrenin strese verdiği yanıt ile stresin şiddeti arasındaki ilişki için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hafif/orta şiddette stres adaptasyona yol açar.",
+      "B": "Hafif/orta şiddette stres geri dönüşümsüz hasar ve ölüme yol açar.",
+      "C": "Şiddetli/kalıcı stres yalnızca adaptasyona yol açar.",
+      "D": "Stres şiddeti yanıt tipini etkilemez.",
+      "E": "Şiddetli stres her zaman geri dönüşümlü hasarla sonlanır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Hafif/orta şiddette stres adaptasyonla; şiddetli/kalıcı stres geri dönüşümlü hasardan geri dönüşümsüz hasar ve ölüme (nekroz/apoptoz) ilerleyerek sonuçlanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hafif/orta stres adaptasyonla karşılanır.",
+      "B": "Yanlış. Bu düzeyde stres adaptasyon beklenir.",
+      "C": "Yanlış. Şiddetli/kalıcı stres ölüme ilerleyebilir.",
+      "D": "Yanlış. Stres şiddeti yanıtı belirler.",
+      "E": "Yanlış. Şiddetli stres geri dönüşümsüz olabilir."
+     },
+     "bilgi": [
+      1,
+      2,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q18",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hücresel stres yanıtlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Adaptasyon geri dönüşümlüdür.",
+      "B": "Adaptasyon her zaman geri dönüşümsüzdür.",
+      "C": "Homeostaz, değişen iç-dış koşullara rağmen iç dengenin korunmasıdır.",
+      "D": "Aynı etken doza ve süreye bağlı farklı yanıtlar oluşturabilir.",
+      "E": "Şiddetli ve kalıcı hasar nekroz veya apoptoza yol açabilir."
+     },
+     "dogru": "B",
+     "aciklama": "Yanlış olan ifade B'dir: Adaptasyon geri dönüşümlü bir süreçtir; hücre yeni bir denge kurarak canlılığını sürdürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru yanıt (yanlış ifade).",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      1,
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q19",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Bir miyokard hücresi artan iş yüküne önce hipertrofi ile uyum sağlamış, ardından kalıcı iskemi sonucu geri dönüşümsüz hasara uğramıştır. Bu durum en iyi hangisini örnekler?",
+     "secenekler": {
+      "A": "Yalnızca fizyolojik adaptasyonu",
+      "B": "Metaplaziye bağlı malign dönüşümü",
+      "C": "Adaptasyondan hücre ölümüne uzanan bir spektrumu",
+      "D": "Otofaji kaynaklı apoptozu",
+      "E": "Geri dönüşümsüz hasarın adaptasyondan bağımsız gelişmesini"
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Aynı hücre önce adapte olup (hipertrofi), stres şiddetlenince geri dönüşümsüz hasara/ölüme ilerleyebilir; bu, adaptasyondan ölüme uzanan spektrumu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Süreç sonunda hasar/ölüm de var.",
+      "B": "Yanlış. Metaplazi veya malignite söz konusu değildir.",
+      "C": "Doğru. Adaptasyondan ölüme spektrumu gösterir.",
+      "D": "Yanlış. Mekanizma otofaji değil iskemidir.",
+      "E": "Yanlış. Hasar adaptasyonu takip eder."
+     },
+     "bilgi": [
+      30,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q20",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi hücrenin 'geri dönüşümlü hasar' dönemine ait bir bulgudur?",
+     "secenekler": {
+      "A": "Kalıcı iskemik koagülatif nekroz",
+      "B": "Karyolizis ile hücre ölümü",
+      "C": "Apoptoz cisimciklerinin oluşumu",
+      "D": "Hücresel şişme ve yağlanma",
+      "E": "Kollajen birikimi ile skar dokusu"
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Geri dönüşümlü hasarda makroskobik/ışık mikroskobik belirgin değişiklik olmadan fonksiyonel bozulma ile birlikte hücresel şişme ve yağlanma görülür; nekroz ve apoptoz geri dönüşümsüz hasara aittir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Nekroz geri dönüşümsüzdür.",
+      "B": "Yanlış. Karyolizis hücre ölümü bulgusudur.",
+      "C": "Yanlış. Apoptoz geri dönüşümsüzdür.",
+      "D": "Doğru. Şişme ve yağlanma geri dönüşümlü hasara aittir.",
+      "E": "Yanlış. Bu onarım sürecidir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k01-q21",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Hücrenin strese yanıt spektrumu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Spektrumu yalnızca etkenin türü belirler.",
+      "B": "Adaptasyon her zaman hasarla sonuçlanır.",
+      "C": "Geri dönüşümlü hasar doğrudan ölümle eşdeğerdir.",
+      "D": "Stres şiddeti arttıkça önce nekroz, sonra adaptasyon gelişir.",
+      "E": "Spektrumu etkenin dozu ve süresi birlikte belirler."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Aynı etken, dozuna ve süresine bağlı olarak adaptasyondan ölüme giden bir spektrum oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Yalnızca tür belirlemez.",
+      "B": "Yanlış. Adaptasyon her zaman hasarla sonuçlanmaz.",
+      "C": "Yanlış. İkisi eşdeğer değildir.",
+      "D": "Yanlış. Sıralama ters verilmiştir.",
+      "E": "Doğru. Doz ve süre spektrumu belirler."
+     },
+     "bilgi": [
       30
      ],
      "benzer_cikmis": []
@@ -178,6 +650,473 @@
       10,
       16,
       20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İkinci gebeliğinin üçüncü trimesterindeki bir kadında uterus kitlesinin belirgin büyüdüğü, doğum sonrası ise eski boyutuna döndüğü izlenmektedir. Aynı vizitte, uzun süredir hipertansiyonu olan bir başka hastada sol ventrikül duvarının kalınlaştığı saptanmıştır. Bu iki durumla ilgili aşağıdakilerden hangisi patolojik adaptasyon örneğidir?",
+     "secenekler": {
+      "A": "Gebelikte uterus büyümesi",
+      "B": "Emzirme döneminde meme bezlerinin gelişmesi",
+      "C": "Hipertansiyonda sol ventrikül duvarının kalınlaşması",
+      "D": "Ergenlikte meme bezlerinin gelişmesi",
+      "E": "Egzersizle iskelet kası liflerinin büyümesi"
+     },
+     "dogru": "C",
+     "aciklama": "Adaptasyon hücrelerin sayı, boyut, fenotip ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir. Gebelikte uterus ve meme büyümesi fizyolojik, hipertansiyonda miyokard hipertrofisi patolojik adaptasyondur.",
+     "sik_aciklamalari": {
+      "A": "Fizyolojik adaptasyondur; normal hormonal uyarıya yanıttır.",
+      "B": "Fizyolojik adaptasyondur; hormonal uyarıya yanıttır.",
+      "C": "Doğru cevap. Anormal basınç yüküne yanıt olan patolojik adaptasyondur.",
+      "D": "Fizyolojik adaptasyondur; normal gelişimsel uyarıya yanıttır.",
+      "E": "Fizyolojik adaptasyondur; artmış iş yüküne normal yanıttır."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Aort stenozu olan yaşlı bir hastada yıllar içinde ventrikül duvarı kalınlaşmış, başlangıçta ejeksiyon fraksiyonu korunmuşken son kontrolde ventrikül dilate olmuş ve kalp yetmezliği bulguları ortaya çıkmıştır. Adaptasyon kavramıyla ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Patolojik adaptasyonda hücrenin canlılığı korunur ancak fonksiyonu bozulabilir",
+      "B": "Patolojik adaptasyon hiçbir koşulda kalp yetmezliğine ilerlemez",
+      "C": "Fizyolojik adaptasyon normal uyarılara verilen yanıttır",
+      "D": "Patolojik adaptasyon anormal veya aşırı strese yanıttır",
+      "E": "Hipertrofik kalp kasında başlangıçta kasılma işlevi korunabilir"
+     },
+     "dogru": "B",
+     "aciklama": "Patolojik adaptasyon hücreyi hayatta tutar ancak normal fonksiyon bozulabilir; stres ortadan kalkarsa gerileyebilir. Hipertrofik miyokardda kasılma başlangıçta korunur ancak beslenme ve enerji sınırları aşılınca yetmezlik gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifadedir; hücre yaşar ama normal işlevi aksar.",
+      "B": "Doğru cevap. Sınırlı damar beslenmesi ve ATP üretimi nedeniyle hipertrofi yetmezliğe ilerleyebilir.",
+      "C": "Doğru ifadedir; gebelik ve egzersiz örnekleri buna girer.",
+      "D": "Doğru ifadedir; hipertansiyon ve stenoz örnekleri buna girer.",
+      "E": "Doğru ifadedir; dekompansasyon geç dönemde gelişir."
+     },
+     "bilgi": [
+      4,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Adaptasyonun tanımını doğru veren seçenek hangisidir?",
+     "secenekler": {
+      "A": "Geri dönüşümlü sayı-boyut-fenotip değişimi",
+      "B": "Geri dönüşümsüz hücre ölümü",
+      "C": "Kalıcı genetik mutasyon",
+      "D": "Kontrolsüz hücre çoğalması",
+      "E": "Doku nekrozu ve yıkımı"
+     },
+     "dogru": "A",
+     "aciklama": "Adaptasyonda hücre sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu değiştirerek yeni çevre koşullarına uyum sağlar. Bu değişim geri dönüşümlüdür; uyaran ortadan kalkınca hücre eski haline dönebilir. Amaç, canlılığı ve işlevi sürdürmek için yeni bir denge kurmaktır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hücre özelliklerini geri dönüşümlü değiştirerek yeni denge kurar.",
+      "B": "Geri dönüşümsüz ölüm nekroz veya apoptozdur, adaptasyon değildir.",
+      "C": "Mutasyon DNA dizisinde kalıcı değişimdir, adaptasyon değildir.",
+      "D": "Kontrolsüz çoğalma neoplazidir, adaptasyonun kontrollü yanıtı değildir.",
+      "E": "Nekroz hücre ölümüdür, adaptif yanıt değildir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Fizyolojik ve patolojik adaptasyonu birbirinden ayıran özellik nedir?",
+     "secenekler": {
+      "A": "İkisi de anormal uyarana yanıttır",
+      "B": "Patolojik adaptasyon geri dönüşümsüzdür",
+      "C": "Fizyolojik adaptasyon işlevi bozar",
+      "D": "İkisi arasında fark yoktur",
+      "E": "Uyaran normal-patolojik, işlev korunur-bozulur"
+     },
+     "dogru": "E",
+     "aciklama": "Fizyolojik adaptasyon gebelikte uterus büyümesi gibi normal uyarılara verilen normal yanıttır ve işlev korunur. Patolojik adaptasyon ise hipertansiyonda kalp hipertrofisi gibi anormal veya aşırı strese yanıttır; hücre hayatta kalır ancak normal fonksiyonu bozulabilir. İkisi de geri dönüşümlü olsa da uyaranın doğası ve işlevsel sonuç farklıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; fizyolojik adaptasyon normal uyarılara yanıttır.",
+      "B": "Yanlış; patolojik adaptasyon da geri dönüşümlüdür.",
+      "C": "Yanlış; fizyolojik adaptasyonda işlev korunur.",
+      "D": "Yanlış; uyaran ve işlevsel sonuç açısından ayrılırlar.",
+      "E": "Doğru. Uyaranın doğası ve fonksiyonel sonuç iki tipi ayırt eder."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Hücresel adaptasyonun tıp literatüründeki temel tanımı ve amacı aşağıdakilerden hangisinde en doğru açıklanmıştır?",
+     "secenekler": {
+      "A": "Hücrenin genetik yapısını mutasyona uğratıp kalıcı olarak karsinom hücresine dönüşmesidir.",
+      "B": "Hücrelerin değişen fizyolojik uyarılara veya patolojik streslere karşı hücre sayısı, boyutu, fenotipi veya metabolik aktivitesini geri dönüşümlü olarak değiştirerek canlılığını ve işlevini sürdürebileceği yeni bir kararlı durum (steady state) oluşturmasıdır.",
+      "C": "Hücrenin sitoplazmik suyunu tamamen kaybedip amiloid birikimi yapmasıdır.",
+      "D": "Tüm organellerin apoptoz ile tamamen yok edilmesidir.",
+      "E": "Sadece embriyonik dönemde görülen ve doğumda sona eren bir farklılaşma sürecidir."
+     },
+     "dogru": "B",
+     "aciklama": "Adaptasyon, hücrelerin hayatta kalabilmek için boyut, sayı, fenotip ve metabolizmalarını geri dönüşümlü olarak ayarlayarak yeni bir homeostatik denge kurmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Malign neoplastik transformasyondur, adaptasyon değildir.",
+      "B": "Doğru. Geri dönüşümlü yeni bir homeostatik denge kurma sürecidir.",
+      "C": "Dejenerasyon veya birikim hastalığıdır.",
+      "D": "Apoptoz hücre ölümüdür.",
+      "E": "Adaptasyon yaşam boyu tüm dokularda gerçekleşir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki klinik tablolardan hangisi 'fizyolojik adaptasyon' sınıfına girer?",
+     "secenekler": {
+      "A": "Sistemik hipertansiyon hastasında sol ventrikül miyokard kalınlığının 2.2 cm'ye ulaşması",
+      "B": "Gebelik sürecinde maternal östrojen uyarısına bağlı olarak uterus miyometriyumunun büyümesi",
+      "C": "Sigara dumanına maruz kalan bronş epitelinde skuamöz metaplazi gelişmesi",
+      "D": "Kronik gastroözofageal reflü hastasında alt özofagusta Barrett özofagusu oluşması",
+      "E": "Bacak kırığı sonrası alçıya alınan kasta liflerin küçülmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Fizyolojik adaptasyon, normal hormonal veya fonksiyonel uyarılara verilen yanıtlardır (gebelikte uterusun büyümesi, laktasyonda memenin büyümesi). Hipertansiyon, sigara dumanı, asit reflüsü ve alçı basısı ise patolojik streslere verilen patolojik adaptasyonlardır.",
+     "sik_aciklamalari": {
+      "A, C, D, E": "Hastalık veya anormal streslere sekonder gelişen patolojik adaptasyonlardır.",
+      "B": "Doğru. Gebelikte östrojen etkisiyle uterus büyümesi normal fizyolojik bir adaptasyondur."
+     },
+     "bilgi": [
+      4,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q10",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Fizyolojik adaptasyon ile patolojik adaptasyon arasındaki temel ayırıcı özellikler değerlendirildiğinde aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Patolojik adaptasyonda hücreler daima malign neoplaziye dönüşür, fizyolojik adaptasyonda asla bölünme olmaz.",
+      "B": "Fizyolojik adaptasyon normal homeostatik ve hormonal sinyallere kontrollü bir yanıt iken; patolojik adaptasyon hücreyi hasar veya ölümden korumayı amaçlayan ancak organın normal işlevini veya yapısını bozabilen anormal streslere verilen yanıttır.",
+      "C": "Fizyolojik adaptasyon kalıcıdır, patolojik adaptasyon her zaman 24 saatte geriler.",
+      "D": "Patolojik adaptasyonda hücresel protein sentezi tamamen durur.",
+      "E": "Fizyolojik adaptasyon sadece kemik iliğinde gerçekleşir."
+     },
+     "dogru": "B",
+     "aciklama": "Patolojik adaptasyon anormal stres altında hücreyi canlı tutmayı başarır ancak aşırı yüklenme organ fonksiyonunu bozabilir veya zemininde hastalık gelişimini tetikleyebilir (örneğin hipertansif miyokard hipertrofisi son evrede kalp yetmezliğine gider).",
+     "sik_aciklamalari": {
+      "A": "Patolojik adaptasyon malignite demek değildir (örn. kalp hipertrofisi kansere dönüşmez).",
+      "B": "Doğru. Normal hormonal uyarı vs. anormal zedeleyici strese yanıt ayrımı kusursuz verilmiştir.",
+      "C": "Fizyolojik adaptasyon da uyaran bitince geriler (örn. doğum sonrası uterus küçülür).",
+      "D ve E": "Biyolojik olarak yanlıştır."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Hücresel adaptasyonun dört ana morfolojik tipi aşağıdakilerden hangisinde eksiksiz verilmiştir?",
+     "secenekler": {
+      "A": "Hipertrofi, Hiperplazi, Atrofi, Metaplazi",
+      "B": "Nekroz, Apoptoz, Otoliz, Fibrinozis",
+      "C": "Dejenerasyon, Displazi, Karsinom, Anaplazi",
+      "D": "Enflamasyon, Onarım, Rejenerasyon, Skar",
+      "E": "Tromboz, Emboli, İnfarktüs, Şok"
+     },
+     "dogru": "A",
+     "aciklama": "Patolojide dört klasik hücresel adaptasyon tipi kabul edilir: 1. Hipertrofi (boyut artışı), 2. Hiperplazi (sayı artışı), 3. Atrofi (boyut ve sayı azalması), 4. Metaplazi (olgun fenotip değişimi).",
+     "sik_aciklamalari": {
+      "A": "Doğru. Dört temel adaptasyon tipidir.",
+      "B": "Hücre ölümü türleridir.",
+      "C": "Neoplastik proliferasyon spektrumudur.",
+      "D": "Doku onarım basamaklarıdır.",
+      "E": "Hemodinamik bozukluklardır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q12",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Hücresel adaptasyon sürecinde hücrelerin strese yanıt verirken gen ekspresyon profilini değiştirmesiyle ilgili olarak kalp kası hipertrofisinde fetal gen programının yeniden aktivasyonu (re-aktivasyon) sonucu ne gözlenir?",
+     "secenekler": {
+      "A": "Erişkin alfa-miyozin ağır zincirinden, mekanik olarak daha yavaş kasılan ancak ATP'yi daha ekonomik kullanan fetal beta-miyozin ağır zincirine geçiş ve ANP ekspresyonu artışı",
+      "B": "Miyozin genlerinin tamamen mutasyonla silinmesi",
+      "C": "Kalp hücrelerinin nöronal akson uzatması",
+      "D": "Hücrelerin keratin sentezlemeye başlaması",
+      "E": "Endokardiyal kök hücrelerin eritrosite dönüşmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Miyokard hipertrofisinde mekanik gerilme sinyalleri transkripsiyon faktörlerini (GATA4, NFAT, MEF2) aktive eder. Bu durum fetal gen programını yeniden tetikler: Alfa-MHC yerine daha az enerji harcayan beta-MHC eksprese edilir ve aşırı volüm yükünü dengelemek için fetal Atriyal Natriüretik Peptid (ANP) sentezi artar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Beta-MHC izoformuna geçiş ve ANP sentezi miyokardiyal adaptasyonun moleküler imzasıdır.",
+      "B, C, D, E": "Patofizyolojik temeli olmayan seçeneklerdir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q13",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "\"Hiperplazi tanımı\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "C": "Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "D": "Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "E": "Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir.",
+      "B": "Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "C": "Yanlış. Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "D": "Yanlış. Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "E": "Yanlış. Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir.",
+      "B": "Yanlış. Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q14",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Atrofi mekanizmaları\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Azalmış protein sentezi, ubikuitin-proteazom sistemi ile artmış protein yıkımı ve artmış otofaji.",
+      "E": "Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince büyüme durur.",
+      "D": "Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür.",
+      "B": "Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "A": "Organ/dokunun hücre boyutu ve/veya sayısında azalma ile küçülmesidir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Azalmış protein sentezi, ubikuitin-proteazom sistemi ile artmış protein yıkımı ve artmış otofaji.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Azalmış protein sentezi, ubikuitin-proteazom sistemi ile artmış protein yıkımı ve artmış otofaji.",
+      "E": "Yanlış. Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince büyüme durur.",
+      "D": "Yanlış. Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür.",
+      "B": "Yanlış. Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "A": "Yanlış. Organ/dokunun hücre boyutu ve/veya sayısında azalma ile küçülmesidir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q15",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Metaplazi tanımı\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+      "A": "Gebelikte uterus östrojen etkisiyle büyür; düz kas hücrelerinde hem hipertrofi hem hiperplazi görülür.",
+      "B": "Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "D": "Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "C": "Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince büyüme durur."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+      "A": "Yanlış. Gebelikte uterus östrojen etkisiyle büyür; düz kas hücrelerinde hem hipertrofi hem hiperplazi görülür.",
+      "B": "Yanlış. Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "D": "Yanlış. Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "C": "Yanlış. Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince büyüme durur."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q16",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Epitel metaplazisi: sigara\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "C": "Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür.",
+      "E": "Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+      "B": "Hafif/orta stres adaptasyonla, şiddetli/kalıcı stres geri dönüşümlü hasardan nekroz veya apoptoza ilerler.",
+      "D": "Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+      "A": "Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür.",
+      "E": "Yanlış. Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+      "B": "Yanlış. Hafif/orta stres adaptasyonla, şiddetli/kalıcı stres geri dönüşümlü hasardan nekroz veya apoptoza ilerler.",
+      "D": "Yanlış. Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+      "A": "Yanlış. Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q17",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Adaptasyonun tanımıyla ilgili en doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "B": "Hücrelerin özelliklerini geri dönüşümsüz biçimde değiştirmesidir.",
+      "C": "Hücrelerin doğrudan nekroza gitmesidir.",
+      "D": "Yalnızca hücre sayısının artmasıdır.",
+      "E": "Hücrenin apoptozla yok olmasıdır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Adaptasyon, hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirerek yeni bir denge kurmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Adaptasyon tanımı doğru verilmiştir.",
+      "B": "Yanlış. Adaptasyon geri dönüşümlüdür.",
+      "C": "Yanlış. Nekroz adaptasyon değildir.",
+      "D": "Yanlış. Bu hiperplazidir.",
+      "E": "Yanlış. Bu hücre ölümüdür."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q18",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Fizyolojik ve patolojik adaptasyon ayrımı için aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Fizyolojik adaptasyon normal uyarılara yanıttır.",
+      "B": "Patolojik adaptasyon her zaman geri dönüşümlü hasar demektir.",
+      "C": "Gebelikte uterus ve memede büyüme fizyolojik adaptasyona örnektir.",
+      "D": "Patolojik adaptasyon anormal veya aşırı streslere yanıttır.",
+      "E": "Patolojik adaptasyon hücreyi hayatta tutabilir ama normal fonksiyon bozulabilir."
+     },
+     "dogru": "B",
+     "aciklama": "Yanlış olan ifade B'dir: Patolojik adaptasyon geri dönüşümlü hasar değildir; hücreyi hayatta tutan bir adaptasyondur, ancak normal fonksiyon bozulabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru yanıt (yanlış ifade).",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q19",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi fizyolojik adaptasyon örneğidir?",
+     "secenekler": {
+      "A": "Hipertansiyonda sol ventrikül hipertrofisi",
+      "B": "Alçıdaki ekstremitede kas atrofisi",
+      "C": "Gebelikte memede hipertrofi ve hiperplazi",
+      "D": "Sigara içicide bronş epitelinde yassı metaplazi",
+      "E": "Endometrial hiperplazi"
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Gebelikte memede görülen hipertrofi ve hiperplazi, normal (fizyolojik) hormonal uyarıya yanıt olan adaptasyondur. Diğer seçenekler patolojik adaptasyon örnekleridir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu patolojik hipertrofidir.",
+      "B": "Yanlış. Bu patolojik (kullanılmama) atrofisidir.",
+      "C": "Doğru. Fizyolojik hormonal adaptasyondur.",
+      "D": "Yanlış. Bu patolojik metaplazidir.",
+      "E": "Yanlış. Bu patolojik hiperplazidir."
+     },
+     "bilgi": [
+      4,
+      8,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q20",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi patolojik adaptasyona örnektir?",
+     "secenekler": {
+      "A": "Egzersizle iskelet kası hipertrofisi",
+      "B": "Parsiyel hepatektomi sonrası karaciğer rejenerasyonu",
+      "C": "Ergenlikte meme gelişimi",
+      "D": "Aort stenozunda sol ventrikül hipertrofisi",
+      "E": "Gebelikte uterus büyümesi"
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Aort stenozu (ve hipertansiyon) sürekli artmış basınca karşı gelişen sol ventrikül hipertrofisi patolojik adaptasyondur; diğerleri fizyolojiktir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Egzersiz fizyolojik uyarandır.",
+      "B": "Yanlış. Telafi edici hiperplazi fizyolojiktir.",
+      "C": "Yanlış. Ergenlik fizyolojik süreçtir.",
+      "D": "Doğru. Aort stenozu patolojik uyarandır.",
+      "E": "Yanlış. Gebelik fizyolojiktir."
+     },
+     "bilgi": [
+      4,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k02-q21",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Adaptasyonun 'amaca yönelik' doğasını en iyi açıklayan ifade hangisidir?",
+     "secenekler": {
+      "A": "Adaptasyon, hücreyi öldürerek zararı önler.",
+      "B": "Adaptasyon, kalıcı genetik değişiklik oluşturur.",
+      "C": "Adaptasyon, homeostazı bozarak hücreyi korur.",
+      "D": "Adaptasyon, her koşulda malign dönüşüme yol açar.",
+      "E": "Adaptasyon, yeni bir denge durumu kurarak canlılık ve işlevi sürdürür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Adaptasyonun amacı değişen koşullara uyum sağlayarak yeni bir denge kurmak ve hücre canlılığı ile işlevini sürdürmektir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Adaptasyon hücreyi öldürmez.",
+      "B": "Yanlış. Adaptasyon geri dönüşümlüdür.",
+      "C": "Yanlış. Amaç yeni denge kurmaktır.",
+      "D": "Yanlış. Her zaman malign dönüşüm olmaz.",
+      "E": "Doğru. Amaç yeni denge ve işlevin sürmesidir."
+     },
+     "bilgi": [
+      3
      ],
      "benzer_cikmis": []
     }
@@ -294,6 +1233,474 @@
       12
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q05",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kontrolsüz hipertansiyonu olan 60 yaşındaki bir hastanın ekokardiyografisinde sol ventrikül duvar kalınlığı 2,2 cm ölçülmüş, miyositlerde dallanma ve nükleer büyüme bildirilmiştir. Hücre sayısında artış saptanmamıştır. Bu tabloya uyan adaptasyon tipi ve doku özelliği aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Hipertansiyon zemininde sol ventrikül duvar kalınlığının 2,2 cm ölçülmesi",
+      "B": "Parsiyel hepatektomi sonrası karaciğerin eski kütlesine dönmesi",
+      "C": "Menopoz sonrası uterus boyutunun küçülmesi",
+      "D": "Alçıya alınan ekstremitede kas kitlesinin azalması",
+      "E": "Sigara içen hastada bronş epitelinin yassı epitele dönüşmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Hipertrofi hücre boyutunda artıştır; kalp ve iskelet kası gibi bölünme kapasitesi sınırlı dokularda saf hipertrofi görülür. Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır; yeni sarkomer senteziyle duvar kalınlaşır.",
+     "sik_aciklamalari": {
+      "A": "Doğru cevap. Sürekli basınç yüküne bağlı miyosit boyut artışıdır; normal duvar 1-1,5 cm iken 2 cm üzeri patolojiktir.",
+      "B": "Telafi edici hiperplazi örneğidir; hücre sayısı artar.",
+      "C": "Endokrin uyarı kaybına bağlı atrofi örneğidir.",
+      "D": "Kullanılmamaya bağlı atrofi örneğidir.",
+      "E": "Skuamöz metaplazi örneğidir."
+     },
+     "bilgi": [
+      6,
+      7,
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q06",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Ağır egzersiz yapan bir sporcuda iskelet kası hipertrofisi gelişmiş ve performans artmıştır. Buna karşılık kronik basınç yükü altındaki bir hastada miyokard hipertrofisi yıllar sonra kalp yetmezliğine dönüşmüştür. Hipertrofi mekanizmasıyla ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Mekanik gerilme ve büyüme faktörleri yeni sarkomer sentezini uyarır",
+      "B": "Miyofilament artışı ve daha ekonomik izoformlara geçilir",
+      "C": "Damar beslenmesi ve ATP üretimi sınırlı olduğundan hipertrofinin sınırı vardır",
+      "D": "Son aşamada miyofibril kaybı ve ventrikül dilatasyonu gelişebilir",
+      "E": "Hipertrofik miyokardda enerji ihtiyacı azaldığı için yetmezlik hiçbir zaman gelişmez"
+     },
+     "dogru": "E",
+     "aciklama": "Mekanik gerilme, büyüme faktörleri ve adrenerjik uyarım yeni sarkomer ve miyofilament sentezini uyarır. Ancak damar beslenmesi, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlı olduğundan son aşamada miyofibril kaybı ve dilatasyonla yetmezlik gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifadedir; hipertrofinin tetikleyicileri bunlardır.",
+      "B": "Doğru ifadedir; kasılma aygıtı güçlendirilir.",
+      "C": "Doğru ifadedir; bu sınır dekompansasyonu açıklar.",
+      "D": "Doğru ifadedir; dekompanse hipertrofinin sonudur.",
+      "E": "Doğru cevap. Hipertrofik miyokardın enerji ihtiyacı artmıştır; beslenme yetersiz kalınca yetmezlik gelişir."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Hipertrofinin hücre sayısı ve boyutuna ilişkin tanımı nedir?",
+     "secenekler": {
+      "A": "Hücre sayısı artar",
+      "B": "Hücre tipi değişir",
+      "C": "Hücre boyutu, sayısı sabit",
+      "D": "Hücre sayısı azalır",
+      "E": "Doku nekroza gider"
+     },
+     "dogru": "C",
+     "aciklama": "Hipertrofide hücre sayısı artmaz, mevcut hücreler yapısal protein ve organel sentezini artırarak büyür. Kalp kası ve iskelet kası gibi bölünme kapasitesi sınırlı dokularda temel adaptif yanıt budur. Hipertansiyon ve aort stenozunda miyositler büyür, sol ventrikül duvarı 2 cm'nin üzerine kalınlaşır.",
+     "sik_aciklamalari": {
+      "A": "Hücre sayısı artışı hiperplazinin tanımıdır.",
+      "B": "Hücre tipi değişimi metaplazidir.",
+      "C": "Doğru. Yapısal protein ve organel artımıyla hücre büyür, sayı değişmez.",
+      "D": "Sayı azalması atrofinin özelliğidir.",
+      "E": "Nekroz ölüm yoludur, hipertrofi yaşamsal yanıttır."
+     },
+     "bilgi": [
+      6,
+      7,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kalp hipertrofisinde miyositin basınç yüküne uyum mekanizması nedir?",
+     "secenekler": {
+      "A": "Miyosit bölünmesi artar",
+      "B": "Sarkomer sentezi ve ekonomik izoform",
+      "C": "Mitokondri sayısı sıfırlanır",
+      "D": "Kollajen tümüyle erir",
+      "E": "Kapiller yatak sınırsız büyür"
+     },
+     "dogru": "B",
+     "aciklama": "Mekanik gerilme, büyüme faktörleri ve adrenerjik uyarım miyositlerde yeni sarkomer sentezini ve hücre başına miyofilament artımını tetikler. Enerji açısından daha ekonomik miyozin izoformlarına geçilerek artan basınç yüküne uyum sağlanır. Ancak vasküler besleme ve mitokondriyal ATP üretimi sınırlı kaldığından süreç ilerlerse miyofibril kaybı, dilatasyon ve kalp yetmezliği gelişir.",
+     "sik_aciklamalari": {
+      "A": "Miyositler bölünme kapasitesi sınırlı hücrelerdir, yanıt bölünme değildir.",
+      "B": "Doğru. Yeni sarkomer ve miyofilament artımıyla basınç yüküne uyum sağlanır.",
+      "C": "Mitokondriyal kapasite sınırlayıcı faktördür, sıfırlanmaz.",
+      "D": "Kollajen erimesi hipertrofi mekanizması değildir.",
+      "E": "Vasküler beslemenin sınırlı olması yetmezliğe gidişin nedenidir."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Hipertrofi (hypertrophy) kavramının hücresel ve dokusal düzeydeki doğru tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mitoz bölünme hızlanarak hücre sayısının katlanması",
+      "B": "Yeni hücre oluşumu olmaksızın, yapısal proteinlerin ve organellerin sentezinin artması sonucu hücre boyutlarının büyümesi ve buna bağlı organın hacim kazanması",
+      "C": "Hücre içine patolojik olarak su ve glikojen dolması",
+      "D": "Hücre çekirdeğinin küçülerek yok olması",
+      "E": "Bir hücre tipinin yerini başka bir hücre tipine bırakması"
+     },
+     "dogru": "B",
+     "aciklama": "Hipertrofi, hücre sayısında artış olmaksızın hücrenin kendi yapısal protein ve organel içeriğini artırarak boyut olarak büyümesidir. Özellikle bölünme yeteneği olmayan kalıcı hücrelerde organ büyümesinin tek yoludur.",
+     "sik_aciklamalari": {
+      "A": "Hücre sayısının artması hiperplazidir.",
+      "B": "Doğru. Hücre boyutunun ve yapısal proteinlerinin artması hipertrofinin tanımıdır.",
+      "C": "Hücresel şişme (hidropik dejenerasyon) hasarıdır.",
+      "D": "Piknoz/karyolizdir.",
+      "E": "Metaplazidir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q10",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki organ ve dokulardan hangisi artan iş yükü karşısında 'saf hipertrofi' ile yanıt vermek zorundadır (hiperplazi yapamaz)?",
+     "secenekler": {
+      "A": "Erişkin sol ventrikül miyokardı ve iskelet kası",
+      "B": "Karaciğer parankimi",
+      "C": "Kemik iliği eritroid serisi",
+      "D": "Endometrium bez epiteli",
+      "E": "Epidermis skuamöz epiteli"
+     },
+     "dogru": "A",
+     "aciklama": "Kardiyak miyositler ve iskelet kası lifleri kalıcı (permanent) hücrelerdir; erişkinde anlamlı mitotik bölünme kapasiteleri yoktur. Dolayısıyla artan iş yüküne yalnızca hücrelerini büyüterek (saf hipertrofi) yanıt verebilirler. Karaciğer, kemik iliği, endometrium ve epidermis ise labil veya stabil hücreler olup hiperplazi yapabilirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kalp ve iskelet kası bölünemez, saf hipertrofi gösterir.",
+      "B, C, D, E": "Bölünme yeteneği olan labil/stabil hücrelerdir, hiperplazi yaparlar."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q11",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Gebelikte uterusun yaklaşık 50 gramdan 1000 gramın üzerine çıkmasını sağlayan kitlesel büyümede hangi hücresel mekanizmalar birlikte rol oynar?",
+     "secenekler": {
+      "A": "Sadece yağ dokusu birikimi",
+      "B": "Östrojen uyarısına bağlı olarak miyometriyum düz kas hücrelerinde hem hipertrofi hem de hiperplazi",
+      "C": "Sadece nekrotik ödem sıvısı toplanması",
+      "D": "Düz kasların çizgili kasa metaplazisi",
+      "E": "Sadece amniyotik sıvının miyometriyuma sızması"
+     },
+     "dogru": "B",
+     "aciklama": "Gebelik uterusunda düz kas hücreleri bölünme yeteneğine de sahip olduğundan, östrojen reseptörleri aracılığıyla hem hücre boyutu büyür (hipertrofi) hem de hücre sayısı artar (hiperplazi).",
+     "sik_aciklamalari": {
+      "A, C, D, E": "Gebelik uterusunun fizyolojisiyle bağdaşmayan yanlış durumlardır.",
+      "B": "Doğru. Gebelik uterusunda hipertrofi ve hiperplazi eşzamanlı yürür."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q12",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Kronik kontrolsüz sistemik hipertansiyonu veya aort kapağı darlığı olan bir hastada gelişen sol ventrikül hipertrofisinin sınırları aşıldığında patolojinin kalp yetmezliğine ilerlemesinin hücresel mekanizması hangisidir?",
+     "secenekler": {
+      "A": "Kalp kası hücrelerinin aniden nöronlara dönüşmesi",
+      "B": "Büyüyen kas kütlesinin oksijen ve besin ihtiyacının koroner kapiller vasküler yatağın besleme kapasitesini aşması, mitokondriyal enerji üretim sınırına ulaşılması ve intraselüler kalsiyum regülasyonunun bozulması sonucu miyosit ölümü (apoptoz/nekroz), miyofibril kaybı ve fibrozis gelişmesi",
+      "C": "Kalp kasında aşırı glikojen yıkımına bağlı hipoglisemi oluşması",
+      "D": "Perikardın kalsifiye olarak ventrikülü delmesi",
+      "E": "Tüm koroner arterlerin bir anda spazma uğraması"
+     },
+     "dogru": "B",
+     "aciklama": "Patolojik kardiyak hipertrofide organ sınırsız büyüyemez; kapiller damarlanma kas kitlesi kadar artamaz (rölatif iskemi), mitokondri ATP üretimi yetersiz kalır, protein sentezi sınırına ulaşılır. Sonuçta miyofibriller parçalanır, miyositler apoptoza gider, ventrikül dilate olur ve dekompanse kalp yetmezliği gelişir.",
+     "sik_aciklamalari": {
+      "A, C, D, E": "Patolojik kardiyak dekompansasyonun mekanizması değildir.",
+      "B": "Doğru. Vasküler yetersizlik, mitokondriyal sınır ve miyofibril kaybı kalp yetmezliğine gidiş mekanizmasıdır."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q13",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Düzenli ağırlık çalışan bir vücut geliştirme sporcusunun kol ve bacak kaslarında görülen kütle artışı hangi hücresel adaptasyonun tipik bir örneğidir?",
+     "secenekler": {
+      "A": "Fizyolojik iskelet kası hipertrofisi",
+      "B": "Patolojik iskelet kası hiperplazisi",
+      "C": "Mezenkimal kıkırdak metaplazisi",
+      "D": "Kullanılmama atrofisi",
+      "E": "Koagülatif kas nekrozu"
+     },
+     "dogru": "A",
+     "aciklama": "Ağır egzersiz ve yük kaldırma sonucu iskelet kası lifleri bölünemediği için hücre içi aktin ve miyozin miyofilamentlerini artırarak boyutça büyür; bu durum fizyolojik hipertrofidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Artmış mekanik yüke verilen fizyolojik hipertrofi yanıtıdır.",
+      "B": "İskelet kası lifleri bölünerek hiperplazi yapamaz.",
+      "C, D, E": "Farklı ve zıt patolojilerdir."
+     },
+     "bilgi": [
+      7,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q14",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Atrofi örnekleri\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "A": "Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas.",
+      "E": "Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "D": "Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir.",
+      "C": "Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "B": "Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas.",
+      "E": "Yanlış. Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "D": "Yanlış. Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir.",
+      "C": "Yanlış. Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "B": "Yanlış. Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q15",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Mezenkimal metaplazi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "D": "Hücreler fizyolojik stres ve zararlı uyaranlara adaptasyon, geri dönüşümlü hasar ve geri dönüşümsüz hasar-ölüm ile yanıt verir.",
+      "C": "Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "E": "Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür.",
+      "A": "Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "D": "Yanlış. Hücreler fizyolojik stres ve zararlı uyaranlara adaptasyon, geri dönüşümlü hasar ve geri dönüşümsüz hasar-ölüm ile yanıt verir.",
+      "C": "Yanlış. Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "E": "Yanlış. Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür.",
+      "A": "Yanlış. Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q16",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Otofaji ve klinik\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "Kıtlık ve stres dönemlerinde adaptif bir yanıttır; aşırı otofaji apoptozla sonuçlanabilir.",
+      "D": "Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "E": "Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "C": "Kronik gastroözofageal reflüde alt özofagustaki çok katlı yassı epitel kolumnar (Barrett tipi) epitele dönüşür.",
+      "A": "Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Kıtlık ve stres dönemlerinde adaptif bir yanıttır; aşırı otofaji apoptozla sonuçlanabilir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Kıtlık ve stres dönemlerinde adaptif bir yanıttır; aşırı otofaji apoptozla sonuçlanabilir.",
+      "D": "Yanlış. Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "E": "Yanlış. Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "C": "Yanlış. Kronik gastroözofageal reflüde alt özofagustaki çok katlı yassı epitel kolumnar (Barrett tipi) epitele dönüşür.",
+      "A": "Yanlış. Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q17",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"Epitel metaplazisi: reflü özofajit\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Kronik gastroözofageal reflüde alt özofagustaki çok katlı yassı epitel kolumnar (Barrett tipi) epitele dönüşür.",
+      "D": "Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "E": "Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "B": "Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır.",
+      "A": "Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Kronik gastroözofageal reflüde alt özofagustaki çok katlı yassı epitel kolumnar (Barrett tipi) epitele dönüşür.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Kronik gastroözofageal reflüde alt özofagustaki çok katlı yassı epitel kolumnar (Barrett tipi) epitele dönüşür.",
+      "D": "Yanlış. Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "E": "Yanlış. Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "B": "Yanlış. Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır.",
+      "A": "Yanlış. Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q18",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Hipertrofi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hücre boyutunda artıştır; yapısal proteinler ve organellerde artışla olur.",
+      "B": "Hücre sayısında artıştır.",
+      "C": "Hücre boyutunda azalmadır.",
+      "D": "Hücre tipinin değişmesidir.",
+      "E": "Yalnızca bölünme kapasitesi yüksek dokularda görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Hipertrofi, hücre boyutunda artış olup yapısal proteinler ve organellerde artışla organın büyümesine yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hipertrofi tanımı doğru verilmiştir.",
+      "B": "Yanlış. Bu hiperplazidir.",
+      "C": "Yanlış. Bu atrofidir.",
+      "D": "Yanlış. Bu metaplazidir.",
+      "E": "Yanlış. Bölünme kapasitesi sınırlı dokularda görülür."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q19",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Hipertrofi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Saf hipertrofide hücre sayısı artmaz, hücreler büyür.",
+      "B": "Hipertrofi organın küçülmesine yol açar.",
+      "C": "Özellikle kalp kası ve iskelet kası gibi bölünme kapasitesi sınırlı dokularda görülür.",
+      "D": "Gebelik uterusunda hipertrofi ve hiperplazi birlikte görülür.",
+      "E": "Kalp hipertrofisinde ventrikül duvarı kalınlaşır ve kalp ağırlaşır."
+     },
+     "dogru": "B",
+     "aciklama": "Yanlış olan ifade B'dir: Hipertrofi hücre boyutunda artış olup organın büyümesine yol açar, küçülmesine değil.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru yanıt (yanlış ifade).",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q20",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Hipertansiyon ve aort stenozu zemininde gelişen kalp hipertrofisi için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sol ventrikül duvar kalınlığı normal sınırlar olan 1-1,5 cm'de kalır.",
+      "B": "Hücre sayısı belirgin şekilde artar.",
+      "C": "Sol ventrikül duvar kalınlığı 2 cm'den kalın olur.",
+      "D": "Tetikleyiciler arasında mekanik gerilme, büyüme faktörleri ve adrenerjik uyarım yer almaz.",
+      "E": "Süreç her zaman iyi huylu ve kalıcı biçimde kompanse kalır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Miyokard hipertrofisinde sol ventrikül duvarı normal 1-1,5 cm iken 2 cm'den kalın hale gelir; tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Duvar kalınlığı artar.",
+      "B": "Yanlış. Temel olay hipertrofidir; miyositler çoğalmaz.",
+      "C": "Doğru. Duvar 2 cm'den kalın olur.",
+      "D": "Yanlış. Bunlar tetikleyicilerdir.",
+      "E": "Yanlış. Yetmezliğe ilerleyebilir."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q21",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Kalp hipertrofisinde mekanizma ve sonuçlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+      "B": "Yeni sarkomer sentezi ve miyofilament artışı görülür.",
+      "C": "Enerji açısından daha ekonomik izoformlara geçilir.",
+      "D": "Hipertrofi sınırsız devam eder; besleme ve ATP üretimi her zaman yeterlidir.",
+      "E": "Sürekli hipertrofide miyofibril kaybı, ventrikül dilatasyonu ve kalp yetmezliği gelişebilir."
+     },
+     "dogru": "D",
+     "aciklama": "Yanlış olan ifade D'dir: Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır; sürekli hipertrofi miyofibril kaybı, dilatasyon ve yetmezlikle sonuçlanabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru yanıt (yanlış ifade).",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k03-q22",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "İskelet kasında ağırlık çalışmasına yanıt olarak gelişen uyumun temel mekanizması hangisidir?",
+     "secenekler": {
+      "A": "Bölünme kapasitesi yüksek olduğundan hiperplazi",
+      "B": "Metaplazi ile kas liflerinin başka hücre tipine dönüşmesi",
+      "C": "Otofaji ile kas proteinlerinin yıkımı",
+      "D": "Apoptozla kas liflerinin yenilenmesi",
+      "E": "Çoğalma kapasitesi sınırlı olduğundan hücre boyutunda artış (hipertrofi)"
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: İskelet kası çoğalma kapasitesi sınırlı olduğundan artmış iş yüküne temel yanıt hücre boyutunda artış (hipertrofi) yoluyla verilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. İskelet kasında temel yanıt hiperplazi değildir.",
+      "B": "Yanlış. Metaplazi söz konusu değildir.",
+      "C": "Yanlış. Otofaji mekanizma değildir.",
+      "D": "Yanlış. Apoptoz adaptasyon değildir.",
+      "E": "Doğru. Mekanizma hipertrofidir."
+     },
+     "bilgi": [
+      7,
+      9
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -405,6 +1812,473 @@
      },
      "bilgi": [
       17,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q05",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Karaciğerinin bir lobu rezeksiyonla alınan bir hastada, kalan dokuda hepatositlerde yoğun mitotik aktivite başlamış ve haftalar içinde karaciğer kütlesi eski hacmine yaklaşmıştır. Hücre boyutundan çok hücre sayısındaki bu artışla seyreden adaptasyon tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hipertrofi",
+      "B": "Metaplazi",
+      "C": "Atrofi",
+      "D": "Telafi edici hiperplazi",
+      "E": "Displazi"
+     },
+     "dogru": "D",
+     "aciklama": "Hiperplazi hücre sayısında artıştır ve bölünebilir hücre popülasyonu gerektirir; parsiyel hepatektomi sonrası karaciğer rejenerasyonu telafi edici hiperplazinin klasik örneğidir. Hipertrofi boyut artışı, metaplazi tip değişimi, atrofi küçülmedir.",
+     "sik_aciklamalari": {
+      "A": "Hücre boyutunda artıştır; karaciğer rejenerasyonunu tanımlamaz.",
+      "B": "Olgun hücre tipinin değişimidir; sayı artışını tanımlamaz.",
+      "C": "Hücre boyut veya sayısında azalmadır.",
+      "D": "Doğru cevap. Kalan hepatositlerde mitotik aktivite artışı ve büyüme faktörleriyle kütlenin geri kazanılmasıdır.",
+      "E": "Düzensiz olgunlaşmadır; rejeneratif sayı artışını tanımlamaz."
+     },
+     "bilgi": [
+      14,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q06",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Anovulatuvar siklusları olan obez bir hastada karşılanmamış östrojen etkisiyle endometrial hiperplazi gelişmiş, biyopside atipi izlenmiştir. Klinisyen, bu tablonun kanserle ilişkisini ve takibini tartışmaktadır. Hiperplazi-kanser ilişkisiyle ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Patolojik hiperplazi tamamen kontrolsüz büyümedir ve uyarı kesilse de durmaz",
+      "B": "Uzamış endometrial hiperplazi endometrium kanseri riskini artırır",
+      "C": "Hiperplazi ile neoplazi arasında hiçbir ilişki yoktur",
+      "D": "Benign prostat hiperplazisi her zaman maligniteye dönüşür",
+      "E": "Hormonal uyarı kesilince hiperplastik doku asla gerilemez"
+     },
+     "dogru": "B",
+     "aciklama": "Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince büyüme durur; ancak uzamış kontrolsüz hiperplazi neoplazi için zemin oluşturur. Endometrial hiperplazi ile kanser, skuamöz metaplazi ile displazi ilişkisi bu geçişi örnekler.",
+     "sik_aciklamalari": {
+      "A": "Hiperplazide büyüme kontrolü kısmen korunur; uyarı azalırsa gerileyebilir.",
+      "B": "Doğru cevap. Östrojen fazlalığına bağlı uzamış hiperplazi malignite zeminidir.",
+      "C": "Uzamış ve kontrolsüz hiperplazi neoplazi için zemin oluşturur.",
+      "D": "BPH benign bir hiperplazidir; maligniteye dönüşüm kural değildir.",
+      "E": "Uyarı kesilince hiperplazi gerileyebilir; bu özelliği neoplaziden ayırır."
+     },
+     "bilgi": [
+      17,
+      18,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hiperplazinin tanımı ve ortaya çıkış koşulu nedir?",
+     "secenekler": {
+      "A": "Hücre boyutu artar",
+      "B": "Hücre tipi değişir",
+      "C": "Bölünemez hücrede olur",
+      "D": "Hücre sayısı artar, bölünebilirlik şart",
+      "E": "Hücre sayısı azalır"
+     },
+     "dogru": "D",
+     "aciklama": "Hiperplazi hücre sayısında artışla organın büyümesidir ve yalnızca bölünebilir hücre topluluklarında görülür. Parsiyel hepatektomi sonrası kalan hepatositlerin mitoza girerek karaciğeri eski kütlesine döndürmesi telafi edici hiperplazinin klasik örneğidir. Hepatosit büyüme faktörü gibi mediyatörler bu mitotik yanıtı yönetir.",
+     "sik_aciklamalari": {
+      "A": "Boyut artışı hipertrofidir, hiperplazi değildir.",
+      "B": "Tip değişimi metaplazidir.",
+      "C": "Bölünemez hücrelerde hiperplazi gelişemez, hipertrofi olur.",
+      "D": "Doğru. Sayı artışı için hücrelerin mitoza girebilmesi gerekir.",
+      "E": "Sayı azalması atrofidir."
+     },
+     "bilgi": [
+      14,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q08",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Patolojik hiperplazinin büyüme kontrolü ve kanserle ilişkisi nasıldır?",
+     "secenekler": {
+      "A": "Uyarı kesilince durur, sürerse zemin",
+      "B": "Her zaman kansere dönüşür",
+      "C": "Uyarıyla ilişkisi yoktur",
+      "D": "Geri dönüşümsüzdür",
+      "E": "Kontroller tümüyle kaybolmuştur"
+     },
+     "dogru": "A",
+     "aciklama": "Patolojik hiperplazide büyüme kontrol mekanizmaları kısmen korunmuştur, bu yüzden östrojen-progesteron dengesizliği gibi uyarı ortadan kalkınca proliferasyon durur ve lezyon gerileyebilir. Ancak uyarı sürerse sürekli bölünen hücrelerde DNA replikasyon hataları birikir ve mutasyon riski artar. Bu nedenle uzun süreli endometrial hiperplazi, endometrium kanseri için zemin oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kontrol kısmen korunduğu için uyarı bağımlıdır, ancak süreklilik mutasyon birikimine yol açar.",
+      "B": "Her zaman dönüşüm olmaz, yalnızca risk artar.",
+      "C": "Hiperplazi hormon ve büyüme faktörü dengesizliğine bağlıdır.",
+      "D": "Uyarı azalırsa gerileyebilir, geri dönüşümlüdür.",
+      "E": "Kontrollerin tümüyle kaybı neoplazinin özelliğidir."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q09",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hiperplazi (hyperplasia) adaptasyonunun gerçekleşebilmesi için ilgili dokunun sahip olması gereken temel biyolojik ön koşul hangisidir?",
+     "secenekler": {
+      "A": "Doku hücrelerinin DNA sentezleme ve mitotik olarak bölünebilme yeteneğine sahip olması",
+      "B": "Doku hücrelerinin mutlaka kıkırdak kökenli olması",
+      "C": "Dokunun kesinlikle damarsız (avasküler) olması",
+      "D": "Hücrelerin sadece apoptoz sinyali üretmesi",
+      "E": "Doku içinde hiçbir kök hücre bulunmaması"
+     },
+     "dogru": "A",
+     "aciklama": "Hiperplazi, hücre sayısındaki artış sonucu organın büyümesidir. Bu nedenle ancak mitotik olarak bölünebilen labil (epitel, hematopoetik) ve stabil (hepatosit, düz kas) hücre popülasyonlarında görülebilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Bölünme ve proliferasyon yeteneği hiperplazinin olmazsa olmazıdır.",
+      "B, C, D, E": "Biyolojik olarak hiperplaziyi imkansız kılan veya ilgisiz önermelerdir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q10",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Bir donörden karaciğerin sağ lobu canlı nakil amacıyla cerrahi olarak alındıktan (parsiyel hepatektomi) sonra geride kalan donör karaciğer parankiminin mitotik aktivite göstererek birkaç hafta içinde orijinal organ kütlesine yeniden ulaşması hangi hiperplazi türüne örnektir?",
+     "secenekler": {
+      "A": "Patolojik endometrial hiperplazi",
+      "B": "Fizyolojik telafi edici (kompansatuvar) hiperplazi",
+      "C": "Hormon bağımlı jinekolojik metaplazi",
+      "D": "Senil involüsyon atrofisi",
+      "E": "Malign hepatosellüler karsinom"
+     },
+     "dogru": "B",
+     "aciklama": "Parsiyel hepatektomi sonrası karaciğerin kendini tamamlaması klasik fizyolojik kompansatuvar (telafi edici) hiperplazidir. Hepatosit Büyüme Faktörü (HGF), IL-6 ve TNF sinyalleri ile G0 fazındaki hepatositler hücre siklusuna girer ve organ kütlesi tamamlanınca TGF-beta gibi inhibitörlerle süreç durdurulur.",
+     "sik_aciklamalari": {
+      "A": "Patolojik hormon dengesizliğidir.",
+      "B": "Doğru. Doku kaybını telafi eden fizyolojik kompansatuvar hiperplazidir.",
+      "C ve D": "Farklı adaptasyon süreçleridir.",
+      "E": "Kanser değildir, kontrollü fizyolojik rejenerasyondur."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Perimenopozal dönemde bir kadında anovulatuar sikluslar nedeniyle progesteronun karşılanamadığı ve sürekli aşırı östrojen uyarısının devam ettiği durumda gelişen 'Endometrial Hiperplazi' ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Fizyolojik kompansatuvar hiperplazidir, kanama yapmaz.",
+      "B": "Patolojik hormonal hiperplazi örneğidir; anormal uterus kanamalarına neden olur ve kontrolsüz devam ederse endometrium adenokarsinomu için risk oluşturur.",
+      "C": "Hücre sayısında azalma ile giden bir atrofi şeklidir.",
+      "D": "Uterusun tamamen kalsifiye olmasına yol açar.",
+      "E": "Tedavisiz kendiliğinden 2 günde yok olur."
+     },
+     "dogru": "B",
+     "aciklama": "Patolojik hiperplaziler genellikle aşırı hormon veya büyüme faktörü uyarısıyla oluşur. Karşılanmamış östrojen endometrial hiperplaziye yol açar; bu durum kanser değildir ancak uzamış kontrolsüz proliferasyon neoplastik dönüşüm (kanser) için verimli bir zemin hazırlar.",
+     "sik_aciklamalari": {
+      "A": "Fizyolojik değildir, patolojiktir.",
+      "B": "Doğru. Hormon dengesizliğine bağlı patolojik hiperplazidir ve karsinom riskini artırır.",
+      "C": "Hücre sayısı artar, atrofi değildir.",
+      "D ve E": "Tıbbi olarak temelsizdir."
+     },
+     "bilgi": [
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Patolojik hiperplazi ile kanser (neoplazi) arasındaki en temel biyolojik ve regülatuvar fark nedir?",
+     "secenekler": {
+      "A": "Patolojik hiperplazide büyüme kontrol mekanizmaları korunmuştur; hiperplaziyi başlatan hormonal veya büyüme faktörü uyarısı ortadan kaldırıldığında hücre çoğalması durur ve lezyon gerileyebilir; neoplazide ise uyaran kalksa bile otonom kontrolsüz çoğalma devam eder.",
+      "B": "Hiperplazide hücreler daima çevre dokuyu istila edip uzak metastaz yapar.",
+      "C": "Kanser hücreleri normal boyutlu iken hiperplazi hücreleri devasa boyuttadır.",
+      "D": "Patolojik hiperplazi sadece virüslerle oluşur, kanser sadece genetik mutasyonla oluşur.",
+      "E": "İkisi arasında hiçbir biyolojik veya patolojik fark yoktur."
+     },
+     "dogru": "A",
+     "aciklama": "Patolojik hiperplazide hücreler halen büyüme sinyallerine bağımlıdır; uyarıcı kesildiğinde gerileyebilir. Neoplazide ise edinilen onkojenik mutasyonlar nedeniyle hücreler dış uyarandan bağımsız, otonom ve durdurulamaz çoğalma yeteneği kazanmıştır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Büyüme kontrol mekanizmalarına yanıt verme ve uyarana bağımlılık temel ayrımdır.",
+      "B": "İnvazyon ve metastaz sadece malign neoplazilere özgüdür.",
+      "C, D, E": "Hatalı genellemelerdir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q13",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yaşlı erkeklerde sık görülen Benign Prostat Hiperplazisi (BPH) ile ilgili patolojik özellik hangisidir?",
+     "secenekler": {
+      "A": "Sadece çizgili kas liflerinin büyümesidir.",
+      "B": "Androjen (özellikle dihidrotestosteron - DHT) ve östrojen etkileşimi sonucu prostatın transizyonel zonundaki stromal ve glandüler hücrelerin sayısının artmasıyla karakterize patolojik hiperplazidir.",
+      "C": "Kesinlikle erken yaşta prostat sarkomuna dönüşür.",
+      "D": "Prostat bezinin tamamen atrofiye uğramasıdır.",
+      "E": "Bakteriyel enfeksiyon sonucu apseleşmedir."
+     },
+     "dogru": "B",
+     "aciklama": "BPH, yaşlanmayla birlikte DHT'nin stromal hücreler üzerindeki proliferatif etkisi ve stromal-epitelyal etkileşimler sonucu prostat stroması ve bezlerinin hiperplazisidir.",
+     "sik_aciklamalari": {
+      "A": "Glandüler ve stromal hiperplazidir.",
+      "B": "Doğru. DHT ve hormon aracılı stromal/glandüler patolojik hiperplazidir.",
+      "C": "BPH benign bir süreçtir, doğrudan sarkoma dönüşmez.",
+      "D": "Atrofi değil, hiperplazidir.",
+      "E": "İnflamatuar apse değildir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q14",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Kalp hipertrofisi mekanizması\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "C": "Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+      "E": "Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "D": "Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "A": "Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas.",
+      "B": "Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+      "E": "Yanlış. Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "D": "Yanlış. Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "A": "Yanlış. Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas.",
+      "B": "Yanlış. Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q15",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Fizyolojik hipertrofi: iskelet kası\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "D": "Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+      "E": "Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "A": "Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir.",
+      "B": "Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "D": "Yanlış. Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+      "E": "Yanlış. Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "A": "Yanlış. Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir.",
+      "B": "Yanlış. Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q16",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Atrofinin sınırları\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Atrofi daha az kaynakla hayatta kalmak için enerji tasarrufu sağlayan adaptasyondur.",
+      "A": "Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas.",
+      "D": "Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür.",
+      "C": "Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+      "B": "Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Atrofi daha az kaynakla hayatta kalmak için enerji tasarrufu sağlayan adaptasyondur.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Atrofi daha az kaynakla hayatta kalmak için enerji tasarrufu sağlayan adaptasyondur.",
+      "A": "Yanlış. Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas.",
+      "D": "Yanlış. Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür.",
+      "C": "Yanlış. Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+      "B": "Yanlış. Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q17",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Fizyolojik hipertrofi: iskelet kası\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "C": "Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "A": "Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "B": "Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "E": "Azalmış protein sentezi, ubikuitin-proteazom sistemi ile artmış protein yıkımı ve artmış otofaji.",
+      "D": "Kıtlık ve stres dönemlerinde adaptif bir yanıttır; aşırı otofaji apoptozla sonuçlanabilir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "A": "Yanlış. Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "B": "Yanlış. Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "E": "Yanlış. Azalmış protein sentezi, ubikuitin-proteazom sistemi ile artmış protein yıkımı ve artmış otofaji.",
+      "D": "Yanlış. Kıtlık ve stres dönemlerinde adaptif bir yanıttır; aşırı otofaji apoptozla sonuçlanabilir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q18",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hiperplazi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hücre sayısında artıştır; hücre popülasyonu bölünebilir olmalıdır.",
+      "B": "Hücre boyutunda artıştır.",
+      "C": "Hücre tipinin değişmesidir.",
+      "D": "Hücre ve organ küçülmesidir.",
+      "E": "Yalnızca kas dokusunda görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Hiperplazi hücre sayısında artıştır; gerçekleşmesi için hücre popülasyonunun bölünebilir olması gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hiperplazi tanımı doğru verilmiştir.",
+      "B": "Yanlış. Bu hipertrofidir.",
+      "C": "Yanlış. Bu metaplazidir.",
+      "D": "Yanlış. Bu atrofidir.",
+      "E": "Yanlış. Bölünebilen dokularda görülür."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q19",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hiperplazi tipleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Fizyolojik hormonal hiperplaziye ergenlik ve gebelikte meme bezleri örnektir.",
+      "B": "Hiperplazide hücre popülasyonu bölünemez (postmitotik) olmalıdır.",
+      "C": "Fizyolojik telafi edici hiperplaziye parsiyel hepatektomi sonrası karaciğer örnektir.",
+      "D": "Patolojik hiperplaziye endometrial hiperplazi ve benign prostat hiperplazisi örnektir.",
+      "E": "Hiperplazi genellikle hipertrofi ile birlikte görülür."
+     },
+     "dogru": "B",
+     "aciklama": "Yanlış olan ifade B'dir: Hiperplazi için hücre popülasyonunun bölünebilir olması gerekir; postmitotik hücreler (ör. kalp kası) hiperplazi yapamaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru yanıt (yanlış ifade).",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q20",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Hiperplazi ile kanser arasındaki ilişki için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hiperplazi her zaman kanserdir.",
+      "B": "Hiperplazi ile neoplazi arasında hiçbir ilişki yoktur.",
+      "C": "Patolojik hiperplazide büyüme kontrolü kısmen korunur; uyarı kesilince büyüme durabilir.",
+      "D": "Benign prostat hiperplazisi doğrudan prostat kanserine neden olur.",
+      "E": "Hiperplazide uyarı kesilse de büyüme sürekli devam eder."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince gerileyebilir; ancak uzamış/kontrolsüz hiperplazi neoplazi zeminini oluşturabilir (ör. endometrial hiperplazi).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Hiperplazi kanser değildir.",
+      "B": "Yanlış. Uzamış hiperplazi zemin oluşturabilir.",
+      "C": "Doğru. Büyüme kontrolü kısmen korunur.",
+      "D": "Yanlış. Doğrudan nedensellik yoktur.",
+      "E": "Yanlış. Uyarı kesilince durabilir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q21",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Parsiyel hepatektomi sonrası karaciğerin normal kütlesine dönmesi hangisine en iyi örnektir?",
+     "secenekler": {
+      "A": "Patolojik hormonal hiperplazi",
+      "B": "Hipertrofi",
+      "C": "Metaplazi",
+      "D": "Fizyolojik telafi edici hiperplazi",
+      "E": "Otofaji"
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Kalan hepatositlerde mitotik aktivitenin artması (hepatosit büyüme faktörü vb.) ile karaciğerin normal kütlesine dönmesi fizyolojik telafi edici hiperplazidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu hormonal değil telafi edici bir hiperplazidir.",
+      "B": "Yanlış. Hücre sayısı artar, salt boyut değil.",
+      "C": "Yanlış. Hücre tipi değişmez.",
+      "D": "Doğru. Telafi edici hiperplazi örneğidir.",
+      "E": "Yanlış. Bu bir yıkım sürecidir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k04-q22",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Uzamış ve kontrolsüz hiperplazinin neoplaziye zemin oluşturmasına en iyi örnek hangisidir?",
+     "secenekler": {
+      "A": "Alçıdaki ekstremitede kas atrofisi",
+      "B": "Barrett özofagus",
+      "C": "İskelet kası hipertrofisi",
+      "D": "Gebelik uterusu",
+      "E": "Endometrial hiperplazi → endometrium kanseri"
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Endometrial hiperplazi, uzamış/kontrolsüz hormonal uyarı ile endometrium kanseri riskini artırarak hiperplazi-neoplazi ilişkisine klasik örnektir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu atrofidir ve neoplazi ile ilişkisi yoktur.",
+      "B": "Yanlış. Barrett özofagus metaplazidir.",
+      "C": "Yanlış. Hipertrofi neoplazi zemini değildir.",
+      "D": "Yanlış. Fizyolojik adaptasyondur.",
+      "E": "Doğru. Uzamış hiperplazinin neoplazi zeminine klasik örnektir."
+     },
+     "bilgi": [
       18
      ],
      "benzer_cikmis": []
@@ -523,6 +2397,474 @@
       22
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q05",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kırık nedeniyle 6 hafta alçıda kalan bacağında belirgin kas erimesi gelişen bir hasta, ayrıca inme sonrası hemiplejik kolunda da küçülme fark etmiştir. Hekim bu tabloları menopoz sonrası uterusun küçülmesiyle birlikte değerlendirmektedir. Aşağıdakilerden hangisi atrofi örneği değildir?",
+     "secenekler": {
+      "A": "Kullanılmayan ekstremitede kas kitlesinde azalma",
+      "B": "Motor sinir lezyonu sonrası ilgili kaslarda küçülme",
+      "C": "Gebelikte uterus düz kas hücrelerinde büyüme",
+      "D": "Menopoz sonrası over ve uterus boyutlarında küçülme",
+      "E": "Yaşlılıkta beyin giruslarında daralma"
+     },
+     "dogru": "C",
+     "aciklama": "Atrofi hücre boyut ve/veya sayısında azalmayla organın küçülmesidir; nedenleri arasında azalmış iş yükü, sinir kaybı, iskemi, yetersiz beslenme, endokrin uyarı kaybı ve yaşlanma sayılır. Uzun süren şiddetli atrofi apoptozla geri dönüşümsüz hücre kaybına ilerleyebilir.",
+     "sik_aciklamalari": {
+      "A": "Kullanılmamaya bağlı atrofi örneğidir.",
+      "B": "İnnervasyon kaybına bağlı atrofi örneğidir.",
+      "C": "Doğru cevap. Bu hipertrofi-hiperplazi örneğidir; atrofi değildir.",
+      "D": "Endokrin uyarı kaybına bağlı atrofi örneğidir.",
+      "E": "Yaşlanmaya bağlı atrofi örneğidir."
+     },
+     "bilgi": [
+      19,
+      20,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q06",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Yoğun bakımda uzun süre immobil kalan bir hastanın kas biyopsisinde lif çaplarında küçülme, ubikuitinle işaretli proteinlerde artış ve çok sayıda otofajik vakuol saptanmıştır. Protein sentez hızı azalmıştır. Bu tablodan sorumlu mekanizma aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Azalmış protein sentezi, ubikuitin-proteazom aracılı yıkım artışı ve otofaji",
+      "B": "Artmış protein sentezi ve proteazom aktivitesinde azalma",
+      "C": "Miyofilament sentezinde artış ve sarkomer sayısında çoğalma",
+      "D": "Kök hücrelerin farklı yönde programlanmasıyla hücre tipi değişimi",
+      "E": "Çift zarlı otofagozom oluşumunda tam baskılanma"
+     },
+     "dogru": "A",
+     "aciklama": "Atrofide protein sentezi azalır, ubikuitin-proteazom sistemiyle yıkım artar ve otofaji hızlanır; proteinler ubikuitinle işaretlenip proteazomda parçalanır. Bu enerji tasarrufu sağlayan adaptif bir yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Doğru cevap. Atrofinin üç temel mekanizması budur.",
+      "B": "Bu hipertrofi yönünde bir değişimdir, atrofinin tersidir.",
+      "C": "Bu hipertrofi mekanizmasıdır.",
+      "D": "Bu metaplazinin mekanizmasıdır.",
+      "E": "Otofaji atrofide artar, baskılanmaz."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "İskelet kasında atrofiye yol açan iki klasik neden nedir?",
+     "secenekler": {
+      "A": "Aşırı egzersiz",
+      "B": "Hormon fazlalığı",
+      "C": "Kan akımı artışı",
+      "D": "Sinir uyarısı artışı",
+      "E": "Kullanılmama ve innervasyon kaybı"
+     },
+     "dogru": "E",
+     "aciklama": "Alçıya alınan ekstremitede mekanik yük ortadan kalkınca kas liflerinde protein sentezi azalır ve kas kitlesi hızla küçülür. Motor sinir lezyonunda ise nörotrofik uyarı kesildiği için aynı yıkım süreci işler. Her iki durumda da azalan iş yükü ve uyarı, hücrenin daha az kaynakla yaşamasına yol açar.",
+     "sik_aciklamalari": {
+      "A": "Egzersiz hipertrofiye yol açar, atrofiye değil.",
+      "B": "Hormon fazlalığı hiperplaziyi uyarır.",
+      "C": "Kan akımı artışı dokuyu besler, atrofi yapmaz.",
+      "D": "Artmış uyarı trofik etki yapar, atrofiyi önler.",
+      "E": "Doğru. Yük ve nörotrofik uyarı kaybı kas kitlesini küçültür."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q08",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Atrofinin protein dengesine ilişkin mekanizması nedir?",
+     "secenekler": {
+      "A": "Sentez artar, yıkım durur",
+      "B": "Mitoz hızlanır",
+      "C": "Sentez azalır, ubikuitin-proteazom artar",
+      "D": "Otofaji tümüyle durur",
+      "E": "Proteinler çekirdekte birikir"
+     },
+     "dogru": "C",
+     "aciklama": "Atrofide düşük metabolik aktiviteye bağlı protein sentezi azalırken, ubikuitinle işaretlenen proteinler proteazomda parçalanır. Eş zamanlı olarak otofajik vakuoller organelleri sindirerek hücreyi küçültür. Bu üçlü mekanizma, hücrenin enerji tasarrufuyla daha az kaynakla hayatta kalmasını sağlar.",
+     "sik_aciklamalari": {
+      "A": "Sentez artışı hipertrofinin özelliğidir.",
+      "B": "Mitoz artışı hiperplazidir, atrofide görülmez.",
+      "C": "Doğru. Azalan sentez ve artan yıkım hücreyi küçültür.",
+      "D": "Otofaji atrofide artar, hücre içi yapıları tüketir.",
+      "E": "Proteinler proteazomda parçalanır, çekirdekte birikmez."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q09",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Atrofi (atrophy) kavramının en doğru patolojik tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hücre boyutunda ve/veya sayısında azalma sonucu bir organ veya dokunun kütlesinin küçülmesidir.",
+      "B": "Dokuda kalsiyum tuzlarının birikerek taşlaşmasıdır.",
+      "C": "Hücre zarının parçalanıp sitoplazmanın dışarı sızmasıdır.",
+      "D": "Hücrelerin yağlanarak devasa büyümesidir.",
+      "E": "Tümör hücrelerinin lenf noduna yayılmasıdır."
+     },
+     "dogru": "A",
+     "aciklama": "Atrofi, hücre maddesinin kaybı nedeniyle hücre boyutunun küçülmesi ve/veya apoptozla hücre sayısının azalması sonucu organ kütlesinin küçülmesidir. Hücreler ölü değildir ancak metabolik aktiviteleri ve fonksiyonları azalmıştır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hücre boyutu ve/veya sayısının azalmasıyla organın küçülmesidir.",
+      "B": "Kalsifikasyondur.",
+      "C": "Nekrozdur.",
+      "D": "Steatozdur.",
+      "E": "Metastazdır."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q10",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Atrofiye uğrayan bir hücrede proteinlerin parçalanmasını ve hücresel kütlenin erimesini sağlayan iki temel intraselüler moleküler yolak hangisidir?",
+     "secenekler": {
+      "A": "Kompleman sistemi ve membran atak kompleksi",
+      "B": "Ubikuitin-proteazom yolağı ve otofaji (lizozomal sindirim)",
+      "C": "Oksidatif fosforilasyon ve glikoliz",
+      "D": "Wnt-beta katenin yolağı ve anjiyogenez",
+      "E": "Rejenerasyon ve mitoz iğ iplikleri"
+     },
+     "dogru": "B",
+     "aciklama": "Atrofi mekanizmasında protein sentezi azalırken protein yıkımı belirgin artar. Protein yıkımı başlıca Ubikuitin-Proteazom Yolağı (proteinler ubikuitin ile işaretlenip 26S proteazomda parçalanır) ile yürütülür. Ayrıca aç kalan hücre kendi organellerini çift zarlı vakuollere alıp lizozomla birleştirerek sindirir (otofaji).",
+     "sik_aciklamalari": {
+      "A": "İmmün aracılı lizistir.",
+      "B": "Doğru. Ubikuitin-proteazom ve otofaji atrofide protein ve organel yıkımının temel iki mekanizmasıdır.",
+      "C": "Enerji metabolizmasıdır.",
+      "D ve E": "Hücresel büyüme ve proliferasyon yolaklarıdır."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q11",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Femur kırığı nedeniyle 6 hafta boyunca bacağı tam alçıya alınan bir hastada alçı çıkarıldığında uyluk kas kitlesinin karşı bacağa göre belirgin inceldiği saptanmıştır. Bu klinik durum hangi atrofi nedenine örnektir?",
+     "secenekler": {
+      "A": "İnnervasyon kaybı (denervasyon) atrofisi",
+      "B": "Kullanılmama atrofisi (disuse atrophy)",
+      "C": "Endokrin uyarı kaybı atrofisi",
+      "D": "İskemik senil atrofi",
+      "E": "Kaşektik otoimmün atrofi"
+     },
+     "dogru": "B",
+     "aciklama": "Hareketsizlik ve iş yükünün azalması sonucu iskelet kası liflerinde protein yıkımının artmasıyla 'kullanılmama atrofisi' (disuse atrophy) gelişir. Başlangıçta geri dönüşümlüdür; egzersizle kas kütlesi yeniden kazanılabilir.",
+     "sik_aciklamalari": {
+      "A": "Motor sinir kesisi gerekir (örn. polio veya periferik sinir hasarı).",
+      "B": "Doğru. Alçıya bağlı immobilizasyon klasik kullanılmama atrofisidir.",
+      "C": "Hormon kaybıdır (örn. menopozda endometrium atrofisi).",
+      "D": "Yaşlanma ve damar sertliğine bağlıdır.",
+      "E": "Kanser kaşeksisidir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q12",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "İleri yaşlı bir bireyin beyin manyetik rezonans görüntülemesinde ve otopsisinde; serebral girusların daraldığı, sulkusların belirgin genişlediği ve ventriküllerin kompanse olarak genişlediği (hidrosefali ex-vacuo) izlenmiştir. Bu durumun patogenezinde rol oynayan temel faktörler hangisidir?",
+     "secenekler": {
+      "A": "Ateroskleroz nedeniyle kronik yavaş kan akımı azalması (iskemi) ve yaşlanmaya bağlı nöron kaybı (senil atrofi)",
+      "B": "Akut bakteriyel menenjit enfeksiyonu",
+      "C": "Aşırı büyüme hormonu salgılanması",
+      "D": "Beyin parankiminde aşırı yağ dokusu birikimi",
+      "E": "Kafatasının dışarıdan aşırı büyümesi"
+     },
+     "dogru": "A",
+     "aciklama": "Yaşlılıkta ateroskleroza bağlı kronik azalmış kan akımı ve hücresel yaşlanma nöronal atrofiye yol açar. Giruslar incelir, sulkuslar derinleşir; bu tablo senil ve iskemik atrofidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Senil ve kronik iskemik atrofinin klasik nöropatolojik görünümüdür.",
+      "B": "Akut inflamasyondur, şişme ve eksüda yapar.",
+      "C": "Akromegali yapar, atrofi yapmaz.",
+      "D ve E": "Gerçek dışı mekanizmalardır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q13",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Menopoz sonrası östrojen hormonunun kesilmesine bağlı olarak endometrium, vajina epiteli ve meme bezlerinde meydana gelen küçülme hangi mekanizmayla açıklanır?",
+     "secenekler": {
+      "A": "Endokrin (trofik hormonal) uyarı kaybına bağlı fizyolojik atrofi",
+      "B": "Mekanik bası atrofisi",
+      "C": "Skuamöz metaplazi",
+      "D": "Kazeifikasyon nekrozu",
+      "E": "Tümör baskılayıcı gen mutasyonu"
+     },
+     "dogru": "A",
+     "aciklama": "Hormon bağımlı dokular (uterus, over, meme) trofik hormon desteğini kaybettiğinde fizyolojik olarak atrofiye uğrar; menopoz sonrası genital organ küçülmesi klasik hormonal endokrin atrofidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hormonal uyarının kesilmesine bağlı fizyolojik atrofi örneğidir.",
+      "B": "Tümör basısı gibi mekanik etken yoktur.",
+      "C, D, E": "Farklı patolojik süreçlerdir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q14",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "\"Hipertrofiden kalp yetmezliğine\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "B": "Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar.",
+      "C": "Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "A": "Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "E": "Organ/dokunun hücre boyutu ve/veya sayısında azalma ile küçülmesidir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "B": "Yanlış. Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar.",
+      "C": "Yanlış. Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "A": "Yanlış. Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "E": "Yanlış. Organ/dokunun hücre boyutu ve/veya sayısında azalma ile küçülmesidir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q15",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Hipertrofiden kalp yetmezliğine\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "B": "Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "D": "Hücreler fizyolojik stres ve zararlı uyaranlara adaptasyon, geri dönüşümlü hasar ve geri dönüşümsüz hasar-ölüm ile yanıt verir.",
+      "A": "Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "C": "Organ/dokunun hücre boyutu ve/veya sayısında azalma ile küçülmesidir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "B": "Yanlış. Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "D": "Yanlış. Hücreler fizyolojik stres ve zararlı uyaranlara adaptasyon, geri dönüşümlü hasar ve geri dönüşümsüz hasar-ölüm ile yanıt verir.",
+      "A": "Yanlış. Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "C": "Yanlış. Organ/dokunun hücre boyutu ve/veya sayısında azalma ile küçülmesidir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q16",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Epitel metaplazisi: sigara\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür.",
+      "B": "Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "D": "Hücreler fizyolojik stres ve zararlı uyaranlara adaptasyon, geri dönüşümlü hasar ve geri dönüşümsüz hasar-ölüm ile yanıt verir.",
+      "C": "Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "A": "Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür.",
+      "B": "Yanlış. Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur.",
+      "D": "Yanlış. Hücreler fizyolojik stres ve zararlı uyaranlara adaptasyon, geri dönüşümlü hasar ve geri dönüşümsüz hasar-ölüm ile yanıt verir.",
+      "C": "Yanlış. Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "A": "Yanlış. Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q17",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"Otofaji ve klinik\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Kıtlık ve stres dönemlerinde adaptif bir yanıttır; aşırı otofaji apoptozla sonuçlanabilir.",
+      "C": "Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas.",
+      "A": "Ergenlik ve gebelikte meme bezleri ile endometriumda siklus proliferasyonu görülür.",
+      "E": "Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "D": "Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Kıtlık ve stres dönemlerinde adaptif bir yanıttır; aşırı otofaji apoptozla sonuçlanabilir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Kıtlık ve stres dönemlerinde adaptif bir yanıttır; aşırı otofaji apoptozla sonuçlanabilir.",
+      "C": "Yanlış. Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas.",
+      "A": "Yanlış. Ergenlik ve gebelikte meme bezleri ile endometriumda siklus proliferasyonu görülür.",
+      "E": "Yanlış. Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "D": "Yanlış. Normal miyosit artmış yüke hipertrofiyle uyum sağlar; iskemi geri dönüşümlü hasar (şişme, yağlanma), kalıcı iskemi koagülatif nekroz oluşturur."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q18",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Atrofi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Organ veya dokunun hücre boyutu ve/veya sayısında azalma ile küçülmesidir.",
+      "B": "Hücre sayısında artıştır.",
+      "C": "Hücre boyutunda artıştır.",
+      "D": "Hücre tipinin başka bir hücre tipine dönüşmesidir.",
+      "E": "Yalnızca gençlerde görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Atrofi, bir organ veya dokunun hücre boyutu ve/veya sayısında azalma sonucu küçülmesidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Atrofi tanımı doğru verilmiştir.",
+      "B": "Yanlış. Bu hiperplazidir.",
+      "C": "Yanlış. Bu hipertrofidir.",
+      "D": "Yanlış. Bu metaplazidir.",
+      "E": "Yanlış. Yaşlanma da bir atrofi nedenidir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q19",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Atrofi nedenleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Azalmış iş yükü",
+      "B": "Malign tümör gelişimi",
+      "C": "Sinir kaybı ve iskemi",
+      "D": "Endokrin uyarı kaybı",
+      "E": "Yetersiz beslenme ve yaşlanma"
+     },
+     "dogru": "B",
+     "aciklama": "Doğru yanıt B'dir: Atrofi nedenleri azalmış iş yükü, sinir kaybı, iskemi, yetersiz beslenme, endokrin uyarı kaybı ve yaşlanmadır; malign tümör gelişimi bir atrofi nedeni değildir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu bir atrofi nedenidir.",
+      "B": "Doğru. Malignite atrofi nedeni değildir.",
+      "C": "Yanlış. Bunlar atrofi nedenleridir.",
+      "D": "Yanlış. Bu bir atrofi nedenidir.",
+      "E": "Yanlış. Bunlar atrofi nedenleridir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q20",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Atrofi mekanizmaları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Azalmış protein sentezi",
+      "B": "Ubikuitin-proteazom sistemi ile artmış protein yıkımı",
+      "C": "Protein sentezinde belirgin artış",
+      "D": "Artmış otofaji",
+      "E": "Otofajik vakuollerin oluşumu"
+     },
+     "dogru": "C",
+     "aciklama": "Yanlış olan ifade C'dir: Atrofide protein sentezi azalır; artmış yıkım (ubikuitin-proteazom) ve artmış otofaji öne çıkar.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru yanıt (yanlış ifade).",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q21",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Beyin atrofisinde görülen makroskobik değişiklik hangisidir?",
+     "secenekler": {
+      "A": "Giruslar kalınlaşır, sulkuslar daralır.",
+      "B": "Beyin hacmi artar.",
+      "C": "Yalnızca beyaz madde artar.",
+      "D": "Giruslar daralır, sulkuslar genişler.",
+      "E": "Ventriküller küçülür ve beyin kütlesi artar."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Beyin atrofisinde beyin maddesi kaybı girusları daraltır ve sulkusları genişletir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Tam tersi görülür.",
+      "B": "Yanlış. Hacim azalır.",
+      "C": "Yanlış. Madde kaybı olur.",
+      "D": "Doğru. Giruslar daralır, sulkuslar genişler.",
+      "E": "Yanlış. Kütle azalır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k05-q22",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Atrofinin adaptif sınırları ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Atrofi enerji tüketimini artırır.",
+      "B": "Atrofi her zaman geri dönüşümsüzdür.",
+      "C": "Atrofi hücre sayısını kontrolsüz artırır.",
+      "D": "Atrofi malign dönüşümle sonuçlanır.",
+      "E": "Atrofi daha az kaynakla hayatta kalmak için enerji tasarrufu sağlar; uzun ve şiddetli sürerse apoptoza yol açabilir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Atrofi enerji tasarrufu sağlayan bir adaptasyondur; ancak uzun sürer ve şiddetli olursa hücreler apoptoza giderek geri dönüşümsüz kayba yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Enerji tasarrufu sağlar.",
+      "B": "Yanlış. Geri dönüşümlüdür.",
+      "C": "Yanlış. Hücre sayısını azaltır.",
+      "D": "Yanlış. Malign dönüşümle sonuçlanmaz.",
+      "E": "Doğru. Adaptif sınırlar doğru verilmiştir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -611,6 +2953,474 @@
       23,
       26,
       27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yirmi yıldır günde bir paket sigara içen bir hastanın bronkoskopik biyopsisinde, normalde siliyalı yalancı çok katlı prizmatik olan bronş epitelinin çok katlı yassı epitele dönüştüğü görülmüştür. Kök hücrelerin farklı yönde programlanmasıyla gelişen bu adaptasyon tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Barrett özofagusta kolumnar epitelin skuamöz epitele dönüşmesi",
+      "B": "Sigara içen hastada bronş kolumnar epitelinin skuamöz epitele dönüşmesi",
+      "C": "Travma odağında yumuşak dokuda kemik oluşması",
+      "D": "Gebelikte uterus düz kas hücrelerinin büyümesi",
+      "E": "Alçıdaki ekstremitede kas liflerinin küçülmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Sigara dumanına kronik maruziyetle bronşlardaki siliyalı kolumnar epitel skuamöz epitele dönüşür; bu dayanıklılığı artırır ancak mukus üretimi ve mukosiliyer temizlenmeyi azaltır. Barrett özofagusta skuamöz epitel kolumnar epitele döner.",
+     "sik_aciklamalari": {
+      "A": "Barrett özofagusta dönüşüm ters yöndedir; skuamöz epitel kolumnar epitele döner.",
+      "B": "Doğru cevap. Kök hücrelerin yeniden programlanmasıyla siliyalı epitel skuamöz epitele döner.",
+      "C": "Mezenkimal metaplazi örneğidir, epitel örneği değildir.",
+      "D": "Hipertrofi-hiperplazi örneğidir.",
+      "E": "Atrofi örneğidir."
+     },
+     "bilgi": [
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Kronik gastroözofageal reflüsü olan bir hastada alt özofagusta skuamöz epitelin kolumnar epitele dönüştüğü (Barrett) saptanmış, izlemde displazi gelişmiştir. Hekim hastaya bu sürecin anlamını açıklamaktadır. Metaplaziyle ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Barrett epiteli asit ortama dayanıklıdır ancak malignite riski taşımaz",
+      "B": "Skuamöz metaplazi mukosiliyer temizlenmeyi artırır",
+      "C": "Mezenkimal metaplazi daima malign bir süreçtir",
+      "D": "Uzamış metaplazi displazi ve malign dönüşüm için zemin oluşturur",
+      "E": "Metaplastik epitel normal fonksiyonlarını tamamen korur"
+     },
+     "dogru": "D",
+     "aciklama": "Metaplazi çift uçlu kılıçtır: yeni hücre tipi strese dayanıklıdır ancak normal fonksiyonlar kaybolur ve uzamış metaplazi displazi-malignite zemini oluşturur. Barrett epitelinde adenokarsinom, skuamöz metaplazide skuamöz karsinom riski artar.",
+     "sik_aciklamalari": {
+      "A": "Barrett epiteli adenokarsinom için zemin oluşturur.",
+      "B": "Skuamöz metaplazide mukus üretimi ve temizlenme azalır.",
+      "C": "Mezenkimal metaplazi genellikle reaktif benign bir değişimdir.",
+      "D": "Doğru cevap. Metaplazi displaziye, displazi kansere ilerleyebilir.",
+      "E": "Metaplazide normal fonksiyonlar kısmen veya tamamen kaybolur."
+     },
+     "bilgi": [
+      25,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Sigara içenlerde bronş epitelinde görülen metaplazi nedir?",
+     "secenekler": {
+      "A": "Kolumnar epitel kalınlaşır",
+      "B": "Kolumnar epitel yassı epitele dönüşür",
+      "C": "Epitel tümüyle dökülür",
+      "D": "Kıkırdak kemiğe dönüşür",
+      "E": "Kas yağa dönüşür"
+     },
+     "dogru": "B",
+     "aciklama": "Sigara dumanına kronik maruz kalan bronşlarda siliyalı kolumnar epitel, kimyasal strese daha dayanıklı olan çok katlı yassı epitele dönüşür. Bu dönüşüm kök hücrelerin farklı yönde programlanmasıyla gerçekleşir. Bedeli mukus üretimi ve mukosiliyer temizlenmenin azalmasıdır, bu yüzden enfeksiyon riski artar.",
+     "sik_aciklamalari": {
+      "A": "Kalınlaşma hiperplazidir, hücre tipi değişimi değildir.",
+      "B": "Doğru. Kök hücrelerin yeniden programlanmasıyla dayanıklı epitel oluşur.",
+      "C": "Dökülme erozyondur, metaplazi değildir.",
+      "D": "Kıkırdak-kemik dönüşümü mezenkimal metaplazi örneğidir, bronşta olmaz.",
+      "E": "Kasın yağa dönüşümü metaplazi değil yağlı infiltrasyondur."
+     },
+     "bilgi": [
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Barrett özofagusunda görülen epitel değişimi ve klinik riski nedir?",
+     "secenekler": {
+      "A": "Kolumnar epitel yassılaşır",
+      "B": "Mide fundusu oluşur",
+      "C": "Skuamöz hücre kanseri gelişir",
+      "D": "Yassı epitel kolumnarlaşır, adeno riski",
+      "E": "Epitel tamamen kaybolur"
+     },
+     "dogru": "D",
+     "aciklama": "Kronik reflüde asit ve safra, alt özofagusun çok katlı yassı epitelini zedeler; kök hücreler bu kimyasal ortama daha dayanıklı kolumnar epitele yönelir. Barrett tipi bu epitel intestinal özellikler taşır ve displazi üzerinden adenokarsinoma ilerleyebilir. Bu nedenle Barrett özofagusu endoskopik sürveyans gerektiren premalign bir durumdur.",
+     "sik_aciklamalari": {
+      "A": "Yön terstir; özofagusta yassı epitel kolumnara dönüşür.",
+      "B": "Fundus oluşumu söz konusu değildir, intestinal tip kolumnar metaplazi olur.",
+      "C": "Bu zeminde skuamöz değil adenokarsinom riski artar.",
+      "D": "Doğru. Asit-safraya dayanıklı kolumnar epitel, adenokarsinom zeminidir.",
+      "E": "Epitel kaybolmaz, tipi değişir."
+     },
+     "bilgi": [
+      25,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q08",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Metaplazi (metaplasia) adaptasyonunun temel tanımı ve hücresel mekanizması ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Olgunlaşmış diferansiye bir hücrenin doğrudan geriye doğru dediferansiye olup kanser hücresine dönüşmesidir.",
+      "B": "Streste olan bir dokuda bulunan kök hücrelerin (veya farklılaşmamış mezenkimal hücrelerin) yeniden programlanması sonucu, basınca/strese daha duyarlı bir olgun hücre tipinin yerini o strese daha dayanıklı başka bir olgun hücre tipine bırakmasıdır.",
+      "C": "Hücre çekirdeğinin bölünmesi ancak sitoplazmanın bölünememesidir.",
+      "D": "Dokuda kalsiyum tuzlarının birikmesidir.",
+      "E": "Doku hücrelerinin su alıp balonlaşmasıdır."
+     },
+     "dogru": "B",
+     "aciklama": "Metaplazi, mevcut strese duyarlı bir erişkin hücre tipinin yerini aynı germ yaprağından köken alan ve o strese daha dayanıklı başka bir erişkin hücre tipine bırakmasıdır. Olgun hücre doğrudan şekil değiştirmez; dokudaki kök hücreler transkripsiyonel olarak yeniden programlanır (reprogramming).",
+     "sik_aciklamalari": {
+      "A": "Dediferansiyasyon anaplazi/kanser sürecidir, metaplazi olgun hücrelerin değişimidir.",
+      "B": "Doğru. Kök hücrelerin yeniden programlanmasıyla dayanıklı olgun hücreye dönüşüm metaplazinin tanımıdır.",
+      "C, D, E": "Metaplazi tanımıyla ilgisiz durumlardır."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q09",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Kronik sigara içen bir bireyin bronş mukozasında görülen epitelyal metaplazi süreci ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bronşun çok katlı yassı epiteli, tek katlı prizmatik epitele dönüşür.",
+      "B": "Normal solunum epiteli olan psödostratifiye siliyalı kolumnar epitel, kronik duman kimyasal stresine daha dayanıklı olan çok katlı yassı (skuamöz) epitele dönüşür; kimyasal direnç artar ancak mukus salgısı ve mukosiliyer temizleme fonksiyonu kaybolur.",
+      "C": "Hücreler kemik dokusuna dönüşür.",
+      "D": "Mukus üretimi 10 katına çıkarak hava yolunu temizler.",
+      "E": "Siliyer hareketler hızlanarak tüm partikülleri temizler."
+     },
+     "dogru": "B",
+     "aciklama": "Sigara dumanı bronş siliyalı kolumnar epitelini tahrip eder. Kök hücreler skuamöz metaplazi ile çok katlı yassı epitel üretir. Yassı epitel dumana dayanıklıdır ancak silyum ve mukus salgısı olmadığından solunum savunması çöker.",
+     "sik_aciklamalari": {
+      "A": "Dönüşüm yönü tam tersidir (kolumnar → skuamöz).",
+      "B": "Doğru. Siliyalı kolumnar epitelin çok katlı yassı epitele dönüşmesi ve savunma fonksiyon kaybı klasik bronşiyal metaplazidir.",
+      "C": "Kemikleşme mezenkimal metaplazidir, bronş lümeninde görülmez.",
+      "D ve E": "Yassı epitelde silya ve goblet hücresi bulunmadığından mukus temizliği bozulur."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q10",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Kronik gastroözofageal reflü hastalığı (GÖRH) olan bir hastada alt özofagusu döşeyen çok katlı yassı epitelin asit ve safraya daha dayanıklı olan goblet hücreli kolumnar (intestinal) epitele dönüşmesi (Barrett özofagusu) ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kolumnar metaplazi olup, reflü devam ederse displazi ve özofagus adenokarsinomu gelişimi için zemin oluşturabilir.",
+      "B": "Doğuştan gelen kalıtsal bir anomalidir, asit reflüsü ile hiçbir ilgisi yoktur.",
+      "C": "Asit karşısında özofagusun kemikleşmesidir.",
+      "D": "Barrett metaplazisi kanser riskini tamamen ortadan kaldıran koruyucu bir adaptasyondur.",
+      "E": "Hücreler derhal apoptoza giderek özofagus lümenini tıkar."
+     },
+     "dogru": "A",
+     "aciklama": "Barrett özofagusu, yassı epitelin kolumnar epitele dönüştüğü klasik kolumnar metaplazidir. Reflü asidine dayanıklılık sağlar ancak metaplazik zemin displazi ve adenokarsinom gelişimi açısından prekanseröz kabul edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Barrett kolumnar metaplazidir ve adenokarsinom risk zeminidir.",
+      "B": "Edinsel bir asit adaptasyonudur, doğumsal değildir.",
+      "C": "Kemikleşme değildir.",
+      "D": "Kanser riskini sıfırlamaz, aksine 30-40 kat artırır.",
+      "E": "Lümen tıkanıklığı apoptozla oluşmaz."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q11",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Metaplazi sadece epitel dokuda değil, mezenkimal bağ dokusunda da görülebilir. Uyluk kası içine travma veya intramüsküler kanama sonrasında yumuşak dokuda fibroblastların osteoblastlara dönüşerek kas içinde olgun kemik dokusu oluşturması durumu (Miyozitis ossifikans) ne tür bir adaptasyondur?",
+     "secenekler": {
+      "A": "Skuamöz epitel metaplazisi",
+      "B": "Bağ dokusu (mezenkimal) metaplazisi",
+      "C": "Fizyolojik kas hipertrofisi",
+      "D": "Malign osteosarkom metastazı",
+      "E": "Kazeifiye granülom"
+     },
+     "dogru": "B",
+     "aciklama": "Miyozitis ossifikans, travma veya hematom odaklarında mezenkimal kök hücrelerin osteogenik diferansiasyon göstererek kas dokusu içinde lameller kemik oluşturduğu klasik mezenkimal (bağ dokusu) metaplazisi örneğidir.",
+     "sik_aciklamalari": {
+      "A": "Epitel doku değildir, çizgili kas ve bağ dokusudur.",
+      "B": "Doğru. Mezenkimal metaplazinin prototipik örneğidir.",
+      "C": "Kemikleşme hipertrofi değildir.",
+      "D": "Benign metaplazik lezyondur, malign osteosarkom değildir.",
+      "E": "Tüberküloz nekrozu değildir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q12",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Metaplazinin 'çift uçlu bir kılıç' (two-edged sword) olarak nitelendirilmesinin temel nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hücrelerin iki adet çekirdeğe sahip olması",
+      "B": "Bir yandan yeni hücre tipinin mevcut strese karşı daha dirençli olmasını sağlarken; diğer yandan orijinal dokunun özgül koruyucu fonksiyonlarının (mukus, siliyer akım vb.) kaybedilmesi ve kronik metaplazik zeminde displazi ve malign neoplazi riskinin artması",
+      "C": "Hücre zarının çift katlı lipid tabakasından oluşması",
+      "D": "Metaplazinin hem anne hem babadan kalıtılması",
+      "E": "Metaplazinin hem kasta hem kanda aynı anda başlaması"
+     },
+     "dogru": "B",
+     "aciklama": "Metaplazinin avantajı strese dayanıklı hücre sağlamasıdır; dezavantajı ise fizyolojik fonksiyon kaybı ve malign transformasyona (kanser) zemin hazırlamasıdır.",
+     "sik_aciklamalari": {
+      "A, C, D, E": "Patolojik metaforla ilgisiz biyolojik ifadelerdir.",
+      "B": "Doğru. Direnç artışı vs. fonksiyon kaybı ve kanser riski ikilemidir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q13",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Homeostaz\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "B": "Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "E": "Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "D": "Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "C": "Azalmış protein sentezi, ubikuitin-proteazom sistemi ile artmış protein yıkımı ve artmış otofaji.",
+      "A": "Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince büyüme durur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "E": "Yanlış. Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "D": "Yanlış. Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "C": "Yanlış. Azalmış protein sentezi, ubikuitin-proteazom sistemi ile artmış protein yıkımı ve artmış otofaji.",
+      "A": "Yanlış. Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince büyüme durur."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q14",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Fizyolojik ve patolojik adaptasyon\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Fizyolojik adaptasyon normal uyarılara (gebelikte uterus/meme), patolojik adaptasyon anormal veya aşırı streslere yanıttır.",
+      "A": "Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince büyüme durur.",
+      "E": "Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "C": "Gebelikte uterus östrojen etkisiyle büyür; düz kas hücrelerinde hem hipertrofi hem hiperplazi görülür.",
+      "B": "Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Fizyolojik adaptasyon normal uyarılara (gebelikte uterus/meme), patolojik adaptasyon anormal veya aşırı streslere yanıttır.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Fizyolojik adaptasyon normal uyarılara (gebelikte uterus/meme), patolojik adaptasyon anormal veya aşırı streslere yanıttır.",
+      "A": "Yanlış. Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince büyüme durur.",
+      "E": "Yanlış. Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "C": "Yanlış. Gebelikte uterus östrojen etkisiyle büyür; düz kas hücrelerinde hem hipertrofi hem hiperplazi görülür.",
+      "B": "Yanlış. Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q15",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Metaplazi: çift uçlu kılıç\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "C": "Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür.",
+      "A": "Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "D": "Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "B": "Hücre boyutunda artış; yapısal proteinler ve organellerde artışla olur ve organ büyür."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "C": "Yanlış. Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür.",
+      "A": "Yanlış. Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "D": "Yanlış. Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "B": "Yanlış. Hücre boyutunda artış; yapısal proteinler ve organellerde artışla olur ve organ büyür."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q16",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"Patolojik hiperplazi\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "A": "Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür.",
+      "C": "Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir.",
+      "D": "Hafif/orta stres adaptasyonla, şiddetli/kalıcı stres geri dönüşümlü hasardan nekroz veya apoptoza ilerler.",
+      "E": "Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "B": "Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Endometrial hiperplazi (östrojen/progesteron dengesizliği) ve benign prostat hiperplazisi (androjen/östrojen etkili) görülür.",
+      "C": "Yanlış. Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir.",
+      "D": "Yanlış. Hafif/orta stres adaptasyonla, şiddetli/kalıcı stres geri dönüşümlü hasardan nekroz veya apoptoza ilerler.",
+      "E": "Yanlış. Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "B": "Yanlış. Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q17",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Metaplazi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir.",
+      "B": "Hücre sayısında artıştır.",
+      "C": "Hücre boyutunda artıştır.",
+      "D": "Hücre ve organ küçülmesidir.",
+      "E": "Yalnızca kas dokusunda görülür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Metaplazi, bir olgun hücre tipinin başka bir olgun hücre tipiyle yer değiştirmesidir; genellikle kök hücrelerin yeniden programlanmasıyla olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Metaplazi tanımı doğru verilmiştir.",
+      "B": "Yanlış. Bu hiperplazidir.",
+      "C": "Yanlış. Bu hipertrofidir.",
+      "D": "Yanlış. Bu atrofidir.",
+      "E": "Yanlış. Epitel ve mezenkimde görülür."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q18",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Epitel metaplazisi örnekleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sigara dumanına kronik maruziyetle bronşta siliyalı kolumnar epitel yassı çok katlı epitele dönüşür.",
+      "B": "Bronşta sigara metaplazisinde mukus üretimi ve mukosiliyer temizlenme artar.",
+      "C": "Kronik gastroözofageal reflüde özofagusta yassı epitel kolumnar (Barrett tipi) epitele dönüşür.",
+      "D": "Barrett özofagusunda adenokarsinom riski artar.",
+      "E": "Metaplazinin amacı strese daha dayanıklı hücre tipi kazandırmaktır."
+     },
+     "dogru": "B",
+     "aciklama": "Yanlış olan ifade B'dir: Bronşta sigara metaplazisinde mukus üretimi ve mukosiliyer temizlenme azalır (dayanıklılık artarken normal fonksiyon kaybolur).",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru yanıt (yanlış ifade).",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q19",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Metaplazinin 'çift uçlu kılıç' olarak nitelendirilmesinin nedeni hangisidir?",
+     "secenekler": {
+      "A": "Hem enfeksiyona hem tümöre yol açması",
+      "B": "Hem fizyolojik hem patolojik olması",
+      "C": "Yeni hücre tipinin daha dayanıklı olması, ancak normal fonksiyonların kaybolması ve displaziye zemin oluşturması",
+      "D": "Hem hiperplaziye hem hipertrofiye yol açması",
+      "E": "Hem epitel hem mezenkimal dokuda geri dönüşümsüz olması"
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Metaplazi kazandırdığı dayanıklılık (avantaj) ile normal fonksiyon kaybı ve displazi/malign dönüşüm zeminine yol açması (dezavantaj) nedeniyle çift uçlu kılıçtır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Tanım uygun değildir.",
+      "B": "Yanlış. Metaplazi patolojik bir süreçtir.",
+      "C": "Doğru. Avantaj ve dezavantaj birlikte doğru verilmiştir.",
+      "D": "Yanlış. Bu süreçlerle ilişkisi yoktur.",
+      "E": "Yanlış. Geri dönüşümsüz olduğu ifadesi hatalıdır."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q20",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Mezenkimal metaplazi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca epitel dokusunda görülür.",
+      "B": "Amaç her zaman normal fonksiyonu korumaktır.",
+      "C": "İnvaziv tümörün metastazını gösterir.",
+      "D": "Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "E": "Her zaman karsinoma dönüşür."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Mezenkimal metaplazi, yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu şeklinde görülen, çoğu kez patolojik süreçlere eşlik eden reaktif bir değişimdir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Mezenkimal dokuda görülür.",
+      "B": "Yanlış. Reaktif bir değişimdir.",
+      "C": "Yanlış. Metastaz göstergesi değildir.",
+      "D": "Doğru. Örnek doğru verilmiştir.",
+      "E": "Yanlış. Her zaman malignleşmez."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k06-q21",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Metaplazi örnekleri göz önüne alındığında hangi seçenek doğru bir eşleştirmedir?",
+     "secenekler": {
+      "A": "Bronş: yassı epitel → siliyalı kolumnar epitel",
+      "B": "Özofagus (reflü): kolumnar epitel → yassı epitel",
+      "C": "Skar dokusu: kemik → kıkırdak",
+      "D": "Bronş: kolumnar epitel → tiroit folikülü",
+      "E": "Bronş: siliyalı kolumnar epitel → yassı epitel; özofagus (reflü): yassı epitel → kolumnar epitel"
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Bronşta sigara ile siliyalı kolumnar epitel yassı epitele, reflüde özofagusta yassı epitel kolumnar (Barrett) epitele dönüşür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Yön ters verilmiştir.",
+      "B": "Yanlış. Yön ters verilmiştir.",
+      "C": "Yanlış. Bu örnek hatalıdır.",
+      "D": "Yanlış. Dönüşüm yönü ve hedef yanlıştır.",
+      "E": "Doğru. Her iki dönüşüm doğru verilmiştir."
+     },
+     "bilgi": [
+      24,
+      25
      ],
      "benzer_cikmis": []
     }
@@ -711,6 +3521,470 @@
      },
      "bilgi": [
       21,
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Açlık durumunda karaciğer hücrelerinde çift zarlı veziküllerin hasarlı mitokondrileri sardığı, bu veziküllerin lizozomlarla birleşerek içeriği parçaladığı ve açığa çıkan yapı taşlarının enerji için kullanıldığı gözlenmiştir. Besin kıtlığında enerji sağlayan bu adaptif süreç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tek zarlı vezikülün doğrudan ekzositozla atılması",
+      "B": "Proteazomda ubikuitinli proteinlerin parçalanması",
+      "C": "Çift zarlı otofagozomun lizozomla birleşip içeriği sindirmesi",
+      "D": "Mitokondriden sitokrom c salınımıyla kaspaz aktivasyonu",
+      "E": "Hücre zarının balonlaşmasıyla apoptotik cisim oluşması"
+     },
+     "dogru": "C",
+     "aciklama": "Otofajide çift zarlı otofagozom oluşur, lizozomla birleşerek otofagolizozomu oluşturur ve içerik sindirilerek enerji sağlanır, hasarlı organeller uzaklaştırılır. Bu kıtlık ve stres dönemlerinde adaptif bir yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Otofaji vezikülü çift zarlıdır ve lizozomla birleşir.",
+      "B": "Bu ubikuitin-proteazom yoludur, otofaji değildir.",
+      "C": "Doğru cevap. Otofagozom-lizozom füzyonuyla otofagolizozom oluşur ve içerik sindirilir.",
+      "D": "Bu mitokondriyal apoptoz yoludur.",
+      "E": "Bu apoptozun morfolojisidir."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Alzheimer hastalığı modelinde nöronlarda otofagozom birikimi saptanmış, bazı hücrelerde otofajiyi takiben apoptotik ölüm gözlenmiştir. Araştırmacı bu ilişkinin iki yönlü olduğunu belirtmektedir. Otofajiyle ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Aşırı otofaji apoptozla sonuçlanabilir ve nörodejeneratif hastalıklarda artmış olabilir",
+      "B": "Otofaji yalnızca fizyolojik koşullarda çalışır, streste baskılanır",
+      "C": "Otofaji protein yıkımını azaltarak atrofiyi engeller",
+      "D": "Otofagozomlar tek zarlıdır ve peroksizomla birleşir",
+      "E": "Otofajinin hücre ölümüyle hiçbir ilişkisi yoktur"
+     },
+     "dogru": "A",
+     "aciklama": "Otofaji stres dönemlerinde adaptif bir yanıttır ancak aşırısı apoptozla sonuçlanabilir; iskemik hasar, bazı miyopatiler ve nörodejeneratif hastalıklarda artmış olabilir. Atrofide otofaji hızlanır ve enerji tasarrufuna katkı sağlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru cevap. Otofaji adaptif bir yanıttır ancak aşırısı ölümle sonuçlanabilir ve bazı hastalıklarda artmıştır.",
+      "B": "Otofaji özellikle kıtlık ve stres dönemlerinde aktive olur.",
+      "C": "Otofaji atrofide artar ve protein yıkımına katkı sağlar.",
+      "D": "Otofagozom çift zarlıdır ve lizozomla birleşir.",
+      "E": "Aşırı otofaji apoptozla sonuçlanabilir."
+     },
+     "bilgi": [
+      29,
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Otofajinin temel hücresel süreci nedir?",
+     "secenekler": {
+      "A": "Otofagozom-lizozom füzyon ve sindirim",
+      "B": "Hücrenin komşuyu yemesi",
+      "C": "Çekirdeğin bölünmesi",
+      "D": "Mitokondrinin çoğalması",
+      "E": "Hücre zarının erimesi"
+     },
+     "dogru": "A",
+     "aciklama": "Besin kıtlığında hücre, çift zarlı otofagozomlarla kendi protein ve organellerini sarar. Otofagozomun lizozomla birleşmesiyle oluşan otofagolizozomda içerik sindirilir ve açığa çıkan amino asit ile yağ asitleri enerji üretiminde kullanılır. Aynı süreç hasarlı mitokondrilerin temizlenmesini de sağlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Çift zarlı kesecik lizozomla birleşir, içerik geri dönüştürülür.",
+      "B": "Komşu hücrenin yenmesi fagositozdur, otofaji değildir.",
+      "C": "Çekirdek bölünmesi mitozdur.",
+      "D": "Mitokondri çoğalması biyogenezdir, otofajinin tersidir.",
+      "E": "Zar erimesi nekroz bulgusudur."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Otofajinin ikili rolünü doğru ifade eden seçenek hangisidir?",
+     "secenekler": {
+      "A": "Her zaman öldürücüdür",
+      "B": "Yalnızca kanserde olur",
+      "C": "Enerjiyle ilişkisi yoktur",
+      "D": "Lizozom katılmaz",
+      "E": "Adaptif, aşırısı apoptoza götürür"
+     },
+     "dogru": "E",
+     "aciklama": "Kıtlık ve stres dönemlerinde otofaji enerji sağlayarak ve hasarlı organelleri temizleyerek hücrenin yaşamasına yardımcı olur. Ancak kontrolsüz sürdüğünde hücrenin kendi yapılarını tüketmesi apoptoza yol açabilir. İskemik hasar, bazı miyopatiler ve nörodejeneratif hastalıklarda otofajinin arttığı gösterilmiştir.",
+     "sik_aciklamalari": {
+      "A": "Otofaji öncelikle yaşamsal bir yanıttır, her zaman öldürücü değildir.",
+      "B": "İskemi, miyopati ve nörodejenerasyonda da artar.",
+      "C": "Açığa çıkan moleküller enerji üretiminde kullanılır.",
+      "D": "Lizozom füzyonu sürecin zorunlu basamağıdır.",
+      "E": "Doğru. Dengeli otofaji korur, aşırısı hücreyi tüketir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q08",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Hücresel adaptasyon mekanizmalarından biri olan 'otofaji' (autophagy) sürecinin temel biyolojik tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hücrenin dış ortamdaki bakterileri fagositozla yutması",
+      "B": "Besin kıtlığı veya stres altındaki bir hücrenin kendi organellerini ve sitoplazmik bileşenlerini lizozomlar aracılığıyla sindirerek enerji ve yapıtaşı geri dönüşümü sağlaması",
+      "C": "Hücrenin apoptoza giderek komşu hücreleri zehirlemesi",
+      "D": "Hücre çekirdeğinin parçalanarak kana karışması",
+      "E": "Hücrelerin kontrolsüz mitoz bölünmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Otofaji (auto: kendi + phagein: yemek), besin yoksunluğunda veya organel hasarında hücrenin kendi içeriğini lizozomal enzimlerle sindirip enerji elde ettiği adaptif bir hayatta kalma mekanizmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Heterofaji/fagositozdur.",
+      "B": "Doğru. Hücrenin kendi bileşenlerini lizozomda sindirerek geri dönüştürmesidir.",
+      "C, D, E": "Hücre ölümü veya kontrolsüz büyüme süreçleridir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q09",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Otofajinin hücresel basamakları kronolojik olarak incelendiğinde doğru akış hangisinde verilmiştir?",
+     "secenekler": {
+      "A": "Lizozom patlaması → Doku nekrozu → Hücre bölünmesi",
+      "B": "İzolasyon membranı (fagofor) oluşumu → Hücresel organellerin çift katlı zarla çevrilerek otofagozom oluşturması → Otofagozomun lizozomla füzyonu (otofagolizozom) → Lizozomal hidrolazlarla içerik sindirimi ve sitoplazmaya geri dönüşüm",
+      "C": "Mitokondri erimesi → Apoptoz → Fagositoz",
+      "D": "DNA replikasyonu → Mitoz → Karyokinez",
+      "E": "Pinikositik vezikül → Ekzositoz → Skar"
+     },
+     "dogru": "B",
+     "aciklama": "Otofaji basamakları: Fagofor oluşumu → Çift zarlı otofagozom kapanması → Lizozom ile birleşme (otofagolizozom) → Enzimatik sindirim ve besin moleküllerinin sitozole salınımı.",
+     "sik_aciklamalari": {
+      "A, C, D, E": "Hatalı ve ilgisiz sıralamalardır.",
+      "B": "Doğru. Otofagozom → Otofagolizozom → Sindirim tam evrensel biyolojik basamaklardır."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q10",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Atrofiye uğrayan veya yaşlanan hücrelerde otofaji sırasında sindirilemeyen doymamış lipid peroksidasyon kalıntılarının lizozomlarda birikmesiyle sitoplazmada sarı-kahverengi granüller şeklinde görülen 'aşınma ve yıpranma (wear and tear)' pigmenti hangisidir?",
+     "secenekler": {
+      "A": "Hemosiderin",
+      "B": "Melanin",
+      "C": "Lipofuskin",
+      "D": "Bilirubin",
+      "E": "Antrakotik karbon pigmenti"
+     },
+     "dogru": "C",
+     "aciklama": "Lipofuskin (yaşlılık/yıpranma pigmenti), otofaji sırasında lizozomal sindirime dirençli lipid ve protein kalıntılarının oksidasyonu sonucu oluşan sarı-kahverengi intraselüler pigmenttir. Yaşlı kalp (kahverengi atrofi) ve karaciğerde tipiktir.",
+     "sik_aciklamalari": {
+      "A": "Demir pigmentidir (Prusya mavisi ile boyanır).",
+      "B": "Melanosit pigmentidir.",
+      "C": "Doğru. Otofajik rezidüel cisimciklerin ürünü lipofuskindir.",
+      "D": "Safra pigmentidir.",
+      "E": "Dışarıdan solunan kömür tozudur."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q11",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Otofajinin fizyolojik ve patolojik rolleri ile ilgili aşağıdaki klinik durumlardan hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Açlık durumunda aminoasit ve enerji sağlayarak hücrenin canlı kalmasını temin eder.",
+      "B": "Alzheimer ve Parkinson gibi nörodejeneratif hastalıklarda hatalı katlanmış toksik protein agregatlarının temizlenmesinde kritik rol oynar; otofaji kusurunda bu proteinler nöronlarda birikir.",
+      "C": "Aşırı ve kontrolsüz otofaji hücresel yapıları tüketerek alternatif bir hücre ölümünü (otofajik hücre ölümü) tetikleyebilir.",
+      "D": "Tümör hücreleri kemoterapi ve radyasyon stresine karşı otofajiyi aktive ederek hayatta kalma avantajı sağlayabilir.",
+      "E": "Otofaji sadece eritrositlerde gerçekleşir, çekirdekli epitel hücrelerinde asla görülmez."
+     },
+     "dogru": "E",
+     "aciklama": "Eritrositlerde lizozom ve organel bulunmadığı için otofaji gerçekleşmez. Otofaji tüm çekirdekli ökaryotik hücrelerde (epitel, nöron, hepatosit vb.) aktif çalışan bir sistemdir.",
+     "sik_aciklamalari": {
+      "A, B, C, D": "Otofajinin adaptasyon, nöroproteksiyon, hücre ölümü ve tümör direnci konusundaki kanıtlanmış rolleridir.",
+      "E": "Doğru (yanlış ifade). Eritrositlerde organel yoktur, otofaji tüm çekirdekli hücrelerde görülür."
+     },
+     "bilgi": [
+      24,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q12",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Mitokondrilerin hasar gördüğünde hücreyi apoptozdan korumak amacıyla spesifik olarak otofajik vakuoller içine alınıp lizozomda parçalanması işlemine ne ad verilir?",
+     "secenekler": {
+      "A": "Mitofaji (Mitophagy)",
+      "B": "Lipogenez",
+      "C": "Karyoliz",
+      "D": "Piknoz",
+      "E": "Riboliz"
+     },
+     "dogru": "A",
+     "aciklama": "Hasarlı ve pro-apoptotik protein (Sitokrom c) sızdıran mitokondrilerin seçici olarak otofajiyle uzaklaştırılmasına 'mitofaji' denir. Parkin ve PINK1 genleri bu süreci yönetir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hasarlı mitokondrilerin otofajik temizliği mitofajidir.",
+      "B": "Yağ sentezidir.",
+      "C ve D": "Nükleer ölüm değişiklikleridir.",
+      "E": "Böyle bir terim yoktur."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q13",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Epitel metaplazisi: sigara\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "B": "Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür.",
+      "C": "Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "E": "Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "D": "Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "A": "Organ/dokunun hücre boyutu ve/veya sayısında azalma ile küçülmesidir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Sigara dumanına kronik maruziyetle bronşlardaki siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele dönüşür.",
+      "C": "Yanlış. Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "E": "Yanlış. Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır.",
+      "D": "Yanlış. Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "A": "Yanlış. Organ/dokunun hücre boyutu ve/veya sayısında azalma ile küçülmesidir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q14",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Patolojik hipertrofi: kalp\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır.",
+      "A": "Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "B": "Organ/dokunun hücre boyutu ve/veya sayısında azalma ile küçülmesidir.",
+      "D": "Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "E": "Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince büyüme durur."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Hipertansiyon ve aort stenozu sürekli artmış basınç oluşturur; miyositler hipertrofikleşir, ventrikül duvarı kalınlaşır ve kalp ağırlaşır.",
+      "A": "Yanlış. Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "B": "Yanlış. Organ/dokunun hücre boyutu ve/veya sayısında azalma ile küçülmesidir.",
+      "D": "Yanlış. Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "E": "Yanlış. Patolojik hiperplazide büyüme kontrolü kısmen korunur ve uyarı kesilince büyüme durur."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q15",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Homeostaz\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "B": "Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "A": "Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "E": "Hücre boyutunda artış; yapısal proteinler ve organellerde artışla olur ve organ büyür.",
+      "C": "Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "B": "Yanlış. Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "A": "Yanlış. Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "E": "Yanlış. Hücre boyutunda artış; yapısal proteinler ve organellerde artışla olur ve organ büyür.",
+      "C": "Yanlış. Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q16",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Fizyolojik hipertrofi: iskelet kası\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "A": "Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar.",
+      "C": "Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "D": "Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "E": "Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "A": "Yanlış. Parsiyel hepatektomi sonrası kalan hepatositlerde mitotik aktivite artar.",
+      "C": "Yanlış. Yumuşak dokuda, travma odaklarında ve skar dokusunda kemik oluşumu görülür.",
+      "D": "Yanlış. Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "E": "Yanlış. Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q17",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Otofaji ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hücrenin kendi bileşenlerini lizozomlar içinde sindirmesidir.",
+      "B": "Hücrenin dış ortamdaki besinleri almasıdır.",
+      "C": "Hücrenin bölünerek çoğalmasıdır.",
+      "D": "Hücrenin sitoplazmasını dışarı atmasıdır.",
+      "E": "Antijen-antikor reaksiyonudur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Otofaji, hücrenin kendi bileşenlerini lizozomlar içinde sindirmesidir; temel amaçları besin kıtlığında enerji sağlamak ve hasarlı organelleri uzaklaştırmaktır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Otofaji tanımı doğru verilmiştir.",
+      "B": "Yanlış. Bu dışsal alımı tanımlar.",
+      "C": "Yanlış. Bu hücre bölünmesidir.",
+      "D": "Yanlış. Bu salgılama/dışa atımdır.",
+      "E": "Yanlış. Bu immün yanıttır."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q18",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Otofaji sürecinin basamakları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Çift zarlı otofagozom oluşur.",
+      "B": "Otofaji yalnızca çekirdekte gerçekleşir.",
+      "C": "Otofagozom lizozomla birleşerek otofagolizozom oluşturur.",
+      "D": "İçerik sindirilir.",
+      "E": "Amaç besin kıtlığında enerji sağlamak ve hasarlı organelleri uzaklaştırmaktır."
+     },
+     "dogru": "B",
+     "aciklama": "Yanlış olan ifade B'dir: Otofaji çekirdekte değil, çift zarlı otofagozomun lizozomla birleşerek otofagolizozomu oluşturmasıyla sitoplazmada gerçekleşir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru yanıt (yanlış ifade).",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q19",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Otofajinin klinik önemi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Otofaji her zaman hücre ölümüyle sonuçlanır.",
+      "B": "Otofaji iskemik hasarda azalır.",
+      "C": "Aşırı otofaji hücresel yapıları tüketebilir ve apoptozla sonuçlanabilir.",
+      "D": "Otofaji yalnızca bakterilerde görülür.",
+      "E": "Otofaji hiçbir hastalıkla ilişkili değildir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Otofaji kıtlık ve stres dönemlerinde adaptiftir; ancak aşırı otofaji hücresel yapıları tüketerek apoptoza yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Her zaman ölümle sonuçlanmaz.",
+      "B": "Yanlış. İskemik hasarda artabilir.",
+      "C": "Doğru. Klinik önemi doğru verilmiştir.",
+      "D": "Yanlış. Ökaryot hücrelerde görülür.",
+      "E": "Yanlış. İskemik hasar, miyopati ve nörodejeneratif hastalıklarla ilişkilidir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q20",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki durumlardan hangisinde otofajinin artmış olması beklenir?",
+     "secenekler": {
+      "A": "Yalnızca hücre döngüsünün S fazı",
+      "B": "Apoptozun tamamen engellendiği durumlar",
+      "C": "Yalnızca mitoz sırasında",
+      "D": "Besin kıtlığı ve stres dönemleri",
+      "E": "Antijen sunumunun hiç olmadığı durumlar"
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Otofaji besin kıtlığı ve stres dönemlerinde artarak enerji sağlar ve hasarlı organelleri uzaklaştırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Hücre döngüsü fazı ile ilgili değildir.",
+      "B": "Yanlış. Apoptoz ilişkisi bu şekilde değildir.",
+      "C": "Yanlış. Yalnızca mitoza özgü değildir.",
+      "D": "Doğru. Kıtlık ve stres otofajiyi artırır.",
+      "E": "Yanlış. Antijen sunumu ile ilgili değildir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k07-q21",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Otofajinin adaptasyondaki rolü ile ilgili en doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Otofaji yalnızca hücre ölümüne yol açan bir süreçtir.",
+      "B": "Otofaji yalnızca hasarlı DNA'yı onarır.",
+      "C": "Otofaji protein sentezini artırır ve hiç yıkmaz.",
+      "D": "Otofaji mitokondriyi çoğaltır.",
+      "E": "Otofaji hem hayatta kalma hem de hücre ölümü ile ilişkili özel bir yanıttır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Otofaji hem hayatta kalma (enerji ve hasarlı organel temizliği) hem de aşırı aktivasyonda hücre ölümü ile ilişkili özel bir yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Yalnızca ölüm süreci değildir.",
+      "B": "Yanlış. DNA onarımı ile sınırlı değildir.",
+      "C": "Yanlış. Yıkım sürecidir.",
+      "D": "Yanlış. Mitokondri çoğaltmaz.",
+      "E": "Doğru. Rol doğru verilmiştir."
+     },
+     "bilgi": [
       28,
       29
      ],
@@ -828,12 +4102,466 @@
       13
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q05",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Hipertansiyonu olan bir hastada miyokard önce hipertrofiyle uyum sağlamış, yıllar sonra beslenme yetersizliği nedeniyle dilatasyon ve yetmezlik gelişmiştir. Benzer şekilde uzun süre atrofik kalan kaslarda hücre kaybı izlenmiştir. Bu gözlemlerle ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hafif stres adaptasyonla karşılanır",
+      "B": "Şiddetli ve kalıcı stres nekroz veya apoptoza ilerler",
+      "C": "Hipertrofi dekompanse olursa kalp yetmezliği gelişebilir",
+      "D": "Uzamış şiddetli atrofi apoptozla hücre kaybına yol açabilir",
+      "E": "Adaptasyon gösteren bir hücre hiçbir koşulda ölemez"
+     },
+     "dogru": "E",
+     "aciklama": "Aynı etken doz ve süreye bağlı olarak adaptasyondan geri dönüşümlü hasara ve ölüme ilerleyen bir spektrum oluşturur. Hipertrofik miyokardda sınırlı damar beslenmesi ve ATP üretimi aşıldığında miyofibril kaybı ve yetmezlik gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifadedir; hafif stres yeni dengeyle karşılanır.",
+      "B": "Doğru ifadedir; ağır stres ölüm getirir.",
+      "C": "Doğru ifadedir; beslenme ve enerji sınırları belirleyicidir.",
+      "D": "Doğru ifadedir; şiddetli atrofi geri dönüşümsüz kayba ilerler.",
+      "E": "Doğru cevap. Stres şiddetlenirse adapte hücre de hasarlanıp ölebilir."
+     },
+     "bilgi": [
+      30,
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q06",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Miyokard enfarktüslü bir hastanın otopsisinde trifeniltetrazolyum klorür uygulanan kalp kesitinde canlı alanlar magenta boyanırken enfarkt alanı soluk kalmıştır. Patolog bu farkın enzim kaybına bağlı olduğunu ve geri dönüşümsüz hasarı gösterdiğini belirtmiştir. Bu yöntemle ilgili ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Canlı miyokard trifeniltetrazolyum ile magenta boyanır",
+      "B": "Nekrotik miyokard artmış enzim aktivitesi nedeniyle daha koyu boyanır",
+      "C": "Boyanma farkı enzim kaybına bağlıdır",
+      "D": "İskemik miyositte önce şişme ve yağlanma görülür",
+      "E": "Kalıcı iskemi koagülatif nekroz oluşturur"
+     },
+     "dogru": "B",
+     "aciklama": "Trifeniltetrazolyum klorür canlı miyokardı enzim aktivitesi sayesinde magenta boyar; nekrotik alanda enzim kaybı nedeniyle boyanma olmaz. Bu, geri dönüşümlü hasarla geri dönüşümsüz hasar arasındaki sınırı doku düzeyinde gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifadedir; dehidrogenaz aktivitesi boyayı indirger.",
+      "B": "Doğru cevap. Nekrozda enzimler kaybolduğu için boyanma olmaz, soluk alan kalır.",
+      "C": "Doğru ifadedir; nekrotik dokuda enzimler hücre dışına kaçar.",
+      "D": "Doğru ifadedir; bunlar geri dönüşümlü hasar bulgularıdır.",
+      "E": "Doğru ifadedir; kalıcı iskemi koagülatif nekroz yapar."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aynı etkenin adaptasyondan hücre ölümüne ilerlemesini belirleyen nedir?",
+     "secenekler": {
+      "A": "Etken türü belirler, doz önemsizdir",
+      "B": "Adaptasyon her zaman ölüme gider",
+      "C": "Doz ve süre spektrumu belirler",
+      "D": "Ölüm her zaman önce gelir",
+      "E": "Adaptasyon geri dönüşümsüzdür"
+     },
+     "dogru": "C",
+     "aciklama": "Aynı etken düşük doz ve kısa sürede adaptif yanıt uyandırırken, doz artıp süre uzadıkça geri dönüşümlü hasara ve ardından ölüme ilerler. Örneğin miyositte basınç yükü önce hipertrofiye, iskemi eklenirse şişme ve yağlanmaya, kalıcı iskemi ise koagülatif nekroza yol açar. Bu spektrum, adaptasyonların hasarın geri dönüşebilirliğini değerlendirmede yardımcı olduğunu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doz ve süre belirleyicidir, etken türü tek başına yetmez.",
+      "B": "Hafif stres adaptasyonda kalır, ölüme ilerlemez.",
+      "C": "Doğru. Doz-süre arttıkça adaptasyondan hasara ve ölüme geçilir.",
+      "D": "Ölüm spektrumun son basamağıdır.",
+      "E": "Adaptasyon geri dönüşümlüdür."
+     },
+     "bilgi": [
+      30,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q08",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Uzamış ve şiddetli atrofinin hücre ölümüyle ilişkisi nedir?",
+     "secenekler": {
+      "A": "Atrofi her zaman geri döner",
+      "B": "Şiddetli atrofi apoptoza ilerler",
+      "C": "Apoptoz adaptasyondur",
+      "D": "Atrofi nekrozu engeller",
+      "E": "Sınır diye bir şey yoktur"
+     },
+     "dogru": "B",
+     "aciklama": "Şiddetli ve uzun süreli atrofi, hücrenin enerji tasarrufu sınırlarını aşar ve apoptotik yolaklar aktive olur. Apoptozla kaybedilen hücreler geri gelmez, dokuda geri dönüşümsüz hücre kaybı ve fonksiyon azalması oluşur. Bu geçiş, adaptasyonun koruyucu kapasitesinin sınırlı olduğunu ve sınır aşılınca ölüm programının devreye girdiğini gösterir.",
+     "sik_aciklamalari": {
+      "A": "Şiddetli ve uzun atrofi geri dönüşümsüz kayba yol açabilir.",
+      "B": "Doğru. Koruyucu kapasite aşılınca apoptoz başlar.",
+      "C": "Apoptoz programlı hücre ölümüdür, adaptasyon tipi değildir.",
+      "D": "Atrofi nekrozu engellemez, sınır aşılırsa ölüm olur.",
+      "E": "Doz-süre sınırı spektrumun temelidir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q09",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Hücresel strese verilen yanıtın adaptasyon mu, geri dönüşümlü hasar mı yoksa hücre ölümü mü olacağını belirleyen faktörler değerlendirildiğinde aşağıdakilerden hangisi geçerli değildir?",
+     "secenekler": {
+      "A": "Zedeleyici etkenin doğası, şiddeti ve maruziyet süresi",
+      "B": "Hücrenin tipi, diferansiasyon durumu ve metabolik gereksinimleri (örneğin nöronların iskemiye saniyeler içinde ölmesi, fibroblastların saatlerce dayanabilmesi)",
+      "C": "Hücrenin genetik yapısı ve antioksidan enzim kapasitesi",
+      "D": "Hücrenin sitoplazmik renginin o gün mikroskop camında mavi mi pembe mi göründüğü",
+      "E": "Öncesinde adaptasyon geliştirip geliştirmediği"
+     },
+     "dogru": "D",
+     "aciklama": "Hasarın sonucunu etkenin şiddeti/süresi ve hücrenin metabolik/genetik duyarlılığı belirler. Lamın mikroskopta görünüm rengi yapay bir boyama detayıdır, biyolojik hasar sınırını belirlemez.",
+     "sik_aciklamalari": {
+      "A, B, C, E": "Hücre hasarı ve adaptasyon sınırını belirleyen temel biyolojik faktörlerdir.",
+      "D": "Doğru (belirleyici değildir). Boya rengi teknik bir sonuçtur, biyolojik faktör değildir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q10",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki klinik tablolardan hangisinde adaptif mekanizma sınırına ulaşmış ve tablo geri dönüşümsüz hücre hasarına (nekroz/apoptoz) ve organ dekompansasyonuna evrilmiştir?",
+     "secenekler": {
+      "A": "Ağırlık çalışan atlette biceps kas liflerinin genişlemesi",
+      "B": "Yıllardır kontrolsüz ağır hipertansiyonu olan bir hastada ventrikül hipertrofisinin sınırlarını aşması sonucu miyosit kaybı, sol ventrikül dilatasyonu ve konjestif kalp yetmezliği gelişmesi",
+      "C": "Gebelikte memede glandüler dokunun artması",
+      "D": "Donör karaciğerinin nakil sonrası büyümesi",
+      "E": "Güneşte bronzlaşan deride melanin sentezinin artması"
+     },
+     "dogru": "B",
+     "aciklama": "Hipertansif miyosit hipertrofisi kompanse adaptasyondur; ancak stres devam ettiğinde beslenme ve mitokondri sınırı aşılır, miyositler ölür, ventrikül genişler (dilatasyon) ve kalp yetmezliği başlar (adaptasyondan dekompansasyona geçiş).",
+     "sik_aciklamalari": {
+      "A, C, D, E": "Başarılı ve dengeli fizyolojik adaptasyon örnekleridir.",
+      "B": "Doğru. Adaptasyonun tükenerek yetmezliğe ve hücre kaybına dönüştüğü tablodur."
+     },
+     "bilgi": [
+      8,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q11",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Apoptoz ile Nekroz arasındaki temel biyolojik ve morfolojik farklar değerlendirildiğinde aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nekroz daima patolojik bir hücre ölümüdür ve her zaman çevre dokuda belirgin inflamatuar yanıtla birliktedir.",
+      "B": "Apoptoz programlı hücre ölümüdür; hem fizyolojik durumlarda (embriyogenez, hormon çekilmesi) hem de patolojik durumlarda (DNA hasarı) görülebilir ve membran intakt kaldığı için inflamasyon oluşturmaz.",
+      "C": "Nekrozda hücre şişer ve lizise uğrar; apoptozda hücre büzüşür ve apoptotik cisimciklere parçalanır.",
+      "D": "Nekroz ATP bağımlı enzimatik bir kaskad ile yönetilirken; apoptoz hiçbir enerji gerektirmeyen pasif bir parçalanmadır.",
+      "E": "Apoptozda kaspaz enzimleri aktive olur."
+     },
+     "dogru": "D",
+     "aciklama": "Tam tersine: Apoptoz ATP bağımlı, kaspaz enzimlerinin rol aldığı aktif ve genetik olarak programlanmış bir ölüm biçimidir. Nekroz ise ATP'nin tükenmesi sonucu membran pompalarının çökmesiyle gelişen pasif/kazara (accidental) bir hücre parçalanmasıdır.",
+     "sik_aciklamalari": {
+      "A, B, C, E": "Robbins patoloji ilkelerine göre apoptoz ve nekrozun kesin doğru özellikleridir.",
+      "D": "Doğru (yanlış ifade). Enerji gerektiren aktif süreç apoptozdur, nekroz enerji yetersizliğiyle gelişir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q12",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Hücresel streste mitokondri iç zarında bulunan 'Mitokondriyal Geçirgenlik Geçiş Pori'nin (Mitochondrial Permeability Transition Pore - MPTP) kontrolsüz ve geri dönüşümsüz olarak kalıcı açılması hücrede hangi sonuca yol açar?",
+     "secenekler": {
+      "A": "Hücrenin sonsuz bölünme yeteneği kazanarak kök hücreye dönüşmesine",
+      "B": "Mitokondri membran potansiyelinin tamamen çökmesine, oksidatif fosforilasyonun durmasına ve geri dönüşümsüz hücre ölümüne (nekroz)",
+      "C": "Hücrenin derhal hipertrofi yaparak organeli büyütmesine",
+      "D": "Hücre zarına fazladan sodyum pompalanmasına",
+      "E": "Tümör hücrelerinin ölümü durdurmasına"
+     },
+     "dogru": "B",
+     "aciklama": "Ağır iskemik ve toksik hasarda intraselüler kalsiyum artışı ve ROS, mitokondrideki MPTP kanalını kalıcı olarak açar. Proton gradiyenti kaybolur, mitokondri şişer, ATP üretimi tamamen sıfırlanır; bu olay hücrenin geri dönüşümsüz nekroza sürüklendiği kritik kırılma noktasıdır.",
+     "sik_aciklamalari": {
+      "A, C, D, E": "Hücresel ölüm mekanizmasıyla bağdaşmayan durumlardır.",
+      "B": "Doğru. MPTP açıklığı ATP çöküşü ve geri dönüşümsüz nekrozun anahtarıdır."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q13",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Patolojik bir uyaranın dozu, süresi ve geri çekilmesi (reversibility) ile ilgili aşağıdaki ifadelerden hangisi doğru bir patoloji yorumudur?",
+     "secenekler": {
+      "A": "Zedeleyici uyaran ortadan kaldırıldığında hücre hasarı geri dönüşümsüz evreye geçmiş olsa bile doku kendiliğinden tamamen eski orijinal haline döner.",
+      "B": "Adaptasyon evresinde ve geri dönüşümlü hasar aşamasında zedeleyici etken kaldırılırsa hücre normal homeostaz durumuna geri dönebilir; ancak geri dönüşümsüz hasar sınırı (ölüm) aşıldığında uyaran kalksa bile hücre kaybı engellenemez ve iyileşme skar/fibrozisle sonuçlanır.",
+      "C": "Hücreler hasara uğradığında asla skar oluşmaz.",
+      "D": "Nekroz gelişen her dokuda 1 saat içinde yeni kök hücreler aynı yapıyı oluşturur.",
+      "E": "Tüm hücre tiplerinin hasara dayanma süresi tamamen aynıdır."
+     },
+     "dogru": "B",
+     "aciklama": "Adaptasyon ve erken hasar evresinde sebep ortadan kaldırılırsa hücre orijinal yapısına dönebilir. Ancak ölüm (nekroz) sınırından sonra doku hasarı onarım (rejenerasyon veya skar dokusu) süreçlerine teslim olur.",
+     "sik_aciklamalari": {
+      "A": "Geri dönüşümsüz evreden sonra hücre kendiliğinden canlanamaz.",
+      "B": "Doğru. Reversibilite ve irreversibilite arasındaki kesin patolojik sınırdır.",
+      "C, D, E": "Patolojinin temel ilkeleriyle çelişen yanlış önermelerdir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q14",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Adaptasyonun tanımı\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "E": "Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "D": "Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "A": "Azalmış protein sentezi, ubikuitin-proteazom sistemi ile artmış protein yıkımı ve artmış otofaji.",
+      "C": "Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+      "B": "Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyonunu geri dönüşümlü biçimde değiştirmesidir.",
+      "D": "Yanlış. Değişen iç ve dış koşullara rağmen iç dengenin korunmasıdır; hücre büyüklüğü, sayısı ve fonksiyonu sınırlar içinde tutulur.",
+      "A": "Yanlış. Azalmış protein sentezi, ubikuitin-proteazom sistemi ile artmış protein yıkımı ve artmış otofaji.",
+      "C": "Yanlış. Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir; kök hücrelerin farklı yöne yeniden programlanmasıyla olur.",
+      "B": "Yanlış. Çift zarlı otofagozom oluşur, lizozomlarla füzyonla otofagolizozom oluşur ve içerik sindirilir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q15",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Fizyolojik ve patolojik adaptasyon\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Fizyolojik adaptasyon normal uyarılara (gebelikte uterus/meme), patolojik adaptasyon anormal veya aşırı streslere yanıttır.",
+      "E": "Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "D": "Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "A": "Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "C": "Hücre boyutunda artış; yapısal proteinler ve organellerde artışla olur ve organ büyür."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Fizyolojik adaptasyon normal uyarılara (gebelikte uterus/meme), patolojik adaptasyon anormal veya aşırı streslere yanıttır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Fizyolojik adaptasyon normal uyarılara (gebelikte uterus/meme), patolojik adaptasyon anormal veya aşırı streslere yanıttır.",
+      "E": "Yanlış. Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "D": "Yanlış. Yoğun egzersiz/ağırlık çalışması iskelet kası liflerinde hipertrofiyi uyarır.",
+      "A": "Yanlış. Avantaj: yeni hücre tipi strese daha dayanıklıdır; dezavantaj: normal fonksiyonlar kaybolur.",
+      "C": "Yanlış. Hücre boyutunda artış; yapısal proteinler ve organellerde artışla olur ve organ büyür."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q16",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Hiperplazi tanımı\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "D": "Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "B": "Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas.",
+      "A": "Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+      "E": "Ergenlik ve gebelikte meme bezleri ile endometriumda siklus proliferasyonu görülür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "D": "Yanlış. Hipertrofi (boyut ↑), hiperplazi (sayı ↑), atrofi (boyut/sayı ↓), metaplazi (olgun hücre tipi değişimi).",
+      "B": "Yanlış. Kullanılmama (alçıdaki ekstremite), innervasyon kaybı (motor sinir lezyonu), endokrin (menopoz sonrası uterus/over) ve yaşlılıkta beyin-kalp-kas.",
+      "A": "Yanlış. Tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır.",
+      "E": "Yanlış. Ergenlik ve gebelikte meme bezleri ile endometriumda siklus proliferasyonu görülür."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q17",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "\"Hipertrofi tanım ve mekanizma\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Hücre boyutunda artış; yapısal proteinler ve organellerde artışla olur ve organ büyür.",
+      "C": "Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "A": "Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "E": "Hücreler fizyolojik stres ve zararlı uyaranlara adaptasyon, geri dönüşümlü hasar ve geri dönüşümsüz hasar-ölüm ile yanıt verir.",
+      "D": "Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Hücre boyutunda artış; yapısal proteinler ve organellerde artışla olur ve organ büyür.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Hücre boyutunda artış; yapısal proteinler ve organellerde artışla olur ve organ büyür.",
+      "C": "Yanlış. Özellikle bölünme kapasitesi sınırlı hücreler: kalp kası ve iskelet kası.",
+      "A": "Yanlış. Hücre sayısında artış ile organ büyür; hücre popülasyonu bölünebilir olmalıdır.",
+      "E": "Yanlış. Hücreler fizyolojik stres ve zararlı uyaranlara adaptasyon, geri dönüşümlü hasar ve geri dönüşümsüz hasar-ölüm ile yanıt verir.",
+      "D": "Yanlış. Vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırlıdır."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q18",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Adaptasyon ile hücre ölümü arasındaki sınırla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Adaptasyon her zaman geri dönüşümsüz hücre kaybıyla sonuçlanır.",
+      "B": "Hafif/orta şiddette stres adaptasyona yol açar.",
+      "C": "Şiddetli/kalıcı stres geri dönüşümlü hasardan geri dönüşümsüz hasara ilerleyebilir.",
+      "D": "Aynı etken doza ve süreye bağlı farklı sonuçlar oluşturabilir.",
+      "E": "Adaptasyonların tanınması hasarın geri dönüşebilirliğini anlamaya yardımcı olur."
+     },
+     "dogru": "A",
+     "aciklama": "Yanlış olan ifade A'dır: Adaptasyon geri dönüşümlüdür; geri dönüşümsüz kayıp şiddetli/kalıcı hasar sonucudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru yanıt (yanlış ifade).",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q19",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Adaptasyon tipleri ile hücre ölümü ilişkisi için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Metaplazi doğrudan koagülatif nekroza neden olur.",
+      "B": "Uzun süreli ve şiddetli atrofi hücrelerin apoptoza gitmesine yol açabilir.",
+      "C": "Hiperplazi her zaman geri dönüşümsüzdür.",
+      "D": "Hipertrofi hücre ölümüne hiç yol açmaz.",
+      "E": "Adaptasyonlar hücre ölümünü tamamen engeller."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Atrofi uzun sürer ve şiddetli olursa hücreler apoptoza giderek geri dönüşümsüz kayba yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Metaplazi doğrudan nekroz yapmaz.",
+      "B": "Doğru. Atrofi apoptoza ilerleyebilir.",
+      "C": "Yanlış. Hiperplazi geri dönüşümlü olabilir.",
+      "D": "Yanlış. Sürekli hipertrofi yetmezliğe/ölüme ilerleyebilir.",
+      "E": "Yanlış. Adaptasyonlar ölümü tamamen engellemez."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q20",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Hipertrofiden kalp yetmezliğine geçiş, adaptasyon–hücre ölümü sınırına nasıl bir örnektir?",
+     "secenekler": {
+      "A": "Adaptasyonun sınırsız sürebildiğini gösterir.",
+      "B": "Hipertrofinin her zaman fizyolojik olduğunu gösterir.",
+      "C": "Uzun süreli adaptasyonun beslenme/ATP sınırları aşıldığında doku hasarı ve fonksiyon kaybına ilerleyebildiğini gösterir.",
+      "D": "Miyositlerin hiç ölmediğini gösterir.",
+      "E": "Ventrikül dilatasyonunun adaptasyon olduğunu gösterir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Kalp hipertrofisinde vasküler besleme, mitokondriyal ATP üretimi ve biyosentetik kapasite sınırları aşıldığında miyofibril kaybı, dilatasyon ve yetmezlik gelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Sınırsız değildir.",
+      "B": "Yanlış. Patolojik bir süreçtir.",
+      "C": "Doğru. Adaptif sınırların aşılmasını gösterir.",
+      "D": "Yanlış. Miyosit kaybı olur.",
+      "E": "Yanlış. Dilatasyon kompanzasyonun bozulmasıdır."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q21",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki örneklerden hangisi 'adaptasyondan geri dönüşümsüz hasara geçiş'i en iyi gösterir?",
+     "secenekler": {
+      "A": "Egzersizle iskelet kası hipertrofisi",
+      "B": "Gebelik uterusunun büyümesi",
+      "C": "Parsiyel hepatektomi sonrası karaciğer rejenerasyonu",
+      "D": "Aynı miyokard dokusunda önce hipertrofi, daha sonra iskemik koagülatif nekroz gelişmesi",
+      "E": "Ergenlikte meme gelişimi"
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Bir miyosit önce artmış yüke hipertrofiyle uyum sağlar; kalıcı iskemi ile geri dönüşümsüz hasara (koagülatif nekroz) ilerleyebilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Fizyolojik adaptasyondur.",
+      "B": "Yanlış. Fizyolojik adaptasyondur.",
+      "C": "Yanlış. Telafi edici hiperplazidir.",
+      "D": "Doğru. Adaptasyondan nekroza geçişi gösterir.",
+      "E": "Yanlış. Fizyolojik gelişimdir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-03-hucresel-adaptasyonlar-k08-q22",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Adaptasyon ve hücre ölümü ayrımının klinik önemi ile ilgili en doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Adaptasyon ve ölüm ayrımı yalnızca deneysel patolojide önemlidir.",
+      "B": "Geri dönüşümlü hasar doğrudan ölümle eşdeğerdir.",
+      "C": "Adaptasyon her zaman malignite göstergesidir.",
+      "D": "Hücre ölümü hiçbir zaman adaptasyonu takip etmez.",
+      "E": "Adaptasyonların tanınması, lezyonun geri dönüşebilir mi yoksa geri dönüşümsüz mü olduğunu anlamaya yardımcı olur."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Adaptasyonların tanınması, hasarın geri dönüşebilir olup olmadığının anlaşılmasına yardım eder; bu klinik karar için önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Klinik önemi de vardır.",
+      "B": "Yanlış. Eşdeğer değildir.",
+      "C": "Yanlış. Malignite göstergesi değildir.",
+      "D": "Yanlış. Ölüm adaptasyonu takip edebilir.",
+      "E": "Doğru. Klinik önemi doğru verilmiştir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 28,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:54:36"
+ ]
 }

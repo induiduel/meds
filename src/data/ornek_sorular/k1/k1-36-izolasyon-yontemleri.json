@@ -6,6 +6,7 @@
  "konu": "İzolasyon Yöntemleri",
  "ogretim_uyesi": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
  "tarih": "2026-09-30",
+ "soru_sayisi": 70,
  "kazanimlar": [
   {
    "no": 1,
@@ -86,6 +87,110 @@
      },
      "bilgi": [
       1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "24 yaşında kadın hasta, immünsüpresyon açısından ek risk taşıyan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Kaynak → çıkış kapısı → taşınma → giriş kapısı → duyarlı kişi sırasıyla ilerleyen döngüdür. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İndirek temas — Kontamine alet, yüzey veya kişi (sağlık personelinin elleri) aracılığıyla mikroorganizma taşınmasıdır.",
+      "B": "Katı-sıvı-gaz ayrımı — Damlacık katı-sıvı karışımı (süspansiyon), solunum ise katı-sıvı-gaz karışımı (aerosol) şeklindedir.",
+      "C": "Standart önlemlerin amacı ve kapsamı — Tanımlanmış olan/olmayan enfekte kan ve vücut sıvıları ile bulaştan korunmak; tanıya bakılmaksızın tüm hastalarda uygulanır.",
+      "D": "Enfeksiyon zinciri — Kaynak → çıkış kapısı → taşınma → giriş kapısı → duyarlı kişi sırasıyla ilerleyen döngüdür.",
+      "E": "Eldiven kullanımı — Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni s…"
+     },
+     "dogru": "D",
+     "aciklama": "Kaynak → çıkış kapısı → taşınma → giriş kapısı → duyarlı kişi sırasıyla ilerleyen döngüdür. Zincirin herhangi bir halkasını kesmek enfeksiyonu önler; izolasyon önlemleri bu zincire yönelir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İndirek temas) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Katı-sıvı-gaz ayrımı) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Standart önlemlerin amacı ve kapsamı) farklı bir klinik/bulguya aittir.",
+      "D": "Doğru. Kaynak → çıkış kapısı → taşınma → giriş kapısı → duyarlı kişi sırasıyla ilerleyen döngüdür. Zincirin herhangi bir halkasını kesmek enfeksiyonu önler; izolasyon önlemleri bu zincire yönelir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Eldiven kullanımı) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "52 yaşında erkek hasta, tekrarlayan atak öyküsü olan ve ayırıcı tanının netleştirilmesi gereken durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Canlı kaynaklar semptomatik/asemptomatik enfeksiyon, flora veya kolonizasyon (hasta, sağlık personeli, hasta yakını, ziyaretçi); cansız kaynaklar alet-yüzey ve su, hava, yiyeceklerdir. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Canlı ve cansız kaynaklar — Canlı kaynaklar semptomatik/asemptomatik enfeksiyon, flora veya kolonizasyon (hasta, sağlık personeli, hasta yakını, ziyaretçi); cansız kayn…",
+      "B": "Damlacık yolu — Mikroorganizma içeren mukozal salgı süspansiyonunun solunum yolundan atılıp ağız, burun veya göz mukozasına geçmesidir.",
+      "C": "Partikül boyutu ve düşme süreleri — 1-3 µm uzun süre asılı kalır; 10 µm 17 dk, 20 µm 4 dk, 100 µm 10 sn'de düşer; büyük damlacıklar >100 µm'dir (Knight ve ark., 1980).",
+      "D": "Standart önlem bileşenleri — El hijyeni, eldiven kullanımı, önlük-maske-yüz/göz koruyucu kullanımı, güvenli enjeksiyon ve kontamine ekipmanın uygun yönetimi.",
+      "E": "Önlük, maske, yüz/göz koruyucu — Kan-vücut sıvılarıyla veya kontamine yüzeyle temas ihtimali varsa önlük, sıçrama ihtimali varsa önlük+maske+yüz/göz koruyucu gerekir."
+     },
+     "dogru": "A",
+     "aciklama": "Canlı kaynaklar semptomatik/asemptomatik enfeksiyon, flora veya kolonizasyon (hasta, sağlık personeli, hasta yakını, ziyaretçi); cansız kaynaklar alet-yüzey ve su, hava, yiyeceklerdir. Kaynağı tanımak bulaş yolunu ve alınacak önlemi belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Canlı kaynaklar semptomatik/asemptomatik enfeksiyon, flora veya kolonizasyon (hasta, sağlık personeli, hasta yakını, ziyaretçi); cansız kaynaklar alet-yüzey ve su, hava, yiyeceklerdir. Kaynağı tanımak bulaş yolunu ve alınacak önlemi belirler.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Damlacık yolu) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Partikül boyutu ve düşme süreleri) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Standart önlem bileşenleri) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Önlük, maske, yüz/göz koruyucu) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Enfeksiyon zincirinin halkaları hangisinde doğru sıralanmıştır?",
+     "secenekler": {
+      "A": "Kaynak, tanı, tedavi, taburculuk, izlem",
+      "B": "Etken, antibiyotik, doz, süre, kontrol",
+      "C": "Kaynak, çıkış, taşınma, giriş, duyarlı",
+      "D": "Ateş, öksürük, balgam, dispne, halsizlik",
+      "E": "Tanı, izolasyon, tedavi, aşılama, sürveyans"
+     },
+     "dogru": "C",
+     "aciklama": "Enfeksiyon zinciri kaynak, çıkış kapısı, taşınma, giriş kapısı ve duyarlı kişiden oluşur. Zincirin herhangi bir halkasının kırılması bulaşı engeller. İzolasyon önlemleri taşınma halkasını hedefler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bu sıralama klinik yönetim basamaklarıdır, enfeksiyon zinciri değildir.",
+      "B": "Yanlış; bu sıralama tedavi planlamasıdır, bulaş zinciri değildir.",
+      "C": "Doğru; enfeksiyonun kaynağından duyarlı kişiye ulaşması bu beş halkayla olur.",
+      "D": "Yanlış; bunlar semptomlardır, zincir halkası değildir.",
+      "E": "Yanlış; bunlar kontrol önlemleridir, zincir halkası değildir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Canlı enfeksiyon kaynağına örnek hangisidir?",
+     "secenekler": {
+      "A": "Asemptomatik kolonize sağlık personeli",
+      "B": "Steril paketlenmiş cerrahi alet",
+      "C": "Uygun dezenfekte edilmiş yüzey",
+      "D": "Kapalı steril serum şişesi",
+      "E": "Tek kullanımlık eldiven kutusu"
+     },
+     "dogru": "A",
+     "aciklama": "Canlı kaynaklar semptomatik veya asemptomatik enfekte kişi, flora veya kolonizasyon taşıyan hasta, sağlık personeli, hasta yakını ve ziyaretçidir. Cansız kaynaklar alet, yüzey, su, hava ve yiyeceklerdir. Her iki kaynak grubu da taşınma halkasını besler.",
+     "sik_aciklamalari": {
+      "A": "Doğru; kolonize personel belirti vermeden etken taşıyıp bulaştırabilir.",
+      "B": "Yanlış; steril alet cansız kaynak olmaktan çıkmıştır.",
+      "C": "Yanlış; uygun dezenfeksiyon kaynağı ortadan kaldırır.",
+      "D": "Yanlış; kapalı steril ürün enfeksiyon kaynağı değildir.",
+      "E": "Yanlış; açılmamış tek kullanımlık ürün kaynak değildir."
+     },
+     "bilgi": [
+      2
      ],
      "benzer_cikmis": []
     }
@@ -176,6 +281,110 @@
       4
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "52 yaşında erkek hasta, komplike seyir açısından yakından izlenen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Direkt temas ile mikroorganizma geçişi; kan veya enfekte vücut sıvılarının mukoza ya da hasarlı deri ile temasıdır. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Partikül boyutu ve düşme süreleri — 1-3 µm uzun süre asılı kalır; 10 µm 17 dk, 20 µm 4 dk, 100 µm 10 sn'de düşer; büyük damlacıklar >100 µm'dir (Knight ve ark., 1980).",
+      "B": "Standart önlem bileşenleri — El hijyeni, eldiven kullanımı, önlük-maske-yüz/göz koruyucu kullanımı, güvenli enjeksiyon ve kontamine ekipmanın uygun yönetimi.",
+      "C": "Önlük, maske, yüz/göz koruyucu — Kan-vücut sıvılarıyla veya kontamine yüzeyle temas ihtimali varsa önlük, sıçrama ihtimali varsa önlük+maske+yüz/göz koruyucu gerekir.",
+      "D": "Temas izolasyonu gereklilikleri — Eldiven ve önlük kullanımı; tek kişilik oda veya aynı mikroorganizmayla enfekte/kolonize hastaların kohortlanması; malzeme ortak kullanımını…",
+      "E": "Direk temas — Direkt temas ile mikroorganizma geçişi; kan veya enfekte vücut sıvılarının mukoza ya da hasarlı deri ile temasıdır."
+     },
+     "dogru": "E",
+     "aciklama": "Direkt temas ile mikroorganizma geçişi; kan veya enfekte vücut sıvılarının mukoza ya da hasarlı deri ile temasıdır. Direk temas izolasyonunda eldiven ve önlük korunma sağlar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Partikül boyutu ve düşme süreleri) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Standart önlem bileşenleri) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Önlük, maske, yüz/göz koruyucu) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Temas izolasyonu gereklilikleri) farklı bir klinik/bulguya aittir.",
+      "E": "Doğru. Direkt temas ile mikroorganizma geçişi; kan veya enfekte vücut sıvılarının mukoza ya da hasarlı deri ile temasıdır. Direk temas izolasyonunda eldiven ve önlük korunma sağlar."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "31 yaşında gebe hasta (12. gebelik haftası), penisilin alerjisi öyküsü de bulunan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Kontamine alet, yüzey veya kişi (sağlık personelinin elleri) aracılığıyla mikroorganizma taşınmasıdır. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mikroorganizmanın çevresel dayanıklılığı — Sıcaklık, nem, hava akımı, UV ışınlar ve kimyasallar etkilidir; M. tuberculosis ve mantar sporları dayanıklı, zarflı virüsler duyarlıdır.",
+      "B": "İndirek temas — Kontamine alet, yüzey veya kişi (sağlık personelinin elleri) aracılığıyla mikroorganizma taşınmasıdır.",
+      "C": "El hijyeni — Sabun ve su ile yıkama veya antiseptik ile sağlanır; gözle görülür kirlenme yoksa antiseptik uygundur.",
+      "D": "Güvenli enjeksiyon — İğneler kılıfına geçirilmemeli, ucu bükülmemeli (delici aletler dahil), kullanım sonrası delinmeye dirençli kaplara atılmalıdır.",
+      "E": "Damlacık izolasyonu gereklilikleri — Eldiven; önlük, maske, yüz ve göz koruyucusu (1 metreden yakın mesafe); farklı tanılı hastalar arasında en az 1 metre mesafe; nakilde hastay…"
+     },
+     "dogru": "B",
+     "aciklama": "Kontamine alet, yüzey veya kişi (sağlık personelinin elleri) aracılığıyla mikroorganizma taşınmasıdır. El hijyeni ve tıbbi malzemenin ortak kullanılmaması indirek teması önler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Mikroorganizmanın çevresel dayanıklılığı) farklı bir klinik/bulguya aittir.",
+      "B": "Doğru. Kontamine alet, yüzey veya kişi (sağlık personelinin elleri) aracılığıyla mikroorganizma taşınmasıdır. El hijyeni ve tıbbi malzemenin ortak kullanılmaması indirek teması önler.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (El hijyeni) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Güvenli enjeksiyon) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Damlacık izolasyonu gereklilikleri) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İndirek temas ile taşınmaya örnek hangisidir?",
+     "secenekler": {
+      "A": "Öksürükle saçılan damlacıkların solunması",
+      "B": "Aerosolün distal hava yollarına ulaşması",
+      "C": "Vektör ısırığıyla etkenin geçmesi",
+      "D": "Kontamine termometre ile etkenin geçmesi",
+      "E": "Kan sıçramasının göze gelmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Direk temasta kan veya enfekte vücut sıvıları mukoza ya da hasarlı deriyle doğrudan buluşur. İndirek temasta ise kontamine alet, yüzey veya eller aracılığıyla taşınma olur. Sağlık personelinin elleri indirek taşınmanın en önemli aracıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; damlacıkların mukozaya ulaşması damlacık yoludur.",
+      "B": "Yanlış; aerosolün distal yollara ulaşması solunum yoludur.",
+      "C": "Yanlış; vektör ısırığı vektör aracılı taşınmadır.",
+      "D": "Doğru; kontamine aletle taşınma indirek temasın tanımıdır.",
+      "E": "Yanlış; kanın mukozaya direkt buluşması direk temastır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Damlacık ve solunum yolu taşınması arasındaki fark hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Damlacık katı-sıvı-gaz karışımıdır",
+      "B": "Aerosol distal hava yollarına ulaşabilir",
+      "C": "Damlacık saatlerce havada asılı kalır",
+      "D": "Aerosol yalnızca göz mukozasını tutar",
+      "E": "Damlacık ve aerosol aynı yapıdır"
+     },
+     "dogru": "B",
+     "aciklama": "Damlacıklar katı-sıvı karışımı süspansiyondur; öksürme ve konuşmayla atılıp ağız, burun veya göz mukozasına ulaşır. Solunum yolunda ise katı-sıvı-gaz karışımı aerosol (biyoaerosol) oluşur ve damlacık çekirdekleri distal solunum yollarına kadar ulaşabilir. Bu fiziksel fark izolasyon tipini belirler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; damlacık süspansiyondur, aerosol gaz karışımıdır.",
+      "B": "Doğru; küçük partiküllü biyoaerosol distal hava yollarına ulaşır.",
+      "C": "Yanlış; büyük damlacıklar hızla yere düşer, asılı kalan aerosoldür.",
+      "D": "Yanlış; aerosol ağız, burun, göz ve distal yolları tutabilir.",
+      "E": "Yanlış; partikül boyutu ve ulaşım derinliği farklıdır."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -264,6 +473,110 @@
      "benzer_cikmis": [
       "16ad86ef48d4"
      ]
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "31 yaşında gebe hasta (12. gebelik haftası), tedaviye uyumu sorgulanan ve eş tedavisi açısından danışmanlık verilen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Damlacık katı-sıvı karışımı (süspansiyon), solunum ise katı-sıvı-gaz karışımı (aerosol) şeklindedir. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Katı-sıvı-gaz ayrımı — Damlacık katı-sıvı karışımı (süspansiyon), solunum ise katı-sıvı-gaz karışımı (aerosol) şeklindedir.",
+      "B": "Eldiven kullanımı — Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni s…",
+      "C": "Bulaş yoluna yönelik önlemler — Standart önlemlere ek olarak uygulanır; temas, damlacık ve solunum izolasyonu bu gruba girer.",
+      "D": "Solunum izolasyonu gereklilikleri — Eldiven, önlük, N95/FFP2 maske ve yüz/göz koruyucu; mümkünse negatif basınçlı oda; sürekli negatif basınç ve saatte 6-12 hava değişimi.",
+      "E": "KKE giyme sırası — El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu."
+     },
+     "dogru": "A",
+     "aciklama": "Damlacık katı-sıvı karışımı (süspansiyon), solunum ise katı-sıvı-gaz karışımı (aerosol) şeklindedir. Bu ayrım partikül davranışını ve uygun izolasyon tipini belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Damlacık katı-sıvı karışımı (süspansiyon), solunum ise katı-sıvı-gaz karışımı (aerosol) şeklindedir. Bu ayrım partikül davranışını ve uygun izolasyon tipini belirler.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Eldiven kullanımı) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Bulaş yoluna yönelik önlemler) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Solunum izolasyonu gereklilikleri) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (KKE giyme sırası) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "19 yaşında kadın hasta, gebelik ve laktasyon açısından özel değerlendirme gerektiren durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: 1-3 µm uzun süre asılı kalır; 10 µm 17 dk, 20 µm 4 dk, 100 µm 10 sn'de düşer; büyük damlacıklar >100 µm'dir (Knight ve ark., 1980). Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Önlük, maske, yüz/göz koruyucu — Kan-vücut sıvılarıyla veya kontamine yüzeyle temas ihtimali varsa önlük, sıçrama ihtimali varsa önlük+maske+yüz/göz koruyucu gerekir.",
+      "B": "Temas izolasyonu gereklilikleri — Eldiven ve önlük kullanımı; tek kişilik oda veya aynı mikroorganizmayla enfekte/kolonize hastaların kohortlanması; malzeme ortak kullanımını…",
+      "C": "Partikül boyutu ve düşme süreleri — 1-3 µm uzun süre asılı kalır; 10 µm 17 dk, 20 µm 4 dk, 100 µm 10 sn'de düşer; büyük damlacıklar >100 µm'dir (Knight ve ark., 1980).",
+      "D": "Solunum izolasyonu endikasyonları — Kızamık, su çiçeği, yaygın zona, akciğer veya larenks tüberkülozu aerosol ile bulaşan hastalıklardır.",
+      "E": "KKE çıkarma sırası — Eldiven çıkar → el hijyeni → önlük çıkar → el hijyeni → gözlük/yüz koruyucu çıkar → maske çıkar → el hijyeni."
+     },
+     "dogru": "C",
+     "aciklama": "1-3 µm uzun süre asılı kalır; 10 µm 17 dk, 20 µm 4 dk, 100 µm 10 sn'de düşer; büyük damlacıklar >100 µm'dir (Knight ve ark., 1980). Küçük partiküller havada uzun kaldığı için hava yolu ile bulaşmada önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Önlük, maske, yüz/göz koruyucu) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Temas izolasyonu gereklilikleri) farklı bir klinik/bulguya aittir.",
+      "C": "Doğru. 1-3 µm uzun süre asılı kalır; 10 µm 17 dk, 20 µm 4 dk, 100 µm 10 sn'de düşer; büyük damlacıklar >100 µm'dir (Knight ve ark., 1980). Küçük partiküller havada uzun kaldığı için hava yolu ile bulaşmada önemlidir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Solunum izolasyonu endikasyonları) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (KKE çıkarma sırası) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Partikül boyutu ve düşme süresi eşleştirmesi hangisinde doğrudur?",
+     "secenekler": {
+      "A": "1-3 µm partiküller 10 saniyede düşer",
+      "B": "100 µm partiküller saatlerce asılı kalır",
+      "C": "10 µm partiküller 4 dakikada düşer",
+      "D": "20 µm partiküller 17 dakikada düşer",
+      "E": "100 µm partiküller 10 saniyede düşer"
+     },
+     "dogru": "E",
+     "aciklama": "Büyük damlacıklar 100 mikrometreden büyüktür ve yaklaşık 10 saniyede yere düşer. Küçük partiküller ise havada uzun süre asılı kalır. Bu nedenle damlacık önlemlerinde 1 metre mesafe kuralı uygulanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; 1-3 µm partiküller uzun süre asılı kalır.",
+      "B": "Yanlış; 100 µm partiküller büyük damlacıktır ve hızla düşer.",
+      "C": "Yanlış; 17 dakikada düşen 10 µm partiküllerdir.",
+      "D": "Yanlış; 4 dakikada düşen 20 µm partiküllerdir.",
+      "E": "Doğru; büyük damlacıklar yerçekimiyle hızla yere düşer."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Damlacık ve aerosol tanımı ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Damlacık süspansiyon, aerosol gaz karışımıdır",
+      "B": "Damlacık gaz içinde dağılmış yapıdır",
+      "C": "Aerosol yalnızca sıvı içermektedir",
+      "D": "Süspansiyon gaz karışımı anlamına gelir",
+      "E": "Biyoaerosol katı parçacık içermez"
+     },
+     "dogru": "A",
+     "aciklama": "Damlacık katı-sıvı karışımı süspansiyondur ve mukozal salgıların öksürükle atılmasıyla oluşur. Aerosol ise bu süspansiyonun gaz içinde dağılmasıyla oluşan biyoaerosoldür. Damlacık çekirdekleri kuruyarak küçülür ve havada asılı kalabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; damlacık katı-sıvı, aerosol katı-sıvı-gaz karışımıdır.",
+      "B": "Yanlış; gaz içinde dağılan yapı aerosoldür.",
+      "C": "Yanlış; aerosol mikroorganizma içeren salgı süspansiyonu taşır.",
+      "D": "Yanlış; süspansiyon katı-sıvı karışımıdır.",
+      "E": "Yanlış; biyoaerosol mikroorganizma içeren partiküller taşır."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -366,6 +679,110 @@
       "e27485d2647f",
       "ebd6f39f398d"
      ]
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "19 yaşında kadın hasta, immünsüpresyon açısından ek risk taşıyan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Sıcaklık, nem, hava akımı, UV ışınlar ve kimyasallar etkilidir; M. tuberculosis ve mantar sporları dayanıklı, zarflı virüsler duyarlıdır. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bulaş yoluna yönelik önlemler — Standart önlemlere ek olarak uygulanır; temas, damlacık ve solunum izolasyonu bu gruba girer.",
+      "B": "Mikroorganizmanın çevresel dayanıklılığı — Sıcaklık, nem, hava akımı, UV ışınlar ve kimyasallar etkilidir; M. tuberculosis ve mantar sporları dayanıklı, zarflı virüsler duyarlıdır.",
+      "C": "Solunum izolasyonu gereklilikleri — Eldiven, önlük, N95/FFP2 maske ve yüz/göz koruyucu; mümkünse negatif basınçlı oda; sürekli negatif basınç ve saatte 6-12 hava değişimi.",
+      "D": "KKE giyme sırası — El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu.",
+      "E": "İzolasyon önlemlerinin karşılaştırılması — Standart: tüm hastalar; temas: temasla bulaşanlar + çok ilaç dirençli mikroorganizmalar; damlacık: öksürme/hapşırma/konuşma; solunum: hava y…"
+     },
+     "dogru": "B",
+     "aciklama": "Sıcaklık, nem, hava akımı, UV ışınlar ve kimyasallar etkilidir; M. tuberculosis ve mantar sporları dayanıklı, zarflı virüsler duyarlıdır. Çevresel şartlar mikroorganizmanın canlılık süresini ve bulaş riskini belirler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Bulaş yoluna yönelik önlemler) farklı bir klinik/bulguya aittir.",
+      "B": "Doğru. Sıcaklık, nem, hava akımı, UV ışınlar ve kimyasallar etkilidir; M. tuberculosis ve mantar sporları dayanıklı, zarflı virüsler duyarlıdır. Çevresel şartlar mikroorganizmanın canlılık süresini ve bulaş riskini belirler.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Solunum izolasyonu gereklilikleri) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (KKE giyme sırası) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İzolasyon önlemlerinin karşılaştırılması) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "44 yaşında erkek hasta, tekrarlayan atak öyküsü olan ve ayırıcı tanının netleştirilmesi gereken durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni sonrası yenilenir. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Solunum izolasyonu endikasyonları — Kızamık, su çiçeği, yaygın zona, akciğer veya larenks tüberkülozu aerosol ile bulaşan hastalıklardır.",
+      "B": "KKE çıkarma sırası — Eldiven çıkar → el hijyeni → önlük çıkar → el hijyeni → gözlük/yüz koruyucu çıkar → maske çıkar → el hijyeni.",
+      "C": "Enfeksiyon zinciri — Kaynak → çıkış kapısı → taşınma → giriş kapısı → duyarlı kişi sırasıyla ilerleyen döngüdür.",
+      "D": "Eldiven kullanımı — Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni s…",
+      "E": "Direk temas — Direkt temas ile mikroorganizma geçişi; kan veya enfekte vücut sıvılarının mukoza ya da hasarlı deri ile temasıdır."
+     },
+     "dogru": "D",
+     "aciklama": "Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni sonrası yenilenir. Eldiven el hijyeninin yerini almaz; giyme-çıkarma arasında hijyen şarttır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Solunum izolasyonu endikasyonları) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (KKE çıkarma sırası) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Enfeksiyon zinciri) farklı bir klinik/bulguya aittir.",
+      "D": "Doğru. Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni sonrası yenilenir. Eldiven el hijyeninin yerini almaz; giyme-çıkarma arasında hijyen şarttır.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Direk temas) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Mikroorganizmaların çevresel dayanıklılığı ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Tüm mikroorganizmalar çevreye eşit dayanıklıdır",
+      "B": "Mantar sporları çevreye dayanıklıdır",
+      "C": "Zarflı virüsler UV ışına dirençlidir",
+      "D": "Nem ve sıcaklık dayanıklılığı etkilemez",
+      "E": "Mycobacterium tuberculosis hızla çevrede ölür"
+     },
+     "dogru": "B",
+     "aciklama": "Sıcaklık, nem, hava akımı, ultraviyole ışınlar ve kimyasallar mikroorganizmanın çevrede canlı kalmasını etkiler. Mycobacterium tuberculosis ve mantar sporları çevresel şartlara dayanıklıdır. Zarflı virüsler ise sıcaklık, nem değişikliği ve UV ışınlara daha duyarlıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; dayanıklılık etkene göre değişir.",
+      "B": "Doğru; mantar sporları ve Mycobacterium tuberculosis çevresel şartlara dayanıklıdır.",
+      "C": "Yanlış; zarflı virüsler UV ve sıcaklık değişimine duyarlıdır.",
+      "D": "Yanlış; sıcaklık, nem ve hava akımı dayanıklılığı belirler.",
+      "E": "Yanlış; Mycobacterium tuberculosis çevreye dayanıklı etkenlerdendir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Çevresel faktörlerin mikroorganizmaya etkisi ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "UV ışınlar mikroorganizmayı korumaktadır",
+      "B": "Zarflı virüsler kimyasala dirençlidir",
+      "C": "Hava akımı bulaş riskini artırmaktadır",
+      "D": "Zarflı virüsler çevreye duyarlıdır",
+      "E": "Dezenfektanlar dayanıklılığı artırmaktadır"
+     },
+     "dogru": "D",
+     "aciklama": "Ultraviyole ışınlar, sıcaklık ve nem değişimleri ile kimyasallar mikroorganizmayı inaktive eder. Zarflı virüslerin lipid zarfı bu etkenlere karşı savunmasızdır. Bu duyarlılık, ortam havalandırması ve dezenfeksiyon önlemlerinin temelini oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; UV ışınlar mikroorganizmayı inaktive eden faktördür.",
+      "B": "Yanlış; zarflı virüsler kimyasallara ve çevreye duyarlıdır.",
+      "C": "Yanlış; uygun hava akımı ve değişimi ortam yükünü azaltır.",
+      "D": "Doğru; zarflı virüsler sıcaklık, nem ve UV değişimine duyarlıdır.",
+      "E": "Yanlış; kimyasallar mikroorganizmayı inaktive eder."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -479,6 +896,110 @@
       11
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "44 yaşında erkek hasta, komplike seyir açısından yakından izlenen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Tanımlanmış olan/olmayan enfekte kan ve vücut sıvıları ile bulaştan korunmak; tanıya bakılmaksızın tüm hastalarda uygulanır. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Damlacık izolasyonu gereklilikleri — Eldiven; önlük, maske, yüz ve göz koruyucusu (1 metreden yakın mesafe); farklı tanılı hastalar arasında en az 1 metre mesafe; nakilde hastay…",
+      "B": "Neisseria meningitidis bulaşı — Meningokok damlacık yoluyla bulaşır; aerosol ile bulaşan enfeksiyonlar arasında yer almaz.",
+      "C": "Standart önlemlerin amacı ve kapsamı — Tanımlanmış olan/olmayan enfekte kan ve vücut sıvıları ile bulaştan korunmak; tanıya bakılmaksızın tüm hastalarda uygulanır.",
+      "D": "Kohort uygulaması — Tek kişilik oda mümkün değilse aynı mikroorganizmayla enfekte veya kolonize hastaların aynı odaya yerleştirilmesidir.",
+      "E": "Canlı ve cansız kaynaklar — Canlı kaynaklar semptomatik/asemptomatik enfeksiyon, flora veya kolonizasyon (hasta, sağlık personeli, hasta yakını, ziyaretçi); cansız kayn…"
+     },
+     "dogru": "C",
+     "aciklama": "Tanımlanmış olan/olmayan enfekte kan ve vücut sıvıları ile bulaştan korunmak; tanıya bakılmaksızın tüm hastalarda uygulanır. Kan, tüm vücut sıvıları, bozulmuş cilt ve mukoza ile olası direk/indirek temas riskini kapsar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Damlacık izolasyonu gereklilikleri) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Neisseria meningitidis bulaşı) farklı bir klinik/bulguya aittir.",
+      "C": "Doğru. Tanımlanmış olan/olmayan enfekte kan ve vücut sıvıları ile bulaştan korunmak; tanıya bakılmaksızın tüm hastalarda uygulanır. Kan, tüm vücut sıvıları, bozulmuş cilt ve mukoza ile olası direk/indirek temas riskini kapsar.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Kohort uygulaması) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Canlı ve cansız kaynaklar) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "67 yaşında kadın hasta, penisilin alerjisi öyküsü de bulunan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: El hijyeni, eldiven kullanımı, önlük-maske-yüz/göz koruyucu kullanımı, güvenli enjeksiyon ve kontamine ekipmanın uygun yönetimi. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Solunum izolasyonu gereklilikleri — Eldiven, önlük, N95/FFP2 maske ve yüz/göz koruyucu; mümkünse negatif basınçlı oda; sürekli negatif basınç ve saatte 6-12 hava değişimi.",
+      "B": "KKE giyme sırası — El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu.",
+      "C": "İzolasyon önlemlerinin karşılaştırılması — Standart: tüm hastalar; temas: temasla bulaşanlar + çok ilaç dirençli mikroorganizmalar; damlacık: öksürme/hapşırma/konuşma; solunum: hava y…",
+      "D": "Duyarlı kişiyi etkileyen faktörler — Mikroorganizma yükü, virülans ve patojenite; immünite; kateter; eşlik eden hastalıklar (DM, HIV, CMV, malignite, organ nakli); ilaçlar (KT,…",
+      "E": "Standart önlem bileşenleri — El hijyeni, eldiven kullanımı, önlük-maske-yüz/göz koruyucu kullanımı, güvenli enjeksiyon ve kontamine ekipmanın uygun yönetimi."
+     },
+     "dogru": "E",
+     "aciklama": "El hijyeni, eldiven kullanımı, önlük-maske-yüz/göz koruyucu kullanımı, güvenli enjeksiyon ve kontamine ekipmanın uygun yönetimi. Bu bileşenler basamak basamak uygulandığında bulaş önlenir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Solunum izolasyonu gereklilikleri) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (KKE giyme sırası) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İzolasyon önlemlerinin karşılaştırılması) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Duyarlı kişiyi etkileyen faktörler) farklı bir klinik/bulguya aittir.",
+      "E": "Doğru. El hijyeni, eldiven kullanımı, önlük-maske-yüz/göz koruyucu kullanımı, güvenli enjeksiyon ve kontamine ekipmanın uygun yönetimi. Bu bileşenler basamak basamak uygulandığında bulaş önlenir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Standart önlemlerin kapsamı ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Tüm hastalarda tanıya bakılmaksızın uygulanır",
+      "B": "Yalnızca tanılı enfekte hastalarda uygulanır",
+      "C": "Yalnızca ameliyathane ortamında uygulanır",
+      "D": "Yalnızca kan temasında gerekli değildir",
+      "E": "Sağlam deriyle temasta da uygulanır"
+     },
+     "dogru": "A",
+     "aciklama": "Standart önlemlerin temel amacı tanımlanmış veya tanımlanmamış enfekte kan ve vücut sıvılarıyla bulaştan korunmaktır. Olası enfeksiyon tanısına bakılmaksızın tüm hastalarda uygulanır. Tüm kan, vücut sıvıları, bütünlüğü bozulmuş cilt ve mukoza temasını kapsar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; standart önlemler her hastada, her temasta geçerlidir.",
+      "B": "Yanlış; tanı bilinmese bile tüm hastalarda uygulanır.",
+      "C": "Yanlış; tüm klinik alanlarda uygulanır.",
+      "D": "Yanlış; kan teması standart önlemlerin ana kapsamıdır.",
+      "E": "Yanlış; kapsam bozulmuş cilt ve mukoza ile kan ve vücut sıvılarıdır."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Standart önlem bileşenleri ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca eldiven kullanımı yeterlidir",
+      "B": "Güvenli enjeksiyon standart önlem değildir",
+      "C": "Sıçrama riskinde maske ve gözlük gerekir",
+      "D": "Kontamine ekipman yönetimi gerekmez",
+      "E": "Önlük kullanımı standart önlemde yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Standart önlem bileşenleri eldiven kullanımı, önlük, maske, yüz ve göz koruyucusu, güvenli enjeksiyon ile kontamine ekipman ve araçların uygun yönetimidir. Kan ve vücut sıvılarının sıçrama ihtimalinde önlük, maske ve göz koruyucu birlikte kullanılır. Bu bileşenler temas riskine göre seçilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; eldiven tek başına yeterli değildir, tüm bileşenler gerekir.",
+      "B": "Yanlış; güvenli enjeksiyon standart önlem bileşenlerindendir.",
+      "C": "Doğru; sıçrama ihtimalinde önlük, maske ve yüz-göz koruyucu kullanılır.",
+      "D": "Yanlış; kontamine ekipmanın uygun yönetimi zorunludur.",
+      "E": "Yanlış; temas ihtimalinde önlük giyilmesi gerekir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -577,6 +1098,110 @@
       15
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "67 yaşında kadın hasta, tedaviye uyumu sorgulanan ve eş tedavisi açısından danışmanlık verilen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Sabun ve su ile yıkama veya antiseptik ile sağlanır; gözle görülür kirlenme yoksa antiseptik uygundur. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Neisseria meningitidis bulaşı — Meningokok damlacık yoluyla bulaşır; aerosol ile bulaşan enfeksiyonlar arasında yer almaz.",
+      "B": "Kohort uygulaması — Tek kişilik oda mümkün değilse aynı mikroorganizmayla enfekte veya kolonize hastaların aynı odaya yerleştirilmesidir.",
+      "C": "Canlı ve cansız kaynaklar — Canlı kaynaklar semptomatik/asemptomatik enfeksiyon, flora veya kolonizasyon (hasta, sağlık personeli, hasta yakını, ziyaretçi); cansız kayn…",
+      "D": "El hijyeni — Sabun ve su ile yıkama veya antiseptik ile sağlanır; gözle görülür kirlenme yoksa antiseptik uygundur.",
+      "E": "İndirek temas — Kontamine alet, yüzey veya kişi (sağlık personelinin elleri) aracılığıyla mikroorganizma taşınmasıdır."
+     },
+     "dogru": "D",
+     "aciklama": "Sabun ve su ile yıkama veya antiseptik ile sağlanır; gözle görülür kirlenme yoksa antiseptik uygundur. Eldiven giymeden önce ve çıkardıktan sonra, farklı hastaya geçmeden önce el hijyeni sağlanmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Neisseria meningitidis bulaşı) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Kohort uygulaması) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Canlı ve cansız kaynaklar) farklı bir klinik/bulguya aittir.",
+      "D": "Doğru. Sabun ve su ile yıkama veya antiseptik ile sağlanır; gözle görülür kirlenme yoksa antiseptik uygundur. Eldiven giymeden önce ve çıkardıktan sonra, farklı hastaya geçmeden önce el hijyeni sağlanmalıdır.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İndirek temas) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "22 yaşında erkek hasta, gebelik ve laktasyon açısından özel değerlendirme gerektiren durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni sonrası yenilenir. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Eldiven kullanımı — Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni s…",
+      "B": "KKE giyme sırası — El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu.",
+      "C": "İzolasyon önlemlerinin karşılaştırılması — Standart: tüm hastalar; temas: temasla bulaşanlar + çok ilaç dirençli mikroorganizmalar; damlacık: öksürme/hapşırma/konuşma; solunum: hava y…",
+      "D": "Duyarlı kişiyi etkileyen faktörler — Mikroorganizma yükü, virülans ve patojenite; immünite; kateter; eşlik eden hastalıklar (DM, HIV, CMV, malignite, organ nakli); ilaçlar (KT,…",
+      "E": "Damlacık yolu — Mikroorganizma içeren mukozal salgı süspansiyonunun solunum yolundan atılıp ağız, burun veya göz mukozasına geçmesidir."
+     },
+     "dogru": "A",
+     "aciklama": "Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni sonrası yenilenir. Eldiven el hijyeninin yerini almaz; giyme-çıkarma arasında hijyen şarttır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni sonrası yenilenir. Eldiven el hijyeninin yerini almaz; giyme-çıkarma arasında hijyen şarttır.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (KKE giyme sırası) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İzolasyon önlemlerinin karşılaştırılması) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Duyarlı kişiyi etkileyen faktörler) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Damlacık yolu) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "El hijyeni ve eldiven kullanımı ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Eldiven varken el hijyenine gerek yoktur",
+      "B": "Eldiven öncesi ve sonrası hijyen gerekir",
+      "C": "Kirli-temiz geçişte eldiven değiştirilmez",
+      "D": "Farklı hastada aynı eldiven kullanılır",
+      "E": "Antiseptik hiçbir durumda kullanılmaz"
+     },
+     "dogru": "B",
+     "aciklama": "El hijyeni eldiven giymeden önce ve çıkardıktan sonra sağlanmalıdır. Aynı hastada kirli bölgeden temiz bölgeye geçerken eldiven çıkarılıp el hijyeni sağlanıp yeni eldiven giyilir. Gözle görülür kirlenme yoksa antiseptikle hijyen uygundur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; eldiven öncesi ve sonrası el hijyeni zorunludur.",
+      "B": "Doğru; eldiven mikro geçirgenliği ve kontaminasyon riski taşır.",
+      "C": "Yanlış; kirli bölgeden temiz bölgeye geçişte eldiven değiştirilir.",
+      "D": "Yanlış; hastalar arası geçişte eldiven değiştirilip hijyen sağlanır.",
+      "E": "Yanlış; gözle görülür kirlenme yoksa antiseptik uygundur."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Kişisel koruyucu ekipman kullanımı ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Temas ihtimalinde koruyucuya gerek yoktur",
+      "B": "Sıçrama riskinde yalnızca eldiven yeterlidir",
+      "C": "Önlük yalnızca ameliyathanede giyilir",
+      "D": "Maske temas önleminde yasaklanmıştır",
+      "E": "Sıçrama riskinde göz koruyucu gerekir"
+     },
+     "dogru": "E",
+     "aciklama": "Kan ve vücut sıvılarıyla temas ihtimalinde önlük giyilir. Sıçrama ihtimali varsa önlüğe ek olarak maske ile yüz ve göz koruyucu kullanılır. Koruyucu seçimi temasın türüne ve sıçrama riskine göre belirlenir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; temas ihtimalinde önlük giyilmesi gerekir.",
+      "B": "Yanlış; sıçramada maske ve yüz-göz koruyucu da gerekir.",
+      "C": "Yanlış; önlük tüm alanlarda temas ihtimalinde kullanılır.",
+      "D": "Yanlış; maske sıçrama riskinde standart önlem bileşenidir.",
+      "E": "Doğru; sıçrayan sıvıların göze ulaşması mukozal bulaşa yol açar."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -657,6 +1282,110 @@
       "C": "Doğru ifade; bu nedenle doğru seçenek değildir.",
       "D": "Doğru ifade; bu nedenle doğru seçenek değildir.",
       "E": "Yanlış ifade (aranan cevap): kılıfa geri takma önerilmez."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "22 yaşında erkek hasta, immünsüpresyon açısından ek risk taşıyan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: İğneler kılıfına geçirilmemeli, ucu bükülmemeli (delici aletler dahil), kullanım sonrası delinmeye dirençli kaplara atılmalıdır. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İzolasyon önlemlerinin karşılaştırılması — Standart: tüm hastalar; temas: temasla bulaşanlar + çok ilaç dirençli mikroorganizmalar; damlacık: öksürme/hapşırma/konuşma; solunum: hava y…",
+      "B": "Duyarlı kişiyi etkileyen faktörler — Mikroorganizma yükü, virülans ve patojenite; immünite; kateter; eşlik eden hastalıklar (DM, HIV, CMV, malignite, organ nakli); ilaçlar (KT,…",
+      "C": "Damlacık yolu — Mikroorganizma içeren mukozal salgı süspansiyonunun solunum yolundan atılıp ağız, burun veya göz mukozasına geçmesidir.",
+      "D": "Partikül boyutu ve düşme süreleri — 1-3 µm uzun süre asılı kalır; 10 µm 17 dk, 20 µm 4 dk, 100 µm 10 sn'de düşer; büyük damlacıklar >100 µm'dir (Knight ve ark., 1980).",
+      "E": "Güvenli enjeksiyon — İğneler kılıfına geçirilmemeli, ucu bükülmemeli (delici aletler dahil), kullanım sonrası delinmeye dirençli kaplara atılmalıdır."
+     },
+     "dogru": "E",
+     "aciklama": "İğneler kılıfına geçirilmemeli, ucu bükülmemeli (delici aletler dahil), kullanım sonrası delinmeye dirençli kaplara atılmalıdır. Delici-kesici alet yaralanmaları ve kan yoluyla bulaşan enfeksiyonlar önlenir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İzolasyon önlemlerinin karşılaştırılması) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Duyarlı kişiyi etkileyen faktörler) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Damlacık yolu) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Partikül boyutu ve düşme süreleri) farklı bir klinik/bulguya aittir.",
+      "E": "Doğru. İğneler kılıfına geçirilmemeli, ucu bükülmemeli (delici aletler dahil), kullanım sonrası delinmeye dirençli kaplara atılmalıdır. Delici-kesici alet yaralanmaları ve kan yoluyla bulaşan enfeksiyonlar önlenir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "40 yaşında kadın hasta, tekrarlayan atak öyküsü olan ve ayırıcı tanının netleştirilmesi gereken durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Solunum (hava yolu) — Mikroorganizma içeren salgı süspansiyonunun gaz içinde (aerosol/biyoaerosol) dağılıp distal solunum yollarına kadar geçmesidir; damlacık çek…",
+      "B": "KKE giyme sırası — El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu.",
+      "C": "Mikroorganizmanın çevresel dayanıklılığı — Sıcaklık, nem, hava akımı, UV ışınlar ve kimyasallar etkilidir; M. tuberculosis ve mantar sporları dayanıklı, zarflı virüsler duyarlıdır.",
+      "D": "El hijyeni — Sabun ve su ile yıkama veya antiseptik ile sağlanır; gözle görülür kirlenme yoksa antiseptik uygundur.",
+      "E": "Güvenli enjeksiyon — İğneler kılıfına geçirilmemeli, ucu bükülmemeli (delici aletler dahil), kullanım sonrası delinmeye dirençli kaplara atılmalıdır."
+     },
+     "dogru": "B",
+     "aciklama": "El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu. Doğru sıra kontaminasyonu ve kendi kendine bulaşı önler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Solunum (hava yolu)) farklı bir klinik/bulguya aittir.",
+      "B": "Doğru. El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu. Doğru sıra kontaminasyonu ve kendi kendine bulaşı önler.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Mikroorganizmanın çevresel dayanıklılığı) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (El hijyeni) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Güvenli enjeksiyon) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Güvenli enjeksiyon kurallarından hangisi doğrudur?",
+     "secenekler": {
+      "A": "İğneler kılıfına geçirilmemelidir",
+      "B": "Kullanılmış iğne kılıfına takılmalıdır",
+      "C": "İğne ucu bükülerek atılmalıdır",
+      "D": "İğneler normal çöpe atılmalıdır",
+      "E": "Kapak elle kapatılarak taşınmalıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Güvenli enjeksiyonda iğneler kılıfına geçirilmez ve ucu bükülmez. Kullanım sonrası iğneler delinmeye dirençli kaplarda biriktirilir. Kılıfa geçirme (recapping) iğne batması yaralanmalarının en önemli nedenidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; kılıfa geçirme iğne batması riskini artırdığı için yasaklanmıştır.",
+      "B": "Yanlış; kullanılmış iğnenin kılıfa takılması yasaktır.",
+      "C": "Yanlış; ucu bükmek yaralanma ve sıçrama riski oluşturur.",
+      "D": "Yanlış; delici aletler delinmeye dirençli kutuya atılır.",
+      "E": "Yanlış; kapak elle kapatılmamalı, güvenli kap kullanılmalıdır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Delici-kesici alet yönetimi ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Delici aletler cepte taşınmalıdır",
+      "B": "Kesici aletler lavaboda biriktirilmelidir",
+      "C": "Atık kapları delinmeye duyarlı olmalıdır",
+      "D": "Delici aletler dirençli kapta biriktirilir",
+      "E": "İğneler yatak başına bırakılmalıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Delici ve kesici aletler kullanım sonrası delinmeye dirençli kaplarda biriktirilir. Bu kaplar delinmeye dayanıklı duvarlarıyla iğne batmalarını önler. Kap dolmadan güvenli şekilde kapatılıp tıbbi atık akışına verilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; cepte taşıma batma ve bulaş riski oluşturur.",
+      "B": "Yanlış; lavaboda biriktirme yaralanma riski oluşturur.",
+      "C": "Yanlış; kaplar delinmeye dirençli olmak zorundadır.",
+      "D": "Doğru; dirençli kap iğne batması yaralanmalarını önler.",
+      "E": "Yanlış; yatak başında bırakma başkalarına batma riski oluşturur."
      },
      "bilgi": [
       16
@@ -752,6 +1481,110 @@
      "benzer_cikmis": [
       "f3525a1ca5c5"
      ]
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "40 yaşında kadın hasta, komplike seyir açısından yakından izlenen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Standart önlemlere ek olarak uygulanır; temas, damlacık ve solunum izolasyonu bu gruba girer. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bulaş yoluna yönelik önlemler — Standart önlemlere ek olarak uygulanır; temas, damlacık ve solunum izolasyonu bu gruba girer.",
+      "B": "Canlı ve cansız kaynaklar — Canlı kaynaklar semptomatik/asemptomatik enfeksiyon, flora veya kolonizasyon (hasta, sağlık personeli, hasta yakını, ziyaretçi); cansız kayn…",
+      "C": "İndirek temas — Kontamine alet, yüzey veya kişi (sağlık personelinin elleri) aracılığıyla mikroorganizma taşınmasıdır.",
+      "D": "Katı-sıvı-gaz ayrımı — Damlacık katı-sıvı karışımı (süspansiyon), solunum ise katı-sıvı-gaz karışımı (aerosol) şeklindedir.",
+      "E": "Standart önlemlerin amacı ve kapsamı — Tanımlanmış olan/olmayan enfekte kan ve vücut sıvıları ile bulaştan korunmak; tanıya bakılmaksızın tüm hastalarda uygulanır."
+     },
+     "dogru": "A",
+     "aciklama": "Standart önlemlere ek olarak uygulanır; temas, damlacık ve solunum izolasyonu bu gruba girer. Önlem, bulaş yoluna ve mikroorganizmanın direncine göre seçilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Standart önlemlere ek olarak uygulanır; temas, damlacık ve solunum izolasyonu bu gruba girer. Önlem, bulaş yoluna ve mikroorganizmanın direncine göre seçilir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Canlı ve cansız kaynaklar) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İndirek temas) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Katı-sıvı-gaz ayrımı) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Standart önlemlerin amacı ve kapsamı) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "8 yaşındaki kız hasta, penisilin alerjisi öyküsü de bulunan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Eldiven ve önlük kullanımı; tek kişilik oda veya aynı mikroorganizmayla enfekte/kolonize hastaların kohortlanması; malzeme ortak kullanımının önlenmesi; KKE'nin odadan ayrılmadan çıkarılması; odadan sonra el hijyeni. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Duyarlı kişiyi etkileyen faktörler — Mikroorganizma yükü, virülans ve patojenite; immünite; kateter; eşlik eden hastalıklar (DM, HIV, CMV, malignite, organ nakli); ilaçlar (KT,…",
+      "B": "Damlacık yolu — Mikroorganizma içeren mukozal salgı süspansiyonunun solunum yolundan atılıp ağız, burun veya göz mukozasına geçmesidir.",
+      "C": "Temas izolasyonu gereklilikleri — Eldiven ve önlük kullanımı; tek kişilik oda veya aynı mikroorganizmayla enfekte/kolonize hastaların kohortlanması; malzeme ortak kullanımını…",
+      "D": "Partikül boyutu ve düşme süreleri — 1-3 µm uzun süre asılı kalır; 10 µm 17 dk, 20 µm 4 dk, 100 µm 10 sn'de düşer; büyük damlacıklar >100 µm'dir (Knight ve ark., 1980).",
+      "E": "Standart önlem bileşenleri — El hijyeni, eldiven kullanımı, önlük-maske-yüz/göz koruyucu kullanımı, güvenli enjeksiyon ve kontamine ekipmanın uygun yönetimi."
+     },
+     "dogru": "C",
+     "aciklama": "Eldiven ve önlük kullanımı; tek kişilik oda veya aynı mikroorganizmayla enfekte/kolonize hastaların kohortlanması; malzeme ortak kullanımının önlenmesi; KKE'nin odadan ayrılmadan çıkarılması; odadan sonra el hijyeni. Çok ilaç direnci olan mikroorganizmalar ve enterik enfeksiyonlar için endikedir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Duyarlı kişiyi etkileyen faktörler) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Damlacık yolu) farklı bir klinik/bulguya aittir.",
+      "C": "Doğru. Eldiven ve önlük kullanımı; tek kişilik oda veya aynı mikroorganizmayla enfekte/kolonize hastaların kohortlanması; malzeme ortak kullanımının önlenmesi; KKE'nin odadan ayrılmadan çıkarılması; odadan sonra el hijyeni. Çok ilaç direnci olan mikroorganizmalar ve enterik enfeksiyonlar için endikedir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Partikül boyutu ve düşme süreleri) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Standart önlem bileşenleri) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Temas izolasyonu ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Standart önlemlerin yerine uygulanır",
+      "B": "Standart önlemlere ek olarak uygulanır",
+      "C": "Eldiven kullanımını gerektirmemektedir",
+      "D": "Kohort uygulaması kesinlikle yasaklanmıştır",
+      "E": "KKE odadan sonra çıkarılmaktadır"
+     },
+     "dogru": "B",
+     "aciklama": "Temas izolasyonu standart önlemlere ek olarak uygulanır ve eldiven ile önlük kullanımını gerektirir. Hasta tek kişilik odaya yatırılır; mümkün değilse aynı mikroorganizmayla enfekte hastalar aynı odaya alınır (kohort). Kişisel koruyucular odadan ayrılmadan çıkarılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bulaş önlemleri standart önlemlere eklenir, yerine geçmez.",
+      "B": "Doğru; temas izolasyonu standart önlemler üzerine ek bariyerler koyar.",
+      "C": "Yanlış; temas izolasyonunda eldiven ve önlük zorunludur.",
+      "D": "Yanlış; aynı etkenli hastaların bir arada yatırılması kohorttur ve uygundur.",
+      "E": "Yanlış; koruyucular odadan ayrılmadan çıkarılır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Solunum izolasyonunun gereklilikleri hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Cerrahi maske yeterli koruma sağlar",
+      "B": "Pozitif basınçlı oda kullanılmaktadır",
+      "C": "N95 maske ve negatif basınç gerekir",
+      "D": "Hava değişimi saatte bir yapılmaktadır",
+      "E": "Göz koruyucuya hiç gerek yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Solunum izolasyonunda hasta negatif basınçlı odada izlenir ve N95/FFP2 maske kullanılır. Koridordan odaya sürekli negatif basınçla saatte 6-12 kez hava değişimi sağlanır. Aerosol oluşturan işlemlerde maskeye ek olarak gözlük ve yüz koruyucu kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; aerosol için N95/FFP2 gerekir, cerrahi maske damlacık içindir.",
+      "B": "Yanlış; etkenin koridora yayılmaması için negatif basınç gerekir.",
+      "C": "Doğru; küçük partiküllü aerosoller ancak bu koşullarda tutulur.",
+      "D": "Yanlış; saatte 6-12 kez hava değişimi sağlanır.",
+      "E": "Yanlış; aerosol işlemlerinde gözlük ve yüz koruyucu kullanılır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -856,6 +1689,112 @@
      "benzer_cikmis": [
       "16ad86ef48d4"
      ]
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "8 yaşındaki kız hasta, tedaviye uyumu sorgulanan ve eş tedavisi açısından danışmanlık verilen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Kızamık, su çiçeği, yaygın zona, akciğer veya larenks tüberkülozu aerosol ile bulaşan hastalıklardır. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Solunum (hava yolu) — Mikroorganizma içeren salgı süspansiyonunun gaz içinde (aerosol/biyoaerosol) dağılıp distal solunum yollarına kadar geçmesidir; damlacık çek…",
+      "B": "Solunum izolasyonu endikasyonları — Kızamık, su çiçeği, yaygın zona, akciğer veya larenks tüberkülozu aerosol ile bulaşan hastalıklardır.",
+      "C": "Mikroorganizmanın çevresel dayanıklılığı — Sıcaklık, nem, hava akımı, UV ışınlar ve kimyasallar etkilidir; M. tuberculosis ve mantar sporları dayanıklı, zarflı virüsler duyarlıdır.",
+      "D": "El hijyeni — Sabun ve su ile yıkama veya antiseptik ile sağlanır; gözle görülür kirlenme yoksa antiseptik uygundur.",
+      "E": "Güvenli enjeksiyon — İğneler kılıfına geçirilmemeli, ucu bükülmemeli (delici aletler dahil), kullanım sonrası delinmeye dirençli kaplara atılmalıdır."
+     },
+     "dogru": "B",
+     "aciklama": "Kızamık, su çiçeği, yaygın zona, akciğer veya larenks tüberkülozu aerosol ile bulaşan hastalıklardır. Bu enfeksiyonlar N95/FFP2 ve negatif basınçlı oda gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Solunum (hava yolu)) farklı bir klinik/bulguya aittir.",
+      "B": "Doğru. Kızamık, su çiçeği, yaygın zona, akciğer veya larenks tüberkülozu aerosol ile bulaşan hastalıklardır. Bu enfeksiyonlar N95/FFP2 ve negatif basınçlı oda gerektirir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Mikroorganizmanın çevresel dayanıklılığı) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (El hijyeni) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Güvenli enjeksiyon) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "6 yaşındaki erkek hasta, gebelik ve laktasyon açısından özel değerlendirme gerektiren durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Meningokok damlacık yoluyla bulaşır; aerosol ile bulaşan enfeksiyonlar arasında yer almaz. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Katı-sıvı-gaz ayrımı — Damlacık katı-sıvı karışımı (süspansiyon), solunum ise katı-sıvı-gaz karışımı (aerosol) şeklindedir.",
+      "B": "Standart önlemlerin amacı ve kapsamı — Tanımlanmış olan/olmayan enfekte kan ve vücut sıvıları ile bulaştan korunmak; tanıya bakılmaksızın tüm hastalarda uygulanır.",
+      "C": "Eldiven kullanımı — Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni s…",
+      "D": "Neisseria meningitidis bulaşı — Meningokok damlacık yoluyla bulaşır; aerosol ile bulaşan enfeksiyonlar arasında yer almaz.",
+      "E": "Bulaş yoluna yönelik önlemler — Standart önlemlere ek olarak uygulanır; temas, damlacık ve solunum izolasyonu bu gruba girer."
+     },
+     "dogru": "D",
+     "aciklama": "Meningokok damlacık yoluyla bulaşır; aerosol ile bulaşan enfeksiyonlar arasında yer almaz. Damlacık izolasyonu gerektirir, solunum izolasyonu gerektirmez.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Katı-sıvı-gaz ayrımı) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Standart önlemlerin amacı ve kapsamı) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Eldiven kullanımı) farklı bir klinik/bulguya aittir.",
+      "D": "Doğru. Meningokok damlacık yoluyla bulaşır; aerosol ile bulaşan enfeksiyonlar arasında yer almaz. Damlacık izolasyonu gerektirir, solunum izolasyonu gerektirmez.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Bulaş yoluna yönelik önlemler) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Solunum izolasyonu endikasyonu olan hastalık hangisidir?",
+     "secenekler": {
+      "A": "Menenjit etkeni solunum izolasyonu gerektirir",
+      "B": "Kızamık damlacık izolasyonu gerektirir",
+      "C": "Su çiçeği temas izolasyonu gerektirir",
+      "D": "Akciğer tüberkülozu standart önlemle izlenir",
+      "E": "Kızamık solunum izolasyonu gerektirir"
+     },
+     "dogru": "E",
+     "aciklama": "Solunum izolasyonu kızamık, su çiçeği, yaygın zona ile akciğer veya larenks tüberkülozunda uygulanır. Bu hastalıklar aerosol yoluyla distal hava yollarına ulaşabilen etkenler yapar. Neisseria meningitidis ise damlacık yoluyla bulaşır ve damlacık izolasyonu gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; Neisseria meningitidis damlacık yoluyla bulaşır.",
+      "B": "Yanlış; kızamık aerosol yoluyla bulaşır, solunum izolasyonu gerekir.",
+      "C": "Yanlış; su çiçeği aerosol yoluyla bulaşır, solunum izolasyonu gerekir.",
+      "D": "Yanlış; akciğer tüberkülozu solunum izolasyonu endikasyonudur.",
+      "E": "Doğru; kızamık virüsü aerosol oluşturur ve negatif basınçlı oda gerektirir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Damlacık izolasyonunda transport kuralı hangisidir?",
+     "secenekler": {
+      "A": "Nakilde hastaya cerrahi maske takılır",
+      "B": "Yakın temasta koruyucuya gerek yoktur",
+      "C": "Hastalar arası mesafe 10 cm yeterlidir",
+      "D": "Nakilde hastaya N95 takılması zorunludur",
+      "E": "Maske yalnızca sağlık personeline takılır"
+     },
+     "dogru": "A",
+     "aciklama": "Damlacık izolasyonunda 1 metreden yakın mesafede önlük, maske ve göz koruyucu kullanılır. Hastanın transportu gerektiğinde hastaya cerrahi maske takılır. Farklı tanılı hastalar aynı odadaysa aralarında en az 1 metre mesafe bırakılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru; cerrahi maske damlacıkların çevreye saçılmasını engeller.",
+      "B": "Yanlış; 1 metreden yakın çalışırken koruyucu gerekir.",
+      "C": "Yanlış; farklı tanılılarda en az 1 metre mesafe gerekir.",
+      "D": "Yanlış; nakilde hastaya cerrahi maske yeterlidir, N95 personele aittir.",
+      "E": "Yanlış; transportta maske hastaya takılır."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": [
+      "16ad86ef48d4"
+     ]
     }
    ],
    "ilgili_cikmis": [
@@ -954,12 +1893,113 @@
       24
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k10-q04",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "6 yaşındaki erkek hasta, immünsüpresyon açısından ek risk taşıyan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mikroorganizmanın çevresel dayanıklılığı — Sıcaklık, nem, hava akımı, UV ışınlar ve kimyasallar etkilidir; M. tuberculosis ve mantar sporları dayanıklı, zarflı virüsler duyarlıdır.",
+      "B": "El hijyeni — Sabun ve su ile yıkama veya antiseptik ile sağlanır; gözle görülür kirlenme yoksa antiseptik uygundur.",
+      "C": "KKE giyme sırası — El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu.",
+      "D": "Güvenli enjeksiyon — İğneler kılıfına geçirilmemeli, ucu bükülmemeli (delici aletler dahil), kullanım sonrası delinmeye dirençli kaplara atılmalıdır.",
+      "E": "Damlacık izolasyonu gereklilikleri — Eldiven; önlük, maske, yüz ve göz koruyucusu (1 metreden yakın mesafe); farklı tanılı hastalar arasında en az 1 metre mesafe; nakilde hastay…"
+     },
+     "dogru": "C",
+     "aciklama": "El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu. Doğru sıra kontaminasyonu ve kendi kendine bulaşı önler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Mikroorganizmanın çevresel dayanıklılığı) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (El hijyeni) farklı bir klinik/bulguya aittir.",
+      "C": "Doğru. El hijyeni → önlük → eldiven → (solunum izolasyonunda N95 maske) → gözlük/yüz koruyucu. Doğru sıra kontaminasyonu ve kendi kendine bulaşı önler.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Güvenli enjeksiyon) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Damlacık izolasyonu gereklilikleri) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k10-q05",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "58 yaşında diyabetik erkek hasta, tekrarlayan atak öyküsü olan ve ayırıcı tanının netleştirilmesi gereken durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Eldiven çıkar → el hijyeni → önlük çıkar → el hijyeni → gözlük/yüz koruyucu çıkar → maske çıkar → el hijyeni. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Standart önlemlerin amacı ve kapsamı — Tanımlanmış olan/olmayan enfekte kan ve vücut sıvıları ile bulaştan korunmak; tanıya bakılmaksızın tüm hastalarda uygulanır.",
+      "B": "Eldiven kullanımı — Temas öncesi/sonrası, aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı hastaya geçmeden önce eldiven çıkarılıp el hijyeni s…",
+      "C": "Bulaş yoluna yönelik önlemler — Standart önlemlere ek olarak uygulanır; temas, damlacık ve solunum izolasyonu bu gruba girer.",
+      "D": "Solunum izolasyonu gereklilikleri — Eldiven, önlük, N95/FFP2 maske ve yüz/göz koruyucu; mümkünse negatif basınçlı oda; sürekli negatif basınç ve saatte 6-12 hava değişimi.",
+      "E": "KKE çıkarma sırası — Eldiven çıkar → el hijyeni → önlük çıkar → el hijyeni → gözlük/yüz koruyucu çıkar → maske çıkar → el hijyeni."
+     },
+     "dogru": "E",
+     "aciklama": "Eldiven çıkar → el hijyeni → önlük çıkar → el hijyeni → gözlük/yüz koruyucu çıkar → maske çıkar → el hijyeni. Hasta alanından ayrılırken uygulanır; her basamak arası el hijyeni esastır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Standart önlemlerin amacı ve kapsamı) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Eldiven kullanımı) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Bulaş yoluna yönelik önlemler) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Solunum izolasyonu gereklilikleri) farklı bir klinik/bulguya aittir.",
+      "E": "Doğru. Eldiven çıkar → el hijyeni → önlük çıkar → el hijyeni → gözlük/yüz koruyucu çıkar → maske çıkar → el hijyeni. Hasta alanından ayrılırken uygulanır; her basamak arası el hijyeni esastır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k10-q06",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Kişisel koruyucu ekipmanın giyilme sırası hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Maske, eldiven, önlük, gözlük sırası",
+      "B": "Eldiven, maske, önlük, hijyen sırası",
+      "C": "Gözlük, önlük, eldiven, maske sırası",
+      "D": "Hijyen, önlük, eldiven, maske sırası",
+      "E": "Önlük, maske, hijyen, eldiven sırası"
+     },
+     "dogru": "D",
+     "aciklama": "Giyilme sırası el hijyeni, önlük, eldiven, maske ve gözlük/yüz koruyucudur. Bu sıra önce vücut ve ellerin kapatılıp sonra yüz bariyerinin tamamlanması mantığına dayanır. Çıkarmada ise en kirli kabul edilen eldivenden başlanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; maske en son takılır, hijyen en başta yapılır.",
+      "B": "Yanlış; el hijyeni giyilmenin ilk basamağıdır.",
+      "C": "Yanlış; gözlük en son takılır.",
+      "D": "Doğru; önce el hijyeni, sonra önlük, eldiven, maske ve gözlük gelir.",
+      "E": "Yanlış; el hijyeni atlanamaz ve ilk sırada yapılır."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-36-izolasyon-yontemleri-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Kişisel koruyucu ekipmanın çıkarılma sırası ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Önce maske, sonra eldiven çıkarılır",
+      "B": "Önce eldiven çıkarılıp hijyen sağlanır",
+      "C": "Önlük en son çıkarılmaktadır",
+      "D": "Çıkarma sonrası hijyene gerek yoktur",
+      "E": "Tüm ekipman birlikte çıkarılmaktadır"
+     },
+     "dogru": "B",
+     "aciklama": "Hasta alanından ayrılırken önce eldiven çıkarılır, el hijyeni sağlanır, önlük çıkarılır, tekrar el hijyeni sağlanır, gözlük ve maske çıkarılıp son kez el hijyeni yapılır. En kirli kabul edilen eldivenden başlanması kontaminasyonun yüze taşınmasını engeller. Her çıkarma sonrası hijyen zincirin kırılmasını güvenceye alır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; maske en son çıkarılır, önce eldiven çıkarılır.",
+      "B": "Doğru; en kirli eldivendir, çıkarılıp el hijyeni sağlanır.",
+      "C": "Yanlış; önlük eldivenden sonra çıkarılır.",
+      "D": "Yanlış; her çıkarma basamağı sonrası el hijyeni yapılır.",
+      "E": "Yanlış; sıralı çıkarma ve ara hijyen kontaminasyonu önler."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 30,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:31"
+ ]
 }

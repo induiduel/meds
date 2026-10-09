@@ -91,6 +91,8 @@ import {
   getGeminiV3ApprovedSynonyms,
 } from './src/services/geminiV3DataService.ts';
 import { createLearnFeedbackStore } from './src/services/learnFeedbackService.ts';
+import { createPhase14UserQueue, type QueueItem } from './src/services/phase14UserQueue.ts';
+import { questionUpdatedEmail } from './src/services/phase14Mail.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -1327,21 +1329,69 @@ app.post('/api/admin/phases/question/:id/test', requireAdmin, async (req, res) =
   }
 });
 
-// Örnek çalışma soruları (müfredata dayalı, drive_root ders notlarından; yapay zekâ üretimi, doğrulanmadı)
-app.get('/api/practice-questions', (req, res) => {
+// Örnek çalışma soruları (Supabase practice_questions tablosu üzerinden dinamik filtreli; JSONL yedeğiyle)
+app.get('/api/practice-questions', async (req, res) => {
   try {
+    const { kurul, ders, konu, zorluk, version, limit = '200', offset = '0' } = req.query as Record<string, string>;
+
+    if (supabase) {
+      let query = supabase
+        .from('practice_questions')
+        .select('*', { count: 'exact' });
+
+      if (kurul) query = query.eq('kurul', Number(kurul));
+      if (ders) query = query.ilike('ders', `%${ders}%`);
+      if (konu) query = query.ilike('konu', `%${konu}%`);
+      if (zorluk) query = query.eq('zorluk', zorluk);
+      if (version) query = query.eq('version', version);
+
+      const fromIdx = Number(offset);
+      const toIdx = fromIdx + Number(limit) - 1;
+      const { data, count, error } = await query.range(fromIdx, toIdx).order('lesson_id', { ascending: true });
+
+      if (!error && data) {
+        return res.json({
+          sorular: data.map((d: any) => ({
+            id: d.id,
+            kurul: d.kurul,
+            lesson_id: d.lesson_id,
+            ders: d.ders,
+            konu: d.konu,
+            ogretim_uyesi: d.ogretim_uyesi,
+            kazanim_no: d.kazanim_no,
+            kazanim_metin: d.kazanim_metin,
+            zorluk: d.zorluk,
+            version: d.version,
+            soru: d.soru,
+            soru_koku: d.soru,
+            secenekler: d.secenekler,
+            dogru_secenek: d.dogru,
+            dogru: d.dogru,
+            aciklama: d.aciklama,
+            aciklama_maddeleri: d.aciklama ? [d.aciklama] : [],
+            sik_aciklamalari: d.sik_aciklamalari,
+            bilgi: d.bilgi,
+            benzer_cikmis: d.benzer_cikmis
+          })),
+          toplam: count ?? data.length,
+          kaynak: 'supabase_postgres'
+        });
+      }
+    }
+
+    // Yerel dosya fallback
     const f = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'derived', 'ornek_sorular', 'sorular.jsonl');
     if (!fs.existsSync(f)) return res.json({ sorular: [], toplam: 0 });
     let rows = fs.readFileSync(f, 'utf-8').split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean) as any[];
-    const { kurul, ders, konu } = req.query as Record<string, string>;
     if (kurul) rows = rows.filter((r) => String(r.kurul) === String(kurul));
     if (ders) rows = rows.filter((r) => r.ders === ders);
     if (konu) rows = rows.filter((r) => r.konu === konu);
-    res.json({ sorular: rows, toplam: rows.length, not: 'Yapay zekâ üretimi; ders notu alıntısıyla kaynaklıdır ama yönetici doğrulamasından geçmemiştir.' });
+    res.json({ sorular: rows, toplam: rows.length, kaynak: 'local_jsonl' });
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 // Müfredat bilgi paketi (kurul → ders → konu): Faz 14, soru üretici ve site özellikleri kullanır. ?kurul=N ile tek kurul.
 app.get('/api/curriculum/package', (req, res) => {
@@ -1632,7 +1682,7 @@ app.delete('/api/past-exams/:id/comments/:commentId', requireAdmin, (req, res) =
 // Student report / complaint ("Şikayet Et / Hata Bildir") on a past question
 app.post('/api/past-exams/:id/report', async (req, res) => {
   try {
-    const { reason, details, reportedBy, id: incomingId } = req.body;
+    const { reason, details, reportedBy, id: incomingId, reporterEmail, reporterUid } = req.body;
     if (!reason || !reason.trim()) {
       return res.status(400).json({ error: 'Şikayet sebebi belirtilmelidir.' });
     }
@@ -1678,6 +1728,24 @@ app.post('/api/past-exams/:id/report', async (req, res) => {
       }
     }
 
+    // Hata bildirimi Faz 14 kullanıcı kuyruğuna da girer (bildirim metniyle); soru güncellenince bildirene e-posta gider
+    let queue: { position: number; waiting: number } | null = null;
+    try {
+      const r = phase14Queue.enqueue(String(q.id), {
+        kind: 'hata',
+        name: newReport.reportedBy,
+        uid: reporterUid,
+        email: reporterEmail,
+        isAdmin: isAdminEmail(reporterEmail),
+        reason: newReport.reason,
+        message: newReport.details,
+      }, q.questionNumber);
+      queue = { position: r.position, waiting: r.waiting };
+      kickPhase14UserQueue(true);
+    } catch (qErr: any) {
+      console.warn('[Faz14 kullanıcı] bildirim kuyruğa eklenemedi:', qErr?.message || qErr);
+    }
+
     // Yalnızca yöneticiye anında e-posta ve telefon push bildirimi gönder
     triggerAdminNotification({
       type: 'report',
@@ -1692,7 +1760,8 @@ app.post('/api/past-exams/:id/report', async (req, res) => {
     res.json({
       success: true,
       message: 'Geri bildiriminiz ve şikayetiniz incelenmek üzere kaydedildi. Katkınız için teşekkür ederiz.',
-      report: newReport
+      report: newReport,
+      queue,
     });
   } catch (err: any) {
     res.status(500).json({ error: 'Şikayet kaydedilemedi: ' + err.message });
@@ -2056,13 +2125,28 @@ function normalizeCommitteeId(v: unknown): string | null {
   return s || null;
 }
 
-app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
-  try {
-    const targetQId = String(req.params.id);
+/** Sorunun ekranda görünen hali (e-postada "eski / yeni" karşılaştırması için) */
+function pastQuestionSnapshot(q: any) {
+  const rec = q?.reconstruction || {};
+  const opts = (Array.isArray(rec.options) && rec.options.length ? rec.options : q?.options) || [];
+  return {
+    stem: String(rec.stem || q?.stem || ''),
+    options: (Array.isArray(opts) ? opts : []).map((o: any, i: number) => ({ key: String(o?.key || 'ABCDE'[i]).toUpperCase(), text: String(o?.text ?? o ?? '') })),
+    answer: String(rec.correctAnswer || q?.correctAnswer || q?.claimedAnswer || ''),
+    explanation: String(rec.explanation || q?.explanation || ''),
+  };
+}
+type Phase14ApplyResult =
+  | { ok: true; question: any; before: ReturnType<typeof pastQuestionSnapshot>; review: any }
+  | { ok: false; status: number; error: string };
+
+/** Faz 14 önerisini soruya uygular (yönetici onayı ve kullanıcı kuyruğunun otomatik güncellemesi aynı yolu kullanır). */
+function applyPhase14Review(targetQId: string, approvedBy: string): Phase14ApplyResult {
+  {
     const reviews = readPhase14Reviews();
     const matchingIndices = reviews.map((r, i) => String(r.question_id) === targetQId ? i : -1).filter(i => i !== -1);
     if (matchingIndices.length === 0) {
-      return res.status(404).json({ error: 'İnceleme kaydı bulunamadı.' });
+      return { ok: false, status: 404, error: 'İnceleme kaydı bulunamadı.' };
     }
     // Aynı soru için birden çok kayıt olabilir (yeniden değerlendirme yeni kayıt ekler): en güncel öneri uygulanır
     const stamp = (r: any) => Date.parse(r.last_edited_at || r.processed_at || '') || 0;
@@ -2070,11 +2154,11 @@ app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
     const rev = reviews[latestIdx];
     const proposal = rev.proposal;
     if (!proposal) {
-      return res.status(400).json({ error: 'Öneri verisi bulunmuyor.' });
+      return { ok: false, status: 400, error: 'Öneri verisi bulunmuyor.' };
     }
     // Faz 14 çözücüleri uzlaşamadıysa cevap boştur: eski cevap anahtarına sessizce düşülmez, önce cevap seçilmeli
     if (!String(proposal.dogru_secenek || '').trim()) {
-      return res.status(400).json({ error: 'Bu öneride doğru cevap belirsiz. Önce "Düzenle" ile doğru şıkkı seçin, sonra onaylayın.' });
+      return { ok: false, status: 400, error: 'Bu öneride doğru cevap belirsiz. Önce "Düzenle" ile doğru şıkkı seçin, sonra onaylayın.' };
     }
 
     const pastList = getPastQuestionsDb();
@@ -2105,6 +2189,7 @@ app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
     } else {
       targetQ = pastList[qIdx];
     }
+    const before = pastQuestionSnapshot(targetQ);
 
     // Orijinal sorunun yedeğini koru (yalnız ilk onayda) ve önerilen alanları uygula
     if (!targetQ.phase14Original) {
@@ -2169,7 +2254,7 @@ app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
 
     // İnceleme kaydı ve mükerrerleri 'approved' olarak güncelle
     const nowIso = new Date().toISOString();
-    const adminEmail = (req.headers['x-admin-email'] as string) || 'nofrostlife@gmail.com';
+    const adminEmail = approvedBy;
     for (const idx of matchingIndices) {
       reviews[idx].status = 'approved';
       reviews[idx].approved_at = nowIso;
@@ -2177,14 +2262,205 @@ app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
     }
     writePhase14Reviews(reviews);
 
+    return { ok: true, question: targetQ, before, review: reviews[matchingIndices[0]] };
+  }
+}
+
+app.post('/api/past-question-reviews/:id/approve', requireAdmin, (req, res) => {
+  try {
+    const targetQId = String(req.params.id);
+    const r = applyPhase14Review(targetQId, (req.headers['x-admin-email'] as string) || ADMIN_EMAIL);
+    if (!r.ok) return res.status(r.status).json({ error: r.error });
+    // Kullanıcı isteğiyle incelenip yönetici onayına kalmış soru: bildirenlere e-posta
+    phase14QueueAfterApply(targetQId, r.before, r.question, 'yonetici_onayi');
     res.json({
       success: true,
       message: `Soru #${targetQId} Faz 14 önerisiyle güncellendi ve onaylandı.`,
-      question: targetQ,
-      review: reviews[matchingIndices[0]],
+      question: r.question,
+      review: r.review,
     });
   } catch (err: any) {
     res.status(500).json({ error: 'Öneri onaylanamadı: ' + err.message });
+  }
+});
+
+// --- Faz 14 kullanıcı kuyruğu: "yapay zekâ incelemesine gönder" + hatalı soru bildirimleri ---
+// Kuyruğu sunucu yazar; betik (--kullanici-kuyrugu) yalnız ücretsiz anahtarlarla işler ve sonucu ayrı dosyaya ekler.
+// Sonuç gelince soru otomatik güncellenir (cevap belirsizse yönetici onayına kalır) ve bildirenlere e-posta gider.
+const phase14Queue = createPhase14UserQueue(PHASE14_DIR);
+const PHASE14_USER_UNIT = 'meds-faz14-kullanici';
+let phase14UserLastKick = 0;
+
+function phase14UserWorkerRunning(): boolean {
+  try {
+    return execSync('pgrep -af python3 || true', { encoding: 'utf-8' }).split('\n').some((l) => l.includes('phase14_cloud_question_editor.py') && l.includes('--kullanici-kuyrugu'));
+  } catch {
+    return false;
+  }
+}
+
+/** Bekleyen istek varsa ve işleyici çalışmıyorsa başlatır. force=false iken 10 dk'da bir denenir (kota bitince boşa dönmesin). */
+function kickPhase14UserQueue(force = false) {
+  try {
+    if (phase14Queue.pendingCount() === 0 || phase14UserWorkerRunning()) return false;
+    if (!force && Date.now() - phase14UserLastKick < 10 * 60 * 1000) return false;
+    phase14UserLastKick = Date.now();
+    const script = path.resolve(__dirname, 'scripts', 'advanced_ai', 'phase14_cloud_question_editor.py');
+    const logPath = path.resolve(__dirname, '..', 'meds_temp', 'logs', 'phase14_kullanici.log');
+    fs.mkdirSync(path.dirname(logPath), { recursive: true });
+    try { execSync(`systemctl --user reset-failed ${PHASE14_USER_UNIT} 2>/dev/null || true`); } catch (_) {}
+    const r = spawnSync('systemd-run', [
+      '--user', `--unit=${PHASE14_USER_UNIT}`, '--collect', `--working-directory=${__dirname}`,
+      `--property=StandardOutput=append:${logPath}`, `--property=StandardError=append:${logPath}`,
+      'python3', script, '--kullanici-kuyrugu',
+    ], { encoding: 'utf-8' });
+    if (r.status !== 0) {
+      // systemd yoksa doğrudan başlat
+      const out = fs.openSync(logPath, 'a');
+      spawn('python3', [script, '--kullanici-kuyrugu'], { cwd: __dirname, detached: true, stdio: ['ignore', out, out] }).unref();
+    }
+    console.log('[Faz14 kullanıcı] kuyruk işleyicisi başlatıldı');
+    return true;
+  } catch (err: any) {
+    console.warn('[Faz14 kullanıcı] başlatılamadı:', err?.message || err);
+    return false;
+  }
+}
+
+async function mailPhase14Reporters(item: QueueItem, before: ReturnType<typeof pastQuestionSnapshot>, question: any, summary?: string) {
+  // Yalnız hata bildirenler; yönetici ve e-postası olmayanlar hariç; kişi başına bir e-posta
+  const seen = new Set<string>(item.mailedTo || []);
+  const targets = item.notes.filter((n) => n.kind === 'hata' && n.email && !n.isAdmin && n.email.toLowerCase() !== ADMIN_EMAIL.toLowerCase() && !seen.has(n.email));
+  if (!targets.length) return;
+  const transporter = createSmtpTransporter();
+  if (!transporter) {
+    console.warn('[Faz14 kullanıcı] SMTP kapalı; güncelleme e-postası gönderilemedi');
+    return;
+  }
+  const cfg = getSmtpConfig();
+  const base = (process.env.APP_URL && !/localhost|127\.0\.0\.1/.test(process.env.APP_URL) ? process.env.APP_URL : 'https://nofrostlife.com.tr').replace(/\/$/, '');
+  const after = pastQuestionSnapshot(question);
+  const sent: string[] = [];
+  for (const n of targets) {
+    if (sent.includes(n.email!)) continue;
+    const mail = questionUpdatedEmail({
+      name: n.name || 'Tıp öğrencisi',
+      questionNumber: question?.questionNumber || item.questionNumber,
+      discipline: question?.discipline,
+      before,
+      after,
+      summary,
+      yourNote: [n.reason, n.message].filter(Boolean).join(' — '),
+      link: `${base}/cikmis/${encodeURIComponent(item.questionId)}`,
+    });
+    try {
+      await transporter.sendMail({ from: cfg.from, to: n.email, subject: mail.subject, html: mail.html, text: mail.text });
+      sent.push(n.email!);
+    } catch (err: any) {
+      console.warn('[Faz14 kullanıcı] e-posta gönderilemedi:', err?.message || err);
+    }
+  }
+  if (sent.length) phase14Queue.update(item.id, { mailedTo: [...(item.mailedTo || []), ...sent] });
+}
+
+/** Yönetici onayı ya da otomatik güncelleme sonrası: o sorunun açık isteklerini kapatır ve e-postaları gönderir. */
+function phase14QueueAfterApply(questionId: string, before: ReturnType<typeof pastQuestionSnapshot>, question: any, fromStatus: 'bekliyor' | 'yonetici_onayi', summary?: string) {
+  for (const it of phase14Queue.openForQuestion(questionId, fromStatus)) {
+    const done = phase14Queue.update(it.id, { status: 'guncellendi', resultNote: summary });
+    if (done) mailPhase14Reporters(done, before, question, summary).catch(() => {});
+  }
+}
+
+/** Betiğin yazdığı sonuçları işler: soruyu günceller ya da durumu not eder. */
+function processPhase14UserResults() {
+  const results = phase14Queue.unconsumedResults();
+  if (!results.length) return;
+  const reviews = readPhase14Reviews();
+  for (const r of results) {
+    const item = phase14Queue.find(r.istek_id);
+    if (!item || item.status !== 'bekliyor') continue;
+    if (!r.ok) {
+      phase14Queue.update(item.id, { status: 'hata', resultNote: r.error || 'İncelenemedi' });
+      continue;
+    }
+    const rev = reviews.find((x: any) => x.istek_id === item.id);
+    const p = rev?.proposal;
+    if (!rev || !p) {
+      phase14Queue.update(item.id, { status: 'hata', resultNote: 'İnceleme kaydı bulunamadı' });
+      continue;
+    }
+    const summary = typeof p.degisiklik_ozeti === 'string' ? p.degisiklik_ozeti : undefined;
+    // Cevap belirsiz/şüpheli: otomatik yazılmaz, yönetici /test/cikmis'te karar verir
+    if (!String(p.dogru_secenek || '').trim() || rev.answer_doubtful || rev.suspicious) {
+      phase14Queue.update(item.id, { status: 'yonetici_onayi', reviewProcessedAt: rev.processed_at, resultNote: summary || 'Cevap belirsiz; yönetici onayı bekliyor' });
+      continue;
+    }
+    const q = getPastQuestionsDb().find((x: any) => String(x.id) === item.questionId);
+    const cur = pastQuestionSnapshot(q);
+    const n = (t: any) => String(t ?? '').replace(/\s+/g, ' ').trim();
+    const propOpts = p.secenekler && typeof p.secenekler === 'object' ? Object.entries(p.secenekler).map(([k, v]) => [k.toUpperCase(), n(v)]) : [];
+    const same =
+      (!p.soru_koku || n(p.soru_koku) === n(cur.stem)) &&
+      String(p.dogru_secenek).toUpperCase() === cur.answer.toUpperCase() &&
+      propOpts.every(([k, v]) => n(cur.options.find((o) => o.key === k)?.text) === v) &&
+      // Bildirim açıklamayla ilgiliyse açıklamanın değişmesi de güncelleme sayılır
+      !(item.notes.some((x) => /açıklama|aciklama/i.test(`${x.reason || ''} ${x.message || ''}`)) && p.aciklama && n(p.aciklama) !== n(cur.explanation));
+    if (same) {
+      // İçerik doğru bulundu: açıklama dahil hiçbir şey yazılmaz, kayıt yönetici kuyruğunu kirletmesin
+      for (const x of reviews) if (x.istek_id === item.id) x.status = 'unchanged';
+      writePhase14Reviews(reviews);
+      phase14Queue.update(item.id, { status: 'degisiklik_yok', reviewProcessedAt: rev.processed_at, resultNote: summary || 'Soru doğru bulundu; değişiklik gerekmedi' });
+      continue;
+    }
+    const applied = applyPhase14Review(item.questionId, 'faz14-kullanici-kuyrugu');
+    if (!applied.ok) {
+      phase14Queue.update(item.id, { status: 'yonetici_onayi', resultNote: applied.error });
+      continue;
+    }
+    phase14QueueAfterApply(item.questionId, applied.before, applied.question, 'bekliyor', summary);
+    console.log(`[Faz14 kullanıcı] soru #${item.questionId} otomatik güncellendi`);
+  }
+}
+
+setInterval(() => {
+  try {
+    processPhase14UserResults();
+    kickPhase14UserQueue();
+  } catch (err: any) {
+    console.warn('[Faz14 kullanıcı] döngü hatası:', err?.message || err);
+  }
+}, 60 * 1000);
+
+const isAdminEmail = (e: unknown) => String(e || '').trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
+
+// Herkes: soruyu yapay zekâ incelemesine gönder (isteğe bağlı not)
+app.post('/api/past-exams/:id/ai-review', (req, res) => {
+  try {
+    const qId = String(req.params.id);
+    const q: any = getPastQuestionsDb().find((x: any) => String(x.id) === qId);
+    if (!q) return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+    const b = req.body || {};
+    const r = phase14Queue.enqueue(qId, {
+      kind: 'inceleme',
+      name: String(b.name || 'Tıp öğrencisi'),
+      uid: b.uid,
+      email: b.email,
+      isAdmin: isAdminEmail(b.email),
+      message: b.message,
+    }, q.questionNumber);
+    kickPhase14UserQueue(true);
+    res.json({ success: true, joined: r.joined, position: r.position, waiting: r.waiting });
+  } catch (err: any) {
+    res.status(500).json({ error: 'İstek kuyruğa eklenemedi: ' + err.message });
+  }
+});
+
+// Herkes: kuyruktaki soruların sırası (kişisel bilgi yok)
+app.get('/api/past-exams/ai-review-queue', (_req, res) => {
+  try {
+    res.set('Cache-Control', 'no-store').json({ success: true, ...phase14Queue.publicStatus() });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Kuyruk okunamadı: ' + err.message });
   }
 });
 
@@ -2347,9 +2623,61 @@ app.get('/api/past-question-reviews/answer-doubtful', (_req, res) => {
       const opts = r.proposal?.secenekler && Object.keys(r.proposal.secenekler).length ? r.proposal.secenekler : r.source?.secenekler;
       if (opts) options[id] = opts;
     }
+    // Kullanıcıların açtığı anketler: cevap anahtarı kabul edilen cevap olarak gösterilir
+    const userPolls = readUserPolls();
+    const db = Object.keys(userPolls).length ? getPastQuestionsDb() : [];
+    for (const id of Object.keys(userPolls)) {
+      if (ids.includes(id) || resolved[id]) continue;
+      const q: any = db.find((x: any) => String(x.id) === id);
+      const ans = String(q?.reconstruction?.correctAnswer || q?.correctAnswer || q?.claimedAnswer || '');
+      if (ans) resolved[id] = { answer: ans, by: 'kullanici' };
+    }
     res.set('Cache-Control', 'no-store').json({ success: true, ids, options, resolved });
   } catch (err: any) {
     res.status(500).json({ error: 'Liste okunamadı: ' + err.message });
+  }
+});
+
+// Kullanıcının açtığı anketler: cevabı olan soruda da topluluk oylaması (kabul edilen cevapla karşılaştırılır)
+const USER_POLLS_FILE = path.join(DATA_DIR, 'user_answer_polls.json');
+function readUserPolls(): Record<string, { by: string; at: string }> {
+  try {
+    return JSON.parse(fs.readFileSync(USER_POLLS_FILE, 'utf-8')) || {};
+  } catch {
+    return {};
+  }
+}
+app.post('/api/past-question-reviews/:id/open-poll', (req, res) => {
+  try {
+    const qId = String(req.params.id);
+    const voter = String(req.headers['x-voter-uid'] || '').slice(0, 128);
+    if (!voter) return res.status(401).json({ error: 'Anket açmak için giriş yapmalısınız.' });
+    const q: any = getPastQuestionsDb().find((x: any) => String(x.id) === qId);
+    if (!q) return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+    const polls = readUserPolls();
+    if (!polls[qId]) {
+      polls[qId] = { by: voter, at: new Date().toISOString() };
+      const tmp = `${USER_POLLS_FILE}.tmp`;
+      fs.writeFileSync(tmp, JSON.stringify(polls, null, 1), 'utf-8');
+      fs.renameSync(tmp, USER_POLLS_FILE);
+    }
+    res.json({ success: true, answer: String(q.reconstruction?.correctAnswer || q.correctAnswer || q.claimedAnswer || '') });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Anket açılamadı: ' + err.message });
+  }
+});
+
+// Oyu geri al (şıkkı değiştirmek için): yalnız kendi oyu
+app.delete('/api/past-question-reviews/:id/answer-votes', async (req, res) => {
+  try {
+    const qId = String(req.params.id);
+    const voter = String(req.headers['x-voter-uid'] || '').slice(0, 128);
+    if (!voter) return res.status(401).json({ error: 'Giriş yapmalısınız.' });
+    const { error } = await localSupabase.from('answer_votes').delete().eq('question_id', qId).eq('voter_uid', voter);
+    if (error) throw new Error(error.message);
+    res.json({ success: true, ...(await readAnswerVotes(qId, voter)) });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Oy geri alınamadı: ' + err.message });
   }
 });
 
@@ -2370,7 +2698,7 @@ app.post('/api/past-question-reviews/:id/answer-votes', async (req, res) => {
     if (!voter) return res.status(401).json({ error: 'Oy vermek için giriş yapmalısınız.' });
     if (!/^[A-E]$/.test(choice)) return res.status(400).json({ error: 'Geçersiz şık.' });
     const review = latestReviews().get(qId);
-    const pollOpen = (review?.answer_doubtful && review.status === 'review_required') || Boolean(review?.answer_poll_open) || pastQuestionHasNoAnswer(qId);
+    const pollOpen = (review?.answer_doubtful && review.status === 'review_required') || Boolean(review?.answer_poll_open) || pastQuestionHasNoAnswer(qId) || Boolean(readUserPolls()[qId]);
     if (!pollOpen) return res.status(409).json({ error: 'Bu soru için anket açık değil.' });
     const { error } = await localSupabase.from('answer_votes').insert([{ question_id: qId, voter_uid: voter, choice }]);
     if (error) {
@@ -2492,12 +2820,12 @@ function readPhase14Settings(): Phase14Settings {
   try {
     const d = JSON.parse(fs.readFileSync(PHASE14_SETTINGS_FILE, 'utf-8'));
     return {
-      lite_kullan: d.lite_kullan !== false,
+      lite_kullan: d.lite_kullan === true,
       otomatik_ucretsiz: d.otomatik_ucretsiz === true,
       otomatik_limit: Number(d.otomatik_limit) > 0 ? Number(d.otomatik_limit) : 4000,
     };
   } catch {
-    return { lite_kullan: true, otomatik_ucretsiz: false, otomatik_limit: 4000 };
+    return { lite_kullan: false, otomatik_ucretsiz: false, otomatik_limit: 4000 };
   }
 }
 function writePhase14Settings(next: Phase14Settings) {
@@ -4915,6 +5243,21 @@ const cloudNotificationBridge = new CloudNotificationBridge({
   onNewNotification: (params) => {
     console.log(`[CloudBridge] 🔔 Buluttan yeni bildirim yakalandı (#${params.questionId}), yöneticiye iletiliyor...`);
     triggerAdminNotification(params);
+    // Canlı sitede sunucuya ulaşılamayıp buluta yazılan çıkmış soru bildirimi: Faz 14 kuyruğuna da al
+    // (aynı bildirim sunucudan zaten geldiyse son 24 saatteki aynı notla eşleşir ve tekrar eklenmez)
+    try {
+      if (params.type === 'report' && getPastQuestionsDb().some((x: any) => String(x.id) === String(params.questionId))) {
+        const qid = String(params.questionId);
+        const since = Date.now() - 24 * 3600 * 1000;
+        const seen = phase14Queue.read().some((it) => it.questionId === qid && it.notes.some((n) => n.kind === 'hata' && Date.parse(n.at) > since && (n.reason || '') === String(params.reason || '').trim().slice(0, 200)));
+        if (!seen) {
+          phase14Queue.enqueue(qid, { kind: 'hata', name: params.author || 'Tıp öğrencisi', reason: params.reason, message: params.details });
+          kickPhase14UserQueue(true);
+        }
+      }
+    } catch (qErr: any) {
+      console.warn('[Faz14 kullanıcı] buluttan gelen bildirim kuyruğa eklenemedi:', qErr?.message || qErr);
+    }
   },
   onSyncSubscriptions: (cloudSubs) => {
     for (const sub of cloudSubs) {

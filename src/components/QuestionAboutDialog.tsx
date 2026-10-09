@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Check, Copy, Eye, FileText, GraduationCap, Presentation, ShieldCheck, History, Sparkles, AlertCircle } from 'lucide-react';
+import { BookOpen, Check, Copy, Eye, FileText, GraduationCap, Presentation, ShieldCheck, History, Sparkles, AlertCircle, Code2 } from 'lucide-react';
 import { Dialog } from './ui/Dialog';
 import { SourceText } from './ui/SourceText';
 import { QuestionInsightsPanel } from './QuestionInsightsPanel';
@@ -46,6 +46,7 @@ interface Props {
   options?: { key: string; text: string }[];
   /** Denetleyici incelemesinde değişen cevap anahtarı */
   answerChange?: { from: string; to: string };
+  question?: any;
   onOpenSlide?: (kaynak: string, sayfa: number) => void;
   onPreviewSlide?: () => void;
   onOpenInLearn?: () => void;
@@ -81,6 +82,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
   learnMatch,
   p14StatusNote,
   isEskiView,
+  question,
   onOpenSlide,
   onPreviewSlide,
   onOpenInLearn,
@@ -88,6 +90,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
   onClose,
 }) => {
   const [copied, setCopied] = useState(false);
+  const [copiedJson, setCopiedJson] = useState(false);
   const [reveal, setReveal] = useState(false);
   const hidden = answerHidden && !reveal;
   const answerOptionText = options?.find((o) => String(o.key).toUpperCase() === String(answerKey || '').toUpperCase())?.text;
@@ -97,6 +100,23 @@ export const QuestionAboutDialog: React.FC<Props> = ({
     navigator.clipboard?.writeText(questionId).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);
+    }).catch(() => {});
+  };
+
+  const copyJson = () => {
+    const dataToCopy = question || {
+      id: questionId,
+      answerKey,
+      options,
+      explanation,
+      evidence,
+      sikAnalizi,
+      referanslar,
+      facts,
+    };
+    navigator.clipboard?.writeText(JSON.stringify(dataToCopy, null, 2)).then(() => {
+      setCopiedJson(true);
+      setTimeout(() => setCopiedJson(false), 1600);
     }).catch(() => {});
   };
 
@@ -113,6 +133,15 @@ export const QuestionAboutDialog: React.FC<Props> = ({
               <FileText /> Kaynak belge
             </button>
           )}
+          <button
+            type="button"
+            onClick={copyJson}
+            className="ms-btn is-ghost"
+            title="Soru veri tabanı kaydını JSON olarak panoya kopyala"
+          >
+            {copiedJson ? <Check className="text-ok" /> : <Code2 />}
+            {copiedJson ? 'JSON Kopyalandı' : 'JSON Kopyala'}
+          </button>
           <button type="button" onClick={onClose} className="ms-btn">Kapat</button>
         </>
       }
@@ -252,7 +281,18 @@ export const QuestionAboutDialog: React.FC<Props> = ({
       )}
 
       <section className="flex flex-col gap-2">
-        <H>Künye</H>
+        <div className="flex items-center justify-between">
+          <H>Künye</H>
+          <button
+            type="button"
+            onClick={copyJson}
+            className="ms-btn is-ghost is-sm text-[12px] h-7 px-2.5 gap-1.5"
+            title="Soru veri tabanı kaydını JSON olarak panoya kopyala"
+          >
+            {copiedJson ? <Check className="w-3.5 h-3.5 text-ok" /> : <Code2 className="w-3.5 h-3.5" />}
+            <span>{copiedJson ? 'JSON Kopyalandı' : 'JSON Kopyala'}</span>
+          </button>
+        </div>
         {/* Künye */}
         <dl className="ms-about-facts">
           <div>

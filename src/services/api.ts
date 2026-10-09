@@ -2481,7 +2481,7 @@ export const ApiService = {
     }
   },
 
-  async reportPastQuestion(questionId: string, reason: string, details?: string, reportedBy?: string): Promise<any> {
+  async reportPastQuestion(questionId: string, reason: string, details?: string, reportedBy?: string, reporter?: { email?: string | null; uid?: string | null }): Promise<any> {
     const apiBase = getCustomApiUrl() || '';
     const nowIso = new Date().toISOString();
     const reportObj = {
@@ -2503,7 +2503,10 @@ export const ApiService = {
           id: reportObj.id,
           reason: reportObj.reason,
           details: reportObj.details,
-          reportedBy: reportObj.reportedBy
+          reportedBy: reportObj.reportedBy,
+          // Soru güncellenince bildirene e-posta için; sunucuda yalnız yerel kuyrukta tutulur
+          reporterEmail: reporter?.email || undefined,
+          reporterUid: reporter?.uid || undefined,
         }),
       });
       if (res.ok) {
@@ -2511,6 +2514,7 @@ export const ApiService = {
         if (data?.report) {
           reportObj.id = data.report.id || reportObj.id;
         }
+        if (data?.queue) (reportObj as any).queue = data.queue;
       }
     } catch (e) {
       console.warn('[reportPastQuestion] Server çağrısı başarısız, doğrudan buluta geçiliyor:', e);
@@ -2884,6 +2888,42 @@ export const ApiService = {
     );
     if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Oylar okunamadı.');
     return res.data;
+  },
+
+  /** Kendi oyunu geri al (şıkkı değiştirmek için). */
+  async cancelAnswerVote(questionId: string, voterUid: string): Promise<AnswerVotes> {
+    const res = await safeJsonFetch<AnswerVotes & { success: boolean; error?: string }>(
+      `/api/past-question-reviews/${encodeURIComponent(questionId)}/answer-votes`,
+      { method: 'DELETE', headers: { 'x-voter-uid': voterUid } }
+    );
+    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Oy geri alınamadı.');
+    return res.data;
+  },
+
+  /** Cevabı olan soruyu topluluk anketine aç. */
+  async openAnswerPoll(questionId: string, voterUid: string): Promise<{ answer: string }> {
+    const res = await safeJsonFetch<{ success: boolean; answer: string; error?: string }>(
+      `/api/past-question-reviews/${encodeURIComponent(questionId)}/open-poll`,
+      { method: 'POST', headers: { 'x-voter-uid': voterUid } }
+    );
+    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Anket açılamadı.');
+    return { answer: res.data.answer };
+  },
+
+  /** Soruyu Faz 14 yapay zekâ incelemesine gönder (ücretsiz kuyruk). */
+  async requestAiReview(questionId: string, body: { message?: string; name?: string; uid?: string; email?: string }): Promise<{ joined: boolean; position: number; waiting: number }> {
+    const res = await safeJsonFetch<{ success: boolean; joined: boolean; position: number; waiting: number; error?: string }>(
+      `/api/past-exams/${encodeURIComponent(questionId)}/ai-review`,
+      { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }
+    );
+    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'İstek gönderilemedi. Sunucuya ulaşılamıyor olabilir.');
+    return res.data;
+  },
+
+  /** İnceleme kuyruğundaki sorular (sıra numarasıyla). */
+  async getAiReviewQueue(): Promise<{ waiting: number; items: Record<string, { status: string; position?: number; requests: number }> } | null> {
+    const res = await safeJsonFetch<{ success: boolean; waiting: number; items: Record<string, any> }>('/api/past-exams/ai-review-queue');
+    return res.ok && res.data?.success ? { waiting: res.data.waiting, items: res.data.items || {} } : null;
   },
 
   async castAnswerVote(questionId: string, voterUid: string, choice: string): Promise<AnswerVotes> {

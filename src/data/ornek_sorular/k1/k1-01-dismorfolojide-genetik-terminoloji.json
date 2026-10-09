@@ -6,6 +6,7 @@
  "konu": "Dismorfolojide Genetik Terminoloji",
  "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
  "tarih": "2026-09-14",
+ "soru_sayisi": 146,
  "kazanimlar": [
   {
    "no": 1,
@@ -88,6 +89,245 @@
      },
      "bilgi": [
       9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Yenidoğan ünitesinde yarık damaklı bir bebek değerlendirilirken asistan, bu durumun doğumda mevcut bir yapısal farklılık olduğunu ve normal gelişim sürecinden sapmaları inceleyen bilim dalının alanına girdiğini belirtmektedir. Bu bilim dalı ve temel terminolojiyle ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Dismorfoloji metabolik hastalıkların enzim tedavisini inceleyen daldır",
+      "B": "Dismorfoloji normal morfogenezden sapmaları inceleyen klinik genetik dalıdır",
+      "C": "Konjenital terimi yalnızca kalıtsal hastalıkları ifade eder",
+      "D": "Anomali terimi normal varyasyonları tanımlar",
+      "E": "Dismorfoloji 1900'lü yılların başında Mendel tarafından tanımlanmıştır"
+     },
+     "dogru": "B",
+     "aciklama": "Dismorfoloji normal morfogenezden sapmaları inceleyen klinik genetik dalıdır; 1960'ta Dr. David Smith tanımlamıştır. Konjenital doğumda mevcut olmayı, anomali anormal gelişimi ifade eder.",
+     "sik_aciklamalari": {
+      "A": "Metabolik hastalıklar dismorfolojinin değil metabolizma alanının konusudur.",
+      "B": "Doğru. Dismorfoloji fiziksel gelişim farklılıklarını inceler; 2000'in üzerinde sendrom bilinir.",
+      "C": "Konjenital doğumda mevcut olmayı ifade eder, kalıtımla eş anlamlı değildir.",
+      "D": "Anomali normal dışı yapısal özelliktir.",
+      "E": "Dismorfoloji 1960'ta Dr. David Smith tarafından tanımlanmıştır."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Normal yüz ve vücut yapısına sahip ancak tekrarlayan hipoglisemi atakları geçiren bir çocukta metabolik hastalık düşünülmüş, dismorfik bulgu saptanmamıştır. Bu ayrımla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Metabolik hastalıkta her zaman majör yapısal anomali vardır",
+      "B": "Dismorfoloji yalnızca fonksiyon bozukluklarını inceler",
+      "C": "Konjenital anomali doğumdan sonra kazanılan hastalıkları kapsar",
+      "D": "Metabolik hastalıkta yapı genellikle normal, fonksiyon anormaldir",
+      "E": "Anomali terimi yalnızca minör farklılıklar için kullanılır"
+     },
+     "dogru": "D",
+     "aciklama": "Metabolik hastalıkta genellikle normal yapı fakat anormal fonksiyon vardır; dismorfoloji anormal yapı ile birlikte anormal fonksiyonu da kapsayabilir. Konjenital anomali doğumda mevcut yapısal farklılıktır.",
+     "sik_aciklamalari": {
+      "A": "Metabolik hastalıkta yapı genellikle normaldir.",
+      "B": "Dismorfoloji yapısal sapmaları inceler.",
+      "C": "Konjenital doğumda mevcut olmayı ifade eder.",
+      "D": "Doğru. Bu özellik metabolik hastalıkları dismorfik tablolardan ayırt eder.",
+      "E": "Anomali minör ve majör tüm yapısal farklılıkları kapsar."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Dismorfoloji terimini oluşturan Yunanca köklerin anlamı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Anormal fonksiyon, normal yapı",
+      "B": "Doğumda mevcut olma",
+      "C": "Anormallik ve biçim",
+      "D": "Anormal gelişim süreci",
+      "E": "Kalıtım ve farklılıklar"
+     },
+     "dogru": "C",
+     "aciklama": "Dismorfoloji terimi Yunanca dys (anormallik) ve morph (biçim) köklerinden türetilmiştir ve normal morfogenezden sapan fiziksel gelişim farklılıklarını inceleyen klinik genetik dalını adlandırır. Bu dal 1960 yılında Dr. David Smith tarafından tanımlanmış ve günümüzde 2000'in üzerinde sendromu kapsar. Dismorfolojik değerlendirme, doğumsal yapısal defektlerin tanınmasında deneyime dayanan sistematik bir yaklaşım gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Bu ifade metabolik hastalıkların yapısal-fonksiyonel profilini tanımlar, dismorfoloji sözcüğünün kökenini vermez.",
+      "B": "Bu ifade konjenital teriminin karşılığıdır, dismorfoloji kökeniyle ilişkisi yoktur.",
+      "C": "Doğru. Dys anormallik, morph biçim anlamına gelir ve bu iki kök dismorfoloji terimini oluşturur.",
+      "D": "Bu ifade anomali kavramına yakındır ancak terimin etimolojik kökenini oluşturan iki sözcüğü vermez.",
+      "E": "Bu ifade genetiğin genel tanımıdır, dismorfoloji teriminin kökeniyle bağlantısı yoktur."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Yapısal olarak normal görünümlü ancak biyokimyasal işlevi bozuk olan hastalık grubu ile dismorfolojinin ilgi alanı arasındaki farkı doğru ifade eden seçenek hangisidir?",
+     "secenekler": {
+      "A": "Dismorfoloji, anormal yapı",
+      "B": "Metabolik hastalık, normal yapı",
+      "C": "Dismorfoloji, anormal fonksiyon",
+      "D": "Metabolik hastalık, anormal yüz",
+      "E": "İkisi de anormal yapı"
+     },
+     "dogru": "B",
+     "aciklama": "Metabolik hastalıklarda enzim eksikliği gibi biyokimyasal kusurlar hücresel metabolizmayı bozar ancak organların makroskopik yapısı genellikle normal gelişir, bu yüzden yenidoğan muayenesinde yapısal anomali saptanmaz. Dismorfolojik anomalilerde ise morfogenez sırasında hücre proliferasyonu, farklılaşması veya organizasyonu bozulduğu için yapı primer olarak anormal oluşur. Bu ayrım, yapısal defekti olan çocuğun dismorfoloji polikliniğine, fonksiyonel bozukluğu olanın ise metabolizma polikliniğine yönlendirilmesini sağlar.",
+     "sik_aciklamalari": {
+      "A": "Dismorfoloji anormal yapıyı inceler ancak bu seçenek sorunun istediği metabolik hastalık profilini vermez.",
+      "B": "Doğru. Enzim düzeyindeki kusur metabolik yolakları aksatır, organogenez tamamlandığı için yapı normal kalır.",
+      "C": "Dismorfolojide fonksiyon bozukluğu eşlik edebilir ancak tanımlayıcı özellik anormal yapıdır, bu ifade eksik ve yönlendiricidir.",
+      "D": "Metabolik hastalıklarda yüz dismorfizmi tipik değildir; yapısal yüz anomalisi dismorfolojinin alanına girer.",
+      "E": "Yanlış; metabolik hastalıklarda yapı genellikle normaldir, bu yüzden iki grubun ayırıcı özelliği ortadan kalkar."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k01-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bir yenidoğan polikliniğinde genetik konsültasyonu istenen bir bebekte multipl fiziksel varyasyonlar saptanmıştır. Dismorfolojik değerlendirme yapılırken \"anomali\" kavramının tıp literatüründeki ve klinik genetikteki tanımı sorgulanmaktadır. Aşağıdakilerden hangisi dismorfoloji pratiğinde \"konjenital anomali\" teriminin en doğru ve kapsamlı tanımıdır?",
+     "secenekler": {
+      "A": "Yalnızca intrauterin dönemde vasküler oklüzyona sekonder oluşan doku nekrozudur.",
+      "B": "Doğumda mevcut olan, normal morfogenez sürecinden sapma sonucu gelişen anatomik/yapısal gelişim kusurudur.",
+      "C": "Postnatal dönemde metabolik enzim eksikliğine bağlı gelişen fonksiyonel organ yetersizliğidir.",
+      "D": "Toplumda %5'ten daha sık görülen ve cerrahi düzeltme gerektirmeyen fenotipik varyasyondur.",
+      "E": "Erken embriyonik dönemde kök hücrelerin neoplastik proliferasyonu ile giden doku fazlalığıdır."
+     },
+     "dogru": "B",
+     "aciklama": "Konjenital terimi doğumda mevcut olanı; anomali ise morfolojik veya yapısal gelişimsel kusuru ifade eder.",
+     "sik_aciklamalari": {
+      "A": "Vasküler oklüzyona sekonder doku nekrozu yalnızca vasküler disrupsiyonu tanımlar, tüm konjenital anomalileri kapsamaz.",
+      "B": "Doğru. Doğum anında var olan, normal morfogenez sürecinden sapma ile oluşan anatomik yapı kusurudur.",
+      "C": "Postnatal enzim eksiklikleri doğumsal metabolik hastalıkların alanıdır, yapısal anomali tanımı değildir.",
+      "D": "%5'ten sık görülenler normal fenotipik polimorfik varyant kabul edilir.",
+      "E": "Neoplastik proliferasyon tümöral hamartomdur, anomali tanımı değildir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k01-q09",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Pediatri kliniğinde değerlendirilen bir olguda metabolik taramalar normal bulunmuş ancak kraniyofasiyal asimetri ve dijital hipoplazi izlenmiştir. Konsültan hekim dismorfolojik bozukluklar ile primer doğumsal metabolik hastalıkların ayırıcı morfolojik özelliklerini tartışmaktadır. Metabolik hastalıklar ile dismorfolojik konjenital anomalilerin temel patogenetik ve fenotipik ayrımı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Metabolik hastalıklarda hücresel düzeyde fonksiyon normal iken daima ağır kaba yüz (kaba dismorfizm) eşlik eder.",
+      "B": "Dismorfolojik anomaliler hücresel biyokimyasal yollardaki blokajdan kaynaklanırken organ mimarisi tamamen korunur.",
+      "C": "Metabolik hastalıklarda genellikle doğumda organ yapısı normal olup fonksiyonel bozukluk ön plandadır; dismorfolojide ise doğum anında saptanan anormal yapısal mimari esastır.",
+      "D": "Dismorfolojik sendromlarda hiçbir zaman zeka geriliği (mental retardasyon) görülmez.",
+      "E": "Doğumsal metabolik hastalıklarda enzim aktivitesi arttığı için postnatal yapısal yıkım hızlanır."
+     },
+     "dogru": "C",
+     "aciklama": "Dismorfolojide temel patoloji anormal yapı (± anormal fonksiyon); metabolik hastalıklarda ise başlangıçta normal yapı fakat anormal fonksiyondur.",
+     "sik_aciklamalari": {
+      "A": "Metabolik hastalıklarda enzim blokajı nedeniyle hücresel disfonksiyon esastır ve kaba yüz her olguda görülmez.",
+      "B": "Dismorfolojide organ mimarisi bozuktur, anatomik yapı korunamaz.",
+      "C": "Doğru. Dismorfolojide primer olay bozulmuş anatomik mimaridir; metabolik hastalıklarda ise başlangıçta organ taslağı normal olup fonksiyon bozuktur.",
+      "D": "Dismorfolojik sendromların birçoğuna mental retardasyon eşlik eder.",
+      "E": "Metabolik hastalıklarda enzim aktivitesi artmaz, mutasyona bağlı fonksiyon kaybı olur."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k01-q10",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Dismorfoloji literatüründe Dr. David Smith tarafından 1960 yılında yapılan tanımlama klinik genetiğin gelişiminde dönüm noktası kabul edilir. Dismorfoloji biliminin klinik yaklaşımındaki temel odak noktası aşağıdakilerden hangisinde en doğru belirtilmiştir?",
+     "secenekler": {
+      "A": "Popülasyondaki Hardy-Weinberg dengesini araştırarak mutasyon hızını ölçmek",
+      "B": "İnsanlarda normal morfogenezden sapmaları, fiziksel gelişim farklılıklarını ve konjenital malformasyon paternlerini incelemek",
+      "C": "Yalnızca yetişkin çağda ortaya çıkan multifaktöriyel otoimmün hastalıkları sınıflandırmak",
+      "D": "Postmortem mikroskopik incelemelerde inflamatuar hücre infiltrasyonunu skorlamak",
+      "E": "Farmakogenomik testler aracılığıyla sitokrom P450 polimorfizmlerine uygun ilaç dozu belirlemek"
+     },
+     "dogru": "B",
+     "aciklama": "Dismorfoloji, normal morfogenezden sapmaları ve fiziksel gelişim farklılıklarını inceleyen klinik genetik dalıdır.",
+     "sik_aciklamalari": {
+      "A": "Popülasyon genetiğinin konusudur.",
+      "B": "Doğru. Dismorfolojinin Smith tarafından tanımlanan resmi çalışma alanıdır.",
+      "C": "İmmünoloji ve romatolojinin ilgi alanıdır.",
+      "D": "Histopatolojinin konusudur.",
+      "E": "Farmakogenetiğin alanıdır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k01-q11",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Konjenital defektlerin değerlendirilmesinde kullanılan terminolojide \"tek primer defekt\" ile \"yaygın doku etkilenmesi\" arasındaki patogenetik farklar klinik tanı için belirleyicidir. Bir dokunun hücresel düzeyde enzim yapımındaki veya yapısal protein sentezindeki bir bozukluk nedeniyle anormal organizasyon göstermesi ve doku büyüdükçe tablonun ilerleyici şekilde ağırlaşması hangi kavramla ifade edilir?",
+     "secenekler": {
+      "A": "Malformasyon",
+      "B": "Deformasyon",
+      "C": "Disrupsiyon",
+      "D": "Displazi",
+      "E": "Agenezi"
+     },
+     "dogru": "D",
+     "aciklama": "Displazi, bir dokunun hücresel organizasyonundaki intrensek defekttir ve doku büyüdükçe bulgular ağırlaşır.",
+     "sik_aciklamalari": {
+      "A": "Malformasyon lokalize organogenez defektidir.",
+      "B": "Deformasyon mekanik dış kuvvete bağlıdır.",
+      "C": "Disrupsiyon normal dokunun dış veya vasküler nedenle yıkımıdır.",
+      "D": "Doğru. Displazi dokusal düzeyde organizasyon, enzim veya yapısal protein defektidir.",
+      "E": "Agenezi doku taslağının hiç oluşmamasıdır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k01-q12",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bir yenidoğanın muayenesinde ensede düşük saç çizgisi, tek palmar çizgi (simian çizgisi) ve preauriküler sinüs saptanmıştır. Başka hiçbir majör iç organ anomalisi izlenmemiştir. Bu bebekte saptanan fiziksel özelliklerin terminolojik sınıflaması ve klinik önemi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bu özellikler majör anomalidir ve ivedi cerrahi rezeksiyon gerektirir.",
+      "B": "Bu özellikler minör anomalilerdir; fonksiyonel engel oluşturmazlar ancak ≥3 adet bulunması altta yatan gizli bir majör defekt veya sendrom riskini belirgin artırır.",
+      "C": "Bu bulgular yalnızca kromozomal trizomilerde görülür, normal popülasyonda sıklığı %50'dir.",
+      "D": "Minör anomalilerin varlığı kesin olarak mental retardasyon gelişeceğini kanıtlar.",
+      "E": "İzole bir minör anomali her zaman amniyotik bant disrupsiyonuna bağlı gelişir."
+     },
+     "dogru": "B",
+     "aciklama": "Minör anomaliler cerrahi/kozmetik önemi az olan fakat 3 veya daha fazla olduğunda sendrom veya majör anomali riskini dramatik artıran belirteçlerdir.",
+     "sik_aciklamalari": {
+      "A": "Minör anomaliler cerrahi müdahale gerektirmez.",
+      "B": "Doğru. Minör anomali tanımı ve 3 ve üzeri sayıda bulunmasının gizli majör/sendromik risk ilişkisi doğrudur.",
+      "C": "Toplumda %4'ten az görülürler, sadece trizomilerde görülmezler.",
+      "D": "Kesin mental retardasyon göstergesi değildir, risk işaretçisidir.",
+      "E": "Amniyotik bantlar minör değil, disrupitif majör amputasyonlar yapar."
+     },
+     "bilgi": [
+      8,
+      9,
+      28
      ],
      "benzer_cikmis": []
     }
@@ -173,6 +413,241 @@
      },
      "bilgi": [
       11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Rutin muayenede izole bir minör kulak kepçesi farklılığı saptanan, ek sorunu olmayan bir bebekte hekim ailenin endişesini gidermeye çalışmaktadır. Minör ve majör anomali ayrımıyla ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Klinik önemi olmayan tek palmar çizgi varyantı – minör anomali",
+      "B": "Ciddi kalp defekti – minör anomali",
+      "C": "Spina bifida – minör anomali",
+      "D": "Yarık damak – minör anomali",
+      "E": "Konjenital kalp hastalığı – minör anomali"
+     },
+     "dogru": "A",
+     "aciklama": "Minör anomaliler medikal ve cerrahi önemi olmayan, popülasyonun %4'ünden azında görülen farklılıklardır; ciddi sonuç doğurmaz ancak sendrom tanısında ipucu olabilir. Majör anomaliler ciddi sağlık sorunlarına yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Minör anomaliler ciddi sonuç doğurmaz ancak sendrom tanısında ipucu olabilir.",
+      "B": "Ciddi kalp defekti majör anomalidir.",
+      "C": "Spina bifida majör anomalidir.",
+      "D": "Yarık damak majör anomalidir.",
+      "E": "Konjenital kalp hastalığı majör anomalidir."
+     },
+     "bilgi": [
+      8,
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Saçlı deride beyaz perçem ve irislerde farklı renklenme saptanan bir çocukta hekim spesifik bir sendromdan şüphelenmiştir. Minör anomalilerin tanısal değeriyle ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hipertelorizm spesifik bir bulgudur ve tek sendroma işaret eder",
+      "B": "Beyaz perçem nonspesifik bir bulgudur, tanısal değeri yoktur",
+      "C": "İris heterokromisi ve göz kapağı kolobomu spesifik minör anomalilerdendir",
+      "D": "Spesifik anomaliler çok sayıda sendromda görülür",
+      "E": "Nonspesifik anomaliler sendrom tanısında yol göstericidir"
+     },
+     "dogru": "C",
+     "aciklama": "Beyaz perçem, iris heterokromisi, kolobom ve tek ön kesici diş az sayıda sendroma eşlik eden spesifik bulgulardır; hipertelorizm ve telekantus nonspesifiktir. Spesifik minör anomaliler hedefe yönelik incelemeyi gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Hipertelorizm nonspesifik bir bulgudur.",
+      "B": "Beyaz perçem spesifik bulgulardandır.",
+      "C": "Doğru. Bu bulgular az sayıda sendroma eşlik eder ve hedefe yönelik incelemeyi gerektirir.",
+      "D": "Spesifik olanlar az sayıda sendroma eşlik eder.",
+      "E": "Nonspesifik anomaliler çok sayıda tabloda görülür."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Bir morfolojik özelliğin minör anomali sayılabilmesi için toplumda görülme sıklığı ölçütü nedir?",
+     "secenekler": {
+      "A": "%2'den azında görülme",
+      "B": "%3'ünden azında görülme",
+      "C": "%10'undan azında görülme",
+      "D": "%4'ünden azında görülme",
+      "E": "%1'inden azında görülme"
+     },
+     "dogru": "D",
+     "aciklama": "Minör anomaliler medikal, cerrahi veya kozmetik önem taşımayan morfolojik özelliklerdir ve toplumun %4'ünden azında görülme ölçütüyle tanımlanırlar. Bu eşik, sık görülen normal varyasyonların (örneğin yapışık kulak memesi gibi) anomali olarak etiketlenmesini engeller. Tek başına zararsız olan minör anomaliler, bir arada bulunduklarında altta yatan bir sendromun ipucu olabilir.",
+     "sik_aciklamalari": {
+      "A": "%2 eşiği malformasyon sıklık aralığıyla karıştırılmaktadır, minör anomali tanımında kullanılmaz.",
+      "B": "%3 yenidoğanda en az bir malformasyon görülme sıklığıdır, minör anomali eşiği değildir.",
+      "C": "%10 çok yüksek bir eşiktir; bu oranda görülen özellikler normal varyasyon kabul edilir.",
+      "D": "Doğru. Popülasyonun %4'ünden azında görülen ve klinik önemi olmayan özellikler minör anomali sayılır.",
+      "E": "%1 çok katı bir eşiktir; minör anomaliler bundan daha sık görülebilir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Konjenital anomalilerin sınıflandırılmasında kullanılan üç ölçüt aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Büyüklük, oluşum şekli, birlikte görülme",
+      "B": "Sıklık, cinsiyet, kalıtım şekli",
+      "C": "Organ sistemi, yaş, etiyoloji",
+      "D": "Mortalite, morbidite, tedavi yanıtı",
+      "E": "Prenatal tanı, prognoz, maliyet"
+     },
+     "dogru": "A",
+     "aciklama": "Konjenital anomaliler önce büyüklüklerine göre minör ve majör olarak ayrılır, çünkü klinik önem ve ileri inceleme gereksinimi bu ayrıma bağlıdır. Ardından oluşum şekline göre (deformasyon, disrupsiyon, displazi, malformasyon) embriyolojik mekanizma belirlenir. Son olarak birlikte görülme örüntüsüne göre izole anomali, sekans, sendrom veya assosiasyon ayrımı yapılarak tekrarlama riski ve danışma stratejisi şekillenir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Minör-majör ayrımı, embriyolojik mekanizma ve birliktelik örüntüsü sınıflamanın üç eksenini oluşturur.",
+      "B": "Cinsiyet ve kalıtım şekli sendrom tanımında yardımcıdır ancak sınıflamanın üç ana ölçütü arasında yer almaz.",
+      "C": "Organ sistemi muayene kapsamını belirler, anomalinin sınıflama ekseni değildir.",
+      "D": "Mortalite ve tedavi yanıtı prognoz göstergesidir, sınıflama ölçütü değildir.",
+      "E": "Prenatal tanı ve maliyet klinik yönetim basamaklarıdır, sınıflandırma ekseni değildir."
+     },
+     "bilgi": [
+      8,
+      10,
+      18,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k02-q08",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Konjenital anomalilerin etiyopatogenezine göre sınıflandırılmasında intrauterin gelişim dönemleri ile ortaya çıkan patoloji tipi arasında doğrudan bir zamansal korelasyon mevcuttur. İntrauterin gelişim evreleri ve bu evrelerde meydana gelen dismorfik süreç eşleştirmelerinden hangisi embriyolojik temellere göre doğrudur?",
+     "secenekler": {
+      "A": "Fetal dönem (organ maturasyonu) → Primer tüp kapanma malformasyonları",
+      "B": "Erken blastogenez/embriyonik dönem (ilk 8 hafta) → Malformasyon ve doku displazileri",
+      "C": "Geç fetal dönem (3. trimester) → Genetik enzim defektine bağlı doku agenezisi",
+      "D": "Postnatal ilk ay → İntrauterin disrupsiyonel amniyotik bant amputasyonu",
+      "E": "Embriyonik 4. hafta → Uterus basısına bağlı kalça çıkığı deformasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "Embriyonik dönem (ilk 8 hafta) dokuların proliferasyonu, farklılaşması ve organ taslaklarının oluşum evresidir; bu evrede malformasyon ve displaziler ortaya çıkar. Fetal dönemde ise deformasyonlar belirir.",
+     "sik_aciklamalari": {
+      "A": "Nöral tüp fetal dönemde değil, 4. embriyonik haftada kapanır.",
+      "B": "Doğru. İlk 8 haftalık embriyonik evrede malformasyon ve displaziler meydana gelir.",
+      "C": "Agenezi geç fetal dönemde başlamaz, erken blastogenezde taslağın oluşamamasıdır.",
+      "D": "Amniyotik bant disrupsiyonu postnatal değil intrauterin oluşur.",
+      "E": "4. haftada uterus basısı deformasyonu oluşmaz; deformasyon geç fetal dönemde görülür."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k02-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Bir yenidoğan hekimi fizik muayenede saptadığı minör anomalileri değerlendirirken bazılarının çok sayıda farklı genetik sendromda ortaklaşa görüldüğünü (nonspesifik), bazılarının ise belirli sendromlara yüksek tanısal özgüllükle işaret ettiğini (spesifik) hatırlamaktadır. Aşağıdaki minör anomalilerden hangisi, daha az sayıda sendroma eşlik etmesi nedeniyle yüksek tanısal özgüllüğe (spesifik minör anomali) sahiptir?",
+     "secenekler": {
+      "A": "Hipertelorizm (göz küreleri arası mesafenin artması)",
+      "B": "Epikantus (göz iç kantusunu örten deri kıvrımı)",
+      "C": "Beyaz perçem (poliozis / saçta lokalize pigment kaybı)",
+      "D": "Düşük kulak yerleşimi",
+      "E": "Klinodaktili (5. parmağın radyal yönde eğriliği)"
+     },
+     "dogru": "C",
+     "aciklama": "Beyaz perçem, iris heterokromisi, göz kapağı kolobomu ve tek ön kesici diş spesifik minör anomalilerdir; hipertelorizm, epikantus ve düşük kulak ise nonspesifiktir.",
+     "sik_aciklamalari": {
+      "A": "Hipertelorizm çok sayıda sendromda görülen nonspesifik bulgudur.",
+      "B": "Epikantus Down vb. birçok sendromda görülebilen nonspesifik bir bulgudur.",
+      "C": "Doğru. Beyaz perçem (Waardenburg vb.) az sayıda sendroma eşlik eden spesifik minör anomalidir.",
+      "D": "Düşük kulak yüzlerce kromozomal sendromda nonspesifiktir.",
+      "E": "Klinodaktili nonspesifiktir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k02-q10",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Doğum odasında solunum sıkıntısı ile doğan bir term bebekte diyafragma hernisi, ventriküler septal defekt ve yarık damak saptanmıştır. Yapılan genetik analizde trizomi 18 (Edwards sendromu) tespit edilmiştir. Bu olgudaki doğumsal defektlerin birlikte görülme paternine göre sınıflandırılması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İzole anomali",
+      "B": "Sendrom",
+      "C": "Assosiasyon",
+      "D": "Deformasyon sekansı",
+      "E": "Vasküler disrupsiyon"
+     },
+     "dogru": "B",
+     "aciklama": "Sendrom, ortak bir etiyolojik nedene (burada Trizomi 18) bağlı olarak birden fazla organ sistemini tutan malformasyonlar birlikteliğidir.",
+     "sik_aciklamalari": {
+      "A": "Birden çok organ sistemi tutulduğu için izole olamaz.",
+      "B": "Doğru. Ortak bir kromozomal nedene (Trizomi 18) dayalı çoklu organ tutulumu sendromdur.",
+      "C": "Assosiasyonda ortak genetik etiyoloji gösterilemez.",
+      "D": "Tek bir mekanik primer odaktan kaynaklanan kaskad (sekans) değildir.",
+      "E": "Vasküler doku yıkımı (disrupsiyon) değildir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k02-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Bir klinisyen konjenital anomalileri büyüklüklerine göre sınıflandırırken majör anomali saptanan bir hastada izole mi yoksa multipl mi olduğunu ayırt etmek için ileri görüntüleme planlamaktadır. Dismorfoloji kılavuzlarına göre, multipl majör anomalilerin tespiti amacıyla asemptomatik olsa bile öncelikle taranması gereken üç temel sistem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Santral Sinir Sistemi - Kardiyovasküler Sistem - Gastrointestinal Sistem",
+      "B": "Kas-İskelet Sistemi - Hematopoetik Sistem - Endokrin Sistem",
+      "C": "Cilt - Tırnak - Saç Folikülleri",
+      "D": "Periferik Sinir Sistemi - Timus - Dalak",
+      "E": "Solunum Yolları - Gonadlar - Diş Mimarisi"
+     },
+     "dogru": "A",
+     "aciklama": "Majör anomalisi olan olgularda gizli multipl defektleri yakalamak için MSS, KVS ve GİS görüntülenmelidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Ders notu ve literatür standartlarına göre asemptomatik olası majör anomaliler için MSS, KVS ve GİS taranır.",
+      "B, C, D, E": "Bu sistemler fizik muayene ile gözlenebilir veya ilk basamak asemptomatik majör anomali tarama odağı değildir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k02-q12",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki klinik tablolardan hangisi \"büyüklüğüne göre\" majör anomali sınıfına giren ve kesin cerrahi/medikal girişim gerektiren bir durumdur?",
+     "secenekler": {
+      "A": "Heliks kıvrımında Darwin tüberkülü bulunması",
+      "B": "Ayakta 2. ve 3. parmaklar arasında hafif parsiyel kutanöz sindaktili",
+      "C": "Özofagus atrezisi ve trakeoözofageal fistül",
+      "D": "Sakral gamze (tabanı görülebilen, <5 mm, orta hat yerleşimli)",
+      "E": "İki taraflı preauriküler pit (çukurcuk)"
+     },
+     "dogru": "C",
+     "aciklama": "Özofagus atrezisi ve TOF yaşamı doğrudan tehdit eden ve acil cerrahi onarım gerektiren majör bir anomalidir.",
+     "sik_aciklamalari": {
+      "A": "Darwin tüberkülü anatomik minör varyasyondur.",
+      "B": "Parsiyel kutanöz sindaktili fonksiyon bozmayan minör anomalidir.",
+      "C": "Doğru. Hayati tehlike oluşturan ve cerrahi zorunluluğu olan açık bir majör malformasyondur.",
+      "D": "Tabanı görülen sakral gamze minör varyanttır.",
+      "E": "Preauriküler pit minör anomalidir."
+     },
+     "bilgi": [
+      10
      ],
      "benzer_cikmis": []
     }
@@ -292,6 +767,251 @@
       17
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k03-q05",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Oligohidramniyoslu gebelikten doğan bebekte çarpık ayak ve kalça çıkığı saptanmış, yapıların normal geliştiği ancak basıya maruz kaldığı belirtilmiştir. Altta yatan mekanizmayla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Deformasyon organogenezdeki lokalize hatadan kaynaklanır",
+      "B": "Oligohidramniyosa bağlı club foot deformasyondur ve geri dönüşümlüdür",
+      "C": "Malformasyon dış mekanik basıyla oluşur",
+      "D": "Deformasyon kalıcı bir primer defekttir",
+      "E": "Konjenital kalp hastalığı deformasyon örneğidir"
+     },
+     "dogru": "B",
+     "aciklama": "Deformasyon normal gelişen yapının dış mekanik etkilere maruz kalmasıdır ve doğum sonrası geri dönüşümlüdür; örnekleri club foot ve kalça çıkığıdır. Malformasyon organogenezdeki lokalize hatadan kaynaklanan kalıcı primer defekttir.",
+     "sik_aciklamalari": {
+      "A": "Organogenez hatası malformasyondur.",
+      "B": "Doğru. Deformasyonda yapı normal gelişmiş ancak mekanik etkiyle şekli bozulmuştur.",
+      "C": "Mekanik bası deformasyon yapar.",
+      "D": "Deformasyon doğum sonrası geri dönüşümlüdür.",
+      "E": "Konjenital kalp hastalığı malformasyon örneğidir."
+     },
+     "bilgi": [
+      12,
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k03-q06",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Bir bebekte amniyotik banda bağlı parmak amputasyonu, başka bir bebekte ise iskelet displazisine bağlı orantısız kısalık saptanmıştır. Bu iki mekanizmayla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Disrupsiyon hücre düzeyinde enzim bozukluğudur",
+      "B": "Displazi oluşmuş yapının mekanik yıkımıdır",
+      "C": "Amniyotik bant amputasyonu displazi örneğidir",
+      "D": "İskelet displazilerinde bulgular yaşla hafifler",
+      "E": "Amniyotik bant amputasyonu disrupsiyon, iskelet displazisi displazi örneğidir"
+     },
+     "dogru": "E",
+     "aciklama": "Disrupsiyon oluşmuş yapının yıkımıdır; amniyotik bant amputasyonları ve vasküler kesintiye bağlı atreziler örnekleridir. Displazi dokuda anormal hücresel organizasyondur; depo hastalıkları ve iskelet displazileri örnekleridir ve doku büyüdükçe bulgular ağırlaşır.",
+     "sik_aciklamalari": {
+      "A": "Enzim bozukluğu displazinin özelliğidir.",
+      "B": "Mekanik yıkım disrupsiyondur.",
+      "C": "Amniyotik bant amputasyonu disrupsiyondur.",
+      "D": "Displazide doku büyüdükçe bulgular ağırlaşır.",
+      "E": "Doğru. Disrupsiyon yıkım, displazi hücresel organizasyon bozukluğudur."
+     },
+     "bilgi": [
+      14,
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Normal gelişmiş bir yapının dış mekanik güçlerle şekil bozukluğuna uğraması ve doğum sonrası düzelebilmesi hangi oluşum şeklinin özelliğidir?",
+     "secenekler": {
+      "A": "Hücresel organizasyon bozukluğudur",
+      "B": "Vasküler yıkımla doku kaybıdır",
+      "C": "Organogenezde primer hatadır",
+      "D": "Kromozom dengesizliğidir",
+      "E": "Dış mekanik etki, geri dönüşümlüdür"
+     },
+     "dogru": "E",
+     "aciklama": "Deformasyonda organ normal gelişimini tamamlamıştır, ancak intrauterin dönemde amniyon sıvısı azlığı, çoğul gebelikte sıkışma veya uterus anomalisi gibi dış mekanik güçler yapıyı sıkıştırır. Kıkırdak ve kemik gibi şekil verilebilir dokular bu basınca boyun eğer, bu yüzden pes ekinovarus ve doğumsal kalça çıkığı tipik örneklerdir. Basınç ortadan kalktıktan sonra doku eski formuna dönebildiği için deformasyonlar doğum sonrası alçılama ve fizyoterapiyle büyük ölçüde düzelir.",
+     "sik_aciklamalari": {
+      "A": "Bu ifade displaziyi tanımlar; deformasyonda hücresel organizasyon normaldir.",
+      "B": "Bu ifade disrupsiyonun vasküler mekanizmasıdır, deformasyonda doku yıkımı yoktur.",
+      "C": "Bu ifade malformasyonu tanımlar; deformasyonda organogenez normal tamamlanmıştır.",
+      "D": "Kromozom dengesizliği sendromik tabloların nedenidir, deformasyon mekanizmasıyla ilişkisi yoktur.",
+      "E": "Doğru. Normal gelişen yapı dışarıdan sıkışır ve basınç kalkınca şekil düzelir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k03-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Disrupsiyon ile displazi arasındaki temel mekanik farkı doğru ifade eden seçenek hangisidir?",
+     "secenekler": {
+      "A": "İkisi de geri dönüşümlüdür",
+      "B": "Yıkım ve hücresel organizasyon bozukluğu",
+      "C": "İkisi de organogenez hatasıdır",
+      "D": "İkisi de dış mekanik etkidir",
+      "E": "İkisi de kromozomaldir"
+     },
+     "dogru": "B",
+     "aciklama": "Disrupsiyonda başlangıçta normal gelişen doku, amniyotik bant gibi dış bir ajanla veya kan akımının kesilmesiyle oluşan infarktüs ve nekrozla yıkıma uğrar, bu yüzden defekt embriyolojik sınırlardan bağımsız ve asimetriktir. Displazide ise sorun hücre düzeyindedir; yapısal protein veya enzim sentezindeki bozukluk dokunun organizasyonunu baştan anormal kılar. Displazik doku büyümeye devam ettiği için iskelet displazilerinde olduğu gibi klinik bulgular yaşla ağırlaşır, disrupsiyonda ise kayıp doku geri gelmez ancak ilerleme de olmaz.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; disrupsiyonda yıkılan doku geri gelmez, displazide bozukluk kalıcıdır.",
+      "B": "Doğru. Disrupsiyon gelişmiş dokunun yıkımıdır, displazi hücresel organizasyonun baştan bozuk olmasıdır.",
+      "C": "Yanlış; organogenezde primer hata malformasyonun tanımıdır.",
+      "D": "Yanlış; dış mekanik etki deformasyonun değil disrupsiyonun yalnızca bir alt mekanizmasıdır, displazide mekanik etken yoktur.",
+      "E": "Yanlış; her ikisi de genellikle kromozomal olmayan, lokalize mekanizmalarla oluşur."
+     },
+     "bilgi": [
+      14,
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k03-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Doğumda her iki ayağında pes ekinovarus (PEV) deformitesi saptanan bir bebekte, uterus içinde oligohidramniyos ve makat geliş öyküsü mevcuttur. Ortopedik muayenede kemik ve kıkırdak dokuların intrensek gelişiminin normal olduğu, ayağın manipülasyonla normale yakın redükte edilebildiği ve konservatif seri alçılama (Ponseti yöntemi) ile tam düzelme sağlandığı görülmüştür. Bu olgudaki patolojinin gelişim mekanizması ve sınıflaması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Malformasyon – Nöral krest hücre göç hatası",
+      "B": "Deformasyon – Normal gelişen dokunun dış mekanik baskıya maruz kalması",
+      "C": "Disrupsiyon – İntrauterin arteriyel emboli sonucu nekroz",
+      "D": "Displazi – Tip II kollajen gen mutasyonuna bağlı hücresel dizilim kusuru",
+      "E": "Agenezi – Bacak ekstremite tomurcuğunun apoptoza uğraması"
+     },
+     "dogru": "B",
+     "aciklama": "Deformasyon, normal gelişen organların mekanik kompresyon veya kısıtlılık sonucu şekil değiştirmesidir; doğum sonrası geri dönüşümlüdür.",
+     "sik_aciklamalari": {
+      "A": "Malformasyon primer kalıcı yapı hatasıdır, alçılama ile spontan geri dönmez.",
+      "B": "Doğru. Oligohidramniyosa sekonder mekanik bası ve redükte edilebilirlik klasik deformasyondur.",
+      "C": "Disrupsiyonda doku kaybı vardır, redüksiyon mümkün değildir.",
+      "D": "Displazide dokusal enzim/protein mutasyonu bulunur.",
+      "E": "Agenezi dokunun hiç olmamasıdır."
+     },
+     "bilgi": [
+      12,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k03-q10",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Term doğan bir bebeğin sağ elinde 2. ve 3. parmakların distal falankslarının konjenital amputasyon tarzında eksik olduğu, parmak uçlarında fibröz halka izleri bulunduğu ve sol bacakta da derin bir konstrüksiyon halkası olduğu izlenmiştir. Aile öyküsünde benzer anomali yoktur ve karyotip analizi normaldir. Bu patolojik süreçle ilgili mekanizma ve tekrarlama riski için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Malformasyon olup otozomal resesif geçişlidir; sonraki gebelikte tekrarlama riski %25'tir.",
+      "B": "Displazi olup X'e bağlı resesif kalıtılır; sonraki erkek çocuklarda risk %50'dir.",
+      "C": "Disrupsiyon olup amniyotik bantların mekanik konstrüksiyonu/vasküler hasarı sonucu oluşur; tekrarlama riski son derece düşüktür (sporadiktir).",
+      "D": "Deformasyon olup uterus fibroidlerine bağlıdır; tüm gebeliklerde tekrarlar.",
+      "E": "Dengeli resesiprokal translokasyon taşıyıcılığına bağlı kromozomal kırılmadır; ailede taşıyıcılık taranmalıdır."
+     },
+     "dogru": "C",
+     "aciklama": "Amniyotik bant amputasyonları disrupsiyonun prototipidir; genetik olmayıp ekstrinsik destrüksiyon sonucu gelişir ve tekrarlama riski son derece düşüktür.",
+     "sik_aciklamalari": {
+      "A": "Mendeliyen malformasyon değildir, tekrarlama riski %25 değildir.",
+      "B": "X'e bağlı displazi değildir.",
+      "C": "Doğru. Amniyotik bant amputasyonu disrupsiyondur ve tekrarlama riski çok düşüktür.",
+      "D": "Deformasyon değil disrupsiyondur.",
+      "E": "Kromozomal kırılma/translokasyon değildir."
+     },
+     "bilgi": [
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k03-q11",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "İntrauterin dönemde vasküler tromboz veya kan akımının kesintiye uğraması sonucu intestinal mezenterik infarktüs gelişen ve doğumda jejunumda atrezi (apple-peel atrezisi) saptanan bir bebekte bu patoloji dismorfolojik açıdan nasıl sınıflandırılır?",
+     "secenekler": {
+      "A": "İntrensek vasküler disrupsiyon",
+      "B": "Primer nörulasyon malformasyonu",
+      "C": "Çoğul gebelik deformasyonu",
+      "D": "Ektodermal displazi",
+      "E": "Sekonder blastopatik hamartom"
+     },
+     "dogru": "A",
+     "aciklama": "Disrupsiyon iki temel mekanizmayla oluşur: ekstrinsik mekanik (amniyotik bant) ve intrensek vasküler infarktüs/nekroz. İntestinal atreziler vasküler disrupsiyona örnektir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Vasküler oklüzyona sekonder infarktüs ve rezorpsiyon disrupsiyon mekanizmasıdır.",
+      "B": "Nörulasyon sinir sisteminin kapanmasıdır, bağırsak atrezisi ile ilgisizdir.",
+      "C": "Deformasyon doku kaybı yapmaz, sadece şekil değiştirir.",
+      "D": "Epitel hücresel displazisi değildir.",
+      "E": "Hamartom aşırı matür doku proliferasyonudur, atrezi doku yokluğudur."
+     },
+     "bilgi": [
+      14,
+      15
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k03-q12",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Bir iskelet displazisi olan akondroplazide FGFR3 geninde gain-of-function mutasyonu sonucu kıkırdak büyüme plağında kondrosit organizasyonu ve endokondral kemikleşme bozulmaktadır. Çocuk büyüdükçe orantısız kısa boy ve rizomelik ekstremite kısalığı belirginleşmektedir. Bu olguda tarif edilen ve doku büyüdükçe klinik bulguların giderek derinleştiği patolojik süreç tipi hangisidir?",
+     "secenekler": {
+      "A": "Malformasyon",
+      "B": "Deformasyon",
+      "C": "Displazi",
+      "D": "Disrupsiyon",
+      "E": "Sekans"
+     },
+     "dogru": "C",
+     "aciklama": "Displazide doku düzeyinde hücresel organizasyon bozuktur ve doku büyüdükçe klinik bulgular daha da belirginleşir.",
+     "sik_aciklamalari": {
+      "A": "Malformasyon lokalize organogenez defektidir, tüm kıkırdak sisteminin hücresel mimari kusuru değildir.",
+      "B": "Deformasyon mekanik basıdır.",
+      "C": "Doğru. Hücresel organizasyon bozukluğu ve büyüme ile ilerleyiş displazinin özelliğidir.",
+      "D": "Disrupsiyon doku yıkımıdır.",
+      "E": "Sekans zincirleme anomaliler kaskadıdır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k03-q13",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Deformasyon, disrupsiyon, displazi ve malformasyonun klinik seyir ve cerrahi/biyolojik geri dönüşümlülük özellikleri karşılaştırıldığında aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Malformasyonlar doğum sonrası dış baskı kaldırıldığında kendiliğinden tamamen geri döner.",
+      "B": "Deformasyonlar kemik ve kıkırdak dokuların mekanik basısı sonucu oluştuğundan, uygun postür veya konservatif yaklaşımlarla geri dönüşümlülük potansiyeli en yüksek gruptur.",
+      "C": "Disrupsiyonlar enzim replasman tedavisi ile embriyonik doku taslağını yeniden oluşturabilir.",
+      "D": "Displazilerde doku mimarisi sağlamdır, sadece organ yerleşiminde ektopi mevcuttur.",
+      "E": "Dört patolojinin de genetik tekrarlama riski daima %50 olup otozomal dominant kalıtılır."
+     },
+     "dogru": "B",
+     "aciklama": "Deformasyonlar dış mekanik baskıya bağlı olduğundan doku intrensek olarak sağlamdır ve doğum sonrası geri dönüşümlülüğü en yüksek gruptur.",
+     "sik_aciklamalari": {
+      "A": "Malformasyon primer kalıcı yapısal hatadır, kendiliğinden düzelmez.",
+      "B": "Doğru. Dış bası kalktığında veya fizyoterapi/ortez uygulandığında deformasyonlar düzelebilir.",
+      "C": "Disrupsiyonda nekroze olan veya ampute doku enzimle yeniden oluşmaz.",
+      "D": "Displazide doku mimarisi hücresel düzeyde bozuktur.",
+      "E": "Deformasyon ve disrupsiyonlar genellikle genetik değildir, tekrarlama riski düşüktür."
+     },
+     "bilgi": [
+      12,
+      13,
+      16,
+      17
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -405,6 +1125,248 @@
       24
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k04-q05",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Meningomiyeloselli bir yenidoğanda hidrosefali ve ayak deformiteleri de saptanmıştır. Hekim tüm bulguların omurga defektine sekonder geliştiğini açıklamıştır. Bu durumun terminolojik karşılığı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Spina bifidaya bağlı hidrosefali ve ayak deformitesi – sekans",
+      "B": "Tek başına yarık dudak – sendrom",
+      "C": "Kromozomal anomaliye bağlı çok sistem tutulumu – izole anomali",
+      "D": "Sekans birden fazla bağımsız primer defekt demektir",
+      "E": "İzole anomalide tekrarlama riski her zaman yüksektir"
+     },
+     "dogru": "A",
+     "aciklama": "Sekans altta yatan tek primer defekte sekonder anomalilerin eşlik etmesidir; NTD sekansında spina bifida hidrosefali ve ayak deformitelerine yol açar. İzole anomali tek sistemi tutar, sendrom ortak etiyolojili çok sistem tutulumudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Tek primer defekte sekonder bulguların eşlik etmesi sekansı tanımlar.",
+      "B": "Tek sistem tutulumu izole anomalidir.",
+      "C": "Ortak etiyolojili çok sistem tutulumu sendromdur.",
+      "D": "Sekans tek primer defekte dayanır.",
+      "E": "Risk primer defekte göre değişir."
+     },
+     "bilgi": [
+      18,
+      19,
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k04-q06",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Anal atrezisi, vertebral anomali ve kardiyak defekti olan bir bebekte VACTERL assosiasyonu düşünülmüştür. Aileye tekrarlama riski ve tarama planı anlatılacaktır. Bu durumla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Assosiasyonda ortak etiyoloji tanımlanmıştır",
+      "B": "Sendromda tekrarlama riski her zaman çok düşüktür",
+      "C": "VACTERL tek bir gen defektinin sonucudur",
+      "D": "Anal atrezili bebekte vertebra, kalp ve böbreklerin araştırılması gerekir",
+      "E": "Assosiasyon ile sendrom genetik danışmada aynı riski taşır"
+     },
+     "dogru": "D",
+     "aciklama": "Assosiasyonda ortak etiyoloji ve kalıtım modeli yoktur, tekrarlama riski çok düşüktür; sendromda ortak neden vardır. VACTERL vertebral, anal, kardiyak, trakeoözofageal, renal ve ekstremite anomalilerinin birlikteliğidir.",
+     "sik_aciklamalari": {
+      "A": "Assosiasyonda ortak etiyoloji yoktur.",
+      "B": "Sendromda risk etiyolojiye göre belirlenir.",
+      "C": "VACTERL ortak etiyolojisi olmayan bir birlikteliktir.",
+      "D": "Doğru. VACTERL bileşenleri birlikte aranmalıdır; anal atrezi saptanan bebekte diğer sistemler taranır.",
+      "E": "Assosiasyonda risk çok düşük, sendromda etiyolojiye göre değişir."
+     },
+     "bilgi": [
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Erken morfogenezdeki tek bir primer defekte sekonder anomalilerin eşlik etmesi hangi kavramın tanımıdır?",
+     "secenekler": {
+      "A": "Rastgele birliktelik, risk düşüktür",
+      "B": "Tek organ, multifaktöriyel kalıtım",
+      "C": "Tek primer defekt, sekonder kaskad",
+      "D": "Ortak etiyoloji, belli kalıtım",
+      "E": "Hücresel organizasyon bozukluğu"
+     },
+     "dogru": "C",
+     "aciklama": "Sekans, embriyogenezin erken döneminde ortaya çıkan tek bir primer defektin kaskad biçiminde ikincil anomalilere yol açmasıdır. Başlatıcı lezyon ortadan kalkmaz; örneğin renal agenezide idrar üretilemediği için amniyon sıvısı azalır ve bu sıvı eksikliği akciğer ile yüz-ekstremite gelişimini bozar. Bu nedenle sekanslarda tekrarlama riski, her bir ikincil bulgunun değil, altta yatan primer defektin kalıtımına göre belirlenir.",
+     "sik_aciklamalari": {
+      "A": "Bu ifade assosiasyonu tanımlar; sekansda birliktelik rastgele değil nedensel zincirle bağlıdır.",
+      "B": "Bu ifade izole anomaliyi tanımlar; sekansda birden fazla sistem tutulur.",
+      "C": "Doğru. Tek başlatıcı defekt, mekanik veya fizyolojik zincirle çoklu ikincil anomaliler doğurur.",
+      "D": "Bu ifade sendromu tanımlar; sekansda ortak etiyolojiden çok tek primer olay vardır.",
+      "E": "Bu ifade displazinin mekanizmasıdır, birliktelik örüntüsü kavramı değildir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k04-q08",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Sendrom ile assosiasyon arasındaki kalıtım ve tekrarlama riski farkını doğru ifade eden seçenek hangisidir?",
+     "secenekler": {
+      "A": "Sendromda belli kalıtım, assosiasyonda düşük risk",
+      "B": "İkisinde de risk %25'tir",
+      "C": "Assosiasyonda tek gen sorumludur",
+      "D": "Sendromda risk hesaplanamaz",
+      "E": "İkisi de aynı anlama gelir"
+     },
+     "dogru": "A",
+     "aciklama": "Sendromda tüm bulgular tek bir etiyolojiye (örneğin bir mikrodelesyon veya tek gen mutasyonu) bağlanır ve Mendel kalıtım kurallarına uygun bir tekrarlama riski hesaplanabilir, bu yüzden aileye net bir risk rakamı verilir. Assosiasyonda ise VACTERL örneğinde olduğu gibi anomaliler toplumda rastgele beklenenden sık bir aradadır ancak ortak bir gen veya kromozom nedeni gösterilemez, kalıtım modeli yoktur. Bu nedenle assosiasyon tanısı alan ailelere tekrarlama riskinin oldukça düşük olduğu söylenir ve izlem sendromlardaki gibi hedefe yönelik yapılamaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sendromda etiyoloji ve kalıtım bilindiği için risk hesaplanır, assosiasyonda ortak neden olmadığı için risk düşüktür.",
+      "B": "Yanlış; %25 otozomal resesif kalıtımın riskidir, bu kavramların sabit bir risk değeri yoktur.",
+      "C": "Yanlış; tek gen sorumluluğu sendromların bir alt grubuna aittir, assosiasyonda gösterilemez.",
+      "D": "Yanlış; sendromda kalıtım şekli bilindiği için tekrarlama riski hesaplanabilir.",
+      "E": "Yanlış; iki kavramın etiyoloji ve danışma açısından farkı klinik olarak kritiktir."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k04-q09",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Bir yenidoğanda tek taraflı izole dudak-damak yarığı tespit edilmiştir. Ayrıntılı ekokardiyografi, kraniyal ultrasonografi, abdominal USG ve genetik inceleme tamamen normal sonuçlanmıştır. Ailede başka kimsede anomali bulunmamaktadır. Bu bebekteki tablonun sınıflaması ve genetik etiyolojisi ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kromozomal delesyon sendromudur; %100 monogenik geçişlidir.",
+      "B": "İzole anomalidir; multifaktöriyel (genetik yatkınlık + çevresel faktörler) veya tek gen etiyolojisiyle ortaya çıkabilir.",
+      "C": "Assosiasyondur; tekrarlama riski kesinlikle sıfırdır.",
+      "D": "Sekans tablosudur; primer defekt kalça çıkığıdır.",
+      "E": "Displazidir; tüm mukozal dokularda kıkırdak yıkımı gelişir."
+     },
+     "dogru": "B",
+     "aciklama": "İzole anomali tek bir organ sistemini tutar; etiyolojisi sıklıkla multifaktöriyeldir veya tek gen mutasyonuna bağlıdır.",
+     "sik_aciklamalari": {
+      "A": "İzole tablolar mikrodelesyon sendromu değildir.",
+      "B": "Doğru. Tek organ tutulumu izole anomalidir ve etiyolojisi multifaktöriyel veya monogeniktir.",
+      "C": "Assosiasyon çoklu sistem tutulumudur.",
+      "D": "Sekans kaskadı mevcut değildir.",
+      "E": "Displazi histolojik hücresel doku hastalığıdır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k04-q10",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Embriyogenezde meydana gelen tek bir primer yapısal defektin, intrauterin süreçte adeta domino taşları gibi birbirini tetikleyen bir dizi sekonder ve tersiyer yapısal anormalliklere yol açması durumu hangi kavramla tanımlanır?",
+     "secenekler": {
+      "A": "Sendrom",
+      "B": "Sekans",
+      "C": "Assosiasyon",
+      "D": "Displazi",
+      "E": "Malformasyon kompleksi"
+     },
+     "dogru": "B",
+     "aciklama": "Sekans, erken morfogenezde tek bir primer defektin başlattığı ikincil anomaliler dizisidir.",
+     "sik_aciklamalari": {
+      "A": "Sendromda çoklu primer malformasyonlar aynı anda ortak bir nedenle gelişir.",
+      "B": "Doğru. Tek primer nedenden kaynaklanan basamaklı kaskad sekans tanımıdır.",
+      "C": "Assosiasyon rastlantısal olmayan ama kaskadı gösterilemeyen birlikteliktir.",
+      "D": "Displazi hücresel doku organizasyon bozukluğudur.",
+      "E": "Malformasyon kompleksi bitişik komşu embriyonik dokuların lokal etkilenmesidir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k04-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Bir yenidoğanda anal atrezi, T4-T5 hemivertebra ve Fallot tetralojisi saptanmıştır. Renal USG'de sol böbrek agenezisi, sağ kolda ise radial aplazi tespit edilmiştir. Karyotip ve mikrodelesyon panellerinde bilinen bir sendromik mutasyon saptanmamıştır. Bu olguda en olası tanısal antite aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Turner sendromu",
+      "B": "Potter sekansı",
+      "C": "VACTERL assosiasyonu",
+      "D": "Pierre Robin sekansı",
+      "E": "Amniyotik bant sendromu"
+     },
+     "dogru": "C",
+     "aciklama": "Vertebral, Anal, Kardiyak, Trakeoözofageal, Renal ve Ekstremite (Limb) anomalilerinin birlikteliği VACTERL assosiasyonudur.",
+     "sik_aciklamalari": {
+      "A": "Turner sendromu 45,X monozomisidir.",
+      "B": "Potter sekansı renal ageneziye bağlı pulmoner hipoplazi ve yüz basıklığıdır.",
+      "C": "Doğru. Vertebra, Anal, Kardiyak, Renal ve Ekstremite tutulumu VACTERL tablosudur.",
+      "D": "Pierre Robin mikrognati, glossoptozis ve yarık damaktır.",
+      "E": "Amniyotik bant asimetrik amputasyonlarla seyreder."
+     },
+     "bilgi": [
+      23,
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k04-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Genetik danışma polikliniğinde bir sendrom ile bir assosiasyonun ayırt edilmesi kritik öneme sahiptir. Bir klinik tablonun \"sendrom\" yerine \"assosiasyon\" olarak kabul edilmesinin temel genetik ve klinik gerekçesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Assosiasyonların yalnızca X kromozomuna bağlı dominant geçiş göstermesi",
+      "B": "Assosiasyonu oluşturan anomaliler arasında embriyolojik veya nedensel doğrudan bir ilişki kurulamaması ve öngörülebilir bir mendeliyen kalıtım modelinin bulunmaması",
+      "C": "Assosiasyonlarda kardiyovasküler sistemin hiçbir zaman etkilenmemesi",
+      "D": "Sendromların her zaman çevresel teratojenlere, assosiasyonların ise sadece trizomilere bağlı olması",
+      "E": "Assosiasyonda aile içi tekrarlama riskinin %50 olması"
+     },
+     "dogru": "B",
+     "aciklama": "Assosiasyonda anomaliler beklenenden sık birlikte görülse de ortak bir genetik/embriyolojik köken gösterilemez ve tekrarlama riski düşüktür; sendromda ise ortak etiyoloji ve kalıtım kalıbı bulunur.",
+     "sik_aciklamalari": {
+      "A": "Assosiasyonların mendeliyen kalıtımı yoktur.",
+      "B": "Doğru. Ortak patogenetik mekanizmanın gösterilememesi ve net kalıtım kalıbının olmaması assosiasyonu sendromdan ayıran ana özelliktir.",
+      "C": "VACTERL'de kardiyak anomali sık görülür.",
+      "D": "Sendromlar sıklıkla kromozomal ve genetik kökenlidir.",
+      "E": "Assosiasyonların tekrarlama riski çok düşüktür (<%1)."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k04-q13",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Spina bifida (meningomiyelosel) tanısıyla doğan bir bebekte, omurilikteki primer füzyon defektine sekonder olarak beyin omurilik sıvısı (BOS) dolaşımının bozulduğu, Chiari tip II malformasyonu ve hidrosefali geliştiği, ayrıca alt ekstremitelerde paraliziye sekonder bilateral pes ekinovarus tablosunun eklendiği gözlenmiştir. Bu klinik durum anomalilerin birlikte görülme paternine göre aşağıdakilerden hangisine en uygun örnektir?",
+     "secenekler": {
+      "A": "VACTERL assosiasyonu",
+      "B": "Nöral tüp defekti (Meningomiyelosel) sekansı",
+      "C": "Kromozomal trizomi sendromu",
+      "D": "İzole konjenital ortopedik anomali",
+      "E": "Primer mezodermal displazi"
+     },
+     "dogru": "B",
+     "aciklama": "Meningomiyelosele sekonder hidrosefali ve paraliziye bağlı gelişen PEV tek primer defekten kaynaklanan bir sekans örneğidir.",
+     "sik_aciklamalari": {
+      "A": "VACTERL bağımsız sistemlerin birlikteliğidir, burada direkt kaskad vardır.",
+      "B": "Doğru. Spina bifidanın hidrosefali ve ayak deformitelerine yol açması NTD sekansıdır.",
+      "C": "Kromozomal anöploidi gösterilmemiştir.",
+      "D": "Tablo tek bir sisteme sınırlı izole ortopedik kusur değildir.",
+      "E": "Mezodermal displazi değildir."
+     },
+     "bilgi": [
+      19,
+      21
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -486,6 +1448,236 @@
       "C": "Ayak deformitesi kompresyon sonucudur.",
       "D": "Kalça displazisi eşlik eder.",
       "E": "Doğru: tablo oligohidramniyosla ilişkilidir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bilateral renal agenezili bir fetüste oligohidramniyos, yassılmış yüz, talipes ekinovarus ve pulmoner hipoplazi saptanmıştır. Bu tablonun oluşum mekanizması aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Primer yüz anomalisi böbrek agenezisine yol açar",
+      "B": "Polihidramniyos kompresyon deformasyonu yapar",
+      "C": "Bilateral renal agenezi oligohidramniyos yoluyla yüz ve ekstremite deformasyonlarına yol açar",
+      "D": "Pulmoner hipoplazi Potter sekansında görülmez",
+      "E": "Potter sekansı kromozomal bir sendromdur"
+     },
+     "dogru": "C",
+     "aciklama": "Bilateral renal agenezide oligohidramniyos gelişir; amniyon sıvısı azlığı fetal yüzde basıklık ve ekstremitelerde kompresyon deformasyonuna yol açar. Pulmoner hipoplazi ve erken ölüm eşlik eder.",
+     "sik_aciklamalari": {
+      "A": "Primer defekt renal agenezidir, yüz bulguları sekonderdir.",
+      "B": "Oligohidramniyos kompresyona yol açar.",
+      "C": "Doğru. Tek primer defekte sekonder anomalilerin eşlik etmesi sekansı tanımlar.",
+      "D": "Pulmoner hipoplazi sekansın önemli bileşenidir.",
+      "E": "Potter bir sekans örneğidir, sendrom değildir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Potter sekanslı bebek doğuran bir ailede ikinci gebelik öncesi danışmada, riskin hangi defekte göre belirleneceği tartışılmaktadır. Bu konuyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sekanslarda her bulgu bağımsız primer defekttir",
+      "B": "Potter sekansında tekrarlama riski primer renal defekte göre belirlenir",
+      "C": "Oligohidramniyos primer defekttir",
+      "D": "Sekans ile sendrom aynı kavramdır",
+      "E": "Pulmoner hipoplazi sekansın primer nedenidir"
+     },
+     "dogru": "B",
+     "aciklama": "Sekans başlatıcısı malformasyon, deformasyon, disrupsiyon veya displazi olabilir; risk primer defekte göre değişir. Potter sekansında primer defekt renal agenezi olduğundan tekrarlama riski bu defekte göre belirlenir.",
+     "sik_aciklamalari": {
+      "A": "Sekans tek primer defekte sekonder bulgulardır.",
+      "B": "Doğru. Başlatıcı defekt riski belirler; sekonder bulgular ayrıca risk taşımaz.",
+      "C": "Oligohidramniyos renal ageneziye sekonderdir.",
+      "D": "Sendrom ortak etiyolojili, sekans tek primer defektlidir.",
+      "E": "Pulmoner hipoplazi sekonder bulgudur."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Potter sekansını başlatan primer defekt ve onu izleyen amniyon sıvısı değişikliği nedir?",
+     "secenekler": {
+      "A": "Polihidramniyos ve makrosefali",
+      "B": "Plasental yetmezlik ve asfiksi",
+      "C": "Kromozom ayrılamaması ve mozaisizm",
+      "D": "Renal agenezi ve oligohidramniyos",
+      "E": "Teratojen maruziyeti ve yıkım"
+     },
+     "dogru": "D",
+     "aciklama": "Bilateral renal agenezide fetal böbrekler idrar üretemez ve ikinci trimesterden sonra amniyon sıvısının ana kaynağı olan fetal idrar ortadan kalkınca şiddetli oligohidramniyos gelişir. Amniyon sıvısının yastıklayıcı etkisinin kaybı, uterus duvarının fetüs yüz ve ekstremitelerine doğrudan bası yapmasına yol açarak kompresyon deformasyonları oluşturur. Aynı sıvı eksikliği akciğerlere sıvı girişini engellediği için bronş dallanması ve alveol gelişimi durur, sonuçta letal pulmoner hipoplazi ortaya çıkar.",
+     "sik_aciklamalari": {
+      "A": "Polihidramniyos yutma kusurlarında görülür; Potter sekansında sıvı azalmıştır, makrosefali bulgusu yoktur.",
+      "B": "Plasental yetmezlik gelişme geriliği yapar, Potter fenotipindeki yüz-akciğer-ekstremite üçlüsünü açıklamaz.",
+      "C": "Ayrılamama anöploidilere yol açar, Potter sekansı tek bir organ defektinin mekanik sonucudur.",
+      "D": "Doğru. İdrar yokluğu oligohidramniyosa, sıvı eksikliği ise bası deformasyonları ve akciğer gelişim bozukluğuna yol açar.",
+      "E": "Teratojenler disrupsiyon yapar; Potter sekansında yıkım değil, sıvı eksikliğine bağlı bası mekanizması vardır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Potter sekansında akciğer hipoplazisine yol açan mekanizma nedir?",
+     "secenekler": {
+      "A": "Sürfaktan eksikliği",
+      "B": "Sıvı sirkülasyon yokluğu",
+      "C": "Diyafram hernisi basısı",
+      "D": "Kalp yetmezliği ödemi",
+      "E": "Enfeksiyon hasarı"
+     },
+     "dogru": "B",
+     "aciklama": "Fetal akciğerlerin bronş ağacının dallanması ve alveollerin genişlemesi, solunum yollarına girip çıkan amniyon sıvısının yarattığı mekanik gerilme ve büyüme faktörleriyle uyarılır. Oligohidramniyosta bu sıvı hareketi ortadan kalktığı için bronş dallanması duraksar ve alveol sayısı yetersiz kalır, akciğerler hipoplastik doğar. Hipoplastik akciğerle doğan bebek yeterli gaz değişimi yapamadığından tablo doğumdan kısa süre sonra ölümle sonuçlanır.",
+     "sik_aciklamalari": {
+      "A": "Sürfaktan eksikliği prematüre respiratuvar distresinin nedenidir, Potter hipoplazisinde sorun alveol sayısının azlığıdır.",
+      "B": "Doğru. Amniyon sıvısının akciğer içi hareketi dallanmayı uyarır, yokluğunda akciğer gelişimi durur.",
+      "C": "Diyafram hernisi akciğeri dıştan sıkıştırır, Potter mekanizmasında dış bası değil sıvı yokluğu vardır.",
+      "D": "Kalp yetmezliği ödemi akciğerde sıvı biriktirir, hipoplaziye yol açmaz.",
+      "E": "Enfeksiyon konjenital pnömoniye yol açar, bronş dallanmasının durması mekanizmasıyla ilişkisi yoktur."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k05-q08",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Antenatal 22. hafta ultrasonografisinde ağır oligohidramniyos ve bilateral renal agenezi tespit edilen bir fetüs, 34. haftada doğduktan sonra şiddetli solunum yetmezliği nedeniyle dakikalar içinde kaybedilmiştir. Potter sekansında yenidoğanın kaybedilmesine (mortaliteye) yol açan temel patolojik komponent aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kafatasının erken kraniyosinostozu",
+      "B": "Pulmoner hipoplazi (akciğerlerin hipoplastik kalması)",
+      "C": "İntestinal perforasyon ve mekonyum peritoniti",
+      "D": "Ciddi supravalvüler aort darlığı",
+      "E": "Renal tübüler disgeneziye bağlı hiperkalsemik kriz"
+     },
+     "dogru": "B",
+     "aciklama": "Oligohidramniyos nedeniyle akciğerlerin sıvı genişlemesi ve bronşiyal dallanması durur; pulmoner hipoplazi erken mortalitenin temel nedenidir.",
+     "sik_aciklamalari": {
+      "A": "Kraniyosinostoz Potter sekansında görülmez.",
+      "B": "Doğru. Potter sekansındaki mortalitenin doğrudan nedeni pulmoner hipoplazidir.",
+      "C": "Gastrointestinal perforasyon Potter sekansının parçası değildir.",
+      "D": "Aort darlığı Williams sendromuna aittir.",
+      "E": "Ölüm nedeni metabolik değil, solunum yetmezliğidir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k05-q09",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Potter sekansında oligohidramniyosa sekonder olarak fetüs üzerine uygulanan kronik mekanik uterus kompresyonu karakteristik bir yüz görünümüne yol açar. Aşağıdakilerden hangisi klasik \"Potter yüzü\" (Potter facies) bulguları arasında yer almaz?",
+     "secenekler": {
+      "A": "Basık, papağan gagası benzeri kıvrık burun",
+      "B": "Resesif (geride yerleşimli) mikrognatik çene",
+      "C": "Göz altlarında belirgin infraorbital deri kıvrımları",
+      "D": "Makrosefali ve belirgin frontal kabarıklık (bossing)",
+      "E": "Düşük yerleşimli ve yassılaşmış, basık kulaklar"
+     },
+     "dogru": "D",
+     "aciklama": "Potter yüzünde mekanik bası nedeniyle burun, kulaklar ve çene basıklaşır; makrosefali ve frontal kabarıklık ise bası bulgusu değildir.",
+     "sik_aciklamalari": {
+      "A, B, C, E": "Potter yüzünün bası sonucu gelişen tipik deformasyonel bulgularıdır.",
+      "D": "Doğru (yer almaz). Makrosefali ve frontal bossing Potter sekansında görülmez, kafa bası ile yassılaşır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k05-q10",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Potter sekansı klinik bir kaskaddır ve başlatıcı primer olay her zaman tek bir genetik etiyolojiye bağlı olmak zorunda değildir. Aşağıdaki fetal patolojilerden hangisi, bilateral renal agenezi olmamasına rağmen Potter sekansına ve pulmoner hipoplaziye yol açabilir?",
+     "secenekler": {
+      "A": "Posterior üretral valv (PUV) obstrüksiyonu",
+      "B": "Tek taraflı üreteropelvik darlık (karşı böbrek normal)",
+      "C": "İzole atriyal septal defekt",
+      "D": "Gastroşizis",
+      "E": "Kraniyofarenjiyom"
+     },
+     "dogru": "A",
+     "aciklama": "Posterior üretral valv gibi mesane çıkışını tıkayan obstrüktif lezyonlar fetal idrarın amniyotik boşluğa geçişini engelleyerek oligohidramniyos ve sekonder Potter sekansına yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. PUV obstrüksiyonu idrar akışını keserek oligohidramniyos ve Potter sekansı yapar.",
+      "B": "Tek böbrek normal idrar üretir, oligohidramniyos gelişmez.",
+      "C, D, E": "Amniyon sıvısını azaltan obstrüktif üropati yapmazlar."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k05-q11",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Potter sekansında kas-iskelet sisteminde saptanan kontraktürler ve ekstremite bozuklukları patogenetik olarak nasıl sınıflandırılır?",
+     "secenekler": {
+      "A": "Fetal kompresyona ve oligohidramniyosa bağlı gelişen deformasyon",
+      "B": "Tip I kollajen mutasyonuna bağlı kemik displazisi",
+      "C": "Amniyotik fibröz bantlara sekonder doku disrupsiyonu",
+      "D": "Primer ekstremite apoptoz malformasyonu",
+      "E": "Nöral krest migrasyon yetersizliği"
+     },
+     "dogru": "A",
+     "aciklama": "Oligohidramniyosta fetüsün hareket alanı daralır ve uterus duvarının basısı ile talipes ekinovarus ve kalça displazisi gibi deformasyonlar oluşur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Dış mekanik bası ve hareketsizlik nedeniyle ortaya çıkan deformasyondur.",
+      "B": "Kollajen gen mutasyonu (osteogenezis imperfekta) yoktur.",
+      "C": "Fibröz bant amputasyonu yoktur.",
+      "D ve E": "Mekanizma primer embriyonik doku hatası değildir."
+     },
+     "bilgi": [
+      12,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k05-q12",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Akciğer gelişiminde amniyotik sıvının fizyolojik rolü ve Potter sekansındaki bozulma ile ilgili Guyton ve Robbins kaynaklarında belirtilen temel mekanizma hangisidir?",
+     "secenekler": {
+      "A": "Amniyon sıvısı sürfaktan proteinlerini parçalayarak alveollerin kapanmasını sağlar.",
+      "B": "Akciğer sıvısının trakea dışına kontrolsüz kaçmasını engelleyen sıvı direnci ve solunum benzeri hareketler (fetal breathing) ile akciğerlerin genişlemesi sağlanır; sıvı yokluğunda hava yolları hipoplastik kalır.",
+      "C": "Amniyon sıvısı eritropoietin üreterek akciğer kılcallarını uyarır.",
+      "D": "Amniyon sıvısı olmadan fetal diyafragma tamamen ageneziye uğrar.",
+      "E": "Amniyon sıvısı fetal laringeal spazmı tetikleyerek mukus üretimini durdurur."
+     },
+     "dogru": "B",
+     "aciklama": "Amniyon sıvısı fetal solunum hareketleriyle akciğer sıvısının dengelenmesini ve mekanik gerilimle bronşiyal dallanmanın sürmesini sağlar; sıvı yokluğunda akciğerler hipoplastik kalır.",
+     "sik_aciklamalari": {
+      "A": "Amniyon sıvısı sürfaktanı parçalamaz.",
+      "B": "Doğru. Sıvı direnci ve mekanik gerilimin kaybolması ile pulmoner hipoplazi gelişimi temel fizyopatolojidir.",
+      "C": "Eritropoietin akciğer dallanmasının primer mekanik faktörü değildir.",
+      "D": "Diyafragma agenezisi diyafragma hernisidir, Potter sekansı ile oluşmaz.",
+      "E": "Laringeal spazm mekanizması yoktur."
      },
      "bilgi": [
       20
@@ -578,6 +1770,239 @@
       37
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Sitogenetik raporunda bir hastada trizomi 21, başka bir hastada 7q11.23 delesyonu bildirilmiştir. Laborant bu iki sonucun farklı düzensizlik gruplarına girdiğini belirtmektedir. Doğru sınıflama aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Trizomi 21 – sayısal; 7q11.23 delesyonu – yapısal düzensizliktir",
+      "B": "Trizomi 21 – yapısal; delesyon – sayısal düzensizliktir",
+      "C": "İnversiyon – sayısal düzensizliktir",
+      "D": "Anöploidi kromozom yapısının bozulmasıdır",
+      "E": "Delesyon kromozom sayısının artmasıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Sayısal düzensizlikler öploidi ve anöploidi olarak sınıflanır; trizomi 21 anöploidi örneğidir. Yapısal düzensizlikler arasında translokasyon, delesyon, duplikasyon, inversiyon ve halka kromozom sayılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sayı bozuklukları öploidi-anöploidi, yapı bozuklukları delesyon-translokasyon grubudur.",
+      "B": "Trizomi sayısal, delesyon yapısaldır.",
+      "C": "İnversiyon yapısal düzensizliktir.",
+      "D": "Anöploidi sayı bozukluğudur.",
+      "E": "Delesyon parça kaybıdır."
+     },
+     "bilgi": [
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Elf yüzü ve supravalvüler aortik stenozu olan hastada 7q11.23 delesyonu saptanmıştır. Bu sonucun düzensizlik grubuyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Williams sendromu sayısal anomalidir",
+      "B": "Mikrodelesyonlar kromozom sayısını artırır",
+      "C": "Halka kromozom sayısal düzensizliktir",
+      "D": "Mikrodelesyon sendromları yapısal düzensizlik mekanizmasıyla ortaya çıkar",
+      "E": "Marker kromozom normal karyotip varyantıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Mikrodelesyon sendromları yapısal düzensizlik mekanizmasıyla ortaya çıkar; Williams sendromu 7q11.23 delesyonuna bağlıdır. Sayısal anomaliler kromozom sayısını değiştirir.",
+     "sik_aciklamalari": {
+      "A": "Williams yapısal delesyona bağlıdır.",
+      "B": "Mikrodelesyon parça kaybıdır.",
+      "C": "Halka kromozom yapısal düzensizliktir.",
+      "D": "Doğru. Translokasyon, delesyon ve duplikasyon yapısal gruptadır.",
+      "E": "Marker kromozom yapısal anomalidir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Sayısal kromozomal düzensizliklerin iki ana alt tipi nedir?",
+     "secenekler": {
+      "A": "Öploidi ve anöploidi",
+      "B": "Delesyon ve duplikasyon",
+      "C": "İnversiyon ve translokasyon",
+      "D": "Halka ve izokromozom",
+      "E": "Marker ve mikrodelesyon"
+     },
+     "dogru": "A",
+     "aciklama": "Sayısal düzensizliklerde kromozom takımlarının tamamı (öploidi) veya tek tek kromozomlar (anöploidi, 2n+1 veya 2n-1) sayı olarak değişir. Mayozda homolog kromozomların veya kardeş kromatidlerin ayrılamaması (nondisjunction) sonucu gametler fazla ya da eksik kromozom taşır. Bu mekanizma Down sendromu gibi trizomilerin ve Turner sendromu gibi monozomilerin temelini oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Takım düzeyinde veya tek kromozom düzeyinde sayı değişimleri sayısal düzensizlikleri oluşturur.",
+      "B": "Delesyon ve duplikasyon kromozomun bir parçasının kaybı veya artmasıdır, yapısal düzensizliktir.",
+      "C": "İnversiyon ve translokasyon parça yerleşim değişiklikleridir, sayı değişimi içermez.",
+      "D": "Halka ve izokromozom anormal yapılı kromozomlardır, yapısal gruba girer.",
+      "E": "Marker kromozom yapısal, mikrodelesyon submikroskopik yapısal kayıptır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": [
+      "80ab29504d2f"
+     ]
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yapısal kromozomal düzensizliklere örnek olan iki değişiklik nedir?",
+     "secenekler": {
+      "A": "Trizomi ve monozomi",
+      "B": "Triploidi ve tetraploidi",
+      "C": "Disomi ve nullisomi",
+      "D": "Mozaisizm ve kimerizm",
+      "E": "Translokasyon ve delesyon"
+     },
+     "dogru": "E",
+     "aciklama": "Yapısal düzensizliklerde kromozom sayısı normaldir ancak bir veya daha fazla kromozomun yapısı, parça kopması ve yanlış birleşme sonucu değişir. Delesyon parça kaybına, duplikasyon parça artımına, translokasyon parça yer değişimine, inversiyon parça ters dönmesine yol açar. Williams sendromundaki 7q11.23 mikrodelesyonu gibi küçük kayıplar, elastin geni dahil kritik genlerin haployetmezliğiyle fenotip oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Trizomi ve monozomi kromozom sayısı değişimleridir, yapısal değil sayısal anomalidir.",
+      "B": "Triploidi ve tetraploidi tüm takımın katlanmasıdır, öploidi grubuna girer.",
+      "C": "Disomi normal durumdur, nullisomi sayı azalmasıdır; yapısal kategoride değildir.",
+      "D": "Mozaisizm ve kimerizm hücre topluluklarının farklılığıdır, kromozom yapı değişimi değildir.",
+      "E": "Doğru. Her ikisi de kromozom parçasının kopup farklı düzenlenmesiyle oluşan yapısal düzensizliklerdir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k06-q08",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Sitogenetik laboratuvarında analiz edilen bir olguda kromozom sayısının haploid sayının (n=23) tam katları şeklinde arttığı (örneğin 3n=69 kromozom) saptanmıştır. Bu durum aşağıdaki kromozomal düzensizlik tanımlarından hangisiyle ifade edilir?",
+     "secenekler": {
+      "A": "Anöploidi",
+      "B": "Monozomi",
+      "C": "Poliploidi (Öploidi sapması)",
+      "D": "İzokromozom",
+      "E": "Resiprokal translokasyon"
+     },
+     "dogru": "C",
+     "aciklama": "Kromozom sayısının haploid sayının tam katı şeklinde olması öploidi/poliploididir (3n=triploidi).",
+     "sik_aciklamalari": {
+      "A": "Anöploidi tekil kromozom artış veya azalışıdır (2n±1).",
+      "B": "Monozomi tek bir kromozomun eksikliğidir (2n-1).",
+      "C": "Doğru. Haploid sayının tam katı artışları poliploididir (öploidi grubu).",
+      "D": "İzokromozom yapısal anomalidir.",
+      "E": "Translokasyon yapısal anomalidir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k06-q09",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Hücre bölünmesi sırasında sentromerin transvers (yatay) olarak yanlış bölünmesi sonucunda bir kolun tamamen kaybedilmesi ve diğer kolun duplike olmasıyla (iki p kolu veya iki q kolundan oluşan simetrik kromozom) ortaya çıkan yapısal kromozom düzensizliği hangisidir?",
+     "secenekler": {
+      "A": "Ring (halka) kromozom",
+      "B": "İzokromozom",
+      "C": "Parasentrik inversiyon",
+      "D": "Perisentrik inversiyon",
+      "E": "Robertsonian translokasyon"
+     },
+     "dogru": "B",
+     "aciklama": "Sentromerin yatay hatalı bölünmesiyle bir kolun kaybedilip diğer kolun ayna hayali çift kol oluşturması izokromozomdur.",
+     "sik_aciklamalari": {
+      "A": "Ring kromozom uç telomer kırıklarının birleşmesidir.",
+      "B": "Doğru. Sentromerin transvers bölünmesiyle oluşan simetrik kromozom izokromozomdur.",
+      "C ve D": "İnversiyon parçanın ters dönmesidir.",
+      "E": "Robertsonian akrosentrik kromozom füzyonudur."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k06-q10",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Bir kromozomda meydana gelen iki ayrı kırık sonrasında sentromeri içermeyen tek bir kol segmentinin kendi ekseni etrafında 180 derece ters dönerek aynı kromozoma yeniden yapışması durumu nasıl adlandırılır?",
+     "secenekler": {
+      "A": "Perisentrik inversiyon",
+      "B": "Parasentrik inversiyon",
+      "C": "İntersitisyel delesyon",
+      "D": "Tandem duplikasyon",
+      "E": "Disentrik marker kromozom"
+     },
+     "dogru": "B",
+     "aciklama": "Sentromeri içermeyen tek bir koldaki ters dönme parasentrik inversiyondur; sentromeri içeren ters dönme perisentriktir.",
+     "sik_aciklamalari": {
+      "A": "Perisentrik inversiyon sentromeri içine alır.",
+      "B": "Doğru. Sentromeri içermeyen inversiyon parasentrik inversiyondur.",
+      "C": "Delesyonda materyal kaybı vardır, burada kayıpsız ters dönme mevcuttur.",
+      "D": "Duplikasyonda genetik materyal artışı vardır.",
+      "E": "Disentrik kromozom iki sentromerlidir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k06-q11",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Akrosentrik kromozomların (13, 14, 15, 21, 22) sentromere çok yakın bölgelerinden kırılarak kısa kollarındaki satellit DNA'ların kaybolması ve uzun kollarının tek bir sentromer altında füzyona uğramasıyla karakterize yapısal bozukluk hangisidir?",
+     "secenekler": {
+      "A": "Halka kromozom",
+      "B": "Robertsonian translokasyonu",
+      "C": "Resiprokal dengeli translokasyon",
+      "D": "Terminal mikrodelesyon",
+      "E": "Homolog olmayan izokromozom"
+     },
+     "dogru": "B",
+     "aciklama": "Akrosentrik kromozomların kısa kollarını kaybedip uzun kollarının birleşmesi Robertsonian translokasyonudur (sentrik füzyon).",
+     "sik_aciklamalari": {
+      "A": "Halka kromozom telomer kaybı ile uçların halkalaşmasıdır.",
+      "B": "Doğru. Akrosentrik kromozomların uzun kol füzyonu Robertsonian translokasyonudur.",
+      "C": "Resiprokal translokasyon herhangi iki kromozom arasında karşılıklı parça değişimidir.",
+      "D ve E": "Farklı yapısal anomalilerdir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k06-q12",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yapısal ve sayısal kromozom anomalilerinin klinik sonuçları değerlendirildiğinde aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Otozomal monozomiler genellikle intrauterin yaşamla bağdaşmaz ve erken spontan abortusla sonuçlanır.",
+      "B": "Dengeli yapısal translokasyon taşıyıcıları genellikle fenotipik olarak tamamen sağlıklıdır ancak infertilite veya tekrarlayan düşük riski taşırlar.",
+      "C": "Mikrodelesyon sendromları standart konvansiyonel karyotipte (550 bant) her zaman kolaylıkla tespit edilebilir.",
+      "D": "Trizomi 21 (Down sendromu) en sık görülen otozomal anöploididir.",
+      "E": "Halka kromozom oluşumunda kromozomun her iki telomerik ucunda kayıp meydana gelir."
+     },
+     "dogru": "C",
+     "aciklama": "Mikrodelesyonlar submikroskopiktir (<5 Mb); ışık mikroskobu (standart karyotip) ile görülemezler, FISH veya Mikroarray gerektirirler.",
+     "sik_aciklamalari": {
+      "A, B, D, E": "Sitogenetik literatüründeki kesin doğru bilgilerdir.",
+      "C": "Doğru (yanlış ifade). Mikrodelesyonlar standart karyotipte görülemez, moleküler test gerektirir."
+     },
+     "bilgi": [
+      4,
+      71
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -662,6 +2087,240 @@
      },
      "bilgi": [
       26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Doğum salonunda 1000 yenidoğanın yaklaşık 20-40'ında konjenital anomali beklendiği, bunların çoğunun izole majör anomali olduğu bir eğitimde anlatılmaktadır. Bu epidemiyolojik bilgiyle ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Konjenital anomali sıklığı yenidoğanda %25-30'dur",
+      "B": "Konjenital anomalilerin yaklaşık %60-65'i izole majör anomalilerdir",
+      "C": "Anomalilerin çoğu kromozomal nedenlidir",
+      "D": "Etiyolojide bilinmeyen grubu %5'ten azdır",
+      "E": "Sendromlar anomalilerin %80'ini oluşturur"
+     },
+     "dogru": "B",
+     "aciklama": "Yenidoğanda konjenital anomali sıklığı %2-4'tür; bunların %60-65'i izole majör anomali, %20'si sendromlardır. Etiyolojide %50-60 bilinmeyen, %20-25 multifaktöriyel nedenler yer alır.",
+     "sik_aciklamalari": {
+      "A": "Sıklık %2-4'tür.",
+      "B": "Doğru. Sıklık dağılımı tanı olasılığını yönlendirir.",
+      "C": "Kromozomal nedenler %6-7'dir.",
+      "D": "Bilinmeyen grup %50-60 ile en büyük gruptur.",
+      "E": "Sendromlar %20'dir."
+     },
+     "bilgi": [
+      7,
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Nedeni saptanamayan çoklu anomalili bir bebekte hekim, etiyolojinin sıklıkla bilinmediğini ve olgunun arşivlenerek izlenmesi gerektiğini belirtmiştir. Bu yaklaşımla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Anomalilerin nedeni her zaman saptanabilir",
+      "B": "Multifaktöriyel nedenler %1'den azdır",
+      "C": "Çevresel nedenler anomalilerin yarısından sorumludur",
+      "D": "Mutant genler en büyük etiyolojik gruptur",
+      "E": "Nedenlerin yarısından fazlası bilinmemektedir ve olguların arşivlenmesi gerekir"
+     },
+     "dogru": "E",
+     "aciklama": "Nedenin sıklıkla saptanamaması olguların takibi ve arşivlenmesini gerekli kılar. Bilinmeyen %50-60, multifaktöriyel %20-25, çevresel %7-10, mutant gen %7-8, kromozomal %6-7'dir.",
+     "sik_aciklamalari": {
+      "A": "Olguların yarısından fazlasında neden bilinmez.",
+      "B": "Multifaktöriyel nedenler %20-25'tir.",
+      "C": "Çevresel nedenler %7-10'dur.",
+      "D": "En büyük grup bilinmeyenlerdir.",
+      "E": "Doğru. Bu durum takip ve yeniden değerlendirmeyi zorunlu kılar."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Yenidoğanda konjenital anomali sıklığı ve en sık görülen örüntü nedir?",
+     "secenekler": {
+      "A": "%10-15, çoğu sendromdur",
+      "B": "%0,5-1, çoğu sekansdır",
+      "C": "%2-4, çoğu izoledir",
+      "D": "%8-10, çoğu assosiasyondur",
+      "E": "%20-25, çoğu kromozomaldir"
+     },
+     "dogru": "C",
+     "aciklama": "Toplum taramalarında yenidoğanların %2-4'ünde konjenital anomali saptanır ve tüm yenidoğanların yaklaşık %3'ünde en az bir malformasyon bulunur. Bu anomalilerin %60-65'i tek sistemle sınırlı izole majör anomalilerdir, %20'si sendrom, %8-13'ü sekans, %3'ü assosiasyon örüntüsü gösterir. Bu dağılım, çoklu anomalisi olan bir bebekte önce sendrom olasılığının düşünülmesi gerektiğini gösterir.",
+     "sik_aciklamalari": {
+      "A": "%10-15 gerçek sıklığın çok üzerindedir ve sendromlar tüm anomalilerin yalnızca %20'sini oluşturur.",
+      "B": "%0,5-1 çok düşük bir tahmindir; sekanslar %8-13'lük küçük bir dilimdir.",
+      "C": "Doğru. Yenidoğanda %2-4 sıklık ve %60-65 izole majör anomali dağılımı epidemiyolojik verilerle uyumludur.",
+      "D": "%8-10 abartılıdır ve assosiasyonlar yalnızca %3'lük dilimi oluşturur.",
+      "E": "%20-25 multifaktöriyel etiyoloji oranıdır, genel sıklık değildir."
+     },
+     "bilgi": [
+      7,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Konjenital anomalilerin etiyolojik dağılımında en büyük paya sahip grup hangisidir?",
+     "secenekler": {
+      "A": "Kromozomal anomaliler",
+      "B": "Bilinmeyen nedenler",
+      "C": "Tek gen mutasyonları",
+      "D": "Çevresel teratojenler",
+      "E": "Multifaktöriyel kalıtım"
+     },
+     "dogru": "B",
+     "aciklama": "Konjenital anomalilerin yarısından fazlasında ayrıntılı incelemeye rağmen tek bir neden gösterilemez ve bu olgular bilinmeyen etiyoloji grubunda toplanır. Bilinen nedenler arasında multifaktöriyel kalıtım %20-25 ile ilk sıradadır, çevresel etkenler ve tek gen mutasyonları daha küçük paylara sahiptir. Nedenin sıklıkla bulunamaması, dismorfik olguların veri tabanlarında arşivlenmesini ve periyodik yeniden değerlendirmesini zorunlu kılar.",
+     "sik_aciklamalari": {
+      "A": "Kromozomal anomaliler yalnızca %6-7'lik paya sahiptir, en büyük grup değildir.",
+      "B": "Doğru. Olguların %50-60'ında etiyoloji aydınlatılamaz ve bu grup ilk sıradadır.",
+      "C": "Mutant genler %7-8'lik payla sınırlıdır.",
+      "D": "Çevresel faktörler %7-10'luk paya sahiptir.",
+      "E": "Multifaktöriyel kalıtım bilinen nedenlerin en sık olanıdır ancak bilinmeyen grubun gerisindedir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k07-q08",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Yenidoğan popülasyonu genelinde yapılan epidemiyolojik çalışmalarda canlı doğan bebeklerde konjenital anomali görülme sıklığı yüzde kaçtır?",
+     "secenekler": {
+      "A": "%0.1 - 0.2",
+      "B": "%2 - 4",
+      "C": "%15 - 20",
+      "D": "%30 - 35",
+      "E": "%0.01'den az"
+     },
+     "dogru": "B",
+     "aciklama": "Canlı doğan yenidoğanlarda konjenital anomali sıklığı %2-4'tür (yaklaşık %3'ünde malformasyon saptanır).",
+     "sik_aciklamalari": {
+      "A ve E": "Çok düşüktür.",
+      "B": "Doğru. Yenidoğandaki küresel anomali sıklığı %2-4'tür.",
+      "C ve D": "Gerçek dışı yüksek oranlardır."
+     },
+     "bilgi": [
+      7,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k07-q09",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Tüm konjenital anomaliler etiyolojik faktörlerine göre gruplandırıldığında, günümüz gelişmiş genetik testlerine rağmen en büyük payı alan etiyolojik kategori aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sitogenetik olarak saptanan sayısal kromozom anomalileri",
+      "B": "Maternal teratojen ilaç ve alkol maruziyeti",
+      "C": "Bilinmeyen (açıklanamayan) nedenler",
+      "D": "Klasik otozomal dominant tek gen mutasyonları",
+      "E": "İntrauterin TORCH enfeksiyonları"
+     },
+     "dogru": "C",
+     "aciklama": "Konjenital anomalilerin %50-60'ında altta yatan neden halen tam olarak bilinememektedir (bilinmeyen etiyoloji).",
+     "sik_aciklamalari": {
+      "A": "Kromozom anomalileri %6-7'dir.",
+      "B ve E": "Çevresel faktörler toplam %7-10'dur.",
+      "C": "Doğru. %50-60 ile en büyük grup nedeni bilinmeyen anomalilerdir.",
+      "D": "Tek gen mutasyonları %7-8'dir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k07-q10",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Canlı doğumlarda saptanan konjenital anomaliler klinik görünüm ve paternlerine göre gruplandırıldığında en sık karşılaşılan kategori hangisidir?",
+     "secenekler": {
+      "A": "Sendromlar (%20)",
+      "B": "İzole majör anomaliler (%60-65)",
+      "C": "Sekanslar (%8-13)",
+      "D": "Assosiasyonlar (%3)",
+      "E": "Dengeli mikrodelesyonlar (%50)"
+     },
+     "dogru": "B",
+     "aciklama": "Konjenital anomalilerin yaklaşık %60-65'i izole majör anomali şeklinde görülür.",
+     "sik_aciklamalari": {
+      "A, C, D": "Yüzdeleri izole majör anomalilerden düşüktür.",
+      "B": "Doğru. Olguların üçte ikisi (%60-65) izole majör anomalidir.",
+      "E": "Böyle bir klinik anomali sınıflaması yoktur."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k07-q11",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Konjenital kalp anomalileri, nöral tüp defektleri ve dudak-damak yarıklarının toplumdaki görülme kalıbı incelendiğinde altta yatan multifaktöriyel eşik modelinin özellikleri ile ilgili hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ailede etkilenen birey sayısı arttıkça sonraki çocukta tekrarlama riski değişmez.",
+      "B": "Hastalık tek bir majör genin varlığıyla ortaya çıkar, çevrenin hiçbir rolü yoktur.",
+      "C": "Poligenik genetik yatkınlık ile çevresel faktörler etkileşir; yatkınlık belirli bir eşik değeri aştığında hastalık fenotipi belirir.",
+      "D": "Akraba evliliği multifaktöriyel hastalık riskini tamamen sıfırlar.",
+      "E": "İkiz eşleri arasında konkordans oranı %100'dür."
+     },
+     "dogru": "C",
+     "aciklama": "Multifaktöriyel eşik modelinde çok sayıda poligenik faktör ile çevresel etkenler etkileşir; eşik değer aşıldığında defekt ortaya çıkar.",
+     "sik_aciklamalari": {
+      "A": "Etkilenen birey sayısı arttıkça tekrarlama riski artar.",
+      "B": "Çevresel faktörler modelin vazgeçilmez parçasıdır.",
+      "C": "Doğru. Multifaktöriyel poligenik eşik modelinin temel tanımıdır.",
+      "D": "Akrabalık multifaktöriyel riski sıfırlamaz.",
+      "E": "Çevrenin etkisi nedeniyle tek yumurta ikizlerinde konkordans %100 değildir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k07-q12",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Birinci trimesterde maternal teratojen maruziyeti (örneğin retinoik asit veya talidomid kullanımı) ile ilgili olarak hangisi doğrudur?",
+     "secenekler": {
+      "A": "Maruziyet fetal 3. trimesterde olsa bile primer ekstremite agenezisine yol açar.",
+      "B": "En kritik ve teratojene en duyarlı dönem embriyonik organogenez evresidir (3-8. haftalar).",
+      "C": "Teratojenler konjenital anomalilerin %90'ının temel nedenidir.",
+      "D": "Bütün teratojenler kesin olarak trizomiye neden olur.",
+      "E": "İlk 2 haftadaki (blastogenez) maruziyet her zaman izole organ malformasyonuna yol açar."
+     },
+     "dogru": "B",
+     "aciklama": "Organogenez dönemi (3-8. haftalar) organ taslaklarının oluştuğu ve teratojenlere en duyarlı olunan evredir.",
+     "sik_aciklamalari": {
+      "A": "Ekstremiteler ilk 8 haftada gelişir, 3. trimesterde agenezi oluşmaz.",
+      "B": "Doğru. 3-8. haftalar arası organogenez evresi teratojen hasarına en açık dönemdir.",
+      "C": "Teratojenler toplam anomalilerin %7-10'undan sorumludur.",
+      "D": "Teratojenler hücresel hasar yapar, anöploidi yapmaz.",
+      "E": "İlk 2 hafta ya hep ya hiç kuralı geçerlidir."
+     },
+     "bilgi": [
+      11,
+      27
      ],
      "benzer_cikmis": []
     }
@@ -750,6 +2409,237 @@
       32
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Yüzde üç farklı minör farklılık ve tek majör kalp defekti saptanan bir bebek genetik polikliniğine yönlendirilmiştir. Aile öyküsünde benzer bulgu yoktur. Bu yönlendirmeyle ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tek minör anomali dismorfik değerlendirmeyi her zaman gerektirir",
+      "B": "Anamnezde teratojen maruziyeti sorgulanmamalıdır",
+      "C": "Akrabalarda bulunmayan 3 veya daha fazla minör anomali dismorfik değerlendirme gerektirir",
+      "D": "Apgar skoru dismorfik yaklaşımda değerlendirilmez",
+      "E": "Majör anomali tek başına incelemeyi gerektirmez"
+     },
+     "dogru": "C",
+     "aciklama": "Dismorfik çocuk akrabalarda bulunmayan 3 veya daha fazla minör anomaliye sahip çocuktur; >2 minör veya 1 majör anomali muayene endikasyonudur. Anamnezde anne yaşı, TORCH ve teratojen maruziyeti, perinatal Apgar sorgulanır.",
+     "sik_aciklamalari": {
+      "A": "Eşik 3 veya daha fazla minör anomalidir.",
+      "B": "Teratojen maruziyeti prenatal öykünün parçasıdır.",
+      "C": "Doğru. Bu tanım dismorfolojik değerlendirmeyi gerektirir.",
+      "D": "Apgar perinatal öyküde değerlendirilir.",
+      "E": "Tek majör anomali de inceleme endikasyonudur."
+     },
+     "bilgi": [
+      28,
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Gelişme geriliği ve mikrosefalisi olan bir çocukta 3 jenerasyonlu pedigri çizilmiş, baş çevresi -3SD'nin altında bulunmuştur. Bu değerlendirme basamaklarıyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "En az 3 jenerasyonlu pedigri alınmalı ve ölçümler persantille değerlendirilmelidir",
+      "B": "Tek jenerasyonlu öykü yeterlidir",
+      "C": "Persantil değerlendirmesi dismorfik yaklaşımda kullanılmaz",
+      "D": "Aile öyküsü negatifse pedigri çizilmesine gerek yoktur",
+      "E": "Pozitif aile öyküleri doğrulanmadan kabul edilmelidir"
+     },
+     "dogru": "A",
+     "aciklama": "En az 3 jenerasyonlu pedigri esastır; etnik köken, akrabalık ve gebelik kayıpları sorgulanır. Boy, ağırlık ve baş çevresi persantille değerlendirilir; kısa yapı <3p, mikrosefali <-3SD olarak tanımlanır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Pedigri ve persantil ölçümsel bulgularla etiyolojiye işaret eder.",
+      "B": "En az 3 jenerasyon esastır.",
+      "C": "Boy ve baş çevresi persantille değerlendirilir.",
+      "D": "Çoğu aile negatif öykü verir ancak pedigri yine de çizilir.",
+      "E": "Pozitif öyküler doğrulanmadan kabul edilmemelidir."
+     },
+     "bilgi": [
+      31,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Bir çocuğun dismorfik olarak kabul edilip değerlendirmeye alınması için minör anomali ölçütü nedir?",
+     "secenekler": {
+      "A": "Bir majör anomali yeterlidir",
+      "B": "İki minör anomali yeterlidir",
+      "C": "Ailede benzer bulgu aranır",
+      "D": "Üç veya daha fazla minör anomali",
+      "E": "Beş veya daha fazla minör anomali"
+     },
+     "dogru": "D",
+     "aciklama": "Tek bir minör anomali toplumda sık görülebilen zararsız bir varyant olabilir, ancak aynı soydan gelmeyen akrabalarda bulunmayan üç veya daha fazla minör anomalinin bir arada olması altta yatan bir sendromun olasılığını belirgin artırır. Bu eşik, gereksiz ileri tetkiklerin önüne geçerken gerçek sendromik olguların atlanmamasını sağlar. Bu ölçüte uyan çocuklar dismorfik kabul edilerek sistematik genetik değerlendirmeye alınır.",
+     "sik_aciklamalari": {
+      "A": "Bir majör anomali ileri inceleme gerektirir ancak dismorfik çocuk tanımının ölçütü değildir.",
+      "B": "İki minör anomali eşik değerin altındadır, tek başına dismorfik tanımı için yetersizdir.",
+      "C": "Tanımda akrabalarda bulunmayan anomaliler esas alınır, benzer bulgu aranması tersine bir ölçüttür.",
+      "D": "Doğru. Birinci derece akrabalarda olmayan üç veya daha fazla minör anomali dismorfik çocuğu tanımlar.",
+      "E": "Beş eşiği gereksiz yere katıdır, tanı gecikmesine yol açar."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Dismorfik hastada aile öyküsü alınırken pedigri için gereken kuşak sayısı nedir?",
+     "secenekler": {
+      "A": "En az üç kuşak pedigri",
+      "B": "Yalnızca çekirdek aile",
+      "C": "Yalnızca anne öyküsü",
+      "D": "Tek kuşak yeterlidir",
+      "E": "Pedigri gerekmez"
+     },
+     "dogru": "A",
+     "aciklama": "Birçok Mendel hastalığında risk, kuşaklar boyunca aktarım örüntüsüne bakılarak anlaşılır; tek kuşağın bilgisi otozomal dominant ile resesif kalıtımı ayırt etmeye yetmez. En az üç kuşağı içeren pedigride akrabalık, etnik köken, yenidoğan ölümleri ve tekrarlayan gebelik kayıpları sorgulanır. Akraba evliliği bilgisi resesif hastalık riskini, etnik köken ise taşıyıcılık sıklığı yüksek bazı hastalıkların ön olasılığını değiştirir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Üç kuşak, kalıtım örüntüsünün tanınması ve akrabalık ile kayıp öyküsünün saptanması için gereklidir.",
+      "B": "Çekirdek aile bilgisi büyükanne-büyükbaba kuşağındaki taşıyıcılık ipuçlarını kaçırır.",
+      "C": "Yalnızca anne öyküsü baba tarafındaki kalıtsal katkıyı dışlar, eksik değerlendirmeye yol açar.",
+      "D": "Tek kuşak kalıtım modelini ayırt etmeye yetmez.",
+      "E": "Pedigrisiz risk tayini yapılamaz, danışma dayanaksız kalır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k08-q08",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Dismorfolojik değerlendirme amacıyla genetik polikliniğine yönlendirilmesi gereken \"dismorfik çocuk\" tanımı aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Yalnızca saç rengi anne ve babasından farklı olan her çocuk",
+      "B": "Birinci derece akrabalarında bulunmayan, 3 veya daha fazla minör anomaliye sahip çocuk",
+      "C": "Boy persantili 50. persantilde olan ve izole diş çürüğü bulunan çocuk",
+      "D": "Postnatal dönemde sadece tek bir kez ateşli havale geçiren çocuk",
+      "E": "Rutin aşı takviminde aşısı gecikmiş olan her süt çocuğu"
+     },
+     "dogru": "B",
+     "aciklama": "Dismorfik çocuk, 1. derece akrabalarda bulunmayan 3 veya daha fazla minör anomaliye sahip olan çocuktur.",
+     "sik_aciklamalari": {
+      "A, C, D, E": "Dismorfik çocuk kriteri değildir.",
+      "B": "Doğru. 1. derece akrabalarda olmayan ≥3 minör anomali dismorfik çocuk tanımıdır."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k08-q09",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Dismorfik bir bebeğin fizik muayenesinde baş çevresi ölçümü yapılmaktadır. Baş çevresinin yaş ve cinsiyete göre ortalamanın 3 standart sapma altında (-3 SD altı veya <3. persantil) olması aşağıdaki terimlerden hangisi ile tanımlanır ve patofizyolojik önemi nedir?",
+     "secenekler": {
+      "A": "Makrosefali – Hidrosefali bulgusudur.",
+      "B": "Brakisefali – Kafatasının ön-arka çapının artmasıdır.",
+      "C": "Mikrosefali – Kraniyal sutürlerin veya beyin parankim gelişiminin yetersizliğine bağlı nöronal kayıp/gelişim geriliğine işaret eder.",
+      "D": "Dolikosefali – Sagittal sütürün açık kalmasıyla normal varyanttır.",
+      "E": "Plagiosefali – Yalnızca kulak kepçesinin yokluğudur."
+     },
+     "dogru": "C",
+     "aciklama": "Baş çevresinin -3 SD altında olması mikrosefalidir ve nörogelişimsel gerilik ile beyin gelişim yetersizliğine işaret eder.",
+     "sik_aciklamalari": {
+      "A": "+3 SD üzeri makrosefalidir.",
+      "B": "Brakisefali arka kafanın düzleşmesidir.",
+      "C": "Doğru. -3 SD altı mikrosefalidir ve beyin gelişim geriliği göstergesidir.",
+      "D": "Dolikosefali kafa ön-arka çapının artmasıdır.",
+      "E": "Plagiosefali kafa asimetrisidir."
+     },
+     "bilgi": [
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k08-q10",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Dismorfik hastaya klinik yaklaşımda aile öyküsü alınırken standardizasyonu sağlamak ve kalıtım modelini doğru analiz etmek için çizilen aile ağacı (pedigri) en az kaç kuşağı kapsamalıdır?",
+     "secenekler": {
+      "A": "Sadece proband ve anne-baba (1 kuşak)",
+      "B": "En az 3 kuşak (proband, kardeşler, ebeveynler, amca/dayı/teyze/hala ve büyükanne-büyükbabalar)",
+      "C": "En az 10 kuşak",
+      "D": "Sadece maternal akrabalar",
+      "E": "Yalnızca etkilenmiş erkek bireyler"
+     },
+     "dogru": "B",
+     "aciklama": "Genetik değerlendirmede aile ağacı (pedigri) en az 3 jenerasyonu kapsamalıdır.",
+     "sik_aciklamalari": {
+      "A": "1-2 kuşak kalıtım kalıbını ayırt etmekte yetersizdir.",
+      "B": "Doğru. Klinik genetik standartlarına göre en az 3 kuşaklık soy ağacı esastır.",
+      "C": "Rutin pratikte 10 kuşak taranmaz.",
+      "D ve E": "Tek yanlı veya cinsiyete kısıtlı soyağacı analizi yanıltır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k08-q11",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Dismorfik bir çocuğun muayenesinde kaşların orta hatta birbiriyle birleşik olması (sinofris), uzun kirpikler, antevert burun delikleri, mikromeli (uzuv kısalığı) ve ağır büyüme-gelişme geriliği saptanmıştır. Sinofrisin (birleşik kaş) patognomonik sayılabilecek düzeyde karakteristik olduğu bu sendrom aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Cornelia de Lange sendromu",
+      "B": "Marfan sendromu",
+      "C": "Williams sendromu",
+      "D": "Akondroplazi",
+      "E": "Klinefelter sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "Sinofris (birleşik kaş), ince dudak, büyüme geriliği ve mikromeli Cornelia de Lange sendromunun klasik bulgularıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sinofris ve mikromeli Cornelia de Lange sendromu ile karakterizedir.",
+      "B": "Marfan uzun boy ve araknodaktili ile seyreder.",
+      "C": "Williams elf yüzü ve kardiyak stenozla seyreder.",
+      "D": "Akondroplazide sinofris tipik değildir.",
+      "E": "Klinefelter 47,XXY'dir, dismorfik sinofris içermez."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k08-q12",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Yenidoğanın perinatal değerlendirmesinde kullanılan Apgar skoru ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kalp hızı, solunum çabası, kas tonusu, refleks uyarılabilirlik ve cilt rengi olmak üzere 5 parametreden oluşur.",
+      "B": "Her parametreye 0, 1 veya 2 puan verilir; toplam puan maksimum 10'dur.",
+      "C": "5. dakika Apgar skorunun 8-10 arasında olması bebeğin durumunun iyi olduğunu gösterir.",
+      "D": "Apgar skorunun 4'ün altında olması şiddetli asfiksi/oksijen yetersizliğine işaret eder.",
+      "E": "Apgar skoru bebeğin ileride kesin olarak otistik olacağını gösteren genetik bir tanı testidir."
+     },
+     "dogru": "E",
+     "aciklama": "Apgar skoru genetik test değildir; yenidoğanın doğum anındaki fizyolojik stabilizasyonunu değerlendirir.",
+     "sik_aciklamalari": {
+      "A, B, C, D": "Apgar skorunun standart bileşen ve yorumlarıdır.",
+      "E": "Doğru (yanlış ifade). Apgar genetik test değildir, otizm öngörüsü yapmaz."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -830,6 +2720,236 @@
       "C": "Sayısal anomaliler karyotiple gösterilir.",
       "D": "Karyotip ve mikroarray önce yapılmalıdır.",
       "E": "WES analizi zordur: analizi en kolay testtir."
+     },
+     "bilgi": [
+      34,
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Sendrom şüphesi netleşmeyen, çoklu anomalili bir çocukta hekim önce karyotip istemiş, sonuç normal bulununca mikroarray planlamıştır. Bu test stratejisiyle ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İlk basamakta her hastaya WES yapılmalıdır",
+      "B": "Sendrom şüphesi varsa önce karyotip yapılmalıdır",
+      "C": "Klinik değerlendirme olmadan teste başlanmalıdır",
+      "D": "Sendrom şüphesi yoksa karyotip ile başlanıp mikroarray ve panelle devam edilmelidir",
+      "E": "Mikroarray büyük delesyonları gösteremez"
+     },
+     "dogru": "D",
+     "aciklama": "Algoritmada önce klinik-laboratuvar-radyolojik değerlendirme yapılır; sendrom şüphesi varsa hedefe spesifik test, yoksa karyotip, mikroarray, panel ve son tercih WES sırası izlenir. Bu hedefe yönelik ve maliyet-etkin seçimi sağlar.",
+     "sik_aciklamalari": {
+      "A": "WES son tercihtir; pahalı ve analizi zordur.",
+      "B": "Sendrom şüphesinde hedefe spesifik test yapılır.",
+      "C": "Önce klinik değerlendirme yapılır.",
+      "D": "Doğru. Algoritma basamaklı ilerler ve maliyet-etkinliği sağlar.",
+      "E": "Mikroarray delesyon ve duplikasyonları gösterir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Karyotip ve mikroarray yapılmadan doğrudan WES istenen bir hastada çok sayıda VUS saptanmış ve yorum zorlaşmıştır. Laboratuvar, basamaklı algoritmaya uyulmadığını belirtmiştir. Bu durumla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Karyotip yapılmadan WES ilk test olmalıdır",
+      "B": "Karyotip ve mikroarray yapılmadan WES önerilmez",
+      "C": "WES büyük delesyonları her zaman saptar",
+      "D": "VUS saptanması tanıyı kesinleştirir",
+      "E": "Veri tabanları bir kez değerlendirilince tekrar bakılmaz"
+     },
+     "dogru": "B",
+     "aciklama": "WES pahalı ve analizi zordur, büyük delesyon ve duplikasyonları kaçırabilir; karyotip ve moleküler sitogenetik yapılmamış hastada önerilmez. Varyantlar ACMG ölçütleriyle sınıflanır ve veri tabanları periyodik yeniden değerlendirilir.",
+     "sik_aciklamalari": {
+      "A": "WES son tercihtir.",
+      "B": "Doğru. WES pahalıdır, 10-15 bin varyant içerir ve büyük yapısal değişiklikleri kaçırabilir.",
+      "C": "Büyük delesyon-duplikasyonları kaçırabilir.",
+      "D": "VUS klinik önemi belirsiz varyanttır.",
+      "E": "Veri tabanları yıllık veya 6 ayda bir yeniden değerlendirilir."
+     },
+     "bilgi": [
+      35,
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Sendrom şüphesi olmayan multipl anomalili çocukta ilk iki genetik test basamağı nedir?",
+     "secenekler": {
+      "A": "Önce WES, sonra karyotip",
+      "B": "Önce panel, sonra mikroarray",
+      "C": "Yalnızca FISH yeterlidir",
+      "D": "Doğrudan genom dizileme",
+      "E": "Önce karyotip, sonra mikroarray"
+     },
+     "dogru": "E",
+     "aciklama": "Belirli bir sendrom şüphesi yoksa tanısal yaklaşım çözünürlüğü düşükten yükseğe ilerler; önce tüm genomun kaba yapısını gösteren karyotipleme yapılır. Karyotip normal ise ışık mikroskobunda görülemeyen mikrodelesyon ve mikroduplikasyonları saptayan mikroarray analizine geçilir. Bu basamaklı strateji, pahalı ve yorumlanması zor ileri testlere başvurmadan önce sık ve saptanabilir nedenleri elemeyi amaçlar.",
+     "sik_aciklamalari": {
+      "A": "WES ilk basamakta önerilmez; büyük delesyonları kaçırabilir ve maliyeti yüksektir.",
+      "B": "Panel hedefe yönelik bir testtir, sendrom şüphesi yoksa ilk basamakta kullanılmaz.",
+      "C": "FISH yalnızca bilinen bölgeyi sorgular, tarama testi olarak yetersizdir.",
+      "D": "Doğrudan genom dizileme maliyet ve yorum yükü nedeniyle ilk basamak değildir.",
+      "E": "Doğru. Karyotip kaba yapıyı, mikroarray submikroskopik dengesizlikleri değerlendirir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Tüm ekzom dizilemenin (WES) tanı algoritmasında son tercih olmasının nedeni nedir?",
+     "secenekler": {
+      "A": "Her hastada ilk tercihtir",
+      "B": "Karyotipsiz hastada önerilmez",
+      "C": "Delesyonları en iyi gösterir",
+      "D": "Sonucu bir günde verir",
+      "E": "Varyant sayısı çok azdır"
+     },
+     "dogru": "B",
+     "aciklama": "Ekzom dizileme 20.000 genin kodlayan bölgelerini tarar ve hasta başına 10-15.000 varyant üretir, bunların klinik anlamını çözümlemek uzun süre ve biyoinformatik altyapı gerektirir. Ayrıca yöntem büyük delesyon ve duplikasyonları saptamada yetersiz kalır, bu yüzden önce karyotip ve mikroarray yapılmamış hastada kullanılması tanıyı geciktirir. Bu teknik ve ekonomik kısıtlar, WES'i algoritmanın son tercihi konumuna yerleştirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; maliyet ve yorum yükü nedeniyle ilk basamakta kullanılmaz.",
+      "B": "Doğru. Kaba kromozom ve mikroarray incelemesi yapılmadan WES'e geçilmesi tanı kaybına yol açar.",
+      "C": "Yanlış; büyük delesyon ve duplikasyonları göstermeyebilir, mikroarray bu alanda üstündür.",
+      "D": "Yanlış; analiz haftalar süren biyoinformatik inceleme gerektirir.",
+      "E": "Yanlış; hasta başına on binlerce varyant saptanır."
+     },
+     "bilgi": [
+      35,
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k09-q08",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Açıklanamayan multipl konjenital anomalileri ve mental retardasyonu (MKA/MR) olan, ancak klinik muayenesinde bilinen spesifik bir sendrom (Down, Williams vb.) düşündürecek belirgin bir bulgusu olmayan dismorfik bir hastada, güncel uluslararası kılavuzlara göre ilk basamakta tercih edilmesi gereken moleküler sitogenetik tanı testi hangisidir?",
+     "secenekler": {
+      "A": "Sanger dizi analizi",
+      "B": "Kromozomal Mikroarray (CMA / Array-CGH)",
+      "C": "Tüm Genom Dizileme (WGS)",
+      "D": "RT-PCR",
+      "E": "Southern Blotting"
+     },
+     "dogru": "B",
+     "aciklama": "Nonspesifik MKA/MR olgularında mikrodelesyon ve mikroduplikasyonları saptamak için ilk basamak test Kromozomal Mikroarray'dir (CMA).",
+     "sik_aciklamalari": {
+      "A": "Sanger tek hedef gen varlığında kullanılır.",
+      "B": "Doğru. Nonspesifik MKA/MR'de ilk basamak moleküler sitogenetik test Mikroarray'dir.",
+      "C": "WGS son basamak testidir.",
+      "D ve E": "İlk basamak MKA tarama testi değildirler."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k09-q09",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Tüm Ekzom Dizileme (WES) yöntemi, klinik genetik pratiğinde devrim yaratmış olmakla birlikte belirli sınırlılıkları mevcuttur. Aşağıdakilerden hangisi Tüm Ekzom Dizilemenin (WES) temel teknik veya tanısal kısıtlılıklarından biri değildir?",
+     "secenekler": {
+      "A": "Büyük kromozomal delesyonları, duplikasyonları ve dengeli translokasyonları tespit etmede yetersiz kalması",
+      "B": "Genomun protein kodlayan ekzon bölgeleri dışındaki derin intronik düzenleyici mutasyonları yakalayamaması",
+      "C": "Analiz sonucunda klinik önemi belirsiz varyant (VUS) saptama oranının yüksek olması ve yorumlama güçlüğü",
+      "D": "DNA'daki tek nükleotid değişimlerini (nokta mutasyonları) hiçbir şekilde tespit edememesi",
+      "E": "Maliyetinin yüksek olması ve biyoinformatik analiz sürecinin uzun zaman alması"
+     },
+     "dogru": "D",
+     "aciklama": "WES'in asıl gücü ve amacı ekzonlardaki tek nükleotid değişimlerini (nokta mutasyonları) ve küçük indelleri tespit etmektir.",
+     "sik_aciklamalari": {
+      "A, B, C, E": "WES'in ders notunda vurgulanan gerçek kısıtlılıklarıdır.",
+      "D": "Doğru (kısıtlılık değildir/yanlış ifade). WES nokta mutasyonları saptamak için kullanılır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k09-q10",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Bir hastada klinik olarak Trizomi 21 (Down sendromu) ön tanısı düşünülmektedir. Bu hastada trizominin serbest trizomi mi yoksa Robertsonian translokasyonuna bağlı mı olduğunu ayırt etmek ve aileye doğru tekrarlama riski vermek için öncelikle hangi test yapılmalıdır?",
+     "secenekler": {
+      "A": "Konvansiyonel Sitogenetik Karyotip Analizi (G-bantlama)",
+      "B": "Tüm Ekzom Dizileme (WES)",
+      "C": "Mitokondriyal DNA dizi analizi",
+      "D": "Western Blot protein analizi",
+      "E": "Sadece anneye AFP taraması"
+     },
+     "dogru": "A",
+     "aciklama": "Translokasyon ve serbest trizomi ayrımını doğrudan gösteren ilk basamak sitogenetik analiz konvansiyonel karyotiptir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Translokasyon tipini ve kromozom sayısını belirlemek için karyotip zorunludur.",
+      "B": "WES translokasyonları göstermez.",
+      "C ve D": "Down sendromu tanısıyla ilgisizdir.",
+      "E": "Doğum sonrası bebek tanısında kullanılmaz."
+     },
+     "bilgi": [
+      2,
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k09-q11",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Genetik laboratuvarında dismorfik bir hastaya tanısal yaklaşım algoritması planlanırken basamakların en rasyonel ve maliyet-etkin sıralaması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "WES → Gen Paneli → Mikroarray → Karyotip",
+      "B": "Klinik Değerlendirme → Şüphelenilen Spesifik Test (örn. FISH/MLPA) → Belirgin sendrom yoksa Karyotip/Mikroarray → Gen Panelleri → WES",
+      "C": "Tüm Genom Dizileme → Sanger Dizileme → Apgar Skoru → Karyotip",
+      "D": "Direkt WES → Normal ise Karyotip → Normal ise Fizik Muayene",
+      "E": "Sadece Biyokimyasal Karaciğer Testleri → WES"
+     },
+     "dogru": "B",
+     "aciklama": "Doğru tanı algoritması: Klinik muayene → spesifik test (varsa) → karyotip/mikroarray → gen paneli → son tercih WES şeklindedir.",
+     "sik_aciklamalari": {
+      "A, C, D, E": "Hatalı veya tersine işletilen algoritmalardır.",
+      "B": "Doğru. Klinik kılavuzların ve ders notunun tanımladığı basamaklı rasyonel algoritmadır."
+     },
+     "bilgi": [
+      34,
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k09-q12",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Yeni Nesil Dizileme (NGS) teknolojisinde birden fazla genin aynı anda taranmasını sağlayan \"Hedefe Yönelik Gen Panelleri\"nin (targeted gene panels), Tüm Ekzom Dizilemeye (WES) göre en belirgin avantajı nedir?",
+     "secenekler": {
+      "A": "Panellerin kromozom sayı anomalilerini karyotipten daha iyi göstermesi",
+      "B": "İlgili hastalığa özgü genlerde çok daha yüksek okuma derinliği (coverage/depth) sağlaması, analizinin daha hızlı olması ve rastlantısal/anlamsız varyant oranını azaltması",
+      "C": "Panellerin tüm intronik bölgeleri ve mitokondriyal genomu istisnasız %100 çözmesi",
+      "D": "Gen panellerinin hiçbir biyoinformatik yazılıma ihtiyaç duymadan çıplak gözle okunması",
+      "E": "Sadece RNA ekspresyonunu ölçebilmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Gen panelleri sınırlı sayıda gene odaklandığı için okuma derinliği çok daha yüksektir, analizi hızlıdır ve anlamsız varyant (VUS) kafa karışıklığını azaltır.",
+     "sik_aciklamalari": {
+      "A": "Gen panelleri anöploidi testi değildir.",
+      "B": "Doğru. Yüksek okuma derinliği ve düşük VUS oranı panellerin ana avantajıdır.",
+      "C": "Paneller çoğunlukla kodlayan bölgeleri inceler.",
+      "D ve E": "Teknik olarak gerçek dışıdır."
      },
      "bilgi": [
       34,
@@ -923,6 +3043,238 @@
       39
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k10-q04",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Elf benzeri yüzü, kalp üfürümü ve gelişme geriliği olan bir çocukta ekokardiyografide supravalvüler aortik stenoz saptanmış, genetik incelemede 7q11.23 delesyonu bulunmuştur. Bu tabloya uyan sendrom aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Elf yüzü, supravalvüler aortik stenoz ve 7q11.23 delesyonu – Williams sendromu",
+      "B": "Makroorşidizm ve FMR1 mutasyonu – Williams sendromu",
+      "C": "Hiperfaji ve obezite – Williams sendromu",
+      "D": "7q11.23 delesyonu X'e bağlı geçiş gösterir",
+      "E": "Supravalvüler stenoz Frajil X'in bulgusudur"
+     },
+     "dogru": "A",
+     "aciklama": "Williams otozomal dominanttır; %90-95'inde ELN içeren 7q11.23 delesyonu vardır. Bulgular mental retardasyon, elf yüzü, supravalvüler aortik stenoz ve infantil hiperkalsemidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Elastin genini içeren delesyon kardiyak ve yüz bulgularını açıklar.",
+      "B": "Bunlar Frajil X bulgularıdır.",
+      "C": "Hiperfaji Prader-Willi bulgusudur.",
+      "D": "Williams otozomal dominanttır.",
+      "E": "Supravalvüler stenoz Williams bulgusudur."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k10-q05",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Mental retardasyonu, uzun ince yüzü, büyük kulakları ve ergenlikte belirginleşen makroorşidizmi olan bir çocukta FMR1 geninde CGG tekrar artışı saptanmıştır. Bu tabloyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Frajil X otozomal dominant geçiş gösterir",
+      "B": "Prader-Willi'de FMR1 proteini yapılamaz",
+      "C": "Makroorşidizm Williams sendromunun bulgusudur",
+      "D": "Hiperfaji Frajil X'in ana bulgusudur",
+      "E": "Uzun yüz, büyük kulaklar ve makroorşidizm Frajil X'i düşündürür"
+     },
+     "dogru": "E",
+     "aciklama": "Frajil X en sık tek gen hastalığı ve X'e bağlı mental retardasyon nedenidir; FMR1 5'UTR CGG tekrar artışı promoter metilasyonuna ve protein yokluğuna yol açar. Bulgular uzun yüz, büyük kulaklar, makroorşidizm ve otistik özelliklerdir.",
+     "sik_aciklamalari": {
+      "A": "Frajil X X'e bağlıdır.",
+      "B": "FMR1 yokluğu Frajil X'tedir.",
+      "C": "Makroorşidizm Frajil X bulgusudur.",
+      "D": "Hiperfaji Prader-Willi bulgusudur.",
+      "E": "Doğru. Tam mutasyonda promoter metillenir ve FMR1 proteini yapılamaz."
+     },
+     "bilgi": [
+      39,
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k10-q06",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Supravalvüler aort stenozu ve elf benzeri yüz ile seyreden Williams sendromunun genetik nedeni nedir?",
+     "secenekler": {
+      "A": "5. kromozom delesyonu",
+      "B": "FMR1 CGG tekrar artışı",
+      "C": "7q11.23 delesyonu",
+      "D": "15. kromozom disomisi",
+      "E": "X kromozomu monozomisi"
+     },
+     "dogru": "C",
+     "aciklama": "Williams sendromunda 7q11.23 bölgesindeki delesyon, damar duvarının elastik liflerinin ana proteini olan elastini kodlayan ELN genini de içerir. Elastin haployetmezliği arter duvarının esnekliğini azaltır ve aort kapağının üzerindeki aort segmentinde darlığa (supravalvüler aortik stenoz) yol açar. Aynı delesyondaki komşu genlerin kaybı, elf benzeri yüz görünümü ve bilişsel profille birlikte infantil hiperkalsemiye katkıda bulunur.",
+     "sik_aciklamalari": {
+      "A": "5. kromozom delesyonu cri-du-chat sendromuna yol açar, Williams ile ilişkisi yoktur.",
+      "B": "FMR1 CGG tekrar artışı Frajil X sendromunun nedenidir.",
+      "C": "Doğru. ELN genini içeren bu mikrodelesyon supravalvüler aort stenozu ve tipik yüz bulgularını açıklar.",
+      "D": "15. kromozom disomisi Prader-Willi/Angelman bölgesiyle ilişkilidir, Williams nedeni değildir.",
+      "E": "X monozomisi Turner sendromudur, Williams fenotipiyle bağlantısı yoktur."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Frajil X sendromunda zihinsel yetersizliğe yol açan moleküler mekanizma nedir?",
+     "secenekler": {
+      "A": "CGG tam mutasyonu ve metilasyon",
+      "B": "ELN gen delesyonu",
+      "C": "Tek ön kesici diş",
+      "D": "Hiperfaji ve obsesyon",
+      "E": "Beyaz perçem ve heterokromi"
+     },
+     "dogru": "A",
+     "aciklama": "FMR1 geninin 5' UTR bölgesindeki CGG tekrarları 200'ün üzerine çıktığında tam mutasyon oluşur ve komşu promoter bölgesi metillenir. Metilasyon genin transkripsiyonunu susturduğu için sinaptik işlevler için gerekli FMR1 proteini üretilemez. Protein yokluğu sinaptik plastisiteyi bozarak zihinsel yetersizliğe, makrosefali benzeri yüz uzamasına ve puberte sonrası makroorşidizme yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. 200 üzeri tekrar promoter metilasyonuyla geni susturur ve FMR1 proteini yapılamaz.",
+      "B": "ELN delesyonu Williams sendromunun nedenidir, Frajil X ile ilişkisi yoktur.",
+      "C": "Tek ön kesici diş spesifik bir minör anomalidir, Frajil X mekanizmasıyla bağlantısı yoktur.",
+      "D": "Hiperfaji ve obsesyonlar Prader-Willi sendromunun davranışsal bulgularıdır.",
+      "E": "Beyaz perçem ve heterokromi spesifik minör anomalilerdir, Frajil X tanısı koydurmaz."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k10-q08",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Üç yaşında bir erkek çocuk kardiyoloji kliniğinde supravalvüler aort darlığı tanısı almıştır. Genetik konsültasyonunda hastanın belirgin periorbital dolgunluk, basık burun kökü, uzun filtrum, dolgun yanaklar ve kalın dudaklar ile karakterize \"elf benzeri (elfin-like) yüz\" görünümüne sahip olduğu, son derece sosyal ve konuşkan bir mizaç sergilediği ve bebeklik döneminde idiyopatik hiperkalsemi atakları geçirdiği öğrenilmiştir. Bu olguda en olası tanı ve sorumlu genetik defekt aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Williams sendromu – 7q11.23 mikrodelesyonu (ELN gen kaybı)",
+      "B": "Prader-Willi sendromu – 15q11-q13 paternal delesyon",
+      "C": "Frajil X sendromu – FMR1 geni CGG tekrar artışı",
+      "D": "Down sendromu – Serbest Trizomi 21",
+      "E": "Turner sendromu – 45,X monozomisi"
+     },
+     "dogru": "A",
+     "aciklama": "Williams sendromu 7q11.23 delesyonudur (ELN gen kaybı); elf yüzü, supravalvüler aort darlığı, arkadaş canlısı mizaç ve infantil hiperkalsemi ile seyreder.",
+     "sik_aciklamalari": {
+      "A": "Doğru. 7q11.23 mikrodelesyonu, elastin defekti, supravalvüler aort darlığı ve hiperkalsemi Williams sendromudur.",
+      "B": "Prader-Willi hiperfaji ve obezite ile seyreder.",
+      "C": "Frajil X makroorşidizm ve otizmle seyreder.",
+      "D ve E": "Farklı klinik ve kardiyak fenotiplere sahiptir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k10-q09",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Frajil X sendromunun moleküler genetik patogenezi ve klinik bulguları ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hastalık otozomal dominant kalıtılır ve kadınlarda erkeklere göre çok daha ağır seyreder.",
+      "B": "FMR1 geninin 5' UTR bölgesindeki (CGG)n trinükleotid tekrar sayısının 200'ün üzerine çıkması (tam mutasyon), promoter hipermetilasyonuna ve FMRP protein sentezinin susturulmasına yol açar.",
+      "C": "En karakteristik fiziksel bulgusu yenidoğan döneminde saptanan mikrosefali ve doğumsal katarakttır.",
+      "D": "Erkeklerde puberte sonrası testis boyutlarında belirgin atrofi (mikroorşidizm) gözlenir.",
+      "E": "Tekrarlayan DNA dizisi GAA olup mitokondriyal solunum zincirini bozar."
+     },
+     "dogru": "B",
+     "aciklama": "Frajil X, FMR1 geni 5' UTR bölgesindeki CGG tekrar sayısının >200 olması (tam mutasyon) ve promoter hipermetilasyonuyla protein sentezinin durması sonucu oluşur.",
+     "sik_aciklamalari": {
+      "A": "X'e bağlı kalıtılır ve hemizigot erkeklerde daha ağırdır.",
+      "B": "Doğru. CGG tekrarı >200, promoter metilasyonu ve FMR1 inaktivasyonu temel patogenezdir.",
+      "C": "Mikrosefali değil, makrosefali sıktır; katarakt tipik değildir.",
+      "D": "Testisler atrofili değil büyüktür (makroorşidizm).",
+      "E": "Tekrar dizisi CGG'dir; GAA Friedreich ataksisindedir."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k10-q10",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Bebeklik döneminde ağır hipotoni, beslenme güçlüğü ve zayıf emme tablosu gösteren; ancak 2 yaşından sonra doymak bilmeyen aşırı iştah (hiperfaji), hızlı morbid obezite gelişimi, kompulsif davranışlar, öfke nöbetleri ve hipogonadizm sergileyen bir çocukta hangi sendrom düşünülmelidir?",
+     "secenekler": {
+      "A": "Angelman sendromu",
+      "B": "Prader-Willi sendromu",
+      "C": "Marfan sendromu",
+      "D": "Williams sendromu",
+      "E": "Trizomi 13 (Patau sendromu)"
+     },
+     "dogru": "B",
+     "aciklama": "Prader-Willi sendromu infantilde hipotoni ve zayıf emme; çocuklukta ise hiperfaji, obezite ve obsesyonlarla karakterizedir.",
+     "sik_aciklamalari": {
+      "A": "Angelman mikrosefali, ataksi ve kahkaha nöbetleri ile seyreder.",
+      "B": "Doğru. İnfantil hipotoni sonrası çocukluk çağı hiperfaji ve obezitesi Prader-Willi sendromunun klasik tablosudur.",
+      "C, D, E": "Bu fazik klinik gidiş ve hiperfaji tablosunu göstermezler."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k10-q11",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Frajil X sendromu premutasyon taşıyıcısı olan bireyler (55-200 CGG tekrarı) ile ilgili tıp literatüründe tanımlanan klinik durumlar hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Premutasyon taşıyıcıları hiçbir zaman klinik semptom göstermez ve tamamen sağlıklıdır.",
+      "B": "Erkek premutasyon taşıyıcılarında geç yaşta ortaya çıkan nörodejeneratif Frajil X ile ilişkili Tremor/Ataksi Sendromu (FXTAS); kadın taşıyıcılarda ise Prematür Ovaryan Yetmezlik (FXPOI) görülebilir.",
+      "C": "Premutasyon taşıyıcılarının tüm çocuklarında mutasyon sayısı kesin olarak normale (5 kopyaya) geri döner.",
+      "D": "Premutasyon sadece baba tarafından aktarıldığında tam mutasyona genişler.",
+      "E": "Premutasyon taşıyıcılarında infantil hiperkalsemiye bağlı nefrokalsinozis gelişir."
+     },
+     "dogru": "B",
+     "aciklama": "FMR1 premutasyon taşıyıcılarında toksik mRNA artışına bağlı FXTAS (erkekte tremor/ataksi) ve FXPOI (kadında erken menopoz) görülebilir.",
+     "sik_aciklamalari": {
+      "A": "Premutasyon taşıyıcıları FXTAS ve FXPOI riski taşır.",
+      "B": "Doğru. Erkekte FXTAS, kadında FXPOI klasik premutasyon fenotipleridir.",
+      "C": "Kuşaktan kuşağa tekrar genişler (antisipasyon), normale dönmez.",
+      "D": "Tam mutasyona genişleme maternal oogenez sırasında olur.",
+      "E": "Hiperkalsemi Williams sendromuna aittir."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k10-q12",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi erkeklerde X'e bağlı mental retardasyonun (zeka geriliğinin) en sık genetik nedenidir?",
+     "secenekler": {
+      "A": "Williams sendromu",
+      "B": "Frajil X sendromu",
+      "C": "Rett sendromu",
+      "D": "Trizomi 18",
+      "E": "Turner sendromu"
+     },
+     "dogru": "B",
+     "aciklama": "Erkeklerde X'e bağlı mental retardasyonun en sık genetik nedeni Frajil X sendromudur.",
+     "sik_aciklamalari": {
+      "A": "Williams otozomal delesyon sendromudur.",
+      "B": "Doğru. En sık X'e bağlı zeka geriliği nedeni Frajil X'tir.",
+      "C": "Rett sendromu kız çocuklarında görülür, erkekte letaldir.",
+      "D": "Trizomi 18 otozomal anöploididir.",
+      "E": "Turner sendromu fenotipik kadındır (45,X)."
+     },
+     "bilgi": [
+      39
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1005,6 +3357,229 @@
       "E": "Doğru: danışman karar vermez, yönlendirici olmaz."
      },
      "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k11-q04",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Çocuğuna sendrom tanısı konan bir aileye, tanının anlamı, tekrarlama riski ve izlem seçenekleri anlatılmış, uzun dönem iletişim planlanmıştır. Genetik danışmanın basamaklarıyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Genetik danışma tek vizitten ibarettir",
+      "B": "Genetik danışma tanı, risk tayini, seçeneklerin tartışılması ve uzun dönem desteği kapsar",
+      "C": "Proband danışmayı veren uzmandır",
+      "D": "Pedigri danışmada kullanılmaz",
+      "E": "Risk tayini danışmanın parçası değildir"
+     },
+     "dogru": "B",
+     "aciklama": "Genetik danışma tanı, risk tayini, seçeneklerin tartışılması ve uzun dönem iletişim-destekten oluşur. Proband indeks vakadır ve pedigri üzerinden risk hesaplanır.",
+     "sik_aciklamalari": {
+      "A": "Uzun dönem iletişim ve destek danışmanın parçasıdır.",
+      "B": "Doğru. Danışma bu dört basamaktan oluşur.",
+      "C": "Proband indeks vakadır.",
+      "D": "Pedigri risk tayininin temelidir.",
+      "E": "Risk tayini danışmanın çekirdeğidir."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k11-q05",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Prenatal tanı sonrası aile karar vermekte zorlanmakta, danışmandan kendileri adına karar vermesini istemektedir. Danışman bilgiyi aktarıp kararı aileye bırakmıştır. Bu tutumla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Danışman ailenin kararını kendisi vermelidir",
+      "B": "Yönlendirici danışma özerkliği güçlendirir",
+      "C": "Tanı sonrası izleme gerek yoktur",
+      "D": "Genetik danışma yönlendirici olmamalıdır",
+      "E": "Seçenekler aileyle tartışılmamalıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Genetik danışma hiçbir zaman yönlendirici olmamalıdır; tanı sonrası semptomatik ve nedene yönelik tedavi ile danışma-izlem yapılır. Yönlendirici tutum özerkliği zedeler.",
+     "sik_aciklamalari": {
+      "A": "Karar aileye aittir, danışman bilgi verir.",
+      "B": "Yönlendiricilik özerkliği zedeler.",
+      "C": "Tanı sonrası izlem yapılır.",
+      "D": "Doğru. Danışma bilgi verir, karar aileye bırakılır.",
+      "E": "Seçeneklerin tartışılması danışmanın parçasıdır."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k11-q06",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Genetik danışmanın karar verme sürecine ilişkin temel ilkesi nedir?",
+     "secenekler": {
+      "A": "Her zaman test önermelidir",
+      "B": "Kararı danışman vermelidir",
+      "C": "Risk gizlenmelidir",
+      "D": "Yönlendirici olmamalıdır",
+      "E": "Tek görüşmede bitmelidir"
+     },
+     "dogru": "D",
+     "aciklama": "Genetik danışmada ailenin gebeliği sürdürme, sonlandırma veya test yaptırma gibi kararları kendi değer yargılarına göre vermesi esastır. Danışmanın kendi görüşünü dayatması özerkliği zedeler ve ailenin kültürel ile dini inançlarıyla çatışma yaratır. Bu nedenle uluslararası kılavuzlar, bilgi eksiksiz verilirken kararın aileye bırakılmasını ve danışmanın yönlendirici olmamasını şart koşar.",
+     "sik_aciklamalari": {
+      "A": "Her hastaya test önermek hedefe yönelik yaklaşımı bozar ve gereksiz kaygıya yol açar.",
+      "B": "Kararın danışman tarafından verilmesi ailenin özerkliğini ortadan kaldırır.",
+      "C": "Riskin gizlenmesi bilgilendirilmiş onam ilkesine aykırıdır.",
+      "D": "Doğru. Danışman bilgiyi tarafsız sunar, üreme ve test kararını aile verir.",
+      "E": "Danışma uzun dönem iletişim ve destek gerektirir, tek görüşmeyle tamamlanamaz."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k11-q07",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Genetik danışmanın dört bileşeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tanı, tedavi, taburculuk",
+      "B": "Tanı, risk, seçenek, destek",
+      "C": "Test, sonuç, fatura",
+      "D": "Muayene, ilaç, kontrol",
+      "E": "Tarama, eleme, yönlendirme"
+     },
+     "dogru": "B",
+     "aciklama": "Danışma önce doğru tanının konmasıyla başlar, çünkü tekrarlama riski ve prognoz tanıya bağlıdır. Ardından Mendel kuralları veya ampirik verilerle risk tayini yapılır, ailenin seçenekleri (prenatal tanı, preimplantasyon testi, izlem) tartışılır. Süreç tek görüşmeyle bitmez; uzun dönem iletişim ve psikososyal destekle ailenin kararı uygulaması ve risk altındaki akrabaların izlemi sağlanır.",
+     "sik_aciklamalari": {
+      "A": "Tedavi ve taburculuk klinik yönetimin parçasıdır, danışmanın dört bileşeninden değildir.",
+      "B": "Doğru. Tanı konur, risk hesaplanır, seçenekler tartışılır ve uzun dönem destek sürdürülür.",
+      "C": "Bu ifade idari süreci anlatır, danışmanlık bileşeni değildir.",
+      "D": "Muayene ve ilaç genel pediatri pratiğidir, genetik danışma bileşeni değildir.",
+      "E": "Tarama ve eleme test stratejisidir, danışmanın bileşenlerini oluşturmaz."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k11-q08",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Genetik danışmanlık hizmetinin biyoetik ve klinik açıdan en temel ve vazgeçilmez ilkesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Danışmanın kesinlikle \"non-direktif\" (yönlendirici olmayan) olması; ailenin kendi özerk kararlarını almasına tarafsız bilgi desteği sağlaması",
+      "B": "Aileye gebeliği derhal sonlandırması yönünde hekim tarafından bağlayıcı emir verilmesi",
+      "C": "Sonuçların ailenin izni olmadan tüm işyeri ve sigorta şirketleriyle paylaşılması",
+      "D": "Anne ve babanın akraba olması durumunda çiftin yasal olarak zorla boşandırılması",
+      "E": "Maliyeti düşürmek amacıyla test sonuçlarının aileye açıklanmaması"
+     },
+     "dogru": "A",
+     "aciklama": "Genetik danışmanlık yönlendirici olmamalıdır (non-direktif); ailenin özerk karar vermesini destekler.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Non-direktif yaklaşım genetik danışmanın altın kuralıdır.",
+      "B, C, D, E": "Tıp etiğine ve hasta haklarına aykırı uygulamalardır."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k11-q09",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Genetik terminolojide bir aile ağacı (pedigri) çizilirken genetik polikliniğine bizzat başvuran veya ailede hastalığı nedeniyle ilk incelenen, genetik değerlendirmeyi başlatan indeks birey hangi terimle ifade edilir?",
+     "secenekler": {
+      "A": "Konsültan",
+      "B": "Proband",
+      "C": "Heterozigot taşıyıcı",
+      "D": "Obligat fenokopi",
+      "E": "Hemizigot mutasyon"
+     },
+     "dogru": "B",
+     "aciklama": "İncelenen ailede klinik genetik değerlendirmeyi başlatan ilk etkilenmiş bireye proband (veya indeks vaka) denir.",
+     "sik_aciklamalari": {
+      "A": "Konsültan danışmayı talep eden kişidir.",
+      "B": "Doğru. Etkilenmiş indeks olgu proband olarak adlandırılır.",
+      "C, D, E": "Genetik varyasyon ve zigosite tanımlarıdır."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k11-q10",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Dismorfoloji polikliniğine başvuran ve çoklu doğumsal anomalisi olan çocukların tanı oranları ile ilgili ders notlarında ve literatürde vurgulanan epidemiyolojik gerçek hangisidir?",
+     "secenekler": {
+      "A": "Başvuran olguların %100'üne ilk 24 saat içinde kesin genetik tanı konulur.",
+      "B": "Günümüz modern genetik analizlerine rağmen dismorfik çocukların yaklaşık %50'sine kesin bir etiyolojik tanı konulamamaktadır.",
+      "C": "Dismorfik çocukların tümünde anomali nedeni sadece annenin sigara içmesidir.",
+      "D": "Vakaların %90'ında neden daima trizomi 13'tür.",
+      "E": "Tanı konulamayan çocukların tümü 1 ay içinde iyileşir."
+     },
+     "dogru": "B",
+     "aciklama": "Tüm ileri genetik testlere rağmen dismorfik çocukların yaklaşık %50'sine halen kesin tanı konulamamaktadır.",
+     "sik_aciklamalari": {
+      "A": "Olguların yarısına henüz tanı konulamamaktadır.",
+      "B": "Doğru. Yaklaşık %50 oranında etiyolojinin aydınlatılamaması literatür ve ders notunun vurguladığı gerçektir.",
+      "C, D, E": "Tıbbi temeli olmayan seçeneklerdir."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k11-q11",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Genetik danışmanlıkta bir hastalığın ailede tekrarlama riski (rekürrens riski) hesaplanırken aşağıdakilerden hangisi doğrudan dikkate alınan parametrelerden biri değildir?",
+     "secenekler": {
+      "A": "Hastalığın kalıtım kalıbı (otozomal dominant, resesif, X'e bağlı vb.)",
+      "B": "Ebeveynlerin taşıyıcılık durumu ve konsanguinite (akrabalık) varlığı",
+      "C": "Anne ve babanın burç uyumu ve kan grubu Rh faktörü",
+      "D": "Penetrans (klinik bulgu verme oranı) ve değişken ekspresivite özellikleri",
+      "E": "Gonadal (germline) mozaiklik olasılığı"
+     },
+     "dogru": "C",
+     "aciklama": "Tekrarlama riski hesaplamasında mendeliyen kalıtım, ebeveyn taşıyıcılığı, penetrans ve germline mozaiklik dikkate alınır; burçlar vb. dikkate alınmaz.",
+     "sik_aciklamalari": {
+      "A, B, D, E": "Risk hesabının vazgeçilmez genetik parametreleridir.",
+      "C": "Doğru (dikkate alınmaz). Tıbbi bilimsel temeli yoktur."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k11-q12",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Otozomal resesif geçişli bir metabolik/dismorfik hastalığı olan bir çocuğun anne ve babası tamamen sağlıklıdır. Bu çiftin gelecekte doğacak bir sonraki çocuğunun aynı hastalığa sahip olma riski yüzde kaçtır?",
+     "secenekler": {
+      "A": "%50",
+      "B": "%25",
+      "C": "%100",
+      "D": "%0",
+      "E": "%75"
+     },
+     "dogru": "B",
+     "aciklama": "İki heterozigot taşıyıcı ebeveynden doğacak çocuğun otozomal resesif hastalığa sahip olma riski her gebelik için %25'tir.",
+     "sik_aciklamalari": {
+      "A": "%50 otozomal dominant aktarım riskidir.",
+      "B": "Doğru. Otozomal resesif hastalıklarda taşıyıcı ebeveynlerden hasta çocuk doğma olasılığı %25'tir.",
+      "C, D, E": "Mendel oranlarına uymaz."
+     },
+     "bilgi": [
+      1,
       40
      ],
      "benzer_cikmis": []
@@ -1093,12 +3668,234 @@
       36
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k12-q04",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Ekzom analizinde bir varyant 'klinik önemi belirsiz' olarak raporlanmış, aile bu sonucun kesin tanı olduğunu düşünmüştür. Varyant sınıflamasıyla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Benign, VUS ve patojenik olmak üzere 3 kategori vardır",
+      "B": "VUS kesin patojenik varyant demektir",
+      "C": "Benign, muhtemelen benign, VUS, muhtemelen patojenik ve patojenik olmak üzere 5 kategori vardır",
+      "D": "Muhtemelen patojenik varyantlar benign kabul edilir",
+      "E": "Sınıflama yalnızca kromozom anomalileri içindir"
+     },
+     "dogru": "C",
+     "aciklama": "ACMG sınıflaması benign, muhtemelen benign, VUS, muhtemelen patojenik ve patojenik kategorilerinden oluşur. VUS klinik önemi belirsiz varyanttır ve tek başına tanı koydurmaz.",
+     "sik_aciklamalari": {
+      "A": "Sınıflama 5 kategorilidir.",
+      "B": "VUS klinik önemi belirsiz varyanttır.",
+      "C": "Doğru. Beşli sınıflama varyant yorumunun standardıdır.",
+      "D": "Muhtemelen patojenik patojenite yönünde değerlendirilir.",
+      "E": "Sınıflama dizi varyantları içindir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k12-q05",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "İki yıl önce VUS raporlanan bir varyantın güncel veri tabanında patojenik olarak sınıflandığı fark edilmiştir. Laboratuvar, periyodik yeniden değerlendirmenin önemini vurgulamıştır. Bu durumla ilgili ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "VUS raporlanan olgular periyodik olarak yeniden değerlendirilmelidir",
+      "B": "VUS bir kez raporlanınca bir daha gözden geçirilmez",
+      "C": "Veri tabanları değişmediği için yeniden değerlendirme gereksizdir",
+      "D": "VUS saptanan hastada izlem sonlandırılmalıdır",
+      "E": "Yeniden değerlendirme yalnızca benign varyantlar içindir"
+     },
+     "dogru": "A",
+     "aciklama": "Veri tabanları yıllık veya 6 ayda bir yeniden değerlendirilmelidir; VUS zamanla benign veya patojenik olarak sınıflanabilir. Bu nedenle olguların takibi ve arşivlenmesi gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Bilgi birikimiyle VUS'un sınıfı değişebilir; arşivleme ve takip gerekir.",
+      "B": "Periyodik yeniden değerlendirme önerilir.",
+      "C": "Veri tabanları sürekli güncellenir.",
+      "D": "Takip sürdürülmelidir.",
+      "E": "Tüm varyantlar için geçerlidir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k12-q06",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "ACMG varyant sınıflamasında kaç kategori bulunur ve uçlar nelerdir?",
+     "secenekler": {
+      "A": "Üç kategori: iyi, kötü, bilinmez",
+      "B": "Dört kategori: tip 1-4",
+      "C": "İki kategori: normal, anormal",
+      "D": "Altı kategori: A-F",
+      "E": "Beş kategori: benign-VUS-patojenik"
+     },
+     "dogru": "E",
+     "aciklama": "ACMG kılavuzu varyantları patojeniteden benigne uzanan beş basamaklı bir spektrumda sınıflar; bu sayede klinisyen varyantın hastalıkla ilişkisinin güçlülüğünü dereceli olarak değerlendirir. Uç kategoriler (patojenik ve benign) klinik kararı doğrudan yönlendirirken, ortadaki klinik önemi belirsiz (VUS) kategori ek kanıt gerektiğini gösterir. Bu standart çerçeve, laboratuvarlar arası yorum farklılıklarını azaltır ve raporların karşılaştırılabilirliğini sağlar.",
+     "sik_aciklamalari": {
+      "A": "Üçlü sınıflama muhtemel kategorileri dışlar, ACMG standardına uymaz.",
+      "B": "Tip 1-4 numaralandırması ACMG sisteminde kullanılmaz.",
+      "C": "İkili sınıflama belirsiz varyantları yönetemez, klinik kullanımı güvensizdir.",
+      "D": "Altı kategori ACMG kılavuzunda yer almaz.",
+      "E": "Doğru. Benign, muhtemelen benign, VUS, muhtemelen patojenik ve patojenik beş kategoriyi oluşturur."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k12-q07",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Klinik önemi belirsiz (VUS) varyantın anlamı ve izlem ilkesi nedir?",
+     "secenekler": {
+      "A": "Belirsiz, yeniden değerlendirilir",
+      "B": "Kesin patojenik, ameliyat edilir",
+      "C": "Kesin benign, izlem bitirilir",
+      "D": "Önemsiz, rapora yazılmaz",
+      "E": "Yalancı pozitif, test tekrarlanır"
+     },
+     "dogru": "A",
+     "aciklama": "VUS, mevcut popülasyon verileri, fonksiyonel çalışmalar ve segregasyon bilgileriyle varyantın hastalık yapıcı olup olmadığına karar verilememesi durumudur. Bilgi biriktikçe varyant benign veya patojenik yönde yeniden sınıflanabilir, bu yüzden veri tabanlarının yılda bir veya altı ayda bir gözden geçirilmesi önerilir. Klinisyen VUS raporunda gereksiz cerrahi veya gebelik kararı gibi geri dönüşsüz adımlardan kaçınmalı, aileyi periyodik yeniden değerlendirmeye çağırmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kanıt yetersizliğinde VUS verilir ve veri tabanları periyodik olarak yeniden değerlendirilir.",
+      "B": "Kesin patojenik ayrı bir kategoridir; VUS'a dayanarak geri dönüşsüz girişim yapılmaz.",
+      "C": "Kesin benign ayrı kategoridir; VUS izlemin sonlandırılmasını gerektirmez.",
+      "D": "VUS raporlanır, çünkü gelecekteki kanıtlar sınıflamayı değiştirebilir.",
+      "E": "VUS teknik hata anlamına gelmez, testin tekrarı sorunu çözmez."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k12-q08",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Amerikan Tıbbi Genetik ve Genomik Koleji (ACMG) kılavuzlarına göre, Yeni Nesil Dizileme (NGS/WES) testlerinde tespit edilen genetik varyantlar patojenitelerine göre kaç ana kategoride sınıflandırılır?",
+     "secenekler": {
+      "A": "2 kategori (İyi - Kötü)",
+      "B": "3 kategori (Dominant - Resesif - Kodominant)",
+      "C": "5 kategori (Patojenik, Muhtemelen Patojenik, Klinik Önemi Belirsiz [VUS], Muhtemelen Benign, Benign)",
+      "D": "10 kategori",
+      "E": "Yalnızca letal olanlar ve olmayanlar"
+     },
+     "dogru": "C",
+     "aciklama": "ACMG kılavuzuna göre varyantlar 5 sınıfta toplanır: Patojenik, Muhtemelen Patojenik, VUS, Muhtemelen Benign, Benign.",
+     "sik_aciklamalari": {
+      "A, B, D, E": "ACMG standardını yansıtmaz.",
+      "C": "Doğru. ACMG'nin resmi 5 basamaklı varyant sınıflama sistemidir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k12-q09",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "WES testi sonucunda bir hastada fenotipiyle kısmen örtüşen bir gende daha önce literatürde hiç bildirilmemiş, popülasyon veri tabanlarında (gnomAD) son derece nadir olan, ancak hastalığa yol açtığına dair yeterli fonksiyonel kanıt bulunmayan bir missense varyant saptanmış ve laboratuvar tarafından \"VUS\" (Klinik Önemi Belirsiz Varyant) olarak raporlanmıştır. Klinik genetikte VUS raporlanan bir varyantla ilgili hekimin izlemesi gereken en doğru klinik yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Bu varyant kesin hastalık nedeni kabul edilip gebelik derhal sonlandırılmalıdır.",
+      "B": "Bu varyant tek başına klinik tanı koydurmaz ve cerrahi/tıbbi karar için kullanılamaz; aile içi segregasyon analizi yapılmalı ve veri tabanları periyodik (yıllık/6 ayda bir) olarak yeniden değerlendirilmelidir.",
+      "C": "VUS raporu hastanın tamamen sağlıklı olduğunu kanıtlar, tüm takip bırakılmalıdır.",
+      "D": "Hastaya derhal gen tedavisi başlanmalıdır.",
+      "E": "Varyant laboratuvar tarafından silinmeli ve rapor yok sayılmalıdır."
+     },
+     "dogru": "B",
+     "aciklama": "VUS varyantlar tek başına klinik/cerrahi karar için kullanılamaz; segregasyon analizi ve periyodik yeniden değerlendirme gerektirir.",
+     "sik_aciklamalari": {
+      "A": "VUS'a dayanılarak terminasyon veya radikal cerrahi yapılamaz.",
+      "B": "Doğru. VUS yönetimi; tek başına karar aldırmaması, segregasyon analizi ve periyodik takiptir.",
+      "C": "VUS benign olduğunu kanıtlamaz.",
+      "D ve E": "Etik ve bilimsel standartlara aykırıdır."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k12-q10",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "ACMG varyant sınıflamasında kullanılan \"in silico\" tahmin algoritmaları ve popülasyon veri tabanları ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "PolyPhen-2, SIFT ve MutationTaster gibi in silico programlar bir varyantın patojenitesini %100 kesinlikle kanıtlayan yegane altın standarttır.",
+      "B": "Bir varyant genel sağlıklı popülasyon veri tabanında (gnomAD / 1000 Genomes) %5'in üzerinde bir sıklığa sahipse, bu varyantın nadir ve ölümcül bir pediatrik monogenik hastalığın nedeni (patojenik) olma olasılığı neredeyse sıfırdır (Benign kanıtıdır).",
+      "C": "Popülasyon veri tabanlarında sıklığı sıfır olan her varyant istisnasız kesin patojeniktir.",
+      "D": "in silico yazılımlar laboratuvar ortamında canlı hücre kültüründe yapılan fonksiyonel enzim testleridir.",
+      "E": "Varyant sınıflandırması bir kez yapıldıktan sonra ömür boyu asla değişmez."
+     },
+     "dogru": "B",
+     "aciklama": "Genel popülasyonda yüksek sıklıkta (>%5) bulunması bir varyantın benign (zararsız polimorfizm) olduğunu gösteren en güçlü kanıttır (ACMG BA1 kuralı).",
+     "sik_aciklamalari": {
+      "A": "In silico tahminler %100 kanıt değildir, destekleyici kanıttır.",
+      "B": "Doğru. Sağlıklı popülasyonda yüksek sıklık benign olduğunun en güçlü kanıtıdır.",
+      "C": "Nadir her varyant hastalık yapmaz.",
+      "D": "In silico bilgisayar simülasyonudur, hücre kültürü değildir.",
+      "E": "Yeni verilerle varyant sınıflamaları değişebilir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k12-q11",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Bir gende daha önce fonksiyonel deneylerle protein fonksiyonunu tamamen yok ettiği kanıtlanmış olan, stop kodon oluşturan (nonsense) veya okuma çerçevesini kaydıran (frameshift) ve haployetersizlik mekanizmasıyla hastalık yaptığı bilinen bir mutasyon ACMG sisteminde öncelikle hangi kategoride değerlendirilir?",
+     "secenekler": {
+      "A": "Benign",
+      "B": "Muhtemelen Benign",
+      "C": "Patojenik",
+      "D": "Fonksiyonsuz polimorfizm",
+      "E": "Epigenetik sessiz varyant"
+     },
+     "dogru": "C",
+     "aciklama": "Haployetersizlik mekanizmasıyla çalışan genlerde zincir sonlandıran frameshift ve nonsense mutasyonlar çok güçlü patojenite kanıtı (PVS1) olup patojenik kabul edilir.",
+     "sik_aciklamalari": {
+      "A, B, D, E": "Fonksiyon kaybı yapan zincir sonlandırıcı mutasyonlar benign olamaz.",
+      "C": "Doğru. Fonksiyon kaybı yapan ve fenotiple uyumlu bu mutasyonlar patojeniktir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-01-dismorfolojide-genetik-terminoloji-k12-q12",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Genetik laboratuvarlarının WES/NGS veri tabanlarını ve daha önce raporlanan varyantları periyodik olarak (örneğin yıllık veya 6 ayda bir) yeniden analiz etmesinin (re-analiz) temel tıbbi gerekçesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hastanın DNA dizisinin zaman geçtikçe mutasyona uğrayıp tamamen farklı bir türe dönüşmesi",
+      "B": "Her yıl yeni hastalık genlerinin tanımlanması, veri tabanlarındaki (ClinVar, gnomAD) fonksiyonel kanıtların güncellenmesi ve önceden VUS olan bir varyantın patojenik veya benign olarak yeniden sınıflandırılabilmesi",
+      "C": "Laboratuvarların hastadan tekrar tekrar kan alma zorunluluğunun bulunması",
+      "D": "ACMG kılavuzunun tüm genetik hastalıkları tedavisi bulunmuş kabul etmesi",
+      "E": "Sanger dizilemenin bilgisayar ortamındaki verileri 1 yılda otomatik olarak silmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Literatür ve veri tabanlarındaki bilgi birikimi arttıkça daha önce VUS olan varyantlar kesinleşebilir; bu nedenle periyodik re-analiz tanı oranını artırır.",
+     "sik_aciklamalari": {
+      "A": "Germline DNA tür düzeyinde değişmez.",
+      "B": "Doğru. Veri tabanı güncellemeleri ve VUS sınıflamasının aydınlatılması re-analizin temel gerekçesidir.",
+      "C, D, E": "Bilimsel gerçeklerle ilgisi olmayan seçeneklerdir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 38,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:54:33"
+ ]
 }

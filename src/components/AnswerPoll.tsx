@@ -113,6 +113,21 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
     }
   };
 
+  // Oyu geri al: şıkkı değiştirmek isteyen yeniden seçebilsin
+  const undo = async () => {
+    if (!voterUid || busy || !myVote) return;
+    setBusy(true);
+    setError('');
+    try {
+      setVotes(await ApiService.cancelAnswerVote(questionId, voterUid));
+      setPicked(null);
+    } catch (e: any) {
+      setError(e.message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
   const status = !votes
     ? error || 'Oylar yükleniyor…'
     : myVote
@@ -129,7 +144,16 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
         <BarChart3 className="w-4 h-4 shrink-0" aria-hidden />
         <span className="font-semibold text-ink">Cevap anketi</span>
         <span className="ms-poll-total"><Users className="w-3.5 h-3.5" aria-hidden /> {total.toLocaleString('tr-TR')} oy</span>
-        <span className={`ms-poll-status ${myVote ? 'is-done' : ''} ${error ? 'is-err' : ''}`}>{error && votes ? error : status}</span>
+        {myVote && !error ? (
+          <span className="ms-poll-status is-done">
+            Oyun <b className="font-mono">{myVote}</b>
+            <button type="button" className="ms-poll-undo" onClick={undo} disabled={busy} title="Oyunu geri al ve başka şık seç">
+              {busy ? '…' : 'Değiştir'}
+            </button>
+          </span>
+        ) : (
+          <span className={`ms-poll-status ${myVote ? 'is-done' : ''} ${error ? 'is-err' : ''}`}>{error && votes ? error : status}</span>
+        )}
       </header>
       {hint && <p className="ms-poll-hint">{hint}</p>}
 
@@ -193,7 +217,7 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
       {picked && canVote && (
         <div className="ms-poll-confirm ms-pop-in">
           <span className="text-[13px] text-ink-2 min-w-0 flex-1">
-            <b className="text-ink">{picked}</b> şıkkına oy vereceksin. Oy bir kez verilir.
+            <b className="text-ink">{picked}</b> şıkkına oy vereceksin. Sonra istersen değiştirebilirsin.
           </span>
           <button type="button" onClick={() => setPicked(null)} className="ms-btn is-ghost is-sm">Vazgeç</button>
           <button type="button" onClick={() => submit(picked)} disabled={busy} className="ms-btn is-primary is-sm">

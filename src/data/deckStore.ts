@@ -52,3 +52,10 @@ export async function loadAllDecks<T = any>(): Promise<T[]> {
   }
   return out;
 }
+
+/** Ekranda gösterilecek ders adı: iç etiketler ("(Yeni Mikro-Ders)") ayıklanır. */
+export const deckName = (d: { title?: string; shortTitle?: string }, short = true) =>
+  String((short && d.shortTitle) || d.title || '')
+    .replace(/\s*\((?:yeni\s*)?mikro[-\s]?ders\)\s*/gi, ' ')
+    .replace(/\s{2,}/g, ' ')
+    .trim();

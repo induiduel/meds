@@ -702,7 +702,8 @@ export const RenderWithGlossaryTerms: React.FC<{
           return (
             <mark
               key={pIdx}
-              className="bg-amber-200/80 dark:bg-amber-400/30 text-amber-950 dark:text-amber-100 px-1.5 py-0.5 rounded font-medium not-italic underline decoration-2 underline-offset-[3px] decoration-amber-400/80 shadow-2xs"
+              className="ms-marker-animated shadow-2xs not-italic cursor-default"
+              title="Vurgulanmış Temel Bilgi"
             >
               {renderedContent}
             </mark>

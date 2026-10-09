@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useSyncExternalStore } from 'react';
+import { isPenDevice, notePointer } from './penInput';
 import { Highlighter as PenIcon, Eraser, Trash2 } from 'lucide-react';
 import { toast } from './Toast';
 
@@ -41,6 +42,17 @@ export const usePenActive = () =>
     },
     () => tool.active,
     () => tool.active
+  );
+/** Fosforlu kalemi açar/kapatır, rengini ya da silgiyi değiştirir (yüzen araç çubuğu için). */
+export const setHighlighterTool = (patch: Partial<Tool>) => setTool(patch);
+export const useHighlighterTool = () =>
+  useSyncExternalStore(
+    (cb) => {
+      toolListeners.add(cb);
+      return () => toolListeners.delete(cb);
+    },
+    () => tool,
+    () => tool
   );
 /** Kalemi kapatır (işaretleme kilidindeki "Bitti" için). */
 export const stopPen = () => setTool({ active: false, eraser: false });
@@ -287,13 +299,20 @@ export const Highlightable: React.FC<{ scope: string; className?: string; style?
     return offsetOf(root, node, off);
   };
   const onPointerDown = (e: React.PointerEvent) => {
+    notePointer(e);
     if (!t.active || e.pointerType === 'mouse') return;
+    // Kalemli cihazda parmak işaretlemez, sayfayı kaydırır
+    if (e.pointerType === 'touch' && isPenDevice()) return;
     const pos = caretOffset(e.clientX, e.clientY);
     touchStart.current = pos == null ? null : { pos, x: e.clientX, y: e.clientY };
   };
 
   const onPointerUp = (e: React.PointerEvent) => {
     if (!t.active) return;
+    if (e.pointerType === 'touch' && isPenDevice()) {
+      touchStart.current = null;
+      return;
+    }
     const root = ref.current;
     if (!root) return;
     const start0 = touchStart.current;

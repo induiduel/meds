@@ -6,6 +6,7 @@
  "konu": "İleri Tümör Genetiği ve Metabolizması",
  "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
  "tarih": null,
+ "soru_sayisi": 96,
  "kazanimlar": [
   {
    "no": 1,
@@ -124,6 +125,277 @@
      "benzer_cikmis": [
       "0af2ce32aaca"
      ]
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k01-q05",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bilateral retinoblastomlu bebekte germ hattı RB mutasyonu, unilateral sporadik olguda iki somatik mutasyon saptanmıştır. RB yolundaki değişiklikler de sorgulanmaktadır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Aileselde iki germ hattı gerekir.",
+      "B": "RB G2/M düzenleyicisidir.",
+      "C": "RB G1/S'in ana negatif düzenleyicisidir (ilk TSG, prototip two-hit). Hipofosforile RB aktif-E2F bağlı-kromatin kapalı; hiperfosforile inaktif-E2F serbest. EGF/PDGF→siklin D artışı; siklin D-CDK4/6 ve E-CDK2 fosforiler; TGF-β/p53→p16/p21 frenler. Aileselde germ hattı mutant + somatik ikinci darbe; sporadikte iki somatik. Siklin D amplifikasyonu, CDK4 aktivasyonu, p16 delesyonu/susturulması yolu bozar; HPV E7 hipofosforile RB'ye bağlanıp E2F serbestleştirir, p21'i inhibe eder.",
+      "D": "Hiperfosforile RB aktiftir.",
+      "E": "p16 yolu aktive eder."
+     },
+     "dogru": "C",
+     "aciklama": "RB işlevi, fosforilasyon dengesi, two-hit (ailesel/sporadik) ve yol bozan değişiklikler doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; germ hattı + somatik ikinci darbedir.",
+      "B": "Yanlış; RB G1/S düzenleyicisidir.",
+      "C": "Doğru. RB biyolojisi ve two-hit doğrudur.",
+      "D": "Yanlış; hipofosforile aktiftir.",
+      "E": "Yanlış; p16 CDK inhibitörüdür."
+     },
+     "bilgi": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k01-q06",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Bilateral bebek ile unilateral sporadik retinoblastom olguları karşılaştırılırken RB yolağıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforiler.",
+      "B": "TGF-β ve p53 p16/p21 üzerinden fren yapar.",
+      "C": "Siklin D amplifikasyonu ve p16 delesyonu RB yolunu bozar.",
+      "D": "HPV E7 hipofosforile RB'ye bağlanır ve p21'i inhibe eder.",
+      "E": "Hiperfosforile RB E2F'yi bağlayıp kromatini kapatır; sporadik retinoblastomda tek somatik mutasyon yeterlidir."
+     },
+     "dogru": "E",
+     "aciklama": "Hipofosforile RB E2F'yi bağlar; sporadikte iki somatik mutasyon gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Yanlış ifade (aranan cevap). Form ve alel sayısı terstir."
+     },
+     "bilgi": [
+      5,
+      6,
+      7,
+      8,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "RB proteininin G1/S kontrolündeki çalışma mekanizması nasıldır?",
+     "secenekler": {
+      "A": "RB G2-M düzenleyicisidir",
+      "B": "Hipofosforile aktif; E2F baskısı; siklin-CDK inaktive",
+      "C": "Hiperfosforile RB aktiftir",
+      "D": "RB E2F'yi aktive eder",
+      "E": "RB lokusu 21. kromozomdur"
+     },
+     "dogru": "B",
+     "aciklama": "RB, G1/S geçişinin ana negatif düzenleyicisi ve keşfedilen ilk tümör baskılayıcı gendir (lokusu 13q14). Hipofosforile formu aktiftir; E2F'yi bağlayıp histon deasetilaz-metiltransferazlarla kromatini kapalı tutarak S fazı genlerini susturur. Büyüme faktörleri siklin D-CDK4/6 ve siklin E-CDK2 ile RB'yi hiperfosforile edip inaktive eder; E2F serbest kalıp siklin E gibi genleri açar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; RB G1/S geçişinin negatif düzenleyicisidir.",
+      "B": "Doğru; fosforilasyon durumları ve E2F ilişkisini verir.",
+      "C": "Yanlış; hiperfosforile form inaktiftir.",
+      "D": "Yanlış; aktif RB E2F'yi bağlayıp baskılar.",
+      "E": "Yanlış; RB lokusu 13q14'tür."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k01-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "İki vuruş hipotezi ve RB yolunu bozan değişiklikler nelerdir?",
+     "secenekler": {
+      "A": "Aileselde iki vuruş somatiktir",
+      "B": "Sporadikte tek vuruş yeterlidir",
+      "C": "p16 kaybı RB'yi aktive eder",
+      "D": "Ailesel germ+somatik; sporadik iki somatik; E7 bozar",
+      "E": "G1/S çoğu kanserde sağlamdır"
+     },
+     "dogru": "D",
+     "aciklama": "İki vuruş modelinde ailesel retinoblastomda birinci vuruş germ hattı mutant alelidir, ikinci vuruş retina hücresinde somatik mutasyondur; kalıtım otozomal dominant eğilimli, hücre düzeyinde resesiftir. Sporadikte iki vuruş da aynı hücrede somatiktir. RB yolunu siklin D amplifikasyonu, CDK4 aktivasyonu, p16 delesyonu-susturulması ve HPV E7 (RB'yi bağlayıp E2F'yi serbest bırakır) bozar; hemen tüm kanserlerde G1/S kontrolü bozuktur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; aileselde birinci vuruş germ hattıdır.",
+      "B": "Yanlış; sporadikte aynı hücrede iki somatik vuruş gerekir.",
+      "C": "Yanlış; p16 kaybı CDK aktivitesiyle RB'yi inaktive eder.",
+      "D": "Doğru; vuruş dağılımını ve yol bozucularını özetler.",
+      "E": "Yanlış; hemen tüm kanserlerde G1/S kontrolü bozuktur."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k01-q09",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"p53'ün normalde düşük tutulması\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "C": "CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır.",
+      "B": "HPV E7 proteini hipofosforile RB'ye bağlanır, E2F'yi serbest bırakır ve CDK inhibitörü p21'i inhibe eder.",
+      "A": "p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "D": "Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "C": "Yanlış. CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır.",
+      "B": "Yanlış. HPV E7 proteini hipofosforile RB'ye bağlanır, E2F'yi serbest bırakır ve CDK inhibitörü p21'i inhibe eder.",
+      "A": "Yanlış. p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "D": "Yanlış. Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k01-q10",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"Anjiyogenezin tetiklenmesi\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır.",
+      "B": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "A": "Tümörler başka anjiyojenik faktörlere geçebilir, stromal adaptasyon gelişebilir ve tümör daha invaziv fenotipe kayabilir.",
+      "D": "Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır.",
+      "E": "18F-işaretli glikoz analoğu kullanarak glikoz alımı artmış dokuları görüntüler; tümörler özellikle yüksek proliferatif olanlar yüksek FDG tutulumu gösterir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır.",
+      "B": "Yanlış. Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "A": "Yanlış. Tümörler başka anjiyojenik faktörlere geçebilir, stromal adaptasyon gelişebilir ve tümör daha invaziv fenotipe kayabilir.",
+      "D": "Yanlış. Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır.",
+      "E": "Yanlış. 18F-işaretli glikoz analoğu kullanarak glikoz alımı artmış dokuları görüntüler; tümörler özellikle yüksek proliferatif olanlar yüksek FDG tutulumu gösterir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k01-q11",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Anti-anjiyojen tedavinin sınırları\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Tümörler başka anjiyojenik faktörlere geçebilir, stromal adaptasyon gelişebilir ve tümör daha invaziv fenotipe kayabilir.",
+      "A": "Kemoterapi ve radyoterapi DNA hasarı, metabolik stres ve hipoksi oluşturur; bazı tümör hücreleri otofajiyi aktive ederek strese dayanır ve uykuda kalır.",
+      "E": "WNT uyarımı yıkım kompleksini devre dışı bırakır ve β-katenin çekirdekte TCF ile büyüme genlerini aktive eder; APC kaybında WNT olmasa bile β-katenin birikir.",
+      "D": "Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "C": "Krebs döngüsü enzimi IDH'nin onkojenik mutasyonunda normal izositrat-α-ketoglutarat dönüşümü kaybolur ve 2-hidroksiglutarat (2-HG) üretilir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Tümörler başka anjiyojenik faktörlere geçebilir, stromal adaptasyon gelişebilir ve tümör daha invaziv fenotipe kayabilir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Tümörler başka anjiyojenik faktörlere geçebilir, stromal adaptasyon gelişebilir ve tümör daha invaziv fenotipe kayabilir.",
+      "A": "Yanlış. Kemoterapi ve radyoterapi DNA hasarı, metabolik stres ve hipoksi oluşturur; bazı tümör hücreleri otofajiyi aktive ederek strese dayanır ve uykuda kalır.",
+      "E": "Yanlış. WNT uyarımı yıkım kompleksini devre dışı bırakır ve β-katenin çekirdekte TCF ile büyüme genlerini aktive eder; APC kaybında WNT olmasa bile β-katenin birikir.",
+      "D": "Yanlış. Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "C": "Yanlış. Krebs döngüsü enzimi IDH'nin onkojenik mutasyonunda normal izositrat-α-ketoglutarat dönüşümü kaybolur ve 2-hidroksiglutarat (2-HG) üretilir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k01-q12",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Anti-anjiyojen tedavi\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "B": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "C": "E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "E": "RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "D": "Tümör baskılayıcı genin her iki aleli inaktive olmalıdır; ailesel retinoblastomda germ hattında bir mutant RB aleli miras alınır ve ikinci alelde somatik mutasyon (ikinci darbe) gelişir.",
+      "A": "Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "C": "Yanlış. E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "E": "Yanlış. RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "D": "Yanlış. Tümör baskılayıcı genin her iki aleli inaktive olmalıdır; ailesel retinoblastomda germ hattında bir mutant RB aleli miras alınır ve ikinci alelde somatik mutasyon (ikinci darbe) gelişir.",
+      "A": "Yanlış. Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k01-q13",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"p53 ve G1 durması\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "D": "CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır.",
+      "E": "Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "A": "Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "C": "p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "B": "Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır.",
+     "sik_aciklamalari": {
+      "D": "Doğru. CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır.",
+      "E": "Yanlış. Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "A": "Yanlış. Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "C": "Yanlış. p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "B": "Yanlış. Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k01-q14",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"TP53 ve p53 işlevleri\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "C": "TP53 en sık mutasyona uğrayan gendir; p53'ün üç işlevi geçici hücre döngüsü durması, kalıcı durma (senesens) ve apoptozdur.",
+      "D": "Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+      "A": "Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "B": "p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "E": "Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: TP53 en sık mutasyona uğrayan gendir; p53'ün üç işlevi geçici hücre döngüsü durması, kalıcı durma (senesens) ve apoptozdur.",
+     "sik_aciklamalari": {
+      "C": "Doğru. TP53 en sık mutasyona uğrayan gendir; p53'ün üç işlevi geçici hücre döngüsü durması, kalıcı durma (senesens) ve apoptozdur.",
+      "D": "Yanlış. Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+      "A": "Yanlış. Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "B": "Yanlış. p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "E": "Yanlış. Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -291,6 +563,278 @@
       15
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "DNA hasarı sonrası p53 birikimi, p21 ile G1 durması izlenen hücrede onarım başarısız olunca apoptoz gelişmiştir. Sarkomda MDM2 amplifikasyonu, başka ailede Li-Fraumeni saptanmıştır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "p53 yarı ömrü günlerdir.",
+      "B": "TP53 en sık mutasyona uğrayan gendir; p53 işlevleri geçici durma, senesens, apoptozdur. Normalde yarı ömür ~20 dk (MDM2 proteazom yıkımı). Stres→ATM/ATR→fosforilasyon→MDM2 ayrılması→çekirdek birikimi. p21 siklin-CDK inhibisyonu + RB fosforilasyon bloğu + onarım uyarısı. Başarıda MDM2 artışı-geri bildirim; başarısızlıkta senesens (kalıcı kromatin) veya PUMA/BAX-mİt apoptoz. Somatik bialelik (akciğer, kolon, meme); MDM2 amplifikasyonu sarkomda p53'ü işlevsiz bırakır; Li-Fraumeni germ hattı mutant + somatik ikinci darbedir.",
+      "C": "MDM2 p53'ü aktive eder.",
+      "D": "p21 siklin-CDK'yı aktive eder.",
+      "E": "Li-Fraumeni somatiktir."
+     },
+     "dogru": "B",
+     "aciklama": "p53 dengesi, aktivasyon, üç işlev, geri bildirim ve mutasyon sonuçları doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; yarı ömür ~20 dakikadır.",
+      "B": "Doğru. p53 biyolojisi ve genetik doğrudur.",
+      "C": "Yanlış; MDM2 yıkıma hedefler.",
+      "D": "Yanlış; p21 inhibe eder.",
+      "E": "Yanlış; Li-Fraumeni germ hattıdır."
+     },
+     "bilgi": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k02-q07",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "DNA hasarı sonrası p53 birikimli hücre ile MDM2 amplikonlu sarkom irdelenirken p53 ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "p53 CDKN1A (p21) ile siklin-CDK'yı inhibe eder.",
+      "B": "Onarım başarılıysa p53 MDM2'yi artırarak kendi yıkımını sağlar.",
+      "C": "Onarılamayan hasarda senesens veya PUMA/BAX apoptozu olur.",
+      "D": "p53 MDM2'den bağımsız stabildir; onarımda p21'i baskılar ve RB fosforilasyonunu artırır; Li-Fraumeni iki somatik alelle sınırlıdır.",
+      "E": "MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır."
+     },
+     "dogru": "D",
+     "aciklama": "p53 MDM2 ile yıkılır; p21'i uyarır, RB fosforilasyonunu önler; Li-Fraumeni germ hattıdır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Yanlış ifade (aranan cevap). Yön ve kalıtım bilgileri terstir.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      10,
+      12,
+      13,
+      14,
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k02-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "p53'ün aktivasyon dengesi ve üç temel işlevi nasıl işler?",
+     "secenekler": {
+      "A": "MDM2 yıkar; ATM/ATR aktive; p21-G1, PUMA-apoptoz",
+      "B": "p53 normalde yüksektir",
+      "C": "MDM2 p53'ü aktive eder",
+      "D": "p21 döngüyü hızlandırır",
+      "E": "Senesens geçici durmadır"
+     },
+     "dogru": "A",
+     "aciklama": "Normalde p53 düzeyi düşüktür (yarı ömür ~20 dk); MDM2 bağlayıp proteazomal yıkıma yönlendirir. DNA hasarı ve hipokside ATM/ATR kinazları p53'ü fosforiler; MDM2'den ayrılan p53 çekirdekte birikir. Hedefler p21 (siklin-CDK inhibisyonu, RB hipofosforile, G1 durması), GADD45 ve PUMAdır. Onarım başarılıysa p53 MDM2'yi artırıp kendini yıktırır; onarılamazsa senesens (kalıcı kromatin değişimi) veya PUMA-BAX ile mitokondriyal apoptoz olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru; yıkım-aktivasyon dengesini ve üç sonucu verir.",
+      "B": "Yanlış; normalde yarı ömür ~20 dk ile düşüktür.",
+      "C": "Yanlış; MDM2 p53'ü yıkıma yönlendirir.",
+      "D": "Yanlış; p21 siklin-CDK'ları inhibe edip G1'i durdurur.",
+      "E": "Yanlış; senesens kalıcı durma ve kromatin değişimidir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k02-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "TP53 mutasyonlarının sıklığı ve Li-Fraumeni spektrumu nedir?",
+     "secenekler": {
+      "A": "TP53 mutasyonu nadirdir",
+      "B": "MDM2 amplifikasyonu p53'ü güçlendirir",
+      "C": "En sık mutant; Li-Fraumeni çoklu erken tümör",
+      "D": "p53 kaybı onarımı artırır",
+      "E": "Li-Fraumeni tek tümördür"
+     },
+     "dogru": "C",
+     "aciklama": "TP53 insan kanserinde en sık mutasyona uğrayan gendir; kaybında hasara rağmen durma-onarım olmaz, hasarlı hücreler çoğalıp malignleşir. Bazı sarkomlarda MDM2 amplifikasyonu p53'ü işlevsiz bırakır. Li-Fraumeni'de germ hattı mutant alel ve somatik ikinci vuruşla erken yaşta çoklu primer tümör gelişir: sarkom, meme kanseri, lösemi, beyin tümörü ve adrenal korteks karsinomu.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; TP53 en sık mutasyona uğrayan gendir.",
+      "B": "Yanlış; MDM2 amplifikasyonu p53'ü işlevsiz bırakır.",
+      "C": "Doğru; sıklık, MDM2 etkisi ve sendrom spektrumunu verir.",
+      "D": "Yanlış; kayıpta durma ve onarım yapılamaz.",
+      "E": "Yanlış; sarkom-meme-lösemi-beyin-adrenal çokluluğu tipiktir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k02-q10",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Li-Fraumeni sendromu\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "A": "Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+      "B": "Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "E": "Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+      "C": "Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "D": "HPV E7 proteini hipofosforile RB'ye bağlanır, E2F'yi serbest bırakır ve CDK inhibitörü p21'i inhibe eder."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+      "B": "Yanlış. Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "E": "Yanlış. Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+      "C": "Yanlış. Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "D": "Yanlış. HPV E7 proteini hipofosforile RB'ye bağlanır, E2F'yi serbest bırakır ve CDK inhibitörü p21'i inhibe eder."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k02-q11",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "\"NF2 (merlin)\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "E-kadherin sonrası temas inhibisyonu yolunda rol oynar.",
+      "D": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "A": "Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması.",
+      "E": "p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "C": "Tümör baskılayıcı genin her iki aleli inaktive olmalıdır; ailesel retinoblastomda germ hattında bir mutant RB aleli miras alınır ve ikinci alelde somatik mutasyon (ikinci darbe) gelişir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: E-kadherin sonrası temas inhibisyonu yolunda rol oynar.",
+     "sik_aciklamalari": {
+      "B": "Doğru. E-kadherin sonrası temas inhibisyonu yolunda rol oynar.",
+      "D": "Yanlış. Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "A": "Yanlış. Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması.",
+      "E": "Yanlış. p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "C": "Yanlış. Tümör baskılayıcı genin her iki aleli inaktive olmalıdır; ailesel retinoblastomda germ hattında bir mutant RB aleli miras alınır ve ikinci alelde somatik mutasyon (ikinci darbe) gelişir."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k02-q12",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Onkogenler ve metabolizma\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "C": "Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "D": "Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "E": "Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "B": "CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "C": "Yanlış. Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "D": "Yanlış. Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "E": "Yanlış. Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "B": "Yanlış. CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k02-q13",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"E-kadherin ve EMT\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "B": "Tümör baskılayıcı genin her iki aleli inaktive olmalıdır; ailesel retinoblastomda germ hattında bir mutant RB aleli miras alınır ve ikinci alelde somatik mutasyon (ikinci darbe) gelişir.",
+      "D": "p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "A": "Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır.",
+      "C": "Hipofosforile RB aktif olup E2F'yi bağlar ve kromatini kapalı tutar; hiperfosforile RB inaktiftir ve E2F serbest kalır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "B": "Yanlış. Tümör baskılayıcı genin her iki aleli inaktive olmalıdır; ailesel retinoblastomda germ hattında bir mutant RB aleli miras alınır ve ikinci alelde somatik mutasyon (ikinci darbe) gelişir.",
+      "D": "Yanlış. p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "A": "Yanlış. Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır.",
+      "C": "Yanlış. Hipofosforile RB aktif olup E2F'yi bağlar ve kromatini kapalı tutar; hiperfosforile RB inaktiftir ve E2F serbest kalır."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k02-q14",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"APC mutasyonunun klinik önemi\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "C": "TP53 en sık mutasyona uğrayan gendir; p53'ün üç işlevi geçici hücre döngüsü durması, kalıcı durma (senesens) ve apoptozdur.",
+      "D": "Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "A": "Düşük ve orta dereceli gliomlar, bazı akut miyeloid lösemi alt tipleri, bazı kolanjiyokarsinomlar ve sarkomlarda homojen IDH mutasyonu taşıyan alt tipler bulunur.",
+      "E": "Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "C": "Yanlış. TP53 en sık mutasyona uğrayan gendir; p53'ün üç işlevi geçici hücre döngüsü durması, kalıcı durma (senesens) ve apoptozdur.",
+      "D": "Yanlış. Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "A": "Yanlış. Düşük ve orta dereceli gliomlar, bazı akut miyeloid lösemi alt tipleri, bazı kolanjiyokarsinomlar ve sarkomlarda homojen IDH mutasyonu taşıyan alt tipler bulunur.",
+      "E": "Yanlış. Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k02-q15",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Nodal noktalar ve ağ düzeyinde anlayış\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "A": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "D": "Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "B": "Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "C": "Stres (DNA hasarı, hipoksi, onkogenik sinyal) ATM/ATR kinazlarını aktive eder; p53 fosforile olur, MDM2'den ayrılır ve çekirdekte birikir.",
+      "E": "RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "D": "Yanlış. Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "B": "Yanlış. Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "C": "Yanlış. Stres (DNA hasarı, hipoksi, onkogenik sinyal) ATM/ATR kinazlarını aktive eder; p53 fosforile olur, MDM2'den ayrılır ve çekirdekte birikir.",
+      "E": "Yanlış. RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -431,6 +975,275 @@
       18
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kolon adenomunda APC kaybı ve β-katenin birikimi, invaziv tümörde E-kadherin kaybı ve TGF-β yanıtsızlığı izlenmiştir. Yolaklarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "TGF-β normal epitel/endotel/hematopoetik proliferasyonun güçlü inhibitörüdür (SMAD→MYC/CDK4 baskısı); erken kayıp freni kaldırır, ileride tümörü destekleyebilir (iki yüz). E-kadherin adezyon-polarite-temas inhibisyonu sağlar; SNAIL/TWIST baskılar, EMT yapar; NF2 (merlin) temas inhibisyonundadır. APC yıkım kompleksinde β-katenini yıktırır; WNT kompleksi devre dışı bırakır→β-katenin-TCF büyüme genleri; APC kaybında WNT'siz birikim olur. Germ hattı APC FAP, sporadik kolonun %70-80'i APC mutanttır.",
+      "B": "TGF-β her evrede baskılayıcıdır.",
+      "C": "E-kadherin kaybı adezyonu artırır.",
+      "D": "APC β-katenini artırır.",
+      "E": "APC kolonla ilişkisizdir."
+     },
+     "dogru": "A",
+     "aciklama": "Üç yolak ve bağlam bağımlılığı (TGF-β iki yüz, EMT, WNT-APC) ile klinik (FAP, %70-80) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Yolaklar ve klinik birlikte doğrudur.",
+      "B": "Yanlış; ileride destekleyebilir.",
+      "C": "Yanlış; kayıp EMT-invazyon yapar.",
+      "D": "Yanlış; APC yıkım kompleksindedir.",
+      "E": "Yanlış; FAP ve sporadik kolon ilişkilidir."
+     },
+     "bilgi": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k03-q07",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "APC kayıplı adenom ile E-kadherin kayıplı invaziv tümör karşılaştırılırken bu yolaklarla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "TGF-β reseptör/SMAD mutasyonları birçok kanserde bulunur.",
+      "B": "SNAIL ve TWIST E-kadherini baskılayarak EMT yapar.",
+      "C": "E-kadherin kaybı temas inhibisyonunu güçlendirir; APC kaybında β-katenin yıkımı artar ve WNT-TCF büyüme genleri baskılanır.",
+      "D": "APC kaybında WNT olmasa bile β-katenin birikir.",
+      "E": "WNT uyarımı yıkım kompleksini devre dışı bırakır."
+     },
+     "dogru": "C",
+     "aciklama": "E-kadherin kaybı inhibisyonu kaldırır; APC kaybı yıkımı azaltıp TCF genlerini aktive eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Yanlış ifade (aranan cevap). Yön bilgileri terstir.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      18,
+      19,
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k03-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "TGF-β ve E-kadherin yollarının iki yüzlü davranışları nelerdir?",
+     "secenekler": {
+      "A": "TGF-β hep baskılayıcıdır",
+      "B": "SMAD büyümeyi artırır",
+      "C": "E-kadherin kaybı korumaktadır",
+      "D": "EMT proliferasyonu durdurur",
+      "E": "TGF-β erken fren-geç destek; E-kadherin kaybı EMT"
+     },
+     "dogru": "E",
+     "aciklama": "TGF-β normal epitelde reseptör-SMAD yoluyla MYC ve CDK4 gibi büyüme genlerini baskılayıp G1/S durması yapar; birçok kanserde reseptör-SMAD mutasyonu freni kaldırır. İleri evrede ise TGF-β EMT, invazyon, metastaz ve immünsüpresif mikroçevreyle tümörü destekler; etkisi bağlama bağlıdır. E-kadherin temas inhibisyonu ve polarite sağlar; kaybı SNAIL-TWIST ile EMT'nin kilit olayıdır, invazyonu artırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ileri evrede tümör destekleyiciye dönüşür.",
+      "B": "Yanlış; SMAD büyüme genlerini baskılar.",
+      "C": "Yanlış; E-kadherin kaybı invazyonu artırır.",
+      "D": "Yanlış; EMT invazyon ve metastazı kolaylaştırır.",
+      "E": "Doğru; iki yolun bağlam bağımlı davranışını verir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k03-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "APC/β-katenin/WNT yolunun işleyişi ve FAP ilişkisi nedir?",
+     "secenekler": {
+      "A": "APC β-katenini stabilize eder",
+      "B": "APC yıkım; kayıpta WNT'siz proliferasyon; FAP",
+      "C": "WNT β-katenini yıkar",
+      "D": "APC kaybı büyümeyi durdurur",
+      "E": "Sporadik kolonda APC nadirdir"
+     },
+     "dogru": "B",
+     "aciklama": "Dinlenmede APC'li yıkım kompleksi β-katenini fosforile edip yıkar; WNT uyarımında kompleks devre dışı kalır, β-katenin çekirdekte TCF ile büyüme genlerini açar. APC kaybında WNT olmasa bile β-katenin birikir ve sürekli proliferasyon olur. Germ hattı APC mutasyonu FAP'ta çok sayıda adenom ve yüksek karsinom riski yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu vardır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; APC yıkım kompleksinin parçasıdır.",
+      "B": "Doğru; dinlenme-uyarım-kayıp üçlüsünü ve kliniği verir.",
+      "C": "Yanlış; WNT yıkımı durdurup birikime yol açar.",
+      "D": "Yanlış; kayıpta sürekli proliferasyon olur.",
+      "E": "Yanlış; sporadik kolon kanserlerinin %70-80'inde vardır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k03-q10",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "\"Otofaji\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır.",
+      "E": "Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+      "C": "Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "B": "Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması.",
+      "A": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır.",
+      "E": "Yanlış. Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+      "C": "Yanlış. Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "B": "Yanlış. Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması.",
+      "A": "Yanlış. Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k03-q11",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"RB fosforilasyonunun denetimi\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "A": "Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "D": "RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur.",
+      "B": "HPV E7 proteini hipofosforile RB'ye bağlanır, E2F'yi serbest bırakır ve CDK inhibitörü p21'i inhibe eder.",
+      "E": "Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "C": "Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "D": "Yanlış. RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur.",
+      "B": "Yanlış. HPV E7 proteini hipofosforile RB'ye bağlanır, E2F'yi serbest bırakır ve CDK inhibitörü p21'i inhibe eder.",
+      "E": "Yanlış. Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "C": "Yanlış. Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k03-q12",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"p53'ün normalde düşük tutulması\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "C": "TP53 en sık mutasyona uğrayan gendir; p53'ün üç işlevi geçici hücre döngüsü durması, kalıcı durma (senesens) ve apoptozdur.",
+      "B": "RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur.",
+      "E": "Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "D": "Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "C": "Yanlış. TP53 en sık mutasyona uğrayan gendir; p53'ün üç işlevi geçici hücre döngüsü durması, kalıcı durma (senesens) ve apoptozdur.",
+      "B": "Yanlış. RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur.",
+      "E": "Yanlış. Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "D": "Yanlış. Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k03-q13",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"Warburg etkisi\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "C": "Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "D": "Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır.",
+      "B": "RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "E": "Krebs döngüsü enzimi IDH'nin onkojenik mutasyonunda normal izositrat-α-ketoglutarat dönüşümü kaybolur ve 2-hidroksiglutarat (2-HG) üretilir.",
+      "A": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "D": "Yanlış. Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır.",
+      "B": "Yanlış. RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "E": "Yanlış. Krebs döngüsü enzimi IDH'nin onkojenik mutasyonunda normal izositrat-α-ketoglutarat dönüşümü kaybolur ve 2-hidroksiglutarat (2-HG) üretilir.",
+      "A": "Yanlış. Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k03-q14",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"Anjiyogenezin tetiklenmesi\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "A": "Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır.",
+      "B": "Retinoblastoma proteini hücre döngüsünün G1/S geçişinin ana negatif düzenleyicisidir; hipofosforile formu aktif olup E2F transkripsiyon faktörlerini bağlayıp baskılar.",
+      "D": "Kemoterapi ve radyoterapi DNA hasarı, metabolik stres ve hipoksi oluşturur; bazı tümör hücreleri otofajiyi aktive ederek strese dayanır ve uykuda kalır.",
+      "C": "Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "E": "p53 hücreyi senesense (kalıcı durma, kalıcı kromatin değişikliği) ya da apoptoza (PUMA, BAX; mitokondriyal iç yol) yönlendirir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır.",
+      "B": "Yanlış. Retinoblastoma proteini hücre döngüsünün G1/S geçişinin ana negatif düzenleyicisidir; hipofosforile formu aktif olup E2F transkripsiyon faktörlerini bağlayıp baskılar.",
+      "D": "Yanlış. Kemoterapi ve radyoterapi DNA hasarı, metabolik stres ve hipoksi oluşturur; bazı tümör hücreleri otofajiyi aktive ederek strese dayanır ve uykuda kalır.",
+      "C": "Yanlış. Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "E": "Yanlış. p53 hücreyi senesense (kalıcı durma, kalıcı kromatin değişikliği) ya da apoptoza (PUMA, BAX; mitokondriyal iç yol) yönlendirir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k03-q15",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"Anti-anjiyojen tedavi\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "E": "Kemoterapi ve radyoterapi DNA hasarı, metabolik stres ve hipoksi oluşturur; bazı tümör hücreleri otofajiyi aktive ederek strese dayanır ve uykuda kalır.",
+      "C": "Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır.",
+      "A": "Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "B": "Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "E": "Yanlış. Kemoterapi ve radyoterapi DNA hasarı, metabolik stres ve hipoksi oluşturur; bazı tümör hücreleri otofajiyi aktive ederek strese dayanır ve uykuda kalır.",
+      "C": "Yanlış. Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır.",
+      "A": "Yanlış. Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "B": "Yanlış. Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -543,6 +1356,270 @@
       25
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k04-q05",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yüksek proliferatif lenfomada FDG tutulumu belirgin artmış; tümörde RAS-PI3K/AKT aktivasyonu ve MYC amplifikasyonu vardır. Metabolizmayla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "FDG-PET aminoasit görüntüler.",
+      "B": "Warburg yalnızca anaerobiktir.",
+      "C": "Tümör ATP'si yüksektir.",
+      "D": "MYC glutamin bağımlılığını azaltır.",
+      "E": "Warburg: oksijen olsa bile aerobik glikoliz-laktat, ATP görece düşük. RAS-PI3K/AKT glikoz taşıyıcı-glikolitik enzimleri artırır; MYC glikolitik-glutaminolitik enzim ve glutamin bağımlılığını artırır; TP53 metabolizmayı düzenler. FDG-PET 18F-glikoz analoğuyla alımı görüntüler; yüksek proliferatif tümörler yüksek tutulum gösterir."
+     },
+     "dogru": "E",
+     "aciklama": "Warburg, onkogenik düzenleme ve FDG-PET ilkesi doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; FDG glikoz analoğudur.",
+      "B": "Yanlış; oksijen olsa bile glikolizdir.",
+      "C": "Yanlış; ATP görece düşüktür.",
+      "D": "Yanlış; MYC bağımlılığı artırır.",
+      "E": "Doğru. Metabolizma ve görüntüleme doğrudur."
+     },
+     "bilgi": [
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k04-q06",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "FDG tutulumlu lenfomda RAS-MYC aktivasyonu incelenirken tümör metabolizmasıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tümör hücresi glikozu laktata çevirir.",
+      "B": "Warburg etkisi oksijen yokluğuna bağlıdır ve ATP verimi yüksektir; FDG-PET yağ asidi alımını gösterir.",
+      "C": "MYC glutaminolitik enzimleri artırır.",
+      "D": "FDG tutulumu yüksek proliferatif tümörlerde belirgindir.",
+      "E": "RAS-PI3K/AKT glikolitik ekspresyonu artırır."
+     },
+     "dogru": "B",
+     "aciklama": "Warburg oksijen varlığında da olur, ATP düşüktür; FDG glikoz analoğudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Yanlış ifade (aranan cevap). Koşul, verim ve ajan hatalıdır.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Warburg etkisinin metabolik mantığı ve gen düzenlemesi nasıldır?",
+     "secenekler": {
+      "A": "Warburg oksidatif fosforilasyondur",
+      "B": "Aerobik glikoliz ATP'yi artırır",
+      "C": "MYC glutamini azaltır",
+      "D": "Aerobik glikoliz-anabolik iskelet; RAS-MYC-TP53",
+      "E": "TP53 glikolizi destekler"
+     },
+     "dogru": "D",
+     "aciklama": "Warburg etkisinde tümör hücresi oksijen olsa bile aerobik glikolizle glikozu laktata çevirir; ATP verimi düşüktür ama glikolitik ara ürünler nükleotid, amino asit ve lipit sentezine karbon iskeleti sağlar. RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzimleri artırır, MYC glikolitik-glutaminolitik enzimlerle glutamin bağımlılığı yaratır, TP53 büyüme destekleyici metabolik genleri baskılar. Bu tablo FDG-PET'in temelidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; Warburg oksijen varlığında glikolizdir.",
+      "B": "Yanlış; ATP verimi düşük, anabolik kazanç yüksektir.",
+      "C": "Yanlış; MYC glutaminolitik enzimleri artırır.",
+      "D": "Doğru; Warburg mantığını ve gen düzenlemesini verir.",
+      "E": "Yanlış; TP53 büyüme destekleyici metabolik genleri baskılar."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k04-q08",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "FDG-PET'in dayandığı ilke ve kullanım alanları nelerdir?",
+     "secenekler": {
+      "A": "FDG glikoz alımını gösterir; tarama-yanıt izlemi",
+      "B": "FDG oksijeni işaretler",
+      "C": "Düşük proliferatif tutulum yüksektir",
+      "D": "PET yalnızca kemik gösterir",
+      "E": "Tutulum Warburg ile ilişkisizdir"
+     },
+     "dogru": "A",
+     "aciklama": "FDG-PET, 18F işaretli glikoz analoğuyla glikoz alımı artmış dokuları görüntüler; yüksek proliferatif tümörler yoğun tutulum gösterir. Primer tümör ve metastaz taramasında, tedavi yanıtı izleminde kullanılır. Tutulum artışı Warburg etkisindeki aerobik glikolizin doğrudan yansımasıdır; bu yüzden metabolik olarak aktif-odak saptamada anatomik görüntülemeyi tamamlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; izotopu, tutulum mantığını ve kullanım alanlarını verir.",
+      "B": "Yanlış; FDG glikoz analoğudur.",
+      "C": "Yanlış; yüksek proliferatif tümörler yüksek tutar.",
+      "D": "Yanlış; primer-metastaz taraması ve yanıt izleminde kullanılır.",
+      "E": "Yanlış; tutulum aerobik glikolizin yansımasıdır."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k04-q09",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "\"APC ve β-katenin\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "E": "APC sitoplazmik tümör baskılayıcıdır ve β-katenin yıkım kompleksinin parçasıdır; β-katenin hem E-kadherin ile adezyonda hem de WNT yolunda transkripsiyon kofaktörüdür.",
+      "B": "Stres (DNA hasarı, hipoksi, onkogenik sinyal) ATM/ATR kinazlarını aktive eder; p53 fosforile olur, MDM2'den ayrılır ve çekirdekte birikir.",
+      "D": "RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "C": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "A": "Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: APC sitoplazmik tümör baskılayıcıdır ve β-katenin yıkım kompleksinin parçasıdır; β-katenin hem E-kadherin ile adezyonda hem de WNT yolunda transkripsiyon kofaktörüdür.",
+     "sik_aciklamalari": {
+      "E": "Doğru. APC sitoplazmik tümör baskılayıcıdır ve β-katenin yıkım kompleksinin parçasıdır; β-katenin hem E-kadherin ile adezyonda hem de WNT yolunda transkripsiyon kofaktörüdür.",
+      "B": "Yanlış. Stres (DNA hasarı, hipoksi, onkogenik sinyal) ATM/ATR kinazlarını aktive eder; p53 fosforile olur, MDM2'den ayrılır ve çekirdekte birikir.",
+      "D": "Yanlış. RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "C": "Yanlış. Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "A": "Yanlış. Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k04-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "\"TGF-β'nın tümör baskılayıcı rolü\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "C": "Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+      "E": "HPV E7 proteini hipofosforile RB'ye bağlanır, E2F'yi serbest bırakır ve CDK inhibitörü p21'i inhibe eder.",
+      "B": "Krebs döngüsü enzimi IDH'nin onkojenik mutasyonunda normal izositrat-α-ketoglutarat dönüşümü kaybolur ve 2-hidroksiglutarat (2-HG) üretilir.",
+      "A": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "D": "p53 hücreyi senesense (kalıcı durma, kalıcı kromatin değişikliği) ya da apoptoza (PUMA, BAX; mitokondriyal iç yol) yönlendirir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+      "E": "Yanlış. HPV E7 proteini hipofosforile RB'ye bağlanır, E2F'yi serbest bırakır ve CDK inhibitörü p21'i inhibe eder.",
+      "B": "Yanlış. Krebs döngüsü enzimi IDH'nin onkojenik mutasyonunda normal izositrat-α-ketoglutarat dönüşümü kaybolur ve 2-hidroksiglutarat (2-HG) üretilir.",
+      "A": "Yanlış. Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "D": "Yanlış. p53 hücreyi senesense (kalıcı durma, kalıcı kromatin değişikliği) ya da apoptoza (PUMA, BAX; mitokondriyal iç yol) yönlendirir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k04-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Li-Fraumeni sendromu\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+      "E": "CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır.",
+      "C": "Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "A": "Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "B": "RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+      "E": "Yanlış. CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır.",
+      "C": "Yanlış. Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "A": "Yanlış. Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "B": "Yanlış. RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k04-q12",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Otofaji\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır.",
+      "D": "E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "A": "HPV E7 proteini hipofosforile RB'ye bağlanır, E2F'yi serbest bırakır ve CDK inhibitörü p21'i inhibe eder.",
+      "B": "Hipofosforile RB aktif olup E2F'yi bağlar ve kromatini kapalı tutar; hiperfosforile RB inaktiftir ve E2F serbest kalır.",
+      "E": "Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır.",
+      "D": "Yanlış. E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "A": "Yanlış. HPV E7 proteini hipofosforile RB'ye bağlanır, E2F'yi serbest bırakır ve CDK inhibitörü p21'i inhibe eder.",
+      "B": "Yanlış. Hipofosforile RB aktif olup E2F'yi bağlar ve kromatini kapalı tutar; hiperfosforile RB inaktiftir ve E2F serbest kalır.",
+      "E": "Yanlış. Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k04-q13",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"RB yolunu bozan onkojenik değişiklikler\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması.",
+      "A": "Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "E": "Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır.",
+      "C": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "B": "18F-işaretli glikoz analoğu kullanarak glikoz alımı artmış dokuları görüntüler; tümörler özellikle yüksek proliferatif olanlar yüksek FDG tutulumu gösterir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması.",
+      "A": "Yanlış. Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "E": "Yanlış. Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır.",
+      "C": "Yanlış. Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "B": "Yanlış. 18F-işaretli glikoz analoğu kullanarak glikoz alımı artmış dokuları görüntüler; tümörler özellikle yüksek proliferatif olanlar yüksek FDG tutulumu gösterir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k04-q14",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Warburg etkisi\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "D": "Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması.",
+      "E": "Tümör baskılayıcı genin her iki aleli inaktive olmalıdır; ailesel retinoblastomda germ hattında bir mutant RB aleli miras alınır ve ikinci alelde somatik mutasyon (ikinci darbe) gelişir.",
+      "B": "Retinoblastoma proteini hücre döngüsünün G1/S geçişinin ana negatif düzenleyicisidir; hipofosforile formu aktif olup E2F transkripsiyon faktörlerini bağlayıp baskılar.",
+      "A": "Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "D": "Yanlış. Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması.",
+      "E": "Yanlış. Tümör baskılayıcı genin her iki aleli inaktive olmalıdır; ailesel retinoblastomda germ hattında bir mutant RB aleli miras alınır ve ikinci alelde somatik mutasyon (ikinci darbe) gelişir.",
+      "B": "Yanlış. Retinoblastoma proteini hücre döngüsünün G1/S geçişinin ana negatif düzenleyicisidir; hipofosforile formu aktif olup E2F transkripsiyon faktörlerini bağlayıp baskılar.",
+      "A": "Yanlış. Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -629,6 +1706,216 @@
       28
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kemoterapi sonrası hipoksik tümör odağında otofaji belirteçleri artmış ve hücreler uykuda kalarak tedaviye direnmiştir. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Otofaji dirençle ilişkisizdir.",
+      "B": "Otofaji yalnızca ölüm yoludur.",
+      "C": "Stres otofajiyi baskılar.",
+      "D": "Otofaji besin eksikliğinde organel-protein-membran yıkımıyla enerji sağlar; normalde adaptif sağkalım yanıtıdır. Kanserle ilişkisi çift yönlüdür. Kemoterapi-radyoterapi DNA hasarı-stres-hipoksi oluşturur; bazı hücreler otofajiyle strese dayanır, uykuda kalır ve direnç geliştirir.",
+      "E": "Otofaji enerji tüketir."
+     },
+     "dogru": "D",
+     "aciklama": "Otofaji tanımı, çift yön ve direnç ilişkisi doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; dirençle ilişkilidir.",
+      "B": "Yanlış; adaptif sağkalım yanıtıdır.",
+      "C": "Yanlış; stres otofajiyi aktive eder.",
+      "D": "Doğru. Otofaji-direnç ilişkisi doğrudur.",
+      "E": "Yanlış; enerji sağlar."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Kemoterapi sonrası hipoksik odakta uykuda-dirençli hücreler gözlenirken otofajiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Otofaji her zaman tümör öldürücüdür ve tedavi stresi otofajiyi tamamen ortadan kaldırır.",
+      "B": "Normalde adaptif sağkalım yanıtıdır.",
+      "C": "Kanserle ilişkisi çift yönlüdür.",
+      "D": "Kemoterapi-radyoterapi stresi otofaji aktivasyonuyla atlatılabilir ve uykuda kalış-direnç gelişebilir.",
+      "E": "Şiddetli besin eksikliğinde hücre kendi bileşenlerini yıkıp enerji sağlar."
+     },
+     "dogru": "A",
+     "aciklama": "Otofaji sağkalım-direnç sağlayabilir; çift yönlüdür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış ifade (aranan cevap). Yön bilgisi hatalıdır.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Otofajinin kanserdeki çift yönlü rolü nasıl açıklanır?",
+     "secenekler": {
+      "A": "Otofaji enerji tüketir yalnızca",
+      "B": "Erken evrede tümörü destekler",
+      "C": "Erken baskılayıcı; geç sağkalım destekleyici",
+      "D": "Otofaji adaptif değildir",
+      "E": "Evre rolü değiştirmez"
+     },
+     "dogru": "C",
+     "aciklama": "Otofaji, şiddetli besin eksikliğinde hücrenin kendi organel ve proteinlerini yıkarak enerji sağlamasıdır; normalde adaptif sağkalım yanıtıdır. Kanserde erken evrede hasarlı organelleri temizleyerek tümör baskılayıcı davranır. Geç evrede ise besin-hipoksi stresinde tümör sağkalımını destekler; bu çift yön, evreye göre zıt etki doğurur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; otofaji yıkımla enerji sağlar.",
+      "B": "Yanlış; erken evrede temizlikle baskılayıcıdır.",
+      "C": "Doğru; çift yönlü rolün evre karşılığını verir.",
+      "D": "Yanlış; normalde adaptif sağkalım yanıtıdır.",
+      "E": "Yanlış; erken-geç etkiler zıttır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Otofajinin tedavi direnci ve nüksle ilişkisi nedir?",
+     "secenekler": {
+      "A": "Otofaji dirençle ilişkisizdir",
+      "B": "Uykuda hücreler nüks yapmaz",
+      "C": "Kemoterapi otofajiyi durdurur",
+      "D": "Modülatörlerin yeri yoktur",
+      "E": "Otofaji-dormansi-direnç; modülatör-kombinasyon"
+     },
+     "dogru": "E",
+     "aciklama": "Kemoterapi ve radyoterapi stresine otofajiyle dayanan hücreler tedaviye dirençli uykuda (dormant) kalabilir; bu hücreler nükslerin kaynağıdır. Bu yüzden otofaji modülatörleri gelecekte kombinasyon tedavilerinde yer alabilir. Geç evrede otofajiyi baskılamak tümörün stres toleransını kırarak tedaviye duyarlılığı artırabilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; otofaji stres toleransı ve direnç sağlar.",
+      "B": "Yanlış; dormant hücreler nüks kaynağıdır.",
+      "C": "Yanlış; hücreler tedaviye otofajiyle dayanır.",
+      "D": "Yanlış; modülatörler kombinasyon adayıdır.",
+      "E": "Doğru; direnç mekanizması ve tedavi çıkarımını verir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k05-q08",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "\"Warburg etkisi\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "C": "Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "D": "Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "A": "TP53 en sık mutasyona uğrayan gendir; p53'ün üç işlevi geçici hücre döngüsü durması, kalıcı durma (senesens) ve apoptozdur.",
+      "B": "Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır.",
+      "E": "Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "D": "Yanlış. Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "A": "Yanlış. TP53 en sık mutasyona uğrayan gendir; p53'ün üç işlevi geçici hücre döngüsü durması, kalıcı durma (senesens) ve apoptozdur.",
+      "B": "Yanlış. Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır.",
+      "E": "Yanlış. Şiddetli besin eksikliğinde hücre kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlar; normalde adaptif sağkalım yanıtıdır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k05-q09",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Warburg etkisi\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "C": "E-kadherin sonrası temas inhibisyonu yolunda rol oynar.",
+      "D": "Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "B": "WNT uyarımı yıkım kompleksini devre dışı bırakır ve β-katenin çekirdekte TCF ile büyüme genlerini aktive eder; APC kaybında WNT olmasa bile β-katenin birikir.",
+      "A": "Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "C": "Yanlış. E-kadherin sonrası temas inhibisyonu yolunda rol oynar.",
+      "D": "Yanlış. Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "B": "Yanlış. WNT uyarımı yıkım kompleksini devre dışı bırakır ve β-katenin çekirdekte TCF ile büyüme genlerini aktive eder; APC kaybında WNT olmasa bile β-katenin birikir.",
+      "A": "Yanlış. Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k05-q10",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"E-kadherin ve EMT\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "D": "p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "A": "18F-işaretli glikoz analoğu kullanarak glikoz alımı artmış dokuları görüntüler; tümörler özellikle yüksek proliferatif olanlar yüksek FDG tutulumu gösterir.",
+      "B": "CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır.",
+      "C": "Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "D": "Yanlış. p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "A": "Yanlış. 18F-işaretli glikoz analoğu kullanarak glikoz alımı artmış dokuları görüntüler; tümörler özellikle yüksek proliferatif olanlar yüksek FDG tutulumu gösterir.",
+      "B": "Yanlış. CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır.",
+      "C": "Yanlış. Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k05-q11",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"RB geninin tarihsel önemi\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "A": "RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur.",
+      "B": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "C": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "E": "E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "D": "p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur.",
+      "B": "Yanlış. Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "C": "Yanlış. Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "E": "Yanlış. E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "D": "Yanlış. p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -712,6 +1999,268 @@
      },
      "bilgi": [
       30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Genç erişkinde düşük dereceli gliomda homojen IDH mutasyonu ve 2-HG birikimiyle hipermetilasyon saptanmıştır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "2-HG epigenetiği etkilemez.",
+      "B": "IDH mutasyonu 2-HG'yi azaltır.",
+      "C": "IDH Krebs enziminin onkojenik mutasyonunda izositrat-α-ketoglutarat dönüşümü kaybolur, 2-hidroksiglutarat (onkojenik metabolit) üretilir ve epigenetik değişiklikler yapar. Homojen IDH alt tipi düşük-orta gliomlarda, bazı AML, kolanjiyokarsinom ve sarkomlarda klinik önemlidir.",
+      "D": "IDH yalnızca metaboliktir.",
+      "E": "Alt tip ayrımı önemsizdir."
+     },
+     "dogru": "C",
+     "aciklama": "IDH-2-HG-epigenetik ekseni ve klinik alt tipler doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; epigenetik değişiklik yapar.",
+      "B": "Yanlış; 2-HG üretilir.",
+      "C": "Doğru. IDH mekanizması ve klinik doğrudur.",
+      "D": "Yanlış; epigenetik-onkojenik etkisi vardır.",
+      "E": "Yanlış; homojen alt tip klinik önemlidir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "IDH mutant düşük dereceli gliomda 2-HG birikimi saptanan olguda IDH mutasyonlarıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Normal dönüşüm izositrat-α-ketoglutarat yönündedir.",
+      "B": "Mutasyonda 2-HG üretilir.",
+      "C": "2-HG onkojenik metabolittir ve epigenetiği değiştirir.",
+      "D": "Homojen IDH alt tipi düşük-orta gliom, bazı AML, kolanjiyokarsinom ve sarkomlarda bulunur.",
+      "E": "IDH mutasyonu α-KG üretimini artırır ve 2-HG oluşmaz; gliom-AML ile ilişkisi yoktur."
+     },
+     "dogru": "E",
+     "aciklama": "Mutasyonda normal dönüşüm kaybolur, 2-HG üretilir; sayılan tümörlerle ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Yanlış ifade (aranan cevap). Yön ve ilişki bilgileri terstir."
+     },
+     "bilgi": [
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "IDH mutasyonunun onkometabolit üzerinden epigenetik etkisi nasıldır?",
+     "secenekler": {
+      "A": "IDH glikoliz enzimidir",
+      "B": "IDH-2-HG; TET2 inhibisyonu; metilasyon",
+      "C": "2-HG demetilasyonu artırır",
+      "D": "Metabolit epigenetiği etkilemez",
+      "E": "Mutasyon α-KG artırır"
+     },
+     "dogru": "B",
+     "aciklama": "IDH Krebs döngüsü enzimidir; onkojenik mutasyonda izositrat-α-ketoglutarat dönüşümü yerine 2-hidroksiglutarat (2-HG) üretilir. 2-HG, TET2 gibi DNA demetilasyon enzimlerini inhibe eder; yaygın DNA ve histon metilasyon değişiklikleriyle onkojenik gen ekspresyonu oluşur. Böylece metabolik bir mutasyon epigenetik yeniden programlamayla kansere sürükler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; IDH Krebs döngüsü enzimidir.",
+      "B": "Doğru; enzim-metabolit-epigenetik zincirini verir.",
+      "C": "Yanlış; 2-HG demetilasyon enzimlerini inhibe eder.",
+      "D": "Yanlış; metilasyon değişiklikleri onkojenik programı kurar.",
+      "E": "Yanlış; mutasyonda 2-HG üretilir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "IDH mutasyonunun görüldüğü tümörler ve tedavi karşılığı nedir?",
+     "secenekler": {
+      "A": "IDH mutasyonu yalnızca melanomdadır",
+      "B": "Mutant IDH tedavisi yoktur",
+      "C": "Gliomlarda IDH bakılmaz",
+      "D": "Gliom-AML-kolanjiyo; mutant IDH inhibitörü AML",
+      "E": "IDH prognozu değiştirmez"
+     },
+     "dogru": "D",
+     "aciklama": "IDH mutasyonları düşük-orta dereceli gliomlar, bazı AML alt tipleri, bazı kolanjiyokarsinomlar ve sarkomlarda görülür. Klinik önemi, mutant IDH inhibitörlerinin özellikle AML'de onaylı tedavi olmasıdır; metabolik-epigenetik aksın ilaçla kırılabileceğini kanıtlar. Gliomlarda IDH durumu tanı ve prognoz sınıflamasında da kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; gliom, AML, kolanjiyokarsinom ve sarkom spektrumudur.",
+      "B": "Yanlış; mutant IDH inhibitörleri AML'de onaylıdır.",
+      "C": "Yanlış; gliom tanı-prognozunda IDH durumu esastır.",
+      "D": "Doğru; tümör spektrumunu ve tedavi karşılığını verir.",
+      "E": "Yanlış; IDH durumu sınıflama ve prognozu belirler."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k06-q08",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"APC mutasyonunun klinik önemi\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "C": "Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "E": "Tümörler başka anjiyojenik faktörlere geçebilir, stromal adaptasyon gelişebilir ve tümör daha invaziv fenotipe kayabilir.",
+      "A": "Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "B": "Krebs döngüsü enzimi IDH'nin onkojenik mutasyonunda normal izositrat-α-ketoglutarat dönüşümü kaybolur ve 2-hidroksiglutarat (2-HG) üretilir.",
+      "D": "18F-işaretli glikoz analoğu kullanarak glikoz alımı artmış dokuları görüntüler; tümörler özellikle yüksek proliferatif olanlar yüksek FDG tutulumu gösterir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "E": "Yanlış. Tümörler başka anjiyojenik faktörlere geçebilir, stromal adaptasyon gelişebilir ve tümör daha invaziv fenotipe kayabilir.",
+      "A": "Yanlış. Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "B": "Yanlış. Krebs döngüsü enzimi IDH'nin onkojenik mutasyonunda normal izositrat-α-ketoglutarat dönüşümü kaybolur ve 2-hidroksiglutarat (2-HG) üretilir.",
+      "D": "Yanlış. 18F-işaretli glikoz analoğu kullanarak glikoz alımı artmış dokuları görüntüler; tümörler özellikle yüksek proliferatif olanlar yüksek FDG tutulumu gösterir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k06-q09",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Warburg etkisi\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "D": "Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "A": "Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "B": "Hipofosforile RB aktif olup E2F'yi bağlar ve kromatini kapalı tutar; hiperfosforile RB inaktiftir ve E2F serbest kalır.",
+      "E": "Tümörler başka anjiyojenik faktörlere geçebilir, stromal adaptasyon gelişebilir ve tümör daha invaziv fenotipe kayabilir.",
+      "C": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Tümör hücresi oksijen olsa bile aerobik glikoliz kullanır ve glikozu laktata çevirir; ATP üretimi nispeten düşüktür.",
+      "A": "Yanlış. Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "B": "Yanlış. Hipofosforile RB aktif olup E2F'yi bağlar ve kromatini kapalı tutar; hiperfosforile RB inaktiftir ve E2F serbest kalır.",
+      "E": "Yanlış. Tümörler başka anjiyojenik faktörlere geçebilir, stromal adaptasyon gelişebilir ve tümör daha invaziv fenotipe kayabilir.",
+      "C": "Yanlış. Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k06-q10",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"APC ve β-katenin\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "C": "APC sitoplazmik tümör baskılayıcıdır ve β-katenin yıkım kompleksinin parçasıdır; β-katenin hem E-kadherin ile adezyonda hem de WNT yolunda transkripsiyon kofaktörüdür.",
+      "D": "Kemoterapi ve radyoterapi DNA hasarı, metabolik stres ve hipoksi oluşturur; bazı tümör hücreleri otofajiyi aktive ederek strese dayanır ve uykuda kalır.",
+      "A": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "E": "Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+      "B": "Stres (DNA hasarı, hipoksi, onkogenik sinyal) ATM/ATR kinazlarını aktive eder; p53 fosforile olur, MDM2'den ayrılır ve çekirdekte birikir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: APC sitoplazmik tümör baskılayıcıdır ve β-katenin yıkım kompleksinin parçasıdır; β-katenin hem E-kadherin ile adezyonda hem de WNT yolunda transkripsiyon kofaktörüdür.",
+     "sik_aciklamalari": {
+      "C": "Doğru. APC sitoplazmik tümör baskılayıcıdır ve β-katenin yıkım kompleksinin parçasıdır; β-katenin hem E-kadherin ile adezyonda hem de WNT yolunda transkripsiyon kofaktörüdür.",
+      "D": "Yanlış. Kemoterapi ve radyoterapi DNA hasarı, metabolik stres ve hipoksi oluşturur; bazı tümör hücreleri otofajiyi aktive ederek strese dayanır ve uykuda kalır.",
+      "A": "Yanlış. Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "E": "Yanlış. Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+      "B": "Yanlış. Stres (DNA hasarı, hipoksi, onkogenik sinyal) ATM/ATR kinazlarını aktive eder; p53 fosforile olur, MDM2'den ayrılır ve çekirdekte birikir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k06-q11",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"p53'ün normalde düşük tutulması\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "D": "Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "A": "p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "C": "CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır.",
+      "B": "Stres (DNA hasarı, hipoksi, onkogenik sinyal) ATM/ATR kinazlarını aktive eder; p53 fosforile olur, MDM2'den ayrılır ve çekirdekte birikir.",
+      "E": "Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler.",
+      "A": "Yanlış. p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "C": "Yanlış. CDKN1A (p21) siklin-CDK komplekslerini inhibe eder ve RB'nin fosforilasyonunu önler; p53 DNA onarım genlerini uyarır.",
+      "B": "Yanlış. Stres (DNA hasarı, hipoksi, onkogenik sinyal) ATM/ATR kinazlarını aktive eder; p53 fosforile olur, MDM2'den ayrılır ve çekirdekte birikir.",
+      "E": "Yanlış. Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k06-q12",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"TGF-β'nın iki yüzü\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "A": "Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "C": "p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "E": "E-kadherin sonrası temas inhibisyonu yolunda rol oynar.",
+      "D": "Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "A": "Yanlış. Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "C": "Yanlış. p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "E": "Yanlış. E-kadherin sonrası temas inhibisyonu yolunda rol oynar.",
+      "D": "Yanlış. Normalde p53 yarı ömrü yaklaşık 20 dakikadır ve MDM2 proteini p53'e bağlanarak onu proteazom yıkımına hedefler."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k06-q13",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"APC mutasyonunun klinik önemi\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "B": "Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "C": "WNT uyarımı yıkım kompleksini devre dışı bırakır ve β-katenin çekirdekte TCF ile büyüme genlerini aktive eder; APC kaybında WNT olmasa bile β-katenin birikir.",
+      "D": "E-kadherin sonrası temas inhibisyonu yolunda rol oynar.",
+      "A": "Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Germ hattı APC mutasyonu ailesel adenomatöz polipozis koli yapar; sporadik kolon karsinomlarının %70-80'inde APC mutasyonu bulunur.",
+      "B": "Yanlış. Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "C": "Yanlış. WNT uyarımı yıkım kompleksini devre dışı bırakır ve β-katenin çekirdekte TCF ile büyüme genlerini aktive eder; APC kaybında WNT olmasa bile β-katenin birikir.",
+      "D": "Yanlış. E-kadherin sonrası temas inhibisyonu yolunda rol oynar.",
+      "A": "Yanlış. Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır."
+     },
+     "bilgi": [
+      23
      ],
      "benzer_cikmis": []
     }
@@ -827,12 +2376,274 @@
       34
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k07-q05",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Hipoksik kolon tümöründe HIF-1α stabilizasyonu ve VEGF artışı, damarlarda sızıntılı-düzensiz yapı izlenmiş; bevacizumab kombinasyonu başlanmış ancak tümör başka faktörlere yönelmiştir. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hipoksi VEGF'yi azaltır.",
+      "B": "Hipoksi HIF-1α-VEGF artışını tetikler; RAS/MYC VEGF ve anjiyojenik faktörleri artırır; makrofajlar VEGF/FGF üretir; damarlar sızıntılı-düzensiz-anormaldir. Bevacizumab VEGF nötralize eden antikordur (kolorektal, akciğer, RCC kombinasyonları). Sınırlar: başka faktörlere geçiş, stromal adaptasyon, invaziv fenotipe kayma. Nodal noktalar RB, TP53, PI3K/AKT, anjiyogenezdir.",
+      "C": "Tümör damarları normaldir.",
+      "D": "Bevacizumab VEGF'yi artırır.",
+      "E": "Direnç gelişmez."
+     },
+     "dogru": "B",
+     "aciklama": "HIF-VEGF ekseni, damar özellikleri, bevacizumab ilkesi-sınırları ve nodal noktalar doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; hipoksi VEGF'yi artırır.",
+      "B": "Doğru. Anjiyogenez ve tedavi doğrudur.",
+      "C": "Yanlış; damarlar anormaldir.",
+      "D": "Yanlış; bevacizumab nötralize eder.",
+      "E": "Yanlış; faktör geçişi ve adaptasyon olur."
+     },
+     "bilgi": [
+      31,
+      32,
+      33,
+      34,
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k07-q06",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Bevacizumab kombineli hipoksik kolon tümöründe direnç gelişen olguda anti-anjiyojen tedaviyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur.",
+      "B": "Kolorektal, akciğer ve RCC kombinasyonlarında kullanılır.",
+      "C": "Tümörler başka anjiyojenik faktörlere geçebilir.",
+      "D": "Bevacizumab VEGF reseptörünü aktive eder ve tek başına kür sağlar; adaptasyon ve fenotip kayması olmaz.",
+      "E": "Stromal adaptasyon ve invaziv kayma görülebilir."
+     },
+     "dogru": "D",
+     "aciklama": "Bevacizumab VEGF'yi nötralize eder; kombinasyonda kullanılır; adaptasyon ve kayma sınırlardır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Yanlış ifade (aranan cevap). Mekanizma ve sınırlar hatalıdır.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      33,
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Tümör anjiyogenezinin HIF-1α/VEGF mekanizması nasıl işler?",
+     "secenekler": {
+      "A": "HIF-1α-VEGF; p53 fren; sızıntılı damar-metastaz",
+      "B": "HIF-1α VEGF'yi baskılar",
+      "C": "TP53 VEGF'yi artırır",
+      "D": "Tümör damarları normaldir",
+      "E": "Makrofajlar anjiyogenezi durdurur"
+     },
+     "dogru": "A",
+     "aciklama": "Hipokside HIF-1α stabilize olur ve VEGF transkripsiyonunu artırır; RAS ve MYC VEGF'yi yükseltirken TP53 trombospondin-1'i artırıp VEGF'yi baskılar. Tümör damarları sızıntılı, düzensiz ve anormaldir; oksijen-besin sağlarken metastatik hücrelerin dolaşıma girişini de kolaylaştırır. Tümörle ilişkili makrofajlar VEGF ve FGF üreterek anjiyogenezi destekler.",
+     "sik_aciklamalari": {
+      "A": "Doğru; tetikleyici, fren ve damar sonuçlarını özetler.",
+      "B": "Yanlış; HIF-1α VEGF transkripsiyonunu artırır.",
+      "C": "Yanlış; TP53 trombospondin-1 ile VEGF'yi baskılar.",
+      "D": "Yanlış; damarlar sızıntılı ve yapısal anormaldir.",
+      "E": "Yanlış; makrofajlar VEGF-FGF ile destekler."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k07-q08",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Bevacizumab tedavisinin ilkesi, faydası ve sınırları nelerdir?",
+     "secenekler": {
+      "A": "Bevacizumab VEGF'yi artırır",
+      "B": "Anti-VEGF tümörü kür eder",
+      "C": "Bevacizumab anti-VEGF; aylar fayda; kaçış-invazyon",
+      "D": "Direnç hiç gelişmez",
+      "E": "Tek hedef yeterlidir"
+     },
+     "dogru": "C",
+     "aciklama": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyonlarda büyümeyi yavaşlatır, yaşamı genellikle aylar düzeyinde uzatır. Sınırları başka anjiyojenik faktörlere geçiş, stromal adaptasyon ve daha invaziv fenotipe kaymadır. Ders, tek hedef yerine çoklu yolakları hedefleyen kombinasyon stratejilerinin gerekliliğidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bevacizumab VEGF'yi nötralize eder.",
+      "B": "Yanlış; büyüme yavaşlar, kür sağlanmaz.",
+      "C": "Doğru; ilkeyi, fayda ölçeğini ve sınırları verir.",
+      "D": "Yanlış; alternatif faktörlere geçiş ve adaptasyon olur.",
+      "E": "Yanlış; çoklu yolak kombinasyonları gereklidir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k07-q09",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "\"TGF-β'nın tümör baskılayıcı rolü\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+      "D": "Krebs döngüsü enzimi IDH'nin onkojenik mutasyonunda normal izositrat-α-ketoglutarat dönüşümü kaybolur ve 2-hidroksiglutarat (2-HG) üretilir.",
+      "C": "Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+      "E": "Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "B": "RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörüdür; reseptör aktivasyonu SMAD proteinleri üzerinden MYC ve CDK4'ü baskılar.",
+      "D": "Yanlış. Krebs döngüsü enzimi IDH'nin onkojenik mutasyonunda normal izositrat-α-ketoglutarat dönüşümü kaybolur ve 2-hidroksiglutarat (2-HG) üretilir.",
+      "C": "Yanlış. Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+      "E": "Yanlış. Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "B": "Yanlış. RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k07-q10",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "\"Otofaji ve tedavi direnci\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kemoterapi ve radyoterapi DNA hasarı, metabolik stres ve hipoksi oluşturur; bazı tümör hücreleri otofajiyi aktive ederek strese dayanır ve uykuda kalır.",
+      "D": "Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "C": "Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması.",
+      "B": "Tümör baskılayıcı genin her iki aleli inaktive olmalıdır; ailesel retinoblastomda germ hattında bir mutant RB aleli miras alınır ve ikinci alelde somatik mutasyon (ikinci darbe) gelişir.",
+      "E": "RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Kemoterapi ve radyoterapi DNA hasarı, metabolik stres ve hipoksi oluşturur; bazı tümör hücreleri otofajiyi aktive ederek strese dayanır ve uykuda kalır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kemoterapi ve radyoterapi DNA hasarı, metabolik stres ve hipoksi oluşturur; bazı tümör hücreleri otofajiyi aktive ederek strese dayanır ve uykuda kalır.",
+      "D": "Yanlış. Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "C": "Yanlış. Siklin D amplifikasyonu/aşırı ekspresyonu, CDK4 aktive edici mutasyon ya da amplifikasyonu ve p16 (CDKN2A) delesyonu veya epigenetik susturulması.",
+      "B": "Yanlış. Tümör baskılayıcı genin her iki aleli inaktive olmalıdır; ailesel retinoblastomda germ hattında bir mutant RB aleli miras alınır ve ikinci alelde somatik mutasyon (ikinci darbe) gelişir.",
+      "E": "Yanlış. RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k07-q11",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Onarım başarılıysa\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "D": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "B": "p53 hücreyi senesense (kalıcı durma, kalıcı kromatin değişikliği) ya da apoptoza (PUMA, BAX; mitokondriyal iç yol) yönlendirir.",
+      "E": "RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur.",
+      "A": "18F-işaretli glikoz analoğu kullanarak glikoz alımı artmış dokuları görüntüler; tümörler özellikle yüksek proliferatif olanlar yüksek FDG tutulumu gösterir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+     "sik_aciklamalari": {
+      "C": "Doğru. p53, MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar.",
+      "D": "Yanlış. Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "B": "Yanlış. p53 hücreyi senesense (kalıcı durma, kalıcı kromatin değişikliği) ya da apoptoza (PUMA, BAX; mitokondriyal iç yol) yönlendirir.",
+      "E": "Yanlış. RB keşfedilen ilk tümör baskılayıcı gendir ve prototip iki vuruş (two-hit) modelini oluşturur.",
+      "A": "Yanlış. 18F-işaretli glikoz analoğu kullanarak glikoz alımı artmış dokuları görüntüler; tümörler özellikle yüksek proliferatif olanlar yüksek FDG tutulumu gösterir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k07-q12",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"TGF-β'nın iki yüzü\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "A": "Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "D": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "C": "Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "E": "E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Birçok kanserde reseptör veya SMAD genlerinde mutasyon vardır; erken evrede yolun kaybı büyüme frenini kaldırır, ileri evrede TGF-β tümörü destekleyebilir.",
+      "A": "Yanlış. Yeni damarlar sızıntılı, düzensiz ve yapısal olarak anormaldir; tümörle ilişkili makrofajlar VEGF, FGF vb. üretir.",
+      "D": "Yanlış. Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "C": "Yanlış. Aynı hücrede her iki RB alelinde de somatik mutasyon gerekir.",
+      "E": "Yanlış. E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k07-q13",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Li-Fraumeni sendromu\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "C": "Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+      "D": "E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "A": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "B": "RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "E": "Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Germ hattında bir mutant TP53 aleli ve ikinci alelde somatik mutasyon bulunur.",
+      "D": "Yanlış. E-kadherin epitelde temel hücre-hücre adezyon molekülüdür ve polarite ile temas inhibisyonu için önemlidir; SNAIL ve TWIST gibi faktörlerle baskılanır.",
+      "A": "Yanlış. Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "B": "Yanlış. RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "E": "Yanlış. Hipoksi HIF-1α stabilizasyonuna ve VEGF transkripsiyonunun artışına yol açar; RAS ve MYC gibi onkogenler VEGF ve diğer anjiyojenik faktörleri artırır."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi-k07-q14",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Anti-anjiyojen tedavi\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "E": "RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "A": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "B": "Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "D": "Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
+      "E": "Yanlış. RAS-PI3K/AKT glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; MYC glikolitik ve glutaminolitik enzimleri ve glutamin bağımlılığını artırır; TP53 büyüme destekleyici metabolik genleri baskılar.",
+      "A": "Yanlış. Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı bağlıdır; ortak nodal noktalar RB, TP53, PI3K/AKT ve anjiyogenezdir.",
+      "B": "Yanlış. Büyüme faktörleri (EGF, PDGF) siklin D'yi artırır; siklin D-CDK4/6 ve siklin E-CDK2 RB'yi fosforile eder. TGF-β ve p53 ise p16 ve p21 gibi CDK inhibitörlerini artırır.",
+      "D": "Yanlış. Sporadik kanserlerde somatik bialelik mutasyonlar çok yaygındır (akciğer, kolon, meme); MDM2 amplifikasyonu bazı sarkomlarda p53'ü işlevsiz bırakır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 28,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:23"
+ ]
 }

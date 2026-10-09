@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useDeferredValue, useRef } from 'react';
+import React, { useCallback, useState, useMemo, useEffect, useDeferredValue, useRef } from 'react';
 import { AnswerPoll } from './AnswerPoll';
 import { PageHeader } from './ui/PageHeader';
 import { StemText, Highlight } from './ui/StemText';
@@ -215,6 +215,55 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     const t = window.setInterval(() => !document.hidden && load(), 60000);
     return () => { alive = false; window.clearInterval(t); };
   }, []);
+  // Yapay zekâ inceleme kuyruğu (Faz 14 · ücretsiz): sıradaki sorular kartta "Sırada" olarak görünür
+  const [aiQueue, setAiQueue] = useState<Record<string, { status: string; position?: number; requests: number }>>({});
+  const loadAiQueue = useCallback(() => ApiService.getAiReviewQueue().then((d) => d && setAiQueue(d.items)).catch(() => {}), []);
+  useEffect(() => {
+    loadAiQueue();
+    const t = window.setInterval(() => !document.hidden && loadAiQueue(), 90000);
+    return () => window.clearInterval(t);
+  }, [loadAiQueue]);
+  const [aiReviewQ, setAiReviewQ] = useState<QuestionItem | null>(null);
+  const [aiReviewMsg, setAiReviewMsg] = useState('');
+  const [aiReviewBusy, setAiReviewBusy] = useState(false);
+  const sendAiReview = async () => {
+    if (!aiReviewQ || aiReviewBusy) return;
+    setAiReviewBusy(true);
+    try {
+      const r = await ApiService.requestAiReview(String(aiReviewQ.id), {
+        message: aiReviewMsg.trim() || undefined,
+        name: currentUser?.displayName || 'Tıp öğrencisi',
+        uid: currentUser?.uid || undefined,
+        email: currentUser?.email || undefined,
+      });
+      toast.success(r.joined ? 'İsteğin mevcut incelemeye eklendi' : 'İncelemeye gönderildi', `Sıra: ${r.position} / ${r.waiting}. Ücretsiz kuyrukta sırayla incelenir; güncellenen soru otomatik yayımlanır.`);
+      setAiReviewQ(null);
+      setAiReviewMsg('');
+      loadAiQueue();
+    } catch (e: any) {
+      toast.error('Gönderilemedi', e?.message);
+    } finally {
+      setAiReviewBusy(false);
+    }
+  };
+  const openPoll = async (q: QuestionItem) => {
+    const uid = currentUser?.uid || currentUser?.email;
+    if (!uid) {
+      toast.info('Giriş gerekli', 'Anket açmak ve oy vermek için giriş yap.');
+      return;
+    }
+    try {
+      const { answer } = await ApiService.openAnswerPoll(String(q.id), uid);
+      setDoubtInfo((prev) => ({
+        ids: prev?.ids || new Set(),
+        options: prev?.options || {},
+        resolved: { ...(prev?.resolved || {}), [String(q.id)]: { answer: answer || String(q.correctAnswer || ''), by: 'kullanici' } },
+      }));
+      toast.success('Anket açıldı', 'Doğru bildiğin şıkkı doldur; topluluğun cevabı kabul edilen cevapla karşılaştırılır.');
+    } catch (e: any) {
+      toast.error('Anket açılamadı', e?.message);
+    }
+  };
   const isDoubtful = (q: QuestionItem) => (doubtInfo ? doubtInfo.ids.has(String(q.id)) : Boolean((q as any).answerDoubtful));
   useEffect(() => {
     try { localStorage.setItem('cikmis_quiz', quizMode ? '1' : '0'); } catch { /* gizli pencere */ }
@@ -836,15 +885,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ...(selectedDiscipline !== 'all' ? [{ label: selectedDiscipline, clear: () => { setSelectedDiscipline('all'); setSelectedTopic('all'); } }] : []),
     ...(selectedTopic !== 'all' ? [{ label: selectedTopic, clear: () => setSelectedTopic('all') }] : []),
     ...(selectedYear !== 'all' ? [{ label: selectedYear, clear: () => setSelectedYear('all') }] : []),
-    ...(explanationFilter === 'without' ? [{ label: 'Açıklamasız', clear: () => setExplanationFilter('all') }] : []),
+    ...(answerFilter !== 'all' ? [{ label: LABELS.answer[answerFilter], clear: () => setAnswerFilter('all') }] : []),
+    ...(explanationFilter !== 'all' ? [{ label: explanationFilter === 'with' ? 'Açıklamalı' : 'Açıklamasız', clear: () => setExplanationFilter('all') }] : []),
     ...(sourceFilter !== 'all' ? [{ label: LABELS.source[sourceFilter], clear: () => setSourceFilter('all') }] : []),
     ...(denetleyiciFilter !== 'all' ? [{ label: LABELS.denetleyici[denetleyiciFilter], clear: () => setDenetleyiciFilter('all') }] : []),
-    ...(phase14Filter !== 'all' && phase14Filter !== 'faz14' ? [{ label: LABELS.p14[phase14Filter], clear: () => setPhase14Filter('all') }] : []),
-    ...(newnessFilter === 'archived_only' ? [{ label: 'Arşiv', clear: () => setNewnessFilter('all') }] : []),
+    ...(phase14Filter !== 'all' ? [{ label: LABELS.p14[phase14Filter], clear: () => setPhase14Filter('all') }] : []),
+    ...(newnessFilter !== 'all' ? [{ label: LABELS.newness[newnessFilter], clear: () => setNewnessFilter('all') }] : []),
     ...(viewMode !== 'redacted' ? [{ label: LABELS.view[viewMode], clear: () => setViewMode('redacted') }] : []),
   ];
-  const advancedCount =
-    activeFilterChips.length + (answerFilter !== 'all' ? 1 : 0) + (explanationFilter === 'with' ? 1 : 0) + (newnessFilter === 'new_only' ? 1 : 0) + (denetleyiciFilter !== 'all' ? 1 : 0);
+  const advancedCount = activeFilterChips.length;
   const anyFilter = advancedCount > 0 || selectedCommittee !== 'all' || searchQuery.trim() !== '';
   const clearAllFilters = () => {
     setSearchQuery('');
@@ -891,190 +940,130 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   );
 
   return (
-    <div className="flex flex-col gap-3 pb-12 min-w-0 w-full">
-      <PageHeader
-        title="Çıkmış sorular"
-        description="Geçmiş sınavların tam metin soruları; cevap, açıklama ve kaynaklarıyla."
-        actions={
-          <div className="flex items-center gap-1.5">
-            <a href={pathFor('test_cikmis')} className="ms-btn is-ghost is-sm" title="Faz 14 düzeltme önerilerini incele">
-              <Sparkles /> <span className="hidden sm:inline">Faz 14 incelemesi</span>
+    <div className="cx">
+      {/* Başlık: ad + canlı sayı; yönetici araçları sağda */}
+      <header className="cx-head">
+        <h1 className="ms-page-title cx-title">Çıkmış sorular</h1>
+        <span className="cx-count" aria-live="polite">{n(filteredQuestions.length)} <small>soru</small></span>
+        <span className="cx-head-tools">
+          {isAdminUser && (
+            <a href={pathFor('test_cikmis')} className="cx-iconbtn" title="Faz 14 düzeltme önerilerini incele" aria-label="Faz 14 incelemesi">
+              <Sparkles />
             </a>
-            <button
-              type="button"
-              onClick={handleManualSync}
-              disabled={cacheStatus.isSyncing}
-              aria-label="Güncellemeleri denetle"
-              title={`Cihazda ${n(questions.length)} soru · güncellemeleri denetle`}
-              className="ms-btn is-ghost is-sm is-icon"
-            >
-              <RefreshCw className={cacheStatus.isSyncing ? 'animate-spin' : ''} />
-            </button>
-          </div>
-        }
-      />
+          )}
+          <button
+            type="button"
+            onClick={handleManualSync}
+            disabled={cacheStatus.isSyncing}
+            aria-label="Güncellemeleri denetle"
+            title={`Cihazda ${n(questions.length)} soru · güncellemeleri denetle`}
+            className="cx-iconbtn"
+          >
+            <RefreshCw className={cacheStatus.isSyncing ? 'animate-spin' : ''} />
+          </button>
+        </span>
+      </header>
 
-      {/* Arama + filtre + sırala + çöz modu */}
-      <div className="flex items-center gap-2 min-w-0">
-        <div className="ms-qsearch flex-1">
-          <Search aria-hidden />
-          <input
-            ref={searchRef}
-            type="search"
-            value={searchQuery}
-            onChange={(e) => { setSearchQuery(e.target.value); resetPage(); setSuggestOpen(true); }}
-            onFocus={() => setSuggestOpen(true)}
-            onBlur={() => window.setTimeout(() => setSuggestOpen(false), 120)}
-            onKeyDown={(e) => {
-              if (e.key === 'Escape') { if (searchQuery) setSearchQuery(''); else (e.target as HTMLInputElement).blur(); }
-              if (e.key === 'Enter') setSuggestOpen(false);
-            }}
-            placeholder="Kök, şık, konu ya da #numara ara"
-            aria-label="Çıkmış sorularda ara"
-            autoComplete="off"
-          />
-          {searchQuery ? (
-            <button type="button" onClick={() => { setSearchQuery(''); searchRef.current?.focus(); }} aria-label="Aramayı temizle" className="ms-btn is-ghost is-sm is-icon">
-              <X />
-            </button>
-          ) : (
-            <span className="ms-kbd mr-1.5" aria-hidden>/</span>
-          )}
-          {suggestOpen && searchQuery.trim().length >= 2 && (
-            <div className="ms-suggest" role="listbox" aria-label="Arama önerileri" onMouseDown={(e) => e.preventDefault()}>
-              <button type="button" className="ms-suggest-row is-active" onClick={() => setSuggestOpen(false)}>
-                <Search aria-hidden />
-                <span className="min-w-0 truncate">“{searchQuery.trim()}” için sonuçlar</span>
-                <span className="n">{n(filteredQuestions.length)}</span>
-              </button>
-              {suggestions.disciplines.length > 0 && <div className="ms-suggest-label">Ders olarak süz</div>}
-              {suggestions.disciplines.map(([d, c]) => (
-                <button key={d} type="button" className="ms-suggest-row" onClick={() => { setSelectedDiscipline(d); setSelectedTopic('all'); setSearchQuery(''); setSuggestOpen(false); resetPage(); }}>
-                  <BookOpen aria-hidden /> <span className="min-w-0 truncate">{d}</span> <span className="n">{n(c)}</span>
-                </button>
-              ))}
-              {suggestions.topics.length > 0 && <div className="ms-suggest-label">Konu olarak süz</div>}
-              {suggestions.topics.map(([t, c]) => (
-                <button key={t} type="button" className="ms-suggest-row" onClick={() => { setSelectedTopic(t); setSearchQuery(''); setSuggestOpen(false); resetPage(); }}>
-                  <Tag aria-hidden /> <span className="min-w-0 truncate">{t}</span> <span className="n">{n(c)}</span>
-                </button>
-              ))}
-              <p className="ms-suggest-tip m-0">
-                <code>"tam ifade"</code> · <code>-hariç</code> · <code>#12</code> soru numarası. Türkçe karakter fark etmez.
-              </p>
-            </div>
-          )}
-        </div>
+      {/* Arama ve filtre tek kontrol */}
+      <div className="cx-search">
+        <Search aria-hidden />
+        <input
+          ref={searchRef}
+          type="search"
+          value={searchQuery}
+          onChange={(e) => { setSearchQuery(e.target.value); resetPage(); setSuggestOpen(true); }}
+          onFocus={() => setSuggestOpen(true)}
+          onBlur={() => window.setTimeout(() => setSuggestOpen(false), 120)}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') { if (searchQuery) setSearchQuery(''); else (e.target as HTMLInputElement).blur(); }
+            if (e.key === 'Enter') setSuggestOpen(false);
+          }}
+          placeholder="Kök, şık, konu ya da #numara"
+          aria-label="Çıkmış sorularda ara"
+          autoComplete="off"
+        />
+        {searchQuery ? (
+          <button type="button" onClick={() => { setSearchQuery(''); searchRef.current?.focus(); }} aria-label="Aramayı temizle" className="cx-search-x">
+            <X />
+          </button>
+        ) : (
+          <kbd className="ms-kbd cx-kbd" aria-hidden>/</kbd>
+        )}
+        <span className="cx-search-sep" aria-hidden />
         <button
           type="button"
           onClick={() => setFiltersOpen(true)}
           aria-haspopup="dialog"
-          aria-label={`Gelişmiş filtreler${advancedCount ? `, ${advancedCount} etkin` : ''}`}
-          className={`ms-btn ${advancedCount ? 'is-tonal' : 'is-outline'} h-11!`}
+          aria-label={`Filtreler${advancedCount ? `, ${advancedCount} etkin` : ''}`}
+          title="Ders, konu, yıl, cevap ve diğer filtreler"
+          className={`cx-filterbtn ${advancedCount ? 'is-on' : ''}`}
         >
           <SlidersHorizontal />
-          <span className="hidden sm:inline">Filtreler</span>
-          {advancedCount > 0 && <span className="ms-btn-badge">{advancedCount}</span>}
+          <span className="cx-filterbtn-l">Filtre</span>
+          {advancedCount > 0 && <b>{advancedCount}</b>}
         </button>
+        {suggestOpen && searchQuery.trim().length >= 2 && (
+          <div className="ms-suggest" role="listbox" aria-label="Arama önerileri" onMouseDown={(e) => e.preventDefault()}>
+            <button type="button" className="ms-suggest-row is-active" onClick={() => setSuggestOpen(false)}>
+              <Search aria-hidden />
+              <span className="min-w-0 truncate">“{searchQuery.trim()}” için sonuçlar</span>
+              <span className="n">{n(filteredQuestions.length)}</span>
+            </button>
+            {suggestions.disciplines.length > 0 && <div className="ms-suggest-label">Ders olarak süz</div>}
+            {suggestions.disciplines.map(([d, c]) => (
+              <button key={d} type="button" className="ms-suggest-row" onClick={() => { setSelectedDiscipline(d); setSelectedTopic('all'); setSearchQuery(''); setSuggestOpen(false); resetPage(); }}>
+                <BookOpen aria-hidden /> <span className="min-w-0 truncate">{d}</span> <span className="n">{n(c)}</span>
+              </button>
+            ))}
+            {suggestions.topics.length > 0 && <div className="ms-suggest-label">Konu olarak süz</div>}
+            {suggestions.topics.map(([t, c]) => (
+              <button key={t} type="button" className="ms-suggest-row" onClick={() => { setSelectedTopic(t); setSearchQuery(''); setSuggestOpen(false); resetPage(); }}>
+                <Tag aria-hidden /> <span className="min-w-0 truncate">{t}</span> <span className="n">{n(c)}</span>
+              </button>
+            ))}
+            <p className="ms-suggest-tip m-0">
+              <code>"tam ifade"</code> · <code>-hariç</code> · <code>#12</code> soru numarası. Türkçe karakter fark etmez.
+            </p>
+          </div>
+        )}
       </div>
 
-      {/* Hızlı süzgeçler: kurul + sık kullanılanlar; sayılar diğer seçimlere göre canlı (yatay kaydırılabilir) */}
-      <div
-        className="ms-chipbar overflow-x-auto scroll-smooth py-1"
-        role="toolbar"
-        aria-label="Hızlı süzgeçler"
-        onWheel={(e) => {
-          if (e.deltaY !== 0) {
-            e.currentTarget.scrollLeft += e.deltaY;
-          }
-        }}
-      >
-        <button type="button" className={`ms-fchip ${selectedCommittee === 'all' ? 'is-on' : ''}`} onClick={() => { setSelectedCommittee('all'); resetPage(); }} aria-pressed={selectedCommittee === 'all'}>
-          Tüm kurullar <span className="n">{n(fc('committee'))}</span>
-        </button>
-        {committeeList.map((c) => {
+      {/* Kurul sekmeleri + sıralama/kendini sına aynı rayda (telefonda alt alta) */}
+      <div className="cx-rail">
+      <nav className="cx-tabs" aria-label="Kurul" onWheel={(e) => { if (e.deltaY) e.currentTarget.scrollLeft += e.deltaY; }}>
+        {[['all', 'Tümü'] as [string, string], ...committeeList.map((c) => [c, committeeShort(c)] as [string, string])].map(([c, label]) => {
           const on = selectedCommittee === c;
-          const cnt = fc('committee', c);
+          const cnt = c === 'all' ? fc('committee') : fc('committee', c);
           return (
             <button
               key={c}
               type="button"
               aria-pressed={on}
-              title={formatCommitteeName(c)}
-              className={`ms-fchip ${on ? 'is-on' : ''} ${cnt === 0 && !on ? 'is-zero' : ''}`}
+              title={c === 'all' ? 'Tüm kurullar' : formatCommitteeName(c)}
+              className={`cx-tab ${on ? 'is-on' : ''} ${cnt === 0 && !on ? 'is-zero' : ''}`}
               onClick={() => {
-                const next = on ? 'all' : c;
-                setSelectedCommittee(next);
+                setSelectedCommittee(c);
                 resetPage();
-                if (next !== 'all' && selectedDiscipline !== 'all') {
-                  const commObj = OFFICIAL_CURRICULUM_COMMITTEES.find((x) => x.id === next);
+                if (c !== 'all' && selectedDiscipline !== 'all') {
+                  const commObj = OFFICIAL_CURRICULUM_COMMITTEES.find((x) => x.id === c);
                   if (commObj && !commObj.allDisciplineNames.map((d) => normalizeDonem3Discipline(d) || d).includes(selectedDiscipline)) setSelectedDiscipline('all');
                 }
               }}
             >
-              {committeeShort(c)} <span className="n">{n(cnt)}</span>
+              {label.replace(/^Kurul\s*/i, 'K')}
+              <small>{n(cnt)}</small>
             </button>
           );
         })}
-        <span className="w-px h-5 self-center bg-line-2 shrink-0 mx-1" aria-hidden />
-        {(
-          [
-            ['without', 'Cevapsız', HelpCircle],
-            ['doubtful', 'Cevap belirsiz', BarChart3],
-          ] as const
-        ).map(([id, label, Icon]) => {
-          const on = answerFilter === id;
-          const cnt = fc('answer', id);
-          if (!cnt && !on) return null;
-          return (
-            <button key={id} type="button" aria-pressed={on} className={`ms-fchip ${on ? 'is-on' : ''}`} onClick={() => { setAnswerFilter(on ? 'all' : id); resetPage(); }}>
-              <Icon className="w-3.5 h-3.5" aria-hidden /> {label} <span className="n">{n(cnt)}</span>
-            </button>
-          );
-        })}
-        <button type="button" aria-pressed={explanationFilter === 'with'} className={`ms-fchip ${explanationFilter === 'with' ? 'is-on' : ''}`} onClick={() => { setExplanationFilter(explanationFilter === 'with' ? 'all' : 'with'); resetPage(); }}>
-          Açıklamalı <span className="n">{n(fc('explanation', 'with'))}</span>
-        </button>
-        <button
-          type="button"
-          aria-pressed={denetleyiciFilter === 'denetleyici_only'}
-          className={`ms-fchip ${denetleyiciFilter === 'denetleyici_only' ? 'is-on' : ''}`}
-          onClick={() => { setDenetleyiciFilter(denetleyiciFilter === 'denetleyici_only' ? 'all' : 'denetleyici_only'); resetPage(); }}
-          title="Yalnız Denetleyici Onayı almış altın standart sorular"
-        >
-          <ShieldCheck className="w-3.5 h-3.5 text-ok" aria-hidden /> Denetleyici Onayı <span className="n">{n(fc('denetleyici', 'denetleyici_only'))}</span>
-        </button>
-        <button type="button" aria-pressed={phase14Filter === 'faz14'} className={`ms-fchip ${phase14Filter === 'faz14' ? 'is-on' : ''}`} onClick={() => { setPhase14Filter(phase14Filter === 'faz14' ? 'all' : 'faz14'); resetPage(); }} title="Yalnız Faz 14 incelemesinden geçen sorular">
-          <Sparkles className="w-3.5 h-3.5" aria-hidden /> Faz 14 <span className="n">{n(fc('p14', 'faz14'))}</span>
-        </button>
-        {(fc('newness', 'new_only') > 0 || newnessFilter === 'new_only') && (
-          <button type="button" aria-pressed={newnessFilter === 'new_only'} className={`ms-fchip ${newnessFilter === 'new_only' ? 'is-on' : ''}`} onClick={() => { setNewnessFilter(newnessFilter === 'new_only' ? 'all' : 'new_only'); resetPage(); }}>
-            Yeni <span className="n">{n(fc('newness', 'new_only'))}</span>
-          </button>
-        )}
-      </div>
+      </nav>
 
-      {/* Sonuç satırı: sayı, etkin süzgeçler, sıralama ve çöz modu */}
-      <div className="flex flex-wrap items-center gap-1.5 min-w-0">
-        <span className="text-[13px] text-ink-2 mr-1" aria-live="polite">
-          <b className="text-ink font-semibold">{n(filteredQuestions.length)}</b> soru
-        </span>
-        {activeFilterChips.map((c) => (
-          <button key={c.label} type="button" onClick={() => { c.clear(); resetPage(); }} className="ms-fchip is-on is-removable max-w-full" aria-label={`${c.label} süzgecini kaldır`}>
-            <span className="truncate max-w-[220px]">{c.label}</span>
-            <X aria-hidden />
-          </button>
-        ))}
-        {anyFilter && (
-          <button type="button" onClick={clearAllFilters} className="ms-btn is-ghost is-sm">
-            Temizle
-          </button>
-        )}
-        <span className="flex-1" />
-        <label className="ms-btn is-ghost is-sm relative" title="Sırala">
-          <ArrowUpDown />
+      {/* Etkin filtreler + sıralama + kendini sına */}
+      <div className="cx-bar">
+        <span className="cx-bar-sp" />
+        <label className="cx-sort" title="Sırala">
+          <ArrowUpDown aria-hidden />
           <span>{LABELS.sort[sortOrder]}</span>
-          <select value={sortOrder} onChange={(e) => { setSortOrder(e.target.value as any); resetPage(); }} aria-label="Sırala" className="absolute inset-0 opacity-0 cursor-pointer">
+          <select value={sortOrder} onChange={(e) => { setSortOrder(e.target.value as any); resetPage(); }} aria-label="Sırala">
             <option value="default">{LABELS.sort.default}</option>
             <option value="newest">Yeniden eskiye</option>
             <option value="oldest">Eskiden yeniye</option>
@@ -1083,15 +1072,28 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         </label>
         <button
           type="button"
+          role="switch"
+          aria-checked={quizMode}
           onClick={() => setQuizMode((v) => !v)}
-          aria-pressed={quizMode}
-          title={quizMode ? 'Cevaplar gizli: şıkka dokununca doğru cevap görünür' : 'Cevapları gizleyip kendini sına'}
-          className={`ms-btn is-sm ${quizMode ? 'is-on' : 'is-ghost'}`}
+          title={quizMode ? 'Cevaplar gizli: şıkkı işaretleyince doğru cevap görünür' : 'Cevapları gizleyip kendini sına'}
+          className={`cx-quiz ${quizMode ? 'is-on' : ''}`}
         >
-          {quizMode ? <EyeOff /> : <Eye />}
-          <span>{quizMode ? 'Çözüyorum' : 'Kendini sına'}</span>
+          <span className="cx-switch" aria-hidden><i /></span>
+          Kendini sına
         </button>
       </div>
+      </div>
+      {activeFilterChips.length > 0 && (
+        <div className="cx-chips">
+          {activeFilterChips.map((c) => (
+            <button key={c.label} type="button" onClick={() => { c.clear(); resetPage(); }} className="cx-chip" aria-label={`${c.label} filtresini kaldır`}>
+              <span>{c.label}</span>
+              <X aria-hidden />
+            </button>
+          ))}
+          {anyFilter && <button type="button" onClick={clearAllFilters} className="cx-clear">Temizle</button>}
+        </div>
+      )}
 
       {/* Gelişmiş filtreler: yan çekmece (telefonda alttan) */}
       {filtersOpen && (
@@ -1179,6 +1181,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 ['gemini_v3', 'Gemini v3', fc('source', 'gemini_v3')],
                 ['existing', 'Mevcut', fc('source', 'existing')],
               ])}
+              {segRow('Denetleyici onayı', denetleyiciFilter, setDenetleyiciFilter, [
+                ['all', 'Tümü', fc('denetleyici')],
+                ['denetleyici_only', 'Onaylı', fc('denetleyici', 'denetleyici_only')],
+                ['standard_only', 'Onaysız', fc('denetleyici', 'standard_only')],
+              ])}
               {segRow('AI İnceleme ve Denetim', phase14Filter, setPhase14Filter, [
                 ['all', 'Tümü', fc('p14')],
                 ['faz14', 'Faz 14', fc('p14', 'faz14')],
@@ -1223,7 +1230,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           <button type="button" onClick={clearAllFilters} className="ms-btn is-tonal">Filtreleri temizle</button>
         </div>
       ) : (
-        <div className="flex flex-col gap-2.5 ms-stagger" key={`${currentPage}-${filteredQuestions.length}-${sharedId || ''}`}>
+        <div className="cx-list" key={`${currentPage}-${filteredQuestions.length}-${sharedId || ''}`}>
           {sharedId && (
             <div className="ms-shared-band" role="status">
               <Share2 className="w-4 h-4 shrink-0" aria-hidden />
@@ -1301,6 +1308,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               ...(reliableLearn
                 ? [{ label: 'Öğren slaytı', icon: GraduationCap, group: 'Öğren', tone: 'accent' as const, hint: `slayt ${reliableLearn.slideNumber}`, onClick: () => setSelectedLearnMatch({ question: q, match: reliableLearn }) }]
                 : []),
+              ...(aiQueue[String(q.id)]
+                ? [{ label: aiQueue[String(q.id)].status === 'yonetici_onayi' ? 'İncelendi · yönetici onayında' : `İncelemede · sıra ${aiQueue[String(q.id)].position}`, icon: Sparkles, group: 'Yapay zekâ', disabled: aiQueue[String(q.id)].status === 'yonetici_onayi', hint: aiQueue[String(q.id)].status === 'yonetici_onayi' ? undefined : 'not ekle', onClick: () => setAiReviewQ(q) }]
+                : [{ label: 'Yapay zekâ incelemesine gönder', icon: Sparkles, group: 'Yapay zekâ', tone: 'accent' as const, onClick: () => setAiReviewQ(q) }]),
               ...(isAdminUser
                 ? [{ label: 'AI ile düzenle', icon: Wand2, group: 'Yapay zekâ', tone: 'accent' as const, onClick: () => setCustomRedactQuestion({ question: q, match: slideMatch }) }]
                 : []),
@@ -1315,68 +1325,71 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               { label: 'Ham metin', icon: FileText, group: 'Görünüm', hint: effectiveMode === 'raw' ? '✓' : undefined, onClick: () => setCardMode('raw') },
               { label: 'Karşılaştır', icon: Layers, group: 'Görünüm', hint: effectiveMode === 'split' ? '✓' : undefined, onClick: () => setCardMode('split') },
               { label: 'Hakkında', icon: Info, group: 'Soru', hint: learnMatch ? `slayt ${learnMatch.slideNumber}` : undefined, onClick: () => setAboutQuestion(q) },
+              ...(!pollMode && options.length >= 2
+                ? [{ label: 'Ankete aç', icon: BarChart3, group: 'Soru', hint: 'topluluk oylasın', onClick: () => openPoll(q) }]
+                : []),
               ...(p14Fixed
                 ? [{ label: p14Open[q.id] ? 'Düzeltme öncesini gizle' : 'Düzeltme öncesini göster', icon: Info, group: 'Diğer', onClick: () => setP14Open((o) => ({ ...o, [q.id]: !o[q.id] })) }]
                 : []),
+              { label: copiedId === q.id ? 'Kopyalandı' : 'Metni kopyala', icon: Copy, group: 'Soru', onClick: () => handleCopyQuestion(q) },
               { label: 'Kaynak dosyayı göster', icon: FileText, group: 'Diğer', onClick: () => setSelectedRawSourceQuestion(q) },
+              ...(correctAnswer && options.some((o: any) => String(o.key) === String(correctAnswer))
+                ? [{ label: `Cevaba itiraz et (${correctAnswer})`, icon: ShieldAlert, group: 'Diğer', onClick: () => setObjection({ question: q, option: { key: String(correctAnswer), text: String(options.find((o: any) => String(o.key) === String(correctAnswer))?.text ?? '') } }) }]
+                : []),
               { label: 'Hata bildir', icon: Flag, group: 'Diğer', tone: 'danger', onClick: () => setReportingQuestion(q) },
             ];
 
             return (
-              <article key={q.id} className="ms-qcard">
-                <header className="ms-qcard-head">
-                  <span className="ms-qcard-num">#{q.questionNumber}</span>
-                  {isNewQuestion && <span className="ms-tag is-ok">Yeni</span>}
+              <article key={q.id} className="cx-q">
+                <header className="cx-q-head">
+                  <span className="cx-q-no">{q.questionNumber}</span>
+                  <span className="cx-q-meta" title={formatCommitteeName(q.committeeId)}>
+                    <b>{(q as any).committeeUncertain ? 'Kurul belirsiz' : q.discipline || 'Tıp'}</b>
+                    <span>{[(q as any).committeeUncertain ? ((q as any).contentCommitteeId ? committeeShort((q as any).contentCommitteeId) : null) : committeeShort((q as any).contentCommitteeId || q.committeeId), q.examYear].filter(Boolean).join(' · ')}</span>
+                  </span>
+                  <span className="cx-q-flags">
+                    {q.reports && q.reports.length > 0 && (
+                      <span className="cx-flag is-bad" title={`${q.reports.length} hata bildirimi`}><Flag aria-hidden />{q.reports.length}</span>
+                    )}
+                    {pollMode && (
+                      <span className={`cx-flag ${acceptedPoll ? 'is-ok' : 'is-warn'}`} title={acceptedPoll ? 'Cevap kabul edildi; anket açık' : doubtful ? 'Cevap anahtarı tartışmalı' : 'Cevap anahtarı yok'}>
+                        <BarChart3 aria-hidden />{acceptedPoll ? 'Anket' : doubtful ? 'Belirsiz' : 'Cevapsız'}
+                      </span>
+                    )}
+                    {aiQueue[String(q.id)] && (
+                      <span className="cx-flag is-ai" title={aiQueue[String(q.id)].status === 'yonetici_onayi' ? 'Yapay zekâ inceledi; cevap belirsiz olduğu için yönetici onayı bekliyor' : `Yapay zekâ inceleme kuyruğunda (${aiQueue[String(q.id)].requests} istek)`}>
+                        <Sparkles aria-hidden />{aiQueue[String(q.id)].status === 'yonetici_onayi' ? 'Onayda' : `Sırada ${aiQueue[String(q.id)].position}`}
+                      </span>
+                    )}
+                    {q.isAmbiguous && <span className="cx-flag is-warn">Eksik</span>}
+                    {isNewQuestion && <span className="cx-flag is-new">Yeni</span>}
+                    {isDenetleyici && <span className="cx-flag is-ok is-icon" title="Denetleyici onayı: müfredat ve mekanizma doğrulamalı sürüm" aria-label="Denetleyici onaylı"><ShieldCheck /></span>}
+                    {p14Fixed && (
+                      <button
+                        type="button"
+                        onClick={() => setP14Open((o) => ({ ...o, [q.id]: !o[q.id] }))}
+                        aria-expanded={!!p14Open[q.id]}
+                        className={`cx-flag is-ai ${isPhase14Pending(q) ? '' : 'is-icon'}`}
+                        title={isPhase14Pending(q) ? 'Düzeltme onay bekliyor: değişiklikleri gör' : 'Yapay zekâ incelemesinde düzeltildi: değişiklikleri ve öncesini gör'}
+                        aria-label="Düzeltme ayrıntıları"
+                      >
+                        <Sparkles aria-hidden />{isPhase14Pending(q) ? 'Onay bekliyor' : null}
+                      </button>
+                    )}
+                    {isAdminUser && isGeminiV3Question(q) && <span className="cx-flag is-ai">Gemini v3</span>}
+                  </span>
                   {isDenetleyici && (
-                    <span
-                      className="ms-tag is-ok font-semibold inline-flex items-center gap-1 shadow-2xs"
-                      title="Denetleyici Onayı: Altın standart tıp müfredatı ve mekanizma doğrulamalı sürüm"
-                    >
-                      <ShieldCheck className="w-3.5 h-3.5 text-ok" /> Denetleyici Onayı
-                    </span>
-                  )}
-                  {p14Fixed && (
-                    <button
-                      type="button"
-                      onClick={() => setP14Open((o) => ({ ...o, [q.id]: !o[q.id] }))}
-                      aria-expanded={!!p14Open[q.id]}
-                      className="ms-tag is-ai"
-                      title="Faz 14 incelemesinde düzeltildi — değişiklikleri ve öncesini gör"
-                    >
-                      <Info /> {isPhase14Pending(q) ? 'Onay bekliyor' : 'Faz 14'}
-                    </button>
-                  )}
-                  {isGeminiV3Question(q) && <span className="ms-tag is-ai">Gemini v3</span>}
-                  {q.isAmbiguous && <span className="ms-tag is-warn">Eksik</span>}
-                  {pollMode && (acceptedPoll
-                    ? <span className="ms-tag is-ok" title="Cevap kabul edildi; anket topluluk karşılaştırması için açık"><BarChart3 /> Anket açık</span>
-                    : <span className="ms-tag is-warn"><BarChart3 /> {doubtful ? 'Cevap belirsiz' : 'Cevapsız'}</span>)}
-                  {q.reports && q.reports.length > 0 && (
-                    <span className="ms-tag is-bad" title={`${q.reports.length} hata bildirimi`}>
-                      <Flag /> {q.reports.length}
-                    </span>
-                  )}
-                  <span className="ms-qcard-meta" title={formatCommitteeName(q.committeeId)}>{meta}</span>
-                  {isDenetleyici && (
-                    <div role="group" aria-label="Soru sürümü" className="ms-qcard-version inline-flex items-center gap-0.5 p-0.5 rounded-full bg-field">
+                    <span role="group" aria-label="Soru sürümü" className="cx-ver">
                       {([
-                        ['denetleyici', ShieldCheck, 'Denetleyici sürümü (yeni)', 'text-ok'],
-                        ['eski', History, 'Eski sürüm (ham çıkmış sınav)', 'text-ink-2'],
-                        ['karsilastir', Layers, 'Sürümleri karşılaştır', 'text-accent'],
-                      ] as const).map(([v, Icon, label, tone]) => (
-                        <button
-                          key={v}
-                          type="button"
-                          onClick={() => setVersionViewOverrides((prev) => ({ ...prev, [q.id]: v }))}
-                          aria-pressed={activeVersion === v}
-                          aria-label={label}
-                          title={label}
-                          className={`h-7 w-7 inline-flex items-center justify-center rounded-full cursor-pointer transition-colors ${activeVersion === v ? `bg-white shadow-xs ${tone}` : 'text-ink-3 hover:text-ink'}`}
-                        >
-                          <Icon className="w-3.5 h-3.5" />
+                        ['denetleyici', ShieldCheck, 'Denetleyici sürümü (yeni)'],
+                        ['eski', History, 'Eski sürüm (ham çıkmış sınav)'],
+                        ['karsilastir', Layers, 'Sürümleri karşılaştır'],
+                      ] as const).map(([v, Icon, label]) => (
+                        <button key={v} type="button" onClick={() => setVersionViewOverrides((prev) => ({ ...prev, [q.id]: v }))} aria-pressed={activeVersion === v} aria-label={label} title={label}>
+                          <Icon />
                         </button>
                       ))}
-                    </div>
+                    </span>
                   )}
                   <ActionMenu
                     items={actions}
@@ -1564,7 +1577,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       />
                     ) : (
                       options.length > 0 && (
-                        <ol className="ms-opts">
+                        <ol className={`cx-opts ${options.every((o: any) => String(o.text ?? '').length <= 42) ? 'is-short' : ''}`}>
                           {options.map((opt: any) => {
                             const key = String(opt.key);
                             const isCorrect = key === correctAnswer;
@@ -1572,42 +1585,45 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                             const wrongPick = quizMode && picked === key && !isCorrect;
                             const before = p14Fixed ? oldOpt(key) : '';
                             const optChanged = p14Fixed && (opt.isAiGenerated || (before && norm(before) !== norm(opt.text)));
+                            const cls = `cx-opt ${showCorrect ? 'is-correct' : ''} ${wrongPick ? 'is-wrong' : ''} ${picked && (showCorrect || wrongPick) ? 'is-reveal' : ''}`;
                             const body = (
                               <>
-                                <span className="ms-opt-key">{showCorrect ? <Check className="w-4 h-4" strokeWidth={3} /> : key}</span>
-                                <span><Highlight text={String(opt.text ?? '')} terms={terms} /></span>
-                                <span className="ms-opt-side">
-                                  {showCorrect && <span className="ms-opt-correct">Doğru</span>}
-                                  {wrongPick && <span className="text-[12px] font-semibold text-bad-text">Senin seçimin</span>}
-                                  {optChanged && (
+                                <span className="cx-bubble" aria-hidden>{showCorrect ? <Check strokeWidth={3} /> : wrongPick ? <X strokeWidth={3} /> : key}</span>
+                                <span className="cx-opt-t">
+                                  <Highlight text={String(opt.text ?? '')} terms={terms} />
+                                  {showCorrect && <span className="sr-only"> (doğru cevap)</span>}
+                                </span>
+                              </>
+                            );
+                            return (
+                              <li key={key} className="cx-opt-li">
+                                {quizMode && !picked ? (
+                                  <button type="button" className={cls} onClick={() => setPicks((p) => ({ ...p, [q.id]: key }))} aria-label={`${key} şıkkını işaretle`}>
+                                    {body}
+                                  </button>
+                                ) : (
+                                  <div className={cls}>{body}</div>
+                                )}
+                                {optChanged && (
+                                  <span className="cx-opt-info">
                                     <ChangeInfo
                                       title={`${key} şıkkı ${before ? 'düzeltildi' : 'eklendi'} (Faz 14)`}
                                       before={before}
                                       after={String(opt.text)}
                                       note={opt.isAiGenerated ? 'Kaynakta bu şık eksikti; yapay zekâ tamamladı (doğrulanmadı).' : undefined}
                                     />
-                                  )}
-                                </span>
-                              </>
-                            );
-                            const cls = `ms-opt ${showCorrect ? 'is-correct' : ''} ${wrongPick ? 'is-wrong' : ''} ${picked && (showCorrect || wrongPick) ? 'is-reveal' : ''}`;
-                            return (
-                              <li key={key} className="ms-opt-line">
-                                <button
-                                  type="button"
-                                  className="ms-objection"
-                                  onClick={() => setObjection({ question: q, option: { key, text: String(opt.text ?? '') } })}
-                                  aria-label={`${key} şıkkına itiraz et`}
-                                  title={`${key} şıkkına itiraz et`}
-                                >
-                                  <ShieldAlert aria-hidden />
-                                </button>
-                                {quizMode ? (
-                                  <button type="button" className={cls} disabled={!!picked} onClick={() => setPicks((p) => ({ ...p, [q.id]: key }))} aria-label={`${key} şıkkını seç`}>
-                                    {body}
+                                  </span>
+                                )}
+                                {!hideAnswer && (
+                                  <button
+                                    type="button"
+                                    className="cx-objection"
+                                    onClick={() => setObjection({ question: q, option: { key, text: String(opt.text ?? '') } })}
+                                    aria-label={`${key} şıkkına itiraz et`}
+                                    title={`${key} şıkkına itiraz et`}
+                                  >
+                                    <ShieldAlert aria-hidden />
                                   </button>
-                                ) : (
-                                  <div className={cls}>{body}</div>
                                 )}
                               </li>
                             );
@@ -1616,83 +1632,44 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       )
                     )}
                     {quizMode && picked && !pollMode && (
-                      <p className={`ms-note ms-pop-in ${picked === correctAnswer ? 'is-ok' : 'is-warn'} flex items-center gap-2`}>
-                        {picked === correctAnswer ? 'Doğru cevap.' : `Doğru cevap ${correctAnswer}.`}
-                        <button type="button" className="ms-btn is-ghost is-sm" onClick={() => setPicks((p) => { const x = { ...p }; delete x[q.id]; return x; })}>
-                          Yeniden dene
-                        </button>
-                        {explanation && (
-                          <button type="button" className="ms-btn is-ghost is-sm" onClick={() => setAboutQuestion(q)}>
-                            <BookOpen /> Açıklama
-                          </button>
-                        )}
+                      <p className={`cx-verdict ${picked === correctAnswer ? 'is-ok' : 'is-bad'}`} role="status">
+                        <b>{picked === correctAnswer ? 'Doğru' : `Yanlış · cevap ${correctAnswer}`}</b>
+                        <button type="button" onClick={() => setPicks((p) => { const x = { ...p }; delete x[q.id]; return x; })}>Yeniden dene</button>
+                        {explanation && <button type="button" onClick={() => setAboutQuestion(q)}>Açıklama</button>}
                       </p>
                     )}
 
                     {!hideAnswer && !pollMode && (q as any).answerStatus === 'dogrulanmadi' && (
-                      <p className="ms-note is-warn">Cevap anahtarı doğrulanmadı — kaynaktaki işaretli şık bir öğrencinin cevabıydı.</p>
+                      <p className="cx-note is-warn">Cevap doğrulanmadı: kaynaktaki işaret bir öğrencinin cevabıydı.</p>
                     )}
-                    {!hideAnswer && (q as any).answerStatus === 'dogrulandi' && <p className="ms-note is-ok">Cevap ders slaytı kanıtıyla doğrulandı.</p>}
-
-                    {!hideAnswer && (q as any).answerStatus === 'denetleyici_onayli' && (
-                      <p className="ms-note is-ok flex items-center gap-1.5">
-                        <ShieldCheck className="w-4 h-4 text-ok shrink-0" />
-                        <span>Denetleyici Onayı: Altın standart tıp müfredatı ve mekanizma doğrulamalı soru.</span>
-                      </p>
-                    )}
+                    {!hideAnswer && (q as any).answerStatus === 'dogrulandi' && <p className="cx-note is-ok">Cevap ders slaytı kanıtıyla doğrulandı.</p>}
 
                     {/* Açıklama, ilgili slayt ve terimler kartta yer kaplamaz: üç nokta → Hakkında */}
                   </>
                 )}
 
-                <footer className="ms-qcard-foot">
-                  <button
-                    type="button"
-                    onClick={() => handleToggleLike(q)}
-                    aria-pressed={isLiked}
-                    title={isLiked ? 'Beğeniyi geri al' : 'Soruyu beğen'}
-                    className={`ms-btn is-sm ${isLiked ? 'is-on' : 'is-ghost'}`}
-                  >
-                    <ThumbsUp className={isLiked ? 'fill-current' : ''} /> {q.upvotes || 0}
+                <footer className="cx-q-foot">
+                  <button type="button" onClick={() => handleToggleLike(q)} aria-pressed={isLiked} title={isLiked ? 'Beğeniyi geri al' : 'Soruyu beğen'} className={`cx-act ${isLiked ? 'is-on' : ''}`}>
+                    <ThumbsUp className={isLiked ? 'fill-current' : ''} aria-hidden /> <span>{q.upvotes || 0}</span><span className="sr-only"> beğeni</span>
                   </button>
-                  <button
-                    type="button"
-                    onClick={() => handleToggleDislike(q)}
-                    aria-pressed={isDisliked}
-                    title={isDisliked ? 'Beğenmemeyi geri al' : 'Eksik ya da hatalı'}
-                    className={`ms-btn is-sm ${isDisliked ? 'is-danger bg-bad-soft!' : 'is-ghost'}`}
-                  >
-                    <ThumbsDown className={isDisliked ? 'fill-current' : ''} /> {q.downvotes || 0}
+                  <button type="button" onClick={() => handleToggleDislike(q)} aria-pressed={isDisliked} title={isDisliked ? 'Beğenmemeyi geri al' : 'Eksik ya da hatalı'} className={`cx-act ${isDisliked ? 'is-bad' : ''}`}>
+                    <ThumbsDown className={isDisliked ? 'fill-current' : ''} aria-hidden /> <span>{q.downvotes || 0}</span><span className="sr-only"> beğenmeme</span>
                   </button>
                   <button
                     type="button"
                     onClick={() => setExpandedCommentsQuestionId(expandedCommentsQuestionId === q.id ? null : q.id)}
                     aria-expanded={expandedCommentsQuestionId === q.id}
-                    className={`ms-btn is-sm ${expandedCommentsQuestionId === q.id ? 'is-on' : 'is-ghost'}`}
+                    className={`cx-act ${expandedCommentsQuestionId === q.id ? 'is-on' : ''}`}
+                    title="Yorumlar"
                   >
-                    <MessageSquare /> {commentsCount > 0 ? `${commentsCount} yorum` : 'Yorum'}
+                    <MessageSquare aria-hidden /> <span>{commentsCount}</span><span className="sr-only"> yorum</span>
                   </button>
-                  <span className="ms-qcard-foot-sep" aria-hidden />
-                  <button
-                    type="button"
-                    onClick={() => setAboutQuestion(q)}
-                    className="ms-btn is-sm is-ghost is-icon text-ink-2 hover:text-ink"
-                    aria-label="Soru hakkında"
-                    title="Soru hakkında (künye, ilgili slayt, kanıt, terimler)"
-                  >
-                    <Info className="w-4 h-4" />
+                  <span className="cx-bar-sp" />
+                  <button type="button" onClick={() => setAboutQuestion(q)} className="cx-act is-text" title="Açıklama, ilgili slayt, kanıt ve terimler">
+                    <BookOpen aria-hidden /> <span>{explanation ? 'Açıklama' : 'Hakkında'}</span>
                   </button>
-                  <button
-                    type="button"
-                    onClick={() => handleCopyQuestion(q)}
-                    className={`ms-btn is-sm is-ghost is-icon ${copiedId === q.id ? 'text-ok!' : ''}`}
-                    aria-label={copiedId === q.id ? 'Soru kopyalandı' : 'Soruyu kopyala'}
-                    title={copiedId === q.id ? 'Kopyalandı' : 'Soruyu metin olarak kopyala'}
-                  >
-                    {copiedId === q.id ? <Check /> : <Copy />}
-                  </button>
-                  <button type="button" onClick={() => handleShareQuestion(q)} className="ms-btn is-sm is-ghost is-icon" aria-label="Soruyu paylaş" title="Soru bağlantısını paylaş">
-                    <Share2 />
+                  <button type="button" onClick={() => handleShareQuestion(q)} className="cx-act" aria-label="Soruyu paylaş" title="Soru bağlantısını paylaş">
+                    <Share2 aria-hidden />
                   </button>
                 </footer>
 
@@ -1734,7 +1711,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           })}
 
           {totalPages > 1 && !sharedId && (
-            <nav aria-label="Sayfalar" className="flex items-center justify-between gap-2 pt-1 text-[13.5px]">
+            <nav aria-label="Sayfalar" className="cx-pager">
               <button type="button" onClick={() => { setCurrentPage((prev) => Math.max(1, prev - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }} disabled={currentPage === 1} className="ms-btn is-outline">
                 <ChevronLeft /> <span className="hidden sm:inline">Önceki</span>
               </button>
@@ -1918,7 +1895,20 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               { label: 'Soru no', value: q.questionNumber ? `#${q.questionNumber}` : undefined, mono: true },
               { label: 'Cevap', value: hidden ? 'gizli' : ans || doubtInfo?.resolved?.[String(q.id)]?.answer, mono: !hidden },
               { label: 'Kaynak dosya', value: q.sourceFile || q.sourceNote, wide: true },
+              {
+                label: 'Veri tabanına eklenme',
+                value: q.createdAt
+                  ? new Date(q.createdAt).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+                  : undefined,
+              },
+              {
+                label: 'Son düzenlenme',
+                value: (q.updatedAt || q.reconstruction?.lastUpdated || q.denetleyiciSurumu?.onayTarihi)
+                  ? new Date(q.updatedAt || q.reconstruction?.lastUpdated || q.denetleyiciSurumu?.onayTarihi).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+                  : undefined,
+              },
             ]}
+            question={q}
             explanation={expl ? String(expl) : undefined}
             explanationNote={p14 ? <span className="ms-tag is-ai normal-case tracking-normal">Faz 14'te yenilendi</span> : undefined}
             evidence={q.evidenceText || q.reconstruction?.evidenceText}
@@ -1956,10 +1946,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       {objection && (
         <ReportQuestionModal
           question={objection.question}
+          notifyEmail={isAdminUser ? null : currentUser?.email || null}
           objectOption={objection.option}
           onClose={() => setObjection(null)}
           onSubmit={async (reason, details) => {
-            const res = await ApiService.reportPastQuestion(objection.question.id, reason, details, currentUser?.displayName || 'Tıp Öğrencisi');
+            const res = await ApiService.reportPastQuestion(objection.question.id, reason, details, currentUser?.displayName || 'Tıp Öğrencisi', { email: currentUser?.email, uid: currentUser?.uid });
+            loadAiQueue();
             if (res?.report) {
               setQuestions((prev) =>
                 prev.map((q) => (q.id === objection.question.id && !(q.reports || []).some((r: any) => r.id === res.report.id) ? { ...q, reports: [...(q.reports || []), res.report] } : q)),
@@ -1969,18 +1961,58 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         />
       )}
 
+      {/* Yapay zekâ incelemesine gönder (Faz 14 · ücretsiz kuyruk) */}
+      {aiReviewQ && (
+        <Dialog
+          width="max-w-md"
+          onClose={() => !aiReviewBusy && setAiReviewQ(null)}
+          title="Yapay zekâ incelemesine gönder"
+          subtitle={`Soru #${aiReviewQ.questionNumber}${aiQueue[String(aiReviewQ.id)]?.position ? ` · şu an sırada ${aiQueue[String(aiReviewQ.id)].position}.` : ''}`}
+          footer={
+            <>
+              <button type="button" className="ms-btn is-ghost mr-auto" onClick={() => setAiReviewQ(null)} disabled={aiReviewBusy}>Vazgeç</button>
+              <button type="button" className="ms-btn is-primary" onClick={sendAiReview} disabled={aiReviewBusy}>
+                <Sparkles /> {aiReviewBusy ? 'Gönderiliyor…' : aiQueue[String(aiReviewQ.id)] ? 'Notu ekle' : 'Gönder'}
+              </button>
+            </>
+          }
+        >
+          <div className="cx-air">
+            <ol className="cx-air-steps">
+              <li><b>Sıraya girer.</b> Ücretsiz yapay zekâ kotasıyla sırayla incelenir; yoğunlukta birkaç saat sürebilir.</li>
+              <li><b>Kaynakla denetlenir.</b> Kök, şıklar ve cevap ders notlarına göre yeniden kontrol edilir.</li>
+              <li><b>Otomatik yayımlanır.</b> Düzeltme gerekirse soru güncellenir. Cevap belirsiz kalırsa yönetici karar verir.</li>
+            </ol>
+            <label htmlFor="cx-air-msg" className="cx-air-l">Neyi kontrol edelim? <span>isteğe bağlı</span></label>
+            <textarea
+              id="cx-air-msg"
+              rows={3}
+              maxLength={1500}
+              value={aiReviewMsg}
+              onChange={(e) => setAiReviewMsg(e.target.value)}
+              placeholder="Ör. Kök eksik görünüyor; C şıkkı da doğru olabilir."
+              className="cx-air-t"
+              autoFocus
+            />
+          </div>
+        </Dialog>
+      )}
+
       {/* Hata bildir */}
       {reportingQuestion && (
         <ReportQuestionModal
           question={reportingQuestion}
+          notifyEmail={isAdminUser ? null : currentUser?.email || null}
           onClose={() => setReportingQuestion(null)}
           onSubmit={async (reason, details) => {
             const res = await ApiService.reportPastQuestion(
               reportingQuestion.id,
               reason,
               details,
-              currentUser?.displayName || 'Tıp Öğrencisi'
+              currentUser?.displayName || 'Tıp Öğrencisi',
+              { email: currentUser?.email, uid: currentUser?.uid }
             );
+            loadAiQueue();
             if (res && res.report) {
               setQuestions((prev) =>
                 prev.map((q) => {

@@ -94,7 +94,7 @@ const loaders: Record<number, () => Promise<{ default: any }>> = {
 interface Props {
   onNavigateToLearn?: (deckId?: string, slideNumber?: number) => void;
   onNavigateToPastExams?: (query?: string) => void;
-  onNavigateToOrnek?: () => void;
+  onNavigateToOrnek?: (lessonId?: string, kazanimNo?: number) => void;
 }
 
 export const KazanimlarView: React.FC<Props> = ({
@@ -532,7 +532,11 @@ export const KazanimlarView: React.FC<Props> = ({
                                   {onNavigateToOrnek && (
                                     <button
                                       type="button"
-                                      onClick={onNavigateToOrnek}
+                                      onClick={() => {
+                                        const targetDeckId = kazanim.slaytlar?.find((s) => s.deckId)?.deckId;
+                                        const targetKazanimNo = kazanim.ornekSorular?.[0]?.kazanimNo || (kIdx + 1);
+                                        onNavigateToOrnek(targetDeckId, targetKazanimNo);
+                                      }}
                                       className="text-[11.5px] font-semibold text-accent hover:underline flex items-center gap-1 cursor-pointer"
                                     >
                                       Örnek Sorular Modu <ExternalLink className="w-3 h-3" />

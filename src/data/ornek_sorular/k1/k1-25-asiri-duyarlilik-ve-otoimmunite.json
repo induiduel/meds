@@ -6,6 +6,7 @@
  "konu": "Aşırı Duyarlılık ve Otoimmünite",
  "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
  "tarih": "2026-09-24",
+ "soru_sayisi": 114,
  "kazanimlar": [
   {
    "no": 1,
@@ -120,6 +121,273 @@
      "benzer_cikmis": [
       "d3-b-125"
      ]
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k01-q05",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Patoloji dersinde dört aşırı duyarlılık tipi vaka örnekleriyle karşılaştırılmaktadır: fıstıkla anafilaksi, otoimmün hemolitik anemi, SLE nefriti ve tüberkülin deri testi. Sınıflamayla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tip II kompleks, Tip III hücre yüzey antikoru aracılıdır.",
+      "B": "Tip I T hücre, Tip IV IgE aracılıdır.",
+      "C": "Tip I IgE-mast hücre aracılı ani; Tip II IgG/IgM'nin hücre/matriks antijenine bağlanması; Tip III antijen-antikor kompleksleri; Tip IV T hücre aracılıdır. Aşırı duyarlılık, normalde koruyucu yanıtların aşırı/uygunsuz hale gelmesidir.",
+      "D": "Aşırı duyarlılıkta hedef antijen yalnızca ilaçlardır.",
+      "E": "Sınıflama yalnızca klinik süreye dayanır; mekanizma ayırt etmez."
+     },
+     "dogru": "C",
+     "aciklama": "Tip I: IgE-mast; Tip II: IgG/IgM-hedef hücre/matriks; Tip III: immün kompleks; Tip IV: T hücre. Hedef antijenler otoantijen, kalıcı mikrobiyal antijen ve zararsız çevresel antijenlerdir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; kompleks Tip III, hücre antikoru Tip II'dir.",
+      "B": "Yanlış; Tip I IgE, Tip IV T hücre aracılıdır.",
+      "C": "Doğru. Tanım ve dört tipin mekanizması doğrudur.",
+      "D": "Yanlış; otoantijen ve mikrobiyal antijenler de hedeftir.",
+      "E": "Yanlış; sınıflama mekanizmaya dayanır."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k01-q06",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Fıstıkla anafilaksili, hemolitik anemili, nefritli ve PPD'li dört olgu sınıflanırken aşırı duyarlılık tipleri ve prototip hastalıklarla ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tip I - anafilaksi, alerjik rinit, astım (IgE-mast hücre)",
+      "B": "Tip II - otoimmün hemolitik anemi, Goodpasture sendromu, pemfigus vulgaris",
+      "C": "Tip III - SLE nefriti, serum hastalığı, Arthus reaksiyonu",
+      "D": "Tip IV - tüberkülin deri testi, kontakt dermatit, CD8 CTL aracılı hasar",
+      "E": "Tip II - tüberkülin reaksiyonu; Tip IV - otoimmün hemolitik anemi"
+     },
+     "dogru": "E",
+     "aciklama": "Tüberkülin Tip IV (DTH), otoimmün hemolitik anemi Tip II (opsonizasyon/fagositoz) örneğidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme.",
+      "B": "Doğru eşleştirme.",
+      "C": "Doğru eşleştirme.",
+      "D": "Doğru eşleştirme.",
+      "E": "Yanlış eşleştirme (aranan cevap). Tip II-IV örnekleri yer değiştirmiştir."
+     },
+     "bilgi": [
+      1,
+      2,
+      15,
+      20,
+      23,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşırı duyarlılık tanımı ve tip I-IV ayrımının temeli nedir?",
+     "secenekler": {
+      "A": "Aşırı duyarlılık daima koruyucudur",
+      "B": "Tip I T hücre aracılıdır",
+      "C": "I IgE, II IgG/IgM, III kompleks, IV T",
+      "D": "Tip II kompleks birikimidir",
+      "E": "Tip III mast hücre degranülasyonudur"
+     },
+     "dogru": "C",
+     "aciklama": "Aşırı duyarlılık, normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelerek doku hasarı yapmasıdır. Hedef antijenler öz antijenler, kalıcı mikrobiyal antijenler veya zararsız çevresel alerjenler olabilir. Dört tip; aracı moleküle göre ayrılır: tip I IgE-mast hücresi, tip II IgG/IgM-hücre antijeni, tip III immün kompleks, tip IV T hücresi.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; aşırı duyarlılık immünolojik doku hasarıdır.",
+      "B": "Yanlış; tip I IgE ve mast hücresi aracılıdır.",
+      "C": "Doğru; dört tipin aracı mekanizmalarını sıralar.",
+      "D": "Yanlış; kompleks birikimi tip III'ün mekanizmasıdır.",
+      "E": "Yanlış; mast hücresi degranülasyonu tip I'e aittir."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k01-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Tip III ve tip IV reaksiyonların histopatolojik lezyonları nasıl farklılaşır?",
+     "secenekler": {
+      "A": "Tip III granülom yapar",
+      "B": "Tip IV fibrinoid nekroz yapar",
+      "C": "Tip I hücre lizisi yapar",
+      "D": "Tip II ödem-bronkospazmdır",
+      "E": "III fibrinoid vaskülit; IV granülom-infiltrat"
+     },
+     "dogru": "E",
+     "aciklama": "Tip I'de vazodilatasyon, ödem, düz kas kasılması ve mukus üretimi; tip II'de fagositoz-lizis ve inflamasyon görülür. Tip III'ün ayırt edici lezyonu fibrinoid nekrozlu nekrotizan vaskülittir; kompleman ve nötrofil enzimleri damar duvarını yıkar. Tip IV'te perivasküler mononükleer infiltrat (cuffing), granülom ve hücre yıkımı izlenir; prototipler kontakt dermatit, multipl skleroz ve tip 1 diyabettir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; granülom tip IV'ün (DTH) lezyonudur.",
+      "B": "Yanlış; fibrinoid nekroz tip III vaskülitine aittir.",
+      "C": "Yanlış; hücre lizisi tip II'nin fagositoz-lizis mekanizmasıdır.",
+      "D": "Yanlış; ödem ve bronkospazm tip I'in erken fazıdır.",
+      "E": "Doğru; iki tipin lezyonlarını ve prototipleri ayırt eder."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k01-q09",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"Sjögren sendromu\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "C": "Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "B": "Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "A": "Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "D": "T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "E": "Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "B": "Yanlış. Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "A": "Yanlış. Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "D": "Yanlış. T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "E": "Yanlış. Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k01-q10",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "\"CD8+ CTL aracılı hasar\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "A": "Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "E": "Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "D": "Düzenleyici T hücre (Treg) bir CD4+ alt grubudur ve FoxP3 transkripsiyon faktörü gerektirir; CTLA-4 ile ko-stimülasyon engellenir, yüksek afiniteli IL-2 reseptörüyle IL-2 tüketilir ve TGF-β gibi baskılayıcı sitokinler salgılanır.",
+      "C": "T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "A": "Yanlış. Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "E": "Yanlış. Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "D": "Yanlış. Düzenleyici T hücre (Treg) bir CD4+ alt grubudur ve FoxP3 transkripsiyon faktörü gerektirir; CTLA-4 ile ko-stimülasyon engellenir, yüksek afiniteli IL-2 reseptörüyle IL-2 tüketilir ve TGF-β gibi baskılayıcı sitokinler salgılanır.",
+      "C": "Yanlış. T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k01-q11",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Transplantasyon immünolojisi\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "D": "Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "E": "Dolaşımdaki antijen-antikor (IgG/IgM) kompleksleri; antijen ekzojen (enfeksiyon, serum proteinleri) veya endojen (otoantijen) olabilir. Kompleksler glomerüller, eklemler ve küçük damarlar gibi filtrasyon alanlarında birikir.",
+      "A": "Hücre yüzeyi IgG antikorları ve C3b kompleman fragmanları ile opsonize olur; makrofaj ve nötrofiller bunu Fc ve C3b reseptörleriyle tanıyıp fagosite eder.",
+      "C": "Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "D": "Yanlış. Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "E": "Yanlış. Dolaşımdaki antijen-antikor (IgG/IgM) kompleksleri; antijen ekzojen (enfeksiyon, serum proteinleri) veya endojen (otoantijen) olabilir. Kompleksler glomerüller, eklemler ve küçük damarlar gibi filtrasyon alanlarında birikir.",
+      "A": "Yanlış. Hücre yüzeyi IgG antikorları ve C3b kompleman fragmanları ile opsonize olur; makrofaj ve nötrofiller bunu Fc ve C3b reseptörleriyle tanıyıp fagosite eder.",
+      "C": "Yanlış. Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k01-q12",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "\"Atopi ve genetik yatkınlık\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Tip I aşırı duyarlılık geliştirme eğilimidir; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterizedir. İlişkili genler HLA sınıf II alelleri, Th2 sitokin genleri, FcεRI bileşenleri ve ADAM33'tür.",
+      "E": "T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "B": "Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir.",
+      "D": "Düzenleyici T hücre (Treg) bir CD4+ alt grubudur ve FoxP3 transkripsiyon faktörü gerektirir; CTLA-4 ile ko-stimülasyon engellenir, yüksek afiniteli IL-2 reseptörüyle IL-2 tüketilir ve TGF-β gibi baskılayıcı sitokinler salgılanır.",
+      "A": "Genetik: HLA-DR2/HLA-DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4). İmmünolojik: B ve T hücre tolerans kusurları, tip I IFN-α fazlalığı, TLR7/TLR9 aktivasyonu ve BAFF artışı. Çevresel: UV ışığı; hidralazin, prokainamid, D-penisilamin, izoniazid."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Tip I aşırı duyarlılık geliştirme eğilimidir; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterizedir. İlişkili genler HLA sınıf II alelleri, Th2 sitokin genleri, FcεRI bileşenleri ve ADAM33'tür.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Tip I aşırı duyarlılık geliştirme eğilimidir; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterizedir. İlişkili genler HLA sınıf II alelleri, Th2 sitokin genleri, FcεRI bileşenleri ve ADAM33'tür.",
+      "E": "Yanlış. T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "B": "Yanlış. Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir.",
+      "D": "Yanlış. Düzenleyici T hücre (Treg) bir CD4+ alt grubudur ve FoxP3 transkripsiyon faktörü gerektirir; CTLA-4 ile ko-stimülasyon engellenir, yüksek afiniteli IL-2 reseptörüyle IL-2 tüketilir ve TGF-β gibi baskılayıcı sitokinler salgılanır.",
+      "A": "Yanlış. Genetik: HLA-DR2/HLA-DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4). İmmünolojik: B ve T hücre tolerans kusurları, tip I IFN-α fazlalığı, TLR7/TLR9 aktivasyonu ve BAFF artışı. Çevresel: UV ışığı; hidralazin, prokainamid, D-penisilamin, izoniazid."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k01-q13",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"IgG4 ilişkili hastalık\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "IgG4 üreten plazma hücreleri ve T lenfosit infiltrasyonu, storiform fibrozis ve obliteratif flebit ile karakterizedir; pankreas (otoimmün pankreatit), tükürük/gözyaşı bezleri (Mikulicz sendromu), retroperiton, tiroid, akciğer ve böbrek tutulur.",
+      "C": "Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "A": "Zehirli sarmaşık (uruşiol), nikel ve bazı ilaçlar kimyasal + öz protein ile yeni antijenik peptitler oluşturur; başlıca Th17 sitokinleriyle aracılı inflamasyon gelişir.",
+      "E": "Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "D": "Çok sistemli otoimmün fibrotik hastalıktır; otoimmün yanıt (Th2, TGF-β), mikrovasküler hasar ve yaygın fibrozis süreçleri vardır. Sınırlı form CREST (Kalsinozis, Raynaud, özofagus disfonksiyonu, sklerodaktili, telanjiektazi) ile seyreder."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: IgG4 üreten plazma hücreleri ve T lenfosit infiltrasyonu, storiform fibrozis ve obliteratif flebit ile karakterizedir; pankreas (otoimmün pankreatit), tükürük/gözyaşı bezleri (Mikulicz sendromu), retroperiton, tiroid, akciğer ve böbrek tutulur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. IgG4 üreten plazma hücreleri ve T lenfosit infiltrasyonu, storiform fibrozis ve obliteratif flebit ile karakterizedir; pankreas (otoimmün pankreatit), tükürük/gözyaşı bezleri (Mikulicz sendromu), retroperiton, tiroid, akciğer ve böbrek tutulur.",
+      "C": "Yanlış. Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "A": "Yanlış. Zehirli sarmaşık (uruşiol), nikel ve bazı ilaçlar kimyasal + öz protein ile yeni antijenik peptitler oluşturur; başlıca Th17 sitokinleriyle aracılı inflamasyon gelişir.",
+      "E": "Yanlış. Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "D": "Yanlış. Çok sistemli otoimmün fibrotik hastalıktır; otoimmün yanıt (Th2, TGF-β), mikrovasküler hasar ve yaygın fibrozis süreçleri vardır. Sınırlı form CREST (Kalsinozis, Raynaud, özofagus disfonksiyonu, sklerodaktili, telanjiektazi) ile seyreder."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k01-q14",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "\"Sjögren sendromu\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "A": "Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "B": "Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "D": "Sistemik: akut serum hastalığı, SLE nefriti, bazı vaskülitler (poliarteritis nodoza). Lokal: Arthus reaksiyonu (önceden immunize bireyde deri içi antijen enjeksiyonu sonrası lokal nekrotizan vaskülit).",
+      "C": "Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "E": "Prototip tip IV reaksiyondur; örnek tüberkülin deri testidir (PPD) ve antijen uygulanmasından 24-48 saat sonra gelişir. Th1 hücreleri IFN-γ salgılayıp makrofajları aktive eder; Th17 hücreleri nötrofil ve monosit toplar."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "B": "Yanlış. Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "D": "Yanlış. Sistemik: akut serum hastalığı, SLE nefriti, bazı vaskülitler (poliarteritis nodoza). Lokal: Arthus reaksiyonu (önceden immunize bireyde deri içi antijen enjeksiyonu sonrası lokal nekrotizan vaskülit).",
+      "C": "Yanlış. Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "E": "Yanlış. Prototip tip IV reaksiyondur; örnek tüberkülin deri testidir (PPD) ve antijen uygulanmasından 24-48 saat sonra gelişir. Th1 hücreleri IFN-γ salgılayıp makrofajları aktive eder; Th17 hücreleri nötrofil ve monosit toplar."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -275,6 +543,285 @@
       13
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Fıstık alerjisi olan 8 yaşındaki çocuk, fıstık yedikten 15 dakika sonra ürtiker, bronkospazm ve hipotansiyon geliştirmiş; 6 saat sonra burun tıkanıklığı ve hışıltı yeniden artmıştır. Mekanizmayla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Reaksiyon IgG aracılıdır ve mast hücresi rol oynamaz.",
+      "B": "İlk maruziyette alerjen Th2'yi aktive etmiş, oluşan IgE mast hücresi FcεRI'na bağlanmıştır; yeniden maruziyette çapraz bağlanma, kalsiyum artışı ve degranülasyon olmuştur. Erken faz (5-30 dk, ~1 saatte azalır) histamin, triptaz, PGD2, LTC4/LTD4 ile; geç faz (2-8 saat, saatler-günler) TNF, kemokinler ve nötrofil-eozinofil infiltrasyonuyla seyreder.",
+      "C": "Erken ve geç faz aynı dakikada olur.",
+      "D": "Histamin bronkodilatasyon yapar.",
+      "E": "Geç fazda hücresel infiltrasyon olmaz."
+     },
+     "dogru": "B",
+     "aciklama": "Duyarlanma (Th2→IgE→FcεRI), yeniden maruziyet (çapraz bağlanma→degranülasyon), erken faz granül+lipid mediyatörleri, geç faz sitokin+hücresel infiltrasyon ve zamanlama (erken 5-30 dk; geç 2-8 saat) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; Tip I IgE-mast hücre aracılıdır.",
+      "B": "Doğru. Mekanizma, mediyatörler ve zamanlama doğrudur.",
+      "C": "Yanlış; fazlar farklı zamanlardadır.",
+      "D": "Yanlış; histamin bronkospazm yapar.",
+      "E": "Yanlış; geç fazda lökosit infiltrasyonu vardır."
+     },
+     "bilgi": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k02-q07",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Fıstık alerjili çocukta erken-geç faz ve tedavi seçenekleri tartışılırken tip I aşırı duyarlılıkla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Atopi; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterize yatkınlıktır.",
+      "B": "Hijyen hipotezine göre erken yaşamda düşük mikrobiyal maruziyet erişkin alerji riskini artırır.",
+      "C": "Anafilaksi penisilin, arı zehiri ve fıstık gibi sistemik alerjenlerle tetiklenir; tedavide epinefrin, antihistaminik, lökotrien antagonisti, bronkodilatör, kortikosteroid ve desensitizasyon yer alır.",
+      "D": "Tip I reaksiyon yalnızca geç fazdan ibarettir; erken faz mediyatörleri (histamin, PGD2, lökotrienler) bu tipte yer almaz.",
+      "E": "LTC4/LTD4 histaminden binlerce kat güçlü vazoaktif ve spazmojeniktir; LTB4 lökosit kemotaksisi yapar."
+     },
+     "dogru": "D",
+     "aciklama": "Tip I hem erken (histamin, triptaz, PGD2, LTC4/LTD4, LTB4) hem geç faz (TNF, kemokinler, hücresel infiltrasyon) içerir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Yanlış ifade (aranan cevap). Erken faz mediyatörleri Tip I'in parçasıdır.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      10,
+      11,
+      12,
+      13,
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k02-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Tip I duyarlanma ve yeniden maruziyet basamakları nasıl işler?",
+     "secenekler": {
+      "A": "IgE nötrofile bağlanır",
+      "B": "Th2-IgE-FcεRI; çapraz bağ degranülasyon",
+      "C": "Duyarlanma IgG ile olur",
+      "D": "Çapraz bağlanma yanıtı durdurur",
+      "E": "Kalsiyum artışı yanıtı baskılar"
+     },
+     "dogru": "B",
+     "aciklama": "Duyarlanmada ilk alerjen teması Th2 hücrelerini aktive eder; IL-4 ve IL-13 IgE sınıf değişimini, IL-5 eozinofil yanıtını yönlendirir. Üretilen IgE, mast hücresi yüzeyindeki yüksek afiniteli FcεRI reseptörlerine bağlanarak hücreyi kaplar. Yeniden maruziyette alerjen IgE'leri çapraz bağlar; hücre içi kalsiyum artışı degranülasyonu ve yeni mediyatör sentezini tetikler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; IgE mast hücresindeki FcεRI'ye bağlanır.",
+      "B": "Doğru; duyarlanma ve yeniden maruziyet zincirini verir.",
+      "C": "Yanlış; tip I yanıtı Th2 ve IgE ile yürür.",
+      "D": "Yanlış; çapraz bağlanma degranülasyonu başlatır.",
+      "E": "Yanlış; kalsiyum artışı degranülasyonu tetikler."
+     },
+     "bilgi": [
+      3,
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k02-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Tip I erken-geç faz özellikleri ve mediyatör güçleriyle ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Erken faz günler sonra başlar",
+      "B": "LTC4 histaminden zayıftır",
+      "C": "Geç fazda eozinofil yoktur",
+      "D": "Erken 5-30 dk; LTC4 güçlü; geç eozinofilik",
+      "E": "Anafilakside ilk ilaç antihistaminiktir"
+     },
+     "dogru": "D",
+     "aciklama": "Erken faz 5-30 dakikada başlar, ~1 saatte geriler; histamin vazodilatasyon, permeabilite artışı ve bronkospazm yapar. Yeni sentezlenen LTC4 ve LTD4, histaminden binlerce kat güçlü vazoaktif ve spazmojeniktir; LTB4 nötrofil-eozinofil için kemotaktiktir. Geç faz 2-8 saatte başlar, saatler-günler sürer; nötrofil, eozinofil ve Th2 infiltrasyonu ile epitel hasarı ve mukus artışı olur. Sistemik anafilakside acil tedavi epinefrindir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; erken faz 5-30 dakikada başlar.",
+      "B": "Yanlış; LTC4/LTD4 binlerce kat güçlüdür.",
+      "C": "Yanlış; geç fazda eozinofil ve Th2 infiltrasyonu tipiktir.",
+      "D": "Doğru; zamanlama, mediyatör gücü ve geç faz hücresini verir.",
+      "E": "Yanlış; anafilaksinin acil tedavisi epinefrindir."
+     },
+     "bilgi": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k02-q10",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "\"Tip II antikor aracılı inflamasyon\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "E": "Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur.",
+      "B": "İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "A": "Tip I aşırı duyarlılık geliştirme eğilimidir; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterizedir. İlişkili genler HLA sınıf II alelleri, Th2 sitokin genleri, FcεRI bileşenleri ve ADAM33'tür.",
+      "C": "Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "D": "Hiperakut: önceden oluşmuş antikorlar (kan grubu, HLA), dakika-saat içinde damar trombozu ve fibrinoid nekroz. Akut: T hücre (hücresel) veya antikor aracılı (humoral), günler-haftalar. Kronik: aylar-yıllar; greft arteriyosklerozu, interstisyel fibrozis ve parankim kaybı."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur.",
+      "B": "Yanlış. İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "A": "Yanlış. Tip I aşırı duyarlılık geliştirme eğilimidir; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterizedir. İlişkili genler HLA sınıf II alelleri, Th2 sitokin genleri, FcεRI bileşenleri ve ADAM33'tür.",
+      "C": "Yanlış. Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "D": "Yanlış. Hiperakut: önceden oluşmuş antikorlar (kan grubu, HLA), dakika-saat içinde damar trombozu ve fibrinoid nekroz. Akut: T hücre (hücresel) veya antikor aracılı (humoral), günler-haftalar. Kronik: aylar-yıllar; greft arteriyosklerozu, interstisyel fibrozis ve parankim kaybı."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k02-q11",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "\"Merkezi tolerans\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "C": "Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "B": "IgG4 üreten plazma hücreleri ve T lenfosit infiltrasyonu, storiform fibrozis ve obliteratif flebit ile karakterizedir; pankreas (otoimmün pankreatit), tükürük/gözyaşı bezleri (Mikulicz sendromu), retroperiton, tiroid, akciğer ve böbrek tutulur.",
+      "E": "Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "D": "Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "C": "Yanlış. Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "B": "Yanlış. IgG4 üreten plazma hücreleri ve T lenfosit infiltrasyonu, storiform fibrozis ve obliteratif flebit ile karakterizedir; pankreas (otoimmün pankreatit), tükürük/gözyaşı bezleri (Mikulicz sendromu), retroperiton, tiroid, akciğer ve böbrek tutulur.",
+      "E": "Yanlış. Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "D": "Yanlış. Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k02-q12",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Tip I temel mekanizma\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir.",
+      "D": "Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "E": "Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "C": "Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "B": "Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir.",
+      "D": "Yanlış. Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "E": "Yanlış. Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "C": "Yanlış. Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "B": "Yanlış. Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k02-q13",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "\"Sitokinler ve geç faz\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "E": "Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "C": "Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir.",
+      "D": "Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "B": "Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir.",
+      "A": "Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "C": "Yanlış. Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir.",
+      "D": "Yanlış. Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "B": "Yanlış. Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir.",
+      "A": "Yanlış. Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k02-q14",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Anafilaksi\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "E": "Dolaşımdaki antijen-antikor (IgG/IgM) kompleksleri; antijen ekzojen (enfeksiyon, serum proteinleri) veya endojen (otoantijen) olabilir. Kompleksler glomerüller, eklemler ve küçük damarlar gibi filtrasyon alanlarında birikir.",
+      "D": "Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir.",
+      "B": "Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur.",
+      "A": "Düzenleyici T hücre (Treg) bir CD4+ alt grubudur ve FoxP3 transkripsiyon faktörü gerektirir; CTLA-4 ile ko-stimülasyon engellenir, yüksek afiniteli IL-2 reseptörüyle IL-2 tüketilir ve TGF-β gibi baskılayıcı sitokinler salgılanır."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "E": "Yanlış. Dolaşımdaki antijen-antikor (IgG/IgM) kompleksleri; antijen ekzojen (enfeksiyon, serum proteinleri) veya endojen (otoantijen) olabilir. Kompleksler glomerüller, eklemler ve küçük damarlar gibi filtrasyon alanlarında birikir.",
+      "D": "Yanlış. Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir.",
+      "B": "Yanlış. Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur.",
+      "A": "Yanlış. Düzenleyici T hücre (Treg) bir CD4+ alt grubudur ve FoxP3 transkripsiyon faktörü gerektirir; CTLA-4 ile ko-stimülasyon engellenir, yüksek afiniteli IL-2 reseptörüyle IL-2 tüketilir ve TGF-β gibi baskılayıcı sitokinler salgılanır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k02-q15",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "\"Tip II tanım\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "E": "İlk alerjen maruziyetinde alerjen Th2 hücrelerini aktive eder; oluşan IgE, mast hücre yüzeyindeki yüksek afiniteli FcεRI reseptörlerine bağlanarak mast hücresini kaplar.",
+      "B": "Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir.",
+      "D": "Tip I aşırı duyarlılık geliştirme eğilimidir; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterizedir. İlişkili genler HLA sınıf II alelleri, Th2 sitokin genleri, FcεRI bileşenleri ve ADAM33'tür.",
+      "C": "Genetik: HLA-DR2/HLA-DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4). İmmünolojik: B ve T hücre tolerans kusurları, tip I IFN-α fazlalığı, TLR7/TLR9 aktivasyonu ve BAFF artışı. Çevresel: UV ışığı; hidralazin, prokainamid, D-penisilamin, izoniazid."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "E": "Yanlış. İlk alerjen maruziyetinde alerjen Th2 hücrelerini aktive eder; oluşan IgE, mast hücre yüzeyindeki yüksek afiniteli FcεRI reseptörlerine bağlanarak mast hücresini kaplar.",
+      "B": "Yanlış. Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir.",
+      "D": "Yanlış. Tip I aşırı duyarlılık geliştirme eğilimidir; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterizedir. İlişkili genler HLA sınıf II alelleri, Th2 sitokin genleri, FcεRI bileşenleri ve ADAM33'tür.",
+      "C": "Yanlış. Genetik: HLA-DR2/HLA-DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4). İmmünolojik: B ve T hücre tolerans kusurları, tip I IFN-α fazlalığı, TLR7/TLR9 aktivasyonu ve BAFF artışı. Çevresel: UV ışığı; hidralazin, prokainamid, D-penisilamin, izoniazid."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -415,6 +962,282 @@
       15
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "İlaç sonrası Coombs pozitif hemolitik anemili hastada eritrositlerde IgG ve C3b saptanmış; başka bir hastada hemoptizi ve glomerülonefritle Goodpasture, üçüncü hastada büllöz deri lezyonlarıyla pemfigus düşünülmektedir. Mekanizmalarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Opsonizasyon/fagositoz: IgG-C3b kaplı hücre makrofaj-nötrofilce Fc/C3b reseptörleriyle fagosite edilir (otoimmün hemolitik anemi, İTP). Antikor aracılı inflamasyon: doku antijenine bağlı antikor klasik yolu aktive eder (Goodpasture). Fonksiyon bozukluğu: antikor reseptörü bloke eder/aşırı uyarır (pemfigusta desmoglein adezyon bozukluğu).",
+      "B": "Goodpasture opsonizasyonla eritrosit yıkımıdır.",
+      "C": "Pemfigus kompleman aracılı glomerülonefrittir.",
+      "D": "Otoimmün hemolitik anemi T hücre aracılıdır.",
+      "E": "Tip II'de kompleman hiçbir zaman rol oynamaz."
+     },
+     "dogru": "A",
+     "aciklama": "Üç mekanizma ve örnekleri (opsonizasyon: OİHA, İTP; inflamasyon: Goodpasture, romatizmal ateş; fonksiyon bozukluğu: pemfigus) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Üç mekanizma-örnek eşleşmesi doğrudur.",
+      "B": "Yanlış; Goodpasture bazal membran antikorudur.",
+      "C": "Yanlış; pemfigus desmoglein adezyon bozukluğudur.",
+      "D": "Yanlış; OİHA antikor-opsonizasyon aracılıdır.",
+      "E": "Yanlış; C3b opsonizasyonu ve klasik yol aktivasyonu vardır."
+     },
+     "bilgi": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k03-q07",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Coombs pozitif anemili, Goodpasture'lu ve pemfiguslu olgular karşılaştırılırken tip II mekanizma-örnek eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Opsonizasyon/fagositoz - otoimmün hemolitik anemi (eritrosit membran proteinleri), İTP (GPIIb/IIIa)",
+      "B": "Antikor aracılı inflamasyon - Goodpasture (glomerül-alveol bazal membranı), akut romatizmal ateş",
+      "C": "Opsonizasyon/fagositoz - tüberkülin deri testi; fonksiyon bozukluğu - serum hastalığı",
+      "D": "Hücresel fonksiyon bozukluğu - pemfigus vulgaris (desmogleinlere karşı antikorla adezyon bozukluğu)",
+      "E": "Tip II hücre yüzeyi veya matriks antijenlerine karşı IgG/IgM ile gelişir."
+     },
+     "dogru": "C",
+     "aciklama": "Tüberkülin Tip IV, serum hastalığı Tip III'tür; Tip II örnekleri değildir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme.",
+      "B": "Doğru eşleştirme.",
+      "C": "Yanlış eşleştirme (aranan cevap). Her iki örnek de başka tiplere aittir.",
+      "D": "Doğru eşleştirme.",
+      "E": "Doğru tanım."
+     },
+     "bilgi": [
+      15,
+      16,
+      17,
+      20,
+      21,
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k03-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Tip II aşırı duyarlılığın üç efektör mekanizması hangileridir?",
+     "secenekler": {
+      "A": "Opsonizasyon, kompleman inflamasyonu, reseptör blokaj-uyarımı",
+      "B": "Tip II yalnızca komplek birikimidir",
+      "C": "Opsonizasyonda T hücreleri fagosite eder",
+      "D": "Fonksiyon bozukluğunda hücre lizisi şarttır",
+      "E": "Kompleman tip II'de hiç aktive olmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Opsonizasyonda IgG ve C3b ile kaplanan hücre, makrofaj ve nötrofillerin Fc ve C3b reseptörlerince tanınıp fagosite edilir; transfüzyon reaksiyonları ve otoimmün hemolitik anemi bu yolla olur. Antikor aracılı inflamasyonda klasik yol kompleman aktivasyonu ve lökosit toplanmasıyla glomerülonefrit ve vaskülit gelişir. Fonksiyon bozukluğunda antikor reseptörü bloke eder (miyastenia gravis) veya aşırı uyarır (Graves).",
+     "sik_aciklamalari": {
+      "A": "Doğru; üç efektör mekanizmayı birlikte sıralar.",
+      "B": "Yanlış; kompleks birikimi tip III mekanizmasıdır.",
+      "C": "Yanlış; fagositozu makrofaj ve nötrofiller yapar.",
+      "D": "Yanlış; fonksiyon bozukluğu hasarsız reseptör etkisiyle olur.",
+      "E": "Yanlış; klasik yol aktivasyonu inflamasyon kolunun parçasıdır."
+     },
+     "bilgi": [
+      14,
+      15,
+      16,
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k03-q09",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Tip II örnek hastalıkların hedef antijen-sonuç eşleşmesi nasıldır?",
+     "secenekler": {
+      "A": "Goodpasture yalnızca cildi tutar",
+      "B": "Pemfigusta hedef bazal membrandır",
+      "C": "Goodpasture nefrit-hemoraji; pemfigus bül; MG güçsüzlük",
+      "D": "Graves hipotiroidi yapar",
+      "E": "Pernisiyöz anemide B12 yükselir"
+     },
+     "dogru": "C",
+     "aciklama": "Goodpasture sendromunda glomerül ve alveol bazal membran proteinine karşı antikor kompleman-Fc aracılı inflamasyonla nefrit ve akciğer hemorajisi yapar. Pemfigus vulgariste desmogleinlere karşı antikor epidermal adezyonu bozarak bül oluşturur. Miyastenia graviste asetilkolin reseptör blokajı kas güçsüzlüğü, Graveste TSH reseptör uyarımı hipertiroidi, pernisiyöz anemide intrinsik faktör blokajı B12 eksikliği yapar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; Goodpasture böbrek ve akciğeri tutar.",
+      "B": "Yanlış; pemfigusta hedef desmogleinlerdir.",
+      "C": "Doğru; üç hastalığın hedef-sonuç eşleşmesini verir.",
+      "D": "Yanlış; TSH reseptör uyarımı hipertiroidi yapar.",
+      "E": "Yanlış; intrinsik faktör blokajı B12 eksikliği yapar."
+     },
+     "bilgi": [
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k03-q10",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Tip II diğer örnekler\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "E": "Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir.",
+      "D": "Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "C": "Yeni sentezlenen PGD2 (bronkospazm, mukus artışı), LTC4/LTD4 (histaminden binlerce kat güçlü vazoaktif ve spazmojenik) ve LTB4 (nötrofil, eozinofil ve monosit için güçlü kemotaktik) salınır.",
+      "A": "Hiperakut: önceden oluşmuş antikorlar (kan grubu, HLA), dakika-saat içinde damar trombozu ve fibrinoid nekroz. Akut: T hücre (hücresel) veya antikor aracılı (humoral), günler-haftalar. Kronik: aylar-yıllar; greft arteriyosklerozu, interstisyel fibrozis ve parankim kaybı.",
+      "B": "Antikor reseptör fonksiyonunu bloke eder veya aşırı uyarır."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir.",
+      "D": "Yanlış. Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "C": "Yanlış. Yeni sentezlenen PGD2 (bronkospazm, mukus artışı), LTC4/LTD4 (histaminden binlerce kat güçlü vazoaktif ve spazmojenik) ve LTB4 (nötrofil, eozinofil ve monosit için güçlü kemotaktik) salınır.",
+      "A": "Yanlış. Hiperakut: önceden oluşmuş antikorlar (kan grubu, HLA), dakika-saat içinde damar trombozu ve fibrinoid nekroz. Akut: T hücre (hücresel) veya antikor aracılı (humoral), günler-haftalar. Kronik: aylar-yıllar; greft arteriyosklerozu, interstisyel fibrozis ve parankim kaybı.",
+      "B": "Yanlış. Antikor reseptör fonksiyonunu bloke eder veya aşırı uyarır."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k03-q11",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "\"Gecikmiş tip aşırı duyarlılık (DTH)\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Prototip tip IV reaksiyondur; örnek tüberkülin deri testidir (PPD) ve antijen uygulanmasından 24-48 saat sonra gelişir. Th1 hücreleri IFN-γ salgılayıp makrofajları aktive eder; Th17 hücreleri nötrofil ve monosit toplar.",
+      "B": "Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "A": "Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir.",
+      "E": "Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir.",
+      "C": "İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Prototip tip IV reaksiyondur; örnek tüberkülin deri testidir (PPD) ve antijen uygulanmasından 24-48 saat sonra gelişir. Th1 hücreleri IFN-γ salgılayıp makrofajları aktive eder; Th17 hücreleri nötrofil ve monosit toplar.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Prototip tip IV reaksiyondur; örnek tüberkülin deri testidir (PPD) ve antijen uygulanmasından 24-48 saat sonra gelişir. Th1 hücreleri IFN-γ salgılayıp makrofajları aktive eder; Th17 hücreleri nötrofil ve monosit toplar.",
+      "B": "Yanlış. Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "A": "Yanlış. Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir.",
+      "E": "Yanlış. Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir.",
+      "C": "Yanlış. İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k03-q12",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"SLE klinik\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Tipik hasta genç kadındır; kelebek şeklinde (malar) döküntü, fotosensitivite, artralji/non-eroziv artrit (%80-90), serözit (plevrit, perikardit), böbrek tutulumu (%50-70; proteinüri, hematüri) ve nöropsikiyatrik belirtiler görülür.",
+      "D": "Hücre yüzeyi IgG antikorları ve C3b kompleman fragmanları ile opsonize olur; makrofaj ve nötrofiller bunu Fc ve C3b reseptörleriyle tanıyıp fagosite eder.",
+      "C": "Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "A": "Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir.",
+      "E": "Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Tipik hasta genç kadındır; kelebek şeklinde (malar) döküntü, fotosensitivite, artralji/non-eroziv artrit (%80-90), serözit (plevrit, perikardit), böbrek tutulumu (%50-70; proteinüri, hematüri) ve nöropsikiyatrik belirtiler görülür.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Tipik hasta genç kadındır; kelebek şeklinde (malar) döküntü, fotosensitivite, artralji/non-eroziv artrit (%80-90), serözit (plevrit, perikardit), böbrek tutulumu (%50-70; proteinüri, hematüri) ve nöropsikiyatrik belirtiler görülür.",
+      "D": "Yanlış. Hücre yüzeyi IgG antikorları ve C3b kompleman fragmanları ile opsonize olur; makrofaj ve nötrofiller bunu Fc ve C3b reseptörleriyle tanıyıp fagosite eder.",
+      "C": "Yanlış. Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "A": "Yanlış. Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir.",
+      "E": "Yanlış. Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k03-q13",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "\"CD8+ CTL aracılı hasar\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "C": "Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "D": "Çok sistemli otoimmün fibrotik hastalıktır; otoimmün yanıt (Th2, TGF-β), mikrovasküler hasar ve yaygın fibrozis süreçleri vardır. Sınırlı form CREST (Kalsinozis, Raynaud, özofagus disfonksiyonu, sklerodaktili, telanjiektazi) ile seyreder.",
+      "E": "Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "A": "Zehirli sarmaşık (uruşiol), nikel ve bazı ilaçlar kimyasal + öz protein ile yeni antijenik peptitler oluşturur; başlıca Th17 sitokinleriyle aracılı inflamasyon gelişir.",
+      "B": "Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "D": "Yanlış. Çok sistemli otoimmün fibrotik hastalıktır; otoimmün yanıt (Th2, TGF-β), mikrovasküler hasar ve yaygın fibrozis süreçleri vardır. Sınırlı form CREST (Kalsinozis, Raynaud, özofagus disfonksiyonu, sklerodaktili, telanjiektazi) ile seyreder.",
+      "E": "Yanlış. Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "A": "Yanlış. Zehirli sarmaşık (uruşiol), nikel ve bazı ilaçlar kimyasal + öz protein ile yeni antijenik peptitler oluşturur; başlıca Th17 sitokinleriyle aracılı inflamasyon gelişir.",
+      "B": "Yanlış. Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k03-q14",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"Tip II hücresel fonksiyon bozukluğu\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "D": "Antikor reseptör fonksiyonunu bloke eder veya aşırı uyarır.",
+      "B": "Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "E": "Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+      "A": "Dolaşımdaki antijen-antikor (IgG/IgM) kompleksleri; antijen ekzojen (enfeksiyon, serum proteinleri) veya endojen (otoantijen) olabilir. Kompleksler glomerüller, eklemler ve küçük damarlar gibi filtrasyon alanlarında birikir.",
+      "C": "Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Antikor reseptör fonksiyonunu bloke eder veya aşırı uyarır.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Antikor reseptör fonksiyonunu bloke eder veya aşırı uyarır.",
+      "B": "Yanlış. Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "E": "Yanlış. Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+      "A": "Yanlış. Dolaşımdaki antijen-antikor (IgG/IgM) kompleksleri; antijen ekzojen (enfeksiyon, serum proteinleri) veya endojen (otoantijen) olabilir. Kompleksler glomerüller, eklemler ve küçük damarlar gibi filtrasyon alanlarında birikir.",
+      "C": "Yanlış. Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k03-q15",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "\"Pemfigus vulgaris\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+      "C": "T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "D": "Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "E": "Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir.",
+      "A": "Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+      "C": "Yanlış. T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "D": "Yanlış. Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "E": "Yanlış. Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir.",
+      "A": "Yanlış. Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -525,6 +1348,219 @@
      "bilgi": [
       23,
       19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k04-q05",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "At serumu (antitoksin) verilen hastada 8 gün sonra ateş, ürtiker, artralji ve proteinüri gelişmiş; böbrek biyopsisinde glomerüllerde immün kompleks birikimi saptanmıştır. Patogenezle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Antijen yalnızca endojen olabilir.",
+      "B": "Kompleksler 1 saatte oluşur ve birikim olmaz.",
+      "C": "Kompleman aktivasyonu Tip III'te yer almaz.",
+      "D": "Arthus reaksiyonu sistemik bir tablodur.",
+      "E": "Faz 1: antijen verilişinden ~1 hafta sonra dolaşımda kompleks oluşumu. Faz 2: damar duvarı ve organlara (glomerül, eklem, deri) birikim. Faz 3: kompleman aktivasyonu, nötrofil-monosit toplanması ve doku hasarı. Sistemik örnek serum hastalığı ve SLE nefriti, lokal örnek Arthus reaksiyonudur."
+     },
+     "dogru": "E",
+     "aciklama": "Üç faz (oluşum ~1 hafta, birikim, kompleman+lökosit hasarı) ve örnekler (sistemik: serum hastalığı, SLE nefriti, PAN; lokal: Arthus) doğrudur; antijen ekzojen veya endojen olabilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; antijen ekzojen de olabilir.",
+      "B": "Yanlış; oluşum ~1 hafta sürer ve birikim olur.",
+      "C": "Yanlış; kompleman aktivasyonu esastır.",
+      "D": "Yanlış; Arthus lokaldir.",
+      "E": "Doğru. Fazlar ve örnekler doğrudur."
+     },
+     "bilgi": [
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k04-q06",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "At serumu sonrası ateş-artralji-proteinürili hastanın böbrek biyopsisi yorumlanırken tip III immün kompleks hastalığıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Dolaşımdaki antijen-antikor (IgG/IgM) kompleksleri glomerül, eklem ve damar duvarında birikir.",
+      "B": "Tip III reaksiyon T hücre sitokinleriyle oluşur; immün kompleks birikimi ve kompleman aktivasyonu görülmez.",
+      "C": "Arthus reaksiyonu önceden immunize bireyde deri içi antijen enjeksiyonuyla gelişen lokal Tip III reaksiyondur.",
+      "D": "Patogenezde kompleman aktivasyonu ve nötrofil-monosit aracılı doku hasarı yer alır.",
+      "E": "Sistemik örnekler akut serum hastalığı, SLE nefriti ve bazı vaskülitlerdir (poliarteritis nodoza)."
+     },
+     "dogru": "B",
+     "aciklama": "Tip III immün kompleks + kompleman + lökosit aracılıdır; T hücre sitokin yanıtı Tip IV'tür.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Yanlış ifade (aranan cevap). Tip IV mekanizması Tip III'e atfedilmiştir.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Tip III immün kompleks hastalığının patogenez basamakları nelerdir?",
+     "secenekler": {
+      "A": "Kompleksler dakikalar içinde oluşur",
+      "B": "Birikim yalnızca akciğerde olur",
+      "C": "Kompleman aktive olmaz",
+      "D": "Hasarı lenfosit enzimleri yapar",
+      "E": "1 hafta, filtrasyon alanları, kompleman-nötrofil"
+     },
+     "dogru": "E",
+     "aciklama": "Antijen verilişinden ~1 hafta sonra antikor yanıtı oluşur ve dolaşımda antijen-antikor kompleksleri birikir. Kompleksler glomerül, eklem ve küçük damarlar gibi filtrasyon alanlarında damar duvarına çöker. Çöken kompleksler komplemanı aktive eder; toplanan nötrofil ve monositlerin lizozomal enzim ve serbest radikalleri vaskülit, trombosit agregasyonu ve doku hasarı yapar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; kompleks oluşumu ~1 hafta sonra başlar.",
+      "B": "Yanlış; glomerül, eklem ve küçük damarlar tutulur.",
+      "C": "Yanlış; kompleman aktivasyonu hasarın merkezindedir.",
+      "D": "Yanlış; hasarı nötrofil-monosit enzim ve radikalleri yapar.",
+      "E": "Doğru; üç patogenez basamağını sıralar."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k04-q08",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Tip III immün kompleks hastalığının klinik örnekleri hangileridir?",
+     "secenekler": {
+      "A": "Arthus sistemik bir hastalıktır",
+      "B": "Serum hastalığı, SLE nefriti, Arthus",
+      "C": "Tip III granülom yapar",
+      "D": "PAN'da antijen hep bilinir",
+      "E": "Fibrinoid nekroz tip III'te yoktur"
+     },
+     "dogru": "B",
+     "aciklama": "Sistemik örnekler akut serum hastalığı (yabancı serum proteinleri), SLE nefriti (nükleer antijenler), poststreptokokal glomerülonefrit ve bazı olgularda hepatit B antijenli poliarteritis nodozadır. Lokal prototip Arthus reaksiyonudur: önceden immünize bireyde deri içi antijen enjeksiyonu sonrası lokal nekrotizan vaskülit gelişir. Ayırt edici lezyon fibrinoid nekrozlu vaskülittir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; Arthus lokal nekrotizan vaskülittir.",
+      "B": "Doğru; sistemik ve lokal örnekleri birlikte verir.",
+      "C": "Yanlış; granülom tip IV (DTH) lezyonudur.",
+      "D": "Yanlış; PAN'da antijen bazı olgularda hepatit B'dir.",
+      "E": "Yanlış; fibrinoid nekroz tip III vaskülitinin imzasıdır."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k04-q09",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "\"Anafilaksi\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "D": "Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir.",
+      "E": "Sistemik: akut serum hastalığı, SLE nefriti, bazı vaskülitler (poliarteritis nodoza). Lokal: Arthus reaksiyonu (önceden immunize bireyde deri içi antijen enjeksiyonu sonrası lokal nekrotizan vaskülit).",
+      "A": "Düzenleyici T hücre (Treg) bir CD4+ alt grubudur ve FoxP3 transkripsiyon faktörü gerektirir; CTLA-4 ile ko-stimülasyon engellenir, yüksek afiniteli IL-2 reseptörüyle IL-2 tüketilir ve TGF-β gibi baskılayıcı sitokinler salgılanır.",
+      "C": "Hücre yüzeyi IgG antikorları ve C3b kompleman fragmanları ile opsonize olur; makrofaj ve nötrofiller bunu Fc ve C3b reseptörleriyle tanıyıp fagosite eder."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "D": "Yanlış. Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir.",
+      "E": "Yanlış. Sistemik: akut serum hastalığı, SLE nefriti, bazı vaskülitler (poliarteritis nodoza). Lokal: Arthus reaksiyonu (önceden immunize bireyde deri içi antijen enjeksiyonu sonrası lokal nekrotizan vaskülit).",
+      "A": "Yanlış. Düzenleyici T hücre (Treg) bir CD4+ alt grubudur ve FoxP3 transkripsiyon faktörü gerektirir; CTLA-4 ile ko-stimülasyon engellenir, yüksek afiniteli IL-2 reseptörüyle IL-2 tüketilir ve TGF-β gibi baskılayıcı sitokinler salgılanır.",
+      "C": "Yanlış. Hücre yüzeyi IgG antikorları ve C3b kompleman fragmanları ile opsonize olur; makrofaj ve nötrofiller bunu Fc ve C3b reseptörleriyle tanıyıp fagosite eder."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k04-q10",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"Periferik tolerans ve Treg\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "E": "Düzenleyici T hücre (Treg) bir CD4+ alt grubudur ve FoxP3 transkripsiyon faktörü gerektirir; CTLA-4 ile ko-stimülasyon engellenir, yüksek afiniteli IL-2 reseptörüyle IL-2 tüketilir ve TGF-β gibi baskılayıcı sitokinler salgılanır.",
+      "A": "IgG4 üreten plazma hücreleri ve T lenfosit infiltrasyonu, storiform fibrozis ve obliteratif flebit ile karakterizedir; pankreas (otoimmün pankreatit), tükürük/gözyaşı bezleri (Mikulicz sendromu), retroperiton, tiroid, akciğer ve böbrek tutulur.",
+      "B": "Aynı alerjen, mast hücresi üzerindeki IgE moleküllerini çapraz bağlar; hücre içi sinyal yollarıyla kalsiyum artar, granül degranülasyonu ve yeni mediyatör sentezi/salınımı olur.",
+      "D": "Genetik yatkınlık (HLA alelleri; CTLA4, PTPN22 gibi immün regülasyon genleri) ve çevresel tetikleyiciler (enfeksiyonlar/moleküler taklit, doku hasarı, UV, sigara, ilaçlar) etkileşir.",
+      "C": "Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Düzenleyici T hücre (Treg) bir CD4+ alt grubudur ve FoxP3 transkripsiyon faktörü gerektirir; CTLA-4 ile ko-stimülasyon engellenir, yüksek afiniteli IL-2 reseptörüyle IL-2 tüketilir ve TGF-β gibi baskılayıcı sitokinler salgılanır.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Düzenleyici T hücre (Treg) bir CD4+ alt grubudur ve FoxP3 transkripsiyon faktörü gerektirir; CTLA-4 ile ko-stimülasyon engellenir, yüksek afiniteli IL-2 reseptörüyle IL-2 tüketilir ve TGF-β gibi baskılayıcı sitokinler salgılanır.",
+      "A": "Yanlış. IgG4 üreten plazma hücreleri ve T lenfosit infiltrasyonu, storiform fibrozis ve obliteratif flebit ile karakterizedir; pankreas (otoimmün pankreatit), tükürük/gözyaşı bezleri (Mikulicz sendromu), retroperiton, tiroid, akciğer ve böbrek tutulur.",
+      "B": "Yanlış. Aynı alerjen, mast hücresi üzerindeki IgE moleküllerini çapraz bağlar; hücre içi sinyal yollarıyla kalsiyum artar, granül degranülasyonu ve yeni mediyatör sentezi/salınımı olur.",
+      "D": "Yanlış. Genetik yatkınlık (HLA alelleri; CTLA4, PTPN22 gibi immün regülasyon genleri) ve çevresel tetikleyiciler (enfeksiyonlar/moleküler taklit, doku hasarı, UV, sigara, ilaçlar) etkileşir.",
+      "C": "Yanlış. Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k04-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "\"CD8+ CTL aracılı hasar\" ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "D": "Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "E": "Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+      "C": "Aynı alerjen, mast hücresi üzerindeki IgE moleküllerini çapraz bağlar; hücre içi sinyal yollarıyla kalsiyum artar, granül degranülasyonu ve yeni mediyatör sentezi/salınımı olur.",
+      "B": "Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "D": "Yanlış. Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "E": "Yanlış. Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+      "C": "Yanlış. Aynı alerjen, mast hücresi üzerindeki IgE moleküllerini çapraz bağlar; hücre içi sinyal yollarıyla kalsiyum artar, granül degranülasyonu ve yeni mediyatör sentezi/salınımı olur.",
+      "B": "Yanlış. Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k04-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "\"Sjögren sendromu\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "B": "Erken faz 5-30 dakikada başlar ve yaklaşık 1 saatte azalır (vazodilatasyon, ödem, bronkospazm). Geç faz 2-8 saat sonra başlar ve saatler-günler sürebilir (nötrofil, eozinofil, Th2 infiltrasyonu, epitel hasarı).",
+      "A": "Genetik: HLA-DR2/HLA-DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4). İmmünolojik: B ve T hücre tolerans kusurları, tip I IFN-α fazlalığı, TLR7/TLR9 aktivasyonu ve BAFF artışı. Çevresel: UV ışığı; hidralazin, prokainamid, D-penisilamin, izoniazid.",
+      "E": "Yeni sentezlenen PGD2 (bronkospazm, mukus artışı), LTC4/LTD4 (histaminden binlerce kat güçlü vazoaktif ve spazmojenik) ve LTB4 (nötrofil, eozinofil ve monosit için güçlü kemotaktik) salınır.",
+      "D": "Çok sistemli otoimmün fibrotik hastalıktır; otoimmün yanıt (Th2, TGF-β), mikrovasküler hasar ve yaygın fibrozis süreçleri vardır. Sınırlı form CREST (Kalsinozis, Raynaud, özofagus disfonksiyonu, sklerodaktili, telanjiektazi) ile seyreder."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "B": "Yanlış. Erken faz 5-30 dakikada başlar ve yaklaşık 1 saatte azalır (vazodilatasyon, ödem, bronkospazm). Geç faz 2-8 saat sonra başlar ve saatler-günler sürebilir (nötrofil, eozinofil, Th2 infiltrasyonu, epitel hasarı).",
+      "A": "Yanlış. Genetik: HLA-DR2/HLA-DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4). İmmünolojik: B ve T hücre tolerans kusurları, tip I IFN-α fazlalığı, TLR7/TLR9 aktivasyonu ve BAFF artışı. Çevresel: UV ışığı; hidralazin, prokainamid, D-penisilamin, izoniazid.",
+      "E": "Yanlış. Yeni sentezlenen PGD2 (bronkospazm, mukus artışı), LTC4/LTD4 (histaminden binlerce kat güçlü vazoaktif ve spazmojenik) ve LTB4 (nötrofil, eozinofil ve monosit için güçlü kemotaktik) salınır.",
+      "D": "Yanlış. Çok sistemli otoimmün fibrotik hastalıktır; otoimmün yanıt (Th2, TGF-β), mikrovasküler hasar ve yaygın fibrozis süreçleri vardır. Sınırlı form CREST (Kalsinozis, Raynaud, özofagus disfonksiyonu, sklerodaktili, telanjiektazi) ile seyreder."
+     },
+     "bilgi": [
+      34
      ],
      "benzer_cikmis": []
     }
@@ -640,6 +1676,273 @@
       27
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k05-q05",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "PPD uygulanan hastada 48 saat sonra endurasyon gelişmiş; nikel küpe takan başka hastada 2 günde kaşıntılı egzama; viral hepatitli üçüncü hastada hepatosit ölümü izlenmiştir. Mekanizmalarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "CD8 CTL antikorla öldürür.",
+      "B": "PPD reaksiyonu IgE aracılıdır.",
+      "C": "Kontakt dermatit Tip I'tir.",
+      "D": "DTH prototip Tip IV'tür (PPD 24-48 saat); Th1 IFN-γ ile makrofaj aktive eder. Kontakt dermatitte (uruşiol, nikel) başlıca Th17 aracılı inflamasyon vardır. CD8 CTL, sınıf I MHC-peptidi tanıyıp perforin-granzim (kaspaz-apoptoz) veya Fas-FasL ile öldürür. Antikor rolü minimaldir.",
+      "E": "Tip IV dakikalar içinde gelişir."
+     },
+     "dogru": "D",
+     "aciklama": "DTH (Th1/IFN-γ/makrofaj, 24-48 saat), kontakt dermatit (Th17 ağırlıklı) ve CD8 CTL (perforin-granzim, Fas-FasL) mekanizmaları doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; CTL perforin-granzim/Fas-FasL kullanır.",
+      "B": "Yanlış; PPD Tip IV'tür.",
+      "C": "Yanlış; kontakt dermatit Tip IV'tür.",
+      "D": "Doğru. Üç mekanizma doğru tanımlanmıştır.",
+      "E": "Yanlış; Tip IV gecikmiştir (24-48 saat)."
+     },
+     "bilgi": [
+      24,
+      25,
+      26,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k05-q06",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "PPD uygulanan, nikel duyarlılığı ve viral hepatitli olgular değerlendirilirken tip IV aşırı duyarlılıkla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Tip IV reaksiyon IgE-mast hücre degranülasyonuyla dakikalar içinde gelişir ve prototipi anafilaksidir.",
+      "B": "DTH'de Th1 IFN-γ salgılayıp makrofajları aktive eder.",
+      "C": "CD8 CTL hedefi perforin-granzim veya Fas-FasL yoluyla öldürür.",
+      "D": "Tüberkülin testi 24-48 saatte gelişir.",
+      "E": "İki ana yol CD4 T hücre sitokin yanıtı ve CD8 CTL sitotoksisitesidir; antikor rolü minimaldir."
+     },
+     "dogru": "A",
+     "aciklama": "Dakikalar içinde IgE-mast degranülasyonu ve anafilaksi Tip I'tir; Tip IV gecikmiş T hücre yanıtıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış ifade (aranan cevap). Tip I özellikleri Tip IV'e atfedilmiştir.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      24,
+      25,
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Gecikmiş tip aşırı duyarlılığın zamanlaması ve hücresel mekanizması nedir?",
+     "secenekler": {
+      "A": "PPD yanıtı dakikalarda olur",
+      "B": "DTH'de antikor esastır",
+      "C": "Th1 makrofajları baskılar",
+      "D": "PPD 24-72 saat; Th1 makrofaj, Th17 nötrofil",
+      "E": "Kontakt dermatit IgE aracılıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Gecikmiş tip reaksiyonun prototipi tüberkülin (PPD) deri testidir; antijenden 24-48 saat sonra gelişir, endürasyon 24-72 saatte maksimuma ulaşır. Th1 hücreleri IFN-γ ile makrofajları aktive eder, Th17 hücreleri nötrofil ve monosit toplar. Kontakt dermatitte uruşiol ve nikel gibi kimyasallar öz proteinlerle birleşerek yeni antijenik peptitler oluşturur; morfoloji perivasküler CD4 infiltratı ve dermal ödemdir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; PPD 24-48 saatte gelişir, 24-72 saatte pik yapar.",
+      "B": "Yanlış; DTH'de antikor rolü minimaldir.",
+      "C": "Yanlış; IFN-γ makrofajları aktive eder.",
+      "D": "Doğru; zamanlama ve iki sitokin kolunu verir.",
+      "E": "Yanlış; kontakt dermatit T hücre aracılıdır."
+     },
+     "bilgi": [
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k05-q08",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "CD8+ sitotoksik yanıtın tanıma ve öldürme mekanizması nasıldır?",
+     "secenekler": {
+      "A": "Sınıf I tanıma; perforin-granzim ve Fas; β hücre",
+      "B": "CD8 sınıf II peptit tanır",
+      "C": "Öldürme histaminle olur",
+      "D": "Tip 1 DM antikorla oluşur",
+      "E": "MS'de hedef adacık hücresidir"
+     },
+     "dogru": "A",
+     "aciklama": "CD8+ sitotoksik T lenfositler sınıf I MHC ile sunulan peptitleri tanır ve hedefi perforin-granzim yoluyla (kaspaz aktivasyonu, apoptoz) veya Fas-FasL etkileşimiyle öldürür. Tip 1 diyabette adacık β hücreleri, viral hepatitte hepatositler bu yolla yıkılır. Multipl sklerozda miyelin proteinlerine Th1/Th17 inflamasyonu demiyelinizasyon, romatoid artritte sitokinler kronik artrit ve kıkırdak yıkımı yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; tanıma kısıtlaması, öldürme yolları ve hedefi verir.",
+      "B": "Yanlış; CD8 sınıf I, CD4 sınıf II kısıtlıdır.",
+      "C": "Yanlış; öldürme perforin-granzim ve Fas-FasL ile olur.",
+      "D": "Yanlış; β hücre yıkımı CTL aracılıdır.",
+      "E": "Yanlış; MS'de hedef miyelin proteinleridir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k05-q09",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "\"Transplantasyon immünolojisi\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "C": "Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "D": "İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "A": "Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir.",
+      "E": "Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "B": "Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "D": "Yanlış. İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "A": "Yanlış. Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir.",
+      "E": "Yanlış. Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "B": "Yanlış. Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k05-q10",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "\"CD8+ CTL aracılı hasar\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "C": "Donör T hücreleri alıcı dokusunu alloantijen olarak tanır (en sık kök hücre nakli sonrası); akut GVHD deri, karaciğer ve GİS epitel hasarı, kronik GVHD sistemik skleroz benzeri değişiklikler yapar. Primer immün yetmezlik örnekleri SCID, Bruton, DiGeorge, hiper-IgM; en sık primer immün yetmezlik izole IgA eksikliğidir.",
+      "D": "Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir.",
+      "B": "Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir.",
+      "E": "Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite)."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "C": "Yanlış. Donör T hücreleri alıcı dokusunu alloantijen olarak tanır (en sık kök hücre nakli sonrası); akut GVHD deri, karaciğer ve GİS epitel hasarı, kronik GVHD sistemik skleroz benzeri değişiklikler yapar. Primer immün yetmezlik örnekleri SCID, Bruton, DiGeorge, hiper-IgM; en sık primer immün yetmezlik izole IgA eksikliğidir.",
+      "D": "Yanlış. Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir.",
+      "B": "Yanlış. Çok sistemli kronik otoimmün hastalıktır; ayırt edici özellik geniş otoantikor spektrumudur (özellikle ANA). Spesifik testler anti-dsDNA ve anti-Sm'dir; ANA %95-100 pozitiftir ama SLE'ye özgül değildir. Anti-SS-A (Ro) konjenital kalp bloğu ve neonatal lupus ilişkilidir.",
+      "E": "Yanlış. Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite)."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k05-q11",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Merkezi tolerans\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "D": "T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "A": "Prototip tip IV reaksiyondur; örnek tüberkülin deri testidir (PPD) ve antijen uygulanmasından 24-48 saat sonra gelişir. Th1 hücreleri IFN-γ salgılayıp makrofajları aktive eder; Th17 hücreleri nötrofil ve monosit toplar.",
+      "C": "Faz 1: antijen verilişinden ~1 hafta sonra dolaşımda kompleks oluşumu. Faz 2: damar duvarı ve organlara birikim. Faz 3: kompleman aktivasyonu, nötrofil-monosit toplanması, lizozomal enzim ve serbest radikal salınımı.",
+      "E": "Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir.",
+      "B": "Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+     "sik_aciklamalari": {
+      "D": "Doğru. T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "A": "Yanlış. Prototip tip IV reaksiyondur; örnek tüberkülin deri testidir (PPD) ve antijen uygulanmasından 24-48 saat sonra gelişir. Th1 hücreleri IFN-γ salgılayıp makrofajları aktive eder; Th17 hücreleri nötrofil ve monosit toplar.",
+      "C": "Yanlış. Faz 1: antijen verilişinden ~1 hafta sonra dolaşımda kompleks oluşumu. Faz 2: damar duvarı ve organlara birikim. Faz 3: kompleman aktivasyonu, nötrofil-monosit toplanması, lizozomal enzim ve serbest radikal salınımı.",
+      "E": "Yanlış. Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir.",
+      "B": "Yanlış. Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k05-q12",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "\"Amiloidoz: sınıflama, morfoloji ve tanı\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "D": "İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "C": "Hiperakut: önceden oluşmuş antikorlar (kan grubu, HLA), dakika-saat içinde damar trombozu ve fibrinoid nekroz. Akut: T hücre (hücresel) veya antikor aracılı (humoral), günler-haftalar. Kronik: aylar-yıllar; greft arteriyosklerozu, interstisyel fibrozis ve parankim kaybı.",
+      "E": "Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "A": "T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "D": "Yanlış. İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "C": "Yanlış. Hiperakut: önceden oluşmuş antikorlar (kan grubu, HLA), dakika-saat içinde damar trombozu ve fibrinoid nekroz. Akut: T hücre (hücresel) veya antikor aracılı (humoral), günler-haftalar. Kronik: aylar-yıllar; greft arteriyosklerozu, interstisyel fibrozis ve parankim kaybı.",
+      "E": "Yanlış. Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "A": "Yanlış. T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k05-q13",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"Hijyen hipotezi\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "B": "Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+      "A": "Tip I aşırı duyarlılık geliştirme eğilimidir; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterizedir. İlişkili genler HLA sınıf II alelleri, Th2 sitokin genleri, FcεRI bileşenleri ve ADAM33'tür.",
+      "E": "Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir.",
+      "C": "Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "D": "İlk alerjen maruziyetinde alerjen Th2 hücrelerini aktive eder; oluşan IgE, mast hücre yüzeyindeki yüksek afiniteli FcεRI reseptörlerine bağlanarak mast hücresini kaplar."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+      "A": "Yanlış. Tip I aşırı duyarlılık geliştirme eğilimidir; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterizedir. İlişkili genler HLA sınıf II alelleri, Th2 sitokin genleri, FcεRI bileşenleri ve ADAM33'tür.",
+      "E": "Yanlış. Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir.",
+      "C": "Yanlış. Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "D": "Yanlış. İlk alerjen maruziyetinde alerjen Th2 hücrelerini aktive eder; oluşan IgE, mast hücre yüzeyindeki yüksek afiniteli FcεRI reseptörlerine bağlanarak mast hücresini kaplar."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k05-q14",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "\"Aşırı duyarlılık tanımı\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir.",
+      "E": "Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "C": "Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "B": "Böbrek glomerülleri ve akciğer alveollerinin bazal membranındaki proteine karşı antikor; kompleman ve Fc reseptörü aracılı inflamasyon.",
+      "D": "Sistemik: akut serum hastalığı, SLE nefriti, bazı vaskülitler (poliarteritis nodoza). Lokal: Arthus reaksiyonu (önceden immunize bireyde deri içi antijen enjeksiyonu sonrası lokal nekrotizan vaskülit)."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir.",
+      "E": "Yanlış. Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "C": "Yanlış. Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "B": "Yanlış. Böbrek glomerülleri ve akciğer alveollerinin bazal membranındaki proteine karşı antikor; kompleman ve Fc reseptörü aracılı inflamasyon.",
+      "D": "Yanlış. Sistemik: akut serum hastalığı, SLE nefriti, bazı vaskülitler (poliarteritis nodoza). Lokal: Arthus reaksiyonu (önceden immunize bireyde deri içi antijen enjeksiyonu sonrası lokal nekrotizan vaskülit)."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -753,6 +2056,222 @@
      "bilgi": [
       28,
       29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k06-q05",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Timik seleksiyon kusuru olan bir çocukta çoklu otoimmün hastalık gelişmiştir. Tolerans mekanizmalarıyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "AIRE B hücrelerinde çalışır.",
+      "B": "Negatif seçilim periferik bir mekanizmadır.",
+      "C": "Merkezi toleransta T hücreleri timusta negatif seçilimle (güçlü öz-reaktifler apoptoz), AIRE periferik antijenlerin timusta ekspresyonunu sağlar; B hücreleri kemik iliğinde seçilir. Periferikte Treg (CD4+, FoxP3, CTLA-4 ile ko-stimülasyon engeli, IL-2 tüketimi) baskılar. Otoimmünite genetik yatkınlık (HLA, CTLA4, PTPN22) + çevresel tetikleyici (moleküler taklit, doku hasarı, UV, sigara) ile gelişir.",
+      "D": "Treg proinflamatuar etki gösterir.",
+      "E": "Otoimmünitede genetik ve çevre rol oynamaz."
+     },
+     "dogru": "C",
+     "aciklama": "Merkezi (timus negatif seçilim, AIRE, kemik iliği B seçilimi), periferik (Treg/FoxP3/CTLA-4) ve otoimmünite modeli (HLA+tetikleyici) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; AIRE timusta ekspresyon sağlar.",
+      "B": "Yanlış; negatif seçilim merkezidir (timus).",
+      "C": "Doğru. Üç başlık birlikte doğrudur.",
+      "D": "Yanlış; Treg baskılayıcıdır.",
+      "E": "Yanlış; genetik + çevre modeli esastır."
+     },
+     "bilgi": [
+      28,
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k06-q06",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Timik seleksiyon kusurlu çocukta tolerans mekanizmaları irdelenirken tolerans ve otoimmüniteyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Güçlü öz-reaktif T reseptörleri timusta negatif seçilimle elimine edilir.",
+      "B": "AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar.",
+      "C": "Treg FoxP3 gerektirir, CTLA-4 ile ko-stimülasyonu engeller.",
+      "D": "Otoimmünitede HLA alelleri ve CTLA4/PTPN22 gibi regülasyon genleri ile moleküler taklit, doku hasarı, UV ve sigara rol oynar.",
+      "E": "Treg'ler öz-reaktif yanıtı güçlendirir ve AIRE timusta yabancı antijen sunarak toleransı bozar."
+     },
+     "dogru": "E",
+     "aciklama": "Treg baskılayıcıdır; AIRE öz antijen ekspresyonuyla toleransı destekler.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Yanlış ifade (aranan cevap). Treg ve AIRE işlevleri ters verilmiştir."
+     },
+     "bilgi": [
+      28,
+      29,
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Merkezi ve periferik tolerans mekanizmaları nasıl işler?",
+     "secenekler": {
+      "A": "Negatif seçilim dalakta olur",
+      "B": "AIRE antikor üretir",
+      "C": "Timus negatif seçilim-AIRE; perifer Treg-FoxP3",
+      "D": "Treg IL-2 üretimini artırır",
+      "E": "B hücreleri seçilime girmez"
+     },
+     "dogru": "C",
+     "aciklama": "Merkezi toleransta timusta güçlü öz-reaktif T hücreleri negatif seçilimle apoptoza gider; AIRE transkripsiyon faktörü periferik öz antijenlerin timusta eksprese edilmesini sağlayarak seçilimi genişletir. B hücrelerinde kemik iliğinde öz antijene bağlanan olgunlaşmamış hücre reseptör düzenlemesi yapar veya apoptoza gider. Periferde kaçan hücreler, FoxP3 bağımlı düzenleyici T hücrelerince CTLA-4 ile ko-stimülasyon engeli, IL-2 tüketimi ve TGF-β gibi baskılayıcı sitokinlerle tutulur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; T hücre negatif seçilimi timustadır.",
+      "B": "Yanlış; AIRE timusta periferik antijen ekspresyonunu sağlar.",
+      "C": "Doğru; merkezi ve periferik kolları özetler.",
+      "D": "Yanlış; Treg yüksek afiniteli reseptörüyle IL-2 tüketir.",
+      "E": "Yanlış; B hücreleri kemik iliğinde düzenleme veya apoptoza girer."
+     },
+     "bilgi": [
+      28,
+      29
+     ],
+     "benzer_cikmis": [
+      "ec588d4f1e"
+     ]
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k06-q08",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Otoimmünitenin gelişiminde genetik ve çevresel etkenler nasıl birleşir?",
+     "secenekler": {
+      "A": "Genetik yatkınlık rol oynamaz",
+      "B": "Moleküler taklit toleransı güçlendirir",
+      "C": "HLA alelleri koruyucudur",
+      "D": "İlaçlar otoimmüniteyi tetiklemez",
+      "E": "HLA-regülasyon genleri; taklit, UV, ilaç tetikler"
+     },
+     "dogru": "E",
+     "aciklama": "Otoimmünite, genetik yatkınlıkla çevresel tetikleyicilerin etkileşimiyle öz toleransın bozulmasıdır. HLA alelleri ve CTLA4, PTPN22 gibi immün regülasyon genleri yatkınlık yaratır. Enfeksiyonlar moleküler taklit ve ko-stimülasyon artışıyla, UV, sigara, doku hasarı ve hidralazin gibi ilaçlar öz antijen sunumunu artırarak toleransı kırar; sonuç kronik öz-reaktif T ve B yanıtıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; HLA ve regülasyon genleri yatkınlık belirler.",
+      "B": "Yanlış; moleküler taklit toleransı kıran tetikleyicidir.",
+      "C": "Yanlış; belirli HLA alelleri riski artırır.",
+      "D": "Yanlış; hidralazin, prokainamid ve izoniazid lupus benzeri tablo tetikler.",
+      "E": "Doğru; genetik zemin ve çevresel tetikleyici etkileşimini verir."
+     },
+     "bilgi": [
+      30,
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k06-q09",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "\"Hijyen hipotezi\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+      "A": "Antikor reseptör fonksiyonunu bloke eder veya aşırı uyarır.",
+      "B": "Yeni sentezlenen PGD2 (bronkospazm, mukus artışı), LTC4/LTD4 (histaminden binlerce kat güçlü vazoaktif ve spazmojenik) ve LTB4 (nötrofil, eozinofil ve monosit için güçlü kemotaktik) salınır.",
+      "D": "Genetik yatkınlık (HLA alelleri; CTLA4, PTPN22 gibi immün regülasyon genleri) ve çevresel tetikleyiciler (enfeksiyonlar/moleküler taklit, doku hasarı, UV, sigara, ilaçlar) etkileşir.",
+      "E": "Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+      "A": "Yanlış. Antikor reseptör fonksiyonunu bloke eder veya aşırı uyarır.",
+      "B": "Yanlış. Yeni sentezlenen PGD2 (bronkospazm, mukus artışı), LTC4/LTD4 (histaminden binlerce kat güçlü vazoaktif ve spazmojenik) ve LTB4 (nötrofil, eozinofil ve monosit için güçlü kemotaktik) salınır.",
+      "D": "Yanlış. Genetik yatkınlık (HLA alelleri; CTLA4, PTPN22 gibi immün regülasyon genleri) ve çevresel tetikleyiciler (enfeksiyonlar/moleküler taklit, doku hasarı, UV, sigara, ilaçlar) etkileşir.",
+      "E": "Yanlış. Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k06-q10",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Tip III patogenez basamakları\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Faz 1: antijen verilişinden ~1 hafta sonra dolaşımda kompleks oluşumu. Faz 2: damar duvarı ve organlara birikim. Faz 3: kompleman aktivasyonu, nötrofil-monosit toplanması, lizozomal enzim ve serbest radikal salınımı.",
+      "B": "Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "E": "Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur.",
+      "C": "Hücre yüzeyi IgG antikorları ve C3b kompleman fragmanları ile opsonize olur; makrofaj ve nötrofiller bunu Fc ve C3b reseptörleriyle tanıyıp fagosite eder.",
+      "D": "Böbrek glomerülleri ve akciğer alveollerinin bazal membranındaki proteine karşı antikor; kompleman ve Fc reseptörü aracılı inflamasyon."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Faz 1: antijen verilişinden ~1 hafta sonra dolaşımda kompleks oluşumu. Faz 2: damar duvarı ve organlara birikim. Faz 3: kompleman aktivasyonu, nötrofil-monosit toplanması, lizozomal enzim ve serbest radikal salınımı.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Faz 1: antijen verilişinden ~1 hafta sonra dolaşımda kompleks oluşumu. Faz 2: damar duvarı ve organlara birikim. Faz 3: kompleman aktivasyonu, nötrofil-monosit toplanması, lizozomal enzim ve serbest radikal salınımı.",
+      "B": "Yanlış. Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "E": "Yanlış. Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur.",
+      "C": "Yanlış. Hücre yüzeyi IgG antikorları ve C3b kompleman fragmanları ile opsonize olur; makrofaj ve nötrofiller bunu Fc ve C3b reseptörleriyle tanıyıp fagosite eder.",
+      "D": "Yanlış. Böbrek glomerülleri ve akciğer alveollerinin bazal membranındaki proteine karşı antikor; kompleman ve Fc reseptörü aracılı inflamasyon."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k06-q11",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "\"Sitokinler ve geç faz\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "C": "Genetik yatkınlık (HLA alelleri; CTLA4, PTPN22 gibi immün regülasyon genleri) ve çevresel tetikleyiciler (enfeksiyonlar/moleküler taklit, doku hasarı, UV, sigara, ilaçlar) etkileşir.",
+      "D": "Yeni sentezlenen PGD2 (bronkospazm, mukus artışı), LTC4/LTD4 (histaminden binlerce kat güçlü vazoaktif ve spazmojenik) ve LTB4 (nötrofil, eozinofil ve monosit için güçlü kemotaktik) salınır.",
+      "B": "Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir.",
+      "E": "Hiperakut: önceden oluşmuş antikorlar (kan grubu, HLA), dakika-saat içinde damar trombozu ve fibrinoid nekroz. Akut: T hücre (hücresel) veya antikor aracılı (humoral), günler-haftalar. Kronik: aylar-yıllar; greft arteriyosklerozu, interstisyel fibrozis ve parankim kaybı."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "C": "Yanlış. Genetik yatkınlık (HLA alelleri; CTLA4, PTPN22 gibi immün regülasyon genleri) ve çevresel tetikleyiciler (enfeksiyonlar/moleküler taklit, doku hasarı, UV, sigara, ilaçlar) etkileşir.",
+      "D": "Yanlış. Yeni sentezlenen PGD2 (bronkospazm, mukus artışı), LTC4/LTD4 (histaminden binlerce kat güçlü vazoaktif ve spazmojenik) ve LTB4 (nötrofil, eozinofil ve monosit için güçlü kemotaktik) salınır.",
+      "B": "Yanlış. Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir.",
+      "E": "Yanlış. Hiperakut: önceden oluşmuş antikorlar (kan grubu, HLA), dakika-saat içinde damar trombozu ve fibrinoid nekroz. Akut: T hücre (hücresel) veya antikor aracılı (humoral), günler-haftalar. Kronik: aylar-yıllar; greft arteriyosklerozu, interstisyel fibrozis ve parankim kaybı."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k06-q12",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "\"Sitokinler ve geç faz\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "B": "Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "E": "Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir.",
+      "C": "Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "D": "Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+      "A": "Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "E": "Yanlış. Granül içeriği histamin (vazodilatasyon, artmış vasküler permeabilite, düz kas kontraksiyonu, mukus salgısı), nötral proteazlar (triptaz; doku hasarı, kinin ve kompleman ürünleri) ve proteoglikanlar (heparin; amin deposu) içerir.",
+      "C": "Yanlış. Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "D": "Yanlış. Erken yaşamda düşük mikrobiyal maruziyet, erişkin dönemde alerji riskinde artışa yol açar.",
+      "A": "Yanlış. Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur."
+     },
+     "bilgi": [
+      8
      ],
      "benzer_cikmis": []
     }
@@ -934,6 +2453,280 @@
       31,
       32,
       33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "22 yaşındaki kadın hastada malar döküntü, fotosensitivite, non-eroziv artralji, plevrit ve proteinüri vardır; ANA pozitif, anti-dsDNA ve anti-Sm pozitiftir. Başka bir hastada kuru göz-kuru ağız ve anti-SS-A/SS-B pozitifliği; üçüncüde CREST bulguları ve deri kalınlaşması vardır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Malar döküntü Sjögren'e özgüdür.",
+      "B": "Birinci hasta SLE'dir (genç kadın, malar döküntü, fotosensitivite, artralji %80-90, serözit, böbrek tutulumu; ANA %95+, spesifik anti-dsDNA/anti-Sm). İkinci Sjögren (keratokonjonktivitis sicca, kserostomi; anti-Ro/La), üçüncü sistemik sklerozdur (Th2/TGF-β, mikrovasküler hasar, fibrozis; sınırlı form CREST).",
+      "C": "Anti-dsDNA sistemik sklerozu gösterir.",
+      "D": "Kuru göz-ağız SLE tanısı koydurur.",
+      "E": "CREST IgG4 hastalığıdır."
+     },
+     "dogru": "B",
+     "aciklama": "SLE (klinik + ANA/anti-dsDNA/anti-Sm), Sjögren (sicca + Ro/La), skleroz (fibrozis+vasküler hasar, CREST) ve IgG4 (storiform fibrozis, obliteratif flebit, otoimmün pankreatit) ayrımı doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; malar döküntü SLE'nindir.",
+      "B": "Doğru. Üç hastanın tanısı ve otoantikorları doğrudur.",
+      "C": "Yanlış; anti-dsDNA/anti-Sm SLE spesifiktir.",
+      "D": "Yanlış; sicca Sjögren'i düşündürür.",
+      "E": "Yanlış; CREST sınırlı sklerozdur."
+     },
+     "bilgi": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k07-q08",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Malar döküntülü genç kadın ile siccalı ve CREST'li hastalar karşılaştırılırken bu hastalık grubuyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "SLE'de HLA-DR2/DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4), B-T tolerans kusurları ve tip I IFN-α fazlalığı patogenezde yer alır.",
+      "B": "Sjögren kronik otoimmün ekzokrinopatidir; lenfoma riski artmıştır.",
+      "C": "IgG4 hastalığında IgG4+ plazma hücre infiltrasyonu, storiform fibrozis ve obliteratif flebit görülür (otoimmün pankreatit, tükürük/gözyaşı bezi).",
+      "D": "SLE erkeklerde sıktır; spesifik antikoru anti-SS-A'dır; Sjögren'de malar döküntü ve anti-dsDNA tipiktir.",
+      "E": "Sistemik sklerozda otoimmün yanıt, mikrovasküler hasar ve yaygın fibrozis birlikte bulunur."
+     },
+     "dogru": "D",
+     "aciklama": "SLE tipik olarak genç kadındadır; spesifik testler anti-dsDNA ve anti-Sm'dir; malar döküntü ve anti-dsDNA Sjögren'in değil SLE'nindir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Yanlış ifade (aranan cevap). Cinsiyet ve otoantikor atıfları karıştırılmıştır.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k07-q09",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "SLE'nin spesifik-duyarlı otoantikorları ve klinik ipuçları nelerdir?",
+     "secenekler": {
+      "A": "ANA SLE'ye spesifiktir",
+      "B": "Anti-dsDNA/Sm spesifik; ANA duyarlı, malar-artrit",
+      "C": "Anti-Ro eklem erozyonu yapar",
+      "D": "SLE nefriti tip I mekanizmadır",
+      "E": "Tipik hasta yaşlı erkektir"
+     },
+     "dogru": "B",
+     "aciklama": "SLE çok sistemli kronik otoimmün hastalıktır; ayırt edici özelliği geniş otoantikor spektrumudur. Anti-dsDNA (%40-60, nefritle ilişkili) ve anti-Sm SLE'ye spesifiktir; ANA %95-100 pozitiftir ama başka otoimmün hastalıklarda da bulunur. Anti-Ro konjenital kalp bloğu ve neonatal lupusla ilişkilidir. Dokuda DNA-anti-DNA kompleksleri tip III nefrit, kan hücre opsonizasyonu tip II sitopeniler yapar; tipik hasta genç kadındır, malar döküntü ve non-eroziv artrit (%80-90) görülür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ANA %95-100 duyarlıdır ama spesifik değildir.",
+      "B": "Doğru; spesifik-duyarlı ayrımını ve kliniği verir.",
+      "C": "Yanlış; anti-Ro neonatal lupus ve kalp bloğuyla ilişkilidir.",
+      "D": "Yanlış; nefrit tip III kompleks, sitopeniler tip II mekanizmadır.",
+      "E": "Yanlış; tipik hasta genç kadındır."
+     },
+     "bilgi": [
+      31,
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k07-q10",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Sjögren, sistemik skleroz ve IgG4 ilişkili hastalığın ayırt edici özellikleri nelerdir?",
+     "secenekler": {
+      "A": "Sjögren yalnızca böbreği tutar",
+      "B": "Scl-70 sınırlı formu gösterir",
+      "C": "IgG4-RD granülom yapar",
+      "D": "Ro/La-sicca-lenfoma; Scl-70 yaygın; storiform flebit",
+      "E": "CREST yaygın sklerozdur"
+     },
+     "dogru": "D",
+     "aciklama": "Sjögren kronik otoimmün ekzokrinopatidir; anti-Ro ve anti-La pozitiftir, kuru göz ve kuru ağız yapar; bezlerde lenfositik infiltrasyon ve germinal merkezler gelişir, B hücreli lenfoma riski artar. Sistemik sklerozda anti-Scl-70 yaygın deri-akciğer hastalığına, antisentromer sınırlı CREST formuna işaret eder; üç süreç otoimmün yanıt, mikrovasküler hasar ve fibrozistir. IgG4 ilişkili hastalıkta storiform fibrozis ve obliteratif flebit tipiktir; pankreas ve tükürük bezleri tutulur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; Sjögren lakrimal ve tükürük bezlerini tutar.",
+      "B": "Yanlış; Scl-70 yaygın, antisentromer sınırlı formla ilişkilidir.",
+      "C": "Yanlış; IgG4-RD storiform fibrozis ve obliteratif flebit yapar.",
+      "D": "Doğru; üç hastalığın imza özelliklerini özetler.",
+      "E": "Yanlış; CREST sınırlı formun kısaltmasıdır."
+     },
+     "bilgi": [
+      34,
+      35,
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k07-q11",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "\"Pemfigus vulgaris\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "E": "Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+      "D": "Aynı alerjen, mast hücresi üzerindeki IgE moleküllerini çapraz bağlar; hücre içi sinyal yollarıyla kalsiyum artar, granül degranülasyonu ve yeni mediyatör sentezi/salınımı olur.",
+      "C": "Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "B": "Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "A": "IgG4 üreten plazma hücreleri ve T lenfosit infiltrasyonu, storiform fibrozis ve obliteratif flebit ile karakterizedir; pankreas (otoimmün pankreatit), tükürük/gözyaşı bezleri (Mikulicz sendromu), retroperiton, tiroid, akciğer ve böbrek tutulur."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+      "D": "Yanlış. Aynı alerjen, mast hücresi üzerindeki IgE moleküllerini çapraz bağlar; hücre içi sinyal yollarıyla kalsiyum artar, granül degranülasyonu ve yeni mediyatör sentezi/salınımı olur.",
+      "C": "Yanlış. Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "B": "Yanlış. Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "A": "Yanlış. IgG4 üreten plazma hücreleri ve T lenfosit infiltrasyonu, storiform fibrozis ve obliteratif flebit ile karakterizedir; pankreas (otoimmün pankreatit), tükürük/gözyaşı bezleri (Mikulicz sendromu), retroperiton, tiroid, akciğer ve böbrek tutulur."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k07-q12",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "\"Amiloidoz: sınıflama, morfoloji ve tanı\" kavramının tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "E": "Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "A": "T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "C": "Böbrek glomerülleri ve akciğer alveollerinin bazal membranındaki proteine karşı antikor; kompleman ve Fc reseptörü aracılı inflamasyon.",
+      "D": "Erken faz 5-30 dakikada başlar ve yaklaşık 1 saatte azalır (vazodilatasyon, ödem, bronkospazm). Geç faz 2-8 saat sonra başlar ve saatler-günler sürebilir (nötrofil, eozinofil, Th2 infiltrasyonu, epitel hasarı).",
+      "B": "Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "A": "Yanlış. T hücreleri timusta olgunlaşır; güçlü öz-reaktif reseptörler negatif seçilimle apoptoza gider. AIRE periferik öz antijenlerin timusta ekspresyonunu sağlar. B hücreleri kemik iliğinde öz antijene bağlanırsa reseptör düzenlemesi veya apoptoz olur.",
+      "C": "Yanlış. Böbrek glomerülleri ve akciğer alveollerinin bazal membranındaki proteine karşı antikor; kompleman ve Fc reseptörü aracılı inflamasyon.",
+      "D": "Yanlış. Erken faz 5-30 dakikada başlar ve yaklaşık 1 saatte azalır (vazodilatasyon, ödem, bronkospazm). Geç faz 2-8 saat sonra başlar ve saatler-günler sürebilir (nötrofil, eozinofil, Th2 infiltrasyonu, epitel hasarı).",
+      "B": "Yanlış. Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k07-q13",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Erken ve geç faz zamanlaması\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Erken faz 5-30 dakikada başlar ve yaklaşık 1 saatte azalır (vazodilatasyon, ödem, bronkospazm). Geç faz 2-8 saat sonra başlar ve saatler-günler sürebilir (nötrofil, eozinofil, Th2 infiltrasyonu, epitel hasarı).",
+      "E": "Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+      "B": "Genetik yatkınlık (HLA alelleri; CTLA4, PTPN22 gibi immün regülasyon genleri) ve çevresel tetikleyiciler (enfeksiyonlar/moleküler taklit, doku hasarı, UV, sigara, ilaçlar) etkileşir.",
+      "D": "IgG4 üreten plazma hücreleri ve T lenfosit infiltrasyonu, storiform fibrozis ve obliteratif flebit ile karakterizedir; pankreas (otoimmün pankreatit), tükürük/gözyaşı bezleri (Mikulicz sendromu), retroperiton, tiroid, akciğer ve böbrek tutulur.",
+      "C": "Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Erken faz 5-30 dakikada başlar ve yaklaşık 1 saatte azalır (vazodilatasyon, ödem, bronkospazm). Geç faz 2-8 saat sonra başlar ve saatler-günler sürebilir (nötrofil, eozinofil, Th2 infiltrasyonu, epitel hasarı).",
+     "sik_aciklamalari": {
+      "A": "Doğru. Erken faz 5-30 dakikada başlar ve yaklaşık 1 saatte azalır (vazodilatasyon, ödem, bronkospazm). Geç faz 2-8 saat sonra başlar ve saatler-günler sürebilir (nötrofil, eozinofil, Th2 infiltrasyonu, epitel hasarı).",
+      "E": "Yanlış. Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+      "B": "Yanlış. Genetik yatkınlık (HLA alelleri; CTLA4, PTPN22 gibi immün regülasyon genleri) ve çevresel tetikleyiciler (enfeksiyonlar/moleküler taklit, doku hasarı, UV, sigara, ilaçlar) etkileşir.",
+      "D": "Yanlış. IgG4 üreten plazma hücreleri ve T lenfosit infiltrasyonu, storiform fibrozis ve obliteratif flebit ile karakterizedir; pankreas (otoimmün pankreatit), tükürük/gözyaşı bezleri (Mikulicz sendromu), retroperiton, tiroid, akciğer ve böbrek tutulur.",
+      "C": "Yanlış. Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k07-q14",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "\"Pemfigus vulgaris\" kavramı hakkında verilen aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+      "E": "Dolaşımdaki antijen-antikor (IgG/IgM) kompleksleri; antijen ekzojen (enfeksiyon, serum proteinleri) veya endojen (otoantijen) olabilir. Kompleksler glomerüller, eklemler ve küçük damarlar gibi filtrasyon alanlarında birikir.",
+      "B": "Çok sistemli otoimmün fibrotik hastalıktır; otoimmün yanıt (Th2, TGF-β), mikrovasküler hasar ve yaygın fibrozis süreçleri vardır. Sınırlı form CREST (Kalsinozis, Raynaud, özofagus disfonksiyonu, sklerodaktili, telanjiektazi) ile seyreder.",
+      "A": "Sistemik: akut serum hastalığı, SLE nefriti, bazı vaskülitler (poliarteritis nodoza). Lokal: Arthus reaksiyonu (önceden immunize bireyde deri içi antijen enjeksiyonu sonrası lokal nekrotizan vaskülit).",
+      "D": "Erken faz 5-30 dakikada başlar ve yaklaşık 1 saatte azalır (vazodilatasyon, ödem, bronkospazm). Geç faz 2-8 saat sonra başlar ve saatler-günler sürebilir (nötrofil, eozinofil, Th2 infiltrasyonu, epitel hasarı)."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+     "sik_aciklamalari": {
+      "C": "Doğru. Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+      "E": "Yanlış. Dolaşımdaki antijen-antikor (IgG/IgM) kompleksleri; antijen ekzojen (enfeksiyon, serum proteinleri) veya endojen (otoantijen) olabilir. Kompleksler glomerüller, eklemler ve küçük damarlar gibi filtrasyon alanlarında birikir.",
+      "B": "Yanlış. Çok sistemli otoimmün fibrotik hastalıktır; otoimmün yanıt (Th2, TGF-β), mikrovasküler hasar ve yaygın fibrozis süreçleri vardır. Sınırlı form CREST (Kalsinozis, Raynaud, özofagus disfonksiyonu, sklerodaktili, telanjiektazi) ile seyreder.",
+      "A": "Yanlış. Sistemik: akut serum hastalığı, SLE nefriti, bazı vaskülitler (poliarteritis nodoza). Lokal: Arthus reaksiyonu (önceden immunize bireyde deri içi antijen enjeksiyonu sonrası lokal nekrotizan vaskülit).",
+      "D": "Yanlış. Erken faz 5-30 dakikada başlar ve yaklaşık 1 saatte azalır (vazodilatasyon, ödem, bronkospazm). Geç faz 2-8 saat sonra başlar ve saatler-günler sürebilir (nötrofil, eozinofil, Th2 infiltrasyonu, epitel hasarı)."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k07-q15",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Sitokinler ve geç faz\" klinik bağlamda aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "C": "Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "E": "Tip I aşırı duyarlılık geliştirme eğilimidir; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterizedir. İlişkili genler HLA sınıf II alelleri, Th2 sitokin genleri, FcεRI bileşenleri ve ADAM33'tür.",
+      "A": "Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir.",
+      "D": "Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "C": "Yanlış. Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür.",
+      "E": "Yanlış. Tip I aşırı duyarlılık geliştirme eğilimidir; yüksek serum IgE, artmış Th2 yanıtı ve ailede alerji öyküsü (~%50) ile karakterizedir. İlişkili genler HLA sınıf II alelleri, Th2 sitokin genleri, FcεRI bileşenleri ve ADAM33'tür.",
+      "A": "Yanlış. Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir.",
+      "D": "Yanlış. Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k07-q16",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "\"Pemfigus vulgaris\" ile ilgili bir hastada bulunacak aşağıdaki bulgulardan hangisi beklenmez?",
+     "secenekler": {
+      "E": "Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+      "C": "Erken faz 5-30 dakikada başlar ve yaklaşık 1 saatte azalır (vazodilatasyon, ödem, bronkospazm). Geç faz 2-8 saat sonra başlar ve saatler-günler sürebilir (nötrofil, eozinofil, Th2 infiltrasyonu, epitel hasarı).",
+      "A": "Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "D": "Faz 1: antijen verilişinden ~1 hafta sonra dolaşımda kompleks oluşumu. Faz 2: damar duvarı ve organlara birikim. Faz 3: kompleman aktivasyonu, nötrofil-monosit toplanması, lizozomal enzim ve serbest radikal salınımı.",
+      "B": "Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar."
+     },
+     "dogru": "E",
+     "aciklama": "Doğru: Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+     "sik_aciklamalari": {
+      "E": "Doğru. Epidermal hücrelerin hücreler arası bağlantı proteinlerine (desmogleinler) karşı antikorla adezyon bozulur.",
+      "C": "Yanlış. Erken faz 5-30 dakikada başlar ve yaklaşık 1 saatte azalır (vazodilatasyon, ödem, bronkospazm). Geç faz 2-8 saat sonra başlar ve saatler-günler sürebilir (nötrofil, eozinofil, Th2 infiltrasyonu, epitel hasarı).",
+      "A": "Yanlış. Mediyatör blokajı (antihistaminikler, lökotrien reseptör antagonistleri, bronkodilatörler, anafilakside epinefrin), enflamasyon baskılanması (kortikosteroidler) ve biyolojik tedaviler (anti-IgE, anti-Th2 sitokin/reseptör antikorları).",
+      "D": "Yanlış. Faz 1: antijen verilişinden ~1 hafta sonra dolaşımda kompleks oluşumu. Faz 2: damar duvarı ve organlara birikim. Faz 3: kompleman aktivasyonu, nötrofil-monosit toplanması, lizozomal enzim ve serbest radikal salınımı.",
+      "B": "Yanlış. Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar."
+     },
+     "bilgi": [
+      18
      ],
      "benzer_cikmis": []
     }
@@ -1125,6 +2918,278 @@
       40
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Böbrek nakilli üç hasta: birincide dakikalar-saatler içinde damar trombozu ve fibrinoid nekroz; ikincide günler-haftalar içinde hücresel/antikor aracılı rejeksiyon; üçüncüde (kök hücre nakli sonrası) deri-karaciğer-GİS epitel hasarı gelişmiştir. Ayrıca dilde büyüme ve Kongo kırmızısı pozitif birikimli dördüncü hasta vardır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hiperakut ret (önceden oluşmuş kan grubu/HLA antikorları, damar trombozu-fibrinoid nekroz); akut ret (T hücre ve/veya antikor aracılı); GVHD'de donör T hücreleri alıcıyı tanır (akut: deri-karaciğer-GİS; kronik sistemik). Amiloidoz hücre dışı fibriler birikimdir: AL (hafif zincir, miyelom), AA (SAA, kronik inflamasyon), Aβ.",
+      "B": "Hiperakut ret T hücre aracılıdır.",
+      "C": "GVHD'de alıcı T hücreleri donörü reddeder.",
+      "D": "AL amiloidoz kronik inflamasyona bağlıdır.",
+      "E": "Alloantijenler eritrosit antijenleridir."
+     },
+     "dogru": "A",
+     "aciklama": "Ret tipleri (hiperakut/akut), GVHD yönü (donör→alıcı) ve amiloidoz sınıflaması (AL/AA/Aβ) doğrudur; başlıca alloantijenler HLA'dır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Dört başlık birlikte doğrudur.",
+      "B": "Yanlış; hiperakut önceden oluşmuş antikordur.",
+      "C": "Yanlış; GVHD donör T hücre aracılıdır.",
+      "D": "Yanlış; AA kronik inflamasyon, AL miyelom ilişkilidir.",
+      "E": "Yanlış; başlıca alloantijen HLA'dır."
+     },
+     "bilgi": [
+      37,
+      38,
+      39,
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k08-q08",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Nakil hastaları ile amiloidozlu olgu birlikte değerlendirilirken transplantasyon ve amiloidozla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Allogreft aynı tür bireyler arası nakildir; başlıca alloantijenler HLA'dır; doğrudan tanımada donör APC-HLA, dolaylıda alıcı APC rol oynar.",
+      "B": "Hiperakut ret önceden oluşmuş antikorlarla dakika-saat içinde gelişir.",
+      "C": "GVHD alıcı antikorlarının donör dokusunu dakikalar içinde tromboze etmesidir; amiloidoz hücre içi amorf birikimdir.",
+      "D": "AL amiloidoz hafif zincir (miyelom), AA SAA (kronik inflamasyon) türevidir.",
+      "E": "Akut GVHD deri, karaciğer ve GİS epitel hasarı yapar; en sık kök hücre nakli sonrası görülür."
+     },
+     "dogru": "C",
+     "aciklama": "GVHD donör T hücre aracılıdır (akut deri-karaciğer-GİS, kronik sistemik); amiloidoz hücre dışı fibriler birikimdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Yanlış ifade (aranan cevap). GVHD yönü ve amiloidoz lokalizasyonu hatalıdır.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      37,
+      38,
+      39,
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k08-q09",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Transplant reddi tipleri ve GVHD mekanizmasıyla ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Hiperakut dakika-saat; akut gün-hafta; kronik arteriyoskleroz",
+      "B": "Hiperakut T hücre aracılıdır",
+      "C": "Akut red yıllar sonra başlar",
+      "D": "Kronik redde damar sağlamdır",
+      "E": "GVHD alıcı T hücreleridir"
+     },
+     "dogru": "A",
+     "aciklama": "Hiperakut red önceden oluşmuş kan grubu veya HLA antikorlarıyla dakika-saatler içinde damar trombozu ve fibrinoid nekroz yapar. Akut red günler-haftalarda T hücre (hücresel) veya antikor (humoral) mekanizmayla gelişir. Kronik red aylar-yıllarda greft arteriyosklerozu, interstisyel fibrozis ve parankim kaybıyla seyreder. GVHD'de donör T hücreleri alıcı dokusunu yabancı tanır; akut form deri-karaciğer-GİS epiteli, kronik form skleroz benzeri değişiklikler yapar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; üç red tipinin zaman ve lezyonlarını sıralar.",
+      "B": "Yanlış; hiperakut önceden var antikorlarla olur.",
+      "C": "Yanlış; akut red günler-haftalar içinde gelişir.",
+      "D": "Yanlış; kronik redde greft arteriyosklerozu tipiktir.",
+      "E": "Yanlış; GVHD'de donör T hücreleri alıcıya saldırır."
+     },
+     "bilgi": [
+      37,
+      38,
+      39
+     ],
+     "benzer_cikmis": [
+      "b8b202b6a775",
+      "e8588ced6485"
+     ]
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k08-q10",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Primer immün yetmezlik örnekleri ve amiloidoz tipleriyle ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Brutonda T hücresi yoktur",
+      "B": "En sık yetmezlik SCID'dir",
+      "C": "XLA B yoksunluğu; IgA en sık; AL-AA-Aβ",
+      "D": "Amiloid bazofilik granüldür",
+      "E": "AA miyelomla ilişkilidir"
+     },
+     "dogru": "C",
+     "aciklama": "X'e bağlı agammaglobulinemide (Bruton) B hücresi yoktur ve serum Ig eksiktir; DiGeorge'da timus hipoplazisi T hücre yetmezliği yapar; en sık primer yetmezlik izole IgA eksikliğidir. Sekonder nedenler HIV (CD4 tükenmesi), kemoterapi ve splenektomi (fagositoz azalması) gibi edinilmiş durumlardır. Amiloidozda Kongo kırmızısıyla pembe-kırmızı, polarize ışıkta elma yeşili çift kırılım görülür; AL miyelom-hafif zincir, AA kronik inflamasyon-SAA, Aβ Alzheimer ile ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; Brutonda B hücresi ve serum Ig eksiktir.",
+      "B": "Yanlış; en sık primer yetmezlik izole IgA eksikliğidir.",
+      "C": "Doğru; yetmezlik örnekleri ve amiloid tiplerini özetler.",
+      "D": "Yanlış; amiloid eozinofilik birikim ve elma yeşili çift kırılımdır.",
+      "E": "Yanlış; miyelomla ilişkili AL, kronik inflamasyonla AA'dır."
+     },
+     "bilgi": [
+      39,
+      40
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k08-q11",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden \"Otoimmünite genel model\" ile ilgili doğru olan seçeneği işaretleyiniz.",
+     "secenekler": {
+      "D": "Genetik yatkınlık (HLA alelleri; CTLA4, PTPN22 gibi immün regülasyon genleri) ve çevresel tetikleyiciler (enfeksiyonlar/moleküler taklit, doku hasarı, UV, sigara, ilaçlar) etkileşir.",
+      "A": "Hiperakut: önceden oluşmuş antikorlar (kan grubu, HLA), dakika-saat içinde damar trombozu ve fibrinoid nekroz. Akut: T hücre (hücresel) veya antikor aracılı (humoral), günler-haftalar. Kronik: aylar-yıllar; greft arteriyosklerozu, interstisyel fibrozis ve parankim kaybı.",
+      "E": "Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "B": "Antikor reseptör fonksiyonunu bloke eder veya aşırı uyarır.",
+      "C": "Tipik hasta genç kadındır; kelebek şeklinde (malar) döküntü, fotosensitivite, artralji/non-eroziv artrit (%80-90), serözit (plevrit, perikardit), böbrek tutulumu (%50-70; proteinüri, hematüri) ve nöropsikiyatrik belirtiler görülür."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Genetik yatkınlık (HLA alelleri; CTLA4, PTPN22 gibi immün regülasyon genleri) ve çevresel tetikleyiciler (enfeksiyonlar/moleküler taklit, doku hasarı, UV, sigara, ilaçlar) etkileşir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Genetik yatkınlık (HLA alelleri; CTLA4, PTPN22 gibi immün regülasyon genleri) ve çevresel tetikleyiciler (enfeksiyonlar/moleküler taklit, doku hasarı, UV, sigara, ilaçlar) etkileşir.",
+      "A": "Yanlış. Hiperakut: önceden oluşmuş antikorlar (kan grubu, HLA), dakika-saat içinde damar trombozu ve fibrinoid nekroz. Akut: T hücre (hücresel) veya antikor aracılı (humoral), günler-haftalar. Kronik: aylar-yıllar; greft arteriyosklerozu, interstisyel fibrozis ve parankim kaybı.",
+      "E": "Yanlış. Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "B": "Yanlış. Antikor reseptör fonksiyonunu bloke eder veya aşırı uyarır.",
+      "C": "Yanlış. Tipik hasta genç kadındır; kelebek şeklinde (malar) döküntü, fotosensitivite, artralji/non-eroziv artrit (%80-90), serözit (plevrit, perikardit), böbrek tutulumu (%50-70; proteinüri, hematüri) ve nöropsikiyatrik belirtiler görülür."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k08-q12",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "\"Kontakt dermatit\" ifadesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "B": "Zehirli sarmaşık (uruşiol), nikel ve bazı ilaçlar kimyasal + öz protein ile yeni antijenik peptitler oluşturur; başlıca Th17 sitokinleriyle aracılı inflamasyon gelişir.",
+      "E": "Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "C": "İlk alerjen maruziyetinde alerjen Th2 hücrelerini aktive eder; oluşan IgE, mast hücre yüzeyindeki yüksek afiniteli FcεRI reseptörlerine bağlanarak mast hücresini kaplar.",
+      "A": "Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "D": "Faz 1: antijen verilişinden ~1 hafta sonra dolaşımda kompleks oluşumu. Faz 2: damar duvarı ve organlara birikim. Faz 3: kompleman aktivasyonu, nötrofil-monosit toplanması, lizozomal enzim ve serbest radikal salınımı."
+     },
+     "dogru": "B",
+     "aciklama": "Doğru: Zehirli sarmaşık (uruşiol), nikel ve bazı ilaçlar kimyasal + öz protein ile yeni antijenik peptitler oluşturur; başlıca Th17 sitokinleriyle aracılı inflamasyon gelişir.",
+     "sik_aciklamalari": {
+      "B": "Doğru. Zehirli sarmaşık (uruşiol), nikel ve bazı ilaçlar kimyasal + öz protein ile yeni antijenik peptitler oluşturur; başlıca Th17 sitokinleriyle aracılı inflamasyon gelişir.",
+      "E": "Yanlış. Hücre yüzeyi proteinleri veya hücre dışı matriks bileşenlerine karşı IgG/IgM antikorlarıyla gelişir.",
+      "C": "Yanlış. İlk alerjen maruziyetinde alerjen Th2 hücrelerini aktive eder; oluşan IgE, mast hücre yüzeyindeki yüksek afiniteli FcεRI reseptörlerine bağlanarak mast hücresini kaplar.",
+      "A": "Yanlış. Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "D": "Yanlış. Faz 1: antijen verilişinden ~1 hafta sonra dolaşımda kompleks oluşumu. Faz 2: damar duvarı ve organlara birikim. Faz 3: kompleman aktivasyonu, nötrofil-monosit toplanması, lizozomal enzim ve serbest radikal salınımı."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k08-q13",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Aşırı duyarlılık sınıflaması\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "C": "Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "B": "Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir.",
+      "E": "Genetik: HLA-DR2/HLA-DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4). İmmünolojik: B ve T hücre tolerans kusurları, tip I IFN-α fazlalığı, TLR7/TLR9 aktivasyonu ve BAFF artışı. Çevresel: UV ışığı; hidralazin, prokainamid, D-penisilamin, izoniazid.",
+      "A": "Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "D": "Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür."
+     },
+     "dogru": "C",
+     "aciklama": "Doğru: Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+     "sik_aciklamalari": {
+      "C": "Doğru. Tip I: IgE ve mast hücre aracılı ani aşırı duyarlılık. Tip II: IgG/IgM'nin hedef hücre veya matriks antijenine bağlanması. Tip III: antijen-antikor komplekslerinin birikimi. Tip IV: T hücre aracılı (sitokin veya sitotoksisite).",
+      "B": "Yanlış. Dakikalar içinde gelişen doku reaksiyonudur; temel hücresel mekanizma Th2 yanıtı, IgE üretimi ve mast hücre aktivasyonudur; uyarıcı antijen alerjendir.",
+      "E": "Yanlış. Genetik: HLA-DR2/HLA-DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4). İmmünolojik: B ve T hücre tolerans kusurları, tip I IFN-α fazlalığı, TLR7/TLR9 aktivasyonu ve BAFF artışı. Çevresel: UV ışığı; hidralazin, prokainamid, D-penisilamin, izoniazid.",
+      "A": "Yanlış. Mast hücreleri TNF ve çeşitli kemokinler salgılar; bunlar lökosit toplanması ve aktivasyonunu sağlar ve geç faz reaksiyonunu sürdürür. Hücresel efektörler nötrofiller, eozinofiller ve Th2 hücreleridir.",
+      "D": "Yanlış. Sınıf I MHC ile sunulan peptitleri tanır; hedef hücreyi perforin-granzim yoluyla (kaspaz aktivasyonu → apoptoz) veya Fas-FasL yoluyla öldürür."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k08-q14",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "\"Gecikmiş tip aşırı duyarlılık (DTH)\" ile ilgili eşleştirmelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Prototip tip IV reaksiyondur; örnek tüberkülin deri testidir (PPD) ve antijen uygulanmasından 24-48 saat sonra gelişir. Th1 hücreleri IFN-γ salgılayıp makrofajları aktive eder; Th17 hücreleri nötrofil ve monosit toplar.",
+      "B": "Böbrek glomerülleri ve akciğer alveollerinin bazal membranındaki proteine karşı antikor; kompleman ve Fc reseptörü aracılı inflamasyon.",
+      "E": "Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "D": "Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir.",
+      "C": "Donör T hücreleri alıcı dokusunu alloantijen olarak tanır (en sık kök hücre nakli sonrası); akut GVHD deri, karaciğer ve GİS epitel hasarı, kronik GVHD sistemik skleroz benzeri değişiklikler yapar. Primer immün yetmezlik örnekleri SCID, Bruton, DiGeorge, hiper-IgM; en sık primer immün yetmezlik izole IgA eksikliğidir."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Prototip tip IV reaksiyondur; örnek tüberkülin deri testidir (PPD) ve antijen uygulanmasından 24-48 saat sonra gelişir. Th1 hücreleri IFN-γ salgılayıp makrofajları aktive eder; Th17 hücreleri nötrofil ve monosit toplar.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Prototip tip IV reaksiyondur; örnek tüberkülin deri testidir (PPD) ve antijen uygulanmasından 24-48 saat sonra gelişir. Th1 hücreleri IFN-γ salgılayıp makrofajları aktive eder; Th17 hücreleri nötrofil ve monosit toplar.",
+      "B": "Yanlış. Böbrek glomerülleri ve akciğer alveollerinin bazal membranındaki proteine karşı antikor; kompleman ve Fc reseptörü aracılı inflamasyon.",
+      "E": "Yanlış. Hücre dışı fibriler protein birikimidir; başlıca tipleri AL (hafif zincir, multipl miyelomla ilişkili), AA (SAA türevi, kronik inflamasyonla ilişkili) ve Aβ'dir (Alzheimer). Histolojide hücre dışı amorf eozinofilik birikintiler görülür; Kongo kırmızısı ile pembe-kırmızı boyanır ve polarize ışıkta elma yeşili çift kırılım verir.",
+      "D": "Yanlış. Otoimmün hemolitik anemi (eritrosit membran proteinleri) ve otoimmün trombositopenik purpura (trombosit GPIIb/IIIa) opsonizasyon/fagositozla; akut romatizmal ateş streptokok antijenine karşı çapraz reaksiyonla gelişir.",
+      "C": "Yanlış. Donör T hücreleri alıcı dokusunu alloantijen olarak tanır (en sık kök hücre nakli sonrası); akut GVHD deri, karaciğer ve GİS epitel hasarı, kronik GVHD sistemik skleroz benzeri değişiklikler yapar. Primer immün yetmezlik örnekleri SCID, Bruton, DiGeorge, hiper-IgM; en sık primer immün yetmezlik izole IgA eksikliğidir."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k08-q15",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "\"SLE patogenez\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Genetik: HLA-DR2/HLA-DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4). İmmünolojik: B ve T hücre tolerans kusurları, tip I IFN-α fazlalığı, TLR7/TLR9 aktivasyonu ve BAFF artışı. Çevresel: UV ışığı; hidralazin, prokainamid, D-penisilamin, izoniazid.",
+      "B": "Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir.",
+      "C": "Çok sistemli otoimmün fibrotik hastalıktır; otoimmün yanıt (Th2, TGF-β), mikrovasküler hasar ve yaygın fibrozis süreçleri vardır. Sınırlı form CREST (Kalsinozis, Raynaud, özofagus disfonksiyonu, sklerodaktili, telanjiektazi) ile seyreder.",
+      "D": "Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "E": "Aynı alerjen, mast hücresi üzerindeki IgE moleküllerini çapraz bağlar; hücre içi sinyal yollarıyla kalsiyum artar, granül degranülasyonu ve yeni mediyatör sentezi/salınımı olur."
+     },
+     "dogru": "A",
+     "aciklama": "Doğru: Genetik: HLA-DR2/HLA-DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4). İmmünolojik: B ve T hücre tolerans kusurları, tip I IFN-α fazlalığı, TLR7/TLR9 aktivasyonu ve BAFF artışı. Çevresel: UV ışığı; hidralazin, prokainamid, D-penisilamin, izoniazid.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Genetik: HLA-DR2/HLA-DR3 ve klasik yol kompleman eksiklikleri (C1q, C2, C4). İmmünolojik: B ve T hücre tolerans kusurları, tip I IFN-α fazlalığı, TLR7/TLR9 aktivasyonu ve BAFF artışı. Çevresel: UV ışığı; hidralazin, prokainamid, D-penisilamin, izoniazid.",
+      "B": "Yanlış. Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir.",
+      "C": "Yanlış. Çok sistemli otoimmün fibrotik hastalıktır; otoimmün yanıt (Th2, TGF-β), mikrovasküler hasar ve yaygın fibrozis süreçleri vardır. Sınırlı form CREST (Kalsinozis, Raynaud, özofagus disfonksiyonu, sklerodaktili, telanjiektazi) ile seyreder.",
+      "D": "Yanlış. Kronik otoimmün ekzokrinopatidir; kuru göz (keratokonjonktivitis sicca) ve kuru ağız (kserostomi) ana bulgulardır. Otoantikorları anti-SS-A (Ro) ve anti-SS-B (La)'dır; sekonder form en sık romatoid artritle birliktedir.",
+      "E": "Yanlış. Aynı alerjen, mast hücresi üzerindeki IgE moleküllerini çapraz bağlar; hücre içi sinyal yollarıyla kalsiyum artar, granül degranülasyonu ve yeni mediyatör sentezi/salınımı olur."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-25-asiri-duyarlilik-ve-otoimmunite-k08-q16",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "\"Tip IV genel bakış\" bilgisini içeren doğru kurulum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "D": "Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir.",
+      "B": "Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur.",
+      "A": "Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "C": "İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "E": "Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir."
+     },
+     "dogru": "D",
+     "aciklama": "Doğru: Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir.",
+     "sik_aciklamalari": {
+      "D": "Doğru. Antikor rolü minimaldir; iki ana yol CD4+ T hücre sitokin yanıtı ve CD8+ sitotoksik T lenfosit sitotoksisitesidir.",
+      "B": "Yanlış. Doku antijenine bağlı antikor klasik yolu aktive eder; kompleman ürünleri kemotaksi ve damar permeabilitesini artırır; Fc reseptörleriyle lökosit aktive olur.",
+      "A": "Yanlış. Allogreft aynı türün bireyleri arasında nakledilen dokudur; başlıca alloantijenler HLA molekülleridir. Doğrudan tanımada donör APC üzerindeki HLA, dolaylı tanımada donör HLA peptitlerinin alıcı APC tarafından sunulması rol oynar.",
+      "C": "Yanlış. İlaçlar (penisilin), arı sokması zehiri, gıdalar (fıstık) gibi sistemik alerjenlerle tetiklenir.",
+      "E": "Yanlış. Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelmesidir; hedef antijenler öz antijenler (otoantijenler), kalıcı mikrobiyal antijenler ve zararsız çevresel antijenler (alerjenler) olabilir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -1142,8 +3207,5 @@
     }
    ]
   }
- ],
- "soru_sayisi": 38,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:16"
+ ]
 }

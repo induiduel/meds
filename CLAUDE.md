@@ -98,3 +98,11 @@ Akış: Drive → `meds_downloads` (ham) → `meds_temp` (ara) → `meds_databas
 `00-init` iskelet, `01-inventory` envanter (`_manifest.json`), `02-download` artımlı indirme
 (`_downloads.json` durum; ücretsiz herkese açık indirme, olmazsa `GOOGLE_SERVICE_ACCOUNT_FILE`).
 Mevcut Supabase verisi yeni hat hazır olana kadar kullanılır, sonra silinmez: "eski" olarak saklanır.
+
+## Faz 14 kullanıcı kuyruğu
+
+Students can send a past question to Faz 14 review; error reports join the same queue. The server owns
+`meds_database_v2/phase14_past_question_editor/kullanici_kuyrugu.json` (`src/services/phase14UserQueue.ts`); the script
+`phase14_cloud_question_editor.py --kullanici-kuyrugu` (free keys only, its own lock) appends results to `kullanici_sonuclari.jsonl`.
+The server applies results with `applyPhase14Review` (same path as admin approval) and e-mails non-admin reporters the old/new
+question (`src/services/phase14Mail.ts`). Reporter e-mails live only in the local queue file — never in question records or the cloud.

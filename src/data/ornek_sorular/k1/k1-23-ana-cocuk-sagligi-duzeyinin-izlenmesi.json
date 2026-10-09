@@ -6,6 +6,7 @@
  "konu": "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
  "ogretim_uyesi": "Doç. Dr. Nergiz Sevinç",
  "tarih": "2026-09-24",
+ "soru_sayisi": 84,
  "kazanimlar": [
   {
    "no": 1,
@@ -87,6 +88,111 @@
      "bilgi": [
       2,
       6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aile hekimi, bölgesindeki 0-6 yaş çocukları ve 15-49 yaş kadınları periyodik izleme çağırmaktadır. Bu uygulamanın temel gerekçesi ve hedeflenen risk gruplarıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bebek ve çocuklar kendi başlarına hayatlarını idame ettiremediğinden, kadınlar ise gebelik-doğum-lohusalıkta risk altında olduğundan koruyucu izlem yapılır.",
+      "B": "İzlemler yalnızca hastalık ortaya çıktıktan sonra tedavi amacıyla yapılır; koruyucu bir işlevi yoktur.",
+      "C": "Risk grubu yalnızca 65 yaş üstü bireylerdir; kadın ve çocuk izlemi gereksizdir.",
+      "D": "İzlemlerin amacı nüfus artışını sınırlamak olup sağlık sorunlarının erken tespiti hedeflenmez.",
+      "E": "Periyodik izlem yalnızca kentsel bölgelerde yaşayan kadınlara uygulanır."
+     },
+     "dogru": "A",
+     "aciklama": "Koruyucu hekimliğin en önemli öğelerinden biri risk altındaki gruplara yönelik izlemlerdir; bebek-çocuklar bakımsızlıkta hastalık-ölüm riski yüksek, kadınlar gebelik-doğum-lohusalıkta risk altındadır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Bebek ve çocuklar kendi başlarına hayatlarını idame ettiremediğinden, kadınlar ise gebelik-doğum-lohusalıkta risk altında olduğundan koruyucu izlem yapılır.",
+      "B": "Yanlış; izlemler sorunları önlemek veya erken tespit etmek için koruyucudur.",
+      "C": "Yanlış; bu dersin risk grupları kadınlar ile bebek-çocuklardır.",
+      "D": "Yanlış; amaç sorunların önlenmesi veya erken tespitidir.",
+      "E": "Yanlış; izlemler kırsal dahil tüm hedef nüfusa yöneliktir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Bir il sağlık yöneticisi, ana-çocuk sağlığı hizmetlerini planlarken şu verileri kullanmaktadır: Dünya nüfusu 8,2 milyar olup %24'ü 0-14 yaş çocuk, %24,5'i 15-49 yaş kadındır; Türkiye'de 0-14 yaş %20,3, 15-49 yaş kadın %25,4'tür. Bu verilerle ilgili aşağıdaki yorumlardan hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İzlem hedef nüfusu toplam nüfusun yaklaşık yarısına yakındır; hizmet planlaması bu büyüklüğe göre yapılmalıdır.",
+      "B": "Türkiye'de 15-49 yaş kadın oranının %25,4 olması, kadın izlemlerinin geniş bir kitleyi kapsadığını gösterir.",
+      "C": "0-14 yaş grubunun Türkiye'de %20,3 olması çocuk izlem yükünün önemsiz olduğu anlamına gelir.",
+      "D": "Dünya genelinde çocuk ve doğurgan çağ kadın oranları, ana-çocuk sağlığı izlemlerinin gerekçesini nüfus düzeyinde destekler.",
+      "E": "Hedef nüfus büyüklüğü, izlem sıklığı ve personel planlamasında belirleyicidir."
+     },
+     "dogru": "C",
+     "aciklama": "0-14 yaş %20,3 ve 15-49 yaş kadın %25,4, izlem hedef kitlesinin büyüklüğünü ve hizmet yükünü gösterir; çocuk izlem yükü önemsiz değil, aksine planlamanın merkezindedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru yorum; hedef nüfus büyüktür.",
+      "B": "Doğru yorum; kadın izlemleri geniş kitleye ulaşır.",
+      "C": "Yanlış yorum (aranan cevap). %20,3'lük çocuk nüfus büyük bir izlem yükü demektir; önemsiz değildir.",
+      "D": "Doğru yorum; nüfus yapısı izlem gerekliliğini destekler.",
+      "E": "Doğru yorum; hedef nüfus planlamayı belirler."
+     },
+     "bilgi": [
+      1,
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Koruyucu hekimlikte periyodik izlemlerin hedeflediği risk grupları hangileridir?",
+     "secenekler": {
+      "A": "Yalnızca hasta erişkinler izlenir",
+      "B": "İzlem yalnızca tedavi amacıyla yapılır",
+      "C": "Bebek-çocuk ve gebe-lohusa kadınlar",
+      "D": "Yalnızca 65 yaş üstü izlenir",
+      "E": "İzlem risk grubuna bakılmaksızın yapılır"
+     },
+     "dogru": "C",
+     "aciklama": "Koruyucu hekimlikte izlemler, sorunu henüz ortaya çıkmadan önlemek ya da erken yakalamak için risk altındaki gruplara periyodik olarak uygulanır. Bebek ve çocuklar yaşamlarını tek başlarına sürdüremedikleri için bakımsızlıkta hastalık ve ölüm riskleri yükselir. Kadınlar ise gebelik, doğum ve lohusalık dönemlerinde fizyolojik yük ve komplikasyon riski nedeniyle izlenir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; izlemler hasta erişkinlere değil risk gruplarına yöneliktir.",
+      "B": "Yanlış; izlemin amacı önleme ve erken tespittir, tedavi değildir.",
+      "C": "Doğru; bebek-çocuklar bakıma muhtaç, kadınlar gebelik-lohusalık riski taşır.",
+      "D": "Yanlış; bu paketin izlem grupları bebek-çocuk ve doğurgan kadınlardır.",
+      "E": "Yanlış; periyodik izlem özellikle risk gruplarına uygulanır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Ana-çocuk sağlığı izlemlerinin toplumdaki hedef kitlesinin büyüklüğüyle ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Dünya nüfusunun %5'i çocuktur",
+      "B": "Dünya nüfusunun %24'ü 0-14 yaş",
+      "C": "Türkiye'de 15-49 kadın %5'tir",
+      "D": "Türkiye'de çocuk oranı %50'dir",
+      "E": "Risk grupları nüfusun %1'idir"
+     },
+     "dogru": "B",
+     "aciklama": "Dünya nüfusunun yaklaşık dörtte biri 0-14 yaş çocuklardan, dörtte biri 15-49 yaş kadınlardan oluşur; bu iki grup birlikte nüfusun yarısına yakındır. Türkiye'de de 0-14 yaş oranı %20,3 ve 15-49 yaş kadın oranı %25,4 ile benzer büyüklüktedir. Bu yüksek pay, ana-çocuk sağlığı izlemlerinin toplum sağlığına etkisinin neden büyük olduğunu açıklar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; dünya nüfusunun %24'ü 0-14 yaş grubundadır.",
+      "B": "Doğru; 0-14 yaş %24, 15-49 kadın %24,5'tir.",
+      "C": "Yanlış; Türkiye'de 15-49 yaş kadın oranı %25,4'tür.",
+      "D": "Yanlış; Türkiye'de 0-14 yaş oranı %20,3'tür.",
+      "E": "Yanlış; iki grup birlikte nüfusun yaklaşık yarısını oluşturur."
+     },
+     "bilgi": [
+      2
      ],
      "benzer_cikmis": []
     }
@@ -172,6 +278,113 @@
      },
      "bilgi": [
       3,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "32 yaşındaki bir kadın, sezaryen doğumdan 30 gün sonra obstetrik kanamaya bağlı komplikasyonla hayatını kaybetmiştir. Ölüm belgesi düzenlenirken bu olgunun anne ölümü tanımına girip girmediği ve hızın nasıl ifade edildiği sorulmaktadır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Anne ölümü yalnızca doğum anındaki ölümleri kapsar; bu olgu tanıma girmez.",
+      "B": "Anne ölüm hızı 1.000 kadın başına ifade edilir ve bu olgu hız dışıdır.",
+      "C": "Anne ölümü yalnızca lohusalığın ilk 24 saatindeki ölümlerdir.",
+      "D": "Obstetrik nedenli olmayan tüm gebelik ölümleri anne ölümü sayılır.",
+      "E": "Gebelik süresince, doğumda veya doğumu izleyen 42 gün içinde obstetrik nedenlere bağlı ölümdür; hız 100.000 canlı doğumda ifade edilir, bu olgu tanıma girer."
+     },
+     "dogru": "E",
+     "aciklama": "Anne ölümü; gebelik süresince, doğumda veya doğumu izleyen 42 gün içinde obstetrik nedenlere bağlı ölümdür ve 100.000 canlı doğumda ifade edilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; tanım 42 günlük lohusalığı da kapsar.",
+      "B": "Yanlış; payda 100.000 canlı doğumdur.",
+      "C": "Yanlış; süre 42 gündür.",
+      "D": "Yanlış; neden obstetrik olmalıdır.",
+      "E": "Doğru. 30. gündeki obstetrik ölü bu tanıma girer ve hız 100.000 canlı doğumda verilir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "2024 Türkiye anne ölüm verileri: ülke ortalaması 11,5/100.000; en yüksek Kuzeydoğu Anadolu (14,2), en düşük Doğu Karadeniz (0,0). Anne ölümünü etkileyen etkenler arasında sağlık hizmetlerine erişim, toplumsal cinsiyet eşitliği ve kadının toplumdaki statüsü sayılmaktadır. Bu bilgilerle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bölgeler arası fark, sağlık hizmetlerine erişim ve toplumsal etkenlerle ilişkilendirilebilir.",
+      "B": "Anne ölüm oranı yalnızca biyolojik faktörlere bağlıdır; toplumsal cinsiyet eşitliği ve kadının statüsüyle ilişkisi yoktur.",
+      "C": "Doğu Karadeniz'de oranın 0,0 olması, anne ölümünün o yıl hiç görülmediğini gösterir; bu başarının sürdürülmesi için izlemlerin devamı gerekir.",
+      "D": "Kuzeydoğu Anadolu'daki yüksek oran, bölgeye yönelik doğum öncesi bakım ve doğum hizmetlerinin güçlendirilmesi gerektiğini düşündürür.",
+      "E": "Anne ölüm hızı obstetrik hizmet kalitesinin temel göstergelerinden biridir."
+     },
+     "dogru": "B",
+     "aciklama": "Anne ölümü; sağlık hizmetlerine erişim, toplumsal cinsiyet eşitliği ve kadının toplumdaki statüsüyle ilişkilidir; yalnızca biyolojik değildir.",
+     "sik_aciklamalari": {
+      "A": "Doğru yorum; bölgesel fark etkenlerle ilişkilidir.",
+      "B": "Yanlış (aranan cevap). Anne ölümü toplumsal etkenlerle de ilişkilidir.",
+      "C": "Doğru yorum; 0,0 o yıl olgu görülmediğini gösterir ve izlem sürdürülmelidir.",
+      "D": "Doğru yorum; yüksek oran hizmet güçlendirmeyi gerektirir.",
+      "E": "Doğru; obstetrik hizmet kalitesinin temel göstergesidir."
+     },
+     "bilgi": [
+      3,
+      4,
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Anne ölümünün zaman aralığı ve paydası açısından doğru tanımı hangisidir?",
+     "secenekler": {
+      "A": "Gebelik-doğum ve sonrası 42 gün",
+      "B": "Yalnızca doğum anındaki ölümler",
+      "C": "Doğumdan sonraki ilk 1 yıl",
+      "D": "Tüm kadın ölümleri dahildir",
+      "E": "Yalnızca evde gerçekleşen ölümler"
+     },
+     "dogru": "A",
+     "aciklama": "Anne ölümü yalnızca gebelik ve doğum anını değil, doğumu izleyen 42 günü de kapsar çünkü obstetrik komplikasyonlar (kanama, enfeksiyon, preeklampsi) bu dönemde de öldürebilir. Tanım obstetrik nedenlere bağlı ölümlerle sınırlıdır; tesadüfi nedenler dahil edilmez. Oranın 100.000 canlı doğumda ifade edilmesi, farklı nüfus büyüklüklerinin karşılaştırılmasını sağlar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; tanım 42 günlük lohusalık penceresini ve obstetrik nedeni içerir.",
+      "B": "Yanlış; gebelik süresince ve doğum sonrası 42 gün de dahildir.",
+      "C": "Yanlış; sınır 42 gündür, bir yıl değildir.",
+      "D": "Yanlış; yalnızca obstetrik nedenlere bağlı ölümler sayılır.",
+      "E": "Yanlış; ölüm yeri tanıma girmez, neden ve zaman girer."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Türkiye 2024 anne ölüm verileriyle ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Türkiye oranı 115/100.000'dir",
+      "B": "En yüksek oran Doğu Karadeniz'dedir",
+      "C": "Anne ölümü hizmet göstergesi değildir",
+      "D": "Türkiye 2024: 11,5/100.000 canlı doğum",
+      "E": "Bölgeler arası fark yoktur"
+     },
+     "dogru": "D",
+     "aciklama": "Anne ölüm oranı, obstetrik hizmetlerin niteliğini ve kadının sağlık hizmetine erişimini yansıtan duyarlı bir göstergedir; toplumsal cinsiyet eşitliği ve kadının statüsüyle de yakından ilişkilidir. Türkiye 2024 ortalaması 11,5/100.000 canlı doğumdur. Bölgesel fark belirgindir: Kuzeydoğu Anadolu 14,2 ile en yüksek, Doğu Karadeniz 0,0 ile en düşüktür; bu fark hizmete erişim ve sosyoekonomik eşitsizliği düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; oran 11,5/100.000'dir, on katı değildir.",
+      "B": "Yanlış; Doğu Karadeniz 0,0 ile en düşüktür.",
+      "C": "Yanlış; anne ölümü obstetrik hizmet ve erişim göstergesidir.",
+      "D": "Doğru; 2024 ortalaması 11,5 olup bölgesel farklılık gösterir.",
+      "E": "Yanlış; Kuzeydoğu Anadolu (14,2) ile Doğu Karadeniz (0,0) ayrışır."
+     },
+     "bilgi": [
+      4,
       5
      ],
      "benzer_cikmis": []
@@ -261,6 +474,115 @@
       12
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aile sağlığı merkezinde görevli hekim, izlem listelerini hazırlarken 15-49 yaş kadınları ve 0-6 yaş grubu çocukları sınıflandırmaktadır. Ders paketindeki sınıflamaya göre aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İzlemler yalnızca gebelere yöneliktir; çocuk izlemi aile hekiminin görevi değildir.",
+      "B": "Kadınlar yalnızca gebelikte izlenir; lohusa ve gebe olmayan kadın izlemi yoktur.",
+      "C": "0-6 yaş çocuklar tek grupta izlenir; dönem ayrımı yapılmaz.",
+      "D": "15-49 yaş kadınlar gebeler, lohusalar ve gebe-lohusa olmayan kadınlar olarak 3 grupta; 0-6 yaş bebek ve çocuk olarak 2 grupta izlenir.",
+      "E": "15-49 yaş dışındaki kadınlar ile 6 yaş üstü çocuklar da aynı izlem takvimine alınır."
+     },
+     "dogru": "D",
+     "aciklama": "15-49 yaş kadınlar 3 grupta (gebeler, lohusalar, gebe-lohusa olmayan kadınlar), 0-6 yaş bebek ve çocuk olarak 2 grupta izlenir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; çocuk izlemi de aile hekiminin görevidir.",
+      "B": "Yanlış; lohusa ve gebe olmayan kadın izlemi de vardır.",
+      "C": "Yanlış; bebek ve çocuk olarak 2 grup vardır.",
+      "D": "Doğru. Kadınlar 3 grupta, bebek-çocuk 2 grupta izlenir.",
+      "E": "Yanlış; izlem grupları tanımlı yaş aralıklarıyla sınırlıdır."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Aile Hekimliği Uygulama Yönetmeliği kapsamında aile hekiminin ana-çocuk sağlığı ve aile planlaması hizmetlerindeki rolüyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Aile hekiminin görevi yalnızca başvuran hastayı tedavi etmektir; hedef nüfusa yönelik aktif izlem sorumluluğu yoktur.",
+      "B": "Aile hekimi yaş, cinsiyet ve hastalık gruplarına göre izlem ve tarama yapar.",
+      "C": "Aile hekimi ana-çocuk sağlığı ve aile planlaması hizmetlerini verir.",
+      "D": "Gebe, lohusa, gebe-lohusa olmayan kadın ile bebek-çocuk izlemleri aile hekimliği hizmet kapsamındadır.",
+      "E": "İzlem ve taramalar koruyucu hekimlik yaklaşımıyla hedef gruplara yöneliktir."
+     },
+     "dogru": "A",
+     "aciklama": "Aile hekimi ana-çocuk sağlığı ve aile planlaması hizmetlerini verir; yaş, cinsiyet ve hastalık gruplarına göre izlem-tarama yapar; aktif izlem sorumluluğu vardır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış ifade (aranan cevap). Aile hekiminin hedef nüfusa yönelik aktif izlem sorumluluğu vardır.",
+      "B": "Doğru ifade; yaş-cinsiyet-hastalık gruplarına göre izlem-tarama yapılır.",
+      "C": "Doğru ifade; yönetmelik kapsamındadır.",
+      "D": "Doğru ifade; sayılan tüm gruplar izlem kapsamındadır.",
+      "E": "Doğru ifade; yaklaşım koruyucudur."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Ana-çocuk sağlığı kapsamında izlenen gruplar nasıl sınıflandırılır?",
+     "secenekler": {
+      "A": "Kadınlar tek grupta izlenir",
+      "B": "Çocuk izlemi 15 yaşa kadardır",
+      "C": "Gebeler izlem dışıdır",
+      "D": "Lohusalar izlenmez",
+      "E": "Gebeler, lohusalar ve diğer kadınlar"
+     },
+     "dogru": "E",
+     "aciklama": "Üreme sağlığı izlemleri 15-49 yaş kadınları gebelik ve lohusalık durumuna göre üç gruba ayırır; böylece her grubun farklı gereksinimi (doğum öncesi bakım, lohusalık bakımı, aile planlaması) karşılanır. Çocuk tarafında 0-6 yaş bebek ve çocuk olarak izlenir. Bu ayrım, izlem içerik ve sıklıklarının gruba özgü düzenlenmesini sağlar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; 15-49 yaş kadınlar üç grupta izlenir.",
+      "B": "Yanlış; bebek-çocuk izlemi 0-6 yaş grubunu kapsar.",
+      "C": "Yanlış; gebeler birinci izlem grubudur.",
+      "D": "Yanlış; lohusalar ayrı bir izlem grubudur.",
+      "E": "Doğru; üç kadın grubu ve 0-6 yaş bebek-çocuk izlenir."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": [
+      "b8f09ad9b69d"
+     ]
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aile Hekimliği Uygulama Yönetmeliği'ne göre aile hekiminin izlem sorumluluğu nedir?",
+     "secenekler": {
+      "A": "Aile hekimi yalnızca hasta bakar",
+      "B": "Yaş-cinsiyet-hastalık grubuna göre izlem",
+      "C": "Kanser taraması kapsam dışındadır",
+      "D": "Gebe izlemi aile hekimliğinde yoktur",
+      "E": "Yalnızca erişkinler izlenir"
+     },
+     "dogru": "B",
+     "aciklama": "Aile Hekimliği Uygulama Yönetmeliği, aile hekimine kayıtlı nüfusun yaş, cinsiyet ve hastalık gruplarına göre izlem ve taramalarını yapma görevi verir. Bu kapsam ana-çocuk sağlığı ve aile planlamasının yanı sıra kanser, kronik hastalık, yenidoğan, bebek, çocuk, adölesan, erişkin ve yaşlı izlemlerini içerir. Böylece birinci basamakta yaşam döngüsünün tamamı kapsanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; yönetmelik izlem-tarama görevini açıkça verir.",
+      "B": "Doğru; kayıtlı nüfusun tüm grup izlemleri aile hekiminindir.",
+      "C": "Yanlış; kanser taramaları kapsam içindedir.",
+      "D": "Yanlış; gebe-lohusa izlemleri temel görevlerdendir.",
+      "E": "Yanlış; yenidoğandan yaşlıya tüm gruplar kapsanır."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [
+      "cbdb8fefa422"
+     ]
     }
    ],
    "ilgili_cikmis": []
@@ -344,6 +666,114 @@
      },
      "bilgi": [
       10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İlk gebeliği olan 24 yaşındaki kadın, aile hekimine doğum öncesi bakımın ne olduğunu ve kendisine ne yarar sağlayacağını sormaktadır. Aşağıdaki yanıtlardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Doğum öncesi bakımın anne ve bebek ölümlerine etkisi gösterilmemiştir.",
+      "B": "Doğum öncesi bakım yalnızca doğum anında verilen hizmettir.",
+      "C": "Doğum öncesi bakım, anne ve fetüsün tüm gebelik boyunca eğitimli sağlık personelince düzenli aralıklarla izlenmesidir; ölü doğum, düşük ağırlıklı doğum, anne ölümü ve perinatal ölüm riskini azaltır.",
+      "D": "İzlemler yalnızca eğitimli olmayan kişilerce ve düzensiz yapılmalıdır.",
+      "E": "Doğum öncesi bakım yalnızca yüksek riskli gebelere önerilir; sağlıklılarda gereksizdir."
+     },
+     "dogru": "C",
+     "aciklama": "DÖB; anne ve fetüsün tüm gebelik boyunca eğitimli sağlık personelince düzenli aralıklarla izlenmesidir; ölü doğum, düşük ağırlıklı doğum, anne ölümü ve perinatal ölüm riskini azaltır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sayılan riskleri azalttığı belirtilmiştir.",
+      "B": "Yanlış; tüm gebelik boyunca düzenli izlemdir.",
+      "C": "Doğru. Tanım ve yararlar birlikte verilmiştir.",
+      "D": "Yanlış; eğitimli personel ve düzenli aralık esastır.",
+      "E": "Yanlış; tüm gebelere önerilir."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Doğum öncesi bakımın tarihçesiyle ilgili bir sınav sorusunda şu bilgiler verilmiştir: 20. yüzyıl başında ABD'de fetal anomalileri önlemek için ortaya atıldı; Boston'da ev ziyaretleri ve 1915 Johns Hopkins deneyimi prematürite ölümlerini azalttı; Türkiye'de 1961'de 224 sayılı kanunla gebe-bebek-çocuk takibi sağlık ocaklarına görev verildi; 2003 Sağlıkta Dönüşüm Programı anne-çocuğa önem verdi. Bu bilgilerle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "ABD'de 20. yüzyıl başı - fetal anomalileri önleme amacıyla DÖB fikrinin ortaya atılması",
+      "B": "1915 Johns Hopkins deneyimi - prematürite ölümlerinde azalma",
+      "C": "1961, 224 sayılı kanun - gebe-bebek-çocuk takibinin sağlık ocaklarına görev verilmesi",
+      "D": "2003 Sağlıkta Dönüşüm Programı - anne ve çocuk sağlığına verilen önemin artması",
+      "E": "Boston ev ziyaretleri - sezaryen oranlarındaki artışın temel nedeni"
+     },
+     "dogru": "E",
+     "aciklama": "Boston'daki ev ziyaretleri prematürite ölümlerini azaltan erken DÖB deneyimlerindendir; sezaryen artışıyla ilişkisi yoktur.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme.",
+      "B": "Doğru eşleştirme.",
+      "C": "Doğru eşleştirme.",
+      "D": "Doğru eşleştirme.",
+      "E": "Yanlış eşleştirme (aranan cevap). Boston ev ziyaretleri prematürite ölümlerini azaltmıştır."
+     },
+     "bilgi": [
+      10,
+      11
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Doğum öncesi bakımın tanımı ve sağladığı yarar açısından doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Eğitimli personelce düzenli gebelik izlemi",
+      "B": "Yalnızca doğum anındaki yardım",
+      "C": "Sadece doğum sonrası bebek bakımı",
+      "D": "Acil durumda tek muayene",
+      "E": "Geleneksel ebeyle evde takip"
+     },
+     "dogru": "A",
+     "aciklama": "Doğum öncesi bakım, eğitimli sağlık personelinin anne ve fetüsü gebelik boyunca düzenli aralıklarla izlemesi, muayene etmesi ve eğitmesidir. Düzenli izlem; hipertansiyon, anemi, enfeksiyon ve fetal geliş geriliği gibi durumların erken yakalanmasını sağlar. Bu erken müdahale zinciri ölü doğum, düşük doğum ağırlığı, anne ölümü ve perinatal ölüm risklerini azaltır.",
+     "sik_aciklamalari": {
+      "A": "Doğru; tanım düzenli izlemi, yararı ölüm risklerinde azalmayı içerir.",
+      "B": "Yanlış; DÖB tüm gebelik boyunca sürer, doğum anıyla sınırlı değildir.",
+      "C": "Yanlış; DÖB gebelik dönemini kapsar, doğum sonrasını değil.",
+      "D": "Yanlış; tek muayene periyodik izlemin yerini tutmaz.",
+      "E": "Yanlış; bakımın eğitimli sağlık personelince verilmesi esastır."
+     },
+     "bilgi": [
+      8,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Doğum öncesi bakımın tarihçesiyle ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "DÖB 19. yüzyılda Türkiye'de başlamıştır",
+      "B": "Johns Hopkins DÖB'ün zararını göstermiştir",
+      "C": "1961'de 224 sayılı kanun takibi",
+      "D": "Boston ev ziyaretleri hiç yapılmamıştır",
+      "E": "2003 programı anne-çocuğu dışlamıştır"
+     },
+     "dogru": "C",
+     "aciklama": "Doğum öncesi bakım fikri 20. yüzyıl başında ABD'de fetal anomalileri önleme amacıyla doğmuş, Boston Hemşireler Birliği ev ziyaretleriyle uygulamaya geçmiştir. Johns Hopkins'in 1915 deneyimi, düzenli bakımın özellikle prematüriteye bağlı ölümleri azalttığını göstermiştir. Türkiye'de 1961'de 224 sayılı Sosyalleştirme Kanunu gebe-bebek-çocuk takibini sağlık ocaklarına vermiş, 2003 Sağlıkta Dönüşüm Programı anne-çocuğa özel önem vurgulamıştır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; fikir 20. yüzyıl başında ABD'de ortaya atılmıştır.",
+      "B": "Yanlış; 1915 deneyimi prematürite ölümlerinde azalma göstermiştir.",
+      "C": "Doğru; 224 sayılı kanun takibi sağlık ocaklarına görev vermiştir.",
+      "D": "Yanlış; Boston Hemşireler Birliği ev ziyaretlerini başlatmıştır.",
+      "E": "Yanlış; 2003 programı anne ve çocuklara özel önem vurgulamıştır."
+     },
+     "bilgi": [
+      10,
+      11
      ],
      "benzer_cikmis": []
     }
@@ -437,6 +867,115 @@
      "benzer_cikmis": [
       "37d39f04ae0a"
      ]
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bir araştırmacı, iki farklı bölgedeki doğum öncesi bakımın yeterliliğini Kessner indeksiyle karşılaştırmak istemektedir. Kessner indeksinin ölçütleriyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca gebenin yaşı ve paritesi.",
+      "B": "Bakımın hangi ay başladığı, doğuma kadar kaç kez izlendiği ve bakımın yapıldığı yer (bakım kalitesi).",
+      "C": "Yalnızca doğumun sezaryenle yapılıp yapılmadığı.",
+      "D": "Yalnızca bebek doğum ağırlığı.",
+      "E": "Yalnızca gebenin eğitim düzeyi."
+     },
+     "dogru": "B",
+     "aciklama": "Kessner indeksi; DÖB'ün hangi ay başladığı, doğuma kadar kaç kez izlendiği ve bakımın yapıldığı yer ölçütlerine dayanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bunlar indeks ölçütü değildir.",
+      "B": "Doğru. Üç ölçüt birlikte değerlendirilir.",
+      "C": "Yanlış; doğum şekli indeks kapsamında değildir.",
+      "D": "Yanlış; doğum ağırlığı sonuç göstergesidir.",
+      "E": "Yanlış; eğitim düzeyi indeks ölçütü değildir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Türkiye'de gebe izlem sayısı tarihçesi ve yeterli bakım ölçütleriyle ilgili şu bilgiler verilmiştir: sosyalleştirmede toplam 13 izlem öngörülmüş, 2001'de 6'ya, 2009'da 4'e inmiştir; yeterli bakımın ölçütleri bakımın sağlık personelince verilmesi ve gebeliğin ilk 3 ayında başlamasıdır. Aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sosyalleştirme döneminde öngörülen toplam izlem sayısı 13'tür.",
+      "B": "İzlem sayısı 2001'de 6'ya, 2009'da 4'e indirilmiştir.",
+      "C": "Yeterli bakım için bakımın sağlık personelince verilmesi ve ilk 3 ayda başlaması gerekir.",
+      "D": "İzlem sayısındaki azalma, bakımın geç başlanmasının yeterli kabul edildiği anlamına gelir.",
+      "E": "Kessner indeksinde bakımın başlama zamanı ve izlem sayısı birlikte değerlendirilir."
+     },
+     "dogru": "D",
+     "aciklama": "İzlem sayısındaki değişim, yeterli bakım ölçütlerini (sağlık personeli + ilk 3 ayda başlama) ortadan kaldırmaz; geç başlama yeterli kabul edilmez.",
+     "sik_aciklamalari": {
+      "A": "Doğru; sosyalleştirmede 13 izlem öngörülmüştür.",
+      "B": "Doğru; 2001'de 6, 2009'da 4'e inmiştir.",
+      "C": "Doğru; yeterli bakımın iki ölçütüdür.",
+      "D": "Yanlış (aranan cevap). Sayı azalması geç başlamayı yeterli kılmaz.",
+      "E": "Doğru; Kessner başlama zamanı ve sayıyı birlikte değerlendirir."
+     },
+     "bilgi": [
+      12,
+      13,
+      14
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Yeterli doğum öncesi bakım alma ölçütleri hangileridir?",
+     "secenekler": {
+      "A": "İzlem 5. ayda başlamalıdır",
+      "B": "Tek izlem yeterlidir",
+      "C": "Bakımı akraba verebilir",
+      "D": "Başlama ayı önemli değildir",
+      "E": "Personel bakımı, ilk 3 ay, 4 izlem"
+     },
+     "dogru": "E",
+     "aciklama": "Yeterli doğum öncesi bakım için üç koşul birlikte aranır: bakımın eğitimli sağlık personelince verilmesi, gebeliğin ilk üç ayı içinde başlaması ve gebelik boyunca en az dört izlem yapılması. Erken başlama, riskli durumların ve fetal anomalilerin zamanında yakalanmasını sağlar. Dört izlem eşiği, güncel Sağlık Bakanlığı takvimindeki dört vizite karşılık gelir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; izlemin ilk 3 ayda başlaması gerekir, 5. ay geçtir.",
+      "B": "Yanlış; gebelik boyunca en az 4 izlem şarttır.",
+      "C": "Yanlış; bakımın sağlık personelince verilmesi zorunludur.",
+      "D": "Yanlış; erken başlama yeterliliğin temel ölçütüdür.",
+      "E": "Doğru; üç ölçüt birlikte yeterli bakımı tanımlar."
+     },
+     "bilgi": [
+      14
+     ],
+     "benzer_cikmis": [
+      "37d39f04ae0a",
+      "fe74dc7053d7"
+     ]
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kessner indeksinin ölçtüğü bileşenler hangileridir?",
+     "secenekler": {
+      "A": "Yalnızca anne yaşını ölçer",
+      "B": "Başlama ayı, izlem sayısı, bakım yeri",
+      "C": "Yalnızca bebek ağırlığını ölçer",
+      "D": "Sadece sezaryen oranını ölçer",
+      "E": "Yalnızca aşı sayısını ölçer"
+     },
+     "dogru": "B",
+     "aciklama": "Kessner indeksi doğum öncesi bakımın kalitesini üç bileşenle ölçer: bakımın gebeliğin kaçıncı ayında başladığı, doğuma kadar toplam izlem sayısı ve bakımın yapıldığı yer. Erken başlama ve yeterli sayı, risklerin erken saptanma olasılığını artırır. Bakım yerinin kayda girmesi, hizmetin niteliği ve erişimi hakkında bilgi verir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; indeks bakımın zamanlama ve sunum özelliklerini ölçer.",
+      "B": "Doğru; üç bileşen bakım kalitesini birlikte gösterir.",
+      "C": "Yanlış; bebek ağırlığı indeksin bileşeni değildir.",
+      "D": "Yanlış; sezaryen oranı indeksle ölçülmez.",
+      "E": "Yanlış; aşı sayısı Kessner bileşeni değildir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -565,6 +1104,117 @@
       20
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "28. haftasında kontrole gelen, takipleri düzenli bir gebenin kaçıncı izlemde olduğu ve bu izlemde yapılması gerekenler sorulmaktadır. Gebe izlem takvimine göre aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "3. izlem (28-32. hafta) yapılmaktadır; doğum, emzirme, postpartum aile planlaması danışmanlığı ve fetal değerlendirme bu izlemin içeriğindedir.",
+      "B": "2. izlem (18-24. hafta) yapılmaktadır; glukoz taraması bu döneme aittir.",
+      "C": "1. izlem (0-14. hafta) yapılmaktadır; ilk öykü ve laboratuvar bu haftada alınır.",
+      "D": "4. izlem (36-38. hafta) yapılmaktadır; Leopold manevraları daha erken haftada yapılır.",
+      "E": "İzlem haftaları sabittir ve 28. hafta hiçbir izleme denk gelmez."
+     },
+     "dogru": "A",
+     "aciklama": "Takvim: 1. izlem 0-14, 2. izlem 18-24, 3. izlem 28-32, 4. izlem 36-38. haftadır; 3. izlemde doğum-emzirme-postpartum aile planlaması danışmanlığı yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. 28. hafta 3. izleme girer ve danışmanlık içeriği doğrudur.",
+      "B": "Yanlış; 18-24. hafta 2. izlemdir.",
+      "C": "Yanlış; 0-14. hafta 1. izlemdir, 28. hafta değildir.",
+      "D": "Yanlış; 36-38. hafta 4. izlemdir.",
+      "E": "Yanlış; 28. hafta 3. izlem aralığındadır."
+     },
+     "bilgi": [
+      16,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Dört izlemini tamamlayan gebenin dosyasını inceleyen hekim izlem içeriklerini karşılaştırırken gebe izlem içerikleriyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "1. izlem - kişisel/tıbbi/obstetrik öykü (~30 dk), fizik muayene, idrar, Hb-Htc, kan grubu, HBsAg, demir ve tetanoz, danışmanlık",
+      "B": "2. izlem - ağırlık, kan basıncı, anemi, uterus yüksekliği, ödem, fetal kalp sesleri, indirekt Coombs ve 24-28. haftada glukoz taraması",
+      "C": "1. izlem - 24-28. haftada glukoz taraması ve Leopold manevraları; 4. izlem - ilk öykü alımı ve kan grubu tayini",
+      "D": "4. izlem - Leopold manevraları ve obstetrik vajinal muayene",
+      "E": "3. izlem - doğum, emzirme ve postpartum aile planlaması danışmanlığı"
+     },
+     "dogru": "C",
+     "aciklama": "Glukoz taraması 2. izlemin (24-28. hafta), Leopold ve vajinal muayene 4. izlemin, ilk öykü ve kan grubu 1. izlemin içeriğidir; E seçeneği içerikleri ters eşleştirmiştir.",
+     "sik_aciklamalari": {
+      "A": "Doğru eşleştirme.",
+      "B": "Doğru eşleştirme.",
+      "C": "Yanlış eşleştirme (aranan cevap). İçerikler izlemler arasında karıştırılmıştır.",
+      "D": "Doğru eşleştirme.",
+      "E": "Doğru eşleştirme."
+     },
+     "bilgi": [
+      17,
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Sağlık Bakanlığı güncel gebe izlem takvimi nasıldır?",
+     "secenekler": {
+      "A": "2 izlem: 10 ve 30. hafta",
+      "B": "6 izlem eşit aralıklarla",
+      "C": "13 izlem her ay",
+      "D": "0-14, 18-24, 28-32, 36-38. hafta",
+      "E": "Tek izlem doğumda yapılır"
+     },
+     "dogru": "D",
+     "aciklama": "Güncel Sağlık Bakanlığı takvimi gebelikte dört izlem öngörür ve her biri kritik bir pencereye denk getirilir. İlk izlem 0-14. haftada erken risk değerlendirmesi için, ikinci 18-24. haftada anomali ve diyabet taraması için yapılır. Üçüncü izlem 28-32. haftada doğuma hazırlığı, dördüncü 36-38. haftada doğum planını netleştirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; güncel takvim dört izlem ve farklı haftalardadır.",
+      "B": "Yanlış; 6 izlem 2001 yönergesinde kalmıştır.",
+      "C": "Yanlış; 13 izlem sosyalleştirme dönemine aittir.",
+      "D": "Doğru; dört izlemin hafta aralıkları güncel rehbere uyar.",
+      "E": "Yanlış; doğumda yapılan tek değerlendirme izlem değildir."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Birinci gebe izleminin içeriğiyle ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "30 dk öykü, idrar, Hb, kan grubu, HBsAg",
+      "B": "Yalnızca kilo ölçümü yapılır",
+      "C": "Laboratuvar hiç istenmez",
+      "D": "Demir ve tetanoz verilmez",
+      "E": "Fetal kalp sesi hiç dinlenmez"
+     },
+     "dogru": "A",
+     "aciklama": "Birinci izlem yaklaşık 30 dakikalık ayrıntılı öyküyle başlar; eğitim, ekonomik durum, akrabalık, tıbbi ve obstetrik öykü alınır. Fizik muayenede boy, kilo, kan basıncı, uterus büyüklüğü, anemi ve ödem değerlendirilir. Laboratuvarda idrar (bakteriüri, proteinüri), Hb-Htc, kan grubu ve HBsAg bakılır; demir desteği ve tetanoz aşısı başlatılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru; birinci izlemin öykü, muayene ve laboratuvar içeriğini özetler.",
+      "B": "Yanlış; kilo yanında tansiyon, uterus, ödem ve laboratuvar bakılır.",
+      "C": "Yanlış; idrar, Hb-Htc, kan grubu ve HBsAg istenir.",
+      "D": "Yanlış; demir desteği ve tetanoz immünizasyonu başlatılır.",
+      "E": "Yanlış; dopplerle 10-12, steteskopla 16-20. haftada dinlenir."
+     },
+     "bilgi": [
+      17,
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": [
@@ -663,6 +1313,113 @@
       23
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "34 haftalık gebe, şiddetli baş ağrısı, görme bozukluğu ve ellerde-yüzde belirgin ödemle başvuruyor; ayrıca vajinal kanaması da başlamış. Aile hekiminin yaklaşımıyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bu bulgular normal gebelik yakınmalarıdır; izleme evde devam edilir.",
+      "B": "Ödem gebelikte her zaman fizyolojiktir ve asla sevk nedeni değildir.",
+      "C": "Tehlike işareti yalnızca ateş ve solunum güçlüğüdür; bu hastada sevk gerekmez.",
+      "D": "Fetus hareketleri azalmadıkça hiçbir bulgu sevk gerektirmez.",
+      "E": "Vajinal kanama, baş ağrısı-görme bozukluğu ve ödem gebelikte tehlike işaretlerindendir; hasta sevk edilmelidir."
+     },
+     "dogru": "E",
+     "aciklama": "Tehlike işaretleri: vajinal kanama, konvülsiyon, baş ağrısı-görme bozukluğu, ateş, ciddi karın ağrısı, solunum güçlüğü, suyun gelmesi, ödem ve ileri haftalarda fetus hareketlerinde azalmadır; sevk gerekir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bulgular tehlike işaretidir.",
+      "B": "Yanlış; ödem tehlike işaretleri arasındadır.",
+      "C": "Yanlış; tehlike işaretleri sayılanlarla sınırlı değildir.",
+      "D": "Yanlış; diğer tehlike işaretleri de sevk gerektirir.",
+      "E": "Doğru. Kanama, baş ağrısı-görme bozukluğu ve ödem tehlike işaretidir ve sevk gerekir."
+     },
+     "bilgi": [
+      21,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "17. haftasındaki gebenin test zamanlaması ve sevk ölçütleri tartışılırken üçlü test ve sevk ölçütleriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Üçlü test beta-hCG ve AFP belirteçleriyle trizomi 21, nöral tüp defekti ve trizomi 18 olasılığını araştırır.",
+      "B": "Üçlü test kesin tanı testidir; sonucu pozitif olan gebede ek değerlendirmeye gerek yoktur.",
+      "C": "Hb < 7 g/dl, kanama, preeklampsi/HT/proteinüri, uterus yüksekliğinin ±4 cm farkı, fetal kalp sesi alınamaması, inatçı bakteriüri ve sistemik hastalık sevk gerektirir.",
+      "D": "Üçlü test 15-22. haftada, ideal olarak 16-18. haftada yapılır.",
+      "E": "Tehlike işareti saptanan her gebe ileri değerlendirme için sevk edilmelidir."
+     },
+     "dogru": "B",
+     "aciklama": "Üçlü test bir tarama testidir, olasılık verir; kesin tanı koydurmaz ve pozitiflikte ileri değerlendirme (danışmanlık, tanısal testler) gerekir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; belirteçler ve taranan durumlar doğrudur.",
+      "B": "Yanlış (aranan cevap). Üçlü test taramadır, kesin tanı değildir.",
+      "C": "Doğru; sayılan durumlar sevk ölçütleridir.",
+      "D": "Doğru; zamanlama 15-22. hafta, ideal 16-18. haftadır.",
+      "E": "Doğru; tehlike işareti sevk gerektirir."
+     },
+     "bilgi": [
+      22,
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Üçlü testin yapılma zamanı ve taradığı durumlar hangileridir?",
+     "secenekler": {
+      "A": "Üçlü test 30. haftada yapılır",
+      "B": "Üçlü test cinsiyet belirler",
+      "C": "15-22. hafta; trizomi 21, 18, NTD",
+      "D": "AFP üçlü testte bakılmaz",
+      "E": "İdeal zaman doğum haftasıdır"
+     },
+     "dogru": "C",
+     "aciklama": "Üçlü test, maternal serumda beta-hCG ve AFP gibi belirteçleri ölçerek Down sendromu (trizomi 21), trizomi 18 ve nöral tüp defekti olasılığını hesaplar. Test 15-22. haftalar arasında yapılır; en ideal pencere 16-18. haftadır çünkü belirteç düzeyleri bu dönemde en ayırt edicidir. Ense kalınlığı ölçümü de kromozom bozuklukları açısından tamamlayıcı ultrason bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; test 15-22. haftada yapılır.",
+      "B": "Yanlış; test anomali olasılığını hesaplar, cinsiyet belirlemez.",
+      "C": "Doğru; zaman penceresi ve taranan üç durumu birlikte verir.",
+      "D": "Yanlış; AFP beta-hCG ile birlikte temel belirteçtir.",
+      "E": "Yanlış; ideal pencere 16-18. haftadır."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Gebelikte üst basamağa sevk gerektiren bulgular hangileridir?",
+     "secenekler": {
+      "A": "Hb 12 g/dl sevk gerektirir",
+      "B": "Fetal kalp sesi duyulması sevk nedenidir",
+      "C": "Hafif bulantı sevk gerektirir",
+      "D": "Normal uterus ölçüsü sevk nedenidir",
+      "E": "Hb<7, ±4 cm sapma, kalp sesi yokluğu"
+     },
+     "dogru": "E",
+     "aciklama": "Sevk kararı, anne veya fetüs için acil risk taşıyan bulgularda verilir: Hb'nin 7 g/dl'nin altına düşmesi ciddi anemiyi, uterus yüksekliğinin beklenenden ±4 cm sapması gelişme sorunu veya çoğul gebeliği düşündürür. Fetal kalp seslerinin duyulmaması fetal distres ya da kayıp açısından alarmdır. Bunlara tehlike işaretleri (kanama, konvülsiyon, suyun gelmesi gibi) ve inatçı bakteriüri ile sistemik hastalıklar da eklenir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sevk eşiği Hb < 7 g/dl'dir.",
+      "B": "Yanlış; duyulmaması sevk nedenidir, duyulması normaldir.",
+      "C": "Yanlış; olağan yakınmalar sevk değil danışmanlık konusudur.",
+      "D": "Yanlış; beklenen ölçü normaldir, ±4 cm sapma sevki gerektirir.",
+      "E": "Doğru; üçü de üst basamağa sevk ölçütüdür."
+     },
+     "bilgi": [
+      21,
+      23
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -747,6 +1504,112 @@
       "E": "Yanlış ifade (aranan cevap): son trimesterde görülür."
      },
      "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Gebeliğinin 6. ayında toplam 6 kg almış bir kadın, kilo artışının normal olup olmadığını sormaktadır. Ders paketindeki ölçütlere göre (toplam 9-13 kg; ilk 3 ayda 1 kg, sonrasında ayda 1,5-2 kg) aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İlk 3 ayda 5 kg alınması beklenir.",
+      "B": "6. ayda 6 kg kesinlikle patolojiktir ve gebelik sonlandırılmalıdır.",
+      "C": "Gebelikte hiç kilo alınmaması normaldir.",
+      "D": "Artış beklenen aralıktadır; toplam artışın ~3,5 kg'ı fetus/plasenta/amniyon, ~1 kg'ı meme, kalanı kan hacmi ve yağ dokusundandır.",
+      "E": "Kilo artışının dağılımının bilinmesi klinik olarak gereksizdir."
+     },
+     "dogru": "D",
+     "aciklama": "Toplam 9-13 kg; ilk 3 ayda 1 kg, sonra ayda 1,5-2 kg. 6. ayda ~6 kg bu paterne uyar; dağılım fetus/plasenta/amniyon ~3,5 kg, meme ~1 kg, kalan kan hacmi ve yağdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ilk 3 ayda ~1 kg beklenir.",
+      "B": "Yanlış; bu artış normal aralıktadır.",
+      "C": "Yanlış; 9-13 kg artış beklenir.",
+      "D": "Doğru. Kilo paterni ve dağılım ölçütlere uygundur.",
+      "E": "Yanlış; dağılımın bilinmesi ödem ve beslenme değerlendirmesinde önemlidir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Altıncı ayda 6 kg alan gebenin takibinde ödem ve kan basıncı bulguları izlenirken gebelikte ödem nedenleri ve toksemiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Gebelikte görülen her ödem fizyolojiktir; hipertansiyon ve proteinüri eşlik etse bile değerlendirme gerekmez.",
+      "B": "Gebelik toksemisi son 3 ayda hipertansiyon, ödem ve proteinüri ile ortaya çıkar.",
+      "C": "Konvülsiyon ve koma eklenirse tablo eklampsi adını alır.",
+      "D": "Ödem nedenleri arasında şiddetli anemi, kronik böbrek/kalp hastalığı, çoğul gebelik, hidramnios, protein yetmezliği, uzun süre ayakta kalma ve toksemi sayılır.",
+      "E": "Hipertansiyon + ödem + proteinüri üçlüsü toksemi yönünden uyarıcıdır."
+     },
+     "dogru": "A",
+     "aciklama": "Hipertansiyon ve proteinüriyle birlikte ödem toksemi bulgusudur; her ödem fizyolojik sayılamaz, değerlendirme gerekir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış (aranan cevap). Eşlik eden HT ve proteinüri toksemiyi düşündürür.",
+      "B": "Doğru; toksemi tanımı ve zamanlaması doğrudur.",
+      "C": "Doğru; konvülsiyon/koma eklampsiyi tanımlar.",
+      "D": "Doğru; ödem nedenleri eksiksiz sayılmıştır.",
+      "E": "Doğru; üçlü uyarıcıdır."
+     },
+     "bilgi": [
+      25,
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Gebelikte beklenen kilo alımı örüntüsü nasıldır?",
+     "secenekler": {
+      "A": "Toplam artış 1-2 kg'dır",
+      "B": "Toplam 9-13 kg; sonra ayda 1,5-2",
+      "C": "İlk 3 ayda 10 kg alınır",
+      "D": "Kilo alımı tamamen yağdır",
+      "E": "Gebelikte kilo kaybı beklenir"
+     },
+     "dogru": "B",
+     "aciklama": "Normal gebelikte toplam ağırlık artışı 9-13 kg'dır; ilk üç ayda yalnızca ~1 kg alınırken sonraki aylarda ayda 1,5-2 kg artış olur. Artışın yaklaşık 3,5 kg'ı fetus, plasenta ve amniyon sıvısına, ~1 kg'ı memelere aittir. Kalan kısım kan hacmi genişlemesi ve yağ depolanmasından gelir; bu dağılım maternal-fetal fizyolojik adaptasyonu yansıtır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; normal toplam artış 9-13 kg aralığındadır.",
+      "B": "Doğru; toplam ve aylık artış örüntüsünü verir.",
+      "C": "Yanlış; ilk 3 ayda artış yalnızca ~1 kg'dır.",
+      "D": "Yanlış; fetus-plasenta, meme, kan hacmi ve yağ paylaşır.",
+      "E": "Yanlış; gebelikte düzenli kilo artışı fizyolojiktir."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Gebelik toksemisinin klinik tablosu ve eklampsiden ayrımı nedir?",
+     "secenekler": {
+      "A": "Toksemi ilk ayda başlar",
+      "B": "Preeklampside tansiyon normaldir",
+      "C": "Eklampside konvülsiyon olmaz",
+      "D": "HT, ödem, proteinüri; konvülsiyon eklampsi",
+      "E": "Ödem yalnızca ayakta kalmadan olur"
+     },
+     "dogru": "D",
+     "aciklama": "Gebelik toksemisi son üç ayda hipertansiyon, ödem ve proteinüri üçlüsüyle ortaya çıkar; plasental kaynaklı vasküler bozukluk zemininde gelişir. Tabloya konvülsiyon veya koma eklenirse eklampsi adını alır. İlk gebelik, 35 yaş üstü, çoğul gebelik, hidramnios, kronik böbrek hastalığı ve diyabet riski artırır; şiddetli anemi ve kalp-böbrek hastalıkları da ödemin diğer nedenleridir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; toksemi son 3 ayın tablosudur.",
+      "B": "Yanlış; hipertansiyon tanı üçlüsünün parçasıdır.",
+      "C": "Yanlış; konvülsiyon-koma eklenmesi eklampsiyi tanımlar.",
+      "D": "Doğru; preeklampsi-eklampsi ayrımını ve üçlüyü verir.",
+      "E": "Yanlış; anemi, böbrek-kalp hastalığı ve toksemi de ödem yapar."
+     },
+     "bilgi": [
+      25,
       26
      ],
      "benzer_cikmis": []
@@ -850,6 +1713,110 @@
       28
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Türkiye doğum öncesi bakım göstergeleri: kadınların çoğu (%90) uzman personelden DÖB almış, kırsalda 4+ DÖB oranı %84, demir ve tetanoz oranı %81'dir. Bu tabloyla ilgili aşağıdaki yorumlardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Uzman personelden DÖB alma oranı düşüktür ve hizmete erişim yoktur.",
+      "B": "Demir ve tetanoz uygulaması DÖB kapsamında değildir.",
+      "C": "Kapsayıcılık görece yüksektir; ancak kırsalda 4+ izlem ve demir-tetanos oranlarındaki açıklar hizmetin nitelik ve sürekliliğinin güçlendirilmesi gerektiğini gösterir.",
+      "D": "Kırsalda izlem oranları kentten her zaman yüksektir.",
+      "E": "%90'lık oran, izlem içeriklerinin tam verildiğini garanti eder."
+     },
+     "dogru": "C",
+     "aciklama": "%90 uzman personelden bakım ve kırsalda %84 4+ izlem görece iyi kapsayıcılıktır; %81 demir-tetanos ve kırsaldaki açık nitelik-süreklilik güçlendirmeyi gerektirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; %90 yüksek bir kapsayıcılıktır.",
+      "B": "Yanlış; demir ve tetanoz 1. izlem içeriğindendir.",
+      "C": "Doğru. Kapsayıcılık yüksek olmakla birlikte nitelik/süreklilik açıkları vardır.",
+      "D": "Yanlış; genelde kırsal oranlar daha düşüktür.",
+      "E": "Yanlış; oran içeriğin tamlığını garanti etmez."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Türkiye'de doğum ve sezaryen göstergeleri: doğumların neredeyse tamamı sağlık kuruluşunda (%96) ve %99'u eğitimli personelce yapılır; sezaryen oranı %52'dir ve çoğu gereksizdir. Aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Doğumların sağlık kuruluşunda ve eğitimli personelce yapılma oranları çok yüksektir.",
+      "B": "%52'lik sezaryen oranı yüksektir ve çoğunun gereksiz olduğu belirtilmektedir.",
+      "C": "Eğitimli personelce yaptırılma oranının %99 olması anne-çocuk güvenliği açısından olumludur.",
+      "D": "Sezaryen oranındaki yükseklik, gereksiz sezaryenlerin azaltılmasına yönelik politikaları gündeme getirir.",
+      "E": "Kuruluşta doğum oranının yüksekliği, sezaryen endikasyonlarının her zaman yerinde konulduğu anlamına gelir."
+     },
+     "dogru": "E",
+     "aciklama": "Kuruluşta doğumun yaygınlığı hizmete erişimi gösterir; ancak %52 sezaryen oranının çoğunun gereksiz olması endikasyonların gözden geçirilmesi gerektiğini gösterir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; %96 ve %99 çok yüksektir.",
+      "B": "Doğru; %52 yüksek ve çoğu gereksizdir.",
+      "C": "Doğru; olumlu bir göstergedir.",
+      "D": "Doğru; politika gereksinimi açıktır.",
+      "E": "Yanlış (aranan cevap). Yüksek kuruluş doğumu, endikasyon yerindeliğini garanti etmez."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "TNSA-2018'e göre Türkiye'de doğum öncesi bakım kapsamı nasıldır?",
+     "secenekler": {
+      "A": "DÖB %90; kırsalda 4+ izlem %84",
+      "B": "DÖB alan kadın yok denecek kadar azdır",
+      "C": "Demir-tetanos %100'dür",
+      "D": "Kırsalda izlem daha yüksektir",
+      "E": "Uzman bakımı %10'un altındadır"
+     },
+     "dogru": "A",
+     "aciklama": "TNSA-2018'e göre kadınların çoğu (%90) son doğumunda uzman sağlık personelinden doğum öncesi bakım almış, ~%90'ı dört ve daha fazla izlem yaptırmıştır. Kırsalda dört ve üzeri izlem %84'e düşer; bu fark erişim eşitsizliğini gösterir. Demir takviyesi ve tetanoz aşısı %81 düzeyindedir; alınmama nedenleri arasında maddi sorunlar, gerek görmeme ve ulaşım yer alır.",
+     "sik_aciklamalari": {
+      "A": "Doğru; genel kapsam yüksek, kırsalda bir miktar düşüktür.",
+      "B": "Yanlış; kadınların çoğu uzman personelden bakım almıştır.",
+      "C": "Yanlış; demir ve tetanos oranı %81'dir.",
+      "D": "Yanlış; kırsalda 4+ izlem %84 ile genelin altındadır.",
+      "E": "Yanlış; uzman bakımı %90 düzeyindedir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Türkiye'de doğum yeri ve sezaryen göstergeleri nasıl yorumlanır?",
+     "secenekler": {
+      "A": "Doğumların çoğu evde yapılır",
+      "B": "Sezaryen oranı %5'tir",
+      "C": "Kurumsal doğum ~%99; sezaryen %52",
+      "D": "Eğitimli personel doğuma katılmaz",
+      "E": "Sezaryenlerin tamamı zorunludur"
+     },
+     "dogru": "C",
+     "aciklama": "Doğumların neredeyse tamamı sağlık kuruluşunda ve %99'u doktor/eğitimli personel yardımıyla gerçekleşir; bu, kurumsal doğuma geçişin tamamlandığını gösterir. Buna karşılık sezaryen oranı %52 ile tıbbi gerekliliğin çok üstündedir ve çoğu gerekli değildir. İlk doğumda ilk 41 saatte doğum sonrası bakım %97 iken sonraki doğumlarda %90'a düşer.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; doğumların neredeyse tamamı sağlık kuruluşundadır.",
+      "B": "Yanlış; sezaryen tüm doğumların %52'sidir.",
+      "C": "Doğru; yüksek kurumsal doğumla aşırı sezaryen bir aradadır.",
+      "D": "Yanlış; %99'u eğitimli personelce yaptırılır.",
+      "E": "Yanlış; sezaryenlerin çoğu gerekli/zorunlu değildir."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -930,6 +1897,110 @@
       "C": "Sıklık yılda 2'dir; bu nedenle doğru seçenek değildir.",
       "D": "Üreme çağı kadınları izlenir.",
       "E": "Amaçları daha geniştir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k10-q04",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Normal vajinal doğum yapan bir kadın taburcu edilirken lohusa izlem planı anlatılmaktadır. Ders paketine göre aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Lohusa izlemi gerekmez; doğumla hizmet tamamlanır.",
+      "B": "Doğumun ertesi günü 1 kez ve lohusalıkta 2 kez daha olmak üzere toplam 3 kez izlenir; amaç puerperal sepsis, mastit ve idrar yolu enfeksiyonu tespiti ile eğitimdir.",
+      "C": "Lohusa yalnızca bir kez, doğumdan 40 gün sonra görülür.",
+      "D": "İzlemin amacı yalnızca bebek bakımı eğitimidir; anne enfeksiyonları izlenmez.",
+      "E": "Lohusalıkta enfeksiyon takibi yapılmaz."
+     },
+     "dogru": "B",
+     "aciklama": "Lohusa izlemi toplam 3 kezdir (ertesi gün 1 + lohusalıkta 2); amaç puerperal sepsis, mastit, İYE tespiti ve eğitimdir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; 3 kez izlem öngörülmüştür.",
+      "B": "Doğru. Sayı, zamanlama ve amaç birlikte doğrudur.",
+      "C": "Yanlış; takvim ertesi gün başlar ve toplam 3'tür.",
+      "D": "Yanlış; anne enfeksiyonları da izlenir.",
+      "E": "Yanlış; enfeksiyon tespiti izlemin amaçlarındandır."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k10-q05",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Taburcu edilen lohusanın izlem planı ile gebe olmayan kadınların yıllık takibi anlatılırken gebe ve lohusa olmayan kadın izlemiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Amaçlar arasında aile planlaması hizmeti, gebeliğin erken tespiti ve riskli gebeliğe aday kadınların belirlenmesi vardır.",
+      "B": "İzlem yılda 2 kez yapılır.",
+      "C": "Riskli gebeliğe adayların önceden belirlenmesi, doğum öncesi bakımın erken başlamasına katkı sağlar.",
+      "D": "Bu izlemin aile planlamasıyla ilişkisi yoktur; yalnızca genel muayene yapılır.",
+      "E": "Gebeliğin erken tespiti, ilk 3 ayda bakım başlama ölçütüyle uyumludur."
+     },
+     "dogru": "D",
+     "aciklama": "Gebe-lohusa olmayan kadın izleminin amaçlarından biri aile planlaması hizmetidir; yılda 2 kez yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru; üç amaç birlikte sayılmıştır.",
+      "B": "Doğru; sıklık yılda 2'dir.",
+      "C": "Doğru; erken belirleme erken bakımı kolaylaştırır.",
+      "D": "Yanlış (aranan cevap). Aile planlaması bu izlemin amaçlarındandır.",
+      "E": "Doğru; erken tespit ilk trimesterde başlama ile uyumludur."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k10-q06",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Lohusa izleminin zamanlaması ve sayısı nasıldır?",
+     "secenekler": {
+      "A": "Lohusa hiç izlenmez",
+      "B": "Tek izlem 40. günde yapılır",
+      "C": "İzlem yılda 12 kezdir",
+      "D": "Amaç yalnızca aşı yapmaktır",
+      "E": "Ertesi gün + 2 kez; toplam 3"
+     },
+     "dogru": "E",
+     "aciklama": "Lohusa izlemi doğumun ertesi günü bir kez ve lohusalık boyunca iki kez olmak üzere toplam üç kez yapılır; DSÖ ilk 24 saatte bakım alınmasını önerir. Erken temas, puerperal sepsis, mastit ve idrar yolu enfeksiyonu gibi lohusalık patolojilerinin hızla yakalanmasını sağlar. İzlemlerde ayrıca bebek bakımı, beslenme, anne sütü ve aile planlaması eğitimi verilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; lohusalıkta toplam 3 izlem öngörülür.",
+      "B": "Yanlış; ilk temas doğumun ertesi günüdür.",
+      "C": "Yanlış; lohusalık izlem sayısı 3'tür.",
+      "D": "Yanlış; amaç patoloji tespiti ve eğitimdir.",
+      "E": "Doğru; zamanlama ve toplam sayı rehbere uyar."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Gebe-lohusa olmayan kadın izleminin amaçları ve sıklığı nedir?",
+     "secenekler": {
+      "A": "Amaç yalnızca infertilite tedavisidir",
+      "B": "Aile planlaması, erken tespit; yılda 2",
+      "C": "Yılda 6 kez izlenir",
+      "D": "Riskli aday tespiti amaçlanmaz",
+      "E": "İzlem 5 yılda bir yapılır"
+     },
+     "dogru": "B",
+     "aciklama": "Gebe ve lohusa olmayan kadın izlemi, aile planlaması hizmeti sunmayı, yeni gebelikleri erken tespit etmeyi ve riskli gebeliğe aday kadınları önceden belirlemeyi amaçlar. Bu sayede yüksek riskli gebelikler oluşmadan önlem alınabilir. İzlemler Ocak-Haziran ve Temmuz-Aralık dönemlerinde birer kez olmak üzere yılda iki kez yapılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; amaçlar planlama, erken tanı ve riskli aday tespitidir.",
+      "B": "Doğru; amaçları ve yılda iki kez sıklığı birlikte verir.",
+      "C": "Yanlış; sıklık her yarıyılda bir, toplam 2'dir.",
+      "D": "Yanlış; riskli gebeliğe aday tespiti temel amaçtır.",
+      "E": "Yanlış; izlem her dönem bir kez, yılda ikidir."
      },
      "bilgi": [
       30
@@ -1020,6 +2091,111 @@
       35
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k11-q04",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Aile hekimi, 3 haftalık bir bebeğin izlemde hangi dönemde olduğunu ve bu dönemlerin ortak sorunlarını değerlendirmektedir. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Neonatal dönem ilk 4 haftadır; bebek hâlâ neonatal dönemdedir. Bebeklik 1 yaşa, okul öncesi dönem 6 yaşa kadar sürer; ortak sorunlar enfeksiyon, beslenme, gelişim ve eğitimdir.",
+      "B": "Neonatal dönem ilk 1 yıldır.",
+      "C": "Bebeklik doğumda biter; okul öncesi dönem yoktur.",
+      "D": "Bu dönemlerde enfeksiyon ve beslenme sorunu görülmez.",
+      "E": "3 haftalık bebek okul öncesi dönemdedir."
+     },
+     "dogru": "A",
+     "aciklama": "Neonatal dönem ilk 4 hafta, bebeklik 1 yaşa kadar, okul öncesi 6 yaşa kadar sürer; ortak sorunlar enfeksiyon, beslenme, gelişim ve eğitimdir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Dönem sınırları ve ortak sorunlar doğrudur.",
+      "B": "Yanlış; neonatal dönem ilk 4 haftadır.",
+      "C": "Yanlış; bebeklik 1 yaşa kadardır.",
+      "D": "Yanlış; sayılan sorunlar bu dönemlerin ortak sorunlarıdır.",
+      "E": "Yanlış; 3 hafta neonatal dönemdir."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k11-q05",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "Üç haftalık bebeğin dönem sınıflaması ve ilk muayene içeriği değerlendirilirken yenidoğanın ilk ziyaret muayenesiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Deri, fontaneller, gözler, ağız, boyun, göbek, genital organlar ve kalça çıkığı değerlendirilir.",
+      "B": "Emme, Moro ve yakalama refleksleri değerlendirilir.",
+      "C": "İlk ziyarette yalnızca ağırlık ölçülür; fizik muayene ve refleks değerlendirmesi yapılmaz.",
+      "D": "Fontanel muayenesi büyüme-gelişme izleminin parçasıdır.",
+      "E": "Kalça çıkığı taraması ilk muayenenin öğelerindendir."
+     },
+     "dogru": "C",
+     "aciklama": "İlk ziyaret muayenesi kapsamlıdır: deri, fontaneller, gözler, ağız, boyun, göbek, genital organlar, kalça çıkığı ve refleksler (emme, Moro, yakalama) değerlendirilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; sayılan öğeler muayene içeriğindendir.",
+      "B": "Doğru; üç refleks değerlendirilir.",
+      "C": "Yanlış (aranan cevap). İlk ziyaret yalnızca tartımdan ibaret değildir.",
+      "D": "Doğru; fontanel takibi büyüme izlemindedir.",
+      "E": "Doğru; kalça çıkığı değerlendirilir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k11-q06",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Bebek-çocuk izlemlerinin amaçları ve dönem sınıflaması nasıldır?",
+     "secenekler": {
+      "A": "Amaç yalnızca boy ölçmektir",
+      "B": "Neonatal dönem 1 yıldır",
+      "C": "Aşılar izlem dışıdır",
+      "D": "Neonatal 4 hafta, bebeklik 1 yaş",
+      "E": "Beslenme izlemde yer almaz"
+     },
+     "dogru": "D",
+     "aciklama": "Bebek ve çocuk izlemleri doğuştan anomali ve patolojilerin erken tespiti, rutin aşıların tamamlanması ve büyüme-gelişmenin izlenmesini amaçlar. Beslenmenin düzenlenmesi, anne sütünün teşviki ve annenin bakımda desteklenmesi de bu kapsamdadır. Dönemler neonatal (ilk 4 hafta), bebeklik (1 yaşa kadar) ve okul öncesi (6 yaşa kadar) olarak ayrılır; her dönemin baskın sorunları (enfeksiyon, beslenme, gelişim) farklıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; amaçlar anomali tespiti, aşı, büyüme-gelişme ve eğitimdir.",
+      "B": "Yanlış; neonatal dönem ilk 4 haftadır.",
+      "C": "Yanlış; rutin aşılar izlemin temel öğesidir.",
+      "D": "Doğru; dönem sınırlarını ve amaç bütünlüğünü verir.",
+      "E": "Yanlış; beslenme düzenleme ve anne sütü teşviki amaçtandır."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k11-q07",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Bebek ve çocuk izlem takvimiyle ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Bebek 1-2 hastanede, 3. 1. haftada",
+      "B": "Çocuk izlemi yalnızca 5 yaştadır",
+      "C": "İlk ziyarette muayene yapılmaz",
+      "D": "Refleksler hiç değerlendirilmez",
+      "E": "Bebek izlemi 1 yaşta başlar"
+     },
+     "dogru": "A",
+     "aciklama": "Bebek izleminde ilk iki izlem hastanede, üçüncü izlem birinci haftada yapılır; böylece erken neonatal sorunlar kaçırılmaz. Çocuk izlemleri 1, 1,5, 2, 2,5, 3, 4 ve 5 yaşlarında olmak üzere yedi kez sürdürülür. İlk ziyaret muayenesinde deri, fontaneller, gözler, ağız, göbek, genital organlar, kalça ve yenidoğan refleksleri (emme, Moro, yakalama) değerlendirilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; bebek izlemlerinin yeri ve zamanlaması rehbere uyar.",
+      "B": "Yanlış; 1-5 yaş arasında yedi izlem yapılır.",
+      "C": "Yanlış; ilk ziyarette tam sistem muayenesi yapılır.",
+      "D": "Yanlış; emme, Moro ve yakalama refleksleri bakılır.",
+      "E": "Yanlış; izlemler doğumdan itibaren başlar."
+     },
+     "bilgi": [
+      32,
+      35
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1105,12 +2281,116 @@
       34
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k12-q04",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "9 aylık bir bebek desteksiz oturuyor, emekliyor ancak yürüyemiyor; 6 dişi çıkmış. Ailesi gelişimin geri olup olmadığını sormaktadır. Ders paketindeki basamaklara göre (1. ay başını hafifçe kaldırma, 2. ay başı dik tutma, 4. ay destekle oturma, 6. ay desteksiz oturma, 9. ay emekleme, 12. ay bir elden tutulunca yürüme; ilk süt dişleri 5-9. ay, 1 yaş 6-8 diş) aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bebekte belirgin gelişme geriliği vardır; 9. ayda bağımsız yürüme beklenir.",
+      "B": "Emekleme gelişim basamakları arasında değildir.",
+      "C": "Desteksiz oturma 12. aydan önce anormaldir.",
+      "D": "İlk dişlerin 2 yaşında çıkması beklenir.",
+      "E": "Bebeğin motor basamakları (desteksiz oturma, emekleme) ve diş sayısı (6 diş) yaşıyla uyumludur; bir elden tutulunca yürüme 12. ayda beklenir."
+     },
+     "dogru": "E",
+     "aciklama": "6. ay desteksiz oturma, 9. ay emekleme, 12. ay destekle yürüme; ilk dişler 5-9. ay, 1 yaşta 6-8 diş. 9 aylık bulgular normaldir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; bağımsız yürüme 9. ay basamağı değildir.",
+      "B": "Yanlış; emekleme 9. ay basamağıdır.",
+      "C": "Yanlış; desteksiz oturma 6. ay basamağıdır.",
+      "D": "Yanlış; ilk dişler 5-9. ayda çıkar.",
+      "E": "Doğru. Motor ve diş gelişimi yaşla uyumludur."
+     },
+     "bilgi": [
+      34,
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k12-q05",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Dokuz aylık bebeğin motor basamakları ve diş sayısı yaşıyla karşılaştırılırken büyüme ölçütleri ve çocuk izlem takvimiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ağırlık 5. ayda 2 katına, 1 yaşında 3 katına çıkar; baş çevresi 34-36 cm'dir; göğüs çevresi 12. ayda baş çevresine eşitlenir.",
+      "B": "Baş çevresi doğumda 50 cm'dir ve göğüs çevresi hiçbir zaman baş çevresine ulaşmaz.",
+      "C": "Çocuk izlemi 1, 1,5, 2, 2,5, 3, 4 ve 5 yaşlarında yapılır.",
+      "D": "2,5 yaşında 20 süt dişinin tamamlanması beklenir.",
+      "E": "Arka fontanel 4. ayda, ön fontanel 9-18. ayda kapanır."
+     },
+     "dogru": "B",
+     "aciklama": "Baş çevresi 34-36 cm (doğum) olup göğüs çevresi 12. ayda baş çevresine eşitlenir; E seçeneğindeki değerler ve 'hiçbir zaman' ifadesi yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Doğru; ağırlık ve çevre ölçütleri doğrudur.",
+      "B": "Yanlış (aranan cevap). Değerler ve eşitlenme bilgisi hatalıdır.",
+      "C": "Doğru; çocuk izlem takvimi doğrudur.",
+      "D": "Doğru; 2,5 yaşta 20 diş beklenir.",
+      "E": "Doğru; fontanel kapanma zamanları doğrudur."
+     },
+     "bilgi": [
+      33,
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k12-q06",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Bebeklikte normal büyüme ölçüleri ve fontanel kapanma zamanları nasıldır?",
+     "secenekler": {
+      "A": "Ağırlık 1 yaşta değişmez",
+      "B": "Ön fontanel doğumda kapanır",
+      "C": "5 ayda 2 kat, 1 yaşta 3 kat",
+      "D": "Baş çevresi 20 cm doğar",
+      "E": "Arka fontanel 2 yaşta kapanır"
+     },
+     "dogru": "C",
+     "aciklama": "Büyüme organ ve dokuların kitle artışı, gelişme ise fonksiyonel olgunlaşmadır. Ağırlık ~5 ayda doğum ağırlığının iki katına, 1 yaşında üç katına ulaşır; bu hızlı artış yeterli beslenmenin göstergesidir. Baş çevresi doğumda 34-36 cm'dir, göğüs çevresi 12. ayda baş çevresine eşitlenir; arka fontanel 4. ayda, ön fontanel 9-18. aylarda kapanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ağırlık 1 yaşında doğumun ~3 katıdır.",
+      "B": "Yanlış; ön fontanel 9-18. aylarda kapanır.",
+      "C": "Doğru; ağırlık artışı ve fontanel zamanlaması normaldir.",
+      "D": "Yanlış; doğumda baş çevresi 34-36 cm'dir.",
+      "E": "Yanlış; arka fontanel 4. ayda kapanır."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-k12-q07",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Bebeklikte gelişme basamakları ve diş sürme takvimi nasıldır?",
+     "secenekler": {
+      "A": "Desteksiz oturma 12. aydadır",
+      "B": "Emekleme 2. ayda olur",
+      "C": "Dişler doğumda tamamdır",
+      "D": "2,5 yaşta diş yoktur",
+      "E": "6. ay desteksiz oturma, 9. ay emekleme"
+     },
+     "dogru": "E",
+     "aciklama": "Motor gelişimde 4. ayda destekle oturma, 6. ayda desteksiz oturma, 9. ayda emekleme ve 12. ayda bir elden tutulunca yürüme (sıralama) beklenir. Sosyal-dil alanında 2. ayda gülümseme, 6. ayda tek hece, 9. ayda taklit heceler izlenir. İlk süt dişleri 5-9. aylarda (genellikle alt ön kesiciler) çıkar; 1 yaşında 6-8, 2,5 yaşında 20 süt dişi tamamlanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; desteksiz oturma 6. ay basamağıdır.",
+      "B": "Yanlış; emekleme 9. ayda beklenir.",
+      "C": "Yanlış; ilk süt dişleri 5-9. aylarda çıkar.",
+      "D": "Yanlış; 2,5 yaşında 20 süt dişi tamamlanır.",
+      "E": "Doğru; iki motor basamağın zamanlaması normaldir."
+     },
+     "bilgi": [
+      34,
+      35
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 36,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:12"
+ ]
 }

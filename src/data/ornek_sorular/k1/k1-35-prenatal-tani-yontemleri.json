@@ -6,6 +6,7 @@
  "konu": "Prenatal Tanı Yöntemleri",
  "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
  "tarih": "2026-09-30",
+ "soru_sayisi": 90,
  "kazanimlar": [
   {
    "no": 1,
@@ -90,6 +91,84 @@
       5
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k01-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "24 yaşında kadın hasta, immünsüpresyon açısından ek risk taşıyan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Fetusta genetik ya da genetik dışı nedenlerin yol açtığı hastalık ve malformasyonların mümkün olduğunca erken gebelik döneminde tanınması; embriyo ve fetusta yapılan bütün diagnostik çalışmalardır. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Prenatal tanı öncesi genetik danışma içeriği — Etkilenme riski, hastalığın doğası/sonuçları, yöntemlerin risk ve sınırları, sonuç süresi, tekrar gerekebileceği ve sonucun net olmayabilece…",
+      "B": "Trizomilerin canlı doğum sıklıkları — Trizomi 21 ~1/800, trizomi 18 ~1/7500, trizomi 13 ~1/15000-25000 canlı doğumda görülür.",
+      "C": "Robertsonian 21q21q ve izokromozom 21 — 21q21q Robertsonian translokasyonu veya izokromozom 21 varlığında Down sendromu riski %100'dür.",
+      "D": "Prenatal tanının tanımı — Fetusta genetik ya da genetik dışı nedenlerin yol açtığı hastalık ve malformasyonların mümkün olduğunca erken gebelik döneminde tanınması; e…",
+      "E": "Üç önemli nöral tüp defekti — Ensefalosel (beyin dokusunun kafatası açıklığından çıkması), anensefali (beyin ve kafatasının bir kısmının yokluğu), spina bifida (omurganın…"
+     },
+     "dogru": "D",
+     "aciklama": "Fetusta genetik ya da genetik dışı nedenlerin yol açtığı hastalık ve malformasyonların mümkün olduğunca erken gebelik döneminde tanınması; embriyo ve fetusta yapılan bütün diagnostik çalışmalardır. Bebeğe anne karnındayken tanı konulabilmesini, doğum öncesi tedavi ve doğum sonrası önlem planlamasını mümkün kılar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Prenatal tanı öncesi genetik danışma içeriği) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Trizomilerin canlı doğum sıklıkları) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Robertsonian 21q21q ve izokromozom 21) farklı bir klinik/bulguya aittir.",
+      "D": "Doğru. Fetusta genetik ya da genetik dışı nedenlerin yol açtığı hastalık ve malformasyonların mümkün olduğunca erken gebelik döneminde tanınması; embriyo ve fetusta yapılan bütün diagnostik çalışmalardır. Bebeğe anne karnındayken tanı konulabilmesini, doğum öncesi tedavi ve doğum sonrası önlem planlamasını mümkün kılar.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Üç önemli nöral tüp defekti) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k01-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "52 yaşında erkek hasta, tekrarlayan atak öyküsü olan ve ayırıcı tanının netleştirilmesi gereken durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Anomali grubuna göre tanı yöntemi — Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır.",
+      "B": "Prenatal tanının sınırı — Prenatal tanı teknikleri fetusta olabilecek bütün anomalileri göstermez.",
+      "C": "Trizomilerde tekrarlama riski — Daha önce trizomili çocuk veya fetüs öyküsü varsa sonraki gebeliklerde risk anne yaşı riski + %1 artar.",
+      "D": "Tek gen hastalığında tekrarlama riski — Biyokimyasal veya DNA testiyle tanımlanabilen tek gen ve kalıtsal metabolizma hastalıklarında tekrarlama riski çoğunlukla otozomal resesif o…",
+      "E": "X'e bağlı hastalık öyküsü — Sadece erkeklerde görülen, kadınların taşıyıcı olduğu kalıtım; tekrarlama riski erkek çocukta %50'dir."
+     },
+     "dogru": "A",
+     "aciklama": "Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır. Doğru tanı yöntemi seçimi, şüphelenilen anomali grubuna göre yapılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır. Doğru tanı yöntemi seçimi, şüphelenilen anomali grubuna göre yapılır.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Prenatal tanının sınırı) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Trizomilerde tekrarlama riski) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Tek gen hastalığında tekrarlama riski) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (X'e bağlı hastalık öyküsü) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k01-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Prenatal tanı uygulamalarının amacı ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Tüm anomalili gebeliklerin sonlandırılması",
+      "B": "Yalnızca cinsiyet tayini yapılması",
+      "C": "Aileye seçenek sunulmadan karar verilmesi",
+      "D": "Gebelik yönetimi ve bakımın planlanması",
+      "E": "Tarama testlerinin tamamen terk edilmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Prenatal tanı uygulamalarının amacı yalnızca anomalili gebelikleri sonlandırmak değildir. Yüksek riskli gruplarda anksiyeteyi azaltır, gebelik yönetimini ve doğum sonrası bakımı planlatır. Bir anomali saptandığında gebeliği sonlandırma zorunluluğu olmadığı aileye bildirilmelidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sonlandırma seçeneklerden yalnızca biridir, zorunluluk değildir.",
+      "B": "Yanlış; cinsiyet tayini X'e bağlı hastalıklarda bir uygulamadır, amaç değildir.",
+      "C": "Yanlış; ailenin bilgilendirilmesi ve seçenek sunulması esastır.",
+      "D": "Doğru; tanı gebelik yönetimi, tedavi ve bakım planlamasına olanak verir.",
+      "E": "Yanlış; tarama testleri prenatal tanının temel basamağıdır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -172,6 +251,110 @@
       "C": "Bazı moleküler yöntemler (ör. QF-PCR, mikroarray) anöploidiyi gösterebilir.",
       "D": "İnceleme düzeyleri farklıdır.",
       "E": "Malformasyon tanısı esas olarak USG ile konur."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "52 yaşında erkek hasta, komplike seyir açısından yakından izlenen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İleri anne yaşı — En yaygın prenatal tanı endikasyonu anne yaşının 35 veya üzerinde olmasıdır; AS için 1/250 yaşa bağlı risk cut-off değeridir.",
+      "B": "Dengeli kromozom taşıyıcısı ebeveyn — Taşıyıcılar fenotipik olarak normaldir ancak dengesiz gamet oluşma riski artmıştır (teorik %30-100).",
+      "C": "NTD riski ve folik asit — NTD'li olguların 1. derece (%2-5) yakınlarında risk artar; gebelikten 1 ay önce ve ilk trimesterde folik asit alımı insidansı ~%75 azaltır.",
+      "D": "Etnik/bölgesel risk grupları — Talasemi Akdeniz çevresinde, Tay Sachs ve kistik fibroz Aşkenazi Yahudilerinde sık görülür (Tay Sachs taşıyıcılığı 1/30, diğer topluluklarda…",
+      "E": "Anomali grubuna göre tanı yöntemi — Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır."
+     },
+     "dogru": "E",
+     "aciklama": "Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır. Doğru tanı yöntemi seçimi, şüphelenilen anomali grubuna göre yapılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İleri anne yaşı) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Dengeli kromozom taşıyıcısı ebeveyn) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (NTD riski ve folik asit) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Etnik/bölgesel risk grupları) farklı bir klinik/bulguya aittir.",
+      "E": "Doğru. Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır. Doğru tanı yöntemi seçimi, şüphelenilen anomali grubuna göre yapılır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "31 yaşında gebe hasta (12. gebelik haftası), penisilin alerjisi öyküsü de bulunan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Sitogenetik testler kromozom düzeyinde, moleküler testler DNA düzeyinde mutasyon analizi yapar. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Trizomilerin canlı doğum sıklıkları — Trizomi 21 ~1/800, trizomi 18 ~1/7500, trizomi 13 ~1/15000-25000 canlı doğumda görülür.",
+      "B": "Sitogenetik ve moleküler testler — Sitogenetik testler kromozom düzeyinde, moleküler testler DNA düzeyinde mutasyon analizi yapar.",
+      "C": "Robertsonian 21q21q ve izokromozom 21 — 21q21q Robertsonian translokasyonu veya izokromozom 21 varlığında Down sendromu riski %100'dür.",
+      "D": "Üç önemli nöral tüp defekti — Ensefalosel (beyin dokusunun kafatası açıklığından çıkması), anensefali (beyin ve kafatasının bir kısmının yokluğu), spina bifida (omurganın…",
+      "E": "Alfa-fetoprotein (AFP) — Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer."
+     },
+     "dogru": "B",
+     "aciklama": "Sitogenetik testler kromozom düzeyinde, moleküler testler DNA düzeyinde mutasyon analizi yapar. Prenatal genetik testler bu iki düzeyin birleşimidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Trizomilerin canlı doğum sıklıkları) farklı bir klinik/bulguya aittir.",
+      "B": "Doğru. Sitogenetik testler kromozom düzeyinde, moleküler testler DNA düzeyinde mutasyon analizi yapar. Prenatal genetik testler bu iki düzeyin birleşimidir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Robertsonian 21q21q ve izokromozom 21) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Üç önemli nöral tüp defekti) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Alfa-fetoprotein (AFP)) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Anomali grubuna göre tanı yöntemi eşleştirmesi hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Malformasyonlar ultrasonografi ile saptanır",
+      "B": "Tek gen hastalıkları ultrasonografi ile saptanır",
+      "C": "Kromozom anomalileri enzim analizi ile saptanır",
+      "D": "Malformasyonlar DNA analizi ile saptanır",
+      "E": "Trizomiler yalnızca AFP ile saptanır"
+     },
+     "dogru": "A",
+     "aciklama": "Malformasyonlar ultrasonografi ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır. Anomali grubuna uygun yöntem seçimi tanı başarısını belirler. Yanlış yöntem seçimi yanlış negatif sonuçlara yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; yapısal malformasyonların tanısında ultrasonografi kullanılır.",
+      "B": "Yanlış; tek gen hastalıkları DNA veya enzim analizi gerektirir.",
+      "C": "Yanlış; kromozom anomalileri fetal kromozom analiziyle saptanır.",
+      "D": "Yanlış; malformasyonlar morfolojik incelemeyle, USG ile saptanır.",
+      "E": "Yanlış; AFP nöral tüp defekti taramasıdır, trizomi tanısı koydurmaz."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Prenatal genetik testler ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Sitogenetik testler DNA mutasyonu saptar",
+      "B": "Moleküler testler malformasyon gösterir",
+      "C": "Moleküler testler DNA düzeyinde çalışır",
+      "D": "Sitogenetik testler enzim eksikliği saptar",
+      "E": "Her iki test de yalnızca cinsiyet belirler"
+     },
+     "dogru": "C",
+     "aciklama": "Sitogenetik testler kromozom düzeyinde değerlendirme yapar ve sayısal-yapısal anomalileri gösterir. Moleküler testler DNA düzeyinde mutasyon analizi yapar ve tek gen hastalıklarını saptar. Spesifik hastalık riski belirlenen çiftler bu testlere yönlendirilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sitogenetik testler kromozom düzeyinde çalışır.",
+      "B": "Yanlış; malformasyonlar ultrasonografi ile değerlendirilir.",
+      "C": "Doğru; moleküler testler DNA düzeyinde mutasyon analizi yapar.",
+      "D": "Yanlış; enzim eksiklikleri biyokimyasal analizle saptanır.",
+      "E": "Yanlış; cinsiyet tayini bu testlerin yalnızca bir uygulamasıdır."
      },
      "bilgi": [
       3
@@ -262,6 +445,110 @@
       4
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k03-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "31 yaşında gebe hasta (12. gebelik haftası), tedaviye uyumu sorgulanan ve eş tedavisi açısından danışmanlık verilen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Kadın-doğum, ultrasonografi, klinik genetik, genetik danışma ve laboratuvar birlikte çalışır. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Multidisipliner ekip yaklaşımı — Kadın-doğum, ultrasonografi, klinik genetik, genetik danışma ve laboratuvar birlikte çalışır.",
+      "B": "Dengeli kromozom taşıyıcısı ebeveyn — Taşıyıcılar fenotipik olarak normaldir ancak dengesiz gamet oluşma riski artmıştır (teorik %30-100).",
+      "C": "NTD riski ve folik asit — NTD'li olguların 1. derece (%2-5) yakınlarında risk artar; gebelikten 1 ay önce ve ilk trimesterde folik asit alımı insidansı ~%75 azaltır.",
+      "D": "Etnik/bölgesel risk grupları — Talasemi Akdeniz çevresinde, Tay Sachs ve kistik fibroz Aşkenazi Yahudilerinde sık görülür (Tay Sachs taşıyıcılığı 1/30, diğer topluluklarda…",
+      "E": "hCG ve estriol davranışı — hCG gebeliğin temel hormonudur, 14-16. haftada en yüksek değere ulaşır; estriol plasentadan salgılanan bir östrojen türüdür."
+     },
+     "dogru": "A",
+     "aciklama": "Kadın-doğum, ultrasonografi, klinik genetik, genetik danışma ve laboratuvar birlikte çalışır. Prenatal tanı tek hekimin değil ekibin işidir; koordinasyon başarıyı belirler.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Kadın-doğum, ultrasonografi, klinik genetik, genetik danışma ve laboratuvar birlikte çalışır. Prenatal tanı tek hekimin değil ekibin işidir; koordinasyon başarıyı belirler.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Dengeli kromozom taşıyıcısı ebeveyn) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (NTD riski ve folik asit) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Etnik/bölgesel risk grupları) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (hCG ve estriol davranışı) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k03-q05",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "19 yaşında kadın hasta, gebelik ve laktasyon açısından özel değerlendirme gerektiren durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Etkilenme riski, hastalığın doğası/sonuçları, yöntemlerin risk ve sınırları, sonuç süresi, tekrar gerekebileceği ve sonucun net olmayabileceği anlatılır. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Robertsonian 21q21q ve izokromozom 21 — 21q21q Robertsonian translokasyonu veya izokromozom 21 varlığında Down sendromu riski %100'dür.",
+      "B": "Üç önemli nöral tüp defekti — Ensefalosel (beyin dokusunun kafatası açıklığından çıkması), anensefali (beyin ve kafatasının bir kısmının yokluğu), spina bifida (omurganın…",
+      "C": "Prenatal tanı öncesi genetik danışma içeriği — Etkilenme riski, hastalığın doğası/sonuçları, yöntemlerin risk ve sınırları, sonuç süresi, tekrar gerekebileceği ve sonucun net olmayabilece…",
+      "D": "Alfa-fetoprotein (AFP) — Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer.",
+      "E": "İkili test (11-14 testi) — Free β-hCG ve PAPP-A ölçümü ile fetal ense kalınlığı birlikte değerlendirilir; PAPP-A ve hCG sinsisyotrofoblastta üretilir."
+     },
+     "dogru": "C",
+     "aciklama": "Etkilenme riski, hastalığın doğası/sonuçları, yöntemlerin risk ve sınırları, sonuç süresi, tekrar gerekebileceği ve sonucun net olmayabileceği anlatılır. Aile bilgilendirilir; anomalide gebeliği sonlandırma zorunluluğu olmadığı belirtilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Robertsonian 21q21q ve izokromozom 21) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Üç önemli nöral tüp defekti) farklı bir klinik/bulguya aittir.",
+      "C": "Doğru. Etkilenme riski, hastalığın doğası/sonuçları, yöntemlerin risk ve sınırları, sonuç süresi, tekrar gerekebileceği ve sonucun net olmayabileceği anlatılır. Aile bilgilendirilir; anomalide gebeliği sonlandırma zorunluluğu olmadığı belirtilir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Alfa-fetoprotein (AFP)) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İkili test (11-14 testi)) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k03-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Prenatal tanı ekibi ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca laboratuvar uzmanı yeterlidir",
+      "B": "Yalnızca kadın-doğum uzmanı karar verir",
+      "C": "Genetik danışmaya gerek yoktur",
+      "D": "Ultrasonografi ekipte yer almaz",
+      "E": "Multidisipliner ekip birlikte çalışır"
+     },
+     "dogru": "E",
+     "aciklama": "Prenatal tanı kadın-doğum, ultrasonografi, klinik genetik, genetik danışma ve laboratuvarın birlikte çalıştığı multidisipliner bir ekip işidir. Tek disiplinin değerlendirmesi tanı ve danışmanlık hatalarına yol açar. Ekip yaklaşımı yöntem seçiminden sonuç yorumuna kadar her basamakta gereklidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; laboratuvar sonucun bir parçasıdır, klinik yorum ekip gerektirir.",
+      "B": "Yanlış; genetik, danışma ve laboratuvar katkısı olmadan karar eksik kalır.",
+      "C": "Yanlış; genetik danışma risk iletimi ve bilgilendirme için zorunludur.",
+      "D": "Yanlış; ultrasonografi hem tarama hem invaziv işlem kılavuzluğunda yer alır.",
+      "E": "Doğru; prenatal tanı kadın-doğum, genetik, USG ve laboratuvarın ortak işidir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Prenatal tanı öncesi genetik danışmanın içeriği ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Sonlandırmanın zorunlu olduğu söylenmelidir",
+      "B": "Sonuçların net olmayabileceği anlatılmalıdır",
+      "C": "Yöntem risklerinden bahsedilmemelidir",
+      "D": "Sonuç süresi aileden gizlenmelidir",
+      "E": "Tekrar gerekebileceği söylenmemelidir"
+     },
+     "dogru": "B",
+     "aciklama": "Genetik danışmada fetusun etkilenme riski, hastalığın doğası ve sonuçları, yöntemlerin risk ve sınırları, sonuç süresi ve tekrar gerekebileceği anlatılır. Sonuçların net olmayabileceği ve ileri tetkik gerekebileceği belirtilir. Anomali saptanırsa gebeliği sonlandırmanın zorunlu olmadığı, yalnızca seçeneklerden biri olduğu vurgulanır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sonlandırma seçeneklerden biridir, zorunluluk olmadığı bildirilmelidir.",
+      "B": "Doğru; belirsiz sonuç ve ileri tetkik olasılığı danışmanın zorunlu içeriğidir.",
+      "C": "Yanlış; yöntemlerin risk ve sınırları aileye açıklanmalıdır.",
+      "D": "Yanlış; sonucun ne kadar sürede çıkacağı bildirilmelidir.",
+      "E": "Yanlış; girişimin başarısızlığında tekrar gerekebileceği anlatılmalıdır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -347,6 +634,84 @@
       12,
       13,
       16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "19 yaşında kadın hasta, immünsüpresyon açısından ek risk taşıyan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: En yaygın prenatal tanı endikasyonu anne yaşının 35 veya üzerinde olmasıdır; AS için 1/250 yaşa bağlı risk cut-off değeridir. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Üç önemli nöral tüp defekti — Ensefalosel (beyin dokusunun kafatası açıklığından çıkması), anensefali (beyin ve kafatasının bir kısmının yokluğu), spina bifida (omurganın…",
+      "B": "İleri anne yaşı — En yaygın prenatal tanı endikasyonu anne yaşının 35 veya üzerinde olmasıdır; AS için 1/250 yaşa bağlı risk cut-off değeridir.",
+      "C": "Alfa-fetoprotein (AFP) — Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer.",
+      "D": "İkili test (11-14 testi) — Free β-hCG ve PAPP-A ölçümü ile fetal ense kalınlığı birlikte değerlendirilir; PAPP-A ve hCG sinsisyotrofoblastta üretilir.",
+      "E": "USG ve çoklu malformasyon — USG gebelik haftası, çoğul gebelik, yaşamsallık ve morfolojik anomalileri belirler; multiple malformasyonda kromozom anomalisi olasılığı dah…"
+     },
+     "dogru": "B",
+     "aciklama": "En yaygın prenatal tanı endikasyonu anne yaşının 35 veya üzerinde olmasıdır; AS için 1/250 yaşa bağlı risk cut-off değeridir. İleri anne yaşı doğrudan invaziv tanı gerekçesi olabilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Üç önemli nöral tüp defekti) farklı bir klinik/bulguya aittir.",
+      "B": "Doğru. En yaygın prenatal tanı endikasyonu anne yaşının 35 veya üzerinde olmasıdır; AS için 1/250 yaşa bağlı risk cut-off değeridir. İleri anne yaşı doğrudan invaziv tanı gerekçesi olabilir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Alfa-fetoprotein (AFP)) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İkili test (11-14 testi)) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (USG ve çoklu malformasyon) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "44 yaşında erkek hasta, tekrarlayan atak öyküsü olan ve ayırıcı tanının netleştirilmesi gereken durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Taşıyıcılar fenotipik olarak normaldir ancak dengesiz gamet oluşma riski artmıştır (teorik %30-100). Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Alfa-fetoprotein (AFP) — Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer.",
+      "B": "İkili test (11-14 testi) — Free β-hCG ve PAPP-A ölçümü ile fetal ense kalınlığı birlikte değerlendirilir; PAPP-A ve hCG sinsisyotrofoblastta üretilir.",
+      "C": "USG ve çoklu malformasyon — USG gebelik haftası, çoğul gebelik, yaşamsallık ve morfolojik anomalileri belirler; multiple malformasyonda kromozom anomalisi olasılığı dah…",
+      "D": "Dengeli kromozom taşıyıcısı ebeveyn — Taşıyıcılar fenotipik olarak normaldir ancak dengesiz gamet oluşma riski artmıştır (teorik %30-100).",
+      "E": "Fetoskopi — Fetüsün endoskopla doğrudan gözlenmesi (15-18. hafta; numune 18-21. hafta)."
+     },
+     "dogru": "D",
+     "aciklama": "Taşıyıcılar fenotipik olarak normaldir ancak dengesiz gamet oluşma riski artmıştır (teorik %30-100). Risk etkilenen kromozoma, segment boyutuna ve taşıyıcı cinsiyetine göre değişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Alfa-fetoprotein (AFP)) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İkili test (11-14 testi)) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (USG ve çoklu malformasyon) farklı bir klinik/bulguya aittir.",
+      "D": "Doğru. Taşıyıcılar fenotipik olarak normaldir ancak dengesiz gamet oluşma riski artmıştır (teorik %30-100). Risk etkilenen kromozoma, segment boyutuna ve taşıyıcı cinsiyetine göre değişir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Fetoskopi) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Nöral tüp defekti riski ile folik asit ilişkisi hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Folik asit NTD riskini artırmaktadır",
+      "B": "Folik asit yalnızca doğumda verilmelidir",
+      "C": "NTD riski folik asitten etkilenmez",
+      "D": "Perikonsepsiyonel folik asit riski azaltır",
+      "E": "Folik asit yalnızca baba adayına verilir"
+     },
+     "dogru": "D",
+     "aciklama": "Nöral tüp defekti riski taşıyan gebelerde gebelikten bir ay önce ve ilk trimester boyunca folik asit alımı NTD insidansını yaklaşık %75 azaltır. Folat, nöral tüpün kapanmasında rol oynayan tek karbon metabolizması için gereklidir. Dozaj, ailenin NTD risk düzeyine göre belirlenir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; folik asit NTD insidansını azaltır, artırmaz.",
+      "B": "Yanlış; koruma perikonsepsiyonel dönemde sağlanır, doğumda değil.",
+      "C": "Yanlış; folik asit NTD riskini yaklaşık %75 azaltır.",
+      "D": "Doğru; gebelikten bir ay önce ve ilk trimesterde folik asit koruyucudur.",
+      "E": "Yanlış; folik asit anne adayına verilir."
+     },
+     "bilgi": [
+      13
      ],
      "benzer_cikmis": []
     }
@@ -435,6 +800,110 @@
       11
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k05-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "44 yaşında erkek hasta, komplike seyir açısından yakından izlenen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Trizomi 21 ~1/800, trizomi 18 ~1/7500, trizomi 13 ~1/15000-25000 canlı doğumda görülür. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Etnik/bölgesel risk grupları — Talasemi Akdeniz çevresinde, Tay Sachs ve kistik fibroz Aşkenazi Yahudilerinde sık görülür (Tay Sachs taşıyıcılığı 1/30, diğer topluluklarda…",
+      "B": "hCG ve estriol davranışı — hCG gebeliğin temel hormonudur, 14-16. haftada en yüksek değere ulaşır; estriol plasentadan salgılanan bir östrojen türüdür.",
+      "C": "Trizomilerin canlı doğum sıklıkları — Trizomi 21 ~1/800, trizomi 18 ~1/7500, trizomi 13 ~1/15000-25000 canlı doğumda görülür.",
+      "D": "Fetal ense kalınlığı (NT) — Boyunda yumuşak dokuda biriken, eko vermeyen sıvı boşluğunun kalınlığıdır; ödemle artar; 11-14. haftada >3 mm artmış kabul edilir.",
+      "E": "Serbest fetal DNA/RNA incelemeleri — Y kromozomu dizileriyle fetüs cinsiyeti, babadan kalıtılan alel ile tek gen hastalıkları, RhD geni ile Rh uyuşmazlığı, mRNA oranlarıyla anöp…"
+     },
+     "dogru": "C",
+     "aciklama": "Trizomi 21 ~1/800, trizomi 18 ~1/7500, trizomi 13 ~1/15000-25000 canlı doğumda görülür. Yaşa bağlı tarama eşikleri bu risklere göre belirlenir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Etnik/bölgesel risk grupları) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (hCG ve estriol davranışı) farklı bir klinik/bulguya aittir.",
+      "C": "Doğru. Trizomi 21 ~1/800, trizomi 18 ~1/7500, trizomi 13 ~1/15000-25000 canlı doğumda görülür. Yaşa bağlı tarama eşikleri bu risklere göre belirlenir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Fetal ense kalınlığı (NT)) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Serbest fetal DNA/RNA incelemeleri) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k05-q05",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "67 yaşında kadın hasta, penisilin alerjisi öyküsü de bulunan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Daha önce trizomili çocuk veya fetüs öyküsü varsa sonraki gebeliklerde risk anne yaşı riski + %1 artar. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Alfa-fetoprotein (AFP) — Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer.",
+      "B": "İkili test (11-14 testi) — Free β-hCG ve PAPP-A ölçümü ile fetal ense kalınlığı birlikte değerlendirilir; PAPP-A ve hCG sinsisyotrofoblastta üretilir.",
+      "C": "USG ve çoklu malformasyon — USG gebelik haftası, çoğul gebelik, yaşamsallık ve morfolojik anomalileri belirler; multiple malformasyonda kromozom anomalisi olasılığı dah…",
+      "D": "Fetoskopi — Fetüsün endoskopla doğrudan gözlenmesi (15-18. hafta; numune 18-21. hafta).",
+      "E": "Trizomilerde tekrarlama riski — Daha önce trizomili çocuk veya fetüs öyküsü varsa sonraki gebeliklerde risk anne yaşı riski + %1 artar."
+     },
+     "dogru": "E",
+     "aciklama": "Daha önce trizomili çocuk veya fetüs öyküsü varsa sonraki gebeliklerde risk anne yaşı riski + %1 artar. Öykü pozitifliği tek başına prenatal tanı endikasyonudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Alfa-fetoprotein (AFP)) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İkili test (11-14 testi)) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (USG ve çoklu malformasyon) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Fetoskopi) farklı bir klinik/bulguya aittir.",
+      "E": "Doğru. Daha önce trizomili çocuk veya fetüs öyküsü varsa sonraki gebeliklerde risk anne yaşı riski + %1 artar. Öykü pozitifliği tek başına prenatal tanı endikasyonudur."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k05-q06",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Trizomilerin canlı doğum sıklıkları ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Trizomi 21 yaklaşık 1/7500 görülür",
+      "B": "Trizomi 18 yaklaşık 1/800 görülür",
+      "C": "Trizomi 21 yaklaşık 1/800 görülür",
+      "D": "Trizomi 13 yaklaşık 1/800 görülür",
+      "E": "Tüm trizomiler eşit sıklıkta görülür"
+     },
+     "dogru": "C",
+     "aciklama": "Canlı doğumda trizomi 21 yaklaşık 1/800, trizomi 18 yaklaşık 1/7500, trizomi 13 yaklaşık 1/15000-25000 sıklıkta görülür. Anne yaşı ilerledikçe nondisjunction olasılığı arttığı için bu riskler yükselir. Bu sıklıklar danışmada yaşa bağlı riskin açıklanmasında kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; 1/7500 trizomi 18'in sıklığıdır.",
+      "B": "Yanlış; 1/800 trizomi 21'in sıklığıdır.",
+      "C": "Doğru; Down sendromu canlı doğumda yaklaşık 1/800 görülür.",
+      "D": "Yanlış; trizomi 13 yaklaşık 1/15000-25000 görülür.",
+      "E": "Yanlış; trizomilerin canlı doğum sıklıkları farklıdır."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Trizomilerde tekrarlama riski ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "21q21q translokasyonunda Down riski %100",
+      "B": "Önceki trizomi öyküsü riski değiştirmez",
+      "C": "Robertsonian taşıyıcılık riski ortadan kaldırır",
+      "D": "Tekrarlama riski her zaman %25'tir",
+      "E": "Anne yaşı tekrarlama riskini etkilemez"
+     },
+     "dogru": "A",
+     "aciklama": "Daha önce trizomili çocuk veya fetüs öyküsü olan çiftlerde sonraki gebeliklerde risk, anne yaşı riskine %1 eklenerek hesaplanır. Robertsonian 21q21q translokasyonu veya izokromozom 21 taşıyıcılığında ise Down sendromu riski %100'dür. Bu ayrım danışmada tekrarlama riskinin belirlenmesinde kritiktir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; 21q21q Robertsonian veya izokromozom 21'de tüm gametler etkilenir.",
+      "B": "Yanlış; önceki trizomi öyküsü riski anne yaşı riskine %1 ekler.",
+      "C": "Yanlış; dengeli taşıyıcılık dengesiz gamet riskini artırır.",
+      "D": "Yanlış; %25 tek gen otozomal resesif hastalıkların tekrarlama riskidir.",
+      "E": "Yanlış; trizomi riski anne yaşıyla birlikte hesaplanır."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -518,6 +987,110 @@
      },
      "bilgi": [
       24
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "67 yaşında kadın hasta, tedaviye uyumu sorgulanan ve eş tedavisi açısından danışmanlık verilen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fetoskopi — Fetüsün endoskopla doğrudan gözlenmesi (15-18. hafta; numune 18-21. hafta).",
+      "B": "AS uygulamaları — Üç uygulama vardır: amniyon sıvısının incelenmesi (biyokimyasal), hücrelerin doğrudan incelenmesi (cinsiyet kromatini, FISH, mukopolisakkari…",
+      "C": "Kordosentez — US eşliğinde 21G iğneyle göbek kordonundan 1-2 cc fetal kan alınır; 18-20. gebelik haftasından doğuma kadar uygulanır.",
+      "D": "Alfa-fetoprotein (AFP) — Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer.",
+      "E": "Mozaisizm ve maternal kontaminasyon — Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır."
+     },
+     "dogru": "D",
+     "aciklama": "Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer. Açık NTD'de AFP yükselir; 16. haftada anne serumundan çalışılır ve USG ile birlikte kullanılmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Fetoskopi) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (AS uygulamaları) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Kordosentez) farklı bir klinik/bulguya aittir.",
+      "D": "Doğru. Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer. Açık NTD'de AFP yükselir; 16. haftada anne serumundan çalışılır ve USG ile birlikte kullanılmalıdır.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Mozaisizm ve maternal kontaminasyon) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "22 yaşında erkek hasta, gebelik ve laktasyon açısından özel değerlendirme gerektiren durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: USG gebelik haftası, çoğul gebelik, yaşamsallık ve morfolojik anomalileri belirler; multiple malformasyonda kromozom anomalisi olasılığı daha yüksektir. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "USG ve çoklu malformasyon — USG gebelik haftası, çoğul gebelik, yaşamsallık ve morfolojik anomalileri belirler; multiple malformasyonda kromozom anomalisi olasılığı dah…",
+      "B": "Kordosentez — US eşliğinde 21G iğneyle göbek kordonundan 1-2 cc fetal kan alınır; 18-20. gebelik haftasından doğuma kadar uygulanır.",
+      "C": "Mozaisizm ve maternal kontaminasyon — Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır.",
+      "D": "Anomali grubuna göre tanı yöntemi — Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır.",
+      "E": "Prenatal tanı öncesi genetik danışma içeriği — Etkilenme riski, hastalığın doğası/sonuçları, yöntemlerin risk ve sınırları, sonuç süresi, tekrar gerekebileceği ve sonucun net olmayabilece…"
+     },
+     "dogru": "A",
+     "aciklama": "USG gebelik haftası, çoğul gebelik, yaşamsallık ve morfolojik anomalileri belirler; multiple malformasyonda kromozom anomalisi olasılığı daha yüksektir. Anormal USG bulgularında en sık 45,X ve dengesiz yapı anomalileri görülür.",
+     "sik_aciklamalari": {
+      "A": "Doğru. USG gebelik haftası, çoğul gebelik, yaşamsallık ve morfolojik anomalileri belirler; multiple malformasyonda kromozom anomalisi olasılığı daha yüksektir. Anormal USG bulgularında en sık 45,X ve dengesiz yapı anomalileri görülür.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Kordosentez) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Mozaisizm ve maternal kontaminasyon) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Anomali grubuna göre tanı yöntemi) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Prenatal tanı öncesi genetik danışma içeriği) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Alfa-fetoprotein ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "AFP overden salgılanan hormondur",
+      "B": "Açık NTD'de anne serumu AFP yükselir",
+      "C": "AFP plasentadan salgılanan östrojendir",
+      "D": "AFP düzeyi gebelikte sürekli azalır",
+      "E": "AFP yalnızca idrarda bakılan testtir"
+     },
+     "dogru": "B",
+     "aciklama": "Alfa-fetoprotein fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan proteindir. Fetustan amniyon sıvısına, oradan anne kanına geçer. Açık nöral tüp defekti varsa on altıncı haftada anne serumunda AFP yüksek bulunur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; AFP fetusun karaciğerinden salgılanır.",
+      "B": "Doğru; açık NTD'de AFP amniyon sıvısına ve anne kanına sızar.",
+      "C": "Yanlış; plasental östrojen estrioldür, AFP proteindir.",
+      "D": "Yanlış; AFP düzeyi gebelikte düzenli artış gösterir.",
+      "E": "Yanlış; AFP anne serumundan ve amniyon sıvısından çalışılır."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Serbest fetal DNA incelemeleri ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Serbest fetal DNA yalnızca anneyi değerlendirir",
+      "B": "Y dizileri anne genotipini gösterir",
+      "C": "RhD geni ile cinsiyet saptanır",
+      "D": "mRNA oranları tek gen hastalığı gösterir",
+      "E": "Y dizileri ile fetüs cinsiyeti saptanır"
+     },
+     "dogru": "E",
+     "aciklama": "Anne serumundaki serbest fetal DNA ve RNA ile Y kromozomu dizilerinden fetüs cinsiyeti, babadan kalıtılan alelden tek gen hastalıkları, RhD geninden Rh uyuşmazlığı ve mRNA oranlarından anöploidi saptanabilir. Bu incelemeler invaziv girişim gerektirmez. Örnek almak için en uygun zaman on-on üçüncü haftalar arasıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; serbest fetal DNA fetüse ait diziler taşır.",
+      "B": "Yanlış; Y dizileri fetüsün erkek olduğunu gösterir.",
+      "C": "Yanlış; RhD geni Rh uyuşmazlığını saptar.",
+      "D": "Yanlış; mRNA oranları anöploidi değerlendirmesinde kullanılır.",
+      "E": "Doğru; Y kromozomu dizilerinin saptanması erkek fetüsü gösterir."
+     },
+     "bilgi": [
+      25
      ],
      "benzer_cikmis": []
     }
@@ -605,6 +1178,112 @@
       21
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "22 yaşında erkek hasta, immünsüpresyon açısından ek risk taşıyan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Üçlü test AFP + uE3 + hCG (2. trimester 15-20, en iyi 16-18); dörtlü test buna dimerik inhibin A ekler. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "AS numune kuralları — Örnek normal çevre sıcaklığında taşınmalı, dondurulmamalı (hücre döngüsü duraklar), kanlı ve pıhtılı örneklerden kaçınılmalıdır.",
+      "B": "CVS direkt ve uzun süreli yöntem — Direkt yöntemde sitotrofoblastların spontan mitotik aktivitesiyle kısa sürede sonuç alınır (maternal kontaminasyon riski yok, bant kalitesi…",
+      "C": "Kromozom analizinde problemler — Kromozom varyantları, marker kromozomlar, cinsiyet kromozomları, yapısal anormallikler, mozaisizm ve kültür başarısızlığı sık karşılaşılan s…",
+      "D": "Prenatal tanının tanımı — Fetusta genetik ya da genetik dışı nedenlerin yol açtığı hastalık ve malformasyonların mümkün olduğunca erken gebelik döneminde tanınması; e…",
+      "E": "Üçlü ve dörtlü test — Üçlü test AFP + uE3 + hCG (2. trimester 15-20, en iyi 16-18); dörtlü test buna dimerik inhibin A ekler."
+     },
+     "dogru": "E",
+     "aciklama": "Üçlü test AFP + uE3 + hCG (2. trimester 15-20, en iyi 16-18); dörtlü test buna dimerik inhibin A ekler. Down sendromu, trizomi 18 ve NTD taramasında kullanılır; Down'da inhibin-A artar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (AS numune kuralları) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (CVS direkt ve uzun süreli yöntem) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Kromozom analizinde problemler) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Prenatal tanının tanımı) farklı bir klinik/bulguya aittir.",
+      "E": "Doğru. Üçlü test AFP + uE3 + hCG (2. trimester 15-20, en iyi 16-18); dörtlü test buna dimerik inhibin A ekler. Down sendromu, trizomi 18 ve NTD taramasında kullanılır; Down'da inhibin-A artar."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "40 yaşında kadın hasta, tekrarlayan atak öyküsü olan ve ayırıcı tanının netleştirilmesi gereken durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: hCG gebeliğin temel hormonudur, 14-16. haftada en yüksek değere ulaşır; estriol plasentadan salgılanan bir östrojen türüdür. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "AS uygulamaları — Üç uygulama vardır: amniyon sıvısının incelenmesi (biyokimyasal), hücrelerin doğrudan incelenmesi (cinsiyet kromatini, FISH, mukopolisakkari…",
+      "B": "hCG ve estriol davranışı — hCG gebeliğin temel hormonudur, 14-16. haftada en yüksek değere ulaşır; estriol plasentadan salgılanan bir östrojen türüdür.",
+      "C": "Kordosentez — US eşliğinde 21G iğneyle göbek kordonundan 1-2 cc fetal kan alınır; 18-20. gebelik haftasından doğuma kadar uygulanır.",
+      "D": "Mozaisizm ve maternal kontaminasyon — Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır.",
+      "E": "Anomali grubuna göre tanı yöntemi — Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır."
+     },
+     "dogru": "B",
+     "aciklama": "hCG gebeliğin temel hormonudur, 14-16. haftada en yüksek değere ulaşır; estriol plasentadan salgılanan bir östrojen türüdür. Bu maddelerin anne kanı düzeyleri normal olmayan gebeliklerde sapma gösterir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (AS uygulamaları) farklı bir klinik/bulguya aittir.",
+      "B": "Doğru. hCG gebeliğin temel hormonudur, 14-16. haftada en yüksek değere ulaşır; estriol plasentadan salgılanan bir östrojen türüdür. Bu maddelerin anne kanı düzeyleri normal olmayan gebeliklerde sapma gösterir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Kordosentez) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Mozaisizm ve maternal kontaminasyon) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Anomali grubuna göre tanı yöntemi) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Üçlü tarama testi ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "AFP, uE3 ve hCG ölçülür",
+      "B": "PAPP-A ve free β-hCG ölçülür",
+      "C": "Yalnızca inhibin A ölçülür",
+      "D": "Yalnızca AFP ölçülerek yapılır",
+      "E": "Birinci trimesterde 11-14 haftada yapılır"
+     },
+     "dogru": "A",
+     "aciklama": "Üçlü testte anne serumunda AFP, unkonjuge estriol ve hCG ölçülür. İkinci trimesterde on beş-yirminci haftalarda, en iyi on altı-on sekizinci haftalarda yapılır. Down sendromu, trizomi 18 ve nöral tüp defekti taramasında kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru; üçlü test AFP, uE3 ve hCG bileşenlerinden oluşur.",
+      "B": "Yanlış; PAPP-A ve free β-hCG ikili testin bileşenleridir.",
+      "C": "Yanlış; inhibin A dörtlü testin ek bileşenidir.",
+      "D": "Yanlış; tek başına AFP NTD taramasıdır.",
+      "E": "Yanlış; üçlü test ikinci trimesterde on beş-yirminci haftalarda yapılır."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "İkili testte trizomi paternleri ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "PAPP-A tüm trizomilerde artmaktadır",
+      "B": "hCG trizomi 21'de azalmaktadır",
+      "C": "Trizomi 21'de free β-hCG artmaktadır",
+      "D": "İkili test ikinci trimesterde yapılmaktadır",
+      "E": "Ense kalınlığı testin duyarlılığını azaltır"
+     },
+     "dogru": "C",
+     "aciklama": "İkili testte free β-hCG ve PAPP-A ölçülür, fetal ense kalınlığı ile birlikte değerlendirilir. Trizomik fetuslerde PAPP-A normalden azdır. Serbest β-hCG trizomi 21'de normalden fazla, diğer trizomilerde daha azdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; PAPP-A trizomik fetuslerde normalden azdır.",
+      "B": "Yanlış; hCG trizomi 21'de normalden fazladır.",
+      "C": "Doğru; trizomi 21'de serbest β-hCG yüksekliği tipik paterndir.",
+      "D": "Yanlış; ikili test on bir-on dördüncü haftalarda birinci trimesterde yapılır.",
+      "E": "Yanlış; ense kalınlığı eklendiğinde tahmin başarısı %90'a yükselir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": [
+      "7739e09554e3"
+     ]
     }
    ],
    "ilgili_cikmis": []
@@ -688,6 +1367,110 @@
      },
      "bilgi": [
       20,
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k08-q04",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "40 yaşında kadın hasta, komplike seyir açısından yakından izlenen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Boyunda yumuşak dokuda biriken, eko vermeyen sıvı boşluğunun kalınlığıdır; ödemle artar; 11-14. haftada >3 mm artmış kabul edilir. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fetal ense kalınlığı (NT) — Boyunda yumuşak dokuda biriken, eko vermeyen sıvı boşluğunun kalınlığıdır; ödemle artar; 11-14. haftada >3 mm artmış kabul edilir.",
+      "B": "Kordosentezde beklenen sonuçlar — Karyotip anomalileri (trizomi, monozomi, delesyon, inversiyon), tek gen anomalileri ve metabolik hastalıklar saptanabilir; İnv9 (p11q13) gib…",
+      "C": "Plasentaya sınırlı mozaisizm ve UPD — Tip I trofoblastla, Tip II koryonik stroma ile, Tip III her ikisiyle sınırlıdır (Tip I-II mitotik, Tip III mayotik). Trisomy rescue sonucu a…",
+      "D": "Sitogenetik ve moleküler testler — Sitogenetik testler kromozom düzeyinde, moleküler testler DNA düzeyinde mutasyon analizi yapar.",
+      "E": "Prenatal tanının sınırı — Prenatal tanı teknikleri fetusta olabilecek bütün anomalileri göstermez."
+     },
+     "dogru": "A",
+     "aciklama": "Boyunda yumuşak dokuda biriken, eko vermeyen sıvı boşluğunun kalınlığıdır; ödemle artar; 11-14. haftada >3 mm artmış kabul edilir. Kromozomal bozukluklar (Tri 13/18/21, Turner), kalp, akciğer, böbrek, karın duvarı anomalileri ve bazı genetik hastalıklarla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Boyunda yumuşak dokuda biriken, eko vermeyen sıvı boşluğunun kalınlığıdır; ödemle artar; 11-14. haftada >3 mm artmış kabul edilir. Kromozomal bozukluklar (Tri 13/18/21, Turner), kalp, akciğer, böbrek, karın duvarı anomalileri ve bazı genetik hastalıklarla ilişkilidir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Kordosentezde beklenen sonuçlar) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Plasentaya sınırlı mozaisizm ve UPD) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Sitogenetik ve moleküler testler) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Prenatal tanının sınırı) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k08-q05",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "8 yaşındaki kız hasta, penisilin alerjisi öyküsü de bulunan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Üçüncül villüslerden transservikal/transabdominal örnek alınır; 7-12. hafta (genel 10-12) uygulanır; ekstremite kısalması defekti nedeniyle 10. hafta öncesi tercih edilmez. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Prenatal tanı öncesi genetik danışma içeriği — Etkilenme riski, hastalığın doğası/sonuçları, yöntemlerin risk ve sınırları, sonuç süresi, tekrar gerekebileceği ve sonucun net olmayabilece…",
+      "B": "Trizomilerin canlı doğum sıklıkları — Trizomi 21 ~1/800, trizomi 18 ~1/7500, trizomi 13 ~1/15000-25000 canlı doğumda görülür.",
+      "C": "Koryon villus örneklemesi (CVS) — Üçüncül villüslerden transservikal/transabdominal örnek alınır; 7-12. hafta (genel 10-12) uygulanır; ekstremite kısalması defekti nedeniyle…",
+      "D": "Robertsonian 21q21q ve izokromozom 21 — 21q21q Robertsonian translokasyonu veya izokromozom 21 varlığında Down sendromu riski %100'dür.",
+      "E": "Üç önemli nöral tüp defekti — Ensefalosel (beyin dokusunun kafatası açıklığından çıkması), anensefali (beyin ve kafatasının bir kısmının yokluğu), spina bifida (omurganın…"
+     },
+     "dogru": "C",
+     "aciklama": "Üçüncül villüslerden transservikal/transabdominal örnek alınır; 7-12. hafta (genel 10-12) uygulanır; ekstremite kısalması defekti nedeniyle 10. hafta öncesi tercih edilmez. Erken sonuç en önemli avantajıdır; plasental mozaisizm artışı %1'dir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Prenatal tanı öncesi genetik danışma içeriği) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Trizomilerin canlı doğum sıklıkları) farklı bir klinik/bulguya aittir.",
+      "C": "Doğru. Üçüncül villüslerden transservikal/transabdominal örnek alınır; 7-12. hafta (genel 10-12) uygulanır; ekstremite kısalması defekti nedeniyle 10. hafta öncesi tercih edilmez. Erken sonuç en önemli avantajıdır; plasental mozaisizm artışı %1'dir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Robertsonian 21q21q ve izokromozom 21) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Üç önemli nöral tüp defekti) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k08-q06",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Fetal ense kalınlığının tanımı ve ölçüm zamanı hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "20-24. haftalarda ölçülen kemik kalınlığı",
+      "B": "İlk trimesterde ölçülen kafa çevresi",
+      "C": "Amniyon sıvısının derinlik ölçümü",
+      "D": "11-14. haftada ölçülen sıvı boşluğu",
+      "E": "Üçüncü trimesterde ölçülen cilt kalınlığı"
+     },
+     "dogru": "D",
+     "aciklama": "Ense kalınlığı, deri ile servikal vertebranın dorsal çıkıntısı çevresindeki yumuşak doku arasındaki eko vermeyen boşluğun kalınlığıdır. Baş-popo uzunluğunun ölçüldüğü kesitte on bir-on dördüncü haftalarda ölçülür. Bu haftalarda 3 mm'den fazla olması artmış kabul edilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; NT birinci trimesterde ölçülen yumuşak doku sıvısıdır.",
+      "B": "Yanlış; kafa çevresi NT ölçümü değildir.",
+      "C": "Yanlış; amniyon sıvısı derinliği NT ile ilişkisizdir.",
+      "D": "Doğru; NT on bir-on dördüncü haftada ense arkasındaki eko vermeyen boşluktur.",
+      "E": "Yanlış; NT üçüncü trimesterde değil on bir-on dördüncü haftada ölçülür."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k08-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Fetal ense kalınlığı artışı ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Artmış NT yalnızca normal varyanttır",
+      "B": "Turner sendromunda NT artmaktadır",
+      "C": "NT artışı trizomileri dışlamaktadır",
+      "D": "Kalp anomalileri NT'yi azaltmaktadır",
+      "E": "NT artışı ileri tetkik gerektirmez"
+     },
+     "dogru": "B",
+     "aciklama": "Artmış ense kalınlığı trizomi 13, 18, 21 ve Turner sendromu gibi kromozomal bozukluklarda görülür. Kromozom dışı nedenler arasında kalp anomalileri, diyafram hernisi, böbrek ve karın duvarı anomalileri ile Noonan sendromu gibi genetik hastalıklar bulunur. Ödem birikimi bu artışın ortak mekanizmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; artmış NT kromozomal ve yapısal anomali riskini gösterir.",
+      "B": "Doğru; 45,X Turner sendromu artmış NT nedenlerindendir.",
+      "C": "Yanlış; NT artışı trizomi olasılığını artırır.",
+      "D": "Yanlış; kalp anomalileri NT artışına yol açan durumlardandır.",
+      "E": "Yanlış; artmış NT pozitif tarama sayılır ve amniyosentez önerilir."
+     },
+     "bilgi": [
       22
      ],
      "benzer_cikmis": []
@@ -776,6 +1559,110 @@
       26,
       27,
       32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k09-q04",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "8 yaşındaki kız hasta, tedaviye uyumu sorgulanan ve eş tedavisi açısından danışmanlık verilen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Fetüsün endoskopla doğrudan gözlenmesi (15-18. hafta; numune 18-21. hafta). Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Anomali grubuna göre tanı yöntemi — Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır.",
+      "B": "Fetoskopi — Fetüsün endoskopla doğrudan gözlenmesi (15-18. hafta; numune 18-21. hafta).",
+      "C": "Prenatal tanı öncesi genetik danışma içeriği — Etkilenme riski, hastalığın doğası/sonuçları, yöntemlerin risk ve sınırları, sonuç süresi, tekrar gerekebileceği ve sonucun net olmayabilece…",
+      "D": "Trizomilerin canlı doğum sıklıkları — Trizomi 21 ~1/800, trizomi 18 ~1/7500, trizomi 13 ~1/15000-25000 canlı doğumda görülür.",
+      "E": "Robertsonian 21q21q ve izokromozom 21 — 21q21q Robertsonian translokasyonu veya izokromozom 21 varlığında Down sendromu riski %100'dür."
+     },
+     "dogru": "B",
+     "aciklama": "Fetüsün endoskopla doğrudan gözlenmesi (15-18. hafta; numune 18-21. hafta). Enfeksiyon, maternal kanama, su kesesi yırtılması ve fetal travma yanında yüksek abortus (%20) ve fetüs ölümü (%2) oranı nedeniyle dezavantajlıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Anomali grubuna göre tanı yöntemi) farklı bir klinik/bulguya aittir.",
+      "B": "Doğru. Fetüsün endoskopla doğrudan gözlenmesi (15-18. hafta; numune 18-21. hafta). Enfeksiyon, maternal kanama, su kesesi yırtılması ve fetal travma yanında yüksek abortus (%20) ve fetüs ölümü (%2) oranı nedeniyle dezavantajlıdır.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Prenatal tanı öncesi genetik danışma içeriği) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Trizomilerin canlı doğum sıklıkları) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Robertsonian 21q21q ve izokromozom 21) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k09-q05",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "6 yaşındaki erkek hasta, gebelik ve laktasyon açısından özel değerlendirme gerektiren durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Robertsonian 21q21q ve izokromozom 21 — 21q21q Robertsonian translokasyonu veya izokromozom 21 varlığında Down sendromu riski %100'dür.",
+      "B": "Üç önemli nöral tüp defekti — Ensefalosel (beyin dokusunun kafatası açıklığından çıkması), anensefali (beyin ve kafatasının bir kısmının yokluğu), spina bifida (omurganın…",
+      "C": "Alfa-fetoprotein (AFP) — Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer.",
+      "D": "Mozaisizm ve maternal kontaminasyon — Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır.",
+      "E": "İkili test (11-14 testi) — Free β-hCG ve PAPP-A ölçümü ile fetal ense kalınlığı birlikte değerlendirilir; PAPP-A ve hCG sinsisyotrofoblastta üretilir."
+     },
+     "dogru": "D",
+     "aciklama": "Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır. XX/XY mozaisizmi maternal kontaminasyonu düşündürür ve AS ile analiz tekrarlanmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Robertsonian 21q21q ve izokromozom 21) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Üç önemli nöral tüp defekti) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Alfa-fetoprotein (AFP)) farklı bir klinik/bulguya aittir.",
+      "D": "Doğru. Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır. XX/XY mozaisizmi maternal kontaminasyonu düşündürür ve AS ile analiz tekrarlanmalıdır.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İkili test (11-14 testi)) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k09-q06",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Fetoskopi yönteminin tanımı hangisidir?",
+     "secenekler": {
+      "A": "Fetusun endoskopla doğrudan gözlenmesidir",
+      "B": "Anne kanından fetal hücre izolasyonudur",
+      "C": "Göbek kordonundan kan alınmasıdır",
+      "D": "Koryon villüslerinden örnek alınmasıdır",
+      "E": "Amniyon sıvısından hücre kültürüdür"
+     },
+     "dogru": "A",
+     "aciklama": "Fetoskopi fetusun endoskopla doğrudan gözlenmesidir ve on beş-on sekizinci haftalarda yapılır. Fetal numune on sekiz-yirmi birinci haftalarda alınır. Yüksek abortus oranı (%20) ve fetus ölümü riski (%2) nedeniyle günümüzde sınırlı kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru; fetoskopi anatomik defektlerin direkt gözlenmesidir.",
+      "B": "Yanlış; fetal hücre izolasyonu non-invaziv yöntemdir.",
+      "C": "Yanlış; kordon kanı alınması kordosentezdir.",
+      "D": "Yanlış; villüs örneklemesi CVS yöntemidir.",
+      "E": "Yanlış; amniyon hücre kültürü amniyosentez uygulamasıdır."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k09-q07",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "CVS ile amniyosentez karşılaştırması ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "CVS ikinci trimesterde uygulanmaktadır",
+      "B": "CVS'de AFP çalışılabilmektedir",
+      "C": "CVS amniyosentezden daha geç sonuç verir",
+      "D": "Mozaiklikte CVS sonucu kesindir",
+      "E": "CVS erken sonuç verir, AFP bakılamaz"
+     },
+     "dogru": "E",
+     "aciklama": "CVS'nin amniyosenteze göre en önemli avantajı ilk trimesterde (yedinci-on ikinci hafta) erken sonuç vermesidir. Ancak bu dönemde AFP çalışılamadığı için nöral tüp defekti değerlendirilemez. CVS'de %2 gerçek ve yalancı mozaiklik görülebilir, bu durumda amniyosentez önerilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; CVS ilk trimesterde yedi-on ikinci haftalarda uygulanır.",
+      "B": "Yanlış; CVS döneminde AFP çalışılamaz.",
+      "C": "Yanlış; CVS'nin ana avantajı erken sonuç vermesidir.",
+      "D": "Yanlış; mozaiklikte doğrulama için amniyosentez önerilir.",
+      "E": "Doğru; erken sonuç avantajdır, AFP eksikliği dezavantajdır."
+     },
+     "bilgi": [
+      30
      ],
      "benzer_cikmis": []
     }
@@ -890,6 +1777,110 @@
       29
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k10-q05",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "6 yaşındaki erkek hasta, immünsüpresyon açısından ek risk taşıyan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Karın duvarından iğneyle ~20 ml amniyon sıvısı alınır; 2. trimesterde (15-16. hafta) uygulanır ve sıvı 180 ml'ye ulaşınca yeterli canlı hücre bulunur. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Multidisipliner ekip yaklaşımı — Kadın-doğum, ultrasonografi, klinik genetik, genetik danışma ve laboratuvar birlikte çalışır.",
+      "B": "İleri anne yaşı — En yaygın prenatal tanı endikasyonu anne yaşının 35 veya üzerinde olmasıdır; AS için 1/250 yaşa bağlı risk cut-off değeridir.",
+      "C": "Amniyosentez (AS) tekniği ve zamanı — Karın duvarından iğneyle ~20 ml amniyon sıvısı alınır; 2. trimesterde (15-16. hafta) uygulanır ve sıvı 180 ml'ye ulaşınca yeterli canlı hücr…",
+      "D": "Dengeli kromozom taşıyıcısı ebeveyn — Taşıyıcılar fenotipik olarak normaldir ancak dengesiz gamet oluşma riski artmıştır (teorik %30-100).",
+      "E": "NTD riski ve folik asit — NTD'li olguların 1. derece (%2-5) yakınlarında risk artar; gebelikten 1 ay önce ve ilk trimesterde folik asit alımı insidansı ~%75 azaltır."
+     },
+     "dogru": "C",
+     "aciklama": "Karın duvarından iğneyle ~20 ml amniyon sıvısı alınır; 2. trimesterde (15-16. hafta) uygulanır ve sıvı 180 ml'ye ulaşınca yeterli canlı hücre bulunur. İkinci trimesterde rutin uygulanan en yaygın yöntemdir; fetal kayıp riski %0,5-1'dir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Multidisipliner ekip yaklaşımı) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İleri anne yaşı) farklı bir klinik/bulguya aittir.",
+      "C": "Doğru. Karın duvarından iğneyle ~20 ml amniyon sıvısı alınır; 2. trimesterde (15-16. hafta) uygulanır ve sıvı 180 ml'ye ulaşınca yeterli canlı hücre bulunur. İkinci trimesterde rutin uygulanan en yaygın yöntemdir; fetal kayıp riski %0,5-1'dir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Dengeli kromozom taşıyıcısı ebeveyn) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (NTD riski ve folik asit) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k10-q06",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "58 yaşında diyabetik erkek hasta, tekrarlayan atak öyküsü olan ve ayırıcı tanının netleştirilmesi gereken durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Örnek normal çevre sıcaklığında taşınmalı, dondurulmamalı (hücre döngüsü duraklar), kanlı ve pıhtılı örneklerden kaçınılmalıdır. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Prenatal tanı öncesi genetik danışma içeriği — Etkilenme riski, hastalığın doğası/sonuçları, yöntemlerin risk ve sınırları, sonuç süresi, tekrar gerekebileceği ve sonucun net olmayabilece…",
+      "B": "Trizomilerin canlı doğum sıklıkları — Trizomi 21 ~1/800, trizomi 18 ~1/7500, trizomi 13 ~1/15000-25000 canlı doğumda görülür.",
+      "C": "Robertsonian 21q21q ve izokromozom 21 — 21q21q Robertsonian translokasyonu veya izokromozom 21 varlığında Down sendromu riski %100'dür.",
+      "D": "Üç önemli nöral tüp defekti — Ensefalosel (beyin dokusunun kafatası açıklığından çıkması), anensefali (beyin ve kafatasının bir kısmının yokluğu), spina bifida (omurganın…",
+      "E": "AS numune kuralları — Örnek normal çevre sıcaklığında taşınmalı, dondurulmamalı (hücre döngüsü duraklar), kanlı ve pıhtılı örneklerden kaçınılmalıdır."
+     },
+     "dogru": "E",
+     "aciklama": "Örnek normal çevre sıcaklığında taşınmalı, dondurulmamalı (hücre döngüsü duraklar), kanlı ve pıhtılı örneklerden kaçınılmalıdır. Örnek hacmi ve kalitesi sonuç süresini ve kültür başarısını etkiler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Prenatal tanı öncesi genetik danışma içeriği) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Trizomilerin canlı doğum sıklıkları) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Robertsonian 21q21q ve izokromozom 21) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Üç önemli nöral tüp defekti) farklı bir klinik/bulguya aittir.",
+      "E": "Doğru. Örnek normal çevre sıcaklığında taşınmalı, dondurulmamalı (hücre döngüsü duraklar), kanlı ve pıhtılı örneklerden kaçınılmalıdır. Örnek hacmi ve kalitesi sonuç süresini ve kültür başarısını etkiler."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k10-q07",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Amniyosentezin uygulama zamanı ve tekniği hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "7-12. haftada 1-2 cc kan alınır",
+      "B": "15-16. haftada ~20 ml sıvı alınır",
+      "C": "18-20. haftada villüs alınır",
+      "D": "10-13. haftada endoskopi yapılır",
+      "E": "11-14. haftada kord kanı alınır"
+     },
+     "dogru": "B",
+     "aciklama": "Amniyosentez ikinci trimesterde on beş-on altıncı haftalarda uygulanır ve yaklaşık 20 ml amniyon sıvısı alınır. Bu haftada sıvı 180 ml'ye ulaşır ve yeterli canlı hücre bulunur. Girişime bağlı fetal kayıp riski %0,5-1'dir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; yedi-on ikinci hafta ve kan alımı kordosenteze değil CVS dönemine aittir.",
+      "B": "Doğru; AS 15-on altıncı haftada karın duvarından amniyon sıvısı alınmasıdır.",
+      "C": "Yanlış; on sekiz-yirminci hafta kordosentez dönemidir.",
+      "D": "Yanlış; endoskopi fetoskopidir.",
+      "E": "Yanlış; kord kanı on sekiz-yirminci haftadan doğuma kadar alınır."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k10-q08",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Amniyosentez numune kuralları ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Örnekler dondurularak taşınmalıdır",
+      "B": "Kanlı örnekler tercih edilmelidir",
+      "C": "Pıhtılı örnekler kültüre uygundur",
+      "D": "Örnekler oda sıcaklığında taşınmalıdır",
+      "E": "Örnek hacmi sonucu etkilemez"
+     },
+     "dogru": "D",
+     "aciklama": "Amniyon örnekleri normal çevre sıcaklığında taşınmalı, dondurulmamalıdır çünkü dondurma hücrelerin yaşam döngüsünü duraklatır. Kanlı ve pıhtılı örneklerden kaçınılmalıdır çünkü hücre üremesi gecikir ve kültür başarısızlığı riski artar. Örnek hacmi sonuç verme sürecini etkiler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; dondurma hücre yaşam döngüsünü duraklatır.",
+      "B": "Yanlış; kanlı örneklerde hücre üremesi gecikir.",
+      "C": "Yanlış; pıhtı varlığında kültür başarısızlığı riski artar.",
+      "D": "Doğru; aşırı soğuk ve sıcaktan kaçınarak normal sıcaklıkta transport gerekir.",
+      "E": "Yanlış; örnek hacmi sonuç verme sürecini etkiler."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -973,6 +1964,110 @@
      },
      "bilgi": [
       23,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k11-q04",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "58 yaşında diyabetik erkek hasta, komplike seyir açısından yakından izlenen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: US eşliğinde 21G iğneyle göbek kordonundan 1-2 cc fetal kan alınır; 18-20. gebelik haftasından doğuma kadar uygulanır. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Dengeli kromozom taşıyıcısı ebeveyn — Taşıyıcılar fenotipik olarak normaldir ancak dengesiz gamet oluşma riski artmıştır (teorik %30-100).",
+      "B": "NTD riski ve folik asit — NTD'li olguların 1. derece (%2-5) yakınlarında risk artar; gebelikten 1 ay önce ve ilk trimesterde folik asit alımı insidansı ~%75 azaltır.",
+      "C": "Etnik/bölgesel risk grupları — Talasemi Akdeniz çevresinde, Tay Sachs ve kistik fibroz Aşkenazi Yahudilerinde sık görülür (Tay Sachs taşıyıcılığı 1/30, diğer topluluklarda…",
+      "D": "Kordosentez — US eşliğinde 21G iğneyle göbek kordonundan 1-2 cc fetal kan alınır; 18-20. gebelik haftasından doğuma kadar uygulanır.",
+      "E": "hCG ve estriol davranışı — hCG gebeliğin temel hormonudur, 14-16. haftada en yüksek değere ulaşır; estriol plasentadan salgılanan bir östrojen türüdür."
+     },
+     "dogru": "D",
+     "aciklama": "US eşliğinde 21G iğneyle göbek kordonundan 1-2 cc fetal kan alınır; 18-20. gebelik haftasından doğuma kadar uygulanır. Geç başvurularda ve AS/CVS mozaikliğinin aydınlatılmasında tercih edilir; fetal kayıp riski ~%2-3'tür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Dengeli kromozom taşıyıcısı ebeveyn) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (NTD riski ve folik asit) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Etnik/bölgesel risk grupları) farklı bir klinik/bulguya aittir.",
+      "D": "Doğru. US eşliğinde 21G iğneyle göbek kordonundan 1-2 cc fetal kan alınır; 18-20. gebelik haftasından doğuma kadar uygulanır. Geç başvurularda ve AS/CVS mozaikliğinin aydınlatılmasında tercih edilir; fetal kayıp riski ~%2-3'tür.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (hCG ve estriol davranışı) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k11-q05",
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "28 yaşında kadın hasta, penisilin alerjisi öyküsü de bulunan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Karyotip anomalileri (trizomi, monozomi, delesyon, inversiyon), tek gen anomalileri ve metabolik hastalıklar saptanabilir; İnv9 (p11q13) gibi polimorfizmler, çok hücre mozaikleri, de novo yapısal anomaliler ve marker kromozomlar görülebilir. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kordosentezde beklenen sonuçlar — Karyotip anomalileri (trizomi, monozomi, delesyon, inversiyon), tek gen anomalileri ve metabolik hastalıklar saptanabilir; İnv9 (p11q13) gib…",
+      "B": "Robertsonian 21q21q ve izokromozom 21 — 21q21q Robertsonian translokasyonu veya izokromozom 21 varlığında Down sendromu riski %100'dür.",
+      "C": "Üç önemli nöral tüp defekti — Ensefalosel (beyin dokusunun kafatası açıklığından çıkması), anensefali (beyin ve kafatasının bir kısmının yokluğu), spina bifida (omurganın…",
+      "D": "Alfa-fetoprotein (AFP) — Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer.",
+      "E": "İkili test (11-14 testi) — Free β-hCG ve PAPP-A ölçümü ile fetal ense kalınlığı birlikte değerlendirilir; PAPP-A ve hCG sinsisyotrofoblastta üretilir."
+     },
+     "dogru": "A",
+     "aciklama": "Karyotip anomalileri (trizomi, monozomi, delesyon, inversiyon), tek gen anomalileri ve metabolik hastalıklar saptanabilir; İnv9 (p11q13) gibi polimorfizmler, çok hücre mozaikleri, de novo yapısal anomaliler ve marker kromozomlar görülebilir. Sitogenetik sonuç 48-72 saatlik kültürle veya interfaz FISH ile elde edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Karyotip anomalileri (trizomi, monozomi, delesyon, inversiyon), tek gen anomalileri ve metabolik hastalıklar saptanabilir; İnv9 (p11q13) gibi polimorfizmler, çok hücre mozaikleri, de novo yapısal anomaliler ve marker kromozomlar görülebilir. Sitogenetik sonuç 48-72 saatlik kültürle veya interfaz FISH ile elde edilir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Robertsonian 21q21q ve izokromozom 21) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Üç önemli nöral tüp defekti) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Alfa-fetoprotein (AFP)) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İkili test (11-14 testi)) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k11-q06",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Kordosentezin uygulama zamanı hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "18-20. haftadan doğuma kadar uygulanır",
+      "B": "7-12. haftada villüs alınarak yapılır",
+      "C": "15-16. haftada amniyon sıvısı alınır",
+      "D": "11-14. haftada ense ölçümü yapılır",
+      "E": "10-13. haftada anne kanı alınır"
+     },
+     "dogru": "A",
+     "aciklama": "Kordosentez ultrasonografi eşliğinde 21G spinal iğneyle göbek kordonundan 1-2 cc fetal kan alınmasıdır. Gebeliğin on sekiz-yirminci haftasından doğuma kadar uygulanır. Sitogenetik sonuç 48-72 saatlik kültürle alınır ve girişime bağlı fetal kayıp riski yaklaşık %2-3'tür.",
+     "sik_aciklamalari": {
+      "A": "Doğru; kordosentez geç dönemde umbilikal kordondan fetal kan alınmasıdır.",
+      "B": "Yanlış; villüs alınması CVS yöntemidir.",
+      "C": "Yanlış; amniyon sıvısı alınması amniyosentezdir.",
+      "D": "Yanlış; ense ölçümü non-invaziv taramadır.",
+      "E": "Yanlış; anne kanı alınması fetal hücre izolasyonudur."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k11-q07",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Kordosentez endikasyonları ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Mozaiklikte kordosentezden kaçınılmalıdır",
+      "B": "Geç başvuruda tanısal değeri yoktur",
+      "C": "Mozaikliğin aydınlatılmasında kullanılır",
+      "D": "Yalnızca cinsiyet tayini yapmaktadır",
+      "E": "Karyotip anomalisi saptayamamaktadır"
+     },
+     "dogru": "C",
+     "aciklama": "Kordosentez, amniyosentez veya CVS'de gözlenen mozaikliğin aydınlatılmasında kullanılır. İkinci trimesterde geç başvuranlarda hızlı sonuç almak ve üçüncü trimesterde tahliye kararına tanısal veri sağlamak için tercih edilir. Beklenen anomaliler arasında trizomi, monozomi, delesyon, inversiyon ve tek gen hastalıkları bulunur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; mozaikliğin aydınlatılması ana endikasyonlardandır.",
+      "B": "Yanlış; geç başvuruda hızlı sonuç avantajıyla tercih edilir.",
+      "C": "Doğru; AS veya CVS mozaikliğini fetal kanla doğrulamak için kullanılır.",
+      "D": "Yanlış; karyotip, tek gen ve metabolik hastalıklar saptanabilir.",
+      "E": "Yanlış; trizomi, monozomi, delesyon ve inversiyon saptanabilir."
+     },
+     "bilgi": [
       33
      ],
      "benzer_cikmis": []
@@ -1061,6 +2156,110 @@
       34
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k12-q04",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "28 yaşında kadın hasta, tedaviye uyumu sorgulanan ve eş tedavisi açısından danışmanlık verilen durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Kromozom varyantları, marker kromozomlar, cinsiyet kromozomları, yapısal anormallikler, mozaisizm ve kültür başarısızlığı sık karşılaşılan sorunlardır; analiz 400-500 bant seviyesinde G bantlama ile yapılır. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "NTD riski ve folik asit — NTD'li olguların 1. derece (%2-5) yakınlarında risk artar; gebelikten 1 ay önce ve ilk trimesterde folik asit alımı insidansı ~%75 azaltır.",
+      "B": "Etnik/bölgesel risk grupları — Talasemi Akdeniz çevresinde, Tay Sachs ve kistik fibroz Aşkenazi Yahudilerinde sık görülür (Tay Sachs taşıyıcılığı 1/30, diğer topluluklarda…",
+      "C": "hCG ve estriol davranışı — hCG gebeliğin temel hormonudur, 14-16. haftada en yüksek değere ulaşır; estriol plasentadan salgılanan bir östrojen türüdür.",
+      "D": "Fetal ense kalınlığı (NT) — Boyunda yumuşak dokuda biriken, eko vermeyen sıvı boşluğunun kalınlığıdır; ödemle artar; 11-14. haftada >3 mm artmış kabul edilir.",
+      "E": "Kromozom analizinde problemler — Kromozom varyantları, marker kromozomlar, cinsiyet kromozomları, yapısal anormallikler, mozaisizm ve kültür başarısızlığı sık karşılaşılan s…"
+     },
+     "dogru": "E",
+     "aciklama": "Kromozom varyantları, marker kromozomlar, cinsiyet kromozomları, yapısal anormallikler, mozaisizm ve kültür başarısızlığı sık karşılaşılan sorunlardır; analiz 400-500 bant seviyesinde G bantlama ile yapılır. Sentromerik varyant sık görünümde değilse ebeveyn çalışması, C bant veya FISH yapılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (NTD riski ve folik asit) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Etnik/bölgesel risk grupları) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (hCG ve estriol davranışı) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Fetal ense kalınlığı (NT)) farklı bir klinik/bulguya aittir.",
+      "E": "Doğru. Kromozom varyantları, marker kromozomlar, cinsiyet kromozomları, yapısal anormallikler, mozaisizm ve kültür başarısızlığı sık karşılaşılan sorunlardır; analiz 400-500 bant seviyesinde G bantlama ile yapılır. Sentromerik varyant sık görünümde değilse ebeveyn çalışması, C bant veya FISH yapılır."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k12-q05",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "35 yaşında erkek hasta, gebelik ve laktasyon açısından özel değerlendirme gerektiren durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Üç önemli nöral tüp defekti — Ensefalosel (beyin dokusunun kafatası açıklığından çıkması), anensefali (beyin ve kafatasının bir kısmının yokluğu), spina bifida (omurganın…",
+      "B": "Mozaisizm ve maternal kontaminasyon — Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır.",
+      "C": "Alfa-fetoprotein (AFP) — Fetusun karaciğerinden salgılanan, erişkindeki albuminin fetal karşılığı olan protein; amniyon sıvısı ve anne kanına geçer.",
+      "D": "İkili test (11-14 testi) — Free β-hCG ve PAPP-A ölçümü ile fetal ense kalınlığı birlikte değerlendirilir; PAPP-A ve hCG sinsisyotrofoblastta üretilir.",
+      "E": "USG ve çoklu malformasyon — USG gebelik haftası, çoğul gebelik, yaşamsallık ve morfolojik anomalileri belirler; multiple malformasyonda kromozom anomalisi olasılığı dah…"
+     },
+     "dogru": "B",
+     "aciklama": "Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır. XX/XY mozaisizmi maternal kontaminasyonu düşündürür ve AS ile analiz tekrarlanmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Üç önemli nöral tüp defekti) farklı bir klinik/bulguya aittir.",
+      "B": "Doğru. Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır. XX/XY mozaisizmi maternal kontaminasyonu düşündürür ve AS ile analiz tekrarlanmalıdır.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Alfa-fetoprotein (AFP)) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (İkili test (11-14 testi)) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (USG ve çoklu malformasyon) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k12-q06",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Prenatal kültürlerde mozaiklik türleri ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Psödomozaiklik fetal mozaikliği kanıtlar",
+      "B": "Tek hücredeki anomali her zaman anlamlıdır",
+      "C": "Gerçek mozaiklik kültür artefaktıdır",
+      "D": "Tüm mozaiklikler aynı klinik öneme sahiptir",
+      "E": "Gerçek mozaiklik çoklu kolonide görülür"
+     },
+     "dogru": "E",
+     "aciklama": "Gerçek mozaiklikte farklı primer kültürlerden çoklu kolonilerde aynı anormal karyotip bulunur ve fetüste mozaiklik olasılığı yüksektir. Psödomozaiklikte yalnızca tek hücrede farklı karyotip vardır ve genellikle göz ardı edilir. Tek primer kültürle sınırlı mozaiklikte karar zordur, çoğunlukla kültür artefaktı kabul edilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; tek hücredeki farklılık genellikle göz ardı edilir.",
+      "B": "Yanlış; tek hücre bulgusu psödomozaiklik sayılır.",
+      "C": "Yanlış; çoklu kolonideki tutarlı bulgu fetal mozaikliği düşündürür.",
+      "D": "Yanlış; gerçek ve yalancı mozaikliğin klinik önemi farklıdır.",
+      "E": "Doğru; farklı primer kültürlerde çoklu kolonilerde görülmesi gerçek mozaikliktir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k12-q07",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Maternal kontaminasyon ve kromozom varyantları ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "XX/XY mozaikliği her zaman fetaldir",
+      "B": "XX/XY mozaikliğinde maternal kontaminasyon düşünülür",
+      "C": "Varyantlarda ebeveyn çalışmasına gerek yoktur",
+      "D": "Marker kromozom her zaman zararsızdır",
+      "E": "Kontaminasyonda CVS tekrarı yeterlidir"
+     },
+     "dogru": "B",
+     "aciklama": "XX/XY mozaikliği saptanırsa maternal kontaminasyon düşünülmelidir, özellikle uzun süreli CVS kültürlerinde anne kaynaklı decidua karışabilir. Bu durumda amniyosentezle analiz tekrarlanır. Kromozom varyantları ve marker kromozom saptanırsa ailesel olup olmadığını anlamak için anne-babada da kromozom analizi yapılır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; XX/XY paterni maternal kontaminasyonun tipik göstergesidir.",
+      "B": "Doğru; uzun CVS kültürlerinde decidua karışması bu tabloyu oluşturur.",
+      "C": "Yanlış; varyantın ailesel veya de novo olduğunu saptamak için ebeveyn bakılır.",
+      "D": "Yanlış; marker kromozomun önemi içeriğine göre değişir.",
+      "E": "Yanlış; doğrulama için amniyosentezle analiz tekrarlanmalıdır."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -1146,12 +2345,113 @@
       36
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k13-q04",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "35 yaşında erkek hasta, immünsüpresyon açısından ek risk taşıyan durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: Tip I trofoblastla, Tip II koryonik stroma ile, Tip III her ikisiyle sınırlıdır (Tip I-II mitotik, Tip III mayotik). Trisomy rescue sonucu aynı ebeveynden iki kopya kalırsa UPD oluşur ve trizomik kaçışların 1/3'ünde görülür. Bu hastada en olası tanı, etken ya da uygulanması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Plasentaya sınırlı mozaisizm ve UPD — Tip I trofoblastla, Tip II koryonik stroma ile, Tip III her ikisiyle sınırlıdır (Tip I-II mitotik, Tip III mayotik). Trisomy rescue sonucu a…",
+      "B": "Etnik/bölgesel risk grupları — Talasemi Akdeniz çevresinde, Tay Sachs ve kistik fibroz Aşkenazi Yahudilerinde sık görülür (Tay Sachs taşıyıcılığı 1/30, diğer topluluklarda…",
+      "C": "hCG ve estriol davranışı — hCG gebeliğin temel hormonudur, 14-16. haftada en yüksek değere ulaşır; estriol plasentadan salgılanan bir östrojen türüdür.",
+      "D": "Fetal ense kalınlığı (NT) — Boyunda yumuşak dokuda biriken, eko vermeyen sıvı boşluğunun kalınlığıdır; ödemle artar; 11-14. haftada >3 mm artmış kabul edilir.",
+      "E": "Serbest fetal DNA/RNA incelemeleri — Y kromozomu dizileriyle fetüs cinsiyeti, babadan kalıtılan alel ile tek gen hastalıkları, RhD geni ile Rh uyuşmazlığı, mRNA oranlarıyla anöp…"
+     },
+     "dogru": "A",
+     "aciklama": "Tip I trofoblastla, Tip II koryonik stroma ile, Tip III her ikisiyle sınırlıdır (Tip I-II mitotik, Tip III mayotik). Trisomy rescue sonucu aynı ebeveynden iki kopya kalırsa UPD oluşur ve trizomik kaçışların 1/3'ünde görülür. UPD imprintli gen içeren kromozomlarda hastalık yapar; UPD 15 → anne kaynaklı Prader-Willi, baba kaynaklı Angelman.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Tip I trofoblastla, Tip II koryonik stroma ile, Tip III her ikisiyle sınırlıdır (Tip I-II mitotik, Tip III mayotik). Trisomy rescue sonucu aynı ebeveynden iki kopya kalırsa UPD oluşur ve trizomik kaçışların 1/3'ünde görülür. UPD imprintli gen içeren kromozomlarda hastalık yapar; UPD 15 → anne kaynaklı Prader-Willi, baba kaynaklı Angelman.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Etnik/bölgesel risk grupları) farklı bir klinik/bulguya aittir.",
+      "C": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (hCG ve estriol davranışı) farklı bir klinik/bulguya aittir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Fetal ense kalınlığı (NT)) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Serbest fetal DNA/RNA incelemeleri) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k13-q05",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "24 yaşında kadın hasta, tekrarlayan atak öyküsü olan ve ayırıcı tanının netleştirilmesi gereken durumda polikliniğe başvuruyor. Öykü, fizik muayene ve laboratuvar bulguları birlikte değerlendirildiğinde tablonun ayırt edici özellikleri şunlardır: NTD'li olguların 1. derece (%2-5) yakınlarında risk artar; gebelikten 1 ay önce ve ilk trimesterde folik asit alımı insidansı ~%75 azaltır. Bu hastanın ayırıcı tanısı ve yönetimi birlikte değerlendirildiğinde, altta yatan mekanizma ve beklenen seyir açısından söylenebilecek en doğru yargı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "AS uygulamaları — Üç uygulama vardır: amniyon sıvısının incelenmesi (biyokimyasal), hücrelerin doğrudan incelenmesi (cinsiyet kromatini, FISH, mukopolisakkari…",
+      "B": "Kordosentez — US eşliğinde 21G iğneyle göbek kordonundan 1-2 cc fetal kan alınır; 18-20. gebelik haftasından doğuma kadar uygulanır.",
+      "C": "NTD riski ve folik asit — NTD'li olguların 1. derece (%2-5) yakınlarında risk artar; gebelikten 1 ay önce ve ilk trimesterde folik asit alımı insidansı ~%75 azaltır.",
+      "D": "Mozaisizm ve maternal kontaminasyon — Bir birey/dokuda iki veya daha fazla hücre hattı bulunmasıdır; gerçek, pseudo ve tek primer kültürle sınırlı olmak üzere üç çeşidi vardır.",
+      "E": "Anomali grubuna göre tanı yöntemi — Malformasyonlar USG ile, tek gen hastalıkları DNA ve/veya enzim analizleri ile, kromozom anomalileri fetal kromozom analizleri ile saptanır."
+     },
+     "dogru": "C",
+     "aciklama": "NTD'li olguların 1. derece (%2-5) yakınlarında risk artar; gebelikten 1 ay önce ve ilk trimesterde folik asit alımı insidansı ~%75 azaltır. Folik asit dozu NTD riskine göre belirlenir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (AS uygulamaları) farklı bir klinik/bulguya aittir.",
+      "B": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Kordosentez) farklı bir klinik/bulguya aittir.",
+      "C": "Doğru. NTD'li olguların 1. derece (%2-5) yakınlarında risk artar; gebelikten 1 ay önce ve ilk trimesterde folik asit alımı insidansı ~%75 azaltır. Folik asit dozu NTD riskine göre belirlenir.",
+      "D": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Mozaisizm ve maternal kontaminasyon) farklı bir klinik/bulguya aittir.",
+      "E": "Yanlış. Bu seçenek bu hastanın tablosuna uymaz; (Anomali grubuna göre tanı yöntemi) farklı bir klinik/bulguya aittir."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k13-q06",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Plasentaya sınırlı mozaiklik tipleri ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Tip I koryonik stroma ile sınırlıdır",
+      "B": "Tip II trofoblast ve stromadadır",
+      "C": "Tip III yalnızca trofoblastla sınırlıdır",
+      "D": "Tip I trofoblastla sınırlı mozaikliktir",
+      "E": "Tüm tipler mayotik hata sonucudur"
+     },
+     "dogru": "D",
+     "aciklama": "Plasentaya sınırlı mozaiklikte Tip I yalnızca trofoblastla, Tip II yalnızca koryonik stroma ile, Tip III her ikisiyle sınırlıdır. Tip I ve II çoğunlukla mitotik, Tip III mayotik hatayla meydana gelir. Tanı, CVS'de anöploidi saptanırken amniyon sıvısı veya fetal kanda yalnızca normal hücre dizisi bulunmasıyla konur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; Tip I trofoblastla sınırlıdır.",
+      "B": "Yanlış; Tip II yalnızca koryonik stroma ile sınırlıdır.",
+      "C": "Yanlış; Tip III hem trofoblast hem stromayı tutar.",
+      "D": "Doğru; Tip I mozaiklik trofoblastla sınırlıdır ve çoğunlukla mitotiktir.",
+      "E": "Yanlış; Tip I ve II çoğunlukla mitotik, Tip III mayotiktir."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-35-prenatal-tani-yontemleri-k13-q07",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Uniparental dizomi ile ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Anne kaynaklı UPD 15 Prader-Willi yapar",
+      "B": "UPD her zaman fenotipi değiştirir",
+      "C": "Trisomy rescue UPD'yi önlemektedir",
+      "D": "Baba kaynaklı UPD 15 Prader-Willi yapar",
+      "E": "UPD yalnızca cinsiyet kromozomlarında olur"
+     },
+     "dogru": "A",
+     "aciklama": "Trisomy rescue sırasında trizomik kaçışların yaklaşık üçte birinde uniparental dizomi meydana gelir. Aynı ebeveynden gelen iki kopya kalırsa homolog kromozom çiftinin ikisi de tek ebeveyndendir. Kromozomda imprintli genler varsa hastalık oluşur; anne kaynaklı UPD 15 Prader-Willi, baba kaynaklı UPD 15 Angelman sendromuna yol açar.",
+     "sik_aciklamalari": {
+      "A": "Doğru; 15q11-13 imprintli bölgesinde maternal UPD Prader-Willi'ye yol açar.",
+      "B": "Yanlış; maternal UPD 10 gibi bazı UPD'ler fenotipi değiştirmez.",
+      "C": "Yanlış; UPD trizomik kaçışların üçte birinde meydana gelir.",
+      "D": "Yanlış; baba kaynaklı UPD 15 Angelman sendromuna yol açar.",
+      "E": "Yanlış; UPD otozomlarda da olur, örneğin UPD 7 ve UPD 11."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 40,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:30"
+ ]
 }

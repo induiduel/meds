@@ -1,6 +1,28 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Check, X, RotateCcw, ChevronDown, ChevronLeft, ChevronRight, History, Target, Flag, Maximize2, Search, Trophy } from 'lucide-react';
+import {
+  Check,
+  X,
+  RotateCcw,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  History,
+  Target,
+  Flag,
+  Maximize2,
+  Search,
+  Trophy,
+  ThumbsUp,
+  ThumbsDown,
+  MessageSquare,
+  Copy,
+  Share2,
+  Info,
+  Send,
+} from 'lucide-react';
 import { ReportQuestionModal } from './ReportQuestionModal';
+import { QuestionAboutDialog } from './QuestionAboutDialog';
+import { toast } from './ui/Toast';
 import { ApiService } from '../services/api';
 
 /**
@@ -92,13 +114,153 @@ function BildirButonu({ q, ders }: { q: Soru; ders: string }) {
   );
 }
 
-function SoruKarti({ q, n, ders, buyuk = false }: { q: Soru; n: number; ders: string; buyuk?: boolean }) {
+type SoruComment = { id: string; author: string; text: string; timestamp: string };
+type SoruSocial = {
+  upvotes: number;
+  downvotes: number;
+  liked: boolean;
+  disliked: boolean;
+  comments: SoruComment[];
+};
+
+const SOCIAL_KEY = 'medsoru_ornek_k1_social';
+let SOCIAL_STORE: Record<string, SoruSocial> = (() => {
+  try { return JSON.parse(window.localStorage.getItem(SOCIAL_KEY) || '{}') || {}; } catch { return {}; }
+})();
+const socialListeners = new Set<() => void>();
+
+function notifySocial() {
+  try { window.localStorage.setItem(SOCIAL_KEY, JSON.stringify(SOCIAL_STORE)); } catch {}
+  socialListeners.forEach((fn) => fn());
+}
+
+function useSoruSocial(id: string): [SoruSocial, { toggleLike: () => void; toggleDislike: () => void; addComment: (text: string, author?: string) => void }] {
+  const [, setTick] = useState(0);
+  useEffect(() => {
+    const fn = () => setTick((t) => t + 1);
+    socialListeners.add(fn);
+    return () => { socialListeners.delete(fn); };
+  }, []);
+
+  const current: SoruSocial = SOCIAL_STORE[id] || { upvotes: 0, downvotes: 0, liked: false, disliked: false, comments: [] };
+
+  const actions = useMemo(() => ({
+    toggleLike: () => {
+      const prev = SOCIAL_STORE[id] || { upvotes: 0, downvotes: 0, liked: false, disliked: false, comments: [] };
+      const isLiked = prev.liked;
+      const isDisliked = prev.disliked;
+      const newLiked = !isLiked;
+      const newDisliked = isLiked ? isDisliked : false;
+      const newUp = isLiked ? Math.max(0, prev.upvotes - 1) : prev.upvotes + 1;
+      const newDown = isDisliked ? Math.max(0, prev.downvotes - 1) : prev.downvotes;
+      SOCIAL_STORE = {
+        ...SOCIAL_STORE,
+        [id]: { ...prev, liked: newLiked, disliked: newDisliked, upvotes: newUp, downvotes: newDown }
+      };
+      notifySocial();
+      try { ApiService.upvotePastQuestion(id, 'anonim-std'); } catch {}
+    },
+    toggleDislike: () => {
+      const prev = SOCIAL_STORE[id] || { upvotes: 0, downvotes: 0, liked: false, disliked: false, comments: [] };
+      const isDisliked = prev.disliked;
+      const isLiked = prev.liked;
+      const newDisliked = !isDisliked;
+      const newLiked = isDisliked ? isLiked : false;
+      const newDown = isDisliked ? Math.max(0, prev.downvotes - 1) : prev.downvotes + 1;
+      const newUp = isLiked ? Math.max(0, prev.upvotes - 1) : prev.upvotes;
+      SOCIAL_STORE = {
+        ...SOCIAL_STORE,
+        [id]: { ...prev, liked: newLiked, disliked: newDisliked, upvotes: newUp, downvotes: newDown }
+      };
+      notifySocial();
+      try { ApiService.downvotePastQuestion(id, 'anonim-std'); } catch {}
+    },
+    addComment: (text: string, author: string = 'Tıp Öğrencisi') => {
+      if (!text.trim()) return;
+      const prev = SOCIAL_STORE[id] || { upvotes: 0, downvotes: 0, liked: false, disliked: false, comments: [] };
+      const newComment: SoruComment = {
+        id: `c_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+        author: author.trim() || 'Tıp Öğrencisi',
+        text: text.trim(),
+        timestamp: new Date().toISOString(),
+      };
+      SOCIAL_STORE = {
+        ...SOCIAL_STORE,
+        [id]: { ...prev, comments: [...(prev.comments || []), newComment] }
+      };
+      notifySocial();
+      try { ApiService.commentPastQuestion(id, author, text.trim()); } catch {}
+    }
+  }), [id]);
+
+  return [current, actions];
+}
+
+function SoruKarti({
+  q,
+  n,
+  ders,
+  konu,
+  buyuk = false,
+  onOpenAbout,
+}: {
+  q: Soru;
+  n: number;
+  ders: string;
+  konu?: string;
+  buyuk?: boolean;
+  onOpenAbout?: (q: Soru) => void;
+}) {
   const cevaplar = useCevaplar();
   const picked = cevaplar[q.id]?.s ?? null;
   const done = picked !== null;
   const correct = picked === q.dogru;
   const pick = (k: string) => { if (!done) setCevap(q.id, { s: k, ok: k === q.dogru }); };
   const reset = () => setCevap(q.id, null);
+
+  const [social, socialActions] = useSoruSocial(q.id);
+  const [showComments, setShowComments] = useState(false);
+  const [commentText, setCommentText] = useState('');
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    const seceneklerText = LETTERS
+      .filter((k) => q.secenekler[k])
+      .map((k) => `${k}) ${q.secenekler[k]}`)
+      .join('\n');
+    const fullText = `[Örnek Soru · ${ders} · K${q.kazanim}]\n\n${q.soru}\n\n${seceneklerText}\n\nDoğru Cevap: ${q.dogru}\n\nAçıklama: ${q.aciklama}`;
+    navigator.clipboard.writeText(fullText);
+    setCopied(true);
+    toast.success('Soru kopyalandı', 'Soru metni ve şıklar panoya kopyalandı.');
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleShare = async () => {
+    const url = `${window.location.origin}${window.location.pathname}?ornekId=${encodeURIComponent(q.id)}`;
+    const title = `Örnek Soru · ${ders} · K${q.kazanim}`;
+    if (navigator.share && window.matchMedia?.('(pointer: coarse)').matches) {
+      try {
+        await navigator.share({ title, url });
+        return;
+      } catch (e: any) {
+        if (e?.name === 'AbortError') return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      toast.success('Bağlantı kopyalandı', 'Soruyu bu bağlantıyla paylaşabilirsin.');
+    } catch {
+      toast.info('Bağlantı', url);
+    }
+  };
+
+  const handleAddComment = () => {
+    if (!commentText.trim()) return;
+    socialActions.addComment(commentText);
+    setCommentText('');
+    toast.success('Yorum eklendi');
+  };
+
   return (
     <article className={`bg-white border border-line rounded-2xl flex flex-col gap-3 ${buyuk ? 'p-5 sm:p-7' : 'p-4 sm:p-5'}`}>
       <header className="flex items-center gap-2 text-[12.5px] text-ink-3">
@@ -146,6 +308,107 @@ function SoruKarti({ q, n, ders, buyuk = false }: { q: Soru; n: number; ders: st
           </button>
         </div>
       )}
+
+      {/* Aksiyon Butonları (Like, Dislike, Yorum, Hakkında, Kopyala, Paylaş) */}
+      <footer className="ms-qcard-foot pt-2 border-t border-line-soft">
+        <button
+          type="button"
+          onClick={socialActions.toggleLike}
+          aria-pressed={social.liked}
+          title={social.liked ? 'Beğeniyi geri al' : 'Soruyu beğen'}
+          className={`ms-btn is-sm ${social.liked ? 'is-on' : 'is-ghost'}`}
+        >
+          <ThumbsUp className={social.liked ? 'fill-current' : ''} /> {social.upvotes || 0}
+        </button>
+        <button
+          type="button"
+          onClick={socialActions.toggleDislike}
+          aria-pressed={social.disliked}
+          title={social.disliked ? 'Beğenmemeyi geri al' : 'Eksik ya da hatalı'}
+          className={`ms-btn is-sm ${social.disliked ? 'is-danger bg-bad-soft!' : 'is-ghost'}`}
+        >
+          <ThumbsDown className={social.disliked ? 'fill-current' : ''} /> {social.downvotes || 0}
+        </button>
+        <button
+          type="button"
+          onClick={() => setShowComments((prev) => !prev)}
+          aria-expanded={showComments}
+          className={`ms-btn is-sm ${showComments ? 'is-on' : 'is-ghost'}`}
+        >
+          <MessageSquare /> {(social.comments || []).length > 0 ? `${social.comments.length} yorum` : 'Yorum'}
+        </button>
+        <span className="ms-qcard-foot-sep" aria-hidden />
+        {onOpenAbout && (
+          <button
+            type="button"
+            onClick={() => onOpenAbout(q)}
+            className="ms-btn is-sm is-ghost is-icon text-ink-2 hover:text-ink"
+            aria-label="Soru hakkında"
+            title="Soru hakkında (künye, kazanım, şık analizleri)"
+          >
+            <Info className="w-4 h-4" />
+          </button>
+        )}
+        <button
+          type="button"
+          onClick={handleCopy}
+          className={`ms-btn is-sm is-ghost is-icon ${copied ? 'text-ok!' : ''}`}
+          aria-label={copied ? 'Soru kopyalandı' : 'Soruyu kopyala'}
+          title={copied ? 'Kopyalandı' : 'Soruyu metin olarak kopyala'}
+        >
+          {copied ? <Check /> : <Copy />}
+        </button>
+        <button
+          type="button"
+          onClick={handleShare}
+          className="ms-btn is-sm is-ghost is-icon"
+          aria-label="Soruyu paylaş"
+          title="Soru bağlantısını paylaş"
+        >
+          <Share2 />
+        </button>
+      </footer>
+
+      {/* Yorumlar Paneli */}
+      {showComments && (
+        <div className="ms-pop-in bg-field rounded-xl p-2.5 flex flex-col gap-2">
+          <div className="flex flex-col gap-1.5 max-h-56 overflow-y-auto">
+            {(social.comments || []).length > 0 ? (
+              social.comments.map((c) => (
+                <div key={c.id} className="bg-white rounded-[10px] px-3 py-2 flex flex-col gap-0.5">
+                  <div className="flex items-center justify-between gap-2 text-[12px] text-ink-3">
+                    <span className="font-semibold text-ink">{c.author || 'Tıp Öğrencisi'}</span>
+                    <span>{new Date(c.timestamp).toLocaleDateString('tr-TR')}</span>
+                  </div>
+                  <p className="m-0 text-[14px] text-ink-2 leading-relaxed">{c.text}</p>
+                </div>
+              ))
+            ) : (
+              <p className="m-0 px-1 text-[13.5px] text-ink-3">Henüz yorum yok. Bir ipucu ya da not ekleyen ilk kişi ol.</p>
+            )}
+          </div>
+          <div className="flex items-center gap-2">
+            <input
+              type="text"
+              value={commentText}
+              onChange={(e) => setCommentText(e.target.value)}
+              onKeyDown={(e) => { if (e.key === 'Enter') handleAddComment(); }}
+              placeholder="Yorum ya da ipucu yaz…"
+              aria-label="Yorum"
+              className="flex-1 min-w-0 h-10 bg-white border border-line rounded-full px-4 text-[15px] outline-0 focus:border-accent"
+            />
+            <button
+              type="button"
+              onClick={handleAddComment}
+              disabled={!commentText.trim()}
+              aria-label="Gönder"
+              className="ms-btn is-primary is-icon"
+            >
+              <Send />
+            </button>
+          </div>
+        </div>
+      )}
     </article>
   );
 }
@@ -181,7 +444,21 @@ function CikmisListesi({ items }: { items: Cikmis[] }) {
 }
 
 /** Tam ekran çözüm: tek soru, ilerleme çubuğu, klavye (A–E, ←/→, Esc), sonunda özet. */
-function TamEkran({ sorular, ders, baslik, onClose }: { sorular: Soru[]; ders: string; baslik: string; onClose: () => void }) {
+function TamEkran({
+  sorular,
+  ders,
+  konu,
+  baslik,
+  onClose,
+  onOpenAbout,
+}: {
+  sorular: Soru[];
+  ders: string;
+  konu?: string;
+  baslik: string;
+  onClose: () => void;
+  onOpenAbout?: (q: Soru) => void;
+}) {
   const cevaplar = useCevaplar();
   const ilk = Math.max(0, sorular.findIndex((q) => !cevaplar[q.id]));
   const [i, setI] = useState(ilk);
@@ -238,7 +515,15 @@ function TamEkran({ sorular, ders, baslik, onClose }: { sorular: Soru[]; ders: s
               </div>
             </div>
           ) : (
-            <SoruKarti key={q.id} q={q} n={i + 1} ders={ders} buyuk />
+            <SoruKarti
+              key={q.id}
+              q={q}
+              n={i + 1}
+              ders={ders}
+              konu={konu}
+              buyuk
+              onOpenAbout={onOpenAbout}
+            />
           )}
           <p className="hidden sm:block m-0 mt-4 text-center text-[12px] text-ink-3">Klavye: A–E şık seçer · ← → sorular arasında gezer · Esc çıkar</p>
         </div>
@@ -260,10 +545,11 @@ function TamEkran({ sorular, ders, baslik, onClose }: { sorular: Soru[]; ders: s
   );
 }
 
-function DersGorunumu({ id, onBack }: { id: string; onBack: () => void }) {
+function DersGorunumu({ id, initialKazanimNo, onBack }: { id: string; initialKazanimNo?: number; onBack: () => void }) {
   const [ders, setDers] = useState<Ders | null>(null);
   const [hata, setHata] = useState(false);
   const [zorluk, setZorluk] = useState<Zorluk | ''>('');
+  const [aboutQuestion, setAboutQuestion] = useState<{ q: Soru; ders: string; konu: string } | null>(null);
   const [tam, setTam] = useState<{ sorular: Soru[]; baslik: string } | null>(null);
   const cevaplar = useCevaplar();
 
@@ -271,8 +557,15 @@ function DersGorunumu({ id, onBack }: { id: string; onBack: () => void }) {
     const load = loaders[`../data/ornek_sorular/k1/${id}.json`];
     if (!load) { setHata(true); return; }
     setDers(null);
-    load().then(setDers).catch(() => setHata(true));
-  }, [id]);
+    load().then((data) => {
+      setDers(data);
+      if (initialKazanimNo) {
+        setTimeout(() => {
+          document.getElementById(`kz-${initialKazanimNo}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 120);
+      }
+    }).catch(() => setHata(true));
+  }, [id, initialKazanimNo]);
 
   if (hata) return <p className="m-0 text-[14px] text-bad-text">Bu dersin soruları yüklenemedi. Sayfayı yenileyip tekrar deneyin.</p>;
   if (!ders) return <p className="m-0 text-[14px] text-ink-3">Sorular yükleniyor…</p>;
@@ -354,21 +647,103 @@ function DersGorunumu({ id, onBack }: { id: string; onBack: () => void }) {
               <button type="button" onClick={() => setTam({ sorular: qs, baslik: `K${k.no} · ${k.metin}` })} title="Bu kazanımı tam ekran çöz" aria-label="Bu kazanımı tam ekran çöz"
                 className="shrink-0 h-8 w-8 rounded-lg inline-flex items-center justify-center text-accent hover:bg-white cursor-pointer"><Maximize2 className="w-4 h-4" /></button>
             </div>
-            {qs.map((q) => { sayac += 1; return <SoruKarti key={q.id} q={q} n={sayac} ders={ders.ders} />; })}
+            {qs.map((q) => {
+              sayac += 1;
+              return (
+                <SoruKarti
+                  key={q.id}
+                  q={q}
+                  n={sayac}
+                  ders={ders.ders}
+                  konu={ders.konu}
+                  onOpenAbout={(selQ) => setAboutQuestion({ q: selQ, ders: ders.ders, konu: ders.konu })}
+                />
+              );
+            })}
             <CikmisListesi items={k.ilgili_cikmis} />
           </section>
         );
       })}
-      {tam && tam.sorular.length > 0 && <TamEkran sorular={tam.sorular} ders={ders.ders} baslik={tam.baslik} onClose={() => setTam(null)} />}
+      {tam && tam.sorular.length > 0 && (
+        <TamEkran
+          sorular={tam.sorular}
+          ders={ders.ders}
+          konu={ders.konu}
+          baslik={tam.baslik}
+          onClose={() => setTam(null)}
+          onOpenAbout={(selQ) => setAboutQuestion({ q: selQ, ders: ders.ders, konu: ders.konu })}
+        />
+      )}
+
+      {aboutQuestion && (
+        <QuestionAboutDialog
+          questionId={aboutQuestion.q.id}
+          title={`Örnek Soru · ${aboutQuestion.ders}`}
+          subtitle={aboutQuestion.konu}
+          facts={[
+            { label: 'Kurul', value: 'Kurul 1 (TIP 310)' },
+            { label: 'Ders', value: aboutQuestion.ders },
+            { label: 'Konu', value: aboutQuestion.konu, wide: true },
+            { label: 'Soru ID', value: aboutQuestion.q.id, mono: true },
+            { label: 'Kazanım', value: `K${aboutQuestion.q.kazanim}`, mono: true },
+            { label: 'Zorluk', value: aboutQuestion.q.zorluk.toUpperCase() },
+            { label: 'Doğru Cevap', value: `${aboutQuestion.q.dogru} Şıkkı`, mono: true },
+            {
+              label: 'Veri tabanına eklenme',
+              value: ders.tarih
+                ? new Date(ders.tarih).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })
+                : undefined,
+            },
+            {
+              label: 'Son düzenlenme',
+              value: new Date('2026-10-09T08:30:00Z').toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
+            },
+          ]}
+          question={{
+            id: aboutQuestion.q.id,
+            kazanim: aboutQuestion.q.kazanim,
+            zorluk: aboutQuestion.q.zorluk,
+            ders: aboutQuestion.ders,
+            konu: aboutQuestion.konu,
+            soru: aboutQuestion.q.soru,
+            secenekler: aboutQuestion.q.secenekler,
+            dogru: aboutQuestion.q.dogru,
+            aciklama: aboutQuestion.q.aciklama,
+            sik_aciklamalari: aboutQuestion.q.sik_aciklamalari,
+            kurul: 'Kurul 1 (TIP 310)',
+            tarih: ders.tarih,
+          }}
+          explanation={aboutQuestion.q.aciklama}
+          sikAnalizi={aboutQuestion.q.sik_aciklamalari}
+          answerKey={aboutQuestion.q.dogru}
+          options={LETTERS.filter((l) => aboutQuestion.q.secenekler[l]).map((l) => ({
+            key: l,
+            text: aboutQuestion.q.secenekler[l],
+          }))}
+          onClose={() => setAboutQuestion(null)}
+        />
+      )}
     </div>
   );
 }
 
-export const KazanimSorulariView: React.FC = () => {
+export const KazanimSorulariView: React.FC<{
+  initialLessonId?: string | null;
+  initialKazanimNo?: number | null;
+}> = ({ initialLessonId, initialKazanimNo }) => {
   const [secili, setSecili] = useState<string | null>(() => {
+    if (initialLessonId && INDEX.some((x) => x.id === initialLessonId)) return initialLessonId;
     const s = readSecim();
     return s && INDEX.some((x) => x.id === s) ? s : null;
   });
+
+  useEffect(() => {
+    if (initialLessonId && INDEX.some((x) => x.id === initialLessonId)) {
+      setSecili(initialLessonId);
+      writeSecim(initialLessonId);
+    }
+  }, [initialLessonId]);
+
   const [brans, setBrans] = useState('');
   const [ara, setAra] = useState('');
   const cevaplar = useCevaplar();
@@ -384,7 +759,7 @@ export const KazanimSorulariView: React.FC = () => {
 
   const sec = (id: string | null) => { setSecili(id); writeSecim(id); window.scrollTo({ top: 0 }); };
 
-  if (secili) return <DersGorunumu id={secili} onBack={() => sec(null)} />;
+  if (secili) return <DersGorunumu id={secili} initialKazanimNo={initialKazanimNo || undefined} onBack={() => sec(null)} />;
 
   if (!INDEX.length) {
     return <p className="m-0 rounded-2xl border border-line bg-white p-6 text-center text-[14px] text-ink-3">Kurul 1 örnek soruları henüz hazırlanmadı.</p>;

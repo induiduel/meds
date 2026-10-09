@@ -6,6 +6,7 @@
  "konu": "Üriner Sistem Taş Hastalıkları Fizyopatolojisi",
  "ogretim_uyesi": "Dr. Öğr. Üyesi Fahrettin Şamil Uysal",
  "tarih": "2026-09-25",
+ "soru_sayisi": 52,
  "kazanimlar": [
   {
    "no": 1,
@@ -115,6 +116,116 @@
       30
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k01-q05",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "45 yaşında, obez, tip 2 diyabetli, sıcak ortamda çalışan bir erkek hastada tekrarlayan böbrek taşı öyküsü vardır. Epidemiyoloji ve risklerle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Cinsiyet açığı giderek açılmaktadır.",
+      "B": "Taş hastalığı azalmaktadır ve yaşla ilişkisizdir.",
+      "C": "Sıcak iklim taş riskini azaltır.",
+      "D": "Obezite ve diyabet taş riskini azaltır.",
+      "E": "Prevalans %1-20 arasında değişir ve artmaktadır; insidans 4.-6. dekadda zirve yapar, erkek baskınlığı azalmaktadır. Sıcak-kuru iklim, sıcak meslekler ve dehidratasyon riski artırır; obezite, kilo alımı, metabolik sendrom ve tip 2 diyabet riski yükseltir."
+     },
+     "dogru": "E",
+     "aciklama": "Epidemiyoloji (prevalans artışı, 4.-6. dekad zirve, kapanan cinsiyet açığı) ve çevresel-sistemik riskler doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; cinsiyet açığı kapanmaktadır.",
+      "B": "Yanlış; prevalans doğrusal artmaktadır.",
+      "C": "Yanlış; sıcak-kuru iklim riski artırır.",
+      "D": "Yanlış; obezite ve diyabet riski artırır.",
+      "E": "Doğru. Epidemiyoloji ve riskler birlikte doğrudur."
+     },
+     "bilgi": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k01-q06",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Obez-diyabetik, sıcak ortamda çalışan tekrarlayan taşlı erkek hasta değerlendirilirken taş epidemiyolojisi ve riskleriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Yüksek yaşam standardına sahip ülkelerde prevalans daha yüksektir.",
+      "B": "Soğuk-nemli iklim, genç kadın cinsiyet ve düşük yaşam standardı taş riskini artırır; obezite koruyucudur.",
+      "C": "Tarihsel erkek baskınlığı (2-3 kat) azalmakta, cinsiyet açığı kapanmaktadır.",
+      "D": "Dehidratasyonu teşvik eden koşullar ve sıcak meslekler riski artırır.",
+      "E": "İnsidans 4.-6. dekadda zirve yapar."
+     },
+     "dogru": "B",
+     "aciklama": "Risk sıcak-kuru iklim, sıcak meslek, dehidratasyon, obezite ve diyabettir; E seçeneği tersini söylemektedir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Yanlış ifade (aranan cevap). Risk yönleri terstir.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k01-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Ürolitiyazisin prevalansı ve demografik dağılımıyla ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Prevalans %0,1'in altındadır",
+      "B": "Türkiye taş kuşağı dışındadır",
+      "C": "Zirve 1. dekattadır",
+      "D": "Türkiye %15; zirve 4-6. dekat",
+      "E": "Erkek-kadın farkı açılmaktadır"
+     },
+     "dogru": "D",
+     "aciklama": "Böbrek taşı prevalansı %1-20 aralığında olup son dekatlarda doğrusal artmıştır; yüksek yaşam standartlı ülkelerde %10'u aşar. Türkiye taş kuşağında yer alır ve sıklık %15'tir. İnsidans 4-6. dekatta zirve yapar; erkeklerde tarihsel 2-3 kat fazlalık kapanmaktadır; 20 yaş öncesi taş nadirdir, çocuk-ergenlerde son 25 yılda artış izlenir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; prevalans %1-20 aralığındadır.",
+      "B": "Yanlış; Türkiye taş kuşağında, sıklık %15'tir.",
+      "C": "Yanlış; insidans 4-6. dekatta zirve yapar.",
+      "D": "Doğru; ülke sıklığı ve yaş zirvesini verir.",
+      "E": "Yanlış; tarihsel erkek fazlalığı kapanmaktadır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k01-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Ürolitiyazisin çevresel ve sistemik risk faktörleri nasıl etki eder?",
+     "secenekler": {
+      "A": "Sıcak iklim taştan korur",
+      "B": "Dehidratasyon, obezite, diyabette asidik idrar",
+      "C": "Diyabet ürik asidi azaltır",
+      "D": "Obezite taş riskini düşürür",
+      "E": "Meslek maruziyeti önemsizdir"
+     },
+     "dogru": "B",
+     "aciklama": "Sıcak-kuru iklim, aşırı sıcağa maruz meslekler ve dehidratasyon idrarı konsantre ederek aşırı doygunluğu artırır. Obezite, kilo alımı ve metabolik sendrom sistemik risk taşır; tip 2 diyabette idrar pH düşüklüğü ürik asit taşını, artmış oksalat atılımı kalsiyum oksalat taşını destekler. Bu mekanizmalar çevresel ve metabolik risklerin taşa nasıl dönüştüğünü açıklar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sıcak-kuru iklim ve dehidratasyon riski artırır.",
+      "B": "Doğru; çevresel ve sistemik risk mekanizmalarını özetler.",
+      "C": "Yanlış; diyabette asidik idrar ürik asit taşını artırır.",
+      "D": "Yanlış; obezite ve metabolik sendrom risk faktörüdür.",
+      "E": "Yanlış; aşırı sıcak meslekler dehidratasyonla risk yaratır."
+     },
+     "bilgi": [
+      1
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -200,6 +311,114 @@
      },
      "bilgi": [
       5
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k02-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Üreterde 8 mm taş saptanan hastada taşın radyoopak olduğu görülmüş; analizde kalsiyum oksalat monohidrat (whewellit) saptanmıştır. Sınıflamayla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sistin taşlar güçlü radyoopaktır.",
+      "B": "Taş boyutu en küçük çapla ölçülür.",
+      "C": "Whewellit dihidrattır.",
+      "D": "Etyolojide enfeksiyon/non-enfeksiyöz, genetik ve ilaçlar; bileşimde whewellit (monohidrat), weddellit (dihidrat), apatit, bruşit; boyutta en büyük çap, yerde kaliks/pelvis/üreter/mesane; radyolojik olarak kalsiyum oksalat ve fosfatlar radyoopak, strüvit-apatit-sistin zayıf radyoopaktır.",
+      "E": "Yer sınıflaması yapılmaz."
+     },
+     "dogru": "D",
+     "aciklama": "Etyoloji-bileşim-boyut-yer-radyolojik sınıflama birlikte doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sistin zayıf radyoopaktır.",
+      "B": "Yanlış; en büyük çapla ölçülür.",
+      "C": "Yanlış; whewellit monohidrattır.",
+      "D": "Doğru. Dört sınıflama ekseni doğrudur.",
+      "E": "Yanlış; anatomik pozisyona göre sınıflanır."
+     },
+     "bilgi": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k02-q05",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Üreterde 8 mm radyoopak whewellit taşı olan hastanın sınıflaması yapılırken taş sınıflamasıyla ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bruşit - magnezyum amonyum fosfat; apatit - ürik asit; radyoopak - sistin",
+      "B": "Weddellit - kalsiyum oksalat dihidrat",
+      "C": "Radyoopak - kalsiyum oksalat ve kalsiyum fosfatlar",
+      "D": "Zayıf radyoopak - strüvit, apatit, sistin",
+      "E": "Whewellit - kalsiyum oksalat monohidrat"
+     },
+     "dogru": "A",
+     "aciklama": "Bruşit kalsiyum hidrojen fosfat, apatit bazik kalsiyum fosfattır; sistin zayıf radyoopaktır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış eşleştirme (aranan cevap). Mineral ve opasite bilgileri hatalıdır.",
+      "B": "Doğru eşleştirme.",
+      "C": "Doğru eşleştirme.",
+      "D": "Doğru eşleştirme.",
+      "E": "Doğru eşleştirme."
+     },
+     "bilgi": [
+      6,
+      8
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k02-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Taşların etiyolojik grupları ve örnek eşleşmeleri hangileridir?",
+     "secenekler": {
+      "A": "Strüvit enfeksiyon; sistin genetik; CaOx enfeksiyon dışı",
+      "B": "Ürik asit enfeksiyon taşıdır",
+      "C": "Sistin enfeksiyon dışıdır",
+      "D": "Strüvit genetik taşdır",
+      "E": "Whewellit ürik asittir"
+     },
+     "dogru": "A",
+     "aciklama": "Etiyolojiye göre enfeksiyon dışı (kalsiyum oksalat, kalsiyum fosfat, ürik asit), enfeksiyon (strüvit, karbonat apatit, amonyum ürat), genetik (sistin, ksantin, 2,8-dihidroksiadenin) ve ilaç taşları ayrılır. Mineral adları tanıda kullanılır: kalsiyum oksalat monohidrat whewellit, dihidrat weddellit; magnezyum amonyum fosfat strüvit, ürik asit ürisittir. Bu ayrım altta yatan metabolik veya enfeksiyöz nedeni işaret eder.",
+     "sik_aciklamalari": {
+      "A": "Doğru; üç grubun örnek eşleşmesini verir.",
+      "B": "Yanlış; ürik asit enfeksiyon dışı gruptadır.",
+      "C": "Yanlış; sistin genetik taş grubundadır.",
+      "D": "Yanlış; strüvit enfeksiyon taş grubundadır.",
+      "E": "Yanlış; whewellit kalsiyum oksalat monohidrattır."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k02-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Taşların radyolojik opaklık özellikleriyle ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Ürik asit radyoopaktır",
+      "B": "Kalsiyum taşları radyolüsenttir",
+      "C": "Ca radyoopak; ürik asit radyolüsen",
+      "D": "Sistin tam radyoopaktır",
+      "E": "Strüvit radyolüsenttir"
+     },
+     "dogru": "C",
+     "aciklama": "Direkt grafide kalsiyum oksalat ve kalsiyum fosfatlar radyoopaktır; strüvit, apatit ve sistin zayıf radyoopaktır. Ürik asit, amonyum ürat, ksantin, 2,8-dihidroksiadenin ve ilaç taşları radyolüsenttir; bu yüzden direkt grafide görülmeyip ultrason veya BT ile saptanırlar. Radyolojik görünüm taş bileşimine dair ilk ipucunu verir ve görüntüleme seçimini yönlendirir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ürik asit radyolüsenttir.",
+      "B": "Yanlış; kalsiyum taşları radyoopaktır.",
+      "C": "Doğru; iki grubun opaklık farkını verir.",
+      "D": "Yanlış; sistin zayıf radyoopaktır.",
+      "E": "Yanlış; strüvit zayıf radyoopaktır."
+     },
+     "bilgi": [
+      2
      ],
      "benzer_cikmis": []
     }
@@ -328,6 +547,120 @@
       15
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k03-q05",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Tekrarlayan kalsiyum oksalat taşı olan hastada idrar sitratı düşük bulunmuştur. Fizikokimya ve inhibitörlerle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sitrat taş oluşumunu destekler.",
+      "B": "SS<1 taş oluşturur.",
+      "C": "SS>1 taş için gerekli itici güçtür; heterojen çekirdeklenme + epitaksi kristali başlatır; agregasyon atılamayacak büyüklüğü oluşturur; tutulma (adezyon/staz) son olaydır. Sitrat dört yoldan güçlü inhibitördür (Ca kompleksi, spontan çekirdeklenme inhibisyonu vb.); pirofosfat, Mg, nefrokalsin, alkali idrarda THP ve GAG'lar da inhibitördür; matris ~%3 organik maddedir.",
+      "D": "Agregasyon taşı küçültür.",
+      "E": "Matris taşın %90'ıdır."
+     },
+     "dogru": "C",
+     "aciklama": "Aşırı doygunluk-çekirdeklenme-agregasyon-tutulma sırası ile inhibitörler ve matris bilgisi doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sitrat güçlü inhibitördür.",
+      "B": "Yanlış; SS>1 gereklidir.",
+      "C": "Doğru. Fizikokimya ve inhibitörler doğrudur.",
+      "D": "Yanlış; agregasyon büyütür.",
+      "E": "Yanlış; matris ~%3'tür."
+     },
+     "bilgi": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k03-q06",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Tekrarlayan CaOx taşlı ve idrar sitratı düşük hastada fizikokimya irdelenirken i̇nhibitörler ve fizikokimyayla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sitrat iyonize kalsiyumla kompleks oluşturur ve kalsiyum oksalat çekirdeklenmesini inhibe eder.",
+      "B": "Pirofosfat, fosfat ve magnezyum kalsiyum oksalat kristalleşmesini engeller.",
+      "C": "Nefrokalsin asidik glikoprotein olup CaOx monohidrat kristalleşmesini etkiler.",
+      "D": "THP alkali idrarda agregasyon inhibitörü, asidik idrarda destekleyicidir.",
+      "E": "Sitrat taş oluşumunu hızlandırır; THP her pH'ta agregasyonu destekler; aşırı doygunluk taş için gerekli değildir."
+     },
+     "dogru": "E",
+     "aciklama": "Sitrat inhibitördür; THP alkali idrarda inhibitör, asidik idrarda destekleyicidir; SS>1 gereklidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Yanlış ifade (aranan cevap). Üç bilgi de terstir."
+     },
+     "bilgi": [
+      13,
+      14,
+      15,
+      9
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k03-q07",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşırı doygunluk düzeyleri ve çekirdeklenme tipleri nasıl ilişkilidir?",
+     "secenekler": {
+      "A": "SS<1 kristal oluşturur",
+      "B": "Heterojen çekirdeklenme de novodur",
+      "C": "Aşırı doygunluk gerekmez",
+      "D": "Epitaksi aynı kristal demektir",
+      "E": "SS>1 heterojen; ULM üstü homojen"
+     },
+     "dogru": "E",
+     "aciklama": "Aşırı doygunluk tuzdan katıya faz geçişinin itici gücü ve taş oluşumunun gerekli koşuludur. SS<1 doymamış idrarda çözünme kolaylaşır; SS>1 metastabil idrarda mevcut nidus üzerinde heterojen çekirdeklenme olur. Metastabilite üst sınırı aşılınca kararsız fazda de novo homojen çekirdeklenme başlar. Epitaksi, benzer kafes yapılı farklı kristal üzerinde büyümedir (ürik asit nidusunda CaOx).",
+     "sik_aciklamalari": {
+      "A": "Yanlış; SS<1'de çözünme kolaylaşır.",
+      "B": "Yanlış; heterojen mevcut nidusta, homojen de novodur.",
+      "C": "Yanlış; aşırı doygunluk taş oluşumunun koşuludur.",
+      "D": "Yanlış; epitaksi farklı kristal üzerinde büyümedir.",
+      "E": "Doğru; doygunluk düzeyleriyle çekirdeklenme tiplerini eşler."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k03-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kristal inhibitörleri ve taş matriksiyle ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Agregasyon atılımı kolaylaştırır",
+      "B": "Sitrat güçlü inhibitör; THP pH bağımlı",
+      "C": "Sitrat taş oluşumunu destekler",
+      "D": "Matriks inorganik kristaldir",
+      "E": "Tutulma taş için gerekmez"
+     },
+     "dogru": "B",
+     "aciklama": "Agregasyonda kristaller tek ünitede toplanarak atılamayacak büyüklüğe ulaşır; tutulma kristallerin epitele adezyonu veya stazla kalıcılığıdır. En güçlü inhibitör sitrattır: iyonize kalsiyumu kompleksler, CaOx çökmesini ve aglomerasyonu engeller, heterojen çekirdeklenmeyi önler. Tamm-Horsfall proteini alkali idrarda inhibitörken asidik idrarda agregasyonu destekler; taş matriksi organik proteinlerdir, enfeksiyon taşlarında %65'e ulaşır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; agregasyon atılamayacak büyüklük oluşturur.",
+      "B": "Doğru; inhibitör etkileri ve matriks bilgisini özetler.",
+      "C": "Yanlış; sitrat dört mekanizmayla kristalleşmeyi engeller.",
+      "D": "Yanlış; matriks idrar ve parankim proteinleridir.",
+      "E": "Yanlış; tutulma kalkülüs oluşumunun son olayıdır."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -413,6 +746,116 @@
       17,
       19,
       20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k04-q04",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Renal papillada epitel altı plaklarla ilişkili taş başlangıcı izlenen hasta ile üreteropelvik darlıklı, stazlı başka bir hasta karşılaştırılmaktadır. Teorilerle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Randall plağı üreterdedir.",
+      "B": "Randall plak teorisi: papilladaki epitel altı plaklar başlangıç bölgesidir. Oksalat hasar teorisi: hiperoksalüri-ROS-tübüler hasar. Vasküler hipotez: vasa recta türbülansı-endotel hasarı-erozyon. Nanobakteri, yetersiz inhibitör ve staz (UPJ darlığı) diğer açıklamalardır; sabit partikül hipotezi adezyonu vurgular.",
+      "C": "Staz taş oluşumunu engeller.",
+      "D": "İnhibitör yetersizliği koruyucudur.",
+      "E": "Oksalat tübülü korumaktadır."
+     },
+     "dogru": "B",
+     "aciklama": "Dört teori + inhibitör-staz açıklamaları doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; plak renal papilladadır.",
+      "B": "Doğru. Teoriler birlikte doğru verilmiştir.",
+      "C": "Yanlış; staz tutulmayı kolaylaştırır.",
+      "D": "Yanlış; inhibitör yetersizliği risk artırır.",
+      "E": "Yanlış; hiperoksalüri ROS-hasar yapar."
+     },
+     "bilgi": [
+      17,
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k04-q05",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Papiller plaklı hasta ile UPJ darlıklı stazlı hasta karşılaştırılırken taş oluşum teorileriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Randall: epitel altı plaklar taş başlangıç bölgesidir.",
+      "B": "Oksalat kaynaklı hasar: ROS ve tübüler hasar rol oynar.",
+      "C": "Vasküler hipotez: papiller uçta türbülans-endotel hasarı-erozyon.",
+      "D": "Randall plağı mesanede bulunur; staz ve inhibitör eksikliği taş oluşumunu önler.",
+      "E": "UPJ darlığı gibi staz durumları ve inhibitör eksikliği taş oluşumunu kolaylaştırır."
+     },
+     "dogru": "D",
+     "aciklama": "Plak renal papilladadır; staz ve inhibitör eksikliği riski artırır.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Yanlış ifade (aranan cevap). Yer ve yön bilgileri hatalıdır.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      17,
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k04-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Randall plak ve oksalat hasarı teorilerinin ortak noktası nedir?",
+     "secenekler": {
+      "A": "Randall plağı üreterdedir",
+      "B": "Plak CaOx birikimidir",
+      "C": "Oksalat epiteli korumaktadır",
+      "D": "Apatit plak; oksalat hasarlı epitel",
+      "E": "Nidus kavramı geçersizdir"
+     },
+     "dogru": "D",
+     "aciklama": "Randall plak teorisinde ince Henle kulpu bazal membranında kalsiyum apatit birikintileri subepitelyal konuma ilerleyip ürotelyumu aşındırır; bu plak üzerinde CaOx taşı büyür. Oksalat kaynaklı tübüler hasar teorisinde hiperoksalürinin ROS ve oksidatif stresi epiteli zedeler; kristaller hasarlı epitele tercihen yapışarak sabit nidus oluşturur. Her iki teori de kristal-epitel etkileşimini merkeze alır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; plak renal papillada subepitelyaldir.",
+      "B": "Yanlış; plak kalsiyum apatittir, üzerinde CaOx büyür.",
+      "C": "Yanlış; hiperoksalüri oksidatif epitel hasarı yapar.",
+      "D": "Doğru; iki teorinin çekirdeğini karşılaştırır.",
+      "E": "Yanlış; sabit nidus taş başlangıcının merkezidir."
+     },
+     "bilgi": [
+      4
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k04-q07",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Diğer kalkülüs oluşum teorileriyle ilgili doğru ifade hangisidir?",
+     "secenekler": {
+      "A": "Vasküler erozyon; staz tutulum; nanobakteri tartışmalı",
+      "B": "Staz taştan korumaktadır",
+      "C": "Nanobakteri kanıtlanmıştır",
+      "D": "İnhibitörler taşı hızlandırır",
+      "E": "Vasküler hipotez enfeksiyondur"
+     },
+     "dogru": "A",
+     "aciklama": "Vasküler hipotezde papiller uçta vasa recta türbülansı endotel hasarı ve Bellini kanalı erozyonuyla taş başlatır. Staz teorisinde UPJ obstrüksiyonu ve at nalı böbrek gibi durumlarda kristal tutulması ve enfeksiyon taş oluşumunu kolaylaştırır. Nanobakteri teorisi apatit çökelmesini başlatan kalsifiye nanopartiküller öne sürer ancak tartışmalıdır; kristalürili taşsız bireylerde ise endojen inhibitörlerin koruduğu kabul edilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; üç teorinin durumunu birlikte verir.",
+      "B": "Yanlış; staz kristal tutulmasıyla taşı kolaylaştırır.",
+      "C": "Yanlış; nanobakteri teorisi tartışmalıdır.",
+      "D": "Yanlış; endojen inhibitörler taşsız bireyleri korur.",
+      "E": "Yanlış; vasküler hipotez türbülans-erozyon mekanizmasıdır."
+     },
+     "bilgi": [
+      4
      ],
      "benzer_cikmis": []
     }
@@ -529,6 +972,126 @@
       27
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k05-q05",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Tekrarlayan CaOx taşı olan hastada 24 saatlik idrarda kalsiyum yüksek, sitrat düşük, pH 5,2 bulunmuş; parathormon yüksek, kalsemi yüksek. Başka hastada Crohn öyküsü ve yağlı dışkılama, diğerinde idrar oksalatı çok yüksek genç hasta vardır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hiperkalsiüri >4 mg/kg/gün (GİS/böbrek/kemik); hiperkalsemide primer hiperparatiroidi (PTH yüksek) ile sarkoidoz (PTH baskılı) ayrılır. Hiperürikozüri >700 mg/gün, pH>5,5'te Na ürat çökeltisiyle CaOx'u destekler. Diyet hiperoksalürisi (fındık, çikolata, ıspanak, patates, çay, C vitamini); primer (OR, genç yaş, oksalat çok yüksek); enterik (Crohn/ÜK/çölyak, rezeksiyon-bariatrik; yağ asidi Ca-Mg sabunlaşması). Hipositratüri (asidoz, tiyazid dışı nedenler, distal RTA); pH<5,5 heterojen çekirdeklenme; Mg eksikliği inhibitör kaybıdır.",
+      "B": "Hiperkalsiüri tanımı >1 mg/gün'dür.",
+      "C": "Sarkoidozda PTH yükselir.",
+      "D": "Enterik hiperoksalüri yağ emilimi artışıyla olur.",
+      "E": "Asidoz sitrat atılımını artırır."
+     },
+     "dogru": "A",
+     "aciklama": "Metabolik düzenekler (hiperkalsiüri tipleri, hiperkalsemi ayrımı, hiperürikozüri, üç hiperoksalüri, hipositratüri-RTA, düşük pH, hipomagnezüri) doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Düzenekler birlikte doğru verilmiştir.",
+      "B": "Yanlış; sınır >4 mg/kg/gün'dür.",
+      "C": "Yanlış; sarkoidozda PTH baskılanır.",
+      "D": "Yanlış; yağ malabsorpsiyonu ve Ca-Mg sabunlaşması vardır.",
+      "E": "Yanlış; asidoz sitrat atılımını azaltır."
+     },
+     "bilgi": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k05-q06",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Kalsiyumu yüksek sitratı düşük hastayla Crohn'lu ve genç hiperoksalürili hastalar karşılaştırılırken kalsiyum taşlarının metabolik düzenekleriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Primer hiperoksalüri OR glioksalat metabolizma bozukluğudur; genç yaş ve tekrarlayan taşlarla seyreder.",
+      "B": "Enterik hiperoksalüri bağırsak emilim bozukluğu/rezeksiyon sonrası gelişir.",
+      "C": "Hiperkalsiüri >10 mg/kg/gün ile tanımlanır ve yalnızca böbrek kaynaklıdır; hiperürikozüri CaOx oluşumunu engeller; primer hiperoksalüri OD'dir.",
+      "D": "İdiyopatik düşük idrar pH'sında (<5,5) CaOx, ürik asit kristalleriyle heterojen çekirdeklenme yapar.",
+      "E": "Hipositratüride sistemik asidoz sitrat metabolizmasını artırıp atılımı azaltır; distal RTA nedendir."
+     },
+     "dogru": "C",
+     "aciklama": "Hiperkalsiüri >4 mg/kg/gün, GİS/böbrek/kemik kaynaklıdır; hiperürikozüri CaOx'u destekler; primer hiperoksalüri OR'dir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Doğru ifade.",
+      "C": "Yanlış ifade (aranan cevap). Tanım, kaynak, yön ve kalıtım hatalıdır.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      21,
+      22,
+      24,
+      26,
+      27,
+      28,
+      29
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k05-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Hiperkalsiüri tipleri ve hiperparatiroidi-sarkoidoz ayrımı nasıldır?",
+     "secenekler": {
+      "A": "Hiperkalsiüri nadir bir bulgudur",
+      "B": "Resorptif tip bağırsaktandır",
+      "C": "En sık; PTH yüksek-paratiroid, baskılı-sarkoidoz",
+      "D": "Sarkoidozda PTH yükselir",
+      "E": "Eşik 1 mg/kg/gündür"
+     },
+     "dogru": "C",
+     "aciklama": "Hiperkalsiüri (>4 mg/kg/gün) en sık metabolik anormalliktir (%50'ye kadar); absorptif tipte bağırsak emilimi, renal tipte tübüler geri emilim bozukluğu, resorptif tipte primer hiperparatiroidi rol oynar. Primer hiperparatiroidiyi ayırt etmek en anlamlı tanı adımıdır: PTH yüksekliğiyle hiperkalsemi-hiperkalsiüri yapar. Sarkoidozda ise 1,25-dihidroksi D vitamini artışıyla hiperkalsiüri olurken PTH baskılıdır; hiler adenopati ipucudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; en sık metabolik anormalliktir.",
+      "B": "Yanlış; resorptif tip primer hiperparatiroidiye bağlıdır.",
+      "C": "Doğru; sıklık, tipler ve PTH ayrımını verir.",
+      "D": "Yanlış; sarkoidozda PTH baskılıdır.",
+      "E": "Yanlış; eşik >4 mg/kg/gündür."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": [
+      "37b566eb4aa5"
+     ]
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k05-q08",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Hiperürikozüri, enterik hiperoksalüri ve hipositratüri mekanizmaları nelerdir?",
+     "secenekler": {
+      "A": "Ürat çekirdeklenme yapmaz",
+      "B": "Enterik oksalüri emilimi azaltır",
+      "C": "Asidoz sitratı artırır",
+      "D": "Distal RTA'da idrar asidiktir",
+      "E": "Ürat nidus; sabunlaşma oksalat; asidoz sitrat düşürür"
+     },
+     "dogru": "E",
+     "aciklama": "Hiperürikozüride (>700 mg/gün, en sık aşırı hayvansal protein) pH>5,5'te çöken sodyum ürat heterojen çekirdeklenmeyle kalsiyum taşını başlatır; ürik asit kristalleri ayrıca inhibitörleri bağlayıp etkisizleştirir. Enterik hiperoksalüride (Crohn, bariatrik cerrahi) yağ asitleri kalsiyumu sabunlaştırır; bağırsakta serbest kalan oksalat emilip atılır. Hipositratüride asidoz (distal RTA, kronik ishal, tiyazid) sitratı düşürür; distal RTA'da idrar pH>6,5 ile hiperkloremik asidoz tipiktir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sodyum ürat heterojen çekirdeklenme yapar.",
+      "B": "Yanlış; sabunlaşma serbest oksalatı ve emilimi artırır.",
+      "C": "Yanlış; asidoz sitrat atılımını azaltır.",
+      "D": "Yanlış; distal RTA'da idrar pH>6,5'tir.",
+      "E": "Doğru; üç düzeneğin mekanizmasını özetler."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
@@ -614,6 +1177,112 @@
      },
      "bilgi": [
       31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k06-q04",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Gutlu, idrar pH'sı sürekli 5,0 olan hastada radyolusen taşlar; başka bir çocuk hastada hekzagonal kristaller ve COLA aminoasidürisi saptanmıştır. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ürik asit taşları güçlü radyoopaktır.",
+      "B": "Ürik asit taşı yüksek pH'ta oluşur.",
+      "C": "Sistin taşı OD'dir.",
+      "D": "COLA yalnızca sistini içerir.",
+      "E": "Ürik asit taşında birincil faktör düşük idrar pH'sıdır (pKa 5,35; altında az çözünen ürik asit baskın). Sistin taşı OR bozukluktur; COLA (sistin, ornitin, lizin, arginin) renal-intestinal taşınma kusurudur; sistin görece çözünmezdir ve hekzagonal kristal verir."
+     },
+     "dogru": "E",
+     "aciklama": "Ürik asit (düşük pH, pKa 5,35) ve sistin (OR, COLA taşınma kusuru) patofizyolojisi doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ürik asit taşları radyolusendir.",
+      "B": "Yanlış; düşük pH birincil faktördür.",
+      "C": "Yanlış; OR kalıtılır.",
+      "D": "Yanlış; dört dibazik aminoasittir.",
+      "E": "Doğru. İki taş tipi birlikte doğru verilmiştir."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k06-q05",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Gutlu asidik idrarlı hasta ile hekzagonal kristalli çocuk karşılaştırılırken ürik asit ve sistin taşlarıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ürik asidin pKa'sı 5,35'tir; bu değerde yarısı ürat, yarısı ürik asittir.",
+      "B": "Ürik asit taşının birincil nedeni hiperkalsiüri, sistin taşının nedeni üreaz enfeksiyonudur; sistin OD kalıtılır.",
+      "C": "Sistin taşı dibazik aminoasit taşınma kusurudur (COLA).",
+      "D": "Sistin taşı OR kalıtılır.",
+      "E": "Düşük idrar pH'sı ürik asit taşı için birincil faktördür."
+     },
+     "dogru": "B",
+     "aciklama": "Ürik asitte birincil faktör düşük pH, sistinde OR taşınma kusurudur; üreaz enfeksiyon taşı (strüvit) nedenidir.",
+     "sik_aciklamalari": {
+      "A": "Doğru ifade.",
+      "B": "Yanlış ifade (aranan cevap). Neden ve kalıtım bilgileri hatalıdır.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      30,
+      31
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k06-q06",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Ürik asit taşı oluşumunda pH'nın rolü ve diyabet ilişkisi nedir?",
+     "secenekler": {
+      "A": "Temel faktör yüksek pH'tır",
+      "B": "pKa 5,35; asidik idrar; diyabette sık",
+      "C": "Ürik asit radyoopaktır",
+      "D": "Amonyum atılımı artmıştır",
+      "E": "Hacim düşüklüğü korumaktadır"
+     },
+     "dogru": "B",
+     "aciklama": "Ürik asit taşında birincil faktör düşük idrar pH'ıdır; ürik asidin pKa'sı 5,35 olduğundan bu pH'ta yarısı az çözünen ürik asit formundadır. Düşük hacim ve hiperürikozüri ek faktörlerdir. Diyabetiklerde renal amonyum atılımı bozulur, net asit atılımı artar; tamponlama azalınca idrar asidikleşir ve taş sıklaşır. Ürik asit taşları radyolüsenttir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; birincil faktör düşük idrar pH'ıdır.",
+      "B": "Doğru; pKa, pH mekanizması ve diyabet ilişkisini verir.",
+      "C": "Yanlış; ürik asit taşları radyolüsenttir.",
+      "D": "Yanlış; diyabette amonyum atılımı bozulur.",
+      "E": "Yanlış; düşük idrar hacmi riski artırır."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k06-q07",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Sistin taşlarının genetik kusuru ve çözünürlük ilkesi nedir?",
+     "secenekler": {
+      "A": "Sistinüri dominant geçişlidir",
+      "B": "COLA yalnızca sistindir",
+      "C": "Asidik idrar çözünürlüğü artırır",
+      "D": "Resesif COLA kusuru; alkali idrar çözer",
+      "E": "Sodyum atılımı azaltır"
+     },
+     "dogru": "D",
+     "aciklama": "Sistinüri otozomal resesif geçişli, COLA amino asitlerinin (sistin, ornitin, lizin, arjinin) renal ve intestinal taşınım kusurudur. Sistin idrarda çok az çözünür; çözünürlüğü idrar pH'ı yükseldikçe artar, bu yüzden alkali idrar tedavinin temelidir. Sodyum alımı sistin atılımını artırdığından tuz kısıtlaması da taşı azaltır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sistinüri otozomal resesiftir.",
+      "B": "Yanlış; COLA dört dibazik amino asittir.",
+      "C": "Yanlış; çözünürlük alkali pH ile artar.",
+      "D": "Doğru; kalıtım, taşınım kusuru ve tedavi mantığını verir.",
+      "E": "Yanlış; sodyum sistin atılımını artırır."
+     },
+     "bilgi": [
+      6
      ],
      "benzer_cikmis": []
     }
@@ -714,12 +1383,115 @@
       33
      ],
      "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k07-q04",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Tekrarlayan Proteus mirabilis İYE'si olan kadında büyük, dallanan (staghorn) taş; epilepsi için topiramat kullanan başka hastada taş gelişmiştir. Mekanizmalarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Topiramat sitratı artırır.",
+      "B": "Strüvit asidik idrarda oluşur.",
+      "C": "Üreaz bakterileri idrarı asitleştirir.",
+      "D": "Enfeksiyon taşları strüvit (Mg amonyum fosfat), karbonat apatit ve amonyum ürattır; üreaz bakterileri (Proteus, Klebsiella) üreyi amonyağa çevirir, idrar alkalileşir ve fosfat çöker. İlaç taşlarında karbonik anhidraz inhibitörleri (asetazolamid, topiramat) idrar pH'sını artırır, sitratı azaltır, bazen hiperkalsiüriyi destekler.",
+      "E": "Enfeksiyon taşları yalnızca ürik asittir."
+     },
+     "dogru": "D",
+     "aciklama": "Üreaz-alkalinizasyon-fosfat çökmesi ve KA inhibitörü (pH artışı, sitrat azalışı) mekanizmaları doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; sitratı azaltır.",
+      "B": "Yanlış; alkali idrarda oluşur.",
+      "C": "Yanlış; amonyakla alkalileştirir.",
+      "D": "Doğru. İki mekanizma birlikte doğrudur.",
+      "E": "Yanlış; strüvit-apatit-amonyum ürattır."
+     },
+     "bilgi": [
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k07-q05",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Proteus İYE'li staghorn taşlı kadın ile topiramat kullanan hasta değerlendirilirken enfeksiyon ve ilaç taşlarıyla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Enfeksiyon taşları üreaz-negatif bakterilerle asidik idrarda oluşur; KA inhibitörleri pH'ı düşürüp sitratı artırarak taşı önler.",
+      "B": "Proteus mirabilis ve Klebsiella üreaz oluşturur.",
+      "C": "Üreaz üreyi amonyağa çevirerek idrarı alkalileştirir.",
+      "D": "Asetazolamid ve topiramat idrar pH'sını artırıp sitratı azaltır.",
+      "E": "Strüvit, karbonat apatit ve amonyum ürat enfeksiyon taşlarıdır."
+     },
+     "dogru": "A",
+     "aciklama": "Enfeksiyon taşları üreaz-pozitif bakterilerle alkali idrarda oluşur; KA inhibitörleri pH'ı artırıp sitratı azaltarak riski artırır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış ifade (aranan cevap). Bakteri, pH ve ilaç etkisi terstir.",
+      "B": "Doğru ifade.",
+      "C": "Doğru ifade.",
+      "D": "Doğru ifade.",
+      "E": "Doğru ifade."
+     },
+     "bilgi": [
+      32,
+      33
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k07-q06",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Enfeksiyon taşlarının üreaz mekanizması nasıl işler?",
+     "secenekler": {
+      "A": "Üreaz; amonyak; alkali idrar; strüvit",
+      "B": "Üreaz idrarı asitleştirir",
+      "C": "Strüvit asidik idrarda çöker",
+      "D": "Proteus taş yapmaz",
+      "E": "Enfeksiyon taşları küçüktür"
+     },
+     "dogru": "A",
+     "aciklama": "Üreaz üreten bakteriler (Proteus mirabilis, Klebsiella, stafilokoklar) üreyi amonyak ve CO2'ye parçalar. Açığa çıkan amonyak idrarı alkalileştirir; yüksek amonyum ve fosfatla magnezyum amonyum fosfat (strüvit) çöker. Karbonat apatit ve amonyum ürat da enfeksiyon taş grubundadır; bu taşlar hızlı büyüyüp staghorn oluşturabilir.",
+     "sik_aciklamalari": {
+      "A": "Doğru; enzim, ürün, pH ve çöken tuzu sıralar.",
+      "B": "Yanlış; amonyak idrarı alkalileştirir.",
+      "C": "Yanlış; strüvit alkali idrarda oluşur.",
+      "D": "Yanlış; Proteus klasik üreaz üreticisidir.",
+      "E": "Yanlış; enfeksiyon taşları staghorn yapabilir."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi-k07-q07",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "İlaç kaynaklı taşların dolaylı ve doğrudan mekanizmaları nelerdir?",
+     "secenekler": {
+      "A": "Asetazolamid sitratı artırır",
+      "B": "Tiyazid idrarı asitleştirir",
+      "C": "CA inhibitörü pH-sitrat; indinavir direkt",
+      "D": "İlaç taşları radyoopaktır",
+      "E": "Topiramat taş yapmaz"
+     },
+     "dogru": "C",
+     "aciklama": "Karbonik anhidraz inhibitörleri (asetazolamid, topiramat) metabolik asidozla idrar pH'ını yükseltip sitratı düşürür; bazen hiperkalsiüri eklenir. Tiyazidler hipokalemiyle hücre içi asidoz yaparak hipositratüriye yol açar. İndinavir, triamteren ve guaifenesin gibi ilaçlar idrarda doğrudan kristalleşerek taş oluşturur; bunlar radyolüsent gruptadır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış; CA inhibitörleri sitratı düşürür.",
+      "B": "Yanlış; tiyazid hipositratüri yoluyla risk yaratır.",
+      "C": "Doğru; dolaylı ve doğrudan iki ilaç mekanizmasını verir.",
+      "D": "Yanlış; ilaç taşları radyolüsenttir.",
+      "E": "Yanlış; topiramat CA inhibisyonuyla taş yapar."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": []
     }
    ],
    "ilgili_cikmis": []
   }
- ],
- "soru_sayisi": 24,
- "uretim": "editör (Claude), ders paketi + bilgi paketi temelli",
- "guncelleme": "2026-10-08T22:55:18"
+ ]
 }

@@ -453,7 +453,9 @@ export class ServerNotificationService {
       ? `${cleanBaseUrl}/cikmis/${encodeURIComponent(questionId)}`
       : `${cleanBaseUrl}/cikmis`;
 
-    const title = type === 'report'
+    const title = type === 'report' && params.link?.startsWith('/ogren')
+      ? `📘 MedSoru Öğren: Hata Bildirimi (${questionId})`
+      : type === 'report'
       ? `🚨 MedSoru: Yeni Hata Bildirimi (#${questionId})`
       : type === 'comment'
       ? `💬 MedSoru: Yeni Öğrenci Yorumu (#${questionId})`
