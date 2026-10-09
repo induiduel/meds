@@ -129,13 +129,13 @@ export const LearnHub: React.FC<{
   const totals = useMemo(() => {
     let steps = 0;
     let seen = 0;
-    let questions = 0;
+    let cards = 0;
     scoped.forEach((d) => {
       steps += d.slideCount || 0;
       seen += Math.min(d.slideCount || 0, progress[d.id]?.seen?.length || 0);
-      questions += d.questionCount || 0;
+      cards += d.cardCount || d.flashcardCount || 0;
     });
-    return { steps, seen, questions, pct: steps ? Math.round((seen / steps) * 100) : 0 };
+    return { steps, seen, cards, pct: steps ? Math.round((seen / steps) * 100) : 0 };
   }, [scoped, progress]);
 
   const filtered = !!q || group !== 'all' || status !== 'all';
@@ -150,12 +150,12 @@ export const LearnHub: React.FC<{
       <header className="lh-head">
         <div className="lh-title">
           <h1 className="ms-page-title m-0">Öğren</h1>
-          <p>Ders anlatımı, etkinlikler ve çıkmış sorularla adım adım çalış.</p>
+          <p>Ders anlatımı, etkinlikler ve interaktif mini sorularla adım adım çalış.</p>
         </div>
         <dl className="lh-stats">
           <div><dt>Ders</dt><dd>{scoped.length}</dd></div>
           <div><dt>Adım</dt><dd>{totals.steps.toLocaleString('tr-TR')}</dd></div>
-          <div><dt>Soru</dt><dd>{totals.questions.toLocaleString('tr-TR')}</dd></div>
+          <div><dt>Akıl Kartı</dt><dd>{totals.cards.toLocaleString('tr-TR')}</dd></div>
           <div className="is-accent"><dt>İlerleme</dt><dd>%{totals.pct}</dd></div>
         </dl>
       </header>
@@ -247,7 +247,6 @@ export const LearnHub: React.FC<{
                   <b className="lh-card-t" title={deckName(d, false)}>{deckName(d, false)}</b>
                   <span className="lh-card-meta">
                     <span><Layers aria-hidden />{d.slideCount} adım</span>
-                    {d.questionCount > 0 && <span><HelpCircle aria-hidden />{d.questionCount} soru</span>}
                     {d.cardCount > 0 && <span><BookOpen aria-hidden />{d.cardCount} kart</span>}
                   </span>
                   <span className="lh-card-foot">

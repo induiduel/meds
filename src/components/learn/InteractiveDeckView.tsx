@@ -268,8 +268,31 @@ const Rich: React.FC<{ text: string; className?: string }> = ({ text, className 
 const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
   if (!text) return null;
 
+  // Ham LaTeX ve matematiksel ifadelerin (örn. $\times$, $\ge$, $\to$) temizlenmesi
+  const clean = text
+    .replace(/\$\\times\$/g, '×')
+    .replace(/\\times\b/g, '×')
+    .replace(/\$\\to\$/g, '→')
+    .replace(/\\to\b/g, '→')
+    .replace(/\$\\rightarrow\$/g, '→')
+    .replace(/\\rightarrow\b/g, '→')
+    .replace(/\$\\ge\s*(\d+)/g, '≥ $1')
+    .replace(/\$\\ge\$/g, '≥')
+    .replace(/\\ge\b/g, '≥')
+    .replace(/\$\\le\s*(\d+)/g, '≤ $1')
+    .replace(/\$\\le\$/g, '≤')
+    .replace(/\\le\b/g, '≤')
+    .replace(/\$\\pm\$/g, '±')
+    .replace(/\\pm\b/g, '±')
+    .replace(/\$\\approx\$/g, '≈')
+    .replace(/\\approx\b/g, '≈')
+    .replace(/\$\/\\mu\s*L\$/gi, '/µL')
+    .replace(/\$\\mu\s*L\$/gi, 'µL')
+    .replace(/\\mu\s*L\b/gi, 'µL')
+    .replace(/\$([a-zA-Z0-9_+^–-]+)\$/g, '$1');
+
   // Satırları gruplayalım: tabloları ve normal blokları ayırt edelim
-  const rawLines = text.split('\n');
+  const rawLines = clean.split('\n');
   const elements: React.ReactNode[] = [];
   let i = 0;
 
@@ -813,7 +836,7 @@ const DeckPlayer: React.FC<{
     }
   });
   const [panelOpen, setPanelOpen] = useState(() => typeof window !== 'undefined' && window.innerWidth >= 1100);
-  const [tab, setTab] = useState<PanelTab>('questions');
+  const [tab, setTab] = useState<PanelTab>('flashcards');
   // Mobil çekmece: sürükle-kapat
   const [sheetDrag, setSheetDrag] = useState(0);
   const sheetStartY = useRef<number | null>(null);
@@ -1332,7 +1355,7 @@ const DeckPlayer: React.FC<{
           onClick={() => setPanelOpen((v) => !v)}
           aria-pressed={panelOpen}
           aria-label="Etkileşim panelini aç/kapat"
-          title="Akıl kartları, çıkmış sorular, ders notu ve AI"
+          title="Akıl kartları, ders notu ve AI"
           className={`${iconBtn} ${panelOpen ? 'bg-accent-soft text-accent' : ''}`}
         >
           {panelOpen ? <PanelRightClose className="w-5 h-5" /> : <PanelRightOpen className="w-5 h-5" />}
@@ -1452,7 +1475,7 @@ const DeckPlayer: React.FC<{
                   onToggleFullscreen={toggleFullscreen}
                   isFullscreen={isFs || immersive}
                   onOpenQuestions={() => {
-                    setTab('questions');
+                    setTab('flashcards');
                     setPanelOpen(true);
                   }}
                   onOpenFlashcards={() => {
@@ -1494,7 +1517,7 @@ const DeckPlayer: React.FC<{
                 onToggleFullscreen={toggleFullscreen}
                 isFullscreen={isFs || immersive}
                 onOpenQuestions={() => {
-                  setTab('questions');
+                  setTab('flashcards');
                   setPanelOpen(true);
                 }}
                 onOpenFlashcards={() => {
@@ -1529,7 +1552,7 @@ const DeckPlayer: React.FC<{
                     onToggleFullscreen={toggleFullscreen}
                     isFullscreen={isFs || immersive}
                     onOpenQuestions={() => {
-                      setTab('questions');
+                      setTab('flashcards');
                       setPanelOpen(true);
                     }}
                     onOpenFlashcards={() => {
@@ -1729,27 +1752,6 @@ export const GlobalTopicSearchModal: React.FC<{
           snippet: pearlStr,
         });
         return;
-      }
-      // 6. Questions
-      const slideQuestions = (slide.relatedQuestions && slide.relatedQuestions.length > 0)
-        ? slide.relatedQuestions
-        : ((slide as any).practiceQuestion ? [(slide as any).practiceQuestion] : []);
-      const foundQ = slideQuestions.find(
-        (rq: any) => {
-          if (!rq) return false;
-          if (typeof rq === 'string') return rq.toLocaleLowerCase('tr-TR').includes(queryNorm);
-          return (rq.stem || '').toLocaleLowerCase('tr-TR').includes(queryNorm) || (rq.explanation || '').toLocaleLowerCase('tr-TR').includes(queryNorm);
-        }
-      );
-      if (foundQ) {
-        const snippetText = typeof foundQ === 'string' ? foundQ : (foundQ.stem || '');
-        matches.push({
-          slideIndex: sIdx,
-          slideNumber: slide.slideNumber,
-          slideTitle: slide.title,
-          matchedType: 'Çıkmış Soru',
-          snippet: snippetText.slice(0, 130) + '...',
-        });
       }
     });
 
@@ -2410,47 +2412,8 @@ const SlideCanvas: React.FC<{
   };
 
   const renderQuestions = () => {
-    const validQuestions = (slide.relatedQuestions || []).filter((q: any) => String(q?.stem || q?.question || '').trim().length > 10);
-    if (validQuestions.length === 0) return null;
-    return (
-      <section id={`slide-questions-${slide.slideNumber}`} className="flex flex-col gap-2.5 pt-1 scroll-mt-6">
-        <div className="flex items-center justify-between gap-2 border-b border-line-soft pb-2">
-          <div className="flex items-center gap-2 min-w-0">
-            <span className="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-2xs">
-              <CheckCircle2 className="w-4 h-4" />
-            </span>
-            <div>
-              <h3 className="m-0 text-[14px] sm:text-[14.5px] font-bold text-ink flex items-center gap-2">
-                <span>Eşleşen Kurul & Çıkmış Sorular</span>
-                <span className="shrink-0 font-mono text-[11px] font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
-                  {validQuestions.length} Soru
-                </span>
-              </h3>
-              <p className="m-0 text-[11.5px] text-ink-3">
-                Paneli açmaya gerek kalmadan doğrudan bu slayt üzerinden çözebilirsiniz
-              </p>
-            </div>
-          </div>
-
-          {onOpenQuestions && (
-            <button
-              type="button"
-              onClick={onOpenQuestions}
-              className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[11.5px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
-            >
-              <span>Panelde Aç</span>
-              <ChevronRight className="w-3.5 h-3.5" />
-            </button>
-          )}
-        </div>
-
-        <div className="grid grid-cols-1 gap-3">
-          {validQuestions.map((q, i) => (
-            <QuizCard key={`canvas-${slide.slideNumber}-${q.id || i}`} q={q} n={i + 1} />
-          ))}
-        </div>
-      </section>
-    );
+    // Kullanıcı talimatı: Etkileşimli öğrenim sayfalarından örnek soru ve çıkmış soru gösterimi kaldırıldı.
+    return null;
   };
 
   // Kritik Tıbbi Terimler - Kullanıcı talimatı: Slaytın en altında yer alır
@@ -2509,10 +2472,6 @@ const SlideCanvas: React.FC<{
       case 'flashcards':
       case 'flashcard':
         return <React.Fragment key={block.id}>{renderFlashcards()}</React.Fragment>;
-      case 'questions':
-      case 'related_questions':
-      case 'relatedquestions':
-        return <React.Fragment key={block.id}>{renderQuestions()}</React.Fragment>;
       case 'terms':
       case 'medical_terms':
       case 'medicalterms':
@@ -2542,11 +2501,7 @@ const SlideCanvas: React.FC<{
               {!sortedBlocks.some((b) =>
                 ['interactive', 'interactive_element', 'interactive_elements', 'interactives'].includes(b.type?.toLowerCase())
               ) && renderInteractive()}
-              {/* Güvenlik Ağı 2: Eğer sortedBlocks içinde soru bloğu yoksa ama slaytta sorular varsa render et */}
-              {!sortedBlocks.some((b) =>
-                ['questions', 'related_questions', 'relatedquestions'].includes(b.type?.toLowerCase())
-              ) && renderQuestions()}
-              {/* Güvenlik Ağı 3: Eğer sortedBlocks içinde terim bloğu yoksa ama tıbbi terimler varsa en altta render et */}
+              {/* Güvenlik Ağı 2: Eğer sortedBlocks içinde terim bloğu yoksa ama tıbbi terimler varsa en altta render et */}
               {!sortedBlocks.some((b) =>
                 ['terms', 'medical_terms', 'medicalterms'].includes(b.type?.toLowerCase())
               ) && renderMedicalTerms()}
@@ -2561,7 +2516,6 @@ const SlideCanvas: React.FC<{
               {renderSpots()}
               {renderKeyBullets()}
               {renderFlashcards()}
-              {renderQuestions()}
               {renderMedicalTerms()}
             </>
           )}
@@ -2711,24 +2665,17 @@ const InteractionPanel: React.FC<{
   tab: PanelTab;
   setTab: (t: PanelTab) => void;
 }> = ({ deck, slide, tab, setTab }) => {
-  // Kökü ya da şıkları boş "soru" kayıtları gösterilmez (boş çıkmış soru kartı oluşuyordu)
-  const usable = (q: any) => !!q && String(q.stem || q.question || '').trim().length > 10 && Array.isArray(q.options) && q.options.length >= 2;
-  const qs = ((slide.relatedQuestions && slide.relatedQuestions.length > 0)
-    ? slide.relatedQuestions
-    : ((slide as any).practiceQuestion ? [(slide as any).practiceQuestion] : [])
-  ).filter(usable);
   const cards = slide.flashcards || [];
 
-  // Sade panel: 4 sekme. PDF üst çubuktaki görünüm seçicide; spotlar notların altında.
-  // Boş sekmeler (sorusu ya da kartı olmayan slayt) gösterilmez; seçili sekme boşsa ilk doluya geçilir
+  // Sade panel: Kartlar, Notlar ve AI.
+  // Kullanıcı talimatı: Örnek soru ve çıkmış soru gösterimi kaldırıldı.
   const tabs: { id: PanelTab; label: string; count?: number }[] = [
-    ...(qs.length ? [{ id: 'questions' as PanelTab, label: 'Kendini sına', count: qs.length }] : []),
     ...(cards.length ? [{ id: 'flashcards' as PanelTab, label: 'Kartlar', count: cards.length }] : []),
     { id: 'notes', label: 'Notlar' },
     { id: 'ai', label: 'Sor' },
   ];
-  const wanted: PanelTab = tab === 'pdf' ? 'questions' : tab === 'pearls' ? 'notes' : tab;
-  const active: PanelTab = tabs.some((t) => t.id === wanted) ? wanted : tabs[0].id;
+  const wanted: PanelTab = (tab === 'pdf' || tab === 'questions') ? 'flashcards' : tab === 'pearls' ? 'notes' : tab;
+  const active: PanelTab = tabs.some((t) => t.id === wanted) ? wanted : (tabs[0]?.id || 'notes');
 
   return (
     <>
@@ -2762,12 +2709,6 @@ const InteractionPanel: React.FC<{
             )}
           </div>
         )}
-        {active === 'questions' &&
-          (qs.length === 0 ? (
-            <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu slayta eşleşen soru yok.</p>
-          ) : (
-            qs.map((q, i) => <QuizCard key={`${slide.slideNumber}-${q.id}`} q={q} n={i + 1} />)
-          ))}
         {active === 'notes' && <SlideNotesTab slide={slide} />}
         {active === 'notes' && (
           (deck.highYieldPearls || []).length > 0 ? (

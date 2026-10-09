@@ -629,8 +629,32 @@ export const RenderWithGlossaryTerms: React.FC<{
   }, [glossaryList]);
 
   // Multi-token parser: Bold (*** / **), Markers (==...== or <mark>...</mark>), Italics (*...* or _..._)
+  const cleanText = useMemo(() => {
+    return String(text || '')
+      .replace(/\$\\times\$/g, '×')
+      .replace(/\\times\b/g, '×')
+      .replace(/\$\\to\$/g, '→')
+      .replace(/\\to\b/g, '→')
+      .replace(/\$\\rightarrow\$/g, '→')
+      .replace(/\\rightarrow\b/g, '→')
+      .replace(/\$\\ge\s*(\d+)/g, '≥ $1')
+      .replace(/\$\\ge\$/g, '≥')
+      .replace(/\\ge\b/g, '≥')
+      .replace(/\$\\le\s*(\d+)/g, '≤ $1')
+      .replace(/\$\\le\$/g, '≤')
+      .replace(/\\le\b/g, '≤')
+      .replace(/\$\\pm\$/g, '±')
+      .replace(/\\pm\b/g, '±')
+      .replace(/\$\\approx\$/g, '≈')
+      .replace(/\\approx\b/g, '≈')
+      .replace(/\$\/\\mu\s*L\$/gi, '/µL')
+      .replace(/\$\\mu\s*L\$/gi, 'µL')
+      .replace(/\\mu\s*L\b/gi, 'µL')
+      .replace(/\$([a-zA-Z0-9_+^–-]+)\$/g, '$1');
+  }, [text]);
+
   const tokenRegex = /(\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*|==[^=]+==|<mark>[^<]+<\/mark>|\*[^*\n]+\*|_[^_\n]+_)/g;
-  const parts = String(text || '').split(tokenRegex);
+  const parts = cleanText.split(tokenRegex);
 
   return (
     <span className={className}>

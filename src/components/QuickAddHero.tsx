@@ -3,6 +3,7 @@ import {
   ArrowRight,
   CheckCircle2,
   ChevronRight,
+  ChevronLeft,
   ChevronDown,
   Check,
   CircleDashed,
@@ -119,6 +120,7 @@ interface QuickAddHeroProps {
 }
 
 const SAVED_NAME_KEY = 'medsoru_saved_contributor_name';
+const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI'];
 const EXAM_YEAR_KEY = 'medsoru_contrib_exam_year';
 /** Öğretim yılı Eylül'de başlar: 9 Ekim 2026 → "2026-2027" */
 export const currentAcademicYear = (d = new Date()) => {
@@ -598,6 +600,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       );
 
       setTexts({ stem: '', clue: '' });
+      setPremises(['', '', '']);
+      setQType(null);
       setOptions({ A: '', B: '', C: '', D: '', E: '' });
       setOptionCount(1);
       setAnswerReason('');
@@ -700,8 +704,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     const num = parseInt(questionNumber, 10);
     const hasNumber = Number.isFinite(num) && num >= 1 && num <= target;
     // Everything written in the different modes goes in as one fragment
+    const premiseLines = qType === 'onculu' ? premises.map((p) => p.trim()).filter(Boolean).map((p, i) => `${ROMAN[i]}. ${p}`) : [];
     const fragmentText = [
       texts.stem.trim(),
+      ...premiseLines,
       texts.clue.trim() ? `İpucu: ${texts.clue.trim()}` : '',
       claimedAnswer && answerReason.trim() ? `Cevap notu (${claimedAnswer}): ${answerReason.trim()}` : '',
     ]
@@ -805,6 +811,49 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedText, mode]);
 
+  // Telefonda tam ekran yazma adım adım ilerler: kök → soru tipi → (öncüller) → şıklar → ipucu ve künye
+  type WizStep = 'kok' | 'tur' | 'onculler' | 'siklar' | 'son';
+  const [qType, setQType] = useState<'klasik' | 'onculu' | null>(null);
+  const [premises, setPremises] = useState<string[]>(['', '', '']);
+  const [wiz, setWizRaw] = useState<WizStep>('kok');
+  const [wizDir, setWizDir] = useState<1 | -1>(1);
+  const wizRef = React.useRef<WizStep>('kok');
+  wizRef.current = wiz;
+  const wizSteps: WizStep[] = qType === 'onculu' ? ['kok', 'tur', 'onculler', 'siklar', 'son'] : ['kok', 'tur', 'siklar', 'son'];
+  const goWiz = (to: WizStep) => {
+    const order: WizStep[] = ['kok', 'tur', 'onculler', 'siklar', 'son'];
+    setWizDir(order.indexOf(to) >= order.indexOf(wizRef.current) ? 1 : -1);
+    setWizRaw(to);
+  };
+  const wizNext = () => {
+    const i = wizSteps.indexOf(wiz);
+    if (i >= 0 && i < wizSteps.length - 1) goWiz(wizSteps[i + 1]);
+  };
+  const wizBack = () => {
+    const i = wizSteps.indexOf(wizRef.current);
+    if (i > 0) goWiz(wizSteps[i - 1]);
+  };
+  const pickType = (t: 'klasik' | 'onculu') => {
+    setQType(t);
+    setWizDir(1);
+    setWizRaw(t === 'onculu' ? 'onculler' : 'siklar');
+  };
+  // Öncüllü sorularda sık şık kalıpları: dokununca ilk boş şıkka yazılır
+  const premiseCount = Math.max(2, premises.filter((p) => p.trim()).length);
+  const comboChips = (() => {
+    const R = ROMAN.slice(0, Math.min(premiseCount, 5));
+    const out: string[] = R.map((r) => `Yalnız ${r}`);
+    for (let a = 0; a < R.length; a++) for (let b = a + 1; b < R.length; b++) out.push(`${R[a]} ve ${R[b]}`);
+    if (R.length >= 3) out.push(`${R.slice(0, -1).join(', ')} ve ${R[R.length - 1]}`);
+    return out.slice(0, 12);
+  })();
+  const fillNextOption = (text: string) => {
+    const k = KEYS.find((key, i) => i < optionCount && !options[key].trim()) || (optionCount < 5 ? KEYS[optionCount] : null);
+    if (!k) return;
+    if (KEYS.indexOf(k) >= optionCount) setOptionCount(KEYS.indexOf(k) + 1);
+    setOptions((p) => ({ ...p, [k]: text }));
+  };
+
   // Telefonda yazma alanı tam ekran açılır (animasyonla), kapatınca yerine animasyonla döner; geri tuşu da kapatır
   const [full, setFull] = useState<false | 'open' | 'closing'>(false);
   const fullRef = React.useRef(full);
@@ -812,6 +861,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const openFull = () => {
     if (fullRef.current || !window.matchMedia('(max-width: 767px)').matches) return;
     setFull('open');
+    setWizRaw('kok');
     try { window.history.pushState({ ...(window.history.state || {}), msComposer: 1 }, ''); } catch { /* yok */ }
   };
   const finishClose = () => {
@@ -825,7 +875,16 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     else finishClose();
   };
   useEffect(() => {
-    const onPop = () => { if (fullRef.current === 'open') finishClose(); };
+    // Geri tuşu: önce bir önceki adıma döner, ilk adımda tam ekranı kapatır
+    const onPop = () => {
+      if (fullRef.current !== 'open') return;
+      if (wizRef.current !== 'kok') {
+        wizBack();
+        try { window.history.pushState({ ...(window.history.state || {}), msComposer: 1 }, ''); } catch { /* yok */ }
+        return;
+      }
+      finishClose();
+    };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, []);
@@ -878,18 +937,33 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               <label htmlFor="hatira" className="sr-only">Hatırladığın kısım</label>
               <div className={`ms-composer ${showMeta ? 'has-meta' : ''} ${full ? `is-full ${full === 'closing' ? 'is-closing' : ''}` : ''}`}>
                 {full && (
-                  <div className="ms-composer-top">
-                    <button type="button" className="ms-composer-close" onClick={closeFull} aria-label="Kapat">
-                      <ChevronDown />
-                    </button>
-                    <span className="ms-composer-title">{mode === 'clue' ? 'İpucu' : 'Aklında ne kaldı?'}</span>
-                    <button type="submit" className="ms-composer-send" disabled={isSubmitting || isLocked || !text.trim()}>
-                      {isSubmitting ? 'Ekleniyor…' : 'Ekle'}
-                    </button>
-                  </div>
+                  <>
+                    <div className="ms-composer-top">
+                      {wiz === 'kok' ? (
+                        <button type="button" className="ms-composer-close" onClick={closeFull} aria-label="Kapat"><ChevronDown /></button>
+                      ) : (
+                        <button type="button" className="ms-composer-close" onClick={wizBack} aria-label="Geri"><ChevronLeft /></button>
+                      )}
+                      <span className="ms-composer-title">
+                        {({ kok: 'Soru kökü', tur: 'Soru tipi', onculler: 'Öncüller', siklar: 'Şıklar', son: 'Son dokunuş' } as Record<WizStep, string>)[wiz]}
+                        <small>{wizSteps.indexOf(wiz) + 1} / {wiz === 'kok' || wiz === 'tur' ? (qType === 'onculu' ? 5 : qType ? 4 : '4–5') : wizSteps.length}</small>
+                      </span>
+                      {wiz === 'son' ? (
+                        <button type="submit" className="ms-composer-send" disabled={isSubmitting || isLocked}>
+                          {isSubmitting ? 'Ekleniyor…' : 'Havuza ekle'}
+                        </button>
+                      ) : wiz !== 'tur' ? (
+                        <button type="button" className="ms-composer-send" disabled={wiz === 'kok' && !texts.stem.trim()} onClick={wizNext}>
+                          Devam et
+                        </button>
+                      ) : <span className="w-[74px]" aria-hidden />}
+                    </div>
+                    <div className="wz-progress" aria-hidden><i style={{ width: `${((wizSteps.indexOf(wiz) + 1) / (qType ? wizSteps.length : 4.5)) * 100}%` }} /></div>
+                  </>
                 )}
                 <textarea
                   id="hatira"
+                  hidden={!!full && wiz !== 'kok'}
                   rows={4}
                   value={text}
                   onFocus={openFull}
@@ -903,6 +977,171 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                   placeholder="Tek kelime bile işe yarar…"
                   className="ms-bare-input w-full block resize-none px-4 pt-3.5 pb-2 text-[16px] leading-[1.6] text-ink placeholder:text-ink-3 bg-transparent border-0 outline-0 min-h-[128px]"
                 />
+                {full && wiz !== 'kok' && (
+                  <div key={wiz} className={`wz-panel ${wizDir > 0 ? 'is-fwd' : 'is-back'}`}>
+                    {wiz === 'tur' && (
+                      <>
+                        <p className="wz-q">Soru nasıl bir soruydu?</p>
+                        <div className="wz-types" role="radiogroup" aria-label="Soru tipi">
+                          <button type="button" role="radio" aria-checked={qType === 'klasik'} className={`wz-type ${qType === 'klasik' ? 'is-on' : ''}`} onClick={() => pickType('klasik')}>
+                            <span className="wz-type-art" aria-hidden><i /><i /><b>A</b><b>B</b><b>C</b></span>
+                            <b>Klasik</b>
+                            <small>Kök ve beş şık. Doğrudan şıklara geçersin.</small>
+                          </button>
+                          <button type="button" role="radio" aria-checked={qType === 'onculu'} className={`wz-type ${qType === 'onculu' ? 'is-on' : ''}`} onClick={() => pickType('onculu')}>
+                            <span className="wz-type-art" aria-hidden><i /><em>I</em><em>II</em><em>III</em><b>Yalnız I</b></span>
+                            <b>Öncüllü</b>
+                            <small>I, II, III ifadeleri; şıklar “Yalnız I”, “I ve II” gibi.</small>
+                          </button>
+                        </div>
+                      </>
+                    )}
+                    {wiz === 'onculler' && (
+                      <>
+                        <p className="wz-q">Öncülleri yaz <small>hatırladıkların yeter, sırası önemli</small></p>
+                        <ol className="wz-prem">
+                          {premises.map((p, i) => (
+                            <li key={i}>
+                              <span className="wz-prem-k">{ROMAN[i]}</span>
+                              <input
+                                value={p}
+                                autoFocus={i === 0}
+                                onChange={(e) => setPremises((list) => list.map((x, j) => (j === i ? e.target.value : x)))}
+                                onKeyDown={(e) => {
+                                  if (e.key === 'Enter') {
+                                    e.preventDefault();
+                                    const ol = e.currentTarget.closest('ol');
+                                    if (i === premises.length - 1 && premises.length < 6) setPremises((l) => [...l, '']);
+                                    window.setTimeout(() => (ol?.querySelectorAll('input')[i + 1] as HTMLInputElement | undefined)?.focus(), 0);
+                                  }
+                                }}
+                                placeholder={`${ROMAN[i]}. öncül`}
+                                aria-label={`${ROMAN[i]}. öncül`}
+                                enterKeyHint="next"
+                              />
+                              {premises.length > 2 && (
+                                <button type="button" className="wz-prem-x" onClick={() => setPremises((l) => l.filter((_, j) => j !== i))} aria-label={`${ROMAN[i]}. öncülü sil`}><X /></button>
+                              )}
+                            </li>
+                          ))}
+                        </ol>
+                        {premises.length < 6 && (
+                          <button type="button" className="wz-add" onClick={() => setPremises((l) => [...l, ''])}>
+                            <Plus aria-hidden /> {ROMAN[premises.length]}. öncülü ekle
+                          </button>
+                        )}
+                      </>
+                    )}
+                    {wiz === 'siklar' && (
+                      <>
+                        <p className="wz-q">Şıkları yaz <small>{qType === 'onculu' ? 'kalıplara dokununca sıradaki boş şıkka yazılır' : 'A’dan E’ye; hatırladıkların yeter'}</small></p>
+                        {qType === 'onculu' && (
+                          <div className="wz-chips" aria-label="Sık kullanılan şık kalıpları">
+                            {comboChips.map((c) => (
+                              <button key={c} type="button" onClick={() => fillNextOption(c)} disabled={KEYS.filter((k) => options[k].trim()).length >= 5}>{c}</button>
+                            ))}
+                          </div>
+                        )}
+                        <OptionsEditor
+                          options={options}
+                          onChange={(k, v) => setOptions((p) => ({ ...p, [k]: v }))}
+                          count={optionCount}
+                          onCountChange={setOptionCount}
+                          answer={claimedAnswer}
+                          onAnswerChange={setClaimedAnswer}
+                          reason={answerReason}
+                          onReasonChange={setAnswerReason}
+                        />
+                      </>
+                    )}
+                    {wiz === 'son' && (
+                      <>
+                        <p className="wz-q">İpucu <small>isteğe bağlı · hocanın vurgusu, vaka ayrıntısı…</small></p>
+                        <textarea
+                          className="wz-clue"
+                          rows={3}
+                          value={texts.clue}
+                          onChange={(e) => setTexts((prev) => ({ ...prev, clue: e.target.value }))}
+                          placeholder={PLACEHOLDERS.clue}
+                          aria-label="İpucu"
+                        />
+                        <p className="wz-q">Hangi soru? <small>bilmediğini boş bırak</small></p>
+                        <div className="wz-kunye">
+                          <MetaPicker label="Kurul" icon={Layers} value={committee ? titleCase(committee) : 'Seç'}>
+                            {(close) => (
+                              <ul className="qa-list" role="listbox" aria-label="Kurul">
+                                {sortedCommittees.map((c) => {
+                                  const locked = isCommitteeLocked(c.id);
+                                  const on = c.id === committee?.id;
+                                  return (
+                                    <li key={c.id}>
+                                      <button type="button" role="option" aria-selected={on} disabled={locked} className={on ? 'is-on' : ''} onClick={() => { onSelectCommittee(c.id); close(); }}>
+                                        <i className={`qa-dot ${c.id === activeCommitteeId ? 'is-live' : ''}`} aria-hidden />
+                                        <span className="qa-list-t">{titleCase(c)}</span>
+                                        <small>{locked ? <><Lock aria-hidden /> açılmadı</> : c.id === activeCommitteeId ? 'toplama açık' : ''}</small>
+                                        {on && <Check className="qa-list-ok" aria-hidden />}
+                                      </button>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            )}
+                          </MetaPicker>
+                          <MetaPicker label="Ders" icon={BookOpen} value={discipline} auto={autoDisc && !userManualDiscipline}>
+                            {(close) => (
+                              <ul className="qa-list" role="listbox" aria-label="Ders">
+                                {disciplines.map((d) => (
+                                  <li key={d}>
+                                    <button type="button" role="option" aria-selected={d === discipline} className={d === discipline ? 'is-on' : ''} onClick={() => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); close(); }}>
+                                      <span className="qa-list-t">{d}</span>
+                                      {d === discipline && <Check className="qa-list-ok" aria-hidden />}
+                                    </button>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </MetaPicker>
+                          <MetaPicker label="Sene" icon={CalendarDays} value={examYear ? `${examYear.slice(0, 4)}–${examYear.slice(7, 9)}` : 'Bilmiyorum'} empty={!examYear}>
+                            {(close) => (
+                              <div className="qa-years">
+                                <div className="qa-years-grid" role="listbox" aria-label="Öğretim yılı">
+                                  {academicYears().map((y) => (
+                                    <button key={y} type="button" role="option" aria-selected={examYear === y} className={examYear === y ? 'is-on' : ''} onClick={() => { setExamYear(y); close(); }}>
+                                      {`${y.slice(0, 4)}–${y.slice(7, 9)}`}
+                                      {y === currentAcademicYear() && <small>bu yıl</small>}
+                                    </button>
+                                  ))}
+                                </div>
+                                <button type="button" className={`qa-years-none ${!examYear ? 'is-on' : ''}`} onClick={() => { setExamYear(''); close(); }}>Bilmiyorum</button>
+                              </div>
+                            )}
+                          </MetaPicker>
+                          <label className={`qa-tok is-num ${!questionNumber ? 'is-empty' : ''}`}>
+                            <Hash className="qa-tok-i" aria-hidden />
+                            <span className="qa-tok-l">Soru no</span>
+                            <input
+                              type="text"
+                              inputMode="numeric"
+                              value={questionNumber}
+                              onChange={(e) => { setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
+                              placeholder="bilmiyorum"
+                              aria-label="Soru numarası (bilmiyorsan boş bırak)"
+                            />
+                          </label>
+                        </div>
+                        <div className="wz-sum">
+                          <span>{texts.stem.trim() ? texts.stem.trim().split(/\s+/).length : 0} kelime kök</span>
+                          {qType === 'onculu' && <span>{premises.filter((p) => p.trim()).length} öncül</span>}
+                          <span>{filledOptionCount} şık{claimedAnswer ? ` · cevap ${claimedAnswer}` : ''}</span>
+                        </div>
+                        {formError && <div role="alert" className="qa-note is-bad">{formError}</div>}
+                        <button type="submit" className="wz-submit" disabled={isSubmitting || isLocked}>
+                          {isSubmitting ? 'Ekleniyor…' : 'Havuza ekle'} <ArrowRight aria-hidden />
+                        </button>
+                      </>
+                    )}
+                  </div>
+                )}
                 {/* Alt şerit: soru kimliği. Ders ve numara akıllı etiketler; otomatik dolanlar işaretli */}
                 {showMeta && (
                   <div className="ms-meta" data-no-tip>

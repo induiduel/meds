@@ -142,11 +142,8 @@ export function buildSteps(deck: InteractiveDeck): LessonStep[] {
     const cc = s.coreContent && !Array.isArray(s.coreContent) ? s.coreContent : {};
     const bullets = Array.isArray(cc.keyBullets) ? cc.keyBullets.filter((b: any) => b && (b.title || b.desc)) : [];
     const slideNum = slide.slideNumber ?? index + 1;
-    const slideDeckQs = (s.relatedQuestions && s.relatedQuestions.length > 0) ? [] : (questionsBySlide.get(slideNum) || []);
-    const rawRelated = [...(s.relatedQuestions || []), ...slideDeckQs];
-    const related = rawRelated.map((q: any, i: number) => normQuestion(q, i)).filter(Boolean) as LessonQuestion[];
-    const practice = s.practiceQuestion ? normQuestion(s.practiceQuestion, 99, true) : null;
-    const questions = [...related, ...(practice && !related.some((r) => r.stem === practice.stem) ? [practice] : [])];
+    // Kullanıcı talimatı: Etkileşimli öğrenim modülünde örnek soru ve çıkmış soru gösterimi kaldırıldı.
+    const questions: LessonQuestion[] = [];
     const interactives = (
       Array.isArray(s.interactiveElements) && s.interactiveElements.length
         ? s.interactiveElements

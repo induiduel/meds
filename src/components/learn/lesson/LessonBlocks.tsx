@@ -593,7 +593,6 @@ export const infoTabsFor = (step: LessonStep, kaz: DeckKazanim[]): InfoTab[] =>
     { id: 'teacher' as const, label: 'Hoca notu', icon: Quote, count: (step.teacher ? 1 : 0) + (step.important ? 1 : 0) + (step.examTip ? 1 : 0) },
     { id: 'terms' as const, label: 'Terimler', icon: Tag, count: step.terms.length },
     { id: 'kaz' as const, label: 'Kazanımlar', icon: Target, count: kaz.length },
-    { id: 'q' as const, label: 'Sorular', icon: Archive, count: step.questions.length },
     { id: 'src' as const, label: 'Kaynak', icon: FileText, count: 1 },
   ].filter((t) => t.count > 0);
 
@@ -681,29 +680,6 @@ export const InfoPane: React.FC<{
           <li key={i}>
             <span className="ico is-ok"><Target aria-hidden /></span>
             <span>{k.m}</span>
-            {k.c > 0 && <span className="ls-tag is-warn meta">{k.c} çıkmış</span>}
-          </li>
-        ))}
-      </ul>
-    );
-  if (id === 'q')
-    return (
-      <ul className="ls-info">
-        <li className="is-summary">
-          <span className="ico"><Archive aria-hidden /></span>
-          <span>
-            <b>Bu adımla ilgili {step.questions.length} soru</b>
-            {deckPastCount ? <> · derste toplam {deckPastCount} çıkmış soru eşleşti</> : null}
-          </span>
-        </li>
-        {step.questions.map((q, i) => (
-          <li key={q.id}>
-            <span className="ico"><HelpCircle aria-hidden /></span>
-            <span>
-              <Inline text={q.stem} />
-              {q.examYear && <><br /><span className="ls-tag is-plain">{q.examYear}</span></>}
-            </span>
-            <button type="button" className="ls-btn is-sm is-primary meta" onClick={() => onPractice(i)}>Çöz</button>
           </li>
         ))}
       </ul>
