@@ -38,6 +38,7 @@ export type AppRoute =
   | 'tester_ozet'
   | 'ornek_sorular'
   | 'kazanimlar'
+  | 'music'
   | 'datacore';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
@@ -55,6 +56,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   kazanimlar: '/kazanimlar',
   datacore: '/veri',
   leaderboard: '/siralama',
+  music: '/muzik',
   notes: '/notlar',
   summaries: '/ozetler',
   transcripts: '/ses-kayitlari',
@@ -81,6 +83,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   kazanimlar: 'Kazanımlar',
   datacore: 'Veri Merkezi (Core v2)',
   leaderboard: 'Sıralama',
+  music: 'Müzik',
   notes: 'Ders notları',
   summaries: 'Ders özetleri',
   transcripts: 'Ses kayıtları',
@@ -122,6 +125,9 @@ const ALIASES: Record<string, AppRoute> = {
   'cikmis-sorular': 'past_exams',
   matrix: 'matrix',
   leaderboard: 'leaderboard',
+  music: 'music',
+  muzik: 'music',
+  'müzik': 'music',
   notes: 'notes',
   practice: 'practice',
   'test-coz': 'practice',

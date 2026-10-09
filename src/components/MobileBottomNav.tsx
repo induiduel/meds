@@ -18,6 +18,7 @@ import {
   Layers,
   Target,
   Compass,
+  Music,
 } from 'lucide-react';
 import type { AppTab } from './Header';
 import { pathFor, linkClick } from '../router';
@@ -61,7 +62,10 @@ const MORE_GROUPS: { label: string; items: { id: AppTab; label: string; hint: st
   },
   {
     label: 'Topluluk',
-    items: [{ id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy }],
+    items: [
+      { id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy },
+      { id: 'music', label: 'Müzik', hint: 'Çalışırken dinle', icon: Music },
+    ],
   },
 ];
 

@@ -27,6 +27,7 @@ import {
   GraduationCap,
   MoreHorizontal,
   Mic,
+  Music,
   Layers,
   Sparkles,
   Compass,
@@ -89,6 +90,7 @@ export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'glossary', label: 'Sözlük', icon: BookOpenText },
   { id: 'flashcards', label: 'Kartlar', icon: Layers },
   { id: 'leaderboard', label: 'Sıralama', icon: Trophy },
+  { id: 'music', label: 'Müzik', icon: Music },
   { id: 'summaries', label: 'Ders özetleri', icon: BookOpen },
   { id: 'matrix', label: 'Soru haritası', icon: LayoutGrid },
 ];
@@ -96,7 +98,7 @@ export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
 /** How many NAV entries the desktop bar may show before folding the rest into "Daha". */
 const NAV_PRIMARY = 9;
 /** v3: dört ana yer önde, gerisi "Daha" menüsünde. */
-const V3_ORDER: AppTab[] = ['quick_add', 'past_exams', 'ornek_sorular', 'learn', 'kazanimlar', 'study', 'questions', 'glossary', 'flashcards', 'summaries', 'leaderboard', 'matrix'];
+const V3_ORDER: AppTab[] = ['quick_add', 'past_exams', 'ornek_sorular', 'learn', 'kazanimlar', 'study', 'questions', 'glossary', 'flashcards', 'summaries', 'leaderboard', 'music', 'matrix'];
 
 export const BrandMark: React.FC<{ size?: number }> = ({ size = 34 }) => (
   <span

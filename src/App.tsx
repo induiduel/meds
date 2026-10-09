@@ -75,6 +75,7 @@ const PracticeMode = React.lazy(() => wrapLazy(import('./components/PracticeMode
 const StudyHub = React.lazy(() => wrapLazy(import('./components/study/StudyHub').then(m => ({ default: m.StudyHub }))));
 const BookletView = React.lazy(() => wrapLazy(import('./components/BookletView').then(m => ({ default: m.BookletView }))));
 const LeaderboardView = React.lazy(() => wrapLazy(import('./components/LeaderboardView').then(m => ({ default: m.LeaderboardView }))));
+const MusicView = React.lazy(() => wrapLazy(import('./components/MusicView').then(m => ({ default: m.MusicView }))));
 const LectureNotesView = React.lazy(() => wrapLazy(import('./components/LectureNotesView').then(m => ({ default: m.LectureNotesView }))));
 const PastExamsView = React.lazy(() => wrapLazy(import('./components/PastExamsView').then(m => ({ default: m.PastExamsView }))));
 const QuestionMatrix = React.lazy(() => wrapLazy(import('./components/QuestionMatrix').then(m => ({ default: m.QuestionMatrix }))));
@@ -1586,6 +1587,13 @@ export default function App() {
                 setIsContributeModalOpen(true);
               }}
             />
+          </Suspense>
+        )}
+
+        {/* Topluluk: Müzik — admin paylaşımlı ses çalar (video yok) */}
+        {activeTab === 'music' && (
+          <Suspense fallback={<ViewFallback />}>
+            <MusicView isAdmin={isAdmin} />
           </Suspense>
         )}
 

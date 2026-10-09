@@ -3142,3 +3142,8 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .wz-submit svg { width: 18px; height: 18px; }
 .wz-submit:disabled { opacity: .55; }
 @media (prefers-reduced-motion: reduce) { .wz-panel, .wz-prem li { animation: none !important; } }
+
+/* Müzik sayfası: çalan parça ekolayzer çubukları (yalnızca ses çalar) */
+@keyframes ms-eq { 0%, 100% { height: 5px; } 50% { height: 16px; } }
+.ms-eq-bar { height: 10px; animation: ms-eq 0.9s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .ms-eq-bar { animation: none !important; } }
