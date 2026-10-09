@@ -577,8 +577,18 @@ const CausalChainElement: React.FC<{ data: InteractiveElementData }> = ({ data }
 
 // 9. İnteraktif Hücre Maskeli Ezber Tablosu (Interactive Masked Memorization Table)
 const InteractiveTableElement: React.FC<{ data: InteractiveElementData }> = ({ data }) => {
-  const headers = data.tableHeaders || [];
-  const rows = data.tableRows || [];
+  const d = data as any;
+  const headers = (d.tableHeaders && d.tableHeaders.length ? d.tableHeaders : d.headers) || (d.table && d.table.headers) || [];
+  const rawRows = (d.tableRows && d.tableRows.length ? d.tableRows : d.rows) || (d.table && d.table.rows) || [];
+  const rows = rawRows.map((r: any) => {
+    if (r && Array.isArray(r.cells)) return r;
+    if (Array.isArray(r)) {
+      return {
+        cells: r.map((c: any) => (typeof c === 'object' && c ? c : { text: String(c ?? ''), isMasked: false })),
+      };
+    }
+    return { cells: [] };
+  });
 
   // Track revealed cells by key: `rIdx-cIdx`
   const [revealedCells, setRevealedCells] = useState<Record<string, boolean>>({});
@@ -597,8 +607,8 @@ const InteractiveTableElement: React.FC<{ data: InteractiveElementData }> = ({ d
       setAllRevealed(false);
     } else {
       const all: Record<string, boolean> = {};
-      rows.forEach((r, rIdx) => {
-        (r.cells || []).forEach((c, cIdx) => {
+      rows.forEach((r: any, rIdx: number) => {
+        (r.cells || []).forEach((c: any, cIdx: number) => {
           if (c.isMasked) all[`${rIdx}-${cIdx}`] = true;
         });
       });

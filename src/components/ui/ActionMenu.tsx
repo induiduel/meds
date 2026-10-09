@@ -35,7 +35,22 @@ const toneCls = {
  * Desktop/tablet: anchored dropdown. Phones (<640px): bottom sheet, like a native app.
  */
 export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'İşlemler', className = '', highlight }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpenRaw] = useState(false);
+  // Kapanış animasyonlu: menü/panel önce çıkar, sonra kaldırılır
+  const [closing, setClosing] = useState(false);
+  const setOpen = (v: boolean | ((p: boolean) => boolean)) => {
+    const next = typeof v === 'function' ? v(open) : v;
+    if (next) {
+      setClosing(false);
+      setOpenRaw(true);
+    } else if (open && !closing) {
+      setClosing(true);
+      window.setTimeout(() => {
+        setOpenRaw(false);
+        setClosing(false);
+      }, 170);
+    }
+  };
   const [isPhone, setIsPhone] = useState(() => typeof window !== 'undefined' && window.innerWidth < 640);
   const rootRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -48,12 +63,15 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = '�
     if (!btn) return;
     const r = btn.getBoundingClientRect();
     const vh = window.innerHeight;
-    const below = vh - r.bottom - 12;
-    const above = r.top - 12;
+    // Düğme ekranın kenarına taşmışsa da menü ekranın içinde kalır
+    const bTop = Math.min(Math.max(r.top, 8), vh - 8);
+    const bBottom = Math.min(Math.max(r.bottom, 8), vh - 8);
+    const below = vh - bBottom - 14;
+    const above = bTop - 14;
     const want = Math.min(menuRef.current?.scrollHeight || 420, 520);
     const right = Math.max(8, window.innerWidth - r.right);
-    if (below >= Math.min(want, 280) || below >= above) setPos({ top: r.bottom + 6, right, maxH: Math.max(160, below) });
-    else setPos({ bottom: vh - r.top + 6, right, maxH: Math.max(160, above) });
+    if (below >= Math.min(want, 280) || below >= above) setPos({ top: bBottom + 6, right, maxH: Math.max(140, below) });
+    else setPos({ bottom: vh - bTop + 6, right, maxH: Math.max(140, above) });
   };
   useLayoutEffect(() => {
     if (!open || isPhone) return;
@@ -158,11 +176,11 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = '�
       {open &&
         (isPhone ? (
           createPortal(
-            <div data-action-sheet className="fixed inset-0 z-[70]" role="dialog" aria-modal="true" aria-label={title}>
-              <button type="button" aria-label="Kapat" onClick={() => setOpen(false)} className="absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
+            <div data-action-sheet className={`ms-am fixed inset-0 z-[70] ${closing ? 'is-closing' : ''}`} role="dialog" aria-modal="true" aria-label={title}>
+              <button type="button" aria-label="Kapat" onClick={() => setOpen(false)} className="ms-am-scrim absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
               <div
                 role="menu"
-                className="absolute left-0 right-0 bottom-0 max-h-[80dvh] overflow-y-auto bg-white rounded-t-2xl px-4 pt-2 pb-[max(env(safe-area-inset-bottom),20px)] shadow-lg"
+                className="ms-am-sheet absolute left-0 right-0 bottom-0 max-h-[80dvh] overflow-y-auto bg-white rounded-t-2xl px-4 pt-2 pb-[max(env(safe-area-inset-bottom),20px)] shadow-lg"
               >
                 <span className="block mx-auto w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
                 <div className="flex items-center py-2">
@@ -184,7 +202,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = '�
               aria-label={title}
               data-action-sheet
               style={{ position: 'fixed', top: pos?.top, bottom: pos?.bottom, right: pos?.right ?? 8, maxHeight: pos?.maxH, visibility: pos ? 'visible' : 'hidden' }}
-              className="ms-menu-pop z-[75] w-[264px] overflow-y-auto overscroll-contain bg-white border border-line rounded-xl p-1.5 shadow-lg"
+              className={`ms-menu-pop ${closing ? 'is-closing' : ''} z-[75] w-[264px] overflow-y-auto overscroll-contain bg-white border border-line rounded-xl p-1.5 shadow-lg`}
             >
               {list(false)}
             </div>,

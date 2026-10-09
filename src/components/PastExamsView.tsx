@@ -153,6 +153,67 @@ const WordDiff: React.FC<{ from: string; to: string; side: 'old' | 'new' }> = ({
   return <>{parts.map((p, i) => (p.d ? <Tag key={i}>{p.t}</Tag> : <React.Fragment key={i}>{p.t}</React.Fragment>))}</>;
 };
 
+/** İki sürümün kitapçık görünümünde farkı: yeni metin + kelime düzeyinde işaret, değişen satırın altında "önceki" hali. */
+const DiffSheet: React.FC<{
+  oldLabel: string;
+  newLabel: string;
+  oldStem: string;
+  newStem: string;
+  oldOpts: { key: string; text: string }[];
+  newOpts: { key: string; text: string }[];
+  answer?: string;
+  oldAnswer?: string;
+  hideAnswer?: boolean;
+  terms?: string[];
+  children?: React.ReactNode;
+}> = ({ oldLabel, newLabel, oldStem, newStem, oldOpts, newOpts, answer, oldAnswer, hideAnswer, children }) => {
+  const n = (t: any) => String(t ?? '').replace(/\s+/g, ' ').trim();
+  const os = n(oldStem);
+  const ns = n(newStem) || os;
+  const keys = Array.from(new Set([...oldOpts, ...newOpts].map((o) => String(o.key).toUpperCase()))).sort();
+  const textOf = (list: { key: string; text: string }[], k: string) => n(list.find((o) => String(o.key).toUpperCase() === k)?.text);
+  const answerChanged = !!oldAnswer && !!answer && oldAnswer !== answer;
+  const hasOld = !!os || oldOpts.some((o) => n(o.text));
+  const changed = !hasOld ? 0 : keys.filter((k) => (oldOpts.length ? textOf(oldOpts, k) !== textOf(newOpts, k) : false)).length + (os && os !== ns ? 1 : 0) + (answerChanged ? 1 : 0);
+  return (
+    <div className="cx-diff">
+      <div className="cx-diff-bar">
+        <span className={`cx-diff-count ${changed ? '' : 'is-none'}`}>{!hasOld ? `${oldLabel} sürümün kaydı yok` : changed ? `${changed} değişiklik` : 'Değişiklik yok'}</span>
+        {answerChanged && !hideAnswer && <span className="cx-flag is-warn">Cevap {oldAnswer} → {answer}</span>}
+        <span className="cx-diff-legend"><ins>{newLabel}</ins><del>{oldLabel}</del></span>
+      </div>
+      <div className="cx-diff-stem">
+        <p className="ms-stem m-0">{os && ns !== os ? <WordDiff from={os} to={ns} side="new" /> : ns}</p>
+        {os && ns !== os && <p className="cx-diff-was"><span>{oldLabel}</span><span><WordDiff from={os} to={ns} side="old" /></span></p>}
+      </div>
+      {keys.length > 0 && (
+        <ol className="cx-opts">
+          {keys.map((k) => {
+            const o = textOf(oldOpts, k);
+            const nw = textOf(newOpts, k);
+            const isAns = !hideAnswer && k === answer;
+            const wasAns = !hideAnswer && answerChanged && k === oldAnswer;
+            return (
+              <li key={k} className="cx-opt-li">
+                <div className={`cx-opt ${isAns ? 'is-correct' : ''} ${wasAns ? 'was-answer' : ''}`}>
+                  <span className="cx-bubble" aria-hidden>{isAns ? <Check strokeWidth={3} /> : k}</span>
+                  <span className="cx-opt-t">
+                    {nw ? (o && o !== nw ? <WordDiff from={o} to={nw} side="new" /> : nw) : <span className="cx-diff-gone">{newLabel} sürümünde yok</span>}
+                    {!o && nw && oldOpts.length > 0 && <span className="cx-flag is-new cx-diff-tag">Yeni şık</span>}
+                    {wasAns && <span className="cx-flag is-warn cx-diff-tag">{oldLabel} cevap</span>}
+                    {o && o !== nw && <span className="cx-diff-was"><span>{oldLabel}</span><span><WordDiff from={o} to={nw} side="old" /></span></span>}
+                  </span>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+      )}
+      {children}
+    </div>
+  );
+};
+
 export const PastExamsView: React.FC<PastExamsViewProps> = ({
   currentUser,
   lectureNotes = [],
@@ -179,6 +240,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [newnessFilter, setNewnessFilter] = useState<'all' | 'new_only' | 'archived_only'>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
+  // Filtre çekmecesi kapanırken de kayarak çıkar
+  const [filtersClosing, setFiltersClosing] = useState(false);
+  const closeFilters = () => {
+    if (filtersClosing) return;
+    setFiltersClosing(true);
+    window.setTimeout(() => { setFiltersOpen(false); setFiltersClosing(false); }, 200);
+  };
   const [answerFilter, setAnswerFilter] = useState<'all' | 'with' | 'without' | 'doubtful'>('all');
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
   const [facetQuery, setFacetQuery] = useState('');
@@ -1098,11 +1166,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       {/* Gelişmiş filtreler: yan çekmece (telefonda alttan) */}
       {filtersOpen && (
         <>
-          <div className="ms-drawer-scrim" onClick={() => setFiltersOpen(false)} aria-hidden />
-          <div className="ms-drawer" role="dialog" aria-modal="true" aria-labelledby="cikmis-filter-title" onKeyDown={(e) => e.key === 'Escape' && setFiltersOpen(false)}>
+          <div className={`ms-drawer-scrim ${filtersClosing ? 'is-closing' : ''}`} onClick={() => closeFilters()} aria-hidden />
+          <div className={`ms-drawer ${filtersClosing ? 'is-closing' : ''}`} role="dialog" aria-modal="true" aria-labelledby="cikmis-filter-title" onKeyDown={(e) => e.key === 'Escape' && closeFilters()}>
             <header className="ms-drawer-head">
               <h2 id="cikmis-filter-title" className="ms-drawer-title">Filtreler</h2>
-              <button type="button" onClick={() => setFiltersOpen(false)} aria-label="Kapat" className="ms-btn is-ghost is-icon" autoFocus>
+              <button type="button" onClick={() => closeFilters()} aria-label="Kapat" className="ms-btn is-ghost is-icon" autoFocus>
                 <X />
               </button>
             </header>
@@ -1200,7 +1268,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             </div>
             <footer className="ms-drawer-foot">
               <button type="button" onClick={clearAllFilters} className="ms-btn">Sıfırla</button>
-              <button type="button" onClick={() => setFiltersOpen(false)} className="ms-btn is-primary">
+              <button type="button" onClick={() => closeFilters()} className="ms-btn is-primary">
                 {n(filteredQuestions.length)} soruyu göster
               </button>
             </footer>
@@ -1310,7 +1378,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 : []),
               ...(aiQueue[String(q.id)]
                 ? [{ label: aiQueue[String(q.id)].status === 'yonetici_onayi' ? 'İncelendi · yönetici onayında' : `İncelemede · sıra ${aiQueue[String(q.id)].position}`, icon: Sparkles, group: 'Yapay zekâ', disabled: aiQueue[String(q.id)].status === 'yonetici_onayi', hint: aiQueue[String(q.id)].status === 'yonetici_onayi' ? undefined : 'not ekle', onClick: () => setAiReviewQ(q) }]
-                : [{ label: 'Yapay zekâ incelemesine gönder', icon: Sparkles, group: 'Yapay zekâ', tone: 'accent' as const, onClick: () => setAiReviewQ(q) }]),
+                : [{ label: 'İncelemeye gönder', icon: Sparkles, group: 'Yapay zekâ', tone: 'accent' as const, onClick: () => setAiReviewQ(q) }]),
               ...(isAdminUser
                 ? [{ label: 'AI ile düzenle', icon: Wand2, group: 'Yapay zekâ', tone: 'accent' as const, onClick: () => setCustomRedactQuestion({ question: q, match: slideMatch }) }]
                 : []),
@@ -1342,7 +1410,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             return (
               <article key={q.id} className="cx-q">
                 <header className="cx-q-head">
-                  <span className="cx-q-no">{q.questionNumber}</span>
+                  <span className={`cx-q-no ${q.questionNumber ? '' : 'is-none'}`} title={q.questionNumber ? `Soru ${q.questionNumber}` : 'Soru numarası bilinmiyor'}>{q.questionNumber || '?'}</span>
                   <span className="cx-q-meta" title={formatCommitteeName(q.committeeId)}>
                     <b>{(q as any).committeeUncertain ? 'Kurul belirsiz' : q.discipline || 'Tıp'}</b>
                     <span>{[(q as any).committeeUncertain ? ((q as any).contentCommitteeId ? committeeShort((q as any).contentCommitteeId) : null) : committeeShort((q as any).contentCommitteeId || q.committeeId), q.examYear].filter(Boolean).join(' · ')}</span>
@@ -1434,101 +1502,50 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 })()}
 
                 {isCompareView ? (
-                  (() => {
-                    const n = (t: any) => String(t ?? '').replace(/\s+/g, ' ').trim();
-                    const oldStem = n(eskiData.stem || stem);
-                    const newStem = n(denetleyiciData.stem || stem);
-                    const oldOpts: any[] = eskiData.options || [];
-                    const newOpts: any[] = denetleyiciData.options || options;
-                    const keys = Array.from(new Set([...oldOpts, ...newOpts].map((o: any) => String(o.key)))).sort();
-                    const oldAns = eskiData.correctAnswer;
-                    const textOf = (list: any[], k: string) => n(list.find((o) => o.key === k)?.text);
-                    const changedCount = keys.filter((k) => textOf(oldOpts, k) !== textOf(newOpts, k)).length + (oldStem !== newStem ? 1 : 0) + (answerChanged ? 1 : 0);
-                    return (
-                      <div className="ms-cmp">
-                        <div className="ms-cmp-bar">
-                          <span className="ms-cmp-legend"><ins>eklenen</ins><del>çıkarılan</del></span>
-                          <span className="ms-cmp-count">{changedCount ? `${changedCount} değişiklik` : 'Değişiklik yok'}</span>
-                          {answerChanged && <span className="ms-tag is-warn">Cevap {oldAns} → {correctAnswer}</span>}
-                        </div>
-
-                        <div className="ms-cmp-stem">
-                          <p className="m-0"><WordDiff from={oldStem} to={newStem} side="new" /></p>
-                          {oldStem !== newStem && oldStem && <p className="ms-cmp-was"><span>Önceki</span><WordDiff from={oldStem} to={newStem} side="old" /></p>}
-                        </div>
-
-                        <ol className="ms-cmp-opts">
-                          {keys.map((k) => {
-                            const o = textOf(oldOpts, k);
-                            const nw = textOf(newOpts, k);
-                            const isAns = k === correctAnswer;
-                            const wasAns = answerChanged && k === oldAns;
-                            return (
-                              <li key={k} className={isAns ? 'is-answer' : ''}>
-                                <span className="ms-cmp-key">{k}</span>
-                                <div className="min-w-0 flex-1 flex flex-col gap-0.5">
-                                  <div className="flex items-start gap-2">
-                                    <span className="min-w-0 flex-1">{nw ? <WordDiff from={o} to={nw} side="new" /> : <span className="text-ink-3">—</span>}</span>
-                                    {!o && nw && oldOpts.length > 0 && <span className="ms-tag is-accent shrink-0">Yeni şık</span>}
-                                    {isAns && <span className="ms-tag is-ok shrink-0">Doğru</span>}
-                                    {wasAns && <span className="ms-tag is-warn shrink-0">Eski cevap</span>}
-                                  </div>
-                                  {o !== nw && o && <p className="ms-cmp-was"><span>Önceki</span><WordDiff from={o} to={nw} side="old" /></p>}
-                                </div>
-                              </li>
-                            );
-                          })}
-                        </ol>
-
+                  <DiffSheet
+                    oldLabel="Eski"
+                    newLabel="Denetleyici"
+                    oldStem={String(eskiData.stem || stem)}
+                    newStem={String(denetleyiciData.stem || stem)}
+                    oldOpts={eskiData.options || []}
+                    newOpts={denetleyiciData.options || options}
+                    answer={correctAnswer ? String(correctAnswer) : undefined}
+                    oldAnswer={eskiData.correctAnswer ? String(eskiData.correctAnswer) : undefined}
+                    hideAnswer={hideAnswer}
+                  >
+                    {(explanation || String(eskiData.explanation || '').trim() || saEntries.length > 0) && (
+                      <div className="cx-diff-foot">
                         {explanation && (
-                          <div className="ms-cmp-expl">
-                            <span className="ms-cmp-label">Açıklama</span>
+                          <details className="cx-diff-expl">
+                            <summary>Açıklama</summary>
                             <SourceText text={String(explanation)} size="sm" />
-                          </div>
+                          </details>
                         )}
-                        <div className="flex flex-wrap items-center gap-1.5">
-                          {n(eskiData.explanation) && (
-                            <details className="ms-cmp-old-expl">
-                              <summary>Eski açıklamayı göster</summary>
-                              <p className="m-0 whitespace-pre-wrap">{eskiData.explanation}</p>
-                            </details>
-                          )}
-                          {saEntries.length > 0 && (
-                            <button type="button" className="ms-btn is-ghost is-sm ml-auto" onClick={() => setAboutQuestion(q)}>
-                              <ShieldCheck /> Şık analizi
-                            </button>
-                          )}
-                        </div>
+                        {String(eskiData.explanation || '').trim() && (
+                          <details className="cx-diff-expl">
+                            <summary>Eski açıklama</summary>
+                            <p className="m-0 whitespace-pre-wrap">{eskiData.explanation}</p>
+                          </details>
+                        )}
+                        {saEntries.length > 0 && (
+                          <button type="button" className="cx-act is-text" onClick={() => setAboutQuestion(q)}>
+                            <ShieldCheck aria-hidden /> <span>Şık analizi</span>
+                          </button>
+                        )}
                       </div>
-                    );
-                  })()
+                    )}
+                  </DiffSheet>
                 ) : effectiveMode === 'split' ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-                    <div className="bg-canvas rounded-xl p-3 flex flex-col gap-2">
-                      <span className="text-[12px] font-semibold text-ink-3">Ham metin</span>
-                      <StemText text={String(q.fragments?.[0]?.text || stem)} size="sm" terms={terms} />
-                      {q.options && q.options.length > 0 && (
-                        <ol className="list-none m-0 p-0 flex flex-col gap-1 text-[13.5px] text-ink-2">
-                          {q.options.map((opt) => (
-                            <li key={opt.key} className="flex gap-2"><span className="font-mono text-ink-3">{opt.key})</span><span>{opt.text}</span></li>
-                          ))}
-                        </ol>
-                      )}
-                    </div>
-                    <div className="bg-accent-soft/50 rounded-xl p-3 flex flex-col gap-2">
-                      <span className="text-[12px] font-semibold text-accent">Düzenlenmiş</span>
-                      <StemText text={stem} size="sm" terms={terms} />
-                      {options.length > 0 && (
-                        <ol className="list-none m-0 p-0 flex flex-col gap-1 text-[13.5px]">
-                          {options.map((opt: any) => (
-                            <li key={opt.key} className={`flex gap-2 ${!pollMode && !hideAnswer && opt.key === correctAnswer ? 'text-ok font-semibold' : 'text-ink-2'}`}>
-                              <span className="font-mono">{opt.key})</span><span>{opt.text}</span>
-                            </li>
-                          ))}
-                        </ol>
-                      )}
-                    </div>
-                  </div>
+                  <DiffSheet
+                    oldLabel="Ham"
+                    newLabel="Düzenlenmiş"
+                    oldStem={String((q as any).rawQuestion?.stem || q.fragments?.[0]?.text || q.rawStem || stem)}
+                    newStem={stem}
+                    oldOpts={(q as any).rawQuestion?.options || q.options || []}
+                    newOpts={options}
+                    answer={!pollMode && correctAnswer ? String(correctAnswer) : undefined}
+                    hideAnswer={hideAnswer}
+                  />
                 ) : effectiveMode === 'raw' ? (
                   <div className="bg-canvas rounded-xl p-3 flex flex-col gap-2">
                     <span className="text-[12px] font-semibold text-ink-3 truncate">Ham metin · {q.sourceFile || 'PDF kaynağı'}</span>

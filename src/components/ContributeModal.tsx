@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { X, Sparkles, Stethoscope, AlertCircle, ArrowRight, ChevronDown } from 'lucide-react';
+import { X, Sparkles, Stethoscope, AlertCircle, ArrowRight, Check, Layers, BookOpen, CalendarDays, Hash, Lock } from 'lucide-react';
 import { OptionsEditor, OPTION_KEYS, OptionKey } from './ui/OptionsEditor';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
 import { toast } from './ui/Toast';
@@ -11,6 +11,9 @@ import { Collapsible } from './ui/Collapsible';
 import { ApiService, safeJsonFetch, type SimilarPastQuestion } from '../services/api';
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
 import { validateNamePolicy } from '../utils/namePolicy';
+import { MetaPicker } from './ui/MetaPicker';
+import { academicYears, committeeShortLabel, currentAcademicYear, isCommitteeLocked } from './QuickAddHero';
+import { getDefaultActiveCommitteeId } from '../services/firestoreDb';
 
 const SAVED_NAME_KEY = 'medsoru_saved_contributor_name';
 
@@ -34,6 +37,7 @@ interface ContributeModalProps {
     authorStudentNumber?: string;
     claimedAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
     options?: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string }[];
+    examYear?: string;
   }) => Promise<void>;
 }
 
@@ -68,6 +72,20 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     ? selectedComm.disciplines
     : DISCIPLINES;
 
+  // Sınav yılı: ana sayfadaki seçimle aynı kayıt (cihazda hatırlanır); "" = bilmiyorum
+  const [examYear, setExamYearState] = useState<string>(() => {
+    try {
+      const v = localStorage.getItem('medsoru_contrib_exam_year');
+      if (v !== null) return v;
+    } catch { /* yok */ }
+    return currentAcademicYear();
+  });
+  const setExamYear = (v: string) => {
+    setExamYearState(v);
+    try { localStorage.setItem('medsoru_contrib_exam_year', v); } catch { /* yok */ }
+  };
+  const activeCommitteeId = getDefaultActiveCommitteeId();
+  const [discQuery, setDiscQuery] = useState('');
   const [isUnknownNumber, setIsUnknownNumber] = useState(!defaultQuestionNumber);
   const [questionNumber, setQuestionNumber] = useState(defaultQuestionNumber || 1);
   const [discipline, setDiscipline] = useState(activeDisciplines[0] || 'Farmakoloji');
@@ -213,10 +231,18 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     sources?: { title: string; pageNumber?: number }[];
   } | null>(null);
 
+  // Kapanış animasyonlu: önce pencere aşağı/küçülerek çıkar, sonra kapatılır
+  const [closing, setClosing] = useState(false);
+  useEffect(() => { if (isOpen) setClosing(false); }, [isOpen]);
+  const requestClose = () => {
+    if (closing) return;
+    setClosing(true);
+    window.setTimeout(() => onClose(), 220);
+  };
   // Escape closes (unless saving)
   useEffect(() => {
     if (!isOpen) return;
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && !isSubmitting && onClose();
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && !isSubmitting && requestClose();
     document.addEventListener('keydown', onKey);
     const prev = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -318,11 +344,12 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
         authorStudentNumber: currentUser?.studentNumber || undefined,
         claimedAnswer: (claimedAnswer as any) || undefined,
         options: filledOptions,
+        examYear: examYear || undefined,
       });
 
       setSaveSuccess(true);
       setTimeout(() => {
-        onClose();
+        requestClose();
       }, 1400);
     } catch (err: any) {
       console.error('ContributeModal submit error:', err);
@@ -339,14 +366,14 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
 
   return (
     <div
-      className="ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.45)] backdrop-blur-[3px] flex items-end sm:items-center justify-center sm:p-5 ms-fade-in"
-      onMouseDown={(e) => e.target === e.currentTarget && !isSubmitting && onClose()}
+      className={`ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.45)] backdrop-blur-[3px] flex items-end sm:items-center justify-center sm:p-5 ms-fade-in ct-overlay ${closing ? 'is-closing' : ''}`}
+      onMouseDown={(e) => e.target === e.currentTarget && !isSubmitting && requestClose()}
     >
       <div
         role="dialog"
         aria-modal="true"
         aria-labelledby="contribute-title"
-        className="relative w-full sm:max-w-[600px] max-h-[calc(var(--vvh,100dvh)-12px)] sm:max-h-[92dvh] bg-white rounded-t-2xl sm:rounded-2xl shadow-xl grid grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden ms-pop-in"
+        className="relative w-full sm:max-w-[600px] max-h-[calc(var(--vvh,100dvh)-12px)] sm:max-h-[92dvh] bg-white rounded-t-2xl sm:rounded-2xl shadow-xl grid grid-cols-[minmax(0,1fr)] grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden ct-dialog"
       >
         {/* Header */}
         <header className="flex items-center gap-3 px-5 pt-3 sm:pt-4 pb-3 border-b border-line-soft">
@@ -362,7 +389,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
           </div>
           <button
             type="button"
-            onClick={onClose}
+            onClick={requestClose}
             disabled={isSubmitting}
             aria-label="Kapat"
             className="w-10 h-10 rounded-full flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas cursor-pointer shrink-0"
@@ -380,36 +407,71 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
         ) : (
           <>
             <form id="contribute-form" onSubmit={handleSubmit} noValidate className="relative overflow-y-auto px-5 py-4 flex flex-col gap-5">
-              {/* Which question */}
+              {/* Hangi soru: kurul, ders, sene, numara */}
               <section className="flex flex-col gap-2">
                 <span className={labelCls}>Hangi soru?</span>
-                <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-2">
-                  <label className="relative">
-                    <span className="sr-only">Kurul</span>
-                    <select value={committeeId} onChange={(e) => setCommitteeId(e.target.value)} className={`${fieldCls} h-12 pr-9 appearance-none cursor-pointer truncate`}>
-                      {committees.map((c) => (
-                        <option key={c.id} value={c.id}>
-                          {c.name.replace(/^Dönem 3\s*-\s*/i, '')}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-3" />
-                  </label>
-                  <label className="relative">
-                    <span className="sr-only">Ders</span>
-                    <select value={discipline} onChange={(e) => setDiscipline(e.target.value)} className={`${fieldCls} h-12 pr-9 appearance-none cursor-pointer truncate`}>
-                      {activeDisciplines.map((d) => (
-                        <option key={d} value={d}>
-                          {d}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-3" />
-                  </label>
-                </div>
-                <div className="flex items-center gap-2">
-                  <label className={`flex items-center gap-2 h-12 w-[132px] px-3.5 rounded-xl bg-field border border-transparent focus-within:border-accent focus-within:bg-white ${isUnknownNumber ? '' : ''}`}>
-                    <span className="text-[13px] text-ink-3 shrink-0">Soru no</span>
+                <div className="ct-kunye">
+                  <MetaPicker label="Kurul" icon={Layers} value={selectedComm ? committeeShortLabel(selectedComm) : 'Seç'} width={300}>
+                    {(close) => (
+                      <ul className="qa-list" role="listbox" aria-label="Kurul">
+                        {committees.map((c) => {
+                          const locked = isCommitteeLocked(c.id);
+                          const on = c.id === committeeId;
+                          return (
+                            <li key={c.id}>
+                              <button type="button" role="option" aria-selected={on} disabled={locked} className={on ? 'is-on' : ''} onClick={() => { setCommitteeId(c.id); close(); }}>
+                                <i className={`qa-dot ${c.id === activeCommitteeId ? 'is-live' : ''}`} aria-hidden />
+                                <span className="qa-list-t">{committeeShortLabel(c)}</span>
+                                <small>{locked ? <><Lock aria-hidden /> açılmadı</> : c.id === activeCommitteeId ? 'toplama açık' : ''}</small>
+                                {on && <Check className="qa-list-ok" aria-hidden />}
+                              </button>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </MetaPicker>
+                  <MetaPicker label="Ders" icon={BookOpen} value={discipline} width={320}>
+                    {(close) => {
+                      const list = activeDisciplines.filter((d) => !discQuery || d.toLocaleLowerCase('tr').includes(discQuery.toLocaleLowerCase('tr')));
+                      return (
+                        <>
+                          {activeDisciplines.length > 6 && (
+                            <input autoFocus value={discQuery} onChange={(e) => setDiscQuery(e.target.value)} placeholder="Ders ara" aria-label="Ders ara" className="qa-pop-search" />
+                          )}
+                          <ul className="qa-list" role="listbox" aria-label="Ders">
+                            {list.map((d) => (
+                              <li key={d}>
+                                <button type="button" role="option" aria-selected={d === discipline} className={d === discipline ? 'is-on' : ''} onClick={() => { setDiscipline(d); setDiscQuery(''); close(); }}>
+                                  <span className="qa-list-t">{d}</span>
+                                  {d === discipline && <Check className="qa-list-ok" aria-hidden />}
+                                </button>
+                              </li>
+                            ))}
+                            {list.length === 0 && <li className="qa-list-empty">“{discQuery}” bu kurulun derslerinde yok.</li>}
+                          </ul>
+                        </>
+                      );
+                    }}
+                  </MetaPicker>
+                  <MetaPicker label="Sene" icon={CalendarDays} value={examYear ? `${examYear.slice(0, 4)}–${examYear.slice(7, 9)}` : 'Bilmiyorum'} empty={!examYear} width={300} title="Sorunun çıktığı sınavın öğretim yılı">
+                    {(close) => (
+                      <div className="qa-years">
+                        <div className="qa-years-grid" role="listbox" aria-label="Öğretim yılı">
+                          {academicYears().map((y) => (
+                            <button key={y} type="button" role="option" aria-selected={examYear === y} className={examYear === y ? 'is-on' : ''} onClick={() => { setExamYear(y); close(); }}>
+                              {`${y.slice(0, 4)}–${y.slice(7, 9)}`}
+                              {y === currentAcademicYear() && <small>bu yıl</small>}
+                            </button>
+                          ))}
+                        </div>
+                        <button type="button" className={`qa-years-none ${!examYear ? 'is-on' : ''}`} onClick={() => { setExamYear(''); close(); }}>Bilmiyorum</button>
+                      </div>
+                    )}
+                  </MetaPicker>
+                  <label className={`qa-tok is-num ${isUnknownNumber ? 'is-empty' : ''}`} title="Soru numarası (bilmiyorsan boş bırak)">
+                    <Hash className="qa-tok-i" aria-hidden />
+                    <span className="qa-tok-l">Soru no</span>
                     <input
                       type="text"
                       inputMode="numeric"
@@ -420,13 +482,12 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                         setQuestionNumber(v === '' ? ('' as any) : Number(v));
                         if (formError) setFormError(null);
                       }}
-                      placeholder="?"
+                      placeholder="bilmiyorum"
                       aria-label="Soru numarası (bilmiyorsan boş bırak)"
-                      className="w-full min-w-0 bg-transparent border-0 outline-0 text-[15px] font-mono placeholder:text-slate-600"
                     />
                   </label>
-                  <span className="text-[13px] text-ink-3">{isUnknownNumber ? 'Bilmiyorsan boş bırak, biz yerleştiririz.' : `${selectedComm?.targetCount || 150} sorudan biri`}</span>
                 </div>
+                <span className="text-[12.5px] text-ink-3">{isUnknownNumber ? 'Numarayı bilmiyorsan boş bırak; benzer parçalarla doğru yere yerleştiririz.' : `${selectedComm?.targetCount || 150} sorudan biri.`}</span>
               </section>
 
               {/* Stem */}
@@ -467,60 +528,35 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
 
                 {/* Akıllı Kurul / Ders ve Konu Asistanı Bildirimi */}
                 {smartAssistant && (smartAssistant.crossCommitteeWarning || smartAssistant.suggestedTopics.length > 0) && (
-                  <div className="ms-pop-in rounded-xl bg-amber-500/10 border border-amber-300/80 p-3 flex flex-col gap-2">
+                  <div className="qa-assist">
                     {smartAssistant.crossCommitteeWarning && smartAssistant.predictedCommittee && (
-                      <div className="flex items-start justify-between gap-2.5 flex-wrap sm:flex-nowrap">
-                        <div className="flex items-start gap-2 text-[12.5px] text-amber-950 leading-snug">
-                          <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                          <div>
-                            <span className="font-bold">Kurul Önerisi: </span>
-                            {smartAssistant.crossCommitteeWarning}
-                          </div>
-                        </div>
+                      <div className="qa-assist-row">
+                        <AlertCircle className="qa-assist-i" aria-hidden />
+                        <span className="min-w-0 flex-1">{smartAssistant.crossCommitteeWarning}</span>
                         <button
                           type="button"
+                          className="ms-btn is-sm is-warn"
                           onClick={() => {
                             if (smartAssistant.predictedCommittee) {
                               setCommitteeId(smartAssistant.predictedCommittee.committeeId);
-                              if (smartAssistant.predictedDiscipline) {
-                                setDiscipline(smartAssistant.predictedDiscipline.discipline);
-                              }
-                              toast.success('Kurul Değiştirildi', `${smartAssistant.predictedCommittee.committeeName} kuruluna geçildi.`);
+                              if (smartAssistant.predictedDiscipline) setDiscipline(smartAssistant.predictedDiscipline.discipline);
+                              toast.success('Kurul değiştirildi', `${smartAssistant.predictedCommittee.committeeName} kuruluna geçildi.`);
                             }
                           }}
-                          className="shrink-0 h-7 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-[11.5px] font-bold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
                         >
-                          Bu Kurula Geç
-                          <ArrowRight className="w-3 h-3" />
+                          Bu kurula geç
                         </button>
                       </div>
                     )}
-
                     {smartAssistant.suggestedTopics.length > 0 && (
-                      <div className="flex items-center gap-1.5 flex-wrap pt-0.5">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-amber-900/80 flex items-center gap-1">
-                          <Sparkles className="w-3 h-3 text-amber-600" />
-                          Önerilen Konular:
-                        </span>
+                      <div className="qa-assist-row">
+                        <span className="qa-assist-l">Önerilen konular</span>
                         {smartAssistant.suggestedTopics.slice(0, 3).map((st, i) => (
-                          <button
-                            key={i}
-                            type="button"
-                            onClick={() => setTopic(st.topic)}
-                            className="h-6 px-2.5 rounded-full bg-white hover:bg-amber-50 text-amber-950 text-[11.5px] font-semibold border border-amber-200 shadow-2xs inline-flex items-center gap-1 cursor-pointer transition-colors"
-                            title="Konu olarak seç"
-                          >
-                            {st.topic}
-                          </button>
+                          <button key={i} type="button" className="qa-topic" onClick={() => setTopic(st.topic)} title="Konu olarak seç">{st.topic}</button>
                         ))}
                         {smartAssistant.predictedDiscipline && discipline !== smartAssistant.predictedDiscipline.discipline && (
-                          <button
-                            type="button"
-                            onClick={() => setDiscipline(smartAssistant.predictedDiscipline!.discipline)}
-                            className="h-6 px-2 rounded-full bg-accent/15 hover:bg-accent/25 text-accent text-[11px] font-bold border border-accent/30 inline-flex items-center gap-1 cursor-pointer transition-colors"
-                            title="Dersi eşle"
-                          >
-                            Dersi "{smartAssistant.predictedDiscipline.discipline}" yap
+                          <button type="button" className="qa-link" onClick={() => setDiscipline(smartAssistant.predictedDiscipline!.discipline)}>
+                            Dersi “{smartAssistant.predictedDiscipline.discipline}” yap
                           </button>
                         )}
                       </div>
@@ -529,23 +565,23 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                 )}
 
                 {realtimeMatch?.matchedQuestion && (
-                  <div className="ms-pop-in rounded-xl bg-amber-50/90 border border-amber-300 p-3.5 flex flex-col gap-2.5">
+                  <div className="ct-match">
                     <div className="flex items-center justify-between gap-2 flex-wrap">
                       <div className="flex items-center gap-1.5 flex-wrap">
-                        <span className="h-6 px-2.5 rounded-full bg-amber-500/15 text-amber-900 text-[12px] font-semibold inline-flex items-center gap-1.5">
-                          <Sparkles className="w-3.5 h-3.5 text-amber-800 shrink-0" />
+                        <span className="ct-match-badge">
+                          <Sparkles aria-hidden />
                           Benzer bir taslak var · %{realtimeMatch.compatibility?.score} uyum
                         </span>
                         {realtimeMatch.contextHashtag && (
                           <ContextBadge hashtag={realtimeMatch.contextHashtag} colorIndex={0} />
                         )}
                       </div>
-                      <span className="text-[12px] font-mono text-amber-800/80">
+                      <span className="text-[12px] font-mono font-semibold text-ink-2">
                         {realtimeMatch.matchedQuestion?.questionNumber ? `S.${realtimeMatch.matchedQuestion.questionNumber}` : 'Numarasız'}
                       </span>
                     </div>
 
-                    <div className="text-[13px] leading-relaxed text-ink bg-white/90 rounded-xl p-2.5 border border-amber-200/60">
+                    <div className="text-[13.5px] leading-relaxed text-ink">
                       <Colored text={matchedStem} colors={sharedColors} />
                     </div>
 
@@ -562,7 +598,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                           if (mq.topic) setTopic(mq.topic);
                           toast.success('Soruya bağlandı', `Soru #${mq.questionNumber} ile eşleştirildi.`);
                         }}
-                        className="self-start h-9 px-3.5 rounded-[10px] bg-amber-800 hover:bg-amber-900 text-white text-[13px] font-semibold cursor-pointer shadow-xs transition-colors"
+                        className="ms-btn is-sm is-primary self-start"
                       >
                         Bu soruya bağla (S.{realtimeMatch.matchedQuestion.questionNumber})
                       </button>
@@ -580,7 +616,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                         style={{ animationDelay: `${i * 60}ms` }}
                       >
                         <summary className="list-none cursor-pointer min-h-10 px-2.5 py-1.5 flex items-center gap-2 text-[13px]">
-                          <span className="shrink-0 text-[11px] font-semibold px-1.5 py-0.5 rounded-md bg-violet-50 text-violet-700">
+                          <span className="shrink-0 text-[11px] font-mono font-semibold px-1.5 py-0.5 rounded-md bg-field text-ink-2">
                             {pq.examYear || 'Çıkmış'}
                           </span>
                           <span className="min-w-0 flex-1 truncate text-ink-2 group-open:whitespace-normal" title={pq.stem}>
@@ -596,7 +632,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                 )}
 
                 {aiSuggestion?.suggestedStem && (
-                  <div className="ms-pop-in rounded-xl bg-accent-soft/60 p-3 flex flex-col gap-1">
+                  <div className="ct-ai">
                     <span className="text-[12.5px] font-semibold text-accent inline-flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5" />
                       AI'nın önerdiği soru kalıbı
@@ -652,7 +688,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
             <footer className="flex items-center gap-2 px-5 py-3 pb-[max(env(safe-area-inset-bottom),12px)] sm:pb-3 border-t border-line-soft bg-white">
               <button
                 type="button"
-                onClick={onClose}
+                onClick={requestClose}
                 disabled={isSubmitting}
                 className="h-12 sm:h-11 px-4 rounded-xl text-[15px] font-semibold text-ink-2 hover:bg-canvas cursor-pointer disabled:opacity-50"
               >

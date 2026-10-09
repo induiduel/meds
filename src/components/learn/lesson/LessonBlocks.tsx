@@ -537,11 +537,21 @@ const IxBody: React.FC<{ item: PracticeItem; onDone?: () => void }> = ({ item, o
         />
       );
     case 'interactive_table':
+    case 'hidden_table': {
+      const title = e.tableTitle || e.title || '';
+      const headers = (e.tableHeaders && e.tableHeaders.length ? e.tableHeaders : e.headers) || (e.table && e.table.headers) || [];
+      const rawRows = (e.tableRows && e.tableRows.length ? e.tableRows : e.rows) || (e.table && e.table.rows) || [];
+      const rows = rawRows.map((r: any) => {
+        if (Array.isArray(r)) return r;
+        if (r && Array.isArray(r.cells)) return r.cells;
+        return [];
+      });
       return (
         <div className="ls-ix-body">
-          <LessonTable title={e.tableTitle} headers={e.tableHeaders || []} rows={(e.tableRows || []).map((r: any) => r.cells || r)} masked onAllRevealed={onDone} />
+          <LessonTable title={title} headers={headers} rows={rows} masked onAllRevealed={onDone} />
         </div>
       );
+    }
     case 'cloze_masking':
       return <Cloze e={e} onDone={onDone} />;
     case 'causal_chain':

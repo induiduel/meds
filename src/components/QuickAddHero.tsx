@@ -768,7 +768,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   // v3 · minimal ana sayfa: tek alan, tek düğme. Benzerler ve şıklar yalnızca istenince.
   // Kutudaki ders/numara overlay'leri 2+ kelimeden sonra (ya da değer girildiyse) görünür
   const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
-  const showMeta = mode !== 'option' && (wordCount >= 2 || userManualDiscipline || !!questionNumber);
+  // Künye (kurul, ders, sene, no) yalnız soru kökü yazılınca sorulur
+  const showMeta = mode !== 'option' && (texts.stem.trim().length > 0 || !!linkedQuestion);
   const filledOptionCount = KEYS.filter((k) => options[k].trim()).length;
 
   // Eşleşen taslak varsa ders ve numara otomatik dolar; elle girilen değer korunur
@@ -804,363 +805,550 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedText, mode]);
 
+  // Telefonda yazma alanı tam ekran açılır (animasyonla), kapatınca yerine animasyonla döner; geri tuşu da kapatır
+  const [full, setFull] = useState<false | 'open' | 'closing'>(false);
+  const fullRef = React.useRef(full);
+  fullRef.current = full;
+  const openFull = () => {
+    if (fullRef.current || !window.matchMedia('(max-width: 767px)').matches) return;
+    setFull('open');
+    try { window.history.pushState({ ...(window.history.state || {}), msComposer: 1 }, ''); } catch { /* yok */ }
+  };
+  const finishClose = () => {
+    setFull('closing');
+    window.setTimeout(() => setFull(false), 240);
+    (document.activeElement as HTMLElement | null)?.blur?.();
+  };
+  const closeFull = () => {
+    if (fullRef.current !== 'open') return;
+    if (window.history.state?.msComposer) window.history.back();
+    else finishClose();
+  };
+  useEffect(() => {
+    const onPop = () => { if (fullRef.current === 'open') finishClose(); };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+  useEffect(() => {
+    if (!full) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prev; };
+  }, [full]);
+  // Gönderim başarılı olunca (metin temizlenir) tam ekran kapanır
+  useEffect(() => {
+    if (full === 'open' && successMessage && !texts.stem.trim() && !texts.clue.trim()) closeFull();
+  }, [successMessage, texts]); // eslint-disable-line react-hooks/exhaustive-deps
+
   if (isV3) {
-    const yearLabel = (y: string) => (y ? `${y.slice(0, 4)}–${y.slice(7, 9)}` : 'Bilmiyorum');
-    const examDate = (id: string) => {
-      const d = COMMITTEE_EXAM_DATES[id];
-      return d ? new Date(d).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' }) : '';
-    };
-    const filteredDiscs = disciplines.filter((d) => !discQuery || d.toLocaleLowerCase('tr').includes(discQuery.toLocaleLowerCase('tr')));
-    const hasSide = mode !== 'option' && (realtimeMatches.length > 0 || similar.length > 0);
     return (
-      <div className="qa">
+      <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8">
         <LoveNote />
-        <header className="qa-head">
-          <div className="qa-head-t">
-            <span className="qa-eyebrow">
-              <i className={isCollecting ? 'is-live' : ''} aria-hidden />
-              {committee ? titleCase(committee) : 'Kurul'} · {isLocked ? 'henüz açılmadı' : isCollecting ? 'soru toplama açık' : 'arşive katkı'}
-            </span>
-            <h1 className="ms-page-title qa-title">Aklında ne kaldı?</h1>
-            <p className="qa-lead">Tek kelime bile işe yarar. Benzer parçalar aynı soruda birleşir, yeterince parça toplanınca soru tamamlanır.</p>
-          </div>
-          <dl className="qa-stats">
-            <div><dt>Havuzda</dt><dd>{totalQuestionsCount.toLocaleString('tr-TR')}</dd></div>
-            <div><dt>Numarasız</dt><dd>{unassignedCount.toLocaleString('tr-TR')}</dd></div>
-          </dl>
-        </header>
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-2">
+          <span className="inline-flex items-center text-[13px] text-ink-3">
+            <span className={`w-1.5 h-1.5 rounded-full mr-2 ${isCollecting ? 'bg-ok-bright' : 'bg-line-2'}`} aria-hidden="true" />
+            {committee ? titleCase(committee) : 'Kurul'}{isCollecting ? ' · toplama açık' : ''}
+          </span>
+          <h1 className="ms-page-title m-0 text-[30px] sm:text-[36px] text-ink">Aklında ne kaldı?</h1>
+          {isLocked && (
+            <div className="ms-pop-in flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-300/80 text-amber-900 text-[12.5px] font-medium mt-1">
+              <Lock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+              <span>Ders programına göre sınav tamamlanmadan bu kurula soru yazılamaz.</span>
+            </div>
+          )}
+        </div>
 
-        <div className={`qa-grid ${hasSide ? 'has-side' : ''}`}>
-          <form onSubmit={handleSubmit} aria-busy={isSubmitting} className="qa-main">
-            <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
-
-            {/* Künye: kurul, ders, sene, numara */}
-            <div className="qa-kunye" role="group" aria-label="Sorunun künyesi">
-              <MetaPicker label="Kurul" icon={Layers} value={committee ? titleCase(committee) : 'Seç'} width={300}>
-                {(close) => (
-                  <ul className="qa-list" role="listbox" aria-label="Kurul">
-                    {sortedCommittees.map((c) => {
-                      const locked = isCommitteeLocked(c.id);
-                      const on = c.id === committee?.id;
-                      return (
-                        <li key={c.id}>
-                          <button
-                            type="button"
-                            role="option"
-                            aria-selected={on}
-                            disabled={locked}
-                            className={on ? 'is-on' : ''}
-                            onClick={() => { onSelectCommittee(c.id); close(); }}
-                          >
-                            <i className={`qa-dot ${c.id === activeCommitteeId ? 'is-live' : ''}`} aria-hidden />
-                            <span className="qa-list-t">{titleCase(c)}</span>
-                            <small>{locked ? <><Lock aria-hidden /> açılmadı</> : c.id === activeCommitteeId ? 'toplama açık' : examDate(c.id) ? `sınav ${examDate(c.id)}` : ''}</small>
-                            {on && <Check className="qa-list-ok" aria-hidden />}
-                          </button>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                )}
-              </MetaPicker>
-
-              <MetaPicker label="Ders" icon={BookOpen} value={discipline} auto={autoDisc && !userManualDiscipline} width={320}>
-                {(close) => (
-                  <>
-                    {disciplines.length > 6 && (
-                      <input
-                        autoFocus
-                        value={discQuery}
-                        onChange={(e) => setDiscQuery(e.target.value)}
-                        placeholder="Ders ara"
-                        aria-label="Ders ara"
-                        className="qa-pop-search"
-                      />
-                    )}
-                    <ul className="qa-list" role="listbox" aria-label="Ders">
-                      {filteredDiscs.map((d) => (
-                        <li key={d}>
-                          <button
-                            type="button"
-                            role="option"
-                            aria-selected={d === discipline}
-                            className={d === discipline ? 'is-on' : ''}
-                            onClick={() => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); setDiscQuery(''); close(); }}
-                          >
-                            <span className="qa-list-t">{d}</span>
-                            {d === discipline && <Check className="qa-list-ok" aria-hidden />}
-                          </button>
-                        </li>
-                      ))}
-                      {filteredDiscs.length === 0 && <li className="qa-list-empty">“{discQuery}” bu kurulun derslerinde yok.</li>}
-                    </ul>
-                  </>
-                )}
-              </MetaPicker>
-
-              <MetaPicker label="Sene" icon={CalendarDays} value={yearLabel(examYear)} empty={!examYear} width={300} title="Sorunun çıktığı sınavın öğretim yılı">
-                {(close) => (
-                  <div className="qa-years">
-                    <div className="qa-years-grid" role="listbox" aria-label="Öğretim yılı">
-                      {academicYears().map((y) => (
-                        <button
-                          key={y}
-                          type="button"
-                          role="option"
-                          aria-selected={examYear === y}
-                          className={examYear === y ? 'is-on' : ''}
-                          onClick={() => { setExamYear(y); close(); }}
-                        >
-                          {yearLabel(y)}
-                          {y === currentAcademicYear() && <small>bu yıl</small>}
-                        </button>
-                      ))}
-                    </div>
-                    <button type="button" className={`qa-years-none ${!examYear ? 'is-on' : ''}`} onClick={() => { setExamYear(''); close(); }}>
-                      Bilmiyorum
+        <form onSubmit={handleSubmit} aria-busy={isSubmitting} className="relative flex flex-col gap-3">
+          <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
+          {mode === 'option' ? (
+            <div className="bg-white rounded-2xl p-3 shadow-sm">
+              <OptionsEditor
+                options={options}
+                onChange={(k, v) => setOptions((p) => ({ ...p, [k]: v }))}
+                count={optionCount}
+                onCountChange={setOptionCount}
+                answer={claimedAnswer}
+                onAnswerChange={setClaimedAnswer}
+                reason={answerReason}
+                onReasonChange={setAnswerReason}
+              />
+            </div>
+          ) : (
+            <>
+              <label htmlFor="hatira" className="sr-only">Hatırladığın kısım</label>
+              <div className={`ms-composer ${showMeta ? 'has-meta' : ''} ${full ? `is-full ${full === 'closing' ? 'is-closing' : ''}` : ''}`}>
+                {full && (
+                  <div className="ms-composer-top">
+                    <button type="button" className="ms-composer-close" onClick={closeFull} aria-label="Kapat">
+                      <ChevronDown />
+                    </button>
+                    <span className="ms-composer-title">{mode === 'clue' ? 'İpucu' : 'Aklında ne kaldı?'}</span>
+                    <button type="submit" className="ms-composer-send" disabled={isSubmitting || isLocked || !text.trim()}>
+                      {isSubmitting ? 'Ekleniyor…' : 'Ekle'}
                     </button>
                   </div>
                 )}
-              </MetaPicker>
-
-              <label className={`qa-tok is-num ${autoNum && !userManualNumber ? 'is-auto' : ''} ${!questionNumber ? 'is-empty' : ''}`} title="Soru numarası (bilmiyorsan boş bırak)">
-                <Hash className="qa-tok-i" aria-hidden />
-                <span className="qa-tok-l">No</span>
-                <input
-                  type="text"
-                  inputMode="numeric"
-                  value={questionNumber}
-                  onChange={(e) => { setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
-                  placeholder="—"
-                  aria-label="Soru numarası (bilmiyorsan boş bırak)"
+                <textarea
+                  id="hatira"
+                  rows={4}
+                  value={text}
+                  onFocus={openFull}
+                  onChange={(e) => setText(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                      e.preventDefault();
+                      e.currentTarget.form?.requestSubmit();
+                    }
+                  }}
+                  placeholder="Tek kelime bile işe yarar…"
+                  className="ms-bare-input w-full block resize-none px-4 pt-3.5 pb-2 text-[16px] leading-[1.6] text-ink placeholder:text-ink-3 bg-transparent border-0 outline-0 min-h-[128px]"
                 />
-                {autoNum && !userManualNumber && <Sparkles className="qa-tok-auto" aria-label="otomatik dolduruldu" />}
-              </label>
-            </div>
-
-            {isLocked && (
-              <p className="qa-note is-warn" role="status">
-                <Lock aria-hidden /> Ders programına göre önceki kurulun sınavı bitmeden bu kurula soru yazılamaz.
-              </p>
-            )}
-
-            <div className="qa-card">
-              <div className="qa-modes" role="tablist" aria-label="Ne ekliyorsun?">
-                {([
-                  ['stem', 'Soru kökü', PenLine, texts.stem.trim() ? '•' : ''],
-                  ['clue', 'İpucu', Lightbulb, texts.clue.trim() ? '•' : ''],
-                  ['option', 'Şıklar', ListChecks, filledOptionCount ? `${filledOptionCount}${claimedAnswer ? ` · ${claimedAnswer}` : ''}` : ''],
-                ] as [Mode, string, React.ElementType, string][]).map(([id, label, Icon, badge]) => (
-                  <button key={id} type="button" role="tab" aria-selected={mode === id} className={mode === id ? 'is-on' : ''} onClick={() => setMode(id)}>
-                    <Icon aria-hidden /> {label}
-                    {badge && <span className="qa-modes-b">{badge}</span>}
-                  </button>
-                ))}
+                {/* Alt şerit: soru kimliği. Ders ve numara akıllı etiketler; otomatik dolanlar işaretli */}
+                {showMeta && (
+                  <div className="ms-meta" data-no-tip>
+                    <MetaPicker variant="token" label="Kurul" icon={Layers} value={committee ? titleCase(committee) : 'Kurul'} width={280}>
+                      {(close) => (
+                        <ul className="qa-list" role="listbox" aria-label="Kurul">
+                          {sortedCommittees.map((c) => {
+                            const locked = isCommitteeLocked(c.id);
+                            const on = c.id === committee?.id;
+                            return (
+                              <li key={c.id}>
+                                <button type="button" role="option" aria-selected={on} disabled={locked} className={on ? 'is-on' : ''} onClick={() => { onSelectCommittee(c.id); close(); }}>
+                                  <i className={`qa-dot ${c.id === activeCommitteeId ? 'is-live' : ''}`} aria-hidden />
+                                  <span className="qa-list-t">{titleCase(c)}</span>
+                                  <small>{locked ? <><Lock aria-hidden /> açılmadı</> : c.id === activeCommitteeId ? 'toplama açık' : ''}</small>
+                                  {on && <Check className="qa-list-ok" aria-hidden />}
+                                </button>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                    </MetaPicker>
+                    <MetaPicker variant="token" label="Ders" icon={BookOpen} value={discipline} auto={autoDisc && !userManualDiscipline} width={300}>
+                      {(close) => {
+                        const list = disciplines.filter((d) => !discQuery || d.toLocaleLowerCase('tr').includes(discQuery.toLocaleLowerCase('tr')));
+                        return (
+                          <>
+                            {disciplines.length > 6 && (
+                              <input autoFocus value={discQuery} onChange={(e) => setDiscQuery(e.target.value)} placeholder="Ders ara" aria-label="Ders ara" className="qa-pop-search" />
+                            )}
+                            <ul className="qa-list" role="listbox" aria-label="Ders">
+                              {list.map((d) => (
+                                <li key={d}>
+                                  <button type="button" role="option" aria-selected={d === discipline} className={d === discipline ? 'is-on' : ''} onClick={() => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); setDiscQuery(''); close(); }}>
+                                    <span className="qa-list-t">{d}</span>
+                                    {d === discipline && <Check className="qa-list-ok" aria-hidden />}
+                                  </button>
+                                </li>
+                              ))}
+                              {list.length === 0 && <li className="qa-list-empty">“{discQuery}” bu kurulun derslerinde yok.</li>}
+                            </ul>
+                          </>
+                        );
+                      }}
+                    </MetaPicker>
+                    <MetaPicker variant="token" label="Sene" icon={CalendarDays} value={((y: string) => (y ? `${y.slice(0, 4)}–${y.slice(7, 9)}` : 'Sene?'))(examYear)} empty={!examYear} width={300} title="Sorunun çıktığı sınavın öğretim yılı">
+                      {(close) => (
+                        <div className="qa-years">
+                          <div className="qa-years-grid" role="listbox" aria-label="Öğretim yılı">
+                            {academicYears().map((y) => (
+                              <button key={y} type="button" role="option" aria-selected={examYear === y} className={examYear === y ? 'is-on' : ''} onClick={() => { setExamYear(y); close(); }}>
+                                {`${y.slice(0, 4)}–${y.slice(7, 9)}`}
+                                {y === currentAcademicYear() && <small>bu yıl</small>}
+                              </button>
+                            ))}
+                          </div>
+                          <button type="button" className={`qa-years-none ${!examYear ? 'is-on' : ''}`} onClick={() => { setExamYear(''); close(); }}>Bilmiyorum</button>
+                        </div>
+                      )}
+                    </MetaPicker>
+                    <label className={`ms-meta-token is-number ${autoNum && !userManualNumber ? 'is-auto' : ''}`} title="Soru numarası (bilmiyorsan boş bırak)">
+                      <span className="opacity-70">No</span>
+                      <input
+                        type="text"
+                        inputMode="numeric"
+                        value={questionNumber}
+                        onChange={(e) => { setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
+                        placeholder="—"
+                        aria-label="Soru numarası (bilmiyorsan boş bırak)"
+                      />
+                      {autoNum && !userManualNumber && <Sparkles className="ms-meta-auto w-3 h-3 shrink-0" aria-label="otomatik" />}
+                    </label>
+                    {(autoDisc || autoNum) && !(userManualDiscipline && userManualNumber) && (
+                      <span className="hidden sm:inline ml-auto text-[12px] text-ink-3 truncate">Eşleşen taslaktan dolduruldu</span>
+                    )}
+                  </div>
+                )}
               </div>
-
-              {mode === 'option' ? (
-                <div className="qa-opts">
-                  <OptionsEditor
-                    options={options}
-                    onChange={(k, v) => setOptions((p) => ({ ...p, [k]: v }))}
-                    count={optionCount}
-                    onCountChange={setOptionCount}
-                    answer={claimedAnswer}
-                    onAnswerChange={setClaimedAnswer}
-                    reason={answerReason}
-                    onReasonChange={setAnswerReason}
-                  />
+              {spell?.text && spell.text !== dismissedSpell && (
+                <div className="ms-pop-in flex items-center gap-2 text-[14px] text-ink-2 min-w-0">
+                  <span className="shrink-0 text-ink-3">Bunu mu kastettiniz?</span>
+                  <button
+                    type="button"
+                    onClick={() => { setText(spell.text!); setSpell(null); }}
+                    className="min-w-0 truncate text-left text-accent font-medium hover:underline cursor-pointer"
+                  >
+                    {spell.changes.map((c) => c.to).join(', ')}
+                  </button>
+                  <button type="button" onClick={() => setDismissedSpell(spell.text)} aria-label="Öneriyi kapat" className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-ink-3 hover:bg-field cursor-pointer">
+                    <X className="w-3.5 h-3.5" />
+                  </button>
                 </div>
-              ) : (
-                <>
-                  <label htmlFor="hatira" className="sr-only">{mode === 'clue' ? 'Hatırladığın ipucu' : 'Hatırladığın kısım'}</label>
-                  <textarea
-                    id="hatira"
-                    rows={5}
-                    value={text}
-                    onChange={(e) => setText(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
-                        e.preventDefault();
-                        e.currentTarget.form?.requestSubmit();
-                      }
-                    }}
-                    placeholder={mode === 'clue' ? PLACEHOLDERS.clue : 'Tek kelime bile işe yarar… örn. göçük altında kalan hasta, EKG’de sivri T'}
-                    className="qa-text"
-                  />
-                </>
+              )}
+              {/* Canlı arama mikro-animasyonu / yükleme göstergesi */}
+              {isSearching && text.trim().length >= 6 && (
+                <div className="ms-fade-in flex items-center gap-2 px-3 py-1.5 rounded-xl bg-accent-soft/60 border border-accent/20 text-accent text-[12px] font-medium w-fit">
+                  <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
+                  <span className="flex items-center gap-1">
+                    <Sparkles className="w-3.5 h-3.5 animate-spin" />
+                    Benzer soru, kurul ve taslaklar taranıyor…
+                  </span>
+                </div>
               )}
 
-              <footer className="qa-card-foot">
-                <span className="qa-hint">
-                  {isSearching && text.trim().length >= 6 ? (
-                    <><span className="qa-pulse" aria-hidden /> Benzer taslaklar taranıyor…</>
-                  ) : mode === 'option' ? (
-                    'Doğru bildiğin şıkkın harfine dokun.'
-                  ) : wordCount > 0 ? (
-                    <>{wordCount} kelime · <kbd className="ms-kbd">Ctrl</kbd> + <kbd className="ms-kbd">Enter</kbd></>
-                  ) : (
-                    'Kök, ipucu ve şıkları birlikte gönderebilirsin.'
-                  )}
-                </span>
-                <button type="submit" disabled={isSubmitting || isLocked} className="qa-submit">
-                  {isSubmitting ? 'Kaydediliyor…' : linkedQuestion ? 'Soruya ekle' : 'Havuza ekle'}
-                  <ArrowRight aria-hidden />
-                </button>
-              </footer>
-            </div>
+              {/* Seçili Soruya / Taslağa Bağlandı Rozeti */}
+              {linkedQuestion && (
+                <div className="ms-pop-in flex items-center justify-between gap-2 px-3.5 py-2 rounded-xl bg-teal-50 border border-teal-200 text-teal-900 text-[13px]">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <Link2 className="w-4 h-4 text-teal-600 shrink-0" />
+                    <span className="font-semibold text-teal-950 truncate">
+                      {linkedQuestion.questionNumber ? `Soru #${linkedQuestion.questionNumber} ile bağlandı` : 'Mevcut taslakla bağlandı'}
+                    </span>
+                    <span className="text-teal-700 text-[12px] hidden sm:inline truncate">
+                      (Yazdıkların bu sorunun katkılarına eklenecek)
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setLinkedQuestion(null);
+                      setQuestionNumber('');
+                    }}
+                    className="p-1 text-teal-700 hover:text-teal-950 hover:bg-teal-100 rounded-lg cursor-pointer transition-colors shrink-0"
+                    title="Bağlantıyı kaldır"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              )}
+            </>
+          )}
 
-            {spell?.text && spell.text !== dismissedSpell && mode !== 'option' && (
-              <p className="qa-note">
-                <span>Bunu mu demek istedin?</span>
-                <button type="button" className="qa-link" onClick={() => { setText(spell.text!); setSpell(null); }}>
-                  {spell.changes.map((c) => c.to).join(', ')}
-                </button>
-                <button type="button" className="qa-x" onClick={() => setDismissedSpell(spell.text)} aria-label="Öneriyi kapat"><X /></button>
-              </p>
-            )}
+          {/* Akıllı Kurul & Ders Öneri ve Uyarı Kutusu */}
+          {smartAssistant && mode !== 'option' && (smartAssistant.crossCommitteeWarning || smartAssistant.suggestedTopics.length > 0) && (
+            <div className="ms-pop-in rounded-2xl bg-amber-500/10 border border-amber-300/80 p-3.5 flex flex-col gap-2.5">
+              {smartAssistant.crossCommitteeWarning && smartAssistant.predictedCommittee && (
+                <div className="flex items-start justify-between gap-3 flex-wrap sm:flex-nowrap">
+                  <div className="flex items-start gap-2 text-[13px] text-amber-950 leading-snug">
+                    <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-bold">Kurul Uyuşmazlığı Olabilir: </span>
+                      {smartAssistant.crossCommitteeWarning}
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (smartAssistant.predictedCommittee) {
+                        onSelectCommittee(smartAssistant.predictedCommittee.committeeId);
+                        if (smartAssistant.predictedDiscipline) {
+                          setDiscipline(smartAssistant.predictedDiscipline.discipline);
+                        }
+                        toast.success('Kurul Değiştirildi', `${smartAssistant.predictedCommittee.committeeName} kuruluna geçildi.`);
+                      }
+                    }}
+                    className="shrink-0 h-8 px-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-[12px] font-bold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-xs"
+                  >
+                    Bu Kurula Geç
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              )}
 
-            {linkedQuestion && (
-              <p className="qa-note is-ok">
-                <Link2 aria-hidden />
-                <span className="min-w-0 flex-1">
-                  <b>{linkedQuestion.questionNumber ? `Soru #${linkedQuestion.questionNumber}` : 'Seçtiğin taslak'}</b> ile bağlandı; yazdıkların bu soruya eklenecek.
-                </span>
-                <button type="button" className="qa-x" onClick={() => { setLinkedQuestion(null); setQuestionNumber(''); }} aria-label="Bağlantıyı kaldır"><X /></button>
-              </p>
-            )}
-
-            {smartAssistant && mode !== 'option' && (smartAssistant.crossCommitteeWarning || smartAssistant.suggestedTopics.length > 0) && (
-              <div className="qa-assist">
-                {smartAssistant.crossCommitteeWarning && smartAssistant.predictedCommittee && (
-                  <div className="qa-assist-row">
-                    <AlertCircle className="qa-assist-i" aria-hidden />
-                    <span className="min-w-0 flex-1">{smartAssistant.crossCommitteeWarning}</span>
+              {/* Tespit Edilen Tıbbi Konular / Kavramlar */}
+              {smartAssistant.suggestedTopics.length > 0 && (
+                <div className="flex items-center gap-1.5 flex-wrap pt-0.5">
+                  <span className="text-[11.5px] font-bold uppercase tracking-wider text-amber-900/80 flex items-center gap-1">
+                    <Sparkles className="w-3 h-3 text-amber-600" />
+                    İlişkili Konu Önerileri:
+                  </span>
+                  {smartAssistant.suggestedTopics.slice(0, 3).map((st, i) => (
+                    <span
+                      key={i}
+                      className="h-6 px-2.5 rounded-full bg-white text-amber-950 text-[12px] font-semibold border border-amber-200 shadow-2xs inline-flex items-center gap-1"
+                    >
+                      {st.topic}
+                    </span>
+                  ))}
+                  {smartAssistant.predictedDiscipline && discipline !== smartAssistant.predictedDiscipline.discipline && (
                     <button
                       type="button"
-                      className="ms-btn is-sm is-warn"
-                      onClick={() => {
-                        if (smartAssistant.predictedCommittee) {
-                          onSelectCommittee(smartAssistant.predictedCommittee.committeeId);
-                          if (smartAssistant.predictedDiscipline) setDiscipline(smartAssistant.predictedDiscipline.discipline);
-                          toast.success('Kurul değiştirildi', `${smartAssistant.predictedCommittee.committeeName} kuruluna geçildi.`);
-                        }
-                      }}
+                      onClick={() => setDiscipline(smartAssistant.predictedDiscipline!.discipline)}
+                      className="h-6 px-2.5 rounded-full bg-accent/15 hover:bg-accent/25 text-accent text-[12px] font-bold border border-accent/30 inline-flex items-center gap-1 cursor-pointer transition-colors"
+                      title="Dersi otomatik eşle"
                     >
-                      Bu kurula geç
+                      Dersi "{smartAssistant.predictedDiscipline.discipline}" yap
                     </button>
-                  </div>
-                )}
-                {smartAssistant.suggestedTopics.length > 0 && (
-                  <div className="qa-assist-row is-topics">
-                    <span className="qa-assist-l">İlgili konular</span>
-                    {smartAssistant.suggestedTopics.slice(0, 3).map((st, i) => <span key={i} className="qa-topic">{st.topic}</span>)}
-                    {smartAssistant.predictedDiscipline && discipline !== smartAssistant.predictedDiscipline.discipline && (
-                      <button type="button" className="qa-link" onClick={() => setDiscipline(smartAssistant.predictedDiscipline!.discipline)}>
-                        Dersi “{smartAssistant.predictedDiscipline.discipline}” yap
-                      </button>
-                    )}
-                  </div>
-                )}
-              </div>
-            )}
-
-            {formError && <div role="alert" className="ms-shake qa-note is-bad">{formError}</div>}
-            {successMessage && <div role="status" className="ms-pop-in qa-note is-ok"><Check aria-hidden /> Teşekkürler! {successMessage}</div>}
-          </form>
-
-          <aside className="qa-side" aria-label="Benzerler">
-            {!hasSide && (
-              <ol className="qa-how">
-                <li><b>Hatırladığını yaz.</b> Bir kelime, bir şık ya da yarım cümle yeter.</li>
-                <li><b>Benzerini seç.</b> Yazdıkça aynı soruyu hatırlayanların taslakları burada çıkar; bağlarsan parçalar birleşir.</li>
-                <li><b>Soru tamamlanır.</b> Yeterince parça toplanınca kaynakla doğrulanmış tam soru olur.</li>
-              </ol>
-            )}
-
-            {realtimeMatches.length > 0 && mode !== 'option' && (
-              <section className="qa-sec">
-                <header className="qa-sec-h">
-                  <span>Benzer taslaklar <small>{realtimeMatches.length}</small></span>
-                  <button type="button" className="qa-link" onClick={selectedMatchIds.size === realtimeMatches.length ? clearSelection : selectAllMatches}>
-                    {selectedMatchIds.size === realtimeMatches.length ? 'Seçimi bırak' : 'Tümünü seç'}
-                  </button>
-                </header>
-                <ul className="qa-matches">
-                  {realtimeMatches.map((m, idx) => {
-                    const q = m.question;
-                    const isSelected = selectedMatchIds.has(q.id);
-                    const sc = m.compatibility.score;
-                    return (
-                      <li key={q.id} className={`qa-match ${isSelected ? 'is-sel' : ''}`} style={{ animationDelay: `${idx * 50}ms` }}>
-                        <div className="qa-match-h">
-                          <button type="button" className="qa-check" onClick={() => toggleSelectMatch(q.id)} aria-pressed={isSelected} aria-label={`Soru ${q.questionNumber || 'taslak'} seç`}>
-                            {isSelected ? <CheckSquare /> : <Square />}
-                          </button>
-                          <span className={`qa-score ${sc >= 70 ? 'is-hi' : sc >= 45 ? 'is-mid' : ''}`}><i style={{ width: `${Math.min(100, sc)}%` }} />%{sc}</span>
-                          {idx === 0 && <span className="qa-flag">En yakın</span>}
-                          {m.isCrossCommittee && <span className="qa-flag is-warn">Başka kurul</span>}
-                          <span className="qa-match-no">{q.questionNumber ? `#${q.questionNumber}` : 'numarasız'}</span>
-                        </div>
-                        <p className="qa-match-t"><Colored text={questionStemText(q)} colors={sharedColors} /></p>
-                        <div className="qa-match-f">
-                          {m.contextHashtag && <ContextBadge hashtag={m.contextHashtag} colorIndex={idx} />}
-                          <span className="qa-match-d">{q.discipline}</span>
-                          <button type="button" className="qa-mini" onClick={() => setOptimizingQuestion(q)} title="Taslağı ders slaytları ve yapay zekâ ile tam soruya dönüştür"><Wand2 aria-hidden /> Dönüştür</button>
-                          <button type="button" className="qa-mini is-primary" onClick={() => handleLinkToQuestion(q)}><Link2 aria-hidden /> Bağla</button>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
-                <WordLegend texts={[text, ...realtimeMatches.map((m) => questionStemText(m.question))]} colors={sharedColors} />
-                {selectedMatchIds.size > 0 && (
-                  <div className="qa-selbar ms-pop-in">
-                    <b>{selectedMatchIds.size}</b>
-                    <span className="min-w-0 flex-1">soru seçildi</span>
-                    <button type="button" className="qa-selbar-x" onClick={clearSelection}>İptal</button>
-                    <button type="button" className="qa-selbar-go" disabled={isMergingSelected} onClick={handleMergeAndGroupSelected}>
-                      <Layers aria-hidden />
-                      {isMergingSelected ? 'Birleştiriliyor…' : selectedMatchIds.size === 1 ? 'Birleştir' : `Birleştir (${selectedMatchIds.size})`}
-                    </button>
-                  </div>
-                )}
-              </section>
-            )}
-
-            {similar.length > 0 && mode !== 'option' && (
-              <section className="qa-sec">
-                <header className="qa-sec-h">
-                  <span>Benzer çıkmış sorular <small>{similar.length}</small></span>
-                  {similar.length > 2 && (
-                    <button type="button" className="qa-link" onClick={() => setSimOpen((v) => !v)} aria-expanded={simOpen}>{simOpen ? 'Daha az' : 'Tümü'}</button>
                   )}
-                </header>
-                <ul className="qa-past">
-                  {(simOpen ? similar : similar.slice(0, 2)).map((sItem) => (
-                    <li key={sItem.id} className="qa-pastq">
-                      <p className="qa-pastq-t">{sItem.stem}</p>
-                      {sItem.options && sItem.options.length > 0 && (
-                        <ol className="qa-pastq-o">
-                          {sItem.options.map((o) => (
-                            <li key={o.key} className={o.key === sItem.claimedAnswer ? 'is-ans' : ''}><b>{o.key}</b>{o.text}</li>
-                          ))}
-                        </ol>
-                      )}
-                      <div className="qa-match-f">
-                        <span className="qa-match-d">{[sItem.discipline, sItem.examYear].filter(Boolean).join(' · ')}</span>
-                        <button type="button" className="qa-mini" onClick={() => handleCopyQuestionStem(sItem.stem)} title="Yalnız soru kökünü yazma alanına al"><Copy aria-hidden /> Kökü al</button>
-                        <button type="button" className="qa-mini is-primary" onClick={() => handleTransferEntireQuestion(sItem)} title="Kökü, dersi ve şıkları yazma alanına aktar">
-                          <FileText aria-hidden /> {sItem.options && sItem.options.length ? 'Kök + şıklar' : 'Aktar'}
-                        </button>
+                </div>
+              )}
+            </div>
+          )}
+
+          {realtimeMatches.length > 0 && mode !== 'option' && (
+            <div className="flex flex-col gap-2.5">
+              <div className="flex items-center justify-between gap-2 px-1">
+                <span className="flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-wider text-ink-3">
+                  <Sparkles className="w-3.5 h-3.5 text-accent animate-pulse" />
+                  Benzer Taslaklar ({realtimeMatches.length})
+                </span>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={selectedMatchIds.size === realtimeMatches.length ? clearSelection : selectAllMatches}
+                    className="text-[12px] font-semibold text-accent hover:underline cursor-pointer"
+                  >
+                    {selectedMatchIds.size === realtimeMatches.length ? 'Seçimi Bırak' : 'Tümünü Seç'}
+                  </button>
+                </div>
+              </div>
+
+              {/* Benzer sorular listesi: En belirgin soru ilk sırada */}
+              <div className="flex flex-col gap-2">
+                {realtimeMatches.map((m, idx) => {
+                  const q = m.question;
+                  const stem = questionStemText(q);
+                  const isTop = idx === 0;
+                  const isSelected = selectedMatchIds.has(q.id);
+                  const tier = getScoreTier(m.compatibility.score);
+
+                  return (
+                    <div
+                      key={q.id}
+                      className={`ms-pop-in rounded-2xl border transition-all p-3.5 flex flex-col gap-2 relative ${
+                        isSelected
+                          ? 'border-accent bg-accent-soft/30 shadow-xs ring-1 ring-accent'
+                          : tier.cardBorder
+                      }`}
+                      style={{ animationDelay: `${idx * 60}ms` }}
+                    >
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <button
+                            type="button"
+                            onClick={() => toggleSelectMatch(q.id)}
+                            className="cursor-pointer text-ink-2 hover:text-ink focus:outline-none"
+                            title={isSelected ? 'Seçimi Kaldır' : 'Seç'}
+                            aria-label={`Soru ${q.questionNumber || 'taslak'} seç`}
+                          >
+                            {isSelected ? (
+                              <CheckSquare className="w-4 h-4 text-accent fill-accent-soft" />
+                            ) : (
+                              <Square className="w-4 h-4 text-ink-3 hover:text-ink" />
+                            )}
+                          </button>
+
+                          {isTop && (
+                            <span className="h-5 px-2 rounded-full bg-accent text-white text-[11px] font-bold uppercase tracking-wider">
+                              En Yakın
+                            </span>
+                          )}
+
+                          <span className={`h-6 px-2.5 rounded-full text-[12px] font-semibold inline-flex items-center gap-1 border ${tier.pillBg}`}>
+                            <span className={`w-1.5 h-1.5 rounded-full ${tier.barColor}`} />
+                            %{m.compatibility.score} · {tier.tierName}
+                          </span>
+
+                          {m.isCrossCommittee && (
+                            <span className="h-5 px-2 rounded-full bg-purple-600 text-white text-[11px] font-bold uppercase tracking-wider">
+                              Farklı Kurul Taslağı
+                            </span>
+                          )}
+
+                          {m.contextHashtag && (
+                            <ContextBadge hashtag={m.contextHashtag} colorIndex={idx} />
+                          )}
+                        </div>
+
+                        <span className="text-[12px] font-mono font-bold text-ink-2">
+                          {q.questionNumber ? `Soru #${q.questionNumber}` : 'Numarasız'}
+                        </span>
                       </div>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            )}
-          </aside>
-        </div>
+
+                      <div className="text-[13px] leading-relaxed text-ink bg-white/90 rounded-xl p-2.5 border border-line-soft">
+                        <Colored text={stem} colors={sharedColors} />
+                      </div>
+
+                      <div className="flex items-center justify-between gap-2 pt-1">
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          <button
+                            type="button"
+                            onClick={() => handleLinkToQuestion(q)}
+                            className="h-7 px-2.5 rounded-lg bg-white hover:bg-canvas text-ink text-[12px] font-medium border border-line inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                          >
+                            <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
+                            {q.questionNumber ? `S.${q.questionNumber} ile Bağla` : 'Bu Taslakla Bağla'}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setOptimizingQuestion(q)}
+                            className="h-7 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-[12px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                            title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür"
+                          >
+                            <Wand2 className="w-3.5 h-3.5" />
+                            AI ile Dönüştür
+                          </button>
+                        </div>
+                        {q.discipline && (
+                          <span className="text-[11.5px] text-ink-3 truncate">{q.discipline}</span>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Ortak kelimeler renk kılavuzu */}
+              <WordLegend texts={[text, ...realtimeMatches.map((m) => questionStemText(m.question))]} colors={sharedColors} />
+
+              {/* Seçim yapıldığında ortaya çıkan bağlamsal çubuk */}
+              {selectedMatchIds.size > 0 && (
+                <div className="ms-pop-in sticky bottom-3 z-20 flex items-center justify-between gap-3 p-3 rounded-2xl bg-ink text-white shadow-xl border border-white/10 backdrop-blur-md">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="w-6 h-6 rounded-full bg-accent text-white text-[12px] font-bold flex items-center justify-center shrink-0">
+                      {selectedMatchIds.size}
+                    </span>
+                    <span className="text-[13px] font-medium truncate">
+                      {selectedMatchIds.size === 1
+                        ? '1 soru seçildi'
+                        : `${selectedMatchIds.size} soru seçildi`}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-2 shrink-0">
+                    <button
+                      type="button"
+                      onClick={clearSelection}
+                      className="h-8 px-2.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white text-[12px] font-medium cursor-pointer transition-colors"
+                    >
+                      İptal
+                    </button>
+                    <button
+                      type="button"
+                      disabled={isMergingSelected}
+                      onClick={handleMergeAndGroupSelected}
+                      className="h-8 px-3.5 rounded-lg bg-accent hover:bg-accent-hover text-white text-[12.5px] font-bold inline-flex items-center gap-1.5 cursor-pointer shadow-md disabled:opacity-50 transition-colors"
+                    >
+                      <Layers className="w-3.5 h-3.5" />
+                      {isMergingSelected
+                        ? 'Birleştiriliyor…'
+                        : selectedMatchIds.size === 1
+                        ? 'Bu Soru ile Birleştir'
+                        : `Seçilenleri Gruplandır & Birleştir (${selectedMatchIds.size})`}
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {similar.length > 0 && mode !== 'option' && (
+            <button
+              type="button"
+              onClick={() => setSimOpen((v) => !v)}
+              aria-expanded={simOpen}
+              className="ms-pop-in w-full min-h-11 px-4 rounded-2xl bg-field hover:bg-line flex items-center gap-3 text-left text-[14px] cursor-pointer"
+            >
+              <span className="h-6 min-w-6 px-2 rounded-full bg-accent-soft text-accent text-[12px] font-semibold inline-flex items-center justify-center">
+                {similar.length}
+              </span>
+              <span className="flex-1 text-ink-2">benzer çıkmış soru bulundu</span>
+              <span className="text-[13px] text-ink-3">{simOpen ? 'Gizle' : 'Göster'}</span>
+            </button>
+          )}
+          {simOpen && similar.length > 0 && mode !== 'option' && (
+            <ul className="list-none m-0 p-0 flex flex-col gap-2">
+              {similar.map((s, i) => (
+                <li
+                  key={s.id}
+                  className="ms-pop-in p-3 rounded-xl bg-field/60 border border-line-soft hover:bg-field text-[14px] text-ink flex flex-col gap-2"
+                  style={{ animationDelay: `${i * 60}ms` }}
+                >
+                  <div className="flex flex-col gap-0.5 min-w-0">
+                    <span className="line-clamp-2 text-ink-2 font-medium">{s.stem}</span>
+                    {s.options && s.options.length > 0 && (
+                      <ol className="m-0 mt-1 p-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-0.5 text-[13px] text-ink-2">
+                        {s.options.map((o) => (
+                          <li key={o.key} className={`min-w-0 truncate ${o.key === s.claimedAnswer ? 'text-ok font-semibold' : ''}`}>
+                            <span className="font-mono text-ink-3 mr-1">{o.key})</span>{o.text}
+                          </li>
+                        ))}
+                      </ol>
+                    )}
+                    <span className="text-[12px] text-ink-3">
+                      {[s.discipline, s.examYear ? `Çıkmış ${s.examYear}` : 'Çıkmış', s.claimedAnswer ? `Cevap: ${s.claimedAnswer}` : ''].filter(Boolean).join(' · ')}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 pt-1 border-t border-line-soft">
+                    <button
+                      type="button"
+                      onClick={() => handleTransferEntireQuestion(s)}
+                      className="h-7 px-2.5 rounded-lg bg-accent text-white text-[12px] font-semibold inline-flex items-center gap-1 cursor-pointer hover:bg-accent-hover shadow-2xs transition-colors"
+                      title="Sorunun kökünü, branşını ve şıklarını editöre aktar"
+                    >
+                      <FileText className="w-3.5 h-3.5" />
+                      {s.options && s.options.length ? 'Kök + şıkları aktar' : 'Soruyu aktar'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleCopyQuestionStem(s.stem)}
+                      className="h-7 px-2.5 rounded-lg bg-white text-ink text-[12px] font-medium border border-line inline-flex items-center gap-1 cursor-pointer hover:bg-canvas shadow-2xs transition-colors"
+                      title="Yalnızca soru kökünü editöre yaz ve panoya kopyala"
+                    >
+                      <Copy className="w-3.5 h-3.5 text-accent" />
+                      Yalnızca Kökü Al
+                    </button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          <div className="flex items-center gap-2 text-[13px] text-ink-3">
+            <span className="flex-1" />
+            {/* Şık ekle: gönder düğmesinin solunda küçük baloncuk */}
+            <button
+              type="button"
+              onClick={() => setMode(mode === 'option' ? 'stem' : 'option')}
+              aria-pressed={mode === 'option'}
+              className={`ms-opt-bubble ${mode === 'option' || filledOptionCount > 0 ? 'is-on' : ''}`}
+            >
+              {mode === 'option' ? (
+                <>Köke dön</>
+              ) : filledOptionCount > 0 ? (
+                <>{filledOptionCount} şık{claimedAnswer ? ` · ${claimedAnswer}` : ''}</>
+              ) : (
+                <><Plus className="w-3.5 h-3.5" strokeWidth={2.4} /> Şık</>
+              )}
+            </button>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="h-12 sm:h-11 px-6 rounded-full bg-accent hover:bg-accent-hover text-white text-[15px] sm:text-[14.5px] font-semibold cursor-pointer disabled:opacity-60 transition-colors shrink-0"
+            >
+              {isSubmitting ? 'Kaydediliyor…' : 'Havuza ekle'}
+            </button>
+          </div>
+
+          {formError && (
+            <div role="alert" className="ms-shake px-4 py-3 rounded-2xl bg-bad-soft text-bad-text text-[14px]">{formError}</div>
+          )}
+          {successMessage && (
+            <div role="status" className="ms-pop-in px-4 py-3 rounded-2xl bg-ok-soft text-ok text-[14px] font-medium">Teşekkürler! {successMessage}</div>
+          )}
+        </form>
 
         {optimizingQuestion && (
           <AiQuestionOptimizerModal
@@ -1170,14 +1358,17 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             currentUser={currentUser}
             onSaved={async (updated) => {
               setOptimizingQuestion(null);
-              toast.success('Taslak geliştirildi', `Soru #${updated.questionNumber || 'taslak'} güncellendi.`);
-              if (onQuestionsUpdated) await onQuestionsUpdated();
+              toast.success('Taslak Geliştirildi', `Soru #${updated.questionNumber || 'taslak'} başarıyla güncellendi.`);
+              if (onQuestionsUpdated) {
+                await onQuestionsUpdated();
+              }
             }}
           />
         )}
       </div>
     );
   }
+
 
   return (
     <div className="w-full grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-4 lg:gap-5 md:pt-2">

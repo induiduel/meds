@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useRef } from 'react';
+import React, { useEffect, useId, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 
 interface DialogProps {
@@ -20,8 +20,18 @@ interface DialogProps {
 export const Dialog: React.FC<DialogProps> = ({ title, subtitle, onClose, footer, width = 'max-w-xl', children, bareBody }) => {
   const id = useId();
   const panelRef = useRef<HTMLDivElement>(null);
-  const closeRef = useRef(onClose);
-  closeRef.current = onClose;
+  // Kapanış animasyonlu: Esc, dış tıklama ve kapat düğmesi önce çıkış animasyonunu oynatır
+  const [closing, setClosing] = useState(false);
+  const closingRef = useRef(false);
+  const requestClose = () => {
+    if (closingRef.current) return;
+    closingRef.current = true;
+    setClosing(true);
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.setTimeout(() => onClose(), reduce ? 0 : 190);
+  };
+  const closeRef = useRef(requestClose);
+  closeRef.current = requestClose;
 
   useEffect(() => {
     const prevFocus = document.activeElement as HTMLElement | null;
@@ -38,7 +48,7 @@ export const Dialog: React.FC<DialogProps> = ({ title, subtitle, onClose, footer
   }, []);
 
   return (
-    <div className="ms-overlay fixed inset-0 z-[70] flex items-center justify-center p-4" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
+    <div className={`ms-overlay fixed inset-0 z-[70] flex items-center justify-center p-4 ${closing ? 'is-closing' : ''}`} onMouseDown={(e) => e.target === e.currentTarget && requestClose()}>
       <div
         ref={panelRef}
         tabIndex={-1}
@@ -52,7 +62,7 @@ export const Dialog: React.FC<DialogProps> = ({ title, subtitle, onClose, footer
             <h2 id={`${id}-t`} className="m-0 font-display text-[17px] font-semibold leading-snug text-ink">{title}</h2>
             {subtitle && <p className="m-0 mt-0.5 text-[12.5px] text-ink-3">{subtitle}</p>}
           </div>
-          <button type="button" onClick={onClose} aria-label="Kapat" className="ms-btn is-ghost is-icon -mr-2 -mt-1">
+          <button type="button" onClick={requestClose} aria-label="Kapat" className="ms-btn is-ghost is-icon -mr-2 -mt-1">
             <X />
           </button>
         </header>
