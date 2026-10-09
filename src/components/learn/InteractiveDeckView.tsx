@@ -63,6 +63,7 @@ import { SlideDrawingCanvas, DrawingModeToolbarTrigger, useDrawingGlobalState, s
 import { toast } from '../ui/Toast';
 import { safeJsonFetch } from '../../services/api';
 import { QuestionFocus, focusMarks } from '../../services/questionFocus';
+import { LessonPlayer } from './lesson/LessonPlayer';
 
 // ---------------------------------------------------------------------------
 // Data types (shape of interactive_learning_decks.json)
@@ -651,6 +652,8 @@ const ScrollRow: React.FC<{ label: string; children: React.ReactNode }> = ({ lab
 };
 
 export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange, onOpenPdfModal, questionFocus, onClearQuestionFocus }) => {
+  // Yeni ders ekranı varsayılan; klasik slayt ekranı Araçlar menüsünden açılır ve deste kapanınca sıfırlanır
+  const [classicPlayer, setClassicPlayer] = useState(false);
   // Liste hafif katalogdan gelir; slaytlar yalnızca açılan deste için yüklenir (12 MB tek parça yerine)
   const allDecks = DECK_CATALOG;
   const [deckId, setDeckId] = useState<string | null>(initialDeckId || null);
@@ -855,7 +858,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
         </div>
       )}
 
-      {activeDeck && activeDeck.id === deckId && (
+      {activeDeck && activeDeck.id === deckId && (classicPlayer ? (
         <DeckPlayer
           deck={activeDeck}
           initialViewMode={playerViewMode}
@@ -871,13 +874,38 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
           }}
           onClose={() => {
             setDeckId(null);
+            setClassicPlayer(false);
             onDeckChange?.(null);
           }}
           onExportPdf={onOpenPdfModal ? (slideNumber) => onOpenPdfModal({ deckId: activeDeck.id, slideNumber }) : undefined}
           focus={questionFocus && (!questionFocus.deckId || questionFocus.deckId === activeDeck.id) ? questionFocus : null}
           onClearFocus={onClearQuestionFocus}
         />
-      )}
+      ) : (
+        <LessonPlayer
+          deck={activeDeck}
+          initialViewMode={playerViewMode}
+          startAt={initialSlideNumber != null && initialSlideNumber > 0 ? initialSlideNumber - 1 : (progress[activeDeck.id]?.last ?? 0)}
+          onProgress={(index) => {
+            setProgress((prev) => {
+              const cur = prev[activeDeck.id] || { last: 0, seen: [] };
+              const seen = cur.seen.includes(index) ? cur.seen : [...cur.seen, index];
+              const next = { ...prev, [activeDeck.id]: { last: index, seen } };
+              writeProgress(next);
+              return next;
+            });
+          }}
+          onClose={() => {
+            setDeckId(null);
+            setClassicPlayer(false);
+            onDeckChange?.(null);
+          }}
+          onExportPdf={onOpenPdfModal ? (slideNumber) => onOpenPdfModal({ deckId: activeDeck.id, slideNumber }) : undefined}
+          focus={questionFocus && (!questionFocus.deckId || questionFocus.deckId === activeDeck.id) ? questionFocus : null}
+          onClearFocus={onClearQuestionFocus}
+          onClassic={() => setClassicPlayer(true)}
+        />
+      ))}
       </div>
   );
 };
@@ -1685,7 +1713,7 @@ const DeckPlayer: React.FC<{
 // ---------------------------------------------------------------------------
 // Global Topic Search Modal (searches slide contents, notes, cards and questions)
 // ---------------------------------------------------------------------------
-const GlobalTopicSearchModal: React.FC<{
+export const GlobalTopicSearchModal: React.FC<{
   deck: InteractiveDeck;
   onSelect: (slideIdx: number) => void;
   onClose: () => void;
@@ -2518,7 +2546,7 @@ const SlideCanvas: React.FC<{
 // - Normal = Genel Spot Bilgi
 // - Sub-bullets (alt madde) and Upper-bullets (üst madde)
 // ---------------------------------------------------------------------------
-const SpotList: React.FC<{ items: Array<string | any>; title?: string; note?: string; compact?: boolean }> = ({
+export const SpotList: React.FC<{ items: Array<string | any>; title?: string; note?: string; compact?: boolean }> = ({
   items,
   title = 'Akılda tut',
   note,
@@ -2726,7 +2754,7 @@ const InteractionPanel: React.FC<{
 // ---------------------------------------------------------------------------
 // Slide Notes Tab: Structured medical textbook notes and tables for the slide
 // ---------------------------------------------------------------------------
-const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
+export const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
   const c = slide.coreContent || {};
   const narrative = slide.synthesisNarrative || (slide as any).content || '';
   const spots = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
@@ -2905,7 +2933,7 @@ const formatAiModelDisplayName = (raw?: string | null): string => {
   return val;
 };
 
-const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, slide }) => {
+export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, slide }) => {
   const [q, setQ] = useState('');
   const [loading, setLoading] = useState(false);
   const [answer, setAnswer] = useState<string | null>(null);

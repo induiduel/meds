@@ -109,6 +109,7 @@ export const KazanimlarView: React.FC<Props> = ({
   const [loading, setLoading] = useState<boolean>(true);
 
   // Active resource expansion per kazanim id: 'none' | 'slayt' | 'ornek' | 'cikmis' | 'sozluk' | 'ozet'
+  const [openKonu, setOpenKonu] = useState<Record<string, boolean>>({});
   const [openDers, setOpenDers] = useState<Record<string, boolean>>({});
   const [activeTabByKazanim, setActiveTabByKazanim] = useState<Record<string, string>>({});
   // Solved state for sample questions
@@ -282,8 +283,8 @@ export const KazanimlarView: React.FC<Props> = ({
       ) : (
         <div className="flex flex-col gap-2">
           <div className="flex justify-end gap-1">
-            <button type="button" className="ms-btn is-ghost is-sm" onClick={() => setOpenDers(Object.fromEntries(filteredDersler.map((d) => [d.ders, true])))}>Tümünü aç</button>
-            <button type="button" className="ms-btn is-ghost is-sm" onClick={() => setOpenDers(Object.fromEntries(filteredDersler.map((d) => [d.ders, false])))}>Tümünü kapat</button>
+            <button type="button" className="ms-btn is-ghost is-sm" onClick={() => { setOpenDers(Object.fromEntries(filteredDersler.map((d) => [d.ders, true]))); setOpenKonu(Object.fromEntries(filteredDersler.flatMap((d) => d.konular.map((k) => [`${d.ders}::${k.konu}`, true])))); }}>Tümünü aç</button>
+            <button type="button" className="ms-btn is-ghost is-sm" onClick={() => { setOpenDers(Object.fromEntries(filteredDersler.map((d) => [d.ders, false]))); setOpenKonu({}); }}>Tümünü kapat</button>
           </div>
           {filteredDersler.map((dersGroup) => (
             (() => {
@@ -309,23 +310,29 @@ export const KazanimlarView: React.FC<Props> = ({
               {/* Konular ve Kazanımlar */}
               {isOpen && (
               <div className="flex flex-col gap-3 px-3 pb-3 sm:px-4 sm:pb-4 ms-pop-in">
-                {dersGroup.konular.map((konuGroup) => (
+                {dersGroup.konular.map((konuGroup) => {
+                  const konuKey = `${dersGroup.ders}::${konuGroup.konu}`;
+                  const konuOpen = openKonu[konuKey] ?? Boolean(searchQuery.trim());
+                  return (
                   <div
                     key={konuGroup.konu}
                     className="rounded-2xl bg-white border border-line flex flex-col shadow-2xs overflow-hidden"
                   >
-                    <div className="flex items-center justify-between gap-2 px-4 py-2.5 border-b border-line-soft">
-                      <h3 className="m-0 text-[13.5px] font-semibold text-ink flex items-center gap-1.5">
-                        <BookOpen className="w-4 h-4 text-accent shrink-0" />
-                        <span>{konuGroup.konu}</span>
-                      </h3>
-                      <span className="text-[11.5px] text-ink-3 shrink-0">
-                        {konuGroup.kazanimlar.length} hedef
-                      </span>
-                    </div>
+                    <h3 className="m-0">
+                      <button
+                        type="button"
+                        aria-expanded={konuOpen}
+                        onClick={() => setOpenKonu((o) => ({ ...o, [konuKey]: !konuOpen }))}
+                        className={`ms-konu-acc-head ${konuOpen ? 'is-open' : ''}`}
+                      >
+                        <ChevronDown className="ms-ders-acc-chev" aria-hidden />
+                        <span className="min-w-0 flex-1 text-left text-[13.5px] font-semibold text-ink">{konuGroup.konu}</span>
+                        <span className="text-[11.5px] text-ink-3 shrink-0 tabular-nums">{konuGroup.kazanimlar.length} hedef</span>
+                      </button>
+                    </h3>
 
                     {/* Kazanım Listesi */}
-                    <div className="flex flex-col divide-y divide-line-soft">
+                    {konuOpen && <div className="flex flex-col divide-y divide-line-soft border-t border-line-soft">
                       {konuGroup.kazanimlar.map((kazanim, kIdx) => {
                         const activeTab = activeTabByKazanim[kazanim.id] || '';
                         const hasSlides = kazanim.slaytlar.length > 0;
@@ -642,9 +649,10 @@ export const KazanimlarView: React.FC<Props> = ({
                           </div>
                         );
                       })}
-                    </div>
+                    </div>}
                   </div>
-                ))}
+                );
+                })}
               </div>
               )}
             </section>

@@ -127,6 +127,32 @@ interface PastExamsViewProps {
   onNavigateToLearn?: (deckId?: string, slideNumber?: number, focus?: QuestionFocus) => void;
 }
 
+/** Kelime düzeyinde fark: yeni tarafta eklenenleri, eski tarafta çıkarılanları işaretler. */
+const WordDiff: React.FC<{ from: string; to: string; side: 'old' | 'new' }> = ({ from, to, side }) => {
+  const parts = React.useMemo(() => {
+    const a = from.split(/(\s+)/), b = to.split(/(\s+)/);
+    if (from === to || !from || !to || a.length * b.length > 250000) return null;
+    const m = a.length, k = b.length;
+    const dp: Uint16Array[] = Array.from({ length: m + 1 }, () => new Uint16Array(k + 1));
+    for (let i = m - 1; i >= 0; i--) for (let j = k - 1; j >= 0; j--) dp[i][j] = a[i] === b[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    const out: { t: string; d: boolean }[] = [];
+    let i = 0, j = 0;
+    const push = (t: string, d: boolean) => { const last = out[out.length - 1]; if (last && last.d === d) last.t += t; else out.push({ t, d }); };
+    while (i < m && j < k) {
+      if (a[i] === b[j]) { push(a[i], false); i++; j++; }
+      else if (dp[i + 1][j] >= dp[i][j + 1]) { if (side === 'old') push(a[i], !/^\s+$/.test(a[i])); i++; }
+      else { if (side === 'new') push(b[j], !/^\s+$/.test(b[j])); j++; }
+    }
+    if (side === 'old') while (i < m) push(a[i++], true);
+    else while (j < k) push(b[j++], true);
+    return out;
+  }, [from, to, side]);
+  const text = side === 'old' ? from : to;
+  if (!parts) return <>{text}</>;
+  const Tag = side === 'old' ? 'del' : 'ins';
+  return <>{parts.map((p, i) => (p.d ? <Tag key={i}>{p.t}</Tag> : <React.Fragment key={i}>{p.t}</React.Fragment>))}</>;
+};
+
 export const PastExamsView: React.FC<PastExamsViewProps> = ({
   currentUser,
   lectureNotes = [],
@@ -1403,65 +1429,62 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     const newOpts: any[] = denetleyiciData.options || options;
                     const keys = Array.from(new Set([...oldOpts, ...newOpts].map((o: any) => String(o.key)))).sort();
                     const oldAns = eskiData.correctAnswer;
-                    const changedCount = keys.filter((k) => n(oldOpts.find((o) => o.key === k)?.text) !== n(newOpts.find((o) => o.key === k)?.text)).length + (oldStem !== newStem ? 1 : 0);
-                    const oldExpl = n(eskiData.explanation);
+                    const textOf = (list: any[], k: string) => n(list.find((o) => o.key === k)?.text);
+                    const changedCount = keys.filter((k) => textOf(oldOpts, k) !== textOf(newOpts, k)).length + (oldStem !== newStem ? 1 : 0) + (answerChanged ? 1 : 0);
                     return (
                       <div className="ms-cmp">
-                        <div className="ms-cmp-head">
-                          <span><History /> Eski sürüm{oldAns && <span className="ms-tag">Cevap {oldAns}</span>}</span>
-                          <span className="is-new"><ShieldCheck /> Denetleyici sürümü<span className="ms-tag is-ok">Cevap {correctAnswer}</span></span>
+                        <div className="ms-cmp-bar">
+                          <span className="ms-cmp-legend"><ins>eklenen</ins><del>çıkarılan</del></span>
+                          <span className="ms-cmp-count">{changedCount ? `${changedCount} değişiklik` : 'Değişiklik yok'}</span>
+                          {answerChanged && <span className="ms-tag is-warn">Cevap {oldAns} → {correctAnswer}</span>}
                         </div>
-                        <p className="ms-cmp-summary">
-                          {changedCount ? `${changedCount} alanda değişiklik` : 'Metin değişmedi'}
-                          {answerChanged && <> · <b className="text-warn">cevap {oldAns} → {correctAnswer}</b></>}
-                        </p>
 
-                        {oldStem === newStem ? (
-                          <div className="ms-cmp-row is-same"><span className="ms-cmp-key is-label" title="Soru kökü">Kök</span><div className="ms-cmp-cell is-wide"><StemText text={newStem} terms={terms} size="sm" /></div></div>
-                        ) : (
-                          <div className="ms-cmp-row is-changed">
-                            <span className="ms-cmp-key is-label" title="Soru kökü">Kök</span>
-                            <div className="ms-cmp-cell is-old"><StemText text={oldStem} terms={terms} size="sm" /></div>
-                            <div className="ms-cmp-cell is-new"><StemText text={newStem} terms={terms} size="sm" /></div>
+                        <div className="ms-cmp-stem">
+                          <p className="m-0"><WordDiff from={oldStem} to={newStem} side="new" /></p>
+                          {oldStem !== newStem && oldStem && <p className="ms-cmp-was"><span>Önceki</span><WordDiff from={oldStem} to={newStem} side="old" /></p>}
+                        </div>
+
+                        <ol className="ms-cmp-opts">
+                          {keys.map((k) => {
+                            const o = textOf(oldOpts, k);
+                            const nw = textOf(newOpts, k);
+                            const isAns = k === correctAnswer;
+                            const wasAns = answerChanged && k === oldAns;
+                            return (
+                              <li key={k} className={isAns ? 'is-answer' : ''}>
+                                <span className="ms-cmp-key">{k}</span>
+                                <div className="min-w-0 flex-1 flex flex-col gap-0.5">
+                                  <div className="flex items-start gap-2">
+                                    <span className="min-w-0 flex-1">{nw ? <WordDiff from={o} to={nw} side="new" /> : <span className="text-ink-3">—</span>}</span>
+                                    {!o && nw && oldOpts.length > 0 && <span className="ms-tag is-accent shrink-0">Yeni şık</span>}
+                                    {isAns && <span className="ms-tag is-ok shrink-0">Doğru</span>}
+                                    {wasAns && <span className="ms-tag is-warn shrink-0">Eski cevap</span>}
+                                  </div>
+                                  {o !== nw && o && <p className="ms-cmp-was"><span>Önceki</span><WordDiff from={o} to={nw} side="old" /></p>}
+                                </div>
+                              </li>
+                            );
+                          })}
+                        </ol>
+
+                        {explanation && (
+                          <div className="ms-cmp-expl">
+                            <span className="ms-cmp-label">Açıklama</span>
+                            <SourceText text={String(explanation)} size="sm" />
                           </div>
                         )}
-
-                        {keys.map((k) => {
-                          const o = n(oldOpts.find((x) => x.key === k)?.text);
-                          const nw = n(newOpts.find((x) => x.key === k)?.text);
-                          const same = o === nw;
-                          const marks = (isAns: boolean, wasAns: boolean) => (
-                            <>{isAns && <span className="ms-tag is-ok">Doğru</span>}{wasAns && <span className="ms-tag is-warn">Eski cevap</span>}</>
-                          );
-                          return (
-                            <div key={k} className={`ms-cmp-row ${same ? 'is-same' : 'is-changed'}`}>
-                              <span className={`ms-cmp-key ${k === correctAnswer ? 'is-ok' : ''}`}>{k}</span>
-                              {same ? (
-                                <div className="ms-cmp-cell is-wide"><span>{nw || '—'}</span>{marks(k === correctAnswer, answerChanged && k === oldAns)}</div>
-                              ) : (
-                                <>
-                                  <div className="ms-cmp-cell is-old"><span>{o || '—'}</span>{answerChanged && k === oldAns && <span className="ms-tag is-warn">Eski cevap</span>}</div>
-                                  <div className="ms-cmp-cell is-new"><span>{nw || '—'}</span>{k === correctAnswer && <span className="ms-tag is-ok">Doğru</span>}</div>
-                                </>
-                              )}
-                            </div>
-                          );
-                        })}
-
-                        <div className="ms-cmp-expl">
-                          <div>
-                            <span className="ms-cmp-label">Eski açıklama</span>
-                            {oldExpl ? <p className="m-0 whitespace-pre-wrap">{eskiData.explanation}</p> : <p className="m-0 text-ink-3">Eski sürümde açıklama yok.</p>}
-                          </div>
-                          <div>
-                            <span className="ms-cmp-label is-new">Yeni açıklama</span>
-                            {explanation ? <SourceText text={String(explanation)} size="sm" /> : <p className="m-0 text-ink-3">Açıklama yok.</p>}
-                            {saEntries.length > 0 && (
-                              <button type="button" className="ms-btn is-ghost is-sm self-start" onClick={() => setAboutQuestion(q)}>
-                                <ShieldCheck /> Şık analizini gör
-                              </button>
-                            )}
-                          </div>
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          {n(eskiData.explanation) && (
+                            <details className="ms-cmp-old-expl">
+                              <summary>Eski açıklamayı göster</summary>
+                              <p className="m-0 whitespace-pre-wrap">{eskiData.explanation}</p>
+                            </details>
+                          )}
+                          {saEntries.length > 0 && (
+                            <button type="button" className="ms-btn is-ghost is-sm ml-auto" onClick={() => setAboutQuestion(q)}>
+                              <ShieldCheck /> Şık analizi
+                            </button>
+                          )}
                         </div>
                       </div>
                     );

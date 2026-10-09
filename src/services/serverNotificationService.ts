@@ -247,6 +247,8 @@ export class ServerNotificationService {
     discipline?: string;
     topic?: string;
     appUrl?: string;
+    /** Uygulama içi yol (ör. Öğren derin bağlantısı); verilirse bağlantı buraya gider */
+    link?: string;
   }): Promise<{ success: boolean; messageId?: string; error?: string }> {
     const { transporter, smtpFrom, type, questionId, reason, details, text, author, discipline, topic } = params;
     if (!transporter) {
@@ -258,9 +260,11 @@ export class ServerNotificationService {
       baseUrl = 'https://nofrostlife.com.tr';
     }
     const cleanBaseUrl = baseUrl.replace(/\/$/, '');
-    const questionLink = questionId
-      ? `${cleanBaseUrl}/cikmis/${encodeURIComponent(questionId)}`
-      : `${cleanBaseUrl}/cikmis`;
+    const questionLink = params.link
+      ? `${cleanBaseUrl}${params.link}`
+      : questionId
+        ? `${cleanBaseUrl}/cikmis/${encodeURIComponent(questionId)}`
+        : `${cleanBaseUrl}/cikmis`;
 
     let subject = '';
     let badgeColor = '#0f766e';
@@ -276,7 +280,9 @@ export class ServerNotificationService {
     const safeTopic = (topic || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
     if (type === 'report') {
-      subject = `🚨 [MedSoru Hata Bildirimi] Soru #${questionId || 'Genel'}: ${safeReason || 'İtiraz/Hata'}`;
+      subject = params.link?.startsWith('/ogren')
+        ? `🚨 [MedSoru Öğren Hata Bildirimi] ${questionId || 'Ders'}: ${safeReason || 'İtiraz/Hata'}`
+        : `🚨 [MedSoru Hata Bildirimi] Soru #${questionId || 'Genel'}: ${safeReason || 'İtiraz/Hata'}`;
       badgeColor = '#dc2626';
       badgeText = 'HATA BİLDİRİMİ';
       headline = 'Bir tıp öğrencisi soru hakkında hata/itiraz bildirdi!';
@@ -413,6 +419,8 @@ export class ServerNotificationService {
     discipline?: string;
     topic?: string;
     appUrl?: string;
+    /** Uygulama içi yol (ör. Öğren derin bağlantısı); verilirse bağlantı buraya gider */
+    link?: string;
   }) {
     const { type, questionId, reason, details, text, author, discipline, topic, appUrl, transporter, smtpFrom } = params;
 
@@ -439,7 +447,9 @@ export class ServerNotificationService {
       baseUrl = 'https://nofrostlife.com.tr';
     }
     const cleanBaseUrl = baseUrl.replace(/\/$/, '');
-    const questionUrl = questionId
+    const questionUrl = params.link
+      ? `${cleanBaseUrl}${params.link}`
+      : questionId
       ? `${cleanBaseUrl}/cikmis/${encodeURIComponent(questionId)}`
       : `${cleanBaseUrl}/cikmis`;
 
@@ -505,6 +515,7 @@ export class ServerNotificationService {
       discipline,
       topic,
       appUrl: cleanBaseUrl,
+      link: params.link,
     }).then(res => {
       if (res.success) {
         console.log(`[NotificationService] Admin bildirim e-postası başarıyla iletildi (${ADMIN_EMAIL})`);

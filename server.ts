@@ -90,6 +90,7 @@ import {
   getGeminiV3ApprovedRelations,
   getGeminiV3ApprovedSynonyms,
 } from './src/services/geminiV3DataService.ts';
+import { createLearnFeedbackStore } from './src/services/learnFeedbackService.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -3191,6 +3192,37 @@ app.post('/api/ornek-sorular/:id/report', (req, res) => {
   res.json({ success: true, report });
 });
 
+// Öğren ders ekranı geri bildirimleri: hata bildirimi + beğen/reddet (data/learn_feedback.json)
+const learnFeedback = createLearnFeedbackStore(DATA_DIR);
+app.get('/api/learn/feedback', (req, res) => {
+  const deckId = String(req.query.deckId || '');
+  if (!deckId) return res.status(400).json({ error: 'Ders belirtilmedi.' });
+  res.json({ items: learnFeedback.list(deckId, String(req.query.voterId || '')) });
+});
+app.post('/api/learn/feedback', (req, res) => {
+  const r = learnFeedback.create(req.body);
+  if (!r.ok) return res.status(400).json({ error: r.error });
+  triggerAdminNotification({
+    type: 'report',
+    questionId: `${r.item.deckTitle} · Adım ${r.item.slideNumber}`,
+    reason: r.item.field,
+    details: `Konum: ${r.item.location}\nNeden: ${r.item.reason}`,
+    author: r.item.author.name,
+    topic: r.item.location,
+    link: r.item.link,
+  });
+  res.json({ success: true, item: r.item });
+});
+app.post('/api/learn/feedback/:id/vote', (req, res) => {
+  const r = learnFeedback.vote(String(req.params.id), String(req.body?.voterId || ''), Number(req.body?.vote) || 0);
+  if (!r.ok) return res.status(r.status).json({ error: r.error });
+  res.json({ success: true, item: r.item });
+});
+app.post('/api/admin/learn-feedback/:id/resolve', requireAdmin, (req, res) => {
+  if (!learnFeedback.resolve(String(req.params.id))) return res.status(404).json({ error: 'Bildirim bulunamadı.' });
+  res.json({ success: true });
+});
+
 app.post('/api/questions/:id/report', (req, res) => {
   const question: any = db.questions.find((q) => q.id === req.params.id);
   if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
@@ -4850,6 +4882,8 @@ function triggerAdminNotification(params: {
   author?: string;
   discipline?: string;
   topic?: string;
+  /** Uygulama içi yol; verilirse e-posta/push bağlantısı buraya gider (varsayılan: /cikmis/<id>) */
+  link?: string;
 }) {
   try {
     const cfg = getSmtpConfig();
@@ -4866,6 +4900,7 @@ function triggerAdminNotification(params: {
       author: params.author,
       discipline: params.discipline,
       topic: params.topic,
+      link: params.link,
       appUrl,
     });
   } catch (err: any) {

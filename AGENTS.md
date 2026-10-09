@@ -285,3 +285,19 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 - **Canlı Telemetri:** [`dashboard_server.py`](file:///home/indu/medsor/meds/dashboard_server.py) Port 8085 üzerinde Aşama 6 (Konsensüs) ve Aşama 7 (Hiper-Metadata) ilerlemelerini, günlük kota durumunu ve karantinaya alınan soruları canlı olarak gösterir.
 
 
+
+---
+
+## 11. Öğren Ders Ekranı: Deste ve Etkileşim Üretimi
+
+Ayrıntılı şema, kurallar, API ve kod eklemeleri: **`docs/OGREN_ETKILESIM_REHBERI.md`** (yeni deste/etkileşim eklemeden önce okunması zorunlu).
+
+| Konu | Kural |
+|---|---|
+| Kaynak | Yalnız `src/data/interactive_learning_decks.json`. `src/data/decks/items/` üretilir (vite eklentisi), git'te yoktur; elle yazılmaz. |
+| Doğrulama | `python3 scripts/validate_learning_decks.py` → 0 HATA. `--duzelt` kesik zincir basamaklarını ve ipucu sızıntılarını onarır. |
+| Sonrası | `npx vite build` → `python3 scripts/build_kazanim_deck_index.py` → `npm run lint` |
+| Etkileşim türleri | `micro_quiz`, `branching_logic`, `cloze_masking`, `interactive_table`, `causal_chain`, `before_after_slider`, `active_recall` + `flashcards`, `relatedQuestions` |
+| Yasaklar | `…` ile kesilmiş metin; cevabı ele veren ipucu; birden fazla doğru şık; sıra numarası/şık metni olarak `correctAnswer`; eşit olmayan karşılaştırma satırları |
+| Geri bildirim | `GET/POST /api/learn/feedback`, `POST /api/learn/feedback/:id/vote`, `POST /api/admin/learn-feedback/:id/resolve` → `data/learn_feedback.json` |
+| Kod | `src/components/learn/lesson/` (`LessonPlayer`, `LessonBlocks`, `lessonModel`, `lessonFeedback`, `LessonFeedbackUI`); stiller `src/index.css` içindeki `ls-*` blokları |

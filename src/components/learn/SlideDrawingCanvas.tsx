@@ -104,6 +104,7 @@ export const SlideDrawingCanvas: React.FC<{
   const { activeMode, color, penSize, highlighterSize } = useDrawingGlobalState();
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const dprRef = useRef(1);
 
   const [strokes, setStrokes] = useState<DrawingStroke[]>(() => readScopeDrawings(scope));
   const currentStrokeRef = useRef<DrawingStroke | null>(null);
@@ -133,8 +134,10 @@ export const SlideDrawingCanvas: React.FC<{
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const w = canvas.width;
-    const h = canvas.height;
+    // Bağlam DPR ile ölçekli: çizim CSS pikseliyle yapılır (yoksa telefonda çizgiler 2-3 kat uzağa düşer)
+    const dpr = dprRef.current;
+    const w = canvas.width / dpr;
+    const h = canvas.height / dpr;
     ctx.clearRect(0, 0, w, h);
 
     if (strokes.length === 0 && !currentStrokeRef.current) return;
@@ -210,6 +213,7 @@ export const SlideDrawingCanvas: React.FC<{
       if (canvas.width !== displayWidth * dpr || canvas.height !== displayHeight * dpr) {
         canvas.width = displayWidth * dpr;
         canvas.height = displayHeight * dpr;
+        dprRef.current = dpr;
         const ctx = canvas.getContext('2d');
         if (ctx) {
           ctx.scale(dpr, dpr);

@@ -145,3 +145,14 @@ python scripts/advanced_ai/phase14_past_question_editor.py --limit 10
 
 Faz, `phase_cycle.py` içinde otomatik sıraya eklenmiştir. Tüm kayıtların yeniden değerlendirilmesi için
 `--full` kullanılabilir.
+
+## Öğren destesi ve etkileşim içeriği
+
+Öğren ekranına deste/slayt/etkileşim eklerken şema, yasaklar, gönderim adımları ve geri bildirim API'si için `docs/OGREN_ETKILESIM_REHBERI.md` esas alınır. Deste yalnız `src/data/interactive_learning_decks.json` içine yazılır; teslimden önce:
+
+```bash
+python3 scripts/validate_learning_decks.py      # 0 HATA olmalı (--duzelt: kesik zincir + ipucu sızıntısı onarımı)
+npx vite build                                  # desteler yeniden bölünür
+python3 scripts/build_kazanim_deck_index.py     # deste → kazanım dizini
+npm run lint
+```
