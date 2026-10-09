@@ -85,6 +85,13 @@ const SOURCE_KIND: Record<string, { label: string; cls: string }> = {
   transcript: { label: 'Deşifre', cls: 'bg-warn-soft text-warn' },
 };
 
+/**
+ * Rozet (#etiket) ve ortak-terim boyası eşiği: yalnızca %80+ ("Çok Yüksek Uyum")
+ * kartlarda gösterilir. Altındaki skorlarda rozet yanıltıcı olabiliyor
+ * (örn. muğlak girdide alakasız hastalık etiketi).
+ */
+export const HIGHLIGHT_MIN_SCORE = 80;
+
 type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E';
 const KEYS: OptionKey[] = ['A', 'B', 'C', 'D', 'E'];
 
@@ -629,9 +636,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   // Tüm adayların ve kullanıcının metinlerindeki ortak kelime paleti (debouncedText ile optimize edildi).
   // Renkler kullanıcının metnine çapalanır (çapa 0): iki taslağın kendi arasındaki
   // ortak kelimesi boyanmaz; yalnızca kullanıcıyla örtüşen kelimeler aynı rengi alır.
+  // Boya yalnızca %80+ kartlardan kurulur; altındaki kartlar boyasız kalır.
   const sharedColors = useMemo(() => {
     if (realtimeMatches.length === 0 || !debouncedText) return new Map<string, string>();
-    const allStems = [debouncedText, ...realtimeMatches.map((m) => questionStemText(m.question))];
+    const trusted = realtimeMatches.filter((m) => m.compatibility.score >= HIGHLIGHT_MIN_SCORE);
+    if (trusted.length === 0) return new Map<string, string>();
+    const allStems = [debouncedText, ...trusted.map((m) => questionStemText(m.question))];
     return sharedWordColors(allStems, 0);
   }, [realtimeMatches, debouncedText]);
 
@@ -1413,7 +1423,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                             </span>
                           )}
 
-                          {m.contextHashtag && (
+                          {m.contextHashtag && m.compatibility.score >= HIGHLIGHT_MIN_SCORE && (
                             <ContextBadge hashtag={m.contextHashtag} colorIndex={idx} />
                           )}
                         </div>
@@ -1829,7 +1839,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                           %{m.compatibility.score} uyum · {tier.tierName}
                         </span>
 
-                        {m.contextHashtag && (
+                        {m.contextHashtag && m.compatibility.score >= HIGHLIGHT_MIN_SCORE && (
                           <ContextBadge hashtag={m.contextHashtag} colorIndex={idx} />
                         )}
                       </div>
