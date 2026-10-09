@@ -148,8 +148,11 @@ const PLACEHOLDERS: Record<Mode, string> = {
 export const committeeShortLabel = (c: Committee) => {
   const m = c.name.match(/Kurul\s*(\d+)/i);
   if (m) return `Kurul ${m[1]}`;
-  if (/bütünleme/i.test(c.name) || /bütünleme/i.test(c.id)) return 'Bütünleme';
-  if (/final/i.test(c.name) || /final/i.test(c.id)) return 'Final';
+  // Önce kimliğe bakılır: Final kurulunun adı "bütünleme" sözcüğünü de içerebiliyor
+  if (/final/i.test(c.id)) return 'Final';
+  if (/b[uü]t[uü]nleme/i.test(c.id)) return 'Bütünleme';
+  if (/bütünleme/i.test(c.name)) return 'Bütünleme';
+  if (/final/i.test(c.name)) return 'Final';
   return c.code || c.name;
 };
 
