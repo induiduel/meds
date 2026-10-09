@@ -243,18 +243,24 @@ export const cleanWhy = (t?: string): string => {
   if (!t) return '';
   let s = String(t).trim();
 
-  // 1. Şık ve doğruluk/yanlışlık öneklerini kaldır
-  s = s
-    .replace(
-      /^(?:(?:\*+)?(?:doğru|yanlış|hatalı)\s+(?:cevap|yanıt|seçenek)(?:\s+[A-Za-z](?:['’][a-z]+)?)?(?:\*+)?|(?:\*+)?(?:\(?[A-Za-z]\)?)?\s*(?:seçeneği|şıkkı|seçenek|şık)?\s*(?:doğrudur|yanlıştır|hatalıdır|doğru|yanlış|hatalı)(?:\*+)?|(?:\*+)?(?:doğrudur|yanlıştır|hatalıdır|doğru|yanlış|hatalı\s+yaklaşım|mükemmel\s+klinik\s+karar|kritik\s+hata)(?:\*+)?)[!.:;\s-]*/iu,
-      ''
-    )
-    .trim();
+  // Tekrarlayan temizlik döngüsü (iç içe veya ardışık kalıplar için)
+  let prev = '';
+  while (prev !== s) {
+    prev = s;
+    s = s
+      .replace(
+        /^(?:(?:\*+)?(?:doğru|yanlış|hatalı)\s+(?:cevap|yanıt|seçenek)(?:\s+[A-Za-z](?:['’][a-z]+)?)?(?:\*+)?|(?:\*+)?(?:\(?[A-Za-z]\)?)?\s*(?:seçeneği|şıkkı|seçenek|şık)?\s*(?:doğrudur|yanlıştır|hatalıdır|doğru|yanlış|hatalı)(?:\s*\([^)]*\))?(?:\*+)?|(?:\*+)?(?:doğrudur|yanlıştır|hatalıdır|doğru|yanlış|hatalı\s+yaklaşım|mükemmel\s+klinik\s+karar|kritik\s+hata)(?:\s*\([^)]*\))?(?:\*+)?)[!.:;\s-]*/iu,
+        ''
+      )
+      .replace(
+        /^(?:(?:\*+)?(?:doğru|yanlış|hatalı)\s+(?:bir\s+)?(?:spot\s+)?(?:bilgidir|ifadedir|açıklamadır|yargıdır|yaklaşımdır|tespittir|tanımdır|kuraldır|durumdur|seçenektir)(?:\*+)?|(?:\*+)?(?:bir\s+)?(?:spot\s+)?(?:bilgidir|ifadedir|açıklamadır|yargıdır|yaklaşımdır|tespittir|tanımdır|kuraldır|durumdur)(?:\*+)?)[!.:;\s-]*/iu,
+        ''
+      )
+      .replace(/^(?:dur|dır|dir|dür|tır|tir|tur|tür)[!.:;\s-]+/iu, '')
+      .trim();
+  }
 
-  // 2. İzole kalmış "dur;", "tır;", "dir;", "tir;" ek kalıntılarını temizle
-  s = s.replace(/^(?:dur|dır|dir|dür|tır|tir|tur|tür)[!.:;\s-]+/iu, '').trim();
-
-  // 3. İlk harfi Türkçe kurallarına uygun büyüt
+  // İlk harfi Türkçe kurallarına uygun büyüt
   if (s.length > 0) {
     s = s.charAt(0).toLocaleUpperCase('tr-TR') + s.slice(1);
   }
