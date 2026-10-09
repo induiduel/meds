@@ -234,7 +234,33 @@ interface OptLike { key: string; text: string; ok: boolean; why?: string }
  * Şıklı soru: ilk seçim cevabı belirler. Sonra her şıkka dokunarak açıklaması kartın içinde açılır,
  * aynı şıkka tekrar dokununca kapanır.
  */
-const cleanWhy = (t?: string) => String(t || '').replace(/^(Doğru|Yanlış|Hatalı yaklaşım|Mükemmel klinik karar|Kritik hata)[!.:\s-]*/i, '').trim();
+/**
+ * Şık açıklamasının başındaki "Doğrudur;", "Yanlıştır;", "Doğru!", "Yanlış.", "A seçeneği yanlıştır:" gibi
+ * hüküm ve şık etiketlerini temizler; geriye kalan açıklama cümlesini ilk harfi büyük olacak şekilde döndürür.
+ * "dur;", "tır;" gibi eksik kesilme hatalarını ve izole ek kalıntılarını tamamen engeller.
+ */
+export const cleanWhy = (t?: string): string => {
+  if (!t) return '';
+  let s = String(t).trim();
+
+  // 1. Şık ve doğruluk/yanlışlık öneklerini kaldır
+  s = s
+    .replace(
+      /^(?:(?:\*+)?(?:doğru|yanlış|hatalı)\s+(?:cevap|yanıt|seçenek)(?:\s+[A-Za-z](?:['’][a-z]+)?)?(?:\*+)?|(?:\*+)?(?:\(?[A-Za-z]\)?)?\s*(?:seçeneği|şıkkı|seçenek|şık)?\s*(?:doğrudur|yanlıştır|hatalıdır|doğru|yanlış|hatalı)(?:\*+)?|(?:\*+)?(?:doğrudur|yanlıştır|hatalıdır|doğru|yanlış|hatalı\s+yaklaşım|mükemmel\s+klinik\s+karar|kritik\s+hata)(?:\*+)?)[!.:;\s-]*/iu,
+      ''
+    )
+    .trim();
+
+  // 2. İzole kalmış "dur;", "tır;", "dir;", "tir;" ek kalıntılarını temizle
+  s = s.replace(/^(?:dur|dır|dir|dür|tır|tir|tur|tür)[!.:;\s-]+/iu, '').trim();
+
+  // 3. İlk harfi Türkçe kurallarına uygun büyüt
+  if (s.length > 0) {
+    s = s.charAt(0).toLocaleUpperCase('tr-TR') + s.slice(1);
+  }
+
+  return s;
+};
 const OptionList: React.FC<{ question: string; options: OptLike[]; onDone?: () => void; extraWhy?: string }> = ({ question, options, onDone, extraWhy }) => {
   const [first, setFirst] = useState<string | null>(null);
   const [opened, setOpened] = useState<Set<string>>(new Set());

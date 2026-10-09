@@ -16,6 +16,7 @@ import {
   ChevronRight,
   Network
 } from 'lucide-react';
+import { cleanWhy } from './lesson/LessonBlocks';
 
 export type InteractiveElementType =
   | 'cloze_masking'
@@ -491,7 +492,7 @@ const MicroQuizElement: React.FC<{ data: InteractiveElementData }> = ({ data }) 
                   )}
                   <div>
                     <strong>{opt.isCorrect ? 'Doğru Gerekçe:' : 'Çürütme & Açıklama:'}</strong>{' '}
-                    {opt.explanation}
+                    {cleanWhy(opt.explanation)}
                   </div>
                 </div>
               )}
