@@ -13913,6 +13913,64 @@
         "E": "YANLIŞ: Sosyoekonomik ve psikososyal etkenler fiziki değil sosyal çevre faktörüdür."
       },
       "referans_kaynaklar": "Halk Sağlığı Temel Bilgiler Kitabı."
+    },
+    {
+      "id": "past-1790877041268-901039",
+      "stem": "Monoklonal antikorların (mAb) modern tıbbi uygulamalardaki en temel ve yaygın klinik kullanım alanı aşağıdakilerden hangisidir?",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Esansiyel hipertansiyonun basamaklı medikal tedavisi",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Otoimmün/enflamatuvar hastalıkların ve çeşitli kanserlerin hedefe yönelik tedavisi",
+          "isCorrect": true
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Hepatik sitokrom P450 mikrozomal enzimlerinin uyarılması (indüksiyonu)",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Bakteriyel suşlarda antibiyotik direnç genlerinin transferinin engellenmesi",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "Gastrointestinal paraziter enfeksiyonların profilaktik eliminasyonu",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "sik_analizi": {
+        "A": "YANLIŞ: Hipertansiyon tedavisinde ACE inhibitörleri, ARB’ler, kalsiyum kanal blokörleri ve diüretikler kullanılır; monoklonal antikorlar hipertansiyonun rutin tedavisinde yer almaz.",
+        "B": "DOĞRU: Monoklonal antikorlar tek bir epitopa özgül üretilen immünoglobulinlerdir; günümüzde TNF-alfa blokörleri (adalimumab, infliksimab) gibi ajanlarla otoimmün hastalıklarda (romatoid artrit, Crohn vb.) ve VEGF/HER2/CD20 inhibitörleri (trastuzumab, rituksimab vb.) ile hedefe yönelik onkolojik kanser tedavilerinde devrim yaratmış temel ilaç grubudur.",
+        "C": "YANLIŞ: Karaciğer CYP enzim indüksiyonu barbitüratlar, rifampisin ve karbamazepin gibi küçük moleküllü ksenobiyotiklerce yapılır; antikorlar enzim indüklemez.",
+        "D": "YANLIŞ: Antibiyotik direncinin önlenmesi akılcı antibiyotik kullanımı ve enfeksiyon kontrol önlemleriyle sağlanır; monoklonal antikorların birincil kullanım alanı değildir.",
+        "E": "YANLIŞ: Paraziter enfeksiyonlarda antihelmintik veya antiprotozoal ilaçlar (albendazol, metronidazol vb.) kullanılır; antikorlar parazit profilaksisinde kullanılmaz."
+      },
+      "explanation": "• Monoklonal antikorlar (mAb): B hücre klonlarından hibridoma teknolojisiyle üretilen ve spesifik antijenik epitopları hedefleyen moleküllerdir.\n• Başlıca iki devasa kullanım alanı vardır: 1) Onkoloji (hedefe yönelik kanser immünoterapisi), 2) Romatoloji/Gastroenteroloji (otoimmün ve kronik inflamatuvar hastalıkların kontrolü).",
+      "referans_kaynaklar": "Katzung Basic & Clinical Pharmacology 15th Ed., Robbins & Cotran Pathologic Basis of Disease 10th Ed.",
+      "status": "verified",
+      "isSuspect": false,
+      "denetleyiciOnayi": true,
+      "tags": [
+        "İmmünoloji",
+        "Farmakoloji",
+        "Çıkmış Sınav",
+        "denetleyici_onayi",
+        "dogrulanmis_soru",
+        "altin_standart"
+      ],
+      "updatedAt": "2026-10-09T17:59:55.795Z"
     }
   ]
 }
