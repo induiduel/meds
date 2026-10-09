@@ -146632,15 +146632,202 @@
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "instructor": "Prof. Dr. Hikmet Keleş",
+    "audioFile": "",
+    "audioDuration": "",
+    "confidence": "high",
+    "themeColor": "#2563eb",
+    "matchedNoteId": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari",
+    "matchedNoteTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "overview": "Bağışıklık gözetimi, tümör antijenleri (neoantijenler, kanser-testis, viral antijenler), efektör hücreler (CD8+ CTL, Th1, NK, makrofajlar), immunoediting (eliminasyon, denge, kaçış), intrensek kaçış mekanizmaları (B2M, TAP), immün kontrol noktaları (PD-1/PD-L1, CTLA-4), modern immünoterapiler (kontrol noktası inhibitörleri, CAR-T hücreleri, CRS/ICANS yönetimi) ve metastaz kaskadının (lokal invazyon, EMT, intravazasyon, trombosit zırhı, ekstravazasyon, tohum ve toprak hipotezi, CXCR4/CXCL12, pre-metastatik niş, tümör dormansisi, otofaji, kolonizasyon) 100 adımda kapsamlı moleküler analizi.",
+    "highYieldPearls": [
+      "Bağışıklık gözetiminin en güçlü kanıtı immünsüpresif tedavi alanlarda ve AIDS hastalarında artan malignite insidansıdır.",
+      "Tümör neoantijenleri somatik mutasyonlarla oluşur; timik merkezi toleransa tabi olmadıkları için en yüksek immünojenisiteye sahiptir.",
+      "CD8+ sitotoksik T lenfositler (CTL) MHC-I ile sunulan antijeni tanıyıp perforin-granzim ve Fas-FasL yollarıyla tümörü apoptoza sokar.",
+      "MHC-I ekspresyonunu kaybeden tümör hücreleri (β2m mutasyonu, TAP defekti), 'Missing-Self' kuralına göre aktive olan NK hücreleri tarafından öldürülür.",
+      "İmmunoediting üç aşamada gerçekleşir: Eliminasyon (temizlik), Denge (sessiz dormansi ve dirençli klon seleksiyonu), Kaçış (klinik kitle oluşumu).",
+      "PD-1/PD-L1 periferde ve tümör yatağında T hücre tükenmişliği (exhaustion) yaparken; CTLA-4 lenf nodunda B7'ye bağlanarak erken faz T hücre aktivasyonunu frenler.",
+      "Yüksek Tümör Mutasyon Yükü (TMB-High >= 10 mut/Mb) ve Mikrosatellit Kararsızlığı (MSI-H / dMMR), zengin neoantijen havuzu sağlayarak immünoterapiye en yüksek klinik yanıtı öngörür.",
+      "CAR-T hücreleri (scFv ucu sayesinde) MHC Sınıf I kısıtlamasından bağımsız olarak yüzey antijenlerini (CD19) doğrudan tanır; en ölümcül komplikasyonu IL-6 aracılı Sitokin Salınım Sendromudur (CRS) ve tedavisinde Tosilizumab kullanılır.",
+      "Karsinom invazyonunun ilk ve zorunlu adımı E-kadherin kaybı ve EMT'dir (SNAIL, TWIST ile uyarılır); bazal membranın Tip IV kollajeni MMP-2 ve MMP-9 jelatinazları ile eritilir.",
+      "Dolaşımdaki tümör hücreleri trombosit-fibrin zırhı örerek makaslama kuvvetlerinden ve NK hücrelerinden korunur; organ tropizmi Stephen Paget'in 'Tohum ve Toprak' hipotezi ve CXCR4/CXCL12 kemokin ekseni ile yönetilir."
+    ],
+    "totalSlides": 100,
     "slideCount": 100,
+    "matchedPastQuestionsCount": 0,
+    "category": "Tıbbi Patoloji",
+    "programDate": "2026-2027",
+    "kazanimlar": [
+      "Bağışıklık gözetimi kavramını, klinik kanıtlarını ve tümör antijeni tiplerini (neoantijen, kanser-testis, viral antijen) açıklar.",
+      "Antitümör hücresel ve hümoral bağışıklığın efektörlerini (CD8+ CTL, CD4+ Th1, NK, makrofaj, ADCC) ve öldürme mekanizmalarını açıklar.",
+      "Kanser immün düzenlemesi (immunoediting) basamaklarını ve intrensek kaçış mekanizmalarını (MHC-I/B2M kaybı, TAP kusurları, apoptoz direnci) açıklar.",
+      "İmmün kontrol noktalarını (PD-1/PD-L1, CTLA-4), T hücre tükenmişliğini ve immünsüpresif mikroçevre bileşenlerini (Treg, MDSC, TGF-β) açıklar.",
+      "İmmün kontrol noktası inhibitörlerini, yanıt biyobelirteçlerini (TMB, MSI-H, PD-L1) ve otoimmün benzeri toksisite yönetimini açıklar.",
+      "Kişiselleştirilmiş aşıları, adoptif hücre transferini (TIL) ve CAR-T tedavisini, sitokin salınım sendromu (CRS) yönetimini açıklar.",
+      "Metastaz kaskadının lokal invazyon basamaklarını, E-kadherin kaybını, EMT sürecini (SNAIL, TWIST) ve bazal membran yıkımını (MMP-2/9) açıklar.",
+      "İntravazasyon, dolaşımda sağkalım (trombosit zırhı, anoikis) ve ekstravazasyon (selektin, integrin) basamaklarını açıklar.",
+      "Organ tropizmini, Stephen Paget'in 'Tohum ve Toprak' hipotezini, kemokin eksenlerini (CXCR4/CXCL12, CCR7) ve pre-metastatik niş oluşumunu açıklar.",
+      "Kolonizasyon basamağını, MET geçişini, tümör dormansisini, otofaji ilişkisini, geç nüksleri ve oligometastaz yaklaşımını sentezler."
+    ],
+    "questions": [],
+    "flashcards": [
+      {
+        "front": "Bağışıklık gözetimi (immune surveillance) kavramının temel fizyolojik tanımı nedir?",
+        "back": "Vücutta sürekli ortaya çıkan malign hücrelerin klinik bir kitle oluşmadan önce bağışıklık sistemi tarafından tespit edilip imha edilmesidir.",
+        "id": "k1-32-fc01"
+      },
+      {
+        "front": "Tümör neoantijenleri nasıl oluşur ve neden yüksek immünojenisiteye sahiptir?",
+        "back": "Somatik gen mutasyonları sonucu oluşan yabancı aminoasit dizilimleridir; timusta bunlara karşı merkezi tolerans gelişmediği için güçlü immün yanıt tetiklerler.",
+        "id": "k1-32-fc02"
+      },
+      {
+        "front": "Serviks ve orofarenks karsinomlarında bağışıklık sistemine sunulan majör viral neoantijenler hangileridir?",
+        "back": "Yüksek riskli HPV'nin (Tip 16/18) kodladığı E6 ve E7 onkoproteinleridir.",
+        "id": "k1-32-fc03"
+      },
+      {
+        "front": "Tümör hücresini MHC sınıf I aracılığıyla tanıyıp doğrudan öldüren temel immün efektör hücre hangisidir?",
+        "back": "CD8+ Sitotoksik T Lenfosit (CTL).",
+        "id": "k1-32-fc04"
+      },
+      {
+        "front": "CD4+ Th1 yardımcı T hücrelerinin salgıladığı İnterferon-gama'nın (IFN-γ) tümör mikroçevresindeki temel etkisi nedir?",
+        "back": "Makrofajları klasik (M1) yoldan aktive eder ve tümör hücrelerinde MHC-I ekspresyonunu artırarak CTL'lere görünür hale getirir.",
+        "id": "k1-32-fc05"
+      },
+      {
+        "front": "Antikora Bağımlı Hücresel Sitotoksisite (ADCC) sürecinde NK hücresinin tümöre bağlı antikoru tanıdığı yüzey reseptörü hangisidir?",
+        "back": "CD16 (FcγRIII) reseptörüdür.",
+        "id": "k1-32-fc06"
+      },
+      {
+        "front": "Kanser immün düzenlemesinin (Immunoediting) 3 'E' basamağı sırasıyla nelerdir?",
+        "back": "1. Eliminasyon (Yok etme), 2. Denge (Equilibrium / Sessizlik), 3. Kaçış (Escape / Klinik tümör).",
+        "id": "k1-32-fc07"
+      },
+      {
+        "front": "Tümör hücresinde β2-mikroglobulin (B2M) mutasyonu veya delesyonu neye yol açar?",
+        "back": "MHC Sınıf I molekülünün hücre yüzeyine çıkamamasına ve CD8+ CTL'ler tarafından tanınamamasına yol açar.",
+        "id": "k1-32-fc08"
+      },
+      {
+        "front": "Tümör hücreleri NK hücrelerinin NKG2D reseptörlerini bloke etmek için hangi mekanizmayı kullanır?",
+        "back": "Yüzeylerindeki MIC-A ve MIC-B stres ligandlarını proteazlarla kesip çözünür formda kana dökerek reseptörleri tüketirler.",
+        "id": "k1-32-fc09"
+      },
+      {
+        "front": "Tümör hücrelerinin immün kontrol noktalarını (PD-L1 vb.) yüzeylerinde aşırı sergilemesinin temel amacı nedir?",
+        "back": "Saldırıya gelen sitotoksik T lenfositleri periferik tolerans frenini kullanarak etkisiz hale getirmek ve apoptozdan kaçmaktır.",
+        "id": "k1-32-fc10"
+      },
+      {
+        "front": "CTLA-4 ile PD-1 immün kontrol noktaları arasındaki temel anatomik ve zamansal fark nedir?",
+        "back": "CTLA-4 bölgesel lenf nodunda erken fazda (priming sırasında), PD-1 ise periferik dokularda ve tümör mikroçevresinde geç efektör fazda baskılama yapar.",
+        "id": "k1-32-fc11"
+      },
+      {
+        "front": "Düzenleyici T hücrelerinin (Treg) karakteristik yüzey belirteçleri ve ana transkripsiyon faktörü nedir?",
+        "back": "Yüzeyde CD4 ve CD25 (yüksek afiniteli IL-2 reseptörü); çekirdekte FoxP3 transkripsiyon faktörüdür.",
+        "id": "k1-32-fc12"
+      },
+      {
+        "front": "İmmün kontrol noktası inhibitörlerinin klasik kemoterapiden en temel kavramsal farkı nedir?",
+        "back": "Doğrudan tümör hücresine saldırmak yerine, T hücreleri üzerindeki baskılayıcı frenleri kaldırarak hastanın kendi bağışıklık sistemini aktive etmeleridir.",
+        "id": "k1-32-fc13"
+      },
+      {
+        "front": "T lenfositler üzerindeki PD-1 reseptörünü hedefleyen iki majör monoklonal antikor ilacı hangileridir?",
+        "back": "Pembrolizumab ve Nivolumab.",
+        "id": "k1-32-fc14"
+      },
+      {
+        "front": "Mikrosatellit Kararsızlığı (MSI-H / dMMR) taşıyan tümörlerin immünoterapiye son derece duyarlı olmasının nedeni nedir?",
+        "back": "Frame-shift mutasyonları sonucu binlerce yabancı neoantijen üretmeleri ve yoğun lenfosit infiltrasyonu (TIL) barındırmalarıdır.",
+        "id": "k1-32-fc15"
+      },
+      {
+        "front": "Klinikte kanser gelişimini önlemek amacıyla başarıyla uygulanan iki majör profilaktik aşı hangileridir?",
+        "back": "HPV (Serviks kanserine karşı) ve HBV (Hepatosellüler karsinoma karşı) aşılarıdır.",
+        "id": "k1-32-fc16"
+      },
+      {
+        "front": "CAR-T hücrelerinin tümör hücrelerini tanırken MHC Sınıf I kısıtlamasından bağımsız olmasını sağlayan yapısal parçası nedir?",
+        "back": "Antikor kaynaklı tek zincirli değişken parça (scFv - single-chain variable fragment) reseptör ucudur.",
+        "id": "k1-32-fc17"
+      },
+      {
+        "front": "CAR-T hücre tedavisinin en ölümcül komplikasyonu olan Sitokin Salınım Sendromunda (CRS) sorumlu anahtar sitokin hangisidir?",
+        "back": "İnterlökin-6 (IL-6)'dır.",
+        "id": "k1-32-fc18"
+      },
+      {
+        "front": "Kanser hastalarında ölümlerin %90'ından fazlasından sorumlu temel biyolojik olay nedir?",
+        "back": "Primer tümörün uzak organlara yayılması ve parankim yetmezliği yaratması yani metastazdır.",
+        "id": "k1-32-fc19"
+      },
+      {
+        "front": "Kanser hücrelerinin durağan epitel fenotipinden hareketli ve invaziv mezenkimal fenotipe geçiş sürecine ne ad verilir?",
+        "back": "Epitel-Mezenkimal Geçiş (EMT - Epithelial-Mesenchymal Transition).",
+        "id": "k1-32-fc20"
+      },
+      {
+        "front": "Bir karsinom dokusunda EMT sürecini doğrulayan karakteristik immünohistokimyasal belirteç değişimi nedir?",
+        "back": "E-kadherin ve sitokeratin ekspresyonunun azalması; buna karşılık vimentin ve N-kadherin ekspresyonunun artmasıdır.",
+        "id": "k1-32-fc21"
+      },
+      {
+        "front": "Tümör hücrelerinin kan veya lenf damarı duvarını aşarak lümene girmesi olayına ne ad verilir?",
+        "back": "İntravazasyon.",
+        "id": "k1-32-fc22"
+      },
+      {
+        "front": "Epitelyal tümör hücrelerinin ekstraselüler matriks tutunmasını kaybettiklerinde kanda girdikleri özel apoptoz türü nedir?",
+        "back": "Anoikis.",
+        "id": "k1-32-fc23"
+      },
+      {
+        "front": "Tümör hücresinin hedef organ kapiller endoteline sıkıca kilitlenmesini (vasküler arrest) sağlayan anahtar molekül çifti nedir?",
+        "back": "Tümör üzerindeki İntegrinler (VLA-4 vb.) ile endotel üzerindeki İmmünglobulin benzeri adezyon molekülleridir (VCAM-1 / ICAM-1).",
+        "id": "k1-32-fc24"
+      },
+      {
+        "front": "Kanser hastalarında invaziv doku biyopsisini tekrarlamadan, periferik kandan tümör mutasyonlarını ve nüks riskini saptayan güncel yöntem nedir?",
+        "back": "Likit Biyopsi (ctDNA ve CTC analizi).",
+        "id": "k1-32-fc25"
+      },
+      {
+        "front": "Prostat karsinomunun ve uveal melanomun en karakteristik hedef metastaz organları sırasıyla nelerdir?",
+        "back": "Prostat karsinomu için Kemik (özellikle aksiyel iskelet); uveal melanom için ise Karaciğerdir.",
+        "id": "k1-32-fc26"
+      },
+      {
+        "front": "Meme ve prostat kanserinde kemik iliği tropizmini sağlayan temel kemokin reseptörü ve hedef organ ligandı nedir?",
+        "back": "Tümördeki CXCR4 reseptörü ile hedef kemik iliği stromasındaki CXCL12 (SDF-1) ligandıdır.",
+        "id": "k1-32-fc27"
+      },
+      {
+        "front": "Prostat kanseri kemik metastazları ile meme kanseri kemik metastazlarının radyolojik ve patolojik ana farkı nedir?",
+        "back": "Prostat kanseri osteoblastik (kemik yapıcı/sklerotik), meme kanseri ise tipik olarak osteolitik (kemik eritici) lezyonlar oluşturur.",
+        "id": "k1-32-fc28"
+      },
+      {
+        "front": "Metastatik kanser hücresinin uzak organ parankiminde katı bir tümör kitlesi oluşturabilmesi için EMT'yi tersine çevirerek geçirdiği biyolojik süreç nedir?",
+        "back": "Mezenkimal-Epitel Geçiş (MET - Mesenchymal-Epithelial Transition).",
+        "id": "k1-32-fc29"
+      },
+      {
+        "front": "Dorman tümör hücrelerinin yabancı organda besin ve damar desteği yokken yıllarca canlı kalmasını sağlayan temel katabolik mekanizma nedir?",
+        "back": "Hücre içi organellerin lizozomal sindirimiyle bazal enerji sağlayan Otofajidir.",
+        "id": "k1-32-fc30"
+      }
+    ],
     "questionCount": 0,
     "flashcardCount": 30,
-    "totalSlides": 100,
-    "themeColor": "#2563eb",
-    "category": "Tıbbi Patoloji",
+    "sourcePdf": "19) Tümör İmmünolojisi ve Metastaz Mekanizmaları.pdf",
     "isNew": true,
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "cardCount": 30,
+    "firstSlideNumber": 1
   },
   {
     "deckId": "k1p-k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan",
@@ -146650,15 +146837,202 @@
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "instructor": "Prof. Dr. Hikmet Keleş",
+    "audioFile": "",
+    "audioDuration": "",
+    "confidence": "high",
+    "themeColor": "#0284c7",
+    "matchedNoteId": "k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan",
+    "matchedNoteTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "overview": "Neoplazmların konak üzerindeki mekanik ve fonksiyonel etkileri (bası, obstrüksiyon, kronik kanama, demir eksikliği anemisi), kanser kaşeksisinin patogenezi (TNF-alfa/kaşektin, lipoprotein lipaz inhibisyonu, ubikuitin-proteazom kas proteolizi, yüksek BMH ve hipermetabolizma), paraneoplastik sendromlar (PTHrP hiperkalsemisi vs osteolitik metastaz ayrımı, ektopik ACTH ve ADH, IGF-II hipoglisemisi, EPO polisitemisi, timoma ilişkili myastenia gravis ve saf kırmızı hücre aplazisi, dermatomiyozit, akantozis nigrikans, HPOA, pankreas karsinomunda Trousseau gezici tromboflebiti, steril NBTE ve nefrotik sendrom), tümör derecelendirmesi (diferansiyasyon, nükleer pleomorfizm, atipik mitoz, nekroz, Nottingham ve Gleason mimari sistemleri), tümör evrelemesi (TNM sistemi, Tis, sentinel lenf nodu, M1 evre IV belirleyiciliği, evrelemenin derecelendirmeye üstünlüğü), morfolojik tanı yöntemleri (eksizyonel, insizyonel, frozen hızlı tanı, İİAB, kohezyon kaybı ve Pap smear taraması, hücre bloğu), immünohistokimya (sitokeratin, vimentin, S100/Melan-A, sinaptofizin/kromogranin, metastazda PSA/TTF-1, ER/PR, HER2, Ki-67), akış sitometrisi (lösemi/lenfoma tiplendirmesi, FSC/SSC saçılımı, DNA ploidisi), serum tümör belirteçleri (izlem vs tarama ilkeleri, PSA, CEA, AFP, CA-125, CA 19-9, hCG, kalsitonin) ve moleküler tanı (Ig/TCR klonalitesi, Ewing t(11;22) EWS-FLI1, KML BCR-ABL, JAK2 V617F, MYCN amplifikasyonu, minimal kalıntı hastalık ve sıvı biyopsi, kalıtsal BRCA/APC taraması, NGS, TMB-High/MSI-H doku bağımsız immünoterapi ve yapay zeka destekli dijital patoloji) 100 adımda kapsamlı analizi.",
+    "highYieldPearls": [
+      "Tümörün klinik ciddiyeti ve tehlikesi yerleşim yerine bağlıdır; dar kanallarda yer alan milimetrik benign kitleler ölümcül mekanik tablolara yol açabilir.",
+      "Kanser kaşeksisi TNF-alfa (kaşektin) aracılıdır; lipoprotein lipaz inhibe edilerek yağ depolanması durdurulur ve basit açlıktan farklı olarak bazal metabolizma hızı yüksek kalır.",
+      "En sık görülen paraneoplastik sendrom PTHrP salınımına bağlı hiperkalsemidir (en sık akciğer skuamöz hücreli karsinomu); osteolitik kemik metastazı paraneoplastik DEĞİLDİR.",
+      "Küçük hücreli akciğer karsinomu ektopik ACTH salgılayarak paraneoplastik Cushing sendromuna, ektopik ADH salgılayarak hiponatremik SIADH tablosuna neden olur.",
+      "Timoma epitelyal tümörü hem paraneoplastik Myastenia Gravis (anti-AChR) hem de Saf Kırmızı Hücre Aplazisi (izole eritroid duraklama) ile güçlü birliktelik gösterir.",
+      "Müsinöz pankreas karsinomunda salgılanan prokoagülan müsinler Trousseau sendromuna (gezici tromboflebit) yol açar; ileri evre kanserlerde kalp kapaklarında steril vejetasyonlarla NBTE gelişebilir.",
+      "Onkolojik prognozu ve sağkalımı belirlemede EVRELEME (staging), hücresel diferansiasyonu ölçen DERECELENDİRMEDEN (grading) tartışmasız olarak çok daha üstündür.",
+      "TNM sınıflamasında M1 (uzak metastaz) saptanması, primer tümör boyutu ve lenf nodu ne olursa olsun hastayı doğrudan EVRE IV kategorisine sokar.",
+      "İntraoperatif dondurulmuş kesit (frozen) 15-20 dakikada cerrahi sınır ve tanı kontrolü sağlar; nihai rapor kalıcı parafin kesitlerle doğrulanmalıdır.",
+      "Serum tümör belirteçleri (PSA, CEA, CA-125, CA 19-9) genel popülasyonda tarama testi olarak uygun değildir; rezeksiyon sonrası tedavi yanıtı ve erken nüks takibinde esastır."
+    ],
+    "totalSlides": 100,
     "slideCount": 100,
+    "matchedPastQuestionsCount": 0,
+    "category": "Tıbbi Patoloji",
+    "programDate": "2026-2027",
+    "kazanimlar": [
+      "Tümörlerin konak üzerindeki mekanik, lokal ve sistemik etkilerini (kitle etkisi, lümen obstrüksiyonu, mikrositer demir eksikliği anemisi) açıklar.",
+      "Kanser kaşeksisinin patogenezini, TNF-alfa/kaşektin rolünü, lipoprotein lipaz inhibisyonunu, ubikuitin-proteazom kas yıkımını ve yüksek bazal metabolizma hızını açıklar.",
+      "Paraneoplastik sendromların genel kavramlarını, görülme sıklığını (%10-15), erken tanı değerini ve osteolitik metastazdan farkını ayırt eder.",
+      "PTHrP aracılı paraneoplastik hiperkalsemiyi, küçük hücreli akciğer karsinomu kaynaklı ektopik ACTH (Cushing) ve ADH (SIADH) endokrinopatilerini açıklar.",
+      "Nöromüsküler (timoma/MG), hematolojik (PRCA, polisitemi), dermatolojik (akantozis, dermatomiyozit) ve vasküler (Trousseau, NBTE) paraneoplastik sendromları analiz eder.",
+      "Tümör derecelendirmesinin (grading) morfolojik kriterlerini (diferansiyasyon, nükleer pleomorfizm, atipik mitoz, nekroz, Nottingham ve Gleason sistemleri) açıklar.",
+      "Tümör evrelemesini (staging), AJCC TNM sistemini (Tis, sentinel nod, M1), evre gruplarını ve prognozda derecelendirmeye üstünlüğünü açıklar.",
+      "Laboratuvar tanısında morfolojik yöntemleri (eksizyonel, insizyonel, frozen kesit, İİAB, kohezyon kaybı, Pap smear ve hücre bloğu) karşılaştırır.",
+      "İmmünohistokimya (sitokeratin, vimentin, PSA, TTF-1, ER/PR, HER2, Ki-67) ve akış sitometrisi (lösemi/lenfoma, DNA ploidisi) prensiplerini açıklar.",
+      "Serum tümör belirteçlerinin (PSA, CEA, AFP, CA-125, CA 19-9) doğru kullanım ilkelerini ve modern moleküler patoloji yöntemlerini (klonalite, translokasyonlar, JAK2, MYCN, sıvı biyopsi, NGS, MSI-H/TMB) sentezler."
+    ],
+    "questions": [],
+    "flashcards": [
+      {
+        "front": "Bir neoplazm histolojik olarak benign olmasına rağmen konak için neden ölümcül olabilir?",
+        "back": "Kritik anatomik yerleşimi (örneğin hipofiz, solunum yolu veya beyin sapı basısı) nedeniyle çevre hayati dokularda bası, obstrüksiyon ve fonksiyon kaybı yaratarak ölümcül olabilir.",
+        "id": "k1-33-fc01"
+      },
+      {
+        "front": "Renal arter duvarında gelişen 0,5 cm boyutundaki benign bir leiomyom konakta hangi mekanizmayla ağır hipertansiyon yapar?",
+        "back": "Renal arter lümenini daraltarak böbrekte iskemiye yol açar; renin-anjiyotensin-aldosteron sistemini aktive ederek renovasküler hipertansiyona neden olur.",
+        "id": "k1-33-fc02"
+      },
+      {
+        "front": "Gastrointestinal mukozada ülsere karsinomların yol açtığı en karakteristik kronik hematolojik komplikasyon nedir?",
+        "back": "Gaitada mikroskobik düzeyde süregelen gizli kan kaybına bağlı gelişen mikrositer hipokrom demir eksikliği anemisidir.",
+        "id": "k1-33-fc03"
+      },
+      {
+        "front": "Kanser kaşeksisinde doku kaybı deseni basit açlıktan (starvasyon) nasıl ayrılır?",
+        "back": "Basit açlıkta iskelet kası korunup sadece yağ depoları tüketilirken; kanser kaşeksisinde hem iskelet kası hem de yağ dokusu eş zamanlı ve derin biçimde erir.",
+        "id": "k1-33-fc04"
+      },
+      {
+        "front": "Kanser kaşeksisinde yağ dokusunda depolanmayı durduran ve adiposit erimesine yol açan temel sitokin ve enzimatik hedefi nedir?",
+        "back": "TNF-alfa (kaşektin) ve onun endotel yüzeyinde inhibe ettiği Lipoprotein Lipaz (LPL) enzimidir.",
+        "id": "k1-33-fc05"
+      },
+      {
+        "front": "Kanser kaşeksisinde iskelet kası yıkımında görev alan tümör kaynaklı spesifik glikoprotein hangisidir?",
+        "back": "Proteoliz İndükleyici Faktör (PIF) olup ubikuitin-proteazom yolunu uyararak miyofibriler proteinleri parçalar.",
+        "id": "k1-33-fc06"
+      },
+      {
+        "front": "Paraneoplastik sendrom nedir ve kanser hastalarının yaklaşık yüzde kaçında görülür?",
+        "back": "Tümörün lokal yayılımı, metastazı veya dokuya özgü fizyolojik hormonuyla açıklanamayan sistemik tablolardır; kanser hastalarının yaklaşık %10-15'inde görülür.",
+        "id": "k1-33-fc07"
+      },
+      {
+        "front": "En sık görülen paraneoplastik sendrom hangisidir ve en sık hangi histolojik tümör tipinde gözlenir?",
+        "back": "PTHrP aracılı paraneoplastik hiperkalsemidir ve en sık akciğerin skuamöz hücreli karsinomunda (SCC) gözlenir.",
+        "id": "k1-33-fc08"
+      },
+      {
+        "front": "Küçük hücreli akciğer karsinomunun (SCLC) en sık yol açtığı iki majör paraneoplastik endokrin tablo hangileridir?",
+        "back": "Ektopik ACTH salınımına bağlı Cushing Sendromu ve ektopik ADH salınımına bağlı Uygunsuz ADH Salınımı Sendromudur (SIADH).",
+        "id": "k1-33-fc09"
+      },
+      {
+        "front": "Paraneoplastik nörolojik sendromların temel immünopatofizyolojik mekanizması nedir?",
+        "back": "Tümör hücrelerindeki ektopik onkonöronal antijenlere karşı üretilen konak antikorlarının, normal santral ve periferik sinir sistemi dokularıyla immünolojik çapraz reaksiyon vermesidir.",
+        "id": "k1-33-fc10"
+      },
+      {
+        "front": "Timoma ile en sık ilişkili olan iki paraneoplastik sendrom hangileridir?",
+        "back": "Nöromüsküler kavşak blokajı yapan Myastenia Gravis ve kemik iliğinde eritropoezi durduran Saf Kırmızı Hücre Aplazisidir (PRCA).",
+        "id": "k1-33-fc11"
+      },
+      {
+        "front": "Pankreas adenokarsinomunda salgılanan prokoagülan müsinlerin yol açtığı karakteristik paraneoplastik vasküler tablo nedir?",
+        "back": "Gezici yüzeyel tromboflebit ile karakterize Trousseau fenomenidir.",
+        "id": "k1-33-fc12"
+      },
+      {
+        "front": "Tümör derecelendirmesi (grading) temelde neyi ölçer?",
+        "back": "Tümör hücrelerinin köken aldıkları normal hücrelere benzerlik derecesini (diferansiyasyon), mitoz sayısını, nükleer anormalliklerini ve nekroz varlığını ölçer.",
+        "id": "k1-33-fc13"
+      },
+      {
+        "front": "Meme karsinomunda kullanılan Nottingham (Elston-Ellis) derecelendirme sisteminin üç bileşeni nedir?",
+        "back": "Tübül oluşum oranı, nükleer pleomorfizm derecesi ve mitotik figür sayısıdır.",
+        "id": "k1-33-fc14"
+      },
+      {
+        "front": "Prostat karsinomunda Gleason derecelendirmesi yapılırken diğer tümörlerden farklı olarak hangi kriterler dikkate ALINMAZ?",
+        "back": "Sitolojik nükleer atipi ve mitoz sayısı dikkate alınmaz; yalnızca glandüler mimari ve bezlerin kaynaşma paternine bakılır.",
+        "id": "k1-33-fc15"
+      },
+      {
+        "front": "Tümör evrelemesi (staging) temelde neyi değerlendirir?",
+        "back": "Malign tümörün primer boyutunu, komşu doku invazyonunu, bölgesel lenf nodu tutulumunu ve uzak organ metastazını (vücuttaki anatomik yayılımını) değerlendirir.",
+        "id": "k1-33-fc16"
+      },
+      {
+        "front": "TNM evreleme sisteminde 'Tis' ile 'T1' arasındaki en temel histopatolojik sınır nedir?",
+        "back": "Epitelyal bazal membrandır; Tis lezyonunda bazal membran sağlamdır (invazyon yoktur), T1'de ise bazal membran aşılmış ve subepitelyal stromaya invazyon başlamıştır.",
+        "id": "k1-33-fc17"
+      },
+      {
+        "front": "Onkolojik prognozu ve 5 yıllık sağkalımı belirlemede 'Evreleme' (staging) mi yoksa 'Derecelendirme' (grading) mi daha üstündür?",
+        "back": "Evreleme (staging) tartışmasız olarak çok daha üstündür; çünkü anatomik yayılımı ve uzak metastaz varlığını ölçer.",
+        "id": "k1-33-fc18"
+      },
+      {
+        "front": "Onkolojide kesin kanser tanısı ve tedavi protokolünün başlatılmasında altın standart yöntem nedir?",
+        "back": "Doku örneğinin mikroskop altında değerlendirildiği histopatolojik incelemedir.",
+        "id": "k1-33-fc19"
+      },
+      {
+        "front": "İntraoperatif dondurulmuş kesit (frozen section) incelemesinin en temel iki klinik endikasyonu nedir?",
+        "back": "Ameliyat sırasında cerrahi sınırların temiz olup olmadığını denetlemek ve bilinmeyen bir lezyonun benign-malign ayrımını hızla yapmaktır.",
+        "id": "k1-33-fc20"
+      },
+      {
+        "front": "Eksfoliyatif sitolojinin ve Pap smear testinin temelini oluşturan biyolojik hücresel özellik nedir?",
+        "back": "Malign epitel hücrelerinin interselüler bağlantılarını (E-kadherin) kaybederek azalmış kohezyon göstermesi ve serbestçe yüzeylere dökülmesidir.",
+        "id": "k1-33-fc21"
+      },
+      {
+        "front": "İmmünohistokimyanın (İHK) temel çalışma prensibi nedir?",
+        "back": "Doku kesitindeki spesifik protein antijenlerinin monoklonal antikorlar ve enzim-kromojen (DAB) reaksiyonuyla kahverengi renkte mikroskop altında görünür kılınmasıdır.",
+        "id": "k1-33-fc22"
+      },
+      {
+        "front": "Anaplastik bir tümör kesitinde immünohistokimyasal olarak 'Sitokeratin (+)' olması neyi kanıtlar?",
+        "back": "Tümörün epitelyal kökenli bir karsinom olduğunu kanıtlar.",
+        "id": "k1-33-fc23"
+      },
+      {
+        "front": "Akış sitometrisinin (flow cytometry) tıbbi patoloji ve onkolojideki en yaygın kullanım alanı nedir?",
+        "back": "Lösemi ve lenfomaların immünfenotiplendirilmesi ve hematolojik alt tiplerine sınıflandırılmasıdır.",
+        "id": "k1-33-fc24"
+      },
+      {
+        "front": "Onkofetal tümör belirteçleri (örneğin CEA ve AFP) ne anlama gelir?",
+        "back": "Normalde intrauterin fetal gelişim sırasında üretilip doğum sonrası baskılanan, ancak malign neoplastik dediferansiyasyon sırasında tümör hücrelerince yeniden kana salınan embriyonik proteinlerdir.",
+        "id": "k1-33-fc25"
+      },
+      {
+        "front": "Serum tümör belirteçlerinin (PSA, CEA, CA-125) genel popülasyonda kanser tarama testi olarak kullanılamamasının iki temel nedeni nedir?",
+        "back": "Düşük duyarlılık (erken evreyi kaçırma) ve düşük özgüllüktür (benign enflamatuvar durumlarda da yükselerek yalancı pozitiflik verme).",
+        "id": "k1-33-fc26"
+      },
+      {
+        "front": "Kolorektal karsinom ameliyatı sonrası hastanın periyodik kontrollerinde CEA düzeyinin aylar sonra yeniden yükselmesi neyi gösterir?",
+        "back": "Tümörün lokal nüks yaptığını veya karaciğer/uzak organ metastazı geliştirdiğini gösterir.",
+        "id": "k1-33-fc27"
+      },
+      {
+        "front": "Onkolojide 'prediktif' biyobelirteç ne anlama gelir?",
+        "back": "Tümörün spesifik bir hedefe yönelik tedaviye (örneğin tirozin kinaz inhibitörleri veya monoklonal antikorlar) yanıt verme olasılığını önceden gösteren moleküler belirteçtir.",
+        "id": "k1-33-fc28"
+      },
+      {
+        "front": "Ewing sarkomunun tanısında kullanılan karakteristik kromozomal translokasyon ve oluşan füzyon geni nedir?",
+        "back": "t(11;22)(q24;q12) translokasyonu ve oluşan EWS-FLI1 kimerik onkoproteinidir.",
+        "id": "k1-33-fc29"
+      },
+      {
+        "front": "Polisitemia Vera tanısında hastaların %95'inde pozitif bulunan kardinal genetik nokta mutasyonu nedir?",
+        "back": "JAK2 kinaz genindeki V617F nokta mutasyonudur.",
+        "id": "k1-33-fc30"
+      }
+    ],
     "questionCount": 0,
     "flashcardCount": 30,
-    "totalSlides": 100,
-    "themeColor": "#0284c7",
-    "category": "Tıbbi Patoloji",
+    "sourcePdf": "20) Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı.pdf",
     "isNew": true,
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "cardCount": 30,
+    "firstSlideNumber": 1
   },
   {
     "deckId": "k1p-k1-34-genital-enfeksiyonlar",
@@ -146668,15 +147042,202 @@
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "instructor": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
+    "audioFile": "",
+    "audioDuration": "",
+    "confidence": "high",
+    "themeColor": "#e11d48",
+    "matchedNoteId": "k1-34-genital-enfeksiyonlar",
+    "matchedNoteTitle": "Genital Enfeksiyonlar",
     "overview": "Genital cilt ve mukoza enfeksiyonlarının klinik ayırıcı tanısı (ağrılı lezyonlar: HSV ve H. ducreyi şankroidi; ağrısız lezyonlar: T. pallidum sifiliz sert şankrı, LGV C. trachomatis L1-L3, Donovanozis K. granulomatis, HPV ve molluscum); lenf nodu dinamikleri (sifilizde bilateral ağrısız, HSV'de hassas, LGV ve şankroidde süpüratif oluk bulgulu bubo, donovanoziste LAP yokluğu); üç majör vajinit tablosunun karşılaştırmalı analizi: Vulvovajinal Kandidiyaz (C. albicans, süt kesiği akıntı, yoğun kaşıntı, pH < 4.5, Whiff negatif, psödohif/tomurcuklanan maya, flukonazol 150 mg tek doz, eş tedavisi yok), Bakteriyel Vajinoz (laktobasil kaybı, G. vaginalis ve zorunlu anaeroplar, ince homojen gri akıntı, balık kokusu, pH > 4.5, Whiff pozitif, clue cell, lökosit yokluğu, metronidazol/klindamisin, eş tedavisi GEREKMEZ, semptomatik gebeler tedavi edilir) ve Trikomoniyazis (T. vaginalis flagellalı protozoon, kist formu yok, pürülan köpüklü sarı-yeşil akıntı, çilek serviks / kolpitis makülaris, pH > 4.5, hareketli trofozoitler, yoğun PNL lökosit, metronidazol 2 g tek doz, EŞ TEDAVİSİ ŞARTTIR, laktasyonda 12-24 saat emzirmeme); üst genital sistem patolojileri: akut servisit (C. trachomatis, N. gonorrhoeae, mukopürülan eksüda, servikal frajilite, PİH protokolü ampirik tedavi), endometrit (kesin tanı biyopsi ve stromal plazma hücresi); perinatal enfeksiyonlar: koryoamniyonit (asendan yayılım, maternal ateş, fetal taşikardi), postpartum endometrit (sezaryende %20-55, vajinalde %2-5, Klindamisin + Gentamisin IV altın standart, geç >7 günde klamidya), postoperatif pelvik enfeksiyonlar (vajinal histerektomi riski, <5 gün erken Gram-negatif sepsis vs >5-7 gün geç anaerop apse ve cerrahi drenaj); erkek genital enfeksiyonları: akut bakteriyel prostatit (genitoüriner girişim öyküsü, yüksek ateş, rektal tuşede sıcak ve aşırı hassas prostat, prostat masajı KONTRENDİKE, GSBL/kinolon direncinde karbapenem 2-4 hafta), kronik prostatit ve epididimoorşit (<35 yaş CYBH vs >35 yaş E. coli, skrotal ödem/ağrı, sistemik ateş beklenir, granülomatöz formda tüberküloz ve bruselloz) 100 adımda kapsamlı analizi.",
+    "highYieldPearls": [
+      "Genital ülserler arasında HSV ve H. ducreyi (şankroid) ağrılı; Sifiliz, LGV ve Granüloma inguinale (donovanozis) ağrısızdır.",
+      "Genital ülserlerin en sık enfeksiyöz nedeni Herpes Simpleks Virüstür (HSV); virüs S2-S4 sakral dorsal kök gangliyonlarında latent kalır.",
+      "Primer sifiliz sert tabanlı, düzgün kenarlı tek ülser (şankr) ve bilateral ağrısız sert lenfadenopati ile seyreder.",
+      "Lenf bezlerinin iltihapla paketleşip fluktue olduğu ve drene olabildiği bubo lezyonlarına Şankroid ve LGV (C. trachomatis L1-L3) yol açar.",
+      "Vulvovajinal kandidiyaziste normal asidite korunur (pH < 4.5); Bakteriyel Vajinoz ve Trikomoniyaziste ise pH daima 4.5'in üzerine çıkar.",
+      "Bakteriyel vajinozda vajen duvarında inflamasyon ve PNL lökosit artışı yoktur; Amsel kriterleri (ince akıntı, pH>4.5, Whiff +, clue cell) ile tanı konur ve rutin eş tedavisi GEREKMEZ.",
+      "Trikomoniyazis etkeni T. vaginalis'in kist formu yoktur; çilek serviks (kolpitis makülaris) yapar, yalnız lokal tedavi önerilmez ve EŞ TEDAVİSİ KESİNLİKLE ŞARTTIR.",
+      "Postpartum endometrit insidansı vajinal doğumda %2-5 iken, sezaryen doğum sonrası %20-55'e fırlar; altın standart tedavi Klindamisin + Gentamisin IV rejimidir.",
+      "Postoperatif pelvik enfeksiyonlarda ilk 5 gün içinde Gram-negatif basillerle peritonit/sepsis; 5-7. günden sonra ise anaeroplarla pelvik apse gelişir (drenaj şarttır).",
+      "Akut bakteriyel prostatitte genitoüriner girişim öyküsü ve yüksek ateş tipiktir; bakteriyemi riski nedeniyle PROSTAT MASAJI KESİNLİKLE KONTRENDİKEDİR; GSBL suşlarında karbapenem uygulanır."
+    ],
+    "totalSlides": 100,
     "slideCount": 100,
+    "matchedPastQuestionsCount": 0,
+    "category": "Enfeksiyon Hastalıkları",
+    "programDate": "2026-2027",
+    "kazanimlar": [
+      "Genital cilt ve mukoza lezyonlarının ayırıcı tanısını (ağrı, lenfadenopati, morfoloji, etken mikroorganizmalar) yapar.",
+      "Genital Herpes Simpleks Virüs enfeksiyonunun primer ve rekürren atak özelliklerini, sakral latensiyi ve antiviral tedavisini açıklar.",
+      "Primer sifiliz (şankr), şankroid, lenfogranüloma venereum (LGV) ve granüloma inguinale (donovanozis) klinik ve laboratuvar ayrımını yapar.",
+      "Vulvovajinal kandidiyazisin klinik belirtilerini, mikroskobik bulgularını (psödohif), pH ilişkisini ve flukonazol tedavisini açıklar.",
+      "Bakteriyel vajinozun patogenezini (laktobasil kaybı, anaerop sinerjisi), Amsel tanı kriterlerini, clue cell morfolojisini ve partner yönetimini kavrar.",
+      "Trikomoniyazisin biyolojisini (trofozoit), köpüklü akıntısını, çilek serviks bulgusunu, zorunlu eş tedavisini ve laktasyondaki metronidazol kuralını analiz eder.",
+      "Üç majör vajinit tablosunun (Kandidiyazis, BV, Trikomoniyazis) ayırıcı tanı matrisini ve ko-enfeksiyon yönetimini açıklar.",
+      "Akut/kronik servisit ve endometrit patogenezini, servikal frajiliteyi, endometrial biyopsinin (plazma hücresi) rolünü ve PİH sekellerini açıklar.",
+      "İntrapartum koryoamniyonit ve postpartum endometritin risk faktörlerini (sezaryen), mikrobiyolojisini, klindamisin+gentamisin tedavisini ve postoperatif erken sepsis vs geç apse ayrımını açıklar.",
+      "Erkek genital enfeksiyonlarını (akut/kronik prostatit, genitoüriner girişim öyküsü, prostat masajı kontrendikasyonu, karbapenem endikasyonu ve epididimoorşitte ateş varlığı ile tüberküloz/bruselloz etyolojisini) açıklar."
+    ],
+    "questions": [],
+    "flashcards": [
+      {
+        "front": "Genital cilt ve mukoza enfeksiyonlarının klinik ayırıcı tanısında ilk değerlendirilen temel fizik muayene parametreleri nelerdir?",
+        "back": "Lezyonun ağrılı olup olmaması, morfolojisi (vezikül, püstül, ülser, papül) ve bölgesel lenfadenopatinin (LAP) bilateral/unilateral, hassas veya fluktuan (bubo) olmasıdır.",
+        "id": "k1-34-fc01"
+      },
+      {
+        "front": "Genital herpes virüsü (HSV) primer enfeksiyon sonrasında hangi anatomik sinir yapısında ömür boyu latent kalır?",
+        "back": "S2-S4 sakral dorsal kök gangliyonlarında nükleer episom halinde latent kalır.",
+        "id": "k1-34-fc02"
+      },
+      {
+        "front": "Genital ülserler arasında lenf bezlerinin paketleşip iltihapla fluktue olduğu ve deriye açılabildiği 'bubo' lezyonlarına en sık yol açan iki etken nedir?",
+        "back": "Chlamydia trachomatis L1-L3 (Lenfogranüloma venereum) ve Haemophilus ducreyi'dir (Şankroid).",
+        "id": "k1-34-fc03"
+      },
+      {
+        "front": "Sifilizin (Treponema pallidum) tüm klinik evrelerinde doku hasarına ve iskemiye yol açan temel histopatolojik damar lezyonu nedir?",
+        "back": "Küçük arter ve arteriyollerin etrafında yoğun plazma hücresi infiltrasyonuyla seyreden endarteritis obliteranstır.",
+        "id": "k1-34-fc04"
+      },
+      {
+        "front": "Genital bölgede ağrısız et kırmızısı (beefy-red) granülasyon dokusu içeren ülseri olan ve gerçek lenfadenopatisi bulunmayan bir hastada biyopside ne görülmesi beklenir?",
+        "back": "Büyük makrofajların sitoplazması içinde çengelli iğne görünümünde intraselüler Donovan cisimcikleri (Klebsiella granulomatis) görülür.",
+        "id": "k1-34-fc05"
+      },
+      {
+        "front": "Cinsel yolla bulaşan enfeksiyonlar arasında 'oluk bulgusu' (groove sign) hangi hastalık için patognomoniktir ve etkeni nedir?",
+        "back": "Lenfogranüloma Venereum (LGV) için patognomoniktir ve etkeni Chlamydia trachomatis L1, L2, L3 serovarlarıdır.",
+        "id": "k1-34-fc06"
+      },
+      {
+        "front": "Anogenital bölgede karnabahar görünümlü eksofitik, verrüköz ve ağrısız siğillere (kondiloma akuminata) yol açan viral etken nedir?",
+        "back": "İnsan Papilloma Virüsüdür (özellikle düşük riskli HPV tip 6 ve tip 11).",
+        "id": "k1-34-fc07"
+      },
+      {
+        "front": "Sekonder sifiliz lezyonu olan Kondiloma Lata ile HPV lezyonu olan Kondiloma Akuminatanın morfolojik ayırıcı özelliği nedir?",
+        "back": "Kondiloma akuminata karnabahar benzeri sivri eksofitik siğiller iken; kondiloma lata geniş tabanlı, yüzeyi yassı ve düz, masere plaklardır.",
+        "id": "k1-34-fc08"
+      },
+      {
+        "front": "Molluscum contagiosum lezyonlarının fizik muayenedeki en karakteristik patognomonik morfolojik bulgusu nedir?",
+        "back": "Kubbe biçimli parlak papüllerin ortasında küçük bir çöküntünün (santral umblikasyon / göbeklenme) bulunmasıdır.",
+        "id": "k1-34-fc09"
+      },
+      {
+        "front": "Vulvovajinal kandidiyazın en sık etkeni nedir ve kadınların yaşam boyu bu enfeksiyonu geçirme sıklığı yaklaşık yüzde kaçtır?",
+        "back": "En sık etken Candida albicans'tır (%80-90) ve kadınların yaklaşık %75'i yaşamları boyunca en az bir kez bu enfeksiyonu geçirir.",
+        "id": "k1-34-fc10"
+      },
+      {
+        "front": "Vulvovajinal kandidiyazda vajinal pH değeri ve Whiff testi sonucu nasıldır?",
+        "back": "Vajinal pH normal sınırlardadır (< 4.5, asidik) ve %10 KOH ile yapılan Whiff testi negatiftir (balık kokusu oluşmaz).",
+        "id": "k1-34-fc11"
+      },
+      {
+        "front": "Flukonazole dirençli Candida glabrata kaynaklı komplike vajinit olgularında en sık tercih edilen kurtarma tedavisi nedir?",
+        "back": "Vajinal yoldan uygulanan 600 mg Borik Asit kapsülleridir (14-21 gün).",
+        "id": "k1-34-fc12"
+      },
+      {
+        "front": "Sağlıklı vajen florasının yaklaşık %96'sını oluşturan ve laktik asit üreterek pH'yı asidik tutan ana mikroorganizma nedir?",
+        "back": "Lactobacillus türleridir (Laktobasiller).",
+        "id": "k1-34-fc13"
+      },
+      {
+        "front": "Bakteriyel vajinoz tanısında kullanılan Amsel kriterlerinin 4 parametresi nelerdir?",
+        "back": "1. İnce, homojen gri-beyaz akıntı, 2. Vajinal pH > 4.5, 3. Pozitif Whiff testi (%10 KOH ile balık kokusu), 4. Mikroskopide clue cell varlığı (en az 3/4 pozitiflik tanı koydurur).",
+        "id": "k1-34-fc14"
+      },
+      {
+        "front": "Bakteriyel vajinoz tanısı alan bir kadında heteroseksüel erkek cinsel partnerin rutin tedavisi gerekir mi?",
+        "back": "Hayır, gerekmez. Çalışmalar asemptomatik erkek partnerin tedavi edilmesinin kadındaki nüks oranını etkilemediğini göstermiştir.",
+        "id": "k1-34-fc15"
+      },
+      {
+        "front": "Trichomonas vaginalis'in kist formu var mıdır ve bu durumun bulaşma yolu üzerindeki etkisi nedir?",
+        "back": "Kist formu yoktur, yalnızca trofozoit formu bulunur. Dış ortamda ve kurulukta hızla öldüğü için bulaşma neredeyse tamamen doğrudan cinsel temasla gerçekleşir.",
+        "id": "k1-34-fc16"
+      },
+      {
+        "front": "Trichomonas vaginalis enfeksiyonunda spekulum muayenesinde servikste görülen patognomonik fiziksel bulgu nedir?",
+        "back": "Kapiller frajiliteye ve punktat peteşiyal kanamalara bağlı 'çilek serviks' (kolpitis makülaris) görünümüdür.",
+        "id": "k1-34-fc17"
+      },
+      {
+        "front": "Trikomoniyazis tedavisinde yalnız lokal vajinal tedavi (krem/jel) neden önerilmez?",
+        "back": "Parazit sadece vajinada değil, üretra ve Skene/Bartholin bezleri gibi derin glandüler odaklarda da yerleştiğinden yalnızca oral sistemik tedavi tam paraziter kür sağlar.",
+        "id": "k1-34-fc18"
+      },
+      {
+        "front": "Vajinal akıntı ayırıcı tanısında ilk fiziksel ayrımı sağlayan ve muayene başında yapılan en hızlı test nedir?",
+        "back": "Dar skalalı pH indikatör kağıdı ile lateral vajen duvarından yapılan pH ölçümüdür (pH < 4.5 vs pH > 4.5 ayrımı).",
+        "id": "k1-34-fc19"
+      },
+      {
+        "front": "Vajinal akıntı yakınması olan bir kadında pH < 4.5 ve Whiff testi negatif ise ilk akla gelen tanı nedir?",
+        "back": "Vulvovajinal kandidiyazistir.",
+        "id": "k1-34-fc20"
+      },
+      {
+        "front": "Üç majör vajinit tablosu arasında mikroskopide polimorfonükleer lökositlerin (PNL) epitelden belirgin şekilde fazla olduğu tablo hangisidir?",
+        "back": "Trichomonas vaginalis enfeksiyonudur (Trikomoniyazis).",
+        "id": "k1-34-fc21"
+      },
+      {
+        "front": "Kadın üst genital sistemini vajinal mikroorganizmalara karşı koruyan ana fizyolojik ve mekanik bariyer nedir?",
+        "back": "Endoservikal kanalı dolduran, immünoglobulinlerden zengin kalın servikal mukus tıkacıdır.",
+        "id": "k1-34-fc22"
+      },
+      {
+        "front": "Akut servisit tanısı konulduğunda ampirik antibiyoterapi neden PİH protokolü gibi geniş spektrumlu planlanır?",
+        "back": "Klamidya ve gonokok gibi patojenlerin asemptomatik olarak üst genital yola (tüplere) tırmanmasını, kalıcı tubal hasarı ve infertiliteyi engellemek için.",
+        "id": "k1-34-fc23"
+      },
+      {
+        "front": "Endometritin kesin histopatolojik tanısında endometrial stromada saptanması gereken patognomonik hücre tipi hangisidir?",
+        "back": "Plazma hücresidir (CD138 pozitifliği ile teyit edilir).",
+        "id": "k1-34-fc24"
+      },
+      {
+        "front": "Koryoamniyonit patogenezinde mikroorganizmalar amniyon boşluğuna en sık hangi mekanizma ile ulaşır?",
+        "back": "Servikovajinal floranın servikal kanaldan yukarı tırmandığı asendan yayılım yoluyla.",
+        "id": "k1-34-fc25"
+      },
+      {
+        "front": "Postpartum endometritte altın standart birinci basamak parenteral tedavi kombinasyonu nedir?",
+        "back": "Klindamisin + Gentamisin IV kombinasyonudur.",
+        "id": "k1-34-fc26"
+      },
+      {
+        "front": "Jinekolojik operasyon sonrası >5-7 gün sonra gelişen geç enfeksiyonlarda en sık patoloji ve mikroorganizma grubu nedir?",
+        "back": "Zorunlu anaeropların (Bacteroides vb.) etken olduğu pelvik apse tablosudur (drenaj şarttır).",
+        "id": "k1-34-fc27"
+      },
+      {
+        "front": "Erkek genital sisteminde bakteriyel enfeksiyonların prostat ve epididime ulaşmasında en sık izlenen mekanizma nedir?",
+        "back": "Distal üretradan retrograd / asendan yayılımdır.",
+        "id": "k1-34-fc28"
+      },
+      {
+        "front": "Akut bakteriyel prostatit düşünülen bir hastada tanısal amaçla dahi olsa prostata masaj yapılması neden kesinlikle kontrendikedir?",
+        "back": "Masif bakteriyemiye ve septik şoka yol açabileceğinden (ve apse rüptürü riskinden dolayı) kesinlikle kontrendikedir.",
+        "id": "k1-34-fc29"
+      },
+      {
+        "front": "Granülomatöz epididimoorşit saptanan bir hastada akla gelmesi gereken başlıca iki etken nedir?",
+        "back": "Mycobacterium tuberculosis (Tüberküloz) ve Brucella türleridir (Bruselloz).",
+        "id": "k1-34-fc30"
+      }
+    ],
     "questionCount": 0,
     "flashcardCount": 30,
-    "totalSlides": 100,
-    "themeColor": "#e11d48",
-    "category": "Enfeksiyon Hastalıkları",
+    "sourcePdf": "2) Genital Enfeksiyonlar.pdf",
     "isNew": true,
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "cardCount": 30,
+    "firstSlideNumber": 1
   },
   {
     "deckId": "k1p-k1-35-prenatal-tani-yontemleri",
@@ -146686,15 +147247,203 @@
     "discipline": "Tıbbi Genetik",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "instructor": "Dr. Öğr. Üyesi Serap Arslan",
+    "audioFile": "",
+    "audioDuration": "",
+    "confidence": "high",
+    "themeColor": "#8b5cf6",
+    "matchedNoteId": "k1-35-prenatal-tani-yontemleri",
+    "matchedNoteTitle": "Prenatal Tanı Yöntemleri",
     "overview": "Prenatal tanının tanımı, felsefesi, hedefleri ve intrauterin fetal tedavi imkanları (fetal mesane kateteri/şantı, konjenital adrenal hiperplazide deksametazon, B12 duyarlı metilmalonik asidemi); prenatal tanı endikasyonları (ileri anne yaşı >35 ve 1/250 cut-off, trizomi riskleri Tri 21 ~1/800, Tri 18 ~1/7500, Tri 13 ~1/15.000-25.000, ebeveynde 21q21q Robertsonian translokasyonunda %100 risk, Aşkenazi Yahudileri 1/30 taşıyıcılık); Nöral Tüp Defektleri (embriyoloji 28. gün, %95 aile öyküsüz, folik asit 400 mcg vs 4 mg ile %75 insidans azalması, maternal ve amniyotik AFP dinamikleri, yanlış hafta hesabı ve kapalı defektlerde normal AFP); fetal ultrasonografi (kistik higroma Turner ilişkisi, 18-22. hafta detaylı tarama, normal USG paradoksu); biyokimyasal tarama testleri: 1. trimester İkili Test (11-14. hafta, PAPP-A azalması, serbest beta-hCG artışı [Trizomi 21'de yüksek, 18/13'te düşük], NT > 3 mm eşiği, kalp defektleri ve Noonan sendromu, %90 saptama); 2. trimester Üçlü Test (15-20. hafta, en iyi 16-18. hafta, Down sendromunda AFP düşük, uE3 düşük, hCG yüksek; Edwards Trizomi 18'de tümü düşük); Dörtlü Test (+ Dimerik İnhibin-A artışı, %80-85); Anne kanından serbest fetal DNA (NIPT/cfDNA, 10. haftadan itibaren, apoptoz trofoblast kökeni, taramadır tanı koydurmaz, AS teyidi şarttır); İnvaziv Yöntemler: Koryon Villus Örneklemesi (CVS, 10-12. hafta üçüncül villüsler, erken sonuç avantajı [21. haftada tahliye 8. haftaya göre 20 kat risklidir], AFP ÇALIŞILAMAZ kuralı, <10 hafta ekstremite redüksiyonu riski, direkt yöntem sitotrofoblast vs kültür yöntemi stroma hücreleri, Rh profilaksisi, ek kayıp ~%1); Amniyosentez (AS, 15-16. hafta altın standart, 180 ml sıvı havuzu ve ~20 ml aspirasyon, fetal cilt/GİS/üriner/amniyon hücresi, erken AS'de talipes ekinovarus riski, dondurulmama kuralı, açık NTD'de kesin amniyotik AFP, ek kayıp %0.5-1); Fetoskopi (15-18. hafta, %20 abortus / %2 ölüm nedeniyle rutinden kalkış); Kordosentez (PUBS, 18-20. haftadan doğuma kadar, 21G spinal iğne ile 1-2 cc fetal kan, 48-72 saat hızlı lenfosit kültürü, AS/CVS mozaizminin aydınlatılması, fetal kayıp ~%2-3); Preimplantasyon Genetik Tanı (PGD, IVF embriyolarında implantasyon öncesi analiz, tahliye travmasını önleme, trofektoderm biyopsisi); Prenatal sitogenetik problemler: 400-500 bant G-bantlama, XX/XY mozaizminde maternal kontaminasyon şüphesi ve AS ile teyit, gerçek mozaisizm vs pseudomozaisizm, Plasentaya Sınırlı Mozaisizm (CPM Tip I trofoblast/mitotik, Tip II stroma/mitotik, Tip III her ikisi/mayotik), Trizomik kurtuluş (Trisomy rescue), Uniparental Dizomi (UPD 1/3 kuralı, Maternal UPD 15 Prader-Willi, Paternal UPD 15 Angelman, UPD 7 Russell-Silver, UPD 11 Beckwith-Wiedemann) 100 adımda kapsamlı analizi.",
+    "highYieldPearls": [
+      "En yaygın prenatal tanı endikasyonu ileri anne yaşıdır (>35 yaş); amniyosentez için standart cut-off riski 1/250'dir.",
+      "Trizomili çocuk öyküsünde tekrarlama riski maternal yaş riski + %1'dir; ebeveynde 21q21q Robertsonian translokasyonu varsa Down sendromu riski %100'dür.",
+      "Konjenital anomalilerin %95'i aile öyküsü olmayan gebeliklerde görülür; perikonsepsiyonel folik asit (400 mcg / risklide 4 mg) NTD insidansını %75 azaltır.",
+      "Açık nöral tüp defektlerinde fetal cilt bütünlüğü bozulduğu için AFP anne kanında ve amniyon sıvısında belirgin yükselir; kapalı defektlerde AFP normal kalır.",
+      "Birinci trimester ikili testinde (11-14. hafta) serbest beta-hCG ve PAPP-A ölçülür; PAPP-A tüm trizomilerde düşerken, serbest beta-hCG Trizomi 21'de artar.",
+      "Fetal ense kalınlığı (NT) 11-14. haftada >3 mm patolojiktir; trizomiler, konjenital kalp defektleri ve Noonan sendromuyla yakından ilişkilidir.",
+      "İkinci trimester üçlü testinde Down sendromu profili AFP düşük, uE3 düşük ve hCG yüksek iken; Trizomi 18'de (Edwards) tüm belirteçler düşüktür. Dörtlü testte dimerik inhibin-A artar.",
+      "Koryon villus örneklemesi (CVS) 10-12. haftalarda üçüncül villüslerden yapılır ve erken tanı sağlar; ancak CVS materyali ile AFP ÇALIŞILAMAZ ve <10 hafta ekstremite redüksiyon riski vardır.",
+      "Amniyosentez 15-16. haftalarda amniyon sıvısı 180 ml'ye ulaştığında ~20 ml alınarak yapılır; ek fetal kayıp riski %0.5-1'dir ve numune kesinlikle DONDURULMAMALIDIR.",
+      "Kordosentez 18-20. haftadan doğuma kadar 21G iğneyle yapılır ve 48-72 saatte sonuç verir (kayıp %2-3); Tip I-II plasental mozaisizm mitotik, Tip III mayotiktir; UPD trizomik kaçışların 1/3'ünde görülür."
+    ],
+    "totalSlides": 100,
     "slideCount": 100,
+    "matchedPastQuestionsCount": 0,
+    "category": "Tıbbi Genetik",
+    "programDate": "2026-2027",
+    "kazanimlar": [
+      "Prenatal tanının tanımını, amaçlarını, felsefesini ve intrauterin fetal tedavi olanaklarını açıklar.",
+      "Prenatal tanı endikasyonlarını (ileri anne yaşı cut-off 1/250, trizomi riskleri, 21q21q Robertsonian translokasyonu, akraba evliliği ve Aşkenazi taşıyıcılığı) kavrar.",
+      "Nöral tüp defektlerinin embriyolojisini (28. gün), folik asit profilaksisini (400 mcg vs 4 mg) ve maternal serum AFP tarama dinamiklerini analiz eder.",
+      "Fetal ultrasonografinin rolünü, kistik higroma ile Turner/anöploidi ilişkisini ve normal USG paradoksunu açıklar.",
+      "Birinci trimester ikili testini (11-14. hafta), PAPP-A ve serbest beta-hCG paternlerini, fetal ense kalınlığı (NT) eşiğini (>3 mm) ve Noonan/kalp defekti birlikteliğini kavrar.",
+      "İkinci trimester üçlü testini (16-18. hafta ideal), Down sendromu ile Edwards sendromu (Trizomi 18) biyokimyasal ayrımını ve dörtlü testte dimerik inhibin-A artışını açıklar.",
+      "Anne kanından serbest fetal DNA (cfDNA / NIPT) prensibini, saptama kapasitesini (Y kromozomu, RhD, anöploidi) ve tarama testi sınırlarını kavrar.",
+      "Koryon villus örneklemesini (CVS, 10-12. hafta, üçüncül villüsler, AFP çalışılamaz kuralı, <10 hafta ekstremite redüksiyonu, direkt yöntem vs kültür, ek kayıp %1) açıklar.",
+      "Amniyosentezi (AS, 15-16. hafta, 180 ml sıvı, ~20 ml aspirasyon, fetal hücre kaynakları, erken AS talipes ekinovarus riski, dondurulmama kuralı, ek kayıp %0.5-1) kavrar.",
+      "Fetoskopinin yüksek riskini (%20 abortus / %2 fetal ölüm), kordosentezin tekniğini (21G iğne, 1-2 cc kan, 48-72 saat kültür, mozaizmin aydınlatılması, kayıp %2-3) ve PGD ilkelerini analiz eder.",
+      "Prenatal sitogenetik problemleri (400-500 bant G-bantlama, XX/XY maternal kontaminasyon, gerçek vs pseudomozaisizm, Tip I-II-III plasental mozaisizm, trizomik kurtuluş, UPD 1/3 kuralı ve UPD 15 Prader-Willi/Angelman, UPD 7, UPD 11) açıklar."
+    ],
+    "questions": [],
+    "flashcards": [
+      {
+        "front": "Prenatal tanının temel tıbbi tanımı nedir ve genetik testler hangi iki ana koldan yürütülür?",
+        "back": "Fetusta genetik veya yapısal anomalilerin mümkün olan en erken gebelik haftasında saptanması sürecidir; kromozom düzeyindeki sitogenetik testler ve DNA mutasyonlarını tarayan moleküler testlerden oluşur.",
+        "id": "k1-35-fc01"
+      },
+      {
+        "front": "Fetal mesane obstrüksiyonu in utero tedavi edilmediğinde gelişen ve akciğer gelişimini bozan ölümcül klinik sekans nedir?",
+        "back": "Ağır oligohidramnios ve akciğer hipoplazisi ile seyreden Potter sendromudur (Potter sekansı).",
+        "id": "k1-35-fc02"
+      },
+      {
+        "front": "Prenatal tanı öncesi genetik danışmada sonlandırma (terminasyon) kararı ile ilgili etik ve yasal kural nedir?",
+        "back": "Anomali saptansa dahi hamileliği sonlandırma konusunda hiçbir zorunluluk yoktur; bu karar tamamen ailenin özgür tercihine bırakılır.",
+        "id": "k1-35-fc03"
+      },
+      {
+        "front": "Prenatal sitogenetik analizin klinik uygulamada en sık rastlanan ve en yaygın endikasyonu nedir?",
+        "back": "Anne yaşının 35 ve üzerinde olmasıyla tanımlanan 'ileri anne yaşı' endikasyonudur.",
+        "id": "k1-35-fc04"
+      },
+      {
+        "front": "Daha önce de novo serbest trizomili çocuk öyküsü olan bir çiftin sonraki gebeliklerindeki trizomi riski nasıl hesaplanır?",
+        "back": "Anne yaşına bağlı temel risk oranına ek olarak %1 artış eklenerek (Anne Yaşı Riski + %1) hesaplanır.",
+        "id": "k1-35-fc05"
+      },
+      {
+        "front": "Anne veya babadan birinde 21q21q Robertsonian translokasyonu saptandığında canlı doğacak çocukta Down sendromu riski nedir?",
+        "back": "Kesinlikle %100'dür (tüm canlı gametler çift 21. kromozom içerir).",
+        "id": "k1-35-fc06"
+      },
+      {
+        "front": "Nöral tüpün embriyolojik olarak kapanmasını tamamladığı kritik gelişimsel zaman eşiği nedir?",
+        "back": "Fertilizasyondan sonraki 28. günün (4. haftanın) sonudur.",
+        "id": "k1-35-fc07"
+      },
+      {
+        "front": "Nöral tüp defekti taramasında anne serumundan alfa-fetoprotein (AFP) çalışılması için en uygun gebelik haftası hangisidir?",
+        "back": "16. gebelik haftasıdır (15-20. haftalar arasında bakılabilir).",
+        "id": "k1-35-fc08"
+      },
+      {
+        "front": "Perikonsepsiyonel folik asit desteği nöral tüp defektleri (NTD) görülme insidansını yaklaşık yüzde kaç oranında azaltır?",
+        "back": "Yaklaşık %75 oranında azaltır.",
+        "id": "k1-35-fc09"
+      },
+      {
+        "front": "Fetal anomalilerin morfolojik olarak taranmasında kullanılan primer non-invaziv görüntüleme yöntemi nedir ve hangi dönemlerde uygulanabilir?",
+        "back": "Yüksek rezolüsyonlu gerçek zamanlı (real-time) fetal ultrasonografidir; gebeliğin her üç trimesterinde de güvenle uygulanabilir.",
+        "id": "k1-35-fc10"
+      },
+      {
+        "front": "Anormal fetal ultrasonografi bulgularında en sık saptanan kromozom anomalileri hangileridir?",
+        "back": "45,X (Turner Sendromu) ve dengesiz yapısal kromozom anomalileridir.",
+        "id": "k1-35-fc11"
+      },
+      {
+        "front": "Fetal ultrasonografide birden fazla organ sistemini tutan multiple malformasyonlar saptandığında kromozom anomalisi olasılığı nasıl değişir?",
+        "back": "Kromozom anomalisi olasılığı izole tek bir malformasyona göre çok daha fazla artar.",
+        "id": "k1-35-fc12"
+      },
+      {
+        "front": "İlk trimester ikili tarama testinin (11-14 testi) uygulandığı gebelik haftası aralığı ve değerlendirilen 3 ana bileşen nedir?",
+        "back": "11-14. haftalar arasında uygulanır; Fetal Ense Kalınlığı (NT), anne serumu PAPP-A ve serbest β-hCG düzeylerini kombine eder.",
+        "id": "k1-35-fc13"
+      },
+      {
+        "front": "İlk trimester tarama testinde Trizomi 21 (Down sendromu) ile Trizomi 18/13 arasındaki serbest β-hCG hormon farkı nedir?",
+        "back": "Serbest β-hCG Trizomi 21'de normalden belirgin olarak yüksek (artmış) iken, Trizomi 18 ve 13'te normalden düşüktür (azalmış).",
+        "id": "k1-35-fc14"
+      },
+      {
+        "front": "Anne serum tarama testlerinin (ikili, üçlü, dörtlü test) sonuçları pozitif (yüksek riskli) çıktığında klinik yaklaşım ne olmalıdır?",
+        "back": "Bu testler tarama testidir ve kesin tanı koydurmaz; pozitif sonuçta kesin tanı için koryon villus örneklemesi (CVS) veya amniyosentez (AS) gibi invaziv testler önerilir.",
+        "id": "k1-35-fc15"
+      },
+      {
+        "front": "İkinci trimester üçlü tarama testinde anne serumunda ölçülen üç temel biyokimyasal parametre nedir?",
+        "back": "Alfa-fetoprotein (AFP), unkonjuge estriol (uE3) ve human chorionic gonadotropin (hCG) düzeyleridir.",
+        "id": "k1-35-fc16"
+      },
+      {
+        "front": "İkinci trimester üçlü tarama testinde Trizomi 18 (Edwards sendromu) ile Trizomi 21 (Down sendromu) arasındaki temel fark nedir?",
+        "back": "Trizomi 21'de hCG yüksek iken; Trizomi 18'de her üç belirteç birden (AFP, uE3 ve hCG) normalin belirgin altındadır (tümü düşük tablosu).",
+        "id": "k1-35-fc17"
+      },
+      {
+        "front": "Anne kanından serbest fetal DNA (NIPT) testi pozitif (yüksek riskli) çıktığında gebelik doğrudan sonlandırılabilir mi?",
+        "back": "Hayır, sonlandırılamaz. NIPT bir tarama testidir ve yalancı pozitiflik riski vardır; tanı mutlaka amniyosentez yapılarak doğrulanmalıdır.",
+        "id": "k1-35-fc18"
+      },
+      {
+        "front": "Koryon villus örneklemesinde (CVS) sitogenetik analiz için biyopsi alınan yapı embriyolojik olarak nedir?",
+        "back": "Koryon frondozumda bulunan, mezenşimal çekirdek ve sitotrofoblast tabakası içeren üçüncül (tersiyer) koryonik villüslerdir.",
+        "id": "k1-35-fc19"
+      },
+      {
+        "front": "CVS analizinde direkt yöntemin uzun süreli kültür yöntemine göre en büyük avantajı ve dezavantajı nedir?",
+        "back": "En büyük avantajı maternal kontaminasyon riski olmaması ve birkaç saatte hızlı sonuç vermesidir; en büyük dezavantajı ise kromozom bant kalitesinin düşük ve artefaktlara açık olmasıdır.",
+        "id": "k1-35-fc20"
+      },
+      {
+        "front": "CVS uygulamasında mozaik bir anöploidi saptandığında izlenmesi gereken doğru klinik yaklaşım nedir?",
+        "back": "Bulgu plasentaya sınırlı mozaisizm olabileceği için gebelik sonlandırılmaz; gebeliğin 15-16. haftasında amniyosentez yapılarak fetüsün gerçek karyotipi teyit edilir.",
+        "id": "k1-35-fc21"
+      },
+      {
+        "front": "İkinci trimesterde prenatal genetik tanıda en yaygın ve rutin olarak uygulanan altın standart invaziv yöntem nedir?",
+        "back": "Amniyosentezdir (AS); USG eşliğinde amniyon sıvısının aspire edilerek dökülen fetal hücrelerin incelenmesine dayanır.",
+        "id": "k1-35-fc22"
+      },
+      {
+        "front": "Amniyosentez ile aspire edilen amniyon sıvısının saklanmasında en kritik kural nedir?",
+        "back": "Numune kesinlikle dondurulmamalıdır (hücre döngüsü durur/ölür); aşırı sıcak ve soğuktan korunarak oda sıcaklığında taşınmalıdır.",
+        "id": "k1-35-fc23"
+      },
+      {
+        "front": "Fetoskopi yönteminin günümüzde rutin prenatal tanıda terk edilmesinin temel nedeni nedir?",
+        "back": "Girişime bağlı abortus oranının %20 ve doğrudan fetal ölüm riskinin %2 gibi kabul edilemeyecek kadar yüksek olmasıdır.",
+        "id": "k1-35-fc24"
+      },
+      {
+        "front": "Kordosentez (fetal kan örneklemesi) tıp pratiğinde ilk kez hangi yılda çalışılarak rutin hale getirilmiştir?",
+        "back": "İlk kez 1983 yılında çalışılmış ve prenatal sitogenetik/hematolojik tanıda rutin kullanıma uygun hale getirilmiştir.",
+        "id": "k1-35-fc25"
+      },
+      {
+        "front": "Kordosentezin (fetal kan örneklemesi) standart gebelik haftası, kullanılan iğne tipi ve aspire edilen kan miktarı nedir?",
+        "back": "18-20. gebelik haftasından doğuma kadar uygulanır; USG eşliğinde 21G spinal iğne ile 1-2 cc fetal kan aspire edilir.",
+        "id": "k1-35-fc26"
+      },
+      {
+        "front": "Preimplantasyon genetik tanının (PGD) diğer invaziv tanı yöntemlerine göre en belirgin avantajı nedir?",
+        "back": "İn vitro fertilizasyon (IVF) embriyolarında implantasyon öncesi genetik analiz sağlayarak ailenin gebelik tahliyesi (abortus) travması yaşamasını önlemesidir.",
+        "id": "k1-35-fc27"
+      },
+      {
+        "front": "Prenatal sitogenetik analizde rutin metafaz karyotiplemesi hangi bant çözünürlüğünde ve hangi yöntemle yapılır?",
+        "back": "Genellikle 400-500 bant çözünürlük seviyesinde, G (Giemsa) bantlama yöntemi ile gerçekleştirilir.",
+        "id": "k1-35-fc28"
+      },
+      {
+        "front": "15. kromozom için anne kaynaklı (maternal UPD 15) ve baba kaynaklı (paternal UPD 15) uniparental dizomi hangi hastalıklara yol açar?",
+        "back": "Maternal UPD 15 Prader-Willi Sendromuna; Paternal UPD 15 ise Angelman Sendromuna yol açar.",
+        "id": "k1-35-fc29"
+      },
+      {
+        "front": "Plasentaya sınırlı mozaiklikte (CPM) Tip I, Tip II ve Tip III ayrımı doku ve oluşum mekanizması açısından nasıldır?",
+        "back": "Tip I trofoblastla sınırlı (mitotik), Tip II koryonik stroma ile sınırlı (mitotik), Tip III hem trofoblast hem stromada (mayotik kökenli trizomik kaçış) görülür.",
+        "id": "k1-35-fc30"
+      }
+    ],
     "questionCount": 0,
     "flashcardCount": 30,
-    "totalSlides": 100,
-    "themeColor": "#8b5cf6",
-    "category": "Tıbbi Genetik",
+    "sourcePdf": "Kurul 1 Not 35, Sayfa 1-5; Tıbbi Genetik ve Klinik Uygulamaları (Haluk Akın, 2016)",
     "isNew": true,
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "cardCount": 30,
+    "firstSlideNumber": 1
   },
   {
     "deckId": "k1p-k1-36-izolasyon-yontemleri",
@@ -146704,15 +147453,203 @@
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "instructor": "Dr. Öğr. Üyesi Rüveyda Korkmazer",
+    "audioFile": "",
+    "audioDuration": "",
+    "confidence": "high",
+    "themeColor": "#0284c7",
+    "matchedNoteId": "k1-36-izolasyon-yontemleri",
+    "matchedNoteTitle": "İzolasyon Yöntemleri",
     "overview": "Enfeksiyon zincirinin beş temel halkası (kaynak, çıkış kapısı, taşınma şekli, giriş kapısı, duyarlı kişi); canlı rezervuarlar (hasta, sağlık personeli, taşıyıcı, ziyaretçi) ve cansız rezervuarlar (fomitler, tıbbi aletler, yüzeyler, su, hava); taşınma şekilleri: temas bulaşı (hastanede en sık yayılım yolu; direkt temas vücut sıvısının hasarlı deri/mukozaya dokunması; indirekt temas kontamine eller, glukometre, tansiyon aleti, ortak su ısıtıcı aracılığıyla taşınması; kan transfüzyonunun indirekt temas SAYILMAMASI ilkesi); damlacık bulaşı (öksürme/hapşırma ile sıvı süspansiyonu, 1 metre kuralı ve yerçekimsel çökme, Neisseria meningitidis, İnfluenza, Boğmaca); solunum / hava yolu bulaşı (damlacık çekirdekleri, aerosol/biyoaerosol, saatlerce havada asılı kalma, uzun mesafe yayılımı, Kızamık, Su çiçeği, Yaygın zona, Akciğer/Larenks tüberkülozu; N. meningitidis'in havayolu OLMAMASI kuralı); fiziksel faktörler: partikül boyutu ve çökme süreleri (>100 µm ~10 saniye, 20 µm ~4 dakika, 10 µm ~17 dakika, 1-3 µm saatlerce asılı kalma ve alveollere ulaşma; çevreye en dayanıklı patojenler: M. tuberculosis mumsu duvarı ve sporlar; çevreye en duyarlı: zarflı virüsler); Standart Önlemler (tanıya bakılmaksızın TÜM hastalarda, kan ve tüm vücut sıvıları [ter hariç], el hijyeni 5 endikasyon, gözle görülür kanda su-sabun 40-60 sn vs kirsiz alkol antiseptiği 20-30 sn, Clostridioides difficile'de alkolün spora etkisizliği ve su-sabun zorunluluğu, eldiven giymeden önce ve çıkardıktan sonra el hijyeni, eldivenle alkol ovulmaması; hedefe yönelik KKE; güvenli enjeksiyon: iğne kılıfına asla tekrar takılmaz [no recapping], kesici alet kutusu 3/4 dolunca kilitlenir, ıslak temizlik); Bulaş yoluna yönelik önlemler: Temas İzolasyonu (çok ilaç dirençli bakteriler [CRE/KPC Klebsiella, VRE, MRSA], tek kişilik oda / kohort, eldiven + önlük, malzeme ortak kullanımının önlenmesi, KKE'nin odadan ayrılmadan çıkarılması, çıkış sırası eldiven->önlük->el hijyeni, N95 TAKILMAZ!); Damlacık İzolasyonu (N. meningitidis, İnfluenza; tek kişilik oda veya yataklar arası en az 1 metre mesafe, 1 m yakında cerrahi maske, N95 gerekmez, hasta naklinde HASTAYA CERRAHİ MASKE taktırılması zorunluluğu, negatif basınç gerekmez); Solunum İzolasyonu (Kızamık, su çiçeği, yaygın zona, tüberküloz, SARS-CoV-2 aerosol işlemleri; negatif basınçlı oda [sürekli koridordan odaya hava akımı], saatte 6-12 kez hava değişimi ve HEPA filtre, N95/FFP2 solunum maskesi odaya girmeden takılır, N95 maske HASTA ODASININ DIŞINDA çıkarılır); İzolasyon önlemlerinin karşılaştırılması, KKE giyinme (Donning: Önlük->Maske->Gözlük->Eldiven) ve soyunma (Doffing: Eldiven->Gözlük->Önlük->Maske) evrensel algoritmaları 100 adımda kapsamlı analizi.",
+    "highYieldPearls": [
+      "Enfeksiyon zinciri 5 temel halkadan oluşur: Kaynak -> Çıkış kapısı -> Taşınma şekli -> Giriş kapısı -> Duyarlı kişi; taşınma yolunun kesilmesi bulaşı durdurur.",
+      "Hastanelerde mikroorganizmaların en sık yayılma yolu temas bulaşıdır; sağlık personelinin kontamine elleri, glukometre ve tansiyon aletleri indirekt temas aracıdır; KAN TRANSFÜZYONU İNDİREKT TEMAS DEĞİLDİR.",
+      "Neisseria meningitidis damlacık yoluyla bulaşır (yerçekimiyle 1 metrede çöker); AEROSOL (HAVAYOLU) İLE BULAŞAN ENFEKSİYONLAR ARASINDA YER ALMAZ.",
+      "Solunum (hava yolu / aerosol) yoluyla bulaşan dört klasik hastalık: Kızamık, Su çiçeği, Yaygın/Dissemine Zona ve Akciğer/Larenks Tüberkülozudur.",
+      "Düşme süreleri: >100 µm partiküller ~10 saniye; 20 µm partiküller ~4 dakika; 10 µm partiküller ~17 dakika; 1-3 µm damlacık çekirdekleri saatlerce asılı kalır ve alveollere ulaşır.",
+      "Çevreye ve kuruluğa en dayanıklı patojenler M. tuberculosis (mumsu lipit duvarı) ve sporlardır; en duyarlı olanlar ise zarflı virüslerdir (HIV, HSV, İnfluenza).",
+      "Standart önlemler tanıya bakılmaksızın tüm hastalara uygulanır; Clostridioides difficile'de alkol sporları öldüremediği için el hijyeni MUTLAKA SU VE SABUNLA yapılmalıdır.",
+      "Güvenli enjeksiyon kuralı: Kullanılmış iğne ucu kesinlikle iki elle kılıfına tekrar geçirilmez (recapping YASAKTIR); bükülmeden delinmeye dirençli kutuya atılır (3/4 dolunca kilitlenir).",
+      "Temas izolasyonunda (Karbapenem dirençli Klebsiella, VRE, MRSA): Tek kişilik oda/kohort, eldiven+önlük giyilir, cihaz ortak kullanımı önlenir, KKE odadan çıkmadan çıkarılır; N95 MASKE TAKILMAZ!",
+      "Damlacık izolasyonunda yataklar arası en az 1 metre mesafe bırakılır ve nakilde HASTAYA CERRAHİ MASKE takılır; Solunum izolasyonunda ise negatif basınçlı oda (saatte 6-12 hava değişimi) ve N95 maske kullanılır, N95 maske HASTA ODASININ DIŞINDA çıkarılır."
+    ],
+    "totalSlides": 100,
     "slideCount": 100,
+    "matchedPastQuestionsCount": 0,
+    "category": "Enfeksiyon Hastalıkları",
+    "programDate": "2026-2027",
+    "kazanimlar": [
+      "Enfeksiyon zincirinin beş temel halkasını (kaynak, çıkış kapısı, taşınma, giriş kapısı, duyarlı konak) ve kontrol ilkelerini açıklar.",
+      "Temas bulaşının mekanizmasını (direkt temas, indirekt temas, personelin elleri, ortak cihazlar) ve kan transfüzyonunun indirekt temas sayılmamasını kavrar.",
+      "Damlacık bulaşını (1 metre kuralı, Neisseria meningitidis, İnfluenza, boğmaca) ve solunum (aerosol) bulaşından farklarını açıklar.",
+      "Solunum (hava yolu) bulaşını, damlacık çekirdeğini (aerosol) ve dört klasik hastalığı (Kızamık, Su çiçeği, Yaygın zona, Tüberküloz) analiz eder.",
+      "Partikül boyutlarının çökme sürelerini (>100 µm ~10 sn, 20 µm ~4 dk, 10 µm ~17 dk, 1-3 µm saatlerce/alveol) ve çevresel direnç spektrumunu açıklar.",
+      "Standart önlemlerin felsefesini (tüm hastalarda geçerlilik), el hijyeni endikasyonlarını (5 moment), C. difficile'de su-sabun zorunluluğunu ve eldiven entegrasyonunu kavrar.",
+      "Kişisel koruyucu ekipman (KKE) mantığını, güvenli enjeksiyonu (iğne kılıfına takılmaz kuralı), kesici alet kutusu standartlarını (3/4 doluluk) ve ıslak çevre temizliğini açıklar.",
+      "Temas izolasyonunu (Karbapenem dirençli Klebsiella/CRE, VRE, MRSA, kohortlama, eldiven+önlük, KKE'nin odada çıkarılması, çıkış sırası, N95 takılmaması) analiz eder.",
+      "Damlacık izolasyonunu (1 metre mesafe kuralı, cerrahi maske, negatif basınç gerekmemesi, hasta naklinde hastaya cerrahi maske takılması zorunluluğu) kavrar.",
+      "Solunum izolasyonunu (negatif basınçlı oda, koridordan odaya hava akımı, saatte 6-12 hava değişimi, HEPA filtre, N95/FFP2 maske ve N95 maskenin oda dışında çıkarılması kuralı) açıklar.",
+      "Dört majör izolasyon kategorisinin karşılaştırma matrisini, KKE giyinme (Donning) ve soyunma (Doffing) evrensel sıralarını eksiksiz uygular."
+    ],
+    "questions": [],
+    "flashcards": [
+      {
+        "front": "Hastanelerde izolasyon önlemlerinin uygulanmasındaki temel amaç nedir?",
+        "back": "Patojen mikroorganizmaların hastalar, sağlık personeli ve çevre arasındaki çapraz bulaşmasını engelleyerek enfeksiyon zincirini kırmaktır.",
+        "id": "k1-36-fc01"
+      },
+      {
+        "front": "Enfeksiyon zincirini oluşturan beş temel halka sırasıyla nelerdir?",
+        "back": "1. Kaynak (Rezervuar), 2. Çıkış kapısı, 3. Taşınma şekli, 4. Giriş kapısı ve 5. Duyarlı kişi.",
+        "id": "k1-36-fc02"
+      },
+      {
+        "front": "Hastanelerde enfeksiyon zincirini kırmada en pratik, en ekonomik ve en etkili müdahale noktası hangisidir?",
+        "back": "Taşınma şeklinin kesilmesidir (el hijyeni, bariyer izolasyon önlemleri ve kişisel koruyucu ekipman kullanımı ile).",
+        "id": "k1-36-fc03"
+      },
+      {
+        "front": "Sağlık hizmeti ilişkili enfeksiyonlarda patojenlerin en sık görülen taşınma yolu nedir?",
+        "back": "Temas yoluyla bulaşmadır (direkt ve indirekt temas).",
+        "id": "k1-36-fc04"
+      },
+      {
+        "front": "Direkt temas bulaşı ile indirekt temas bulaşı arasındaki temel mekanik fark nedir?",
+        "back": "Direkt temasta aracı nesne olmaksızın enfekte vücut sıvısı hasarlı deri/mukozaya doğrudan dokunur; indirekt temasta ise bulaş kontamine bir alet, yüzey veya sağlık personelinin elleri aracılığıyla gerçekleşir.",
+        "id": "k1-36-fc05"
+      },
+      {
+        "front": "Kan transfüzyonu neden mikroorganizmalar için indirek temas yolları arasında sayılmaz?",
+        "back": "Çünkü kan transfüzyonu kontamine bir yüzey/alet aracılı temas değil, doğrudan damar içi (parenteral) kan yoluyla sistemik bulaşma mekanizmasıdır.",
+        "id": "k1-36-fc06"
+      },
+      {
+        "front": "Damlacık bulaşı (droplet transmission) enfeksiyon epidemiyolojisinde nasıl tanımlanır?",
+        "back": "Enfekte kişinin öksürmesi, hapşırması veya konuşması sırasında saçılan, havada süspansiyon halinde bulunan ve yerçekimiyle kısa mesafede çöken sıvı partiküllerle gerçekleşen bulaşmadır.",
+        "id": "k1-36-fc07"
+      },
+      {
+        "front": "Solunum (hava yolu / aerosol) yoluyla bulaşan dört klasik hastalık hangileridir?",
+        "back": "Kızamık (Rubeola), Su çiçeği (Varicella), Yaygın/Dissemine Zona ve Akciğer/Larenks Tüberkülozudur.",
+        "id": "k1-36-fc08"
+      },
+      {
+        "front": "Neisseria meningitidis neden aerosol ile bulaşan enfeksiyonlar arasında sayılmaz?",
+        "back": "Çünkü N. meningitidis büyük sıvı partikülleri içeren damlacık yoluyla bulaşır; yerçekimiyle 1 metre içinde çöker ve havada asılı kalan damlacık çekirdeği oluşturmaz.",
+        "id": "k1-36-fc09"
+      },
+      {
+        "front": "Solunum sekresyonlarında partikül boyutu ile havada asılı kalma süresi arasındaki temel ilişki nedir?",
+        "back": "Ters orantılıdır; partikül boyutu küçüldükçe yerçekimsel çökme süresi uzar ve partikül havada çok daha uzun süre asılı kalır.",
+        "id": "k1-36-fc10"
+      },
+      {
+        "front": "Solunum partiküllerinin boyutlarına göre havada asılı kalma süreleri (>100 µm, 20 µm, 10 µm ve 1-3 µm) nelerdir?",
+        "back": ">100 µm partiküller ~10 saniye; 20 µm partiküller ~4 dakika; 10 µm partiküller ~17 dakika; 1-3 µm damlacık çekirdekleri ise saatlerce (uzun süre) havada asılı kalır.",
+        "id": "k1-36-fc11"
+      },
+      {
+        "front": "Çevresel şartlara ve kurumaya en dayanıklı ve en duyarlı mikroorganizma grupları hangileridir?",
+        "back": "En dayanıklı olanlar: Mycobacterium tuberculosis (mumsu lipit duvarı), bakteri endosporları ve mantar sporlarıdır. En duyarlı olanlar: Zarflı virüslerdir (HIV, HSV, İnfluenza).",
+        "id": "k1-36-fc12"
+      },
+      {
+        "front": "Standart enfeksiyon kontrol önlemlerinin uygulama alanı ve hedef hasta grubu nedir?",
+        "back": "Olası enfeksiyon tanısına veya patojen varlığına bakılmaksızın, sağlık kuruluşundaki istisnasız tüm hastalara uygulanır.",
+        "id": "k1-36-fc13"
+      },
+      {
+        "front": "Standart önlemler kapsamında el hijyeni yönteminin seçiminde (su-sabun vs alkol antiseptiği) temel kural nedir?",
+        "back": "Ellerde gözle görülür kir, kan veya vücut sıvısı varsa su ve sabunla en az 40-60 saniye yıkanır; gözle görülür kir yoksa alkol bazlı el antiseptiği ile 20-30 saniye ovulur.",
+        "id": "k1-36-fc14"
+      },
+      {
+        "front": "Clostridioides difficile enfeksiyonu olan bir hastanın bakımından sonra el hijyeninde neden mutlaka su ve sabun kullanılmalıdır?",
+        "back": "Çünkü alkol bazlı el antiseptikleri bakteriyel endosporları öldüremez (sporsidal değildir); sporları ciltten mekanik olarak uzaklaştırmak için su ve sabunla yıkamak zorunludur.",
+        "id": "k1-36-fc15"
+      },
+      {
+        "front": "Standart önlemlerde kişisel koruyucu ekipman (KKE) kullanımının temel seçim kriteri nedir?",
+        "back": "Yapılacak tıbbi işlem sırasında kan, vücut sıvısı, salgılar veya hasarlı deriyle temas ve sıçrama riskinin varlığına göre belirlenir.",
+        "id": "k1-36-fc16"
+      },
+      {
+        "front": "Güvenli enjeksiyon uygulamalarında iğne batması kazalarını önlemek için konulan en temel kural nedir?",
+        "back": "Kullanılmış iğne ucu kesinlikle iki elle kılıfına tekrar geçirilmez (recapping yapılmaz); bükülmeden doğrudan delinmeye dirençli kesici alet kutusuna atılır.",
+        "id": "k1-36-fc17"
+      },
+      {
+        "front": "Delinmeye dirençli kesici-delici alet kutuları ne zaman kilitlenip kullanımdan kaldırılmalıdır?",
+        "back": "Kutu kapasitesinin dörtte üçüne (3/4 doluluğa) ulaştığında kapağı kalıcı olarak kilitlenmeli ve tıbbi atığa gönderilmelidir.",
+        "id": "k1-36-fc18"
+      },
+      {
+        "front": "Temas izolasyonunun temel uygulama ilkesi nedir?",
+        "back": "Standart önlemlere ek olarak uygulanır; temas ile bulaşabilen veya çoklu ilaç direnci taşıyan mikroorganizmalarla enfekte/kolonize hastalarda devreye sokulur.",
+        "id": "k1-36-fc19"
+      },
+      {
+        "front": "Temas izolasyonunda hasta odasından ayrılırken izlenmesi gereken doğru uygulama sırası nedir?",
+        "back": "Eldiveni çıkar -> Önlüğü çıkar -> Hasta odasından ayrıl -> El hijyeni sağla.",
+        "id": "k1-36-fc20"
+      },
+      {
+        "front": "Temas izolasyonunda N95 / FFP2 maske takılması neden doğru bir uygulama değildir?",
+        "back": "Çünkü N95/FFP2 maske solunum (hava yolu) izolasyonu önlemidir; temas izolasyonunun standart parçası eldiven ve önlüktür.",
+        "id": "k1-36-fc21"
+      },
+      {
+        "front": "Damlacık izolasyonu hangi bulaş mekanizmasına karşı ve nasıl uygulanır?",
+        "back": "Standart önlemlere ek olarak; öksürme, hapşırma ve konuşma ile saçılan büyük sıvı damlacıklarıyla bulaşan patojenlere karşı uygulanır.",
+        "id": "k1-36-fc22"
+      },
+      {
+        "front": "Damlacık izolasyonu uygulanan bir hastanın zorunlu transportunda en kritik kural nedir?",
+        "back": "Hastanın transport sırasında cerrahi maske kullanması zorunludur.",
+        "id": "k1-36-fc23"
+      },
+      {
+        "front": "Damlacık izolasyonunda farklı tanılı hastalar aynı odaya yerleştirildiğinde bırakılması gereken asgari mesafe nedir?",
+        "back": "Yataklar arasında en az 1 metre mesafe bırakılmalı ve araya perde çekilmelidir.",
+        "id": "k1-36-fc24"
+      },
+      {
+        "front": "Solunum (hava yolu / airborne) izolasyonu hangi bulaşma formuna karşı ve nasıl uygulanır?",
+        "back": "Standart önlemlere ek olarak uygulanır; havada asılı kalan mikroskobik damlacık çekirdekleri (aerosoller/biyoaerosoller) ile bulaşabilen hastalıklara karşı devreye sokulur.",
+        "id": "k1-36-fc25"
+      },
+      {
+        "front": "Solunum izolasyonunda negatif basınçlı odanın hava akım yönü ve saatlik hava değişim sayısı standardı nedir?",
+        "back": "Hava akımı sürekli koridordan odaya doğrudur (içe doğru emilir) ve odada saatte 6-12 kez hava değişimi sağlanır.",
+        "id": "k1-36-fc26"
+      },
+      {
+        "front": "Solunum izolasyonunda N95 / FFP2 maske nerede çıkarılmalıdır?",
+        "back": "Hasta odasının içinde değil, hasta odasından ayrıldıktan sonra HASTA ODASININ DIŞINDA (antrede veya koridorda) çıkarılmalı ve hemen el hijyeni sağlanmalıdır.",
+        "id": "k1-36-fc27"
+      },
+      {
+        "front": "Hastanelerde uygulanan dört majör izolasyon kategorisi ve temel gereklilikleri nelerdir?",
+        "back": "1. Standart Önlemler (tüm hastalar, el hijyeni, güvenli enjeksiyon), 2. Temas (eldiven, önlük, kohort), 3. Damlacık (1 m yakında cerrahi maske, nakilde hastaya maske), 4. Solunum (N95/FFP2, negatif basınç, 6-12 hava değişimi).",
+        "id": "k1-36-fc28"
+      },
+      {
+        "front": "Temas izolasyonu ile solunum izolasyonunun kişisel koruyucu ekipman (KKE) çıkarma yeri arasındaki en kritik fark nedir?",
+        "back": "Temas izolasyonunda tüm KKE'ler (eldiven ve önlük) HASTA ODASINDAN AYRILMADAN ÖNCE oda içinde çıkarılır; Solunum izolasyonunda ise N95 maske havada asılı basilleri solumamak için HASTA ODASININ DIŞINDA çıkarılır.",
+        "id": "k1-36-fc29"
+      },
+      {
+        "front": "Hastanede hasta transportunda hastaya cerrahi maske taktırılması hangi izolasyon türünün temel kuralıdır?",
+        "back": "Damlacık izolasyonunun temel kuralıdır (öksürük ve hapşırma ile saçılan damlacıkları kaynağında tutmak için).",
+        "id": "k1-36-fc30"
+      }
+    ],
     "questionCount": 0,
     "flashcardCount": 30,
-    "totalSlides": 100,
-    "themeColor": "#0284c7",
-    "category": "Enfeksiyon Hastalıkları",
+    "sourcePdf": "Kurul 1 Not 36, Sayfa 1-2; Enfeksiyon Hastalıkları ve Klinik Mikrobiyoloji Ders Notları",
     "isNew": true,
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "cardCount": 30,
+    "firstSlideNumber": 1
   },
   {
     "deckId": "k1p-k1-37-glomeruler-hastaliklar-nefrotik-sendrom",
@@ -146722,15 +147659,325 @@
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "instructor": "Prof. Dr. Hikmet Keleş",
+    "audioFile": "",
+    "audioDuration": "",
+    "confidence": "high",
+    "themeColor": "#e11d48",
+    "matchedNoteId": "k1-37-glomeruler-hastaliklar-nefrotik-sendrom",
+    "matchedNoteTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom",
     "overview": "Glomerüler filtrasyon bariyerinin anatomik katmanları (fenestre endotel, heparan sülfatlı GBM, podosit slit diyaframı); nefrotik sendromun klinik tanımı ve kardinal dörtlüsü (erişkinde ≥3,5 g/gün ağır proteinüri, hipoalbüminemi, generalize ödem, hiperlipidemi ve idrarda polarize ışıkta Malta haçı veren lipidüri); proteinüri mekanizması (yük ve boyut seçiciliği); ödem patofizyolojisi (underfill ve overfill teorileri); glomerüler hasar mekanizmaları (dolaşan, in situ ve anti-GBM) ve İF desenleri (granüler vs lineer); renal sendromların ayrımı (nefrotik vs nefritik vs ABH vs KBH); primer ve sekonder nefrotik nedenler; Minimal Değişiklik Hastalığı (çocuklarda en sık, seçici proteinüri, LM normal, İF negatif, EM'de ayak uzantılarında silinme, steroid yanıtı >%90, nüks >%60-70); Fokal Segmental Glomeruloskleroz (FSGS: bir hasar paterni, erişkinde %30, podositopati ve denüdasyon, LM'de segmental skleroz ve köpüklü makrofajlar, İF'de nonspesifik IgM/C3 tuzaklanması, nonselektif proteinüri, steroid direnci, 10 yılda ≥%50 SDBY, greftte nüks); Membranöz Nefropati (30-60 yaş erişkin, sinsi seyir, primer olguların %80'inde anti-PLA2R otoantikorları, sekonder nedenler: Hepatit B, karsinomlar, altın/penisilamin, Lupus Sınıf V; in situ IgG4 immün kompleksleri, sublitik C5b-9 ile enflamasyonsuz proteinüri; LM'de difüz GBM kalınlaşması, gümüşte spikes, İF'de muntazam granüler IgG4/C3, EM'de 'spike and dome', steroide yanıtsızlık, %40 SDBY); Membranoproliferatif Glomerulonefrit (MPGN Tip I: membran kalınlaşması + proliferasyon, mikst nefritik-nefrotik, Hepatit C ve kriyoglobülinemi, lobülasyon, mezangial interpozisyona bağlı çift kontur / tramvay rayı, subendotelyal depozitler, düşük C3/C4); C3 Glomerulopatisi ve Yoğun Birikim Hastalığı (DDD: alternatif kompleman yolu kontrolsüzlüğü, C3NeF otoantikoru, Faktör H kusurları, lamina densada kurdele/şerit benzeri aşırı dans GBM, İF'de izole güçlü C3 [antikor yok], düşük C3 normal C4, nakilde %85 nüks); Sekonder Nefrotik Sendromlar (Diyabetik nefropati: AGE, hiperfiltrasyon, diffüz skleroz, Kimmelstiel-Wilson nodülleri; Amiloidoz: AL ve AA, Kongo kırmızısı ile polarize ışıkta elma yeşili çift kırılma; Lupus Sınıf V: full-house); Nefrotik Komplikasyonlar (idrarla Antitrombin III kaybıyla tromboemboli ve renal ven trombozu; IgG kaybıyla kapsüllü bakteri ve S. pneumoniae peritoniti; vitamin D ve transferrin kaybı); Üçlü mikroskopi karşılaştırma matrisi, çocuk vs erişkin biyopsi algoritması ve klinik vaka çözümleri 100 adımda kapsamlı analizi.",
+    "highYieldPearls": [
+      "Nefrotik sendromun kardinal dörtlüsü: Ağır proteinüri (erişkinde ≥3,5 g/gün), hipoalbüminemi (<3 g/dL), generalize ödem ve hiperlipidemi/lipidüridir (idrarda polarize ışıkta Malta haçı).",
+      "Glomerüler filtrasyon bariyerinde negatif elektrik yükünü GBM heparan sülfatı; moleküler boyut bariyerini ise podosit yarık diyaframındaki nefrin ve podosin sağlar.",
+      "Çocuklarda nefrotik sendromun en sık nedeni Minimal Değişiklik Hastalığıdır (%90+); seçici proteinüri vardır, ışık mikroskopisi normaldir, İF negatiftir, EM'de ayaksı uzantılarda yaygın silinme izlenir, steroid yanıtı >%90'dır.",
+      "Fokal Segmental Glomeruloskleroz (FSGS) tek bir hastalık değil hasar paternidir; LM'de segmental skleroz ve köpüklü makrofajlar, İF'de mekanik IgM/C3 tuzaklanması görülür; nonselektif proteinüri, steroid direnci ve 10 yılda ≥%50 SDBY riski vardır.",
+      "Membranöz nefropati 30-60 yaş erişkinde en sık primer nedendir; primer olguların ≈%80'inde podosit fosfolipaz A2 reseptörüne (PLA2R) karşı IgG4 otoantikorları saptanır.",
+      "Membranöz nefropatide LM'de difüz GBM kalınlaşması, gümüş boyasında spikes, İF'de muntazam granüler IgG4/C3 ve elektron mikroskobunda patognomonik 'spike and dome' görünümü izlenir; tek başına steroide yanıt minimaldir.",
+      "MPGN Tip I'de subendotelyal immün kompleksler, mezangial interpozisyon ve gümüş boyasında 'tramvay rayı' (çift kontur) görünümü tipiktir; sıklıkla kronik Hepatit C ve kriyoglobülinemi eşlik eder, serum C3 ve C4 düşüktür.",
+      "C3 Glomerulopatisi ve Yoğun Birikim Hastalığı (DDD) alternatif kompleman yolu regülasyon defektidir; C3NeF otoantikoru C3 konvertazı stabilize eder; EM'de şerit benzeri aşırı dans GBM, İF'de izole güçlü C3 görülür; nakilde nüks %85'tir.",
+      "Sekonder nefrotik nedenlerde: Diyabetik nefropatide PAS-pozitif Kimmelstiel-Wilson nodülleri; Amiloidozda Kongo kırmızısı ile polarize ışıkta parlak elma yeşili çift kırılma patognomoniktir.",
+      "Nefrotik komplikasyonlar: İdrarla Antitrombin III kaybı ve fibrinojen artışı tromboemboliye (renal ven trombozu); IgG ve kompleman kaybı kapsüllü bakteri (Streptococcus pneumoniae) peritonitine yol açar."
+    ],
+    "totalSlides": 100,
     "slideCount": 100,
+    "matchedPastQuestionsCount": 0,
+    "category": "Tıbbi Patoloji",
+    "programDate": "2026-2027",
+    "kazanimlar": [
+      "Glomerüler filtrasyon bariyerinin üç anatomik katmanını ve yük/boyut seçiciliğinin moleküler temellerini açıklar.",
+      "Nefrotik sendromun klinik tanımını, erişkinde ≥3,5 g/gün proteinüri eşiğini ve kardinal dört bileşenini açıklar.",
+      "Nefrotik ödem patofizyolojisini (underfill ve overfill hipotezleri) ve lipidüri mekanizmasını (Malta haçı) kavrar.",
+      "Glomerüler hasarın immünolojik mekanizmalarını (dolaşan, in situ, anti-GBM) ve İF desenlerini (granüler vs lineer) ayırt eder.",
+      "Minimal Değişiklik Hastalığının epidemiyolojisini, seçici proteinüri özelliğini, normal LM ve negatif İF bulgularını kavrar.",
+      "MDH'de elektron mikroskopisi bulgusunu (ayak uzantılarında silinme), steroid yanıtını (%90+) ve nüks seyrini açıklar.",
+      "FSGS'nin tanımını (fokal, segmental hasar paterni), primer ve sekonder formlarını (HIVAN, heroin, hiperfiltrasyon, obezite, genetik) sınıflandırır.",
+      "FSGS morfolojisini (segmental skleroz, köpüklü makrofajlar, nonspesifik IgM/C3 tuzaklanması, nonselektif proteinüri) ve kötü prognozunu kavrar.",
+      "Membranöz nefropatinin demografisini (30-60 yaş), anti-PLA2R otoantikorunun rolünü ve sekonder nedenlerini (Hepatit B, karsinomlar, altın) analiz eder.",
+      "Membranöz nefropatinin mikroskobik damgalarını (difüz GBM kalınlaşması, gümüşte spikes, granüler IgG4/C3, EM'de spike and dome) ve doğal seyrini açıklar.",
+      "MPGN Tip I patogenezini (subendotelyal kompleksler, Hepatit C), mikst sendrom kliniğini ve tramvay rayı (çift kontur) morfolojisini kavrar.",
+      "C3 Glomerulopatisini (alternatif yol aktivasyonu, C3NeF otoantikoru, DDD'de şerit GBM, izole C3 pozitifliği, nakilde %85 nüks) immün komplekslerden ayırt eder.",
+      "Sekonder nefrotik sendromları (diyabetik Kimmelstiel-Wilson nodülleri, amiloidozda elma yeşili çift kırılma, Lupus Sınıf V full-house) ve sistemik komplikasyonları (tromboemboli, pnömokok sepsisi) açıklar."
+    ],
+    "questions": [],
+    "flashcards": [
+      {
+        "id": "k1-37-fc01",
+        "category": "Tanım",
+        "front": "Nefrotik sendromun dört kardinal klinik ve laboratuvar bileşeni nedir?",
+        "hint": "Protein kaçağı ve ödem zinciri",
+        "back": "Ağır proteinüri (≥3,5 g/gün), hipoalbüminemi, generalize ödem, hiperlipidemi ve lipidüri.",
+        "question": "Nefrotik sendromun dört kardinal klinik ve laboratuvar bileşeni nedir?",
+        "answer": "Ağır proteinüri (≥3,5 g/gün), hipoalbüminemi, generalize ödem, hiperlipidemi ve lipidüri."
+      },
+      {
+        "id": "k1-37-fc02",
+        "category": "Patoloji",
+        "front": "Böbrek immünfloresan mikroskopisinde granüler ve lineer patern neyi gösterir?",
+        "hint": "Noktalı vs düz çizgi",
+        "back": "Granüler patern dolaşan veya in situ immün kompleks birikimini; lineer patern ise doğrudan anti-GBM antikorlarını gösterir.",
+        "question": "Böbrek immünfloresan mikroskopisinde granüler ve lineer patern neyi gösterir?",
+        "answer": "Granüler patern dolaşan veya in situ immün kompleks birikimini; lineer patern ise doğrudan anti-GBM antikorlarını gösterir."
+      },
+      {
+        "id": "k1-37-fc03",
+        "category": "Mekanizma",
+        "front": "Nefrotik sendromda lipidüri bulgusu olan oval yağ cisimcikleri polarize ışıkta nasıl görünür?",
+        "hint": "Özel haç deseni",
+        "back": "Kolesterol esterlerinin çift kırılması sonucu 'Malta haçı' (Maltese cross) paterni verir.",
+        "question": "Nefrotik sendromda lipidüri bulgusu olan oval yağ cisimcikleri polarize ışıkta nasıl görünür?",
+        "answer": "Kolesterol esterlerinin çift kırılması sonucu 'Malta haçı' (Maltese cross) paterni verir."
+      },
+      {
+        "id": "k1-37-fc04",
+        "category": "Etiyoloji",
+        "front": "Erişkinlerde ve çocuklarda sekonder nefrotik sendrom yapan klasik ilaç/madde örnekleri nelerdir?",
+        "hint": "Metal ve bağımlılık ajanı",
+        "back": "Altın tuzları, penisilamin, intravenöz heroin ve NSAİİ.",
+        "question": "Erişkinlerde ve çocuklarda sekonder nefrotik sendrom yapan klasik ilaç/madde örnekleri nelerdir?",
+        "answer": "Altın tuzları, penisilamin, intravenöz heroin ve NSAİİ."
+      },
+      {
+        "id": "k1-37-fc05",
+        "category": "Primer NS",
+        "front": "Minimal Değişiklik Hastalığı en sık hangi yaş grubunda görülür ve proteinüri tipi nasıldır?",
+        "hint": "Çocuk ve seçici albümin",
+        "back": "Çocuklarda en sık nedendir (%90+); proteinüri seçicidir (ağırlıkla albümin kaybı).",
+        "question": "Minimal Değişiklik Hastalığı en sık hangi yaş grubunda görülür ve proteinüri tipi nasıldır?",
+        "answer": "Çocuklarda en sık nedendir (%90+); proteinüri seçicidir (ağırlıkla albümin kaybı)."
+      },
+      {
+        "id": "k1-37-fc06",
+        "category": "Morfoloji",
+        "front": "Minimal Değişiklik Hastalığında ışık ve immünfloresan mikroskopisi bulguları nasıldır?",
+        "hint": "Normal LM, negatif İF",
+        "back": "Işık mikroskopisinde glomerüller tamamen normaldir; immünfloresan mikroskopisi negatiftir (birikim yok).",
+        "question": "Minimal Değişiklik Hastalığında ışık ve immünfloresan mikroskopisi bulguları nasıldır?",
+        "answer": "Işık mikroskopisinde glomerüller tamamen normaldir; immünfloresan mikroskopisi negatiftir (birikim yok)."
+      },
+      {
+        "id": "k1-37-fc07",
+        "category": "Ultra-yapı",
+        "front": "Minimal Değişiklik Hastalığında elektron mikroskobisindeki patognomonik lezyon nedir?",
+        "hint": "Ayak uzantısı düzleşmesi",
+        "back": "Podosit ayak uzantılarının yaygın silinmesi (effacement / füzyon); immün depozit yoktur.",
+        "question": "Minimal Değişiklik Hastalığında elektron mikroskobisindeki patognomonik lezyon nedir?",
+        "answer": "Podosit ayak uzantılarının yaygın silinmesi (effacement / füzyon); immün depozit yoktur."
+      },
+      {
+        "id": "k1-37-fc08",
+        "category": "Tedavi & Seyir",
+        "front": "Çocukluk çağı MDH olgularında kortikosteroid yanıtı ve nüks oranı nedir?",
+        "hint": "%90 yanıt, %60-70 nüks",
+        "back": "Çocukların %90'ından fazlası steroide tam yanıt verir; ancak yanıt verenlerin %60-70'inde tekrarlayan nüksler görülür.",
+        "question": "Çocukluk çağı MDH olgularında kortikosteroid yanıtı ve nüks oranı nedir?",
+        "answer": "Çocukların %90'ından fazlası steroide tam yanıt verir; ancak yanıt verenlerin %60-70'inde tekrarlayan nüksler görülür."
+      },
+      {
+        "id": "k1-37-fc09",
+        "category": "Etiyoloji",
+        "front": "FSGS'nin sekonder adaptif, viral ve genetik nedenlerine örnekler nelerdir?",
+        "hint": "HIV, obezite, podosin",
+        "back": "Adaptif: tek böbrek, obezite (hiperfiltrasyon); Viral: HIV (HIVAN); İlaç: heroin; Genetik: nefrin (NPHS1) ve podosin (NPHS2) mutasyonları.",
+        "question": "FSGS'nin sekonder adaptif, viral ve genetik nedenlerine örnekler nelerdir?",
+        "answer": "Adaptif: tek böbrek, obezite (hiperfiltrasyon); Viral: HIV (HIVAN); İlaç: heroin; Genetik: nefrin (NPHS1) ve podosin (NPHS2) mutasyonları."
+      },
+      {
+        "id": "k1-37-fc10",
+        "category": "Morfoloji",
+        "front": "FSGS'de ışık mikroskopisinde sklerotik lezyonlar içinde görülen tipik hücreler hangileridir?",
+        "hint": "Lipid yutan makrofajlar",
+        "back": "Lipid yüklü köpüklü makrofajlar (foam cells).",
+        "question": "FSGS'de ışık mikroskopisinde sklerotik lezyonlar içinde görülen tipik hücreler hangileridir?",
+        "answer": "Lipid yüklü köpüklü makrofajlar (foam cells)."
+      },
+      {
+        "id": "k1-37-fc11",
+        "category": "İmmünoloji",
+        "front": "FSGS'de immünfloresan incelemede saptanan IgM ve C3 boyanmasının mekanizması nedir?",
+        "hint": "Nonspesifik tuzaklanma",
+        "back": "Gerçek immün kompleks değil; büyük plazma proteinlerinin sklerotik skar dokusunda mekanik olarak tuzaklanmasıdır.",
+        "question": "FSGS'de immünfloresan incelemede saptanan IgM ve C3 boyanmasının mekanizması nedir?",
+        "answer": "Gerçek immün kompleks değil; büyük plazma proteinlerinin sklerotik skar dokusunda mekanik olarak tuzaklanmasıdır."
+      },
+      {
+        "id": "k1-37-fc12",
+        "category": "Prognoz",
+        "front": "FSGS'nin klinik gidişi, steroid yanıtı ve 10 yıllık son dönem böbrek yetmezliği riski nedir?",
+        "hint": "Steroid direnci, %50 SDBY",
+        "back": "Steroid yanıtı zayıftır (steroid direnci sıktır); hastaların en az %50'si 10 yıl içinde son dönem böbrek yetmezliğine ilerler.",
+        "question": "FSGS'nin klinik gidişi, steroid yanıtı ve 10 yıllık son dönem böbrek yetmezliği riski nedir?",
+        "answer": "Steroid yanıtı zayıftır (steroid direnci sıktır); hastaların en az %50'si 10 yıl içinde son dönem böbrek yetmezliğine ilerler."
+      },
+      {
+        "id": "k1-37-fc13",
+        "category": "Etiyoloji",
+        "front": "Primer membranöz nefropatili olguların yaklaşık %80'inde saptanan hedef podosit otoantijeni nedir?",
+        "hint": "Podosit reseptörü",
+        "back": "Fosfolipaz A2 Reseptörü (PLA2R).",
+        "question": "Primer membranöz nefropatili olguların yaklaşık %80'inde saptanan hedef podosit otoantijeni nedir?",
+        "answer": "Fosfolipaz A2 Reseptörü (PLA2R)."
+      },
+      {
+        "id": "k1-37-fc14",
+        "category": "Sekonder Neden",
+        "front": "Membranöz nefropatinin en sık enfeksiyöz ve en sık paraneoplastik sekonder nedenleri nelerdir?",
+        "hint": "HBV ve karsinomlar",
+        "back": "En sık enfeksiyöz: Kronik Hepatit B virüsü; En sık paraneoplastik: İleri yaşta solid karsinomlar (akciğer, kolon, mide) ve KLL.",
+        "question": "Membranöz nefropatinin en sık enfeksiyöz ve en sık paraneoplastik sekonder nedenleri nelerdir?",
+        "answer": "En sık enfeksiyöz: Kronik Hepatit B virüsü; En sık paraneoplastik: İleri yaşta solid karsinomlar (akciğer, kolon, mide) ve KLL."
+      },
+      {
+        "id": "k1-37-fc15",
+        "category": "İmmünoloji",
+        "front": "Membranöz nefropatide antikor izotipi ve kompleman aracılı hasar mekanizması nasıldır?",
+        "hint": "IgG4 ve sublitik C5b-9",
+        "back": "Baskın antikor IgG4 izotipindedir; sublitik C5b-9 kompleksi aracılığıyla enflamasyonsuz ağır proteinüri oluşturur.",
+        "question": "Membranöz nefropatide antikor izotipi ve kompleman aracılı hasar mekanizması nasıldır?",
+        "answer": "Baskın antikor IgG4 izotipindedir; sublitik C5b-9 kompleksi aracılığıyla enflamasyonsuz ağır proteinüri oluşturur."
+      },
+      {
+        "id": "k1-37-fc16",
+        "category": "Morfoloji",
+        "front": "Membranöz nefropatinin ışık, gümüş boyası ve İF mikroskopisi bulguları nelerdir?",
+        "hint": "Difüz kalınlaşma ve spikes",
+        "back": "Işık: Difüz GBM kalınlaşması (hiperhücrelilik yok); Gümüş boyası: GBM çıkıntıları (spikes); İF: GBM boyunca muntazam granüler IgG ve C3.",
+        "question": "Membranöz nefropatinin ışık, gümüş boyası ve İF mikroskopisi bulguları nelerdir?",
+        "answer": "Işık: Difüz GBM kalınlaşması (hiperhücrelilik yok); Gümüş boyası: GBM çıkıntıları (spikes); İF: GBM boyunca muntazam granüler IgG ve C3."
+      },
+      {
+        "id": "k1-37-fc17",
+        "category": "Ultra-yapı",
+        "front": "Membranöz nefropatinin elektron mikroskobisindeki karakteristik görünümü nedir?",
+        "hint": "Spike and dome",
+        "back": "Subepitelyal elektron-yoğun birikintiler ve aralardaki GBM çıkıntılarının oluşturduğu 'spike and dome' görünümü.",
+        "question": "Membranöz nefropatinin elektron mikroskobisindeki karakteristik görünümü nedir?",
+        "answer": "Subepitelyal elektron-yoğun birikintiler ve aralardaki GBM çıkıntılarının oluşturduğu 'spike and dome' görünümü."
+      },
+      {
+        "id": "k1-37-fc18",
+        "category": "Klinik & Prognoz",
+        "front": "Membranöz nefropatinin steroid yanıtı ve uzun dönem böbrek yetmezliği riski nedir?",
+        "hint": "Minimal steroid yanıtı, %40 SDBY",
+        "back": "Kortikosteroidlere yanıt minimaldir; olguların yaklaşık %40'ı 2-20 yıl içinde son dönem böbrek yetmezliğine ilerler.",
+        "question": "Membranöz nefropatinin steroid yanıtı ve uzun dönem böbrek yetmezliği riski nedir?",
+        "answer": "Kortikosteroidlere yanıt minimaldir; olguların yaklaşık %40'ı 2-20 yıl içinde son dönem böbrek yetmezliğine ilerler."
+      },
+      {
+        "id": "k1-37-fc19",
+        "category": "Morfoloji",
+        "front": "MPGN Tip I'de ışık mikroskobundaki karakteristik bazal membran lezyonu ve hücresel mekanizması nedir?",
+        "hint": "Tramvay rayı ve interpozisyon",
+        "back": "Tramvay rayı (çift kontur) görünümüdür; mezangial hücre uzantılarının GBM ile endotel arasına interpozisyonu ve yeni bazal membran sentezlemesiyle oluşur.",
+        "question": "MPGN Tip I'de ışık mikroskobundaki karakteristik bazal membran lezyonu ve hücresel mekanizması nedir?",
+        "answer": "Tramvay rayı (çift kontur) görünümüdür; mezangial hücre uzantılarının GBM ile endotel arasına interpozisyonu ve yeni bazal membran sentezlemesiyle oluşur."
+      },
+      {
+        "id": "k1-37-fc20",
+        "category": "Ultra-yapı & İF",
+        "front": "MPGN Tip I'de elektron-yoğun depozitlerin lokalizasyonu ve İF bulgusu nasıldır?",
+        "hint": "Subendotelyal depozit",
+        "back": "EM'de subendotelyal ve mezangial elektron-yoğun depozitler; İF'de kaba granüler IgG ve C3 birikimi görülür.",
+        "question": "MPGN Tip I'de elektron-yoğun depozitlerin lokalizasyonu ve İF bulgusu nasıldır?",
+        "answer": "EM'de subendotelyal ve mezangial elektron-yoğun depozitler; İF'de kaba granüler IgG ve C3 birikimi görülür."
+      },
+      {
+        "id": "k1-37-fc21",
+        "category": "Etiyoloji & Lab",
+        "front": "MPGN Tip I'in en sık sekonder nedeni ve serum kompleman profili nasıldır?",
+        "hint": "Hepatit C ve düşük C3/C4",
+        "back": "En sık sekonder neden kronik Hepatit C (ve kriyoglobülinemi); klasik kompleman yolu tüketimi nedeniyle serum C3 ve C4 düzeyleri düşüktür.",
+        "question": "MPGN Tip I'in en sık sekonder nedeni ve serum kompleman profili nasıldır?",
+        "answer": "En sık sekonder neden kronik Hepatit C (ve kriyoglobülinemi); klasik kompleman yolu tüketimi nedeniyle serum C3 ve C4 düzeyleri düşüktür."
+      },
+      {
+        "id": "k1-37-fc22",
+        "category": "İmmünoloji",
+        "front": "C3 Glomerulopatisinde temel patogenetik mekanizma ve sorumlu otoantikor nedir?",
+        "hint": "Alternatif yol ve C3NeF",
+        "back": "Alternatif kompleman yolunun kontrolsüz aktivasyonu; C3 konvertazı (C3bBb) stabilize eden C3 Nefritik Faktör (C3NeF) otoantikoru.",
+        "question": "C3 Glomerulopatisinde temel patogenetik mekanizma ve sorumlu otoantikor nedir?",
+        "answer": "Alternatif kompleman yolunun kontrolsüz aktivasyonu; C3 konvertazı (C3bBb) stabilize eden C3 Nefritik Faktör (C3NeF) otoantikoru."
+      },
+      {
+        "id": "k1-37-fc23",
+        "category": "Ultra-yapı & İF",
+        "front": "Yoğun Birikim Hastalığında (DDD) elektron mikroskopisi ve İF bulgusu nedir?",
+        "hint": "Şerit GBM ve izole C3",
+        "back": "EM: Lamina densada şerit/kurdele benzeri aşırı elektron-yoğun transformasyon; İF: Yalnızca güçlü C3 pozitifliği, IgG ve C1q/C4 negatifliği.",
+        "question": "Yoğun Birikim Hastalığında (DDD) elektron mikroskopisi ve İF bulgusu nedir?",
+        "answer": "EM: Lamina densada şerit/kurdele benzeri aşırı elektron-yoğun transformasyon; İF: Yalnızca güçlü C3 pozitifliği, IgG ve C1q/C4 negatifliği."
+      },
+      {
+        "id": "k1-37-fc24",
+        "category": "Laboratuvar & Nakil",
+        "front": "C3 Glomerulopatisinde serum kompleman profili ve böbrek nakli sonrası nüks riski nedir?",
+        "hint": "Düşük C3, normal C4, %85 nüks",
+        "back": "Serum C3 düzeyi belirgin düşük, C4 düzeyi normaldir; böbrek nakli sonrası greftte nüks oranı %85'e varır.",
+        "question": "C3 Glomerulopatisinde serum kompleman profili ve böbrek nakli sonrası nüks riski nedir?",
+        "answer": "Serum C3 düzeyi belirgin düşük, C4 düzeyi normaldir; böbrek nakli sonrası greftte nüks oranı %85'e varır."
+      },
+      {
+        "id": "k1-37-fc25",
+        "category": "Sekonder Morfoloji",
+        "front": "Diyabetik nefropatinin ve amiloidozun karakteristik mikroskobik tanı kriterleri nelerdir?",
+        "hint": "Kimmelstiel-Wilson ve elma yeşili",
+        "back": "Diyabette PAS-pozitif Kimmelstiel-Wilson nodülleri; amiloidozda Kongo kırmızısı ile polarize ışıkta parlak elma yeşili çift kırılma.",
+        "question": "Diyabetik nefropatinin ve amiloidozun karakteristik mikroskobik tanı kriterleri nelerdir?",
+        "answer": "Diyabette PAS-pozitif Kimmelstiel-Wilson nodülleri; amiloidozda Kongo kırmızısı ile polarize ışıkta parlak elma yeşili çift kırılma."
+      },
+      {
+        "id": "k1-37-fc26",
+        "category": "Lupus Nefriti",
+        "front": "Sistemik lupus eritematozusta nefrotik sendrom ile seyreden lupus nefriti sınıfı ve İF özelliği nedir?",
+        "hint": "Sınıf V ve full-house",
+        "back": "Lupus nefriti Sınıf V (Membranöz lupus nefriti); İF'de tüm antikor ve komplemanların pozitifleştiği 'full-house' paterni izlenir.",
+        "question": "Sistemik lupus eritematozusta nefrotik sendrom ile seyreden lupus nefriti sınıfı ve İF özelliği nedir?",
+        "answer": "Lupus nefriti Sınıf V (Membranöz lupus nefriti); İF'de tüm antikor ve komplemanların pozitifleştiği 'full-house' paterni izlenir."
+      },
+      {
+        "id": "k1-37-fc27",
+        "category": "Komplikasyonlar",
+        "front": "Nefrotik sendromda tromboemboli (renal ven trombozu) ve ağır enfeksiyon eğiliminin temel nedenleri nelerdir?",
+        "hint": "AT-III kaybı ve IgG kaybı",
+        "back": "Tromboemboli idrarla Antitrombin III kaybı ve artan fibrinojenden; enfeksiyon eğilimi ise idrarla IgG ve kompleman opsoninlerinin kaybından kaynaklanır.",
+        "question": "Nefrotik sendromda tromboemboli (renal ven trombozu) ve ağır enfeksiyon eğiliminin temel nedenleri nelerdir?",
+        "answer": "Tromboemboli idrarla Antitrombin III kaybı ve artan fibrinojenden; enfeksiyon eğilimi ise idrarla IgG ve kompleman opsoninlerinin kaybından kaynaklanır."
+      },
+      {
+        "id": "k1-37-fc28",
+        "category": "Ayırıcı Tanı",
+        "front": "Primer nefrotik sendromların (MDH, FSGS, Membranöz, MPGN I) EM ayırıcı özellikleri nelerdir?",
+        "hint": "EM depozit haritası",
+        "back": "MDH: Depozitsiz ayak silinmesi; FSGS: Podosit denüdasyonu ve segmental skleroz; Membranöz: Subepitelyal 'spike and dome'; MPGN I: Subendotelyal depozit ve interpozisyon.",
+        "question": "Primer nefrotik sendromların (MDH, FSGS, Membranöz, MPGN I) EM ayırıcı özellikleri nelerdir?",
+        "answer": "MDH: Depozitsiz ayak silinmesi; FSGS: Podosit denüdasyonu ve segmental skleroz; Membranöz: Subepitelyal 'spike and dome'; MPGN I: Subendotelyal depozit ve interpozisyon."
+      },
+      {
+        "id": "k1-37-fc29",
+        "category": "İmmünfloresan",
+        "front": "Membranöz nefropati, C3 Glomerulopatisi ve Lupus Sınıf V İF desenleri nasıldır?",
+        "hint": "Granüler vs izole C3 vs full-house",
+        "back": "Membranöz: Muntazam granüler IgG4/C3; C3 Glomerulopatisi: Yalnızca izole güçlü C3 pozitifliği (antikor yok); Lupus Sınıf V: Tüm antikor ve komplemanların yandığı 'full-house' paterni.",
+        "question": "Membranöz nefropati, C3 Glomerulopatisi ve Lupus Sınıf V İF desenleri nasıldır?",
+        "answer": "Membranöz: Muntazam granüler IgG4/C3; C3 Glomerulopatisi: Yalnızca izole güçlü C3 pozitifliği (antikor yok); Lupus Sınıf V: Tüm antikor ve komplemanların yandığı 'full-house' paterni."
+      },
+      {
+        "id": "k1-37-fc30",
+        "category": "Genel Klinik",
+        "front": "Çocuk ve erişkin nefrotik sendromunda en sık primer nedenler ve ilk basamak biyopsi kararı nedir?",
+        "hint": "Çocukta steroid, erişkinde biyopsi",
+        "back": "Çocukta en sık MDH'dir, biyopsisiz ampirik steroid başlanır; Erişkinde en sık FSGS ve Membranözdür, tanı anında biyopsi kuraldır.",
+        "question": "Çocuk ve erişkin nefrotik sendromunda en sık primer nedenler ve ilk basamak biyopsi kararı nedir?",
+        "answer": "Çocukta en sık MDH'dir, biyopsisiz ampirik steroid başlanır; Erişkinde en sık FSGS ve Membranözdür, tanı anında biyopsi kuraldır."
+      }
+    ],
     "questionCount": 0,
     "flashcardCount": 30,
-    "totalSlides": 100,
-    "themeColor": "#e11d48",
-    "category": "Tıbbi Patoloji",
+    "sourcePdf": "Kurul 1 Not 37; Prof. Dr. Hikmet Keleş Ders Notu; Robbins & Kumar Basic Pathology 11. Baskı",
     "isNew": true,
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "cardCount": 30,
+    "firstSlideNumber": 1
   },
   {
     "deckId": "k1p-k1-38-glomeruler-hastaliklar-nefritik-sendrom",
@@ -146740,43 +147987,15 @@
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "instructor": "Prof. Dr. Hikmet Keleş",
-    "audioFile": "",
-    "audioDuration": "",
-    "confidence": "high",
-    "themeColor": "rose",
-    "matchedNoteId": "k1-38-glomeruler-hastaliklar-nefritik-sendrom",
-    "matchedNoteTitle": "Glomerüler Hastalıklar: Nefritik Sendrom",
-    "overview": "Nefritik Sendromun Tanımı ve Patofizyolojisi\nNefritik sendrom, glomerüler enflamasyon ile ilişkili bir klinik sendromdur. Temel özellikleri hematüri (mikroskopik veya makroskopik, çoğunlukla eritrosit silendirleri ile), genellikle subnefrotik düzeyde proteinüri, azotemi (serum üre ve kreatinin artışı), oligüri ve hipertansiyondur. Patofizyolojide glomerüler kılcal duvarlarda lökosit infiltrasyonu ve kılcal hasar gelişir; bariyer bozulması sonucu eritrositler ve proteinler filtrata geçer. Glomerüler filtrasyon hızının azalması azotemi ve oligüriye yol açar. Renin-anjiyotensin-aldosteron sistemi aktivasyonu (renin salınımı artışı, vazokonstriksiyon, sodyum-su retansiyonu) hipertansiyondan soru",
-    "highYieldPearls": [
-      "Nefritik sendrom: hematüri (eritrosit silendirleri), subnefrotik proteinüri, azotemi, oligüri, hipertansiyon",
-      "Hipertansiyon RAAS aktivasyonuna, azotemi-oligüri GFR azalmasına bağlıdır",
-      "Poststreptokokal GN: nefritojenik A grubu beta-hemolitik Streptococcus, 1-4 hafta sonra, C3 düşük/ASO yüksek, EM'de 'hump'",
-      "Çocuklarda poststreptokokal GN prognozu >%95 iyi; erişkinlerde %15-50 kronik böbrek hastalığı",
-      "RPGN: Bowman boşluğunda hilal; Tip I anti-GBM (lineer), Tip II immün kompleks, Tip III pauci-immün (ANCA)",
-      "Lupus nefriti 6 sınıf; sınıf IV en şiddetli, 'tel halka'; sınıf V membranöz → nefrotik sendrom"
-    ],
-    "totalSlides": 18,
-    "matchedPastQuestionsCount": 1,
-    "category": "Kurul 1 · 2026-2027 ders paketi",
-    "programDate": "2026-10-01",
-    "kazanimlar": [
-      "Nefritik sendromun klinik tanımını ve temel özelliklerini (hematüri, subnefrotik proteinüri, azotemi, oligüri, hipertansiyon) açıklayabilmek",
-      "Nefritik sendromun patofizyolojisini (enflamasyon, bariyer bozulması, GFR azalması, RAAS aktivasyonu) kavramak",
-      "Nefritik sendromun başlıca nedenlerini sıralayabilmek",
-      "Akut enfeksiyon sonrası (poststreptokokal) glomerulonefritin patogenezini, morfolojisini ve klinik özelliklerini açıklayabilmek",
-      "Hızlı ilerleyen (hilal) glomerulonefritin immünolojik sınıflamasını (anti-GBM, immün kompleks, pauci-immün) açıklayabilmek",
-      "RPGN morfolojisini (hilal oluşumu) ve tedavi yaklaşımını kavramak",
-      "Lupus nefritinin altı morfolojik sınıfını ve klinik önemini tanımlayabilmek",
-      "IgA nefropatisinin patogenezini, morfolojisini ve klinik özelliklerini açıklayabilmek",
-      "Kalıtsal nefritleri (Alport sendromu, ince bazal membran hastalığı) ayırt edebilmek",
-      "Alport sendromunun genetiğini, klinik ve elektron mikroskopisi bulgularını açıklayabilmek",
-      "Başlıca primer glomerüler hastalıkların ışık, immünfloresan ve elektron mikroskopisi bulgularını karşılaştırabilmek",
-      "Nefritik sendromda klinik yaklaşımı, laboratuvar-seroloji ve böbrek biyopsisinin yerini açıklayabilmek"
-    ],
-    "slideCount": 18,
-    "questionCount": 1,
-    "cardCount": 30,
-    "firstSlideNumber": 1
+    "overview": "Glomerüler enflamasyon ve kapiller hasarla karakterize Nefritik Sendromun kardinal beşlisi (hematüri ve eritrosit silendirleri, subnefrotik proteinüri, oligüri, azotemi ve RAAS aktivasyonlu hipertansiyon); nefritik ve nefrotik sendromların patofizyolojik ayrımı; Akut Poststreptokokal Glomerülonefrit (APSGN: nefritojenik A grubu beta-hemolitik streptokoklar M12 ve M49, 1-4 haftalık latent süre, SPEB/NAPlr kationik antijenleri, klasik kompleman yolundan C3 tüketimi, diffüz endokapiller proliferatif GN, lümen tıkanıklığı, İF'de kaba granüler lumpy-bumpy IgG/C3, EM'de subepitelyal hörgüçler [humps], kola rengi idrar, ASO ve Anti-DNaz B, çocukta >%95 tam iyileşme, erişkinde %15-50 KBH riski); Hızlı İlerleyen Glomerülonefrit (RPGN: Bowman boşluğunda parietal epitel, monosit ve fibrinden oluşan hilal [kresent] formasyonu, <%80 hilal kuralı ve prognoz, acil pulse steroid + sitotoksik + plazmaferez); RPGN'nin 3 immünolojik tipi (Tip I Anti-GBM / Goodpasture: Tip IV kollajen alfa-3 NC1 domainine karşı lineer IgG ve hemoptizi; Tip II İmmün Kompleks: APSGN/SLE/IgA alevlenmesi ve granüler İF; Tip III Pauci-İmmün: c-ANCA/PR3 ve p-ANCA/MPO vaskülitleri ve negatif İF); Lupus Nefriti (SLE'de en sık ölüm nedeni, ISN/RPS 6 sınıfı, Sınıf IV diffüz proliferatif nefrit, tel halka [wire-loop] lezyonları, 'full-house' İF); IgA Nefropatisi (Berger hastalığı: dünyada en sık primer GN ve tekrarlayan hematüri nedeni, 4 vuruş modeli, galaktoz eksik IgA1, alternatif ve lektin yolları, mezangial granüler IgA ve C3, enfeksiyondan 1-2 gün sonra senfarenjitik hematüri atağı, normal serum C3, %25-50 SDBY); Henoch-Schönlein Purpurası (HSP tetradı); Kalıtsal Nefritler (Tip IV kollajen bozuklukları: Alport Sendromu X'e bağlı COL4A5 mutasyonu, ilerleyici nefrit + bilateral sensörinöral sağırlık + anterior lentikonus, EM'de sepet örgüsü [basket-weave]; İnce Bazal Membran Hastalığı COL4A3/COL4A4 heterozigot mutasyonları, diffüz 150-250 nm GBM incelmesi, iyi huylu kalıcı hematüri); Nefritik laboratuvar algoritması (eritrosit silendirleri, C3 düşük vs normal, İF ve EM matrisleri) ve klinik vaka çözümleri 100 adımda kapsamlı analizi.",
+    "slideCount": 100,
+    "questionCount": 0,
+    "flashcardCount": 30,
+    "totalSlides": 100,
+    "themeColor": "#dc2626",
+    "category": "Tıbbi Patoloji",
+    "isNew": true,
+    "version": "2.0.0"
   },
   {
     "deckId": "k1p-k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy",
