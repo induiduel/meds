@@ -46,7 +46,7 @@ const orderOf = (d: DeckCatalogEntry) => {
   const m = /-k\d+-(\d+)/.exec(d.id);
   return m ? Number(m[1]) : 999;
 };
-const isPublished = (d: DeckCatalogEntry) => !!(d.isNew || String(d.version || '').startsWith('2'));
+const isPublished = (d: DeckCatalogEntry) => !!(d.isNew || String(d.version || '').startsWith('2') || (d.slideCount && d.slideCount >= 50) || ((d as any).totalSlides && (d as any).totalSlides >= 50));
 
 const stateOf = (d: DeckCatalogEntry, p: Progress) => {
   const seen = p[d.id]?.seen?.length || 0;
