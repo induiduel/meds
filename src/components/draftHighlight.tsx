@@ -35,8 +35,14 @@ export const tokens = (text: string): string[] =>
 /**
  * Kelimeleri harf eksikliği, yer değiştirmesi ve Türkçe gövdeye göre kümeleyip
  * her ortak kümeye aynı rengi atar.
+ *
+ * @param anchorIndex Renkler bu metne çapalanır: yalnızca çapadaki metinde de
+ * geçen kelimeler boyanır. Anasayfada çapa kullanıcının yazdığı metindir (0);
+ * böylece iki taslağın kendi arasındaki ortak kelimesi ("kollajen") renk alıp
+ * kullanıcıyla ilgiliymiş gibi görünmez. -1 ise eski davranıştır (herhangi
+ * iki metin arasındaki ortaklık; küme karşılaştırma ekranları için).
  */
-export const sharedWordColors = (texts: string[]): Map<string, string> => {
+export const sharedWordColors = (texts: string[], anchorIndex = -1): Map<string, string> => {
   // 1. Tüm metinlerdeki benzersiz kelimeleri topla
   const textWordSets: Array<Set<string>> = texts.map(
     (t) => new Set(tokens(t).map((w) => foldTurkish(w)))
@@ -47,11 +53,13 @@ export const sharedWordColors = (texts: string[]): Map<string, string> => {
     rep: string; // Temsilci kelime
     variants: Set<string>;
     seenInCount: number;
+    seenIn: Set<number>; // Hangi metinlerde görüldü (çapa denetimi için)
   }
 
   const clusters: WordCluster[] = [];
 
-  for (const wordSet of textWordSets) {
+  for (let docIdx = 0; docIdx < textWordSets.length; docIdx++) {
+    const wordSet = textWordSets[docIdx];
     const matchedClustersInDoc = new Set<WordCluster>();
 
     for (const word of wordSet) {
@@ -62,6 +70,7 @@ export const sharedWordColors = (texts: string[]): Map<string, string> => {
           rep: word,
           variants: new Set([word]),
           seenInCount: 0,
+          seenIn: new Set(),
         };
         clusters.push(found);
       } else {
@@ -76,12 +85,15 @@ export const sharedWordColors = (texts: string[]): Map<string, string> => {
 
     for (const c of matchedClustersInDoc) {
       c.seenInCount++;
+      c.seenIn.add(docIdx);
     }
   }
 
-  // 3. En az 2 farklı metinde görülen kümeleri frekans ve uzunluğa göre sırala
+  // 3. En az 2 farklı metinde görülen kümeleri frekans ve uzunluğa göre sırala.
+  // Çapa varsa (anasayfa) yalnızca çapadaki metni içeren kümeler renk alır.
+  const useAnchor = anchorIndex >= 0 && anchorIndex < textWordSets.length;
   const shared = clusters
-    .filter((c) => c.seenInCount >= 2)
+    .filter((c) => c.seenInCount >= 2 && (!useAnchor || c.seenIn.has(anchorIndex)))
     .sort((a, b) => b.seenInCount - a.seenInCount || b.rep.length - a.rep.length)
     .slice(0, WORD_COLORS.length);
 

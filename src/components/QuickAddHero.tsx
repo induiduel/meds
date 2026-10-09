@@ -626,11 +626,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     }
   };
 
-  // Tüm adayların ve kullanıcının metinlerindeki ortak kelime paleti (debouncedText ile optimize edildi)
+  // Tüm adayların ve kullanıcının metinlerindeki ortak kelime paleti (debouncedText ile optimize edildi).
+  // Renkler kullanıcının metnine çapalanır (çapa 0): iki taslağın kendi arasındaki
+  // ortak kelimesi boyanmaz; yalnızca kullanıcıyla örtüşen kelimeler aynı rengi alır.
   const sharedColors = useMemo(() => {
     if (realtimeMatches.length === 0 || !debouncedText) return new Map<string, string>();
     const allStems = [debouncedText, ...realtimeMatches.map((m) => questionStemText(m.question))];
-    return sharedWordColors(allStems);
+    return sharedWordColors(allStems, 0);
   }, [realtimeMatches, debouncedText]);
 
   useEffect(() => {
