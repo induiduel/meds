@@ -72,6 +72,16 @@ Bu belge 8–9 Ekim 2026'da yapılan arayüz, Öğren ders ekranı ve veri deği
 - **Anket:** ⋯ › "Ankete aç" ile cevabı olan soru da topluluk oylamasına açılır (`data/user_answer_polls.json`, kabul edilen cevapla karşılaştırılır). Oy verildikten sonra anketin başlığında "Oyun B · Değiştir": oy geri alınır, başka şık seçilir (`DELETE /api/past-question-reviews/:id/answer-votes`).
 - Yeni uç noktalar: `POST /api/past-exams/:id/ai-review`, `GET /api/past-exams/ai-review-queue`, `POST /api/past-question-reviews/:id/open-poll`, `DELETE /api/past-question-reviews/:id/answer-votes`.
 
+## Soru ekle ve küçük düzeltmeler (9 Ekim gece)
+
+- **Ana sayfa (Soru ekle) kendi tasarımında kaldı**; yalnız: üstteki kurul seçimi kaldırıldı, kurul · ders · sene · no **soru kökü yazılınca** yazma alanının altındaki şeritte belirir (`src/components/ui/MetaPicker.tsx`, "token" görünümü). Telefonda yazma alanına dokununca alan **tam ekran** açılır (üstte kapat ve Ekle, altta künye şeridi; klavyeye göre yükseklik `--vvh`), kapatınca animasyonla yerine döner; telefonun geri tuşu da kapatır, gönderim başarılı olunca kendiliğinden kapanır.
+- **Soru katkısı yap penceresi** (`ContributeModal.tsx`): "Hangi soru?" bölümü Kurul · Ders · Sene · Soru no seçicileri (ızgara, kaydırılan pencerede kırpılmaz); kurul uyarısı, benzer taslak ve AI önerisi kutuları sade tasarımda; açılış ve kapanış animasyonlu. Telefonda başlığın pencereyi ekrandan taşırması düzeltildi.
+- **Sene seçimi:** 2016–17'den bu öğretim yılına kadar (yeniden eskiye) ve "Bilmiyorum"; varsayılan bu öğretim yılı, seçim cihazda hatırlanır. Katkıyla `examYear` ("2025-2026") olarak kaydedilir; soruda yıl zaten varsa ezilmez.
+- Kurul listesinde Final'in "Bütünleme" görünmesi düzeltildi (`committeeShortLabel` önce kimliğe bakar).
+- **⋯ menüsü (tüm sayfalar):** masaüstünde belgenin üst katmanında açılır; altta yer yoksa yukarı açılır, ekrana sığacak kadar kayar. Önceden alttaki kartın arkasında kalıyordu.
+- **Kapanış animasyonları:** ortak pencere (`ui/Dialog`: Esc, dış tıklama, kapat), ⋯ menüsü (masaüstü kutu ve telefon paneli), künye seçicileri, Çıkmış filtre çekmecesi ve katkı penceresi artık kapanırken de animasyonlu (hareketi azalt açıksa kapalı).
+- **Çıkmış · karşılaştırma:** sürüm farkı (Denetleyici ↔ Eski) ve Ham ↔ Düzenlenmiş görünümü aynı "fark kâğıdı"nda: kitapçık kabarcıklı şıklar, eklenen kelimeler yeşil, çıkarılanlar kırmızı üstü çizili, değişen satırın altında soluk "önceki" hali; eski cevap kesik çizgili kabarcık. Eski sürüm kaydı yoksa "kaydı yok" yazar (önceden yanlış değişiklik sayısı gösteriyordu). Numarasız soruda rozet "?".
+
 ## Talimatlar
 
 `docs/OGREN_ETKILESIM_REHBERI.md` (yeni) ve özetleri: kök `GEMINI.md`, `PROJE_TANITIMI.md`, `AGENTS.md`; `meds/AGENTS.md` §11, `meds/CLAUDE.md`, `meds/PROJECT_INSTRUCTIONS.md`.
