@@ -2163,7 +2163,7 @@ const SlideCanvas: React.FC<{
   const spots = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
   const interactiveData = slide.interactiveElements && slide.interactiveElements.length > 0
     ? slide.interactiveElements
-    : slide.interactiveElement;
+    : slide.interactiveElement || (slide.microQuiz ? [slide.microQuiz] : null);
 
   const copyQuote = () => {
     if (!hl?.quote) return;

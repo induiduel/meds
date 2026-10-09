@@ -144,6 +144,7 @@ export function buildSteps(deck: InteractiveDeck): LessonStep[] {
     const slideNum = slide.slideNumber ?? index + 1;
     // Kullanıcı talimatı: Etkileşimli öğrenim modülünde örnek soru ve çıkmış soru gösterimi kaldırıldı.
     const questions: LessonQuestion[] = [];
+    const rawMicroQuiz = s.microQuiz ? [{ type: 'micro_quiz', ...s.microQuiz }] : [];
     const interactives = (
       Array.isArray(s.interactiveElements) && s.interactiveElements.length
         ? s.interactiveElements
@@ -151,7 +152,7 @@ export function buildSteps(deck: InteractiveDeck): LessonStep[] {
           ? s.elements
           : s.interactiveElement
             ? [s.interactiveElement]
-            : []
+            : rawMicroQuiz
     )
       .filter((e: any) => e && typeof e === 'object' && e.type)
       .map((e: any) => repairInteractive(e, s));
