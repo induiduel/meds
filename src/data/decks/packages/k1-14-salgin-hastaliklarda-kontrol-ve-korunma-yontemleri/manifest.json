@@ -1,0 +1,46 @@
+{
+  "id": "k1p-k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri",
+  "title": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+  "course": "Halk Sağlığı",
+  "instructor": "Uzm. Dr. Erkay Nacar (Halk Sağlığı ABD)",
+  "category": "Kurul 1 · 2026-2027 ders paketi",
+  "stepCount": 100,
+  "questionCount": 168,
+  "totalFlashcards": 30,
+  "totalInteractiveElements": 221,
+  "elementDistribution": {
+    "before_after_slider": {
+      "count": 38,
+      "percentage": 17.19
+    },
+    "cloze_masking": {
+      "count": 42,
+      "percentage": 19.0
+    },
+    "interactive_table": {
+      "count": 26,
+      "percentage": 11.76
+    },
+    "active_recall": {
+      "count": 30,
+      "percentage": 13.57
+    },
+    "branching_logic": {
+      "count": 25,
+      "percentage": 11.31
+    },
+    "causal_chain": {
+      "count": 23,
+      "percentage": 10.41
+    },
+    "micro_quiz": {
+      "count": 37,
+      "percentage": 16.74
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "blocks": "blocks.html",
+    "content": "content.md"
+  }
+}

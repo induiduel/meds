@@ -13971,6 +13971,87 @@
         "altin_standart"
       ],
       "updatedAt": "2026-10-09T17:59:55.795Z"
+    },
+    {
+      "id": "039bf4cb1cf9",
+      "question_id": "039bf4cb1cf9",
+      "soru_no": 293,
+      "donem": "Dönem 3",
+      "kurul": 4,
+      "kurul_adi": "TIP340",
+      "committeeId": "donem3-kurul4",
+      "discipline": "Göğüs Hastalıkları",
+      "ders_adi": "Göğüs Hastalıkları",
+      "topic": "Pnömoniler",
+      "konu_adi": "Pnömoniler",
+      "soru_koku": "Toplum kökenli pnömoni hastalarında CURB-65 skorlama sisteminde aşağıda verilen klinik parametrelerden hangisi veya hangileri YER ALMAZ?\nI. Akut konfüzyon\nII. Solunum sayısı (≥ 30/dk)\nIII. İleri yaş (≥ 65)\nIV. Nabız (Kalp hızı)",
+      "stem": "Toplum kökenli pnömoni hastalarında CURB-65 skorlama sisteminde aşağıda verilen klinik parametrelerden hangisi veya hangileri YER ALMAZ?\nI. Akut konfüzyon\nII. Solunum sayısı (≥ 30/dk)\nIII. İleri yaş (≥ 65)\nIV. Nabız (Kalp hızı)",
+      "oncul_bilgiler": [
+        "I. Akut konfüzyon",
+        "II. Solunum sayısı (≥ 30/dk)",
+        "III. İleri yaş (≥ 65)",
+        "IV. Nabız (Kalp hızı)"
+      ],
+      "secenekler": {
+        "A": "I, II, III ve IV",
+        "B": "I, II ve III",
+        "C": "II ve IV",
+        "D": "Yalnız IV",
+        "E": "I ve III"
+      },
+      "options": [
+        {
+          "key": "A",
+          "text": "I, II, III ve IV",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "I, II ve III",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "II ve IV",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "text": "Yalnız IV",
+          "isCorrect": true
+        },
+        {
+          "key": "E",
+          "text": "I ve III",
+          "isCorrect": false
+        }
+      ],
+      "dogru_secenek": "D",
+      "correctAnswer": "D",
+      "correctOption": "D",
+      "dogru_cevap_metni": "Yalnız IV",
+      "sik_analizi": {
+        "A": "YANLIŞ: I, II ve III numaralı parametreler (konfüzyon, solunum sayısı ve ileri yaş) CURB-65 skorunun temel bileşenleridir; tamamının yer almadığı iddiası yanlıştır.",
+        "B": "YANLIŞ: I (Konfüzyon), II (Solunum sayısı) ve III (İleri yaş) kriterleri sırasıyla C, R ve 65 bileşenleri olarak CURB-65 skorlamasında doğrudan kullanılır.",
+        "C": "YANLIŞ: II numaralı parametre (solunum sayısı >= 30/dk), skorun R bileşeni olup skora dahildir; IV (nabız) ise skorda yer almaz.",
+        "D": "DOĞRU: CURB-65 akronimi Konfüzyon (C), Üre (U), Solunum sayısı (R), Kan basıncı (B) ve 65 yaş kriterlerini içerir. Nabız sayısı (taşikardi) bu skorlama sisteminde yer almaz (PSI/PORT kriteridir). Dolayısıyla skorda yer almayan parametre yalnız IV numaralı nabızdır.",
+        "E": "YANLIŞ: I numaralı parametre (konfüzyon) ve III numaralı parametre (ileri yaş) CURB-65 skorunda mortalite riskini belirleyen ana parametrelerdir."
+      },
+      "tibbi_aciklama": "• CURB-65, toplum kökenli pnömoni (TKP) hastalarında 30 günlük mortalite riskini ve hastaneye/yoğun bakıma yatış endikasyonunu belirlemede kullanılan kanıta dayalı uluslararası skorlama sistemidir.\n• Kriterler (Her biri 1 puan):\n  - C (Confusion): Yeni gelişen akut konfüzyon (AMTS <= 8 veya dezoryantasyon)\n  - U (Urea): Serum üre düzeyi > 7 mmol/L (BUN > 19 mg/dL)\n  - R (Respiratory rate): Takipne / Solunum sayısı >= 30/dk\n  - B (Blood pressure): Hipotansiyon (Sistolik KB < 90 mmHg veya Diyastolik KB <= 60 mmHg)\n  - 65: Yaşın 65 ve üzerinde olması (>= 65 yaş)\n• Nabız (kalp hızı), CURB-65 kriterleri arasında YER ALMAZ. Nabız parametresi PSI (Pneumonia Severity Index / PORT) skorlamasında ve SIRS/Sepsis kriterlerinde değerlendirilir.",
+      "explanation": "• CURB-65, toplum kökenli pnömoni (TKP) hastalarında 30 günlük mortalite riskini ve hastaneye/yoğun bakıma yatış endikasyonunu belirlemede kullanılan kanıta dayalı uluslararası skorlama sistemidir.\n• Kriterler (Her biri 1 puan):\n  - C (Confusion): Yeni gelişen akut konfüzyon (AMTS <= 8 veya dezoryantasyon)\n  - U (Urea): Serum üre düzeyi > 7 mmol/L (BUN > 19 mg/dL)\n  - R (Respiratory rate): Takipne / Solunum sayısı >= 30/dk\n  - B (Blood pressure): Hipotansiyon (Sistolik KB < 90 mmHg veya Diyastolik KB <= 60 mmHg)\n  - 65: Yaşın 65 ve üzerinde olması (>= 65 yaş)\n• Nabız (kalp hızı), CURB-65 kriterleri arasında YER ALMAZ. Nabız parametresi PSI (Pneumonia Severity Index / PORT) skorlamasında ve SIRS/Sepsis kriterlerinde değerlendirilir.",
+      "cevap_gerekcesi": "CURB-65 kriterleri Konfüzyon, Üre, Solunum sayısı, Kan basıncı ve 65 yaştır. Nabız bu skorlamada yer almaz. Doğru cevap D seçeneğidir (Yalnız IV).",
+      "rationale": "CURB-65 kriterleri Konfüzyon, Üre, Solunum sayısı, Kan basıncı ve 65 yaştır. Nabız bu skorlamada yer almaz. Doğru cevap D seçeneğidir (Yalnız IV).",
+      "referans_kaynaklar": "Harrison's Principles of Internal Medicine, 21st ed., Chapter 121 (Pneumonia); British Thoracic Society (BTS) Community Acquired Pneumonia Guidelines.",
+      "degisiklik_notu": "Aşırı Koruma Muhafızı (Heuristic Guard) bypass edilerek öncüllü sınav formatına dönüştürüldü ve 5 şıklı tam gerekçeli analiz eklendi.",
+      "dogrulama_durumu": "VERIFIED_GOLD_STANDARD",
+      "status": "approved",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": true,
+      "isSuspect": false,
+      "isAmbiguous": false,
+      "isPastExam": true,
+      "supportRatio": 1,
+      "updatedAt": "2026-10-09T18:08:19.473Z"
     }
   ]
 }

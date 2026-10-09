@@ -2915,3 +2915,6 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .cx-air-l span { text-transform: none; letter-spacing: 0; font-weight: 400; }
 .cx-air-t { width: 100%; resize: vertical; min-height: 80px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-field); color: var(--color-ink); font: inherit; font-size: 15px; line-height: 1.5; outline: 0; }
 .cx-air-t:focus { border-color: var(--color-accent); background: var(--color-white); }
+@keyframes ms-menu-pop { from { opacity: 0; transform: translateY(-4px) scale(.98); } to { opacity: 1; transform: none; } }
+.ms-menu-pop { animation: ms-menu-pop .16s var(--ease-out-soft); transform-origin: top right; }
+@media (prefers-reduced-motion: reduce) { .ms-menu-pop { animation: none; } }

@@ -1,0 +1,47 @@
+{
+  "id": "k1p-k1-12-enflamasyonun-kimyasal-mediyatorleri",
+  "title": "Enflamasyonun Kimyasal Mediyatörleri",
+  "version": "2.0.0",
+  "formatVersion": "1.0",
+  "author": "Prof. Dr. Hikmet Keleş",
+  "course": "Tıbbi Patoloji",
+  "committee": "Kurul 1",
+  "slideCount": 100,
+  "questionCount": 209,
+  "totalElements": 222,
+  "elementDistribution": {
+    "cloze_masking": {
+      "count": 51,
+      "percentage": 22.97
+    },
+    "micro_quiz": {
+      "count": 31,
+      "percentage": 13.96
+    },
+    "before_after_slider": {
+      "count": 25,
+      "percentage": 11.26
+    },
+    "active_recall": {
+      "count": 43,
+      "percentage": 19.37
+    },
+    "branching_logic": {
+      "count": 24,
+      "percentage": 10.81
+    },
+    "interactive_table": {
+      "count": 25,
+      "percentage": 11.26
+    },
+    "causal_chain": {
+      "count": 23,
+      "percentage": 10.36
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "content": "content.md",
+    "blocks": "blocks.html"
+  }
+}

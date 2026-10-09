@@ -44,7 +44,7 @@ linux/
 \# raw DeepSeek exports to ingest/
 
 # Öğrenme desteleri derlemede bölünür (scripts/vite/splitLearningDecks.ts)
-src/data/decks/
+src/data/decks/items/
 
 # kişisel veri — herkese açık repoya girmez
 data/users.json

@@ -1,0 +1,1410 @@
+{
+  "id": "k1-01-dismorfolojide-genetik-terminoloji",
+  "title": "Dismorfolojide Genetik Terminoloji",
+  "discipline": "Tıbbi Genetik",
+  "committee": "Kurul 1 (Ürogenital ve Obstetrik)",
+  "instructor": "Dr. Öğr. Üyesi Serap Arslan",
+  "version": "2.0",
+  "totalSlides": 100,
+  "interactiveMetrics": {
+    "totalCount": 260,
+    "ratio": 2.6,
+    "distribution": {
+      "micro_quiz": {
+        "count": 97,
+        "percentage": 37.31
+      },
+      "cloze_masking": {
+        "count": 24,
+        "percentage": 9.23
+      },
+      "branching_logic": {
+        "count": 26,
+        "percentage": 10.0
+      },
+      "interactive_table": {
+        "count": 24,
+        "percentage": 9.23
+      },
+      "before_after_slider": {
+        "count": 24,
+        "percentage": 9.23
+      },
+      "active_recall": {
+        "count": 28,
+        "percentage": 10.77
+      },
+      "causal_chain": {
+        "count": 37,
+        "percentage": 14.23
+      }
+    }
+  },
+  "sources": {
+    "xml": "structure.xml",
+    "html": "blocks.html",
+    "markdown": "content.md"
+  },
+  "slidesIndex": [
+    {
+      "slideNumber": 1,
+      "title": "Tıbbi Genetiğin Tanımı, Amacı ve İnsan Hastalıklarındaki Rolü",
+      "badge": "Temel Disiplin",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 2,
+      "title": "Sitogenetik Disiplini: Kromozom Morfolojisi ve Klasik Karyotipleme",
+      "badge": "Laboratuvar",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "interactive_table",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 3,
+      "title": "Moleküler Genetik: DNA Sekansı, Varyantlar ve Yeni Nesil Dizileme (NGS)",
+      "badge": "Laboratuvar",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 4,
+      "title": "Klinik Genetik ve Dismorfoloji: Hasta Başı Tanı Sanatı",
+      "badge": "Klinik Yaklaşım",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 5,
+      "title": "İnsan Genomunun Büyüklüğü, Organizasyonu ve Genomik Mimarisi",
+      "badge": "Genom Mimarisi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 6,
+      "title": "Kromozomların Yapısal Mimarisi: Sentromer, Telomer ve Kromatitler",
+      "badge": "Kromozom Mimarisi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 7,
+      "title": "Sentromer Konumuna Göre Kromozom Sınıflaması",
+      "badge": "Sınıflandırma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "before_after_slider",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 8,
+      "title": "Akrosentrik Kromozomlar: Robertsonyan Translokasyonun Anatomik Yuvası",
+      "badge": "Sınav Odağı",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 9,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Genetik Disiplinleri ve Çözünürlük Matrisi",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "micro_quiz"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 10,
+      "title": "Kromozom Düzensizliklerinin Genel Sınıflaması: Sayısal ve Yapısal Değişimler",
+      "badge": "Sınıflandırma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "before_after_slider",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 11,
+      "title": "Sayısal Kromozom Anomalileri: Aneuploidi ve Trizomi/Monozomi Kavramı",
+      "badge": "Mekanizma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 12,
+      "title": "Mayotik Ayrılmama (Nondisjunction): İleri Anne Yaşı ve Trizomi 21 Mekanizması",
+      "badge": "Mekanizma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 13,
+      "title": "Mitotik Ayrılmama ve Mozaiklik (Mosaicism)",
+      "badge": "Genetik Çeşitlilik",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 14,
+      "title": "Poliploidi: Triploidi (69 Kromozom) ve Tetraploidi (92 Kromozom)",
+      "badge": "Genom Katlanması",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 15,
+      "title": "Yapısal Kromozom Düzensizlikleri: Kırıklar, Yeniden Düzenlenmeler ve Dozaj",
+      "badge": "Mekanizma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": true,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 16,
+      "title": "Resiprokal Translokasyonlar: Homolog Olmayan Kromozomlar Arası Değiş-Tokuş",
+      "badge": "Translokasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 17,
+      "title": "Robertsonyan Translokasyon: Akrosentrik Kromozomların Füzyonu",
+      "badge": "Translokasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 18,
+      "title": "İnversiyonlar: Parasentrik ve Perisentrik Ayrımı",
+      "badge": "İnversiyon",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 19,
+      "title": "Halka Kromozom (Ring Chromosome): Telomer Kaybı ve Halka Kapanması",
+      "badge": "Yapısal Anomali",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 20,
+      "title": "İzokromozom: Sentromerin Enine Bölünmesi ve Ayna Hayali Kollar",
+      "badge": "Yapısal Anomali",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 21,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Kromozom Anomalileri ve Mayotik Riskler Sentez Tablosu",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "micro_quiz"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 22,
+      "title": "Dismorfoloji Biliminin Doğuşu ve Dr. David W. Smith'in Klinik Mirası",
+      "badge": "Tarihçe & Tanım",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 23,
+      "title": "Dismorfik Özellik Nedir? Normal Varyasyon ile Patoloji Sınırı",
+      "badge": "Klinik Yaklaşım",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 24,
+      "title": "Kraniyofasiyal Muayene: Baş Şekilleri ve Kraniyosinostoz Dinamiği",
+      "badge": "Kraniyal Anatomi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 25,
+      "title": "Göz Bölgesi Dismorfolojisi: Telekantus, Hipertelorizm ve Hipotelorizm",
+      "badge": "Fasiyal Ölçüm",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 26,
+      "title": "Palpebral Çatlak Eğimi: Yukarı Çekik ve Aşağı Çekik Gözler",
+      "badge": "Fasiyal Ölçüm",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 27,
+      "title": "Kulak Dismorfolojisi: Düşük Kulak (Low-set) ve Posterior Rotasyon",
+      "badge": "Kulak Anatomisi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 28,
+      "title": "Burun, Filtrum ve Ağız Dismorfolojisi: FAS ve Sendromik İpuçları",
+      "badge": "Fasiyal Örüntü",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 29,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Kraniyofasiyal Dismorfoloji ve Ayırıcı Tanı Matrisi",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "micro_quiz"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 30,
+      "title": "Minör ve Majör Anomali Sınıflamasının Temel Felsefesi",
+      "badge": "Sınıflandırma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 31,
+      "title": "Minör Anomalilerin Sayısal Yükü: Majör Risk Sıçraması (%3 - %10 - %90)",
+      "badge": "Sınav Odağı",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "interactive_table",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 32,
+      "title": "Klasik Minör Anomali Örnekleri: Yüz ve Ekstremite İpuçları",
+      "badge": "Klinik Belirteç",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 33,
+      "title": "Majör Anomaliler: Cerrahi Müdahale, Yaşamı Tehdit ve Ağır Morbidite",
+      "badge": "Klinik Ağırlık",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 34,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Minör ve Majör Anomaliler & Risk Basamakları",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "micro_quiz"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 35,
+      "title": "İntrauterin Gelişim Periyotlarının Genel Çerçevesi: Blastogenez, Embriyogenez, Fetogenez",
+      "badge": "Gelişim Dönemleri",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 36,
+      "title": "Blastogenez Periyodu (0-4. Hafta): Hücresel Totipotensi ve 'Ya Hep Ya Hiç' Kuralı",
+      "badge": "Mekanizma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 37,
+      "title": "Blastogenez Anomalileri: Sakrokoksigeal Teratom, Sirenomeli ve Yapışık İkizler",
+      "badge": "Klinik Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 38,
+      "title": "Embriyogenez Periyodu (4-8. Hafta): Primer Organogenez ve Maksimum Hasar Penceresi",
+      "badge": "Maksimum Duyarlılık",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 39,
+      "title": "Fetogenez Periyodu (9. Hafta - Doğum): Doku Büyümesi, Matürasyon ve Deformasyonlar",
+      "badge": "Fetal Olgunlaşma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 40,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 5] İntrauterin Gelişim Dönemleri & Biyolojik Duyarlılık",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "micro_quiz"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 41,
+      "title": "Primer Tek Defektlerin 4 Temel Mekanizması: Malformasyon, Deformasyon, Disrupsiyon, Displazi",
+      "badge": "Patogenetik Sınıflama",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 42,
+      "title": "Malformasyon: İntrinsik Morfogenez Hataları ve Rekürrens Riski",
+      "badge": "Malformasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 43,
+      "title": "Deformasyon: Mekanik Dış Bası ve Geri Döndürülebilirlik",
+      "badge": "Deformasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 44,
+      "title": "Disrupsiyon: Normal Dokunun Ekstrinsik Faktörlerle Yıkımı ve Parçalanması",
+      "badge": "Disrupsiyon",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 45,
+      "title": "Displazi: Hücrelerin Doku İçinde Anormal Organizasyonu ve Histogenez Hataları",
+      "badge": "Displazi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 46,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 6] 4 Primer Defekt Tipinin Karşılaştırma Matrisi",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "micro_quiz"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 47,
+      "title": "Birlikte Görülen Anomalilerin Sınıflandırma Mantığı ve Klinik Gereklilik",
+      "badge": "Sınıflandırma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 48,
+      "title": "Potter Sekansı: Bilateral Renal Agenezisten Anüriye ve Akciğer Hipoplazisine",
+      "badge": "Klasik Sekans",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 49,
+      "title": "Pierre Robin Sekansı: Mikrognatiden Glossozise ve Yarık Damağa",
+      "badge": "Klasik Sekans",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 50,
+      "title": "Sendrom (Syndrome): Tek Bir Ortak Etiyoloji ve Çoklu Sistem Tutulumu",
+      "badge": "Sendrom",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 51,
+      "title": "Asosiasyon (Association): İstatistiki Birliktelik ve VACTERL Modeli",
+      "badge": "Asosiasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 52,
+      "title": "Kompleks ve Gelişimsel Saha Defekti (Developmental Field Defect)",
+      "badge": "Saha Defekti",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 53,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 7] Sekans, Sendrom, Asosiasyon & Kompleks Sentezi",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "micro_quiz",
+        "before_after_slider"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 54,
+      "title": "Dismorfik Hastaya Yaklaşımda Altın Standartlar ve Klinik Basamaklar",
+      "badge": "Klinik Protokol",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 55,
+      "title": "Üç Kuşak Pedigri (Soyağacı) Çiziminin Standart Sembolleri",
+      "badge": "Pedigri Analizi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 56,
+      "title": "Klasik Teratojenler I: Talidomid Embriyopatisi ve Ekstremite Defektleri",
+      "badge": "Teratoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 57,
+      "title": "Klasik Teratojenler II: Fetal Alkol Sendromu (FAS) ve Nörogelişimsel Hasar",
+      "badge": "Teratoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 58,
+      "title": "Klasik Teratojenler III: Valproik Asit, Retinoidler ve TORCH Ajanları",
+      "badge": "Teratojen Yelpazesi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 59,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 8] Teratojenler ve Kritik Embriyonik Pencereler",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "micro_quiz"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 60,
+      "title": "Multipl Konjenital Anomali ve Zihinsel Yetersizlikte Basamaklı Tanı Algoritması",
+      "badge": "Tanı Algoritması",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 61,
+      "title": "Konvansiyonel Sitogenetik (G-Bantlama Karyotip): 4-5 Mb Sınırı ve Endikasyonlar",
+      "badge": "Laboratuvar",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 62,
+      "title": "Karyotipin Teknik Kısıtlılıkları: Metafaz Zorunluluğu ve Uzun Kültür Süresi",
+      "badge": "Laboratuvar Kısıtı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "branching_logic"
+      ],
+      "hasFlashcards": true,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 63,
+      "title": "Floresan İn Situ Hibridizasyon (FISH): Bilinen Lokuslara Özgü Hızlı Mikrodelesyon Testi",
+      "badge": "Laboratuvar",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 64,
+      "title": "Kromozomal Mikrodizi (CMA / Array CGH): Birinci Basamak Genetik Test Olarak Üstünlüğü",
+      "badge": "Altın Standart",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 65,
+      "title": "CMA'nın Teknik Sınırları: Dengeli Translokasyonları ve İnversiyonları Yakalayamaması",
+      "badge": "Teknik Kısıtlılık",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 66,
+      "title": "MLPA (Multiplex Ligation-dependent Probe Amplification) ve Subtelomerik Taramalar",
+      "badge": "Moleküler Test",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 67,
+      "title": "Yeni Nesil Dizileme (NGS): Hedefe Yönelik Gen Panelleri ve Monogenik Hastalıklar",
+      "badge": "Yeni Nesil Teknoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 68,
+      "title": "Tüm Ekzom Dizileme (WES) ve Tüm Genom Dizileme (WGS): Klinik Uygulama Alanları",
+      "badge": "İleri Genomik",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 69,
+      "title": "WES'in Teknik Kısıtları: İntronlar, Triplet Tekrarları ve Devasa Varyant Yükü",
+      "badge": "Genomik Sınırlar",
+      "isCheckpoint": false,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 70,
+      "title": "Bilgisayar Destekli Tanı Veritabanları: OMIM, POSSUM, London Dysmorphology ve DECIPHER",
+      "badge": "Veritabanları",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 71,
+      "title": "Genetik Varyantların Sınıflandırılması: Patojenik, Muhtemel Patojenik, VUS ve Benign",
+      "badge": "Varyant Yorumu",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 72,
+      "title": "Genetik Testlerin Çözünürlük Hiyerarşisi: Megabazdan Tek Nükleotide",
+      "badge": "Çözünürlük Skalası",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 73,
+      "title": "Genetik Test Seçim Matrisi: Hangi Klinik Tabloda Hangi Test İstenmelidir?",
+      "badge": "Özet Kılavuz",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 74,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 9] Genetik Tanı Yöntemleri ve Çözünürlük Ezber Matrisi",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 75,
+      "title": "Sendrom Tanısını Zorlaştıran Biyolojik Faktörlerin Genel Çerçevesi",
+      "badge": "Genetik İlkeler",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 76,
+      "title": "Pleiotropi Mekanizması: Tek Bir Genetik Kusurun Birbiriyle İlişkisiz Çoklu Sistemleri Etkilemesi",
+      "badge": "Temel İlke",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 77,
+      "title": "Değişken Ekspresyon (Variable Expressivity): Aynı Genotipin Farklı Bireylerde Farklı Şiddette Belirmesi",
+      "badge": "Klinik Çeşitlilik",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 78,
+      "title": "Eksik / Azalmış Penetrans: Genotipi Taşıdığı Halde Fenotipik Olarak Sağlıklı Bireyler",
+      "badge": "Kalıtım Prensibi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 79,
+      "title": "Fenokopi: Çevresel Bir Teratojenin Genetik Sendromu Birebir Taklit Etmesi",
+      "badge": "Klinik Taklit",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 80,
+      "title": "Lokus Heterojenitesi: Farklı Kromozomlardaki Farklı Genlerin Aynı Hastalığı Yapması",
+      "badge": "Heterojenite",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 81,
+      "title": "Alilik Heterojenite: Aynı Tek Bir Gendeki Farklı Mutasyonların Farklı Tablolar Doğurması",
+      "badge": "Alilik Çeşitlilik",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 82,
+      "title": "Mozaiklik Mekanizması: Somatik Mozaiklik vs Germline (Gonadal) Mozaiklik",
+      "badge": "Mozaiklik",
+      "isCheckpoint": false,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 83,
+      "title": "Yaşa Bağlı Dinamik Fenotip Değişimi: Bebeklikten Erişkinliğe Morfolojik Dönüşüm",
+      "badge": "Klinik Seyir",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 84,
+      "title": "Epigenetik Mekanizmalar: Genomik İmprinting ve Uniparental Dizomi (UPD)",
+      "badge": "Epigenetik",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 85,
+      "title": "X Kromozomu İnaktivasyonu (Lyonizasyon): Taşıyıcı Dişilerde Fenotipik Belirtiler",
+      "badge": "Epigenetik Dozaj",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 86,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 10] Klinik Genetik Kuralları ve Mekanizmalar Sentez Tablosu",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 87,
+      "title": "Frajil X Sendromu Moleküler Mekanizması: FMR1 Geni ve Dinamik CGG Tekrar Artışı",
+      "badge": "Dinamik Mutasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 88,
+      "title": "Frajil X Premutasyon Taşıyıcıları: FXTAS ve FXPOI Sendromları",
+      "badge": "Premutasyon Kliniği",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 89,
+      "title": "Frajil X Sendromu Kardinal Kliniği: Makroorşidizm, Uzun Yüz ve Otizm",
+      "badge": "Klinik Fenotip",
+      "isCheckpoint": false,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "micro_quiz"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 90,
+      "title": "Waardenburg Sendromu: Nöral Krest Göç Kusuru, İris Heterokromisi ve Sağırlık",
+      "badge": "Klinik Sendrom",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 91,
+      "title": "Waardenburg Tipleri Ayırıcı Tanısı: Tip 1 vs Tip 2 Ayrımında Distelekanzi Kriteri",
+      "badge": "Ayırıcı Tanı",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 92,
+      "title": "Akondroplazi Moleküler Temeli: FGFR3 Geni Fonksiyon Kazanımı ve İleri Baba Yaşı",
+      "badge": "İskelet Displazisi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 93,
+      "title": "Akondroplazi Kliniği: Rizomeli, Foramen Magnum Stenozu ve Trident El",
+      "badge": "Klinik Belirteçler",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 94,
+      "title": "Williams Sendromu: 7q11.23 Mikrodelesyonu, Elastin Gen Kaybı ve Elfin Yüzü",
+      "badge": "Mikrodelesyon",
+      "isCheckpoint": false,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 95,
+      "title": "Majör Trizomilerin Ayırıcı Tanısı: Down (T21), Edwards (T18) ve Patau (T13)",
+      "badge": "Trizomi Karşılaştırma",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 96,
+      "title": "Cinsiyet Kromozomu Aneuploidileri: Turner (45,X) vs Klinefelter (47,XXY)",
+      "badge": "Gonosom Anomalileri",
+      "isCheckpoint": false,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 97,
+      "title": "Prader-Willi ve Angelman Ayırıcı Tanı Laboratuvar Testleri: Metilasyon Spesifik PCR",
+      "badge": "Laboratuvar Tanısı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 98,
+      "title": "Konjenital Anomalilerde Prevalans ve Etiyoloji Dağılımı: %50-60 Bilinmeyen Neden",
+      "badge": "Epidemiyoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 99,
+      "title": "Genetik Danışmanın 4 Temel İlkesi: Yönlendirici Olmayan (Non-directive) Yaklaşım",
+      "badge": "Klinik Etik",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 100,
+      "title": "[BÜYÜK FİNAL TEKRAR SAYFASI - MASTER CHECKPOINT 11] Tüm Dersin 10 Kritik Sınav Tuzağı ve İnteraktif Sentez Matrisi",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    }
+  ]
+}

@@ -1,0 +1,857 @@
+<?xml version="1.0" ?>
+<learningDeck id="k1p-k1-08-hucresel-yaslanma" version="2.0.0" totalSlides="100">
+  <metadata>
+    <title>Hücresel Yaşlanma (Yeni Mikro-Ders)</title>
+    <discipline>Tıbbi Patoloji</discipline>
+    <instructor>Prof. Dr. Hikmet Keleş</instructor>
+  </metadata>
+  <slides>
+    <slide number="1" badge="Yaşlanma Tanımı" isCheckpoint="false">
+      <title>Hücresel Yaşlanma Tanımı ve Biyolojik Boyutları</title>
+      <subtitle>Çoğalma kapasitesinde ve fonksiyonel rezervde zamanla ortaya çıkan ilerleyici azalma</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="2" badge="Klinik Önem" isCheckpoint="false">
+      <title>Yaşlanmanın Klinik Önemi: Kronik Hastalıkların Bağımsız Risk Faktörü</title>
+      <subtitle>Kanserler, kardiyovasküler patolojiler ve nörodejenerasyon epidemiyolojisi</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="3" badge="Moleküler Paradigma" isCheckpoint="false">
+      <title>Yaşlanma Basit Bir "Zaman Geçişi" Değildir</title>
+      <subtitle>Genetik kontrol, modüle edilebilir sinyal ağları ve evrimsel programlanma</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="4" badge="6 Temel Mekanizma" isCheckpoint="false">
+      <title>Yaşlanmayı Yöneten Başlıca 6 Moleküler Mekanizmaya Kuşbakışı</title>
+      <subtitle>DNA hasarı, replikatif senesens, proteostaz, mitokondri, besin algısı ve inflamasyon</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="5" badge="Hücre Döngüsü Blokajı" isCheckpoint="false">
+      <title>Yaşlanma ve Hücre Döngüsü Düzenleyicileri: p53, p21 ve p16INK4a</title>
+      <subtitle>CDK inhibitörleri, Rb hipofosforilasyonu ve G1/S fazı kalıcı blokajı</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="6" badge="Senesent Morfoloji" isCheckpoint="false">
+      <title>Senesent Hücre Fenotipi: Büyüme Tutukluğu ve Morfolojik Şişme</title>
+      <subtitle>Geniş yassılaşmış sitoplazma, SA-β-galaktozidaz aktivitesi ve apoptoz direnci</subtitle>
+      <interactiveElements count="3">
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="7" badge="SASP ve Toksisite" isCheckpoint="false">
+      <title>Senesens İlişkili Salgı Fenotipi (SASP): Parakrin Toksisite</title>
+      <subtitle>İnterlökinler (IL-6, IL-8), matriks metalloproteinazlar ve komşu doku harabiyeti</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="active_recall"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="8" badge="Fizyolojik vs Hızlanmış" isCheckpoint="false">
+      <title>Fizyolojik Yaşlanma vs Patolojik Hızlanmış Yaşlanma Dinamikleri</title>
+      <subtitle>Biyolojik yaş vs kronolojik yaş ve progeroid sendromların klinik dersleri</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="9" badge="Checkpoint" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 1] Hücresel Yaşlanma Kavramı ve Temel Mekanizmalar</title>
+      <subtitle>Klinik önem, moleküler 6 mekanizma, p16/p53 kilitlenmesi ve SASP'ın sentezi</subtitle>
+      <interactiveElements count="1">
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="10" badge="Senolitik Algoritma" isCheckpoint="false">
+      <title>Bölüm Sentezi ve Senesens Değerlendirme Algoritması</title>
+      <subtitle>Klinik araştırmalarda senolitik tedaviler ve hücresel temizlik stratejileri</subtitle>
+      <interactiveElements count="2">
+        <element type="branching_logic"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="11" badge="Genomik Hasar" isCheckpoint="false">
+      <title>Yaşam Boyu DNA Hasarı: Endojen ve Çevresel Tehditler</title>
+      <subtitle>Spontan deaminasyon, replikasyon hataları, ROS saldırıları ve radyasyon</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="12" badge="Kırık Tipleri" isCheckpoint="false">
+      <title>Tek Zincir vs Çift Zincir Kırıkları ve Onarım Yetersizliği</title>
+      <subtitle>Homolog rekombinasyon vs Hatalı uç birleştirme (NHEJ) ve kromozomal anomaliler</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="13" badge="Onarım Sistemleri" isCheckpoint="false">
+      <title>DNA Onarım Sistemleri: NER, BER ve Mismatch Repair</title>
+      <subtitle>Kseroderma pigmentozum, kolorektal kanser ve onarım yetersizliği spektrumu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="14" badge="Werner Sendromu" isCheckpoint="false">
+      <title>Werner Sendromu (Yetişkin Progeriası): WRN Helikaz Gen Mutasyonu</title>
+      <subtitle>Otozomal resesif RecQ DNA helikaz/ekzonükleaz defekti ve genomik çöküş</subtitle>
+      <interactiveElements count="3">
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="interactive_table"/>
+      </interactiveElements>
+    </slide>
+    <slide number="15" badge="Werner Kliniği" isCheckpoint="false">
+      <title>Werner Sendromunun Klinik Fenotipi ve Erken Komplikasyonlar</title>
+      <subtitle>Katarakt, kuş yüzü görünümü, osteoporoz, sarkomlar ve 40-50 yaşta kardiyovasküler ölüm</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="16" badge="Progeroid Sendromlar" isCheckpoint="false">
+      <title>Diğer DNA Onarım Defekti Sendromları: Bloom, Cockayne ve AT</title>
+      <subtitle>Kromozom kırılma sendromları, fotosensitivite ve immün yetmezlik spektrumu</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="active_recall"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="17" badge="Epigenetik Saat" isCheckpoint="false">
+      <title>DNA Hasarı ve Epigenetik Değişiklikler: DNA Metilasyon Saatleri</title>
+      <subtitle>CpG adacıkları metilasyonu, Horvath epigenetik saati ve kromatin erozyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="18" badge="Doku Atrofisi" isCheckpoint="false">
+      <title>Kümülatif Mutasyon Yükü, Gen Ekspresyon Değişimi ve Hücre Kaybı</title>
+      <subtitle>Kritik genlerin transkripsiyon yetersizliği, kök hücre tükenmesi ve doku atrofisi</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="19" badge="Checkpoint" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 2] DNA Hasarı ve Erken Yaşlanma Sendromları</title>
+      <subtitle>Kümülatif mutasyonlar, NHEJ, NER, Werner sendromu ve epigenetik saatin sentezi</subtitle>
+      <interactiveElements count="1">
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="20" badge="Evrimsel Sentez" isCheckpoint="false">
+      <title>DNA Onarım Kapasitesinin Ömür Belirlemedeki Rolü ve Sentez</title>
+      <subtitle>Türler arası karşılaştırmalar, fare vs insan tamir hızı ve uzun yaşamın genetik şifresi</subtitle>
+      <interactiveElements count="2">
+        <element type="branching_logic"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="21" badge="ROS Biyokimyası" isCheckpoint="false">
+      <title>Serbest Radikal ve ROS Biyokimyası: Üç Anahtar Molekül</title>
+      <subtitle>Süperoksit (O2•-), hidrojen peroksit (H2O2) ve en reaktif hidroksil radikali (•OH)</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="22" badge="Üretim Kaynakları" isCheckpoint="false">
+      <title>ROS Üretim Kaynakları: Mitokondri Kaçakları ve Lökosit Patlaması</title>
+      <subtitle>Kompleks I ve III kaçakları, NADPH oksidaz solunum patlaması ve çevresel toksinler</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="23" badge="Enzimatik Savunma" isCheckpoint="false">
+      <title>Antioksidan Enzim Savunma Sistemleri: SOD, Katalaz ve GPX</title>
+      <subtitle>Hücresel kompartımanların özelleşmiş enzimatik kalkanları ve kofaktörleri</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="24" badge="Non-Enzimatik Kalkan" isCheckpoint="false">
+      <title>Non-Enzimatik Antioksidanlar: Vitamin E, C, A ve Glutatyon</title>
+      <subtitle>Lipid fazı koruyucusu alfa-tokoferol, askorbik asit redüksiyonu ve tiyol tamponu</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="active_recall"/>
+        <element type="interactive_table"/>
+      </interactiveElements>
+    </slide>
+    <slide number="25" badge="Lipid Hasarı" isCheckpoint="false">
+      <title>ROS'un Hedefleri 1: Lipid Peroksidasyonu ve Lipofusin</title>
+      <subtitle>Karbon-karbon çift bağlarına saldırı, malondialdehit (MDA) ve telolizozomlar</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="26" badge="Protein Oksidasyonu" isCheckpoint="false">
+      <title>ROS'un Hedefleri 2: Protein Oksidasyonu ve Karbonilasyon</title>
+      <subtitle>Sülfhidril köprüleri, karbonil grupları eklenmesi ve proteolitik yıkım yetersizliği</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="27" badge="DNA Oksidasyonu" isCheckpoint="false">
+      <title>ROS'un Hedefleri 3: DNA Oksidasyonu (8-Okso-Guanin) ve Mutajenez</title>
+      <subtitle>Guanin bazının hidroksilasyonu, G:C'den T:A'ya transversiyon ve mitokondriyal genom</subtitle>
+      <interactiveElements count="3">
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="28" badge="Harman Teorisi" isCheckpoint="false">
+      <title>Serbest Radikal Yaşlanma Teorisi (Harman Teorisi) ve Kısır Döngü</title>
+      <subtitle>Denham Harman'ın 1956 hipotezi, mitokondriyal kaçaklar ve kümülatif doku erozyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="29" badge="Checkpoint" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 3] ROS, Oksidatif Stres ve Antioksidan Savunma</title>
+      <subtitle>Süperoksit, hidroksil, SOD, katalaz, GPX, MDA ve 8-OHdG'nin büyük sentezi</subtitle>
+      <interactiveElements count="1">
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="30" badge="Antioksidan Paradoks" isCheckpoint="false">
+      <title>Antioksidan Tedavilerin Yaşlanmadaki Sınırları ve Klinik Sentez</title>
+      <subtitle>Klinik çalışma paradoksları, ROS'un fizyolojik sinyal rolü ve hormezis ilkesi</subtitle>
+      <interactiveElements count="2">
+        <element type="branching_logic"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="31" badge="Mitokondri Paradoksu" isCheckpoint="false">
+      <title>Mitokondrinin Çift Rolü: Enerji Santrali ve Hasar Odağı</title>
+      <subtitle>ATP biyosentezi, hücresel metabolizma merkezi ve intraselüler ROS fabrikası</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="32" badge="mtDNA Hassasiyeti" isCheckpoint="false">
+      <title>Mitokondriyal DNA'nın (mtDNA) Özellikleri ve Hassasiyeti</title>
+      <subtitle>Histonsuz dairesel yapı, zayıf DNA onarımı ve 10-20 kat yüksek mutasyon hızı</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="33" badge="Solunum Çöküşü" isCheckpoint="false">
+      <title>Oksidatif Fosforilasyonun Bozulması: Solunum Çöküşü</title>
+      <subtitle>Kompleks I ve IV aktivite kaybı, elektron kaçağı ve hücresel enerji krizi</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="34" badge="Enerji ve Nekroz" isCheckpoint="false">
+      <title>ATP Tüketimi ve Nekroz Eğilimi: İyon Pompalarının İflası</title>
+      <subtitle>Na+/K+ ATPaz durması, kalsiyum göllenmesi, hücresel şişme ve membran yırtılması</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="active_recall"/>
+        <element type="interactive_table"/>
+      </interactiveElements>
+    </slide>
+    <slide number="35" badge="MPTP ve Geçirgenlik" isCheckpoint="false">
+      <title>Mitokondriyal Membran Geçirgenlik Gözenekleri (MPTP)</title>
+      <subtitle>Siklofilin D, iç zar kilitlenmesi, mitokondriyal şişme ve geri dönüşsüz hasar</subtitle>
+      <interactiveElements count="2">
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="36" badge="Mitofaji ve PINK1" isCheckpoint="false">
+      <title>Mitofaji (Mitokondriyal Otofaji): PINK1/Parkin Kalite Kontrolü</title>
+      <subtitle>İç zar potansiyel kaybının algılanması, ubikitinlenme ve fagozomal temizlik</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="37" badge="Megamitokondri" isCheckpoint="false">
+      <title>Yaşlanan Hücrede Mitofaji Yetmezliği ve Megamitokondriler</title>
+      <subtitle>Bozuk füzyon/fisyon dengesi, dev şişkin organeller ve sitotoksisite</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="38" badge="Organ Tutulumu" isCheckpoint="false">
+      <title>Kalp Kası ve Beyinde Mitokondri Yaşlanması</title>
+      <subtitle>Kardiyomiyosit sarkopenisi, diyastolik disfonksiyon ve nörodejeneratif enerji açlığı</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="39" badge="Checkpoint" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 4] Mitokondriyal Disfonksiyon ve Enerji Biyolojisi</title>
+      <subtitle>mtDNA hassasiyeti, Kompleks I/IV çöküşü, MPTP, PINK1/Parkin ve mitofajinin sentezi</subtitle>
+      <interactiveElements count="1">
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="40" badge="Mitokondriyal Tedavi" isCheckpoint="false">
+      <title>Mitokondri Hedefli Yaşlanma Karşıtı Stratejiler ve Sentez</title>
+      <subtitle>Mitokondriyal antioksidanlar (MitoQ), NAD+ öncülleri (NMN/NR) ve biyojenez uyarımı</subtitle>
+      <interactiveElements count="2">
+        <element type="branching_logic"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="41" badge="Hücre Kaderi" isCheckpoint="false">
+      <title>Senesens vs Apoptoz: Hücresel Kaderin Hakemliği</title>
+      <subtitle>DNA hasarının şiddetine göre hücrenin hayatta kalma veya intihar kararı</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="42" badge="Onkogenetik" isCheckpoint="false">
+      <title>BCL-2 Protein Ailesi: Mitokondriyal Dış Zar Bekçileri</title>
+      <subtitle>Anti-apoptotik kalkanlar ile pro-apoptotik öldürücüler arasındaki denge</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="43" badge="Membran Biyofiziği" isCheckpoint="false">
+      <title>BAX ve BAK: Mitokondriyal Dış Zarın Geçirgenleşmesi (MOMP)</title>
+      <subtitle>Oligomerizasyon, lipid gözenekleri ve geri dönüşsüz intihar kapısı</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="44" badge="Genomik Bekçi" isCheckpoint="false">
+      <title>BH3-Only Sensörler: PUMA ve NOXA'nın p53 Kontrolü</title>
+      <subtitle>DNA hasarından mitokondriye haber taşıyan moleküler haberciler</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="interactive_table"/>
+      </interactiveElements>
+    </slide>
+    <slide number="45" badge="Hücresel Biyokimya" isCheckpoint="false">
+      <title>Sitokrom c Salınımı ve APAF-1 ile Birleşme</title>
+      <subtitle>Solunum elektron taşıyıcısından sitoplazmik ölüm sinyaline dönüşüm</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="46" badge="Enzim Aktivasyonu" isCheckpoint="false">
+      <title>Apoptozom (Apoptosome): Kaspaz-9 Aktivasyon Çarkı</title>
+      <subtitle>Yedi kollu tekerlek kompleksi ve başlatıcı pro-kaspaz-9 kesimi</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="47" badge="İnfaz Fazı" isCheckpoint="false">
+      <title>İnfazcı Kaspazlar (Kaspaz-3 ve Kaspaz-7): Hücrenin Yıkımı</title>
+      <subtitle>Hücre iskeletinin, laminanın ve nükleer proteinlerin koordineli parçalanması</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="micro_quiz"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="48" badge="Apoptotik Morfoloji" isCheckpoint="false">
+      <title>DNA Fragmantasyonu ve Apoptotik Cisimcikler</title>
+      <subtitle>CAD endonükleazı, 180-200 baz çiftlik merdiven deseni ve fagositoz sinyalleri</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="49" badge="Checkpoint 5" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 5] İntrensek Apoptoz ve Kaspaz Kaskadı</title>
+      <subtitle>Bölüm 5 BCL-2 Dengesi, BAX/BAK, Sitokrom c, Apoptozom ve Kaspazlar</subtitle>
+      <interactiveElements count="2">
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="50" badge="Hedefli Tedavi" isCheckpoint="false">
+      <title>Senesent Hücrelerde Apoptotik Direnç ve Senolitik Mantığı</title>
+      <subtitle>Senesent hücrelerin BCL-2 aşırı ekspresyonu ile ölümden kaçması</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="51" badge="Replikatif Yaşlanma" isCheckpoint="false">
+      <title>Replikatif Senesens ve Hayflick Limiti</title>
+      <subtitle>Normal insan somatik hücrelerinin kültür ortamındaki sınırlı bölünme kapasitesi</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="52" badge="Kromozom Biyolojisi" isCheckpoint="false">
+      <title>Telomerlerin Moleküler Yapısı: TTAGGG Tekrarları</title>
+      <subtitle>Kromozom uçlarında yer alan kodlamayan nükleoprotein kütükleri</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="53" badge="Nükleer Kompleks" isCheckpoint="false">
+      <title>Shelterin Kompleksi: Kromozom Uçlarını Koruyan Kalkan</title>
+      <subtitle>Altı alt birimli koruyucu nükleoprotein zırh ve t-loop stabilizasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="54" badge="Biyokimyasal Engel" isCheckpoint="false">
+      <title>Son Replikasyon Problemi (End-Replication Problem)</title>
+      <subtitle>DNA polimerazın doğasından kaynaklanan kaçınılmaz telomer kaybı</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+        <element type="interactive_table"/>
+      </interactiveElements>
+    </slide>
+    <slide number="55" badge="Hücresel Saat" isCheckpoint="false">
+      <title>Kritik Telomer Boyu: Hücresel Saatin Çalması</title>
+      <subtitle>Kilobaz bazında erime ve telomerik t-loop kapağının açılması</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="56" badge="Sinyal İletimi" isCheckpoint="false">
+      <title>Açılan Telomerlerin DNA Hasar Yanıtını (DDR) Tetiklemesi</title>
+      <subtitle>Kromozom ucuna ATM bağlanması ve kalıcı telomer ilişkili odak (TAF)</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="57" badge="Hücre Siklusu Kontrolü" isCheckpoint="false">
+      <title>p53/p21 ve p16/Rb ile İki Kademeli Replikatif Blokaj</title>
+      <subtitle>Mortality Stage 1 (M1) evresi ve senesens kalesinin inşası</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="interactive_table"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="58" badge="Karşılaştırmalı Histoloji" isCheckpoint="false">
+      <title>Somatik, Kök ve Germ Hücrelerinde Telomer Dinamiği</title>
+      <subtitle>Üç farklı hücre sınıfında telomer kısalma hızı ve biyolojik kader</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="59" badge="Checkpoint 6" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 6] Telomerler, Hayflick Limiti ve Replikatif Yaşlanma</title>
+      <subtitle>Bölüm 6 TTAGGG, Shelterin, Son Replikasyon Çıkmazı ve p16/p53</subtitle>
+      <interactiveElements count="2">
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="60" badge="Evrimsel Paradoks" isCheckpoint="false">
+      <title>Telomer Kısalması: Kanserden Koruyan Evrimsel Bir Fren</title>
+      <subtitle>Kısa vadede tümör baskılama, uzun vadede doku yaşlanması ve tükenme</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="61" badge="Enzim Biyolojisi" isCheckpoint="false">
+      <title>Telomeraz Enzimi: Ters Transkriptaz Ribonükleoproteini</title>
+      <subtitle>Kromozom uçlarına nükleotid ekleyerek telomer boyunu uzatan enzim</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="62" badge="Moleküler Yapı" isCheckpoint="false">
+      <title>TERT ve TERC: Katalitik Çekirdek ve RNA Şablonu</title>
+      <subtitle>hTERT proteini, hTERC molekülü ve diskerin stabilitesi</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="63" badge="Genomik Felaket" isCheckpoint="false">
+      <title>Somatik Kriz Evresi (M2): Köprü-Füzyon-Kırılma Döngüsü</title>
+      <subtitle>p53 ve Rb yokluğunda telomersiz uçların yapışması ve mitotik felaket</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="64" badge="Karsinojenez" isCheckpoint="false">
+      <title>Kanser Hücrelerinde Telomeraz Reaktivasyonu</title>
+      <subtitle>M2 krizinden kaçış, hTERT promotör mutasyonları ve hücresel ölümsüzlük</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="interactive_table"/>
+      </interactiveElements>
+    </slide>
+    <slide number="65" badge="Onkopatoloji" isCheckpoint="false">
+      <title>Alternatif Telomer Uzaması (ALT): Telomeraz Dışı Yolak</title>
+      <subtitle>Homolog rekombinasyon aracılığıyla telomer kopyalanması (kanserlerin %10-15'i)</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="66" badge="Genetik Patoloji" isCheckpoint="false">
+      <title>Telomeropatiler: Kalıtsal Telomeraz Yetersizlikleri</title>
+      <subtitle>Kök hücre havuzunun erken tükenmesi ve çoklu organ fibrozisleri</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="67" badge="Sendrom Biyolojisi" isCheckpoint="false">
+      <title>Diskeratozis Konjenita: Klasik Telomeropati Modeli</title>
+      <subtitle>Kutanöz triat, aplastik anemi ve X'e bağlı DKC1 mutasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="micro_quiz"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="68" badge="Erişkin Telomeropatisi" isCheckpoint="false">
+      <title>İdiyopatik Pulmoner Fibrozis ve Karaciğer Sirozunda Telomer Rolü</title>
+      <subtitle>Erişkin çağda TERT ve TERC heterozigot mutasyonlarının organ yetmezlikleri</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="69" badge="Checkpoint 7" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 7] Telomeraz, Kanser ve Telomeropatiler</title>
+      <subtitle>Bölüm 7 Ribonükleoprotein Mimarisi, hTERT, M2 Krizi ve Diskeratozis</subtitle>
+      <interactiveElements count="2">
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="70" badge="Hedefli Onkoloji" isCheckpoint="false">
+      <title>Telomeraz İnhibitörleri ve Onkolojik Tedavi</title>
+      <subtitle>Kanser hücrelerinin ölümsüzlüğünü kırma stratejileri (İmetelstat)</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="71" badge="Protein Biyolojisi" isCheckpoint="false">
+      <title>Proteostazis Ağı: Hücresel Protein Dengesi</title>
+      <subtitle>Protein sentezi, şaperon aracılı katlanma, otofaji ve proteazomal yıkım dengesi</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="72" badge="Şaperonlar" isCheckpoint="false">
+      <title>Yaşlanmayla Şaperon Kapasitesinin Zayıflaması</title>
+      <subtitle>Isı şok proteinlerinin (Hsp70, Hsp90) ekspresyon kaybı ve katlanma defektleri</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="73" badge="Proteazom Yıkımı" isCheckpoint="false">
+      <title>26S Proteazom Sisteminin Yaşla Tıkanması</title>
+      <subtitle>Ubiquitinlenmiş proteinlerin yıkılamaması ve proteazom kilitlenmesi</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="74" badge="Otofaji" isCheckpoint="false">
+      <title>Yaşlanan Hücrede Otofaji ve Lizozom Kapasitesinin Çöküşü</title>
+      <subtitle>Makrootofaji, şaperon aracılı otofaji (CMA) ve lipofuksin yükü</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+        <element type="interactive_table"/>
+      </interactiveElements>
+    </slide>
+    <slide number="75" badge="Nöropatoloji" isCheckpoint="false">
+      <title>Nörodejeneratif Hastalıklarda Protein Agregasyonu</title>
+      <subtitle>Bölünmeyen nöronların protein birikimlerine aşırı duyarlılığı</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="76" badge="Alzheimer Patolojisi" isCheckpoint="false">
+      <title>Alzheimer Hastalığı: Plaklar ve Yumaklar</title>
+      <subtitle>Ekstrasellüler amiloid-beta ile intrasellüler hiperfosforile tau ikilisi</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="77" badge="Hareket Bozukluğu" isCheckpoint="false">
+      <title>Parkinson Hastalığı: Lewy Cisimcikleri ve Alfa-Sinüklein</title>
+      <subtitle>Substansiya nigra dopaminerjik nöron kaybı ve eozinofilik sitoplazmik inklüzyonlar</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="micro_quiz"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="78" badge="Nörogenetik" isCheckpoint="false">
+      <title>Huntington Hastalığı ve ALS: Proteotoksik İntihar</title>
+      <subtitle>CAG trinükleotid patlaması ve motor nöronlarda TDP-43 birikimi</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="79" badge="Checkpoint 8" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 8] Proteostazis Çöküşü ve Nörodejenerasyon</title>
+      <subtitle>Bölüm 8 Şaperonlar, Proteazom Kilitlenmesi, Alzheimer ve Parkinson</subtitle>
+      <interactiveElements count="2">
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="80" badge="Tedavi Hedefleri" isCheckpoint="false">
+      <title>Proteostazisi Güçlendiren Tedavi Yaklaşımları</title>
+      <subtitle>Otofaji indükleyicileri, kimyasal şaperonlar ve proteazom aktivatörleri</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="81" badge="Metabolik Biyoloji" isCheckpoint="false">
+      <title>Hücresel Besin Algılama: Büyüme ve Onarım Dengesi</title>
+      <subtitle>Hücrenin besin bolluğunda anabolizmayı, kıtlıkta ise DNA bakımı ve otofajiyi seçmesi</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="82" badge="Endokrin Patoloji" isCheckpoint="false">
+      <title>İnsülin ve IGF-1 Sinyal Yolağı (IIS): Yaşlanmanın Gaz Pedalı</title>
+      <subtitle>Büyüme hormonunun yaşlanma üzerindeki evrimsel baskısı</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="83" badge="Kinaz Sinyali" isCheckpoint="false">
+      <title>mTOR: Protein Sentezinin Efendisi ve Otofajinin Düşmanı</title>
+      <subtitle>Besin ve aminoasit fazlalığında ribozomal biyogenez ve lizozomal blokaj</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="84" badge="Genom Koruma" isCheckpoint="false">
+      <title>Sirtuinler (SIRT1-7): NAD+ Bağımlı Genom Koruyucuları</title>
+      <subtitle>Histon deasetilasyonu, PGC-1alfa aktivasyonu ve epigenetik susturma</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="interactive_table"/>
+      </interactiveElements>
+    </slide>
+    <slide number="85" badge="Enerji Sensörü" isCheckpoint="false">
+      <title>AMPK: Hücrenin Yakıt Göstergesi ve Enerji Bekçisi</title>
+      <subtitle>AMP/ATP oranı artışıyla tetiklenen katabolik adaptasyon ve otofaji</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="interactive_table"/>
+      </interactiveElements>
+    </slide>
+    <slide number="86" badge="Kanıtlanmış Müdahale" isCheckpoint="false">
+      <title>Kalori Kısıtlaması (Caloric Restriction): Evrensel Uzun Ömür</title>
+      <subtitle>Malnütrisyon olmaksızın kalori alımının %30 azaltılmasının biyolojik mucizesi</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="87" badge="Moleküler Ağ" isCheckpoint="false">
+      <title>Kalori Kısıtlamasının Moleküler Mekanizması</title>
+      <subtitle>IGF-1 ve mTOR düşüşü, SIRT1 ve AMPK aktivasyonu, otofaji patlaması</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="88" badge="Farmakoloji" isCheckpoint="false">
+      <title>Kalori Kısıtlama Mimetikleri: Rapamisin, Metformin ve Resveratrol</title>
+      <subtitle>Diyet yapmadan kalori kısıtlamasının moleküler faydalarını taklit eden ilaçlar</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="89" badge="Checkpoint 9" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 9] Besin Algılama, mTOR, Sirtuinler ve Kalori Kısıtlaması</title>
+      <subtitle>Bölüm 9 IIS, mTOR, AMPK, SIRT1, Kalori Kısıtlaması ve Mimetikler</subtitle>
+      <interactiveElements count="2">
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="90" badge="Klinik Geriatri" isCheckpoint="false">
+      <title>İnsanda Kalori Kısıtlaması ve Geleceğin Gerontolojisi</title>
+      <subtitle>CALERIE çalışmaları, aralıklı oruç (Intermittent Fasting) ve klinik gerçekler</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="91" badge="İmmünogeriatri" isCheckpoint="false">
+      <title>Inflammaging: Yaşlanmanın Steril Yangısı</title>
+      <subtitle>Enfeksiyöz olmayan, düşük dereceli, sistemik ve kalıcı kronik inflamasyon</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="92" badge="Senesens Biyolojisi" isCheckpoint="false">
+      <title>SASP: Senesens İlişkili Salgı Fenotipi</title>
+      <subtitle>Bölünmeyen yaşlı hücrelerin çevre dokulara yaydığı sitokin ve kemokin fırtınası</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="93" badge="Biyokimyasal Mediyatörler" isCheckpoint="false">
+      <title>SASP Bileşenleri ve Doku Harabiyeti</title>
+      <subtitle>İnterlökinler, kemokinler ve matriks metalloproteinazların (MMP) doku erozyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="94" badge="Parakrin Etki" isCheckpoint="false">
+      <title>Parakrin Senesens: Yaşlanmanın Bulaşıcı Doğası</title>
+      <subtitle>Bir çürük elmanın tüm sepeti çürütmesi: SASP aracılı komşu hücre yaşlanması</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+        <element type="interactive_table"/>
+      </interactiveElements>
+    </slide>
+    <slide number="95" badge="Sistemik Patoloji" isCheckpoint="false">
+      <title>Inflammaging ve SASP'ın İkincil Hastalıkları</title>
+      <subtitle>Ateroskleroz, tip 2 diyabet, osteoartrit ve sarkopeninin moleküler motoru</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="96" badge="Senolitikler" isCheckpoint="false">
+      <title>Senolitik Tedaviler: Yaşlı Hücreleri Hedefli İmha</title>
+      <subtitle>Dasatinib, Quercetin ve senesent hücrelerin seçici apoptoza uğratılması</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="micro_quiz"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="97" badge="Senomorfikler" isCheckpoint="false">
+      <title>Senomorfik İlaçlar: Zehirli Salgıyı Susturma</title>
+      <subtitle>Hücreyi öldürmeden SASP sitokin üretimini NF-kB ve mTOR üzerinden durdurma</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="98" badge="Büyük Matris" isCheckpoint="false">
+      <title>Altı Yaşlanma Mekanizmasının Büyük Entegrasyon Matrisi</title>
+      <subtitle>Moleküler kusurlardan klinik hastalıklara uzanan patoloji sentezi</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="active_recall"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="99" badge="Checkpoint 10" isCheckpoint="false">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 10] Inflammaging, Senolitikler ve Klinik Sentez</title>
+      <subtitle>Bölüm 10 Steril Yangı, SASP Mediyatörleri, Senolitik vs Senomorfik</subtitle>
+      <interactiveElements count="3">
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="100" badge="Büyük Sentez" isCheckpoint="true">
+      <title>Ders 8 Master Sentezi: Hücresel Yaşlanmanın Moleküler Haritası</title>
+      <subtitle>TIP 310 Patoloji Kurul 1 dersinin tüm mekanik, genetik ve klinik entegrasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="branching_logic"/>
+        <element type="active_recall"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+  </slides>
+</learningDeck>

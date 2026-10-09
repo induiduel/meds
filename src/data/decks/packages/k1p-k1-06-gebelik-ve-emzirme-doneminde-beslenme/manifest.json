@@ -1,0 +1,750 @@
+{
+  "id": "k1p-k1-06-gebelik-ve-emzirme-doneminde-beslenme",
+  "title": "Gebelik ve Emzirme Döneminde Beslenme (Yeni Mikro-Ders)",
+  "discipline": "Halk Sağlığı",
+  "committee": "Kurul 1 (Ürogenital ve Obstetrik)",
+  "instructor": "Doç. Dr. Nergiz Sevinç",
+  "version": "2.0",
+  "totalSlides": 100,
+  "interactiveMetrics": {
+    "totalCount": 225,
+    "ratio": 2.25,
+    "distribution": {
+      "cloze_masking": {
+        "count": 87,
+        "percentage": 38.67
+      },
+      "active_recall": {
+        "count": 30,
+        "percentage": 13.33
+      },
+      "branching_logic": {
+        "count": 22,
+        "percentage": 9.78
+      },
+      "micro_quiz": {
+        "count": 21,
+        "percentage": 9.33
+      },
+      "causal_chain": {
+        "count": 21,
+        "percentage": 9.33
+      },
+      "before_after_slider": {
+        "count": 23,
+        "percentage": 10.22
+      },
+      "interactive_table": {
+        "count": 21,
+        "percentage": 9.33
+      }
+    }
+  },
+  "sources": {
+    "xml": "structure.xml",
+    "html": "blocks.html",
+    "markdown": "content.md"
+  },
+  "slidesIndex": [
+    {
+      "slideNumber": 1,
+      "title": "Anne Sağlığı Kavramı ve Yaşam Boyu Perspektif",
+      "badge": "Anne Sağlığı",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 2,
+      "title": "Anne Ölüm Oranı (MMR) Tanımı ve Epidemiyolojik Önemi",
+      "badge": "Epidemiyoloji",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 3,
+      "title": "DSÖ 2020 Küresel Anne Ölüm Verileri ve Bilanço",
+      "badge": "DSÖ Verileri",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 4,
+      "title": "Küresel Eğilim: 2000-2020 Arası MMR Değişimi",
+      "badge": "Zaman Serisi",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 5,
+      "title": "Bölgesel Eşitsizlikler ve Düşük-Orta Gelirli Ülkeler",
+      "badge": "Sağlıkta Adalet",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 6,
+      "title": "Adolesan Gebelikler: 15-19 Yaş Grubunun Risk Profili",
+      "badge": "Adolesan Sağlığı",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 7,
+      "title": "Erken Adolesan Dönem (10-14 Yaş) ve Uç Riskler",
+      "badge": "Kritik Risk",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 8,
+      "title": "Türkiye Epidemiyolojisi: Adolesan Doğurganlık Hızında Büyük Başarı",
+      "badge": "TÜİK Verisi",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 9,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Anne Sağlığı ve Küresel Göstergeler İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "badgeColor": "teal",
+      "isCheckpoint": true
+    },
+    {
+      "slideNumber": 10,
+      "title": "Vasıflı Doğum Personelinin Hayat Kurtarıcı Rolü",
+      "badge": "Sağlık İş Gücü",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 11,
+      "title": "Anne Ölümlerinin %75'ini Oluşturan 5 Temel Komplikasyon",
+      "badge": "Mortalite Nedenleri",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 12,
+      "title": "Şiddetli Postpartum Kanama (PPH): Bir Numaralı Katil",
+      "badge": "Postpartum Kanama",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 13,
+      "title": "Puerperal Enfeksiyonlar ve Doğum Sonu Sepsis",
+      "badge": "Puerperal Sepsis",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 14,
+      "title": "Gebelikte Hipertansif Bozukluklar: Preeklampsi ve Eklampsi",
+      "badge": "Preeklampsi",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 15,
+      "title": "Tıkalı Doğum Eylemi (Obstrüktif Travay) ve Komplikasyonları",
+      "badge": "Obstrüktif Travay",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 16,
+      "title": "Güvenli Olmayan Kürtaj: Gizli ve Önlenebilir Yara",
+      "badge": "Güvenli Olmayan Kürtaj",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 17,
+      "title": "Dolaylı Maternal Ölüm Nedenleri: Anemi, Kalp ve Sıtma",
+      "badge": "Dolaylı Nedenler",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 18,
+      "title": "Bakıma Erişimi Engelleyen 5 Faktör (DSÖ Kriterleri)",
+      "badge": "DSÖ Engelleri",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 19,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Anne Ölüm Nedenleri ve Bakım Engelleri İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "badgeColor": "teal",
+      "isCheckpoint": true
+    },
+    {
+      "slideNumber": 20,
+      "title": "Üç Gecikme Modeli (Three Delays Model) ve Hayatta Kalma",
+      "badge": "Gecikme Modeli",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 21,
+      "title": "Gebelikte Maternal Fizyolojik Uyumun Temelleri",
+      "badge": "Fizyolojik Uyum",
+      "badgeColor": "blue",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 22,
+      "title": "Plazma Hacmi Artışı ve Fizyolojik Hemodilüsyon",
+      "badge": "Hematoloji",
+      "badgeColor": "blue",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 23,
+      "title": "Kardiyovasküler Adaptasyon: Debide Artış ve Vazodilatasyon",
+      "badge": "Kardiyoloji",
+      "badgeColor": "blue",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 24,
+      "title": "Solunum Sistemi: Oksijen İhtiyacında %20-30 Artış",
+      "badge": "Solunum",
+      "badgeColor": "blue",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 25,
+      "title": "Gastrointestinal Sistem: Progesteronun Düz Kas Gevşetici Etkisi",
+      "badge": "Gastrointestinal",
+      "badgeColor": "blue",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 26,
+      "title": "Doğum Öncesi Bakım (DÖB): Tanım, Amaç ve İzlem Standartları",
+      "badge": "Doğum Öncesi Bakım",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 27,
+      "title": "DÖB İçeriği: Danışmanlık ve Tehlike İşaretleri Eğitimi",
+      "badge": "Eğitim ve Danışmanlık",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 28,
+      "title": "Fetal Programlama ve David Barker Hipotezi",
+      "badge": "Barker Hipotezi",
+      "badgeColor": "purple",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 29,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Fizyolojik Değişiklikler ve Barker Hipotezi İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "badgeColor": "teal",
+      "isCheckpoint": true
+    },
+    {
+      "slideNumber": 30,
+      "title": "Tasarruflu Fenotip Hipotezi (Thrifty Phenotype): Moleküler Köprü",
+      "badge": "Tasarruflu Fenotip",
+      "badgeColor": "purple",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 31,
+      "title": "Gebelikte Beslenmenin 4 Temel Amacı ve 'İki Canlı' Yanılgısı",
+      "badge": "Beslenme İlkeleri",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 32,
+      "title": "Anne Beslenmesini Bozan Riskli Gebelik Kriterleri",
+      "badge": "Risk Faktörleri",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 33,
+      "title": "Sosyoekonomik, Toksik ve Sistemik Etmenler",
+      "badge": "Sistemik Engeller",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 34,
+      "title": "Yetersiz Beslenmenin Anne Üzerindeki Sonuçları",
+      "badge": "Maternal Sonuçlar",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 35,
+      "title": "Yetersiz Beslenmenin Bebek Üzerindeki Sonuçları",
+      "badge": "Fetal Sonuçlar",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 36,
+      "title": "Aşırı Beslenmenin Maternal Riskleri: Gestasyonel Diyabet ve Toksemi",
+      "badge": "Aşırı Beslenme",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 37,
+      "title": "Aşırı Beslenmenin Fetal Riskleri: Makrozomi ve Doğum Hasarı",
+      "badge": "Fetal Makrozomi",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 38,
+      "title": "Maternal-Fetal Beslenme Dengesi Matrisi",
+      "badge": "Sentez Matrisi",
+      "badgeColor": "teal",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 39,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Yetersiz ve Aşırı Beslenme İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "badgeColor": "teal",
+      "isCheckpoint": true
+    },
+    {
+      "slideNumber": 40,
+      "title": "Gestasyonel Diyabet (GDM) Taraması ve Yönetim İlkeleri",
+      "badge": "GDM Taraması",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 41,
+      "title": "Gebelikte Ağırlık Artışının Anatomik ve Fizyolojik Dağılımı",
+      "badge": "Ağırlık Dağılımı",
+      "badgeColor": "blue",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 42,
+      "title": "Gebelik Öncesi BKİ'ye Göre Kilo Kazanım Hedefleri",
+      "badge": "BKİ Standartları",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 43,
+      "title": "Normal BKİ (20,0 - 24,9 kg/m²) Olan Gebede Kilo Yönetimi",
+      "badge": "Normal BKİ",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 44,
+      "title": "Kilolu ve Obez Gebelerde Kilo Kısıtlama İlkeleri",
+      "badge": "Kilolu ve Obez",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 45,
+      "title": "Çoğul Gebeliklerde Kilo Artışı: İkiz ve Üçüz Gebelikler",
+      "badge": "Çoğul Gebelik",
+      "badgeColor": "purple",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 46,
+      "title": "Adolesan Gebelikte Kilo Yönetimi: Büyüme Rekabeti",
+      "badge": "Adolesan Beslenmesi",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 47,
+      "title": "Gebelikte Günlük Enerji Gereksinimi ve Toplam Kalori",
+      "badge": "Enerji İhtiyacı",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 48,
+      "title": "Çoğul Gebeliklerde Ek Kalori İhtiyacı: Tekil, İkiz, Üçüz",
+      "badge": "Kalori Dağılımı",
+      "badgeColor": "purple",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 49,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 5] Ağırlık Kazanımı ve Enerji İhtiyacı İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "badgeColor": "teal",
+      "isCheckpoint": true
+    },
+    {
+      "slideNumber": 50,
+      "title": "Trimesterlere Göre Enerji Dağılımı ve Kalori Zamanlaması",
+      "badge": "Kalori Zamanlaması",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 51,
+      "title": "Gebelikte Protein Gereksinimi: Toplam 925 g ve Günlük +20-25 g",
+      "badge": "Protein Dengesi",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 52,
+      "title": "Yağlar ve Esansiyel Yağ Asitleri: Fetal Beyin ve DHA (n-3)",
+      "badge": "Esansiyel Yağlar",
+      "badgeColor": "blue",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 53,
+      "title": "Kalsiyum Metabolizması: Günlük 1000-1300 mg Hedefi",
+      "badge": "Kalsiyum",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 54,
+      "title": "Çinko (Zn) Esansiyelliği ve Fitat Etkileşimi",
+      "badge": "Çinko",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 55,
+      "title": "İyot Yetersizliği Bozuklukları: Kretenizm ve Zeka Geriliği",
+      "badge": "İyot",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 56,
+      "title": "İyotlu Tuzun Doğru Saklanması ve Tüketim İlkeleri",
+      "badge": "İyotlu Tuz",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 57,
+      "title": "A Vitamini Dengesi: Fetal İhtiyaç vs Teratojenite Riski",
+      "badge": "A Vitamini",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 58,
+      "title": "B12 Vitamini ve C Vitamini: Nöral Gelişim ve Kollajen",
+      "badge": "B12 ve C Vitamini",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 59,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 6] Makro ve Mikrobesinler İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "badgeColor": "teal",
+      "isCheckpoint": true
+    },
+    {
+      "slideNumber": 60,
+      "title": "Diyet Çeşitliliği ve Temel Besin Grubu Porsiyonları",
+      "badge": "Porsiyon Rehberi",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 61,
+      "title": "Folik Asit (B9) ve Nöral Tüp Kapanma Biyolojisi: 28. Gün Eşiği",
+      "badge": "Folik Asit",
+      "badgeColor": "purple",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 62,
+      "title": "Nöral Tüp Defektleri Spektrumu: Spina Bifida, Anensefali, Ensefalosel",
+      "badge": "Nöral Tüp Defektleri",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 63,
+      "title": "Folik Asit Profilaksi Protokolü: 400 mcg vs 4000 mcg (4 mg)",
+      "badge": "Profilaksi Protokolü",
+      "badgeColor": "purple",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 64,
+      "title": "Gebelikte En Sık Beslenme Yetersizliği: Demir Eksikliği Anemisi",
+      "badge": "Demir Eksikliği",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 65,
+      "title": "Maternal Demir Dengesi: Toplam 1000 mg Demir İhtiyacı",
+      "badge": "Demir Dengesi",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 66,
+      "title": "Diyet Demirinin Emilim Dinamikleri: Hem vs Non-Hem Demir",
+      "badge": "Demir Biyoyararlanımı",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 67,
+      "title": "Demir Emilimini Etkileyen Faktörler: C Vitamini vs Çay-Kahve",
+      "badge": "Emilim Etkileşimi",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 68,
+      "title": "Gebelikte Anemi Tanı Kriterleri: Trimestrlere Göre Eşikler",
+      "badge": "Anemi Eşikleri",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 69,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 7] Folik Asit ve Demir Metabolizması İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "badgeColor": "teal",
+      "isCheckpoint": true
+    },
+    {
+      "slideNumber": 70,
+      "title": "Maternal Aneminin Doğum Eylemi ve Fetüs Üzerindeki Riskleri",
+      "badge": "Klinik Komplikasyonlar",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 71,
+      "title": "Sağlık Bakanlığı Demir Destek Programı Protokolü",
+      "badge": "Demir Protokolü",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 72,
+      "title": "Sağlık Bakanlığı D Vitamini Destek Programı Protokolü",
+      "badge": "D Vitamini Protokolü",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 73,
+      "title": "D Vitamini Dengesi: Fetal Raşitizm vs Aşırılık Toksisitesi",
+      "badge": "Kemik Biyolojisi",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 74,
+      "title": "Kafein Tüketimi: Günde 5 Fincan Eşiği ve Fetal Toksisite",
+      "badge": "Kafein Sınırı",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 75,
+      "title": "Alkol ve Teratojenite: Gebelikte Sıfır Alkol Kuralı",
+      "badge": "Alkol Uyarısı",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 76,
+      "title": "Fetal Alkol Sendromu (FAS): Klinik Triad ve Dismorfoloji",
+      "badge": "FAS Triadı",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 77,
+      "title": "Sigara ve Tütün Dumanı: Nikotin Vazokonstriksiyonu ve CO Hipoksisi",
+      "badge": "Sigaranın Zararları",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 78,
+      "title": "Gebelikte Güvenli Fiziksel Aktivite İlkeleri",
+      "badge": "Fiziksel Aktivite",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 79,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 8] Destek Programları ve Toksik Maddeler İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "badgeColor": "teal",
+      "isCheckpoint": true
+    },
+    {
+      "slideNumber": 80,
+      "title": "Karşılaştırmalı Toksikoloji: Sigara vs Alkolün Fetal İmzaları",
+      "badge": "Klinik Karşılaştırma",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 81,
+      "title": "Gebelikte Trimestrlere Göre Sık Görülen Fizyolojik Yakınmalar",
+      "badge": "Semptom Kronolojisi",
+      "badgeColor": "blue",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 82,
+      "title": "Sabah Bulantısı (Emesis Gravidarum) ve Diyet Önlemleri",
+      "badge": "Bulantı Yönetimi",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 83,
+      "title": "Hiperemezis Gravidarum (HG): Patolojik Kusma ve Yatış",
+      "badge": "Hiperemezis",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 84,
+      "title": "Gastroözofageal Reflü ve Pirozis: Mide Yanması İlkeleri",
+      "badge": "Reflü ve Pirozis",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 85,
+      "title": "Gebelikte Konstipasyon (Kabızlık) ve Hemoroid Yönetimi",
+      "badge": "Kabızlık Yönetimi",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 86,
+      "title": "Pika Sendromu: Besin Olmayan Maddeleri Aşerme",
+      "badge": "Pika Sendromu",
+      "badgeColor": "purple",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 87,
+      "title": "Gebelik Toksemisi (Preeklampsi) ve Diyet Yanılgıları",
+      "badge": "Toksemi ve Diyet",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 88,
+      "title": "Diş Eti Problemleri ve Gebelik Epulisi (Epulis Gravidarum)",
+      "badge": "Oral Sağlık",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 89,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 9] Gebelikte Sık Sorunlar ve Diyet İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "badgeColor": "teal",
+      "isCheckpoint": true
+    },
+    {
+      "slideNumber": 90,
+      "title": "Klinik Karar Algoritması: Hafif Bulantıdan Hiperemezis Yatışına",
+      "badge": "Klinik Karar",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 91,
+      "title": "Anne Sütü Sentez Fizyolojisi: Günlük 800 ml Üretim",
+      "badge": "Süt Sentezi",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 92,
+      "title": "Maternal Beslenme ve Süt Miktarı: 'Fazla Yiyenin Sütü Artmaz'",
+      "badge": "Laktasyon Mitleri",
+      "badgeColor": "amber",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 93,
+      "title": "Emzirme Döneminde Ek Enerji ve Ek Protein Gereksinimi",
+      "badge": "Laktasyon Enerjisi",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 94,
+      "title": "Sıvı Dengesi ve Besin Grupları: Tahılın Emziklilikteki Rolü",
+      "badge": "Sıvı ve Tahıl",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 95,
+      "title": "Laktasyonda Kaçınılması Gerekenler: Alkol, Sigara ve Kafein",
+      "badge": "Laktasyon Toksikolojisi",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 96,
+      "title": "Gebelikte Kesinlikle Yenmemesi Gereken Besinler: Listeria ve Toksoplazma",
+      "badge": "Gıda Güvenliği",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 97,
+      "title": "Kabuklu Deniz Ürünleri, Ağır Metaller ve Katkı Maddeli Gıdalar",
+      "badge": "Toksik Besinler",
+      "badgeColor": "red",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 98,
+      "title": "Bebek Beslenmesinde İlk 6 Ay Sadece Anne Sütü",
+      "badge": "Eksklüzif Emzirme",
+      "badgeColor": "emerald",
+      "isCheckpoint": false
+    },
+    {
+      "slideNumber": 99,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 10] Emzirme Beslenmesi ve Sakınılacak Gıdalar İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "badgeColor": "teal",
+      "isCheckpoint": true
+    },
+    {
+      "slideNumber": 100,
+      "title": "Büyük Sentez: Gebelik ve Emzirme Beslenmesinin Altın Kuralları",
+      "badge": "Büyük Sentez",
+      "badgeColor": "teal",
+      "isCheckpoint": false
+    }
+  ]
+}

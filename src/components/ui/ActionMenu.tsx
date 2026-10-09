@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { MoreHorizontal, X } from 'lucide-react';
 
@@ -38,14 +38,43 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = '�
   const [open, setOpen] = useState(false);
   const [isPhone, setIsPhone] = useState(() => typeof window !== 'undefined' && window.innerWidth < 640);
   const rootRef = useRef<HTMLDivElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
   const visible = items.filter(Boolean);
+  // Masaüstü menüsü belgenin üst katmanına (portal) çizilir: kartların katmanları ya da taşma kırpması menüyü örtmez.
+  // Düğmenin altında yer yoksa yukarı açılır; yükseklik ekrana sığacak kadar sınırlanır.
+  const [pos, setPos] = useState<{ top?: number; bottom?: number; right: number; maxH: number } | null>(null);
+  const place = () => {
+    const btn = rootRef.current?.querySelector('button');
+    if (!btn) return;
+    const r = btn.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const below = vh - r.bottom - 12;
+    const above = r.top - 12;
+    const want = Math.min(menuRef.current?.scrollHeight || 420, 520);
+    const right = Math.max(8, window.innerWidth - r.right);
+    if (below >= Math.min(want, 280) || below >= above) setPos({ top: r.bottom + 6, right, maxH: Math.max(160, below) });
+    else setPos({ bottom: vh - r.top + 6, right, maxH: Math.max(160, above) });
+  };
+  useLayoutEffect(() => {
+    if (!open || isPhone) return;
+    place();
+    const raf = requestAnimationFrame(place);
+    const onMove = () => place();
+    window.addEventListener('resize', onMove);
+    window.addEventListener('scroll', onMove, true);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', onMove);
+      window.removeEventListener('scroll', onMove, true);
+    };
+  }, [open, isPhone]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!open) return;
     setIsPhone(window.innerWidth < 640);
     const onDown = (e: MouseEvent) => {
       const t = e.target as HTMLElement;
-      if (t.closest?.('[data-action-sheet]')) return;
+      if (t.closest?.('[data-action-sheet]') || menuRef.current?.contains(t)) return;
       if (rootRef.current && !rootRef.current.contains(t)) setOpen(false);
     };
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
@@ -148,12 +177,19 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = '�
             document.body
           )
         ) : (
-          <div
-            role="menu"
-            className="absolute right-0 top-11 z-40 w-[248px] bg-white border border-line rounded-xl p-1.5 shadow-lg"
-          >
-            {list(false)}
-          </div>
+          createPortal(
+            <div
+              ref={menuRef}
+              role="menu"
+              aria-label={title}
+              data-action-sheet
+              style={{ position: 'fixed', top: pos?.top, bottom: pos?.bottom, right: pos?.right ?? 8, maxHeight: pos?.maxH, visibility: pos ? 'visible' : 'hidden' }}
+              className="ms-menu-pop z-[75] w-[264px] overflow-y-auto overscroll-contain bg-white border border-line rounded-xl p-1.5 shadow-lg"
+            >
+              {list(false)}
+            </div>,
+            document.body
+          )
         ))}
     </div>
   );

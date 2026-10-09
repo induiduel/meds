@@ -1,0 +1,46 @@
+{
+  "id": "k1p-k1-15-doku-onarimi-ve-yara-iyilesmesi",
+  "title": "Doku Onarımı ve Yara İyileşmesi",
+  "course": "Patoloji",
+  "instructor": "Prof. Dr. Hikmet Keleş (Patoloji ABD)",
+  "category": "Kurul 1 · 2026-2027 ders paketi",
+  "stepCount": 100,
+  "questionCount": 320,
+  "totalFlashcards": 30,
+  "totalInteractiveElements": 226,
+  "elementDistribution": {
+    "before_after_slider": {
+      "count": 38,
+      "percentage": 16.81
+    },
+    "cloze_masking": {
+      "count": 39,
+      "percentage": 17.26
+    },
+    "interactive_table": {
+      "count": 36,
+      "percentage": 15.93
+    },
+    "micro_quiz": {
+      "count": 41,
+      "percentage": 18.14
+    },
+    "branching_logic": {
+      "count": 24,
+      "percentage": 10.62
+    },
+    "active_recall": {
+      "count": 24,
+      "percentage": 10.62
+    },
+    "causal_chain": {
+      "count": 24,
+      "percentage": 10.62
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "blocks": "blocks.html",
+    "content": "content.md"
+  }
+}

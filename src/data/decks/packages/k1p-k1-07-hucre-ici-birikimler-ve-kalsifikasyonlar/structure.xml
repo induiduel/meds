@@ -1,0 +1,448 @@
+<?xml version="1.0" ?>
+<deck id="k1p-k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar" title="Hücre İçi Birikimler ve Kalsifikasyonlar" discipline="Patoloji">
+  <slide id="k1-07-s01" slideNumber="1" title="Hücre İçi Birikim Kavramı ve Patolojik Önemi" badge="Giriş ve Kavram" badgeColor="blue">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+  <slide id="k1-07-s02" slideNumber="2" title="Birikimlerin Hücresel Lokalizasyonu: Sitoplazma, Lizozom, Çekirdek" badge="Hücresel Lokalizasyon" badgeColor="indigo">
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="cloze_masking"/>
+  </slide>
+  <slide id="k1-07-s03" slideNumber="3" title="Temel Mekanizma 1: Normal Maddenin Yetersiz Uzaklaştırılması" badge="Mekanizma 1" badgeColor="amber">
+    <interactiveElement type="causal_chain"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s04" slideNumber="4" title="Temel Mekanizma 2: Anormal Endojen Maddenin Birikmesi" badge="Mekanizma 2" badgeColor="red">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s05" slideNumber="5" title="Temel Mekanizma 3: Eksojen Anormal Maddenin Alınması ve Birikimi" badge="Mekanizma 3" badgeColor="stone">
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s06" slideNumber="6" title="Temel Mekanizma 4: Lizozomal Enzim Eksikliği ve Depo Hastalıkları" badge="Mekanizma 4" badgeColor="purple">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="branching_logic"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s07" slideNumber="7" title="Lizozomal Depo Hastalıkları: Sfingolipidozlar ve Mukopolisakkaridozlar" badge="Depo Hastalıkları" badgeColor="teal">
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s08" slideNumber="8" title="Hücre İçi ve Hücre Dışı Birikimlerin Karşılaştırmalı Dinamiği" badge="Karşılaştırma" badgeColor="cyan">
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="active_recall"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s09" slideNumber="9" title="[TEKRAR SAYFASI - CHECKPOINT 1] Hücre İçi Birikim Mekanizmaları ve Lokalizasyon" badge="Checkpoint 1" badgeColor="teal" isCheckpoint="true" checkpointNumber="1">
+    <interactiveElement type="cloze_masking"/>
+  </slide>
+  <slide id="k1-07-s10" slideNumber="10" title="Bölüm Sentezi ve Klinik Değerlendirme Senaryosu" badge="Klinik Sentez" badgeColor="emerald">
+    <interactiveElement type="branching_logic"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+  <slide id="k1-07-s11" slideNumber="11" title="Steatoz (Yağlı Değişim) Tanımı ve Tutulan Başlıca Organlar" badge="Steatoz Tanımı" badgeColor="amber">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="active_recall"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s12" slideNumber="12" title="Karaciğerde Lipid Metabolizması ve Yağ Asidi Döngüsü" badge="Metabolizma" badgeColor="emerald">
+    <interactiveElement type="causal_chain"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s13" slideNumber="13" title="Steatoz Etiyolojisi: Alkol Toksisitesi ve Biyokimyasal Yıkım" badge="Alkolik Steatoz" badgeColor="red">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s14" slideNumber="14" title="Steatoz Etiyolojisi: Obezite, Tip 2 Diyabet ve İnsülin Direnci" badge="Metabolik Steatoz" badgeColor="blue">
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s15" slideNumber="15" title="Protein-Kalori Malnütrisyonu (Kvaşiorkor) ve Toksinlere Bağlı Steatoz" badge="Malnütrisyon ve Toksin" badgeColor="purple">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s16" slideNumber="16" title="Hipoksi ve Hücre Hasarının Trigliserid Birikimine Etkisi" badge="Hipoksik Steatoz" badgeColor="cyan">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s17" slideNumber="17" title="Steatozun Morfolojisi: Makroveziküler vs Mikroveziküler Yağlanma" badge="Morfoloji" badgeColor="teal">
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s18" slideNumber="18" title="Steatohepatit, İlerleyici Fibrozis ve Siroz Gelişim Riski" badge="İlerleyici Hasar" badgeColor="stone">
+    <interactiveElement type="causal_chain"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s19" slideNumber="19" title="[TEKRAR SAYFASI - CHECKPOINT 2] Steatoz Patogenezi ve Morfolojik Özellikleri" badge="Checkpoint 2" badgeColor="teal" isCheckpoint="true" checkpointNumber="2">
+    <interactiveElement type="cloze_masking"/>
+  </slide>
+  <slide id="k1-07-s20" slideNumber="20" title="Steatoz Klinik Yönetimi ve Karşılaştırmalı Değerlendirme" badge="Klinik Yönetim" badgeColor="emerald">
+    <interactiveElement type="branching_logic"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+  <slide id="k1-07-s21" slideNumber="21" title="Kolesterolün Hücresel Rolü ve Sıkı Homeostaz Mekanizmaları" badge="Kolesterol Fizyolojisi" badgeColor="amber">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="active_recall"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s22" slideNumber="22" title="Aşırı Kolesterol Yükü ve Makrofaj / Düz Kas Hücresi Yanıtı" badge="Aşırı Yük Yanıtı" badgeColor="red">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s23" slideNumber="23" title="Köpük Hücre (Foam Cell) Biyolojisi ve Morfolojik Özellikleri" badge="Köpük Hücre" badgeColor="blue">
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="active_recall"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s24" slideNumber="24" title="Ateroskleroz Patogenezinde Kolesterol: İntimal Plak ve Kristaller" badge="Ateroskleroz" badgeColor="teal">
+    <interactiveElement type="causal_chain"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s25" slideNumber="25" title="Ateromatöz Plakta Hücre İçi ve Hücre Dışı Kolesterol Dağılımı" badge="Plak Dinamiği" badgeColor="stone">
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s26" slideNumber="26" title="Ksantomlar (Ksantelazma, Tuberoerüptif, Tendon Ksantomları)" badge="Ksantomlar" badgeColor="indigo">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="active_recall"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s27" slideNumber="27" title="Ailesel Hiperkolesterolemi ve Aşil Tendonu Ksantomlarının Önemi" badge="Genetik Hiperkolesterolemi" badgeColor="red">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s28" slideNumber="28" title="Kolesterolozis (Çilek Safra Kesesi): Lamina Propriada Köpük Hücreler" badge="Kolesterolozis" badgeColor="cyan">
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="active_recall"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s29" slideNumber="29" title="[TEKRAR SAYFASI - CHECKPOINT 3] Kolesterol Birikimleri ve Klinik Tablolar" badge="Checkpoint 3" badgeColor="teal" isCheckpoint="true" checkpointNumber="3">
+    <interactiveElement type="cloze_masking"/>
+  </slide>
+  <slide id="k1-07-s30" slideNumber="30" title="Ateroskleroz ve Ksantomların Karşılaştırmalı Ayırıcı Tanısı" badge="Ayırıcı Tanı" badgeColor="emerald">
+    <interactiveElement type="branching_logic"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+  <slide id="k1-07-s31" slideNumber="31" title="Protein Birikimlerinin Genel İlkeleri ve Hiyalin Morfolojisi" badge="Protein Birikimi" badgeColor="purple">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="active_recall"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s32" slideNumber="32" title="Böbrek Proksimal Tübül Hücrelerinde Reabsorpsiyon Damlacıkları" badge="Tübüler Reabsorpsiyon" badgeColor="blue">
+    <interactiveElement type="causal_chain"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s33" slideNumber="33" title="Nefrotik Sendrom Patofizyolojisi ve Proteinüri-Damlacık Korelasyonu" badge="Nefrotik Korelasyon" badgeColor="teal">
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="active_recall"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s34" slideNumber="34" title="Plazma Hücrelerinde İmmünoglobulin Birikimi ve Russell Cisimcikleri" badge="Russell Cisimcikleri" badgeColor="red">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s35" slideNumber="35" title="Dutcher Cisimcikleri ve Multipl Miyelomda Plazma Hücre İnfiltrasyonu" badge="Miyelom İnklüzyonları" badgeColor="indigo">
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s36" slideNumber="36" title="Hücre İskeleti Proteinlerinin Agregasyonu: Sitokeratinler ve Ara Filamentler" badge="Sitoiskelet Agregasyonu" badgeColor="amber">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="active_recall"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s37" slideNumber="37" title="Alkolik Hiyalin (Mallory-Denk Cisimcikleri) Patogenezi ve Morfolojisi" badge="Mallory-Denk" badgeColor="red">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s38" slideNumber="38" title="Nörofibriler Yumaklar ve Tau Proteini Agregatları (Alzheimer Modeli)" badge="Nörofibriler Yumak" badgeColor="stone">
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="active_recall"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s39" slideNumber="39" title="[TEKRAR SAYFASI - CHECKPOINT 4] Protein Birikimleri ve Morfolojik Formlar" badge="Checkpoint 4" badgeColor="teal" isCheckpoint="true" checkpointNumber="4">
+    <interactiveElement type="cloze_masking"/>
+  </slide>
+  <slide id="k1-07-s40" slideNumber="40" title="Protein Birikimlerinin Klinik Ayırıcı Tanısı ve Sentez" badge="Klinik Sentez" badgeColor="emerald">
+    <interactiveElement type="branching_logic"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+  <slide id="k1-07-s41" slideNumber="41" title="Protein Katlanma Biyolojisi, Şaperonlar ve Ubikitin-Proteazom Yolağı" badge="Katlanma Biyolojisi" badgeColor="blue">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="active_recall"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s42" slideNumber="42" title="Endoplazmik Retikulum (ER) Stresi ve Açılmamış Protein Yanıtı (UPR)" badge="ER Stresi ve UPR" badgeColor="red">
+    <interactiveElement type="causal_chain"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s43" slideNumber="43" title="Yanlış Katlanmış Protein Hastalıklarının İki Ana Mekanizması" badge="Mekanizma Ayrımı" badgeColor="amber">
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s44" slideNumber="44" title="Kistik Fibrozis (CFTR) ve ER'de Yıkım Nedeniyle Fonksiyon Kaybı" badge="Kistik Fibrozis" badgeColor="teal">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s45" slideNumber="45" title="Ailesel Hiperkolesterolemi (LDLR) ve Tay-Sachs'ta Katlanma Hataları" badge="LDLR ve Tay-Sachs" badgeColor="indigo">
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s46" slideNumber="46" title="Retinitis Pigmentosa (Rodopsin) ve Nöronal ER Stresi / Hücre Kaybı" badge="Retinitis Pigmentosa" badgeColor="stone">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+  <slide id="k1-07-s47" slideNumber="47" title="Creutzfeldt-Jakob Hastalığı (CJD): Prion Proteini Konformasyonel Değişimi" badge="Prion Hastalıkları" badgeColor="purple">
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s48" slideNumber="48" title="α1-Antitripsin Eksikliği: Hem ER Stresi Hem Fonksiyon Kaybı" badge="AAT Eksikliği" badgeColor="red">
+    <interactiveElement type="causal_chain"/>
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s49" slideNumber="49" title="[TEKRAR SAYFASI - CHECKPOINT 5] Yanlış Katlanmış Protein Hastalıkları Tablosu" badge="Checkpoint 5" badgeColor="teal" isCheckpoint="true" checkpointNumber="5">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s50" slideNumber="50" title="Yanlış Katlanma Hastalıklarında Terapötik Yaklaşımlar ve Moleküler Sentez" badge="Terapötik Sentez" badgeColor="emerald">
+    <interactiveElement type="branching_logic"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+  <slide id="k1-07-s51" slideNumber="51" title="Glikojen Metabolizması ve Patolojik Birikim Mekanizmaları" badge="Karbonhidrat Patolojisi" badgeColor="amber">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s52" slideNumber="52" title="Diabetes Mellitus'ta Glikojen Birikimi" badge="Diyabet Patolojisi" badgeColor="red">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s53" slideNumber="53" title="Glikojenin Histopatolojik Tanısı: PAS ve Diyastaz" badge="Laboratuvar Tanı" badgeColor="rose">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s54" slideNumber="54" title="Glikojen Depo Hastalıkları (Glikojenozlar) Sınıflandırması" badge="Genetik Biyokimya" badgeColor="blue">
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s55" slideNumber="55" title="Tip I GSD (von Gierke Hastalığı): Masif Hepatomegali" badge="Pediatrik Metabolizma" badgeColor="orange">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s56" slideNumber="56" title="Tip II GSD (Pompe Hastalığı): Lizozomal Depolanma" badge="Kardiyogenetik" badgeColor="purple">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+  <slide id="k1-07-s57" slideNumber="57" title="Tip V GSD (McArdle Hastalığı): Çizgili Kas İntoleransı" badge="Kas Patolojisi" badgeColor="indigo">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s58" slideNumber="58" title="Hepatik vs Miyopatik Glikojenozların Karşılaştırmalı Özeti" badge="Sentez" badgeColor="cyan">
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s59" slideNumber="59" title="[TEKRAR SAYFASI - CHECKPOINT 6] Glikojen Birikimleri ve Glikojenozlar" badge="Checkpoint 6" badgeColor="teal" isCheckpoint="true" checkpointNumber="6">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+  <slide id="k1-07-s60" slideNumber="60" title="Glikojen Depo Hastalıklarında Güncel Tedavi Stratejileri" badge="Tedavi İlkeleri" badgeColor="emerald">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s61" slideNumber="61" title="Pigmentlerin Genel Sınıflandırması" badge="Pigment Biyolojisi" badgeColor="slate">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s62" slideNumber="62" title="Eksojen Karbon Partikülleri ve İnhalasyon" badge="Solunum Patolojisi" badgeColor="slate">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="causal_chain"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s63" slideNumber="63" title="Antrakozis: Akciğer ve Lenf Nodlarında Karbon Birikimi" badge="Çevresel Patoloji" badgeColor="blue">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s64" slideNumber="64" title="Kömür İşçisi Pnömokonyozu (CWP)" badge="Meslek Hastalığı" badgeColor="red">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s65" slideNumber="65" title="Dövme (Tattoo) Pigmentleri ve Dermal Depolanma" badge="Dermatopatoloji" badgeColor="purple">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s66" slideNumber="66" title="Melanin Biyosentezi ve Keratinositlere Dağıtımı" badge="Deri Biyolojisi" badgeColor="amber">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s67" slideNumber="67" title="Melanositik Lezyonlar: Nevus vs Malign Melanom" badge="Onkodermatoloji" badgeColor="rose">
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s68" slideNumber="68" title="Hipopigmentasyon Patolojileri: Vitiligo ve Albinizm" badge="Deri Hastalıkları" badgeColor="cyan">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s69" slideNumber="69" title="[TEKRAR SAYFASI - CHECKPOINT 7] Eksojen Pigmentler ve Melanin Biyolojisi" badge="Checkpoint 7" badgeColor="teal" isCheckpoint="true" checkpointNumber="7">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s70" slideNumber="70" title="Melanozis Koli: Laksatif Bağımlılığı ve Pigment Yanılgısı" badge="Gastroenteroloji" badgeColor="emerald">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s71" slideNumber="71" title="Lipofuksin ('Aşınma / Yaşlanma Pigmenti')" badge="Yaşlanma Patolojisi" badgeColor="amber">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s72" slideNumber="72" title="Kahverengi Atrofi (Brown Atrophy)" badge="Organ Morfolojisi" badgeColor="orange">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s73" slideNumber="73" title="Hemosiderin: Hemoglobinden Türeyen Demir Pigmenti" badge="Hematopatoloji" badgeColor="red">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="causal_chain"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s74" slideNumber="74" title="Histokimyasal Tanı: Prusya Mavisi (Perls Boyası)" badge="Histokimya" badgeColor="blue">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s75" slideNumber="75" title="Lokal Hemosideroz: Hematom ve Kalp Yetmezliği Hücreleri" badge="Fizyopatoloji" badgeColor="purple">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s76" slideNumber="76" title="Sistemik Hemosideroz: Nedenler ve Organ Tutulumu" badge="Hematoloji" badgeColor="rose">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s77" slideNumber="77" title="Herediter Hemokromatoz: HFE Gen Mutasyonu ve Bronz Diyabet" badge="Genetik Toksikoloji" badgeColor="red">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s78" slideNumber="78" title="Bilirubin Metabolizması ve Doku İkteri (Sarılık)" badge="Hepatobilier" badgeColor="yellow">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s79" slideNumber="79" title="[TEKRAR SAYFASI - CHECKPOINT 8] Endojen Pigmentler: Lipofuksin, Hemosiderin ve Bilirubin" badge="Checkpoint 8" badgeColor="teal" isCheckpoint="true" checkpointNumber="8">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s80" slideNumber="80" title="Hemosiderin vs Lipofuksin: Ayırıcı Tanı Kılavuzu" badge="Ayırıcı Tanı" badgeColor="cyan">
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s81" slideNumber="81" title="Patolojik Kalsifikasyona Giriş: Kalsiyum Tuzlarının Çökmesi" badge="Mineral Patolojisi" badgeColor="blue">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s82" slideNumber="82" title="Distrofik Kalsifikasyon Tanımı ve Önkoşulları" badge="Distrofik Kalsifikasyon" badgeColor="indigo">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s83" slideNumber="83" title="Distrofik Kalsifikasyonun Patogenezi: İnisiyasyon Fazı" badge="Biyofizik" badgeColor="purple">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="causal_chain"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s84" slideNumber="84" title="Propagasyon Fazı ve Hidroksiapatit Kristalleri" badge="Histopatoloji" badgeColor="cyan">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s85" slideNumber="85" title="Aterosklerotik Plakta Distrofik Kalsifikasyon" badge="Kardiyovasküler" badgeColor="red">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s86" slideNumber="86" title="Kalsifik Kalp Kapak Hastalıkları: Senil Aort Stenozu" badge="Kapak Patolojisi" badgeColor="amber">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s87" slideNumber="87" title="Psammom Cisimcikleri (Psammoma Bodies)" badge="Onkopatoloji" badgeColor="rose">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s88" slideNumber="88" title="Tüberküloz ve Granülomlarda Kalsifikasyon: Ghon Odağı" badge="Enfeksiyon Patolojisi" badgeColor="teal">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s89" slideNumber="89" title="[TEKRAR SAYFASI - CHECKPOINT 9] Distrofik Kalsifikasyon ve Psammom Cisimcikleri" badge="Checkpoint 9" badgeColor="teal" isCheckpoint="true" checkpointNumber="9">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s90" slideNumber="90" title="Yağ Nekrozu ve Sabunlaşma (Saponifikasyon)" badge="Enzimatik Nekroz" badgeColor="red">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s91" slideNumber="91" title="Metastatik Kalsifikasyon Tanımı: Sistemik Hiperkalsemi" badge="Metastatik Kalsifikasyon" badgeColor="red">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="interactive_table"/>
+  </slide>
+  <slide id="k1-07-s92" slideNumber="92" title="Hiperkalsemi Nedenleri I: Primer Hiperparatiroidizm" badge="Endokrinoloji" badgeColor="amber">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="causal_chain"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s93" slideNumber="93" title="Hiperkalsemi Nedenleri II: Kemik Destrüksiyonu ve Maliniteler" badge="Onkoloji" badgeColor="rose">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s94" slideNumber="94" title="Hiperkalsemi Nedenleri III: Kronik Böbrek Yetmezliği ve Kalsifilaksi" badge="Nefroloji" badgeColor="purple">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="before_after_slider"/>
+  </slide>
+  <slide id="k1-07-s95" slideNumber="95" title="Hiperkalsemi Nedenleri IV: D Vitamini Bozuklukları ve Sarkoidoz" badge="İmmünoloji" badgeColor="teal">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="micro_quiz"/>
+  </slide>
+  <slide id="k1-07-s96" slideNumber="96" title="Metastatik Kalsifikasyonun Hedef Organları: Asit Kaybeden Dokular" badge="Fizyoloji" badgeColor="blue">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="causal_chain"/>
+  </slide>
+  <slide id="k1-07-s97" slideNumber="97" title="Metastatik Kalsifikasyonun Klinik Komplikasyonları" badge="Klinik Patoloji" badgeColor="red">
+    <interactiveElement type="cloze_masking"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+  <slide id="k1-07-s98" slideNumber="98" title="Distrofik vs Metastatik Kalsifikasyon: Büyük Karşılaştırma" badge="Büyük Karşılaştırma" badgeColor="indigo">
+    <interactiveElement type="interactive_table"/>
+    <interactiveElement type="before_after_slider"/>
+    <interactiveElement type="branching_logic"/>
+  </slide>
+  <slide id="k1-07-s99" slideNumber="99" title="[TEKRAR SAYFASI - CHECKPOINT 10] Metastatik Kalsifikasyon ve Ayırıcı Tanı İlkeleri" badge="Checkpoint 10" badgeColor="teal" isCheckpoint="true" checkpointNumber="10">
+    <interactiveElement type="micro_quiz"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+  <slide id="k1-07-s100" slideNumber="100" title="Ders 7 Master Sentezi: Hücre İçi Birikimler ve Kalsifikasyonlar" badge="Büyük Sentez" badgeColor="emerald">
+    <interactiveElement type="branching_logic"/>
+    <interactiveElement type="active_recall"/>
+  </slide>
+</deck>

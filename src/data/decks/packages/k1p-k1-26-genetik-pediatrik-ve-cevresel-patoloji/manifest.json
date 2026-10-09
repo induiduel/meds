@@ -1,0 +1,31 @@
+{
+  "id": "k1p-k1-26-genetik-pediatrik-ve-cevresel-patoloji",
+  "title": "Genetik, Pediatrik ve Çevresel Patoloji",
+  "subtitle": "Genom Mimarisi, Marfan ve Kistik Fibrozis, Çevresel Toksinler, Ağır Metaller, Tütün/Alkol, Malnütrisyon ve Moleküler Patoloji",
+  "slug": "k1p-k1-26-genetik-pediatrik-ve-cevresel-patoloji",
+  "version": "1.0.0",
+  "category": "Dönem 1 - Kurul 1",
+  "department": "Tıbbi Patoloji",
+  "lecturer": "Prof. Dr. Hikmet Keleş (Tıbbi Patoloji ABD)",
+  "sourcePdf": "Kurul 1 - Ders 26: Genetik, Pediatrik ve Çevresel Patoloji (Prof. Dr. Hikmet Keleş)",
+  "stats": {
+    "slideCount": 100,
+    "questionCount": 111,
+    "flashcardCount": 30,
+    "elementCount": 256,
+    "elementDiversity": {
+      "interactive_table": "57 (%22.3)",
+      "active_recall": "49 (%19.1)",
+      "micro_quiz": "30 (%11.7)",
+      "branching_logic": "30 (%11.7)",
+      "before_after_slider": "30 (%11.7)",
+      "cloze_masking": "30 (%11.7)",
+      "causal_chain": "30 (%11.7)"
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "content": "content.md",
+    "blocks": "blocks.html"
+  }
+}

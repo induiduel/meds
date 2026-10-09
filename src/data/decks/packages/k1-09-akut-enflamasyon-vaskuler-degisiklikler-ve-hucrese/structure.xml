@@ -1,0 +1,840 @@
+<?xml version="1.0" ?>
+<learningDeck id="k1p-k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese" version="2.0.0" totalSlides="100">
+  <metadata>
+    <title>Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar (Yeni Mikro-Ders)</title>
+    <discipline>Tıbbi Patoloji</discipline>
+    <instructor>Prof. Dr. Hikmet Keleş</instructor>
+  </metadata>
+  <slides>
+    <slide number="1" badge="Giriş ve Tanım" isCheckpoint="false">
+      <title>Enflamasyonun Temel Tanımı: Vaskülarize Dokunun Koruyucu Kalkanı</title>
+      <subtitle>Zararlı etkenleri yok etmek ve doku onarımını başlatmak için damarlı dokunun verdiği dinamik yanıt</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="2" badge="Fizyopatolojik Rol" isCheckpoint="false">
+      <title>Konak Savunmasında Enflamasyonun Yaşamsal Önemi</title>
+      <subtitle>Enflamasyon olmasaydı enfeksiyonlar hızla dissemine olur ve yaralar asla iyileşemezdi</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="3" badge="Patolojik Potansiyel" isCheckpoint="false">
+      <title>İki Ucu Keskin Kılıç: Enflamasyonun Dokuya Verdiği Zararlar</title>
+      <subtitle>Savunma silahlarının (ROS, lizozomal enzimler) masum çevre parankimini tahrip etmesi</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="active_recall"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="4" badge="Klinik Korelasyon" isCheckpoint="false">
+      <title>Aşırı ve Uygunsuz Enflamatuvar Hastalıklar Spektrumu</title>
+      <subtitle>Otoimmünite, alerjik reaksiyonlar ve kronik dejeneratif süreçlerde enflamasyonun rolü</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="5" badge="Temel Sınıflandırma" isCheckpoint="false">
+      <title>Akut ve Kronik Enflamasyonun Karşılaştırmalı Dinamiği</title>
+      <subtitle>Başlangıç hızı, hücresel kompozisyon, doku hasarı şiddeti ve lokal/sistemik belirtiler</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="6" badge="Üç Ayaklı Mekanizma" isCheckpoint="false">
+      <title>Akut Enflamasyonun Üç Majör Bileşeni</title>
+      <subtitle>Damar çapı değişimi, mikrovasküler sızıntı ve lökositlerin dokuya çıkışı</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="7" badge="Savunma Ordusu" isCheckpoint="false">
+      <title>Enflamasyona Katılan Hücresel ve Sıvısal Elemanlar</title>
+      <subtitle>Dolaşımdaki lökositler, doku yerleşik bekçileri ve plazma protein sistemleri</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="8" badge="Sistemik Boyut" isCheckpoint="false">
+      <title>Lokal Enflamasyondan Sistemik Yanıta: Akut Faz Tepkisi</title>
+      <subtitle>TNF-alfa, IL-1 ve IL-6 sitokinlerinin kemik iliği, hipotalamus ve karaciğer üzerindeki etkileri</subtitle>
+      <interactiveElements count="2">
+        <element type="branching_logic"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="9" badge="Checkpoint 1" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 1] Enflamasyonun Tanımı, Amacı ve Genel Prensipleri</title>
+      <subtitle>Bölüm 1 Temel Kavramlar, Fayda-Zarar Dengesi, Akut vs Kronik ve Sistemik Yanıt</subtitle>
+      <interactiveElements count="3">
+        <element type="active_recall"/>
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="10" badge="Laboratuvar ve Klinik" isCheckpoint="false">
+      <title>Bölüm 1 Entegrasyonu: Patoloji Laboratuvarından Kliniğe</title>
+      <subtitle>Kandaki biyobelirteçler ile dokudaki enflamatuvar sürecin birebir eşleşmesi</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="11" badge="Tıp Tarihi" isCheckpoint="false">
+      <title>Tarihsel Kökenler: Mısır Papirüslerinden Antik Roma'ya</title>
+      <subtitle>Edwin Smith papirüsü, Celsus'un dört kardinal bulgusu ve Virchow'un beşinci katkısı</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="12" badge="Vasküler Patoloji" isCheckpoint="false">
+      <title>Rubor (Kızarıklık) ve Calor (Sıcaklık): Hipereminin Fizyopatolojisi</title>
+      <subtitle>Arteriyoler vazodilatasyon, kapiller yatak genişlemesi ve lokal kan göllenmesi</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="13" badge="Ödem Biyolojisi" isCheckpoint="false">
+      <title>Tumor (Şişlik): Vasküler Kaçak ve Eksüda Birikimi</title>
+      <subtitle>Artmış mikrovasküler geçirgenlik, plazma proteinleri ve doku turgor basıncının artışı</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="14" badge="Ağrı Nörobiyolojisi" isCheckpoint="false">
+      <title>Dolor (Ağrı): Nosiseptörlerin Kimyasal ve Mekanik Uyarımı</title>
+      <subtitle>Bradikinin, PGE2, doku asidozu ve ödemin yarattığı gerilim basıncı</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="15" badge="Virchow İlkesi" isCheckpoint="false">
+      <title>Functio Laesa (Fonksiyon Kaybı): Enflamasyonun Bütünleşik Sonucu</title>
+      <subtitle>Ağrı inhibisyonu, mekanik deformite ve parankimal hücre yıkımının organ işlevini durdurması</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="16" badge="Yanıt Dinamiği" isCheckpoint="false">
+      <title>Enflamatuvar Yanıtın Beş Aşaması: '5R' Kuralı</title>
+      <subtitle>Recognition, Recruitment, Removal, Regulation ve Resolution/Repair orkestrasyonu</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="17" badge="Erken Faz" isCheckpoint="false">
+      <title>Adım 1 ve 2: Recognition (Tanıma) ve Recruitment (Çağırma)</title>
+      <subtitle>Sentinel hücre reseptörleri alarm verir; selektinler ve integrinler lökositleri damardan çeker</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="18" badge="Geç Faz ve Rezolüsyon" isCheckpoint="false">
+      <title>Adım 3, 4 ve 5: Removal, Regulation ve Repair</title>
+      <subtitle>Fagositoz ile temizlik, yangıyı sonlandıran frenler ve fibroblastik onarım</subtitle>
+      <interactiveElements count="2">
+        <element type="branching_logic"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="19" badge="Checkpoint 2" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 2] Kardinal Belirtiler ve 5R Orkestrasyonu</title>
+      <subtitle>Bölüm 2 Celsus-Virchow Beşlisi, Nosiseptörler, Eksüda ve Enflamasyonun 5 Evresi</subtitle>
+      <interactiveElements count="3">
+        <element type="active_recall"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="20" badge="Klinik Uygulama" isCheckpoint="false">
+      <title>Bölüm 2 Entegrasyonu: Akut Apandisitte 5 Kardinal Belirti</title>
+      <subtitle>Klinik patoloji viziti: Lümen obstrüksiyonundan cerrahi masasına uzanan enflamasyon tablosu</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="21" badge="İmmün Tanıma" isCheckpoint="false">
+      <title>Tehlike Sinyallerinin Sınıflandırılması: PAMPs ve DAMPs</title>
+      <subtitle>Eksojen mikrobiyal istilacılar ile endojen hücresel hasar moleküllerinin ayrımı</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="22" badge="Reseptör Biyolojisi" isCheckpoint="false">
+      <title>Toll-Like Reseptörler (TLR): Hücresel Sınır Bekçileri</title>
+      <subtitle>Plazma membranı ve endozomal kompartımanlarda nöbet tutan transmembran sensörler</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="23" badge="Sinyal İletimi" isCheckpoint="false">
+      <title>TLR Sinyal İletimi: MyD88 ve NF-kappaB Aktivasyonu</title>
+      <subtitle>Reseptör uyarımından nükleer transkripsiyona ve sitokin fırtınasına giden moleküler otoyol</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="active_recall"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="24" badge="İnflamazom" isCheckpoint="false">
+      <title>NLR Reseptörleri ve İnflamazom Kompleksinin Mimarisi</title>
+      <subtitle>Sitozolik tehlike sensörü NLRP3, adaptör ASC ve efektör prokaspaz-1 üçlüsü</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="25" badge="Aktivasyon Modeli" isCheckpoint="false">
+      <title>İnflamazomun İki Aşamalı Çalışma Mekanizması</title>
+      <subtitle>Sinyal 1 (Priming: NF-kappaB) ve Sinyal 2 (Tetikleme: Potasyum çıkışı ve ROS)</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="26" badge="Metabolik Yangı" isCheckpoint="false">
+      <title>İnflamazom İlişkili Klinik Hastalıklar: Gut, Ateroskleroz ve Diyabet</title>
+      <subtitle>Ürat kristalleri, kolesterol kristalleri ve amiloidin steril yangıyı alevlendirmesi</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="27" badge="Ölüm Biçimleri" isCheckpoint="false">
+      <title>Piroptozis: İnflamazom Aracılı Enflamatuvar Hücre İntiharı</title>
+      <subtitle>Kaspaz-1 aktivasyonu, Gazdermin D gözenekleri ve sitokinlerin patlayarak salınması</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="28" badge="Genişletilmiş PRR" isCheckpoint="false">
+      <title>Diğer Örüntü Tanıma Reseptörleri: CLR ve RLR Aileleri</title>
+      <subtitle>Mantar glukanlarını yakalayan C-tipi lektinler ve intrasellüler viral RNA avcısı RIG-I</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="29" badge="Checkpoint 3" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 3] Tehlike Algılama ve İnflamazom Mimarisi</title>
+      <subtitle>Bölüm 3 PAMPs, DAMPs, TLR4/MyD88/NF-kappaB ve NLRP3/Kaspaz-1/IL-1 Sentezi</subtitle>
+      <interactiveElements count="3">
+        <element type="active_recall"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="30" badge="İlaç Hedefleri" isCheckpoint="false">
+      <title>Bölüm 3 Entegrasyonu: İnflamazomun Farmakolojik Hedeflenmesi</title>
+      <subtitle>Kolkisin, Anakinra ve MCC950 ile IL-1 yolağının kilitlenmesi</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="31" badge="Vasküler Başlangıç" isCheckpoint="false">
+      <title>Vasküler Yanıtın İlk Saniyeleri: Geçici Vazokonstriksiyon</title>
+      <subtitle>Mekanik travma anında nörojenik refleks ve endotelin aracılı koruyucu damar büzüşmesi</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="32" badge="Hemodinami" isCheckpoint="false">
+      <title>Arteriyoler Vazodilatasyon: Akut Enflamasyonun Temel Vasküler Belirteci</title>
+      <subtitle>Prekapiller arteriyollerin gevşemesi, kapiller yatakların açılması ve hiperemi dalgası</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="33" badge="Vazomotor Biyokimya" isCheckpoint="false">
+      <title>Vazodilatasyonun Kimyasal Mediyatörleri: Histamin ve Nitrik Oksit</title>
+      <subtitle>H1 reseptör uyarımı, endotelyal eNOS aktivasyonu ve düz kasta cGMP artışı</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="micro_quiz"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="34" badge="Klasik Fizyoloji" isCheckpoint="false">
+      <title>Lewis'in Üçlü Yanıtı (Triple Response of Lewis)</title>
+      <subtitle>Kırmızı çizgi, alev dalgası (flare) ve kabarcık (wheal): Deneysel enflamasyon modeli</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="35" badge="Hemoreoloji" isCheckpoint="false">
+      <title>Mikrodolaşımda Kan Akımının Yavaşlaması ve Staz Gelişimi</title>
+      <subtitle>Sıvı kaybıyla kanın vizkozitesinin artması, eritrosit yoğunlaşması ve akımın durma noktasına gelmesi</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="36" badge="Biyofizik" isCheckpoint="false">
+      <title>Aksiyal Akımdan Marginasyona Geçiş: Lökositlerin Kenara İtilmesi</title>
+      <subtitle>Laminer akım fiziği, reolojik itilme kuvvetleri ve lökosit-endotel buluşması</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="37" badge="Mikrovasküler Anatomi" isCheckpoint="false">
+      <title>Postkapiller Venüller: Vasküler Yanıtın Anatomik Odak Noktası</title>
+      <subtitle>Neden kapiller veya arteriyoller değil de venüller sızıntı ve lökosit göçünün merkezidir?</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="38" badge="Zaman Çizelgesi" isCheckpoint="false">
+      <title>Vasküler Yanıtın Zamansal Fazları: Erken vs Uzamış Yanıt</title>
+      <subtitle>Histaminin dakikalar süren ani geçici fazı ve sitokinlerin saatler süren gecikmiş fazı</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="39" badge="Checkpoint 4" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 4] Vasküler Yanıt ve Akım Dinamikleri</title>
+      <subtitle>Bölüm 4 Vazokonstriksiyon, Arteriyoler Dilatasyon, NO/Histamin, Lewis Üçlüsü ve Staz</subtitle>
+      <interactiveElements count="3">
+        <element type="active_recall"/>
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="40" badge="Kritik Bakım" isCheckpoint="false">
+      <title>Bölüm 4 Entegrasyonu: Şok ve Sepsiste Vazodilatasyon Felaketi</title>
+      <subtitle>Lokal koruyucu hiperemiden sistemik kollapsa uzanan patolojik köprü</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="41" badge="Geçirgenlik Temeli" isCheckpoint="false">
+      <title>Mikrovasküler Geçirgenlik Artışına Giriş: Kaçağın Biyolojisi</title>
+      <subtitle>Normal Starling dengesinin çöküşü ve protein zengini plazma sıvısının dokuya hücumu</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="42" badge="Anahtar Mekanizma" isCheckpoint="false">
+      <title>Mekanizma 1: Endotel Hücre Kasılması (Endothelial Cell Contraction)</title>
+      <subtitle>En yaygın mekanizma: Postkapiller venüllerde histamin ve bradikinin ile hızlı aralanma</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="43" badge="Ağır Doku Hasarı" isCheckpoint="false">
+      <title>Mekanizma 2: Doğrudan Endotel Hasarı ve Nekrozu (Direct Endothelial Injury)</title>
+      <subtitle>Şiddetli termal yanık, lütrik bakteriyel toksinler ve nekrotizan vaskülitlerin yarattığı masif yıkım</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="44" badge="İmmün Hasar" isCheckpoint="false">
+      <title>Mekanizma 3: Lökosit Bağımlı Endotel Hasarı (Leukocyte-Mediated Injury)</title>
+      <subtitle>Konağı korumaya gelen nötrofillerin reaktif oksijen radikalleri ve proteazlarla damarı delmesi</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="45" badge="Özel Yollar" isCheckpoint="false">
+      <title>Mekanizma 4 ve 5: Artmış Transsitoz ve Yeni Damar Sızıntısı</title>
+      <subtitle>Vezikülovakuoler organel (VVO) kanalları ve granülasyon dokusundaki pencereli anjiyogenez</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="46" badge="Sentez Tablosu" isCheckpoint="false">
+      <title>Beş Geçirgenlik Mekanizmasının Büyük Karşılaştırma Matrisi</title>
+      <subtitle>Zamanlama, anatomik lokalizasyon, mediyatör ve klinik prototip entegrasyonu</subtitle>
+      <interactiveElements count="2">
+        <element type="branching_logic"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="47" badge="Eksüda Biyokimyası" isCheckpoint="false">
+      <title>Eksüdanın Moleküler Anatomisi: Neden Sıradan Su Değildir?</title>
+      <subtitle>İmmünglobülinler, kompleman, fibrinojen ve biyolojik savunma kalkanı</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="48" badge="Farmakoterapi" isCheckpoint="false">
+      <title>Geçirgenlik Artışının İlaçlarla Modülasyonu</title>
+      <subtitle>Antihistaminikler, lökotrien reseptör antagonistleri ve kortikosteroidlerin vasküler hedefleri</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="49" badge="Checkpoint 5" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 5] Vasküler Geçirgenlik Mekanizmaları</title>
+      <subtitle>Bölüm 5 Endotel Kasılması, Nekroz, Lökosit Toksisitesi, Transsitoz ve Eksüda</subtitle>
+      <interactiveElements count="3">
+        <element type="active_recall"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="50" badge="Yoğun Bakım Entegrasyonu" isCheckpoint="false">
+      <title>Bölüm 5 Entegrasyonu: Ağır Yanık Hastasında Sıvı Resüsitasyonunun Mantığı</title>
+      <subtitle>Parkland formülü, evaporatif kayıp ve onkotik basınç dengesinin patolojik temeli</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="51" badge="Sıvı Biyopatolojisi" isCheckpoint="false">
+      <title>Vücut Boşluklarında Sıvı Birikimi: Transüda ve Eksüda Kavramları</title>
+      <subtitle>Kardiyovasküler hemodinami bozukluğu mu, yoksa enflamatuvar bariyer yıkımı mı?</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="52" badge="Laboratuvar Tanı" isCheckpoint="false">
+      <title>Transüda ve Eksüdanın Laboratuvar Ayrımı: Light Kriterleri ve Dansite</title>
+      <subtitle>Dansite, total protein, LDH düzeyi ve hücresel içerik parametreleri</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="53" badge="Eksüda Tipleri" isCheckpoint="false">
+      <title>İltihaplı Sıvının Tipleri: Seröz, Fibrinöz, Pürülan ve Hemorajik</title>
+      <subtitle>Eksüdanın protein, fibrin, canlı/ölü lökosit ve eritrosit içeriğine göre morfolojik spektrumu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="54" badge="Hemoreoloji" isCheckpoint="false">
+      <title>Kan Akımının Duraklaması (Staz): Eritrosit Yığılması ve Asidoz</title>
+      <subtitle>Kılcal damarlarda eritrositlerin birbirine kenetlenmesi, lokal hipoksi ve doku pH düşüşü</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="55" badge="Lenfatik Dolaşım" isCheckpoint="false">
+      <title>Lenfatik Sistemin Enflamasyondaki Dinamiği: Drenaj ve Taşıma</title>
+      <subtitle>Kör uçlu lenf kapillerlerinin gerilmesi, lenf akım hızının artışı ve immün gözetim</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="56" badge="Klinik Patoloji" isCheckpoint="false">
+      <title>Lenfanjit (Lymphangitis): Yangının Drenaj Yollarını Sarması</title>
+      <subtitle>Ciltte enfeksiyon odağından lenf bezine uzanan ağrılı kırmızı çizgiler</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="57" badge="Lenf Nodu Patolojisi" isCheckpoint="false">
+      <title>Reaktif Lenfadenit (Lymphadenitis): Lenf Düğümünün Alarm Yanıtı</title>
+      <subtitle>Kapsül gerilimi, foliküler hiperplazi, sinüs histiyositozu ve hassas lenfadenopati</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="58" badge="Sistemik İstilâ" isCheckpoint="false">
+      <title>Bakteriyemi ve Sepsise Açılan Kapı: Bariyerlerin İflası</title>
+      <subtitle>Lenf nodu filtresi delindiğinde mikropların duktus torasikus yoluyla kana karışması</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="59" badge="Checkpoint 6" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 6] Transüda vs Eksüda ve Lenfatik Patoloji</title>
+      <subtitle>Bölüm 6 Sıvı Tipleri, Light Kriterleri, Staz Asidozu, Lenfanjit ve Lenfadenit</subtitle>
+      <interactiveElements count="3">
+        <element type="active_recall"/>
+        <element type="cloze_masking"/>
+        <element type="before_after_slider"/>
+      </interactiveElements>
+    </slide>
+    <slide number="60" badge="Klinik Karar Algoritması" isCheckpoint="false">
+      <title>Bölüm 6 Entegrasyonu: Plevral Efüzyonlu Hastaya Klinik Yaklaşım</title>
+      <subtitle>Torasentez örneğinin laboratuvar algoritması: Siroz mu, Pnömoni mi, Malignite mi?</subtitle>
+      <interactiveElements count="2">
+        <element type="branching_logic"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="61" badge="Lökosit Trafiği" isCheckpoint="false">
+      <title>Lökositlerin Göreve Alımı (Recruitment): Adım Adım Kaskad</title>
+      <subtitle>Kandan dokuya uzanan dört aşamalı yolculuk: Marginasyon, Yuvarlanma, Adezyon ve Diapedez</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="62" badge="Selektinler" isCheckpoint="false">
+      <title>Selektin Ailesi ve Yuvarlanma (Rolling) Biyolojisi</title>
+      <subtitle>Kalsiyum bağımlı lektinler: Hızlı akan kanda lökosite ilk freni yaptıran zayıf bağlar</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="63" badge="Endotel Sırları" isCheckpoint="false">
+      <title>P-Selektin ve Weibel-Palade Cisimcikleri: Yıldırım Hızında Dışavurum</title>
+      <subtitle>Histamin ve trombin ile dakikalar içinde hücre zarına füzyon olan sekretuvar granüller</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="64" badge="İntegrin Kilitlenmesi" isCheckpoint="false">
+      <title>İntegrin Ailesi ve Sıkı Adezyon (Firm Adhesion) Kilitlenmesi</title>
+      <subtitle>LFA-1, Mac-1 ve VLA-4: Düşük afiniteli katlanmış formdan yüksek afiniteli dik forma geçiş</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="65" badge="Endotel Ligandları" isCheckpoint="false">
+      <title>Endotelyal İntegrin Ligandları: ICAM-1 ve VCAM-1</title>
+      <subtitle>İmmünglobülin süperailesi üyeleri ve TNF/IL-1 sitokinleri ile güçlü indüksiyon</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="66" badge="Genetik İmmün Yetmezlik" isCheckpoint="false">
+      <title>Lökosit Adezyon Eksikliği Tip 1 (LAD-1): CD18 İntegrin Mutasyonu</title>
+      <subtitle>Kanda yüz bin nötrofil varken dokuda sıfır irin: İmmünolojinin en çarpıcı paradoksu</subtitle>
+      <interactiveElements count="2">
+        <element type="branching_logic"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="67" badge="Karbonhidrat Defekti" isCheckpoint="false">
+      <title>Lökosit Adezyon Eksikliği Tip 2 (LAD-2): Selektin Ligand Kusuru</title>
+      <subtitle>Fruktoz taşıyıcı mutasyonu, Sialyl-Lewis X yokluğu ve yuvarlanma (rolling) kusuru</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="68" badge="Monoklonal Tedaviler" isCheckpoint="false">
+      <title>Adezyon Moleküllerinin Tedavide Hedeflenmesi</title>
+      <subtitle>Natalizumab ve Efalizumab: İntegrin blokajıyla yangıyı damarda durdurmak</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="69" badge="Checkpoint 7" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 7] Lökosit Marginasyonu, Yuvarlanma ve Adezyon</title>
+      <subtitle>Bölüm 7 Selektinler, Weibel-Palade, İntegrinler, ICAM-1, LAD-1 ve LAD-2 Entegrasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="active_recall"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="70" badge="Hücresel Kinetik" isCheckpoint="false">
+      <title>Bölüm 7 Entegrasyonu: Neden Nötrofiller Önce, Monositler Sonra Gelir?</title>
+      <subtitle>Kandaki sayısal üstünlük, selektin bağlanma hızı ve adezyon moleküllerinin zamansal ardıllığı</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="71" badge="Diapedez" isCheckpoint="false">
+      <title>Transmigrasyon (Diapedez): Damar Duvarını Aşmak</title>
+      <subtitle>Endotel kavşaklarından sürünerek geçiş ve PECAM-1 (CD31) molekülünün homofilik köprüsü</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="72" badge="Enzimatik Geçiş" isCheckpoint="false">
+      <title>Bazal Membranın Delinmesi: Matriks Metalloproteinazların (MMP) Rolü</title>
+      <subtitle>Kollajenazların tip IV kollajeni sindirmesi ve lökositin ekstravasküler alana ayak basması</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="73" badge="Yönlendirilmiş Göç" isCheckpoint="false">
+      <title>Kemotaksi (Chemotaxis): Kimyasal Gradyan Boyunca Hedefe Koşmak</title>
+      <subtitle>Konsantrasyon farkını sezen lökositlerin hasar odağına yönlendirilmiş amip benzeri hareketi</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="74" badge="Kemoatraktanlar" isCheckpoint="false">
+      <title>Kemotaktik Ajanlar: Eksojen ve Endojen Pusulalar</title>
+      <subtitle>Bakteriyel formil peptitler, C5a, Lökotrien B4 ve İnterlökin-8 (CXCL8) kalkanı</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="75" badge="Hücre Biyofiziği" isCheckpoint="false">
+      <title>Kemotaktik Sinyal İletimi: GPCR ve Aktin İskeleti Lokomosyonu</title>
+      <subtitle>G-protein kenetli yedi transmembran reseptör, Rho-GTPazlar ve lamellipod itişi</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="76" badge="Özel Kinetik" isCheckpoint="false">
+      <title>İnfiltrasyon Kinetiğinin İstisnaları: Standart Nötrofil-Monosit Kuralını Bozanlar</title>
+      <subtitle>Pseudomonas'ta günlerce nötrofil, virüslerde ilk andan lenfosit, alerjide eozinofil</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="77" badge="Özgül Trafik" isCheckpoint="false">
+      <title>Eozinofilik ve Lenfositik Kemotaksi: Özelleşmiş Çağrıcılar</title>
+      <subtitle>Eotaksin-1 (CCL11), IL-5, VLA-4 ve CXCR3 kemokin eksenleri</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="78" badge="Genetik Trafik Kusuru" isCheckpoint="false">
+      <title>Chédiak-Higashi Sendromu: Mikrotübül ve Vezikül Trafik İflası</title>
+      <subtitle>LYST gen mutasyonu, dev lizozomal granüller, kemotaksi felci ve parsiyel albinizm</subtitle>
+      <interactiveElements count="2">
+        <element type="branching_logic"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="79" badge="Checkpoint 8" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 8] Diapedez, Kemotaksi ve Hücresel Göç</title>
+      <subtitle>Bölüm 8 PECAM-1 (CD31), MMP-9, Kemotaktik Gradyan, GPCR, Kinetik ve Chédiak-Higashi</subtitle>
+      <interactiveElements count="3">
+        <element type="active_recall"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="80" badge="Genetik Karşılaştırma" isCheckpoint="false">
+      <title>Bölüm 8 Entegrasyonu: Lökosit Göç Kusurlarının Ayırıcı Tanı Tablosu</title>
+      <subtitle>LAD-1, LAD-2 ve Chédiak-Higashi sendromlarının patolojik karşılaştırması</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="81" badge="Fagositoz" isCheckpoint="false">
+      <title>Fagositozun Üç Aşaması: Tanıma, Yutulma ve İntrasellüler İmha</title>
+      <subtitle>Savunma hücrelerinin mikroorganizmaları kucaklayıp fagozom içine hapsetmesi</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="82" badge="Opsoninler" isCheckpoint="false">
+      <title>Opsonizasyon: Hedefi İşaretleyen Moleküler Soslar</title>
+      <subtitle>IgG Fc parçası, Kompleman C3b ve Mannoz Bağlayıcı Lektin (MBL) mucizesi</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="83" badge="Oksidatif Patlama" isCheckpoint="false">
+      <title>Solunumsal Patlama (Respiratory Burst) ve NADPH Oksidaz</title>
+      <subtitle>Oksijen tüketiminde dev sıçrama ve süperoksit radikalinin üretilmesi</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="84" badge="MPO Sistemi" isCheckpoint="false">
+      <title>Miyeloperoksidaz (MPO) ve Hipokloröz Asit: Hücresel Çamaşır Suyu</title>
+      <subtitle>H2O2 ve klorürden HOCl üretimi: Nötrofillerin en güçlü ve ölümcül mikrobisidal silahı</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="85" badge="Genetik Mikrobisidal Kusur" isCheckpoint="false">
+      <title>Kronik Granülomatöz Hastalık (KGH / CGD): NADPH Oksidaz İflası</title>
+      <subtitle>Katalaz-pozitif mikroplarla tekrarlayan granülomlar, NBT testi ve DHR akım sitometrisi</subtitle>
+      <interactiveElements count="2">
+        <element type="branching_logic"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="86" badge="Enzim Karşılaştırması" isCheckpoint="false">
+      <title>Miyeloperoksidaz Eksikliği vs CGD: Ayırıcı Tanı İncelemeleri</title>
+      <subtitle>Neden MPO eksikliği çoğunlukla asemptomatiktir ve NBT testi neden pozitiftir?</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="87" badge="Alternatif Cephane" isCheckpoint="false">
+      <title>Oksijenden Bağımsız Öldürme Mekanizmaları ve Lizozomal Enzimler</title>
+      <subtitle>Defensinler, Lizozim, Laktoferrin ve Bakterisidal Permeabilite Artıran Protein (BPI)</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="88" badge="NETosis" isCheckpoint="false">
+      <title>Nötrofil Ekstrasellüler Tuzakları (NET'ler) ve NETosis</title>
+      <subtitle>Kendi DNA'sını fırlatan nötrofil intiharı: Mikropları yakalayan yapışkan kromatin ağı</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="89" badge="Checkpoint 9" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 9] Fagositoz, Oksidatif Patlama ve NETosis</title>
+      <subtitle>Bölüm 9 Opsoninler, NADPH Oksidaz, MPO, CGD Ayrımı ve Antimikrobiyal Cephane</subtitle>
+      <interactiveElements count="3">
+        <element type="active_recall"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="90" badge="İmmünopatoloji" isCheckpoint="false">
+      <title>Bölüm 9 Entegrasyonu: Lökosit Aracılı Doku Hasarı Hastalıkları</title>
+      <subtitle>Romatoid artrit, gut, ARDS ve glomerülonefritte lökositlerin kontrolsüz fagozom sızıntısı</subtitle>
+      <interactiveElements count="2">
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="91" badge="Morfolojiye Giriş" isCheckpoint="false">
+      <title>Akut Enflamasyonun Morfolojik Kalıplarına Giriş</title>
+      <subtitle>Doku hasarının şiddetine, damar kaçağının derecesine ve etkenin doğasına göre şekillenen kalıplar</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="92" badge="Seröz Kalıp" isCheckpoint="false">
+      <title>Seröz Enflamasyon: Hücreden Fakir Berrak Sıvı Efüzyonları</title>
+      <subtitle>Yanık bülleri, viral veziküller ve periton/plevra/perikard seröz efüzyonları</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="93" badge="Fibrinöz Kalıp" isCheckpoint="false">
+      <title>Fibrinöz Enflamasyon: Damar Bariyerinin Ağır Yırtılması</title>
+      <subtitle>Kandan sızan dev fibrinojenin polimerizasyonu ve 'tereyağlı ekmek' perikarditi</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="94" badge="Pürülan Kalıp" isCheckpoint="false">
+      <title>Pürülan (Süpüratif) Enflamasyon ve Abse Anatomisi</title>
+      <subtitle>Piyojenik bakteriler, devasa nötrofil göçü, likefaksiyon (sıvılaşma) nekrozu ve pus</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="95" badge="Ülser Kalıbı" isCheckpoint="false">
+      <title>Ülseröz Enflamasyon: Epitelyal Örtünün Soyulması</title>
+      <subtitle>Organ yüzeyinden dökülen nekrotik epitel, akut eksüda tabanı ve granülasyon yatağı</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="96" badge="Akıbet Yolları" isCheckpoint="false">
+      <title>Akut Enflamasyonun Üç Nihai Akıbeti (Outcomes)</title>
+      <subtitle>1. Tam Rezolüsyon, 2. Skarlaşma/Fibrozis, 3. Kronik Enflamasyona İlerleme</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="97" badge="Yangı Frenleri" isCheckpoint="false">
+      <title>Rezolüsyonun Aktif Moleküler Frenleri: Yangıyı Söndürmek</title>
+      <subtitle>Lipoksinler, Rezolvinler, Protektinler, Nötrofil Apoptozu ve Eferositoz</subtitle>
+      <interactiveElements count="2">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="98" badge="Onarım Patolojisi" isCheckpoint="false">
+      <title>Organizasyon ve Skarlaşma: Granülasyon Dokusundan Fibröz Sikatrise</title>
+      <subtitle>Fibrin eksüdasının içine yürüyen yeni damarlar, fibroblastlar ve tip I kollajen çatısı</subtitle>
+      <interactiveElements count="2">
+        <element type="causal_chain"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="99" badge="Büyük Matris" isCheckpoint="false">
+      <title>Akut Enflamasyonun Büyük Entegrasyon Matrisi</title>
+      <subtitle>Tüm vasküler, hücresel ve kimyasal mekanizmaların tek bir panoramik tabloda birleşimi</subtitle>
+      <interactiveElements count="2">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="100" badge="Master Checkpoint" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 10] Akut Enflamasyonun Büyük Sentezi ve Master Özeti</title>
+      <subtitle>Bölüm 10 Morfolojik Kalıplar, Abse Mimarisi, Rezolüsyon ve Ders 9 Master Sentezi</subtitle>
+      <interactiveElements count="3">
+        <element type="branching_logic"/>
+        <element type="active_recall"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+  </slides>
+</learningDeck>

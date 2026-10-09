@@ -1,0 +1,48 @@
+{
+  "id": "k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar",
+  "title": "Hücre İçi Birikimler ve Kalsifikasyonlar (Yeni Mikro-Ders)",
+  "shortTitle": "Hücre İçi Birikimler ve Kalsifikasyonlar",
+  "discipline": "Tıbbi Patoloji",
+  "committee": "Kurul 1 (Ürogenital ve Solunum Sistemi)",
+  "instructor": "Prof. Dr. Hikmet Keleş",
+  "version": "2.0.0",
+  "formatVersion": "1.0",
+  "totalSlides": 100,
+  "totalInteractiveElements": 224,
+  "interactiveRatio": 2.24,
+  "interactiveDistribution": {
+    "cloze_masking": {
+      "count": 73,
+      "percentage": 32.6
+    },
+    "active_recall": {
+      "count": 46,
+      "percentage": 20.5
+    },
+    "interactive_table": {
+      "count": 21,
+      "percentage": 9.4
+    },
+    "branching_logic": {
+      "count": 21,
+      "percentage": 9.4
+    },
+    "causal_chain": {
+      "count": 21,
+      "percentage": 9.4
+    },
+    "micro_quiz": {
+      "count": 21,
+      "percentage": 9.4
+    },
+    "before_after_slider": {
+      "count": 21,
+      "percentage": 9.4
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "blocks": "blocks.html",
+    "content": "content.md"
+  }
+}

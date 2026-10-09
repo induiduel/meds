@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "tsx server.ts",
     "build": "vite build",
-    "build:gh-pages": "vite build",
+    "build:gh-pages": "BUILD_TARGET=gh-pages vite build",
     "predeploy": "npm run build:gh-pages",
-    "deploy": "gh-pages -d dist",
+    "deploy": "BUILD_TARGET=gh-pages npm run build:gh-pages && gh-pages -d dist",
     "start": "tsx server.ts",
     "preview": "vite preview",
     "check:online": "tsx scripts/check-online-status.ts",

@@ -1,0 +1,1946 @@
+# Doku Onarımı ve Yara İyileşmesi
+**Eğitmen:** Prof. Dr. Hikmet Keleş (Patoloji ABD)  
+**Ders:** Patoloji | **Kategori:** Kurul 1 · 2026-2027 ders paketi  
+**Toplam Slayt:** 100 | **Toplam Soru:** 320  
+
+---
+
+## Slayt 1: Doku Onarımına Giriş: Biyolojik Bütünlüğün Yeniden Kurulması
+
+Doku onarımı (repair), doku hasarı oluştuktan sonra organizmanın hayatta kalabilmek için anatomik bütünlüğü ve işlevi yeniden kazanma çabasıdır:
+
+- **Biyolojik Savunmanın Devamı:** Akut enflamasyon zararlı etkeni ortadan kaldırıp nekrotik enkazı temizledikten hemen sonra onarım süreci devreye girer.
+- **İki Temel Bileşenin Etkileşimi:** Onarım süreci parankim hücreleri ile ekstrasellüler matriks (ECM) arasındaki sıkı biyokimyasal diyaloğa dayanır.
+- **Klinik Hedef:** İdeal olan, hasar gören dokunun orijinal mimarisine ve işlevine tam olarak geri dönmesidir (restitutio ad integrum).
+- **Hasarın Boyutu:** Eğer hasar çok derinse veya dokunun çoğalma yeteneği yoksa, organizma kusursuz restorasyon yerine dokuyu fibröz bir bağ dokusu yamasıyla (skar) kapatmak zorunda kalır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 2: İki Temel Onarım Yolu: Rejenerasyon vs Skarla Onarım (Fibrozis)
+
+Patolojide doku onarımı iki temel fizyopatolojik mekanizma üzerinden yürütülür (Sınav Spotu):
+
+- **1. Rejenerasyon (Restorasyon):**
+  - Hasar gören hücrelerin, geride kalan sağlam aynı tip hücrelerin çoğalması veya kök hücrelerin farklılaşmasıyla yenilenmesidir.
+  - **Ön Şartı:** Dokunun bölünme yeteneğinde olması ve **ekstrasellüler matriks (ECM) çatısının (özellikle bazal membranın) sağlam kalmasıdır**.
+  - Örnek: Karaciğer rezeksiyonu sonrası büyüme, bağırsak epitel erozyonunun iyileşmesi.
+- **2. Skarla Onarım (Bağ Dokusu Depolanması / Fibrozis):**
+  - Hasar çok genişse, ECM çatısı yıkılmışsa veya hücreler bölünemiyorsa parankimin yerini fibröz bağ dokusu (kollajen) alır.
+  - Skar dokusu yapısal bir yama görevi görür; çekme kuvveti sağlar ancak salgı veya kasılma yapamaz.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 3: Hücre Çoğalma Kapasitesine Göre Dokuların Sınıflandırılması
+
+Vücuttaki dokuların hasara karşı rejenerasyon yeteneği, hücrelerin hücre döngüsündeki (hücre siklusu) durumuna göre belirlenir:
+
+- **Tarihi Sınıflandırma (Bizzozero Sınıflaması - Sınav Spotu):**
+  1. **Labil (Sürekli Bölünen) Dokular:** Hücre döngüsünde sürekli G1-S-G2-M fazlarında aktif olarak dolaşan dokulardır.
+  2. **Stabil (Sessiz / Koşullu Bölünen) Dokular:** Normalde dinlenme fazında (G0) sessizce bekleyen, ancak hasar veya büyüme faktörü uyarısıyla hızla G1 fazına girip bölünen dokulardır.
+  3. **Kalıcı (Non-Proliferatif / Permanant) Dokular:** Embriyonik gelişimden sonra hücre döngüsünü tamamen terk etmiş (post-mitotik), çoğalma yeteneği olmayan dokulardır.
+- **Klinik Yansıma:** Bir enfarktüs karaciğerde veya deride olursa rejenerasyon şansı yüksektir; ancak kalpte veya beyinde olursa mutlaka kalıcı skar kalır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 4: Labil (Sürekli Bölünen) Dokular ve Stem Cell Kompartımanı
+
+Labil dokularda yaşam boyu sürekli fizyolojik bir hücre kaybı ve bunun eşzamanlı yenilenmesi söz konusudur:
+
+- **Hücre Döngüsü:** Hücreler döngüden hiç çıkmaz; sürekli prolifere olur.
+- **Labil Doku Örnekleri (Sınav Sorusu):**
+  - **Hematopoetik Sistem:** Kemik iliğindeki hematopoetik kök hücreler (alyuvar, akyuvar, trombosit üretimi).
+  - **Çok Katlı Yassı Epitel:** Deri epidermisi, ağız boşluğu, farinks, özofagus, vajina ve serviks epiteli.
+  - **Kübik/Silindirik Epitel:** Gastrointestinal sistem mukozası (mide, ince ve kalın bağırsak epiteli), safra yolları, uterus ve fallop tüpü epiteli.
+  - **Transizyonel Epitel (Ürotelyum):** Mesane, üreter ve böbrek pelvisi epiteli.
+- **Kök Hücre Bağımlılığı:** Yüzeydeki dökülen yaşlı hücrelerin yerini bazal tabakada yer alan erişkin kök hücrelerin bölünmesiyle oluşan yeni hücreler alır.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 5: Stabil (Sessiz / G0) Dokular: Koşullu Çoğalan Hücreler
+
+Stabil dokular vücudun metabolik fabrikalarıdır; rutin koşullarda hücre bölünme hızı çok düşüktür ancak muazzam bir yedek çoğalma potansiyeline sahiptirler:
+
+- **Hücre Döngüsü:** Normalde **G0 (dinlenme) fazında** bulunurlar. Doku kaybı, cerrahi rezeksiyon veya toksik hasar meydana geldiğinde büyüme faktörlerinin uyarısıyla hızla G1 fazına girip mitoza başlarlar.
+- **Stabil Doku Örnekleri (Sınav Spotu):**
+  - **Parankimal Organlar:** **Karaciğer (hepatositler)**, **böbrek (tübül epitel hücreleri)** ve **pankreas (asiner ve adacık hücreleri)**.
+  - **Mezenkimal Hücreler:** Fibroblastlar, miyofibroblastlar ve düz kas hücreleri.
+  - **Vasküler Endotel:** Damar endotel hücreleri (anjiyogenez için hızla uyarılır).
+  - **Kondrosit ve Osteositler:** Kıkırdak ve kemik hücreleri (kırık onarımı).
+- **Kritik Kural:** Stabil dokularda rejenerasyon olabilmesi için **ECM iskeletinin sağlam olması** şarttır. Örneğin viral hepatitte retikülin çatısı sağlamsa karaciğer tam iyileşir; çatı çökerse siroz (skar) gelişir.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+
+---
+
+## Slayt 6: Kalıcı (Non-Proliferatif / Post-Mitotik) Dokular
+
+Kalıcı dokular embriyogenez ve erken postnatal dönemde son farklılaşmasını tamamlamış ve mitoz yeteneğini tamamen kaybetmiş hücrelerden oluşur:
+
+- **Hücre Döngüsü:** Hücre döngüsünü kesin olarak terk etmişlerdir (post-mitotik). Hasar gördüklerinde yerlerine yenisi yapılamaz.
+- **Kalıcı Doku Örnekleri (Sınav Sorusu):**
+  - **Santral Sinir Sistemi Nöronları:** Beyin ve omurilik nöronları öldüğünde bölünerek çoğalamaz; oluşan nekroz alanı astrositlerin çoğalmasıyla **glial skar (gliozis)** ile onarılır.
+  - **Kardiyak Miyositler (Miyokard):** Kalp kası hücreleri öldüğünde (miyokard enfarktüsü) bölünüp kalbi yenileyemez; nekroz alanı tamamen **kollajenöz fibröz skar** dokusuna dönüşür.
+  - **Çizgili İskelet Kası:** Büyük oranda kalıcıdır; ancak kılıfları altında bulunan az sayıdaki **satellit hücre** sayesinde çok sınırlı bir rejenerasyon potansiyeli gösterir.
+- **Klinik Sonuç:** Miyokard enfarktüsü veya inme (stroke) geçiren bir hastada hasar daima kalıcı bir kayıp ve skar ile sonlanır.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 7: Ekstrasellüler Matriksin (ECM) Kritik Bütünlüğü
+
+Rejenerasyon ile skarla iyileşme arasındaki kavşak noktasını belirleyen en hayati faktör **ekstrasellüler matriksin (ECM) fiziksel ve biyokimyasal bütünlüğüdür**:
+
+- **ECM Bir 'Harç' Değil, Bir 'Orkestra Şefidir':** ECM yalnızca hücreleri bir arada tutan pasif bir dolgu maddesi değildir; hücre çoğalmasını, kutuplaşmasını (polarite), göçünü ve farklılaşmasını kontrol eden dinamik bir kılavuzdur.
+- **İskelet Görevi:** Bölünen hücrelerin dokunun orijinal 3 boyutlu mimarisini yeniden oluşturabilmesi için bir kalıp/iskelet (scaffold) olarak ECM bazal membranına tutunmaları şarttır.
+- **İki Temel ECM Formu:**
+  1. **İnterstisyel Matriks:** Fibriler kollajen (Tip I, III), elastin ve fibronektinden zengin gevşek ağ.
+  2. **Bazal Membran:** Epitel ve endotelin oturduğu Tip IV kollajen, laminin ve proteoglikanlardan oluşan sıkı bariyer.
+- **Sonuç:** Bazal membran parçalandığında, çoğalan parankim hücreleri yönünü kaybeder, düzensiz prolifere olur ve alan fibroblastlar tarafından skarla doldurulur.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 8: Hasarın Şiddeti ve İyileşme Yolunun Belirlenmesi
+
+Aynı organda dahi hasarın derinliği ve süresi onarımın sonucunu doğrudan tayin eder:
+
+- **Yüzeysel Epitel Hasarı (Erozyon):**
+  - Yalnızca epitel hücreleri dökülmüştür; alttaki bazal membran ve dermis/submukoza sağlamdır.
+  - Komşu sağlam epitel hücreleri hızla bazal membran üzerinde kayarak (re-epitelizasyon) açığı kapatır. **Skar oluşmaz, tam rejenerasyon gerçekleşir**.
+- **Derin Hasar (Ülser ve Nekroz):**
+  - Bazal membran parçalanmış, dermis veya bağ dokusu stroma yatağı tahrip olmuştur.
+  - Sadece epitel çoğalması yetmez; açılan derin kraterin önce **granülasyon dokusu** ile doldurulması gerekir. **Kalıcı skar dokusu oluşur**.
+- **Kronik İnflamasyon:** Hasar aralıksız sürerse (ör. kronik hepatit, kronik peptik ülser) devam eden sitokin salınımı aşırı fibroblast aktivasyonuna ve yaygın fibrozise (organ sertleşmesine) yol açar.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+
+---
+
+## Slayt 9: [TEKRAR SAYFASI - CHECKPOINT 1] Doku Onarımı Temelleri, Rejenerasyon ve Hücre Döngüsü
+
+Bu checkpointte doku onarımının temel kurallarını ve hücre sınıflamasını pekiştiriyoruz:
+
+- **İki Yol:** Rejenerasyon (orijinal hücre çoğalması) vs Skarla Onarım (kollajen yama).
+- **Rejenerasyonun 2 Şartı:** Hücrelerin bölünebilmesi VE ekstrasellüler matriks (ECM) iskeletinin sağlam kalması.
+- **Labil Dokular:** Sürekli bölünenler (Kemik iliği, deri epidermisi, GIS mukoza epiteli, ürotelyum).
+- **Stabil Dokular:** Normalde G0'da bekleyen, uyarılınca G1'e girenler (Karaciğer hepatositleri, böbrek tübülleri, pankreas, vasküler endotel, fibroblastlar).
+- **Kalıcı (Permanant) Dokular:** Post-mitotik, çoğalamayanlar (Nöronlar, kardiyak miyositler). Hasarları daima fibröz skar ile onarılır.
+- **Hasar Derinliği:** Yüzeysel erozyon skarsız tam rejenere olurken; bazal membranı yıkan derin ülser ve nekrozlar skarla onarılır.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `interactive_table`
+
+### Akıl Kartları (Flashcards):
+- **S:** Hasar gören bir dokunun fibröz skar bırakmadan tamamen orijinal mimarisine dönmesine ne ad verilir?
+  - **C:** Tam rejenerasyondur (restitutio ad integrum).
+  - *İpucu:* Orijinal hücrelerle kusursuz yenilenme
+- **S:** Hücre çoğalma kapasitesine göre dokular hangi üç temel gruba ayrılır?
+  - **C:** Labil, stabil ve kalıcı (permanant) dokulardır.
+  - *İpucu:* Üçlü mitotik potansiyel sınıfı
+- **S:** Post-mitotik olup hasar gördüklerinde asla çoğalamayan iki majör kalıcı doku hücresi hangileridir?
+  - **C:** Kardiyak miyositler (kalp kası) ve nöronlardır.
+  - *İpucu:* Bölünmeyen iki hayati hücre grubu
+
+---
+
+## Slayt 10: Mini Vaka: Miyokard İnfarktüsü vs Deri Sıyrığında Hücresel Onarım Karşılaştırması
+
+Acil servise iki hasta başvuruyor: Birincisi bisikletten düşüp dizinde geniş bir deri sıyrığı (erozyon) olan 8 yaşında bir çocuk; ikincisi koroner arter tıkanıklığı nedeniyle sol ventrikül ön duvarında transmural enfarktüs gelişen 58 yaşında bir yetişkin:
+
+- **Hasta 1 (Çocuk - Deri Sıyrığı):**
+  - Epidermis labil hücrelerden oluşur; bazal membran ve kıl folikülü kök hücreleri sağlam kalmıştır.
+  - 7 gün içinde keratinositler prolifere olarak sıyrığı tamamen örter; **deride hiçbir skar dokusu kalmaz**.
+- **Hasta 2 (Yetişkin - Miyokard Enfarktüsü):**
+  - Kardiyak miyositler kalıcı (post-mitotik) hücrelerdir; iskemiyle ölen kas hücreleri bölünemez.
+  - Alan nötrofil ve makrofajlarca temizlendikten sonra granülasyon dokusu gelişir ve 6-8 hafta içinde **yoğun kollajen fibröz skarla** yer değiştirir.
+  - Skar alanı kasılamaz; sol ventrikülde ejeksiyon fraksiyonu düşer ve kalp yetmezliği gelişir.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 11: Kök Hücreler: Kendini Yenileme ve Asimetrik Bölünme
+
+Rejenerasyon ve sürekli doku homeostazının temel kaynağı kök hücrelerdir (stem cells):
+
+- **Kök Hücre Tanımı (Sınav Spotu):** Kendi kendini sınırsız veya uzun süre yenileyebilme (self-renewal) ve özelleşmiş çoklu hücre tiplerine farklılaşabilme (differentiation) yeteneğine sahip farklılaşmamış hücrelerdir.
+- **Asimetrik Bölünme Mekanizması:** Kök hücre bölündüğünde iki hücre oluşur:
+  1. Bir yavru hücre **kök hücre olarak kalır** (böylece kök hücre havuzu tükenmez).
+  2. Diğer yavru hücre **farklılaşma yoluna girer** (progenitör / geçici çoğalan hücre haline gelir ve olgun doku hücrelerine dönüşür).
+- **Önemi:** Asimetrik bölünme olmasaydı, kök hücreler her yaralanmada tükenir ve organizma yaşlandıkça dokularını yenileyemezdi.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 12: Embriyonik vs Erişkin (Doku) Kök Hücreleri
+
+Gelişimsel potansiyellerine göre kök hücreler iki ana kategoriye ayrılır:
+
+- **1. Embriyonik Kök Hücreler (ES Hücreleri - Pluripotent):**
+  - Blastokist evresindeki embriyonun iç hücre kitlesinden (inner cell mass) elde edilir.
+  - **Pluripotent Kapasite:** Vücuttaki üç germ yaprağından (ektoderm, mezoderm, endoderm) köken alan her türlü özelleşmiş hücre tipine dönüşebilirler.
+  - Sınırsız kendini yenileme potansiyeline sahiptirler.
+- **2. Erişkin (Doku / Somatik) Kök Hücreleri (Multipotent / Unipotent):**
+  - Olgun organizmanın dokularında özel mikroçevrelerde (niş) sessizce yaşayan hücrelerdir.
+  - **Multipotent / Sınırlı Kapasite:** Genellikle sadece bulundukları dokunun hücre tiplerini üretirler (örneğin hematopoetik kök hücre kan hücrelerini üretir).
+  - Görevleri: Günlük fizyolojik hücre kaybını telafi etmek ve yaralanmalarda hızlı onarım sağlamaktır.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 13: Kök Hücre Nişi (Niche): Koruyucu Mikroçevre
+
+Erişkin dokularda kök hücreler doku içinde rastgele dağılmaz; **Niş (Niche)** adı verilen son derece özelleşmiş mikroçevrelerde barınırlar:
+
+- **Nişin Yapısı ve Önemi (Sınav Spotu):** Destekleyici stromal hücreler, özelleşmiş ekstrasellüler matriks proteinleri ve parakrin sinyal moleküllerinden (Wnt, Notch, Hedgehog) oluşan korunaklı anatomik yuvadır.
+- **Nişin Görevleri:**
+  - Kök hücreleri mutasyonlardan ve oksidatif stresten korumak.
+  - Kök hücrelerin zamansız farklılaşmasını engelleyerek onları 'sessiz ve uykuda' (quiescent) tutmak.
+  - Hasar anında sinyal vererek kontrollü bölünmeyi ve dokuya göçü tetiklemek.
+- **Tipik Niş Örnekleri:**
+  - **Bağırsak:** Kriptlerin en dibinde, Paneth hücrelerinin hemen yanında (Lgr5+ hücreler).
+  - **Deri:** Kıl folikülünün **kabarıklık (bulge)** bölgesinde.
+  - **Kornea:** Kornea ile konjonktiva sınırındaki **limbus** bölgesinde (limbal kök hücreler).
+  - **Beyin:** Subventriküler zon ve hipokampus gyrus dentatusu.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 14: Karaciğer Rejenerasyonu: Kompansatuvar Büyüme Modeli
+
+Karaciğer, insan vücudundaki en muazzam ve en kusursuz rejenerasyon yeteneğine sahip organdır:
+
+- **Yunan Mitolojisinden Tıbba:** Mitolojide Prometheus'un her gün kartal tarafından yenen karaciğerinin her gece yeniden büyümesi, karaciğerin bu olağanüstü biyolojisinin antik çağdan beri bilindiğini gösterir.
+- **Parsiyel Hepatektomi Modeli (Sınav Spotu):**
+  - Bir insanda veya deney hayvanında karaciğerin **üçte ikisi (%60-70)** cerrahi olarak çıkarıldığında (parsiyel hepatektomi), geride kalan sağlam doku hızla büyüyerek **1-2 hafta içinde** orijinal karaciğer ağırlığına ve kütlesine tam olarak ulaşır.
+- **Kritik Patolojik Gerçek: Gerçek Bir 'Yeniden Doğuş' Değil, Kompansatuvar Büyümedir!**
+  - Çıkarılan loblar anatomik olarak eski şekilleriyle tekrar uzamaz!
+  - Bunun yerine geride kalan sağlam loblardaki olgun hepatositler ve vasküler yapılar hiperplazi (hücre sayısı artışı) ve hipertrofi yaparak orijinal kütleyi tamamlar.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+- `active_recall`
+
+---
+
+## Slayt 15: Karaciğer Rejenerasyonu Faz 1: Başlatma (Priming Fazı)
+
+Karaciğer rejenerasyonu bir yarış arabasının motorunu çalıştırmaya benzer; önce kontak açılır (priming), sonra gaza basılır (proliferasyon):
+
+- **Priming (Uyarılmaya Hazırlık) Nedir? (Sınav Spotu):**
+  - Normalde G0 fazında dinlenen hepatositlerin büyüme faktörlerine yanıt verebilecek duyarlılığa getirilmesi sürecidir.
+  - Tek başına priming mitozu başlatmaz; hücreyi büyüme faktörlerinin 'bölün' emrine hazır hale getirir.
+- **Hücresel Aktör: Kupffer Hücreleri:**
+  - Doku rezeksiyonu veya hasarından hemen sonra karaciğerin yerleşik makrofajları olan Kupffer hücreleri aktive olur.
+  - Kupffer hücreleri **Tümör Nekroz Faktörü (TNF)** ve **İnterlökin-6 (IL-6)** salgılar.
+- **Sinyal Yolağı:** TNF ve IL-6 hepatositlerdeki NF-kB ve STAT3 yolaklarını aktive eder. Bu sayede hepatositler G0 fazından G1 fazına adım atar.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `micro_quiz`
+
+---
+
+## Slayt 16: Karaciğer Rejenerasyonu Faz 2: Proliferasyon Fazı
+
+Priming aşamasını tamamlayan hepatositler, kan dolaşımındaki ve stromadaki güçlü büyüme faktörlerinin etkisiyle hızla hücre döngüsünde ilerler:
+
+- **Kilit Büyüme Faktörleri (Sınav Spotu):**
+  - **Hepatosit Büyüme Faktörü (HGF):** Karaciğerdeki fibroblastlar, endotel hücreleri ve hepatik stellat hücreler tarafından üretilir; hepatosit üzerindeki **c-Met (MET)** reseptör tirozin kinazına bağlanarak en güçlü mitojenik etkiyi yaratır.
+  - **Epidermal Büyüme Faktörü (EGF) ve TGF-alfa:** Hepatosit proliferasyonunu ve DNA sentezini (S fazına girişi) güçlü şekilde uyarır.
+- **Dalga Dalga Çoğalma Sırası:**
+  1. Önce **hepatositler** bölünür (ilk 24-48 saatte DNA sentezi zirve yapar).
+  2. Ardından sinüzoidleri döşeyen **endotel hücreleri**, **Kupffer hücreleri** ve **stellat hücreler** çoğalır.
+  3. Yeni oluşan hücrelerECM bazal membranını örerek düzenli hepatik kordonlar ve lobüller halinde organize olur.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 17: Karaciğer Rejenerasyonu Faz 3: Sonlanma (Terminasyon Fazı)
+
+Rejenerasyon sürecinde 'bölünmeyi başlatmak' kadar, doku orijinal boyutuna ulaştığında 'bölünmeyi zamanında durdurmak' da hayati önem taşır; durmazsa tümör gelişir:
+
+- **Terminasyonun Amacı:** Karaciğer kütlesi vücut ağırlığının tam %100'üne ulaştığında çoğalmayı derhal frenlemektir.
+- **En Kritik İnhibitör Sitokin (Sınav Spotu): Transforming Büyüme Faktörü-Beta (TGF-β):**
+  - Karaciğer orijinal kütlesine yaklaştığında stellat hücrelerden ve endotelden yoğun şekilde salınır.
+  - Hepatositlerde hücre döngüsünü durdurucu proteinleri (p15, p21, p27 gibi siklin bağımlı kinaz inhibitörlerini) uyarır.
+  - Hepatositlerin mitozunu kesin olarak bloke eder.
+- **Aktivinler ve Temas İnhibisyonu:** Hücreler birbirine sıkıca temas ettiğinde katenin ve kadherin sinyalleri de çoğalmayı durdurur.
+- **Sonuç:** Karaciğer orijinal boyut ve ağırlığına ulaştığı anda kusursuz bir hassasiyetle durur.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+
+---
+
+## Slayt 18: Karaciğerde Kök Hücre Kompartımanı: Oval Hücreler ve Hering Kanalları
+
+Peki karaciğer hasarı hepatositlerin çoğalamayacağı kadar ağırsa (örneğin kronik hepatit, siroz veya ağır toksik nekroz) ne olur?
+
+- **Yedek Kök Hücre Rezervi (Sınav Spotu):**
+  - Normalde karaciğer rejenerasyonunu hepatositlerin kendisi yürütür; kök hücrelere ihtiyaç duyulmaz.
+  - Ancak hepatositler yaşlanmış (senesens), kronik virüsle tükenmiş veya bölünemez hale gelmişse karaciğerin kök hücreleri devreye girer.
+- **Hering Kanalları ve Oval Hücreler:**
+  - Biliyer sistem ile hepatosit kordonlarının birleştiği mikroskopik **Hering kanallarında** karaciğer kök hücreleri (progenitör hücreler) yerleşiktir.
+  - Kemirgenlerde oval şekilli oldukları için **'oval hücreler'** olarak adlandırılır.
+  - **Bipotansiyel Güç:** Bu progenitör hücreler hem yeni **hepatositlere** hem de safra kanalı epitel hücrelerine (**kolanjiyositlere**) dönüşebilirler.
+- **Klinik Yansıması:** Ağır sirotik karaciğer biyopsilerinde görülen 'duktular reaksiyon' bu kök hücrelerin çaresizce çoğalma çabasıdır.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+
+---
+
+## Slayt 19: [TEKRAR SAYFASI - CHECKPOINT 2] Kök Hücre Biyolojisi ve Karaciğer Rejenerasyonu
+
+Bu checkpointte kök hücre dinamiklerini ve karaciğerin üç fazlı rejenerasyonunu özetliyoruz:
+
+- **Kök Hücre Özellikleri:** Kendi kendini yenileme (self-renewal) ve asimetrik bölünme.
+- **Embriyonik (Pluripotent) vs Erişkin (Multipotent):** Embriyonik kök hücreler 3 germ yaprağının tamamını üretir.
+- **Kök Hücre Nişi:** Kök hücreleri koruyan ve uykuda tutan özel anatomik mikroçevre (bağırsak kript tabanı, saç folikülü bulge).
+- **Karaciğer Kompansatuvar Büyümesi:** 2/3 rezeksiyon sonrası geride kalan hepatositlerin hiperplazisiyle 1-2 haftada eski kütleye ulaşılır.
+- **Üç Aşamalı Faz:**
+  1. **Priming Fazı:** Kupffer hücreleri -> TNF ve IL-6 -> G0'dan G1'e hazırlık.
+  2. **Proliferasyon Fazı:** HGF (c-Met), EGF, TGF-alfa -> S fazı ve yoğun mitoz.
+  3. **Terminasyon Fazı:** TGF-beta ve aktivinler -> Rejenerasyonu zamanında durdurma.
+- **Yedek Kök Hücre:** Hering kanallarındaki bipotansiyel oval hücreler (hepatosit + kolanjiyosit).
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `before_after_slider`
+
+### Akıl Kartları (Flashcards):
+- **S:** Erişkin kök hücrelerin havuzunu tüketmeden bir yavruyu kök hücre, diğerini progenitör hücre yapma mekanizmasına ne denir?
+  - **C:** Asimetrik bölünmedir.
+  - *İpucu:* Diferansiasyon ve rezerv koruma biçimi
+- **S:** Parsiyel hepatektomide hepatositleri G0'dan G1 fazına hazırlayan (priming) iki anahtar Kupffer sitokini nedir?
+  - **C:** Tümör Nekroz Faktörü (TNF) ve İnterlökin-6'dır (IL-6).
+  - *İpucu:* Başlatıcı makrofaj aracılı sinyaller
+- **S:** Hepatositlerin bölünemediği ağır karaciğer hasarlarında Hering kanallarından çoğalan bipotansiyel kök hücrelere ne ad verilir?
+  - **C:** Oval hücrelerdir (progenitör hücreler).
+  - *İpucu:* Biliyer kanalcık diplerindeki yedek rezerv
+
+---
+
+## Slayt 20: Mini Vaka: Canlı Vericili Karaciğer Nakli Sonrası Donörün İyileşmesi
+
+32 yaşında sağlıklı bir donör, siroz hastası kardeşine karaciğer nakli için sağ lobunu (%60 karaciğer hacmi) bağışlıyor. Başarılı bir cerrahi operasyonla sağ lob alınıyor:
+
+- **1. Gün:** Donörün kalan sol karaciğer lobundaki Kupffer hücreleri hemodinamik değişimi algılayarak hızla TNF ve IL-6 salgılıyor (Priming fazı).
+- **3. Gün:** HGF ve TGF-alfa seviyeleri zirve yapıyor; kalan sol lobdaki hepatositlerin %90'ından fazlası S fazına girerek hızla bölünüyor (Proliferasyon fazı).
+- **4. Hafta:** Kontrol abdominal BT anjiyografide, donörün kalan karaciğerinin hiperplazi ile büyüyerek ameliyat öncesi toplam karaciğer hacminin %92'sine ulaştığı ve biyokimya testlerinin (AST, ALT, Bilirubin, Albumin) tamamen normale döndüğü görülüyor.
+- **Sonuç:** TGF-beta salınımı ile proliferasyon durdurulmuş, organ kusursuz bir kompanse kütleye ulaşmıştır.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 21: Skarla Onarımın Dört Temel Evresi
+
+Doku hasarı rejenerasyon sınırlarını aştığında, organizma hasarlı bölgeyi bağ dokusu ile onarmak için dinamik ve örtüşen 4 evreli bir program başlatır (Sınav Spotu):
+
+- **1. Hemostaz Evresi (İlk Dakikalar):** Kanamanın durdurulması, trombosit agregasyonu ve yara boşluğunu dolduran geçici fibrin pıhtısının oluşması.
+- **2. Enflamasyon Evresi (0 - 48 Saat):** Önce nötrofillerin, ardından makrofajların yara yatağına akması; bakterilerin ve nekrotik doku artıklarının fagosite edilmesi.
+- **3. Proliferasyon Evresi (3 - 10 Gün):** Granülasyon dokusunun kurulması; yoğun anjiyogenez, fibroblast göçü ve proliferasyonu, gevşek ECM sentezi ve re-epitelizasyon.
+- **4. Remodeling / Yeniden Şekillenme Evresi (2-3. Hafta - Aylar):** ECM'nin olgunlaşması, Tip III kollajenin yerini güçlü Tip I kollajene bırakması, yara kontraksiyonu ve skarın avaskülerleşmesi.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 22: İlk Dakikalar: Hemostaz, Trombosit Tıkacı ve Fibrin Pıhtısı
+
+Bir damar kesildiğinde veya doku yırtıldığında onarımın ilk acil hamlesi kan kaybını durdurmaktır:
+
+- **Damar Vazokonstriksiyonu:** Endotelin ve refleks nörojenik uyarıyla hasarlı arteriyoller saniyeler içinde kasılır.
+- **Primer Hemostaz (Trombosit Tıkacı):**
+  - Açığa çıkan subendotelyal kollajen ve von Willebrand faktörüne (vWF) trombositler yapışır (adezyon).
+  - Trombositler aktive olarak granüllerini boşaltır (ADP, Tromboksan A2); yeni trombositler kümelenir.
+- **Sekonder Hemostaz (Koagülasyon Kaskadı):**
+  - Doku faktörü (Faktör III) ekstrinsek yolu tetikler; trombin üretilir.
+  - Trombin, kanda çözünür haldeki fibrinojeni çözünmeyen **fibrin liflerine** çevirir.
+- **Sonuç:** Trombositler ve alyuvarlar fibrin ağının içine hapsolarak yarayı kapatan geçici bir mühür oluşturur.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 23: Pıhtının İskelet Görevi: Fibronektin ve Geçici Matriks
+
+Oluşan fibrin pıhtısı sadece bir 'tıkaç' değildir; onarım hücreleri için hayati bir 'köprü iskelesi'dir:
+
+- **Geçici Matriks (Provisional Matrix):** Fibrin lifleri, plazma fibronektini ve vitronektinden zengin bu geçici yapı, yara boşluğunu doldurur.
+- **Kılavuz Yollar:** Lökositler, endotel hücreleri ve fibroblastlar boşlukta uçamaz! Bu hücrelerin yara merkezine doğru hareket edebilmesi için integrin reseptörleriyle fibrin ve fibronektin ipliklerine tutunmaları gerekir.
+- **Büyüme Faktörü Deposu (Sınav Spotu):**
+  - Trombositlerin alfa granülleri patladığında yüksek konsantrasyonda **Trombosit Kaynaklı Büyüme Faktörü (PDGF)**, **Transforming Büyüme Faktörü-beta (TGF-β)** ve **FGF** pıhtı içine salınır.
+  - Bu büyüme faktörleri çevre dokulardaki makrofajları ve fibroblastları yaralanma merkezine çeken en güçlü kemotaktik sinyallerdir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 24: İlk 24 Saat: Akut Enflamasyon ve Nötrofil Dalgası
+
+Pıhtı oluştuktan hemen sonra yaralanma alanına ulaşan ilk savunma ordusu nötrofillerdir (Sınav Spotu):
+
+- **İlk 6 - 24 Saat:** Nötrofiller kandan yara dokusuna masif şekilde ekstravaze olur. 24. saatte yara kenarlarında en baskın hücre tipidir.
+- **Temel Görevleri: 'Saha Temizliği ve Sanitasyon':**
+  - Kesilen deriden giren bakterileri fagositozla öldürmek.
+  - Salgıladıkları elastaz ve proteolitik enzimlerle nekrotik hücre enkazını eritip temizlemek.
+- **Ömürleri Kısadır:** Nötrofiller görevlerini tamamladıktan sonra 24-48 saat içinde hızla apoptoza uğrar ve ölürler.
+- **Klinik Gerçek (Steril Yara Paradoksu):**
+  - Temiz cerrahi insizyonlarda enfeksiyon yoksa nötrofillerin varlığı yara iyileşmesi için mutlak zorunlu değildir; deney hayvanlarında nötrofiller tüketilse dahi yara iyileşebilir.
+  - Ancak makrofajlar yok edilirse yara iyileşmesi **tamamen durur!**
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `active_recall`
+- `branching_logic`
+
+---
+
+## Slayt 25: 48–72. Saatler: Monosit Göçü ve Makrofaj Devrimi
+
+Yaralanmanın 48. saatinden itibaren sahne nötrofillerden makrofajlara devredilir; bu onarımın dönüm noktasıdır:
+
+- **Monositlerin Çağrılması:** Kanda dolaşan monositler, trombositlerden ve nötrofillerden salınan kemokinlerin (MCP-1 / CCL2) çekimiyle damar dışına çıkar ve **doku makrofajına** dönüşür.
+- **48 - 72. Saat Baskınlığı (Sınav Spotu):** 48. saatten itibaren yara alanındaki en baskın hücre grubu makrofajlardır.
+- **İki Aşamalı Büyük Misyon:**
+  1. **Enkaz Kaldırma:** Apoptoza gitmiş nötrofilleri, nekrotik hücre artıklarını ve fibrin kalıntılarını yutarak ortamı sterilize etmek.
+  2. **Onarımı Başlatma (Büyüme Faktörü Fabrikası):** Granülasyon dokusunun kurulması için endotel hücrelerini ve fibroblastları uyaran büyüme faktörlerini salgılamak.
+- **Sonuç:** Makrofaj olmadan granülasyon dokusu kurulamaz ve yara iyileşemez.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+
+---
+
+## Slayt 26: Makrofaj Polarizasyonu: M1 (Savaşçı) vs M2 (Onarıcı)
+
+Makrofajlar tek tip hücreler değildir; mikroçevrenin sinyallerine göre iki zıt fenotipe bürünürler (Sınav Spotu):
+
+- **1. M1 Makrofajlar (Klasik Aktive - 'Savaşçı ve Yıkıcı'):**
+  - **Uyaran:** Bakteriyel endotoksinler (LPS) ve Th1 sitokini olan İnterferon-gama (IFN-γ).
+  - **İşlevi:** Yüksek oranda iNOS (nitrik oksit sentaz), serbest oksijen radikalleri (ROS) ve pro-enflamatuar sitokinler (IL-1, TNF, IL-6) üretirler. Mikropları öldürür ve doku nekrozunu temizlerler.
+- **2. M2 Makrofajlar (Alternatif Aktive - 'Onarıcı ve Yapıcı'):**
+  - **Uyaran:** Th2 sitokinleri olan **IL-4 ve IL-13**.
+  - **İşlevi:** Enflamasyonu söndürürler (IL-10 ve TGF-β salarlar). Arginaz-1 üzerinden prolin/kollajen sentezini uyarır, anjiyogenezi tetikler ve granülasyon dokusunu kurarlar.
+- **Hayati Geçiş:** Başarılı bir yara iyileşmesinde ilk 24-48 saatte M1 baskınken, 3. günden itibaren **M2 fenotipine geçiş (fenotipik shift)** zorunludur! Geçiş olmazsa yara kronikleşir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 27: M2 Makrofajın Salgıladığı Büyüme Faktörleri
+
+M2 makrofajlar, proliferasyon evresindeki tüm hücreleri mobilize eden devasa bir büyüme faktörü fabrikasıdır:
+
+- **1. TGF-β (Transforming Büyüme Faktörü-beta):** Fibroblastları yara yatağına çeker, kollajen sentezini uyarır ve matriks yıkımını durdurur (**en güçlü fibrogenik faktör**).
+- **2. PDGF (Trombosit Kaynaklı Büyüme Faktörü):** Fibroblastların ve düz kas hücrelerinin göçünü ve mitozunu sağlar.
+- **3. VEGF (Vasküler Endotel Büyüme Faktörü):** Damar endotelini uyararak yeni kılcal damar tomurcuklanmasını (anjiyogenezi) başlatır.
+- **4. FGF-2 (Temel Fibroblast Büyüme Faktörü - bFGF):** Hem anjiyogenezi hem de fibroblast proliferasyonunu uyarır.
+- **5. EGF (Epidermal Büyüme Faktörü):** Yüzeydeki keratinositlerin çoğalarak yarayı örtmesini (re-epitelizasyon) tetikler.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 28: Enflamasyonun Rezolüsyonu ve Skara Geçiş Köprüsü
+
+Onarımın başlayabilmesi için yangının (enflamasyonun) aktif olarak söndürülmesi gerekir; rezolüsyon pasif bir süreç değildir:
+
+- **Aktif Söndürme Mekanizması:** Enflamasyon kendiliğinden sönmez; pro-enflamatuar mediyatörlerin yerini aktif çözücü (pro-resolving) moleküller alır.
+- **Lipid Mediyatör Dönüşümü (Class Switching):** Nötrofil ve makrofajlar lökotrien üretmeyi bırakıp araşidonik asitten **lipoksinler (LXA4, LXB4)**, omega-3 yağ asitlerinden ise **rezolvinler**, **protektinler** ve **maresinler** üretmeye başlar.
+- **Rezolüsyonun Hücresel Etkileri:**
+  - Nötrofil kemotaksisi ve damar geçirgenliği anında kesilir.
+  - Apoptoza giden nötrofiller M2 makrofajlar tarafından temizlenir (eferositoz).
+  - Dokuda anti-enflamatuar sitokinler (IL-10, TGF-β) yükselir.
+- **Patolojik Kural:** Enflamasyon vaktinde sonlanmazsa, doku kronik enflamasyona kayar ve yara iyileşmesi yerine kronik ülser veya aşırı parankimal fibrozis gelişir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 29: [TEKRAR SAYFASI - CHECKPOINT 3] Skarla Onarımın Evreleri ve Hemostaz / Enflamasyon
+
+Bu checkpointte skarla onarımın ilk iki evresini ve hücresel geçişleri pekiştiriyoruz:
+
+- **Dört Evre:** Hemostaz -> Enflamasyon -> Proliferasyon -> Remodeling.
+- **Hemostaz:** Damar vazokonstriksiyonu, trombosit tıkacı ve fibrin pıhtısı oluşumu. Pıhtı hem kanamayı durdurur hem hücre göçü için geçici matriks (fibronektin) sağlar.
+- **İlk 24 Saat:** Nötrofiller yara yatağını istila eder; bakterileri öldürür ve enkazı temizler.
+- **48–72. Saat:** Monositler dokuya sızarak makrofajlara dönüşür ve en baskın hücre haline gelir.
+- **M1 vs M2 Makrofaj:**
+  - M1 (IFN-γ/LPS): Klasik aktive, mikrop öldürücü, yıkıcı, pro-enflamatuar.
+  - M2 (IL-4/IL-13): Alternatif aktive, onarıcı, TGF-β, VEGF ve PDGF salarak granülasyon dokusunu kuran orkestra şefi.
+- **Rezolüsyon:** Lipoksin ve rezolvinlerle yangının söndürülmesi onarımın ön koşuludur.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `interactive_table`
+
+### Akıl Kartları (Flashcards):
+- **S:** Skarla yara onarımının zaman sırasına göre dört temel evresi nelerdir?
+  - **C:** Hemostaz, enflamasyon, proliferasyon ve remodeling evreleridir.
+  - *İpucu:* Dörtlü kronolojik cerrahi faz
+- **S:** Cerrahi kesisinden sonraki ilk 24 saat içinde yara yatağında en baskın olan iltihabi hücre hangisidir?
+  - **C:** Nötrofillerdir.
+  - *İpucu:* İlk günün fagositer hücresi
+- **S:** Onarım evresinde enflamasyonu söndürüp anjiyogenez ve kollajen sentezini başlatan alternatif aktive makrofaj fenotipi nedir?
+  - **C:** M2 makrofajlardır (IL-4 ve IL-13 ile uyarılır).
+  - *İpucu:* Yapıcı onarıcı fagositer alt tip
+
+---
+
+## Slayt 30: Mini Vaka: Cerrahi İnsizyonun İlk 3 Günlük Patolojik Takibi
+
+Genel cerrahi servisinde apandisit ameliyatı olan 24 yaşındaki hastanın McBurney insizyonu gün gün takip ediliyor:
+
+- **Ameliyat Anı:** Cerrahi kesi sonrası damarlar hızla pıhtılaşarak fibrin tıkacıyla mühürleniyor; yara dudakları sütürlerle birbirine yaklaştırılıyor.
+- **24. Saat:** Yara kenarlarında hafif eritem izleniyor. Biyopside insizyon hattında nötrofil yoğunluğu izleniyor; epitel bazal tabakası kesi kenarlarından fibrin ağı üzerine doğru göç etmeye başlıyor.
+- **48-72. Saat:** Nötrofiller yerini doku makrofajlarına bırakıyor. Makrofajlar M2 fenotipine dönerek VEGF ve TGF-beta salgılamaya başlıyor.
+- **3. Gün:** Yara tabanında mikroskopik düzeyde ilk anjiyogenez tomurcukları ve fibroblast göçü (granülasyon dokusunun ilk adımları) saptanıyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 31: Granülasyon Dokusu Tanımı: Onarımın Biyolojik Zirvesi
+
+Yara iyileşmesinin 3. ila 5. günleri arasında başlayan proliferatif evrenin en karakteristik morfolojik göstergesi **granülasyon dokusudur (granulation tissue)**:
+
+- **Granülasyon Dokusu Tanımı (Sınav Spotu):** Skarla onarım sürecinde hasarlı doku boşluğunu geçici olarak dolduran, **yeni oluşmuş hassas kılcal damarlar (anjiyogenez)**, **prolifere olan fibroblastlar** ve **gevşek, ödemli bir ekstrasellüler matriks** içeren özelleşmiş genç bağ dokusudur.
+- **Makroskopik Görünüm:** Yara tabanında parlak pembe-kırmızı renkli, ıslak, yumuşak ve küçük tanecikli (granüler) bir kadife örtü gibi görünür.
+- **Hassasiyet:** Çok sayıda yeni kılcal damar içerdiği için en ufak dokunmada kolayca kanar; bu durum cerrahta dokunun canlı ve iyi kanlandığı hissini uyandırır.
+- **Zaman Çizelgesi:** 3-5. günlerde hızla artar, 7-10. günlerde yara alanını tamamen kaplar ve daha sonra olgunlaşarak fibröz skara dönüşür.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 32: Granülasyon Dokusunun Üçlü Histopatolojik Bileşeni
+
+Patoloji mikroskobunda granülasyon dokusu incelendiğinde üç temel yapısal bileşen bir arada izlenir (Sınav Sorusu):
+
+- **1. Yeni Oluşan Kılcal Damarlar (Anjiyogenez):**
+  - İnce duvarlı, tek katlı endotelle döşeli, henüz tam olgunlaşmamış bol miktarda yeni kapiller tomurcukları.
+  - Endotel hücreleri şişkin ve aktiftir.
+- **2. Prolifere Olan Fibroblastlar / Miyofibroblastlar:**
+  - İğsi şekilli, geniş soluk nükleuslu, aktif protein sentezi yapan genç fibroblast hücreleri.
+  - İlerleyen günlerde miyofibroblasta dönüşerek aktin flamanları kazanırlar.
+- **3. Gevşek, Ödemli Ekstrasellüler Matriks (ECM):**
+  - Fibronektin, hyaluronik asit, proteoglikanlar ve ince Tip III kollajen liflerinden oluşan hidrate gevşek zemin.
+  - Arada mononükleer iltihabi hücreler (makrofajlar, lenfositler, mast hücreleri) yer alır.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 33: 'Granülasyon' İsimlendirmesinin Kökeni ve Makroskopi
+
+Bu dokunun neden 'granülasyon' olarak adlandırıldığını bilmek patolojiyi kavramak açısından son derece aydınlatıcıdır:
+
+- **Kelime Kökeni:** Latince 'granulum' (küçük tanecik) kelimesinden türetilmiştir.
+- **Makroskopik Neden:** Açık bir yara (örneğin bacak ülseri veya geniş yanık) tabanına çıplak gözle bakıldığında, yüzeyde minik minik kırmızı kum taneleri veya nar taneleri gibi çıkıntılar görülür.
+- **Taneciklerin Biyolojik Sırrı (Sınav Spotu):** Bu minik granüllerin her biri, dikey olarak yukarıya doğru tomurcuklanan **yeni bir kılcal damar yumağını (kapiller ilmek)** ve etrafındaki fibroblast kümesini temsil eder.
+- **Klinik Değerlendirme:** Cerrahlar yara yatağında granülasyon dokusunu gördüklerinde sevinirler; çünkü bu doku yaranın enfeksiyondan arındığını ve hızla kapandığını kanıtlar. Cilt greftleri ancak iyi bir granülasyon yatağı üzerine tutunabilir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 34: Proliferasyon Evresinde Fibroblastların Göçü ve Çoğalması
+
+Granülasyon dokusunun protein sentez fabrikaları fibroblastlardır:
+
+- **Yara Yatağına Çağrı:** Yara çevresindeki sağlam dermis ve fasya dokusunda uykuda olan yerel fibroblastlar uyarılır. Ayrıca kemik iliğinden gelen fibrositler de alana göç eder.
+- **Kilit Kemotaktik ve Mitojenik Faktörler (Sınav Spotu):**
+  - **PDGF (Trombosit Kaynaklı Büyüme Faktörü):** Fibroblastları yara merkezine doğru çeken (kemotaksis) ve bölünmelerini sağlayan en güçlü mitojendir.
+  - **FGF-2 (Fibroblast Büyüme Faktörü):** Fibroblast göçünü ve proliferasyonunu şiddetle uyarır.
+  - **TGF-β:** Fibroblastların çoğalmasından ziyade **kollajen ve matriks üretimine kilitlenmesini** sağlar.
+- **Hücresel Değişim:** Fibroblastlar aktif hale geldikçe endoplazmik retikulumları devasa boyutlara ulaşır; bol miktarda fibronektin, proteoglikan ve pro-kollajen sentezleyerek doku açığını doldururlar.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 35: Re-epitelizasyon: Yüzeyin Kapatılması ve Temas İnhibisyonu
+
+Granülasyon dokusu alttan yara boşluğunu doldururken, eşzamanlı olarak yüzey epitelinin yarayı kapatması gerekir:
+
+- **Re-epitelizasyonun Başlaması:** Kesi yapıldıktan sonraki **ilk 24-48 saat içinde**, kesi kenarlarındaki bazal keratinositler ve kıl folikülü kök hücreleri mitoza başlar.
+- **Kayan Tabaka (Sheet Migration):**
+  - Keratinositler desmozom bağlantılarını geçici olarak çözer.
+  - Fibrin pıhtısının hemen altından, granülasyon dokusunun üstünden bir çarşaf gibi yara merkezine doğru kayarlar.
+- **Temas İnhibisyonu (Contact Inhibition - Sınav Spotu):**
+  - İki karşıt yara kenarından gelen epitel hücreleri yara ortasında birbiriyle temas ettiği anda göç ve çoğalma **anında durur**.
+- **Epitelin Kalınlaşması:** Yüzey kapandıktan sonra hücreler bazal membranını salgılar, yukarıya doğru tabakalanır ve keratin üreterek normal çok katlı skuamöz epidermis katmanını yeniden oluşturur.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+
+---
+
+## Slayt 36: Granülasyon Dokusunda Kapiller Geçirgenlik ve Ödem
+
+Granülasyon dokusunun histolojisindeki en çarpıcı özelliklerden biri yoğun doku ödemidir (Sınav Spotu):
+
+- **Neden Yeni Kılcallar Bu Kadar Geçirgendir?**
+  - Anjiyogenez sırasında oluşan yeni endotel hücreleri arasında henüz sıkı intersellüler bağlantılar (tight junction'lar) kurulmamıştır.
+  - Yeni damarların etrafını saran perisit tabakası eksiktir veya henüz gevşektir.
+  - Ayrıca ortamda yüksek konsantrasyonda **VEGF (Vasküler Endotel Büyüme Faktörü)** bulunur; VEGF'in tarihi adı **Vasküler Geçirgenlik Faktörüdür (VPF)** ve damar geçirgenliğini histaminden 50.000 kat daha güçlü artırır!
+- **Klinik Sonuç:**
+  - Plazma proteinleri ve sıvı sürekli damar dışına sızar.
+  - Bu nedenle genç granülasyon dokusu ve iyileşen yaralar **daima ödemlidir**.
+  - Bu ödem iyileşmenin doğal bir parçasıdır; lökositlerin ve besinlerin dokuya akışını kolaylaştırır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+- `active_recall`
+
+---
+
+## Slayt 37: Granülasyon Dokusu vs Granülomatöz Enflamasyon
+
+Tıp fakültesi öğrencilerinin ve asistanların sınavlarda en çok karıştırdığı iki kavram isim benzerliğinden kaynaklanır (Kritik Sınav Tuzağı):
+
+- **1. Granülasyon Dokusu (Granulation Tissue):**
+  - Bir kronik iltihap türü DEĞİLDİR!
+  - Bu bir **doku onarımı (tamir) yapısıdır**.
+  - Bileşenleri: Yeni kılcal damarlar (anjiyogenez), prolifere fibroblastlar, ödem ve gevşek ECM.
+- **2. Granülomatöz Enflamasyon (Granulomatous Inflammation):**
+  - Bir onarım dokusu DEĞİLDİR!
+  - Bu özel bir **kronik enflamasyon formudur**.
+  - Bileşenleri: Sindirilemeyen antijen etrafında toplanmış **epiteloid histiyositler (makrofajlar)**, çok çekirdekli dev hücreler (Langhans, yabancı cisim) ve çevresinde lenfosit yakası.
+  - Örnek: Tüberküloz kazeöz granülomu, sarkoidoz, yabancı cisim granülomu.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+
+---
+
+## Slayt 38: Aşırı Granülasyon Dokusu: Eksüberan Granülasyon (Proud Flesh)
+
+Granülasyon dokusu hayat kurtarıcı bir onarım yapısıdır; ancak miktarı doğru ayarlanamazsa patolojik bir engele dönüşür:
+
+- **Eksüberan Granülasyon (Proud Flesh / Vahşi Et - Sınav Spotu):**
+  - Yara iyileşmesi sırasında granülasyon dokusunun kontrolsüz ve aşırı miktarda çoğalarak **yara yüzey seviyesinin üzerine taşması (kabarması)** durumudur.
+  - Veteriner hekimlikte at bacak yaralarında çok sık görülür; insanlarda da sekonder iyileşen derin yaralarda karşımıza çıkar.
+- **Klinik Sorun:** Yaranın üzerinde kabaran bu aşırı et kitlesi, kenarlardan ilerleyen **keratinositlerin yolunu tıkar ve re-epitelizasyonu fiziksel olarak engeller!** Yara aylarca kapanamaz.
+- **Tedavi:** Cerrah bu aşırı granülasyon dokusunu bistüri ile kazıyarak (küretaj) veya gümüş nitrat koterizasyonu ile yakarak normal deri seviyesine indirir; ardından epitel hızla yarayı örter.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 39: [TEKRAR SAYFASI - CHECKPOINT 4] Granülasyon Dokusu ve Proliferasyon Fazı (3–10. Gün)
+
+Bu checkpointte proliferatif evrenin ve granülasyon dokusunun kilit prensiplerini özetliyoruz:
+
+- **Zaman Dilimi:** 3. günden itibaren başlar, 7-10. günlerde doruğa ulaşır.
+- **Üçlü Histoloji:** (1) Yeni kapillerler (anjiyogenez), (2) Prolifere fibroblastlar, (3) Ödemli gevşek ECM ve makrofajlar.
+- **Makroskopi:** Canlı kırmızı, pembe, granüler (nar tanesi gibi), kolay kanayan kadife örtü.
+- **Fibroblast Uyaranları:** PDGF (en güçlü mitojen) ve FGF.
+- **Re-epitelizasyon:** Keratinositlerin pıhtı altından kayması; karşı hücreyle karşılaşınca **temas inhibisyonu** ile durması.
+- **Ödem Nedeni:** Yeni kapillerlerin eksik endotel bağlantıları ve yüksek VEGF/VPF seviyesi.
+- **Granülasyon vs Granülom:** Granülasyon dokusu onarımdır; granülomatöz enflamasyon (epiteloid histiyositler) kronik yangıdır.
+- **Eksüberan Granülasyon:** Yüzeyin üzerine taşan aşırı granülasyon dokusu epitelizasyonu engeller.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `causal_chain`
+
+### Akıl Kartları (Flashcards):
+- **S:** Yara iyileşmesinin 3-5. günlerinde oluşan genç granülasyon dokusunun üçlü histopatolojik bileşeni nedir?
+  - **C:** Yeni kapillerler (anjiyogenez), prolifere fibroblastlar ve gevşek ödemli ekstrasellüler matrikstir.
+  - *İpucu:* Üçlü mikroskobik mimari
+- **S:** Yara tabanında granülasyon dokusunun kırmızı tanecikli (granüler) görünümünün anatomik temeli nedir?
+  - **C:** Yüzeye dik uzanan yeni kapiller damar ilmekleridir.
+  - *İpucu:* Nar tanesi görünümünün kaynağı
+- **S:** Re-epitelizasyon sırasında karşıt kenarlardan göç eden keratinositlerin yara ortasında birleşince durmasını sağlayan biyolojik olay nedir?
+  - **C:** Temas inhibisyonudur (contact inhibition).
+  - *İpucu:* Hücrelerin birbirine değince durması
+
+---
+
+## Slayt 40: Mini Vaka: Diyabetik Ayak Ülserinde Granülasyon Dokusu Takibi
+
+62 yaşında tip 2 diyabet hastasının sağ topuğunda 4 cm çapında derin nöropatik ayak ülseri bulunuyor. Ülser tabanındaki enfeksiyon ve sarı nekrotik dokular cerrahi debridmanla temizleniyor:
+
+- **1. Hafta:** Uygun pansuman ve kan şekeri regülasyonu sonrası yara tabanında parlak kırmızı, nar tanesi görünümünde minik kabarıklıklar (granülasyon dokusu) belirmeye başlıyor.
+- **2. Hafta:** Granülasyon dokusu derin doku açığını tamamen doldurarak yara kenarları seviyesine ulaşıyor.
+- **3. Hafta:** Yara kenarlarından pembemsi ince bir epitel tabakasının (keratinosit çarşafı) granülasyon dokusunun üzerini örterek ilerlediği (re-epitelizasyon) izleniyor.
+- **Klinik Başarı:** Sağlıklı granülasyon dokusu sayesinde ülser ampütasyona gitmeden başarıyla kapanıyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 41: Anjiyogenez: Mevcut Damarlardan Yeni Damar Oluşumu
+
+Yeni oluşan dokunun oksijen ve besin ihtiyacını karşılamak için damarlanma şarttır:
+
+- **İki Farklı Damar Oluşum Mekanizması (Sınav Spotu):**
+  1. **Vaskülogenez (Vaskülogenizis):** Embriyonik gelişim sırasında primitif endotelyal öncül hücrelerin (anjiyoblastlar / endotel progenitörleri) sıfırdan bir araya gelerek ilk damar ağını (pleksus) kurmasıdır.
+  2. **Anjiyogenez (Neovaskülarizasyon):** Erişkin organizmada doku onarımı, menstrüel siklus veya tümör büyümesi sırasında **önceden var olan mevcut olgun damarlardan yeni damar dallarının tomurcuklanmasıdır**.
+- **Kritik Biyolojik Görev:** Anjiyogenez olmadan doku onarımı imkansızdır; çünkü çoğalan fibroblastların ve epitel hücrelerinin ihtiyaç duyduğu oksijen ve yapıtaşları ancak bu yeni kapillerler yoluyla taşınır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 42: Anjiyogenezin 1. ve 2. Basamakları: Vazodilatasyon ve Perisit Ayrılması
+
+Bir damarın yeni bir dal verebilmesi için önce mevcut yapısını gevşetmesi gerekir (Sınav Spotu):
+
+- **1. Basamak: Vazodilatasyon ve Geçirgenlik Artışı:**
+  - Hipoksik yara dokusundan salınan mediyatörlerin etkisiyle ana damarda **Nitrik Oksit (NO)** üretilir; damar genişler (vazodilatasyon).
+  - **VEGF (Vasküler Endotel Büyüme Faktörü)** etkisiyle endotel hücreleri arasındaki bağlantılar gevşer, vasküler geçirgenlik tavan yapar.
+- **2. Basamak: Perisitlerin Ayrılması (Pericyte Detachment):**
+  - Normalde olgun kapillerlerin dış yüzeyini bir kılıf gibi saran ve damarı stabilize eden destek hücrelerine **perisitler** denir.
+  - Tomurcuklanmanın başlayabilmesi için perisitlerin damar duvarından ayrılması zorunludur.
+  - Bu ayrılmayı **Angiopoietin-2 (Ang-2)** molekülü sağlar; Ang-2, endoteldeki Tie-2 reseptörünü bloke ederek perisit tutunmasını çözer.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 43: Anjiyogenezin 3. ve 4. Basamakları: ECM Yıkımı ve Tip Hücresi Göçü
+
+Perisitler ayrıldıktan sonra endotelin önündeki fiziksel bariyerlerin temizlenmesi gerekir:
+
+- **3. Basamak: Bazal Membran ve ECM'nin Proteolitik Yıkımı:**
+  - Endotel hücreleri **Matriks Metalloproteinazlar (MMP'ler)** ve plazminojen aktivatörleri salgılar.
+  - Bu enzimler damarın kendi bazal membranını (Tip IV kollajen) ve komşu interstisyel matriksi eriterek endotelin çıkabileceği bir delik açar.
+- **4. Basamak: Endotel Göçü ve Tip Hücresi (Tip Cell):**
+  - Yeni tomurcuğun en önünde liderlik eden özelleşmiş endotel hücresine **Uç Hücresi (Tip Cell)** denir.
+  - Tip hücresi mitoz yapmaz! Uzun sitoplazmik uzantılarıyla (**filopodia**) yara dokusundan gelen VEGF gradyanını koklar ve en yüksek oksijensiz alana doğru sürünür.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 44: Notch Sinyali ve Dll4: Anjiyogenik Kaosu Önleme
+
+Anjiyogenez sırasında her endotel hücresi aynı anda 'uç hücresi' olmaya kalkarsa ne olur? Damar kör bir yumağa döner ve lümen oluşamaz:
+
+- **Lateral İnhibisyon Mekanizması (Sınav Spotu):**
+  - En yüksek VEGF alan endotel hücresi öncü **Tip hücresi** haline gelir.
+  - Tip hücresi, yüzeyinde **Delta-like ligand 4 (Dll4)** ekspresyonunu artırır.
+  - Dll4, arkasındaki komşu endotel hücrelerinin üzerindeki **Notch-1** reseptörüne bağlanır.
+- **Sonuç:**
+  - Notch sinyali alan arkadaki hücrelerde VEGF reseptörleri (VEGFR-2) baskılanır.
+  - Bu hücrelerin de tip hücresi olması engellenir; onlar birer **Gövde Hücresi (Stalk Cell)** haline gelir.
+  - Stalk hücreleri göç etmez, çoğalarak damarın tübüler boru yapısını uzatır.
+- **Klinik Önemi:** Anti-Dll4 ilaçlar verildiğinde aşırı ama işlevsiz kör damar yumakları oluşur.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 45: Anjiyogenezin 5, 6 ve 7. Basamakları: Lümenleşme ve Damar Olgunlaşması
+
+Tomurcuk uzadıktan sonra gerçek bir fonksiyonel kan kanalına dönüşmesi gerekir:
+
+- **5. Basamak: Tübüler Lümen Oluşumu (Vakuolizasyon):**
+  - Stalk endotel hücreleri içinde intrasellüler pinositik vakuoller birleşir.
+  - İki komşu endotel hücresi arasında içi boş tübüler bir lümen açılır.
+- **6. Basamak: Karşı Tomurcukla Birleşme (Anastomoz):**
+  - Karşı yönden gelen başka bir kapiller ilmeğiyle uç uca birleşerek kapalı bir dolaşım döngüsü kurulur; kan akımı başlar.
+- **7. Basamak: Damar Olgunlaşması ve Stabilizasyon (Sınav Spotu):**
+  - Kan akımı başladığında damarın sızdırmaz hale getirilmesi şarttır.
+  - Endotel hücreleri **PDGF** salgılayarak çevre dokudaki perisitleri ve düz kas hücrelerini damar duvarına çağırır.
+  - **Angiopoietin-1 (Ang-1)**, endoteldeki **Tie-2** reseptörüne bağlanarak perisitlerin endotelle sıkı bağ kurmasını sağlar.
+  - **TGF-β**, endotel proliferasyonunu durdurur ve yeni bazal membran (kollajen Tip IV ve laminin) sentezini uyarır.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 46: VEGF Ailesi ve Anjiyogenik Reseptörler
+
+Anjiyogenezin en tartışmasız baş aktörü **Vasküler Endotel Büyüme Faktörü (VEGF)** ailesidir:
+
+- **Ailenin Üyeleri:** VEGF-A, VEGF-B, VEGF-C, VEGF-D ve PIGF (Plasental Büyüme Faktörü).
+- **VEGF-A (Klasik VEGF - Sınav Spotu):**
+  - Anjiyogenezin ana tetikleyicisidir. Mezenkimal hücreler, makrofajlar ve tümör hücreleri tarafından hipoksiye yanıt olarak salgılanır.
+  - Hipoksi anında hücrede **HIF-1α (Hipoksi İle İndüklenen Faktör-1α)** parçalanmaktan kurtulur, çekirdeğe girer ve devasa bir VEGF-A transkripsiyonu başlatır.
+- **Reseptörler:**
+  - **VEGFR-2 (KDR/Flk-1):** Endotel üzerindeki **en önemli fonksiyonel reseptördür**; endotel mitozunu, göçünü ve anjiyogenezi neredeyse tamamen bu reseptör yürütür.
+  - **VEGFR-1 (Flt-1):** VEGF'e çok yüksek afiniteyle bağlanır ancak sinyali zayıftır; genellikle bir 'tuzak/yem reseptör' (decoy receptor) gibi davranarak anjiyogenezi dengeler.
+  - **VEGFR-3:** Kan damarlarında değil, **Lenfanjiogenezde (lenf damarlarının oluşumunda)** rol oynar (VEGF-C ve VEGF-D ile uyarılır).
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 47: FGF, PDGF ve Angiopoietinlerin Orkestrasyonu
+
+Anjiyogenez tek bir enstrümanın değil, tam bir biyokimyasal orkestranın eseridir:
+
+- **FGF-2 (Temel Fibroblast Büyüme Faktörü - bFGF - Sınav Spotu):**
+  - Endotel hücre göçünü uyarır.
+  - Yara tabanında epitel hücrelerinin ve fibroblastların çoğalmasını da eşzamanlı tetikleyerek doku dolgusunu hızlandırır.
+- **Angiopoietin-1 (Ang-1) vs Angiopoietin-2 (Ang-2) Dengesi:**
+  - **Ang-1:** Endotel hücresindeki **Tie-2** reseptörüne bağlanarak perisitleri çağırır ve damarı **stabilize eder (kapatır/olgunlaştırır)**.
+  - **Ang-2:** Tie-2 reseptörünü yarışmalı olarak bloke eder; perisitleri uzaklaştırarak damarı **gevşetir ve yeni tomurcuklanmaya açar**.
+- **PDGF (Trombosit Kaynaklı Büyüme Faktörü):** Düz kas hücrelerini ve perisitleri yeni tomurcuğun etrafına çekerek damarın elastik duvarını örer.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 48: Anjiyogenezin Tıptaki İki Yüzü: Onarım vs Tümör Biyolojisi
+
+Anjiyogenez, yara iyileşmesinde hayat kurtaran bir dostken; onkolojide kanserin yayılmasını sağlayan ölümcül bir düşmana dönüşür:
+
+- **Doku Onarımında Anjiyogenez (Fizyolojik):**
+  - Düzenli, kontrollü, basamaklı ve sonlanan bir süreçtir.
+  - İyileşme tamamlandığında damarlar olgunlaşır, fazla kılcallar apoptozla geriler (avasküler skar kalır).
+- **Kanserde Anjiyogenez (Patolojik):**
+  - 1-2 mm çapını aşan tümörler oksijensiz kalır; aşırı kontrolsüz VEGF salgılarlar.
+  - Tümör damarları son derece kaotik, kıvrımlı, kör sonlanan ve aşırı geçirgendir.
+- **Farmakolojik Hedef (Anti-Anjiyogenik Tedaviler):**
+  - **Bevacizumab (Anti-VEGF monoklonal antikoru):** VEGF'i nötralize ederek tümör damarlanmasını kurutur.
+  - Göz hastalıklarında (diyabetik retinopati ve yaşa bağlı makula dejenerasyonu) görmeyi kurtarmak için göze anti-VEGF enjeksiyonları yapılır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 49: [TEKRAR SAYFASI - CHECKPOINT 5] Anjiyogenez Mekanizması ve Büyüme Faktörleri
+
+Bu checkpointte neovaskülarizasyonun moleküler koreografisini pekiştiriyoruz:
+
+- **Vaskülogenez vs Anjiyogenez:** Vaskülogenez embriyoda sıfırdan yapım; anjiyogenez mevcut damardan tomurcuklanmadır.
+- **Sıralı Basamaklar:**
+  1. NO ile vazodilatasyon ve VEGF ile geçirgenlik artışı.
+  2. Ang-2 ile perisitlerin ayrılması.
+  3. MMP'ler ile bazal membran ve ECM'nin delinmesi.
+  4. **Tip hücresi (Uç hücresi)** önderliğinde VEGF gradyanına doğru filopodial göç.
+  5. **Notch/Dll4** lateral inhibisyonuyla arkadaki hücrelerin **Stalk hücresi (Gövde hücresi)** yapılması.
+  6. Vakuolizasyonla tübüler lümen açılması ve anastomoz.
+  7. **PDGF ve Ang-1 (Tie-2)** ile perisitlerin damarı sarması ve **TGF-β** ile bazal membran örülmesi.
+- **Reseptörler:** VEGFR-2 (kan damarı anjiyogenezi), VEGFR-3 (lenfanjiogenez).
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `interactive_table`
+
+### Akıl Kartları (Flashcards):
+- **S:** Anjiyogenezde en önde VEGF gradyanına doğru filopodiaları ile göç eden lider endotel hücresine ne denir?
+  - **C:** Uç hücresidir (Tip cell).
+  - *İpucu:* Kılavuz tomurcuk birimi
+- **S:** Anjiyogenezde arkadaki endotel hücrelerinin kontrolsüz tomurcuklanmasını engelleyip tübüler lümen gövdesi yapmasını sağlayan yolak nedir?
+  - **C:** Notch ve Dll4 (Delta-like ligand 4) yolağıdır.
+  - *İpucu:* Lateral engelleme sistemi
+- **S:** Yeni oluşan kapillerlerin perisitlerle sarılarak stabilize edilmesini sağlayan temel büyüme faktörleri hangileridir?
+  - **C:** PDGF ve Angiopoietin-1'dir (Ang-1 / Tie-2).
+  - *İpucu:* Damar olgunlaştırıcı iki molekül
+
+---
+
+## Slayt 50: Mini Vaka: İskemik Yara İyileşmesinde Anti-VEGF Tedavisinin Yan Etkisi
+
+65 yaşında metastatik kolon kanseri nedeniyle onkoloji kliniğinde kemoterapi ve **Bevacizumab (Anti-VEGF monoklonal antikoru)** alan bir hastaya, akut apandisit nedeniyle acil laparotomi yapılıyor:
+
+- **Ameliyat Sonrası 10. Gün:** Hastanın laparotomi insizyonunun hiç kaynamadığı, yara dudaklarının soluk, avasküler ve kuru kaldığı; granülasyon dokusunun hiç gelişmediği ve dikişlerin açıldığı (yara dehisensi) saptanıyor.
+- **Patolojik Açıklama:**
+  - Bevacizumab ilacı hastanın tümör damarlarını kuruturken, yara iyileşmesi için gereken fizyolojik VEGF-A sinyalini de tamamen bloke etmiştir.
+  - Endoteldeki VEGFR-2 uyarılamadığı için endotel tomurcuklanamamış, anjiyogenez gelişmemiş ve granülasyon dokusu kurulamamıştır.
+- **Cerrahi Kural:** Elektif ameliyat planlanan kanser hastalarında anti-anjiyogenik ilaçlar (bevacizumab) ameliyattan en az 4-6 hafta önce kesilmelidir!
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 51: Ekstrasellüler Matriks (ECM) Bileşenleri ve Doku Mimarisi
+
+Doku onarımında hücrelerin yerleştiği ve gerilme kuvveti kazandığı ana çatı ekstrasellüler matrikstir (ECM):
+
+- **ECM'nin Üç Temel Makromolekül Grubu (Sınav Spotu):**
+  1. **Fibriler Yapısal Proteinler (Kollajen ve Elastin):** Dokulara çekme kuvveti (tensile strength) ve geri yaylanma (elastisite) sağlar.
+  2. **Su Tutucu Hidrate Jeller (Proteoglikanlar ve Hyaluronan):** Dokulara basınca ve sıkışmaya karşı direnç (turgor) ve lubrikasyon kazandırır.
+  3. **Yapıştırıcı (Adeziv) Glikoproteinler (Fibronektin ve Laminin):** Matriks elemanlarını birbirine ve hücre yüzeyindeki **integrin reseptörlerine** bağlayan moleküler çimentodur.
+- **Dinamik Dengenin Önemi:** ECM sabit bir betonarme yapı değildir; yara iyileşmesi boyunca sürekli sentezlenir, yıkılır ve yeniden şekillenir.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 52: Kollajen Tipleri ve Yara İyileşmesindeki Değişim
+
+Vücuttaki en bol protein olan kollajenin yara iyileşmesinde iki ana türü kritik rol oynar (Sınav Sorusu):
+
+- **Kollajen Tipleri ve Dağılımı:**
+  - **Tip I Kollajen:** Deri, kemik, tendon, fasya ve **olgun skar dokusunda** bulunur. Kalın lifler oluşturur; olağanüstü yüksek çekme direncine sahiptir.
+  - **Tip II Kollajen:** Eklem kıkırdağı ve vitreus cismi.
+  - **Tip III Kollajen (Retikülin Lifleri):** Embriyonik dokular, kan damarları ve **erken dönem granülasyon dokusunda** en bol bulunan kollajendir. İnce ve esnek liflerdir.
+  - **Tip IV Kollajen:** Fibril oluşturmaz; epitelyal ve endotelyal **bazal membranları** kuran tabaka tarzı ağ örgüsüdür.
+- **Yara İyileşmesindeki Tipik Değişim (Shift):**
+  - Erken granülasyon dokusunda (ilk hafta) **Tip III kollajen** sentezlenir (hızlı dolgu).
+  - İlerleyen haftalarda Tip III kollajen matriks metalloproteinazlarca yıkılır ve yerini kalıcı, sert **Tip I kollajene** bırakır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 53: Kollajen Biyosentezi ve C Vitamini Bağımlılığı
+
+Kollajen molekülünün sağlam bir halat gibi örülebilmesi karmaşık bir post-translasyonel biyokimyasal modifikasyon zincirine bağlıdır:
+
+- **1. Pre-Prokollajen Sentezi:** Ribozomlarda sentezlenip granüllü endoplazmik retikuluma (GER) girer.
+- **2. Hidroksilasyon (Hayati Basamak - Sınav Spotu):**
+  - Prokollajen zincirindeki **prolin ve lizin** amino asitleri, sırasıyla **prolil hidroksilaz** ve **lizil hidroksilaz** enzimleri tarafından hidroksillenir.
+  - Bu enzimler kofaktör olarak **C Vitamini (Askorbik Asit)** ve demir ($Fe^{2+}$) kullanmak ZORUNDADIR!
+- **3. Triple-Heliks Kurulması:** Hidroksiprolinler sayesinde üçlü heliks (tropokollajen) oluşur.
+- **4. Hücre Dışına Salınım ve Çapraz Bağlanma:**
+  - Prokollajen peptidazlar uç peptidleri keser.
+  - **Lizil Oksidaz** enzimi (kofaktörü **Bakır - Cu**) kollajen lifleri arasında kovalent çapraz bağlar (cross-links) kurarak dokuya nihai çekme gücünü kazandırır.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+
+---
+
+## Slayt 54: C Vitamini Eksikliği (Skorbüt): Yara Açılmasının Biyokimyası
+
+Tarihte denizcileri kırıp geçiren skorbüt hastalığı, doku onarımının biyokimyasal önemini en net gösteren tablodur:
+
+- **Moleküler Kusur (Sınav Spotu):**
+  - C vitamini eksikliğinde prolil ve lizil hidroksilaz enzimleri çalışamaz.
+  - Hidroksiprolin üretilemediği için prokollajen zincirleri kararlı bir üçlü heliks (triple-helix) yapısı oluşturamaz.
+  - Bozuk kollajen polipeptidleri hücre içinde birikir, hücre dışına salınamaz veya salınsa bile hızla parçalanır.
+- **Klinik Yansıması:**
+  - Damar bazal membranları zayıflar; diş etlerinde kanamalar, ciltte peteşi ve purpuralar görülür.
+  - **Yara İyileşmesi Tamamen Durur:** Yeni yaralar hiç kaynamaz.
+  - **Eski Skarların Çözülmesi:** Aylar veya yıllar önce kapanmış eski cerrahi yaralar dahi kollajen turnover'ı bozulduğu için yeniden açılır (yara dehisensi).
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 55: TGF-beta: En Güçlü Fibrogenik Sitokin (Anahtar Faktör)
+
+Doku onarımı, fibrozis ve skar oluşumunun en tartışmasız imparatoru **Transforming Büyüme Faktörü-beta (TGF-β)** molekülüdür (Sınavların 1 Numaralı Spotu):
+
+- **Kaynağı:** M2 makrofajlar, trombositler, endotel hücreleri ve aktive fibroblastlar.
+- **Üçlü Fibrogenik Etki Mekanizması (Sınav Sorusu):**
+  1. **ECM Sentezini Şiddetle Uyarır:** Fibroblastları yara yatağına çeker ve gen düzeyinde Tip I ve Tip III kollajen, fibronektin ve proteoglikan üretimini katbekat artırır.
+  2. **ECM Yıkımını Baskılar:** Kollajeni eriten Matriks Metalloproteinazların (MMP'lerin) sentezini doğrudan bloke eder.
+  3. **Yıkım İnhibitörlerini Artırır:** MMP'leri durduran **TIMP (Doku Metalloproteinaz İnhibitörleri)** sentezini artırır.
+- **Bileşik Sonuç:** Bir taraftan kollajen üretimi zirveye çıkarılırken, diğer taraftan kollajen yıkımı tamamen durdurulur! Bu sayede yara hızla fibröz bağ dokusuyla dolar.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+
+---
+
+## Slayt 56: Miyofibroblastlar ve Yara Kontraksiyonu
+
+Granülasyon dokusu oluştuktan sonra yaranın kapanabilmesi için doku defektinin fiziksel olarak daraltılması gerekir:
+
+- **Miyofibroblast Nedir? (Sınav Spotu):**
+  - TGF-β ve PDGF etkisiyle doku fibroblastlarının fenotip değiştirerek düz kas hücrelerine benzeyen kasılabilen bir forma dönüşmesidir.
+  - Sitoplazmalarında yüksek konsantrasyonda **alfa-düz kas aktini (α-SMA)** flamanları içerirler.
+- **Yara Kontraksiyonu (Yaranın Büzülmesi):**
+  - Miyofibroblastlar uzantılarıyla çevrelerindeki kollajen liflerine ve birbirlerine tutunurlar.
+  - Hep birlikte koordineli şekilde kasılarak yara kenarlarını merkeze doğru çekerler.
+  - Özellikle doku kaybının çok geniş olduğu **sekonder iyileşen yaralarda**, yara yüzey alanını **%70-80 oranında küçülterek** iyileşmeyi hızlandırırlar.
+- **Patolojik Aşırılık:** Miyofibroblast kontraksiyonu kontrolsüz devam ederse eklemlerde hareket kısıtlılığına yol açan **kontraktürler** gelişir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 57: TGF-beta'nın Anti-enflamatuar ve Pleiotropik Rolü
+
+TGF-β yalnızca kollajen yaptıran kör bir molekül değildir; organizmada birden fazla karşıt görevi aynı anda yürüten pleiotropik bir mediyatördür:
+
+- **1. Enflamasyonu Söndürme (İmmünosüpresif Rol):**
+  - TGF-β, lenfosit çoğalmasını, makrofaj aktivasyonunu ve nötrofil infiltrasyonunu güçlü şekilde baskılar.
+  - Akut enflamasyonun bitip doku onarımına geçilmesini garanti eder.
+- **2. Epitel Çoğalmasını Frenleme:**
+  - Karaciğer rejenerasyonunda gördüğümüz gibi, parankim ve epitel hücrelerinde hücre döngüsünü durdurarak (G1 arresti) kontrolsüz büyümeyi engeller.
+- **3. Fibrogenezis (Skar Yapımı):**
+  - Mezenkimal hücreleri uyararak bağ dokusunu artırır.
+- **Klinik İki Yüzü:**
+  - TGF-β yara onarımı için vazgeçilmezdir.
+  - Ancak aşırı ve kronik salınımı karaciğer sirozuna, akciğer pulmoner fibrozisine, böbrek sklerozuna ve keloid gelişimine yol açar!
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `active_recall`
+
+---
+
+## Slayt 58: İntegrinler: Hücre ile Matriks Arasındaki Mekanotransdüksiyon
+
+Fibroblastlar yara yatağında ne kadar kollajen sentezleyeceklerini ve ne kadar kasılacaklarını nasıl anlarlar? Hücrelerin 'dokunma duyusu' olan integrinlerle:
+
+- **İntegrin Ailesi:** Hücre zarını boydan boya geçen alfa ve beta heterodimerlerinden oluşan transmembran reseptörleridir.
+- **Çift Yönlü İletişim (Inside-out ve Outside-in):**
+  - Dışarıda ECM'deki **fibronektin, laminin ve kollajene** bağlanırlar.
+  - İçeride hücre iskeletindeki (sitoiskelet) **aktin mikroflamanlarına** tutunurlar.
+- **Mekanotransdüksiyon (Sınav Spotu):**
+  - Yara dokusundaki mekanik gerilimi (tension) hissederler.
+  - Yaranın kenarları gerildikçe integrinler hücre çekirdeğine sinyal göndererek daha fazla kollajen sentezlenmesini ve miyofibroblast kontraksiyonunu emreder.
+  - Yaranın dikişlerle yaklaştırılması mekanik gerilimi düşürerek gereksiz aşırı skar oluşumunu engeller.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 59: [TEKRAR SAYFASI - CHECKPOINT 6] Fibroblast Aktivasyonu, TGF-beta ve ECM Sentezi
+
+Bu checkpointte kollajen biyolojisini, TGF-beta mekanizmasını ve miyofibroblastları özetliyoruz:
+
+- **ECM Bileşenleri:** Yapısal proteinler (kollajen, elastin), su jelleri (proteoglikan, hyaluronan) ve yapışkanlar (fibronektin, laminin).
+- **Kollajen Değişimi:** Genç granülasyon dokusunda Tip III kollajen; olgun skarda sağlam Tip I kollajen.
+- **C Vitamini:** Prolil ve lizil hidroksilaz kofaktörüdür; eksikliğinde (skorbüt) triple-heliks kurulamaz, yaralar açılır.
+- **Lizil Oksidaz:** Bakır (Cu) bağımlıdır; kollajen lifleri arasında çapraz bağlar kurar.
+- **TGF-beta:** En güçlü fibrogenik sitokin. (1) Kollajen sentezini uyarır, (2) MMP'leri baskılar, (3) TIMP'leri artırır.
+- **Miyofibroblastlar:** Alfa-düz kas aktini (α-SMA) içerir; yara kontraksiyonunu sağlar.
+- **İntegrinler:** ECM ile hücre içi aktin arasında mekanik stres iletimi (mekanotransdüksiyon) sağlar.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `causal_chain`
+
+### Akıl Kartları (Flashcards):
+- **S:** Normal yara iyileşmesinde genç granülasyon dokusunda ilk yapılan kollajen ile olgun skardaki ana kollajen hangileridir?
+  - **C:** Genç dokuda Tip III, olgun skarda ise Tip I kollajendir.
+  - *İpucu:* Erken ve geç lif sınıfları
+- **S:** Kollajen biyosentezinde prolin ve lizin hidroksilasyonu için mutlak kofaktör olan vitamin hangisidir?
+  - **C:** C vitaminidir (Askorbik Asit).
+  - *İpucu:* Eksikliğinde skorbüt yapan madde
+- **S:** Yara iyileşmesi ve organ fibrozisinde kollajen sentezini en güçlü uyaran temel fibrogenik sitokin nedir?
+  - **C:** Transforming Büyüme Faktörü-betadır (TGF-β).
+  - *İpucu:* En kuvvetli fibrozis uyaranı
+
+---
+
+## Slayt 60: Mini Vaka: Yaşlı Bir Hastada C Vitamini Eksikliği ve Yara Dehisensi
+
+74 yaşında yalnız yaşayan, dişleri olmadığı için taze sebze ve meyve tüketmeyen, aylardır sadece çay ve bisküvi ile beslenen bir hastaya fıtık ameliyatı yapılıyor:
+
+- **Ameliyat Sonrası 12. Gün:** Dikişler alındıktan 2 saat sonra hasta öksürdüğünde, ameliyat kesisinin boydan boya açıldığı ve içeriden omentumun dışarı sarktığı (evisserasyon / yara dehisensi) görülüyor.
+- **Klinik Muayene:** Hastanın bacaklarında kıl köklerinde perifoliküler kanamalar (peteşi) ve diş etlerinde morarma saptanıyor.
+- **Patolojik İnceleme:** Yara dudaklarından alınan biyopside, fibroblastların bol olduğu ancak aralarındaki kollajen liflerinin son derece zayıf, amorf ve çapraz bağ kuramamış olduğu izleniyor.
+- **Tanı ve Tedavi:** Skorbüt (C vitamini eksikliği) tanısıyla hastaya yüksek doz oral ve IV askorbik asit başlanıyor; yara tekrar dikildikten sonra 10 günde sağlam skar dokusuyla iyileşiyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 61: ECM Yeniden Şekillenmesi (Remodeling): Skarın Olgunlaşması
+
+Yara iyileşmesinin en uzun süren evresi olan yeniden şekillenme (remodeling), yaranın 2-3. haftasında başlar ve aylarca, hatta yıllarca sürer:
+
+- **Neden Remodeling Gereklidir?**
+  - Proliferasyon evresinde üretilen granülasyon dokusu kaotiktir; damardan çok zengin, gevşek ve mekanik olarak dayanıksızdır.
+  - Bu dokunun kalıcı, sağlam ve fonksiyonel bir skara dönüşmesi için gereksiz bileşenlerin ayıklanması ve kollajen liflerinin stres çizgileri boyunca hizalanması şarttır.
+- **Sentez ve Yıkım Dengesi (Sınav Spotu):**
+  - Remodeling evresinde kollajen sentezi ile kollajen yıkımı arasında hassas bir denge kurulur.
+  - Matriks metalloproteinazlar (MMP'ler) eski ve dağınık Tip III kollajenleri eritirken, fibroblastlar paralel demetler halinde güçlü Tip I kollajen üretir.
+- **Sonuç:** Granülasyon dokusu geriler; damarlar kurur ve yara beyaz, sert, avasküler bir skar dokusuna dönüşür.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 62: Matriks Metalloproteinazlar (MMP'ler) ve Çinko ($Zn^{2+}$) Bağımlılığı
+
+Ekstrasellüler matriksin heykeltıraşları **Matriks Metalloproteinazlar (MMP'ler)** adı verilen özel bir enzim ailesidir:
+
+- **Çinko Bağımlılığı (Sınav Sorusu):**
+  - Bu enzimlerin katalitik merkezinde mutlaka bir **Çinko ($Zn^{2+}$) iyonu** bulunması zorunludur.
+  - Çinko eksikliğinde MMP'ler çalışamaz; bu nedenle çinko eksikliği olan hastalarda yara iyileşmesi ve remodeling ağır şekilde bozulur!
+- **Zimojen Salınımı ve Aktivasyon:**
+  - Fibroblastlar, makrofajlar ve nötrofiller tarafından **inaktif pro-enzimler (pro-MMP)** olarak salgılanırlar.
+  - Yara yatağında doku plazmini veya serbest oksijen radikalleri (ROS) tarafından inaktif parça kesilerek aktive edilirler.
+- **Önemi:** MMP'ler olmasaydı eski matriks eritilemez, yeni damarlar dokuya sızamaz ve skar dokusu kontrolsüzce büyüyerek devasa kitlelere dönüşürdü.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 63: MMP Sınıfları ve Özgül Matriks Substratları
+
+MMP ailesi yıktıkları ekstrasellüler matriks proteinlerine göre 3 majör sınıfa ayrılır (Sınav Spotu):
+
+- **1. İnterstisyel Kollajenazlar (MMP-1, MMP-2, MMP-3, MMP-8):**
+  - Sağlam fibriler kollajenleri (Tip I, Tip II ve Tip III) tanıyan ve üçlü heliksin ortasından spesifik olarak kesen yegane enzimlerdir.
+  - MMP-8 nötrofil kaynaklıdır; akut iltihapta hızla devreye girer.
+- **2. Jelatinazlar (MMP-2 ve MMP-9):**
+  - Kollajenazlar tarafından kesilip açılmış amorf kollajen parçalarını (jelatin) ve özellikle **Tip IV bazal membran kollajenini** parçalarlar.
+  - Anjiyogenezde endotelin bazal membranı delip geçmesini sağlarlar.
+- **3. Stromelisinler (MMP-3, MMP-10, MMP-11):**
+  - Fibronektin, laminin, elastin, proteoglikanlar ve amorf glikoproteinleri parçalarlar; ayrıca diğer pro-MMP'leri aktive ederler.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 64: TIMP'ler: Doku Metalloproteinaz İnhibitörleri ve Denge
+
+MMP'ler kontrolsüz kalırsa dokuyu tamamen sindirip yarayı devasa bir krater haline getirebilir; bu yıkımı frenleyen kalkan **TIMP'lerdir**:
+
+- **TIMP Tanımı (Sınav Spotu):** Mezenkimal hücreler ve makrofajlar tarafından salgılanan, aktif MMP enzimlerine 1:1 stokiometrik oranla bağlanarak onları tamamen inaktive eden **Doku Metalloproteinaz İnhibitörleridir (Tissue Inhibitors of Metalloproteinases)**.
+- **Kritik Biyolojik Denge:**
+  - **MMP > TIMP Durumu:** Aşırı matriks yıkımı gerçekleşir; yara kenarları erir, dikişler tutmaz ve **kronik iyileşmeyen ülserler veya yara dehisensi** gelişir.
+  - **TIMP > MMP Durumu:** Matriks yıkılamaz; sentezlenen kollajen birikir, birikir ve sonuçta **hipertrofik skar, keloid veya organ fibrozisi (siroz)** gelişir.
+- **TGF-β'nın Rolü:** Hatırlanacağı üzere TGF-β, TIMP sentezini artırıp MMP'yi baskılayarak dengeyi daima 'kollajen birikimi' tarafına büker.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 65: Yara Gerilme Kuvveti (Tensile Strength) Dinamikleri
+
+Bir cerrah dikişleri ne zaman almalıdır? Hasta ne zaman ağır kaldırabilir? Bu kararların tümü yara gerilme kuvvetinin zaman çizgisine dayanır (Sınavların Klasik Sorusu):
+
+- **1. Hafta (Dikişlerin Alındığı An - Kritik Eşik):**
+  - Cerrahi sütürler genellikle 7-10. günlerde alınır.
+  - Bu anda yaranın gerilme gücü normal sağlam derinin **yalnızca %10'u kadardır!**
+  - Yara henüz sadece gevşek granülasyon dokusu ve zayıf Tip III kollajenle tutunmaktadır; hastanın ani gerilme hareketlerinden kaçınması şarttır.
+- **4. Hafta (1. Ay):**
+  - Tip I kollajen sentezi ve çapraz bağlanma artar; gerilme gücü hızla yükselerek normalin **yaklaşık %50 - 60'ına** ulaşır.
+- **3. Ay (Plato Düzeyi - Altın Kural):**
+  - Remodeling doruğa çıkar; yara gücü normal dokunun **yaklaşık %70 ila %80'ine** ulaşır ve bu seviyede plato çizer.
+- **Unutulmaz Patoloji Kuralı:** İyileşen bir yara dokusu **ASLA normal sağlam dokunun %100 gücüne geri dönemez!** Maksimum güç %70-80 bandında kalır.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+
+---
+
+## Slayt 66: Kollajen Çapraz Bağlanması ve Gerilme Gücünün Moleküler Temeli
+
+Yara gücünün 1. haftadaki %10'dan 3. aydaki %80'e fırlamasını sağlayan şey sadece kollajen miktarı değil, kollajen liflerinin **fiziksel düzeni ve kovalent kenetlenmesidir**:
+
+- **Miktar Artışı vs Kalite Artışı:**
+  - Yara iyileşmesinde kollajen miktarı 2. ay civarında sabitlenir; ancak yaranın gerilme gücü artmaya devam eder!
+- **Bunun Sırrı İki Mekanizmadır (Sınav Spotu):**
+  1. **Çapraz Bağlanma (Cross-linking):** Bakır bağımlı **lizil oksidaz** enzimi sayesinde fibriller arasında kovalent bağlar kurulur; lifler birbirine kenetlenmiş çelik halatlara döner.
+  2. **Yönelim (Alignment):** Başlangıçta rastgele ve dağınık duran kollajen lifleri, dokunun maruz kaldığı mekanik gerilim vektörleri boyunca **birbirine paralel demetler** halinde dizilir.
+- **Sonuç:** Dağınık bir ip yumağı yerine, gerilime dirençli bir çelik kafes yapısı kurulur.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 67: Avaskülerleşme ve Skarın Soluklaşması Mekanizması
+
+Granülasyon dokusunun ilk haftalardaki parlak kırmızı rengi aylar içinde nasıl olur da soluk beyaz bir çizgiye dönüşür?
+
+- **Oksijen İhtiyacının Bitmesi:** Granülasyon dokusunda fibroblastlar işlerini tamamlayıp kollajeni ördükten sonra dokunun metabolik aktivitesi hızla düşer.
+- **Endotel Apoptozu (Sınav Spotu):**
+  - Artık aşırı kan akımına ihtiyaç kalmadığı için VEGF sinyali kesilir.
+  - Yeni oluşmuş yüzlerce kılcal damarın endotel hücreleri programlı hücre ölümüne (apoptoz) girer.
+  - Kapiller lümenler çöker, perisitler dağılır ve damar yoğunluğu dramatik biçimde azalır.
+- **Fibroblastların Dinlenmeye Çekilmesi:** Aktif miyofibroblastlar da apoptoza uğrar veya inaktif yassı **fibrositlere** dönüşür.
+- **Makroskopik Sonuç:** Doku tamamen avasküler, asellüler, yoğun kollajenden ibaret **beyaz kalıcı skar (cicatrix)** halini alır.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+
+---
+
+## Slayt 68: Kontraktürler: Miyofibroblastların Patolojik Aşırılığı
+
+Yara kontraksiyonu defekti küçültmek için gereklidir; ancak sınır aşıldığında hayatı kabusa çeviren bir deformiteye dönüşür:
+
+- **Kontraktür Tanımı (Sınav Spotu):** Yara iyileşmesi sırasında miyofibroblastların aşırı ve kontrolsüz kasılması sonucu yara dokusunun ve çevresindeki eklemlerin **patolojik olarak büzüşmesi, sertleşmesi ve hareket kabiliyetini kaybetmesidir**.
+- **En Sık Görüldüğü Durumlar:**
+  - **Geniş Cilt Yanıkları:** Özellikle avuç içi, boyun, aksilla ve dirsek fleksura bölgelerinde derin 2. ve 3. derece yanıklardan sonra.
+  - **Palmar Fibromatozis (Dupuytren Kontraktürü):** Avuç içi aponevrozunun nodüler kalınlaşması ve parmakların bükülü kalması.
+- **Fonksiyonel Sakatlık:** Boyun yanığı olan bir hastanın çenesi göğsüne yapışabilir veya dirsek eklemi 90 derecede kilitlenip bir daha açılamayabilir.
+- **Tedavi:** Cerrahi skar eksizyonu, Z-plasti operasyonları ve deri greftlemeleridir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+
+---
+
+## Slayt 69: [TEKRAR SAYFASI - CHECKPOINT 7] ECM Yeniden Şekillenmesi, MMP'ler ve Yara Gücü
+
+Bu checkpointte yara iyileşmesinin remodeling evresini ve yara gücü dinamiklerini pekiştiriyoruz:
+
+- **Remodeling:** Tip III kollajenin Tip I kollajene dönüşmesi ve damarların gerilemesi.
+- **MMP'ler:** Çinko ($Zn^{2+}$) bağımlı enzimler. İnaktif pro-MMP olarak salınır, plazminle aktive olurlar.
+  - Kollajenazlar (MMP-1, 8): Tip I, II, III fibriler kollajeni keser.
+  - Jelatinazlar (MMP-2, 9): Denatüre kollajen ve Tip IV bazal membranı yıkar.
+  - Stromelisinler (MMP-3): Fibronektin ve proteoglikanları yıkar.
+- **TIMP'ler:** MMP doku inhibitörleridir; denge skar veya ülser yönünü belirler.
+- **Yara Gücü (Tensile Strength):**
+  - 1. hafta dikişler alındığında: Normal derinin **yalnızca %10'u**.
+  - 3. ay sonunda plato: Normal derinin **en fazla %70–80'i** (Asla %100 olamaz!).
+- **Kollajen Çapraz Bağları:** Bakır bağımlı lizil oksidaz ile kovalent kenetlenme.
+- **Kontraktür:** Miyofibroblastların aşırı kasılmasıyla eklemlerin büzüşüp kilitlenmesi (yanık komplikasyonu).
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `causal_chain`
+
+### Akıl Kartları (Flashcards):
+- **S:** ECM remodelinginde kollajeni yıkan Matriks Metalloproteinaz (MMP) enzimlerinin katalitik kofaktörü nedir?
+  - **C:** Çinko iyonudur (Zn2+).
+  - *İpucu:* Enzimin adındaki metal elementi
+- **S:** Cerrahi dikişlerin alındığı birinci haftanın sonunda yara gerilme kuvveti sağlam derinin yaklaşık yüzde kaçıdır?
+  - **C:** Yalnızca yaklaşık yüzde 10'u (%10) kadardır.
+  - *İpucu:* Dikiş alımındaki zayıf direnç seviyesi
+- **S:** Yara iyileşmesinin 3. ayı sonunda yara gerilme gücünün ulaştığı nihai maksimum plato sınırı nedir?
+  - **C:** Normal dokunun yaklaşık yüzde 70 ila 80'idir (%70-80).
+  - *İpucu:* Nihai kalıcı mekanik sınır
+
+---
+
+## Slayt 70: Mini Vaka: Çinko Eksikliği Olan Hastada İyileşmeyen Kronik Yara
+
+Uzun süredir kronik alkolizm ve malnütrisyonu olan 45 yaşındaki bir hastaya fıtık onarımı yapılıyor:
+
+- **Ameliyat Sonrası 4. Hafta:** İnsizyon hattı hala kırmızı, ödemli, yer yer kabuklu kalıyor ve hiç gerilme gücü kazanamıyor. Yara kenarları en ufak dokunmada kolayca ayrılıyor.
+- **Laboratuvar İncelemesi:** Hastada şiddetli serum **Çinko ($Zn^{2+}$) eksikliği** saptanıyor.
+- **Patofizyolojik Mekanizma:**
+  - Çinko, Matriks Metalloproteinazların (MMP'lerin) çalışabilmesi için zorunlu kofaktördür.
+  - Çinko eksikliğinde eski matriks eritilip yeniden düzenlenemez (remodeling durur); epitel göçü ve fibroblast fonksiyonları bloke olur.
+- **Tedavi:** Hastaya oral çinko sülfat takviyesi ve protein desteği başlandıktan sonraki 2 hafta içinde yara hızla olgunlaşarak sağlam bir skar dokusuyla kapanıyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 71: Primer Niyetle İyileşme (İntensiyo Prima / Primary Union)
+
+Cerrahi pratiğin altın standardı olan primer niyetle iyileşme (birincil iyileşme), doku hasarının ve kaybının minimum olduğu durumlarda gerçekleşir:
+
+- **Tanımı ve Koşulları (Sınav Spotu):**
+  - Temiz, enfekte olmamış, cerrahi bir insizyon kesisidir.
+  - Yara kenarları cerrahi sütürler, zımbalar (stapler) veya bantlarla **birbirine sıkıca yaklaştırılmıştır (koapte edilmiştir)**.
+  - Yalnızca fokal bazal membran ve birkaç epitel/bağ dokusu hücresi ölmüştür; doku kaybı yok denecek kadar azdır.
+- **İyileşme Dinamiği:**
+  - İki yara kenarı arasındaki mesafe mikroskopik düzeydedir.
+  - Epitel hücreleri ilk 24-48 saatte karşıdan karşıya hızla geçerek yüzeyi mühürler.
+  - Aradaki dar yarık minimal miktarda granülasyon dokusuyla dolar.
+- **Sonuç:** Çok az skar dokusu oluşur; yara ince, düzgün ve estetik bir çizgi halinde iyileşir. Yara kontraksiyonuna neredeyse hiç ihtiyaç duyulmaz.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 72: Primer İyileşmenin 24 Saatten 1. Aya Kronolojisi
+
+Temiz bir cerrahi kesinin gün gün histopatolojik takibi patolojinin en kusursuz saat mekanizmalarından biridir (Sınav Sorusu):
+
+- **İlk 24 Saat:** Kesi hattı fibrin pıhtısıyla dolar; nötrofiller insizyon sınırlarına göç eder. Epidermis bazal hücreleri kesi kenarlarından fibrin altına doğru göç etmeye başlar.
+- **24 - 48. Saat (İki Gün):** İki taraftan gelen epitel hücreleri ortada birleşir (re-epitelizasyon tamamlanır, temas inhibisyonu).
+- **3. Gün:** Nötrofillerin yerini makrofajlar alır. Granülasyon dokusu insizyon boşluğuna sızar; ilk ince Tip III kollajen lifleri görülür.
+- **5. Gün:** Granülasyon dokusu insizyon aralığını tamamen doldurur; anjiyogenez zirvededir. Epidermis kalınlaşarak normal katmanlarına kavuşur.
+- **2. Hafta:** Kollajen birikimi devam eder; damarlar ve ödem gerilemeye başlar.
+- **1. Ay:** Yara tamamen avasküler, asellüler, Tip I kollajenden zengin ve üzeri normal epidermis ile örtülü ince bir skar dokusuna dönüşür.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 73: Sekonder Niyetle İyileşme (İntensiyo Sekunda / Secondary Union)
+
+Doku kaybının büyük olduğu, yara dudaklarının birleştirilemediği veya enfekte yaralarda sekonder iyileşme devreye girer:
+
+- **Hangi Durumlarda Görülür? (Sınav Spotu):**
+  - Geniş cilt yanıkları ve travmatik ezilme yaralanmaları.
+  - Bacak ve bası ülserleri (dekübitus ülseri).
+  - İçi boşaltılmış geniş apse kaviteleri veya enfekte cerrahi yaralar.
+  - Miyokard enfarktüsü veya organ enfarktüsleri.
+- **Sekonder İyileşmenin Temel Biyolojisi:**
+  - Doku kaybı çok büyüktür; yara kenarları açık kalır.
+  - Ortamda devasa miktarda nekrotik enkaz, fibrin ve iltihabi eksuda vardır; temizlenmesi günler sürer.
+  - Bu devasa kraterin kapanabilmesi için **çok büyük miktarda granülasyon dokusunun** alttan yukarıya doğru yavaş yavaş üremesi gerekir.
+- **Sonuç:** Skar kaçınılmaz olarak geniş, çökük veya kabarık, düzensiz ve belirgindir.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 74: Primer ve Sekonder İyileşme Arasındaki Üç Temel Fark
+
+Sekonder iyileşmeyi primer iyileşmeden ayıran ve patoloji sınavlarında mutlaka sorulan 3 majör biyolojik fark şunlardır (Sınavların Klasiği):
+
+- **1. Enflamatuar Reaksiyonun Şiddeti ve Süresi:**
+  - Sekonder iyileşmede doku kaybı ve nekroz çok daha fazla olduğu için nötrofil ve makrofaj akını katbekat büyüktür; enflamasyon haftalarca sürebilir.
+- **2. Granülasyon Dokusunun Miktarı:**
+  - Primer iyileşmede dar bir aralık doldurulurken; sekonder iyileşmede devasa bir krater tabandan tavana kadar doldurulmak zorundadır. Bu nedenle granülasyon dokusu çok daha bol miktarda üretilir.
+- **3. Yara Kontraksiyonu (Miyofibroblastların Rolü - En Kritik Fark):**
+  - Primer iyileşmede yara kenarları zaten dikişle birleştirildiği için kontraksiyon önemsizdir.
+  - Sekonder iyileşmede ise yara tabanındaki **miyofibroblastlar** güçlü bir şekilde kasılarak açık yara yüzeyini **%70-80 oranında büzüştürür**.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 75: Tersiyer İyileşme (Gecikmiş Primer Kapatma / Delayed Primary Closure)
+
+Askeri cerrahi, travma ve acil cerrahide hayat kurtaran üçüncü bir onarım stratejisi vardır: **Tersiyer İyileşme**:
+
+- **Tanımı ve Gerekçesi (Sınav Spotu):**
+  - Ağır kontamine olmuş, kirli, toprak bulaşmış savaş/trafik yaraları veya patlamış apandisit peritoniti durumlarında **yara hemen kapatılmaz!**
+  - Yara hemen dikilirse içeride kalan anaerobik bakteriler kapalı alanda çoğalarak flegmon, apse veya gazlı kangrene yol açar.
+- **Klinik Protokol Adımları:**
+  1. Yara debride edilir, yıkanır ve **4 ila 7 gün boyunca açık bırakılarak** steril pansumanlarla takip edilir.
+  2. Bu sürede yara tabanında sağlıklı granülasyon dokusu oluşur, enfeksiyon temizlenir ve lökositler bakterileri yok eder.
+  3. Yara temizlendiğinde (3-7. günlerde), cerrah yara dudaklarını ameliyathanede dikişlerle **gecikmiş olarak kapatır (delayed primary closure)**.
+- **Sonuç:** Enfeksiyon riski ortadan kaldırılırken, sekonder iyileşmenin yaratacağı devasa kaba skar yerine kontrollü bir primer skar elde edilir.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+
+---
+
+## Slayt 76: Üç İyileşme Tipinin Karşılaştırmalı Matrisi
+
+Klinik pratikte bir yarayı değerlendirirken bu üç stratejinin parametrelerini net bir matrisle bilmek gerekir:
+
+- **Doku Kaybı:** Primerde minimal; Sekonderde çok geniş; Tersiyerde orta/geniş.
+- **Enfeksiyon Durumu:** Primerde kesinlikle steril/temiz; Sekonderde sıklıkla kontamine/enfekte; Tersiyerde başlangıçta kirli/enfekte, sonradan steril.
+- **Granülasyon İhtiyacı:** Primerde çok az; Sekonderde devasa; Tersiyerde orta düzeyde.
+- **Yara Kontraksiyonu:** Primerde yok; Sekonderde çok belirgin (%70-80); Tersiyerde kısmi.
+- **İyileşme Süresi:** Primerde hızlı (7-14 gün); Sekonderde çok yavaş (aylar); Tersiyerde orta (2-4 hafta).
+- **Skar Kalitesi:** Primerde ince lineer estetik; Sekonderde geniş ve biçimsiz; Tersiyerde kabul edilebilir.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `active_recall`
+
+---
+
+## Slayt 77: Miyofibroblast Kontraksiyonunun Biyomekaniği
+
+Sekonder iyileşmede açık yarayı büzüştürerek kapatan miyofibroblastların kasılma biyomekaniği kendine özgüdür:
+
+- **Fibroblasttan Miyofibroblasta Dönüşüm:**
+  - Yara tabanında yüksek konsantrasyonda bulunan **TGF-β** ve mekanik gerilim sinyalleri, fibroblastların DNA'sında **alfa-düz kas aktini (α-SMA)** genini açar.
+- **Fibronektin 'Bağlantı Plakları' (Fibronexus):**
+  - Miyofibroblastın içindeki aktin mikroflamanları, hücre zarındaki integrinler üzerinden dışarıdaki fibronektin ve kollajen liflerine bağlanır.
+  - Bu özelleşmiş hücre-matriks bağlantısına **fibroneksus** denir.
+- **Adım Adım Büzüşme:**
+  - Miyofibroblastlar kasıldığında bu mekanik güç kollajen liflerine aktarılır.
+  - Hücreler gevşediğinde geriye kaymazlar; matriks yeni pozisyonunda MMP ve TIMP dengesiyle yeniden sabitlenir.
+  - Bu cırcır (ratchet) mekanizmasıyla açık yara defekti her gün milimetre milimetre küçülür.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+
+---
+
+## Slayt 78: Açık Yara Bakımında Negatif Basınçlı Yara Tedavisi (NPWT / VAC)
+
+Modern cerrahi ve doku onarımında sekonder iyileşmeyi hızlandıran en büyük biyomühendislik devrimlerinden biri **Vakum Yardımlı Kapama (VAC / NPWT)** yöntemidir:
+
+- **Çalışma Prensibi (Sınav Spotu):**
+  - Açık yara yatağına steril poliüretan sünger yerleştirilir ve üzeri hava geçirmez şeffaf filmle örtülür.
+  - Bir pompa aracılığıyla yaraya kontrollü **negatif basınç (-125 mmHg)** uygulanır.
+- **Doku Onarımını Nasıl Hızlandırır?**
+  1. **Mikrodeformasyon:** Süngerin gözenekleri yara tabanındaki hücreleri mekanik olarak gerer; bu gerilim integrinleri uyararak **hücre proliferasyonunu ve anjiyogenezi 3-4 kat artırır**.
+  2. **Ödem ve Eksuda Drenajı:** Doku aralığındaki proteaz dolu aşırı sıvıyı emerek kompresyonu ve kompartıman basıncını düşürür; mikrosirkülasyonu rahatlatır.
+  3. **Bakteriyel Yükün Azalması:** Yaranın steril ve kapalı kalmasını sağlar.
+- **Sonuç:** Normalde 2 ayda dolmayacak devasa yara boşlukları 1-2 haftada sağlıklı pembe granülasyon dokusuyla kaplanır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+
+---
+
+## Slayt 79: [TEKRAR SAYFASI - CHECKPOINT 8] Primer, Sekonder ve Tersiyer Yara İyileşmesi
+
+Bu checkpointte üç cerrahi onarım biçimini ve biyolojik mekanizmalarını pekiştiriyoruz:
+
+- **Primer İyileşme:** Temiz, kenarları sütürle yaklaştırılmış kesi. Minimal doku kaybı, minimal granülasyon, hızlı re-epitelizasyon (24-48 saat), neredeyse sıfır kontraksiyon, ince estetik çizgi skar.
+- **Sekonder İyileşme:** Geniş doku kaybı, açık yara, ülser/yanık/apse. Yoğun nekroz ve uzun enflamasyon, devasa granülasyon dokusu, **belirgin miyofibroblast yara kontraksiyonu (%70-80)**, geniş kaba skar.
+- **Tersiyer İyileşme (Gecikmiş Primer):** Kontamine/kirli yaranın önce 3-5 gün açık bırakılıp granülasyon ve enfeksiyon kontrolü sağlandıktan sonra cerrahi olarak dikilmesi.
+- **Miyofibroblastlar:** α-SMA içeren ve fibroneksusla kollajene tutunup kasılan onarım hücreleri.
+- **VAC / NPWT:** Negatif basınçla ödemi azaltıp granülasyonu patlatan biyomekanik yara bakım yöntemi.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `causal_chain`
+
+### Akıl Kartları (Flashcards):
+- **S:** Temiz, kenarları cerrahi sütürlerle yaklaştırılmış bir insizyonun iyileşme tipi nedir?
+  - **C:** Primer niyetle iyileşmedir (Primary union).
+  - *İpucu:* Birincil cerrahi onarım biçimi
+- **S:** Geniş doku kayıplı sekonder iyileşmede açık yara alanını %70-80 oranında küçülten temel mekanizma nedir?
+  - **C:** Miyofibroblastlar aracılığıyla yara kontraksiyonudur (büzülme).
+  - *İpucu:* Aktin içeren hücrelerin büzme eylemi
+- **S:** Ağır kontamine kirli yaraların önce açık bırakılıp granülasyon oluştuktan sonra dikilmesi protokolüne ne ad verilir?
+  - **C:** Tersiyer iyileşmedir (Gecikmiş primer kapama).
+  - *İpucu:* Üçüncül cerrahi kapatma stratejisi
+
+---
+
+## Slayt 80: Mini Vaka: Perfore Apandisitte Cerrahi Kapatma Kararı
+
+Akut apandisiti patlamış (perfore) ve batın içi yoğun püy ile kaplı 35 yaşındaki hastaya acil apandektomi yapılıyor:
+
+- **Ameliyat Sonu İkilemi:** Cerrah peritonu ve fasyayı dikiyor; ancak cilt ve cilt altı dokuda yoğun dışkı ve püy bulaşı bulunuyor.
+- **Hatalı Seçenek (Primer Kapama):** Eğer cilt hemen sıkıca dikilirse, 3 gün sonra dikişlerin altında devasa bir yara apsesi gelişecek, dikişler patlayacak ve yara dehisensi oluşacaktır.
+- **Doğru Cerrahi Karar (Tersiyer Kapama / Gecikmiş Primer):**
+  - Cerrah cilt ve cilt altını açık bırakıyor; yara içine serum fizyolojikli ıslak gazlı bez yerleştiriyor.
+  - 4 gün boyunca pansuman yapılıyor; antibiyotikle sistemik enfeksiyon geriliyor ve yara tabanında tertemiz, kırmızı granülasyon dokusu beliriyor.
+  - 5. günde hasta pansuman odasında lokal anesteziyle dikişleri atılarak gecikmiş primer (tersiyer) olarak kapatılıyor.
+- **Sonuç:** Hasta apse komplikasyonu yaşamadan, minimum skar ile sorunsuz iyileşiyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 81: Yara İyileşmesini Etkileyen Faktörler: Giriş ve Ayrım
+
+Doku onarımı mükemmel bir biyolojik orkestrasyondur; ancak hem organizmanın genel sağlık durumu (sistemik faktörler) hem de yara bölgesinin yerel koşulları (lokal faktörler) bu süreci raydan çıkarabilir:
+
+- **İki Temel Faktör Kategorisi (Sınav Spotu):**
+  1. **Sistemik Faktörler:** Hastanın beslenme düzeyi, metabolik hastalıkları (diyabet), dolaşım durumu ve kullandığı ilaçlar (özellikle glukokortikoidler).
+  2. **Lokal Faktörler:** Doğrudan yara yerindeki enfeksiyon, mekanik stres, yabancı cisim mevcudiyeti ve yaranın anatomik konumu/kanlanması.
+- **Klinik Gerçek:** En mükemmel cerrahi dikiş atılsa dahi, altta yatan kontrolsüz bir diyabet veya lokal bir enfeksiyon varsa yara açılmaya veya kronikleşmeye mahkumdur.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 82: Sistemik Faktör 1: Diabetes Mellitus ve Dolaşım Bozuklukları
+
+Klinikte yara iyileşmesini bozan en sık ve en tehlikeli sistemik hastalık Diabetes Mellitus'tur (Sınav Sorusu):
+
+- **Diyabetteki Çok Katmanlı Yara Kusuru:**
+  - **Mikroanjiyopati ve Hipoksi:** Diyabetik damar duvarlarında bazal membran kalınlaşır ve arteriyoloskleroz gelişir; yara dokusuna yeterli oksijen ve lökosit ulaşamaz.
+  - **Nötrofil Disfonksiyonu:** Yüksek kan şekeri nötrofillerin kemotaksisini, adezyonunu ve fagositoz yeteneğini bozar; yara enfeksiyonlara karşı savunmasız kalır.
+  - **İleri Glikozilasyon Ürünleri (AGEs):** Kollajen liflerini anormal çapraz bağlayarak esnekliği ve remodelingi felç eder.
+  - **Diyabetik Nöropati:** Ağrı duyusunun kaybı nedeniyle hasta travmaları fark etmez; kronik bası ülserleri (mal perforant) gelişir.
+- **Dolaşım Bozuklukları:** Ateroskleroz (arteriyel iskemi) veya kronik venöz yetmezlik (varis ülserleri), dokunun oksijenlenmesini bozarak iyileşmeyi engeller.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 83: Sistemik Faktör 2: Glukokortikoidler (Kortizon) ve İmmünsüpresyon
+
+Klinikte otoimmün hastalıklarda, astımda veya organ nakillerinde hayat kurtaran kortikosteroidler, doku onarımının en büyük düşmanıdır (Sınav Spotu):
+
+- **Glukokortikoidlerin Onarıma Darbesi:**
+  - **TGF-β'yı Baskılama:** Fibroblastların ana yakıtı olan TGF-β ve PDGF ekspresyonunu gen düzeyinde bloke ederler.
+  - **Kollajen Sentezini Durdurma:** Fibroblast proliferasyonunu ve pro-kollajen transkripsiyonunu doğrudan inhibe ederler.
+  - **Anjiyogenezi Felç Etme:** Endotel hücrelerinin tomurcuklanmasını durdururlar; yara tabanında granülasyon dokusu gelişemez.
+  - **Enflamasyonu Aşırı Söndürme:** Monosit ve makrofaj göçünü keserek yaranın debridmanını ve sitokin desteğini yok ederler.
+- **Klinik Sonuç:** Uzun süreli kortizon kullanan (Cushingoid) hastalarda cerrahi yaraların gerilme gücü son derece zayıftır; dikişler kolayca patlar (dehisens) ve enfeksiyon riski çok yüksektir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 84: Lokal Faktörler: Enfeksiyon, Yabancı Cisim ve Mekanik Güçler
+
+Sistemik durum ne kadar mükemmel olursa olsun, yara bölgesindeki lokal engeller iyileşmeyi durdurabilir:
+
+- **1. Enfeksiyon (En Önemli Lokal Neden - Sınav Spotu):**
+  - Patojen mikroorganizmalar devam eden bir nötrofil akınına yol açar.
+  - Salınan proteazlar ve elastazlar yeni sentezlenen matriksi hızla eritir; yara granülasyon dokusu oluşturamaz ve doku nekroza gider.
+- **2. Yabancı Cisimler:**
+  - Yara içinde unutulan dikiş iplikleri, cam kırıkları, metal parçaları veya kıymıklar.
+  - Sürekli bir kronik yangı ve yabancı cisim granülomu odağı oluşturarak re-epitelizasyonu engeller.
+- **3. Mekanik Faktörler:**
+  - Ameliyat sonrası erken ayağa kalkma, aşırı gerilme veya şiddetli öksürük karın içi basıncını artırarak taze granülasyon dokusunu yırtar.
+- **4. Anatomik Konum ve Vaskülarizasyon:**
+  - Kanlanması mükemmel olan yüz yaraları 3-5 günde hızla iyileşirken; kan akımı zayıf olan ayak ve bacak yaraları çok daha geç kapanır.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `active_recall`
+- `active_recall`
+
+---
+
+## Slayt 85: Anormal İyileşme Formu 1: Yara Dehisensi ve Ülserasyon
+
+Yara iyileşmesindeki aksaklıklar iki zıt uçta patoloji üretir: Yetersiz onarım veya aşırı onarım:
+
+- **1. Yara Dehisensi (Wound Dehiscence / Yaranın Açılması - Sınav Spotu):**
+  - Cerrahi olarak dikilmiş bir yaranın dikiş hatlarından mekanik olarak ayrılması ve açılmasıdır.
+  - **En Sık Yerleşim:** Karın ön duvarı laparotomi kesileri (abdominal dehisens).
+  - **Risk Faktörleri:** Şiddetli öksürük (karın içi basınç artışı), kusma, paralitik ileus, yetersiz beslenme (hipoalbüminemi), enfeksiyon ve obezite.
+  - **Korkulan Komplikasyon: Evisserasyon:** Karın fasyasının açılıp bağırsakların dışarı fırlaması durumudur; acil cerrahi müdahale gerektirir.
+- **2. Ülserasyon (İyileşmeyen Kronik Yara):**
+  - Yetersiz damarlanma (arteriyel iskemi), nöropati veya sürekli bası nedeniyle epitelizasyonun tamamlanamaması ve doku kaybının sürmesidir (Örnek: Dekübitus ve diyabetik ayak ülseri).
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+
+---
+
+## Slayt 86: Anormal İyileşme Formu 2: Aşırı Skar Oluşumu (Hipertrofik Skar)
+
+Onarım mekanizması 'dur' sinyalini zamanında alamazsa, aşırı kollajen birikimiyle anormal skarlar gelişir:
+
+- **Hipertrofik Skar Nedir? (Sınav Spotu):**
+  - Yara iyileşmesi sırasında aşırı miktarda granülasyon dokusu ve kollajen sentezlenmesi sonucu deriden kabarık, sert, kırmızımsı bir yara izi oluşmasıdır.
+  - **En Temel Ayırt Edici Özelliği (Sınavın Altın Kuralı):** Skar dokusu **ORİJİNAL YARA SINIRLARI İÇİNDE KALIR!** Kesinin veya yaranın dışına taşmaz.
+- **Kollajen Yapısı:** Ağırlıklı olarak **Tip III kollajen** içerir; lifler yüzeye paralel gevşek demetler halindedir.
+- **Klinik Seyir:**
+  - Genellikle derin termal yanıklardan veya cerrahi kesilerden sonraki 1-3 ay içinde gelişir.
+  - **Aylar veya yıllar içinde kendiliğinden gerileme (regresyon / küçülme) eğilimindedir!**
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 87: Anormal İyileşme Formu 3: Keloid (Kanser Benzeri Skar)
+
+Skar dokusunun en tehlikeli ve tedavisi en güç aşırı büyüme formu **Keloiddir**:
+
+- **Keloid Tanımı (Sınav Spotu):**
+  - Yara iyileşmesindeki denetim mekanizmalarının tamamen çökmesi sonucu, oluşan skar dokusunun **orijinal yara sınırlarını fersah fersah aşarak çevre sağlam deriye doğru bir yengeç kıskacı gibi büyümesidir**.
+- **Etiyoloji ve Genetik Yatkınlık:**
+  - Siyah ırkta ve Asyalı bireylerde beyaz ırka göre 15-20 kat daha sıktır.
+  - En sık yerleşim: Kulak memesi (kulak deldirme sonrası), omuz (deltoid bölgesi), sternum üzeri ve üst sırt.
+- **Histopatoloji:**
+  - Mikroskopta devasa, asellüler, camsı (hiyalinize), parlak pembe boyanan **kalın Tip I kollajen demetleri (keloidal kollajen)** izlenir.
+- **Klinik Kabus:**
+  - **Kendiliğinden ASLA gerilemez!**
+  - Bir cerrah keloidi kesip çıkarırsa, yeni cerrahi travma fibroblastları daha da çılgına çevirir ve lezyon **çok daha büyük olarak nüks eder!** Tedavide intralezyonel steroid enjeksiyonları ve silikon bası örtüleri tercih edilir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+
+---
+
+## Slayt 88: Desmoid Tümörler (Fibromatozis): Skar ile Neoplazi Sınırı
+
+Onarım ile tümör biyolojisinin birbirine karıştığı en ilginç antite **Desmoid Tümörlerdir (Agresif Fibromatozis)**:
+
+- **Tanımı ve Doğası (Sınav Spotu):**
+  - Karın ön duvarında (rektus kası fasyasında) veya ekstremitelerde, sıklıkla **geçirilmiş cerrahi ameliyat veya gebelik travması alanında** gelişen lokal agresif fibroblastik proliferasyonlardır.
+  - Gerçek anlamda metastaz yapmazlar (benign/orta dereceli kabul edilirler).
+  - Ancak çevre kas ve yağ dokusunu bir kanser gibi parmak benzeri uzantılarla **infiltre ederler (lokal invazyon)** ve cerrahi sonrası nüks oranları çok yüksektir.
+- **Moleküler Mekanizma:**
+  - Vakaların büyük çoğunluğunda **Wnt / beta-katenin (CTNNB1)** yolağında mutasyon vardır.
+  - Sitoplazmada biriken beta-katenin çekirdeğe girerek fibroblastları sürekli çoğalma modunda kilitler.
+  - Ailesel Adenomatöz Polipozis (FAP) / Gardner sendromu hastalarında sık görülür.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 89: [TEKRAR SAYFASI - CHECKPOINT 9] Yara İyileşmesini Etkileyen Faktörler ve Anormal İyileşme
+
+Bu checkpointte yara iyileşmesini bozan faktörleri ve anormal skar tiplerini pekiştiriyoruz:
+
+- **En Sık Sistemik Neden:** Diabetes Mellitus (mikroanjiyopati, fagositoz felci, AGEs).
+- **En Önemli Lokal Neden:** Enfeksiyon (bakteriler persistan nötrofil akını ve doku erimesi yapar).
+- **Glukokortikoidler (Kortizon):** TGF-β'yı ve kollajen sentezini baskılar; granülasyonu ve yara gücünü felç eder.
+- **Beslenme:** C vitamini (hidroksilasyon), Çinko (MMP katalizi) ve Protein eksiklikleri iyileşmeyi durdurur.
+- **Yara Dehisensi:** Dikişlerin açılması; karında öksürük ve basınçla bağırsakların sarkması (evisserasyon).
+- **Hipertrofik Skar vs Keloid:**
+  - **Hipertrofik Skar:** Sınırları aşmaz, Tip III kollajen baskın, yanıklarda sık, aylar içinde kendiliğinden geriler.
+  - **Keloid:** Orijinal yara sınırlarını fersah fersah aşar, kalın Tip I kollajen demetleri içerir, Afrika ırkında sık, asla gerilemez, kesilirse katlanarak nüks eder.
+- **Desmoid Tümör:** Beta-katenin mutasyonu ile giden lokal agresif fibroblastik neoplazi.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `causal_chain`
+
+### Akıl Kartları (Flashcards):
+- **S:** Yara iyileşmesini geciktiren en sık ve en önemli lokal faktör nedir?
+  - **C:** Yara yeri enfeksiyonudur.
+  - *İpucu:* Mikrobiyal kontaminasyon engeli
+- **S:** Orijinal cerrahi yara sınırları içinde kalan ve zamanla gerileme eğiliminde olan kabarık skar türü nedir?
+  - **C:** Hipertrofik skardır.
+  - *İpucu:* Kesi sınırını aşmayan kabarık iz
+- **S:** Orijinal yara sınırlarını fersah fersah aşan, kalın Tip I kollajen içeren ve kendiliğinden gerilemeyen skar türü nedir?
+  - **C:** Keloiddir.
+  - *İpucu:* Sağlam deriye yayılan agresif kitle
+
+---
+
+## Slayt 90: Mini Vaka: Kulak Memesinde Keloid vs Sezaryen Skarında Hipertrofik Skar
+
+Dermatoloji polikliniğine aynı gün iki farklı yara komplikasyonu başvuruyor:
+
+- **Hasta 1 (22 Yaşında Kadın - Kulak Memesi):**
+  - 6 ay önce kulak memesini deldirdikten sonra delik çevresinde başlayan sert kitle, deliğin çok ötesine geçerek tüm kulak memesini kaplayan 3 cm çapında devasa, lobüle, parlak pembe bir yumruya dönüşmüş.
+  - Biyopside: Kalın, hiyalinize, asellüler Tip I kollajen bantları izleniyor. **Tanı: Keloid**.
+- **Hasta 2 (30 Yaşında Kadın - Sezaryen Kesisı):**
+  - 4 ay önceki sezaryen dikiş hattında kabarık, kırmızı, kaşıntılı sert bir çizgi gelişmiş; ancak bu kabarıklık cerrahi insizyon sınırlarının kesinlikle dışına taşmamış.
+  - Biyopside: İnce Tip III kollajen demetleri izleniyor. **Tanı: Hipertrofik Skar**.
+- **Tedavi Farkı:** Hasta 2'ye zamanla gerileyeceği söylenip silikon jel verilirken; Hasta 1'e cerrahi eksizyondan kesinlikle kaçınılarak intralezyonel triamsinolon (kortizon) enjeksiyonu uygulanıyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 91: Parankimal Organ Fibrozisi: İyileşmenin Patolojiye Dönüşmesi
+
+Doku onarım mekanizmaları deride bir kesiyi kapatıp hayat kurtarırken; iç organlarda kronik bir hasara yanıt olarak devreye girdiğinde ölümcül bir yıkıma yol açar:
+
+- **Fibrozis vs Skar:**
+  - Skar genellikle lokalize bir hasar sonrası oluşan sınırlı bağ dokusu yamasıdır.
+  - **Fibrozis ise parankimal organlarda (karaciğer, akciğer, böbrek, kalp) kronik ve kontrolsüz kollajen birikimiyle organın mimarisini ve fonksiyonunu yok eden sistemik bir patolojidir**.
+- **Ortak İmmünolojik Yolak:**
+  - Kronik enflamasyon -> M2 makrofajlar ve lenfositler -> Sürekli ve aşırı **TGF-β** salınımı -> Yerleşik mezenkimal hücrelerin (stellat hücreler, perisitler) miyofibroblasta dönüşmesi -> Masif Tip I ve Tip III kollajen depolanması.
+- **Sonuç:** Yumuşak, süngerimsi ve işlevsel parankim dokuları taş gibi sert, büzüşmüş ve kanlanamayan fibröz organlara döner.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 92: Karaciğer Sirozu: Stellat Hücreler ve Disse Aralığı Fibrozisi
+
+Parankimal organ fibrozisinin dünyadaki en sık ve en ölümcül örneği karaciğer sirozudur (Sınav Spotu):
+
+- **Kilit Hücresel Aktör: Hepatik Stellat Hücreler (İto Hücreleri):**
+  - Normal karaciğerde Disse aralığında sessizce otururlar ve vücudun **A vitamini deposu** olarak görev yaparlar.
+- **Fibrojenik Dönüşüm:**
+  - Kronik Hepatit B, C virüsleri veya kronik alkol hasarında; Kupffer hücrelerinden ve hepatositlerden yoğun **TGF-β** ve **PDGF** salınır.
+  - Stellat hücreler A vitamini damlacıklarını kaybeder ve yüksek oranda **alfa-düz kas aktini (α-SMA)** eksprese eden proliferatif **miyofibroblastlara** dönüşürler.
+- **Disse Aralığının Tıkanması (Sinüzoid Kapillerizasyonu):**
+  - Miyofibroblastlar Disse aralığına yoğun Tip I ve Tip III kollajen yığar.
+  - Sinüzoidlerin endotelindeki doğal pencereler (fenestralar) kapanır; kan ile hepatosit arasındaki madde alışverişi felç olur.
+- **Sonuç: Rejenerasyon Nodülleri ve Portal Hipertansiyon:** Karaciğer nodüler sert bir kitleye döner, portal ven basıncı fırlar ve özofagus varis kanamaları başlar.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 93: İdiyopatik Pulmoner Fibrozis (IPF) ve 'Bal Peteği' Akciğer
+
+Akciğer parankiminde ilerleyici, ölümcül ve geri dönüşsüz bağ dokusu birikimi tablosudur:
+
+- **Etiyopatogenez (Sınav Spotu):**
+  - Genetik yatkınlığı olan bireylerde tekrarlayan mikroskobik alveolar epitel hasarları (sigara, reflü, toz maruziyeti).
+  - Tip I pnömositler ölür; Tip II pnömositler hasarı onarmaya çalışırken kontrolsüz **TGF-β** ve **FGF** salgılar.
+  - İnterstisyumdaki fibroblastlar aşırı prolifere olarak **'Fibroblastik Odaklar' (Fibroblastic Foci)** oluşturur.
+- **Kollajen Fırtınası ve Matriks Yıkımı:**
+  - Alveol duvarları kalın Tip I kollajenle dolar; gaz difüzyon mesafesi 10 katına çıkar.
+- **Morfoloji: 'Bal Peteği Akciğer' (Honeycomb Lung):**
+  - Alveoler mimari tamamen çöker; akciğer genişlemiş kistik boşluklar ve aralarındaki kalın fibröz bantlardan oluşan bir bal peteğine döner.
+- **Klinik Tablo:** İlerleyici efor dispnesi, kuru öksürük ve hipoksemi; ortalama yaşam süresi akciğer nakli yapılmazsa 3-5 yıldır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 94: Böbrek ve Kalpte Fibrozis: Glomerüloskleroz ve Post-MI Skar
+
+Fibrozis vücudun hangi organında gelişirse gelişsin daima 'işlevsel parankimin ölümü ve yerine sert bağ dokusunun çökmesi' kuralını takip eder:
+
+- **Böbrekte Fibrozis (Son Dönem Böbrek Yetmezliği):**
+  - Diyabetik nefropati veya kronik glomerülonefritte glomerüllerde ve tübülointerstisyel alanda aşırı kollajen depolanır.
+  - Glomerüller süzme yeteneğini kaybederek asellüler pembe yumaklara döner (**Glomerüloskleroz**).
+  - Tübüller atrofiye uğrar; son dönem böbrek küçülmüş, yüzeyi pürtüklü sert bir taş haline gelir.
+- **Kalpte Post-Enfarktüs Skarı (Miyokardiyal Fibrozis):**
+  - Koroner tıkanıklığıyla ölen kardiyak miyositler rejenere olamaz.
+  - Makrofaj temizliğini takiben granülasyon dokusu gelişir ve 6-8 haftada yerini **yoğun beyaz kollajenöz skar plaklarına** bırakır.
+  - Bu skar alanı kasılamaz; ventrikül genişler (remodeling) ve kalp yetmezliği gelişir.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `active_recall`
+- `active_recall`
+
+---
+
+## Slayt 95: Ders Notu Eki: Transplantasyon İmmünolojisi ve Rejeksiyon Tipleri
+
+Doku onarımı ve organ nakillerinin kesiştiği noktada, allogreftlerin reddedilme süreçleri yer alır (Ders Notu Özel Eki):
+
+- **1. Hiperakut Rejeksiyon (Dakikalar - Saatler İçinde):**
+  - **Mekanizma:** Alıcıda önceden var olan donör antijenlerine karşı antikorlar (Anti-HLA veya ABO antikorları).
+  - **Patoloji:** Damar endoteline bağlanan antikorlar komplemanı aktive eder; yaygın trombotik tıkanma, fibrinoid nekroz ve greftin dakikalar içinde morarıp ölmesi.
+- **2. Akut Rejeksiyon (Günler - Haftalar - Aylar İçinde):**
+  - **Akut Sellüler Rejeksiyon:** Alıcının CD8+ sitotoksik T lenfositleri donör parankimini ve endotelini doğrudan öldürür (endotelit ve interstisyel lenfosit infiltrasyonu).
+  - **Akut Humoral (Antikor Aracılı) Rejeksiyon:** Donöre karşı gelişen yeni antikorlar peritübüler kapillerlerde **C4d kompleman birikimine** yol açar.
+- **3. Kronik Rejeksiyon (Aylar - Yıllar İçinde):**
+  - T hücreleri ve sitokinlerin uyardığı intimal düz kas proliferasyonu sonucu damarlar daralır (**hızlanmış damar sklerozu / graft vaskülopatisi**) ve parankim iskemiyle atrofiye uğrayıp yaygın **fibrozis** ile kaybedilir.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+
+---
+
+## Slayt 96: Graft-Versus-Host Hastalığı (GVHD): Donörün Alıcıyı Kemirmesi
+
+Kemik iliği (hematopoetik kök hücre) nakillerinde organ reddinin tam tersi bir felaket yaşanır:
+
+- **GVHD Tanımı (Sınav Spotu):** Nakledilen donör kemik iliğindeki yetkin immün hücrelerin (T lenfositlerinin), immünitesi baskılanmış alıcının dokularını 'yabancı' tanıyarak saldırması durumudur.
+- **Şartları (Billingham Kriterleri):**
+  1. Greft immünolojik olarak yetkin T hücreleri içermelidir.
+  2. Alıcı dokuları donörden farklı antijenler (HLA uyuşmazlığı) taşımalıdır.
+  3. Alıcı immünsüprese olmalı ve grefti reddedememelidir.
+- **Hedef Organlar (Üçlü Klasik Hedef):**
+  - **Deri:** Yaygın makülopapüler döküntüler, soyulma (büllöz nekroz / toksik epidermal nekroliz benzeri).
+  - **Gastrointestinal Sistem:** Şiddetli sulu-kanlı diyare, kramplar, mukoza dökülmesi.
+  - **Karaciğer:** Safra kanalları nekrozu, sarılık ve kolestaz.
+- **Kronik GVHD:** Sklerodermaya benzer yaygın cilt sertleşmesi ve otoimmün benzeri fibrozisle seyreder.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 97: Anti-Fibrotik Tedaviler: Modern Tıbbın Yeni Ufku
+
+Geçmişte fibrozis 'geri dönüşümsüz bir son durak' olarak kabul edilirdi; ancak modern moleküler patoloji fibrozisi durduracak ve geriletecek ilaçlar geliştirmiştir:
+
+- **1. TGF-β Hedefli Tedaviler:**
+  - TGF-β antikorları veya reseptör kinaz inhibitörleri; fibrozis sinyalini kaynağında kesmeyi hedefler.
+- **2. Pirfenidon (Pulmoner Fibrozis İlacı):**
+  - TGF-β üretimini ve fibroblast proliferasyonunu baskılar; akciğer fibrozisinin ilerlemesini yavaşlatır.
+- **3. Nintedanib (Çoklu Tirozin Kinaz İnhibitörü):**
+  - PDGF, FGF ve VEGF reseptörlerini aynı anda bloke eder; fibroblast aktivasyonunu ve anjiyogenezi durdurur.
+- **4. Sirozun Geri Dönüşebilirliği:**
+  - Hepatit C hastalarında yeni direkt etkili antivirallerle (DAA) virüs tamamen temizlendiğinde; karaciğerdeki MMP/TIMP dengesi MMP lehine döner ve erken evre fibröz septalar yıllar içinde eriyerek karaciğer rejenere olabilir!
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `active_recall`
+
+---
+
+## Slayt 98: Tıp Hekiminin Yara Bakımı ve Doku Onarımındaki 5 Altın Kuralı
+
+Geleceğin klinisyenleri olarak yara yönetimi hekimlik sanatının en somut vitrinidir:
+
+- **1. Asepsi ve Debridman:** Enfeksiyon ve nekrotik doku varken hiçbir yara iyileşemez; önce temizle, sonra kapat.
+- **2. Gerilimsiz Kapatma (No Tension):** Yaranın kenarlarını aşırı gererek dikmeyin; gerilim kan akımını bozar, iskemi yapar ve dehisense yol açar.
+- **3. Dokuya Nazik Davranma (Halsted İlkeleri):** Dokuyu ezmeyin, yakmayın, gereksiz koterize etmeyin; her ölü hücre granülasyon yükünü artırır.
+- **4. Beslenme ve Altta Yatan Hastalığı Yönetme:** Kan şekerini regüle edin, hastaya protein, C vitamini ve çinko desteği sağlayın.
+- **5. Aşırı Skara Karşı Uyanık Olma:** Genetik yatkınlığı olan hastalarda keloid ve kontraktür riskini baştan öngörün ve gereksiz cerrahi travmalardan kaçının.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 99: Bütüncül Klinik Patoloji Simülasyonu: Ağır Travma Sonrası Onarım Yönetimi
+
+Trafik kazası geçiren 30 yaşındaki bir hastada karaciğer laserasyonu, açık uyluk yaralanması ve üçüncü derece derin yanıklar bulunuyor:
+
+- **Karaciğer Hasarı:** Karaciğerin sol lobu cerrahi olarak çıkarılıyor. Stabil doku kuralları gereği, sağlam sağ lobdaki hepatositler Kupffer hücrelerinin TNF/IL-6 (priming) ve HGF (proliferasyon) uyarısıyla 3 haftada kütlesini tamamlıyor; rejenerasyon gerçekleşiyor.
+- **Açık Uyluk Yarası:** Doku kaybı çok geniş olduğu için sekonder iyileşmeye bırakılıyor; yara tabanından fışkıran pembe granülasyon dokusu (anjiyogenez ve fibroblastlar) ve miyofibroblast kontraksiyonuyla 6 haftada kapanıyor.
+- **Derin Yanık Alanı:** Boyundaki yanık skarı iyileşirken miyofibroblastlar aşırı kasılarak çeneyi göğse bağlayan patolojik bir **kontraktür** oluşturuyor; plastik cerrahi Z-plasti ile bu kontraktürü gevşetiyor.
+- **Sonuç:** Organizmanın tüm onarım mekanizmaları tek bir vakada eşzamanlı olarak hayat kurtarır ve yönetilir.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 100: [TEKRAR SAYFASI - CHECKPOINT 10] Doku Onarımı ve Yara İyileşmesi Bütüncül Özeti
+
+Bu son checkpointte Ders 15'in tüm patolojik, hücresel ve moleküler mekanizmalarını tek bir vizyonda birleştiriyoruz:
+
+- **1. Onarım Yolları:** Rejenerasyon (orijinal hücre çoğalması, ECM sağlam olmalı) vs Skarla Onarım (kollajen bağ dokusu yaması).
+- **2. Doku Sınıflaması:** Labil (GIS epiteli, kemik iliği, deri), Stabil / G0 (Karaciğer hepatositleri, böbrek tübülleri), Kalıcı (Kalp kası, nöronlar).
+- **3. Karaciğer Rejenerasyonu:** Priming (Kupffer -> TNF/IL-6), Proliferasyon (HGF / c-Met), Terminasyon (TGF-β), Oval kök hücreler.
+- **4. Skarla Onarımın 4 Evresi:** Hemostaz -> Enflamasyon (Nötrofil ilk 24h, Makrofaj 48-72h) -> Proliferasyon (Granülasyon) -> Remodeling.
+- **5. M1 vs M2 Makrofaj:** M1 yıkıcı/savaşçı; M2 (IL-4/IL-13) TGF-β ve VEGF salan yapıcı/onarıcı orkestra şefi.
+- **6. Granülasyon Dokusu:** Yeni kapillerler (anjiyogenez) + Fibroblastlar + Gevşek ödemli ECM. (Granülomatöz iltihap ile asla karıştırılamaz!).
+- **7. Anjiyogenez:** Tip hücresi (VEGF göçü), Stalk hücresi (Notch/Dll4 denetimi), Ang-1/Tie-2 ve PDGF (perisit stabilizasyonu).
+- **8. Kollajen ve TGF-beta:** Erken Tip III -> Geç Tip I dönüşümü. C vitamini (hidroksilasyon), Bakır (lizil oksidaz çapraz bağ). TGF-β: En güçlü fibrogenik faktör (kollajen artar, MMP düşer, TIMP artar).
+- **9. İyileşme Tipleri:** Primer (temiz dikişli, az skar), Sekonder (açık yara, belirgin miyofibroblast kontraksiyonu %70-80, kaba skar), Tersiyer (gecikmiş sütür).
+- **10. Anormal İyileşme:** Dehisens (açılma), Hipertrofik skar (sınırda kalır, geriler), Keloid (sınırları aşar, Tip I kollajen, gerilemez, nüks eder), Kontraktür (yanık büzüşmesi), Parankimal Organ Fibrozisi (Siroz, İto hücreleri; IPF).
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `causal_chain`
+
+### Akıl Kartları (Flashcards):
+- **S:** Karaciğer sirozunda Disse aralığına kollajen yığarak sinüzoid kapillerizasyonuna yol açan ana hücre hangisidir?
+  - **C:** Hepatik stellat hücredir (İto hücresi / miyofibroblast).
+  - *İpucu:* Disse aralığındaki retinoid deposu
+- **S:** İdiyopatik pulmoner fibrozisin ileri evresinde akciğer parankiminin dönüştüğü kistik kaba morfolojiye ne denir?
+  - **C:** Bal peteği akciğerdir (Honeycomb lung).
+  - *İpucu:* Arı kovanı benzeri kistik görüntü
+- **S:** Kemik iliği naklinden sonra donör T hücrelerinin alıcının deri, karaciğer ve bağırsaklarına saldırması tablosu nedir?
+  - **C:** Graft-Versus-Host Hastalığıdır (GVHD).
+  - *İpucu:* Donörün alıcıyı yabancı görmesi
+
+---

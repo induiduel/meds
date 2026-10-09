@@ -1,0 +1,1381 @@
+{
+  "id": "k1-05-hucre-hasari-ve-nekroz-ii",
+  "title": "Hücre Hasarı ve Nekroz - II (Yeni Mikro-Ders)",
+  "discipline": "Tıbbi Patoloji",
+  "committee": "Kurul 1 (Ürogenital ve Obstetrik)",
+  "instructor": "Prof. Dr. Hikmet Keleş",
+  "version": "2.0",
+  "totalSlides": 100,
+  "interactiveMetrics": {
+    "totalCount": 231,
+    "ratio": 2.31,
+    "distribution": {
+      "cloze_masking": {
+        "count": 89,
+        "percentage": 38.53
+      },
+      "active_recall": {
+        "count": 26,
+        "percentage": 11.26
+      },
+      "before_after_slider": {
+        "count": 21,
+        "percentage": 9.09
+      },
+      "causal_chain": {
+        "count": 21,
+        "percentage": 9.09
+      },
+      "interactive_table": {
+        "count": 32,
+        "percentage": 13.85
+      },
+      "branching_logic": {
+        "count": 21,
+        "percentage": 9.09
+      },
+      "micro_quiz": {
+        "count": 21,
+        "percentage": 9.09
+      }
+    }
+  },
+  "sources": {
+    "xml": "structure.xml",
+    "html": "blocks.html",
+    "markdown": "content.md"
+  },
+  "slidesIndex": [
+    {
+      "slideNumber": 1,
+      "title": "Kazeöz Nekroz: Tüberküloz Enfeksiyonunun Karakteristik Dokusu",
+      "badge": "Kazeöz Nekroz",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 2,
+      "title": "Kazeöz Nekrozun Işık Mikroskopisi: Amorf ve Granüler Çatı Kaybı",
+      "badge": "Mikroskopi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 3,
+      "title": "Granülomatöz İnflamasyon: Kazeöz Nekrozu Kuşatan Hücresel Kalkan",
+      "badge": "Granülom",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking",
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 4,
+      "title": "Langhans Tipi Dev Hücreler: Çok Çekirdekli Savunma Devleri",
+      "badge": "Dev Hücreler",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 5,
+      "title": "Ghon Kompleksi ve Kavitasyon: Tüberküloz Lezyonunun Kaderi",
+      "badge": "Klinik Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 6,
+      "title": "Kazeöz Dışı Granülomlar: Ayırıcı Tanı Spektrumu",
+      "badge": "Ayırıcı Tanı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 7,
+      "title": "Ziehl-Neelsen Boyası: Kazeöz Nekrozda Aside Dirençli Basil Kanıtı",
+      "badge": "Laboratuvar",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 8,
+      "title": "Kazeöz Nekrozun Distrofik Kalsifikasyonu: Kireçlenme Dönemi",
+      "badge": "Kalsifikasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 9,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Kazeöz Nekroz ve Granülomatöz Yanıt",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 10,
+      "title": "Tüberküloz Dışı Kazeöz Odaklar: Mantar ve Parazit Enfeksiyonları",
+      "badge": "Enfeksiyon Patolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 11,
+      "title": "Yağ Nekrozu: Yağ Dokusunun Enzimatik ve Travmatik Yıkımı",
+      "badge": "Yağ Nekrozu",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 12,
+      "title": "Akut Pankreatitte Yağ Nekrozu Patogenezi: Asiner Enzim Sızıntısı",
+      "badge": "Patogenez",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 13,
+      "title": "Sabunlaşma (Saponifikasyon): Tebeşir Beyazı Birikintilerin Kimyası",
+      "badge": "Biyokimya",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking",
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 14,
+      "title": "Yağ Nekrozunun Işık Mikroskopisi: Gölge Yağ Hücreleri",
+      "badge": "Mikroskopi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 15,
+      "title": "Travmatik Yağ Nekrozu: Meme Dokusunda Tümör Benzeri Kitle",
+      "badge": "Meme Patolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 16,
+      "title": "Subkutan Yağ Nekrozu: Yenidoğanda Travmatik ve Soğuk Hasarı",
+      "badge": "Pediatrik Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 17,
+      "title": "Yağ Nekrozunda Boyama Özellikleri: Özel Yağ Boyaları",
+      "badge": "Laboratuvar",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 18,
+      "title": "Yağ Nekrozunun İyileşme Süreci: Fibröz Skar ve Yağ Kistleri",
+      "badge": "İyileşme",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 19,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Enzimatik ve Travmatik Yağ Nekrozu",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 20,
+      "title": "Pankreatitte Sistemik Enzim Dağılımı: Uzak Yağ Dokusu Nekrozları",
+      "badge": "Sistemik Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 21,
+      "title": "Fibrinoid Nekroz: Mikroskobik Tanınan Özel Damar Nekrozu",
+      "badge": "Fibrinoid Nekroz",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 22,
+      "title": "Fibrinoid Nekrozun Biyokimyasal İçeriği: İmmün Kompleksler ve Fibrin",
+      "badge": "İmmünopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 23,
+      "title": "Fibrinoid Nekrozun Mikroskopisi: Parlak Pembe Camsı Halka",
+      "badge": "Mikroskopi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 24,
+      "title": "Poliarteritis Nodosa (PAN): Klasik Fibrinoid Vaskülit Modeli",
+      "badge": "Vaskülit",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 25,
+      "title": "Malign Hipertansiyon ve Hiperakut Rejeksiyon: Non-İmmün Fibrinoid Nekroz",
+      "badge": "Hipertansiyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 26,
+      "title": "Nekroz ve Serum Biyobelirteçleri: Hücre Zarı Parçalanmasının Klinik İmzası",
+      "badge": "Biyobelirteçler",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 27,
+      "title": "Miyokard Nekrozu Biyobelirteçleri: Troponin ve CK-MB Kinetiği",
+      "badge": "Kardiyoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 28,
+      "title": "Hepatobiliyer ve Pankreatik Biyobelirteçler: Organ Özgüllüğü",
+      "badge": "Enzimler",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 29,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Fibrinoid Nekroz ve Biyobelirteçler",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 30,
+      "title": "Serum Enzimlerinin Zamansal Klirensi: Karaciğer ve Böbrek Eliminasyonu",
+      "badge": "Farmakokinetik",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 31,
+      "title": "Apoptoz: Programlı ve Düzenlenmiş Hücre İntiharı",
+      "badge": "Apoptoza Giriş",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 32,
+      "title": "Apoptozun Biyolojik Çift Yüzü: Fizyolojik ve Patolojik Dengeler",
+      "badge": "Biyolojik Spektrum",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 33,
+      "title": "Embriyogenezde Apoptoz: Parmak Aralarının Açılması ve Lümenleşme",
+      "badge": "Embriyoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking",
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 34,
+      "title": "Hormon Bağımlı Dokuların İnvolüsyonu: Menstruasyon ve Laktasyon Sonu",
+      "badge": "Endokrin Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 35,
+      "title": "Proliferatif Dokularda Hücre Dengelemesi: Bağırsak Epiteli ve Kriptler",
+      "badge": "Gastroenteroloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 36,
+      "title": "İmmün Yanıtın Sonlanması: Görevini Tamamlayan Lökositlerin Tasfiyesi",
+      "badge": "İmmünoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 37,
+      "title": "Otoreaktif Lenfositlerin Eliminasyonu: Santral ve Periferik Tolerans",
+      "badge": "İmmün Tolerans",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 38,
+      "title": "Çıkmış Kurul Sorusu Analizi: Apoptozla İlişkisiz Durum",
+      "badge": "Çıkmış Soru",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 39,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Apoptozun Temelleri ve Fizyolojik Rolleri",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 40,
+      "title": "Sitotoksik T Lenfosit (CTL) ve NK Hücresi Aracılı Apoptoz",
+      "badge": "Sitotoksisite",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 41,
+      "title": "Patolojik Apoptoz: DNA Hasarı ve Hücresel Savunma",
+      "badge": "DNA Hasarı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 42,
+      "title": "Yanlış Katlanmış Protein Birikimi: ER Stresi Kaynaklı Apoptoz",
+      "badge": "ER Stresi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 43,
+      "title": "Viral Enfeksiyonlarda Apoptoz: Konak ve Virüs Arasındaki Savaş",
+      "badge": "Viral Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 44,
+      "title": "Apoptozun Morfolojik Evreleri: Hücre Büzüşmesi (Shrinkage)",
+      "badge": "Morfoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 45,
+      "title": "Kromatin Kondansasyonu ve Hilal Morfolojisi: Apoptozun İmzası",
+      "badge": "Çekirdek Morfolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 46,
+      "title": "Zar Kabarcıklanması ve Tomurcuklanma (Blebbing): Apoptotik Cisimcikler",
+      "badge": "Tomurcuklanma",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 47,
+      "title": "Fosfatidilserin Dışa Dönüşü: Makrofajlar İçin 'Beni Ye' Sinyali",
+      "badge": "Beni Ye Sinyali",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 48,
+      "title": "Sessiz Fagositoz: İçerik Sızmadan Yangısız Temizlik",
+      "badge": "Fagositoz",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 49,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 5] Patolojik Apoptoz ve Morfolojik Bulgular",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 50,
+      "title": "Kaspaz Biyokimyası: Aspartat Kalıntısından Kesen Proteazlar",
+      "badge": "Enzimoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 51,
+      "title": "Apoptozun İki Ana Yolu: İçsel ve Dışsal Yolakların Genel Mimarisi",
+      "badge": "Yolaklar",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 52,
+      "title": "BCL-2 Protein Ailesi: Mitokondriyal Kapının Üçlü Bekçileri",
+      "badge": "BCL-2 Ailesi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 53,
+      "title": "Mitokondri Dış Zar Geçirgenleşmesi (MOMP): Sitokrom c Kaçışı",
+      "badge": "MOMP",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking",
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 54,
+      "title": "Apaptozom Kompleksi: Tekerlek Benzeri Moleküler İnfaz Platformu",
+      "badge": "Apaptozom",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 55,
+      "title": "Başlatıcı Kaspaz-9: Mitokondriyal Kaskadın Kıvılcımı",
+      "badge": "Kaspaz-9",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 56,
+      "title": "Foliküler Lenfoma ve BCL-2 Onkogeni: t(14;18) Translokasyonu",
+      "badge": "Onkoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 57,
+      "title": "Smac/DIABLO ve IAP İnhibitörleri: İkinci Güvenlik Kilidi",
+      "badge": "İkinci Kilit",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 58,
+      "title": "AIF ve Endonükleaz G: Kaspazdan Bağımsız Mitokondriyal Ölüm",
+      "badge": "Kaspaz-Bağımsız",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 59,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 6] Mitokondriyal Yol ve BCL-2 Ailesi",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 60,
+      "title": "Bcl-2 İnhibitörleri ile Hedefe Yönelik Kanser Tedavisi: Venetoklaks Devrimi",
+      "badge": "Farmakoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 61,
+      "title": "Ölüm Reseptörü (Dışsal) Yolu: Dış Dünyadan Gelen İntihar Emri",
+      "badge": "Dışsal Yol",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 62,
+      "title": "Fas (CD95) ve FasL Etkileşimi: Aktive T Hücrelerinin Silahı",
+      "badge": "Fas-FasL",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 63,
+      "title": "DISC Kompleksi: Ölüm İndükleyici Sinyal Platformu",
+      "badge": "DISC",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking",
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 64,
+      "title": "Başlatıcı Kaspaz-8 ve Kaspaz-10: Dışsal Yolağın Kesim Motorları",
+      "badge": "Kaspaz-8",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 65,
+      "title": "FLIP Proteini: Dışsal Yolun Fizyolojik ve Viral Freni",
+      "badge": "FLIP",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 66,
+      "title": "İki Yol Arasındaki Köprü: Bid Proteini ve tBid Çapraz Geçişi",
+      "badge": "Çapraz Geçiş",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 67,
+      "title": "İnfazcı (Efektör) Kaspazlar: Kaspaz-3, Kaspaz-6 ve Kaspaz-7",
+      "badge": "İnfazcı Kaspazlar",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 68,
+      "title": "DNA Merdiveni (DNA Laddering): CAD ve İnternükleozomal Parçalanma",
+      "badge": "DNA Merdiveni",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 69,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 7] Dışsal Yol, DISC ve Kaspaz Kaskadı",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 70,
+      "title": "TUNEL Yöntemi: Apoptotik DNA Kırıklarını Floresanla Yakalama",
+      "badge": "Laboratuvar",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 71,
+      "title": "Nekroz ile Apoptozun Karşılaştırma Matrisi: Temel Farklılıklar",
+      "badge": "Karşılaştırma",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 72,
+      "title": "Nekroptoz: Nekroz ile Apoptozun Programlı Hibriti",
+      "badge": "Nekroptoz",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 73,
+      "title": "Nekroptozun Moleküler Düzeneği: RIPK1, RIPK3 ve MLKL (Nekrozom)",
+      "badge": "Nekrozom",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking",
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 74,
+      "title": "Piroptoz: İnflamozom, Ateş ve Gazdermin D ile Patlayan Hücreler",
+      "badge": "Piroptoz",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 75,
+      "title": "Ferroptoz: Demir Bağımlı Lipid Peroksidasyon Krizi",
+      "badge": "Ferroptoz",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 76,
+      "title": "Otofaji (Kendi Kendini Yeme): Temel Hayatta Kalma Mekanizması",
+      "badge": "Otofaji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 77,
+      "title": "Otofajinin Moleküler Evreleri: Atg Genleri ve Otofagozom Mimarisi",
+      "badge": "Otofagozom",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 78,
+      "title": "Otofajinin Klinik ve Hastalık Bağlantıları: Kanser, İnfarkt ve Nörodejenerasyon",
+      "badge": "Klinik Otofaji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 79,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 8] Ölüm Biçimleri ve Otofaji Konsolidasyonu",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 80,
+      "title": "Hücre Hasarının Biyokimyasal Mekanizmalarına Giriş: Dört Kırılgan Hedef",
+      "badge": "Biyokimya Giriş",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 81,
+      "title": "DNA Hasarı ve p53: 'Genom Bekçisi'nin İkili Karar Mekanizması",
+      "badge": "p53 Genom Bekçisi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 82,
+      "title": "p53'ün Moleküler Yolu: p21 ile Döngü Blokajından BAX ile İnfaza",
+      "badge": "p53 Mekanizması",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 83,
+      "title": "p53 Mutasyonu ve Neoplazik Dönüşüm: Li-Fraumeni Sendromu",
+      "badge": "Onkopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 84,
+      "title": "Endoplazmik Retikulum (ER) Stresi: Katlanmamış Protein Yanıtı (UPR)",
+      "badge": "ER Stresi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 85,
+      "title": "Adaptif UPR'den Terminal UPR'ye: CHOP ile Apoptotik İnfaz",
+      "badge": "Terminal UPR",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 86,
+      "title": "Hücre İçi Kalsiyum Dengesi: 10.000 Katlık Gradyan ve Depolar",
+      "badge": "Kalsiyum Gradyanı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 87,
+      "title": "İskemik Hasarda Kalsiyum Kaosu: Pompaların Çöküşü ve Sitozolik Tufan",
+      "badge": "Kalsiyum Tufanı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 88,
+      "title": "Kalsiyumun Aktive Ettiği Yıkıcı Enzimler: Dörtlü İnfaz Mangası",
+      "badge": "Yıkıcı Enzimler",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 89,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 9] DNA Hasarı, ER Stresi ve Kalsiyum Kaosu",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 90,
+      "title": "Kalsiyum Kanal Blokörlerinin Sitoprotektif Potansiyeli",
+      "badge": "Farmakoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 91,
+      "title": "Reaktif Oksijen Türleri (ROS) ve Serbest Radikaller: Kimyasal Kararsızlık",
+      "badge": "ROS Giriş",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 92,
+      "title": "Başlıca Reaktif Oksijen Türleri: Süperoksit, Hidrojen Peroksit ve Peroksinitrit",
+      "badge": "Radikal Türleri",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 93,
+      "title": "Hidroksil Radikali (•OH) ve Fenton Reaksiyonu: En Yıkıcı Serbest Radikal",
+      "badge": "Fenton Reaksiyonu",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 94,
+      "title": "Antioksidan Savunma Sistemleri: Enzimatik ve Non-Enzimatik Kalkanlar",
+      "badge": "Antioksidanlar",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 95,
+      "title": "ROS'un Üç Yıkıcı Hedefi: Lipid, Protein ve DNA Hasarı",
+      "badge": "Yıkıcı Etkiler",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 96,
+      "title": "Membran Hasarının Üçlü Mekanizması: ROS, ATP Azalması ve Fosfolipazlar",
+      "badge": "Membran Hasarı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 97,
+      "title": "İskeminin Patofizyolojik Akışı: Arter Tıkanmasından Hücre Ölümüne",
+      "badge": "İskemi Akışı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 98,
+      "title": "İskemi-Reperfüzyon Hasarı: Kan Akımının Getirdiği İkinci Yıkım",
+      "badge": "Reperfüzyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 99,
+      "title": "Nekroz Tiplerinin Büyük Ayırıcı Tanı Atlası: 6 Nekrozun Özeti",
+      "badge": "Nekroz Atlası",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": false
+    },
+    {
+      "slideNumber": 100,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 10] Ders 5 Büyük Sentez ve Mezuniyet İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    }
+  ]
+}

@@ -654,10 +654,39 @@ def _olumsuz_mu(metin: str) -> bool:
     return any(w in t for w in _OLUMSUZ)
 
 
+def is_bozuk_sik(ov: str) -> bool:
+    """Şıkkın OCR çöpü, birleşmiş soru, ham öncül listesi veya bozuk format içerip içermediğini tespit eder."""
+    if not ov:
+        return True
+    t = ov.strip()
+    # 1. OCR ve tipografik çöpler
+    if any(c in t for c in ("$", "~", "^", "|", "\\", "§", "€", "@")):
+        return True
+    if re.search(r'["\']ç["\']n|hang["\']s["\']|oto\$mmun|tans\$yon', t, re.IGNORECASE):
+        return True
+    # 2. Şık içinde şık etiketi kalıntısı: örn. "*B)*", "A)", "B- "
+    if re.search(r'(\*?[A-E]\s*\)?|\([A-E]\))', t):
+        return True
+    # 3. Şık içinde soru birleşmesi (soru işareti veya soru kökü kalıpları)
+    if "?" in t:
+        return True
+    if re.search(r'(hangisi\s+(?:yanlıştır|doğrudur|değildir|olamaz|yer\s+almaz|kullanılmaz)|ne\s+için\s+kullanılır|aşağıdakilerden\s+hangisi)', t, re.IGNORECASE):
+        return True
+    # 4. Ham öncül listeleri (örn. "1 2 3 4", "1 2 3", "1 3", "4", "1, 2", "Yalnız 1", "1 ve 3", "1, 3 ve 4")
+    t_oncul = re.sub(r'^(?:yalnız|yalniz|yalnızca)?\s*', '', t, flags=re.IGNORECASE)
+    t_oncul = re.sub(r'\s*(?:ve|ile)\s*', ' ', t_oncul, flags=re.IGNORECASE)
+    if re.fullmatch(r'[\d\s,./-]+', t_oncul.strip()):
+        return True
+    # 5. Tek harf veya anlamsız çok kısa şık (örn. "1", "A", "-")
+    if len(t) <= 2:
+        return True
+    return False
+
+
 def anlam_koru(soru: dict, res: dict) -> None:
     """Modelin soruyu kendi cevabına uydurmasını engeller (Flash-Lite 'doğru değildir'i 'doğrudur' yapıp şıkları
-    yeniden yazıyordu). Kökün olumsuzluk yönü değiştiyse kök geri alınır; dolu bir şık anlamca çok değiştiyse
-    (benzerlik < 0.55) o şık özgün haline döner. Boş/eksik şıkların tamamlanmasına izin verilir."""
+    yeniden yazıyordu). Kökün olumsuzluk yönü değiştiyse kök geri alınır; dolu ve geçerli bir şık anlamca çok değiştiyse
+    (benzerlik < 0.55) o şık özgün haline döner. Bozuk, OCR çöplü veya ham öncüllü şıkların düzeltilmesine tam izin verilir."""
     import difflib
     notlar = []
     ok, yk = soru.get("soru_koku") or "", res.get("soru_koku") or ""
@@ -665,28 +694,43 @@ def anlam_koru(soru: dict, res: dict) -> None:
         res["soru_koku"] = ok
         notlar.append("kökün olumlu/olumsuz yönü değiştirilmişti → özgün kök korundu")
     # Sayısal veri koruması: kökteki değerler (ör. "kapiller dolum <3 sn", nabız 110, Hb 11) değiştirilemez.
-    # Model "<3 sn"yi "<2 sn" yapmıştı (2026-10-07 testi) — bu imla değil, vakanın verisini değiştirmektir.
     def _sayilar(t: str) -> list[str]:
         return [x.replace(",", ".") for x in re.findall(r"\d+(?:[.,]\d+)?", t or "")]
     if ok and res.get("soru_koku") and not kok_bozuk(soru):
         from collections import Counter
         eksik = Counter(_sayilar(ok)) - Counter(_sayilar(res["soru_koku"]))
+        # Eğer eksilen sayılar yalnızca öncül madde numaralarıysa (1, 2, 3, 4...) ve yeni kökte Roma rakamları varsa format dönüşümüdür
+        roma_var = bool(re.search(r'\b[IVXLCDM]+\b', res["soru_koku"]))
+        oncul_rakamlari = {str(i) for i in range(1, 10)}
+        if eksik and (set(eksik.keys()).issubset(oncul_rakamlari) and roma_var):
+            eksik = Counter()  # Sayısal veri kaybı sayılmaz, öncül standardizasyonudur
         if eksik:
             res["soru_koku"] = ok
             notlar.append(f"kökteki sayısal değer değiştirilmişti ({', '.join(sorted(eksik))}) → özgün kök korundu")
     osec, ysec = soru.get("secenekler") or {}, res.get("secenekler") or {}
     if isinstance(osec, dict) and isinstance(ysec, dict):
+        # Özgün şıklar arasında kopya/mükerrer şıklar varsa (örn C ve E aynı), modelin çeşitlendirmesi korunur
+        dolu_ov = [str(v).strip() for v in osec.values() if str(v).strip()]
+        kopya_siklar_var = len(dolu_ov) > len(set(dolu_ov))
+
         for k, ov in osec.items():
             ov = str(ov or "").strip()
             yv = str(ysec.get(k) or "").strip()
-            if ov and yv and _sayilar(ov) and sorted(_sayilar(ov)) != sorted(_sayilar(yv)):
+            if not ov or not yv:
+                continue
+            # Özgün şık bozuksa (OCR çöpü, birleşik soru, ham öncül listesi "1 2 3", tek rakam "4" vb.)
+            # veya kopya şık varsa modelin yaptığı temizlik/dönüştürme KORUNUR, geri alınmaz!
+            if kopya_siklar_var or is_bozuk_sik(ov):
+                continue
+
+            if _sayilar(ov) and sorted(_sayilar(ov)) != sorted(_sayilar(yv)):
                 ysec[k] = ov                                   # şıktaki sayı da değiştirilemez (1000 mL, 20 mL/kg …)
                 notlar.append(f"{k} şıkkındaki sayısal değer değiştirilmişti → özgün şık korundu")
                 continue
-            if len(ov) >= 3 and yv and difflib.SequenceMatcher(None, ov.lower(), yv.lower()).ratio() < 0.55:
+            if len(ov) >= 3 and difflib.SequenceMatcher(None, ov.lower(), yv.lower()).ratio() < 0.55:
                 ysec[k] = ov
                 notlar.append(f"{k} şıkkı anlamca değiştirilmişti → özgün şık korundu")
-            elif len(ov) >= 3 and yv:
+            elif len(ov) >= 3:
                 import re as _re
                 kel = lambda t: {w for w in _re.findall(r"[a-zçğıöşü]{4,}", t.lower())}
                 dusen = kel(ov) - kel(yv)

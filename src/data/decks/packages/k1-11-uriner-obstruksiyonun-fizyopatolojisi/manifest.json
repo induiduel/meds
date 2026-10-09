@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "metadata": {
+    "id": "k1p-k1-11-uriner-obstruksiyonun-fizyopatolojisi",
+    "title": "Üriner Obstrüksiyonun Fizyopatolojisi",
+    "shortTitle": "Üriner Obstrüksiyonun Fizyopatolojisi",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "instructor": "Doç. Dr. Özer Baran",
+    "overview": "Obstrüktif üropati, idrar üretim yeri olan tübüllerden eksternal meaya kadar idrar akımının engellendiği klinik tablodur. Klinik tabloyu seviye, derece, süre ve enfeksiyon belirler; proksimalinde staz ve basınç artışı olur. İnfravezikal obstrüksiyonda kompanzasyon (PVR=0), irritasyon (PVR<50 ml) ve dekompansasyon (PVR>500 ml, VUR) evreleri görülür; mesane duvarında tip III kollajen artışı ile kompliyans çöker, trabekülasyon ve divertiküller gelişir. Supravezikal tıkanıklıkta ilk etkilenen kalikslerdir (forniks küntleşmesi, papilla düzleşmesi); 7. günde kollektör nekrozu başlar. Pyelointerstisyel, pyelolenfatik ve pyelovenöz reflü basıncı düşürür. Erken fazda PGE2/NO vazodilatasyonu, geç fazda TXA2/AngII vazokonstriksiyonu görülür; 6 haftalık tam tıkanıklıktan sonra fonksiyon dönmez. Toplayıcı kanallarda ADH direnci, hipostenürik poliüri ve asidifikasyon defekti gelişirken, ÜRİNER DİLÜSYON YETENEĞİ SAĞLAM KALIR. Anüri ve piyonefroz acildir; açılınca postobstrüktif diürez izlenir ve çıkanın %50-70'i replase edilir.",
+    "totalSlides": 100,
+    "slideCount": 100,
+    "totalQuestions": 158,
+    "questionCount": 158,
+    "totalFlashcards": 30,
+    "interactiveElementCount": 241,
+    "category": "Kurul 1 · 2026-2027 ders paketi",
+    "programDate": "2026-09-17",
+    "confidence": "high",
+    "themeColor": "sky"
+  },
+  "structure": "structure.xml",
+  "blocks": "blocks.html",
+  "content": "content.md",
+  "stats": {
+    "slideCount": 100,
+    "elementCount": 241,
+    "questionCount": 158,
+    "flashcardCount": 30,
+    "elementDistribution": {
+      "cloze_masking": 52,
+      "interactive_table": 28,
+      "active_recall": 48,
+      "before_after_slider": 27,
+      "micro_quiz": 32,
+      "branching_logic": 28,
+      "causal_chain": 26
+    }
+  }
+}

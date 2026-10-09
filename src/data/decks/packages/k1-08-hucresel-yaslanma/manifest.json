@@ -1,0 +1,48 @@
+{
+  "id": "k1-08-hucresel-yaslanma",
+  "title": "Hücresel Yaşlanma (Yeni Mikro-Ders)",
+  "shortTitle": "Hücresel Yaşlanma",
+  "discipline": "Tıbbi Patoloji",
+  "committee": "Kurul 1 (Ürogenital ve Solunum Sistemi)",
+  "instructor": "Prof. Dr. Hikmet Keleş",
+  "version": "2.0.0",
+  "formatVersion": "1.0",
+  "totalSlides": 100,
+  "totalInteractiveElements": 247,
+  "interactiveRatio": 2.47,
+  "interactiveDistribution": {
+    "cloze_masking": {
+      "count": 81,
+      "percentage": 32.8
+    },
+    "active_recall": {
+      "count": 46,
+      "percentage": 18.6
+    },
+    "before_after_slider": {
+      "count": 25,
+      "percentage": 10.1
+    },
+    "interactive_table": {
+      "count": 25,
+      "percentage": 10.1
+    },
+    "causal_chain": {
+      "count": 25,
+      "percentage": 10.1
+    },
+    "micro_quiz": {
+      "count": 21,
+      "percentage": 8.5
+    },
+    "branching_logic": {
+      "count": 24,
+      "percentage": 9.7
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "blocks": "blocks.html",
+    "content": "content.md"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese",
+  "title": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar (Yeni Mikro-Ders)",
+  "shortTitle": "Akut Enflamasyon: Vasküler ve Hücresel",
+  "discipline": "Tıbbi Patoloji",
+  "committee": "Kurul 1 (Ürogenital ve Solunum Sistemi)",
+  "instructor": "Prof. Dr. Hikmet Keleş",
+  "version": "2.0.0",
+  "formatVersion": "1.0",
+  "totalSlides": 100,
+  "totalInteractiveElements": 230,
+  "interactiveRatio": 2.3,
+  "interactiveDistribution": {
+    "cloze_masking": {
+      "count": 73,
+      "percentage": 31.7
+    },
+    "active_recall": {
+      "count": 38,
+      "percentage": 16.5
+    },
+    "before_after_slider": {
+      "count": 25,
+      "percentage": 10.9
+    },
+    "micro_quiz": {
+      "count": 22,
+      "percentage": 9.6
+    },
+    "branching_logic": {
+      "count": 22,
+      "percentage": 9.6
+    },
+    "causal_chain": {
+      "count": 22,
+      "percentage": 9.6
+    },
+    "interactive_table": {
+      "count": 28,
+      "percentage": 12.2
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "blocks": "blocks.html",
+    "content": "content.md"
+  }
+}

@@ -1,0 +1,1396 @@
+{
+  "id": "k1-04-hucre-hasari-ve-nekroz-i",
+  "title": "Hücre Hasarı ve Nekroz - I (Yeni Mikro-Ders)",
+  "discipline": "Tıbbi Patoloji",
+  "committee": "Kurul 1 (Ürogenital ve Obstetrik)",
+  "instructor": "Prof. Dr. Hikmet Keleş",
+  "version": "2.0",
+  "totalSlides": 100,
+  "interactiveMetrics": {
+    "totalCount": 246,
+    "ratio": 2.46,
+    "distribution": {
+      "cloze_masking": {
+        "count": 93,
+        "percentage": 37.8
+      },
+      "active_recall": {
+        "count": 36,
+        "percentage": 14.63
+      },
+      "micro_quiz": {
+        "count": 24,
+        "percentage": 9.76
+      },
+      "causal_chain": {
+        "count": 24,
+        "percentage": 9.76
+      },
+      "before_after_slider": {
+        "count": 21,
+        "percentage": 8.54
+      },
+      "interactive_table": {
+        "count": 24,
+        "percentage": 9.76
+      },
+      "branching_logic": {
+        "count": 24,
+        "percentage": 9.76
+      }
+    }
+  },
+  "sources": {
+    "xml": "structure.xml",
+    "html": "blocks.html",
+    "markdown": "content.md"
+  },
+  "slidesIndex": [
+    {
+      "slideNumber": 1,
+      "title": "Hücre Hasarı Kavramı ve Biyolojik Homeostaz",
+      "badge": "Giriş",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 2,
+      "title": "Hücrenin Zararlı Uyaranlara Yanıt Akışı",
+      "badge": "Mekanizma",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 3,
+      "title": "Hastalık Gelişiminin Dört Temel Boyutu",
+      "badge": "Klinik Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "micro_quiz",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 4,
+      "title": "Hücre Hasarının Nedenleri Spektrumu",
+      "badge": "Etiyoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 5,
+      "title": "Hipoksi ile İskemi Arasındaki Kritik Ayırıcı Tanı",
+      "badge": "Ayırıcı Tanı",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "micro_quiz",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 6,
+      "title": "Hipoksinin Başlıca Klinik Etyolojileri",
+      "badge": "Etiyoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 7,
+      "title": "Toksinler ve Kimyasal Ajanların Neden Olduğu Hasar",
+      "badge": "Toksikoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 8,
+      "title": "Enfeksiyonlar ve İmmünolojik Hücre Hasarı",
+      "badge": "İmmünopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 9,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Homeostaz ve Hasar Spektrumu",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 10,
+      "title": "Genetik Kusurlar ve Hücre Hasarı",
+      "badge": "Genetik",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 11,
+      "title": "Beslenme Dengesizlikleri ve Hücresel Hasar",
+      "badge": "Metabolizma",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "cloze_masking",
+        "before_after_slider",
+        "branching_logic",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 12,
+      "title": "Fiziksel Etkenlerin Neden Olduğu Hücre Hasarı",
+      "badge": "Fiziksel Hasar",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 13,
+      "title": "Hücre Hasarında Genel İlkeler: Tür, Süre ve Şiddet",
+      "badge": "Genel İlkeler",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 14,
+      "title": "Doku Toleransı ve Hücre Tipi Duyarlılıkları",
+      "badge": "Doku Toleransı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 15,
+      "title": "Hücresel Hasarda Kritik Biyokimyasal Hedefler",
+      "badge": "Hedefler",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 16,
+      "title": "Hücresel Hasarın Zaman ve Morfoloji İlişkisi",
+      "badge": "Kronoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 17,
+      "title": "Geri Dönüşümlü Hücre Hasarı Kavramı ve Sınırları",
+      "badge": "Geri Dönüşümlü",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 18,
+      "title": "Hücresel Şişme (Hidropik Değişim): En Erken Morfolojik Bulgu",
+      "badge": "Mekanizma",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 19,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Hasar İlkeleri ve Doku Toleransı",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 20,
+      "title": "Hücresel Şişmenin Işık Mikroskobik Görünümü",
+      "badge": "Histopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 21,
+      "title": "Hücresel Şişmenin Makroskobik ve Organ Düzeyinde Bulguları",
+      "badge": "Makroskopi",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 22,
+      "title": "Geri Dönüşümlü Hasarın Ultrastrüktürel Değişiklikleri",
+      "badge": "Ultrastrüktür",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 23,
+      "title": "Böbrek Proksimal Tübülünde Erken İskemik Hasar",
+      "badge": "Organ Patolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 24,
+      "title": "Yağlanma (Steatoz): İkinci Geri Dönüşümlü Hasar Kalıbı",
+      "badge": "Steatoz",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 25,
+      "title": "Karaciğer Yağlanmasının Morfolojisi: Makro ve Mikro",
+      "badge": "Histopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 26,
+      "title": "Miyokardda Yağlanma: Kaplan Derisi (Cor Tigrinum) Görünümü",
+      "badge": "Kardiyopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 27,
+      "title": "Hücre Hasarında İntraselüler Kalsiyum Dengesi",
+      "badge": "Biyokimya",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 28,
+      "title": "Kalsiyumun Aktive Ettiği 4 Yıkıcı Enzim Ailesi",
+      "badge": "Enzimler",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 29,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Geri Dönüşümlü Hasar ve Hidropik Şişme",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 30,
+      "title": "Geri Dönüşümsüz Hasara Geçiş: Geri Dönüşü Olmayan Nokta",
+      "badge": "Eşik Noktası",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 31,
+      "title": "Mitokondriyal Kriz: Geç Hasarda Amorf Kalsiyum Yoğunlukları",
+      "badge": "Mitokondri",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "branching_logic",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 32,
+      "title": "Membran Bütünlüğünün Kalıcı Olarak Bozulması",
+      "badge": "Membran Hasarı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 33,
+      "title": "Lizozomal Enzimlerin Sitozole Boşalması ve Otoliz",
+      "badge": "Otoliz",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 34,
+      "title": "Klinik Biyobelirteçler: Enzimlerin Kana Sızması",
+      "badge": "Laboratuvar",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 35,
+      "title": "İskemi-Reperfüzyon Hasarı: Oksijen Paradoksu",
+      "badge": "Reperfüzyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 36,
+      "title": "DNA ve Kromatin Bütünlüğünün Bozulması",
+      "badge": "Genetik Hasar",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 37,
+      "title": "Geri Dönüşümsüz Hasarın Özeti: Üç Ölümcül Kriter",
+      "badge": "Sentez",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 38,
+      "title": "İskemik Hücre Hasarında Biyokimyasal Olaylar Dizisi",
+      "badge": "Mekanizma",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 39,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Geri Dönüşümsüzlük Kriterleri ve Enzim Salınımı",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 40,
+      "title": "Hücre Ölümü Spektrumu: Nekroz ile Apoptozun Temel Ayrımı",
+      "badge": "Hücre Ölümü",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 41,
+      "title": "Nekrozun Tanımı ve Doku Düzeyindeki Sonuçları",
+      "badge": "Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "branching_logic",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 42,
+      "title": "Doku Nekrozu Kalıpları: Morfolojik Sınıflandırma",
+      "badge": "Sınıflandırma",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 43,
+      "title": "Koagülatif Nekroz: En Sık Görülen Nekroz Kalıbı",
+      "badge": "Koagülatif",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 44,
+      "title": "Koagülatif Nekrozda Doku Mimarisinin Korunması: Hayalet Hücreler",
+      "badge": "Histopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 45,
+      "title": "Böbrek ve Dalak Enfarktüsü: Kama Şeklinde Koagülatif Nekroz",
+      "badge": "Organ Patolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 46,
+      "title": "Miyokard Enfarktüsü: Kardiyak Koagülatif Nekroz",
+      "badge": "Kardiyopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 47,
+      "title": "Büyük İstisna: Beyin İnfarktlarında Sıvılaşma Nekrozu",
+      "badge": "Kritik İstisna",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 48,
+      "title": "Koagülatif Nekrotik Dokunun Akıbeti",
+      "badge": "Onarım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 49,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 5] Nekroz vs Apoptoz ve Koagülatif Nekroz",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 50,
+      "title": "Nekrozun Sitoplazmik Morfolojisi: Artmış Eozinofili",
+      "badge": "Histopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 51,
+      "title": "Camsı (Glassy) Homojen Sitoplazma ve Glikojen Kaybı",
+      "badge": "Histopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "branching_logic",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 52,
+      "title": "Sitoplazmik Vakuolizasyon: Güve Yeniği Görünümü",
+      "badge": "Histopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 53,
+      "title": "Miyelin Figürleri ve Distrofik Kalsifikasyon Başlangıcı",
+      "badge": "Kalsifikasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 54,
+      "title": "Nekrozun Elektron Mikroskobundaki Temel Bulguları",
+      "badge": "Ultrastrüktür",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 55,
+      "title": "Nekrozun Sitoplazmik Bulgularının Sentezi",
+      "badge": "Sentez",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 56,
+      "title": "Nekrozda Nükleer Değişiklikler: Evrensel 3 Basamak",
+      "badge": "Nükleer Değişiklikler",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 57,
+      "title": "Piknoz (Pyknosis): Nükleer Büzülme ve Aşırı Bazofili",
+      "badge": "Piknoz",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 58,
+      "title": "Karyoreksis (Karyorrhexis): Nükleer Parçalanma",
+      "badge": "Karyoreksis",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 59,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 6] Sitoplazmik Nekroz Morfolojisi ve Eozinofili",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 60,
+      "title": "Karyolizis (Karyolysis): Nükleer Erime ve Çekirdeğin Silinmesi",
+      "badge": "Karyolizis",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 61,
+      "title": "Nükleer Değişikliklerin Zaman Akışı ve Karşılaştırması",
+      "badge": "Kronoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 62,
+      "title": "Nükleer Değişiklikler: Nekroz vs Apoptoz Ayrımı",
+      "badge": "Ayırıcı Tanı",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 63,
+      "title": "Nekrozun Sitoplazmik ve Nükleer Değişikliklerinin Bütünleşik Özeti",
+      "badge": "Tam Özet",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 64,
+      "title": "Kazeöz, Yağ ve Fibrinoid Nekroza Genel Bakış",
+      "badge": "Ön Bakış",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 65,
+      "title": "Nekrozun Histokimyasal Belirteçleri ve Ayırıcı Boyalar",
+      "badge": "Histokimya",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 66,
+      "title": "İskemik Enfarktlarda Renk Ayrımı: Soluk (Beyaz) vs Kırmızı (Hemorajik)",
+      "badge": "Enfarktüs Tipleri",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 67,
+      "title": "İskemik Doku Hasarında Sitolojik Ayrıntılar",
+      "badge": "Sitoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 68,
+      "title": "İskemik Enfarktlarda İltihabi Sınır Kuşağı",
+      "badge": "Enflamasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 69,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 7] Nükleer Nekroz Evreleri",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 70,
+      "title": "Sıvılaşma (Likefaksiyon) Nekrozu: Kavram ve Biyolojik Mekanizma",
+      "badge": "Sıvılaşma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 71,
+      "title": "Püy (İrin) Oluşumu ve Lökositik Enzimler",
+      "badge": "Püy Patolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 72,
+      "title": "Apse (Abscess) Patolojisi ve Kavitasyon",
+      "badge": "Apse",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 73,
+      "title": "Serebral İnfarkt: Beyinde Sıvılaşma Nekrozu",
+      "badge": "Nöropatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 74,
+      "title": "Kırmızı Nöron (Red Neuron): Erken İskemik Nöron Hasarı",
+      "badge": "Nöropatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 75,
+      "title": "Koagülatif Nekroz ile Sıvılaşma Nekrozunun Karşılaştırmalı Tablosu",
+      "badge": "Karşılaştırma",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 76,
+      "title": "Akut Enflamasyonda Sıvılaşma Nekrozunun Rolü",
+      "badge": "Enflamasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 77,
+      "title": "Santral Sinir Sisteminde Gliozis ve Onarım Özellikleri",
+      "badge": "Nöropatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 78,
+      "title": "Sıvılaşma Nekrozunda Özel Boyalar ve Tanı Yöntemleri",
+      "badge": "Laboratuvar",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 79,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 8] Sıvılaşma Nekrozu ve Apseleşme",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 80,
+      "title": "Gangrenöz Nekroz Kavramı: Klinik Bir Tanım",
+      "badge": "Gangren",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 81,
+      "title": "Kuru Gangren (Dry Gangrene): Mumyalaşma ve Keskin Sınır",
+      "badge": "Kuru Gangren",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 82,
+      "title": "Islak Gangren (Wet Gangrene): İkincil Sıvılaşma ve Sepsis Tehlikesi",
+      "badge": "Islak Gangren",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 83,
+      "title": "Gazlı Gangren (Gas Gangrene): Clostridium Enfeksiyonu",
+      "badge": "Gazlı Gangren",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 84,
+      "title": "Diyabetik Ayak ve Periferik Arter Hastalığı",
+      "badge": "Klinik Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 85,
+      "title": "Gangren Tiplerinin Karşılaştırmalı Sentez Tablosu",
+      "badge": "Ayırıcı Tanı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 86,
+      "title": "Fournier Gangreni: Perine ve Genital Bölgenin Nekrotizan Enfeksiyonu",
+      "badge": "Acil Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 87,
+      "title": "Gangrende Demarkasyon Hattı ve Cerrahi Karar",
+      "badge": "Cerrahi Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 88,
+      "title": "Gangren Tanısında Laboratuvar ve Radyolojik Bulgular",
+      "badge": "Laboratuvar",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 89,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 9] Gangrenöz Nekroz ve Tipleri",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 90,
+      "title": "Doku Nekrozu Kalıplarının Büyük Karşılaştırma Matrisi",
+      "badge": "Büyük Sentez",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 91,
+      "title": "Hücre Hasarının Biyokimyasal Yolakları Entegrasyonu",
+      "badge": "Entegrasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 92,
+      "title": "Klinik Olgu 1: Akut Miyokard Enfarktüsü ve Troponin Yükselmesi",
+      "badge": "Klinik Olgu",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 93,
+      "title": "Klinik Olgu 2: Serebral İskemik İnme ve Sıvılaşma Kavitasyonu",
+      "badge": "Klinik Olgu",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 94,
+      "title": "Klinik Olgu 3: Diyabetik Hastada Islak Gangren ve Acil Cerrahi",
+      "badge": "Klinik Olgu",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 95,
+      "title": "Klinik Olgu 4: Karbon Monoksit Zehirlenmesi ve Hipoksik Hasar",
+      "badge": "Klinik Olgu",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 96,
+      "title": "Tıbbi Patolojide Sık Yapılan Hatalar ve Kritik Tuzaklar",
+      "badge": "Kritik Tuzaklar",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 97,
+      "title": "TUS ve Kurul Sınavlarında En Sık Sorulan Hücre Hasarı Spotları",
+      "badge": "Sınav Spotları",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 98,
+      "title": "Hücre Hasarından Nekroza: Patofizyolojik Büyük Entegrasyon",
+      "badge": "Büyük Entegrasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 99,
+      "title": "Hücre Hasarı ve Nekroz - I Dersinin Temel Çıkarımları",
+      "badge": "Klinik Çıkarım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 100,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 10] Büyük Sentez ve Final İstasyonu",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    }
+  ]
+}

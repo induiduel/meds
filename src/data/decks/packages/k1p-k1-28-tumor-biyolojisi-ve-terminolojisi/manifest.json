@@ -1,0 +1,28 @@
+{
+  "id": "k1p-k1-28-tumor-biyolojisi-ve-terminolojisi",
+  "title": "Tümör Biyolojisi ve Terminolojisi",
+  "subtitle": "Neoplazi İlkeleri, Benign/Malign Ayrımı, İsimlendirme, Mikst/Blastik Tümörler, Diferansiyasyon/Anaplazi, Lokal İnvazyon, Metastaz, Epidemiyoloji ve Moleküler Karsinogenez",
+  "slug": "k1p-k1-28-tumor-biyolojisi-ve-terminolojisi",
+  "description": "Prof. Dr. Hikmet Keleş (Tıbbi Patoloji ABD) tarafından hazırlanan Tümör Biyolojisi ve Terminolojisi dersinin 100 slaytlık tam kapsamlı interaktif öğrenme destesi.",
+  "department": "Tıbbi Patoloji",
+  "lecturer": "Prof. Dr. Hikmet Keleş (Tıbbi Patoloji ABD)",
+  "sourcePdf": "Kurul 1 - Ders 28: Tümör Biyolojisi ve Terminolojisi (Prof. Dr. Hikmet Keleş)",
+  "slideCount": 100,
+  "questionCount": 97,
+  "flashcardCount": 30,
+  "elementCounts": {
+    "cloze_masking": 44,
+    "active_recall": 38,
+    "interactive_table": 38,
+    "before_after_slider": 28,
+    "causal_chain": 28,
+    "branching_logic": 28,
+    "micro_quiz": 27
+  },
+  "files": [
+    "manifest.json",
+    "content.md",
+    "blocks.html",
+    "structure.xml"
+  ]
+}

@@ -1,0 +1,1442 @@
+{
+  "id": "k1-02-patolojiye-giris",
+  "title": "Patolojiye Giriş (Yeni Mikro-Ders)",
+  "discipline": "Tıbbi Patoloji",
+  "committee": "Kurul 1 (Ürogenital ve Obstetrik)",
+  "instructor": "Prof. Dr. Hikmet Keleş",
+  "version": "2.0",
+  "totalSlides": 100,
+  "interactiveMetrics": {
+    "totalCount": 292,
+    "ratio": 2.92,
+    "distribution": {
+      "micro_quiz": {
+        "count": 80,
+        "percentage": 27.4
+      },
+      "cloze_masking": {
+        "count": 83,
+        "percentage": 28.42
+      },
+      "causal_chain": {
+        "count": 28,
+        "percentage": 9.59
+      },
+      "active_recall": {
+        "count": 26,
+        "percentage": 8.9
+      },
+      "before_after_slider": {
+        "count": 26,
+        "percentage": 8.9
+      },
+      "interactive_table": {
+        "count": 24,
+        "percentage": 8.22
+      },
+      "branching_logic": {
+        "count": 25,
+        "percentage": 8.56
+      }
+    }
+  },
+  "sources": {
+    "xml": "structure.xml",
+    "html": "blocks.html",
+    "markdown": "content.md"
+  },
+  "slidesIndex": [
+    {
+      "slideNumber": 1,
+      "title": "Patoloji Kavramı: Tanımı, Etimolojisi ve Tıptaki Anlamı",
+      "badge": "Temel Kavram",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 2,
+      "title": "Patolojinin Düzeyleri: Molekülden Tüm Organizmaya Bütüncül Bakış",
+      "badge": "Hiyerarşik Düzeyler",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 3,
+      "title": "Patoloji ve Fizyopatoloji: Morfoloji ile Fonksiyonun Dansı",
+      "badge": "Ayırıcı Tanım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 4,
+      "title": "Entegre Patoloji: Morfoloji, Moleküler Genetik ve Bilişimin Sentezi",
+      "badge": "Modern Yaklaşım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 5,
+      "title": "Patolojinin Tıptaki Üçlü Rolü: Bilimsel, Uygulamalı ve Eğitsel Güç",
+      "badge": "Tıptaki Rolü",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 6,
+      "title": "Temel ve Klinik Bilimler Arasında Patolojinin Köprü Fonksiyonu",
+      "badge": "Köprü Disiplin",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 7,
+      "title": "Klinik Pratikte Morfolojik Belirsizlikler ve Erken Evre Lezyonlar",
+      "badge": "Klinik Tuzak",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 8,
+      "title": "Klinisyen-Patolog İletişimi: Ortak Dil ve Karşılıklı Konsültasyon",
+      "badge": "İletişim İlkeleri",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "before_after_slider"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 9,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Patolojinin Tanımı, Kapsamı ve Klinik İlkeler",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 10,
+      "title": "Hastalık Sürecinin Dört Çekirdeği: Etiyolojiden Sonuca Mantıksal Akış",
+      "badge": "Hastalık Çekirdeği",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 11,
+      "title": "Etiyoloji 1: Genetik (İntrinsik) Nedenler ve Tümör Baskılayıcı Genler",
+      "badge": "Genetik Etiyoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 12,
+      "title": "Etiyoloji 2: Kromozomal Anomaliler ve Aneuploidiler",
+      "badge": "Kromozomal Etiyoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 13,
+      "title": "Etiyoloji 3: Edinsel (Ekstrinsik) Biyolojik Etkenler ve Enfeksiyonlar",
+      "badge": "Biyolojik Etiyoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 14,
+      "title": "Etiyoloji 4: Fiziksel, Kimyasal ve Beslenme Zedeleyicileri",
+      "badge": "Çevresel Etiyoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 15,
+      "title": "Patogenez: Etiyolojik Uyarandan Klinik Tabloya Giden Olaylar Zinciri",
+      "badge": "Mekanizma Zinciri",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 16,
+      "title": "Patogenez Düzeyleri: Moleküler, Hücresel ve Doku Kaskatları",
+      "badge": "Kaskat Düzeyleri",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 17,
+      "title": "Morfolojik Değişiklikler: Makroskopi, Mikroskopi ve Ultrastrüktür",
+      "badge": "Morfolojik Düzey",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 18,
+      "title": "Fonksiyonel ve Klinik Sonuçlar: Kliniko-Patolojik Korelasyonun Esasları",
+      "badge": "Klinik Yansıma",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 19,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Hastalık Sürecinin Dört Temel Öğesi",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 20,
+      "title": "Neoplazilerde Altın Standart: Neden Patolojik Tanı Şarttır?",
+      "badge": "Altın Standart",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 21,
+      "title": "Cerrahi Patoloji Raporunun Mimarisi: Tanı, Evre, Derece ve Sınırlar",
+      "badge": "Rapor Standartları",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 22,
+      "title": "Patoloğun Konsültan Hekim Kimliği: Klinisyenin Teşhis ve Tedavi Ortağı",
+      "badge": "Konsültan Hekim",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 23,
+      "title": "İyi Bir Patoloji Raporunun Standartları ve Kalite Kriterleri",
+      "badge": "Kalite Standartları",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 24,
+      "title": "İstek Formunun Önemi: Yaş, Cinsiyet, Girişim Türü ve Klinik Ön Tanı",
+      "badge": "İstek Formu",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 25,
+      "title": "Eksik veya Hatalı Klinik Bilginin Doğurabileceği Tanısal Tehlikeler",
+      "badge": "Tanısal Tehlikeler",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "branching_logic",
+        "active_recall",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 26,
+      "title": "Klinikopatolojik Uyumsuzluklar: Karşılaşıldığında Ne Yapılmalıdır?",
+      "badge": "Uyumsuzluk Yönetimi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 27,
+      "title": "Çok Disiplinli Tümör Konseyleri ve Morbidite-Mortalite Toplantıları",
+      "badge": "Tümör Konseyi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 28,
+      "title": "Patolojide Tıbbi Hata Önleme ve Hasta Güvenliği Standartları",
+      "badge": "Hasta Güvenliği",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 29,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Patolojinin Klinik Önemi ve Patoloğun Rolü",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 30,
+      "title": "Patolojinin İki Ana Ekseni: Genel Patoloji ve Özel (Sistemik) Patoloji",
+      "badge": "Patoloji Dalları",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 31,
+      "title": "Patolojik Anatomi (Makroskopik Patoloji): Çıplak Gözün Tanısal Gücü",
+      "badge": "Makroskopi",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 32,
+      "title": "Cerrahi Patoloji (Surgical Pathology): Yaşayan Hastanın Tedavi Rotası",
+      "badge": "Cerrahi Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "branching_logic",
+        "active_recall",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 33,
+      "title": "Otopsi Patolojisi: Klinik (Tıbbi) Otopsi ve Kalite Kontrolü",
+      "badge": "Klinik Otopsi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 34,
+      "title": "Adli Patoloji (Forensic Pathology): Şüpheli Ölümler ve Hukuki Adalet",
+      "badge": "Adli Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 35,
+      "title": "Sitopatoloji: Doku Bütünlüğü Olmadan Hücreden Teşhise",
+      "badge": "Sitopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 36,
+      "title": "Moleküler Patoloji ve Kişiselleştirilmiş Tıp (Personalized Medicine)",
+      "badge": "Moleküler Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 37,
+      "title": "Deneysel Patoloji (Experimental Pathology): Hastalık Mekanizmalarının Laboratuvarda Çözülmesi",
+      "badge": "Deneysel Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 38,
+      "title": "Ultrastrüktürel Patoloji ve Elektron Mikroskopisi (TEM & SEM)",
+      "badge": "Ultrastrüktür",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 39,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Patolojinin Alt Dalları ve Disiplinlerarası Entegrasyon",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "interactive_table"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 40,
+      "title": "Antik Çağ ve Yangının Beş Kardinal Belirtisi: Celsus ve Galen",
+      "badge": "Antik Tarihçe",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 41,
+      "title": "İslam ve Doğu Tıbbı: İbni Sina ve Amasyalı Şerefeddin Sabuncuoğlu",
+      "badge": "Doğu ve İslam Tıbbı",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 42,
+      "title": "Organ Patolojisinin Doğuşu: Giovanni Battista Morgagni (1682-1771)",
+      "badge": "Patolojik Anatomi Kurucusu",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 43,
+      "title": "Hücresel Patoloji Devrimi: Rudolf Virchow (1821-1902)",
+      "badge": "Modern Patoloji Kurucusu",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 44,
+      "title": "Osmanlı'da Modernleşme ve Patoloji Eğitiminin Başlangıcı",
+      "badge": "Osmanlı Patolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 45,
+      "title": "Türkiye'de Modern Patolojinin Kurucusu: Prof. Dr. Hamdi Suat Aknar (1869-1936)",
+      "badge": "Türk Patolojisinin Babası",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 46,
+      "title": "1933 Üniversite Reformu ve Yabancı Bilim İnsanları: Schwartz ve Oberndorfer",
+      "badge": "1933 Reformu",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 47,
+      "title": "Cumhuriyet'in Öncü Kadın Hekimi: Prof. Dr. Kamile Şevki Mutlu (1906-1987)",
+      "badge": "Cumhuriyet Öncüsü",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 48,
+      "title": "Türkiye'de Sitolojinin Doğuşu: Dr. Osman Nuri Aker ve PAP Testi",
+      "badge": "Sitoloji Öncüsü",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 49,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 5] Patoloji Tarihi: Antik Çağdan Modern Türkiye'ye Tarihsel Çizgi",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "interactive_table"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 50,
+      "title": "Makroskobik İnceleme ve Örnekleme (Sampling) Sanatı",
+      "badge": "Makroskopi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 51,
+      "title": "Işık Mikroskopisi ve Optik Büyütme Prensipleri",
+      "badge": "Işık Mikroskobu",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 52,
+      "title": "Rutin Hematoksilen-Eozin (HE) Boyası: Bazofili ve Eozinofili Mekanizması",
+      "badge": "Rutin Boya HE",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 53,
+      "title": "Özel Histokimyasal Boyalar I: Prusya Mavisi (Perls) ile Demir ve Hemosiderin Tayini",
+      "badge": "Demir Boyası",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 54,
+      "title": "Özel Histokimyasal Boyalar II: Periyodik Asit-Schiff (PAS) ile Glikojen, Mukus ve Mantarlar",
+      "badge": "PAS Boyası",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 55,
+      "title": "Özel Histokimyasal Boyalar III: Masson Trikrom ile Bağ Dokusu ve Fibrozis Tayini",
+      "badge": "Fibrozis Boyası",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 56,
+      "title": "Özel Histokimyasal Boyalar IV: Dondurulmuş Kesitte Lipid Boyaları (Oil Red O ve Sudan Siyahı)",
+      "badge": "Lipid Boyaları",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 57,
+      "title": "İmmünohistokimya (İHK) Prensipleri: Antijen-Antikor Özgüllüğü",
+      "badge": "İmmünohistokimya",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 58,
+      "title": "İHK'nın Onkolojideki Rolü: Tümör Kökeni, Reseptörler ve Ki-67",
+      "badge": "Onkolojik İHK",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 59,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 6] Tanısal Araçlar, Boyama Teknikleri ve İHK Panelleri",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "interactive_table"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 60,
+      "title": "Patoloji Laboratuvarına Gelen Materyal Tipleri ve Sınıflandırma",
+      "badge": "Laboratuvar Materyalleri",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 61,
+      "title": "Biyopsi Kavramı ve Klinik Amaçları",
+      "badge": "Biyopsi Kavramı",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 62,
+      "title": "İnsizyonel ve Eksizyonel Biyopsi Karşılaştırması",
+      "badge": "Cerrahi Biyopsiler",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 63,
+      "title": "Punch ve Forseps (Endoskopik) Biyopsiler",
+      "badge": "Yüzeyel Biyopsiler",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "interactive_table",
+        "cloze_masking",
+        "micro_quiz",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 64,
+      "title": "Kor (Tru-cut) İğne Biyopsisi: Meme, Karaciğer, Prostat ve Böbrek Dokusu",
+      "badge": "Tru-cut Biyopsi",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 65,
+      "title": "İnce İğne Aspirasyon Biyopsisi (İİAS): Hücresel Aspirasyon Prensipleri",
+      "badge": "İİAS Tekniği",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 66,
+      "title": "Materyal Kabulü, Kimlik Doğrulama ve Barkodlama Güvenliği",
+      "badge": "Hasta Güvenliği",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 67,
+      "title": "Patoloji İstek Formunun Önemi ve Eksik Bilginin Riskleri",
+      "badge": "İstek Formu",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "active_recall",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 68,
+      "title": "Laboratuvar Biyogüvenliği ve Formaldehit Maruziyeti",
+      "badge": "Biyogüvenlik",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 69,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 7] Materyal Tipleri, Biyopsiler ve Preanalitik Güvenlik",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "interactive_table"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 70,
+      "title": "Histopatolojik Tekniğin Amacı ve Doku Takibinin Mantığı",
+      "badge": "Doku Takibi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 71,
+      "title": "Fiksasyonun Biyokimyası: Otoliz ve Putrefaksiyonun Engellenmesi",
+      "badge": "Fiksasyon Biyokimyası",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 72,
+      "title": "Fiksasyon Kuralları: Hacim Oranı, Penetrasyon Hızı ve Doku Kalınlığı",
+      "badge": "Fiksasyon Standartları",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 73,
+      "title": "Alternatif Fiksatifler: Zenker, Bouin, Carnoy ve Glutaraldehit",
+      "badge": "Özel Fiksatifler",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 74,
+      "title": "Dehidrasyon Basamağı: Kademeli Alkol Serileri ile Suyun Uzaklaştırılması",
+      "badge": "Dehidrasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 75,
+      "title": "Şeffaflaştırma (Clearing): Ksilenin Rolü ve Alkol-Parafin Köprüsü",
+      "badge": "Şeffaflaştırma",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 76,
+      "title": "İnfiltrasyon ve Parafin Bloklama (Gömme): Doku Oryantasyonu",
+      "badge": "Bloklama",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 77,
+      "title": "Mikrotomi: Rotary Mikrotom ile 3-5 µm Kesit Alma ve Su Banyosu",
+      "badge": "Mikrotomi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 78,
+      "title": "İntraoperatif Konsültasyon: Frozen (Kriostat) Kesit Tekniği",
+      "badge": "Frozen Kesit",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 79,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 8] Doku Takibi, Fiksasyon Parametreleri ve Frozen Kesit",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "interactive_table"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 80,
+      "title": "Artefakt Kavramı ve Patolojik Tanıdaki Tuzaklar",
+      "badge": "Artefakt Kavramı",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 81,
+      "title": "Fiksasyon Kaynaklı Artefaktlar: Otoliz ve Geç Fiksasyon",
+      "badge": "Otoliz Artefaktı",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 82,
+      "title": "Kimyasal Pigment Artefaktı: Formalin Pigmenti (Asit Formaldehit Hematin)",
+      "badge": "Formalin Pigmenti",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 83,
+      "title": "Dehidrasyon ve Şeffaflaştırma Hataları: Kötü Alkol ve Kirli Ksilen",
+      "badge": "Takip Hataları",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 84,
+      "title": "Parafin Gömme ve Sıcaklık Artefaktları: Doku Yanığı ve Çatlaklar",
+      "badge": "Termal Artefaktlar",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 85,
+      "title": "Mikrotomi Kesim Hataları I: Bıçak Çentiği (Knife Marks) ve Yırtılmalar",
+      "badge": "Bıçak Çentiği",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 86,
+      "title": "Mikrotomi Kesim Hataları II: Chatter (Titreme / Panjur) ve Kalın-İnce Kesitler",
+      "badge": "Chatter Artefaktı",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 87,
+      "title": "Su Banyosu ve Lam Hataları: Katlantı, Kabarcık ve Floater Tehlikesi",
+      "badge": "Floater Tehlikesi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking",
+        "micro_quiz"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 88,
+      "title": "Cerrahi Müdahale Artefaktları: Koter (Termal) Hasarı ve Crush (Ezilme) Hasarı",
+      "badge": "Cerrahi Artefaktlar",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 89,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 9] Histopatolojik Artefaktlar ve Tanısal Ayırıcı Tanı",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "interactive_table"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 90,
+      "title": "Sitopatolojinin Temel Prensipleri ve Klinik Avantajları",
+      "badge": "Sitopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 91,
+      "title": "Sitolojik Materyal Tipleri: Eksfolyatif vs Mekanik Örnekleme",
+      "badge": "Materyal Tipleri",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 92,
+      "title": "Servikal Sitoloji ve PAP Smear Devrimi",
+      "badge": "PAP Testi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 93,
+      "title": "Bethesda Sistemi: Servikal Sitolojik Raporlama Standartları",
+      "badge": "Bethesda Sistemi",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "interactive_table",
+        "micro_quiz",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 94,
+      "title": "İnce İğne Aspirasyon Sitolojisi (İİAS) Detayları: Tiroid ve Derin Kitleler",
+      "badge": "İİAS Detayları",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 95,
+      "title": "Sitolojik Fiksasyon ve Boyama: Alkol vs Havada Kurutma",
+      "badge": "Sitolojik Fiksasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 96,
+      "title": "Sıvı Bazlı Sitoloji (LBC) ve Hücre Bloğu (Cell Block) Yöntemi",
+      "badge": "Sitolojik Yenilikler",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 97,
+      "title": "Solunum ve Vücut Boşlukları Sitolojisi",
+      "badge": "Efüzyon Sitolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 98,
+      "title": "Patolojinin Geleceği I: Moleküler Biyobelirteçler, NGS ve Likit Biyopsi",
+      "badge": "Geleceğin Patolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "causal_chain",
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 99,
+      "title": "Patolojinin Geleceği II: Dijital Patoloji, WSI ve Yapay Zekâ (AI)",
+      "badge": "Dijital Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 4,
+      "interactiveTypes": [
+        "before_after_slider",
+        "micro_quiz",
+        "cloze_masking",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 100,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 10] Sitopatoloji, Moleküler Devrim ve Patolojinin Geleceği",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "interactive_table"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    }
+  ]
+}

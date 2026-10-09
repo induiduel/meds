@@ -1,0 +1,1383 @@
+{
+  "id": "k1-03-hucresel-adaptasyonlar",
+  "title": "Hücresel Adaptasyonlar (Yeni Mikro-Ders)",
+  "discipline": "Tıbbi Patoloji",
+  "committee": "Kurul 1 (Ürogenital ve Obstetrik)",
+  "instructor": "Prof. Dr. Hikmet Keleş",
+  "version": "2.0",
+  "totalSlides": 100,
+  "interactiveMetrics": {
+    "totalCount": 233,
+    "ratio": 2.33,
+    "distribution": {
+      "micro_quiz": {
+        "count": 34,
+        "percentage": 14.59
+      },
+      "cloze_masking": {
+        "count": 71,
+        "percentage": 30.47
+      },
+      "causal_chain": {
+        "count": 24,
+        "percentage": 10.3
+      },
+      "active_recall": {
+        "count": 31,
+        "percentage": 13.3
+      },
+      "before_after_slider": {
+        "count": 25,
+        "percentage": 10.73
+      },
+      "branching_logic": {
+        "count": 24,
+        "percentage": 10.3
+      },
+      "interactive_table": {
+        "count": 24,
+        "percentage": 10.3
+      }
+    }
+  },
+  "sources": {
+    "xml": "structure.xml",
+    "html": "blocks.html",
+    "markdown": "content.md"
+  },
+  "slidesIndex": [
+    {
+      "slideNumber": 1,
+      "title": "Homeostaz: Tanım, Dinamik Denge ve Fizyolojik Sınırlar",
+      "badge": "Temel Kavram",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 2,
+      "title": "Hücresel Stres Spektrumu: Uyaran Şiddeti ve Hücresel Karşılık",
+      "badge": "Patolojik Spektrum",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 3,
+      "title": "Hücrenin Üç Temel Yanıtı: Adaptasyon, Geri Dönüşümlü Hasar ve Ölüm",
+      "badge": "Temel Triad",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 4,
+      "title": "Adaptasyonun Tanımı: Geri Dönüşümlü Yapısal ve Fonksiyonel Uyum",
+      "badge": "Tanısal İlke",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 5,
+      "title": "Yeni Bir Kararlı Durum (Steady State) Oluşturma Mantığı",
+      "badge": "Fizyopatolojik Mantık",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 6,
+      "title": "Fizyolojik vs Patolojik Adaptasyon: Temel Ayırıcı Ölçütler",
+      "badge": "Ayırıcı Tanım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 7,
+      "title": "Dört Ana Adaptasyon Tipine Kuşbakışı: Boyut, Sayı, Fenotip ve Kütle",
+      "badge": "Sınıflama",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 8,
+      "title": "Hücresel Rezerv ve Stres Yanıtında Organ Farklılıkları",
+      "badge": "Doku Farklılıkları",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 9,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Homeostaz ve Adaptasyon İlkeleri",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "interactive_table"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 10,
+      "title": "Hipertrofi Tanımı: Hücre Boyutunda Artış ve Organ Büyümesi",
+      "badge": "Temel Tanım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 11,
+      "title": "Hücresel Mekanizma: Yapısal Protein ve Organel Biyosentezi",
+      "badge": "Moleküler Mekanizma",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 12,
+      "title": "Bölünemeyen (Kalıcı) Hücrelerde Saf Hipertrofi Prensibi",
+      "badge": "Hücre Biyolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 13,
+      "title": "Mekanik Gerilim Reseptörleri ve İntraselüler Sinyal İletimi",
+      "badge": "Sinyal İletimi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 14,
+      "title": "Büyüme Faktörleri ve Vazoaktif Ajanlar: TGF-β, IGF-1, Endotelin-1",
+      "badge": "Biyokimyasal Uyarım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 15,
+      "title": "Transkripsiyonel Aktivasyon: GATA4, NFAT ve MEF2 Yolakları",
+      "badge": "Genetik Regülasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 16,
+      "title": "İskelet Kasında Fizyolojik Hipertrofi: Egzersiz ve Yük Artışı",
+      "badge": "Fizyolojik Örnek",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 17,
+      "title": "Gebelik Uterusunda Hipertrofi: Östrojen Uyarımı ve Düz Kas Büyümesi",
+      "badge": "Hormonal Adaptasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 18,
+      "title": "Gebelik Uterusunda Hipertrofi ve Hiperplazi Birlikteliği",
+      "badge": "Kombine Yanıt",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 19,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Hipertrofinin Temelleri ve Fizyolojik Örnekler",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 20,
+      "title": "Patolojik Kardiyak Hipertrofi: Hipertansiyon ve Aort Stenozu",
+      "badge": "Klinik Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 21,
+      "title": "Sol Ventrikül Konsantrik Hipertrofisi: Duvar Kalınlığı (>2 cm)",
+      "badge": "Morfolojik Kriter",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 22,
+      "title": "Fetal Gen Programına Geri Dönüş: ANP ve BNP Salınımı",
+      "badge": "Fetal Reprogramlama",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 23,
+      "title": "Ağır Zincir İzoform Değişimi: Alfa-MHC'den Beta-MHC'ye Geçiş",
+      "badge": "Enerji Ekonomisi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 24,
+      "title": "Miyokardiyal İskemi Riski: Kapiller Yatak ile Kas Hacmi Uyuşmazlığı",
+      "badge": "Vasküler Kısıtlılık",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 25,
+      "title": "Mitokondriyal Oksidatif Kapasitenin Sınırları ve ATP Tükenmesi",
+      "badge": "Metabolik Çöküş",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 26,
+      "title": "Miyosit Apoptozu ve Fokal Fibrozis Gelişimi",
+      "badge": "Hücresel Kayıp",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 27,
+      "title": "Kompansatuvardan Dekompansatuvar Faz: Ventriküler Dilatasyon",
+      "badge": "Yetmezlik Dönemi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 28,
+      "title": "İskemik Koagülatif Nekroz ve TTC (Trifeniltetrazolyum Klorür) Boyaması",
+      "badge": "Tanısal Histokimya",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 29,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Patolojik Hipertrofi ve Kalp Yetmezliği",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 30,
+      "title": "Hiperplazi Tanımı: Hücre Sayısında Artış ve Organ Hacim Değişimi",
+      "badge": "Temel Tanım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 31,
+      "title": "Hücre Çoğalması Ön Koşulu: Labil ve Stabil Hücre Popülasyonları",
+      "badge": "Hücre Döngüsü",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 32,
+      "title": "Kök Hücre Aktivasyonu ve Progenitör Hücre Proliferasyonu",
+      "badge": "Kök Hücre Biyolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 33,
+      "title": "Büyüme Faktörü Aracılı Sinyal İletimi: MAPK ve PI3K/Akt Yolakları",
+      "badge": "Sinyal İletimi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 34,
+      "title": "Hormonal Fizyolojik Hiperplazi: Ergenlik ve Gebelikte Meme Glandları",
+      "badge": "Fizyolojik Örnek",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 35,
+      "title": "Hormonal Fizyolojik Hiperplazi: Siklik Endometriyal Proliferasyon",
+      "badge": "Siklik Proliferasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 36,
+      "title": "Kompansatuvar (Telafi Edici) Hiperplazi Prensibi",
+      "badge": "Telafi Edici Yanıt",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 37,
+      "title": "Parsiyel Hepatektomi Sonrası Karaciğer Rejenerasyonu",
+      "badge": "Karaciğer Rejenerasyonu",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 38,
+      "title": "Hepatosit Büyüme Faktörü (HGF), IL-6 ve TNF-α'nın Hazırlayıcı Rolü",
+      "badge": "Sitokin Regülasyonu",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 39,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Hiperplazinin Biyolojisi ve Fizyolojik Tipleri",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "active_recall",
+        "interactive_table"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 40,
+      "title": "Patolojik Hiperplazi Tanımı: Aşırı Hormon ve Büyüme Faktörü Uyarımı",
+      "badge": "Patolojik Uyarım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 41,
+      "title": "Endometriyal Hiperplazi: Östrojen / Progesteron Dengesizliği",
+      "badge": "Jinekolojik Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 42,
+      "title": "Endometriyal Hiperplazi Sınıflaması: Basit, Kompleks ve Atipili",
+      "badge": "Histopatoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 43,
+      "title": "Atipili Endometriyal Hiperplazi ve Adenokarsinom Riski",
+      "badge": "Onkolojik Risk",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 44,
+      "title": "Benign Prostat Hiperplazisi (BPH): DHT ve Stroma-Epitel Etkileşimi",
+      "badge": "Ürolojik Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 45,
+      "title": "BPH'nin Histopatolojisi: Transizyonel Zonda Glandüler ve Fibröz Nodüller",
+      "badge": "Anatomik Lokalizasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 46,
+      "title": "Siğiller (Verrü) ve Viral Kaynaklı Hiperplaziler: HPV E6 ve E7 Etkisi",
+      "badge": "Enfeksiyöz Hiperplazi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 47,
+      "title": "Yara İyileşmesinde Aşırı Granülasyon Dokusu ve Skar Hiperplazisi",
+      "badge": "Onarım Patolojisi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 48,
+      "title": "Patolojik Hiperplazi ile Neoplazi Arasındaki Kritik Sınır: Geri Çekilme Yeteneği",
+      "badge": "Onkolojik Sınır",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 49,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 5] Patolojik Hiperplazi ve Neoplazi Riski",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 50,
+      "title": "Atrofi Tanımı: Hücre Hacmi ve Kütlesindeki Azalma ile Organ Küçülmesi",
+      "badge": "Temel Tanım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 51,
+      "title": "Atrofide Hücre Sayısı vs Hücre Boyutu Azalması Ayrımı",
+      "badge": "Hücresel Dinamik",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 52,
+      "title": "Fizyolojik Atrofi Örnekleri: Notokord, Tiroglossal Kanal ve Uterus İnvolüsyonu",
+      "badge": "Fizyolojik Örnek",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 53,
+      "title": "Kullanılmama Atrofisi (Disuse Atrophy): İmmobilizasyon ve Alçı Etkisi",
+      "badge": "Mekanik Atrofi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 54,
+      "title": "Denervasyon Atrofisi: Motor Nöron ve Periferik Sinir Hasarı",
+      "badge": "Nörolojik Atrofi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 55,
+      "title": "İskemik Atrofi: Kronik Aterosklerotik Kan Akımı Azalması",
+      "badge": "Vasküler Atrofi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 56,
+      "title": "Yetersiz Beslenme Atrofisi (Kaşeksi): Malnütrisyon ve Kanser Kaşeksisi",
+      "badge": "Metabolik Kaşeksi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 57,
+      "title": "Endokrin Uyarım Kaybı Atrofisi: Menopoz Sonrası Over ve Endometrium",
+      "badge": "Hormon Yokluğu",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 58,
+      "title": "Yaşlanma Atrofisi (Senil Atrofi): Beyin Atrofisi, Genişleyen Sulkuslar ve Daralan Giruslar",
+      "badge": "Senil Dejenerasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 59,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 6] Atrofinin Nedenleri ve Klinik Görünümleri",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 60,
+      "title": "Atrofinin Biyokimyasal Temeli: Protein Sentezi Azalması ve Yıkım Artışı",
+      "badge": "Biyokimyasal Denge",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 61,
+      "title": "Metabolik Baskılanma ve Azalmış Hücresel Enerji Tüketimi",
+      "badge": "Enerji Tasarrufu",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 62,
+      "title": "Ubikuitin-Proteazom Yolağı: Proteinlerin Kovalent İşaretlenmesi",
+      "badge": "Yıkım Yolağı",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 63,
+      "title": "Ubikuitin Ligazlar: E1, E2 ve E3 Enzim Kaskadı",
+      "badge": "Enzim Kaskadı",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 64,
+      "title": "Kas Atrofisinde E3 Ligazların Rolü: MuRF1 ve Atrogin-1 Aktivasyonu",
+      "badge": "Kas Atrofisi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 65,
+      "title": "26S Proteazom Kompleksinde Yapısal Kas Proteinlerinin Yıkımı",
+      "badge": "Hücresel Öğütücü",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 66,
+      "title": "Lizozomal Enzimler ve Asit Hidrolazların Rolü",
+      "badge": "Lizozomal Yıkım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 67,
+      "title": "Kahverengi Atrofi (Brown Atrophy): Lipofuksin Pigmenti Birikimi",
+      "badge": "Aşınma Pigmenti",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 68,
+      "title": "Atrofik Hücrede Canlılığın Sürdürülmesi vs Apoptoza Geçiş",
+      "badge": "Hücresel Karar",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 69,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 7] Atrofinin Moleküler Mekanizmaları",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 70,
+      "title": "Metaplazi Tanımı: Bir Erişkin Hücre Tipinin Diğerine Dönüşümü",
+      "badge": "Temel Tanım",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 71,
+      "title": "Metaplazinin Moleküler Mekanizması: Kök Hücrelerin Yeniden Programlanması",
+      "badge": "Genetik Reprogramlama",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 72,
+      "title": "Transdiferensiasyon vs Kök Hücre Diferensiasyon Değişimi",
+      "badge": "Biyolojik Mekanizma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 73,
+      "title": "Solunum Epitelinde Skuamöz Metaplazi: Sigara Dumanı ve Kimyasal Toksisite",
+      "badge": "Klasik Örnek",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 74,
+      "title": "Skuamöz Metaplazinin Bedeli: Mukosiliyer Temizlenme Kaybı ve Enfeksiyon Riski",
+      "badge": "Fonksiyonel Bedel",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 75,
+      "title": "A Vitamini (Retinoik Asit) Eksikliği ve Epitelyal Metaplazi",
+      "badge": "Nutrisyonel Metaplazi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 76,
+      "title": "Barrett Özofagusu: Kronik Gastroözofageal Reflüde Kolumnar Metaplazi",
+      "badge": "Gastroenterolojik Metaplazi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 77,
+      "title": "Barrett Özofagusunda İntestinal Metaplazi: Goblet Hücrelerinin Tanısal Rolü",
+      "badge": "Histopatolojik Kriter",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 78,
+      "title": "Servikal Transformasyon Zonunda Skuamöz Metaplazi: Fizyolojik vs Patolojik Süreç",
+      "badge": "Jinekolojik Metaplazi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 79,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 8] Epitelyal Metaplazi ve Kök Hücre Biyolojisi",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 80,
+      "title": "Mezenkimal (Bağ Dokusu) Metaplazisi: Yumuşak Dokuda Kemik Oluşumu",
+      "badge": "Mezenkimal Adaptasyon",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 81,
+      "title": "Miyozitis Ossifikans: Kas İçi Travma Sonrası Heterotopik Kemikleşme",
+      "badge": "Klinik Patoloji",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 82,
+      "title": "Metaplazi: Çift Uçlu Kılıç (Dayanıklılık Artışı vs Fonksiyon Kaybı)",
+      "badge": "Biyolojik Bilanço",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 83,
+      "title": "Metaplazi-Displazi-Karsinom Dizilimi: Barrett'ten Özofagus Adenokarsinomuna",
+      "badge": "Kanserleşme Dizilimi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 84,
+      "title": "Otofaji Tanımı: Hücrenin Kendi İçeriğini Lizozomda Sindirmesi",
+      "badge": "Hücresel Temizlik",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 85,
+      "title": "Otofajinin Üç Temel Tipi: Makrootofaji, Mikrootofaji ve Şaperon Aracılı Otofaji",
+      "badge": "Yolak Çeşitleri",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 86,
+      "title": "Otofajinin Biyolojik Adımları: İzolasyon Membranı, Otofagozom ve Otofagolizozom",
+      "badge": "Hücresel Basamaklar",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 87,
+      "title": "Açlık ve Metabolik Stres Yanıtında Otofajinin Yaşamsal Kurtarıcı Rolü",
+      "badge": "Metabolik Kurtarma",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "before_after_slider",
+        "active_recall",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 88,
+      "title": "Otofaji Genleri (ATG) ve Hücre İçi Organel Kalite Kontrolü",
+      "badge": "Genetik Kontrol",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 89,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 9] Mezenkimal Metaplazi ve Otofaji",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 90,
+      "title": "Adaptasyon ile Hücre Hasarı Arasındaki Dinamik Sınır",
+      "badge": "Patolojik Eşik",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 91,
+      "title": "Doz-Süre İlişkisi: Aynı Uyaranın Adaptasyondan Ölüme Uzanan Spektrumu",
+      "badge": "Dinamik Spektrum",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 92,
+      "title": "Biyosentetik ve Vasküler Rezerv Sınırları Aşıldığında Ne Olur?",
+      "badge": "Rezerv Tükenmesi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking",
+        "branching_logic"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 93,
+      "title": "Geri Dönüşümlü Hücre Hasarı: Hücresel Şişme (Hidropik Dejenerasyon) ve Yağlanma",
+      "badge": "Erken Hasar",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "causal_chain",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 94,
+      "title": "Geri Dönüşsüzlük Noktası (Point of No Return): Membran Hasarı ve Kalsiyum Girişi",
+      "badge": "Geri Dönüşsüz Eşik",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking",
+        "interactive_table"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 95,
+      "title": "Nekroz vs Apoptoz: Adaptasyon Başarısızlığının İki Farklı Ölüm Yolu",
+      "badge": "Ölüm Biçimleri",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "before_after_slider",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 96,
+      "title": "Karşılaştırmalı Ayırıcı Tanı: Hipertrofi, Hiperplazi, Atrofi ve Metaplazi",
+      "badge": "Sentez Matrisi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "interactive_table",
+        "active_recall"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 97,
+      "title": "Klinik Vaka Analizi: Hipertansif Kalp Hastalığında Adaptif Evreleme",
+      "badge": "Vaka Analizi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "branching_logic",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 98,
+      "title": "Klinik Vaka Analizi: Reflü Hastasında Barrett Özofagusunun İzlemi",
+      "badge": "Vaka Analizi",
+      "isCheckpoint": false,
+      "interactiveCount": 3,
+      "interactiveTypes": [
+        "active_recall",
+        "cloze_masking",
+        "causal_chain"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 99,
+      "title": "Kurul ve Klinik Patoloji Sınavları İçin Yüksek Verimli Özet Stratejisi",
+      "badge": "Sınav Stratejisi",
+      "isCheckpoint": false,
+      "interactiveCount": 2,
+      "interactiveTypes": [
+        "micro_quiz",
+        "cloze_masking"
+      ],
+      "hasFlashcards": false,
+      "hasTable": true
+    },
+    {
+      "slideNumber": 100,
+      "title": "[TEKRAR SAYFASI - CHECKPOINT 10] BÜYÜK FİNAL: Hücresel Adaptasyonlar Sentez Matrisi",
+      "badge": "Tekrar Sayfası",
+      "isCheckpoint": true,
+      "interactiveCount": 1,
+      "interactiveTypes": [
+        "active_recall"
+      ],
+      "hasFlashcards": true,
+      "hasTable": true
+    }
+  ]
+}

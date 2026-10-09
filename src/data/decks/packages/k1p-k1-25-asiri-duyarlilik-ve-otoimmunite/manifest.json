@@ -1,0 +1,31 @@
+{
+  "id": "k1p-k1-25-asiri-duyarlilik-ve-otoimmunite",
+  "title": "Aşırı Duyarlılık ve Otoimmünite",
+  "subtitle": "Hipersensitivite Tipleri, İmmün Tolerans Bozuklukları, SLE, Romatoid Artrit, Sjögren, Sistemik Skleroz, İmmün Yetmezlikler ve Sistemik Amiloidoz",
+  "slug": "k1p-k1-25-asiri-duyarlilik-ve-otoimmunite",
+  "version": "1.0.0",
+  "category": "Dönem 1 - Kurul 1",
+  "department": "Tıbbi Patoloji",
+  "lecturer": "Prof. Dr. Hikmet Keleş (Tıbbi Patoloji ABD)",
+  "sourcePdf": "Kurul 1 - Ders 25: Aşırı Duyarlılık ve Otoimmünite (Prof. Dr. Hikmet Keleş)",
+  "stats": {
+    "slideCount": 100,
+    "questionCount": 114,
+    "flashcardCount": 30,
+    "elementCount": 255,
+    "elementDiversity": {
+      "cloze_masking": "31 (%12.2)",
+      "interactive_table": "52 (%20.4)",
+      "micro_quiz": "31 (%12.2)",
+      "causal_chain": "31 (%12.2)",
+      "branching_logic": "31 (%12.2)",
+      "active_recall": "48 (%18.8)",
+      "before_after_slider": "31 (%12.2)"
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "content": "content.md",
+    "blocks": "blocks.html"
+  }
+}

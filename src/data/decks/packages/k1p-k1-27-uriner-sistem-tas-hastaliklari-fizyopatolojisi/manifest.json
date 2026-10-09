@@ -1,0 +1,31 @@
+{
+  "id": "k1p-k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi",
+  "title": "Üriner Sistem Taş Hastalıkları Fizyopatolojisi",
+  "subtitle": "Epidemiyoloji, Taş Sınıflaması, Fizikokimya ve Süpersatürasyon, İnhibitörler, Randall Plakları ve Kalsiyum/Non-Kalsiyum Litogenezi",
+  "slug": "k1p-k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi",
+  "version": "1.0.0",
+  "category": "Dönem 1 - Kurul 1",
+  "department": "Üroloji",
+  "lecturer": "Dr. Öğr. Üyesi Fahrettin Şamil Uysal (Üroloji ABD)",
+  "sourcePdf": "Kurul 1 - Ders 27: Üriner Sistem Taş Hastalıkları Fizyopatolojisi (Dr. Öğr. Üyesi Fahrettin Şamil Uysal)",
+  "stats": {
+    "slideCount": 100,
+    "questionCount": 52,
+    "flashcardCount": 30,
+    "elementCount": 237,
+    "elementDiversity": {
+      "cloze_masking": "42 (%17.7)",
+      "active_recall": "41 (%17.3)",
+      "interactive_table": "35 (%14.8)",
+      "before_after_slider": "30 (%12.7)",
+      "causal_chain": "29 (%12.2)",
+      "micro_quiz": "30 (%12.7)",
+      "branching_logic": "30 (%12.7)"
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "content": "content.md",
+    "blocks": "blocks.html"
+  }
+}

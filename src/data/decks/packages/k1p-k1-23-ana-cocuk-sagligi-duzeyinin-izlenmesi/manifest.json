@@ -1,0 +1,31 @@
+{
+  "id": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi",
+  "title": "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
+  "subtitle": "Mortalite Ölçütleri, DÖB Standartları, Gebe-Lohusa Takibi, Bebek-Çocuk İzlemleri ve Gelişim Basamakları",
+  "slug": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi",
+  "version": "1.0.0",
+  "category": "Dönem 1 - Kurul 1",
+  "department": "Halk Sağlığı",
+  "lecturer": "Doç. Dr. Nergiz Sevinç (Halk Sağlığı ABD)",
+  "sourcePdf": "Kurul 1 - Ders 23: Ana-Çocuk Sağlığı Düzeyinin İzlenmesi (Doç. Dr. Nergiz Sevinç)",
+  "stats": {
+    "slideCount": 100,
+    "questionCount": 84,
+    "flashcardCount": 30,
+    "elementCount": 332,
+    "elementDiversity": {
+      "cloze_masking": "83 (%25.0)",
+      "micro_quiz": "57 (%17.2)",
+      "active_recall": "47 (%14.2)",
+      "before_after_slider": "27 (%8.1)",
+      "interactive_table": "64 (%19.3)",
+      "branching_logic": "27 (%8.1)",
+      "causal_chain": "27 (%8.1)"
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "content": "content.md",
+    "blocks": "blocks.html"
+  }
+}

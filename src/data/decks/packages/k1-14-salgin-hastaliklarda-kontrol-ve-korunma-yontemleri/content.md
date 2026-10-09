@@ -1,0 +1,1773 @@
+# Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri
+**Eğitmen:** Uzm. Dr. Erkay Nacar (Halk Sağlığı ABD)  
+**Ders:** Halk Sağlığı | **Kategori:** Kurul 1 · 2026-2027 ders paketi  
+**Toplam Slayt:** 100 | **Toplam Soru:** 168  
+
+---
+
+## Slayt 1: Bulaşıcı Hastalıkların Tarihsel Seyri: 1970'lerin İyimserliğinden Günümüze
+
+20. yüzyılın ortalarında penisilinin keşfi, geniş spektrumlu antibiyotiklerin geliştirilmesi ve çiçek aşısı gibi küresel aşılama başarıları tıp dünyasında aşırı bir iyimserlik dalgası yarattı:
+
+- **1970'lerin Yanılgısı:** Birçok bilim insanı ve halk sağlığı otoritesi bulaşıcı hastalıklar kitabının artık kapandığını, insanlığın bundan böyle yalnızca kanser ve kardiyovasküler kronik hastalıklarla mücadele edeceğini ilan etti.
+- **Gerçeklikle Yüzleşme:** Bu iyimserlik kısa sürede çöktü. Mikroorganizmaların antibiyotik direnci geliştirmesi, yeni zoonotik virüslerin ortaya çıkması ve küreselleşme, bulaşıcı hastalıkların 21. yüzyılın en büyük küresel varoluşsal tehdidi olarak kalmaya devam ettiğini gösterdi.
+- **Günümüz Tablosu:** Bulaşıcı hastalıklar tehdidi azalmamış, aksine insanlığın ekolojik dengeleri bozmasıyla çok daha karmaşık ve tehlikeli bir evreye evrilmiştir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 2: Yeni ve Yeniden Ortaya Çıkan Patojenler: 1500'den Fazla Tehdit
+
+1970'lerden günümüze geçen yaklaşık 50 yıllık süreçte tıp bilimi daha önce insanlarda tanımlanmamış **1500'den fazla yeni patojen** keşfetmiştir:
+
+- **HIV/AIDS Örneği:** 1980'lerin başında tanımlanan İnsan İmmün Yetmezlik Virüsü (HIV), bugüne kadar dünya çapında **70 milyondan fazla insanı enfekte etmiş** ve **35 milyondan fazla insanın ölümüne** yol açarak modern çağın en yıkıcı pandemilerinden birine imza atmıştır.
+- **Yeniden Ortaya Çıkanlar (Re-emerging):** Geçmişte kontrol altına alınmış sanılan tüberküloz, sıtma, kızamık ve kolera gibi hastalıklar; aşı tereddütü, ilaç direnci, savaşlar ve yetersiz altyapı nedeniyle yeniden patlama yapmaktadır.
+- **Bilinmeyen 'X Hastalığı':** DSÖ, henüz bilinmeyen ancak küresel bir felakete yol açma potansiyeli olan varsayımsal patojeni 'Disease X' olarak tanımlamaktadır.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `active_recall`
+
+---
+
+## Slayt 3: Küreselleşme, Hızlı Ulaşım ve Salgınların Kıtalararası Hızı
+
+Orta Çağ'da Kara Veba'nın İpek Yolu ve ticaret gemileriyle Asya'dan Avrupa'ya yayılması yıllar sürmüştür. 21. yüzyılda ise salgınların dinamiği kökten değişmiştir:
+
+- **Uçak Hızında Salgınlar:** Günümüzde lokal bir köyde veya pazarda ortaya çıkan bir patojen, **kıtalararası bir yolcu uçağının uçabildiği hızla (24 saatten kısa sürede)** dünyanın en uzak metropolüne taşınabilmektedir.
+- **Yolcu Sayısı Hacmi:** Her gün milyonlarca insan kıtalararası uçuş yapmaktadır. Asemptomatik kuluçka dönemindeki bir yolcu, havaalanı taramalarını hiçbir belirti vermeden geçerek virüsü başka bir kıtaya ekebilir.
+- **Şehirleşme ve Yoğunluk:** Plansız mega-kentler, toplu taşıma ve hava sirkülasyonu yetersiz binalar patojenin bir kıtaya ayak bastığı anda katlanarak çoğalmasına (amplifikasyon) kusursuz zemin hazırlar.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 4: 2009 H1N1 Pandemisi: 9 Ayda Tüm Dünyayı Sarma Hızı
+
+2009 yılında Meksika ve Amerika Birleşik Devletleri'nde domuz kökenli yeni bir H1N1 influenza A virüsü patlak verdi:
+
+- **Yayılma Hızı Rekoru:** Virüs tespit edildikten sonra **9 aydan daha kısa bir süre içinde dünyanın tüm kıtalarına ve neredeyse tüm ülkelerine** ulaştı.
+- **Pandemi İlanı:** Dünya Sağlık Örgütü (DSÖ), virüsün küresel hızına dayanarak 41 yıl aradan sonra ilk kez en üst seviye olan Faz 6 Pandemi ilan etti.
+- **Çıkarılan Dersler:** Modern ulaşım ağlarının ne kadar entegre olduğu ve solunum yoluyla yayılan bir damlacık patojeninin konvansiyonel sınır kontrolleriyle durdurulmasının imkansıza yakın olduğu tüm dünyaya kanıtlandı.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `micro_quiz`
+
+---
+
+## Slayt 5: Koronavirüs Salgınları: SARS (2003) ve MERS-CoV (2012 / 2015)
+
+21. yüzyılın ilk çeyreği, koronavirüslerin hayvanlardan insanlara sıçrayarak ne denli öldürücü olabileceğinin iki büyük uyarısına sahne oldu:
+
+1. **SARS (Ağır Akut Solunum Sendromu - 2003):**
+   - Çin'in Guangdong bölgesinde misk kedileri ve yarasalardan insana geçti.
+   - Hong Kong'daki bir otelden dünyaya yayıldı; 8000'den fazla insan hastalandı ve 800'e yakın ölüm (%10 mortalite) görüldü.
+2. **MERS-CoV (Ortadoğu Solunum Sendromu - 2012):**
+   - Suudi Arabistan'da tek hörgüçlü develerden insana bulaştı; %35 gibi korkunç bir vaka-ölüm hızına sahiptir.
+   - **2015 Güney Kore Dersi (Sınav Spotu):** Ortadoğu'dan dönen tek bir enfekte iş insanı Seul'e indi; hastane içi süper-bulaştırma zinciriyle **186 vakaya ve 36 ölüme** yol açtı, binlerce kişi karantinaya alındı ve ekonomi sarsıldı!
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 6: Kanamalı Ateşler: 2014 Batı Afrika Ebola Salgını
+
+Filovirüs ailesinden Ebola virüsü, tarihin en korkutucu kanamalı ateş etkenlerinden biridir. 2014 Batı Afrika (Gine, Liberya, Sierra Leone) salgını tarihin en büyük Ebola felaketi oldu:
+
+- **Gecikmiş Farkındalık:** Salgın ormanlık bir köyde başladı ancak zayıf sağlık altyapısı ve sürveyans eksikliği nedeniyle **ilk iki ay boyunca hiçbir hekim ve otorite tarafından teşhis edilemedi!**
+- **Yıkıcı Bilanço:** 28.000'den fazla vaka ve 11.000'den fazla ölüm kaydedildi. Yüzlerce doktor ve hemşire hayatını kaybetti.
+- **Kritik Bulaş Yolu:** Havadan solunumla değil; hastaların kanı, kusmuğu, ishali ve ter gibi enfekte vücut sıvılarıyla doğrudan temasla bulaşır.
+- **Güvenli Defin Krizi:** Geleneksel cenaze yıkama ritüelleri virüsün yayılmasında süper-bulaşma odağı oldu; kültürel inançlara saygılı güvenli defin protokolleri geliştirildi.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `active_recall`
+
+---
+
+## Slayt 7: Vektör Kaynaklı Yeni Tehditler: 2015 Zika Virüsü ve Mikrosefali
+
+2015 yılında Brezilya'da patlak veren Zika virüsü salgını, vektör kaynaklı arbovirüslerin beklenmedik teratojenik tehlikelerini gözler önüne serdi:
+
+- **Bulaşma Vektörü:** Gündüzleri ısıran **Aedes aegypti** ve **Aedes albopictus** sivrisinekleridir. Ayrıca cinsel yolla ve kan transfüzyonuyla da bulaşabilir.
+- **Klinik ve Teratojenite (Sınav Spotu):** Yetişkinlerde hafif döküntü ve eklem ağrısıyla atlatan hastalık, hamile kadınlara bulaştığında plasentayı aşarak fetal nöral kök hücreleri enfekte etti.
+- **Konjenital Zika Sendromu:** Binlerce bebekte ağır **mikrosefali (küçük baş anomalisi)**, serebral korteks kalsifikasyonu ve körlük gelişti.
+- **Küresel Acil Durum:** DSÖ, mikrosefali patlaması nedeniyle 2016 yılında Uluslararası Öneme Sahip Halk Sağlığı Acil Durumu (PHEIC) ilan etti.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 8: Tarihin Yeniden Uyanan Salgınları: Madagaskar Vebası ve Kolera
+
+Salgın tehditleri yalnızca yepyeni virüslerden ibaret değildir; bin yıllık kadim hastalıklar da fırsat bulduğunda kitlesel ölümlere yol açar:
+
+1. **Madagaskar Veba Salgını (2017):**
+   - Yersinia pestis bakterisi kemirgen pireleriyle bulaşan hıyarcıklı veba yaparken, 2017'de insandan insana damlacıkla bulaşan **pnömonik vebaya** dönüştü.
+   - Kısa sürede 2400'den fazla vaka ve **209 ölüm** kaydedildi.
+2. **Kolera Salgınları (Vibrio cholerae):**
+   - Temiz su ve sanitasyonun çöktüğü savaş ve afet bölgelerinde (Yemen, Haiti, Sahra altı Afrika) her yıl **40'tan fazla büyük kolera salgını** patlak vermektedir.
+   - Pirinç suyu benzeri masif sulu ishal saatler içinde hipovolemik şok ve ölüm yaratır.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `active_recall`
+- `causal_chain`
+
+---
+
+## Slayt 9: [TEKRAR SAYFASI - CHECKPOINT 1] 21. Yüzyıl Salgın Tehditleri ve Küresel Dinamikler
+
+Bu ilk kontrol noktasında modern çağın salgın tehditlerini ve küresel yayılma hızını özetliyoruz:
+
+- **1970 Yanılgısı:** 'Bulaşıcı hastalıklar bitti' iddiası çöktü; 1500'den fazla yeni patojen tanımlandı (HIV tek başına 35 milyon can aldı).
+- **Uçak Hızında Salgın:** Kıtalararası jet uçuşları sayesinde lokal bir odak 24 saatte tüm dünyaya ulaşabilmektedir.
+- **2009 H1N1:** 9 aydan kısa sürede tüm kıtaları sardı ve pandemi ilan edildi.
+- **Koronavirüsler:** SARS-CoV (2003, %10 ölüm) ve MERS-CoV (2012, %35 ölüm; 2015'te tek yolcuyla Güney Kore'de hastane salgını).
+- **Ebola (2014):** 2 ay tanı alamadı; vücut sıvılarıyla bulaşır; 11.000 ölüm.
+- **Zika (2015):** Aedes sivrisineğiyle bulaşan konjenital mikrosefali etkeni.
+- **Tarihin Yeniden Uyanışı:** Madagaskar'da pnömonik veba (2017) ve su kaynaklı kolera salgınları.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `cloze_masking`
+
+### Akıl Kartları (Flashcards):
+- **S:** 21. yüzyılda insanlarda yeni ortaya çıkan (emerging) patojenlerin yaklaşık yüzde kaçı hayvan kaynaklıdır (zoonotiktir)?
+  - **C:** Yaklaşık %70'i hayvan kaynaklıdır.
+  - *İpucu:* Omurgalı canlılardan insana geçiş payı
+- **S:** 1970'lerden bu yana tıp dünyasında yaklaşık kaç yeni insan patojeni tanımlanmıştır?
+  - **C:** 1500'den fazla yeni patojen tanımlanmıştır.
+  - *İpucu:* Keşfedilen mikrop miktarı
+- **S:** 2009 influenza (domuz gribi) pandemisinde virüsün tüm kıtalara yayılma süresi yaklaşık ne kadar olmuştur?
+  - **C:** 9 aydan daha kısa sürede tüm kıtalara yayılmıştır.
+  - *İpucu:* Grip salgınının dünya turu süresi
+
+---
+
+## Slayt 10: Salgın Tehditlerinin Çok Sektörlü ve Ekonomik Maliyeti
+
+Salgınlar asla yalnızca tıbbi bir mesele değildir; toplumun tüm organlarını felç eden sistemik bir depremdir:
+
+- **Sağlık Sisteminin Kilitlenmesi:** Ani hasta akışı hastane yataklarını, yoğun bakımları ve ventilatörleri tüketir. Rutin sağlık hizmetleri (kanser ameliyatları, aşılar, doğumlar) aksar; salgından ölenler kadar aksayan rutin bakımdan ölenler olur (**dolaylı mortalite**).
+- **Ekonomik Yıkım:** Karantinalar, sınırların kapatılması, turizm ve ticaretin durması trilyonlarca dolarlık küresel kayıp yaratır.
+- **Sosyal ve Politik İstikrarsızlık:** Güven kaybı, sokağa çıkma yasakları, panik ve gıda tedarik zincirlerinin kopması hükümetleri ve toplumsal barışı tehdit eder.
+- **Sonuç:** Salgınlara hazırlık yapmak bir masraf kalemi değil, medeniyetin devamı için zorunlu bir güvenlik yatırımıdır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 11: Bir Sonraki Salgına Hazırlığın Dört Temel Direği
+
+Gelecekteki salgınların felakete dönüşmesini engellemek için Dünya Sağlık Örgütü (DSÖ) hazırlık stratejisini dört ana sütun üzerine kurmuştur:
+
+1. **İyi Bir Sürveyans Sistemi:** Erken uyarı ağları, şüpheli vakaların anında tespiti ve güvenilir laboratuvar doğrulaması.
+2. **Sağlıklı Bir Çevre (Tek Sağlık):** Zoonotik sıçramaları önlemek için yaban hayatı ve tarımsal çevre dengesinin korunması.
+3. **Bilimsel Yatırım ve Araştırma-Geliştirme:** Patojen genom dizileme, hızlı aşı ve antiviral geliştirme platformlarına sürekli finansman.
+4. **Güçlü ve Esnek Sağlık Sistemleri:** Ani hasta akışını absorbe edebilecek eğitimli, korunan işgücü ve adil sağlık finansmanı.
+Bu dört unsurdan birinin eksikliği tüm savunma kalkanını çökertir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 12: Tek Sağlık (One Health) Yaklaşımı: Bölünemez Sağlık
+
+Tek Sağlık (One Health), insan sağlığının hayvan sağlığı ve paylaştığımız çevre sağlığı ile ayrılmaz bir bütün olduğunu savunan disiplinler arası küresel bir yaklaşımdır:
+
+- **Geleneksel Tıbbın Hatası:** İnsan hekimliği sadece hastaneye gelen insanı tedavi etmeye odaklanmış; hayvan popülasyonlarındaki virüs döngülerini ve ekosistem tahribatını görmezden gelmiştir.
+- **Bütünleşik Çözüm:** Beşeri hekimler, veteriner hekimler, epidemiyologlar, çevre bilimciler ve vahşi yaşam uzmanları aynı masada ortak veri paylaşımı yapmalıdır.
+- **Hedef:** Virüs bir hayvandan insana sıçramadan önce ormanda, çiftlikte veya pazarda tespit edilip kontrol altına alınmalıdır.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `active_recall`
+
+---
+
+## Slayt 13: Zoonotik Tehditler: Yeni Patojenlerin %70'i Hayvan Kaynaklıdır
+
+Halk sağlığı istatistikleri, modern çağın enfeksiyon tehditleri hakkında çarpıcı ve tartışmasız bir gerçeği ortaya koymaktadır:
+
+- **%70 Kuralı (Sınav Spotu):** İnsanlarda yeni ortaya çıkan (emerging) bulaşıcı hastalıkların **yaklaşık %70'i hayvan kaynaklıdır (zoonozdur)!**
+- **Rezervuarlar:**
+  - Yarasalar: Kuduz, Ebola, Marburg, Nipah, Hendra, SARS ve SARS-CoV-2 rezervuarıdır.
+  - Kemirgenler: Hantavirüs, Veba, Lassa ateşi, Leptospiroz rezervuarıdır.
+  - Kuşlar: Yüksek patojeniteli Avian İnfluenza (Kuş Gribi - H5N1, H7N9) rezervuarıdır.
+- **Kritik Çıkarım:** Yaban hayatı ve hayvan sağlığı kontrol edilmeden insanları salgınlardan korumak biyolojik olarak imkansızdır!
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 14: Çevresel Bozulma, Yoğun Hayvancılık ve Islak Pazarlar
+
+Patojenlerin hayvanlardan insanlara sıçramasını (spillover) hızlandıran üç büyük insan yapımı faktör bulunmaktadır:
+
+1. **Ormansızlaşma ve Yaşam Alanı Kaybı:** Tropikal ormanların tarım veya madencilik için yok edilmesi, vahşi hayvanları insan yerleşimlerine yaklaşmaya zorlar (yarasaların meyve bahçelerine gelmesi gibi).
+2. **Endüstriyel Yoğun Hayvancılık:** Binlerce genetik olarak tekdüze hayvanın dar alanlarda tutulması, virüslerin hızla mutasyona uğrayıp virulans kazanması için kusursuz bir kuluçka makinesi (bioreaktör) işlevi görür.
+3. **Canlı Yaban Hayatı Pazarları (Wet Markets):** Farklı türden vahşi ve evcil hayvanların stres altında üst üste kafeslendiği, kan ve dışkıların karıştığı pazarlar türler arası sıçramanın merkez üssüdür.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+- `interactive_table`
+
+---
+
+## Slayt 15: Sürveyansın Temeli: Tanı İlk Olarak Klinisyenle Başlar
+
+Dünyanın en gelişmiş dijital izleme algoritmaları veya yapay zeka sistemleri dahi tek bir hekimin klinik şüphesinin yerini tutamaz:
+
+- **Altın İlke (Sınav Spotu):** Salgınların erken uyarısında tanı **ilk olarak klinisyenle başlar!**
+- **Klinisyenin Uyanıklığı:** Acil serviste veya poliklinikte çalışan bir hekim, alışılagelmişin dışında seyreden, standart tedaviye yanıt vermeyen veya aynı aileden/bölgeden benzer şikayetlerle gelen hastaları fark ettiğinde alarm zillerini çalmalıdır.
+- **Bildirim Zinciri:** Klinisyen vakayı şüphelendiği anda halk sağlığı otoritesine bildirmelidir. Klinisyenin atladığı veya bildirmeyi unuttuğu bir vaka, haftalar içinde tüm şehri veya ülkeyi saran kontrolsüz bir salgına dönüşür.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `cloze_masking`
+
+---
+
+## Slayt 16: Tanısal Gecikmenin Bedeli: Ebola'da 2 Aylık Körlük
+
+Tarih, erken tanı ve sürveyanstaki en ufak bir aksamanın ne denli büyük bir insani trajediye yol açabileceğinin acı örnekleriyle doludur:
+
+- **Gine Vakası (Aralık 2013):** Salgının ilk vakası (indeks vaka) 2 yaşındaki bir çocuktu. Çocuk ve ardından ailesi hayatını kaybetti.
+- **İki Aylık Tanı Körlüğü (Sınav Spotu):** Bölgedeki yerel sağlık çalışanları ölümleri kolera veya Lassa ateşine bağladı; gerekli numuneler alınıp doğru laboratuvara gönderilemedi.
+- **Sonuç:** Ebola virüsü **tam iki ay boyunca resmi olarak teşhis edilemeden** üç ülkenin sınırlarından serbestçe geçti ve mega-kentlere ulaştı. Zamanında sınırlanamayan salgın 11.000'den fazla can aldı.
+- **Ders:** Şüpheli kümeleşmelerde erken laboratuvar teyidi hayat kurtarır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 17: Sağlık Sistemlerinin Esnekliği (Resilience) ve Kapasite
+
+Salgınlar başladığında sağlık sistemleri daha önce hiç görmedikleri devasa bir stres testine tabi tutulurlar:
+
+- **Sağlık Sistem Esnekliği (Resilience):** Bir sağlık sisteminin şoklara (salgın, deprem, savaş) karşı temel fonksiyonlarını kaybetmeden direnme, uyum sağlama ve kriz anında kapasitesini hızla artırabilme yeteneğidir.
+- **Dalgalanma Kapasitesi (Surge Capacity):** 4 temel bileşenden oluşur (4S kuralı):
+  1. **Staff (İşgücü):** Yedek doktor, hemşire ve sağlık çalışanlarının hızla göreve çağrılması.
+  2. **Stuff (Malzeme):** KKE, ventilatör, oksijen ve ilaç stoklarının hazır olması.
+  3. **Structure (Mekan):** Normal servislerin yoğun bakıma, fuar alanlarının sahra hastanesine dönüştürülmesi.
+  4. **Systems (Sistemler):** Triyaj ve hasta sevk protokollerinin işletilmesi.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `active_recall`
+- `branching_logic`
+
+---
+
+## Slayt 18: Sağlık Finansmanı ve Acil Kriz Fonları
+
+Salgın başladığında bütçe onayları ve bürokratik ödenek tahsisleri haftalar sürerse mücadele kaybedilir:
+
+- **Önceden Tahsis Edilmiş Acil Fonlar:** Salgın öncesinde hazır tutulan acil durum bütçeleri, kriz çıktığı ilk saatlerde KKE, tanı kiti ve ilaç alımını finanse etmelidir.
+- **Evrensel Sağlık Kapsamı:** Salgın kontrolünün en kritik finansal şartı **hastaların tanı ve tedavisinin tamamen ücretsiz olmasıdır!**
+  - Eğer şüpheli bir hasta hastaneye gittiğinde cebinden para ödemek zorunda kalırsa doktora gitmekten kaçınır.
+  - Teşhis edilemeyen bu hasta topluma karışarak virüsü yüzlerce kişiye bulaştırır.
+- **Yatırımın Geri Dönüşü:** Salgına hazırlık için harcanan 1 dolar, kriz patladığında harcanacak 100 doları ve trilyonlarca dolarlık ekonomik çöküşü önler.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+- `causal_chain`
+
+---
+
+## Slayt 19: [TEKRAR SAYFASI - CHECKPOINT 2] Salgına Hazırlık, Tek Sağlık ve Klinisyenin Rolü
+
+Bu kontrol noktasında salgınlara hazırlığın temel taşlarını ve Tek Sağlık yaklaşımını özetliyoruz:
+
+- **Dört Hazırlık Direği:** 1) Sürveyans, 2) Sağlıklı çevre, 3) Bilimsel yatırım, 4) Esnek sağlık sistemi.
+- **Tek Sağlık (One Health):** İnsan, hayvan ve çevre sağlığı bölünmez bir bütündür.
+- **%70 Kuralı:** Yeni insan patojenlerinin yaklaşık %70'i zoonotiktir (hayvan kaynaklı).
+- **Klinisyenin Rolü:** Salgında erken tanı klinisyenle başlar; kümeleşen vakaları fark etmek hekimin sorumluluğudur.
+- **Ebola Dersi:** 2 aylık tanı körlüğü salgını uluslararası krize dönüştürdü.
+- **Esneklik ve Dalgalanma Kapasitesi (4S):** Staff (işgücü), Stuff (malzeme), Structure (mekan), Systems (sistemler).
+- **Finansman:** Ücretsiz tanı ve tedavi salgın kontrolünün mutlak şartıdır.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `cloze_masking`
+
+### Akıl Kartları (Flashcards):
+- **S:** Salgınlara hazırlığın üç temel sacayağı nelerdir?
+  - **C:** İyi bir sürveyans sistemi, sağlıklı çevre ve bilimsel yatırım ile sağlık sistemleridir.
+  - *İpucu:* Savunmanın üç sacayağı
+- **S:** İnsan, hayvan ve çevre sağlığının birbirinden ayrılamaz tek bir bütün olduğunu savunan küresel halk sağlığı vizyonu nedir?
+  - **C:** Tek Sağlık (One Health) yaklaşımıdır.
+  - *İpucu:* Ekolojik tıp konsepti
+- **S:** Salgınların erken tespitinde ilk alarmı veren en kritik ve vazgeçilmez aktör kimdir?
+  - **C:** Klinik ortamda olağan dışı durumu fark eden uyanık klinisyendir.
+  - *İpucu:* İlk şüpheyi duyan tıp doktoru
+
+---
+
+## Slayt 20: Salgınlarda Korku, Panik ve İrrasyonel Kararların Engellenmesi
+
+Salgınlar sadece biyolojik ajanların yayılması değil, aynı zamanda kitlesel korku ve psikolojik travma dalgalarıdır:
+
+- **Korkunun Getirdiği Tehlike:** Panik ve belirsizlik; halkın hastanelere kontrolsüz hücum etmesine, KKE ve ilaç stokçuluğuna, sağlık çalışanlarının darp edilmesine ve yabancılara karşı ırkçılık/damgalamaya (stigmatizasyon) yol açar.
+- **Hatalı Yönetici Kararları:** Yöneticiler korku ve politik baskı altında bilimsel temeli olmayan kararlar alabilirler (etkisiz seyahat yasakları, faydasız sokak dezenfeksiyonları, kanıtlanmamış ilaçların dağıtılması).
+- **Çözüm:** Bilimsel verilere dayalı, şeffaf, açık ve dürüst bir liderlik sergilemektir. Gerçekler halktan gizlenmemeli, belirsizlikler açıkça ifade edilmelidir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 21: Salgın Sürecinin Dört Epidemik Fazı ve Karşılık Gelen Müdahaleler
+
+Dünya Sağlık Örgütü (DSÖ), bir salgının evrimini ve her evrede uygulanması gereken halk sağlığı müdahalelerini **dört epidemik fazda** modeller:
+
+1. **Faz 1: Giriş / Ortaya Çıkış (Emergence):** Patojenin topluma ilk sızması → **Müdahale: Bekleme ve Öngörü (Anticipation)**.
+2. **Faz 2: Lokal Yayılım (Local Transmission):** İlk vakalar ve sınırlı kümelenmeler → **Müdahale: Erken Teşhis ve Sınırlama (Containment)**.
+3. **Faz 3: Amplifikasyon (Amplification):** Salgının katlanarak büyümesi ve yaygın toplum içi bulaş → **Müdahale: Kontrol ve Etkiyi Azaltma (Mitigation)**.
+4. **Faz 4: Azalma ve Sönümlenme (Decline):** Bağışıklık veya müdahalelerle vakaların düşüşe geçmesi → **Müdahale: Eliminasyon veya Eradikasyon**.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `active_recall`
+
+---
+
+## Slayt 22: Faz 1: Giriş ve Bekleme / Öngörü Stratejisi
+
+Salgının birinci fazı, patojenin hayvandan insana sıçradığı ya da bir seyahatçi ile ülkeye sızdığı ilk evredir:
+
+- **Öngörülebilirlik Paradoksu:** Yeni bir virüsün tam olarak hangi gün, nerede ve hangi genetik mutasyonla çıkacağını nokta atışı bilmek imkansızdır; ancak **tahmin edilebilir ve öngörülebilir**!
+- **Risk Tahmini (Öngörü):** Bölgedeki yaban hayatı döngüleri, iklim değişiklikleri, göç hareketleri ve mevsimsel koşullar analiz edilerek en olası patojenler ve yayılmayı kolaylaştıracak 'sürücüler' (drivers) önceden modellenir.
+- **Hızlı Araştırma Kapasitesi:** Yeni ve bilinmeyen bir patojen belirdiği anda laboratuvarların patojeni izole edip genom dizilimini 48 saat içinde çıkaracak Ar-Ge altyapısı hazır bekletilmelidir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 23: Risk Değerlendirmesi: Salgını Tetikleyen Sürücüler
+
+Bir salgının patlamasında patojenin virulansı kadar, çevresel ve toplumsal **yayılma sürücüleri (drivers)** de belirleyicidir:
+
+1. **Ekolojik Sürücüler:** Kuraklık, seller, orman yangınları veya baraj inşaatları kemirgen ve sivrisinek popülasyonlarını insan yerleşimlerine kaydırır.
+2. **Demografik ve Davranışsal Sürücüler:** Hızlı plansız kentleşme, aşırı kalabalık kamplar, göçmen dalgaları ve yetersiz sanitasyon.
+3. **Sağlık Sistemi Zayıflıkları:** Düşük aşılama oranları, KKE eksikliği, nozokomiyal enfeksiyon kontrolsüzlüğü.
+- **Erken Risk Değerlendirmesi:** Bu sürücüler önceden analiz edilerek 'Hangi mahallede kolera patlayabilir?', 'Hangi sınır kapısından kızamık girebilir?' sorularının yanıtı aranır.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `active_recall`
+- `branching_logic`
+
+---
+
+## Slayt 24: Faz 2: Lokal Yayılım ve Erken Teşhis
+
+İkinci fazda patojen ilk insan konaklarını enfekte etmiş ve sınırlı bir yerel küme (aile, iş yeri, hastane) içinde bulaşmaya başlamıştır:
+
+- **Kritik Eşik:** Bu faz, büyük bir felaketi önlemek için insanlığın elindeki **en değerli ve son fırsat penceresidir**.
+- **Erken Teşhisin Hayati Önemi:** İlk birkaç vakanın semptomları başladığı anda hızlı tanı testleriyle (PCR, antijen) doğrulanması gerekir.
+- **İndeks Vaka:** Topluma enfeksiyonu ilk getiren veya sağlık otoritesince ilk saptanan vakadır. İndeks vakanın seyahat geçmişi ve temaslıları saniyeler içinde geriye doğru taranmalıdır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 25: Sınırlama (Containment) İlkesi: İlk Vakada Başlayan Yangın Söndürme
+
+Salgın kontrolünde zaman en acımasız düşmandır. Bu nedenle sınırlama müdahalesi katı bir kurala tabidir:
+
+- **Temel Prensip (Sınav Spotu):** Sınırlama (containment) müdahalesi **ilk vaka teşhis edildiği anda başlamalıdır!**
+- **Laboratuvarı Beklemeden Harekete Geçme:** Patojenin türü, alt varyantı veya kesin genetik dizilimi henüz tam netleşmemiş olsa dahi, epidemiyolojik klinik şüphe oluştuğu anda izolasyon ve temaslı sınırlaması başlatılmalıdır.
+- **Karantina ve İzolasyon Kordonu:** Enfekte hasta derhal hava/temas izolasyon odasına alınır; lezyon bölgesine giriş-çıkışlar kontrol altına alınır ve yayılma çemberi fiziksel olarak daraltılır.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `cloze_masking`
+
+---
+
+## Slayt 26: Filyasyon ve Temaslı Takibi: Bulaş Zincirini Kırma Dedektifliği
+
+Lokal yayılım fazında salgının belini büken en kritik epidemiyolojik saha çalışması **filyasyon (contact tracing)** işlemidir:
+
+- **Filyasyonun Amacı:** İndeks vakanın bulaştırıcı olduğu süre boyunca temas ettiği tüm kişileri tek tek tespit etmek, bulmak ve izole etmektir.
+- **Temaslı Sınıflandırması:**
+  - Yakın Temaslı (Yüksek Risk): Aynı evde yaşayan, maskesiz 1 metreden yakın 15 dakikadan uzun süre geçirenler → Doğrudan karantinaya alınır.
+  - Düşük Riskli Temaslı: Aynı ortamda kısa süreli bulunanlar → Kendi semptomlarını günlük izlemeleri istenir.
+- **Bulaş Zincirinin Kırılması:** Her temaslı kişi kuluçka süresi boyunca toplumdan izole edildiğinde, virüs yeni bir konak bulamaz ve bulaşma zinciri kırılıp söner.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `active_recall`
+
+---
+
+## Slayt 27: Faz 3: Amplifikasyon ve Kontrolsüz Toplum Bulaşı
+
+Eğer ikinci fazda sınırlama ve filyasyon başarısız olursa veya patojen aşırı bulaşıcıysa salgın **üçüncü faza (amplifikasyona)** geçer:
+
+- **Eksponansiyel Patlama:** Vaka sayıları lineer değil, logaritmik (katlanarak) artar. 1 vaka 3'e, 3 vaka 9'a, 9 vaka 81'e fırlar.
+- **Bulaş Zincirlerinin Kaybı:** Artık vakaların kaynağı (kimin kimden kaptığı) takip edilemez hale gelir; toplum içi yaygın bulaş (**community transmission**) oturur.
+- **Süper-Bulaştırıcı Olaylar (SSE):** Düğünler, ibadethaneler, konserler ve kapalı havalandırmasız binalar tek bir kişinin onlarca kişiyi enfekte ettiği amplifikasyon jeneratörlerine dönüşür.
+- **Sağlık Sistemi Alarmı:** Hastanelere akın başlar; yatak ve personel kapasiteleri dolma noktasına gelir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 28: Etkiyi Azaltma (Mitigation): Eğriyi Düzleştirme Sanatı
+
+Amplifikasyon fazına girildiğinde artık tek tek vakaları sıfırlamaya çalışmak (sınırlama) imkansızdır. Müdahale stratejisi **Kontrol ve Etkiyi Azaltma (Mitigation)** moduna geçer:
+
+- **Temel Amaç:** Virüsü tamamen yok etmek değil; yayılma hızını yavaşlatarak hastane başvurularını zamana yaymak ve **sağlık sisteminin çökmesini engellemektir**.
+- **Eğriyi Düzleştirmek (Flattening the Curve):** Günlük vaka sayısını sağlık sisteminin azami kapasite çizgisinin altında tutmaktır.
+- **Uygulanan Önlemler (Farmakolojik Olmayan Müdahaleler - NPI):**
+  - Okulların ve üniversitelerin kapatılması, uzaktan eğitime geçiş.
+  - Toplu etkinliklerin, konserlerin, spor müsabakalarının iptali.
+  - Kamusal alanlarda maske zorunluluğu, sokağa çıkma kısıtlamaları ve seyahat engelleri.
+  - Ağır vakalara yoğun bakım desteği verilerek mortalitenin düşürülmesi.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `causal_chain`
+
+---
+
+## Slayt 29: [TEKRAR SAYFASI - CHECKPOINT 3] Epidemik Fazlar, Sınırlama ve Etkiyi Azaltma
+
+Bu kontrol noktasında salgın fazlarını ve fazlara özgü stratejik müdahaleleri özetliyoruz:
+
+- **Faz 1 (Giriş):** Patojenin topluma sızması → Bekleme ve Öngörü (risk sürücülerinin analizi).
+- **Faz 2 (Lokal Yayılım):** Sınırlı kümelenmeler → Erken Teşhis ve Sınırlama (Containment).
+- **Sınırlama Kuralı:** İlk vaka teşhis edildiği anda başlar; patojen tam tanımlanmasa bile beklenmez.
+- **Filyasyon:** İndeks vakanın temaslılarının taranması ve bulaş zincirinin kırılması.
+- **Faz 3 (Amplifikasyon):** Katlanarak büyüme ve toplum içi yaygın bulaş → Kontrol ve Etkiyi Azaltma (Mitigation).
+- **Eğriyi Düzleştirme:** Farmakolojik olmayan müdahalelerle (NPI) hasta yükünü zamana yayarak yoğun bakımların çökmesini önleme.
+- **Faz 4 (Azalma):** Duyarlı havuzun tükenmesiyle sönümlenme → Eliminasyon / Eradikasyon.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `cloze_masking`
+
+### Akıl Kartları (Flashcards):
+- **S:** Bir salgının doğal seyrindeki dört epidemik faz sırasıyla hangileridir?
+  - **C:** Giriş, Lokal Yayılım, Amplifikasyon ve Azalma fazlarıdır.
+  - *İpucu:* Dört kronolojik basamak
+- **S:** Salgın yönetiminde 'sınırlama' (containment) müdahalesi tam olarak ne zaman başlatılmalıdır?
+  - **C:** İlk vaka teşhis edildiği anda derhal başlatılmalıdır.
+  - *İpucu:* İndeks hastanın belirlenmesiyle eşzamanlı
+- **S:** Salgının amplifikasyon fazında sağlık sisteminin çökmesini önlemek için uygulanan ana strateji nedir?
+  - **C:** Kontrol ve Etkiyi Azaltma (Mitigation) stratejisidir.
+  - *İpucu:* Eğriyi yataylaştırma hamlesi
+
+---
+
+## Slayt 30: Faz 4: Azalma ve Sönümlenme Dinamikleri
+
+Her salgın dalgası eninde sonunda bir tepe noktasına (pik) ulaşır ve ardından dördüncü faza, yani **azalma ve sönümlenme evresine** girer:
+
+- **Neden Söner?**
+  1. Toplumdaki duyarlı (enfekte olabilecek) insan havuzunun tükenmesi (hastalığı geçirenlerin antikor kazanması).
+  2. Etkin aşılama ile toplumsal bağışıklık duvarının örülmesi.
+  3. İzolasyon, maske ve kısıtlamaların virüsün yeni insan bulmasını imkansız kılması.
+- **Kritik Yanılgı (Erken Rehavet):** Vaka sayıları düşmeye başladığında önlemler aceleyle terk edilirse, kalan duyarlı popülasyonda virüs yeniden alevlenir ve **ikinci/üçüncü dalgalar** başlar (1918 İspanyol gribindeki ölümcül ikinci dalga gibi).
+- **Hedef:** Bu evrede rehavete kapılmadan sürveyansı sürdürerek hastalığı bölgesel olarak silmek (eliminasyon) veya tamamen yok etmektir (eradikasyon).
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 31: Eliminasyon (Bölgesel Yok Etme) Tanımı ve Kriterleri
+
+Bulaşıcı hastalıklarla mücadelede 'eliminasyon' ve 'eradikasyon' kavramları halk sağlığının en temel iki ayrı başarı basamağıdır:
+
+- **Eliminasyon Tanımı (Sınav Spotu):** Bir enfeksiyon hastalığının, kasıtlı ve planlı halk sağlığı önlemleri (aşılama, vektör kontrolü) sonucunda **tanımlı belirli bir coğrafi bölgede (ülke veya kıta çapında)** insidansının sıfıra indirilmesi ve **artık büyük bir halk sağlığı sorunu olmaktan çıkarılmasıdır**.
+- **Kritik Kural:** Patojen dünyanın başka bölgelerinde varlığını sürdürmektedir! Bu nedenle eliminasyona ulaşmış bir ülkede **sürveyans ve aşılama/kontrol önlemleri KESİNTİSİZ SÜRDÜRÜLMELİDİR**.
+- **Risk:** Önlemler bırakılırsa dışarıdan gelen (ithal/imported) tek bir vaka duyarlı nüfusta yeniden salgın başlatabilir.
+- **Örnek:** Türkiye'de ve Amerika kıtasında yerli kızamık ve çocuk felcinin elimine edilmiş olması.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 32: Eradikasyon (Küresel Yok Oluş) Tanımı ve Şartları
+
+Eradikasyon, halk sağlığı biliminin ulaşabileceği en üst, en kutsal ve nihai zirvedir:
+
+- **Eradikasyon Tanımı (Sınav Spotu):** Bir patojenin yol açtığı enfeksiyonun görülme sıklığının **dünya çapında kalıcı olarak sıfıra indirilmesidir**.
+- **Kalıcı Zafer:** Eradikasyon sağlandığında patojen doğada tamamen yok olmuştur. Bu nedenle, artık **hiçbir ülkede sürveyans, karantina veya rutin aşılama yapılmasına GEREK KALMAZ!**
+- **Olağanüstü Güçlük:** Eradikasyon insanlık tarihinde başarılması en zor halk sağlığı hedefidir ve bugüne kadar insan hekimliğinde **yalnızca tek bir hastalık için** başarılabilmiştir: **Çiçek Hastalığı (Smallpox)**.
+- **Veteriner Başarısı:** Hayvan hekimliğinde ise sığır vebası (Rinderpest) 2011 yılında eradike edilmiştir.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `active_recall`
+
+---
+
+## Slayt 33: Bir Patojenin Eradike Edilebilirliğini Belirleyen Biyolojik Şartlar
+
+Her bulaşıcı hastalık eradike edilemez. Bir patojenin dünyadan silinebilmesi için doğanın çok katı biyolojik şartları sağlaması gerekir:
+
+1. **Tek Rezervuarın İnsan Olması (Zorunlu Şart):** Patojenin hiçbir hayvan rezervuarı ve çevresel odağı (toprak, su) bulunmamalıdır. Eğer virüs kuşlarda, yarasalarda veya kemirgenlerde yaşıyorsa insanda sıfırlansa bile hayvandan tekrar bulaşır!
+2. **Asemptomatik Taşıyıcılığın Olmaması:** Hastalanan her bireyin belirgin klinik bulgu vermesi gerekir; gizli taşıyıcılar sürveyanstan kaçar.
+3. **Etkin, Güvenli ve Tek Dozluk/Kolay Bir Aşının Varlığı:** Yaşam boyu kalıcı bağışıklık sağlayan, soğuk zincire dayanıklı bir aşı şarttır.
+4. **Mevsimsel Değil Sabit Antijenik Yapı:** İnfluenza gibi sürekli mutasyonla antijen değiştirmemelidir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `branching_logic`
+
+---
+
+## Slayt 34: Tarihin En Büyük Zaferi: Çiçek Hastalığının Eradikasyonu (1980)
+
+Çiçek hastalığı (Variola virüsü), insanlık tarihi boyunca yüz milyonlarca insanın yüzünü körleştiren, sakat bırakan ve öldüren en acımasız veba idi:
+
+- **Biyolojik Avantajlar:** Çiçek virüsünün hiçbir hayvan rezervuarı yoktu; taşıyıcılık yoktu (her vaka belirgin püstüller dökerdi) ve Edward Jenner'ın geliştirdiği aşı ömür boyu koruyordu.
+- **Stratejik Deha (Halka Aşılama - Ring Vaccination):** Tüm dünya nüfusunu aşılamak yerine, vaka çıkan köyün etrafındaki temaslı çemberi (halka) aşılandı; virüs kaçacak insan bulamadı.
+- **Son Vaka ve Resmi İlan (Sınav Spotu):** Dünyadaki son doğal vaka 1977'de Somali'de (Ali Maow Maalin) görüldü. 1980 yılında Dünya Sağlık Asamblesi **çiçek hastalığının dünya üzerinden tamamen silindiğini (eradike edildiğini)** resmen ilan etti.
+- **Sonuç:** O tarihten bu yana çiçek aşısı yapılmamaktadır!
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+
+---
+
+## Slayt 35: Eradikasyonun Eşiğindeki Hastalıklar: Polio ve Gine Solucanı
+
+Günümüzde insanlık iki hastalığı daha çiçek hastalığı gibi yeryüzünden silmenin eşiğine gelmiştir:
+
+1. **Poliomiyelit (Çocuk Felci):**
+   - Küresel Polio Eradikasyon Girişimi (1988'den beri) sayesinde vakalar %99.9 oranında azaltıldı.
+   - Tip 2 ve Tip 3 vahşi poliovirüsler tamamen eradike edildi. Günümüzde Tip 1 vahşi virüs yalnızca savaş ve güvensizlik altındaki **Afganistan ve Pakistan'da** sınırlı ceplerde kalmıştır.
+2. **Drakunkuliyazis (Gine Solucanı):**
+   - Kirli su içilmesiyle bulaşan parazitik bir nematoddur.
+   - Aşısı veya ilacı yoktur; yalnızca su filtreleri ve su kaynaklarının korunmasıyla vakalar yılda 3.5 milyondan **15'in altına indirilmiştir**; tarihin aşı olmadan eradike edilen ilk hastalığı olmaya adaydır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 36: Neden Her Patojen Eradike Edilemez? Biyolojik Engeller
+
+Modern tıbbın olağanüstü gücüne rağmen birçok ölümcül patojeni dünyadan silmek biyolojik doğaları gereği imkansızdır:
+
+- **Geniş Hayvan Rezervuarı:** Kuduz virüsü yarasalar ve etoburlarda; İnfluenza su kuşları ve domuzlarda; Sarı humma orman maymunlarında sürekli döngü halindedir. İnsanlardaki tüm vakaları sıfırlasanız bile hayvandan insana sıçrama her an tekrar başlar.
+- **Çevresel Rezervuar:** Tetanoz basili (**Clostridium tetani**) ve şarbon basili toprakta onlarca yıl canlı kalan sporlar oluşturur; dünyadaki tüm toprakları sterilize etmek imkansızdır!
+- **Antijenik Değişkenlik:** HIV ve Hepatit C gibi virüsler vücut içinde bile dakikalar içinde mutasyon geçirerek bağışıklıktan kaçar; etkin aşı geliştirilemez.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `active_recall`
+
+---
+
+## Slayt 37: Kızamık ve Kızamıkçık Eliminasyonu: Aşı Karşıtlığı Tehdidi
+
+Kızamık (Measles), temel üreme katsayısı (R0 = 12-18) en yüksek olan, havadan son derece kolay bulaşan bir virüstür:
+
+- **Yüksek Sürü Bağışıklığı Eşiği:** Kızamık bulaşını durdurabilmek için toplumun **en az %95'inin iki doz aşı ile bağışık olması şarttır!**
+- **Aşı Karşıtlığı ve Tereddüt:** Bilim dışı iddialar ve dezenformasyon nedeniyle aşılama oranları %90'ın altına düştüğünde, eliminasyona ulaşmış gelişmiş ülkelerde dahi kızamık salgınları hortlamaktadır (Avrupa ve ABD salgınları).
+- **Subakut Sklerozan Panensefalit (SSPE):** Kızamık geçiren çocuklarda yıllar sonra ortaya çıkan, beyinde ilerleyici demans ve ölümle sonuçlanan korkunç bir komplikasyondur; tek koruyucu aşıdır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 38: Eliminasyon Sonrası Aşama: Sürveyans Neden Asla Bırakılamaz?
+
+Halk sağlığı yöneticilerinin en sık düştüğü ölümcül tuzak, bir hastalığı elimine ettikten sonra rehavete kapılıp bütçe ve sürveyansı kesmeleridir:
+
+- **İthal Vaka Tehdidi (Importation):** Bir ülke kendi sınırları içinde polio veya kızamığı sıfırlamış olsa bile, komşu ülkede veya dünyanın başka bir ucunda hastalık devam ediyorsa risk sıfırlanmamıştır.
+- **Aşılamayı Bırakmanın Bedeli:** Aşılamayı durdurursanız doğan her yeni bebek 'duyarlı' olarak büyür. 10 yıl sonra toplumun %20'si savunmasız kalır. Dışarıdan uçakla gelen tek bir vaka felaketi tetikler.
+- **Sürveyans Nöbeti:** Akut flask paralizi (AFP) sürveyansı polio için, döküntülü hastalık sürveyansı kızamık için eliminasyon sonrasında da harfiyen sürdürülmelidir.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `active_recall`
+
+---
+
+## Slayt 39: [TEKRAR SAYFASI - CHECKPOINT 4] Eliminasyon vs Eradikasyon ve Başarılı Örnekler
+
+Bu kontrol noktasında bulaşıcı hastalıklarla mücadelenin en üst hedefleri olan eliminasyon ve eradikasyon dinamiklerini pekiştiriyoruz:
+
+- **Eliminasyon:** Belirli bir coğrafi bölgede vakaların sıfırlanması; dış tehdit sürdüğü için aşılama ve kontrol önlemleri zorunlu olarak devam eder.
+- **Eradikasyon:** Patojenin tüm dünyadan kalıcı olarak silinmesi; doğada virüs kalmadığı için aşı ve kontrol önlemleri sonlandırılır.
+- **Tarihin Tek Örneği:** Çiçek hastalığı (Variola, 1980'de eradike edildi; halka aşılama yöntemiyle başarıldı).
+- **Eradikasyon Şartları:** Tek rezervuar insan olmalı, hayvan/toprak rezervuarı olmamalı, asemptomatik taşıyıcılık bulunmamalı, etkin koruyucu aşı olmalı.
+- **Eradike Edilemeyenler:** Kuduz (hayvan rezervuarı), tetanoz (toprak sporu), grip (sürekli mutasyon/kuşlar).
+- **Eşiğindekiler:** Polio (çocuk felci) ve Gine solucanı (Drakunkuliyazis).
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `cloze_masking`
+
+### Akıl Kartları (Flashcards):
+- **S:** Bir enfeksiyonun tanımlı belirli bir coğrafi bölgede halk sağlığı sorunu olmaktan çıkarılmasına ne denir?
+  - **C:** Eliminasyondur (bölgesel yok etme).
+  - *İpucu:* Lokal başarı kavramı
+- **S:** Bir patojenin yol açtığı enfeksiyonun görülme sıklığının dünya çapında kalıcı olarak sıfırlanmasına ne ad verilir?
+  - **C:** Eradikasyondur (küresel kalıcı yok oluş).
+  - *İpucu:* Gezegen çapında bitiş
+- **S:** İnsanlık tarihinde küresel olarak eradike edilmiş tek insan enfeksiyon hastalığı hangisidir?
+  - **C:** Çiçek hastalığıdır (Smallpox - Variola).
+  - *İpucu:* Tarihte yok edilmiş tek virüs marazı
+
+---
+
+## Slayt 40: Yok Edilme (Extinction) Kavramı: Laboratuvar Stoklarının da İmhası
+
+Eradikasyonun da ötesinde teorik ve pratik bir son aşama mevcuttur:
+
+- **Extinction (Yok Edilme / Neslinin Tüketilmesi):** Patojenin doğada canlı vaka yapmamasının yanı sıra, dünya üzerindeki tüm araştırma merkezleri ve biyolojik silah **laboratuvarlarındaki dondurulmuş suşlarının da tamamen imha edilmesidir**.
+- **Çiçek Virüsü İkilemi:** Çiçek hastalığı 1980'de doğadan silinmiştir (eradike edilmiştir) ancak henüz 'extinct' değildir!
+- **Kalan İki Stok:** Çiçek virüsünün bilinen son resmi örnekleri yüksek güvenlikli (BSL-4) iki merkezde muhafaza edilmektedir:
+  1. CDC (Atlanta, ABD)
+  2. VECTOR Enstitüsü (Koltsovo, Rusya)
+- **Biyoterörizm Riski:** Bu stokların imha edilip edilmemesi küresel tıp politikasında yıllardır süregelen büyük bir etik ve güvenlik tartışmasıdır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 41: Kapsamlı Salgın Yanıtının Dört Temel Bileşeni
+
+Salgınlar, tek bir hekimin, tek bir hastanenin veya tek bir sağlık biriminin kendi başına yönetebileceği standart klinik durumlar değildir. Çok paydaşlı, karmaşık ve olağanüstü olaylardır:
+
+- **Sistemik Karmaşıklık:** Salgın ortaya çıktığında rutin sağlık hizmetleri hızla yetersiz kalır; fazladan bütçe, insan gücü, lojistik ve sektörler arası iş birliği gerekir.
+- **DSÖ ve Halk Sağlığına Göre 4 Temel Özellik (Sınav Spotu):**
+  1. **Kurumlar Arası Koordinasyon:** Tüm aktörlerin tek elden, senkronize ve tek komuta merkeziyle çalışması.
+  2. **Tam ve Eksiksiz Sağlık Enformasyonu:** Hem sürveyans (kişi-zaman-yer) hem de müdahale süreç verilerinin toplanması.
+  3. **Risk İletişimi (Riski Doğru ve Tam Aktarma):** Toplumla güven temelli çift yönlü iletişim ve infodemiyle mücadele.
+  4. **Tam ve Eksiksiz Sağlık Müdahaleleri:** Tanı, tedavi, filyasyon, aşı, KKE ve defin süreçlerinin eksiksiz yürütülmesi.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 42: Bileşen 1: Kurumlar Arası Koordinasyon ve Liderlik
+
+Salgın yanıtının ilk ve en kritik omurgası **kurumlar arası güçlü koordinasyondur**:
+
+- **İstisnai Bir Olay Olarak Salgın:** Salgın anında rutin bürokratik mekanizmalar çok yavaş kalır. Fazladan finansman, binlerce ek personel, güvenlik güçleri, yerel yönetimler (belediyeler), ulaştırma, gıda tedariki ve uluslararası kuruluşlar aynı anda sürece dahil olur.
+- **Tek Komuta ve Yetki:** Kararların tek bir merkezden, çelişki üretmeden ve hızla alınabilmesi için çok sektörlü liderlik yapısı kurulmalıdır.
+- **Sektörler Arası Entegrasyon:** Sağlık Bakanlığı, İçişleri, Milli Eğitim, Tarım ve Orman Bakanlığı ile sivil toplum kuruluşları arasında kesintisiz bilgi ve kaynak paylaşımı sağlanmalıdır.
+- **Temel Tehlike:** Koordinasyonun olmadığı durumlarda farklı kurumlar birbiriyle çelişen kararlar alır (örneğin biri okulları kapatırken diğeri kitlesel sınav düzenler) ve halkın güveni sarsılır.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 43: Acil Operasyon Merkezi (ASOM / EOC) ve Fiziksel Altyapı
+
+Kurumlar arası koordinasyonun somutlaştığı kalbi **Acil Sağlık Operasyon Merkezi (ASOM / Public Health Emergency Operations Centre - PHEOC)** adı verilen özel fiziksel ve teknolojik merkezdir:
+
+- **Özel Fiziksel Alan (Sınav Spotu):** Tüm paydaş liderlerinin, epidemiyologların, lojistikçilerin ve iletişim uzmanlarının 7/24 kesintisiz birlikte çalışabileceği, güvenli ve donanımlı fiziksel bir merkez gereklidir.
+- **Teknolojik Altyapı:** Kesintisiz enerji kaynakları (jeneratör), uydu interneti, haritalama ekranları (CBS/GIS), güvenli telsiz ve veri sunucuları.
+- **Operasyonel Dokümantasyon Araçları:**
+  - Güncel **irtibat listeleri** (tüm kilit paydaşların doğrudan iletişim kanalları).
+  - **Toplantı izleme ve görev dağıtım sistemi** (her sabah yapılan brifing kararlarının takibi).
+- **Önemi:** ASOM, sahadan gelen ham verilerin hızla stratejik kararlara ve sahadaki eylemlere dönüştürüldüğü komuta güvertesidir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 44: Ortak Eylem Planı, Görev Dağılımı ve Paydaş İletişimi
+
+Acil operasyon merkezinin elindeki en kritik kılavuz **Ortak Eylem Planı (Incident Action Plan)** ve paydaş iletişim araçlarıdır:
+
+- **Düzenli Güncellenen Ortak Eylem Planı (Sınav Spotu):** Hangi müdahalenin ne zaman, hangi kaynakla yapılacağını ve her paydaşın rol ve sorumluluklarını açıkça tanımlayan yaşayan bir belgedir. Salgının gidişatına göre dinamik olarak revize edilir.
+- **Rol ve Sorumluluk Matrisi:** Kim filyasyon yapacak, kim güvenliği sağlayacak, kim laboratuvar kitini dağıtacak, kim basına konuşacak açıkça belirlenir.
+- **Paydaşlar Arası İletişim Araçları:**
+  - Acil telefon ve telsiz ağları.
+  - **Gösterge Tabloları (Dashboard):** Yatak doluluk oranları, KKE stokları, günlük vaka sayıları canlı izlenir.
+  - **Coğrafi Haritalar (GIS):** Kümelenmelerin (cluster) mekansal dağılımı haritalandırılır.
+  - **Hizmet ve Kaynak Dizinleri:** Hangi hastanede kaç solunum cihazı veya izolasyon odası olduğunu gösteren veri tabanları.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `micro_quiz`
+
+---
+
+## Slayt 45: Bileşen 2: Sağlık Enformasyonu ve İki Temel Bilgi Türü
+
+Doğru karar alabilmek, müdahale etkisini ölçmek ve kaynakları hedefe yönlendirebilmek için sağlam enformasyon şarttır. Enformasyon yoksa salgın yönetimi karanlıkta araç kullanmaya benzer:
+
+- **Sağlık Enformasyonunun Amacı:** Epidemiyolojik eğilimleri izlemek, yüksek riskli grupları belirlemek, sağlık sisteminin kapasite sınırlarını kestirmek ve kararların kanıta dayalı olmasını sağlamaktır.
+- **Salgında Gereken İki Temel Bilgi Türü (Sınav Sorusu):**
+  1. **Sürveyans Bilgisi:** Hastalığın yayılımını gösteren doğrudan epidemiyolojik veriler (Kişi, Zaman ve Yere göre vaka ve ölüm sayıları).
+  2. **Müdahale Bilgisi:** Sahada yürütülen eylemlerin kapsamı, verimliliği ve etkisini ölçen göstergeler (Süreç ve Çıktı göstergeleri).
+- **Bütünleşik Yaklaşım:** Sadece vaka sayısını bilmek yetmez; kaç temaslıya ulaşıldığını, kaç test yapıldığını ve kaç yatağın boş olduğunu da bilmek zorunludur.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `cloze_masking`
+
+---
+
+## Slayt 46: Sürveyans Bilgisi: Kişi, Zaman ve Yer Analitiği
+
+Epidemiyolojinin kutsal sacayağı **Kişi, Zaman ve Yer (Person, Time, Place)** analizi, sürveyans bilgisinin özünü oluşturur:
+
+- **1. Kişi (Person) Değişkenleri:**
+  - Yaş, cinsiyet, meslek, gebelik durumu, altta yatan kronik hastalıklar (diyabet, immün yetmezlik).
+  - Hangi yaş grubunun daha duyarlı olduğunu veya kimlerin asemptomatik taşıyıcı olduğunu ortaya koyar.
+- **2. Zaman (Time) Değişkenleri:**
+  - Semptom başlangıç tarihi, tanı tarihi, hastaneye yatış ve taburculuk/ölüm tarihleri.
+  - Bu verilerle **Epidemik Eğri (Epi curve)** çizilir; salgının tek kaynaklı mı (point source) yoksa insandan insana yayılan (propagated) mı olduğu anlaşılır.
+- **3. Yer (Place) Değişkenleri:**
+  - İkametgah adresi, çalışma yeri, okul, seyahat geçmişi, hastane koğuşu.
+  - Mekansal kümelenmeleri ve bulaş odaklarını saptayarak coğrafi sınırlama sağlar.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+
+---
+
+## Slayt 47: Müdahale Bilgisi: Süreç ve Çıktı Göstergeleri
+
+Salgında yalnızca kaç kişinin hastalandığını saymak eylemleri yönetmeye yetmez; yapılan müdahalelerin sahada işleyip işlemediğini ölçen **Müdahale Bilgisine** ihtiyaç vardır:
+
+- **Süreç Göstergeleri (Process Indicators):** Müdahale adımlarının hedeflenen hız ve kalitede yapılıp yapılmadığını ölçer:
+  - Şüpheli vakanın bildirilmesi ile numunenin laboratuvara ulaşması arasındaki süre (ör. < 24 saat).
+  - Test sonucunun çıkma süresi (turnaround time).
+  - Temaslıların kaç saat içinde tespit edilip izolasyona alındığı (filyasyon süresi).
+  - Sağlık çalışanlarının KKE temin oranı ve el hijyeni uyumu.
+- **Çıktı ve Etki Göstergeleri (Outcome Indicators):**
+  - Hedef nüfusta aşılama kapsayıcılığı yüzdesi (ör. %85 üzeri).
+  - Vaka ölüm hızı (CFR) değişimi.
+  - İkincil atak hızındaki düşüş oranı.
+- **Yönetimsel Önemi:** Süreç göstergelerindeki aksama erken fark edilirse, vaka sayıları patlamadan operasyonel hata düzeltilir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 48: Sağlık Müdahalelerinin Üç Temel Amacı
+
+Kapsamlı bir salgın yanıtında yürütülen tüm sağlık müdahaleleri nihai olarak 3 temel hedefe odaklanır (Sınav Spotu):
+
+- **1. Bulaşmayı Azaltmak (Amacın Özü):**
+  - Enfeksiyon zincirini kırmak, yeni ikincil vakaların ortaya çıkmasını engellemek ve R0/Rt değerini 1'in altına düşürmek.
+  - Yöntemler: İzolasyon, karantina, maske, el hijyeni, fiziksel mesafe, filyasyon.
+- **2. Ağır Morbidite ve Mortaliteyi Azaltmak:**
+  - Hastalanan kişilerin hayatını kurtarmak, yoğun bakım ihtiyacını ve kalıcı sakatlıkları en aza indirmek.
+  - Yöntemler: Erken tanı, etkili triyaj, doğru destekleyici tedavi, oksijen desteği, antiviraller ve antibiyotikler.
+- **3. Sağlık Sistemleri ile Politik ve Sosyoekonomik Etkiyi Azaltmak:**
+  - Hastanelerin ve yoğun bakımların tıkanmasını önlemek; rutin sağlık hizmetlerinin (kanser, kalp cerrahisi, doğum) aksamasını engellemek.
+  - Toplumun ekonomik çöküşünü, gıda arzı kesintilerini ve politik istikrarsızlığı sınırlandırmak.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 49: [TEKRAR SAYFASI - CHECKPOINT 5] Kapsamlı Salgın Yanıtının Dört Temel Bileşeni
+
+Bu checkpointte salgın yönetim mekanizmasının kurumsal bileşenlerini ve bilgi akışını pekiştiriyoruz:
+
+- **Dört Temel Bileşen:** Kurumlar arası koordinasyon, tam sağlık enformasyonu, doğru risk iletişimi ve tam sağlık müdahaleleri.
+- **Acil Operasyon Merkezi (ASOM / EOC):** Kararların tek elden alındığı özel fiziksel ve teknolojik komuta merkezi.
+- **Ortak Eylem Planı:** Paydaşların görev, yetki ve sorumluluklarını tanımlayan, dinamik olarak güncellenen ana kılavuz.
+- **İki Enformasyon Türü:** Sürveyans bilgisi (kişi-zaman-yer) ve Müdahale bilgisi (süreç ve çıktı göstergeleri).
+- **Müdahale Amaçları:** (1) Bulaşmayı azaltmak, (2) Ağır morbidite/mortaliteyi azaltmak, (3) Sağlık sistemleri ve toplum üzerindeki hasarı en aza indirmek.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `interactive_table`
+
+### Akıl Kartları (Flashcards):
+- **S:** Kapsamlı bir salgın yanıtının sistemde bulunması zorunlu olan dört temel özelliği nelerdir?
+  - **C:** Kurumlar arası koordinasyon, tam sağlık enformasyonu, doğru risk iletişimi ve eksiksiz sağlık müdahaleleridir.
+  - *İpucu:* Dörtlü operasyonel mimari
+- **S:** Salgın yönetiminde paydaşların bir arada karar aldığı özel fiziksel komuta merkezine ne ad verilir?
+  - **C:** Acil Operasyon Merkezidir (ASOM / EOC).
+  - *İpucu:* Kriz komuta karargahı
+- **S:** Epidemiyolojide sürveyans verilerinin toplandığı ve analiz edildiği üç kutsal eksen nedir?
+  - **C:** Kişi, zaman ve yer değişkenleridir.
+  - *İpucu:* Kim, ne vakit ve nerede soruları
+
+---
+
+## Slayt 50: Mini Vaka: İl Sağlık Müdürlüğünde Salgın Yanıtı ve ASOM Yönetimi
+
+Güneydoğu Anadolu bölgesindeki 1 milyon nüfuslu bir ilde, aniden yüksek ateş, kusma ve kanamalı diyare ile başvuran 45 vaka tespit ediliyor. İl Sağlık Müdürü salgın yanıtını başlatıyor:
+
+- **İlk Karar:** İl Sağlık Müdürlüğü bünyesinde derhal **Acil Sağlık Operasyon Merkezi (ASOM)** aktive ediliyor. Emniyet, Belediye Su ve Kanalizasyon İdaresi, İl Tarım Müdürlüğü ve Kızılay temsilcileri masaya çağrılıyor.
+- **Sürveyans Analizi:** Vakaların tamamının aynı ilçede ve aynı ana su isale hattı çevresinde yaşadığı (Yer), yaş ortalamasının 18-45 olduğu (Kişi) ve vakaların son 48 saatte patladığı (Zaman) saptanıyor.
+- **Müdahale Bilgisi:** Test sonuçlarının çıkış süresinin 36 saate uzadığı (süreç aksaması) görülüyor ve hemen ek PCR cihazı talep ediliyor.
+- **Hedef:** Su şebekesi klorlaması artırılarak bulaş kesiliyor, hastanelerde sıvı-elektrolit ve antibiyotik triyajı kurularak mortalite sıfırda tutuluyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 51: 21. Yüzyılda İletişim Krizi ve Değişen Toplum Dinamikleri
+
+21. yüzyılda halk sağlığı uzmanlarının karşılaştığı en çetin engel biyolojik patojenlerden ziyade değişen toplumsal iletişim dinamikleridir:
+
+- **Buyurgan Dilin İflası (Sınav Spotu):** Geçmiş yüzyıllarda devletin veya hekimin tek taraflı 'şunu yapın, bunu yapmayın' şeklindeki tepeden inme, buyurgan dili artık toplumlar tarafından benimsenmemektedir.
+- **Uzman Görüşüne Azalan Güven:** Bilgiye erişimin demokratikleşmesiyle birlikte sahte uzmanlar türemiş, bilimsel otoriteye ve kurumlara duyulan geleneksel güven aşınmıştır.
+- **İnternet ve Sosyal Medya Kaynağı:** İnsanlar sağlık bilgilerini artık hekimlerinden önce sosyal medyadan, arama motorlarından ve kapalı mesajlaşma gruplarından almaktadır.
+- **Hızlı İnfial:** Yanlış veya provokatif bir haber saniyeler içinde viral hale gelerek kitlesel paniğe veya sağlık personeline saldırılara yol açabilmektedir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 52: İnfodemi: Tanımı, Yayılım Hızı ve Halk Sağlığı Tehdidi
+
+Salgın dönemlerinde yalnızca virüsler değil, bilgi kirliliği de epidemik bir hızla yayılır:
+
+- **İnfodemi Tanımı (Sınav Spotu):** Bir salgın (epidemi veya pandemi) sırasında, patojenle birlikte veya patojenden daha hızlı bir şekilde **yanlış, gereksiz, kanıtsız ve panik yaratacak kadar abartılı bilgilerin** toplumda kontrolsüzce yayılması durumudur.
+- **İki Uçlu Tehlike:**
+  1. **Yanlış Tedavi Çılgınlığı:** Çamaşır suyu içmek, yüksek doz parazit ilaçları kullanmak gibi ölümcül sahte kürlerin yayılması.
+  2. **Önlemleri Reddetme:** Aşının kısırlık yaptığı, maskenin oksijensiz bıraktığı veya virüsün bir komplo olduğu yalanlarıyla korunma tedbirlerinin boykot edilmesi.
+- **Sonuç:** İnfodemi, patojenden daha fazla insanın hastalanmasına ve ölümüne neden olabilen ölümcül bir bilgi pandemisidir.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 53: İnfodemiyle Mücadelede Üç Kutsal İlke: Konuş, Dinle, Dedikoduyu Engelle
+
+DSÖ ve halk sağlığı otoriteleri, infodeminin yıkıcı etkilerini durdurabilmek için üç aşamalı temel bir iletişim formülü belirlemiştir (Sınav Spotu):
+
+- **1. Konuş (Şeffaf ve Proaktif Bilgilendirme):** Bilgi boşluğu bırakılamaz. Resmi kanallar doğru, anlaşılır, dürüst ve kanıta dayalı bilgiyi ilk andan itibaren sürekli paylaşmalıdır.
+- **2. Dinle (Sosyal Dinleme / Social Listening):** Toplumun kaygıları, korkuları, inançları ve soruları analiz edilmelidir. İnsanların ne hissettiğini bilmeden verilen cevaplar havada kalır.
+- **3. Dedikoduları Engelle (Rumour Tracking & Fact-checking):** Sahada ve dijital mecralarda üretilen şehir efsaneleri ve sahte haberler anında tespit edilmeli; bilimsel kanıtlarla hızla ve alay etmeden çürütülmelidir.
+- **Kritik Kural:** Halkı azarlamak değil, güven inşa ederek dedikodunun önünü kesmek esastır.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+
+---
+
+## Slayt 54: Güven İnşası: Dinlemek Anlatmak Kadar Önemlidir
+
+Risk iletişiminde en sık yapılan ölümcül hata, toplumun sadece 'bilgilendirilmesi gereken pasif bir alıcı' olarak görülmesidir:
+
+- **Önce Güven Tesis Edilmeli (Sınav Spotu):** Bilimsel gerçekleri veya uzman tavsiyelerini iletebilmenin ön koşulu, hedef kitlenin size güvenmesidir. Güven yoksa dünyanın en mükemmel ilacı da gelse halk onu kullanmayı reddeder.
+- **Dinlemenin Gücü:** İnsanların inançlarını, korkularını, algılarını ve kaygılarını dinlemek; onlara gerçekleri anlatmak kadar, hatta bazen daha önemlidir.
+- **Empati ve Alçakgönüllülük:** 'Biz tıp profesörüyüz, siz bilmezsiniz' kibri halkı bilimden uzaklaştırır ve şarlatanların kucağına iter. Bilim insanları belirsizlikleri dürüstçe kabul etmeli ve halkın endişelerine saygıyla yaklaşmalıdır.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+
+---
+
+## Slayt 55: Toplumsal Bazda Düşünmek: Homojen Değil Heterojen Toplum
+
+Salgın yönetiminde yapılan en büyük planlama hatalarından biri, bir ülkedeki veya şehirdeki tüm insanları tek tip (monolitik/homojen) kabul etmektir:
+
+- **Toplumlar Yekpare Değildir (Sınav Spotu):** Bir toplum homojen bir kitle değildir; etnik köken, din, dil, sosyoekonomik gelişmişlik düzeyi ve kültürel inançlar açısından derin farklılıklar barındırır.
+- **Risk Algısının Değişkenliği:** Zengin bir plazada yaşayan bir birey ile gecekondu mahallesinde günlük yevmiye ile çalışan veya mülteci kampında yaşayan birinin risk algısı ve salgın tedbirlerine uyabilme kapasitesi tamamen farklıdır.
+- **'Evde Kal' Çelişkisi:** 'Evde kalın' çağrısı, günlük çalışmak zorunda olan veya evi olmayan biri için uygulanabilir değildir; sosyal ve ekonomik destek sağlanmadan bu kitleye izolasyon dayatılamaz.
+- **Kültürel İnançlar:** Cenaze ritüelleri, bayramlaşma gelenekleri ve el sıkışma alışkanlıkları bulaşta kritik rol oynar; bu geleneklere saygılı alternatifler üretilmelidir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 56: Eğitilmiş ve Hazırlıklı Toplumun Gücü
+
+Salgınla mücadelenin en güçlü ve en ucuz kalkanı, sağlık okuryazarlığı yüksek ve salgınlara hazırlanmış bir halktır:
+
+- **Bağımsız Erken Teşhis Yeteneği (Sınav Spotu):** İyi eğitimli, bilinçli ve hazırlıklı bir toplum, olağan dışı bir hastalık kümelenmesini veya salgın belirtilerini **daha uzman desteği sahaya ulaşmadan bile fark edebilir**.
+- **Hızlı Öz-Önlem:** Böyle bir toplumda bireyler, semptom hissettiğinde kendiliğinden maske takar, işe veya okula gitmez, yaşlı aile bireylerini korumaya alır ve sağlık birimini uyarır.
+- **Müdahalelerin Etkin Uygulanması:** Devlet bir tedbir açıkladığında (örneğin aşılama veya temaslı bildirimi), bilinçli toplum bu tedbire polis zoruyla değil, kendi sorumluluğu olarak gönüllü katılır.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 57: Stigmatizasyon ve Hastalıktan Kurtulanların Topluma Kaynaştırılması
+
+Salgın dönemlerinde toplumda korkuyla birlikte ortaya çıkan en tehlikeli sosyo-psikolojik olgu **damgalama (stigmatizasyon)** ve dışlamadır:
+
+- **Damgalama Tehdidi:** Hastalığa yakalanan bireyler, aileleri ve hatta onları tedavi eden hekim ve hemşireler toplum tarafından 'vebalı' muamelesi görebilir; evlerinden atılabilir veya hakarete uğrayabilir.
+- **Filyasyonun Çöküşü:** Damgalanmaktan korkan insanlar semptomlarını gizler, test yaptırmaktan kaçar ve temaslılarını bildirmez. Bu durum salgının yer altında kontrolsüz büyümesine yol açar.
+- **Kurtulanları Topluma Kaynaştırma (Sınav Spotu):** Salgından iyileşip hayatta kalanların (survivors) dışlanmasını önlemek, onları birer kahraman ve toplum elçisi olarak yeniden topluma entegre etmek halk sağlığının temel görevidir.
+- **İyileşenlerin Rolü:** İyileşen kişiler plazma bağışçısı olabilir, sahada filyasyon ve temaslı ikna ekiplerine gönüllü rehberlik edebilir.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `cloze_masking`
+
+---
+
+## Slayt 58: Sosyal Medya, Doğrulama Platformları ve Proaktif İletişim
+
+Dijital çağda risk iletişiminin sahnesi hastane koridorlarından sosyal medya platformlarına kaymıştır:
+
+- **Dedikoduyu Anında Tespit:** WhatsApp gruplarında yayılan 'aşı kısırlık yapıyor' veya 'hastanelerde hastalar bilerek öldürülüyor' iddiaları anlık takip edilmelidir.
+- **Proaktif ve Sade Görseller:** 50 sayfalık resmi tıp genelgelerini halk okumaz. Bunun yerine TikTok, Instagram ve YouTube için 30 saniyelik net, sempatik, hekim anlatımlı videolar ve infografikler üretilmelidir.
+- **Doğrulama (Fact-checking) Ağları:** Teyit platformları ile iş birliği yapılarak sahte görseller ve montaj videolar ifşa edilmelidir.
+- **Yerel Dinamikler ve Kanaat Önderleri:** Halkın güvendiği yerel din adamları, sporcular, sanatçılar ve mahalle muhtarları iletişime dahil edilmelidir.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+
+---
+
+## Slayt 59: [TEKRAR SAYFASI - CHECKPOINT 6] Risk İletişimi, İnfodemi Yönetimi ve Toplumsal Dinamikler
+
+Bu checkpointte salgının sosyolojik boyutunu, iletişim engellerini ve infodemi yönetimini özetliyoruz:
+
+- **21. Yüzyıl İletişim Krizi:** Buyurgan dil kabul görmez, uzman görüşüne güven azalmıştır; bilgi internet ve sosyal medyadan alınmaktadır.
+- **Önce Güven Tesis Edilmeli:** Dinlemek, insanlara gerçekleri ve tavsiyeleri anlatmak kadar önemlidir.
+- **İnfodemi:** Patojenle birlikte yayılan abartılı, yanlış ve panik yaratan bilgi salgınıdır.
+- **Üç Mücadele Kuralı:** Konuş, dinle ve dedikoduları engelle.
+- **Toplum Yekpare Değildir:** Din, kültür, dil ve sosyoekonomik farklılıklar risk algısını ve uyumu belirler.
+- **Eğitilmiş Toplum:** Uzman desteği olmadan dahi salgını fark edebilir ve tedbirleri sahiplenir.
+- **Stigmatizasyon:** Damgalamayla mücadele edilmeli, hastalıktan kurtulanlar topluma kaynaştırılmalıdır.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `before_after_slider`
+
+### Akıl Kartları (Flashcards):
+- **S:** Salgın sırasında patojenle birlikte yanlış, gereksiz ve panik yaratan abartılı bilgilerin kontrolsüz yayılmasına ne ad verilir?
+  - **C:** İnfodemidir.
+  - *İpucu:* Yalan haber bolluğu
+- **S:** İnfodemiyle mücadelede Dünya Sağlık Örgütü'nün belirlediği üç temel eylem ilkesi nedir?
+  - **C:** Konuş, dinle ve dedikoduları engelle prensipleridir.
+  - *İpucu:* Üçlü iletişim formülü
+- **S:** 21. yüzyılda uzman görüşünün halk tarafından benimsenmesi için öncelikle neyin tesis edilmesi şarttır?
+  - **C:** Güven tesis edilmeli ve toplumun kaygıları dinlenmelidir.
+  - *İpucu:* Karşılıklı inanç ve empati zemini
+
+---
+
+## Slayt 60: Mini Vaka: Aşı Karşıtlığı ve WhatsApp İnfodemisiyle Mücadele
+
+Kızamık salgınının baş gösterdiği bir ilçede, anneler arasında 'Kızamık aşısı otizm yapıyor ve kısırlık bırakıyor' şeklinde sahte bir ses kaydı WhatsApp gruplarında hızla yayılıyor. Aşı ret oranı bir haftada %8'den %45'e fırlıyor:
+
+- **İlçe Sağlık Müdürü Eylemi:**
+  1. **Dinleme:** Anne gruplarıyla aile sağlığı merkezlerinde çay sohbetleri düzenlenerek korkuları sabırla dinleniyor.
+  2. **Kanaat Önderleri:** İlçenin sevilen kadın doğum uzmanı ve yerel din görevlisi çocuklarını kameralar önünde aşılatıyor.
+  3. **Dedikoduyu Engelleme:** Otizm iddiasının 1998'de tıp literatüründen sahtekarlık nedeniyle atılan Andrew Wakefield makalesine dayandığı, milyonlarca çocukta yapılan güncel çalışmalarla kesinlikle çürütüldüğü broşürlerle açıklanıyor.
+- **Sonuç:** Buyurgan bir dille ceza kesmek yerine güven tesis edilerek aşılanma oranı %92'ye çıkarılıyor ve kızamık salgını sınırlanıyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 61: Tıbbi Tedaviler ve Aşıların Salgınlardaki Yeri
+
+Salgın hastalıkların kontrolünde 20. yüzyılın en büyük halk sağlığı devrimleri aşılar ve antibiyotikler olmuştur:
+
+- **Tarihi Kalkan:** Aşılar ve antibiyotikler, geçmişte insanlığı kırıp geçiren veba, kolera, tifo, çiçek, çocuk felci ve difteri gibi devasa salgınların büyük bir kısmını durdurmuştur.
+- **Kombine DTP Aşısı (Sınav Spotu):** DSÖ verilerine göre difteri-tetanoz-boğmaca (DTP) kombine aşısı günümüzde küresel olarak **çocukların %86'sını** bu ölümcül bakteriyel hastalıklardan korumaktadır.
+- **Toplum Düzeyinde Etki:** Kitlesel aşılama, duyarlı konak havuzunu kurutarak patojenin toplumda dolaşımını imkansız hale getirir ve aşılanamayan bebekleri/bağışıklığı baskılanmış bireyleri de dolaylı olarak korur (sürü bağışıklığı).
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `cloze_masking`
+
+---
+
+## Slayt 62: Antiviraller, Monoklonal Antikorlar ve İlaç Eşitsizliği
+
+20. yüzyılın son çeyreği ve 21. yüzyıl, enfeksiyon tedavisinde moleküler biyolojinin zirveye ulaştığı bir dönem olmuştur:
+
+- **Antiviral Devrim:** Özellikle 1980'lerden sonra HIV/AIDS pandemisinde geliştirilen kombine antiretroviral tedaviler (HAART), ölümcül bir virüsü kronik yönetilebilir bir hastalığa dönüştürmüştür.
+- **Monoklonal Antikorlar (mAbs):** SARS-CoV-2 ve Ebola için laboratuvarda üretilen yüksek afiniteli nötralizan antikorlar klinik yanıtı hızlandırmıştır.
+- **Kitlesel Erişim ve Maliyet Engeli (Sınav Spotu):** Monoklonal antikorlar ve yeni nesil antiviraller **aşırı pahalıdır** ve üretim kapasiteleri kısıtlıdır. Bu nedenle yoksul ülkelerde veya milyonlarca insanı etkileyen salgınlarda **kitlesel halk sağlığı uygulaması için uygun ve erişilebilir değildirler**.
+- **Halk Sağlığı Dersi:** Pahalı butik tedaviler yerine herkese eşit ulaşabilen aşılar, hijyen ve destekleyici bakım daima önceliklidir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 63: Sağlık İşgücünün Korunması: En Değerli ve Yenilenemez Kaynak
+
+Bir salgında en gelişmiş ilaçlar, en modern hastane binaları ve binlerce solunum cihazı olsa bile, onları uygulayacak hekim ve hemşire yoksa hiçbir şey ifade etmez:
+
+- **Sağlık Personelinin Vazgeçilmezliği (Sınav Spotu):** Tüm tedaviler ancak **kalifiye, sağlıklı, eğitimli ve özverili sağlık personeli** uygulandığında hayat kurtarır.
+- **Tükenme ve Enfeksiyon Riski:** Sağlık çalışanları patojenle en yüksek viral/bakteriyel yük altında doğrudan temas eden gruptur. Korunmayan bir sağlık personeli hem hastalanıp sistemi felç eder, hem de süper-bulaştırıcı haline gelerek hastaneyi bulaş yuvasına çevirir.
+- **Yenilenemez Kaynak:** Yeni bir yoğun bakım hekimi veya enfeksiyon hemşiresi yetiştirmek en az 5-10 yıl sürer; salgın anında sağlık işgücünün kaybı telafi edilemez bir felakettir.
+- **Koruma Şartı:** Sağlık işgücünün fiziksel, zihinsel ve enfeksiyon açısından korunması, salgın yanıtının sürdürülebilmesi için 1 numaralı önceliktir.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 64: Kişisel Koruyucu Ekipman (KKE) ve Enfeksiyon Önleme-Kontrol (IPC)
+
+Sağlık çalışanlarını ve hastaları korumanın temel teknik omurgası **Enfeksiyon Önleme ve Kontrol (IPC - Infection Prevention and Control)** ve **Kişisel Koruyucu Ekipman (KKE)** standartlarıdır:
+
+- **Bulaş Yoluna Uygun KKE Seçimi:**
+  - **Damlacık:** Cerrahi maske, göz koruyucu (siperlik/gözlük), önlük, eldiven.
+  - **Hava Yolu (Aerosol):** N95 / FFP2 / FFP3 maskeler, negatif basınçlı izolasyon odaları.
+  - **Temas / Vücut Sıvısı (Ebola, KKKA):** Sıvı geçirmez tulum, çift eldiven, çizme koruyucu, tam yüz koruması.
+- **Kritik Süreç: Donning ve Doffing:**
+  - **Donning (Giyme):** Sırasıyla ve dikkatle giyilir.
+  - **Doffing (Çıkarma - En Riskli Aşama):** Sağlık çalışanlarının en sık enfekte olduğu an KKE'yi çıkarma anıdır! Dış yüzey kontamine olduğu için çıkarma işlemi ayna karşısında veya bir gözlemci eşliğinde, her katmanda el dezenfeksiyonu yapılarak adım adım yürütülmelidir.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `interactive_table`
+
+---
+
+## Slayt 65: Destekleyici Tedavinin Hayat Kurtarıcı Gücü
+
+Modern tıpta sıkça düşülen bir yanılgı, bir virüse karşı spesifik antiviral yoksa tıbbın çaresiz kaldığı inancıdır. Bu inanç tamamen yanlıştır:
+
+- **Spesifik Tedavi Olmasa Bile (Sınav Spotu):** Bir patojene karşı geliştirilmiş doğrudan bir aşı veya mucizevi bir antiviral ilaç olmasa dahi, **yeterli ve kaliteli klinik destekleyici yöntemler binlerce hayat kurtarır**.
+- **Destekleyici Bakımın Bileşenleri:**
+  - **Sıvı ve Elektrolit Dengesi:** Ağır diyare ve kusmayla kaybedilen sıvının (oral rehidrasyon veya IV ringer laktat) yerine konması hipovolemik şoku ve böbrek yetmezliğini önler.
+  - **Oksijen Desteği ve Solunum Yönetimi:** Hipokseminin erken fark edilip oksijen, yüksek akışlı nazal kanül veya mekanik ventilasyonla düzeltilmesi.
+  - **Asit-Baz Dengesi ve Glukoz Kontrolü:** Metabolik asidozun ve hipogliseminin düzeltilmesi.
+  - **İkincil Bakteriyel Enfeksiyonların Tedavisi:** Virüsle zayıflayan akciğerde süperenfeksiyonu hedefleyen rasyonel antibiyotikler.
+- **Sonuç:** Vücuda bağışıklık sistemi virüsü temizleyene kadar zaman kazandırılır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 66: Tarihi Kanıt: 2014 Ebola Salgınında Ölüm Oranının %75'ten %33'e Düşmesi
+
+Destekleyici bakımın olağanüstü gücünü kanıtlayan tıp tarihinin en çarpıcı örneği Batı Afrika Ebola salgınıdır:
+
+- **2014 Batı Afrika Ebola Gerçeği (Sınav Sorusu):** 2014 yılında Gine, Liberya ve Sierra Leone'de patlak veren Ebola salgınında onaylanmış hiçbir antiviral ilaç veya aşı bulunmuyordu.
+- **İlk Tablo:** Sahada sağlık altyapısının çöktüğü ilk haftalarda vaka ölüm oranı (CFR) **yaklaşık %75** civarındaydı; hastalar ağır kusma, kanama ve diyareye bağlı dehidratasyondan ölüyordu.
+- **Destekleyici Bakım Devrimi:** Sağlık çalışanlarının korunması sağlandıktan sonra hastalara yoğun agresif intravenöz sıvı, elektrolit replasmanı, kan basıncı kontrolü ve beslenme desteği sağlandı.
+- **Çarpıcı Sonuç:** Tek bir spesifik antiviral ilaç dahi verilmeden, sadece **daha iyi destekleyici bakım sayesinde ölüm oranı %75'ten yaklaşık %33'e geriledi!**
+- **Halk Sağlığı Dersi:** Temel klinik bakım ve hekimlik sanatı, en ölümcül patojenin dahi yıkımını yarıdan fazla azaltabilir.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 67: Triyaj, İzolasyon Odaları ve Nozokomiyal Bulaşın Önlenmesi
+
+Salgınlarda hastaneler birer şifa merkezi olabileceği gibi, tedbir alınmazsa salgının en büyük bulaş yuvasına (amplifikasyon merkezi) dönüşebilir:
+
+- **Nozokomiyal Bulaş Riski:** Bekleme salonlarında öksüren bir hastanın diğer kronik hastaları veya refakatçileri enfekte etmesi.
+- **Girişte Triyaj (Kapı Önü Ayrımı):**
+  - Hastane ana kapısında tüm hastalar ateş ve solunum semptomları açısından sorgulanır.
+  - Şüpheli hastalar derhal cerrahi maske takılarak ayrı bir 'izolasyon/triyaj polikliniğine' yönlendirilir.
+- **Hastane İçi Kohortlama:** Pozitif hastalar ayrı bir serviste veya binada (kohort) toplanır; bu servise giriş çıkışlar sınırlandırılır.
+- **Personel Ayrımı:** Salgın servisinde çalışan hekim ve hemşirelerin temiz servislerde (onkoloji, yenidoğan) nöbet tutması kesinlikle yasaklanır.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 68: Toplum Sağlığı Çalışanları, Ebeler, Hemşireler ve Gönüllülerin Rolü
+
+Salgın mücadelesi yalnızca büyük üniversite hastanelerindeki yoğun bakım ünitelerinde değil, esas olarak mahallelerde ve evlerde kazanılır:
+
+- **Her Düzeyde Fark Yaratan Sağlık Ordusu (Sınav Spotu):** Toplum sağlığı çalışanları, ebeler, hemşireler, aile hekimleri ve gönüllüler salgın yönetiminin en ön cephesindedir.
+- **Ev Ziyaretleri ve Filyasyon:** Ebeler ve toplum sağlığı çalışanları ev ev dolaşarak temaslıları tarar, karantinadaki hastaların ateşini ölçer ve ilaçlarını teslim eder.
+- **Güven Köprüsü:** Yerel halk hastanedeki yabancı bir profesörden ziyade kendi mahallesindeki ebe veya hemşireye güvenir; aşı iknasında bu çalışanlar kilit rol oynar.
+- **Gönüllülerin Seferberliği:** Kızılay ve sivil toplum gönüllüleri karantinadaki yaşlıların gıda ve sıcak yemek ihtiyaçlarını karşılayarak evde kalmalarını mümkün kılar.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `causal_chain`
+
+---
+
+## Slayt 69: [TEKRAR SAYFASI - CHECKPOINT 7] Sağlık İşgücünün Korunması ve Klinik Yönetim
+
+Bu checkpointte klinik yönetim prensiplerini ve sağlık işgücünün korunmasının hayati önemini pekiştiriyoruz:
+
+- **Aşıların Gücü:** DTP kombine aşısı dünyadaki çocukların %86'sını korumaktadır.
+- **İlaç Eşitsizliği:** Monoklonal antikorlar ve yeni antiviraller aşırı pahalıdır; kitlesel halk sağlığı uygulaması için uygun değildir.
+- **Sağlık İşgücünün Korunması:** Tedaviler ancak kalifiye ve özverili personel uyguladığında yararlıdır; sağlık çalışanlarının korunması yanıtın sürdürülmesi için zorunludur.
+- **KKE ve Doffing:** En yüksek enfeksiyon riski ekipmanı çıkarma (doffing) aşamasındadır; adım adım protokol uygulanmalıdır.
+- **Destekleyici Tedavi:** Spesifik ilaç olmasa bile sıvı-elektrolit ve klinik bakım hayat kurtarır.
+- **Ebola 2014 Kanıtı:** İyi destekleyici bakımla ölüm oranı %75'ten %33'e düşürülmüştür.
+- **Birinci Basamak:** Ebe, hemşire ve toplum sağlığı çalışanları sahadaki güvenin ve filyasyonun omurgasıdır.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `interactive_table`
+
+### Akıl Kartları (Flashcards):
+- **S:** DSÖ verilerine göre difteri-tetanoz-boğmaca (DTP) kombine aşısı küresel çocukların yaklaşık yüzde kaçını korur?
+  - **C:** Çocukların yaklaşık %86'sını korumaktadır.
+  - *İpucu:* Gezegen genelindeki bebek kalkanı
+- **S:** Sağlık çalışanlarının KKE kullanımı sırasında en yüksek bulaş riskinin yaşandığı kritik evre hangisidir?
+  - **C:** KKE'yi çıkarma (doffing) aşamasıdır.
+  - *İpucu:* Tulum ve maskeyi soyunma periyodu
+- **S:** 2014 Batı Afrika Ebola salgınında spesifik ilaç olmadan sadece iyi destekleyici bakımla ölüm oranı yüzde kaçtan kaça düşmüştür?
+  - **C:** Ölüm oranı yaklaşık %75'ten %33'e gerilemiştir.
+  - *İpucu:* Batı Afrika kliniğindeki istatistiki düşüş
+
+---
+
+## Slayt 70: Mini Vaka: Kırım-Kongo Kanamalı Ateşi (KKKA) Kliniğinde Personel Korunması
+
+İç Anadolu'da kırsal bir devlet hastanesi acil servisine vücudundan kene çıkaran, burun kanaması, yüksek ateş ve trombositopenisi (PLT: 18.000/uL) olan 48 yaşında bir çiftçi getiriliyor:
+
+- **Acil Hekimi Yaklaşımı:**
+  - Hekim şüpheli KKKA tanısıyla hastayı derhal tek kişilik yüksek izolasyon odasına alıyor.
+  - Hastaya kan alma veya damar yolu açma işlemi sırasında çift eldiven, sıvı geçirmez tulum, koruyucu gözlük ve N95 maske takılıyor.
+  - Personel iğne batması riskine karşı kesici-delici alet kutusunu yatak başına getiriyor.
+- **Klinik Tedavi:** Hastaya derhal taze donmuş plazma, trombosit süspansiyonu, agresif IV hidrasyon ve destekleyici bakım başlanıyor.
+- **Sonuç:** Doğru KKE ve doffing kuralları sayesinde tek bir sağlık çalışanına dahi bulaş olmadan, hasta 10 günlük destekleyici tedaviyle tamamen iyileşerek taburcu ediliyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 71: Salgın Patojenlerinin Bulaş Yolları ve DSÖ Müdahale Başlıkları
+
+Salgın yönetimi patojenin biyolojisine ve bulaş yoluna göre özelleştirilmiş sektörel müdahaleler gerektirir:
+
+- **Bulaş Yolunun Önemi:** Solunumla bulaşan bir virüs için uygulanan tedbirler (maske, havalandırma), fekal-oral yolla bulaşan bir bakteride (su klorlama) veya kene ile bulaşan bir virüste (vektör kontrolü) tamamen anlamsız kalır.
+- **DSÖ Temel Müdahale Başlıkları (Sınav Spotu):**
+  1. **Klinik Yönetim:** Spesifik antiviraller, antibiyotikler ve destekleyici bakım.
+  2. **Güçlendirilmiş Enfeksiyon Önleme ve Kontrol (IPC):** Hastane içi izolasyon ve KKE standartları.
+  3. **Aşılama:** Duyarlı konak havuzunu kurutma ve sürü bağışıklığı.
+  4. **Güvenli ve Onurlu Defin:** Cenaze ritüellerinde ceset kaynaklı enfeksiyonu engelleme.
+  5. **Vektör Kontrolü:** Sivrisinek, kene ve pire popülasyonunu kırma.
+  6. **Su ve Sanitasyon (WASH):** Güvenli içme suyu sağlama, kanalizasyon ve el yıkama altyapısı.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 72: Vektörle Bulaşan Salgın Patojenleri
+
+Tropikal ve subtropikal kuşaktan iklim değişikliğiyle ılıman bölgelere yayılan en büyük salgın tehditlerinden biri vektör kaynaklı hastalıklardır:
+
+- **Temel Vektör Kaynaklı Hastalıklar (DSÖ Listesi - Sınav Sorusu):**
+  - **Chikungunya Virüsü:** Aedes sivrisinekleriyle bulaşır; şiddetli eklem ağrıları ve ateşle seyreder.
+  - **Sıtma (Malaria):** Anopheles cinsi dişi sivrisineklerle bulaşan Plasmodium parazitleridir.
+  - **Sarı Humma (Yellow Fever):** Aedes ve Haemagogus sivrisinekleriyle bulaşan ölümcül flavivirüstür; aşısı vardır.
+  - **Zika Virüsü:** Aedes sivrisinekleriyle bulaşır; gebelerde fetal mikrosefali ve Guillain-Barré sendromuna yol açar.
+- **Kontrol Stratejisi:**
+  - Sivrisinek üreme alanlarının (durgun sular, eski araba lastikleri, saksı altlıkları) kurutulması.
+  - Biyolojik larvasit uygulamaları ve insektisitli cibinlikler (ITN).
+  - Sarı humma için endemik bölgelere seyahat edenlere zorunlu aşılama.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 73: Hayvan ve Kene Kaynaklı Tehditler: KKKA, Mpox ve Rift Vadisi Ateşi
+
+Zoonotik kökenli salgınların en ölümcül örnekleri hayvan rezervuarları ve eklembacaklılar üzerinden insanlara geçer:
+
+- **Kırım-Kongo Kanamalı Ateşi (KKKA - Sınav Spotu):**
+  - Başlıca bulaş yolu: **Hayvanlar (başlıca Hyalomma cinsi keneler) ve enfekte hayvan kanı/dokusuyla doğrudan temas**.
+  - İkincil bulaş: Nozokomiyal olarak hastane ortamında kan ve vücut sıvılarıyla sağlık personeline bulaşır.
+- **Maymun Çiçeği (Mpox - Sınav Spotu):**
+  - Başlıca bulaş yolu: **Hayvanlar ve insandan insana doğrudan yakın fiziksel/lezyon teması**.
+  - Cilt lezyonları, döküntüler ve kontamine çarşaflarla yayılır.
+- **Rift Vadisi Ateşi (Sınav Spotu):**
+  - Başlıca bulaş yolu: **Hayvanlar (enfekte hayvan dokusu teması) ve vektörler (sivrisinekler)**.
+  - Çiftlik hayvanlarında kitlesel düşüklere (abortus fırtınası) yol açar.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 74: Fekal-Oral ve Su Kaynaklı Salgınlar: Kolera, Polio ve Şigelloz
+
+Altyapı yetersizliği, savaşlar ve doğal afetler sonrasında patlak veren en hızlı salgınlar fekal-oral yolla bulaşan enfeksiyonlardır:
+
+- **Kolera (Vibrio cholerae - Sınav Spotu):**
+  - Başlıca bulaş yolu: **Fekal-oral / kontamine su ve deniz ürünleri**.
+  - Pirinç suyu benzeri masif sekresyonlu diyare; saatler içinde hipovolemik şok ve ölüm. Temel müdahale: Acil klorlama, temiz su sağlama ve oral rehidrasyon sıvısı (ORS).
+- **Poliomiyelit (Çocuk Felci - Sınav Spotu):**
+  - Başlıca bulaş yolu: **Fekal-oral** (nadir solunum).
+  - Motor nöron harabiyeti ve flask paralizi. Temel müdahale: Oral polio aşısı (OPV) ve inaktif polio aşısı (IPV).
+- **Şigelloz (Basilli Dizanteri - Sınav Spotu):**
+  - Başlıca bulaş yolu: **Fekal-oral / gıda ve sinekler**.
+  - Çok düşük enfeksiyon dozu (10-100 bakteri yeterlidir); kanlı-mukuslu diyare ve tenesmus. Temel müdahale: El yıkama, gıda hijyeni.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+- `interactive_table`
+
+---
+
+## Slayt 75: Solunum Yolu Salgınları: Kızamık, Grip ve Koronavirüsler
+
+Küresel çapta yayılma hızı en yüksek olan ve kontrolü en zor salgınlar solunum yoluyla yayılan hastalıklardır:
+
+- **Kızamık (Measles - Sınav Spotu):**
+  - Başlıca bulaş yolu: **Solunum (havada saatlerce asılı kalan ince aerosoller)**.
+  - Bulaştırıcılığı bilinen en yüksek virüstür (R0 = 12-18). Bir sınıfta bir hasta çocuk varsa aşılanmamış herkes enfekte olur.
+  - Tek kesin kurtuluş: İki doz KKK aşısı ile toplum bağışıklığının **%95'in üzerinde** tutulmasıdır.
+- **İnfluenza ve Koronavirüsler:**
+  - Damlacık ve aerosol bulaşı.
+  - Kapalı alanlarda yetersiz havalandırma, kalabalık ortamlar ve yakın temas patojenin amplifikasyonuna yol açar.
+  - Önlemler: Kaynak kontrolü (maske), etkili mekanik havalandırma (HEPA filtre), fiziksel mesafe ve el hijyeni.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 76: Kemirgen Kaynaklı Tarihi Tehdit: Veba (Yersinia pestis)
+
+Orta Çağ'da Avrupa nüfusunun üçte birini yok eden 'Kara Ölüm' günümüzde de endemik odaklar halinde varlığını sürdürmektedir:
+
+- **Bübonik Veba Bulaş Yolu (DSÖ Listesi - Sınav Spotu):**
+  - Başlıca bulaş yolu: **Kemirgenler (rodentler - sıçanlar) ve onların üzerinde yaşayan enfekte pireler (Xenopsylla cheopis)**.
+  - Pireler enfekte kemirgenden kan emdikten sonra insanı ısırarak Yersinia pestis bakterisini lenfatiklere aşılar.
+  - Büyümüş, ağrılı ve nekroze lenf nodları (bübo) gelişir.
+- **Pnömonik Veba (İkincil Dönüşüm):**
+  - Bakteri akciğere ulaştığında insandan insana **solunum yoluyla (öksürük damlacıkları)** bulaşmaya başlar; tedavi edilmezse saatler içinde %100 öldürücüdür.
+- **Müdahale:** Pire ilaçlaması yapılmadan doğrudan sıçanlar zehirlenirse, aç kalan pireler doğrudan insanlara saldırır! Önce pire kontrolü, sonra kemirgen kontrolü yapılmalıdır.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 77: Güvenli ve Onurlu Defin (Safe and Dignified Burial) Prensipleri
+
+Ebola, Marburg ve KKKA gibi yüksek mortaliteli kanamalı ateş salgınlarında cenaze törenleri en büyük süper-bulaş kaynağıdır:
+
+- **Ölü Bedendeki Viral Yük:** Ebola veya KKKA'dan ölen bir hastanın cansız bedenindeki viral yük, yaşayan bir hastadan katbekat daha yüksektir. Kan, kusmuk ve vücut sıvıları aşırı derecede bulaştırıcıdır.
+- **Geleneksel Ritüellerin Tehlikesi:** Cesedi çıplak elle yıkamak, öpmek, sarılmak ve toplu cenaze yemekleri tek bir cenazeden onlarca yeni vakanın çıkmasına yol açar.
+- **Güvenli ve Onurlu Defin Protokolü (DSÖ - Sınav Spotu):**
+  - **Güvenli (Safe):** Cenaze ekibi tam koruyucu tulumlar giyer, ceset sızdırmaz ceset torbasına konur, klor solüsyonuyla dezenfekte edilir.
+  - **Onurlu (Dignified):** Ailenin dini ve kültürel inançlarına saygı gösterilir; aile üyelerinin güvenli mesafeden dua etmelerine ve cenazeyi görmelerine izin verilir.
+- **Halk Sağlığı İlkesi:** Aile dışlanır veya ceset zorla kaçırılırsa halk cenazelerini gizlice gömmeye başlar ve salgın kontrolden çıkar.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `cloze_masking`
+
+---
+
+## Slayt 78: Su ve Sanitasyon (WASH): Salgınların Sessiz Temel Direği
+
+DSÖ'nün 'WASH' (Water, Sanitation and Hygiene) programı, enfeksiyon kontrolünün görünmeyen en büyük kahramanıdır:
+
+- **Su Güvenliği ve Klorlama:** Şebeke suyunda serbest bakiye klor düzeyinin **en az 0.5 mg/L** tutulması kolera, tifo ve hepatit A gibi etkenleri saniyeler içinde etkisiz hale getirir.
+- **Sanitasyon ve Tuvaletler:** İnsan dışkısının içme suyu havzalarından ve tarım arazilerinden tamamen izole edilmesi fekal-oral döngüyü kırar.
+- **El Hijyeni Altyapısı:** Su ve sabuna erişim solunum ve sindirim yolu enfeksiyonlarını %30 ila %50 oranında tek başına azaltır.
+- **Afetlerde WASH:** Deprem, sel veya mülteci krizlerinde ilk 48 saatte temiz su tankerleri ve klor tabletleri sağlanamazsa ikincil salgınlar travmadan daha çok insan öldürür.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 79: [TEKRAR SAYFASI - CHECKPOINT 8] Bulaş Yollarına Göre Salgın Patojenleri ve Kontrol Önlemleri
+
+Bu checkpointte DSÖ'nün bulaş yolları sınıflamasını ve özgül müdahaleleri pekiştiriyoruz:
+
+- **Vektör Kaynaklı:** Chikungunya, sıtma, sarı humma, Zika (Sivrisinek kontrolü, larvasit, cibinlik).
+- **Hayvan / Kene / Temas:** KKKA (Kene ve kan teması), Maymun çiçeği / Mpox (Yakın cilt lezyonu teması), Rift Vadisi ateşi (Hayvan ve vektör).
+- **Fekal-Oral / Su ve Gıda:** Kolera (Su), Polio (Fekal-oral), Şigelloz (Gıda/su) -> WASH ve klorlama.
+- **Solunum Yolu:** Kızamık (Aerosol, R0=12-18), İnfluenza, SARS-CoV-2 -> Maske, havalandırma, %95 aşılama.
+- **Kemirgen Kaynaklı:** Veba (Yersinia pestis - sıçanlar ve pireler) -> Önce pire, sonra kemirgen kontrolü.
+- **Güvenli ve Onurlu Defin:** Ebola ve kanamalı ateşlerde ceset kaynaklı yayılımı dini inançlara saygıyla önleme.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `causal_chain`
+
+### Akıl Kartları (Flashcards):
+- **S:** Kırım-Kongo Kanamalı Ateşi'nin (KKKA) başlıca bulaş yolu ve omurgasız vektörü nedir?
+  - **C:** Hyalomma cinsi keneler ve enfekte hayvan kanı/dokusuyla temastır.
+  - *İpucu:* Kırım-Kongo vektörü
+- **S:** Vibrio cholerae bakterisinin yol açtığı kolera salgınlarında temel bulaş yolu nedir?
+  - **C:** Fekal-oral yol ve kontamine içme sularıdır.
+  - *İpucu:* Koleranın taşınma ortamı
+- **S:** Kanamalı ateş salgınlarında cesetlerden kaynaklanan süper-bulaşları önlemek için uygulanan defin standardı nedir?
+  - **C:** Güvenli ve Onurlu Defindir (Safe and Dignified Burial).
+  - *İpucu:* Dini inançlara saygılı cenaze gömme usulü
+
+---
+
+## Slayt 80: Mini Vaka: Deprem Sonrası Çadır Kentte Su Kaynaklı Kolera Tehdidi
+
+Büyük bir depremin 5. gününde, 20.000 kişinin yaşadığı çadır kentte aniden pirinç suyu görünümünde yoğun sulu ishali olan 12 hasta sahra hastanesine başvuruyor:
+
+- **Epidemiyolog Teşhisi:** Hastaların dışkı mikroskopisinde hareketli Vibrio bakterileri görülüyor; kolera salgını alarmı veriliyor.
+- **Kaynak Taraması:** Çadır kent sakinlerinin ana su borusundaki patlak nedeniyle yakındaki dere suyunu kullandığı ve tuvalet çukurlarının su kaynağına 10 metre mesafede kazıldığı saptanıyor.
+- **Müdahale:**
+  1. Dere suyu kullanımı jandarma kontrolüyle derhal yasaklanıyor.
+  2. Çadır kente tankerlerle klorlanmış (serbest bakiye klor: 0.8 mg/L) içme suyu getiriliyor.
+  3. Tuvaletler su havzasından 50 metre uzağa taşınıyor ve kireçleniyor.
+  4. Sahra hastanesinde ORS ve IV sıvı istasyonu kurularak vaka ölüm oranı %0'da tutuluyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 81: Temel Üreme Sayısı (R0) ve Efektif Üreme Sayısı (Rt)
+
+Salgın matematiğinin ve aşılama hedeflerinin merkezinde üreme sayıları yer alır:
+
+- **Temel Üreme Sayısı (R0 - Sınav Spotu):** Tamamen duyarlı (bağışık olmayan) bir toplumda, enfekte tek bir vakanın bulaştırıcılık süresi boyunca doğrudan enfekte ettiği ortalama ikincil vaka sayısıdır.
+  - Biyolojik ve çevresel bir sabittir (Kızamık için 12-18, Çiçek için 5-7, İnfluenza için 1.3-1.8).
+- **Efektif Üreme Sayısı (Rt / Re):** Toplumda aşılananlar, hastalığı geçirip bağışıklık kazananlar ve alınan tedbirler (maske, mesafe) devreye girdikten sonra **herhangi bir t anındaki gerçek bulaş hızıdır**.
+- **Kritik Eşik:**
+  - **Rt > 1:** Salgın katlanarak büyür (eksponansiyel yayılım).
+  - **Rt = 1:** Salgın sabit/endemik seyreder.
+  - **Rt < 1:** Salgın sönmeye başlar ve yok olur. Aşılama ve müdahalelerin nihai hedefi Rt değerini hızla 1'in altına indirmektir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 82: Sürü Bağışıklığı Eşiği (Herd Immunity Threshold) ve Korunma Mekanizması
+
+Aşılar sadece aşılanan bireyi değil, tüm toplumu koruyan biyolojik bir kalkan oluşturur:
+
+- **Sürü Bağışıklığı Eşiği (HIT):** Bir toplumda salgının kendiliğinden yayılmasını durdurmak için bağışık olması gereken minimum nüfus oranıdır.
+- **Matematiksel Formül (Sınav Spotu):** $$H = 1 - \frac{1}{R_0}$$
+  - R0 ne kadar yüksekse, gereken aşı kapsayıcılığı o kadar yüksek olur!
+  - Örneğin R0 = 2 olan bir hastalıkta: $1 - 1/2 = 0.50$ (%50 bağışıklık yeterlidir).
+  - Ancak kızamık gibi R0 = 18 olan bir virüste: $1 - 1/18 \approx 0.944$ (**en az %95 bağışıklık şarttır!**)
+- **Dolaylı Koruma:** Kanser tedavisi gören çocuklar, organ nakilliler veya aşı yapılamayan yenidoğan bebekler, etraflarındaki herkes aşılandığı için virüsle karşılaşmaz ve korunmuş olurlar.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+
+---
+
+## Slayt 83: Salgında Aşılama Stratejileri: Kitlesel vs Halka Aşılama (Ring Vaccination)
+
+Salgın anında aşı stoğu, zaman ve insan gücü sınırlı olduğunda iki farklı stratejik model uygulanır:
+
+- **1. Kitlesel Aşılama (Mass Vaccination):**
+  - Tüm ülkedeki veya şehirdeki hedef yaş grubunun tamamını aynı anda aşılamayı hedefler.
+  - Çok yüksek kaynak, milyonlarca doz aşı ve devasa lojistik gerektirir; rutin ulusal aşı takvimlerinde ve büyük pandemilerde uygulanır.
+- **2. Halka Aşılama (Ring Vaccination - Sınav Spotu):**
+  - Bir vaka tespit edildiğinde, hastanın etrafında konsantrik bir 'koruma halkası' oluşturulur.
+  - Hastanın birinci derece tüm temaslıları (aile, iş arkadaşları) ve onların da temaslıları (ikinci halka) hızla aşılanır.
+  - Patojenin yayılacağı tüm duyarlı konaklar kalkan altına alınarak virüs hapsedilir.
+- **Avantajı:** Çok daha az aşı dozuyla ve az personelle salgını odakta boğmayı sağlar.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 84: Çiçek Hastalığının Eradikasyonunda Halka Aşılamanın Rolü
+
+Tıp tarihinin en büyük zaferi olan çiçek hastalığının yok edilmesinde anahtar strateji halka aşılama olmuştur:
+
+- **Tarihi Kriz:** 1960'larda DSÖ dünya çapında tüm insanları aşılayarak çiçeği bitirmeye çalışmış, ancak Hindistan ve Afrika'da devasa nüfuslar nedeniyle kitlesel aşılama başarısız olmuştur.
+- **Strateji Değişikliği (Surveillance-Containment):**
+  - DSÖ, tüm dünyayı aşılamak yerine 'Gözetim ve Sınırlama' stratejisine geçti.
+  - Her bir çiçek vakası ödül karşılığı ihbar ettirildi.
+  - Vakanın bulunduğu köyün etrafına derhal filyasyon ekipleri sevk edildi ve vakanın temas ettiği herkes (halka aşılama) aşılandı.
+- **Tarihi Sonuç:** Virüs gidecek başka duyarlı insan bulamadı ve zincir kırıldı; 1977'de Somali'deki son doğal vakadan sonra çiçek yeryüzünden silindi.
+- **Modern Uygulama:** Günümüzde Ebola ve Maymun Çiçeği (Mpox) salgınlarında da halka aşılama en kritik araçtır.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `micro_quiz`
+- `causal_chain`
+
+---
+
+## Slayt 85: Aşı Teknolojileri ve Salgın Yanıtındaki Rolleri
+
+Farklı aşı platformları salgın durumlarında hız, güvenlik ve etkinlik açısından farklı üstünlüklere sahiptir:
+
+- **1. Canlı Attenüe Aşılar (KKK, Suçiçeği, Sarı Humma, OPV):**
+  - Güçlü, uzun ömürlü hücresel ve humoral bağışıklık sağlar; genellikle tek veya iki doz yeterlidir.
+  - Kısıtlılık: İmmün yetmezliği olanlara ve gebelere uygulanamaz; soğuk zincire çok hassastır.
+- **2. İnaktif Aşılar (Hepatit A, Kuduz, IPV):**
+  - Patojen öldürülmüştür; güvenlidir, immün yetmezliği olanlara yapılabilir.
+  - Kısıtlılık: Daha zayıf bağışıklık oluşturur, rapel (pekiştirme) dozları gerektirir.
+- **3. mRNA Aşıları (COVID-19 - BNT162b2, mRNA-1273):**
+  - **Salgın Avantajı (Sınav Spotu):** Genom sekansı belirlendikten sonra **haftalar içinde** laboratuvarda tasarlanıp üretilebilir; salgın hızına yetişen en esnek platformdur.
+  - Kısıtlılık: Ultra-soğuk zincir (-70°C) gereksinimi.
+- **4. Rekombinant ve Protein Subunit Aşılar (Hepatit B, HPV):**
+  - Yüksek güvenlik profili ve standart buzdolabı (+2°C ila +8°C) uyumu.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 86: Soğuk Zincir Yönetimi (Cold Chain): Biyolojik Güvenliğin Temeli
+
+Bir aşı fabrikada ne kadar mükemmel üretilirse üretilsin, hedef kola ulaşana kadar soğuk zincir bozulursa suya dönüşür:
+
+- **Soğuk Zincir Tanımı (Sınav Spotu):** Bir aşının üretim aşamasından kişiye uygulanma anına kadar etkinliğini ve biyolojik gücünü kaybetmemesi için gereken **kesintisiz sıcaklık kontrolü sistemidir**.
+- **Standart Sıcaklık Aralığı:** Çoğu rutin aşı (KKK, DaBT, Hepatit B) **+2°C ile +8°C arasında** saklanmalı ve taşınmalıdır. Asla dondurulmamalı veya ısıya maruz bırakılmamalıdır.
+- **Ultra-Soğuk Zincir:** Bazı yeni nesil mRNA aşıları **-70°C ile -80°C** derin dondurucu ve kuru buz lojistiği gerektirir.
+- **İzleme Araçları:** Aşı flakon izleyicileri (VVM - Vaccine Vial Monitor), dijital sıcaklık kayıt cihazları (data logger).
+- **Soğuk Zincir Kırılırsa:** Aşı denatüre olur, antijenik yapısını kaybeder; hastaya uygulandığında bağışıklık sağlamaz ve sahte bir güven duygusu yaratır.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `micro_quiz`
+
+---
+
+## Slayt 87: Aşı Tereddüdü, Aşı Reddi ve Toplumsal Bağışıklık Duvarının Çökmesi
+
+DSÖ tarafından küresel sağlığı tehdit eden 10 temel tehlikeden biri olarak tanımlanan olgu biyolojik değil psikolojiktir: **Aşı Tereddüdü (Vaccine Hesitancy)**:
+
+- **Aşı Karşıtlığının Anatomisi:** Aşıların güvenliğine, yan etkilerine veya arkasındaki ilaç firmalarına/devlete duyulan şüphe sonucu aşı yaptırmakta tereddüt etme veya tamamen reddetme durumudur.
+- **Eşik Değerin Altına Düşüş:** Bir toplumda aşılama oranı sürü bağışıklığı eşiğinin (örneğin kızamık için %95) altına düştüğünde, patojen duyarlı cepler (clusters) bularak yeniden epidemilere yol açar.
+- **Son Yıllardaki Kızamık Patlamaları:** Avrupa ve Amerika'da aşı reddi nedeniyle binlerce çocukta yeniden kızamık salgınları ve buna bağlı subakut sklerozan panensefalit (SSPE) vakaları görülmüştür.
+- **Çözüm:** Aşıyı zorunlu kılmaktan ziyade, aile hekimlerinin birebir şefkatli iletişimi ve bilimsel şeffaflıktır.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 88: Küresel Aşı Eşitliği ve COVAX: 'Kimse Güvende Değilse Hiç Kimse Güvende Değildir'
+
+Pandemiler sınır tanımaz; zengin ülkelerin tüm nüfusunu aşılaması küresel salgını tek başına sonlandıramaz:
+
+- **Aşı Milliyetçiliği Tehdidi:** Zengin ülkelerin aşı stoklarını kapatıp ihtiyaçlarının katbekat fazlasını depolaması, yoksul ülkelerdeki sağlık çalışanlarının dahi aşısız kalmasına yol açmıştır.
+- **Yeni Varyant Fabrikası:** Afrika veya Asya'da aşıya erişemeyen milyarlarca insan enfekte oldukça, virüs kontrolsüzce çoğalır ve aşıdan kaçan yeni mutant varyantlar (Delta, Omicron) türetir. Bu varyantlar eninde sonunda dönüp zengin ülkeleri de vurur!
+- **COVAX Girişimi (DSÖ):** Dünyadaki her ülkenin, ekonomik gücüne bakılmaksızın aşıya eşit erişimini sağlamak için kurulan küresel aşı paylaşım platformudur.
+- **Halk Sağlığının Küresel Kuralı:** Bir salgında yeryüzündeki son insan güvende olana kadar, hiç kimse tamamen güvende değildir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 89: [TEKRAR SAYFASI - CHECKPOINT 9] Aşılar, İmmünizasyon Programları ve Salgın Kontrolü
+
+Bu checkpointte salgın matematiğini, aşı stratejilerini ve soğuk zincir lojistiğini özetliyoruz:
+
+- **R0 ve Rt:** R0 doğal bulaş potansiyelidir; Rt müdahalelerle 1'in altına indirilmelidir.
+- **Sürü Bağışıklığı Eşiği:** $H = 1 - 1/R_0$; kızamık gibi yüksek R0 patojenlerde en az %95 aşılama gerekir.
+- **Halka Aşılama (Ring Vaccination):** Vakanın etrafındaki doğrudan ve dolaylı temaslıların aşılanması; çiçek hastalığını tarihten silen anahtar stratejidir.
+- **Aşı Teknolojileri:** mRNA aşıları salgında en hızlı tasarlanan ve üretilen platformdur.
+- **Soğuk Zincir:** Standart aşılar için **+2°C ile +8°C**; soğuk zincir bozulursa aşı inaktive olur ve bağışıklık bırakmaz.
+- **Aşı Tereddüdü:** Güven kaybı sürü bağışıklığını deler.
+- **COVAX ve Eşitlik:** Küresel aşı adaleti sağlanmadan pandemiler sona erdirilemez.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `interactive_table`
+
+### Akıl Kartları (Flashcards):
+- **S:** Tamamen duyarlı bir toplumda enfekte bir vakanın bulaştırdığı ortalama ikincil vaka sayısına ne ad verilir?
+  - **C:** Temel üreme sayısıdır (R0).
+  - *İpucu:* Sıfır anındaki bulaştırma gücü
+- **S:** Salgın kontrolünde vakanın doğrudan ve dolaylı temaslılarını hızla aşılayarak bulaşı odakta sınırlandırma stratejisine ne denir?
+  - **C:** Halka aşılamadır (Ring vaccination).
+  - *İpucu:* Çember biçiminde koruma
+- **S:** Rutin çocukluk çağı aşılarının saklanması ve taşınması gereken standart soğuk zincir sıcaklık aralığı nedir?
+  - **C:** +2°C ile +8°C arasındadır.
+  - *İpucu:* Standart soğutucu dolap derecesi
+
+---
+
+## Slayt 90: Mini Vaka: Yatılı Bölge Okulunda Kızamık Salgını ve Halka Aşılama
+
+500 öğrencinin kaldığı bir yatılı bölge ortaokulunda, aşı karnesi eksik olan 11 yaşında bir çocukta yüksek ateş, burun akıntısı, Koplik lekeleri ve yüzden başlayan makülopapüler döküntü görülüyor:
+
+- **Epidemiyolog Teşhisi:** Klinik olarak kızamık tanısı konuyor. Kızamığın R0 değerinin 15 olduğu ve havada asılı aerosollerle hızla yayılacağı biliniyor.
+- **Acil Müdahale Adımları:**
+  1. Hasta çocuk derhal tek kişilik negatif basınçlı/havalandırılan odaya alınıyor.
+  2. Filyasyon ekibi tüm okulun aşı kayıtlarını 2 saat içinde inceliyor; 42 öğrencinin aşısız veya tek doz aşılı olduğu saptanıyor.
+  3. **Halka Aşılama:** İlçe Sağlık Müdürlüğü'nden +2°C / +8°C soğuk zincirle getirilen KKK aşıları, temasın ilk 72 saati içinde bu 42 öğrenciye ve tüm okul personeline uygulanıyor.
+- **Sonuç:** Bulaş odağı halka aşılamayla kapatılıyor; okulda ikinci bir vaka dahi çıkmadan salgın önleniyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 91: Uluslararası Sağlık Tüzüğü (UST / IHR 2005) ve Hukuki Çerçeve
+
+Küreselleşen dünyada hiçbir ülke sınırlarını biyolojik patojenlere karşı tek başına kapatamaz; uluslararası hukuk kuralları şarttır:
+
+- **UST / IHR 2005 Tanımı (Sınav Spotu):** Dünya Sağlık Örgütü üyesi 196 ülkeyi yasal olarak bağlayan, uluslararası hastalık yayılımını önlemek, kontrol etmek ve kamu sağlığı yanıtı vermek için hazırlanmış **küresel bağlayıcı sağlık antlaşmasıdır**.
+- **Temel Felsefe:** Uluslararası trafiğe ve ticarete **gereksiz ve orantısız müdahalelerden kaçınırken**, halk sağlığı güvenliğini en üst düzeyde korumaktır.
+- **Ülkelerin Yükümlülükleri:**
+  - Olağan dışı halk sağlığı olaylarını 24 saat içinde DSÖ'ye bildirmek.
+  - Havalimanı, liman ve kara sınır kapılarında asgari sürveyans ve karantina altyapısını kurmak.
+  - Biyolojik, kimyasal ve nükleer tehditleri erken yakalayacak ulusal çekirdek kapasiteleri (core capacities) geliştirmek.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 92: Uluslararası Öneme Sahip Halk Sağlığı Acil Durumu (PHEIC)
+
+DSÖ Genel Direktörü tarafından ilan edilen en üst düzey küresel alarm seviyesi **PHEIC** (Public Health Emergency of International Concern) olarak adlandırılır:
+
+- **PHEIC Tanımı (Sınav Spotu):** Hastalığın uluslararası yayılımı yoluyla diğer devletler için bir halk sağlığı riski oluşturduğu ve **koordine edilmiş küresel bir yanıt gerektiren olağanüstü olaydır**.
+- **Karar Algoritması (UST Ek 2):** Bir olayın PHEIC olup olmadığı 4 soruyla test edilir:
+  1. Halk sağlığı etkisi **ciddi** mi?
+  2. Durum **olağan dışı veya beklenmedik** mi?
+  3. **Uluslararası yayılma riski** belirgin mi?
+  4. Uluslararası **seyahat veya ticaret kısıtlaması riski** var mı?
+- **Tarihi PHEIC İlanları:** 2009 H1N1 Pandemisi, 2014 Çocuk Felci, 2014 Batı Afrika Ebola, 2016 Zika Virüsü, 2020 COVID-19 ve 2022-2024 Mpox (Maymun Çiçeği).
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `micro_quiz`
+
+---
+
+## Slayt 93: İzolasyon vs Karantina: Hukuki, Tıbbi ve Epidemiyolojik Ayrım
+
+Tıp ve halk sağlığı terminolojisinde en sık birbirine karıştırılan iki kavram izolasyon ve karantinadır. Hekimler bu ayrımı kesin olarak bilmelidir:
+
+- **İzolasyon (Yalıtım - Sınav Spotu):**
+  - **Kime Uygulanır:** Bulaşıcı hastalığı **kanıtlanmış (testi pozitif) veya semptom gösteren HASTA kişilere** uygulanır.
+  - **Amaç:** Patojen saçan enfekte kişinin sağlıklı bireylerle temasını keserek bulaş zincirini durdurmaktır. Hastane odasında veya evde tek bir odada yapılır.
+- **Karantina (Sınav Spotu):**
+  - **Kime Uygulanır:** Bulaşıcı bir hastalık etkenine **maruz kalmış (temaslı), ancak henüz HASTALANMAMIŞ ve SEMPTOMSUZ (sağlıklı görünen) kişilere** uygulanır.
+  - **Amaç:** Kişi kuluçka (inkübasyon) süresinde olabilir; semptomlar çıktığında veya kuluçka süresi bitene kadar toplum içine çıkmasını kısıtlamaktır.
+  - **Süre:** Hastalığın bilinen **maksimum kuluçka süresi** kadardır (örneğin COVID-19 için 10-14 gün, Ebola için 21 gün).
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+
+---
+
+## Slayt 94: Salgınlarda Biyoetik: Bireysel Özgürlükler vs Toplum Yararı (Siracusa İlkeleri)
+
+Salgın yönetimi tıp ile insan haklarının en sert çarpıştığı biyoetik alanıdır:
+
+- **Etik İkilem:** Bir bireyin seyahat etme, çalışma veya toplanma özgürlüğü; toplumun hayatta kalma ve sağlıklı yaşama hakkıyla çatıştığında ne yapılmalıdır?
+- **Siracusa İlkeleri (BM İnsan Hakları Standardı - Sınav Spotu):** Salgın döneminde bireysel özgürlükleri kısıtlayan tedbirlerin hukuki ve etik olabilmesi için 5 şartı sağlaması zorunludur:
+  1. **Kanunilik:** Kısıtlama keyfi değil, açık bir kanuna dayanmalıdır.
+  2. **Meşru Amaç:** Amaç yalnızca halk sağlığını korumak olmalıdır; siyasi baskı aracı olamaz.
+  3. **Zorunluluk:** Başka hiçbir alternatifle hedefe ulaşılamıyor olmalıdır.
+  4. **Orantılılık:** Kısıtlama tehdidin büyüklüğüyle orantılı olmalı; en az kısıtlayıcı yol seçilmelidir.
+  5. **Ayrımcılık Yasağı:** Belirli bir ırk, din veya sosyal gruba karşı ayrımcı uygulanamaz.
+
+**İnteraktif Öğeler:**
+- `micro_quiz`
+- `active_recall`
+
+---
+
+## Slayt 95: Geleceğin Tehdidi: 'Hastalık X' (Disease X) ve Bilinmeyene Hazırlık
+
+DSÖ'nün öncelikli patojenler listesinde Ebola, Zika veya SARS'ın yanında çok özel ve gizemli bir başlık yer alır:
+
+- **Hastalık X Tanımı (Sınav Spotu):** İnsanlarda henüz bilinmeyen, şu anda hayvan rezervuarlarında sessizce bekleyen, ancak gelecekte ciddi bir küresel pandemiye yol açma potansiyeli taşıyan **varsayımsal/öngörülen bilinmeyen bir patojendir**.
+- **Felsefi ve Stratejik Amaç:** Salgın hazırlıklarının sadece bilinen virüslere (örneğin gribe) odaklanmasını engellemek; 'bilinmeyene karşı' esnek aşı platformları, hızlı genomik dizileme ve çok amaçlı yoğun bakım kapasiteleri inşa etmektir.
+- **COVID-19 Örneği:** SARS-CoV-2 ortaya çıktığında tıp dünyası için tam bir 'Hastalık X' örneğiydi; hazırlıklı olan ülkeler moleküler tanı ve mRNA teknolojileriyle hızla adapte olabildi.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `cloze_masking`
+- `branching_logic`
+
+---
+
+## Slayt 96: Erken Uyarı ve Küresel Yanıt Ağları (GOARN ve Entegre Sürveyans)
+
+Hiçbir ülke küresel bir patojeni tek başına durduramaz; uluslararası bilimsel ve operasyonel dayanışma şarttır:
+
+- **GOARN (Global Outbreak Alert and Response Network - Sınav Spotu):** Dünya Sağlık Örgütü koordinasyonunda çalışan, 250'den fazla teknik kurum, üniversite ve laboratuvarı barındıran **Küresel Salgın Uyarı ve Yanıt Ağıdır**.
+  - Bir ülkede salgın patlak verdiğinde ve yerel kapasite aşıldığında; GOARN uzman epidemiyologları, saha laboratuvarlarını ve lojistiği 48 saat içinde o ülkeye sevk eder.
+- **Dijital ve Açık Kaynak Sürveyans (EIOS):** Yapay zeka ve internet tarama botları (ProMED, EIOS), dünyadaki tüm dillerdeki yerel haberleri, sosyal medya paylaşımlarını ve hastane yoğunluklarını tarayarak resmi bildirimden günler önce salgın ipuçlarını yakalar.
+- **Genomik Sürveyans:** Viral mutasyonların küresel veri tabanlarına (GISAID) eş zamanlı yüklenmesi varyantların anlık izlenmesini sağlar.
+
+**İnteraktif Öğeler:**
+- `causal_chain`
+- `micro_quiz`
+- `causal_chain`
+
+---
+
+## Slayt 97: Salgın Sonrası İnceleme: After-Action Review (AAR) ve Sistematik İyileşme
+
+Salgın kontrol altına alındığında veya bittiğinde süreç tamamlanmış sayılmaz; en kritik öğrenme aşaması başlar:
+
+- **After-Action Review (AAR - Eylem Sonrası Değerlendirme):** Salgın yanıtına katılan tüm kurumların (sağlık, emniyet, yerel yönetim, sivil toplum) bir araya gelerek yanıtın güçlü ve zayıf yönlerini açık yüreklilikle analiz ettiği yapılandırılmış niteliksel bir incelemedir.
+- **Dört Temel AAR Sorusu (Sınav Spotu):**
+  1. Ne yapılması **planlanmıştı**?
+  2. Gerçekte ne **yaşandı**?
+  3. Planlanan ile gerçekleşen arasındaki **farklar neden kaynaklandı**?
+  4. Bir sonraki salgında aynı hataları yapmamak için **neyi değiştirmeliyiz**?
+- **Suçlama Değil Öğrenme:** AAR bir mahkeme veya günah keçisi arama süreci değildir; sistemik aksaklıkları tespit edip mevzuatı ve stokları güncelleme mekanizmasıdır.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `cloze_masking`
+
+---
+
+## Slayt 98: Tıp Hekiminin Salgın Yönetimindeki Liderlik Rolü ve Mesleki Yemin
+
+Geleceğin hekimleri olarak tıp öğrencileri, salgın anında sadece reçete yazan bir teknisyen değil, toplumun en güvenilir lideridir:
+
+- **Klinisyenin Eşsiz Gücü (Sınav Spotu):** Bir salgını laboratuvarlar veya algoritmalar değil; olağan dışı bir semptomu fark eden **uyanık ve şüpheci bir ilk basamak hekimi** başlatır veya durdurur.
+- **Liderlik ve Sakinlik:** Toplum panik içindeyken hekimin sergileyeceği rasyonel, bilimsel ve şefkatli duruş kitlesel histeriyi engeller.
+- **Etik Sadakat:** Hastanın kimliğine, inancına veya sosyal statüsüne bakılmaksızın eşit bakım vermek, hekimlik andının salgınlardaki en asil sınavıdır.
+- **Mesleki Dayanışma:** Hekimler, hemşirelerden temizlik personeline kadar tüm sağlık çalışanlarıyla tek bir zincirin halkaları gibi kenetlenmelidir.
+
+**İnteraktif Öğeler:**
+- `before_after_slider`
+- `active_recall`
+
+---
+
+## Slayt 99: Çok Sektörlü Salgın Simülasyonu: Küresel Patojen Krizinde Stratejik Karar Akışı
+
+Uluslararası bir liman kentinde acil servis hekimi olarak nöbettesiniz. Bir yük gemisinden indirilen 3 denizcide yüksek ateş, hemoptizi ve solunum yetmezliği saptanıyor:
+
+- **1. Adım (Klinik Şüphe):** Hastalar derhal negatif basınçlı izolasyona alınıyor; KKE ile müdahale ediliyor ve İl Sağlık Müdürlüğü ASOM'a acil sürveyans bildirimi yapılıyor.
+- **2. Adım (Filyasyon ve Sınır Kontrolü):** Gemideki diğer 25 mürettebat kabinlerinde **karantinaya** alınıyor (maksimum kuluçka süresince temaslı takibi).
+- **3. Adım (Laboratuvar ve Küresel İletişim):** Numuneler referans laboratuvara gönderiliyor; patojenin yeni bir mutant solunum virüsü olduğu saptanıyor. Durum 24 saat içinde UST/IHR kapsamında DSÖ'ye bildiriliyor.
+- **4. Adım (Risk İletişimi):** Sosyal medyada 'limandan şehre veba yayıldı' yalanları çıkmadan önce Sağlık Bakanlığı basın toplantısıyla doğru bilgiyi paylaşıyor; dedikoduların önü kesiliyor.
+- **Sonuç:** Çok sektörlü koordinasyon ve erken müdahale ile yerel yayılım başlamadan salgın sınırlanıyor.
+
+**İnteraktif Öğeler:**
+- `branching_logic`
+- `micro_quiz`
+
+---
+
+## Slayt 100: [TEKRAR SAYFASI - CHECKPOINT 10] Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri Bütüncül Özeti
+
+Bu son checkpointte Ders 14'ün tüm temel halk sağlığı ve epidemiyoloji ilkelerini birleştiriyoruz:
+
+- **1. Salgın Tehditleri:** 1970'ten beri 1500+ yeni patojen; ortaya çıkanların %70'i zoonotik (Tek Sağlık).
+- **2. Hazırlık ve Tanı:** İyi sürveyans, sağlıklı çevre, bilimsel yatırım; tanı ilk klinisyenle başlar!
+- **3. Epidemik Fazlar:** Giriş -> Lokal yayılım -> Amplifikasyon -> Azalma. Sınırlama ilk vakada başlar.
+- **4. Eliminasyon vs Eradikasyon:** Eliminasyon bölgesel sıfırlanmadır (aşı sürer); eradikasyon küresel kalıcı yok oluştur (yalnızca Çiçek).
+- **5. Yanıtın 4 Bileşeni:** Kurumlar arası koordinasyon (ASOM), sağlık enformasyonu (sürveyans: kişi-zaman-yer, müdahale: süreç/çıktı), risk iletişimi, sağlık müdahaleleri.
+- **6. Toplum ve İletişim:** Buyurgan dil bitti, önce güven; infodemiye karşı konuş, dinle, dedikoduyu engelle.
+- **7. Sağlık İşgücü ve Klinik Bakım:** Sağlık işgücünü korumak esastır; destekleyici bakımla Ebola'da ölüm %75'ten %33'e indi!
+- **8. Bulaş Yolları:** Vektör (Chikungunya, sarı humma, sıtma), Kene (KKKA), Fekal-oral (Kolera, polio), Solunum (Kızamık), Kemirgen (Veba), Güvenli ve Onurlu Defin.
+- **9. Aşı ve Matematik:** $H = 1 - 1/R_0$; halka aşılama çiçeği bitirdi; soğuk zincir (+2°C/+8°C).
+- **10. Hukuk ve Etik:** IHR 2005, PHEIC alarmı, İzolasyon (hasta) vs Karantina (temaslı), Hastalık X hazırlığı.
+
+**İnteraktif Öğeler:**
+- `interactive_table`
+- `causal_chain`
+
+### Akıl Kartları (Flashcards):
+- **S:** Bulaşıcı hastalığı kesinleşmiş hastaya uygulanan yalıtım ile semptomsuz temaslıya uygulanan kısıtlama arasındaki terim farkı nedir?
+  - **C:** Hasta kişiye izolasyon, semptomsuz temaslıya kuluçka süresince karantina uygulanır.
+  - *İpucu:* İki farklı ayırma terimi
+- **S:** Dünya Sağlık Örgütü tarafından ilan edilen en üst düzey küresel halk sağlığı alarm statüsü nedir?
+  - **C:** PHEIC'tir (Uluslararası Öneme Sahip Halk Sağlığı Acil Durumu).
+  - *İpucu:* Küresel en üst alarm kodu
+- **S:** Salgın sona erdiğinde tüm paydaşların güçlü ve zayıf yönleri analiz ettiği yapılandırılmış öğrenme sürecine ne ad verilir?
+  - **C:** Eylem Sonrası İncelemedir (After-Action Review / AAR).
+  - *İpucu:* Kriz bitimi sistematik değerlendirme
+
+---

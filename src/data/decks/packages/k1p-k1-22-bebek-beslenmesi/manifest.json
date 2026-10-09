@@ -1,0 +1,31 @@
+{
+  "id": "k1p-k1-22-bebek-beslenmesi",
+  "title": "Bebek Beslenmesi",
+  "subtitle": "Anne Sütü, Emzirme Dinamikleri, Tamamlayıcı Beslenme ve Çocukluk Çağı Malnütrisyonu",
+  "slug": "k1p-k1-22-bebek-beslenmesi",
+  "version": "1.0.0",
+  "category": "Dönem 1 - Kurul 1",
+  "department": "Halk Sağlığı",
+  "lecturer": "Doç. Dr. Nergiz Sevinç (Halk Sağlığı ABD)",
+  "sourcePdf": "Kurul 1 - Ders 22: Bebek Beslenmesi (Doç. Dr. Nergiz Sevinç)",
+  "stats": {
+    "slideCount": 100,
+    "questionCount": 84,
+    "flashcardCount": 30,
+    "elementCount": 304,
+    "elementDiversity": {
+      "cloze_masking": "87 (%28.6)",
+      "causal_chain": "29 (%9.5)",
+      "active_recall": "50 (%16.4)",
+      "interactive_table": "37 (%12.2)",
+      "micro_quiz": "39 (%12.8)",
+      "branching_logic": "29 (%9.5)",
+      "before_after_slider": "33 (%10.9)"
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "content": "content.md",
+    "blocks": "blocks.html"
+  }
+}

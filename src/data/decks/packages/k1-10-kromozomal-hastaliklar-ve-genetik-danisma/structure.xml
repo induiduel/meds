@@ -1,0 +1,941 @@
+<?xml version="1.0" ?>
+<learningDeck id="k1p-k1-10-kromozomal-hastaliklar-ve-genetik-danisma" version="2.0.0" totalSlides="100">
+  <metadata>
+    <title>Kromozomal Hastalıklar ve Genetik Danışma (Yeni Mikro-Ders)</title>
+    <discipline>Tıbbi Genetik</discipline>
+    <instructor>Dr. Öğr. Üyesi Serap Arslan</instructor>
+  </metadata>
+  <slides>
+    <slide number="1" badge="Genetik Temeller" isCheckpoint="false">
+      <title>İnsan Genom Organizasyonu: Normal Karyotip ve Sitogenetik Esaslar</title>
+      <subtitle>Hücresel Genetik Mimari ve Kromozomal Düzen</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="interactive_table"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="2" badge="Genomik Sınıflandırma" isCheckpoint="false">
+      <title>Kromozom Anomalilerinin Sınıflandırılması: Sayısal ve Yapısal Ayrım</title>
+      <subtitle>Kromozomal Bozuklukların Genomik Tipolojisi</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="3" badge="Gen Dozajı" isCheckpoint="false">
+      <title>Dengeli ve Dengesiz Kromozom Anomalileri: Gen Dozajı Prensibi</title>
+      <subtitle>Kromozomal Dengesizliklerin Klinik ve Fenotipik Yansımaları</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="4" badge="Sayısal Anomaliler" isCheckpoint="false">
+      <title>Sayısal Kromozom Anomalilerine Giriş: Öploidi ve Anöploidi</title>
+      <subtitle>Kromozom Sayım Sapmalarının Sitogenetik Tanımları</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="active_recall"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="5" badge="Poliploidi Biyolojisi" isCheckpoint="false">
+      <title>Poliploidiler: Triploidi (69 Kromozom) ve Tetraploidi Dinamikleri</title>
+      <subtitle>Spontan Abortuslarda Yüksek İnsidans ve Ebeveyn Kökeni Etkileri</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="6" badge="Fetal Sitogenetik" isCheckpoint="false">
+      <title>Spontan Abortuslarda Sitogenetik: Fetal Kayıpların Kromozomal Haritası</title>
+      <subtitle>Erken Gebelik Kayıplarında Kromozomal Etiyolojinin Ağırlığı</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="7" badge="Ayrılamama Biyolojisi" isCheckpoint="false">
+      <title>Anöploidi Mekanizmaları: Mayotik Ayrılamama (Nondisjunction)</title>
+      <subtitle>Kromozom Ayrılma Kusurları ve Gamet Anöploidisi</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="8" badge="Ayrılamama Analizi" isCheckpoint="false">
+      <title>Mayoz I vs Mayoz II Ayrılamamasının Moleküler Ayrımı</title>
+      <subtitle>Parental Homologların ve Heterozigotluğun Karyotipik Analizi</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="9" badge="Checkpoint 1" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 1] Sitogenetik Temeller ve Kromozomal Anomalilerin Sınıflandırılması</title>
+      <subtitle>Bölüm Sonu Entegrasyonu ve Aktif Hatırlama İstasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="10" badge="Mozaisizm Mekanizmaları" isCheckpoint="false">
+      <title>Anafazda Geri Kalma (Anaphase Lagging) ve Post-Zigotik Mozaisizm</title>
+      <subtitle>Mitotik Ayrılma Hataları ve Hücresel Heterojenite</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="11" badge="Yapısal Anomaliler" isCheckpoint="false">
+      <title>Yapısal Kromozom Anomalilerinin Biyolojik Temeli: Kırıklar ve Onarım</title>
+      <subtitle>DNA Çift Zincir Kırıkları ve Hatalı Rekombinasyon Mekanizmaları</subtitle>
+      <interactiveElements count="4">
+        <element type="cloze_masking"/>
+        <element type="interactive_table"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="12" badge="Delesyon Biyolojisi" isCheckpoint="false">
+      <title>Delesyonlar (Parsiyel Monozomiler): Terminal ve İnterstisyel Tipler</title>
+      <subtitle>Kromozomal Segment Kayıpları ve Sitogenetik Boyut</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="13" badge="Haploinsüfisyens" isCheckpoint="false">
+      <title>Haploinsüfisyens Kavramı: Dozaja Duyarlı Genlerin Fenotipik İmzası</title>
+      <subtitle>Kromozomal Delesyonların Moleküler Patogenezi</subtitle>
+      <interactiveElements count="4">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="14" badge="Mikrodelesyonlar" isCheckpoint="false">
+      <title>Mikrodelesyon ve Mikroduplikasyon Sendromları: Moleküler Sitogenetik</title>
+      <subtitle>Kromozomal Mikroarray (CMA) ve FISH ile Tanınan Submikroskobik Lezyonlar</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="15" badge="Duplikasyon Mekaniği" isCheckpoint="false">
+      <title>Duplikasyonlar (Parsiyel Trizomiler) ve Eşit Olmayan Krossing-Over</title>
+      <subtitle>Kromozomal Segment Fazlalıkları ve NAHR Mekaniği</subtitle>
+      <interactiveElements count="4">
+        <element type="before_after_slider"/>
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="16" badge="İnversiyon Biyolojisi" isCheckpoint="false">
+      <title>İnversiyonlar: Parasentrik ve Perisentrik Dinamikler</title>
+      <subtitle>Kromozomal Segmentlerin 180° Dönüşü ve Dengeli Yapı</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="17" badge="İnversiyon Rekombinasyonu" isCheckpoint="false">
+      <title>İnversiyon Taşıyıcılarında Gametogenez ve Rekombinasyon Riskleri</title>
+      <subtitle>İnversiyon İlmeği (Loop) ve Dengesiz Gamet Üretimi</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="branching_logic"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="18" badge="Ring ve İzokromozom" isCheckpoint="false">
+      <title>Halka (Ring) Kromozomlar ve İzokromozom Mekanizmaları</title>
+      <subtitle>Kromozom Uç Füzyonları ve Transvers Sentromer Bölünmesi</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="19" badge="Checkpoint 2" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 2] Yapısal Kromozom Anomalileri ve Kırık-Birleşme Mekanizmaları</title>
+      <subtitle>Bölüm Sonu Entegrasyonu ve Aktif Hatırlama İstasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="active_recall"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="20" badge="Marker Kromozomlar" isCheckpoint="false">
+      <title>Süpernümerer Marker Kromozomlar (sSMC) ve Klinik Değerlendirme</title>
+      <subtitle>Sitogenetik Olarak Tanımlanamayan Ekstra Küçük Parçalar</subtitle>
+      <interactiveElements count="3">
+        <element type="branching_logic"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="21" badge="Resiprokal Translokasyon" isCheckpoint="false">
+      <title>Translokasyon Çeşitleri: Resiprokal Translokasyon ve Kuadrivalan Yapısı</title>
+      <subtitle>Homolog Olmayan Kromozomlar Arasında Parça Değişimi</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="22" badge="Segregasyon Modelleri" isCheckpoint="false">
+      <title>Resiprokal Translokasyonlarda Mayotik Segregasyon Modelleri</title>
+      <subtitle>Alternatif, Bitişik-1 (Adjacent-1) ve Bitişik-2 Dağılımları</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="23" badge="Robertsonian Mekanizması" isCheckpoint="false">
+      <title>Robertsonian Translokasyonlar: Akrosentrik Kromozomların Sentromerik Füzyonu</title>
+      <subtitle>İnsan Türünde En Yaygın Yapısal Kromozom Anomalisi</subtitle>
+      <interactiveElements count="4">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="24" badge="Translokasyon Tipleri" isCheckpoint="false">
+      <title>En Sık Robertsonian Translokasyonlar: rob(13;14) ve rob(14;21)</title>
+      <subtitle>Kromozomal Rekombinasyon Sıcak Noktaları ve Klinik Spektrum</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="25" badge="Trivalan Ayrılması" isCheckpoint="false">
+      <title>Robertsonian Taşıyıcılarda Gametogenez ve Trivalan Segregasyonu</title>
+      <subtitle>Üçlü Kromozom Kompleksi ve Teorik Gamet İhtimalleri</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="active_recall"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="26" badge="Ebeveyn Riski" isCheckpoint="false">
+      <title>Translokasyon Taşıyıcılarında Ebeveyn Cinsiyetine Göre Risk Farklılıkları</title>
+      <subtitle>Anne Taşıyıcılığı (%15) ve Baba Taşıyıcılığı (%4-5) Dinamiği</subtitle>
+      <interactiveElements count="4">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="27" badge="İnfertilite ve Düşükler" isCheckpoint="false">
+      <title>Tekrarlayan Fetal Kayıplar ve İnfertilitede Sitogenetik Tarama</title>
+      <subtitle>Habitüel Abortus Etiyolojisinde Dengeli Ebeveyn Taşıyıcılığı</subtitle>
+      <interactiveElements count="3">
+        <element type="branching_logic"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="28" badge="Onkogenetik Translokasyonlar" isCheckpoint="false">
+      <title>Kanser Sitogenetiğinde Somatik Translokasyonlar</title>
+      <subtitle>Onkojenik Füzyon Genleri ve Kimerik Protein Oluşumu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="29" badge="Checkpoint 3" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 3] Translokasyon Biyolojisi, Segregasyon ve Robertsonian Mekanizma</title>
+      <subtitle>Bölüm Sonu Entegrasyonu ve Aktif Hatırlama İstasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="30" badge="Kompleks Düzenlenmeler" isCheckpoint="false">
+      <title>İnsersiyonel Translokasyonlar ve Kompleks Kromozomal Düzenlenmeler</title>
+      <subtitle>Üç Kırıklı Segment Transferleri ve CCR Dinamikleri</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="31" badge="Otozomal Trizomiler" isCheckpoint="false">
+      <title>Canlı Doğumla Bağdaşan Otozomal Trizomiler: Genel Bakış ve Epidemiyoloji</title>
+      <subtitle>Trizomi 21, Trizomi 18 ve Trizomi 13 Spektrumu</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="32" badge="Down Sendromu" isCheckpoint="false">
+      <title>Down Sendromu (Trizomi 21): Genel Biyoloji ve Epidemiyoloji</title>
+      <subtitle>Orta Derece Zihinsel Yetersizliğin En Yaygın Genetik Nedeni</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="33" badge="Klasik Trizomi 21" isCheckpoint="false">
+      <title>Down Sendromunun Sitogenetik Tipleri: Klasik Trizomi (%95)</title>
+      <subtitle>Mayotik Ayrılamama ve Anne Yaşı Riski</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="34" badge="Translokasyon ve Mozaik Down" isCheckpoint="false">
+      <title>Down Sendromunda Translokasyon (%4) ve Mozaisizm (%1)</title>
+      <subtitle>Kalıtsal Risk Taşıyan Varyantlar ve Parental Karyotip Zorunluluğu</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="35" badge="Klinik Dismorfoloji" isCheckpoint="false">
+      <title>Down Sendromunun Karakteristik Dismorfolojisi ve Muayene Bulguları</title>
+      <subtitle>Yenidoğan Döneminde Tanı Koyduran Fiziksel Stigmalar</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="36" badge="Ekstremite Stigmaları" isCheckpoint="false">
+      <title>Ekstremite Bulguları: Simian Çizgisi, Klinodaktili ve Sandal Gap</title>
+      <subtitle>Down Sendromunun Karakteristik Periferik Fiziksel İpuçları</subtitle>
+      <interactiveElements count="4">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="37" badge="Kardiyak Malformasyonlar" isCheckpoint="false">
+      <title>Kardiyovasküler Anomaliler: Endokardiyal Yastık Defektleri (AVSD)</title>
+      <subtitle>Down Sendromunda Erken Mortalitenin Bir Numaralı Nedeni</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="38" badge="Gastrointestinal Tutulum" isCheckpoint="false">
+      <title>Gastrointestinal Malformasyonlar: Duodenal Atrezi ve Çift Kabarcık</title>
+      <subtitle>Gelişimsel Sindirim Sistemi Stenozları ve Hirschsprung Hastalığı</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="39" badge="Checkpoint 4" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 4] Down Sendromu (Trizomi 21) Sitogenetiği ve Klinik Fenotipi</title>
+      <subtitle>Bölüm Sonu Entegrasyonu ve Aktif Hatırlama İstasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="40" badge="Uzun Dönem Riskler" isCheckpoint="false">
+      <title>Uzun Dönem Riskler: Hematolojik Malignite ve Erken Evre Alzheimer</title>
+      <subtitle>21. Kromozom Dozajının İmmünolojik ve Nörodejeneratif Yansımaları</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="41" badge="Edwards Sendromu" isCheckpoint="false">
+      <title>Edwards Sendromu (Trizomi 18): Epidemiyoloji ve Fetal Seyir</title>
+      <subtitle>Canlı Doğan İkinci En Sık Otozomal Trizomi ve Ağır Mortalite</subtitle>
+      <interactiveElements count="3">
+        <element type="cloze_masking"/>
+        <element type="interactive_table"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="42" badge="Edwards Dismorfolojisi" isCheckpoint="false">
+      <title>Edwards Sendromunun Karakteristik Dismorfolojisi: Clenched Hand ve Rocker-Bottom Ayak</title>
+      <subtitle>Karakteristik Fleksiyon Kontraktürleri ve İskelet Deformiteleri</subtitle>
+      <interactiveElements count="4">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="43" badge="Sistemik Tutulum" isCheckpoint="false">
+      <title>Edwards Sendromunda Sistemik Anomaliler, Mikrosefali ve Hipertonisite</title>
+      <subtitle>Down Sendromundan Tonus Farkı: İnfantil Hipertonisite</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="44" badge="Patau Sendromu" isCheckpoint="false">
+      <title>Patau Sendromu (Trizomi 13): Epidemiyoloji ve Fetal Letalite</title>
+      <subtitle>Canlı Doğan En Nadir ve En Yıkıcı Otozomal Trizomi</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="45" badge="Holoprozensefali" isCheckpoint="false">
+      <title>Patau Sendromunda Holoprozensefali ve Santral Sinir Sistemi Kusurları</title>
+      <subtitle>Ön Beyin Segmentasyon Kusuru ve Ağır Nörogelişimsel Hasar</subtitle>
+      <interactiveElements count="4">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="46" badge="Karakteristik Triad" isCheckpoint="false">
+      <title>Patau Sendromunun Karakteristik Triadı: Mikroftalmi + Yarık Dudak/Damak + Polidaktili</title>
+      <subtitle>Klinik Tanıda Yüksek Özgüllüğe Sahip Üçlü Stigma</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="47" badge="Kutis Aplazi ve Omfalosel" isCheckpoint="false">
+      <title>Patau Sendromunda Kutis Aplazi (Oksipital Skalp Defekti) ve Omfalosel</title>
+      <subtitle>Karakteristik Cilt ve Karın Duvarı Malformasyonları</subtitle>
+      <interactiveElements count="4">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="48" badge="Trizomi Karşılaştırması" isCheckpoint="false">
+      <title>Üç Majör Canlı Trizominin Karşılaştırmalı Ayrımı: 21 vs 18 vs 13</title>
+      <subtitle>Klinik, Tonus, Organ Tutulumu ve Prognoz Karşılaştırma Matrisi</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="49" badge="Checkpoint 5" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 5] Edwards (Trizomi 18) ve Patau (Trizomi 13) Sendromları</title>
+      <subtitle>Bölüm Sonu Entegrasyonu ve Aktif Hatırlama İstasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="50" badge="Letal Trizomiler" isCheckpoint="false">
+      <title>Diğer Otozomal Trizomilerin Fetal Letalitesi ve Spontan Abortuslar</title>
+      <subtitle>Trizomi 16, Trizomi 22 ve Gelişimsel Dozaj Bariyerleri</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="51" badge="Delesyon Sendromları" isCheckpoint="false">
+      <title>Klasik Otozomal Delesyon Sendromlarına Genel Bakış</title>
+      <subtitle>Kromozom Kol Kayıpları, Parsiyel Monozomiler ve Fenotip</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="52" badge="Cri du Chat Sendromu" isCheckpoint="false">
+      <title>Cri du Chat (Kedi Ağlaması) Sendromu: del(5p15) Sitogenetiği</title>
+      <subtitle>5. Kromozom Kısa Kol Delesyonunun Moleküler Anatomisi</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="53" badge="Kedi Ağlaması İmzası" isCheckpoint="false">
+      <title>Cri du Chat Sendromunda Larinks Hipoplazisi ve Karakteristik Ağlama</title>
+      <subtitle>Kedi Miyavlamasını Andıran Akustik İmza ve Yaşla Evrimi</subtitle>
+      <interactiveElements count="4">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="54" badge="Cri du Chat Fenotipi" isCheckpoint="false">
+      <title>Cri du Chat Sendromunda Klinik Seyir, Dismorfoloji ve Bilişsel Tablo</title>
+      <subtitle>Ay Yüz Görünümü, Mikrosefali ve Şiddetli Zihinsel Engellilik</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="55" badge="Wolf-Hirschhorn" isCheckpoint="false">
+      <title>Wolf-Hirschhorn Sendromu: del(4p16.3) ve Yunan Miğferi Görünümü</title>
+      <subtitle>4. Kromozom Kısa Kol Delesyonu ve Patognomonik Yüz Dismorfizmi</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="56" badge="Wolf-Hirschhorn Kliniği" isCheckpoint="false">
+      <title>Wolf-Hirschhorn Sendromunda Nöbetler, Ağır Büyüme Geriliği ve Balık Ağzı</title>
+      <subtitle>Kritik Genler, İnatçı Epilepsi ve Ağız Dismorfizmi</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="57" badge="DiGeorge Sendromu" isCheckpoint="false">
+      <title>DiGeorge Sendromu (22q11.2 Delesyonu / CATCH-22 Fenotipi)</title>
+      <subtitle>Farinks Poşlarının Embriyolojik Disgenezisi ve Çoklu Organ Tutulumu</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="58" badge="Williams Sendromu" isCheckpoint="false">
+      <title>Williams-Beuren Sendromu: del(7q11.23) ve Kokteyl Kişilik</title>
+      <subtitle>Elastin Geni Dozajı, Supravalvüler Aort Stenozu ve Peri Yüzü</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="59" badge="Checkpoint 6" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 6] Yapısal Delesyon ve Mikrodelesyon Sendromları</title>
+      <subtitle>Bölüm Sonu Entegrasyonu ve Aktif Hatırlama İstasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="60" badge="PMP22 Gen Dozajı" isCheckpoint="false">
+      <title>Gen Dozajının Zıt Uçları: CMT-1A (17p12 Duplikasyonu) ve HNPP (17p12 Delesyonu)</title>
+      <subtitle>PMP22 Gen Dozajına Bağlı Resiprokal Periferik Nöropatiler</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="61" badge="X İnaktivasyonu" isCheckpoint="false">
+      <title>Gonozomal Kromozom Anomalileri ve X İnaktivasyonu (Lyon Hipotezi)</title>
+      <subtitle>Cinsiyet Kromozomu Dozaj Kompansasyonu ve Barr Cismi Biyolojisi</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="62" badge="Psödootozomal Bölgeler" isCheckpoint="false">
+      <title>Psödootozomal Bölgeler (PAR1 ve PAR2) ve X İnaktivasyonundan Kaçış</title>
+      <subtitle>X ve Y Homolojisi, SHOX Geni ve Anöploidi Fenotipinin Kökeni</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="63" badge="Klinefelter Sendromu" isCheckpoint="false">
+      <title>Klinefelter Sendromu (47,XXY): Epidemiyoloji ve Ebeveynsel Köken</title>
+      <subtitle>Erkek İnfertilitesinin En Sık Genetik Nedeni ve Karyotip Dağılımı</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="64" badge="Testiküler Patoloji" isCheckpoint="false">
+      <title>Klinefelter Sendromunda Testiküler Patoloji: Hiyalinizasyon ve İnfertilite</title>
+      <subtitle>Seminifer Tübül Sklerozu, Leydig Hücre Hiperplazisi ve Azospermi</subtitle>
+      <interactiveElements count="4">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="65" badge="Klinik ve Endokrin Profil" isCheckpoint="false">
+      <title>Klinefelter Sendromunda Fiziksel Özellikler ve Hormon Profili</title>
+      <subtitle>Önökoid Vücut Yapısı, Jinekomasti ve Hipergonadotropik Hipogonadizm</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="66" badge="Polizomik Varyantlar" isCheckpoint="false">
+      <title>Yüksek Dereceli Polizomi X Erkekleri: 48,XXXY ve 49,XXXXY</title>
+      <subtitle>Kromozom Dozajı Kuralı: Ekstra X Sayısı Arttıkça Fenotipik Yıkım</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="67" badge="47,XYY Sendromu" isCheckpoint="false">
+      <title>47,XYY Sendromu (Jakob Sendromu): Biyoloji, Büyüme ve Fertilite</title>
+      <subtitle>Paternal Mayoz II Hatası, Uzun Boy ve Normal Üreme Potansiyeli</subtitle>
+      <interactiveElements count="4">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="68" badge="Trizomi X" isCheckpoint="false">
+      <title>Trizomi X (47,XXX) ve Yüksek Dereceli X Polizomi Dişileri</title>
+      <subtitle>Triple-X Sendromu, İki Barr Cisimciği ve Normal Üreme</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="69" badge="Checkpoint 7" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 7] Gonozomal Polizomiler: Klinefelter (47,XXY) ve 47,XYY</title>
+      <subtitle>Bölüm Sonu Entegrasyonu ve Aktif Hatırlama İstasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="70" badge="Psikososyal Gelişim" isCheckpoint="false">
+      <title>Gonozomal Aneuploidilerde Davranışsal, Bilişsel ve Psikososyal Gelişim</title>
+      <subtitle>Öğrenme Güçlükleri, Dilsel Beceriler ve Sosyal Uyum Yönetimi</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="71" badge="Turner Sendromu" isCheckpoint="false">
+      <title>Turner Sendromu (45,X): Yaşamla Bağdaşan Tek Monozomi</title>
+      <subtitle>Epidemiyoloji, Fetal Doğal Seleksiyon ve Maternal X Baskınlığı</subtitle>
+      <interactiveElements count="4">
+        <element type="cloze_masking"/>
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="72" badge="Turner Karyotipleri" isCheckpoint="false">
+      <title>Turner Sendromunda Karyotip Çeşitliliği ve Genotip-Fenotip Korelasyonu</title>
+      <subtitle>45,X Monozomisi, i(Xq) İzokromozomu ve del(Xp) vs del(Xq) Ayrımı</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+      </interactiveElements>
+    </slide>
+    <slide number="73" badge="Lenfatik Dismorfoloji" isCheckpoint="false">
+      <title>Turner Sendromunda Fetal Lenfödem Kalıntıları: Yele Boyun ve Kistik Higroma</title>
+      <subtitle>Juguler Lenfatik Kese Tıkanıklığı ve Postnatal Morfolojik İzler</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="74" badge="SHOX ve Kısa Boy" isCheckpoint="false">
+      <title>Turner Sendromunda Kısa Boyun Moleküler Temeli: SHOX Geni Dozajı</title>
+      <subtitle>Kondrosit Proliferasyonu, İskelet Displazisi ve Büyüme Eğrileri</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="75" badge="Gonadal Disgenezi" isCheckpoint="false">
+      <title>Gonadal Disgenezi: Çizgi Gonad (Streak Gonads) ve Primer Amenore</title>
+      <subtitle>Oosit Apoptozu, Fibröz Bant Dönüşümü ve Hipergonadotropik Hipogonadizm</subtitle>
+      <interactiveElements count="4">
+        <element type="causal_chain"/>
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="76" badge="Kardiyak Malformasyonlar" isCheckpoint="false">
+      <title>Kardiyovasküler Anomaliler: Aort Koarktasyonu ve Biküspit Aort</title>
+      <subtitle>Turner Sendromunda Sol Kalp Obstrüktif Lezyonları ve Aort Diseksiyonu Riski</subtitle>
+      <interactiveElements count="4">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="77" badge="Renal ve İskelet Stigmaları" isCheckpoint="false">
+      <title>Renal Anomaliler (At Nalı Böbrek) ve İskelet Bulguları: Kubitus Valgus</title>
+      <subtitle>Kalkan Göğüs, Ayrık Meme Başları ve 4. Metakarp Kısalığı</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="78" badge="Klinik Yönetim" isCheckpoint="false">
+      <title>Turner Sendromunda Endokrin ve Bilişsel Yönetim Stratejileri</title>
+      <subtitle>Büyüme Hormonu, Östrojen/Progesteron Replasmanı ve Bilişsel Profil</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="79" badge="Checkpoint 8" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 8] Turner Sendromu (45,X): Sitogenetik, Klinik ve Yönetim</title>
+      <subtitle>Bölüm Sonu Entegrasyonu ve Aktif Hatırlama İstasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="80" badge="Y Varyantı ve Kanser" isCheckpoint="false">
+      <title>Y Kromozomu İçeren Turner Varyantları (45,X/46,XY) ve Gonadoblastom</title>
+      <subtitle>Kromozomal Mozaiklik, Maskülinizasyon ve Profilaktik Gonadektomi</subtitle>
+      <interactiveElements count="4">
+        <element type="causal_chain"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="81" badge="Genomik İmprinting" isCheckpoint="false">
+      <title>Genomik İmprinting (Damgalama) Kavramı ve Epigenetik Modifikasyonlar</title>
+      <subtitle>Mendel Kalıtımının İstisnası: Ebeveyn Kökenine Bağımlı Gen Ekspresyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="82" badge="15q11-q13 Genomik Mimarisi" isCheckpoint="false">
+      <title>15q11-q13 Bölgesinin Genomik Mimarisi ve İmprinting Merkezi</title>
+      <subtitle>Prader-Willi ve Angelman Lokusunun Bipolar Epigenetik Düzeni</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="83" badge="Uniparental Dizomi" isCheckpoint="false">
+      <title>Uniparental Dizomi (UPD): Tanım, İzodizomi ve Heterodizomi</title>
+      <subtitle>Kromozom Çiftinin Tek Ebeveynden Kalıtılması Fenomeni</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="84" badge="Trizomi Kurtarma" isCheckpoint="false">
+      <title>Trizomi Kurtarma (Trisomy Rescue) ve UPD Oluşum Yolları</title>
+      <subtitle>Anöploid Zigotun Mitotik Düzeltimi ve İki Ebeveyn Kuralının Bozulması</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="85" badge="Prader-Willi Etiyolojisi" isCheckpoint="false">
+      <title>Prader-Willi Sendromu (PWS): Paternal 15q11-q13 Kaybı ve SNRPN</title>
+      <subtitle>Etiyolojik Dağılım: Paternal Delesyon (%70) ve Maternal UPD (%30)</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="86" badge="PWS Klinik Spektrumu" isCheckpoint="false">
+      <title>Prader-Willi Sendromunda İki Evreli Klinik: İnfantil Hipotoni ve Hiperfaji</title>
+      <subtitle>Beslenme Güçlüğünden Doyumsuz İştaha, Morbid Obezite ve Hipogonadizm</subtitle>
+      <interactiveElements count="4">
+        <element type="before_after_slider"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="87" badge="Angelman Etiyolojisi" isCheckpoint="false">
+      <title>Angelman Sendromu (AS): Maternal 15q11-q13 Kaybı ve UBE3A</title>
+      <subtitle>Etiyolojik Dağılım: Maternal Delesyon (%70) ve Paternal UPD (%3-5)</subtitle>
+      <interactiveElements count="4">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="branching_logic"/>
+      </interactiveElements>
+    </slide>
+    <slide number="88" badge="Angelman Fenotipi" isCheckpoint="false">
+      <title>Angelman Sendromunda Klinik Tablo: 'Mutlu Kukla' (Happy Puppet) Fenotipi</title>
+      <subtitle>Karakteristik Kahkaha Nöbetleri, Ataksi, Nöbet ve Konuşma Yokluğu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="89" badge="Checkpoint 9" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 9] Genomik İmprinting, Uniparental Dizomi, Prader-Willi ve Angelman</title>
+      <subtitle>Bölüm Sonu Entegrasyonu ve Aktif Hatırlama İstasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="90" badge="11p15 İmprinting" isCheckpoint="false">
+      <title>Diğer İmprinting Sendromları: Beckwith-Wiedemann ve Russell-Silver</title>
+      <subtitle>11p15 Kromozomal Bölgesi ve IGF2 / H19 Büyüme Ekseni</subtitle>
+      <interactiveElements count="3">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="91" badge="Genetik Danışma Esasları" isCheckpoint="false">
+      <title>Genetik Danışmanın Tanımı, Kapsamı ve Temel Hedefleri</title>
+      <subtitle>Kalıtsal Hastalık Riski Taşıyan Ailelere Bilimsel ve Psikolojik Rehberlik</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="92" badge="Etik İlkeler" isCheckpoint="false">
+      <title>Yönlendirici Olmayan (Non-Directive) Danışmanlık İlkesi ve Etik</title>
+      <subtitle>Hasta Özerkliğine Saygı, Tarafsızlık ve Bilgilendirilmiş Onam</subtitle>
+      <interactiveElements count="3">
+        <element type="branching_logic"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="93" badge="Pedigri Analizi" isCheckpoint="false">
+      <title>Pedigri (Soyağacı) Çizimi, Aile Öyküsü ve Risk Analizi</title>
+      <subtitle>Klinik Genetiğin Temel Tanısal Haritası ve Standart Semboller</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="94" badge="Tanısal Genetik Araçlar" isCheckpoint="false">
+      <title>Sitogenetik ve Moleküler Tanı Araçları: Karyotip, FISH ve Mikroarray</title>
+      <subtitle>Kromozomal Analiz Yöntemlerinin Çözünürlük ve Endikasyon Hiyerarşisi</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="95" badge="Down Danışmanlığı" isCheckpoint="false">
+      <title>Down Sendromlu Bebeğe Sahip Aileye Genetik Danışma Yaklaşımı</title>
+      <subtitle>Karyotipik Doğrulama, Ebeveyn Eğitimi ve İzlem Protokolü</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="96" badge="Translokasyon Danışmanlığı" isCheckpoint="false">
+      <title>Translokasyon Down Sendromunda Ebeveyn Analizi ve Rekürrens Riski</title>
+      <subtitle>Kalıtsal Risk Yönetimi, rob(14;21) ve Ebeveyn Taşıyıcılığı</subtitle>
+      <interactiveElements count="4">
+        <element type="before_after_slider"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+        <element type="causal_chain"/>
+      </interactiveElements>
+    </slide>
+    <slide number="97" badge="Üreme Genetiği ve PGT" isCheckpoint="false">
+      <title>Dengeli Taşıyıcı Çiftlerde İnfertilite, Düşükler ve PGT Seçenekleri</title>
+      <subtitle>Preimplantasyon Genetik Tanı (PGT-SR) ile Sağlıklı Embriyo Seçimi</subtitle>
+      <interactiveElements count="3">
+        <element type="causal_chain"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="98" badge="Prenatal Tanı Yöntemleri" isCheckpoint="false">
+      <title>Prenatal Tarama ve İnvaziv Tanı Yöntemleri: İkili Test, NIPT ve Amniyosentez</title>
+      <subtitle>Tarama Testi ile Kesin Tanı Testi Arasındaki Biyolojik ve Klinik Fark</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="micro_quiz"/>
+        <element type="cloze_masking"/>
+      </interactiveElements>
+    </slide>
+    <slide number="99" badge="Multidisipliner İzlem" isCheckpoint="false">
+      <title>Kromozomal Hastalıklarda Multidisipliner Takip ve Yaşam Kalitesi</title>
+      <subtitle>Kardiyoloji, Endokrinoloji, Özel Eğitim ve Sosyal Entegrasyon</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+    <slide number="100" badge="Checkpoint 10" isCheckpoint="true">
+      <title>[TEKRAR SAYFASI - CHECKPOINT 10] Tıbbi Genetik Büyük Entegrasyon ve Sınav Spotları</title>
+      <subtitle>Bölüm Sonu Entegrasyonu ve Aktif Hatırlama İstasyonu</subtitle>
+      <interactiveElements count="3">
+        <element type="interactive_table"/>
+        <element type="cloze_masking"/>
+        <element type="active_recall"/>
+      </interactiveElements>
+    </slide>
+  </slides>
+</learningDeck>

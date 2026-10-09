@@ -1,0 +1,48 @@
+{
+  "id": "k1-10-kromozomal-hastaliklar-ve-genetik-danisma",
+  "title": "Kromozomal Hastalıklar ve Genetik Danışma (Yeni Mikro-Ders)",
+  "shortTitle": "Kromozomal Hastalıklar ve Danışma",
+  "discipline": "Tıbbi Genetik",
+  "committee": "Kurul 1 (Ürogenital ve Solunum Sistemi)",
+  "instructor": "Dr. Öğr. Üyesi Serap Arslan",
+  "version": "2.0.0",
+  "formatVersion": "1.0",
+  "totalSlides": 100,
+  "totalInteractiveElements": 331,
+  "interactiveRatio": 3.31,
+  "interactiveDistribution": {
+    "cloze_masking": {
+      "count": 84,
+      "percentage": 25.4
+    },
+    "interactive_table": {
+      "count": 52,
+      "percentage": 15.7
+    },
+    "active_recall": {
+      "count": 65,
+      "percentage": 19.6
+    },
+    "before_after_slider": {
+      "count": 28,
+      "percentage": 8.5
+    },
+    "micro_quiz": {
+      "count": 47,
+      "percentage": 14.2
+    },
+    "branching_logic": {
+      "count": 28,
+      "percentage": 8.5
+    },
+    "causal_chain": {
+      "count": 27,
+      "percentage": 8.2
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "blocks": "blocks.html",
+    "content": "content.md"
+  }
+}

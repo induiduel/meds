@@ -799,6 +799,7 @@ export default function App() {
     claimedAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
     options?: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string }[];
     targetQuestionId?: string;
+    examYear?: string;
   }) => {
     try {
       const savedQuestion = await ApiService.addQuestionContribution({

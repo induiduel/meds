@@ -1,0 +1,31 @@
+{
+  "id": "k1p-k1-24-emboli-enfarktus-ve-sok",
+  "title": "Emboli, Enfarktüs ve Şok",
+  "subtitle": "Tromboembolizm, Yağ ve Gaz Embolisi, İskemik Nekroz Çeşitleri, Septik Şok Patogenezi, DİK ve Çoklu Organ Yetmezliği",
+  "slug": "k1p-k1-24-emboli-enfarktus-ve-sok",
+  "version": "1.0.0",
+  "category": "Dönem 1 - Kurul 1",
+  "department": "Tıbbi Patoloji",
+  "lecturer": "Prof. Dr. Hikmet Keleş (Tıbbi Patoloji ABD)",
+  "sourcePdf": "Kurul 1 - Ders 24: Emboli, Enfarktüs ve Şok (Prof. Dr. Hikmet Keleş)",
+  "stats": {
+    "slideCount": 100,
+    "questionCount": 145,
+    "flashcardCount": 30,
+    "elementCount": 322,
+    "elementDiversity": {
+      "cloze_masking": "68 (%21.1)",
+      "interactive_table": "63 (%19.6)",
+      "micro_quiz": "74 (%23.0)",
+      "causal_chain": "29 (%9.0)",
+      "active_recall": "30 (%9.3)",
+      "branching_logic": "29 (%9.0)",
+      "before_after_slider": "29 (%9.0)"
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "content": "content.md",
+    "blocks": "blocks.html"
+  }
+}

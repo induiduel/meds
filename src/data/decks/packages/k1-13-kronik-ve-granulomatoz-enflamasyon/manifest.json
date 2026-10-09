@@ -1,0 +1,47 @@
+{
+  "id": "k1p-k1-13-kronik-ve-granulomatoz-enflamasyon",
+  "title": "Kronik ve Granülomatöz Enflamasyon",
+  "version": "2.0.0",
+  "formatVersion": "1.0",
+  "author": "Prof. Dr. Hikmet Keleş",
+  "course": "Tıbbi Patoloji",
+  "committee": "Kurul 1",
+  "slideCount": 100,
+  "questionCount": 224,
+  "totalElements": 222,
+  "elementDistribution": {
+    "before_after_slider": {
+      "count": 39,
+      "percentage": 17.57
+    },
+    "cloze_masking": {
+      "count": 46,
+      "percentage": 20.72
+    },
+    "interactive_table": {
+      "count": 22,
+      "percentage": 9.91
+    },
+    "active_recall": {
+      "count": 35,
+      "percentage": 15.77
+    },
+    "causal_chain": {
+      "count": 22,
+      "percentage": 9.91
+    },
+    "micro_quiz": {
+      "count": 33,
+      "percentage": 14.86
+    },
+    "branching_logic": {
+      "count": 25,
+      "percentage": 11.26
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "content": "content.md",
+    "blocks": "blocks.html"
+  }
+}

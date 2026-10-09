@@ -1,0 +1,46 @@
+{
+  "id": "k1p-k1-16-odem-hiperemi-konjesyon-ve-kanama",
+  "title": "Ödem, Hiperemi, Konjesyon ve Kanama",
+  "course": "Patoloji",
+  "instructor": "Prof. Dr. Hikmet Keleş (Patoloji ABD)",
+  "category": "Kurul 1 · 2026-2027 ders paketi",
+  "stepCount": 100,
+  "questionCount": 289,
+  "totalFlashcards": 30,
+  "totalInteractiveElements": 240,
+  "elementDistribution": {
+    "before_after_slider": {
+      "count": 34,
+      "percentage": 14.17
+    },
+    "cloze_masking": {
+      "count": 39,
+      "percentage": 16.25
+    },
+    "active_recall": {
+      "count": 25,
+      "percentage": 10.42
+    },
+    "interactive_table": {
+      "count": 34,
+      "percentage": 14.17
+    },
+    "micro_quiz": {
+      "count": 51,
+      "percentage": 21.25
+    },
+    "branching_logic": {
+      "count": 25,
+      "percentage": 10.42
+    },
+    "causal_chain": {
+      "count": 32,
+      "percentage": 13.33
+    }
+  },
+  "files": {
+    "structure": "structure.xml",
+    "blocks": "blocks.html",
+    "content": "content.md"
+  }
+}

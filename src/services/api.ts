@@ -610,8 +610,14 @@ export const ApiService = {
     claimedAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
     options?: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string }[];
     targetQuestionId?: string;
+    examYear?: string;
   }): Promise<QuestionItem> {
     const db = getLocalDb();
+    // Sınav yılı yalnız boşsa yazılır (önceki katkıların yılı ezilmez)
+    const withYear = <T extends { examYear?: string }>(q: T): T => {
+      if (data.examYear && !q.examYear) q.examYear = data.examYear;
+      return q;
+    };
     const isUnassigned = !!data.isUnknownNumber || !data.questionNumber || data.questionNumber <= 0;
 
     let targetQuestion: QuestionItem;
@@ -668,6 +674,7 @@ export const ApiService = {
         }
         explicitTarget.status = 'gathering';
         explicitTarget.updatedAt = new Date().toISOString();
+        withYear(explicitTarget);
         saveLocalDb(db);
         try {
           await multiDbManager.saveQuestion(explicitTarget);
@@ -727,6 +734,7 @@ export const ApiService = {
         }
         existing.status = 'gathering';
         existing.updatedAt = new Date().toISOString();
+        withYear(existing);
         saveLocalDb(db);
         try {
           await multiDbManager.saveQuestion(existing);
@@ -984,6 +992,7 @@ export const ApiService = {
       }
     }
 
+    withYear(targetQuestion);
     saveLocalDb(db);
 
     // Save to Firestore for cross-device cloud sync
