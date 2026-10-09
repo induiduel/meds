@@ -407,12 +407,17 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
         // 2. Chunk / Hızlı Ön Filtreleme ile Aday Havuzu Daraltma
         const qWords = q.toLowerCase().split(/\s+/).filter((w) => w.length > 2);
-        // Sadece soru metninde veya şıklarında en az 1 ortak token içeren ya da aynı kurul/ders olanları al
+        // Sadece soru metninde veya şıklarında ortak token içeren ya da aynı kurul/ders olanları al.
+        // Çapraz kurulda tek yaygın kelime ("sendromu") yeterli değildir: ≥2 kelimelik
+        // sorguda en az 2 farklı kelime örtüşmelidir, yoksa Alport/Down karışır.
         const filteredCandidateQuestions = indexedPool.length > 0
           ? indexedPool
               .filter((item) => {
                 if (item.committeeId === committee.id) return true;
-                // Çapraz kurul için en az bir kelime benzerliği şartı
+                // Çapraz kurul için kelime benzerliği şartı
+                if (qWords.length >= 2) {
+                  return qWords.filter((w) => item.tokens.has(w) || item.stem.includes(w)).length >= 2;
+                }
                 return qWords.some((w) => item.tokens.has(w) || item.stem.includes(w));
               })
               .map((item) => item.question)
@@ -716,7 +721,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     const savedName = localStorage.getItem(SAVED_NAME_KEY) || '';
     const authorCandidate = currentUser?.displayName || savedName;
     if (authorCandidate) {
-      const nameCheck = validateNamePolicy(authorCandidate);
+      const nameCheck = validateNamePolicy(authorCandidate, { adminEmail: currentUser?.email });
       if (!nameCheck.isValid) {
         setFormError(nameCheck.errorMessage || 'Geçersiz yazar / katkıcı adı.');
         toast.error('İsim Kuralı Hatası', nameCheck.errorMessage || 'Geçersiz isim.');

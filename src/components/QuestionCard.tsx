@@ -234,7 +234,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
     e.preventDefault();
     if (!fragmentText.trim()) return;
     if (fragmentAuthor.trim()) {
-      const nameCheck = validateNamePolicy(fragmentAuthor.trim());
+      const nameCheck = validateNamePolicy(fragmentAuthor.trim(), { adminEmail: currentUser?.email, isAdmin });
       if (!nameCheck.isValid) {
         toast.error('İsim Kuralı Hatası', nameCheck.errorMessage || 'Geçersiz yazar adı.');
         return;
@@ -256,7 +256,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
     e.preventDefault();
     if (!optionText.trim()) return;
     if (optionAuthor.trim()) {
-      const nameCheck = validateNamePolicy(optionAuthor.trim());
+      const nameCheck = validateNamePolicy(optionAuthor.trim(), { adminEmail: currentUser?.email, isAdmin });
       if (!nameCheck.isValid) {
         toast.error('İsim Kuralı Hatası', nameCheck.errorMessage || 'Geçersiz yazar adı.');
         return;

@@ -1386,6 +1386,10 @@ export async function searchLocalRag(
     .filter((w) => w.length >= 3 && !FOLDED_STOPWORDS.has(w));
 
   const effectiveTokens: string[] = [];
+  // Genişletilmiş her token'ın hangi sorgu kelimesinden geldiği (kök+tam sözcük
+  // aynı kelime sayılır; yoksa tek kelime 2 eşleşme gibi görünür ve "sendromu"
+  // tek başına tüm sendromları getirir).
+  const tokenBase = new Map<string, string>();
   for (const w of rawWords) {
     if (fuzzyVocab.size() > 0 && !invertedIndex.has(w)) {
       const hits = fuzzyVocab.findMatches(w, 2);
@@ -1395,13 +1399,23 @@ export async function searchLocalRag(
         if (hits[0].dist <= (w.length >= 6 ? 2 : 1)) {
           const best = hits[0].term;
           effectiveTokens.push(best);
-          if (best.length > STEM_LENGTH) effectiveTokens.push(best.slice(0, STEM_LENGTH) + '*');
+          tokenBase.set(best, w);
+          if (best.length > STEM_LENGTH) {
+            const st = best.slice(0, STEM_LENGTH) + '*';
+            effectiveTokens.push(st);
+            tokenBase.set(st, w);
+          }
           continue;
         }
       }
     }
     effectiveTokens.push(w);
-    if (w.length > STEM_LENGTH) effectiveTokens.push(w.slice(0, STEM_LENGTH) + '*');
+    tokenBase.set(w, w);
+    if (w.length > STEM_LENGTH) {
+      const st = w.slice(0, STEM_LENGTH) + '*';
+      effectiveTokens.push(st);
+      tokenBase.set(st, w);
+    }
   }
   const cleanTokens = Array.from(new Set(effectiveTokens));
   if (cleanTokens.length === 0 && !options.queryEmbedding) return [];
@@ -1429,12 +1443,18 @@ export async function searchLocalRag(
   tokenInfo.sort((x, y) => y.idf - x.idf);
   // Optimization: Prune query tokens to top 12 most informative terms (highest IDF)
   const tokensToScore = tokenInfo.slice(0, 12);
+  // Budamada hayatta kalan taban kelimeler: kapsama koşulu bunlara göre kurulur
+  const scoredBases = new Set(tokensToScore.map((t) => tokenBase.get(t.token) || t.token));
+  // En ayırt edici taban kelime (örn. "down"): adayda mutlaka bulunmalı
+  const rarestBase = tokenBase.get(tokensToScore[0]?.token || '') || '';
 
   // 2. Accumulate candidate BM25 scores
   const candidateScores = new Map<string, number>();
   const matchedTokensCount = new Map<string, number>();
+  const matchedBases = new Map<string, Set<string>>();
 
-  for (const { idf, postings } of tokensToScore) {
+  for (const { token, idf, postings } of tokensToScore) {
+    const base = tokenBase.get(token) || token;
     for (const [chunkId, tf] of postings.entries()) {
       const docLen = docLengths.get(chunkId) || avgdl;
       const tfNorm = (tf * (k1 + 1)) / (tf + k1 * (1 - b + b * (docLen / avgdl)));
@@ -1442,6 +1462,12 @@ export async function searchLocalRag(
 
       candidateScores.set(chunkId, (candidateScores.get(chunkId) || 0) + termScore);
       matchedTokensCount.set(chunkId, (matchedTokensCount.get(chunkId) || 0) + 1);
+      let set = matchedBases.get(chunkId);
+      if (!set) {
+        set = new Set<string>();
+        matchedBases.set(chunkId, set);
+      }
+      set.add(base);
     }
   }
 
@@ -1452,6 +1478,16 @@ export async function searchLocalRag(
   for (const [id, bmScore] of candidateScores.entries()) {
     const chunk = memoryChunks.get(id);
     if (!chunk) continue;
+
+    // Kapsama koşulu: indekste karşılığı bulunan ≥2 taban kelime varsa adayda
+    // en az 2'si geçmeli ve en ayırt edici kelime ("down") mutlaka bulunmalı.
+    // Tek yaygın kelime ("sendromu") ile gelen Alport-benzeri sonuçlar burada elenir.
+    const bases = matchedBases.get(id);
+    const distinctBases = bases ? bases.size : 0;
+    if (scoredBases.size >= 2) {
+      if (distinctBases < 2) continue;
+      if (rarestBase && !bases?.has(rarestBase)) continue;
+    }
 
     let finalScore = bmScore;
 
@@ -1470,8 +1506,9 @@ export async function searchLocalRag(
       continue;
     }
 
-    // Term coordination boost (chunks matching multiple high-yield query terms)
-    const matchCount = matchedTokensCount.get(id) || 1;
+    // Term coordination boost: aynı kökün tam+kök çifti iki sayılmaz,
+    // yalnızca farklı taban kelime sayısı (örn. down + sendromu) büyütür.
+    const matchCount = distinctBases || 1;
     if (matchCount > 1) {
       finalScore *= (1 + 0.25 * (matchCount - 1));
     }

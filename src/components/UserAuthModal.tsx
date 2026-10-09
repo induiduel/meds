@@ -118,7 +118,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   const onRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
-    const nameCheck = validateNamePolicy(displayName);
+    const nameCheck = validateNamePolicy(displayName, { adminEmail: email });
     if (!nameCheck.isValid) {
       setError(nameCheck.errorMessage || 'Geçersiz ad soyad.');
       return;

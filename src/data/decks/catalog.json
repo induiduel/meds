@@ -41519,7 +41519,7 @@
         "badge": "Checkpoint 9",
         "badgeColor": "teal",
         "isCheckpoint": true,
-        "synthesisNarrative": "Dokuzuncu kontrol noktasında lökositlerin mikrobisidal cephanesini sabitliyoruz:\n\n1. **Fagositoz:** Tanıma/Bağlanma -> Yutulma (fagozom) -> Öldürme (fago-lizozom).\n2. **Opsoninler:** **IgG (FcγRI / CD64)** ve **Kompleman C3b (CR1 ve Mac-1)** en güçlüleridir.\n3. **Solunumsal Patlama:**\n   - **NADPH Oksidaz:** $O_2 \\rightarrow O_2^{\\bullet -}$ (Süperoksit anyonu).\n   - **SOD:** $O_2^{\\bullet -} \\rightarrow H_2O_2$ (Hidrojen peroksit).\n   - **Miyeloperoksidaz (MPO):** $H_2O_2 + Cl^- \\rightarrow \\mathbf{HOCl}$ (Hipokloröz asit / Çamaşır suyu; en güçlü ajan).\n4. **KGH / CGD:** NADPH oksidaz mutasyonu -> $H_2O_2$ yok -> Katalaz (+) mikroplarla (S. aureus, Aspergillus) tekrarlayan apseler. **DHR ve NBT testleri negatif**.\n5. **MPO Eksikliği:** Çoğu asemptomatik; $H_2O_2$ sağlam olduğu için **DHR ve NBT pozitif (normal)**.\n6. **Oksijensiz Silahlar:** BPI (LPS deler), Lizozim (peptidoglikan yıkar), Laktoferrin (demir çalar), Defensin (membran deler).\n7. **NETosis:** PAD4 ile kromatin fırlatma; mikropları yakalar, tromboz ve otoimmüniteyi (SLE) körükler.",
+        "synthesisNarrative": "Dokuzuncu kontrol noktasında lökositlerin mikrobisidal cephanesini sabitliyoruz:\n\n1. **Fagositoz:** Tanıma/Bağlanma -> Yutulma (fagozom) -> Öldürme (fago-lizozom).\n2. **Opsoninler:** **IgG (FcγRI / CD64)** ve **Kompleman C3b (CR1 ve Mac-1)** en güçlüleridir.\n3. **Solunumsal Patlama:**\n   - **NADPH Oksidaz:** $O_2 → O_2^{\\bullet -}$ (Süperoksit anyonu).\n   - **SOD:** $O_2^{\\bullet -} → H_2O_2$ (Hidrojen peroksit).\n   - **Miyeloperoksidaz (MPO):** $H_2O_2 + Cl^- → \\mathbf{HOCl}$ (Hipokloröz asit / Çamaşır suyu; en güçlü ajan).\n4. **KGH / CGD:** NADPH oksidaz mutasyonu -> H₂O₂ yok -> Katalaz (+) mikroplarla (S. aureus, Aspergillus) tekrarlayan apseler. **DHR ve NBT testleri negatif**.\n5. **MPO Eksikliği:** Çoğu asemptomatik; H₂O₂ sağlam olduğu için **DHR ve NBT pozitif (normal)**.\n6. **Oksijensiz Silahlar:** BPI (LPS deler), Lizozim (peptidoglikan yıkar), Laktoferrin (demir çalar), Defensin (membran deler).\n7. **NETosis:** PAD4 ile kromatin fırlatma; mikropları yakalar, tromboz ve otoimmüniteyi (SLE) körükler.",
         "medicalTerms": [
           {
             "term": "Bakterisidal Kaskad",
@@ -41554,7 +41554,7 @@
           {
             "type": "active_recall",
             "question": "Nötrofillerin oksijene bağımlı intrasellüler öldürme kaskadında yer alan üç enzimi ve bu enzimlerin ürettikleri reaktif molekülleri sırasıyla belirtiniz?",
-            "answer": "1) NADPH Oksidaz: Moleküler oksijenden Süperoksit anyonu ($O_2^{\\bullet -}$) üretir; 2) Süperoksit Dismutaz (SOD): Süperoksitten Hidrojen Peroksit ($H_2O_2$) üretir; 3) Miyeloperoksidaz (MPO): $H_2O_2$ ve klorürden Hipokloröz Asit (HOCl) üretir."
+            "answer": "1) NADPH Oksidaz: Moleküler oksijenden Süperoksit anyonu ($O_2^{\\bullet -}$) üretir; 2) Süperoksit Dismutaz (SOD): Süperoksitten Hidrojen Peroksit (H₂O₂) üretir; 3) Miyeloperoksidaz (MPO): H₂O₂ ve klorürden Hipokloröz Asit (HOCl) üretir."
           },
           {
             "type": "micro_quiz",
@@ -41655,7 +41655,7 @@
             "category": "Respiratuar Patlama ve NETosis"
           }
         ],
-        "content": "Dokuzuncu kontrol noktasında lökositlerin mikrobisidal cephanesini sabitliyoruz:\n\n1. **Fagositoz:** Tanıma/Bağlanma -> Yutulma (fagozom) -> Öldürme (fago-lizozom).\n2. **Opsoninler:** **IgG (FcγRI / CD64)** ve **Kompleman C3b (CR1 ve Mac-1)** en güçlüleridir.\n3. **Solunumsal Patlama:**\n   - **NADPH Oksidaz:** $O_2 \\rightarrow O_2^{\\bullet -}$ (Süperoksit anyonu).\n   - **SOD:** $O_2^{\\bullet -} \\rightarrow H_2O_2$ (Hidrojen peroksit).\n   - **Miyeloperoksidaz (MPO):** $H_2O_2 + Cl^- \\rightarrow \\mathbf{HOCl}$ (Hipokloröz asit / Çamaşır suyu; en güçlü ajan).\n4. **KGH / CGD:** NADPH oksidaz mutasyonu -> $H_2O_2$ yok -> Katalaz (+) mikroplarla (S. aureus, Aspergillus) tekrarlayan apseler. **DHR ve NBT testleri negatif**.\n5. **MPO Eksikliği:** Çoğu asemptomatik; $H_2O_2$ sağlam olduğu için **DHR ve NBT pozitif (normal)**.\n6. **Oksijensiz Silahlar:** BPI (LPS deler), Lizozim (peptidoglikan yıkar), Laktoferrin (demir çalar), Defensin (membran deler).\n7. **NETosis:** PAD4 ile kromatin fırlatma; mikropları yakalar, tromboz ve otoimmüniteyi (SLE) körükler.",
+        "content": "Dokuzuncu kontrol noktasında lökositlerin mikrobisidal cephanesini sabitliyoruz:\n\n1. **Fagositoz:** Tanıma/Bağlanma -> Yutulma (fagozom) -> Öldürme (fago-lizozom).\n2. **Opsoninler:** **IgG (FcγRI / CD64)** ve **Kompleman C3b (CR1 ve Mac-1)** en güçlüleridir.\n3. **Solunumsal Patlama:**\n   - **NADPH Oksidaz:** $O_2 → O_2^{\\bullet -}$ (Süperoksit anyonu).\n   - **SOD:** $O_2^{\\bullet -} → H_2O_2$ (Hidrojen peroksit).\n   - **Miyeloperoksidaz (MPO):** $H_2O_2 + Cl^- → \\mathbf{HOCl}$ (Hipokloröz asit / Çamaşır suyu; en güçlü ajan).\n4. **KGH / CGD:** NADPH oksidaz mutasyonu -> H₂O₂ yok -> Katalaz (+) mikroplarla (S. aureus, Aspergillus) tekrarlayan apseler. **DHR ve NBT testleri negatif**.\n5. **MPO Eksikliği:** Çoğu asemptomatik; H₂O₂ sağlam olduğu için **DHR ve NBT pozitif (normal)**.\n6. **Oksijensiz Silahlar:** BPI (LPS deler), Lizozim (peptidoglikan yıkar), Laktoferrin (demir çalar), Defensin (membran deler).\n7. **NETosis:** PAD4 ile kromatin fırlatma; mikropları yakalar, tromboz ve otoimmüniteyi (SLE) körükler.",
         "matchedPastQuestions": [
           {
             "id": "k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese-k20-q06",
@@ -146215,15 +146215,210 @@
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "instructor": "Prof. Dr. Hikmet Keleş",
+    "audioFile": "",
+    "audioDuration": "",
+    "confidence": "high",
+    "themeColor": "#0d9488",
+    "matchedNoteId": "k1-30",
+    "matchedNoteTitle": "İleri Tümör Genetiği ve Metabolizması",
     "overview": "Retinoblastoma (RB) ve TP53 tümör baskılayıcı ağları, Knudson çift darbe hipotezi, viral onkogenez, TGF-β, E-kadherin/Merlin, APC/β-katenin yolları; Warburg etkisi ve aerobik glikoliz, IDH mutasyonları ve 2-HG onkometaboliti, otofajinin ikili rolü, HIF-1α/VEGF anjiyogenezi, damar normalizasyonu, likit biyopsi (ctDNA) ve PARP sentetik ölümcüllüğünün 100 adımda kapsamlı moleküler incelemesi.",
+    "highYieldPearls": [
+      "RB hipofosforile formda aktiftir; E2F'yi bağlayarak hücre döngüsünü G1'de kilitler.",
+      "Knudson'ın çift darbe kuralına göre ailesel retinoblastomda 1. darbe germline, 2. darbe somatiktir.",
+      "TP53 insan kanserlerinde en sık mutasyona uğrayan tekil gendir; DNA hasarında p21, GADD45, PUMA ve BAX'ı uyarır.",
+      "Li-Fraumeni sendromunda germline TP53 mutasyonu vardır; radyoterapiden kaçınılmalıdır.",
+      "Warburg etkisi (aerobik glikoliz) hızlı bölünen hücreye ATP'den ziyade biyosentez için karbon iskeleti sağlar.",
+      "Mutant IDH1/2 neoenzimatik aktiviteyle 2-HG üretir; TET2'yi bloke ederek CpG ada hipermetilasyonuna (CIMP) yol açar.",
+      "Otofaji erken evrede tümör baskılayıcı, ileri evrede besin stresini aşan ve tedavi direnci sağlayan kalkandır.",
+      "Anti-VEGF (Bevacizumab) damar normalizasyonu penceresi açarak eş zamanlı kemoterapinin intratümöral geçişini maksimize eder.",
+      "BRCA mutant tümörlerde PARP inhibisyonu çift iplik DNA kırığı krizine yol açarak sentetik ölümcüllükle apoptoz sağlar."
+    ],
+    "totalSlides": 100,
     "slideCount": 100,
+    "matchedPastQuestionsCount": 0,
+    "category": "Tıbbi Patoloji",
+    "programDate": "2026-2027",
+    "kazanimlar": [
+      "RB proteininin hücre döngüsünün G1/S kontrol noktasındaki rolünü ve iki vuruş (two-hit) hipotezini ailesel ve sporadik retinoblastom örnekleriyle açıklar.",
+      "CDKN2A lokusunun (p16 ve p14) hücre siklusu ve p53 regülasyonundaki etkilerini ve karşılıklı dışlayıcılık prensibini açıklar.",
+      "TP53 tümör baskılayıcı geninin aktivasyonunu, MDM2 ve ATM/ATR etkileşimini, Li-Fraumeni sendromunun klinik yönetimini açıklar.",
+      "TGF-β/SMAD, E-kadherin/Merlin ve APC/β-katenin tümör baskılayıcı ağlarının moleküler mekanizmalarını ve EMT sürecini açıklar.",
+      "Warburg etkisini, aerobik glikolizin anabolik avantajlarını, FDG-PET temellerini ve MYC glutaminolizini açıklar.",
+      "İzositrat dehidrogenaz (IDH1/2) mutasyonlarını, 2-HG onkometabolitini ve TET2 demetilaz inhibisyonuna bağlı hipermetilasyonu açıklar.",
+      "Otofajinin hücresel mekanizmalarını (Beclin-1, LC3, p62), tümör dormansisindeki rolünü ve kloroquin ile inhibisyonunu açıklar.",
+      "HIF-1α/pVHL oksijen algılama mekanizmasını, VEGF anjiyogenezini ve anormal tümör damar mimarisini açıklar.",
+      "Anti-anjiyogenik tedavileri (Bevacizumab, TKI'lar), damar normalizasyonu penceresini ve kaçış yollarını açıklar.",
+      "Kanser hallmarks bütünleşik modelini, likit biyopsi (ctDNA) takibini ve BRCA/PARP sentetik ölümcüllük ilkelerini sentezler."
+    ],
+    "questions": [],
+    "flashcards": [
+      {
+        "id": "k1-30-fc01",
+        "front": "RB proteininin biyolojik olarak aktif olup E2F transkripsiyon faktörünü hapsederek hücre döngüsünü durduran formu hangisidir?",
+        "back": "Hipofosforile formudur.",
+        "hint": "Üzerinde az sayıda fosfat grubu taşıyan moleküler durum"
+      },
+      {
+        "id": "k1-30-fc02",
+        "front": "Knudson'ın çift darbe kuralına göre kalıtsal retinoblastom vakalarında ilk mutasyonel vuruş nerede bulunur?",
+        "back": "Germline (üreme hücreleri)",
+        "hint": "Ebeveynden döllenmeyle aktarılan gametik köken"
+      },
+      {
+        "id": "k1-30-fc03",
+        "front": "Ailesel retinoblastomlu çocuklarda göz tümörü tedavi edilse dahi ergenlikte gelişme riski en yüksek olan sekonder mezenkimal malignite nedir?",
+        "back": "Osteosarkomdur.",
+        "hint": "Malign kemik dokusu üreten primer iskelet tümörü"
+      },
+      {
+        "id": "k1-30-fc04",
+        "front": "Kromozom 9p21 bandındaki CDKN2A lokusundan alternatif okuma çerçevesiyle üretilen iki temel tümör baskılayıcı protein hangileridir?",
+        "back": "p16 (INK4a) ve p14 (ARF) proteinleridir.",
+        "hint": "Biri CDK4'ü diğeri MDM2'yi denetleyen iki sayısal protein"
+      },
+      {
+        "id": "k1-30-fc05",
+        "front": "Mantle hücreli lenfomada Siklin D1 geninin immünoglobulin ağır zincir promotoru altına taşınmasına yol açan translokasyon nedir?",
+        "back": "t(11;14)(q13;q32) translokasyonudur.",
+        "hint": "On birinci ve on dördüncü kromozomlar arası sitogenetik yer değişimi"
+      },
+      {
+        "id": "k1-30-fc06",
+        "front": "Meme karsinomunda kullanılan palbosiklib ve ribosiklib gibi CDK4/6 inhibitörlerinin tümör hücresindeki moleküler etki mekanizması nedir?",
+        "back": "RB'nin hipofosforile kalarak E2F'yi hapsetmesini sağlamaktır.",
+        "hint": "Retinoblastoma proteinini aktif baskılayıcı formda kilitleme durumu"
+      },
+      {
+        "id": "k1-30-fc07",
+        "front": "DNA çift zincir kırıklarını algılayarak Chk2 üzerinden p53'ü fosforilleyip MDM2 yıkımından kurtaran apikal kinaz hangisidir?",
+        "back": "ATM (Ataxia Telangiectasia Mutated) kinazıdır.",
+        "hint": "Ataksi telenjiektazi hastalığında mutant olan apikal DNA sensörü"
+      },
+      {
+        "id": "k1-30-fc08",
+        "front": "p53'ün hücreyi G1/S sınırında geçici olarak durdurmak amacıyla transkripsiyonunu doğrudan başlattığı CDK inhibitörü gen hangisidir?",
+        "back": "CDKN1A (p21) genidir.",
+        "hint": "Yirmi bir kilodaltonluk klasik siklin kinaz inhibitör proteini"
+      },
+      {
+        "id": "k1-30-fc09",
+        "front": "p53'ün şiddetli DNA hasarında mitokondri dış zarında gözenek açarak apoptozu başlatmak için uyardığı temel BH3-only pro-apoptotik proteinler hangileridir?",
+        "back": "PUMA ve NOXA proteinleridir.",
+        "hint": "Mitokondriyal intrensek ölüm yolağını ateşleyen iki kritik protein"
+      },
+      {
+        "front": "Transforming Growth Factor-β (TGF-β) yolağında sitoplazmik sinyali çekirdeğe ileten temel molekül ailesi nedir?",
+        "back": "SMAD proteinleri (SMAD2/3 ve ko-SMAD4)",
+        "id": "k1-30-fc10"
+      },
+      {
+        "front": "Kromozom 5q21'de kodlanan ve yokluğunda kontrolsüz β-katenin birikimine yol açan kapı bekçisi gen hangisidir?",
+        "back": "APC (Adenomatöz Polipozis Koli) geni",
+        "id": "k1-30-fc11"
+      },
+      {
+        "front": "E-kadherin sentezini baskılayıp karsinomlarda epitel-mezenkimal geçişi (EMT) tetikleyen başlıca nükleer regülatörler hangileridir?",
+        "back": "SNAIL ve TWIST çinko parmak proteinleri",
+        "id": "k1-30-fc12"
+      },
+      {
+        "front": "Tümör hücrelerinin oksijen varlığında dahi glikozu laktata çevirerek ara ürünleri biyosenteze yönlendirmesi olayına ne ad verilir?",
+        "back": "Warburg etkisi (Aerobik glikoliz)",
+        "id": "k1-30-fc13"
+      },
+      {
+        "front": "Pozitron emisyon tomografisinde hücreye giren radyoaktif işaretli şekerin fosforillenip sitoplazmada kilitlenmesini sağlayan katalizör nedir?",
+        "back": "Hekzokinaz (Glukokinaz izoformu)",
+        "id": "k1-30-fc14"
+      },
+      {
+        "front": "Kanser hücrelerinde glutaminaz ekspresyonunu artırarak hücreyi glutamin bağımlılığına sürükleyen ana onkogen hangisidir?",
+        "back": "MYC onkogeni",
+        "id": "k1-30-fc15"
+      },
+      {
+        "front": "Mutant IDH1 ve IDH2 enzimlerinin neoenzimatik aktiviteyle α-ketoglutarattan ürettiği ana onkometabolit nedir?",
+        "back": "2-Hidroksiglutarat (2-HG)",
+        "id": "k1-30-fc16"
+      },
+      {
+        "front": "2-HG molekülünün yarışmalı inhibisyonla bloke ettiği ve yokluğunda genomik hipermetilasyon gelişen dioksijenaz enzimi hangisidir?",
+        "back": "TET2 (Ten-Eleven Translocation 2) demetilazı",
+        "id": "k1-30-fc17"
+      },
+      {
+        "front": "Erişkin diffüz gliomlarında IDH1/2 mutasyonunun saptanması prognoz açısından nasıl bir anlam taşır?",
+        "back": "IDH vahşi tipe göre belirgin olarak daha iyi prognoza işaret eder",
+        "id": "k1-30-fc18"
+      },
+      {
+        "front": "Otofagozom zarının uzaması ve oluşumunda kullanılan ve otofajinin altın biyobelirteci olan lipidlenmiş protein hangisidir?",
+        "back": "LC3-II (LC3-fosfatidiletanolamin konjugatı)",
+        "id": "k1-30-fc19"
+      },
+      {
+        "front": "Otofajide ubikitinlenmiş hücresel çöpleri LC3-II'ye bağlayan ve otofajik akışta kendisi de sindirilen kargo adaptör proteini nedir?",
+        "back": "p62 (SQSTM1)",
+        "id": "k1-30-fc20"
+      },
+      {
+        "front": "Lizozomal asidik pH'yı nötralize ederek otofajik akışı tıkayan ve onkolojide otofaji inhibitörü olarak araştırılan ilaçlar nelerdir?",
+        "back": "Kloroquin ve Hidroksikloroquin",
+        "id": "k1-30-fc21"
+      },
+      {
+        "front": "Normokside HIF-1α proteinini hidroksillenmiş prolinlerinden tanıyarak proteazomda yıkan tümör baskılayıcı molekül nedir?",
+        "back": "Von Hippel-Lindau proteini (pVHL)",
+        "id": "k1-30-fc22"
+      },
+      {
+        "front": "Katı tümör hücrelerinde anjiyogenez şalterinin açılmasında endotel hücresinde göç ve bölünmeyi başlatan ana yüzey proteini hangisidir?",
+        "back": "VEGFR-2 tirozin kinazı",
+        "id": "k1-30-fc23"
+      },
+      {
+        "front": "Vahşi tip p53 tarafından sentezletilen ve endotel hücresini apoptoza sokarak damarlanmayı durduran endojen glikoprotein nedir?",
+        "back": "Trombospondin-1 (TSP-1)",
+        "id": "k1-30-fc24"
+      },
+      {
+        "front": "Dolaşımdaki serbest VEGF-A proteinine bağlanarak anjiyogenik endotel uyarımını durduran hümanize monoklonal ilaç nedir?",
+        "back": "Bevacizumab antikor ajanı",
+        "id": "k1-30-fc25"
+      },
+      {
+        "front": "Tümör dokusunda anti-VEGF uygulanması sonrası interstisyel sıvı basıncının düşüp kemoterapi dağılımının arttığı geçici duruma ne denir?",
+        "back": "Damar normalizasyonu penceresi",
+        "id": "k1-30-fc26"
+      },
+      {
+        "front": "Kanser hücrelerinin endotel hücresi kullanmaksızın kendi aralarında eritrosit dolu lümenli tüpler kurması fenomenine ne ad verilir?",
+        "back": "Vasküler mimikri oluşumu",
+        "id": "k1-30-fc27"
+      },
+      {
+        "front": "Homolog rekombinasyon kusuru olan BRCA mutant tümörlerde tek iplik DNA tamirini durdurarak hücreyi ölüme götüren sentetik enzim hedefi nedir?",
+        "back": "Poli ADP-riboz polimeraz (PARP)",
+        "id": "k1-30-fc28"
+      },
+      {
+        "front": "Periferik kanda serbest dolaşan tümör kökenli nükleik asit fragmanlarının tespitiyle tedavi direnci ve nüks izleyen minimal invaziv tanı yöntemi hangisidir?",
+        "back": "Sıvı biyopsi (ctDNA analizi)",
+        "id": "k1-30-fc29"
+      },
+      {
+        "front": "Malign hücrelerin tek bir kritik itici mutasyonun sinyaline aşırı muhtaç olması ve onun kesilmesiyle apoptoza gitmesi durumu nedir?",
+        "back": "Onkogen bağımlılığı (Oncogene addiction)",
+        "id": "k1-30-fc30"
+      }
+    ],
     "questionCount": 0,
     "flashcardCount": 30,
-    "totalSlides": 100,
-    "themeColor": "#0d9488",
-    "category": "Tıbbi Patoloji",
+    "sourcePdf": "18) İleri Tümör Genetiği ve Metabolizması.pdf",
     "isNew": true,
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "cardCount": 30,
+    "firstSlideNumber": 1
   },
   {
     "deckId": "k1p-k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler",
@@ -146233,15 +146428,201 @@
     "discipline": "Tıbbi Genetik",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "instructor": "Dr. Öğr. Üyesi Serap Arslan",
+    "audioFile": "",
+    "audioDuration": "",
+    "confidence": "high",
+    "themeColor": "#7c3aed",
+    "matchedNoteId": "k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler",
+    "matchedNoteTitle": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları",
     "overview": "Ürogenital sistem tümörlerinin (böbrek, mesane, prostat, testis, jinekolojik maligniteler) genetik temeli, herediter renal hücreli karsinom sendromları (VHL, BAP1, BHD, HLRCC, HPRC, TSC), hedefe yönelik tedaviler (TKI, anti-VEGF, Belzutifan), mesanede FGFR3/TP53 ikili yolağı, prostatta HRR/BRCA mutasyonları ve PARP sentetik letalitesinin 100 adımda kapsamlı moleküler analizi.",
+    "highYieldPearls": [
+      "Erkekte en sık ürogenital tümörler prostat ve mesane; kadında en sık üriner sistem tümörü mesanedir.",
+      "RCC tüm kanserlerin ~%4,1'i; böbrek tümörlerinin %85'i RCC ve bunların %70'i berrak hücreli karsinomdur (ccRCC); en sık metastaz akciğeredir.",
+      "Herediter RCC sendromları tüm RCC'lerin ~%3'üdür: VHL (3p25, hemanjiyoblastom + ccRCC + feokromositoma), BAP1 (3p21, agresif ccRCC, uveal melanom), FLCN (17p11, BHD, onkositoz/kromofob), FH (1q42, HLRCC, agresif tip 2 papiller RCC), MET (7q31, HPRC, tip 1 papiller RCC).",
+      "VHL sendromlu böbrek kitlelerinde 3 cm kuralı ile nefron koruyucu cerrahi uygulanırken, HLRCC ilişkili renal kitlelerde metastaz riski çok yüksek olduğundan 3 cm kuralı kesinlikle geçersizdir ve saptandığı an radikal cerrahi uygulanır.",
+      "İleri evre ccRCC birinci basamak sistemik tedavide TKI + İmmün Kontrol Noktası İnhibitörü (Aksitinib+Pembrolizumab, Kabozantinib+Nivolumab, Lenvatinib+Pembrolizumab) veya çift immünoterapi (İpilimumab+Nivolumab); VHL ilişkili ccRCC'de spesifik HIF-2α inhibitörü Belzutifan kullanılır.",
+      "Mesane karsinomlarında yüzeyel papiller non-invaziv tümörlerde FGFR3 aktivasyonu (iyi prognoz); invaziv karsinomlarda ise TP53 ve RB inaktivasyonu (kötü prognoz) ön plandadır. FGFR3 mutasyonlu ileri evre ürotelyal karsinomda Erdafitinib hedefe yönelik tedavidir.",
+      "Prostat karsinomunda germ hattı mutasyonlarında en sık BRCA2 ve ATM saptanır; HOXB13 ailesel risk genidir. Metastatik kastrasyona dirençli prostat kanserinde (mCRPC) homolog rekombinasyon tamir (HRR) defekti varlığında PARP inhibitörleri (Olaparib, Rukaparib) sentetik letalite ile etki gösterir; CDK12 bialelik kaybı ise agresif seyir ve immünojenik tandem duplikasyonlarla karakterizedir.",
+      "Testis tümörlerinin %95'i germ hücreli tümördür (GHT) ve >%80'inde izokromozom 12p [i(12p)] patognomonik genetik anomalidir; kriptorşidizm en güçlü konjenital risk faktörüdür.",
+      "Endometriyum karsinomu Lynch sendromlu kadınlarda kolorektal kanserden sonra en sık görülen ikinci malignitedir ve sıklıkla kolondan önce prezente olur (sentinel kanser).",
+      "Vulva karsinomunda iki bağımsız etiyopatogenetik yol vardır: HPV ilişkili yolak (genç hastalar, CIN/VIN zemininde, p16 diffüz pozitif) ve HPV bağımsız yolak (ileri yaş, liken skleroz zemininde, dVIN, TP53 mutasyonu, kötü prognoz)."
+    ],
+    "totalSlides": 100,
     "slideCount": 100,
+    "matchedPastQuestionsCount": 0,
+    "category": "Tıbbi Genetik",
+    "programDate": "2026-2027",
+    "kazanimlar": [
+      "Ürogenital sistem tümörlerinin (böbrek, mesane, prostat, testis, endometrium, vulva, over) epidemiyolojisini, risk faktörlerini ve genetik temelini özetler.",
+      "Herediter renal hücreli karsinom sendromlarını (VHL, BAP1-TPDS, BHD, HLRCC, HPRC, TSC, PGL/PCC) gen, lokus ve klinik özellikleriyle açıklar ve genetik değerlendirme kriterlerini bilir.",
+      "İleri evre berrak hücreli RCC'de hedefe yönelik tedavi kombinasyonlarını ve VHL ilişkili RCC'de belzutifanın yerini açıklar.",
+      "Mesane kanserinin moleküler değişikliklerini (papiller tümörde FGFR3, invaziv tümörde p53/RB), prognostik belirteçlerini ve hedefe yönelik tedavilerini açıklar.",
+      "Prostat kanserinin genetik yapısını, germ hattı ve somatik tümör testi önerilerini ve hedefe yönelik tedavisini (PARP inhibitörleri, CDK12) açıklar.",
+      "Testis tümörlerinin ana alt tiplerini, risk faktörlerini ve serum tümör belirteçlerini açıklar.",
+      "Endometrium kanserinin risk faktörlerini, Lynch sendromu ilişkisini ve moleküler sınıflamasını (POLE, MSI-H, kopya sayısı düşük/yüksek) açıklar.",
+      "Vulva ve over kanserinin genetik yönlerini ve Peutz-Jeghers sendromunda servikal adenoma malignum riskini açıklar.",
+      "Ailesel meme-over kanseri sendromlarını ve PARP inhibitörlerinin sentetik letalite mantığını açıklar."
+    ],
+    "questions": [],
+    "flashcards": [
+      {
+        "front": "Erişkin böbrek parankim kaynaklı malign neoplazmları arasında yaklaşık yüzde yetmişlik oranla en sık izlenen histopatolojik alt tip hangisidir?",
+        "back": "Berrak hücreli renal hücreli karsinom (ccRCC)",
+        "id": "k1-31-fc01"
+      },
+      {
+        "front": "Renal neoplazmlarda hematüri, lomber ağrı ve ele gelen kitle birlikteliğinden oluşan klasik tanısal bulgu üçlüsüne ne ad verilir?",
+        "back": "Klinik triad (Guyon triad)",
+        "id": "k1-31-fc02"
+      },
+      {
+        "front": "Berrak hücreli böbrek karsinomlarında olguların yüzde elli ila altmışında en sık hematik metastaz izlenen torasik organ neresidir?",
+        "back": "Akciğer parankimi",
+        "id": "k1-31-fc03"
+      },
+      {
+        "front": "Serebellar hemanjiyoblastom, retina anjiyomu, berrak hücreli böbrek karsinomu ve feokromositoma ile seyreden 3p25 lokuslu sendrom hangisidir?",
+        "back": "Von Hippel-Lindau (VHL) hastalığı",
+        "id": "k1-31-fc04"
+      },
+      {
+        "front": "Uveal melanom, plevral malign mezotelyoma ve yüksek dereceli agresif renal karsinoma yatkınlık oluşturan 3p21 lokuslu moleküler belirteç hangisidir?",
+        "back": "BAP1 deubikitilaz geni",
+        "id": "k1-31-fc05"
+      },
+      {
+        "front": "Yüzde kıl folikülü fibrofolikülomları, akciğer kistleri, spontan pnömotoraks ve kromofob renal neoplazmlarla giden 17p11 mutasyonu nedir?",
+        "back": "Birt-Hogg-Dubé sendromu (FLCN)",
+        "id": "k1-31-fc06"
+      },
+      {
+        "front": "Kutanöz-uterin leiomiyomlar ve erken yaşta son derece agresif seyirli tip iki papiller böbrek karsinomu ile karakterize 1q43 gen defekti nedir?",
+        "back": "HLRCC sendromu (Fumarat hidrataz eksikliği)",
+        "id": "k1-31-fc07"
+      },
+      {
+        "front": "Kromozom 7q31 bandında yer alan ve bilateral multifokal tip bir papiller böbrek karsinomlarına yol açan onkojenik reseptör hangisidir?",
+        "back": "MET tirozin kinazı",
+        "id": "k1-31-fc08"
+      },
+      {
+        "front": "Tüberoz sklerozlu bireylerde böbrek parankiminde en sık izlenen ve aşırı kanama riski taşıyan mezenkimal lezyon nedir?",
+        "back": "Anjiyomiyolipom (AML)",
+        "id": "k1-31-fc09"
+      },
+      {
+        "front": "VHL ilişkili berrak hücreli böbrek karsinomlarında HIF-2α transkripsiyon faktörünün dimerleşmesini selektif durduran ilk onaylı ajan hangisidir?",
+        "back": "Belzutifan molekülü",
+        "id": "k1-31-fc10"
+      },
+      {
+        "front": "İleri evre metastatik renal karsinomda VEGFR tirozin kinaz inhibitörü Aksitinib ile kombine edilen anti-PD-1 monoklonal antikoru nedir?",
+        "back": "Pembrolizumab immünoterapi ilacı",
+        "id": "k1-31-fc11"
+      },
+      {
+        "front": "Orta ve kötü riskli ileri evre böbrek karsinomlarında tam remisyon sağlayabilen çift immün kontrol noktası kombinasyonu hangi antikorlardan oluşur?",
+        "back": "Nivolumab ve İpilimumab",
+        "id": "k1-31-fc12"
+      },
+      {
+        "front": "Yüzeysel kas invaziv olmayan papiller mesane tümörlerinin yüzde sekseninden fazlasında görülen ve iyi prognozla ilişkili onkojenik reseptör değişimi hangisidir?",
+        "back": "FGFR3 kinaz mutasyonu",
+        "id": "k1-31-fc13"
+      },
+      {
+        "front": "Yüksek dereceli kas invaziv mesane karsinomlarının karsinogenezinde erken basamakta kaybedilen iki klasik tümör baskılayıcı yol hangileridir?",
+        "back": "TP53 ve RB yolakları",
+        "id": "k1-31-fc14"
+      },
+      {
+        "front": "İleri evre FGFR2 veya FGFR3 genetik füzyonu taşıyan ürotelyal mesane karsinomunda kullanılan pan-FGFR inhibitörü oral ajan hangisidir?",
+        "back": "Erdafitinib molekülü",
+        "id": "k1-31-fc15"
+      },
+      {
+        "front": "Ailesel erken başlangıçlı ve agresif seyirli prostat adenokarsinomlarında germ hattında en sık mutasyona uğrayan homolog rekombinasyon faktörü hangisidir?",
+        "back": "BRCA2 tamir geni",
+        "id": "k1-31-fc16"
+      },
+      {
+        "front": "Kuzey Avrupa ve İskandinav kökenli ailelerde prostat kanseri riskini belirgin artıran G84E mutasyonu hangi homeobox bölgesinde yerleşiktir?",
+        "back": "HOXB13 transkripsiyon faktörü",
+        "id": "k1-31-fc17"
+      },
+      {
+        "front": "Metastatik kastrasyona dirençli prostat karsinomunda BRCA veya ATM defekti olan hastalarda onaylı sentetik ölümcüllük ajanı hangisidir?",
+        "back": "Olaparib (PARP inhibitörü)",
+        "id": "k1-31-fc18"
+      },
+      {
+        "front": "Genç erişkin erkeklerde en sık izlenen germ hücreli testis neoplazmlarının neredeyse tamamında görülen karakteristik sitogenetik anomali hangisidir?",
+        "back": "İzokromozom 12p [i(12p)]",
+        "id": "k1-31-fc19"
+      },
+      {
+        "front": "Testis neoplazmlarında koryokarsinom komponentinin varlığını ve sinsityotrofoblastik aktiviteyi kanda gösteren glikoprotein belirteç nedir?",
+        "back": "Beta-hCG hormonu",
+        "id": "k1-31-fc20"
+      },
+      {
+        "front": "Saf seminomlarda düzeyi daima normal kalan, kanda yükselmesi durumunda non-seminomatöz yolk sak komponenti kanıtlayan onkofetal antijen hangisidir?",
+        "back": "Alfa-fetoprotein (AFP)",
+        "id": "k1-31-fc21"
+      },
+      {
+        "front": "Endometrium karsinomu moleküler sınıflamasında aşırı yüksek mutasyon yüküne rağmen en mükemmel klinik prognoza sahip moleküler kategori hangisidir?",
+        "back": "POLE ekzonükleaz mutant grup",
+        "id": "k1-31-fc22"
+      },
+      {
+        "front": "Lynch sendromlu kadınlarda yetmiş yaşına kadar en yüksek kümülatif endometrium kanseri riski oluşturan DNA uyumsuzluk geni hangisidir?",
+        "back": "MSH6 mutasyonu",
+        "id": "k1-31-fc23"
+      },
+      {
+        "front": "Endometrium karsinomu sınıflamasında yüksek kopya sayısı, derin miyometrial invazyon ve en kötü sağkalım sergileyen nükleer belirteç nedir?",
+        "back": "Anormal (mutant) p53 proteini",
+        "id": "k1-31-fc24"
+      },
+      {
+        "front": "Elli yaş üstü kadınlarda HPV enfeksiyonu olmaksızın liken skleroz zemininde gelişen vulva karsinomlarında en sık saptanan moleküler defekt nedir?",
+        "back": "TP53 tümör süpresör mutasyonu",
+        "id": "k1-31-fc25"
+      },
+      {
+        "front": "BRCA1 veya BRCA2 mutasyonu taşıyan kadınlarda yüksek dereceli seröz over karsinomunun gerçek anatomik çıkış noktası neresidir?",
+        "back": "Fallop tüpü fimbriyası (STIC)",
+        "id": "k1-31-fc26"
+      },
+      {
+        "front": "STK11 gen defektine bağlı gelişen Peutz-Jeghers sendromunda servikste izlenen karakteristik agresif glandüler neoplazm hangisidir?",
+        "back": "Adenoma malignum (Minimal deviasyonlu adenokarsinom)",
+        "id": "k1-31-fc27"
+      },
+      {
+        "front": "Prostat karsinomunda androjen ile düzenlenen TMPRSS2 promotoru ile füzyon yaparak aşırı eksprese edilen ETS transkripsiyon faktörü hangisidir?",
+        "back": "ERG onkogeni",
+        "id": "k1-31-fc28"
+      },
+      {
+        "front": "Ürogenital sistemde bir bireyde patojenik germ hattı mutasyonu saptandığında tüm birinci derece kan bağı olan akrabaların taranması sürecine ne ad verilir?",
+        "back": "Kaskad genetik tarama",
+        "id": "k1-31-fc29"
+      },
+      {
+        "front": "Böbrek, prostat ve over neoplazmlarında homolog rekombinasyon kusuru taşıyan hücreleri tek iplik onarımını durdurarak apoptoza sürükleyen farmakolojik ilke nedir?",
+        "back": "Sentetik letalite (ölümcüllük)",
+        "id": "k1-31-fc30"
+      }
+    ],
     "questionCount": 0,
     "flashcardCount": 30,
-    "totalSlides": 100,
-    "themeColor": "#7c3aed",
-    "category": "Tıbbi Genetik",
+    "sourcePdf": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler.pdf",
     "isNew": true,
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "cardCount": 30,
+    "firstSlideNumber": 1
   },
   {
     "deckId": "k1p-k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari",

@@ -61,7 +61,7 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
     setSuccess(null);
 
     if (displayName.trim()) {
-      const nameCheck = validateNamePolicy(displayName.trim());
+      const nameCheck = validateNamePolicy(displayName.trim(), { adminEmail: currentUser?.email });
       if (!nameCheck.isValid) {
         setError(nameCheck.errorMessage || 'Geçersiz isim girdiniz.');
         return;

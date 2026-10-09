@@ -119,11 +119,28 @@ export interface NameValidationResult {
   matchedDetails?: string;
 }
 
+/** Admin hesabı isim politikasından muaftır (Dr. House dahil her adı kullanabilir). */
+export const ADMIN_BYPASS_EMAIL = 'nofrostlife@gmail.com';
+
+export function isAdminBypassEmail(email?: string | null): boolean {
+  return !!email && email.trim().toLowerCase() === ADMIN_BYPASS_EMAIL.toLowerCase();
+}
+
 /**
  * Validates a user name or contributor name against forbidden fictional names (Dr. House)
  * and real curriculum instructor names (first name + last name together).
+ *
+ * Admin muafiyeti: `opts.isAdmin === true` veya `opts.adminEmail` admin hesabına
+ * aitse (nofrostlife@gmail.com) kontrol yapılmadan geçerli döner. Normal
+ * kullanıcılar için kısıtlama aynen devam eder.
  */
-export function validateNamePolicy(rawName: string | null | undefined): NameValidationResult {
+export function validateNamePolicy(
+  rawName: string | null | undefined,
+  opts?: { adminEmail?: string | null; isAdmin?: boolean },
+): NameValidationResult {
+  if (opts?.isAdmin === true || isAdminBypassEmail(opts?.adminEmail)) {
+    return { isValid: true };
+  }
   if (!rawName || !rawName.trim()) {
     return {
       isValid: false,

@@ -250,12 +250,40 @@ export function extractMedicalEntities(text: string): string[] {
 // Hızlı Ters İndeks (Inverted Index) - 5,000+ Tıbbi Kavram için O(1) arama
 let termToConceptMap: Map<string, MedicalConceptBank[]> | null = null;
 
+/**
+ * Jenerik kavram eşiği: bu sayıda bankadan fazla geçen terim (örn. "sendromu"
+ * 400+ bankada) ayırt edici değildir; kavram bonusuna girmemelidir. Aksi halde
+ * "Down sendromu" yazan kullanıcıya "#AlportSendromu" eşleşmesi gösterilir.
+ */
+export const GENERIC_CONCEPT_DF_THRESHOLD = 30;
+
+/** Skorlamada ayırt edici sayılmayan jenerik varlık token'ları (normalize ascii). */
+export const GENERIC_ENTITY_TOKENS = new Set([
+  'sendrom', 'sendromu', 'sendromlar', 'sendromlari',
+  'hastalik', 'hastaligi', 'hastaliklari',
+  'yetmezlik', 'yetmezligi', 'eksiklik', 'eksikligi',
+  'mekanizma', 'mekanizmasi', 'bozukluk', 'bozuklugu',
+]);
+
 function getTermToConceptMap(): Map<string, MedicalConceptBank[]> {
   if (termToConceptMap) return termToConceptMap;
   if (MEDICAL_CONCEPT_BANKS.length === 0) {
     void loadMedicalConcepts();
     return new Map();
   }
+  // 1. tur: her terimin kaç farklı bankada geçtiğini say (df)
+  const df = new Map<string, number>();
+  for (const concept of MEDICAL_CONCEPT_BANKS) {
+    if (!concept.terms) continue;
+    const seen = new Set<string>();
+    for (const term of concept.terms) {
+      const cleanTerm = normalizeMedicalText(term);
+      if (cleanTerm.length < 3 || MEDICAL_STOP_WORDS.has(cleanTerm)) continue;
+      seen.add(cleanTerm);
+    }
+    for (const t of seen) df.set(t, (df.get(t) || 0) + 1);
+  }
+  // 2. tur: jenerik terimler (yüksek df) indekse alınmaz
   termToConceptMap = new Map();
 
   for (const concept of MEDICAL_CONCEPT_BANKS) {
@@ -263,6 +291,8 @@ function getTermToConceptMap(): Map<string, MedicalConceptBank[]> {
     for (const term of concept.terms) {
       const cleanTerm = normalizeMedicalText(term);
       if (cleanTerm.length < 3 || MEDICAL_STOP_WORDS.has(cleanTerm)) continue;
+      // Jenerik terim ("sendromu" gibi): kavram eşleşmesinde kullanılmaz
+      if ((df.get(cleanTerm) || 0) > GENERIC_CONCEPT_DF_THRESHOLD) continue;
       const list = termToConceptMap.get(cleanTerm);
       if (list) {
         if (list.length < 30) {
@@ -590,6 +620,37 @@ export function calculateOptionSetSimilarity(
   return { score, alignments, matchedCount };
 }
 
+/**
+ * Paylaşılan kavramlar arasından etikete en uygun olanın adını seçer.
+ * Her iki metinde de geçen spesifik terimi adında barındıran kavram önceliklidir;
+ * böylece "Down" sorgusunda "#AlportSendromu" gibi yanlış etiket gösterilmez.
+ */
+function pickSharedConceptName(
+  sharedConcepts: MedicalConceptBank[],
+  specificSharedEntities: string[]
+): string | undefined {
+  if (sharedConcepts.length === 0) return undefined;
+  if (specificSharedEntities.length === 0) return sharedConcepts[0]?.name;
+  const fold = (s: string) => normalizeMedicalText(s);
+  const specs = specificSharedEntities.filter((e) => e.length >= 3).slice(0, 4);
+  let best: MedicalConceptBank | undefined;
+  let bestHits = -1;
+  for (const c of sharedConcepts) {
+    // Banka adı ortak spesifik terimi içermiyorsa ("İzole Pulmoner Stenoz" vs "down")
+    // etikete aday olamaz; aksi halde yanlış hastalık etiketi gösterilir.
+    const hay = fold(c.name || '');
+    let hits = 0;
+    for (const e of specs) {
+      if (hay.includes(e)) hits++;
+    }
+    if (hits > bestHits || (hits === bestHits && (c.name?.length || 0) < (best?.name?.length ?? Infinity))) {
+      bestHits = hits;
+      best = c;
+    }
+  }
+  return (bestHits > 0 ? best : sharedConcepts[0])?.name;
+}
+
 // ==========================================
 // 3. İKİ TASLAK ARASINDA ÇOK KATMANLI UYUM ANALİZİ
 // ==========================================
@@ -695,15 +756,19 @@ export function calculateDraftCompatibility(
     reasons.push(`1 ortak şık örtüşmesi var.`);
   }
 
-  // 5. Tıbbi Varlık ve Terim Kesişimi
+  // 5. Tıbbi Varlık ve Terim Kesişimi (jenerik "sendromu/hastalığı" sayılmaz:
+  // Down vs Alport gibi farklı hastalıklar tek ortak kelimeyle eşleşmemeli)
   const entitiesA = extractMedicalEntities(textA);
   const entitiesB = extractMedicalEntities(textB);
   const sharedMedicalEntities = entitiesA.filter((e) => entitiesB.includes(e));
+  const specificSharedEntities = sharedMedicalEntities.filter((e) => !GENERIC_ENTITY_TOKENS.has(e));
 
-  if (sharedMedicalEntities.length >= 2) {
-    reasons.push(`Kritik tıbbi terimler ortak: ${sharedMedicalEntities.slice(0, 4).join(', ')}`);
-  } else if (sharedMedicalEntities.length === 1) {
-    reasons.push(`Ortak terim: ${sharedMedicalEntities[0]}`);
+  if (specificSharedEntities.length >= 2) {
+    reasons.push(`Kritik tıbbi terimler ortak: ${specificSharedEntities.slice(0, 4).join(', ')}`);
+  } else if (specificSharedEntities.length === 1) {
+    reasons.push(`Ortak terim: ${specificSharedEntities[0]}`);
+  } else if (sharedMedicalEntities.length > 0) {
+    reasons.push(`Yalnızca jenerik terim örtüşüyor (${sharedMedicalEntities.slice(0, 2).join(', ')}); eşleşme sayılmaz.`);
   }
 
   // 5b. KISA-METİN KORUMASI: iki taraf da bir-iki cümlelik ipucundan ibaretse,
@@ -772,27 +837,28 @@ export function calculateDraftCompatibility(
     // Aynı soru numarası, aynı kitapçık sorusuna işaret ettiği için ek destektir.
     overallScore = conceptBonus + Math.min(40,
       stemSimilarity * 0.35 +
-      sharedMedicalEntities.length * 6 +
+      specificSharedEntities.length * 6 +
       (sameDiscipline ? 8 : 0) +
       (sameNumber ? 10 : 0));
+    // YALNIZCA kavram adı örtüşüyorsa (spesifik terim, kök ve şık desteği yoksa)
+    // güvenli eşleşme kurulamaz: ayrı hastalıklar listelenmemeli (örn. Down vs Alport).
     const weakEvidence =
-      stemSimilarity < 20 && sharedMedicalEntities.length < 2 && optionMatch.matchedCount < 2 && !sameNumber;
+      stemSimilarity < 25 && specificSharedEntities.length < 1 && optionMatch.matchedCount < 2 && !sameNumber;
     if (weakEvidence) {
-      overallScore = Math.min(overallScore, t.autoThreshold - 4);
-      reasons.push('Yalnızca kavram adı örtüşüyor; kök ve şık desteği zayıf olduğu için insan incelemesi gerekir.');
+      return distinct('Yalnızca kavram adı örtüşüyor; spesifik terim, kök ve şık desteği yok.');
     }
   } else if (optionMatch.matchedCount >= 2) {
     // En az 2 ortak şık güçlü sinyaldir; ama kök tamamen farklıysa temkinli olunur.
     const optBase = (stemSimilarity >= 15 || sameNumber) ? 75 : 60;
-    overallScore = optBase + Math.min(25, sharedMedicalEntities.length * 5 + stemSimilarity * 0.15);
-  } else if (sharedMedicalEntities.length >= 2) {
+    overallScore = optBase + Math.min(25, specificSharedEntities.length * 5 + stemSimilarity * 0.15);
+  } else if (specificSharedEntities.length >= 2) {
     overallScore = 50 + Math.min(35, stemSimilarity * 0.35 + optionSetSimilarity * 0.25 + (sameDiscipline ? 10 : 0));
   } else {
     overallScore = (
       stemSimilarity * 0.45 +
       optionSetSimilarity * 0.35 +
       (sameDiscipline ? 15 : 0) +
-      Math.min(20, sharedMedicalEntities.length * 8)
+      Math.min(20, specificSharedEntities.length * 8)
     );
   }
 
@@ -809,7 +875,8 @@ export function calculateDraftCompatibility(
     recommendation = 'distinct';
   }
 
-  const primaryConcept = sharedConcepts[0]?.name || draftA.topic || draftB.topic || '';
+  const primaryConcept = pickSharedConceptName(sharedConcepts, specificSharedEntities)
+    || draftA.topic || draftB.topic || '';
   const contextHashtag = toContextHashtag(primaryConcept);
 
   return {

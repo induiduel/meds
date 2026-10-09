@@ -319,7 +319,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     }
 
     if (author.trim()) {
-      const nameCheck = validateNamePolicy(author.trim());
+      const nameCheck = validateNamePolicy(author.trim(), { adminEmail: currentUser?.email });
       if (!nameCheck.isValid) {
         setFormError(nameCheck.errorMessage || 'Geçersiz isim girdiniz.');
         return;
