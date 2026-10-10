@@ -2513,47 +2513,6 @@
     "firstSlideNumber": 1
   },
   {
-    "deckId": "k1p-k1-44-vaskuler-ve-kistik-bobrek-hastaliklari",
-    "id": "k1p-k1-44-vaskuler-ve-kistik-bobrek-hastaliklari",
-    "title": "Vasküler ve Kistik Böbrek Hastalıkları",
-    "shortTitle": "Vasküler ve Kistik Böbrek Hastalıkları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "instructor": "Prof. Dr. Hikmet Keleş",
-    "audioFile": "",
-    "audioDuration": "",
-    "confidence": "high",
-    "themeColor": "rose",
-    "matchedNoteId": "k1-44-vaskuler-ve-kistik-bobrek-hastaliklari",
-    "matchedNoteTitle": "Vasküler ve Kistik Böbrek Hastalıkları",
-    "overview": "Hipertansif Böbrek Hastalığı\nSistemik hipertansiyon böbrek damarları ve parankimini etkiler; iki ana tablo uzun süreli primer hipertansiyona bağlı benign nefroskleroz ve hızlı gelişen ağır hipertansiyona bağlı malign nefrosklerozdur. Temel patolojik değişiklikler hiyalin arteriyoloskleroz, hiperplastik arteriyoloskleroz ve fibrinoid nekrozdur. Benign nefrosklerozda böbrekler simetrik küçülmüş ve yüzey ince granülerdir; arteriyollerde pembe homojen hiyalin arteriyoloskleroz, tübüllerde atrofi, interstisyel fibrozis ve ileri olgularda glomeruloskleroz görülür. Klinikte hafif proteinüri ve azotemi olur; genellikle böbrek yetmezliği yapmaz ancak diyabet ve eşlik eden böbrek hastalığında risk art",
-    "highYieldPearls": [
-      "Benign nefroskleroz: uzun süreli primer hipertansiyon; simetrik küçülmüş böbrek, ince granüler yüzey; hiyalin arteriyoloskleroz; genellikle böbrek yetmezliği yapmaz.",
-      "Malign nefroskleroz: hızlı ağır hipertansiyon; pire ısırığı görünümü; fibrinoid nekroz ve soğan zarı; papilödem/ensefalopati; acil antihipertansif tedavi.",
-      "TMA üçlüsü: mikrovasküler tromboz, mikroanjiyopatik hemolitik anemi ve trombositopeni; böbrek yetmezliği sık.",
-      "Primer TMA formları: Şiga toksin-ilişkili HÜS (edinsel), kompleman-aracılı TMA (kalıtsal/edinilmiş) ve TTP (ADAMTS13 eksikliği).",
-      "Kronik böbrek hastalığı ilerlemiş nefron kaybının ortak son yoludur; diyaliz/nakil olmadıkça ölümcüldür.",
-      "Basit kistler kortekse sınırlı, 1-5 cm, anekoik; görüntülemede tümörden ayırt edilmelidir."
-    ],
-    "totalSlides": 17,
-    "matchedPastQuestionsCount": 1,
-    "category": "Kurul 1 · 2026-2027 ders paketi",
-    "programDate": "2026-10-05",
-    "kazanimlar": [
-      "Hipertansif nefrosklerozun benign ve malign formlarının patogenez, morfoloji ve klinik özelliklerini ayırt eder.",
-      "Trombotik mikroanjiyopatilerin (TMA) böbrek üzerindeki etkisini ve başlıca formlarının etiyolojik sınıflamasını açıklar.",
-      "Kronik böbrek hastalığı ve son dönem böbreğin ortak morfolojik ve klinik özelliklerini kavrar.",
-      "Başlıca kistik böbrek hastalıklarının (basit kist, edinilmiş kistik hastalık, ADPKD, ARPKD, nefronofthisis, multikistik displazi) özelliklerini karşılaştırır.",
-      "İdrar yolu tıkanıklığının böbrek üzerindeki etkilerini ve tıkanıklık seviyesine göre tutulum örüntüsünü açıklar.",
-      "Ürolitiyazisin patogenezini, başlıca taş tiplerini ve klinik özelliklerini açıklar.",
-      "Hidronefrozun tanımını, nedenlerini, patogenezini, morfolojisini ve klinik özelliklerini açıklar."
-    ],
-    "slideCount": 17,
-    "questionCount": 1,
-    "cardCount": 28,
-    "firstSlideNumber": 1
-  },
-  {
     "deckId": "k1p-k1-45-bobrek-tumorleri",
     "id": "k1p-k1-45-bobrek-tumorleri",
     "title": "Böbrek Tümörleri",
@@ -3572,6 +3531,27 @@
     ],
     "slideCount": 100,
     "questionCount": 0,
+    "cardCount": 30,
+    "firstSlideNumber": 1
+  },
+  {
+    "id": "k1p-k1-44-vaskuler-ve-kistik-bobrek-hastaliklari",
+    "deckId": "k1p-k1-44-vaskuler-ve-kistik-bobrek-hastaliklari",
+    "title": "Vasküler ve Kistik Böbrek Hastalıkları",
+    "shortTitle": "Vasküler ve Kistik Böbrek",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Ürogenital ve Obstetrik Kurulu)",
+    "instructor": "Prof. Dr. Hikmet Keleş",
+    "overview": "Sistemik hipertansiyonun böbrekteki benign ve malign tabloları ile trombotik mikroanjiyopatiler dersin vasküler kanadını kurar. Kronik böbrek hastalığının ortak son yolu ile heterojen kistik grup, polikistik formlar, taş tipleri ve hidronefroz morfolojiden kliniğe bütünlenir.",
+    "highYieldPearls": [
+      "Benign nefroskleroz simetrik küçülmüş granüler böbrek ile hiyalin arteriyoloskleroz ve hafif klinik taşır; malign form pire ısırığı makrosu ile fibrinoid nekroz ve soğan zarı mikrosu ve acil klinik taşır.",
+      "TMA üçlüsü mikrovasküler tromboz ile mikroanjiyopatik hemolitik anemi ve trombositopenidir; formlar edinsel Shiga toksini, kalıtsal ve edinsel kompleman ile kalıtsal ve edinsel TTP başlıklarında toplanır.",
+      "ADPKD genleri PKD1 (%85-90) ve PKD2 (%10-15) ile ikinci darbe mantığıdır; ekstrarenal oranlar karaciğer %30, anevrizma %10-30 ve kapak %20-25 olarak bilinir.",
+      "Taş payları kalsiyum %80, strüvit %10, ürik asit %6-7 ve sistin %1-2 olarak sıralanır; hidronefrozda önce yoğunlaştırma kusuru sonra GFR düşüşü gelir ve erken giderimde işlev dönebilir."
+    ],
+    "questionCount": 0,
+    "flashcardCount": 30,
+    "slideCount": 100,
     "cardCount": 30,
     "firstSlideNumber": 1
   }
