@@ -126,7 +126,7 @@ Ana içerikte yalnız ders anlatılır; kaynak, terim listesi, kazanım ve sayı
 
 ## 5. Etkileşim türleri (`interactiveElements[]`)
 
-Her slaytta 1–4 etkileşim önerilir. Ekranda **Pekiştir** bölümünde sekmeler halinde (Akış) ya da sağ panelde (Stüdyo) görünür. Her kartta öğrencilerin hata bildirebildiği bir bayrak vardır (§7).
+Her slaytta 4–6 etkileşim kullanılır (tek tipe yığılma yok; 11 model dengeli dağıtılır). Ekranda **Pekiştir** bölümünde sekmeler halinde (Akış) ya da sağ panelde (Stüdyo) görünür. Her kartta öğrencilerin hata bildirebildiği bir bayrak vardır (§7).
 
 ### 5.1 `micro_quiz` — Mini soru
 ```json
@@ -267,7 +267,7 @@ Her slaytta 1–4 etkileşim önerilir. Ekranda **Pekiştir** bölümünde sekme
 Öğren modülündeki **11 etkileşim türünün tamamı** (`micro_quiz`, `branching_logic`, `cloze_masking`, `interactive_table`, `causal_chain`, `before_after_slider`, `active_recall`, `spot_the_lie`, `swipe_matching`, `feature_bidding`, `venn_grid`) için katı kronoloji kuralı esastır:
 1. **Geriye Dönük / Anlık Bilgi Sınırı:** Bir slayttaki herhangi bir etkileşimin konusu, soru kökü, doğru cevabı, çeldiricileri, vaka kurgusu veya gizli hücresi **YALNIZCA o slayt ve öncesindeki adımlarda işlenmiş bilgilerle** oluşturulabilir.
 2. **İleriye Sızıntı Kesinlikle Yasaktır:** İleriki adımlarda (örneğin 20. slayttaki bir etkileşim için 21-100. slaytlarda) öğretilecek hiçbir kavram, hastalık, sendrom, ilaç veya tanı yöntemi mevcut slayttaki etkileşime dahil edilemez. Kullanıcı henüz okuyup öğrenmediği bilginin sorusuyla veya testiyle ASLA karşılaşamaz.
-3. **Karşılaştırma Modelleri (`before_after_slider`, `interactive_table`):** Karşılaştırılan her iki kutup da (sol ve sağ) o slayta kadar anlatılmış olmalıdır. Biri öğretilmiş, diğeri ileriki slaytlarda anlatılacak iki durum asla erkenden karşılaştırılamaz.
+3. **Karşılaştırma Modelleri (`before_after_slider`, `interactive_table`, `venn_grid`, `swipe_matching`):** Karşılaştırılan her iki kutup/kategori de (sol ve sağ) o slayta kadar anlatılmış olmalıdır. Biri öğretilmiş, diğeri ileriki slaytlarda anlatılacak iki durum asla erkenden karşılaştırılamaz.
 4. **Tekrar Sayfaları (Checkpoint) Kapsamı:** Bir Checkpoint slaytı (`[TEKRAR SAYFASI - CHECKPOINT n]`) yalnızca kendi bölümünde ve önceki bölümlerde işlenmiş kazanımları özetleyebilir. İleriki bölümlerin konusu olan hiçbir tablo, zincir veya vaka checkpoint sayfasına erken taşınamaz.
 5. **İn-Situ Boşluk Doldurma:** `cloze_masking` ögelerindeki cümle ve gizlenen terim (`maskedTerm`), kural olarak o slaytın kendi anlatım metninde (`synthesisNarrative` veya `content`) doğrudan yer alan temel bir bilgiyi pekiştirmelidir.
 6. **İpucu Sızıntısı Yasaktır:** İpucu (`hint`), cevabın 3+ harfli herhangi bir kelimesini (ya da 5+ harfli kelimenin ilk 5 harfini) veya bir sayısını içeremez (`leaks(hint, answer) == False`).
@@ -339,7 +339,8 @@ Dosyalar: `src/components/learn/lesson/`
 - [ ] Deste yalnız `src/data/interactive_learning_decks.json` içinde; `items/` elle değiştirilmedi.
 - [ ] `python3 scripts/validate_learning_decks.py` → **0 HATA** (yeni destede uyarı da olmamalı).
 - [ ] Hiçbir metin `…` ile bitmiyor; ipuçları cevabı ele vermiyor.
-- [ ] Mini soru/klinik karar: tek doğru, her şıkta açıklama.
+- [ ] Mini soru/klinik karar/tuzak avı: tek doğru (quiz), tek tuzak (`spot_the_lie`), her şıkta/önermede açıklama.
+- [ ] Her slaytta 4–6 etkileşim; `venn_grid` kriterleri (`A`/`B`/`both`/`neither`) ve `swipe_matching` kartları yalnızca öğrenilmiş kavramları içerir.
 - [ ] Zincir basamakları "N. Etiket: tam cümle"; karşılaştırmada sol/sağ eşit.
 - [ ] `correctAnswer` tek harf; şıklarda `key` A–E.
 - [ ] Her 6–12 adımda bir tekrar sayfası ya da tutarlı `badge` ile bölümleme.
