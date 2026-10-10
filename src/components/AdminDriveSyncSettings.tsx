@@ -269,7 +269,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
         </h2>
         <div className="ms-panel-tools">
           {statusTag}
-          <span className="inline-flex items-center gap-1.5 text-[12.5px] text-ink-2">
+          <span className="inline-flex items-center gap-1.5 text-sm text-ink-2">
             <span className={`ms-sdot ${isSyncing ? 'is-warn is-live' : 'is-ok'}`} aria-hidden="true" />
             {isSyncing ? 'Eşitleniyor' : 'Hazır'}
           </span>
@@ -291,7 +291,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
           </dd>
           <dt>Hedef klasör</dt>
           <dd className="flex flex-wrap items-center gap-x-2">
-            <span>{settings.preferredScope === 'custom' && settings.customFolderId ? <span className="font-mono text-[12.5px]">{settings.customFolderId}</span> : 'Kurul 1–6 ve Dönem 3 çıkmışları'}</span>
+            <span>{settings.preferredScope === 'custom' && settings.customFolderId ? <span className="font-mono text-sm">{settings.customFolderId}</span> : 'Kurul 1–6 ve Dönem 3 çıkmışları'}</span>
             <a href={TARGET_DRIVE_FOLDER_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-accent font-semibold hover:underline underline-offset-2">
               <FolderOpen className="w-3.5 h-3.5" /> Drive'da aç <ExternalLink className="w-3 h-3" />
             </a>
@@ -350,7 +350,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
             <FolderSync className={isSyncing ? 'animate-spin' : ''} /> {isSyncing ? 'Eşitleniyor…' : 'Şimdi eşitle'}
           </button>
           <span className="flex-1" />
-          {settingsSavedMessage && <span className={`text-[12.5px] font-semibold ${settingsSavedMessage.startsWith('Hata') ? 'text-bad-text' : 'text-ok'}`}>{clean(settingsSavedMessage)}</span>}
+          {settingsSavedMessage && <span className={`text-sm font-semibold ${settingsSavedMessage.startsWith('Hata') ? 'text-bad-text' : 'text-ok'}`}>{clean(settingsSavedMessage)}</span>}
           <button type="button" onClick={handleSaveSettings} disabled={isSavingSettings} className="ms-btn is-tonal">
             <Check /> {isSavingSettings ? 'Kaydediliyor…' : 'Drive ayarlarını kaydet'}
           </button>
@@ -371,7 +371,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
               <div className="w-full flex flex-col gap-1.5">
                 <ul className="m-0 p-0 list-none flex flex-col gap-1 max-h-56 overflow-y-auto">
                   {checkResult.newFiles.map((file, idx) => (
-                    <li key={idx} className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/70 text-[12.5px]">
+                    <li key={idx} className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/70 text-sm">
                       <FileText className="w-3.5 h-3.5 text-ink-3 shrink-0" />
                       <span className="flex-1 min-w-0 truncate text-ink" title={file.fullPath}>{file.name}</span>
                       <span className={`ms-tag ${file.type === 'exam' ? 'is-accent' : ''}`}>{file.type === 'exam' ? 'Çıkmış sınav' : 'Ders slaytı'}</span>
@@ -400,13 +400,13 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
         {isTerminalOpen && (
           <div className="flex flex-col gap-2">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-2 text-[13px] font-semibold text-ink mr-auto">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-ink mr-auto">
                 <Terminal className="w-4 h-4 text-ink-3" /> Eşitleme konsolu
-                {activeJobId && <span className="font-mono text-[11.5px] text-ink-3 font-normal">{activeJobId}</span>}
+                {activeJobId && <span className="font-mono text-xs text-ink-3 font-normal">{activeJobId}</span>}
                 {isSyncing && <span className="ms-tag is-ok"><span className="ms-sdot is-ok is-live" /> Çalışıyor</span>}
                 {activeJob?.status === 'failed' && <span className="ms-tag is-bad">Hata</span>}
               </span>
-              <Switch checked={autoScroll} onChange={setAutoScroll} label={<span className="text-[13px]">Otomatik kaydır</span>} />
+              <Switch checked={autoScroll} onChange={setAutoScroll} label={<span className="text-sm">Otomatik kaydır</span>} />
               <button type="button" onClick={handleCopyLogs} className="ms-btn is-sm is-ghost">
                 {copiedLogs ? <Check /> : <Copy />} {copiedLogs ? 'Kopyalandı' : 'Kopyala'}
               </button>

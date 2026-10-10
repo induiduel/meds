@@ -25,8 +25,8 @@ export const MiniMusicPlayer: React.FC<{ onOpen: () => void }> = ({ onOpen }) =>
             <Music className="w-4.5 h-4.5" />
           </span>
           <span className="min-w-0">
-            <span className="block text-[13.5px] font-semibold text-ink truncate">{current.title}</span>
-            <span className="block text-[12px] text-ink-3 truncate">{playing ? 'Çalıyor' : 'Duraklatıldı'} · {current.artist || 'Admin seçkisi'}</span>
+            <span className="block text-base font-semibold text-ink truncate">{current.title}</span>
+            <span className="block text-xs text-ink-3 truncate">{playing ? 'Çalıyor' : 'Duraklatıldı'} · {current.artist || 'Admin seçkisi'}</span>
           </span>
         </button>
         <button

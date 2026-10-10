@@ -28,18 +28,18 @@ export interface SearchResponse {
 }
 
 export const TYPE_META: Record<SearchDocType, { label: string; dot: string }> = {
-  past_question: { label: 'Çıkmış soru', dot: 'bg-violet-500' },
-  deepseek_contribution: { label: 'Soru bankası', dot: 'bg-indigo-500' },
-  active_question: { label: 'Havuz sorusu', dot: 'bg-blue-500' },
-  lecture_slide: { label: 'Ders slaytı', dot: 'bg-emerald-500' },
-  summary: { label: 'Özet', dot: 'bg-teal-500' },
-  transcript: { label: 'Ses kaydı', dot: 'bg-amber-500' },
-  user_contribution: { label: 'Katkı', dot: 'bg-sky-500' },
-  ai_refinement: { label: 'AI düzeltme', dot: 'bg-slate-400' },
-  ai_qa: { label: 'AI yanıtı', dot: 'bg-slate-400' },
-  gemini_v3_question: { label: 'Gemini v3 soru', dot: 'bg-fuchsia-500' },
-  gemini_v3_lecture: { label: 'Gemini v3 ders notu', dot: 'bg-fuchsia-500' },
-  gemini_v3_term: { label: 'Gemini v3 terim', dot: 'bg-fuchsia-500' },
+  past_question: { label: 'Çıkmış soru', dot: 'bg-ai' },
+  deepseek_contribution: { label: 'Soru bankası', dot: 'bg-accent' },
+  active_question: { label: 'Havuz sorusu', dot: 'bg-accent' },
+  lecture_slide: { label: 'Ders slaytı', dot: 'bg-ok' },
+  summary: { label: 'Özet', dot: 'bg-ok' },
+  transcript: { label: 'Ses kaydı', dot: 'bg-warn' },
+  user_contribution: { label: 'Katkı', dot: 'bg-accent' },
+  ai_refinement: { label: 'AI düzeltme', dot: 'bg-ink-3' },
+  ai_qa: { label: 'AI yanıtı', dot: 'bg-ink-3' },
+  gemini_v3_question: { label: 'Gemini v3 soru', dot: 'bg-ai' },
+  gemini_v3_lecture: { label: 'Gemini v3 ders notu', dot: 'bg-ai' },
+  gemini_v3_term: { label: 'Gemini v3 terim', dot: 'bg-ai' },
 };
 
 export const TYPE_ORDER: SearchDocType[] = [
@@ -119,9 +119,9 @@ export const Highlight: React.FC<{ text: string; query: string }> = ({ text, que
 };
 
 export const TypeTag: React.FC<{ type: SearchDocType }> = ({ type }) => {
-  const meta = TYPE_META[type] || { label: type, dot: 'bg-slate-400' };
+  const meta = TYPE_META[type] || { label: type, dot: 'bg-ink-3' };
   return (
-    <span className="inline-flex items-center gap-1.5 text-[12px] text-ink-3 whitespace-nowrap">
+    <span className="inline-flex items-center gap-1.5 text-xs text-ink-3 whitespace-nowrap">
       <span className={`w-1.5 h-1.5 rounded-full ${meta.dot}`} aria-hidden="true" />
       {meta.label}
     </span>

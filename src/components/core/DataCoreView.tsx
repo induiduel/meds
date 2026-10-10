@@ -119,7 +119,7 @@ export default function DataCoreView() {
       {/* Toplu tamamlama: parça yaz → benzer sorular */}
       <section className="ms-panel ms-panel-body">
         <h2 className="ms-panel-title">Parça yaz → benzer soruları bul (birleştirme)</h2>
-        <p className="m-0 text-[12.5px] leading-normal text-ink-3">Hatırladığın parçayı yaz; aynı soruya ait kayıtlar benzerlikle listelenir (AI yok, deterministik).</p>
+        <p className="m-0 text-sm leading-normal text-ink-3">Hatırladığın parçayı yaz; aynı soruya ait kayıtlar benzerlikle listelenir (AI yok, deterministik).</p>
         <div className="flex gap-2">
           <textarea
             value={similarStem}
@@ -132,7 +132,7 @@ export default function DataCoreView() {
         </div>
         <ul className="m-0 p-0 list-none flex flex-col gap-2 empty:hidden">
           {similarHits.map((h) => (
-            <li key={h.question_id} className="text-[12.5px] leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
+            <li key={h.question_id} className="text-sm leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
               <div className="opacity-60">{h.ders || '—'} · benzerlik {h.benzerlik}{h.answer ? ` · cevap: ${h.answer}` : ''}</div>
               <div className="opacity-90">{h.stem}</div>
             </li>
@@ -143,7 +143,7 @@ export default function DataCoreView() {
       {/* Toplu tamamlama: çok parçayı birleştir */}
       <section className="ms-panel ms-panel-body">
         <h2 className="ms-panel-title">Parçaları birleştir (toplu tamamlama)</h2>
-        <p className="m-0 text-[12.5px] leading-normal text-ink-3">Her satıra bir parça yaz; aynı soruya ait olanlar birleşip tam soru adayı üretir (AI yok).</p>
+        <p className="m-0 text-sm leading-normal text-ink-3">Her satıra bir parça yaz; aynı soruya ait olanlar birleşip tam soru adayı üretir (AI yok).</p>
         <textarea
           value={mergeText}
           onChange={(e) => setMergeText(e.target.value)}
@@ -154,7 +154,7 @@ export default function DataCoreView() {
         <button onClick={() => doMerge(mergeText)} className="ms-btn is-primary self-start">Birleştir</button>
         <ul className="m-0 p-0 list-none flex flex-col gap-2 empty:hidden">
           {mergeOut.map((m, i) => (
-            <li key={i} className="text-[12.5px] leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
+            <li key={i} className="text-sm leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
               <div className="font-medium">{m.stem}</div>
               <div className="opacity-60">{m.ders || '—'} · {m.birlesik_parca_sayisi ?? 1} parça{m.answer ? ` · cevap: ${m.answer}` : ''}</div>
             </li>
@@ -177,7 +177,7 @@ export default function DataCoreView() {
         </div>
         <ul className="m-0 p-0 list-none flex flex-col gap-2 empty:hidden">
           {noteHits.map((h) => (
-            <li key={h.chunk_id} className="text-[12.5px] leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
+            <li key={h.chunk_id} className="text-sm leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
               <div className="opacity-70">{h.ders || '—'} · {h.source_id} · s.{h.page ?? '?'} · skor {h.skor}</div>
               <div className="opacity-90">{h.alinti}</div>
             </li>
@@ -188,7 +188,7 @@ export default function DataCoreView() {
       </div>
 
       {audit?.toplam && (
-        <div className="text-[12.5px] text-ink-3">
+        <div className="text-sm text-ink-3">
           Eski veri denetimi ({audit.zaman}): {audit.toplam.kayit} kayıt · engelleyici {audit.toplam.blocking} · inceleme {audit.toplam.review}
         </div>
       )}
@@ -201,7 +201,7 @@ export default function DataCoreView() {
           </div>
           <ul className="m-0 p-0 list-none flex flex-col gap-2">
             {revChanges.map((c: any, i: number) => (
-              <li key={i} className="text-[12.5px] leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
+              <li key={i} className="text-sm leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
                 <div className="opacity-60 mb-1">{c.id} · {c.model}</div>
                 {(c.degisiklikler || []).map((d: any, j: number) => (
                   <div key={j} className="mb-2 whitespace-pre-wrap break-words">
@@ -223,14 +223,14 @@ export default function DataCoreView() {
           <ul className="m-0 p-0 list-none flex flex-col gap-3">
             {revQuestions.map((r: any, i: number) => (
               <li key={i} className="ms-panel p-4 flex flex-col gap-1.5">
-                <div className="m-0 text-[14.5px] font-medium text-ink leading-snug whitespace-pre-wrap break-words">{r.soru_koku}</div>
+                <div className="m-0 text-md font-medium text-ink leading-snug whitespace-pre-wrap break-words">{r.soru_koku}</div>
                 <div className="text-xs opacity-80 grid gap-0.5 mb-1">
                   {Object.entries(r.secenekler || {}).map(([k, v]) => <div key={k} className="break-words">{k}) {String(v)}</div>)}
                 </div>
-                <div className="text-[11px] mb-1">
-                  <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-accent-soft text-accent mr-1">Doğru: {r.dogru_secenek || '—'}</span>
-                  {r.ders_adi && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-field text-ink-2 mr-1">{r.ders_adi}</span>}
-                  {r.konu_adi && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-field text-ink-2">{r.konu_adi}</span>}
+                <div className="text-2xs mb-1">
+                  <span className="rounded-full h-6 px-2 inline-flex items-center text-xs font-medium bg-accent-soft text-accent mr-1">Doğru: {r.dogru_secenek || '—'}</span>
+                  {r.ders_adi && <span className="rounded-full h-6 px-2 inline-flex items-center text-xs font-medium bg-field text-ink-2 mr-1">{r.ders_adi}</span>}
+                  {r.konu_adi && <span className="rounded-full h-6 px-2 inline-flex items-center text-xs font-medium bg-field text-ink-2">{r.konu_adi}</span>}
                 </div>
                 {((r.aciklama_maddeleri || []).length > 0) ? (
                   <ul className="text-xs opacity-90 list-disc pl-4 space-y-0.5">
@@ -239,7 +239,7 @@ export default function DataCoreView() {
                 ) : r.aciklama ? (
                   <div className="text-xs opacity-80 whitespace-pre-wrap break-words">{r.aciklama}</div>
                 ) : null}
-                <div className="text-[11px] opacity-50 mt-1">model: {r.model} · kategori: {r.kategori} · destek: {r.support_ratio}</div>
+                <div className="text-2xs opacity-50 mt-1">model: {r.model} · kategori: {r.kategori} · destek: {r.support_ratio}</div>
               </li>
             ))}
           </ul>
@@ -254,10 +254,10 @@ export default function DataCoreView() {
           placeholder="Sorularda ara…"
           className="flex-1 min-w-[200px] ms-input"
         />
-        <label className="text-[14px] text-ink-2 flex items-center gap-1.5 px-1 cursor-pointer">
+        <label className="text-base text-ink-2 flex items-center gap-1.5 px-1 cursor-pointer">
           <input type="checkbox" checked={onlyAnswered} onChange={(e) => setOnlyAnswered(e.target.checked)} /> Cevaplı
         </label>
-        <label className="text-[14px] text-ink-2 flex items-center gap-1.5 px-1 cursor-pointer">
+        <label className="text-base text-ink-2 flex items-center gap-1.5 px-1 cursor-pointer">
           <input type="checkbox" checked={onlyOpen} onChange={(e) => setOnlyOpen(e.target.checked)} /> Açık uçlu
         </label>
         <button onClick={() => load(query, onlyAnswered, onlyOpen)} className="ms-btn is-primary shrink-0">Ara</button>
@@ -269,12 +269,12 @@ export default function DataCoreView() {
       <ul className="m-0 p-0 list-none grid grid-cols-1 xl:grid-cols-2 gap-3 items-start">
         {questions.map((qq) => (
           <li key={qq.question_id} className="ms-panel p-4 flex flex-col gap-1.5">
-            <p className="m-0 text-[14.5px] font-medium text-ink leading-snug">{qq.stem}</p>
-            <div className="flex flex-wrap gap-1 text-[11px] mb-1">
-              {qq.ders && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-field text-ink-2">{qq.ders}</span>}
-              {qq.konu && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-field text-ink-2">{qq.konu}</span>}
-              {qq.acik_uclu && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-warn-soft text-warn">açık uçlu</span>}
-              {qq.answer && <span className="rounded-full h-6 px-2 inline-flex items-center text-[12px] font-medium bg-accent-soft text-accent">cevap: {qq.answer}</span>}
+            <p className="m-0 text-md font-medium text-ink leading-snug">{qq.stem}</p>
+            <div className="flex flex-wrap gap-1 text-2xs mb-1">
+              {qq.ders && <span className="rounded-full h-6 px-2 inline-flex items-center text-xs font-medium bg-field text-ink-2">{qq.ders}</span>}
+              {qq.konu && <span className="rounded-full h-6 px-2 inline-flex items-center text-xs font-medium bg-field text-ink-2">{qq.konu}</span>}
+              {qq.acik_uclu && <span className="rounded-full h-6 px-2 inline-flex items-center text-xs font-medium bg-warn-soft text-warn">açık uçlu</span>}
+              {qq.answer && <span className="rounded-full h-6 px-2 inline-flex items-center text-xs font-medium bg-accent-soft text-accent">cevap: {qq.answer}</span>}
             </div>
             {qq.kazanim && <div className="text-xs opacity-70 mb-1">Kazanım: {qq.kazanim}</div>}
             {!qq.acik_uclu && qq.options && (
@@ -283,7 +283,7 @@ export default function DataCoreView() {
               </div>
             )}
             {(qq.terimler || []).length > 0 && (
-              <div className="text-[11px] opacity-60 mt-1">Terimler: {qq.terimler!.slice(0, 8).join(', ')}</div>
+              <div className="text-2xs opacity-60 mt-1">Terimler: {qq.terimler!.slice(0, 8).join(', ')}</div>
             )}
             {((qq as any).aciklama_maddeleri || []).length > 0 ? (
               <ul className="text-xs opacity-90 mt-2 list-disc pl-4 space-y-0.5">
@@ -293,7 +293,7 @@ export default function DataCoreView() {
               <div className="text-xs opacity-80 mt-2 whitespace-pre-wrap break-words">{(qq as any).aciklama}</div>
             ) : null}
             {(qq.kaynak_baglari || []).length > 0 && (
-              <div className="text-[11px] opacity-60 mt-1">
+              <div className="text-2xs opacity-60 mt-1">
                 Kaynak: {qq.kaynak_baglari![0].source_id} · s.{qq.kaynak_baglari![0].sayfa ?? '?'}
               </div>
             )}
@@ -309,7 +309,7 @@ export default function DataCoreView() {
             {clusters.map((c, i) => {
               const m = c.birlesik || c;
               return (
-                <li key={i} className="text-[12.5px] leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
+                <li key={i} className="text-sm leading-normal rounded-xl bg-canvas px-3 py-2.5 text-ink-2">
                   <div className="font-medium mb-0.5">{String(m.stem || '').slice(0, 140)}</div>
                   <div className="opacity-60">
                     {m.ders || '—'} · {m.birlesik_parca_sayisi ?? 1} parça birleşti

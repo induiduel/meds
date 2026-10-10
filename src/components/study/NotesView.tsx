@@ -106,7 +106,7 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Notlarda ara"
-                className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[14px]"
+                className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-base"
               />
             </label>
             <button type="button" onClick={create} aria-label="Yeni not" className="w-10 h-10 rounded-[10px] bg-accent hover:bg-accent-hover text-white flex items-center justify-center cursor-pointer shrink-0">
@@ -117,7 +117,7 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
             <label className="sr-only" htmlFor="notes-filter">
               Ders filtresi
             </label>
-            <select id="notes-filter" value={filter} onChange={(e) => setFilter(e.target.value)} className={`${selectCls} h-9 flex-1 text-[13px]`}>
+            <select id="notes-filter" value={filter} onChange={(e) => setFilter(e.target.value)} className={`${selectCls} h-9 flex-1 text-sm`}>
               <option value="all">Tüm dersler ({notes.length})</option>
               {allDisciplines
                 .filter((d) => notes.some((n) => n.discipline === d))
@@ -133,7 +133,7 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
           </div>
         </div>
         <ul className="list-none m-0 p-1.5 flex flex-col gap-0.5 overflow-y-auto md:max-h-[640px]">
-          {visible.length === 0 && <li className="px-3 py-6 text-[14px] text-ink-2">Aramana uyan not yok.</li>}
+          {visible.length === 0 && <li className="px-3 py-6 text-base text-ink-2">Aramana uyan not yok.</li>}
           {visible.map((n) => {
             const on = n.id === activeId;
             return (
@@ -149,10 +149,10 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
                 >
                   <span className="flex items-center gap-1.5 min-w-0">
                     {n.pinned && <Pin className="w-3.5 h-3.5 text-accent shrink-0" />}
-                    <span className={`text-[14px] font-semibold truncate ${on ? 'text-accent' : 'text-ink'}`}>{n.title || 'Başlıksız not'}</span>
+                    <span className={`text-base font-semibold truncate ${on ? 'text-accent' : 'text-ink'}`}>{n.title || 'Başlıksız not'}</span>
                   </span>
-                  <span className="text-[13px] text-ink-2 line-clamp-2">{n.body || 'Boş not'}</span>
-                  <span className="text-[11px] text-ink-3 flex gap-1.5 items-center">
+                  <span className="text-sm text-ink-2 line-clamp-2">{n.body || 'Boş not'}</span>
+                  <span className="text-2xs text-ink-3 flex gap-1.5 items-center">
                     {n.discipline && <span className="truncate">{n.discipline}</span>}
                     {n.discipline && <span aria-hidden="true">·</span>}
                     <span className="shrink-0">{fmt(n.updatedAt)}</span>
@@ -168,7 +168,7 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
       {/* ---------- Editor ---------- */}
       <section aria-label="Not düzenleyici" className={`${mobileEditing ? 'flex' : 'hidden md:flex'} flex-col min-w-0`}>
         {!active ? (
-          <div className="flex-1 flex items-center justify-center p-8 text-[14px] text-ink-2">Soldan bir not seç ya da yeni not oluştur.</div>
+          <div className="flex-1 flex items-center justify-center p-8 text-base text-ink-2">Soldan bir not seç ya da yeni not oluştur.</div>
         ) : (
           <>
             <div className="flex items-center gap-1.5 px-3 py-2 border-b border-line">
@@ -178,7 +178,7 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
               <label className="sr-only" htmlFor="note-discipline">
                 Ders
               </label>
-              <select id="note-discipline" value={active.discipline} onChange={(e) => update({ discipline: e.target.value })} className={`${selectCls} h-9 text-[13px] max-w-[200px]`}>
+              <select id="note-discipline" value={active.discipline} onChange={(e) => update({ discipline: e.target.value })} className={`${selectCls} h-9 text-sm max-w-[200px]`}>
                 <option value="">Ders seç</option>
                 {allDisciplines.map((d) => (
                   <option key={d} value={d}>
@@ -187,7 +187,7 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
                 ))}
               </select>
               <span className="flex-1" />
-              <span className="hidden sm:inline text-[12px] text-ink-3 mr-1" role="status">
+              <span className="hidden sm:inline text-xs text-ink-3 mr-1" role="status">
                 {savedAt ? 'Kaydedildi' : ''}
               </span>
               <button
@@ -215,10 +215,10 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
                 value={active.title}
                 onChange={(e) => update({ title: e.target.value })}
                 placeholder="Başlık"
-                className="border-0 outline-0 bg-transparent font-display text-[22px] sm:text-[24px] font-bold tracking-[-0.02em] placeholder:text-blue-400"
+                className="border-0 outline-0 bg-transparent font-display text-2xl sm:text-2xl font-bold tracking-[-0.02em] placeholder:text-accent"
               />
               {active.questionStem && (
-                <div className="flex gap-2 items-start rounded-[10px] bg-canvas px-3 py-2.5 text-[13px] text-ink-2">
+                <div className="flex gap-2 items-start rounded-[10px] bg-canvas px-3 py-2.5 text-sm text-ink-2">
                   <Link2 className="w-4 h-4 shrink-0 mt-0.5" />
                   <span className="line-clamp-3">{active.questionStem}</span>
                 </div>
@@ -231,9 +231,9 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
                 value={active.body}
                 onChange={(e) => update({ body: e.target.value })}
                 placeholder="Notunu yaz… Madde için satır başına - koyabilirsin."
-                className="flex-1 min-h-[320px] resize-none border-0 outline-0 bg-transparent text-[15px] leading-[1.65] placeholder:text-slate-500"
+                className="flex-1 min-h-[320px] resize-none border-0 outline-0 bg-transparent text-md leading-[1.65] placeholder:text-ink-3"
               />
-              <div className="flex flex-wrap items-center justify-between gap-2 border-t border-line-soft pt-3 text-[12px] text-ink-3">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-t border-line-soft pt-3 text-xs text-ink-3">
                 <span>
                   Oluşturuldu {fmt(active.createdAt)} · {active.body.trim() ? active.body.trim().split(/\s+/).length : 0} kelime
                 </span>

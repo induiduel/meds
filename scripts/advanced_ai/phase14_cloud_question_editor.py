@@ -125,9 +125,20 @@ def lite_acik() -> bool:
 
 
 WEAK_GEMINI = []                                      # cevap oyu sayılmayan modeller
-STRONG_VERIFIER = "gpt-oss"                                    # cevap DEĞİŞİKLİĞİNİ yalnız bu doğrulayıcı onaylayabilir
-# Bağımsız cevap doğrulayıcı (farklı model ailesi, ücretsiz Groq): soruyu kayıtlı cevabı görmeden çözer
-VERIFY_MODELS = ["groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b"]
+STRONG_VERIFIER = "gemini-3.5-flash"                  # kontrol ve doğrulamada Gemini 3.5 Flash daha yetkili
+# Bağımsız cevap doğrulayıcı / kontrol API'leri (Gemini 3.5 Flash birincil ve yetkili model)
+VERIFY_MODELS = ["gemini:gemini-3.5-flash", "groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b"]
+
+
+def kontrol_modeli() -> str:
+    """Faz 14 kontrol amaçlı API: varsayılan ve en yetkili gemini-3.5-flash."""
+    try:
+        if FAZ14_AYAR.exists():
+            ayar = json.loads(FAZ14_AYAR.read_text(encoding="utf-8"))
+            return ayar.get("kontrol_modeli", "gemini-3.5-flash")
+    except Exception:
+        pass
+    return "gemini-3.5-flash"
 
 
 def load_monthly_cost() -> dict:
@@ -748,18 +759,22 @@ def anlam_koru(soru: dict, res: dict) -> None:
 
 
 def _dogrulayici_sor(prompt: str, max_tokens: int):
-    """Önce güçlü doğrulayıcı (gpt-oss); dakikalık sınıra takılırsa bekleyip 3 kez dener, ancak sonra yedek modele geçer.
-    (Hemen qwen'e geçmek doğru cevap değişikliklerinin 'zayıf doğrulayıcı' diye reddedilmesine yol açıyordu.)"""
+    """Önce yetkili kontrol modeli (öncelikle gemini-3.5-flash); kota durumunda yedek kontrollere geçer."""
     sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "agents"))
     import cloud_llm
+    secilen = kontrol_modeli()
+    spec = f"gemini:{secilen}" if not (":" in secilen) else secilen
+    modeller = [m for m in [spec] if m in VERIFY_MODELS] + [m for m in VERIFY_MODELS if m != spec]
+    if not modeller:
+        modeller = VERIFY_MODELS
     for deneme in range(3):
         with _GROQ_KILIT:
-            r = cloud_llm.chat(prompt, as_json=True, max_tokens=max_tokens, temperature=0.0, models=VERIFY_MODELS[:1], timeout=120)
+            r = cloud_llm.chat(prompt, as_json=True, max_tokens=max_tokens, temperature=0.0, models=modeller[:1], timeout=120)
         if r:
-            return r, (cloud_llm.last_model or {}).get("ad") or VERIFY_MODELS[0]
+            return r, (cloud_llm.last_model or {}).get("ad") or modeller[0]
         time.sleep(20 * (deneme + 1))
     with _GROQ_KILIT:
-        r = cloud_llm.chat(prompt, as_json=True, max_tokens=max_tokens, temperature=0.0, models=VERIFY_MODELS[1:], timeout=120)
+        r = cloud_llm.chat(prompt, as_json=True, max_tokens=max_tokens, temperature=0.0, models=modeller[1:], timeout=120)
     return r, (cloud_llm.last_model or {}).get("ad") or ""
 
 
@@ -1004,6 +1019,12 @@ def belirsizi_gemini_ile_tamamla(soru: dict, res: dict) -> None:
         res["dogru_secenek"] = kazanan
         res["cevap_belirsiz"] = False
         d["sonuc"] = "gemini_ile_cogunluk_supheli"
+    elif any(c["cozucu"] == "gemini" and c["cevap"] for c in cevaplar):
+        # Gemini 3.5 Flash daha yetkili seçildiği için tekil kararı da geçerli kılınır
+        g_ans = next(c["cevap"] for c in cevaplar if c["cozucu"] == "gemini" and c["cevap"])
+        res["dogru_secenek"] = g_ans
+        res["cevap_belirsiz"] = False
+        d["sonuc"] = "gemini_yetkili_karar"
     else:
         res["dogru_secenek"] = ""
         res["cevap_belirsiz"] = True
@@ -1026,9 +1047,9 @@ def cevap_uyusmazligi(res: dict) -> bool:
 
 def cevap_dogrula(soru: dict, res: dict) -> None:
     """Cevap ESKİ CEVAP ANAHTARI KULLANILMADAN belirlenir (kullanıcı kuralı): aynı ders kaynaklarını gören bağımsız
-    çözücülerin çoğunluk oyu — (1) soruyu düzelten modelin şık analizinin gösterdiği şık, (2) gpt-oss-120b (kör),
-    (3) ilk ikisi ayrışırsa farklı aileden üçüncü çözücü. En az iki oy aynı şıkta değilse cevap BELİRSİZ bırakılır
-    (dogru_secenek="") ve soru elle incelemeye düşer. Açıklamanın savunduğu şık son cevapla çelişirse açıklama geçersiz
+    çözücülerin çoğunluk oyu — (1) soruyu düzelten modelin şık analizinin gösterdiği şık, (2) yetkili kontrol modeli (gemini-3.5-flash),
+    (3) ilk ikisi ayrışırsa farklı aileden üçüncü çözücü. En az iki oy aynı şıkta değilse yetkili kontrol modeli olan
+    Gemini 3.5 Flash'ın kararı esas alınır. Açıklamanın savunduğu şık son cevapla çelişirse açıklama geçersiz
     işaretlenir. Eski cevap yalnız bilgi olarak saklanır (res['cevap_dogrulama']['eski_anahtar'])."""
     eski = str(soru.get("dogru_secenek") or "").strip().upper()[:1]
     oneri = str(res.get("dogru_secenek") or "").strip().upper()[:1]
@@ -1046,12 +1067,13 @@ def cevap_dogrula(soru: dict, res: dict) -> None:
         model_oyu = ""                                         # Flash-Lite cevabı oy sayılmaz (düşünmeden seçer)
     harf, vmodel = _bagimsiz_cevap(kok, sec, kay)
     coklu = _bagimsiz_cevap.son_coklu
-    oylar = {"duzelten_model": model_oyu or ("(Lite, sayılmadı)" if zayif else ""), "gpt_oss": harf}
+    vkey = "gemini" if "gemini" in str(vmodel).lower() else ("gpt_oss" if "gpt" in str(vmodel).lower() else "dogrulayici")
+    oylar = {"duzelten_model": model_oyu or ("(Lite, sayılmadı)" if zayif else ""), vkey: harf}
     d = {"eski_anahtar": eski, "oneri": oneri, "dogrulayici": harf, "dogrulayici_model": vmodel,
          "aciklama_gosterdigi": ac_harf, "kaynak_sayisi": len(kay or [])}
     if not (model_oyu and harf and model_oyu == harf):
         # Üçüncü çözücü doğrulayıcıdan FARKLI model olmalı (aynı modelin iki oyu bağımsız doğrulama değildir)
-        adaylar = [m for m in ["gemini:gemini-flash-latest", "gemini:gemini-3.5-flash", "groq:openai/gpt-oss-120b",
+        adaylar = [m for m in ["gemini:gemini-3.5-flash", "groq:openai/gpt-oss-120b",
                                "groq:qwen/qwen3.8-27b"] if m != vmodel]
         h3, m3 = _bagimsiz_cevap(kok, sec, kay, modeller=adaylar)
         if m3 and m3 == vmodel:
@@ -1071,10 +1093,28 @@ def cevap_dogrula(soru: dict, res: dict) -> None:
         res["cevap_emin"] = sayim[kazanan] == len([v for v in oylar.values() if v and len(v) == 1]) and not coklu
         d["sonuc"] = "oybirligi" if res["cevap_emin"] else "cogunluk"
     else:
-        res["dogru_secenek"] = ""                               # çözücüler uzlaşamadı: cevap işaretlenmez
-        res["cevap_emin"] = False
-        res["cevap_belirsiz"] = True
-        d["sonuc"] = "belirsiz"
+        # Kontrol amaçlı API'ler arasından Gemini 3.5 Flash daha yetkili seçildi:
+        # Modeller arasında ayrışma olduğunda Gemini 3.5 Flash'ın cevabı yetkili (authoritative) kabul edilir.
+        gemini_secimi = ""
+        if "gemini" in str(vmodel).lower() and harf and harf in sec:
+            gemini_secimi = harf
+        elif d.get("ucuncu_model") and "gemini" in str(d.get("ucuncu_model")).lower() and d.get("ucuncu") and d.get("ucuncu") in sec:
+            gemini_secimi = d.get("ucuncu")
+        elif model_oyu and model_oyu in sec and not zayif and "gemini-3.5-flash" in str(res.get("_duzelten_model", "gemini-3.5-flash")):
+            gemini_secimi = model_oyu
+
+        if gemini_secimi:
+            res["dogru_secenek"] = gemini_secimi
+            res["cevap_belirsiz"] = False
+            res["cevap_emin"] = False
+            res["supheli_cevap"] = True
+            d["sonuc"] = "gemini_yetkili_karar"
+            logging.info(f"[DOĞRULAMA] Gemini 3.5 Flash daha yetkili kontrol oyu olarak uygulandı: {gemini_secimi}")
+        else:
+            res["dogru_secenek"] = ""                               # çözücüler uzlaşamadı: cevap işaretlenmez
+            res["cevap_emin"] = False
+            res["cevap_belirsiz"] = True
+            d["sonuc"] = "belirsiz"
     if coklu:
         d["birden_fazla_dogru"] = _bagimsiz_cevap.son_uyan or True
         res["cevap_emin"] = False

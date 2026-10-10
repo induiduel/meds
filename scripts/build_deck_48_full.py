@@ -58,14 +58,27 @@ def build_full_deck():
     
     deck = {
         "id": DECK_ID,
-        "title": "Vulva, Vajen ve Serviks Hastalıkları",
+        "deckId": DECK_ID,
+        "title": "Vulva, Vajen ve Serviks Hastalıkları: TIP 310",
+        "shortTitle": "Vulva, Vajen ve Serviks Hastalıkları",
         "description": "Kurul 1 Tıbbi Patoloji amfi ders notu ve Robbins referanslarıyla tam uyumlu; vulva, vajen ve serviksin inflamatuvar, premalign ve malign patolojilerini, HPV karsinogenezini ve tarama ilkelerini kapsayan 100 slaytlık master modül.",
         "courseCode": "TIP 310",
         "curriculumPeriod": "Dönem 3 · Kurul 1",
-        "committee": "Ürogenital ve Obstetrik Kurulu",
+        "committee": "Kurul 1 (Ürogenital ve Obstetrik Kurulu)",
+        "discipline": "Tıbbi Patoloji",
         "date": "07.10.2026",
         "instructor": "Prof. Dr. Hikmet Keleş (Tıbbi Patoloji ABD)",
         "sourcePdf": "meds_database_v2/ders_notlari_k1/notlar/48_vulva_vajen_ve_serviks_hastaliklari.md",
+        "overview": "Vulva anatomisi ve histolojisi, vulvit ve Bartholin apsesi, liken skleroz ve skuamöz hiperplazi, lökoplaki biyopsisi, kondiloma akuminatum ve lata, vulvar karsinom ikili yolu, dVIN ve Paget hastalığı, vajinal anomaliler ve Gartner kisti, Candida/Trichomonas/Gardnerella vajinitleri, vajinal karsinom ve sarkoma botryoides, serviks transformasyon zonu metaplazisi, HPV E6/E7 karsinogenezi, CIN sınıflaması, Pap smear taraması, kolposkopi ve Schiller testi ile terminal üremi mortalitesinin 100 slaytlık tam kronolojik sentezi.",
+        "highYieldPearls": [
+            "📌 [SINAV SPOTU] Vulvada en sık inflamatuvar lezyonlar görülür; Bartholin bezi kanal tıkanması ağrılı kist ve apse ile sonuçlanan en önemli vulvit komplikasyonudur.",
+            "📌 [SINAV SPOTU] Liken sklerozda epidermis incelmesi ve homojen dermal fibrozis varken; skuamöz hiperplazide akantoz izlenir. Her lökoplakide biyopsi şarttır.",
+            "📌 [SINAV SPOTU] Vulvar karsinom ikili yol gösterir: Gençlerde HPV-16 ilişkili çok odaklı bazaloid SCC; yaşlılarda (~75 yaş) liken skleroz ve dVIN (p53) zemininde unifokal keratinize SCC.",
+            "📌 [SINAV SPOTU] Candida cinsel yolla bulaşmaz (hif ve peynirimsi akıntı); Trichomonas en yaygın non-viral CYBH'dır (hareketli parazit); Gardnerella ise clue cells yapar.",
+            "📌 [SINAV SPOTU] Sarkoma Botryoides <5 yaş çocukta üzüm salkımı kitle, kambiyum tabakası ve Desmin/Miyogenin pozitifliği yapar; serviks kanserinde en sık ölüm nedeni üremidir."
+        ],
+        "isNew": True,
+        "version": "2.0",
         "learningOutcomes": learning_outcomes,
         "flashcards": flashcards,
         "slides": slides

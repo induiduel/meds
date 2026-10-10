@@ -105,23 +105,23 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
           {query.length < 2 ? (
             recent.length > 0 ? (
               <div className="p-2">
-                <div className="px-2 pt-1 pb-2 text-[12px] font-semibold text-ink-3">Son aramalar</div>
+                <div className="px-2 pt-1 pb-2 text-xs font-semibold text-ink-3">Son aramalar</div>
                 {recent.map((r) => (
                   <button key={r} type="button" className="ms-search-row" onClick={() => setQ(r)}>
                     <Search className="w-4 h-4 text-ink-3 shrink-0" />
-                    <span className="truncate text-[15px] text-ink">{r}</span>
+                    <span className="truncate text-md text-ink">{r}</span>
                   </button>
                 ))}
               </div>
             ) : (
-              <p className="m-0 px-5 py-8 text-center text-[14px] text-ink-3">
+              <p className="m-0 px-5 py-8 text-center text-base text-ink-3">
                 Slaytlar, özetler, çıkmış sorular ve ses kayıtlarının tamamında arar.
               </p>
             )
           ) : failed ? (
-            <p className="m-0 px-5 py-8 text-center text-[14px] text-ink-3">Arama şu an yapılamadı. Bağlantını kontrol edip tekrar dene.</p>
+            <p className="m-0 px-5 py-8 text-center text-base text-ink-3">Arama şu an yapılamadı. Bağlantını kontrol edip tekrar dene.</p>
           ) : data && results.length === 0 && !loading ? (
-            <p className="m-0 px-5 py-8 text-center text-[14px] text-ink-3">“{query}” için sonuç bulunamadı.</p>
+            <p className="m-0 px-5 py-8 text-center text-base text-ink-3">“{query}” için sonuç bulunamadı.</p>
           ) : (
             <ul className="m-0 p-2 list-none" role="listbox">
               {results.map((r, i) => (
@@ -134,7 +134,7 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
                   >
                     <span className="flex items-center gap-2 min-w-0">
                       <TypeTag type={r.documentType} />
-                      {r.discipline && <span className="text-[12px] text-ink-3 truncate">· {r.discipline}</span>}
+                      {r.discipline && <span className="text-xs text-ink-3 truncate">· {r.discipline}</span>}
                     </span>
                     <span className="ms-search-hit-title"><Highlight text={r.title} query={query} /></span>
                     <span className="ms-search-hit-snippet"><Highlight text={r.snippet} query={query} /></span>
@@ -148,7 +148,7 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
         {query.length >= 2 && data && data.total > 0 && (
           <button type="button" className="ms-search-footer" onClick={() => seeAll()}>
             <span className="min-w-0 truncate">Tümünü gör <span className="text-ink-3 font-normal">· {totalLabel} sonuç</span></span>
-            <span className="hidden sm:inline-flex items-center gap-1 text-[12px] text-ink-3 font-normal">
+            <span className="hidden sm:inline-flex items-center gap-1 text-xs text-ink-3 font-normal">
               <CornerDownLeft className="w-3.5 h-3.5" /> Enter
             </span>
             <ArrowRight className="sm:hidden w-4 h-4" />

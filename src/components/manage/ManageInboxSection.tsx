@@ -175,12 +175,12 @@ export const ManageInboxSection: React.FC<Props> = ({
           onClick={() => setShowNotificationCard(!showNotificationCard)}
           className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
             showNotificationCard
-              ? 'bg-emerald-600 text-white'
-              : 'bg-teal-900/60 hover:bg-teal-800 text-teal-200 border border-teal-700/60'
+              ? 'bg-ok text-white'
+              : 'bg-ok/60 hover:bg-ok text-ok-soft border border-ok/60'
           }`}
           title="Telefonda (nofrostlife.com.tr) admin bildirim ayarları"
         >
-          <Smartphone className="w-3.5 h-3.5 text-amber-300" />
+          <Smartphone className="w-3.5 h-3.5 text-warn" />
           <span>{showNotificationCard ? 'Bildirim Ayarlarını Kapat' : '📱 Telefon Bildirim Ayarı'}</span>
         </button>
         {resolvedCount > 0 && <Switch checked={showResolved} onChange={setShowResolved} label={`Çözülenleri göster (${resolvedCount})`} />}
@@ -223,7 +223,7 @@ export const ManageInboxSection: React.FC<Props> = ({
           <ul className="ms-rows">{rows}</ul>
         )}
         {visible.length > limit && (
-          <button type="button" onClick={() => setLimit((n) => n + PAGE)} className="w-full h-11 border-t border-line-soft text-[13px] font-semibold text-accent inline-flex items-center justify-center gap-1 cursor-pointer hover:bg-canvas rounded-b-2xl">
+          <button type="button" onClick={() => setLimit((n) => n + PAGE)} className="w-full h-11 border-t border-line-soft text-sm font-semibold text-accent inline-flex items-center justify-center gap-1 cursor-pointer hover:bg-canvas rounded-b-2xl">
             <ChevronDown className="w-4 h-4" /> {visible.length - limit} kayıt daha
           </button>
         )}
@@ -245,20 +245,20 @@ const QueueRow: React.FC<
       </span>
       <div className="ms-row-main">
         {/* Kimden & Neden Başlığı */}
-        <div className="flex flex-wrap items-center gap-1.5 text-[12px] text-ink-3">
+        <div className="flex flex-wrap items-center gap-1.5 text-xs text-ink-3">
           <span className="inline-flex items-center gap-1 font-semibold text-ink bg-surface-2 px-2 py-0.5 rounded-md border border-line-soft">
             <User className="w-3.5 h-3.5 text-accent" />
             {item.sender || 'Bilinmiyor'}
           </span>
           <span className="text-ink-3">·</span>
-          <span className="text-ink-2 font-medium bg-amber-50 text-amber-900 border border-amber-200/60 px-2 py-0.5 rounded-md text-[11.5px]">
+          <span className="text-ink-2 font-medium bg-warn-soft text-warn border border-warn/60 px-2 py-0.5 rounded-md text-xs">
             {item.reason || m.label}
           </span>
           {item.questionId && onNavigateToData && (
             <button
               type="button"
               onClick={() => onNavigateToData(item.questionId!)}
-              className="text-accent hover:underline inline-flex items-center gap-0.5 text-[11.5px] font-semibold ml-1 cursor-pointer"
+              className="text-accent hover:underline inline-flex items-center gap-0.5 text-xs font-semibold ml-1 cursor-pointer"
               title="Bu soruyu veritabanında bul ve düzenle"
             >
               <span>{item.questionId.startsWith('past-') ? 'Çıkmış Soru' : 'Soru'} #{item.questionId.replace(/^q-|^past-/, '')}</span>

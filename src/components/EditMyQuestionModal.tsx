@@ -143,15 +143,15 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
   const revisionCount = question.revisions?.length || 0;
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fadeIn">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/60 backdrop-blur-xs animate-fadeIn">
       <div 
-        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl max-h-[90dvh] flex flex-col overflow-hidden relative"
+        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-line w-full max-w-2xl max-h-[90dvh] flex flex-col overflow-hidden relative"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="bg-ink-surface p-5 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-xl bg-white/10 text-teal-300">
+            <div className="p-2 rounded-xl bg-white/10 text-ok">
               <Edit3 className="w-5 h-5" />
             </div>
             <div>
@@ -159,11 +159,11 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
                 <h3 className="font-bold text-base leading-tight">
                   Soruyu Düzenle {question.isUnassignedNumber ? '(Numarasız Havuz)' : `(#${question.questionNumber})`}
                 </h3>
-                <span className="text-[11px] font-bold bg-teal-500/20 text-teal-200 px-2 py-0.5 rounded-full border border-teal-400/30">
+                <span className="text-2xs font-bold bg-ok/20 text-ok-soft px-2 py-0.5 rounded-full border border-ok/30">
                   {revisionCount > 0 ? `${revisionCount} Versiyon` : 'İlk Versiyon'}
                 </span>
               </div>
-              <p className="text-xs text-teal-200/80">
+              <p className="text-xs text-ok-soft/80">
                 {committee?.name || 'Kurul Sınavı'}
               </p>
             </div>
@@ -174,13 +174,13 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
               type="button"
               onClick={handleAutoOptimizeWithAi}
               disabled={isAiOptimizing}
-              className="bg-teal-500/20 hover:bg-teal-500/30 text-teal-200 border border-teal-400/40 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
+              className="bg-ok/20 hover:bg-ok/30 text-ok-soft border border-ok/40 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
               title="Amfi ders notları ve tıp literatürüyle bu soruyu yapay zeka ile otomatik doldur"
             >
               {isAiOptimizing ? (
-                <RefreshCw className="w-3.5 h-3.5 animate-spin text-teal-300" />
+                <RefreshCw className="w-3.5 h-3.5 animate-spin text-ok" />
               ) : (
-                <Sparkles className="w-3.5 h-3.5 text-teal-300" />
+                <Sparkles className="w-3.5 h-3.5 text-ok" />
               )}
               <span>{isAiOptimizing ? 'İnceleniyor...' : 'AI ile Otomatik Düzenle'}</span>
             </button>
@@ -189,9 +189,9 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
               <button
                 type="button"
                 onClick={onOpenHistory}
-                className="bg-white/10 hover:bg-white/20 text-teal-100 px-2.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
+                className="bg-white/10 hover:bg-white/20 text-ok-soft px-2.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
               >
-                <History className="w-3.5 h-3.5 text-teal-300" />
+                <History className="w-3.5 h-3.5 text-ok" />
                 <span>Eski Versiyonlar</span>
               </button>
             )}
@@ -205,8 +205,8 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
         </div>
 
         {/* Notice Banner */}
-        <div className="bg-emerald-50 border-b border-emerald-200 px-5 py-2.5 text-xs text-emerald-900 flex items-center gap-2 shrink-0">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+        <div className="bg-ok-soft border-b border-ok/30 px-5 py-2.5 text-xs text-ok flex items-center gap-2 shrink-0">
+          <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />
           <span>
             <strong>Güvenli Versiyonlama:</strong> Yaptığınız düzenleme yeni bir versiyon olarak eklenir, sorunun eski halleri silinmez ve arşivde korunur.
           </span>
@@ -214,8 +214,8 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
 
         {/* AI Banner Message if generated */}
         {aiBannerMsg && (
-          <div className="bg-teal-50 border-b border-teal-200 px-5 py-2.5 text-xs text-teal-900 flex items-center gap-2 shrink-0 animate-fadeIn">
-            <Sparkles className="w-4 h-4 text-teal-600 shrink-0" />
+          <div className="bg-ok-soft border-b border-ok/30 px-5 py-2.5 text-xs text-ok flex items-center gap-2 shrink-0 animate-fadeIn">
+            <Sparkles className="w-4 h-4 text-ok shrink-0" />
             <span>{aiBannerMsg}</span>
           </div>
         )}
@@ -223,21 +223,21 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
         {/* Form Body */}
         <form onSubmit={handleSubmit} className="p-6 overflow-y-auto space-y-4 flex-1">
           {error && (
-            <div className="bg-rose-50 border border-rose-200 text-rose-800 text-xs p-3 rounded-lg flex items-start gap-2">
-              <AlertCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
+            <div className="bg-bad-soft border border-bad/30 text-bad-text text-xs p-3 rounded-lg flex items-start gap-2">
+              <AlertCircle className="w-4 h-4 text-bad-text shrink-0 mt-0.5" />
               <span>{error}</span>
             </div>
           )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
+              <label className="block text-xs font-bold text-ink-2 mb-1">
                 Branş / Ders
               </label>
               <select
                 value={discipline}
                 onChange={(e) => setDiscipline(e.target.value)}
-                className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600 bg-white"
+                className="w-full px-3 py-2 text-sm border border-line-2 rounded-lg focus:outline-hidden focus:border-ok bg-white"
               >
                 {disciplines.map((d) => (
                   <option key={d} value={d}>
@@ -248,7 +248,7 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
+              <label className="block text-xs font-bold text-ink-2 mb-1">
                 Konu Başlığı
               </label>
               <input
@@ -256,13 +256,13 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
                 value={topic}
                 onChange={(e) => setTopic(e.target.value)}
                 placeholder="Örn: Akut Glomerülonefrit Patolojisi"
-                className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
+                className="w-full px-3 py-2 text-sm border border-line-2 rounded-lg focus:outline-hidden focus:border-ok"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1">
+            <label className="block text-xs font-bold text-ink-2 mb-1">
               Soru Metni / Kökü
             </label>
             <textarea
@@ -271,13 +271,13 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
               value={stem}
               onChange={(e) => setStem(e.target.value)}
               placeholder="Hatırladığınız soru kökünü yazınız..."
-              className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600 font-sans leading-relaxed"
+              className="w-full px-3 py-2 text-sm border border-line-2 rounded-lg focus:outline-hidden focus:border-ok font-sans leading-relaxed"
             />
           </div>
 
           {/* Options */}
-          <div className="space-y-2 pt-2 border-t border-slate-100">
-            <label className="block text-xs font-bold text-slate-700">
+          <div className="space-y-2 pt-2 border-t border-line">
+            <label className="block text-xs font-bold text-ink-2">
               Şıklar (A - E) ve Doğru Şık Seçimi
             </label>
             
@@ -294,8 +294,8 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
                   onClick={() => setClaimedAnswer(claimedAnswer === key ? undefined : (key as any))}
                   className={`w-7 h-7 rounded-lg text-xs font-bold shrink-0 transition-colors flex items-center justify-center cursor-pointer ${
                     claimedAnswer === key
-                      ? 'bg-emerald-600 text-white shadow-xs'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      ? 'bg-ok text-white shadow-xs'
+                      : 'bg-field text-ink-2 hover:bg-line'
                   }`}
                   title={claimedAnswer === key ? 'Doğru şık seçili' : 'Doğru şık olarak işaretle'}
                 >
@@ -306,8 +306,8 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
                   value={val}
                   onChange={(e) => set(e.target.value)}
                   placeholder={`${key} şıkkı metni...`}
-                  className={`flex-1 px-3 py-1.5 text-xs border rounded-lg focus:outline-hidden focus:border-teal-600 ${
-                    claimedAnswer === key ? 'border-emerald-400 bg-emerald-50/30' : 'border-slate-300'
+                  className={`flex-1 px-3 py-1.5 text-xs border rounded-lg focus:outline-hidden focus:border-ok ${
+                    claimedAnswer === key ? 'border-ok bg-ok-soft/30' : 'border-line-2'
                   }`}
                 />
               </div>
@@ -315,23 +315,23 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1">
-              Değişiklik Notu / Özeti <span className="text-slate-400 font-normal">(Neyi düzelttiğinizi belirtin)</span>
+            <label className="block text-xs font-bold text-ink-2 mb-1">
+              Değişiklik Notu / Özeti <span className="text-ink-3 font-normal">(Neyi düzelttiğinizi belirtin)</span>
             </label>
             <input
               type="text"
               value={changeSummary}
               onChange={(e) => setChangeSummary(e.target.value)}
               placeholder="Örn: Soru kökündeki semptomu düzelttim ve C şıkkını tamamladım"
-              className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
+              className="w-full px-3 py-2 text-xs border border-line-2 rounded-lg focus:outline-hidden focus:border-ok"
             />
           </div>
 
-          <div className="pt-3 border-t border-slate-200 flex items-center justify-between">
+          <div className="pt-3 border-t border-line flex items-center justify-between">
             <button
               type="button"
               onClick={onOpenHistory}
-              className="text-xs text-teal-700 hover:text-teal-900 font-semibold flex items-center gap-1 cursor-pointer"
+              className="text-xs text-ok hover:text-ok font-semibold flex items-center gap-1 cursor-pointer"
             >
               <History className="w-3.5 h-3.5" />
               <span>Versiyon Geçmişini Görüntüle ({revisionCount})</span>
@@ -341,14 +341,14 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
               <button
                 type="button"
                 onClick={onClose}
-                className="px-4 py-2 text-xs font-semibold text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg cursor-pointer"
+                className="px-4 py-2 text-xs font-semibold text-ink-2 hover:text-ink hover:bg-field rounded-lg cursor-pointer"
               >
                 Vazgeç
               </button>
               <button
                 type="submit"
                 disabled={isSaving}
-                className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-5 py-2 rounded-lg text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer disabled:opacity-50"
+                className="bg-ok hover:bg-ok text-white font-bold px-5 py-2 rounded-lg text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer disabled:opacity-50"
               >
                 <Save className="w-4 h-4" />
                 <span>{isSaving ? 'Kaydediliyor...' : 'Güncellemeyi Kaydet'}</span>

@@ -1109,10 +1109,13 @@ export default function App() {
             }}
           />
         </Suspense>
-      ) : activeTab === 'manage' ? (
+      ) : activeTab === 'manage' || activeTab === 'admin' ? (
         isAdmin ? (
           <Suspense fallback={<ViewFallback />}>
             <ManageConsole
+              key={activeTab}
+              entry={activeTab === 'admin' ? 'admin' : 'manage'}
+              initialSlug={parseLocation().param}
               adminEmail={ADMIN_EMAIL}
               committees={committees}
               questions={questions}
@@ -1129,13 +1132,13 @@ export default function App() {
               <span className="w-12 h-12 rounded-2xl bg-ink text-white flex items-center justify-center">
                 <ShieldCheck className="w-6 h-6" />
               </span>
-              <h1 className="m-0 font-display font-bold text-[24px] tracking-[-0.02em]">Yönetim Konsolu</h1>
-              <p className="m-0 text-[15px] text-ink-2">Bu konsol yalnızca yöneticilere açık. Devam etmek için yönetici hesabıyla giriş yap.</p>
+              <h1 className="m-0 font-display font-bold text-2xl tracking-[-0.02em]">Yönetim Konsolu</h1>
+              <p className="m-0 text-md text-ink-2">Bu konsol yalnızca yöneticilere açık. Devam etmek için yönetici hesabıyla giriş yap.</p>
               <div className="flex gap-2 pt-1">
                 <button
                   type="button"
                   onClick={() => setActiveTab('quick_add')}
-                  className="h-11 px-4 rounded-xl border border-line-2 bg-white font-semibold text-[15px] cursor-pointer"
+                  className="h-11 px-4 rounded-xl border border-line-2 bg-white font-semibold text-md cursor-pointer"
                 >
                   Ana sayfa
                 </button>
@@ -1145,7 +1148,7 @@ export default function App() {
                     setAuthModalInitialMode('admin');
                     setIsAuthModalOpen(true);
                   }}
-                  className="h-11 px-5 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-[15px] cursor-pointer"
+                  className="h-11 px-5 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-md cursor-pointer"
                 >
                   Yönetici girişi
                 </button>
@@ -1157,7 +1160,7 @@ export default function App() {
       <>
       {/* v3 shell: icon rail on tablet/desktop, bottom tabs on phones */}
       <AppRail activeTab={activeTab} setActiveTab={setActiveTab} isAdmin={isAdmin} />
-      <div className="ms-shell md:pl-[76px] lg:pl-[232px] flex-1 flex flex-col min-w-0">
+      <div className="ms-shell md:pl-[76px] lg:pl-[208px] flex-1 flex flex-col min-w-0">
       {/* Navigation Header with Google Auth & Drive */}
       <Header
         searchQuery={searchQuery}
@@ -1201,15 +1204,15 @@ export default function App() {
       />
 
       {!isOnline && (
-        <div className="bg-amber-500/15 border-b border-amber-500/30 px-4 py-2.5 text-xs flex items-center justify-between text-amber-900 dark:text-amber-200">
+        <div className="bg-warn/15 border-b border-warn/30 px-4 py-2.5 text-xs flex items-center justify-between text-warn dark:text-amber-200">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse shrink-0" />
+            <span className="w-2 h-2 rounded-full bg-warn animate-pulse shrink-0" />
             <span><strong>Çevrimdışı Mod:</strong> İnternet bağlantısı yok. Sorular ve desteler cihazınızın yerel belleğinden sunuluyor.</span>
           </div>
           <button
             type="button"
             onClick={() => setIsOfflineModalOpen(true)}
-            className="underline font-semibold hover:text-amber-950 dark:hover:text-amber-100 cursor-pointer shrink-0 ml-2"
+            className="underline font-semibold hover:text-warn dark:hover:text-amber-100 cursor-pointer shrink-0 ml-2"
           >
             Veritabanı
           </button>
@@ -1217,7 +1220,7 @@ export default function App() {
       )}
 
       {/* Main Container */}
-      <main key={activeTab} className={`ms-view-enter min-w-0 flex-1 max-w-[1240px] w-full mx-auto px-4 sm:px-6 lg:px-10 pt-4 sm:pt-6 flex flex-col gap-4 sm:gap-5 ${activeTab === 'ai_chat' ? 'ms-chat-main pb-[84px] md:pb-4' : 'pb-28 md:pb-12'}`}>
+      <main key={activeTab} className={`ms-view-enter min-w-0 flex-1 max-w-[1180px] w-full mx-auto px-4 sm:px-5 lg:px-6 pt-3 sm:pt-4 flex flex-col gap-3 ${activeTab === 'ai_chat' ? 'ms-chat-main pb-[84px] md:pb-4' : 'pb-24 md:pb-8'}`}>
 
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (
@@ -1225,8 +1228,8 @@ export default function App() {
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-5 h-5 text-ok shrink-0 mt-0.5" />
               <div>
-                <p className="m-0 font-semibold text-[15px] text-ok">PDF Google Drive'a kaydedildi</p>
-                <p className="m-0 text-[14px] text-ink">
+                <p className="m-0 font-semibold text-md text-ok">PDF Google Drive'a kaydedildi</p>
+                <p className="m-0 text-base text-ink">
                   {driveUploadSuccess.fileName} · “{FOLDER_NAME}” klasörü
                 </p>
               </div>
@@ -1237,7 +1240,7 @@ export default function App() {
                   href={driveUploadSuccess.webViewLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-10 px-4 rounded-[10px] bg-white border border-line-2 text-ink font-semibold text-[14px] inline-flex items-center gap-2"
+                  className="h-10 px-4 rounded-[10px] bg-white border border-line-2 text-ink font-semibold text-base inline-flex items-center gap-2"
                 >
                   Drive'da aç
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -1246,7 +1249,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={() => setDriveUploadSuccess(null)}
-                className="h-10 px-3 rounded-[10px] text-ink-2 font-semibold text-[14px] cursor-pointer"
+                className="h-10 px-3 rounded-[10px] text-ink-2 font-semibold text-base cursor-pointer"
               >
                 Kapat
               </button>
@@ -1258,16 +1261,16 @@ export default function App() {
         {congratsToast && (
           <div role="status" className="bg-ink text-white rounded-xl px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between gap-3">
             <div className="flex items-start gap-3">
-              <Sparkles className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+              <Sparkles className="w-5 h-5 text-warn shrink-0 mt-0.5" />
               <div>
-                <p className="m-0 font-semibold text-[15px]">Teşekkürler!</p>
-                <p className="m-0 text-[14px] text-blue-300">{congratsToast}</p>
+                <p className="m-0 font-semibold text-md">Teşekkürler!</p>
+                <p className="m-0 text-base text-accent">{congratsToast}</p>
               </div>
             </div>
             <button
               type="button"
               onClick={() => setCongratsToast(null)}
-              className="h-10 px-4 rounded-[10px] bg-white/10 hover:bg-white/20 font-semibold text-[14px] cursor-pointer shrink-0"
+              className="h-10 px-4 rounded-[10px] bg-white/10 hover:bg-white/20 font-semibold text-base cursor-pointer shrink-0"
             >
               Tamam
             </button>
@@ -1371,6 +1374,7 @@ export default function App() {
               eyebrow="Kolektif arşiv"
               title="Soru havuzu"
               description="Herkesin hatırladığı parçalar burada birleşir; kaynaklarla tamamlanan sorular doğrulanır."
+              stats={loading ? undefined : [{ label: 'soru', value: poolQuestions.length.toLocaleString('tr-TR') }]}
               actions={
                 <>
                   <label className="sr-only" htmlFor="pool-committee">Kurul</label>
@@ -1378,7 +1382,7 @@ export default function App() {
                     id="pool-committee"
                     value={selectedCommitteeId}
                     onChange={(e) => setSelectedCommitteeId(e.target.value)}
-                    className="h-10 pl-3 pr-8 rounded-[10px] border border-line bg-white text-ink font-semibold text-[14px] cursor-pointer w-full sm:w-auto sm:max-w-[360px] truncate"
+                    className="ms-select h-10 font-semibold w-full sm:w-auto sm:max-w-[360px] truncate"
                   >
                     {committees.map((c) => (
                       <option key={c.id} value={c.id}>
@@ -1392,7 +1396,7 @@ export default function App() {
                       setContributeDefaultNumber(undefined);
                       setIsContributeModalOpen(true);
                     }}
-                    className="hidden sm:inline-flex h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-[14px] items-center gap-2 cursor-pointer shadow-sm"
+                    className="hidden sm:inline-flex h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-base items-center gap-2 cursor-pointer shadow-sm"
                   >
                     <Plus className="w-4 h-4" strokeWidth={2.2} />
                     Soru ekle
@@ -1401,7 +1405,7 @@ export default function App() {
               }
             >
               {searchQuery && (
-                <div className="flex flex-wrap items-center gap-2 text-[14px] text-ink-2">
+                <div className="flex flex-wrap items-center gap-2 text-base text-ink-2">
                   <span>Arama:</span>
                   <span className="text-ink font-semibold">“{searchQuery}”</span>
                   <button type="button" onClick={() => setSearchQuery('')} className="h-8 px-2.5 rounded-lg text-accent font-semibold cursor-pointer hover:bg-accent-soft">
@@ -1436,15 +1440,15 @@ export default function App() {
             {loading ? (
               <div className="text-center py-16 bg-white rounded-2xl border border-line">
                 <RefreshCw className="w-6 h-6 text-accent animate-spin mx-auto mb-3" />
-                <p className="m-0 text-[14px] text-ink-2">Soru havuzu yükleniyor…</p>
+                <p className="m-0 text-base text-ink-2">Soru havuzu yükleniyor…</p>
               </div>
             ) : poolQuestions.length === 0 ? (
               <div className="bg-white rounded-2xl border border-line px-6 py-14 text-center flex flex-col items-center gap-4">
                 <div>
-                  <h3 className="m-0 font-display text-[22px] font-bold tracking-[-0.02em]">
+                  <h3 className="m-0 font-display text-2xl font-bold tracking-[-0.02em]">
                     {filterMyQuestionsOnly ? 'Henüz katkıda bulunduğun soru yok' : 'Bu kriterlere uyan soru yok'}
                   </h3>
-                  <p className="m-0 mt-1.5 text-[15px] text-ink-2 max-w-[420px]">
+                  <p className="m-0 mt-1.5 text-md text-ink-2 max-w-[420px]">
                     {filterMyQuestionsOnly
                       ? 'Aklında kalan parçaları ekleyerek kurul arşivine katkı sağlayabilirsin.'
                       : 'Henüz soru girilmemiş olabilir ya da filtreye uyan soru yok.'}
@@ -1507,7 +1511,7 @@ export default function App() {
                     <button
                       type="button"
                       onClick={() => setVisibleCount((prev) => prev + 30)}
-                      className="h-11 px-6 rounded-xl bg-white border border-line-2 text-ink font-semibold text-[14px] hover:bg-slate-50 cursor-pointer shadow-xs inline-flex items-center gap-2"
+                      className="h-11 px-6 rounded-xl bg-white border border-line-2 text-ink font-semibold text-base hover:bg-field cursor-pointer shadow-xs inline-flex items-center gap-2"
                     >
                       Daha fazla soru göster ({poolQuestions.length - visibleCount} soru daha)
                     </button>
@@ -1710,56 +1714,12 @@ export default function App() {
           </Suspense>
         )}
 
-        {/* /yonetim — admin panel as its own page */}
-        {activeTab === 'admin' &&
-          (isAdmin ? (
-            <Suspense fallback={<ViewFallback />}>
-              <AdminPanelModal
-                variant="page"
-                isOpen
-                onClose={() => setActiveTab('quick_add')}
-                adminEmail={ADMIN_EMAIL}
-                committees={committees}
-                questions={questions}
-                selectedCommitteeId={selectedCommitteeId}
-                onRefreshData={fetchQuestions}
-                onOpenSubagentMonitor={() => setIsSubagentMonitorOpen(true)}
-              />
-            </Suspense>
-          ) : (
-            <div className="max-w-[440px] w-full mx-auto mt-6 sm:mt-14 bg-white border border-line rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center gap-3">
-              <span className="w-12 h-12 rounded-2xl bg-ink text-white flex items-center justify-center">
-                <ShieldCheck className="w-6 h-6" />
-              </span>
-              <h1 className="m-0 font-display font-bold text-[24px] tracking-[-0.02em]">Yönetim</h1>
-              <p className="m-0 text-[15px] text-ink-2">Bu sayfa yalnızca yöneticilere açık. Devam etmek için yönetici hesabıyla giriş yap.</p>
-              <div className="flex gap-2 pt-1">
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('quick_add')}
-                  className="h-11 px-4 rounded-xl border border-line-2 bg-white font-semibold text-[15px] cursor-pointer"
-                >
-                  Ana sayfa
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setAuthModalInitialMode('admin');
-                    setIsAuthModalOpen(true);
-                  }}
-                  className="h-11 px-5 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-[15px] cursor-pointer"
-                >
-                  Yönetici girişi
-                </button>
-              </div>
-            </div>
-          ))}
 
       </main>
 
       {/* Footer */}
       <footer className="hidden border-t border-line bg-white print:hidden">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-8 py-5 flex flex-col sm:flex-row sm:justify-between gap-3 text-[13px] text-ink-3">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-8 py-5 flex flex-col sm:flex-row sm:justify-between gap-3 text-sm text-ink-3">
           <span>
             MeDSor · Tıp Dönem 3 kurul soru havuzu
             {currentUser ? ` · ${currentUser.email}${isAdmin ? ' (yönetici)' : ''}` : ''}
@@ -1919,11 +1879,12 @@ export default function App() {
       <OfflineDatabaseModal
         isOpen={isOfflineModalOpen}
         onClose={() => setIsOfflineModalOpen(false)}
+        isAdmin={isAdmin}
       />
 
       {/* PWA & Çevrimdışı Veritabanı Açılış Önerisi Modalı */}
       <PwaInstallWelcomeModal
-        isOpen={isPwaWelcomeOpen}
+        isOpen={isPwaWelcomeOpen && !isAdmin && !offlineDatabaseService.getState().isDatabaseDownloaded}
         onClose={() => setIsPwaWelcomeOpen(false)}
         onOpenOfflineDatabase={() => setIsOfflineModalOpen(true)}
       />

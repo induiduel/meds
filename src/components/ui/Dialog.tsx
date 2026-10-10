@@ -59,8 +59,8 @@ export const Dialog: React.FC<DialogProps> = ({ title, subtitle, onClose, footer
       >
         <header className="flex items-start gap-2 px-5 pt-4 pb-3 border-b border-line-soft shrink-0">
           <div className="flex-1 min-w-0">
-            <h2 id={`${id}-t`} className="m-0 font-display text-[17px] font-semibold leading-snug text-ink">{title}</h2>
-            {subtitle && <p className="m-0 mt-0.5 text-[12.5px] text-ink-3">{subtitle}</p>}
+            <h2 id={`${id}-t`} className="m-0 font-display text-lg font-semibold leading-snug text-ink">{title}</h2>
+            {subtitle && <p className="m-0 mt-0.5 text-sm text-ink-3">{subtitle}</p>}
           </div>
           <button type="button" onClick={requestClose} aria-label="Kapat" className="ms-btn is-ghost is-icon -mr-2 -mt-1">
             <X />

@@ -459,14 +459,14 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
         <span className="truncate">{q.discipline}{q.topic ? ` · ${q.topic}` : ''}</span>
         {extra}
       </span>
-      <span className="text-[14px] text-ink leading-snug">{stemOf(q) ? (colors ? <Colored text={stemOf(q)} colors={colors} /> : stemOf(q)) : <span className="text-ink-3">Metin girilmemiş</span>}</span>
+      <span className="text-base text-ink leading-snug">{stemOf(q) ? (colors ? <Colored text={stemOf(q)} colors={colors} /> : stemOf(q)) : <span className="text-ink-3">Metin girilmemiş</span>}</span>
     </>
   );
 
   return (
     <div className="flex flex-col gap-3 min-w-0">
       <div className="flex flex-col xl:flex-row xl:items-center gap-2">
-        <p className="m-0 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-ink-2 flex-1 min-w-0">
+        <p className="m-0 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-ink-2 flex-1 min-w-0">
           {summary.map((x) => (
             <span key={x.label} className="inline-flex items-center gap-1.5 tabular-nums">
               <span className={`ms-sdot ${x.tone}`} aria-hidden="true" />
@@ -515,7 +515,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
         </div>
       ) : activeFilter === 'merged' ? (
         <div className="flex flex-col gap-3">
-          <p className="m-0 text-[13.5px] text-ink-2">Daha önce birleştirilmiş taslaklar. Parçaları incele; hata varsa <b className="text-ink">Ayır</b> ile eski hallerine döndür.</p>
+          <p className="m-0 text-base text-ink-2">Daha önce birleştirilmiş taslaklar. Parçaları incele; hata varsa <b className="text-ink">Ayır</b> ile eski hallerine döndür.</p>
           {mergedQuestions.length === 0 && (
             <section className="ms-panel"><EmptyState icon={Layers} title="Henüz birleştirilmiş soru yok">“Hazır” ya da “Elle seç” sekmesinden birleştirebilirsin.</EmptyState></section>
           )}
@@ -526,14 +526,14 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
             return (
               <article key={q.id} className="ms-panel">
                 <div className="ms-row !border-t-0">
-                  <span className="ms-ricon is-ok font-mono text-[12.5px] font-bold">{numLabel(q)}</span>
+                  <span className="ms-ricon is-ok font-mono text-sm font-bold">{numLabel(q)}</span>
                   <div className="ms-row-main">
                     <span className="flex flex-wrap items-center gap-2">
                       <span className="ms-row-title truncate">{q.topic || q.discipline || 'Birleştirilmiş soru'}</span>
                       <span className="ms-tag is-ok"><Layers /> {satelliteCount > 0 ? `${satelliteCount + 1} taslak` : 'Birleşik'}</span>
                     </span>
                     <span className="ms-row-meta"><span>{q.discipline}</span><span>{q.fragments?.length || 0} parça</span><span>{q.options?.length || 0} şık</span></span>
-                    <p className="m-0 pt-1 text-[14px] text-ink leading-relaxed">{stemOf(q) || <span className="text-ink-3">Soru kökü henüz girilmemiş</span>}</p>
+                    <p className="m-0 pt-1 text-base text-ink leading-relaxed">{stemOf(q) || <span className="text-ink-3">Soru kökü henüz girilmemiş</span>}</p>
                   </div>
                 </div>
                 <div className="flex flex-wrap items-center gap-1 px-4 pb-3 pl-[60px]">
@@ -549,16 +549,16 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                 {isInspecting && q.mergedSatellites && q.mergedSatellites.length > 0 && (
                   <div className="flex flex-col gap-2 px-4 pb-4 pl-[60px]">
                     {q.mergedSatellites.map((sat, sIdx) => (
-                      <div key={sat.id || sIdx} className="rounded-xl bg-canvas p-3 text-[13px] flex flex-col gap-1.5">
+                      <div key={sat.id || sIdx} className="rounded-xl bg-canvas p-3 text-sm flex flex-col gap-1.5">
                         <div className="flex items-center justify-between gap-2">
                           <span className="font-semibold text-ink">{sat.contributedByName || sat.author || 'Anonim'}</span>
-                          <span className="text-[11.5px] text-ink-3 font-mono">{numLabel(sat)}</span>
+                          <span className="text-xs text-ink-3 font-mono">{numLabel(sat)}</span>
                         </div>
                         <p className="m-0 text-ink-2 leading-relaxed">{stemOf(sat) || 'Metin girilmemiş'}</p>
                         {sat.fragments && sat.fragments.length > 0 && (
                           <ul className="m-0 p-0 list-none flex flex-col gap-0.5">
                             {sat.fragments.map((sf) => (
-                              <li key={sf.id} className="text-[12.5px] text-ink-3"><b className="font-medium text-ink-2">{sf.author}:</b> “{sf.text}”</li>
+                              <li key={sf.id} className="text-sm text-ink-3"><b className="font-medium text-ink-2">{sf.author}:</b> “{sf.text}”</li>
                             ))}
                           </ul>
                         )}
@@ -579,7 +579,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
         </div>
       ) : activeFilter === 'manual' ? (
         <div className="flex flex-col gap-2.5">
-          <p className="m-0 text-[13.5px] text-ink-2">Aynı soruya ait taslakları işaretle. Biri <b className="text-ink">çapa</b> olur; şıklar harmanlanır, mükerrerler temizlenir. Seçtiklerinde ortak geçen kelimeler aynı renkle boyanır.</p>
+          <p className="m-0 text-base text-ink-2">Aynı soruya ait taslakları işaretle. Biri <b className="text-ink">çapa</b> olur; şıklar harmanlanır, mükerrerler temizlenir. Seçtiklerinde ortak geçen kelimeler aynı renkle boyanır.</p>
           {manualColors.size > 0 && <WordLegend texts={selectedQs.map(fullText)} colors={manualColors} />}
           <SearchBox value={manualSearchQuery} onChange={setManualSearchQuery} placeholder="Metin, konu, ders ya da soru no" count={manualFilteredQuestions.length} />
           <section className="ms-panel">
@@ -633,7 +633,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
         </div>
       ) : activeFilter === 'vague' ? (
         <div className="flex flex-col gap-2">
-          <p className="m-0 text-[13.5px] text-ink-2">Bu taslaklarda güçlü bir eşleşme için yeterli bilgi yok. Yeni ipucu ya da şık geldikçe kendiliğinden bağlanırlar.</p>
+          <p className="m-0 text-base text-ink-2">Bu taslaklarda güçlü bir eşleşme için yeterli bilgi yok. Yeni ipucu ya da şık geldikçe kendiliğinden bağlanırlar.</p>
           <section className="ms-panel">
             {!analysis?.unmatchedVagueDrafts.length ? (
               <EmptyState icon={Check} title="Muğlak taslak yok" />
@@ -670,16 +670,16 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
           return (
             <article key={cluster.id} className="ms-panel">
               <header className="ms-panel-head">
-                <span className={`ms-ricon ${ready ? 'is-ok' : 'is-warn'} font-mono text-[12.5px] font-bold`}>{anchor.isUnassignedNumber || !anchor.questionNumber ? '?' : anchor.questionNumber}</span>
+                <span className={`ms-ricon ${ready ? 'is-ok' : 'is-warn'} font-mono text-sm font-bold`}>{anchor.isUnassignedNumber || !anchor.questionNumber ? '?' : anchor.questionNumber}</span>
                 <span className="flex-1 min-w-[200px] flex flex-col gap-0.5">
                   <span className="flex items-center gap-2 min-w-0">
-                    <span className="text-[14.5px] font-semibold text-ink truncate">{cluster.detectedSubject || anchor.topic || anchor.discipline}</span>
+                    <span className="text-md font-semibold text-ink truncate">{cluster.detectedSubject || anchor.topic || anchor.discipline}</span>
                     <span className={`ms-tag ${ready ? 'is-ok' : 'is-warn'} tabular-nums`}>%{cluster.overallConfidence}</span>
                   </span>
-                  <span className="text-[12.5px] text-ink-3 truncate">{anchor.discipline} · {satellites.length} taslak birleşecek</span>
+                  <span className="text-sm text-ink-3 truncate">{anchor.discipline} · {satellites.length} taslak birleşecek</span>
                 </span>
                 <span className="ms-panel-tools">
-                  <label className="inline-flex items-center gap-1.5 text-[12.5px] text-ink-3">
+                  <label className="inline-flex items-center gap-1.5 text-sm text-ink-3">
                     Çapa
                     <select value={anchor.id} onChange={(e) => setAnchorOverrides((prev) => ({ ...prev, [cluster.id]: e.target.value }))} className="ms-input is-sm !w-auto max-w-[220px]" title="Birleşince ana soru olacak taslak">
                       {members.map((m) => (
@@ -701,17 +701,17 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
               <div className="px-4 pt-2"><WordLegend texts={clusterTexts} colors={colors} /></div>
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 p-3 pt-2">
                 <div className="rounded-xl bg-accent-soft/60 px-3 py-2.5 flex flex-col gap-1.5 min-w-0">
-                  <span className="flex items-center gap-1.5 text-[12px] font-semibold text-accent">
+                  <span className="flex items-center gap-1.5 text-xs font-semibold text-accent">
                     <Layers className="w-3.5 h-3.5" /> Çapa soru
                     <span className="ml-auto font-normal text-ink-3">{anchor.options?.length || 0} şık</span>
                   </span>
-                  <span className={`text-[13.5px] text-ink leading-relaxed ${open ? '' : 'line-clamp-3'}`}>
+                  <span className={`text-base text-ink leading-relaxed ${open ? '' : 'line-clamp-3'}`}>
                     {stemOf(anchor) ? <Colored text={stemOf(anchor)} colors={colors} /> : 'Soru kökü henüz girilmemiş'}
                   </span>
                   {open && anchor.options && anchor.options.length > 0 && (
                     <span className="flex flex-col gap-0.5 pt-1.5 mt-1 border-t border-accent/15">
                       {anchor.options.map((o) => (
-                        <span key={o.key} className="text-[12.5px] text-ink-2">
+                        <span key={o.key} className="text-sm text-ink-2">
                           <b className="font-mono text-ink mr-1">{o.key}</b><Colored text={o.text} colors={colors} />
                         </span>
                       ))}
@@ -724,7 +724,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                     const comp = cluster.satelliteDrafts.find((sd) => sd.question.id === satQ.id)?.compatibility;
                     return (
                       <li key={satQ.id} className="rounded-xl bg-canvas px-3 py-2 flex flex-col gap-1 min-w-0">
-                        <div className="flex items-center gap-2 text-[12.5px] min-w-0 flex-wrap">
+                        <div className="flex items-center gap-2 text-sm min-w-0 flex-wrap">
                           <span className="font-semibold text-ink truncate">{satQ.contributedByName || 'Anonim'}</span>
                           <span className="text-ink-3 shrink-0 font-mono">{numLabel(satQ)}</span>
                           {comp && <span className="ms-tag is-ok tabular-nums">%{comp.score}</span>}
@@ -733,7 +733,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                             <button type="button" onClick={() => handleMarkNotSame(anchor.id, satQ.id)} title="Farklı sorular; bir daha aynı kümede gösterme (kalıcı)" className="ms-btn is-sm is-danger"><X /> Aynı değil</button>
                           </span>
                         </div>
-                        <span className={`text-[13px] text-ink-2 leading-snug ${open ? '' : 'line-clamp-2'}`}>
+                        <span className={`text-sm text-ink-2 leading-snug ${open ? '' : 'line-clamp-2'}`}>
                           {stemOf(satQ) ? <Colored text={stemOf(satQ)} colors={colors} /> : 'Metin yok'}
                         </span>
                         {open && comp && comp.reasons.length > 0 && (

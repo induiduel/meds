@@ -48,15 +48,15 @@ export const ListsView: React.FC<ListsViewProps> = ({ bank, onChange }) => {
         <Collapsible
           title={
             <span className="flex flex-col gap-0.5 py-2 min-w-0 text-left">
-              <span className="text-[12px] text-ink-3 font-normal truncate">
+              <span className="text-xs text-ink-3 font-normal truncate">
                 {[q.discipline, q.year, attempt ? (attempt.correct ? 'Doğru çözdün' : `Yanlış · ${attempt.picked}`) : null].filter(Boolean).join(' · ')}
               </span>
-              <span className="text-[15px] text-ink font-medium line-clamp-2 whitespace-normal">{q.stem}</span>
+              <span className="text-md text-ink font-medium line-clamp-2 whitespace-normal">{q.stem}</span>
             </span>
           }
         >
           <div className="px-3 pb-3 flex flex-col gap-2">
-            <ol className="m-0 p-0 list-none flex flex-col gap-1 text-[14px]">
+            <ol className="m-0 p-0 list-none flex flex-col gap-1 text-base">
               {q.options.map((o) => (
                 <li key={o.key} className={`flex gap-2 rounded-lg px-2.5 py-1.5 ${o.key === q.answer ? 'bg-ok-soft text-ok font-semibold' : 'text-ink-2'}`}>
                   <span className="font-mono shrink-0">{o.key})</span>
@@ -65,7 +65,7 @@ export const ListsView: React.FC<ListsViewProps> = ({ bank, onChange }) => {
               ))}
             </ol>
             <ExplanationBlock q={q} compact />
-            <button type="button" onClick={onRemove} className="self-start h-9 px-3 rounded-full text-[13px] font-medium text-ink-3 hover:text-ink hover:bg-field inline-flex items-center gap-1.5 cursor-pointer">
+            <button type="button" onClick={onRemove} className="self-start h-9 px-3 rounded-full text-sm font-medium text-ink-3 hover:text-ink hover:bg-field inline-flex items-center gap-1.5 cursor-pointer">
               <Trash2 className="w-3.5 h-3.5" /> {removeLabel}
             </button>
           </div>
@@ -81,7 +81,7 @@ export const ListsView: React.FC<ListsViewProps> = ({ bank, onChange }) => {
           <button key={t.id} type="button" role="tab" aria-selected={list === t.id} onClick={() => setList(t.id)} className={`inline-flex items-center justify-center gap-1.5 ${list === t.id ? 'is-on' : ''}`}>
             <t.icon className="w-3.5 h-3.5" />
             {t.label}
-            <span className="text-ink-3 text-[12px]">{t.count}</span>
+            <span className="text-ink-3 text-xs">{t.count}</span>
           </button>
         ))}
       </div>
@@ -114,18 +114,18 @@ export const ListsView: React.FC<ListsViewProps> = ({ bank, onChange }) => {
             {cards.map((c) => (
               <li key={c.id} className="bg-white border border-line rounded-2xl p-4 flex flex-col gap-1.5 min-w-0">
                 <div className="flex items-start gap-2 min-w-0">
-                  <span className="flex-1 min-w-0 font-semibold text-[15px] text-ink [overflow-wrap:anywhere]">{c.front}</span>
+                  <span className="flex-1 min-w-0 font-semibold text-md text-ink [overflow-wrap:anywhere]">{c.front}</span>
                   <button
                     type="button"
                     onClick={() => setCards(toggleFavoriteCard({ id: c.id, front: c.front, back: c.back, group: c.group }))}
                     aria-label="Favorilerden çıkar"
-                    className="w-8 h-8 -m-1 rounded-full flex items-center justify-center text-amber-500 hover:bg-amber-50 cursor-pointer shrink-0"
+                    className="w-8 h-8 -m-1 rounded-full flex items-center justify-center text-warn hover:bg-warn-soft cursor-pointer shrink-0"
                   >
                     <Star className="w-4 h-4" fill="currentColor" />
                   </button>
                 </div>
-                {c.group && <span className="text-[12px] text-ink-3">{c.group}</span>}
-                <p className="m-0 text-[14px] text-ink-2 leading-[1.6] line-clamp-4 [overflow-wrap:anywhere]">{c.back}</p>
+                {c.group && <span className="text-xs text-ink-3">{c.group}</span>}
+                <p className="m-0 text-base text-ink-2 leading-[1.6] line-clamp-4 [overflow-wrap:anywhere]">{c.back}</p>
               </li>
             ))}
           </ul>

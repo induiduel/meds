@@ -155,10 +155,10 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
           {[0, 1, 2, 3].map((i) => <div key={i} className="h-[92px] rounded-2xl bg-white border border-line animate-pulse" />)}
         </div>
       ) : !query ? null : items.length === 0 ? (
-        <div className="py-14 text-center text-[15px] text-ink-3">“{query}” için sonuç bulunamadı. Daha kısa ya da farklı bir ifade dene.</div>
+        <div className="py-14 text-center text-md text-ink-3">“{query}” için sonuç bulunamadı. Daha kısa ya da farklı bir ifade dene.</div>
       ) : (
         <>
-          <p className="m-0 text-[13px] text-ink-3">
+          <p className="m-0 text-sm text-ink-3">
             “<span className="text-ink font-medium">{query}</span>” için {total}{data?.capped ? '+' : ''} sonuç · alaka sırasına göre
           </p>
           <ol className="m-0 p-0 list-none flex flex-col gap-2">
@@ -169,8 +169,8 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
                   <button type="button" className="ms-hit-head" aria-expanded={open} onClick={() => setOpenId(open ? undefined : r.id)}>
                     <span className="flex items-center gap-2 min-w-0 flex-wrap">
                       <TypeTag type={r.documentType} />
-                      {r.discipline && <span className="text-[12px] text-ink-3 truncate max-w-full">{r.discipline}</span>}
-                      {r.pageNumber ? <span className="text-[12px] text-ink-3">· s. {r.pageNumber}</span> : null}
+                      {r.discipline && <span className="text-xs text-ink-3 truncate max-w-full">{r.discipline}</span>}
+                      {r.pageNumber ? <span className="text-xs text-ink-3">· s. {r.pageNumber}</span> : null}
                     </span>
                     <span className="ms-hit-title"><Highlight text={r.title} query={query} /></span>
                     {!open && <span className="ms-hit-snippet"><Highlight text={r.snippet} query={query} /></span>}
@@ -180,7 +180,7 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
                     <div className="min-h-0 overflow-hidden">
                       {SOURCE_ACTION[r.documentType] && (
                         <div className="ms-hit-actions">
-                          <button type="button" onClick={() => openSource(r)} disabled={openingId === r.id} className="h-10 px-4 rounded-full bg-accent-soft text-accent text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer hover:bg-accent hover:text-white transition-colors disabled:opacity-60">
+                          <button type="button" onClick={() => openSource(r)} disabled={openingId === r.id} className="h-10 px-4 rounded-full bg-accent-soft text-accent text-base font-semibold inline-flex items-center gap-1.5 cursor-pointer hover:bg-accent hover:text-white transition-colors disabled:opacity-60">
                             {openingId === r.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <ArrowUpRight className="w-4 h-4" />}
                             {SOURCE_ACTION[r.documentType]}
                           </button>
@@ -194,7 +194,7 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
             })}
           </ol>
           {items.length < total && (
-            <button type="button" onClick={loadMore} disabled={loadingMore} className="self-center h-11 px-5 rounded-full border border-line-2 bg-white text-[14px] font-semibold text-ink cursor-pointer hover:bg-canvas disabled:opacity-60 inline-flex items-center gap-2">
+            <button type="button" onClick={loadMore} disabled={loadingMore} className="self-center h-11 px-5 rounded-full border border-line-2 bg-white text-base font-semibold text-ink cursor-pointer hover:bg-canvas disabled:opacity-60 inline-flex items-center gap-2">
               {loadingMore && <Loader2 className="w-4 h-4 animate-spin" />}
               Daha fazla göster
             </button>

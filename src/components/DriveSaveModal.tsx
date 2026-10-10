@@ -110,53 +110,53 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
   };
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-      <div className="ms-modal-panel bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden my-6 flex flex-col max-h-[90dvh]">
+    <div className="ms-overlay fixed inset-0 z-50 bg-ink/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+      <div className="ms-modal-panel bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-line overflow-hidden my-6 flex flex-col max-h-[90dvh]">
         {/* Header */}
         <div className="bg-ink-surface text-white p-5 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-white/10 text-white border border-white/20 flex items-center justify-center">
-              <Cloud className="w-6 h-6 text-teal-300" />
+              <Cloud className="w-6 h-6 text-ok" />
             </div>
             <div>
               <h3 className="font-bold text-base">Soru Kitapçığını PDF & Drive'a Kaydet</h3>
-              <p className="text-xs text-teal-200">
+              <p className="text-xs text-ok-soft">
                 {committee?.name || 'Kurul Sınavı'} ({questions.length} Soru)
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-teal-200 hover:text-white hover:bg-white/10 cursor-pointer"
+            className="p-1.5 rounded-lg text-ok-soft hover:text-white hover:bg-white/10 cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Content */}
-        <div className="p-6 space-y-5 overflow-y-auto text-xs text-slate-700 leading-relaxed">
+        <div className="p-6 space-y-5 overflow-y-auto text-xs text-ink-2 leading-relaxed">
           {/* Threshold status badge */}
-          <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 space-y-2">
+          <div className="bg-field border border-line rounded-xl p-3.5 space-y-2">
             <div className="flex items-center justify-between text-xs">
-              <span className="font-semibold text-slate-700 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-amber-500" />
+              <span className="font-semibold text-ink-2 flex items-center gap-1.5">
+                <Sparkles className="w-4 h-4 text-warn" />
                 Otomatik Drive Eşiği Durumu
               </span>
-              <span className={`font-bold px-2 py-0.5 rounded text-[11px] ${
+              <span className={`font-bold px-2 py-0.5 rounded text-2xs ${
                 threshold.isThresholdMet 
-                  ? 'bg-emerald-100 text-emerald-800' 
-                  : 'bg-amber-100 text-amber-800'
+                  ? 'bg-ok-soft text-ok' 
+                  : 'bg-warn-soft text-warn'
               }`}>
                 {threshold.isThresholdMet ? 'EŞİK KARŞILANDI' : `%${threshold.percentageMet} TAMAMLANDI`}
               </span>
             </div>
-            <p className="text-[11px] text-slate-600">
+            <p className="text-2xs text-ink-2">
               {threshold.summary}
             </p>
-            <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden">
+            <div className="w-full bg-line rounded-full h-1.5 overflow-hidden">
               <div
                 className={`h-full transition-all duration-500 ${
-                  threshold.isThresholdMet ? 'bg-emerald-600' : 'bg-amber-500'
+                  threshold.isThresholdMet ? 'bg-ok' : 'bg-warn'
                 }`}
                 style={{ width: `${threshold.percentageMet}%` }}
               />
@@ -165,12 +165,12 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
 
           {/* Success state */}
           {uploadSuccessResult && (
-            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 space-y-2.5">
-              <div className="flex items-center gap-2 text-emerald-800 font-bold text-xs">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+            <div className="bg-ok-soft border border-ok/30 rounded-xl p-4 space-y-2.5">
+              <div className="flex items-center gap-2 text-ok font-bold text-xs">
+                <CheckCircle2 className="w-5 h-5 text-ok" />
                 <span>PDF Başarıyla Google Drive'a Yüklendi!</span>
               </div>
-              <p className="text-[11px] text-emerald-950">
+              <p className="text-2xs text-ok">
                 Dosya Google Drive hesabınızdaki <strong>"{FOLDER_NAME}"</strong> klasörüne kaydedildi.
               </p>
               {uploadSuccessResult.webViewLink && (
@@ -178,7 +178,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
                   href={uploadSuccessResult.webViewLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-3 py-1.5 rounded-lg text-xs"
+                  className="inline-flex items-center gap-1.5 bg-ok hover:bg-ok text-white font-bold px-3 py-1.5 rounded-lg text-xs"
                 >
                   <FolderOpen className="w-3.5 h-3.5" />
                   <span>Google Drive'da Görüntüle</span>
@@ -190,34 +190,34 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
 
           {/* Error message */}
           {uploadError && (
-            <div className="bg-rose-50 border border-rose-200 rounded-xl p-3.5 space-y-1.5">
-              <div className="flex items-center gap-2 text-rose-800 font-bold text-xs">
-                <AlertCircle className="w-4 h-4 text-rose-600" />
+            <div className="bg-bad-soft border border-bad/30 rounded-xl p-3.5 space-y-1.5">
+              <div className="flex items-center gap-2 text-bad-text font-bold text-xs">
+                <AlertCircle className="w-4 h-4 text-bad-text" />
                 <span>Drive Yükleme Bildirimi</span>
               </div>
-              <p className="text-[11px] text-rose-950 leading-normal">
+              <p className="text-2xs text-bad-text leading-normal">
                 {uploadError}
               </p>
             </div>
           )}
 
           {/* Option 1: Direct Local PDF Download (Instant & Always Works) */}
-          <div className="border border-slate-200 rounded-xl p-4 space-y-2.5 bg-white shadow-2xs hover:border-teal-400 transition-colors">
+          <div className="border border-line rounded-xl p-4 space-y-2.5 bg-white shadow-2xs hover:border-ok transition-colors">
             <div className="flex items-center justify-between">
-              <h4 className="font-bold text-slate-900 flex items-center gap-1.5 text-xs">
-                <Download className="w-4 h-4 text-teal-700" />
+              <h4 className="font-bold text-ink flex items-center gap-1.5 text-xs">
+                <Download className="w-4 h-4 text-ok" />
                 1. Seçenek: Cihazınıza PDF İndir (Anında & İnternetsiz)
               </h4>
-              <span className="bg-teal-50 text-teal-700 text-[11px] font-bold px-2 py-0.5 rounded-full border border-teal-200">
+              <span className="bg-ok-soft text-ok text-2xs font-bold px-2 py-0.5 rounded-full border border-ok/30">
                 1 Tıkla Hazır
               </span>
             </div>
-            <p className="text-[11px] text-slate-600">
+            <p className="text-2xs text-ink-2">
               Tüm soruları, rekonstrüksiyonları, şıkları ve cevap anahtarını içeren A4 baskıya hazır PDF kitapçığını bilgisayarınıza veya telefonunuza anında kaydeder. Google girişi gerektirmez.
             </p>
             <button
               onClick={handleDownloadLocally}
-              className="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-xs shadow-xs cursor-pointer active:scale-98 transition-transform"
+              className="w-full bg-ok hover:bg-ok text-white font-bold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-xs shadow-xs cursor-pointer active:scale-98 transition-transform"
             >
               <FileText className="w-4 h-4" />
               <span>PDF Kitapçığını Hemen Bilgisayara / Telefona İndir</span>
@@ -225,17 +225,17 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
           </div>
 
           {/* Option 2: Upload to Google Drive Folder */}
-          <div className="border border-slate-200 rounded-xl p-4 space-y-3 bg-white shadow-2xs hover:border-teal-400 transition-colors">
+          <div className="border border-line rounded-xl p-4 space-y-3 bg-white shadow-2xs hover:border-ok transition-colors">
             <div className="flex items-center justify-between">
-              <h4 className="font-bold text-slate-900 flex items-center gap-1.5 text-xs">
-                <Cloud className="w-4 h-4 text-teal-700" />
+              <h4 className="font-bold text-ink flex items-center gap-1.5 text-xs">
+                <Cloud className="w-4 h-4 text-ok" />
                 2. Seçenek: Google Drive Klasörüne Kaydet
               </h4>
-              <span className="bg-slate-100 text-slate-700 text-[11px] font-medium px-2 py-0.5 rounded">
+              <span className="bg-field text-ink-2 text-2xs font-medium px-2 py-0.5 rounded">
                 Bulut Arşiv
               </span>
             </div>
-            <p className="text-[11px] text-slate-600">
+            <p className="text-2xs text-ink-2">
               Google Drive hesabınızda <strong>"{FOLDER_NAME}"</strong> adında bir klasör açar ve PDF'i oraya yedekler.
             </p>
 
@@ -243,16 +243,16 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
               <button
                 onClick={handleUploadDrive}
                 disabled={isUploading}
-                className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-xs shadow-xs cursor-pointer active:scale-98 transition-all disabled:opacity-50"
+                className="w-full bg-ink hover:bg-ink text-white font-bold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-xs shadow-xs cursor-pointer active:scale-98 transition-all disabled:opacity-50"
               >
                 {isUploading ? (
                   <>
-                    <Loader2 className="w-4 h-4 animate-spin text-teal-300" />
+                    <Loader2 className="w-4 h-4 animate-spin text-ok" />
                     <span>Google Drive'a Yükleniyor...</span>
                   </>
                 ) : (
                   <>
-                    <Cloud className="w-4 h-4 text-teal-300" />
+                    <Cloud className="w-4 h-4 text-ok" />
                     <span>Google Drive Klasörüne Yedekle</span>
                   </>
                 )}
@@ -262,7 +262,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
                 <button
                   onClick={handleUploadDrive}
                   disabled={isUploading}
-                  className="w-full bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-xs shadow-xs cursor-pointer"
+                  className="w-full bg-white hover:bg-field border border-line-2 text-ink font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-xs shadow-xs cursor-pointer"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24">
                     <path
@@ -285,8 +285,8 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
                   <span>Google ile Oturum Aç & Drive'a Yükle</span>
                 </button>
 
-                <p className="text-[11px] text-amber-800 bg-amber-50 p-2 rounded border border-amber-200 flex items-start gap-1.5">
-                  <ShieldAlert className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
+                <p className="text-2xs text-warn bg-warn-soft p-2 rounded border border-warn/30 flex items-start gap-1.5">
+                  <ShieldAlert className="w-3.5 h-3.5 text-warn shrink-0 mt-0.5" />
                   <span>
                     GitHub Pages üzerinden Google Drive'a doğrudan yükleyebilmek için Firebase Console'da <strong>induiduel.github.io</strong> alan adının ekli olması gerekir.
                   </span>
@@ -299,27 +299,27 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
               <button
                 type="button"
                 onClick={() => setShowTokenInput(!showTokenInput)}
-                className="text-[11px] text-slate-500 hover:text-slate-800 underline flex items-center gap-1 cursor-pointer"
+                className="text-2xs text-ink-3 hover:text-ink underline flex items-center gap-1 cursor-pointer"
               >
                 <Key className="w-3 h-3" />
                 <span>{showTokenInput ? 'Belirteç alanını gizle' : 'Google OAuth Access Token ile yüklemek ister misiniz?'}</span>
               </button>
 
               {showTokenInput && (
-                <div className="mt-2 space-y-1.5 bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                <div className="mt-2 space-y-1.5 bg-field p-2.5 rounded-lg border border-line">
                   <input
                     type="password"
                     placeholder="ya29.a0AfH6SM..."
                     value={tokenInput}
                     onChange={(e) => setTokenInput(e.target.value)}
-                    className="w-full bg-white border border-slate-300 rounded p-1.5 font-mono text-[11px]"
+                    className="w-full bg-white border border-line-2 rounded p-1.5 font-mono text-2xs"
                   />
-                  <div className="flex justify-between items-center text-[11px] text-slate-500">
+                  <div className="flex justify-between items-center text-2xs text-ink-3">
                     <span>Google Drive scope içeren geçici belirteç</span>
                     <button
                       onClick={handleUploadDrive}
                       disabled={!tokenInput.trim() || isUploading}
-                      className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-2 py-1 rounded cursor-pointer disabled:opacity-50"
+                      className="bg-ok hover:bg-ok text-white font-bold px-2 py-1 rounded cursor-pointer disabled:opacity-50"
                     >
                       Token ile Yükle
                     </button>
@@ -331,17 +331,17 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between shrink-0">
+        <div className="p-4 bg-field border-t border-line flex items-center justify-between shrink-0">
           <button
             onClick={handleDownloadLocally}
-            className="text-xs font-semibold text-teal-800 hover:underline flex items-center gap-1 cursor-pointer"
+            className="text-xs font-semibold text-ok hover:underline flex items-center gap-1 cursor-pointer"
           >
             <Download className="w-3.5 h-3.5" />
             <span>Direkt PDF İndir</span>
           </button>
           <button
             onClick={onClose}
-            className="bg-slate-800 hover:bg-slate-900 text-white font-bold px-4 py-1.5 rounded-lg text-xs cursor-pointer"
+            className="bg-ink hover:bg-ink text-white font-bold px-4 py-1.5 rounded-lg text-xs cursor-pointer"
           >
             Kapat
           </button>

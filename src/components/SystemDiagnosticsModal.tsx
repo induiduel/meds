@@ -289,36 +289,36 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
       case 'ok':
       case 'ready':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[12px] font-semibold bg-emerald-100 text-emerald-900 border border-emerald-300">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-ok-soft text-ok border border-ok/30">
+            <CheckCircle2 className="w-3.5 h-3.5 text-ok" />
             Çevrimiçi / Hazır
           </span>
         );
       case 'quota_exceeded':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[12px] font-semibold bg-amber-50 text-amber-800 border border-amber-500">
-            <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-warn-soft text-warn border border-warn">
+            <AlertTriangle className="w-3.5 h-3.5 text-warn" />
             Kota Aşıldı (429)
           </span>
         );
       case 'high_demand':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[12px] font-semibold bg-amber-50 text-amber-800 border border-amber-400">
-            <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-warn-soft text-warn border border-warn">
+            <AlertTriangle className="w-3.5 h-3.5 text-warn" />
             Aşırı Yoğun (503)
           </span>
         );
       case 'spending_cap_exceeded':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[12px] font-semibold bg-rose-50 text-rose-800 border border-rose-300">
-            <AlertOctagon className="w-3.5 h-3.5 text-rose-500" />
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-bad-soft text-bad-text border border-bad/30">
+            <AlertOctagon className="w-3.5 h-3.5 text-bad-text" />
             Harcama Limiti Aşıldı
           </span>
         );
       case 'missing_tables':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[12px] font-semibold bg-amber-200 text-amber-800 border border-amber-500">
-            <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-warn/20 text-warn border border-warn">
+            <AlertTriangle className="w-3.5 h-3.5 text-warn" />
             Tablolar Eksik
           </span>
         );
@@ -326,14 +326,14 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
       case 'error':
       case 'auth_error':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[12px] font-semibold bg-rose-50 text-rose-800 border border-rose-300">
-            <AlertOctagon className="w-3.5 h-3.5 text-rose-500" />
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-bad-soft text-bad-text border border-bad/30">
+            <AlertOctagon className="w-3.5 h-3.5 text-bad-text" />
             Hata / Çevrimdışı
           </span>
         );
       default:
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[12px] font-semibold bg-gray-100 text-gray-700">
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-field text-ink-2">
             {status}
           </span>
         );
@@ -354,20 +354,20 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
               <Activity className="w-5 h-5" />
             </span>
             <div>
-              <h2 id="diagnostics-modal-title" className="font-display font-bold text-[18px] sm:text-[20px] text-ink m-0 flex items-center gap-2">
+              <h2 id="diagnostics-modal-title" className="font-display font-bold text-lg sm:text-xl text-ink m-0 flex items-center gap-2">
                 Veritabanı & Limit Takip Paneli
                 {health.hasCriticalDatabaseError && (
-                  <span className="px-2 py-0.5 rounded-md text-[11px] bg-rose-500 text-white font-bold">
+                  <span className="px-2 py-0.5 rounded-md text-2xs bg-bad text-white font-bold">
                     KRİTİK HATA
                   </span>
                 )}
                 {health.hasAiQuotaAlert && (
-                  <span className="px-2 py-0.5 rounded-md text-[11px] bg-violet-400 text-white font-bold">
+                  <span className="px-2 py-0.5 rounded-md text-2xs bg-ai text-white font-bold">
                     AI KOTA LİMİTİ
                   </span>
                 )}
               </h2>
-              <p className="text-[13px] text-ink-3 m-0">
+              <p className="text-sm text-ink-3 m-0">
                 Online Firebase, Supabase ve Yapay Zeka servislerinin canlı durum ve limit takibi
               </p>
             </div>
@@ -377,7 +377,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
               type="button"
               onClick={handleRunTest}
               disabled={isRunningTest}
-              className="h-9 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-[13px] inline-flex items-center gap-2 transition-colors cursor-pointer disabled:opacity-50"
+              className="h-9 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-sm inline-flex items-center gap-2 transition-colors cursor-pointer disabled:opacity-50"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${isRunningTest ? 'animate-spin' : ''}`} />
               {isRunningTest ? 'Test Ediliyor…' : 'Yeniden Test Et'}
@@ -398,7 +398,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
           <button
             type="button"
             onClick={() => setActiveTab('overview')}
-            className={`py-3 text-[14px] font-semibold border-b-2 transition-colors cursor-pointer whitespace-nowrap ${
+            className={`py-3 text-base font-semibold border-b-2 transition-colors cursor-pointer whitespace-nowrap ${
               activeTab === 'overview'
                 ? 'border-accent text-accent'
                 : 'border-transparent text-ink-2 hover:text-ink'
@@ -409,7 +409,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
           <button
             type="button"
             onClick={() => setActiveTab('database')}
-            className={`py-3 text-[14px] font-semibold border-b-2 transition-colors cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
+            className={`py-3 text-base font-semibold border-b-2 transition-colors cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
               activeTab === 'database'
                 ? 'border-accent text-accent'
                 : 'border-transparent text-ink-2 hover:text-ink'
@@ -418,16 +418,16 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
             <Database className="w-4 h-4" />
             Veritabanları (Firebase & Supabase)
             {health.firebase.status === 'quota_exceeded' && (
-              <span className="w-2 h-2 rounded-full bg-amber-600" />
+              <span className="w-2 h-2 rounded-full bg-warn" />
             )}
             {health.hasCriticalDatabaseError && (
-              <span className="w-2 h-2 rounded-full bg-rose-500" />
+              <span className="w-2 h-2 rounded-full bg-bad" />
             )}
           </button>
           <button
             type="button"
             onClick={() => setActiveTab('ai')}
-            className={`py-3 text-[14px] font-semibold border-b-2 transition-colors cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
+            className={`py-3 text-base font-semibold border-b-2 transition-colors cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
               activeTab === 'ai'
                 ? 'border-accent text-accent'
                 : 'border-transparent text-ink-2 hover:text-ink'
@@ -436,13 +436,13 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
             <Cpu className="w-4 h-4" />
             Yapay Zeka Limitleri (Gemini & Groq)
             {health.hasAiQuotaAlert && (
-              <span className="w-2 h-2 rounded-full bg-violet-400" />
+              <span className="w-2 h-2 rounded-full bg-ai" />
             )}
           </button>
           <button
             type="button"
             onClick={() => setActiveTab('settings')}
-            className={`py-3 text-[14px] font-semibold border-b-2 transition-colors cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
+            className={`py-3 text-base font-semibold border-b-2 transition-colors cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
               activeTab === 'settings'
                 ? 'border-accent text-accent'
                 : 'border-transparent text-ink-2 hover:text-ink'
@@ -461,12 +461,12 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
             <div className="space-y-6">
               {/* Alert Callouts */}
               {health.hasCriticalDatabaseError && (
-                <div className="p-4 rounded-xl bg-rose-50 border border-rose-300 text-rose-800">
+                <div className="p-4 rounded-xl bg-bad-soft border border-bad/30 text-bad-text">
                   <div className="flex items-start gap-3">
-                    <AlertOctagon className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />
+                    <AlertOctagon className="w-5 h-5 text-bad-text shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="font-bold text-[15px] m-0">Online Veritabanı Kesintisi Tespit Edildi!</h4>
-                      <p className="text-[13px] mt-1 m-0 text-rose-800">
+                      <h4 className="font-bold text-md m-0">Online Veritabanı Kesintisi Tespit Edildi!</h4>
+                      <p className="text-sm mt-1 m-0 text-bad-text">
                         Online sitede hem Firebase Spark kotası dolmuş hem de Supabase bağlantısı sağlanamıyor.
                         Öğrenciler soru ekleyemez veya soruları yükleyemez. Lütfen <strong>Ayarlar</strong> sekmesinden Supabase bağlantınızı kontrol edin.
                       </p>
@@ -476,12 +476,12 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
               )}
 
               {health.firebase.status === 'quota_exceeded' && health.supabase.status === 'online' && (
-                <div className="p-4 rounded-xl bg-amber-50 border border-amber-500 text-amber-800">
+                <div className="p-4 rounded-xl bg-warn-soft border border-warn text-warn">
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-700 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-ok shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="font-bold text-[15px] m-0">✓ Otomatik Veritabanı Devri Başarılı</h4>
-                      <p className="text-[13px] mt-1 m-0 text-amber-900">
+                      <h4 className="font-bold text-md m-0">✓ Otomatik Veritabanı Devri Başarılı</h4>
+                      <p className="text-sm mt-1 m-0 text-warn">
                         Firebase Spark günlük ücretsiz 50.000 okuma kotası doldu. MeDSor otomatik failover sistemi sayesinde tüm veri trafiği kesintisiz olarak <strong>Supabase PostgreSQL</strong> bulut veritabanına aktarıldı.
                       </p>
                     </div>
@@ -495,17 +495,17 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                 <div className="p-4 rounded-xl border border-line bg-canvas/40 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-bold text-[15px] text-ink flex items-center gap-2">
-                        <Database className="w-4 h-4 text-amber-600" />
+                      <span className="font-bold text-md text-ink flex items-center gap-2">
+                        <Database className="w-4 h-4 text-warn" />
                         Firebase Firestore
                       </span>
                       {getStatusBadge(health.firebase.status)}
                     </div>
-                    <div className="text-[12px] text-ink-3 space-y-1">
+                    <div className="text-xs text-ink-3 space-y-1">
                       <div>Plan: Spark (Ücretsiz)</div>
                       <div>Günlük Limit: 50.000 Okuma / 20.000 Yazma</div>
                       {health.firebase.details && (
-                        <div className="text-ink-2 font-medium mt-1 text-[11px] p-1.5 rounded bg-white border border-line/60">
+                        <div className="text-ink-2 font-medium mt-1 text-2xs p-1.5 rounded bg-white border border-line/60">
                           {health.firebase.details}
                         </div>
                       )}
@@ -514,7 +514,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                   <button
                     type="button"
                     onClick={() => setActiveTab('database')}
-                    className="mt-3 text-[12px] font-semibold text-accent hover:underline inline-flex items-center gap-1 cursor-pointer"
+                    className="mt-3 text-xs font-semibold text-accent hover:underline inline-flex items-center gap-1 cursor-pointer"
                   >
                     Detayları Görüntüle →
                   </button>
@@ -524,18 +524,18 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                 <div className="p-4 rounded-xl border border-line bg-canvas/40 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-bold text-[15px] text-ink flex items-center gap-2">
-                        <Database className="w-4 h-4 text-emerald-700" />
+                      <span className="font-bold text-md text-ink flex items-center gap-2">
+                        <Database className="w-4 h-4 text-ok" />
                         Supabase PostgreSQL
                       </span>
                       {getStatusBadge(health.supabase.status)}
                     </div>
-                    <div className="text-[12px] text-ink-3 space-y-1">
+                    <div className="text-xs text-ink-3 space-y-1">
                       <div>Veritabanı: kgutsltgmqbnlxcnzrtl</div>
                       <div>Çıkmış Soru Sayısı: {health.supabase.rowCounts.past_questions || 0}</div>
                       <div>Ders Notu Sayısı: {health.supabase.rowCounts.lecture_notes || 0}</div>
                       {health.supabase.details && (
-                        <div className="text-ink-2 font-medium mt-1 text-[11px] p-1.5 rounded bg-white border border-line/60">
+                        <div className="text-ink-2 font-medium mt-1 text-2xs p-1.5 rounded bg-white border border-line/60">
                           {health.supabase.details}
                         </div>
                       )}
@@ -544,7 +544,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                   <button
                     type="button"
                     onClick={() => setActiveTab('database')}
-                    className="mt-3 text-[12px] font-semibold text-accent hover:underline inline-flex items-center gap-1 cursor-pointer"
+                    className="mt-3 text-xs font-semibold text-accent hover:underline inline-flex items-center gap-1 cursor-pointer"
                   >
                     Detayları Görüntüle →
                   </button>
@@ -554,13 +554,13 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                 <div className="p-4 rounded-xl border border-line bg-canvas/40 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-bold text-[15px] text-ink flex items-center gap-2">
-                        <Cpu className="w-4 h-4 text-violet-400" />
+                      <span className="font-bold text-md text-ink flex items-center gap-2">
+                        <Cpu className="w-4 h-4 text-ai" />
                         Yapay Zeka (AI)
                       </span>
                       {getStatusBadge(health.ai.status)}
                     </div>
-                    <div className="text-[12px] text-ink-3 space-y-1">
+                    <div className="text-xs text-ink-3 space-y-1">
                       <div>Model: Gemini 3.8 Flash</div>
                       <div>Yedek: Groq Cloud (Llama 3.3 70B)</div>
                       <div>Kota Durumu: {health.hasAiQuotaAlert ? 'Limit Aşıldı (429)' : 'Kullanılabilir'}</div>
@@ -569,7 +569,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                   <button
                     type="button"
                     onClick={() => setActiveTab('ai')}
-                    className="mt-3 text-[12px] font-semibold text-accent hover:underline inline-flex items-center gap-1 cursor-pointer"
+                    className="mt-3 text-xs font-semibold text-accent hover:underline inline-flex items-center gap-1 cursor-pointer"
                   >
                     Kotaları & Modelleri İncele →
                   </button>
@@ -579,9 +579,9 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
               {/* Quick Action Bar */}
               <div className="p-4 rounded-xl border border-line bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div>
-                  <h4 className="font-bold text-[14px] text-ink m-0">Otomatik Teşhis Scripti</h4>
-                  <p className="text-[12px] text-ink-3 m-0">
-                    Terminal üzerinden kontrol etmek için: <code className="px-1.5 py-0.5 rounded bg-canvas font-mono text-[11px]">npm run check:status</code>
+                  <h4 className="font-bold text-base text-ink m-0">Otomatik Teşhis Scripti</h4>
+                  <p className="text-xs text-ink-3 m-0">
+                    Terminal üzerinden kontrol etmek için: <code className="px-1.5 py-0.5 rounded bg-canvas font-mono text-2xs">npm run check:status</code>
                   </p>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
@@ -589,7 +589,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                     type="button"
                     onClick={handleRunTest}
                     disabled={isRunningTest}
-                    className="h-8 px-3 rounded-lg bg-accent text-white font-semibold text-[13px] inline-flex items-center gap-1.5 shadow-sm cursor-pointer disabled:opacity-50"
+                    className="h-8 px-3 rounded-lg bg-accent text-white font-semibold text-sm inline-flex items-center gap-1.5 shadow-sm cursor-pointer disabled:opacity-50"
                   >
                     <RefreshCw className={`w-3.5 h-3.5 ${isRunningTest ? 'animate-spin' : ''}`} />
                     Tüm Servisleri Canlı Test Et
@@ -605,16 +605,16 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
               {/* Firebase Deep Dive */}
               <div className="p-5 rounded-xl border border-line bg-white space-y-3">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-[16px] text-ink flex items-center gap-2 m-0">
-                    <Database className="w-5 h-5 text-amber-600" />
+                  <h3 className="font-bold text-md text-ink flex items-center gap-2 m-0">
+                    <Database className="w-5 h-5 text-warn" />
                     Google Firebase Firestore (Spark Plan)
                   </h3>
                   {getStatusBadge(health.firebase.status)}
                 </div>
-                <p className="text-[13px] text-ink-2 m-0">
-                  Firebase Spark planı günde en fazla 50.000 okuma ve 20.000 yazma sunar. Bu sınır aşıldığında Firestore <code className="font-mono text-red-600">resource-exhausted</code> hatası verir.
+                <p className="text-sm text-ink-2 m-0">
+                  Firebase Spark planı günde en fazla 50.000 okuma ve 20.000 yazma sunar. Bu sınır aşıldığında Firestore <code className="font-mono text-bad-text">resource-exhausted</code> hatası verir.
                 </p>
-                <div className="p-3 rounded-lg bg-canvas text-[12px] font-mono space-y-1">
+                <div className="p-3 rounded-lg bg-canvas text-xs font-mono space-y-1">
                   <div>• Proje ID: gen-lang-client-0056595657</div>
                   <div>• Veritabanı ID: ai-studio-medsorutpkurulso-8352a999-14d5-45ab-bdf1-62102aece060</div>
                   <div>• Son Durum: {health.firebase.details || health.firebase.status}</div>
@@ -624,33 +624,33 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
               {/* Supabase Deep Dive */}
               <div className="p-5 rounded-xl border border-line bg-white space-y-4">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-[16px] text-ink flex items-center gap-2 m-0">
-                    <Database className="w-5 h-5 text-emerald-700" />
+                  <h3 className="font-bold text-md text-ink flex items-center gap-2 m-0">
+                    <Database className="w-5 h-5 text-ok" />
                     Supabase PostgreSQL Bulut Veritabanı
                   </h3>
                   {getStatusBadge(health.supabase.status)}
                 </div>
-                <p className="text-[13px] text-ink-2 m-0">
+                <p className="text-sm text-ink-2 m-0">
                   Supabase, Firebase kotası dolduğunda veya kapalıyken soru havuzunu, çıkmış soruları ve amfi ders notlarını kesintisiz sunan paralel ilişkisel veritabanıdır.
                 </p>
 
                 {/* Table Row Counts */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   <div className="p-3 rounded-lg bg-canvas border border-line/50 text-center">
-                    <div className="text-[11px] font-semibold text-ink-3 uppercase">Kurullar</div>
-                    <div className="font-bold text-[18px] text-ink mt-0.5">{health.supabase.rowCounts.committees || 0}</div>
+                    <div className="text-2xs font-semibold text-ink-3 uppercase">Kurullar</div>
+                    <div className="font-bold text-lg text-ink mt-0.5">{health.supabase.rowCounts.committees || 0}</div>
                   </div>
                   <div className="p-3 rounded-lg bg-canvas border border-line/50 text-center">
-                    <div className="text-[11px] font-semibold text-ink-3 uppercase">Güncel Sorular</div>
-                    <div className="font-bold text-[18px] text-ink mt-0.5">{health.supabase.rowCounts.questions || 0}</div>
+                    <div className="text-2xs font-semibold text-ink-3 uppercase">Güncel Sorular</div>
+                    <div className="font-bold text-lg text-ink mt-0.5">{health.supabase.rowCounts.questions || 0}</div>
                   </div>
                   <div className="p-3 rounded-lg bg-canvas border border-line/50 text-center">
-                    <div className="text-[11px] font-semibold text-ink-3 uppercase">Çıkmış Sorular</div>
-                    <div className="font-bold text-[18px] text-ink mt-0.5">{health.supabase.rowCounts.past_questions || 0}</div>
+                    <div className="text-2xs font-semibold text-ink-3 uppercase">Çıkmış Sorular</div>
+                    <div className="font-bold text-lg text-ink mt-0.5">{health.supabase.rowCounts.past_questions || 0}</div>
                   </div>
                   <div className="p-3 rounded-lg bg-canvas border border-line/50 text-center">
-                    <div className="text-[11px] font-semibold text-ink-3 uppercase">Ders Notları</div>
-                    <div className="font-bold text-[18px] text-ink mt-0.5">{health.supabase.rowCounts.lecture_notes || 0}</div>
+                    <div className="text-2xs font-semibold text-ink-3 uppercase">Ders Notları</div>
+                    <div className="font-bold text-lg text-ink mt-0.5">{health.supabase.rowCounts.lecture_notes || 0}</div>
                   </div>
                 </div>
 
@@ -661,11 +661,11 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                     <div className="p-4 rounded-xl border border-line bg-canvas/40 space-y-3">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                         <div>
-                          <div className="font-bold text-[14px] text-ink flex items-center gap-1.5">
-                            <Zap className="w-4 h-4 text-amber-600" />
+                          <div className="font-bold text-base text-ink flex items-center gap-1.5">
+                            <Zap className="w-4 h-4 text-warn" />
                             Supabase Realtime (Anlık Çift Yönlü İletişim & Canlı Eşitleme)
                           </div>
-                          <div className="text-[12px] text-ink-3">
+                          <div className="text-xs text-ink-3">
                             WebSocket üzerinden canlı veri dinleme, yayınlama ve cihazlar arası anlık senkronizasyon.
                           </div>
                         </div>
@@ -673,7 +673,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                           type="button"
                           onClick={handleTestRealtime}
                           disabled={realtimeTest.running}
-                          className="h-8 px-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-[12px] inline-flex items-center gap-1.5 shadow-xs cursor-pointer disabled:opacity-50 shrink-0"
+                          className="h-8 px-3 rounded-lg bg-accent hover:bg-accent text-white font-semibold text-xs inline-flex items-center gap-1.5 shadow-xs cursor-pointer disabled:opacity-50 shrink-0"
                         >
                           <RefreshCw className={`w-3.5 h-3.5 ${realtimeTest.running ? 'animate-spin' : ''}`} />
                           {realtimeTest.running ? 'Test Ediliyor…' : 'Realtime Canlı Test Et'}
@@ -683,18 +683,18 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                       {realtimeTest.result && (
                         <div className="space-y-3">
                           <div
-                            className={`p-3 rounded-xl text-[13px] font-medium border flex items-start gap-2.5 ${
+                            className={`p-3 rounded-xl text-sm font-medium border flex items-start gap-2.5 ${
                               realtimeTest.result.postgresActive
-                                ? 'bg-emerald-50 text-emerald-900 border-emerald-200'
+                                ? 'bg-ok-soft text-ok border-ok/30'
                                 : realtimeTest.result.broadcastActive
-                                ? 'bg-amber-50 text-amber-900 border-amber-200'
-                                : 'bg-red-50 text-red-900 border-red-200'
+                                ? 'bg-warn-soft text-warn border-warn/30'
+                                : 'bg-bad-soft text-bad-text border-bad/30'
                             }`}
                           >
                             {realtimeTest.result.postgresActive ? (
-                              <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                              <CheckCircle2 className="w-5 h-5 text-ok shrink-0 mt-0.5" />
                             ) : (
-                              <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                              <AlertTriangle className="w-5 h-5 text-warn shrink-0 mt-0.5" />
                             )}
                             <div className="space-y-1">
                               <div className="font-bold">
@@ -704,7 +704,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                                   ? 'WebSocket Canlı Yayını Aktif — PostgreSQL Yayını Açılmalı'
                                   : 'Realtime Bağlantı Hatası'}
                               </div>
-                              <div className="text-[12px] leading-relaxed">
+                              <div className="text-xs leading-relaxed">
                                 {realtimeTest.result.message}
                               </div>
                             </div>
@@ -712,19 +712,19 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
 
                           {/* If PostgreSQL changes not active yet, show 1-click fix buttons and guide */}
                           {!realtimeTest.result.postgresActive && (
-                            <div className="p-3.5 bg-white rounded-xl border border-amber-200/90 shadow-xs space-y-2.5">
-                              <div className="text-[12px] text-ink font-bold flex items-center gap-1.5">
-                                <Sparkles className="w-4 h-4 text-amber-500" />
+                            <div className="p-3.5 bg-white rounded-xl border border-warn/90 shadow-xs space-y-2.5">
+                              <div className="text-xs text-ink font-bold flex items-center gap-1.5">
+                                <Sparkles className="w-4 h-4 text-warn" />
                                 PostgreSQL Realtime Yayınını Açmak İçin (2 Kolay Yol):
                               </div>
-                              <div className="text-[12px] text-ink-2 space-y-1.5 pl-1">
+                              <div className="text-xs text-ink-2 space-y-1.5 pl-1">
                                 <div>
                                   <strong>1. Yöntem (Dashboard - 10 saniye):</strong> Supabase panelinizde{' '}
                                   <a
                                     href={`https://supabase.com/dashboard/project/${projectRef}/database/publications`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-indigo-600 font-semibold underline inline-flex items-center gap-0.5"
+                                    className="text-accent font-semibold underline inline-flex items-center gap-0.5"
                                   >
                                     Database &gt; Publications &gt; supabase_realtime
                                     <ExternalLink className="w-3 h-3 inline" />
@@ -737,7 +737,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                                     href={`https://supabase.com/dashboard/project/${projectRef}/sql/new`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-indigo-600 font-semibold underline inline-flex items-center gap-0.5"
+                                    className="text-accent font-semibold underline inline-flex items-center gap-0.5"
                                   >
                                     Supabase SQL Editöründe
                                     <ExternalLink className="w-3 h-3 inline" />
@@ -750,7 +750,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                                 <button
                                   type="button"
                                   onClick={copyRealtimeSql}
-                                  className="h-8 px-3 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-semibold text-[12px] inline-flex items-center gap-1.5 shadow-xs cursor-pointer"
+                                  className="h-8 px-3 rounded-lg bg-warn hover:bg-warn text-white font-semibold text-xs inline-flex items-center gap-1.5 shadow-xs cursor-pointer"
                                 >
                                   {copiedRealtimeSql ? <Check className="w-3.5 h-3.5 text-white" /> : <Copy className="w-3.5 h-3.5" />}
                                   {copiedRealtimeSql ? 'Realtime SQL Kopyalandı!' : '1 Tıkla Realtime SQL Kopyala'}
@@ -760,7 +760,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                                   href={`https://supabase.com/dashboard/project/${projectRef}/sql/new`}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="h-8 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-[12px] inline-flex items-center gap-1.5 cursor-pointer"
+                                  className="h-8 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-xs inline-flex items-center gap-1.5 cursor-pointer"
                                 >
                                   <ExternalLink className="w-3.5 h-3.5" />
                                   Supabase SQL Editörü Aç
@@ -770,7 +770,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                                   href={`https://supabase.com/dashboard/project/${projectRef}/database/publications`}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="h-8 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-[12px] inline-flex items-center gap-1.5 cursor-pointer"
+                                  className="h-8 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-xs inline-flex items-center gap-1.5 cursor-pointer"
                                 >
                                   <ExternalLink className="w-3.5 h-3.5" />
                                   Yayınlar (Publications) Menüsü Aç
@@ -788,16 +788,16 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                   <button
                     type="button"
                     onClick={copySupabaseSql}
-                    className="h-9 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-[13px] inline-flex items-center gap-2 cursor-pointer transition-colors"
+                    className="h-9 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-sm inline-flex items-center gap-2 cursor-pointer transition-colors"
                   >
-                    {copiedSql ? <Check className="w-4 h-4 text-emerald-700" /> : <Copy className="w-4 h-4" />}
+                    {copiedSql ? <Check className="w-4 h-4 text-ok" /> : <Copy className="w-4 h-4" />}
                     {copiedSql ? 'SQL Şeması Kopyalandı!' : 'Supabase SQL Şemasını Kopyala'}
                   </button>
                   <a
                     href="https://supabase.com/dashboard"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="h-9 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-[13px] inline-flex items-center gap-2 cursor-pointer transition-colors"
+                    className="h-9 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-sm inline-flex items-center gap-2 cursor-pointer transition-colors"
                   >
                     Supabase Dashboard'a Git
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -810,12 +810,12 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
           {/* TAB 3: AI POOL & QUOTAS */}
           {activeTab === 'ai' && (
             <div className="space-y-6">
-              <div className="p-4 rounded-xl bg-purple-50 border border-purple-200 text-purple-900 text-[13px]">
+              <div className="p-4 rounded-xl bg-ai-soft border border-ai/30 text-ai text-sm">
                 <div className="flex items-start gap-2.5">
-                  <Sparkles className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
+                  <Sparkles className="w-5 h-5 text-ai shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold">4 Kademeli Kesintisiz Yapay Zeka Havuzu:</span>
-                    <p className="mt-1 m-0 text-purple-800">
+                    <p className="mt-1 m-0 text-ai">
                       Soru düzenleme ve yeniden yapılandırma fonksiyonlarında sistem önce Ücretsiz Gemini planlarını dener. Kotaya takılırsa (HTTP 429) anında <strong>Groq Cloud (Llama 3.3 70B & DeepSeek R1)</strong> veya Faturalı plana geçer.
                     </p>
                   </div>
@@ -824,39 +824,39 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
 
               {/* Key Status List */}
               <div className="space-y-3">
-                <h4 className="font-bold text-[14px] text-ink m-0">Tanımlı Yapay Zeka Planları & Canlı Durumları</h4>
+                <h4 className="font-bold text-base text-ink m-0">Tanımlı Yapay Zeka Planları & Canlı Durumları</h4>
                 
                 {health.ai.keys.length > 0 ? (
                   health.ai.keys.map((k, i) => (
                     <div key={i} className="p-3.5 rounded-xl border border-line bg-white flex items-center justify-between gap-3">
                       <div>
-                        <div className="font-bold text-[14px] text-ink">{k.label}</div>
-                        <div className="text-[12px] text-ink-3">{k.details || 'Model: Gemini 3.8 Flash'}</div>
+                        <div className="font-bold text-base text-ink">{k.label}</div>
+                        <div className="text-xs text-ink-3">{k.details || 'Model: Gemini 3.8 Flash'}</div>
                       </div>
                       {getStatusBadge(k.status)}
                     </div>
                   ))
                 ) : (
-                  <div className="p-4 rounded-xl border border-line bg-canvas text-center text-[13px] text-ink-2">
+                  <div className="p-4 rounded-xl border border-line bg-canvas text-center text-sm text-ink-2">
                     Yapay zeka anahtarlarının durumunu görmek için "Yeniden Test Et" butonuna tıklayın.
                   </div>
                 )}
               </div>
 
               {/* Free Groq Cloud Recommendation */}
-              <div className="p-5 rounded-xl border border-violet-200 bg-violet-50 space-y-3">
-                <h4 className="font-bold text-[15px] text-violet-700 m-0 flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-violet-500" />
+              <div className="p-5 rounded-xl border border-ai/30 bg-ai-soft space-y-3">
+                <h4 className="font-bold text-md text-ai m-0 flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-ai" />
                   Öneri: Ücretsiz & Sınırsız Groq Cloud API'sini Ekleyin
                 </h4>
-                <p className="text-[13px] text-violet-800 m-0">
+                <p className="text-sm text-ai m-0">
                   Groq Cloud, Llama 3.3 70B ve DeepSeek R1 modellerini saniyede 300+ token hızında tamamen ücretsiz sunar. Gemini kotası dolduğunda sorularınızı anında ve kesintisiz düzenleyebilirsiniz.
                 </p>
                 <div className="flex flex-wrap items-center gap-3 pt-1">
                   <button
                     type="button"
                     onClick={() => setActiveTab('settings')}
-                    className="h-8 px-3 rounded-lg bg-violet-500 hover:bg-violet-600 text-white font-semibold text-[13px] cursor-pointer"
+                    className="h-8 px-3 rounded-lg bg-ai hover:bg-ai text-white font-semibold text-sm cursor-pointer"
                   >
                     Groq API Anahtarını Tanımla →
                   </button>
@@ -864,7 +864,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                     href="https://console.groq.com/keys"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="h-8 px-3 rounded-lg border border-violet-200 bg-white text-violet-700 font-semibold text-[13px] inline-flex items-center gap-1.5 cursor-pointer"
+                    className="h-8 px-3 rounded-lg border border-ai/30 bg-white text-ai font-semibold text-sm inline-flex items-center gap-1.5 cursor-pointer"
                   >
                     Ücretsiz Anahtar Al (Groq)
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -878,21 +878,21 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
           {activeTab === 'settings' && (
             <div className="space-y-6">
               {saveSuccess && (
-                <div className="p-3 rounded-xl bg-emerald-100 border border-emerald-300 text-emerald-900 text-[13px] flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-700" />
+                <div className="p-3 rounded-xl bg-ok-soft border border-ok/30 text-ok text-sm flex items-center gap-2">
+                  <Check className="w-4 h-4 text-ok" />
                   Ayarlar başarıyla kaydedildi ve tüm bağlantılar güncellendi!
                 </div>
               )}
 
               {/* Database Mode Switcher */}
               <div className="p-4 rounded-xl border border-line bg-white space-y-3">
-                <h4 className="font-bold text-[14px] text-ink m-0">Aktif Veritabanı Modu</h4>
+                <h4 className="font-bold text-base text-ink m-0">Aktif Veritabanı Modu</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                   <label className={`p-3 rounded-lg border flex flex-col gap-1 cursor-pointer transition-colors ${
                     dbMode === 'auto' ? 'border-accent bg-accent-soft' : 'border-line hover:bg-canvas'
                   }`}>
                     <div className="flex items-center justify-between">
-                      <span className="font-bold text-[13px] text-ink">Otomatik (Önerilen)</span>
+                      <span className="font-bold text-sm text-ink">Otomatik (Önerilen)</span>
                       <input 
                         type="radio" 
                         name="db_mode" 
@@ -900,14 +900,14 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                         onChange={() => setDbMode('auto')} 
                       />
                     </div>
-                    <span className="text-[11px] text-ink-3">Firebase Spark kotası dolarsa otomatik Supabase devralır.</span>
+                    <span className="text-2xs text-ink-3">Firebase Spark kotası dolarsa otomatik Supabase devralır.</span>
                   </label>
 
                   <label className={`p-3 rounded-lg border flex flex-col gap-1 cursor-pointer transition-colors ${
                     dbMode === 'supabase' ? 'border-accent bg-accent-soft' : 'border-line hover:bg-canvas'
                   }`}>
                     <div className="flex items-center justify-between">
-                      <span className="font-bold text-[13px] text-ink">Yalnızca Supabase</span>
+                      <span className="font-bold text-sm text-ink">Yalnızca Supabase</span>
                       <input 
                         type="radio" 
                         name="db_mode" 
@@ -915,14 +915,14 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                         onChange={() => setDbMode('supabase')} 
                       />
                     </div>
-                    <span className="text-[11px] text-ink-3">Firebase kotalarını atlar, doğrudan Supabase PostgreSQL kullanır.</span>
+                    <span className="text-2xs text-ink-3">Firebase kotalarını atlar, doğrudan Supabase PostgreSQL kullanır.</span>
                   </label>
 
                   <label className={`p-3 rounded-lg border flex flex-col gap-1 cursor-pointer transition-colors ${
                     dbMode === 'firebase' ? 'border-accent bg-accent-soft' : 'border-line hover:bg-canvas'
                   }`}>
                     <div className="flex items-center justify-between">
-                      <span className="font-bold text-[13px] text-ink">Yalnızca Firebase</span>
+                      <span className="font-bold text-sm text-ink">Yalnızca Firebase</span>
                       <input 
                         type="radio" 
                         name="db_mode" 
@@ -930,17 +930,17 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                         onChange={() => setDbMode('firebase')} 
                       />
                     </div>
-                    <span className="text-[11px] text-ink-3">Yalnızca Google Firestore veritabanını kullanır.</span>
+                    <span className="text-2xs text-ink-3">Yalnızca Google Firestore veritabanını kullanır.</span>
                   </label>
                 </div>
               </div>
 
               {/* API Keys Configuration */}
               <div className="p-4 rounded-xl border border-line bg-white space-y-4">
-                <h4 className="font-bold text-[14px] text-ink m-0">Kişisel Yapay Zeka API Anahtarları</h4>
+                <h4 className="font-bold text-base text-ink m-0">Kişisel Yapay Zeka API Anahtarları</h4>
                 
                 <div>
-                  <label className="block text-[13px] font-semibold text-ink mb-1">
+                  <label className="block text-sm font-semibold text-ink mb-1">
                     Google Gemini API Anahtarı (AI Studio)
                   </label>
                   <input
@@ -948,15 +948,15 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                     value={customGeminiKey}
                     onChange={(e) => setCustomGeminiKey(e.target.value)}
                     placeholder="AIzaSy... veya AQ.Ab8..."
-                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-[13px] text-ink font-mono focus:border-accent outline-0"
+                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-sm text-ink font-mono focus:border-accent outline-0"
                   />
-                  <span className="text-[11px] text-ink-3 mt-1 block">
+                  <span className="text-2xs text-ink-3 mt-1 block">
                     Kendi ücretsiz anahtarınızı girerek genel kota sınırından bağımsız çalışabilirsiniz.
                   </span>
                 </div>
 
                 <div>
-                  <label className="block text-[13px] font-semibold text-ink mb-1">
+                  <label className="block text-sm font-semibold text-ink mb-1">
                     Groq Cloud API Anahtarları (3. Sıra: Hızlı & Ücretsiz AI)
                   </label>
                   <input
@@ -964,22 +964,22 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                     value={customGroqKey}
                     onChange={(e) => setCustomGroqKey(e.target.value)}
                     placeholder="1. Groq Anahtarı (gsk_...)"
-                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-[13px] text-ink font-mono focus:border-accent outline-0"
+                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-sm text-ink font-mono focus:border-accent outline-0"
                   />
                   <input
                     type="password"
                     value={customGroqKey2}
                     onChange={(e) => setCustomGroqKey2(e.target.value)}
                     placeholder="2. Yedek Groq Anahtarı (gsk_...)"
-                    className="w-full h-10 px-3 mt-2 rounded-lg border border-line bg-field text-[13px] text-ink font-mono focus:border-accent outline-0"
+                    className="w-full h-10 px-3 mt-2 rounded-lg border border-line bg-field text-sm text-ink font-mono focus:border-accent outline-0"
                   />
-                  <span className="text-[11px] text-ink-3 mt-1 block">
+                  <span className="text-2xs text-ink-3 mt-1 block">
                     Groq Cloud (OpenAI GPT-OSS 120B / Llama 3.3 / Qwen) kotasız ve ücretsizdir. Biri dolarsa diğeri otomatik devreye girer.
                   </span>
                 </div>
 
                 <div>
-                  <label className="block text-[13px] font-semibold text-ink mb-1">
+                  <label className="block text-sm font-semibold text-ink mb-1">
                     Muse Spark 1.3 Free (Son Çare / Tüm Limitler Dolunca Otomatik Kurtarma)
                   </label>
                   <input
@@ -987,9 +987,9 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                     value={customMuseSparkKey}
                     onChange={(e) => setCustomMuseSparkKey(e.target.value)}
                     placeholder="Muse Spark / OpenCode / OpenRouter Anahtarı (İsteğe Bağlı)"
-                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-[13px] text-ink font-mono focus:border-accent outline-0"
+                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-sm text-ink font-mono focus:border-accent outline-0"
                   />
-                  <span className="text-[11px] text-ink-3 mt-1 block">
+                  <span className="text-2xs text-ink-3 mt-1 block">
                     Gemini ve Groq limitleri dolduğunda otomatik devreye girer. Boş bırakıldığında yerleşik ücretsiz havuz kullanılır.
                   </span>
                 </div>
@@ -997,23 +997,23 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
 
               {/* Supabase Config */}
               <div className="p-4 rounded-xl border border-line bg-white space-y-4">
-                <h4 className="font-bold text-[14px] text-ink m-0">Supabase Bağlantı Bilgileri</h4>
+                <h4 className="font-bold text-base text-ink m-0">Supabase Bağlantı Bilgileri</h4>
                 <div>
-                  <label className="block text-[13px] font-semibold text-ink mb-1">Supabase URL</label>
+                  <label className="block text-sm font-semibold text-ink mb-1">Supabase URL</label>
                   <input
                     type="text"
                     value={customSupaUrl}
                     onChange={(e) => setCustomSupaUrl(e.target.value)}
-                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-[13px] text-ink font-mono focus:border-accent outline-0"
+                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-sm text-ink font-mono focus:border-accent outline-0"
                   />
                 </div>
                 <div>
-                  <label className="block text-[13px] font-semibold text-ink mb-1">Supabase Anon / Publishable Key</label>
+                  <label className="block text-sm font-semibold text-ink mb-1">Supabase Anon / Publishable Key</label>
                   <input
                     type="password"
                     value={customSupaKey}
                     onChange={(e) => setCustomSupaKey(e.target.value)}
-                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-[13px] text-ink font-mono focus:border-accent outline-0"
+                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-sm text-ink font-mono focus:border-accent outline-0"
                   />
                 </div>
               </div>
@@ -1023,7 +1023,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                 <button
                   type="button"
                   onClick={handleSaveSettings}
-                  className="h-10 px-5 rounded-lg bg-accent hover:bg-accent/90 text-white font-semibold text-[14px] shadow-sm cursor-pointer transition-colors"
+                  className="h-10 px-5 rounded-lg bg-accent hover:bg-accent/90 text-white font-semibold text-base shadow-sm cursor-pointer transition-colors"
                 >
                   Ayarları Kaydet ve Test Et
                 </button>
@@ -1034,15 +1034,15 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-3.5 border-t border-line bg-canvas flex items-center justify-between text-[12px] text-ink-3 shrink-0">
+        <div className="px-6 py-3.5 border-t border-line bg-canvas flex items-center justify-between text-xs text-ink-3 shrink-0">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-700" />
+            <span className="w-2 h-2 rounded-full bg-ok" />
             <span>MeDSor Dayanıklılık & Kota İzleme Sistemi Aktif</span>
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="h-8 px-4 rounded-lg bg-white border border-line hover:bg-canvas text-ink font-semibold text-[13px] cursor-pointer"
+            className="h-8 px-4 rounded-lg bg-white border border-line hover:bg-canvas text-ink font-semibold text-sm cursor-pointer"
           >
             Kapat
           </button>

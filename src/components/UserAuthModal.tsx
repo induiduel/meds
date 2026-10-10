@@ -152,15 +152,15 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   };
 
   const input =
-    'w-full h-11 px-3 rounded-xl border border-line bg-white text-[16px] sm:text-[14.5px] text-ink placeholder:text-ink-3 outline-none focus:border-accent focus:ring-2 focus:ring-accent/15';
-  const label = 'block text-[12.5px] font-semibold text-ink-2 mb-1';
+    'w-full h-11 px-3 rounded-xl border border-line bg-white text-md sm:text-md text-ink placeholder:text-ink-3 outline-none focus:border-accent focus:ring-2 focus:ring-accent/15';
+  const label = 'block text-sm font-semibold text-ink-2 mb-1';
   const disabled = busy !== '' || Boolean(success);
 
   const card = (
     <div className={`w-full max-w-[380px] mx-auto bg-white rounded-2xl border border-line ${embedded ? '' : 'shadow-xl'} p-4 sm:p-5 flex flex-col gap-3.5`}>
       {!embedded && (
         <div className="flex items-center justify-between -mt-1">
-          <h2 className="m-0 text-[16px] font-bold text-ink">{mode === 'admin' ? 'Yönetici girişi' : mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}</h2>
+          <h2 className="m-0 text-md font-bold text-ink">{mode === 'admin' ? 'Yönetici girişi' : mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}</h2>
           {!mandatory && (
             <button type="button" onClick={onClose} className="w-9 h-9 -mr-2 inline-flex items-center justify-center rounded-lg text-ink-3 hover:bg-canvas cursor-pointer" aria-label="Kapat">
               <X className="w-4 h-4" />
@@ -182,7 +182,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                   setMode(m);
                   setError(null);
                 }}
-                className={`h-9 rounded-lg text-[13.5px] font-semibold cursor-pointer transition-colors ${mode === m ? 'bg-white text-ink shadow-xs' : 'text-ink-3 hover:text-ink'}`}
+                className={`h-9 rounded-lg text-base font-semibold cursor-pointer transition-colors ${mode === m ? 'bg-white text-ink shadow-xs' : 'text-ink-3 hover:text-ink'}`}
               >
                 {m === 'login' ? 'Giriş' : 'Kayıt'}
               </button>
@@ -193,13 +193,13 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
             type="button"
             onClick={() => onGoogle(false)}
             disabled={disabled}
-            className="h-11 rounded-xl border border-line bg-white hover:bg-canvas text-[14.5px] font-semibold text-ink inline-flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-60"
+            className="h-11 rounded-xl border border-line bg-white hover:bg-canvas text-md font-semibold text-ink inline-flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-60"
           >
             {busy === 'google' ? <Loader2 className="w-[18px] h-[18px] animate-spin" /> : <GoogleMark />}
             Google ile devam et
           </button>
 
-          <div className="flex items-center gap-3 text-[12px] text-ink-3" aria-hidden="true">
+          <div className="flex items-center gap-3 text-xs text-ink-3" aria-hidden="true">
             <span className="h-px flex-1 bg-line" /> ya da e-posta ile <span className="h-px flex-1 bg-line" />
           </div>
 
@@ -238,7 +238,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                 </button>
               </div>
             </div>
-            <button type="submit" disabled={disabled} className="h-11 mt-0.5 rounded-xl bg-accent hover:bg-accent-hover text-white text-[14.5px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60">
+            <button type="submit" disabled={disabled} className="h-11 mt-0.5 rounded-xl bg-accent hover:bg-accent-hover text-white text-md font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60">
               {busy === 'form' && <Loader2 className="w-4 h-4 animate-spin" />}
               {mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}
             </button>
@@ -246,32 +246,32 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
         </>
       ) : (
         <div className="flex flex-col gap-2.5">
-          <p className="m-0 flex items-center gap-1.5 text-[13.5px] font-semibold text-ink">
+          <p className="m-0 flex items-center gap-1.5 text-base font-semibold text-ink">
             <ShieldCheck className="w-4 h-4 text-accent" /> Yönetici girişi
           </p>
-          <button type="button" onClick={() => onGoogle(true)} disabled={disabled} className="h-11 rounded-xl border border-line bg-white hover:bg-canvas text-[14.5px] font-semibold text-ink inline-flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-60">
+          <button type="button" onClick={() => onGoogle(true)} disabled={disabled} className="h-11 rounded-xl border border-line bg-white hover:bg-canvas text-md font-semibold text-ink inline-flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-60">
             {busy === 'google' ? <Loader2 className="w-[18px] h-[18px] animate-spin" /> : <GoogleMark />}
             Google ile yönetici girişi
           </button>
           <form onSubmit={onAdminPassword} className="flex gap-2">
             <input className={input} type="password" value={adminPassword} onChange={(e) => setAdminPassword(e.target.value)} placeholder="ya da yönetici şifresi" autoComplete="current-password" aria-label="Yönetici şifresi" />
-            <button type="submit" disabled={disabled || !adminPassword} className="h-11 px-4 rounded-xl bg-accent text-white text-[14px] font-semibold cursor-pointer disabled:opacity-60 shrink-0">Giriş</button>
+            <button type="submit" disabled={disabled || !adminPassword} className="h-11 px-4 rounded-xl bg-accent text-white text-base font-semibold cursor-pointer disabled:opacity-60 shrink-0">Giriş</button>
           </form>
         </div>
       )}
 
       {error && (
-        <p role="alert" className="m-0 flex items-start gap-2 rounded-xl bg-rose-50 text-rose-800 px-3 py-2 text-[13px] leading-snug">
+        <p role="alert" className="m-0 flex items-start gap-2 rounded-xl bg-bad-soft text-bad-text px-3 py-2 text-sm leading-snug">
           <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" /> {error}
         </p>
       )}
       {success && (
-        <p role="status" className="m-0 flex items-center gap-2 rounded-xl bg-emerald-50 text-emerald-800 px-3 py-2 text-[13px]">
+        <p role="status" className="m-0 flex items-center gap-2 rounded-xl bg-ok-soft text-ok px-3 py-2 text-sm">
           <CheckCircle2 className="w-4 h-4 shrink-0" /> {success}
         </p>
       )}
 
-      <div className="flex items-center justify-center gap-3 pt-1 border-t border-line text-[11.5px] text-ink-3">
+      <div className="flex items-center justify-center gap-3 pt-1 border-t border-line text-xs text-ink-3">
         <a href="/sartlar" target="_blank" rel="noopener noreferrer" className="hover:text-accent underline">Kullanım Şartları</a>
         <span>·</span>
         <a href="/policy" target="_blank" rel="noopener noreferrer" className="hover:text-accent underline">Gizlilik Politikası</a>
@@ -283,7 +283,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
           setMode(mode === 'admin' ? 'login' : 'admin');
           setError(null);
         }}
-        className="self-center min-h-8 px-2 text-[12px] text-ink-3 hover:text-ink inline-flex items-center gap-1 cursor-pointer"
+        className="self-center min-h-8 px-2 text-xs text-ink-3 hover:text-ink inline-flex items-center gap-1 cursor-pointer"
       >
         {mode === 'admin' ? (<><ArrowLeft className="w-3.5 h-3.5" /> Öğrenci girişine dön</>) : 'Yönetici girişi'}
       </button>
@@ -293,7 +293,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   if (embedded) return card;
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-3 sm:p-4 bg-slate-900/45"
+      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-3 sm:p-4 bg-ink/45"
       role="dialog"
       aria-modal="true"
       aria-label="Giriş ve kayıt"

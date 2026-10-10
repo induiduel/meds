@@ -1,6 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { PageHeader } from '../ui/PageHeader';
+import { EmptySearch } from '../ui/Animations';
 import {
+  ChevronDown,
   Search,
   BookOpenText,
   Sparkles,
@@ -69,44 +71,101 @@ interface MedicalEncyclopediaViewProps {
 
 const CATEGORY_TABS: { id: EncyclopediaCategory; label: string; icon: React.ElementType; color: string }[] = [
   { id: 'all', label: 'Tümü', icon: BookOpenText, color: 'text-ink' },
-  { id: 'hastalik', label: 'Hastalıklar', icon: Activity, color: 'text-rose-600' },
-  { id: 'ilac', label: 'İlaçlar & Tedavi', icon: Pill, color: 'text-blue-600' },
-  { id: 'patoloji', label: 'Patoloji & Morfoloji', icon: Stethoscope, color: 'text-emerald-600' },
-  { id: 'patojen', label: 'Patojenler (Bakteri/Virüs)', icon: Bug, color: 'text-amber-600' },
-  { id: 'genetik', label: 'Genetik & Gelişim', icon: Dna, color: 'text-purple-600' },
+  { id: 'hastalik', label: 'Hastalıklar', icon: Activity, color: 'text-bad-text' },
+  { id: 'ilac', label: 'İlaçlar & Tedavi', icon: Pill, color: 'text-accent' },
+  { id: 'patoloji', label: 'Patoloji & Morfoloji', icon: Stethoscope, color: 'text-ok' },
+  { id: 'patojen', label: 'Patojenler (Bakteri/Virüs)', icon: Bug, color: 'text-warn' },
+  { id: 'genetik', label: 'Genetik & Gelişim', icon: Dna, color: 'text-ai' },
 ];
 
 const ALPHABET = 'ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ'.split('');
+
+/** Kategori kimliği: ders renkleri (health.css .d-*) ve simge */
+const CAT_TONE: Record<string, { cls: string; icon: React.ElementType; label: string }> = {
+  hastalik: { cls: 'd-pat', icon: Activity, label: 'Hastalık' },
+  ilac: { cls: 'd-farm', icon: Pill, label: 'İlaç & Tedavi' },
+  patoloji: { cls: 'd-kardi', icon: Stethoscope, label: 'Patoloji' },
+  patojen: { cls: 'd-enf', icon: Bug, label: 'Patojen' },
+  genetik: { cls: 'd-gen', icon: Dna, label: 'Genetik' },
+};
+const catTone = (c?: string) => CAT_TONE[c || ''] || { cls: 'd-ic', icon: BookOpenText, label: 'Tıbbi kavram' };
+const firstLetterOf = (t?: string) => {
+  const ch = String(t || '').trim().charAt(0).toLocaleUpperCase('tr-TR');
+  return ALPHABET.includes(ch) ? ch : '#';
+};
+
+
+/** Kayıtlı yerel düzeltmeleri ham sözlük verisine uygular */
+const readEntries = (): EncyclopediaEntry[] => {
+  try {
+    const stored = localStorage.getItem('medsoru_custom_encyclopedia_v1');
+    if (stored) {
+      const parsed = JSON.parse(stored) as Record<string, Partial<EncyclopediaEntry>>;
+      return (rawEncyclopediaData as EncyclopediaEntry[]).map((entry) => {
+        if (parsed[entry.id]) {
+          return {
+            ...entry,
+            ...parsed[entry.id],
+            aiAudit: {
+              ...entry.aiAudit,
+              ...(parsed[entry.id]?.aiAudit || {}),
+            },
+          };
+        }
+        return entry;
+      });
+    }
+  } catch (e) {
+    console.error('Local encyclopedia read error:', e);
+  }
+  return rawEncyclopediaData as EncyclopediaEntry[];
+};
+/** Adı boş gelen maddelere kimlikten okunur ad verir: "venoz-tromboz" → "Venöz tromboz" değil, "Venoz tromboz" (veri düzeltilene kadar) */
+const withNames = (list: EncyclopediaEntry[]): EncyclopediaEntry[] =>
+  list.map((e) => {
+    if (String(e.term || '').trim()) return e;
+    const raw = String(e.id || '').replace(/[-_]+/g, ' ').trim();
+    return { ...e, term: raw ? raw.charAt(0).toLocaleUpperCase('tr-TR') + raw.slice(1) : 'Adsız madde' };
+  });
+
+
+/** Sözlük alanı metin, metin listesi ya da nesne listesi olabilir ({condition, distinction} gibi); hepsini okunur gösterir */
+const RichField: React.FC<{ value: unknown }> = ({ value }) => {
+  const line = (v: unknown): string =>
+    v == null ? '' : typeof v === 'string' || typeof v === 'number' ? String(v)
+      : Array.isArray(v) ? v.map(line).filter(Boolean).join(' · ')
+      : Object.values(v as Record<string, unknown>).map(line).filter(Boolean).join(' — ');
+  if (Array.isArray(value)) {
+    const items = value.map(line).filter(Boolean);
+    if (!items.length) return null;
+    return (
+      <ul className="gx-points">
+        {items.map((t, i) => <li key={i}>{t}</li>)}
+      </ul>
+    );
+  }
+  return <>{line(value)}</>;
+};
+
+/** Geniş ekran mı (ana-ayrıntı düzeni) */
+const useWide = () => {
+  const q = '(min-width: 1024px)';
+  const [wide, setWide] = React.useState(() => typeof window !== 'undefined' && window.matchMedia(q).matches);
+  React.useEffect(() => {
+    const m = window.matchMedia(q);
+    const on = () => setWide(m.matches);
+    m.addEventListener('change', on);
+    return () => m.removeEventListener('change', on);
+  }, []);
+  return wide;
+};
 
 export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = ({
   initialTermId,
   onNavigateToDeck,
 }) => {
   // Load database with user's local enhancements from localStorage
-  const [entries, setEntries] = useState<EncyclopediaEntry[]>(() => {
-    try {
-      const stored = localStorage.getItem('medsoru_custom_encyclopedia_v1');
-      if (stored) {
-        const parsed = JSON.parse(stored) as Record<string, Partial<EncyclopediaEntry>>;
-        return (rawEncyclopediaData as EncyclopediaEntry[]).map((entry) => {
-          if (parsed[entry.id]) {
-            return {
-              ...entry,
-              ...parsed[entry.id],
-              aiAudit: {
-                ...entry.aiAudit,
-                ...(parsed[entry.id]?.aiAudit || {}),
-              },
-            };
-          }
-          return entry;
-        });
-      }
-    } catch (e) {
-      console.error('Local encyclopedia read error:', e);
-    }
-    return rawEncyclopediaData as EncyclopediaEntry[];
-  });
+  const [entries, setEntries] = useState<EncyclopediaEntry[]>(() => withNames(readEntries()));
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<EncyclopediaCategory>('all');
@@ -208,14 +267,50 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
 
       return true;
     });
-    if (sortMode === 'default') return list;
     const sorted = [...list];
     const term = (e: any) => String(e?.term ?? '');
+    // Varsayılan: arama yoksa alfabetik (sözlük düzeni); aramada isabet sırası korunur
+    if (sortMode === 'default') {
+      if (!q) sorted.sort((a, b) => term(a).localeCompare(term(b), 'tr'));
+      return sorted;
+    }
     if (sortMode === 'az') sorted.sort((a, b) => term(a).localeCompare(term(b), 'tr'));
     if (sortMode === 'za') sorted.sort((a, b) => term(b).localeCompare(term(a), 'tr'));
     if (sortMode === 'kurul') sorted.sort((a, b) => String(a.kurul ?? '').localeCompare(String(b.kurul ?? ''), 'tr') || term(a).localeCompare(term(b), 'tr'));
     return sorted;
   }, [entries, searchQuery, selectedCategory, selectedKurul, selectedDiscipline, onlyAiVerified, selectedLetter, onlySaved, bookmarkedIds, sortMode]);
+
+  const wide = useWide();
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const activeFilterCount = [selectedKurul !== 'Tümü', selectedDiscipline !== 'Tümü', sortMode !== 'default', onlyAiVerified, onlySaved].filter(Boolean).length;
+  const listRef = React.useRef<HTMLDivElement>(null);
+  const grouped = !searchQuery.trim() && (sortMode === 'default' || sortMode === 'az' || sortMode === 'za');
+  const groups = useMemo(() => {
+    if (sortMode === 'kurul') {
+      const m = new Map<string, EncyclopediaEntry[]>();
+      filteredEntries.forEach((e) => {
+        const k = String(e.kurul || 'Diğer');
+        m.set(k, [...(m.get(k) || []), e]);
+      });
+      return [...m.entries()].map(([k, items]) => ({ key: k.replace(/\s+/g, '-'), title: k, items }));
+    }
+    if (!grouped) return [{ key: 'all', title: '', items: filteredEntries }];
+    const m = new Map<string, EncyclopediaEntry[]>();
+    filteredEntries.forEach((e) => {
+      const k = firstLetterOf(e.term);
+      m.set(k, [...(m.get(k) || []), e]);
+    });
+    const rank = (k: string) => (k === '#' ? 999 : ALPHABET.indexOf(k));
+    const out = [...m.entries()].map(([k, items]) => ({ key: k, title: k, items })).sort((a, b) => rank(a.key) - rank(b.key));
+    return sortMode === 'za' ? out.reverse() : out;
+  }, [filteredEntries, grouped, sortMode]);
+  const letterSet = useMemo(() => new Set(grouped ? groups.map((g) => g.key) : []), [groups, grouped]);
+  const jumpTo = (ch: string) => document.getElementById(`gx-${ch}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Geniş ekranda ilk madde kendiliğinden açık gelir (boş panel kalmasın)
+  React.useEffect(() => {
+    if (wide && !activeEntry && filteredEntries[0]) setActiveEntry(filteredEntries[0]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [wide, filteredEntries]);
 
   // Statistics
   const stats = useMemo(() => {
@@ -317,310 +412,45 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
   const getCategoryBadge = (cat: string) => {
     switch (cat) {
       case 'hastalik':
-        return { label: 'Hastalık', dot: 'bg-rose-500', cls: 'bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/20' };
+        return { label: 'Hastalık', dot: 'bg-bad', cls: 'bg-bad/10 text-bad-text dark:text-rose-300 border-bad/20' };
       case 'ilac':
-        return { label: 'İlaç & Tedavi', dot: 'bg-blue-500', cls: 'bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/20' };
+        return { label: 'İlaç & Tedavi', dot: 'bg-accent', cls: 'bg-accent/10 text-accent dark:text-blue-300 border-accent/20' };
       case 'patoloji':
-        return { label: 'Patoloji', dot: 'bg-emerald-500', cls: 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/20' };
+        return { label: 'Patoloji', dot: 'bg-ok', cls: 'bg-ok/10 text-ok dark:text-emerald-300 border-ok/20' };
       case 'patojen':
-        return { label: 'Patojen', dot: 'bg-amber-500', cls: 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20' };
+        return { label: 'Patojen', dot: 'bg-warn', cls: 'bg-warn/10 text-warn dark:text-amber-300 border-warn/20' };
       case 'genetik':
-        return { label: 'Genetik', dot: 'bg-purple-500', cls: 'bg-purple-500/10 text-purple-700 dark:text-purple-300 border-purple-500/20' };
+        return { label: 'Genetik', dot: 'bg-ai', cls: 'bg-ai/10 text-ai dark:text-purple-300 border-ai/20' };
       default:
-        return { label: 'Tıbbi Kavram', dot: 'bg-teal-500', cls: 'bg-teal-500/10 text-teal-700 dark:text-teal-300 border-teal-500/20' };
+        return { label: 'Tıbbi Kavram', dot: 'bg-ok', cls: 'bg-ok/10 text-ok dark:text-teal-300 border-ok/20' };
     }
   };
 
-  return (
-    <div className="w-full min-w-0 text-ink pb-8">
-      <PageHeader
-        className="mb-5"
-        eyebrow="Müfredat kütüphanesi"
-        title="Sözlük & Ansiklopedi"
-        description="Ders notlarından derlenen hastalıklar, patoloji bulguları, ilaçlar ve patojenler. Her madde amfi notu bağlamında korunur."
-        stats={[
-          { label: 'Toplam madde', value: stats.total },
-          { label: 'Denetlenmiş', value: `%${stats.total ? Math.round((stats.verified / stats.total) * 100) : 0}`, tone: 'ok' },
-        ]}
-      />
-
-      {/* Search and Filter Bar */}
-      <div className="bg-white border border-line rounded-2xl p-3 sm:p-4 shadow-xs mb-5 flex flex-col gap-3">
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
-          {/* Main Search Input */}
-          <div className="relative flex-1">
-            <Search className="w-4 h-4 text-ink-3 absolute left-3.5 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Hastalık, ilaç, patoloji bulgusu, genetik mutasyon veya hoca notu ara (örn. RHK, VHL, Benzatin, Apoptoz)..."
-              className="w-full pl-10 pr-9 py-2.5 text-[14px] bg-canvas border border-line rounded-xl outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-all placeholder:text-ink-3"
-            />
-            {searchQuery && (
-              <button
-                type="button"
-                onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-ink-3 hover:text-ink p-1 cursor-pointer"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            )}
-          </div>
-
-          {/* Quick Selects */}
-          <div className="flex flex-wrap items-center gap-2 [&>select]:min-w-0 [&>select]:flex-1">
-            <select
-              value={selectedKurul}
-              onChange={(e) => setSelectedKurul(e.target.value)}
-              className="px-3 py-2.5 text-[13px] font-medium bg-canvas border border-line rounded-xl outline-none text-ink cursor-pointer hover:border-accent/40"
-            >
-              <option value="Tümü">Tüm Kurullar</option>
-              <option value="Kurul 1">Kurul 1</option>
-              <option value="Kurul 2">Kurul 2</option>
-              <option value="Kurul 3">Kurul 3</option>
-            </select>
-
-            <select
-              value={selectedDiscipline}
-              onChange={(e) => setSelectedDiscipline(e.target.value)}
-              className="px-3 py-2.5 text-[13px] font-medium bg-canvas border border-line rounded-xl outline-none text-ink cursor-pointer hover:border-accent/40 max-w-[150px] truncate"
-            >
-              <option value="Tümü">Tüm Branşlar</option>
-              {availableDisciplines.map((d) => (
-                <option key={d} value={d}>
-                  {d}
-                </option>
-              ))}
-            </select>
-
-            <button
-              type="button"
-              onClick={() => setOnlyAiVerified((prev) => !prev)}
-              className={`px-3 py-2.5 text-[12.5px] font-semibold rounded-xl border transition-all flex items-center gap-1.5 cursor-pointer shrink-0 ${
-                onlyAiVerified
-                  ? 'bg-emerald-500 text-white border-emerald-600 shadow-2xs'
-                  : 'bg-canvas text-ink-2 border-line hover:border-accent/40'
-              }`}
-              title="Yalnızca yapay zeka tarafından denetlenmiş maddeleri göster"
-            >
-              <ShieldCheck className="w-4 h-4" />
-              <span className="hidden md:inline">Doğrulanmış</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setOnlySaved((v) => !v)}
-              aria-pressed={onlySaved}
-              className={`px-3 py-2.5 text-[12.5px] font-semibold rounded-xl border transition-all flex items-center gap-1.5 cursor-pointer shrink-0 ${
-                onlySaved ? 'bg-amber-500 text-white border-amber-600' : 'bg-canvas text-ink-2 border-line hover:border-accent/40'
-              }`}
-              title="Yalnızca kaydettiğin terimleri göster"
-            >
-              <Bookmark className="w-4 h-4" fill={onlySaved ? 'currentColor' : 'none'} />
-              <span>Kaydedilenler</span>
-              <span className="tabular-nums opacity-80">{bookmarkedIds.length}</span>
-            </button>
-
-            <select
-              value={sortMode}
-              onChange={(e) => setSortMode(e.target.value as any)}
-              aria-label="Sırala"
-              title="Sırala"
-              className="px-3 py-2.5 text-[13px] font-medium bg-canvas border border-line rounded-xl outline-none text-ink cursor-pointer hover:border-accent/40"
-            >
-              <option value="default">Sıralama: önerilen</option>
-              <option value="az">A → Z</option>
-              <option value="za">Z → A</option>
-              <option value="kurul">Kurula göre</option>
-            </select>
-          </div>
-        </div>
-
-        {/* Category Pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
-          {CATEGORY_TABS.map((tab) => {
-            const Icon = tab.icon;
-            const isSelected = selectedCategory === tab.id;
-            return (
-              <button
-                key={tab.id}
-                type="button"
-                onClick={() => {
-                  setSelectedCategory(tab.id);
-                  setSelectedLetter(null);
-                }}
-                className={`px-3 py-1.5 rounded-lg text-[12.5px] font-semibold transition-all flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${
-                  isSelected
-                    ? 'bg-accent text-white shadow-2xs'
-                    : 'bg-canvas text-ink-2 hover:bg-canvas-2 border border-line/60'
-                }`}
-              >
-                <Icon className={`w-3.5 h-3.5 ${isSelected ? 'text-white' : tab.color}`} />
-                <span>{tab.label}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Alphabet Jump Bar */}
-        <div className="pt-2 border-t border-line/60 flex items-center gap-1 overflow-x-auto scrollbar-none text-[11.5px] font-mono font-bold text-ink-3">
-          <button
-            type="button"
-            onClick={() => setSelectedLetter(null)}
-            className={`px-2 py-0.5 rounded cursor-pointer ${
-              selectedLetter === null ? 'bg-accent text-white' : 'hover:text-accent'
-            }`}
-          >
-            TÜMÜ
-          </button>
-          {ALPHABET.map((char) => (
-            <button
-              key={char}
-              type="button"
-              onClick={() => setSelectedLetter(selectedLetter === char ? null : char)}
-              className={`w-6 h-6 rounded flex items-center justify-center cursor-pointer transition-colors ${
-                selectedLetter === char ? 'bg-accent text-white' : 'hover:bg-accent-soft hover:text-accent'
-              }`}
-            >
-              {char}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Result Count and Active Filters Bar */}
-      <div className="flex items-center justify-between gap-2 px-1 mb-4 text-[12.5px] text-ink-3">
-        <div>
-          <span className="font-semibold text-ink">{filteredEntries.length}</span> tıbbi terim ve hastalık listeleniyor
-          {searchQuery && (
-            <span>
-              {' '}
-              • "<strong>{searchQuery}</strong>" araması
-            </span>
-          )}
-          {selectedLetter && (
-            <span>
-              {' '}
-              • "<strong>{selectedLetter}</strong>" harfi
-            </span>
-          )}
-        </div>
-
-        {(searchQuery || selectedCategory !== 'all' || selectedKurul !== 'Tümü' || selectedDiscipline !== 'Tümü' || selectedLetter !== null || onlyAiVerified) && (
-          <button
-            type="button"
-            onClick={() => {
-              setSearchQuery('');
-              setSelectedCategory('all');
-              setSelectedKurul('Tümü');
-              setSelectedDiscipline('Tümü');
-              setSelectedLetter(null);
-              setOnlyAiVerified(false);
-            }}
-            className="text-accent hover:underline font-semibold cursor-pointer"
-          >
-            Filtreleri Sıfırla
-          </button>
-        )}
-      </div>
-
-      {/* Grid of Encyclopedia Entries */}
-      {filteredEntries.length === 0 ? (
-        <div className="text-center py-16 bg-white dark:bg-panel border border-line rounded-2xl p-6">
-          <BookOpenText className="w-12 h-12 text-ink-3 opacity-40 mx-auto mb-3" />
-          <h3 className="text-[17px] font-bold text-ink mb-1">Aramanızla Eşleşen Madde Bulunamadı</h3>
-          <p className="text-[13.5px] text-ink-2 max-w-md mx-auto mb-4">
-            "{searchQuery}" araması için sonuç bulunamadı. Farklı bir terim deneyebilir veya filtreleri temizleyebilirsiniz.
-          </p>
-          <button
-            type="button"
-            onClick={() => {
-              setSearchQuery('');
-              setSelectedCategory('all');
-              setSelectedLetter(null);
-            }}
-            className="px-4 py-2 rounded-xl bg-accent text-white text-[13px] font-semibold cursor-pointer shadow-2xs"
-          >
-            Tüm Maddeleri Göster
-          </button>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
-          {filteredEntries.map((entry) => {
-            const badge = getCategoryBadge(entry.category);
-            const isBookmarked = bookmarkedIds.includes(entry.id);
-
-            return (
-              <div
-                key={entry.id}
-                onClick={() => setActiveEntry(entry)}
-                className="group rounded-2xl border border-line hover:border-line-2 bg-white p-4 flex flex-col transition-colors cursor-pointer min-w-0"
-              >
-                <div className="flex items-center gap-2 text-[12px] text-ink-3 min-w-0">
-                  <span className={`shrink-0 w-1.5 h-1.5 rounded-full ${badge.dot}`} aria-hidden="true" />
-                  <span className="truncate">{badge.label} · {entry.kurul}</span>
-                  {entry.aiAudit?.verified && (
-                    <ShieldCheck className="w-3.5 h-3.5 text-ok shrink-0" aria-label="Doğrulanmış" />
-                  )}
-                  <span className="flex-1" />
-                  <button
-                    type="button"
-                    onClick={(e) => toggleBookmark(entry.id, e)}
-                    className={`-m-1.5 w-8 h-8 shrink-0 rounded-lg flex items-center justify-center hover:bg-canvas transition-colors cursor-pointer ${
-                      isBookmarked ? 'text-amber-500' : 'text-ink-3 hover:text-ink'
-                    }`}
-                    aria-label={isBookmarked ? 'Yer işaretlerinden kaldır' : 'Yer işaretlerine ekle'}
-                  >
-                    <Bookmark className="w-4 h-4" fill={isBookmarked ? 'currentColor' : 'none'} />
-                  </button>
-                </div>
-                <h3 className="m-0 mt-2 text-[16px] font-semibold text-ink group-hover:text-accent transition-colors leading-snug">
-                  {entry.term}
-                </h3>
-                {entry.latinName && (
-                  <p className="m-0 text-[12.5px] text-ink-3 italic truncate">{entry.latinName}</p>
-                )}
-                <p className="m-0 mt-2 text-[14px] text-ink-2 line-clamp-3 leading-[1.6]">{entry.definition}</p>
-              </div>
-            );
-          })}
-        </div>
-      )}
-
-      {/* ========================================================= */}
-      {/* DETAYLI ANSİKLOPEDİ MODAL / SLIDE-OVER                    */}
-      {/* ========================================================= */}
-      {activeEntry && (
-        <div
-          className="ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.6)] backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 md:p-6"
-          role="dialog"
-          aria-modal="true"
-        >
-          <div className="w-full max-w-3xl bg-white dark:bg-panel border border-line rounded-2xl shadow-2xl flex flex-col max-h-[90dvh] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+  const detailPanel = activeEntry ? (
+          <div className={wide ? 'gx-pane flex flex-col overflow-hidden' : 'ds-modal w-full max-w-[720px] flex flex-col max-h-[92dvh] overflow-hidden'}>
             {/* Modal Header */}
-            <div className="p-4 sm:p-5 border-b border-line flex items-start justify-between gap-3 bg-canvas/40">
+            <div className="ds-modal-head">
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2 flex-wrap mb-1.5">
-                  <span className={`text-[11.5px] font-bold px-2 py-0.5 rounded-md border ${getCategoryBadge(activeEntry.category).cls}`}>
+                  <span className="ms-tag is-new">
                     {getCategoryBadge(activeEntry.category).label}
                   </span>
-                  <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-canvas text-ink-3 border border-line">
+                  <span className="ms-tag">
                     {activeEntry.kurul} • {activeEntry.discipline}
                   </span>
                   {activeEntry.aiAudit?.verified && (
-                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
-                      <ShieldCheck className="w-3.5 h-3.5" />
+                    <span className="ms-tag is-ok">
+                      <ShieldCheck aria-hidden />
                       <span>{activeEntry.uretici === 's13_study' ? 'Ders notuyla doğrulandı' : 'AI Onaylı'} (%{activeEntry.aiAudit.accuracyScore})</span>
                     </span>
                   )}
                 </div>
 
-                <h2 className="text-xl sm:text-2xl font-extrabold text-ink leading-tight">
+                <h2 className="m-0 font-display text-xl sm:text-2xl font-bold tracking-[-0.02em] text-ink leading-tight">
                   {activeEntry.term}
                 </h2>
                 {activeEntry.latinName && (
-                  <p className="text-[13px] sm:text-[14px] text-ink-3 italic font-serif mt-0.5">
+                  <p className="m-0 text-sm text-ink-3 italic mt-0.5">
                     {activeEntry.latinName}
                   </p>
                 )}
@@ -631,38 +461,39 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                 <button
                   type="button"
                   onClick={() => toggleBookmark(activeEntry.id)}
-                  className="p-2 rounded-xl border border-line hover:bg-canvas text-ink-2 hover:text-ink cursor-pointer transition-colors"
+                  className="ms-btn is-icon is-ghost"
                   title="Kaydet"
                 >
                   <Bookmark
-                    className="w-4 h-4"
                     fill={bookmarkedIds.includes(activeEntry.id) ? 'currentColor' : 'none'}
                   />
                 </button>
                 <button
                   type="button"
                   onClick={() => copyShareLink(activeEntry)}
-                  className="p-2 rounded-xl border border-line hover:bg-canvas text-ink-2 hover:text-ink cursor-pointer transition-colors"
+                  className="ms-btn is-icon is-ghost"
                   title="Bağlantıyı Kopyala"
                 >
-                  {copiedLink ? <Check className="w-4 h-4 text-emerald-600" /> : <Share2 className="w-4 h-4" />}
+                  {copiedLink ? <Check className="text-ok" /> : <Share2 />}
                 </button>
+                {!wide && (
                 <button
                   type="button"
                   onClick={() => setActiveEntry(null)}
-                  className="p-2 rounded-xl border border-line hover:bg-canvas text-ink-2 hover:text-ink cursor-pointer transition-colors"
+                  className="ms-btn is-icon is-ghost"
                   title="Kapat (Esc)"
                 >
-                  <X className="w-4 h-4" />
+                  <X />
                 </button>
+                )}
               </div>
             </div>
 
             {/* Modal Body Content (Scrollable) */}
-            <div className="flex-1 min-h-0 overflow-y-auto p-4 sm:p-6 flex flex-col gap-4">
+            <div className="ds-modal-body">
               {/* Notification if AI Audited recently */}
               {auditMessage && (
-                <div className="p-3 rounded-xl bg-accent-soft text-accent text-[13px] font-semibold flex items-center gap-2 border border-accent/20 animate-in fade-in">
+                <div className="ds-callout is-note">
                   <Sparkles className="w-4 h-4 shrink-0" />
                   <span>{auditMessage}</span>
                 </div>
@@ -670,90 +501,88 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
 
               {/* 1. Orijinal Ders Notu Bağlamı (Prof/Slayt Notu) */}
               {activeEntry.lectureContextNotes && (
-                <div className="rounded-xl p-3.5 sm:p-4 bg-teal-500/10 dark:bg-teal-950/20 flex flex-col gap-2 min-w-0">
+                <div className="ds-callout is-clinic">
                   <div className="flex flex-col gap-0.5 min-w-0">
-                    <span className="text-[13px] font-semibold text-teal-800 dark:text-teal-300 flex items-center gap-1.5">
-                      <GraduationCap className="w-4 h-4 text-teal-600 shrink-0" />
+                    <span className="ds-callout-t">
+                      <GraduationCap aria-hidden />
                       <span>Ders notu</span>
                     </span>
                     {activeEntry.instructorAndSource && (
-                      <span className="text-[12.5px] text-ink-3 [overflow-wrap:anywhere]">
+                      <span className="text-sm text-ink-3 [overflow-wrap:anywhere]">
                         {activeEntry.instructorAndSource.replace(/\.txt\b/gi, '').replace(/^\d+\)\s*/, '')}
                       </span>
                     )}
                   </div>
-                  <p className="m-0 text-[13px] sm:text-[13.5px] text-teal-950 dark:text-teal-100 leading-relaxed font-normal">
-                    {activeEntry.lectureContextNotes}
-                  </p>
+                  <div className="m-0">
+                    <RichField value={activeEntry.lectureContextNotes as unknown} />
+                  </div>
                 </div>
               )}
 
               {/* 2. Tanım */}
               <div className="flex flex-col gap-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-ink-3">Tanım</span>
-                <p className="text-[14px] sm:text-[14.5px] text-ink leading-relaxed">
-                  {activeEntry.definition}
-                </p>
+                <span className="ds-label">Tanım</span>
+                <div className="m-0 text-md text-ink leading-[1.6]">
+                  <RichField value={activeEntry.definition as unknown} />
+                </div>
               </div>
 
               {/* 3. Patoloji, Morfoloji ve Etki Mekanizması */}
               {activeEntry.morphologyOrMechanism && (
-                <div className="rounded-xl p-3.5 sm:p-4 bg-canvas border border-line flex flex-col gap-1.5">
-                  <span className="text-[11.5px] font-bold uppercase tracking-wider text-ink-2 flex items-center gap-1.5">
-                    <Stethoscope className="w-4 h-4 text-accent" />
-                    <span>Patoloji, Morfoloji & Etki Mekanizması</span>
+                <div className="ds-callout">
+                  <span className="ds-callout-t">
+                    <Stethoscope aria-hidden />
+                    <span>Patoloji, morfoloji ve mekanizma</span>
                   </span>
-                  <p className="m-0 text-[13px] sm:text-[13.5px] text-ink-2 leading-relaxed whitespace-pre-line">
-                    {activeEntry.morphologyOrMechanism}
-                  </p>
+                  <div className="m-0 whitespace-pre-line">
+                    <RichField value={activeEntry.morphologyOrMechanism as unknown} />
+                  </div>
                 </div>
               )}
 
               {/* 4. Ayırıcı Tanı Kriterleri */}
               {activeEntry.differentialDiagnosis && (
-                <div className="rounded-xl p-3.5 sm:p-4 bg-blue-500/5 dark:bg-blue-950/20 border-l-4 border-l-blue-600 border border-blue-500/20 flex flex-col gap-1.5">
-                  <span className="text-[11.5px] font-bold uppercase tracking-wider text-blue-900 dark:text-blue-300 flex items-center gap-1.5">
-                    <Filter className="w-4 h-4 text-blue-600" />
-                    <span>Ayırıcı Tanı & Ayırt Edici Özellikler</span>
+                <div className="ds-callout is-note">
+                  <span className="ds-callout-t">
+                    <Filter aria-hidden />
+                    <span>Ayırıcı tanı</span>
                   </span>
-                  <p className="m-0 text-[13px] sm:text-[13.5px] text-ink-2 leading-relaxed">
-                    {activeEntry.differentialDiagnosis}
-                  </p>
+                  <div className="m-0">
+                    <RichField value={activeEntry.differentialDiagnosis as unknown} />
+                  </div>
                 </div>
               )}
 
               {/* 5. Sınav Tuzağı & Dikkat Edilmesi Gerekenler */}
               {activeEntry.pitfallsAndWarnings && (
-                <div className="rounded-xl p-3.5 sm:p-4 bg-rose-500/10 dark:bg-rose-950/30 border-l-4 border-l-rose-600 border border-rose-500/20 flex flex-col gap-1.5">
-                  <span className="text-[11.5px] font-bold uppercase tracking-wider text-rose-900 dark:text-rose-300 flex items-center gap-1.5">
-                    <AlertTriangle className="w-4 h-4 text-rose-600" />
-                    <span>Sınav Tuzağı & Dikkat Edilmesi Gerekenler</span>
+                <div className="ds-callout is-bad">
+                  <span className="ds-callout-t">
+                    <AlertTriangle aria-hidden />
+                    <span>Sınav tuzağı</span>
                   </span>
-                  <p className="m-0 text-[13px] sm:text-[13.5px] text-rose-950 dark:text-rose-100 leading-relaxed font-medium">
-                    {activeEntry.pitfallsAndWarnings}
-                  </p>
+                  <div className="m-0">
+                    <RichField value={activeEntry.pitfallsAndWarnings as unknown} />
+                  </div>
                 </div>
               )}
 
               {/* 6. Hoca İncisi & Sınav Spotları */}
               {activeEntry.examSpotPearls && (
-                <div className="rounded-xl p-3.5 sm:p-4 bg-amber-500/10 dark:bg-amber-950/30 border-l-4 border-l-amber-600 border border-amber-500/20 flex flex-col gap-1.5">
-                  <span className="text-[11.5px] font-bold uppercase tracking-wider text-amber-900 dark:text-amber-300 flex items-center gap-1.5">
-                    <Lightbulb className="w-4 h-4 text-amber-600" />
-                    <span>Hoca İncisi & Sınav Spotu</span>
+                <div className="ds-callout is-important">
+                  <span className="ds-callout-t">
+                    <Lightbulb aria-hidden />
+                    <span>Sınav spotu</span>
                   </span>
-                  <p className="m-0 text-[13px] sm:text-[13.5px] text-amber-950 dark:text-amber-100 leading-relaxed font-medium">
-                    {activeEntry.examSpotPearls}
-                  </p>
+                  <div className="m-0">
+                    <RichField value={activeEntry.examSpotPearls as unknown} />
+                  </div>
                 </div>
               )}
 
               {/* 7. İlişkili Kavramlar (Clickable Chips) */}
               {activeEntry.relatedItems && activeEntry.relatedItems.length > 0 && (
-                <div className="flex flex-col gap-2 pt-2 border-t border-line/60">
-                  <span className="text-[11.5px] font-bold uppercase tracking-wider text-ink-3">
-                    İlişkili Hastalıklar & İlaçlar
-                  </span>
+                <div className="flex flex-col gap-1.5 pt-2 border-t border-line-soft">
+                  <span className="ds-label">İlişkili maddeler</span>
                   <div className="flex items-center gap-1.5 flex-wrap">
                     {activeEntry.relatedItems.map((relId) => {
                       const rel = (entries || []).find((e) => e.id === relId);
@@ -764,9 +593,9 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                           onClick={() => {
                             if (rel) setActiveEntry(rel);
                           }}
-                          className="px-2.5 py-1 rounded-lg bg-canvas hover:bg-accent-soft text-ink-2 hover:text-accent border border-line text-[12px] font-semibold flex items-center gap-1 transition-colors cursor-pointer"
+                          className="ms-btn is-outline is-sm"
                         >
-                          <Hash className="w-3 h-3 text-accent" />
+                          <Hash aria-hidden />
                           <span>{rel ? rel.term : relId}</span>
                         </button>
                       );
@@ -777,12 +606,12 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
 
               {/* 8. Örnek TUS / Komite Soru Kutusu */}
               {activeEntry.aiAudit?.sampleExamQuestion && (
-                <div className="rounded-xl p-3.5 bg-canvas/80 border border-line flex flex-col gap-1 text-[12.5px]">
-                  <span className="font-bold text-accent flex items-center gap-1">
-                    <HelpCircle className="w-3.5 h-3.5" />
-                    <span>Örnek Sınav Sorusu & Kazanım</span>
+                <div className="ds-callout">
+                  <span className="ds-callout-t">
+                    <HelpCircle aria-hidden />
+                    <span>Örnek sınav sorusu</span>
                   </span>
-                  <p className="m-0 text-ink-2 italic font-sans leading-relaxed">
+                  <p className="m-0">
                     {activeEntry.aiAudit.sampleExamQuestion}
                   </p>
                 </div>
@@ -790,11 +619,11 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
             </div>
 
             {/* Modal Footer with AI Audit Action */}
-            <div className="p-3.5 sm:p-4 border-t border-line bg-canvas/60 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
-              <div className="text-[11.5px] text-ink-3 flex items-center gap-1.5">
-                <BrainCircuit className="w-4 h-4 text-emerald-600 shrink-0" />
+            <div className="ds-modal-foot">
+              <div className="ds-modal-note">
+                <BrainCircuit aria-hidden />
                 <span>
-                  Doğrulama Durumu:{' '}
+                  Doğrulama:{' '}
                   <strong className="text-ink">
                     {activeEntry.aiAudit?.verified ? `Doğrulandı (%${activeEntry.aiAudit.accuracyScore})` : 'Beklemede'}
                   </strong>
@@ -806,14 +635,233 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                   type="button"
                   disabled={isAiAuditing}
                   onClick={() => handleRunAiAudit(activeEntry)}
-                  className="w-full sm:w-auto px-4 py-2 rounded-xl bg-accent hover:bg-accent/90 text-white text-[12.5px] font-bold flex items-center justify-center gap-2 shadow-2xs transition-all cursor-pointer disabled:opacity-50"
+                  className="ms-btn is-primary w-full sm:w-auto"
                 >
-                  <RefreshCw className={`w-3.5 h-3.5 ${isAiAuditing ? 'animate-spin' : ''}`} />
-                  <span>{isAiAuditing ? 'Yapay Zeka Denetliyor...' : 'AI ile Denetle & Geliştir'}</span>
+                  <RefreshCw className={isAiAuditing ? 'animate-spin' : ''} aria-hidden />
+                  <span>{isAiAuditing ? 'Yapay zekâ denetliyor…' : 'Yapay zekâyla denetle'}</span>
                 </button>
               </div>
             </div>
           </div>
+  ) : null;
+
+  return (
+    <div className="ds-page">
+      <PageHeader
+        eyebrow="Müfredat kütüphanesi"
+        title="Sözlük & Ansiklopedi"
+        description="Ders notlarından derlenen hastalıklar, patoloji bulguları, ilaçlar ve patojenler. Her madde amfi notu bağlamında korunur."
+        stats={[
+          { label: 'Toplam madde', value: stats.total },
+          { label: 'Denetlenmiş', value: `%${stats.total ? Math.round((stats.verified / stats.total) * 100) : 0}`, tone: 'ok' },
+        ]}
+      />
+
+      {/* Arama + hızlı süzgeçler */}
+      <div className="ds-filters">
+        <label className="cx-search">
+          <Search aria-hidden />
+          <input
+            type="search"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Hastalık, ilaç, bulgu ya da gen ara (RHK, VHL, apoptoz…)"
+            aria-label="Sözlükte ara"
+          />
+          {searchQuery && (
+            <button type="button" onClick={() => setSearchQuery('')} className="cx-search-x" aria-label="Aramayı temizle">
+              <X aria-hidden />
+            </button>
+          )}
+        </label>
+        <button type="button" className={`ms-btn is-sm gx-ftoggle ${activeFilterCount ? 'is-tonal' : ''}`} onClick={() => setFiltersOpen((v) => !v)} aria-expanded={filtersOpen}>
+          <Filter aria-hidden /> Süzgeç{activeFilterCount ? ` · ${activeFilterCount}` : ''}
+        </button>
+        <div className={`ds-toolbar gx-filters ${filtersOpen ? 'is-open' : ''}`}>
+          <label className="ds-select">
+            <span>Kurul</span>
+            <select value={selectedKurul} onChange={(e) => setSelectedKurul(e.target.value)} aria-label="Kurul">
+              <option value="Tümü">Tümü</option>
+              <option value="Kurul 1">Kurul 1</option>
+              <option value="Kurul 2">Kurul 2</option>
+              <option value="Kurul 3">Kurul 3</option>
+            </select>
+            <ChevronDown aria-hidden />
+          </label>
+          <label className="ds-select">
+            <span>Branş</span>
+            <select value={selectedDiscipline} onChange={(e) => setSelectedDiscipline(e.target.value)} aria-label="Branş">
+              <option value="Tümü">Tümü</option>
+              {availableDisciplines.map((d) => (
+                <option key={d} value={d}>{d}</option>
+              ))}
+            </select>
+            <ChevronDown aria-hidden />
+          </label>
+          <label className="ds-select">
+            <span>Sırala</span>
+            <select value={sortMode} onChange={(e) => setSortMode(e.target.value as any)} aria-label="Sırala">
+              <option value="default">Önerilen</option>
+              <option value="az">A → Z</option>
+              <option value="za">Z → A</option>
+              <option value="kurul">Kurula göre</option>
+            </select>
+            <ChevronDown aria-hidden />
+          </label>
+          <span className="ds-grow" />
+          <button
+            type="button"
+            onClick={() => setOnlyAiVerified((prev) => !prev)}
+            aria-pressed={onlyAiVerified}
+            className={`ms-btn ${onlyAiVerified ? 'is-tonal' : 'is-outline'}`}
+            title="Yalnızca denetlenmiş maddeleri göster"
+          >
+            <ShieldCheck aria-hidden /> Doğrulanmış
+          </button>
+          <button
+            type="button"
+            onClick={() => setOnlySaved((v) => !v)}
+            aria-pressed={onlySaved}
+            className={`ms-btn ${onlySaved ? 'is-tonal' : 'is-outline'}`}
+            title="Yalnızca kaydettiğin terimleri göster"
+          >
+            <Bookmark fill={onlySaved ? 'currentColor' : 'none'} aria-hidden /> Kaydedilenler <small className="ds-n">{bookmarkedIds.length}</small>
+          </button>
+        </div>
+
+        {/* Kategori sekmeleri */}
+        <div className="cx-tabs" role="tablist" aria-label="Kategori">
+          {CATEGORY_TABS.map((tab) => {
+            const isSelected = selectedCategory === tab.id;
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                role="tab"
+                aria-selected={isSelected}
+                onClick={() => {
+                  setSelectedCategory(tab.id);
+                  setSelectedLetter(null);
+                }}
+                className={`cx-tab ${isSelected ? 'is-on' : ''}`}
+              >
+                {tab.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Harf dizini */}
+        <div className="ds-alpha" role="group" aria-label="Harfe göre">
+          {ALPHABET.map((char) => (
+            <button key={char} type="button" onClick={() => jumpTo(char)} disabled={!letterSet.has(char)} aria-label={`${char} harfine git`}>
+              {char}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Sonuç satırı */}
+      <div className="ds-resultbar">
+        <span>
+          <b>{filteredEntries.length}</b> madde
+          {searchQuery && <> · “{searchQuery}”</>}
+          {selectedLetter && <> · {selectedLetter} harfi</>}
+        </span>
+        {(searchQuery || selectedCategory !== 'all' || selectedKurul !== 'Tümü' || selectedDiscipline !== 'Tümü' || selectedLetter !== null || onlyAiVerified || onlySaved) && (
+          <button
+            type="button"
+            onClick={() => {
+              setSearchQuery('');
+              setSelectedCategory('all');
+              setSelectedKurul('Tümü');
+              setSelectedDiscipline('Tümü');
+              setSelectedLetter(null);
+              setOnlyAiVerified(false);
+              setOnlySaved(false);
+            }}
+            className="cx-clear"
+          >
+            Süzgeçleri temizle
+          </button>
+        )}
+      </div>
+
+      {/* Ana-ayrıntı: solda A–Z liste, sağda seçili madde */}
+      {filteredEntries.length === 0 ? (
+        <div className="ds-empty is-panel">
+          <EmptySearch size={64} />
+          <b>Eşleşen madde yok</b>
+          <span>Farklı bir terim dene ya da süzgeçleri temizle.</span>
+          <button
+            type="button"
+            onClick={() => {
+              setSearchQuery('');
+              setSelectedCategory('all');
+              setSelectedLetter(null);
+            }}
+            className="ms-btn is-tonal is-sm"
+          >
+            Tüm maddeleri göster
+          </button>
+        </div>
+      ) : (
+        <div className="gx">
+          <div className="gx-list" ref={listRef}>
+            {groups.map((g) => (
+              <section key={g.key} className="gx-group" id={`gx-${g.key}`}>
+                {g.title && <h3 className="gx-letter">{g.title}</h3>}
+                <ul>
+                  {g.items.map((entry) => {
+                    const tone = catTone(entry.category);
+                    const Icon = tone.icon;
+                    const on = activeEntry?.id === entry.id;
+                    const saved = bookmarkedIds.includes(entry.id);
+                    return (
+                      <li key={entry.id} className={tone.cls}>
+                        <button type="button" onClick={() => setActiveEntry(entry)} aria-current={on ? 'true' : undefined} className={`gx-row ${on ? 'is-on' : ''}`}>
+                          <span className="hk-tile is-sm"><Icon aria-hidden /></span>
+                          <span className="gx-row-t">
+                            <b>
+                              {entry.term}
+                              {entry.aiAudit?.verified && <ShieldCheck className="gx-ok" aria-label="Doğrulanmış" />}
+                            </b>
+                            <span>{entry.latinName || entry.definition}</span>
+                          </span>
+                          {saved && <Bookmark className="gx-saved" fill="currentColor" aria-label="Kaydedildi" />}
+                          <span className="gx-kurul">{String(entry.kurul || '').replace('Kurul ', 'K')}</span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            ))}
+          </div>
+          {wide && (
+            <aside className="gx-detail" aria-label="Madde ayrıntısı">
+              {activeEntry ? detailPanel : (
+                <div className="gx-placeholder">
+                  <BookOpenText aria-hidden />
+                  <b>Bir madde seç</b>
+                  <span>Tanım, ders notu, ayırıcı tanı ve sınav spotları burada açılır.</span>
+                </div>
+              )}
+            </aside>
+          )}
+        </div>
+      )}
+
+      {/* ========================================================= */}
+      {/* DETAYLI ANSİKLOPEDİ MODAL / SLIDE-OVER                    */}
+      {/* ========================================================= */}
+      {activeEntry && !wide && (
+        <div
+          className="ms-overlay ds-modal-wrap fixed inset-0 z-[70] flex items-end sm:items-center justify-center sm:p-4"
+          role="dialog"
+          aria-modal="true"
+        >
+          {detailPanel}
         </div>
       )}
     </div>

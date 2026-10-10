@@ -189,14 +189,14 @@ function QuestionCard({ q, n, onOpenAbout }: { q: PQ; n: number; onOpenAbout?: (
 
   return (
     <article className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3">
-      <header className="flex flex-wrap items-center gap-2 text-[12.5px] text-ink-3">
+      <header className="flex flex-wrap items-center gap-2 text-sm text-ink-3">
         <span className="font-mono font-semibold text-ink">{n}.</span>
         <span>Kurul {q.kurul} · {q.ders}</span>
-        {q.kazanim_no && <span className="font-mono text-[11px] bg-canvas px-1.5 py-0.5 rounded text-accent">K{q.kazanim_no}</span>}
+        {q.kazanim_no && <span className="font-mono text-2xs bg-canvas px-1.5 py-0.5 rounded text-accent">K{q.kazanim_no}</span>}
         {q.zorluk && <span className="px-1.5 py-0.5 rounded bg-canvas text-ink-2 capitalize">{q.zorluk}</span>}
-        {q.version && <span className="px-1.5 py-0.5 rounded bg-accent-soft text-accent text-[11px] font-mono">{q.version}</span>}
+        {q.version && <span className="px-1.5 py-0.5 rounded bg-accent-soft text-accent text-2xs font-mono">{q.version}</span>}
       </header>
-      <p className="m-0 text-[16px] sm:text-[17px] font-medium text-ink leading-[1.5]">{soruMetni}</p>
+      <p className="m-0 text-md sm:text-lg font-medium text-ink leading-[1.5]">{soruMetni}</p>
       <ol className="list-none m-0 p-0 flex flex-col gap-1.5" aria-label="Şıklar">
         {LETTERS.filter((k) => q.secenekler && q.secenekler[k]).map((k) => {
           const isRight = k === correctVal;
@@ -217,12 +217,12 @@ function QuestionCard({ q, n, onOpenAbout }: { q: PQ; n: number; onOpenAbout?: (
                 className={`w-full min-h-11 grid grid-cols-[28px_minmax(0,1fr)_auto] items-center gap-2.5 px-3 py-2.5 rounded-xl border text-left ${tone}`}
                 aria-pressed={isPicked}
               >
-                <span className={`w-7 h-7 rounded-lg flex items-center justify-center font-mono text-[13px] font-semibold ${done && isRight ? 'bg-ok text-white' : 'bg-canvas text-ink-2'}`}>{k}</span>
-                <span className="text-[14.5px] leading-[1.45] text-ink">{q.secenekler[k]}</span>
+                <span className={`w-7 h-7 rounded-lg flex items-center justify-center font-mono text-sm font-semibold ${done && isRight ? 'bg-ok text-white' : 'bg-canvas text-ink-2'}`}>{k}</span>
+                <span className="text-md leading-[1.45] text-ink">{q.secenekler[k]}</span>
                 {done && isRight ? <Check className="w-4 h-4 text-ok" /> : done && isPicked ? <X className="w-4 h-4 text-bad" /> : <span />}
               </button>
               {done && q.sik_aciklamalari && q.sik_aciklamalari[k] && (
-                <p className={`m-0 px-3 py-1.5 pl-[48px] text-[13px] leading-relaxed ${isRight ? 'text-ok' : 'text-ink-2'}`}>
+                <p className={`m-0 px-3 py-1.5 pl-[48px] text-sm leading-relaxed ${isRight ? 'text-ok' : 'text-ink-2'}`}>
                   {q.sik_aciklamalari[k]}
                 </p>
               )}
@@ -232,26 +232,26 @@ function QuestionCard({ q, n, onOpenAbout }: { q: PQ; n: number; onOpenAbout?: (
       </ol>
       {done && (
         <div className="flex flex-col gap-2.5">
-          <p className={`m-0 text-[14px] font-semibold ${correct ? 'text-ok' : 'text-bad-text'}`}>
+          <p className={`m-0 text-base font-semibold ${correct ? 'text-ok' : 'text-bad-text'}`}>
             {correct ? 'Doğru!' : `Yanlış — doğru cevap ${correctVal}`}
           </p>
           {aciklamalar.length > 0 && (
-            <ul className="m-0 pl-5 flex flex-col gap-1 text-[14px] text-ink-2 leading-relaxed">
+            <ul className="m-0 pl-5 flex flex-col gap-1 text-base text-ink-2 leading-relaxed">
               {aciklamalar.map((m, i) => (
                 <li key={i}>{m}</li>
               ))}
             </ul>
           )}
           {q.kaynak?.alinti && (
-            <blockquote className="m-0 rounded-xl bg-field px-3 py-2.5 text-[13px] text-ink-2 flex flex-col gap-1">
-              <span className="flex items-center gap-1.5 text-[12px] font-semibold text-ink-3">
+            <blockquote className="m-0 rounded-xl bg-field px-3 py-2.5 text-sm text-ink-2 flex flex-col gap-1">
+              <span className="flex items-center gap-1.5 text-xs font-semibold text-ink-3">
                 <BookOpen className="w-3.5 h-3.5" /> {q.kaynak.ders_notu}
                 {q.kaynak.sayfa ? ` · sayfa ${q.kaynak.sayfa}` : ''}
               </span>
               <span className="italic">“{q.kaynak.alinti}”</span>
             </blockquote>
           )}
-          <button type="button" onClick={() => setPicked(null)} className="self-start h-9 px-3 rounded-lg border border-line text-[13px] text-ink-2 inline-flex items-center gap-1.5 cursor-pointer hover:bg-canvas">
+          <button type="button" onClick={() => setPicked(null)} className="self-start h-9 px-3 rounded-lg border border-line text-sm text-ink-2 inline-flex items-center gap-1.5 cursor-pointer hover:bg-canvas">
             <RotateCcw className="w-3.5 h-3.5" /> Tekrar çöz
           </button>
         </div>
@@ -324,15 +324,15 @@ function QuestionCard({ q, n, onOpenAbout }: { q: PQ; n: number; onOpenAbout?: (
             {(social.comments || []).length > 0 ? (
               social.comments.map((c) => (
                 <div key={c.id} className="bg-white rounded-[10px] px-3 py-2 flex flex-col gap-0.5">
-                  <div className="flex items-center justify-between gap-2 text-[12px] text-ink-3">
+                  <div className="flex items-center justify-between gap-2 text-xs text-ink-3">
                     <span className="font-semibold text-ink">{c.author || 'Tıp Öğrencisi'}</span>
                     <span>{new Date(c.timestamp).toLocaleDateString('tr-TR')}</span>
                   </div>
-                  <p className="m-0 text-[14px] text-ink-2 leading-relaxed">{c.text}</p>
+                  <p className="m-0 text-base text-ink-2 leading-relaxed">{c.text}</p>
                 </div>
               ))
             ) : (
-              <p className="m-0 px-1 text-[13.5px] text-ink-3">Henüz yorum yok. Bir ipucu ya da not ekleyen ilk kişi ol.</p>
+              <p className="m-0 px-1 text-base text-ink-3">Henüz yorum yok. Bir ipucu ya da not ekleyen ilk kişi ol.</p>
             )}
           </div>
           <div className="flex items-center gap-2">
@@ -343,7 +343,7 @@ function QuestionCard({ q, n, onOpenAbout }: { q: PQ; n: number; onOpenAbout?: (
               onKeyDown={(e) => { if (e.key === 'Enter') handleAddComment(); }}
               placeholder="Yorum ya da ipucu yaz…"
               aria-label="Yorum"
-              className="flex-1 min-w-0 h-10 bg-white border border-line rounded-full px-4 text-[15px] outline-0 focus:border-accent"
+              className="flex-1 min-w-0 h-10 bg-white border border-line rounded-full px-4 text-md outline-0 focus:border-accent"
             />
             <button
               type="button"
@@ -386,8 +386,7 @@ export const PracticeQuestionsView: React.FC<{
   const k1Soru = KAZANIM_INDEX.reduce((a, x) => a + x.soru_sayisi, 0);
   const k1Kazanim = KAZANIM_INDEX.reduce((a, x) => a + x.kazanim, 0);
   const sekmeBtn = (v: 'k1' | 'havuz', label: string) => (
-    <button type="button" role="tab" aria-selected={sekme === v} onClick={() => sekmeSec(v)}
-      className={`h-10 px-3.5 rounded-lg text-[14px] font-medium cursor-pointer ${sekme === v ? 'bg-white text-ink shadow-sm' : 'text-ink-2 hover:text-ink'}`}>
+    <button type="button" role="tab" aria-selected={sekme === v} onClick={() => sekmeSec(v)}>
       {label}
     </button>
   );
@@ -396,16 +395,16 @@ export const PracticeQuestionsView: React.FC<{
     <div className="flex flex-col gap-4 pb-16 w-full min-w-0">
       <PageHeader
         title="Örnek sorular"
-        description="Kurul 1 derslerinin müfredat kazanımlarına göre hazırlanmış çalışma soruları. Her kazanımda kolay, orta ve zor sorular; cevapladıktan sonra her şıkkın neden doğru ya da yanlış olduğu gösterilir."
+        description="Kurul 1 kazanımlarına göre kolay, orta ve zor sorular; cevaplayınca her şıkkın gerekçesi açılır."
         stats={[
-          { label: 'Kurul 1 Ders', value: String(KAZANIM_INDEX.length) },
-          { label: 'Kazanım', value: k1Kazanim.toLocaleString('tr-TR') },
-          { label: 'Kurul 1 Soru', value: k1Soru.toLocaleString('tr-TR') },
+          { label: 'ders', value: String(KAZANIM_INDEX.length) },
+          { label: 'kazanım', value: k1Kazanim.toLocaleString('tr-TR') },
+          { label: 'soru', value: k1Soru.toLocaleString('tr-TR') },
         ]}
       />
-      <div role="tablist" aria-label="Soru kümesi" className="self-start flex gap-1 p-1 rounded-xl bg-field border border-line-soft">
-        {sekmeBtn('k1', `Kurul 1 · Kazanım ve Ders Kataloğu (${k1Soru.toLocaleString('tr-TR')} Soru)`)}
-        {sekmeBtn('havuz', 'Kurul 1 · Serbest Filtre & Arama')}
+      <div role="tablist" aria-label="Soru kümesi" className="ms-seg self-start">
+        {sekmeBtn('k1', 'Ders kataloğu')}
+        {sekmeBtn('havuz', 'Serbest arama')}
       </div>
       {sekme === 'k1' ? (
         <KazanimSorulariView
@@ -481,16 +480,16 @@ const TumHavuzUretim: React.FC = () => {
 
   const [aboutQuestion, setAboutQuestion] = useState<PQ | null>(null);
 
-  const sel = 'h-11 px-3 rounded-xl border border-line bg-white text-[14px] text-ink min-w-0';
+  const sel = 'h-11 px-3 rounded-xl border border-line bg-white text-base text-ink min-w-0';
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="rounded-xl bg-accent-soft text-ink px-3.5 py-2.5 text-[13px] flex items-center justify-between gap-2">
+      <div className="rounded-xl bg-accent-soft text-ink px-3.5 py-2.5 text-sm flex items-center justify-between gap-2">
         <span className="flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-accent shrink-0" />
           <span><b>Supabase Havuzu:</b> Toplam <b>{totalCount.toLocaleString('tr-TR')}</b> soru yerel veritabanında aktif.</span>
         </span>
-        <span className="text-[12px] font-mono text-ink-3">Gösterilen: {shown.length} soru</span>
+        <span className="text-xs font-mono text-ink-3">Gösterilen: {shown.length} soru</span>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2" role="group" aria-label="Filtreler">
@@ -521,23 +520,23 @@ const TumHavuzUretim: React.FC = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Soru metni veya kavram ara..."
-          className="w-full h-11 pl-9 pr-3 rounded-xl bg-white border border-line text-[14px] text-ink placeholder:text-ink-3 outline-none focus:border-accent"
+          className="w-full h-11 pl-9 pr-3 rounded-xl bg-white border border-line text-base text-ink placeholder:text-ink-3 outline-none focus:border-accent"
         />
       </div>
 
       {error ? (
-        <p className="m-0 text-[14px] text-bad-text">{error}</p>
+        <p className="m-0 text-base text-bad-text">{error}</p>
       ) : all === null ? (
-        <p className="m-0 text-[14px] text-ink-3">Sorular yükleniyor…</p>
+        <p className="m-0 text-base text-ink-3">Sorular yükleniyor…</p>
       ) : shown.length === 0 ? (
-        <div className="rounded-2xl border border-line bg-white p-8 text-center text-ink-3 text-[14px] flex flex-col items-center gap-2">
+        <div className="rounded-2xl border border-line bg-white p-8 text-center text-ink-3 text-base flex flex-col items-center gap-2">
           <Filter className="w-6 h-6" />
           <span>Filtreye uyan soru bulunamadı.</span>
         </div>
       ) : (
         groups.map(([title, qs]) => (
           <section key={title} className="flex flex-col gap-3">
-            <h2 className="m-0 text-[13px] font-semibold uppercase tracking-wide text-ink-3">{title} · {qs.length} soru</h2>
+            <h2 className="m-0 text-sm font-semibold uppercase tracking-wide text-ink-3">{title} · {qs.length} soru</h2>
             {qs.map((q, i) => (
               <QuestionCard key={q.id} q={q} n={i + 1} onOpenAbout={(selQ) => setAboutQuestion(selQ)} />
             ))}

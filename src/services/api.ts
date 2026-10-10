@@ -452,8 +452,8 @@ export interface AnswerDoubtfulInfo {
   resolved: Record<string, { answer: string; by: string }>;
 }
 
-/** Faz 14 ayarları (/test/cikmis): Lite yedeği, otomatik ücretsiz inceleme */
-export type Phase14Settings = { lite_kullan: boolean; otomatik_ucretsiz: boolean; otomatik_limit: number };
+/** Faz 14 ayarları (/test/cikmis): Lite yedeği, otomatik ücretsiz inceleme, yetkili kontrol modeli */
+export type Phase14Settings = { lite_kullan: boolean; otomatik_ucretsiz: boolean; otomatik_limit: number; kontrol_modeli?: string };
 
 export const ApiService = {
   async getCommittees(): Promise<Committee[]> {
@@ -2752,6 +2752,23 @@ export const ApiService = {
     });
     if (!res.ok || !res.data?.success) {
       throw new Error(res.data?.error || res.error || 'Öneri reddedilemedi.');
+    }
+    return res.data;
+  },
+
+  /** Faz 14: Soruyu inceleme listesinden ve veritabanından kalıcı olarak sil */
+  async deletePastQuestionReview(adminEmail: string, questionId: string): Promise<any> {
+    const res = await safeJsonFetch<{
+      success: boolean;
+      message: string;
+      id?: string;
+      error?: string;
+    }>(`/api/past-question-reviews/${encodeURIComponent(questionId)}`, {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+    });
+    if (!res.ok || !res.data?.success) {
+      throw new Error(res.data?.error || res.error || 'Soru kalıcı olarak silinemedi.');
     }
     return res.data;
   },

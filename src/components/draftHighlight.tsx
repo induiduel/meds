@@ -164,7 +164,7 @@ export const ContextBadge: React.FC<{
 
   return (
     <span
-      className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[12px] font-semibold text-ink border border-black/5 shadow-2xs ${className}`}
+      className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold text-ink border border-black/5 shadow-2xs ${className}`}
       style={{ backgroundColor: bg }}
       title={`Ortak bağlam: ${tag}`}
     >
@@ -191,11 +191,11 @@ export const WordLegend: React.FC<{ texts: string[]; colors: Map<string, string>
 
   return (
     <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
-      <span className="text-[11.5px] font-semibold text-ink-3 mr-0.5">Ortak terimler:</span>
+      <span className="text-xs font-semibold text-ink-3 mr-0.5">Ortak terimler:</span>
       {Array.from(spelled.entries()).map(([c, word]) => (
         <span
           key={c}
-          className="h-5 px-2 rounded-md text-[11.5px] font-medium text-ink inline-flex items-center shadow-2xs border border-black/5"
+          className="h-5 px-2 rounded-md text-xs font-medium text-ink inline-flex items-center shadow-2xs border border-black/5"
           style={{ backgroundColor: c }}
         >
           {word}

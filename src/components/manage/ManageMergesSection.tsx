@@ -123,8 +123,8 @@ export const ManageMergesSection: React.FC<{ adminEmail: string }> = ({ adminEma
                 <span className="flex flex-wrap items-center gap-1.5 min-w-0">
                   <span className={`ms-tag ${g.birebir_ayni ? 'is-ok' : 'is-warn'}`}>{g.birebir_ayni ? 'Birebir aynı' : 'Metin farklı'}</span>
                   {durumTag(g)}
-                  <span className="text-[12.5px] text-ink-3 tabular-nums">{g.uyeler.length} soru · benzerlik %{(g.benzerlik * 100).toFixed(0)}</span>
-                  <span className="font-mono text-[11.5px] text-ink-3 truncate max-w-[18ch]" title={g.id}>{g.id}</span>
+                  <span className="text-sm text-ink-3 tabular-nums">{g.uyeler.length} soru · benzerlik %{(g.benzerlik * 100).toFixed(0)}</span>
+                  <span className="font-mono text-xs text-ink-3 truncate max-w-[18ch]" title={g.id}>{g.id}</span>
                 </span>
                 <span className="ms-panel-tools">
                   {g.durum !== 'ayrildi' ? (
@@ -150,30 +150,30 @@ export const ManageMergesSection: React.FC<{ adminEmail: string }> = ({ adminEma
                   const asil = q.id === g.asil && g.durum !== 'ayrildi';
                   return (
                     <article key={q.id} className={`rounded-xl p-3 flex flex-col gap-2 min-w-0 ${asil ? 'bg-ok-tint ring-1 ring-ok/35' : 'bg-canvas'}`}>
-                      <div className="flex items-center gap-1.5 text-[12px] text-ink-3 min-w-0">
+                      <div className="flex items-center gap-1.5 text-xs text-ink-3 min-w-0">
                         {asil ? <span className="ms-tag is-ok"><Crown /> Asıl</span> : <span className="ms-tag"><Copy /> Kopya</span>}
                         <span className="truncate">{[q.committeeId, q.discipline, q.year].filter(Boolean).join(' · ')}</span>
                       </div>
-                      <p className="m-0 text-[14px] text-ink leading-relaxed break-words whitespace-pre-wrap">{q.stem || <i className="text-ink-3">Kök yok</i>}</p>
+                      <p className="m-0 text-base text-ink leading-relaxed break-words whitespace-pre-wrap">{q.stem || <i className="text-ink-3">Kök yok</i>}</p>
                       <ol className="m-0 p-0 list-none flex flex-col gap-1">
                         {q.options.map((o, i) => {
                           const ok = LETTERS[i] === q.correctAnswer;
                           return (
-                            <li key={i} className={`flex items-start gap-2 text-[13px] leading-snug ${ok ? 'text-ok font-semibold' : 'text-ink-2'}`}>
-                              <span className={`shrink-0 w-5 h-5 rounded-md inline-flex items-center justify-center font-mono text-[11.5px] ${ok ? 'bg-ok text-white' : 'bg-white text-ink-3'}`}>{LETTERS[i]}</span>
+                            <li key={i} className={`flex items-start gap-2 text-sm leading-snug ${ok ? 'text-ok font-semibold' : 'text-ink-2'}`}>
+                              <span className={`shrink-0 w-5 h-5 rounded-md inline-flex items-center justify-center font-mono text-xs ${ok ? 'bg-ok text-white' : 'bg-white text-ink-3'}`}>{LETTERS[i]}</span>
                               <span className="min-w-0">{o}</span>
                             </li>
                           );
                         })}
                       </ol>
                       <div className="flex items-center justify-between gap-2 mt-auto pt-1">
-                        <span className="font-mono text-[11.5px] text-ink-3 truncate" title={q.id}>{q.id}</span>
+                        <span className="font-mono text-xs text-ink-3 truncate" title={q.id}>{q.id}</span>
                         {!asil && g.durum !== 'ayrildi' && (
                           <button type="button" disabled={busy === g.id} onClick={() => islem(g, { action: 'primary', asil: q.id }, 'Asıl soru değiştirildi.')} className="ms-btn is-sm is-tonal">
                             <Crown /> Bunu asıl yap
                           </button>
                         )}
-                        {asil && <span className="text-[12px] font-semibold text-ok">Sitede görünen</span>}
+                        {asil && <span className="text-xs font-semibold text-ok">Sitede görünen</span>}
                       </div>
                     </article>
                   );

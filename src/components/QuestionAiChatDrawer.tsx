@@ -240,7 +240,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
   const renderFormattedText = (raw: string) => {
     const paragraphs = raw.split('\n\n');
     return (
-      <div className="space-y-2 text-[14px] leading-relaxed">
+      <div className="space-y-2 text-base leading-relaxed">
         {paragraphs.map((para, pIdx) => {
           const trimmed = para.trim();
           if (!trimmed) return null;
@@ -248,14 +248,14 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
           // Header ###
           if (trimmed.startsWith('### ')) {
             return (
-              <h4 key={pIdx} className="font-bold text-accent text-[14px] pt-1 pb-0.5 border-b border-line-soft">
+              <h4 key={pIdx} className="font-bold text-accent text-base pt-1 pb-0.5 border-b border-line-soft">
                 {trimmed.replace(/^###\s*/, '')}
               </h4>
             );
           }
           if (trimmed.startsWith('## ')) {
             return (
-              <h3 key={pIdx} className="font-bold text-ink text-[15px] pt-1 pb-0.5 font-display">
+              <h3 key={pIdx} className="font-bold text-ink text-md pt-1 pb-0.5 font-display">
                 {trimmed.replace(/^##\s*/, '')}
               </h3>
             );
@@ -301,7 +301,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
           // Callout / Blockquote
           if (trimmed.startsWith('>')) {
             return (
-              <div key={pIdx} className="border-l-3 border-accent bg-accent-soft/40 px-3 py-2 rounded-r-lg text-ink text-[13px] my-1">
+              <div key={pIdx} className="border-l-3 border-accent bg-accent-soft/40 px-3 py-2 rounded-r-lg text-ink text-sm my-1">
                 <span dangerouslySetInnerHTML={{
                   __html: trimmed
                     .replace(/^>\s*/g, '')
@@ -318,7 +318,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                 __html: trimmed
                   .replace(/\*\*(.*?)\*\*/g, '<strong class="text-ink font-semibold">$1</strong>')
                   .replace(/\*(.*?)\*/g, '<em class="italic text-ink-2">$1</em>')
-                  .replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-slate-100 font-mono text-[12px] text-accent">$1</code>')
+                  .replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-field font-mono text-xs text-accent">$1</code>')
               }} />
             </p>
           );
@@ -350,12 +350,12 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
             </div>
             <div className="flex flex-col min-w-0 leading-tight">
               <div className="flex items-center gap-1.5">
-                <span className="font-semibold text-ink text-[15px] truncate">AI Tıp Asistanı</span>
-                <span className="bg-emerald-50 text-emerald-700 text-[11px] font-bold px-1.5 py-0.5 rounded border border-emerald-200 uppercase tracking-wider shrink-0">
+                <span className="font-semibold text-ink text-md truncate">AI Tıp Asistanı</span>
+                <span className="bg-ok-soft text-ok text-2xs font-bold px-1.5 py-0.5 rounded border border-ok/30 uppercase tracking-wider shrink-0">
                   Canlı
                 </span>
               </div>
-              <span className="text-[12px] text-ink-2 truncate">
+              <span className="text-xs text-ink-2 truncate">
                 {questionContext.discipline || 'Tıp Fakültesi'} · {questionContext.topic || 'Soru İncelemesi'}
               </span>
             </div>
@@ -396,7 +396,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
 
         {/* Model Settings Accordion (Optional) */}
         {showSettings && (
-          <div className="px-4 py-2.5 bg-slate-50 border-b border-line flex flex-wrap items-center justify-between gap-2 text-xs">
+          <div className="px-4 py-2.5 bg-field border-b border-line flex flex-wrap items-center justify-between gap-2 text-xs">
             <div className="flex items-center gap-2">
               <span className="font-semibold text-ink-2">Sağlayıcı:</span>
               <select
@@ -428,7 +428,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
         )}
 
         {/* Question Context Quick Card (Collapsible) */}
-        <div className="bg-canvas border-b border-line px-4 py-2 text-[12px] flex flex-col gap-1 shrink-0">
+        <div className="bg-canvas border-b border-line px-4 py-2 text-xs flex flex-col gap-1 shrink-0">
           <button
             type="button"
             onClick={() => setIsContextExpanded(!isContextExpanded)}
@@ -450,14 +450,14 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
           </button>
 
           {isContextExpanded ? (
-            <div className="mt-1.5 p-2.5 bg-white rounded-lg border border-line-soft space-y-2 text-[13px] text-ink leading-relaxed max-h-48 overflow-y-auto">
+            <div className="mt-1.5 p-2.5 bg-white rounded-lg border border-line-soft space-y-2 text-sm text-ink leading-relaxed max-h-48 overflow-y-auto">
               <p className="font-medium text-ink m-0">{questionContext.stem}</p>
               {questionContext.options && questionContext.options.length > 0 && (
                 <div className="space-y-1 pt-1 border-t border-line-soft">
                   {questionContext.options.map((opt) => (
                     <div 
                       key={opt.key}
-                      className={`px-2 py-0.5 rounded text-[12px] flex items-start gap-1.5 ${
+                      className={`px-2 py-0.5 rounded text-xs flex items-start gap-1.5 ${
                         opt.key === questionContext.correctAnswer 
                           ? 'bg-ok-soft text-ok font-bold' 
                           : opt.key === questionContext.userAnswer 
@@ -472,18 +472,18 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                 </div>
               )}
               {questionContext.explanation && (
-                <div className="pt-1 border-t border-line-soft text-[12px] text-ink-2">
+                <div className="pt-1 border-t border-line-soft text-xs text-ink-2">
                   <strong className="text-ink">Mevcut Açıklama:</strong> {questionContext.explanation}
                 </div>
               )}
               {(questionContext.slideSnippet || questionContext.lectureReference?.matchedSnippet) && (
-                <div className="pt-1 border-t border-line-soft text-[11px] text-ink-3">
+                <div className="pt-1 border-t border-line-soft text-2xs text-ink-3">
                   <strong>Amfi Notu:</strong> {questionContext.slideSnippet || questionContext.lectureReference?.matchedSnippet}
                 </div>
               )}
             </div>
           ) : (
-            <p className="m-0 text-ink-2 line-clamp-1 truncate text-[11px]">
+            <p className="m-0 text-ink-2 line-clamp-1 truncate text-2xs">
               {questionContext.stem}
             </p>
           )}
@@ -493,49 +493,49 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {/* Past Community & AI Interactions Accordion */}
           {pastInteractions.length > 0 && (
-            <div className="bg-indigo-50/80 border border-indigo-200/80 rounded-xl p-3 text-ink shadow-xs transition-all">
+            <div className="bg-accent-soft/80 border border-accent/80 rounded-xl p-3 text-ink shadow-xs transition-all">
               <div 
                 className="flex items-center justify-between cursor-pointer select-none" 
                 onClick={() => setShowPastInteractions(!showPastInteractions)}
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center text-[12px] font-bold shadow-xs">
+                  <div className="w-6 h-6 rounded-md bg-accent text-white flex items-center justify-center text-xs font-bold shadow-xs">
                     {pastInteractions.length}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[13px] text-indigo-950 flex items-center gap-1.5 m-0">
+                    <h4 className="font-semibold text-sm text-accent flex items-center gap-1.5 m-0">
                       <span>Bu Soru İçin Kayıtlı AI Soru-Cevapları</span>
-                      <span className="text-[11px] font-bold bg-indigo-200/70 text-indigo-800 px-1.5 py-0.5 rounded">RAG Arşivi</span>
+                      <span className="text-2xs font-bold bg-accent/70 text-accent px-1.5 py-0.5 rounded">RAG Arşivi</span>
                     </h4>
-                    <p className="text-[11px] text-indigo-800/80 m-0">Daha önce sorulan sorular ve açıklamalar tek tıkla incelenebilir.</p>
+                    <p className="text-2xs text-accent/80 m-0">Daha önce sorulan sorular ve açıklamalar tek tıkla incelenebilir.</p>
                   </div>
                 </div>
-                {showPastInteractions ? <ChevronUp className="w-4 h-4 text-indigo-600" /> : <ChevronDown className="w-4 h-4 text-indigo-600" />}
+                {showPastInteractions ? <ChevronUp className="w-4 h-4 text-accent" /> : <ChevronDown className="w-4 h-4 text-accent" />}
               </div>
 
               {showPastInteractions && (
-                <div className="mt-2.5 space-y-2.5 pt-2.5 border-t border-indigo-200/70 max-h-72 overflow-y-auto pr-1">
+                <div className="mt-2.5 space-y-2.5 pt-2.5 border-t border-accent/70 max-h-72 overflow-y-auto pr-1">
                   {pastInteractions.map((item, pIdx) => (
-                    <div key={item.id || pIdx} className="bg-white p-3 rounded-lg border border-indigo-100 text-[13px] space-y-2 shadow-2xs">
-                      <div className="font-medium text-indigo-950 flex items-start gap-1.5">
-                        <span className="text-indigo-600 font-bold shrink-0">Soru:</span>
+                    <div key={item.id || pIdx} className="bg-white p-3 rounded-lg border border-accent/30 text-sm space-y-2 shadow-2xs">
+                      <div className="font-medium text-accent flex items-start gap-1.5">
+                        <span className="text-accent font-bold shrink-0">Soru:</span>
                         <span className="text-ink font-semibold">"{item.prompt}"</span>
                       </div>
-                      <div className="text-ink-2 bg-slate-50 p-2.5 rounded-md text-[12px] max-h-40 overflow-y-auto border border-slate-100">
+                      <div className="text-ink-2 bg-field p-2.5 rounded-md text-xs max-h-40 overflow-y-auto border border-line">
                         {renderFormattedText(item.response)}
                       </div>
-                      <div className="flex items-center justify-between text-[11px] pt-1.5 border-t border-slate-100">
-                        <span className="text-ink-3 text-[11px]">
+                      <div className="flex items-center justify-between text-2xs pt-1.5 border-t border-line">
+                        <span className="text-ink-3 text-2xs">
                           {item.userDisplayName || 'Öğrenci'} · {new Date(item.createdAt).toLocaleDateString('tr-TR')}
                         </span>
                         <div className="flex items-center gap-2">
                           <button
                             type="button"
                             onClick={() => handleUpvote(item.id)}
-                            className={`inline-flex items-center gap-1 px-2.5 py-1 rounded text-[11px] font-medium transition-colors cursor-pointer ${
+                            className={`inline-flex items-center gap-1 px-2.5 py-1 rounded text-2xs font-medium transition-colors cursor-pointer ${
                               upvotedIds.has(item.id) 
-                                ? 'bg-emerald-100 text-emerald-800 font-bold' 
-                                : 'bg-slate-100 hover:bg-slate-200 text-ink'
+                                ? 'bg-ok-soft text-ok font-bold' 
+                                : 'bg-field hover:bg-line text-ink'
                             }`}
                           >
                             <ThumbsUp className="w-3 h-3" />
@@ -544,7 +544,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                           <button
                             type="button"
                             onClick={() => handleSendMessage(`"${item.prompt}" konusuyla ilgili daha detaylı klinik örnek verebilir misin?`)}
-                            className="text-accent hover:underline font-semibold text-[11px] cursor-pointer"
+                            className="text-accent hover:underline font-semibold text-2xs cursor-pointer"
                           >
                             Detay İste &rarr;
                           </button>
@@ -571,7 +571,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                 )}
 
                 <div 
-                  className={`max-w-[85%] rounded-2xl px-4 py-3 text-[14px] leading-relaxed relative group ${
+                  className={`max-w-[85%] rounded-2xl px-4 py-3 text-base leading-relaxed relative group ${
                     isMe
                       ? 'bg-accent text-white rounded-br-xs shadow-xs'
                       : 'bg-white border border-line rounded-bl-xs text-ink shadow-xs'
@@ -584,18 +584,18 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                   )}
 
                   {/* Message Footer / Timestamp / Copy */}
-                  <div className={`flex items-center justify-between gap-3 mt-1.5 text-[11px] ${
+                  <div className={`flex items-center justify-between gap-3 mt-1.5 text-2xs ${
                     isMe ? 'text-white/70' : 'text-ink-3'
                   }`}>
                     <span>{msg.timestamp || ''}</span>
                     {!isMe && (
                       <div className="flex items-center gap-2">
-                        <span className="inline-flex items-center gap-1 text-[11px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 font-medium">
+                        <span className="inline-flex items-center gap-1 text-2xs text-ok bg-ok-soft px-1.5 py-0.5 rounded border border-ok/30 font-medium">
                           <Database className="w-2.5 h-2.5" />
                           RAG Kütüphanesinde
                         </span>
                         {(msg.planUsed || msg.providerUsed) && (
-                          <span className="font-mono text-[11px] opacity-75">{msg.planUsed || msg.providerUsed}</span>
+                          <span className="font-mono text-2xs opacity-75">{msg.planUsed || msg.providerUsed}</span>
                         )}
                         <button
                           type="button"
@@ -643,9 +643,9 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                 </div>
                 <span className={`text-xs font-sans ml-1 ${
                   loadingStatus.includes('Muse Spark') || loadingStatus.includes('3. Deneme')
-                    ? 'text-cyan-800 font-bold bg-cyan-50 px-2 py-0.5 rounded border border-cyan-200'
+                    ? 'text-accent font-bold bg-accent-soft px-2 py-0.5 rounded border border-accent/30'
                     : loadingStatus.includes('2. Deneme') || loadingStatus.includes('Alternatif') || loadingStatus.includes('diğer')
-                      ? 'text-amber-700 font-semibold'
+                      ? 'text-warn font-semibold'
                       : 'text-ink-2 italic'
                 }`}>
                   {loadingStatus}
@@ -656,17 +656,17 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
 
           {/* 3-Attempt Failure Alert Card */}
           {twoAttemptsFailed && !isLoading && (
-            <div className="p-3.5 bg-amber-50 border border-amber-300/80 rounded-2xl shadow-xs space-y-2.5 animate-fade-in text-ink">
+            <div className="p-3.5 bg-warn-soft border border-warn/80 rounded-2xl shadow-xs space-y-2.5 animate-fade-in text-ink">
               <div className="flex items-center justify-between gap-2">
-                <div className="flex items-center gap-2 text-amber-900 font-bold text-[13px]">
-                  <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+                <div className="flex items-center gap-2 text-warn font-bold text-sm">
+                  <AlertTriangle className="w-4 h-4 text-warn shrink-0" />
                   <span>Yapay Zeka Kotaları Doldu</span>
                 </div>
-                <span className="text-[11px] bg-amber-200/90 text-amber-950 font-mono px-2 py-0.5 rounded-full font-bold">
+                <span className="text-2xs bg-warn/90 text-warn font-mono px-2 py-0.5 rounded-full font-bold">
                   Gemini, Groq &amp; Muse Spark
                 </span>
               </div>
-              <p className="text-[12px] text-amber-800/90 leading-relaxed m-0">
+              <p className="text-xs text-warn/90 leading-relaxed m-0">
                 Sistem sırasıyla Google Gemini, Groq Cloud ve son çare kurtarıcı Muse Spark 1.3 Free modellerini denedi ancak tüm servislerin kotaları doldu veya geçici olarak yanıt alınamadı. Aşağıdan tekrar deneyebilir veya Ayarlar menüsünden API anahtarınızı güncelleyebilirsiniz.
               </p>
               <div className="flex items-center flex-wrap gap-2 pt-0.5">
@@ -674,7 +674,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                   <button
                     type="button"
                     onClick={() => handleSendMessage(lastFailedText)}
-                    className="px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-[12px] font-semibold flex items-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
+                    className="px-3 py-1.5 bg-warn hover:bg-warn text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
                   >
                     <RotateCcw className="w-3.5 h-3.5" />
                     <span>Tekrar Dene</span>
@@ -683,7 +683,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                 <button
                   type="button"
                   onClick={() => setShowSettings(!showSettings)}
-                  className="px-3 py-1.5 bg-white border border-amber-300 hover:bg-amber-100/50 text-amber-900 rounded-lg text-[12px] font-medium flex items-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
+                  className="px-3 py-1.5 bg-white border border-warn/30 hover:bg-warn-soft/50 text-warn rounded-lg text-xs font-medium flex items-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
                 >
                   <SlidersHorizontal className="w-3.5 h-3.5" />
                   <span>Model / Sağlayıcı Ayarları</span>
@@ -696,8 +696,8 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
         </div>
 
         {/* Quick Suggestion Chips */}
-        <div className="px-4 py-2 border-t border-line-soft bg-slate-50/70 overflow-x-auto flex items-center gap-2 scrollbar-none shrink-0">
-          <span className="text-[11px] font-semibold text-ink-3 uppercase tracking-wider shrink-0 mr-1 flex items-center gap-1">
+        <div className="px-4 py-2 border-t border-line-soft bg-field/70 overflow-x-auto flex items-center gap-2 scrollbar-none shrink-0">
+          <span className="text-2xs font-semibold text-ink-3 uppercase tracking-wider shrink-0 mr-1 flex items-center gap-1">
             <Lightbulb className="w-3.5 h-3.5 text-accent" />
             Öneriler:
           </span>
@@ -709,7 +709,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                 type="button"
                 disabled={isLoading}
                 onClick={() => handleSendMessage(chip.prompt)}
-                className="whitespace-nowrap px-2.5 py-1 rounded-full bg-white border border-line-2 hover:border-accent hover:bg-accent-soft text-ink hover:text-accent text-[12px] font-medium transition-all shrink-0 cursor-pointer disabled:opacity-50 flex items-center gap-1.5 shadow-2xs"
+                className="whitespace-nowrap px-2.5 py-1 rounded-full bg-white border border-line-2 hover:border-accent hover:bg-accent-soft text-ink hover:text-accent text-xs font-medium transition-all shrink-0 cursor-pointer disabled:opacity-50 flex items-center gap-1.5 shadow-2xs"
               >
                 <Icon className="w-3 h-3 text-accent" />
                 <span>{chip.label}</span>
@@ -729,7 +729,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
               onKeyDown={handleKeyDown}
               disabled={isLoading}
               placeholder="Soru hakkında aklına takılanı sor... (Örn: Neden A şıkkı olamaz?)"
-              className="flex-1 bg-transparent border-0 outline-none resize-none px-2 py-1 text-[14px] text-ink placeholder:text-ink-3 max-h-32 min-h-[44px]"
+              className="flex-1 bg-transparent border-0 outline-none resize-none px-2 py-1 text-base text-ink placeholder:text-ink-3 max-h-32 min-h-[44px]"
             />
             <button
               type="button"
@@ -741,10 +741,10 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
               <Send className="w-4 h-4" />
             </button>
           </div>
-          <div className="flex items-center justify-between text-[11px] text-ink-3 px-1 pt-2">
+          <div className="flex items-center justify-between text-2xs text-ink-3 px-1 pt-2">
             <span>Enter: Gönder · Shift+Enter: Yeni satır</span>
             {lastUsedProvider && (
-              <span className="font-mono text-[11px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
+              <span className="font-mono text-2xs text-ok bg-ok-soft px-1.5 py-0.5 rounded">
                 {lastUsedProvider}
               </span>
             )}

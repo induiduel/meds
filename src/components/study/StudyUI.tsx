@@ -28,7 +28,7 @@ export function Segmented<T extends string | number>({
             role="radio"
             aria-checked={on}
             onClick={() => onChange(o.value)}
-            className={`shrink-0 whitespace-nowrap rounded-lg cursor-pointer ${size === 'sm' ? 'h-8 px-2.5 text-[13px]' : 'h-9 px-3 text-[14px]'} ${
+            className={`shrink-0 whitespace-nowrap rounded-lg cursor-pointer ${size === 'sm' ? 'h-8 px-2.5 text-sm' : 'h-9 px-3 text-base'} ${
               on ? 'bg-white font-semibold shadow-xs text-ink' : 'text-ink-2 hover:text-ink'
             }`}
           >
@@ -41,19 +41,19 @@ export function Segmented<T extends string | number>({
 }
 
 export const Field: React.FC<{ label: string; children: React.ReactNode; className?: string }> = ({ label, children, className = '' }) => (
-  <label className={`flex flex-col gap-1.5 text-[13px] font-semibold text-ink-2 ${className}`}>
+  <label className={`flex flex-col gap-1.5 text-sm font-semibold text-ink-2 ${className}`}>
     {label}
     {children}
   </label>
 );
 
-export const selectCls = 'h-10 border border-line-2 rounded-[10px] px-3 text-[14px] font-normal text-ink bg-white cursor-pointer min-w-0';
+export const selectCls = 'h-10 border border-line-2 rounded-[10px] px-3 text-base font-normal text-ink bg-white cursor-pointer min-w-0';
 export const cardCls = 'bg-white border border-line rounded-2xl';
 export const btnPrimary =
-  'h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
+  'h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-base font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
 export const btnSecondary =
-  'h-10 px-3.5 rounded-[10px] border border-line-2 bg-white text-ink text-[14px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer hover:border-ink-3 disabled:opacity-50 disabled:cursor-not-allowed';
-export const btnGhost = 'h-10 px-3 rounded-[10px] text-ink-2 hover:text-ink hover:bg-canvas text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer';
+  'h-10 px-3.5 rounded-[10px] border border-line-2 bg-white text-ink text-base font-semibold inline-flex items-center justify-center gap-2 cursor-pointer hover:border-ink-3 disabled:opacity-50 disabled:cursor-not-allowed';
+export const btnGhost = 'h-10 px-3 rounded-[10px] text-ink-2 hover:text-ink hover:bg-canvas text-base font-semibold inline-flex items-center gap-2 cursor-pointer';
 
 /** One answer option; state decides colour. */
 export const OptionButton: React.FC<{
@@ -85,13 +85,13 @@ export const OptionButton: React.FC<{
       aria-checked={state === 'selected' || state === 'wrong' || (state === 'correct' && tag === 'Senin cevabın')}
       onClick={onClick}
       disabled={disabled}
-      className={`w-full flex items-center gap-3 min-h-[48px] px-3 py-2 rounded-xl text-[15px] leading-snug text-left transition-colors ${box} ${
+      className={`w-full flex items-center gap-3 min-h-[48px] px-3 py-2 rounded-xl text-md leading-snug text-left transition-colors ${box} ${
         disabled ? 'cursor-default' : 'cursor-pointer'
       }`}
     >
-      <span className={`w-8 h-8 shrink-0 rounded-lg flex items-center justify-center font-mono text-[13px] ${key}`}>{opt.key}</span>
+      <span className={`w-8 h-8 shrink-0 rounded-lg flex items-center justify-center font-mono text-sm ${key}`}>{opt.key}</span>
       <span className="flex-1 min-w-0 break-words">{opt.text}</span>
-      {tag && <span className={`text-[12px] font-semibold whitespace-nowrap ${tagCls}`}>{tag}</span>}
+      {tag && <span className={`text-xs font-semibold whitespace-nowrap ${tagCls}`}>{tag}</span>}
     </button>
   );
 };
@@ -99,14 +99,14 @@ export const OptionButton: React.FC<{
 /** Compact explanation: labelled sections when the redactor wrote them. */
 export const ExplanationBlock: React.FC<{ q: StudyQuestion; compact?: boolean }> = ({ q, compact }) => {
   if (!q.explanation) {
-    return <p className="m-0 text-[14px] text-ink-2">Bu soru için açıklama henüz yazılmadı.</p>;
+    return <p className="m-0 text-base text-ink-2">Bu soru için açıklama henüz yazılmadı.</p>;
   }
   const sections = parseExplanation(q.explanation, q.answer);
   return (
     <div className="flex flex-col gap-3">
       {sections.map((s, i) => (
         <div key={i} className={sections.length > 1 ? 'grid grid-cols-1 sm:grid-cols-[120px_minmax(0,1fr)] gap-1 sm:gap-4' : ''}>
-          {sections.length > 1 && <div className="text-[12px] font-semibold uppercase tracking-[0.06em] text-ink-2 pt-0.5">{s.label}</div>}
+          {sections.length > 1 && <div className="text-xs font-semibold uppercase tracking-[0.06em] text-ink-2 pt-0.5">{s.label}</div>}
           <div className={s.pearl ? 'px-3 py-2.5 rounded-lg bg-accent-soft' : ''}>
             <SourceText text={s.body} size={compact ? 'sm' : 'md'} />
           </div>
@@ -118,8 +118,8 @@ export const ExplanationBlock: React.FC<{ q: StudyQuestion; compact?: boolean }>
 
 export const EmptyState: React.FC<{ title: string; body?: string; action?: React.ReactNode }> = ({ title, body, action }) => (
   <div className={`${cardCls} px-6 py-12 text-center flex flex-col items-center gap-3`}>
-    <h3 className="m-0 font-display text-[20px] font-bold tracking-[-0.02em]">{title}</h3>
-    {body && <p className="m-0 text-[14px] text-ink-2 max-w-[420px]">{body}</p>}
+    <h3 className="m-0 font-display text-xl font-bold tracking-[-0.02em]">{title}</h3>
+    {body && <p className="m-0 text-base text-ink-2 max-w-[420px]">{body}</p>}
     {action}
   </div>
 );

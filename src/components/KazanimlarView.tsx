@@ -231,7 +231,7 @@ export const KazanimlarView: React.FC<Props> = ({
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Kazanım, konu, terim veya patoloji ara..."
-            className="w-full h-10 pl-9 pr-3 rounded-xl bg-white border border-line text-[13.5px] text-ink placeholder:text-ink-3 focus:outline-hidden focus:border-accent"
+            className="w-full h-10 pl-9 pr-3 rounded-xl bg-white border border-line text-base text-ink placeholder:text-ink-3 focus:outline-hidden focus:border-accent"
           />
           {searchQuery && (
             <button
@@ -264,7 +264,7 @@ export const KazanimlarView: React.FC<Props> = ({
       </div>
 
       {/* Sonuç Sayısı ve Bilgi */}
-      <div className="flex items-center justify-between gap-2 text-[12.5px] text-ink-3 mb-3">
+      <div className="flex items-center justify-between gap-2 text-sm text-ink-3 mb-3">
         <span>
           Kurul {selectedKurul}: <b className="text-ink">{totalFilteredCount}</b> kazanım listeleniyor
         </span>
@@ -277,8 +277,8 @@ export const KazanimlarView: React.FC<Props> = ({
       ) : filteredDersler.length === 0 ? (
         <div className="rounded-2xl border border-line bg-white p-8 text-center flex flex-col items-center gap-2">
           <Compass className="w-8 h-8 text-ink-3 opacity-60" />
-          <h3 className="m-0 text-[15px] font-semibold text-ink">Eşleşen kazanım bulunamadı</h3>
-          <p className="m-0 text-[13px] text-ink-3">Arama terimini değiştirebilir ya da filtreyi temizleyebilirsiniz.</p>
+          <h3 className="m-0 text-md font-semibold text-ink">Eşleşen kazanım bulunamadı</h3>
+          <p className="m-0 text-sm text-ink-3">Arama terimini değiştirebilir ya da filtreyi temizleyebilirsiniz.</p>
         </div>
       ) : (
         <div className="flex flex-col gap-2">
@@ -301,8 +301,8 @@ export const KazanimlarView: React.FC<Props> = ({
                   className="ms-ders-acc-head"
                 >
                   <ChevronDown className="ms-ders-acc-chev" aria-hidden />
-                  <span className="min-w-0 flex-1 truncate text-[15px] font-semibold text-ink text-left">{dersGroup.ders}</span>
-                  <span className="hidden sm:inline text-[12.5px] text-ink-3 shrink-0">{dersGroup.konular.length} konu</span>
+                  <span className="min-w-0 flex-1 truncate text-md font-semibold text-ink text-left">{dersGroup.ders}</span>
+                  <span className="hidden sm:inline text-sm text-ink-3 shrink-0">{dersGroup.konular.length} konu</span>
                   <span className="ms-tag shrink-0 tabular-nums">{dersGroup.count} kazanım</span>
                 </button>
               </h2>
@@ -326,8 +326,8 @@ export const KazanimlarView: React.FC<Props> = ({
                         className={`ms-konu-acc-head ${konuOpen ? 'is-open' : ''}`}
                       >
                         <ChevronDown className="ms-ders-acc-chev" aria-hidden />
-                        <span className="min-w-0 flex-1 text-left text-[13.5px] font-semibold text-ink">{konuGroup.konu}</span>
-                        <span className="text-[11.5px] text-ink-3 shrink-0 tabular-nums">{konuGroup.kazanimlar.length} hedef</span>
+                        <span className="min-w-0 flex-1 text-left text-base font-semibold text-ink">{konuGroup.konu}</span>
+                        <span className="text-xs text-ink-3 shrink-0 tabular-nums">{konuGroup.kazanimlar.length} hedef</span>
                       </button>
                     </h3>
 
@@ -349,10 +349,10 @@ export const KazanimlarView: React.FC<Props> = ({
                             <div className="flex flex-col lg:flex-row lg:items-start gap-1 lg:gap-4">
                             {/* Kazanım Metni */}
                             <div className="flex items-start gap-2 flex-1 min-w-0">
-                              <span className="w-5 h-5 rounded-md bg-accent-soft text-accent text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                              <span className="w-5 h-5 rounded-md bg-accent-soft text-accent text-2xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                                 {kIdx + 1}
                               </span>
-                              <p className="m-0 text-[13.5px] text-ink font-medium leading-snug flex-1 min-w-0 pt-0.5">
+                              <p className="m-0 text-base text-ink font-medium leading-snug flex-1 min-w-0 pt-0.5">
                                 {kazanim.metin}
                               </p>
                             </div>
@@ -363,7 +363,7 @@ export const KazanimlarView: React.FC<Props> = ({
                                 <button
                                   type="button"
                                   onClick={() => toggleTab(kazanim.id, 'slayt')}
-                                  className={`ms-btn is-sm ${activeTab === 'slayt' ? 'is-on' : 'is-ghost'} h-7! px-2! text-[12px]!`}
+                                  className={`ms-btn is-sm ${activeTab === 'slayt' ? 'is-on' : 'is-ghost'} h-7! px-2! text-xs!`}
                                   title="Bağlı amfi slaytlarını ve sayfaları incele"
                                 >
                                   <Presentation className="w-3.5 h-3.5" />
@@ -375,7 +375,7 @@ export const KazanimlarView: React.FC<Props> = ({
                                 <button
                                   type="button"
                                   onClick={() => toggleTab(kazanim.id, 'cikmis')}
-                                  className={`ms-btn is-sm ${activeTab === 'cikmis' ? 'is-on' : 'is-ghost'} h-7! px-2! text-[12px]! text-ok!`}
+                                  className={`ms-btn is-sm ${activeTab === 'cikmis' ? 'is-on' : 'is-ghost'} h-7! px-2! text-xs! text-ok!`}
                                   title="Bu kazanımla eşleşen çıkmış sınav soruları"
                                 >
                                   <Archive className="w-3.5 h-3.5" />
@@ -387,7 +387,7 @@ export const KazanimlarView: React.FC<Props> = ({
                                 <button
                                   type="button"
                                   onClick={() => toggleTab(kazanim.id, 'ornek')}
-                                  className={`ms-btn is-sm ${activeTab === 'ornek' ? 'is-on' : 'is-ghost'} h-7! px-2! text-[12px]! text-accent!`}
+                                  className={`ms-btn is-sm ${activeTab === 'ornek' ? 'is-on' : 'is-ghost'} h-7! px-2! text-xs! text-accent!`}
                                   title="Kazanım temelli örnek sorular"
                                 >
                                   <Target className="w-3.5 h-3.5" />
@@ -399,7 +399,7 @@ export const KazanimlarView: React.FC<Props> = ({
                                 <button
                                   type="button"
                                   onClick={() => toggleTab(kazanim.id, 'sozluk')}
-                                  className={`ms-btn is-sm ${activeTab === 'sozluk' ? 'is-on' : 'is-ghost'} h-7! px-2! text-[12px]!`}
+                                  className={`ms-btn is-sm ${activeTab === 'sozluk' ? 'is-on' : 'is-ghost'} h-7! px-2! text-xs!`}
                                   title="İlgili tıbbi terim ve tanımlar"
                                 >
                                   <BookOpenText className="w-3.5 h-3.5" />
@@ -411,7 +411,7 @@ export const KazanimlarView: React.FC<Props> = ({
                                 <button
                                   type="button"
                                   onClick={() => toggleTab(kazanim.id, 'ozet')}
-                                  className={`ms-btn is-sm ${activeTab === 'ozet' ? 'is-on' : 'is-ghost'} h-7! px-2! text-[12px]!`}
+                                  className={`ms-btn is-sm ${activeTab === 'ozet' ? 'is-on' : 'is-ghost'} h-7! px-2! text-xs!`}
                                   title="Ders özeti kilit noktaları"
                                 >
                                   <Sparkles className="w-3.5 h-3.5" />
@@ -424,7 +424,7 @@ export const KazanimlarView: React.FC<Props> = ({
                             {/* Açılır Panel: Slaytlar */}
                             {activeTab === 'slayt' && (
                               <div className="rounded-xl bg-white p-3 border border-line-2 flex flex-col gap-2 ms-pop-in">
-                                <span className="text-[12px] font-bold text-ink-2 flex items-center gap-1.5 pb-1 border-b border-line-2">
+                                <span className="text-xs font-bold text-ink-2 flex items-center gap-1.5 pb-1 border-b border-line-2">
                                   <Presentation className="w-3.5 h-3.5 text-accent" /> İlgili Ders Notu & Slaytlar
                                 </span>
                                 <div className="flex flex-col gap-2">
@@ -434,12 +434,12 @@ export const KazanimlarView: React.FC<Props> = ({
                                       className="rounded-lg bg-canvas p-2.5 flex items-center justify-between gap-2 border border-line-2/50"
                                     >
                                       <div className="min-w-0 flex-1">
-                                        <p className="m-0 text-[13px] font-semibold text-ink truncate">
+                                        <p className="m-0 text-sm font-semibold text-ink truncate">
                                           {sl.kaynak}{' '}
                                           <span className="font-normal text-ink-3">· sayfa {sl.sayfa}</span>
                                         </p>
                                         {sl.alinti && (
-                                          <p className="m-0 text-[12px] text-ink-2 mt-0.5 line-clamp-2">
+                                          <p className="m-0 text-xs text-ink-2 mt-0.5 line-clamp-2">
                                             {sl.alinti}
                                           </p>
                                         )}
@@ -464,14 +464,14 @@ export const KazanimlarView: React.FC<Props> = ({
                             {activeTab === 'cikmis' && (
                               <div className="rounded-xl bg-white p-3 border border-line-2 flex flex-col gap-2 ms-pop-in">
                                 <div className="flex items-center justify-between pb-1 border-b border-line-2">
-                                  <span className="text-[12px] font-bold text-ink-2 flex items-center gap-1.5">
+                                  <span className="text-xs font-bold text-ink-2 flex items-center gap-1.5">
                                     <Archive className="w-3.5 h-3.5 text-ok" /> Bağlı Çıkmış Sınav Soruları
                                   </span>
                                   {onNavigateToPastExams && (
                                     <button
                                       type="button"
                                       onClick={() => onNavigateToPastExams(konuGroup.konu)}
-                                      className="text-[11.5px] font-semibold text-accent hover:underline flex items-center gap-1 cursor-pointer"
+                                      className="text-xs font-semibold text-accent hover:underline flex items-center gap-1 cursor-pointer"
                                     >
                                       Çıkmış'ta Tümünü Gör <ExternalLink className="w-3 h-3" />
                                     </button>
@@ -483,21 +483,21 @@ export const KazanimlarView: React.FC<Props> = ({
                                       key={q.id}
                                       className="rounded-lg bg-canvas p-3 border border-line-2 flex flex-col gap-2"
                                     >
-                                      <div className="flex items-center justify-between text-[11.5px] text-ink-3">
+                                      <div className="flex items-center justify-between text-xs text-ink-3">
                                         <span className="font-semibold text-ink">
                                           Soru #{q.questionNumber || '–'} · {q.year || 'Arşiv'}
                                         </span>
                                         {q.correctAnswer && (
-                                          <span className="ms-tag is-ok text-[11px] font-bold">
+                                          <span className="ms-tag is-ok text-2xs font-bold">
                                             Doğru: {q.correctAnswer}
                                           </span>
                                         )}
                                       </div>
-                                      <p className="m-0 text-[12.5px] text-ink font-medium leading-relaxed">
+                                      <p className="m-0 text-sm text-ink font-medium leading-relaxed">
                                         {q.stem}
                                       </p>
                                       {q.options && q.options.length > 0 && (
-                                        <ul className="m-0 p-0 list-none flex flex-col gap-1 text-[12px] text-ink-2">
+                                        <ul className="m-0 p-0 list-none flex flex-col gap-1 text-xs text-ink-2">
                                           {q.options.map((opt) => (
                                             <li
                                               key={opt.key}
@@ -512,7 +512,7 @@ export const KazanimlarView: React.FC<Props> = ({
                                         </ul>
                                       )}
                                       {q.explanation && (
-                                        <div className="text-[11.5px] text-ink-3 pt-1 border-t border-line-2/40 italic">
+                                        <div className="text-xs text-ink-3 pt-1 border-t border-line-2/40 italic">
                                           {q.explanation}
                                         </div>
                                       )}
@@ -526,7 +526,7 @@ export const KazanimlarView: React.FC<Props> = ({
                             {activeTab === 'ornek' && (
                               <div className="rounded-xl bg-white p-3 border border-line-2 flex flex-col gap-2 ms-pop-in">
                                 <div className="flex items-center justify-between pb-1 border-b border-line-2">
-                                  <span className="text-[12px] font-bold text-ink-2 flex items-center gap-1.5">
+                                  <span className="text-xs font-bold text-ink-2 flex items-center gap-1.5">
                                     <Target className="w-3.5 h-3.5 text-accent" /> Kazanım Odaklı Örnek Çalışma Sorusu
                                   </span>
                                   {onNavigateToOrnek && (
@@ -537,7 +537,7 @@ export const KazanimlarView: React.FC<Props> = ({
                                         const targetKazanimNo = kazanim.ornekSorular?.[0]?.kazanimNo || (kIdx + 1);
                                         onNavigateToOrnek(targetDeckId, targetKazanimNo);
                                       }}
-                                      className="text-[11.5px] font-semibold text-accent hover:underline flex items-center gap-1 cursor-pointer"
+                                      className="text-xs font-semibold text-accent hover:underline flex items-center gap-1 cursor-pointer"
                                     >
                                       Örnek Sorular Modu <ExternalLink className="w-3 h-3" />
                                     </button>
@@ -554,13 +554,13 @@ export const KazanimlarView: React.FC<Props> = ({
                                         key={oq.id}
                                         className="rounded-lg bg-canvas p-3 border border-line-2 flex flex-col gap-2"
                                       >
-                                        <div className="flex items-center justify-between text-[11.5px] text-ink-3">
-                                          <span className="ms-tag is-accent text-[11px]">
+                                        <div className="flex items-center justify-between text-xs text-ink-3">
+                                          <span className="ms-tag is-accent text-2xs">
                                             {oq.zorluk || 'Standart'}
                                           </span>
                                           {solved && (
                                             <span
-                                              className={`ms-tag font-bold text-[11px] ${
+                                              className={`ms-tag font-bold text-2xs ${
                                                 isCorrect ? 'is-ok' : 'is-bad'
                                               }`}
                                             >
@@ -568,10 +568,10 @@ export const KazanimlarView: React.FC<Props> = ({
                                             </span>
                                           )}
                                         </div>
-                                        <p className="m-0 text-[12.5px] text-ink font-medium leading-relaxed">
+                                        <p className="m-0 text-sm text-ink font-medium leading-relaxed">
                                           {oq.soru}
                                         </p>
-                                        <div className="flex flex-col gap-1 text-[12px]">
+                                        <div className="flex flex-col gap-1 text-xs">
                                           {Object.entries(oq.secenekler || {}).map(([key, text]) => {
                                             const picked = userPick === key;
                                             const corr = key === oq.dogru;
@@ -597,7 +597,7 @@ export const KazanimlarView: React.FC<Props> = ({
                                           })}
                                         </div>
                                         {solved && oq.aciklama && (
-                                          <p className="m-0 text-[11.5px] text-ink-2 bg-field p-2 rounded-lg border border-line-2">
+                                          <p className="m-0 text-xs text-ink-2 bg-field p-2 rounded-lg border border-line-2">
                                             <b>Açıklama:</b> {oq.aciklama}
                                           </p>
                                         )}
@@ -611,7 +611,7 @@ export const KazanimlarView: React.FC<Props> = ({
                             {/* Açılır Panel: Sözlük Terimleri */}
                             {activeTab === 'sozluk' && (
                               <div className="rounded-xl bg-white p-3 border border-line-2 flex flex-col gap-2 ms-pop-in">
-                                <span className="text-[12px] font-bold text-ink-2 flex items-center gap-1.5 pb-1 border-b border-line-2">
+                                <span className="text-xs font-bold text-ink-2 flex items-center gap-1.5 pb-1 border-b border-line-2">
                                   <BookOpenText className="w-3.5 h-3.5 text-accent" /> İlgili Tıbbi Sözlük Kavramları
                                 </span>
                                 <div className="flex flex-col gap-2">
@@ -620,12 +620,12 @@ export const KazanimlarView: React.FC<Props> = ({
                                       key={idx}
                                       className="rounded-lg bg-canvas p-2.5 border border-line-2 flex flex-col gap-1"
                                     >
-                                      <h4 className="m-0 text-[13px] font-bold text-ink">{t.term}</h4>
-                                      <p className="m-0 text-[12px] text-ink-2 leading-relaxed">
+                                      <h4 className="m-0 text-sm font-bold text-ink">{t.term}</h4>
+                                      <p className="m-0 text-xs text-ink-2 leading-relaxed">
                                         {t.definition}
                                       </p>
                                       {t.pearl && (
-                                        <p className="m-0 text-[11.5px] text-ink-3 italic mt-0.5">
+                                        <p className="m-0 text-xs text-ink-3 italic mt-0.5">
                                           💡 {t.pearl}
                                         </p>
                                       )}
@@ -638,10 +638,10 @@ export const KazanimlarView: React.FC<Props> = ({
                             {/* Açılır Panel: Ders Özeti */}
                             {activeTab === 'ozet' && (
                               <div className="rounded-xl bg-white p-3 border border-line-2 flex flex-col gap-2 ms-pop-in">
-                                <span className="text-[12px] font-bold text-ink-2 flex items-center gap-1.5 pb-1 border-b border-line-2">
+                                <span className="text-xs font-bold text-ink-2 flex items-center gap-1.5 pb-1 border-b border-line-2">
                                   <Sparkles className="w-3.5 h-3.5 text-accent" /> İlgili Ders Özeti Noktaları
                                 </span>
-                                <ul className="m-0 pl-4 list-disc flex flex-col gap-1 text-[12.5px] text-ink-2">
+                                <ul className="m-0 pl-4 list-disc flex flex-col gap-1 text-sm text-ink-2">
                                   {kazanim.ozetler.map((bullet, idx) => (
                                     <li key={idx} className="leading-relaxed">
                                       {bullet}

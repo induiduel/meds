@@ -540,7 +540,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                 type="button"
                 onClick={handleTriggerDesktopSync}
                 disabled={isSyncingDesktop}
-                className="h-10 px-3.5 rounded-[10px] border border-line bg-white text-[14px] font-semibold text-ink inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-60"
+                className="h-10 px-3.5 rounded-[10px] border border-line bg-white text-base font-semibold text-ink inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-60"
                 title="Yerel ders notu klasörünü şimdi tara"
               >
                 {isSyncingDesktop ? <RefreshCw className="w-4 h-4 animate-spin" /> : <FolderOpen className="w-4 h-4" />}
@@ -551,7 +551,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
               href={DRIVE_FOLDER_URL}
               target="_blank"
               rel="noreferrer"
-              className="h-10 px-3.5 rounded-[10px] border border-line bg-white text-[14px] font-semibold text-ink inline-flex items-center gap-2 hover:border-line-2"
+              className="h-10 px-3.5 rounded-[10px] border border-line bg-white text-base font-semibold text-ink inline-flex items-center gap-2 hover:border-line-2"
             >
               <ExternalLink className="w-4 h-4" />
               Drive klasörü
@@ -560,7 +560,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
               <button
                 type="button"
                 onClick={() => setIsAddingNote(true)}
-                className="h-10 px-3.5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer"
+                className="h-10 px-3.5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-base font-semibold inline-flex items-center gap-2 cursor-pointer"
               >
                 <Plus className="w-4 h-4" />
                 Not yükle
@@ -573,7 +573,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
         {isAdmin && <DriveSyncVisualizer onSelectLecture={handleOpenSlideFromMonitor} />}
 
         <div className="flex flex-col gap-1.5">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 text-[13px]">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 text-sm">
             <span className="text-ink-2">
               <strong className="text-ink font-semibold">
                 {renderedSlidesCount} / {TOTAL_CATALOG_SLIDES}
@@ -595,7 +595,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
         </div>
 
         {feedbackMessage && (
-          <div role="status" className="px-3.5 py-2.5 rounded-xl bg-ok-soft text-[14px] text-ink flex items-center justify-between gap-3">
+          <div role="status" className="px-3.5 py-2.5 rounded-xl bg-ok-soft text-base text-ink flex items-center justify-between gap-3">
             <span className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />
               {feedbackMessage}
@@ -621,13 +621,13 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                 role="tab"
                 aria-selected={on}
                 onClick={() => setActiveTab(id)}
-                className={`min-h-10 px-2 rounded-lg flex items-center justify-center gap-2 text-[14px] cursor-pointer ${
+                className={`min-h-10 px-2 rounded-lg flex items-center justify-center gap-2 text-base cursor-pointer ${
                   on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
                 }`}
               >
                 <Icon className={`w-4 h-4 shrink-0 ${on ? 'text-accent' : ''}`} />
                 <span className="truncate">{label}</span>
-                <span className="font-mono text-[12px] text-ink-3">{count}</span>
+                <span className="font-mono text-xs text-ink-3">{count}</span>
               </button>
             );
           })}
@@ -638,29 +638,29 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
       {activeTab === 'drive_catalog' && (
         <div className="space-y-4">
           {/* Filter Bar */}
-          <div className="bg-white rounded-xl p-4 border border-slate-200 shadow-xs space-y-3">
+          <div className="bg-white rounded-xl p-4 border border-line shadow-xs space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               {/* Search */}
               <div className="relative flex-1">
-                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-ink-3" />
                 <input
                   type="text"
                   placeholder="Drive slayt adı veya konu ara (örn. Nekroz, Glomerül, BPH, Sepsis)..."
                   value={catalogSearch}
                   onChange={(e) => setCatalogSearch(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:bg-white"
+                  className="w-full pl-9 pr-3 py-2 bg-field border border-line rounded-lg text-xs text-ink placeholder-ink-3 focus:outline-none focus:ring-2 focus:ring-ok/30 focus:bg-white"
                 />
               </div>
 
               {/* Status Filter */}
               <div className="flex items-center gap-1.5 text-xs shrink-0">
-                <span className="text-slate-500 font-semibold text-[11px]">Durum:</span>
+                <span className="text-ink-3 font-semibold text-2xs">Durum:</span>
                 <button
                   onClick={() => setCatalogStatusFilter('all')}
                   className={`px-2.5 py-1.5 rounded-lg font-bold text-xs cursor-pointer ${
                     catalogStatusFilter === 'all'
                       ? 'bg-accent-soft text-accent ring-1 ring-inset ring-accent/40'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      : 'bg-field text-ink-2 hover:bg-line'
                   }`}
                 >
                   Tümü ({TOTAL_CATALOG_SLIDES})
@@ -669,8 +669,8 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                   onClick={() => setCatalogStatusFilter('unrendered')}
                   className={`px-2.5 py-1.5 rounded-lg font-bold text-xs cursor-pointer ${
                     catalogStatusFilter === 'unrendered'
-                      ? 'bg-amber-600 text-white'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      ? 'bg-warn text-white'
+                      : 'bg-field text-ink-2 hover:bg-line'
                   }`}
                 >
                   İşlenmemiş ({TOTAL_CATALOG_SLIDES - renderedSlidesCount})
@@ -679,8 +679,8 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                   onClick={() => setCatalogStatusFilter('rendered')}
                   className={`px-2.5 py-1.5 rounded-lg font-bold text-xs cursor-pointer ${
                     catalogStatusFilter === 'rendered'
-                      ? 'bg-emerald-600 text-white'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      ? 'bg-ok text-white'
+                      : 'bg-field text-ink-2 hover:bg-line'
                   }`}
                 >
                   İşlenmiş ({renderedSlidesCount})
@@ -689,7 +689,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
             </div>
 
             {/* Discipline Badges */}
-            <div className="flex flex-wrap gap-1.5 pt-1 border-t border-slate-100 text-xs">
+            <div className="flex flex-wrap gap-1.5 pt-1 border-t border-line text-xs">
               {[
                 { name: 'Tümü', count: 40 },
                 { name: 'Tıbbi Patoloji', count: 22 },
@@ -703,11 +703,11 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                   onClick={() => setCatalogDiscipline(d.name)}
                   className={`px-3 py-1 rounded-lg text-xs font-semibold cursor-pointer transition-colors ${
                     catalogDiscipline === d.name
-                      ? 'bg-teal-700 text-white shadow-xs'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      ? 'bg-ok text-white shadow-xs'
+                      : 'bg-field text-ink-2 hover:bg-line'
                   }`}
                 >
-                  {d.name} <span className="opacity-70 text-[11px]">({d.count})</span>
+                  {d.name} <span className="opacity-70 text-2xs">({d.count})</span>
                 </button>
               ))}
             </div>
@@ -725,33 +725,33 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                   key={slide.id}
                   className={`rounded-2xl p-5 border transition-all space-y-3.5 ${
                     isRendered
-                      ? 'bg-emerald-50/40 border-emerald-300 shadow-xs'
-                      : 'bg-white border-slate-200 hover:border-teal-300 shadow-xs'
+                      ? 'bg-ok-soft/40 border-ok/30 shadow-xs'
+                      : 'bg-white border-line hover:border-ok/30 shadow-xs'
                   }`}
                 >
                   {/* Card Header */}
                   <div className="flex items-start justify-between gap-3">
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
-                        <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+                        <span className="text-2xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-field text-ink-2 border border-line">
                           {slide.discipline}
                         </span>
-                        <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-teal-100 text-teal-800">
+                        <span className="text-2xs font-bold px-2 py-0.5 rounded-full bg-ok-soft text-ok">
                           {slide.totalRealPages} Gerçek Sayfa
                         </span>
                       </div>
-                      <h3 className="font-bold text-sm text-slate-900 leading-snug">
+                      <h3 className="font-bold text-sm text-ink leading-snug">
                         {slide.title}
                       </h3>
                     </div>
 
                     {isRendered ? (
-                      <span className="inline-flex items-center gap-1 bg-emerald-100 text-emerald-800 text-[11px] font-bold px-2.5 py-1 rounded-full border border-emerald-300 shrink-0">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      <span className="inline-flex items-center gap-1 bg-ok-soft text-ok text-2xs font-bold px-2.5 py-1 rounded-full border border-ok/30 shrink-0">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-ok" />
                         <span>Render Edildi</span>
                       </span>
                     ) : (
-                      <span className="inline-flex items-center gap-1 bg-slate-100 text-slate-600 text-[11px] font-bold px-2.5 py-1 rounded-full border border-slate-200 shrink-0">
+                      <span className="inline-flex items-center gap-1 bg-field text-ink-2 text-2xs font-bold px-2.5 py-1 rounded-full border border-line shrink-0">
                         <span>İşlenmedi</span>
                       </span>
                     )}
@@ -759,14 +759,14 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
                   {/* Key Topics */}
                   <div className="space-y-1">
-                    <span className="text-[11px] text-slate-400 font-semibold uppercase block">
+                    <span className="text-2xs text-ink-3 font-semibold uppercase block">
                       Dersin Kapsadığı Konular:
                     </span>
                     <div className="flex flex-wrap gap-1">
                       {slide.keyTopics.map((topic, i) => (
                         <span
                           key={i}
-                          className="bg-slate-100 text-slate-600 text-[11px] px-2 py-0.5 rounded-md font-medium"
+                          className="bg-field text-ink-2 text-2xs px-2 py-0.5 rounded-md font-medium"
                         >
                           {topic}
                         </span>
@@ -775,12 +775,12 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                   </div>
 
                   {/* Card Actions */}
-                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between gap-2">
+                  <div className="pt-2 border-t border-line flex items-center justify-between gap-2">
                     <a
                       href={`https://drive.google.com/file/d/${slide.fileId}/view?usp=sharing`}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-xs text-slate-500 hover:text-teal-700 flex items-center gap-1"
+                      className="text-xs text-ink-3 hover:text-ok flex items-center gap-1"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       <span>Drive'da İncele</span>
@@ -796,7 +796,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                                 setActiveTab('rendered_notes');
                               }
                             }}
-                            className="bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 cursor-pointer shadow-xs"
+                            className="bg-ok hover:bg-ok text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 cursor-pointer shadow-xs"
                           >
                             <Eye className="w-3.5 h-3.5" />
                             <span>Sayfaları Oku</span>
@@ -806,7 +806,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                             onClick={() => handleRenderSlide(slide)}
                             disabled={isProcessing}
                             title="Tüm sayfaları yeniden oluşturup günceller"
-                            className="text-slate-400 hover:text-slate-600 p-1.5 rounded-lg hover:bg-slate-100 cursor-pointer"
+                            className="text-ink-3 hover:text-ink-2 p-1.5 rounded-lg hover:bg-field cursor-pointer"
                           >
                             <RefreshCw className={`w-3.5 h-3.5 ${isProcessing ? 'animate-spin' : ''}`} />
                           </button>
@@ -815,7 +815,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                             <button
                               onClick={() => handleDeleteNote(slide.id, slide.title)}
                               title="İşlenmiş notu siler"
-                              className="text-rose-400 hover:text-rose-600 p-1.5 rounded-lg hover:bg-rose-50 cursor-pointer"
+                              className="text-bad-text hover:text-bad-text p-1.5 rounded-lg hover:bg-bad-soft cursor-pointer"
                             >
                               <Trash2 className="w-3.5 h-3.5" />
                             </button>
@@ -825,7 +825,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                         <button
                           onClick={() => handleRenderSlide(slide)}
                           disabled={isProcessing}
-                          className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-1.5 cursor-pointer shadow-xs disabled:opacity-50"
+                          className="bg-ok hover:bg-ok text-white font-bold px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-1.5 cursor-pointer shadow-xs disabled:opacity-50"
                         >
                           {isProcessing ? (
                             <>
@@ -848,10 +848,10 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
           </div>
 
           {filteredCatalog.length === 0 && (
-            <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center space-y-3">
-              <Search className="w-10 h-10 text-slate-300 mx-auto" />
-              <h4 className="font-bold text-slate-800">Aramanıza uygun slayt bulunamadı</h4>
-              <p className="text-xs text-slate-500">
+            <div className="bg-white rounded-2xl border border-line p-12 text-center space-y-3">
+              <Search className="w-10 h-10 text-ink-3 mx-auto" />
+              <h4 className="font-bold text-ink">Aramanıza uygun slayt bulunamadı</h4>
+              <p className="text-xs text-ink-3">
                 Farklı bir anabilim dalı veya anahtar kelime seçebilirsiniz.
               </p>
             </div>
@@ -863,19 +863,19 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
       {activeTab === 'rendered_notes' && (
         <div className="space-y-4">
           {notes.length === 0 ? (
-            <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center space-y-4 shadow-xs">
-              <div className="w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mx-auto">
+            <div className="bg-white rounded-2xl border border-line p-12 text-center space-y-4 shadow-xs">
+              <div className="w-14 h-14 rounded-2xl bg-ok-soft text-ok flex items-center justify-center mx-auto">
                 <BookMarked className="w-8 h-8" />
               </div>
               <div className="space-y-1">
-                <h4 className="font-bold text-base text-slate-900">Henüz Render Edilmiş Ders Notu Bulunmuyor</h4>
-                <p className="text-xs text-slate-500 max-w-md mx-auto leading-relaxed">
+                <h4 className="font-bold text-base text-ink">Henüz Render Edilmiş Ders Notu Bulunmuyor</h4>
+                <p className="text-xs text-ink-3 max-w-md mx-auto leading-relaxed">
                   Gerçek dışı örnek notlar temizlendi. Google Drive kataloğundan istediğiniz slaytı tek tıkla renderlayabilir ya da "+ Yeni Slayt / Not Yükle" butonunu kullanarak kendi ders notunuzu ekleyebilirsiniz.
                 </p>
               </div>
               <button
                 onClick={() => setActiveTab('drive_catalog')}
-                className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-4 py-2 rounded-xl text-xs inline-flex items-center gap-1.5 cursor-pointer shadow-sm"
+                className="bg-ok hover:bg-ok text-white font-bold px-4 py-2 rounded-xl text-xs inline-flex items-center gap-1.5 cursor-pointer shadow-sm"
               >
                 <FolderGit2 className="w-4 h-4" />
                 <span>Google Drive Slayt Kataloğuna Git</span>
@@ -885,25 +885,25 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
               {/* Left Sidebar: Rendered Notes List */}
               <div className="lg:col-span-4 space-y-3">
-                <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-xs space-y-3">
+                <div className="bg-white rounded-2xl border border-line p-4 shadow-xs space-y-3">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-bold text-sm text-slate-900">İşlenmiş Notlar ({notes.length})</h3>
+                    <h3 className="font-bold text-sm text-ink">İşlenmiş Notlar ({notes.length})</h3>
                     <button
                       onClick={() => setActiveTab('drive_catalog')}
-                      className="text-[11px] font-bold text-teal-700 hover:underline"
+                      className="text-2xs font-bold text-ok hover:underline"
                     >
                       + Daha Fazla Slayt Ekle
                     </button>
                   </div>
 
                   <div className="relative">
-                    <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+                    <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-ink-3" />
                     <input
                       type="text"
                       placeholder="Notlarda ara..."
                       value={notesSearch}
                       onChange={(e) => setNotesSearch(e.target.value)}
-                      className="w-full pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs"
+                      className="w-full pl-8 pr-3 py-1.5 bg-field border border-line rounded-lg text-xs"
                     />
                   </div>
 
@@ -916,16 +916,16 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                           onClick={() => setActiveNote(note)}
                           className={`p-3 rounded-xl border text-left cursor-pointer transition-all ${
                             isSelected
-                              ? 'bg-teal-50 border-teal-500 shadow-xs'
-                              : 'bg-white border-slate-200 hover:border-slate-300'
+                              ? 'bg-ok-soft border-ok shadow-xs'
+                              : 'bg-white border-line hover:border-line-2'
                           }`}
                         >
-                          <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1">
-                            <span className="font-bold uppercase text-teal-700">{note.discipline}</span>
+                          <div className="flex items-center justify-between text-2xs text-ink-3 mb-1">
+                            <span className="font-bold uppercase text-ok">{note.discipline}</span>
                             <span>{note.totalSlides} Sayfa</span>
                           </div>
-                          <h4 className="font-bold text-xs text-slate-900 line-clamp-1">{note.title}</h4>
-                          <p className="text-[11px] text-slate-500 mt-0.5">
+                          <h4 className="font-bold text-xs text-ink line-clamp-1">{note.title}</h4>
+                          <p className="text-2xs text-ink-3 mt-0.5">
                             {note.instructor || 'Anabilim Dalı'} • {new Date(note.uploadedAt).toLocaleDateString('tr-TR')}
                           </p>
                         </div>
@@ -938,20 +938,20 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
               {/* Right Content: Page-by-Page Interactive Slide Reader */}
               <div className="lg:col-span-8">
                 {activeNote ? (
-                  <div className="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden space-y-4 p-5 sm:p-6">
+                  <div className="bg-white rounded-2xl border border-line shadow-xs overflow-hidden space-y-4 p-5 sm:p-6">
                     {/* Note Header */}
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-line">
                       <div>
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="bg-teal-100 text-teal-800 text-[11px] font-bold px-2 py-0.5 rounded-full">
+                          <span className="bg-ok-soft text-ok text-2xs font-bold px-2 py-0.5 rounded-full">
                             {activeNote.discipline}
                           </span>
-                          <span className="text-slate-400 text-xs">
+                          <span className="text-ink-3 text-xs">
                             Toplam {activeNote.totalSlides} Sayfa
                           </span>
                         </div>
-                        <h3 className="font-black text-lg text-slate-900">{activeNote.title}</h3>
-                        <p className="text-xs text-slate-500 mt-0.5">
+                        <h3 className="font-black text-lg text-ink">{activeNote.title}</h3>
+                        <p className="text-xs text-ink-3 mt-0.5">
                           {activeNote.instructor && `Eğitici: ${activeNote.instructor} • `}
                           Yükleyen: {activeNote.uploadedBy}
                         </p>
@@ -960,7 +960,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                       <div className="flex items-center gap-2">
                         <button
                           onClick={() => setReaderNote(activeNote)}
-                          className="bg-slate-900 hover:bg-slate-800 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 cursor-pointer shadow-xs"
+                          className="bg-ink hover:bg-ink text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 cursor-pointer shadow-xs"
                         >
                           <BookOpen className="w-3.5 h-3.5" />
                           <span>Tam Ekran Okuyucu</span>
@@ -969,7 +969,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                         {isAdmin && (
                           <button
                             onClick={() => handleDeleteNote(activeNote.id, activeNote.title)}
-                            className="text-rose-500 hover:text-rose-700 p-1.5 rounded-lg hover:bg-rose-50 cursor-pointer"
+                            className="text-bad-text hover:text-bad-text p-1.5 rounded-lg hover:bg-bad-soft cursor-pointer"
                             title="Bu notu sil"
                           >
                             <Trash2 className="w-4 h-4" />
@@ -983,21 +983,21 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                       {activeNote.pages.map((page) => (
                         <div
                           key={page.pageNumber}
-                          className="border border-slate-200 rounded-xl p-4 bg-slate-50/50 space-y-2.5"
+                          className="border border-line rounded-xl p-4 bg-field/50 space-y-2.5"
                         >
-                          <div className="flex items-center justify-between text-xs border-b border-slate-200/60 pb-2">
-                            <span className="font-bold text-slate-700 bg-white px-2 py-0.5 rounded border border-slate-200">
+                          <div className="flex items-center justify-between text-xs border-b border-line/60 pb-2">
+                            <span className="font-bold text-ink-2 bg-white px-2 py-0.5 rounded border border-line">
                               Sayfa / Slayt #{page.pageNumber} / {activeNote.totalSlides}
                             </span>
 
                             <button
                               onClick={() => copyPageContent(page.content, page.pageNumber)}
-                              className="text-slate-500 hover:text-slate-900 flex items-center gap-1 cursor-pointer text-[11px]"
+                              className="text-ink-3 hover:text-ink flex items-center gap-1 cursor-pointer text-2xs"
                             >
                               {copySuccess[page.pageNumber] ? (
                                 <>
-                                  <Check className="w-3 h-3 text-emerald-600" />
-                                  <span className="text-emerald-700 font-bold">Kopyalandı</span>
+                                  <Check className="w-3 h-3 text-ok" />
+                                  <span className="text-ok font-bold">Kopyalandı</span>
                                 </>
                               ) : (
                                 <>
@@ -1008,17 +1008,17 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                             </button>
                           </div>
 
-                          <div className="bg-white p-3.5 rounded-lg border border-slate-100">
+                          <div className="bg-white p-3.5 rounded-lg border border-line">
                             <SourceText text={String(page.content || '')} size="sm" />
                           </div>
 
                           {page.keywords && page.keywords.length > 0 && (
                             <div className="flex flex-wrap gap-1 items-center pt-1">
-                              <span className="text-[11px] text-slate-400 font-bold">Kavramlar:</span>
+                              <span className="text-2xs text-ink-3 font-bold">Kavramlar:</span>
                               {page.keywords.map((kw, i) => (
                                 <span
                                   key={i}
-                                  className="bg-slate-200/70 text-slate-700 text-[11px] px-1.5 py-0.5 rounded"
+                                  className="bg-line/70 text-ink-2 text-2xs px-1.5 py-0.5 rounded"
                                 >
                                   {kw}
                                 </span>
@@ -1030,7 +1030,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                     </div>
                   </div>
                 ) : (
-                  <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center text-slate-400">
+                  <div className="bg-white rounded-2xl border border-line p-12 text-center text-ink-3">
                     Sol taraftaki listeden görüntülemek istediğiniz ders notunu seçiniz.
                   </div>
                 )}
@@ -1042,30 +1042,30 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
       {/* MODAL: ADD MANUAL / CUSTOM LECTURE NOTE */}
       {isAddingNote && (
-        <div className="ms-overlay fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-2xl border border-slate-200 max-w-2xl w-full p-6 shadow-2xl space-y-4 my-8">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-              <div className="flex items-center gap-2 text-slate-900 font-bold">
-                <BookMarked className="w-5 h-5 text-teal-600" />
+        <div className="ms-overlay fixed inset-0 z-50 bg-ink/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white rounded-2xl border border-line max-w-2xl w-full p-6 shadow-2xl space-y-4 my-8">
+            <div className="flex items-center justify-between border-b border-line pb-3">
+              <div className="flex items-center gap-2 text-ink font-bold">
+                <BookMarked className="w-5 h-5 text-ok" />
                 <span>Yeni Ders Notu / Slayt Yükle</span>
               </div>
               <button
                 onClick={() => setIsAddingNote(false)}
-                className="text-slate-400 hover:text-slate-600 text-xs px-2 py-1 cursor-pointer"
+                className="text-ink-3 hover:text-ink-2 text-xs px-2 py-1 cursor-pointer"
               >
                 Kapat
               </button>
             </div>
 
             {/* Upload Mode Selector */}
-            <div className="flex border-b border-slate-200 text-xs font-bold">
+            <div className="flex border-b border-line text-xs font-bold">
               <button
                 type="button"
                 onClick={() => setAddMode('text')}
                 className={`flex-1 py-2 text-center border-b-2 cursor-pointer transition-colors ${
                   addMode === 'text'
-                    ? 'border-teal-700 text-teal-900 bg-teal-50/50'
-                    : 'border-transparent text-slate-500 hover:text-slate-800'
+                    ? 'border-ok text-ok bg-ok-soft/50'
+                    : 'border-transparent text-ink-3 hover:text-ink'
                 }`}
               >
                 Metin Yapıştırarak Ekle
@@ -1075,8 +1075,8 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                 onClick={() => setAddMode('upload')}
                 className={`flex-1 py-2 text-center border-b-2 cursor-pointer transition-colors ${
                   addMode === 'upload'
-                    ? 'border-teal-700 text-teal-900 bg-teal-50/50'
-                    : 'border-transparent text-slate-500 hover:text-slate-800'
+                    ? 'border-ok text-ok bg-ok-soft/50'
+                    : 'border-transparent text-ink-3 hover:text-ink'
                 }`}
               >
                 PDF / DOCX Dosyası Yükle
@@ -1085,18 +1085,18 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
             {addMode === 'upload' ? (
               <div className="space-y-4 text-xs">
-                <div className="border-2 border-dashed border-teal-300 rounded-xl p-6 text-center bg-teal-50/30 space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center mx-auto">
+                <div className="border-2 border-dashed border-ok/30 rounded-xl p-6 text-center bg-ok-soft/30 space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-ok-soft text-ok flex items-center justify-center mx-auto">
                     <UploadCloud className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900">Ders Slaytını Yükleyin (.pdf veya .docx)</h4>
-                    <p className="text-slate-500 text-[11px] mt-1">
+                    <h4 className="font-bold text-ink">Ders Slaytını Yükleyin (.pdf veya .docx)</h4>
+                    <p className="text-ink-3 text-2xs mt-1">
                       Sistem slayttaki tüm sayfaları metin olarak ayıklar ve soru eşleştirmelerine bağlar.
                     </p>
                   </div>
-                  <label className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white font-bold px-4 py-2 rounded-lg cursor-pointer transition-all shadow-xs">
-                    <FileUp className="w-4 h-4 text-teal-200" />
+                  <label className="inline-flex items-center gap-2 bg-ok hover:bg-ok text-white font-bold px-4 py-2 rounded-lg cursor-pointer transition-all shadow-xs">
+                    <FileUp className="w-4 h-4 text-ok-soft" />
                     <span>Dosya Seç (.pdf, .docx)</span>
                     <input
                       type="file"
@@ -1109,8 +1109,8 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                 </div>
 
                 {pdfUploadStatus && (
-                  <div className="p-3 bg-amber-50 border border-amber-300 text-amber-950 rounded-xl flex items-center gap-2.5 font-medium animate-pulse">
-                    <RefreshCw className="w-4 h-4 text-amber-700 animate-spin shrink-0" />
+                  <div className="p-3 bg-warn-soft border border-warn/30 text-warn rounded-xl flex items-center gap-2.5 font-medium animate-pulse">
+                    <RefreshCw className="w-4 h-4 text-warn animate-spin shrink-0" />
                     <span>{pdfUploadStatus}</span>
                   </div>
                 )}
@@ -1118,11 +1118,11 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
             ) : (
               <form onSubmit={handleSaveManualNote} className="space-y-4 text-xs">
                 <div>
-                  <label className="font-bold text-slate-700 block mb-1">Ders / Anabilim Dalı</label>
+                  <label className="font-bold text-ink-2 block mb-1">Ders / Anabilim Dalı</label>
                   <select
                     value={newDiscipline}
                     onChange={(e) => setNewDiscipline(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white"
+                    className="w-full px-3 py-2 rounded-lg border border-line-2 bg-white"
                   >
                     <option value="Tıbbi Patoloji">Tıbbi Patoloji</option>
                     <option value="Tıbbi Genetik">Tıbbi Genetik</option>
@@ -1135,34 +1135,34 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                 </div>
 
                 <div>
-                  <label className="font-bold text-slate-700 block mb-1">Ders Başlığı</label>
+                  <label className="font-bold text-ink-2 block mb-1">Ders Başlığı</label>
                   <input
                     type="text"
                     required
                     placeholder="Örn: 2) Hücre Hasarı ve Nekroz"
                     value={newTitle}
                     onChange={(e) => setNewTitle(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-3 py-2 rounded-lg border border-line-2 focus:ring-2 focus:ring-ok"
                   />
                 </div>
 
                 <div>
-                  <label className="font-bold text-slate-700 block mb-1">Dersi Veren Öğretim Üyesi (İsteğe bağlı)</label>
+                  <label className="font-bold text-ink-2 block mb-1">Dersi Veren Öğretim Üyesi (İsteğe bağlı)</label>
                   <input
                     type="text"
                     placeholder="Örn: Prof. Dr. ..."
                     value={newInstructor}
                     onChange={(e) => setNewInstructor(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg border border-slate-300"
+                    className="w-full px-3 py-2 rounded-lg border border-line-2"
                   />
                 </div>
 
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <label className="font-bold text-slate-700 block">
+                    <label className="font-bold text-ink-2 block">
                       Ders Notu / Slayt İçeriği (Sayfa sayfa yapıştırın)
                     </label>
-                    <span className="text-[11px] text-slate-500">
+                    <span className="text-2xs text-ink-3">
                       Sayfa ayracı: <code>{pageDelimiter}</code>
                     </span>
                   </div>
@@ -1172,25 +1172,25 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                     placeholder={`Sayfa 1 slayt metni...\n\n--- Sayfa ---\n\nSayfa 2 slayt metni...\n\n--- Sayfa ---\n\nSayfa 3 slayt metni...`}
                     value={newRawContent}
                     onChange={(e) => setNewRawContent(e.target.value)}
-                    className="w-full p-3 rounded-lg border border-slate-300 font-mono text-xs focus:ring-2 focus:ring-teal-500"
+                    className="w-full p-3 rounded-lg border border-line-2 font-mono text-xs focus:ring-2 focus:ring-ok"
                   />
-                  <p className="text-[11px] text-slate-500 mt-1">
+                  <p className="text-2xs text-ink-3 mt-1">
                     İpucu: Slayt sayfalarını ayırmak için aralarına <code>--- Sayfa ---</code> yazın. Sayfalar numaralandırılacak ve soru eşleştirmelerinde kullanılacaktır.
                   </p>
                 </div>
 
-                <div className="flex items-center justify-end gap-2 pt-2 border-t border-slate-100">
+                <div className="flex items-center justify-end gap-2 pt-2 border-t border-line">
                   <button
                     type="button"
                     onClick={() => setIsAddingNote(false)}
-                    className="px-4 py-2 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50 cursor-pointer"
+                    className="px-4 py-2 rounded-lg border border-line-2 text-ink-2 hover:bg-field cursor-pointer"
                   >
                     İptal
                   </button>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="px-5 py-2 rounded-lg bg-teal-700 hover:bg-teal-800 text-white font-bold flex items-center gap-1.5 shadow-sm cursor-pointer"
+                    className="px-5 py-2 rounded-lg bg-ok hover:bg-ok text-white font-bold flex items-center gap-1.5 shadow-sm cursor-pointer"
                   >
                     <CheckCircle2 className="w-4 h-4" />
                     <span>{isSubmitting ? 'Kaydediliyor...' : 'Ders Notunu Render Et & Kaydet'}</span>

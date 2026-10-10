@@ -398,10 +398,10 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
             <Layers className="w-5 h-5" />
           </span>
           <div className="flex-1 min-w-0">
-            <h2 id="dedup-title" className="m-0 font-display font-bold text-[19px] tracking-[-0.02em] leading-tight">
+            <h2 id="dedup-title" className="m-0 font-display font-bold text-xl tracking-[-0.02em] leading-tight">
               Taslak birleştirme
             </h2>
-            <p className="m-0 text-[13px] text-ink-3 truncate">{shortCommittee}</p>
+            <p className="m-0 text-sm text-ink-3 truncate">{shortCommittee}</p>
           </div>
           <button
             type="button"
@@ -428,13 +428,13 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 px-4 sm:px-5 pb-3 [@media(max-height:620px)]:hidden">
           {stats.map((s) => (
             <div key={s.label} className="rounded-xl bg-canvas px-3 py-2 flex flex-col">
-              <span className="flex items-center gap-1.5 text-[12px] text-ink-2">
+              <span className="flex items-center gap-1.5 text-xs text-ink-2">
                 <span className="w-2 h-2 rounded-full" style={{ background: s.dot }} aria-hidden="true" />
                 {s.label}
               </span>
               <span className="flex items-baseline gap-1.5">
-                <span className="font-mono text-[20px] font-semibold text-ink leading-tight">{s.value}</span>
-                {s.hint && <span className="text-[12px] text-ink-3 truncate">{s.hint}</span>}
+                <span className="font-mono text-xl font-semibold text-ink leading-tight">{s.value}</span>
+                {s.hint && <span className="text-xs text-ink-3 truncate">{s.hint}</span>}
               </span>
             </div>
           ))}
@@ -452,13 +452,13 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                   role="tab"
                   aria-selected={on}
                   onClick={() => setActiveFilter(t.id)}
-                  className={`shrink-0 h-8 px-3 rounded-lg text-[13.5px] whitespace-nowrap cursor-pointer inline-flex items-center gap-1.5 transition-colors ${
+                  className={`shrink-0 h-8 px-3 rounded-lg text-base whitespace-nowrap cursor-pointer inline-flex items-center gap-1.5 transition-colors ${
                     on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
                   }`}
                 >
                   {t.id === 'manual' && <GitMerge className="w-3.5 h-3.5" />}
                   {t.label}
-                  {t.count !== undefined && <span className={`font-mono text-[12px] ${on ? 'text-accent' : 'text-ink-3'}`}>{t.count}</span>}
+                  {t.count !== undefined && <span className={`font-mono text-xs ${on ? 'text-accent' : 'text-ink-3'}`}>{t.count}</span>}
                 </button>
               );
             })}
@@ -469,8 +469,8 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
               type="button"
               onClick={() => (confirmBatch ? (setConfirmBatch(false), handleBatchMergeReady()) : setConfirmBatch(true))}
               disabled={isBatchMerging}
-              className={`shrink-0 h-10 px-3.5 rounded-[11px] text-[13.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 transition-colors ${
-                confirmBatch ? 'bg-rose-700 text-white' : 'bg-ok text-white hover:bg-emerald-900'
+              className={`shrink-0 h-10 px-3.5 rounded-[11px] text-base font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 transition-colors ${
+                confirmBatch ? 'bg-bad text-white' : 'bg-ok text-white hover:bg-ok'
               }`}
             >
               <Zap className="w-4 h-4" />
@@ -481,17 +481,17 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
         </div>
 
         {/* Body */}
-        <div className="relative overflow-y-auto bg-blue-50 px-4 sm:px-5 py-4 flex flex-col gap-2.5">
+        <div className="relative overflow-y-auto bg-accent-soft px-4 sm:px-5 py-4 flex flex-col gap-2.5">
           {loading ? (
             <div role="status" className="py-14 flex flex-col items-center gap-2 text-center ms-fade-in">
               <CapsuleLoader />
-              <p className="m-0 text-[15px] font-semibold text-ink">Taslaklar taranıyor…</p>
-              <p className="m-0 text-[13px] text-ink-3">Tıbbi kavramlar ve şık varyasyonları karşılaştırılıyor</p>
+              <p className="m-0 text-md font-semibold text-ink">Taslaklar taranıyor…</p>
+              <p className="m-0 text-sm text-ink-3">Tıbbi kavramlar ve şık varyasyonları karşılaştırılıyor</p>
             </div>
           ) : activeFilter === 'merged' ? (
             <>
               <div className="flex items-center justify-between gap-2">
-                <p className="m-0 text-[13.5px] text-ink-2">
+                <p className="m-0 text-base text-ink-2">
                   Daha önce birleştirilmiş (iç içe geçmiş) taslaklar aşağıda listelenmiştir. Her bir taslağın parçalarını inceleyebilir, hata durumunda <strong className="text-ink">"Taslakları Ayır (Geri Al)"</strong> butonuyla eski bağımsız hallerine döndürebilirsiniz.
                 </p>
               </div>
@@ -513,24 +513,24 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                     return (
                       <li
                         key={q.id}
-                        className="rounded-2xl bg-white border border-emerald-200 shadow-sm overflow-hidden flex flex-col"
+                        className="rounded-2xl bg-white border border-ok/30 shadow-sm overflow-hidden flex flex-col"
                       >
                         {/* Başlık ve Butonlar */}
-                        <div className="flex items-center gap-3 px-4 py-3 bg-emerald-50 border-b border-emerald-100">
-                          <span className="w-9 h-9 rounded-[10px] bg-ok-soft text-ok font-mono text-[13px] font-bold flex items-center justify-center shrink-0">
+                        <div className="flex items-center gap-3 px-4 py-3 bg-ok-soft border-b border-ok/30">
+                          <span className="w-9 h-9 rounded-[10px] bg-ok-soft text-ok font-mono text-sm font-bold flex items-center justify-center shrink-0">
                             {numLabel(q)}
                           </span>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2">
-                              <span className="font-semibold text-ink text-[14.5px] truncate">
+                              <span className="font-semibold text-ink text-md truncate">
                                 {q.topic || q.discipline || 'Birleştirilmiş Soru'}
                               </span>
-                              <span className="h-5 px-2 rounded-full bg-ok text-white text-[11px] font-semibold inline-flex items-center gap-1 shrink-0">
+                              <span className="h-5 px-2 rounded-full bg-ok text-white text-2xs font-semibold inline-flex items-center gap-1 shrink-0">
                                 <Layers className="w-3 h-3" />
                                 {satelliteCount > 0 ? `${satelliteCount + 1} taslak birleşik` : 'Birleşik'}
                               </span>
                             </div>
-                            <span className="text-[12px] text-ink-3">
+                            <span className="text-xs text-ink-3">
                               {q.discipline} · {q.fragments?.length || 0} parça · {q.options?.length || 0} şık
                             </span>
                           </div>
@@ -538,7 +538,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                             <button
                               type="button"
                               onClick={() => setOptimizingQuestion(q)}
-                              className="h-8 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-[12.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
+                              className="h-8 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-sm font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
                               title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür"
                             >
                               <Wand2 className="w-3.5 h-3.5" />
@@ -547,7 +547,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                             <button
                               type="button"
                               onClick={() => setInspectingMergedId(isInspecting ? null : q.id)}
-                              className="h-8 px-2.5 rounded-lg border border-line bg-white text-[12.5px] font-medium text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer"
+                              className="h-8 px-2.5 rounded-lg border border-line bg-white text-sm font-medium text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer"
                             >
                               {isInspecting ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
                               <span>{isInspecting ? 'Kapat' : 'İncele'}</span>
@@ -556,7 +556,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                               type="button"
                               onClick={() => handleUnmergeQuestion(q.id)}
                               disabled={isUnmerging}
-                              className="h-8 px-2.5 rounded-lg border border-rose-300 bg-rose-50 text-rose-700 text-[12.5px] font-semibold hover:bg-rose-100 inline-flex items-center gap-1 cursor-pointer disabled:opacity-50 transition-colors"
+                              className="h-8 px-2.5 rounded-lg border border-bad/30 bg-bad-soft text-bad-text text-sm font-semibold hover:bg-bad-soft inline-flex items-center gap-1 cursor-pointer disabled:opacity-50 transition-colors"
                               title="İç içe geçmiş taslakları ayrıştırıp bağımsız taslaklar olarak geri yükler"
                             >
                               {isUnmerging ? (
@@ -571,13 +571,13 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
 
                         {/* Konsolide Soru Önizlemesi */}
                         <div className="p-3.5 flex flex-col gap-2">
-                          <p className="m-0 text-[13.5px] text-ink leading-relaxed">
+                          <p className="m-0 text-base text-ink leading-relaxed">
                             {stemOf(q) || 'Soru kökü henüz girilmemiş'}
                           </p>
                           {q.options && q.options.length > 0 && (
                             <div className="flex flex-wrap gap-1.5 pt-1 border-t border-line-soft">
                               {q.options.map((opt) => (
-                                <span key={opt.key} className="h-6 px-2 rounded-md bg-canvas text-[12px] text-ink-2 inline-flex items-center">
+                                <span key={opt.key} className="h-6 px-2 rounded-md bg-canvas text-xs text-ink-2 inline-flex items-center">
                                   <strong className="font-mono text-ink mr-1">{opt.key})</strong>
                                   {opt.text}
                                 </span>
@@ -588,7 +588,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                           {/* Detaylı İnceleme Bölümü */}
                           {isInspecting && (
                             <div className="mt-2 pt-3 border-t border-line flex flex-col gap-2.5 bg-canvas/60 p-3 rounded-xl">
-                              <span className="text-[12.5px] font-semibold text-accent flex items-center gap-1.5">
+                              <span className="text-sm font-semibold text-accent flex items-center gap-1.5">
                                 <Layers className="w-3.5 h-3.5" />
                                 İç İçe Geçen Taslaklar ve Öğrenci Katkıları
                               </span>
@@ -597,12 +597,12 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                               {q.mergedSatellites && q.mergedSatellites.length > 0 ? (
                                 <div className="flex flex-col gap-2">
                                   {q.mergedSatellites.map((sat, sIdx) => (
-                                    <div key={sat.id || sIdx} className="rounded-[10px] bg-white border border-line-soft p-2.5 flex flex-col gap-1 text-[12.5px]">
+                                    <div key={sat.id || sIdx} className="rounded-[10px] bg-white border border-line-soft p-2.5 flex flex-col gap-1 text-sm">
                                       <div className="flex items-center justify-between text-ink-3">
                                         <span className="font-semibold text-ink">
                                           Taslak #{sIdx + 1}: {sat.contributedByName || sat.author || 'Anonim Katkıcı'}
                                         </span>
-                                        <span className="font-mono text-[11.5px]">{numLabel(sat)}</span>
+                                        <span className="font-mono text-xs">{numLabel(sat)}</span>
                                       </div>
                                       <p className="m-0 text-ink-2 leading-snug">
                                         {stemOf(sat) || 'Metin girilmemiş'}
@@ -610,7 +610,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                                       {sat.fragments && sat.fragments.length > 0 && (
                                         <div className="flex flex-col gap-1 mt-1 pl-2 border-l-2 border-accent/40">
                                           {sat.fragments.map((sf) => (
-                                            <div key={sf.id} className="text-[11.5px] text-ink-3">
+                                            <div key={sf.id} className="text-xs text-ink-3">
                                               <span className="font-medium text-ink-2">{sf.author}:</span> “{sf.text}”
                                             </div>
                                           ))}
@@ -619,7 +619,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                                       {sat.options && sat.options.length > 0 && (
                                         <div className="flex flex-wrap gap-1 mt-0.5">
                                           {sat.options.map((o) => (
-                                            <span key={o.key} className="px-1.5 py-0.5 rounded bg-canvas text-[11px] text-ink-3">
+                                            <span key={o.key} className="px-1.5 py-0.5 rounded bg-canvas text-2xs text-ink-3">
                                               {o.key}) {o.text}
                                             </span>
                                           ))}
@@ -634,10 +634,10 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                                   {(q.fragments || [])
                                     .filter((f) => f.text.includes('[Birleştirilen Taslak'))
                                     .map((f, fIdx) => (
-                                      <div key={f.id || fIdx} className="rounded-[10px] bg-white border border-line-soft p-2.5 flex flex-col gap-0.5 text-[12.5px]">
+                                      <div key={f.id || fIdx} className="rounded-[10px] bg-white border border-line-soft p-2.5 flex flex-col gap-0.5 text-sm">
                                         <div className="flex items-center justify-between text-ink-3">
                                           <span className="font-semibold text-ink">{f.author || 'Taslak Parçası'}</span>
-                                          {f.timestamp && <span className="text-[11px]">{new Date(f.timestamp).toLocaleDateString('tr-TR')}</span>}
+                                          {f.timestamp && <span className="text-2xs">{new Date(f.timestamp).toLocaleDateString('tr-TR')}</span>}
                                         </div>
                                         <p className="m-0 text-ink-2 leading-snug">{f.text}</p>
                                       </div>
@@ -655,7 +655,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
             </>
           ) : activeFilter === 'manual' ? (
             <>
-              <p className="m-0 text-[13.5px] text-ink-2">
+              <p className="m-0 text-base text-ink-2">
                 Aynı soruya ait taslakları işaretle. Biri <strong className="text-ink">çapa</strong> olur; şıklar harmanlanır, mükerrerler temizlenir.
               </p>
               {manualColors.size > 0 && <WordLegend texts={selectedQs.map(fullText)} colors={manualColors} />}
@@ -667,9 +667,9 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                   placeholder="Metin, konu, ders ya da soru no ara"
                   value={manualSearchQuery}
                   onChange={(e) => setManualSearchQuery(e.target.value)}
-                  className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[14.5px] placeholder:text-slate-600"
+                  className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-md sm:text-md placeholder:text-ink-2"
                 />
-                <span className="text-[12.5px] text-ink-3 shrink-0">{manualFilteredQuestions.length}</span>
+                <span className="text-sm text-ink-3 shrink-0">{manualFilteredQuestions.length}</span>
               </label>
               <ul className="list-none m-0 p-0 flex flex-col gap-1.5">
                 {manualFilteredQuestions.map((q) => {
@@ -694,28 +694,28 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                             {on && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
                           </span>
                           <span className="flex-1 min-w-0 flex flex-col gap-1">
-                            <span className="flex items-center gap-2 min-w-0 text-[12.5px] text-ink-3">
+                            <span className="flex items-center gap-2 min-w-0 text-sm text-ink-3">
                               <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
                               <span className="truncate">
                                 {q.discipline}
                                 {q.topic ? ` · ${q.topic}` : ''}
                               </span>
                               {isAnchor && (
-                                <span className="ml-auto shrink-0 h-5 px-2 rounded-full bg-accent text-white text-[11px] font-semibold inline-flex items-center">Çapa</span>
+                                <span className="ml-auto shrink-0 h-5 px-2 rounded-full bg-accent text-white text-2xs font-semibold inline-flex items-center">Çapa</span>
                               )}
                             </span>
-                            <span className="text-[14px] text-ink leading-snug line-clamp-2">
+                            <span className="text-base text-ink leading-snug line-clamp-2">
                               {stemOf(q) ? <Colored text={stemOf(q)} colors={manualColors} /> : 'Metin girilmemiş'}
                             </span>
                             {q.options?.length > 0 && (
                               <span className="flex flex-wrap gap-1">
                                 {q.options.slice(0, 3).map((o) => (
-                                  <span key={o.key} className="max-w-[220px] truncate h-6 px-2 rounded-md bg-canvas text-[12px] text-ink-2 inline-flex items-center">
+                                  <span key={o.key} className="max-w-[220px] truncate h-6 px-2 rounded-md bg-canvas text-xs text-ink-2 inline-flex items-center">
                                     <strong className="font-mono mr-1">{o.key}</strong>
                                     <Colored text={o.text} colors={manualColors} />
                                   </span>
                                 ))}
-                                {q.options.length > 3 && <span className="h-6 px-2 text-[12px] text-ink-3 inline-flex items-center">+{q.options.length - 3}</span>}
+                                {q.options.length > 3 && <span className="h-6 px-2 text-xs text-ink-3 inline-flex items-center">+{q.options.length - 3}</span>}
                               </span>
                             )}
                           </span>
@@ -739,7 +739,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
             </>
           ) : activeFilter === 'vague' ? (
             <>
-              <p className="m-0 text-[13.5px] text-ink-2">
+              <p className="m-0 text-base text-ink-2">
                 Bu taslaklarda henüz güçlü bir eşleşme için yeterli bilgi yok. Yeni ipucu ya da şık geldikçe otomatik bağlanırlar.
               </p>
               {!analysis?.unmatchedVagueDrafts.length ? (
@@ -748,14 +748,14 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                 analysis.unmatchedVagueDrafts.map((q) => (
                   <div key={q.id} className="rounded-xl bg-white border border-line px-3.5 py-2.5 flex items-start justify-between gap-2">
                     <div className="flex-1 min-w-0 flex flex-col gap-1">
-                      <span className="flex items-center gap-2 text-[12.5px] text-ink-3 min-w-0">
+                      <span className="flex items-center gap-2 text-sm text-ink-3 min-w-0">
                         <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
                         <span className="truncate">
                           {q.discipline}
                           {q.topic ? ` · ${q.topic}` : ''}
                         </span>
                       </span>
-                      <span className="text-[14px] text-ink leading-snug line-clamp-2">{stemOf(q) || 'Metin girilmemiş'}</span>
+                      <span className="text-base text-ink leading-snug line-clamp-2">{stemOf(q) || 'Metin girilmemiş'}</span>
                     </div>
                     <button
                       type="button"
@@ -786,12 +786,12 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
               return (
                 <article
                   key={cluster.id}
-                  className={`rounded-2xl bg-white border overflow-hidden ${ready ? 'border-emerald-200' : 'border-line'}`}
+                  className={`rounded-2xl bg-white border overflow-hidden ${ready ? 'border-ok/30' : 'border-line'}`}
                 >
                   {/* Row: number, subject, confidence, actions */}
                   <div className="flex items-center gap-3 px-3.5 py-3">
                     <span
-                      className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 font-mono text-[13px] font-semibold ${
+                      className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 font-mono text-sm font-semibold ${
                         ready ? 'bg-ok-soft text-ok' : 'bg-warn-soft text-warn'
                       }`}
                     >
@@ -799,16 +799,16 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                     </span>
                     <span className="flex-1 min-w-0 flex flex-col">
                       <span className="flex items-center gap-2 min-w-0">
-                        <span className="text-[14.5px] font-semibold text-ink truncate">{cluster.detectedSubject || anchor.topic || anchor.discipline}</span>
+                        <span className="text-md font-semibold text-ink truncate">{cluster.detectedSubject || anchor.topic || anchor.discipline}</span>
                         <span
-                          className={`shrink-0 h-5 px-1.5 rounded-full text-[11.5px] font-mono font-semibold inline-flex items-center ${
+                          className={`shrink-0 h-5 px-1.5 rounded-full text-xs font-mono font-semibold inline-flex items-center ${
                             ready ? 'bg-ok-soft text-ok' : 'bg-warn-soft text-warn'
                           }`}
                         >
                           %{cluster.overallConfidence}
                         </span>
                       </span>
-                      <span className="text-[12.5px] text-ink-3 truncate">
+                      <span className="text-sm text-ink-3 truncate">
                         {anchor.discipline} · {cluster.satelliteDrafts.length} taslak birleşecek
                       </span>
                       <span className="mt-1">
@@ -819,7 +819,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                       type="button"
                       onClick={() => handleDissolveCluster(cluster.id)}
                       title="Bu kümeyi dağıtıp taslakları ayır"
-                      className="hidden sm:inline-flex h-9 px-2.5 rounded-[10px] border border-line bg-white text-[12px] font-medium text-ink-2 hover:text-rose-700 hover:border-rose-200 hover:bg-rose-50 items-center gap-1 cursor-pointer"
+                      className="hidden sm:inline-flex h-9 px-2.5 rounded-[10px] border border-line bg-white text-xs font-medium text-ink-2 hover:text-bad-text hover:border-bad/30 hover:bg-bad-soft items-center gap-1 cursor-pointer"
                     >
                       <Split className="w-3.5 h-3.5" />
                       <span>Kümeyi Dağıt</span>
@@ -828,7 +828,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                       type="button"
                       onClick={() => setExpandedClusterId(open ? null : cluster.id)}
                       aria-expanded={open}
-                      className="hidden sm:inline-flex h-9 px-3 rounded-[10px] border border-line bg-white text-[13px] font-semibold text-ink-2 items-center gap-1 cursor-pointer hover:border-line-2"
+                      className="hidden sm:inline-flex h-9 px-3 rounded-[10px] border border-line bg-white text-sm font-semibold text-ink-2 items-center gap-1 cursor-pointer hover:border-line-2"
                     >
                       Karşılaştır
                       <ChevronDown className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} />
@@ -837,8 +837,8 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                       type="button"
                       onClick={() => handleMergeCluster(cluster)}
                       disabled={merging || busy}
-                      className={`h-9 px-3 rounded-[10px] text-[13px] font-semibold text-white inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 ${
-                        ready ? 'bg-ok hover:bg-emerald-900' : 'bg-ink hover:bg-blue-950'
+                      className={`h-9 px-3 rounded-[10px] text-sm font-semibold text-white inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 ${
+                        ready ? 'bg-ok hover:bg-ok' : 'bg-ink hover:bg-accent'
                       }`}
                     >
                       {merging ? <RefreshCw className="w-4 h-4 animate-spin" /> : <GitMerge className="w-4 h-4" />}
@@ -849,16 +849,16 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                   {/* Anchor + satellites, compact */}
                   <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-2 px-3.5 pb-3.5">
                     <div className="rounded-xl bg-canvas px-3 py-2.5 flex flex-col gap-1">
-                      <span className="flex items-center gap-1.5 text-[12px] font-semibold text-accent">
+                      <span className="flex items-center gap-1.5 text-xs font-semibold text-accent">
                         <Layers className="w-3.5 h-3.5" />
                         Çapa soru
                         <span className="ml-auto font-normal text-ink-3">{anchor.options?.length || 0} şık</span>
                       </span>
-                      <span className={`text-[13.5px] text-ink leading-snug ${open ? '' : 'line-clamp-2'}`}>{stemOf(anchor) ? <Colored text={stemOf(anchor)} colors={colors} /> : 'Soru kökü henüz girilmemiş'}</span>
+                      <span className={`text-base text-ink leading-snug ${open ? '' : 'line-clamp-2'}`}>{stemOf(anchor) ? <Colored text={stemOf(anchor)} colors={colors} /> : 'Soru kökü henüz girilmemiş'}</span>
                       {open && anchor.options?.length > 0 && (
                         <span className="flex flex-col gap-0.5 pt-1 border-t border-line-soft mt-1">
                           {anchor.options.map((o) => (
-                            <span key={o.key} className="text-[12.5px] text-ink-2">
+                            <span key={o.key} className="text-sm text-ink-2">
                               <strong className="font-mono text-ink mr-1">{o.key})</strong>
                               <Colored text={o.text} colors={colors} />
                             </span>
@@ -869,10 +869,10 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                     <ul className={`list-none m-0 p-0 flex flex-col gap-1.5 ${open ? '' : 'max-h-[132px] overflow-y-auto'}`}>
                       {cluster.satelliteDrafts.map((sat, idx) => (
                         <li key={sat.question.id || idx} className="rounded-xl border border-line-soft px-3 py-2 flex flex-col gap-1">
-                          <div className="flex items-center gap-2 text-[12.5px] min-w-0">
+                          <div className="flex items-center gap-2 text-sm min-w-0">
                             <span className="font-semibold text-ink truncate">{sat.question.contributedByName || 'Anonim'}</span>
                             <span className="text-ink-3 shrink-0">· {numLabel(sat.question)}</span>
-                            <span className="shrink-0 font-mono text-[12px] font-semibold text-ok">%{sat.compatibility.score}</span>
+                            <span className="shrink-0 font-mono text-xs font-semibold text-ok">%{sat.compatibility.score}</span>
                             <button
                               type="button"
                               onClick={(e) => {
@@ -880,7 +880,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                                 handleDetachSatelliteFromCluster(cluster.id, sat.question.id);
                               }}
                               title="Bu taslağı bu kümeden ayır (bağımsız yap)"
-                              className="ml-auto text-[11.5px] px-2 py-0.5 rounded-md text-ink-3 hover:text-rose-700 hover:bg-rose-100 border border-line-soft transition-colors cursor-pointer inline-flex items-center gap-1 shrink-0"
+                              className="ml-auto text-xs px-2 py-0.5 rounded-md text-ink-3 hover:text-bad-text hover:bg-bad-soft border border-line-soft transition-colors cursor-pointer inline-flex items-center gap-1 shrink-0"
                             >
                               <Split className="w-3 h-3" />
                               <span>Kümeden Ayır</span>
@@ -892,17 +892,17 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                                 handleDeleteDraft(sat.question.id, sat.question.topic || sat.question.discipline);
                               }}
                               title="Taslağı kalıcı olarak veritabanından sil"
-                              className="text-[11.5px] px-2 py-0.5 rounded-md text-ink-3 hover:text-bad-text hover:bg-bad-soft border border-line-soft transition-colors cursor-pointer inline-flex items-center gap-1 shrink-0"
+                              className="text-xs px-2 py-0.5 rounded-md text-ink-3 hover:text-bad-text hover:bg-bad-soft border border-line-soft transition-colors cursor-pointer inline-flex items-center gap-1 shrink-0"
                             >
                               <Trash2 className="w-3 h-3" />
                               <span>Sil</span>
                             </button>
                           </div>
-                          <span className={`text-[13px] text-ink-2 leading-snug ${open ? '' : 'line-clamp-1'}`}>{stemOf(sat.question) ? <Colored text={stemOf(sat.question)} colors={colors} /> : 'Metin'}</span>
+                          <span className={`text-sm text-ink-2 leading-snug ${open ? '' : 'line-clamp-1'}`}>{stemOf(sat.question) ? <Colored text={stemOf(sat.question)} colors={colors} /> : 'Metin'}</span>
                           {open && sat.compatibility.reasons.length > 0 && (
                             <span className="flex flex-wrap gap-1">
                               {sat.compatibility.reasons.map((r, i) => (
-                                <span key={i} className="px-2 py-0.5 rounded-md bg-canvas text-[11.5px] text-ink-2">
+                                <span key={i} className="px-2 py-0.5 rounded-md bg-canvas text-xs text-ink-2">
                                   {r}
                                 </span>
                               ))}
@@ -914,14 +914,14 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                   </div>
 
                   {open && (
-                    <p className="m-0 mx-3.5 mb-3.5 rounded-xl bg-accent-soft/60 px-3 py-2 text-[12.5px] text-ink-2 leading-[1.55]">
+                    <p className="m-0 mx-3.5 mb-3.5 rounded-xl bg-accent-soft/60 px-3 py-2 text-sm text-ink-2 leading-[1.55]">
                       Birleşince ipuçları ve parçalar çapa soruya taşınır (isimler ve puanlar korunur), şıklar 5'e tamamlanır, mükerrer taslaklar silinir.
                     </p>
                   )}
                   <button
                     type="button"
                     onClick={() => setExpandedClusterId(open ? null : cluster.id)}
-                    className="sm:hidden w-full h-10 border-t border-line-soft text-[13px] font-semibold text-ink-2 inline-flex items-center justify-center gap-1 cursor-pointer"
+                    className="sm:hidden w-full h-10 border-t border-line-soft text-sm font-semibold text-ink-2 inline-flex items-center justify-center gap-1 cursor-pointer"
                   >
                     {open ? 'Daha az' : 'Karşılaştır'}
                     <ChevronDown className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} />
@@ -936,7 +936,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
         <footer className="flex items-center gap-2 px-4 sm:px-5 py-3 pb-[max(env(safe-area-inset-bottom),12px)] sm:pb-3 border-t border-line-soft bg-white">
           {activeFilter === 'manual' && selectedDraftIds.length > 0 ? (
             <>
-              <span className="text-[13.5px] text-ink-2 shrink-0">
+              <span className="text-base text-ink-2 shrink-0">
                 <strong className="text-ink">{selectedDraftIds.length}</strong> seçili
               </span>
               {selectedDraftIds.length >= 2 && (
@@ -945,7 +945,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                   <select
                     value={manualAnchorId}
                     onChange={(e) => setManualAnchorId(e.target.value)}
-                    className="appearance-none w-full h-10 rounded-[11px] bg-field border border-line pl-3 pr-8 text-[13.5px] text-ink cursor-pointer truncate"
+                    className="appearance-none w-full h-10 rounded-[11px] bg-field border border-line pl-3 pr-8 text-base text-ink cursor-pointer truncate"
                   >
                     {selectedDraftIds.map((id) => {
                       const q = committeeQuestions.find((x) => x.id === id);
@@ -965,7 +965,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                   setSelectedDraftIds([]);
                   setManualAnchorId('');
                 }}
-                className="hidden sm:inline-flex h-10 px-3 rounded-[11px] text-[13.5px] font-semibold text-ink-2 hover:bg-canvas cursor-pointer items-center"
+                className="hidden sm:inline-flex h-10 px-3 rounded-[11px] text-base font-semibold text-ink-2 hover:bg-canvas cursor-pointer items-center"
               >
                 Temizle
               </button>
@@ -973,7 +973,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                 type="button"
                 onClick={handleManualMergeSelected}
                 disabled={isManualMerging || selectedDraftIds.length < 2}
-                className="ml-auto h-10 px-4 rounded-[11px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shrink-0"
+                className="ml-auto h-10 px-4 rounded-[11px] bg-accent hover:bg-accent-hover text-white text-base font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shrink-0"
               >
                 {isManualMerging ? <RefreshCw className="w-4 h-4 animate-spin" /> : <GitMerge className="w-4 h-4" />}
                 {selectedDraftIds.length < 2 ? 'En az 2 seç' : 'Birleştir'}
@@ -981,11 +981,11 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
             </>
           ) : (
             <>
-              <span className="text-[12.5px] text-ink-3 truncate">Kavram ve şık permütasyonuna göre kümeleme</span>
+              <span className="text-sm text-ink-3 truncate">Kavram ve şık permütasyonuna göre kümeleme</span>
               <button
                 type="button"
                 onClick={onClose}
-                className="ml-auto h-10 px-4 rounded-[11px] bg-canvas hover:bg-line-soft text-[14px] font-semibold text-ink cursor-pointer shrink-0"
+                className="ml-auto h-10 px-4 rounded-[11px] bg-canvas hover:bg-line-soft text-base font-semibold text-ink cursor-pointer shrink-0"
               >
                 Kapat
               </button>
@@ -1015,13 +1015,13 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
 const EmptyState: React.FC<{ title: string; text: string; action?: { label: string; onClick: () => void } }> = ({ title, text, action }) => (
   <div className="py-12 flex flex-col items-center gap-2 text-center">
     <SuccessCheck size={72} />
-    <p className="m-0 text-[16px] font-semibold text-ink">{title}</p>
-    <p className="m-0 text-[13.5px] text-ink-2 max-w-[340px]">{text}</p>
+    <p className="m-0 text-md font-semibold text-ink">{title}</p>
+    <p className="m-0 text-base text-ink-2 max-w-[340px]">{text}</p>
     {action && (
       <button
         type="button"
         onClick={action.onClick}
-        className="mt-1 h-10 px-4 rounded-[11px] bg-accent-soft text-accent text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+        className="mt-1 h-10 px-4 rounded-[11px] bg-accent-soft text-accent text-base font-semibold inline-flex items-center gap-1.5 cursor-pointer"
       >
         <GitMerge className="w-4 h-4" />
         {action.label}

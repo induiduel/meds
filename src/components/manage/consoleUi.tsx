@@ -94,7 +94,7 @@ export const SearchBox: React.FC<{
     <Search aria-hidden="true" />
     <span className="sr-only">{label || placeholder}</span>
     <input type="search" value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} />
-    {count !== undefined && !value && <span className="text-[12.5px] text-ink-3 pr-2 shrink-0 tabular-nums">{count}</span>}
+    {count !== undefined && !value && <span className="text-sm text-ink-3 pr-2 shrink-0 tabular-nums">{count}</span>}
     {value && (
       <button type="button" onClick={() => onChange('')} className="ms-btn is-ghost is-icon is-sm" aria-label="Aramayı temizle">
         <X />

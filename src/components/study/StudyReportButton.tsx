@@ -14,7 +14,7 @@ export const StudyReportButton: React.FC<{ q: StudyQuestion; compact?: boolean; 
         onClick={() => setOpen(true)}
         title="Soruda hata ya da sorun bildir"
         aria-label="Soruyu bildir"
-        className={`h-9 px-2.5 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 text-ink-2 hover:bg-bad-soft hover:text-bad-text cursor-pointer ${className}`}
+        className={`h-9 px-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 text-ink-2 hover:bg-bad-soft hover:text-bad-text cursor-pointer ${className}`}
       >
         <Flag className="w-4 h-4" />
         {!compact && <span className="hidden sm:inline">Bildir</span>}

@@ -24,6 +24,7 @@ import {
   Flag,
   BarChart3,
   Gift,
+  Trash2,
 } from 'lucide-react';
 import { PastQuestionReviewRecord } from '../types';
 import { ApiService } from '../services/api';
@@ -108,7 +109,7 @@ function ChangeInfo({ title, before, after, note }: { title: string; before?: st
         <Info className="w-3.5 h-3.5" />
       </button>
       {open && (
-        <span role="dialog" className="absolute z-30 top-6 right-0 w-[min(22rem,80vw)] p-3 rounded-lg bg-white border border-line shadow-lg text-[12.5px] font-normal normal-case tracking-normal text-ink-2 flex flex-col gap-1.5 text-left">
+        <span role="dialog" className="absolute z-30 top-6 right-0 w-[min(22rem,80vw)] p-3 rounded-lg bg-white border border-line shadow-lg text-sm font-normal normal-case tracking-normal text-ink-2 flex flex-col gap-1.5 text-left">
           <b className="text-ink">{title}</b>
           {before !== undefined && (
             <span>
@@ -146,12 +147,12 @@ function TermsDialog({ rev, onClose }: { rev: PastQuestionReviewRecord; onClose:
   const syn = Object.entries((data?.faz6_5?.esanlamlilar || {}) as Record<string, string[]>);
   const abbr = Object.entries((data?.faz6_5?.kisaltmalar || {}) as Record<string, string>);
   const k = (data?.mufredat || data?.faz8)?.kazanimlar?.[0];
-  const h = 'm-0 text-[11.5px] font-semibold uppercase tracking-wide text-ink-3';
+  const h = 'm-0 text-xs font-semibold uppercase tracking-wide text-ink-3';
   return (
     <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Terim ve sözlük bilgisi" onClick={onClose}>
       <div className="ms-modal-panel bg-white w-full max-w-xl overflow-y-auto px-5 pt-4 pb-5 flex flex-col gap-3" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between gap-2">
-          <h3 className="m-0 font-display text-[17px] font-semibold text-ink">Terimler ve sözlük <span className="font-mono text-[13px] font-normal text-ink-3">#{String(rev.question_id).slice(0, 8)}</span></h3>
+          <h3 className="m-0 font-display text-lg font-semibold text-ink">Terimler ve sözlük <span className="font-mono text-sm font-normal text-ink-3">#{String(rev.question_id).slice(0, 8)}</span></h3>
           <button type="button" onClick={onClose} className="ms-btn is-ghost is-icon" aria-label="Kapat">
             <X />
           </button>
@@ -159,51 +160,51 @@ function TermsDialog({ rev, onClose }: { rev: PastQuestionReviewRecord; onClose:
         <section className="flex flex-col gap-1">
           <h4 className={h}>Bu öneride değişenler</h4>
           {(prop.degisen_alanlar || []).length ? (
-            <div className="flex flex-wrap gap-1">{prop.degisen_alanlar.map((f: string) => <span key={f} className="text-[12px] px-1.5 rounded bg-accent-soft text-accent">{f}</span>)}</div>
+            <div className="flex flex-wrap gap-1">{prop.degisen_alanlar.map((f: string) => <span key={f} className="text-xs px-1.5 rounded bg-accent-soft text-accent">{f}</span>)}</div>
           ) : (
-            <p className="m-0 text-[13px] text-ink-3">Değişen alan bildirilmedi.</p>
+            <p className="m-0 text-sm text-ink-3">Değişen alan bildirilmedi.</p>
           )}
-          {yzv?.soru_koku_duzeltmesi && <p className="m-0 text-[13px]"><b>Kök:</b> {yzv.soru_koku_duzeltmesi}</p>}
-          {yzv?.aciklama_duzeltmesi && <p className="m-0 text-[13px]"><b>Açıklama:</b> {yzv.aciklama_duzeltmesi}</p>}
-          {yzv?.mufredat_atamasi && <p className="m-0 text-[13px]"><b>Müfredat:</b> {yzv.mufredat_atamasi}</p>}
-          {prop.YZV?.referans_literatur && <p className="m-0 text-[13px]"><b>Literatür:</b> {prop.YZV.referans_literatur}</p>}
+          {yzv?.soru_koku_duzeltmesi && <p className="m-0 text-sm"><b>Kök:</b> {yzv.soru_koku_duzeltmesi}</p>}
+          {yzv?.aciklama_duzeltmesi && <p className="m-0 text-sm"><b>Açıklama:</b> {yzv.aciklama_duzeltmesi}</p>}
+          {yzv?.mufredat_atamasi && <p className="m-0 text-sm"><b>Müfredat:</b> {yzv.mufredat_atamasi}</p>}
+          {prop.YZV?.referans_literatur && <p className="m-0 text-sm"><b>Literatür:</b> {prop.YZV.referans_literatur}</p>}
         </section>
         {data === undefined ? (
-          <p className="m-0 text-[13px] text-ink-3">Faz verisi yükleniyor…</p>
+          <p className="m-0 text-sm text-ink-3">Faz verisi yükleniyor…</p>
         ) : !data ? (
-          <p className="m-0 text-[13px] text-ink-3">Bu soru için faz verisi (terim, sözlük) yok.</p>
+          <p className="m-0 text-sm text-ink-3">Bu soru için faz verisi (terim, sözlük) yok.</p>
         ) : (
           <>
             {k && (
               <section className="flex flex-col gap-0.5">
                 <h4 className={h}>Kazanım</h4>
-                <p className="m-0 text-[13px] text-ink">{['Kurul ' + k.kurul, k.ders, k.konu].filter(Boolean).join(' · ')}</p>
-                {k.kazanim && <p className="m-0 text-[13px] text-ink-2">{k.kazanim}</p>}
+                <p className="m-0 text-sm text-ink">{['Kurul ' + k.kurul, k.ders, k.konu].filter(Boolean).join(' · ')}</p>
+                {k.kazanim && <p className="m-0 text-sm text-ink-2">{k.kazanim}</p>}
               </section>
             )}
             {terms.length > 0 && (
               <section className="flex flex-col gap-1">
                 <h4 className={h}>Terimler ({terms.length})</h4>
-                <div className="flex flex-wrap gap-1">{terms.map((t) => <span key={t} className="text-[12px] px-2 py-0.5 rounded-full bg-canvas text-ink-2">{t}</span>)}</div>
+                <div className="flex flex-wrap gap-1">{terms.map((t) => <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-canvas text-ink-2">{t}</span>)}</div>
               </section>
             )}
             {syn.length > 0 && (
               <section className="flex flex-col gap-0.5">
                 <h4 className={h}>Eş anlamlılar</h4>
-                {syn.map(([t, v]) => <p key={t} className="m-0 text-[13px]"><b>{t}</b> = {(v || []).join(', ')}</p>)}
+                {syn.map(([t, v]) => <p key={t} className="m-0 text-sm"><b>{t}</b> = {(v || []).join(', ')}</p>)}
               </section>
             )}
             {abbr.length > 0 && (
               <section className="flex flex-col gap-0.5">
                 <h4 className={h}>Kısaltmalar</h4>
-                {abbr.map(([a, e]) => <p key={a} className="m-0 text-[13px]"><b>{a}</b> = {e}</p>)}
+                {abbr.map(([a, e]) => <p key={a} className="m-0 text-sm"><b>{a}</b> = {e}</p>)}
               </section>
             )}
             {(data.varliklar || []).length > 0 && (
               <section className="flex flex-col gap-0.5">
                 <h4 className={h}>Kimlikli tıbbi varlıklar (Faz 13)</h4>
                 {(data.varliklar || []).map((v: any) => (
-                  <p key={v.ad} className="m-0 text-[12.5px]">
+                  <p key={v.ad} className="m-0 text-sm">
                     <b>{v.ad}</b>
                     <span className="text-ink-3"> · {v.tur || 'tür yok'} · {v.kaynak}{v.kimlik && Object.keys(v.kimlik).length ? ' · ' + Object.entries(v.kimlik).map(([kk, vv]: any) => `${kk}: ${(vv || []).join(',')}`).join(' · ') : ''}</span>
                   </p>
@@ -285,6 +286,14 @@ const modelLabel = (m?: string) => {
   return `${m} önerisi`;
 };
 
+export type Phase14QuestionStatus = 'approved' | 'suspicious' | 'answer_doubtful';
+
+export function getPhase14Status(r: PastQuestionReviewRecord): Phase14QuestionStatus {
+  if (r.status === 'approved') return 'approved';
+  if (r.suspicious || r.status === 'rejected') return 'suspicious';
+  return 'answer_doubtful';
+}
+
 interface TestCikmisViewProps {
   currentUser: AppUser | null;
   isAdmin: boolean;
@@ -301,8 +310,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Filters & Sorting
-  const [statusFilter, setStatusFilter] = useState<string>('review_required');
+  // Filters & Sorting (bir soru ya onaylanmış, ya şüpheli ya da cevabı belirsizdir)
+  const [statusFilter, setStatusFilter] = useState<'all' | Phase14QuestionStatus>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedReviewId, setSelectedReviewId] = useState<string | null>(null);
   const [sortOrder, setSortOrder] = useState<'newest' | 'oldest' | 'evidence_low' | 'evidence_high'>('newest');
@@ -566,13 +575,41 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     setProcessingId(qId);
     setActionFeedback(null);
     // İyimser güncelleme
-    setAllReviews(prev => prev.map(r => String(r.question_id) === qId ? { ...r, status: 'rejected' as any } : r));
+    setAllReviews(prev => prev.map(r => String(r.question_id) === qId ? { ...r, status: 'rejected' as any, suspicious: true } : r));
     try {
       await ApiService.rejectPastQuestionReview(ADMIN_EMAIL, qId, reason);
-      setActionFeedback({ message: `✓ Soru #${qId} önerisi reddedildi.`, type: 'ok' });
+      setActionFeedback({ message: `✓ Soru #${qId} önerisi reddedildi (şüpheli işaretlendi).`, type: 'ok' });
       fetchReviews(true);
     } catch (err: any) {
       setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
+      fetchReviews(true);
+    } finally {
+      setProcessingId(null);
+    }
+  };
+
+  const handlePermanentDelete = async (qId: string) => {
+    if (!window.confirm(`Soru #${qId} kalıcı olarak silinecektir.\n\nBu soru hem Faz 14 inceleme listesinden hem de soru veritabanından kalıcı olarak kaldırılacaktır ve bu işlem geri alınamaz.\n\nKalıcı olarak silmek istediğinize emin misiniz?`)) {
+      return;
+    }
+    setProcessingId(qId);
+    setActionFeedback(null);
+    // İyimser güncelleme
+    setAllReviews(prev => prev.filter(r => String(r.question_id) !== qId));
+    try {
+      await ApiService.deletePastQuestionReview(ADMIN_EMAIL, qId);
+      try {
+        const { pastQuestionsCache } = await import('../services/pastQuestionsCache');
+        await pastQuestionsCache.removeQuestions([qId]);
+      } catch {}
+      try {
+        const { broadcastLiveEvent } = await import('../services/supabaseDb');
+        broadcastLiveEvent('past_questions_changed', { eventType: 'DELETE', old: { id: qId }, id: qId });
+      } catch {}
+      setActionFeedback({ message: `✓ Soru #${qId} kalıcı olarak silindi.`, type: 'ok' });
+      fetchReviews(true);
+    } catch (err: any) {
+      setActionFeedback({ message: `Silme başarısız: ${err.message}`, type: 'err' });
       fetchReviews(true);
     } finally {
       setProcessingId(null);
@@ -644,27 +681,29 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   };
 
   const stats = useMemo(() => {
-    const total = allReviews.length;
-    const pending = allReviews.filter((r) => r.status === 'review_required' && !r.answer_doubtful).length;
-    const doubtful = allReviews.filter((r) => r.answer_doubtful && r.status === 'review_required').length;
-    const approved = allReviews.filter((r) => r.status === 'approved').length;
-    const rejected = allReviews.filter((r) => r.status === 'rejected').length;
-    const unchanged = allReviews.filter((r) => r.status === 'unchanged').length;
-    const suspicious = allReviews.filter((r) => r.suspicious && r.status === 'review_required').length;
-    return { total, pending, approved, rejected, unchanged, suspicious, doubtful };
+    let approved = 0;
+    let suspicious = 0;
+    let doubtful = 0;
+    let unchanged = 0;
+    for (const r of allReviews) {
+      const st = getPhase14Status(r);
+      if (st === 'approved') approved++;
+      else if (st === 'suspicious') suspicious++;
+      else doubtful++;
+      if (r.status === 'unchanged') unchanged++;
+    }
+    return { total: allReviews.length, approved, suspicious, doubtful, unchanged };
   }, [allReviews]);
 
   const filteredReviews = useMemo(() => {
     let list = allReviews;
 
-    if (statusFilter === 'suspicious') {
-      list = list.filter((r) => r.suspicious && r.status === 'review_required');
+    if (statusFilter === 'approved') {
+      list = list.filter((r) => getPhase14Status(r) === 'approved');
+    } else if (statusFilter === 'suspicious') {
+      list = list.filter((r) => getPhase14Status(r) === 'suspicious');
     } else if (statusFilter === 'answer_doubtful') {
-      list = list.filter((r) => r.answer_doubtful && r.status === 'review_required');
-    } else if (statusFilter === 'review_required') {
-      list = list.filter((r) => r.status === 'review_required' && !r.answer_doubtful);
-    } else if (statusFilter !== 'all') {
-      list = list.filter((r) => r.status === statusFilter);
+      list = list.filter((r) => getPhase14Status(r) === 'answer_doubtful');
     }
 
     if (searchQuery.trim()) {
@@ -695,14 +734,11 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     return sorted;
   }, [allReviews, statusFilter, searchQuery, sortOrder]);
 
-  const statusTabs = [
-    { id: 'review_required', label: 'İnceleme bekliyor', count: stats.pending },
-    { id: 'answer_doubtful', label: 'Cevap belirsiz', count: stats.doubtful },
-    { id: 'suspicious', label: 'Şüpheli', count: stats.suspicious },
-    { id: 'approved', label: 'Onaylandı', count: stats.approved },
-    { id: 'rejected', label: 'Reddedildi', count: stats.rejected },
-    { id: 'unchanged', label: 'Değişiklik yok', count: stats.unchanged },
+  const statusTabs: Array<{ id: 'all' | Phase14QuestionStatus; label: string; count: number }> = [
     { id: 'all', label: 'Tümü', count: stats.total },
+    { id: 'approved', label: 'Onaylanmış', count: stats.approved },
+    { id: 'suspicious', label: 'Şüpheli', count: stats.suspicious },
+    { id: 'answer_doubtful', label: 'Cevabı belirsiz', count: stats.doubtful },
   ];
   const total = liveStatus?.totalCandidate || 0;
   const processed = liveStatus?.processed ?? allReviews.length;
@@ -738,11 +774,11 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       {isAdmin && (
         <section className="ms-qcard gap-2.5!" aria-label="Faz 14 süreci">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <span className="inline-flex items-center gap-2 text-[13.5px] font-semibold text-ink">
+            <span className="inline-flex items-center gap-2 text-base font-semibold text-ink">
               <span className={`w-2 h-2 rounded-full ${liveStatus?.isRunning ? 'bg-ok animate-pulse' : 'bg-line-2'}`} aria-hidden />
               {liveStatus?.isRunning ? `Çalışıyor · ${liveStatus.activeMode === 'cloud' ? 'Gemini' : 'yerel model'}` : 'Süreç bekliyor'}
             </span>
-            <dl className="m-0 flex flex-wrap gap-x-4 gap-y-1 text-[12.5px] text-ink-3">
+            <dl className="m-0 flex flex-wrap gap-x-4 gap-y-1 text-sm text-ink-3">
               {[
                 ['Havuz', total ? total.toLocaleString('tr-TR') : '—'],
                 ['İşlenen', processed.toLocaleString('tr-TR')],
@@ -758,6 +794,9 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             </dl>
             <span className="flex-1" />
             <div className="flex flex-wrap items-center gap-1.5">
+              <span className="ms-tag is-ai hidden sm:inline-flex text-xs!" title="Faz 14 kontrol ve cevap doğrulama API'si: Gemini 3.5 Flash daha yetkili seçildi">
+                Kontrol: Gemini 3.5 Flash (Yetkili)
+              </span>
               <label className="ms-btn is-sm relative" title="Bir çalıştırmada işlenecek soru sayısı">
                 Parti: {triggerLimit}
                 <select value={triggerLimit} onChange={(e) => setTriggerLimit(Number(e.target.value))} className="absolute inset-0 opacity-0 cursor-pointer" aria-label="Parti büyüklüğü">
@@ -820,7 +859,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             </div>
           </div>
           {liveStatus?.isRunning && liveStatus.paralel?.anahtarlar && (
-            <ul className="m-0 p-0 list-none flex flex-wrap gap-1.5 text-[12px]" aria-label="Ücretsiz anahtar durumu">
+            <ul className="m-0 p-0 list-none flex flex-wrap gap-1.5 text-xs" aria-label="Ücretsiz anahtar durumu">
               {Object.entries(liveStatus.paralel.anahtarlar).map(([ad, d]) => {
                 const bekliyor = d.bekleme_bitis && Date.parse(d.bekleme_bitis) > Date.now();
                 return (
@@ -845,14 +884,14 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               </span>
             }
           >
-            <div className="bg-slate-950 p-3 rounded-lg font-mono text-[12px] text-slate-300 max-h-56 overflow-y-auto flex flex-col gap-0.5 select-text">
+            <div className="bg-ink p-3 rounded-lg font-mono text-xs text-ink-3 max-h-56 overflow-y-auto flex flex-col gap-0.5 select-text">
               {liveStatus?.logs && liveStatus.logs.length > 0 ? (
                 liveStatus.logs.map((line, idx) => {
                   const isErr = line.includes('ERROR') || line.includes('hata') || line.includes('429') || line.includes('404');
                   const isOk = line.includes('✓') || line.includes('başarıyla') || line.includes('unchanged');
                   const isWarn = line.includes('WARNING') || line.includes('review_required');
                   return (
-                    <div key={idx} className={`leading-relaxed whitespace-pre-wrap ${isErr ? 'text-bad' : isOk ? 'text-ok' : isWarn ? 'text-amber-300' : 'text-slate-300'}`}>
+                    <div key={idx} className={`leading-relaxed whitespace-pre-wrap ${isErr ? 'text-bad' : isOk ? 'text-ok' : isWarn ? 'text-warn' : 'text-ink-3'}`}>
                       {line}
                     </div>
                   );
@@ -866,7 +905,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       )}
 
       {actionFeedback && (
-        <div role="status" className={`ms-pop-in flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-[13.5px] font-medium ${actionFeedback.type === 'ok' ? 'bg-ok-soft text-ok' : 'bg-bad-soft text-bad-text'}`}>
+        <div role="status" className={`ms-pop-in flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-base font-medium ${actionFeedback.type === 'ok' ? 'bg-ok-soft text-ok' : 'bg-bad-soft text-bad-text'}`}>
           {actionFeedback.type === 'ok' ? <CheckCircle2 className="w-4 h-4 shrink-0" /> : <AlertTriangle className="w-4 h-4 shrink-0" />}
           <span className="flex-1 min-w-0">{actionFeedback.message.replace(/^✓\s*/, '')}</span>
           <button type="button" onClick={() => setActionFeedback(null)} className="ms-btn is-ghost is-sm is-icon text-inherit!" aria-label="Kapat">
@@ -921,7 +960,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       {isLoading ? (
         <div className="ms-qcard items-center py-10 text-ink-2">
           <div className="ms-progress is-indeterminate w-40"><span /></div>
-          <span className="text-[13.5px]">İnceleme kayıtları yükleniyor…</span>
+          <span className="text-base">İnceleme kayıtları yükleniyor…</span>
         </div>
       ) : error ? (
         <div className="ms-qcard items-center text-center py-8 text-bad-text">
@@ -932,8 +971,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       ) : filteredReviews.length === 0 ? (
         <div className="ms-qcard items-center text-center py-10 text-ink-2">
           <Sparkles className="w-7 h-7 text-ink-3" />
-          <h3 className="m-0 font-semibold text-[16px] text-ink">{searchQuery ? 'Aramaya uyan kayıt yok' : 'Bu durumda kayıt yok'}</h3>
-          <p className="m-0 text-[13.5px] max-w-md text-ink-3">
+          <h3 className="m-0 font-semibold text-md text-ink">{searchQuery ? 'Aramaya uyan kayıt yok' : 'Bu durumda kayıt yok'}</h3>
+          <p className="m-0 text-base max-w-md text-ink-3">
             {searchQuery ? 'Farklı bir kelime ya da durum seç.' : 'Faz 14 bu süzgeç için henüz kayıt üretmedi. Süreci yukarıdan başlatabilirsin.'}
           </p>
         </div>
@@ -943,12 +982,14 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             const qId = rev.question_id;
             const src = rev.source || ({} as any);
             const prop = rev.proposal || ({} as any);
-            const isPending = rev.status === 'review_required';
-            const isApproved = rev.status === 'approved';
+            const p14Status = getPhase14Status(rev);
+            const isApproved = p14Status === 'approved';
+            const isSuspicious = p14Status === 'suspicious';
+            const isDoubtful = p14Status === 'answer_doubtful';
+            const isPending = !isApproved;
             const isRejected = rev.status === 'rejected';
             const isUnchanged = rev.status === 'unchanged';
-            const isDuplicate = (rev.status as string) === 'duplicate';
-            const doubtful = Boolean(rev.answer_doubtful);
+            const doubtful = Boolean(rev.answer_doubtful || isDoubtful);
             // Cevabı kabul edilmiş ama anketi açık tutulan soru: kabul edilen cevap + topluluk oyları birlikte gösterilir
             const keptPoll = !doubtful && Boolean(rev.answer_poll_open) && Boolean(rev.answer_vote_result?.winner);
             const ratioPercent = Math.round((rev.support_ratio || 0) * 100);
@@ -961,14 +1002,10 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             const yzvNote = prop.YZV?.degisiklik_ozeti && typeof prop.YZV.degisiklik_ozeti === 'object' ? prop.YZV.degisiklik_ozeti : null;
             const aiCompletedList: string[] = (prop.yapay_zeka_tamamlanan_siklar || []).map((x: any) => String(x).toUpperCase());
             const status = isApproved
-              ? { label: 'Onaylandı', cls: 'is-ok', Icon: CheckCircle2, dot: 'bg-ok' }
-              : isRejected
-              ? { label: 'Reddedildi', cls: 'is-bad', Icon: XCircle, dot: 'bg-bad' }
-              : isUnchanged
-              ? { label: 'Değişiklik yok', cls: '', Icon: Check, dot: 'bg-line-2' }
-              : isDuplicate
-              ? { label: `Kopya · #${(rev as any).duplicate_of || '?'}`, cls: '', Icon: Copy, dot: 'bg-line-2' }
-              : { label: 'İnceleme bekliyor', cls: 'is-warn', Icon: Clock, dot: 'bg-warn' };
+              ? { label: 'Onaylanmış', cls: 'is-ok', Icon: CheckCircle2, dot: 'bg-ok' }
+              : isSuspicious
+              ? { label: 'Şüpheli', cls: 'is-bad', Icon: AlertTriangle, dot: 'bg-bad' }
+              : { label: 'Cevabı belirsiz', cls: 'is-warn', Icon: Clock, dot: 'bg-warn' };
             const onCopy = async (which: 'src' | 'prop') => {
               const ok = await copyText(questionText(rev, which));
               if (ok) {
@@ -1008,21 +1045,27 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   onClick={() => setOpenRows((o) => ({ ...o, [qId]: true }))}
                 >
                   <span className={`w-2 h-2 rounded-full shrink-0 ${status.dot}`} title={status.label} />
-                  <span className="font-mono text-[12px] text-ink-3 shrink-0 hidden sm:inline">#{qId.slice(0, 8)}</span>
-                  <span className="text-[13.5px] text-ink truncate min-w-0 flex-1">{propStem || srcStem}</span>
+                  <span className="font-mono text-xs text-ink-3 shrink-0 hidden sm:inline">#{qId.slice(0, 8)}</span>
+                  <span className="text-base text-ink truncate min-w-0 flex-1">{propStem || srcStem}</span>
                   {doubtful && <span className="ms-tag is-warn hidden sm:inline-flex"><BarChart3 /> anket</span>}
                   {changes.length > 0 && <span className="ms-tag is-warn hidden md:inline-flex">müfredat</span>}
                   {explChanged && <span className="ms-tag is-ai hidden md:inline-flex">açıklama</span>}
-                  <span className={`text-[12px] font-mono shrink-0 ${ratioPercent >= 80 ? 'text-ok' : 'text-bad-text'}`}>%{ratioPercent}</span>
-                  {isAdmin && !isApproved && (
-                    <button type="button" onClick={(e) => { e.stopPropagation(); handleApprove(qId); }} disabled={busy} className="ms-btn is-ghost is-sm is-icon text-ok!" title="Onayla" aria-label="Onayla">
-                      <Check />
-                    </button>
-                  )}
-                  {isAdmin && !isRejected && (
-                    <button type="button" onClick={(e) => { e.stopPropagation(); handleReject(qId); }} disabled={busy} className="ms-btn is-ghost is-sm is-icon text-bad-text!" title="Reddet" aria-label="Reddet">
-                      <X />
-                    </button>
+                  <span className={`text-xs font-mono shrink-0 ${ratioPercent >= 80 ? 'text-ok' : 'text-bad-text'}`}>%{ratioPercent}</span>
+                  {isAdmin && (
+                    <div className="flex items-center gap-1 shrink-0 ml-auto" onClick={(e) => e.stopPropagation()}>
+                      <button type="button" onClick={() => handleReject(qId)} disabled={busy} className="ms-btn is-ghost is-sm is-icon text-bad-text!" title="Reddet" aria-label="Reddet">
+                        <X />
+                      </button>
+                      <button type="button" onClick={() => handleApprove(qId)} disabled={busy} className="ms-btn is-ghost is-sm is-icon text-ok!" title="Onayla" aria-label="Onayla">
+                        <Check />
+                      </button>
+                      <button type="button" onClick={() => openEditModal(rev)} disabled={busy} className="ms-btn is-ghost is-sm is-icon text-ink-2!" title="Düzenle" aria-label="Düzenle">
+                        <Edit3 />
+                      </button>
+                      <button type="button" onClick={() => handlePermanentDelete(qId)} disabled={busy} className="ms-btn is-ghost is-sm is-icon text-bad-text!" title="Kalıcı sil" aria-label="Kalıcı sil">
+                        <Trash2 />
+                      </button>
+                    </div>
                   )}
                 </article>
               );
@@ -1037,8 +1080,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                   const isAiCompleted = kind === 'prop' && (!before || aiCompletedList.includes(upperKey));
                   const optChanged = kind === 'prop' && view !== 'prop' && before && before.trim() !== String(v).trim();
                   return (
-                    <li key={k} className={`ms-opt min-h-9! py-1.5! text-[13.5px]! ${isCorrect ? 'is-correct' : ''}`}>
-                      <span className="ms-opt-key w-6! h-6! text-[12px]!">{isCorrect ? <Check className="w-3.5 h-3.5" strokeWidth={3} /> : upperKey}</span>
+                    <li key={k} className={`ms-opt min-h-9! py-1.5! text-base! ${isCorrect ? 'is-correct' : ''}`}>
+                      <span className="ms-opt-key w-6! h-6! text-xs!">{isCorrect ? <Check className="w-3.5 h-3.5" strokeWidth={3} /> : upperKey}</span>
                       <span>{optChanged ? <DiffText before={before} after={String(v)} /> : String(v)}</span>
                       <span className="ms-opt-side">
                         {isAiCompleted && <span className="ms-tag is-ai" title="Bu şık kaynakta yoktu; AI tamamladı">AI</span>}
@@ -1083,8 +1126,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                       <BarChart3 /> {rev.answer_vote_result.by === 'admin' ? 'Cevap seçildi' : 'Anket'}: {rev.answer_vote_result.winner}
                     </span>
                   )}
-                  {doubtful && <span className="ms-tag is-warn"><BarChart3 /> Cevap belirsiz</span>}
-                  {rev.suspicious && <span className="ms-tag is-bad"><Flag /> Şüpheli</span>}
+                  {doubtful && !rev.answer_vote_result && <span className="ms-tag is-warn"><BarChart3 /> Anket açık</span>}
                   <span className={`ms-tag ${ratioPercent >= 80 ? 'is-ok' : 'is-bad'} font-mono`} title={`Önerinin kaynak metinle örtüşme oranı: %${ratioPercent}`}>%{ratioPercent}</span>
                   <span className="ms-qcard-meta" title={changes.length ? 'Müfredat değişikliği önerildi' : undefined}>
                     {[kurulLabel(src.kurul_adi), src.ders_adi].filter(Boolean).join(' · ')}
@@ -1106,7 +1148,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 </header>
 
                 {changes.length > 0 && (
-                  <p className="mx-3 sm:mx-4 mb-2 m-0 px-2.5 py-1.5 rounded-lg bg-warn-soft text-warn text-[12.5px] leading-snug">
+                  <p className="mx-3 sm:mx-4 mb-2 m-0 px-2.5 py-1.5 rounded-lg bg-warn-soft text-warn text-sm leading-snug">
                     <b className="font-semibold">Müfredat:</b>{' '}
                     {changes.map((c, i) => (
                       <span key={c.alan}>
@@ -1133,17 +1175,17 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 <div className="px-3 sm:px-4 pb-3 grid grid-cols-1 lg:grid-cols-2 gap-2.5">
                   {/* Mevcut kayıt */}
                   <section className={`${view === 'src' ? 'flex' : 'hidden'} lg:flex flex-col gap-2 p-3 rounded-xl bg-canvas min-w-0`}>
-                    <h4 className="m-0 flex items-center justify-between gap-2 text-[12px] font-semibold text-ink-3">
+                    <h4 className="m-0 flex items-center justify-between gap-2 text-xs font-semibold text-ink-3">
                       <span className="inline-flex items-center gap-1"><FileText className="w-3.5 h-3.5" /> Mevcut kayıt</span>
                       {answerLabel(src.dogru_secenek)}
                     </h4>
-                    {srcStem ? <StemText text={srcStem} size="sm" /> : <p className="m-0 text-[13.5px] text-ink-3 italic">Soru kökü boş</p>}
+                    {srcStem ? <StemText text={srcStem} size="sm" /> : <p className="m-0 text-base text-ink-3 italic">Soru kökü boş</p>}
                     {src.secenekler && Object.keys(src.secenekler).length > 0 && optList(src.secenekler, src.dogru_secenek, 'src')}
                   </section>
 
                   {/* Öneri (fark işaretli) */}
                   <section className={`${view === 'src' ? 'hidden' : 'flex'} lg:flex flex-col gap-2 p-3 rounded-xl bg-accent-soft/40 min-w-0`}>
-                    <h4 className="m-0 flex items-center justify-between gap-2 text-[12px] font-semibold text-accent">
+                    <h4 className="m-0 flex items-center justify-between gap-2 text-xs font-semibold text-accent">
                       <span className="inline-flex items-center gap-1"><Sparkles className="w-3.5 h-3.5" /> {modelLabel(rev.model)}</span>
                       <span className="inline-flex items-center gap-1">
                         {answerLabel(prop.dogru_secenek)}
@@ -1153,7 +1195,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                       </span>
                     </h4>
                     {!propStem ? (
-                      <p className="m-0 text-[13.5px] text-ink-3 italic">Kökte değişiklik önerilmedi</p>
+                      <p className="m-0 text-base text-ink-3 italic">Kökte değişiklik önerilmedi</p>
                     ) : stemChanged && view !== 'prop' ? (
                       <div className="flex items-start gap-1">
                         <p className="ms-stem is-sm m-0 flex-1 whitespace-pre-wrap"><DiffText before={srcStem} after={propStem} /></p>
@@ -1184,7 +1226,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                       prop.secenekler && Object.keys(prop.secenekler).length > 0 && optList(prop.secenekler, prop.dogru_secenek, 'prop')
                     )}
                     {stemChanged && view !== 'prop' && (
-                      <p className="m-0 text-[11.5px] text-ink-3">
+                      <p className="m-0 text-xs text-ink-3">
                         <ins className="no-underline bg-ok-soft text-ok rounded-sm px-0.5">eklenen</ins>{' '}
                         <del className="bg-bad-soft text-bad-text rounded-sm px-0.5">çıkarılan</del> kelimeler, mevcut kayda göre
                       </p>
@@ -1211,7 +1253,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         </span>
                       }
                     >
-                      <div className="text-[13px] text-ink-2 flex flex-col gap-1.5 leading-relaxed">
+                      <div className="text-sm text-ink-2 flex flex-col gap-1.5 leading-relaxed">
                         {prop.degisiklik_ozeti && <p className="m-0">{typeof prop.degisiklik_ozeti === 'string' ? prop.degisiklik_ozeti : JSON.stringify(prop.degisiklik_ozeti)}</p>}
                         {yzvNote?.soru_koku_duzeltmesi && <p className="m-0"><b className="text-ink">Kök:</b> {yzvNote.soru_koku_duzeltmesi}</p>}
                         {prop.cevap_dogrulama && (
@@ -1219,7 +1261,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                             <b className="text-ink">Cevap kontrolü:</b>{' '}
                             {prop.cevap_dogrulama.oylar
                               ? Object.entries(prop.cevap_dogrulama.oylar as Record<string, string>)
-                                  .map(([k, v]) => `${({ duzelten_model: 'düzelten model', gpt_oss: 'gpt-oss', ucuncu: '3. çözücü', gemini: 'Gemini' } as Record<string, string>)[k] || k} ${v || '?'}`)
+                                  .map(([k, v]) => `${({ duzelten_model: 'düzelten model', gpt_oss: 'gpt-oss', ucuncu: '3. çözücü', gemini: 'Gemini (yetkili)', kontrol_gemini: 'Gemini (yetkili)', dogrulayici: 'doğrulayıcı' } as Record<string, string>)[k] || k} ${v || '?'}`)
                                   .join(' · ')
                               : `model ${prop.cevap_dogrulama.oneri || '–'} · bağımsız ${prop.cevap_dogrulama.dogrulayici || '?'}`}
                             {' → '}
@@ -1265,20 +1307,20 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         </span>
                       }
                     >
-                      {yzvNote?.aciklama_duzeltmesi && <p className="m-0 mb-2 text-[12.5px] text-ink-3">{yzvNote.aciklama_duzeltmesi}</p>}
-                      <div className="grid gap-2 lg:grid-cols-2 text-[13px]">
+                      {yzvNote?.aciklama_duzeltmesi && <p className="m-0 mb-2 text-sm text-ink-3">{yzvNote.aciklama_duzeltmesi}</p>}
+                      <div className="grid gap-2 lg:grid-cols-2 text-sm">
                         <div className="rounded-lg bg-white p-2.5 min-w-0">
-                          <p className="m-0 mb-1 text-[11.5px] font-semibold text-ink-3">Eski</p>
+                          <p className="m-0 mb-1 text-xs font-semibold text-ink-3">Eski</p>
                           <p className="m-0 whitespace-pre-wrap leading-relaxed text-ink-2 wrap-anywhere">{srcExpl || <i className="text-ink-3">Açıklama yoktu</i>}</p>
                         </div>
                         <div className="rounded-lg bg-white p-2.5 min-w-0">
-                          <p className="m-0 mb-1 text-[11.5px] font-semibold text-accent">Yeni</p>
+                          <p className="m-0 mb-1 text-xs font-semibold text-accent">Yeni</p>
                           <p className="m-0 whitespace-pre-wrap leading-relaxed text-ink wrap-anywhere">{propExpl || <i className="text-ink-3">Öneri açıklama içermiyor</i>}</p>
                         </div>
                       </div>
                       {explChanged && srcExpl && (
-                        <details className="pt-2 text-[13px] text-ink-2">
-                          <summary className="cursor-pointer text-[12.5px] text-ink-3 py-1">Kelime farkını göster</summary>
+                        <details className="pt-2 text-sm text-ink-2">
+                          <summary className="cursor-pointer text-sm text-ink-3 py-1">Kelime farkını göster</summary>
                           <p className="m-0 whitespace-pre-wrap leading-relaxed break-words"><DiffText before={srcExpl} after={propExpl} /></p>
                         </details>
                       )}
@@ -1287,50 +1329,86 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                 </div>
 
                 {/* Eylemler + künye */}
-                <footer className="px-3 sm:px-4 py-2 border-t border-line-soft flex flex-wrap items-center gap-1.5">
+                <footer className="px-3 sm:px-4 py-2 border-t border-line-soft flex flex-wrap items-center gap-2">
                   {isAdmin && (
-                    <>
-                      {isPending && doubtful ? (
-                        <div className="flex flex-wrap items-center gap-1.5 w-full sm:w-auto">
-                          <span className="text-[12.5px] text-ink-3">Doğru cevap</span>
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <button
+                        type="button"
+                        onClick={() => handleReject(qId)}
+                        disabled={busy}
+                        className="ms-btn is-sm is-danger"
+                        title="Soruyu reddet (şüpheli olarak işaretle)"
+                      >
+                        <X className="w-3.5 h-3.5" /> Reddet
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => handleApprove(qId)}
+                        disabled={busy}
+                        className="ms-btn is-sm is-ok"
+                        title="Soruyu onayla ve ana soru havuzuna kaydet"
+                      >
+                        <Check className="w-3.5 h-3.5" /> Onayla
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => openEditModal(rev)}
+                        disabled={busy}
+                        className="ms-btn is-sm is-ghost"
+                        title="Soru kökünü, şıklarını veya cevabını düzenle"
+                      >
+                        <Edit3 className="w-3.5 h-3.5" /> Düzenle
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => handlePermanentDelete(qId)}
+                        disabled={busy}
+                        className="ms-btn is-sm is-danger bg-bad-soft! text-bad-text! hover:bg-bad! hover:text-white!"
+                        title="Soruyu hem Faz 14 listesinden hem soru havuzundan kalıcı olarak sil"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" /> Kalıcı sil
+                      </button>
+
+                      {doubtful && (
+                        <div className="flex flex-wrap items-center gap-1 ml-1 pl-2 border-l border-line-soft">
+                          <span className="text-xs text-ink-3">Hızlı cevap:</span>
                           <div className="ms-seg" role="radiogroup" aria-label="Kaydedilecek doğru cevap">
                             {Object.keys(pollOptions).map((k) => k.toUpperCase()).filter((k) => /^[A-E]$/.test(k)).map((k) => {
                               const sel = (answerPick[qId] || pollLeader[qId]) === k;
                               return (
-                                <button key={k} type="button" role="radio" aria-checked={sel} onClick={() => setAnswerPick((m) => ({ ...m, [qId]: k }))} className={`font-mono min-w-8 justify-center ${sel ? 'bg-ok! text-white! shadow-none!' : ''}`} title={pollLeader[qId] === k ? 'Ankette önde' : undefined}>
+                                <button
+                                  key={k}
+                                  type="button"
+                                  role="radio"
+                                  aria-checked={sel}
+                                  onClick={() => setAnswerPick((m) => ({ ...m, [qId]: k }))}
+                                  className={`font-mono min-w-7 h-7 text-xs justify-center ${sel ? 'bg-ok! text-white! shadow-none!' : ''}`}
+                                  title={pollLeader[qId] === k ? 'Ankette önde' : undefined}
+                                >
                                   {k}
                                 </button>
                               );
                             })}
                           </div>
-                          <button
-                            type="button"
-                            onClick={() => handleCompleteAnswerDoubt(qId, answerPick[qId] || pollLeader[qId])}
-                            disabled={busy || !(answerPick[qId] || pollLeader[qId])}
-                            className="ms-btn is-sm is-ok"
-                            title="Seçili şıkkı cevap olarak kaydet ve soruyu onaylayıp çıkmış sorulara gönder"
-                          >
-                            <Check /> Kaydet · çıkmışa gönder
-                          </button>
+                          {(answerPick[qId] || pollLeader[qId]) && (
+                            <button
+                              type="button"
+                              onClick={() => handleCompleteAnswerDoubt(qId, answerPick[qId] || pollLeader[qId])}
+                              disabled={busy}
+                              className="ms-btn is-sm is-ok text-xs py-1"
+                              title="Seçili şıkkı cevap olarak kaydet ve onayla"
+                            >
+                              Cevabı {answerPick[qId] || pollLeader[qId]} yap ve onayla
+                            </button>
+                          )}
                         </div>
-                      ) : (
-                        !isApproved && (
-                          <button type="button" onClick={() => handleApprove(qId)} disabled={busy} className="ms-btn is-sm is-ok">
-                            <Check /> Onayla
-                          </button>
-                        )
                       )}
-                      {!isRejected && (
-                        <button type="button" onClick={() => handleReject(qId)} disabled={busy} className="ms-btn is-sm is-danger">
-                          <X /> Reddet
-                        </button>
-                      )}
-                      <button type="button" onClick={() => openEditModal(rev)} className="ms-btn is-sm is-ghost">
-                        <Edit3 /> Düzenle
-                      </button>
-                    </>
+                    </div>
                   )}
-                  <p className="m-0 ml-auto text-[11.5px] text-ink-3 flex flex-wrap gap-x-2.5 gap-y-0.5 min-w-0">
+                  <p className="m-0 ml-auto text-xs text-ink-3 flex flex-wrap gap-x-2.5 gap-y-0.5 min-w-0">
                     <span className="font-mono">{rev.model || 'model bilinmiyor'}</span>
                     {rev.processed_at && <span>{rev.processed_at.slice(0, 16).replace('T', ' ')}</span>}
                     {rev.approved_at && <span className="text-ok">Onay {rev.approved_at.slice(0, 16).replace('T', ' ')}</span>}
@@ -1362,8 +1440,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
         >
           <div className="ms-modal-panel bg-white w-full max-w-2xl flex flex-col overflow-hidden">
             <header className="flex items-center gap-2 px-5 pt-4 pb-3 border-b border-line-soft">
-              <h3 id="tc-edit-title" className="m-0 flex-1 min-w-0 font-display text-[17px] font-semibold text-ink truncate">
-                Öneriyi düzenle <span className="font-mono text-[13px] font-normal text-ink-3">#{editingReview.question_id.slice(0, 8)}</span>
+              <h3 id="tc-edit-title" className="m-0 flex-1 min-w-0 font-display text-lg font-semibold text-ink truncate">
+                Öneriyi düzenle <span className="font-mono text-sm font-normal text-ink-3">#{editingReview.question_id.slice(0, 8)}</span>
               </h3>
               <button type="button" onClick={() => setEditingReview(null)} aria-label="Kapat" className="ms-btn is-ghost is-icon">
                 <X />
@@ -1371,24 +1449,24 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
             </header>
 
             <div className="flex-1 min-h-0 overflow-y-auto px-5 py-4 flex flex-col gap-4">
-              <p className="m-0 text-[12.5px] leading-relaxed text-warn bg-warn-soft rounded-lg px-3 py-2">
+              <p className="m-0 text-sm leading-relaxed text-warn bg-warn-soft rounded-lg px-3 py-2">
                 Kökün yönünü (olumlu/olumsuz) ve cevabı değiştirecek oynamalar yapma; yalnız imla, OCR bozukluğu, terim ve eksik şıkları düzelt.
               </p>
 
               <label className="flex flex-col gap-1.5">
-                <span className="text-[12.5px] font-semibold text-ink-3">Soru kökü</span>
+                <span className="text-sm font-semibold text-ink-3">Soru kökü</span>
                 <textarea
                   rows={5}
                   value={editStem}
                   onChange={(e) => setEditStem(e.target.value)}
-                  className="w-full p-3 rounded-xl bg-field border border-transparent focus:border-accent focus:bg-white text-ink text-[16px] sm:text-[14px] outline-0 leading-relaxed resize-y"
+                  className="w-full p-3 rounded-xl bg-field border border-transparent focus:border-accent focus:bg-white text-ink text-md sm:text-base outline-0 leading-relaxed resize-y"
                   placeholder="Düzeltilmiş soru kökü"
                 />
-                <span className="text-[11.5px] text-ink-3">Maddeli kökte her maddeyi ayrı satıra yaz (I. … / II. …); listede maddeler ayrı gösterilir.</span>
+                <span className="text-xs text-ink-3">Maddeli kökte her maddeyi ayrı satıra yaz (I. … / II. …); listede maddeler ayrı gösterilir.</span>
               </label>
 
               <fieldset className="m-0 p-0 border-0 flex flex-col gap-1.5">
-                <legend className="mb-1.5 text-[12.5px] font-semibold text-ink-3">Şıklar · doğru şıkkın harfine dokun</legend>
+                <legend className="mb-1.5 text-sm font-semibold text-ink-3">Şıklar · doğru şıkkın harfine dokun</legend>
                 {(['A', 'B', 'C', 'D', 'E'] as const).map((key) => {
                   const on = editCorrectAnswer === key;
                   return (
@@ -1399,7 +1477,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         aria-checked={on}
                         aria-label={`${key} doğru cevap`}
                         onClick={() => setEditCorrectAnswer(key)}
-                        className={`w-9 h-9 rounded-xl font-mono text-[13px] font-semibold shrink-0 inline-flex items-center justify-center cursor-pointer transition-colors ${on ? 'bg-ok text-white' : 'bg-field text-ink-2 hover:bg-line'}`}
+                        className={`w-9 h-9 rounded-xl font-mono text-sm font-semibold shrink-0 inline-flex items-center justify-center cursor-pointer transition-colors ${on ? 'bg-ok text-white' : 'bg-field text-ink-2 hover:bg-line'}`}
                       >
                         {on ? <Check className="w-4 h-4" strokeWidth={3} /> : key}
                       </button>
@@ -1407,7 +1485,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
                         type="text"
                         value={editOptions[key]}
                         onChange={(e) => setEditOptions((prev) => ({ ...prev, [key]: e.target.value }))}
-                        className={`flex-1 min-w-0 h-10 px-3 rounded-xl border text-[16px] sm:text-[14px] text-ink outline-0 focus:border-accent ${on ? 'bg-ok-tint border-transparent' : 'bg-field border-transparent focus:bg-white'}`}
+                        className={`flex-1 min-w-0 h-10 px-3 rounded-xl border text-md sm:text-base text-ink outline-0 focus:border-accent ${on ? 'bg-ok-tint border-transparent' : 'bg-field border-transparent focus:bg-white'}`}
                         placeholder={`${key} şıkkı`}
                       />
                     </div>
@@ -1416,23 +1494,23 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               </fieldset>
 
               <label className="flex flex-col gap-1.5">
-                <span className="text-[12.5px] font-semibold text-ink-3">Açıklama</span>
+                <span className="text-sm font-semibold text-ink-3">Açıklama</span>
                 <textarea
                   rows={4}
                   value={editExplanation}
                   onChange={(e) => setEditExplanation(e.target.value)}
-                  className="w-full p-3 rounded-xl bg-field border border-transparent focus:border-accent focus:bg-white text-ink text-[16px] sm:text-[14px] outline-0 leading-relaxed resize-y"
+                  className="w-full p-3 rounded-xl bg-field border border-transparent focus:border-accent focus:bg-white text-ink text-md sm:text-base outline-0 leading-relaxed resize-y"
                   placeholder="Soruya ait tıbbi açıklama"
                 />
               </label>
 
               <label className="flex flex-col gap-1.5">
-                <span className="text-[12.5px] font-semibold text-ink-3">Değişiklik notu</span>
+                <span className="text-sm font-semibold text-ink-3">Değişiklik notu</span>
                 <input
                   type="text"
                   value={editSummary}
                   onChange={(e) => setEditSummary(e.target.value)}
-                  className="w-full h-10 px-3 rounded-xl bg-field border border-transparent focus:border-accent focus:bg-white text-[16px] sm:text-[14px] text-ink outline-0"
+                  className="w-full h-10 px-3 rounded-xl bg-field border border-transparent focus:border-accent focus:bg-white text-md sm:text-base text-ink outline-0"
                   placeholder="Örn: C şıkkındaki imla hatası düzeltildi."
                 />
               </label>

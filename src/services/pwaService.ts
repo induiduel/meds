@@ -105,6 +105,13 @@ class PwaService {
       return null;
     }
 
+    // Vite geliştirme sunucusunda SW kaynak modülleri (/src/*.css, *.tsx) önbelleğe alıp
+    // düzenlemeleri gizliyordu: geliştirmede kaydedilmez, eski kayıt varsa kaldırılır.
+    if (import.meta.env.DEV) {
+      navigator.serviceWorker.getRegistrations().then((regs) => regs.forEach((r) => r.unregister())).catch(() => {});
+      return null;
+    }
+
     try {
       const swUrl = '/sw.js';
       const reg = await navigator.serviceWorker.register(swUrl, { scope: '/' });

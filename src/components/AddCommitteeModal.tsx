@@ -46,11 +46,11 @@ export const AddCommitteeModal: React.FC<AddCommitteeModalProps> = ({
   };
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
-      <div className="ms-modal-panel bg-white rounded-2xl max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden">
-        <div className="bg-teal-700 text-white p-4 flex items-center justify-between">
+    <div className="ms-overlay fixed inset-0 z-50 bg-ink/60 backdrop-blur-xs flex items-center justify-center p-4">
+      <div className="ms-modal-panel bg-white rounded-2xl max-w-md w-full shadow-2xl border border-line overflow-hidden">
+        <div className="bg-ok text-white p-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <FolderPlus className="w-5 h-5 text-teal-200" />
+            <FolderPlus className="w-5 h-5 text-ok-soft" />
             <h3 className="font-bold text-sm">Yeni Kurul / Komite Sınavı Ekle</h3>
           </div>
           <button
@@ -63,7 +63,7 @@ export const AddCommitteeModal: React.FC<AddCommitteeModalProps> = ({
 
         <form onSubmit={handleSubmit} className="p-5 space-y-4">
           <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1">
+            <label className="block text-xs font-semibold text-ink-2 mb-1">
               Kurul Sınavı Adı *
             </label>
             <input
@@ -71,18 +71,18 @@ export const AddCommitteeModal: React.FC<AddCommitteeModalProps> = ({
               placeholder="Ör: Dönem 3 - Kurul 4: Endokrin & Ürogenital Sistem"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs text-slate-900 focus:bg-white focus:outline-hidden focus:ring-1 focus:ring-teal-500"
+              className="w-full bg-field border border-line rounded-lg px-3 py-2 text-xs text-ink focus:bg-white focus:outline-hidden focus:ring-1 focus:ring-ok"
               required
             />
           </div>
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1">Tıp Dönemi</label>
+              <label className="block text-xs font-semibold text-ink-2 mb-1">Tıp Dönemi</label>
               <select
                 value={year}
                 onChange={(e) => setYear(Number(e.target.value))}
-                className="w-full bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-slate-800"
+                className="w-full bg-field border border-line rounded-lg px-2.5 py-1.5 text-xs text-ink"
               >
                 <option value={1}>Dönem 1</option>
                 <option value={2}>Dönem 2</option>
@@ -94,11 +94,11 @@ export const AddCommitteeModal: React.FC<AddCommitteeModalProps> = ({
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1">Soru Sayısı</label>
+              <label className="block text-xs font-semibold text-ink-2 mb-1">Soru Sayısı</label>
               <select
                 value={targetCount}
                 onChange={(e) => setTargetCount(Number(e.target.value))}
-                className="w-full bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-slate-800"
+                className="w-full bg-field border border-line rounded-lg px-2.5 py-1.5 text-xs text-ink"
               >
                 <option value={50}>50 Soru</option>
                 <option value={100}>100 Soru</option>
@@ -110,39 +110,39 @@ export const AddCommitteeModal: React.FC<AddCommitteeModalProps> = ({
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1">Akademik Yıl / Dönem</label>
+            <label className="block text-xs font-semibold text-ink-2 mb-1">Akademik Yıl / Dönem</label>
             <input
               type="text"
               placeholder="2025-2026 Güz"
               value={term}
               onChange={(e) => setTerm(e.target.value)}
-              className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs text-slate-800"
+              className="w-full bg-field border border-line rounded-lg px-3 py-1.5 text-xs text-ink"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1">Kısa Açıklama & Dersler</label>
+            <label className="block text-xs font-semibold text-ink-2 mb-1">Kısa Açıklama & Dersler</label>
             <textarea
               rows={2}
               placeholder="Patoloji, Farmakoloji, Dahiliye soruları..."
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-xs text-slate-800"
+              className="w-full bg-field border border-line rounded-lg p-2.5 text-xs text-ink"
             />
           </div>
 
-          <div className="pt-3 border-t border-slate-100 flex items-center justify-end gap-2">
+          <div className="pt-3 border-t border-line flex items-center justify-end gap-2">
             <button
               type="button"
               onClick={onClose}
-              className="px-3.5 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-100 rounded-lg cursor-pointer"
+              className="px-3.5 py-1.5 text-xs font-medium text-ink-2 hover:bg-field rounded-lg cursor-pointer"
             >
               Vazgeç
             </button>
             <button
               type="submit"
               disabled={isSubmitting || !name.trim()}
-              className="bg-teal-700 hover:bg-teal-800 text-white px-4 py-1.5 text-xs font-bold rounded-lg cursor-pointer disabled:opacity-50"
+              className="bg-ok hover:bg-ok text-white px-4 py-1.5 text-xs font-bold rounded-lg cursor-pointer disabled:opacity-50"
             >
               {isSubmitting ? 'Ekleniyor...' : 'Kurulu Oluştur'}
             </button>

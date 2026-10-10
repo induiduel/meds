@@ -232,7 +232,7 @@ export const ManageModerationSection: React.FC<Props> = ({
                     </span>
                     <span className="ms-row-main">
                       <span className="ms-row-title truncate">{r.reason}</span>
-                      <span className="text-[13px] text-ink-2 truncate">{r.questionTopic || r.questionId}</span>
+                      <span className="text-sm text-ink-2 truncate">{r.questionTopic || r.questionId}</span>
                       <span className="ms-row-meta">
                         <span className="truncate max-w-[18ch]">{r.reportedBy || 'Anonim'}</span>
                         {r.createdAt && <span>{timeLabel(r.createdAt, true)}</span>}
@@ -255,8 +255,8 @@ export const ManageModerationSection: React.FC<Props> = ({
           <header className="flex items-start gap-3 px-4 py-3.5 border-b border-line-soft">
             <span className="ms-ricon is-bad mt-0.5"><Flag aria-hidden="true" /></span>
             <div className="min-w-0 flex-1 flex flex-col gap-1">
-              <h2 className="m-0 text-[16px] font-semibold text-ink leading-snug">{report.reason}</h2>
-              <p className="m-0 text-[14px] text-ink-2 leading-relaxed [overflow-wrap:anywhere]">{report.details || 'Öğrenci ayrıntı yazmamış.'}</p>
+              <h2 className="m-0 text-md font-semibold text-ink leading-snug">{report.reason}</h2>
+              <p className="m-0 text-base text-ink-2 leading-relaxed [overflow-wrap:anywhere]">{report.details || 'Öğrenci ayrıntı yazmamış.'}</p>
               <span className="ms-row-meta">
                 <span>{report.reportedBy || 'Anonim'}</span>
                 {report.createdAt && <span>{new Date(report.createdAt).toLocaleString('tr-TR', { dateStyle: 'medium', timeStyle: 'short' })}</span>}
@@ -272,15 +272,15 @@ export const ManageModerationSection: React.FC<Props> = ({
           ) : (
             <>
               <div className="px-4 py-4 flex flex-col gap-4">
-                <div className="flex flex-wrap items-center gap-1.5 text-[12.5px] text-ink-3">
+                <div className="flex flex-wrap items-center gap-1.5 text-sm text-ink-3">
                   <span className={`ms-tag ${isPast ? '' : 'is-accent'}`}>{isPast ? 'Çıkmış soru' : 'Havuz sorusu'}</span>
                   {hidden && <span className="ms-tag is-warn"><EyeOff /> Gizli</span>}
                   <span className="truncate">{[question.discipline, question.topic, question.examYear, `S.${question.questionNumber || '?'}`].filter(Boolean).join(' · ')}</span>
-                  <span className="font-mono text-[11.5px] text-ink-3 ml-auto truncate max-w-[24ch]" title={question.id}>{question.id}</span>
+                  <span className="font-mono text-xs text-ink-3 ml-auto truncate max-w-[24ch]" title={question.id}>{question.id}</span>
                 </div>
 
                 <Field label="Soru kökü">
-                  <textarea value={stem} onChange={(e) => setStem(e.target.value)} rows={4} className="ms-input text-[15px]" />
+                  <textarea value={stem} onChange={(e) => setStem(e.target.value)} rows={4} className="ms-input text-md" />
                 </Field>
 
                 <div className="ms-field">
@@ -298,7 +298,7 @@ export const ManageModerationSection: React.FC<Props> = ({
                             onChange={(e) => setOptions((prev) => prev.map((x, j) => (j === i ? { ...x, text: e.target.value } : x)))}
                             placeholder={`${o.key} şıkkı`}
                             aria-label={`${o.key} şıkkı`}
-                            className="ms-bare-input w-full min-w-0 h-9 bg-transparent border-0 outline-0 text-[14.5px] text-ink"
+                            className="ms-bare-input w-full min-w-0 h-9 bg-transparent border-0 outline-0 text-md text-ink"
                           />
                         </li>
                       );

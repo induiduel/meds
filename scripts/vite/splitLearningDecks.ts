@@ -22,9 +22,7 @@ export function splitLearningDecks(root: string): Plugin {
     const srcTime = fs.statSync(src).mtimeMs;
     if (fs.existsSync(catalogFile)) {
       try {
-        const cat = JSON.parse(fs.readFileSync(catalogFile, 'utf8'));
-        const pub = cat.filter((x: any) => x.isNew || String(x.version || '').startsWith('2') || (x.slideCount && x.slideCount >= 50));
-        if (cat.length >= 100 && pub.length >= 29 && fs.statSync(catalogFile).mtimeMs >= srcTime) return;
+        if (fs.statSync(catalogFile).mtimeMs >= srcTime) return;
       } catch {}
     }
     const decks: any[] = JSON.parse(fs.readFileSync(src, 'utf8'));

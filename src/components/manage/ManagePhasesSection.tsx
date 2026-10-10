@@ -38,12 +38,12 @@ const HIDEABLE: [string, string][] = [
 const stemOf = (q: any) => q?.reconstruction?.stem || q?.stem || q?.rawQuestion?.stem || '';
 const fold = (s: string) => s.toLocaleLowerCase('tr-TR');
 const card = 'rounded-xl bg-canvas p-3.5 flex flex-col gap-2 min-w-0';
-const h3 = 'm-0 text-[12.5px] font-semibold text-ink-2';
+const h3 = 'm-0 text-sm font-semibold text-ink-2';
 const input = 'ms-input';
 
 function Json({ value }: { value: any }) {
   return (
-    <pre className="ms-term !max-h-72 !min-h-0 !text-[11.5px]">
+    <pre className="ms-term !max-h-72 !min-h-0 !text-xs">
       {value == null ? '—' : JSON.stringify(value, null, 1)}
     </pre>
   );
@@ -261,11 +261,11 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
         {term.trim().length >= 2 && (
           <div className="ms-suggest">
             {matches.length === 0 ? (
-              <p className="m-0 px-3 py-3 text-[13px] text-ink-3">Eşleşen soru yok.</p>
+              <p className="m-0 px-3 py-3 text-sm text-ink-3">Eşleşen soru yok.</p>
             ) : (
               matches.map((q) => (
                 <button key={q.id} type="button" onClick={() => { void load(q.id); setTerm(''); }} className="ms-suggest-row !min-h-[42px]">
-                  <span className="font-mono text-[12px] text-ink-3 shrink-0">#{q.questionNumber}</span>
+                  <span className="font-mono text-xs text-ink-3 shrink-0">#{q.questionNumber}</span>
                   <span className="truncate">{stemOf(q).slice(0, 140)}</span>
                 </button>
               ))
@@ -287,7 +287,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
       <section className="ms-panel">
         <header className="ms-panel-head">
           <h2 className="ms-panel-title">{curCat?.label || 'Kategori'}</h2>
-          {curCat && <span className="text-[12.5px] text-ink-3 tabular-nums">{curCat.satir.toLocaleString('tr-TR')} kayıt · {curCat.soru.toLocaleString('tr-TR')} soru</span>}
+          {curCat && <span className="text-sm text-ink-3 tabular-nums">{curCat.satir.toLocaleString('tr-TR')} kayıt · {curCat.soru.toLocaleString('tr-TR')} soru</span>}
           {curCat?.desc && <p className="ms-panel-desc">{curCat.desc}</p>}
         </header>
         <div className="px-4 pt-3 pb-2 flex flex-col gap-2">
@@ -307,7 +307,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
           </div>
           {eq.alan && (ex?.dagilim?.length ?? 0) > 0 && (
             <div className="ms-chipbar is-wrap">
-              <span className="text-[12.5px] text-ink-3 self-center">{eq.alan}:</span>
+              <span className="text-sm text-ink-3 self-center">{eq.alan}:</span>
               {ex!.dagilim.map((d) => (
                 <button key={d.deger} type="button" onClick={() => setDegerInput('=' + d.deger)} className={`ms-fchip !h-7 ${eq.deger === '=' + d.deger ? 'is-on' : ''}`}>
                   {d.deger.length > 40 ? d.deger.slice(0, 40) + '…' : d.deger} <span className="n">{d.sayi}</span>
@@ -349,7 +349,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
           {!ex && <div className="p-3 flex flex-col gap-2">{[0, 1, 2, 3].map((i) => <div key={i} className="h-8 rounded-lg ms-shimmer" />)}</div>}
         </div>
         {ex && ex.toplam > 0 && (
-          <footer className="flex flex-wrap items-center justify-between gap-2 px-4 py-2.5 border-t border-line-soft text-[12.5px] text-ink-3">
+          <footer className="flex flex-wrap items-center justify-between gap-2 px-4 py-2.5 border-t border-line-soft text-sm text-ink-3">
             <span className="tabular-nums">{ex.toplam.toLocaleString('tr-TR')} kayıt · sayfa {ex.sayfa} / {Math.max(1, Math.ceil(ex.toplam / ex.boyut))} · satıra dokununca ayrıntı açılır</span>
             <div className="flex items-center gap-1">
               <select className="ms-input is-sm !w-auto" value={eq.boyut} onChange={(e) => setEq((q) => ({ ...q, boyut: Number(e.target.value), sayfa: 1 }))} aria-label="Sayfa boyutu">
@@ -376,7 +376,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
       >
       {detail && (
         <>
-          <p className="m-0 text-[15px] leading-relaxed text-ink font-medium">{stemOf(selQ)}</p>
+          <p className="m-0 text-md leading-relaxed text-ink font-medium">{stemOf(selQ)}</p>
           {detail.gorunen?.elle_duzeltildi && (
             <div className="ms-alert is-warn !py-2">
               <Info aria-hidden="true" />
@@ -384,7 +384,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
             </div>
           )}
           <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-[12.5px] text-ink-3 mr-1">Yeniden incele</span>
+            <span className="text-sm text-ink-3 mr-1">Yeniden incele</span>
             <button type="button" onClick={() => rereview('slayt')} className="ms-btn is-sm">Hakem · slayt</button>
             <button type="button" onClick={() => rereview('konu')} className="ms-btn is-sm">Hakem · konu</button>
             <button type="button" onClick={() => rereview('faz14')} className="ms-btn is-sm">Faz 14 · soru düzeltme</button>
@@ -397,8 +397,8 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
                 .filter((k) => JSON.stringify(ham?.[k] ?? null) !== JSON.stringify(detail.gorunen?.[k] ?? null))
                 .map((k) => (
                   <div key={k} className="grid gap-2 md:grid-cols-2">
-                    <div><p className="m-0 mb-1 text-[12px] font-semibold text-ink-3">{k} · faz çıktısı</p><Json value={ham?.[k] ?? null} /></div>
-                    <div><p className="m-0 mb-1 text-[12px] font-semibold text-accent">{k} · sitede görünen</p><Json value={detail.gorunen?.[k] ?? null} /></div>
+                    <div><p className="m-0 mb-1 text-xs font-semibold text-ink-3">{k} · faz çıktısı</p><Json value={ham?.[k] ?? null} /></div>
+                    <div><p className="m-0 mb-1 text-xs font-semibold text-accent">{k} · sitede görünen</p><Json value={detail.gorunen?.[k] ?? null} /></div>
                   </div>
                 ))}
             </section>
@@ -412,11 +412,11 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
             <div className="grid gap-3 md:grid-cols-2">
               <div className={card}>
                 <div className="flex items-center justify-between gap-2"><h3 className={h3}>Müfredat</h3><SecActions k="mufredat" /></div>
-                <p className="m-0 text-[13px]">
+                <p className="m-0 text-sm">
                   <b>Sınav başlığı:</b>{' '}
                   {kay.mufredat_sinav_basligi ? `Kurul ${kay.mufredat_sinav_basligi.kurul} · ${kay.mufredat_sinav_basligi.ders} · ${kay.mufredat_sinav_basligi.konu}` : '—'}
                 </p>
-                <p className="m-0 text-[13px]">
+                <p className="m-0 text-sm">
                   <b>Faz 8/9 kazanım:</b>{' '}
                   {(() => {
                     const k = (ham.mufredat || ham.faz8)?.kazanimlar?.[0];
@@ -427,21 +427,21 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
               <div className={card}>
                 <div className="flex items-center justify-between gap-2"><h3 className={h3}>Slaytlar (Faz 11) · güven {ham.slayt?.guven || '—'}</h3><SecActions k="slayt" /></div>
                 {(ham.slayt?.slaytlar || []).map((s: any) => (
-                  <p key={`${s.kaynak}${s.sayfa}`} className="m-0 text-[13px]">
+                  <p key={`${s.kaynak}${s.sayfa}`} className="m-0 text-sm">
                     <b>{s.kaynak}</b> · s.{s.sayfa} <span className="text-ink-3">{(s.gerekce || []).join(', ')}</span>
                   </p>
                 ))}
-                {!ham.slayt && <p className="m-0 text-[13px] text-ink-3">Eşleşme yok</p>}
-                <p className="m-0 text-[13px]">
+                {!ham.slayt && <p className="m-0 text-sm text-ink-3">Eşleşme yok</p>}
+                <p className="m-0 text-sm">
                   <b>Öğren:</b> {kay.ogren ? `${kay.ogren.deckTitle} · slayt ${kay.ogren.slideNumber} (${kay.ogren.guven}, ${kay.ogren.skor})` : '—'}
                 </p>
               </div>
               <div className={card}>
                 <div className="flex items-center justify-between gap-2"><h3 className={h3}>Kısaltmalar · terimler</h3><SecActions k="kisaltmalar" /></div>
-                <p className="m-0 text-[13px]">
+                <p className="m-0 text-sm">
                   {Object.entries(ham.faz6_5?.kisaltmalar || {}).map(([k, v]) => `${k} = ${v}`).join(' · ') || 'Kısaltma yok'}
                 </p>
-                <p className="m-0 text-[13px] text-ink-2">{[...(ham.faz6_5?.terimler || []), ...(ham.faz5?.terimler || [])].join(', ') || '—'}</p>
+                <p className="m-0 text-sm text-ink-2">{[...(ham.faz6_5?.terimler || []), ...(ham.faz5?.terimler || [])].join(', ') || '—'}</p>
               </div>
               <div className={card}>
                 <div className="flex items-center justify-between gap-2"><h3 className={h3}>Faz 13 varlıkları ({(kay.varliklar_tum || []).length})</h3><SecActions k="varliklar" /></div>
@@ -450,23 +450,23 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
                     <span
                       key={i}
                       title={`${v.kaynak}${v.tur ? ' · ' + v.tur : ''}`}
-                      className={`px-2 py-0.5 rounded-full text-[12px] ${v.kavram ? 'bg-ok-soft text-ok' : 'bg-canvas text-ink-3'}`}
+                      className={`px-2 py-0.5 rounded-full text-xs ${v.kavram ? 'bg-ok-soft text-ok' : 'bg-canvas text-ink-3'}`}
                     >
                       {v.ad || v.metin}
                     </span>
                   ))}
                 </div>
-                <p className="m-0 text-[11.5px] text-ink-3">Yeşil: kimlikli (sitede görünür) · gri: kimliksiz GLiNER tahmini (gizli)</p>
+                <p className="m-0 text-xs text-ink-3">Yeşil: kimlikli (sitede görünür) · gri: kimliksiz GLiNER tahmini (gizli)</p>
               </div>
               <div className={card}>
                 <div className="flex items-center justify-between gap-2"><h3 className={h3}>Ayırıcı tanı (Faz 6) · {ham.faz6 ? (ham.faz6.dogrulanmadi ? 'doğrulanmadı' : 'materyalle desteklenen') : '—'}</h3><SecActions k="faz6" /></div>
                 {(ham.faz6?.ayirici_tani || []).map((d: any) => (
-                  <p key={d.hastalik} className="m-0 text-[13px]"><b>{d.hastalik}</b> — {d.ozellik}</p>
+                  <p key={d.hastalik} className="m-0 text-sm"><b>{d.hastalik}</b> — {d.ozellik}</p>
                 ))}
               </div>
               <div className={card}>
                 <h3 className={h3}>Karantina</h3>
-                {kay.karantina ? <Json value={kay.karantina} /> : <p className="m-0 text-[13px] text-ink-3">Karantinada değil</p>}
+                {kay.karantina ? <Json value={kay.karantina} /> : <p className="m-0 text-sm text-ink-3">Karantinada değil</p>}
               </div>
             </div>
           )}
@@ -475,7 +475,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
             <h3>Elle düzelt</h3>
             <div className="flex flex-wrap gap-x-4 gap-y-1.5">
               {HIDEABLE.map(([k, label]) => (
-                <label key={k} className="inline-flex items-center gap-1.5 text-[13px] cursor-pointer">
+                <label key={k} className="inline-flex items-center gap-1.5 text-sm cursor-pointer">
                   <input
                     className="w-[15px] h-[15px] accent-accent"
                     type="checkbox"
@@ -512,12 +512,12 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
               <FlaskConical /> {busy === 'test' ? 'Aranıyor…' : 'Testi çalıştır'}
             </button>
             {test && (
-              <ol className="m-0 pl-5 flex flex-col gap-1.5 text-[13px]">
+              <ol className="m-0 pl-5 flex flex-col gap-1.5 text-sm">
                 {test.sonuclar.map((r, i) => (
                   <li key={i}>
                     <b>{r.baslik}</b> {r.sayfa != null && <span className="text-ink-3">· s.{r.sayfa}</span>} <span className="text-ink-3">· {r.skor}</span>
                     {faz11Keys.has(`${fold(r.baslik)}#${r.sayfa}`) && <span className="ml-1.5 ms-tag is-ok">Faz 11 ile aynı</span>}
-                    <div className="text-ink-2 text-[12.5px]">{r.metin}</div>
+                    <div className="text-ink-2 text-sm">{r.metin}</div>
                   </li>
                 ))}
               </ol>

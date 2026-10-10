@@ -239,7 +239,7 @@ export const ManageUsersSection: React.FC<Props> = ({
         />
       </div>
       {tab === 'registered' && registeredUsers.length > 0 && (
-        <p className="m-0 text-[12.5px] text-ink-3">
+        <p className="m-0 text-sm text-ink-3">
           {registeredUsers.length - admins} öğrenci, {admins} yönetici. Hesaplar Supabase ve yerel veritabanından birleştirilir.
         </p>
       )}
@@ -271,11 +271,11 @@ export const ManageUsersSection: React.FC<Props> = ({
                           <span className={`ms-avatar ${admin ? 'is-accent' : ''}`}>{initial(u.displayName || u.email)}</span>
                           <div className="min-w-0">
                             <div className="font-semibold truncate max-w-[240px]">{u.displayName || 'İsimsiz öğrenci'}</div>
-                            <div className="text-[12.5px] text-ink-3 truncate max-w-[260px]">{u.email || '—'}</div>
+                            <div className="text-sm text-ink-3 truncate max-w-[260px]">{u.email || '—'}</div>
                           </div>
                         </div>
                       </td>
-                      <td className="font-mono text-[12.5px]">{u.studentNumber || <span className="text-ink-3 font-sans">—</span>}</td>
+                      <td className="font-mono text-sm">{u.studentNumber || <span className="text-ink-3 font-sans">—</span>}</td>
                       <td>{admin ? <span className="ms-tag is-accent"><ShieldCheck /> Yönetici</span> : <span className="ms-tag">Öğrenci</span>}</td>
                       <td className="text-ink-2 whitespace-nowrap">{fmtDate(u.createdAt)}</td>
                       <td className="text-ink-2 whitespace-nowrap">{fmtDate(u.lastLoginAt)}</td>
@@ -313,7 +313,7 @@ export const ManageUsersSection: React.FC<Props> = ({
                     <tr key={u.key} onClick={() => open(u.key)} className={`is-button ${openKey === u.key ? 'is-on' : ''}`}>
                       <td>
                         <div className="font-semibold truncate max-w-[260px]">{u.name}</div>
-                        {u.email && <div className="text-[12.5px] text-ink-3 truncate max-w-[260px]">{u.email}</div>}
+                        {u.email && <div className="text-sm text-ink-3 truncate max-w-[260px]">{u.email}</div>}
                       </td>
                       <td className="is-num">{u.questions}</td>
                       <td className="is-num">{u.revisions || 0}</td>
@@ -372,8 +372,8 @@ export const ManageUsersSection: React.FC<Props> = ({
         {sel &&
           (mode === 'mail' ? (
             <>
-              <p className="m-0 text-[13.5px] text-ink-2">
-                Alıcı: <b className="text-ink">{sel.name}</b> · <span className="font-mono text-[12.5px]">{sel.email}</span>
+              <p className="m-0 text-base text-ink-2">
+                Alıcı: <b className="text-ink">{sel.name}</b> · <span className="font-mono text-sm">{sel.email}</span>
               </p>
               <Field label="Konu">
                 <input value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Konu başlığı" className="ms-input" autoFocus />
@@ -391,14 +391,14 @@ export const ManageUsersSection: React.FC<Props> = ({
                     {sel.reg ? <span className="ms-tag is-ok">Kayıtlı hesap</span> : <span className="ms-tag is-warn">Hesabı yok, yalnız katkı izi</span>}
                     {(sel.reg?.role === 'admin' || isOwner(sel.email)) && <span className="ms-tag is-accent"><ShieldCheck /> Yönetici</span>}
                   </span>
-                  {sel.email && <span className="font-mono text-[12.5px] text-ink-2 truncate">{sel.email}</span>}
+                  {sel.email && <span className="font-mono text-sm text-ink-2 truncate">{sel.email}</span>}
                 </div>
               </div>
               <dl className="ms-kv">
                 {sel.studentNumber && (<><dt>Öğrenci no</dt><dd className="font-mono">{sel.studentNumber}</dd></>)}
                 {sel.reg?.createdAt && (<><dt>Kayıt</dt><dd>{fmtDate(sel.reg.createdAt)}</dd></>)}
                 {sel.reg?.lastLoginAt && (<><dt>Son giriş</dt><dd>{new Date(sel.reg.lastLoginAt).toLocaleString('tr-TR', { dateStyle: 'medium', timeStyle: 'short' })}</dd></>)}
-                {sel.reg?.uid && (<><dt>UID</dt><dd className="font-mono text-[12px]">{sel.reg.uid}</dd></>)}
+                {sel.reg?.uid && (<><dt>UID</dt><dd className="font-mono text-xs">{sel.reg.uid}</dd></>)}
               </dl>
               <dl className="ms-statgrid m-0">
                 {([['Soru', sel.act?.questions], ['Düzenleme', sel.act?.revisions], ['Parça', sel.act?.fragments], ['Şık', sel.act?.options], ['Bildirim', sel.act?.reports], ['Yorum', sel.act?.comments]] as const).map(([k, v]) => (
@@ -423,7 +423,7 @@ const DList: React.FC<{ title: string; items: { label?: string; text: string }[]
       {title} <span className="n">{items.length}</span>
     </h3>
     {items.length === 0 ? (
-      <p className="m-0 text-[13px] text-ink-3">{empty}</p>
+      <p className="m-0 text-sm text-ink-3">{empty}</p>
     ) : (
       <ul className="ms-dlist">
         {items.map((it, i) => (

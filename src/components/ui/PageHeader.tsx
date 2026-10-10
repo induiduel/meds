@@ -1,8 +1,9 @@
 import React from 'react';
 
 /**
- * Tüm sayfaların ortak başlığı: küçük üst etiket, büyük başlık, açıklama,
- * sağda eylemler ve isteğe bağlı istatistik satırı. Dar ekranda eylemler alta iner.
+ * Tüm sayfaların ortak başlığı — Çıkmış sorular dili: büyük başlık + yanında canlı mono sayaç,
+ * sağda sessiz araçlar. Açıklama tek sakin satırdır (telefonda gizlenir). İstatistikler kutu değil,
+ * başlığın yanındaki sayacın parçasıdır: "66 ders · 8.774 soru".
  */
 export interface PageStat {
   label: string;
@@ -10,14 +11,10 @@ export interface PageStat {
   tone?: 'default' | 'accent' | 'ok' | 'warn';
 }
 
-const TONE: Record<NonNullable<PageStat['tone']>, string> = {
-  default: 'text-ink',
-  accent: 'text-accent',
-  ok: 'text-ok',
-  warn: 'text-warn',
-};
+const lower = (s: string) => s.toLocaleLowerCase('tr-TR');
 
 export const PageHeader: React.FC<{
+  /** Eski üst etiket; başlık kendi ağırlığını taşır, gösterilmez */
   eyebrow?: React.ReactNode;
   title: React.ReactNode;
   description?: React.ReactNode;
@@ -25,26 +22,23 @@ export const PageHeader: React.FC<{
   stats?: PageStat[];
   className?: string;
   children?: React.ReactNode;
-}> = ({ eyebrow, title, description, actions, stats, className = '', children }) => (
-  <header className={`flex flex-col gap-2.5 ${className}`}>
-    <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
-      <div className="min-w-0 flex flex-col gap-1 max-w-3xl">
-        {eyebrow && <span className="ms-eyebrow">{eyebrow}</span>}
-        <h1 className="ms-page-title m-0 text-ink">{title}</h1>
-        {description && <p className="ms-page-desc m-0 leading-relaxed">{description}</p>}
-      </div>
-      {actions && <div className="ms-ph-actions min-w-0 max-w-full flex flex-wrap items-center gap-2">{actions}</div>}
+}> = ({ title, description, actions, stats, className = '', children }) => (
+  <header className={`cx-page ${className}`}>
+    <div className="cx-head">
+      <h1 className="ms-page-title cx-title">{title}</h1>
+      {stats && stats.length > 0 && (
+        <span className="cx-count" aria-live="polite">
+          {stats.map((s, i) => (
+            <span key={s.label} className={`cx-stat ${s.tone && s.tone !== 'default' ? `is-${s.tone}` : ''}`}>
+              {i > 0 && <i aria-hidden>·</i>}
+              {s.value} <small>{lower(s.label)}</small>
+            </span>
+          ))}
+        </span>
+      )}
+      {actions && <div className="cx-head-tools ms-ph-actions">{actions}</div>}
     </div>
-    {stats && stats.length > 0 && (
-      <dl className="ms-stats m-0 flex flex-wrap gap-2">
-        {stats.map((s) => (
-          <div key={s.label} className="min-w-[112px] bg-white border border-line rounded-xl px-3 py-2 flex flex-col">
-            <dt className="text-[11.5px] font-medium text-ink-3">{s.label}</dt>
-            <dd className={`m-0 text-[17px] font-bold font-mono tracking-tight ${TONE[s.tone || 'default']}`}>{s.value}</dd>
-          </div>
-        ))}
-      </dl>
-    )}
+    {description && <p className="ms-page-desc cx-desc">{description}</p>}
     {children}
   </header>
 );

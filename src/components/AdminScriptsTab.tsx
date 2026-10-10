@@ -291,10 +291,10 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                   <span className="ms-row-text">{pipe.description}</span>
                   <ol className="m-0 p-0 list-none flex flex-wrap items-center gap-1 pt-1">
                     {pipe.steps.map((st, idx) => (
-                      <li key={idx} className="inline-flex items-center gap-1 text-[12px] text-ink-2">
+                      <li key={idx} className="inline-flex items-center gap-1 text-xs text-ink-2">
                         {idx > 0 && <ArrowRight className="w-3 h-3 text-ink-3" aria-hidden="true" />}
                         <span className="h-6 px-2 rounded-md bg-canvas inline-flex items-center gap-1.5">
-                          <span className="font-mono text-[11.5px] text-ink-3">{idx + 1}</span>
+                          <span className="font-mono text-xs text-ink-3">{idx + 1}</span>
                           {cleanTitle(st.title || st.script)}
                         </span>
                       </li>
@@ -340,7 +340,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                     </span>
                     <span className="ms-row-text">{script.description}</span>
                     <span className="ms-row-meta">
-                      <code className="font-mono text-[12px] text-ink-2">{script.name}</code>
+                      <code className="font-mono text-xs text-ink-2">{script.name}</code>
                       {script.sizeBytes ? <span>{(script.sizeBytes / 1024).toFixed(1)} KB</span> : null}
                       {script.tags && script.tags.length > 0 && <span>{script.tags.map((t) => `#${t}`).join(' ')}</span>}
                     </span>
@@ -391,7 +391,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
         head={
           <span className="hidden sm:inline-flex items-center gap-1.5">
             {jobStatusTag(terminalJob?.status)}
-            {terminalJob?.durationMs ? <span className="text-[12px] text-ink-3 tabular-nums">{(terminalJob.durationMs / 1000).toFixed(1)} sn</span> : null}
+            {terminalJob?.durationMs ? <span className="text-xs text-ink-3 tabular-nums">{(terminalJob.durationMs / 1000).toFixed(1)} sn</span> : null}
           </span>
         }
         foot={

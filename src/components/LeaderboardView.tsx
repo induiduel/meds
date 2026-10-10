@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { PageHeader } from './ui/PageHeader';
-import { 
+import { EmptySearch } from './ui/Animations';
+import {
+  ChevronDown,
   Trophy, 
   Medal, 
   Award, 
@@ -239,7 +241,6 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
   const me = leaderboard.find((x) => x.isCurrentUser);
   const myRank = me ? leaderboard.indexOf(me) + 1 : 0;
   const maxPoints = Math.max(1, leaderboard[0]?.totalPoints || 1);
-  const podiumTone = ['#B7791F', '#6B7785', '#A0592B'];
   const initials = (name: string) =>
     name
       .split(/[^\p{L}\p{N}]+/u)
@@ -250,162 +251,121 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
       .toLocaleUpperCase('tr-TR') || '?';
 
   return (
-    <div className="w-full flex flex-col gap-3 sm:gap-4 min-w-0">
+    <div className="ds-page">
       <PageHeader
-        eyebrow="Topluluk"
         title="Sıralama"
+        stats={[
+          { label: 'katkıcı', value: leaderboard.length },
+          ...(me ? [{ label: 'senin sıran', value: `${myRank}.`, tone: 'accent' as const }] : []),
+        ]}
         description="Soru kökü +10 · şık +5 · aldığın her beğeni +2 puan."
         actions={
-          <button
-            type="button"
-            onClick={onOpenContributeModal}
-            className="h-10 px-3.5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer shrink-0 shadow-sm"
-          >
-            <Sparkles className="w-4 h-4" />
+          <button type="button" onClick={onOpenContributeModal} className="ms-btn is-primary">
+            <Sparkles aria-hidden />
             Katkı yap
           </button>
         }
       />
 
-      {/* Scope + committee */}
-      <div className="flex flex-wrap items-center gap-2">
-        <div role="radiogroup" aria-label="Kapsam" className="inline-grid grid-cols-2 gap-1 bg-white border border-line rounded-xl p-1">
+      {/* Kapsam + kurul */}
+      <div className="ds-toolbar">
+        <div role="radiogroup" aria-label="Kapsam" className="ds-seg">
           {(
             [
               ['current', 'Bu kurul'],
               ['all', 'Tüm kurullar'],
             ] as const
           ).map(([id, label]) => (
-            <button
-              key={id}
-              type="button"
-              role="radio"
-              aria-checked={filterScope === id}
-              onClick={() => setFilterScope(id)}
-              className={`h-8 px-3 rounded-lg text-[13.5px] cursor-pointer whitespace-nowrap ${
-                filterScope === id ? 'bg-ink text-white font-semibold' : 'text-ink-2 hover:text-ink'
-              }`}
-            >
+            <button key={id} type="button" role="radio" aria-checked={filterScope === id} onClick={() => setFilterScope(id)}>
               {label}
             </button>
           ))}
         </div>
         {filterScope === 'current' && (
-          <label className="min-w-0 flex-1 sm:flex-none">
-            <span className="sr-only">Kurul</span>
-            <select
-              value={selectedCommitteeId}
-              onChange={(e) => onSelectCommittee(e.target.value)}
-              className="w-full sm:w-auto sm:max-w-[320px] h-10 rounded-xl bg-white border border-line px-3 text-[14px] text-ink cursor-pointer truncate"
-            >
+          <label className="ds-select is-wide">
+            <span>Kurul</span>
+            <select value={selectedCommitteeId} onChange={(e) => onSelectCommittee(e.target.value)} aria-label="Kurul">
               {committees.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.name}
-                </option>
+                <option key={c.id} value={c.id}>{c.name}</option>
               ))}
             </select>
+            <ChevronDown aria-hidden />
           </label>
         )}
       </div>
 
-      {/* Your rank */}
-      {me && (
-        <div className="bg-ink text-white rounded-2xl px-4 sm:px-5 py-4 flex items-center gap-4">
-          <span className="font-display font-bold text-[34px] leading-none tracking-[-0.03em] w-14 text-center shrink-0">{myRank}.</span>
-          <span className="flex-1 min-w-0">
-            <span className="block text-[13px] text-white/60">Senin sıran</span>
-            <span className="block text-[16px] font-semibold truncate">{me.name}</span>
-          </span>
-          <span className="text-right shrink-0">
-            <span className="block font-mono text-[20px] font-semibold">{me.totalPoints}</span>
-            <span className="block text-[12px] text-white/60">puan</span>
-          </span>
-        </div>
-      )}
-
-      {/* Podium */}
+      {/* İlk üç: sade podyum */}
       {top3.some((t) => t.totalPoints > 0) && (
-        <ol className="list-none m-0 p-0 grid grid-cols-3 gap-2 sm:gap-3">
+        <ol className="ds-podium">
           {top3.map((item, i) => (
-            <li
-              key={item.id}
-              className={`bg-white border rounded-2xl px-2 sm:px-4 pt-4 pb-3 flex flex-col items-center text-center gap-1.5 min-w-0 ${
-                item.isCurrentUser ? 'border-accent' : 'border-line'
-              } ${i === 0 ? 'shadow-md' : ''}`}
-            >
-              <span className="relative">
-                <span
-                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white font-semibold text-[15px] sm:text-[17px]"
-                  style={{ background: podiumTone[i] }}
-                >
-                  {initials(item.name)}
-                </span>
-                <span className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-white border border-line flex items-center justify-center font-mono text-[12px] font-semibold">
-                  {i + 1}
-                </span>
+            <li key={item.id} className={`${i === 0 ? 'is-first' : ''} ${item.isCurrentUser ? 'is-me' : ''}`}>
+              <span className="ds-avatar is-lg">{initials(item.name)}<i>{i + 1}</i></span>
+              <span className="ds-podium-t">
+                <b>{item.name}</b>
+                <span>{item.totalPoints} puan</span>
               </span>
-              <span className="text-[14px] sm:text-[15px] font-semibold text-ink truncate max-w-full">{item.name}</span>
-              <span className="font-mono text-[13px] text-ink-2">{item.totalPoints} puan</span>
             </li>
           ))}
         </ol>
       )}
 
-      {/* Full list */}
-      <div className="bg-white border border-line rounded-2xl overflow-hidden">
-        <div className="flex items-center gap-2 px-3 sm:px-4 py-2.5 border-b border-line-soft">
-          <Search className="w-4 h-4 text-ink-3 shrink-0" />
+      {/* Senin sıran */}
+      {me && (
+        <div className="ds-me">
+          <span className="ds-me-rank">{myRank}.</span>
+          <span className="ds-row-t">
+            <span>Senin sıran</span>
+            <b>{me.name}</b>
+          </span>
+          <span className="ds-me-pts">{me.totalPoints}<small>puan</small></span>
+        </div>
+      )}
+
+      {/* Tam liste */}
+      <section className="ds-panel is-flush">
+        <label className="ds-panel-search">
+          <Search aria-hidden />
           <input
             type="search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Rumuz ya da öğrenci no ara"
             aria-label="Katkıcı ara"
-            className="flex-1 min-w-0 h-9 bg-transparent border-0 outline-0 text-[16px] sm:text-[14px] placeholder:text-slate-600"
           />
-          <span className="text-[12.5px] text-ink-3 shrink-0">{filteredLeaderboard.length} kişi</span>
-        </div>
+          <span className="ds-count">{filteredLeaderboard.length} kişi</span>
+        </label>
         {filteredLeaderboard.length === 0 ? (
-          <p className="m-0 px-4 py-10 text-center text-[14px] text-ink-3">Aramaya uyan katkıcı yok.</p>
+          <div className="ds-empty">
+            <EmptySearch size={56} />
+            <b>Aramaya uyan katkıcı yok</b>
+          </div>
         ) : (
-          <ol className="list-none m-0 p-0">
+          <ol className="ds-rank-list">
             {filteredLeaderboard.map((item) => {
               const rank = leaderboard.indexOf(item) + 1;
               return (
-                <li
-                  key={item.id}
-                  className={`grid grid-cols-[32px_minmax(0,1fr)_auto] items-center gap-3 px-3 sm:px-4 py-3 border-b border-line-soft last:border-b-0 ${
-                    item.isCurrentUser ? 'bg-accent-soft/60' : ''
-                  }`}
-                >
-                  <span className={`font-mono text-[14px] text-center ${rank <= 3 ? 'font-bold text-ink' : 'text-ink-3'}`}>{rank}</span>
-                  <span className="min-w-0 flex flex-col gap-1">
-                    <span className="flex items-center gap-2 min-w-0">
-                      <span className="text-[15px] font-semibold text-ink truncate">{item.name}</span>
-                      {item.isCurrentUser && (
-                        <span className="h-5 px-1.5 rounded-full bg-accent text-white text-[11px] font-semibold inline-flex items-center shrink-0">Sen</span>
-                      )}
-                    </span>
-                    <span className="flex items-center gap-2">
-                      <span className="flex-1 max-w-[220px] h-1.5 rounded-full bg-line-soft overflow-hidden" aria-hidden="true">
-                        <span
-                          className="block h-full rounded-full bg-accent"
-                          style={{ width: `${Math.max(item.totalPoints > 0 ? 3 : 0, (item.totalPoints / maxPoints) * 100)}%` }}
-                        />
-                      </span>
-                      <span className="text-[12px] text-ink-3 whitespace-nowrap">
-                        {item.questionsCount} soru · {item.optionsCount} şık
-                        <span className="hidden sm:inline"> · {item.upvotesCount} beğeni</span>
-                      </span>
+                <li key={item.id} className={item.isCurrentUser ? 'is-me' : ''}>
+                  <span className={`ds-rank ${rank <= 3 ? 'is-top' : ''}`}>{rank}</span>
+                  <span className="ds-avatar">{initials(item.name)}</span>
+                  <span className="ds-row-t">
+                    <b>
+                      {item.name}
+                      {item.isCurrentUser && <span className="ms-tag is-new">Sen</span>}
+                    </b>
+                    <span>
+                      {item.questionsCount} soru · {item.optionsCount} şık · {item.upvotesCount} beğeni
                     </span>
                   </span>
-                  <span className="font-mono text-[15px] font-semibold text-ink text-right">{item.totalPoints}</span>
+                  <span className="ds-bar" aria-hidden="true">
+                    <i style={{ width: `${Math.max(item.totalPoints > 0 ? 3 : 0, (item.totalPoints / maxPoints) * 100)}%` }} />
+                  </span>
+                  <span className="ds-pts">{item.totalPoints}</span>
                 </li>
               );
             })}
           </ol>
         )}
-      </div>
+      </section>
     </div>
   );
 };

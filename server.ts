@@ -94,6 +94,29 @@ import { createLearnFeedbackStore } from './src/services/learnFeedbackService.ts
 import { createPhase14UserQueue, type QueueItem } from './src/services/phase14UserQueue.ts';
 import { questionUpdatedEmail } from './src/services/phase14Mail.ts';
 import { renderHtmlToPdf, findChrome } from './src/services/pdfRenderService.ts';
+import {
+  exportPastExamsToMarkdown,
+  exportSummariesToMarkdown,
+  exportGlossaryToMarkdown,
+  exportFlashcardsToMarkdown,
+  exportDecksToMarkdown,
+  markdownToSemanticHtml,
+  getNotebookLMContracts,
+  ingestNotebookLMData,
+} from './src/services/notebooklmBridgeService.ts';
+import {
+  renderPortalIndexHtml,
+  renderKurulPortalHtml,
+  renderSingleLectureHtml,
+} from './src/services/notebooklmSummariesPortal.ts';
+import {
+  getAllNotebookLMContributions,
+  stageNotebookLMInput,
+  activateNotebookLMContribution,
+  deactivateNotebookLMContribution,
+  updateNotebookLMContribution,
+  deleteNotebookLMContribution,
+} from './src/services/notebooklmManageService.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -437,12 +460,24 @@ const PUBLIC_API_DIRECTORY = {
     { path: '/v1/v2/revize', source: '/api/v2/revize', description: 'Revize v2: özet + örnekler' },
     { path: '/v1/v2/revize/questions', source: '/api/v2/revize/questions', description: 'Revize v2: revize edilmiş sorular' },
     { path: '/v1/v2/revize/changes', source: '/api/v2/revize/changes', description: 'Revize v2: eski→yeni değişiklik kayıtları' },
+    { path: '/v1/notebooklm/past-exams', source: '/api/notebooklm/past-exams', description: 'NotebookLM için çıkmış soru Markdown kaynağı (kurul/branş/arama filtreli)' },
+    { path: '/v1/notebooklm/summaries', source: '/api/notebooklm/summaries', description: 'NotebookLM için ders özetleri ve spot bilgiler Markdown kaynağı' },
+    { path: '/v1/notebooklm/glossary', source: '/api/notebooklm/glossary', description: 'NotebookLM için tıp sözlüğü ve ansiklopedi Markdown kaynağı' },
+    { path: '/v1/notebooklm/flashcards', source: '/api/notebooklm/flashcards', description: 'NotebookLM için akıl kartları Markdown kaynağı' },
+    { path: '/v1/notebooklm/decks', source: '/api/notebooklm/decks', description: 'NotebookLM için interaktif öğrenme desteleri Markdown kaynağı' },
+    { path: '/v1/notebooklm/contracts', source: '/api/notebooklm/contracts', description: 'NotebookLM çıktı şablonları ve sistem sözleşmeleri' },
+    { path: '/v1/decks', source: '/api/decks', description: 'Tüm interaktif öğrenme desteleri (compact=1 ile özet liste)' },
+    { path: '/v1/ogren', source: '/api/decks', description: 'İnteraktif öğrenme destelerinin Türkçe takma adı' },
+    { path: '/v1/decks/:id', source: '/api/decks/:id', description: 'Tek interaktif deste (tüm 100 slayt ve interaktif ögeler)' },
+    { path: '/v1/ogren/:id', source: '/api/decks/:id', description: 'Tek interaktif destenin Türkçe takma adı' },
   ],
   examples: [
     'GET /v1/questions',
     'GET /v1/past-exams?committeeId=all',
     'GET /v1/past-question-reviews',
     'GET /v1/lecture-notes?compact=1',
+    'GET /v1/decks?compact=1',
+    'GET /v1/decks/k1p-k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri',
     'GET /api/questions',
   ],
   note: 'Yalnızca katalogdaki GET yolları anonim erişime açıktır. Yönetim, kullanıcı, yazma ve ham AI verileri bu API üzerinden sunulmaz.',
@@ -458,6 +493,7 @@ const PUBLIC_V1_PREFIXES = [
   '/v2', '/committees', '/questions', '/sorular', '/past-exams', '/cikmis', '/past-question-reviews', '/data-catalog', '/learn-links',
   '/lecture-notes', '/summaries', '/search', '/insights', '/slides', '/notebooklm', '/audit',
   '/lecture-pdf', '/gemini-v3', '/rag', '/ai/interactions', '/deepseek', '/transcriptions',
+  '/decks', '/ogren', '/interactive-decks',
 ];
 app.use((req, res, next) => {
   if (!req.path.startsWith('/v1/')) return next();
@@ -471,7 +507,11 @@ app.use((req, res, next) => {
     ? v1Path.replace(/^\/sorular/, '/questions')
     : v1Path === '/cikmis' || v1Path.startsWith('/cikmis/')
       ? v1Path.replace(/^\/cikmis/, '/past-exams')
-      : v1Path;
+      : v1Path === '/ogren' || v1Path.startsWith('/ogren/')
+        ? v1Path.replace(/^\/ogren/, '/decks')
+        : v1Path === '/interactive-decks' || v1Path.startsWith('/interactive-decks/')
+          ? v1Path.replace(/^\/interactive-decks/, '/decks')
+          : v1Path;
   req.url = `/api${aliasPath}${req.url.slice(req.path.length)}`;
   next();
 });
@@ -1914,16 +1954,24 @@ app.put('/api/past-exams/:id', requireAdmin, (req, res) => {
 // Şikâyet edilen çıkmış soruyu kalıcı sil (yalnızca yönetici). Yerel kayıt + Supabase satırı.
 app.delete('/api/past-exams/:id', requireAdmin, async (req, res) => {
   try {
-    const qId = req.params.id;
+    const qId = String(req.params.id);
     addDeletedPastQuestion(qId);
     const list = getPastQuestionsDb();
-    const idx = list.findIndex((item) => item.id === qId);
+    const idx = list.findIndex((item) => String(item.id) === qId);
     let removedId = qId;
     if (idx !== -1) {
       const [removed] = list.splice(idx, 1);
       removedId = removed.id;
       savePastQuestionsDb(list);
     }
+    // Faz 14 inceleme listesinde de varsa kalıcı sil
+    try {
+      const reviews = readPhase14Reviews();
+      const remainingReviews = reviews.filter((r) => String(r.question_id) !== qId);
+      if (remainingReviews.length !== reviews.length) {
+        writePhase14Reviews(remainingReviews, new Set([qId]));
+      }
+    } catch (_) {}
     // Yetkili servis anahtarıyla her iki Supabase veritabanından kalıcı sil
     const cloud = await deleteFromSupabaseEverywhere('past_questions', qId);
     console.log(`[PastQuestion Delete] Soru #${qId} kalıcı olarak silindi. Supabase durumu:`, cloud);
@@ -2112,12 +2160,13 @@ function readPhase14Reviews(): any[] {
   }
 }
 
-function writePhase14Reviews(items: any[]) {
+function writePhase14Reviews(items: any[], removedIds?: Set<string>) {
   if (!fs.existsSync(PHASE14_DIR)) {
     fs.mkdirSync(PHASE14_DIR, { recursive: true });
   }
   // Faz 14 (Python) dosyaya eşzamanlı ekleme yapabilir: okumadan bu yana eklenmiş kayıtlar korunur (yoksa onay/ret
   // anında yazılan yeni inceleme kaybolurdu). Anahtar: question_id + processed_at.
+  // Silinen soru kimlikleri (removedIds) kesinlikle yeniden eklenemez.
   const key = (r: any) => `${r?.question_id}|${r?.processed_at}`;
   const known = new Set(items.map(key));
   try {
@@ -2125,6 +2174,7 @@ function writePhase14Reviews(items: any[]) {
       if (!line.trim()) continue;
       try {
         const r = JSON.parse(line);
+        if (removedIds && removedIds.has(String(r?.question_id))) continue;
         if (!known.has(key(r))) items = [...items, r];
       } catch (_) {}
     }
@@ -2542,6 +2592,39 @@ app.post('/api/past-question-reviews/:id/reject', requireAdmin, (req, res) => {
   }
 });
 
+// 3.0.0. DELETE /api/past-question-reviews/:id: Soruyu Faz 14 listesinden ve soru havuzundan kalıcı olarak sil (Admin)
+app.delete('/api/past-question-reviews/:id', requireAdmin, async (req, res) => {
+  try {
+    const targetQId = String(req.params.id);
+    const reviews = readPhase14Reviews();
+    const beforeCount = reviews.length;
+    const remainingReviews = reviews.filter((r) => String(r.question_id) !== targetQId);
+    writePhase14Reviews(remainingReviews, new Set([targetQId]));
+
+    // Soruyu kalıcı silinenler listesine ekle ve pastQuestionsDb'den çıkar
+    addDeletedPastQuestion(targetQId);
+    const list = getPastQuestionsDb();
+    const idx = list.findIndex((item) => String(item.id) === targetQId);
+    if (idx !== -1) {
+      list.splice(idx, 1);
+      savePastQuestionsDb(list);
+    }
+
+    // Supabase'den sil
+    const cloud = await deleteFromSupabaseEverywhere('past_questions', targetQId).catch(() => null);
+    console.log(`[Phase14 Delete] Soru #${targetQId} kalıcı olarak silindi. Supabase:`, cloud);
+
+    res.json({
+      success: true,
+      message: `Soru #${targetQId} kalıcı olarak silindi.`,
+      id: targetQId,
+      cloud,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Soru kalıcı olarak silinemedi: ' + err.message });
+  }
+});
+
 // 3.0. POST /api/past-question-reviews/:id/suspicious: Bekleyen öneriyi şüpheli olarak işaretle / kaldır (Admin)
 app.post('/api/past-question-reviews/:id/suspicious', requireAdmin, (req, res) => {
   try {
@@ -2863,7 +2946,12 @@ app.post('/api/admin/question-merges/:groupId', requireAdmin, (req, res) => {
 
 // 3.9. Faz 14 ayarları (meds_temp/state/faz14_ayarlari.json): lite_kullan — Flash kotası bitince Flash-Lite yedeği
 const PHASE14_SETTINGS_FILE = path.resolve(__dirname, '..', 'meds_temp', 'state', 'faz14_ayarlari.json');
-type Phase14Settings = { lite_kullan: boolean; otomatik_ucretsiz: boolean; otomatik_limit: number };
+type Phase14Settings = {
+  lite_kullan: boolean;
+  otomatik_ucretsiz: boolean;
+  otomatik_limit: number;
+  kontrol_modeli: string;
+};
 function readPhase14Settings(): Phase14Settings {
   try {
     const d = JSON.parse(fs.readFileSync(PHASE14_SETTINGS_FILE, 'utf-8'));
@@ -2871,9 +2959,10 @@ function readPhase14Settings(): Phase14Settings {
       lite_kullan: d.lite_kullan === true,
       otomatik_ucretsiz: d.otomatik_ucretsiz === true,
       otomatik_limit: Number(d.otomatik_limit) > 0 ? Number(d.otomatik_limit) : 4000,
+      kontrol_modeli: typeof d.kontrol_modeli === 'string' && d.kontrol_modeli.trim() ? d.kontrol_modeli.trim() : 'gemini-3.5-flash',
     };
   } catch {
-    return { lite_kullan: false, otomatik_ucretsiz: false, otomatik_limit: 4000 };
+    return { lite_kullan: false, otomatik_ucretsiz: false, otomatik_limit: 4000, kontrol_modeli: 'gemini-3.5-flash' };
   }
 }
 function writePhase14Settings(next: Phase14Settings) {
@@ -2930,6 +3019,7 @@ app.post('/api/past-question-reviews/settings', requireAdmin, (req, res) => {
     if (typeof req.body?.lite_kullan === 'boolean') next.lite_kullan = req.body.lite_kullan;
     if (typeof req.body?.otomatik_ucretsiz === 'boolean') next.otomatik_ucretsiz = req.body.otomatik_ucretsiz;
     if (Number(req.body?.otomatik_limit) > 0) next.otomatik_limit = Math.min(10000, Math.floor(Number(req.body.otomatik_limit)));
+    if (typeof req.body?.kontrol_modeli === 'string' && req.body.kontrol_modeli.trim()) next.kontrol_modeli = req.body.kontrol_modeli.trim();
     writePhase14Settings(next);
     let started = false;
     if (next.otomatik_ucretsiz && !prev.otomatik_ucretsiz) started = startPhase14AutoFree(next.otomatik_limit);
@@ -4431,6 +4521,413 @@ app.get('/api/notebooklm/bundle', (req, res) => {
   res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
   res.setHeader('Content-Disposition', `attachment; filename="MedSoru_NotebookLM_${committee?.id || 'kaynak'}.md"`);
   res.send(md);
+});
+
+// --- Enhanced NotebookLM Bi-Directional Bridge Endpoints ---
+
+// Helper to detect if caller wants HTML (NotebookLM web crawler, web browser) or raw Markdown
+function shouldServeNotebookLMHtml(req: express.Request): boolean {
+  if (req.query.format === 'markdown' || req.query.format === 'md') return false;
+  if (req.query.format === 'html') return true;
+  const accept = String(req.headers['accept'] || '');
+  const ua = String(req.headers['user-agent'] || '');
+  return accept.includes('text/html') || ua.includes('Mozilla') || ua.includes('Google') || ua.includes('bot');
+}
+
+// 1. Export Past Exam Questions (Supports HTML for NotebookLM Web Scraper, Markdown, or JSON)
+app.get(['/api/notebooklm/past-exams', '/api/notebooklm/cikmis'], (req, res) => {
+  try {
+    const format = req.query.format as string;
+    if (format === 'json') {
+      const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(getPastQuestionsDb())));
+      return res.json({ total: list.length, questions: list });
+    }
+
+    // Default to kurul=1 or limit=100 for web scraper to prevent multi-megabyte crawler timeout
+    const kurul = (req.query.kurul || req.query.all ? req.query.kurul : '1') as string | undefined;
+    const limit = req.query.limit ? Number(req.query.limit) : (!req.query.all && !req.query.kurul ? 100 : undefined);
+
+    const md = exportPastExamsToMarkdown({
+      kurul: kurul ? String(kurul) : undefined,
+      discipline: req.query.discipline as string,
+      limit,
+      offset: req.query.offset ? Number(req.query.offset) : undefined,
+      search: (req.query.q || req.query.search) as string,
+    });
+
+    if (shouldServeNotebookLMHtml(req)) {
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.send(markdownToSemanticHtml('MedSoru Çıkmış Sorular (NotebookLM Kaynağı)', md));
+    }
+    res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+    res.send(md);
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// 2. Export Summaries & High-Yield Spot Pearls (Supports HTML for NotebookLM Web Scraper, Markdown, or JSON)
+app.get('/api/notebooklm/summaries', (req, res) => {
+  try {
+    // Default to Kurul 1 if neither kurul nor all nor limit is passed, keeping size ~1.5 MB instead of 10.7 MB
+    const kurul = req.query.kurul || (!req.query.all && !req.query.limit ? '1' : undefined);
+    const limit = req.query.limit ? Number(req.query.limit) : undefined;
+
+    const md = exportSummariesToMarkdown({
+      kurul: kurul ? String(kurul) : undefined,
+      limit,
+    });
+
+    if (shouldServeNotebookLMHtml(req)) {
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.send(markdownToSemanticHtml('MedSoru Ders Özetleri ve Spot Bilgiler', md));
+    }
+    res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+    res.send(md);
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// 3. Export Medical Glossary & Encyclopedia
+app.get(['/api/notebooklm/glossary', '/api/notebooklm/sozluk'], (req, res) => {
+  try {
+    const md = exportGlossaryToMarkdown({
+      limit: req.query.limit ? Number(req.query.limit) : undefined,
+      category: req.query.category as string,
+    });
+    if (shouldServeNotebookLMHtml(req)) {
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.send(markdownToSemanticHtml('MedSoru Tıp Sözlüğü ve Ansiklopedi', md));
+    }
+    res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+    res.send(md);
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// 4. Export Flashcards
+app.get(['/api/notebooklm/flashcards', '/api/notebooklm/kartlar'], (req, res) => {
+  try {
+    const md = exportFlashcardsToMarkdown({
+      group: req.query.group as string,
+      limit: req.query.limit ? Number(req.query.limit) : undefined,
+    });
+    if (shouldServeNotebookLMHtml(req)) {
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.send(markdownToSemanticHtml('MedSoru Akıl Kartları (Flashcards)', md));
+    }
+    res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+    res.send(md);
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// 5. Export Interactive Learning Decks
+app.get(['/api/notebooklm/decks', '/api/notebooklm/ogren'], (req, res) => {
+  try {
+    const md = exportDecksToMarkdown({
+      deckId: req.query.deckId as string,
+    });
+    if (shouldServeNotebookLMHtml(req)) {
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.send(markdownToSemanticHtml('MedSoru İnteraktif Öğrenme Desteleri', md));
+    }
+    res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+    res.send(md);
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// 6. Output Contract Schemas & Prompt Instructions for NotebookLM
+app.get('/api/notebooklm/contracts', (_req, res) => {
+  res.json(getNotebookLMContracts());
+});
+
+// --- Dedicated NotebookLM Lecture Summaries Web Portal ---
+app.get(['/notebooklm/ozetler', '/notebooklm/ders-ozetleri', '/v1/notebooklm/ozetler', '/v1/notebooklm/ders-ozetleri'], (req, res) => {
+  const host = req.get('host') || 'localhost:3000';
+  const proto = req.get('x-forwarded-proto') || (req.secure ? 'https' : 'http');
+  const baseUrl = `${proto}://${host}`;
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  res.send(renderPortalIndexHtml(baseUrl));
+});
+
+app.get(['/notebooklm/ozetler/kurul-:num', '/v1/notebooklm/ozetler/kurul-:num', '/notebooklm/kurul-:num', '/v1/notebooklm/kurul-:num'], (req, res) => {
+  const num = req.params.num;
+  const host = req.get('host') || 'localhost:3000';
+  const proto = req.get('x-forwarded-proto') || (req.secure ? 'https' : 'http');
+  const baseUrl = `${proto}://${host}`;
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  res.send(renderKurulPortalHtml(num, baseUrl));
+});
+
+app.get(['/notebooklm/ozet/:id', '/v1/notebooklm/ozet/:id'], (req, res) => {
+  const id = req.params.id;
+  const host = req.get('host') || 'localhost:3000';
+  const proto = req.get('x-forwarded-proto') || (req.secure ? 'https' : 'http');
+  const baseUrl = `${proto}://${host}`;
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  res.send(renderSingleLectureHtml(id, baseUrl));
+});
+
+// 7. Direct File Download for Pre-Generated NotebookLM Markdown Volumes
+app.get('/api/notebooklm/download/:file', (req, res) => {
+  const fileName = path.basename(req.params.file);
+  const repoRoot = path.resolve(__dirname, '..');
+  const targetPath = path.resolve(repoRoot, 'meds_export', 'notebooklm', fileName);
+  if (fs.existsSync(targetPath)) {
+    return res.download(targetPath);
+  }
+  res.status(404).json({ error: 'Dosya bulunamadı: ' + fileName });
+});
+
+// 8. Universal Dynamic Ingestion Endpoint (Ingests NotebookLM Output & Updates Databases)
+app.post('/api/notebooklm/ingest', async (req, res) => {
+  try {
+    const payload = req.body?.payload !== undefined ? req.body.payload : req.body;
+    const forcedType = (req.body?.type || req.query.type) as string | undefined;
+    const result = await ingestNotebookLMData(payload, forcedType);
+
+    // Invalidate in-memory past questions cache immediately
+    cachedPastQuestionsDb = null;
+    lastPastQuestionsMtime = 0;
+
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 9. Dedicated Typed Ingestion Endpoints
+app.post('/api/notebooklm/ingest/questions', async (req, res) => {
+  try {
+    const payload = req.body?.payload !== undefined ? req.body.payload : req.body;
+    const result = await ingestNotebookLMData(payload, 'past_question_correction');
+    cachedPastQuestionsDb = null;
+    lastPastQuestionsMtime = 0;
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/notebooklm/ingest/decks', async (req, res) => {
+  try {
+    const payload = req.body?.payload !== undefined ? req.body.payload : req.body;
+    const result = await ingestNotebookLMData(payload, 'interactive_deck');
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/notebooklm/ingest/spot', async (req, res) => {
+  try {
+    const payload = req.body?.payload !== undefined ? req.body.payload : req.body;
+    const result = await ingestNotebookLMData(payload, 'spot_pearls');
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/notebooklm/ingest/practice-questions', async (req, res) => {
+  try {
+    const payload = req.body?.payload !== undefined ? req.body.payload : req.body;
+    const result = await ingestNotebookLMData(payload, 'practice_questions');
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/notebooklm/ingest/glossary', async (req, res) => {
+  try {
+    const payload = req.body?.payload !== undefined ? req.body.payload : req.body;
+    const result = await ingestNotebookLMData(payload, 'glossary_terms');
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/notebooklm/ingest/flashcards', async (req, res) => {
+  try {
+    const payload = req.body?.payload !== undefined ? req.body.payload : req.body;
+    const result = await ingestNotebookLMData(payload, 'flashcards');
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// --- Interactive Learning Decks & Slides Endpoints ---
+const INTERACTIVE_DECKS_FILE = path.resolve(__dirname, 'src', 'data', 'interactive_learning_decks.json');
+const INTERACTIVE_DECK_ITEMS_DIR = path.resolve(__dirname, 'src', 'data', 'decks', 'items');
+
+function getDecksDb(): any[] {
+  try {
+    if (fs.existsSync(INTERACTIVE_DECKS_FILE)) {
+      return JSON.parse(fs.readFileSync(INTERACTIVE_DECKS_FILE, 'utf-8'));
+    }
+  } catch (e) {
+    console.error('Error reading interactive_learning_decks.json:', e);
+  }
+  return [];
+}
+
+app.get(['/api/decks', '/api/ogren', '/api/interactive-decks'], (req, res) => {
+  try {
+    const list = getDecksDb();
+    const { committeeId, discipline, search, compact } = req.query;
+    let filtered = list;
+
+    if (committeeId) {
+      filtered = filtered.filter((d) => String(d.committee || d.committeeId || '').toLowerCase().includes(String(committeeId).toLowerCase()));
+    }
+    if (discipline) {
+      filtered = filtered.filter((d) => String(d.discipline || '').toLowerCase().includes(String(discipline).toLowerCase()));
+    }
+    if (search) {
+      const q = String(search).toLowerCase();
+      filtered = filtered.filter((d) => String(d.title || '').toLowerCase().includes(q) || String(d.id || '').toLowerCase().includes(q));
+    }
+
+    if (compact === '1' || compact === 'true') {
+      const compactList = filtered.map((d) => ({
+        id: d.id,
+        title: d.title,
+        description: d.description,
+        committee: d.committee || d.committeeId,
+        discipline: d.discipline,
+        slideCount: d.slides?.length || 0,
+        flashcardCount: d.flashcards?.length || 0,
+        updatedAt: d.updatedAt,
+      }));
+      return res.json({ total: compactList.length, decks: compactList });
+    }
+
+    res.json({ total: filtered.length, decks: filtered });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get(['/api/decks/:id', '/api/ogren/:id', '/api/interactive-decks/:id'], (req, res) => {
+  try {
+    const deckId = req.params.id;
+    const itemPath = path.resolve(INTERACTIVE_DECK_ITEMS_DIR, `${deckId}.json`);
+    let deck: any = null;
+    if (fs.existsSync(itemPath)) {
+      deck = JSON.parse(fs.readFileSync(itemPath, 'utf-8'));
+    } else {
+      const list = getDecksDb();
+      deck = list.find((d) => d.id === deckId || d.id === `k1p-${deckId}` || d.id.includes(deckId));
+    }
+
+    if (!deck) {
+      return res.status(404).json({ error: `Deste bulunamadı: "${deckId}"` });
+    }
+
+    if (req.query.format === 'markdown' || req.query.format === 'md') {
+      res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+      return res.send(exportDecksToMarkdown({ deckId: deck.id }));
+    }
+
+    if (shouldServeNotebookLMHtml(req) || req.query.format === 'html') {
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      const md = exportDecksToMarkdown({ deckId: deck.id });
+      return res.send(markdownToSemanticHtml(deck.title || 'İnteraktif Öğrenme Destesi', md));
+    }
+
+    res.json({ deck });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get(['/api/decks/:id/slides/:slideNum', '/api/ogren/:id/slides/:slideNum'], (req, res) => {
+  try {
+    const { id, slideNum } = req.params;
+    const num = Number(slideNum);
+    const itemPath = path.resolve(INTERACTIVE_DECK_ITEMS_DIR, `${id}.json`);
+    let deck: any = null;
+    if (fs.existsSync(itemPath)) {
+      deck = JSON.parse(fs.readFileSync(itemPath, 'utf-8'));
+    } else {
+      const list = getDecksDb();
+      deck = list.find((d) => d.id === id);
+    }
+
+    if (!deck) return res.status(404).json({ error: 'Deste bulunamadı' });
+    const slide = deck.slides?.find((s: any) => s.slideNumber === num || s.slideIndex === num || s.id === `slide-${num}`) || deck.slides?.[num - 1];
+    if (!slide) return res.status(404).json({ error: 'Slayt bulunamadı' });
+
+    res.json({ deckId: deck.id, deckTitle: deck.title, slide });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// --- NotebookLM Safe Stage & Alternative Management Endpoints ---
+app.get('/api/notebooklm/manage/contributions', (_req, res) => {
+  res.json({ contributions: getAllNotebookLMContributions() });
+});
+
+app.post('/api/notebooklm/manage/stage', (req, res) => {
+  try {
+    const payload = req.body?.payload !== undefined ? req.body.payload : req.body;
+    const title = req.body?.title;
+    const notes = req.body?.notes;
+    const result = stageNotebookLMInput(payload, title, notes);
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.post('/api/notebooklm/manage/activate/:id', async (req, res) => {
+  try {
+    const result = await activateNotebookLMContribution(req.params.id);
+    cachedPastQuestionsDb = null;
+    lastPastQuestionsMtime = 0;
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.post('/api/notebooklm/manage/deactivate/:id', async (req, res) => {
+  try {
+    const result = await deactivateNotebookLMContribution(req.params.id);
+    cachedPastQuestionsDb = null;
+    lastPastQuestionsMtime = 0;
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.put('/api/notebooklm/manage/contribution/:id', (req, res) => {
+  try {
+    const result = updateNotebookLMContribution(req.params.id, req.body);
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.delete('/api/notebooklm/manage/contribution/:id', (req, res) => {
+  try {
+    const result = deleteNotebookLMContribution(req.params.id);
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ success: false, message: err.message });
+  }
 });
 
 // Direct Gemini / NotebookLM Database Sync Webhook

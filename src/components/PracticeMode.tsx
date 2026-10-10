@@ -123,8 +123,8 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           </div>
         </header>
         <main className="flex-1 w-full max-w-[520px] mx-auto px-5 py-16 flex flex-col gap-4 text-center items-center">
-          <h1 className="m-0 font-display text-[26px] font-bold tracking-[-0.02em]">Çözülecek soru henüz yok</h1>
-          <p className="m-0 text-[15px] text-ink-2">
+          <h1 className="m-0 font-display text-3xl font-bold tracking-[-0.02em]">Çözülecek soru henüz yok</h1>
+          <p className="m-0 text-md text-ink-2">
             Testte yalnızca yeniden kurulup doğrulanan sorular çıkar. Çıkmış sorularla pratik yapmak için Çalış sayfasını açabilir ya da bu kurula bir parça ekleyebilirsin.
           </p>
           <div className="flex flex-wrap gap-2 justify-center">
@@ -151,24 +151,24 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
         <div className="max-w-[1280px] mx-auto px-3 sm:px-8 h-14 flex items-center gap-2 sm:gap-4">
           {exitButton}
           <div className="flex flex-col leading-[1.25] min-w-0 flex-1 sm:flex-none sm:max-w-[320px]">
-            <span className="font-semibold truncate text-[15px]">{title}</span>
-            {subtitle && <span className="text-[12px] text-ink-3 truncate">{subtitle}</span>}
+            <span className="font-semibold truncate text-md">{title}</span>
+            {subtitle && <span className="text-xs text-ink-3 truncate">{subtitle}</span>}
           </div>
           <div className="hidden sm:flex flex-1 items-center gap-3 max-w-[460px] mx-auto">
             <div className="flex-1 h-1.5 rounded-full bg-line-soft">
               <div className="h-1.5 rounded-full bg-accent transition-all" style={{ width: `${pct}%` }} />
             </div>
-            <span className="font-mono text-[13px] text-ink-2 whitespace-nowrap">
+            <span className="font-mono text-sm text-ink-2 whitespace-nowrap">
               {position}/{total}
             </span>
           </div>
-          <span className="shrink-0 font-mono text-[13px] px-2.5 h-8 inline-flex items-center rounded-lg bg-canvas text-ink-2" aria-label="Geçen süre">
+          <span className="shrink-0 font-mono text-sm px-2.5 h-8 inline-flex items-center rounded-lg bg-canvas text-ink-2" aria-label="Geçen süre">
             {formatElapsed(elapsed)}
           </span>
           <button
             type="button"
             onClick={() => setAiChatOpen(true)}
-            className="h-9 px-2.5 sm:px-3 rounded-[10px] bg-accent-soft text-accent font-semibold text-[13px] inline-flex items-center gap-1.5 cursor-pointer shrink-0"
+            className="h-9 px-2.5 sm:px-3 rounded-[10px] bg-accent-soft text-accent font-semibold text-sm inline-flex items-center gap-1.5 cursor-pointer shrink-0"
             title="Bu soruyu yapay zekâya sor"
           >
             <Sparkles className="w-4 h-4" />
@@ -181,7 +181,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
       </header>
 
       <main className="flex-1 w-full max-w-[960px] mx-auto px-4 sm:px-8 pt-5 sm:pt-10 pb-32 flex flex-col gap-4 sm:gap-5">
-        <div className="flex items-center justify-between gap-3 text-[13px] text-ink-3">
+        <div className="flex items-center justify-between gap-3 text-sm text-ink-3">
           <span>
             <span className="font-mono font-semibold text-ink">Soru {position}</span>
             {currentQ.discipline ? ` · ${currentQ.discipline}` : ''}
@@ -192,7 +192,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
             </span>
           )}
         </div>
-        <h1 className={`m-0 font-medium leading-[1.45] tracking-[-0.01em] ${rec.stem.length > 180 ? 'text-[17px] sm:text-[19px]' : 'text-[19px] sm:text-[23px]'}`}>{rec.stem}</h1>
+        <h1 className={`m-0 font-medium leading-[1.45] tracking-[-0.01em] ${rec.stem.length > 180 ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl'}`}>{rec.stem}</h1>
 
         <div role="radiogroup" aria-label="Şıklar" className="flex flex-col gap-2">
           {rec.options.map((o0, oi) => {
@@ -224,13 +224,13 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
                 role="radio"
                 aria-checked={isPicked}
                 onClick={() => handleSelect(opt.key)}
-                className={`flex items-center gap-3 min-h-[52px] px-3 py-2.5 rounded-xl text-[15px] sm:text-[16px] leading-snug text-left transition-colors ${box} ${
+                className={`flex items-center gap-3 min-h-[52px] px-3 py-2.5 rounded-xl text-md sm:text-md leading-snug text-left transition-colors ${box} ${
                   isAnswered ? 'cursor-default' : 'cursor-pointer'
                 }`}
               >
-                <span className={`w-8 h-8 shrink-0 rounded-lg flex items-center justify-center font-mono text-[13px] font-semibold ${key}`}>{opt.key}</span>
+                <span className={`w-8 h-8 shrink-0 rounded-lg flex items-center justify-center font-mono text-sm font-semibold ${key}`}>{opt.key}</span>
                 <span className="flex-1">{opt.text}</span>
-                {tag && <span className={`text-[12px] font-semibold whitespace-nowrap ${tagCls}`}>{tag}</span>}
+                {tag && <span className={`text-xs font-semibold whitespace-nowrap ${tagCls}`}>{tag}</span>}
               </button>
             );
           })}
@@ -238,22 +238,22 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
 
         {isAnswered && (
           <section className={`rounded-2xl px-4 py-4 flex flex-col gap-2 ${isCorrect ? 'bg-ok-soft' : 'bg-bad-soft'}`}>
-            <span className={`font-semibold text-[15px] ${isCorrect ? 'text-ok' : 'text-bad-text'}`}>
+            <span className={`font-semibold text-md ${isCorrect ? 'text-ok' : 'text-bad-text'}`}>
               {isCorrect ? 'Doğru!' : `Doğru cevap ${rec.correctAnswer}`}
             </span>
-            {shortExplanation && <p className="m-0 text-[15px] leading-[1.6] text-ink whitespace-pre-line line-clamp-6">{shortExplanation}</p>}
+            {shortExplanation && <p className="m-0 text-md leading-[1.6] text-ink whitespace-pre-line line-clamp-6">{shortExplanation}</p>}
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pt-1">
-              <button type="button" onClick={() => setAiChatOpen(true)} className="h-9 text-[14px] font-semibold text-accent inline-flex items-center gap-1.5 cursor-pointer">
+              <button type="button" onClick={() => setAiChatOpen(true)} className="h-9 text-base font-semibold text-accent inline-flex items-center gap-1.5 cursor-pointer">
                 <Sparkles className="w-4 h-4" />
                 {isCorrect ? 'Mekanizmayı sor' : 'Neden yanlış? Sor'}
               </button>
               {onOpenQuestion && (
-                <button type="button" onClick={() => onOpenQuestion(currentQ)} className="h-9 text-[14px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1.5 cursor-pointer">
+                <button type="button" onClick={() => onOpenQuestion(currentQ)} className="h-9 text-base font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1.5 cursor-pointer">
                   <BookOpen className="w-4 h-4" />
                   Tam açıklama
                 </button>
               )}
-              <button type="button" onClick={handleReset} className="h-9 text-[14px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1.5 cursor-pointer">
+              <button type="button" onClick={handleReset} className="h-9 text-base font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1.5 cursor-pointer">
                 <RotateCcw className="w-4 h-4" />
                 Tekrar dene
               </button>
@@ -261,7 +261,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           </section>
         )}
 
-        <p className="hidden md:block m-0 text-[12.5px] text-ink-3">Kısayollar: A–E cevap · ← → soru değiştir</p>
+        <p className="hidden md:block m-0 text-sm text-ink-3">Kısayollar: A–E cevap · ← → soru değiştir</p>
       </main>
 
       {/* Sticky bottom bar: navigator · previous · next */}
@@ -271,7 +271,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
             type="button"
             onClick={() => setNavOpen(true)}
             aria-haspopup="dialog"
-            className="h-12 px-3 rounded-xl border border-line bg-white inline-flex items-center gap-2 font-mono text-[14px] text-ink cursor-pointer shrink-0"
+            className="h-12 px-3 rounded-xl border border-line bg-white inline-flex items-center gap-2 font-mono text-base text-ink cursor-pointer shrink-0"
           >
             <LayoutGrid className="w-[18px] h-[18px] text-ink-2" />
             {position}/{total}
@@ -289,7 +289,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
             type="button"
             onClick={() => go(currentIndex + 1)}
             disabled={currentIndex >= total - 1}
-            className="flex-1 h-12 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-[16px] inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-40"
+            className="flex-1 h-12 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-md inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-40"
           >
             {isAnswered ? 'Sonraki soru' : 'Atla'}
             <ArrowRight className="w-5 h-5" />
@@ -304,8 +304,8 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           <div className="relative w-full sm:max-w-[560px] max-h-[80dvh] overflow-y-auto bg-white rounded-t-2xl sm:rounded-2xl px-4 sm:px-5 pt-2 sm:pt-5 pb-[max(env(safe-area-inset-bottom),20px)] sm:pb-5 flex flex-col gap-3">
             <span className="sm:hidden self-center w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
             <div className="flex items-center gap-3">
-              <span className="flex-1 text-[18px] font-bold">Sorular</span>
-              <span className="font-mono text-[13px] text-ink-2">
+              <span className="flex-1 text-lg font-bold">Sorular</span>
+              <span className="font-mono text-sm text-ink-2">
                 <span className="text-ok font-semibold">{correctCount}</span> doğru · {answeredCount - correctCount} yanlış · {total - answeredCount} boş
               </span>
               <button type="button" onClick={() => setNavOpen(false)} aria-label="Kapat" className="w-9 h-9 -mr-1 rounded-full flex items-center justify-center text-ink-2 cursor-pointer hover:bg-canvas">
@@ -331,7 +331,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
                     onClick={() => go(i)}
                     aria-current={current ? 'step' : undefined}
                     aria-label={`Soru ${i + 1}${ans ? (right ? ', doğru' : ', yanlış') : ''}`}
-                    className={`h-11 rounded-[10px] flex items-center justify-center font-mono text-[13px] cursor-pointer ${cls}`}
+                    className={`h-11 rounded-[10px] flex items-center justify-center font-mono text-sm cursor-pointer ${cls}`}
                   >
                     {i + 1}
                   </button>

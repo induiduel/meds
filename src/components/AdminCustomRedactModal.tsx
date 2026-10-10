@@ -183,28 +183,28 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
   };
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/80 backdrop-blur-xs overflow-y-auto animate-fadeIn">
-      <div className="ms-modal-panel bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92dvh] flex flex-col border border-slate-200 overflow-hidden">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-ink/80 backdrop-blur-xs overflow-y-auto animate-fadeIn">
+      <div className="ms-modal-panel bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92dvh] flex flex-col border border-line overflow-hidden">
         
         {/* Header */}
         <div className="p-4 sm:p-5 bg-ink-surface text-white flex items-center justify-between shrink-0">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="p-1.5 bg-teal-700/60 rounded-lg">
-                <Sparkles className="w-5 h-5 text-teal-200" />
+              <span className="p-1.5 bg-ok/60 rounded-lg">
+                <Sparkles className="w-5 h-5 text-ok-soft" />
               </span>
               <h2 className="text-base sm:text-lg font-bold">
                 Yapay Zeka ile Özel Soru Redaksiyonu (Admin)
               </h2>
             </div>
-            <p className="text-xs text-teal-100 flex flex-wrap items-center gap-2">
+            <p className="text-xs text-ok-soft flex flex-wrap items-center gap-2">
               <span>Kurul: <strong>{question.committeeId}</strong></span>
               <span>•</span>
               <span>Disiplin: <strong>{question.discipline}</strong></span>
               <span>•</span>
               <span>Konu: <strong>{question.topic}</strong></span>
               {isStudentLocked && (
-                <span className="inline-flex items-center gap-1 bg-amber-400 text-amber-950 font-extrabold px-2 py-0.5 rounded-full text-[11px]">
+                <span className="inline-flex items-center gap-1 bg-warn text-warn font-extrabold px-2 py-0.5 rounded-full text-2xs">
                   <Lock className="w-3 h-3" />
                   %90+ Öğrenci Onaylı Soru (Yalnızca Admin Değiştirebilir)
                 </span>
@@ -213,7 +213,7 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 text-teal-200 hover:text-white rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
+            className="p-1.5 text-ok-soft hover:text-white rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -224,44 +224,44 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
           
           {/* Soru Kaynak & Ham Metin Önizlemesi */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 space-y-1.5">
-              <div className="flex items-center justify-between font-bold text-slate-700 border-b border-slate-200 pb-1">
+            <div className="bg-field border border-line rounded-xl p-3.5 space-y-1.5">
+              <div className="flex items-center justify-between font-bold text-ink-2 border-b border-line pb-1">
                 <span className="flex items-center gap-1.5">
-                  <FileText className="w-3.5 h-3.5 text-slate-500" />
+                  <FileText className="w-3.5 h-3.5 text-ink-3" />
                   Orijinal Ham Soru Metni
                 </span>
-                <span className="text-[11px] text-slate-500 bg-white px-1.5 py-0.5 rounded border border-slate-200">
+                <span className="text-2xs text-ink-3 bg-white px-1.5 py-0.5 rounded border border-line">
                   {question.sourceFile || 'PDF Kaynağı'}
                 </span>
               </div>
-              <p className="text-slate-800 leading-relaxed font-sans max-h-28 overflow-y-auto pr-1">
+              <p className="text-ink leading-relaxed font-sans max-h-28 overflow-y-auto pr-1">
                 {(question as any).rawQuestion?.stem || question.fragments?.[0]?.text || question.rawStem || question.topic}
               </p>
             </div>
 
             {matchedSlideNote ? (
-              <div className="bg-emerald-50/60 border border-emerald-200 rounded-xl p-3.5 space-y-1.5">
-                <div className="flex items-center justify-between font-bold text-emerald-900 border-b border-emerald-200 pb-1">
+              <div className="bg-ok-soft/60 border border-ok/30 rounded-xl p-3.5 space-y-1.5">
+                <div className="flex items-center justify-between font-bold text-ok border-b border-ok/30 pb-1">
                   <span className="flex items-center gap-1.5">
-                    <BookOpen className="w-3.5 h-3.5 text-emerald-700" />
+                    <BookOpen className="w-3.5 h-3.5 text-ok" />
                     Amfi Slayt Bağlamı (#{matchedSlideNote.pageNumber})
                   </span>
-                  <label className="flex items-center gap-1 text-[11px] text-emerald-800 font-semibold cursor-pointer">
+                  <label className="flex items-center gap-1 text-2xs text-ok font-semibold cursor-pointer">
                     <input
                       type="checkbox"
                       checked={includeSlideGrounding}
                       onChange={(e) => setIncludeSlideGrounding(e.target.checked)}
-                      className="rounded text-teal-600 focus:ring-teal-500"
+                      className="rounded text-ok focus:ring-ok"
                     />
                     <span>İsteme Dahil Et</span>
                   </label>
                 </div>
-                <p className="text-emerald-950 leading-relaxed max-h-28 overflow-y-auto pr-1">
+                <p className="text-ok leading-relaxed max-h-28 overflow-y-auto pr-1">
                   <strong>{matchedSlideNote.noteTitle}:</strong> {matchedSlideNote.snippet}
                 </p>
               </div>
             ) : (
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 flex items-center justify-center text-slate-400 italic">
+              <div className="bg-field border border-line rounded-xl p-3.5 flex items-center justify-center text-ink-3 italic">
                 Bu soruyla doğrudan eşleşen amfi slaytı bulunamadı (Genel Tıp literatürü kullanılacak).
               </div>
             )}
@@ -270,16 +270,16 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
           {/* Admin Custom Redaction Prompt Input */}
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <label className="text-xs sm:text-sm font-bold text-slate-800 flex items-center gap-1.5">
-                <Sliders className="w-4 h-4 text-teal-700" />
+              <label className="text-xs sm:text-sm font-bold text-ink flex items-center gap-1.5">
+                <Sliders className="w-4 h-4 text-ok" />
                 <span>Yapay Zekaya Özel Redaksiyon Talimatınız:</span>
               </label>
               <div className="flex items-center gap-2">
-                <span className="text-[11px] font-semibold text-slate-500">Yapay Zeka Modeli:</span>
+                <span className="text-2xs font-semibold text-ink-3">Yapay Zeka Modeli:</span>
                 <select
                   value={selectedModel}
                   onChange={(e) => setSelectedModel(e.target.value)}
-                  className="bg-slate-50 border border-slate-300 rounded-md px-2 py-0.5 text-xs font-semibold text-slate-800"
+                  className="bg-field border border-line-2 rounded-md px-2 py-0.5 text-xs font-semibold text-ink"
                 >
                   <optgroup label="Google Gemini">
                     <option value="gemini-3.8-flash">Gemini 3.8 Flash (Otomatik Çok Kademeli Havuz)</option>
@@ -298,19 +298,19 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
               value={customPrompt}
               onChange={(e) => setCustomPrompt(e.target.value)}
               placeholder="Örn: Bu soruyu Robbins Temel Patoloji kitabındaki gibi 5 şıklı klinik vaka sorusuna çevir. Şıklara tipik çeldiriciler ekle, doğru cevabı açıkla..."
-              className="w-full bg-slate-50 border border-slate-300 rounded-xl p-3 text-xs sm:text-sm text-slate-900 focus:bg-white focus:border-teal-600 focus:ring-1 focus:ring-teal-600 leading-relaxed"
+              className="w-full bg-field border border-line-2 rounded-xl p-3 text-xs sm:text-sm text-ink focus:bg-white focus:border-ok focus:ring-1 focus:ring-ok leading-relaxed"
             />
 
             {/* Prompt Quick Chips */}
             <div className="space-y-1">
-              <span className="text-[11px] font-semibold text-slate-500">Hızlı Şablon İstemler:</span>
+              <span className="text-2xs font-semibold text-ink-3">Hızlı Şablon İstemler:</span>
               <div className="flex flex-wrap gap-1.5">
                 {PROMPT_SUGGESTIONS.map((s, idx) => (
                   <button
                     key={idx}
                     type="button"
                     onClick={() => handleApplySuggestion(s)}
-                    className="text-[11px] bg-slate-100 hover:bg-teal-50 hover:text-teal-900 border border-slate-200 hover:border-teal-300 rounded-lg px-2.5 py-1 text-slate-700 transition-colors text-left cursor-pointer"
+                    className="text-2xs bg-field hover:bg-ok-soft hover:text-ok border border-line hover:border-ok/30 rounded-lg px-2.5 py-1 text-ink-2 transition-colors text-left cursor-pointer"
                   >
                     + {s.substring(0, 48)}...
                   </button>
@@ -324,16 +324,16 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
                 type="button"
                 onClick={handleGenerate}
                 disabled={isGenerating || !customPrompt.trim()}
-                className="bg-accent hover:from-teal-800 hover:to-indigo-900 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md flex items-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
+                className="bg-accent hover:from-ok hover:to-accent text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md flex items-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
               >
                 {isGenerating ? (
                   <>
-                    <RefreshCw className="w-4 h-4 animate-spin text-teal-200" />
+                    <RefreshCw className="w-4 h-4 animate-spin text-ok-soft" />
                     <span>Yapay Zeka ile Redakte Ediliyor...</span>
                   </>
                 ) : (
                   <>
-                    <Sparkles className="w-4 h-4 text-teal-200" />
+                    <Sparkles className="w-4 h-4 text-ok-soft" />
                     <span>Yapay Zeka ile Yeniden Redakte Et</span>
                   </>
                 )}
@@ -342,21 +342,21 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
           </div>
 
           {errorMsg && (
-            <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 flex items-start gap-2">
-              <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
+            <div className="p-3 bg-bad-soft border border-bad/30 rounded-xl text-xs text-bad-text flex items-start gap-2">
+              <AlertTriangle className="w-4 h-4 text-bad-text shrink-0 mt-0.5" />
               <span>{errorMsg}</span>
             </div>
           )}
 
           {/* Result Review & Editable Form */}
-          <div className="border-t border-slate-200 pt-4 space-y-4">
+          <div className="border-t border-line pt-4 space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="text-xs sm:text-sm font-bold text-slate-900 flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+              <h3 className="text-xs sm:text-sm font-bold text-ink flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-ok" />
                 <span>Redakte Edilmiş Soru Taslağı (Düzenlenebilir):</span>
               </h3>
               {hasGeneratedOnce && (
-                <span className="text-[11px] bg-emerald-100 text-emerald-900 font-bold px-2 py-0.5 rounded-full border border-emerald-300">
+                <span className="text-2xs bg-ok-soft text-ok font-bold px-2 py-0.5 rounded-full border border-ok/30">
                   ✓ Yapay Zeka Tarafından Başarıyla Oluşturuldu
                 </span>
               )}
@@ -364,20 +364,20 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
 
             {/* Stem Input */}
             <div className="space-y-1">
-              <label className="text-[11px] font-bold text-slate-700">Soru Kökü (Klinik Senaryo):</label>
+              <label className="text-2xs font-bold text-ink-2">Soru Kökü (Klinik Senaryo):</label>
               <textarea
                 rows={3}
                 value={draftStem}
                 onChange={(e) => setDraftStem(e.target.value)}
-                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-xs text-slate-900 focus:border-teal-600"
+                className="w-full bg-white border border-line-2 rounded-xl p-2.5 text-xs text-ink focus:border-ok"
               />
             </div>
 
             {/* 5 Options Grid */}
             <div className="space-y-2">
-              <label className="text-[11px] font-bold text-slate-700 flex items-center justify-between">
+              <label className="text-2xs font-bold text-ink-2 flex items-center justify-between">
                 <span>5 Seçenek (A, B, C, D, E) & Doğru Cevap:</span>
-                <span className="text-slate-400 font-normal">Doğru cevabı radyo butonundan seçin</span>
+                <span className="text-ink-3 font-normal">Doğru cevabı radyo butonundan seçin</span>
               </label>
               <div className="grid grid-cols-1 gap-2">
                 {draftOptions.map((opt, idx) => (
@@ -385,8 +385,8 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
                     key={opt.key}
                     className={`flex items-center gap-2 p-2 rounded-xl border transition-all ${
                       draftCorrectAnswer === opt.key
-                        ? 'bg-emerald-50 border-emerald-400'
-                        : 'bg-white border-slate-200'
+                        ? 'bg-ok-soft border-ok'
+                        : 'bg-white border-line'
                     }`}
                   >
                     <label className="flex items-center gap-1.5 cursor-pointer shrink-0">
@@ -395,10 +395,10 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
                         name="correctAnswerGroup"
                         checked={draftCorrectAnswer === opt.key}
                         onChange={() => setDraftCorrectAnswer(opt.key)}
-                        className="text-emerald-600 focus:ring-emerald-500 cursor-pointer"
+                        className="text-ok focus:ring-ok cursor-pointer"
                       />
-                      <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${
-                        draftCorrectAnswer === opt.key ? 'bg-emerald-600 text-white' : 'bg-slate-200 text-slate-700'
+                      <span className={`w-5 h-5 rounded-full flex items-center justify-center text-2xs font-bold ${
+                        draftCorrectAnswer === opt.key ? 'bg-ok text-white' : 'bg-line text-ink-2'
                       }`}>
                         {opt.key}
                       </span>
@@ -413,11 +413,11 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
                         setDraftOptions(newOpts);
                       }}
                       placeholder={`${opt.key} seçeneği metni...`}
-                      className="flex-1 bg-transparent text-xs text-slate-900 focus:outline-none"
+                      className="flex-1 bg-transparent text-xs text-ink focus:outline-none"
                     />
 
                     {draftCorrectAnswer === opt.key && (
-                      <span className="text-[11px] bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded font-extrabold shrink-0">
+                      <span className="text-2xs bg-ok/20 text-ok px-2 py-0.5 rounded font-extrabold shrink-0">
                         Doğru Cevap
                       </span>
                     )}
@@ -429,24 +429,24 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
             {/* Explanation & Discrepancies */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
               <div className="space-y-1">
-                <label className="text-[11px] font-bold text-slate-700">Klinik Patofizyolojik Açıklama:</label>
+                <label className="text-2xs font-bold text-ink-2">Klinik Patofizyolojik Açıklama:</label>
                 <textarea
                   rows={3}
                   value={draftExplanation}
                   onChange={(e) => setDraftExplanation(e.target.value)}
                   placeholder="Detaylı patofizyoloji ve literatür dayanağı..."
-                  className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-xs text-slate-900 focus:border-teal-600"
+                  className="w-full bg-white border border-line-2 rounded-xl p-2.5 text-xs text-ink focus:border-ok"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="text-[11px] font-bold text-slate-700">Redaksiyon Notu & Gerekçe:</label>
+                <label className="text-2xs font-bold text-ink-2">Redaksiyon Notu & Gerekçe:</label>
                 <textarea
                   rows={3}
                   value={draftNotes}
                   onChange={(e) => setDraftNotes(e.target.value)}
                   placeholder="Admin talimatı doğrultusunda yapılan değişiklikler..."
-                  className="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-xs text-slate-900 focus:border-teal-600"
+                  className="w-full bg-white border border-line-2 rounded-xl p-2.5 text-xs text-ink focus:border-ok"
                 />
               </div>
             </div>
@@ -456,11 +456,11 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
         </div>
 
         {/* Modal Footer */}
-        <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between gap-3 shrink-0">
+        <div className="p-4 bg-field border-t border-line flex items-center justify-between gap-3 shrink-0">
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer"
+            className="px-4 py-2 rounded-xl text-xs font-semibold text-ink-2 hover:bg-line transition-colors cursor-pointer"
           >
             İptal
           </button>
@@ -470,7 +470,7 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
               type="button"
               onClick={handleSave}
               disabled={isSaving || !draftStem.trim()}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-sm flex items-center gap-1.5 transition-all disabled:opacity-50 cursor-pointer"
+              className="bg-ok hover:bg-ok text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-sm flex items-center gap-1.5 transition-all disabled:opacity-50 cursor-pointer"
             >
               {isSaving ? (
                 <>

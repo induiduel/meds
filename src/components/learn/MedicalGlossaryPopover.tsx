@@ -79,30 +79,30 @@ export const getCategoryBadgeStyle = (category: string, badgeColor?: string) => 
   switch (badgeColor || category.toLowerCase()) {
     case 'red':
     case 'bakteriyoloji':
-      return 'bg-red-500/10 text-red-600 dark:text-red-400 border-red-500/20';
+      return 'bg-bad/10 text-bad-text dark:text-red-400 border-bad/20';
     case 'rose':
     case 'viroloji':
-      return 'bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20';
+      return 'bg-bad/10 text-bad-text dark:text-rose-400 border-bad/20';
     case 'purple':
     case 'tıbbi patoloji':
-      return 'bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20';
+      return 'bg-ai/10 text-ai dark:text-purple-400 border-ai/20';
     case 'indigo':
     case 'genetik & dismorfoloji':
     case 'genetik & patoloji':
-      return 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20';
+      return 'bg-accent/10 text-accent dark:text-indigo-400 border-accent/20';
     case 'teal':
     case 'latin / anatomi':
-      return 'bg-teal-500/10 text-teal-600 dark:text-teal-400 border-teal-500/20';
+      return 'bg-ok/10 text-ok dark:text-teal-400 border-ok/20';
     case 'blue':
     case 'üroloji / nefroloji':
-      return 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20';
+      return 'bg-accent/10 text-accent dark:text-blue-400 border-accent/20';
     case 'cyan':
     case 'farmakoloji':
-      return 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/20';
+      return 'bg-accent/10 text-accent dark:text-cyan-400 border-accent/20';
     case 'amber':
     case 'izolasyon':
     case 'epidemiyoloji':
-      return 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20';
+      return 'bg-warn/10 text-warn dark:text-amber-400 border-warn/20';
     default:
       return 'bg-accent-soft text-accent border-accent/20';
   }
@@ -399,7 +399,7 @@ export const FloatingGlossaryToast: React.FC = () => {
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2 flex-wrap mb-1">
             <span
-              className={`text-[11.5px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border shadow-2xs ${getCategoryBadgeStyle(
+              className={`text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border shadow-2xs ${getCategoryBadgeStyle(
                 item.category,
                 item.badgeColor
               )}`}
@@ -407,12 +407,12 @@ export const FloatingGlossaryToast: React.FC = () => {
               {item.category}
             </span>
             {item.pronunciation && (
-              <span className="text-[11px] text-ink-3 italic font-mono">
+              <span className="text-2xs text-ink-3 italic font-mono">
                 {item.pronunciation}
               </span>
             )}
           </div>
-          <h4 className="text-[15px] sm:text-[16px] font-bold text-ink tracking-tight flex items-center gap-1.5 m-0">
+          <h4 className="text-md sm:text-md font-bold text-ink tracking-tight flex items-center gap-1.5 m-0">
             {item.term}
             {'speechSynthesis' in (typeof window !== 'undefined' ? window : {}) && (
               <button
@@ -440,20 +440,20 @@ export const FloatingGlossaryToast: React.FC = () => {
       </div>
 
       {/* Definition */}
-      <p className="m-0 text-[12.5px] sm:text-[13px] text-ink-2 leading-relaxed">
+      <p className="m-0 text-sm sm:text-sm text-ink-2 leading-relaxed">
         {item.definition}
       </p>
 
       {/* Dynamic Slide Clinical Synthesis / Slayt Patoloji Bilgisi */}
       {slideKnowledge && (
-        <div className="p-2.5 rounded-xl bg-teal-500/10 dark:bg-teal-500/15 text-[11.5px] sm:text-[12px] text-ink-2 leading-snug flex items-start gap-2 animate-in fade-in duration-200 shadow-2xs">
-          <span className="text-[13px] select-none shrink-0 mt-0.5"></span>
+        <div className="p-2.5 rounded-xl bg-ok/10 dark:bg-teal-500/15 text-xs sm:text-xs text-ink-2 leading-snug flex items-start gap-2 animate-in fade-in duration-200 shadow-2xs">
+          <span className="text-sm select-none shrink-0 mt-0.5"></span>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5 mb-1">
-              <strong className="font-semibold text-teal-900 dark:text-teal-200 text-[11.5px]">
+              <strong className="font-semibold text-ok dark:text-teal-200 text-xs">
                 Slayttaki Bilgi & Patoloji Sentezi:
               </strong>
-              <span className="text-[9.5px] font-bold uppercase tracking-wider bg-teal-500/20 text-teal-800 dark:text-teal-300 px-1 py-0.2 rounded">
+              <span className="text-2xs font-bold uppercase tracking-wider bg-ok/20 text-ok dark:text-teal-300 px-1 py-0.2 rounded">
                 Bu Slayt
               </span>
             </div>
@@ -466,10 +466,10 @@ export const FloatingGlossaryToast: React.FC = () => {
 
       {/* Clinical Pearl Box */}
       {item.clinicalPearls && (
-        <div className="p-2.5 rounded-xl bg-amber-500/10 dark:bg-amber-500/15 text-[11.5px] sm:text-[12px] text-ink-2 leading-snug flex items-start gap-2">
-          <span className="text-[13px] select-none shrink-0 mt-0.5"></span>
+        <div className="p-2.5 rounded-xl bg-warn/10 dark:bg-amber-500/15 text-xs sm:text-xs text-ink-2 leading-snug flex items-start gap-2">
+          <span className="text-sm select-none shrink-0 mt-0.5"></span>
           <div className="min-w-0 flex-1">
-            <strong className="font-semibold text-amber-900 dark:text-amber-200 block mb-0.5">
+            <strong className="font-semibold text-warn dark:text-amber-200 block mb-0.5">
               Spot Sınav & Hoca İncisi:
             </strong>
             <span>{item.clinicalPearls}</span>
@@ -478,7 +478,7 @@ export const FloatingGlossaryToast: React.FC = () => {
       )}
 
       {/* Footer / Helper hint */}
-      <div className="pt-2 border-t border-line-soft flex items-center justify-end gap-1 text-[13px] text-ink-3 min-w-0">
+      <div className="pt-2 border-t border-line-soft flex items-center justify-end gap-1 text-sm text-ink-3 min-w-0">
         <div className="flex items-center gap-1 min-w-0">
           <a
             href={`/sozluk?id=${encodeURIComponent(item.term)}`}
@@ -557,11 +557,11 @@ export const GlossaryTermSpan: React.FC<{
       }}
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
-      className="cursor-pointer font-semibold text-teal-800 dark:text-teal-200 bg-teal-500/15 dark:bg-teal-400/20 hover:bg-teal-500/25 dark:hover:bg-teal-400/30 underline decoration-2 underline-offset-[3px] decoration-teal-500/70 dark:decoration-teal-400/90 px-1 py-0.5 rounded transition-all duration-150 inline-flex items-baseline gap-0.5 select-text"
+      className="cursor-pointer font-semibold text-ok dark:text-teal-200 bg-ok/15 dark:bg-teal-400/20 hover:bg-ok/25 dark:hover:bg-teal-400/30 underline decoration-2 underline-offset-[3px] decoration-ok/70 dark:decoration-teal-400/90 px-1 py-0.5 rounded transition-all duration-150 inline-flex items-baseline gap-0.5 select-text"
       title={`${item.term} (${item.category}) - Dokunun veya üzerine gelin`}
     >
       <span>{text}</span>
-      <span className="text-[11px] text-teal-600 dark:text-teal-300 opacity-70 select-none"></span>
+      <span className="text-2xs text-ok dark:text-teal-300 opacity-70 select-none"></span>
     </span>
   );
 };
@@ -703,10 +703,10 @@ export const RenderWithGlossaryTerms: React.FC<{
             return (
               <mark
                 key={pIdx}
-                className="bg-red-100/90 dark:bg-red-950/50 text-red-800 dark:text-red-200 underline decoration-2 underline-offset-[3px] decoration-red-500 px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
+                className="bg-bad-soft/90 dark:bg-red-950/50 text-bad-text dark:text-red-200 underline decoration-2 underline-offset-[3px] decoration-bad-text px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
                 title="Önemli / Kritik Vurgu"
               >
-                <span className="text-[11px] select-none text-red-500"></span>
+                <span className="text-2xs select-none text-bad-text"></span>
                 <span>{renderedContent}</span>
               </mark>
             );
@@ -715,10 +715,10 @@ export const RenderWithGlossaryTerms: React.FC<{
             return (
               <mark
                 key={pIdx}
-                className="bg-blue-100/90 dark:bg-blue-950/50 text-blue-800 dark:text-blue-200 underline decoration-2 underline-offset-[3px] decoration-blue-500 px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
+                className="bg-accent-soft/90 dark:bg-blue-950/50 text-accent dark:text-blue-200 underline decoration-2 underline-offset-[3px] decoration-accent px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
                 title="Sorulmuş / Çıkmış Sınav Sorusu"
               >
-                <span className="text-[11px] select-none text-blue-500"></span>
+                <span className="text-2xs select-none text-accent"></span>
                 <span>{renderedContent}</span>
               </mark>
             );
@@ -750,11 +750,11 @@ export const RenderWithGlossaryTerms: React.FC<{
             return (
               <strong
                 key={pIdx}
-                className="font-bold text-red-600 dark:text-red-400 bg-red-500/10 dark:bg-red-500/20 border border-red-500/30 px-1.5 py-0.5 rounded shadow-2xs inline-flex items-center gap-1 my-0.5"
+                className="font-bold text-bad-text dark:text-red-400 bg-bad/10 dark:bg-red-500/20 border border-bad/30 px-1.5 py-0.5 rounded shadow-2xs inline-flex items-center gap-1 my-0.5"
                 title="Önemli Bilgi"
               >
                 {!rawContent.includes('') && !rawContent.includes('') && !rawContent.includes('') && (
-                  <span className="text-[11px] select-none text-red-500"></span>
+                  <span className="text-2xs select-none text-bad-text"></span>
                 )}
                 <span>{renderedContent}</span>
               </strong>
@@ -765,11 +765,11 @@ export const RenderWithGlossaryTerms: React.FC<{
             return (
               <strong
                 key={pIdx}
-                className="font-bold text-blue-600 dark:text-blue-400 bg-blue-500/10 dark:bg-blue-500/20 border border-blue-500/30 px-1.5 py-0.5 rounded shadow-2xs inline-flex items-center gap-1 my-0.5"
+                className="font-bold text-accent dark:text-blue-400 bg-accent/10 dark:bg-blue-500/20 border border-accent/30 px-1.5 py-0.5 rounded shadow-2xs inline-flex items-center gap-1 my-0.5"
                 title="Sorulmuş / Çıkmış Soru"
               >
                 {!rawContent.includes('') && !rawContent.includes('') && !rawContent.includes('') && (
-                  <span className="text-[11px] select-none text-blue-500"></span>
+                  <span className="text-2xs select-none text-accent"></span>
                 )}
                 <span>{renderedContent}</span>
               </strong>
@@ -779,7 +779,7 @@ export const RenderWithGlossaryTerms: React.FC<{
           return (
             <strong
               key={pIdx}
-              className="font-bold text-ink bg-amber-100/60 dark:bg-amber-950/40 px-1 py-0.5 rounded shadow-2xs"
+              className="font-bold text-ink bg-warn-soft/60 dark:bg-amber-950/40 px-1 py-0.5 rounded shadow-2xs"
             >
               {renderedContent}
             </strong>
@@ -848,10 +848,10 @@ export const MedicalGlossaryDrawer: React.FC = () => {
               <BookOpen className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-[16px] font-bold text-ink m-0 tracking-tight">
+              <h3 className="text-md font-bold text-ink m-0 tracking-tight">
                 Tıbbi Terimler & Glosser
               </h3>
-              <p className="text-[12px] text-ink-3 m-0">
+              <p className="text-xs text-ink-3 m-0">
                 Kurul 1 Latin Terimleri, Bakteriler, Virüsler ve Patoloji Sözlüğü ({glossaryList.length} Terim)
               </p>
             </div>
@@ -875,7 +875,7 @@ export const MedicalGlossaryDrawer: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Terim, bakteri, virüs veya semptom ara..."
-              className="w-full pl-10 pr-4 py-2 text-[13px] bg-canvas border border-line-soft rounded-xl text-ink placeholder:text-ink-3 focus:outline-hidden focus:border-accent"
+              className="w-full pl-10 pr-4 py-2 text-sm bg-canvas border border-line-soft rounded-xl text-ink placeholder:text-ink-3 focus:outline-hidden focus:border-accent"
             />
             {searchQuery && (
               <button
@@ -895,7 +895,7 @@ export const MedicalGlossaryDrawer: React.FC = () => {
                 key={cat}
                 type="button"
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-2.5 py-1 rounded-lg text-[11.5px] font-medium whitespace-nowrap transition-colors cursor-pointer ${
+                className={`px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition-colors cursor-pointer ${
                   selectedCategory === cat
                     ? 'bg-accent text-white shadow-2xs'
                     : 'bg-canvas text-ink-3 hover:text-ink hover:bg-line-soft'
@@ -910,7 +910,7 @@ export const MedicalGlossaryDrawer: React.FC = () => {
         {/* Term List */}
         <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3">
           {filtered.length === 0 ? (
-            <div className="p-8 text-center text-ink-3 text-[13px]">
+            <div className="p-8 text-center text-ink-3 text-sm">
               Eşleşen tıbbi terim bulunamadı.
             </div>
           ) : (
@@ -922,7 +922,7 @@ export const MedicalGlossaryDrawer: React.FC = () => {
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span
-                      className={`text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${getCategoryBadgeStyle(
+                      className={`text-2xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${getCategoryBadgeStyle(
                         item.category,
                         item.badgeColor
                       )}`}
@@ -930,7 +930,7 @@ export const MedicalGlossaryDrawer: React.FC = () => {
                       {item.category}
                     </span>
                     {item.pronunciation && (
-                      <span className="text-[11px] text-ink-3 italic font-mono">
+                      <span className="text-2xs text-ink-3 italic font-mono">
                         {item.pronunciation}
                       </span>
                     )}
@@ -943,24 +943,24 @@ export const MedicalGlossaryDrawer: React.FC = () => {
                       showTerm(item, rect, 'tap');
                       setIsDrawerOpen(false);
                     }}
-                    className="text-[11px] text-accent hover:underline font-medium flex items-center gap-1 cursor-pointer"
+                    className="text-2xs text-accent hover:underline font-medium flex items-center gap-1 cursor-pointer"
                   >
                     <span>Toast Gör</span>
                     <ExternalLink className="w-3 h-3" />
                   </button>
                 </div>
 
-                <h4 className="text-[14.5px] font-bold text-ink m-0 tracking-tight">
+                <h4 className="text-md font-bold text-ink m-0 tracking-tight">
                   {item.term}
                 </h4>
 
-                <p className="text-[12.5px] text-ink-2 leading-relaxed m-0">
+                <p className="text-sm text-ink-2 leading-relaxed m-0">
                   {item.definition}
                 </p>
 
                 {item.clinicalPearls && (
-                  <div className="p-2 rounded-lg bg-amber-500/10 text-[11.5px] text-ink-2 leading-snug flex items-start gap-1.5">
-                    <span className="text-[12px] select-none shrink-0"></span>
+                  <div className="p-2 rounded-lg bg-warn/10 text-xs text-ink-2 leading-snug flex items-start gap-1.5">
+                    <span className="text-xs select-none shrink-0"></span>
                     <span>{item.clinicalPearls}</span>
                   </div>
                 )}
@@ -1013,9 +1013,9 @@ export const SlideTermsPills: React.FC<{
   });
 
   return (
-    <div className={`ms-terms flex items-center gap-1.5 flex-wrap p-2 rounded-xl bg-teal-500/5 dark:bg-teal-500/10 border border-teal-500/15 ${className || ''}`}>
-      <span className="text-[11px] font-semibold text-teal-800 dark:text-teal-300 flex items-center gap-1 shrink-0">
-        <Sparkles className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+    <div className={`ms-terms flex items-center gap-1.5 flex-wrap p-2 rounded-xl bg-ok/5 dark:bg-teal-500/10 border border-ok/15 ${className || ''}`}>
+      <span className="text-2xs font-semibold text-ok dark:text-teal-300 flex items-center gap-1 shrink-0">
+        <Sparkles className="w-3.5 h-3.5 text-ok dark:text-teal-400" />
         <span>Slayt Tıbbi Terimleri:</span>
       </span>
       {uniqueTerms.map((term, i) => (
@@ -1026,7 +1026,7 @@ export const SlideTermsPills: React.FC<{
             const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
             showTerm(term, rect, 'tap');
           }}
-          className={`px-2 py-0.5 rounded-full text-[11px] font-medium border cursor-pointer hover:scale-105 active:scale-95 transition-all shadow-2xs ${getCategoryBadgeStyle(
+          className={`px-2 py-0.5 rounded-full text-2xs font-medium border cursor-pointer hover:scale-105 active:scale-95 transition-all shadow-2xs ${getCategoryBadgeStyle(
             term.category,
             term.badgeColor
           )}`}

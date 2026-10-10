@@ -48,32 +48,32 @@ export const getScoreTier = (score: number) => {
   if (score >= 80) {
     return {
       tierName: 'Çok Yüksek Uyum',
-      pillBg: 'bg-emerald-500/15 text-emerald-900 border-emerald-300',
-      barColor: 'bg-emerald-500',
-      cardBorder: 'border-emerald-300 bg-emerald-50/50 hover:border-emerald-400',
+      pillBg: 'bg-ok/15 text-ok border-ok/30',
+      barColor: 'bg-ok',
+      cardBorder: 'border-ok/30 bg-ok-soft/50 hover:border-ok',
     };
   }
   if (score >= 65) {
     return {
       tierName: 'Yüksek Benzerlik',
-      pillBg: 'bg-amber-500/15 text-amber-900 border-amber-300',
-      barColor: 'bg-amber-500',
-      cardBorder: 'border-amber-300 bg-amber-50/50 hover:border-amber-400',
+      pillBg: 'bg-warn/15 text-warn border-warn/30',
+      barColor: 'bg-warn',
+      cardBorder: 'border-warn/30 bg-warn-soft/50 hover:border-warn',
     };
   }
   if (score >= 50) {
     return {
       tierName: 'Orta Benzerlik',
-      pillBg: 'bg-sky-500/15 text-sky-900 border-sky-300',
-      barColor: 'bg-sky-500',
-      cardBorder: 'border-sky-200 bg-sky-50/40 hover:border-sky-300',
+      pillBg: 'bg-accent/15 text-accent border-accent/30',
+      barColor: 'bg-accent',
+      cardBorder: 'border-accent/30 bg-accent-soft/40 hover:border-accent/30',
     };
   }
   return {
     tierName: 'İlişkili Konu',
-    pillBg: 'bg-purple-500/15 text-purple-900 border-purple-200',
-    barColor: 'bg-purple-500',
-    cardBorder: 'border-purple-200 bg-purple-50/30 hover:border-purple-300',
+    pillBg: 'bg-ai/15 text-ai border-ai/30',
+    barColor: 'bg-ai',
+    cardBorder: 'border-ai/30 bg-ai-soft/30 hover:border-ai/30',
   };
 };
 
@@ -81,7 +81,7 @@ export const getScoreTier = (score: number) => {
 const SOURCE_KIND: Record<string, { label: string; cls: string }> = {
   lecture_slide: { label: 'Slayt', cls: 'bg-accent-soft text-accent' },
   summary: { label: 'Özet', cls: 'bg-ok-soft text-ok' },
-  past_question: { label: 'Çıkmış', cls: 'bg-violet-50 text-violet-700' },
+  past_question: { label: 'Çıkmış', cls: 'bg-ai-soft text-ai' },
   transcript: { label: 'Deşifre', cls: 'bg-warn-soft text-warn' },
 };
 
@@ -171,7 +171,7 @@ export const questionStemText = (q: QuestionItem) =>
 export const StatusPill: React.FC<{ status: QuestionItem['status']; hasFragments?: boolean }> = ({ status, hasFragments }) => {
   if (status === 'completed') {
     return (
-      <span className="inline-flex items-center gap-1.5 h-7 px-2.5 rounded-full bg-ok-soft text-ok text-[12px] font-semibold whitespace-nowrap">
+      <span className="inline-flex items-center gap-1.5 h-7 px-2.5 rounded-full bg-ok-soft text-ok text-xs font-semibold whitespace-nowrap">
         <Check className="w-[13px] h-[13px]" strokeWidth={3} />
         Doğrulandı
       </span>
@@ -179,13 +179,13 @@ export const StatusPill: React.FC<{ status: QuestionItem['status']; hasFragments
   }
   if (status === 'empty' && !hasFragments) {
     return (
-      <span className="inline-flex items-center gap-1.5 h-7 px-2.5 rounded-full bg-canvas text-ink-2 text-[12px] font-semibold whitespace-nowrap">
+      <span className="inline-flex items-center gap-1.5 h-7 px-2.5 rounded-full bg-canvas text-ink-2 text-xs font-semibold whitespace-nowrap">
         Boş
       </span>
     );
   }
   return (
-    <span className="inline-flex items-center gap-1.5 h-7 px-2.5 rounded-full bg-warn-soft text-warn text-[12px] font-semibold whitespace-nowrap">
+    <span className="inline-flex items-center gap-1.5 h-7 px-2.5 rounded-full bg-warn-soft text-warn text-xs font-semibold whitespace-nowrap">
       <CircleDashed className="w-[13px] h-[13px]" strokeWidth={2.6} />
       Taslak
     </span>
@@ -921,14 +921,14 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8">
         <LoveNote />
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-2">
-          <span className="inline-flex items-center text-[13px] text-ink-3">
+          <span className="inline-flex items-center text-sm text-ink-3">
             <span className={`w-1.5 h-1.5 rounded-full mr-2 ${isCollecting ? 'bg-ok-bright' : 'bg-line-2'}`} aria-hidden="true" />
             {committee ? titleCase(committee) : 'Kurul'}{isCollecting ? ' · toplama açık' : ''}
           </span>
-          <h1 className="ms-page-title m-0 text-[30px] sm:text-[36px] text-ink">Aklında ne kaldı?</h1>
+          <h1 className="ms-page-title m-0 text-3xl sm:text-4xl text-ink">Aklında ne kaldı?</h1>
           {isLocked && (
-            <div className="ms-pop-in flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-300/80 text-amber-900 text-[12.5px] font-medium mt-1">
-              <Lock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+            <div className="ms-pop-in flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-warn/10 border border-warn/80 text-warn text-sm font-medium mt-1">
+              <Lock className="w-3.5 h-3.5 text-warn shrink-0" />
               <span>Ders programına göre sınav tamamlanmadan bu kurula soru yazılamaz.</span>
             </div>
           )}
@@ -992,7 +992,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     }
                   }}
                   placeholder="Tek kelime bile işe yarar…"
-                  className="ms-bare-input w-full block resize-none px-4 pt-3.5 pb-2 text-[16px] leading-[1.6] text-ink placeholder:text-ink-3 bg-transparent border-0 outline-0 min-h-[128px]"
+                  className="ms-bare-input w-full block resize-none px-4 pt-3.5 pb-2 text-md leading-[1.6] text-ink placeholder:text-ink-3 bg-transparent border-0 outline-0 min-h-[128px]"
                 />
                 {full && wiz !== 'kok' && (
                   <div key={wiz} className={`wz-panel ${wizDir > 0 ? 'is-fwd' : 'is-back'}`}>
@@ -1233,13 +1233,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       {autoNum && !userManualNumber && <Sparkles className="ms-meta-auto w-3 h-3 shrink-0" aria-label="otomatik" />}
                     </label>
                     {(autoDisc || autoNum) && !(userManualDiscipline && userManualNumber) && (
-                      <span className="hidden sm:inline ml-auto text-[12px] text-ink-3 truncate">Eşleşen taslaktan dolduruldu</span>
+                      <span className="hidden sm:inline ml-auto text-xs text-ink-3 truncate">Eşleşen taslaktan dolduruldu</span>
                     )}
                   </div>
                 )}
               </div>
               {spell?.text && spell.text !== dismissedSpell && (
-                <div className="ms-pop-in flex items-center gap-2 text-[14px] text-ink-2 min-w-0">
+                <div className="ms-pop-in flex items-center gap-2 text-base text-ink-2 min-w-0">
                   <span className="shrink-0 text-ink-3">Bunu mu kastettiniz?</span>
                   <button
                     type="button"
@@ -1255,7 +1255,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               )}
               {/* Canlı arama mikro-animasyonu / yükleme göstergesi */}
               {isSearching && text.trim().length >= 6 && (
-                <div className="ms-fade-in flex items-center gap-2 px-3 py-1.5 rounded-xl bg-accent-soft/60 border border-accent/20 text-accent text-[12px] font-medium w-fit">
+                <div className="ms-fade-in flex items-center gap-2 px-3 py-1.5 rounded-xl bg-accent-soft/60 border border-accent/20 text-accent text-xs font-medium w-fit">
                   <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
                   <span className="flex items-center gap-1">
                     <Sparkles className="w-3.5 h-3.5 animate-spin" />
@@ -1266,13 +1266,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
               {/* Seçili Soruya / Taslağa Bağlandı Rozeti */}
               {linkedQuestion && (
-                <div className="ms-pop-in flex items-center justify-between gap-2 px-3.5 py-2 rounded-xl bg-teal-50 border border-teal-200 text-teal-900 text-[13px]">
+                <div className="ms-pop-in flex items-center justify-between gap-2 px-3.5 py-2 rounded-xl bg-ok-soft border border-ok/30 text-ok text-sm">
                   <div className="flex items-center gap-2 min-w-0">
-                    <Link2 className="w-4 h-4 text-teal-600 shrink-0" />
-                    <span className="font-semibold text-teal-950 truncate">
+                    <Link2 className="w-4 h-4 text-ok shrink-0" />
+                    <span className="font-semibold text-ok truncate">
                       {linkedQuestion.questionNumber ? `Soru #${linkedQuestion.questionNumber} ile bağlandı` : 'Mevcut taslakla bağlandı'}
                     </span>
-                    <span className="text-teal-700 text-[12px] hidden sm:inline truncate">
+                    <span className="text-ok text-xs hidden sm:inline truncate">
                       (Yazdıkların bu sorunun katkılarına eklenecek)
                     </span>
                   </div>
@@ -1282,7 +1282,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       setLinkedQuestion(null);
                       setQuestionNumber('');
                     }}
-                    className="p-1 text-teal-700 hover:text-teal-950 hover:bg-teal-100 rounded-lg cursor-pointer transition-colors shrink-0"
+                    className="p-1 text-ok hover:text-ok hover:bg-ok-soft rounded-lg cursor-pointer transition-colors shrink-0"
                     title="Bağlantıyı kaldır"
                   >
                     <X className="w-3.5 h-3.5" />
@@ -1294,11 +1294,11 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
           {/* Akıllı Kurul & Ders Öneri ve Uyarı Kutusu */}
           {smartAssistant && mode !== 'option' && (smartAssistant.crossCommitteeWarning || smartAssistant.suggestedTopics.length > 0) && (
-            <div className="ms-pop-in rounded-2xl bg-amber-500/10 border border-amber-300/80 p-3.5 flex flex-col gap-2.5">
+            <div className="ms-pop-in rounded-2xl bg-warn/10 border border-warn/80 p-3.5 flex flex-col gap-2.5">
               {smartAssistant.crossCommitteeWarning && smartAssistant.predictedCommittee && (
                 <div className="flex items-start justify-between gap-3 flex-wrap sm:flex-nowrap">
-                  <div className="flex items-start gap-2 text-[13px] text-amber-950 leading-snug">
-                    <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-2 text-sm text-warn leading-snug">
+                    <AlertCircle className="w-4 h-4 text-warn shrink-0 mt-0.5" />
                     <div>
                       <span className="font-bold">Kurul Uyuşmazlığı Olabilir: </span>
                       {smartAssistant.crossCommitteeWarning}
@@ -1315,7 +1315,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                         toast.success('Kurul Değiştirildi', `${smartAssistant.predictedCommittee.committeeName} kuruluna geçildi.`);
                       }
                     }}
-                    className="shrink-0 h-8 px-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-[12px] font-bold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-xs"
+                    className="shrink-0 h-8 px-3 rounded-xl bg-warn hover:bg-warn text-white text-xs font-bold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-xs"
                   >
                     Bu Kurula Geç
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -1326,14 +1326,14 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               {/* Tespit Edilen Tıbbi Konular / Kavramlar */}
               {smartAssistant.suggestedTopics.length > 0 && (
                 <div className="flex items-center gap-1.5 flex-wrap pt-0.5">
-                  <span className="text-[11.5px] font-bold uppercase tracking-wider text-amber-900/80 flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-amber-600" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-warn/80 flex items-center gap-1">
+                    <Sparkles className="w-3 h-3 text-warn" />
                     İlişkili Konu Önerileri:
                   </span>
                   {smartAssistant.suggestedTopics.slice(0, 3).map((st, i) => (
                     <span
                       key={i}
-                      className="h-6 px-2.5 rounded-full bg-white text-amber-950 text-[12px] font-semibold border border-amber-200 shadow-2xs inline-flex items-center gap-1"
+                      className="h-6 px-2.5 rounded-full bg-white text-warn text-xs font-semibold border border-warn/30 shadow-2xs inline-flex items-center gap-1"
                     >
                       {st.topic}
                     </span>
@@ -1342,7 +1342,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     <button
                       type="button"
                       onClick={() => setDiscipline(smartAssistant.predictedDiscipline!.discipline)}
-                      className="h-6 px-2.5 rounded-full bg-accent/15 hover:bg-accent/25 text-accent text-[12px] font-bold border border-accent/30 inline-flex items-center gap-1 cursor-pointer transition-colors"
+                      className="h-6 px-2.5 rounded-full bg-accent/15 hover:bg-accent/25 text-accent text-xs font-bold border border-accent/30 inline-flex items-center gap-1 cursor-pointer transition-colors"
                       title="Dersi otomatik eşle"
                     >
                       Dersi "{smartAssistant.predictedDiscipline.discipline}" yap
@@ -1356,7 +1356,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           {realtimeMatches.length > 0 && mode !== 'option' && (
             <div className="flex flex-col gap-2.5">
               <div className="flex items-center justify-between gap-2 px-1">
-                <span className="flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-wider text-ink-3">
+                <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-ink-3">
                   <Sparkles className="w-3.5 h-3.5 text-accent animate-pulse" />
                   Benzer Taslaklar ({realtimeMatches.length})
                 </span>
@@ -1364,7 +1364,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                   <button
                     type="button"
                     onClick={selectedMatchIds.size === realtimeMatches.length ? clearSelection : selectAllMatches}
-                    className="text-[12px] font-semibold text-accent hover:underline cursor-pointer"
+                    className="text-xs font-semibold text-accent hover:underline cursor-pointer"
                   >
                     {selectedMatchIds.size === realtimeMatches.length ? 'Seçimi Bırak' : 'Tümünü Seç'}
                   </button>
@@ -1407,18 +1407,18 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                           </button>
 
                           {isTop && (
-                            <span className="h-5 px-2 rounded-full bg-accent text-white text-[11px] font-bold uppercase tracking-wider">
+                            <span className="h-5 px-2 rounded-full bg-accent text-white text-2xs font-bold uppercase tracking-wider">
                               En Yakın
                             </span>
                           )}
 
-                          <span className={`h-6 px-2.5 rounded-full text-[12px] font-semibold inline-flex items-center gap-1 border ${tier.pillBg}`}>
+                          <span className={`h-6 px-2.5 rounded-full text-xs font-semibold inline-flex items-center gap-1 border ${tier.pillBg}`}>
                             <span className={`w-1.5 h-1.5 rounded-full ${tier.barColor}`} />
                             %{m.compatibility.score} · {tier.tierName}
                           </span>
 
                           {m.isCrossCommittee && (
-                            <span className="h-5 px-2 rounded-full bg-purple-600 text-white text-[11px] font-bold uppercase tracking-wider">
+                            <span className="h-5 px-2 rounded-full bg-ai text-white text-2xs font-bold uppercase tracking-wider">
                               Farklı Kurul Taslağı
                             </span>
                           )}
@@ -1428,12 +1428,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                           )}
                         </div>
 
-                        <span className="text-[12px] font-mono font-bold text-ink-2">
+                        <span className="text-xs font-mono font-bold text-ink-2">
                           {q.questionNumber ? `Soru #${q.questionNumber}` : 'Numarasız'}
                         </span>
                       </div>
 
-                      <div className="text-[13px] leading-relaxed text-ink bg-white/90 rounded-xl p-2.5 border border-line-soft">
+                      <div className="text-sm leading-relaxed text-ink bg-white/90 rounded-xl p-2.5 border border-line-soft">
                         <Colored text={stem} colors={sharedColors} />
                       </div>
 
@@ -1442,7 +1442,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                           <button
                             type="button"
                             onClick={() => handleLinkToQuestion(q)}
-                            className="h-7 px-2.5 rounded-lg bg-white hover:bg-canvas text-ink text-[12px] font-medium border border-line inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                            className="h-7 px-2.5 rounded-lg bg-white hover:bg-canvas text-ink text-xs font-medium border border-line inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
                           >
                             <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
                             {q.questionNumber ? `S.${q.questionNumber} ile Bağla` : 'Bu Taslakla Bağla'}
@@ -1450,7 +1450,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                           <button
                             type="button"
                             onClick={() => setOptimizingQuestion(q)}
-                            className="h-7 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-[12px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                            className="h-7 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
                             title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür"
                           >
                             <Wand2 className="w-3.5 h-3.5" />
@@ -1458,7 +1458,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                           </button>
                         </div>
                         {q.discipline && (
-                          <span className="text-[11.5px] text-ink-3 truncate">{q.discipline}</span>
+                          <span className="text-xs text-ink-3 truncate">{q.discipline}</span>
                         )}
                       </div>
                     </div>
@@ -1473,10 +1473,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               {selectedMatchIds.size > 0 && (
                 <div className="ms-pop-in sticky bottom-3 z-20 flex items-center justify-between gap-3 p-3 rounded-2xl bg-ink text-white shadow-xl border border-white/10 backdrop-blur-md">
                   <div className="flex items-center gap-2 min-w-0">
-                    <span className="w-6 h-6 rounded-full bg-accent text-white text-[12px] font-bold flex items-center justify-center shrink-0">
+                    <span className="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center shrink-0">
                       {selectedMatchIds.size}
                     </span>
-                    <span className="text-[13px] font-medium truncate">
+                    <span className="text-sm font-medium truncate">
                       {selectedMatchIds.size === 1
                         ? '1 soru seçildi'
                         : `${selectedMatchIds.size} soru seçildi`}
@@ -1487,7 +1487,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     <button
                       type="button"
                       onClick={clearSelection}
-                      className="h-8 px-2.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white text-[12px] font-medium cursor-pointer transition-colors"
+                      className="h-8 px-2.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white text-xs font-medium cursor-pointer transition-colors"
                     >
                       İptal
                     </button>
@@ -1495,7 +1495,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       type="button"
                       disabled={isMergingSelected}
                       onClick={handleMergeAndGroupSelected}
-                      className="h-8 px-3.5 rounded-lg bg-accent hover:bg-accent-hover text-white text-[12.5px] font-bold inline-flex items-center gap-1.5 cursor-pointer shadow-md disabled:opacity-50 transition-colors"
+                      className="h-8 px-3.5 rounded-lg bg-accent hover:bg-accent-hover text-white text-sm font-bold inline-flex items-center gap-1.5 cursor-pointer shadow-md disabled:opacity-50 transition-colors"
                     >
                       <Layers className="w-3.5 h-3.5" />
                       {isMergingSelected
@@ -1515,13 +1515,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               type="button"
               onClick={() => setSimOpen((v) => !v)}
               aria-expanded={simOpen}
-              className="ms-pop-in w-full min-h-11 px-4 rounded-2xl bg-field hover:bg-line flex items-center gap-3 text-left text-[14px] cursor-pointer"
+              className="ms-pop-in w-full min-h-11 px-4 rounded-2xl bg-field hover:bg-line flex items-center gap-3 text-left text-base cursor-pointer"
             >
-              <span className="h-6 min-w-6 px-2 rounded-full bg-accent-soft text-accent text-[12px] font-semibold inline-flex items-center justify-center">
+              <span className="h-6 min-w-6 px-2 rounded-full bg-accent-soft text-accent text-xs font-semibold inline-flex items-center justify-center">
                 {similar.length}
               </span>
               <span className="flex-1 text-ink-2">benzer çıkmış soru bulundu</span>
-              <span className="text-[13px] text-ink-3">{simOpen ? 'Gizle' : 'Göster'}</span>
+              <span className="text-sm text-ink-3">{simOpen ? 'Gizle' : 'Göster'}</span>
             </button>
           )}
           {simOpen && similar.length > 0 && mode !== 'option' && (
@@ -1529,13 +1529,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               {similar.map((s, i) => (
                 <li
                   key={s.id}
-                  className="ms-pop-in p-3 rounded-xl bg-field/60 border border-line-soft hover:bg-field text-[14px] text-ink flex flex-col gap-2"
+                  className="ms-pop-in p-3 rounded-xl bg-field/60 border border-line-soft hover:bg-field text-base text-ink flex flex-col gap-2"
                   style={{ animationDelay: `${i * 60}ms` }}
                 >
                   <div className="flex flex-col gap-0.5 min-w-0">
                     <span className="line-clamp-2 text-ink-2 font-medium">{s.stem}</span>
                     {s.options && s.options.length > 0 && (
-                      <ol className="m-0 mt-1 p-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-0.5 text-[13px] text-ink-2">
+                      <ol className="m-0 mt-1 p-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-0.5 text-sm text-ink-2">
                         {s.options.map((o) => (
                           <li key={o.key} className={`min-w-0 truncate ${o.key === s.claimedAnswer ? 'text-ok font-semibold' : ''}`}>
                             <span className="font-mono text-ink-3 mr-1">{o.key})</span>{o.text}
@@ -1543,7 +1543,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                         ))}
                       </ol>
                     )}
-                    <span className="text-[12px] text-ink-3">
+                    <span className="text-xs text-ink-3">
                       {[s.discipline, s.examYear ? `Çıkmış ${s.examYear}` : 'Çıkmış', s.claimedAnswer ? `Cevap: ${s.claimedAnswer}` : ''].filter(Boolean).join(' · ')}
                     </span>
                   </div>
@@ -1551,7 +1551,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     <button
                       type="button"
                       onClick={() => handleTransferEntireQuestion(s)}
-                      className="h-7 px-2.5 rounded-lg bg-accent text-white text-[12px] font-semibold inline-flex items-center gap-1 cursor-pointer hover:bg-accent-hover shadow-2xs transition-colors"
+                      className="h-7 px-2.5 rounded-lg bg-accent text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer hover:bg-accent-hover shadow-2xs transition-colors"
                       title="Sorunun kökünü, branşını ve şıklarını editöre aktar"
                     >
                       <FileText className="w-3.5 h-3.5" />
@@ -1560,7 +1560,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     <button
                       type="button"
                       onClick={() => handleCopyQuestionStem(s.stem)}
-                      className="h-7 px-2.5 rounded-lg bg-white text-ink text-[12px] font-medium border border-line inline-flex items-center gap-1 cursor-pointer hover:bg-canvas shadow-2xs transition-colors"
+                      className="h-7 px-2.5 rounded-lg bg-white text-ink text-xs font-medium border border-line inline-flex items-center gap-1 cursor-pointer hover:bg-canvas shadow-2xs transition-colors"
                       title="Yalnızca soru kökünü editöre yaz ve panoya kopyala"
                     >
                       <Copy className="w-3.5 h-3.5 text-accent" />
@@ -1572,7 +1572,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             </ul>
           )}
 
-          <div className="flex items-center gap-2 text-[13px] text-ink-3">
+          <div className="flex items-center gap-2 text-sm text-ink-3">
             <span className="flex-1" />
             {/* Şık ekle: gönder düğmesinin solunda küçük baloncuk */}
             <button
@@ -1592,17 +1592,17 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="h-12 sm:h-11 px-6 rounded-full bg-accent hover:bg-accent-hover text-white text-[15px] sm:text-[14.5px] font-semibold cursor-pointer disabled:opacity-60 transition-colors shrink-0"
+              className="h-12 sm:h-11 px-6 rounded-full bg-accent hover:bg-accent-hover text-white text-md sm:text-md font-semibold cursor-pointer disabled:opacity-60 transition-colors shrink-0"
             >
               {isSubmitting ? 'Kaydediliyor…' : 'Havuza ekle'}
             </button>
           </div>
 
           {formError && (
-            <div role="alert" className="ms-shake px-4 py-3 rounded-2xl bg-bad-soft text-bad-text text-[14px]">{formError}</div>
+            <div role="alert" className="ms-shake px-4 py-3 rounded-2xl bg-bad-soft text-bad-text text-base">{formError}</div>
           )}
           {successMessage && (
-            <div role="status" className="ms-pop-in px-4 py-3 rounded-2xl bg-ok-soft text-ok text-[14px] font-medium">Teşekkürler! {successMessage}</div>
+            <div role="status" className="ms-pop-in px-4 py-3 rounded-2xl bg-ok-soft text-ok text-base font-medium">Teşekkürler! {successMessage}</div>
           )}
         </form>
 
@@ -1641,7 +1641,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           <select
             value={committee?.id || ''}
             onChange={(e) => onSelectCommittee(e.target.value)}
-            className={`appearance-none h-8 pl-7 pr-8 rounded-full text-[13px] font-semibold cursor-pointer border-0 outline-0 ${
+            className={`appearance-none h-8 pl-7 pr-8 rounded-full text-sm font-semibold cursor-pointer border-0 outline-0 ${
               isCollecting ? 'bg-ok-soft text-ok' : 'bg-white text-ink-2 ring-1 ring-inset ring-line'
             }`}
           >
@@ -1659,15 +1659,15 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           <ChevronDown className="pointer-events-none absolute right-2.5 w-3.5 h-3.5 opacity-70" aria-hidden="true" />
         </label>
         {isLocked && (
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-300 text-amber-900 text-[12px] font-semibold">
-            <Lock className="w-3 h-3 text-amber-600" />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-warn/10 border border-warn/30 text-warn text-xs font-semibold">
+            <Lock className="w-3 h-3 text-warn" />
             Sınav tamamlanmadan bu kurula soru eklenemez
           </span>
         )}
         <span className="ms-eyebrow">Soru ekle</span>
-        <h1 className="ms-page-title m-0 text-[24px] sm:text-[28px] text-ink">Hatırladığın soruyu yaz</h1>
+        <h1 className="ms-page-title m-0 text-2xl sm:text-3xl text-ink">Hatırladığın soruyu yaz</h1>
         </div>
-        <p className="m-0 text-[13px] text-ink-3">Parça parça da olur; gerisini kaynaklardan tamamlarız.</p>
+        <p className="m-0 text-sm text-ink-3">Parça parça da olur; gerisini kaynaklardan tamamlarız.</p>
       </div>
 
       {/* Composer */}
@@ -1687,13 +1687,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 role="radio"
                 aria-checked={on}
                 onClick={() => setMode(m.id)}
-                className={`h-9 rounded-lg text-[13.5px] sm:text-[14px] whitespace-nowrap cursor-pointer transition-colors inline-flex items-center justify-center gap-1.5 ${
+                className={`h-9 rounded-lg text-base sm:text-base whitespace-nowrap cursor-pointer transition-colors inline-flex items-center justify-center gap-1.5 ${
                   on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
                 }`}
               >
                 {m.label}
                 {m.id === 'option' && claimedAnswer && (
-                  <span className="h-5 min-w-5 px-1 rounded-full bg-ok text-white text-[11px] font-mono font-semibold inline-flex items-center justify-center" aria-label={`Cevap ${claimedAnswer}`}>
+                  <span className="h-5 min-w-5 px-1 rounded-full bg-ok text-white text-2xs font-mono font-semibold inline-flex items-center justify-center" aria-label={`Cevap ${claimedAnswer}`}>
                     {claimedAnswer}
                   </span>
                 )}
@@ -1730,9 +1730,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                   e.currentTarget.form?.requestSubmit();
                 }
               }}
-              className={`resize-y rounded-[10px] px-3.5 py-3 text-[15px] leading-[1.6] text-ink placeholder:text-ink-3 min-h-[132px] sm:min-h-[150px] ${field}`}
+              className={`resize-y rounded-[10px] px-3.5 py-3 text-md leading-[1.6] text-ink placeholder:text-ink-3 min-h-[132px] sm:min-h-[150px] ${field}`}
             />
-            <div className="flex items-center justify-between gap-1.5 text-[12px] text-ink-3 -mt-1 flex-wrap">
+            <div className="flex items-center justify-between gap-1.5 text-xs text-ink-3 -mt-1 flex-wrap">
               <div className="flex items-center gap-1.5">
                 <span className="font-mono">{text.length} karakter</span>
                 <span aria-hidden="true">·</span>
@@ -1740,7 +1740,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               </div>
               {/* Canlı arama mikro-animasyonu / yükleme göstergesi */}
               {isSearching && text.trim().length >= 6 && (
-                <div className="ms-fade-in flex items-center gap-1.5 text-accent text-[11.5px] font-medium">
+                <div className="ms-fade-in flex items-center gap-1.5 text-accent text-xs font-medium">
                   <Sparkles className="w-3.5 h-3.5 animate-spin" />
                   <span>Eşleşmeler taranıyor…</span>
                 </div>
@@ -1749,13 +1749,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
             {/* Seçili Soruya / Taslağa Bağlandı Rozeti */}
             {linkedQuestion && (
-              <div className="ms-pop-in flex items-center justify-between gap-2 px-3.5 py-2 rounded-xl bg-teal-50 border border-teal-200 text-teal-900 text-[13px]">
+              <div className="ms-pop-in flex items-center justify-between gap-2 px-3.5 py-2 rounded-xl bg-ok-soft border border-ok/30 text-ok text-sm">
                 <div className="flex items-center gap-2 min-w-0">
-                  <Link2 className="w-4 h-4 text-teal-600 shrink-0" />
-                  <span className="font-semibold text-teal-950 truncate">
+                  <Link2 className="w-4 h-4 text-ok shrink-0" />
+                  <span className="font-semibold text-ok truncate">
                     {linkedQuestion.questionNumber ? `Soru #${linkedQuestion.questionNumber} ile bağlandı` : 'Mevcut taslakla bağlandı'}
                   </span>
-                  <span className="text-teal-700 text-[12px] hidden sm:inline truncate">
+                  <span className="text-ok text-xs hidden sm:inline truncate">
                     (Yazdıkların bu sorunun katkılarına eklenecek)
                   </span>
                 </div>
@@ -1765,7 +1765,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     setLinkedQuestion(null);
                     setQuestionNumber('');
                   }}
-                  className="p-1 text-teal-700 hover:text-teal-950 hover:bg-teal-100 rounded-lg cursor-pointer transition-colors shrink-0"
+                  className="p-1 text-ok hover:text-ok hover:bg-ok-soft rounded-lg cursor-pointer transition-colors shrink-0"
                   title="Bağlantıyı kaldır"
                 >
                   <X className="w-3.5 h-3.5" />
@@ -1778,7 +1778,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         {realtimeMatches.length > 0 && mode !== 'option' && (
           <div className="flex flex-col gap-2.5">
             <div className="flex items-center justify-between gap-2 px-1">
-              <span className="flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-wider text-ink-3">
+              <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-ink-3">
                 <Sparkles className="w-3.5 h-3.5 text-accent animate-pulse" />
                 Benzer / Devamı Olan Taslaklar ({realtimeMatches.length})
               </span>
@@ -1786,7 +1786,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 <button
                   type="button"
                   onClick={selectedMatchIds.size === realtimeMatches.length ? clearSelection : selectAllMatches}
-                  className="text-[12px] font-semibold text-accent hover:underline cursor-pointer"
+                  className="text-xs font-semibold text-accent hover:underline cursor-pointer"
                 >
                   {selectedMatchIds.size === realtimeMatches.length ? 'Seçimi Bırak' : 'Tümünü Seç'}
                 </button>
@@ -1829,12 +1829,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                         </button>
 
                         {isTop && (
-                          <span className="h-5 px-2 rounded-full bg-accent text-white text-[11px] font-bold uppercase tracking-wider">
+                          <span className="h-5 px-2 rounded-full bg-accent text-white text-2xs font-bold uppercase tracking-wider">
                             En Yakın
                           </span>
                         )}
 
-                        <span className={`h-6 px-2.5 rounded-full text-[12px] font-semibold inline-flex items-center gap-1.5 border ${tier.pillBg}`}>
+                        <span className={`h-6 px-2.5 rounded-full text-xs font-semibold inline-flex items-center gap-1.5 border ${tier.pillBg}`}>
                           <span className={`w-1.5 h-1.5 rounded-full ${tier.barColor}`} />
                           %{m.compatibility.score} uyum · {tier.tierName}
                         </span>
@@ -1844,16 +1844,16 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                         )}
                       </div>
 
-                      <span className="text-[12px] font-mono font-bold text-ink-2">
+                      <span className="text-xs font-mono font-bold text-ink-2">
                         {q.questionNumber ? `Soru #${q.questionNumber}` : 'Numarasız Taslak'}
                       </span>
                     </div>
 
-                    <div className="text-[13.5px] leading-relaxed text-ink bg-white/95 rounded-xl p-3 border border-line-soft">
-                      <div className="text-[11px] font-semibold uppercase tracking-wider text-ink-3 mb-1 flex items-center justify-between">
+                    <div className="text-base leading-relaxed text-ink bg-white/95 rounded-xl p-3 border border-line-soft">
+                      <div className="text-2xs font-semibold uppercase tracking-wider text-ink-3 mb-1 flex items-center justify-between">
                         <span>Havuzdaki Taslak Metni:</span>
                         {q.discipline && (
-                          <span className="font-normal text-[11.5px] text-ink-3">{q.discipline}</span>
+                          <span className="font-normal text-xs text-ink-3">{q.discipline}</span>
                         )}
                       </div>
                       <p className="m-0 line-clamp-3">
@@ -1865,7 +1865,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       <button
                         type="button"
                         onClick={() => handleLinkToQuestion(q)}
-                        className="h-8 px-3 rounded-lg bg-white hover:bg-canvas text-ink text-[12.5px] font-semibold border border-line inline-flex items-center gap-1.5 cursor-pointer shadow-2xs transition-colors"
+                        className="h-8 px-3 rounded-lg bg-white hover:bg-canvas text-ink text-sm font-semibold border border-line inline-flex items-center gap-1.5 cursor-pointer shadow-2xs transition-colors"
                       >
                         <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
                         {q.questionNumber ? `Bu soruya bağla (S.${q.questionNumber})` : 'Bu taslağa bağla'}
@@ -1873,13 +1873,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       <button
                         type="button"
                         onClick={() => setOptimizingQuestion(q)}
-                        className="h-8 px-3 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors shadow-2xs"
+                        className="h-8 px-3 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors shadow-2xs"
                         title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür"
                       >
                         <Wand2 className="w-3.5 h-3.5" />
                         AI ile Dönüştür
                       </button>
-                      <span className="text-[12px] text-ink-3">
+                      <span className="text-xs text-ink-3">
                         veya çoklu seçim yapıp birleştirebilirsin.
                       </span>
                     </div>
@@ -1895,10 +1895,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             {selectedMatchIds.size > 0 && (
               <div className="ms-pop-in sticky bottom-3 z-20 flex items-center justify-between gap-3 p-3 sm:p-3.5 rounded-2xl bg-ink text-white shadow-xl border border-white/10 backdrop-blur-md">
                 <div className="flex items-center gap-2 min-w-0">
-                  <span className="w-6 h-6 rounded-full bg-accent text-white text-[12px] font-bold flex items-center justify-center shrink-0">
+                  <span className="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center shrink-0">
                     {selectedMatchIds.size}
                   </span>
-                  <span className="text-[13px] font-medium truncate">
+                  <span className="text-sm font-medium truncate">
                     {selectedMatchIds.size === 1
                       ? '1 soru seçildi'
                       : `${selectedMatchIds.size} soru seçildi`}
@@ -1909,7 +1909,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                   <button
                     type="button"
                     onClick={clearSelection}
-                    className="h-8 px-2.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white text-[12px] font-medium cursor-pointer transition-colors"
+                    className="h-8 px-2.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white text-xs font-medium cursor-pointer transition-colors"
                   >
                     İptal
                   </button>
@@ -1917,7 +1917,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     type="button"
                     disabled={isMergingSelected}
                     onClick={handleMergeAndGroupSelected}
-                    className="h-8 px-3.5 rounded-lg bg-accent hover:bg-accent-hover text-white text-[12.5px] font-bold inline-flex items-center gap-1.5 cursor-pointer shadow-md disabled:opacity-50 transition-colors"
+                    className="h-8 px-3.5 rounded-lg bg-accent hover:bg-accent-hover text-white text-sm font-bold inline-flex items-center gap-1.5 cursor-pointer shadow-md disabled:opacity-50 transition-colors"
                   >
                     <Layers className="w-3.5 h-3.5" />
                     {isMergingSelected
@@ -1934,7 +1934,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
         {similar.length > 0 && mode !== 'option' && (
           <div className="flex flex-col gap-1" aria-live="polite">
-            <span className="flex items-center gap-1.5 text-[11.5px] font-semibold uppercase tracking-[.06em] text-ink-3">
+            <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[.06em] text-ink-3">
               Benzer çıkmış sorular
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" aria-hidden="true" />
             </span>
@@ -1948,7 +1948,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                   className="ms-pop-in group rounded-[10px] border border-line bg-white open:bg-canvas hover:border-accent transition-colors"
                   style={{ animationDelay: `${i * 70}ms` }}
                 >
-                  <summary className="list-none cursor-pointer min-h-10 px-2.5 py-1.5 flex items-center gap-2 text-[13px]">
+                  <summary className="list-none cursor-pointer min-h-10 px-2.5 py-1.5 flex items-center gap-2 text-sm">
                     {rel !== null && (
                       <span className="shrink-0 hidden sm:block w-9 h-1 rounded-full bg-line overflow-hidden" title="Göreli benzerlik">
                         <span className="block h-full bg-accent" style={{ width: `${rel}%` }} />
@@ -1957,12 +1957,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     <span className="min-w-0 flex-1 truncate group-open:whitespace-normal text-ink-2" title={s.stem}>
                       {s.stem}
                     </span>
-                    <span className="shrink-0 text-[11px] font-semibold px-1.5 py-0.5 rounded-md bg-violet-50 text-violet-700">
+                    <span className="shrink-0 text-2xs font-semibold px-1.5 py-0.5 rounded-md bg-ai-soft text-ai">
                       {s.examYear ? `Çıkmış ${s.examYear}` : 'Çıkmış'}
                     </span>
                   </summary>
                   <div className="px-2.5 pb-2.5 flex flex-col gap-2 border-t border-line-soft pt-1.5">
-                    <div className="text-[12px] text-ink-3">
+                    <div className="text-xs text-ink-3">
                       {[s.discipline, s.title].filter(Boolean).join(' · ')}
                       {s.claimedAnswer ? ` · Cevap: ${s.claimedAnswer}` : ''}
                     </div>
@@ -1970,7 +1970,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       <button
                         type="button"
                         onClick={() => handleTransferEntireQuestion(s)}
-                        className="h-7 px-2.5 rounded-lg bg-accent text-white text-[12px] font-semibold inline-flex items-center gap-1 cursor-pointer hover:bg-accent-hover shadow-2xs transition-colors"
+                        className="h-7 px-2.5 rounded-lg bg-accent text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer hover:bg-accent-hover shadow-2xs transition-colors"
                         title="Sorunun kökünü, branşını ve şıklarını editöre aktar"
                       >
                         <FileText className="w-3.5 h-3.5" />
@@ -1979,7 +1979,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       <button
                         type="button"
                         onClick={() => handleCopyQuestionStem(s.stem)}
-                        className="h-7 px-2.5 rounded-lg bg-white text-ink text-[12px] font-medium border border-line inline-flex items-center gap-1 cursor-pointer hover:bg-canvas shadow-2xs transition-colors"
+                        className="h-7 px-2.5 rounded-lg bg-white text-ink text-xs font-medium border border-line inline-flex items-center gap-1 cursor-pointer hover:bg-canvas shadow-2xs transition-colors"
                         title="Yalnızca soru kökünü editöre yaz ve panoya kopyala"
                       >
                         <Copy className="w-3.5 h-3.5 text-accent" />
@@ -2002,7 +2002,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 setDiscipline(e.target.value);
                 setUserManualDiscipline(true);
               }}
-              className={`appearance-none w-full h-11 rounded-xl pl-3 pr-8 text-[14px] text-ink cursor-pointer truncate ${field}`}
+              className={`appearance-none w-full h-11 rounded-xl pl-3 pr-8 text-base text-ink cursor-pointer truncate ${field}`}
             >
               {disciplines.map((d) => (
                 <option key={d} value={d}>
@@ -2013,7 +2013,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-3" aria-hidden="true" />
           </label>
           <label className="flex items-center gap-1.5 h-11 w-[104px] px-3 rounded-xl bg-field border border-transparent focus-within:border-accent focus-within:bg-white">
-            <span className="text-[13px] text-ink-3">No</span>
+            <span className="text-sm text-ink-3">No</span>
             <input
               type="text"
               inputMode="numeric"
@@ -2024,13 +2024,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               }}
               placeholder="?"
               aria-label="Soru numarası (bilmiyorsan boş bırak)"
-              className="w-full min-w-0 bg-transparent border-0 outline-0 text-[15px] font-mono placeholder:text-slate-600"
+              className="w-full min-w-0 bg-transparent border-0 outline-0 text-md font-mono placeholder:text-ink-2"
             />
           </label>
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`h-12 sm:h-11 px-5 rounded-xl text-white text-[15px] font-semibold flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 w-full sm:w-auto transition-colors ${
+            className={`h-12 sm:h-11 px-5 rounded-xl text-white text-md font-semibold flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 w-full sm:w-auto transition-colors ${
               canSubmit ? 'bg-accent hover:bg-accent-hover shadow-md' : 'bg-accent/75'
             }`}
           >
@@ -2040,17 +2040,17 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         </div>
 
         {formError && (
-          <div role="alert" className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-bad-soft text-bad-text text-[14px]">
+          <div role="alert" className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-bad-soft text-bad-text text-base">
             <AlertCircle className="w-4 h-4 shrink-0 text-bad" />
             <span>{formError}</span>
           </div>
         )}
         {successMessage && (
-          <div role="status" className="ms-pop-in flex items-center gap-3 px-3 py-2 rounded-xl bg-ok-tint border border-emerald-200">
+          <div role="status" className="ms-pop-in flex items-center gap-3 px-3 py-2 rounded-xl bg-ok-tint border border-ok/30">
             <SuccessCheck size={48} className="shrink-0 -my-1" />
             <span className="flex flex-col">
-              <span className="text-[14.5px] font-semibold text-ok">Teşekkürler!</span>
-              <span className="text-[13.5px] text-ink-2">{successMessage}</span>
+              <span className="text-md font-semibold text-ok">Teşekkürler!</span>
+              <span className="text-base text-ink-2">{successMessage}</span>
             </span>
           </div>
         )}
@@ -2061,9 +2061,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       {/* Sağ sütun: bulunan kaynaklar, havuz durumu, kısayol */}
       <aside className="flex flex-col gap-3 min-w-0 lg:pt-[52px]">
         <section className="bg-white border border-line rounded-xl px-4 py-3" aria-live="polite">
-          <h2 className="m-0 mb-1 text-[11px] font-semibold uppercase tracking-[.06em] text-ink-3">Bulunan kaynaklar</h2>
+          <h2 className="m-0 mb-1 text-2xs font-semibold uppercase tracking-[.06em] text-ink-3">Bulunan kaynaklar</h2>
           {sources.length === 0 ? (
-            <p className="m-0 py-2 text-[13px] text-ink-3">Yazmaya başlayınca soruna en yakın slayt, özet ve çıkmış sorular burada görünür.</p>
+            <p className="m-0 py-2 text-sm text-ink-3">Yazmaya başlayınca soruna en yakın slayt, özet ve çıkmış sorular burada görünür.</p>
           ) : (
             <ul className="list-none m-0 p-0">
               {sources.map((src, i) => {
@@ -2071,13 +2071,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 return (
                   <li
                     key={`${src.documentId}-${src.pageNumber ?? i}`}
-                    className="ms-pop-in flex items-center gap-2 py-2 border-t first:border-t-0 border-line text-[13px]"
+                    className="ms-pop-in flex items-center gap-2 py-2 border-t first:border-t-0 border-line text-sm"
                     style={{ animationDelay: `${i * 60}ms` }}
                     title={src.snippet}
                   >
-                    <span className={`shrink-0 text-[11px] font-semibold px-1.5 py-0.5 rounded-md ${kind.cls}`}>{kind.label}</span>
+                    <span className={`shrink-0 text-2xs font-semibold px-1.5 py-0.5 rounded-md ${kind.cls}`}>{kind.label}</span>
                     <span className="min-w-0 flex-1 truncate text-ink">{src.title}</span>
-                    {src.pageNumber ? <span className="shrink-0 text-[12px] text-ink-3 font-mono">s.{src.pageNumber}</span> : null}
+                    {src.pageNumber ? <span className="shrink-0 text-xs text-ink-3 font-mono">s.{src.pageNumber}</span> : null}
                   </li>
                 );
               })}
@@ -2090,7 +2090,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         className="group bg-white border border-line rounded-xl px-4 py-3 flex items-center gap-3 hover:border-line-2"
       >
         <span className="flex-1 min-w-0 flex flex-col gap-1.5">
-          <span className="flex items-baseline gap-2 text-[14px] min-w-0">
+          <span className="flex items-baseline gap-2 text-base min-w-0">
             <span className="font-semibold text-ink shrink-0">{shortName} havuzu</span>
             <span className="font-mono text-ink-2 shrink-0">
               {completed}/{target}
@@ -2099,15 +2099,15 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           </span>
           <span role="img" aria-label={`${completed} doğrulandı, ${drafts} taslak`} className="flex h-1.5 rounded-full overflow-hidden gap-[2px] bg-line-soft">
             {completed > 0 && <span className="bg-ok-bright" style={{ width: `${pctNum(completed)}%` }} />}
-            {drafts > 0 && <span className="bg-amber-600" style={{ width: `${draftPct}%` }} />}
+            {drafts > 0 && <span className="bg-warn" style={{ width: `${draftPct}%` }} />}
           </span>
         </span>
-        <span className="text-[13px] font-semibold text-accent inline-flex items-center gap-0.5 shrink-0">
+        <span className="text-sm font-semibold text-accent inline-flex items-center gap-0.5 shrink-0">
           Havuz
           <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
         </span>
       </a>
-        <p className="hidden lg:block m-0 px-1 text-[12px] text-ink-3">
+        <p className="hidden lg:block m-0 px-1 text-xs text-ink-3">
           Kısayol: <kbd className="font-mono border border-line rounded px-1">Ctrl</kbd> + <kbd className="font-mono border border-line rounded px-1">Enter</kbd> gönderir.
         </p>
       </aside>

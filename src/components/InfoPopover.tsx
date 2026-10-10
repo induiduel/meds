@@ -61,12 +61,12 @@ export const InfoPopover: React.FC<InfoPopoverProps> = ({
         onClick={() => setIsOpen(!isOpen)}
         aria-label={title}
         title={title}
-        className={`inline-flex items-center gap-1.5 p-1 rounded-full text-slate-400 hover:text-teal-700 hover:bg-teal-50 transition-colors cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-teal-500/20 active:scale-95 ${buttonClassName}`}
+        className={`inline-flex items-center gap-1.5 p-1 rounded-full text-ink-3 hover:text-ok hover:bg-ok-soft transition-colors cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-ok/20 active:scale-95 ${buttonClassName}`}
       >
         <Info className={iconClassName} />
         {buttonLabel && <span className="text-xs font-semibold">{buttonLabel}</span>}
         {badgeText && (
-          <span className="text-[11px] font-bold bg-teal-100 text-teal-800 px-1.5 py-0.2 rounded-full">
+          <span className="text-2xs font-bold bg-ok-soft text-ok px-1.5 py-0.2 rounded-full">
             {badgeText}
           </span>
         )}
@@ -78,25 +78,25 @@ export const InfoPopover: React.FC<InfoPopoverProps> = ({
           ref={popoverRef}
           role="dialog"
           aria-modal="true"
-          className={`absolute top-full mt-2 z-50 w-72 sm:w-84 max-w-[90vw] p-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-teal-100 text-slate-700 text-xs animate-fadeIn ${alignmentClasses[align]}`}
+          className={`absolute top-full mt-2 z-50 w-72 sm:w-84 max-w-[90vw] p-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-ok/30 text-ink-2 text-xs animate-fadeIn ${alignmentClasses[align]}`}
         >
           {/* Header */}
-          <div className="flex items-center justify-between gap-2 pb-2 mb-2 border-b border-slate-100">
+          <div className="flex items-center justify-between gap-2 pb-2 mb-2 border-b border-line">
             <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-teal-500"></span>
-              <h4 className="font-bold text-slate-900 text-xs tracking-tight">{title}</h4>
+              <span className="w-2 h-2 rounded-full bg-ok"></span>
+              <h4 className="font-bold text-ink text-xs tracking-tight">{title}</h4>
             </div>
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              className="text-slate-400 hover:text-slate-700 p-0.5 rounded-md hover:bg-slate-100 cursor-pointer"
+              className="text-ink-3 hover:text-ink-2 p-0.5 rounded-md hover:bg-field cursor-pointer"
             >
               <X className="w-3.5 h-3.5" />
             </button>
           </div>
 
           {/* Body Content */}
-          <div className="text-slate-600 space-y-2 leading-relaxed text-[11px] sm:text-xs">
+          <div className="text-ink-2 space-y-2 leading-relaxed text-2xs sm:text-xs">
             {children}
           </div>
         </div>

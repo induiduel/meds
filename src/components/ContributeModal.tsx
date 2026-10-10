@@ -361,8 +361,8 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
   };
 
   const fieldCls =
-    'w-full rounded-xl bg-field border border-transparent px-3.5 text-[15px] text-ink outline-0 focus:border-accent focus:bg-white placeholder:text-slate-600';
-  const labelCls = 'text-[12px] font-semibold uppercase tracking-[0.07em] text-ink-3';
+    'w-full rounded-xl bg-field border border-transparent px-3.5 text-md text-ink outline-0 focus:border-accent focus:bg-white placeholder:text-ink-2';
+  const labelCls = 'text-xs font-semibold uppercase tracking-[0.07em] text-ink-3';
 
   return (
     <div
@@ -382,10 +382,10 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
             <Stethoscope className="w-5 h-5" />
           </span>
           <div className="flex-1 min-w-0 mt-1 sm:mt-0">
-            <h2 id="contribute-title" className="m-0 font-display font-bold text-[19px] tracking-[-0.02em] leading-tight">
+            <h2 id="contribute-title" className="m-0 font-display font-bold text-xl tracking-[-0.02em] leading-tight">
               Soru ekle
             </h2>
-            <p className="m-0 text-[13px] text-ink-3 truncate">Hatırladığın her küçük detay soruyu kurmaya yardım eder.</p>
+            <p className="m-0 text-sm text-ink-3 truncate">Hatırladığın her küçük detay soruyu kurmaya yardım eder.</p>
           </div>
           <button
             type="button"
@@ -401,8 +401,8 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
         {saveSuccess ? (
           <div role="status" className="row-span-2 flex flex-col items-center justify-center gap-2 px-6 py-14 text-center">
             <SuccessCheck size={96} />
-            <p className="m-0 font-display text-[22px] font-bold tracking-[-0.02em]">Havuza eklendi!</p>
-            <p className="m-0 text-[15px] text-ink-2 max-w-[340px]">Teşekkürler. Benzer parçalar varsa aynı soruda birleştiriyoruz.</p>
+            <p className="m-0 font-display text-2xl font-bold tracking-[-0.02em]">Havuza eklendi!</p>
+            <p className="m-0 text-md text-ink-2 max-w-[340px]">Teşekkürler. Benzer parçalar varsa aynı soruda birleştiriyoruz.</p>
           </div>
         ) : (
           <>
@@ -487,7 +487,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                     />
                   </label>
                 </div>
-                <span className="text-[12.5px] text-ink-3">{isUnknownNumber ? 'Numarayı bilmiyorsan boş bırak; benzer parçalarla doğru yere yerleştiririz.' : `${selectedComm?.targetCount || 150} sorudan biri.`}</span>
+                <span className="text-sm text-ink-3">{isUnknownNumber ? 'Numarayı bilmiyorsan boş bırak; benzer parçalarla doğru yere yerleştiririz.' : `${selectedComm?.targetCount || 150} sorudan biri.`}</span>
               </section>
 
               {/* Stem */}
@@ -500,7 +500,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                     type="button"
                     onClick={handleQuickAiAssist}
                     disabled={aiAssisting || !fragmentText.trim()}
-                    className="h-8 px-2.5 rounded-lg text-[13px] font-semibold text-accent bg-accent-soft inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                    className="h-8 px-2.5 rounded-lg text-sm font-semibold text-accent bg-accent-soft inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
                   >
                     <Sparkles className={`w-3.5 h-3.5 ${aiAssisting ? 'animate-pulse' : ''}`} />
                     {aiAssisting ? 'AI düşünüyor…' : 'AI ile tamamla'}
@@ -523,7 +523,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   aria-label="Konu"
-                  className={`${fieldCls} h-11 text-[14px]`}
+                  className={`${fieldCls} h-11 text-base`}
                 />
 
                 {/* Akıllı Kurul / Ders ve Konu Asistanı Bildirimi */}
@@ -576,12 +576,12 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                           <ContextBadge hashtag={realtimeMatch.contextHashtag} colorIndex={0} />
                         )}
                       </div>
-                      <span className="text-[12px] font-mono font-semibold text-ink-2">
+                      <span className="text-xs font-mono font-semibold text-ink-2">
                         {realtimeMatch.matchedQuestion?.questionNumber ? `S.${realtimeMatch.matchedQuestion.questionNumber}` : 'Numarasız'}
                       </span>
                     </div>
 
-                    <div className="text-[13.5px] leading-relaxed text-ink">
+                    <div className="text-base leading-relaxed text-ink">
                       <Colored text={matchedStem} colors={sharedColors} />
                     </div>
 
@@ -615,16 +615,16 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                         className="ms-pop-in group rounded-[10px] border border-line bg-white open:bg-canvas transition-colors"
                         style={{ animationDelay: `${i * 60}ms` }}
                       >
-                        <summary className="list-none cursor-pointer min-h-10 px-2.5 py-1.5 flex items-center gap-2 text-[13px]">
-                          <span className="shrink-0 text-[11px] font-mono font-semibold px-1.5 py-0.5 rounded-md bg-field text-ink-2">
+                        <summary className="list-none cursor-pointer min-h-10 px-2.5 py-1.5 flex items-center gap-2 text-sm">
+                          <span className="shrink-0 text-2xs font-mono font-semibold px-1.5 py-0.5 rounded-md bg-field text-ink-2">
                             {pq.examYear || 'Çıkmış'}
                           </span>
                           <span className="min-w-0 flex-1 truncate text-ink-2 group-open:whitespace-normal" title={pq.stem}>
                             {pq.stem}
                           </span>
-                          {pq.claimedAnswer && <span className="shrink-0 font-mono text-[12px] text-ok">{pq.claimedAnswer}</span>}
+                          {pq.claimedAnswer && <span className="shrink-0 font-mono text-xs text-ok">{pq.claimedAnswer}</span>}
                         </summary>
-                        {pq.discipline && <div className="px-2.5 pb-2 text-[12px] text-ink-3">{pq.discipline}</div>}
+                        {pq.discipline && <div className="px-2.5 pb-2 text-xs text-ink-3">{pq.discipline}</div>}
                       </details>
                     ))}
                   </div>
@@ -633,13 +633,13 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
 
                 {aiSuggestion?.suggestedStem && (
                   <div className="ct-ai">
-                    <span className="text-[12.5px] font-semibold text-accent inline-flex items-center gap-1.5">
+                    <span className="text-sm font-semibold text-accent inline-flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5" />
                       AI'nın önerdiği soru kalıbı
                     </span>
-                    <p className="m-0 text-[14px] text-ink leading-[1.55]">{aiSuggestion.suggestedStem}</p>
+                    <p className="m-0 text-base text-ink leading-[1.55]">{aiSuggestion.suggestedStem}</p>
                     {aiSuggestion.sources && aiSuggestion.sources.length > 0 && (
-                      <span className="text-[12px] text-ink-3">
+                      <span className="text-xs text-ink-3">
                         Kaynak: {aiSuggestion.sources.map((src) => src.title + (src.pageNumber ? ` (s.${src.pageNumber})` : '')).join(' · ')}
                       </span>
                     )}
@@ -678,7 +678,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
               </section>
 
               {formError && (
-                <div role="alert" className="flex items-start gap-2 px-3 py-2.5 rounded-xl bg-bad-soft text-bad-text text-[14px]">
+                <div role="alert" className="flex items-start gap-2 px-3 py-2.5 rounded-xl bg-bad-soft text-bad-text text-base">
                   <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-bad" />
                   <span>{formError}</span>
                 </div>
@@ -690,7 +690,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                 type="button"
                 onClick={requestClose}
                 disabled={isSubmitting}
-                className="h-12 sm:h-11 px-4 rounded-xl text-[15px] font-semibold text-ink-2 hover:bg-canvas cursor-pointer disabled:opacity-50"
+                className="h-12 sm:h-11 px-4 rounded-xl text-md font-semibold text-ink-2 hover:bg-canvas cursor-pointer disabled:opacity-50"
               >
                 Vazgeç
               </button>
@@ -698,7 +698,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                 type="submit"
                 form="contribute-form"
                 disabled={isSubmitting}
-                className="flex-1 sm:flex-none sm:ml-auto h-12 sm:h-11 px-6 rounded-xl bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 shadow-md"
+                className="flex-1 sm:flex-none sm:ml-auto h-12 sm:h-11 px-6 rounded-xl bg-accent hover:bg-accent-hover text-white text-md font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 shadow-md"
               >
                 Havuza ekle
                 <ArrowRight className="w-4 h-4" />

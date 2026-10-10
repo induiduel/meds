@@ -27,22 +27,22 @@ export const RevisionHistoryModal: React.FC<RevisionHistoryModalProps> = ({
   const revisions = question.revisions || [];
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fadeIn">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/60 backdrop-blur-xs animate-fadeIn">
       <div 
-        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl max-h-[90dvh] flex flex-col overflow-hidden relative"
+        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-line w-full max-w-2xl max-h-[90dvh] flex flex-col overflow-hidden relative"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="bg-ink-surface p-5 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-xl bg-white/10 text-teal-300">
+            <div className="p-2 rounded-xl bg-white/10 text-ok">
               <History className="w-5 h-5" />
             </div>
             <div>
               <h3 className="font-bold text-base leading-tight">
                 Versiyon & Değişiklik Geçmişi
               </h3>
-              <p className="text-xs text-teal-200/80">
+              <p className="text-xs text-ok-soft/80">
                 {question.isUnassignedNumber ? 'Numarasız Soru' : `Soru #${question.questionNumber}`} • {question.discipline}
               </p>
             </div>
@@ -57,15 +57,15 @@ export const RevisionHistoryModal: React.FC<RevisionHistoryModalProps> = ({
         </div>
 
         {/* Info */}
-        <div className="bg-slate-50 border-b border-slate-200 px-5 py-2.5 text-xs text-slate-600 flex items-center justify-between shrink-0">
+        <div className="bg-field border-b border-line px-5 py-2.5 text-xs text-ink-2 flex items-center justify-between shrink-0">
           <span>Toplam <strong>{revisions.length}</strong> versiyon kaydedildi. Eski versiyonlar arşivde tutulur.</span>
-          <span className="text-[11px] text-teal-700 font-semibold">Ters Kronolojik Sıralama</span>
+          <span className="text-2xs text-ok font-semibold">Ters Kronolojik Sıralama</span>
         </div>
 
         {/* Revision List */}
         <div className="p-6 overflow-y-auto space-y-5 flex-1">
           {revisions.length === 0 ? (
-            <div className="text-center py-10 text-slate-400">
+            <div className="text-center py-10 text-ink-3">
               <History className="w-8 h-8 mx-auto mb-2 opacity-40" />
               <p className="text-xs">Bu soru için henüz ek bir düzenleme versiyonu bulunmuyor.</p>
             </div>
@@ -79,35 +79,35 @@ export const RevisionHistoryModal: React.FC<RevisionHistoryModalProps> = ({
                   key={rev.id || index}
                   className={`rounded-xl border p-4.5 transition-all ${
                     isLatest
-                      ? 'bg-teal-50/40 border-teal-300 shadow-2xs'
-                      : 'bg-white border-slate-200'
+                      ? 'bg-ok-soft/40 border-ok/30 shadow-2xs'
+                      : 'bg-white border-line'
                   }`}
                 >
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-line">
                     <div className="flex items-center gap-2">
-                      <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${
+                      <span className={`text-2xs font-bold px-2 py-0.5 rounded-full ${
                         isLatest
-                          ? 'bg-teal-600 text-white'
-                          : 'bg-slate-100 text-slate-700'
+                          ? 'bg-ok text-white'
+                          : 'bg-field text-ink-2'
                       }`}>
                         Versiyon {revNum} {isLatest && '(Güncel)'}
                       </span>
-                      <span className="text-xs font-bold text-slate-900">
+                      <span className="text-xs font-bold text-ink">
                         {rev.changeSummary || 'Düzenleme'}
                       </span>
                     </div>
 
-                    <div className="flex items-center gap-3 text-[11px] text-slate-500">
+                    <div className="flex items-center gap-3 text-2xs text-ink-3">
                       <span className="flex items-center gap-1">
-                        <User className="w-3 h-3 text-slate-400" />
+                        <User className="w-3 h-3 text-ink-3" />
                         <strong>{rev.editorName || 'Anonim'}</strong>
                         {rev.editorStudentNumber && (
-                          <span className="font-mono text-slate-400">({rev.editorStudentNumber})</span>
+                          <span className="font-mono text-ink-3">({rev.editorStudentNumber})</span>
                         )}
                       </span>
                       <span>•</span>
                       <span className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3 text-slate-400" />
+                        <Calendar className="w-3 h-3 text-ink-3" />
                         {new Date(rev.editedAt).toLocaleString('tr-TR', {
                           day: '2-digit',
                           month: '2-digit',
@@ -122,10 +122,10 @@ export const RevisionHistoryModal: React.FC<RevisionHistoryModalProps> = ({
                   {/* Soru Kökü */}
                   {rev.stem && (
                     <div className="mt-3">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                      <span className="text-2xs font-bold uppercase tracking-wider text-ink-3 block mb-1">
                         Bu Versiyondaki Soru Metni:
                       </span>
-                      <p className="text-xs text-slate-800 bg-slate-50 p-2.5 rounded-lg border border-slate-100 leading-relaxed font-sans whitespace-pre-wrap">
+                      <p className="text-xs text-ink bg-field p-2.5 rounded-lg border border-line leading-relaxed font-sans whitespace-pre-wrap">
                         {rev.stem}
                       </p>
                     </div>
@@ -134,23 +134,23 @@ export const RevisionHistoryModal: React.FC<RevisionHistoryModalProps> = ({
                   {/* Options if recorded */}
                   {rev.options && rev.options.length > 0 && (
                     <div className="mt-2.5 space-y-1">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
+                      <span className="text-2xs font-bold uppercase tracking-wider text-ink-3 block">
                         Şıklar:
                       </span>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mt-1">
                         {rev.options.map((o) => (
                           <div
                             key={o.key}
-                            className={`text-[11px] px-2.5 py-1 rounded-md flex items-center gap-1.5 border ${
+                            className={`text-2xs px-2.5 py-1 rounded-md flex items-center gap-1.5 border ${
                               rev.claimedAnswer === o.key
-                                ? 'bg-emerald-50 border-emerald-300 text-emerald-950 font-semibold'
-                                : 'bg-slate-50 border-slate-200 text-slate-700'
+                                ? 'bg-ok-soft border-ok/30 text-ok font-semibold'
+                                : 'bg-field border-line text-ink-2'
                             }`}
                           >
                             <span className="font-bold">{o.key})</span>
                             <span className="truncate">{o.text}</span>
                             {rev.claimedAnswer === o.key && (
-                              <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0 ml-auto" />
+                              <CheckCircle2 className="w-3 h-3 text-ok shrink-0 ml-auto" />
                             )}
                           </div>
                         ))}
@@ -164,11 +164,11 @@ export const RevisionHistoryModal: React.FC<RevisionHistoryModalProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="p-4 bg-slate-50 border-t border-slate-200 flex justify-end shrink-0">
+        <div className="p-4 bg-field border-t border-line flex justify-end shrink-0">
           <button
             type="button"
             onClick={onClose}
-            className="px-5 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg text-xs font-bold transition-colors cursor-pointer"
+            className="px-5 py-2 bg-ink hover:bg-ink text-white rounded-lg text-xs font-bold transition-colors cursor-pointer"
           >
             Kapat
           </button>

@@ -101,7 +101,11 @@ export const StudyHub: React.FC<StudyHubProps> = ({
     <div className="flex flex-col gap-3 sm:gap-4">
       <PageHeader
         title="Çalış"
-        description={loading && bank.length === 0 ? 'Soru bankası yükleniyor…' : `${bank.length.toLocaleString('tr-TR')} soru · %${stats.accuracy} doğruluk`}
+        description={loading && bank.length === 0 ? 'Soru bankası yükleniyor…' : undefined}
+        stats={loading && bank.length === 0 ? undefined : [
+          { label: 'soru', value: bank.length.toLocaleString('tr-TR') },
+          { label: 'doğruluk', value: `%${stats.accuracy}`, tone: stats.accuracy >= 70 ? 'ok' : 'default' },
+        ]}
       />
 
       {/* Tek satır: sekmeler solda, hızlı test sağda */}
@@ -123,7 +127,7 @@ export const StudyHub: React.FC<StudyHubProps> = ({
               >
                 <Icon className="w-4 h-4 shrink-0" strokeWidth={on ? 2.3 : 2} />
                 <span className="hidden min-[420px]:inline">{t.label}</span>
-                {t.count ? <span className="text-[12px] text-ink-3">{t.count}</span> : null}
+                {t.count ? <span className="text-xs text-ink-3">{t.count}</span> : null}
               </button>
             );
           })}
@@ -133,7 +137,7 @@ export const StudyHub: React.FC<StudyHubProps> = ({
           type="button"
           onClick={startQuick}
           disabled={bank.length === 0}
-          className="h-10 px-4 rounded-full bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shrink-0"
+          className="h-10 px-4 rounded-full bg-accent hover:bg-accent-hover text-white text-base font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shrink-0"
           title="Karışık 20 soruluk hızlı test"
         >
           <Zap className="w-4 h-4" /> <span className="hidden sm:inline">Hızlı test</span>

@@ -28,7 +28,7 @@ export function ChangeInfo({ title, before, after, note, align = 'right' }: { ti
           e.stopPropagation();
           setOpen((v) => !v);
         }}
-        className="w-7 h-7 inline-flex items-center justify-center rounded-full text-violet-600 hover:bg-violet-100 cursor-pointer"
+        className="w-7 h-7 inline-flex items-center justify-center rounded-full text-ai hover:bg-ai-soft cursor-pointer"
         aria-label={`${title}: ayrıntıyı göster`}
         aria-expanded={open}
       >
@@ -37,18 +37,18 @@ export function ChangeInfo({ title, before, after, note, align = 'right' }: { ti
       {open && (
         <span
           role="dialog"
-          className={`absolute z-30 top-7 ${align === 'right' ? 'right-0' : 'left-0'} w-[min(22rem,80vw)] p-3 rounded-lg bg-white border border-line shadow-lg text-[12.5px] font-normal normal-case tracking-normal text-ink-2 flex flex-col gap-1.5 text-left leading-snug`}
+          className={`absolute z-30 top-7 ${align === 'right' ? 'right-0' : 'left-0'} w-[min(22rem,80vw)] p-3 rounded-lg bg-white border border-line shadow-lg text-sm font-normal normal-case tracking-normal text-ink-2 flex flex-col gap-1.5 text-left leading-snug`}
         >
           <b className="text-ink">{title}</b>
           {before !== undefined && (
             <span>
               <span className="text-ink-3">Önce:</span>{' '}
-              {before ? <del className="bg-rose-50 text-rose-800 decoration-rose-400">{before}</del> : <i>(yoktu)</i>}
+              {before ? <del className="bg-bad-soft text-bad-text decoration-bad-text">{before}</del> : <i>(yoktu)</i>}
             </span>
           )}
           {after !== undefined && (
             <span>
-              <span className="text-ink-3">Sonra:</span> <ins className="no-underline bg-emerald-50 text-emerald-900">{after}</ins>
+              <span className="text-ink-3">Sonra:</span> <ins className="no-underline bg-ok-soft text-ok">{after}</ins>
             </span>
           )}
           {note && <span className="text-ink-3">{note}</span>}

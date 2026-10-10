@@ -3363,7 +3363,7 @@
       "questionNumber": 25,
       "discipline": "Tıbbi Patoloji",
       "topic": "Yüksek kırık riski taşıyan ve osteoporozu ola...",
-      "status": "completed",
+      "status": "gathering",
       "claimedAnswer": "A",
       "upvotes": 0,
       "likedBy": [],
@@ -3373,9 +3373,19 @@
         "Tıbbi Patoloji"
       ],
       "createdAt": "2026-10-08T17:32:27.684736+00:00",
-      "updatedAt": "2026-10-09T21:51:09.507Z",
-      "contributedByName": "Yönetici (2023-2024 Arşivi)",
-      "fragments": [],
+      "updatedAt": "2026-10-10T18:36:08.362Z",
+      "contributedByName": "Dr House",
+      "fragments": [
+        {
+          "id": "f-1791657368129-gfju",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "İpucu: Jdjwjfhevd",
+          "type": "stem",
+          "timestamp": "2026-10-10T18:36:08.129Z",
+          "upvotes": 1
+        }
+      ],
       "options": [],
       "reconstruction": {
         "stem": "Yüksek kırık riski taşıyan ve osteoporozu olan postmenopozal\nkadınların tedavisinde kullanılan insan IgG2 monoklonal antikoru olan\nmadde aşağıdakilerden hangisidir?",
@@ -3412,7 +3422,24 @@
         "confidenceScore": 85,
         "notesAndDiscrepancies": "Geçmiş yıl çıkmış soru dosyasından AI tarafından ayrıştırıldı. Öğrenciler tarafından düzenlenebilir."
       },
-      "isUnassignedNumber": false
+      "isUnassignedNumber": false,
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "revisions": [
+        {
+          "id": "rev-1791657368129",
+          "version": 1,
+          "editedAt": "2026-10-10T18:36:08.129Z",
+          "editorName": "Dr House",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "changeSummary": "Yeni parça ve şık katkısı (Dr House)",
+          "stem": "İpucu: Jdjwjfhevd",
+          "discipline": "Tıbbi Patoloji",
+          "topic": "Yüksek kırık riski taşıyan ve osteoporozu ola...",
+          "claimedAnswer": "A",
+          "options": []
+        }
+      ],
+      "examYear": "2026-2027"
     },
     {
       "id": "past-donem3-kurul1-26-3082",
@@ -9578,6 +9605,610 @@
       "isPastExam": true,
       "supportRatio": 1,
       "updatedAt": "2026-10-09T18:08:19.473Z"
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1791657348899",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "isUnassignedNumber": true,
+      "discipline": "Tıbbi Genetik",
+      "topic": "Tıbbi Genetik Hatırlanan Soru",
+      "status": "gathering",
+      "fragments": [
+        {
+          "id": "f-1791657348896-esz9",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "Down Sendromu",
+          "type": "stem",
+          "timestamp": "2026-10-10T18:35:48.896Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657348899-A",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "A) Jsje",
+          "type": "option",
+          "timestamp": "2026-10-10T18:35:48.899Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657348899-B",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "B) Kdkejr",
+          "type": "option",
+          "timestamp": "2026-10-10T18:35:48.899Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657348899-C",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "C) Kerkjdjr",
+          "type": "option",
+          "timestamp": "2026-10-10T18:35:48.899Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657348899-D",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "D) Kdjedj",
+          "type": "option",
+          "timestamp": "2026-10-10T18:35:48.899Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657348899-E",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "E) Kdkejdje",
+          "type": "option",
+          "timestamp": "2026-10-10T18:35:48.899Z",
+          "upvotes": 1
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Jsje",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "B",
+          "text": "Kdkejr",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "C",
+          "text": "Kerkjdjr",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "D",
+          "text": "Kdjedj",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "E",
+          "text": "Kdkejdje",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        }
+      ],
+      "claimedAnswer": "B",
+      "tags": [
+        "Tıbbi Genetik",
+        "numarasız-hatırlanan",
+        "taslak-eslesme-adayi"
+      ],
+      "placementNotes": "Olası Taslak Eşleşmesi: Soru #Belirsiz ile %56 benzerlik.",
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "contributedByName": "Dr House",
+      "revisions": [
+        {
+          "id": "rev-1791657348899",
+          "version": 1,
+          "editedAt": "2026-10-10T18:35:48.899Z",
+          "editorName": "Dr House",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)",
+          "stem": "Down Sendromu",
+          "discipline": "Tıbbi Genetik",
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "claimedAnswer": "B",
+          "options": [
+            {
+              "key": "A",
+              "text": "Jsje",
+              "upvotes": 1
+            },
+            {
+              "key": "B",
+              "text": "Kdkejr",
+              "upvotes": 1
+            },
+            {
+              "key": "C",
+              "text": "Kerkjdjr",
+              "upvotes": 1
+            },
+            {
+              "key": "D",
+              "text": "Kdjedj",
+              "upvotes": 1
+            },
+            {
+              "key": "E",
+              "text": "Kdkejdje",
+              "upvotes": 1
+            }
+          ]
+        }
+      ],
+      "createdAt": "2026-10-10T18:35:48.899Z",
+      "updatedAt": "2026-10-10T18:35:49.171Z",
+      "examYear": "2026-2027"
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1791657355971",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "isUnassignedNumber": true,
+      "discipline": "Tıbbi Genetik",
+      "topic": "Tıbbi Genetik Hatırlanan Soru",
+      "status": "empty",
+      "fragments": [
+        {
+          "id": "f-opt-1791657355971-A",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "A) Irue",
+          "type": "option",
+          "timestamp": "2026-10-10T18:35:55.971Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657355971-B",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "B) Iruj",
+          "type": "option",
+          "timestamp": "2026-10-10T18:35:55.971Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657355971-C",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "C) Jjj",
+          "type": "option",
+          "timestamp": "2026-10-10T18:35:55.971Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657355971-D",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "D) Nnn",
+          "type": "option",
+          "timestamp": "2026-10-10T18:35:55.971Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657355971-E",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "E) Nnn",
+          "type": "option",
+          "timestamp": "2026-10-10T18:35:55.971Z",
+          "upvotes": 1
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Irue",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "B",
+          "text": "Iruj",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "C",
+          "text": "Jjj",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "D",
+          "text": "Nnn",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "E",
+          "text": "Nnn",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        }
+      ],
+      "tags": [
+        "Tıbbi Genetik",
+        "numarasız-hatırlanan"
+      ],
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "contributedByName": "Dr House",
+      "revisions": [
+        {
+          "id": "rev-1791657355971",
+          "version": 1,
+          "editedAt": "2026-10-10T18:35:55.971Z",
+          "editorName": "Dr House",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)",
+          "stem": "",
+          "discipline": "Tıbbi Genetik",
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "options": [
+            {
+              "key": "A",
+              "text": "Irue",
+              "upvotes": 1
+            },
+            {
+              "key": "B",
+              "text": "Iruj",
+              "upvotes": 1
+            },
+            {
+              "key": "C",
+              "text": "Jjj",
+              "upvotes": 1
+            },
+            {
+              "key": "D",
+              "text": "Nnn",
+              "upvotes": 1
+            },
+            {
+              "key": "E",
+              "text": "Nnn",
+              "upvotes": 1
+            }
+          ]
+        }
+      ],
+      "createdAt": "2026-10-10T18:35:55.971Z",
+      "updatedAt": "2026-10-10T18:35:56.239Z",
+      "examYear": "2026-2027"
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1791657377613",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "isUnassignedNumber": true,
+      "discipline": "Tıbbi Genetik",
+      "topic": "Tıbbi Genetik Hatırlanan Soru",
+      "status": "empty",
+      "fragments": [
+        {
+          "id": "f-opt-1791657377613-A",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "A) Jdjdjd",
+          "type": "option",
+          "timestamp": "2026-10-10T18:36:17.613Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657377613-B",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "B) Dfrejjr",
+          "type": "option",
+          "timestamp": "2026-10-10T18:36:17.613Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657377613-C",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "C) Dıejfjdh",
+          "type": "option",
+          "timestamp": "2026-10-10T18:36:17.613Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657377613-D",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "D) Jekwkw7wue",
+          "type": "option",
+          "timestamp": "2026-10-10T18:36:17.613Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1791657377613-E",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "E) Udjehdhejeje",
+          "type": "option",
+          "timestamp": "2026-10-10T18:36:17.613Z",
+          "upvotes": 1
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Jdjdjd",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "B",
+          "text": "Dfrejjr",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "C",
+          "text": "Dıejfjdh",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "D",
+          "text": "Jekwkw7wue",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "E",
+          "text": "Udjehdhejeje",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        }
+      ],
+      "claimedAnswer": "A",
+      "tags": [
+        "Tıbbi Genetik",
+        "numarasız-hatırlanan"
+      ],
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "contributedByName": "Dr House",
+      "revisions": [
+        {
+          "id": "rev-1791657377613",
+          "version": 1,
+          "editedAt": "2026-10-10T18:36:17.613Z",
+          "editorName": "Dr House",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)",
+          "stem": "",
+          "discipline": "Tıbbi Genetik",
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "claimedAnswer": "A",
+          "options": [
+            {
+              "key": "A",
+              "text": "Jdjdjd",
+              "upvotes": 1
+            },
+            {
+              "key": "B",
+              "text": "Dfrejjr",
+              "upvotes": 1
+            },
+            {
+              "key": "C",
+              "text": "Dıejfjdh",
+              "upvotes": 1
+            },
+            {
+              "key": "D",
+              "text": "Jekwkw7wue",
+              "upvotes": 1
+            },
+            {
+              "key": "E",
+              "text": "Udjehdhejeje",
+              "upvotes": 1
+            }
+          ]
+        }
+      ],
+      "createdAt": "2026-10-10T18:36:17.613Z",
+      "updatedAt": "2026-10-10T18:36:17.953Z",
+      "examYear": "2026-2027"
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1791657402480",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "isUnassignedNumber": true,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Hatırlanan Soru",
+      "status": "gathering",
+      "fragments": [
+        {
+          "id": "f-1791657402435-ai9j",
+          "text": "Ufjrnfjenfıwnfnsbdv",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-10T18:36:42.435Z"
+        },
+        {
+          "id": "f-opt-1791657402480-A",
+          "text": "A) Dıkdjd",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-10T18:36:42.480Z"
+        },
+        {
+          "id": "f-opt-1791657402480-B",
+          "text": "B) Kdkejfje",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-10T18:36:42.480Z"
+        },
+        {
+          "id": "f-opt-1791657402480-C",
+          "text": "C) Kdkwjdjejd",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-10T18:36:42.480Z"
+        },
+        {
+          "id": "f-opt-1791657402480-D",
+          "text": "D) Jfjsjfjsjd",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-10T18:36:42.480Z"
+        },
+        {
+          "id": "f-opt-1791657402480-E",
+          "text": "E) Jdjwjfjsndh",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-10T18:36:42.480Z"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Dıkdjd",
+          "upvotes": 1,
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+        },
+        {
+          "key": "B",
+          "text": "Kdkejfje",
+          "upvotes": 2,
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "likedBy": [
+            "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+          ]
+        },
+        {
+          "key": "C",
+          "text": "Kdkwjdjejd",
+          "upvotes": 2,
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "likedBy": [
+            "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+          ]
+        },
+        {
+          "key": "D",
+          "text": "Jfjsjfjsjd",
+          "upvotes": 2,
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "likedBy": [
+            "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+          ]
+        },
+        {
+          "key": "E",
+          "text": "Jdjwjfjsndh",
+          "upvotes": 1,
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+        }
+      ],
+      "tags": [
+        "Tıbbi Patoloji",
+        "numarasız-hatırlanan"
+      ],
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "contributedByName": "Dr House",
+      "revisions": [
+        {
+          "id": "rev-1791657402480",
+          "stem": "Ufjrnfjenfıwnfnsbdv",
+          "topic": "Tıbbi Patoloji Hatırlanan Soru",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dıkdjd",
+              "upvotes": 1
+            },
+            {
+              "key": "B",
+              "text": "Kdkejfje",
+              "upvotes": 1
+            },
+            {
+              "key": "C",
+              "text": "Kdkwjdjejd",
+              "upvotes": 1
+            },
+            {
+              "key": "D",
+              "text": "Jfjsjfjsjd",
+              "upvotes": 1
+            },
+            {
+              "key": "E",
+              "text": "Jdjwjfjsndh",
+              "upvotes": 1
+            }
+          ],
+          "version": 1,
+          "editedAt": "2026-10-10T18:36:42.480Z",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "discipline": "Tıbbi Patoloji",
+          "editorName": "Dr House",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+        }
+      ],
+      "createdAt": "2026-10-10T18:36:42.719689+00:00",
+      "updatedAt": "2026-10-10T18:37:13.249Z",
+      "examYear": "2026-2027",
+      "upvotes": 0,
+      "reconstruction": null,
+      "claimedAnswer": "C"
     }
   ]
 }

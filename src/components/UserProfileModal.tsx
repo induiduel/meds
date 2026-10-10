@@ -90,22 +90,22 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
   };
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fadeIn">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/60 backdrop-blur-xs animate-fadeIn">
       <div 
-        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden relative"
+        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-line w-full max-w-lg overflow-hidden relative"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="bg-ink-surface p-5 text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-teal-500/20 border border-teal-400/30 flex items-center justify-center text-teal-300 font-bold text-lg">
+            <div className="w-10 h-10 rounded-xl bg-ok/20 border border-ok/30 flex items-center justify-center text-ok font-bold text-lg">
               {(currentUser.displayName || currentUser.email || 'Ö')[0].toUpperCase()}
             </div>
             <div>
               <h3 className="font-bold text-base leading-tight">
                 Öğrenci Profilim & Ayarlar
               </h3>
-              <p className="text-xs text-teal-200/80">
+              <p className="text-xs text-ok-soft/80">
                 {currentUser.email}
               </p>
             </div>
@@ -122,23 +122,23 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
         <div className="p-6 space-y-6">
           {/* Stats Bar */}
           <div className="grid grid-cols-2 gap-3">
-            <div className="bg-teal-50/70 border border-teal-200 rounded-xl p-3.5 flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-teal-600 text-white">
+            <div className="bg-ok-soft/70 border border-ok/30 rounded-xl p-3.5 flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-ok text-white">
                 <BookOpen className="w-4 h-4" />
               </div>
               <div>
-                <span className="text-[11px] font-semibold text-teal-800 block">Katkıda Bulunduğum</span>
-                <span className="text-lg font-black text-teal-950">{myContributedQuestions.length} Soru</span>
+                <span className="text-2xs font-semibold text-ok block">Katkıda Bulunduğum</span>
+                <span className="text-lg font-black text-ok">{myContributedQuestions.length} Soru</span>
               </div>
             </div>
 
-            <div className="bg-emerald-50/70 border border-emerald-200 rounded-xl p-3.5 flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-emerald-600 text-white">
+            <div className="bg-ok-soft/70 border border-ok/30 rounded-xl p-3.5 flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-ok text-white">
                 <Award className="w-4 h-4" />
               </div>
               <div>
-                <span className="text-[11px] font-semibold text-emerald-800 block">Tebrik E-postası</span>
-                <span className="text-xs font-bold text-emerald-950 mt-1 block">
+                <span className="text-2xs font-semibold text-ok block">Tebrik E-postası</span>
+                <span className="text-xs font-bold text-ok mt-1 block">
                   {currentUser.congratsSentCommittees && currentUser.congratsSentCommittees.length > 0
                     ? `${currentUser.congratsSentCommittees.length} Kurulda Alındı`
                     : 'İlk Katkıda Gelecek'}
@@ -149,14 +149,14 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
 
           {/* Admin Panel Quick Access if Admin */}
           {currentUser.email?.toLowerCase() === 'nofrostlife@gmail.com' && onOpenAdminPanel && (
-            <div className="bg-amber-50 border border-amber-300 rounded-xl p-3.5 flex items-center justify-between gap-3 shadow-2xs">
+            <div className="bg-warn-soft border border-warn/30 rounded-xl p-3.5 flex items-center justify-between gap-3 shadow-2xs">
               <div className="flex items-center gap-2.5">
-                <div className="p-2 rounded-lg bg-amber-500 text-slate-950 font-bold">
+                <div className="p-2 rounded-lg bg-warn text-ink font-bold">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="font-extrabold text-xs text-amber-950 block">Sistem Yöneticisi Yetkisi Aktif</span>
-                  <span className="text-[11px] text-amber-800">Soru silme, kullanıcı yönetimi & otomasyonlar</span>
+                  <span className="font-extrabold text-xs text-warn block">Sistem Yöneticisi Yetkisi Aktif</span>
+                  <span className="text-2xs text-warn">Soru silme, kullanıcı yönetimi & otomasyonlar</span>
                 </div>
               </div>
               <button
@@ -165,7 +165,7 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
                   onClose();
                   onOpenAdminPanel();
                 }}
-                className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs cursor-pointer shadow-xs transition-all active:scale-95 shrink-0"
+                className="bg-warn hover:bg-warn text-ink font-bold px-3 py-1.5 rounded-lg text-xs cursor-pointer shadow-xs transition-all active:scale-95 shrink-0"
               >
                 Yönetici Panelini Aç               </button>
             </div>
@@ -174,48 +174,48 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
           {/* Form */}
           <form onSubmit={handleSave} className="space-y-4">
             {error && (
-              <div className="bg-rose-50 border border-rose-200 text-rose-800 text-xs p-3 rounded-lg flex items-start gap-2">
-                <AlertCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
+              <div className="bg-bad-soft border border-bad/30 text-bad-text text-xs p-3 rounded-lg flex items-start gap-2">
+                <AlertCircle className="w-4 h-4 text-bad-text shrink-0 mt-0.5" />
                 <span>{error}</span>
               </div>
             )}
             {success && (
-              <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs p-3 rounded-lg flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <div className="bg-ok-soft border border-ok/30 text-ok text-xs p-3 rounded-lg flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-ok shrink-0 mt-0.5" />
                 <span>{success}</span>
               </div>
             )}
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
+              <label className="block text-xs font-bold text-ink-2 mb-1">
                 İsim / Soyisim (Görünen Ad)
               </label>
               <div className="relative">
-                <User className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                <User className="w-4 h-4 text-ink-3 absolute left-3 top-2.5" />
                 <input
                   type="text"
                   value={displayName}
                   onChange={(e) => setDisplayName(e.target.value)}
                   placeholder="Adınızı ve soyadınızı giriniz"
-                  className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
+                  className="w-full pl-9 pr-3 py-2 text-sm border border-line-2 rounded-lg focus:outline-hidden focus:border-ok"
                 />
               </div>
-              <p className="text-[11px] text-slate-500 mt-1">
+              <p className="text-2xs text-ink-3 mt-1">
                 Soru ve şık eklerken adınız otomatik hatırlanacaktır.
               </p>
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1 flex items-center justify-between">
-                <span>Öğrenci Numarası <span className="text-slate-400 font-normal">(İsteğe bağlı)</span></span>
+              <label className="block text-xs font-bold text-ink-2 mb-1 flex items-center justify-between">
+                <span>Öğrenci Numarası <span className="text-ink-3 font-normal">(İsteğe bağlı)</span></span>
                 {studentNumber && (
-                  <span className={`text-[11px] font-bold px-2 py-0.5 rounded ${studentNumber.length === 11 ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-teal-50 text-teal-800 border border-teal-200'}`}>
+                  <span className={`text-2xs font-bold px-2 py-0.5 rounded ${studentNumber.length === 11 ? 'bg-ok-soft text-ok border border-ok/30' : 'bg-ok-soft text-ok border border-ok/30'}`}>
                     {studentNumber.length === 11 ? '✓ 11 Haneli Standart No (Geçerli)' : `${studentNumber.length} Hane (Kabul Edildi ✓)`}
                   </span>
                 )}
               </label>
               <div className="relative">
-                <Hash className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                <Hash className="w-4 h-4 text-ink-3 absolute left-3 top-2.5" />
                 <input
                   type="text"
                   inputMode="numeric"
@@ -223,28 +223,28 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
                   value={studentNumber}
                   onChange={(e) => handleStudentNumberChange(e.target.value)}
                   placeholder="Örn: 20241054012"
-                  className="w-full pl-9 pr-3 py-2 text-sm font-mono border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
+                  className="w-full pl-9 pr-3 py-2 text-sm font-mono border border-line-2 rounded-lg focus:outline-hidden focus:border-ok"
                 />
               </div>
-              <p className="text-[11px] text-slate-500 mt-1">
+              <p className="text-2xs text-ink-3 mt-1">
                 Boşluklu veya tireli yapıştırsanız bile otomatik temizlenir.
               </p>
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
+              <label className="block text-xs font-bold text-ink-2 mb-1">
                 Kayıtlı E-posta Adresi
               </label>
               <div className="relative">
-                <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                <Mail className="w-4 h-4 text-ink-3 absolute left-3 top-2.5" />
                 <input
                   type="text"
                   disabled
                   value={currentUser.email || 'Girilmedi'}
-                  className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 bg-slate-50 text-slate-500 rounded-lg cursor-not-allowed"
+                  className="w-full pl-9 pr-3 py-2 text-sm border border-line bg-field text-ink-3 rounded-lg cursor-not-allowed"
                 />
               </div>
-              <p className="text-[11px] text-teal-700 mt-1 font-medium">
+              <p className="text-2xs text-ok mt-1 font-medium">
                 Her kurulda ilk soru katkınız için teşekkür e-postası bu adrese otomatik iletilir.
               </p>
             </div>
@@ -253,14 +253,14 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
               <button
                 type="button"
                 onClick={onClose}
-                className="px-4 py-2 text-xs font-semibold text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg cursor-pointer"
+                className="px-4 py-2 text-xs font-semibold text-ink-2 hover:text-ink hover:bg-field rounded-lg cursor-pointer"
               >
                 Kapat
               </button>
               <button
                 type="submit"
                 disabled={isSaving}
-                className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-5 py-2 rounded-lg text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer disabled:opacity-50"
+                className="bg-ok hover:bg-ok text-white font-bold px-5 py-2 rounded-lg text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer disabled:opacity-50"
               >
                 <Save className="w-4 h-4" />
                 <span>{isSaving ? 'Kaydediliyor...' : 'Bilgileri Kaydet'}</span>

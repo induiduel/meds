@@ -55,7 +55,7 @@ interface Props {
 }
 
 const H = ({ children }: { children: React.ReactNode }) => (
-  <h3 className="m-0 text-[11.5px] font-bold uppercase tracking-[0.07em] text-ink-3 flex items-center gap-1.5">{children}</h3>
+  <h3 className="m-0 text-xs font-bold uppercase tracking-[0.07em] text-ink-3 flex items-center gap-1.5">{children}</h3>
 );
 
 /**
@@ -148,13 +148,13 @@ export const QuestionAboutDialog: React.FC<Props> = ({
     >
       {/* Durum Bildirimleri (Eski sürüm, Faz 14 vb.) */}
       {isEskiView && (
-        <div className="p-3 bg-warn/10 border border-warn/20 rounded-xl text-[12.5px] text-warn flex items-start gap-2.5 mb-1">
+        <div className="p-3 bg-warn/10 border border-warn/20 rounded-xl text-sm text-warn flex items-start gap-2.5 mb-1">
           <History className="w-4 h-4 shrink-0 text-warn mt-0.5" />
           <span><b>Eski Sınav Arşiv Sürümü:</b> Doğrulanmış ve gerekçelendirilmiş hâl için Denetleyici Sürümüne geçebilirsiniz.</span>
         </div>
       )}
       {p14StatusNote && (
-        <div className="p-3 bg-accent-soft/40 border border-accent/20 rounded-xl text-[12.5px] text-ink flex items-start gap-2.5 mb-1">
+        <div className="p-3 bg-accent-soft/40 border border-accent/20 rounded-xl text-sm text-ink flex items-start gap-2.5 mb-1">
           <Sparkles className="w-4 h-4 shrink-0 text-accent mt-0.5" />
           <span>{p14StatusNote}</span>
         </div>
@@ -166,10 +166,10 @@ export const QuestionAboutDialog: React.FC<Props> = ({
         <div className="ms-about-answer">
           <span className="ms-about-answer-key" aria-label={`Doğru cevap ${answerKey}`}>{answerKey}</span>
           <div className="min-w-0 flex-1 flex flex-col gap-0.5">
-            <span className="text-[11.5px] font-semibold text-ok">Doğru cevap</span>
-            {answerOptionText && <span className="text-[14px] font-medium text-ink leading-snug">{answerOptionText}</span>}
+            <span className="text-xs font-semibold text-ok">Doğru cevap</span>
+            {answerOptionText && <span className="text-base font-medium text-ink leading-snug">{answerOptionText}</span>}
             {answerChange && (
-              <span className="mt-1 inline-flex items-start gap-1.5 text-[12.5px] text-ink-2">
+              <span className="mt-1 inline-flex items-start gap-1.5 text-sm text-ink-2">
                 <AlertCircle className="w-3.5 h-3.5 shrink-0 text-warn mt-0.5" />
                 <span><b className="text-ink">Cevap düzeltildi:</b> eski arşivde <b className="font-mono">{answerChange.from}</b> idi; literatür incelemesiyle <b className="font-mono">{answerChange.to}</b> olarak güncellendi.</span>
               </span>
@@ -185,8 +185,8 @@ export const QuestionAboutDialog: React.FC<Props> = ({
           <div className="ms-about-slide">
             <span className="ms-about-slide-num" aria-hidden>{learnMatch.slideNumber}</span>
             <span className="min-w-0 flex-1">
-              <span className="block text-[13.5px] font-semibold text-ink truncate">{learnMatch.slideTitle || `Slayt ${learnMatch.slideNumber}`}</span>
-              <span className="block text-[12px] text-ink-3 truncate">
+              <span className="block text-base font-semibold text-ink truncate">{learnMatch.slideTitle || `Slayt ${learnMatch.slideNumber}`}</span>
+              <span className="block text-xs text-ink-3 truncate">
                 {learnMatch.deckTitle} · {learnMatch.matchType === 'direct' ? 'müfredat eşleşmesi' : 'konu eşleşmesi'}
               </span>
             </span>
@@ -212,7 +212,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
             {denetleyiciOnayi ? 'Açıklama ve patofizyolojik mekanizma' : 'Açıklama'} {explanationNote}
           </H>
           {hidden ? (
-            <div className="rounded-xl bg-field px-3.5 py-3 flex flex-wrap items-center gap-2 text-[13px] text-ink-2">
+            <div className="rounded-xl bg-field px-3.5 py-3 flex flex-wrap items-center gap-2 text-sm text-ink-2">
               Açıklama cevabı gösterir. Önce şıkkını seç ya da
               <button type="button" onClick={() => setReveal(true)} className="ms-btn is-ghost is-sm">
                 <Eye /> yine de göster
@@ -242,11 +242,11 @@ export const QuestionAboutDialog: React.FC<Props> = ({
                   <span className="ms-about-analysis-key">{k}</span>
                   <div className="min-w-0 flex-1 flex flex-col gap-1">
                     <div className="flex flex-wrap items-center gap-1.5">
-                      {optionText(k) && <span className="text-[13.5px] font-medium text-ink leading-snug mr-1">{optionText(k)}</span>}
+                      {optionText(k) && <span className="text-base font-medium text-ink leading-snug mr-1">{optionText(k)}</span>}
                       {label && <span className={`ms-tag ${tone}`}>{label}</span>}
                       {isAnswer && <span className="ms-tag is-ok"><Check /> Cevap</span>}
                     </div>
-                    <p className="m-0 text-[13px] text-ink-2 leading-relaxed">{reason}</p>
+                    <p className="m-0 text-sm text-ink-2 leading-relaxed">{reason}</p>
                   </div>
                 </li>
               );
@@ -262,7 +262,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
         return (
           <section className="flex flex-col gap-1.5">
             <H><BookOpen className="w-3.5 h-3.5" /> Referans kaynaklar</H>
-            <ul className="m-0 pl-4 text-[12.5px] text-ink-2 list-disc flex flex-col gap-1">
+            <ul className="m-0 pl-4 text-sm text-ink-2 list-disc flex flex-col gap-1">
               {cleanRefs.map((ref, idx) => (
                 <li key={idx} className="leading-snug">{ref}</li>
               ))}
@@ -286,7 +286,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
           <button
             type="button"
             onClick={copyJson}
-            className="ms-btn is-ghost is-sm text-[12px] h-7 px-2.5 gap-1.5"
+            className="ms-btn is-ghost is-sm text-xs h-7 px-2.5 gap-1.5"
             title="Soru veri tabanı kaydını JSON olarak panoya kopyala"
           >
             {copiedJson ? <Check className="w-3.5 h-3.5 text-ok" /> : <Code2 className="w-3.5 h-3.5" />}
@@ -298,7 +298,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
           <div>
             <dt>Soru kimliği</dt>
             <dd className="flex items-center gap-1 min-w-0">
-              <span className="font-mono text-[12.5px] truncate" title={questionId}>{questionId}</span>
+              <span className="font-mono text-sm truncate" title={questionId}>{questionId}</span>
               <button type="button" onClick={copyId} className="ms-btn is-ghost is-icon is-sm shrink-0" aria-label="Kimliği kopyala" title="Kimliği kopyala">
                 {copied ? <Check className="text-ok" /> : <Copy />}
               </button>

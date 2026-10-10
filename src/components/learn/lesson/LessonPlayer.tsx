@@ -250,44 +250,70 @@ const practiceTarget = (step: LessonStep, p: PracticeItem, i: number) => {
 
 const PracticeSet: React.FC<{ step: LessonStep; items: PracticeItem[]; jump?: { to: number; at: number } | null; onAllDone: () => void }> = ({ step, items, jump, onAllDone }) => {
   const [cur, setCur] = useState(0);
+  const [dir, setDir] = useState<1 | -1>(1);
   const [doneSet, setDoneSet] = useState<Set<number>>(new Set());
+  const go = (i: number) => {
+    setDir(i >= cur ? 1 : -1);
+    setCur(i);
+  };
   useEffect(() => {
-    if (jump && jump.to >= 0 && jump.to < items.length) setCur(jump.to);
+    if (jump && jump.to >= 0 && jump.to < items.length) go(jump.to);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [jump, items.length]);
   if (!items.length) return null;
-  const item = items[Math.min(cur, items.length - 1)];
+  const at = Math.min(cur, items.length - 1);
+  const item = items[at];
+  const nextUndone = items.findIndex((_, i) => i > at && !doneSet.has(i));
+  const nextIdx = nextUndone >= 0 ? nextUndone : items.findIndex((_, i) => !doneSet.has(i) && i !== at);
+  const pct = Math.round((doneSet.size / items.length) * 100);
   return (
     <section className="ls-practice" aria-label="Pekiştir">
       <div className="ls-sec-h">Pekiştir <span>{doneSet.size}/{items.length}</span></div>
       {items.length > 1 && (
-        <div className="ls-ptabs" role="tablist">
+        <div className="ls-psteps" role="tablist" style={{ '--p': pct } as React.CSSProperties}>
           {items.map((p, i) => {
             const [Icon, label] = practiceMeta(p);
             const isDone = doneSet.has(i);
             return (
-              <button key={i} type="button" role="tab" aria-selected={i === cur} className={`ls-ptab ${i === cur ? 'is-on' : ''} ${isDone ? 'is-done' : ''}`} onClick={() => setCur(i)} title={label}>
+              <button
+                key={i}
+                type="button"
+                role="tab"
+                aria-selected={i === at}
+                aria-label={`${i + 1}. ${label}${isDone ? ' (tamam)' : ''}`}
+                title={label}
+                className={`ls-pstep ${i === at ? 'is-on' : ''} ${isDone ? 'is-done' : ''}`}
+                onClick={() => go(i)}
+              >
                 {isDone ? <Check aria-hidden /> : <Icon aria-hidden />}
-                <span className="lbl">{label}</span>
+                <span className="lbl"><span>{label}</span></span>
               </button>
             );
           })}
         </div>
       )}
       <PracticeCard
-        key={cur}
-        className="ls-enter-up"
+        key={at}
+        className={dir > 0 ? 'ls-enter-next' : 'ls-enter-prev'}
         item={item}
-        target={practiceTarget(step, item, Math.min(cur, items.length - 1))}
-        done={doneSet.has(cur)}
+        target={practiceTarget(step, item, at)}
+        done={doneSet.has(at)}
         onDone={() =>
           setDoneSet((d) => {
-            if (d.has(cur)) return d;
-            const nd = new Set(d).add(cur);
+            if (d.has(at)) return d;
+            const nd = new Set(d).add(at);
             if (nd.size >= items.length) onAllDone();
             return nd;
           })
         }
       />
+      {doneSet.has(at) && nextIdx >= 0 && (
+        <button type="button" className="ls-pnext" onClick={() => go(nextIdx)}>
+          <span>Sonraki</span>
+          <b>{practiceMeta(items[nextIdx])[1]}</b>
+          <ChevronRight aria-hidden />
+        </button>
+      )}
     </section>
   );
 };

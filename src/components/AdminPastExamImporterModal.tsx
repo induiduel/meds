@@ -310,15 +310,15 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
         {/* Header */}
         <div className="bg-ink-surface text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 border border-teal-400/30 flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-teal-300" />
+            <div className="w-10 h-10 rounded-xl bg-ok/20 text-ok border border-ok/30 flex items-center justify-center">
+              <Sparkles className="w-5 h-5 text-ok" />
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <h3 className="font-bold text-sm sm:text-base">
                   Çıkmış Soru Yükleme & Yapay Zeka Ayrıştırıcı
                 </h3>
-                <span className="bg-teal-500/20 text-teal-200 border border-teal-400/30 text-[11px] font-bold px-2 py-0.5 rounded-full">
+                <span className="bg-ok/20 text-ok-soft border border-ok/30 text-2xs font-bold px-2 py-0.5 rounded-full">
                   Admin Aracı
                 </span>
               </div>
@@ -329,14 +329,14 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
           </div>
 
           <div className="flex items-center gap-2">
-            <InfoPopover title="Çıkmış Soru Yükleme Rehberi" buttonClassName="text-white hover:text-teal-200">
+            <InfoPopover title="Çıkmış Soru Yükleme Rehberi" buttonClassName="text-white hover:text-ok-soft">
               <p>
                 Geçmiş senelerin (2020-2024 vb.) çıkmış sorularını Word'den, PDF'ten, Telegram/WhatsApp gruplarından kopyalayıp buraya yapıştırabilirsiniz.
               </p>
               <p className="mt-1">
                 Yapay Zeka (Gemini); soru kökünü, 5 şıkkı, varsa doğru cevabı ve branşı otomatik tespit eder.
               </p>
-              <p className="mt-1 font-semibold text-teal-800">
+              <p className="mt-1 font-semibold text-ok">
                 Veritabanına aktarıldıktan sonra tüm öğrenciler sorular üzerinde yeni şık önerisi verebilir, oylayabilir ve düzenleyebilir.
               </p>
             </InfoPopover>
@@ -380,7 +380,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-canvas p-3.5 rounded-xl border border-line">
             {/* Exam Year */}
             <div>
-              <label className="block text-[11px] font-bold text-ink-2 mb-1">
+              <label className="block text-2xs font-bold text-ink-2 mb-1">
                 Sınav Senesi / Yıl
               </label>
               <select
@@ -400,7 +400,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
             {/* Target Committee */}
             <div>
-              <label className="block text-[11px] font-bold text-ink-2 mb-1">
+              <label className="block text-2xs font-bold text-ink-2 mb-1">
                 Hedef Kurul / Komite
               </label>
               <select
@@ -418,7 +418,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
             {/* Discipline */}
             <div>
-              <label className="block text-[11px] font-bold text-ink-2 mb-1">
+              <label className="block text-2xs font-bold text-ink-2 mb-1">
                 Ders / Branş (Dönem 3 Müfredatı)
               </label>
               <select
@@ -440,12 +440,12 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
           <div className="space-y-2">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <label className="font-bold text-ink text-xs flex items-center gap-1.5">
-                <FileText className="w-4 h-4 text-teal-600" />
+                <FileText className="w-4 h-4 text-ok" />
                 <span>Çıkmış Soru Metni veya Dosya İçeriği</span>
               </label>
 
-              <label className="inline-flex items-center gap-1.5 px-3 py-1 bg-white hover:bg-canvas border border-line-2 rounded-lg text-[11px] font-semibold text-ink-2 cursor-pointer shadow-2xs">
-                <Upload className="w-3.5 h-3.5 text-teal-600" />
+              <label className="inline-flex items-center gap-1.5 px-3 py-1 bg-white hover:bg-canvas border border-line-2 rounded-lg text-2xs font-semibold text-ink-2 cursor-pointer shadow-2xs">
+                <Upload className="w-3.5 h-3.5 text-ok" />
                 <span>{fileName ? `Dosya: ${fileName}` : 'Dosya Seç (.pdf, .docx, .txt)'}</span>
                 <input
                   type="file"
@@ -457,8 +457,8 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
             </div>
 
             {isExtractingFile && (
-              <div className="bg-teal-50 border border-teal-200 text-teal-900 p-2.5 rounded-xl flex items-center gap-2 text-xs font-semibold animate-pulse">
-                <div className="w-3.5 h-3.5 border-2 border-teal-600 border-t-transparent rounded-full animate-spin shrink-0" />
+              <div className="bg-ok-soft border border-ok/30 text-ok p-2.5 rounded-xl flex items-center gap-2 text-xs font-semibold animate-pulse">
+                <div className="w-3.5 h-3.5 border-2 border-ok border-t-transparent rounded-full animate-spin shrink-0" />
                 <span>Yapay zeka PDF / Word belgesini metne dönüştürüyor...</span>
               </div>
             )}
@@ -484,7 +484,7 @@ Cevap: A
 
 2) Bradikinin birikimine bağlı kuru öksürük yapan ilaç hangisidir?..."
               rows={7}
-              className="w-full p-3 bg-white border border-line-2 rounded-xl font-mono text-[11px] text-ink focus:outline-hidden focus:ring-2 focus:ring-teal-500/20"
+              className="w-full p-3 bg-white border border-line-2 rounded-xl font-mono text-2xs text-ink focus:outline-hidden focus:ring-2 focus:ring-ok/20"
             />
           </div>
 
@@ -495,10 +495,10 @@ Cevap: A
                 type="checkbox"
                 checked={autoSaveToFirebase}
                 onChange={(e) => setAutoSaveToFirebase(e.target.checked)}
-                className="w-4 h-4 text-teal-600 rounded focus:ring-teal-500"
+                className="w-4 h-4 text-ok rounded focus:ring-ok"
               />
               <span className="flex items-center gap-1.5">
-                <Cloud className="w-3.5 h-3.5 text-teal-600" />
+                <Cloud className="w-3.5 h-3.5 text-ok" />
                 <span>Ayrıştırıldığında doğrudan Firebase & Sunucuya Otomatik Kaydet</span>
               </span>
             </label>
@@ -506,7 +506,7 @@ Cevap: A
             <button
               onClick={handleParseQuestions}
               disabled={isParsing || isImporting || (!rawText.trim() && !uploadedFileBase64)}
-              className="bg-accent hover:from-teal-800 hover:to-ok disabled:opacity-50 text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer active:scale-95"
+              className="bg-accent hover:from-ok hover:to-ok disabled:opacity-50 text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer active:scale-95"
             >
               {isParsing ? (
                 <>
@@ -520,7 +520,7 @@ Cevap: A
                 </>
               ) : (
                 <>
-                  <Sparkles className="w-4 h-4 text-teal-200" />
+                  <Sparkles className="w-4 h-4 text-ok-soft" />
                   <span>Yapay Zeka ile Ayrıştır & Şıkları Çıkar</span>
                 </>
               )}
@@ -530,18 +530,18 @@ Cevap: A
           {/* Staging / Parsed Questions List */}
           {parsedQuestions.length > 0 && (
             <div className="space-y-4 pt-4 border-t border-line">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-canvas p-3.5 rounded-xl border border-teal-300 shadow-2xs">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-canvas p-3.5 rounded-xl border border-ok/30 shadow-2xs">
                 <div className="space-y-0.5">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-700" />
-                    <span className="font-bold text-teal-950 text-xs">
+                    <CheckCircle2 className="w-4 h-4 text-ok" />
+                    <span className="font-bold text-ok text-xs">
                       {parsedQuestions.length} Soru Tespit Edildi ({examYear})
                     </span>
-                    <span className="bg-teal-700 text-white font-mono text-[11px] font-bold px-2 py-0.5 rounded-full">
+                    <span className="bg-ok text-white font-mono text-2xs font-bold px-2 py-0.5 rounded-full">
                       Beğeniler: 0
                     </span>
                   </div>
-                  <p className="text-[11px] text-ink-2">
+                  <p className="text-2xs text-ink-2">
                     Aşağıdaki sorularda düzenleme yapabilir veya doğrudan bulut havuzuna aktarabilirsiniz.
                   </p>
                 </div>
@@ -568,7 +568,7 @@ Cevap: A
               {/* Toplu Bilgi Doldurma Çubuğu */}
               <div className="p-3 bg-white rounded-xl border border-line flex flex-wrap items-center gap-2.5 text-xs shadow-xs">
                 <span className="font-bold text-ink-2 flex items-center gap-1 shrink-0">
-                  <Sparkles className="w-3.5 h-3.5 text-teal-600" /> Toplu Bilgi Uygula:
+                  <Sparkles className="w-3.5 h-3.5 text-ok" /> Toplu Bilgi Uygula:
                 </span>
 
                 {/* Kurul */}
@@ -589,7 +589,7 @@ Cevap: A
                     type="button"
                     onClick={() => handleApplyBatch('committeeId', batchCommittee)}
                     disabled={!batchCommittee}
-                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-[11px]"
+                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-2xs"
                   >
                     Uygula
                   </button>
@@ -608,7 +608,7 @@ Cevap: A
                     type="button"
                     onClick={() => handleApplyBatch('examYear', batchYear)}
                     disabled={!batchYear}
-                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-[11px]"
+                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-2xs"
                   >
                     Uygula
                   </button>
@@ -633,7 +633,7 @@ Cevap: A
                     type="button"
                     onClick={() => handleApplyBatch('discipline', batchDiscipline)}
                     disabled={!batchDiscipline}
-                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-[11px]"
+                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-2xs"
                   >
                     Uygula
                   </button>
@@ -658,7 +658,7 @@ Cevap: A
                     type="button"
                     onClick={() => handleApplyBatch('kazanim', batchKazanim)}
                     disabled={!batchKazanim}
-                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-[11px] shrink-0"
+                    className="px-2 py-1 bg-line hover:bg-line-2 disabled:opacity-40 rounded font-medium text-2xs shrink-0"
                   >
                     Uygula
                   </button>
@@ -679,7 +679,7 @@ Cevap: A
                   >
                     <div className="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-line">
                       <div className="flex flex-wrap items-center gap-2 flex-1">
-                        <span className="bg-ink text-white font-black px-2 py-0.5 rounded text-[11px]">
+                        <span className="bg-ink text-white font-black px-2 py-0.5 rounded text-2xs">
                           Soru #{q.questionNumber || idx + 1}
                         </span>
 
@@ -687,7 +687,7 @@ Cevap: A
                         <select
                           value={qCommitteeId}
                           onChange={(e) => handleUpdateParsedField(idx, 'committeeId', e.target.value)}
-                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-[11px] font-semibold text-ink"
+                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-2xs font-semibold text-ink"
                         >
                           {committees.map((c) => (
                             <option key={c.id} value={c.id}>
@@ -701,7 +701,7 @@ Cevap: A
                           type="text"
                           value={q.examYear || ''}
                           onChange={(e) => handleUpdateParsedField(idx, 'examYear', e.target.value)}
-                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-[11px] w-24 text-ink-2"
+                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-2xs w-24 text-ink-2"
                           placeholder="Yıl (2023-2024)"
                         />
 
@@ -711,7 +711,7 @@ Cevap: A
                           list={`muf-ders-${idx}`}
                           value={q.discipline || ''}
                           onChange={(e) => handleUpdateParsedField(idx, 'discipline', e.target.value)}
-                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-[11px] font-bold text-teal-800 w-32"
+                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-2xs font-bold text-ok w-32"
                           placeholder="Ders (Müfredat)"
                         />
                         <datalist id={`muf-ders-${idx}`}>
@@ -729,7 +729,7 @@ Cevap: A
                             handleUpdateParsedField(idx, 'topic', e.target.value);
                             handleUpdateParsedField(idx, 'kazanim', e.target.value);
                           }}
-                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-[11px] text-ink-2 flex-1 min-w-[130px]"
+                          className="bg-white border border-line-2 rounded px-2 py-0.5 text-2xs text-ink-2 flex-1 min-w-[130px]"
                           placeholder="Müfredat Konusu / Kazanım"
                         />
                         <datalist id={`muf-konu-${idx}`}>
@@ -741,7 +741,7 @@ Cevap: A
 
                       <div className="flex items-center gap-2">
                         <div className="flex items-center gap-1">
-                          <span className="text-[11px] font-bold text-ink-2">Cevap:</span>
+                          <span className="text-2xs font-bold text-ink-2">Cevap:</span>
                           <select
                             value={q.claimedAnswer || 'C'}
                             onChange={(e) => handleUpdateParsedField(idx, 'claimedAnswer', e.target.value)}
@@ -767,19 +767,19 @@ Cevap: A
 
                     {/* Kazanım Bilgisi */}
                     <div className="flex items-center gap-2">
-                      <span className="text-[11px] font-bold text-teal-700 shrink-0">🎯 Kazanım:</span>
+                      <span className="text-2xs font-bold text-ok shrink-0">🎯 Kazanım:</span>
                       <input
                         type="text"
                         value={q.kazanim || ''}
                         onChange={(e) => handleUpdateParsedField(idx, 'kazanim', e.target.value)}
-                        className="w-full bg-white border border-teal-200 focus:border-teal-500 rounded px-2 py-1 text-xs text-ink"
+                        className="w-full bg-white border border-ok/30 focus:border-ok rounded px-2 py-1 text-xs text-ink"
                         placeholder="Örn: Hücresel adaptasyon mekanizmalarını ve metaplazi özelliklerini açıklar"
                       />
                     </div>
 
                     {/* Question Stem */}
                     <div>
-                      <label className="block text-[11px] font-bold text-ink-3 mb-0.5">Soru Kökü</label>
+                      <label className="block text-2xs font-bold text-ink-3 mb-0.5">Soru Kökü</label>
                       <textarea
                         value={q.stem || ''}
                         onChange={(e) => handleUpdateParsedField(idx, 'stem', e.target.value)}
@@ -793,7 +793,7 @@ Cevap: A
                       {(q.options || []).map((opt: any) => (
                         <div key={opt.key} className="flex items-center gap-1.5 bg-white p-1.5 rounded-lg border border-line">
                           <span
-                            className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-[11px] shrink-0 ${
+                            className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-2xs shrink-0 ${
                               q.claimedAnswer === opt.key
                                 ? 'bg-ok text-white'
                                 : 'bg-field text-ink-2'
@@ -814,7 +814,7 @@ Cevap: A
 
                     {/* Explanation */}
                     {q.explanation && (
-                      <p className="text-[11px] text-ink-3 bg-white/70 p-2 rounded-lg border border-line/60 italic">
+                      <p className="text-2xs text-ink-3 bg-white/70 p-2 rounded-lg border border-line/60 italic">
                         <strong>Tıbbi Açıklama:</strong> {q.explanation}
                       </p>
                     )}
@@ -828,7 +828,7 @@ Cevap: A
 
         {/* Footer */}
         <div className="bg-canvas p-4 border-t border-line flex items-center justify-between shrink-0">
-          <span className="text-[11px] text-ink-3">
+          <span className="text-2xs text-ink-3">
             MeDSor Admin Motoru • Sorular eklendikten sonra soru havuzunda anında listelenir.
           </span>
 

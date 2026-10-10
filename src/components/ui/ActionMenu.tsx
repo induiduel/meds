@@ -27,7 +27,7 @@ interface ActionMenuProps {
 const toneCls = {
   default: 'text-ink',
   accent: 'text-accent',
-  danger: 'text-rose-700',
+  danger: 'text-bad-text',
 };
 
 /**
@@ -123,7 +123,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'Ä
     groups.map((g, gi) => (
       <div key={gi} className={gi > 0 ? (big ? 'mt-2' : 'border-t border-line-soft mt-1 pt-1') : ''}>
         {g[0].group && (
-          <div className={`px-2.5 ${big ? 'pt-1 pb-1.5' : 'pt-1.5 pb-1'} text-[11.5px] font-semibold uppercase tracking-[0.06em] text-ink-3`}>{g[0].group}</div>
+          <div className={`px-2.5 ${big ? 'pt-1 pb-1.5' : 'pt-1.5 pb-1'} text-xs font-semibold uppercase tracking-[0.06em] text-ink-3`}>{g[0].group}</div>
         )}
         <div className={big ? 'bg-canvas rounded-2xl overflow-hidden' : ''}>
           {g.map((it, i) => {
@@ -137,13 +137,13 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'Ä
                 onClick={() => run(it)}
                 className={`w-full flex items-center gap-3 text-left cursor-pointer disabled:opacity-50 ${toneCls[it.tone || 'default']} ${
                   big
-                    ? `min-h-[52px] px-4 text-[15.5px] ${i > 0 ? 'border-t border-line' : ''}`
-                    : 'min-h-[38px] px-2.5 rounded-lg text-[14px] hover:bg-canvas'
+                    ? `min-h-[52px] px-4 text-md ${i > 0 ? 'border-t border-line' : ''}`
+                    : 'min-h-[38px] px-2.5 rounded-lg text-base hover:bg-canvas'
                 }`}
               >
                 {Icon && <Icon className={big ? 'w-5 h-5 shrink-0' : 'w-4 h-4 shrink-0 opacity-80'} />}
                 <span className="flex-1 min-w-0 truncate">{it.label}</span>
-                {it.hint && <span className="text-[12px] text-ink-3 shrink-0">{it.hint}</span>}
+                {it.hint && <span className="text-xs text-ink-3 shrink-0">{it.hint}</span>}
               </button>
             );
           })}
@@ -160,7 +160,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'Ä
         aria-expanded={open}
         aria-label={label ? undefined : highlight ? `${title} Â· ${highlight.title}` : title}
         title={highlight ? `${title} Â· ${highlight.title}` : title}
-        className={`h-9 rounded-[10px] border flex items-center justify-center gap-1 text-[13.5px] font-semibold cursor-pointer transition-colors ${
+        className={`h-9 rounded-[10px] border flex items-center justify-center gap-1 text-base font-semibold cursor-pointer transition-colors ${
           label || highlight ? 'px-2' : 'w-9'
         } ${
           highlight
@@ -184,7 +184,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'Ä
               >
                 <span className="block mx-auto w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
                 <div className="flex items-center py-2">
-                  <span className="flex-1 text-[18px] font-bold">{title}</span>
+                  <span className="flex-1 text-lg font-bold">{title}</span>
                   <button type="button" onClick={() => setOpen(false)} aria-label="Kapat" className="w-10 h-10 -mr-2 rounded-full flex items-center justify-center text-ink-2 cursor-pointer">
                     <X className="w-5 h-5" />
                   </button>

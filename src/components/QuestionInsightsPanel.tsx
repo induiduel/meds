@@ -23,7 +23,7 @@ function Chips({ items }: { items: string[] }) {
   return (
     <div className="flex flex-wrap gap-1.5">
       {items.map((t) => (
-        <span key={t} className="px-2 py-0.5 rounded-full bg-canvas text-[12px] text-ink-2">
+        <span key={t} className="px-2 py-0.5 rounded-full bg-canvas text-xs text-ink-2">
           {t}
         </span>
       ))}
@@ -62,8 +62,8 @@ export function QuestionInsightsPanel({
     };
   }, [questionId]);
 
-  if (!probed) return bare ? <p className="m-0 text-[12.5px] text-ink-3">Müfredat bilgisi yükleniyor…</p> : null;
-  if (!data) return bare ? <p className="m-0 text-[12.5px] text-ink-3">Bu soru için müfredat analizi henüz yok.</p> : null;
+  if (!probed) return bare ? <p className="m-0 text-sm text-ink-3">Müfredat bilgisi yükleniyor…</p> : null;
+  if (!data) return bare ? <p className="m-0 text-sm text-ink-3">Bu soru için müfredat analizi henüz yok.</p> : null;
 
   const f5 = data.faz5;
   const f65 = data.faz6_5;
@@ -80,9 +80,9 @@ export function QuestionInsightsPanel({
   const slides: { kaynak: string; sayfa: number; alinti?: string }[] = Array.isArray(data.slayt?.slaytlar) ? data.slayt.slaytlar : [];
   const ddx: { hastalik: string; ozellik?: string }[] = Array.isArray(f6?.ayirici_tani) ? f6.ayirici_tani : [];
   const icd: string[] = Array.isArray(f6?.icd10) ? f6.icd10 : [];
-  if (!k && !terms.length && !synonyms.length && !abbrs.length && !slides.length && !ddx.length) return bare ? <p className="m-0 text-[12.5px] text-ink-3">Bu soru için müfredat analizi henüz yok.</p> : null;
+  if (!k && !terms.length && !synonyms.length && !abbrs.length && !slides.length && !ddx.length) return bare ? <p className="m-0 text-sm text-ink-3">Bu soru için müfredat analizi henüz yok.</p> : null;
   const baslik = k ? [k.ders, k.konu].filter(Boolean).join(' · ') : slides.length ? 'İlgili slaytlar' : 'Terimler';
-  const h4 = 'm-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3 flex items-center gap-1';
+  const h4 = 'm-0 text-xs font-semibold uppercase tracking-wide text-ink-3 flex items-center gap-1';
 
   const content = (
     <>
@@ -90,7 +90,7 @@ export function QuestionInsightsPanel({
         <section className="flex flex-col gap-1">
           <h4 className={h4}>{k.kazanim ? 'Kazanım' : 'Müfredat'}{mf?.dogrulama === 'sinav_basligi' ? ' · sınav başlığından' : ' · Faz 8'}</h4>
           {k.kazanim && <p className="m-0 text-ink">{k.kazanim}</p>}
-          <p className="m-0 text-[12px] text-ink-3">{['Kurul ' + k.kurul, k.ders, k.konu].filter(Boolean).join(' · ')}</p>
+          <p className="m-0 text-xs text-ink-3">{['Kurul ' + k.kurul, k.ders, k.konu].filter(Boolean).join(' · ')}</p>
         </section>
       )}
 
@@ -103,7 +103,7 @@ export function QuestionInsightsPanel({
           {slides.slice(0, 3).map((sl) => (
             <div key={`${sl.kaynak}-${sl.sayfa}`} className="rounded-lg bg-canvas px-3 py-2 flex items-center justify-between gap-2 border border-line-2/50">
               <div className="min-w-0 flex-1">
-                <p className="m-0 text-[13px] font-semibold text-ink truncate">
+                <p className="m-0 text-sm font-semibold text-ink truncate">
                   {sl.kaynak} <span className="font-normal text-ink-3">· sayfa {sl.sayfa}</span>
                 </p>
                 {sl.alinti && <SourceText text={sl.alinti.replace(/^\[[^\]]*\]\s*/, '')} size="sm" terms={terms.slice(0, 8)} />}
@@ -127,7 +127,7 @@ export function QuestionInsightsPanel({
         <section className="flex flex-col gap-1">
           <h4 className={h4}>Kısaltmalar</h4>
           {abbrs.map(([ab, exp]) => (
-            <p key={ab} className="m-0 text-[12.5px]">
+            <p key={ab} className="m-0 text-sm">
               <span className="font-semibold text-ink">{ab}</span> = {exp}
             </p>
           ))}
@@ -141,7 +141,7 @@ export function QuestionInsightsPanel({
           </h4>
           <Chips items={terms} />
           {synonyms.map(([t, syn]) => (
-            <p key={t} className="m-0 text-[12.5px]">
+            <p key={t} className="m-0 text-sm">
               <span className="font-semibold text-ink">{t}</span> = {syn.join(', ')}
             </p>
           ))}
@@ -155,18 +155,18 @@ export function QuestionInsightsPanel({
             <span className="normal-case tracking-normal font-normal">· {f6?.dogrulanmadi ? 'yapay zekâ, doğrulanmadı' : 'ders materyaliyle desteklenen'}</span>
           </h4>
           {ddx.slice(0, 5).map((d) => (
-            <p key={d.hastalik} className="m-0 text-[12.5px]">
+            <p key={d.hastalik} className="m-0 text-sm">
               <span className="font-semibold text-ink">{d.hastalik}</span>
               {d.ozellik ? ` — ${d.ozellik}` : ''}
             </p>
           ))}
-          {icd.length > 0 && <p className="m-0 text-[12px] text-ink-3">ICD-10: {icd.join(', ')}</p>}
+          {icd.length > 0 && <p className="m-0 text-xs text-ink-3">ICD-10: {icd.join(', ')}</p>}
         </section>
       )}
     </>
   );
 
-  if (bare) return <div className="flex flex-col gap-3.5 text-[13.5px] text-ink-2">{content}</div>;
+  if (bare) return <div className="flex flex-col gap-3.5 text-base text-ink-2">{content}</div>;
 
   return (
     <div className="rounded-xl bg-field">
@@ -174,7 +174,7 @@ export function QuestionInsightsPanel({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="w-full min-h-11 px-3.5 py-2 flex items-center justify-between gap-2 text-left text-[14px] font-semibold text-ink cursor-pointer"
+        className="w-full min-h-11 px-3.5 py-2 flex items-center justify-between gap-2 text-left text-base font-semibold text-ink cursor-pointer"
       >
         <span className="flex items-center gap-1.5 min-w-0">
           <GraduationCap className="w-4 h-4 text-ink-3 shrink-0" />
@@ -182,7 +182,7 @@ export function QuestionInsightsPanel({
         </span>
         <ChevronDown className={`w-4 h-4 text-ink-3 shrink-0 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
-      {open && <div className="px-3.5 pb-3.5 flex flex-col gap-3 text-[13.5px] text-ink-2">{content}</div>}
+      {open && <div className="px-3.5 pb-3.5 flex flex-col gap-3 text-base text-ink-2">{content}</div>}
     </div>
   );
 }

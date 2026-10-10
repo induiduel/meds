@@ -126,21 +126,21 @@ export const ManageSystemSection: React.FC<{ notify: (msg: string) => void }> = 
       <section className="ms-panel ms-statusgrid grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4" aria-label="Sistem durumu">
         {status.map((x) => (
           <div key={x.name} className="px-4 py-3.5 flex flex-col gap-1 min-w-0">
-            <span className="text-[12.5px] font-medium text-ink-3">{x.name}</span>
-            <span className="flex items-center gap-2 text-[15px] font-semibold text-ink">
+            <span className="text-sm font-medium text-ink-3">{x.name}</span>
+            <span className="flex items-center gap-2 text-md font-semibold text-ink">
               <span className={`ms-sdot ${toneOf(x.s)}`} aria-hidden="true" />
               {STATUS_LABEL[x.s] || x.s}
             </span>
-            <span className="text-[12.5px] text-ink-3 truncate" title={x.detail}>{x.detail}</span>
+            <span className="text-sm text-ink-3 truncate" title={x.detail}>{x.detail}</span>
           </div>
         ))}
         <div className="px-4 py-3.5 flex flex-col gap-1 min-w-0">
-          <span className="text-[12.5px] font-medium text-ink-3">Arka plan işçisi</span>
-          <span className="flex items-center gap-2 text-[15px] font-semibold text-ink">
+          <span className="text-sm font-medium text-ink-3">Arka plan işçisi</span>
+          <span className="flex items-center gap-2 text-md font-semibold text-ink">
             <span className={`ms-sdot ${heartbeat ? (heartbeat.isOnline ? 'is-ok is-live' : 'is-bad') : ''}`} aria-hidden="true" />
             {heartbeat ? (heartbeat.isOnline ? 'Çevrimiçi' : 'Çevrimdışı') : 'Bilinmiyor'}
           </span>
-          <span className="text-[12.5px] text-ink-3 truncate" title={heartbeat?.message}>
+          <span className="text-sm text-ink-3 truncate" title={heartbeat?.message}>
             {heartbeat ? `${heartbeat.diffSeconds !== undefined ? `${heartbeat.diffSeconds} sn önce · ` : ''}${heartbeat.message}` : 'Servisler yüklenince görünür'}
           </span>
         </div>
@@ -162,7 +162,7 @@ export const ManageSystemSection: React.FC<{ notify: (msg: string) => void }> = 
         <button type="button" onClick={() => void realtimeTest()} disabled={realtime.running} className="ms-btn">
           <Radio /> {realtime.running ? 'Realtime test ediliyor…' : 'Realtime tur testi'}
         </button>
-        {realtime.message && <span className="text-[13px] text-ink-2">{realtime.message}</span>}
+        {realtime.message && <span className="text-sm text-ink-2">{realtime.message}</span>}
       </div>
 
       <Panel
@@ -198,10 +198,10 @@ export const ManageSystemSection: React.FC<{ notify: (msg: string) => void }> = 
                     <li key={s.id} className="ms-row !py-2.5 items-center">
                       <span className={`ms-sdot ${on ? 'is-ok' : ''}`} aria-hidden="true" />
                       <div className="ms-row-main !gap-0.5">
-                        <span className="text-[14px] font-medium text-ink truncate">{s.name}</span>
-                        {s.description && <span className="text-[12.5px] text-ink-3 truncate" title={s.description}>{s.description}</span>}
+                        <span className="text-base font-medium text-ink truncate">{s.name}</span>
+                        {s.description && <span className="text-sm text-ink-3 truncate" title={s.description}>{s.description}</span>}
                       </div>
-                      <span className={`text-[12.5px] font-semibold shrink-0 ${on ? 'text-ok' : 'text-ink-3'}`}>{s.statusLabel || s.status}</span>
+                      <span className={`text-sm font-semibold shrink-0 ${on ? 'text-ok' : 'text-ink-3'}`}>{s.statusLabel || s.status}</span>
                     </li>
                   );
                 })}

@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://induiduel.github.io/meds/",
   "scripts": {
-    "dev": "tsx server.ts",
+    "dev": "tsx watch server.ts",
     "build": "vite build",
     "build:gh-pages": "BUILD_TARGET=gh-pages vite build --outDir dist-gh",
     "predeploy": "npm run build:gh-pages",
@@ -48,6 +48,7 @@
     "express": "^4.21.2",
     "firebase": "^12.19.0",
     "jspdf": "^4.2.1",
+    "lottie-web": "^5.12.2",
     "lucide-react": "^0.546.0",
     "mammoth": "^1.13.0",
     "motion": "^12.23.24",

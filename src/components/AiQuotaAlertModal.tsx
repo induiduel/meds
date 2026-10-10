@@ -103,16 +103,16 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
         className="ms-modal-panel w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-line flex flex-col overflow-hidden"
       >
         {/* Header */}
-        <div className="px-5 sm:px-6 py-4 border-b border-line bg-purple-50 flex items-center justify-between">
+        <div className="px-5 sm:px-6 py-4 border-b border-line bg-ai-soft flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-sm animate-pulse">
+            <span className="w-10 h-10 rounded-xl bg-ai text-white flex items-center justify-center shrink-0 shadow-sm animate-pulse">
               <Sparkles className="w-5 h-5" />
             </span>
             <div>
-              <h3 id="ai-quota-title" className="font-display font-bold text-[17px] sm:text-[18px] text-purple-950 m-0">
+              <h3 id="ai-quota-title" className="font-display font-bold text-lg sm:text-lg text-ai m-0">
                 Yapay Zeka İstek Limiti Aşıldı (Hata 429)
               </h3>
-              <p className="text-[13px] text-purple-800 m-0">
+              <p className="text-sm text-ai m-0">
                 {sourceFunction} için ücretsiz API kotası geçici olarak doldu
               </p>
             </div>
@@ -121,7 +121,7 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
             type="button"
             onClick={onClose}
             aria-label="Kapat"
-            className="w-8 h-8 rounded-lg hover:bg-purple-100 text-purple-900 flex items-center justify-center transition-colors cursor-pointer"
+            className="w-8 h-8 rounded-lg hover:bg-ai-soft text-ai flex items-center justify-center transition-colors cursor-pointer"
           >
             <X className="w-4 h-4" />
           </button>
@@ -130,16 +130,16 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
         {/* Body */}
         <div className="p-5 sm:p-6 space-y-5 text-ink">
           {/* Explanation Alert */}
-          <div className="p-3.5 rounded-xl bg-canvas border border-line text-[13px] space-y-1">
+          <div className="p-3.5 rounded-xl bg-canvas border border-line text-sm space-y-1">
             <div className="font-semibold text-ink flex items-center gap-1.5">
-              <AlertTriangle className="w-4 h-4 text-amber-600" />
+              <AlertTriangle className="w-4 h-4 text-warn" />
               Neden bu uyarıyı aldınız?
             </div>
             <p className="text-ink-2 m-0 leading-relaxed">
               Google Gemini ücretsiz API havuzu dakikada en fazla 15 istek (RPM) veya günlük 1.500 istek kotasına sahiptir. Aynı anda çok sayıda soru düzenlendiğinde veya genel kota dolduğunda Google sunucuları geçici olarak yanıt vermeyi durdurur.
             </p>
             {errorDetails && (
-              <div className="text-[11px] font-mono text-red-600 mt-2 p-2 rounded bg-white border border-red-200">
+              <div className="text-2xs font-mono text-bad-text mt-2 p-2 rounded bg-white border border-bad/30">
                 {errorDetails}
               </div>
             )}
@@ -147,65 +147,65 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
 
           {/* Solutions Tabs */}
           <div className="space-y-3">
-            <div className="flex border-b border-line text-[13px] font-semibold gap-3 overflow-x-auto">
+            <div className="flex border-b border-line text-sm font-semibold gap-3 overflow-x-auto">
               <button
                 type="button"
                 onClick={() => setActiveTab('muse-spark')}
                 className={`pb-2 border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-                  activeTab === 'muse-spark' ? 'border-cyan-600 text-cyan-800 font-bold' : 'border-transparent text-ink-3 hover:text-ink'
+                  activeTab === 'muse-spark' ? 'border-accent text-accent font-bold' : 'border-transparent text-ink-3 hover:text-ink'
                 }`}
               >
-                <Cpu className="w-3.5 h-3.5 text-cyan-600" />
+                <Cpu className="w-3.5 h-3.5 text-accent" />
                 Muse Spark 1.3 Free (Kurtarıcı)
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab('groq')}
                 className={`pb-2 border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-                  activeTab === 'groq' ? 'border-purple-600 text-purple-700' : 'border-transparent text-ink-3 hover:text-ink'
+                  activeTab === 'groq' ? 'border-ai text-ai' : 'border-transparent text-ink-3 hover:text-ink'
                 }`}
               >
-                <Zap className="w-3.5 h-3.5 text-purple-600" />
+                <Zap className="w-3.5 h-3.5 text-ai" />
                 Ücretsiz Groq
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab('gemini')}
                 className={`pb-2 border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-                  activeTab === 'gemini' ? 'border-purple-600 text-purple-700' : 'border-transparent text-ink-3 hover:text-ink'
+                  activeTab === 'gemini' ? 'border-ai text-ai' : 'border-transparent text-ink-3 hover:text-ink'
                 }`}
               >
-                <Key className="w-3.5 h-3.5 text-purple-600" />
+                <Key className="w-3.5 h-3.5 text-ai" />
                 Kendi Gemini Anahtarın
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab('wait')}
                 className={`pb-2 border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-                  activeTab === 'wait' ? 'border-purple-600 text-purple-700' : 'border-transparent text-ink-3 hover:text-ink'
+                  activeTab === 'wait' ? 'border-ai text-ai' : 'border-transparent text-ink-3 hover:text-ink'
                 }`}
               >
-                <Clock className="w-3.5 h-3.5 text-purple-600" />
+                <Clock className="w-3.5 h-3.5 text-ai" />
                 Bekle & Yeniden Dene
               </button>
             </div>
 
             {/* TAB: MUSE SPARK 1.3 FREE */}
             {activeTab === 'muse-spark' && (
-              <div className="p-4 rounded-xl border border-cyan-200 bg-cyan-50/50 space-y-3 text-[13px]">
-                <div className="flex items-center gap-2 text-cyan-900 font-bold">
-                  <span className="w-2.5 h-2.5 rounded-full bg-cyan-600 animate-pulse" />
+              <div className="p-4 rounded-xl border border-accent/30 bg-accent-soft/50 space-y-3 text-sm">
+                <div className="flex items-center gap-2 text-accent font-bold">
+                  <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse" />
                   <span>Otomatik Kota Kurtarıcı Aktif</span>
                 </div>
-                <p className="text-cyan-950 m-0 leading-relaxed">
+                <p className="text-accent m-0 leading-relaxed">
                   <strong>Muse Spark 1.3 Free</strong>, sitede Google Gemini ve Groq Cloud kotalarının tamamı tükendiğinde soru sorma işlemlerinde otomatik devreye giren yüksek performanslı akıl yürütme modelidir.
                 </p>
-                <div className="p-2.5 rounded-lg bg-white border border-cyan-200 text-[12px] text-cyan-900 space-y-1">
+                <div className="p-2.5 rounded-lg bg-white border border-accent/30 text-xs text-accent space-y-1">
                   <div>✓ <strong>Model:</strong> Muse Spark 1.3 Free (Contributor Tier)</div>
                   <div>✓ <strong>Çalışma Prensibi:</strong> Tüm AI limitleri dolduğunda sorularınız kesintisiz olarak Muse Spark üzerinden yanıtlanır.</div>
                 </div>
                 <div className="space-y-2 pt-1">
-                  <label className="block text-[12px] font-semibold text-cyan-950">
+                  <label className="block text-xs font-semibold text-accent">
                     Özel Muse Spark / OpenCode / OpenRouter Anahtarı (İsteğe Bağlı):
                   </label>
                   <div className="flex items-center gap-2">
@@ -214,17 +214,17 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
                       value={customMuseSparkKey}
                       onChange={(e) => setCustomMuseSparkKey(e.target.value)}
                       placeholder="OpenCode / Muse Spark API Anahtarı..."
-                      className="flex-1 h-9 px-3 rounded-lg border border-cyan-300 bg-white font-mono text-[12px] text-ink outline-0 focus:border-cyan-600"
+                      className="flex-1 h-9 px-3 rounded-lg border border-accent/30 bg-white font-mono text-xs text-ink outline-0 focus:border-accent"
                     />
                     <button
                       type="button"
                       onClick={handleSaveMuseSparkKey}
-                      className="h-9 px-4 rounded-lg bg-cyan-700 hover:bg-cyan-800 text-white font-semibold text-[13px] cursor-pointer transition-colors"
+                      className="h-9 px-4 rounded-lg bg-accent hover:bg-accent text-white font-semibold text-sm cursor-pointer transition-colors"
                     >
                       {savedSuccess ? 'Kaydedildi ✓' : 'Kaydet'}
                     </button>
                   </div>
-                  <p className="text-[11px] text-cyan-800 m-0">
+                  <p className="text-2xs text-accent m-0">
                     Anahtar girmeseniz dahi yerleşik Muse Spark 1.3 havuzu arka planda otomatik devreye girer.
                   </p>
                 </div>
@@ -233,8 +233,8 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
 
             {/* TAB: GROQ */}
             {activeTab === 'groq' && (
-              <div className="p-4 rounded-xl border border-purple-200 bg-purple-50/50 space-y-3 text-[13px]">
-                <p className="text-purple-900 m-0">
+              <div className="p-4 rounded-xl border border-ai/30 bg-ai-soft/50 space-y-3 text-sm">
+                <p className="text-ai m-0">
                   <strong>Groq Cloud</strong>, Gemini'den bağımsız olarak Llama 3.3 70B modelini saniyede 300+ token hızında tamamen ücretsiz ve sınırsız çalıştırır.
                 </p>
                 <div className="space-y-2">
@@ -244,13 +244,13 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
                       value={customGroqKey}
                       onChange={(e) => setCustomGroqKey(e.target.value)}
                       placeholder="gsk_..."
-                      className="flex-1 h-9 px-3 rounded-lg border border-purple-300 bg-white font-mono text-[12px] text-ink outline-0 focus:border-purple-600"
+                      className="flex-1 h-9 px-3 rounded-lg border border-ai/30 bg-white font-mono text-xs text-ink outline-0 focus:border-ai"
                     />
                     <button
                       type="button"
                       onClick={handleSaveGroqKey}
                       disabled={!customGroqKey.trim()}
-                      className="h-9 px-4 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-semibold text-[13px] disabled:opacity-50 cursor-pointer transition-colors"
+                      className="h-9 px-4 rounded-lg bg-ai hover:bg-ai text-white font-semibold text-sm disabled:opacity-50 cursor-pointer transition-colors"
                     >
                       {savedSuccess ? 'Kaydedildi ✓' : 'Kaydet ve Devam Et'}
                     </button>
@@ -259,7 +259,7 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
                     href="https://console.groq.com/keys"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[12px] text-purple-700 font-semibold hover:underline"
+                    className="inline-flex items-center gap-1 text-xs text-ai font-semibold hover:underline"
                   >
                     10 saniyede ücretsiz Groq anahtarı al →
                     <ExternalLink className="w-3 h-3" />
@@ -270,7 +270,7 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
 
             {/* TAB: GEMINI KEY */}
             {activeTab === 'gemini' && (
-              <div className="p-4 rounded-xl border border-line bg-canvas/40 space-y-3 text-[13px]">
+              <div className="p-4 rounded-xl border border-line bg-canvas/40 space-y-3 text-sm">
                 <p className="text-ink-2 m-0">
                   Google AI Studio'dan kendi adınıza açacağınız ücretsiz API anahtarını tanımlayarak genel kullanıcıların harcadığı kotadan bağımsız olabilirsiniz.
                 </p>
@@ -281,13 +281,13 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
                       value={customKey}
                       onChange={(e) => setCustomKey(e.target.value)}
                       placeholder="AIzaSy..."
-                      className="flex-1 h-9 px-3 rounded-lg border border-line bg-white font-mono text-[12px] text-ink outline-0 focus:border-accent"
+                      className="flex-1 h-9 px-3 rounded-lg border border-line bg-white font-mono text-xs text-ink outline-0 focus:border-accent"
                     />
                     <button
                       type="button"
                       onClick={handleSaveGeminiKey}
                       disabled={!customKey.trim()}
-                      className="h-9 px-4 rounded-lg bg-accent text-white font-semibold text-[13px] disabled:opacity-50 cursor-pointer"
+                      className="h-9 px-4 rounded-lg bg-accent text-white font-semibold text-sm disabled:opacity-50 cursor-pointer"
                     >
                       {savedSuccess ? 'Kaydedildi ✓' : 'Uygula'}
                     </button>
@@ -296,7 +296,7 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
                     href="https://aistudio.google.com/apikey"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[12px] text-accent font-semibold hover:underline"
+                    className="inline-flex items-center gap-1 text-xs text-accent font-semibold hover:underline"
                   >
                     Google AI Studio'dan Ücretsiz Anahtar Al →
                     <ExternalLink className="w-3 h-3" />
@@ -308,14 +308,14 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
             {/* TAB: WAIT & RETRY */}
             {activeTab === 'wait' && (
               <div className="p-4 rounded-xl border border-line bg-canvas/40 text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-purple-100 text-purple-700 mx-auto flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-ai-soft text-ai mx-auto flex items-center justify-center">
                   <Clock className="w-6 h-6 animate-pulse" />
                 </div>
                 <div>
-                  <div className="font-bold text-[18px] text-ink font-mono">
+                  <div className="font-bold text-lg text-ink font-mono">
                     {countdown > 0 ? `${countdown} saniye` : 'Kota Sıfırlandı!'}
                   </div>
-                  <p className="text-[12px] text-ink-3 mt-1 m-0">
+                  <p className="text-xs text-ink-3 mt-1 m-0">
                     {countdown > 0 
                       ? 'Dakikalık istek limitinin sıfırlanması bekleniyor...'
                       : 'Dakikalık kota yenilendi, şimdi tekrar deneyebilirsiniz!'}
@@ -328,7 +328,7 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
                     onClose();
                   }}
                   disabled={!canRetryNow}
-                  className="h-9 px-5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-semibold text-[13px] inline-flex items-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="h-9 px-5 rounded-lg bg-ai hover:bg-ai text-white font-semibold text-sm inline-flex items-center gap-2 cursor-pointer disabled:opacity-50"
                 >
                   <RefreshCw className="w-3.5 h-3.5" />
                   Şimdi Tekrar Dene
@@ -339,13 +339,13 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-3 border-t border-line bg-canvas flex items-center justify-between text-[12px] text-ink-3">
+        <div className="px-6 py-3 border-t border-line bg-canvas flex items-center justify-between text-xs text-ink-3">
           <span>MeDSor Yapay Zeka Hata Kalkanı</span>
           <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={onClose}
-              className="h-8 px-4 rounded-lg bg-white border border-line hover:bg-canvas text-ink font-semibold text-[13px] cursor-pointer"
+              className="h-8 px-4 rounded-lg bg-white border border-line hover:bg-canvas text-ink font-semibold text-sm cursor-pointer"
             >
               Manuel Düzenlemeye Dön
             </button>

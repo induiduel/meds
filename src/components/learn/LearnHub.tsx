@@ -147,17 +147,16 @@ export const LearnHub: React.FC<{
 
   return (
     <div className="lh">
-      <header className="lh-head">
-        <div className="lh-title">
-          <h1 className="ms-page-title m-0">Öğren</h1>
-          <p>Ders anlatımı, etkinlikler ve interaktif mini sorularla adım adım çalış.</p>
+      <header className="cx-page">
+        <div className="cx-head">
+          <h1 className="ms-page-title cx-title">Öğren</h1>
+          <span className="cx-count" aria-live="polite">
+            <span className="cx-stat">{scoped.length} <small>ders</small></span>
+            <span className="cx-stat"><i aria-hidden>·</i>{totals.steps.toLocaleString('tr-TR')} <small>adım</small></span>
+            <span className="cx-stat"><i aria-hidden>·</i>{totals.cards.toLocaleString('tr-TR')} <small>kart</small></span>
+            {totals.pct > 0 && <span className="cx-stat is-accent"><i aria-hidden>·</i>%{totals.pct} <small>ilerleme</small></span>}
+          </span>
         </div>
-        <dl className="lh-stats">
-          <div><dt>Ders</dt><dd>{scoped.length}</dd></div>
-          <div><dt>Adım</dt><dd>{totals.steps.toLocaleString('tr-TR')}</dd></div>
-          <div><dt>Akıl Kartı</dt><dd>{totals.cards.toLocaleString('tr-TR')}</dd></div>
-          <div className="is-accent"><dt>İlerleme</dt><dd>%{totals.pct}</dd></div>
-        </dl>
       </header>
 
       {resume.length > 0 && !filtered && (

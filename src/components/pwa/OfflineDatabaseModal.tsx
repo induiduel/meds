@@ -1,349 +1,251 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
-  DownloadCloud,
-  CheckCircle2,
-  AlertCircle,
-  Wifi,
-  WifiOff,
-  RefreshCw,
-  Trash2,
-  Smartphone,
-  HardDrive,
-  Database,
-  BookOpen,
-  Archive,
-  Layers,
-  Sparkles,
-  X,
-  Share2,
-  BookOpenText,
-  FileQuestion,
+  Archive, BookOpenText, CheckCircle2, CloudDownload, Layers, RefreshCw, Share2, Smartphone, Trash2, WifiOff, FileQuestion, Database, Inbox,
 } from 'lucide-react';
 import { offlineDatabaseService, OfflineState } from '../../services/offlineDatabaseService';
 import { pwaService, PwaState } from '../../services/pwaService';
+import { Dialog } from '../ui/Dialog';
 
 interface OfflineDatabaseModalProps {
   isOpen: boolean;
   onClose: () => void;
+  /** Yönetici teknik ayrıntıyı (depo sayıları, SW, kuyruk) görür; öğrenci yalnız durumu ve tek eylemi */
+  isAdmin?: boolean;
 }
 
-export const OfflineDatabaseModal: React.FC<OfflineDatabaseModalProps> = ({ isOpen, onClose }) => {
-  const [offlineState, setOfflineState] = useState<OfflineState>(offlineDatabaseService.getState());
-  const [pwaState, setPwaState] = useState<PwaState>(pwaService.getState());
-  const [isIos, setIsIos] = useState(false);
-  const [showIosGuide, setShowIosGuide] = useState(false);
+const nf = (n: number) => n.toLocaleString('tr-TR');
+const when = (iso: string | null, full = false) =>
+  iso
+    ? new Date(iso).toLocaleString('tr-TR', full
+      ? { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' }
+      : { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })
+    : '';
 
+const useOfflineState = () => {
+  const [o, setO] = useState<OfflineState>(offlineDatabaseService.getState());
+  const [p, setP] = useState<PwaState>(pwaService.getState());
   useEffect(() => {
-    const unsubOffline = offlineDatabaseService.subscribe(setOfflineState);
-    const unsubPwa = pwaService.subscribe(setPwaState);
-
-    if (typeof window !== 'undefined') {
-      const ua = window.navigator.userAgent.toLowerCase();
-      setIsIos(/iphone|ipad|ipod/.test(ua));
-    }
-
+    const a = offlineDatabaseService.subscribe(setO);
+    const b = pwaService.subscribe(setP);
     return () => {
-      unsubOffline();
-      unsubPwa();
+      a();
+      b();
     };
   }, []);
+  return [o, p] as const;
+};
 
-  if (!isOpen) return null;
+const isIos = () => typeof window !== 'undefined' && /iphone|ipad|ipod/i.test(window.navigator.userAgent);
 
-  const handleDownload = async () => {
-    try {
-      const ok = await offlineDatabaseService.downloadEntireDatabase();
-      if (!ok) {
-        console.warn('[OfflineModal] Download returned false');
-      }
-    } catch (e: any) {
-      console.error('[OfflineModal] Download error:', e);
-    }
-  };
-
-  const handleClear = async () => {
-    if (confirm('Cihazınızdaki çevrimdışı soru ve deste veritabanını temizlemek istediğinize emin misiniz?')) {
-      await offlineDatabaseService.clearDatabase();
-    }
-  };
-
-  const handleInstallPwa = async () => {
-    if (pwaState.canInstall) {
-      await pwaService.promptInstall();
-    } else if (isIos) {
-      setShowIosGuide(true);
-    }
-  };
-
-  const { stats, isDownloading, progress, isOnline, isDatabaseDownloaded } = offlineState;
-
+/** Durum satırı: tek bakışta "cihazda hazır mı" */
+const StateLine: React.FC<{ o: OfflineState; full?: boolean }> = ({ o, full }) => {
+  const tone = o.isDownloading ? 'is-busy' : !o.isOnline ? 'is-offline' : o.isDatabaseDownloaded ? 'is-ready' : 'is-empty';
+  const Icon = o.isDownloading ? RefreshCw : !o.isOnline ? WifiOff : o.isDatabaseDownloaded ? CheckCircle2 : CloudDownload;
+  const title = o.isDownloading
+    ? 'İndiriliyor'
+    : !o.isOnline
+      ? o.isDatabaseDownloaded ? 'İnternet yok · cihazdaki veriyle çalışıyor' : 'İnternet yok'
+      : o.isDatabaseDownloaded ? 'Cihazında hazır' : 'Henüz cihazında değil';
+  const sub = o.isDownloading
+    ? o.progress.stage
+    : o.isDatabaseDownloaded
+      ? o.stats.downloadedAt ? `Son güncelleme ${when(o.stats.downloadedAt, full)}` : 'İnternet olmadan da çalışır.'
+      : 'İndirince internet olmadan da çalışırsın.';
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/70 backdrop-blur-sm animate-in fade-in duration-200">
-      <div
-        className="w-full max-w-lg bg-surface border border-line rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Modal Başlık */}
-        <div className="px-5 py-4 border-b border-line flex items-center justify-between bg-surface-hover/30">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-2xl bg-accent-soft text-accent flex items-center justify-center">
-              <Database className="w-5 h-5" />
-            </div>
-            <div>
-              <h2 className="text-[17px] font-bold text-ink">Çevrimdışı Veritabanı & PWA</h2>
-              <div className="flex items-center gap-2 text-xs">
-                {isOnline ? (
-                  <span className="flex items-center gap-1 text-emerald-600 font-medium">
-                    <Wifi className="w-3.5 h-3.5" /> Çevrimiçi
-                  </span>
-                ) : (
-                  <span className="flex items-center gap-1 text-amber-600 font-medium">
-                    <WifiOff className="w-3.5 h-3.5" /> Çevrimdışı Mod
-                  </span>
-                )}
-                <span className="text-ink-3">•</span>
-                <span className="text-ink-2">Arka Plan Desteği Aktif</span>
-              </div>
-            </div>
-          </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="w-8 h-8 rounded-full flex items-center justify-center text-ink-3 hover:text-ink hover:bg-canvas transition-colors cursor-pointer"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Modal İçerik */}
-        <div className="p-5 overflow-y-auto space-y-5 flex-1">
-          {/* Durum Özeti Kartı */}
-          <div
-            className={`p-4 rounded-2xl border transition-all ${
-              isDatabaseDownloaded
-                ? 'bg-emerald-500/5 border-emerald-500/20 text-emerald-950 dark:text-emerald-100'
-                : 'bg-amber-500/5 border-amber-500/20 text-amber-950 dark:text-amber-100'
-            }`}
-          >
-            <div className="flex items-start gap-3">
-              {isDatabaseDownloaded ? (
-                <div className="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                  <CheckCircle2 className="w-5 h-5" />
-                </div>
-              ) : (
-                <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
-                  <AlertCircle className="w-5 h-5" />
-                </div>
-              )}
-              <div className="flex-1 min-w-0">
-                <h3 className="font-semibold text-sm">
-                  {isDatabaseDownloaded
-                    ? 'Veritabanı Cihazınızda Kurulu (Tam Çevrimdışı)'
-                    : 'Veritabanı Henüz Cihaza İndirilmedi'}
-                </h3>
-                <p className="text-xs text-ink-2 mt-1 leading-relaxed">
-                  {isDatabaseDownloaded
-                    ? `İnternetiniz olmasa bile tüm soruları çözebilir, ders destelerini okuyabilirsiniz. (Son indirme: ${
-                        stats.downloadedAt
-                          ? new Date(stats.downloadedAt).toLocaleDateString('tr-TR', {
-                              day: 'numeric',
-                              month: 'long',
-                              hour: '2-digit',
-                              minute: '2-digit',
-                            })
-                          : 'Tamamlandı'
-                      })`
-                    : 'Hastanede, metroda veya internetsiz ortamlarda kesintisiz çalışabilmek için tüm veri havuzunu tek tıkla cihazınıza indirebilirsiniz.'}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* İndirme İlerleme Çubuğu */}
-          {isDownloading && (
-            <div className="p-4 rounded-2xl bg-accent-soft border border-accent/20 space-y-2.5">
-              <div className="flex items-center justify-between text-xs font-semibold text-accent">
-                <span className="flex items-center gap-1.5">
-                  <RefreshCw className="w-3.5 h-3.5 animate-spin" /> {progress.stage}
-                </span>
-                <span>%{progress.percent}</span>
-              </div>
-              <div className="w-full h-2 bg-accent/20 rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-accent transition-all duration-300 rounded-full"
-                  style={{ width: `${progress.percent}%` }}
-                />
-              </div>
-            </div>
-          )}
-
-          {/* Veritabanı Kapsamı Tablosu */}
-          <div className="space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-ink-3">
-              Cihaza İndirilen Veriler
-            </h4>
-            <div className="grid grid-cols-2 gap-2.5">
-              <div className="p-3 rounded-2xl bg-canvas border border-line flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-sky-500/10 text-sky-600 flex items-center justify-center shrink-0">
-                  <Archive className="w-4 h-4" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-ink">
-                    {stats.pastQuestionsCount > 0 ? `${stats.pastQuestionsCount.toLocaleString()} Soru` : '5.695 Soru'}
-                  </div>
-                  <div className="text-[11px] text-ink-3">Çıkmış Sınavlar</div>
-                </div>
-              </div>
-
-              <div className="p-3 rounded-2xl bg-canvas border border-line flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center shrink-0">
-                  <Layers className="w-4 h-4" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-ink">
-                    {stats.decksCount > 0 ? `${stats.decksCount} Deste` : '114+ Deste'}
-                  </div>
-                  <div className="text-[11px] text-ink-3">İnteraktif Öğren</div>
-                </div>
-              </div>
-
-              <div className="p-3 rounded-2xl bg-canvas border border-line flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0">
-                  <BookOpen className="w-4 h-4" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-ink">66+ Ders</div>
-                  <div className="text-[11px] text-ink-3">Amfi Notları & Özet</div>
-                </div>
-              </div>
-
-              <div className="p-3 rounded-2xl bg-canvas border border-line flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-teal-500/10 text-teal-600 flex items-center justify-center shrink-0">
-                  <BookOpenText className="w-4 h-4" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-ink">
-                    {stats.glossaryCount > 0 ? `${stats.glossaryCount} Terim` : '1.000+ Terim'}
-                  </div>
-                  <div className="text-[11px] text-ink-3">Tıbbi Sözlük</div>
-                </div>
-              </div>
-
-              <div className="p-3 rounded-2xl bg-canvas border border-line flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center shrink-0">
-                  <FileQuestion className="w-4 h-4" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-ink">
-                    {stats.flashcardsCount > 0 ? `${stats.flashcardsCount} Kart` : '2.500+ Kart'}
-                  </div>
-                  <div className="text-[11px] text-ink-3">Akıl Kartları</div>
-                </div>
-              </div>
-
-              <div className="p-3 rounded-2xl bg-canvas border border-line flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
-                  <HardDrive className="w-4 h-4" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-ink">~{stats.estimatedSizeMb || 25} MB</div>
-                  <div className="text-[11px] text-ink-3">Yerel Depolama</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* İndir & Güncelle Butonları */}
-          <div className="space-y-2 pt-1">
-            <button
-              type="button"
-              disabled={isDownloading}
-              onClick={handleDownload}
-              className={`w-full py-3.5 px-4 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 cursor-pointer shadow-lg transition-all ${
-                isDownloading
-                  ? 'bg-slate-400 text-white cursor-not-allowed'
-                  : 'bg-accent text-white hover:bg-accent-hover active:scale-[0.99]'
-              }`}
-            >
-              {isDownloading ? (
-                <>
-                  <RefreshCw className="w-4 h-4 animate-spin" /> Veritabanı İndiriliyor...
-                </>
-              ) : isDatabaseDownloaded ? (
-                <>
-                  <RefreshCw className="w-4 h-4" /> Veritabanını Yenile / Güncelle
-                </>
-              ) : (
-                <>
-                  <DownloadCloud className="w-4 h-4" /> Tüm Veritabanını Cihaza İndir
-                </>
-              )}
-            </button>
-
-            {isDatabaseDownloaded && (
-              <button
-                type="button"
-                disabled={isDownloading}
-                onClick={handleClear}
-                className="w-full py-2.5 px-4 rounded-xl font-medium text-xs text-rose-500 hover:bg-rose-500/10 flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
-              >
-                <Trash2 className="w-3.5 h-3.5" /> Cihaz Önbelleğini Temizle
-              </button>
-            )}
-          </div>
-
-          {/* PWA Kurulum Bölümü */}
-          <div className="p-4 rounded-2xl bg-canvas border border-line space-y-3">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center shrink-0">
-                <Smartphone className="w-4 h-4" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h4 className="text-sm font-bold text-ink">Cihaza Kur (Uygulama Modu)</h4>
-                <p className="text-xs text-ink-3">
-                  {pwaState.isInstalled
-                    ? '✓ MedSoru cihazınızda bağımsız uygulama olarak çalışıyor.'
-                    : 'Tarayıcı çubuğu olmadan tam ekran mobil/masaüstü deneyimi.'}
-                </p>
-              </div>
-            </div>
-
-            {!pwaState.isInstalled && (
-              <>
-                {pwaState.canInstall ? (
-                  <button
-                    type="button"
-                    onClick={handleInstallPwa}
-                    className="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs flex items-center justify-center gap-2 cursor-pointer transition-colors shadow-sm"
-                  >
-                    <Smartphone className="w-4 h-4" /> Uygulamayı Cihaza Yükle
-                  </button>
-                ) : isIos ? (
-                  <div className="p-3 rounded-xl bg-surface border border-line text-xs text-ink-2 space-y-1.5">
-                    <div className="font-semibold text-ink flex items-center gap-1.5">
-                      <Share2 className="w-3.5 h-3.5 text-accent" /> iOS Safari Kurulum Rehberi:
-                    </div>
-                    <ol className="list-decimal list-inside space-y-1 text-ink-3">
-                      <li>Safari altındaki <strong>Paylaş</strong> simgesine dokunun.</li>
-                      <li>Açılan menüde aşağı kaydırıp <strong>"Ana Ekrana Ekle"</strong>yi seçin.</li>
-                    </ol>
-                  </div>
-                ) : (
-                  <div className="text-xs text-ink-3 italic">
-                    Tarayıcınızın adres çubuğundaki "Yükle" simgesine tıklayarak doğrudan kurabilirsiniz.
-                  </div>
-                )}
-              </>
-            )}
-          </div>
-
-          {/* Bilgi Kutusu */}
-          <div className="text-[11px] text-ink-3 leading-relaxed text-center px-2">
-            💡 Veriler cihazınızın güvenli yerel depolama alanında (IndexedDB) saklanır.
-            Arka plan servis yöneticisi (Service Worker) sayesinde internet kesildiğinde otomatik olarak yerel veritabanına geçilir.
-          </div>
-        </div>
+    <div className={`of-state ${tone}`} role="status">
+      <span className="of-orb" aria-hidden><Icon /></span>
+      <div className="of-state-t">
+        <b>{title}</b>
+        <span>{sub}</span>
       </div>
     </div>
+  );
+};
+
+const Progress: React.FC<{ o: OfflineState; detail?: boolean }> = ({ o, detail }) => (
+  <div className="of-progress" aria-live="polite">
+    <div className="of-progress-top">
+      <span>{o.progress.stage}</span>
+      <b>%{o.progress.percent}</b>
+    </div>
+    <div className="ms-progress"><span style={{ width: `${o.progress.percent}%` }} /></div>
+    {detail && o.progress.totalCount ? <span className="of-mono">{nf(o.progress.currentCount || 0)} / {nf(o.progress.totalCount)}</span> : null}
+  </div>
+);
+
+const InstallRow: React.FC<{ p: PwaState }> = ({ p }) => {
+  const [guide, setGuide] = useState(false);
+  if (p.isInstalled) {
+    return <p className="of-note is-ok"><Smartphone aria-hidden /> Uygulama olarak kurulu.</p>;
+  }
+  return (
+    <div className="of-install">
+      <div className="of-install-t">
+        <Smartphone aria-hidden />
+        <span><b>Ana ekrana ekle</b><small>Tam ekran açılır, tek dokunuşla başlar.</small></span>
+        {p.canInstall ? (
+          <button type="button" className="ms-btn is-tonal is-sm" onClick={() => pwaService.promptInstall()}>Ekle</button>
+        ) : isIos() ? (
+          <button type="button" className="ms-btn is-ghost is-sm" onClick={() => setGuide((g) => !g)} aria-expanded={guide}>Nasıl?</button>
+        ) : null}
+      </div>
+      {guide && (
+        <ol className="of-steps">
+          <li><Share2 aria-hidden /> Safari'de <b>Paylaş</b>'a dokun.</li>
+          <li><b>Ana Ekrana Ekle</b>'yi seç, <b>Ekle</b>'ye dokun.</li>
+        </ol>
+      )}
+      {!p.canInstall && !isIos() && <small className="of-hint">Tarayıcının adres çubuğundaki kurulum simgesini kullan.</small>}
+    </div>
+  );
+};
+
+/** İki adımlı kaldırma: ilk dokunuş onay ister */
+const ClearButton: React.FC<{ disabled?: boolean; label: string }> = ({ disabled, label }) => {
+  const [arm, setArm] = useState(false);
+  useEffect(() => {
+    if (!arm) return;
+    const t = window.setTimeout(() => setArm(false), 3500);
+    return () => window.clearTimeout(t);
+  }, [arm]);
+  return (
+    <button
+      type="button"
+      disabled={disabled}
+      className={`ms-btn is-danger is-sm ${arm ? 'is-armed' : ''}`}
+      onClick={async () => {
+        if (!arm) return setArm(true);
+        setArm(false);
+        await offlineDatabaseService.clearDatabase();
+      }}
+    >
+      <Trash2 /> {arm ? 'Emin misin? Tekrar dokun' : label}
+    </button>
+  );
+};
+
+const StudentView: React.FC<{ o: OfflineState; p: PwaState }> = ({ o, p }) => {
+  const s = o.stats;
+  const rows: [React.ElementType, string, string][] = [
+    [Archive, 'Çıkmış sorular', s.pastQuestionsCount ? nf(s.pastQuestionsCount) : ''],
+    [Layers, 'Öğren desteleri', s.decksCount ? nf(s.decksCount) : ''],
+    [BookOpenText, 'Sözlük', s.glossaryCount ? nf(s.glossaryCount) : ''],
+    [FileQuestion, 'Ezber kartları', s.flashcardsCount ? nf(s.flashcardsCount) : ''],
+  ];
+  return (
+    <>
+      <StateLine o={o} />
+      <ul className={`of-list ${o.isDatabaseDownloaded ? 'is-ready' : ''}`}>
+        {rows.map(([Icon, label, n], i) => (
+          <li key={label} style={{ '--i': i } as React.CSSProperties}>
+            <Icon aria-hidden />
+            <span>{label}</span>
+            {o.isDatabaseDownloaded ? (n ? <b>{n}</b> : <em>güncellemede gelir</em>) : <i aria-hidden />}
+          </li>
+        ))}
+      </ul>
+      {o.isDownloading ? (
+        <Progress o={o} />
+      ) : (
+        <button
+          type="button"
+          className="ms-btn is-primary of-main"
+          disabled={!o.isOnline}
+          onClick={() => offlineDatabaseService.downloadEntireDatabase()}
+        >
+          {o.isDatabaseDownloaded ? <><RefreshCw /> Güncelle</> : <><CloudDownload /> Cihaza indir · ~{s.estimatedSizeMb || 25} MB</>}
+        </button>
+      )}
+      {!o.isOnline && !o.isDownloading && <p className="of-note">İndirmek için internete bağlan.</p>}
+      <InstallRow p={p} />
+      {o.isDatabaseDownloaded && !o.isDownloading && (
+        <div className="of-foot"><ClearButton label="Cihazdan kaldır" /></div>
+      )}
+    </>
+  );
+};
+
+const AdminView: React.FC<{ o: OfflineState; p: PwaState }> = ({ o, p }) => {
+  const s = o.stats;
+  const [syncing, setSyncing] = useState(false);
+  const [syncMsg, setSyncMsg] = useState('');
+  const kv: [string, string][] = [
+    ['Çıkmış soru', nf(s.pastQuestionsCount)],
+    ['Havuz sorusu', nf(s.poolQuestionsCount)],
+    ['Kurul', nf(s.committeesCount)],
+    ['Deste', nf(s.decksCount)],
+    ['Özet', nf(s.summariesCount)],
+    ['Sözlük', nf(s.glossaryCount)],
+    ['Kart', nf(s.flashcardsCount)],
+    ['Toplam öge', nf(s.totalItems)],
+    ['Tahmini boyut', `${s.estimatedSizeMb || 0} MB`],
+    ['Son indirme', s.downloadedAt ? when(s.downloadedAt, true) : '—'],
+  ];
+  const sys: [string, boolean, string, string][] = [
+    ['Ağ', o.isOnline, 'çevrimiçi', 'çevrimdışı'],
+    ['Service Worker', p.isRegistered, 'kayıtlı', 'yok'],
+    ['Background Sync', p.backgroundSyncSupported, 'var', 'yok'],
+    ['Periodic Sync', p.periodicSyncSupported, 'var', 'yok'],
+    ['Kurulum', p.isInstalled, 'uygulama', 'tarayıcı'],
+  ];
+  return (
+    <>
+      <StateLine o={o} full />
+      {o.isDownloading && <Progress o={o} detail />}
+      <section className="of-sec" aria-label="Depolar">
+        <h3>IndexedDB · medsoru_offline_db</h3>
+        <dl className="of-kv">
+          {kv.map(([k, v]) => (
+            <div key={k}><dt>{k}</dt><dd>{v}</dd></div>
+          ))}
+        </dl>
+      </section>
+      <section className="of-sec" aria-label="Sistem">
+        <h3>Sistem</h3>
+        <ul className="of-sys">
+          {sys.map(([k, ok, yes, no]) => (
+            <li key={k} className={ok ? 'is-ok' : ''}><i aria-hidden />{k}<b>{ok ? yes : no}</b></li>
+          ))}
+          {p.hasUpdate && <li className="is-warn"><i aria-hidden />Yeni sürüm<b>hazır</b></li>}
+          <li className={o.queuedActionsCount ? 'is-warn' : 'is-ok'}><i aria-hidden />Bekleyen işlem<b>{nf(o.queuedActionsCount)}</b></li>
+        </ul>
+      </section>
+      {syncMsg && <p className="of-note">{syncMsg}</p>}
+      <div className="of-actions">
+        <button type="button" className="ms-btn is-primary is-sm" disabled={o.isDownloading || !o.isOnline} onClick={() => offlineDatabaseService.downloadEntireDatabase()}>
+          {o.isDatabaseDownloaded ? <><RefreshCw /> Yeniden indir</> : <><CloudDownload /> İndir</>}
+        </button>
+        <button
+          type="button"
+          className="ms-btn is-sm"
+          disabled={syncing || !o.isOnline || !o.queuedActionsCount}
+          onClick={async () => {
+            setSyncing(true);
+            const r = await offlineDatabaseService.syncOfflineQueue();
+            setSyncing(false);
+            setSyncMsg(`Kuyruk: ${r.synced} eşitlendi, ${r.failed} başarısız.`);
+          }}
+        >
+          <Inbox /> Kuyruğu eşitle
+        </button>
+        <span className="flex-1" />
+        <ClearButton disabled={o.isDownloading || !o.isDatabaseDownloaded} label="Temizle" />
+      </div>
+    </>
+  );
+};
+
+export const OfflineDatabaseModal: React.FC<OfflineDatabaseModalProps> = ({ isOpen, onClose, isAdmin }) => {
+  const [o, p] = useOfflineState();
+  if (!isOpen) return null;
+  return (
+    <Dialog
+      title={isAdmin ? <span className="inline-flex items-center gap-2"><Database className="w-4 h-4 text-ink-3" /> Çevrimdışı veritabanı</span> : 'Çevrimdışı kullanım'}
+      subtitle={isAdmin ? 'Yönetici görünümü · depolar, eşitleme, PWA' : undefined}
+      onClose={onClose}
+      width={isAdmin ? 'max-w-lg' : 'max-w-md'}
+    >
+      <div className="of">{isAdmin ? <AdminView o={o} p={p} /> : <StudentView o={o} p={p} />}</div>
+    </Dialog>
   );
 };

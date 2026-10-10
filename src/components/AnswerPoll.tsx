@@ -216,7 +216,7 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
 
       {picked && canVote && (
         <div className="ms-poll-confirm ms-pop-in">
-          <span className="text-[13px] text-ink-2 min-w-0 flex-1">
+          <span className="text-sm text-ink-2 min-w-0 flex-1">
             <b className="text-ink">{picked}</b> şıkkına oy vereceksin. Sonra istersen değiştirebilirsin.
           </span>
           <button type="button" onClick={() => setPicked(null)} className="ms-btn is-ghost is-sm">Vazgeç</button>

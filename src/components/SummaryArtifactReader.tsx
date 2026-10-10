@@ -724,193 +724,116 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
     lineHeight === 'tight' ? 'leading-normal' : lineHeight === 'relaxed' ? 'leading-loose' : 'leading-relaxed';
 
   // Container width class
-  const widthClass =
-    widthMode === 'fullscreen'
-      ? 'w-full h-full max-w-none rounded-none m-0'
-      : widthMode === 'wide'
-      ? 'max-w-6xl w-full mx-auto my-3 sm:my-5 rounded-2xl max-h-[94dvh]'
-      : 'max-w-5xl w-full mx-auto my-3 sm:my-5 rounded-2xl max-h-[94dvh]';
+  // Okuma sütunu genişliği (kabuk her zaman tam ekran)
+  const measureClass = widthMode === 'fullscreen' ? 'max-w-none' : widthMode === 'wide' ? 'max-w-[980px]' : 'max-w-[760px]';
+  const [aaOpen, setAaOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const minutesLeft = Math.max(1, Math.round((summary.readingTimeMinutes || 1) * (1 - scrollProgress / 100)));
 
   return (
     <div
       ref={containerRef}
-      className={`ms-overlay fixed inset-0 z-50 bg-[rgba(14,26,38,0.45)] flex flex-col justify-center items-center p-0 sm:p-4 overflow-hidden select-text ${curTheme.container}`}
+      className={`rd-root fixed inset-0 z-50 flex flex-col overflow-hidden select-text ${curTheme.container}`}
       onClick={(e) => e.stopPropagation()}
     >
       {/* ========================================================
           MODAL READER WINDOW (Artifact Container)
           ======================================================== */}
       <div
-        className={`flex flex-col bg-[var(--reader-bg,#ffffff)] border border-[var(--reader-border,#e2e8f0)] shadow-2xl overflow-hidden transition-all duration-200 ${widthClass}`}
+        className="rd-shell flex flex-col bg-[var(--reader-bg,#ffffff)] overflow-hidden w-full h-full"
       >
         {/* ========================================================
             TOP DOCK TOOLBAR (Artifact Design Header)
             ======================================================== */}
-        <header className="bg-white border-b border-line text-ink shrink-0 px-2 sm:px-4 py-2 flex items-center gap-2 z-20">
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Okuyucuyu kapat"
-            title="Kapat (Esc)"
-            className="w-10 h-10 shrink-0 rounded-[10px] flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas cursor-pointer"
-          >
-            <X className="w-[18px] h-[18px]" />
+        <header className="rd-bar">
+          <button type="button" onClick={onClose} aria-label="Okuyucuyu kapat" title="Kapat (Esc)" className="rd-btn">
+            <X />
           </button>
-
-          <div className="min-w-0 flex-1">
-            <div className="flex items-center gap-1.5 text-[12px] text-ink-2 min-w-0">
-              <span className="shrink-0 font-semibold">Kurul {summary.kurul}</span>
-              <span aria-hidden="true">·</span>
-              <span className="truncate">{summary.discipline}</span>
-              <span className="hidden md:inline shrink-0 text-ink-3">· ~{summary.readingTimeMinutes} dk</span>
-            </div>
-            <h2 className="m-0 text-[15px] sm:text-[16px] font-semibold text-ink truncate">{summary.title}</h2>
+          <div className="rd-title">
+            <h2>{summary.title}</h2>
+            <span>
+              Kurul {summary.kurul} · {summary.discipline} · {scrollProgress >= 99 ? 'bitti' : `%${scrollProgress} · ~${minutesLeft} dk kaldı`}
+            </span>
           </div>
-
-          <div className="flex items-center gap-1 shrink-0">
-            <label className="relative hidden lg:flex items-center">
-              <span className="sr-only">Özet içinde ara</span>
-              <Search className="w-4 h-4 text-ink-2 absolute left-2.5 pointer-events-none" />
-              <input
-                type="search"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Özette ara"
-                className="w-44 h-9 pl-8 pr-2 text-[14px] bg-field border border-line-2 rounded-[10px] outline-0 focus:border-accent"
-              />
-            </label>
-
-            <div className="flex items-center h-9 bg-canvas rounded-[10px] p-0.5" role="group" aria-label="Yazı boyutu">
-              <button
-                type="button"
-                onClick={() => setFontScale((s) => Math.max(75, s - 10))}
-                aria-label="Yazıyı küçült"
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-ink-2 hover:bg-white hover:text-ink cursor-pointer"
-              >
-                <ZoomOut className="w-4 h-4" />
-              </button>
-              <button
-                type="button"
-                onClick={() => setFontScale(100)}
-                aria-label={`Yazı boyutu yüzde ${fontScale}, sıfırla`}
-                className="hidden sm:block min-w-10 font-mono text-[12px] text-ink-2 cursor-pointer"
-              >
-                %{fontScale}
-              </button>
-              <button
-                type="button"
-                onClick={() => setFontScale((s) => Math.min(160, s + 10))}
-                aria-label="Yazıyı büyüt"
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-ink-2 hover:bg-white hover:text-ink cursor-pointer"
-              >
-                <ZoomIn className="w-4 h-4" />
-              </button>
-            </div>
-
-            <div className="flex items-center h-9 bg-canvas rounded-[10px] p-0.5" role="radiogroup" aria-label="Okuma teması">
-              {(
-                [
-                  ['light', Sun, 'Açık tema'],
-                  ['sepia', Coffee, 'Sepya tema'],
-                  ['dark', Moon, 'Koyu tema'],
-                ] as const
-              ).map(([id, Icon, label]) => (
-                <button
-                  key={id}
-                  type="button"
-                  role="radio"
-                  aria-checked={theme === id}
-                  aria-label={label}
-                  title={label}
-                  onClick={() => setTheme(id)}
-                  className={`w-8 h-8 rounded-lg flex items-center justify-center cursor-pointer ${
-                    theme === id ? 'bg-white text-accent shadow-xs' : 'text-ink-2 hover:text-ink'
-                  }`}
-                >
-                  <Icon className="w-4 h-4" />
+          <div className="rd-tools">
+            {searchOpen ? (
+              <label className="rd-search">
+                <Search aria-hidden />
+                <span className="sr-only">Özet içinde ara</span>
+                <input
+                  type="search"
+                  autoFocus
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Escape' && (setSearchQuery(''), setSearchOpen(false))}
+                  placeholder="Özette ara"
+                />
+                <button type="button" onClick={() => { setSearchQuery(''); setSearchOpen(false); }} aria-label="Aramayı kapat" className="rd-btn is-sm">
+                  <X />
                 </button>
-              ))}
-            </div>
-
-            <button
-              type="button"
-              onClick={() => setFontFamily((f) => (f === 'sans' ? 'serif' : 'sans'))}
-              aria-pressed={fontFamily === 'serif'}
-              aria-label="Kitap yazı tipi"
-              title={fontFamily === 'serif' ? 'Modern yazı tipine geç' : 'Kitap yazı tipine geç'}
-              className={`hidden sm:flex w-9 h-9 rounded-[10px] items-center justify-center text-[14px] font-serif cursor-pointer ${
-                fontFamily === 'serif' ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
-              }`}
-            >
-              Aa
+              </label>
+            ) : (
+              <button type="button" onClick={() => setSearchOpen(true)} aria-label="Özette ara" title="Ara" className="rd-btn">
+                <Search />
+              </button>
+            )}
+            <button type="button" onClick={() => setShowToc((v) => !v)} aria-pressed={showToc} aria-label="İçindekiler" title="İçindekiler" className={`rd-btn ${showToc ? 'is-on' : ''}`}>
+              <List />
             </button>
-
             <HighlighterToolbar />
-
-            <button
-              type="button"
-              onClick={() => setMarkerMode((m) => !m)}
-              aria-pressed={markerMode}
-              aria-label="Otomatik vurgular"
-              title={markerMode ? 'Otomatik anahtar kelime vurgularını kapat' : 'Otomatik anahtar kelime vurgularını aç'}
-              className={`hidden sm:flex w-9 h-9 rounded-[10px] items-center justify-center cursor-pointer ${
-                markerMode ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
-              }`}
-            >
-              <Wand2 className="w-4 h-4" />
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setShowToc((v) => !v)}
-              aria-pressed={showToc}
-              aria-label="İçindekiler"
-              title="İçindekiler"
-              className={`h-9 px-2 rounded-[10px] flex items-center gap-1.5 cursor-pointer ${
-                showToc ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
-              }`}
-            >
-              <List className="w-4 h-4" />
-              <span className="hidden xl:inline text-[13px] font-semibold">İçindekiler</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={handlePrint}
-              aria-label="Yazdır veya PDF kaydet"
-              title="Yazdır / PDF"
-              className="hidden md:flex w-9 h-9 rounded-[10px] items-center justify-center text-ink-2 hover:bg-canvas cursor-pointer"
-            >
-              <Printer className="w-4 h-4" />
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setWidthMode((w) => (w === 'standard' ? 'wide' : w === 'wide' ? 'fullscreen' : 'standard'))}
-              aria-label="Okuyucu genişliğini değiştir"
-              title={`Genişlik: ${widthMode === 'standard' ? 'Geniş' : widthMode === 'wide' ? 'Tam ekran' : 'Normal'}`}
-              className="hidden md:flex w-9 h-9 rounded-[10px] items-center justify-center text-ink-2 hover:bg-canvas cursor-pointer"
-            >
-              {widthMode === 'fullscreen' ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
-            </button>
-
-            <button
-              type="button"
-              onClick={toggleFullscreen}
-              aria-pressed={isFullscreen}
-              aria-label={isFullscreen ? 'Tam ekrandan çık' : 'Tam ekran'}
-              title={isFullscreen ? 'Tam ekrandan çık (Esc)' : 'Tam ekran'}
-              className={`w-9 h-9 rounded-[10px] flex items-center justify-center cursor-pointer ${
-                isFullscreen ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
-              }`}
-            >
-              {isFullscreen ? <Shrink className="w-4 h-4" /> : <Expand className="w-4 h-4" />}
-            </button>
+            <div className="relative">
+              <button type="button" onClick={() => setAaOpen((v) => !v)} aria-expanded={aaOpen} aria-haspopup="dialog" aria-label="Görünüm ayarları" title="Görünüm" className={`rd-btn rd-aa ${aaOpen ? 'is-on' : ''}`}>
+                Aa
+              </button>
+              {aaOpen && (
+                <>
+                  <button type="button" aria-label="Kapat" className="fixed inset-0 z-30 cursor-default" onClick={() => setAaOpen(false)} />
+                  <div className="rd-pop" role="dialog" aria-label="Görünüm ayarları">
+                    <div className="rd-pop-row" role="group" aria-label="Yazı boyutu">
+                      <button type="button" onClick={() => setFontScale((x) => Math.max(75, x - 10))} aria-label="Yazıyı küçült" className="rd-step"><span className="text-sm">A</span></button>
+                      <button type="button" onClick={() => setFontScale(100)} className="rd-scale" aria-label="Yazı boyutunu sıfırla">%{fontScale}</button>
+                      <button type="button" onClick={() => setFontScale((x) => Math.min(160, x + 10))} aria-label="Yazıyı büyüt" className="rd-step"><span className="text-xl">A</span></button>
+                    </div>
+                    <div className="rd-themes" role="radiogroup" aria-label="Okuma teması">
+                      {(
+                        [
+                          ['light', 'Açık', 'is-light'],
+                          ['sepia', 'Sepya', 'is-sepia'],
+                          ['dark', 'Koyu', 'is-dark'],
+                        ] as const
+                      ).map(([id, label, cls]) => (
+                        <button key={id} type="button" role="radio" aria-checked={theme === id} onClick={() => setTheme(id)} className={`rd-theme ${cls}`}>
+                          <i>Aa</i>
+                          {label}
+                        </button>
+                      ))}
+                    </div>
+                    <div className="rd-pop-list">
+                      <button type="button" onClick={() => setFontFamily((f) => (f === 'sans' ? 'serif' : 'sans'))} aria-pressed={fontFamily === 'serif'}>
+                        <span>Kitap yazı tipi</span><i className={`rd-switch ${fontFamily === 'serif' ? 'is-on' : ''}`} />
+                      </button>
+                      <button type="button" onClick={() => setMarkerMode((m) => !m)} aria-pressed={markerMode}>
+                        <span>Anahtar kelime vurguları</span><i className={`rd-switch ${markerMode ? 'is-on' : ''}`} />
+                      </button>
+                      <button type="button" onClick={() => setWidthMode((w) => (w === 'standard' ? 'wide' : w === 'wide' ? 'fullscreen' : 'standard'))}>
+                        <span>Satır genişliği</span><b>{widthMode === 'standard' ? 'Normal' : widthMode === 'wide' ? 'Geniş' : 'Tam'}</b>
+                      </button>
+                      <button type="button" onClick={toggleFullscreen} aria-pressed={isFullscreen}>
+                        <span>{isFullscreen ? 'Tam ekrandan çık' : 'Tam ekran'}</span>{isFullscreen ? <Shrink /> : <Expand />}
+                      </button>
+                      <button type="button" onClick={() => { setAaOpen(false); handlePrint(); }}>
+                        <span>Yazdır / PDF</span><Printer />
+                      </button>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </header>
 
-        <div className="w-full h-[3px] bg-line-soft shrink-0" aria-hidden="true">
-          <div className="h-full bg-accent transition-[width] duration-150" style={{ width: `${scrollProgress}%` }} />
+        <div className="rd-progress" aria-hidden="true">
+          <i style={{ width: `${scrollProgress}%` }} />
         </div>
 
         {/* ========================================================
@@ -1010,7 +933,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
           <main
             ref={contentAreaRef}
             onScroll={handleScroll}
-            className={`flex-1 overflow-y-auto p-4 sm:p-8 lg:p-12 space-y-8 scroll-smooth ${fontFamClass} ${lineHeightClass}`}
+            className={`rd-main flex-1 overflow-y-auto scroll-smooth ${fontFamClass} ${lineHeightClass}`}
             style={{ fontSize: `${fontScale}%` }}
           >
             {!summary.content ? (
@@ -1020,7 +943,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                 <p className="text-xs text-slate-400">Tıp Fakültesi müfredat kataloğu hazırlanıyor</p>
               </div>
             ) : (
-              <Highlightable scope={`summary:${summary.id}`} className="space-y-8">
+              <Highlightable scope={`summary:${summary.id}`} className={`rd-col ${measureClass} space-y-8`}>
             {/* 1. EXECUTIVE DOSSIER CARD (DERS BİLGİ KARTI) */}
             <div
               className={`p-6 sm:p-7 rounded-2xl border ${curTheme.card} ${curTheme.border} relative overflow-hidden`}
@@ -1456,27 +1379,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
           </main>
         </div>
 
-        {/* ========================================================
-            BOTTOM STATUS BAR
-            ======================================================== */}
-        <footer className="p-3 bg-slate-900 border-t border-slate-800 text-slate-400 text-xs flex items-center justify-between shrink-0">
-          <div className="flex items-center gap-2 truncate">
-            <span className="font-semibold text-slate-300">MeDSor Artifact Reader</span>
-            <span>•</span>
-            <span className="truncate">{summary.title}</span>
-          </div>
 
-          <div className="flex items-center gap-3 shrink-0">
-            <span className="font-mono text-[11px] text-teal-400">Okuma İlerlemesi: %{scrollProgress}</span>
-            <button
-              type="button"
-              onClick={onClose}
-              className="bg-slate-800 hover:bg-slate-700 text-white font-bold px-3 py-1 rounded-lg cursor-pointer transition-colors"
-            >
-              Kapat (ESC)
-            </button>
-          </div>
-        </footer>
       </div>
     </div>
   );

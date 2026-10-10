@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ShieldCheck,
   Inbox,
@@ -21,10 +21,17 @@ import {
   ChevronDown,
   GraduationCap,
   Database,
+  Library,
+  HardDrive,
+  Search,
+  CornerDownLeft,
+  Brain,
 } from 'lucide-react';
 import type { QuestionItem, Committee, AdminNotification } from '../../types';
 import { ApiService } from '../../services/api';
 import { AdminScriptsTab } from '../AdminScriptsTab';
+import { AdminPanelModal } from '../AdminPanelModal';
+import { writeLocation } from '../../router';
 import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
 import { DraftStudio } from './DraftStudio';
 import { useTheme } from '../../utils/theme';
@@ -39,6 +46,7 @@ import { ManageUsersSection } from './ManageUsersSection';
 import { ManageSystemSection } from './ManageSystemSection';
 import { ManageAutomationSection } from './ManageAutomationSection';
 import { ManageDataCoreSection } from './ManageDataCoreSection';
+import { ManageNotebookLMSection } from './ManageNotebookLMSection';
 import { consoleLogBuffer } from './ConsoleLogBuffer';
 import { Drawer, classifyNotice } from './consoleUi';
 import {
@@ -54,7 +62,7 @@ import {
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'inbox' | 'data' | 'phases' | 'merges' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore';
+export type ManageSection = 'inbox' | 'pool' | 'data' | 'phases' | 'merges' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -66,26 +74,33 @@ interface ManageConsoleProps {
   onExit: () => void;
   /** Tam ekran kipinde pencere tüm görünümü kaplar (manage alt alanı varsayılanı). */
   fullscreen?: boolean;
+  /** Hangi adresten girildi: /manage ya da /yonetim. Bölüm adresi bu tabana yazılır. */
+  entry?: 'manage' | 'admin';
+  /** Adresteki bölüm (ikinci parça), örn. "taslaklar" */
+  initialSlug?: string;
 }
 
-const SECTIONS: { id: ManageSection; label: string; hint: string; icon: React.ElementType; group: string }[] = [
-  { id: 'inbox', label: 'Gelen kutusu', hint: 'Bildirim, yorum, taslak ve sistem uyarıları tek kuyrukta; en yenisi üstte.', icon: Inbox, group: 'Genel' },
-  { id: 'moderation', label: 'Moderasyon', hint: 'Şikâyet edilen soruyu gör, düzelt ya da kaldır.', icon: Wrench, group: 'Genel' },
-  { id: 'data', label: 'Tüm veriler', hint: 'Her veri kümesi tek tabloda: ara, sırala, seç, toplu işlem yap, CSV al.', icon: Table2, group: 'İçerik' },
-  { id: 'phases', label: 'Faz verileri', hint: 'Soru bazında faz çıktıları: gez, elle düzelt, arama testini çalıştır.', icon: FlaskConical, group: 'İçerik' },
-  { id: 'merges', label: 'Birleştirilen sorular', hint: 'Kopya çıkmış sorular: yan yana karşılaştır, asıl soruyu seç ya da ayır.', icon: GitMerge, group: 'İçerik' },
-  { id: 'datacore', label: 'Veri Merkezi (v2)', hint: 'Bağımsız Core v2 hattı: sorular, kazanım, ders notu bağları, kavram grafı, toplu tamamlama.', icon: Database, group: 'İçerik' },
-  { id: 'drafts', label: 'Taslaklar', hint: 'Öğrenci taslaklarını kümele, birleştir, düzenle ya da AI ile tam soruya dönüştür.', icon: Layers, group: 'İçerik' },
-  { id: 'studio', label: 'Taslak stüdyosu', hint: 'Parçaları elle eşle: ağaç, pano, akış ve terim görünümleri.', icon: Workflow, group: 'İçerik' },
-  { id: 'users', label: 'Kullanıcılar', hint: 'Kayıtlı hesaplar ve kim ne kadar katkı verdi.', icon: Users, group: 'Topluluk' },
-  { id: 'scripts', label: 'Betikler', hint: 'Veri hattı betiklerini ve zincirleri çalıştır, çıktıyı canlı izle.', icon: Terminal, group: 'Sistem' },
-  { id: 'system', label: 'Sistem ve günlükler', hint: 'Veritabanı ve AI sağlığı, servisler, tarayıcı konsolu.', icon: Activity, group: 'Sistem' },
-  { id: 'automation', label: 'Otomasyon', hint: 'Yedek saatleri, AI çalışma pencereleri, anahtarlar ve Drive eşitlemesi.', icon: Settings, group: 'Sistem' },
+const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; icon: React.ElementType; group: string; keywords?: string }[] = [
+  { id: 'inbox', slug: 'gelen-kutusu', label: 'Gelen kutusu', hint: 'Bildirim, yorum, taslak ve sistem uyarıları tek kuyrukta; en yenisi üstte.', icon: Inbox, group: 'Genel', keywords: 'bildirim yorum uyarı' },
+  { id: 'moderation', slug: 'moderasyon', label: 'Moderasyon', hint: 'Şikâyet edilen soruyu gör, düzelt ya da kaldır.', icon: Wrench, group: 'Genel', keywords: 'şikayet hata bildirimi' },
+  { id: 'pool', slug: 'soru-havuzu', label: 'Soru havuzu', hint: 'Kurul sorularını düzenle, sil, içe aktar; taslakları kümele.', icon: Library, group: 'İçerik', keywords: 'kurul soru içe aktar yükle çıkmış' },
+  { id: 'data', slug: 'tum-veriler', label: 'Tüm veriler', hint: 'Her veri kümesi tek tabloda: ara, sırala, seç, toplu işlem yap, CSV al.', icon: Table2, group: 'İçerik', keywords: 'tablo csv toplu' },
+  { id: 'phases', slug: 'fazlar', label: 'Faz verileri', hint: 'Soru bazında faz çıktıları: gez, elle düzelt, arama testini çalıştır.', icon: FlaskConical, group: 'İçerik', keywords: 'faz 14 faz 15' },
+  { id: 'merges', slug: 'birlesenler', label: 'Birleştirilen sorular', hint: 'Kopya çıkmış sorular: yan yana karşılaştır, asıl soruyu seç ya da ayır.', icon: GitMerge, group: 'İçerik', keywords: 'kopya birleştir' },
+  { id: 'datacore', slug: 'veri-merkezi', label: 'Veri Merkezi (v2)', hint: 'Bağımsız Core v2 hattı: sorular, kazanım, ders notu bağları, kavram grafı, toplu tamamlama.', icon: Database, group: 'İçerik', keywords: 'core kazanım graf' },
+  { id: 'notebooklm', slug: 'notebooklm', label: 'NotebookLM Stüdyosu', hint: 'NotebookLM JSON/MD çıktılarını yükle, alternatif olarak sakla, orijinalle karşılaştır ve tercihi seç.', icon: Brain, group: 'İçerik', keywords: 'notebooklm ai json alternatif rag soru deste spot' },
+  { id: 'drafts', slug: 'taslaklar', label: 'Taslaklar', hint: 'Öğrenci taslaklarını kümele, birleştir, düzenle ya da AI ile tam soruya dönüştür.', icon: Layers, group: 'İçerik', keywords: 'parça taslak' },
+  { id: 'studio', slug: 'studyo', label: 'Taslak stüdyosu', hint: 'Parçaları elle eşle: ağaç, pano, akış ve terim görünümleri.', icon: Workflow, group: 'İçerik', keywords: 'eşle pano' },
+  { id: 'users', slug: 'kullanicilar', label: 'Kullanıcılar', hint: 'Katkılar, hesaplar, roller ve e-posta.', icon: Users, group: 'Topluluk', keywords: 'öğrenci hesap rol smtp e-posta' },
+  { id: 'scripts', slug: 'betikler', label: 'Betikler', hint: 'Veri hattı betiklerini ve zincirleri çalıştır, çıktıyı canlı izle.', icon: Terminal, group: 'Sistem', keywords: 'script görev zincir' },
+  { id: 'system', slug: 'sistem', label: 'Sistem ve günlükler', hint: 'Veritabanı ve AI sağlığı, servisler, tarayıcı konsolu.', icon: Activity, group: 'Sistem', keywords: 'log sağlık servis' },
+  { id: 'automation', slug: 'otomasyon', label: 'Otomasyon', hint: 'Zamanlanmış işler, AI pencereleri, anahtarlar; Drive eşitlemesi ve masaüstü servisleri.', icon: Settings, group: 'Sistem', keywords: 'drive yedek anahtar zamanla' },
+  { id: 'database', slug: 'veritabani', label: 'Veritabanı ve yedek', hint: 'Etkin veritabanı, eşitleme, dışa ve içe aktarım.', icon: HardDrive, group: 'Sistem', keywords: 'supabase firebase yedek dışa aktar' },
 ];
+const sectionBySlug = (slug?: string) => SECTIONS.find((x) => x.slug === slug || x.id === slug);
 
 // Yoğunluk: tek ayar konsoldaki tüm liste ve kartları küçültür (cihaz başına hatırlanır)
 type Density = 'comfy' | 'compact' | 'tight';
-const DENSITY_ZOOM: Record<Density, number> = { comfy: 1, compact: 0.92, tight: 0.84 };
 const DENSITY_LABEL: Record<Density, string> = { comfy: 'Rahat', compact: 'Kompakt', tight: 'Sıkı' };
 const readDensity = (): Density => {
   try {
@@ -96,7 +111,10 @@ const readDensity = (): Density => {
   }
 };
 const SECTION_KEY = 'medsoru_manage_section';
-const readSection = (): ManageSection => {
+const readSection = (entry: 'manage' | 'admin', slug?: string): ManageSection => {
+  const fromUrl = sectionBySlug(slug);
+  if (fromUrl) return fromUrl.id;
+  if (entry === 'admin') return 'pool';
   try {
     const v = localStorage.getItem(SECTION_KEY) as ManageSection | null;
     return v && SECTIONS.some((s) => s.id === v) ? v : 'inbox';
@@ -114,13 +132,20 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   onRefreshData,
   onExit,
   fullscreen = true,
+  entry = 'manage',
+  initialSlug,
 }) => {
-  const [section, setSectionState] = useState<ManageSection>(readSection);
+  const [section, setSectionState] = useState<ManageSection>(() => readSection(entry, initialSlug));
   const [density, setDensityState] = useState<Density>(readDensity);
   const [menuOpen, setMenuOpen] = useState(false);
-  const setSection = (s: ManageSection) => {
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  const [usersTab, setUsersTab] = useState<'activity' | 'accounts'>('activity');
+  const [autoTab, setAutoTab] = useState<'schedule' | 'services'>('schedule');
+  const setSection = (s: ManageSection, opts: { replace?: boolean } = {}) => {
     setSectionState(s);
     setMenuOpen(false);
+    setPaletteOpen(false);
+    writeLocation(entry, SECTIONS.find((x) => x.id === s)?.slug, opts.replace);
     try {
       localStorage.setItem(SECTION_KEY, s);
     } catch {
@@ -136,6 +161,29 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     }
   };
   const [loading, setLoading] = useState(false);
+
+  // Adres bölümü taşır: açılışta normalize et, geri/ileri ile bölüm değişsin
+  useEffect(() => {
+    setSection(section, { replace: true });
+    const onPop = () => {
+      const hit = sectionBySlug(window.location.pathname.split('/').filter(Boolean)[1]);
+      if (hit) setSectionState(hit.id);
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  // Ctrl/⌘ + K: bölüme atla
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setPaletteOpen((v) => !v);
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, []);
 
   // Bildirimler: tonuna göre toast (hata metni kırmızı, diğerleri yeşil)
   const notify = (msg: string) => {
@@ -279,10 +327,10 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
 
   const brand = (
     <>
-      <span className="w-[34px] h-[34px] rounded-[10px] bg-accent text-white flex items-center justify-center shrink-0">
-        <Plus className="w-[18px] h-[18px]" strokeWidth={2.8} />
+      <span className="ms-rail-mark w-[28px] h-[28px] flex items-center justify-center shrink-0">
+        <Activity className="w-[17px] h-[17px]" strokeWidth={2.4} />
       </span>
-      <span className="font-display font-bold text-[19px] tracking-[-0.02em] text-ink">
+      <span className="ms-rail-word font-display font-bold text-lg tracking-[-0.02em] text-ink">
         Me<span className="text-accent">DS</span>or
       </span>
       <span className="ms-tag is-accent">
@@ -311,13 +359,18 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
         <header className="ms-ctop">
           <button type="button" onClick={() => setMenuOpen(true)} className="ms-btn is-ghost ms-menu-btn !px-2.5 min-w-0" aria-label="Bölüm menüsünü aç" aria-expanded={menuOpen}>
             <Menu />
-            <span className="truncate text-[14px]">{current.label}</span>
+            <span className="truncate text-base">{current.label}</span>
             <ChevronDown className="!w-3.5 !h-3.5 text-ink-3" />
+          </button>
+          <button type="button" onClick={() => setPaletteOpen(true)} className="ms-cpal-btn" aria-label="Bölüm ara (Ctrl+K)">
+            <Search aria-hidden />
+            <span>Bölüme git…</span>
+            <kbd>Ctrl K</kbd>
           </button>
           <span className="flex-1" />
           <label className="ms-select-chip !h-9 min-w-0 max-w-[46vw] sm:max-w-[300px]" title={committeeName}>
             <span className="sr-only">Kurul</span>
-            <select value={selectedCommitteeId} onChange={(e) => onSelectCommittee(e.target.value)} className="!text-[13px]">
+            <select value={selectedCommitteeId} onChange={(e) => onSelectCommittee(e.target.value)} className="!text-sm">
               {committees.map((c) => (
                 <option key={c.id} value={c.id}>{c.name}</option>
               ))}
@@ -346,7 +399,6 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           key={section}
           className="ms-console-body ms-view-enter overscroll-contain flex-1 min-h-0 overflow-y-auto"
           data-density={density}
-          style={{ zoom: DENSITY_ZOOM[density] } as React.CSSProperties}
         >
           <div className={`ms-cinner ${section === 'studio' ? '!max-w-none' : ''}`}>
             <div className="ms-chead">
@@ -437,7 +489,47 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               />
             )}
 
-            {section === 'users' && (
+            {section === 'pool' && (
+              <AdminPanelModal
+                variant="embedded"
+                tab="questions"
+                isOpen
+                onClose={onExit}
+                adminEmail={adminEmail}
+                committees={committees}
+                questions={questions}
+                selectedCommitteeId={selectedCommitteeId}
+                onRefreshData={onRefreshData}
+              />
+            )}
+            {section === 'database' && (
+              <AdminPanelModal
+                variant="embedded"
+                tab="database"
+                isOpen
+                onClose={onExit}
+                adminEmail={adminEmail}
+                committees={committees}
+                questions={questions}
+                selectedCommitteeId={selectedCommitteeId}
+                onRefreshData={onRefreshData}
+              />
+            )}
+            {section === 'users' && <SubTabs value={usersTab} onChange={setUsersTab} items={[['activity', 'Katkılar'], ['accounts', 'Hesaplar ve e-posta']]} />}
+            {section === 'users' && usersTab === 'accounts' && (
+              <AdminPanelModal
+                variant="embedded"
+                tab="users"
+                isOpen
+                onClose={onExit}
+                adminEmail={adminEmail}
+                committees={committees}
+                questions={questions}
+                selectedCommitteeId={selectedCommitteeId}
+                onRefreshData={onRefreshData}
+              />
+            )}
+            {section === 'users' && usersTab === 'activity' && (
               <ManageUsersSection
                 adminEmail={adminEmail}
                 committees={committees}
@@ -457,12 +549,29 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
             {section === 'scripts' && <AdminScriptsTab adminEmail={adminEmail} onRefreshAllData={onRefreshData} />}
             {section === 'system' && <ManageSystemSection notify={notify} />}
             {section === 'datacore' && <ManageDataCoreSection notify={notify} />}
-            {section === 'automation' && (
+            {section === 'notebooklm' && <ManageNotebookLMSection />}
+            {section === 'automation' && <SubTabs value={autoTab} onChange={setAutoTab} items={[['schedule', 'Zamanlama ve anahtarlar'], ['services', 'Drive ve servisler']]} />}
+            {section === 'automation' && autoTab === 'schedule' && (
               <ManageAutomationSection adminEmail={adminEmail} selectedCommitteeId={selectedCommitteeId} onRefreshData={onRefreshData} notify={notify} />
+            )}
+            {section === 'automation' && autoTab === 'services' && (
+              <AdminPanelModal
+                variant="embedded"
+                tab="automations"
+                isOpen
+                onClose={onExit}
+                adminEmail={adminEmail}
+                committees={committees}
+                questions={questions}
+                selectedCommitteeId={selectedCommitteeId}
+                onRefreshData={onRefreshData}
+              />
             )}
           </div>
         </main>
       </div>
+
+      {paletteOpen && <SectionPalette onPick={(id) => setSection(id)} onClose={() => setPaletteOpen(false)} badgeOf={badgeOf} />}
 
       {/* Telefon ve tablet: bölüm menüsü alttan açılır */}
       <Drawer open={menuOpen} onClose={() => setMenuOpen(false)} title="Yönetim" label="Yönetim bölümleri">
@@ -488,6 +597,73 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           }}
         />
       )}
+    </div>
+  );
+};
+
+/** Bölüm içi alt sekmeler (segment) */
+function SubTabs<T extends string>({ value, onChange, items }: { value: T; onChange: (v: T) => void; items: [T, string][] }) {
+  return (
+    <div role="tablist" className="ds-seg self-start">
+      {items.map(([id, label]) => (
+        <button key={id} type="button" role="tab" aria-selected={value === id} onClick={() => onChange(id)}>
+          {label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+/** Ctrl/⌘+K bölüm paleti: yaz, ok tuşlarıyla seç, Enter ile git */
+const SectionPalette: React.FC<{
+  onPick: (id: ManageSection) => void;
+  onClose: () => void;
+  badgeOf: (id: ManageSection) => { n: number; alert?: boolean } | undefined;
+}> = ({ onPick, onClose, badgeOf }) => {
+  const [q, setQ] = useState('');
+  const [idx, setIdx] = useState(0);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const fold = (t: string) => t.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
+  const list = SECTIONS.filter((x) => !q.trim() || fold(`${x.label} ${x.hint} ${x.keywords || ''} ${x.group}`).includes(fold(q.trim())));
+  useEffect(() => inputRef.current?.focus(), []);
+  useEffect(() => setIdx(0), [q]);
+  return (
+    <div className="ms-overlay ms-cpal-wrap fixed inset-0 z-[90] flex items-start justify-center p-4 pt-[12vh]" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
+      <div className="ms-cpal ms-keep-shell" role="dialog" aria-modal="true" aria-label="Bölüme git">
+        <label className="ms-cpal-in">
+          <Search aria-hidden />
+          <input
+            ref={inputRef}
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Bölüm ya da iş ara: taslak, yedek, e-posta…"
+            onKeyDown={(e) => {
+              if (e.key === 'Escape') onClose();
+              if (e.key === 'ArrowDown') { e.preventDefault(); setIdx((i) => Math.min(list.length - 1, i + 1)); }
+              if (e.key === 'ArrowUp') { e.preventDefault(); setIdx((i) => Math.max(0, i - 1)); }
+              if (e.key === 'Enter' && list[idx]) onPick(list[idx].id);
+            }}
+          />
+          <kbd>Esc</kbd>
+        </label>
+        <ul className="ms-cpal-list" role="listbox" aria-label="Bölümler">
+          {list.map((x, i) => {
+            const Icon = x.icon;
+            const b = badgeOf(x.id);
+            return (
+              <li key={x.id} role="option" aria-selected={i === idx}>
+                <button type="button" onMouseEnter={() => setIdx(i)} onClick={() => onPick(x.id)} className={i === idx ? 'is-on' : ''}>
+                  <span className="hk-tile is-sm"><Icon aria-hidden /></span>
+                  <span className="ms-cpal-t"><b>{x.label}</b><small>{x.hint}</small></span>
+                  {b && b.n > 0 && <span className={`ms-cpal-n ${b.alert ? 'is-alert' : ''}`}>{b.n}</span>}
+                  {i === idx && <CornerDownLeft className="ms-cpal-enter" aria-hidden />}
+                </button>
+              </li>
+            );
+          })}
+          {list.length === 0 && <li className="ms-cpal-empty">Eşleşen bölüm yok</li>}
+        </ul>
+      </div>
     </div>
   );
 };

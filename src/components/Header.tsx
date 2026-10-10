@@ -1,6 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import {
-  Plus,
   Search,
   ShieldCheck,
   CloudUpload,
@@ -107,10 +106,10 @@ const V3_ORDER: AppTab[] = ['quick_add', 'past_exams', 'ornek_sorular', 'learn',
 
 export const BrandMark: React.FC<{ size?: number }> = ({ size = 34 }) => (
   <span
-    className="rounded-lg bg-accent flex items-center justify-center shrink-0"
+    className="ms-rail-mark rounded-lg flex items-center justify-center shrink-0"
     style={{ width: size, height: size }}
   >
-    <Plus className="text-white" style={{ width: size * 0.53, height: size * 0.53 }} strokeWidth={2.6} />
+    <Activity style={{ width: size * 0.6, height: size * 0.6 }} strokeWidth={2.4} />
   </span>
 );
 
@@ -180,7 +179,7 @@ const PriorityNav: React.FC<{
   }, [open]);
 
   const itemCls = (on: boolean) =>
-    `h-9 px-3 rounded-lg text-[13px] font-medium whitespace-nowrap cursor-pointer transition-colors inline-flex items-center gap-2 shrink-0 ${
+    `h-9 px-3 rounded-lg text-sm font-medium whitespace-nowrap cursor-pointer transition-colors inline-flex items-center gap-2 shrink-0 ${
       on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-2 hover:text-ink hover:bg-canvas'
     }`;
   const shown = items.slice(0, Math.min(count, max));
@@ -244,7 +243,7 @@ const PriorityNav: React.FC<{
                       setOpen(false);
                       onSelect(item.id);
                     })}
-                    className={`w-full min-h-10 px-2.5 rounded-[10px] flex items-center gap-2.5 text-left text-[14px] cursor-pointer ${
+                    className={`w-full min-h-10 px-2.5 rounded-[10px] flex items-center gap-2.5 text-left text-base cursor-pointer ${
                       on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink hover:bg-canvas'
                     }`}
                   >
@@ -363,7 +362,7 @@ export const Header: React.FC<HeaderProps> = ({
       role="menuitem"
       disabled={disabled}
       onClick={run(onClick)}
-      className={`w-full min-h-11 px-2 rounded-[10px] flex items-center gap-3 text-left text-[14px] text-ink hover:bg-canvas disabled:opacity-50 cursor-pointer ${className}`}
+      className={`w-full min-h-11 px-2 rounded-[10px] flex items-center gap-3 text-left text-base text-ink hover:bg-canvas disabled:opacity-50 cursor-pointer ${className}`}
     >
       <span
         className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
@@ -373,17 +372,17 @@ export const Header: React.FC<HeaderProps> = ({
         <Icon className="w-4 h-4" strokeWidth={2} />
       </span>
       <span className={`flex-1 ${tone === 'accent' ? 'font-semibold' : ''}`}>{label}</span>
-      {hint && <span className="text-[12px] text-ok font-semibold">{hint}</span>}
+      {hint && <span className="text-xs text-ok font-semibold">{hint}</span>}
     </button>
   );
 
   const MenuLabel: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <div className="px-2 pt-3 pb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-3">{children}</div>
+    <div className="px-2 pt-3 pb-1 text-2xs font-semibold uppercase tracking-[0.08em] text-ink-3">{children}</div>
   );
 
   return (
     <header className="bg-white md:bg-canvas border-b border-line sticky top-0 z-30 print:hidden">
-      <div className="px-4 sm:px-6 lg:px-8 h-14 flex items-center gap-2 sm:gap-3">
+      <div className="px-4 sm:px-5 lg:px-6 h-12 flex items-center gap-2 sm:gap-3">
         {/* Telefon: logo. Tablet/masaüstü: logo ve menü kenar çubuğunda; burada sayfa başlığı */}
         <a
           href={pathFor('quick_add')}
@@ -392,18 +391,18 @@ export const Header: React.FC<HeaderProps> = ({
           aria-label="MeDSor ana sayfa"
         >
           <BrandMark size={28} />
-          <span className="font-display font-bold text-[18px] tracking-[-0.02em] text-ink">Me<span className="text-accent">DS</span>or</span>
+          <span className="font-display font-bold text-lg tracking-[-0.02em] text-ink">Me<span className="text-accent">DS</span>or</span>
         </a>
         <span className="flex-1" aria-hidden="true" />
 
-        <OfflineStatusBadge onClick={() => onOpenOfflineModal?.()} />
+        <OfflineStatusBadge onClick={() => onOpenOfflineModal?.()} isAdmin={isAdmin} />
 
         <button
           type="button"
           onClick={toggleTheme}
           aria-label={theme === 'dark' ? 'Açık temaya geç' : 'Koyu temaya geç'}
           title={theme === 'dark' ? 'Açık tema' : 'Koyu tema'}
-          className="w-10 h-10 rounded-xl flex items-center justify-center cursor-pointer shrink-0 bg-canvas text-ink hover:bg-line-soft transition-colors"
+          className="w-9 h-9 rounded-lg flex items-center justify-center cursor-pointer shrink-0 bg-canvas text-ink hover:bg-line-soft transition-colors"
         >
           {theme === 'dark' ? <Sun className="w-[18px] h-[18px]" /> : <Moon className="w-[18px] h-[18px]" />}
         </button>
@@ -414,7 +413,7 @@ export const Header: React.FC<HeaderProps> = ({
           aria-label="Ara"
           aria-expanded={mobileSearchOpen}
           title="Ara  ( / ya da Ctrl+K )"
-          className={`w-10 h-10 rounded-xl flex items-center justify-center cursor-pointer shrink-0 transition-colors ${
+          className={`w-9 h-9 rounded-lg flex items-center justify-center cursor-pointer shrink-0 transition-colors ${
             mobileSearchOpen ? 'bg-accent-soft text-accent' : 'bg-canvas text-ink hover:bg-line-soft'
           }`}
         >
@@ -435,7 +434,7 @@ export const Header: React.FC<HeaderProps> = ({
             {currentUser?.photoURL ? (
               <img src={currentUser.photoURL} alt="" className="w-8 h-8 rounded-full" />
             ) : (
-              <span className="w-8 h-8 rounded-full bg-ink text-white flex items-center justify-center text-[12px] font-semibold">
+              <span className="w-8 h-8 rounded-full bg-ink text-white flex items-center justify-center text-xs font-semibold">
                 {currentUser ? initialsOf(currentUser) : <UserRound className="w-4 h-4" />}
               </span>
             )}
@@ -448,22 +447,22 @@ export const Header: React.FC<HeaderProps> = ({
               className="fixed sm:absolute left-3 right-3 sm:left-auto sm:right-0 top-[60px] sm:top-12 sm:w-[300px] max-h-[calc(100dvh-140px)] sm:max-h-[calc(100vh-96px)] overflow-y-auto bg-white border border-line rounded-2xl shadow-lg p-2 z-50"
             >
               <div className="flex items-center gap-3 px-2 py-2.5">
-                <span className="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center text-[13px] font-semibold shrink-0">
+                <span className="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center text-sm font-semibold shrink-0">
                   {currentUser ? initialsOf(currentUser) : <UserRound className="w-4 h-4" />}
                 </span>
                 <div className="min-w-0">
                   {currentUser ? (
                     <>
-                      <div className="font-semibold text-[15px] text-ink truncate">
+                      <div className="font-semibold text-md text-ink truncate">
                         {currentUser.displayName || currentUser.email?.split('@')[0]}
                       </div>
-                      <div className="text-[13px] text-ink-3 truncate">
+                      <div className="text-sm text-ink-3 truncate">
                         {currentUser.studentNumber ? `No: ${currentUser.studentNumber}` : currentUser.email}
                         {isAdmin ? ' · Yönetici' : ''}
                       </div>
                     </>
                   ) : (
-                    <div className="text-[14px] text-ink-2">Giriş yapmadın. Katkı için isim gerekmez.</div>
+                    <div className="text-base text-ink-2">Giriş yapmadın. Katkı için isim gerekmez.</div>
                   )}
                 </div>
               </div>

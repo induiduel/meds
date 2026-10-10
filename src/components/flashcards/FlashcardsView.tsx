@@ -3,7 +3,7 @@ import { PageHeader } from '../ui/PageHeader';
 import { BookA, GraduationCap, FileQuestion, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2, ChevronLeft, ChevronRight, ChevronDown, Star } from 'lucide-react';
 import { getFavoriteCards, toggleFavoriteCard } from '../../services/studyStore';
 import { GLOSSARY } from '../../data/glossary';
-import { SectionLoader, SuccessCheck } from '../ui/Animations';
+import { EmptySearch, SectionLoader, SuccessCheck } from '../ui/Animations';
 
 // ---------------------------------------------------------------------------
 // Card model + spaced repetition (Leitner boxes, stored per device)
@@ -209,101 +209,100 @@ export const FlashcardsView: React.FC = () => {
   const startCount = Math.min(limit > 0 ? limit : inGroup.length, counts.due + counts.new || inGroup.length);
 
   return (
-    <div className="w-full flex flex-col gap-3 sm:gap-4 min-w-0">
-      <PageHeader title="Kartlar" description="Kartı çevir, bildiğini işaretle; bildiklerin giderek daha seyrek gelir." />
+    <div className="ds-page">
+      <PageHeader
+        title="Kartlar"
+        stats={[
+          { label: 'kart', value: inGroup.length.toLocaleString('tr-TR') },
+          { label: 'tekrar', value: counts.due, tone: counts.due ? 'warn' : 'default' },
+          { label: 'ezber', value: counts.mastered, tone: 'ok' },
+        ]}
+        description="Kartı çevir, bildiğini işaretle; bildiklerin giderek daha seyrek gelir."
+      />
 
-      {/* Kaynak ve konu: tek satır, sade */}
-      <div className="flex flex-col sm:flex-row gap-2 min-w-0">
-        <div role="radiogroup" aria-label="Kaynak" className="ms-f-seg sm:flex-none">
+      {/* Kaynak ve konu */}
+      <div className="ds-toolbar">
+        <div role="radiogroup" aria-label="Kaynak" className="ds-seg">
           {(
             [
               ['terms', BookA, 'Terimler', GLOSSARY_CARDS.length],
               ['lessons', GraduationCap, 'Ders kartları', deckCards?.length],
             ] as const
           ).map(([id, Icon, label, n]) => (
-            <button key={id} type="button" role="radio" aria-checked={source === id} onClick={() => setSource(id)} className={`inline-flex items-center justify-center gap-1.5 ${source === id ? 'is-on' : ''}`}>
-              <Icon className="w-4 h-4" />
+            <button key={id} type="button" role="radio" aria-checked={source === id} onClick={() => setSource(id)}>
+              <Icon aria-hidden />
               {label}
-              {n ? <span className="text-[12px] text-ink-3">{n}</span> : null}
+              {n ? <small>{n}</small> : null}
             </button>
           ))}
         </div>
         {!loading && (
-          <label className="ms-select-chip flex-1 sm:max-w-[320px]">
-            <span className="text-ink-3 shrink-0">{source === 'terms' ? 'Konu' : 'Ders'}</span>
+          <label className="ds-select">
+            <span>{source === 'terms' ? 'Konu' : 'Ders'}</span>
             <select value={group} onChange={(e) => setGroup(e.target.value)} aria-label={source === 'terms' ? 'Konu' : 'Ders'}>
               <option value="all">Tümü · {all.length}</option>
               {groups.map(([g, n]) => <option key={g} value={g}>{g} · {n}</option>)}
             </select>
-            <ChevronDown className="w-4 h-4 text-ink-3 shrink-0 pointer-events-none" aria-hidden="true" />
+            <ChevronDown aria-hidden />
           </label>
         )}
       </div>
 
       {loading ? (
-        <SectionLoader variant="book" label="Ders kartları yükleniyor…" />
+        <SectionLoader label="Ders kartları yükleniyor…" />
       ) : (
         <>
-          {/* Başlat paneli: durum tek satır, ayarlar tek satır, büyük başlat düğmesi */}
-          <section className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3.5">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-ink-2">
+          {/* Başlat paneli: ilerleme, ayarlar ve tek birincil eylem */}
+          <section className="ds-panel ds-fc-start">
+            {inGroup.length > 0 && (
+              <div className="ds-meter" aria-hidden="true">
+                <span style={{ width: `${(counts.mastered / inGroup.length) * 100}%`, background: 'var(--color-ok)' }} />
+                <span style={{ width: `${(counts.learning / inGroup.length) * 100}%`, background: 'var(--color-accent)' }} />
+                <span style={{ width: `${(counts.due / inGroup.length) * 100}%`, background: 'var(--color-warn)' }} />
+              </div>
+            )}
+            <div className="ds-legend">
               {(
                 [
-                  ['due', 'tekrar', counts.due],
-                  ['new', 'yeni', counts.new],
-                  ['learning', 'öğreniliyor', counts.learning],
-                  ['mastered', 'ezber', counts.mastered],
+                  ['due', 'tekrar', counts.due, 'var(--color-warn)'],
+                  ['new', 'yeni', counts.new, 'var(--color-line-2)'],
+                  ['learning', 'öğreniliyor', counts.learning, 'var(--color-accent)'],
+                  ['mastered', 'ezber', counts.mastered, 'var(--color-ok)'],
                 ] as const
-              ).map(([k, label, n]) => (
-                <span key={k} className="inline-flex items-center gap-1.5 whitespace-nowrap">
-                  <span className="w-2 h-2 rounded-full" style={{ background: STATUS_DOT[k] }} />
-                  <span className="font-semibold text-ink tabular-nums">{n}</span> {label}
+              ).map(([k, label, n, c]) => (
+                <span key={k}>
+                  <i style={{ background: c }} />
+                  <b>{n}</b> {label}
                 </span>
               ))}
             </div>
-            {inGroup.length > 0 && (
-              <div className="h-1.5 rounded-full bg-line-soft overflow-hidden flex" aria-hidden="true">
-                <span style={{ width: `${(counts.mastered / inGroup.length) * 100}%`, background: STATUS_DOT.mastered }} />
-                <span style={{ width: `${(counts.learning / inGroup.length) * 100}%`, background: STATUS_DOT.learning }} />
-                <span style={{ width: `${(counts.due / inGroup.length) * 100}%`, background: STATUS_DOT.due }} />
-              </div>
-            )}
-
-            <div className="grid grid-cols-1 sm:grid-cols-[auto_auto_minmax(0,1fr)] items-center gap-2">
-              <div className="flex gap-2">
-                <ToggleChip on={doShuffle} onClick={() => setDoShuffle((v) => !v)} icon={Shuffle} label="Karıştır" />
-                <ToggleChip on={reverse} onClick={() => setReverse((v) => !v)} icon={Repeat2} label="Ters çevir" />
-              </div>
-              <span className="hidden sm:block" />
-              <div role="radiogroup" aria-label="Kart sayısı" className="ms-f-seg sm:justify-self-end sm:w-[260px]">
+            <div className="ds-fc-row">
+              <ToggleChip on={doShuffle} onClick={() => setDoShuffle((v) => !v)} icon={Shuffle} label="Karıştır" />
+              <ToggleChip on={reverse} onClick={() => setReverse((v) => !v)} icon={Repeat2} label="Ters çevir" />
+              <div role="radiogroup" aria-label="Kart sayısı" className="ds-seg is-compact">
                 {[10, 20, 50, 0].map((n) => (
-                  <button key={n} type="button" role="radio" aria-checked={limit === n} onClick={() => setLimit(n)} className={limit === n ? 'is-on' : ''}>
+                  <button key={n} type="button" role="radio" aria-checked={limit === n} onClick={() => setLimit(n)}>
                     {n === 0 ? 'Hepsi' : n}
                   </button>
                 ))}
               </div>
-            </div>
-
-            <button
-              type="button"
-              onClick={() => buildSession(false)}
-              disabled={inGroup.length === 0}
-              className="w-full h-14 shrink-0 rounded-full bg-accent hover:bg-accent-hover text-white text-[16px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-colors"
-            >
-              <Play className="w-4 h-4 fill-current" />
-              {counts.due + counts.new > 0 ? `Başla · ${startCount} kart` : 'Hepsini tekrar et'}
-            </button>
-            {counts.due + counts.new > 0 && counts.learning + counts.mastered > 0 && (
-              <button type="button" onClick={() => buildSession(true)} className="self-center h-9 px-3 rounded-full text-[14px] font-medium text-ink-2 hover:text-ink hover:bg-field inline-flex items-center gap-1.5 cursor-pointer">
-                <Layers className="w-4 h-4" /> Tüm kartları çalış
+              <span className="ds-grow" />
+              {counts.due + counts.new > 0 && counts.learning + counts.mastered > 0 && (
+                <button type="button" onClick={() => buildSession(true)} className="ms-btn is-ghost">
+                  <Layers aria-hidden /> Tüm kartlar
+                </button>
+              )}
+              <button type="button" onClick={() => buildSession(false)} disabled={inGroup.length === 0} className="ms-btn is-primary">
+                <Play className="fill-current" aria-hidden />
+                {counts.due + counts.new > 0 ? `Başla · ${startCount} kart` : 'Hepsini tekrar et'}
               </button>
-            )}
+            </div>
           </section>
 
           {/* Göz at: durum ve favori süzgeci */}
-          <section className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 min-w-0">
-              <div role="tablist" aria-label="Kart süzgeci" className="ms-f-seg flex-1 min-w-0">
+          <section className="ds-section">
+            <div className="ds-tabrail">
+              <div role="tablist" aria-label="Kart süzgeci" className="cx-tabs">
                 {(
                   [
                     ['all', 'Tümü', inGroup.length],
@@ -314,10 +313,8 @@ export const FlashcardsView: React.FC = () => {
                     ['fav', 'Favoriler', favCards.length],
                   ] as const
                 ).map(([id, label, n]) => (
-                  <button key={id} type="button" role="tab" aria-selected={view === id} onClick={() => setView(id)} className={`inline-flex items-center justify-center gap-1 ${view === id ? 'is-on' : ''}`}>
-                    {id === 'fav' && <Star className="w-3.5 h-3.5" fill={view === 'fav' ? 'currentColor' : 'none'} />}
-                    {label}
-                    <span className="text-[12px] text-ink-3 tabular-nums">{n}</span>
+                  <button key={id} type="button" role="tab" aria-selected={view === id} onClick={() => setView(id)} className={`cx-tab ${view === id ? 'is-on' : ''} ${n ? '' : 'is-zero'}`}>
+                    {label} <small>{n}</small>
                   </button>
                 ))}
               </div>
@@ -325,24 +322,18 @@ export const FlashcardsView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setSession(doShuffle ? shuffle(visible) : visible)}
-                  className="h-10 px-4 rounded-full bg-accent-soft text-accent text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer shrink-0 hover:bg-accent hover:text-white transition-colors"
+                  className="ms-btn is-tonal is-sm"
                   title="Yalnızca bu süzgeçteki kartları çalış"
                 >
-                  <Play className="w-3.5 h-3.5 fill-current" /> <span className="hidden sm:inline">Bunları çalış</span>
+                  <Play className="fill-current" aria-hidden /> Bunları çalış
                 </button>
               )}
             </div>
-            <label className="flex items-center gap-2 h-11 px-3.5 rounded-xl bg-white border border-line focus-within:border-accent">
-              <Search className="w-4 h-4 text-ink-3 shrink-0" />
+            <label className="cx-search">
+              <Search aria-hidden />
               <span className="sr-only">Kartlarda ara</span>
-              <input
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Kartlarda ara"
-                className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[15px] placeholder:text-slate-600"
-              />
-              <span className="text-[12.5px] text-ink-3 shrink-0">{visible.length} kart</span>
+              <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Terim ya da tanım ara" />
+              <span className="ds-count">{visible.length} kart</span>
             </label>
             <BrowseList cards={visible} store={store} now={now} />
           </section>
@@ -353,56 +344,49 @@ export const FlashcardsView: React.FC = () => {
 };
 
 const ToggleChip: React.FC<{ on: boolean; onClick: () => void; icon: React.ElementType; label: string }> = ({ on, onClick, icon: Icon, label }) => (
-  <button
-    type="button"
-    aria-pressed={on}
-    onClick={onClick}
-    className={`h-10 px-3.5 rounded-full text-[14px] inline-flex items-center gap-1.5 cursor-pointer transition-colors whitespace-nowrap ${
-      on ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent/40' : 'bg-white border border-line text-ink-2 hover:border-line-2'
-    }`}
-  >
-    <Icon className="w-4 h-4" />
+  <button type="button" aria-pressed={on} onClick={onClick} className={`ms-btn ${on ? 'is-tonal' : 'is-outline'}`}>
+    <Icon aria-hidden />
     {label}
   </button>
 );
+
+const STATUS_LABEL: Record<Status, string> = { new: 'Yeni', due: 'Tekrar', learning: 'Öğreniliyor', mastered: 'Ezber' };
+const STATUS_TONE: Record<Status, string> = { new: '', due: 'is-warn', learning: 'is-new', mastered: 'is-ok' };
 
 const BrowseList: React.FC<{ cards: StudyCard[]; store: Record<string, CardState>; now: number }> = ({ cards, store, now }) => {
   const [shown, setShown] = useState(24);
   const [open, setOpen] = useState<string | null>(null);
   useEffect(() => setShown(24), [cards]);
-  if (!cards.length) return <p className="m-0 py-8 text-center text-[14px] text-ink-3">Bu aramada kart yok.</p>;
+  if (!cards.length)
+    return (
+      <div className="ds-empty">
+        <EmptySearch size={56} />
+        <b>Bu aramada kart yok</b>
+        <span>Başka bir kelime dene ya da süzgeci “Tümü” yap.</span>
+      </div>
+    );
   return (
     <>
-      <ul className="list-none m-0 p-0 grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <ul className="ds-list">
         {cards.slice(0, shown).map((c) => {
           const st = statusOf(store[c.id], now);
           const isOpen = open === c.id;
           return (
-            <li key={c.id} className="min-w-0">
-              <button
-                type="button"
-                onClick={() => setOpen(isOpen ? null : c.id)}
-                aria-expanded={isOpen}
-                className={`w-full text-left rounded-xl border bg-white px-3.5 py-3 flex flex-col gap-1 cursor-pointer transition-colors ${
-                  isOpen ? 'border-accent' : 'border-line hover:border-line-2'
-                }`}
-              >
-                <span className="flex items-center gap-2 min-w-0">
-                  <span className="w-2 h-2 rounded-full shrink-0" style={{ background: STATUS_DOT[st] }} aria-hidden="true" />
-                  <span className="text-[15px] font-semibold text-ink truncate">{plain(c.front)}</span>
+            <li key={c.id}>
+              <button type="button" onClick={() => setOpen(isOpen ? null : c.id)} aria-expanded={isOpen} className={`ds-row ${isOpen ? 'is-open' : ''}`}>
+                <span className="ds-row-t">
+                  <b>{plain(c.front)}</b>
+                  <span className={isOpen ? '' : 'line-clamp-1'}>{plain(c.back)}</span>
                 </span>
-                <span className={`text-[13.5px] text-ink-2 leading-[1.5] ${isOpen ? '' : 'line-clamp-1'}`}>{plain(c.back)}</span>
+                <span className={`ms-tag ${STATUS_TONE[st]}`}>{STATUS_LABEL[st]}</span>
+                <ChevronDown className={`ds-row-chev ${isOpen ? 'is-open' : ''}`} aria-hidden />
               </button>
             </li>
           );
         })}
       </ul>
       {cards.length > shown && (
-        <button
-          type="button"
-          onClick={() => setShown((n) => n + 48)}
-          className="self-center h-10 px-4 rounded-xl border border-line bg-white text-[14px] font-semibold text-ink cursor-pointer hover:border-line-2"
-        >
+        <button type="button" onClick={() => setShown((n) => n + 48)} className="ms-btn is-outline ds-more">
           Daha fazla göster · {cards.length - shown}
         </button>
       )}
@@ -502,34 +486,34 @@ const StudySession: React.FC<{
 
   if (done) {
     return (
-      <div className="w-full max-w-[520px] mx-auto bg-white border border-line rounded-2xl px-6 py-10 flex flex-col items-center text-center gap-3 ms-pop-in">
-        <SuccessCheck size={104} />
-        <h1 className="m-0 font-display font-bold text-[26px] tracking-[-0.02em]">Oturum bitti!</h1>
-        <p className="m-0 text-[15px] text-ink-2">{total} kart çalıştın. Bildiklerin bir sonraki tekrara kadar dinlenecek.</p>
+      <div className="ds-panel ds-fc-done ms-pop-in">
+        <SuccessCheck size={72} />
+        <h1 className="m-0 font-display font-bold text-xl tracking-[-0.02em]">Oturum bitti</h1>
+        <p className="m-0 text-base text-ink-2">{total} kart çalıştın. Bildiklerin bir sonraki tekrara kadar dinlenecek.</p>
         <div className="grid grid-cols-3 gap-2 w-full mt-1">
           {(
             [
-              ['Biliyorum', tally.good, 'text-ok', 'bg-ok-tint'],
+              ['Biliyorum', tally.good, 'text-ok', 'bg-ok-soft'],
               ['Zor', tally.hard, 'text-warn', 'bg-warn-soft'],
-              ['Tekrar', tally.again, 'text-rose-700', 'bg-rose-50'],
+              ['Tekrar', tally.again, 'text-bad-text', 'bg-bad-soft'],
             ] as const
           ).map(([label, n, fg, bg]) => (
-            <div key={label} className={`rounded-xl ${bg} py-3`}>
-              <div className={`font-mono text-[22px] font-semibold ${fg}`}>{n}</div>
-              <div className="text-[12.5px] text-ink-2">{label}</div>
+            <div key={label} className={`rounded-lg ${bg} py-2`}>
+              <div className={`font-mono text-lg font-semibold ${fg}`}>{n}</div>
+              <div className="text-sm text-ink-2">{label}</div>
             </div>
           ))}
         </div>
         <div className="flex gap-2 w-full mt-2">
-          <button type="button" onClick={onExit} className="flex-1 h-12 rounded-xl border border-line bg-white text-[15px] font-semibold cursor-pointer">
+          <button type="button" onClick={onExit} className="ms-btn is-outline flex-1">
             Kartlara dön
           </button>
           <button
             type="button"
             onClick={onRestart}
-            className="flex-1 h-12 rounded-xl bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer"
+            className="ms-btn is-primary flex-1"
           >
-            <RotateCcw className="w-4 h-4" />
+            <RotateCcw aria-hidden />
             Yeniden çalış
           </button>
         </div>
@@ -543,23 +527,23 @@ const StudySession: React.FC<{
   const leaveCls = leaving === 'good' ? 'translate-x-[40%] rotate-6 opacity-0' : leaving === 'again' ? '-translate-x-[40%] -rotate-6 opacity-0' : leaving === 'hard' ? 'translate-y-6 opacity-0' : '';
 
   return (
-    <div className="w-full max-w-[880px] mx-auto flex flex-col gap-4 min-h-[calc(100dvh-220px)]">
+    <div className="ds-fc-session">
       {/* Top bar */}
       <div className="flex items-center gap-3">
-        <button type="button" onClick={onExit} aria-label="Oturumu bitir" className="w-10 h-10 -ml-1 rounded-full flex items-center justify-center text-ink-2 hover:bg-white cursor-pointer">
+        <button type="button" onClick={onExit} aria-label="Oturumu bitir" className="ms-btn is-icon is-ghost">
           <X className="w-5 h-5" />
         </button>
-        <div className="flex-1 h-2 rounded-full bg-white overflow-hidden" aria-hidden="true">
+        <div className="flex-1 h-1.5 rounded-full bg-line overflow-hidden" aria-hidden="true">
           <div className="h-full rounded-full bg-accent transition-[width] duration-300" style={{ width: `${pct}%` }} />
         </div>
         <div className="flex items-center gap-0.5 shrink-0">
-          <button type="button" onClick={goPrev} disabled={idx === 0} aria-label="Önceki kart" className="w-9 h-9 rounded-full flex items-center justify-center text-ink-2 hover:bg-white disabled:opacity-30 cursor-pointer">
+          <button type="button" onClick={goPrev} disabled={idx === 0} aria-label="Önceki kart" className="ms-btn is-icon is-ghost">
             <ChevronLeft className="w-5 h-5" />
           </button>
-          <span className="font-mono text-[13px] text-ink-2 min-w-[3.5ch] text-center tabular-nums">
+          <span className="font-mono text-sm text-ink-2 min-w-[3.5ch] text-center tabular-nums">
             {Math.min(idx + 1, queue.length)}/{queue.length}
           </span>
-          <button type="button" onClick={goNext} aria-label="Sonraki kart" className="w-9 h-9 rounded-full flex items-center justify-center text-ink-2 hover:bg-white cursor-pointer">
+          <button type="button" onClick={goNext} aria-label="Sonraki kart" className="ms-btn is-icon is-ghost">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
@@ -567,7 +551,7 @@ const StudySession: React.FC<{
 
       {/* Card */}
       <div
-        className="relative flex-1 min-h-[340px] [perspective:1400px]"
+        className="relative flex-1 min-h-[300px] [perspective:1400px]"
         onTouchStart={(e) => (touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY })}
         onTouchEnd={(e) => {
           if (!touch.current) return;
@@ -586,36 +570,36 @@ const StudySession: React.FC<{
         >
           {/* Front */}
           <span
-            className="absolute inset-0 rounded-2xl bg-white border border-line shadow-lg [backface-visibility:hidden] flex flex-col p-5 sm:p-7 text-left"
+            className="ds-flip-face absolute inset-0 [backface-visibility:hidden] flex flex-col text-left"
             style={{ opacity: flipped ? 0 : 1, transition: 'opacity 0s linear 0.25s' }}
             aria-hidden={flipped}
           >
             <span className="flex items-center gap-2">
-              <span className="h-6 px-2.5 rounded-full bg-accent-soft text-accent text-[12px] font-semibold inline-flex items-center max-w-[70%] truncate">{card.group}</span>
-              <span className="ml-auto mr-12 text-[12px] text-ink-3">{card.id.startsWith('q:') ? (reverse ? 'Cevap' : 'Soru') : reverse ? 'Tanım' : 'Terim'}</span>
+              <span className="ms-tag is-new max-w-[70%] truncate">{card.group}</span>
+              <span className="ml-auto mr-12 text-xs text-ink-3">{card.id.startsWith('q:') ? (reverse ? 'Cevap' : 'Soru') : reverse ? 'Tanım' : 'Terim'}</span>
             </span>
             <span className="flex-1 flex flex-col items-center justify-center text-center gap-2 px-2">
-              <span className={`font-display font-bold tracking-[-0.02em] text-ink whitespace-pre-line ${reverse || plain(front).length > 60 ? 'text-[17px] sm:text-[19px] leading-[1.45] font-medium' : 'text-[28px] sm:text-[34px] leading-[1.15]'} ${plain(front).length > 60 ? 'self-stretch text-left' : ''}`}>
+              <span className={`font-display font-bold tracking-[-0.02em] text-ink whitespace-pre-line ${reverse || plain(front).length > 60 ? 'text-lg sm:text-xl leading-[1.45] font-medium' : 'text-2xl sm:text-3xl leading-[1.18]'} ${plain(front).length > 60 ? 'self-stretch text-left' : ''}`}>
                 {plain(front)}
               </span>
-              {!reverse && card.sub && <span className="font-mono text-[13px] text-ink-3">{card.sub}</span>}
+              {!reverse && card.sub && <span className="font-mono text-sm text-ink-3">{card.sub}</span>}
             </span>
-            <span className="text-center text-[13px] text-ink-3">Çevirmek için dokun · boşluk tuşu</span>
+            <span className="text-center text-xs text-ink-3">Çevirmek için dokun · boşluk tuşu</span>
           </span>
           {/* Back */}
           <span
-            className="absolute inset-0 rounded-2xl bg-white border border-accent/30 shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col p-5 sm:p-7 text-left overflow-y-auto"
+            className="ds-flip-face is-back absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col text-left overflow-y-auto"
             style={{ opacity: flipped ? 1 : 0, transition: 'opacity 0s linear 0.25s' }}
             aria-hidden={!flipped}
           >
             <span className="flex items-center gap-2">
-              <span className="text-[15px] font-semibold text-accent truncate pr-12">{plain(reverse ? card.back : card.front).slice(0, 60)}</span>
+              <span className="text-md font-semibold text-accent truncate pr-12">{plain(reverse ? card.back : card.front).slice(0, 60)}</span>
             </span>
             <span className="flex-1 flex flex-col justify-center gap-3 py-3">
-              <span className={`text-ink ${reverse ? 'font-display font-bold text-[28px] leading-[1.15] text-center' : 'text-[17px] sm:text-[18px] leading-[1.6]'}`}>{plain(back)}</span>
+              <span className={`text-ink ${reverse ? 'font-display font-bold text-3xl leading-[1.15] text-center' : 'text-md sm:text-md leading-[1.6]'}`}>{plain(back)}</span>
               {card.pearl && (
-                <span className="rounded-xl bg-amber-50 border border-amber-300 px-3.5 py-2.5 text-[14px] leading-[1.55] text-ink">
-                  <span className="block text-[12px] font-semibold text-amber-800 mb-0.5">Akılda tut</span>
+                <span className="ds-callout is-important">
+                  <b>Akılda tut</b>
                   {plain(card.pearl)}
                 </span>
               )}
@@ -627,9 +611,7 @@ const StudySession: React.FC<{
           onClick={() => toggleFav(card)}
           aria-pressed={favIds.has(card.id)}
           aria-label={favIds.has(card.id) ? 'Favorilerden çıkar' : 'Favorilere ekle'}
-          className={`absolute right-3 top-3 z-10 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-colors ${
-            favIds.has(card.id) ? 'text-amber-500 bg-amber-50' : 'text-ink-3 hover:text-ink bg-canvas'
-          }`}
+          className={`ms-btn is-icon absolute right-2.5 top-2.5 z-10 ${favIds.has(card.id) ? 'is-fav' : 'is-ghost'}`}
         >
           <Star className="w-[18px] h-[18px]" fill={favIds.has(card.id) ? 'currentColor' : 'none'} />
         </button>
@@ -638,7 +620,7 @@ const StudySession: React.FC<{
             type="button"
             onClick={() => speak(plain(card.front))}
             aria-label="Terimi seslendir"
-            className="absolute right-3 bottom-3 z-10 w-10 h-10 rounded-full bg-canvas text-ink-2 hover:text-accent flex items-center justify-center cursor-pointer"
+            className="ms-btn is-icon is-ghost absolute right-2.5 bottom-2.5 z-10"
           >
             <Volume2 className="w-[18px] h-[18px]" />
           </button>
@@ -650,22 +632,22 @@ const StudySession: React.FC<{
         <div className="grid grid-cols-3 gap-2 ms-pop-in">
           {(
             [
-              ['again', 'Tekrar', '1', 'bg-rose-50 text-rose-700 hover:bg-rose-100'],
-              ['hard', 'Zor', '2', 'bg-warn-soft text-warn hover:bg-amber-200'],
-              ['good', 'Biliyorum', '3', 'bg-ok text-white hover:bg-emerald-900'],
+              ['again', 'Tekrar', '1', 'is-again'],
+              ['hard', 'Zor', '2', 'is-hard'],
+              ['good', 'Biliyorum', '3', 'is-good'],
             ] as const
           ).map(([g, label, key, cls]) => (
             <button
               key={g}
               type="button"
               onClick={() => answer(g)}
-              className={`h-14 rounded-2xl text-[15.5px] font-semibold inline-flex flex-col items-center justify-center cursor-pointer transition-colors ${cls}`}
+              className={`ds-grade ${cls}`}
             >
               <span className="inline-flex items-center gap-1.5">
                 {g === 'good' && <Check className="w-4 h-4" strokeWidth={3} />}
                 {label}
               </span>
-              <span className="hidden md:block text-[11px] opacity-70 font-mono">{key}</span>
+              <span className="hidden md:block text-2xs opacity-70 font-mono">{key}</span>
             </button>
           ))}
         </div>
@@ -673,12 +655,12 @@ const StudySession: React.FC<{
         <button
           type="button"
           onClick={() => setFlipped(true)}
-          className="h-14 rounded-2xl bg-ink text-white text-[16px] font-semibold cursor-pointer hover:bg-blue-950"
+          className="ds-grade is-reveal"
         >
           Cevabı göster
         </button>
       )}
-      <p className="m-0 text-center text-[12.5px] text-ink-3">
+      <p className="m-0 text-center text-sm text-ink-3">
         <span className="md:hidden">Çevirdikten sonra sağa kaydır: biliyorum · sola: tekrar</span>
         <span className="hidden md:inline">Boşluk: çevir · ← → gezin · F favori · 1 tekrar · 2 zor · 3 biliyorum</span>
       </p>

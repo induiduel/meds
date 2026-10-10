@@ -498,647 +498,473 @@ const Recall: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
 };
 
 /* ---------------------------------------------------------------------------
- * Yeni İnteraktif Modeller:
- * 1. SpotTheLie: Hata / Tuzak Avı (3 doğru, 1 yanıltıcı çeldiriciyi bulma)
- * 2. SwipeMatching: Hızlı Kart Eşleme / Kategori Kaydırma (Tinder stili refleks testi)
- * 3. FeatureBidding: Özellik Açık Artırması / Puan Bahsi (Metabilişsel güven çarpanı)
- * 4. VennGrid: Teşhis Çapraz Tablosu (Doğru - Yanlış - Her İkisi / Ayırıcı Tanı Matrisi)
+ * Karşılaştırmalı modeller: tuzak avı, hızlı eşleme, puan bahsi, çapraz tablo.
+ * Ortak ilke: uzun etiketler kesilmez, sarar; renk yalnız sonucu (doğru/yanlış) anlatır;
+ * hareket yalnız durum değişimini gösterir (seçim, karar, ilerleme).
  * ------------------------------------------------------------------------- */
 
+/** Veri açıklamalarının başındaki "Tuzak / Yalan!", "Doğru." gibi hükümleri ayıklar (arayüz hükmü zaten gösterir). */
+const cleanVerdict = (t?: string): string =>
+  cleanWhy(String(t || '').replace(/^\s*(?:tuzak|yalan)(?:\s*\/\s*(?:tuzak|yalan))?\s*[!.:]*\s*/iu, ''));
+
+/** İki kutuplu modellerde kutbun kısa harfi ve tam adı */
+const Pole: React.FC<{ k: 'A' | 'B'; label: string }> = ({ k, label }) => (
+  <span className={`ls-pole is-${k.toLowerCase()}`}><b>{k}</b><span>{label}</span></span>
+);
+
+/** İlerleme şeridi: her parça bir tur/kart; sonucu renkle gösterir */
+const Pips: React.FC<{ total: number; at: number; results?: boolean[]; label: string }> = ({ total, at, results = [], label }) => (
+  <span className="ls-pips" role="progressbar" aria-label={label} aria-valuemin={0} aria-valuemax={total} aria-valuenow={Math.min(at, total)}>
+    {Array.from({ length: total }, (_, i) => (
+      <i key={i} className={i < results.length ? (results[i] ? 'is-ok' : 'is-bad') : i === at ? 'is-on' : ''} />
+    ))}
+  </span>
+);
+
 export const SpotTheLie: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
-  const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
-  const [revealed, setRevealed] = useState<Set<number>>(new Set());
   const items: any[] = Array.isArray(e.items) ? e.items : [];
-  const topic = e.topic || e.question || 'Aşağıdaki önermelerden hangisi yanıltıcı bir tuzaktır?';
+  const topic = e.topic || e.question || 'Hangisi yanıltıcı?';
   const lieIdx = items.findIndex((it) => !!(it.isLie || it.isTrap));
+  const [picked, setPicked] = useState<number | null>(null);
+  const [open, setOpen] = useState<Set<number>>(new Set());
 
-  const handleSelect = (idx: number) => {
-    if (selectedIdx === null) {
-      setSelectedIdx(idx);
-      setRevealed(new Set([idx]));
+  const pick = (i: number) => {
+    if (picked === null) {
+      setPicked(i);
+      setOpen(new Set([i, lieIdx].filter((x) => x >= 0)));
       onDone?.();
-    } else {
-      setRevealed((prev) => {
-        const next = new Set(prev);
-        if (next.has(idx)) next.delete(idx);
-        else next.add(idx);
-        return next;
-      });
+      return;
     }
+    setOpen((s) => {
+      const n = new Set(s);
+      n.has(i) ? n.delete(i) : n.add(i);
+      return n;
+    });
   };
-
-  const isLieSelected = selectedIdx !== null && selectedIdx === lieIdx;
+  const caught = picked !== null && picked === lieIdx;
 
   return (
     <div className="ls-ix-body">
-      <div className="ls-stl-header">
-        <Inline text={topic} as="p" className="ls-ix-q" />
-        <span className="ls-stl-instruction">
-          <ShieldAlert aria-hidden /> 3 doğru, 1 yanıltıcı çeldirici var. Tuzağı tespit et!
-        </span>
-      </div>
-
-      <ul className="ls-stl-list">
-        {items.map((it, idx) => {
-          const isLie = !!(it.isLie || it.isTrap);
-          const isPicked = selectedIdx === idx;
-          const isOpen = revealed.has(idx);
-
-          let cardTone = '';
-          if (selectedIdx !== null) {
-            if (isLie) {
-              cardTone = 'is-lie-card';
-            } else if (isPicked) {
-              cardTone = 'is-wrong-pick';
-            } else {
-              cardTone = 'is-safe-card';
-            }
-          }
-
+      <Inline text={topic} as="p" className="ls-ix-q" />
+      {picked === null && (
+        <span className="ls-hint"><ShieldAlert aria-hidden /> {items.length} önermeden biri yanlış. Onu bul.</span>
+      )}
+      <ol className={`ls-stl ${picked !== null ? 'is-decided' : ''}`}>
+        {items.map((it, i) => {
+          const isLie = i === lieIdx;
+          const tone = picked === null ? '' : isLie ? 'is-lie' : i === picked ? 'is-miss' : 'is-fact';
+          const why = cleanVerdict(it.explanation);
+          const isOpen = picked !== null && open.has(i) && !!why;
           return (
-            <li key={idx} className={`ls-stl-item ${cardTone} ${isOpen ? 'is-open' : ''}`}>
-              <button
-                type="button"
-                className="ls-stl-btn"
-                onClick={() => handleSelect(idx)}
-                aria-expanded={isOpen}
-              >
-                <span className="ls-stl-badge">
-                  {selectedIdx === null ? (
-                    String.fromCharCode(65 + idx)
-                  ) : isLie ? (
-                    <ShieldAlert aria-hidden />
-                  ) : isPicked ? (
-                    <X aria-hidden />
-                  ) : (
-                    <Check aria-hidden />
-                  )}
+            <li key={i} className={`ls-stl-item ${tone} ${isOpen ? 'is-open' : ''}`} style={{ '--i': i } as React.CSSProperties}>
+              <button type="button" className="ls-stl-btn" onClick={() => pick(i)} aria-expanded={picked !== null && why ? isOpen : undefined}>
+                <span className="ls-stl-badge" aria-hidden>
+                  {picked === null ? String.fromCharCode(65 + i) : isLie ? <ShieldAlert /> : i === picked ? <X /> : <Check />}
                 </span>
-                <span className="ls-stl-text">
-                  <Inline text={it.text || ''} />
-                </span>
-                {selectedIdx !== null && it.explanation && (
-                  <ChevronDown className="ls-opt-chev" aria-hidden />
-                )}
+                <Inline text={it.text || ''} className="ls-stl-text" />
+                {picked !== null && why && <ChevronDown className="ls-opt-chev" aria-hidden />}
               </button>
-
-              {selectedIdx !== null && isOpen && it.explanation && (
-                <div className="ls-stl-panel">
-                  <span className={`ls-stl-verdict ${isLie ? 'is-trap-tag' : 'is-fact-tag'}`}>
-                    {isLie ? '🚨 TUZAK / YANILTICI ÖNERME' : '✅ TIBBEN DOĞRU BİLGİ'}
-                  </span>
-                  <p className="ls-stl-expl">
-                    <Inline text={cleanWhy(it.explanation)} />
-                  </p>
+              {picked !== null && why && (
+                <div className="ls-fold" aria-hidden={!isOpen}>
+                  <div>
+                    <p className="ls-stl-why">
+                      <span className={`ls-verdict ${isLie ? 'is-warn' : 'is-ok'}`}>{isLie ? 'Tuzak' : 'Doğru bilgi'}</span>
+                      <Inline text={why} />
+                    </p>
+                  </div>
                 </div>
               )}
             </li>
           );
         })}
-      </ul>
-
-      {selectedIdx !== null && (
-        <div className={`ls-fb ${isLieSelected ? 'is-ok' : 'is-bad'}`} role="status">
-          <b>
-            {isLieSelected
-              ? '🎯 Tebrikler! Tuzağı başarıyla yakaladın.'
-              : '⚠️ Bu önerme tıbben doğrudur! Yanıltıcı çeldiriciyi incele.'}
-          </b>
-          <span className="ls-fb-hint"> Maddelere dokunarak gerekçelerini inceleyebilirsin.</span>
-        </div>
+      </ol>
+      {picked !== null && (
+        <p className={`ls-fb ${caught ? 'is-ok' : 'is-bad'}`} role="status">
+          <b>{caught ? 'Tuzağı yakaladın.' : `Bu önerme doğru; tuzak ${String.fromCharCode(65 + lieIdx)}.`}</b>
+          <span className="ls-fb-hint"> Diğer gerekçeler için önermelere dokun.</span>
+        </p>
       )}
     </div>
   );
 };
 
+type Side = 'left' | 'right';
 export const SwipeMatching: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
   const cards: any[] = Array.isArray(e.cards) ? e.cards : [];
-  const leftLabel = typeof e.leftCategory === 'object' && e.leftCategory ? (e.leftCategory.label || e.leftCategory.name || 'Sol Kategori') : String(e.leftCategory || 'Sol Kategori');
-  const rightLabel = typeof e.rightCategory === 'object' && e.rightCategory ? (e.rightCategory.label || e.rightCategory.name || 'Sağ Kategori') : String(e.rightCategory || 'Sağ Kategori');
-  const title = e.title || `${leftLabel} vs ${rightLabel}`;
+  const labelOf = (c: any, d: string) => (typeof c === 'object' && c ? c.label || c.name || d : String(c || d));
+  const L = labelOf(e.leftCategory, 'Sol');
+  const R = labelOf(e.rightCategory, 'Sağ');
+  const sideOf = (c: any): Side | null => {
+    const t = String(c?.category || c?.correctCategory || '').toLocaleLowerCase('tr-TR');
+    if (t === 'left' || t === 'l' || t === L.toLocaleLowerCase('tr-TR')) return 'left';
+    if (t === 'right' || t === 'r' || t === R.toLocaleLowerCase('tr-TR')) return 'right';
+    return null;
+  };
 
   const [idx, setIdx] = useState(0);
-  const [history, setHistory] = useState<Array<{ card: any; chosen: 'left' | 'right'; isCorrect: boolean }>>([]);
-  const [dragOffset, setDragOffset] = useState<number>(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [animatingDir, setAnimatingDir] = useState<'left' | 'right' | null>(null);
-  const startXRef = useRef<number>(0);
+  const [log, setLog] = useState<Array<{ card: any; chosen: Side; ok: boolean }>>([]);
+  const [dx, setDx] = useState(0);
+  const [drag, setDrag] = useState(false);
+  const [verdict, setVerdict] = useState<{ dir: Side; ok: boolean } | null>(null);
+  const [fly, setFly] = useState<Side | null>(null);
+  const startX = useRef(0);
+  const timers = useRef<number[]>([]);
+  useEffect(() => () => timers.current.forEach((t) => window.clearTimeout(t)), []);
 
-  const isCompleted = idx >= cards.length;
-  const currentCard = !isCompleted ? cards[idx] : null;
+  const done = idx >= cards.length;
+  const card = done ? null : cards[idx];
 
-  const handleMatch = (dir: 'left' | 'right') => {
-    if (isCompleted || animatingDir || !currentCard) return;
-    setAnimatingDir(dir);
-    const targetCat = String(currentCard.category || currentCard.correctCategory || '').toLowerCase();
-    const isCorrect = (dir === 'left' && (targetCat === 'left' || targetCat === 'l' || targetCat === leftLabel.toLowerCase()))
-      || (dir === 'right' && (targetCat === 'right' || targetCat === 'r' || targetCat === rightLabel.toLowerCase()));
-
-    setTimeout(() => {
-      setHistory((prev) => [...prev, { card: currentCard, chosen: dir, isCorrect }]);
-      const nextIdx = idx + 1;
-      setIdx(nextIdx);
-      setAnimatingDir(null);
-      setDragOffset(0);
-      if (nextIdx >= cards.length) {
-        onDone?.();
-      }
-    }, 280);
+  const decide = (dir: Side) => {
+    if (!card || verdict) return;
+    const ok = sideOf(card) === dir;
+    setVerdict({ dir, ok });
+    setDx(0);
+    // Önce karar kartın üstünde görünür, sonra kart seçilen yöne uçar
+    timers.current.push(
+      window.setTimeout(() => setFly(dir), 520),
+      window.setTimeout(() => {
+        setLog((l) => [...l, { card, chosen: dir, ok }]);
+        setVerdict(null);
+        setFly(null);
+        setIdx((i) => {
+          if (i + 1 >= cards.length) onDone?.();
+          return i + 1;
+        });
+      }, 800),
+    );
   };
 
-  const resetAll = () => {
-    setIdx(0);
-    setHistory([]);
-    setDragOffset(0);
-    setAnimatingDir(null);
+  const onDown = (ev: React.PointerEvent<HTMLDivElement>) => {
+    if (verdict) return;
+    ev.currentTarget.setPointerCapture(ev.pointerId);
+    startX.current = ev.clientX;
+    setDrag(true);
+  };
+  const onMove = (ev: React.PointerEvent<HTMLDivElement>) => {
+    if (drag) setDx(ev.clientX - startX.current);
+  };
+  const onUp = () => {
+    if (!drag) return;
+    setDrag(false);
+    if (dx > 72) decide('right');
+    else if (dx < -72) decide('left');
+    else setDx(0);
+  };
+  const onKey = (ev: React.KeyboardEvent) => {
+    if (ev.key === 'ArrowLeft') { ev.preventDefault(); decide('left'); }
+    if (ev.key === 'ArrowRight') { ev.preventDefault(); decide('right'); }
   };
 
-  const handleTouchStart = (ev: React.TouchEvent | React.MouseEvent) => {
-    if (isCompleted || animatingDir) return;
-    setIsDragging(true);
-    const pageX = 'touches' in ev ? ev.touches[0].pageX : ev.pageX;
-    startXRef.current = pageX;
-  };
+  const correct = log.filter((h) => h.ok).length;
+  const lean = Math.max(-1, Math.min(1, dx / 120));
 
-  const handleTouchMove = (ev: React.TouchEvent | React.MouseEvent) => {
-    if (!isDragging) return;
-    const pageX = 'touches' in ev ? ev.touches[0].pageX : ev.pageX;
-    const diff = pageX - startXRef.current;
-    setDragOffset(diff);
-  };
-
-  const handleTouchEnd = () => {
-    if (!isDragging) return;
-    setIsDragging(false);
-    if (dragOffset > 70) {
-      handleMatch('right');
-    } else if (dragOffset < -70) {
-      handleMatch('left');
-    } else {
-      setDragOffset(0);
-    }
-  };
-
-  const correctCount = history.filter((h) => h.isCorrect).length;
+  if (done) {
+    return (
+      <div className="ls-ix-body">
+        <div className="ls-score">
+          <b>{correct}<small>/{cards.length}</small></b>
+          <span>{correct === cards.length ? 'Hepsini doğru ayırdın.' : 'Yanlış eşlediklerinin gerekçesine bak.'}</span>
+        </div>
+        <ul className="ls-reslist">
+          {log.map((h, i) => {
+            const right = sideOf(h.card);
+            return (
+              <li key={i} className={h.ok ? 'is-ok' : 'is-bad'} style={{ '--i': i } as React.CSSProperties}>
+                <span className="ls-res-ico" aria-hidden>{h.ok ? <Check /> : <X />}</span>
+                <div>
+                  <Inline text={h.card.text || ''} as="p" className="ls-res-t" />
+                  <span className="ls-res-tag">{right === 'left' ? L : right === 'right' ? R : ''}</span>
+                  {h.card.explanation && <Inline text={cleanVerdict(h.card.explanation)} as="p" className="ls-res-why" />}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+        <button
+          type="button"
+          className="ls-btn is-sm self-start"
+          onClick={() => {
+            setIdx(0);
+            setLog([]);
+          }}
+        >
+          <RotateCcw aria-hidden /> Yeniden
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="ls-ix-body">
-      <div className="ls-swipe-head">
-        <span className="ls-eyebrow">Hızlı Kart Eşleme (Kategori Kaydırma)</span>
-        <Inline text={title} as="p" className="ls-ix-q" />
+      {e.title && <Inline text={e.title} as="p" className="ls-ix-q" />}
+      <div className="ls-swipe-top">
+        <Pips total={cards.length} at={idx} results={log.map((h) => h.ok)} label="Kart ilerlemesi" />
+        <span className="ls-mono">{idx + 1}/{cards.length}</span>
+      </div>
+      <div className="ls-swipe-deck">
+        {cards.slice(idx + 1, idx + 3).map((_, k) => (
+          <div key={idx + 1 + k} className="ls-swipe-ghost" style={{ '--d': k + 1 } as React.CSSProperties} aria-hidden />
+        ))}
+        <div
+          key={idx}
+          role="group"
+          tabIndex={0}
+          aria-label={`Kart ${idx + 1}. Sola ${L}, sağa ${R}. Ok tuşları da çalışır.`}
+          className={`ls-swipe-card ${drag ? 'is-drag' : ''} ${fly ? `is-fly-${fly}` : ''} ${verdict ? (verdict.ok ? 'is-ok' : 'is-bad') : ''}`}
+          style={{ '--dx': `${dx}px`, '--lean': lean } as React.CSSProperties}
+          onPointerDown={onDown}
+          onPointerMove={onMove}
+          onPointerUp={onUp}
+          onPointerCancel={onUp}
+          onKeyDown={onKey}
+        >
+          <span className="ls-swipe-hint is-left" aria-hidden>{L}</span>
+          <span className="ls-swipe-hint is-right" aria-hidden>{R}</span>
+          <Inline text={card?.text || ''} as="p" className="ls-swipe-text" />
+          {verdict && (
+            <span className="ls-swipe-stamp" role="status">
+              {verdict.ok ? <Check aria-hidden /> : <X aria-hidden />}
+              {verdict.ok ? 'Doğru' : `Doğrusu: ${sideOf(card) === 'left' ? L : R}`}
+            </span>
+          )}
+        </div>
+      </div>
+      <div className="ls-swipe-btns">
+        <button type="button" className="ls-swipe-btn is-left" onClick={() => decide('left')} disabled={!!verdict}>
+          <ChevronLeft aria-hidden /><span>{L}</span>
+        </button>
+        <button type="button" className="ls-swipe-btn is-right" onClick={() => decide('right')} disabled={!!verdict}>
+          <span>{R}</span><ChevronRight aria-hidden />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const CONF = [
+  { m: 1, t: 'Emin değilim' },
+  { m: 2, t: 'Eminim' },
+  { m: 3, t: 'Çok eminim' },
+] as const;
+
+export const FeatureBidding: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+  const A = e.optionA || 'A';
+  const B = e.optionB || 'B';
+  const rounds: any[] = Array.isArray(e.rounds) && e.rounds.length ? e.rounds : [{ feature: e.feature || '', correct: e.correct || e.correctOption || 'A', explanation: e.explanation }];
+  const [r, setR] = useState(0);
+  const [mult, setMult] = useState<1 | 2 | 3>(2);
+  const [pick, setPick] = useState<'A' | 'B' | null>(null);
+  const [score, setScore] = useState(0);
+  const [log, setLog] = useState<Array<{ round: any; picked: 'A' | 'B'; mult: number; delta: number; ok: boolean }>>([]);
+  const round = rounds[r];
+  const finished = r >= rounds.length;
+  const rightOf = (x: any): 'A' | 'B' => (String(x?.correct || 'A').toUpperCase() === 'B' ? 'B' : 'A');
+  const last = log[log.length - 1];
+
+  const choose = (c: 'A' | 'B') => {
+    if (pick || !round) return;
+    const ok = c === rightOf(round);
+    const delta = (ok ? 10 : -10) * mult;
+    setPick(c);
+    setScore((s) => s + delta);
+    setLog((l) => [...l, { round, picked: c, mult, delta, ok }]);
+    if (r + 1 >= rounds.length) onDone?.();
+  };
+  const next = () => {
+    setPick(null);
+    setMult(2);
+    setR((x) => x + 1);
+  };
+  const fmt = (n: number) => (n > 0 ? `+${n}` : n < 0 ? `\u2212${-n}` : '0');
+
+  return (
+    <div className="ls-ix-body">
+      {e.title && <Inline text={e.title} as="p" className="ls-ix-q" />}
+      <div className="ls-bid-top">
+        <Pips total={rounds.length} at={r} results={log.map((x) => x.ok)} label="Tur ilerlemesi" />
+        <span className={`ls-bid-score ${score < 0 ? 'is-neg' : ''}`} aria-live="polite">
+          <Award aria-hidden /><b key={score}>{fmt(score)}</b>
+          {pick && last && <i key={log.length} className={last.ok ? 'is-ok' : 'is-bad'} aria-hidden>{fmt(last.delta)}</i>}
+        </span>
       </div>
 
-      {!isCompleted && currentCard ? (
-        <div className="ls-swipe-arena">
-          <div className="ls-swipe-targets">
-            <button
-              type="button"
-              className={`ls-swipe-target is-left ${dragOffset < -25 ? 'is-active' : ''}`}
-              onClick={() => handleMatch('left')}
-            >
-              <ChevronLeft aria-hidden />
-              <span>{leftLabel}</span>
-            </button>
-
-            <span className="ls-swipe-progress">
-              {idx + 1} / {cards.length}
-            </span>
-
-            <button
-              type="button"
-              className={`ls-swipe-target is-right ${dragOffset > 25 ? 'is-active' : ''}`}
-              onClick={() => handleMatch('right')}
-            >
-              <span>{rightLabel}</span>
-              <ChevronRight aria-hidden />
-            </button>
+      {!finished && round ? (
+        <>
+          <div key={r} className="ls-bid-feature">
+            <span className="ls-mono">Tur {r + 1}/{rounds.length}</span>
+            <Inline text={round.feature || ''} as="p" />
           </div>
-
-          <div
-            className={`ls-swipe-card ${animatingDir === 'left' ? 'is-flying-left' : ''} ${animatingDir === 'right' ? 'is-flying-right' : ''}`}
-            style={{
-              transform: !animatingDir ? `translateX(${dragOffset}px) rotate(${dragOffset * 0.08}deg)` : undefined,
-              transition: isDragging ? 'none' : 'transform 0.28s ease-out',
-            }}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-            onMouseDown={handleTouchStart}
-            onMouseMove={handleTouchMove}
-            onMouseUp={handleTouchEnd}
-            onMouseLeave={handleTouchEnd}
-          >
-            <div className="ls-swipe-card-badge">
-              <Zap aria-hidden /> Refleks Kartı
+          {!pick && (
+            <div className="ls-bid-conf" role="radiogroup" aria-label="Ne kadar eminsin?">
+              {CONF.map((c) => (
+                <button key={c.m} type="button" role="radio" aria-checked={mult === c.m} className={mult === c.m ? 'is-on' : ''} onClick={() => setMult(c.m)}>
+                  <b>{c.m}×</b><span>{c.t}</span><small>±{c.m * 10}</small>
+                </button>
+              ))}
             </div>
-            <p className="ls-swipe-card-text">
-              <Inline text={currentCard.text || ''} />
-            </p>
-            <div className="ls-swipe-cue">
-              <span className="ls-swipe-cue-left">👈 {leftLabel}</span>
-              <span className="ls-swipe-cue-right">{rightLabel} 👉</span>
+          )}
+          <div className="ls-bid-choices">
+            {(['A', 'B'] as const).map((k) => {
+              const right = pick && rightOf(round) === k;
+              const wrong = pick === k && !right;
+              return (
+                <button
+                  key={k}
+                  type="button"
+                  className={`ls-bid-choice ${right ? 'is-ok' : ''} ${wrong ? 'is-bad' : ''} ${pick && !right && !wrong ? 'is-dim' : ''}`}
+                  onClick={() => choose(k)}
+                  disabled={!!pick}
+                >
+                  <span className="k" aria-hidden>{right ? <Check /> : wrong ? <X /> : k}</span>
+                  <span className="t">{k === 'A' ? A : B}</span>
+                </button>
+              );
+            })}
+          </div>
+          {pick && last && (
+            <div className="ls-bid-verdict">
+              <p className={`ls-fb ${last.ok ? 'is-ok' : 'is-bad'}`} role="status">
+                <b>{last.ok ? `Doğru · ${fmt(last.delta)}` : last.mult === 3 ? `Aşırı güven · ${fmt(last.delta)}` : `Yanlış · ${fmt(last.delta)}`}</b>
+                {round.explanation && <> <Inline text={cleanVerdict(round.explanation)} /></>}
+              </p>
+              <button type="button" className="ls-btn is-primary self-start" onClick={next}>
+                {r + 1 < rounds.length ? 'Sonraki tur' : 'Sonucu gör'} <ChevronRight aria-hidden />
+              </button>
             </div>
-          </div>
-
-          <div className="ls-swipe-actions">
-            <button
-              type="button"
-              className="ls-btn ls-swipe-action-btn is-left"
-              onClick={() => handleMatch('left')}
-            >
-              <ChevronLeft aria-hidden /> {leftLabel}
-            </button>
-            <button
-              type="button"
-              className="ls-btn ls-swipe-action-btn is-right"
-              onClick={() => handleMatch('right')}
-            >
-              {rightLabel} <ChevronRight aria-hidden />
-            </button>
-          </div>
-        </div>
+          )}
+        </>
       ) : (
-        <div className="ls-swipe-summary">
-          <div className={`ls-fb ${correctCount === cards.length ? 'is-ok' : 'is-plain'}`}>
-            <b>⚡ Eşleme Tamamlandı! Skor: {correctCount} / {cards.length} Doğru</b>
-            <span className="ls-fb-hint">
-              {correctCount === cards.length
-                ? ' Harika refleks! İki klinik tabloyu mükemmel ayırdın.'
-                : ' Maddeleri aşağıdan inceleyip reflekslerini tazeleyebilirsin.'}
+        <>
+          <div className="ls-score">
+            <b>{fmt(score)}<small> puan</small></b>
+            <span>
+              {log.filter((x) => x.ok).length}/{rounds.length} doğru ·{' '}
+              {score >= rounds.length * 20 ? 'güvenin bilgine denk.' : score > 0 ? 'iyi denge; tereddütlerini gözden geçir.' : 'güvenini bilginle eşitle; gerekçelere bak.'}
             </span>
           </div>
-
-          <ul className="ls-swipe-result-list">
-            {history.map((h, i) => (
-              <li key={i} className={`ls-swipe-result-item ${h.isCorrect ? 'is-ok' : 'is-wrong'}`}>
-                <div className="ls-swipe-result-head">
-                  <span className="ls-swipe-result-icon">
-                    {h.isCorrect ? <Check aria-hidden /> : <X aria-hidden />}
-                  </span>
-                  <span className="ls-swipe-result-text">
-                    <Inline text={h.card.text} />
-                  </span>
-                  <span className="ls-tag">
-                    {h.chosen === 'left' ? leftLabel : rightLabel}
-                  </span>
+          <ul className="ls-reslist">
+            {log.map((x, i) => (
+              <li key={i} className={x.ok ? 'is-ok' : 'is-bad'} style={{ '--i': i } as React.CSSProperties}>
+                <span className="ls-res-ico" aria-hidden>{x.ok ? <Check /> : <X />}</span>
+                <div>
+                  <Inline text={x.round.feature || ''} as="p" className="ls-res-t" />
+                  <span className="ls-res-tag">{rightOf(x.round) === 'A' ? A : B} · {x.mult}× · {fmt(x.delta)}</span>
+                  {x.round.explanation && <Inline text={cleanVerdict(x.round.explanation)} as="p" className="ls-res-why" />}
                 </div>
-                {h.card.explanation && (
-                  <p className="ls-swipe-result-expl">
-                    <Inline text={cleanWhy(h.card.explanation)} />
-                  </p>
-                )}
               </li>
             ))}
           </ul>
-
-          <button type="button" className="ls-btn is-sm self-start mt-2" onClick={resetAll}>
-            <RotateCcw aria-hidden /> Tekrar Dene
+          <button
+            type="button"
+            className="ls-btn is-sm self-start"
+            onClick={() => {
+              setR(0);
+              setPick(null);
+              setMult(2);
+              setScore(0);
+              setLog([]);
+            }}
+          >
+            <RotateCcw aria-hidden /> Yeniden
           </button>
-        </div>
+        </>
       )}
     </div>
   );
 };
 
-export const FeatureBidding: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
-  const optA = e.optionA || 'Seçenek A';
-  const optB = e.optionB || 'Seçenek B';
-  const title = e.title || `${optA} vs ${optB} Özellik Bahsi`;
+const VENN_KEYS = ['a', 'b', 'both'] as const;
+type VennKey = (typeof VENN_KEYS)[number] | 'neither';
+const normVenn = (t: string): VennKey => {
+  const s = String(t || '').toLocaleLowerCase('tr-TR');
+  if (['both', 'both_a_b', 'ikisi', 'her ikisi'].includes(s)) return 'both';
+  if (['neither', 'hicbiri', 'hiçbiri'].includes(s)) return 'neither';
+  return s === 'b' ? 'b' : 'a';
+};
 
-  const rawRounds: any[] = Array.isArray(e.rounds) && e.rounds.length > 0 ? e.rounds : [
-    { feature: e.feature || '', correct: e.correct || e.correctOption || 'A', explanation: e.explanation }
-  ];
+export const VennGrid: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+  const A = e.labelA || 'A';
+  const B = e.labelB || 'B';
+  const items: any[] = Array.isArray(e.items) ? e.items : [];
+  const hasNeither = items.some((it) => normVenn(it.correct) === 'neither');
+  const keys: VennKey[] = hasNeither ? [...VENN_KEYS, 'neither'] : [...VENN_KEYS];
+  const short: Record<VennKey, string> = { a: 'A', b: 'B', both: 'İkisi', neither: 'Hiçbiri' };
+  const full: Record<VennKey, string> = { a: A, b: B, both: 'Her ikisi', neither: 'Hiçbiri' };
+  const [ans, setAns] = useState<Record<number, VennKey>>({});
+  const [closed, setClosed] = useState<Set<number>>(new Set());
+  const n = Object.keys(ans).length;
+  const correct = items.reduce((acc, it, i) => (ans[i] && ans[i] === normVenn(it.correct) ? acc + 1 : acc), 0);
 
-  const [roundIdx, setRoundIdx] = useState(0);
-  const [multiplier, setMultiplier] = useState<1 | 2 | 3>(2);
-  const [selectedOpt, setSelectedOpt] = useState<'A' | 'B' | null>(null);
-  const [score, setScore] = useState(0);
-  const [roundResults, setRoundResults] = useState<Array<{ round: any; picked: 'A' | 'B'; mult: number; delta: number; ok: boolean }>>([]);
-
-  const currentRound = rawRounds[roundIdx];
-  const isFinished = roundIdx >= rawRounds.length;
-
-  const handlePick = (choice: 'A' | 'B') => {
-    if (selectedOpt !== null || isFinished || !currentRound) return;
-    setSelectedOpt(choice);
-
-    const isCorrect = choice.toUpperCase() === String(currentRound.correct || 'A').toUpperCase();
-    const basePoints = 10;
-    const delta = isCorrect ? basePoints * multiplier : -basePoints * multiplier;
-
-    setScore((s) => s + delta);
-    setRoundResults((prev) => [
-      ...prev,
-      { round: currentRound, picked: choice, mult: multiplier, delta, ok: isCorrect }
-    ]);
-
-    if (roundIdx + 1 >= rawRounds.length) {
-      onDone?.();
-    }
-  };
-
-  const handleNextRound = () => {
-    setSelectedOpt(null);
-    setMultiplier(2);
-    setRoundIdx((i) => i + 1);
-  };
-
-  const resetGame = () => {
-    setRoundIdx(0);
-    setSelectedOpt(null);
-    setMultiplier(2);
-    setScore(0);
-    setRoundResults([]);
-  };
+  const choose = (i: number, k: VennKey) =>
+    setAns((prev) => {
+      if (prev[i]) return prev;
+      const next = { ...prev, [i]: k };
+      if (Object.keys(next).length === items.length) queueMicrotask(() => onDone?.());
+      return next;
+    });
 
   return (
     <div className="ls-ix-body">
-      <div className="ls-bidding-head">
-        <div className="flex items-center justify-between gap-2">
-          <span className="ls-eyebrow">Özellik Açık Artırması (Puan Bahsi)</span>
-          <span className={`ls-bidding-score ${score >= 0 ? 'is-pos' : 'is-neg'}`}>
-            <Award aria-hidden /> Puan: {score > 0 ? `+${score}` : score}
-          </span>
-        </div>
-        <Inline text={title} as="p" className="ls-ix-q" />
+      {e.title && <Inline text={e.title} as="p" className="ls-ix-q" />}
+      <div className="ls-poles">
+        <Pole k="A" label={A} />
+        <Pole k="B" label={B} />
+        <span className="ls-mono ls-poles-n">{n}/{items.length}</span>
       </div>
-
-      {!isFinished && currentRound ? (
-        <div className="ls-bidding-arena">
-          <div className="ls-bidding-round-badge">
-            Tur {roundIdx + 1} / {rawRounds.length}
-          </div>
-
-          <div className="ls-bidding-feature-box">
-            <span className="ls-bidding-feature-tag">Özellik / Patognomonik Bulgu:</span>
-            <p className="ls-bidding-feature-text">
-              <Inline text={currentRound.feature || ''} />
-            </p>
-          </div>
-
-          {selectedOpt === null ? (
-            <div className="ls-bidding-controls">
-              <div className="ls-bidding-multiplier-row">
-                <span className="ls-bidding-mult-label">
-                  <Scale aria-hidden /> Kendine ne kadar güveniyorsun?
-                </span>
-                <div className="ls-bidding-mult-btns">
-                  {([1, 2, 3] as const).map((m) => (
+      <ol className="ls-vg">
+        {items.map((it, i) => {
+          const target = normVenn(it.correct);
+          const mine = ans[i];
+          const ok = mine === target;
+          const why = cleanVerdict(it.explanation);
+          const isOpen = !!mine && !!why && !closed.has(i);
+          return (
+            <li key={i} className={`ls-vg-row ${mine ? (ok ? 'is-ok' : 'is-bad') : ''}`} style={{ '--i': i } as React.CSSProperties}>
+              <div className="ls-vg-main">
+                <Inline text={it.criterion || ''} as="p" className="ls-vg-text" />
+                <div className="ls-vg-seg" role="radiogroup" aria-label={`${i + 1}. özellik`}>
+                  {keys.map((k) => (
                     <button
-                      key={m}
+                      key={k}
                       type="button"
-                      className={`ls-bidding-mult-btn ${multiplier === m ? 'is-selected' : ''}`}
-                      onClick={() => setMultiplier(m)}
+                      role="radio"
+                      aria-checked={mine === k}
+                      aria-label={full[k]}
+                      title={full[k]}
+                      disabled={!!mine}
+                      className={mine ? (k === target ? 'is-target' : k === mine ? 'is-miss' : '') : ''}
+                      onClick={() => choose(i, k)}
                     >
-                      <span className="m-val">{m}x</span>
-                      <small className="m-desc">
-                        {m === 1 ? 'Emin Değilim (+10/-10)' : m === 2 ? 'Güveniyorum (+20/-20)' : 'Adım Gibi Eminim (+30/-30)'}
-                      </small>
+                      {short[k]}
                     </button>
                   ))}
                 </div>
               </div>
-
-              <div className="ls-bidding-choice-grid">
-                <button
-                  type="button"
-                  className="ls-bidding-choice-btn is-a"
-                  onClick={() => handlePick('A')}
-                >
-                  <span className="k">A</span>
-                  <span className="t">{optA}</span>
-                </button>
-                <button
-                  type="button"
-                  className="ls-bidding-choice-btn is-b"
-                  onClick={() => handlePick('B')}
-                >
-                  <span className="k">B</span>
-                  <span className="t">{optB}</span>
-                </button>
-              </div>
-            </div>
-          ) : (
-            <div className="ls-bidding-verdict">
-              {(() => {
-                const isCorrect = selectedOpt.toUpperCase() === String(currentRound.correct || 'A').toUpperCase();
-                const delta = isCorrect ? 10 * multiplier : -10 * multiplier;
-                return (
-                  <div className={`ls-fb ${isCorrect ? 'is-ok' : 'is-bad'}`}>
-                    <b>
-                      {isCorrect ? (
-                        multiplier === 3 ? '🔥 TAM İSABET! Mükemmel Güven (+30 Puan)' : `🎯 Doğru Teşhis! (+${delta} Puan)`
-                      ) : (
-                        multiplier === 3 ? '🚨 AŞIRI GÜVEN YANILGISI! Dikkat Tuzağı (-30 Puan)' : `⚠️ Yanlış Karar! (${delta} Puan)`
-                      )}
-                    </b>
-                    <p className="mt-1">
-                      Bu özellik <b>{String(currentRound.correct).toUpperCase() === 'A' ? optA : optB}</b> tablosuna aittir.
-                    </p>
-                    {currentRound.explanation && (
-                      <p className="mt-1 text-[13px] opacity-90">
-                        <Inline text={cleanWhy(currentRound.explanation)} />
-                      </p>
-                    )}
-                  </div>
-                );
-              })()}
-
-              <button
-                type="button"
-                className="ls-btn is-primary mt-2"
-                onClick={handleNextRound}
-              >
-                {roundIdx + 1 < rawRounds.length ? 'Sonraki Tur' : 'Sonucu Gör'} <ChevronRight aria-hidden />
-              </button>
-            </div>
-          )}
-        </div>
-      ) : (
-        <div className="ls-bidding-summary">
-          <div className={`ls-fb ${score > 0 ? 'is-ok' : 'is-plain'}`}>
-            <b>🏆 Bahis Tamamlandı! Toplam Puan: {score > 0 ? `+${score}` : score}</b>
-            <span className="ls-fb-hint">
-              {score >= 40
-                ? ' Mükemmel klinik sezgi ve yüksek metabilişsel doğruluk!'
-                : score > 0
-                ? ' Başarılı bir analiz. Tereddüt ve güven dengesini iyi kurdun.'
-                : ' Aşırı güven tuzaklarına dikkat; gerekçeleri tekrar gözden geçir.'}
-            </span>
-          </div>
-
-          <ul className="ls-bidding-res-list">
-            {roundResults.map((r, i) => (
-              <li key={i} className={`ls-bidding-res-item ${r.ok ? 'is-ok' : 'is-bad'}`}>
-                <div className="flex items-center justify-between gap-2">
-                  <span className="font-semibold text-[13.5px]">
-                    Tur {i + 1}: {r.ok ? '✅ Doğru' : '❌ Yanlış'} ({r.delta > 0 ? `+${r.delta}` : r.delta} Puan · {r.mult}x)
-                  </span>
-                  <span className="ls-tag">
-                    {r.picked === 'A' ? optA : optB}
-                  </span>
-                </div>
-                <p className="text-[13px] text-ink-2 mt-1">
-                  <Inline text={r.round.feature} />
-                </p>
-                {r.round.explanation && (
-                  <p className="text-[12.5px] text-ink-3 mt-1">
-                    <Inline text={cleanWhy(r.round.explanation)} />
-                  </p>
-                )}
-              </li>
-            ))}
-          </ul>
-
-          <button type="button" className="ls-btn is-sm self-start mt-2" onClick={resetGame}>
-            <RotateCcw aria-hidden /> Bahsi Yeniden Başlat
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export const VennGrid: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
-  const labA = e.labelA || 'Durum A';
-  const labB = e.labelB || 'Durum B';
-  const title = e.title || `${labA} vs ${labB} Çapraz Karşılaştırma`;
-  const items: any[] = Array.isArray(e.items) ? e.items : [];
-
-  const [answers, setAnswers] = useState<Record<number, string>>({});
-  const [openedExpl, setOpenedExpl] = useState<Set<number>>(new Set());
-
-  const answeredCount = Object.keys(answers).length;
-  const isAllAnswered = items.length > 0 && answeredCount === items.length;
-
-  const normTarget = (t: string) => {
-    const s = String(t || '').toLowerCase();
-    if (s === 'both_a_b' || s === 'ikisi' || s === 'her ikisi') return 'both';
-    if (s === 'hicbiri' || s === 'hiçbiri') return 'neither';
-    return s;
-  };
-
-  const handlePick = (idx: number, choice: string) => {
-    if (answers[idx]) return;
-    const nextAnswers = { ...answers, [idx]: choice };
-    setAnswers(nextAnswers);
-    setOpenedExpl((prev) => new Set(prev).add(idx));
-
-    if (Object.keys(nextAnswers).length === items.length) {
-      onDone?.();
-    }
-  };
-
-  const toggleExpl = (idx: number) => {
-    setOpenedExpl((prev) => {
-      const n = new Set(prev);
-      n.has(idx) ? n.delete(idx) : n.add(idx);
-      return n;
-    });
-  };
-
-  const correctCount = items.reduce((acc, it, idx) => {
-    const userChoice = answers[idx];
-    if (!userChoice) return acc;
-    return normTarget(userChoice) === normTarget(it.correct) ? acc + 1 : acc;
-  }, 0);
-
-  return (
-    <div className="ls-ix-body">
-      <div className="ls-vg-head">
-        <span className="ls-eyebrow">Teşhis Çapraz Tablosu (Venn Matrisi)</span>
-        <Inline text={title} as="p" className="ls-ix-q" />
-        <span className="ls-hint">
-          Her özellik için ilgili hastalığı ya da her ikisini seçerek matrisi tamamlayın.
-        </span>
-      </div>
-
-      <div className="ls-vg-table">
-        {items.map((it, idx) => {
-          const userAns = answers[idx];
-          const target = normTarget(it.correct);
-          const isAnswered = !!userAns;
-          const isCorrect = isAnswered && normTarget(userAns) === target;
-          const isExplOpen = openedExpl.has(idx);
-
-          return (
-            <div
-              key={idx}
-              className={`ls-vg-row ${isAnswered ? (isCorrect ? 'is-row-ok' : 'is-row-bad') : ''}`}
-            >
-              <div className="ls-vg-crit-col">
-                <span className="ls-vg-num">{idx + 1}.</span>
-                <span className="ls-vg-text">
-                  <Inline text={it.criterion || ''} />
-                </span>
-                {isAnswered && it.explanation && (
+              {mine && why && (
+                <>
                   <button
                     type="button"
-                    className="ls-vg-expl-toggle"
-                    onClick={() => toggleExpl(idx)}
-                    aria-label="Açıklamayı göster/gizle"
+                    className="ls-vg-why-toggle"
+                    aria-expanded={isOpen}
+                    onClick={() => setClosed((s) => { const c = new Set(s); c.has(i) ? c.delete(i) : c.add(i); return c; })}
                   >
-                    <Info aria-hidden /> Gerekçe
+                    {ok ? 'Doğru' : `Doğrusu: ${full[target]}`}
+                    <ChevronDown aria-hidden />
                   </button>
-                )}
-              </div>
-
-              <div className="ls-vg-btns-col">
-                {[
-                  { key: 'a', label: labA },
-                  { key: 'b', label: labB },
-                  { key: 'both', label: 'Her İkisi' },
-                ].map((btn) => {
-                  const isThisPicked = userAns === btn.key;
-                  const isThisTarget = target === btn.key;
-
-                  let btnClass = 'ls-vg-btn';
-                  if (isAnswered) {
-                    if (isThisTarget) btnClass += ' is-target';
-                    if (isThisPicked && !isCorrect) btnClass += ' is-wrong-picked';
-                    if (isThisPicked && isCorrect) btnClass += ' is-correct-picked';
-                  }
-
-                  return (
-                    <button
-                      key={btn.key}
-                      type="button"
-                      className={btnClass}
-                      disabled={isAnswered}
-                      onClick={() => handlePick(idx, btn.key)}
-                    >
-                      {btn.label}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {isAnswered && isExplOpen && it.explanation && (
-                <div className="ls-vg-row-expl">
-                  <span className={`ls-vg-verdict ${isCorrect ? 'is-ok' : 'is-bad'}`}>
-                    {isCorrect ? 'Doğru Eşleşme' : `Hatalı (Doğrusu: ${target === 'both' ? 'Her İkisi' : target === 'a' ? labA : labB})`}
-                  </span>
-                  <p>
-                    <Inline text={cleanWhy(it.explanation)} />
-                  </p>
-                </div>
+                  <div className="ls-fold" aria-hidden={!isOpen}>
+                    <div><Inline text={why} as="p" className="ls-vg-why" /></div>
+                  </div>
+                </>
               )}
-            </div>
+            </li>
           );
         })}
-      </div>
-
-      {isAllAnswered && (
-        <div className={`ls-fb ${correctCount === items.length ? 'is-ok' : 'is-plain'}`}>
-          <b>
-            Matris Tamamlandı! Skor: {correctCount} / {items.length} Doğru
-          </b>
-          <span className="ls-fb-hint">
-            {correctCount === items.length
-              ? ' Tebrikler, iki antite arasındaki tüm klinik ayrım kriterlerini eksiksiz kavradın!'
-              : ' Ayırıcı tanı tablosundaki gerekçeleri inceleyerek bilgileri pekiştirebilirsin.'}
-          </span>
-        </div>
+      </ol>
+      {n === items.length && items.length > 0 && (
+        <p className={`ls-fb ${correct === items.length ? 'is-ok' : 'is-plain'}`} role="status">
+          <b>{correct}/{items.length} doğru.</b>
+          <span className="ls-fb-hint">{correct === items.length ? ' İki tabloyu ayıran her ölçütü yerine koydun.' : ' Kırmızı satırların gerekçesini oku.'}</span>
+        </p>
       )}
     </div>
   );

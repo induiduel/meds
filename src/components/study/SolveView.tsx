@@ -182,7 +182,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
           className="lg:hidden min-h-10 px-2 rounded-[10px] flex items-center gap-2 text-left cursor-pointer"
         >
           <SlidersHorizontal className="w-4 h-4 text-ink-2 shrink-0" />
-          <span className="flex-1 min-w-0 text-[14px] truncate">
+          <span className="flex-1 min-w-0 text-base truncate">
             <strong className="font-semibold">{committeeId === 'all' ? 'Tüm kurullar' : committeeName(committeeId)}</strong>
             <span className="text-ink-2">
               {' · '}
@@ -190,7 +190,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
               {mode !== 'all' ? ` · ${mode === 'unsolved' ? 'Çözülmemiş' : mode === 'wrong' ? 'Yanlışlar' : 'Tekrar'}` : ''}
             </span>
           </span>
-          <span className="font-mono text-[12px] text-ink-3 shrink-0">{list.length}</span>
+          <span className="font-mono text-xs text-ink-3 shrink-0">{list.length}</span>
           {filtersOpen ? <ChevronUp className="w-4 h-4 text-ink-2" /> : <ChevronDown className="w-4 h-4 text-ink-2" />}
         </button>
         <div id="solve-filters" className={`${filtersOpen ? 'flex' : 'hidden'} lg:flex flex-col gap-3 px-1 pb-1 lg:p-0`}>
@@ -226,16 +226,16 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
         </Field>
 
         <div className="hidden lg:flex flex-col gap-1">
-          <span className="text-[13px] font-semibold text-ink-2 mb-0.5">Dersler</span>
+          <span className="text-sm font-semibold text-ink-2 mb-0.5">Dersler</span>
           <button
             type="button"
             aria-pressed={discipline === 'all'}
             onClick={() => setDiscipline('all')}
-            className={`flex items-center justify-between gap-2 min-h-9 px-2.5 rounded-lg text-[14px] text-left cursor-pointer ${
+            className={`flex items-center justify-between gap-2 min-h-9 px-2.5 rounded-lg text-base text-left cursor-pointer ${
               discipline === 'all' ? 'bg-accent-soft text-accent font-semibold' : 'hover:bg-canvas text-ink'
             }`}
           >
-            Tümü <span className="font-mono text-[12px]">{scoped.length}</span>
+            Tümü <span className="font-mono text-xs">{scoped.length}</span>
           </button>
           <div className="flex flex-col gap-0.5 max-h-[320px] overflow-y-auto -mr-1 pr-1">
             {disciplines.map(([d, s]) => {
@@ -248,9 +248,9 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                   onClick={() => setDiscipline(d)}
                   className={`flex flex-col gap-1 px-2.5 py-1.5 rounded-lg text-left cursor-pointer ${on ? 'bg-accent-soft' : 'hover:bg-canvas'}`}
                 >
-                  <span className={`flex items-center justify-between gap-2 text-[14px] ${on ? 'text-accent font-semibold' : 'text-ink'}`}>
+                  <span className={`flex items-center justify-between gap-2 text-base ${on ? 'text-accent font-semibold' : 'text-ink'}`}>
                     <span className="truncate">{d}</span>
-                    <span className="font-mono text-[12px] shrink-0">
+                    <span className="font-mono text-xs shrink-0">
                       {s.solved}/{s.total}
                     </span>
                   </span>
@@ -264,7 +264,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
         </div>
 
         <div className="flex flex-col gap-1.5 border-t border-line-soft pt-3">
-          <span className="text-[13px] font-semibold text-ink-2">Mod</span>
+          <span className="text-sm font-semibold text-ink-2">Mod</span>
           <Segmented<Mode>
             label="Mod"
             size="sm"
@@ -277,25 +277,25 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
               { value: 'review', label: `Tekrar ${review.size}` },
             ]}
           />
-          <label className="flex items-center gap-2 min-h-9 text-[14px] text-ink cursor-pointer">
+          <label className="flex items-center gap-2 min-h-9 text-base text-ink cursor-pointer">
             <input type="checkbox" checked={shuffled} onChange={(e) => setShuffled(e.target.checked)} className="w-4 h-4 accent-[#1E4FD8]" />
             Karışık sırala
             {shuffled && (
-              <button type="button" onClick={() => setSeed((s) => s + 1)} className="ml-auto text-accent text-[13px] font-semibold inline-flex items-center gap-1 cursor-pointer">
+              <button type="button" onClick={() => setSeed((s) => s + 1)} className="ml-auto text-accent text-sm font-semibold inline-flex items-center gap-1 cursor-pointer">
                 <Shuffle className="w-3.5 h-3.5" /> Yeniden
               </button>
             )}
           </label>
         </div>
 
-        <div className="hidden lg:grid grid-cols-2 gap-2 border-t border-line-soft pt-3 text-[12px] text-ink-2">
+        <div className="hidden lg:grid grid-cols-2 gap-2 border-t border-line-soft pt-3 text-xs text-ink-2">
           <div>
             Çözülen
-            <div className="font-mono text-[18px] text-ink">{solvedInScope}</div>
+            <div className="font-mono text-lg text-ink">{solvedInScope}</div>
           </div>
           <div>
             Doğruluk
-            <div className="font-mono text-[18px] text-ink">{solvedInScope ? Math.round((correctInScope / solvedInScope) * 100) : 0}%</div>
+            <div className="font-mono text-lg text-ink">{solvedInScope ? Math.round((correctInScope / solvedInScope) * 100) : 0}%</div>
           </div>
         </div>
         </div>
@@ -318,18 +318,18 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
         ) : (
           <article className={`${cardCls} p-4 sm:p-6 flex flex-col gap-4`}>
             <header className="flex flex-wrap items-center gap-2">
-              <span className="font-mono text-[13px] text-ink-2">
+              <span className="font-mono text-sm text-ink-2">
                 {index + 1} / {list.length}
               </span>
-              <span className="h-6 px-2 rounded-full bg-canvas text-ink-2 text-[12px] font-semibold inline-flex items-center">{q.discipline}</span>
-              <span className="h-6 px-2 rounded-full bg-canvas text-ink-2 text-[12px] font-semibold inline-flex items-center">
+              <span className="h-6 px-2 rounded-full bg-canvas text-ink-2 text-xs font-semibold inline-flex items-center">{q.discipline}</span>
+              <span className="h-6 px-2 rounded-full bg-canvas text-ink-2 text-xs font-semibold inline-flex items-center">
                 {committeeName(q.committeeId)}
                 {q.year ? ` · ${q.year}` : ''}
                 {q.number ? ` · S.${q.number}` : ''}
               </span>
               {answered && (
                 <span
-                  className={`h-6 px-2 rounded-full text-[12px] font-semibold inline-flex items-center gap-1 ${
+                  className={`h-6 px-2 rounded-full text-xs font-semibold inline-flex items-center gap-1 ${
                     attempt!.correct ? 'bg-ok-soft text-ok' : 'bg-bad-soft text-bad-text'
                   }`}
                 >
@@ -341,7 +341,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
               <button
                 type="button"
                 onClick={() => setAiChatOpen(true)}
-                className="h-9 px-2.5 sm:px-3 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 bg-accent hover:bg-accent-hover text-white shadow-xs cursor-pointer transition-all shrink-0"
+                className="h-9 px-2.5 sm:px-3 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 bg-accent hover:bg-accent-hover text-white shadow-xs cursor-pointer transition-all shrink-0"
                 title="Yapay zeka ile bu soru hakkında canlı sohbet et"
               >
                 <Sparkles className="w-3.5 h-3.5" />
@@ -352,7 +352,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                 type="button"
                 onClick={toggleReview}
                 aria-pressed={review.has(q.id)}
-                className={`h-9 px-2.5 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
+                className={`h-9 px-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
                   review.has(q.id) ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
                 }`}
               >
@@ -364,8 +364,8 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                 onClick={() => setFavorites(new Set(setFavorite(q.id, !favorites.has(q.id))))}
                 aria-pressed={favorites.has(q.id)}
                 aria-label={favorites.has(q.id) ? 'Favorilerden çıkar' : 'Favorilere ekle'}
-                className={`h-9 px-2.5 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
-                  favorites.has(q.id) ? 'text-amber-600' : 'text-ink-2 hover:bg-canvas'
+                className={`h-9 px-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
+                  favorites.has(q.id) ? 'text-warn' : 'text-ink-2 hover:bg-canvas'
                 }`}
               >
                 <Star className="w-4 h-4" fill={favorites.has(q.id) ? 'currentColor' : 'none'} />
@@ -375,7 +375,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                 type="button"
                 onClick={() => setNoteOpen((v) => !v)}
                 aria-expanded={noteOpen}
-                className="h-9 px-2.5 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 text-ink-2 hover:bg-canvas cursor-pointer"
+                className="h-9 px-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 text-ink-2 hover:bg-canvas cursor-pointer"
               >
                 <NotebookPen className="w-4 h-4" />
                 <span className="hidden sm:inline">Not al</span>
@@ -383,7 +383,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
               <StudyReportButton q={q} />
             </header>
 
-            <h2 className={`m-0 font-display font-medium tracking-[-0.01em] leading-[1.35] ${q.stem.length > 220 ? 'text-[17px] sm:text-[19px]' : 'text-[19px] sm:text-[22px]'}`}>{q.stem}</h2>
+            <h2 className={`m-0 font-display font-medium tracking-[-0.01em] leading-[1.35] ${q.stem.length > 220 ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl'}`}>{q.stem}</h2>
 
             <div role="radiogroup" aria-label="Şıklar" className="flex flex-col gap-2">
               {q.options.map((o) => {
@@ -402,16 +402,16 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
               })}
             </div>
 
-            {!answered && <p className="m-0 text-[12px] text-ink-3 hidden sm:block">Kısayol: A–E ile cevapla, ← → ile gez.</p>}
+            {!answered && <p className="m-0 text-xs text-ink-3 hidden sm:block">Kısayol: A–E ile cevapla, ← → ile gez.</p>}
 
             {answered && (
               <section className={`rounded-xl px-4 py-3.5 flex flex-col gap-2.5 ${attempt!.correct ? 'bg-ok-soft' : 'bg-bad-soft'}`}>
                 <div className="flex items-center justify-between gap-2">
-                  <span className={`font-semibold text-[15px] ${attempt!.correct ? 'text-ok' : 'text-bad-text'}`}>
+                  <span className={`font-semibold text-md ${attempt!.correct ? 'text-ok' : 'text-bad-text'}`}>
                     {attempt!.correct ? 'Doğru.' : `Doğru cevap ${q.answer}.`}
                     {!attempt!.correct && <span className="font-normal text-ink"> Soru tekrar listene eklendi.</span>}
                   </span>
-                  <button type="button" onClick={retry} className="h-8 px-2 rounded-lg text-[13px] font-semibold text-ink-2 hover:bg-white/60 inline-flex items-center gap-1 cursor-pointer shrink-0">
+                  <button type="button" onClick={retry} className="h-8 px-2 rounded-lg text-sm font-semibold text-ink-2 hover:bg-white/60 inline-flex items-center gap-1 cursor-pointer shrink-0">
                     <RotateCcw className="w-3.5 h-3.5" /> Yeniden çöz
                   </button>
                 </div>
@@ -421,7 +421,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                     <button
                       type="button"
                       onClick={() => setAiChatOpen(true)}
-                      className="text-[13px] font-semibold text-accent hover:text-accent-hover inline-flex items-center gap-1.5 cursor-pointer"
+                      className="text-sm font-semibold text-accent hover:text-accent-hover inline-flex items-center gap-1.5 cursor-pointer"
                     >
                       <Sparkles className="w-3.5 h-3.5" />
                       {attempt!.correct
@@ -435,7 +435,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
 
             {noteOpen && (
               <div className="flex flex-col gap-2 bg-canvas rounded-xl p-3">
-                <label htmlFor="solve-note" className="text-[13px] font-semibold text-ink-2">
+                <label htmlFor="solve-note" className="text-sm font-semibold text-ink-2">
                   Bu soruya not
                 </label>
                 <textarea
@@ -445,7 +445,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                   value={noteText}
                   onChange={(e) => setNoteText(e.target.value)}
                   placeholder="İlk satır notun başlığı olur. Örn. Kurşun → kemikte birikir, FEP ve δ-ALA artar"
-                  className="resize-y border border-line-2 rounded-[10px] px-3 py-2.5 text-[15px] bg-white outline-0 focus:border-accent"
+                  className="resize-y border border-line-2 rounded-[10px] px-3 py-2.5 text-md bg-white outline-0 focus:border-accent"
                 />
                 <div className="flex justify-end gap-2">
                   <button type="button" onClick={() => setNoteOpen(false)} className={btnGhost}>
@@ -457,7 +457,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                 </div>
               </div>
             )}
-            {noteSaved && <p role="status" className="m-0 text-[13px] text-ok font-semibold">Not kaydedildi. Notlarım sekmesinde bulabilirsin.</p>}
+            {noteSaved && <p role="status" className="m-0 text-sm text-ok font-semibold">Not kaydedildi. Notlarım sekmesinde bulabilirsin.</p>}
 
             <footer className="flex items-center justify-between gap-2 border-t border-line-soft pt-3">
               <button type="button" onClick={() => go(-1)} disabled={index === 0} className={btnSecondary}>

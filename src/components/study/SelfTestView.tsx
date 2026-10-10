@@ -199,8 +199,8 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-3 sm:gap-5 items-start">
         <section className={`${cardCls} p-4 sm:p-6 flex flex-col gap-4`}>
           <div>
-            <h2 className="m-0 font-display text-[22px] font-bold tracking-[-0.02em]">Deneme oluştur</h2>
-            <p className="m-0 mt-1 text-[14px] text-ink-2">Çıkmış ve kurulan sorulardan rastgele bir deneme. Bitirince ders ders sonucunu görürsün.</p>
+            <h2 className="m-0 font-display text-2xl font-bold tracking-[-0.02em]">Deneme oluştur</h2>
+            <p className="m-0 mt-1 text-base text-ink-2">Çıkmış ve kurulan sorulardan rastgele bir deneme. Bitirince ders ders sonucunu görürsün.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -215,7 +215,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
               </select>
             </Field>
             <div className="flex flex-col gap-1.5">
-              <span className="text-[13px] font-semibold text-ink-2">Süre</span>
+              <span className="text-sm font-semibold text-ink-2">Süre</span>
               <Segmented<TimeMode>
                 label="Süre"
                 value={timeMode}
@@ -230,7 +230,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <span className="text-[13px] font-semibold text-ink-2">Soru sayısı</span>
+            <span className="text-sm font-semibold text-ink-2">Soru sayısı</span>
             <Segmented<number>
               label="Soru sayısı"
               value={count}
@@ -240,10 +240,10 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
           </div>
 
           <fieldset className="border-0 p-0 m-0 flex flex-col gap-2">
-            <legend className="text-[13px] font-semibold text-ink-2 mb-2 flex items-center gap-2">
+            <legend className="text-sm font-semibold text-ink-2 mb-2 flex items-center gap-2">
               Dersler <span className="font-normal text-ink-3">{picked.length ? `${picked.length} seçili` : 'hepsi'}</span>
               {picked.length > 0 && (
-                <button type="button" onClick={() => setPicked([])} className="text-accent text-[13px] font-semibold cursor-pointer">
+                <button type="button" onClick={() => setPicked([])} className="text-accent text-sm font-semibold cursor-pointer">
                   Temizle
                 </button>
               )}
@@ -257,24 +257,24 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
                     type="button"
                     aria-pressed={on}
                     onClick={() => toggleDiscipline(d)}
-                    className={`h-8 px-3 rounded-full text-[13px] cursor-pointer ${
+                    className={`h-8 px-3 rounded-full text-sm cursor-pointer ${
                       on ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent/40' : 'bg-white border border-line text-ink hover:border-line-2'
                     }`}
                   >
-                    {d} <span className={`font-mono text-[11px] ${on ? 'text-accent/70' : 'text-ink-3'}`}>{n}</span>
+                    {d} <span className={`font-mono text-2xs ${on ? 'text-accent/70' : 'text-ink-3'}`}>{n}</span>
                   </button>
                 );
               })}
             </div>
           </fieldset>
 
-          <label className="flex items-center gap-2 min-h-9 text-[14px] text-ink cursor-pointer">
+          <label className="flex items-center gap-2 min-h-9 text-base text-ink cursor-pointer">
             <input type="checkbox" checked={onlyUnsolved} onChange={(e) => setOnlyUnsolved(e.target.checked)} className="w-4 h-4 accent-[#1E4FD8]" />
             Yalnızca daha önce çözmediğim sorular
           </label>
 
           <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line-soft pt-4">
-            <span className="text-[14px] text-ink-2">
+            <span className="text-base text-ink-2">
               <strong className="text-ink">{effective}</strong> soru
               {timeMode !== 'none' && effective > 0 && <> · {formatDuration(Math.round(effective * Number(timeMode)))} süre</>}
               {pool.length < count && pool.length > 0 && (
@@ -294,7 +294,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
 
         <section className={`${cardCls} p-4 sm:p-5 flex flex-col gap-3`}>
           <div className="flex items-center justify-between">
-            <h2 className="m-0 text-[15px] font-semibold">Geçmiş denemeler</h2>
+            <h2 className="m-0 text-md font-semibold">Geçmiş denemeler</h2>
             {history.length > 0 && (
               <button
                 type="button"
@@ -304,14 +304,14 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
                     setHistory([]);
                   }
                 }}
-                className="h-8 px-2 rounded-lg text-[13px] text-ink-2 hover:text-bad-text inline-flex items-center gap-1 cursor-pointer"
+                className="h-8 px-2 rounded-lg text-sm text-ink-2 hover:text-bad-text inline-flex items-center gap-1 cursor-pointer"
               >
                 <Trash2 className="w-3.5 h-3.5" /> Temizle
               </button>
             )}
           </div>
           {history.length === 0 ? (
-            <p className="m-0 text-[14px] text-ink-2">İlk denemeni çözdüğünde sonuçların burada listelenir.</p>
+            <p className="m-0 text-base text-ink-2">İlk denemeni çözdüğünde sonuçların burada listelenir.</p>
           ) : (
             <ol className="list-none m-0 p-0 flex flex-col">
               {history.slice(0, 10).map((h) => {
@@ -325,11 +325,11 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
                         setItems(h.questionIds.map((id) => (bank || []).find((q) => q.id === id)).filter(Boolean) as StudyQuestion[]);
                         setPhase('result');
                       }}
-                      className="w-full grid grid-cols-[minmax(0,1fr)_auto] gap-x-3 gap-y-1 items-center py-2.5 border-b border-line-soft text-left cursor-pointer hover:bg-blue-50 rounded"
+                      className="w-full grid grid-cols-[minmax(0,1fr)_auto] gap-x-3 gap-y-1 items-center py-2.5 border-b border-line-soft text-left cursor-pointer hover:bg-accent-soft rounded"
                     >
-                      <span className="text-[14px] font-semibold truncate">{h.title}</span>
-                      <span className={`font-mono text-[14px] ${pct >= 70 ? 'text-ok' : pct >= 50 ? 'text-warn' : 'text-bad-text'}`}>%{pct}</span>
-                      <span className="text-[12px] text-ink-3">
+                      <span className="text-base font-semibold truncate">{h.title}</span>
+                      <span className={`font-mono text-base ${pct >= 70 ? 'text-ok' : pct >= 50 ? 'text-warn' : 'text-bad-text'}`}>%{pct}</span>
+                      <span className="text-xs text-ink-3">
                         {new Date(h.at).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })} · {h.correct}/{h.total} ·{' '}
                         {formatDuration(h.durationSec)}
                       </span>
@@ -356,11 +356,11 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
     return (
       <div className="flex flex-col gap-3 sm:gap-4">
         <div className={`${cardCls} sticky top-[60px] sm:top-[76px] z-20 px-3 sm:px-4 py-2.5 flex items-center gap-3`}>
-          <span className={`inline-flex items-center gap-1.5 font-mono text-[15px] px-2.5 h-9 rounded-lg ${low ? 'bg-bad-soft text-bad-text' : 'bg-canvas text-ink'}`} aria-label="Süre">
+          <span className={`inline-flex items-center gap-1.5 font-mono text-md px-2.5 h-9 rounded-lg ${low ? 'bg-bad-soft text-bad-text' : 'bg-canvas text-ink'}`} aria-label="Süre">
             <Timer className="w-4 h-4" />
             {remaining !== null ? formatDuration(remaining) : formatDuration(elapsed)}
           </span>
-          <span className="text-[13px] text-ink-2">
+          <span className="text-sm text-ink-2">
             <strong className="text-ink font-mono">{answeredCount}</strong>/{items.length} cevaplandı
           </span>
           <div className="hidden sm:block flex-1 h-1.5 rounded-full bg-line-soft">
@@ -369,7 +369,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
           <span className="flex-1 sm:hidden" />
           {confirmFinish ? (
             <span className="flex items-center gap-1.5">
-              <span className="hidden sm:inline text-[13px] text-ink-2">{items.length - answeredCount} boş. Emin misin?</span>
+              <span className="hidden sm:inline text-sm text-ink-2">{items.length - answeredCount} boş. Emin misin?</span>
               <button type="button" onClick={() => setConfirmFinish(false)} className={btnGhost}>
                 Devam
               </button>
@@ -387,7 +387,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_280px] gap-3 sm:gap-4 items-start">
           <article className={`${cardCls} p-4 sm:p-6 flex flex-col gap-4`}>
             <header className="flex items-center gap-2">
-              <span className="font-mono text-[13px] text-ink-2">
+              <span className="font-mono text-sm text-ink-2">
                 SORU {cur + 1} · {q.discipline.toLocaleUpperCase('tr-TR')}
               </span>
               <span className="flex-1" />
@@ -401,7 +401,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
                     return n;
                   })
                 }
-                className={`h-9 px-2.5 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
+                className={`h-9 px-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
                   flags.has(q.id) ? 'bg-warn-soft text-warn' : 'text-ink-2 hover:bg-canvas'
                 }`}
               >
@@ -409,7 +409,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
               </button>
               <StudyReportButton q={q} compact />
             </header>
-            <h2 className={`m-0 font-display font-medium tracking-[-0.01em] leading-[1.35] ${q.stem.length > 220 ? 'text-[17px] sm:text-[19px]' : 'text-[19px] sm:text-[22px]'}`}>{q.stem}</h2>
+            <h2 className={`m-0 font-display font-medium tracking-[-0.01em] leading-[1.35] ${q.stem.length > 220 ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl'}`}>{q.stem}</h2>
             <div role="radiogroup" aria-label="Şıklar" className="flex flex-col gap-2">
               {q.options.map((o) => (
                 <OptionButton
@@ -424,7 +424,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
               <button type="button" onClick={() => setCur((i) => Math.max(0, i - 1))} disabled={cur === 0} className={btnSecondary}>
                 <ArrowLeft className="w-4 h-4" /> Önceki
               </button>
-              <span className="hidden sm:inline text-[12px] text-ink-3">A–E seç · tekrar basınca boşalır · ← →</span>
+              <span className="hidden sm:inline text-xs text-ink-3">A–E seç · tekrar basınca boşalır · ← →</span>
               <button type="button" onClick={() => setCur((i) => Math.min(items.length - 1, i + 1))} disabled={cur >= items.length - 1} className={btnPrimary}>
                 Sonraki <ArrowRight className="w-4 h-4" />
               </button>
@@ -433,10 +433,10 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
 
           <nav aria-label="Optik form" className={`${cardCls} p-3 sm:p-4 flex flex-col gap-3 lg:sticky lg:top-[148px]`}>
             <div className="flex items-center justify-between">
-              <span className="text-[13px] font-semibold text-ink-2">Optik form</span>
-              <span className="flex gap-2 text-[11px] text-ink-3">
+              <span className="text-sm font-semibold text-ink-2">Optik form</span>
+              <span className="flex gap-2 text-2xs text-ink-3">
                 <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-accent" />Dolu</span>
-                <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-amber-600" />İşaretli</span>
+                <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-warn" />İşaretli</span>
               </span>
             </div>
             <div className="grid grid-cols-8 sm:grid-cols-10 lg:grid-cols-6 gap-1.5 max-h-[50dvh] overflow-y-auto">
@@ -451,12 +451,12 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
                     onClick={() => setCur(i)}
                     aria-current={isCur ? 'step' : undefined}
                     aria-label={`Soru ${i + 1}${a ? `, ${a} işaretli` : ', boş'}${flagged ? ', sonra bakılacak' : ''}`}
-                    className={`relative h-9 rounded-md font-mono text-[12px] flex items-center justify-center cursor-pointer ${
+                    className={`relative h-9 rounded-md font-mono text-xs flex items-center justify-center cursor-pointer ${
                       isCur ? 'ring-2 ring-accent ring-offset-1' : ''
                     } ${a ? 'bg-accent text-white' : 'bg-canvas text-ink-2 hover:bg-line-soft'}`}
                   >
                     {a ? `${i + 1}${a}` : i + 1}
-                    {flagged && <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-amber-600" />}
+                    {flagged && <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-warn" />}
                   </button>
                 );
               })}
@@ -518,18 +518,18 @@ const ResultView: React.FC<{
       <section className="flex flex-col gap-3 sm:gap-4">
         <div className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3">
           <div className="flex justify-between items-baseline gap-2">
-            <h2 className="m-0 text-[15px] font-semibold truncate text-ink">{result.title}</h2>
-            <span className="font-mono text-[12px] text-ink-3 shrink-0">{formatDuration(result.durationSec)}</span>
+            <h2 className="m-0 text-md font-semibold truncate text-ink">{result.title}</h2>
+            <span className="font-mono text-xs text-ink-3 shrink-0">{formatDuration(result.durationSec)}</span>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-[40px] sm:text-[48px] font-bold leading-none tracking-[-0.03em] text-ink">%{pct}</span>
-            <span className="text-[14px] text-ink-2">net {net.toLocaleString('tr-TR', { maximumFractionDigits: 2 })}</span>
+            <span className="font-display text-4xl sm:text-4xl font-bold leading-none tracking-[-0.03em] text-ink">%{pct}</span>
+            <span className="text-base text-ink-2">net {net.toLocaleString('tr-TR', { maximumFractionDigits: 2 })}</span>
           </div>
           <div className="flex h-2 rounded-full overflow-hidden gap-[2px] bg-line-soft">
             <span className="bg-ok-bright" style={{ width: `${(result.correct / result.total) * 100}%` }} />
             <span className="bg-bad" style={{ width: `${(result.wrong / result.total) * 100}%` }} />
           </div>
-          <div className="grid grid-cols-3 gap-2 text-[13px]">
+          <div className="grid grid-cols-3 gap-2 text-sm">
             {[
               ['Doğru', result.correct, '#1F9D55'],
               ['Yanlış', result.wrong, '#C2410C'],
@@ -540,26 +540,26 @@ const ResultView: React.FC<{
                   <span className="w-2 h-2 rounded-sm" style={{ background: c as string }} />
                   {l}
                 </span>
-                <span className="font-mono text-[18px] text-ink">{n}</span>
+                <span className="font-mono text-lg text-ink">{n}</span>
               </div>
             ))}
           </div>
         </div>
 
         <div className={`${cardCls} p-4 sm:p-5 flex flex-col gap-3`}>
-          <h3 className="m-0 text-[15px] font-semibold">Derslere göre</h3>
+          <h3 className="m-0 text-md font-semibold">Derslere göre</h3>
           {disc.map(([d, s]) => {
             const p = Math.round((s.correct / Math.max(1, s.total)) * 100);
             return (
               <div key={d} className="flex flex-col gap-1">
-                <div className="flex justify-between text-[14px] gap-2">
+                <div className="flex justify-between text-base gap-2">
                   <span className="truncate">{d}</span>
                   <span className="font-mono text-ink-2 shrink-0">
                     {s.correct}/{s.total}
                   </span>
                 </div>
                 <div className="h-1.5 rounded-full bg-line-soft">
-                  <div className={`h-1.5 rounded-full ${p >= 70 ? 'bg-ok-bright' : p >= 50 ? 'bg-amber-600' : 'bg-bad'}`} style={{ width: `${Math.max(2, p)}%` }} />
+                  <div className={`h-1.5 rounded-full ${p >= 70 ? 'bg-ok-bright' : p >= 50 ? 'bg-warn' : 'bg-bad'}`} style={{ width: `${Math.max(2, p)}%` }} />
                 </div>
               </div>
             );
@@ -588,7 +588,7 @@ const ResultView: React.FC<{
 
       <section className={`${cardCls} overflow-hidden`}>
         <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 border-b border-line">
-          <h3 className="m-0 text-[15px] font-semibold">Cevap anahtarı</h3>
+          <h3 className="m-0 text-md font-semibold">Cevap anahtarı</h3>
           <Segmented
             label="Göster"
             size="sm"
@@ -603,9 +603,9 @@ const ResultView: React.FC<{
           />
         </div>
         {items.length === 0 ? (
-          <p className="m-0 px-4 py-6 text-[14px] text-ink-2">Bu denemenin soruları artık bankada bulunmuyor.</p>
+          <p className="m-0 px-4 py-6 text-base text-ink-2">Bu denemenin soruları artık bankada bulunmuyor.</p>
         ) : rows.length === 0 ? (
-          <p className="m-0 px-4 py-6 text-[14px] text-ink-2">Bu grupta soru yok.</p>
+          <p className="m-0 px-4 py-6 text-base text-ink-2">Bu grupta soru yok.</p>
         ) : (
           <ol className="list-none m-0 p-0">
             {rows.map((q) => {
@@ -619,22 +619,22 @@ const ResultView: React.FC<{
                     type="button"
                     onClick={() => setOpen(isOpen ? null : q.id)}
                     aria-expanded={isOpen}
-                    className="w-full grid grid-cols-[36px_minmax(0,1fr)_auto] gap-3 items-center px-4 py-3 text-left cursor-pointer hover:bg-blue-50"
+                    className="w-full grid grid-cols-[36px_minmax(0,1fr)_auto] gap-3 items-center px-4 py-3 text-left cursor-pointer hover:bg-accent-soft"
                   >
-                    <span className="font-mono text-[13px] text-ink-2">{i + 1}</span>
+                    <span className="font-mono text-sm text-ink-2">{i + 1}</span>
                     <span className="flex flex-col gap-0.5 min-w-0">
-                      <span className="text-[12px] font-semibold text-ink-2">{q.discipline}</span>
-                      <span className="text-[14px] truncate">{q.stem}</span>
+                      <span className="text-xs font-semibold text-ink-2">{q.discipline}</span>
+                      <span className="text-base truncate">{q.stem}</span>
                     </span>
                     <span className="flex items-center gap-2">
-                      <span className={`font-mono text-[13px] ${!a ? 'text-ink-3' : ok ? 'text-ok' : 'text-bad-text'}`}>{a || '—'}</span>
-                      <span className="font-mono text-[13px] text-ok">→{q.answer}</span>
+                      <span className={`font-mono text-sm ${!a ? 'text-ink-3' : ok ? 'text-ok' : 'text-bad-text'}`}>{a || '—'}</span>
+                      <span className="font-mono text-sm text-ok">→{q.answer}</span>
                       {isOpen ? <ChevronUp className="w-4 h-4 text-ink-2" /> : <ChevronDown className="w-4 h-4 text-ink-2" />}
                     </span>
                   </button>
                   {isOpen && (
                     <div className="px-4 pb-4 flex flex-col gap-2.5">
-                      <p className="m-0 text-[15px] leading-[1.5]">{q.stem}</p>
+                      <p className="m-0 text-md leading-[1.5]">{q.stem}</p>
                       <div className="flex flex-col gap-1.5">
                         {q.options.map((o) => (
                           <OptionButton
@@ -657,7 +657,7 @@ const ResultView: React.FC<{
                             setInReview(q.id, !isRev);
                             setAdded(false);
                           }}
-                          className={`h-8 px-2.5 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
+                          className={`h-8 px-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
                             getReview().has(q.id) ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
                           }`}
                         >
@@ -668,7 +668,7 @@ const ResultView: React.FC<{
                         <button
                           type="button"
                           onClick={() => setChatQuestion(q)}
-                          className="h-8 px-2.5 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 text-accent hover:bg-accent-soft cursor-pointer transition-colors"
+                          className="h-8 px-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 text-accent hover:bg-accent-soft cursor-pointer transition-colors"
                         >
                           <Sparkles className="w-3.5 h-3.5" />
                           <span>AI ile İncele</span>

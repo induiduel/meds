@@ -103,7 +103,7 @@ export const ManageAutomationSection: React.FC<{
           <div className="ms-field">
             <span className="lbl">Yedek saatleri</span>
             <div className="flex flex-wrap gap-1.5">
-              {settings.backupHours.length === 0 && <span className="text-[13px] text-ink-3">Saat eklenmedi.</span>}
+              {settings.backupHours.length === 0 && <span className="text-sm text-ink-3">Saat eklenmedi.</span>}
               {settings.backupHours.map((h) => (
                 <span key={h} className="ms-fchip is-removable font-mono tabular-nums !cursor-default">
                   <Clock className="w-3.5 h-3.5 text-ink-3" /> {h}
@@ -134,7 +134,7 @@ export const ManageAutomationSection: React.FC<{
           <Switch checked={settings.aiAutoRunEnabled} onChange={(v) => set({ aiAutoRunEnabled: v })} label="Zamanlanmış AI çalışması" hint="Ajanlar yalnızca bu saat aralıklarında kendiliğinden çalışır." />
           <div className="ms-field">
             <span className="lbl">Pencereler</span>
-            {settings.aiWindows.length === 0 && <span className="text-[13px] text-ink-3">Pencere yok; AI yalnızca elle başlatılır.</span>}
+            {settings.aiWindows.length === 0 && <span className="text-sm text-ink-3">Pencere yok; AI yalnızca elle başlatılır.</span>}
             <ul className="m-0 p-0 list-none flex flex-col gap-1.5">
               {settings.aiWindows.map((w, i) => (
                 <li key={i} className="flex items-center gap-2">

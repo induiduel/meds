@@ -67,14 +67,14 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
 
   return (
     <div className="flex flex-col gap-1.5">
-      <p className="m-0 px-0.5 text-[12.5px] text-ink-3">Doğru olduğunu düşündüğün şıkkın harfine dokun.</p>
+      <p className="m-0 px-0.5 text-sm text-ink-3">Doğru olduğunu düşündüğün şıkkın harfine dokun.</p>
       {keys.map((k) => {
         const on = answer === k;
         return (
           <div
             key={k}
             className={`ms-pop-in flex items-center gap-2 h-12 pl-1.5 pr-1.5 rounded-xl border transition-colors ${
-              on ? 'bg-ok-tint border-emerald-400' : 'bg-field border-transparent focus-within:border-accent focus-within:bg-white'
+              on ? 'bg-ok-tint border-ok' : 'bg-field border-transparent focus-within:border-accent focus-within:bg-white'
             }`}
           >
             <button
@@ -83,7 +83,7 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
               aria-pressed={on}
               aria-label={on ? `${k} doğru cevap olarak işaretli, kaldırmak için dokun` : `${k} şıkkını doğru cevap olarak işaretle`}
               title={on ? 'Doğru cevap' : 'Doğru cevap olarak işaretle'}
-              className={`w-9 h-9 rounded-[10px] flex items-center justify-center font-mono text-[14px] font-semibold shrink-0 cursor-pointer transition-all ${
+              className={`w-9 h-9 rounded-[10px] flex items-center justify-center font-mono text-base font-semibold shrink-0 cursor-pointer transition-all ${
                 on ? 'bg-ok text-white shadow-sm' : 'bg-white border border-line text-ink-2 hover:border-ok hover:text-ok'
               }`}
             >
@@ -104,9 +104,9 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
               }}
               placeholder={`${k} şıkkı`}
               aria-label={`${k} şıkkı`}
-              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[15px] placeholder:text-slate-600"
+              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-md sm:text-md placeholder:text-ink-2"
             />
-            {on && <span className="hidden sm:inline text-[12px] font-semibold text-ok pr-1">Doğru</span>}
+            {on && <span className="hidden sm:inline text-xs font-semibold text-ok pr-1">Doğru</span>}
             {count > 1 && (
               <button
                 type="button"
@@ -125,7 +125,7 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
         <button
           type="button"
           onClick={add}
-          className="self-start h-10 pl-2 pr-3.5 rounded-xl border border-dashed border-line-2 text-[14px] font-semibold text-accent inline-flex items-center gap-2 cursor-pointer hover:border-accent hover:bg-accent-soft/50 transition-colors"
+          className="self-start h-10 pl-2 pr-3.5 rounded-xl border border-dashed border-line-2 text-base font-semibold text-accent inline-flex items-center gap-2 cursor-pointer hover:border-accent hover:bg-accent-soft/50 transition-colors"
         >
           <span className="w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center">
             <Plus className="w-3.5 h-3.5" strokeWidth={2.6} />
@@ -135,8 +135,8 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
       )}
 
       {answer && onReasonChange && (
-        <div className="ms-pop-in mt-1 rounded-xl bg-ok-tint border border-emerald-200 p-3 flex flex-col gap-2">
-          <label htmlFor="answer-reason" className="text-[13.5px] font-semibold text-ok">
+        <div className="ms-pop-in mt-1 rounded-xl bg-ok-tint border border-ok/30 p-3 flex flex-col gap-2">
+          <label htmlFor="answer-reason" className="text-base font-semibold text-ok">
             Neden {answer}? <span className="font-normal text-ink-3">Fikrini yaz (isteğe bağlı)</span>
           </label>
           <textarea
@@ -145,7 +145,7 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
             value={reason}
             onChange={(e) => onReasonChange(e.target.value)}
             placeholder="Örn. hoca derste bu bulguyu özellikle vurgulamıştı…"
-            className="resize-none rounded-[10px] bg-white border border-transparent px-3 py-2.5 text-[15px] leading-[1.5] outline-0 focus:border-ok placeholder:text-slate-600"
+            className="resize-none rounded-[10px] bg-white border border-transparent px-3 py-2.5 text-md leading-[1.5] outline-0 focus:border-ok placeholder:text-ink-2"
           />
         </div>
       )}

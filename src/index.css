@@ -48,6 +48,25 @@
   --color-accent-hover: #1C45C9;
   --color-accent-soft: #EAF0FE;
 
+  /* v7 · Apple Sağlık: anlamsal ek tokenlar ve yazı ölçeği (değerler styles/health.css'te temaya göre) */
+  --color-ai: #8944AB;
+  --color-ai-soft: #F3E8FA;
+  --color-brand: #E0245E;
+  --color-brand-soft: #FDE7EE;
+  --color-on-accent: #FFFFFF;
+  --color-clinic: #00756F;
+  --color-clinic-soft: #DDF5F3;
+  --text-2xs: 11px;  --text-2xs--line-height: 14px;
+  --text-xs: 12px;   --text-xs--line-height: 16px;
+  --text-sm: 13px;   --text-sm--line-height: 18px;
+  --text-base: 14px; --text-base--line-height: 20px;
+  --text-md: 15px;   --text-md--line-height: 22px;
+  --text-lg: 17px;   --text-lg--line-height: 22px;
+  --text-xl: 20px;   --text-xl--line-height: 25px;
+  --text-2xl: 22px;  --text-2xl--line-height: 28px;
+  --text-3xl: 28px;  --text-3xl--line-height: 34px;
+  --text-4xl: 34px;  --text-4xl--line-height: 41px;
+
   --color-ok: #157A3E;
   --color-ok-bright: #1F9D55;
   --color-ok-soft: #E4F3E9;
@@ -1192,7 +1211,9 @@ html.kb-open .ms-onboard-nav, html.kb-open .ms-onboard-text { display: none; }
 .ms-f-select select:focus { border-color: var(--color-accent); }
 .ms-f-row { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 @media (min-width: 640px) { .ms-f-row { flex-direction: row; align-items: center; gap: 12px; } .ms-f-label { width: 84px; flex-shrink: 0; } }
-.ms-f-seg { display: flex; gap: 2px; padding: 3px; border-radius: 12px; background: var(--color-field); overflow-x: auto; scrollbar-width: none; min-width: 0; flex: 1; }
+.ms-f-seg { display: flex; gap: 2px; padding: 3px; border-radius: 12px; background: var(--color-field); overflow-x: auto; scrollbar-width: none; min-width: 0; flex: 1 1 auto; }
+/* ms-* sınıfı Tailwind'in sm:flex-none'ını eziyordu: sekmeler eşit pay alıp "Notlar" kesiliyordu */
+@media (min-width: 640px) { .ms-f-seg.sm\:flex-none { flex: 0 1 auto; } }
 .ms-f-seg::-webkit-scrollbar { display: none; }
 .ms-f-seg button {
   flex: 1 0 auto; height: 34px; padding: 0 12px; border-radius: 9px; font-size: 13.5px; color: var(--color-ink-2);
@@ -2270,118 +2291,6 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-dots i { width: 6px; height: 6px; border-radius: 9px; background: var(--color-line-2, var(--color-line)); transition: all .25s; }
 .ls-dots i.is-on { width: 18px; background: var(--color-accent); }
 
-/* --- 1. Spot The Lie (Hata / Tuzak Avı) --- */
-.ls-stl-header { display: flex; flex-direction: column; gap: 4px; }
-.ls-stl-instruction { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--color-warn); }
-.ls-stl-instruction svg { width: 14px; height: 14px; }
-.ls-stl-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-.ls-stl-item { border-radius: 12px; border: 1px solid var(--color-line-soft); background: var(--color-field); overflow: hidden; transition: all .2s var(--ease-out-soft); }
-.ls-stl-item:hover { border-color: var(--color-line); }
-.ls-stl-btn { width: 100%; display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 0; background: transparent; color: var(--color-ink); font: inherit; font-size: 14px; line-height: 1.45; text-align: left; cursor: pointer; }
-.ls-stl-badge { width: 24px; height: 24px; flex-shrink: 0; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; background: var(--color-white); font-family: var(--font-mono); font-size: 12px; font-weight: 650; color: var(--color-ink-2); transition: all .2s; }
-.ls-stl-badge svg { width: 14px; height: 14px; }
-.ls-stl-text { flex: 1; min-width: 0; }
-.ls-stl-panel { padding: 8px 12px 12px 46px; border-top: 1px solid var(--color-line-soft); font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); animation: ls-rise .2s var(--ease-out-soft); }
-.ls-stl-verdict { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 4px; }
-.ls-stl-verdict.is-trap-tag { color: var(--color-warn); }
-.ls-stl-verdict.is-fact-tag { color: var(--color-ok); }
-.ls-stl-expl { margin: 0; }
-.ls-stl-item.is-lie-card { border-color: var(--color-warn); background: color-mix(in srgb, var(--color-warn) 10%, var(--color-field)); }
-.ls-stl-item.is-lie-card .ls-stl-badge { background: var(--color-warn); color: #fff; }
-.ls-stl-item.is-wrong-pick { border-color: var(--color-bad); background: var(--color-bad-soft); }
-.ls-stl-item.is-wrong-pick .ls-stl-badge { background: var(--color-bad); color: #fff; }
-.ls-stl-item.is-safe-card .ls-stl-badge { background: var(--color-ok-soft); color: var(--color-ok); }
-
-/* --- 2. Swipe Matching (Hızlı Kart Eşleme / Kategori Kaydırma) --- */
-.ls-swipe-head { display: flex; flex-direction: column; gap: 2px; }
-.ls-swipe-arena { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.ls-swipe-targets { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.ls-swipe-target { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 99px; border: 1.5px dashed var(--color-line); background: var(--color-field); color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 650; cursor: pointer; transition: all .2s; }
-.ls-swipe-target.is-left.is-active, .ls-swipe-target.is-left:hover { border-color: var(--color-accent); background: var(--color-accent-soft); color: var(--color-accent); }
-.ls-swipe-target.is-right.is-active, .ls-swipe-target.is-right:hover { border-color: var(--color-ok); background: var(--color-ok-soft); color: var(--color-ok); }
-.ls-swipe-progress { font-family: var(--font-mono); font-size: 12px; color: var(--color-ink-3); font-weight: 600; }
-.ls-swipe-card { position: relative; border-radius: 16px; border: 1.5px solid var(--color-line); background: var(--color-white); box-shadow: var(--shadow-md); padding: 18px 16px 14px; min-height: 120px; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; cursor: grab; user-select: none; touch-action: pan-y; }
-.ls-swipe-card:active { cursor: grabbing; }
-.ls-swipe-card.is-flying-left { transform: translateX(-160%) rotate(-25deg) !important; opacity: 0; transition: transform .28s ease-in, opacity .24s !important; }
-.ls-swipe-card.is-flying-right { transform: translateX(160%) rotate(25deg) !important; opacity: 0; transition: transform .28s ease-in, opacity .24s !important; }
-.ls-swipe-card-badge { align-self: flex-start; display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--color-accent); background: var(--color-accent-soft); padding: 2px 7px; border-radius: 6px; }
-.ls-swipe-card-badge svg { width: 12px; height: 12px; }
-.ls-swipe-card-text { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.5; color: var(--color-ink); text-align: center; }
-.ls-swipe-cue { display: flex; justify-content: space-between; font-size: 11px; font-weight: 600; color: var(--color-ink-3); opacity: .7; }
-.ls-swipe-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.ls-swipe-action-btn { height: 40px; border-radius: 12px; font-size: 13.5px; font-weight: 650; }
-.ls-swipe-action-btn.is-left { background: var(--color-accent-soft); color: var(--color-accent); }
-.ls-swipe-action-btn.is-left:hover { background: var(--color-accent); color: #fff; }
-.ls-swipe-action-btn.is-right { background: var(--color-ok-soft); color: var(--color-ok); }
-.ls-swipe-action-btn.is-right:hover { background: var(--color-ok); color: #fff; }
-.ls-swipe-summary { display: flex; flex-direction: column; gap: 10px; animation: ls-rise .3s var(--ease-out-soft); }
-.ls-swipe-result-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow-y: auto; }
-.ls-swipe-result-item { padding: 10px 12px; border-radius: 12px; border: 1px solid var(--color-line-soft); background: var(--color-field); display: flex; flex-direction: column; gap: 6px; }
-.ls-swipe-result-item.is-ok { border-left: 3px solid var(--color-ok); }
-.ls-swipe-result-item.is-wrong { border-left: 3px solid var(--color-bad); }
-.ls-swipe-result-head { display: flex; align-items: flex-start; gap: 8px; }
-.ls-swipe-result-icon { width: 18px; height: 18px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 99px; }
-.ls-swipe-result-item.is-ok .ls-swipe-result-icon { background: var(--color-ok-soft); color: var(--color-ok); }
-.ls-swipe-result-item.is-wrong .ls-swipe-result-icon { background: var(--color-bad-soft); color: var(--color-bad); }
-.ls-swipe-result-text { flex: 1; font-size: 13.5px; font-weight: 550; color: var(--color-ink); }
-.ls-swipe-result-expl { margin: 0; padding-left: 26px; font-size: 12.5px; line-height: 1.45; color: var(--color-ink-2); }
-
-/* --- 3. Feature Bidding (Özellik Açık Artırması / Puan Bahsi) --- */
-.ls-bidding-head { display: flex; flex-direction: column; gap: 4px; }
-.ls-bidding-score { display: inline-flex; align-items: center; gap: 5px; font-family: var(--font-mono); font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 99px; }
-.ls-bidding-score.is-pos { background: var(--color-ok-soft); color: var(--color-ok); }
-.ls-bidding-score.is-neg { background: var(--color-bad-soft); color: var(--color-bad); }
-.ls-bidding-score svg { width: 15px; height: 15px; }
-.ls-bidding-arena { display: flex; flex-direction: column; gap: 12px; }
-.ls-bidding-round-badge { align-self: flex-start; font-family: var(--font-mono); font-size: 11px; font-weight: 650; color: var(--color-ink-3); text-transform: uppercase; }
-.ls-bidding-feature-box { border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-field); padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
-.ls-bidding-feature-tag { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-accent); }
-.ls-bidding-feature-text { margin: 0; font-size: 15.5px; font-weight: 600; line-height: 1.5; color: var(--color-ink); }
-.ls-bidding-controls { display: flex; flex-direction: column; gap: 12px; }
-.ls-bidding-multiplier-row { display: flex; flex-direction: column; gap: 6px; }
-.ls-bidding-mult-label { font-size: 12.5px; font-weight: 600; color: var(--color-ink-2); display: inline-flex; align-items: center; gap: 6px; }
-.ls-bidding-mult-label svg { width: 14px; height: 14px; color: var(--color-accent); }
-.ls-bidding-mult-btns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-.ls-bidding-mult-btn { border-radius: 10px; border: 1.5px solid var(--color-line); background: var(--color-white); padding: 6px 8px; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; transition: all .15s; }
-.ls-bidding-mult-btn .m-val { font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: var(--color-ink); }
-.ls-bidding-mult-btn .m-desc { font-size: 10.5px; color: var(--color-ink-3); text-align: center; }
-.ls-bidding-mult-btn.is-selected { border-color: var(--color-accent); background: var(--color-accent-soft); }
-.ls-bidding-mult-btn.is-selected .m-val { color: var(--color-accent); }
-.ls-bidding-choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.ls-bidding-choice-btn { height: 46px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); display: flex; align-items: center; gap: 10px; padding: 0 14px; cursor: pointer; text-align: left; font: inherit; transition: all .2s; }
-.ls-bidding-choice-btn:hover { border-color: var(--color-accent); background: var(--color-field); }
-.ls-bidding-choice-btn .k { width: 22px; height: 22px; border-radius: 6px; background: var(--color-field); color: var(--color-ink); font-family: var(--font-mono); font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
-.ls-bidding-choice-btn .t { font-size: 13.5px; font-weight: 600; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.ls-bidding-verdict { display: flex; flex-direction: column; gap: 8px; animation: ls-rise .25s var(--ease-out-soft); }
-.ls-bidding-summary { display: flex; flex-direction: column; gap: 10px; animation: ls-rise .3s var(--ease-out-soft); }
-.ls-bidding-res-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; max-height: 280px; overflow-y: auto; }
-.ls-bidding-res-item { border-radius: 12px; border: 1px solid var(--color-line-soft); background: var(--color-field); padding: 10px 12px; display: flex; flex-direction: column; }
-.ls-bidding-res-item.is-ok { border-left: 3px solid var(--color-ok); }
-.ls-bidding-res-item.is-bad { border-left: 3px solid var(--color-bad); }
-
-/* --- 4. Venn Grid (Teşhis Çapraz Tablosu) --- */
-.ls-vg-head { display: flex; flex-direction: column; gap: 4px; }
-.ls-vg-table { display: flex; flex-direction: column; gap: 8px; border-radius: 14px; }
-.ls-vg-row { border-radius: 12px; border: 1px solid var(--color-line-soft); background: var(--color-field); padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; transition: all .2s; }
-.ls-vg-row.is-row-ok { border-color: var(--color-ok); background: color-mix(in srgb, var(--color-ok) 6%, var(--color-field)); }
-.ls-vg-row.is-row-bad { border-color: var(--color-bad); background: color-mix(in srgb, var(--color-bad) 6%, var(--color-field)); }
-.ls-vg-crit-col { display: flex; align-items: flex-start; gap: 8px; min-width: 0; }
-.ls-vg-num { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--color-ink-3); padding-top: 1px; }
-.ls-vg-text { flex: 1; font-size: 13.5px; font-weight: 600; line-height: 1.45; color: var(--color-ink); }
-.ls-vg-expl-toggle { border: 0; background: transparent; color: var(--color-accent); font: inherit; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; cursor: pointer; padding: 2px 6px; border-radius: 6px; }
-.ls-vg-expl-toggle:hover { background: var(--color-accent-soft); }
-.ls-vg-expl-toggle svg { width: 13px; height: 13px; }
-.ls-vg-btns-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-.ls-vg-btn { height: 32px; padding: 0 8px; border-radius: 8px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: all .15s; }
-.ls-vg-btn:hover:not(:disabled) { border-color: var(--color-accent); color: var(--color-ink); }
-.ls-vg-btn.is-target { border-color: var(--color-ok); background: var(--color-ok-soft); color: var(--color-ok); font-weight: 700; }
-.ls-vg-btn.is-wrong-picked { border-color: var(--color-bad); background: var(--color-bad); color: #fff; }
-.ls-vg-btn.is-correct-picked { border-color: var(--color-ok); background: var(--color-ok); color: #fff; }
-.ls-vg-btn:disabled { cursor: default; }
-.ls-vg-row-expl { padding: 8px 10px; border-radius: 8px; background: var(--color-white); font-size: 12.5px; line-height: 1.45; color: var(--color-ink-2); animation: ls-rise .2s var(--ease-out-soft); }
-.ls-vg-verdict { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 2px; }
-.ls-vg-verdict.is-ok { color: var(--color-ok); }
-.ls-vg-verdict.is-bad { color: var(--color-bad); }
 
 /* Bilgi listeleri */
 .ls-info { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
@@ -2411,15 +2320,6 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-sec-h::after { content: ""; flex: 1; height: 1px; background: var(--color-line); order: 1; }
 .ls-sec-h span { order: 2; }
 .ls-practice { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
-.ls-ptabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 2px; margin: -2px; scroll-snap-type: x proximity; }
-.ls-ptabs::-webkit-scrollbar { display: none; }
-.ls-ptab { flex: 0 0 auto; max-width: 190px; display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 11px; border: 0; border-radius: 999px; background: var(--color-field); color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; scroll-snap-align: start; transition: background-color .15s, color .15s; }
-.ls-ptab svg { width: 15px; height: 15px; }
-.ls-ptab .lbl { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.ls-ptab:hover { color: var(--color-ink); }
-.ls-ptab.is-done svg { color: var(--color-ok); }
-.ls-ptab.is-on { background: var(--color-ink); color: var(--color-white); }
-.ls-ptab.is-on.is-done svg { color: inherit; }
 /* Sade gezinme satırı */
 .ls-flownav { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--color-line-soft); }
 .ls-flownav > .ls-btn.is-icon { border-radius: 99px; }
@@ -2523,15 +2423,12 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
   .ls-dock { padding: 0 10px; padding-bottom: max(10px, env(safe-area-inset-bottom, 0px)); }
   .ls-dock-tab .lbl { display: none; }
   .ls-dock-tab.is-on .lbl { display: inline; }
-  .ls-ptab .lbl { max-width: 9.5em; }
   .ls-next { max-width: 62%; }
   .ls-split { padding: 8px; gap: 8px; }
   .ls-pdf { margin: 8px; }
   .ls-prose { font-size: 15px; }
 }
 @media (max-width: 420px) {
-  .ls-ptab:not(.is-on) .lbl { display: none; }
-  .ls-ptab { padding: 0 10px; }
 }
 .ls-root:fullscreen { background: var(--color-canvas); }
 .ls-root.is-immersive .ls-col { max-width: 900px; }
@@ -2719,15 +2616,6 @@ html.theme-dark .ls-avatar { background: hsl(var(--h) 35% 22%); color: hsl(var(-
  * Öğren açılış sayfası (components/learn/LearnHub.tsx)
  * ------------------------------------------------------------- */
 .lh { display: flex; flex-direction: column; gap: 14px; min-width: 0; width: 100%; }
-.lh-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px 24px; }
-.lh-title { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-.lh-title p { margin: 0; font-size: 14px; color: var(--color-ink-3); }
-.lh-stats { margin: 0; display: flex; gap: 2px; padding: 3px; border-radius: 14px; background: var(--color-white); border: 1px solid var(--color-line); }
-.lh-stats > div { display: flex; flex-direction: column; padding: 4px 14px; min-width: 64px; }
-.lh-stats > div + div { border-left: 1px solid var(--color-line-soft); }
-.lh-stats dt { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
-.lh-stats dd { margin: 0; font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--color-ink); font-variant-numeric: tabular-nums; }
-.lh-stats .is-accent dd { color: var(--color-accent); }
 
 .lh-resume { display: grid; grid-template-columns: minmax(0, 1.6fr) repeat(2, minmax(0, 1fr)); gap: 8px; }
 .lh-resume:has(> :nth-child(2):last-child) { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
@@ -2793,9 +2681,6 @@ html.theme-dark .ls-avatar { background: hsl(var(--h) 35% 22%); color: hsl(var(-
 
 @media (max-width: 767px) {
   .lh { gap: 12px; }
-  .lh-stats { width: 100%; }
-  .lh-stats > div { flex: 1; min-width: 0; padding: 4px 8px; }
-  .lh-stats dd { font-size: 15px; }
   .lh-resume, .lh-resume:has(> :nth-child(2):last-child) { grid-template-columns: minmax(0, 1fr); }
   .lh-tools > .ms-seg { width: 100%; }
   .lh-tools > .ms-seg button { flex: 1 1 auto; justify-content: center; padding: 0 6px; gap: 4px; font-size: 12.5px; }
@@ -3260,3 +3145,1697 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 @keyframes ms-eq { 0%, 100% { height: 5px; } 50% { height: 16px; } }
 .ms-eq-bar { height: 10px; animation: ms-eq 0.9s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { .ms-eq-bar { animation: none !important; } }
+
+/* =============================================================
+ * Öğren · Pekiştir v2 — adım çubuğu + karşılaştırmalı modeller
+ * Şerit asla taşmaz (sarar); etkin adım etiketiyle genişler. Kart içi her etiket sarar,
+ * hiçbir metin üç noktayla kesilmez. Hareket yalnız seçim → karar → ilerleme anlatır.
+ * ============================================================= */
+.ls-psteps { position: relative; display: flex; flex-wrap: wrap; gap: 4px; min-width: 0; padding-bottom: 8px; }
+.ls-psteps::before, .ls-psteps::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; border-radius: 2px; }
+.ls-psteps::before { right: 0; background: var(--color-line-soft); }
+.ls-psteps::after { width: calc(var(--p, 0) * 1%); background: var(--color-ok); transition: width .5s var(--ease-out-soft); }
+.ls-pstep { display: inline-grid; grid-template-columns: 16px 0fr; align-items: center; column-gap: 0; height: 34px; min-width: 34px; padding: 0 9px; border: 0; border-radius: 999px; background: var(--color-field); color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; transition: grid-template-columns .32s var(--ease-out-soft), column-gap .32s var(--ease-out-soft), background-color .2s, color .2s; }
+.ls-pstep > svg { width: 16px; height: 16px; }
+.ls-pstep .lbl { min-width: 0; overflow: hidden; }
+.ls-pstep .lbl > span { display: block; white-space: nowrap; }
+.ls-pstep:hover { color: var(--color-ink); background: var(--color-line); }
+.ls-pstep.is-done { background: var(--color-ok-soft); color: var(--color-ok); }
+.ls-pstep.is-done > svg { animation: ls-pop .35s var(--ease-out-soft); }
+.ls-pstep.is-on { grid-template-columns: 16px 1fr; column-gap: 6px; padding-right: 12px; background: var(--color-ink); color: var(--color-white); }
+.ls-pstep:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+@media (hover: hover) and (min-width: 768px) {
+  /* Geniş ekranda etiketler sığıyorsa hepsi görünür; sığmayanlar simgeye iner */
+  @container ls-col (min-width: 760px) { .ls-psteps:not(:has(> :nth-child(7))) .ls-pstep { grid-template-columns: 16px 1fr; column-gap: 6px; padding-right: 12px; } }
+}
+
+.ls-enter-next { animation: ls-ix-next .34s var(--ease-out-soft) both; }
+.ls-enter-prev { animation: ls-ix-prev .34s var(--ease-out-soft) both; }
+@keyframes ls-ix-next { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
+@keyframes ls-ix-prev { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: none; } }
+
+.ls-pnext { align-self: flex-end; display: inline-flex; align-items: center; gap: 6px; max-width: 100%; height: 38px; padding: 0 8px 0 14px; border: 0; border-radius: 999px; background: var(--color-accent); color: #fff; font: inherit; font-size: 13px; cursor: pointer; animation: ls-rise .3s var(--ease-out-soft) .12s both; transition: background-color .15s, transform .15s; }
+.ls-pnext span { opacity: .8; }
+.ls-pnext b { font-weight: 650; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ls-pnext svg { width: 17px; height: 17px; flex-shrink: 0; transition: transform .2s var(--ease-out-soft); }
+.ls-pnext:hover { background: var(--color-accent-hover); }
+.ls-pnext:hover svg { transform: translateX(2px); }
+
+/* Kart içi düğmeler: uzun etiket sarar, kesilmez */
+.ls-ix-body .ls-btn { white-space: normal; height: auto; min-height: 36px; padding-block: 7px; text-align: left; line-height: 1.3; }
+.ls-ix-body .ls-btn.is-sm { min-height: 30px; padding-block: 5px; }
+.ls-mono { font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--color-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* Ortak katlanır panel (grid 0fr → 1fr) */
+.ls-fold { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .32s var(--ease-out-soft); }
+.is-open > .ls-fold, .ls-fold:not([aria-hidden="true"]) { grid-template-rows: 1fr; }
+.ls-fold > div { overflow: hidden; min-height: 0; }
+.ls-verdict { display: block; margin-bottom: 2px; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.ls-verdict.is-ok { color: var(--color-ok); } .ls-verdict.is-warn { color: var(--color-warn); } .ls-verdict.is-bad { color: var(--color-bad-text, var(--color-bad)); }
+
+/* İlerleme parçaları */
+.ls-pips { flex: 1; min-width: 0; display: flex; gap: 3px; }
+.ls-pips i { flex: 1; max-width: 48px; height: 4px; border-radius: 99px; background: var(--color-line-soft); transition: background-color .3s; }
+.ls-pips i.is-on { background: var(--color-ink-3); }
+.ls-pips i.is-ok { background: var(--color-ok); animation: ls-pip .35s var(--ease-out-soft); }
+.ls-pips i.is-bad { background: var(--color-bad); animation: ls-pip .35s var(--ease-out-soft); }
+@keyframes ls-pip { from { transform: scaleY(2.4); } to { transform: none; } }
+
+/* Kutuplar: A / B kısa harf + tam ad (sarar) */
+.ls-poles { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.ls-pole { display: inline-flex; align-items: flex-start; gap: 6px; min-width: 0; max-width: 100%; padding: 4px 10px 4px 4px; border-radius: 10px; background: var(--color-field); font-size: 12.5px; font-weight: 600; line-height: 1.35; color: var(--color-ink); }
+.ls-pole b { flex-shrink: 0; width: 20px; height: 20px; border-radius: 6px; display: inline-grid; place-items: center; font-family: var(--font-mono); font-size: 11.5px; color: #fff; }
+.ls-pole span { padding-top: 1px; min-width: 0; overflow-wrap: anywhere; }
+.ls-pole.is-a b { background: var(--color-accent); }
+.ls-pole.is-b b { background: var(--color-ink); }
+.ls-poles-n { margin-left: auto; }
+
+/* Sonuç özeti ve listesi (eşleme / bahis) */
+.ls-score { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; padding: 12px 14px; border-radius: 12px; background: var(--color-field); animation: ls-rise .3s var(--ease-out-soft); }
+.ls-score b { font-family: var(--font-display); font-size: 28px; font-weight: 700; letter-spacing: -.02em; line-height: 1; color: var(--color-ink); font-variant-numeric: tabular-nums; }
+.ls-score b small { font-size: 15px; font-weight: 600; color: var(--color-ink-3); }
+.ls-score span { font-size: 13.5px; color: var(--color-ink-2); }
+.ls-reslist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.ls-reslist li { display: flex; gap: 10px; padding: 10px 0; border-top: 1px solid var(--color-line-soft); animation: ls-rise .3s var(--ease-out-soft) both; animation-delay: calc(min(var(--i, 0), 6) * 40ms); }
+.ls-reslist li:first-child { border-top: 0; }
+.ls-res-ico { flex-shrink: 0; width: 22px; height: 22px; margin-top: 1px; border-radius: 99px; display: grid; place-items: center; }
+.ls-res-ico svg { width: 13px; height: 13px; }
+.ls-reslist li.is-ok .ls-res-ico { background: var(--color-ok-soft); color: var(--color-ok); }
+.ls-reslist li.is-bad .ls-res-ico { background: var(--color-bad); color: #fff; }
+.ls-reslist li > div { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.ls-res-t { margin: 0; font-size: 13.5px; font-weight: 550; line-height: 1.45; color: var(--color-ink); }
+.ls-res-tag { font-size: 12px; font-weight: 650; color: var(--color-ink-3); }
+.ls-reslist li.is-bad .ls-res-tag { color: var(--color-bad-text, var(--color-bad)); }
+.ls-res-why { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--color-ink-2); }
+
+/* 1 · Tuzak avı */
+.ls-stl { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.ls-stl-item { border-radius: 12px; background: var(--color-field); overflow: hidden; transition: background-color .3s, box-shadow .3s, opacity .3s; }
+.ls-stl-btn { width: 100%; display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; border: 0; background: transparent; color: var(--color-ink); font: inherit; font-size: 14px; line-height: 1.5; text-align: left; cursor: pointer; }
+.ls-stl-btn:hover { background: color-mix(in srgb, var(--color-ink) 4%, transparent); }
+.ls-stl-badge { flex-shrink: 0; width: 24px; height: 24px; border-radius: 8px; display: grid; place-items: center; background: var(--color-white); font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--color-ink-2); transition: background-color .25s, color .25s; }
+.ls-stl-badge svg { width: 14px; height: 14px; }
+.ls-stl-text { flex: 1; min-width: 0; padding-top: 1px; }
+.ls-stl .ls-opt-chev { margin-top: 4px; align-self: flex-start; }
+.ls-stl-item.is-open .ls-opt-chev { transform: rotate(180deg); }
+.ls-stl-why { margin: 0 12px 10px 46px; padding-top: 8px; border-top: 1px dashed color-mix(in srgb, var(--color-ink) 14%, transparent); font-size: 13.5px; line-height: 1.55; color: var(--color-ink-2); }
+.ls-stl.is-decided .ls-stl-item.is-fact .ls-stl-badge { background: var(--color-ok-soft); color: var(--color-ok); animation: ls-pop .35s var(--ease-out-soft) both; animation-delay: calc(var(--i) * 60ms); }
+.ls-stl.is-decided .ls-stl-item.is-fact:not(.is-open) { opacity: .8; }
+.ls-stl-item.is-lie { background: var(--color-warn-soft); box-shadow: inset 0 0 0 1.5px var(--color-warn); animation: ls-stamp .45s var(--ease-out-soft); }
+.ls-stl-item.is-lie .ls-stl-badge { background: var(--color-warn); color: #fff; }
+.ls-stl-item.is-miss { background: var(--color-bad-soft); animation: ls-shake .35s; }
+.ls-stl-item.is-miss .ls-stl-badge { background: var(--color-bad); color: #fff; }
+@keyframes ls-stamp { 0% { transform: scale(1.025); box-shadow: inset 0 0 0 3px var(--color-warn); } 100% { transform: none; } }
+
+/* 2 · Hızlı eşleme: kart destesi, sürükle-bırak, karar damgası */
+.ls-swipe-top { display: flex; align-items: center; gap: 10px; }
+.ls-swipe-deck { position: relative; display: grid; padding-bottom: 12px; }
+.ls-swipe-ghost, .ls-swipe-card { grid-area: 1 / 1; border-radius: 16px; }
+.ls-swipe-ghost { background: var(--color-white); border: 1px solid var(--color-line); transform: translateY(calc(var(--d) * 6px)) scale(calc(1 - var(--d) * .04)); opacity: calc(1 - var(--d) * .3); z-index: 0; transition: transform .3s var(--ease-out-soft); }
+.ls-swipe-card { --dx: 0px; --lean: 0; position: relative; z-index: 1; min-height: 132px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 30px 18px 22px; background: var(--color-white); border: 1px solid var(--color-line); box-shadow: var(--shadow-md); cursor: grab; user-select: none; -webkit-user-select: none; touch-action: pan-y; transform: translateX(var(--dx)) rotate(calc(var(--lean) * 6deg)); transition: transform .3s var(--ease-out-soft), box-shadow .2s, border-color .2s; animation: ls-card-in .32s var(--ease-out-soft); }
+.ls-swipe-card.is-drag { cursor: grabbing; transition: none; box-shadow: var(--shadow-lg); }
+.ls-swipe-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+.ls-swipe-card.is-ok { border-color: var(--color-ok); }
+.ls-swipe-card.is-bad { border-color: var(--color-bad); animation: ls-shake .35s; }
+.ls-swipe-card.is-fly-left { transform: translateX(-130%) rotate(-14deg); opacity: 0; transition: transform .28s cubic-bezier(.5, 0, .75, 0), opacity .28s; }
+.ls-swipe-card.is-fly-right { transform: translateX(130%) rotate(14deg); opacity: 0; transition: transform .28s cubic-bezier(.5, 0, .75, 0), opacity .28s; }
+@keyframes ls-card-in { from { transform: translateY(6px) scale(.96); } to { transform: none; } }
+.ls-swipe-text { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.5; color: var(--color-ink); text-align: center; text-wrap: pretty; }
+.ls-swipe-hint { position: absolute; top: 10px; max-width: 46%; padding: 2px 8px; border-radius: 6px; font-size: 11.5px; font-weight: 700; line-height: 1.35; color: #fff; overflow-wrap: anywhere; pointer-events: none; transition: opacity .12s; }
+.ls-swipe-hint.is-left { left: 10px; background: var(--color-accent); opacity: max(0, calc(var(--lean) * -1.6)); }
+.ls-swipe-hint.is-right { right: 10px; background: var(--color-ink); opacity: max(0, calc(var(--lean) * 1.6)); }
+.ls-swipe-stamp { display: inline-flex; align-items: center; gap: 5px; max-width: 100%; padding: 3px 10px; border-radius: 99px; font-size: 12.5px; font-weight: 700; line-height: 1.35; color: #fff; animation: ls-stamp-in .3s var(--ease-out-soft) both; }
+.ls-swipe-stamp svg { width: 14px; height: 14px; flex-shrink: 0; }
+.ls-swipe-card.is-ok .ls-swipe-stamp { background: var(--color-ok); }
+.ls-swipe-card.is-bad .ls-swipe-stamp { background: var(--color-bad); }
+@keyframes ls-stamp-in { from { opacity: 0; transform: translateY(6px) scale(.9); } to { opacity: 1; transform: none; } }
+.ls-swipe-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.ls-swipe-btn { min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 8px 12px; border: 0; border-radius: 12px; font: inherit; font-size: 13px; font-weight: 650; line-height: 1.3; cursor: pointer; transition: background-color .15s, color .15s, transform .12s; }
+.ls-swipe-btn span { min-width: 0; overflow-wrap: anywhere; }
+.ls-swipe-btn svg { width: 17px; height: 17px; flex-shrink: 0; }
+.ls-swipe-btn.is-left { background: var(--color-accent-soft); color: var(--color-accent); text-align: left; }
+.ls-swipe-btn.is-right { justify-content: flex-end; background: var(--color-field); color: var(--color-ink); text-align: right; }
+.ls-swipe-btn.is-left:hover:not(:disabled) { background: var(--color-accent); color: #fff; }
+.ls-swipe-btn.is-right:hover:not(:disabled) { background: var(--color-ink); color: var(--color-white); }
+.ls-swipe-btn:active:not(:disabled) { transform: scale(.97); }
+.ls-swipe-btn:disabled { opacity: .5; cursor: default; }
+
+/* 3 · Puan bahsi */
+.ls-bid-top { display: flex; align-items: center; gap: 12px; }
+.ls-bid-score { position: relative; flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; height: 28px; padding: 0 10px; border-radius: 99px; background: var(--color-ok-soft); color: var(--color-ok); font-family: var(--font-mono); font-size: 13px; font-variant-numeric: tabular-nums; }
+.ls-bid-score.is-neg { background: var(--color-bad-soft); color: var(--color-bad-text, var(--color-bad)); }
+.ls-bid-score svg { width: 15px; height: 15px; }
+.ls-bid-score b { display: inline-block; animation: ls-pop .35s var(--ease-out-soft); }
+.ls-bid-score i { position: absolute; right: 8px; top: -4px; font-style: normal; font-weight: 700; font-size: 12px; pointer-events: none; animation: ls-float-up .9s var(--ease-out-soft) both; }
+.ls-bid-score i.is-ok { color: var(--color-ok); } .ls-bid-score i.is-bad { color: var(--color-bad); }
+@keyframes ls-float-up { 0% { opacity: 0; transform: translateY(6px); } 25% { opacity: 1; } 100% { opacity: 0; transform: translateY(-16px); } }
+.ls-bid-feature { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; background: var(--color-field); animation: ls-ix-next .32s var(--ease-out-soft); }
+.ls-bid-feature p { margin: 0; font-size: 15.5px; font-weight: 600; line-height: 1.5; color: var(--color-ink); text-wrap: pretty; }
+.ls-bid-conf { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; padding: 3px; border-radius: 12px; background: var(--color-field); }
+.ls-bid-conf button { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 0; padding: 6px 4px; border: 0; border-radius: 9px; background: transparent; color: var(--color-ink-2); font: inherit; cursor: pointer; transition: background-color .2s, color .2s, box-shadow .2s; }
+.ls-bid-conf b { font-family: var(--font-mono); font-size: 14px; font-weight: 700; }
+.ls-bid-conf span { font-size: 11.5px; font-weight: 600; line-height: 1.25; text-align: center; }
+.ls-bid-conf small { font-family: var(--font-mono); font-size: 10.5px; color: var(--color-ink-3); }
+.ls-bid-conf button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: var(--shadow-xs); }
+.ls-bid-conf button.is-on b { color: var(--color-accent); }
+.ls-bid-choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 8px; }
+.ls-bid-choice { min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 9px 12px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; transition: border-color .2s, background-color .2s, opacity .2s, transform .12s; }
+.ls-bid-choice:hover:not(:disabled) { border-color: var(--color-accent); }
+.ls-bid-choice:active:not(:disabled) { transform: scale(.98); }
+.ls-bid-choice:disabled { cursor: default; }
+.ls-bid-choice .k { flex-shrink: 0; width: 24px; height: 24px; border-radius: 7px; display: grid; place-items: center; background: var(--color-field); font-family: var(--font-mono); font-size: 12px; font-weight: 700; transition: background-color .2s, color .2s; }
+.ls-bid-choice .k svg { width: 14px; height: 14px; }
+.ls-bid-choice .t { min-width: 0; font-size: 13.5px; font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
+.ls-bid-choice.is-ok { border-color: var(--color-ok); background: var(--color-ok-soft); animation: ls-pop .35s var(--ease-out-soft); }
+.ls-bid-choice.is-ok .k { background: var(--color-ok); color: #fff; }
+.ls-bid-choice.is-bad { border-color: var(--color-bad); background: var(--color-bad-soft); animation: ls-shake .35s; }
+.ls-bid-choice.is-bad .k { background: var(--color-bad); color: #fff; }
+.ls-bid-choice.is-dim { opacity: .55; }
+.ls-bid-verdict { display: flex; flex-direction: column; gap: 8px; }
+
+/* 4 · Çapraz tablo */
+.ls-vg { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.ls-vg-row { padding: 10px 0; border-top: 1px solid var(--color-line-soft); transition: background-color .3s; }
+.ls-vg-row:first-child { border-top: 0; padding-top: 2px; }
+.ls-vg-main { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px 14px; }
+.ls-vg-text { margin: 0; font-size: 14px; font-weight: 550; line-height: 1.5; color: var(--color-ink); }
+.ls-vg-seg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 11px; background: var(--color-field); }
+.ls-vg-seg button { min-width: 40px; height: 32px; padding: 0 10px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer; transition: background-color .2s, color .2s, transform .12s; }
+.ls-vg-seg button:hover:not(:disabled) { background: var(--color-white); color: var(--color-ink); }
+.ls-vg-seg button:active:not(:disabled) { transform: scale(.95); }
+.ls-vg-seg button:disabled { cursor: default; }
+.ls-vg-seg button.is-target { background: var(--color-ok); color: #fff; animation: ls-pop .35s var(--ease-out-soft); }
+.ls-vg-seg button.is-miss { background: var(--color-bad); color: #fff; animation: ls-shake .35s; }
+.ls-vg-row.is-bad .ls-vg-text { color: var(--color-bad-text, var(--color-bad)); }
+.ls-vg-why-toggle { margin-top: 6px; display: inline-flex; align-items: center; gap: 4px; padding: 0; border: 0; background: none; font: inherit; font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ok); cursor: pointer; }
+.ls-vg-row.is-bad .ls-vg-why-toggle { color: var(--color-bad-text, var(--color-bad)); }
+.ls-vg-why-toggle svg { width: 13px; height: 13px; transition: transform .25s var(--ease-out-soft); }
+.ls-vg-why-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+.ls-vg-why { margin: 4px 0 0; font-size: 13px; line-height: 1.55; color: var(--color-ink-2); }
+@container ls-col (max-width: 480px) {
+  /* Çok etkinlikli adımda telefonda şerit tek satır kalsın: etkin adım da simgeye iner (ad kart başlığında) */
+  .ls-psteps:has(> :nth-child(6)) .ls-pstep.is-on { grid-template-columns: 16px 0fr; column-gap: 0; padding-right: 9px; }
+}
+@container ls-col (max-width: 520px) {
+  .ls-vg-main { grid-template-columns: minmax(0, 1fr); }
+  .ls-vg-seg { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+  .ls-swipe-btns { grid-template-columns: 1fr 1fr; }
+  .ls-stl-why { margin-left: 12px; }
+}
+@media (max-width: 767px) {
+  .ls-stl-btn { font-size: 13.5px; }
+  .ls-swipe-text, .ls-bid-feature p { font-size: 14.5px; }
+  .ls-vg-text { font-size: 13.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ls-pstep, .ls-psteps::after, .ls-fold { transition: none; }
+  .ls-enter-next, .ls-enter-prev, .ls-pnext, .ls-swipe-card, .ls-bid-feature, .ls-reslist li, .ls-stl-item.is-lie, .ls-bid-score i, .ls-score { animation: none; }
+  .ls-swipe-card.is-fly-left, .ls-swipe-card.is-fly-right { transform: none; transition: opacity .2s; }
+}
+/* Sonuç listesi: doğru bilinenler tek satıra iner, gerekçe yalnız hatalılarda */
+.ls-reslist li.is-ok .ls-res-why { display: none; }
+.ls-reslist li.is-ok .ls-res-t { font-weight: 500; color: var(--color-ink-2); }
+
+/* =============================================================
+ * Çevrimdışı · öğrenci (sade durum + tek eylem) / yönetici (depo, sistem, kuyruk)
+ * components/pwa/*
+ * ============================================================= */
+.ms-btn.is-danger.is-armed { background: var(--color-bad); color: #fff; animation: ls-pop .3s var(--ease-out-soft); }
+.of { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.of-lead { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--color-ink-2); text-wrap: pretty; }
+.of-state { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.of-orb { flex-shrink: 0; width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; background: var(--color-field); color: var(--color-ink-2); }
+.of-orb svg { width: 21px; height: 21px; }
+.of-state.is-ready .of-orb { background: var(--color-ok-soft); color: var(--color-ok); }
+.of-state.is-ready .of-orb svg { animation: of-check .5s var(--ease-out-soft); }
+.of-state.is-offline .of-orb { background: var(--color-warn-soft); color: var(--color-warn); }
+.of-state.is-busy .of-orb { background: var(--color-accent-soft); color: var(--color-accent); }
+.of-state.is-busy .of-orb svg { animation: spin 1.1s linear infinite; }
+.of-state.is-empty .of-orb { background: var(--color-accent-soft); color: var(--color-accent); }
+@keyframes of-check { 0% { transform: scale(.5); opacity: 0; } 60% { transform: scale(1.12); opacity: 1; } 100% { transform: none; } }
+.of-state-t { min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.of-state-t b { font-size: 15px; font-weight: 650; color: var(--color-ink); }
+.of-state-t span { font-size: 12.5px; color: var(--color-ink-3); overflow-wrap: anywhere; }
+
+.of-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-white); }
+.of-list li { display: flex; align-items: center; gap: 10px; min-height: 42px; padding: 0 14px; font-size: 14px; color: var(--color-ink); }
+.of-list li + li { border-top: 1px solid var(--color-line-soft); }
+.of-list li > svg { width: 16px; height: 16px; color: var(--color-ink-3); flex-shrink: 0; }
+.of-list li > span { flex: 1; min-width: 0; }
+.of-list li > b { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
+.of-list li > em { font-style: normal; font-size: 12px; color: var(--color-ink-3); }
+.of-list li > i { width: 7px; height: 7px; border-radius: 99px; background: var(--color-line-2); }
+.of-list.is-ready li > svg { color: var(--color-ok); animation: ls-pop .35s var(--ease-out-soft) both; animation-delay: calc(var(--i) * 60ms); }
+
+.of-main { width: 100%; height: 46px; font-size: 14.5px; }
+.of-progress { display: flex; flex-direction: column; gap: 7px; padding: 12px 14px; border-radius: 14px; background: var(--color-accent-soft); animation: ls-rise .25s var(--ease-out-soft); }
+.of-progress-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--color-accent); font-weight: 600; }
+.of-progress-top b { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.of-progress .ms-progress { background: color-mix(in srgb, var(--color-accent) 18%, transparent); }
+.of-mono { font-family: var(--font-mono); font-size: 11.5px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+
+.of-install { display: flex; flex-direction: column; gap: 8px; padding-top: 12px; border-top: 1px solid var(--color-line-soft); }
+.of-install-t { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.of-install-t > svg { width: 18px; height: 18px; color: var(--color-ink-3); flex-shrink: 0; }
+.of-install-t > span { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.of-install-t b { font-size: 14px; font-weight: 600; color: var(--color-ink); }
+.of-install-t small { font-size: 12.5px; color: var(--color-ink-3); }
+.of-steps { margin: 0; padding: 10px 12px; border-radius: 12px; background: var(--color-field); list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--color-ink-2); animation: ls-rise .25s var(--ease-out-soft); }
+.of-steps li { display: flex; align-items: center; gap: 6px; }
+.of-steps svg { width: 14px; height: 14px; color: var(--color-accent); }
+.of-hint { font-size: 12px; color: var(--color-ink-3); }
+.of-note { margin: 0; display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--color-ink-3); }
+.of-note svg { width: 14px; height: 14px; }
+.of-note.is-ok { color: var(--color-ok); }
+.of-foot { display: flex; justify-content: center; margin-top: -4px; }
+
+.of-perks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.of-perks li { display: flex; gap: 12px; animation: ls-rise .35s var(--ease-out-soft) both; animation-delay: calc(80ms + var(--i) * 60ms); }
+.of-perks li > svg { flex-shrink: 0; width: 34px; height: 34px; padding: 8px; border-radius: 11px; background: var(--color-accent-soft); color: var(--color-accent); }
+.of-perks li > span { display: flex; flex-direction: column; gap: 1px; font-size: 13px; line-height: 1.45; color: var(--color-ink-3); }
+.of-perks b { font-size: 14px; font-weight: 600; color: var(--color-ink); }
+
+/* Yönetici */
+.of-sec { display: flex; flex-direction: column; gap: 8px; }
+.of-sec h3 { margin: 0; font-family: var(--font-mono); font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); }
+.of-kv { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); border-radius: 12px; border: 1px solid var(--color-line); overflow: hidden; }
+.of-kv > div { display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-right: 1px solid var(--color-line-soft); border-bottom: 1px solid var(--color-line-soft); margin: 0 -1px -1px 0; min-width: 0; }
+.of-kv dt { font-size: 11.5px; color: var(--color-ink-3); }
+.of-kv dd { margin: 0; font-family: var(--font-mono); font-size: 13.5px; font-weight: 600; color: var(--color-ink); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.of-sys { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.of-sys li { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border-radius: 99px; background: var(--color-field); font-size: 12.5px; color: var(--color-ink-2); }
+.of-sys li i { width: 7px; height: 7px; border-radius: 99px; background: var(--color-ink-3); }
+.of-sys li b { font-weight: 650; color: var(--color-ink); }
+.of-sys li.is-ok i { background: var(--color-ok); }
+.of-sys li.is-warn i { background: var(--color-warn); }
+.of-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding-top: 12px; border-top: 1px solid var(--color-line-soft); }
+
+/* Üst çubuk göstergesi */
+.of-badge { position: relative; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 36px; min-width: 36px; padding: 0 10px; border: 0; border-radius: 12px; background: transparent; color: var(--color-ink-3); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; transition: background-color .15s, color .15s; }
+.of-badge svg { width: 18px; height: 18px; flex-shrink: 0; }
+.of-badge:hover { background: var(--color-field); color: var(--color-ink); }
+.of-badge.is-icon { padding: 0; width: 40px; height: 40px; }
+.of-badge.is-ready { color: var(--color-ok); }
+.of-badge.is-offline { background: var(--color-warn-soft); color: var(--color-warn); }
+.of-badge.is-offline svg { animation: of-breathe 2s ease-in-out infinite; }
+.of-badge.is-busy { background: var(--color-accent-soft); color: var(--color-accent); overflow: hidden; }
+.of-badge.is-busy::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: calc(var(--p, 0) * 1%); background: var(--color-accent); transition: width .4s var(--ease-out-soft); }
+.of-badge.is-busy b { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.of-badge.is-admin { background: var(--color-field); color: var(--color-ink-2); }
+.of-badge.is-admin.is-ready svg { color: var(--color-ok); }
+.of-badge.is-admin span { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.of-q { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px; background: var(--color-warn); color: #fff; font-size: 11px; display: inline-grid; place-items: center; }
+@keyframes of-breathe { 50% { opacity: .45; } }
+@media (prefers-reduced-motion: reduce) { .of-badge.is-offline svg, .of-state.is-busy .of-orb svg, .of-perks li, .of-list.is-ready li > svg { animation: none; } }
+
+/* =============================================================
+ * Çıkmış dili · tüm sistem
+ * PastExamsView'de kurulan "sınav kitapçığı" dili ortak parçalara yayılır:
+ *  - başlık: büyük başlık + yanında mono sayaç, sağda sessiz araçlar (PageHeader)
+ *  - kategori şeritleri: hap çip yerine altı çizili sekme
+ *  - arama: tek kontrol, ince çizgi, odakta vurgu halkası
+ *  - kartlar: gölge değil kılçizgi; 16px köşe, beyaz yüzey
+ * ============================================================= */
+.cx-page { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.cx-page > .cx-head { flex-wrap: wrap; row-gap: 6px; }
+.cx-page .cx-title { min-width: 0; overflow-wrap: anywhere; }
+.cx-page .cx-count { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 0 6px; white-space: normal; }
+.cx-stat { display: inline-flex; align-items: baseline; gap: 4px; white-space: nowrap; }
+.cx-stat > i { font-style: normal; color: var(--color-line-2); margin-right: 2px; }
+.cx-stat.is-ok { color: var(--color-ok); } .cx-stat.is-warn { color: var(--color-warn); } .cx-stat.is-accent { color: var(--color-accent); }
+.cx-page .cx-head-tools { display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px; min-width: 0; max-width: 100%; }
+.cx-desc { margin: 0 !important; }
+html.ui-v3 .cx-page .cx-stat { display: inline-flex; }
+
+/* Kategori şeritleri → altı çizili sekmeler */
+.ms-chipbar:not(.is-wrap) { gap: 2px; padding: 0; border-bottom: 1px solid var(--color-line); -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 20px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 20px), transparent); }
+.ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip) { position: relative; height: 38px; padding: 0 10px; border: 0; border-radius: 0; background: transparent; color: var(--color-ink-2); font-size: 14px; font-weight: 500; transition: color .15s; }
+.ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip)::after { content: ""; position: absolute; left: 8px; right: 8px; bottom: 0; height: 2px; border-radius: 2px 2px 0 0; background: var(--color-ink); transform: scaleX(0); transition: transform .2s var(--ease-out-soft); }
+.ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip):hover { color: var(--color-ink); border: 0; }
+.ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip):is(.is-on, [aria-checked="true"]) { background: transparent; color: var(--color-ink); font-weight: 650; }
+.ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip):is(.is-on, [aria-checked="true"])::after { transform: none; }
+.ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip) :is(.n, .ms-chip-count) { font-family: var(--font-mono); font-size: 11px; font-weight: 500; opacity: 1; color: var(--color-ink-3); }
+.ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip):focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; border-radius: 8px; }
+
+/* Arama kutuları → Çıkmış araması */
+:is(.ms-qsearch, .lh-search, .ms-search-field) { border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-white); box-shadow: var(--shadow-xs); }
+:is(.ms-qsearch, .lh-search, .ms-search-field):focus-within { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+.lh-search { height: 44px; }
+
+/* Kartlar → kılçizgili kitapçık yüzeyi */
+.ms-qcard { border: 1px solid var(--color-line); box-shadow: none; }
+html.ui-v3 main :is(div, section, article, li, a, aside, form).bg-white.border,
+html.ui-v3 main :is(div, section, article, li, a, aside, form).bg-white.border-line { border-color: var(--color-line); box-shadow: none; }
+html.ui-v3 main :is(div, section, article, li, aside).bg-white.border.rounded-2xl { border-radius: 16px; }
+.ms-table-wrap { border: 1px solid var(--color-line); box-shadow: none; }
+
+/* Öğren kataloğu: kutulu istatistikler yerine başlık sayacı */
+
+@media (max-width: 639px) {
+  .cx-page .cx-head-tools { margin-left: auto; }
+  .ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip) { padding: 0 8px; font-size: 13.5px; }
+}
+.cx-rail > .ms-chipbar { min-width: 0; }
+@media (min-width: 900px) {
+  .cx-rail > .ms-chipbar { flex: 1; border-bottom: 0; }
+  .cx-rail > .cx-count { padding-bottom: 10px; }
+}
+@media (max-width: 899px) { .cx-rail > .cx-count { align-self: flex-end; } }
+/* Yerel seçim kutusu: arama kutusuyla aynı çizgi */
+.ms-select { height: 44px; padding: 0 34px 0 12px; border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235F6C80' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center; box-shadow: var(--shadow-xs); color: var(--color-ink); font: inherit; font-size: 14px; cursor: pointer; -webkit-appearance: none; appearance: none; transition: border-color .15s, box-shadow .15s; }
+.ms-select:focus { outline: 0; border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+html.ui-v3 main select.ms-select { background-color: var(--color-white); border-color: var(--color-line); }
+@media (max-width: 639px) { .ms-select { font-size: 16px; } }
+/* Koyu tema: açık tonlu doğru/yanlış/uyarı zeminlerinde beyaz yazı okunmuyor → koyu yazı */
+html.theme-dark :is(.ls-vg-seg button.is-target, .ls-vg-seg button.is-miss, .ls-bid-choice.is-ok .k, .ls-bid-choice.is-bad .k, .ls-swipe-card .ls-swipe-stamp, .ls-stl-item.is-lie .ls-stl-badge, .ls-stl-item.is-miss .ls-stl-badge, .ls-reslist li.is-bad .ls-res-ico, .ls-swipe-hint.is-right, .ls-pole.is-b b, .of-q, .ms-btn.is-danger.is-armed) { color: #0B1220; }
+
+/* =============================================================
+ * v6 · Klinik kitapçık — tüm sistem (html.ui-v3: v3 ve v4)
+ * Kaynak: "MedSoru" tasarım sistemi (Design System artifact). /cikmis
+ * sayfasının sınav kitapçığı dili bütün uygulamaya yayılır:
+ *  - düz yüzey + kılçizgi, tek vurgu (accent), klinik ikincil ton (clinic)
+ *  - kompakt yoğunluk: kontrol 32px (dokunmatik 40), boşluklar yarıya yakın
+ *  - okuma metni küçülmez: gövde ≥14px, soru kökü 15/24
+ *  - hap düğme yok: kontroller 8px, kartlar 12px, pencereler 16px köşe
+ * ============================================================= */
+html.ui-v3 {
+  --color-canvas: #F6F7F9;
+  --color-white: #FFFFFF;
+  --color-field: #F0F2F5;
+  --color-line: #E4E7EC;
+  --color-line-soft: #EEF0F3;
+  --color-line-2: #CDD3DC;
+  --color-ink: #0E1726;
+  --color-ink-2: #46546A;
+  --color-ink-3: #5F6C80;
+  --color-accent: #2453E6;
+  --color-accent-hover: #1C45C9;
+  --color-accent-soft: #EAF0FE;
+  --color-on-accent: #FFFFFF;
+  --color-clinic: #0B7A75;
+  --color-clinic-soft: #E3F3F1;
+  --color-ok: #157A3E;
+  --color-ok-soft: #E4F3E9;
+  --color-warn: #9A4A06;
+  --color-warn-soft: #FCEFE0;
+  --color-bad: #C2294A;
+  --color-bad-text: #B4233C;
+  --color-bad-soft: #FDECEF;
+  --color-ai: #6D28D9;
+  --color-ai-soft: #F1EAFD;
+
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+  --radius-2xl: 12px;
+  --radius-3xl: 16px;
+  --shadow-xs: 0 1px 2px rgb(14 23 38 / 0.05);
+  --shadow-sm: 0 1px 2px rgb(14 23 38 / 0.05);
+  --shadow-md: 0 4px 12px rgb(14 23 38 / 0.08), 0 1px 3px rgb(14 23 38 / 0.06);
+  --shadow-lg: 0 8px 24px rgb(14 23 38 / 0.12);
+  --shadow-xl: 0 16px 48px rgb(14 23 38 / 0.18);
+  --shadow-2xl: 0 16px 48px rgb(14 23 38 / 0.18);
+
+  /* Başlık ölçeği yarıya yakın kısılır; gövde ve okuma metni aynı kalır */
+  --text-4xl: 1.75rem;   --text-4xl--line-height: 1.15;
+  --text-3xl: 1.5rem;    --text-3xl--line-height: 1.2;
+  --text-2xl: 1.25rem;   --text-2xl--line-height: 1.25;
+  --text-xl: 1.0625rem;  --text-xl--line-height: 1.35;
+
+  --ms-ctl: 32px;
+  --ms-ctl-sm: 26px;
+  --ease-out-soft: cubic-bezier(.22, 1, .36, 1);
+  --ms-ease: cubic-bezier(.22, 1, .36, 1);
+}
+@media (pointer: coarse) { html.ui-v3 { --ms-ctl: 40px; --ms-ctl-sm: 34px; } }
+html.ui-v3.theme-dark {
+  --color-canvas: #0F131A;
+  --color-white: #171C25;
+  --color-field: #1F2531;
+  --color-line: #2A3240;
+  --color-line-soft: #20262F;
+  --color-line-2: #3A4456;
+  --color-ink: #E7ECF3;
+  --color-ink-2: #A9B5C6;
+  --color-ink-3: #8A98AC;
+  --color-accent: #7B98F7;
+  --color-accent-hover: #9BB1FA;
+  --color-accent-soft: #1E2A4D;
+  --color-on-accent: #0B1220;
+  --color-clinic: #4FC8BF;
+  --color-clinic-soft: #0F2E2C;
+  --color-ok: #66D093;
+  --color-ok-soft: #12301F;
+  --color-warn: #F2AE68;
+  --color-warn-soft: #35250F;
+  --color-bad: #FF8FA0;
+  --color-bad-text: #FF8FA0;
+  --color-bad-soft: #3A1720;
+  --color-ai: #C4B5FD;
+  --color-ai-soft: #2A2145;
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.45), 0 1px 3px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 8px 24px rgb(0 0 0 / 0.5);
+  --shadow-xl: 0 16px 48px rgb(0 0 0 / 0.6);
+}
+/* Koyu temada accent açık: üstündeki "beyaz" yazı koyuya döner */
+html.ui-v3.theme-dark :is(.bg-accent, .ms-btn.is-primary, .cx-filterbtn b, .ms-btn-badge) { color: var(--color-on-accent); }
+html.ui-v3.theme-dark .bg-accent :is(svg, span) { color: inherit; }
+
+html.ui-v3 body { font-size: 14px; line-height: 1.45; background: var(--color-canvas); }
+
+/* ---------- Kabuk: üst çubuk, kenar menüsü, alt menü ---------- */
+html.ui-v3 header.sticky { background: color-mix(in srgb, var(--color-canvas) 86%, transparent); -webkit-backdrop-filter: saturate(1.6) blur(14px); backdrop-filter: saturate(1.6) blur(14px); border-bottom-color: var(--color-line); }
+html.ui-v3 header.sticky > div:first-child { height: 48px; }
+
+html.ui-v3 .ms-rail { padding-top: 10px; padding-bottom: 8px; }
+@media (min-width: 1024px) {
+  html.ui-v3 .ms-rail { width: 208px; padding-left: 8px; padding-right: 8px; }
+  html.ui-v3 .ms-shell { padding-left: 208px; }
+  html.ui-v3.rail-collapsed .ms-rail { width: 64px; padding-left: 0; padding-right: 0; }
+  html.ui-v3.rail-collapsed .ms-shell { padding-left: 64px; }
+  html.ui-v3 .ms-rail-item { height: 32px !important; padding: 0 8px !important; gap: 10px !important; font-size: 13px !important; border-radius: 8px !important; }
+  html.ui-v3 .ms-rail-item > svg { width: 16px !important; height: 16px !important; }
+  html.ui-v3.rail-collapsed .ms-rail-item { width: 48px; height: auto !important; padding: 6px 0 !important; gap: 3px !important; font-size: 10.5px !important; }
+  html.ui-v3.rail-collapsed .ms-rail-item > svg { width: 18px !important; height: 18px !important; }
+}
+html.ui-v3 .ms-rail-item { border-radius: 8px; }
+html.ui-v3 .ms-rail-item[aria-current="page"] { background: var(--color-accent-soft); color: var(--color-accent); }
+html.ui-v3 .ms-rail-group { padding: 12px 8px 4px; font-size: 11px; line-height: 14px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
+html.ui-v3 .ms-rail-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--color-clinic-soft); color: var(--color-clinic); }
+
+html.ui-v3 nav[aria-label="Alt menü"] { background: color-mix(in srgb, var(--color-white) 88%, transparent); -webkit-backdrop-filter: saturate(1.6) blur(16px); backdrop-filter: saturate(1.6) blur(16px); padding-top: 4px; }
+html.ui-v3 nav[aria-label="Alt menü"] :is(a, button) { min-height: 44px; gap: 2px; font-size: 10.5px; }
+html.ui-v3 nav[aria-label="Alt menü"] :is(a, button) > span { height: 26px; width: 44px; }
+html.ui-v3 nav[aria-label="Alt menü"] :is(a, button) svg { width: 19px; height: 19px; }
+html.ui-v3 nav[aria-label="Alt menü"] :is(a, button)[aria-current="page"] { color: var(--color-ink); }
+html.ui-v3 nav[aria-label="Alt menü"] :is(a, button)[aria-current="page"] > span { color: var(--color-accent); }
+
+/* ---------- Sayfa başlığı ---------- */
+html.ui-v3 .ms-page-title, html.ui-v3 .cx-title { font-size: 22px !important; line-height: 26px; letter-spacing: -.02em; font-weight: 700; }
+@media (max-width: 639px) { html.ui-v3 .ms-page-title, html.ui-v3 .cx-title { font-size: 20px !important; line-height: 24px; } }
+html.ui-v3 .cx-count { font-size: 12px; }
+html.ui-v3 .cx-page { gap: 2px; }
+html.ui-v3 :is(.ms-page-desc, .cx-desc) { font-size: 12.5px; line-height: 18px; color: var(--color-ink-3); }
+html.ui-v3 main :is(h2, h3).font-display { letter-spacing: -.015em; }
+
+/* ---------- Düğmeler: hap değil, 8px köşe ---------- */
+html.ui-v3 .ms-btn { border-radius: 8px; padding: 0 12px; font-size: 13px; gap: 6px; }
+html.ui-v3 .ms-btn > svg { width: 15px; height: 15px; }
+html.ui-v3 .ms-btn.is-sm { border-radius: 6px; padding: 0 9px; font-size: 12.5px; }
+html.ui-v3 .ms-btn.is-icon { padding: 0; }
+html.ui-v3 .ms-btn.is-primary { color: var(--color-on-accent); }
+html.ui-v3 :is(button, a).bg-accent { border-radius: 8px; }
+html.ui-v3 main :is(button, a).rounded-full:not(.ms-keep-shape):not([class*="w-"]):not(.ms-tag) { border-radius: 8px; }
+html.ui-v3 main :is(button, a, label).h-12:not(.ms-keep-size) { height: calc(var(--ms-ctl) + 4px); }
+html.ui-v3 main :is(input, select).h-12:not(.ms-keep-size) { height: calc(var(--ms-ctl) + 4px); }
+html.ui-v3 :where(button:not(:disabled)):active { transform: scale(.97); }
+html.ui-v3 .ms-tag { height: 20px; padding: 0 7px; border-radius: 6px; font-size: 11.5px; }
+html.ui-v3 .ms-tag.is-ai, html.ui-v3 .cx-flag.is-ai { background: var(--color-ai-soft); color: var(--color-ai); }
+
+/* ---------- Kartlar ve yüzeyler: gölge yok, kılçizgi, 12px ---------- */
+html.ui-v3 main :is(div, section, article, li, aside).bg-white.border.rounded-2xl,
+html.ui-v3 main :is(div, section, article, li, aside).bg-white.border.rounded-3xl { border-radius: 12px; }
+html.ui-v3 main :is(div, section, article, li, a, aside).shadow-sm,
+html.ui-v3 main :is(div, section, article, li, a, aside).shadow { box-shadow: none; }
+html.ui-v3 .ms-qcard { border-radius: 12px; padding: 12px; gap: 8px; }
+@media (hover: hover) {
+  html.ui-v3 .ms-lift:hover { transform: none; box-shadow: none; border-color: var(--color-line-2); }
+}
+
+/* ---------- Çıkmış dili: kompakt ---------- */
+html.ui-v3 .cx { gap: 8px; }
+html.ui-v3 .cx-iconbtn { width: 30px; height: 30px; border-radius: 8px; }
+html.ui-v3 .cx-iconbtn svg { width: 16px; height: 16px; }
+html.ui-v3 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field) { height: calc(var(--ms-ctl) + 4px); border-radius: 10px; padding-left: 10px; }
+html.ui-v3 :is(.cx-search, .ms-qsearch) > svg { width: 15px; height: 15px; }
+html.ui-v3 :is(.cx-search, .ms-qsearch) input { font-size: 14px; }
+html.ui-v3 .cx-filterbtn { height: 28px; border-radius: 7px; font-size: 13px; }
+html.ui-v3 .cx-search-x { width: 26px; height: 26px; border-radius: 7px; }
+html.ui-v3 .ms-select { height: calc(var(--ms-ctl) + 4px); border-radius: 10px; font-size: 13.5px; }
+html.ui-v3 :is(.cx-tab, .ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip)) { height: var(--ms-ctl); padding: 0 8px; font-size: 13px; }
+html.ui-v3 .cx-tab small { font-size: 10.5px; }
+html.ui-v3 :is(.cx-tab, .ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip))::after { left: 6px; right: 6px; }
+html.ui-v3 .cx-bar { min-height: 28px; gap: 4px; }
+html.ui-v3 :is(.cx-sort, .cx-quiz) { height: 28px; font-size: 12.5px; }
+html.ui-v3 .cx-chip { height: 24px; font-size: 11.5px; }
+html.ui-v3 .cx-list { gap: 8px; }
+html.ui-v3 .cx-q { padding: 12px 12px 4px; gap: 8px; border-radius: 12px; }
+html.ui-v3 .cx-q-head { gap: 8px; }
+html.ui-v3 .cx-q-no { min-width: 30px; height: 22px; border-radius: 6px; font-size: 12px; }
+html.ui-v3 .cx-q-meta b { font-size: 12.5px; }
+html.ui-v3 .cx-q-meta span { font-size: 11px; }
+html.ui-v3 .cx-flag { height: 20px; padding: 0 6px; border-radius: 6px; font-size: 11px; }
+html.ui-v3 .cx-q .ms-stem { font-size: 15px; line-height: 1.6; }
+html.ui-v3 .cx-opt { gap: 10px; padding-block: 7px; font-size: 14px; line-height: 1.45; }
+html.ui-v3 .cx-bubble { width: 22px; height: 22px; font-size: 11px; margin-top: -1px; }
+html.ui-v3 .cx-bubble svg { width: 12px; height: 12px; }
+html.ui-v3 .cx-verdict { padding: 6px 10px; border-radius: 8px; font-size: 13px; }
+html.ui-v3 .cx-q-foot { margin: 0 -6px; padding-top: 2px; }
+html.ui-v3 .cx-act { height: 30px; min-width: 30px; padding: 0 8px; border-radius: 8px; font-size: 12.5px; }
+html.ui-v3 .cx-act svg { width: 15px; height: 15px; }
+@media (max-width: 639px) {
+  html.ui-v3 .cx-q { padding: 12px 16px 4px; border-radius: 0; }
+  html.ui-v3 .cx-opt { padding-block: 9px; }
+}
+
+/* ---------- Pencereler ve alt paneller ---------- */
+html.ui-v3 [role="dialog"] :is(.rounded-2xl, .rounded-3xl).bg-white { border-radius: 16px; }
+html.ui-v3 [role="dialog"] .rounded-t-2xl { border-top-left-radius: 16px; border-top-right-radius: 16px; }
+html.ui-v3 [role="dialog"] h2 { letter-spacing: -.015em; }
+
+/* ---------- Ders notu vurgu kutuları: ton + başlık, sol şerit yok ---------- */
+html.ui-v3 :is(.markdown-alert, .ms-callout) { border-left: 0 !important; border-radius: 8px; padding: 8px 10px; }
+
+/* ---------- Lottie: katmanlar tokenlara boyanır ---------- */
+.ms-lottie { display: inline-block; line-height: 0; }
+.ms-lottie svg { width: 100% !important; height: 100% !important; }
+.ms-lottie .lt-clinic path { stroke: var(--color-clinic, #0B7A75); }
+.ms-lottie .lt-accent path { stroke: var(--color-accent); }
+.ms-lottie .lt-faint path { stroke: var(--color-ink-3); }
+.ms-lottie .lt-ok path { stroke: var(--color-ok); }
+.ms-lottie .lt-ok-soft path { fill: var(--color-ok-soft); }
+.ms-empty { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+
+/* ---------- Hareket: tek eğri, kısa süreler ---------- */
+html.ui-v3 .ms-view-enter { animation: ms-page-in .26s var(--ease-out-soft) backwards; }
+html.ui-v3 main.flex-col > * { animation-duration: .26s; }
+@keyframes ms-clinic-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+html.ui-v3 .cx-q { animation: ms-clinic-in .26s var(--ease-out-soft) both; }
+@media (prefers-reduced-motion: reduce) {
+  html.ui-v3 .ms-view-enter, html.ui-v3 .cx-q { animation: none; }
+}
+
+/* v6 · Kompakt yoğunluk: Tailwind boşlukları main ve pencerelerde ~%40–50 kısılır (simge boyutları değişmez) */
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-2\.5 { padding: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-3 { padding: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-3\.5 { padding: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-4 { padding: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-5 { padding: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-6 { padding: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-7 { padding: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-8 { padding: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-10 { padding: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-12 { padding: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-16 { padding: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-2\.5 { padding-inline: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-3 { padding-inline: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-3\.5 { padding-inline: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-4 { padding-inline: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-5 { padding-inline: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-6 { padding-inline: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-7 { padding-inline: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-8 { padding-inline: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-10 { padding-inline: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-12 { padding-inline: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-16 { padding-inline: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-2\.5 { padding-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-3 { padding-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-3\.5 { padding-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-4 { padding-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-5 { padding-block: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-6 { padding-block: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-7 { padding-block: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-8 { padding-block: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-10 { padding-block: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-12 { padding-block: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-16 { padding-block: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-2\.5 { padding-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-3 { padding-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-3\.5 { padding-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-4 { padding-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-5 { padding-top: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-6 { padding-top: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-7 { padding-top: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-8 { padding-top: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-10 { padding-top: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-12 { padding-top: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-16 { padding-top: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-2\.5 { padding-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-3 { padding-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-3\.5 { padding-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-4 { padding-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-5 { padding-bottom: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-6 { padding-bottom: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-7 { padding-bottom: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-8 { padding-bottom: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-10 { padding-bottom: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-12 { padding-bottom: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-16 { padding-bottom: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-2\.5 { padding-left: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-3 { padding-left: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-3\.5 { padding-left: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-4 { padding-left: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-5 { padding-left: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-6 { padding-left: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-7 { padding-left: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-8 { padding-left: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-10 { padding-left: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-12 { padding-left: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-16 { padding-left: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-2\.5 { padding-right: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-3 { padding-right: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-3\.5 { padding-right: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-4 { padding-right: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-5 { padding-right: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-6 { padding-right: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-7 { padding-right: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-8 { padding-right: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-10 { padding-right: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-12 { padding-right: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-16 { padding-right: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-3 { margin-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-4 { margin-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-5 { margin-top: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-6 { margin-top: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-8 { margin-top: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-10 { margin-top: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-12 { margin-top: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-16 { margin-top: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-3 { margin-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-4 { margin-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-5 { margin-bottom: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-6 { margin-bottom: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-8 { margin-bottom: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-10 { margin-bottom: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-12 { margin-bottom: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-16 { margin-bottom: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-3 { margin-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-4 { margin-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-5 { margin-block: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-6 { margin-block: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-8 { margin-block: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-10 { margin-block: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-12 { margin-block: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-16 { margin-block: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-2\.5 { gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-3 { gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-3\.5 { gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-4 { gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-5 { gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-6 { gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-8 { gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-10 { gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-12 { gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-2\.5 { column-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-3 { column-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-3\.5 { column-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-4 { column-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-5 { column-gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-6 { column-gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-8 { column-gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-10 { column-gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-12 { column-gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-2\.5 { row-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-3 { row-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-3\.5 { row-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-4 { row-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-5 { row-gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-6 { row-gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-8 { row-gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-10 { row-gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-12 { row-gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-2\.5 > :not(:last-child) { margin-block-end: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-3 > :not(:last-child) { margin-block-end: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-3\.5 > :not(:last-child) { margin-block-end: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-4 > :not(:last-child) { margin-block-end: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-5 > :not(:last-child) { margin-block-end: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-6 > :not(:last-child) { margin-block-end: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-8 > :not(:last-child) { margin-block-end: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-10 > :not(:last-child) { margin-block-end: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-12 > :not(:last-child) { margin-block-end: 26px; }
+@media (min-width: 40rem) {
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-2\.5 { padding: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-3 { padding: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-3\.5 { padding: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-4 { padding: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-5 { padding: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-6 { padding: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-7 { padding: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-8 { padding: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-10 { padding: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-12 { padding: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-16 { padding: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-2\.5 { padding-inline: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-3 { padding-inline: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-3\.5 { padding-inline: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-4 { padding-inline: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-5 { padding-inline: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-6 { padding-inline: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-7 { padding-inline: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-8 { padding-inline: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-10 { padding-inline: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-12 { padding-inline: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-16 { padding-inline: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-2\.5 { padding-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-3 { padding-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-3\.5 { padding-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-4 { padding-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-5 { padding-block: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-6 { padding-block: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-7 { padding-block: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-8 { padding-block: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-10 { padding-block: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-12 { padding-block: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-16 { padding-block: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-2\.5 { padding-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-3 { padding-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-3\.5 { padding-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-4 { padding-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-5 { padding-top: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-6 { padding-top: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-7 { padding-top: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-8 { padding-top: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-10 { padding-top: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-12 { padding-top: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-16 { padding-top: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-2\.5 { padding-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-3 { padding-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-3\.5 { padding-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-4 { padding-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-5 { padding-bottom: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-6 { padding-bottom: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-7 { padding-bottom: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-8 { padding-bottom: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-10 { padding-bottom: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-12 { padding-bottom: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-16 { padding-bottom: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-2\.5 { padding-left: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-3 { padding-left: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-3\.5 { padding-left: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-4 { padding-left: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-5 { padding-left: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-6 { padding-left: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-7 { padding-left: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-8 { padding-left: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-10 { padding-left: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-12 { padding-left: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-16 { padding-left: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-2\.5 { padding-right: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-3 { padding-right: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-3\.5 { padding-right: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-4 { padding-right: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-5 { padding-right: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-6 { padding-right: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-7 { padding-right: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-8 { padding-right: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-10 { padding-right: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-12 { padding-right: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-16 { padding-right: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-3 { margin-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-4 { margin-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-5 { margin-top: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-6 { margin-top: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-8 { margin-top: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-10 { margin-top: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-12 { margin-top: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-16 { margin-top: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-3 { margin-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-4 { margin-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-5 { margin-bottom: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-6 { margin-bottom: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-8 { margin-bottom: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-10 { margin-bottom: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-12 { margin-bottom: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-16 { margin-bottom: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-3 { margin-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-4 { margin-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-5 { margin-block: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-6 { margin-block: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-8 { margin-block: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-10 { margin-block: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-12 { margin-block: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-16 { margin-block: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-2\.5 { gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-3 { gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-3\.5 { gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-4 { gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-5 { gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-6 { gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-8 { gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-10 { gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-12 { gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-2\.5 { column-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-3 { column-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-3\.5 { column-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-4 { column-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-5 { column-gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-6 { column-gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-8 { column-gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-10 { column-gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-12 { column-gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-2\.5 { row-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-3 { row-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-3\.5 { row-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-4 { row-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-5 { row-gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-6 { row-gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-8 { row-gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-10 { row-gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-12 { row-gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-2\.5 > :not(:last-child) { margin-block-end: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-3 > :not(:last-child) { margin-block-end: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-3\.5 > :not(:last-child) { margin-block-end: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-4 > :not(:last-child) { margin-block-end: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-5 > :not(:last-child) { margin-block-end: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-6 > :not(:last-child) { margin-block-end: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-8 > :not(:last-child) { margin-block-end: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-10 > :not(:last-child) { margin-block-end: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-12 > :not(:last-child) { margin-block-end: 26px; }
+}
+@media (min-width: 48rem) {
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-2\.5 { padding: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-3 { padding: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-3\.5 { padding: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-4 { padding: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-5 { padding: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-6 { padding: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-7 { padding: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-8 { padding: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-10 { padding: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-12 { padding: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-16 { padding: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-2\.5 { padding-inline: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-3 { padding-inline: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-3\.5 { padding-inline: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-4 { padding-inline: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-5 { padding-inline: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-6 { padding-inline: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-7 { padding-inline: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-8 { padding-inline: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-10 { padding-inline: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-12 { padding-inline: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-16 { padding-inline: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-2\.5 { padding-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-3 { padding-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-3\.5 { padding-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-4 { padding-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-5 { padding-block: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-6 { padding-block: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-7 { padding-block: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-8 { padding-block: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-10 { padding-block: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-12 { padding-block: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-16 { padding-block: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-2\.5 { padding-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-3 { padding-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-3\.5 { padding-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-4 { padding-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-5 { padding-top: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-6 { padding-top: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-7 { padding-top: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-8 { padding-top: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-10 { padding-top: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-12 { padding-top: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-16 { padding-top: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-2\.5 { padding-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-3 { padding-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-3\.5 { padding-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-4 { padding-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-5 { padding-bottom: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-6 { padding-bottom: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-7 { padding-bottom: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-8 { padding-bottom: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-10 { padding-bottom: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-12 { padding-bottom: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-16 { padding-bottom: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-2\.5 { padding-left: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-3 { padding-left: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-3\.5 { padding-left: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-4 { padding-left: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-5 { padding-left: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-6 { padding-left: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-7 { padding-left: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-8 { padding-left: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-10 { padding-left: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-12 { padding-left: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-16 { padding-left: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-2\.5 { padding-right: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-3 { padding-right: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-3\.5 { padding-right: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-4 { padding-right: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-5 { padding-right: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-6 { padding-right: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-7 { padding-right: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-8 { padding-right: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-10 { padding-right: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-12 { padding-right: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-16 { padding-right: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-3 { margin-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-4 { margin-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-5 { margin-top: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-6 { margin-top: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-8 { margin-top: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-10 { margin-top: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-12 { margin-top: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-16 { margin-top: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-3 { margin-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-4 { margin-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-5 { margin-bottom: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-6 { margin-bottom: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-8 { margin-bottom: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-10 { margin-bottom: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-12 { margin-bottom: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-16 { margin-bottom: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-3 { margin-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-4 { margin-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-5 { margin-block: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-6 { margin-block: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-8 { margin-block: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-10 { margin-block: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-12 { margin-block: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-16 { margin-block: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-2\.5 { gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-3 { gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-3\.5 { gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-4 { gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-5 { gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-6 { gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-8 { gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-10 { gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-12 { gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-2\.5 { column-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-3 { column-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-3\.5 { column-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-4 { column-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-5 { column-gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-6 { column-gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-8 { column-gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-10 { column-gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-12 { column-gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-2\.5 { row-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-3 { row-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-3\.5 { row-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-4 { row-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-5 { row-gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-6 { row-gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-8 { row-gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-10 { row-gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-12 { row-gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-2\.5 > :not(:last-child) { margin-block-end: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-3 > :not(:last-child) { margin-block-end: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-3\.5 > :not(:last-child) { margin-block-end: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-4 > :not(:last-child) { margin-block-end: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-5 > :not(:last-child) { margin-block-end: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-6 > :not(:last-child) { margin-block-end: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-8 > :not(:last-child) { margin-block-end: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-10 > :not(:last-child) { margin-block-end: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-12 > :not(:last-child) { margin-block-end: 26px; }
+}
+@media (min-width: 64rem) {
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-2\.5 { padding: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-3 { padding: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-3\.5 { padding: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-4 { padding: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-5 { padding: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-6 { padding: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-7 { padding: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-8 { padding: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-10 { padding: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-12 { padding: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-16 { padding: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-2\.5 { padding-inline: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-3 { padding-inline: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-3\.5 { padding-inline: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-4 { padding-inline: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-5 { padding-inline: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-6 { padding-inline: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-7 { padding-inline: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-8 { padding-inline: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-10 { padding-inline: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-12 { padding-inline: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-16 { padding-inline: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-2\.5 { padding-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-3 { padding-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-3\.5 { padding-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-4 { padding-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-5 { padding-block: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-6 { padding-block: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-7 { padding-block: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-8 { padding-block: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-10 { padding-block: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-12 { padding-block: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-16 { padding-block: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-2\.5 { padding-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-3 { padding-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-3\.5 { padding-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-4 { padding-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-5 { padding-top: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-6 { padding-top: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-7 { padding-top: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-8 { padding-top: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-10 { padding-top: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-12 { padding-top: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-16 { padding-top: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-2\.5 { padding-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-3 { padding-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-3\.5 { padding-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-4 { padding-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-5 { padding-bottom: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-6 { padding-bottom: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-7 { padding-bottom: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-8 { padding-bottom: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-10 { padding-bottom: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-12 { padding-bottom: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-16 { padding-bottom: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-2\.5 { padding-left: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-3 { padding-left: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-3\.5 { padding-left: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-4 { padding-left: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-5 { padding-left: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-6 { padding-left: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-7 { padding-left: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-8 { padding-left: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-10 { padding-left: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-12 { padding-left: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-16 { padding-left: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-2\.5 { padding-right: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-3 { padding-right: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-3\.5 { padding-right: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-4 { padding-right: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-5 { padding-right: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-6 { padding-right: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-7 { padding-right: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-8 { padding-right: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-10 { padding-right: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-12 { padding-right: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-16 { padding-right: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-3 { margin-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-4 { margin-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-5 { margin-top: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-6 { margin-top: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-8 { margin-top: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-10 { margin-top: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-12 { margin-top: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-16 { margin-top: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-3 { margin-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-4 { margin-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-5 { margin-bottom: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-6 { margin-bottom: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-8 { margin-bottom: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-10 { margin-bottom: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-12 { margin-bottom: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-16 { margin-bottom: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-3 { margin-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-4 { margin-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-5 { margin-block: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-6 { margin-block: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-8 { margin-block: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-10 { margin-block: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-12 { margin-block: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-16 { margin-block: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-2\.5 { gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-3 { gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-3\.5 { gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-4 { gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-5 { gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-6 { gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-8 { gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-10 { gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-12 { gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-2\.5 { column-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-3 { column-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-3\.5 { column-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-4 { column-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-5 { column-gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-6 { column-gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-8 { column-gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-10 { column-gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-12 { column-gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-2\.5 { row-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-3 { row-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-3\.5 { row-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-4 { row-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-5 { row-gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-6 { row-gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-8 { row-gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-10 { row-gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-12 { row-gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-2\.5 > :not(:last-child) { margin-block-end: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-3 > :not(:last-child) { margin-block-end: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-3\.5 > :not(:last-child) { margin-block-end: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-4 > :not(:last-child) { margin-block-end: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-5 > :not(:last-child) { margin-block-end: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-6 > :not(:last-child) { margin-block-end: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-8 > :not(:last-child) { margin-block-end: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-10 > :not(:last-child) { margin-block-end: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-12 > :not(:last-child) { margin-block-end: 26px; }
+}
+@media (min-width: 80rem) {
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-2\.5 { padding: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-3 { padding: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-3\.5 { padding: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-4 { padding: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-5 { padding: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-6 { padding: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-7 { padding: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-8 { padding: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-10 { padding: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-12 { padding: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-16 { padding: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-2\.5 { padding-inline: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-3 { padding-inline: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-3\.5 { padding-inline: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-4 { padding-inline: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-5 { padding-inline: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-6 { padding-inline: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-7 { padding-inline: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-8 { padding-inline: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-10 { padding-inline: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-12 { padding-inline: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-16 { padding-inline: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-2\.5 { padding-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-3 { padding-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-3\.5 { padding-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-4 { padding-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-5 { padding-block: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-6 { padding-block: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-7 { padding-block: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-8 { padding-block: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-10 { padding-block: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-12 { padding-block: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-16 { padding-block: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-2\.5 { padding-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-3 { padding-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-3\.5 { padding-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-4 { padding-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-5 { padding-top: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-6 { padding-top: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-7 { padding-top: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-8 { padding-top: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-10 { padding-top: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-12 { padding-top: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-16 { padding-top: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-2\.5 { padding-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-3 { padding-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-3\.5 { padding-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-4 { padding-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-5 { padding-bottom: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-6 { padding-bottom: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-7 { padding-bottom: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-8 { padding-bottom: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-10 { padding-bottom: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-12 { padding-bottom: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-16 { padding-bottom: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-2\.5 { padding-left: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-3 { padding-left: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-3\.5 { padding-left: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-4 { padding-left: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-5 { padding-left: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-6 { padding-left: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-7 { padding-left: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-8 { padding-left: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-10 { padding-left: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-12 { padding-left: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-16 { padding-left: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-2\.5 { padding-right: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-3 { padding-right: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-3\.5 { padding-right: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-4 { padding-right: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-5 { padding-right: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-6 { padding-right: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-7 { padding-right: 16px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-8 { padding-right: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-10 { padding-right: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-12 { padding-right: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-16 { padding-right: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-3 { margin-top: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-4 { margin-top: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-5 { margin-top: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-6 { margin-top: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-8 { margin-top: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-10 { margin-top: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-12 { margin-top: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-16 { margin-top: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-3 { margin-bottom: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-4 { margin-bottom: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-5 { margin-bottom: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-6 { margin-bottom: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-8 { margin-bottom: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-10 { margin-bottom: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-12 { margin-bottom: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-16 { margin-bottom: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-3 { margin-block: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-4 { margin-block: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-5 { margin-block: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-6 { margin-block: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-8 { margin-block: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-10 { margin-block: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-12 { margin-block: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-16 { margin-block: 32px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-2\.5 { gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-3 { gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-3\.5 { gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-4 { gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-5 { gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-6 { gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-8 { gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-10 { gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-12 { gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-2\.5 { column-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-3 { column-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-3\.5 { column-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-4 { column-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-5 { column-gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-6 { column-gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-8 { column-gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-10 { column-gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-12 { column-gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-2\.5 { row-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-3 { row-gap: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-3\.5 { row-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-4 { row-gap: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-5 { row-gap: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-6 { row-gap: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-8 { row-gap: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-10 { row-gap: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-12 { row-gap: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-2\.5 > :not(:last-child) { margin-block-end: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-3 > :not(:last-child) { margin-block-end: 8px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-3\.5 > :not(:last-child) { margin-block-end: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-4 > :not(:last-child) { margin-block-end: 10px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-5 > :not(:last-child) { margin-block-end: 12px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-6 > :not(:last-child) { margin-block-end: 14px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-8 > :not(:last-child) { margin-block-end: 18px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-10 > :not(:last-child) { margin-block-end: 22px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-12 > :not(:last-child) { margin-block-end: 26px; }
+}
+
+/* v6 · Çıkmış hizalama: bilgi (ⓘ) ve itiraz düğmeleri tek sağ sütunda, ilk satırla ortalı */
+html.ui-v3 .cx-opt-li { align-items: flex-start; }
+html.ui-v3 .cx-opt-info { position: absolute; right: 0; top: 3px; transform: none; display: inline-flex; }
+html.ui-v3 .cx-objection { right: 0; top: 2px; transform: none; }
+html.ui-v3 .cx-opt-li:has(> .cx-opt-info) > .cx-objection { right: 30px; }
+html.ui-v3 .cx-opt { padding-right: 34px; }
+html.ui-v3 .cx-opt-li:has(> .cx-opt-info) > .cx-opt { padding-right: 64px; }
+html.ui-v3 :is(.cx-opt-info, .cx-q > .flex.items-start > span.relative) button { width: 28px; height: 28px; border-radius: 8px; }
+/* Kökteki ⓘ: 24px satır yüksekliğinin ortasına */
+html.ui-v3 .cx-q > .flex.items-start { gap: 6px; }
+html.ui-v3 .cx-q > .flex.items-start > span.relative { margin-top: -2px; }
+@media (hover: none) {
+  html.ui-v3 .cx-opt { padding-right: 0; }
+  html.ui-v3 .cx-opt-li:has(> .cx-opt-info) > .cx-opt { padding-right: 34px; }
+}
+@media (max-width: 639px) {
+  html.ui-v3 .cx-opt-info { top: 5px; }
+  html.ui-v3 .cx-objection { top: 4px; }
+}
+/* Anket kabarcıkları normal şıklarla aynı boyda (22px) */
+html.ui-v3 .cx-q .ms-poll-row { grid-template-columns: 22px minmax(0, 1fr) auto; gap: 10px; padding: 7px 0 8px; align-items: center; }
+html.ui-v3 .cx-q .ms-poll-key { width: 22px; height: 22px; font-size: 11px; }
+html.ui-v3 .cx-q .ms-poll-key svg { width: 12px; height: 12px; }
+html.ui-v3 .cx-q .ms-poll-meta { display: inline-flex; align-items: center; gap: 6px; }
+html.ui-v3 .cx-q :is(.ms-poll-tag, .ms-poll-pct) { line-height: 20px; }
+/* Başlık şeridi: numara, künye, bayraklar ve araçlar tek eksende */
+html.ui-v3 .cx-q-flags, html.ui-v3 .cx-ver { align-self: center; }
+html.ui-v3 .cx-flag svg { flex-shrink: 0; }
+html.ui-v3 .cx-q-foot .cx-act svg { flex-shrink: 0; }
+
+/* =============================================================
+ * v6 · Ortak sayfa parçaları (ds-*) — Kartlar, Sözlük, Sıralama ve
+ * yeniden yazılan diğer ekranlar. Tasarım sistemi: PageHeader, Tabs,
+ * SearchField, ListRow, Sheet, Callout.
+ * ============================================================= */
+.ds-page { display: flex; flex-direction: column; gap: 10px; min-width: 0; width: 100%; padding-bottom: 24px; }
+.ds-section { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.ds-grow { flex: 1 1 auto; }
+.ds-count { flex-shrink: 0; font-family: var(--font-mono); font-size: 11.5px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; padding-right: 8px; }
+.ds-label { font-size: 11px; line-height: 14px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
+.ds-n { font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: inherit; opacity: .75; }
+
+/* Araç satırı: aynı yükseklikte kontroller, taşarsa alt satıra sarar */
+.ds-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; min-width: 0; }
+.ds-toolbar > * { min-width: 0; }
+
+/* Segment (Apple) */
+.ds-seg { display: inline-flex; gap: 2px; padding: 2px; border-radius: 10px; background: var(--color-field); max-width: 100%; overflow-x: auto; scrollbar-width: none; flex-shrink: 0; }
+.ds-seg::-webkit-scrollbar { display: none; }
+.ds-seg > button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: calc(var(--ms-ctl) - 4px); padding: 0 10px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-2); font: inherit; font-size: 13px; font-weight: 600; white-space: nowrap; cursor: pointer; transition: background-color .18s var(--ease-out-soft), color .12s, box-shadow .18s; }
+.ds-seg > button:hover { color: var(--color-ink); }
+.ds-seg > button svg { width: 15px; height: 15px; }
+.ds-seg > button small { font-family: var(--font-mono); font-size: 11px; color: var(--color-ink-3); font-weight: 500; }
+.ds-seg > button:is([aria-checked="true"], [aria-pressed="true"], [aria-selected="true"], .is-on) { background: var(--color-white); color: var(--color-ink); box-shadow: var(--shadow-xs), 0 0 0 1px var(--color-line); }
+.ds-seg.is-compact > button { min-width: 40px; padding: 0 8px; font-family: var(--font-mono); font-size: 12px; }
+
+/* Seçim kutusu: etiket + değer tek kontrolde */
+.ds-select { position: relative; display: inline-flex; align-items: center; gap: 6px; height: var(--ms-ctl); padding: 0 8px 0 10px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); max-width: 100%; transition: border-color .12s, box-shadow .12s; }
+.ds-select:hover { border-color: var(--color-line-2); }
+.ds-select:focus-within { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+.ds-select > span { flex-shrink: 0; font-size: 12px; font-weight: 600; color: var(--color-ink-3); }
+.ds-select select { min-width: 0; max-width: 240px; height: 100%; padding: 0 18px 0 0; margin-right: -18px; border: 0; outline: 0; background: transparent; color: var(--color-ink); font: inherit; font-size: 13px; font-weight: 600; text-overflow: ellipsis; cursor: pointer; -webkit-appearance: none; appearance: none; }
+.ds-select.is-wide select { max-width: 360px; }
+.ds-select > svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--color-ink-3); pointer-events: none; }
+@media (max-width: 639px) { .ds-select { flex: 1 1 140px; } .ds-select select { max-width: none; flex: 1; font-size: 16px; } }
+
+/* Panel: kılçizgili yüzey */
+.ds-panel { display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 12px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); }
+.ds-panel.is-flush { padding: 0; gap: 0; overflow: hidden; }
+.ds-panel-search { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 4px 0 12px; border-bottom: 1px solid var(--color-line-soft); }
+.ds-panel-search > svg { width: 15px; height: 15px; color: var(--color-ink-3); flex-shrink: 0; }
+.ds-panel-search input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--color-ink); font: inherit; font-size: 14px; }
+.ds-panel-search input::placeholder { color: var(--color-ink-3); }
+
+/* Sekme rayı + sağda eylem */
+.ds-tabrail { display: flex; align-items: flex-end; gap: 8px; min-width: 0; border-bottom: 1px solid var(--color-line); }
+.ds-tabrail > .cx-tabs { flex: 1; min-width: 0; border-bottom: 0; margin: 0; }
+.ds-tabrail > .ms-btn { margin-bottom: 4px; }
+
+/* Satır listesi (ListRow) */
+.ds-list { list-style: none; margin: 0; padding: 0; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); overflow: hidden; }
+.ds-list > li + li { border-top: 1px solid var(--color-line-soft); }
+.ds-row { width: 100%; display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 12px; border: 0; background: transparent; color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; transition: background-color .12s; }
+.ds-row:hover { background: var(--color-field); }
+.ds-row.is-open { background: var(--color-accent-soft); }
+.ds-row-t { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.ds-row-t > b { display: flex; align-items: center; gap: 6px; min-width: 0; font-size: 14px; line-height: 19px; font-weight: 600; color: var(--color-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ds-row-t > span { font-size: 12.5px; line-height: 18px; color: var(--color-ink-3); }
+.ds-row.is-open .ds-row-t > span { color: var(--color-ink-2); }
+.ds-row-chev { width: 15px; height: 15px; flex-shrink: 0; color: var(--color-ink-3); transition: transform .18s var(--ease-out-soft); }
+.ds-row-chev.is-open { transform: rotate(180deg); }
+.ds-more { align-self: center; }
+@media (min-width: 900px) {
+  .ds-list.is-cols { display: grid; grid-template-columns: 1fr 1fr; }
+}
+
+/* Boş durum */
+.ds-empty { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 20px 16px; color: var(--color-ink-3); font-size: 12.5px; }
+.ds-empty > b { margin-top: 2px; font-size: 14px; font-weight: 650; color: var(--color-ink); }
+.ds-empty > .ms-btn { margin-top: 6px; }
+.ds-empty.is-panel { border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); }
+
+/* Sonuç satırı */
+.ds-resultbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 24px; font-size: 12.5px; color: var(--color-ink-3); }
+.ds-resultbar b { font-family: var(--font-mono); font-weight: 600; color: var(--color-ink); }
+
+/* Süzgeç bloğu (Sözlük) */
+.ds-filters { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.ds-filters > .cx-tabs { margin-top: 0; }
+.ds-alpha { display: flex; gap: 1px; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 20px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 20px), transparent); }
+.ds-alpha::-webkit-scrollbar { display: none; }
+.ds-alpha > button { flex-shrink: 0; min-width: 24px; height: 24px; padding: 0 4px; border: 0; border-radius: 6px; background: transparent; color: var(--color-ink-3); font-family: var(--font-mono); font-size: 11.5px; font-weight: 600; cursor: pointer; transition: background-color .12s, color .12s; }
+.ds-alpha > button.is-all { padding: 0 8px; font-family: var(--font-sans); font-size: 12px; }
+.ds-alpha > button:hover { background: var(--color-field); color: var(--color-ink); }
+.ds-alpha > button[aria-pressed="true"] { background: var(--color-ink); color: var(--color-white); }
+
+/* Kart ızgarası (Sözlük maddeleri) */
+.ds-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+.ds-card { display: flex; flex-direction: column; gap: 2px; min-width: 0; padding: 10px 12px 12px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); transition: border-color .12s, background-color .12s; animation: ms-clinic-in .26s var(--ease-out-soft) both; }
+.ds-card.is-link { cursor: pointer; }
+.ds-card.is-link:hover { border-color: var(--color-line-2); }
+.ds-card.is-link:hover .ds-card-title { color: var(--color-accent); }
+.ds-card-meta { display: flex; align-items: center; gap: 6px; min-width: 0; height: 26px; margin: -2px -4px 2px 0; font-size: 11.5px; font-weight: 500; color: var(--color-ink-3); }
+.ds-dot { width: 6px; height: 6px; border-radius: 99px; flex-shrink: 0; }
+.ds-ok { width: 13px; height: 13px; color: var(--color-ok); flex-shrink: 0; }
+.ds-card-title { margin: 0; font-size: 15px; line-height: 20px; font-weight: 650; color: var(--color-ink); transition: color .12s; }
+.ds-card-sub { margin: 0; font-size: 12px; line-height: 16px; font-style: italic; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ds-card-body { margin: 4px 0 0; font-size: 13px; line-height: 19px; color: var(--color-ink-2); }
+
+/* Favori / yer imi düğmesi */
+.ms-btn.is-fav { background: var(--color-warn-soft); color: var(--color-warn); }
+
+/* Vurgu kutusu (Callout) — sol şerit yok */
+.ds-callout { display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border-radius: 10px; background: var(--color-field); color: var(--color-ink); font-size: 13.5px; line-height: 1.55; }
+.ds-callout > b, .ds-callout-t { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; line-height: 14px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-2); }
+.ds-callout-t svg { width: 14px; height: 14px; flex-shrink: 0; }
+.ds-callout-t + span { font-size: 12px; color: var(--color-ink-3); }
+.ds-callout.is-note { background: var(--color-accent-soft); }
+.ds-callout.is-note :is(> b, .ds-callout-t) { color: var(--color-accent); }
+.ds-callout.is-important { background: var(--color-warn-soft); }
+.ds-callout.is-important :is(> b, .ds-callout-t) { color: var(--color-warn); }
+.ds-callout.is-bad { background: var(--color-bad-soft); }
+.ds-callout.is-bad :is(> b, .ds-callout-t) { color: var(--color-bad-text); }
+.ds-callout.is-clinic { background: var(--color-clinic-soft); }
+.ds-callout.is-clinic :is(> b, .ds-callout-t) { color: var(--color-clinic); }
+
+/* Pencere kabuğu (Sheet) */
+.ds-modal-wrap { background: var(--color-scrim, rgb(14 23 38 / .36)); animation: ms-fade-kf .18s ease both; }
+html.theme-dark .ds-modal-wrap { background: rgb(0 0 0 / .56); }
+.ds-modal { background: var(--color-white); border-radius: 16px 16px 0 0; box-shadow: var(--shadow-xl); animation: ds-sheet-up .26s var(--ease-out-soft) both; }
+@media (min-width: 640px) { .ds-modal { border-radius: 16px; animation-name: ds-pop; } }
+.ds-modal-head { display: flex; align-items: flex-start; gap: 8px; padding: 12px 8px 10px 16px; border-bottom: 1px solid var(--color-line-soft); }
+.ds-modal-head > div:first-child { min-width: 0; flex: 1; }
+.ds-modal-head > div:first-child > div:first-child { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+.ds-modal-body { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 12px 16px 16px; display: flex; flex-direction: column; gap: 10px; }
+.ds-modal-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 12px max(8px, env(safe-area-inset-bottom)) 16px; border-top: 1px solid var(--color-line-soft); }
+.ds-modal-note { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--color-ink-3); }
+.ds-modal-note svg { width: 14px; height: 14px; color: var(--color-ai); flex-shrink: 0; }
+.ds-modal-note strong { color: var(--color-ink); font-weight: 600; }
+@keyframes ms-fade-kf { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ds-sheet-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes ds-pop { from { opacity: 0; transform: translateY(6px) scale(.985); } to { opacity: 1; transform: none; } }
+
+/* ---------- Kartlar ---------- */
+.ds-meter { display: flex; height: 4px; border-radius: 99px; background: var(--color-line-soft); overflow: hidden; }
+.ds-meter > span { height: 100%; transition: width .4s var(--ease-out-soft); }
+.ds-legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--color-ink-3); }
+.ds-legend > span { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.ds-legend i { width: 7px; height: 7px; border-radius: 99px; }
+.ds-legend b { font-family: var(--font-mono); font-weight: 600; color: var(--color-ink); font-variant-numeric: tabular-nums; }
+.ds-fc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+@media (max-width: 639px) {
+  .ds-fc-row > .ms-btn.is-primary { flex: 1 1 100%; height: 44px; font-size: 14px; }
+  .ds-fc-row > .ds-grow { display: none; }
+}
+.ds-fc-done { max-width: 440px; width: 100%; margin: 24px auto; align-items: center; text-align: center; padding: 20px; gap: 6px; }
+.ds-fc-done > .grid { margin-top: 4px; }
+.ds-fc-done > .flex { margin-top: 8px; }
+.ds-fc-session { width: 100%; max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; min-height: calc(100dvh - 180px); }
+.ds-flip-face { padding: 16px 18px; border-radius: 16px; border: 1px solid var(--color-line); background: var(--color-white); box-shadow: var(--shadow-md); }
+.ds-flip-face.is-back { border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-line)); }
+.ds-flip-face .ds-callout { font-size: 13.5px; }
+.ds-grade { height: 48px; border: 0; border-radius: 12px; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; font: inherit; font-size: 14.5px; font-weight: 650; cursor: pointer; transition: background-color .12s, transform .08s; }
+.ds-grade:active { transform: scale(.97); }
+.ds-grade > span:first-child { display: inline-flex; align-items: center; gap: 6px; }
+.ds-grade svg { width: 15px; height: 15px; }
+.ds-grade .font-mono { font-size: 10.5px; opacity: .7; }
+.ds-grade.is-again { background: var(--color-bad-soft); color: var(--color-bad-text); }
+.ds-grade.is-hard { background: var(--color-warn-soft); color: var(--color-warn); }
+.ds-grade.is-good { background: var(--color-ok); color: var(--color-white); }
+.ds-grade.is-reveal { width: 100%; background: var(--color-ink); color: var(--color-white); }
+.ds-grade:hover { filter: brightness(.97); }
+
+/* ---------- Sıralama ---------- */
+.ds-avatar { position: relative; flex-shrink: 0; width: 32px; height: 32px; border-radius: 99px; display: inline-grid; place-items: center; background: var(--color-field); color: var(--color-ink-2); font-size: 12px; font-weight: 650; letter-spacing: .02em; }
+.ds-avatar.is-lg { width: 44px; height: 44px; font-size: 15px; }
+.ds-avatar > i { position: absolute; right: -3px; bottom: -3px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 99px; border: 2px solid var(--color-white); background: var(--color-ink); color: var(--color-white); font-style: normal; font-family: var(--font-mono); font-size: 10px; font-weight: 700; display: grid; place-items: center; }
+.ds-podium { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.ds-podium > li { display: flex; align-items: center; gap: 10px; min-width: 0; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); animation: ms-clinic-in .26s var(--ease-out-soft) both; }
+.ds-podium > li:nth-child(2) { animation-delay: .04s; } .ds-podium > li:nth-child(3) { animation-delay: .08s; }
+.ds-podium > li.is-first .ds-avatar { background: var(--color-accent-soft); color: var(--color-accent); }
+.ds-podium > li.is-first .ds-avatar > i { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+.ds-podium > li.is-me { border-color: var(--color-accent); }
+.ds-podium-t { min-width: 0; display: flex; flex-direction: column; }
+.ds-podium-t b { font-size: 13.5px; font-weight: 650; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ds-podium-t span { font-family: var(--font-mono); font-size: 12px; color: var(--color-ink-3); }
+@media (max-width: 639px) {
+  .ds-podium > li { flex-direction: column; text-align: center; gap: 6px; padding: 10px 6px; }
+  .ds-podium-t { align-items: center; max-width: 100%; }
+}
+.ds-me { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border-radius: 12px; background: var(--color-accent-soft); color: var(--color-ink); }
+.ds-me-rank { min-width: 36px; font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -.02em; color: var(--color-accent); }
+.ds-me .ds-row-t > span { font-size: 11.5px; color: var(--color-ink-2); }
+.ds-me-pts { display: flex; align-items: baseline; gap: 4px; font-family: var(--font-mono); font-size: 17px; font-weight: 650; }
+.ds-me-pts small { font-family: var(--font-sans); font-size: 11.5px; font-weight: 500; color: var(--color-ink-2); }
+.ds-rank-list { list-style: none; margin: 0; padding: 0; }
+.ds-rank-list > li { display: grid; grid-template-columns: 24px 32px minmax(0, 1fr) minmax(48px, 160px) 44px; align-items: center; gap: 10px; min-height: 52px; padding: 6px 12px; border-top: 1px solid var(--color-line-soft); animation: ms-clinic-in .26s var(--ease-out-soft) both; }
+.ds-rank-list > li:first-child { border-top: 0; }
+.ds-rank-list > li.is-me { background: var(--color-accent-soft); }
+.ds-rank { font-family: var(--font-mono); font-size: 12.5px; font-weight: 600; color: var(--color-ink-3); text-align: center; }
+.ds-rank.is-top { color: var(--color-ink); font-weight: 700; }
+.ds-bar { height: 4px; border-radius: 99px; background: var(--color-line-soft); overflow: hidden; }
+.ds-bar > i { display: block; height: 100%; border-radius: inherit; background: var(--color-accent); transition: width .5s var(--ease-out-soft); }
+.ds-pts { font-family: var(--font-mono); font-size: 14px; font-weight: 650; text-align: right; font-variant-numeric: tabular-nums; }
+@media (max-width: 639px) {
+  .ds-rank-list > li { grid-template-columns: 22px 30px minmax(0, 1fr) 40px; }
+  .ds-rank-list .ds-bar { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .ds-card, .ds-podium > li, .ds-rank-list > li, .ds-modal, .ds-modal-wrap { animation: none; } }
+
+/* =============================================================
+ * v6 · Öğren (ls-*) — klinik kitapçık dili
+ * Şıklar optik form (kabarcık + ince satır), kartlarda sol şerit yok,
+ * adım çubuğu Apple segmenti, gezinme 8px köşe; yoğunluk kompakt,
+ * okuma metni 15px/1.7 korunur.
+ * ============================================================= */
+html.ui-v3 .ls-top { min-height: 48px; padding-block: 4px; }
+html.ui-v3 .ls-deck b { font-size: 14px; }
+html.ui-v3 .ls-deck small { font-size: 11.5px; }
+html.ui-v3 .ls-btn { height: var(--ms-ctl); border-radius: 8px; font-size: 13px; }
+html.ui-v3 .ls-btn.is-icon { width: var(--ms-ctl); }
+html.ui-v3 .ls-btn > svg { width: 16px; height: 16px; }
+html.ui-v3 .ls-btn.is-primary { color: var(--color-on-accent); }
+html.ui-v3 .ls-tag { height: 20px; padding: 0 7px; border-radius: 6px; font-size: 11px; }
+html.ui-v3 .ls-search { height: 34px; border-radius: 8px; background: var(--color-white); border: 1px solid var(--color-line); }
+html.ui-v3 .ls-search:focus-within { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+html.ui-v3 .ls-ol-item { padding-block: 5px; border-radius: 0 8px 8px 0; font-size: 12.5px; }
+html.ui-v3 .ls-ol-head { padding: 6px 8px; border-radius: 8px; }
+html.ui-v3 .ls-ol-head .nm span { font-size: 13px; }
+
+/* Başlık: süs çizgisi yok, ölçek kısık */
+html.ui-v3 .ls-title { font-size: clamp(20px, 2vw, 26px); line-height: 1.18; letter-spacing: -.02em; }
+html.ui-v3 .ls-title::after { display: none; }
+html.ui-v3 .ls-sub { font-size: 14px; color: var(--color-ink-3); }
+html.ui-v3 .ls-head { gap: 4px; }
+html.ui-v3 .ls-content { gap: 14px; }
+html.ui-v3 .ls-prose { font-size: 15px; line-height: 1.7; }
+html.ui-v3 .ls-prose > ul > li::before { border-radius: 99px; width: 5px; height: 5px; background: var(--color-ink-3); }
+html.ui-v3 .ls-prose mark { border-radius: 3px; }
+
+/* Not kutuları: sol şerit yerine ton */
+html.ui-v3 .ls-note { margin: 4px 0 10px; padding: 9px 12px; border: 0; border-radius: 10px; background: var(--color-field); color: var(--color-ink); font-size: 14px; line-height: 1.6; }
+html.ui-v3 .ls-note::before { display: none; }
+html.ui-v3 .ls-note.is-accent { background: var(--color-accent-soft); }
+html.ui-v3 .ls-note.is-warn { background: var(--color-warn-soft); }
+html.ui-v3 .ls-note.is-bad { background: var(--color-bad-soft); }
+html.ui-v3 .ls-note.is-ok { background: var(--color-ok-soft); }
+html.ui-v3 .ls-note-k { font-size: 10.5px; }
+
+/* Kavram kartları: düz yüzey, anahtar kart yalnız çerçeveyle ayrışır */
+html.ui-v3 .ls-keys { gap: 6px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+html.ui-v3 .ls-keys li { padding: 10px 12px; border-radius: 10px; background: var(--color-field); box-shadow: none; }
+html.ui-v3 .ls-keys li.is-key { background: var(--color-white); box-shadow: inset 0 0 0 1px var(--color-line-2); }
+html.ui-v3 .ls-keys-t { font-size: 13.5px; }
+html.ui-v3 .ls-keys p { font-size: 13px; line-height: 1.5; }
+
+/* Tablolar */
+html.ui-v3 .ls-table { border-radius: 12px; }
+html.ui-v3 .ls-table figcaption { padding: 8px 12px; font-size: 12.5px; background: var(--color-white); border-bottom: 1px solid var(--color-line); }
+html.ui-v3 .ls-table th { padding: 7px 10px; font-size: 10.5px; background: var(--color-field); }
+html.ui-v3 .ls-table td { padding: 8px 10px; font-size: 13px; }
+
+/* Etkileşim kartı */
+html.ui-v3 .ls-ix { border-radius: 12px; }
+html.ui-v3 .ls-ix-head { padding: 10px 12px 0; }
+html.ui-v3 .ls-ix-label { font-size: 10.5px; }
+html.ui-v3 .ls-ix-body { padding: 8px 12px 12px; gap: 8px; }
+html.ui-v3 .ls-ix-q { font-size: 15px; line-height: 1.55; }
+html.ui-v3 .ls-sec-h { font-size: 11px; }
+
+/* Şıklar: optik form */
+html.ui-v3 .ls-opts { gap: 0; }
+html.ui-v3 .ls-opts > li + li { border-top: 1px solid var(--color-line-soft); }
+html.ui-v3 :is(.ls-opt, .ls-optcard) { background: transparent; border-radius: 8px; }
+html.ui-v3 .ls-opt { gap: 10px; padding: 8px 6px; border: 0; font-size: 14px; line-height: 1.45; }
+html.ui-v3 .ls-opt:hover:not(:disabled) { background: var(--color-field); border: 0; }
+html.ui-v3 .ls-opt .k { width: 22px; height: 22px; border-radius: 99px; background: transparent; border: 1.5px solid var(--color-line-2); font-size: 11px; transition: background-color .2s, border-color .2s, color .2s; }
+html.ui-v3 .ls-opt:hover:not(:disabled) .k { border-color: var(--color-ink); color: var(--color-ink); }
+html.ui-v3 :is(.ls-opt.is-right, .ls-optcard.is-right) { background: transparent; }
+html.ui-v3 :is(.ls-opt.is-right, .ls-optcard.is-right) .k { background: var(--color-ok); border-color: var(--color-ok); color: var(--color-white); animation: cx-fill .32s var(--ease-out-soft); }
+html.ui-v3 :is(.ls-opt.is-right, .ls-optcard.is-right) .ls-opt > span:not(.k), html.ui-v3 .ls-opt.is-right > span:not(.k) { color: var(--color-ok); font-weight: 600; }
+html.ui-v3 :is(.ls-opt.is-wrong, .ls-optcard.is-wrong) { background: transparent; animation: none; }
+html.ui-v3 :is(.ls-opt.is-wrong, .ls-optcard.is-wrong) .k { background: var(--color-bad); border-color: var(--color-bad); color: var(--color-white); }
+html.ui-v3 .ls-optcard.is-wrong.is-first > .ls-opt { animation: none; }
+html.ui-v3 .ls-optcard.is-first, html.ui-v3 .ls-optcard.is-first.is-right, html.ui-v3 .ls-optcard.is-first.is-wrong { box-shadow: none; }
+html.ui-v3 .ls-optcard.is-first.is-right { background: var(--color-ok-soft); }
+html.ui-v3 .ls-optcard.is-first.is-wrong { background: var(--color-bad-soft); }
+html.ui-v3 .ls-optcard.is-idle { opacity: .7; }
+html.ui-v3 .ls-opt-why { margin: 2px 0 6px 32px; padding: 8px 10px; border-left: 0; border-radius: 8px; font-size: 13px; }
+
+/* Mekanizma zinciri: numara kabarcığı ve ince ray */
+html.ui-v3 .ls-chain .n { width: 22px; height: 22px; font-size: 11px; color: var(--color-on-accent); }
+html.ui-v3 .ls-chain li:not(:last-child)::after { left: 10px; top: 22px; width: 1.5px; }
+html.ui-v3 .ls-chain li { gap: 10px; padding-bottom: 10px; }
+html.ui-v3 .ls-chain .t { font-size: 13.5px; padding-top: 1px; }
+
+/* Pekiştir adım çubuğu: segment + ilerleme çizgisi */
+html.ui-v3 .ls-psteps { gap: 2px; padding: 2px 2px 8px; }
+html.ui-v3 .ls-pstep { height: 30px; min-width: 30px; padding: 0 8px; border-radius: 8px; background: transparent; font-size: 12.5px; }
+html.ui-v3 .ls-pstep:hover { background: var(--color-field); }
+html.ui-v3 .ls-pstep.is-done { background: transparent; color: var(--color-ok); }
+html.ui-v3 .ls-pstep.is-on { background: var(--color-accent-soft); color: var(--color-accent); padding-right: 10px; }
+html.ui-v3 .ls-pstep > svg { width: 15px; height: 15px; }
+
+/* Adım gezinmesi */
+html.ui-v3 .ls-flownav { gap: 10px; padding-top: 10px; }
+html.ui-v3 .ls-flownav > .ls-btn.is-icon { border-radius: 8px; }
+html.ui-v3 .ls-stepdots button { width: 6px; height: 6px; }
+html.ui-v3 .ls-stepdots button.is-on { width: 18px; }
+html.ui-v3 .ls-next { height: 40px; padding: 0 6px 0 12px; border-radius: 10px; color: var(--color-on-accent); }
+html.ui-v3 .ls-next:hover { transform: none; }
+html.ui-v3 .ls-next > svg { width: 26px; height: 26px; padding: 5px; border-radius: 7px; }
+html.ui-v3 .ls-next .lbl { font-size: 13px; }
+
+/* Alt bilgi çekmecesi */
+html.ui-v3 .ls-dock { padding-bottom: max(10px, env(safe-area-inset-bottom, 0px)); }
+html.ui-v3 .ls-dock-in { border-radius: 12px; box-shadow: var(--shadow-md); }
+html.ui-v3 .ls-dock-bar { padding: 4px; gap: 2px; }
+html.ui-v3 .ls-dock-tab { height: 30px; padding: 0 8px; border-radius: 8px; font-size: 12.5px; }
+html.ui-v3 .ls-tools-pop { border-radius: 12px; box-shadow: var(--shadow-md); }
+html.ui-v3 .ls-tools-item { border-radius: 8px; padding: 6px 8px; font-size: 13px; }
+
+/* Diğer modeller: köşe ve dolgu dili */
+html.ui-v3 :is(.ls-stl-item, .ls-swipe-card, .ls-bid-choice, .ls-vg-row, .ls-pole, .ls-reslist li) { border-radius: 10px; }
+html.ui-v3 :is(.ls-swipe-btn, .ls-stl-btn, .ls-vg-seg button, .ls-pnext) { border-radius: 8px; }
+html.ui-v3 :is(.ls-stl-why, .ls-vg-why, .ls-res-why) { border-left: 0 !important; border-radius: 8px; }
+
+/* =============================================================
+ * v6 · Pencereler, diyaloglar, çekmeceler ve filtre panelleri
+ * Tek kabuk: 16px köşe (telefonda alttan panel), 44px başlık şeridi,
+ * kendi içinde kayan gövde, sağa yaslı eylem şeridi; gölge tek kademe.
+ * ============================================================= */
+html.ui-v3 .ms-overlay { background-color: rgb(14 23 38 / .36) !important; }
+html.ui-v3.theme-dark .ms-overlay { background-color: rgb(0 0 0 / .56) !important; }
+@media (min-width: 640px) {
+  html.ui-v3 .ms-overlay > div:not(.ms-keep-shell) { border-radius: 16px !important; }
+  html.ui-v3 .ms-overlay > div:not(.ms-keep-shell):not(.ds-modal) { animation: ds-pop .2s var(--ease-out-soft) both; }
+}
+@media (max-width: 639px) {
+  html.ui-v3 .ms-overlay > div:not(.ms-keep-shell) { border-radius: 16px 16px 0 0 !important; }
+}
+html.ui-v3 .ms-overlay > div:not(.ms-keep-shell) { box-shadow: var(--shadow-xl) !important; }
+/* Pencere içi yüzeyler: düz, kılçizgili, kompakt */
+html.ui-v3 :is(.ms-overlay, [role="dialog"], .ms-drawer) :is(.rounded-2xl, .rounded-3xl):not(.ms-overlay > div) { border-radius: 12px; }
+html.ui-v3 :is(.ms-overlay, [role="dialog"], .ms-drawer) .rounded-xl { border-radius: 10px; }
+html.ui-v3 :is(.ms-overlay, [role="dialog"], .ms-drawer) :is(.shadow-sm, .shadow, .shadow-md, .shadow-lg, .shadow-xs, .shadow-2xs) { box-shadow: none; }
+html.ui-v3 :is(.ms-overlay, [role="dialog"]) [class*="bg-gradient-to"]:not(:first-child) { background-image: none !important; background-color: var(--color-field) !important; }
+html.ui-v3 :is(.ms-overlay, [role="dialog"], .ms-drawer) :is(button, a).rounded-full:not([class*="w-"]):not(.ms-tag) { border-radius: 8px; }
+html.ui-v3 :is(.ms-overlay, [role="dialog"], .ms-drawer) :is(button, a):is(.h-11, .h-12, .h-14):not(.ms-keep-size) { height: calc(var(--ms-ctl) + 4px); }
+html.ui-v3 :is(.ms-overlay, [role="dialog"], .ms-drawer) :is(button, a).h-10:not(.ms-keep-size):not([class*="w-10"]) { height: var(--ms-ctl); }
+html.ui-v3 :is(.ms-overlay, [role="dialog"], .ms-drawer) :is(input, select):is(.h-11, .h-12) { height: calc(var(--ms-ctl) + 4px); }
+html.ui-v3 :is(.ms-overlay, [role="dialog"], .ms-drawer) :is(input:not([type="checkbox"]):not([type="radio"]), select, textarea):is(.rounded-xl, .rounded-2xl, .rounded-lg) { border-radius: 8px; }
+html.ui-v3 :is(.ms-overlay, [role="dialog"], .ms-drawer) :is(input:not([type="checkbox"]):not([type="radio"]):not(.bg-transparent), textarea:not(.bg-transparent), select):focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); outline: 0; }
+html.ui-v3 :is(.ms-overlay, [role="dialog"]) :is(h2, h3).font-display { letter-spacing: -.015em; }
+html.ui-v3 :is(.ms-overlay, [role="dialog"]) :is(h2, h3):is(.text-xl, .text-2xl, .text-\[20px\], .text-\[22px\], .text-\[24px\]) { font-size: 17px; line-height: 1.3; }
+
+/* Ortak Dialog bileşeni */
+html.ui-v3 .ms-modal-panel > header { padding: 12px 10px 10px 16px; gap: 8px; }
+html.ui-v3 .ms-modal-panel > header h2 { font-size: 16px; font-weight: 650; }
+html.ui-v3 .ms-modal-panel > header .ms-btn.is-icon { margin: -4px -2px 0 0; }
+html.ui-v3 .ms-modal-panel > div.overflow-y-auto { padding: 12px 16px 16px; gap: 12px; }
+html.ui-v3 .ms-modal-panel > footer { padding: 8px 12px 10px 16px; gap: 6px; }
+html.ui-v3 .ms-overlay.is-closing > * { animation: ds-out .19s ease both !important; }
+@keyframes ds-out { to { opacity: 0; transform: translateY(8px) scale(.99); } }
+
+/* Yan çekmece (filtre / ayrıntı) */
+html.ui-v3 .ms-drawer-scrim { background: rgb(14 23 38 / .36); }
+html.ui-v3 .ms-drawer { width: min(380px, 100vw); box-shadow: var(--shadow-xl); }
+html.ui-v3 .ms-drawer-head { height: 48px; padding: 0 8px 0 16px; }
+html.ui-v3 .ms-drawer-title { font-size: 16px; font-weight: 650; letter-spacing: -.01em; }
+html.ui-v3 .ms-drawer-body { padding: 12px 16px 16px; gap: 14px; }
+html.ui-v3 .ms-drawer-foot { padding: 8px 12px max(10px, env(safe-area-inset-bottom)); gap: 6px; }
+html.ui-v3 .ms-drawer-foot .ms-btn { height: calc(var(--ms-ctl) + 4px); }
+@media (max-width: 639px) { html.ui-v3 .ms-drawer { border-radius: 16px 16px 0 0; } }
+
+/* Filtre paneli ve yönlü seçimler */
+html.ui-v3 .ms-filter-panel { border-radius: 16px 16px 0 0; }
+@media (min-width: 640px) { html.ui-v3 .ms-filter-panel { border-radius: 16px; max-width: 520px; } }
+html.ui-v3 .ms-filter-body { padding: 4px 16px 14px; gap: 12px; }
+html.ui-v3 :is(.ms-facet-head, .ms-f-label, .ms-f-select > span) { font-size: 11px; line-height: 14px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
+html.ui-v3 .ms-facet { gap: 6px; }
+html.ui-v3 .ms-facet-head button { font-size: 12px; letter-spacing: 0; text-transform: none; }
+html.ui-v3 .ms-facet-list { gap: 4px; }
+html.ui-v3 .ms-fchip { height: 28px; padding: 0 9px; border-radius: 8px; font-size: 12.5px; gap: 5px; border-color: var(--color-line); background: var(--color-white); }
+html.ui-v3 .ms-fchip:hover { border-color: var(--color-line-2); background: var(--color-field); }
+html.ui-v3 .ms-fchip.is-on { background: var(--color-accent-soft); color: var(--color-accent); border-color: color-mix(in srgb, var(--color-accent) 35%, transparent); }
+html.ui-v3 .ms-fchip .n { font-family: var(--font-mono); font-size: 10.5px; }
+html.ui-v3 .ms-chipbar.is-wrap > .ms-chip, html.ui-v3 .ms-chip { height: 30px; padding: 0 10px; border-radius: 8px; font-size: 13px; }
+html.ui-v3 .ms-chip.is-on { background: var(--color-ink); }
+html.ui-v3 .ms-chip-count { font-family: var(--font-mono); font-size: 11px; }
+html.ui-v3 .ms-f-select select { height: var(--ms-ctl); border-radius: 8px; background-color: var(--color-white); border: 1px solid var(--color-line); font-size: 13.5px; }
+html.ui-v3 .ms-f-seg { padding: 2px; border-radius: 10px; }
+html.ui-v3 .ms-f-seg button { height: calc(var(--ms-ctl) - 4px); padding: 0 10px; border-radius: 8px; font-size: 13px; }
+html.ui-v3 .ms-select-chip { height: var(--ms-ctl); padding: 0 10px; border-radius: 8px; background: var(--color-white); border: 1px solid var(--color-line); font-size: 13px; }
+html.ui-v3 .ms-select-chip:focus-within { box-shadow: 0 0 0 3px var(--color-accent-soft); border-color: var(--color-accent); }
+
+/* Açılır menüler ve ipuçları */
+html.ui-v3 :is(.ms-menu, [role="menu"], .ms-popover, .ms-menu-pop) { border-radius: 12px !important; box-shadow: var(--shadow-md) !important; border-color: var(--color-line) !important; }
+html.ui-v3 [role="menu"] :is([role="menuitem"], button) { border-radius: 8px; }
+html.ui-v3 .ms-tooltip { border-radius: 8px; font-size: 12px; }

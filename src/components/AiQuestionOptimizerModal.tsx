@@ -267,31 +267,31 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
   };
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-950/80 backdrop-blur-md overflow-y-auto">
-      <div className="ms-modal-panel relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl border border-teal-200/80 flex flex-col max-h-[92dvh] overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-ink/80 backdrop-blur-md overflow-y-auto">
+      <div className="ms-modal-panel relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl border border-ok/80 flex flex-col max-h-[92dvh] overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
         
         {/* Header */}
-        <div className="bg-ink-surface px-5 py-4 text-white flex items-center justify-between shrink-0 shadow-sm border-b border-teal-700/50">
+        <div className="bg-ink-surface px-5 py-4 text-white flex items-center justify-between shrink-0 shadow-sm border-b border-ok/50">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-accent text-teal-950 flex items-center justify-center shadow-md">
+            <div className="w-10 h-10 rounded-xl bg-accent text-ok flex items-center justify-center shadow-md">
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <h3 className="font-bold text-base sm:text-lg text-white">Yapay Zeka Soru Düzenleme & İyileştirme Motoru</h3>
-                <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-teal-500/20 text-teal-200 border border-teal-400/30">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-2xs font-semibold bg-ok/20 text-ok-soft border border-ok/30">
+                  <span className="w-1.5 h-1.5 rounded-full bg-ok animate-pulse" />
                   Canlı • Amfi Notu & Tıp Zeminlemeli
                 </span>
               </div>
-              <p className="text-xs text-teal-200/80 mt-0.5">
+              <p className="text-xs text-ok-soft/80 mt-0.5">
                 Soru No: #{question.questionNumber || 'Çıkmış'} · {question.discipline || 'Tıp'} · {question.topic || 'Kurul Sınavı'}
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-lg bg-teal-800/60 hover:bg-teal-700 text-teal-100 flex items-center justify-center transition-colors cursor-pointer"
+            className="w-8 h-8 rounded-lg bg-ok/60 hover:bg-ok text-ok-soft flex items-center justify-center transition-colors cursor-pointer"
             title="Kapat"
           >
             <X className="w-4 h-4" />
@@ -305,19 +305,19 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
           <div className="lg:col-span-5 flex flex-col gap-4">
             
             {/* Matched Lecture Note Card */}
-            <div className="bg-canvas border border-emerald-200/80 rounded-xl p-3.5 shadow-2xs">
+            <div className="bg-canvas border border-ok/80 rounded-xl p-3.5 shadow-2xs">
               <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-900">
-                  <BookMarked className="w-4 h-4 text-emerald-600" />
+                <div className="flex items-center gap-1.5 text-xs font-bold text-ok">
+                  <BookMarked className="w-4 h-4 text-ok" />
                   <span>Amfi Ders Notu Zeminlemesi</span>
                 </div>
                 {isSearchingSlides ? (
-                  <span className="text-[11px] text-teal-700 flex items-center gap-1">
+                  <span className="text-2xs text-ok flex items-center gap-1">
                     <RefreshCw className="w-3 h-3 animate-spin" />
                     Slayt aranıyor...
                   </span>
                 ) : matchedSlide ? (
-                  <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded-md text-[11px] font-bold">
+                  <span className="px-2 py-0.5 bg-ok-soft text-ok rounded-md text-2xs font-bold">
                     %{matchedSlide.confidenceScore || matchedSlide.score || 95} Eşleşti
                   </span>
                 ) : null}
@@ -325,18 +325,18 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
 
               {matchedSlide ? (
                 <div className="space-y-2">
-                  <div className="bg-white/90 p-2.5 rounded-lg border border-emerald-100 text-xs">
-                    <div className="font-semibold text-slate-800 flex items-center justify-between">
+                  <div className="bg-white/90 p-2.5 rounded-lg border border-ok/30 text-xs">
+                    <div className="font-semibold text-ink flex items-center justify-between">
                       <span className="truncate pr-2">{matchedSlide.noteTitle || matchedSlide.title}</span>
-                      <span className="text-[11px] bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded shrink-0">
+                      <span className="text-2xs bg-ok-soft text-ok px-1.5 py-0.5 rounded shrink-0">
                         Slayt #{matchedSlide.pageNumber}
                       </span>
                     </div>
-                    <div className="text-[11px] text-slate-500 mt-0.5">
-                      Ders: <strong className="text-slate-700">{matchedSlide.discipline}</strong>
+                    <div className="text-2xs text-ink-3 mt-0.5">
+                      Ders: <strong className="text-ink-2">{matchedSlide.discipline}</strong>
                     </div>
                     {matchedSlide.matchedSnippet && (
-                      <p className="mt-1.5 text-[11px] text-slate-600 italic bg-slate-50 p-1.5 rounded border border-slate-100 line-clamp-3">
+                      <p className="mt-1.5 text-2xs text-ink-2 italic bg-field p-1.5 rounded border border-line line-clamp-3">
                         "{matchedSlide.matchedSnippet}"
                       </p>
                     )}
@@ -346,7 +346,7 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                     <button
                       type="button"
                       onClick={() => onOpenSlideReader(matchedSlide, matchedSlide.pageNumber)}
-                      className="w-full text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-white hover:bg-emerald-50 border border-emerald-200 py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                      className="w-full text-xs font-semibold text-ok hover:text-ok bg-white hover:bg-ok-soft border border-ok/30 py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
                     >
                       <BookOpen className="w-3.5 h-3.5" />
                       <span>Bu Amfi Slaytını Oku & İncele</span>
@@ -354,21 +354,21 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                   )}
                 </div>
               ) : (
-                <div className="text-xs text-slate-500 py-2 text-center bg-white/60 rounded-lg border border-dashed border-emerald-200">
+                <div className="text-xs text-ink-3 py-2 text-center bg-white/60 rounded-lg border border-dashed border-ok/30">
                   {isSearchingSlides ? '880+ Amfi ders slaytı taranıyor...' : 'Doğrudan eşleşen slayt bulunamadı, tıp literatürü esas alınacak.'}
                 </div>
               )}
             </div>
 
             {/* Question Pool / Memory Fragments Context */}
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-xs">
+            <div className="bg-field border border-line rounded-xl p-3.5 text-xs">
               <div className="flex items-center justify-between mb-2">
-                <span className="font-bold text-slate-700 flex items-center gap-1.5">
-                  <Layers className="w-3.5 h-3.5 text-teal-600" />
+                <span className="font-bold text-ink-2 flex items-center gap-1.5">
+                  <Layers className="w-3.5 h-3.5 text-ok" />
                   Öğrenci Soru Havuzu ({question.fragments?.length || 0} Parça)
                 </span>
                 {question.claimedAnswer && (
-                  <span className="text-[11px] bg-teal-100 text-teal-800 font-bold px-2 py-0.5 rounded">
+                  <span className="text-2xs bg-ok-soft text-ok font-bold px-2 py-0.5 rounded">
                     Hatırlanan Cevap: {question.claimedAnswer}
                   </span>
                 )}
@@ -377,13 +377,13 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
               {question.fragments && question.fragments.length > 0 ? (
                 <div className="space-y-1.5 max-h-36 overflow-y-auto pr-1">
                   {question.fragments.map((f, i) => (
-                    <div key={f.id || i} className="bg-white p-2 rounded border border-slate-100 text-[11px] text-slate-600">
-                      <span className="font-semibold text-slate-700">{f.author}:</span> "{f.text}"
+                    <div key={f.id || i} className="bg-white p-2 rounded border border-line text-2xs text-ink-2">
+                      <span className="font-semibold text-ink-2">{f.author}:</span> "{f.text}"
                     </div>
                   ))}
                 </div>
               ) : (
-                <p className="text-[11px] text-slate-500 italic bg-white p-2 rounded border border-slate-100">
+                <p className="text-2xs text-ink-3 italic bg-white p-2 rounded border border-line">
                   Henüz öğrenci hafıza parçası girilmemiş. Mevcut konu ve ham soru kökü baz alınacak.
                 </p>
               )}
@@ -392,18 +392,18 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
             {/* Student Custom Guidance & Clues */}
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between">
-                <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                  <Lightbulb className="w-3.5 h-3.5 text-amber-500" />
+                <label className="text-xs font-bold text-ink-2 flex items-center gap-1.5">
+                  <Lightbulb className="w-3.5 h-3.5 text-warn" />
                   <span>Öğrenci / Kullanıcı Ek Yönlendirmesi (İsteğe Bağlı):</span>
                 </label>
-                <span className="text-[11px] text-slate-400">İpucu veya Hoca Vurgusu</span>
+                <span className="text-2xs text-ink-3">İpucu veya Hoca Vurgusu</span>
               </div>
               <textarea
                 value={studentNotes}
                 onChange={(e) => setStudentNotes(e.target.value)}
                 placeholder="Örn: Hoca bu soruda kesinlikle değildir kökünü sordu / Slaytta Orphan Annie gözü çekirdeği vurgulanmıştı / C şıkkında Bradikinin vardı..."
                 rows={3}
-                className="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 outline-none transition-all resize-none bg-white text-slate-800"
+                className="w-full text-xs p-2.5 rounded-xl border border-line-2 focus:border-ok focus:ring-1 focus:ring-ok outline-none transition-all resize-none bg-white text-ink"
               />
 
               {/* Quick Prompt Suggestions */}
@@ -413,7 +413,7 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                     key={idx}
                     type="button"
                     onClick={() => handleApplyQuickPrompt(qp)}
-                    className="text-[11px] bg-slate-100 hover:bg-teal-50 hover:text-teal-700 text-slate-600 border border-slate-200 px-2 py-1 rounded-md transition-all text-left cursor-pointer"
+                    className="text-2xs bg-field hover:bg-ok-soft hover:text-ok text-ink-2 border border-line px-2 py-1 rounded-md transition-all text-left cursor-pointer"
                   >
                     + {qp.slice(0, 42)}...
                   </button>
@@ -422,29 +422,29 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
             </div>
 
             {/* Advanced Settings Accordion */}
-            <div className="border border-slate-200 rounded-xl overflow-hidden text-xs">
+            <div className="border border-line rounded-xl overflow-hidden text-xs">
               <button
                 type="button"
                 onClick={() => setShowAdvancedSettings(!showAdvancedSettings)}
-                className="w-full px-3 py-2 bg-slate-50 hover:bg-slate-100 flex items-center justify-between text-slate-600 font-semibold cursor-pointer"
+                className="w-full px-3 py-2 bg-field hover:bg-field flex items-center justify-between text-ink-2 font-semibold cursor-pointer"
               >
                 <span className="flex items-center gap-1.5">
-                  <Sliders className="w-3.5 h-3.5 text-slate-500" />
+                  <Sliders className="w-3.5 h-3.5 text-ink-3" />
                   Gelişmiş AI Ayarları (Model & Sağlayıcı)
                 </span>
-                <span className="text-[11px] text-teal-600 font-mono">
+                <span className="text-2xs text-ok font-mono">
                   {showAdvancedSettings ? 'Gizle' : 'Göster'}
                 </span>
               </button>
 
               {showAdvancedSettings && (
-                <div className="p-3 bg-white space-y-3 border-t border-slate-200">
+                <div className="p-3 bg-white space-y-3 border-t border-line">
                   <div>
-                    <label className="block text-[11px] font-semibold text-slate-600 mb-1">Yapay Zeka Modeli</label>
+                    <label className="block text-2xs font-semibold text-ink-2 mb-1">Yapay Zeka Modeli</label>
                     <select
                       value={selectedModel}
                       onChange={(e) => setSelectedModel(e.target.value)}
-                      className="w-full text-xs p-2 border border-slate-300 rounded-lg bg-white"
+                      className="w-full text-xs p-2 border border-line-2 rounded-lg bg-white"
                     >
                       <option value="gemini-3.8-flash">Google Gemini 3.8 Flash (Önerilen • Hızlı & Tıbbi Akıl Yürütme)</option>
                       <option value="gemini-flash-latest">Google Gemini Flash Latest</option>
@@ -452,7 +452,7 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                     </select>
                   </div>
                   <div>
-                    <label className="block text-[11px] font-semibold text-slate-600 mb-1">
+                    <label className="block text-2xs font-semibold text-ink-2 mb-1">
                       Özel Gemini API Anahtarı (İsteğe bağlı)
                     </label>
                     <input
@@ -463,9 +463,9 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                         localStorage.setItem('medsoru_gemini_api_key', e.target.value);
                       }}
                       placeholder="Boş bırakılırsa sunucudaki anahtar havuzu çalışır"
-                      className="w-full text-xs p-2 border border-slate-300 rounded-lg"
+                      className="w-full text-xs p-2 border border-line-2 rounded-lg"
                     />
-                    <p className="text-[11px] text-slate-400 mt-0.5">
+                    <p className="text-2xs text-ink-3 mt-0.5">
                       Boş bırakırsanız sistemdeki otomatik havuz (Ücretsiz + Yedek) kullanılır.
                     </p>
                   </div>
@@ -480,18 +480,18 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
               disabled={isOptimizing}
               className={`w-full py-3 px-4 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer ${
                 isOptimizing
-                  ? 'bg-teal-700 opacity-90 cursor-not-allowed'
-                  : 'bg-accent hover:from-teal-700 hover:to-cyan-800 active:scale-[0.99]'
+                  ? 'bg-ok opacity-90 cursor-not-allowed'
+                  : 'bg-accent hover:from-ok hover:to-accent active:scale-[0.99]'
               }`}
             >
               {isOptimizing ? (
                 <>
-                  <RefreshCw className="w-4 h-4 animate-spin text-teal-200" />
+                  <RefreshCw className="w-4 h-4 animate-spin text-ok-soft" />
                   <span>Yapay Zeka Düzenliyor...</span>
                 </>
               ) : (
                 <>
-                  <Sparkles className="w-4 h-4 text-cyan-300" />
+                  <Sparkles className="w-4 h-4 text-accent" />
                   <span>{hasOptimizedOnce ? 'Yapay Zeka ile Tekrar Düzenle' : 'Yapay Zeka ile Gerçek Zamanlı Düzenle'}</span>
                 </>
               )}
@@ -499,25 +499,25 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
 
             {/* Real-time Progress Stepper */}
             {isOptimizing && (
-              <div className="bg-teal-50 border border-teal-200 p-3 rounded-xl space-y-1.5 text-xs text-teal-900">
+              <div className="bg-ok-soft border border-ok/30 p-3 rounded-xl space-y-1.5 text-xs text-ok">
                 <div className="flex items-center gap-2 font-bold">
-                  <RefreshCw className="w-3.5 h-3.5 animate-spin text-teal-600" />
+                  <RefreshCw className="w-3.5 h-3.5 animate-spin text-ok" />
                   <span>Gerçek Zamanlı Süreç:</span>
                 </div>
-                <div className="space-y-1 pl-4 text-[11px]">
-                  <div className={`flex items-center gap-1.5 ${progressStep >= 1 ? 'font-semibold text-teal-900' : 'text-slate-400'}`}>
+                <div className="space-y-1 pl-4 text-2xs">
+                  <div className={`flex items-center gap-1.5 ${progressStep >= 1 ? 'font-semibold text-ok' : 'text-ink-3'}`}>
                     <span>{progressStep >= 1 ? '✓' : '○'}</span>
                     <span>1. Öğrenci soru havuzu ve hatırlanan parçalar derleniyor...</span>
                   </div>
-                  <div className={`flex items-center gap-1.5 ${progressStep >= 2 ? 'font-semibold text-teal-900' : 'text-slate-400'}`}>
+                  <div className={`flex items-center gap-1.5 ${progressStep >= 2 ? 'font-semibold text-ok' : 'text-ink-3'}`}>
                     <span>{progressStep >= 2 ? '✓' : '○'}</span>
                     <span>2. 880+ Amfi ders notu ve slaytlar taranarak zeminleme yapılıyor...</span>
                   </div>
-                  <div className={`flex items-center gap-1.5 ${progressStep >= 3 ? 'font-semibold text-teal-900' : 'text-slate-400'}`}>
+                  <div className={`flex items-center gap-1.5 ${progressStep >= 3 ? 'font-semibold text-ok' : 'text-ink-3'}`}>
                     <span>{progressStep >= 3 ? '✓' : '○'}</span>
                     <span>3. Tıbbi literatür ve internet bilgisiyle etki mekanizması teyit ediliyor...</span>
                   </div>
-                  <div className={`flex items-center gap-1.5 ${progressStep >= 4 ? 'font-semibold text-teal-900' : 'text-slate-400'}`}>
+                  <div className={`flex items-center gap-1.5 ${progressStep >= 4 ? 'font-semibold text-ok' : 'text-ink-3'}`}>
                     <span>{progressStep >= 4 ? '✓' : '○'}</span>
                     <span>4. Kurul sınavı dilinde saf soru kökü ve 5 seçenek oluşturuluyor...</span>
                   </div>
@@ -526,30 +526,30 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
             )}
 
             {errorMsg && (
-              <div className="bg-red-50 border border-red-200 p-3 rounded-xl text-xs text-red-700 flex items-start gap-2">
-                <AlertTriangle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+              <div className="bg-bad-soft border border-bad/30 p-3 rounded-xl text-xs text-bad-text flex items-start gap-2">
+                <AlertTriangle className="w-4 h-4 text-bad-text shrink-0 mt-0.5" />
                 <p className="leading-relaxed">{errorMsg}</p>
               </div>
             )}
           </div>
 
           {/* RIGHT COLUMN: AI Refined Result & Editable Preview (col-span-7) */}
-          <div className="lg:col-span-7 flex flex-col gap-4 bg-slate-50/50 p-4 rounded-xl border border-slate-200">
+          <div className="lg:col-span-7 flex flex-col gap-4 bg-field/50 p-4 rounded-xl border border-line">
             
-            <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+            <div className="flex items-center justify-between border-b border-line pb-3">
               <div>
-                <h4 className="font-bold text-slate-800 text-sm sm:text-base flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal-600" />
+                <h4 className="font-bold text-ink text-sm sm:text-base flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-ok" />
                   <span>{hasOptimizedOnce ? 'Yapay Zeka Tarafından Düzenlenen Soru' : 'Düzenleme Taslağı'}</span>
                 </h4>
-                <p className="text-xs text-slate-500 mt-0.5">
+                <p className="text-xs text-ink-3 mt-0.5">
                   {hasOptimizedOnce 
                     ? `Ders notu ve tıp zeminlemesiyle oluşturuldu (${planUsed || 'Gemini 3.8 Flash'}). Doğrudan inceleyip düzenleyebilirsiniz.`
                     : 'Henüz yapay zeka çalıştırılmadı. Sol taraftan "Düzenle" butonuna basarak anında çalıştırabilirsiniz.'}
                 </p>
               </div>
               {hasOptimizedOnce && (
-                <span className="px-2.5 py-1 bg-teal-100 text-teal-800 rounded-full text-xs font-bold shrink-0">
+                <span className="px-2.5 py-1 bg-ok-soft text-ok rounded-full text-xs font-bold shrink-0">
                   %96 Güven
                 </span>
               )}
@@ -558,26 +558,26 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
             {/* Discipline & Topic Detected by AI */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[11px] font-bold text-slate-700 mb-1">
+                <label className="block text-2xs font-bold text-ink-2 mb-1">
                   Tespit Edilen Ders / Disiplin:
                 </label>
                 <input
                   type="text"
                   value={draftDiscipline}
                   onChange={(e) => setDraftDiscipline(e.target.value)}
-                  className="w-full text-xs p-2 bg-white rounded-lg border border-slate-300 font-semibold text-slate-800 focus:border-teal-500 outline-none"
+                  className="w-full text-xs p-2 bg-white rounded-lg border border-line-2 font-semibold text-ink focus:border-ok outline-none"
                   placeholder="Örn: Tıbbi Patoloji"
                 />
               </div>
               <div>
-                <label className="block text-[11px] font-bold text-slate-700 mb-1">
+                <label className="block text-2xs font-bold text-ink-2 mb-1">
                   Tespit Edilen Konu Başlığı:
                 </label>
                 <input
                   type="text"
                   value={draftTopic}
                   onChange={(e) => setDraftTopic(e.target.value)}
-                  className="w-full text-xs p-2 bg-white rounded-lg border border-slate-300 font-semibold text-slate-800 focus:border-teal-500 outline-none"
+                  className="w-full text-xs p-2 bg-white rounded-lg border border-line-2 font-semibold text-ink focus:border-ok outline-none"
                   placeholder="Örn: Miyokard İnfarktüsü Histopatolojisi"
                 />
               </div>
@@ -586,24 +586,24 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
             {/* Pure Stem Textarea */}
             <div>
               <div className="flex items-center justify-between mb-1">
-                <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                  <FileText className="w-3.5 h-3.5 text-teal-600" />
+                <label className="text-xs font-bold text-ink-2 flex items-center gap-1.5">
+                  <FileText className="w-3.5 h-3.5 text-ok" />
                   <span>Resmi Sınav Soru Kökü:</span>
                 </label>
-                <span className="text-[11px] text-slate-400">Saf ve temiz sınav metni</span>
+                <span className="text-2xs text-ink-3">Saf ve temiz sınav metni</span>
               </div>
               <textarea
                 value={draftStem}
                 onChange={(e) => setDraftStem(e.target.value)}
                 rows={4}
-                className="w-full text-xs sm:text-[13px] p-3 rounded-xl border border-slate-300 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 outline-none transition-all leading-relaxed bg-white text-slate-900 font-medium"
+                className="w-full text-xs sm:text-sm p-3 rounded-xl border border-line-2 focus:border-ok focus:ring-1 focus:ring-ok outline-none transition-all leading-relaxed bg-white text-ink font-medium"
                 placeholder="Düzenlenmiş soru kökü..."
               />
             </div>
 
             {/* 5 Options (A, B, C, D, E) */}
             <div className="space-y-2">
-              <label className="block text-xs font-bold text-slate-700">
+              <label className="block text-xs font-bold text-ink-2">
                 5 Seçenek ve Doğru Cevap (Seçili olan doğru şıktır):
               </label>
               <div className="space-y-1.5">
@@ -614,8 +614,8 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                       key={opt.key}
                       className={`flex items-center gap-2 p-2 rounded-xl border transition-all ${
                         isCorrect
-                          ? 'bg-emerald-50/90 border-emerald-300 ring-1 ring-emerald-300 shadow-2xs'
-                          : 'bg-white border-slate-200'
+                          ? 'bg-ok-soft/90 border-ok/30 ring-1 ring-ok/30 shadow-2xs'
+                          : 'bg-white border-line'
                       }`}
                     >
                       <button
@@ -623,8 +623,8 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                         onClick={() => setDraftCorrectAnswer(opt.key)}
                         className={`w-7 h-7 rounded-lg font-bold text-xs flex items-center justify-center shrink-0 cursor-pointer transition-colors ${
                           isCorrect
-                            ? 'bg-emerald-600 text-white shadow-xs'
-                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                            ? 'bg-ok text-white shadow-xs'
+                            : 'bg-field text-ink-2 hover:bg-line'
                         }`}
                         title="Doğru cevap olarak işaretle"
                       >
@@ -639,16 +639,16 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                             prev.map((o) => (o.key === opt.key ? { ...o, text: val } : o))
                           );
                         }}
-                        className="flex-1 text-xs sm:text-[13px] p-1.5 bg-transparent border-none outline-none text-slate-800"
+                        className="flex-1 text-xs sm:text-sm p-1.5 bg-transparent border-none outline-none text-ink"
                         placeholder={`${opt.key} şıkkı metni...`}
                       />
                       {opt.isAiFilled && (
-                        <span className="text-[11px] bg-cyan-100 text-cyan-800 px-1.5 py-0.5 rounded font-semibold shrink-0">
+                        <span className="text-2xs bg-accent-soft text-accent px-1.5 py-0.5 rounded font-semibold shrink-0">
                           AI Çeldirici
                         </span>
                       )}
                       {isCorrect && (
-                        <span className="text-[11px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold shrink-0 flex items-center gap-1">
+                        <span className="text-2xs bg-ok-soft text-ok px-2 py-0.5 rounded-full font-bold shrink-0 flex items-center gap-1">
                           <Check className="w-3 h-3" /> Doğru
                         </span>
                       )}
@@ -660,41 +660,41 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
 
             {/* Academic Explanation */}
             <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
+              <label className="block text-xs font-bold text-ink-2 mb-1">
                 Klinik Patofizyolojik Açıklama & Çeldirici Analizi:
               </label>
               <textarea
                 value={draftExplanation}
                 onChange={(e) => setDraftExplanation(e.target.value)}
                 rows={3}
-                className="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 outline-none transition-all leading-relaxed bg-white text-slate-700"
+                className="w-full text-xs p-2.5 rounded-xl border border-line-2 focus:border-ok focus:ring-1 focus:ring-ok outline-none transition-all leading-relaxed bg-white text-ink-2"
                 placeholder="Robbins/Guyton/Katzung standardında patofizyolojik açıklama..."
               />
             </div>
 
             {/* Refinement Summary Report */}
             {refinementReport && (
-              <div className="bg-teal-50/80 border border-teal-200 p-3 rounded-xl text-xs text-teal-900">
-                <span className="font-bold flex items-center gap-1.5 mb-1 text-teal-950">
-                  <Sparkles className="w-3.5 h-3.5 text-teal-600" />
+              <div className="bg-ok-soft/80 border border-ok/30 p-3 rounded-xl text-xs text-ok">
+                <span className="font-bold flex items-center gap-1.5 mb-1 text-ok">
+                  <Sparkles className="w-3.5 h-3.5 text-ok" />
                   Yapay Zeka Düzenleme Raporu:
                 </span>
-                <p className="leading-relaxed text-[11px] text-teal-800">{refinementReport}</p>
+                <p className="leading-relaxed text-2xs text-ok">{refinementReport}</p>
               </div>
             )}
 
             {/* Bottom Actions */}
-            <div className="mt-auto pt-3 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
-              <div className="text-xs text-slate-500 flex items-center gap-1">
+            <div className="mt-auto pt-3 border-t border-line flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div className="text-xs text-ink-3 flex items-center gap-1">
                 <span>Katkı Sahibi:</span>
-                <strong className="text-slate-700">{currentUser?.displayName || 'Öğrenci'}</strong>
+                <strong className="text-ink-2">{currentUser?.displayName || 'Öğrenci'}</strong>
               </div>
 
               <div className="flex items-center gap-2 w-full sm:w-auto">
                 <button
                   type="button"
                   onClick={onClose}
-                  className="flex-1 sm:flex-none px-4 py-2 border border-slate-300 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
+                  className="flex-1 sm:flex-none px-4 py-2 border border-line-2 rounded-xl text-xs font-semibold text-ink-2 hover:bg-field transition-colors cursor-pointer"
                 >
                   İptal
                 </button>
@@ -704,10 +704,10 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                   disabled={isSaving || saveSuccess}
                   className={`flex-1 sm:flex-none px-5 py-2.5 rounded-xl text-xs font-bold text-white flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer ${
                     saveSuccess
-                      ? 'bg-emerald-600 text-white'
+                      ? 'bg-ok text-white'
                       : isSaving
-                      ? 'bg-teal-700 opacity-80 cursor-wait'
-                      : 'bg-emerald-600 hover:bg-emerald-700 active:scale-95'
+                      ? 'bg-ok opacity-80 cursor-wait'
+                      : 'bg-ok hover:bg-ok active:scale-95'
                   }`}
                 >
                   {saveSuccess ? (

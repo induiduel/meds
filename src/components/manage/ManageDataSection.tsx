@@ -537,7 +537,7 @@ export const ManageDataSection: React.FC<Props> = ({
 
       <div className="ms-table-wrap">
         <div className="w-full min-w-[760px]">
-          <div className="grid items-center gap-x-3 h-10 px-3 border-b border-line text-[12px] font-semibold text-ink-3 sticky top-0 bg-white z-[1]" style={{ gridTemplateColumns: grid }}>
+          <div className="grid items-center gap-x-3 h-10 px-3 border-b border-line text-xs font-semibold text-ink-3 sticky top-0 bg-white z-[1]" style={{ gridTemplateColumns: grid }}>
             <input
               type="checkbox"
               aria-label="Bu sayfadakilerin hepsini seç"
@@ -567,12 +567,12 @@ export const ManageDataSection: React.FC<Props> = ({
                 <div
                   key={id}
                   onClick={() => setOpenId(open ? null : id)}
-                  className={`grid items-center gap-x-3 min-h-10 px-3 py-1.5 border-b border-line-soft last:border-b-0 text-[13.5px] cursor-pointer transition-colors ${sel || open ? 'bg-accent-soft' : 'hover:bg-canvas'}`}
+                  className={`grid items-center gap-x-3 min-h-10 px-3 py-1.5 border-b border-line-soft last:border-b-0 text-base cursor-pointer transition-colors ${sel || open ? 'bg-accent-soft' : 'hover:bg-canvas'}`}
                   style={{ gridTemplateColumns: grid }}
                 >
                   <input type="checkbox" checked={sel} onClick={(e) => e.stopPropagation()} onChange={() => toggleRow(id)} aria-label="Satırı seç" className="w-[15px] h-[15px] accent-accent cursor-pointer" />
                   {cols.map((c) => (
-                    <span key={c.key} className={`min-w-0 truncate ${c.mono ? 'font-mono text-[12.5px]' : ''}`} title={String(c.value(r))}>
+                    <span key={c.key} className={`min-w-0 truncate ${c.mono ? 'font-mono text-sm' : ''}`} title={String(c.value(r))}>
                       {c.render ? c.render(r) : c.value(r) || '—'}
                     </span>
                   ))}
@@ -581,7 +581,7 @@ export const ManageDataSection: React.FC<Props> = ({
             })
           )}
           {visible.length > limit && (
-            <button type="button" onClick={() => setLimit((n) => n + 200)} className="w-full h-11 border-t border-line-soft text-[13px] font-semibold text-accent cursor-pointer inline-flex items-center justify-center gap-1 hover:bg-canvas">
+            <button type="button" onClick={() => setLimit((n) => n + 200)} className="w-full h-11 border-t border-line-soft text-sm font-semibold text-accent cursor-pointer inline-flex items-center justify-center gap-1 hover:bg-canvas">
               <ChevronDown className="w-4 h-4" />
               {(visible.length - limit).toLocaleString('tr-TR')} kayıt daha
             </button>
@@ -625,7 +625,7 @@ export const ManageDataSection: React.FC<Props> = ({
               <span className="font-semibold text-ink truncate">
                 {String(ds.columns[0]?.value(openRow) || ds.idOf(openRow)).slice(0, 45)}
               </span>
-              <span className="text-[11.5px] px-2 py-0.5 rounded-full bg-accent-soft text-accent font-medium shrink-0">
+              <span className="text-xs px-2 py-0.5 rounded-full bg-accent-soft text-accent font-medium shrink-0">
                 {ds.label}
               </span>
             </div>
@@ -639,7 +639,7 @@ export const ManageDataSection: React.FC<Props> = ({
                 setEditTab('form');
                 if (editDraft) setJsonText(JSON.stringify(editDraft, null, 2));
               }}
-              className={`px-3 py-1 text-[12px] font-medium rounded-md transition-all ${
+              className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${
                 editTab === 'form' ? 'bg-white shadow-xs text-ink font-semibold' : 'text-ink-3 hover:text-ink'
               }`}
             >
@@ -649,14 +649,14 @@ export const ManageDataSection: React.FC<Props> = ({
               <button
                 type="button"
                 onClick={() => setEditTab('history')}
-                className={`px-3 py-1 text-[12px] font-medium rounded-md transition-all inline-flex items-center gap-1.5 ${
+                className={`px-3 py-1 text-xs font-medium rounded-md transition-all inline-flex items-center gap-1.5 ${
                   editTab === 'history' ? 'bg-white shadow-xs text-ink font-semibold' : 'text-ink-3 hover:text-ink'
                 }`}
               >
                 <History className="w-3.5 h-3.5" />
                 <span>Geçmiş & Katkılar</span>
                 {Boolean((openRow?.revisions?.length || 0) + (openRow?.fragments?.length || 0)) && (
-                  <span className="px-1.5 py-0.2 rounded-full bg-accent-soft text-accent text-[10.5px] font-bold">
+                  <span className="px-1.5 py-0.2 rounded-full bg-accent-soft text-accent text-2xs font-bold">
                     {(openRow?.revisions?.length || 0) + (openRow?.fragments?.length || 0)}
                   </span>
                 )}
@@ -668,7 +668,7 @@ export const ManageDataSection: React.FC<Props> = ({
                 setEditTab('json');
                 if (editDraft) setJsonText(JSON.stringify(editDraft, null, 2));
               }}
-              className={`px-3 py-1 text-[12px] font-medium rounded-md transition-all ${
+              className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${
                 editTab === 'json' ? 'bg-white shadow-xs text-ink font-semibold' : 'text-ink-3 hover:text-ink'
               }`}
             >
@@ -705,7 +705,7 @@ export const ManageDataSection: React.FC<Props> = ({
                   <button
                     type="button"
                     onClick={() => setWizardQuestion(editDraft as QuestionItem)}
-                    className="ms-btn is-ghost text-accent hover:bg-accent-soft text-[12.5px]"
+                    className="ms-btn is-ghost text-accent hover:bg-accent-soft text-sm"
                     title="Gelişmiş soru sihirbazında düzenle"
                   >
                     <Sparkles className="w-3.5 h-3.5" /> Sihirbaz
@@ -729,7 +729,7 @@ export const ManageDataSection: React.FC<Props> = ({
                     type="button"
                     disabled={busy}
                     onClick={() => void runBulk('verify', [ds.idOf(openRow)])}
-                    className="ms-btn is-sm is-ghost text-emerald-600 hover:bg-emerald-50"
+                    className="ms-btn is-sm is-ghost text-ok hover:bg-ok-soft"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5" /> Doğrula
                   </button>
@@ -754,7 +754,7 @@ export const ManageDataSection: React.FC<Props> = ({
           <div className="flex flex-col gap-4">
             {editTab === 'json' ? (
               <div className="flex flex-col gap-2">
-                <div className="flex items-center justify-between text-[12px] text-ink-3 bg-surface-2 p-2.5 rounded-lg border border-line-soft">
+                <div className="flex items-center justify-between text-xs text-ink-3 bg-surface-2 p-2.5 rounded-lg border border-line-soft">
                   <span>Bu verinin tamamını (alt nesneler, diziler, özel alanlar) doğrudan JSON olarak düzenleyebilirsiniz.</span>
                   <button
                     type="button"
@@ -765,7 +765,7 @@ export const ManageDataSection: React.FC<Props> = ({
                   </button>
                 </div>
                 {jsonError && (
-                  <div className="flex items-start gap-2 p-2.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 text-[12px]">
+                  <div className="flex items-start gap-2 p-2.5 rounded-lg bg-bad-soft border border-bad/30 text-bad-text text-xs">
                     <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
                     <div>
                       <b className="font-semibold">JSON Sözdizimi Hatası:</b> {jsonError}
@@ -777,8 +777,8 @@ export const ManageDataSection: React.FC<Props> = ({
                   onChange={(e) => handleJsonChange(e.target.value)}
                   spellCheck={false}
                   rows={24}
-                  className={`w-full font-mono text-[12.5px] leading-relaxed p-3.5 rounded-lg border bg-surface-1 text-ink focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent ${
-                    jsonError ? 'border-rose-400 focus:ring-rose-400' : 'border-line'
+                  className={`w-full font-mono text-sm leading-relaxed p-3.5 rounded-lg border bg-surface-1 text-ink focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent ${
+                    jsonError ? 'border-bad focus:ring-bad' : 'border-line'
                   }`}
                 />
               </div>
@@ -786,23 +786,23 @@ export const ManageDataSection: React.FC<Props> = ({
               <div className="flex flex-col gap-4">
                 {/* Yazar & Ekleyen Özeti */}
                 <div className="p-3.5 rounded-xl border border-line bg-surface-2 flex flex-col gap-2">
-                  <div className="text-[12px] font-bold uppercase tracking-wider text-ink-3">Veri Kaynağı & İlk Ekleyen</div>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-[13px]">
+                  <div className="text-xs font-bold uppercase tracking-wider text-ink-3">Veri Kaynağı & İlk Ekleyen</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
                     <div>
-                      <span className="text-ink-3 block text-[11.5px]">Ekleyen Kullanıcı:</span>
+                      <span className="text-ink-3 block text-xs">Ekleyen Kullanıcı:</span>
                       <b className="text-ink font-semibold">{editDraft.contributedByName || editDraft.author || '—'}</b>
                     </div>
                     <div>
-                      <span className="text-ink-3 block text-[11.5px]">Öğrenci No / UID:</span>
+                      <span className="text-ink-3 block text-xs">Öğrenci No / UID:</span>
                       <span className="font-mono text-ink-2">{editDraft.contributedByStudentNumber || editDraft.contributedByUid || '—'}</span>
                     </div>
                     <div>
-                      <span className="text-ink-3 block text-[11.5px]">Eklenme Tarihi:</span>
+                      <span className="text-ink-3 block text-xs">Eklenme Tarihi:</span>
                       <span className="text-ink-2">{fmtDate(editDraft.createdAt || editDraft.updatedAt)}</span>
                     </div>
                   </div>
                   {editDraft.sourceFile && (
-                    <div className="text-[12px] pt-1 border-t border-line-soft text-ink-3">
+                    <div className="text-xs pt-1 border-t border-line-soft text-ink-3">
                       Kaynak Dosya / OCR: <span className="font-mono text-ink-2">{editDraft.sourceFile}</span>
                     </div>
                   )}
@@ -811,15 +811,15 @@ export const ManageDataSection: React.FC<Props> = ({
                 {/* Revizyonlar / Düzenleme Geçmişi */}
                 <div className="flex flex-col gap-2">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[13.5px] font-bold text-ink flex items-center gap-2">
+                    <h3 className="text-base font-bold text-ink flex items-center gap-2">
                       <History className="w-4 h-4 text-accent" />
                       <span>Düzenleme Geçmişi (Revizyonlar)</span>
                     </h3>
-                    <span className="text-[12px] text-ink-3">{(editDraft.revisions || []).length} versiyon</span>
+                    <span className="text-xs text-ink-3">{(editDraft.revisions || []).length} versiyon</span>
                   </div>
 
                   {(!editDraft.revisions || editDraft.revisions.length === 0) ? (
-                    <div className="p-4 text-center border border-dashed border-line rounded-xl text-ink-3 text-[12.5px]">
+                    <div className="p-4 text-center border border-dashed border-line rounded-xl text-ink-3 text-sm">
                       Bu veri için kaydedilmiş geçmiş düzenleme revizyonu bulunmuyor.
                     </div>
                   ) : (
@@ -836,17 +836,17 @@ export const ManageDataSection: React.FC<Props> = ({
                           >
                             <div className="flex items-center justify-between pb-2 border-b border-line-soft">
                               <div className="flex items-center gap-2">
-                                <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${isLatest ? 'bg-accent text-white' : 'bg-surface-2 text-ink-2'}`}>
+                                <span className={`text-2xs font-bold px-2 py-0.5 rounded-full ${isLatest ? 'bg-accent text-white' : 'bg-surface-2 text-ink-2'}`}>
                                   v{revNum} {isLatest && '(Son)'}
                                 </span>
-                                <span className="font-semibold text-[13px] text-ink">
+                                <span className="font-semibold text-sm text-ink">
                                   {rev.changeSummary || 'Düzenleme yapıldı'}
                                 </span>
                               </div>
-                              <span className="text-[11.5px] text-ink-3">{fmtDate(rev.editedAt)}</span>
+                              <span className="text-xs text-ink-3">{fmtDate(rev.editedAt)}</span>
                             </div>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 text-[12px] text-ink-2">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 text-xs text-ink-2">
                               <div>
                                 <span className="text-ink-3">Düzenleyen:</span>{' '}
                                 <b className="text-ink font-semibold">{rev.editorName || 'Anonim'}</b>
@@ -863,8 +863,8 @@ export const ManageDataSection: React.FC<Props> = ({
                             </div>
 
                             {rev.stem && rev.stem !== editDraft.reconstruction?.stem && (
-                              <div className="mt-2 p-2 rounded-lg bg-surface-2 text-[12px] text-ink-2 border border-line-soft max-h-24 overflow-y-auto">
-                                <div className="text-[11px] font-medium text-ink-3 mb-0.5">Bu versiyondaki soru kökü:</div>
+                              <div className="mt-2 p-2 rounded-lg bg-surface-2 text-xs text-ink-2 border border-line-soft max-h-24 overflow-y-auto">
+                                <div className="text-2xs font-medium text-ink-3 mb-0.5">Bu versiyondaki soru kökü:</div>
                                 {rev.stem}
                               </div>
                             )}
@@ -878,30 +878,30 @@ export const ManageDataSection: React.FC<Props> = ({
                 {/* Hafıza Parçaları & Katkı Sağlayanlar */}
                 <div className="flex flex-col gap-2 pt-2">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[13.5px] font-bold text-ink flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-emerald-600" />
+                    <h3 className="text-base font-bold text-ink flex items-center gap-2">
+                      <FileText className="w-4 h-4 text-ok" />
                       <span>Kullanıcı Hafıza Parçaları (Fragments)</span>
                     </h3>
-                    <span className="text-[12px] text-ink-3">{(editDraft.fragments || []).length} parça</span>
+                    <span className="text-xs text-ink-3">{(editDraft.fragments || []).length} parça</span>
                   </div>
 
                   {(!editDraft.fragments || editDraft.fragments.length === 0) ? (
-                    <div className="p-3 text-center border border-dashed border-line rounded-xl text-ink-3 text-[12.5px]">
+                    <div className="p-3 text-center border border-dashed border-line rounded-xl text-ink-3 text-sm">
                       Kullanıcılar tarafından eklenmiş hafıza parçası yok.
                     </div>
                   ) : (
                     <div className="flex flex-col gap-2">
                       {editDraft.fragments.map((frag: any, fIdx: number) => (
-                        <div key={frag.id || fIdx} className="p-3 rounded-xl border border-line-soft bg-surface-1 flex flex-col gap-1.5 text-[12.5px]">
+                        <div key={frag.id || fIdx} className="p-3 rounded-xl border border-line-soft bg-surface-1 flex flex-col gap-1.5 text-sm">
                           <div className="flex items-center justify-between">
                             <span className="font-semibold text-ink flex items-center gap-1.5">
-                              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                              <span className="w-2 h-2 rounded-full bg-ok"></span>
                               {frag.author || 'İsimsiz Öğrenci'}
                               {frag.authorStudentNumber && (
-                                <span className="font-mono text-ink-3 text-[11px]">({frag.authorStudentNumber})</span>
+                                <span className="font-mono text-ink-3 text-2xs">({frag.authorStudentNumber})</span>
                               )}
                             </span>
-                            <span className="text-[11px] text-ink-3">{fmtDate(frag.timestamp)}</span>
+                            <span className="text-2xs text-ink-3">{fmtDate(frag.timestamp)}</span>
                           </div>
                           <p className="m-0 text-ink-2 leading-relaxed bg-surface-2 p-2 rounded-lg border border-line-soft">
                             {frag.text}
@@ -916,7 +916,7 @@ export const ManageDataSection: React.FC<Props> = ({
               <div className="flex flex-col gap-4">
                 {/* Ekleyen ve Revizyon Hızlı Bilgi Şeridi */}
                 {(ds.id === 'questions' || ds.id === 'past') && (
-                  <div className="p-2.5 rounded-xl bg-accent-soft/40 border border-accent/20 flex items-center justify-between text-[12.5px]">
+                  <div className="p-2.5 rounded-xl bg-accent-soft/40 border border-accent/20 flex items-center justify-between text-sm">
                     <div className="flex items-center gap-2 min-w-0">
                       <User className="w-4 h-4 text-accent shrink-0" />
                       <span className="truncate">
@@ -930,7 +930,7 @@ export const ManageDataSection: React.FC<Props> = ({
                     <button
                       type="button"
                       onClick={() => setEditTab('history')}
-                      className="text-accent hover:underline text-[12px] font-semibold shrink-0 inline-flex items-center gap-1"
+                      className="text-accent hover:underline text-xs font-semibold shrink-0 inline-flex items-center gap-1"
                     >
                       <span>Tüm Geçmiş ({editDraft.revisions?.length || 0})</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -940,55 +940,55 @@ export const ManageDataSection: React.FC<Props> = ({
                 {(ds.id === 'questions' || ds.id === 'past') && (
                   <>
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-[12.5px] font-semibold text-ink flex items-center justify-between">
+                      <label className="text-sm font-semibold text-ink flex items-center justify-between">
                         <span>Soru Kökü / Metni</span>
-                        <span className="text-[11.5px] text-ink-3 font-normal">Markdown formatı geçerlidir</span>
+                        <span className="text-xs text-ink-3 font-normal">Markdown formatı geçerlidir</span>
                       </label>
                       <textarea
                         value={stemOf(editDraft)}
                         onChange={(e) => handleQuestionStemChange(e.target.value)}
                         rows={4}
                         placeholder="Soru metnini girin..."
-                        className="w-full text-[13.5px] leading-relaxed p-3 rounded-lg border border-line bg-surface-1 focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                        className="w-full text-base leading-relaxed p-3 rounded-lg border border-line bg-surface-1 focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent"
                       />
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                       <div>
-                        <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Soru No</label>
+                        <label className="text-xs font-medium text-ink-3 block mb-1">Soru No</label>
                         <input
                           type="number"
                           value={editDraft.questionNumber ?? ''}
                           onChange={(e) => handleFormChange('questionNumber', e.target.value === '' ? 0 : Number(e.target.value))}
-                          className="w-full h-9 px-2.5 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                          className="w-full h-9 px-2.5 text-sm rounded-lg border border-line bg-surface-1 focus:bg-white"
                         />
                       </div>
                       <div>
-                        <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Ders / Branş</label>
+                        <label className="text-xs font-medium text-ink-3 block mb-1">Ders / Branş</label>
                         <input
                           type="text"
                           value={editDraft.discipline || ''}
                           onChange={(e) => handleFormChange('discipline', e.target.value)}
                           placeholder="Örn: Patoloji"
-                          className="w-full h-9 px-2.5 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                          className="w-full h-9 px-2.5 text-sm rounded-lg border border-line bg-surface-1 focus:bg-white"
                         />
                       </div>
                       <div>
-                        <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Konu Başlığı</label>
+                        <label className="text-xs font-medium text-ink-3 block mb-1">Konu Başlığı</label>
                         <input
                           type="text"
                           value={editDraft.topic || ''}
                           onChange={(e) => handleFormChange('topic', e.target.value)}
                           placeholder="Örn: Hücre Zedelenmesi"
-                          className="w-full h-9 px-2.5 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                          className="w-full h-9 px-2.5 text-sm rounded-lg border border-line bg-surface-1 focus:bg-white"
                         />
                       </div>
                       <div>
-                        <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Durum</label>
+                        <label className="text-xs font-medium text-ink-3 block mb-1">Durum</label>
                         <select
                           value={editDraft.status || 'gathering'}
                           onChange={(e) => handleFormChange('status', e.target.value)}
-                          className="w-full h-9 px-2 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                          className="w-full h-9 px-2 text-sm rounded-lg border border-line bg-surface-1 focus:bg-white"
                         >
                           <option value="completed">Doğrulandı</option>
                           <option value="gathering">Taslak</option>
@@ -998,23 +998,23 @@ export const ManageDataSection: React.FC<Props> = ({
                       {ds.id === 'past' && (
                         <>
                           <div>
-                            <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Sınav Yılı</label>
+                            <label className="text-xs font-medium text-ink-3 block mb-1">Sınav Yılı</label>
                             <input
                               type="text"
                               value={editDraft.examYear || ''}
                               onChange={(e) => handleFormChange('examYear', e.target.value)}
                               placeholder="Örn: 2024-2025"
-                              className="w-full h-9 px-2.5 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                              className="w-full h-9 px-2.5 text-sm rounded-lg border border-line bg-surface-1 focus:bg-white"
                             />
                           </div>
                           <div>
-                            <label className="text-[11.5px] font-medium text-ink-3 block mb-1">Kurul Kodu</label>
+                            <label className="text-xs font-medium text-ink-3 block mb-1">Kurul Kodu</label>
                             <input
                               type="text"
                               value={editDraft.committeeId || ''}
                               onChange={(e) => handleFormChange('committeeId', e.target.value)}
                               placeholder="Örn: donem3-kurul1"
-                              className="w-full h-9 px-2.5 text-[13px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                              className="w-full h-9 px-2.5 text-sm rounded-lg border border-line bg-surface-1 focus:bg-white"
                             />
                           </div>
                         </>
@@ -1023,8 +1023,8 @@ export const ManageDataSection: React.FC<Props> = ({
 
                     <div className="flex flex-col gap-2">
                       <div className="flex items-center justify-between">
-                        <label className="text-[12.5px] font-semibold text-ink">Şıklar ve Doğru Cevap</label>
-                        <span className="text-[11.5px] text-ink-3">Doğru şık için harfe tıklayın</span>
+                        <label className="text-sm font-semibold text-ink">Şıklar ve Doğru Cevap</label>
+                        <span className="text-xs text-ink-3">Doğru şık için harfe tıklayın</span>
                       </div>
                       {['A', 'B', 'C', 'D', 'E'].map((letter) => {
                         const currentOpt =
@@ -1036,14 +1036,14 @@ export const ManageDataSection: React.FC<Props> = ({
                           <div
                             key={letter}
                             className={`flex items-start gap-2 p-2 rounded-lg border transition-colors ${
-                              isCorrect ? 'bg-emerald-50/70 border-emerald-300' : 'bg-surface-1 border-line-soft'
+                              isCorrect ? 'bg-ok-soft/70 border-ok/30' : 'bg-surface-1 border-line-soft'
                             }`}
                           >
                             <button
                               type="button"
                               onClick={() => handleQuestionAnswerChange(letter)}
-                              className={`w-7 h-7 rounded-md font-bold text-[12px] flex items-center justify-center shrink-0 transition-colors ${
-                                isCorrect ? 'bg-emerald-600 text-white shadow-xs' : 'bg-surface-2 text-ink-3 hover:bg-emerald-100 hover:text-emerald-700'
+                              className={`w-7 h-7 rounded-md font-bold text-xs flex items-center justify-center shrink-0 transition-colors ${
+                                isCorrect ? 'bg-ok text-white shadow-xs' : 'bg-surface-2 text-ink-3 hover:bg-ok-soft hover:text-ok'
                               }`}
                               title={isCorrect ? 'Doğru cevap seçili' : 'Doğru cevap olarak işaretle'}
                             >
@@ -1054,10 +1054,10 @@ export const ManageDataSection: React.FC<Props> = ({
                               value={currentOpt?.text || ''}
                               onChange={(e) => handleQuestionOptionChange(letter, e.target.value)}
                               placeholder={`${letter} şıkkı metni...`}
-                              className="flex-1 min-w-0 bg-transparent text-[13px] border-none outline-none py-1 text-ink"
+                              className="flex-1 min-w-0 bg-transparent text-sm border-none outline-none py-1 text-ink"
                             />
                             {isCorrect && (
-                              <span className="text-[11px] font-medium text-emerald-700 px-1.5 py-0.5 bg-emerald-100/80 rounded shrink-0">
+                              <span className="text-2xs font-medium text-ok px-1.5 py-0.5 bg-ok-soft/80 rounded shrink-0">
                                 Doğru
                               </span>
                             )}
@@ -1067,13 +1067,13 @@ export const ManageDataSection: React.FC<Props> = ({
                     </div>
 
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-[12.5px] font-semibold text-ink">Çözüm ve Tıbbi Açıklama</label>
+                      <label className="text-sm font-semibold text-ink">Çözüm ve Tıbbi Açıklama</label>
                       <textarea
                         value={editDraft.reconstruction?.explanation || editDraft.explanation || editDraft.clinicalExplanation || ''}
                         onChange={(e) => handleQuestionExplanationChange(e.target.value)}
                         rows={4}
                         placeholder="Sorunun ayrıntılı fizyopatolojik gerekçesi ve şık analizleri..."
-                        className="w-full text-[13px] leading-relaxed p-3 rounded-lg border border-line bg-surface-1 focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                        className="w-full text-sm leading-relaxed p-3 rounded-lg border border-line bg-surface-1 focus:bg-white focus:outline-none focus:ring-2 focus:ring-accent"
                       />
                     </div>
                   </>
@@ -1082,38 +1082,38 @@ export const ManageDataSection: React.FC<Props> = ({
                 {ds.id === 'users' && (
                   <div className="flex flex-col gap-3">
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Ad Soyad</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Ad Soyad</label>
                       <input
                         type="text"
                         value={editDraft.displayName || ''}
                         onChange={(e) => handleFormChange('displayName', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">E-posta</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">E-posta</label>
                       <input
                         type="email"
                         value={editDraft.email || ''}
                         onChange={(e) => handleFormChange('email', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Öğrenci Numarası</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Öğrenci Numarası</label>
                       <input
                         type="text"
                         value={editDraft.studentNumber || ''}
                         onChange={(e) => handleFormChange('studentNumber', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Rol</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Rol</label>
                       <select
                         value={editDraft.role || 'student'}
                         onChange={(e) => handleFormChange('role', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       >
                         <option value="student">Öğrenci</option>
                         <option value="admin">Yönetici</option>
@@ -1125,39 +1125,39 @@ export const ManageDataSection: React.FC<Props> = ({
                 {ds.id === 'glossary' && (
                   <div className="flex flex-col gap-3">
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Terim</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Terim</label>
                       <input
                         type="text"
                         value={editDraft.term || ''}
                         onChange={(e) => handleFormChange('term', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Kategori</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Kategori</label>
                       <input
                         type="text"
                         value={editDraft.category || ''}
                         onChange={(e) => handleFormChange('category', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Tanım</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Tanım</label>
                       <textarea
                         rows={4}
                         value={editDraft.definition || ''}
                         onChange={(e) => handleFormChange('definition', e.target.value)}
-                        className="w-full p-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full p-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Klinik Spot (Pearls)</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Klinik Spot (Pearls)</label>
                       <textarea
                         rows={3}
                         value={editDraft.clinicalPearls || ''}
                         onChange={(e) => handleFormChange('clinicalPearls', e.target.value)}
-                        className="w-full p-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full p-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                   </div>
@@ -1166,39 +1166,39 @@ export const ManageDataSection: React.FC<Props> = ({
                 {ds.id === 'summaries' && (
                   <div className="flex flex-col gap-3">
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Başlık</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Başlık</label>
                       <input
                         type="text"
                         value={editDraft.title || ''}
                         onChange={(e) => handleFormChange('title', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Ders / Branş</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Ders / Branş</label>
                       <input
                         type="text"
                         value={editDraft.discipline || ''}
                         onChange={(e) => handleFormChange('discipline', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Kurul</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Kurul</label>
                       <input
                         type="number"
                         value={editDraft.kurul || ''}
                         onChange={(e) => handleFormChange('kurul', Number(e.target.value))}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Dosya Adı</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Dosya Adı</label>
                       <input
                         type="text"
                         value={editDraft.fileName || ''}
                         onChange={(e) => handleFormChange('fileName', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                   </div>
@@ -1207,30 +1207,30 @@ export const ManageDataSection: React.FC<Props> = ({
                 {ds.id === 'decks' && (
                   <div className="flex flex-col gap-3">
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Ders Başlığı</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Ders Başlığı</label>
                       <input
                         type="text"
                         value={editDraft.title || ''}
                         onChange={(e) => handleFormChange('title', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Branş</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Branş</label>
                       <input
                         type="text"
                         value={editDraft.discipline || ''}
                         onChange={(e) => handleFormChange('discipline', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                     <div>
-                      <label className="text-[12px] font-medium text-ink-3 block mb-1">Öğretim Üyesi (Hoca)</label>
+                      <label className="text-xs font-medium text-ink-3 block mb-1">Öğretim Üyesi (Hoca)</label>
                       <input
                         type="text"
                         value={editDraft.instructor || ''}
                         onChange={(e) => handleFormChange('instructor', e.target.value)}
-                        className="w-full h-9 px-3 text-[13.5px] rounded-lg border border-line bg-surface-1 focus:bg-white"
+                        className="w-full h-9 px-3 text-base rounded-lg border border-line bg-surface-1 focus:bg-white"
                       />
                     </div>
                   </div>

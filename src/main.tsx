@@ -2,6 +2,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+import './styles/health.css';
 import { installToastBridge } from './components/ui/Toast';
 import { applyTheme, readTheme } from './utils/theme';
 import { applyUiVersion } from './utils/uiVersion';
@@ -107,27 +108,27 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
       const isChunkError = /Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg);
 
       return (
-        <div className="min-h-dvh bg-slate-900 text-white flex flex-col items-center justify-center p-4">
-          <div className="max-w-md w-full bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-2xl text-center space-y-4">
-            <div className="w-12 h-12 bg-rose-500/20 text-rose-400 rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+        <div className="min-h-dvh bg-ink text-white flex flex-col items-center justify-center p-4">
+          <div className="max-w-md w-full bg-ink border border-line-2 rounded-2xl p-6 shadow-2xl text-center space-y-4">
+            <div className="w-12 h-12 bg-bad/20 text-bad-text rounded-full flex items-center justify-center mx-auto text-xl font-bold">
               !
             </div>
-            <h2 className="text-lg font-bold text-slate-100">
+            <h2 className="text-lg font-bold text-ink-3">
               {isChunkError ? 'Yeni Sürüm Tespit Edildi' : 'Uygulama Yüklenirken Bir Sorun Oluştu'}
             </h2>
-            <p className="text-xs text-slate-400 font-mono bg-slate-950 p-3 rounded-lg text-left overflow-auto max-h-32">
+            <p className="text-xs text-ink-3 font-mono bg-ink p-3 rounded-lg text-left overflow-auto max-h-32">
               {msg}
             </p>
             <div className="flex flex-col sm:flex-row gap-2 justify-center pt-2">
               <button
                 onClick={this.handleSoftReload}
-                className="bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold px-4 py-2.5 rounded-lg cursor-pointer transition-colors"
+                className="bg-ok hover:bg-ok text-white text-xs font-bold px-4 py-2.5 rounded-lg cursor-pointer transition-colors"
               >
                 Sayfayı Yenile (Güncelle)
               </button>
               <button
                 onClick={this.handleHardReset}
-                className="bg-slate-700 hover:bg-slate-600 text-slate-300 text-xs font-medium px-3 py-2.5 rounded-lg cursor-pointer transition-colors"
+                className="bg-ink-2 hover:bg-ink-2 text-ink-3 text-xs font-medium px-3 py-2.5 rounded-lg cursor-pointer transition-colors"
               >
                 Önbelleği Sıfırla
               </button>

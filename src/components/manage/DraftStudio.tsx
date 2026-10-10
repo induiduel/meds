@@ -77,7 +77,7 @@ const DT = 'application/x-medsoru-studio';
 
 const KIND_STYLE: Record<FragKind, string> = {
   stem: 'bg-accent-soft text-accent',
-  option: 'bg-violet-50 text-violet-700',
+  option: 'bg-ai-soft text-ai',
   clue: 'bg-warn-soft text-warn',
   answer: 'bg-ok-soft text-ok',
 };
@@ -631,8 +631,8 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
           <div className="flex items-center gap-3 px-5 py-3.5 border-b border-line">
             <Bot className="w-5 h-5 text-accent" />
             <div className="flex-1 min-w-0">
-              <b className="text-[15px]">AI ile dönüştür</b>
-              <div className="text-[12.5px] text-ink-3 truncate">{c.title || 'Adsız aday'} · {c.fragmentIds.length} parça · kaynaklara dayalı</div>
+              <b className="text-md">AI ile dönüştür</b>
+              <div className="text-sm text-ink-3 truncate">{c.title || 'Adsız aday'} · {c.fragmentIds.length} parça · kaynaklara dayalı</div>
             </div>
             <button type="button" aria-label="Kapat" onClick={() => !aiSaving && setAiFor(null)} className="ms-btn is-ghost is-icon"><X className="w-4 h-4" /></button>
           </div>
@@ -650,7 +650,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                       onClick={() => setAiTargets((p) => (on ? p.filter((x) => x !== m.target) : [...p, m.target]))}
                       aria-pressed={on}
                       title={m.available ? '' : 'Ollama’da bu model yüklü değil'}
-                      className={`h-9 px-3 rounded-full text-[13px] inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed ${on ? 'bg-ink text-white font-semibold' : 'bg-field text-ink-2'}`}
+                      className={`h-9 px-3 rounded-full text-sm inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed ${on ? 'bg-ink text-white font-semibold' : 'bg-field text-ink-2'}`}
                     >
                       {m.local ? <Cpu className="w-4 h-4" /> : <Cloud className="w-4 h-4" />}
                       {m.label}
@@ -659,7 +659,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                   );
                 })}
               </div>
-              <span className="text-[12px] text-ink-3">
+              <span className="text-xs text-ink-3">
                 {aiModels?.embed?.available ? `${aiModels.embed.model}: kaynakları anlam benzerliğine göre sıralar (gömme modeli, soru yazmaz). ` : ''}
                 {aiModels && !aiModels.ollamaReachable ? 'Ollama’ya ulaşılamadı; yalnız bulut çalışır. ' : ''}
                 Yerel modeller sırayla çalışır; ilk sonuç bulut ya da ilk biten modelden gelir.
@@ -669,7 +669,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                   {loadingCount > 0 ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
                   {loadingCount > 0 ? `${loadingCount} model çalışıyor…` : results.length ? 'Yeniden üret' : 'Soruları üret'}
                 </button>
-                {results.length > 0 && <span className="text-[12.5px] text-ink-3">{okCount} sonuç hazır</span>}
+                {results.length > 0 && <span className="text-sm text-ink-3">{okCount} sonuç hazır</span>}
               </div>
             </section>
 
@@ -679,17 +679,17 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                   const picked = aiPick.includes(t);
                   if (r === 'loading')
                     return (
-                      <div key={t} className="rounded-2xl bg-field p-4 flex items-center gap-3 text-[13px] text-ink-2 min-h-[120px]">
+                      <div key={t} className="rounded-2xl bg-field p-4 flex items-center gap-3 text-sm text-ink-2 min-h-[120px]">
                         <Loader2 className="w-5 h-5 animate-spin text-accent" />
                         <span><b className="text-ink">{t === 'cloud' ? 'Bulut AI' : t}</b> soru yazıyor…</span>
                       </div>
                     );
                   if (!r.ok)
                     return (
-                      <div key={t} className="ms-pop-in rounded-2xl bg-bad-soft p-4 text-[13px] flex flex-col gap-1">
+                      <div key={t} className="ms-pop-in rounded-2xl bg-bad-soft p-4 text-sm flex flex-col gap-1">
                         <b className="text-bad-text">{r.label} · başarısız</b>
                         <span className="text-ink-2">{r.error}</span>
-                        <button type="button" onClick={() => { setAiResults((p) => ({ ...p, [t]: 'loading' })); ApiService.studioAiGenerate(adminEmail, t, aiInputOf(c)).then((x) => setAiResults((p) => ({ ...p, [t]: x }))); }} className="self-start h-8 px-3 rounded-full bg-white text-[12.5px] font-semibold cursor-pointer mt-1">Tekrar dene</button>
+                        <button type="button" onClick={() => { setAiResults((p) => ({ ...p, [t]: 'loading' })); ApiService.studioAiGenerate(adminEmail, t, aiInputOf(c)).then((x) => setAiResults((p) => ({ ...p, [t]: x }))); }} className="self-start h-8 px-3 rounded-full bg-white text-sm font-semibold cursor-pointer mt-1">Tekrar dene</button>
                       </div>
                     );
                   const q = r.question!;
@@ -698,9 +698,9 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                       <div className="flex items-center gap-2">
                         <label className="inline-flex items-center gap-2 cursor-pointer flex-1 min-w-0">
                           <input type="checkbox" checked={picked} onChange={() => setAiPick((p) => (picked ? p.filter((x) => x !== t) : [...p, t]))} className="w-4 h-4 accent-[var(--color-accent)]" />
-                          <span className="text-[13px] font-semibold truncate">{r.label}</span>
+                          <span className="text-sm font-semibold truncate">{r.label}</span>
                         </label>
-                        <span className="text-[11.5px] text-ink-3 font-mono">%{q.confidence} · {(r.ms / 1000).toFixed(1)} sn</span>
+                        <span className="text-xs text-ink-3 font-mono">%{q.confidence} · {(r.ms / 1000).toFixed(1)} sn</span>
                         <button
                           type="button"
                           onClick={() => {
@@ -708,7 +708,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                             setAiPick((p) => (p.includes(t) ? p : [...p, t]));
                           }}
                           title="Ana soru: adayın taslağına yazılır; diğer seçilenler alternatif olarak ayrı kaydedilir"
-                          className={`h-7 px-2.5 rounded-full text-[12px] inline-flex items-center gap-1 cursor-pointer ${aiPrimary === t ? 'bg-warn-soft text-warn font-semibold' : 'bg-field text-ink-3 hover:text-ink'}`}
+                          className={`h-7 px-2.5 rounded-full text-xs inline-flex items-center gap-1 cursor-pointer ${aiPrimary === t ? 'bg-warn-soft text-warn font-semibold' : 'bg-field text-ink-3 hover:text-ink'}`}
                         >
                           <Star className="w-3.5 h-3.5" /> {aiPrimary === t ? 'Ana soru' : 'Ana yap'}
                         </button>
@@ -718,29 +718,29 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                         const claimed = c.answer ? fold(c.options[c.answer] || '').trim() : '';
                         const modelText = fold(q.options.find((o) => o.key === q.correctAnswer)?.text || '');
                         return claimed && modelText && !modelText.includes(claimed) && !claimed.includes(modelText) ? (
-                          <span className="self-start text-[12px] font-semibold px-2 py-0.5 rounded-full bg-warn-soft text-warn">
+                          <span className="self-start text-xs font-semibold px-2 py-0.5 rounded-full bg-warn-soft text-warn">
                             Cevabı editördekiyle çelişiyor ({c.answer}: {c.options[c.answer!]})
                           </span>
                         ) : null;
                       })()}
-                      <p className="m-0 text-[14px] leading-relaxed text-ink font-medium">{q.stem}</p>
+                      <p className="m-0 text-base leading-relaxed text-ink font-medium">{q.stem}</p>
                       <ol className="list-none m-0 p-0 flex flex-col gap-1">
                         {q.options.map((o) => (
-                          <li key={o.key} className={`flex gap-2 px-2.5 py-1.5 rounded-lg text-[13px] ${o.key === q.correctAnswer ? 'bg-ok-soft text-ok font-semibold' : 'bg-field text-ink-2'}`}>
+                          <li key={o.key} className={`flex gap-2 px-2.5 py-1.5 rounded-lg text-sm ${o.key === q.correctAnswer ? 'bg-ok-soft text-ok font-semibold' : 'bg-field text-ink-2'}`}>
                             <b className="font-mono">{o.key}</b>
                             <span>{o.text}</span>
                           </li>
                         ))}
                       </ol>
-                      {q.explanation && <p className="m-0 text-[12.5px] text-ink-2 leading-relaxed line-clamp-5" title={q.explanation}>{q.explanation}</p>}
+                      {q.explanation && <p className="m-0 text-sm text-ink-2 leading-relaxed line-clamp-5" title={q.explanation}>{q.explanation}</p>}
                       {r.sources.length > 0 && (
                         <div className="flex flex-wrap gap-1">
                           {r.sources.map((src, i) => (
-                            <span key={i} className="text-[11.5px] px-2 py-0.5 rounded-full bg-field text-ink-3 truncate max-w-[260px]" title={src.snippet}>
+                            <span key={i} className="text-xs px-2 py-0.5 rounded-full bg-field text-ink-3 truncate max-w-[260px]" title={src.snippet}>
                               {src.title}{src.pageNumber ? ` · s.${src.pageNumber}` : ''}
                             </span>
                           ))}
-                          {r.reranked && <span className="text-[11px] text-ink-3">· bge-m3 ile sıralandı</span>}
+                          {r.reranked && <span className="text-2xs text-ink-3">· bge-m3 ile sıralandı</span>}
                         </div>
                       )}
                       <button
@@ -753,7 +753,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                           });
                           notify('Sonuç editöre aktarıldı; dilediğin gibi düzenleyebilirsin.');
                         }}
-                        className="self-start h-8 px-3 rounded-full text-accent hover:bg-accent-soft text-[12.5px] font-semibold cursor-pointer"
+                        className="self-start h-8 px-3 rounded-full text-accent hover:bg-accent-soft text-sm font-semibold cursor-pointer"
                       >
                         Editöre aktar
                       </button>
@@ -764,7 +764,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             )}
           </div>
           <div className="flex flex-wrap items-center gap-2 px-5 py-3 border-t border-line">
-            <span className="text-[12.5px] text-ink-3 flex-1 min-w-[200px]">
+            <span className="text-sm text-ink-3 flex-1 min-w-[200px]">
               {aiPick.length ? `${aiPick.length} seçili · ana soru adayın taslağına yazılır, diğerleri alternatif olarak ayrı kaydedilir.` : 'Kaydetmek için sonuçları işaretle; birden çok seçebilirsin.'}
             </span>
             <button type="button" onClick={() => setAiFor(null)} disabled={aiSaving} className="ms-btn">Kapat</button>
@@ -875,7 +875,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             setInspectorOpen(true);
           }
         }}
-        className={`group/frag relative flex items-start gap-2 rounded-xl border bg-white px-2.5 py-2 text-[13px] leading-snug cursor-grab active:cursor-grabbing select-none transition-colors ${
+        className={`group/frag relative flex items-start gap-2 rounded-xl border bg-white px-2.5 py-2 text-sm leading-snug cursor-grab active:cursor-grabbing select-none transition-colors ${
           on ? 'border-accent ring-2 ring-accent-soft' : isPicked ? 'border-accent bg-accent-soft/40' : 'border-line hover:border-line-2'
         } ${hidden.has(f.id) ? 'opacity-50' : ''}`}
         title="Sürükle: adaya bırak · Shift/Ctrl+tık: çoklu seç"
@@ -883,8 +883,8 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
         <GripVertical className="w-3.5 h-3.5 mt-0.5 text-ink-3 shrink-0 opacity-0 group-hover/frag:opacity-100" aria-hidden="true" />
         <span className="flex-1 min-w-0">
           <span className="flex items-center gap-1.5 mb-0.5">
-            <span className={`text-[11px] font-semibold px-1.5 rounded-md ${KIND_STYLE[f.kind]}`}>{KIND_LABEL[f.kind]}</span>
-            {!compact && <span className="text-[11.5px] text-ink-3 truncate">{f.discipline}{f.questionNumber ? ` · No ${f.questionNumber}` : ''}</span>}
+            <span className={`text-2xs font-semibold px-1.5 rounded-md ${KIND_STYLE[f.kind]}`}>{KIND_LABEL[f.kind]}</span>
+            {!compact && <span className="text-xs text-ink-3 truncate">{f.discipline}{f.questionNumber ? ` · No ${f.questionNumber}` : ''}</span>}
           </span>
           <span className={compact ? 'line-clamp-2 text-ink-2' : 'line-clamp-3 text-ink'}>{f.text}</span>
         </span>
@@ -946,19 +946,19 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
           </button>
           <span className={`w-2 h-2 rounded-full shrink-0 ${STATUS[c.status].dot}`} title={STATUS[c.status].label} />
           <span className="flex-1 min-w-0">
-            <span className="block text-[13.5px] font-medium text-ink truncate">{c.title || 'Adsız aday'}</span>
-            <span className="block text-[12px] text-ink-3 truncate">
+            <span className="block text-base font-medium text-ink truncate">{c.title || 'Adsız aday'}</span>
+            <span className="block text-xs text-ink-3 truncate">
               {c.fragmentIds.length} parça · {optCount(c)}/5 şık{c.answer ? ` · cevap ${c.answer}` : ''}
               {c.questionNumber ? ` · No ${c.questionNumber}` : ''}
             </span>
           </span>
           {c.status !== 'done' && c.stem.trim() && optCount(c) >= 4 && c.answer && (
-            <span className="text-[11px] font-semibold text-ok bg-ok-soft px-1.5 rounded-md shrink-0">tam</span>
+            <span className="text-2xs font-semibold text-ok bg-ok-soft px-1.5 rounded-md shrink-0">tam</span>
           )}
         </div>
         {open && (
           <div className="ms-pop-in flex flex-col gap-1.5 py-1.5 pr-1 border-l-2 border-line ml-[18px]" style={{ marginLeft: depth * 20 + 18, paddingLeft: 12 }}>
-            {c.fragmentIds.length === 0 && <span className="text-[12.5px] text-ink-3 py-1">Parça yok — havuzdan sürükleyip buraya bırak.</span>}
+            {c.fragmentIds.length === 0 && <span className="text-sm text-ink-3 py-1">Parça yok — havuzdan sürükleyip buraya bırak.</span>}
             {c.fragmentIds.map((id) => {
               const f = fragById.get(id);
               return f ? <React.Fragment key={id}>{FragChip({ f: f, compact: true, inCand: c.id })}</React.Fragment> : null;
@@ -1024,11 +1024,11 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                 if (e.key === 'Enter') (e.target as HTMLInputElement).blur();
                 if (e.key === 'Escape') setEditing(false);
               }}
-              className="flex-1 min-w-0 h-8 px-2 rounded-lg bg-white border border-accent text-[14px] font-semibold outline-0"
+              className="flex-1 min-w-0 h-8 px-2 rounded-lg bg-white border border-accent text-base font-semibold outline-0"
             />
           ) : (
             <span
-              className="flex-1 min-w-0 truncate text-[14px] font-semibold text-ink"
+              className="flex-1 min-w-0 truncate text-base font-semibold text-ink"
               onDoubleClick={(e) => {
                 e.stopPropagation();
                 if (g) setEditing(true);
@@ -1039,9 +1039,9 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             </span>
           )}
           {g?.discipline && depth === 0 && g.discipline !== g.label && (
-            <span className="text-[11.5px] text-ink-3 bg-field px-2 rounded-full truncate max-w-[140px]">{g.discipline}</span>
+            <span className="text-xs text-ink-3 bg-field px-2 rounded-full truncate max-w-[140px]">{g.discipline}</span>
           )}
-          <span className="text-[12px] font-mono text-ink-3 shrink-0">{cands.length}</span>
+          <span className="text-xs font-mono text-ink-3 shrink-0">{cands.length}</span>
           {g && (
             <span className="flex items-center gap-0.5 shrink-0" onClick={(e) => e.stopPropagation()}>
               <button type="button" title="Alt konu ekle" aria-label="Alt konu ekle" onClick={() => createGroup(g.id)} className="w-7 h-7 rounded-lg flex items-center justify-center text-ink-3 hover:text-ink hover:bg-white">
@@ -1055,7 +1055,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                 title="Gruptaki tüm adayları (kök, şık, parça) birleştir ve AI ile tek soruya dönüştür"
                 aria-label="Grubu AI ile dönüştür"
                 onClick={() => mergeGroupForAi(g.id)}
-                className="h-7 px-2 rounded-lg flex items-center gap-1 text-[12px] font-semibold text-accent hover:bg-white"
+                className="h-7 px-2 rounded-lg flex items-center gap-1 text-xs font-semibold text-accent hover:bg-white"
               >
                 <Bot className="w-4 h-4" /> <span className="hidden xl:inline">Grubu dönüştür</span>
               </button>
@@ -1071,7 +1071,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
               <React.Fragment key={c.id}>{CandRow({ c: c, depth: depth + 1 })}</React.Fragment>
             ))}
             {g && kids.length === 0 && cands.length === 0 && (
-              <li className="text-[12.5px] text-ink-3 py-1.5" style={{ marginLeft: (depth + 1) * 20 + 36 }}>
+              <li className="text-sm text-ink-3 py-1.5" style={{ marginLeft: (depth + 1) * 20 + 36 }}>
                 Boş — parça ya da aday sürükle.
               </li>
             )}
@@ -1094,7 +1094,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
       {state.groups.length === 0 && state.candidates.length === 0 && (EmptyHint())}
       <div
         {...dropProps('new-cand', ['frag'], (it) => createCandidate(fragIds(it)))}
-        className={`mt-1 min-h-14 rounded-2xl border-2 border-dashed border-line flex items-center justify-center gap-2 text-[13px] text-ink-3 ${zoneCls('new-cand', ['frag'])}`}
+        className={`mt-1 min-h-14 rounded-2xl border-2 border-dashed border-line flex items-center justify-center gap-2 text-sm text-ink-3 ${zoneCls('new-cand', ['frag'])}`}
       >
         <Plus className="w-4 h-4" /> Parçaları buraya bırak: yeni aday
       </div>
@@ -1102,7 +1102,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
   );
 
   const EmptyHint = () => (
-    <div className="rounded-2xl bg-field px-5 py-6 text-[13.5px] text-ink-2 flex flex-col gap-2">
+    <div className="rounded-2xl bg-field px-5 py-6 text-base text-ink-2 flex flex-col gap-2">
       <b className="text-ink">Nasıl çalışır?</b>
       <span>1. Soldaki havuzdan parçaları sürükleyip “yeni aday” alanına bırak ya da <b>Otomatik grupla</b> ile öneri al.</span>
       <span>2. Adayları konulara topla: <b>Konu ekle</b>, alt konu, sürükle bırak.</span>
@@ -1136,8 +1136,8 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
               >
                 <span className={`w-2 h-2 rounded-full mt-1.5 shrink-0 ${STATUS[c.status].dot}`} />
                 <span className="flex-1 min-w-0">
-                  <span className="block text-[13.5px] font-semibold text-ink line-clamp-2">{c.title || 'Adsız aday'}</span>
-                  <span className="block text-[11.5px] text-ink-3 truncate">{groupPath(c.groupId) || 'Gruplanmamış'}</span>
+                  <span className="block text-base font-semibold text-ink line-clamp-2">{c.title || 'Adsız aday'}</span>
+                  <span className="block text-xs text-ink-3 truncate">{groupPath(c.groupId) || 'Gruplanmamış'}</span>
                 </span>
               </button>
               {(['stem', 'option', 'clue', 'answer'] as FragKind[]).map((k) => {
@@ -1145,20 +1145,20 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                 if (!fs.length) return null;
                 return (
                   <div key={k} className="flex flex-col gap-1.5">
-                    <span className="text-[11px] font-semibold uppercase tracking-[.06em] text-ink-3 px-1">{KIND_LABEL[k]} · {fs.length}</span>
+                    <span className="text-2xs font-semibold uppercase tracking-[.06em] text-ink-3 px-1">{KIND_LABEL[k]} · {fs.length}</span>
                     {fs.map((f) => (
                       <React.Fragment key={f.id}>{FragChip({ f: f, compact: true, inCand: c.id })}</React.Fragment>
                     ))}
                   </div>
                 );
               })}
-              <div className="text-[11.5px] text-ink-3 px-1">{optCount(c)}/5 şık · {c.answer ? `cevap ${c.answer}` : 'cevap yok'}</div>
+              <div className="text-xs text-ink-3 px-1">{optCount(c)}/5 şık · {c.answer ? `cevap ${c.answer}` : 'cevap yok'}</div>
             </section>
           );
         })}
         <section
           {...dropProps('board-new', ['frag'], (it) => createCandidate(fragIds(it)))}
-          className={`w-[240px] shrink-0 min-h-[160px] rounded-2xl border-2 border-dashed border-line flex flex-col items-center justify-center gap-2 text-[13px] text-ink-3 p-4 text-center ${zoneCls('board-new', ['frag'])}`}
+          className={`w-[240px] shrink-0 min-h-[160px] rounded-2xl border-2 border-dashed border-line flex flex-col items-center justify-center gap-2 text-sm text-ink-3 p-4 text-center ${zoneCls('board-new', ['frag'])}`}
         >
           <Plus className="w-5 h-5" />
           Parçayı bırak: yeni aday sütunu
@@ -1232,7 +1232,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
 
     return (
       <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-1.5 text-[12.5px] text-ink-3">
+        <div className="flex items-center gap-1.5 text-sm text-ink-3">
           <span className="flex-1">Parçalar → aday → konu. Düğümleri tutup taşı; parçayı aday düğümüne bırak.</span>
           <button type="button" aria-label="Uzaklaş" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.1).toFixed(2)))} className="w-8 h-8 rounded-lg hover:bg-field flex items-center justify-center"><ZoomOut className="w-4 h-4" /></button>
           <span className="font-mono w-10 text-center">{Math.round(zoom * 100)}%</span>
@@ -1273,10 +1273,10 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                       setSel({ t: 'frag', id: f.id });
                       setInspectorOpen(true);
                     }}
-                    className={`absolute rounded-xl bg-white shadow-sm px-2.5 py-1.5 text-[12px] leading-snug cursor-move touch-none ${sel?.id === f.id ? 'ring-2 ring-accent' : ''}`}
+                    className={`absolute rounded-xl bg-white shadow-sm px-2.5 py-1.5 text-xs leading-snug cursor-move touch-none ${sel?.id === f.id ? 'ring-2 ring-accent' : ''}`}
                     style={{ left: p.x, top: p.y, width: NODE_W, height: FRAG_H }}
                   >
-                    <span className={`text-[11.5px] font-semibold px-1.5 rounded-md ${KIND_STYLE[f.kind]}`}>{KIND_LABEL[f.kind]}</span>
+                    <span className={`text-xs font-semibold px-1.5 rounded-md ${KIND_STYLE[f.kind]}`}>{KIND_LABEL[f.kind]}</span>
                     <span className="block line-clamp-2 text-ink-2 mt-0.5">{f.text}</span>
                   </div>
                 );
@@ -1298,8 +1298,8 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                     } ${sel?.id === c.id ? 'ring-2 ring-accent' : ''} ${zoneCls(zone, ['frag'])}`}
                     style={{ left: p.x, top: p.y, width: NODE_W, height: CAND_H }}
                   >
-                    <span className="block text-[13px] font-semibold text-ink line-clamp-2">{c.title || 'Adsız aday'}</span>
-                    <span className="block text-[11.5px] text-ink-3">{c.fragmentIds.length} parça · {optCount(c)}/5 şık · {STATUS[c.status].label}</span>
+                    <span className="block text-sm font-semibold text-ink line-clamp-2">{c.title || 'Adsız aday'}</span>
+                    <span className="block text-xs text-ink-3">{c.fragmentIds.length} parça · {optCount(c)}/5 şık · {STATUS[c.status].label}</span>
                   </div>
                 );
               })}
@@ -1313,7 +1313,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                       setSel({ t: 'group', id: g.id });
                       setInspectorOpen(true);
                     }}
-                    className={`absolute rounded-full bg-ink text-white px-4 h-14 flex items-center gap-2 text-[13px] font-semibold cursor-move touch-none shadow-md ${sel?.id === g.id ? 'ring-2 ring-accent' : ''}`}
+                    className={`absolute rounded-full bg-ink text-white px-4 h-14 flex items-center gap-2 text-sm font-semibold cursor-move touch-none shadow-md ${sel?.id === g.id ? 'ring-2 ring-accent' : ''}`}
                     style={{ left: p.x, top: p.y, width: NODE_W }}
                   >
                     <GitBranch className="w-4 h-4 shrink-0" />
@@ -1335,14 +1335,14 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
       <div className="flex flex-col gap-4">
         {suggestions.length > 0 && (
           <section className="rounded-2xl bg-field p-3 flex flex-col gap-2">
-            <b className="text-[13px] text-ink">Eş anlamlı öneriler · aynı kök</b>
+            <b className="text-sm text-ink">Eş anlamlı öneriler · aynı kök</b>
             <div className="flex flex-wrap gap-2">
               {suggestions.map((g) => (
                 <button
                   key={g.join('|')}
                   type="button"
                   onClick={() => g.slice(1).forEach((t) => mergeTerms(t, g[0]))}
-                  className="h-8 px-3 rounded-full bg-white text-[12.5px] text-ink-2 hover:text-accent inline-flex items-center gap-1.5 cursor-pointer"
+                  className="h-8 px-3 rounded-full bg-white text-sm text-ink-2 hover:text-accent inline-flex items-center gap-1.5 cursor-pointer"
                   title="Tek terimde birleştir"
                 >
                   <Merge className="w-3.5 h-3.5" />
@@ -1353,15 +1353,15 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
           </section>
         )}
         {mergeFrom && (
-          <div className="rounded-xl bg-accent-soft text-accent px-3 py-2 text-[13px] flex items-center gap-2">
+          <div className="rounded-xl bg-accent-soft text-accent px-3 py-2 text-sm flex items-center gap-2">
             <b>“{mergeFrom}”</b> hangi terimle birleşsin? Listeden bir terime tıkla.
             <button type="button" onClick={() => setMergeFrom(null)} className="ml-auto h-7 px-2 rounded-lg hover:bg-white cursor-pointer">Vazgeç</button>
           </div>
         )}
         <div className="overflow-auto rounded-2xl bg-white shadow-sm">
-          <table className="w-full text-[13px] border-collapse">
+          <table className="w-full text-sm border-collapse">
             <thead>
-              <tr className="text-left text-[12px] text-ink-3">
+              <tr className="text-left text-xs text-ink-3">
                 <th className="px-3 h-9 font-semibold sticky top-0 bg-white">Terim</th>
                 <th className="px-3 h-9 font-semibold sticky top-0 bg-white">Biçimler</th>
                 <th className="px-3 h-9 font-semibold sticky top-0 bg-white">Parça</th>
@@ -1388,9 +1388,9 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                     <td className="px-3 py-1.5 font-mono">{e.frags.size}</td>
                     <td className="px-3 py-1.5 font-mono">{inCands || '—'}</td>
                     <td className="px-3 py-1.5 text-right whitespace-nowrap">
-                      <button type="button" onClick={() => setMergeFrom(t)} className="h-7 px-2 rounded-lg text-[12px] text-ink-2 hover:bg-white cursor-pointer">Birleştir…</button>
+                      <button type="button" onClick={() => setMergeFrom(t)} className="h-7 px-2 rounded-lg text-xs text-ink-2 hover:bg-white cursor-pointer">Birleştir…</button>
                       {state.synonyms[t] && (
-                        <button type="button" onClick={() => splitTerm(t)} className="h-7 px-2 rounded-lg text-[12px] text-ink-2 hover:bg-white cursor-pointer">Ayır</button>
+                        <button type="button" onClick={() => splitTerm(t)} className="h-7 px-2 rounded-lg text-xs text-ink-2 hover:bg-white cursor-pointer">Ayır</button>
                       )}
                       <button
                         type="button"
@@ -1399,7 +1399,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                           if (ids.length) createCandidate(ids);
                           else notify('Bu terimdeki parçaların hepsi zaten bir adayda.');
                         }}
-                        className="h-7 px-2 rounded-lg text-[12px] text-accent font-semibold hover:bg-accent-soft cursor-pointer"
+                        className="h-7 px-2 rounded-lg text-xs text-accent font-semibold hover:bg-accent-soft cursor-pointer"
                       >
                         Aday yap
                       </button>
@@ -1425,8 +1425,8 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
       .map((g) => ({ id: g.id, label: groupPath(g.id) }))
       .sort((a, b) => a.label.localeCompare(b.label, 'tr'));
 
-  const label = 'text-[11.5px] font-semibold uppercase tracking-[.06em] text-ink-3';
-  const input = 'w-full rounded-xl bg-field border border-transparent px-3 py-2 text-[14px] text-ink outline-0 focus:border-accent focus:bg-white';
+  const label = 'text-xs font-semibold uppercase tracking-[.06em] text-ink-3';
+  const input = 'w-full rounded-xl bg-field border border-transparent px-3 py-2 text-base text-ink outline-0 focus:border-accent focus:bg-white';
 
   const CandidateEditor = ({ c }: { c: StudioCandidate }) => {
     const frs = c.fragmentIds.map((id) => fragById.get(id)).filter((f): f is StudioFragment => !!f);
@@ -1436,7 +1436,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2">
           <span className={`w-2.5 h-2.5 rounded-full ${STATUS[c.status].dot}`} />
-          <input value={c.title} onChange={(e) => updateCand(c.id, { title: e.target.value })} placeholder="Aday adı" aria-label="Aday adı" className="flex-1 min-w-0 bg-transparent text-[16px] font-semibold text-ink outline-0 border-b border-transparent focus:border-accent py-1" />
+          <input value={c.title} onChange={(e) => updateCand(c.id, { title: e.target.value })} placeholder="Aday adı" aria-label="Aday adı" className="flex-1 min-w-0 bg-transparent text-md font-semibold text-ink outline-0 border-b border-transparent focus:border-accent py-1" />
         </div>
         <div className="grid grid-cols-2 gap-2">
           <label className="flex flex-col gap-1">
@@ -1461,7 +1461,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
               <button
                 type="button"
                 onClick={() => updateCand(c.id, { stem: stems.map((f) => f.text).join(' ') })}
-                className="text-[12px] text-accent font-semibold hover:underline cursor-pointer"
+                className="text-xs text-accent font-semibold hover:underline cursor-pointer"
                 title="Kök ve ipucu parçalarını birleştirip kökü doldur"
               >
                 Parçalardan doldur
@@ -1507,12 +1507,12 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                   onClick={() => updateCand(c.id, { answer: c.answer === k ? undefined : k })}
                   aria-pressed={c.answer === k}
                   aria-label={`Cevap ${k}`}
-                  className={`w-8 h-8 shrink-0 rounded-full text-[12.5px] font-semibold font-mono cursor-pointer transition-colors ${c.answer === k ? 'bg-ok text-white' : 'bg-field text-ink-2 hover:bg-line'}`}
+                  className={`w-8 h-8 shrink-0 rounded-full text-sm font-semibold font-mono cursor-pointer transition-colors ${c.answer === k ? 'bg-ok text-white' : 'bg-field text-ink-2 hover:bg-line'}`}
                 >
                   {k}
                 </button>
                 <input value={c.options[k]} onChange={(e) => updateCand(c.id, { options: { ...c.options, [k]: e.target.value } })} placeholder="Şık metni ya da şık parçasını bırak" className={`${input} py-1.5`} />
-                {src && <span className="text-[11px] text-violet-700 shrink-0" title="Bu şık bir parçadan geldi">●</span>}
+                {src && <span className="text-2xs text-ai shrink-0" title="Bu şık bir parçadan geldi">●</span>}
               </div>
             );
           })}
@@ -1522,7 +1522,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
           <span className={label}>Terimler</span>
           <div className="flex flex-wrap gap-1.5">
             {c.terms.map((t) => (
-              <span key={t} className="h-7 pl-2.5 pr-1 rounded-full bg-accent-soft text-accent text-[12.5px] inline-flex items-center gap-1">
+              <span key={t} className="h-7 pl-2.5 pr-1 rounded-full bg-accent-soft text-accent text-sm inline-flex items-center gap-1">
                 {t}
                 <button type="button" aria-label={`${t} kaldır`} onClick={() => updateCand(c.id, { terms: c.terms.filter((x) => x !== t) })} className="w-5 h-5 rounded-full hover:bg-white flex items-center justify-center cursor-pointer">
                   <X className="w-3 h-3" />
@@ -1539,11 +1539,11 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                 }
               }}
               placeholder="+ terim"
-              className="h-7 w-24 px-2 rounded-full bg-field text-[12.5px] outline-0 focus:ring-1 focus:ring-accent"
+              className="h-7 w-24 px-2 rounded-full bg-field text-sm outline-0 focus:ring-1 focus:ring-accent"
             />
           </div>
           {suggestedTerms.length > 0 && (
-            <div className="flex flex-wrap gap-1 text-[12px] text-ink-3">
+            <div className="flex flex-wrap gap-1 text-xs text-ink-3">
               Öneri:
               {suggestedTerms.map((t) => (
                 <button key={t} type="button" onClick={() => updateCand(c.id, { terms: [...c.terms, t] })} className="hover:text-accent cursor-pointer">
@@ -1565,7 +1565,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             {...dropProps(`insp-${c.id}`, ['frag'], (it) => attach(fragIds(it), c.id))}
             className={`flex flex-col gap-1.5 rounded-xl min-h-12 ${zoneCls(`insp-${c.id}`, ['frag'])}`}
           >
-            {frs.length === 0 && <span className="text-[12.5px] text-ink-3 p-2">Parça sürükleyip buraya bırak.</span>}
+            {frs.length === 0 && <span className="text-sm text-ink-3 p-2">Parça sürükleyip buraya bırak.</span>}
             {frs.map((f) => (
               <React.Fragment key={f.id}>{FragChip({ f: f, compact: true, inCand: c.id })}</React.Fragment>
             ))}
@@ -1603,7 +1603,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             <ArrowRight />
           </button>
         </div>
-        {c.convertedQuestionId && <span className="text-[12px] text-ok">Kaydedildi · {c.convertedQuestionId}</span>}
+        {c.convertedQuestionId && <span className="text-xs text-ok">Kaydedildi · {c.convertedQuestionId}</span>}
       </div>
     );
   };
@@ -1619,17 +1619,17 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
     return (
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2">
-          <span className={`text-[12px] font-semibold px-2 rounded-md ${KIND_STYLE[f.kind]}`}>{KIND_LABEL[f.kind]}</span>
-          <span className="text-[12.5px] text-ink-3 truncate">{f.discipline}{f.questionNumber ? ` · No ${f.questionNumber}` : ''}</span>
+          <span className={`text-xs font-semibold px-2 rounded-md ${KIND_STYLE[f.kind]}`}>{KIND_LABEL[f.kind]}</span>
+          <span className="text-sm text-ink-3 truncate">{f.discipline}{f.questionNumber ? ` · No ${f.questionNumber}` : ''}</span>
         </div>
-        <p className="m-0 text-[15px] leading-relaxed text-ink whitespace-pre-wrap">{f.text}</p>
-        <div className="text-[12.5px] text-ink-3">
+        <p className="m-0 text-md leading-relaxed text-ink whitespace-pre-wrap">{f.text}</p>
+        <div className="text-sm text-ink-3">
           {f.author}
           {f.timestamp ? ` · ${new Date(f.timestamp).toLocaleDateString('tr-TR')}` : ''} · taslak <span className="font-mono">{f.draftId}</span>
         </div>
         <div className="flex flex-wrap gap-1.5">
           {f.terms.slice(0, 14).map((t) => (
-            <button key={t} type="button" onClick={() => setQ(canonical(t, state.synonyms))} className="h-7 px-2.5 rounded-full bg-field text-[12.5px] text-ink-2 hover:text-accent cursor-pointer">
+            <button key={t} type="button" onClick={() => setQ(canonical(t, state.synonyms))} className="h-7 px-2.5 rounded-full bg-field text-sm text-ink-2 hover:text-accent cursor-pointer">
               {canonical(t, state.synonyms)}
             </button>
           ))}
@@ -1657,7 +1657,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             <span className={label}>Benzer parçalar</span>
             {similar.map(({ x, s }) => (
               <div key={x.id} className="flex items-start gap-2">
-                <span className="w-9 shrink-0 text-[11.5px] font-mono text-ink-3 pt-2">%{Math.round(s * 100)}</span>
+                <span className="w-9 shrink-0 text-xs font-mono text-ink-3 pt-2">%{Math.round(s * 100)}</span>
                 <div className="flex-1 min-w-0">{FragChip({ f: x, compact: true })}</div>
                 <button
                   type="button"
@@ -1672,7 +1672,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             ))}
           </div>
         )}
-        <button type="button" onClick={() => toggleHide([f.id])} className="self-start h-8 px-3 rounded-full bg-field text-[12.5px] text-ink-2 inline-flex items-center gap-1.5 cursor-pointer">
+        <button type="button" onClick={() => toggleHide([f.id])} className="self-start h-8 px-3 rounded-full bg-field text-sm text-ink-2 inline-flex items-center gap-1.5 cursor-pointer">
           {hidden.has(f.id) ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
           {hidden.has(f.id) ? 'Gizlemeyi kaldır' : 'Gizle (çöp/anlamsız)'}
         </button>
@@ -1700,7 +1700,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
           ))}
         </select>
       </label>
-      <div className="text-[13px] text-ink-2">
+      <div className="text-sm text-ink-2">
         {state.candidates.filter((c) => c.groupId === g.id).length} aday · {state.groups.filter((x) => x.parentId === g.id).length} alt konu
       </div>
       <div className="flex gap-2">
@@ -1709,7 +1709,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
         <span className="flex-1" />
         <button type="button" onClick={() => deleteGroup(g.id)} className="ms-btn is-danger"><Trash2 /> Sil</button>
       </div>
-      <span className="text-[12px] text-ink-3">Silince içindeki adaylar ve alt konular bir üst seviyeye taşınır.</span>
+      <span className="text-xs text-ink-3">Silince içindeki adaylar ve alt konular bir üst seviyeye taşınır.</span>
     </div>
   );
 
@@ -1720,14 +1720,14 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
     { id: 'flow', label: 'Akış', icon: Workflow },
     { id: 'terms', label: 'Terimler', icon: Tags },
   ];
-  const chip = (on: boolean) => `h-8 px-3 rounded-full text-[12.5px] whitespace-nowrap cursor-pointer transition-colors ${on ? 'bg-ink text-white font-semibold' : 'bg-field text-ink-2 hover:text-ink'}`;
+  const chip = (on: boolean) => `h-8 px-3 rounded-full text-sm whitespace-nowrap cursor-pointer transition-colors ${on ? 'bg-ink text-white font-semibold' : 'bg-field text-ink-2 hover:text-ink'}`;
 
   return (
     <div className="flex flex-col gap-3 min-w-0">
       {/* Başlık + araç çubuğu */}
       <div className="flex flex-wrap items-center gap-2">
         <div className="min-w-0 mr-auto">
-          <p className="m-0 text-[13px] text-ink-2">
+          <p className="m-0 text-sm text-ink-2">
             {committeeName || 'Kurul'} · {stats.frags} parça · <b className="text-ink">{stats.free}</b> eşlenmemiş · {stats.cands} aday · {stats.ready} hazır · {stats.done} soru oldu
           </p>
         </div>
@@ -1759,14 +1759,14 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
       <div className="grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)] xl:grid-cols-[300px_minmax(0,1fr)_380px] gap-3 items-start">
         {/* Sol: parça havuzu */}
         <aside className="bg-white rounded-2xl shadow-sm flex flex-col min-h-0 lg:sticky lg:top-3 lg:max-h-[calc(100dvh-140px)]" aria-label="Parça havuzu">
-          <button type="button" onClick={() => setPoolOpen((v) => !v)} className="lg:hidden flex items-center gap-2 px-4 h-12 text-[14px] font-semibold cursor-pointer">
+          <button type="button" onClick={() => setPoolOpen((v) => !v)} className="lg:hidden flex items-center gap-2 px-4 h-12 text-base font-semibold cursor-pointer">
             Parça havuzu · {pool.length} {poolOpen ? <ChevronDown className="w-4 h-4 ml-auto" /> : <ChevronRight className="w-4 h-4 ml-auto" />}
           </button>
           <div className={`${poolOpen ? 'flex' : 'hidden'} lg:flex flex-col gap-2 p-3 border-b border-line-soft`}>
             <label className="flex items-center gap-2 h-9 px-3 rounded-full bg-field">
               <Search className="w-4 h-4 text-ink-3" />
               <span className="sr-only">Parçalarda ara</span>
-              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Metin ya da terim" className="flex-1 min-w-0 bg-transparent outline-0 text-[13.5px]" />
+              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Metin ya da terim" className="flex-1 min-w-0 bg-transparent outline-0 text-base" />
               {q && <button type="button" aria-label="Temizle" onClick={() => setQ('')} className="cursor-pointer"><X className="w-4 h-4 text-ink-3" /></button>}
             </label>
             <div className="flex flex-wrap gap-1">
@@ -1776,17 +1776,17 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                 </button>
               ))}
             </div>
-            <select value={discF} onChange={(e) => setDiscF(e.target.value)} aria-label="Ders" className="h-9 px-3 rounded-full bg-field text-[13px] outline-0 cursor-pointer">
+            <select value={discF} onChange={(e) => setDiscF(e.target.value)} aria-label="Ders" className="h-9 px-3 rounded-full bg-field text-sm outline-0 cursor-pointer">
               <option value="all">Tüm dersler</option>
               {disciplines.map((d) => <option key={d} value={d}>{d}</option>)}
             </select>
-            <div className="flex items-center gap-3 text-[12.5px] text-ink-2">
+            <div className="flex items-center gap-3 text-sm text-ink-2">
               <label className="inline-flex items-center gap-1.5 cursor-pointer"><input type="checkbox" checked={onlyFree} onChange={(e) => setOnlyFree(e.target.checked)} /> Yalnız eşlenmemiş</label>
               <label className="inline-flex items-center gap-1.5 cursor-pointer"><input type="checkbox" checked={showHidden} onChange={(e) => setShowHidden(e.target.checked)} /> Gizlileri göster</label>
             </div>
           </div>
           {picked.length > 0 && (
-            <div className="ms-pop-in mx-3 mt-2 rounded-xl bg-ink text-white px-3 py-2 flex items-center gap-2 text-[12.5px]">
+            <div className="ms-pop-in mx-3 mt-2 rounded-xl bg-ink text-white px-3 py-2 flex items-center gap-2 text-sm">
               <ListChecks className="w-4 h-4" /> {picked.length} seçili
               <span className="flex-1" />
               <button type="button" onClick={() => createCandidate(picked)} className="h-7 px-2.5 rounded-full bg-white/15 hover:bg-white/25 font-semibold cursor-pointer">Aday yap</button>
@@ -1795,11 +1795,11 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             </div>
           )}
           <div className={`${poolOpen ? 'flex' : 'hidden'} lg:flex flex-col gap-1.5 p-3 overflow-y-auto overscroll-contain min-h-0 max-h-[60dvh] lg:max-h-none`}>
-            {pool.length === 0 && <span className="text-[13px] text-ink-3 py-6 text-center">{allFrags.length ? 'Bu süzgeçte parça yok.' : 'Bu kurulda taslak parça yok.'}</span>}
+            {pool.length === 0 && <span className="text-sm text-ink-3 py-6 text-center">{allFrags.length ? 'Bu süzgeçte parça yok.' : 'Bu kurulda taslak parça yok.'}</span>}
             {pool.slice(0, 400).map((f) => (
               <React.Fragment key={f.id}>{FragChip({ f: f })}</React.Fragment>
             ))}
-            {pool.length > 400 && <span className="text-[12px] text-ink-3 text-center py-2">İlk 400 parça gösteriliyor; süzgeçle daralt.</span>}
+            {pool.length > 400 && <span className="text-xs text-ink-3 text-center py-2">İlk 400 parça gösteriliyor; süzgeçle daralt.</span>}
           </div>
         </aside>
 
@@ -1821,7 +1821,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             >
               <div className="flex items-center gap-2 mb-3">
                 <CircleDot className="w-4 h-4 text-accent" />
-                <span className="text-[13px] font-semibold text-ink-2 flex-1">
+                <span className="text-sm font-semibold text-ink-2 flex-1">
                   {selCand ? 'Soru adayı' : selFrag ? 'Parça' : 'Konu'}
                 </span>
                 <button type="button" aria-label="Kapat" onClick={() => { setSel(null); setInspectorOpen(false); }} className="ms-btn is-ghost is-icon is-sm"><X /></button>
@@ -1832,11 +1832,11 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
             </aside>
           </>
         ) : (
-          <aside className="hidden xl:flex flex-col gap-2 bg-white rounded-2xl shadow-sm p-4 text-[13px] text-ink-2 sticky top-3">
+          <aside className="hidden xl:flex flex-col gap-2 bg-white rounded-2xl shadow-sm p-4 text-sm text-ink-2 sticky top-3">
             <Check className="w-5 h-5 text-accent" />
-            <b className="text-ink text-[14px]">Bir şey seç</b>
+            <b className="text-ink text-base">Bir şey seç</b>
             Aday, parça ya da konuya tıkla; tüm alanları burada düzenlersin.
-            <span className="text-ink-3 text-[12px] mt-2">Kısayollar: Ctrl+Z geri al · Ctrl+Shift+Z yinele · Shift+tık çoklu seç · Esc seçimi bırak</span>
+            <span className="text-ink-3 text-xs mt-2">Kısayollar: Ctrl+Z geri al · Ctrl+Shift+Z yinele · Shift+tık çoklu seç · Esc seçimi bırak</span>
           </aside>
         )}
       </div>

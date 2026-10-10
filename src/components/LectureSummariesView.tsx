@@ -75,13 +75,13 @@ const KURUL_LABELS: Record<number, string> = {
 };
 
 const DISCIPLINE_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  'Tıbbi Farmakoloji': { bg: 'bg-emerald-50', text: 'text-emerald-800', border: 'border-emerald-200' },
-  'Tıbbi Patoloji': { bg: 'bg-rose-50', text: 'text-rose-800', border: 'border-rose-200' },
-  'Tıbbi Mikrobiyoloji': { bg: 'bg-amber-50', text: 'text-amber-800', border: 'border-amber-200' },
-  'Tıbbi Genetik': { bg: 'bg-indigo-50', text: 'text-indigo-800', border: 'border-indigo-200' },
-  'Halk Sağlığı': { bg: 'bg-sky-50', text: 'text-sky-800', border: 'border-sky-200' },
-  'Tıbbi Biyokimya': { bg: 'bg-purple-50', text: 'text-purple-800', border: 'border-purple-200' },
-  'İç Hastalıkları': { bg: 'bg-blue-50', text: 'text-blue-800', border: 'border-blue-200' },
+  'Tıbbi Farmakoloji': { bg: 'bg-ok-soft', text: 'text-ok', border: 'border-ok/30' },
+  'Tıbbi Patoloji': { bg: 'bg-bad-soft', text: 'text-bad-text', border: 'border-bad/30' },
+  'Tıbbi Mikrobiyoloji': { bg: 'bg-warn-soft', text: 'text-warn', border: 'border-warn/30' },
+  'Tıbbi Genetik': { bg: 'bg-accent-soft', text: 'text-accent', border: 'border-accent/30' },
+  'Halk Sağlığı': { bg: 'bg-accent-soft', text: 'text-accent', border: 'border-accent/30' },
+  'Tıbbi Biyokimya': { bg: 'bg-ai-soft', text: 'text-ai', border: 'border-ai/30' },
+  'İç Hastalıkları': { bg: 'bg-accent-soft', text: 'text-accent', border: 'border-accent/30' },
 };
 
 export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOpenPdfModal, initialSummaryId }) => {
@@ -222,14 +222,14 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
         eyebrow="Amfi notları"
         title="Ders özetleri"
         description="Klinik ipuçları, mekanizmalar, sınav tuzakları ve tablolar; ders ders, okunur biçimde."
-        stats={[{ label: 'Özet', value: summaries.length }]}
+        stats={[{ label: 'özet', value: filteredSummaries.length }]}
         actions={
           onOpenPdfModal && (
             <button
               type="button"
               onClick={onOpenPdfModal}
               aria-label="PDF indir"
-              className="shrink-0 h-10 px-3 rounded-[10px] border border-line bg-white text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2"
+              className="shrink-0 h-10 px-3 rounded-[10px] border border-line bg-white text-base font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2"
             >
               <Download className="w-4 h-4" />
               <span className="hidden sm:inline">PDF indir</span>
@@ -238,75 +238,55 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
         }
       />
 
-      {/* Toolbar */}
-      <div className="bg-white border border-line rounded-2xl p-3 sm:p-4 flex flex-col gap-2.5">
-        <div role="radiogroup" aria-label="Kurul" className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0">
-          {(['all', 1, 2, 3, 4, 5, 6] as const).map((k) => {
-            const on = selectedKurul === k;
-            const count = k === 'all' ? summaries.length : summaries.filter((s) => s.kurul === k).length;
-            return (
-              <button
-                key={String(k)}
-                type="button"
-                role="radio"
-                aria-checked={on}
-                title={k === 'all' ? undefined : KURUL_LABELS[k]}
-                onClick={() => setSelectedKurul(k)}
-                className={`shrink-0 h-8 sm:h-9 px-3 rounded-full text-[13px] sm:text-[14px] cursor-pointer whitespace-nowrap ${
-                  on ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent/40' : 'bg-white border border-line text-ink hover:border-line-2'
-                }`}
-              >
-                {k === 'all' ? 'Tümü' : `Kurul ${k}`}
-                <span className={`ml-1.5 font-mono text-[12px] ${on ? 'text-accent/70' : 'text-ink-3'}`}>{count}</span>
-              </button>
-            );
-          })}
-        </div>
-        <div className="flex flex-col sm:flex-row gap-2">
-          <label className="flex items-center gap-2 h-10 px-3 border border-line-2 rounded-[10px] bg-field flex-1 min-w-0 focus-within:border-accent">
-            <Search className="w-4 h-4 text-ink-2 shrink-0" />
-            <span className="sr-only">Özetlerde ara</span>
-            <input
-              type="search"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Ders, konu ya da terim ara"
-              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-slate-600"
-            />
-            {searchQuery && (
-              <button type="button" onClick={() => setSearchQuery('')} aria-label="Aramayı temizle" className="w-7 h-7 rounded-md flex items-center justify-center text-ink-2 hover:bg-white cursor-pointer">
-                <X className="w-4 h-4" />
-              </button>
-            )}
-          </label>
-          <label className="sr-only" htmlFor="summ-discipline">
-            Branş
-          </label>
-          <select
-            id="summ-discipline"
-            value={selectedDiscipline}
-            onChange={(e) => setSelectedDiscipline(e.target.value)}
-            className="h-10 border border-line-2 rounded-[10px] px-3 text-[14px] bg-white cursor-pointer sm:w-[220px] min-w-0"
-          >
-            <option value="all">{selectedKurul === 'all' ? 'Tüm dersler' : `Kurul ${selectedKurul} dersleri`} ({disciplines.length})</option>
-            {disciplines.map((d) => (
-              <option key={d} value={d}>
-                {d}
-              </option>
-            ))}
-          </select>
-        </div>
+      {/* Arama + branş tek satır; kurullar altı çizili sekme (Çıkmış dili) */}
+      <div className="flex flex-col sm:flex-row gap-2 min-w-0">
+        <label className="cx-search flex-1 min-w-0">
+          <Search aria-hidden />
+          <span className="sr-only">Özetlerde ara</span>
+          <input type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Ders, konu ya da terim ara" />
+          {searchQuery && (
+            <button type="button" className="cx-search-x" onClick={() => setSearchQuery('')} aria-label="Aramayı temizle"><X /></button>
+          )}
+        </label>
+        <label className="sr-only" htmlFor="summ-discipline">Branş</label>
+        <select
+          id="summ-discipline"
+          value={selectedDiscipline}
+          onChange={(e) => setSelectedDiscipline(e.target.value)}
+          className="ms-select h-11 sm:w-[230px] min-w-0"
+        >
+          <option value="all">{selectedKurul === 'all' ? 'Tüm dersler' : `Kurul ${selectedKurul} dersleri`} ({disciplines.length})</option>
+          {disciplines.map((d) => (
+            <option key={d} value={d}>{d}</option>
+          ))}
+        </select>
       </div>
+      <nav className="cx-tabs" aria-label="Kurul" role="radiogroup">
+        {(['all', 1, 2, 3, 4, 5, 6] as const).map((k) => {
+          const on = selectedKurul === k;
+          const count = k === 'all' ? summaries.length : summaries.filter((s) => s.kurul === k).length;
+          return (
+            <button
+              key={String(k)}
+              type="button"
+              role="radio"
+              aria-checked={on}
+              title={k === 'all' ? undefined : KURUL_LABELS[k]}
+              onClick={() => setSelectedKurul(k)}
+              className={`cx-tab ${on ? 'is-on' : ''} ${count === 0 ? 'is-zero' : ''}`}
+            >
+              {k === 'all' ? 'Tümü' : `K${k}`} <small>{count}</small>
+            </button>
+          );
+        })}
+      </nav>
 
-      <div className="text-[13px] text-ink-2 px-1" role="status">
-        <strong className="text-ink font-semibold">{filteredSummaries.length}</strong> özet
-        {selectedKurul !== 'all' && <> · {KURUL_LABELS[selectedKurul]}</>}
-      </div>
+      {selectedKurul !== 'all' && <p className="m-0 -mt-1 text-sm text-ink-3">{KURUL_LABELS[selectedKurul]}</p>}
 
       {filteredSummaries.length === 0 ? (
         <div className="bg-white border border-line rounded-2xl px-6 py-12 text-center flex flex-col items-center gap-2">
-          <h3 className="m-0 font-display text-[20px] font-bold tracking-[-0.02em]">Bu filtrede özet yok</h3>
-          <p className="m-0 text-[14px] text-ink-2">Aramayı temizleyip farklı bir kurul seçebilirsin.</p>
+          <h3 className="m-0 font-display text-xl font-bold tracking-[-0.02em]">Bu filtrede özet yok</h3>
+          <p className="m-0 text-base text-ink-2">Aramayı temizleyip farklı bir kurul seçebilirsin.</p>
         </div>
       ) : (
         <ul className="list-none m-0 p-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
@@ -318,23 +298,23 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
                 className="w-full h-full text-left bg-white border border-line rounded-xl p-3.5 sm:p-4 flex flex-col gap-2 cursor-pointer hover:border-accent transition-colors group"
               >
                 <span className="flex items-center gap-1.5 min-w-0">
-                  <span className="shrink-0 h-6 px-2 rounded-full bg-canvas text-ink-2 text-[12px] font-semibold inline-flex items-center">Kurul {s.kurul}</span>
-                  <span className="min-w-0 h-6 px-2 rounded-full bg-accent-soft text-accent text-[12px] font-semibold inline-flex items-center truncate">{s.discipline}</span>
+                  <span className="shrink-0 h-6 px-2 rounded-full bg-canvas text-ink-2 text-xs font-semibold inline-flex items-center">Kurul {s.kurul}</span>
+                  <span className="min-w-0 h-6 px-2 rounded-full bg-accent-soft text-accent text-xs font-semibold inline-flex items-center truncate">{s.discipline}</span>
                   {s.sourceYear && (
-                    <span className="ml-auto shrink-0 text-[12px] text-ink-3 tabular-nums" title={s.pdfName ? `${s.pdfName} · ${s.sourceDate}` : s.sourceDate}>
+                    <span className="ml-auto shrink-0 text-xs text-ink-3 tabular-nums" title={s.pdfName ? `${s.pdfName} · ${s.sourceDate}` : s.sourceDate}>
                       {s.sourceYear}
                     </span>
                   )}
                 </span>
-                <span className="text-[16px] font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2">{s.title}</span>
+                <span className="text-md font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2">{s.title}</span>
                 {s.instructor && (
-                  <span className="text-[13px] text-ink-2 font-medium flex items-center gap-1.5 truncate">
+                  <span className="text-sm text-ink-2 font-medium flex items-center gap-1.5 truncate">
                     <GraduationCap className="w-3.5 h-3.5 text-accent shrink-0" />
                     <span className="truncate">{s.instructor}</span>
                   </span>
                 )}
                 {s.keyPoints?.length > 0 && (
-                  <span className="flex flex-col gap-0.5 text-[13px] text-ink-2">
+                  <span className="flex flex-col gap-0.5 text-sm text-ink-2">
                     {s.keyPoints.slice(0, 3).map((pt, idx) => (
                       <span key={idx} className="truncate">
                         · {pt}
@@ -342,11 +322,11 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
                     ))}
                   </span>
                 )}
-                <span className="mt-auto pt-2 border-t border-line-soft flex items-center justify-between text-[12px] text-ink-3">
+                <span className="mt-auto pt-2 border-t border-line-soft flex items-center justify-between text-xs text-ink-3">
                   <span className="inline-flex items-center gap-1 font-mono">
                     <Clock className="w-3.5 h-3.5" /> ~{s.readingTimeMinutes} dk
                   </span>
-                  <span className="inline-flex items-center gap-0.5 text-[13px] font-semibold text-accent">
+                  <span className="inline-flex items-center gap-0.5 text-sm font-semibold text-accent">
                     Oku <ChevronRight className="w-4 h-4" />
                   </span>
                 </span>

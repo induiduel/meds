@@ -57,7 +57,8 @@ import {
 } from 'lucide-react';
 import { ActionMenu, ActionItem } from './ui/ActionMenu';
 import { ReportQuestionModal } from './ReportQuestionModal';
-import { SectionLoader } from './ui/Animations';
+import { EmptySearch, SectionLoader } from './ui/Animations';
+import { disciplineClass, disciplineLabel } from '../utils/discipline';
 import { QuestionItem, LectureNote, LectureNotePage, QuestionLectureMatch } from '../types';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { ApiService } from '../services/api';
@@ -258,6 +259,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [selectedCommittee, setSelectedCommittee] = useState<string>('all');
   const [selectedYear, setSelectedYear] = useState<string>('all');
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
+  const [browseAll, setBrowseAll] = useState(false);
   const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'gemini_v3' | 'existing'>('all');
   const [phase14Filter, setPhase14Filter] = useState<'all' | 'faz14' | 'faz14_onayli' | 'faz14_bekleyen'>('all');
@@ -691,6 +693,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       await ApiService.adminDeletePastQuestion(currentUser?.email || ADMIN_EMAIL, targetQ.id);
       try {
         await pastQuestionsCache.removeQuestions([targetQ.id]);
+      } catch {}
+      try {
+        const { broadcastLiveEvent } = await import('../services/supabaseDb');
+        broadcastLiveEvent('past_questions_changed', { eventType: 'DELETE', old: { id: targetQ.id }, id: targetQ.id });
       } catch {}
       setQuestions((prev) => prev.filter((q) => q.id !== targetQ.id));
       toast.success('Soru Silindi', `${label} kalıcı olarak silindi.`);
@@ -1361,23 +1367,55 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         </>
       )}
 
+      {/* Derslere göz at (Apple Sağlık "Göz at" listesi): süzgeç yokken ders renkli kısa yol */}
+      {!isLoading && !sharedId && selectedDiscipline === 'all' && !searchQuery.trim() && currentPage === 1 && (() => {
+        const rows = disciplineList.map((d) => ({ d, cnt: fc('discipline', d) })).filter((r) => r.cnt > 0).sort((a, b) => b.cnt - a.cnt);
+        if (rows.length < 2) return null;
+        const shown = browseAll ? rows : rows.slice(0, 6);
+        return (
+          <section className="hk-browse" aria-label="Derslere göz at">
+            <header className="hk-sec-h">
+              <h2>Derslere göz at</h2>
+              {rows.length > 6 && (
+                <button type="button" onClick={() => setBrowseAll((v) => !v)} className="ms-btn is-ghost is-sm">
+                  {browseAll ? 'Daha az' : `Tümü (${rows.length})`}
+                </button>
+              )}
+            </header>
+            <ul className="hk-browse-list">
+              {shown.map(({ d, cnt }) => (
+                <li key={d} className={disciplineClass(d)}>
+                  <button type="button" onClick={() => { setSelectedDiscipline(d); setSelectedTopic('all'); resetPage(); }}>
+                    <span className="hk-tile is-sm"><BookOpen aria-hidden /></span>
+                    <span className="hk-browse-t">{disciplineLabel(d)}</span>
+                    <span className="hk-browse-n hk-num">{n(cnt)}</span>
+                    <ChevronRight className="hk-chev" aria-hidden />
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <h2 className="hk-sec-title">Tüm sorular</h2>
+          </section>
+        );
+      })()}
+
       {/* Questions Listing */}
       {isLoading ? (
         <div className="bg-white rounded-2xl border border-line">
-          <SectionLoader variant="book" label="Çıkmış sorular yükleniyor…" />
+          <SectionLoader label="Çıkmış sorular yükleniyor…" />
         </div>
       ) : sharedId && paginatedQuestions.length === 0 ? (
         <div className="ms-qcard items-center text-center py-10">
           <HelpCircle className="w-8 h-8 text-ink-3" />
-          <p className="m-0 font-display text-[18px] font-semibold">Paylaşılan soru bulunamadı</p>
-          <p className="m-0 text-[13.5px] text-ink-2 max-w-sm">Soru kaldırılmış, birleştirilmiş ya da bağlantı eksik olabilir.</p>
+          <p className="m-0 text-base font-semibold">Paylaşılan soru bulunamadı</p>
+          <p className="m-0 text-sm text-ink-3 max-w-sm">Soru kaldırılmış, birleştirilmiş ya da bağlantı eksik olabilir.</p>
           <button type="button" onClick={showAllQuestions} className="ms-btn is-tonal">Tüm çıkmış sorular</button>
         </div>
       ) : paginatedQuestions.length === 0 ? (
-        <div className="ms-qcard items-center text-center py-10">
-          <HelpCircle className="w-8 h-8 text-ink-3" />
-          <p className="m-0 font-display text-[18px] font-semibold">Eşleşen soru yok</p>
-          <p className="m-0 text-[13.5px] text-ink-2 max-w-sm">
+        <div className="ms-qcard ms-empty items-center text-center py-6">
+          <EmptySearch size={64} />
+          <p className="m-0 text-base font-semibold">Eşleşen soru yok</p>
+          <p className="m-0 text-sm text-ink-3 max-w-sm">
             {searchQuery.trim() ? 'Kelimeyi kısaltmayı ya da bir süzgeci kaldırmayı dene.' : 'Seçili süzgeçlerin hepsine uyan soru yok.'}
           </p>
           <button type="button" onClick={clearAllFilters} className="ms-btn is-tonal">Filtreleri temizle</button>
@@ -1504,11 +1542,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             ];
 
             return (
-              <article key={q.id} className="cx-q">
+              <article key={q.id} className={`cx-q ${disciplineClass(q.discipline)}`}>
                 <header className="cx-q-head">
                   <span className={`cx-q-no ${q.questionNumber ? '' : 'is-none'}`} title={q.questionNumber ? `Soru ${q.questionNumber}` : 'Soru numarası bilinmiyor'}>{q.questionNumber || '?'}</span>
                   <span className="cx-q-meta" title={formatCommitteeName(q.committeeId)}>
-                    <b>{(q as any).committeeUncertain ? 'Kurul belirsiz' : q.discipline || 'Tıp'}</b>
+                    <b><i className="hk-dot" aria-hidden />{(q as any).committeeUncertain ? 'Kurul belirsiz' : disciplineLabel(q.discipline) || 'Tıp'}</b>
                     <span>{[(q as any).committeeUncertain ? ((q as any).contentCommitteeId ? committeeShort((q as any).contentCommitteeId) : null) : committeeShort((q as any).contentCommitteeId || q.committeeId), q.examYear].filter(Boolean).join(' · ')}</span>
                   </span>
                   <span className="cx-q-flags">
@@ -1584,7 +1622,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   {isAdminUser && (
                     <button
                       type="button"
-                      className="cx-iconbtn text-red-500 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-950/30"
+                      className="cx-iconbtn text-bad-text hover:text-bad-text hover:bg-bad-soft dark:hover:bg-red-950/30"
                       title="Soruyu kalıcı sil (Yönetici)"
                       aria-label="Soruyu kalıcı sil"
                       disabled={deletingQuestionId === q.id}
@@ -1607,7 +1645,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   const o: any = (q as any).phase14Original || {};
                   const p14: any = (q as any).phase14 || {};
                   return (
-                    <div className="ms-pop-in rounded-xl bg-field px-3 py-2.5 text-[13px] text-ink-2 flex flex-col gap-1.5">
+                    <div className="ms-pop-in rounded-xl bg-field px-3 py-2.5 text-sm text-ink-2 flex flex-col gap-1.5">
                       <p className="m-0 font-semibold text-ink flex flex-wrap items-center gap-1">
                         Faz 14 düzeltmesi
                         {(p14.changes || []).map((c: string) => <span key={c} className="ms-tag is-ai">{c}</span>)}
@@ -1623,16 +1661,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                           ))
                         ))}
                       {(o.committeeId || o.discipline || o.topic) && (
-                        <p className="m-0 text-[12.5px]"><span className="text-ink-3">Önceki kurul/ders/konu:</span> {[o.committeeId ? committeeShort(String(o.committeeId).replace(/^TIP\s*3(\d)0$/i, 'donem3-kurul$1')) : null, o.discipline, o.topic].filter(Boolean).join(' · ')}</p>
+                        <p className="m-0 text-sm"><span className="text-ink-3">Önceki kurul/ders/konu:</span> {[o.committeeId ? committeeShort(String(o.committeeId).replace(/^TIP\s*3(\d)0$/i, 'donem3-kurul$1')) : null, o.discipline, o.topic].filter(Boolean).join(' · ')}</p>
                       )}
                       {o.stem && <p className="m-0"><span className="text-ink-3">Önceki kök:</span> {o.stem}</p>}
                       {Array.isArray(o.options) && o.options.length > 0 && (
-                        <ul className="m-0 pl-4 text-[12.5px]">
+                        <ul className="m-0 pl-4 text-sm">
                           {o.options.map((op: any) => <li key={op.key}>{op.key}) {op.text}</li>)}
                         </ul>
                       )}
                       {o.explanation && (
-                        <details className="text-[12.5px]"><summary className="cursor-pointer text-ink-3">Önceki açıklama</summary><p className="m-0 mt-1 whitespace-pre-wrap">{o.explanation}</p></details>
+                        <details className="text-sm"><summary className="cursor-pointer text-ink-3">Önceki açıklama</summary><p className="m-0 mt-1 whitespace-pre-wrap">{o.explanation}</p></details>
                       )}
                     </div>
                   );
@@ -1685,8 +1723,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   />
                 ) : effectiveMode === 'raw' ? (
                   <div className="bg-canvas rounded-xl p-3 flex flex-col gap-2">
-                    <span className="text-[12px] font-semibold text-ink-3 truncate">Ham metin · {q.sourceFile || 'PDF kaynağı'}</span>
-                    <p className="m-0 text-[14.5px] text-ink leading-relaxed whitespace-pre-wrap">{(q as any).rawQuestion?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic}</p>
+                    <span className="text-xs font-semibold text-ink-3 truncate">Ham metin · {q.sourceFile || 'PDF kaynağı'}</span>
+                    <p className="m-0 text-md text-ink leading-relaxed whitespace-pre-wrap">{(q as any).rawQuestion?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic}</p>
                     {(((q as any).rawQuestion?.options && (q as any).rawQuestion.options.length > 0) || (q.options && q.options.length > 0)) && (
                       <ol className="ms-opts">
                         {((q as any).rawQuestion?.options || q.options).map((opt: any) => {
@@ -1695,7 +1733,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                             <li key={opt.key} className={`ms-opt ${isClaimed ? 'is-claimed' : ''}`}>
                               <span className="ms-opt-key">{opt.key}</span>
                               <span>{opt.text}</span>
-                              <span className="ms-opt-side">{isClaimed && <span className="text-[12px] font-semibold text-warn">İşaretlenen</span>}</span>
+                              <span className="ms-opt-side">{isClaimed && <span className="text-xs font-semibold text-warn">İşaretlenen</span>}</span>
                             </li>
                           );
                         })}
@@ -1800,7 +1838,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
                     {/* Çoklu referans / alternatif sınav yılları bandı */}
                     {q.similarPastQuestions && q.similarPastQuestions.length > 0 && (
-                      <div className="mt-2.5 pt-2 border-t border-line/60 flex flex-wrap items-center gap-1.5 text-[12px] text-ink-3">
+                      <div className="mt-2.5 pt-2 border-t border-line/60 flex flex-wrap items-center gap-1.5 text-xs text-ink-3">
                         <span className="font-semibold text-ink-2 flex items-center gap-1">
                           <Layers className="w-3.5 h-3.5 text-accent" />
                           Diğer yıllardaki çıkmış örnekleri:
@@ -1808,7 +1846,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         {q.similarPastQuestions.map((alt) => (
                           <span
                             key={alt.id}
-                            className="inline-flex items-center px-2 py-0.5 rounded-md bg-field border border-line text-[11.5px] font-medium text-ink"
+                            className="inline-flex items-center px-2 py-0.5 rounded-md bg-field border border-line text-xs font-medium text-ink"
                             title={`Soru ID: ${alt.id}`}
                           >
                             {alt.label || `${alt.examYear} - Soru ${alt.questionNumber}`}
@@ -1852,15 +1890,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       {commentsCount > 0 ? (
                         (q as any).comments.map((c: any) => (
                           <div key={c.id} className="bg-white rounded-[10px] px-3 py-2 flex flex-col gap-0.5">
-                            <div className="flex items-center justify-between gap-2 text-[12px] text-ink-3">
+                            <div className="flex items-center justify-between gap-2 text-xs text-ink-3">
                               <span className="font-semibold text-ink">{c.author || 'Tıp öğrencisi'}</span>
                               <span>{new Date(c.timestamp).toLocaleDateString('tr-TR')}</span>
                             </div>
-                            <p className="m-0 text-[14px] text-ink-2 leading-relaxed">{c.text}</p>
+                            <p className="m-0 text-base text-ink-2 leading-relaxed">{c.text}</p>
                           </div>
                         ))
                       ) : (
-                        <p className="m-0 px-1 text-[13.5px] text-ink-3">Henüz yorum yok. Bir ipucu ya da alternatif çözüm ekleyen ilk kişi ol.</p>
+                        <p className="m-0 px-1 text-base text-ink-3">Henüz yorum yok. Bir ipucu ya da alternatif çözüm ekleyen ilk kişi ol.</p>
                       )}
                     </div>
                     <div className="flex items-center gap-2">
@@ -1871,7 +1909,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         onKeyDown={(e) => { if (e.key === 'Enter') handleCommentSubmit(q.id); }}
                         placeholder="Yorum ya da ipucu yaz…"
                         aria-label="Yorum"
-                        className="flex-1 min-w-0 h-10 bg-white border border-line rounded-full px-4 text-[15px] outline-0 focus:border-accent"
+                        className="flex-1 min-w-0 h-10 bg-white border border-line rounded-full px-4 text-md outline-0 focus:border-accent"
                       />
                       <button type="button" onClick={() => handleCommentSubmit(q.id)} disabled={isSubmittingComment || !newCommentText.trim()} aria-label="Gönder" className="ms-btn is-primary is-icon">
                         <Send />
@@ -1927,13 +1965,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             </>
           }
         >
-          <p className="m-0 text-[13px] text-ink-2 leading-relaxed">
+          <p className="m-0 text-sm text-ink-2 leading-relaxed">
             <b className="text-ink">Soru #{selectedLearnMatch.question.questionNumber}</b> bu slayta bağlı
             <span className="ms-tag is-accent ml-1.5 align-middle">{selectedLearnMatch.match.matchType === 'direct' ? 'Müfredat eşleşmesi' : 'Konu eşleşmesi'}</span>
           </p>
           <div className="flex flex-col gap-1">
             {selectedLearnMatch.match.badge && <span className="ms-tag self-start">{selectedLearnMatch.match.badge}</span>}
-            <h3 className="m-0 text-[15.5px] font-semibold text-ink">{selectedLearnMatch.match.slideTitle}</h3>
+            <h3 className="m-0 text-md font-semibold text-ink">{selectedLearnMatch.match.slideTitle}</h3>
           </div>
           {(() => {
             const f = focusFor(selectedLearnMatch.question, selectedLearnMatch.match);
@@ -1955,12 +1993,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           })()}
           {selectedLearnMatch.match.spotPearls && selectedLearnMatch.match.spotPearls.length > 0 && (
             <section className="flex flex-col gap-1.5">
-              <h4 className="m-0 text-[12.5px] font-semibold text-ink-3">Sınav için önemli noktalar</h4>
+              <h4 className="m-0 text-sm font-semibold text-ink-3">Sınav için önemli noktalar</h4>
               <ul className="ms-stem-list">
                 {selectedLearnMatch.match.spotPearls.map((pearl: any, i: number) => {
                   const isObj = pearl && typeof pearl === 'object';
                   return (
-                    <li key={i} className="text-[13.5px] text-ink-2 leading-relaxed">
+                    <li key={i} className="text-base text-ink-2 leading-relaxed">
                       <span className="ms-stem-mark is-dot" aria-hidden />
                       <span className="min-w-0">
                         {isObj && pearl.badge && <b className="text-ink mr-1">{pearl.badge}</b>}
@@ -1978,7 +2016,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           )}
           {selectedLearnMatch.match.flashcards && selectedLearnMatch.match.flashcards.length > 0 && (
             <section className="flex flex-col gap-1.5">
-              <h4 className="m-0 text-[12.5px] font-semibold text-ink-3">İlgili kartlar · {selectedLearnMatch.match.flashcards.length}</h4>
+              <h4 className="m-0 text-sm font-semibold text-ink-3">İlgili kartlar · {selectedLearnMatch.match.flashcards.length}</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {selectedLearnMatch.match.flashcards.map((card) => (
                   <FlashcardComponent key={card.id} card={card} />
@@ -2001,22 +2039,22 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             subtitle={[rq.discipline || 'Tıp', committeeShort(rq.committeeId)].filter(Boolean).join(' · ')}
             footer={<button type="button" onClick={() => setSelectedRawSourceQuestion(null)} className="ms-btn is-ghost">Kapat</button>}
           >
-            <dl className="m-0 grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-2 text-[13px]">
+            <dl className="m-0 grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-2 text-sm">
               <div className="col-span-2 min-w-0">
-                <dt className="text-[12px] text-ink-3">Dosya</dt>
+                <dt className="text-xs text-ink-3">Dosya</dt>
                 <dd className="m-0 font-medium text-ink truncate" title={rq.sourceFile || rq.sourceNote}>{rq.sourceFile || rq.sourceNote || 'Geçmiş kurul arşivi'}</dd>
               </div>
               <div>
-                <dt className="text-[12px] text-ink-3">Yıl</dt>
+                <dt className="text-xs text-ink-3">Yıl</dt>
                 <dd className="m-0 font-medium text-ink">{rq.examYear || 'Arşiv'}</dd>
               </div>
               <div>
-                <dt className="text-[12px] text-ink-3">Soru · sayfa</dt>
+                <dt className="text-xs text-ink-3">Soru · sayfa</dt>
                 <dd className="m-0 font-medium text-ink">#{rq.questionNumber}{rq.matchedSlidePage ? ` · s. ${rq.matchedSlidePage}` : ''}</dd>
               </div>
             </dl>
             <section className="flex flex-col gap-1.5">
-              <h4 className="m-0 text-[12.5px] font-semibold text-ink-3">Ham soru metni</h4>
+              <h4 className="m-0 text-sm font-semibold text-ink-3">Ham soru metni</h4>
               <div className="rounded-xl bg-canvas p-3">
                 <StemText text={String(rq.rawStem || rq.rawQuestion?.stem || rq.fragments?.[0]?.text || rq.stem || rq.topic || '')} size="sm" />
               </div>

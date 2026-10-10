@@ -209,15 +209,15 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
   };
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs animate-fadeIn overflow-y-auto">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-ink/60 backdrop-blur-xs animate-fadeIn overflow-y-auto">
       <div 
-        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl max-h-[90dvh] flex flex-col overflow-hidden relative"
+        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-line w-full max-w-2xl max-h-[90dvh] flex flex-col overflow-hidden relative"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="bg-ink-surface p-4 sm:p-5 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-purple-500/20 text-purple-300 border border-purple-400/30">
+            <div className="p-2 rounded-xl bg-ai/20 text-ai border border-ai/30">
               <Brain className="w-5 h-5" />
             </div>
             <div>
@@ -225,11 +225,11 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
                 <h3 className="font-bold text-sm sm:text-base leading-tight">
                   NotebookLM & Gemini Bağlantı Merkezi
                 </h3>
-                <span className="text-[11px] bg-purple-400/20 text-purple-200 border border-purple-400/40 px-2 py-0.5 rounded-full font-bold uppercase">
+                <span className="text-2xs bg-ai/20 text-ai-soft border border-ai/40 px-2 py-0.5 rounded-full font-bold uppercase">
                   Canlı Entegrasyon
                 </span>
               </div>
-              <p className="text-xs text-purple-200/80 mt-0.5">
+              <p className="text-xs text-ai-soft/80 mt-0.5">
                 Veritabanını NotebookLM ve Gemini ile çift yönlü senkronize edin
               </p>
             </div>
@@ -243,38 +243,38 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
         </div>
 
         {/* Tab switchers */}
-        <div className="flex border-b border-slate-200 bg-slate-50 text-xs font-semibold shrink-0">
+        <div className="flex border-b border-line bg-field text-xs font-semibold shrink-0">
           <button
             onClick={() => { setActiveTab('export'); setStatusMessage(null); }}
             className={`flex-1 py-3 text-center border-b-2 transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
               activeTab === 'export'
-                ? 'border-purple-600 text-purple-900 bg-white font-bold'
-                : 'border-transparent text-slate-600 hover:text-slate-900'
+                ? 'border-ai text-ai bg-white font-bold'
+                : 'border-transparent text-ink-2 hover:text-ink'
             }`}
           >
-            <Download className="w-3.5 h-3.5 text-purple-600" />
+            <Download className="w-3.5 h-3.5 text-ai" />
             <span>NotebookLM'e Aktar (Dışa Aktar)</span>
           </button>
           <button
             onClick={() => { setActiveTab('import'); setStatusMessage(null); }}
             className={`flex-1 py-3 text-center border-b-2 transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
               activeTab === 'import'
-                ? 'border-indigo-600 text-indigo-900 bg-white font-bold'
-                : 'border-transparent text-slate-600 hover:text-slate-900'
+                ? 'border-accent text-accent bg-white font-bold'
+                : 'border-transparent text-ink-2 hover:text-ink'
             }`}
           >
-            <Upload className="w-3.5 h-3.5 text-indigo-600" />
+            <Upload className="w-3.5 h-3.5 text-accent" />
             <span>NotebookLM'den Veritabanına (İçe Aktar)</span>
           </button>
           <button
             onClick={() => { setActiveTab('direct_ai'); setStatusMessage(null); }}
             className={`flex-1 py-3 text-center border-b-2 transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
               activeTab === 'direct_ai'
-                ? 'border-teal-600 text-teal-900 bg-white font-bold'
-                : 'border-transparent text-slate-600 hover:text-slate-900'
+                ? 'border-ok text-ok bg-white font-bold'
+                : 'border-transparent text-ink-2 hover:text-ink'
             }`}
           >
-            <Sparkles className="w-3.5 h-3.5 text-teal-600" />
+            <Sparkles className="w-3.5 h-3.5 text-ok" />
             <span>Doğrudan Gemini API</span>
           </button>
         </div>
@@ -284,13 +284,13 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
           <div className="p-4 pb-0 shrink-0">
             <div className={`p-3 rounded-xl border text-xs flex items-center gap-2 ${
               statusMessage.type === 'success'
-                ? 'bg-emerald-50 border-emerald-200 text-emerald-900'
-                : 'bg-rose-50 border-rose-200 text-rose-900'
+                ? 'bg-ok-soft border-ok/30 text-ok'
+                : 'bg-bad-soft border-bad/30 text-bad-text'
             }`}>
               {statusMessage.type === 'success' ? (
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />
               ) : (
-                <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+                <AlertCircle className="w-4 h-4 text-bad-text shrink-0" />
               )}
               <span className="font-medium">{statusMessage.text}</span>
             </div>
@@ -302,12 +302,12 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
           {/* TAB 1: EXPORT TO NOTEBOOKLM */}
           {activeTab === 'export' && (
             <div className="space-y-4">
-              <div className="bg-purple-50/70 border border-purple-200 rounded-xl p-4 text-xs text-purple-950 space-y-2">
-                <div className="flex items-center gap-2 font-bold text-purple-900 text-sm">
-                  <Brain className="w-4 h-4 text-purple-700" />
+              <div className="bg-ai-soft/70 border border-ai/30 rounded-xl p-4 text-xs text-ai space-y-2">
+                <div className="flex items-center gap-2 font-bold text-ai text-sm">
+                  <Brain className="w-4 h-4 text-ai" />
                   <span>Google NotebookLM ile Nasıl Kullanılır?</span>
                 </div>
-                <p className="leading-relaxed text-purple-900/90">
+                <p className="leading-relaxed text-ai/90">
                   1. Aşağıdaki <strong>"NotebookLM Kaynak Metnini Kopyala"</strong> butonuna basın veya <strong>".md İndir"</strong> ile dosyayı kaydedin.<br />
                   2. <strong>notebooklm.google.com</strong> adresine gidin ve yeni bir not defteri oluşturun.<br />
                   3. <em>"Kaynak Ekle (Add Source)"</em> kısmından kopyaladığınız metni yapıştırın veya indirilen dosyayı yükleyin.<br />
@@ -320,18 +320,18 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
                 <button
                   type="button"
                   onClick={handleCopyMarkdown}
-                  className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-4 rounded-xl text-xs flex items-center justify-center gap-2 shadow-xs transition-all cursor-pointer active:scale-95"
+                  className="bg-ai hover:bg-ai text-white font-bold py-3 px-4 rounded-xl text-xs flex items-center justify-center gap-2 shadow-xs transition-all cursor-pointer active:scale-95"
                 >
-                  {copied ? <Check className="w-4 h-4 text-emerald-300" /> : <Copy className="w-4 h-4" />}
+                  {copied ? <Check className="w-4 h-4 text-ok" /> : <Copy className="w-4 h-4" />}
                   <span>{copied ? 'Panoya Kopyalandı ✓' : 'NotebookLM Kaynak Metnini Kopyala'}</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={handleDownloadMarkdown}
-                  className="bg-white hover:bg-slate-50 border border-purple-300 text-purple-950 font-bold py-3 px-4 rounded-xl text-xs flex items-center justify-center gap-2 shadow-2xs transition-all cursor-pointer active:scale-95"
+                  className="bg-white hover:bg-field border border-ai/30 text-ai font-bold py-3 px-4 rounded-xl text-xs flex items-center justify-center gap-2 shadow-2xs transition-all cursor-pointer active:scale-95"
                 >
-                  <Download className="w-4 h-4 text-purple-700" />
+                  <Download className="w-4 h-4 text-ai" />
                   <span>Kaynak Belgesini İndir (.md)</span>
                 </button>
               </div>
@@ -342,7 +342,7 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
                   href="https://notebooklm.google.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-purple-700 hover:text-purple-900 font-bold underline"
+                  className="inline-flex items-center gap-1.5 text-xs text-ai hover:text-ai font-bold underline"
                 >
                   <span>Google NotebookLM Sayfasına Git</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -354,17 +354,17 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
           {/* TAB 2: IMPORT FROM NOTEBOOKLM TO DATABASE */}
           {activeTab === 'import' && (
             <div className="space-y-4">
-              <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-3.5 text-xs text-indigo-950">
-                <p className="font-semibold text-indigo-900">
+              <div className="bg-accent-soft border border-accent/30 rounded-xl p-3.5 text-xs text-accent">
+                <p className="font-semibold text-accent">
                   NotebookLM veya Gemini'de ürettiğiniz soruları, düzeltmeleri veya çözümleri buraya yapıştırın.
                 </p>
-                <p className="text-[11px] text-indigo-800/80 mt-1">
+                <p className="text-2xs text-accent/80 mt-1">
                   Yapay zeka ayrıştırıcımız metni otomatik olarak okur, soru numaralarını, 5 şıkkı ve doğru cevabı tespit ederek doğrudan veritabanına ekler.
                 </p>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">
+                <label className="block text-xs font-bold text-ink-2 mb-1">
                   NotebookLM / Gemini Metin Çıktısı:
                 </label>
                 <textarea
@@ -372,7 +372,7 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
                   value={importText}
                   onChange={(e) => setImportText(e.target.value)}
                   placeholder={`Örnek:\nSoru 15: Aşağıdakilerden hangisi nefrotik sendromun en sık çocukluk çağı nedenidir?\nA) Minimal Değişiklik Hastalığı\nB) FSGS\nC) Membranöz Nefropati\nD) MPGN\nE) IgA Nefropatisi\nCevap: A\nAçıklama: Minimal değişiklik hastalığında podosit ayak çıkıntılarında silinme görülür ve steroide tam yanıt alınır.`}
-                  className="w-full text-xs font-mono p-3 rounded-xl border border-slate-300 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 bg-white"
+                  className="w-full text-xs font-mono p-3 rounded-xl border border-line-2 focus:outline-hidden focus:ring-2 focus:ring-accent/20 bg-white"
                 />
               </div>
 
@@ -380,7 +380,7 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
                 type="button"
                 onClick={handleImportFromAI}
                 disabled={isProcessing || !importText.trim()}
-                className="w-full bg-indigo-700 hover:bg-indigo-800 disabled:opacity-50 text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer active:scale-95"
+                className="w-full bg-accent hover:bg-accent disabled:opacity-50 text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer active:scale-95"
               >
                 {isProcessing ? (
                   <>
@@ -400,29 +400,29 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
           {/* TAB 3: DIRECT GEMINI INTEGRATION */}
           {activeTab === 'direct_ai' && (
             <div className="space-y-4">
-              <div className="bg-teal-50 border border-teal-200 rounded-xl p-4 text-xs text-teal-950 space-y-2">
-                <div className="flex items-center gap-2 font-bold text-teal-900 text-sm">
-                  <Sparkles className="w-4 h-4 text-teal-700" />
+              <div className="bg-ok-soft border border-ok/30 rounded-xl p-4 text-xs text-ok space-y-2">
+                <div className="flex items-center gap-2 font-bold text-ok text-sm">
+                  <Sparkles className="w-4 h-4 text-ok" />
                   <span>Doğrudan Gemini 2.5 Flash ile Otomatik Zenginleştirme</span>
                 </div>
-                <p className="leading-relaxed text-teal-900/90">
+                <p className="leading-relaxed text-ok/90">
                   Bu özellik, mevcut sorularınızı ve Google Drive'dan çekilen 40 ders slaytını doğrudan Gemini yapay zekasına gönderir.
                   Eksik soru köklerini tıp literatürüne göre tamamlar, çeldirici şıklar üretir ve soruların hangi ders slaytından çıktığını otomatik bağlar.
                 </p>
               </div>
 
-              <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-3">
-                <div className="flex items-center justify-between text-xs text-slate-700">
+              <div className="bg-white border border-line rounded-xl p-4 space-y-3">
+                <div className="flex items-center justify-between text-xs text-ink-2">
                   <span>Mevcut Soru Sayısı:</span>
-                  <span className="font-bold text-teal-800">{questions.length} Soru</span>
+                  <span className="font-bold text-ok">{questions.length} Soru</span>
                 </div>
-                <div className="flex items-center justify-between text-xs text-slate-700">
+                <div className="flex items-center justify-between text-xs text-ink-2">
                   <span>İndekslenen Slayt Sayısı:</span>
-                  <span className="font-bold text-teal-800">{lectureNotes.length} Slayt</span>
+                  <span className="font-bold text-ok">{lectureNotes.length} Slayt</span>
                 </div>
-                <div className="flex items-center justify-between text-xs text-slate-700">
+                <div className="flex items-center justify-between text-xs text-ink-2">
                   <span>Gemini Modeli:</span>
-                  <span className="font-bold text-slate-900">Gemini 2.5 Flash (Tıp Soru Motoru)</span>
+                  <span className="font-bold text-ink">Gemini 2.5 Flash (Tıp Soru Motoru)</span>
                 </div>
               </div>
 
@@ -430,7 +430,7 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
                 type="button"
                 onClick={handleDirectGeminiEnhance}
                 disabled={isProcessing}
-                className="w-full bg-teal-700 hover:bg-teal-800 disabled:opacity-50 text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer active:scale-95"
+                className="w-full bg-ok hover:bg-ok disabled:opacity-50 text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer active:scale-95"
               >
                 {isProcessing ? (
                   <>
@@ -439,7 +439,7 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
                   </>
                 ) : (
                   <>
-                    <Sparkles className="w-4 h-4 text-teal-200" />
+                    <Sparkles className="w-4 h-4 text-ok-soft" />
                     <span>Veritabanını Gemini ile Otomatik Zenginleştir</span>
                   </>
                 )}

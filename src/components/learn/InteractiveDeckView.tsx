@@ -325,7 +325,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
         elements.push(
           <div key={`table-${i}`} className="my-3 overflow-hidden rounded-xl border border-line bg-white dark:bg-zinc-900 shadow-2xs">
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-[12.5px] sm:text-[13px] border-collapse">
+              <table className="w-full text-left text-sm sm:text-sm border-collapse">
                 <thead>
                   <tr className="bg-accent/10 border-b border-line text-accent font-bold">
                     {headers.map((h, hIdx) => (
@@ -368,7 +368,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
       elements.push(
         <h4
           key={`h3-${i}`}
-          className="m-0 pt-3 pb-1 border-b border-line-soft text-[14.5px] sm:text-[15.5px] font-bold text-ink flex items-center gap-2"
+          className="m-0 pt-3 pb-1 border-b border-line-soft text-md sm:text-md font-bold text-ink flex items-center gap-2"
         >
           <span className="w-2.5 h-2.5 rounded-full bg-accent shrink-0 shadow-2xs" />
           <Rich text={line.slice(4)} />
@@ -383,7 +383,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
       elements.push(
         <h5
           key={`h4-${i}`}
-          className="m-0 pt-2 text-[12.5px] sm:text-[13px] font-bold uppercase tracking-wider text-accent flex items-center gap-2"
+          className="m-0 pt-2 text-sm sm:text-sm font-bold uppercase tracking-wider text-accent flex items-center gap-2"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0" />
           <Rich text={line.slice(5)} />
@@ -402,13 +402,13 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
       elements.push(
         <div
           key={`callout-${i}`}
-          className={`p-3 sm:p-3.5 my-2 rounded-xl border text-[12.5px] sm:text-[13px] leading-relaxed flex items-start gap-2.5 shadow-2xs ${
+          className={`p-3 sm:p-3.5 my-2 rounded-xl border text-sm sm:text-sm leading-relaxed flex items-start gap-2.5 shadow-2xs ${
             isRed
-              ? 'bg-rose-50/90 dark:bg-rose-950/30 border-rose-300 dark:border-rose-800 text-rose-950 dark:text-rose-200'
+              ? 'bg-bad-soft/90 dark:bg-rose-950/30 border-bad/30 dark:border-rose-800 text-bad-text dark:text-rose-200'
               : 'bg-accent-soft/40 dark:bg-accent-soft/10 border-accent/40 text-ink'
           }`}
         >
-          <span className="text-[15px] select-none shrink-0 mt-0.5" aria-hidden="true">{icon}</span>
+          <span className="text-md select-none shrink-0 mt-0.5" aria-hidden="true">{icon}</span>
           <div className="min-w-0 flex-1 leading-relaxed">
             <Rich text={content} />
           </div>
@@ -424,9 +424,9 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
       elements.push(
         <div
           key={`subsub-${i}`}
-          className="ml-7 sm:ml-10 my-1 p-2 sm:p-2.5 rounded-lg bg-slate-50/80 dark:bg-zinc-850/60 border-l-2 border-accent/40 border-t border-r border-b border-line-soft/80 text-[12.5px] text-ink-3 leading-relaxed flex items-start gap-2.5 shadow-2xs hover:border-accent/60 transition-colors"
+          className="ml-7 sm:ml-10 my-1 p-2 sm:p-2.5 rounded-lg bg-field/80 dark:bg-zinc-850/60 border-l-2 border-accent/40 border-t border-r border-b border-line-soft/80 text-sm text-ink-3 leading-relaxed flex items-start gap-2.5 shadow-2xs hover:border-accent/60 transition-colors"
         >
-          <span className="text-accent text-[12px] select-none shrink-0 mt-0.5 font-bold">↳</span>
+          <span className="text-accent text-xs select-none shrink-0 mt-0.5 font-bold">↳</span>
           <div className="min-w-0 flex-1 leading-relaxed">
             <Rich text={cleanText} />
           </div>
@@ -442,7 +442,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
       elements.push(
         <div
           key={`sub-${i}`}
-          className="ml-3 sm:ml-5 my-1.5 p-2.5 sm:p-3 rounded-xl bg-slate-50/90 dark:bg-zinc-850/80 border-l-3 border-accent border-t border-r border-b border-line-soft text-[13px] sm:text-[13.5px] text-ink-2 leading-relaxed flex items-start gap-3 shadow-2xs hover:border-accent transition-all"
+          className="ml-3 sm:ml-5 my-1.5 p-2.5 sm:p-3 rounded-xl bg-field/90 dark:bg-zinc-850/80 border-l-3 border-accent border-t border-r border-b border-line-soft text-sm sm:text-base text-ink-2 leading-relaxed flex items-start gap-3 shadow-2xs hover:border-accent transition-all"
         >
           <span className="mt-2 w-2 h-2 rounded-sm bg-accent/80 shrink-0 rotate-45" />
           <div className="min-w-0 flex-1 leading-relaxed">
@@ -460,9 +460,9 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
       elements.push(
         <div
           key={`num-${i}`}
-          className="my-1.5 p-3 sm:p-3.5 rounded-xl bg-white dark:bg-zinc-850 border border-line-soft hover:border-accent/40 text-[13.5px] text-ink leading-relaxed flex items-start gap-3 shadow-2xs transition-all"
+          className="my-1.5 p-3 sm:p-3.5 rounded-xl bg-white dark:bg-zinc-850 border border-line-soft hover:border-accent/40 text-base text-ink leading-relaxed flex items-start gap-3 shadow-2xs transition-all"
         >
-          <span className="shrink-0 w-5.5 h-5.5 rounded-lg bg-accent text-white text-[11.5px] font-bold flex items-center justify-center mt-0.5 shadow-xs">
+          <span className="shrink-0 w-5.5 h-5.5 rounded-lg bg-accent text-white text-xs font-bold flex items-center justify-center mt-0.5 shadow-xs">
             {numMatch[1]}
           </span>
           <div className="min-w-0 flex-1 leading-relaxed">
@@ -480,7 +480,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
       elements.push(
         <div
           key={`bullet-${i}`}
-          className="my-2 p-3 sm:p-3.5 rounded-xl bg-white dark:bg-zinc-850 border border-line-soft hover:border-accent/50 text-[13.5px] sm:text-[14px] text-ink leading-relaxed flex items-start gap-3 shadow-2xs transition-all"
+          className="my-2 p-3 sm:p-3.5 rounded-xl bg-white dark:bg-zinc-850 border border-line-soft hover:border-accent/50 text-base sm:text-base text-ink leading-relaxed flex items-start gap-3 shadow-2xs transition-all"
         >
           <span className="mt-2 w-2.5 h-2.5 rounded-full bg-accent shrink-0 shadow-xs ring-4 ring-accent/15" />
           <div className="min-w-0 flex-1 leading-relaxed">
@@ -494,7 +494,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
 
     // 9. Normal Paragraf
     elements.push(
-      <p key={`p-${i}`} className="m-0 text-[13.5px] sm:text-[14px] text-ink-2 leading-[1.8] font-normal my-1.5">
+      <p key={`p-${i}`} className="m-0 text-base sm:text-base text-ink-2 leading-[1.8] font-normal my-1.5">
         <Rich text={line} />
       </p>
     );
@@ -563,9 +563,9 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
       <div
         className={`w-full grid rounded-2xl transition-all duration-500 ease-out shadow-xs hover:shadow-md min-h-[175px] border ${
           status === 'learned'
-            ? 'border-emerald-400 dark:border-emerald-700 bg-emerald-50/20'
+            ? 'border-ok dark:border-emerald-700 bg-ok-soft/20'
             : status === 'review'
-            ? 'border-amber-400 dark:border-amber-700 bg-amber-50/20'
+            ? 'border-warn dark:border-amber-700 bg-warn-soft/20'
             : 'border-line hover:border-accent/40 bg-canvas'
         }`}
         style={{
@@ -583,18 +583,18 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
           }}
         >
           <div className="flex items-start justify-between gap-2 shrink-0">
-            <span className="min-w-0 min-h-6 px-2.5 py-1 rounded-lg text-[11.5px] leading-tight font-semibold bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-200 uppercase tracking-[0.04em] inline-flex items-center gap-1.5 border border-amber-200/80 dark:border-amber-800">
-              <BrainCircuit className="w-3.5 h-3.5 shrink-0 text-amber-700 dark:text-amber-400" />
+            <span className="min-w-0 min-h-6 px-2.5 py-1 rounded-lg text-xs leading-tight font-semibold bg-warn-soft dark:bg-amber-950/60 text-warn dark:text-amber-200 uppercase tracking-[0.04em] inline-flex items-center gap-1.5 border border-warn/80 dark:border-amber-800">
+              <BrainCircuit className="w-3.5 h-3.5 shrink-0 text-warn dark:text-amber-400" />
               <span className="min-w-0">{card.category || card.subtopic || 'Klinik Spot'}</span>
             </span>
             <div className="flex items-center gap-1.5">
               {status === 'learned' && (
-                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                <span className="px-2 py-0.5 rounded-full text-2xs font-bold bg-ok-soft text-ok border border-ok/30">
                   Öğrenildi ✓
                 </span>
               )}
               {status === 'review' && (
-                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                <span className="px-2 py-0.5 rounded-full text-2xs font-bold bg-warn-soft text-warn border border-warn/30">
                   Tekrar Edilecek
                 </span>
               )}
@@ -605,13 +605,13 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
           </div>
 
           <div className="my-2.5 flex-1 flex flex-col justify-center">
-            <h4 className="m-0 text-[13.5px] sm:text-[14.5px] font-bold text-ink leading-snug tracking-[-0.01em] break-words">
+            <h4 className="m-0 text-base sm:text-md font-bold text-ink leading-snug tracking-[-0.01em] break-words">
               {frontText}
             </h4>
             {card.hint && (
               <div className="mt-2.5">
                 {showHint ? (
-                  <p className="m-0 text-[12px] text-amber-950 dark:text-amber-200 bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800 rounded-xl p-2.5 leading-relaxed shadow-2xs">
+                  <p className="m-0 text-xs text-warn dark:text-amber-200 bg-warn-soft dark:bg-amber-950/50 border border-warn/30 dark:border-amber-800 rounded-xl p-2.5 leading-relaxed shadow-2xs">
                     <strong>İpucu:</strong> {card.hint}
                   </p>
                 ) : (
@@ -621,7 +621,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
                       e.stopPropagation();
                       setShowHint(true);
                     }}
-                    className="text-[11.5px] font-semibold text-accent hover:text-accent-hover hover:underline cursor-pointer inline-flex items-center gap-1"
+                    className="text-xs font-semibold text-accent hover:text-accent-hover hover:underline cursor-pointer inline-flex items-center gap-1"
                   >
                     <span>İpucunu Göster</span>
                   </button>
@@ -630,7 +630,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
             )}
           </div>
 
-          <div className="pt-2 border-t border-line-soft/60 flex items-center justify-between text-[11px] text-ink-3">
+          <div className="pt-2 border-t border-line-soft/60 flex items-center justify-between text-2xs text-ink-3">
             <span>Kafanda yanıtla</span>
             <span className="font-semibold text-accent flex items-center gap-1">
               <span>Cevabı Gör (Tıkla)</span>
@@ -650,29 +650,29 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
           }}
         >
           <div className="flex items-start justify-between gap-2 shrink-0 select-none">
-            <span className="min-w-0 min-h-6 px-2.5 py-1 rounded-lg text-[11.5px] leading-tight font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200 uppercase tracking-[0.04em] inline-flex items-center gap-1.5 border border-emerald-300/80 dark:border-emerald-800">
-              <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-emerald-700 dark:text-emerald-400" />
+            <span className="min-w-0 min-h-6 px-2.5 py-1 rounded-lg text-xs leading-tight font-semibold bg-ok-soft dark:bg-emerald-950/60 text-ok dark:text-emerald-200 uppercase tracking-[0.04em] inline-flex items-center gap-1.5 border border-ok/80 dark:border-emerald-800">
+              <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-ok dark:text-emerald-400" />
               <span className="min-w-0">Çözüm & Mekanizma</span>
             </span>
-            <span aria-hidden="true" className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-white/80 dark:bg-zinc-800 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 shadow-2xs">
+            <span aria-hidden="true" className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-white/80 dark:bg-zinc-800 text-ok dark:text-emerald-400 border border-ok/30 dark:border-emerald-800 shadow-2xs">
               <RefreshCw className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
             </span>
           </div>
 
-          <div className="my-2.5 flex-1 text-[12.5px] sm:text-[13.5px] font-medium text-ink leading-relaxed whitespace-pre-line break-words select-text">
+          <div className="my-2.5 flex-1 text-sm sm:text-base font-medium text-ink leading-relaxed whitespace-pre-line break-words select-text">
             <Rich text={backText} />
           </div>
 
           <div className="pt-2.5 border-t border-line-soft/80 flex items-center justify-between gap-2" onClick={(e) => e.stopPropagation()}>
-            <span className="text-[11px] font-medium text-ink-3">Hafıza Durumu:</span>
+            <span className="text-2xs font-medium text-ink-3">Hafıza Durumu:</span>
             <div className="flex items-center gap-1.5">
               <button
                 type="button"
                 onClick={() => setStatus('learned')}
-                className={`px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer flex items-center gap-1 ${
+                className={`px-2.5 py-1 rounded-lg text-2xs font-bold transition-all cursor-pointer flex items-center gap-1 ${
                   status === 'learned'
-                    ? 'bg-emerald-600 text-white shadow-xs ring-2 ring-emerald-300'
-                    : 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100'
+                    ? 'bg-ok text-white shadow-xs ring-2 ring-ok/30'
+                    : 'bg-ok-soft dark:bg-emerald-950/40 text-ok dark:text-emerald-300 border border-ok/30 dark:border-emerald-800 hover:bg-ok-soft'
                 }`}
               >
                 <Check className="w-3 h-3" />
@@ -681,10 +681,10 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
               <button
                 type="button"
                 onClick={() => setStatus('review')}
-                className={`px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer flex items-center gap-1 ${
+                className={`px-2.5 py-1 rounded-lg text-2xs font-bold transition-all cursor-pointer flex items-center gap-1 ${
                   status === 'review'
-                    ? 'bg-amber-600 text-white shadow-xs ring-2 ring-amber-300'
-                    : 'bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 hover:bg-amber-100'
+                    ? 'bg-warn text-white shadow-xs ring-2 ring-warn/30'
+                    : 'bg-warn-soft dark:bg-amber-950/40 text-warn dark:text-amber-300 border border-warn/30 dark:border-amber-800 hover:bg-warn-soft'
                 }`}
               >
                 <RotateCcw className="w-3 h-3" />
@@ -751,7 +751,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
 
       {deckId && deckLoading && !activeDeck && (
         <div className="fixed inset-0 z-[60] bg-canvas flex items-center justify-center" role="status" aria-live="polite">
-          <span className="flex items-center gap-3 text-[15px] text-ink-2">
+          <span className="flex items-center gap-3 text-md text-ink-2">
             <span className="w-5 h-5 rounded-full border-2 border-accent border-t-transparent animate-spin" aria-hidden="true" />
             Ders açılıyor…
           </span>
@@ -1200,11 +1200,11 @@ const DeckPlayer: React.FC<{
           <ListTree className="w-5 h-5" />
         </button>
         <div className="min-w-[96px] flex-1">
-          <div className="text-[11.5px] text-ink-3 truncate leading-tight">
+          <div className="text-xs text-ink-3 truncate leading-tight">
             {deck.discipline}
             {deck.instructor ? ` · ${deck.instructor}` : ''}
           </div>
-          <div className="text-[15px] font-semibold truncate leading-tight" title={deck.title}>
+          <div className="text-md font-semibold truncate leading-tight" title={deck.title}>
             {deck.shortTitle || deck.title}
           </div>
         </div>
@@ -1214,11 +1214,11 @@ const DeckPlayer: React.FC<{
           type="button"
           onClick={() => setSearchOpen(true)}
           title="Ders İçinde Konu, Soru ve Spot Ara (Ctrl+K veya /)"
-          className="h-9 px-2.5 rounded-[10px] bg-canvas hover:bg-white border border-line text-ink-2 hover:text-ink text-[13px] font-medium inline-flex items-center gap-1.5 cursor-pointer shrink-0 transition-colors"
+          className="h-9 px-2.5 rounded-[10px] bg-canvas hover:bg-white border border-line text-ink-2 hover:text-ink text-sm font-medium inline-flex items-center gap-1.5 cursor-pointer shrink-0 transition-colors"
         >
           <Search className="w-4 h-4 text-accent" />
           <span className="hidden xl:inline">Ara</span>
-          <kbd className="hidden lg:inline text-[11px] font-mono text-ink-3 bg-white px-1.5 py-0.5 rounded border border-line">Ctrl+K</kbd>
+          <kbd className="hidden lg:inline text-2xs font-mono text-ink-3 bg-white px-1.5 py-0.5 rounded border border-line">Ctrl+K</kbd>
         </button>
 
         {/* Medical Glossary Dictionary trigger */}
@@ -1226,16 +1226,16 @@ const DeckPlayer: React.FC<{
           type="button"
           onClick={() => setIsDrawerOpen(true)}
           title="Tıbbi Terimler Sözlüğü (Latin İsimler, Bakteri, Virüs ve İlaçlar)"
-          className="hidden sm:inline-flex h-9 px-2.5 rounded-[10px] bg-canvas hover:bg-white border border-line text-ink-2 hover:text-teal-700 dark:hover:text-teal-400 text-[13px] font-medium items-center gap-1.5 cursor-pointer shrink-0 transition-colors"
+          className="hidden sm:inline-flex h-9 px-2.5 rounded-[10px] bg-canvas hover:bg-white border border-line text-ink-2 hover:text-ok dark:hover:text-teal-400 text-sm font-medium items-center gap-1.5 cursor-pointer shrink-0 transition-colors"
         >
-          <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+          <BookOpen className="w-4 h-4 text-ok dark:text-teal-400" />
           <span className="hidden xl:inline">Sözlük</span>
-          <span className="hidden sm:inline text-[11.5px] font-bold bg-teal-500/10 text-teal-700 dark:text-teal-300 px-1.5 py-0.5 rounded-full border border-teal-500/20">
+          <span className="hidden sm:inline text-xs font-bold bg-ok/10 text-ok dark:text-teal-300 px-1.5 py-0.5 rounded-full border border-ok/20">
             {glossaryList.length}
           </span>
         </button>
 
-        <span className="font-mono text-[12px] sm:text-[13px] text-ink-2 px-1.5 py-0.5 rounded-md bg-canvas shrink-0" aria-live="polite">
+        <span className="font-mono text-xs sm:text-sm text-ink-2 px-1.5 py-0.5 rounded-md bg-canvas shrink-0" aria-live="polite">
           {index + 1} / {n}
         </span>
 
@@ -1248,7 +1248,7 @@ const DeckPlayer: React.FC<{
             aria-label="Etkileşimli Slaytlar"
             title="Etkileşimli Slaytlar"
             onClick={() => setViewMode('interactive')}
-            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
+            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-xs sm:text-sm cursor-pointer transition-colors ${
               viewMode === 'interactive'
                 ? 'bg-white text-accent font-semibold shadow-xs'
                 : 'text-ink-2 hover:text-ink'
@@ -1265,13 +1265,13 @@ const DeckPlayer: React.FC<{
             aria-label="Yan Yana (Slayt + Orijinal PDF)"
             title="Yan Yana: Sol tarafta slayt, sağ tarafta hoca PDF'i"
             onClick={() => setViewMode('split')}
-            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
+            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-xs sm:text-sm cursor-pointer transition-colors ${
               viewMode === 'split'
-                ? 'bg-white text-indigo-600 dark:text-indigo-400 font-semibold shadow-xs'
+                ? 'bg-white text-accent dark:text-indigo-400 font-semibold shadow-xs'
                 : 'text-ink-2 hover:text-ink'
             }`}
           >
-            <Columns className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 dark:text-indigo-400" />
+            <Columns className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent dark:text-indigo-400" />
             <span className="hidden 2xl:inline">Yan Yana</span>
           </button>
 
@@ -1282,13 +1282,13 @@ const DeckPlayer: React.FC<{
             aria-label="Orijinal Ders PDF'i"
             title="Hocanın orijinal ders sunumu PDF'i"
             onClick={() => setViewMode('pdf')}
-            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
+            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-xs sm:text-sm cursor-pointer transition-colors ${
               viewMode === 'pdf'
-                ? 'bg-white text-rose-600 dark:text-rose-400 font-semibold shadow-xs'
+                ? 'bg-white text-bad-text dark:text-rose-400 font-semibold shadow-xs'
                 : 'text-ink-2 hover:text-ink'
             }`}
           >
-            <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-500" />
+            <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-bad-text" />
             <span className="hidden 2xl:inline">Orijinal PDF</span>
           </button>
         </div>
@@ -1309,7 +1309,7 @@ const DeckPlayer: React.FC<{
                 aria-label={label}
                 title={label}
                 onClick={() => setMode(id)}
-                className={`h-8 px-2 rounded-lg inline-flex items-center gap-1.5 text-[12px] cursor-pointer ${
+                className={`h-8 px-2 rounded-lg inline-flex items-center gap-1.5 text-xs cursor-pointer ${
                   mode === id ? 'bg-white text-accent font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
                 }`}
               >
@@ -1327,7 +1327,7 @@ const DeckPlayer: React.FC<{
               onClick={() => setRecall((v) => !v)}
               aria-pressed={recall}
               title="Hatırlama modu: kalın anahtar ifadeleri ört, önce hatırla, sonra dokunup aç"
-              className={`h-9 px-3 rounded-full text-[13px] font-medium inline-flex items-center gap-1.5 cursor-pointer shrink-0 transition-colors ${
+              className={`h-9 px-3 rounded-full text-sm font-medium inline-flex items-center gap-1.5 cursor-pointer shrink-0 transition-colors ${
                 recall ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
               }`}
             >
@@ -1372,7 +1372,7 @@ const DeckPlayer: React.FC<{
         <div className="h-full bg-accent transition-[width] duration-300" style={{ width: `${((index + 1) / n) * 100}%` }} />
       </div>
       {marking && (
-        <div role="status" className="ms-pop-in shrink-0 flex items-center gap-2 px-3 sm:px-4 py-1.5 bg-warn-soft text-warn text-[12.5px] font-medium">
+        <div role="status" className="ms-pop-in shrink-0 flex items-center gap-2 px-3 sm:px-4 py-1.5 bg-warn-soft text-warn text-sm font-medium">
           <Lock className="w-3.5 h-3.5 shrink-0" />
           <span className="flex-1 min-w-0 truncate">İşaretleme modu: kaydırma sayfa çevirmez. Kalem çizer, parmak kaydırır.</span>
           <button
@@ -1381,7 +1381,7 @@ const DeckPlayer: React.FC<{
               stopPen();
               setDrawingGlobalState({ activeMode: 'none' });
             }}
-            className="shrink-0 h-7 px-2.5 rounded-md bg-white/70 hover:bg-white text-ink text-[12px] font-semibold cursor-pointer"
+            className="shrink-0 h-7 px-2.5 rounded-md bg-white/70 hover:bg-white text-ink text-xs font-semibold cursor-pointer"
           >
             Bitti
           </button>
@@ -1392,7 +1392,7 @@ const DeckPlayer: React.FC<{
       <div className="flex-1 min-h-0 flex">
         {tocOpen && (
           <aside aria-label="İçindekiler" className="ms-fade-in hidden lg:flex w-[248px] shrink-0 flex-col bg-white border-r border-line min-h-0">
-            <div className="px-4 pt-3 pb-1.5 text-[11px] font-semibold uppercase tracking-[.06em] text-ink-3">Bölümler · {n}</div>
+            <div className="px-4 pt-3 pb-1.5 text-2xs font-semibold uppercase tracking-[.06em] text-ink-3">Bölümler · {n}</div>
             <ol className="list-none m-0 px-2 pb-3 flex-1 min-h-0 overflow-y-auto overscroll-contain flex flex-col gap-0.5">
               {slides.map((sl, i) => {
                 const on = i === index;
@@ -1403,7 +1403,7 @@ const DeckPlayer: React.FC<{
                       type="button"
                       onClick={() => goTo(i)}
                       aria-current={on ? 'step' : undefined}
-                      className={`w-full min-h-[34px] px-2.5 rounded-lg flex items-center gap-2 text-left text-[13px] cursor-pointer transition-colors ${
+                      className={`w-full min-h-[34px] px-2.5 rounded-lg flex items-center gap-2 text-left text-sm cursor-pointer transition-colors ${
                         on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-2 hover:bg-canvas hover:text-ink'
                       }`}
                     >
@@ -1504,7 +1504,7 @@ const DeckPlayer: React.FC<{
               </div>
             </div>
           ) : mode === 'paged' ? (
-            <div className="ms-swipe-stage absolute inset-0 p-1 sm:p-2.5 lg:p-3 flex bg-slate-50/70 dark:bg-zinc-950" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+            <div className="ms-swipe-stage absolute inset-0 p-1 sm:p-2.5 lg:p-3 flex bg-field/70 dark:bg-zinc-950" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
               <SlideCanvas
                 key={index}
                 deckId={deck.id}
@@ -1533,7 +1533,7 @@ const DeckPlayer: React.FC<{
               />
             </div>
           ) : (
-            <div ref={scrollRef} className="absolute inset-0 overflow-y-auto snap-y snap-proximity overscroll-contain bg-slate-50/70 dark:bg-zinc-950" aria-label="Slaytlar">
+            <div ref={scrollRef} className="absolute inset-0 overflow-y-auto snap-y snap-proximity overscroll-contain bg-field/70 dark:bg-zinc-950" aria-label="Slaytlar">
               {slides.map((s, i) => (
                 <section
                   key={i}
@@ -1624,13 +1624,13 @@ const DeckPlayer: React.FC<{
                   on ? 'border-accent bg-accent-soft text-accent' : 'border-line bg-white text-ink-2 hover:border-line-2'
                 }`}
               >
-                <span className="font-mono text-[12px] font-semibold">{String(i + 1).padStart(2, '0')}</span>
-                <span className={`hidden md:block max-w-[160px] truncate text-[12px] ${on ? 'font-semibold' : ''}`}>{s.title}</span>
+                <span className="font-mono text-xs font-semibold">{String(i + 1).padStart(2, '0')}</span>
+                <span className={`hidden md:block max-w-[160px] truncate text-xs ${on ? 'font-semibold' : ''}`}>{s.title}</span>
               </button>
             );
           })}
         </div>
-        <span className="sm:hidden font-mono text-[12px] text-ink-2 shrink-0">
+        <span className="sm:hidden font-mono text-xs text-ink-2 shrink-0">
           {index + 1}/{n}
         </span>
         <button type="button" onClick={next} disabled={atEnd} aria-label="Sonraki sayfa" className={`${iconBtn} bg-accent text-white hover:bg-accent-hover hover:text-white`}>
@@ -1772,7 +1772,7 @@ export const GlobalTopicSearchModal: React.FC<{
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Ders içinde konu, patofizyoloji, tanı, akıl kartı veya soru ara..."
-            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] sm:text-[16px] placeholder:text-slate-600"
+            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-md sm:text-md placeholder:text-ink-2"
           />
           {q && (
             <button type="button" onClick={() => setQ('')} className="p-1 text-ink-3 hover:text-ink cursor-pointer">
@@ -1782,7 +1782,7 @@ export const GlobalTopicSearchModal: React.FC<{
           <button
             type="button"
             onClick={onClose}
-            className="shrink-0 whitespace-nowrap h-8 px-2.5 rounded-lg bg-canvas hover:bg-line text-[12px] font-semibold text-ink-2 cursor-pointer"
+            className="shrink-0 whitespace-nowrap h-8 px-2.5 rounded-lg bg-canvas hover:bg-line text-xs font-semibold text-ink-2 cursor-pointer"
           >
             Kapat (Esc)
           </button>
@@ -1791,19 +1791,19 @@ export const GlobalTopicSearchModal: React.FC<{
         {/* Modal Results List */}
         <div className="flex-1 min-h-0 overflow-y-auto p-3 sm:p-4 flex flex-col gap-2">
           {!q.trim() ? (
-            <div className="py-12 text-center text-ink-3 text-[14px]">
+            <div className="py-12 text-center text-ink-3 text-base">
               <Search className="w-8 h-8 mx-auto mb-2 text-ink-3 opacity-40" />
               <p className="m-0 font-medium text-ink-2">Bu dersteki tüm slaytlar, klinik maddeler ve akıl kartları taranır.</p>
-              <p className="m-0 text-[13px] mt-1">Aramak istediğin tıbbi kavramı yazmaya başla (örn. forniks, trabekülasyon, POD, pyelointerstisyel, BPH)...</p>
+              <p className="m-0 text-sm mt-1">Aramak istediğin tıbbi kavramı yazmaya başla (örn. forniks, trabekülasyon, POD, pyelointerstisyel, BPH)...</p>
             </div>
           ) : results.length === 0 ? (
-            <div className="py-12 text-center text-ink-3 text-[14px]">
+            <div className="py-12 text-center text-ink-3 text-base">
               <p className="m-0 font-medium text-ink-2">"{q}" için ders içeriğinde eşleşme bulunamadı.</p>
-              <p className="m-0 text-[13px] mt-1">Farklı bir tıp terimi ya da kelime kökü dene.</p>
+              <p className="m-0 text-sm mt-1">Farklı bir tıp terimi ya da kelime kökü dene.</p>
             </div>
           ) : (
             <>
-              <div className="text-[12px] font-semibold text-ink-3 px-1 pb-1">
+              <div className="text-xs font-semibold text-ink-3 px-1 pb-1">
                 Ders içeriğinde {results.length} eşleşme bulundu:
               </div>
               {results.map((r, i) => (
@@ -1814,17 +1814,17 @@ export const GlobalTopicSearchModal: React.FC<{
                   className="w-full text-left rounded-xl border border-line hover:border-accent p-3 bg-white hover:bg-accent-soft/30 transition-all cursor-pointer flex flex-col gap-1.5 group"
                 >
                   <div className="flex items-center justify-between gap-2">
-                    <span className="font-semibold text-[13px] text-accent flex items-center gap-1.5">
-                      <span className="font-mono text-[11px] px-1.5 py-0.5 rounded bg-accent-soft text-accent">
+                    <span className="font-semibold text-sm text-accent flex items-center gap-1.5">
+                      <span className="font-mono text-2xs px-1.5 py-0.5 rounded bg-accent-soft text-accent">
                         Slayt {r.slideNumber}
                       </span>
                       <span className="truncate">{r.slideTitle}</span>
                     </span>
-                    <span className="text-[11px] font-semibold text-ink-2 bg-black/5 px-2 py-0.5 rounded">
+                    <span className="text-2xs font-semibold text-ink-2 bg-black/5 px-2 py-0.5 rounded">
                       {r.matchedType}
                     </span>
                   </div>
-                  <p className="m-0 text-[13.5px] leading-[1.5] text-ink line-clamp-2">
+                  <p className="m-0 text-base leading-[1.5] text-ink line-clamp-2">
                     {r.snippet}
                   </p>
                 </button>
@@ -1883,8 +1883,8 @@ export const EnhancedDifferentialTable: React.FC<{
 
     if (isRed) {
       return (
-        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11.5px] font-semibold bg-rose-500/10 text-rose-700 dark:text-rose-300 border border-rose-500/20 shadow-2xs">
-          <span className="w-1.5 h-1.5 rounded-full bg-rose-500 shrink-0" />
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-semibold bg-bad/10 text-bad-text dark:text-rose-300 border border-bad/20 shadow-2xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-bad shrink-0" />
           <Rich text={cellText} />
         </span>
       );
@@ -1896,8 +1896,8 @@ export const EnhancedDifferentialTable: React.FC<{
 
     if (isGreen) {
       return (
-        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11.5px] font-medium bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20 shadow-2xs">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium bg-ok/10 text-ok dark:text-emerald-300 border border-ok/20 shadow-2xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-ok shrink-0" />
           <Rich text={cellText} />
         </span>
       );
@@ -1909,8 +1909,8 @@ export const EnhancedDifferentialTable: React.FC<{
 
     if (isAmber) {
       return (
-        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11.5px] font-medium bg-amber-500/10 text-amber-800 dark:text-amber-300 border border-amber-500/20 shadow-2xs">
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium bg-warn/10 text-warn dark:text-amber-300 border border-warn/20 shadow-2xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-warn shrink-0" />
           <Rich text={cellText} />
         </span>
       );
@@ -1922,8 +1922,8 @@ export const EnhancedDifferentialTable: React.FC<{
 
     if (isBlue) {
       return (
-        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11.5px] font-medium bg-blue-500/10 text-blue-800 dark:text-blue-300 border border-blue-500/20 shadow-2xs">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium bg-accent/10 text-accent dark:text-blue-300 border border-accent/20 shadow-2xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
           <Rich text={cellText} />
         </span>
       );
@@ -1935,20 +1935,20 @@ export const EnhancedDifferentialTable: React.FC<{
   return (
     <div className={`rounded-xl border border-line overflow-hidden bg-white shadow-2xs ${compact ? 'mt-1' : 'mt-2.5'}`}>
       {/* Table Header Banner */}
-      <div className="px-3.5 py-2 bg-canvas text-[12px] font-bold border-b border-line text-ink flex items-center justify-between gap-2">
+      <div className="px-3.5 py-2 bg-canvas text-xs font-bold border-b border-line text-ink flex items-center justify-between gap-2">
         <div className="flex items-center gap-2 min-w-0">
           <span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-2xs" />
           <span className="truncate">{table.title || 'Klinik & Patolojik Karşılaştırma Tablosu'}</span>
         </div>
         {isDiffDiagnosis && (
-          <span className="shrink-0 text-[11px] font-bold uppercase tracking-wider bg-accent-soft text-accent border border-accent/20 px-2 py-0.5 rounded-full shadow-2xs">
+          <span className="shrink-0 text-2xs font-bold uppercase tracking-wider bg-accent-soft text-accent border border-accent/20 px-2 py-0.5 rounded-full shadow-2xs">
             Ayırıcı Tanı & Sınıflama
           </span>
         )}
       </div>
 
       <div className="overflow-x-auto custom-scrollbar">
-        <table className={`w-full border-collapse ${table.headers.length >= 4 || compact ? 'text-[12px]' : 'text-[12.5px] sm:text-[13px]'}`}>
+        <table className={`w-full border-collapse ${table.headers.length >= 4 || compact ? 'text-xs' : 'text-sm sm:text-sm'}`}>
           <thead>
             <tr className="bg-canvas/90 border-b border-line">
               {table.headers.map((h, i) => (
@@ -1961,7 +1961,7 @@ export const EnhancedDifferentialTable: React.FC<{
                 >
                   <div className="flex items-center gap-1.5">
                     {i === 0 ? (
-                      <span className="text-accent text-[11px]"></span>
+                      <span className="text-accent text-2xs"></span>
                     ) : (
                       <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />
                     )}
@@ -2013,11 +2013,11 @@ export const KeyBulletsRenderer: React.FC<{
   return (
     <div className={`flex flex-col ${compact ? 'gap-2' : 'gap-2.5 my-2.5'}`}>
       <div className="flex items-center justify-between gap-2 px-1">
-        <span className="text-[11.5px] font-bold uppercase tracking-wider text-ink-3 flex items-center gap-1.5">
+        <span className="text-xs font-bold uppercase tracking-wider text-ink-3 flex items-center gap-1.5">
           <Sparkles className="w-3.5 h-3.5 text-accent" />
           <span>Kritik Ders Notları, Spotlar ve Ayırt Edici Özellikler</span>
         </span>
-        <span className="text-[11px] font-mono font-semibold text-ink-3 bg-canvas px-2 py-0.5 rounded-md border border-line">
+        <span className="text-2xs font-mono font-semibold text-ink-3 bg-canvas px-2 py-0.5 rounded-md border border-line">
           {bullets.length} Madde
         </span>
       </div>
@@ -2054,26 +2054,26 @@ export const KeyBulletsRenderer: React.FC<{
             (/(?:||)/.test(b.title) ||
               /\b(özet|tekrar|sentez|hatırlatma|yaklaşım|prognoz|sonuç)\b/i.test(t));
 
-          let badgeCls = 'bg-teal-500/10 text-teal-800 dark:text-teal-300 border-teal-500/20';
-          let borderCls = 'bg-teal-50/20 dark:bg-teal-950/20 border-line-soft';
-          let icon = <BookOpen className="w-3.5 h-3.5 text-teal-600 shrink-0" />;
+          let badgeCls = 'bg-ok/10 text-ok dark:text-teal-300 border-ok/20';
+          let borderCls = 'bg-ok-soft/20 dark:bg-teal-950/20 border-line-soft';
+          let icon = <BookOpen className="w-3.5 h-3.5 text-ok shrink-0" />;
 
           if (isRed) {
-            badgeCls = 'bg-rose-500/10 text-rose-800 dark:text-rose-300 border-rose-500/30';
-            borderCls = 'bg-rose-50/40 dark:bg-rose-950/30 border-rose-500/20';
-            icon = <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />;
+            badgeCls = 'bg-bad/10 text-bad-text dark:text-rose-300 border-bad/30';
+            borderCls = 'bg-bad-soft/40 dark:bg-rose-950/30 border-bad/20';
+            icon = <AlertTriangle className="w-3.5 h-3.5 text-bad-text shrink-0" />;
           } else if (isAmber) {
-            badgeCls = 'bg-amber-500/10 text-amber-900 dark:text-amber-300 border-amber-500/30';
-            borderCls = 'bg-amber-50/40 dark:bg-amber-950/30 border-amber-500/20';
-            icon = <Lightbulb className="w-3.5 h-3.5 text-amber-600 shrink-0" />;
+            badgeCls = 'bg-warn/10 text-warn dark:text-amber-300 border-warn/30';
+            borderCls = 'bg-warn-soft/40 dark:bg-amber-950/30 border-warn/20';
+            icon = <Lightbulb className="w-3.5 h-3.5 text-warn shrink-0" />;
           } else if (isBlue) {
-            badgeCls = 'bg-blue-500/10 text-blue-900 dark:text-blue-300 border-blue-500/30';
-            borderCls = 'bg-blue-50/40 dark:bg-blue-950/30 border-blue-500/20';
-            icon = <ArrowLeftRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />;
+            badgeCls = 'bg-accent/10 text-accent dark:text-blue-300 border-accent/30';
+            borderCls = 'bg-accent-soft/40 dark:bg-blue-950/30 border-accent/20';
+            icon = <ArrowLeftRight className="w-3.5 h-3.5 text-accent shrink-0" />;
           } else if (isPurple) {
-            badgeCls = 'bg-purple-500/10 text-purple-900 dark:text-purple-300 border-purple-500/30';
-            borderCls = 'bg-purple-50/40 dark:bg-purple-950/30 border-purple-500/20';
-            icon = <RotateCcw className="w-3.5 h-3.5 text-purple-600 shrink-0" />;
+            badgeCls = 'bg-ai/10 text-ai dark:text-purple-300 border-ai/30';
+            borderCls = 'bg-ai-soft/40 dark:bg-purple-950/30 border-ai/20';
+            icon = <RotateCcw className="w-3.5 h-3.5 text-ai shrink-0" />;
           }
 
           return (
@@ -2085,18 +2085,18 @@ export const KeyBulletsRenderer: React.FC<{
                 <span className="w-6 h-6 rounded-lg bg-white/90 dark:bg-panel shadow-2xs border border-line flex items-center justify-center">
                   {icon}
                 </span>
-                <span className="text-[11px] font-mono font-bold text-ink-3">
+                <span className="text-2xs font-mono font-bold text-ink-3">
                   #{i + 1}
                 </span>
               </div>
 
               <div className="flex flex-col gap-1 min-w-0 flex-1">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className={`text-[11px] font-bold px-2 py-0.5 rounded-md border shadow-2xs ${badgeCls}`}>
+                  <span className={`text-2xs font-bold px-2 py-0.5 rounded-md border shadow-2xs ${badgeCls}`}>
                     {b.title}
                   </span>
                 </div>
-                <div className="text-[12.5px] sm:text-[13px] text-ink leading-relaxed font-normal">
+                <div className="text-sm sm:text-sm text-ink leading-relaxed font-normal">
                   <Rich text={b.desc} />
                 </div>
               </div>
@@ -2177,13 +2177,13 @@ const SlideCanvas: React.FC<{
   const renderHeader = (config?: SlideLayoutBlock['styleConfig']) => (
     <header className="ms-slide-head flex flex-col gap-2.5 pb-2 border-b border-line-soft">
       {/* Üst Başlık (Eyebrow & Metadata) */}
-      <div className="ms-slide-meta flex items-center gap-2 flex-wrap text-[12px]">
+      <div className="ms-slide-meta flex items-center gap-2 flex-wrap text-xs">
         <span className="font-mono font-bold text-accent bg-accent-soft px-2.5 py-1 rounded-lg border border-accent/20 flex items-center gap-1.5 shadow-2xs">
           <GraduationCap className="w-3.5 h-3.5" />
           <span>Slayt {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}</span>
         </span>
         {slide.badge && (
-          <span className="h-7 px-3 rounded-lg text-[12px] font-bold tracking-[0.03em] inline-flex items-center shadow-2xs" style={{ background: badge.bg, color: badge.fg }}>
+          <span className="h-7 px-3 rounded-lg text-xs font-bold tracking-[0.03em] inline-flex items-center shadow-2xs" style={{ background: badge.bg, color: badge.fg }}>
             {slide.badge}
           </span>
         )}
@@ -2192,11 +2192,11 @@ const SlideCanvas: React.FC<{
           type="button"
           onClick={() => onOpenPdfAtPage?.(slidePdfLoc.startPage)}
           title={`Orijinal ders sunumunda ${slidePdfLoc.citation} bölümünü yan ekranda aç`}
-          className="h-7 px-2.5 rounded-lg text-[11.5px] font-semibold bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-500/25 inline-flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer group active:scale-95"
+          className="h-7 px-2.5 rounded-lg text-xs font-semibold bg-warn/10 hover:bg-warn/20 text-warn dark:text-amber-300 border border-warn/25 inline-flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer group active:scale-95"
         >
-          <FileText className="w-3.5 h-3.5 text-amber-600 group-hover:scale-110 transition-transform" />
+          <FileText className="w-3.5 h-3.5 text-warn group-hover:scale-110 transition-transform" />
           <span>Ders Notu: <strong>{slidePdfLoc.citation}</strong></span>
-          <ArrowRight className="w-3 h-3 text-amber-500/70 group-hover:translate-x-0.5 transition-transform" />
+          <ArrowRight className="w-3 h-3 text-warn/70 group-hover:translate-x-0.5 transition-transform" />
         </button>
         {/* 1-Tap Tam Ekran / Odak Modu Butonu */}
         {onToggleFullscreen && (
@@ -2204,7 +2204,7 @@ const SlideCanvas: React.FC<{
             type="button"
             onClick={onToggleFullscreen}
             title={isFullscreen ? 'Tam ekrandan çık' : 'Tüm ekrana yay / Tam ekran oku'}
-            className="h-7 px-2.5 rounded-lg text-[11.5px] font-semibold bg-accent-soft hover:bg-accent/20 text-accent border border-accent/25 inline-flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer group active:scale-95 ml-auto sm:ml-0"
+            className="h-7 px-2.5 rounded-lg text-xs font-semibold bg-accent-soft hover:bg-accent/20 text-accent border border-accent/25 inline-flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer group active:scale-95 ml-auto sm:ml-0"
           >
             {isFullscreen ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5" />}
             <span className="hidden sm:inline">{isFullscreen ? 'Küçült' : 'Tam Ekran Oku'}</span>
@@ -2218,17 +2218,17 @@ const SlideCanvas: React.FC<{
         <span data-o="ai">Yapay zekâ özeti</span>
       </div>
       {/* Büyük Ana Başlık */}
-      <h2 className="ms-slide-title m-0 font-display font-extrabold tracking-[-0.025em] leading-[1.18] text-[20px] sm:text-[24px] lg:text-[27px] text-ink">
+      <h2 className="ms-slide-title m-0 font-display font-extrabold tracking-[-0.025em] leading-[1.18] text-xl sm:text-2xl lg:text-3xl text-ink">
         {slide.title}
       </h2>
 
       {/* Vurgulu Alt Başlık */}
       {slide.subtitle && (
         <div className="ms-slide-lead p-2.5 sm:p-3 rounded-xl bg-canvas border border-accent/20 flex items-start gap-2.5 shadow-2xs">
-          <span className="ms-slide-emoji text-[14px] shrink-0 select-none mt-0.5"></span>
+          <span className="ms-slide-emoji text-base shrink-0 select-none mt-0.5"></span>
           <div className="flex flex-col gap-0.5 min-w-0">
-            <span className="ms-slide-eyebrow text-[11.5px] font-bold uppercase tracking-wider text-accent">Kavram & Odak Özeti</span>
-            <p className="m-0 text-[12.5px] sm:text-[13.5px] font-medium text-ink-2 leading-[1.55]">
+            <span className="ms-slide-eyebrow text-xs font-bold uppercase tracking-wider text-accent">Kavram & Odak Özeti</span>
+            <p className="m-0 text-sm sm:text-base font-medium text-ink-2 leading-[1.55]">
               {slide.subtitle}
             </p>
           </div>
@@ -2243,30 +2243,30 @@ const SlideCanvas: React.FC<{
       <figure data-origin="hoca" className="ms-slide-pearl m-0 rounded-2xl border-2 border-accent/20 bg-canvas p-3.5 sm:p-4.5 flex flex-col gap-2 shadow-xs">
         <figcaption className="flex items-center gap-2">
           <span
-            className="h-6 px-2.5 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1.5 shadow-2xs"
+            className="h-6 px-2.5 rounded-full text-xs font-semibold inline-flex items-center gap-1.5 shadow-2xs"
             style={{ background: tone(emph.c).bg, color: tone(emph.c).fg }}
           >
             <emph.icon className="w-3.5 h-3.5" />
             {emph.label}
           </span>
-          <span className="ms-slide-eyebrow text-[11.5px] font-semibold text-accent uppercase tracking-wider">
+          <span className="ms-slide-eyebrow text-xs font-semibold text-accent uppercase tracking-wider">
             Klinik & Sınav Kritik Vurgusu
           </span>
           <button
             type="button"
             onClick={copyQuote}
             aria-label="Alıntıyı kopyala"
-            className="ml-auto h-7 px-2 rounded-lg flex items-center gap-1 text-[11.5px] text-ink-2 hover:bg-white border border-transparent hover:border-line cursor-pointer transition-colors"
+            className="ml-auto h-7 px-2 rounded-lg flex items-center gap-1 text-xs text-ink-2 hover:bg-white border border-transparent hover:border-line cursor-pointer transition-colors"
           >
             {copied ? <Check className="w-3.5 h-3.5 text-ok" /> : <Copy className="w-3.5 h-3.5" />}
             <span className="hidden sm:inline">{copied ? 'Kopyalandı' : 'Kopyala'}</span>
           </button>
         </figcaption>
-        <blockquote className="m-0 text-[13.5px] sm:text-[14.5px] font-medium leading-[1.6] text-ink border-l-3 border-accent pl-3.5 italic">
+        <blockquote className="m-0 text-base sm:text-md font-medium leading-[1.6] text-ink border-l-3 border-accent pl-3.5 italic">
           “{hl.quote}”
         </blockquote>
         {hl.note && (
-          <p className="m-0 text-[12px] sm:text-[12.5px] text-ink-2 leading-[1.55] bg-white/60 p-2 sm:p-2.5 rounded-xl border border-line-soft">
+          <p className="m-0 text-xs sm:text-sm text-ink-2 leading-[1.55] bg-white/60 p-2 sm:p-2.5 rounded-xl border border-line-soft">
             <strong>Klinik Yaklaşım:</strong> {hl.note}
           </p>
         )}
@@ -2284,10 +2284,10 @@ const SlideCanvas: React.FC<{
               <BookOpen className="w-4 h-4" />
             </span>
             <div className="min-w-0">
-              <span className="ms-slide-eyebrow text-[11.5px] font-bold uppercase tracking-wider text-accent block">
+              <span className="ms-slide-eyebrow text-xs font-bold uppercase tracking-wider text-accent block">
                 Öğrenim Bölümü • Detaylı Müfredat Analizi
               </span>
-              <h3 className="m-0 text-[14.5px] sm:text-[15.5px] font-bold text-ink">
+              <h3 className="m-0 text-md sm:text-md font-bold text-ink">
                 {slide.discipline?.toLowerCase().includes('patoloji')
                   ? 'Kapsamlı Ders Notu ve Patoloji Sentezi'
                   : `Kapsamlı Ders Notu ve ${slide.discipline || 'Müfredat'} Sentezi`}
@@ -2300,9 +2300,9 @@ const SlideCanvas: React.FC<{
                 type="button"
                 onClick={() => onOpenPdfAtPage(slidePdfLoc.startPage)}
                 title={`Orijinal ders sunumunun ${slidePdfLoc.citation} sayfalarını yan ekranda aç`}
-                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/25 text-[11.5px] font-semibold text-amber-800 dark:text-amber-300 inline-flex items-center gap-1.5 cursor-pointer transition-colors shadow-2xs active:scale-95"
+                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-warn/10 hover:bg-warn/20 border border-warn/25 text-xs font-semibold text-warn dark:text-amber-300 inline-flex items-center gap-1.5 cursor-pointer transition-colors shadow-2xs active:scale-95"
               >
-                <BookOpen className="w-3.5 h-3.5 text-amber-600" />
+                <BookOpen className="w-3.5 h-3.5 text-warn" />
                 <span className="hidden sm:inline">PDF'te Aç</span>
                 <span>({slidePdfLoc.citation})</span>
               </button>
@@ -2311,7 +2311,7 @@ const SlideCanvas: React.FC<{
               <button
                 type="button"
                 onClick={onOpenNotes}
-                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-white border border-line text-[11.5px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-white border border-line text-xs font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
               >
                 <FileText className="w-3.5 h-3.5" />
                 <span>Panelde Oku</span>
@@ -2362,7 +2362,7 @@ const SlideCanvas: React.FC<{
         data-origin="ai"
         className={`flex flex-col gap-3 pt-1 transition-all ${
           isCheckpoint
-            ? 'p-4 sm:p-5 rounded-2xl bg-amber-50/50 dark:bg-amber-950/25 border-2 border-amber-300/80 dark:border-amber-800/60 shadow-sm'
+            ? 'p-4 sm:p-5 rounded-2xl bg-warn-soft/50 dark:bg-amber-950/25 border-2 border-warn/80 dark:border-amber-800/60 shadow-sm'
             : ''
         }`}
       >
@@ -2370,21 +2370,21 @@ const SlideCanvas: React.FC<{
           <div className="flex items-center gap-2.5 min-w-0">
             <span
               className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 shadow-xs ${
-                isCheckpoint ? 'bg-amber-600 text-white' : 'bg-amber-500 text-white'
+                isCheckpoint ? 'bg-warn text-white' : 'bg-warn text-white'
               }`}
             >
               <BrainCircuit className="w-4.5 h-4.5" />
             </span>
             <div>
-              <h3 className="m-0 text-[14.5px] sm:text-[15.5px] font-bold text-ink flex flex-wrap items-center gap-x-2 gap-y-1">
+              <h3 className="m-0 text-md sm:text-md font-bold text-ink flex flex-wrap items-center gap-x-2 gap-y-1">
                 <span>
                   {isCheckpoint ? '🎯 Pekiştirme Akıl Kartları İstasyonu' : 'Akıl Kartları (Tıkla & Çevir)'}
                 </span>
-                <span className="shrink-0 whitespace-nowrap font-mono text-[11px] font-bold text-amber-900 dark:text-amber-200 bg-amber-200/80 dark:bg-amber-900/60 px-2.5 py-0.5 rounded-full border border-amber-300 dark:border-amber-700">
+                <span className="shrink-0 whitespace-nowrap font-mono text-2xs font-bold text-warn dark:text-amber-200 bg-warn/80 dark:bg-amber-900/60 px-2.5 py-0.5 rounded-full border border-warn/30 dark:border-amber-700">
                   {flashcards.length} Hafıza Kartı
                 </span>
               </h3>
-              <p className="m-0 text-[12px] text-ink-3">
+              <p className="m-0 text-xs text-ink-3">
                 {isCheckpoint
                   ? 'Bölümün kilit sınav spotlarını ve fizyopatolojik mekanizmalarını kartları çevirerek zihninizde sınayın'
                   : 'Kafanda yanıtla, ardından karta tıklayarak cevabı ve amfi ipucunu aç'}
@@ -2396,7 +2396,7 @@ const SlideCanvas: React.FC<{
             <button
               type="button"
               onClick={onOpenFlashcards}
-              className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[11.5px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
+              className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-xs font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
             >
               <span>Panelde Çalış</span>
               <ChevronRight className="w-3.5 h-3.5" />
@@ -2423,14 +2423,14 @@ const SlideCanvas: React.FC<{
     if (!slide.medicalTerms || slide.medicalTerms.length === 0) return null;
     return (
       <section data-origin="ders" className="mt-4 pt-3.5 border-t border-line-soft">
-        <div className="text-[11.5px] font-bold uppercase tracking-wider text-teal-800 dark:text-teal-300 mb-2.5 flex items-center gap-1.5">
-          <BookOpen className="w-3.5 h-3.5 text-teal-600" />
+        <div className="text-xs font-bold uppercase tracking-wider text-ok dark:text-teal-300 mb-2.5 flex items-center gap-1.5">
+          <BookOpen className="w-3.5 h-3.5 text-ok" />
           <span>Kritik Tıbbi Terimler & Sözlük Kartları</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {slide.medicalTerms.map((t, idx) => (
-            <div key={idx} className="p-2.5 rounded-xl bg-teal-50/30 dark:bg-zinc-800/80 border border-teal-200/50 text-[12px] shadow-2xs">
-              <strong className="text-teal-900 dark:text-teal-300 block font-bold text-[12.5px] mb-0.5">{t.term}</strong>
+            <div key={idx} className="p-2.5 rounded-xl bg-ok-soft/30 dark:bg-zinc-800/80 border border-ok/50 text-xs shadow-2xs">
+              <strong className="text-ok dark:text-teal-300 block font-bold text-sm mb-0.5">{t.term}</strong>
               <span className="text-ink-2 leading-relaxed">{t.explanation}</span>
             </div>
           ))}
@@ -2523,7 +2523,7 @@ const SlideCanvas: React.FC<{
           )}
 
           {paged && index < total - 1 && onNext && (
-            <div className="mt-2 pt-3.5 border-t border-line-soft flex items-center justify-between text-[12.5px] text-ink-3">
+            <div className="mt-2 pt-3.5 border-t border-line-soft flex items-center justify-between text-sm text-ink-3">
               <span>Slayt {index + 1} / {total} · Aşağı kaydırarak tamamını okuyabilirsiniz</span>
               <button
                 type="button"
@@ -2555,24 +2555,24 @@ export const SpotList: React.FC<{ items: Array<string | any>; title?: string; no
   note,
   compact = false,
 }) => (
-  <section className={`rounded-2xl border-2 border-amber-300/90 dark:border-amber-700/60 bg-gradient-to-br from-amber-50/95 via-amber-50/40 to-orange-50/60 dark:from-amber-950/40 dark:via-zinc-900 dark:to-orange-950/20 shadow-sm flex flex-col ${compact ? 'p-3 gap-2.5' : 'p-4 sm:p-5 gap-3.5'}`}>
-    <header className="flex items-center gap-2.5 pb-2.5 border-b border-amber-200/80 dark:border-amber-800/40">
-      <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 text-white flex items-center justify-center shrink-0 shadow-xs" aria-hidden="true">
+  <section className={`rounded-2xl border-2 border-warn/90 dark:border-amber-700/60 bg-gradient-to-br from-warn-soft/95 via-warn-soft/40 to-warn-soft/60 dark:from-amber-950/40 dark:via-zinc-900 dark:to-orange-950/20 shadow-sm flex flex-col ${compact ? 'p-3 gap-2.5' : 'p-4 sm:p-5 gap-3.5'}`}>
+    <header className="flex items-center gap-2.5 pb-2.5 border-b border-warn/80 dark:border-amber-800/40">
+      <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-warn to-warn text-white flex items-center justify-center shrink-0 shadow-xs" aria-hidden="true">
         <Lightbulb className="w-4.5 h-4.5" />
       </span>
       <div className="min-w-0">
-        <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-wider text-amber-900 dark:text-amber-300 block">
+        <span className="text-xs sm:text-sm font-black uppercase tracking-wider text-warn dark:text-amber-300 block">
           {title}
         </span>
-        <span className="text-[11px] text-amber-800/80 dark:text-amber-400 font-medium">
+        <span className="text-2xs text-warn/80 dark:text-amber-400 font-medium">
           Komite ve kurul sınavlarında doğrudan puan getiren kilit prensipler
         </span>
       </div>
-      <span className="ml-auto font-mono text-[11.5px] font-bold text-amber-900 bg-amber-200/80 dark:bg-amber-900/60 px-2.5 py-0.5 rounded-full border border-amber-300 dark:border-amber-700">
+      <span className="ml-auto font-mono text-xs font-bold text-warn bg-warn/80 dark:bg-amber-900/60 px-2.5 py-0.5 rounded-full border border-warn/30 dark:border-amber-700">
         {items.length} Spot
       </span>
     </header>
-    {note && <p className="m-0 -mt-1 text-[13px] text-amber-900/80 dark:text-amber-300/80 font-medium">{note}</p>}
+    {note && <p className="m-0 -mt-1 text-sm text-warn/80 dark:text-amber-300/80 font-medium">{note}</p>}
     <ol className={`list-none m-0 p-0 flex flex-col ${compact ? 'gap-2' : 'gap-2.5'}`}>
       {items.map((p, i) => {
         const isObj = p && typeof p === 'object';
@@ -2591,29 +2591,29 @@ export const SpotList: React.FC<{ items: Array<string | any>; title?: string; no
             key={i}
             className={`rounded-xl transition-all shadow-2xs border-l-4 border-t border-r border-b ${
               isRed
-                ? 'border-l-red-600 bg-red-50/90 dark:bg-red-950/30 border-red-200 dark:border-red-900/50 text-red-950 dark:text-red-100'
+                ? 'border-l-bad bg-bad-soft/90 dark:bg-red-950/30 border-bad/30 dark:border-red-900/50 text-bad-text dark:text-red-100'
                 : isBlue
-                ? 'border-l-blue-600 bg-blue-50/90 dark:bg-blue-950/30 border-blue-200 dark:border-blue-900/50 text-blue-950 dark:text-blue-100'
-                : 'border-l-amber-500 bg-white dark:bg-zinc-800/90 border-amber-200/80 dark:border-zinc-700 text-ink'
-            } p-3 sm:p-3.5 text-[13px] sm:text-[13.5px] leading-[1.65]`}
+                ? 'border-l-accent bg-accent-soft/90 dark:bg-blue-950/30 border-accent/30 dark:border-blue-900/50 text-accent dark:text-blue-100'
+                : 'border-l-warn bg-white dark:bg-zinc-800/90 border-warn/80 dark:border-zinc-700 text-ink'
+            } p-3 sm:p-3.5 text-sm sm:text-base leading-[1.65]`}
           >
             <div className="flex items-center justify-between gap-2 mb-1.5 pb-1 border-b border-inherit/20">
               <span className="inline-flex items-center gap-1.5">
                 {isRed ? (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-bold bg-red-100 dark:bg-red-900/60 text-red-700 dark:text-red-200">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-bold bg-bad-soft dark:bg-red-900/60 text-bad-text dark:text-red-200">
                     <AlertCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[🚨]\s*/, '') : 'KRİTİK UYARI'}
                   </span>
                 ) : isBlue ? (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-200">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-bold bg-accent-soft dark:bg-blue-900/60 text-accent dark:text-blue-200">
                     <HelpCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[❓]\s*/, '') : 'ÇIKMIŞ SORU ODAĞI'}
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-bold bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300">
-                    <Lightbulb className="w-3 h-3 text-amber-600" /> {pBadge ? pBadge.replace(/^[💡]\s*/, '') : 'SINAV SPOTU'}
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-bold bg-warn-soft dark:bg-amber-950/60 text-warn dark:text-amber-300">
+                    <Lightbulb className="w-3 h-3 text-warn" /> {pBadge ? pBadge.replace(/^[💡]\s*/, '') : 'SINAV SPOTU'}
                   </span>
                 )}
               </span>
-              <span className="font-mono text-[11px] font-bold text-ink-3">#{i + 1}</span>
+              <span className="font-mono text-2xs font-bold text-ink-3">#{i + 1}</span>
             </div>
 
             <div className="flex flex-col gap-1 min-w-0 break-words">
@@ -2627,8 +2627,8 @@ export const SpotList: React.FC<{ items: Array<string | any>; title?: string; no
                 if (isSubBullet) {
                   const cleanText = trimmed.replace(/^[-•*→]\s*/, '');
                   return (
-                    <div key={lIdx} className="ml-3 pl-2.5 py-0.5 border-l-2 border-amber-300 dark:border-amber-700 text-[12.5px] flex items-start gap-1.5 text-ink-2">
-                      <span className="text-[10px] opacity-70 mt-1 select-none">▫</span>
+                    <div key={lIdx} className="ml-3 pl-2.5 py-0.5 border-l-2 border-warn/30 dark:border-amber-700 text-sm flex items-start gap-1.5 text-ink-2">
+                      <span className="text-2xs opacity-70 mt-1 select-none">▫</span>
                       <span className="min-w-0 flex-1"><Rich text={cleanText} /></span>
                     </div>
                   );
@@ -2638,7 +2638,7 @@ export const SpotList: React.FC<{ items: Array<string | any>; title?: string; no
                   const cleanText = trimmed.replace(/^([•*]|\d+\.)\s*/, '');
                   return (
                     <div key={lIdx} className="font-semibold flex items-start gap-2 pt-0.5 text-ink">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-warn mt-2 shrink-0" />
                       <span className="min-w-0 flex-1"><Rich text={cleanText} /></span>
                     </div>
                   );
@@ -2689,10 +2689,10 @@ const InteractionPanel: React.FC<{
             role="tab"
             aria-selected={active === t.id}
             onClick={() => setTab(t.id)}
-            className={`h-9 px-1 rounded-lg text-[12.5px] cursor-pointer truncate inline-flex items-center justify-center gap-1 transition-colors ${active === t.id ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'}`}
+            className={`h-9 px-1 rounded-lg text-sm cursor-pointer truncate inline-flex items-center justify-center gap-1 transition-colors ${active === t.id ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'}`}
           >
             {t.label}
-            {!!t.count && <span className="font-mono text-[11px] text-ink-3">{t.count}</span>}
+            {!!t.count && <span className="font-mono text-2xs text-ink-3">{t.count}</span>}
           </button>
         ))}
       </div>
@@ -2700,12 +2700,12 @@ const InteractionPanel: React.FC<{
         {active === 'flashcards' && (
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between px-1">
-              <span className="text-[12px] text-ink-3">
+              <span className="text-xs text-ink-3">
                 {cards.length} akıl kartı · Tıklayarak çevir
               </span>
             </div>
             {cards.length === 0 ? (
-              <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu slayt için tanımlı akıl kartı yok.</p>
+              <p className="m-0 text-base text-ink-2 px-1 py-4">Bu slayt için tanımlı akıl kartı yok.</p>
             ) : (
               cards.map((c) => <FlashcardComponent key={c.id} card={c} />)
             )}
@@ -2716,7 +2716,7 @@ const InteractionPanel: React.FC<{
           (deck.highYieldPearls || []).length > 0 ? (
             <SpotList items={deck.highYieldPearls || []} title="Dersin spotları" note="Dersin tamamından en çok sorulan bilgiler" compact />
           ) : (
-            <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu ders için spot bilgi yok.</p>
+            <p className="m-0 text-base text-ink-2 px-1 py-4">Bu ders için spot bilgi yok.</p>
           )
         )}
         {active === 'ai' && <AskAi key={slide.slideNumber} deck={deck} slide={slide} />}
@@ -2740,7 +2740,7 @@ export const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
         <div className="rounded-xl border border-line bg-canvas p-3.5 flex flex-col gap-2.5">
           <div className="flex items-center gap-2 pb-1.5 border-b border-line-soft">
             <BookOpen className="w-4 h-4 text-accent" />
-            <span className="text-[13px] font-bold text-ink">Kapsamlı Ders Notu Sentezi</span>
+            <span className="text-sm font-bold text-ink">Kapsamlı Ders Notu Sentezi</span>
           </div>
           <StructuredSynthesisRenderer text={narrative} />
         </div>
@@ -2754,9 +2754,9 @@ export const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
       {/* Formula / Box */}
       {c.formulaBox && (
         <div className="rounded-xl bg-accent-soft p-3 flex flex-col gap-1 border border-accent/20">
-          <span className="text-[11.5px] font-semibold uppercase text-accent">{c.formulaBox.title}</span>
-          <code className="font-mono text-[13px] text-ink">{c.formulaBox.formula}</code>
-          {c.formulaBox.explanation && <span className="text-[12px] text-ink-2">{c.formulaBox.explanation}</span>}
+          <span className="text-xs font-semibold uppercase text-accent">{c.formulaBox.title}</span>
+          <code className="font-mono text-sm text-ink">{c.formulaBox.formula}</code>
+          {c.formulaBox.explanation && <span className="text-xs text-ink-2">{c.formulaBox.explanation}</span>}
         </div>
       )}
 
@@ -2779,20 +2779,20 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion | string | any; n: number }> 
 
   if (typeof q === 'string') {
     return (
-      <article className="rounded-xl border border-amber-200 dark:border-amber-900/40 bg-amber-50/20 dark:bg-amber-950/10 p-3 flex flex-col gap-2 transition-all shadow-2xs">
-        <header className="flex items-center justify-between gap-2 text-[12px] text-ink-3">
+      <article className="rounded-xl border border-warn/30 dark:border-amber-900/40 bg-warn-soft/20 dark:bg-amber-950/10 p-3 flex flex-col gap-2 transition-all shadow-2xs">
+        <header className="flex items-center justify-between gap-2 text-xs text-ink-3">
           <div className="flex items-center gap-1.5 min-w-0">
-            <span className="font-mono font-semibold px-1.5 py-0.5 rounded text-[11px] bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300">
+            <span className="font-mono font-semibold px-1.5 py-0.5 rounded text-2xs bg-warn-soft dark:bg-amber-950 text-warn dark:text-amber-300">
               Soru {n}
             </span>
             <span className="truncate font-medium text-ink-2">Klinik Tartışma & Muhakeme</span>
           </div>
-          <span className="shrink-0 px-2 py-0.5 rounded-full text-[11.5px] font-bold bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-200 border border-amber-300 dark:border-amber-700 flex items-center gap-1 shadow-2xs">
-            <Sparkles className="w-3 h-3 text-amber-600 dark:text-amber-400" />
+          <span className="shrink-0 px-2 py-0.5 rounded-full text-xs font-bold bg-warn-soft dark:bg-amber-900/60 text-warn dark:text-amber-200 border border-warn/30 dark:border-amber-700 flex items-center gap-1 shadow-2xs">
+            <Sparkles className="w-3 h-3 text-warn dark:text-amber-400" />
             Öz Değerlendirme
           </span>
         </header>
-        <p className="m-0 text-[14px] leading-[1.5] font-medium text-ink">{q}</p>
+        <p className="m-0 text-base leading-[1.5] font-medium text-ink">{q}</p>
       </article>
     );
   }
@@ -2809,17 +2809,17 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion | string | any; n: number }> 
     <article
       className={`rounded-xl border p-3 flex flex-col gap-2.5 transition-all shadow-2xs ${
         isPractice
-          ? 'border-emerald-200 dark:border-emerald-900/40 bg-emerald-50/20 dark:bg-emerald-950/10'
-          : 'border-blue-200 dark:border-blue-900/40 bg-blue-50/20 dark:bg-blue-950/10'
+          ? 'border-ok/30 dark:border-emerald-900/40 bg-ok-soft/20 dark:bg-emerald-950/10'
+          : 'border-accent/30 dark:border-blue-900/40 bg-accent-soft/20 dark:bg-blue-950/10'
       }`}
     >
-      <header className="flex items-center justify-between gap-2 text-[12px] text-ink-3 flex-wrap">
+      <header className="flex items-center justify-between gap-2 text-xs text-ink-3 flex-wrap">
         <div className="flex items-center gap-1.5 min-w-0">
           <span
-            className={`font-mono font-semibold px-1.5 py-0.5 rounded text-[11px] ${
+            className={`font-mono font-semibold px-1.5 py-0.5 rounded text-2xs ${
               isPractice
-                ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300'
-                : 'bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300'
+                ? 'bg-ok-soft dark:bg-emerald-950 text-ok dark:text-emerald-300'
+                : 'bg-accent-soft dark:bg-blue-950 text-accent dark:text-blue-300'
             }`}
           >
             S{n}
@@ -2827,18 +2827,18 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion | string | any; n: number }> 
           <span className="truncate font-medium text-ink-2">{[q?.examYear, q?.topic].filter(Boolean).join(' · ')}</span>
         </div>
         {isPractice ? (
-          <span className="shrink-0 px-2 py-0.5 rounded-full text-[11.5px] font-bold bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700 flex items-center gap-1 shadow-2xs">
-            <Sparkles className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
+          <span className="shrink-0 px-2 py-0.5 rounded-full text-xs font-bold bg-ok-soft dark:bg-emerald-900/60 text-ok dark:text-emerald-200 border border-ok/30 dark:border-emerald-700 flex items-center gap-1 shadow-2xs">
+            <Sparkles className="w-3 h-3 text-ok dark:text-emerald-400" />
             Özgün Çalışma Sorusu
           </span>
         ) : (
-          <span className="shrink-0 px-2 py-0.5 rounded-full text-[11.5px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 border border-blue-300 dark:border-blue-700 flex items-center gap-1 shadow-2xs">
-            <GraduationCap className="w-3 h-3 text-blue-600 dark:text-blue-400" />
+          <span className="shrink-0 px-2 py-0.5 rounded-full text-xs font-bold bg-accent-soft dark:bg-blue-900/60 text-accent dark:text-blue-200 border border-accent/30 dark:border-blue-700 flex items-center gap-1 shadow-2xs">
+            <GraduationCap className="w-3 h-3 text-accent dark:text-blue-400" />
             Çıkmış Sınav Sorusu
           </span>
         )}
       </header>
-      <p className="m-0 text-[14px] leading-[1.5] font-medium text-ink">{q?.stem || ''}</p>
+      <p className="m-0 text-base leading-[1.5] font-medium text-ink">{q?.stem || ''}</p>
       {options.length > 0 && (
         <div role="radiogroup" aria-label={`Soru ${n} şıkları`} className="flex flex-col gap-1.5">
           {options.map((o) => {
@@ -2859,7 +2859,7 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion | string | any; n: number }> 
                 aria-checked={isPick}
                 disabled={done}
                 onClick={() => setPicked(o.key)}
-                className={`w-full min-h-10 px-2.5 py-1.5 rounded-lg border text-left flex items-start gap-2 text-[13px] leading-snug transition-colors ${done ? 'cursor-default' : 'cursor-pointer'} ${cls}`}
+                className={`w-full min-h-10 px-2.5 py-1.5 rounded-lg border text-left flex items-start gap-2 text-sm leading-snug transition-colors ${done ? 'cursor-default' : 'cursor-pointer'} ${cls}`}
               >
                 <span className={`font-mono font-semibold shrink-0 ${done && isAns ? 'text-ok' : done && isPick ? 'text-bad-text' : 'text-ink-2'}`}>{o.key})</span>
                 <span className="flex-1 text-ink">{o.text}</span>
@@ -2871,16 +2871,16 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion | string | any; n: number }> 
         </div>
       )}
       {done && (
-        <div className={`rounded-lg px-2.5 py-2 text-[13px] ${right ? 'bg-ok-soft dark:bg-ok/20 border border-ok/30' : 'bg-bad-soft dark:bg-bad/20 border border-bad/30'}`}>
+        <div className={`rounded-lg px-2.5 py-2 text-sm ${right ? 'bg-ok-soft dark:bg-ok/20 border border-ok/30' : 'bg-bad-soft dark:bg-bad/20 border border-bad/30'}`}>
           <div className="flex items-center justify-between gap-2">
             <strong className={right ? 'text-ok dark:text-emerald-400' : 'text-bad-text dark:text-rose-400'}>{right ? '✓ Tebrikler, Doğru Yanıt!' : `Yanlış. Doğru cevap ${answer}`}</strong>
             <span className="flex gap-1">
               {q?.explanation && (
-                <button type="button" onClick={() => setShowExp((v) => !v)} className="h-7 px-2 rounded-md text-[12px] font-semibold text-ink-2 hover:bg-white/70 dark:hover:bg-white/10 cursor-pointer">
+                <button type="button" onClick={() => setShowExp((v) => !v)} className="h-7 px-2 rounded-md text-xs font-semibold text-ink-2 hover:bg-white/70 dark:hover:bg-white/10 cursor-pointer">
                   {showExp ? 'Açıklamayı gizle' : 'Açıklama'}
                 </button>
               )}
-              <button type="button" onClick={() => setPicked(null)} className="h-7 px-2 rounded-md text-[12px] font-semibold text-ink-2 hover:bg-white/70 dark:hover:bg-white/10 cursor-pointer">
+              <button type="button" onClick={() => setPicked(null)} className="h-7 px-2 rounded-md text-xs font-semibold text-ink-2 hover:bg-white/70 dark:hover:bg-white/10 cursor-pointer">
                 Tekrar Dene
               </button>
             </span>
@@ -3010,14 +3010,14 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
     <div className="flex flex-col gap-3">
       {(slide.aiPromptSuggestions || []).length > 0 && (
         <div className="flex flex-col gap-1.5">
-          <span className="text-[12px] font-semibold text-ink-2 px-1">Hazır sorular</span>
+          <span className="text-xs font-semibold text-ink-2 px-1">Hazır sorular</span>
           {slide.aiPromptSuggestions.map((s, i) => (
             <button
               key={i}
               type="button"
               disabled={loading}
               onClick={() => ask(s)}
-              className="text-left rounded-lg border border-line px-2.5 py-2 text-[13px] leading-snug hover:border-accent cursor-pointer disabled:opacity-50 transition-colors"
+              className="text-left rounded-lg border border-line px-2.5 py-2 text-sm leading-snug hover:border-accent cursor-pointer disabled:opacity-50 transition-colors"
             >
               {s}
             </button>
@@ -3032,7 +3032,7 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
         className="flex flex-col gap-2"
       >
         <div className="flex items-center justify-between gap-2 px-1">
-          <label htmlFor="deck-ai-model-select" className="text-[12px] font-semibold text-ink-2 inline-flex items-center gap-1.5">
+          <label htmlFor="deck-ai-model-select" className="text-xs font-semibold text-ink-2 inline-flex items-center gap-1.5">
             <BrainCircuit className="w-3.5 h-3.5 text-accent" />
             <span>Yapay Zeka Modeli:</span>
           </label>
@@ -3041,7 +3041,7 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
             value={selectedModel}
             disabled={loading}
             onChange={(e) => setSelectedModel(e.target.value)}
-            className="bg-white dark:bg-slate-800 border border-line-2 rounded-md px-2 py-0.5 text-[11.5px] font-medium text-ink outline-none cursor-pointer focus:border-accent disabled:opacity-50"
+            className="bg-white dark:bg-slate-800 border border-line-2 rounded-md px-2 py-0.5 text-xs font-medium text-ink outline-none cursor-pointer focus:border-accent disabled:opacity-50"
           >
             <option value="gemini-3.8-flash">Google Gemini 3.8 Flash (Önerilen)</option>
             <option value="gemini-3.7-flash">Google Gemini 3.7 Flash</option>
@@ -3060,12 +3060,12 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Bu slayt ve ders notuyla ilgili sorunu yaz…"
-          className="resize-none border border-line-2 rounded-[10px] px-3 py-2.5 text-[14px] bg-field outline-0 focus:border-accent"
+          className="resize-none border border-line-2 rounded-[10px] px-3 py-2.5 text-base bg-field outline-0 focus:border-accent"
         />
         <button
           type="submit"
           disabled={loading || !q.trim()}
-          className="h-10 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+          className="h-10 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-base font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
         >
           {loading ? <Sparkles className="w-4 h-4 animate-pulse" /> : <Send className="w-4 h-4" />}
           {loading ? 'Yanıt hazırlanıyor…' : 'Sor'}
@@ -3075,12 +3075,12 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
       {answer && (
         <div className="rounded-xl bg-accent-soft border border-accent/20 p-3.5 flex flex-col gap-2.5 shadow-2xs" role="status">
           <div className="flex items-center justify-between gap-2 flex-wrap border-b border-accent/15 pb-2">
-            <span className="inline-flex items-center gap-1.5 text-[12.5px] font-bold text-accent">
+            <span className="inline-flex items-center gap-1.5 text-sm font-bold text-accent">
               <Sparkles className="w-3.5 h-3.5" /> AI Yanıtı
             </span>
             {modelUsed && (
               <span
-                className="inline-flex items-center gap-1.5 text-[11px] font-medium bg-white/95 dark:bg-slate-800 text-ink-2 px-2.5 py-0.5 rounded-full border border-accent/25 shadow-2xs"
+                className="inline-flex items-center gap-1.5 text-2xs font-medium bg-white/95 dark:bg-slate-800 text-ink-2 px-2.5 py-0.5 rounded-full border border-accent/25 shadow-2xs"
                 title={`Bu yanıtı üreten yapay zeka: ${modelUsed}`}
               >
                 <Bot className="w-3.5 h-3.5 text-accent shrink-0" />
@@ -3089,22 +3089,22 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
               </span>
             )}
           </div>
-          <div className="text-[14px] leading-[1.65] text-ink whitespace-pre-line">
+          <div className="text-base leading-[1.65] text-ink whitespace-pre-line">
             <Rich text={answer.replace(/^#+\s*/gm, '').replace(/^>\s?/gm, '')} />
           </div>
           {refs.length > 0 && (
             <ul className="list-none m-0 p-0 flex flex-col gap-1 border-t border-accent/15 pt-2">
               {refs.slice(0, 4).map((r: any, i: number) => (
-                <li key={i} className="text-[11.5px] text-ink-2 truncate flex items-center gap-1.5">
+                <li key={i} className="text-xs text-ink-2 truncate flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
                   <span>{r.title || r.noteTitle || r.source || `Kaynak ${i + 1}`}</span>
                 </li>
               ))}
             </ul>
           )}
-          <div className="flex items-center justify-between gap-2 pt-2 border-t border-accent/15 text-[11px] text-ink-3">
+          <div className="flex items-center justify-between gap-2 pt-2 border-t border-accent/15 text-2xs text-ink-3">
             {modelUsed && (
-              <span className="inline-flex items-center gap-1 text-[11px] text-ink-2">
+              <span className="inline-flex items-center gap-1 text-2xs text-ink-2">
                 <span>Kullanılan Yapay Zeka:</span>
                 <strong className="text-ink font-mono font-medium">{formatAiModelDisplayName(modelUsed)}</strong>
               </span>
@@ -3112,7 +3112,7 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
             <button
               type="button"
               onClick={handleCopy}
-              className="inline-flex items-center gap-1 text-[11.5px] text-ink-2 hover:text-ink cursor-pointer px-2 py-0.5 rounded hover:bg-white/60 dark:hover:bg-white/10 transition-colors ml-auto"
+              className="inline-flex items-center gap-1 text-xs text-ink-2 hover:text-ink cursor-pointer px-2 py-0.5 rounded hover:bg-white/60 dark:hover:bg-white/10 transition-colors ml-auto"
             >
               {copied ? <Check className="w-3.5 h-3.5 text-ok" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{copied ? 'Kopyalandı' : 'Kopyala'}</span>

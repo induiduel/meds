@@ -104,7 +104,7 @@ export const InteractiveStepRenderer: React.FC<{
         return (
           <div key={idx} className="relative">
             {elements.length > 1 && (
-              <div className="text-[11px] font-bold uppercase tracking-wider text-accent mb-1.5 flex items-center gap-1.5">
+              <div className="text-2xs font-bold uppercase tracking-wider text-accent mb-1.5 flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                 <span>İnteraktif Alıştırma {idx + 1} / {elements.length}</span>
               </div>
@@ -163,28 +163,28 @@ const ClozeMaskingElement: React.FC<{ data: InteractiveElementData }> = ({ data 
   suffix = ' ' + suffix.replace(/\]/g, '').trimStart();
 
   return (
-    <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-violet-50/90 via-white to-purple-50/70 dark:from-violet-950/30 dark:via-zinc-900 dark:to-purple-950/20 border-2 border-violet-200/90 dark:border-violet-800/50 shadow-sm transition-all duration-300">
-      <div className="flex flex-wrap items-center justify-between gap-2 mb-3 pb-2 border-b border-violet-100 dark:border-violet-900/40">
-        <span className="text-[12px] font-bold uppercase tracking-wider text-violet-800 dark:text-violet-300 flex items-center gap-1.5 bg-violet-100/80 dark:bg-violet-900/40 px-2.5 py-1 rounded-lg">
-          <Eye className="w-3.5 h-3.5 text-violet-600" />
+    <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-ai-soft/90 via-white to-ai-soft/70 dark:from-violet-950/30 dark:via-zinc-900 dark:to-purple-950/20 border-2 border-ai/90 dark:border-violet-800/50 shadow-sm transition-all duration-300">
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-3 pb-2 border-b border-ai/30 dark:border-violet-900/40">
+        <span className="text-xs font-bold uppercase tracking-wider text-ai dark:text-violet-300 flex items-center gap-1.5 bg-ai-soft/80 dark:bg-violet-900/40 px-2.5 py-1 rounded-lg">
+          <Eye className="w-3.5 h-3.5 text-ai" />
           Kritik Tıbbi Terim Maskesi
         </span>
         {data.hint && !revealed && (
-          <span className="text-[11.5px] font-medium text-violet-700/80 dark:text-violet-300/80 bg-white/80 dark:bg-zinc-800 px-2 py-0.5 rounded-md border border-violet-200/60">
+          <span className="text-xs font-medium text-ai/80 dark:text-violet-300/80 bg-white/80 dark:bg-zinc-800 px-2 py-0.5 rounded-md border border-ai/60">
             İpucu: {data.hint}
           </span>
         )}
       </div>
 
-      <p className="text-[13.5px] sm:text-[14.5px] font-medium leading-[1.8] text-ink m-0">
+      <p className="text-base sm:text-md font-medium leading-[1.8] text-ink m-0">
         {prefix}
         <button
           type="button"
           onClick={() => setRevealed(!revealed)}
-          className={`inline-flex items-center gap-1.5 px-3 py-1 mx-1 rounded-lg text-[13.5px] font-bold cursor-pointer transition-all duration-300 select-none shadow-xs active:scale-95 ${
+          className={`inline-flex items-center gap-1.5 px-3 py-1 mx-1 rounded-lg text-base font-bold cursor-pointer transition-all duration-300 select-none shadow-xs active:scale-95 ${
             revealed
-              ? 'bg-violet-600 text-white shadow-md ring-2 ring-violet-300 dark:ring-violet-700 animate-fadeIn'
-              : 'bg-violet-100 text-violet-900 hover:bg-violet-200 border border-violet-300/80 dark:bg-violet-900/60 dark:text-violet-100'
+              ? 'bg-ai text-white shadow-md ring-2 ring-ai/30 dark:ring-violet-700 animate-fadeIn'
+              : 'bg-ai-soft text-ai hover:bg-ai/20 border border-ai/80 dark:bg-violet-900/60 dark:text-violet-100'
           }`}
           title={revealed ? 'Gizle' : 'Kilit tıbbi terimi açmak için tıklayın'}
         >
@@ -196,7 +196,7 @@ const ClozeMaskingElement: React.FC<{ data: InteractiveElementData }> = ({ data 
           ) : (
             <>
               <span className="tracking-widest">??????</span>
-              <span className="text-[11px] opacity-75">(Açmak İçin Dokun)</span>
+              <span className="text-2xs opacity-75">(Açmak İçin Dokun)</span>
             </>
           )}
         </button>
@@ -204,10 +204,10 @@ const ClozeMaskingElement: React.FC<{ data: InteractiveElementData }> = ({ data 
       </p>
 
       {revealed && data.explanation && (
-        <div className="mt-3.5 p-3 rounded-xl bg-violet-100/60 dark:bg-violet-900/30 border border-violet-200 dark:border-violet-800/60 text-[12.5px] sm:text-[13px] text-violet-950 dark:text-violet-200 flex items-start gap-2.5 animate-fadeIn">
-          <Sparkles className="w-4 h-4 text-violet-600 shrink-0 mt-0.5" />
+        <div className="mt-3.5 p-3 rounded-xl bg-ai-soft/60 dark:bg-violet-900/30 border border-ai/30 dark:border-violet-800/60 text-sm sm:text-sm text-ai dark:text-violet-200 flex items-start gap-2.5 animate-fadeIn">
+          <Sparkles className="w-4 h-4 text-ai shrink-0 mt-0.5" />
           <div className="leading-relaxed">
-            <strong className="block font-bold text-[12.5px] text-violet-900 dark:text-violet-100 mb-0.5">Sınav Hatırlatması:</strong>
+            <strong className="block font-bold text-sm text-ai dark:text-violet-100 mb-0.5">Sınav Hatırlatması:</strong>
             {data.explanation}
           </div>
         </div>
@@ -221,16 +221,16 @@ const ActiveRecallElement: React.FC<{ data: InteractiveElementData }> = ({ data 
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <div className="p-3.5 sm:p-4 rounded-xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-800/40">
+    <div className="p-3.5 sm:p-4 rounded-xl bg-warn-soft/70 dark:bg-amber-950/20 border border-warn/80 dark:border-amber-800/40">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-[11.5px] font-bold uppercase tracking-wider text-amber-800 dark:text-amber-300 flex items-center gap-1.5">
+        <span className="text-xs font-bold uppercase tracking-wider text-warn dark:text-amber-300 flex items-center gap-1.5">
           <Layers className="w-3.5 h-3.5" />
           Aktif Hatırlama Kartı
         </span>
         <button
           type="button"
           onClick={() => setFlipped(!flipped)}
-          className="text-[11.5px] font-medium text-amber-700 hover:text-amber-900 dark:text-amber-400 underline cursor-pointer flex items-center gap-1"
+          className="text-xs font-medium text-warn hover:text-warn dark:text-amber-400 underline cursor-pointer flex items-center gap-1"
         >
           <RotateCcw className="w-3 h-3" />
           {flipped ? 'Soruyu Gör' : 'Cevabı Çevir'}
@@ -239,22 +239,22 @@ const ActiveRecallElement: React.FC<{ data: InteractiveElementData }> = ({ data 
 
       <div
         onClick={() => setFlipped(!flipped)}
-        className="cursor-pointer min-h-[56px] flex flex-col justify-center p-3 rounded-lg bg-white dark:bg-zinc-900 border border-amber-200/60 shadow-2xs transition-all hover:border-amber-300"
+        className="cursor-pointer min-h-[56px] flex flex-col justify-center p-3 rounded-lg bg-white dark:bg-zinc-900 border border-warn/60 shadow-2xs transition-all hover:border-warn/30"
       >
         {!flipped ? (
           <div>
-            <p className="text-[13.5px] font-semibold text-ink m-0 flex items-start gap-2">
-              <span className="text-amber-600 font-bold shrink-0">S:</span>
+            <p className="text-base font-semibold text-ink m-0 flex items-start gap-2">
+              <span className="text-warn font-bold shrink-0">S:</span>
               <span>{data.question}</span>
             </p>
             {data.hint && (
-              <p className="text-[11.5px] text-ink-3 m-0 mt-1 pl-5 italic">İpucu: {data.hint}</p>
+              <p className="text-xs text-ink-3 m-0 mt-1 pl-5 italic">İpucu: {data.hint}</p>
             )}
           </div>
         ) : (
           <div className="animate-fadeIn">
-            <p className="text-[13px] font-medium text-emerald-800 dark:text-emerald-300 m-0 flex items-start gap-2 leading-relaxed">
-              <span className="text-emerald-600 font-bold shrink-0">Cevap:</span>
+            <p className="text-sm font-medium text-ok dark:text-emerald-300 m-0 flex items-start gap-2 leading-relaxed">
+              <span className="text-ok font-bold shrink-0">Cevap:</span>
               <span>{data.answer}</span>
             </p>
           </div>
@@ -273,17 +273,17 @@ const BeforeAfterElement: React.FC<{ data: InteractiveElementData }> = ({ data }
   const maxRows = Math.max(leftPoints.length, rightPoints.length);
 
   return (
-    <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-slate-50 via-white to-zinc-50 dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-955 border-2 border-line shadow-sm">
+    <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-field via-white to-field dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-955 border-2 border-line shadow-sm">
       <div className="flex flex-wrap items-center justify-between gap-2 mb-3.5 pb-2.5 border-b border-line">
         <div className="flex items-center gap-2">
-          <span className="w-7 h-7 rounded-xl bg-indigo-600 text-white flex items-center justify-center shrink-0 shadow-2xs">
+          <span className="w-7 h-7 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-2xs">
             <Sliders className="w-3.5 h-3.5" />
           </span>
           <div>
-            <h4 className="m-0 text-[13.5px] sm:text-[14.5px] font-bold text-ink flex items-center gap-2">
+            <h4 className="m-0 text-base sm:text-md font-bold text-ink flex items-center gap-2">
               <span>{title}</span>
             </h4>
-            <p className="m-0 text-[11px] text-ink-3">
+            <p className="m-0 text-2xs text-ink-3">
               Maddelere tıklayarak karşılıklı klinik ve patofizyolojik farkları vurgulayabilirsiniz
             </p>
           </div>
@@ -292,13 +292,13 @@ const BeforeAfterElement: React.FC<{ data: InteractiveElementData }> = ({ data }
 
       {/* İki Sütunlu Grid Başlıkları */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-2">
-        <div className="p-2.5 rounded-xl bg-indigo-50/80 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800/60 text-center">
-          <span className="text-[11px] uppercase tracking-wider font-bold text-indigo-700 dark:text-indigo-300 block mb-0.5">Konsept A</span>
-          <h5 className="m-0 text-[14px] font-extrabold text-indigo-950 dark:text-indigo-100">{data.leftTitle}</h5>
+        <div className="p-2.5 rounded-xl bg-accent-soft/80 dark:bg-indigo-950/40 border border-accent/30 dark:border-indigo-800/60 text-center">
+          <span className="text-2xs uppercase tracking-wider font-bold text-accent dark:text-indigo-300 block mb-0.5">Konsept A</span>
+          <h5 className="m-0 text-base font-extrabold text-accent dark:text-indigo-100">{data.leftTitle}</h5>
         </div>
-        <div className="p-2.5 rounded-xl bg-rose-50/80 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60 text-center">
-          <span className="text-[11px] uppercase tracking-wider font-bold text-rose-700 dark:text-rose-300 block mb-0.5">Konsept B</span>
-          <h5 className="m-0 text-[14px] font-extrabold text-rose-950 dark:text-rose-100">{data.rightTitle}</h5>
+        <div className="p-2.5 rounded-xl bg-bad-soft/80 dark:bg-rose-950/40 border border-bad/30 dark:border-rose-800/60 text-center">
+          <span className="text-2xs uppercase tracking-wider font-bold text-bad-text dark:text-rose-300 block mb-0.5">Konsept B</span>
+          <h5 className="m-0 text-base font-extrabold text-bad-text dark:text-rose-100">{data.rightTitle}</h5>
         </div>
       </div>
 
@@ -315,21 +315,21 @@ const BeforeAfterElement: React.FC<{ data: InteractiveElementData }> = ({ data }
               onClick={() => setFocusedIdx(isFocused ? null : rIdx)}
               className={`grid grid-cols-1 sm:grid-cols-2 gap-2.5 p-2.5 rounded-xl transition-all duration-200 cursor-pointer border ${
                 isFocused
-                  ? 'bg-amber-50/80 dark:bg-amber-950/30 border-amber-300 dark:border-amber-700 shadow-xs ring-2 ring-amber-200'
+                  ? 'bg-warn-soft/80 dark:bg-amber-950/30 border-warn/30 dark:border-amber-700 shadow-xs ring-2 ring-warn/30'
                   : 'bg-canvas hover:bg-white dark:hover:bg-zinc-800/70 border-line/60'
               }`}
             >
               {/* Sol Madde */}
-              <div className="flex items-start gap-2 text-[12.5px] sm:text-[13px] leading-relaxed text-ink-2">
-                <span className="w-5 h-5 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 text-[10.5px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+              <div className="flex items-start gap-2 text-sm sm:text-sm leading-relaxed text-ink-2">
+                <span className="w-5 h-5 rounded-full bg-accent-soft dark:bg-indigo-900/60 text-accent dark:text-indigo-300 text-2xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                   {rIdx + 1}
                 </span>
                 <span className="flex-1">{lText}</span>
               </div>
 
               {/* Sağ Madde */}
-              <div className="flex items-start gap-2 text-[12.5px] sm:text-[13px] leading-relaxed text-ink-2">
-                <span className="w-5 h-5 rounded-full bg-rose-100 dark:bg-rose-900/60 text-rose-700 dark:text-rose-300 text-[10.5px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+              <div className="flex items-start gap-2 text-sm sm:text-sm leading-relaxed text-ink-2">
+                <span className="w-5 h-5 rounded-full bg-bad-soft dark:bg-rose-900/60 text-bad-text dark:text-rose-300 text-2xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                   {rIdx + 1}
                 </span>
                 <span className="flex-1">{rText}</span>
@@ -348,8 +348,8 @@ const HotspotsElement: React.FC<{ data: InteractiveElementData }> = ({ data }) =
   const items = data.items || [];
 
   return (
-    <div className="p-3.5 sm:p-4 rounded-xl bg-teal-50/60 dark:bg-teal-950/20 border border-teal-200/70">
-      <div className="flex items-center gap-2 mb-2 text-teal-800 dark:text-teal-300 font-semibold text-[12px] uppercase tracking-wider">
+    <div className="p-3.5 sm:p-4 rounded-xl bg-ok-soft/60 dark:bg-teal-950/20 border border-ok/70">
+      <div className="flex items-center gap-2 mb-2 text-ok dark:text-teal-300 font-semibold text-xs uppercase tracking-wider">
         <Activity className="w-3.5 h-3.5" />
         <span>{data.title || 'Kritik Odak Noktaları'}</span>
       </div>
@@ -360,13 +360,13 @@ const HotspotsElement: React.FC<{ data: InteractiveElementData }> = ({ data }) =
             key={idx}
             type="button"
             onClick={() => setSelectedIdx(idx)}
-            className={`px-2.5 py-1 rounded-lg text-[12px] font-medium cursor-pointer transition-all flex items-center gap-1.5 ${
+            className={`px-2.5 py-1 rounded-lg text-xs font-medium cursor-pointer transition-all flex items-center gap-1.5 ${
               selectedIdx === idx
-                ? 'bg-teal-600 text-white shadow-2xs ring-2 ring-teal-300'
-                : 'bg-white dark:bg-zinc-800 text-ink-2 border border-teal-200 hover:bg-teal-50'
+                ? 'bg-ok text-white shadow-2xs ring-2 ring-ok/30'
+                : 'bg-white dark:bg-zinc-800 text-ink-2 border border-ok/30 hover:bg-ok-soft'
             }`}
           >
-            <span className="w-4 h-4 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 flex items-center justify-center text-[10px] font-bold">
+            <span className="w-4 h-4 rounded-full bg-ok-soft dark:bg-teal-900 text-ok dark:text-teal-200 flex items-center justify-center text-2xs font-bold">
               {idx + 1}
             </span>
             <span>{it.label}</span>
@@ -375,8 +375,8 @@ const HotspotsElement: React.FC<{ data: InteractiveElementData }> = ({ data }) =
       </div>
 
       {selectedIdx !== null && items[selectedIdx] && (
-        <div className="p-2.5 rounded-lg bg-white dark:bg-zinc-900 border border-teal-200/80 text-[12.5px] text-ink-2 leading-relaxed animate-fadeIn">
-          <strong className="text-teal-900 dark:text-teal-300 block mb-0.5">
+        <div className="p-2.5 rounded-lg bg-white dark:bg-zinc-900 border border-ok/80 text-sm text-ink-2 leading-relaxed animate-fadeIn">
+          <strong className="text-ok dark:text-teal-300 block mb-0.5">
             {items[selectedIdx].label}:
           </strong>
           {items[selectedIdx].detail}
@@ -392,14 +392,14 @@ const BranchingLogicElement: React.FC<{ data: InteractiveElementData }> = ({ dat
   const options = data.options || [];
 
   return (
-    <div className="p-3.5 sm:p-4 rounded-xl bg-sky-50/70 dark:bg-sky-950/20 border border-sky-200/80 dark:border-sky-800/40">
-      <div className="flex items-center gap-2 mb-2 text-sky-800 dark:text-sky-300 font-semibold text-[12px] uppercase tracking-wider">
+    <div className="p-3.5 sm:p-4 rounded-xl bg-accent-soft/70 dark:bg-sky-950/20 border border-accent/80 dark:border-sky-800/40">
+      <div className="flex items-center gap-2 mb-2 text-accent dark:text-sky-300 font-semibold text-xs uppercase tracking-wider">
         <GitBranch className="w-3.5 h-3.5" />
         <span>Klinik Karar Senaryosu</span>
       </div>
 
       {data.scenario && (
-        <p className="text-[13px] sm:text-[13.5px] font-medium text-ink mb-3 leading-relaxed">
+        <p className="text-sm sm:text-base font-medium text-ink mb-3 leading-relaxed">
           {data.scenario}
         </p>
       )}
@@ -412,30 +412,30 @@ const BranchingLogicElement: React.FC<{ data: InteractiveElementData }> = ({ dat
               <button
                 type="button"
                 onClick={() => setSelectedKey(idx)}
-                className={`text-left p-2.5 rounded-lg text-[12.5px] font-medium transition-all cursor-pointer border flex items-start gap-2 ${
+                className={`text-left p-2.5 rounded-lg text-sm font-medium transition-all cursor-pointer border flex items-start gap-2 ${
                   isSelected
                     ? opt.isCorrect
-                      ? 'bg-emerald-50 border-emerald-300 text-emerald-950 dark:bg-emerald-950/30 dark:border-emerald-700'
-                      : 'bg-rose-50 border-rose-300 text-rose-950 dark:bg-rose-950/30 dark:border-rose-700'
-                    : 'bg-white dark:bg-zinc-800 border-sky-200/60 hover:border-sky-300 text-ink-2'
+                      ? 'bg-ok-soft border-ok/30 text-ok dark:bg-emerald-950/30 dark:border-emerald-700'
+                      : 'bg-bad-soft border-bad/30 text-bad-text dark:bg-rose-950/30 dark:border-rose-700'
+                    : 'bg-white dark:bg-zinc-800 border-accent/60 hover:border-accent/30 text-ink-2'
                 }`}
               >
-                <ChevronRight className="w-3.5 h-3.5 text-sky-600 mt-0.5 shrink-0" />
+                <ChevronRight className="w-3.5 h-3.5 text-accent mt-0.5 shrink-0" />
                 <span className="flex-1">{opt.text}</span>
               </button>
 
               {isSelected && (
                 <div
-                  className={`mt-1.5 p-2 rounded-lg text-[12px] leading-relaxed flex items-start gap-1.5 animate-fadeIn ${
+                  className={`mt-1.5 p-2 rounded-lg text-xs leading-relaxed flex items-start gap-1.5 animate-fadeIn ${
                     opt.isCorrect
-                      ? 'bg-emerald-100/70 text-emerald-900 border border-emerald-300'
-                      : 'bg-rose-100/70 text-rose-900 border border-rose-300'
+                      ? 'bg-ok-soft/70 text-ok border border-ok/30'
+                      : 'bg-bad-soft/70 text-bad-text border border-bad/30'
                   }`}
                 >
                   {opt.isCorrect ? (
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-ok shrink-0 mt-0.5" />
                   ) : (
-                    <AlertTriangle className="w-3.5 h-3.5 text-rose-700 shrink-0 mt-0.5" />
+                    <AlertTriangle className="w-3.5 h-3.5 text-bad-text shrink-0 mt-0.5" />
                   )}
                   <span>{opt.feedback}</span>
                 </div>
@@ -455,14 +455,14 @@ const MicroQuizElement: React.FC<{ data: InteractiveElementData }> = ({ data }) 
   const questionText = data.question || data.sentence || (data as any).stem || '';
 
   return (
-    <div className="p-4 sm:p-5 rounded-2xl bg-indigo-50/80 dark:bg-indigo-950/30 border-2 border-indigo-200/90 dark:border-indigo-800/60 shadow-sm transition-all">
-      <div className="flex items-center gap-2 mb-2.5 pb-1.5 border-b border-indigo-100 dark:border-indigo-900/40 text-indigo-900 dark:text-indigo-200 font-bold text-[12px] uppercase tracking-wider">
-        <HelpCircle className="w-4 h-4 text-indigo-600" />
+    <div className="p-4 sm:p-5 rounded-2xl bg-accent-soft/80 dark:bg-indigo-950/30 border-2 border-accent/90 dark:border-indigo-800/60 shadow-sm transition-all">
+      <div className="flex items-center gap-2 mb-2.5 pb-1.5 border-b border-accent/30 dark:border-indigo-900/40 text-accent dark:text-indigo-200 font-bold text-xs uppercase tracking-wider">
+        <HelpCircle className="w-4 h-4 text-accent" />
         <span>Kavram Pekiştirme Mikro-Quiz</span>
       </div>
 
       {questionText && (
-        <p className="text-[13.5px] sm:text-[14.5px] font-bold text-ink mb-3 leading-relaxed">
+        <p className="text-base sm:text-md font-bold text-ink mb-3 leading-relaxed">
           {questionText}
         </p>
       )}
@@ -475,15 +475,15 @@ const MicroQuizElement: React.FC<{ data: InteractiveElementData }> = ({ data }) 
               <button
                 type="button"
                 onClick={() => setSelectedKey(opt.key)}
-                className={`text-left p-2.5 rounded-lg text-[12.5px] font-medium transition-all cursor-pointer border flex items-start gap-2.5 ${
+                className={`text-left p-2.5 rounded-lg text-sm font-medium transition-all cursor-pointer border flex items-start gap-2.5 ${
                   isSelected
                     ? opt.isCorrect
-                      ? 'bg-emerald-50 border-emerald-400 text-emerald-950 font-bold'
-                      : 'bg-rose-50 border-rose-400 text-rose-950 font-bold'
-                    : 'bg-white dark:bg-zinc-800 border-indigo-200/70 hover:border-indigo-300 text-ink-2'
+                      ? 'bg-ok-soft border-ok text-ok font-bold'
+                      : 'bg-bad-soft border-bad text-bad-text font-bold'
+                    : 'bg-white dark:bg-zinc-800 border-accent/70 hover:border-accent/30 text-ink-2'
                 }`}
               >
-                <span className="w-5 h-5 rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 font-bold text-[11px] flex items-center justify-center shrink-0">
+                <span className="w-5 h-5 rounded-full bg-accent-soft dark:bg-indigo-900 text-accent dark:text-indigo-200 font-bold text-2xs flex items-center justify-center shrink-0">
                   {opt.key}
                 </span>
                 <span className="flex-1">{opt.text}</span>
@@ -491,16 +491,16 @@ const MicroQuizElement: React.FC<{ data: InteractiveElementData }> = ({ data }) 
 
               {isSelected && (
                 <div
-                  className={`mt-1.5 p-2 rounded-lg text-[12px] leading-relaxed flex items-start gap-1.5 animate-fadeIn ${
+                  className={`mt-1.5 p-2 rounded-lg text-xs leading-relaxed flex items-start gap-1.5 animate-fadeIn ${
                     opt.isCorrect
-                      ? 'bg-emerald-100/70 text-emerald-900 border border-emerald-300'
-                      : 'bg-rose-100/70 text-rose-900 border border-rose-300'
+                      ? 'bg-ok-soft/70 text-ok border border-ok/30'
+                      : 'bg-bad-soft/70 text-bad-text border border-bad/30'
                   }`}
                 >
                   {opt.isCorrect ? (
-                    <CheckCircle2 className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-ok shrink-0 mt-0.5" />
                   ) : (
-                    <XCircle className="w-4 h-4 text-rose-700 shrink-0 mt-0.5" />
+                    <XCircle className="w-4 h-4 text-bad-text shrink-0 mt-0.5" />
                   )}
                   <div>
                     <strong>{opt.isCorrect ? 'Doğru Gerekçe:' : 'Çürütme & Açıklama:'}</strong>{' '}
@@ -522,14 +522,14 @@ const NodeGraphElement: React.FC<{ data: InteractiveElementData }> = ({ data }) 
   const nodes = data.nodes || [];
 
   return (
-    <div className="p-3.5 sm:p-4 rounded-xl bg-purple-50/60 dark:bg-purple-950/20 border border-purple-200/70">
-      <div className="flex items-center gap-2 mb-2 text-purple-800 dark:text-purple-300 font-semibold text-[12px] uppercase tracking-wider">
+    <div className="p-3.5 sm:p-4 rounded-xl bg-ai-soft/60 dark:bg-purple-950/20 border border-ai/70">
+      <div className="flex items-center gap-2 mb-2 text-ai dark:text-purple-300 font-semibold text-xs uppercase tracking-wider">
         <Network className="w-3.5 h-3.5" />
         <span>Kavram Düğümleri & İlişkiler</span>
       </div>
 
       <div className="text-center my-2">
-        <span className="inline-block px-3 py-1 rounded-full bg-purple-700 text-white text-[12.5px] font-bold shadow-2xs">
+        <span className="inline-block px-3 py-1 rounded-full bg-ai text-white text-sm font-bold shadow-2xs">
           {data.centerNode}
         </span>
       </div>
@@ -544,12 +544,12 @@ const NodeGraphElement: React.FC<{ data: InteractiveElementData }> = ({ data }) 
               onClick={() => setActiveNode(isSelected ? null : node.id)}
               className={`p-2.5 rounded-lg border text-left cursor-pointer transition-all ${
                 isSelected
-                  ? 'bg-purple-100 dark:bg-purple-900/40 border-purple-400 ring-2 ring-purple-300'
-                  : 'bg-white dark:bg-zinc-800 border-purple-200 hover:border-purple-300'
+                  ? 'bg-ai-soft dark:bg-purple-900/40 border-ai ring-2 ring-ai/30'
+                  : 'bg-white dark:bg-zinc-800 border-ai/30 hover:border-ai/30'
               }`}
             >
-              <div className="text-[12.5px] font-bold text-ink">{node.label}</div>
-              <div className="text-[11px] text-purple-700 dark:text-purple-300 mt-0.5">{node.role}</div>
+              <div className="text-sm font-bold text-ink">{node.label}</div>
+              <div className="text-2xs text-ai dark:text-purple-300 mt-0.5">{node.role}</div>
             </button>
           );
         })}
@@ -563,8 +563,8 @@ const CausalChainElement: React.FC<{ data: InteractiveElementData }> = ({ data }
   const steps = data.steps || [];
 
   return (
-    <div className="p-3.5 sm:p-4 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/20 border border-emerald-200/70">
-      <div className="flex items-center gap-2 mb-2.5 text-emerald-800 dark:text-emerald-300 font-semibold text-[12px] uppercase tracking-wider">
+    <div className="p-3.5 sm:p-4 rounded-xl bg-ok-soft/60 dark:bg-emerald-950/20 border border-ok/70">
+      <div className="flex items-center gap-2 mb-2.5 text-ok dark:text-emerald-300 font-semibold text-xs uppercase tracking-wider">
         <Activity className="w-3.5 h-3.5" />
         <span>{data.chainTitle || 'Patolojik Neden-Sonuç Zinciri'}</span>
       </div>
@@ -572,10 +572,10 @@ const CausalChainElement: React.FC<{ data: InteractiveElementData }> = ({ data }
       <div className="space-y-1.5">
         {steps.map((st, i) => (
           <div key={i} className="flex items-start gap-2">
-            <span className="w-5 h-5 rounded-full bg-emerald-600 text-white font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
+            <span className="w-5 h-5 rounded-full bg-ok text-white font-bold text-2xs flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
               {i + 1}
             </span>
-            <div className="flex-1 p-2 rounded-lg bg-white dark:bg-zinc-800 border border-emerald-200/60 text-[12.5px] text-ink font-medium leading-snug">
+            <div className="flex-1 p-2 rounded-lg bg-white dark:bg-zinc-800 border border-ok/60 text-sm text-ink font-medium leading-snug">
               {st}
             </div>
             {i < steps.length - 1 && (
@@ -631,26 +631,26 @@ const InteractiveTableElement: React.FC<{ data: InteractiveElementData }> = ({ d
   };
 
   return (
-    <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-amber-50/70 via-white to-orange-50/50 dark:from-zinc-900 dark:via-zinc-850 dark:to-zinc-900 border-2 border-amber-300/80 dark:border-amber-700/60 shadow-sm transition-all">
-      <div className="flex flex-wrap items-center justify-between gap-2 mb-3 pb-2 border-b border-amber-200/70 dark:border-amber-800/50">
-        <div className="flex items-center gap-2 text-amber-900 dark:text-amber-200 font-bold text-[12.5px] uppercase tracking-wider">
-          <Layers className="w-4 h-4 text-amber-600" />
+    <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-warn-soft/70 via-white to-warn-soft/50 dark:from-zinc-900 dark:via-zinc-850 dark:to-zinc-900 border-2 border-warn/80 dark:border-amber-700/60 shadow-sm transition-all">
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-3 pb-2 border-b border-warn/70 dark:border-amber-800/50">
+        <div className="flex items-center gap-2 text-warn dark:text-amber-200 font-bold text-sm uppercase tracking-wider">
+          <Layers className="w-4 h-4 text-warn" />
           <span>{data.tableTitle || 'Hafıza & Ezber Tablosu (Maskeli Pekiştirme)'}</span>
         </div>
         <button
           type="button"
           onClick={toggleAll}
-          className="text-[11.5px] font-semibold text-amber-800 dark:text-amber-300 bg-amber-100 hover:bg-amber-200 dark:bg-amber-900/60 dark:hover:bg-amber-800/80 px-2.5 py-1 rounded-lg border border-amber-300/70 cursor-pointer transition-colors shadow-2xs"
+          className="text-xs font-semibold text-warn dark:text-amber-300 bg-warn-soft hover:bg-warn/20 dark:bg-amber-900/60 dark:hover:bg-amber-800/80 px-2.5 py-1 rounded-lg border border-warn/70 cursor-pointer transition-colors shadow-2xs"
         >
           {allRevealed ? 'Hücreleri Maskele' : 'Tüm Maskeleri Aç'}
         </button>
       </div>
 
-      <div className="overflow-x-auto rounded-xl border border-amber-200/60 dark:border-zinc-700">
-        <table className="w-full text-left text-[12.5px] sm:text-[13px] border-collapse bg-white dark:bg-zinc-900">
+      <div className="overflow-x-auto rounded-xl border border-warn/60 dark:border-zinc-700">
+        <table className="w-full text-left text-sm sm:text-sm border-collapse bg-white dark:bg-zinc-900">
           {headers.length > 0 && (
             <thead>
-              <tr className="bg-amber-500/10 border-b border-amber-200/70 dark:border-zinc-700 text-amber-900 dark:text-amber-300 font-bold">
+              <tr className="bg-warn/10 border-b border-warn/70 dark:border-zinc-700 text-warn dark:text-amber-300 font-bold">
                 {headers.map((h, idx) => (
                   <th key={idx} className="px-3.5 py-2.5 whitespace-nowrap">
                     {h}
@@ -659,9 +659,9 @@ const InteractiveTableElement: React.FC<{ data: InteractiveElementData }> = ({ d
               </tr>
             </thead>
           )}
-          <tbody className="divide-y divide-amber-100/80 dark:divide-zinc-800">
+          <tbody className="divide-y divide-warn/80 dark:divide-zinc-800">
             {rows.map((row, rIdx) => (
-              <tr key={rIdx} className={rIdx % 2 === 1 ? 'bg-amber-50/30 dark:bg-zinc-850/40' : ''}>
+              <tr key={rIdx} className={rIdx % 2 === 1 ? 'bg-warn-soft/30 dark:bg-zinc-850/40' : ''}>
                 {(row.cells || []).map((cell, cIdx) => {
                   const cellKey = `${rIdx}-${cIdx}`;
                   const isMasked = cell.isMasked;
@@ -673,17 +673,17 @@ const InteractiveTableElement: React.FC<{ data: InteractiveElementData }> = ({ d
                         <button
                           type="button"
                           onClick={() => toggleCell(cellKey)}
-                          className={`px-2.5 py-1 rounded-lg text-[12px] font-semibold transition-all cursor-pointer inline-flex items-center gap-1.5 shadow-2xs ${
+                          className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer inline-flex items-center gap-1.5 shadow-2xs ${
                             isRevealed
-                              ? 'bg-emerald-100 text-emerald-900 border border-emerald-300 dark:bg-emerald-950/60 dark:text-emerald-200'
-                              : 'bg-amber-200/80 hover:bg-amber-300 text-amber-950 border border-amber-300/80 dark:bg-amber-900/60 dark:text-amber-100'
+                              ? 'bg-ok-soft text-ok border border-ok/30 dark:bg-emerald-950/60 dark:text-emerald-200'
+                              : 'bg-warn/80 hover:bg-warn/20 text-warn border border-warn/80 dark:bg-amber-900/60 dark:text-amber-100'
                           }`}
                           title={isRevealed ? 'Tekrar gizlemek için tıkla' : 'Hücreyi açmak için tıkla'}
                         >
                           {isRevealed ? (
                             <span>{cell.text}</span>
                           ) : (
-                            <span className="italic font-mono text-[11px] opacity-85">
+                            <span className="italic font-mono text-2xs opacity-85">
                               [Tıkla & Gör{cell.hint ? `: ${cell.hint}` : ''}]
                             </span>
                           )}

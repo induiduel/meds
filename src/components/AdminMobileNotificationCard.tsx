@@ -375,7 +375,7 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
           <div>
             <div className="flex items-center gap-2">
               <h3 className="font-bold text-base text-ink">Yönetici Anlık Bildirim Ayarları</h3>
-              <span className="bg-ok-soft text-ok border border-ok/30 text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider flex items-center gap-1">
+              <span className="bg-ok-soft text-ok border border-ok/30 text-2xs font-black px-2 py-0.5 rounded-full uppercase tracking-wider flex items-center gap-1">
                 <ShieldCheck className="w-3 h-3 text-ok" />
                 Yalnızca Admin
               </span>
@@ -430,17 +430,17 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
                 Telefonda Web Push Bildirimi
               </span>
               {isSubscribed ? (
-                <span className="bg-ok-soft text-ok border border-ok/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                <span className="bg-ok-soft text-ok border border-ok/30 text-2xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                   <CheckCircle className="w-3 h-3 text-ok" />
                   Bu Cihaz Aktif
                 </span>
               ) : (
-                <span className="bg-warn-soft text-warn border border-warn/30 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                <span className="bg-warn-soft text-warn border border-warn/30 text-2xs font-bold px-2 py-0.5 rounded-full">
                   Kayıtlı Değil
                 </span>
               )}
             </div>
-            <p className="text-[11px] text-ink-3 leading-relaxed">
+            <p className="text-2xs text-ink-3 leading-relaxed">
               Telefonunuzun kilit ekranında veya bildirim çubuğunda anlık uyarı alırsınız.
               {deviceCount > 0 && (
                 <span className="block mt-1 text-accent font-semibold">
@@ -491,18 +491,18 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
                 Admin E-posta İletimi
               </span>
               {emailEnabled ? (
-                <span className="bg-ok-soft text-ok border border-ok/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                <span className="bg-ok-soft text-ok border border-ok/30 text-2xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                   <CheckCircle className="w-3 h-3 text-ok" />
                   E-posta Aktif
                 </span>
               ) : (
-                <span className="bg-field text-ink-3 border border-line text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                <span className="bg-field text-ink-3 border border-line text-2xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                   <BellOff className="w-3 h-3 text-ink-3" />
                   Kapalı (Yalnızca Telefon)
                 </span>
               )}
             </div>
-            <p className="text-[11px] text-ink-3 leading-relaxed">
+            <p className="text-2xs text-ink-3 leading-relaxed">
               {emailEnabled ? (
                 <>Her hata bildiriminde doğrudan <strong className="text-ink">{ADMIN_EMAIL}</strong> adresine anlık HTML e-posta düşer.</>
               ) : (
@@ -551,13 +551,13 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
           <Smartphone className="w-4 h-4 text-accent" />
           📱 Telefonda Bildirimleri Dakikalar İçinde Almak İçin:
         </strong>
-        <p className="text-[11px] leading-relaxed text-ink-2">
+        <p className="text-2xs leading-relaxed text-ink-2">
           1. <strong>Android (Chrome):</strong> Telefonunuzda <strong>nofrostlife.com.tr</strong> adresine girin, admin olarak oturum açın ve yukarıdaki <em>"Bu Cihazda Bildirimleri Aç"</em> butonuna dokunun. Tarayıcı izin penceresinde <strong>"İzin Ver"</strong> seçin.
         </p>
-        <p className="text-[11px] leading-relaxed text-ink-2">
+        <p className="text-2xs leading-relaxed text-ink-2">
           2. <strong>iPhone / iOS (Safari):</strong> Safari'de <strong>nofrostlife.com.tr</strong>'yi açın &rarr; Paylaş simgesine dokunup <strong>"Ana Ekrana Ekle"</strong> yapın &rarr; Uygulamayı ana ekrandan açıp bildirimleri etkinleştirin (iOS 16.4+).
         </p>
-        <p className="text-[11px] leading-relaxed text-ink-2">
+        <p className="text-2xs leading-relaxed text-ink-2">
           3. <strong>E-posta:</strong> Telefonunuzda Gmail / Mail uygulamasında <em>{ADMIN_EMAIL}</em> hesabı kuruluysa, bildirim mailleri saniyeler içinde doğrudan telefon ekranınıza bildirim olarak da düşer.
         </p>
       </div>
@@ -581,28 +581,28 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     {notif.type === 'report' ? (
-                      <span className="bg-bad-soft text-bad border border-bad/30 text-[10px] font-bold px-1.5 py-0.2 rounded flex items-center gap-1">
+                      <span className="bg-bad-soft text-bad border border-bad/30 text-2xs font-bold px-1.5 py-0.2 rounded flex items-center gap-1">
                         <AlertTriangle className="w-2.5 h-2.5" />
                         Hata Bildirimi
                       </span>
                     ) : notif.type === 'comment' ? (
-                      <span className="bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold px-1.5 py-0.2 rounded flex items-center gap-1">
+                      <span className="bg-accent/20 text-accent border border-accent/30 text-2xs font-bold px-1.5 py-0.2 rounded flex items-center gap-1">
                         <MessageSquare className="w-2.5 h-2.5" />
                         Yorum
                       </span>
                     ) : (
-                      <span className="bg-ok-soft text-ok border border-ok/30 text-[10px] font-bold px-1.5 py-0.2 rounded">
+                      <span className="bg-ok-soft text-ok border border-ok/30 text-2xs font-bold px-1.5 py-0.2 rounded">
                         Test
                       </span>
                     )}
-                    <span className="font-mono text-[11px] text-accent font-semibold">
+                    <span className="font-mono text-2xs text-accent font-semibold">
                       {notif.questionId ? `#${notif.questionId}` : ''}
                     </span>
-                    <span className="text-[10px] text-ink-3">
+                    <span className="text-2xs text-ink-3">
                       {notif.timestamp ? new Date(notif.timestamp).toLocaleString('tr-TR') : ''}
                     </span>
                   </div>
-                  <p className="text-ink text-[11px] leading-tight line-clamp-2">
+                  <p className="text-ink text-2xs leading-tight line-clamp-2">
                     {notif.message}
                   </p>
                 </div>
@@ -610,7 +610,7 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
                 {learnPath(notif.url) ? (
                   <a
                     href={learnPath(notif.url)!}
-                    className="shrink-0 bg-accent-soft hover:bg-accent hover:text-white text-accent text-[11px] font-bold px-2 py-1 rounded flex items-center gap-1 cursor-pointer transition-colors"
+                    className="shrink-0 bg-accent-soft hover:bg-accent hover:text-white text-accent text-2xs font-bold px-2 py-1 rounded flex items-center gap-1 cursor-pointer transition-colors"
                     title="Derste bildirilen yere git"
                   >
                     <span>Derste gör</span>
@@ -619,7 +619,7 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
                 ) : notif.questionId && onOpenQuestion && (
                   <button
                     onClick={() => onOpenQuestion(notif.questionId)}
-                    className="shrink-0 bg-accent-soft hover:bg-accent hover:text-white text-accent text-[11px] font-bold px-2 py-1 rounded flex items-center gap-1 cursor-pointer transition-colors"
+                    className="shrink-0 bg-accent-soft hover:bg-accent hover:text-white text-accent text-2xs font-bold px-2 py-1 rounded flex items-center gap-1 cursor-pointer transition-colors"
                     title="Soruyu incele"
                   >
                     <span>Gör</span>

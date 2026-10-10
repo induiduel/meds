@@ -185,27 +185,27 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
   const isPcOnline = secondsAgo !== null && secondsAgo < 180;
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-xs overflow-y-auto animate-fadeIn">
-      <div className="bg-slate-900 text-slate-100 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[92dvh] flex flex-col border border-slate-800 overflow-hidden">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-ink/80 backdrop-blur-xs overflow-y-auto animate-fadeIn">
+      <div className="bg-ink text-ink-3 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[92dvh] flex flex-col border border-line-2 overflow-hidden">
         
         {/* Header */}
-        <div className="p-4 sm:p-5 bg-ink-surface border-b border-slate-800 flex items-center justify-between shrink-0">
+        <div className="p-4 sm:p-5 bg-ink-surface border-b border-line-2 flex items-center justify-between shrink-0">
           <div className="space-y-1">
             <div className="flex items-center gap-2.5">
-              <span className="p-2 bg-indigo-500/20 text-indigo-400 rounded-xl border border-indigo-500/30">
+              <span className="p-2 bg-accent/20 text-accent rounded-xl border border-accent/30">
                 <Cpu className="w-5 h-5 animate-pulse" />
               </span>
               <div>
                 <h2 className="text-base sm:text-lg font-extrabold text-white flex items-center gap-2">
                   <span>AI Subagent & Arkaplan Süreçleri İzleme Paneli</span>
-                  <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-extrabold ${
-                    isPcOnline ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
+                  <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-2xs font-extrabold ${
+                    isPcOnline ? 'bg-ok/20 text-ok border border-ok/40' : 'bg-warn/20 text-warn border border-warn/40'
                   }`}>
-                    <span className={`w-2 h-2 rounded-full ${isPcOnline ? 'bg-emerald-400 animate-ping' : 'bg-amber-400'}`} />
+                    <span className={`w-2 h-2 rounded-full ${isPcOnline ? 'bg-ok animate-ping' : 'bg-warn'}`} />
                     {isPcOnline ? 'PC ÇEVRİMİÇİ (Bağlı)' : 'BEKLEMEDE / ÇEVRİMDIŞI'}
                   </span>
                 </h2>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-ink-3">
                   Yerel bilgisayarınızdaki yapay zeka subagentleri, OCR süreçleri ve Firebase hibrit veritabanı sentinel durumu
                 </p>
               </div>
@@ -216,13 +216,13 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
             <button
               onClick={loadStatus}
               title="Yenile"
-              className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors cursor-pointer"
+              className="p-2 text-ink-3 hover:text-white rounded-lg hover:bg-ink transition-colors cursor-pointer"
             >
               <RefreshCw className="w-4 h-4" />
             </button>
             <button
               onClick={onClose}
-              className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors cursor-pointer"
+              className="p-2 text-ink-3 hover:text-white rounded-lg hover:bg-ink transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -230,13 +230,13 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
         </div>
 
         {/* Navigation Tabs */}
-        <div className="flex items-center gap-2 px-4 sm:px-6 pt-3 border-b border-slate-800 bg-slate-900/60 text-xs font-bold">
+        <div className="flex items-center gap-2 px-4 sm:px-6 pt-3 border-b border-line-2 bg-ink/60 text-xs font-bold">
           <button
             onClick={() => setActiveTab('overview')}
             className={`pb-2.5 px-3 border-b-2 transition-all cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'overview'
-                ? 'border-indigo-500 text-indigo-400'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? 'border-accent text-accent'
+                : 'border-transparent text-ink-3 hover:text-ink-3'
             }`}
           >
             <Activity className="w-4 h-4" />
@@ -247,8 +247,8 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
             onClick={() => setActiveTab('redactor')}
             className={`pb-2.5 px-3 border-b-2 transition-all cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'redactor'
-                ? 'border-teal-500 text-teal-400'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? 'border-ok text-ok'
+                : 'border-transparent text-ink-3 hover:text-ink-3'
             }`}
           >
             <Sparkles className="w-4 h-4" />
@@ -259,8 +259,8 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
             onClick={() => setActiveTab('hybrid')}
             className={`pb-2.5 px-3 border-b-2 transition-all cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'hybrid'
-                ? 'border-amber-500 text-amber-400'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? 'border-warn text-warn'
+                : 'border-transparent text-ink-3 hover:text-ink-3'
             }`}
           >
             <Server className="w-4 h-4" />
@@ -271,8 +271,8 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
             onClick={() => setActiveTab('logs')}
             className={`pb-2.5 px-3 border-b-2 transition-all cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'logs'
-                ? 'border-blue-500 text-blue-400'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? 'border-accent text-accent'
+                : 'border-transparent text-ink-3 hover:text-ink-3'
             }`}
           >
             <Terminal className="w-4 h-4" />
@@ -284,9 +284,9 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
         <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6">
           
           {actionFeedback && (
-            <div className="p-3 bg-indigo-950/60 border border-indigo-500/40 rounded-xl text-xs text-indigo-200 flex items-center justify-between">
+            <div className="p-3 bg-accent/60 border border-accent/40 rounded-xl text-xs text-accent-soft flex items-center justify-between">
               <span>{actionFeedback}</span>
-              <button onClick={() => setActionFeedback(null)} className="text-indigo-400 hover:text-white"></button>
+              <button onClick={() => setActionFeedback(null)} className="text-accent hover:text-white"></button>
             </div>
           )}
 
@@ -298,57 +298,57 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 
                 {/* Card 1: Subagent Status */}
-                <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-3.5 space-y-2">
-                  <div className="flex items-center justify-between text-xs text-slate-400">
+                <div className="bg-ink/60 border border-line-2/60 rounded-xl p-3.5 space-y-2">
+                  <div className="flex items-center justify-between text-xs text-ink-3">
                     <span className="font-semibold">Subagent Durumu</span>
-                    <Radio className={`w-3.5 h-3.5 ${isPcOnline ? 'text-emerald-400 animate-pulse' : 'text-slate-500'}`} />
+                    <Radio className={`w-3.5 h-3.5 ${isPcOnline ? 'text-ok animate-pulse' : 'text-ink-3'}`} />
                   </div>
                   <div className="text-lg font-bold text-white">
                     {telemetry?.isRunning ? 'Aktif (Çalışıyor)' : isPcOnline ? 'Hazırda Bekliyor' : 'Servis Bekleniyor'}
                   </div>
-                  <p className="text-[11px] text-slate-400">
+                  <p className="text-2xs text-ink-3">
                     Son Kalp Atışı: {secondsAgo !== null ? `${secondsAgo} sn önce` : 'Bilinmiyor'}
                   </p>
                 </div>
 
                 {/* Card 2: Redacted Questions */}
-                <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-3.5 space-y-2">
-                  <div className="flex items-center justify-between text-xs text-slate-400">
+                <div className="bg-ink/60 border border-line-2/60 rounded-xl p-3.5 space-y-2">
+                  <div className="flex items-center justify-between text-xs text-ink-3">
                     <span className="font-semibold">İşlenen Soru Arşivi</span>
-                    <Sparkles className="w-3.5 h-3.5 text-teal-400" />
+                    <Sparkles className="w-3.5 h-3.5 text-ok" />
                   </div>
-                  <div className="text-lg font-bold text-teal-300">
+                  <div className="text-lg font-bold text-ok">
                     {telemetry?.totalQuestions || heartbeat?.totalQuestions || '1,625+'} Soru
                   </div>
-                  <p className="text-[11px] text-teal-400/80">
+                  <p className="text-2xs text-ok/80">
                     ✓ {telemetry?.validQuestionsCount || heartbeat?.validQuestions || '1,342'} Tam Redakte
                   </p>
                 </div>
 
                 {/* Card 3: Lecture Notes Grounding */}
-                <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-3.5 space-y-2">
-                  <div className="flex items-center justify-between text-xs text-slate-400">
+                <div className="bg-ink/60 border border-line-2/60 rounded-xl p-3.5 space-y-2">
+                  <div className="flex items-center justify-between text-xs text-ink-3">
                     <span className="font-semibold">Amfi Ders Slaytları</span>
-                    <Layers className="w-3.5 h-3.5 text-indigo-400" />
+                    <Layers className="w-3.5 h-3.5 text-accent" />
                   </div>
-                  <div className="text-lg font-bold text-indigo-300">
+                  <div className="text-lg font-bold text-accent">
                     {telemetry?.lectureNotesIndexed || heartbeat?.lectureNotesIndexed || '877'} Slayt/Not
                   </div>
-                  <p className="text-[11px] text-indigo-400/80">
+                  <p className="text-2xs text-accent/80">
                     Kurul 1 - 6 Bellekte İndeksli
                   </p>
                 </div>
 
                 {/* Card 4: Hybrid Server Mode */}
-                <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-3.5 space-y-2">
-                  <div className="flex items-center justify-between text-xs text-slate-400">
+                <div className="bg-ink/60 border border-line-2/60 rounded-xl p-3.5 space-y-2">
+                  <div className="flex items-center justify-between text-xs text-ink-3">
                     <span className="font-semibold">Hibrit Veritabanı</span>
-                    <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+                    <ShieldCheck className="w-3.5 h-3.5 text-warn" />
                   </div>
-                  <div className="text-lg font-bold text-amber-300">
+                  <div className="text-lg font-bold text-warn">
                     Paralel & Kotasız
                   </div>
-                  <p className="text-[11px] text-amber-400/80">
+                  <p className="text-2xs text-warn/80">
                     PC Yedekleme: 0 Ekstra Ücret
                   </p>
                 </div>
@@ -357,25 +357,25 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
 
               {/* Subagents Detailed Cards */}
               <div className="space-y-4">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-ink-3">
                   Arka Planda Görev Yapan Aktif Subagentler (İş Parçacıkları)
                 </h3>
 
                 {/* Subagent 1: AI Redactor */}
-                <div className="bg-slate-800/40 border border-slate-700/80 rounded-2xl p-4 sm:p-5 space-y-4">
+                <div className="bg-ink/40 border border-line-2/80 rounded-2xl p-4 sm:p-5 space-y-4">
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
-                      <div className="p-2.5 bg-teal-500/10 text-teal-400 rounded-xl border border-teal-500/20">
+                      <div className="p-2.5 bg-ok/10 text-ok rounded-xl border border-ok/20">
                         <Sparkles className="w-5 h-5" />
                       </div>
                       <div>
                         <h4 className="text-sm font-bold text-white flex items-center gap-2">
                           <span>Subagent 1: Yapay Zeka Redaksiyon & Kalite Denetim Subagenti</span>
-                          <span className="text-[11px] bg-teal-500/20 text-teal-300 font-extrabold px-2 py-0.5 rounded-full border border-teal-500/30">
+                          <span className="text-2xs bg-ok/20 text-ok font-extrabold px-2 py-0.5 rounded-full border border-ok/30">
                             background-ai-redactor.mjs
                           </span>
                         </h4>
-                        <p className="text-xs text-slate-400">
+                        <p className="text-xs text-ink-3">
                           Tüm çıkmış soru metinlerini 877 amfi ders notuyla harmanlar; 5 şıklı klinik vaka rekonstrüksiyonu üretir.
                         </p>
                       </div>
@@ -384,7 +384,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                     <button
                       onClick={handleTriggerRedaction}
                       disabled={isTriggeringRedaction}
-                      className="bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-2 transition-all cursor-pointer shadow-sm disabled:opacity-50"
+                      className="bg-ok hover:bg-ok text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-2 transition-all cursor-pointer shadow-sm disabled:opacity-50"
                     >
                       {isTriggeringRedaction ? (
                         <>
@@ -400,41 +400,41 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                     </button>
                   </div>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs pt-2 border-t border-slate-700/50">
-                    <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[11px] text-slate-400 block">Geçerli Soru:</span>
-                      <span className="text-sm font-bold text-emerald-400">{telemetry?.validQuestionsCount || 1342}</span>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs pt-2 border-t border-line-2/50">
+                    <div className="bg-ink/60 p-2.5 rounded-xl border border-line-2">
+                      <span className="text-2xs text-ink-3 block">Geçerli Soru:</span>
+                      <span className="text-sm font-bold text-ok">{telemetry?.validQuestionsCount || 1342}</span>
                     </div>
-                    <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[11px] text-slate-400 block">Muallak / Eksik:</span>
-                      <span className="text-sm font-bold text-amber-400">{telemetry?.suspectQuestionsCount || 23}</span>
+                    <div className="bg-ink/60 p-2.5 rounded-xl border border-line-2">
+                      <span className="text-2xs text-ink-3 block">Muallak / Eksik:</span>
+                      <span className="text-sm font-bold text-warn">{telemetry?.suspectQuestionsCount || 23}</span>
                     </div>
-                    <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[11px] text-slate-400 block">%90+ Öğrenci Kilitli:</span>
-                      <span className="text-sm font-bold text-indigo-400">{telemetry?.lockedQuestionsCount || 12}</span>
+                    <div className="bg-ink/60 p-2.5 rounded-xl border border-line-2">
+                      <span className="text-2xs text-ink-3 block">%90+ Öğrenci Kilitli:</span>
+                      <span className="text-sm font-bold text-accent">{telemetry?.lockedQuestionsCount || 12}</span>
                     </div>
-                    <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[11px] text-slate-400 block">Çalışma Frekansı:</span>
-                      <span className="text-sm font-bold text-slate-200">Her 5 Dakikada 1</span>
+                    <div className="bg-ink/60 p-2.5 rounded-xl border border-line-2">
+                      <span className="text-2xs text-ink-3 block">Çalışma Frekansı:</span>
+                      <span className="text-sm font-bold text-ink-3">Her 5 Dakikada 1</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Subagent 2: Local & Drive Sync */}
-                <div className="bg-slate-800/40 border border-slate-700/80 rounded-2xl p-4 sm:p-5 space-y-4">
+                <div className="bg-ink/40 border border-line-2/80 rounded-2xl p-4 sm:p-5 space-y-4">
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
-                      <div className="p-2.5 bg-blue-500/10 text-blue-400 rounded-xl border border-blue-500/20">
+                      <div className="p-2.5 bg-accent/10 text-accent rounded-xl border border-accent/20">
                         <HardDrive className="w-5 h-5" />
                       </div>
                       <div>
                         <h4 className="text-sm font-bold text-white flex items-center gap-2">
                           <span>Subagent 2: Yerel Dosya & Google Drive Otomasyon Subagenti</span>
-                          <span className="text-[11px] bg-blue-500/20 text-blue-300 font-extrabold px-2 py-0.5 rounded-full border border-blue-500/30">
+                          <span className="text-2xs bg-accent/20 text-accent font-extrabold px-2 py-0.5 rounded-full border border-accent/30">
                             meds-local-sync.mjs
                           </span>
                         </h4>
-                        <p className="text-xs text-slate-400">
+                        <p className="text-xs text-ink-3">
                           C:\Users\indui\Desktop\meds_database klasöründeki yeni PDF/PPTX dosyalarını izler ve .txt'e dönüştürür.
                         </p>
                       </div>
@@ -443,7 +443,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                     <button
                       onClick={handleTriggerSync}
                       disabled={isTriggeringSync}
-                      className="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-2 transition-all cursor-pointer shadow-sm disabled:opacity-50"
+                      className="bg-accent hover:bg-accent text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-2 transition-all cursor-pointer shadow-sm disabled:opacity-50"
                     >
                       {isTriggeringSync ? (
                         <>
@@ -459,22 +459,22 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                     </button>
                   </div>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs pt-2 border-t border-slate-700/50">
-                    <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[11px] text-slate-400 block">Kurul Notları:</span>
-                      <span className="text-sm font-bold text-blue-300">357 Belge (.txt)</span>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs pt-2 border-t border-line-2/50">
+                    <div className="bg-ink/60 p-2.5 rounded-xl border border-line-2">
+                      <span className="text-2xs text-ink-3 block">Kurul Notları:</span>
+                      <span className="text-sm font-bold text-accent">357 Belge (.txt)</span>
                     </div>
-                    <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[11px] text-slate-400 block">Yerel Soru Slaytları:</span>
-                      <span className="text-sm font-bold text-blue-300">8 Dosya (1,375 Soru)</span>
+                    <div className="bg-ink/60 p-2.5 rounded-xl border border-line-2">
+                      <span className="text-2xs text-ink-3 block">Yerel Soru Slaytları:</span>
+                      <span className="text-sm font-bold text-accent">8 Dosya (1,375 Soru)</span>
                     </div>
-                    <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[11px] text-slate-400 block">OCR Motoru:</span>
-                      <span className="text-sm font-bold text-emerald-400">Yerel CPU (Birebir)</span>
+                    <div className="bg-ink/60 p-2.5 rounded-xl border border-line-2">
+                      <span className="text-2xs text-ink-3 block">OCR Motoru:</span>
+                      <span className="text-sm font-bold text-ok">Yerel CPU (Birebir)</span>
                     </div>
-                    <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[11px] text-slate-400 block">Zamanlama Aralığı:</span>
-                      <span className="text-sm font-bold text-amber-300">16:00 - 18:00 (Otomatik)</span>
+                    <div className="bg-ink/60 p-2.5 rounded-xl border border-line-2">
+                      <span className="text-2xs text-ink-3 block">Zamanlama Aralığı:</span>
+                      <span className="text-sm font-bold text-warn">16:00 - 18:00 (Otomatik)</span>
                     </div>
                   </div>
                 </div>
@@ -487,12 +487,12 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
           {/* TAB 2: AI REDACTOR DETAILS */}
           {activeTab === 'redactor' && (
             <div className="space-y-4">
-              <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 space-y-3">
+              <div className="bg-ink/50 border border-line-2 rounded-xl p-4 space-y-3">
                 <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-teal-400" />
+                  <Sparkles className="w-4 h-4 text-ok" />
                   <span>Arka Plan Yapay Zeka Redaksiyon İşleyişi & Kural Motoru</span>
                 </h3>
-                <div className="text-xs text-slate-300 space-y-2 leading-relaxed">
+                <div className="text-xs text-ink-3 space-y-2 leading-relaxed">
                   <p>
                     <strong>1. Grounding (Ders Notu Dayanağı):</strong> Soru kökü ve seçenekleri rastgele üretilmez. C:\Users\indui\Desktop\meds_database\kurul_ders_notlari_txt altındaki amfi ders slaytlarıyla eşleştirilerek o konunun resmi kurul terminolojisi kullanılır.
                   </p>
@@ -505,15 +505,15 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                 </div>
               </div>
 
-              <div className="p-4 bg-slate-800/30 rounded-xl border border-slate-700/60 text-xs flex items-center justify-between">
+              <div className="p-4 bg-ink/30 rounded-xl border border-line-2/60 text-xs flex items-center justify-between">
                 <div>
-                  <span className="text-slate-400 block">Son Tam Tarama Durumu:</span>
+                  <span className="text-ink-3 block">Son Tam Tarama Durumu:</span>
                   <span className="font-semibold text-white">{telemetry?.statusText || 'Arka plan subagenti çalışıyor.'}</span>
                 </div>
                 <button
                   onClick={handleTriggerRedaction}
                   disabled={isTriggeringRedaction}
-                  className="bg-teal-700 hover:bg-teal-600 text-white font-bold px-3 py-1.5 rounded-lg flex items-center gap-1.5 cursor-pointer"
+                  className="bg-ok hover:bg-ok text-white font-bold px-3 py-1.5 rounded-lg flex items-center gap-1.5 cursor-pointer"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${isTriggeringRedaction ? 'animate-spin' : ''}`} />
                   <span>Yeniden Tara</span>
@@ -527,12 +527,12 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
             <div className="space-y-5">
               
               {/* Concept Banner */}
-              <div className="p-4 sm:p-5 bg-ink-surface border border-amber-500/30 rounded-2xl space-y-2">
-                <div className="flex items-center gap-2 text-amber-300 font-bold text-sm">
-                  <ShieldCheck className="w-5 h-5 text-amber-400" />
+              <div className="p-4 sm:p-5 bg-ink-surface border border-warn/30 rounded-2xl space-y-2">
+                <div className="flex items-center gap-2 text-warn font-bold text-sm">
+                  <ShieldCheck className="w-5 h-5 text-warn" />
                   <span>Hibrit Mimari: Ücretsiz Yerel PC Sunucusu & Firebase Kotasız Çalışma</span>
                 </div>
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <p className="text-xs text-ink-3 leading-relaxed">
                   Firebase Firestore'un ücretsiz günlük okuma/yazma kotaları (50.000 okuma/gün) tükendiğinde veya site GitHub Pages üzerinden yoğun trafik aldığında; sistem otomatik olarak bilgisayarınızdaki yerel veritabanına ve Express sunucusuna yönlenir. Böylece sıfır maliyetle sınırsız hizmet verilir!
                 </p>
               </div>
@@ -541,17 +541,17 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 
                 {/* Cloud Status */}
-                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 space-y-3">
+                <div className="bg-ink/50 border border-line-2 rounded-xl p-4 space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-slate-200 flex items-center gap-2">
-                      <Cloud className="w-4 h-4 text-blue-400" />
+                    <span className="text-xs font-bold text-ink-3 flex items-center gap-2">
+                      <Cloud className="w-4 h-4 text-accent" />
                       Bulut: Firebase Firestore
                     </span>
-                    <span className="text-[11px] bg-emerald-500/20 text-emerald-300 font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
+                    <span className="text-2xs bg-ok/20 text-ok font-bold px-2 py-0.5 rounded-full border border-ok/30">
                       Çevrimiçi
                     </span>
                   </div>
-                  <ul className="text-xs text-slate-300 space-y-1.5">
+                  <ul className="text-xs text-ink-3 space-y-1.5">
                     <li>• Veritabanı ID: <code>karabuk-tip-d3-db</code></li>
                     <li>• Durum: <strong>Aktif & Gerçek Zamanlı Dinleyici Devrede</strong></li>
                     <li>• Kota Durumu: <strong>Normal (Sınır Aşımında Otomatik PC'ye Aktarılır)</strong></li>
@@ -559,19 +559,19 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                 </div>
 
                 {/* Local PC Status */}
-                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 space-y-3">
+                <div className="bg-ink/50 border border-line-2 rounded-xl p-4 space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-slate-200 flex items-center gap-2">
-                      <HardDrive className="w-4 h-4 text-indigo-400" />
+                    <span className="text-xs font-bold text-ink-3 flex items-center gap-2">
+                      <HardDrive className="w-4 h-4 text-accent" />
                       Yerel PC Sunucusu & Veritabanı
                     </span>
-                    <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full border ${
-                      isPcOnline ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : 'bg-slate-700 text-slate-400 border-slate-600'
+                    <span className={`text-2xs font-bold px-2 py-0.5 rounded-full border ${
+                      isPcOnline ? 'bg-ok/20 text-ok border-ok/30' : 'bg-ink-2 text-ink-3 border-line-2'
                     }`}>
                       {isPcOnline ? 'Port 3000 Aktif' : 'Arka Plan Servisi Bekleniyor'}
                     </span>
                   </div>
-                  <ul className="text-xs text-slate-300 space-y-1.5">
+                  <ul className="text-xs text-ink-3 space-y-1.5">
                     <li>• Sunucu Motoru: <strong>Node.js Express + TSX</strong></li>
                     <li>• Yerel Depolama: <code>data/ (pastQuestions, lecture_notes)</code></li>
                     <li>• Yanıt Süresi: <strong>&lt; 5 ms (Yerel Diskten Anlık Okuma)</strong></li>
@@ -581,12 +581,12 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
               </div>
 
               {/* Tunnel / Remote Access Config for GitHub Pages */}
-              <div className="bg-slate-800/40 border border-slate-700 rounded-xl p-4 space-y-3">
+              <div className="bg-ink/40 border border-line-2 rounded-xl p-4 space-y-3">
                 <h4 className="text-xs font-bold text-white flex items-center gap-2">
-                  <Globe className="w-4 h-4 text-teal-400" />
+                  <Globe className="w-4 h-4 text-ok" />
                   <span>GitHub Pages Üzerinden Yerel Bilgisayara Bağlantı (Tünel / API URL):</span>
                 </h4>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-ink-3">
                   GitHub Pages (HTTPS) üzerinden yerel bilgisayarınıza erişmek için Cloudflare Tunnel veya LocalTunnel kullanabilirsiniz. Tünel adresinizi buraya girdiğinizde site doğrudan bilgisayarınızla konuşur:
                 </p>
 
@@ -596,17 +596,17 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                     value={customTunnelUrl}
                     onChange={(e) => setCustomTunnelUrl(e.target.value)}
                     placeholder="Örn: https://medsoru-pc.trycloudflare.com veya http://localhost:3000"
-                    className="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-teal-500"
+                    className="flex-1 bg-ink border border-line-2 rounded-xl px-3 py-2 text-xs text-ink-3 focus:outline-ok"
                   />
                   <button
                     onClick={handleSaveTunnelUrl}
                     disabled={isSavingTunnelUrl}
-                    className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs px-4 py-2 rounded-xl transition-colors cursor-pointer shrink-0"
+                    className="bg-accent hover:bg-accent text-white font-bold text-xs px-4 py-2 rounded-xl transition-colors cursor-pointer shrink-0"
                   >
                     {isSavingTunnelUrl ? 'Kaydediliyor...' : 'Kaydet'}
                   </button>
                 </div>
-                <span className="text-[11px] text-slate-500 block">
+                <span className="text-2xs text-ink-3 block">
                   İpucu: Bilgisayarınızda terminal açıp <code>npx localtunnel --port 3000</code> yazarak saniyeler içinde ücretsiz HTTPS bağlantısı oluşturabilirsiniz.
                 </span>
               </div>
@@ -617,26 +617,26 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
           {/* TAB 4: LIVE LOGS */}
           {activeTab === 'logs' && (
             <div className="space-y-3">
-              <div className="flex items-center justify-between text-xs text-slate-400">
+              <div className="flex items-center justify-between text-xs text-ink-3">
                 <span className="font-semibold flex items-center gap-1.5">
-                  <Terminal className="w-4 h-4 text-emerald-400" />
+                  <Terminal className="w-4 h-4 text-ok" />
                   Canlı Subagent ve Senkronizasyon Akışı
                 </span>
                 <span>{logs.length} olay kaydedildi</span>
               </div>
 
-              <div className="bg-slate-950 font-mono text-xs rounded-xl p-4 border border-slate-800 max-h-72 overflow-y-auto space-y-2">
+              <div className="bg-ink font-mono text-xs rounded-xl p-4 border border-line-2 max-h-72 overflow-y-auto space-y-2">
                 {logs.map((log) => (
                   <div key={log.id} className="flex items-start gap-2 leading-relaxed">
-                    <span className="text-slate-500 shrink-0">[{log.time}]</span>
-                    <span className={`font-bold px-1.5 py-0.2 rounded text-[11px] shrink-0 ${
-                      log.type === 'success' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' :
-                      log.type === 'warn' ? 'bg-amber-950 text-amber-400 border border-amber-800' :
-                      'bg-slate-800 text-slate-300'
+                    <span className="text-ink-3 shrink-0">[{log.time}]</span>
+                    <span className={`font-bold px-1.5 py-0.2 rounded text-2xs shrink-0 ${
+                      log.type === 'success' ? 'bg-ok text-ok border border-ok' :
+                      log.type === 'warn' ? 'bg-warn text-warn border border-warn' :
+                      'bg-ink text-ink-3'
                     }`}>
                       {log.tag}
                     </span>
-                    <span className="text-slate-300">{log.message}</span>
+                    <span className="text-ink-3">{log.message}</span>
                   </div>
                 ))}
               </div>
@@ -646,15 +646,15 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="p-4 bg-slate-950 border-t border-slate-800 flex items-center justify-between gap-3 shrink-0 text-xs">
-          <div className="flex items-center gap-2 text-slate-400">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+        <div className="p-4 bg-ink border-t border-line-2 flex items-center justify-between gap-3 shrink-0 text-xs">
+          <div className="flex items-center gap-2 text-ink-3">
+            <span className="w-2 h-2 rounded-full bg-ok animate-pulse" />
             <span>Bulut Köprüsü: <strong>system_status/worker_heartbeat</strong> dinleniyor</span>
           </div>
 
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-xl transition-colors cursor-pointer"
+            className="px-4 py-2 bg-ink hover:bg-ink-2 text-ink-3 font-semibold rounded-xl transition-colors cursor-pointer"
           >
             Kapat
           </button>

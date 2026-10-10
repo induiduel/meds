@@ -82,13 +82,13 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
             {playing ? <Headphones className="w-8 h-8" /> : <Music className="w-8 h-8" />}
           </span>
           <div className="min-w-0 flex-1">
-            <p className="m-0 text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-3">
+            <p className="m-0 text-2xs font-semibold uppercase tracking-[0.08em] text-ink-3">
               {tracks.length === 0 ? 'Liste boş' : `Parça ${safeIndex + 1} / ${tracks.length}`}
             </p>
-            <h2 className="m-0 font-display font-bold text-[19px] sm:text-[22px] tracking-[-0.02em] text-ink truncate">
+            <h2 className="m-0 font-display font-bold text-xl sm:text-2xl tracking-[-0.02em] text-ink truncate">
               {current?.title || 'Henüz parça eklenmedi'}
             </h2>
-            <p className="m-0 text-[13.5px] text-ink-2 truncate">{current?.artist || 'Admin seçkisi'}</p>
+            <p className="m-0 text-base text-ink-2 truncate">{current?.artist || 'Admin seçkisi'}</p>
             {playing && (
               <span className="mt-1.5 flex items-end gap-1 h-4" aria-hidden="true">
                 {[0, 1, 2, 3].map((i) => (
@@ -106,7 +106,7 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
               href={current.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="h-10 px-3 rounded-[10px] border border-line-2 text-ink font-semibold text-[13.5px] hidden sm:inline-flex items-center gap-1.5 shrink-0"
+              className="h-10 px-3 rounded-[10px] border border-line-2 text-ink font-semibold text-base hidden sm:inline-flex items-center gap-1.5 shrink-0"
             >
               YouTube'da aç
               <ExternalLink className="w-3.5 h-3.5" />
@@ -116,7 +116,7 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
 
         {/* İlerleme */}
         <div className="flex items-center gap-2.5">
-          <span className="font-mono text-[12.5px] text-ink-2 w-10 text-right shrink-0">{fmt(cur)}</span>
+          <span className="font-mono text-sm text-ink-2 w-10 text-right shrink-0">{fmt(cur)}</span>
           <input
             type="range"
             min={0}
@@ -128,7 +128,7 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
             className="flex-1 min-w-0 accent-[var(--accent)] cursor-pointer"
             disabled={!current}
           />
-          <span className="font-mono text-[12.5px] text-ink-2 w-10 shrink-0">{fmt(dur)}</span>
+          <span className="font-mono text-sm text-ink-2 w-10 shrink-0">{fmt(dur)}</span>
         </div>
         <div
           className="h-1.5 rounded-full bg-line-soft overflow-hidden -mt-2"
@@ -187,7 +187,7 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
             aria-label="Ses düzeyi"
             className="w-36 sm:w-44 accent-[var(--accent)] cursor-pointer"
           />
-          <span className="font-mono text-[12.5px] text-ink-3">%{muted ? 0 : volume}</span>
+          <span className="font-mono text-sm text-ink-3">%{muted ? 0 : volume}</span>
         </div>
 
       </section>
@@ -196,11 +196,11 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
       <section className="bg-white border border-line rounded-2xl overflow-hidden">
         <div className="flex items-center gap-2 px-4 py-3 border-b border-line-soft">
           <ListMusic className="w-4 h-4 text-ink-3 shrink-0" />
-          <h3 className="m-0 flex-1 text-[15px] font-semibold text-ink">Çalma listesi</h3>
-          <span className="text-[12.5px] text-ink-3">{tracks.length} parça</span>
+          <h3 className="m-0 flex-1 text-md font-semibold text-ink">Çalma listesi</h3>
+          <span className="text-sm text-ink-3">{tracks.length} parça</span>
         </div>
         {tracks.length === 0 ? (
-          <p className="m-0 px-4 py-8 text-center text-[14px] text-ink-3">
+          <p className="m-0 px-4 py-8 text-center text-base text-ink-3">
             Liste boş. Yönetici ilk parçayı ekleyince burada görünür.
           </p>
         ) : (
@@ -220,8 +220,8 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
                     {on && playing ? <Pause className="w-4.5 h-4.5" /> : <Play className="w-4.5 h-4.5 ml-0.5" />}
                   </button>
                   <span className="flex-1 min-w-0">
-                    <span className={`block text-[14.5px] font-semibold truncate ${on ? 'text-accent' : 'text-ink'}`}>{t.title}</span>
-                    <span className="block text-[12.5px] text-ink-3 truncate">{t.artist || 'Admin seçkisi'}</span>
+                    <span className={`block text-md font-semibold truncate ${on ? 'text-accent' : 'text-ink'}`}>{t.title}</span>
+                    <span className="block text-sm text-ink-3 truncate">{t.artist || 'Admin seçkisi'}</span>
                   </span>
                   <a
                     href={t.url}
@@ -237,7 +237,7 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
                       type="button"
                       onClick={() => removeTrack(t.id)}
                       aria-label={`${t.title} parçasını sil`}
-                      className="w-9 h-9 rounded-lg flex items-center justify-center text-ink-3 hover:text-red-600 hover:bg-red-50 cursor-pointer shrink-0"
+                      className="w-9 h-9 rounded-lg flex items-center justify-center text-ink-3 hover:text-bad-text hover:bg-bad-soft cursor-pointer shrink-0"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>
@@ -252,48 +252,48 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
       {/* Yönetici ekleme */}
       {isAdmin ? (
         <section className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3">
-          <h3 className="m-0 text-[15px] font-semibold text-ink flex items-center gap-2">
+          <h3 className="m-0 text-md font-semibold text-ink flex items-center gap-2">
             <Plus className="w-4 h-4" />
             Yeni parça ekle (yönetici)
           </h3>
           <div className="grid sm:grid-cols-[1fr_2fr_auto] gap-2">
             <label className="flex flex-col gap-1 min-w-0">
-              <span className="text-[12.5px] font-medium text-ink-2">Parça adı</span>
+              <span className="text-sm font-medium text-ink-2">Parça adı</span>
               <input
                 value={formTitle}
                 onChange={(e) => setFormTitle(e.target.value)}
                 placeholder="Örn. Ahu Figan Dilber (Trap)"
-                className="h-11 rounded-xl bg-canvas border border-line px-3 text-[14px] text-ink outline-none focus:border-accent"
+                className="h-11 rounded-xl bg-canvas border border-line px-3 text-base text-ink outline-none focus:border-accent"
               />
             </label>
             <label className="flex flex-col gap-1 min-w-0">
-              <span className="text-[12.5px] font-medium text-ink-2">YouTube / ses bağlantısı</span>
+              <span className="text-sm font-medium text-ink-2">YouTube / ses bağlantısı</span>
               <input
                 value={formUrl}
                 onChange={(e) => setFormUrl(e.target.value)}
                 placeholder="https://youtu.be/…  ya da  https://…/parca.mp3"
                 inputMode="url"
-                className="h-11 rounded-xl bg-canvas border border-line px-3 text-[14px] text-ink outline-none focus:border-accent"
+                className="h-11 rounded-xl bg-canvas border border-line px-3 text-base text-ink outline-none focus:border-accent"
               />
             </label>
             <span className="flex items-end">
               <button
                 type="button"
                 onClick={addTrack}
-                className="h-11 px-5 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-[14.5px] cursor-pointer whitespace-nowrap"
+                className="h-11 px-5 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-md cursor-pointer whitespace-nowrap"
               >
                 Ekle
               </button>
             </span>
           </div>
-          {formError && <p role="alert" className="m-0 text-[13.5px] text-red-600">{formError}</p>}
-          <p className="m-0 text-[13px] text-ink-2 leading-relaxed flex gap-1.5">
+          {formError && <p role="alert" className="m-0 text-base text-bad-text">{formError}</p>}
+          <p className="m-0 text-sm text-ink-2 leading-relaxed flex gap-1.5">
             <Info className="w-4 h-4 shrink-0 mt-0.5 text-ink-3" />
             <span>Yerleştirme (embed / iframe) koduna gerek yok — normal YouTube paylaşım linkini yapıştırman yeterli, uygulama otomatik çözer (youtu.be, youtube.com/watch, /embed/, /shorts, liste parametresi dahil). Doğrudan .mp3 bağlantıları da çalınır.</span>
           </p>
         </section>
       ) : (
-        <p className="m-0 text-[13px] text-ink-3 leading-relaxed">
+        <p className="m-0 text-sm text-ink-3 leading-relaxed">
           Yeni parça önerin varsa yöneticiye YouTube bağlantısını göndermen yeterli — yerleştirme kodu gerekmez.
         </p>
       )}
