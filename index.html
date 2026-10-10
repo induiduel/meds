@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
+    <title>MeDSor · Tıp Kurul Soru Havuzu</title>
+    <meta name="description" content="Tıp fakültesi kurul sınavları için kolektif soru hatırlama, şık tamamlama ve yapay zeka ile %100 doğrulukta soru rekonstrüksiyon platformu." />
+    <link rel="canonical" href="https://nofrostlife.com.tr" />
+    <link rel="icon" type="image/x-icon" href="/meds/favicon.ico" />
+    <link rel="apple-touch-icon" href="/meds/apple-touch-icon.png" />
+    <link rel="manifest" href="/meds/manifest.json" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MeDSor" />
+    <meta property="og:title" content="MeDSor · Tıp Kurul Soru Havuzu" />
+    <meta property="og:description" content="Tıp fakültesi kurul sınavları için kolektif soru hatırlama, şık tamamlama ve yapay zeka ile %100 doğrulukta soru rekonstrüksiyon platformu." />
+    <meta property="og:url" content="https://nofrostlife.com.tr" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <script>
+      // Sürüm güncellemesi sonrası eski chunk önbellek hatasını otomatik yenile
+      window.addEventListener('vite:preloadError', function(event) {
+        if (!navigator.onLine) {
+          event.preventDefault();
+          return;
+        }
+        var lastReload = sessionStorage.getItem('medsoru_chunk_reload');
+        if (!lastReload || (Date.now() - Number(lastReload) > 8000)) {
+          sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));
+          window.location.reload();
+        }
+      });
+      window.addEventListener('unhandledrejection', function(event) {
+        var msg = event.reason ? (event.reason.message || String(event.reason)) : '';
+        if (
+          msg.indexOf('dynamically imported module') !== -1 ||
+          msg.indexOf('Failed to fetch') !== -1 ||
+          msg.indexOf("reading 'default'") !== -1
+        ) {
+          if (!navigator.onLine) {
+            // Çevrimdışıyken sayfayı yenileyip tarayıcının çevrimdışı hata sayfasına düşmesini engelle
+            return;
+          }
+          var lastReload = sessionStorage.getItem('medsoru_chunk_reload');
+          if (!lastReload || (Date.now() - Number(lastReload) > 8000)) {
+            sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));
+            window.location.reload();
+          }
+          return;
+        }
+        if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('vite') !== -1) {
+          event.preventDefault();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        var msg = event.message || '';
+        if (msg.indexOf('WebSocket') !== -1) {
+          event.preventDefault();
+        }
+        if (
+          msg.indexOf('dynamically imported module') !== -1 ||
+          msg.indexOf("reading 'default'") !== -1
+        ) {
+          if (!navigator.onLine) {
+            return;
+          }
+          var lastReload = sessionStorage.getItem('medsoru_chunk_reload');
+          if (!lastReload || (Date.now() - Number(lastReload) > 8000)) {
+            sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));
+            window.location.reload();
+          }
+        }
+      });
+    </script>
+    <script type="module" crossorigin src="/meds/assets/entry-index-vSzkJNhn.js"></script>
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-rolldown-runtime-hePW80VL.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-vendor-lucide-nSnvI6En.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-vendor-react-BkEF4FdA.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-router-B7HBwM9X.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-vendor-firebase-CQMtKPkq.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-auth-DynbbNqd.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-vendor-supabase-1GnJfc5r.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-pastQuestionsCache-B482zwBS.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-preload-helper-DgA0cc8d.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-vendor-genai-lVPqtlLx.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-api-DLUmrnV4.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-searchText-BPd7oX71.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-questionFocus-C0e4lBSv.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-curriculumData-BetONa41.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-AiQuotaAlertModal-CxVlW3vd.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-AiQuestionOptimizerModal-MqFIj_Hr.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-medical_encyclopedia-BEPHRJhV.js">
+    <link rel="modulepreload" crossorigin href="/meds/assets/chunk-glossary-Cx9oMKJU.js">
+    <link rel="stylesheet" crossorigin href="/meds/assets/asset-index-D_BTCFTs.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
