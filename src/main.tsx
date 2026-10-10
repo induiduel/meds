@@ -5,9 +5,17 @@ import './index.css';
 import { installToastBridge } from './components/ui/Toast';
 import { applyTheme, readTheme } from './utils/theme';
 import { applyUiVersion } from './utils/uiVersion';
+import { pwaService } from './services/pwaService';
+import { offlineDatabaseService } from './services/offlineDatabaseService';
 
 applyTheme(readTheme());
 applyUiVersion();
+
+// PWA & Çevrimdışı Servis Başlatıcı
+if (typeof window !== 'undefined') {
+  pwaService.initServiceWorker().catch(() => {});
+  offlineDatabaseService.loadStats().catch(() => {});
+}
 
 // Klavye açılıp kapanırken görsel alanı izle: katmanlar --vvh ile kısalır,
 // alt menü ve FAB klavye açıkken gizlenir; tasarım sıçramaz.
@@ -34,6 +42,10 @@ installToastBridge();
 
 // Auto reload on stale Vite chunk after a new deployment
 window.addEventListener('vite:preloadError', (event) => {
+  if (!navigator.onLine) {
+    event.preventDefault();
+    return;
+  }
   const key = 'medsoru_last_chunk_reload';
   const now = Date.now();
   const last = Number(sessionStorage.getItem(key) || 0);
@@ -64,6 +76,7 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('[RootErrorBoundary]:', error, errorInfo);
+    if (!navigator.onLine) return;
     const msg = error?.message || '';
     if (/Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg)) {
       const key = 'medsoru_last_chunk_reload';

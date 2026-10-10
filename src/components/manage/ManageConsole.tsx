@@ -155,6 +155,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   const [busyAction, setBusyAction] = useState<string | null>(null);
   const [focusReportId, setFocusReportId] = useState('');
   const [editingDraft, setEditingDraft] = useState<QuestionItem | null>(null);
+  const [dataJump, setDataJump] = useState<{ id: string; dsId: 'questions' | 'past' } | null>(null);
 
   useEffect(() => {
     consoleLogBuffer.install();
@@ -373,6 +374,11 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                 onEditDraft={setEditingDraft}
                 onPublishDraft={(d) => void handlePublishDraft(d)}
                 onDeleteDraft={(d) => void handleDeleteDraft(d)}
+                onNavigateToData={(qId, ds) => {
+                  const resolvedDs = ds || (qId.startsWith('past-') ? 'past' : 'questions');
+                  setDataJump({ id: qId, dsId: resolvedDs });
+                  setSection('data');
+                }}
               />
             )}
 
@@ -394,7 +400,17 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               />
             )}
 
-            {section === 'data' && <ManageDataSection adminEmail={adminEmail} questions={questions} committees={committees} onRefreshData={onRefreshData} />}
+            {section === 'data' && (
+              <ManageDataSection
+                adminEmail={adminEmail}
+                questions={questions}
+                committees={committees}
+                onRefreshData={onRefreshData}
+                initialFocusId={dataJump?.id}
+                initialDsId={dataJump?.dsId}
+                onClearFocus={() => setDataJump(null)}
+              />
+            )}
             {section === 'phases' && <ManagePhasesSection adminEmail={adminEmail} />}
             {section === 'merges' && <ManageMergesSection adminEmail={adminEmail} />}
 

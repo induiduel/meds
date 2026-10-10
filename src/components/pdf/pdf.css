@@ -1,0 +1,158 @@
+/* PDF Stüdyosu: belgeye özgü bloklar. Renk, yazı tipi ve köşeler uygulamanın token'larından gelir;
+   soru ve ders kartları ekrandaki cx-* / ls-* sınıflarıyla çizilir, burada yalnız sayfa düzeni var. */
+
+/* ---- Kapak ---- */
+.pd-cover { display: flex; flex-direction: column; box-sizing: border-box; padding: 22mm 18mm 18mm; background: var(--color-white); position: relative; overflow: hidden; }
+.pd-cover::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 9mm; background: var(--color-accent); }
+.pd-cover-brand { display: flex; align-items: center; gap: 10px; margin-top: 6mm; font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -.01em; color: var(--color-ink); }
+.pd-cover-brand i { width: 30px; height: 30px; border-radius: 9px; background: var(--color-accent); display: inline-grid; place-items: center; color: #fff; font-style: normal; font-size: 15px; }
+.pd-cover-kicker { margin: auto 0 10px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--color-accent); }
+.pd-cover h1 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 40px; line-height: 1.08; letter-spacing: -.03em; color: var(--color-ink); text-wrap: balance; }
+.pd-cover-sub { margin: 14px 0 0; font-size: 16px; line-height: 1.5; color: var(--color-ink-2); max-width: 60ch; }
+.pd-cover-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.pd-cover-stat { display: flex; flex-direction: column; gap: 2px; min-width: 104px; padding: 12px 14px; border-radius: 14px; background: var(--color-field); }
+.pd-cover-stat b { font-family: var(--font-display); font-size: 24px; font-weight: 700; letter-spacing: -.02em; color: var(--color-ink); font-variant-numeric: tabular-nums; }
+.pd-cover-stat span { font-size: 12px; font-weight: 600; color: var(--color-ink-3); }
+.pd-cover-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.pd-cover-form { display: grid; grid-template-columns: 1.6fr 1fr; gap: 14px 20px; margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--color-line); }
+.pd-cover-form div { display: flex; flex-direction: column; gap: 22px; font-size: 11px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
+.pd-cover-form div::after { content: ""; border-bottom: 1.5px solid var(--color-line-2); }
+.pd-cover-foot { margin-top: 26px; display: flex; justify-content: space-between; gap: 12px; font-size: 12px; color: var(--color-ink-3); }
+
+/* ---- Başlık şeridi (kapaksız belgede ilk sayfa) ---- */
+.pd-masthead { display: flex; align-items: flex-end; gap: 16px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--color-ink); }
+.pd-masthead h1 { margin: 0; font-family: var(--font-display); font-size: 26px; font-weight: 700; line-height: 1.15; letter-spacing: -.025em; color: var(--color-ink); text-wrap: balance; }
+.pd-masthead p { margin: 4px 0 0; font-size: 13px; color: var(--color-ink-3); }
+.pd-masthead .pd-mh-main { flex: 1; min-width: 0; }
+.pd-masthead .pd-mh-side { text-align: right; font-family: var(--font-mono); font-size: 12px; color: var(--color-ink-3); line-height: 1.6; white-space: nowrap; }
+
+/* ---- Soru listesi ---- */
+.pd-qlist > .cx-q, .pd-qlist > .pd-group { margin: 0 0 10px; }
+.pd-qlist.is-two { column-count: 2; column-gap: 14px; }
+.pd-qlist.is-two > .pd-group { column-span: all; }
+.pd-qlist .cx-q { break-inside: avoid; padding-bottom: 14px; box-shadow: none; }
+.pd-qlist.is-flow .cx-q { break-inside: auto; }
+.pd-qlist .cx-q .ms-stem { font-size: 15px; }
+.pd-qlist .cx-opt { padding-right: 0; }
+.pd-qlist.is-two .cx-opt { font-size: 13.5px; padding: 7px 0; gap: 10px; }
+.pd-qlist.is-two .cx-bubble { width: 24px; height: 24px; }
+.pd-qlist.is-compact .cx-q { gap: 8px; padding: 12px 14px 12px; border-radius: 12px; }
+.pd-qlist.is-compact .cx-opt { padding-block: 5px; }
+.pd-group { display: flex; align-items: baseline; gap: 10px; break-after: avoid; padding: 6px 2px 4px; font-family: var(--font-display); font-size: 17px; font-weight: 700; letter-spacing: -.01em; color: var(--color-ink); border-bottom: 1px solid var(--color-line); }
+.pd-group span { font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--color-ink-3); letter-spacing: 0; }
+.pd-group.is-break { break-before: page; }
+.pd-diff { margin-left: auto; }
+
+/* Şık açıklaması şık satırının altında (Öğren'deki açık şık paneliyle aynı dil) */
+.pd-why { list-style: none; margin: -2px 0 8px 38px; padding: 7px 11px; border-radius: 9px; background: var(--color-field); font-size: 13px; line-height: 1.55; color: var(--color-ink-2); border-left: 3px solid var(--color-bad); }
+.pd-why.is-ok { background: var(--color-ok-soft); color: var(--color-ink); border-left-color: var(--color-ok); }
+.pd-why .ls-opt-verdict { color: var(--color-bad); }
+.pd-why.is-ok .ls-opt-verdict { color: var(--color-ok); }
+.cx-opt-li:has(+ .pd-why), .cx-opt-li.has-why { border-bottom: 0; }
+.cx-opts > .pd-why + .cx-opt-li { border-top: 1px solid var(--color-line-soft); }
+.pd-qblock { display: flex; flex-direction: column; gap: 8px; }
+.pd-qblock-h { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
+.pd-qblock-h svg { width: 14px; height: 14px; color: var(--color-accent); }
+.pd-refs { margin: 0; padding: 0 0 0 16px; font-size: 12.5px; line-height: 1.5; color: var(--color-ink-3); }
+.pd-answer-line { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 650; color: var(--color-ok); }
+.pd-answer-line .cx-bubble { background: var(--color-ok); border-color: var(--color-ok); color: #fff; width: 22px; height: 22px; margin: 0; font-size: 11px; }
+.pd-write { display: flex; flex-direction: column; gap: 22px; padding-top: 8px; }
+.pd-write i { display: block; border-bottom: 1px dashed var(--color-line-2); }
+
+/* ---- Çözümler (sonda) ---- */
+.pd-sol { break-inside: avoid; display: flex; flex-direction: column; gap: 8px; padding: 12px 0 14px; border-bottom: 1px solid var(--color-line-soft); }
+.pd-sol-h { display: flex; align-items: center; gap: 10px; }
+.pd-sol-h .cx-q-no { font-size: 12px; }
+.pd-sol-h b { font-size: 13.5px; color: var(--color-ink); }
+.pd-sol-h small { margin-left: auto; font-size: 12px; color: var(--color-ink-3); }
+
+/* ---- Cevap anahtarı ---- */
+.pd-section { break-before: page; }
+.pd-section-h { display: flex; align-items: baseline; gap: 10px; margin: 0 0 14px; padding-bottom: 10px; border-bottom: 2px solid var(--color-ink); font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -.02em; color: var(--color-ink); }
+.pd-section-h span { font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: var(--color-ink-3); letter-spacing: 0; }
+.pd-key { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px; }
+.pd-key > div { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 7px 2px 8px; border-radius: 10px; background: var(--color-field); break-inside: avoid; }
+.pd-key small { font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--color-ink-3); }
+.pd-key b { width: 24px; height: 24px; border-radius: 99px; display: grid; place-items: center; background: var(--color-ok); color: #fff; font-family: var(--font-mono); font-size: 12px; }
+.pd-key b.is-none { background: var(--color-line-2); color: var(--color-ink-3); }
+
+/* ---- Optik form ---- */
+.pd-optic { column-count: 4; column-gap: 18px; }
+.pd-optic > div { display: flex; align-items: center; gap: 5px; padding: 3px 0; break-inside: avoid; }
+.pd-optic small { width: 26px; font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--color-ink-2); text-align: right; margin-right: 4px; }
+.pd-optic span { width: 18px; height: 18px; border-radius: 99px; border: 1.3px solid var(--color-line-2); display: grid; place-items: center; font-family: var(--font-mono); font-size: 9px; font-weight: 700; color: var(--color-ink-3); }
+
+/* ---- Öğren ---- */
+.pd-step { display: flex; flex-direction: column; gap: 18px; padding-bottom: 22px; margin-bottom: 22px; border-bottom: 1px solid var(--color-line); }
+.pd-step:last-child { border-bottom: 0; }
+.pd-step.is-page { break-before: page; border-bottom: 0; margin-bottom: 0; }
+.pd-step.is-page:first-of-type { break-before: auto; }
+.pd-step .ls-title { font-size: 26px; }
+.pd-step .ls-prose { max-width: none; }
+.pd-step .ls-table, .pd-step .ls-ix, .pd-step .ls-keys li, .pd-step .ls-note, .pd-step .ls-metrics > div { break-inside: avoid; }
+.pd-step .ls-head { break-after: avoid; }
+.pd-sec-title { break-before: page; display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; margin-bottom: 22px; border-radius: 16px; background: var(--color-ink); color: var(--color-white); }
+.pd-sec-title:first-child { break-before: auto; }
+.pd-sec-title small { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: .7; }
+.pd-sec-title b { font-family: var(--font-display); font-size: 21px; letter-spacing: -.02em; line-height: 1.2; }
+.pd-sec-title span { font-size: 12.5px; opacity: .75; }
+.pd-box { border-radius: 14px; border: 1px solid var(--color-line); padding: 4px 14px; break-inside: avoid; }
+.pd-box > .ls-sec-h { padding: 10px 0 2px; }
+.pd-terms { columns: 2; column-gap: 20px; }
+.pd-terms li { break-inside: avoid; }
+.pd-ix-grid { display: flex; flex-direction: column; gap: 10px; }
+.ls-ix .ls-optcard.is-idle { opacity: 1; }
+.pd-blank { display: inline-block; min-width: 120px; height: 1.3em; border-bottom: 2px dashed var(--color-accent); vertical-align: bottom; margin: 0 2px; }
+.pd-mask-blank { display: inline-block; width: 90%; height: 1.2em; border-bottom: 1.5px dashed var(--color-line-2); }
+.pd-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.pd-card { display: flex; flex-direction: column; border-radius: 14px; overflow: hidden; border: 1px solid var(--color-line); break-inside: avoid; }
+.pd-card > div { display: flex; flex-direction: column; gap: 4px; padding: 11px 13px; }
+.pd-card small { font-size: 10.5px; font-weight: 650; letter-spacing: .05em; text-transform: uppercase; opacity: .75; }
+.pd-card .q { font-size: 14px; font-weight: 600; line-height: 1.45; }
+.pd-card .is-front { background: var(--color-field); color: var(--color-ink); }
+.pd-card .is-back { background: var(--color-accent); color: #fff; }
+.pd-card .is-back .q { font-weight: 500; }
+.pd-card .is-blank { background: var(--color-white); min-height: 46px; }
+.pd-lines { display: flex; flex-direction: column; gap: 20px; padding: 10px 0 4px; }
+.pd-lines i { display: block; border-bottom: 1px dashed var(--color-line-2); }
+.pd-ans { break-inside: avoid; display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--color-line-soft); font-size: 13px; line-height: 1.5; color: var(--color-ink-2); }
+.pd-ans > small { font-family: var(--font-mono); font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); padding-top: 2px; }
+.pd-ans b { color: var(--color-ink); }
+.pd-ans .ls-tag { margin-right: 6px; }
+
+/* ---- İçindekiler ---- */
+.pd-toc { list-style: none; margin: 0 0 8px; padding: 0; columns: 2; column-gap: 26px; }
+.pd-toc li { display: flex; align-items: baseline; gap: 8px; padding: 5px 0; border-bottom: 1px dotted var(--color-line-2); font-size: 13px; color: var(--color-ink-2); break-inside: avoid; }
+.pd-toc li small { font-family: var(--font-mono); font-size: 11.5px; color: var(--color-ink-3); min-width: 26px; }
+.pd-toc li span { flex: 1; min-width: 0; }
+
+/* ---- Ders özeti ---- */
+.pd-sum { break-before: page; display: flex; flex-direction: column; gap: 18px; }
+.pd-sum:first-child { break-before: auto; }
+.pd-sum .ls-prose { max-width: none; }
+.pd-sum .ls-prose h4 { break-after: avoid; font-size: 18px; padding-bottom: 6px; border-bottom: 1px solid var(--color-line); }
+.pd-sum .ls-table, .pd-sum .ls-note { break-inside: avoid; }
+
+/* İlk bölüm/özet başlık şeridinin ya da içindekilerin hemen ardından gelirse yeni sayfaya geçmez */
+.pd-masthead + .pd-sec-title, .pd-masthead + .pd-box + .pd-sec-title, .pd-cover + .pd-sec-title,
+.pd-masthead + .pd-sum, .pd-cover + .pd-sum, .pd-cover + .pd-box + .pd-sum, .pd-masthead + .pd-box + .pd-sum { break-before: auto; }
+/* Ara başlıklar sayfa sonunda yalnız kalmaz */
+.ls-practice > .ls-sec-h, .pd-box > .ls-sec-h, .pd-section-h, .pd-sec-title { break-after: avoid; }
+.ls-ix-head, .ls-ix-q { break-after: avoid; }
+.ls-chain .t { flex: 1; }
+.ls-chain .pd-mask-blank { display: block; width: 100%; min-width: 220px; height: 1.25em; margin-top: 2px; }
+
+/* ---- Her soru ayrı sayfada ---- */
+.pd-qlist.is-page > .cx-q { break-before: page; break-inside: auto; margin: 0; }
+.pd-qlist.is-page > .cx-q:first-child, .pd-qlist.is-page > .pd-group + .cx-q { break-before: auto; }
+.pd-qlist.is-page > .pd-group { margin-bottom: 14px; }
+.pd-qlist.is-page > .pd-group:not(:first-child) { break-before: page; }
+.pd-qlist.is-page .cx-q { gap: 14px; padding: 20px 22px 18px; }
+.pd-qlist.is-page .cx-q .ms-stem { font-size: 16.5px; line-height: 1.65; }
+.pd-qlist.is-page .cx-opt { font-size: 15px; padding-block: 11px; }
+.pd-sol.is-page + .pd-sol.is-page { break-before: page; }
+.pd-sol.is-page { border-bottom: 0; }
+@media screen {
+  .pd-qlist.is-page > .cx-q + .cx-q, .pd-qlist.is-page > .pd-group:not(:first-child), .pd-sol.is-page + .pd-sol.is-page { margin-top: 26px; position: relative; }
+  .pd-qlist.is-page > .cx-q + .cx-q::before, .pd-sol.is-page + .pd-sol.is-page::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; border-top: 2px dashed #D5DBE6; }
+}

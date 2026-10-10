@@ -290,6 +290,7 @@ class PastQuestionsCacheService {
     for (const id of ids) {
       this.memoryMap.delete(id);
     }
+    this.currentStatus.totalCached = this.memoryMap.size;
 
     const db = await this.initDb();
     if (db) {
@@ -451,12 +452,23 @@ class PastQuestionsCacheService {
     totalCount: number;
   }> {
     if (this.syncInProgress) {
-      return {
-        success: true,
-        updatedCount: 0,
-        isUpToDate: this.currentStatus.isUpToDate,
-        totalCount: this.memoryMap.size,
-      };
+      if (options.forceFull) {
+        let waitCount = 0;
+        while (this.syncInProgress && waitCount < 20) {
+          await new Promise((r) => setTimeout(r, 200));
+          waitCount++;
+        }
+        if (this.syncInProgress) {
+          this.syncInProgress = false;
+        }
+      } else {
+        return {
+          success: true,
+          updatedCount: 0,
+          isUpToDate: this.currentStatus.isUpToDate,
+          totalCount: this.memoryMap.size,
+        };
+      }
     }
 
     this.syncInProgress = true;
@@ -504,6 +516,11 @@ class PastQuestionsCacheService {
 
           if (res.ok) {
             const data = await res.json();
+            // Sunucuda silinmiş soruları doğrudan yerel önbellekten kaldır
+            if (Array.isArray(data.deletedIds) && data.deletedIds.length > 0) {
+              const toRemove = data.deletedIds.filter((id: string) => this.memoryMap.has(id));
+              if (toRemove.length) await this.removeQuestions(toRemove);
+            }
             // Sunucuda artık olmayan (ör. karantinaya alınan) soruları cihaz önbelleğinden kaldır
             if (Array.isArray(data.allIds) && data.allIds.length > 0) {
               const keep = new Set<string>(data.allIds.map(String));
@@ -541,6 +558,24 @@ class PastQuestionsCacheService {
                 totalCount: this.memoryMap.size,
               };
             }
+
+            // Yerel sunucu yanıt verdi, silinenler kaldırıldı; güncellenecek yeni soru yok
+            if (data.lastModified) {
+              await this.setLastSyncTime(data.lastModified, data.count || this.memoryMap.size);
+              this.currentStatus.lastSyncTime = data.lastModified;
+            }
+            this.syncInProgress = false;
+            this.currentStatus.isSyncing = false;
+            this.currentStatus.isUpToDate = true;
+            this.currentStatus.lastSyncDeltaCount = 0;
+            this.currentStatus.statusMessage = 'Cihazınız güncel.';
+            this.notifyListeners();
+            return {
+              success: true,
+              updatedCount: 0,
+              isUpToDate: true,
+              totalCount: this.memoryMap.size,
+            };
           }
         } catch {
           // Yerel sunucu yanıt vermezse doğrudan Supabase delta sorgusuna geç

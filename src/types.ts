@@ -164,6 +164,15 @@ export interface QuestionItem {
   isMerged?: boolean;
   customRedactedBy?: string;
   customRedactedAt?: string;
+  museRedactionOriginal?: {
+    stem?: string;
+    options?: any;
+    correctAnswer?: string;
+    claimedAnswer?: string;
+    savedAt?: string;
+  };
+  museRedactionNote?: string;
+  museRedactionGrounding?: Array<{ tip?: string; kural?: string; alan?: string[]; hukum?: string; zemin?: Array<{ kaynak?: string; alinti?: string; not?: string }> }>;
   customRedactionPrompt?: string;
   matchedNoteTitle?: string | null;
   matchedSlidePage?: number | null;
@@ -244,6 +253,16 @@ export interface QuestionItem {
   tibbi_aciklama?: string;
   cevap_gerekcesi?: string;
   referans_kaynaklar?: string[];
+  qualityScore?: number;
+  qualityTier?: 'altin' | 'saglam' | 'orta' | 'zayif' | 'kritik' | string;
+  qualityIssues?: string[];
+  qualityVersion?: string;
+  is_manual_entry?: boolean;
+  manuel_ekleme?: boolean;
+  similarPastQuestions?: Array<{ id: string; examYear?: string; booklet?: string; questionNumber?: number; label?: string }>;
+  appearanceCount?: number;
+  appearanceLabels?: string[];
+  examOccurrences?: Array<{ id: string; examYear?: string; booklet?: string; questionNumber?: number; label?: string }>;
   createdAt: string;
   updatedAt: string;
 }

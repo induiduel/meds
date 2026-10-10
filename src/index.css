@@ -2270,6 +2270,119 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-dots i { width: 6px; height: 6px; border-radius: 9px; background: var(--color-line-2, var(--color-line)); transition: all .25s; }
 .ls-dots i.is-on { width: 18px; background: var(--color-accent); }
 
+/* --- 1. Spot The Lie (Hata / Tuzak Avı) --- */
+.ls-stl-header { display: flex; flex-direction: column; gap: 4px; }
+.ls-stl-instruction { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--color-warn); }
+.ls-stl-instruction svg { width: 14px; height: 14px; }
+.ls-stl-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.ls-stl-item { border-radius: 12px; border: 1px solid var(--color-line-soft); background: var(--color-field); overflow: hidden; transition: all .2s var(--ease-out-soft); }
+.ls-stl-item:hover { border-color: var(--color-line); }
+.ls-stl-btn { width: 100%; display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 0; background: transparent; color: var(--color-ink); font: inherit; font-size: 14px; line-height: 1.45; text-align: left; cursor: pointer; }
+.ls-stl-badge { width: 24px; height: 24px; flex-shrink: 0; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; background: var(--color-white); font-family: var(--font-mono); font-size: 12px; font-weight: 650; color: var(--color-ink-2); transition: all .2s; }
+.ls-stl-badge svg { width: 14px; height: 14px; }
+.ls-stl-text { flex: 1; min-width: 0; }
+.ls-stl-panel { padding: 8px 12px 12px 46px; border-top: 1px solid var(--color-line-soft); font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); animation: ls-rise .2s var(--ease-out-soft); }
+.ls-stl-verdict { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 4px; }
+.ls-stl-verdict.is-trap-tag { color: var(--color-warn); }
+.ls-stl-verdict.is-fact-tag { color: var(--color-ok); }
+.ls-stl-expl { margin: 0; }
+.ls-stl-item.is-lie-card { border-color: var(--color-warn); background: color-mix(in srgb, var(--color-warn) 10%, var(--color-field)); }
+.ls-stl-item.is-lie-card .ls-stl-badge { background: var(--color-warn); color: #fff; }
+.ls-stl-item.is-wrong-pick { border-color: var(--color-bad); background: var(--color-bad-soft); }
+.ls-stl-item.is-wrong-pick .ls-stl-badge { background: var(--color-bad); color: #fff; }
+.ls-stl-item.is-safe-card .ls-stl-badge { background: var(--color-ok-soft); color: var(--color-ok); }
+
+/* --- 2. Swipe Matching (Hızlı Kart Eşleme / Kategori Kaydırma) --- */
+.ls-swipe-head { display: flex; flex-direction: column; gap: 2px; }
+.ls-swipe-arena { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.ls-swipe-targets { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.ls-swipe-target { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 99px; border: 1.5px dashed var(--color-line); background: var(--color-field); color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 650; cursor: pointer; transition: all .2s; }
+.ls-swipe-target.is-left.is-active, .ls-swipe-target.is-left:hover { border-color: var(--color-accent); background: var(--color-accent-soft); color: var(--color-accent); }
+.ls-swipe-target.is-right.is-active, .ls-swipe-target.is-right:hover { border-color: var(--color-ok); background: var(--color-ok-soft); color: var(--color-ok); }
+.ls-swipe-progress { font-family: var(--font-mono); font-size: 12px; color: var(--color-ink-3); font-weight: 600; }
+.ls-swipe-card { position: relative; border-radius: 16px; border: 1.5px solid var(--color-line); background: var(--color-white); box-shadow: var(--shadow-md); padding: 18px 16px 14px; min-height: 120px; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; cursor: grab; user-select: none; touch-action: pan-y; }
+.ls-swipe-card:active { cursor: grabbing; }
+.ls-swipe-card.is-flying-left { transform: translateX(-160%) rotate(-25deg) !important; opacity: 0; transition: transform .28s ease-in, opacity .24s !important; }
+.ls-swipe-card.is-flying-right { transform: translateX(160%) rotate(25deg) !important; opacity: 0; transition: transform .28s ease-in, opacity .24s !important; }
+.ls-swipe-card-badge { align-self: flex-start; display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--color-accent); background: var(--color-accent-soft); padding: 2px 7px; border-radius: 6px; }
+.ls-swipe-card-badge svg { width: 12px; height: 12px; }
+.ls-swipe-card-text { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.5; color: var(--color-ink); text-align: center; }
+.ls-swipe-cue { display: flex; justify-content: space-between; font-size: 11px; font-weight: 600; color: var(--color-ink-3); opacity: .7; }
+.ls-swipe-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ls-swipe-action-btn { height: 40px; border-radius: 12px; font-size: 13.5px; font-weight: 650; }
+.ls-swipe-action-btn.is-left { background: var(--color-accent-soft); color: var(--color-accent); }
+.ls-swipe-action-btn.is-left:hover { background: var(--color-accent); color: #fff; }
+.ls-swipe-action-btn.is-right { background: var(--color-ok-soft); color: var(--color-ok); }
+.ls-swipe-action-btn.is-right:hover { background: var(--color-ok); color: #fff; }
+.ls-swipe-summary { display: flex; flex-direction: column; gap: 10px; animation: ls-rise .3s var(--ease-out-soft); }
+.ls-swipe-result-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow-y: auto; }
+.ls-swipe-result-item { padding: 10px 12px; border-radius: 12px; border: 1px solid var(--color-line-soft); background: var(--color-field); display: flex; flex-direction: column; gap: 6px; }
+.ls-swipe-result-item.is-ok { border-left: 3px solid var(--color-ok); }
+.ls-swipe-result-item.is-wrong { border-left: 3px solid var(--color-bad); }
+.ls-swipe-result-head { display: flex; align-items: flex-start; gap: 8px; }
+.ls-swipe-result-icon { width: 18px; height: 18px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 99px; }
+.ls-swipe-result-item.is-ok .ls-swipe-result-icon { background: var(--color-ok-soft); color: var(--color-ok); }
+.ls-swipe-result-item.is-wrong .ls-swipe-result-icon { background: var(--color-bad-soft); color: var(--color-bad); }
+.ls-swipe-result-text { flex: 1; font-size: 13.5px; font-weight: 550; color: var(--color-ink); }
+.ls-swipe-result-expl { margin: 0; padding-left: 26px; font-size: 12.5px; line-height: 1.45; color: var(--color-ink-2); }
+
+/* --- 3. Feature Bidding (Özellik Açık Artırması / Puan Bahsi) --- */
+.ls-bidding-head { display: flex; flex-direction: column; gap: 4px; }
+.ls-bidding-score { display: inline-flex; align-items: center; gap: 5px; font-family: var(--font-mono); font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 99px; }
+.ls-bidding-score.is-pos { background: var(--color-ok-soft); color: var(--color-ok); }
+.ls-bidding-score.is-neg { background: var(--color-bad-soft); color: var(--color-bad); }
+.ls-bidding-score svg { width: 15px; height: 15px; }
+.ls-bidding-arena { display: flex; flex-direction: column; gap: 12px; }
+.ls-bidding-round-badge { align-self: flex-start; font-family: var(--font-mono); font-size: 11px; font-weight: 650; color: var(--color-ink-3); text-transform: uppercase; }
+.ls-bidding-feature-box { border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-field); padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+.ls-bidding-feature-tag { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-accent); }
+.ls-bidding-feature-text { margin: 0; font-size: 15.5px; font-weight: 600; line-height: 1.5; color: var(--color-ink); }
+.ls-bidding-controls { display: flex; flex-direction: column; gap: 12px; }
+.ls-bidding-multiplier-row { display: flex; flex-direction: column; gap: 6px; }
+.ls-bidding-mult-label { font-size: 12.5px; font-weight: 600; color: var(--color-ink-2); display: inline-flex; align-items: center; gap: 6px; }
+.ls-bidding-mult-label svg { width: 14px; height: 14px; color: var(--color-accent); }
+.ls-bidding-mult-btns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.ls-bidding-mult-btn { border-radius: 10px; border: 1.5px solid var(--color-line); background: var(--color-white); padding: 6px 8px; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; transition: all .15s; }
+.ls-bidding-mult-btn .m-val { font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: var(--color-ink); }
+.ls-bidding-mult-btn .m-desc { font-size: 10.5px; color: var(--color-ink-3); text-align: center; }
+.ls-bidding-mult-btn.is-selected { border-color: var(--color-accent); background: var(--color-accent-soft); }
+.ls-bidding-mult-btn.is-selected .m-val { color: var(--color-accent); }
+.ls-bidding-choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ls-bidding-choice-btn { height: 46px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); display: flex; align-items: center; gap: 10px; padding: 0 14px; cursor: pointer; text-align: left; font: inherit; transition: all .2s; }
+.ls-bidding-choice-btn:hover { border-color: var(--color-accent); background: var(--color-field); }
+.ls-bidding-choice-btn .k { width: 22px; height: 22px; border-radius: 6px; background: var(--color-field); color: var(--color-ink); font-family: var(--font-mono); font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+.ls-bidding-choice-btn .t { font-size: 13.5px; font-weight: 600; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ls-bidding-verdict { display: flex; flex-direction: column; gap: 8px; animation: ls-rise .25s var(--ease-out-soft); }
+.ls-bidding-summary { display: flex; flex-direction: column; gap: 10px; animation: ls-rise .3s var(--ease-out-soft); }
+.ls-bidding-res-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; max-height: 280px; overflow-y: auto; }
+.ls-bidding-res-item { border-radius: 12px; border: 1px solid var(--color-line-soft); background: var(--color-field); padding: 10px 12px; display: flex; flex-direction: column; }
+.ls-bidding-res-item.is-ok { border-left: 3px solid var(--color-ok); }
+.ls-bidding-res-item.is-bad { border-left: 3px solid var(--color-bad); }
+
+/* --- 4. Venn Grid (Teşhis Çapraz Tablosu) --- */
+.ls-vg-head { display: flex; flex-direction: column; gap: 4px; }
+.ls-vg-table { display: flex; flex-direction: column; gap: 8px; border-radius: 14px; }
+.ls-vg-row { border-radius: 12px; border: 1px solid var(--color-line-soft); background: var(--color-field); padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; transition: all .2s; }
+.ls-vg-row.is-row-ok { border-color: var(--color-ok); background: color-mix(in srgb, var(--color-ok) 6%, var(--color-field)); }
+.ls-vg-row.is-row-bad { border-color: var(--color-bad); background: color-mix(in srgb, var(--color-bad) 6%, var(--color-field)); }
+.ls-vg-crit-col { display: flex; align-items: flex-start; gap: 8px; min-width: 0; }
+.ls-vg-num { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--color-ink-3); padding-top: 1px; }
+.ls-vg-text { flex: 1; font-size: 13.5px; font-weight: 600; line-height: 1.45; color: var(--color-ink); }
+.ls-vg-expl-toggle { border: 0; background: transparent; color: var(--color-accent); font: inherit; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; cursor: pointer; padding: 2px 6px; border-radius: 6px; }
+.ls-vg-expl-toggle:hover { background: var(--color-accent-soft); }
+.ls-vg-expl-toggle svg { width: 13px; height: 13px; }
+.ls-vg-btns-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.ls-vg-btn { height: 32px; padding: 0 8px; border-radius: 8px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: all .15s; }
+.ls-vg-btn:hover:not(:disabled) { border-color: var(--color-accent); color: var(--color-ink); }
+.ls-vg-btn.is-target { border-color: var(--color-ok); background: var(--color-ok-soft); color: var(--color-ok); font-weight: 700; }
+.ls-vg-btn.is-wrong-picked { border-color: var(--color-bad); background: var(--color-bad); color: #fff; }
+.ls-vg-btn.is-correct-picked { border-color: var(--color-ok); background: var(--color-ok); color: #fff; }
+.ls-vg-btn:disabled { cursor: default; }
+.ls-vg-row-expl { padding: 8px 10px; border-radius: 8px; background: var(--color-white); font-size: 12.5px; line-height: 1.45; color: var(--color-ink-2); animation: ls-rise .2s var(--ease-out-soft); }
+.ls-vg-verdict { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 2px; }
+.ls-vg-verdict.is-ok { color: var(--color-ok); }
+.ls-vg-verdict.is-bad { color: var(--color-bad); }
+
 /* Bilgi listeleri */
 .ls-info { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .ls-info li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 2px; border-bottom: 1px solid var(--color-line-soft); font-size: 13.5px; line-height: 1.55; color: var(--color-ink-2); min-width: 0; }

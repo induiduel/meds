@@ -19,6 +19,7 @@ import {
   Target,
   Compass,
   Music,
+  Database,
 } from 'lucide-react';
 import type { AppTab } from './Header';
 import { pathFor, linkClick } from '../router';
@@ -32,6 +33,7 @@ interface MobileBottomNavProps {
   onOpenPdfModal: () => void;
   onOpenAdminPanel: () => void;
   onUploadToDrive: () => void;
+  onOpenOfflineModal?: () => void;
 }
 
 const TABS: { id: AppTab; label: string; icon: React.ElementType }[] = [
@@ -70,7 +72,7 @@ const MORE_GROUPS: { label: string; items: { id: AppTab; label: string; hint: st
 ];
 
 /** App-style tab bar for phones and tablets (below lg), with a "Daha" sheet for the remaining pages. */
-export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activeTab, setActiveTab, isAdmin, onOpenPdfModal }) => {
+export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activeTab, setActiveTab, isAdmin, onOpenPdfModal, onOpenOfflineModal }) => {
   const [sheetOpen, setSheetOpen] = useState(false);
   const moreActive = !TABS.some((t) => t.id === activeTab) && activeTab !== 'practice';
 
@@ -166,9 +168,20 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activeTab, set
                   type="button"
                   onClick={() => {
                     setSheetOpen(false);
-                    onOpenPdfModal();
+                    onOpenOfflineModal?.();
                   }}
                   className="min-h-[52px] px-4 flex items-center gap-3 text-[15px] text-ink text-left cursor-pointer"
+                >
+                  <Database className="w-5 h-5 text-accent" />
+                  Çevrimdışı Veritabanı & PWA
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSheetOpen(false);
+                    onOpenPdfModal();
+                  }}
+                  className="min-h-[52px] px-4 flex items-center gap-3 text-[15px] text-ink text-left cursor-pointer border-t border-line-soft"
                 >
                   <FileDown className="w-5 h-5 text-ink-2" />
                   PDF indir

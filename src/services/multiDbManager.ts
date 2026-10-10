@@ -4,6 +4,7 @@ import { SupabaseDbService, broadcastLiveEvent } from './supabaseDb';
 import { safeJsonFetch, getCustomApiUrl, getLocalDb, saveLocalDb } from './api';
 import { systemHealthMonitor } from './systemHealthMonitor';
 import { pastQuestionsCache } from './pastQuestionsCache';
+import { ADMIN_EMAIL } from './auth';
 
 export type DatabaseMode = 'auto' | 'supabase' | 'firebase' | 'local_pc';
 
@@ -565,7 +566,10 @@ class MultiDbManager {
           const endpoint = customUrl ? `${customUrl}/api/past-exams/${question.id}` : `/api/past-exams/${question.id}`;
           await safeJsonFetch(endpoint, {
             method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',
+              'x-admin-email': ADMIN_EMAIL,
+            },
             body: JSON.stringify(question),
           });
         } catch (e) {
@@ -666,7 +670,10 @@ class MultiDbManager {
           const endpoint = customUrl ? `${customUrl}/api/lecture-notes` : '/api/lecture-notes';
           await safeJsonFetch(endpoint, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',
+              'x-admin-email': ADMIN_EMAIL,
+            },
             body: JSON.stringify(note),
           });
         } catch (e) {
@@ -721,7 +728,10 @@ class MultiDbManager {
         try {
           const customUrl = getCustomApiUrl();
           const endpoint = customUrl ? `${customUrl}/api/lecture-notes/${id}` : `/api/lecture-notes/${id}`;
-          await safeJsonFetch(endpoint, { method: 'DELETE' });
+          await safeJsonFetch(endpoint, {
+            method: 'DELETE',
+            headers: { 'x-admin-email': ADMIN_EMAIL },
+          });
         } catch (_) {}
       })()
     );
@@ -760,7 +770,10 @@ class MultiDbManager {
             return;
           }
           const endpoint = customUrl ? `${customUrl}/api/questions/${id}` : `/api/questions/${id}`;
-          await safeJsonFetch(endpoint, { method: 'DELETE' });
+          await safeJsonFetch(endpoint, {
+            method: 'DELETE',
+            headers: { 'x-admin-email': ADMIN_EMAIL },
+          });
         } catch (_) {}
       })()
     );
@@ -792,10 +805,33 @@ class MultiDbManager {
   }
 
   /**
-   * Delete Past Question from all databases
+   * Delete Past Question from all databases (Server, Supabase, Firestore, and client Cache)
    */
   public async deletePastQuestion(id: string): Promise<void> {
+    try {
+      const { pastQuestionsCache } = await import('./pastQuestionsCache');
+      await pastQuestionsCache.removeQuestions([id]);
+    } catch (_) {}
+
     const promises: Promise<any>[] = [];
+
+    // Local / Express API
+    promises.push(
+      (async () => {
+        try {
+          const customUrl = getCustomApiUrl();
+          if (typeof window !== 'undefined' && window.location.hostname.includes('github.io') && !customUrl) {
+            return;
+          }
+          const endpoint = customUrl ? `${customUrl}/api/past-exams/${id}` : `/api/past-exams/${id}`;
+          await safeJsonFetch(endpoint, {
+            method: 'DELETE',
+            headers: { 'x-admin-email': ADMIN_EMAIL },
+          });
+        } catch (_) {}
+      })()
+    );
+
     promises.push(SupabaseDbService.deletePastQuestion(id).catch(() => {}));
     promises.push(FirestoreDbService.deleteQuestion(id).catch(() => {}));
     await Promise.allSettled(promises);

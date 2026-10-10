@@ -19,7 +19,7 @@ data/active_tunnel.txt
 .tmp.drivedownload/
 database_json/
 *.backup*
-*.bak
+*.bak*
 __pycache__/
 .tmp*
 data/nested_fix_report.json

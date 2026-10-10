@@ -271,13 +271,19 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
         </p>
       )}
 
+      <div className="flex items-center justify-center gap-3 pt-1 border-t border-line text-[11.5px] text-ink-3">
+        <a href="/sartlar" target="_blank" rel="noopener noreferrer" className="hover:text-accent underline">Kullanım Şartları</a>
+        <span>·</span>
+        <a href="/policy" target="_blank" rel="noopener noreferrer" className="hover:text-accent underline">Gizlilik Politikası</a>
+      </div>
+
       <button
         type="button"
         onClick={() => {
           setMode(mode === 'admin' ? 'login' : 'admin');
           setError(null);
         }}
-        className="self-center min-h-10 px-2 text-[12.5px] text-ink-3 hover:text-ink inline-flex items-center gap-1 cursor-pointer"
+        className="self-center min-h-8 px-2 text-[12px] text-ink-3 hover:text-ink inline-flex items-center gap-1 cursor-pointer"
       >
         {mode === 'admin' ? (<><ArrowLeft className="w-3.5 h-3.5" /> Öğrenci girişine dön</>) : 'Yönetici girişi'}
       </button>

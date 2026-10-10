@@ -6,7 +6,14 @@
     <title>MeDSor · Tıp Kurul Soru Havuzu</title>
     <meta name="description" content="Tıp fakültesi kurul sınavları için kolektif soru hatırlama, şık tamamlama ve yapay zeka ile %100 doğrulukta soru rekonstrüksiyon platformu." />
     <link rel="canonical" href="https://nofrostlife.com.tr" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MeDSor" />
     <meta property="og:title" content="MeDSor · Tıp Kurul Soru Havuzu" />
     <meta property="og:description" content="Tıp fakültesi kurul sınavları için kolektif soru hatırlama, şık tamamlama ve yapay zeka ile %100 doğrulukta soru rekonstrüksiyon platformu." />
     <meta property="og:url" content="https://nofrostlife.com.tr" />
@@ -18,7 +25,10 @@
     <script>
       // Sürüm güncellemesi sonrası eski chunk önbellek hatasını otomatik yenile
       window.addEventListener('vite:preloadError', function(event) {
-        // NOT: event.preventDefault() çağrılmamalıdır; aksi halde Vite yakalama işlevi undefined döner ve React.lazy çöker.
+        if (!navigator.onLine) {
+          event.preventDefault();
+          return;
+        }
         var lastReload = sessionStorage.getItem('medsoru_chunk_reload');
         if (!lastReload || (Date.now() - Number(lastReload) > 8000)) {
           sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));
@@ -32,6 +42,10 @@
           msg.indexOf('Failed to fetch') !== -1 ||
           msg.indexOf("reading 'default'") !== -1
         ) {
+          if (!navigator.onLine) {
+            // Çevrimdışıyken sayfayı yenileyip tarayıcının çevrimdışı hata sayfasına düşmesini engelle
+            return;
+          }
           var lastReload = sessionStorage.getItem('medsoru_chunk_reload');
           if (!lastReload || (Date.now() - Number(lastReload) > 8000)) {
             sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));
@@ -52,6 +66,9 @@
           msg.indexOf('dynamically imported module') !== -1 ||
           msg.indexOf("reading 'default'") !== -1
         ) {
+          if (!navigator.onLine) {
+            return;
+          }
           var lastReload = sessionStorage.getItem('medsoru_chunk_reload');
           if (!lastReload || (Date.now() - Number(lastReload) > 8000)) {
             sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Search, ArrowUp, ArrowDown, Columns3, Download, X, Trash2, CheckCircle2, Copy, RefreshCw, ChevronDown, Save, RotateCcw, Sparkles, AlertTriangle, FileJson, Check } from 'lucide-react';
+import { Search, ArrowUp, ArrowDown, Columns3, Download, X, Trash2, CheckCircle2, Copy, RefreshCw, ChevronDown, Save, RotateCcw, Sparkles, AlertTriangle, FileJson, Check, User, History, Calendar, FileText, ArrowRight } from 'lucide-react';
 import { Committee, QuestionItem } from '../../types';
 import { ApiService } from '../../services/api';
 import { toast } from '../ui/Toast';
@@ -40,6 +40,9 @@ interface Props {
   questions: QuestionItem[];
   committees: Committee[];
   onRefreshData: () => Promise<void>;
+  initialFocusId?: string | null;
+  initialDsId?: DatasetId;
+  onClearFocus?: () => void;
 }
 
 const STATUS_TONE: Record<string, string> = { completed: 'is-ok', gathering: 'is-warn', empty: '' };
@@ -48,7 +51,15 @@ const fmtDate = (s?: string) => (s ? new Date(s).toLocaleDateString('tr-TR', { d
 const stemOf = (q: Row) => q?.reconstruction?.stem || q?.stem || q?.rawQuestion?.stem || q?.fragments?.[0]?.text || q?.topic || '';
 const Pill: React.FC<{ cls: string; children: React.ReactNode }> = ({ cls, children }) => <span className={`ms-tag ${cls}`}>{children}</span>;
 
-export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, committees, onRefreshData }) => {
+export const ManageDataSection: React.FC<Props> = ({
+  adminEmail,
+  questions,
+  committees,
+  onRefreshData,
+  initialFocusId,
+  initialDsId,
+  onClearFocus,
+}) => {
   const committeeName = (id?: string) => {
     const known = committees.find((c) => c.id === id)?.name;
     if (known) return known.replace(/^Dönem 3\s*-\s*/i, '').split(':')[0];
@@ -76,12 +87,17 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
           { key: 'fragments', label: 'Parça', width: '60px', mono: true, value: (r) => r.fragments?.length || 0 },
           { key: 'options', label: 'Şık', width: '50px', mono: true, value: (r) => r.options?.length || 0 },
           { key: 'upvotes', label: 'Beğeni', width: '64px', mono: true, value: (r) => r.upvotes || 0 },
+          { key: 'author', label: 'Ekleyen', width: '130px', value: (r) => r.contributedByName || r.author || r.fragments?.[0]?.author || '', render: (r) => {
+            const author = r.contributedByName || r.author || r.fragments?.[0]?.author;
+            return author ? <span className="text-ink font-medium truncate max-w-[120px] inline-block">{author}</span> : <span className="text-ink-3">—</span>;
+          }},
           { key: 'updatedAt', label: 'Güncel', width: '80px', value: (r) => r.updatedAt || '', render: (r) => fmtDate(r.updatedAt) },
         ],
       },
       {
         id: 'past',
         label: 'Çıkmış sorular',
+        canDelete: true,
         load: async () => (await ApiService.getPastQuestions({ includeAmbiguous: true })) as Row[],
         idOf: (r) => String(r.id),
         defaultSort: { key: 'year', dir: -1 },
@@ -91,6 +107,10 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
           { key: 'discipline', label: 'Ders', width: '140px', value: (r) => r.discipline || '' },
           { key: 'committee', label: 'Kurul', width: '110px', value: (r) => committeeName(r.committeeId) },
           { key: 'year', label: 'Yıl', width: '90px', value: (r) => r.examYear || '' },
+          { key: 'author', label: 'Ekleyen / Kaynak', width: '130px', value: (r) => r.contributedByName || r.author || r.sourceFile || '', render: (r) => {
+            const author = r.contributedByName || r.author || r.sourceFile;
+            return author ? <span className="text-ink font-medium truncate max-w-[120px] inline-block" title={author}>{author}</span> : <span className="text-ink-3">—</span>;
+          }},
           { key: 'state', label: 'Durum', width: '100px', value: (r) => (r.isAmbiguous ? 0 : r.reconstruction ? 2 : 1), render: (r) => (r.isAmbiguous ? <Pill cls="is-warn">Eksik</Pill> : r.reconstruction ? <Pill cls="is-ok">Düzenlendi</Pill> : <Pill cls="">Ham</Pill>) },
           { key: 'answer', label: 'Cevap', width: '60px', mono: true, value: (r) => r.reconstruction?.correctAnswer || r.correctAnswer || r.claimedAnswer || '' },
         ],
@@ -147,7 +167,7 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
         id: 'summaries',
         label: 'Özetler',
         load: async () => {
-          const mod: any = await import('../../data/lectureSummariesCatalog.json');
+          const mod: any = await import('../../data/summaries_meta.json');
           const v = mod ? (mod.default || mod) : [];
           return (Array.isArray(v) ? v : Object.values(v || {})) as Row[];
         },
@@ -166,24 +186,33 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
     [questions, adminEmail, committees]
   );
 
-  const [dsId, setDsId] = useState<DatasetId>('questions');
+  const [dsId, setDsId] = useState<DatasetId>(initialDsId || 'questions');
   const ds = DATASETS.find((d) => d.id === dsId) || DATASETS[0];
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(false);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(initialFocusId ? String(initialFocusId) : '');
   const [sort, setSort] = useState(ds.defaultSort);
   const [hidden, setHidden] = useState<Record<string, boolean>>({});
   const [colMenu, setColMenu] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
-  const [openId, setOpenId] = useState<string | null>(null);
+  const [openId, setOpenId] = useState<string | null>(initialFocusId || null);
   const [limit, setLimit] = useState(100);
   const [busy, setBusy] = useState(false);
+
+  // initialFocusId veya initialDsId değiştiğinde dinamik aç
+  useEffect(() => {
+    if (initialDsId) setDsId(initialDsId);
+    if (initialFocusId) {
+      setOpenId(initialFocusId);
+      setQuery(String(initialFocusId));
+    }
+  }, [initialFocusId, initialDsId]);
 
   // Düzenleme durumu (Form & JSON)
   const [editDraft, setEditDraft] = useState<Row | null>(null);
   const [jsonText, setJsonText] = useState<string>('');
   const [jsonError, setJsonError] = useState<string | null>(null);
-  const [editTab, setEditTab] = useState<'form' | 'json'>('form');
+  const [editTab, setEditTab] = useState<'form' | 'json' | 'history'>('form');
   const [savingRow, setSavingRow] = useState(false);
   const [wizardQuestion, setWizardQuestion] = useState<QuestionItem | null>(null);
 
@@ -443,6 +472,7 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
         try {
           if (kind === 'delete') {
             if (ds.id === 'questions') await ApiService.adminDeleteQuestion(adminEmail, id);
+            else if (ds.id === 'past') await ApiService.adminDeletePastQuestion(adminEmail, id);
             else if (ds.id === 'users') await ApiService.adminDeleteUser(adminEmail, id);
           } else if (ds.id === 'questions') {
             await ApiService.adminUpdateQuestion(adminEmail, id, { status: 'completed' } as Partial<QuestionItem>);
@@ -456,8 +486,18 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
       if (ok < ids.length) toast.error('Bazı kayıtlar işlenemedi', `${ids.length - ok} kayıt değişmedi.`);
       setSelected([]);
       setOpenId(null);
-      if (ds.id === 'questions') await onRefreshData();
-      else await load();
+      if (ds.id === 'questions') {
+        await onRefreshData();
+      } else if (ds.id === 'past') {
+        try {
+          const { pastQuestionsCache } = await import('../../services/pastQuestionsCache');
+          await pastQuestionsCache.removeQuestions(ids);
+        } catch {}
+        await onRefreshData();
+        await load();
+      } else {
+        await load();
+      }
     } finally {
       setBusy(false);
     }
@@ -573,7 +613,10 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
 
       <Drawer
         open={!!openRow}
-        onClose={() => setOpenId(null)}
+        onClose={() => {
+          setOpenId(null);
+          onClearFocus?.();
+        }}
         wide
         label="Veri Düzenleme"
         title={
@@ -602,6 +645,23 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
             >
               Form Düzenleyici
             </button>
+            {(ds.id === 'questions' || ds.id === 'past') && (
+              <button
+                type="button"
+                onClick={() => setEditTab('history')}
+                className={`px-3 py-1 text-[12px] font-medium rounded-md transition-all inline-flex items-center gap-1.5 ${
+                  editTab === 'history' ? 'bg-white shadow-xs text-ink font-semibold' : 'text-ink-3 hover:text-ink'
+                }`}
+              >
+                <History className="w-3.5 h-3.5" />
+                <span>Geçmiş & Katkılar</span>
+                {Boolean((openRow?.revisions?.length || 0) + (openRow?.fragments?.length || 0)) && (
+                  <span className="px-1.5 py-0.2 rounded-full bg-accent-soft text-accent text-[10.5px] font-bold">
+                    {(openRow?.revisions?.length || 0) + (openRow?.fragments?.length || 0)}
+                  </span>
+                )}
+              </button>
+            )}
             <button
               type="button"
               onClick={() => {
@@ -722,8 +782,161 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
                   }`}
                 />
               </div>
+            ) : editTab === 'history' ? (
+              <div className="flex flex-col gap-4">
+                {/* Yazar & Ekleyen Özeti */}
+                <div className="p-3.5 rounded-xl border border-line bg-surface-2 flex flex-col gap-2">
+                  <div className="text-[12px] font-bold uppercase tracking-wider text-ink-3">Veri Kaynağı & İlk Ekleyen</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-[13px]">
+                    <div>
+                      <span className="text-ink-3 block text-[11.5px]">Ekleyen Kullanıcı:</span>
+                      <b className="text-ink font-semibold">{editDraft.contributedByName || editDraft.author || '—'}</b>
+                    </div>
+                    <div>
+                      <span className="text-ink-3 block text-[11.5px]">Öğrenci No / UID:</span>
+                      <span className="font-mono text-ink-2">{editDraft.contributedByStudentNumber || editDraft.contributedByUid || '—'}</span>
+                    </div>
+                    <div>
+                      <span className="text-ink-3 block text-[11.5px]">Eklenme Tarihi:</span>
+                      <span className="text-ink-2">{fmtDate(editDraft.createdAt || editDraft.updatedAt)}</span>
+                    </div>
+                  </div>
+                  {editDraft.sourceFile && (
+                    <div className="text-[12px] pt-1 border-t border-line-soft text-ink-3">
+                      Kaynak Dosya / OCR: <span className="font-mono text-ink-2">{editDraft.sourceFile}</span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Revizyonlar / Düzenleme Geçmişi */}
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-[13.5px] font-bold text-ink flex items-center gap-2">
+                      <History className="w-4 h-4 text-accent" />
+                      <span>Düzenleme Geçmişi (Revizyonlar)</span>
+                    </h3>
+                    <span className="text-[12px] text-ink-3">{(editDraft.revisions || []).length} versiyon</span>
+                  </div>
+
+                  {(!editDraft.revisions || editDraft.revisions.length === 0) ? (
+                    <div className="p-4 text-center border border-dashed border-line rounded-xl text-ink-3 text-[12.5px]">
+                      Bu veri için kaydedilmiş geçmiş düzenleme revizyonu bulunmuyor.
+                    </div>
+                  ) : (
+                    <div className="flex flex-col gap-2.5">
+                      {[...editDraft.revisions].reverse().map((rev: any, idx: number) => {
+                        const revNum = rev.version || (editDraft.revisions.length - idx);
+                        const isLatest = idx === 0;
+                        return (
+                          <div
+                            key={rev.id || idx}
+                            className={`p-3.5 rounded-xl border transition-all ${
+                              isLatest ? 'bg-accent-soft/30 border-accent/40 shadow-2xs' : 'bg-surface-1 border-line'
+                            }`}
+                          >
+                            <div className="flex items-center justify-between pb-2 border-b border-line-soft">
+                              <div className="flex items-center gap-2">
+                                <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${isLatest ? 'bg-accent text-white' : 'bg-surface-2 text-ink-2'}`}>
+                                  v{revNum} {isLatest && '(Son)'}
+                                </span>
+                                <span className="font-semibold text-[13px] text-ink">
+                                  {rev.changeSummary || 'Düzenleme yapıldı'}
+                                </span>
+                              </div>
+                              <span className="text-[11.5px] text-ink-3">{fmtDate(rev.editedAt)}</span>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 text-[12px] text-ink-2">
+                              <div>
+                                <span className="text-ink-3">Düzenleyen:</span>{' '}
+                                <b className="text-ink font-semibold">{rev.editorName || 'Anonim'}</b>
+                                {rev.editorStudentNumber && (
+                                  <span className="font-mono text-ink-3 ml-1.5">({rev.editorStudentNumber})</span>
+                                )}
+                              </div>
+                              {rev.claimedAnswer && (
+                                <div>
+                                  <span className="text-ink-3">Cevap Önerisi:</span>{' '}
+                                  <b className="font-bold text-accent">{rev.claimedAnswer}</b>
+                                </div>
+                              )}
+                            </div>
+
+                            {rev.stem && rev.stem !== editDraft.reconstruction?.stem && (
+                              <div className="mt-2 p-2 rounded-lg bg-surface-2 text-[12px] text-ink-2 border border-line-soft max-h-24 overflow-y-auto">
+                                <div className="text-[11px] font-medium text-ink-3 mb-0.5">Bu versiyondaki soru kökü:</div>
+                                {rev.stem}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+
+                {/* Hafıza Parçaları & Katkı Sağlayanlar */}
+                <div className="flex flex-col gap-2 pt-2">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-[13.5px] font-bold text-ink flex items-center gap-2">
+                      <FileText className="w-4 h-4 text-emerald-600" />
+                      <span>Kullanıcı Hafıza Parçaları (Fragments)</span>
+                    </h3>
+                    <span className="text-[12px] text-ink-3">{(editDraft.fragments || []).length} parça</span>
+                  </div>
+
+                  {(!editDraft.fragments || editDraft.fragments.length === 0) ? (
+                    <div className="p-3 text-center border border-dashed border-line rounded-xl text-ink-3 text-[12.5px]">
+                      Kullanıcılar tarafından eklenmiş hafıza parçası yok.
+                    </div>
+                  ) : (
+                    <div className="flex flex-col gap-2">
+                      {editDraft.fragments.map((frag: any, fIdx: number) => (
+                        <div key={frag.id || fIdx} className="p-3 rounded-xl border border-line-soft bg-surface-1 flex flex-col gap-1.5 text-[12.5px]">
+                          <div className="flex items-center justify-between">
+                            <span className="font-semibold text-ink flex items-center gap-1.5">
+                              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                              {frag.author || 'İsimsiz Öğrenci'}
+                              {frag.authorStudentNumber && (
+                                <span className="font-mono text-ink-3 text-[11px]">({frag.authorStudentNumber})</span>
+                              )}
+                            </span>
+                            <span className="text-[11px] text-ink-3">{fmtDate(frag.timestamp)}</span>
+                          </div>
+                          <p className="m-0 text-ink-2 leading-relaxed bg-surface-2 p-2 rounded-lg border border-line-soft">
+                            {frag.text}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
             ) : (
               <div className="flex flex-col gap-4">
+                {/* Ekleyen ve Revizyon Hızlı Bilgi Şeridi */}
+                {(ds.id === 'questions' || ds.id === 'past') && (
+                  <div className="p-2.5 rounded-xl bg-accent-soft/40 border border-accent/20 flex items-center justify-between text-[12.5px]">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <User className="w-4 h-4 text-accent shrink-0" />
+                      <span className="truncate">
+                        <span className="text-ink-3">Ekleyen:</span>{' '}
+                        <b className="text-ink">{editDraft.contributedByName || editDraft.author || editDraft.fragments?.[0]?.author || 'Bilinmiyor'}</b>
+                        {editDraft.contributedByStudentNumber && (
+                          <span className="font-mono text-ink-3 ml-1">({editDraft.contributedByStudentNumber})</span>
+                        )}
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setEditTab('history')}
+                      className="text-accent hover:underline text-[12px] font-semibold shrink-0 inline-flex items-center gap-1"
+                    >
+                      <span>Tüm Geçmiş ({editDraft.revisions?.length || 0})</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                )}
                 {(ds.id === 'questions' || ds.id === 'past') && (
                   <>
                     <div className="flex flex-col gap-1.5">

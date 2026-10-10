@@ -93,6 +93,7 @@ import {
 import { createLearnFeedbackStore } from './src/services/learnFeedbackService.ts';
 import { createPhase14UserQueue, type QueueItem } from './src/services/phase14UserQueue.ts';
 import { questionUpdatedEmail } from './src/services/phase14Mail.ts';
+import { renderHtmlToPdf, findChrome } from './src/services/pdfRenderService.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -1438,30 +1439,68 @@ app.get('/api/questions/:id', (req, res) => {
 
 // --- Dedicated Past Questions Archive Database (pastQuestions.json) with High-Speed Memory Cache ---
 const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
+const DELETED_PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'deleted_past_questions.json');
 let cachedPastQuestionsDb: any[] | null = null;
 let lastPastQuestionsMtime = 0;
+let cachedDeletedPastQuestions: Set<string> | null = null;
+let lastDeletedPastQuestionsMtime = 0;
+
+function getDeletedPastQuestions(): Set<string> {
+  if (fs.existsSync(DELETED_PAST_QUESTIONS_FILE)) {
+    try {
+      const stat = fs.statSync(DELETED_PAST_QUESTIONS_FILE);
+      if (!cachedDeletedPastQuestions || stat.mtimeMs !== lastDeletedPastQuestionsMtime) {
+        const raw = JSON.parse(fs.readFileSync(DELETED_PAST_QUESTIONS_FILE, 'utf-8'));
+        cachedDeletedPastQuestions = new Set(Array.isArray(raw) ? raw : []);
+        lastDeletedPastQuestionsMtime = stat.mtimeMs;
+      }
+      return cachedDeletedPastQuestions || new Set();
+    } catch (e) {
+      console.error('Error reading deleted_past_questions.json:', e);
+    }
+  }
+  return cachedDeletedPastQuestions || new Set();
+}
+
+function addDeletedPastQuestion(id: string) {
+  try {
+    const s = getDeletedPastQuestions();
+    s.add(id);
+    cachedDeletedPastQuestions = s;
+    fs.writeFileSync(DELETED_PAST_QUESTIONS_FILE, JSON.stringify(Array.from(s), null, 2), 'utf-8');
+    if (fs.existsSync(DELETED_PAST_QUESTIONS_FILE)) {
+      lastDeletedPastQuestionsMtime = fs.statSync(DELETED_PAST_QUESTIONS_FILE).mtimeMs;
+    }
+  } catch (e) {
+    console.error('Error saving deleted_past_questions.json:', e);
+  }
+}
 
 function getPastQuestionsDb(): any[] {
+  const deletedSet = getDeletedPastQuestions();
   if (fs.existsSync(PAST_QUESTIONS_FILE)) {
     try {
       const stat = fs.statSync(PAST_QUESTIONS_FILE);
       if (!cachedPastQuestionsDb || stat.mtimeMs !== lastPastQuestionsMtime) {
         const data = JSON.parse(fs.readFileSync(PAST_QUESTIONS_FILE, 'utf-8'));
-        cachedPastQuestionsDb = Array.isArray(data) ? data : [];
+        const list = Array.isArray(data) ? data : [];
+        cachedPastQuestionsDb = deletedSet.size > 0 ? list.filter((q: any) => !deletedSet.has(q.id)) : list;
         lastPastQuestionsMtime = stat.mtimeMs;
       }
-      return cachedPastQuestionsDb || [];
+      return (cachedPastQuestionsDb || []).filter((q: any) => !deletedSet.has(q.id));
     } catch (e) {
       console.error('Error reading pastQuestions.json:', e);
     }
   }
-  return cachedPastQuestionsDb || [];
+  return (cachedPastQuestionsDb || []).filter((q: any) => !deletedSet.has(q.id));
 }
 
 function savePastQuestionsDb(list: any[]) {
   try {
-    cachedPastQuestionsDb = list;
-    const jsonStr = JSON.stringify(list, null, 2);
+    const deletedSet = getDeletedPastQuestions();
+    const cleanList = deletedSet.size > 0 ? list.filter((q: any) => !deletedSet.has(q.id)) : list;
+    cachedPastQuestionsDb = cleanList;
+    const jsonStr = JSON.stringify(cleanList, null, 2);
     fs.writeFileSync(PAST_QUESTIONS_FILE, jsonStr, 'utf-8');
     if (fs.existsSync(PAST_QUESTIONS_FILE)) {
       lastPastQuestionsMtime = fs.statSync(PAST_QUESTIONS_FILE).mtimeMs;
@@ -1482,6 +1521,7 @@ app.get('/api/past-exams/sync', (req, res) => {
     const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(getPastQuestionsDb())));
     const since = req.query.since as string;
     const clientCount = req.query.count ? parseInt(req.query.count as string, 10) : undefined;
+    const deletedIds = Array.from(getDeletedPastQuestions());
 
     // Detect latest update timestamp across the questions
     let maxUpdatedAt = '';
@@ -1502,7 +1542,8 @@ app.get('/api/past-exams/sync', (req, res) => {
         upToDate: true,
         count: list.length,
         lastModified: maxUpdatedAt,
-        updatedQuestions: []
+        updatedQuestions: [],
+        deletedIds: deletedIds.length > 0 ? deletedIds : undefined
       });
     }
 
@@ -1520,6 +1561,7 @@ app.get('/api/past-exams/sync', (req, res) => {
         count: list.length,
         lastModified: maxUpdatedAt,
         updatedQuestions: updated,
+        deletedIds: deletedIds.length > 0 ? deletedIds : undefined,
         allIds: clientCount !== undefined && clientCount !== list.length ? list.map(q => q.id) : undefined
       });
     }
@@ -1530,7 +1572,8 @@ app.get('/api/past-exams/sync', (req, res) => {
       upToDate: false,
       count: list.length,
       lastModified: maxUpdatedAt,
-      questions: list
+      questions: list,
+      deletedIds: deletedIds.length > 0 ? deletedIds : undefined
     });
   } catch (err: any) {
     res.status(500).json({ error: 'Delta senkronizasyonu başarısız: ' + err.message });
@@ -1871,15 +1914,20 @@ app.put('/api/past-exams/:id', requireAdmin, (req, res) => {
 // Şikâyet edilen çıkmış soruyu kalıcı sil (yalnızca yönetici). Yerel kayıt + Supabase satırı.
 app.delete('/api/past-exams/:id', requireAdmin, async (req, res) => {
   try {
+    const qId = req.params.id;
+    addDeletedPastQuestion(qId);
     const list = getPastQuestionsDb();
-    const idx = list.findIndex((item) => item.id === req.params.id);
-    if (idx === -1) return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
-    const [removed] = list.splice(idx, 1);
-    savePastQuestionsDb(list);
-    for (const client of [localSupabase, cloudSupabase]) {
-      try { if (client) await client.from('past_questions').delete().eq('id', removed.id); } catch (_) {}
+    const idx = list.findIndex((item) => item.id === qId);
+    let removedId = qId;
+    if (idx !== -1) {
+      const [removed] = list.splice(idx, 1);
+      removedId = removed.id;
+      savePastQuestionsDb(list);
     }
-    res.json({ success: true, id: removed.id });
+    // Yetkili servis anahtarıyla her iki Supabase veritabanından kalıcı sil
+    const cloud = await deleteFromSupabaseEverywhere('past_questions', qId);
+    console.log(`[PastQuestion Delete] Soru #${qId} kalıcı olarak silindi. Supabase durumu:`, cloud);
+    res.json({ success: true, id: removedId, cloud });
   } catch (err: any) {
     res.status(500).json({ error: 'Çıkmış soru silinemedi: ' + err.message });
   }
@@ -6804,6 +6852,27 @@ app.post('/api/automation/windows-service-notify', requireAdmin, (req, res) => {
   }
 });
 
+// PDF Stüdyosu: istemcinin uygulama CSS'iyle kurduğu belgeyi başsız Chrome ile PDF'e basar
+app.get('/api/pdf/status', (_req, res) => {
+  res.json({ available: Boolean(findChrome()) });
+});
+app.post('/api/pdf/render', async (req, res) => {
+  const html = typeof req.body?.html === 'string' ? req.body.html : '';
+  if (!html.trim()) return res.status(400).json({ error: 'Belge boş.' });
+  const title = String(req.body?.title || 'MedSoru').slice(0, 160);
+  const fileName = String(req.body?.fileName || 'medsoru.pdf').replace(/[^\p{L}\d._ -]+/gu, '_').slice(0, 120) || 'medsoru.pdf';
+  try {
+    const pdf = await renderHtmlToPdf(html, { title });
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', `inline; filename*=UTF-8''${encodeURIComponent(fileName)}`);
+    res.setHeader('Cache-Control', 'no-store');
+    res.send(pdf);
+  } catch (err: any) {
+    console.warn('[pdf] oluşturulamadı:', err?.message);
+    res.status(err?.status || 500).json({ error: err?.message || 'PDF oluşturulamadı.' });
+  }
+});
+
 // Stream local lecture note PDF file directly
 app.get('/api/lecture-pdf/:filename', (req, res) => {
   try {
@@ -7799,6 +7868,43 @@ async function startServer() {
   const hasDist = fs.existsSync(path.resolve(__dirname, 'dist', 'index.html'));
   const isProd = process.env.NODE_ENV === 'production' || (hasDist && process.env.VITE_DEV !== '1');
 
+  // Static Legal Pages (Google OAuth & KVKK requirement)
+  const serveLegalPage = (fileName: string) => (req: express.Request, res: express.Response) => {
+    const filePath = path.resolve(__dirname, 'public', fileName);
+    if (fs.existsSync(filePath)) {
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.sendFile(filePath);
+    }
+    res.status(404).send('Sayfa bulunamadı.');
+  };
+  app.get(['/sartlar', '/sartlar.html', '/meds/sartlar', '/meds/sartlar.html'], serveLegalPage('sartlar.html'));
+  app.get(['/policy', '/policy.html', '/meds/policy', '/meds/policy.html', '/gizlilik', '/privacy'], serveLegalPage('policy.html'));
+
+  // Dedicated PWA Service Worker & Web App Manifest Handlers
+  const serveServiceWorker = (req: express.Request, res: express.Response) => {
+    const swPath = path.resolve(__dirname, 'public', 'sw.js');
+    if (fs.existsSync(swPath)) {
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+      res.setHeader('Service-Worker-Allowed', '/');
+      return res.sendFile(swPath);
+    }
+    res.status(404).send('Service worker not found');
+  };
+
+  const serveManifest = (req: express.Request, res: express.Response) => {
+    const manifestPath = path.resolve(__dirname, 'public', 'manifest.json');
+    if (fs.existsSync(manifestPath)) {
+      res.setHeader('Content-Type', 'application/manifest+json; charset=utf-8');
+      res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+      return res.sendFile(manifestPath);
+    }
+    res.status(404).send('Manifest not found');
+  };
+
+  app.get(['/sw.js', '/meds/sw.js'], serveServiceWorker);
+  app.get(['/manifest.json', '/meds/manifest.json'], serveManifest);
+
   if (!isProd) {
     console.log('[Server] 🛠️ Vite Geliştirici (Dev) modunda çalışıyor...');
     const vite = await createViteServer({
@@ -7818,8 +7924,8 @@ async function startServer() {
       maxAge: '1y',
       immutable: true,
       setHeaders: (res: express.Response, filePath: string) => {
-        if (filePath.endsWith('.html')) {
-          res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+        if (filePath.endsWith('.html') || filePath.endsWith('sw.js') || filePath.endsWith('manifest.json')) {
+          res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
         } else if (filePath.includes('assets')) {
           res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
         }

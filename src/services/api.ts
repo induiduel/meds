@@ -1789,6 +1789,15 @@ export const ApiService = {
     } catch (e) {
       console.warn('[ApiService] deleteQuestion multiDbManager error', e);
     }
+
+    try {
+      await safeJsonFetch(`/api/questions/${encodeURIComponent(id)}`, {
+        method: 'DELETE',
+        headers: user?.email ? { 'x-admin-email': user.email } : {},
+      });
+    } catch (e) {
+      console.warn('[ApiService] deleteQuestion server error', e);
+    }
   },
 
   async assignUnassignedQuestion(

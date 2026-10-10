@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Archive, BookOpenText, Brain, Check, ChevronDown, ChevronLeft, ChevronRight, X, Eye, FileText, Flag, GitBranch, HelpCircle, Info,
   Layers, Link2, Mic, Quote, Sparkles, SplitSquareHorizontal, Table2, Tag, Target,
+  ShieldAlert, Zap, Scale, Columns, Award, RotateCcw,
 } from 'lucide-react';
 import type { LessonCard, LessonQuestion, LessonStep, PracticeItem, DeckKazanim } from './lessonModel';
 import { inline, mdToHtml, spotTone, stripEmoji } from './lessonModel';
@@ -223,6 +224,10 @@ export const IX_META: Record<string, [React.ElementType, string]> = {
   branching_logic: [GitBranch, 'Klinik karar'],
   before_after_slider: [SplitSquareHorizontal, 'Karşılaştır'],
   active_recall: [Brain, 'Aktif hatırlama'],
+  spot_the_lie: [ShieldAlert, 'Tuzak avı'],
+  swipe_matching: [Zap, 'Hızlı eşleme'],
+  feature_bidding: [Scale, 'Puan bahsi'],
+  venn_grid: [Columns, 'Çapraz tablo'],
   cards: [Layers, 'Çevir kartları'],
   question: [Archive, 'Soru'],
 };
@@ -492,6 +497,653 @@ const Recall: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
   );
 };
 
+/* ---------------------------------------------------------------------------
+ * Yeni İnteraktif Modeller:
+ * 1. SpotTheLie: Hata / Tuzak Avı (3 doğru, 1 yanıltıcı çeldiriciyi bulma)
+ * 2. SwipeMatching: Hızlı Kart Eşleme / Kategori Kaydırma (Tinder stili refleks testi)
+ * 3. FeatureBidding: Özellik Açık Artırması / Puan Bahsi (Metabilişsel güven çarpanı)
+ * 4. VennGrid: Teşhis Çapraz Tablosu (Doğru - Yanlış - Her İkisi / Ayırıcı Tanı Matrisi)
+ * ------------------------------------------------------------------------- */
+
+export const SpotTheLie: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+  const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
+  const [revealed, setRevealed] = useState<Set<number>>(new Set());
+  const items: any[] = Array.isArray(e.items) ? e.items : [];
+  const topic = e.topic || e.question || 'Aşağıdaki önermelerden hangisi yanıltıcı bir tuzaktır?';
+  const lieIdx = items.findIndex((it) => !!(it.isLie || it.isTrap));
+
+  const handleSelect = (idx: number) => {
+    if (selectedIdx === null) {
+      setSelectedIdx(idx);
+      setRevealed(new Set([idx]));
+      onDone?.();
+    } else {
+      setRevealed((prev) => {
+        const next = new Set(prev);
+        if (next.has(idx)) next.delete(idx);
+        else next.add(idx);
+        return next;
+      });
+    }
+  };
+
+  const isLieSelected = selectedIdx !== null && selectedIdx === lieIdx;
+
+  return (
+    <div className="ls-ix-body">
+      <div className="ls-stl-header">
+        <Inline text={topic} as="p" className="ls-ix-q" />
+        <span className="ls-stl-instruction">
+          <ShieldAlert aria-hidden /> 3 doğru, 1 yanıltıcı çeldirici var. Tuzağı tespit et!
+        </span>
+      </div>
+
+      <ul className="ls-stl-list">
+        {items.map((it, idx) => {
+          const isLie = !!(it.isLie || it.isTrap);
+          const isPicked = selectedIdx === idx;
+          const isOpen = revealed.has(idx);
+
+          let cardTone = '';
+          if (selectedIdx !== null) {
+            if (isLie) {
+              cardTone = 'is-lie-card';
+            } else if (isPicked) {
+              cardTone = 'is-wrong-pick';
+            } else {
+              cardTone = 'is-safe-card';
+            }
+          }
+
+          return (
+            <li key={idx} className={`ls-stl-item ${cardTone} ${isOpen ? 'is-open' : ''}`}>
+              <button
+                type="button"
+                className="ls-stl-btn"
+                onClick={() => handleSelect(idx)}
+                aria-expanded={isOpen}
+              >
+                <span className="ls-stl-badge">
+                  {selectedIdx === null ? (
+                    String.fromCharCode(65 + idx)
+                  ) : isLie ? (
+                    <ShieldAlert aria-hidden />
+                  ) : isPicked ? (
+                    <X aria-hidden />
+                  ) : (
+                    <Check aria-hidden />
+                  )}
+                </span>
+                <span className="ls-stl-text">
+                  <Inline text={it.text || ''} />
+                </span>
+                {selectedIdx !== null && it.explanation && (
+                  <ChevronDown className="ls-opt-chev" aria-hidden />
+                )}
+              </button>
+
+              {selectedIdx !== null && isOpen && it.explanation && (
+                <div className="ls-stl-panel">
+                  <span className={`ls-stl-verdict ${isLie ? 'is-trap-tag' : 'is-fact-tag'}`}>
+                    {isLie ? '🚨 TUZAK / YANILTICI ÖNERME' : '✅ TIBBEN DOĞRU BİLGİ'}
+                  </span>
+                  <p className="ls-stl-expl">
+                    <Inline text={cleanWhy(it.explanation)} />
+                  </p>
+                </div>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+
+      {selectedIdx !== null && (
+        <div className={`ls-fb ${isLieSelected ? 'is-ok' : 'is-bad'}`} role="status">
+          <b>
+            {isLieSelected
+              ? '🎯 Tebrikler! Tuzağı başarıyla yakaladın.'
+              : '⚠️ Bu önerme tıbben doğrudur! Yanıltıcı çeldiriciyi incele.'}
+          </b>
+          <span className="ls-fb-hint"> Maddelere dokunarak gerekçelerini inceleyebilirsin.</span>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export const SwipeMatching: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+  const cards: any[] = Array.isArray(e.cards) ? e.cards : [];
+  const leftLabel = typeof e.leftCategory === 'object' && e.leftCategory ? (e.leftCategory.label || e.leftCategory.name || 'Sol Kategori') : String(e.leftCategory || 'Sol Kategori');
+  const rightLabel = typeof e.rightCategory === 'object' && e.rightCategory ? (e.rightCategory.label || e.rightCategory.name || 'Sağ Kategori') : String(e.rightCategory || 'Sağ Kategori');
+  const title = e.title || `${leftLabel} vs ${rightLabel}`;
+
+  const [idx, setIdx] = useState(0);
+  const [history, setHistory] = useState<Array<{ card: any; chosen: 'left' | 'right'; isCorrect: boolean }>>([]);
+  const [dragOffset, setDragOffset] = useState<number>(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [animatingDir, setAnimatingDir] = useState<'left' | 'right' | null>(null);
+  const startXRef = useRef<number>(0);
+
+  const isCompleted = idx >= cards.length;
+  const currentCard = !isCompleted ? cards[idx] : null;
+
+  const handleMatch = (dir: 'left' | 'right') => {
+    if (isCompleted || animatingDir || !currentCard) return;
+    setAnimatingDir(dir);
+    const targetCat = String(currentCard.category || currentCard.correctCategory || '').toLowerCase();
+    const isCorrect = (dir === 'left' && (targetCat === 'left' || targetCat === 'l' || targetCat === leftLabel.toLowerCase()))
+      || (dir === 'right' && (targetCat === 'right' || targetCat === 'r' || targetCat === rightLabel.toLowerCase()));
+
+    setTimeout(() => {
+      setHistory((prev) => [...prev, { card: currentCard, chosen: dir, isCorrect }]);
+      const nextIdx = idx + 1;
+      setIdx(nextIdx);
+      setAnimatingDir(null);
+      setDragOffset(0);
+      if (nextIdx >= cards.length) {
+        onDone?.();
+      }
+    }, 280);
+  };
+
+  const resetAll = () => {
+    setIdx(0);
+    setHistory([]);
+    setDragOffset(0);
+    setAnimatingDir(null);
+  };
+
+  const handleTouchStart = (ev: React.TouchEvent | React.MouseEvent) => {
+    if (isCompleted || animatingDir) return;
+    setIsDragging(true);
+    const pageX = 'touches' in ev ? ev.touches[0].pageX : ev.pageX;
+    startXRef.current = pageX;
+  };
+
+  const handleTouchMove = (ev: React.TouchEvent | React.MouseEvent) => {
+    if (!isDragging) return;
+    const pageX = 'touches' in ev ? ev.touches[0].pageX : ev.pageX;
+    const diff = pageX - startXRef.current;
+    setDragOffset(diff);
+  };
+
+  const handleTouchEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    if (dragOffset > 70) {
+      handleMatch('right');
+    } else if (dragOffset < -70) {
+      handleMatch('left');
+    } else {
+      setDragOffset(0);
+    }
+  };
+
+  const correctCount = history.filter((h) => h.isCorrect).length;
+
+  return (
+    <div className="ls-ix-body">
+      <div className="ls-swipe-head">
+        <span className="ls-eyebrow">Hızlı Kart Eşleme (Kategori Kaydırma)</span>
+        <Inline text={title} as="p" className="ls-ix-q" />
+      </div>
+
+      {!isCompleted && currentCard ? (
+        <div className="ls-swipe-arena">
+          <div className="ls-swipe-targets">
+            <button
+              type="button"
+              className={`ls-swipe-target is-left ${dragOffset < -25 ? 'is-active' : ''}`}
+              onClick={() => handleMatch('left')}
+            >
+              <ChevronLeft aria-hidden />
+              <span>{leftLabel}</span>
+            </button>
+
+            <span className="ls-swipe-progress">
+              {idx + 1} / {cards.length}
+            </span>
+
+            <button
+              type="button"
+              className={`ls-swipe-target is-right ${dragOffset > 25 ? 'is-active' : ''}`}
+              onClick={() => handleMatch('right')}
+            >
+              <span>{rightLabel}</span>
+              <ChevronRight aria-hidden />
+            </button>
+          </div>
+
+          <div
+            className={`ls-swipe-card ${animatingDir === 'left' ? 'is-flying-left' : ''} ${animatingDir === 'right' ? 'is-flying-right' : ''}`}
+            style={{
+              transform: !animatingDir ? `translateX(${dragOffset}px) rotate(${dragOffset * 0.08}deg)` : undefined,
+              transition: isDragging ? 'none' : 'transform 0.28s ease-out',
+            }}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            onMouseDown={handleTouchStart}
+            onMouseMove={handleTouchMove}
+            onMouseUp={handleTouchEnd}
+            onMouseLeave={handleTouchEnd}
+          >
+            <div className="ls-swipe-card-badge">
+              <Zap aria-hidden /> Refleks Kartı
+            </div>
+            <p className="ls-swipe-card-text">
+              <Inline text={currentCard.text || ''} />
+            </p>
+            <div className="ls-swipe-cue">
+              <span className="ls-swipe-cue-left">👈 {leftLabel}</span>
+              <span className="ls-swipe-cue-right">{rightLabel} 👉</span>
+            </div>
+          </div>
+
+          <div className="ls-swipe-actions">
+            <button
+              type="button"
+              className="ls-btn ls-swipe-action-btn is-left"
+              onClick={() => handleMatch('left')}
+            >
+              <ChevronLeft aria-hidden /> {leftLabel}
+            </button>
+            <button
+              type="button"
+              className="ls-btn ls-swipe-action-btn is-right"
+              onClick={() => handleMatch('right')}
+            >
+              {rightLabel} <ChevronRight aria-hidden />
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="ls-swipe-summary">
+          <div className={`ls-fb ${correctCount === cards.length ? 'is-ok' : 'is-plain'}`}>
+            <b>⚡ Eşleme Tamamlandı! Skor: {correctCount} / {cards.length} Doğru</b>
+            <span className="ls-fb-hint">
+              {correctCount === cards.length
+                ? ' Harika refleks! İki klinik tabloyu mükemmel ayırdın.'
+                : ' Maddeleri aşağıdan inceleyip reflekslerini tazeleyebilirsin.'}
+            </span>
+          </div>
+
+          <ul className="ls-swipe-result-list">
+            {history.map((h, i) => (
+              <li key={i} className={`ls-swipe-result-item ${h.isCorrect ? 'is-ok' : 'is-wrong'}`}>
+                <div className="ls-swipe-result-head">
+                  <span className="ls-swipe-result-icon">
+                    {h.isCorrect ? <Check aria-hidden /> : <X aria-hidden />}
+                  </span>
+                  <span className="ls-swipe-result-text">
+                    <Inline text={h.card.text} />
+                  </span>
+                  <span className="ls-tag">
+                    {h.chosen === 'left' ? leftLabel : rightLabel}
+                  </span>
+                </div>
+                {h.card.explanation && (
+                  <p className="ls-swipe-result-expl">
+                    <Inline text={cleanWhy(h.card.explanation)} />
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <button type="button" className="ls-btn is-sm self-start mt-2" onClick={resetAll}>
+            <RotateCcw aria-hidden /> Tekrar Dene
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export const FeatureBidding: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+  const optA = e.optionA || 'Seçenek A';
+  const optB = e.optionB || 'Seçenek B';
+  const title = e.title || `${optA} vs ${optB} Özellik Bahsi`;
+
+  const rawRounds: any[] = Array.isArray(e.rounds) && e.rounds.length > 0 ? e.rounds : [
+    { feature: e.feature || '', correct: e.correct || e.correctOption || 'A', explanation: e.explanation }
+  ];
+
+  const [roundIdx, setRoundIdx] = useState(0);
+  const [multiplier, setMultiplier] = useState<1 | 2 | 3>(2);
+  const [selectedOpt, setSelectedOpt] = useState<'A' | 'B' | null>(null);
+  const [score, setScore] = useState(0);
+  const [roundResults, setRoundResults] = useState<Array<{ round: any; picked: 'A' | 'B'; mult: number; delta: number; ok: boolean }>>([]);
+
+  const currentRound = rawRounds[roundIdx];
+  const isFinished = roundIdx >= rawRounds.length;
+
+  const handlePick = (choice: 'A' | 'B') => {
+    if (selectedOpt !== null || isFinished || !currentRound) return;
+    setSelectedOpt(choice);
+
+    const isCorrect = choice.toUpperCase() === String(currentRound.correct || 'A').toUpperCase();
+    const basePoints = 10;
+    const delta = isCorrect ? basePoints * multiplier : -basePoints * multiplier;
+
+    setScore((s) => s + delta);
+    setRoundResults((prev) => [
+      ...prev,
+      { round: currentRound, picked: choice, mult: multiplier, delta, ok: isCorrect }
+    ]);
+
+    if (roundIdx + 1 >= rawRounds.length) {
+      onDone?.();
+    }
+  };
+
+  const handleNextRound = () => {
+    setSelectedOpt(null);
+    setMultiplier(2);
+    setRoundIdx((i) => i + 1);
+  };
+
+  const resetGame = () => {
+    setRoundIdx(0);
+    setSelectedOpt(null);
+    setMultiplier(2);
+    setScore(0);
+    setRoundResults([]);
+  };
+
+  return (
+    <div className="ls-ix-body">
+      <div className="ls-bidding-head">
+        <div className="flex items-center justify-between gap-2">
+          <span className="ls-eyebrow">Özellik Açık Artırması (Puan Bahsi)</span>
+          <span className={`ls-bidding-score ${score >= 0 ? 'is-pos' : 'is-neg'}`}>
+            <Award aria-hidden /> Puan: {score > 0 ? `+${score}` : score}
+          </span>
+        </div>
+        <Inline text={title} as="p" className="ls-ix-q" />
+      </div>
+
+      {!isFinished && currentRound ? (
+        <div className="ls-bidding-arena">
+          <div className="ls-bidding-round-badge">
+            Tur {roundIdx + 1} / {rawRounds.length}
+          </div>
+
+          <div className="ls-bidding-feature-box">
+            <span className="ls-bidding-feature-tag">Özellik / Patognomonik Bulgu:</span>
+            <p className="ls-bidding-feature-text">
+              <Inline text={currentRound.feature || ''} />
+            </p>
+          </div>
+
+          {selectedOpt === null ? (
+            <div className="ls-bidding-controls">
+              <div className="ls-bidding-multiplier-row">
+                <span className="ls-bidding-mult-label">
+                  <Scale aria-hidden /> Kendine ne kadar güveniyorsun?
+                </span>
+                <div className="ls-bidding-mult-btns">
+                  {([1, 2, 3] as const).map((m) => (
+                    <button
+                      key={m}
+                      type="button"
+                      className={`ls-bidding-mult-btn ${multiplier === m ? 'is-selected' : ''}`}
+                      onClick={() => setMultiplier(m)}
+                    >
+                      <span className="m-val">{m}x</span>
+                      <small className="m-desc">
+                        {m === 1 ? 'Emin Değilim (+10/-10)' : m === 2 ? 'Güveniyorum (+20/-20)' : 'Adım Gibi Eminim (+30/-30)'}
+                      </small>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="ls-bidding-choice-grid">
+                <button
+                  type="button"
+                  className="ls-bidding-choice-btn is-a"
+                  onClick={() => handlePick('A')}
+                >
+                  <span className="k">A</span>
+                  <span className="t">{optA}</span>
+                </button>
+                <button
+                  type="button"
+                  className="ls-bidding-choice-btn is-b"
+                  onClick={() => handlePick('B')}
+                >
+                  <span className="k">B</span>
+                  <span className="t">{optB}</span>
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="ls-bidding-verdict">
+              {(() => {
+                const isCorrect = selectedOpt.toUpperCase() === String(currentRound.correct || 'A').toUpperCase();
+                const delta = isCorrect ? 10 * multiplier : -10 * multiplier;
+                return (
+                  <div className={`ls-fb ${isCorrect ? 'is-ok' : 'is-bad'}`}>
+                    <b>
+                      {isCorrect ? (
+                        multiplier === 3 ? '🔥 TAM İSABET! Mükemmel Güven (+30 Puan)' : `🎯 Doğru Teşhis! (+${delta} Puan)`
+                      ) : (
+                        multiplier === 3 ? '🚨 AŞIRI GÜVEN YANILGISI! Dikkat Tuzağı (-30 Puan)' : `⚠️ Yanlış Karar! (${delta} Puan)`
+                      )}
+                    </b>
+                    <p className="mt-1">
+                      Bu özellik <b>{String(currentRound.correct).toUpperCase() === 'A' ? optA : optB}</b> tablosuna aittir.
+                    </p>
+                    {currentRound.explanation && (
+                      <p className="mt-1 text-[13px] opacity-90">
+                        <Inline text={cleanWhy(currentRound.explanation)} />
+                      </p>
+                    )}
+                  </div>
+                );
+              })()}
+
+              <button
+                type="button"
+                className="ls-btn is-primary mt-2"
+                onClick={handleNextRound}
+              >
+                {roundIdx + 1 < rawRounds.length ? 'Sonraki Tur' : 'Sonucu Gör'} <ChevronRight aria-hidden />
+              </button>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="ls-bidding-summary">
+          <div className={`ls-fb ${score > 0 ? 'is-ok' : 'is-plain'}`}>
+            <b>🏆 Bahis Tamamlandı! Toplam Puan: {score > 0 ? `+${score}` : score}</b>
+            <span className="ls-fb-hint">
+              {score >= 40
+                ? ' Mükemmel klinik sezgi ve yüksek metabilişsel doğruluk!'
+                : score > 0
+                ? ' Başarılı bir analiz. Tereddüt ve güven dengesini iyi kurdun.'
+                : ' Aşırı güven tuzaklarına dikkat; gerekçeleri tekrar gözden geçir.'}
+            </span>
+          </div>
+
+          <ul className="ls-bidding-res-list">
+            {roundResults.map((r, i) => (
+              <li key={i} className={`ls-bidding-res-item ${r.ok ? 'is-ok' : 'is-bad'}`}>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-semibold text-[13.5px]">
+                    Tur {i + 1}: {r.ok ? '✅ Doğru' : '❌ Yanlış'} ({r.delta > 0 ? `+${r.delta}` : r.delta} Puan · {r.mult}x)
+                  </span>
+                  <span className="ls-tag">
+                    {r.picked === 'A' ? optA : optB}
+                  </span>
+                </div>
+                <p className="text-[13px] text-ink-2 mt-1">
+                  <Inline text={r.round.feature} />
+                </p>
+                {r.round.explanation && (
+                  <p className="text-[12.5px] text-ink-3 mt-1">
+                    <Inline text={cleanWhy(r.round.explanation)} />
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <button type="button" className="ls-btn is-sm self-start mt-2" onClick={resetGame}>
+            <RotateCcw aria-hidden /> Bahsi Yeniden Başlat
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export const VennGrid: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+  const labA = e.labelA || 'Durum A';
+  const labB = e.labelB || 'Durum B';
+  const title = e.title || `${labA} vs ${labB} Çapraz Karşılaştırma`;
+  const items: any[] = Array.isArray(e.items) ? e.items : [];
+
+  const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [openedExpl, setOpenedExpl] = useState<Set<number>>(new Set());
+
+  const answeredCount = Object.keys(answers).length;
+  const isAllAnswered = items.length > 0 && answeredCount === items.length;
+
+  const normTarget = (t: string) => {
+    const s = String(t || '').toLowerCase();
+    if (s === 'both_a_b' || s === 'ikisi' || s === 'her ikisi') return 'both';
+    if (s === 'hicbiri' || s === 'hiçbiri') return 'neither';
+    return s;
+  };
+
+  const handlePick = (idx: number, choice: string) => {
+    if (answers[idx]) return;
+    const nextAnswers = { ...answers, [idx]: choice };
+    setAnswers(nextAnswers);
+    setOpenedExpl((prev) => new Set(prev).add(idx));
+
+    if (Object.keys(nextAnswers).length === items.length) {
+      onDone?.();
+    }
+  };
+
+  const toggleExpl = (idx: number) => {
+    setOpenedExpl((prev) => {
+      const n = new Set(prev);
+      n.has(idx) ? n.delete(idx) : n.add(idx);
+      return n;
+    });
+  };
+
+  const correctCount = items.reduce((acc, it, idx) => {
+    const userChoice = answers[idx];
+    if (!userChoice) return acc;
+    return normTarget(userChoice) === normTarget(it.correct) ? acc + 1 : acc;
+  }, 0);
+
+  return (
+    <div className="ls-ix-body">
+      <div className="ls-vg-head">
+        <span className="ls-eyebrow">Teşhis Çapraz Tablosu (Venn Matrisi)</span>
+        <Inline text={title} as="p" className="ls-ix-q" />
+        <span className="ls-hint">
+          Her özellik için ilgili hastalığı ya da her ikisini seçerek matrisi tamamlayın.
+        </span>
+      </div>
+
+      <div className="ls-vg-table">
+        {items.map((it, idx) => {
+          const userAns = answers[idx];
+          const target = normTarget(it.correct);
+          const isAnswered = !!userAns;
+          const isCorrect = isAnswered && normTarget(userAns) === target;
+          const isExplOpen = openedExpl.has(idx);
+
+          return (
+            <div
+              key={idx}
+              className={`ls-vg-row ${isAnswered ? (isCorrect ? 'is-row-ok' : 'is-row-bad') : ''}`}
+            >
+              <div className="ls-vg-crit-col">
+                <span className="ls-vg-num">{idx + 1}.</span>
+                <span className="ls-vg-text">
+                  <Inline text={it.criterion || ''} />
+                </span>
+                {isAnswered && it.explanation && (
+                  <button
+                    type="button"
+                    className="ls-vg-expl-toggle"
+                    onClick={() => toggleExpl(idx)}
+                    aria-label="Açıklamayı göster/gizle"
+                  >
+                    <Info aria-hidden /> Gerekçe
+                  </button>
+                )}
+              </div>
+
+              <div className="ls-vg-btns-col">
+                {[
+                  { key: 'a', label: labA },
+                  { key: 'b', label: labB },
+                  { key: 'both', label: 'Her İkisi' },
+                ].map((btn) => {
+                  const isThisPicked = userAns === btn.key;
+                  const isThisTarget = target === btn.key;
+
+                  let btnClass = 'ls-vg-btn';
+                  if (isAnswered) {
+                    if (isThisTarget) btnClass += ' is-target';
+                    if (isThisPicked && !isCorrect) btnClass += ' is-wrong-picked';
+                    if (isThisPicked && isCorrect) btnClass += ' is-correct-picked';
+                  }
+
+                  return (
+                    <button
+                      key={btn.key}
+                      type="button"
+                      className={btnClass}
+                      disabled={isAnswered}
+                      onClick={() => handlePick(idx, btn.key)}
+                    >
+                      {btn.label}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {isAnswered && isExplOpen && it.explanation && (
+                <div className="ls-vg-row-expl">
+                  <span className={`ls-vg-verdict ${isCorrect ? 'is-ok' : 'is-bad'}`}>
+                    {isCorrect ? 'Doğru Eşleşme' : `Hatalı (Doğrusu: ${target === 'both' ? 'Her İkisi' : target === 'a' ? labA : labB})`}
+                  </span>
+                  <p>
+                    <Inline text={cleanWhy(it.explanation)} />
+                  </p>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {isAllAnswered && (
+        <div className={`ls-fb ${correctCount === items.length ? 'is-ok' : 'is-plain'}`}>
+          <b>
+            Matris Tamamlandı! Skor: {correctCount} / {items.length} Doğru
+          </b>
+          <span className="ls-fb-hint">
+            {correctCount === items.length
+              ? ' Tebrikler, iki antite arasındaki tüm klinik ayrım kriterlerini eksiksiz kavradın!'
+              : ' Ayırıcı tanı tablosundaki gerekçeleri inceleyerek bilgileri pekiştirebilirsin.'}
+          </span>
+        </div>
+      )}
+    </div>
+  );
+};
+
 export const FlipCards: React.FC<{ cards: LessonCard[]; onDone?: () => void }> = ({ cards, onDone }) => {
   const [i, setI] = useState(0);
   const [turned, setTurned] = useState(false);
@@ -592,6 +1244,14 @@ const IxBody: React.FC<{ item: PracticeItem; onDone?: () => void }> = ({ item, o
       return <Compare e={e} onDone={onDone} />;
     case 'active_recall':
       return <Recall e={e} onDone={onDone} />;
+    case 'spot_the_lie':
+      return <SpotTheLie e={e} onDone={onDone} />;
+    case 'swipe_matching':
+      return <SwipeMatching e={e} onDone={onDone} />;
+    case 'feature_bidding':
+      return <FeatureBidding e={e} onDone={onDone} />;
+    case 'venn_grid':
+      return <VennGrid e={e} onDone={onDone} />;
     default:
       return null;
   }

@@ -109,6 +109,19 @@ export const ManageUsersSection: React.FC<Props> = ({
       }
       if (fragments.length >= 15) break;
     }
+    const userRevisions: { questionLabel: string; changeSummary: string; date: string; version: number }[] = [];
+    for (const x of all) {
+      for (const rev of x.revisions || []) {
+        if (normKey(rev.editorUid || rev.editorName) === key) {
+          userRevisions.push({
+            questionLabel: `S.${x.questionNumber || '?'} · ${x.topic || x.discipline || 'Soru'}`,
+            changeSummary: rev.changeSummary || 'Düzenleme',
+            date: fmtDate(rev.editedAt),
+            version: rev.version,
+          });
+        }
+      }
+    }
     return {
       key,
       reg,
@@ -117,6 +130,7 @@ export const ManageUsersSection: React.FC<Props> = ({
       email: reg?.email || act?.email,
       studentNumber: reg?.studentNumber || act?.studentNumber,
       userQuestions,
+      userRevisions,
       fragments,
       userReports: reports.filter((r) => normKey(r.reportedBy) === key).slice(0, 20),
       userComments: comments.filter((c) => normKey(c.author) === key).slice(0, 20),
@@ -283,6 +297,7 @@ export const ManageUsersSection: React.FC<Props> = ({
                 <tr>
                   <th scope="col">Kişi</th>
                   <th scope="col" className="is-num">Soru</th>
+                  <th scope="col" className="is-num">Düzenleme</th>
                   <th scope="col" className="is-num">Parça</th>
                   <th scope="col" className="is-num">Şık</th>
                   <th scope="col" className="is-num">Bildirim</th>
@@ -301,6 +316,7 @@ export const ManageUsersSection: React.FC<Props> = ({
                         {u.email && <div className="text-[12.5px] text-ink-3 truncate max-w-[260px]">{u.email}</div>}
                       </td>
                       <td className="is-num">{u.questions}</td>
+                      <td className="is-num">{u.revisions || 0}</td>
                       <td className="is-num">{u.fragments}</td>
                       <td className="is-num">{u.options}</td>
                       <td className="is-num">{u.reports}</td>
@@ -385,11 +401,12 @@ export const ManageUsersSection: React.FC<Props> = ({
                 {sel.reg?.uid && (<><dt>UID</dt><dd className="font-mono text-[12px]">{sel.reg.uid}</dd></>)}
               </dl>
               <dl className="ms-statgrid m-0">
-                {([['Soru', sel.act?.questions], ['Parça', sel.act?.fragments], ['Şık', sel.act?.options], ['Bildirim', sel.act?.reports], ['Yorum', sel.act?.comments]] as const).map(([k, v]) => (
+                {([['Soru', sel.act?.questions], ['Düzenleme', sel.act?.revisions], ['Parça', sel.act?.fragments], ['Şık', sel.act?.options], ['Bildirim', sel.act?.reports], ['Yorum', sel.act?.comments]] as const).map(([k, v]) => (
                   <div key={k}><dt>{k}</dt><dd>{v || 0}</dd></div>
                 ))}
               </dl>
-              <DList title="Katkı verdiği sorular" items={sel.userQuestions.map((x) => ({ text: `S.${x.questionNumber || '?'} · ${x.topic || x.discipline}` }))} empty="Katkı kaydı yok" />
+              <DList title="Eklediği ve katkı verdiği sorular" items={sel.userQuestions.map((x) => ({ text: `S.${x.questionNumber || '?'} · ${x.topic || x.discipline}` }))} empty="Katkı kaydı yok" />
+              <DList title="Yaptığı soru düzenlemeleri (Revizyonlar)" items={sel.userRevisions.map((r) => ({ label: `${r.questionLabel} · ${r.date} (v${r.version})`, text: r.changeSummary }))} empty="Düzenleme kaydı yok" />
               <DList title="Hafıza parçaları" items={sel.fragments.map((f) => ({ label: f.label, text: f.text.length > 160 ? f.text.slice(0, 160) + '…' : f.text }))} empty="Parça kaydı yok" />
               <DList title="Hata bildirimleri" items={sel.userReports.map((r) => ({ label: r.questionTopic || r.questionId, text: r.reason }))} empty="Bildirim yok" />
               <DList title="Yorumlar" items={sel.userComments.map((c) => ({ label: c.questionTopic || c.questionId, text: c.text }))} empty="Yorum yok" />

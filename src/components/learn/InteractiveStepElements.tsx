@@ -16,7 +16,7 @@ import {
   ChevronRight,
   Network
 } from 'lucide-react';
-import { cleanWhy } from './lesson/LessonBlocks';
+import { cleanWhy, SpotTheLie, SwipeMatching, FeatureBidding, VennGrid } from './lesson/LessonBlocks';
 
 export type InteractiveElementType =
   | 'cloze_masking'
@@ -27,7 +27,11 @@ export type InteractiveElementType =
   | 'micro_quiz'
   | 'node_graph'
   | 'causal_chain'
-  | 'interactive_table';
+  | 'interactive_table'
+  | 'spot_the_lie'
+  | 'swipe_matching'
+  | 'feature_bidding'
+  | 'venn_grid';
 
 export interface InteractiveElementData {
   type: InteractiveElementType;
@@ -92,6 +96,10 @@ export const InteractiveStepRenderer: React.FC<{
         const isNodeGraph = t === 'node_graph' || t === 'graph' || t === 'nodes';
         const isCausalChain = t === 'causal_chain' || t === 'chain' || t === 'causal';
         const isInteractiveTable = t === 'interactive_table' || t === 'masked_table' || t === 'table_masked' || t === 'table';
+        const isSpotTheLie = t === 'spot_the_lie' || t === 'spot_lie' || t === 'lie';
+        const isSwipeMatching = t === 'swipe_matching' || t === 'swipe' || t === 'tinder';
+        const isFeatureBidding = t === 'feature_bidding' || t === 'bidding';
+        const isVennGrid = t === 'venn_grid' || t === 'venn';
 
         return (
           <div key={idx} className="relative">
@@ -110,6 +118,10 @@ export const InteractiveStepRenderer: React.FC<{
             {isNodeGraph && <NodeGraphElement data={el} />}
             {isCausalChain && <CausalChainElement data={el} />}
             {isInteractiveTable && <InteractiveTableElement data={el} />}
+            {isSpotTheLie && <SpotTheLie e={el} />}
+            {isSwipeMatching && <SwipeMatching e={el} />}
+            {isFeatureBidding && <FeatureBidding e={el} />}
+            {isVennGrid && <VennGrid e={el} />}
           </div>
         );
       })}

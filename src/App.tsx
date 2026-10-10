@@ -25,6 +25,8 @@ import { MetricsBar } from './components/MetricsBar';
 import { QuestionCard } from './components/QuestionCard';
 import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
 import { MobileBottomNav } from './components/MobileBottomNav';
+import { MusicPlayerProvider } from './components/music/MusicPlayerContext';
+import { MiniMusicPlayer } from './components/music/MiniMusicPlayer';
 import { AppRail } from './components/AppRail';
 import { PageHeader } from './components/ui/PageHeader';
 import { LearnFab } from './components/learn/LearnFab';
@@ -32,13 +34,17 @@ import { SplashScreen, Onboarding } from './components/onboarding/Onboarding';
 import { SectionLoader } from './components/ui/Animations';
 import { ToastHost, toast } from './components/ui/Toast';
 import { TooltipHost } from './components/ui/TooltipHost';
+import { OfflineDatabaseModal } from './components/pwa/OfflineDatabaseModal';
+import { PwaInstallWelcomeModal, PWA_WELCOME_STORAGE_KEY } from './components/pwa/PwaInstallWelcomeModal';
+import { offlineDatabaseService } from './services/offlineDatabaseService';
+import { pwaService } from './services/pwaService';
 
 function wrapLazy<T extends { default: React.ComponentType<any> }>(
   promise: Promise<T>
 ): Promise<T> {
   return promise.catch((err) => {
     console.warn('[SafeLazy] Failed to load component:', err?.message || err);
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && navigator.onLine) {
       const msg = String(err?.message || err || '');
       if (
         msg.includes('dynamically imported module') ||
@@ -217,7 +223,13 @@ export default function App() {
   const [isSubagentMonitorOpen, setIsSubagentMonitorOpen] = useState(false);
   const [isDiagnosticsOpen, setIsDiagnosticsOpen] = useState(false);
   const [isAiQuotaModalOpen, setIsAiQuotaModalOpen] = useState(false);
+  const [isOfflineModalOpen, setIsOfflineModalOpen] = useState(false);
+  const [isOnline, setIsOnline] = useState(typeof navigator !== 'undefined' ? navigator.onLine : true);
   const [contributeDefaultNumber, setContributeDefaultNumber] = useState<number | undefined>(undefined);
+
+  useEffect(() => {
+    return offlineDatabaseService.subscribe((s) => setIsOnline(s.isOnline));
+  }, []);
 
   // User Auth & Profile Modals - İlk girişte kayıt/tanıtım ekranını zorunlu tut
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(() => {
@@ -235,6 +247,30 @@ export default function App() {
   // İlk açılış: splash her açılışta kısa sürer; kayıtsız kullanıcıya tanıtım + kayıt gösterilir
   const [showSplash, setShowSplash] = useState(true);
   const [showOnboarding, setShowOnboarding] = useState(() => isAuthModalOpen);
+  const [isPwaWelcomeOpen, setIsPwaWelcomeOpen] = useState(false);
+
+  // Site açılışında PWA & Çevrimdışı Veritabanı Kurulum Önerisi
+  useEffect(() => {
+    if (showSplash || showOnboarding) return;
+    if (pwaService.isStandalone()) return;
+
+    try {
+      const dismissed = localStorage.getItem(PWA_WELCOME_STORAGE_KEY);
+      if (dismissed === 'permanent') return;
+      if (dismissed) {
+        const time = Number(dismissed);
+        if (!isNaN(time) && Date.now() - time < 2 * 24 * 60 * 60 * 1000) {
+          return;
+        }
+      }
+    } catch {}
+
+    const timer = setTimeout(() => {
+      setIsPwaWelcomeOpen(true);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, [showSplash, showOnboarding]);
   const [justAddedId, setJustAddedId] = useState<string | null>(null);
   const [searchPageQuery, setSearchPageQuery] = useState<string>(() => (initialRoute.route === 'search' ? initialRoute.param || '' : ''));
   const [openSummaryId, setOpenSummaryId] = useState<string | undefined>(undefined);
@@ -1050,11 +1086,15 @@ export default function App() {
 
   return (
     <GlossaryProvider>
+    <MusicPlayerProvider>
       {showSplash && <SplashScreen onDone={() => setShowSplash(false)} />}
       {showOnboarding && !currentUser && <Onboarding onAuthSuccess={handleAuthSuccess} />}
       <div className="min-h-dvh bg-canvas text-ink flex flex-col font-sans antialiased">
       <ToastHost />
       <TooltipHost />
+      {activeTab !== 'music' && activeTab !== 'practice' && activeTab !== 'manage' && (
+        <MiniMusicPlayer onOpen={() => setActiveTab('music')} />
+      )}
       {activeTab === 'practice' ? (
         <Suspense fallback={<ViewFallback />}>
           <PracticeMode
@@ -1157,7 +1197,24 @@ export default function App() {
         driveLastUploadedLink={driveUploadSuccess?.webViewLink || null}
         onOpenPdfModal={() => setIsPdfModalOpen(true)}
         onOpenDiagnostics={isAdmin ? () => setIsDiagnosticsOpen(true) : undefined}
+        onOpenOfflineModal={() => setIsOfflineModalOpen(true)}
       />
+
+      {!isOnline && (
+        <div className="bg-amber-500/15 border-b border-amber-500/30 px-4 py-2.5 text-xs flex items-center justify-between text-amber-900 dark:text-amber-200">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse shrink-0" />
+            <span><strong>Çevrimdışı Mod:</strong> İnternet bağlantısı yok. Sorular ve desteler cihazınızın yerel belleğinden sunuluyor.</span>
+          </div>
+          <button
+            type="button"
+            onClick={() => setIsOfflineModalOpen(true)}
+            className="underline font-semibold hover:text-amber-950 dark:hover:text-amber-100 cursor-pointer shrink-0 ml-2"
+          >
+            Veritabanı
+          </button>
+        </div>
+      )}
 
       {/* Main Container */}
       <main key={activeTab} className={`ms-view-enter min-w-0 flex-1 max-w-[1240px] w-full mx-auto px-4 sm:px-6 lg:px-10 pt-4 sm:pt-6 flex flex-col gap-4 sm:gap-5 ${activeTab === 'ai_chat' ? 'ms-chat-main pb-[84px] md:pb-4' : 'pb-28 md:pb-12'}`}>
@@ -1709,7 +1766,8 @@ export default function App() {
           </span>
           <span className="flex flex-wrap gap-5">
             <button type="button" onClick={() => { setContributeDefaultNumber(undefined); setIsContributeModalOpen(true); }} className="text-ink-2 hover:text-accent cursor-pointer">Katkı yap</button>
-            <button type="button" onClick={() => setIsPdfModalOpen(true)} className="text-ink-2 hover:text-accent cursor-pointer">PDF kitapçık</button>
+            <a href="/sartlar" target="_blank" rel="noopener noreferrer" className="text-ink-2 hover:text-accent">Şartlar</a>
+            <a href="/policy" target="_blank" rel="noopener noreferrer" className="text-ink-2 hover:text-accent">Gizlilik</a>
             {isAdmin && (
               <button type="button" onClick={() => setActiveTab('admin')} className="text-ink-2 hover:text-accent cursor-pointer">Yönetim</button>
             )}
@@ -1733,6 +1791,7 @@ export default function App() {
         onOpenPdfModal={() => setIsPdfModalOpen(true)}
         onOpenAdminPanel={() => setActiveTab('admin')}
         onUploadToDrive={() => handleDriveUpload(false)}
+        onOpenOfflineModal={() => setIsOfflineModalOpen(true)}
       />
       </div>
       </>
@@ -1823,6 +1882,13 @@ export default function App() {
             committees={committees}
             questions={questions}
             initialSlide={pdfSlideTarget}
+            initialContent={
+              activeTab === 'learn' ? 'learn'
+                : activeTab === 'summaries' ? 'summary'
+                : activeTab === 'ornek_sorular' || activeTab === 'practice' ? 'ornek'
+                : activeTab === 'questions' || activeTab === 'booklet' ? 'pool'
+                : 'past'
+            }
           />
         </Suspense>
       )}
@@ -1848,6 +1914,19 @@ export default function App() {
           />
         </Suspense>
       )}
+
+      {/* Çevrimdışı Veritabanı & PWA Yönetim Modalı */}
+      <OfflineDatabaseModal
+        isOpen={isOfflineModalOpen}
+        onClose={() => setIsOfflineModalOpen(false)}
+      />
+
+      {/* PWA & Çevrimdışı Veritabanı Açılış Önerisi Modalı */}
+      <PwaInstallWelcomeModal
+        isOpen={isPwaWelcomeOpen}
+        onClose={() => setIsPwaWelcomeOpen(false)}
+        onOpenOfflineDatabase={() => setIsOfflineModalOpen(true)}
+      />
 
       {/* User Login/Register Modal */}
       {isAuthModalOpen && !showOnboarding && (
@@ -1976,6 +2055,7 @@ export default function App() {
       )}
 
       </div>
+    </MusicPlayerProvider>
     </GlossaryProvider>
   );
 }

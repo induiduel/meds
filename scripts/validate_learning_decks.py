@@ -14,7 +14,11 @@ ROOT = os.path.join(os.path.dirname(__file__), '..')
 DEFAULT = os.path.join(ROOT, 'src', 'data', 'interactive_learning_decks.json')
 TRUNC = re.compile(r'(\.\.\.|…)\s*$')
 OPT_KEY = re.compile(r'^[A-E]$')
-TYPES = {'micro_quiz', 'interactive_table', 'cloze_masking', 'causal_chain', 'branching_logic', 'before_after_slider', 'active_recall'}
+TYPES = {
+    'micro_quiz', 'interactive_table', 'cloze_masking', 'causal_chain',
+    'branching_logic', 'before_after_slider', 'active_recall',
+    'spot_the_lie', 'swipe_matching', 'feature_bidding', 'venn_grid'
+}
 
 def fold(s):
     return str(s or '').lower().replace('ı', 'i').replace('İ', 'i')
@@ -131,6 +135,60 @@ def check_deck(d, out):
                     add('HATA', 'aktif-hatirlama', n, 'question ve answer gerekli')
                 if TRUNC.search(str(e.get('question', ''))):
                     add('HATA', 'kesik-metin', n, 'aktif hatırlama sorusu kesilmiş')
+            elif t == 'spot_the_lie':
+                items = e.get('items') or []
+                if not (e.get('topic') or e.get('question')) or len(items) < 3:
+                    add('HATA', 'tuzak-avi', n, 'topic/question ve en az 3 items gerekli')
+                lies = [i for i in items if isinstance(i, dict) and (i.get('isLie') or i.get('isTrap'))]
+                if len(lies) != 1:
+                    add('HATA', 'tuzak-avi-tek', n, 'tam olarak bir önermede isLie: true olmalı')
+                for it in items:
+                    if not isinstance(it, dict) or not it.get('text'):
+                        add('HATA', 'tuzak-avi-madde', n, 'her önermede text alanı zorunludur')
+                    elif TRUNC.search(str(it.get('text', ''))):
+                        add('HATA', 'kesik-metin', n, 'önerme metni kesilmiş')
+                    if isinstance(it, dict) and not it.get('explanation'):
+                        add('UYARI', 'tuzak-avi-aciklama', n, 'her önermede explanation olması önerilir')
+            elif t == 'swipe_matching':
+                left_c = e.get('leftCategory')
+                right_c = e.get('rightCategory')
+                cards = e.get('cards') or []
+                if not left_c or not right_c or len(cards) < 2:
+                    add('HATA', 'hizli-esleme', n, 'leftCategory, rightCategory ve en az 2 cards gerekli')
+                for c in cards:
+                    if not isinstance(c, dict) or not c.get('text') or not c.get('category'):
+                        add('HATA', 'hizli-esleme-kart', n, 'her kartta text ve category (left/right) zorunludur')
+                    elif TRUNC.search(str(c.get('text', ''))):
+                        add('HATA', 'kesik-metin', n, 'kart metni kesilmiş')
+            elif t == 'feature_bidding':
+                optA = e.get('optionA')
+                optB = e.get('optionB')
+                rounds = e.get('rounds') if isinstance(e.get('rounds'), list) else []
+                if not optA or not optB:
+                    add('HATA', 'puan-bahsi-secenek', n, 'optionA ve optionB zorunludur')
+                if not rounds and not e.get('feature'):
+                    add('HATA', 'puan-bahsi-ozellik', n, 'en az bir rounds ögesi veya feature/correct alanı gerekli')
+                all_rounds = rounds if rounds else [e]
+                for r in all_rounds:
+                    if not isinstance(r, dict) or not r.get('feature') or not r.get('correct'):
+                        add('HATA', 'puan-bahsi-tur', n, 'her turda feature ve correct (A/B) zorunludur')
+                    elif str(r.get('correct')).upper() not in ('A', 'B'):
+                        add('HATA', 'puan-bahsi-cevap', n, 'correct alanı A ya da B olmalıdır')
+                    elif TRUNC.search(str(r.get('feature', ''))):
+                        add('HATA', 'kesik-metin', n, 'özellik metni kesilmiş')
+            elif t == 'venn_grid':
+                labA = e.get('labelA')
+                labB = e.get('labelB')
+                items = e.get('items') or []
+                if not labA or not labB or len(items) < 2:
+                    add('HATA', 'capraz-tablo', n, 'labelA, labelB ve en az 2 items gerekli')
+                for it in items:
+                    if not isinstance(it, dict) or not it.get('criterion') or not it.get('correct'):
+                        add('HATA', 'capraz-tablo-madde', n, 'her kriterde criterion ve correct (A/B/both/neither) zorunludur')
+                    elif str(it.get('correct')).lower() not in ('a', 'b', 'both', 'neither', 'both_a_b'):
+                        add('HATA', 'capraz-tablo-cevap', n, 'correct değeri A, B, both veya neither olmalıdır')
+                    elif TRUNC.search(str(it.get('criterion', ''))):
+                        add('HATA', 'kesik-metin', n, 'kriter metni kesilmiş')
 
 
 def candidates(s):

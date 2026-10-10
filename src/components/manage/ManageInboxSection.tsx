@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Flag, MessageSquare, FileText, Bell, Eye, Check, Send, Pencil, Trash2, Inbox, CheckCircle2, ChevronDown, Smartphone } from 'lucide-react';
+import { Flag, MessageSquare, FileText, Bell, Eye, Check, Send, Pencil, Trash2, Inbox, CheckCircle2, ChevronDown, Smartphone, User, ExternalLink, ArrowRight } from 'lucide-react';
 import type { QuestionItem, AdminNotification } from '../../types';
 import type { InboxReport, InboxComment } from '../../services/manageConsoleService';
 import { Panel, EmptyState, SearchBox, ChipBar, Switch, ConfirmButton, dayLabel, timeLabel } from './consoleUi';
@@ -18,6 +18,9 @@ interface QueueItem {
   at?: string;
   title: string;
   text?: string;
+  sender?: string;
+  reason?: string;
+  questionId?: string;
   meta: string[];
   done?: boolean;
   unread?: boolean;
@@ -49,6 +52,7 @@ interface Props {
   onEditDraft: (d: QuestionItem) => void;
   onPublishDraft: (d: QuestionItem) => void;
   onDeleteDraft: (d: QuestionItem) => void;
+  onNavigateToData?: (questionId: string, dsId?: 'questions' | 'past') => void;
 }
 
 export const ManageInboxSection: React.FC<Props> = ({
@@ -65,6 +69,7 @@ export const ManageInboxSection: React.FC<Props> = ({
   onEditDraft,
   onPublishDraft,
   onDeleteDraft,
+  onNavigateToData,
 }) => {
   const [filter, setFilter] = useState<Filter>('all');
   const [query, setQuery] = useState('');
@@ -83,13 +88,26 @@ export const ManageInboxSection: React.FC<Props> = ({
         at: r.createdAt,
         title: r.reason,
         text: r.details,
-        meta: [r.questionTopic || r.questionId, r.reportedBy || 'Anonim'].filter(Boolean) as string[],
+        sender: r.reportedBy || 'Anonim Öğrenci',
+        reason: r.reason,
+        questionId: r.questionId,
+        meta: [r.questionTopic || `Soru #${r.questionId}`, r.reportedBy ? `Gönderen: ${r.reportedBy}` : 'Anonim'].filter(Boolean) as string[],
         done: isDone(r),
         report: r,
       });
     }
     for (const c of comments) {
-      out.push({ key: `c-${c.id}`, kind: 'comment', at: c.createdAt, title: c.text, meta: [c.author, c.questionTopic || c.questionId].filter(Boolean) as string[], comment: c });
+      out.push({
+        key: `c-${c.id}`,
+        kind: 'comment',
+        at: c.createdAt,
+        title: c.text,
+        sender: c.author || 'Öğrenci',
+        reason: 'Soruya yeni yorum yapıldı',
+        questionId: c.questionId,
+        meta: [c.author ? `Yazan: ${c.author}` : 'Öğrenci', c.questionTopic || `Soru #${c.questionId}`].filter(Boolean) as string[],
+        comment: c,
+      });
     }
     for (const d of drafts) {
       const num = d.isUnassignedNumber ? 'Numarasız' : d.questionNumber ? `S.${d.questionNumber}` : 'Numarasız';
@@ -99,12 +117,26 @@ export const ManageInboxSection: React.FC<Props> = ({
         at: d.updatedAt || d.createdAt,
         title: d.topic || d.discipline || 'Konusuz taslak',
         text: d.reconstruction?.stem || d.stem || d.fragments?.[0]?.text,
+        sender: d.contributedByName || d.author || d.fragments?.[0]?.author || 'Öğrenci Katkısı',
+        reason: 'Taslak soru onayı bekleniyor',
+        questionId: d.id,
         meta: [num, d.discipline, `${d.fragments?.length || 0} parça`, `${d.options?.length || 0} şık`].filter(Boolean) as string[],
         draft: d,
       });
     }
     for (const n of notifications) {
-      out.push({ key: `n-${n.id}`, kind: 'notice', at: n.timestamp, title: n.title, text: n.message, meta: [n.author].filter(Boolean), unread: !n.isRead });
+      out.push({
+        key: `n-${n.id}`,
+        kind: 'notice',
+        at: n.timestamp,
+        title: n.title,
+        text: n.message,
+        sender: n.author || 'Sistem',
+        reason: n.type === 'new_fragment' ? 'Yeni hafıza parçası eklendi' : n.type === 'unassigned_question' ? 'Numarasız soru girildi' : 'Sistem bildirimi',
+        questionId: n.questionId,
+        meta: [n.author ? `Kaynak: ${n.author}` : ''].filter(Boolean) as string[],
+        unread: !n.isRead,
+      });
     }
     return out.sort((a, b) => (b.at || '').localeCompare(a.at || ''));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -132,7 +164,7 @@ export const ManageInboxSection: React.FC<Props> = ({
       );
       lastDay = day;
     }
-    rows.push(<QueueRow key={item.key} item={item} busyAction={busyAction} {...{ onReview, onResolve, onDeleteComment, onEditDraft, onPublishDraft, onDeleteDraft }} />);
+    rows.push(<QueueRow key={item.key} item={item} busyAction={busyAction} {...{ onReview, onResolve, onDeleteComment, onEditDraft, onPublishDraft, onDeleteDraft, onNavigateToData }} />);
   }
 
   return (
@@ -201,8 +233,8 @@ export const ManageInboxSection: React.FC<Props> = ({
 };
 
 const QueueRow: React.FC<
-  { item: QueueItem; busyAction: string | null } & Pick<Props, 'onReview' | 'onResolve' | 'onDeleteComment' | 'onEditDraft' | 'onPublishDraft' | 'onDeleteDraft'>
-> = ({ item, busyAction, onReview, onResolve, onDeleteComment, onEditDraft, onPublishDraft, onDeleteDraft }) => {
+  { item: QueueItem; busyAction: string | null } & Pick<Props, 'onReview' | 'onResolve' | 'onDeleteComment' | 'onEditDraft' | 'onPublishDraft' | 'onDeleteDraft' | 'onNavigateToData'>
+> = ({ item, busyAction, onReview, onResolve, onDeleteComment, onEditDraft, onPublishDraft, onDeleteDraft, onNavigateToData }) => {
   const m = KIND_META[item.kind];
   const Icon = m.icon;
   const time = timeLabel(item.at);
@@ -212,7 +244,30 @@ const QueueRow: React.FC<
         <Icon aria-hidden="true" />
       </span>
       <div className="ms-row-main">
-        <span className={`ms-row-title ${item.kind === 'comment' ? 'font-medium' : ''}`}>
+        {/* Kimden & Neden Başlığı */}
+        <div className="flex flex-wrap items-center gap-1.5 text-[12px] text-ink-3">
+          <span className="inline-flex items-center gap-1 font-semibold text-ink bg-surface-2 px-2 py-0.5 rounded-md border border-line-soft">
+            <User className="w-3.5 h-3.5 text-accent" />
+            {item.sender || 'Bilinmiyor'}
+          </span>
+          <span className="text-ink-3">·</span>
+          <span className="text-ink-2 font-medium bg-amber-50 text-amber-900 border border-amber-200/60 px-2 py-0.5 rounded-md text-[11.5px]">
+            {item.reason || m.label}
+          </span>
+          {item.questionId && onNavigateToData && (
+            <button
+              type="button"
+              onClick={() => onNavigateToData(item.questionId!)}
+              className="text-accent hover:underline inline-flex items-center gap-0.5 text-[11.5px] font-semibold ml-1 cursor-pointer"
+              title="Bu soruyu veritabanında bul ve düzenle"
+            >
+              <span>{item.questionId.startsWith('past-') ? 'Çıkmış Soru' : 'Soru'} #{item.questionId.replace(/^q-|^past-/, '')}</span>
+              <ExternalLink className="w-3 h-3" />
+            </button>
+          )}
+        </div>
+
+        <span className={`ms-row-title ${item.kind === 'comment' ? 'font-medium' : ''} mt-0.5`}>
           <span className="sr-only">{m.label}: </span>
           {item.title}
         </span>

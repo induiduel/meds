@@ -35,6 +35,8 @@ import {
   Moon,
   Sun,
   Palette,
+  Database,
+  Smartphone,
 } from 'lucide-react';
 import { useTheme } from '../utils/theme';
 import { useUiVersion } from '../utils/uiVersion';
@@ -42,6 +44,8 @@ import { Committee } from '../types';
 import { AppUser } from '../services/auth';
 import { SearchPalette } from './search/SearchPalette';
 import { AppRoute, pathFor, linkClick } from '../router';
+import { OfflineStatusBadge } from './pwa/OfflineStatusBadge';
+import { pwaService } from '../services/pwaService';
 
 export type AppTab = AppRoute;
 
@@ -76,6 +80,7 @@ interface HeaderProps {
   driveLastUploadedLink: string | null;
   onOpenPdfModal: () => void;
   onOpenDiagnostics?: () => void;
+  onOpenOfflineModal?: () => void;
 }
 
 /** Primary pages, in priority order: the desktop nav shows as many as fit, the rest go under "Daha". */
@@ -281,14 +286,20 @@ export const Header: React.FC<HeaderProps> = ({
   driveLastUploadedLink,
   onOpenPdfModal,
   onOpenDiagnostics,
+  onOpenOfflineModal,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [pwaCanInstall, setPwaCanInstall] = useState(pwaService.getState().canInstall);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const { theme, toggle: toggleTheme } = useTheme();
   const { ui, isV3, toggleUi } = useUiVersion();
   const [query, setQuery] = useState(searchQuery);
   const menuRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    return pwaService.subscribe((s) => setPwaCanInstall(s.canInstall));
+  }, []);
 
   useEffect(() => setQuery(searchQuery), [searchQuery]);
 
@@ -385,6 +396,8 @@ export const Header: React.FC<HeaderProps> = ({
         </a>
         <span className="flex-1" aria-hidden="true" />
 
+        <OfflineStatusBadge onClick={() => onOpenOfflineModal?.()} />
+
         <button
           type="button"
           onClick={toggleTheme}
@@ -458,6 +471,27 @@ export const Header: React.FC<HeaderProps> = ({
               <MenuItem icon={SquarePen} label="Soru katkısı yap" tone="accent" onClick={onOpenContributeModal} />
 
               <MenuItem icon={FileDown} label="PDF indir" onClick={onOpenPdfModal} />
+
+              <MenuItem
+                icon={Database}
+                label="Çevrimdışı Veritabanı"
+                onClick={() => {
+                  setMenuOpen(false);
+                  onOpenOfflineModal?.();
+                }}
+              />
+
+              {pwaCanInstall && (
+                <MenuItem
+                  icon={Smartphone}
+                  label="Uygulamayı Cihaza Yükle (PWA)"
+                  tone="accent"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    pwaService.promptInstall();
+                  }}
+                />
+              )}
 
 
               {isAdmin && (

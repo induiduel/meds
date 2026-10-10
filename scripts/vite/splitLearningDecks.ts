@@ -34,15 +34,15 @@ export function splitLearningDecks(root: string): Plugin {
     for (const d of decks) {
       if (!d || !d.id || !Array.isArray(d.slides) || d.slides.length === 0) continue;
       fs.writeFileSync(path.join(itemsDir, `${safeDeckFile(d.id)}.json`), JSON.stringify(d));
-      const { slides, ...meta } = d;
+      const { slides, questions, steps, flashcards, ...meta } = d;
       const questionCount =
         meta.questionCount ||
-        (Array.isArray(d.questions) ? d.questions.length : 0) ||
+        (Array.isArray(questions) ? questions.length : 0) ||
         slides.reduce((n: number, s: any) => n + (s.relatedQuestions?.length || s.questions?.length || 0), 0);
       const cardCount =
         meta.cardCount ||
         meta.flashcardCount ||
-        (Array.isArray(d.flashcards) ? d.flashcards.length : 0) ||
+        (Array.isArray(flashcards) ? flashcards.length : 0) ||
         slides.reduce((n: number, s: any) => n + (s.flashcards?.length || 0), 0);
 
       catalog.push({

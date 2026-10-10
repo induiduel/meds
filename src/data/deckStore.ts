@@ -31,12 +31,55 @@ const loaders = import.meta.glob('./decks/items/*.json', { import: 'default' }) 
 const safe = (id: string) => id.replace(/[^a-zA-Z0-9_-]+/g, '_');
 const cache = new Map<string, Promise<any>>();
 
-/** Bir destenin tam içeriğini (slaytlarla) yükler; aynı deste ikinci kez ağdan gelmez. */
+async function loadFromIndexedDb(id: string): Promise<any> {
+  if (typeof window === 'undefined' || !('indexedDB' in window)) return null;
+  return new Promise((resolve) => {
+    try {
+      const req = window.indexedDB.open('medsoru_offline_db', 2);
+      req.onblocked = () => resolve(null);
+      req.onsuccess = () => {
+        const db = req.result;
+        db.onversionchange = () => db.close();
+        if (!db.objectStoreNames.contains('decks')) {
+          db.close();
+          return resolve(null);
+        }
+        const tx = db.transaction('decks', 'readonly');
+        const store = tx.objectStore('decks');
+        const getReq = store.get(id);
+        getReq.onsuccess = () => {
+          const res = getReq.result || null;
+          db.close();
+          resolve(res);
+        };
+        getReq.onerror = () => {
+          db.close();
+          resolve(null);
+        };
+      };
+      req.onerror = () => resolve(null);
+    } catch {
+      resolve(null);
+    }
+  });
+}
+
+/** Bir destenin tam içeriğini (slaytlarla) yükler; ağ hatasında IndexedDB çevrimdışı yedeğine düşer. */
 export function loadDeck<T = any>(id: string): Promise<T | null> {
   let p = cache.get(id);
   if (!p) {
     const loader = loaders[`./decks/items/${safe(id)}.json`];
-    p = loader ? loader().catch(() => null) : Promise.resolve(null);
+    p = (async () => {
+      try {
+        if (loader) {
+          const res = await loader();
+          if (res) return res;
+        }
+      } catch (err) {
+        console.warn(`[DeckStore] Modül yüklenemedi (${id}), çevrimdışı veritabanı deneniyor:`, err);
+      }
+      return await loadFromIndexedDb(id);
+    })();
     cache.set(id, p);
   }
   return p as Promise<T | null>;

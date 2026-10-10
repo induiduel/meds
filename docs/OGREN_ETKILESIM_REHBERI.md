@@ -185,12 +185,86 @@ Her slaytta 1–4 etkileşim önerilir. Ekranda **Pekiştir** bölümünde sekme
 ```
 - Soru kendi başına anlaşılır; slayt başlığını kesip kopyalama.
 
-### 5.8 Kartlar (`flashcards`)
+### 5.8 `spot_the_lie` — Hata / Tuzak Avı
+```json
+{
+  "type": "spot_the_lie",
+  "topic": "Nefroblastom (Wilms Tümörü) Özellikleri",
+  "items": [
+    { "text": "Çocukluk çağının en sık primer renal malignitesidir.", "isLie": false, "explanation": "Doğru. Pediatrik grupta parankim kaynaklı en sık tümördür." },
+    { "text": "WT1 gen mutasyonu WAGR ve Denys-Drash sendromlarıyla ilişkilidir.", "isLie": false, "explanation": "Doğru. 11p13 lokusundaki WT1 gen kusuru karakteristiktir." },
+    { "text": "Klasik histopatolojisinde blastemal, epitelyal ve mezenkimal trifazik patern izlenir.", "isLie": false, "explanation": "Doğru. Tipik trifazik morfoloji gösterir." },
+    { "text": "Erişkin renal parankiminin en sık görülen malign neoplazmıdır.", "isLie": true, "explanation": "Tuzak / Hata! Erişkin renal parankiminde en sık malignite Renal Hücreli Karsinomdur (RHK). Nefroblastom çocukluk çağı tümörüdür." }
+  ]
+}
+```
+- Konu hakkında 3-4 önerme verilir; 3'ü doğru, tam olarak 1'i sık düşülen tipik bir çeldirici/tuzaktır (`isLie: true`).
+- Öğrenci yanıltıcı bilgiyi tespit eder. Her maddede `explanation` zorunludur.
+
+### 5.9 `swipe_matching` — Hızlı Kart Eşleme (Kategori Kaydırma)
+```json
+{
+  "type": "swipe_matching",
+  "title": "Böbrek Tümörleri Refleks Eşleme",
+  "leftCategory": "Renal Hücreli Karsinom (RHK)",
+  "rightCategory": "Nefroblastom (Wilms Tümörü)",
+  "cards": [
+    { "text": "Erişkin renal parankiminde en sık primer malign neoplazmdır.", "category": "left", "explanation": "RHK tüm erişkin böbrek kanserlerinin %85-90'ını oluşturur." },
+    { "text": "Çocukluk çağında en sık görülen böbrek tümörüdür; trifazik patern gösterir.", "category": "right", "explanation": "Nefroblastom çocukluk çağına özgüdür ve blastem-epitel-mezenkim içerir." },
+    { "text": "VHL gen inaktivasyonu ve 3p delesyonu ile yakından ilişkilidir.", "category": "left", "explanation": "Özellikle Berrak Hücreli RHK'da %90+ VHL kaybı vardır." }
+  ]
+}
+```
+- 2 kategori (`leftCategory`, `rightCategory`) ve seri özellik kartları (`cards`).
+- Mobil swipe (parmakla sola/sağa sürükleme) ya da 👈 / 👉 butonlarıyla 30 saniyelik refleks pekiştirmesi yapılır.
+
+### 5.10 `feature_bidding` — Özellik Açık Artırması (Puan Bahsi)
+```json
+{
+  "type": "feature_bidding",
+  "title": "Papiller RHK vs Kromofob RHK",
+  "optionA": "Papiller RHK",
+  "optionB": "Kromofob RHK",
+  "rounds": [
+    {
+      "feature": "Hipo-diploidi ve perinükleer halo görünümü",
+      "correct": "B",
+      "explanation": "Kromofob RHK hipodiploidi ve soluk berrak sitoplazma etrafında perinükleer halo ile karakterizedir."
+    },
+    {
+      "feature": "MET proto-onkogen mutasyonları ve psammom cisimcikleri",
+      "correct": "A",
+      "explanation": "Papiller RHK'da MET mutasyonu ve histopatolojide psammom cisimcikleri tipiktir."
+    }
+  ]
+}
+```
+- İki antite yan yana verilir, ortada patognomonik bir özellik belirir.
+- Öğrenci hem hastalığı hem güven baremini (1x, 2x, 3x çarpan) seçer; doğru bildiğinde çarpan kadar puan alır, yanlışta o kadar puan kaybeder (metabilişsel farkındalık).
+
+### 5.11 `venn_grid` — Teşhis Çapraz Tablosu (Venn Grid)
+```json
+{
+  "type": "venn_grid",
+  "title": "Ülseratif Kolit vs Crohn Hastalığı Ayırıcı Tanı",
+  "labelA": "Ülseratif Kolit",
+  "labelB": "Crohn Hastalığı",
+  "items": [
+    { "criterion": "Transmural tutulum ve fissür/fistül oluşumu", "correct": "B", "explanation": "Crohn transmuraldir; UK mukoza-submukoza ile sınırlıdır." },
+    { "criterion": "Sürekli (kesintisiz) kolonik tutulum ve psödopolipler", "correct": "A", "explanation": "UK rektumdan başlayıp kesintisiz ilerler." },
+    { "criterion": "Non-kazeifiye granülom varlığı", "correct": "B", "explanation": "Granülom Crohn için patognomoniktir, UK'de görülmez." },
+    { "criterion": "Artmış kolorektal kanser riski", "correct": "both", "explanation": "Her iki inflamatuar bağırsak hastalığında da malignite riski artar." }
+  ]
+}
+```
+- İki antiteyi 4-6 kriter üzerinden karşılaştıran kompakt onaylama matrisi (`correct`: `"A"`, `"B"`, `"both"`, `"neither"`).
+
+### 5.12 Kartlar (`flashcards`)
 - `front` ≤ 140 karakter tek soru; `back` 1–2 cümle; `category` kısa etiket. Eski `question/answer` alanları da okunur ama yeni içerikte `front/back` kullanılır.
 
-### 5.9 Katı Kronoloji ve Sıfır İleriye Sızıntı Kuralı (KESİNLİKLE ZORUNLU)
+### 5.13 Katı Kronoloji ve Sıfır İleriye Sızıntı Kuralı (KESİNLİKLE ZORUNLU)
 
-Öğren modülündeki **7 etkileşim türünün tamamı** (`micro_quiz`, `branching_logic`, `cloze_masking`, `interactive_table`, `causal_chain`, `before_after_slider`, `active_recall`) için katı kronoloji kuralı esastır:
+Öğren modülündeki **11 etkileşim türünün tamamı** (`micro_quiz`, `branching_logic`, `cloze_masking`, `interactive_table`, `causal_chain`, `before_after_slider`, `active_recall`, `spot_the_lie`, `swipe_matching`, `feature_bidding`, `venn_grid`) için katı kronoloji kuralı esastır:
 1. **Geriye Dönük / Anlık Bilgi Sınırı:** Bir slayttaki herhangi bir etkileşimin konusu, soru kökü, doğru cevabı, çeldiricileri, vaka kurgusu veya gizli hücresi **YALNIZCA o slayt ve öncesindeki adımlarda işlenmiş bilgilerle** oluşturulabilir.
 2. **İleriye Sızıntı Kesinlikle Yasaktır:** İleriki adımlarda (örneğin 20. slayttaki bir etkileşim için 21-100. slaytlarda) öğretilecek hiçbir kavram, hastalık, sendrom, ilaç veya tanı yöntemi mevcut slayttaki etkileşime dahil edilemez. Kullanıcı henüz okuyup öğrenmediği bilginin sorusuyla veya testiyle ASLA karşılaşamaz.
 3. **Karşılaştırma Modelleri (`before_after_slider`, `interactive_table`):** Karşılaştırılan her iki kutup da (sol ve sağ) o slayta kadar anlatılmış olmalıdır. Biri öğretilmiş, diğeri ileriki slaytlarda anlatılacak iki durum asla erkenden karşılaştırılamaz.

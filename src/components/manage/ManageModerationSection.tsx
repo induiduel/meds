@@ -142,6 +142,10 @@ export const ManageModerationSection: React.FC<Props> = ({
     try {
       if (isPast) {
         await ApiService.adminDeletePastQuestion(adminEmail, question.id);
+        try {
+          const { pastQuestionsCache } = await import('../../services/pastQuestionsCache');
+          await pastQuestionsCache.removeQuestions([question.id]);
+        } catch {}
         setPastQuestions((prev) => prev.filter((q) => q.id !== question.id));
       } else {
         await ApiService.deleteQuestion(question.id, { email: adminEmail } as any);

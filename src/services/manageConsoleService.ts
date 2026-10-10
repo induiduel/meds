@@ -37,6 +37,7 @@ export interface UserActivityRow {
   email?: string;
   studentNumber?: string;
   questions: number;
+  revisions: number;
   fragments: number;
   options: number;
   reports: number;
@@ -95,11 +96,37 @@ export const computeUserActivity = (
   comments: InboxComment[],
   registeredUsers: Array<{ uid?: string; email?: string; displayName?: string; studentNumber?: string }>
 ): UserActivityRow[] => {
+  const isBotOrSystem = (name?: string, key?: string) => {
+    const s = `${name || ''} ${key || ''}`.toLocaleLowerCase('tr-TR');
+    return (
+      s.includes('yapay zeka') ||
+      s.includes('ai (') ||
+      s.includes(' ai') ||
+      s.startsWith('ai') ||
+      s.includes('bot') ||
+      s.includes('gemini') ||
+      s.includes('gpt') ||
+      s.includes('deepseek') ||
+      s.includes('claude') ||
+      s.includes('asistan') ||
+      s.includes('reconstruct') ||
+      s.includes('otomasyon') ||
+      s.includes('sistem') ||
+      s.includes('system') ||
+      s.includes('ocr') ||
+      s.includes('taranmış') ||
+      s.includes('arşivi') ||
+      s.includes('arşiv') ||
+      s.includes('taslak ayırma')
+    );
+  };
+
   const map = new Map<string, UserActivityRow>();
-  const ensure = (key: string, name: string): UserActivityRow => {
+  const ensure = (key: string, name: string): UserActivityRow | null => {
+    if (isBotOrSystem(name, key)) return null;
     let row = map.get(key);
     if (!row) {
-      row = { key, name, questions: 0, fragments: 0, options: 0, reports: 0, comments: 0, total: 0 };
+      row = { key, name, questions: 0, revisions: 0, fragments: 0, options: 0, reports: 0, comments: 0, total: 0 };
       map.set(key, row);
     }
     return row;
@@ -112,14 +139,23 @@ export const computeUserActivity = (
         normKey(q.contributedByUid || q.contributedByName || 'bilinmeyen'),
         q.contributedByName || 'İsimsiz katkı'
       );
-      row.questions += 1;
+      if (row) row.questions += 1;
+    }
+    for (const rev of q.revisions || []) {
+      if (rev.editorName || rev.editorUid) {
+        const row = ensure(
+          normKey(rev.editorUid || rev.editorName || 'bilinmeyen'),
+          rev.editorName || 'İsimsiz düzenleyen'
+        );
+        if (row) row.revisions += 1;
+      }
     }
     for (const f of q.fragments || []) {
       const row = ensure(
         normKey(f.authorUid || f.author || 'bilinmeyen'),
         f.author || 'İsimsiz'
       );
-      row.fragments += 1;
+      if (row) row.fragments += 1;
     }
     for (const o of q.options || []) {
       if (!o.suggestedBy && !o.suggestedByUid) continue;
@@ -127,16 +163,16 @@ export const computeUserActivity = (
         normKey(o.suggestedByUid || o.suggestedBy || 'bilinmeyen'),
         o.suggestedBy || 'İsimsiz'
       );
-      row.options += 1;
+      if (row) row.options += 1;
     }
   }
   for (const r of reports || []) {
     const row = ensure(normKey(r.reportedBy || 'bilinmeyen'), r.reportedBy || 'İsimsiz bildirim');
-    row.reports += 1;
+    if (row) row.reports += 1;
   }
   for (const c of comments || []) {
     const row = ensure(normKey(c.author || 'bilinmeyen'), c.author || 'İsimsiz yorum');
-    row.comments += 1;
+    if (row) row.comments += 1;
   }
   // Kayıtlı kullanıcıları katkı satırlarıyla BİRLEŞTİR:
   // aynı kişinin e-posta/uid/görünen-ad anahtarları tek satırda toplanır.
@@ -146,7 +182,7 @@ export const computeUserActivity = (
     const primaryKey = normKey(u.email || u.uid);
     let primary = map.get(primaryKey);
     if (!primary) {
-      primary = { key: primaryKey, name: u.displayName || u.email || primaryKey, questions: 0, fragments: 0, options: 0, reports: 0, comments: 0, total: 0 };
+      primary = { key: primaryKey, name: u.displayName || u.email || primaryKey, questions: 0, revisions: 0, fragments: 0, options: 0, reports: 0, comments: 0, total: 0 };
       map.set(primaryKey, primary);
     }
     for (const k of keys) {
@@ -154,6 +190,7 @@ export const computeUserActivity = (
       const other = map.get(k);
       if (other && other !== primary) {
         primary.questions += other.questions;
+        primary.revisions += other.revisions;
         primary.fragments += other.fragments;
         primary.options += other.options;
         primary.reports += other.reports;
@@ -167,7 +204,7 @@ export const computeUserActivity = (
     primary.studentNumber = u.studentNumber || primary.studentNumber;
   }
   const rows = [...new Set(map.values())];
-  for (const r of rows) r.total = r.questions + r.fragments + r.options + r.reports + r.comments;
+  for (const r of rows) r.total = r.questions + r.revisions + r.fragments + r.options + r.reports + r.comments;
   return rows.sort((a, b) => b.total - a.total);
 };
 

@@ -53,6 +53,7 @@ import {
   ShieldCheck,
   History,
   Scale,
+  Trash2,
 } from 'lucide-react';
 import { ActionMenu, ActionItem } from './ui/ActionMenu';
 import { ReportQuestionModal } from './ReportQuestionModal';
@@ -97,6 +98,30 @@ export const isDeepSeekQuestion = (q: any): boolean => {
 export const isGeminiV3Question = (q: any): boolean =>
   Array.isArray(q?.tags) && q.tags.includes('gemini_v3');
 
+/** Kalite puanı (0–100): sunucu `qualityScore` yazar; eski önbellek/Supabase kaydı için hafif istemci tahmini. */
+export const getQualityScore = (q: any): number => {
+  if (typeof q?.qualityScore === 'number' && Number.isFinite(q.qualityScore)) return q.qualityScore;
+  let s = 100;
+  const stem = String(q?.reconstruction?.stem || q?.stem || q?.fragments?.[0]?.text || '');
+  const opts = (q?.reconstruction?.options || q?.options || []) as any[];
+  const ans = String(q?.reconstruction?.correctAnswer || q?.correctAnswer || q?.claimedAnswer || '');
+  const expl = String(q?.reconstruction?.explanation || q?.explanation || q?.tibbi_aciklama || '');
+  if (!stem.trim()) s -= 40; else if (stem.trim().length < 30) s -= 25; else if (stem.trim().length < 50) s -= 12;
+  if (opts.length <= 2) s -= 40; else if (opts.length === 3) s -= 18; else if (opts.length === 4) s -= 8;
+  if (!ans) s -= 25;
+  if (expl.trim().length < 20) s -= 15;
+  if (!q?.sik_analizi) s -= 10;
+  if (q?.isAmbiguous) s -= 15;
+  if (q?.isSuspect) s -= 12;
+  return Math.max(0, Math.min(100, s));
+};
+
+export const getQualityTier = (q: any): string => {
+  if (typeof q?.qualityTier === 'string' && q.qualityTier) return q.qualityTier;
+  const s = getQualityScore(q);
+  return s >= 90 ? 'altin' : s >= 75 ? 'saglam' : s >= 60 ? 'orta' : s >= 40 ? 'zayif' : 'kritik';
+};
+
 const isNewQ = (q: QuestionItem): boolean =>
   Boolean(
     q.isNewQuestion ||
@@ -104,7 +129,7 @@ const isNewQ = (q: QuestionItem): boolean =>
       (q.createdAt ? new Date(q.createdAt).getTime() > Date.now() - 30 * 86400000 : false),
   );
 
-type FacetKey = 'pool' | 'committee' | 'year' | 'discipline' | 'topic' | 'answer' | 'explanation' | 'source' | 'p14' | 'denetleyici' | 'newness';
+type FacetKey = 'pool' | 'committee' | 'year' | 'discipline' | 'topic' | 'answer' | 'explanation' | 'source' | 'p14' | 'denetleyici' | 'newness' | 'manual' | 'repeated';
 interface Prep {
   q: QuestionItem;
   disc: string;
@@ -112,6 +137,8 @@ interface Prep {
   year: string;
   comms: string[];
   isNew: boolean;
+  isManual: boolean;
+  isRepeated: boolean;
   hasAnswer: boolean;
   doubtful: boolean;
   hasExpl: boolean;
@@ -238,6 +265,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [versionViewOverrides, setVersionViewOverrides] = useState<Record<string, 'denetleyici' | 'eski' | 'karsilastir'>>({});
   const [analysisOpen, setAnalysisOpen] = useState<Record<string, boolean>>({});
   const [newnessFilter, setNewnessFilter] = useState<'all' | 'new_only' | 'archived_only'>('all');
+  const [manualFilter, setManualFilter] = useState<'all' | 'manual_only' | 'standard_only'>('all');
+  const [repeatedFilter, setRepeatedFilter] = useState<'all' | 'repeated_only' | 'unique_only'>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
   // Filtre çekmecesi kapanırken de kayarak çıkar
@@ -349,7 +378,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     return () => document.removeEventListener('keydown', onKey);
   }, []);
   const [explanationFilter, setExplanationFilter] = useState<'all' | 'with' | 'without'>('all');
-  const [sortOrder, setSortOrder] = useState<'default' | 'newest' | 'oldest' | 'number'>('default');
+  const [sortOrder, setSortOrder] = useState<'default' | 'newest' | 'oldest' | 'number' | 'quality_desc' | 'quality_asc'>('default');
   // Faz 14 düzeltmesinin öncesi yalnız istenince gösterilir (rozet ⓘ ya da İşlemler menüsü)
   const [p14Open, setP14Open] = useState<Record<string, boolean>>({});
   const [ambiguityTab, setAmbiguityTab] = useState<'valid' | 'ambiguous' | 'reported' | 'all'>('valid');
@@ -392,6 +421,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Feedback & Copy state
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [deletingQuestionId, setDeletingQuestionId] = useState<string | null>(null);
 
   // Client-Side Caching & Delta-Sync State
   const [cacheStatus, setCacheStatus] = useState<CacheSyncStatus>(pastQuestionsCache.getStatus());
@@ -648,6 +678,29 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       toast.info('Bağlantı', url);
     }
   };
+
+  // Yönetici: Çıkmış soruyu kalıcı olarak sil
+  const handleDeletePastQuestion = async (targetQ: QuestionItem) => {
+    if (!isAdminUser) return;
+    const label = targetQ.questionNumber ? `Soru #${targetQ.questionNumber}'ı` : 'Bu çıkmış soruyu';
+    const confirmMsg = `${label} (${targetQ.discipline || 'Çıkmış soru'})\n\nKalıcı olarak tüm veritabanlarından, sunucudan ve cihaz önbelleğinden silmek istediğinize emin misiniz?\n\nBu işlem geri alınamaz.`;
+    if (!window.confirm(confirmMsg)) return;
+
+    setDeletingQuestionId(targetQ.id);
+    try {
+      await ApiService.adminDeletePastQuestion(currentUser?.email || ADMIN_EMAIL, targetQ.id);
+      try {
+        await pastQuestionsCache.removeQuestions([targetQ.id]);
+      } catch {}
+      setQuestions((prev) => prev.filter((q) => q.id !== targetQ.id));
+      toast.success('Soru Silindi', `${label} kalıcı olarak silindi.`);
+    } catch (err: any) {
+      toast.error('Silinemedi', err.message || 'Çıkmış soru silme işlemi başarısız oldu.');
+    } finally {
+      setDeletingQuestionId(null);
+    }
+  };
+
   // Soru → slayt odağı: soru kökünün ayırt edici kelimeleri + doğru şık (Öğren'de ve önizlemede işaretlenir)
   const focusFor = (q: QuestionItem, match?: QuestionLearnMatch | null): QuestionFocus =>
     buildQuestionFocus({
@@ -777,6 +830,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         year: yearKey(q.examYear),
         comms: uncertain ? (content ? [content] : []) : Array.from(new Set([q.committeeId, content].filter(Boolean) as string[])),
         isNew: isNewQ(q),
+        isManual: Boolean(q.is_manual_entry || (q as any).manuel_ekleme || (Array.isArray(q.tags) && q.tags.includes('manuel_ekleme'))),
+        isRepeated: Boolean((q.appearanceCount && q.appearanceCount > 1) || (q.similarPastQuestions && q.similarPastQuestions.length > 0) || (Array.isArray(q.tags) && q.tags.includes('tekrarlayan_soru'))),
         hasAnswer: Boolean(q.correctAnswer || q.claimedAnswer || q.reconstruction?.correctAnswer) && !(isPhase14Pending(q) && !anyQ.phase14Original?.correctAnswer),
         doubtful: isDoubtful(q),
         hasExpl: Boolean(expl.trim()),
@@ -834,6 +889,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       (denetleyiciFilter === 'denetleyici_only' && isDenetleyiciQuestion(p.q)) ||
       (denetleyiciFilter === 'standard_only' && !isDenetleyiciQuestion(p.q)),
     newness: (p) => newnessFilter === 'all' || (newnessFilter === 'new_only') === p.isNew,
+    manual: (p) =>
+      manualFilter === 'all' ||
+      (manualFilter === 'manual_only' && p.isManual) ||
+      (manualFilter === 'standard_only' && !p.isManual),
+    repeated: (p) =>
+      repeatedFilter === 'all' ||
+      (repeatedFilter === 'repeated_only' && p.isRepeated) ||
+      (repeatedFilter === 'unique_only' && !p.isRepeated),
   };
   const facetValues: Record<FacetKey, (p: Prep) => (string | null)[]> = {
     pool: (p) => [p.q.isAmbiguous ? 'ambiguous' : 'valid', p.q.reports?.length ? 'reported' : null],
@@ -847,6 +910,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     p14: (p) => [isPhase14Fixed(p.q) ? 'faz14' : null, isPhase14Fixed(p.q) && !isPhase14Pending(p.q) ? 'faz14_onayli' : null, isPhase14Pending(p.q) ? 'faz14_bekleyen' : null],
     denetleyici: (p) => [isDenetleyiciQuestion(p.q) ? 'denetleyici_only' : 'standard_only'],
     newness: (p) => [p.isNew ? 'new_only' : 'archived_only'],
+    manual: (p) => [p.isManual ? 'manual_only' : 'standard_only'],
+    repeated: (p) => [p.isRepeated ? 'repeated_only' : 'unique_only'],
   };
 
   const { filteredQuestions, facetCounts } = useMemo(() => {
@@ -882,9 +947,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     if (sortOrder === 'newest') list.sort((a, b) => yearOf(b) - yearOf(a));
     if (sortOrder === 'oldest') list.sort((a, b) => (yearOf(a) || 9999) - (yearOf(b) || 9999));
     if (sortOrder === 'number') list.sort((a, b) => (a.questionNumber || 9999) - (b.questionNumber || 9999));
+    if (sortOrder === 'quality_desc') list.sort((a, b) => getQualityScore(b) - getQualityScore(a));
+    if (sortOrder === 'quality_asc') list.sort((a, b) => getQualityScore(a) - getQualityScore(b));
     return { filteredQuestions: list, facetCounts: counts };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, sortOrder]);
+  }, [prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, manualFilter, repeatedFilter, sortOrder]);
   const fc = (k: FacetKey, v = 'all') => facetCounts[k].get(v) || 0;
 
   // Seçili kurul/ders artık sonuç vermiyorsa (başka seçim yüzünden) seçimi düşürme: kullanıcı neyi seçtiyse o kalır,
@@ -944,7 +1011,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     p14: { faz14: 'Faz 14', faz14_onayli: 'Faz 14 · onaylı', faz14_bekleyen: 'Faz 14 · onay bekliyor' } as Record<string, string>,
     denetleyici: { denetleyici_only: 'Denetleyici Onayı', standard_only: 'Standart' } as Record<string, string>,
     newness: { new_only: 'Yeni sorular', archived_only: 'Arşiv' } as Record<string, string>,
-    sort: { newest: 'Yeniden eskiye', oldest: 'Eskiden yeniye', number: 'Soru numarası', default: searchQuery.trim() ? 'En ilgili' : 'Varsayılan' } as Record<string, string>,
+    manual: { manual_only: 'Manuel Eklenenler', standard_only: 'Otomatik Havuz' } as Record<string, string>,
+    repeated: { repeated_only: 'Tekrarlayan Sorular', unique_only: 'Tekil Sorular' } as Record<string, string>,
+    sort: { newest: 'Yeniden eskiye', oldest: 'Eskiden yeniye', number: 'Soru numarası', quality_desc: 'Kalite: en iyi önce', quality_asc: 'Kalite: en sorunlu önce', default: searchQuery.trim() ? 'En ilgili' : 'Varsayılan' } as Record<string, string>,
     view: { raw: 'Ham metin', split: 'Karşılaştır' } as Record<string, string>,
   };
   // Şeritte görünmeyen etkin süzgeçler kaldırılabilir çip olarak listelenir
@@ -959,6 +1028,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ...(denetleyiciFilter !== 'all' ? [{ label: LABELS.denetleyici[denetleyiciFilter], clear: () => setDenetleyiciFilter('all') }] : []),
     ...(phase14Filter !== 'all' ? [{ label: LABELS.p14[phase14Filter], clear: () => setPhase14Filter('all') }] : []),
     ...(newnessFilter !== 'all' ? [{ label: LABELS.newness[newnessFilter], clear: () => setNewnessFilter('all') }] : []),
+    ...(manualFilter !== 'all' ? [{ label: LABELS.manual[manualFilter], clear: () => setManualFilter('all') }] : []),
+    ...(repeatedFilter !== 'all' ? [{ label: LABELS.repeated[repeatedFilter], clear: () => setRepeatedFilter('all') }] : []),
     ...(viewMode !== 'redacted' ? [{ label: LABELS.view[viewMode], clear: () => setViewMode('redacted') }] : []),
   ];
   const advancedCount = activeFilterChips.length;
@@ -970,6 +1041,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     setSourceFilter('all');
     setDenetleyiciFilter('all');
     setNewnessFilter('all');
+    setManualFilter('all');
+    setRepeatedFilter('all');
     setSelectedCommittee('all');
     setSelectedYear('all');
     setSelectedDiscipline('all');
@@ -1133,6 +1206,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           <span>{LABELS.sort[sortOrder]}</span>
           <select value={sortOrder} onChange={(e) => { setSortOrder(e.target.value as any); resetPage(); }} aria-label="Sırala">
             <option value="default">{LABELS.sort.default}</option>
+            <option value="quality_desc">Kalite: en iyi önce</option>
+            <option value="quality_asc">Kalite: en sorunlu önce</option>
             <option value="newest">Yeniden eskiye</option>
             <option value="oldest">Eskiden yeniye</option>
             <option value="number">Soru numarası</option>
@@ -1260,6 +1335,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 ['faz14_onayli', 'Onaylı', fc('p14', 'faz14_onayli')],
                 ['faz14_bekleyen', 'Onay bekliyor', fc('p14', 'faz14_bekleyen')],
               ])}
+              {segRow('Yükleme Türü', manualFilter, setManualFilter, [
+                ['all', 'Tümü', fc('manual')],
+                ['manual_only', 'Manuel Eklenenler', fc('manual', 'manual_only')],
+                ['standard_only', 'Otomatik Havuz', fc('manual', 'standard_only')],
+              ])}
+              {segRow('Soru Tekrarı', repeatedFilter, setRepeatedFilter, [
+                ['all', 'Tümü', fc('repeated')],
+                ['repeated_only', 'Tekrarlayanlar', fc('repeated', 'repeated_only')],
+                ['unique_only', 'Tekil Sorular', fc('repeated', 'unique_only')],
+              ])}
               {segRow('Görünüm', viewMode, setViewMode, [
                 ['redacted', 'Düzenlenmiş'],
                 ['raw', 'Ham metin'],
@@ -1313,7 +1398,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             const isDisliked = (q.dislikedBy || []).includes(userUid);
             const isNewQuestion = isNewQ(q);
 
-            const slideMatch = getQuestionSlideMatch(q);
             const learnMatch = learnMatcher.getMatch(q);
             // Mavi ⋯ ve "Öğren slaytı" kısayolu yalnızca güvenilir eşleşmelerde
             const reliableLearn = isReliableLearnMatch(learnMatch) ? learnMatch : null;
@@ -1380,7 +1464,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 ? [{ label: aiQueue[String(q.id)].status === 'yonetici_onayi' ? 'İncelendi · yönetici onayında' : `İncelemede · sıra ${aiQueue[String(q.id)].position}`, icon: Sparkles, group: 'Yapay zekâ', disabled: aiQueue[String(q.id)].status === 'yonetici_onayi', hint: aiQueue[String(q.id)].status === 'yonetici_onayi' ? undefined : 'not ekle', onClick: () => setAiReviewQ(q) }]
                 : [{ label: 'İncelemeye gönder', icon: Sparkles, group: 'Yapay zekâ', tone: 'accent' as const, onClick: () => setAiReviewQ(q) }]),
               ...(isAdminUser
-                ? [{ label: 'AI ile düzenle', icon: Wand2, group: 'Yapay zekâ', tone: 'accent' as const, onClick: () => setCustomRedactQuestion({ question: q, match: slideMatch }) }]
+                ? [{ label: 'AI ile düzenle', icon: Wand2, group: 'Yapay zekâ', tone: 'accent' as const, onClick: () => setCustomRedactQuestion({ question: q, match: getQuestionSlideMatch(q) }) }]
                 : []),
               ...(isDenetleyici
                 ? [
@@ -1405,6 +1489,18 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 ? [{ label: `Cevaba itiraz et (${correctAnswer})`, icon: ShieldAlert, group: 'Diğer', onClick: () => setObjection({ question: q, option: { key: String(correctAnswer), text: String(options.find((o: any) => String(o.key) === String(correctAnswer))?.text ?? '') } }) }]
                 : []),
               { label: 'Hata bildir', icon: Flag, group: 'Diğer', tone: 'danger', onClick: () => setReportingQuestion(q) },
+              ...(isAdminUser
+                ? [
+                    {
+                      label: deletingQuestionId === q.id ? 'Siliniyor…' : 'Soruyu kalıcı sil',
+                      icon: Trash2,
+                      group: 'Yönetici',
+                      tone: 'danger' as const,
+                      disabled: deletingQuestionId === q.id,
+                      onClick: () => handleDeletePastQuestion(q),
+                    },
+                  ]
+                : []),
             ];
 
             return (
@@ -1431,6 +1527,32 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     )}
                     {q.isAmbiguous && <span className="cx-flag is-warn">Eksik</span>}
                     {isNewQuestion && <span className="cx-flag is-new">Yeni</span>}
+                    {(() => {
+                      const qs = getQualityScore(q);
+                      const tier = getQualityTier(q);
+                      const cls = tier === 'altin' ? 'is-ok' : tier === 'saglam' ? 'is-new' : tier === 'orta' ? '' : tier === 'zayif' ? 'is-warn' : 'is-bad';
+                      const label = tier === 'altin' ? 'Altın' : tier === 'saglam' ? 'Sağlam' : tier === 'orta' ? 'Orta' : tier === 'zayif' ? 'Zayıf' : 'Kritik';
+                      const iss = ((q as any).qualityIssues || []) as string[];
+                      return (
+                        <span className={`cx-flag ${cls}`} title={`Kalite ${qs}/100 · ${label}${iss.length ? ` · ${iss.join(', ')}` : ''}`}>
+                          Q{qs}
+                        </span>
+                      );
+                    })()}
+                    {((q as any).customRedactedBy === 'muse' || (q.tags || []).includes('redacted_by_muse')) && (
+                      <span className="cx-flag is-ai" title={(q as any).museRedactionNote || 'muse tarafından yazım/biçim yönünden düzenlendi; eski hâli kayıtta saklı'}>
+                        muse
+                      </span>
+                    )}
+                    {(q.is_manual_entry || (q as any).manuel_ekleme) && (
+                      <span className="cx-flag is-new" title="Bu soru resmi geçmiş kurul sınavı PDF'inden elle doğrulanıp eklenmiştir.">Manuel Ekleme</span>
+                    )}
+                    {q.similarPastQuestions && q.similarPastQuestions.length > 0 && (
+                      <span className="cx-flag is-ai" title={`${q.similarPastQuestions.length + 1} farklı sınavda çıkan soru`}>
+                        <Layers aria-hidden className="w-3 h-3 inline mr-0.5" />
+                        {q.similarPastQuestions.length + 1} Sınavda Çıktı
+                      </span>
+                    )}
                     {isDenetleyici && <span className="cx-flag is-ok is-icon" title="Denetleyici onayı: müfredat ve mekanizma doğrulamalı sürüm" aria-label="Denetleyici onaylı"><ShieldCheck /></span>}
                     {p14Fixed && (
                       <button
@@ -1458,6 +1580,21 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         </button>
                       ))}
                     </span>
+                  )}
+                  {isAdminUser && (
+                    <button
+                      type="button"
+                      className="cx-iconbtn text-red-500 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-950/30"
+                      title="Soruyu kalıcı sil (Yönetici)"
+                      aria-label="Soruyu kalıcı sil"
+                      disabled={deletingQuestionId === q.id}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleDeletePastQuestion(q);
+                      }}
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
                   )}
                   <ActionMenu
                     items={actions}
@@ -1660,6 +1797,25 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       <p className="cx-note is-warn">Cevap doğrulanmadı: kaynaktaki işaret bir öğrencinin cevabıydı.</p>
                     )}
                     {!hideAnswer && (q as any).answerStatus === 'dogrulandi' && <p className="cx-note is-ok">Cevap ders slaytı kanıtıyla doğrulandı.</p>}
+
+                    {/* Çoklu referans / alternatif sınav yılları bandı */}
+                    {q.similarPastQuestions && q.similarPastQuestions.length > 0 && (
+                      <div className="mt-2.5 pt-2 border-t border-line/60 flex flex-wrap items-center gap-1.5 text-[12px] text-ink-3">
+                        <span className="font-semibold text-ink-2 flex items-center gap-1">
+                          <Layers className="w-3.5 h-3.5 text-accent" />
+                          Diğer yıllardaki çıkmış örnekleri:
+                        </span>
+                        {q.similarPastQuestions.map((alt) => (
+                          <span
+                            key={alt.id}
+                            className="inline-flex items-center px-2 py-0.5 rounded-md bg-field border border-line text-[11.5px] font-medium text-ink"
+                            title={`Soru ID: ${alt.id}`}
+                          >
+                            {alt.label || `${alt.examYear} - Soru ${alt.questionNumber}`}
+                          </span>
+                        ))}
+                      </div>
+                    )}
 
                     {/* Açıklama, ilgili slayt ve terimler kartta yer kaplamaz: üç nokta → Hakkında */}
                   </>

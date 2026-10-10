@@ -78,6 +78,12 @@ export default defineConfig(({ mode }) => {
                 return `local-data-summaries-${match[0]}`;
               }
             }
+            if (normalized.includes('/src/data/kazanimlar/')) {
+              const match = normalized.match(/k\d+/);
+              if (match) {
+                return `local-data-kazanimlar-${match[0]}`;
+              }
+            }
           },
         },
       },
