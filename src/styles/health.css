@@ -20,15 +20,15 @@ html.ui-v7 {
   --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
 
   /* Göz dostu açık tema: hafif sıcak nötr zemin, kırık beyaz yüzey, yumuşatılmış mürekkep */
-  --color-canvas: #EFEFEC;
-  --color-white: #FBFBF9;
-  --color-field: #EBEBE7;
-  --color-line: #E0E0DB;
-  --color-line-soft: #E9E9E4;
-  --color-line-2: #C9C9C3;
-  --color-ink: #2A2B2F;
-  --color-ink-2: #4B4D53;
-  --color-ink-3: #696B71;
+  --color-canvas: #F7F8FA;
+  --color-white: #FFFFFF;
+  --color-field: #F1F3F6;
+  --color-line: #E6E9EE;
+  --color-line-soft: #EEF0F3;
+  --color-line-2: #CDD2DA;
+  --color-ink: #23262C;
+  --color-ink-2: #4A4F58;
+  --color-ink-3: #666C76;
   --color-ink-surface: #2A2B2F;
   --color-accent: #2A64B8;
   --color-accent-hover: #22549E;
@@ -528,7 +528,7 @@ html.ui-v7 .cx-q-meta b { display: inline-flex; align-items: center; gap: 6px; }
  * ============================================================= */
 /* Ders renkleri bir ton sakin (dolgu %82, açık temada) */
 html.ui-v7:not(.theme-dark) :is(.d-pat, .d-farm, .d-enf, .d-mikro, .d-halk, .d-ic, .d-gen, .d-cocuk, .d-kadin, .d-acil, .d-biyo, .d-ana, .d-fiz, .d-noro, .d-psik, .d-kardi, .d-cerr, .d-ftr, .d-uro, .d-onko, .d-diger) {
-  --d-soft: color-mix(in srgb, var(--d) 13%, #FBFBF9);
+  --d-soft: color-mix(in srgb, var(--d) 12%, #FFFFFF);
 }
 html.ui-v7 .ms-rail-item[aria-current="page"], html.ui-v7 .ms-side-item.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
 html.ui-v7 .ms-rail-item[aria-current="page"] > svg, html.ui-v7 .ms-side-item.is-on > svg { color: var(--color-accent); }
@@ -545,7 +545,7 @@ html.ui-v7 .cx-q-no { font-weight: 650; }
 html.ui-v7 .cx-q .ms-stem { font-weight: 550; color: var(--color-ink); }
 html.ui-v7 body { -webkit-font-smoothing: antialiased; }
 /* Gölgesiz kartlara çok hafif ayrım: zeminle kart arasında saç teli çizgi */
-html.ui-v7:not(.theme-dark) :is(.cx-q, .ds-card, .ds-list, .ds-panel, .lh-card, .hk-group, .hk-browse-list button, .ms-panel, .ds-podium > li) { box-shadow: 0 0 0 1px rgb(40 40 30 / .05), 0 1px 2px rgb(40 40 30 / .03); }
+html.ui-v7:not(.theme-dark) :is(.cx-q, .ds-card, .ds-list, .ds-panel, .lh-card, .hk-group, .hk-browse-list button, .ms-panel, .ds-podium > li) { box-shadow: 0 0 0 1px rgb(30 40 60 / .06), 0 1px 2px rgb(30 40 60 / .04); }
 
 /* =============================================================
  * Sözlük · ana-ayrıntı (gx-*): solda A–Z gruplu liste, sağda okuma paneli
@@ -557,7 +557,7 @@ html.ui-v7:not(.theme-dark) :is(.cx-q, .ds-card, .ds-list, .ds-panel, .lh-card, 
   .gx-list { position: sticky; top: 60px; max-height: calc(var(--vvh, 100dvh) - 76px); overflow-y: auto; overscroll-behavior: contain; padding-right: 2px; scrollbar-width: thin; }
 }
 .gx-group > ul { list-style: none; margin: 0; padding: 0; border-radius: 14px; background: var(--color-white); overflow: hidden; }
-html.ui-v7:not(.theme-dark) .gx-group > ul { box-shadow: 0 0 0 1px rgb(40 40 30 / .05); }
+html.ui-v7:not(.theme-dark) .gx-group > ul { box-shadow: 0 0 0 1px rgb(30 40 60 / .06); }
 .gx-letter { position: sticky; top: 0; z-index: 1; margin: 0; padding: 4px 6px 6px; font-family: var(--font-round); font-size: 13px; font-weight: 700; color: var(--color-ink-3); background: var(--color-canvas); }
 .gx-group > ul > li + li .gx-row { box-shadow: inset 52px 1px 0 var(--color-white), inset 0 1px 0 var(--color-line-soft); }
 .gx-row { width: 100%; display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 7px 12px; border: 0; background: transparent; color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; transition: background-color .12s; }
@@ -573,7 +573,7 @@ html.ui-v7:not(.theme-dark) .gx-group > ul { box-shadow: 0 0 0 1px rgb(40 40 30 
 .gx-kurul { flex-shrink: 0; font-family: var(--font-round); font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); }
 .gx-detail { min-width: 0; position: sticky; top: 60px; max-height: calc(var(--vvh, 100dvh) - 76px); display: flex; }
 .gx-pane { width: 100%; border-radius: 14px; background: var(--color-white); animation: ds-pop .2s var(--ease-out-soft) both; }
-html.ui-v7:not(.theme-dark) .gx-pane { box-shadow: 0 0 0 1px rgb(40 40 30 / .05), 0 1px 2px rgb(40 40 30 / .03); }
+html.ui-v7:not(.theme-dark) .gx-pane { box-shadow: 0 0 0 1px rgb(30 40 60 / .06), 0 1px 2px rgb(30 40 60 / .04); }
 .gx-pane .ds-modal-head { background: transparent; padding: 16px 12px 10px 20px; }
 .gx-pane .ds-modal-body { padding: 4px 20px 20px; }
 .gx-pane .ds-modal-foot { background: transparent; border-top: 1px solid var(--color-line-soft); }
@@ -594,3 +594,9 @@ html.ui-v7 .ds-alpha > button:not(:disabled):hover { background: var(--color-acc
   .gx-filters:not(.is-open) { display: none; }
   .gx-filters.is-open { animation: ds-pop .18s var(--ease-out-soft) both; }
 }
+
+/* Açık tema: gri dolgulu alanlar yerine beyaz + ince kenar (zemin grimsi görünmesin) */
+html.ui-v7:not(.theme-dark) :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .ds-panel-search, .ms-cpal-btn) { background: var(--color-white); box-shadow: inset 0 0 0 1px var(--color-line); }
+html.ui-v7:not(.theme-dark) :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field):focus-within { box-shadow: inset 0 0 0 1px var(--color-accent), 0 0 0 3px var(--color-accent-soft); }
+html.ui-v7:not(.theme-dark) :is(.ds-seg, .ms-seg, .ms-f-seg) { background: #ECEFF3; }
+html.ui-v7:not(.theme-dark) :is(.ds-select, .ms-select-chip, .ms-btn.is-outline, .cx-tab, .ms-chip, .ms-fchip) { box-shadow: inset 0 0 0 1px var(--color-line); }
