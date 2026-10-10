@@ -330,6 +330,9 @@ Dosyalar: `src/components/learn/lesson/`
 - Kalem/çizim katmanı (`SlideDrawingCanvas`) CSS pikseliyle çizer; DPR ile ikinci kez çarpma (telefonda çizgiler kayıyordu).
 - **Kalem algılama** (`src/components/ui/penInput.ts`): bir kez `pointerType: "pen"` görülünce cihaz kalemli sayılır (oturum boyunca). Kalemli cihazda marker ve çizim yalnız kalemle yazar; parmak sayfayı kaydırır (`startFingerPan`). Kalem hiç görülmezse parmak yazar. Yüzen çubuktaki "Parmakla yaz" algılamayı sıfırlar.
 - **Araçlar menüsü** her seçimden sonra kapanır. Marker ve Kalem seçilince ekranın tepesinde yüzen çubuk açılır: marker için 4 renk + silgi; kalem için Kalem/Marker/Silgi, 6 renk, 3 kalınlık; kalem/parmak durumu ve kapatma. İşaretlerken bilgi çekmecesi gizlenir.
+- **Pekiştir adım çubuğu** (`PracticeSet`, `.ls-psteps`): sekme şeridi yatayda kaymaz, sarar; etkin adım etiketiyle genişler, diğerleri simgedir. Telefonda 6+ etkinlikte etkin adım da simgeye iner (ad kart başlığında). Alttaki ince çizgi tamamlanan oranı gösterir; bir etkinlik bitince "Sonraki: <ad>" düğmesi çıkar.
+- **Kart içinde metin kesilmez:** etiketler, kategori adları, kutup adları sarar (`overflow-wrap: anywhere`); `.ls-ix-body .ls-btn` tek satıra zorlanmaz. Uzun iki kutuplu adlar (`venn_grid`) satırlarda kısa harfle (A / B / İkisi) seçilir, tam ad üstteki kutup etiketinde ve `aria-label`'dadır.
+- **Hareket yalnız durum anlatır:** seçim → karar → ilerleme (damga, sarsıntı, puan uçuşu, kart destesi). `prefers-reduced-motion` altında hepsi kapanır. Veri açıklamalarındaki "Doğru." / "Tuzak / Yalan!" hükümleri ekranda ayıklanır (`cleanVerdict`); hükmü arayüz verir.
 - Kalıcı tercih anahtarları: `medsoru_learn_layout`, `medsoru_learn_mode`, `medsoru_learn_toc`, `medsoru_learn_done_v1`, `medsoru_learn_progress_v1`, `medsoru_learn_voter_id`.
 
 ---
@@ -340,7 +343,7 @@ Dosyalar: `src/components/learn/lesson/`
 - [ ] `python3 scripts/validate_learning_decks.py` → **0 HATA** (yeni destede uyarı da olmamalı).
 - [ ] Hiçbir metin `…` ile bitmiyor; ipuçları cevabı ele vermiyor.
 - [ ] Mini soru/klinik karar/tuzak avı: tek doğru (quiz), tek tuzak (`spot_the_lie`), her şıkta/önermede açıklama.
-- [ ] Her slaytta 4–6 etkileşim; `venn_grid` kriterleri (`A`/`B`/`both`/`neither`) ve `swipe_matching` kartları yalnızca öğrenilmiş kavramları içerir.
+- [ ] Her slaytta 4–6 etkileşim (adımda en fazla 1 zincir); zorluk orta-zor (mekanizma + ayırıcı tanı muhakemesi); `venn_grid` kriterleri (`A`/`B`/`both`/`neither`) ve `swipe_matching` kartları yalnızca öğrenilmiş kavramları içerir.
 - [ ] Zincir basamakları "N. Etiket: tam cümle"; karşılaştırmada sol/sağ eşit.
 - [ ] `correctAnswer` tek harf; şıklarda `key` A–E.
 - [ ] Her 6–12 adımda bir tekrar sayfası ya da tutarlı `badge` ile bölümleme.
