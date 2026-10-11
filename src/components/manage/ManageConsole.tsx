@@ -27,6 +27,7 @@ import {
   Brain,
   Clock,
   Boxes,
+  BookOpenCheck,
 } from 'lucide-react';
 import type { QuestionItem, Committee, AdminNotification } from '../../types';
 import { ApiService } from '../../services/api';
@@ -42,6 +43,7 @@ import { ManageDataSection } from './ManageDataSection';
 import { ManageCatalogSection } from './ManageCatalogSection';
 import { ManagePhasesSection } from './ManagePhasesSection';
 import { ManageMergesSection } from './ManageMergesSection';
+import { ManageDersIsciSection } from './ManageDersIsciSection';
 import { ManageInboxSection } from './ManageInboxSection';
 import { ManageModerationSection } from './ManageModerationSection';
 import { ManageUsersSection } from './ManageUsersSection';
@@ -71,7 +73,7 @@ import {
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'pending' | 'inbox' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
+export type ManageSection = 'pending' | 'inbox' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -97,6 +99,7 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
   { id: 'catalog', slug: 'veri-katalogu', label: 'Veri kataloğu', hint: 'Her veri türü tek yerde: ara, sınıflara göre süz, kaydı düzenle, değerlendir (onaylı / inceleme / sorunlu), etiketle ve ilişkileri gez.', icon: Boxes, group: 'İçerik', keywords: 'katalog sınıflandır etiket değerlendir ilişki deste kazanım sözlük kart hastalık özet geri bildirim müzik' },
   { id: 'data', slug: 'tum-veriler', label: 'Tüm veriler', hint: 'Her veri kümesi tek tabloda: ara, sırala, seç, toplu işlem yap, CSV al.', icon: Table2, group: 'İçerik', keywords: 'tablo csv toplu' },
   { id: 'phases', slug: 'fazlar', label: 'Faz verileri', hint: 'Soru bazında faz çıktıları: gez, elle düzelt, arama testini çalıştır.', icon: FlaskConical, group: 'İçerik', keywords: 'faz 14 faz 15' },
+  { id: 'ders_isci', slug: 'yeni-dersler', label: 'Yeni dersler', hint: 'Drive\'a eklenen ders PDF\'lerinden ders işçisinin ürettiği paketler: incele, önizle, onayla; 2026-27 checklist durumu.', icon: BookOpenCheck, group: 'İçerik', keywords: 'ders işçisi drive pdf onay taslak deste checklist yeni ders' },
   { id: 'merges', slug: 'birlesenler', label: 'Birleştirilen sorular', hint: 'Kopya çıkmış sorular: yan yana karşılaştır, asıl soruyu seç ya da ayır.', icon: GitMerge, group: 'İçerik', keywords: 'kopya birleştir' },
   { id: 'datacore', slug: 'veri-merkezi', label: 'Veri Merkezi (v2)', hint: 'Bağımsız Core v2 hattı: sorular, kazanım, ders notu bağları, kavram grafı, toplu tamamlama.', icon: Database, group: 'İçerik', keywords: 'core kazanım graf' },
   { id: 'notebooklm', slug: 'notebooklm', label: 'NotebookLM Stüdyosu', hint: 'NotebookLM JSON/MD çıktılarını yükle, alternatif olarak sakla, orijinalle karşılaştır ve tercihi seç.', icon: Brain, group: 'İçerik', keywords: 'notebooklm ai json alternatif rag soru deste spot' },
@@ -522,6 +525,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
             )}
             {section === 'phases' && <ManagePhasesSection adminEmail={adminEmail} />}
             {section === 'merges' && <ManageMergesSection adminEmail={adminEmail} />}
+            {section === 'ders_isci' && <ManageDersIsciSection adminEmail={adminEmail} />}
 
             {section === 'drafts' && (
               <ManageDraftsSection

@@ -1,4 +1,5 @@
 import express from 'express';
+import { dersIsciRouter } from './src/services/dersIsciProxy';
 import compression from 'compression';
 import { createServer as createViteServer } from 'vite';
 import { Type } from '@google/genai';
@@ -3524,6 +3525,9 @@ app.put('/api/past-question-reviews/:id/proposal', requireAdmin, (req, res) => {
     res.status(500).json({ error: 'Öneri güncellenemedi: ' + err.message });
   }
 });
+
+// Ders işçisi onay ekranı (Yönetim → Yeni dersler): işçinin iç API'sine yönetici vekili (src/services/dersIsciProxy.ts)
+app.use('/api/admin/ders-isci', requireAdmin, dersIsciRouter());
 
 // Kopya soru birleştirme (src/services/questionMerge.ts): grupları listele, asıl soruyu seç, onayla, ayır (Admin)
 app.get('/api/admin/question-merges', requireAdmin, (_req, res) => {
