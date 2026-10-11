@@ -82,9 +82,33 @@ export function getQueryIntel(): QueryIntelEngine | null {
   return engine;
 }
 
+/**
+ * Konteyner bellek sınırına kalan pay (MB). Sınır yoksa (cihaz) null.
+ * Derleyici ~1,2 GB tepe yapar; uygulama konteyneri 3 GB tavanlıysa (Oracle) aynı konteynerde derlemek
+ * OOM ile tüm siteyi düşürebilir → pay yetmezse derleme atlanır, Oracle'da ayrı konteynerde çalıştırılır
+ * (deploy/oracle/build-search.sh).
+ */
+function memoryHeadroomMb(): number | null {
+  try {
+    const max = fs.readFileSync('/sys/fs/cgroup/memory.max', 'utf-8').trim();
+    if (max === 'max') return null;
+    const cur = Number(fs.readFileSync('/sys/fs/cgroup/memory.current', 'utf-8').trim());
+    return (Number(max) - cur) / 1048576;
+  } catch {
+    return null;
+  }
+}
+
 /** Derleyiciyi düşük öncelikli alt süreç olarak çalıştırır (imza aynıysa hemen çıkar). */
 export function runQueryIntelBuild(opts: { force?: boolean; graph?: boolean } = {}): Promise<{ ok: boolean; out: string }> {
   if (building) return Promise.resolve({ ok: false, out: 'zaten derleniyor' });
+  const headroom = memoryHeadroomMb();
+  if (headroom !== null && headroom < Number(process.env.MEDS_QUERY_INTEL_MIN_HEADROOM_MB || 1700)) {
+    const out = `bellek payı yetersiz (${Math.round(headroom)} MB) — derleme bu konteynerde atlandı; ayrı konteynerde çalıştırın (deploy/oracle/build-search.sh)`;
+    lastBuild = { at: new Date().toISOString(), ok: false, ms: 0, out };
+    console.warn('[query-intel]', out);
+    return Promise.resolve({ ok: false, out });
+  }
   try {
     fs.mkdirSync(OUT_DIR, { recursive: true });
     // Başka bir süreç (ör. ikinci sunucu kopyası) derliyorsa ve kilit 20 dk'dan yeni ise atla

@@ -102,7 +102,8 @@ function lexiconSources(root: string) {
     diseases: path.join(root, 'src', 'data', 'diseases.json'),
     encyclopedia: path.join(root, 'src', 'data', 'medical_encyclopedia.json'),
     glossary: path.join(root, 'src', 'data', 'medical_glossary.json'),
-    terms: path.join(root, '..', 'meds_database_v2', 'tibbi_terimler_sozlugu', 'tibbi_terimler_sozlugu.json'),
+    // Konteynerde meds_database_v2 farklı yere bağlanabilir: MEDS_DATABASE_V2_DIR
+    terms: path.join(process.env.MEDS_DATABASE_V2_DIR || path.join(root, '..', 'meds_database_v2'), 'tibbi_terimler_sozlugu', 'tibbi_terimler_sozlugu.json'),
   };
 }
 
@@ -152,7 +153,9 @@ function buildConcepts(root: string): MutConcept[] {
 
   const diseases = readJson<any[]>(src.diseases) || [];
   for (const d of diseases) {
-    add(d.name, 'disease', `disease:${d.id}`, d.category || '', [[d.latinName, true], ...paren(d.name)]);
+    // Birleştirilmiş eski kayıtların adları (altNames) da aynı kavrama bağlanır
+    const alt = (d.altNames || []).flatMap((n: string) => [[n, true], ...paren(n)]);
+    add(d.name, 'disease', `disease:${d.id}`, d.category || '', [[d.latinName, true], ...paren(d.name), ...alt]);
   }
   const enc = readJson<any[]>(src.encyclopedia) || [];
   const diseaseIds = new Set(diseases.map((d) => d.id));
