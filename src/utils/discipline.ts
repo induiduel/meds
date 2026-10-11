@@ -45,3 +45,25 @@ export function disciplineLabel(name?: string | null): string {
 
 /** `className` için: "d-pat" gibi; renkler CSS değişkeni olarak alt öğelere geçer */
 export const disciplineClass = (name?: string | null) => `d-${disciplineKey(name)}`;
+
+/**
+ * Ders grupları (tıp eğitimindeki klasik ayrım). Listeler önce gruba, grup içinde soru sayısına göre dizilir.
+ * Sıra = ekrandaki sıra.
+ */
+export const DISCIPLINE_GROUPS: { id: string; label: string; keys: DisciplineKey[] }[] = [
+  { id: 'temel', label: 'Temel tıp', keys: ['pat', 'farm', 'mikro', 'biyo', 'gen', 'fiz', 'ana'] },
+  { id: 'dahili', label: 'Dahili', keys: ['ic', 'enf', 'noro', 'kardi', 'onko', 'cocuk', 'psik', 'ftr', 'acil'] },
+  { id: 'cerrahi', label: 'Cerrahi', keys: ['cerr', 'kadin', 'uro'] },
+  { id: 'toplum', label: 'Toplum sağlığı', keys: ['halk'] },
+  { id: 'diger', label: 'Diğer', keys: ['diger'] },
+];
+const GROUP_OF = new Map<DisciplineKey, number>(DISCIPLINE_GROUPS.flatMap((g, i) => g.keys.map((k) => [k, i] as [DisciplineKey, number])));
+export const disciplineGroupIndex = (name?: string | null) => GROUP_OF.get(disciplineKey(name)) ?? DISCIPLINE_GROUPS.length - 1;
+
+/** Ders adlarını gruplar; grup içinde `count` azalan, eşitse ada göre. Boş gruplar dönmez. */
+export function groupDisciplines<T>(items: T[], name: (x: T) => string, count: (x: T) => number) {
+  const buckets = DISCIPLINE_GROUPS.map((g) => ({ ...g, items: [] as T[] }));
+  for (const it of items) buckets[disciplineGroupIndex(name(it))].items.push(it);
+  for (const b of buckets) b.items.sort((a, c) => count(c) - count(a) || name(a).localeCompare(name(c), 'tr'));
+  return buckets.filter((b) => b.items.length > 0);
+}

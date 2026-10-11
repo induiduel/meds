@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ChevronRight, Database, FileDown, LayoutGrid, Moon, ShieldCheck, Sun, SunMedium, Bell, Plus } from 'lucide-react';
+import { ChevronRight, Database, FileDown, LayoutGrid, Moon, ShieldCheck, Sun, SunMedium, Bell, Plus, CloudUpload } from 'lucide-react';
+import { offlineDatabaseService } from '../../services/offlineDatabaseService';
 import { prefetchRoute } from '../../routePrefetch';
 
 /** Dokunuşta çok kısa titreşim (destekleyen telefonlarda) — uygulama hissi */
@@ -39,6 +40,8 @@ export const TabBar: React.FC<{
     });
   }, []);
 
+  const [queued, setQueued] = useState(() => offlineDatabaseService.getState().queuedActionsCount);
+  useEffect(() => offlineDatabaseService.subscribe((st) => setQueued(st.queuedActionsCount)), []);
   const look = useAppearance();
   const inMore = !TAB_ITEMS.some((t) => t.id === active) && active !== 'practice';
   useEffect(() => setMore(false), [active]);
@@ -92,7 +95,7 @@ export const TabBar: React.FC<{
             aria-current={inMore ? 'page' : undefined}
             style={{ ['--tab-c' as string]: 'var(--color-ink-2)' }}
           >
-            <span className="sh-tab-pill"><LayoutGrid strokeWidth={inMore ? 2.3 : 1.9} />{unreadNotifs > 0 && <i className="sh-tab-dot" aria-hidden />}</span>
+            <span className="sh-tab-pill"><LayoutGrid strokeWidth={inMore ? 2.3 : 1.9} />{(unreadNotifs > 0 || queued > 0) && <i className="sh-tab-dot" aria-hidden />}</span>
             <span className="sh-tab-l">Daha</span>
           </button>
         </div>
@@ -156,6 +159,23 @@ export const TabBar: React.FC<{
                 ) : (
                   <ChevronRight className="w-4 h-4 shrink-0" style={{ color: 'var(--color-line-2)' }} />
                 )}
+              </button>
+              <button
+                type="button"
+                className="ui-row has-icon sh-more-row"
+                onClick={() => {
+                  setMore(false);
+                  window.dispatchEvent(new Event('medsoru:pending'));
+                }}
+              >
+                <span className="ui-ico" style={{ '--ico-bg': queued ? 'var(--color-warn)' : '#34C759', '--ico-fg': '#fff' } as React.CSSProperties}>
+                  <CloudUpload strokeWidth={2.1} />
+                </span>
+                <span className="ui-row-main">
+                  <b>Gönderim kuyruğu</b>
+                  <span>{queued ? 'Bağlantı bekleyen işlemler · gör, iptal et' : 'Bekleyen işlem yok'}</span>
+                </span>
+                {queued > 0 ? <span className="ui-tag is-warn">{queued}</span> : <ChevronRight className="w-4 h-4 shrink-0" style={{ color: 'var(--color-line-2)' }} />}
               </button>
               <a href={pathFor('settings')} onClick={linkClick(() => go('settings'))} className="ui-row has-icon sh-more-row" aria-current={active === 'settings' ? 'page' : undefined}>
                 <span className="ui-ico" style={{ '--ico-bg': NAV_ITEMS.settings.tint, '--ico-fg': '#fff' } as React.CSSProperties}><NAV_ITEMS.settings.icon strokeWidth={2.1} /></span>

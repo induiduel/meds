@@ -1,5 +1,5 @@
 // MedSoru Service Worker - PWA v4: Güçlendirilmiş Çevrimdışı Önbellek, Sıfır Gecikmeli Yenileme, Background Sync ve Push
-const CACHE_VERSION = 'medsoru-pwa-v5';
+const CACHE_VERSION = 'medsoru-pwa-v6';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;

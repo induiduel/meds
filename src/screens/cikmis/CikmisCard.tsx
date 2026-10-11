@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useId, useRef, useState } from 'react';
+import React, { useLayoutEffect, useCallback, useEffect, useId, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { BookOpen, Check, Flag, History, Info, MessageSquare, Share2, ThumbsDown, ThumbsUp, X } from 'lucide-react';
 import { Highlight } from '../../components/ui/StemText';
@@ -183,15 +183,23 @@ const TapPopover: React.FC<{
   onInfo: () => void; onObject: () => void; onClose: () => void;
 }> = ({ x, y, info, canObject, onInfo, onObject, onClose }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [left, setLeft] = useState(x);
-  const [below, setBelow] = useState(false);
-  useEffect(() => {
+  // Konum boyamadan ÖNCE hesaplanır (useLayoutEffect): balon kendi doğal genişliğinde ölçülür (CSS width:max-content,
+  // nowrap) ve ekranın 10px içine sığacak şekilde kaydırılır. Eskiden kenara yakın dokunuşta balon önce dokunma
+  // noktasına çizilip daralıyor, "Hata Bildir" iki satıra kırılıyor ve ok balonun dışına taşıyordu.
+  const [pos, setPos] = useState<{ left: number; below: boolean; ax: number; ready: boolean }>({ left: x, below: false, ax: 0, ready: false });
+  useLayoutEffect(() => {
     const el = ref.current;
-    if (el) {
-      const w = el.offsetWidth;
-      setLeft(Math.min(window.innerWidth - w / 2 - 10, Math.max(w / 2 + 10, x)));
-      setBelow(y - el.offsetHeight - 22 < 64); // üstte yer yoksa altta aç
-    }
+    if (!el) return;
+    const w = el.offsetWidth;
+    const h = el.offsetHeight;
+    const vw = document.documentElement.clientWidth;
+    const left = Math.min(vw - w / 2 - 10, Math.max(w / 2 + 10, x));
+    const topSafe = 64; // üst çubuk
+    const below = y - h - 22 < topSafe;
+    const ax = Math.max(-(w / 2 - 20), Math.min(w / 2 - 20, x - left)); // ok balonun köşelerine taşmasın
+    setPos({ left, below, ax, ready: true });
+  }, [x, y]);
+  useEffect(() => {
     const close = (e: Event) => {
       if (e.type === 'keydown' && (e as KeyboardEvent).key !== 'Escape') return;
       if (e.type === 'pointerdown' && ref.current?.contains(e.target as Node)) return;
@@ -214,10 +222,10 @@ const TapPopover: React.FC<{
       <span className="qk-ripple" style={{ left: x, top: y }} aria-hidden><i /><i /></span>
       <div
         ref={ref}
-        className={`qk-pop ${below ? 'is-below' : ''}`}
+        className={`qk-pop ${pos.below ? 'is-below' : ''}`}
         role="dialog"
         aria-label="Şık işlemleri"
-        style={{ left, top: below ? y + 22 : y - 22, ['--ax' as string]: `${x - left}px` }}
+        style={{ left: pos.left, top: pos.below ? y + 22 : y - 22, ['--ax' as string]: `${pos.ax}px`, visibility: pos.ready ? undefined : 'hidden' }}
       >
         {info && (
           <button type="button" className="qk-pop-info" onClick={() => { onClose(); onInfo(); }} aria-label="Bu şıkta yapılan değişiklik" title="Bu şıkta yapılan değişiklik">
@@ -310,7 +318,7 @@ export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
   return (
     <article ref={rootRef} id={p.anchorId} className={`qk ${p.className || ''}`}>
       <header className={`qk-h ${flagsOpen ? 'is-flags-open' : ''}`}>
-        {p.ders && <span className="qk-ders"><i className="hk-dot" aria-hidden />{p.ders}</span>}
+        {p.ders && <span className="qk-ders" title={p.ders}><i className="hk-dot" aria-hidden /><span className="qk-ders-t">{p.ders}</span></span>}
         {p.kurul && <span className="qk-chip" title="Kurul">{p.kurul}</span>}
         <span className="qk-kunye">{p.kunye}</span>
         {shownFlags.length > 0 && <span className="qk-flags">{shownFlags.map((f, i) => <React.Fragment key={i}>{f}</React.Fragment>)}</span>}

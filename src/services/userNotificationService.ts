@@ -199,8 +199,8 @@ class UserNotificationService {
     try {
       const systemNotif = new Notification(notif.title, {
         body: notif.message,
-        icon: '/icons/icon-192x192.png',
-        badge: '/favicon.ico',
+        icon: '/icons/icon-192x192.png?v=9',
+        badge: '/favicon.png?v=9',
         tag: notif.targetId || 'medsoru-notification',
       });
 

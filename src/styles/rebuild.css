@@ -369,6 +369,7 @@ html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .rd-search
 .qk-kunye { font-family: var(--font-round, ui-monospace, monospace); font-size: 12.5px; font-weight: 600; color: var(--color-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .qk-ders { display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 8px; border-radius: 999px; background: var(--color-field); color: var(--color-ink-2); font-size: 12px; font-weight: 600; line-height: 1; white-space: nowrap; max-width: 220px; overflow: hidden; text-overflow: ellipsis; }
 .qk-ders .hk-dot { width: 7px; height: 7px; border-radius: 99px; flex-shrink: 0; }
+.qk-ders-t { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 22px; }
 .qk-flags { display: inline-flex; align-items: center; gap: 4px; flex-wrap: wrap; }
 .qk-flags .cx-flag { height: 22px; padding: 0 8px; border-radius: 999px; font-size: 11.5px; gap: 4px; }
 .qk-flags .cx-flag svg { width: 12px; height: 12px; }
@@ -1254,7 +1255,9 @@ html.ui-v7 .cx-dock .cx-search { height: 40px; min-height: 40px; border-radius: 
   .qk.is-solve .qk-h > .qk-kunye { display: none; }
   .qk.is-solve .qk-h { gap: 2px; }
   .qk.is-solve .qk-h .qk-ib, .qk.is-solve .qk-h > button { min-width: 32px !important; width: 32px !important; }
+  /* Nokta + yazı esnek kutuda kalır (blok yapınca boşluk kayboluyor, nokta yazıya biniyordu); yalnız yazı kısalır */
   .qk-h > .qk-ders { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; line-height: 22px !important; }
+  .qk-h > .qk-ders:has(> .hk-dot) { display: inline-flex; }
 }
 
 /* 40 · Soru havuzu kartı — sade tek kutu (2026-10-11 gece 20).
@@ -1565,7 +1568,7 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
   background: color-mix(in srgb, var(--color-ink) 8%, transparent); animation: qk-rip 900ms cubic-bezier(.22, 1, .36, 1) both; }
 .qk-ripple i:nth-child(2) { animation-delay: 140ms; background: transparent; }
 @keyframes qk-rip { from { transform: scale(.3); opacity: .9; } to { transform: scale(2.1); opacity: 0; } }
-.qk-pop { position: fixed; z-index: 96; display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 18px;
+.qk-pop { position: fixed; z-index: 96; display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 18px; width: max-content; max-width: calc(100vw - 20px); white-space: nowrap;
   background: color-mix(in srgb, var(--color-white) 92%, transparent); -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2);
   box-shadow: 0 18px 40px -16px rgb(0 0 0 / .35), 0 0 0 1px var(--color-line); transform: translate(-50%, -100%); transform-origin: calc(50% + var(--ax, 0px)) 100%;
   animation: qk-pop-in 380ms cubic-bezier(.34, 1.56, .64, 1) both; }
@@ -1586,3 +1589,30 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 @keyframes qk-pop-in-b { from { opacity: 0; transform: translate(-50%, 0) translateY(-8px) scale(.82); } to { opacity: 1; transform: translate(-50%, 0); } }
 @media (prefers-reduced-motion: reduce) { .qk-lift-row, .qk-lift-front, .qk-lift-pill, .qk-pop, .qk-ripple i, .qk-lift-row::before { animation: none !important; transition: none !important; } }
 .qk-lift.is-lifted .qk-lift-front:not(.is-correct):not(.is-wrong) { background: var(--color-white) !important; }
+
+/* Çıkmış · "Derslere göz at" — tek satır, yatay kayan şerit (v9). Kartlar eşit genişlikte, kaydırma yerine oturur,
+   kenarlarda solma; masaüstünde ‹ › düğmeleri, telefonda parmakla kaydırma. */
+.hk-browse-cnt { margin-left: 6px; font: 600 12px/1 var(--font-sans); color: var(--color-ink-3); letter-spacing: 0; }
+.hk-rail-nav { display: inline-flex; gap: 4px; }
+.hk-rail-btn { width: 30px; height: 30px; border-radius: 99px; display: grid; place-items: center; color: var(--color-ink-2); background: var(--color-white); box-shadow: inset 0 0 0 1px var(--color-line); cursor: pointer; transition: background .15s, color .15s, transform .12s; }
+.hk-rail-btn:hover { color: var(--color-accent); background: var(--color-accent-soft); }
+.hk-rail-btn:active { transform: scale(.92); }
+.hk-rail-btn > svg { width: 16px; height: 16px; }
+@media (pointer: coarse) { .hk-rail-nav { display: none; } }
+.hk-browse-list.is-rail { display: flex; grid-template-columns: none; gap: 8px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-padding-inline: 2px;
+  overscroll-behavior-x: contain; scrollbar-width: none; padding: 2px 2px 6px; margin: 0 -2px; border-radius: 0; background: none;
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); }
+.hk-browse-list.is-rail::-webkit-scrollbar { display: none; }
+.hk-browse-list.is-rail > li { flex: 0 0 196px; scroll-snap-align: start; animation: ui-in .32s var(--mo-ease, ease) both; }
+.hk-browse-list.is-rail button { min-height: 44px; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--color-line); animation: none; }
+.hk-browse-list.is-rail li + li button { box-shadow: inset 0 0 0 1px var(--color-line); }
+@media (max-width: 639px) { .hk-browse-list.is-rail > li { flex-basis: 164px; } .hk-browse-list.is-rail .hk-browse-t { font-size: 13px; } }
+@media (prefers-reduced-motion: reduce) { .hk-browse-list.is-rail > li { animation: none; } }
+/* Ders şeridinde grup başlığı (Temel tıp · Dahili · Cerrahi · Toplum sağlığı) */
+.hk-browse-list.is-rail > li.hk-rail-gl { flex: 0 0 auto; display: flex; align-items: center; padding: 0 2px 0 6px; scroll-snap-align: start; animation: none; }
+.hk-browse-list.is-rail > li.hk-rail-gl:first-child { padding-left: 0; }
+.hk-rail-gl > span { display: block; max-width: 64px; font-size: 10.5px; line-height: 1.15; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); white-space: normal; text-align: left; }
+.hk-browse-list.is-rail > li.hk-rail-gl:not(:first-child) { margin-left: 8px; border-left: 1px solid var(--color-line); padding-left: 10px; }
+/* Süzgeç: ders listesinde grup başlıkları */
+.cx-facet-gl { padding: 10px var(--dn-pad, 14px) 4px; font-size: 11.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); background: var(--color-canvas); }
+.cx-facet-gl:first-child { padding-top: 6px; }

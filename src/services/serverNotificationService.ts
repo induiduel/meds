@@ -185,8 +185,8 @@ export class ServerNotificationService {
     const jsonPayload = JSON.stringify({
       title: payload.title,
       body: payload.body,
-      icon: payload.icon || 'https://nofrostlife.com.tr/assets/favicon.ico',
-      badge: payload.badge || 'https://nofrostlife.com.tr/assets/favicon.ico',
+      icon: payload.icon || 'https://nofrostlife.com.tr/icons/icon-192x192.png?v=9',
+      badge: payload.badge || 'https://nofrostlife.com.tr/favicon.png?v=9',
       tag: payload.data?.tag || `medsoru-${payload.data?.type || 'item'}-${payload.data?.questionId || 'general'}`,
       data: {
         url: payload.url || 'https://nofrostlife.com.tr',

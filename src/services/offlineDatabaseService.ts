@@ -848,6 +848,35 @@ class OfflineDatabaseService {
     }
   }
 
+  /** Kuyruktaki işlemler (en yeni üstte) — "Gönderim kuyruğu" sayfası için. */
+  public async listQueue(): Promise<(OfflineAction & { id: number })[]> {
+    const db = await this.initDb();
+    if (!db) return [];
+    return (await this.readQueue(db)).sort((a, b) => String(b.timestamp).localeCompare(String(a.timestamp)));
+  }
+
+  /** Bekleyen işlemleri iptal eder (sunucuya hiç gönderilmez). `ids` verilmezse tümü. */
+  public async cancelQueued(ids?: number[]): Promise<number> {
+    const db = await this.initDb();
+    if (!db) return 0;
+    const all = await this.readQueue(db);
+    const target = ids ? all.filter((a) => ids.includes(a.id)) : all;
+    if (!target.length) return 0;
+    await this.writeQueue(db, (st) => target.forEach((a) => st.delete(a.id)));
+    this.state.queuedActionsCount = (await this.readQueue(db)).length;
+    this.notify();
+    return target.length;
+  }
+
+  /** İptali geri al: işlemi aynı içerikle (deneme sayacı sıfırlanarak) kuyruğa geri koyar. */
+  public async restoreQueued(actions: OfflineAction[]): Promise<void> {
+    const db = await this.initDb();
+    if (!db || !actions.length) return;
+    await this.writeQueue(db, (st) => actions.forEach(({ id: _id, ...a }) => st.add({ ...a, attempts: 0, nextAt: 0 })));
+    this.state.queuedActionsCount = (await this.readQueue(db)).length;
+    this.notify();
+  }
+
   private draining: Promise<{ synced: number; failed: number }> | null = null;
 
   /**

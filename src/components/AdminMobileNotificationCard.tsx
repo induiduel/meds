@@ -271,13 +271,13 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
         if (swReg && swReg.showNotification) {
           await swReg.showNotification('🧪 MedSoru Test Bildirimi', {
             body: 'Tebrikler! nofrostlife.com.tr bildirimleri telefonunuzda başarıyla çalışıyor.',
-            icon: '/assets/favicon.ico',
+            icon: '/icons/icon-192x192.png?v=9',
             vibrate: [200, 100, 200],
           } as any);
         } else {
           new Notification('🧪 MedSoru Test Bildirimi', {
             body: 'Tebrikler! nofrostlife.com.tr bildirimleri telefonunuzda başarıyla çalışıyor.',
-            icon: '/assets/favicon.ico',
+            icon: '/icons/icon-192x192.png?v=9',
           });
         }
       }

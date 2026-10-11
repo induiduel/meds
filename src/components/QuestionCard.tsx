@@ -407,7 +407,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
             return (
               <header className={`qk-h is-pool ${flagsOpen ? 'is-flags-open' : ''}`}>
                 <span className="qk-chip" title={question.isUnassignedNumber ? 'Soru numarası bilinmiyor' : `Soru ${question.questionNumber}`}>{question.isUnassignedNumber ? '?' : `S${question.questionNumber}`}</span>
-                <span className="qk-ders"><i className="hk-dot" aria-hidden />{disciplineLabel(question.discipline) || question.discipline || 'Tıp'}</span>
+                <span className="qk-ders"><i className="hk-dot" aria-hidden /><span className="qk-ders-t">{disciplineLabel(question.discipline) || question.discipline || 'Tıp'}</span></span>
                 {question.topic && !/hatırlanan soru|çıkmış sorusu/i.test(question.topic) && <span className="qk-kunye is-topic" title={question.topic}>{question.topic}</span>}
                 <span className="qk-flags">{shown}</span>
                 {flagNodes.length > shown.length && <button type="button" className="qk-more-flags" onClick={() => setFlagsOpen(true)}>+{flagNodes.length - shown.length}</button>}

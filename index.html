@@ -6,9 +6,11 @@
     <title>MeDSor · Tıp Kurul Soru Havuzu</title>
     <meta name="description" content="Tıp fakültesi kurul sınavları için kolektif soru hatırlama, şık tamamlama ve yapay zeka ile %100 doğrulukta soru rekonstrüksiyon platformu." />
     <link rel="canonical" href="https://nofrostlife.com.tr" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=9" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=9" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=9" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=9" />
+    <link rel="manifest" href="/manifest.json?v=9" />
     <meta name="theme-color" content="#F4F6F9" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,6 +36,7 @@
           d.dataset.palette = (a && a.palettes && a.palettes[mode]) || 'a';
           d.dataset.density = (a && a.density) || 'normal';
           if (mode === 'dark') d.classList.add('theme-dark');
+          if (matchMedia('(display-mode: standalone)').matches || navigator.standalone) d.classList.add('is-standalone');
         } catch (e) {}
       })();
     </script>
@@ -93,56 +96,62 @@
       });
     </script>
     <style>
-      /* Açılış ekranı — tema uyumlu (açık/koyu, boyamadan önce html[data-mode] ayarlanır), marka renkleri.
-         Sıra: zemin ışıması → işaret yaylanarak belirir → kalp ritmi çizgisi çizilir → nabız halkası →
-         yazı harf harf yükselir → alt ince ilerleme çubuğu. Çıkışta hafif büyüyüp bulanıklaşarak kaybolur. */
+      /* Açılış ekranı (v9) — yeni simgeyle aynı çizim; TÜM hareketler GPU'da (transform/opacity):
+         uygulama kodu yüklenirken ana iş parçacığı meşgul olsa da takılmaz.
+         Sıra: simge yaylanarak belirir → EKG çizgisi soldan sağa TAMAMEN çizilir (iki katmanlı silme: dış katman
+         sağa kayarken iç katman ters yönde kayar, çizgi yerinde durur) → nabız atar + halka → yazı → ince çubuk.
+         Yüklü uygulamada (standalone) sistem açılış ekranı aynı simgeyi zaten gösterdiği için simge girişsiz başlar. */
       #app-splash {
-        --sp-bg: #F4F6F9; --sp-ink: #121A24; --sp-ink3: #566475; --sp-accent: #1A5FB4; --sp-brand: #E0245E; --sp-glow: rgba(10,106,133,.16);
+        --sp-bg: #F4F6F9; --sp-ink: #121A24; --sp-ink3: #566475; --sp-accent: #1A5FB4; --sp-glow: rgba(232,48,106,.10);
         position: fixed; inset: 0; z-index: 99999; display: grid; place-items: center; overflow: hidden;
         background: radial-gradient(60vmax 60vmax at 50% 42%, var(--sp-glow), transparent 62%), var(--sp-bg);
-        transition: opacity .45s ease, transform .55s cubic-bezier(.22,1,.36,1), filter .45s ease, visibility .45s;
+        transition: opacity .4s ease, transform .5s cubic-bezier(.22,1,.36,1), visibility .4s;
       }
-      html[data-mode="sepia"] #app-splash { --sp-bg: #F3ECDD; --sp-ink: #32271D; --sp-ink3: #6A5846; --sp-accent: #7E5026; --sp-brand: #B8324F; --sp-glow: rgba(126,80,38,.14); }
-      html[data-mode="dark"] #app-splash { --sp-bg: #0D1420; --sp-ink: #E2E8F1; --sp-ink3: #8A97A8; --sp-accent: #5CC6E4; --sp-brand: #FF375F; --sp-glow: rgba(92,198,228,.14); }
-      #app-splash.is-leaving { opacity: 0; transform: scale(1.04); filter: blur(6px); visibility: hidden; pointer-events: none; }
+      html[data-mode="sepia"] #app-splash { --sp-bg: #F3ECDD; --sp-ink: #32271D; --sp-ink3: #6A5846; --sp-accent: #7E5026; --sp-glow: rgba(184,50,79,.10); }
+      html[data-mode="dark"] #app-splash { --sp-bg: #0D1420; --sp-ink: #E2E8F1; --sp-ink3: #8A97A8; --sp-accent: #5CC6E4; --sp-glow: rgba(255,92,134,.12); }
+      #app-splash.is-leaving { opacity: 0; transform: scale(1.03); visibility: hidden; pointer-events: none; }
       .app-splash-mark { display: flex; flex-direction: column; align-items: center; gap: 18px; }
-      .app-splash-logo { position: relative; width: 92px; height: 92px; animation: sp-pop .7s cubic-bezier(.34,1.56,.64,1) both; }
-      .app-splash-logo svg { position: relative; z-index: 1; width: 100%; height: 100%; filter: drop-shadow(0 14px 24px rgba(224,36,94,.28)); }
-      .app-splash-box { fill: var(--sp-brand); }
-      .app-splash-pulse { fill: none; stroke: #fff; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 130; stroke-dashoffset: 130; animation: sp-draw .9s .35s cubic-bezier(.65,0,.35,1) forwards, sp-beat 1.6s 1.3s ease-in-out infinite; }
-      .app-splash-ring { position: absolute; inset: 0; border-radius: 30px; border: 2px solid var(--sp-brand); opacity: 0; animation: sp-ring 1.6s 1s cubic-bezier(.22,1,.36,1) infinite; }
+      .sp-logo { position: relative; width: 96px; height: 96px; will-change: transform;
+        animation: sp-pop .55s cubic-bezier(.34,1.56,.64,1) both, sp-beat 1.6s 1.15s ease-in-out infinite; }
+      html.is-standalone .sp-logo { animation: sp-beat 1.6s 1.15s ease-in-out infinite; }
+      .sp-clip { position: absolute; inset: 0; border-radius: 22.6%; overflow: hidden; box-shadow: 0 14px 28px -10px rgba(200,20,80,.45); transform: translateZ(0); }
+      .sp-clip > svg, .sp-wipe, .sp-wipe-in, .sp-wipe-in > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .sp-wipe, .sp-wipe-in { will-change: transform; animation-duration: .72s; animation-delay: .22s; animation-timing-function: cubic-bezier(.45,0,.25,1); animation-fill-mode: both; }
+      .sp-wipe { overflow: hidden; animation-name: sp-wipe-out; }
+      .sp-wipe-in { animation-name: sp-wipe-in; }
+      .sp-ring { position: absolute; inset: 0; border-radius: 22.6%; border: 2px solid #E8306A; opacity: 0; will-change: transform, opacity; animation: sp-ring 1.6s 1.15s cubic-bezier(.22,1,.36,1) infinite; }
       .app-splash-word { display: flex; font-family: "SF Pro Display", system-ui, -apple-system, "Segoe UI", sans-serif; font-weight: 700; font-size: 30px; letter-spacing: -.03em; color: var(--sp-ink); }
-      .app-splash-word > span { display: inline-block; opacity: 0; transform: translateY(10px); animation: sp-up .5s cubic-bezier(.22,1,.36,1) forwards; }
+      .app-splash-word > span { display: inline-block; opacity: 0; transform: translateY(10px); animation: sp-up .45s cubic-bezier(.22,1,.36,1) forwards; }
       .app-splash-word > span.is-acc { color: var(--sp-accent); }
-      .app-splash-word > span:nth-child(1) { animation-delay: .55s; } .app-splash-word > span:nth-child(2) { animation-delay: .6s; }
-      .app-splash-word > span:nth-child(3) { animation-delay: .65s; } .app-splash-word > span:nth-child(4) { animation-delay: .7s; }
-      .app-splash-word > span:nth-child(5) { animation-delay: .75s; } .app-splash-word > span:nth-child(6) { animation-delay: .8s; }
-      .app-splash-sub { margin-top: -8px; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 13px; font-weight: 500; color: var(--sp-ink3); opacity: 0; animation: sp-fade .6s .95s ease forwards; }
-      .app-splash-bar { position: absolute; left: 50%; bottom: max(48px, env(safe-area-inset-bottom)); width: 120px; height: 3px; margin-left: -60px; border-radius: 99px; overflow: hidden; background: color-mix(in srgb, var(--sp-ink) 10%, transparent); opacity: 0; animation: sp-fade .4s 1s ease forwards; }
-      .app-splash-bar::after { content: ""; position: absolute; top: 0; bottom: 0; width: 40%; border-radius: inherit; background: var(--sp-accent); animation: sp-slide 1.1s ease-in-out infinite; }
-      @keyframes sp-pop { 0% { opacity: 0; transform: scale(.4) rotate(-8deg); } 100% { opacity: 1; transform: none; } }
-      @keyframes sp-draw { to { stroke-dashoffset: 0; } }
-      @keyframes sp-beat { 0%, 100% { transform: none; } 12% { transform: scale(1.06); } 24% { transform: none; } 36% { transform: scale(1.04); } }
-      .app-splash-logo svg { transform-origin: 50% 50%; }
-      .app-splash-logo { animation-name: sp-pop; }
-      @keyframes sp-ring { 0% { opacity: .55; transform: scale(1); } 100% { opacity: 0; transform: scale(1.55); } }
+      .app-splash-word > span:nth-child(1) { animation-delay: .5s; } .app-splash-word > span:nth-child(2) { animation-delay: .55s; }
+      .app-splash-word > span:nth-child(3) { animation-delay: .6s; } .app-splash-word > span:nth-child(4) { animation-delay: .65s; }
+      .app-splash-word > span:nth-child(5) { animation-delay: .7s; } .app-splash-word > span:nth-child(6) { animation-delay: .75s; }
+      .app-splash-sub { margin-top: -8px; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 13px; font-weight: 500; color: var(--sp-ink3); opacity: 0; animation: sp-fade .5s .9s ease forwards; }
+      .app-splash-bar { position: absolute; left: 50%; bottom: max(48px, env(safe-area-inset-bottom)); width: 120px; height: 3px; margin-left: -60px; border-radius: 99px; overflow: hidden; background: color-mix(in srgb, var(--sp-ink) 10%, transparent); opacity: 0; animation: sp-fade .4s 1.1s ease forwards; }
+      .app-splash-bar::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 40%; border-radius: inherit; background: #E8306A; will-change: transform; animation: sp-slide 1.1s 1.1s ease-in-out infinite; transform: translateX(-100%); }
+      @keyframes sp-pop { 0% { opacity: 0; transform: scale(.6); } 100% { opacity: 1; transform: none; } }
+      @keyframes sp-wipe-out { from { transform: translateX(-100%); } to { transform: none; } }
+      @keyframes sp-wipe-in { from { transform: translateX(100%); } to { transform: none; } }
+      @keyframes sp-beat { 0%, 100% { transform: none; } 10% { transform: scale(1.07); } 22% { transform: none; } 34% { transform: scale(1.04); } 46% { transform: none; } }
+      @keyframes sp-ring { 0% { opacity: .5; transform: scale(1); } 100% { opacity: 0; transform: scale(1.55); } }
       @keyframes sp-up { to { opacity: 1; transform: none; } }
       @keyframes sp-fade { to { opacity: 1; } }
-      @keyframes sp-slide { 0% { left: -40%; } 100% { left: 100%; } }
+      @keyframes sp-slide { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
       @media (prefers-reduced-motion: reduce) {
-        #app-splash *, #app-splash *::after { animation: none !important; opacity: 1 !important; transform: none !important; stroke-dashoffset: 0 !important; }
+        #app-splash *, #app-splash *::after { animation: none !important; opacity: 1 !important; transform: none !important; }
+        .sp-ring, .app-splash-bar { display: none; }
       }
     </style>
   </head>
   <body>
     <div id="app-splash" aria-hidden="true">
       <div class="app-splash-mark">
-        <div class="app-splash-logo">
-          <span class="app-splash-ring"></span>
-          <svg viewBox="0 0 120 120">
-            <rect class="app-splash-box" x="6" y="6" width="108" height="108" rx="30" />
-            <path class="app-splash-pulse" d="M22 64 H44 L52 44 L62 84 L72 54 L78 64 H98" />
-          </svg>
+        <div class="sp-logo">
+          <span class="sp-ring"></span>
+          <div class="sp-clip">
+            <svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF5C86"/><stop offset=".55" stop-color="#E8306A"/><stop offset="1" stop-color="#C41450"/></linearGradient><radialGradient id="sph" cx=".26" cy=".14" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".3"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><rect width="512" height="512" fill="url(#spg)"/><rect width="512" height="512" fill="url(#sph)"/></svg>
+            <div class="sp-wipe"><div class="sp-wipe-in"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M92 278 H178 L206 222 L236 330 L274 150 L310 318 L330 278 H420" fill="none" stroke="rgba(110,8,40,.28)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 9)"/><path d="M92 278 H178 L206 222 L236 330 L274 150 L310 318 L330 278 H420" fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          </div>
         </div>
         <div class="app-splash-word"><span>M</span><span>e</span><span class="is-acc">D</span><span class="is-acc">S</span><span>o</span><span>r</span></div>
         <div class="app-splash-sub">Tıp kurul soru havuzu</div>

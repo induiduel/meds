@@ -4,10 +4,11 @@ import { WifiOff, Wifi, CloudUpload, RefreshCw } from 'lucide-react';
 import { useNetState, type NetState } from '../../services/net';
 import { offlineDatabaseService } from '../../services/offlineDatabaseService';
 import './system.css';
+import { PendingOpsSheet } from './PendingOpsSheet';
 
 /**
  * Bağlantı şeridi: ağ zayıf ya da yokken ekranın üstünde ince bir kapsül belirir, bekleyen işlem sayısını
- * gösterir ve "Şimdi dene" ile kuyruğu boşaltır. Bağlantı dönünce kısa bir "geri geldi" onayıyla kaybolur.
+ * gösterir; kapsüle dokununca Gönderim kuyruğu (PendingOpsSheet) açılır, ⟳ ile kuyruk hemen boşaltılır. Bağlantı dönünce kısa bir "geri geldi" onayıyla kaybolur.
  * Kendi köküne bağlanır (App'ten bağımsız) → her ekranda, tam ekran derslerde bile görünür.
  */
 const NetworkBanner: React.FC = () => {
@@ -53,7 +54,14 @@ const NetworkBanner: React.FC = () => {
   return (
     <div className={`nb-wrap ${visible ? 'is-in' : ''}`} aria-live="polite" role="status">
       {visible && (
-        <div className={`nb-pill ${kind}`}>
+        <div
+          className={`nb-pill ${kind} ${queued > 0 ? 'is-tap' : ''}`}
+          role={queued > 0 ? 'button' : undefined}
+          tabIndex={queued > 0 ? 0 : undefined}
+          aria-label={queued > 0 ? `${queued} bekleyen işlemi gör` : undefined}
+          onClick={(e) => { if (queued > 0 && !(e.target as HTMLElement).closest('.nb-btn')) window.dispatchEvent(new Event('medsoru:pending')); }}
+          onKeyDown={(e) => { if (queued > 0 && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); window.dispatchEvent(new Event('medsoru:pending')); } }}
+        >
           <span className="nb-ico"><Icon aria-hidden /></span>
           <span className="nb-t">{text}</span>
           {queued > 0 && <span className="nb-q" title="Sırada bekleyen işlem">{queued} sırada</span>}
@@ -75,5 +83,10 @@ export function installNetworkBanner() {
   const host = document.createElement('div');
   host.id = 'net-banner-root';
   document.body.appendChild(host);
-  createRoot(host).render(<NetworkBanner />);
+  createRoot(host).render(
+    <>
+      <NetworkBanner />
+      <PendingOpsSheet />
+    </>
+  );
 }

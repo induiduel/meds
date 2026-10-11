@@ -49,7 +49,7 @@ import {
 import { ActionItem } from './ui/ActionMenu';
 import { ReportQuestionModal } from './ReportQuestionModal';
 import { EmptySearch, SectionLoader } from './ui/Animations';
-import { disciplineClass, disciplineLabel } from '../utils/discipline';
+import { disciplineClass, disciplineLabel, groupDisciplines } from '../utils/discipline';
 import { QuestionItem, LectureNote, LectureNotePage, QuestionLectureMatch } from '../types';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { ApiService } from '../services/api';
@@ -254,7 +254,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [selectedCommittee, setSelectedCommittee] = useState<string>('all');
   const [selectedYear, setSelectedYear] = useState<string>('all');
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
-  const [browseAll, setBrowseAll] = useState(false);
+  const browseRef = useRef<HTMLUListElement>(null);
   const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'gemini_v3' | 'existing'>('all');
   const [phase14Filter, setPhase14Filter] = useState<'all' | 'faz14' | 'faz14_onayli' | 'faz14_bekleyen'>('all');
@@ -1114,12 +1114,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     () =>
       Array.from(facetCounts.topic.entries())
         .filter(([t, n]) => t !== 'all' && t && n > 0)
-        .sort((a, b) => b[1] - a[1])
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'tr'))
         .slice(0, 40),
     [facetCounts],
   );
   const yearList = useMemo(
-    () => Array.from(new Set(prepared.map((p) => p.year))).filter((y) => !y.includes('2026') && !y.toLowerCase().includes('civan')).sort(),
+    // En yeni sınav yılı önce
+    () => Array.from(new Set(prepared.map((p) => p.year))).filter((y) => !y.includes('2026') && !y.toLowerCase().includes('civan')).sort().reverse(),
     [prepared],
   );
 
@@ -1439,12 +1440,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 </div>
               )}
               <div className="cx-facet-list">
-                {disciplineList
-                  .filter((d) => !facetQuery || foldText(d).includes(foldText(facetQuery)))
-                  .map((d) => {
+                {groupDisciplines(
+                  disciplineList.filter((d) => (!facetQuery || foldText(d).includes(foldText(facetQuery))) && (fc('discipline', d) > 0 || selectedDiscipline === d)),
+                  (d) => d,
+                  (d) => fc('discipline', d),
+                ).flatMap((g) => [
+                  <div key={`gl-${g.id}`} className="cx-facet-gl">{g.label}</div>,
+                  ...g.items.map((d) => {
                     const on = selectedDiscipline === d;
                     const cnt = fc('discipline', d);
-                    if (!cnt && !on) return null;
                     return (
                       <button key={d} type="button" role="checkbox" aria-checked={on} onClick={() => { setSelectedDiscipline(on ? 'all' : d); setSelectedTopic('all'); resetPage(); }} className={`ui-row cx-facet-opt ${disciplineClass(d)}`}>
                         <span className="hk-dot" aria-hidden />
@@ -1453,7 +1457,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         <span className="cx-facet-check" aria-hidden>{on && <Check strokeWidth={3} />}</span>
                       </button>
                     );
-                  })}
+                  }),
+                ])}
               </div>
             </div>
           </FilterGroup>
@@ -1579,27 +1584,35 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       {!isLoading && !sharedId && selectedDiscipline === 'all' && !searchQuery.trim() && currentPage === 1 && (() => {
         const rows = disciplineList.map((d) => ({ d, cnt: fc('discipline', d) })).filter((r) => r.cnt > 0).sort((a, b) => b.cnt - a.cnt);
         if (rows.length < 2) return null;
-        const shown = browseAll ? rows : rows.slice(0, 6);
+        // Tek satır, yatay kayan şerit: tüm dersler sırayla; masaüstünde ‹ › ile bir ekran kayar
+        const scrollBy = (dir: 1 | -1) => {
+          const el = browseRef.current;
+          if (el) el.scrollBy({ left: dir * Math.max(200, el.clientWidth * 0.8), behavior: 'smooth' });
+        };
         return (
           <section className="hk-browse" aria-label="Derslere göz at">
             <header className="hk-sec-h">
-              <h2>Derslere göz at</h2>
-              {rows.length > 6 && (
-                <button type="button" onClick={() => setBrowseAll((v) => !v)} className="ms-btn is-ghost is-sm">
-                  {browseAll ? 'Daha az' : `Tümü (${rows.length})`}
-                </button>
-              )}
+              <h2>Derslere göz at <small className="hk-browse-cnt">{rows.length} ders</small></h2>
+              <span className="hk-rail-nav">
+                <button type="button" className="hk-rail-btn" onClick={() => scrollBy(-1)} aria-label="Önceki dersler"><ChevronLeft aria-hidden /></button>
+                <button type="button" className="hk-rail-btn" onClick={() => scrollBy(1)} aria-label="Sonraki dersler"><ChevronRight aria-hidden /></button>
+              </span>
             </header>
-            <ul className="hk-browse-list">
-              {shown.map(({ d, cnt }) => (
-                <li key={d} className={disciplineClass(d)}>
-                  <button type="button" onClick={() => { setSelectedDiscipline(d); setSelectedTopic('all'); resetPage(); }}>
-                    <span className="hk-tile is-sm"><BookOpen aria-hidden /></span>
-                    <span className="hk-browse-t">{disciplineLabel(d)}</span>
-                    <span className="hk-browse-n hk-num">{n(cnt)}</span>
-                    <ChevronRight className="hk-chev" aria-hidden />
-                  </button>
-                </li>
+            <ul className="hk-browse-list is-rail" ref={browseRef}>
+              {/* Gruplu: Temel tıp · Dahili · Cerrahi · Toplum sağlığı; grup içinde soru sayısına göre */}
+              {groupDisciplines(rows, (r) => r.d, (r) => r.cnt).map((g, gi) => (
+                <React.Fragment key={g.id}>
+                  <li className="hk-rail-gl" aria-hidden><span>{g.label}</span></li>
+                  {g.items.map(({ d, cnt }, i) => (
+                    <li key={d} className={disciplineClass(d)} style={{ animationDelay: `${Math.min(gi * 2 + i, 8) * 30}ms` }}>
+                      <button type="button" onClick={() => { setSelectedDiscipline(d); setSelectedTopic('all'); resetPage(); }} aria-label={`${g.label} · ${disciplineLabel(d)}, ${cnt} soru`}>
+                        <span className="hk-tile is-sm"><BookOpen aria-hidden /></span>
+                        <span className="hk-browse-t">{disciplineLabel(d)}</span>
+                        <span className="hk-browse-n hk-num">{n(cnt)}</span>
+                      </button>
+                    </li>
+                  ))}
+                </React.Fragment>
               ))}
             </ul>
             <h2 className="hk-sec-title">Tüm sorular</h2>

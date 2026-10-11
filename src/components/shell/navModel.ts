@@ -62,26 +62,23 @@ const I: Record<string, NavItem> = {
 export const NAV_ITEMS = I;
 
 /**
- * Kenar menüsü kullanım sırasına göre dört kategoride (yeniden kurulum 2026-10-11):
- * günlük çalışma akışı önce, sonra soru kaynakları, başvuru kaynakları ve topluluk.
- * "Soru ekle" menünün tepesinde tek başına duran birincil düğmedir (SideNav).
+ * Menü grupları (v9, 2026-10-11): öğrencinin akışına göre — önce ÖĞREN, sonra SORU ÇÖZ, gerektiğinde BAŞVUR,
+ * en sonda TOPLULUK ve KİŞİSEL. Grup içi sıra kullanım sıklığına göredir. "Soru ekle" menünün tepesinde tek
+ * başına duran birincil düğmedir (SideNav); telefonda alt gezinmenin ortasındadır.
  */
 export const NAV_TREE: NavGroup[] = [
-  { label: 'Çalışma', items: [I.learn, I.study, I.flashcards] },
-  { label: 'Sorular', items: [I.past_exams, I.ornek_sorular, I.questions, I.practice] },
-  { label: 'Kaynaklar', items: [I.kazanimlar, I.summaries, I.glossary, I.diseases, I.notes] },
-  { label: 'Topluluk', items: [I.stats, I.leaderboard, I.music] },
+  { label: 'Öğren', items: [I.learn, I.flashcards, I.summaries, I.notes] },
+  { label: 'Soru çöz', items: [I.past_exams, I.ornek_sorular, I.study, I.practice] },
+  { label: 'Başvuru', items: [I.glossary, I.diseases, I.kazanimlar] },
+  { label: 'Topluluk', items: [I.questions, I.matrix, I.leaderboard] },
+  { label: 'Kişisel', items: [I.stats, I.music] },
 ];
 
-/** Telefonda alt gezinmede doğrudan duran dört sayfa; gerisi "Daha" sayfasında */
+/** Telefonda alt gezinmede doğrudan duran sayfalar (sıra: Ekle · Öğren · Kartlar · Çıkmış); gerisi "Daha" sayfasında */
 export const TAB_ITEMS: NavItem[] = [I.quick_add, I.learn, I.flashcards, I.past_exams];
 
-export const MORE_TREE: NavGroup[] = [
-  { label: 'Çalışma', items: [I.study] },
-  { label: 'Sorular', items: [I.ornek_sorular, I.questions, I.practice, I.matrix] },
-  { label: 'Kaynaklar', items: [I.kazanimlar, I.summaries, I.glossary, I.diseases, I.notes] },
-  { label: 'Topluluk', items: [I.stats, I.leaderboard, I.music] },
-];
+/** "Daha" sayfası: alt gezinmede olmayanlar, aynı gruplar ve sırayla */
+export const MORE_TREE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items.filter((it) => !TAB_ITEMS.includes(it)) })).filter((g) => g.items.length > 0);
 
 /** Global arama paletini aç (üst çubuk dinler; kenar menüsü ve kısayollar tetikler) */
 export const openSearch = () => window.dispatchEvent(new CustomEvent('medsoru:search'));
