@@ -89,12 +89,10 @@ def kapsam_guncelle() -> int:
 def kuyruga_al(ilk_kurulum: bool) -> int:
     """Kural (kullanıcı, 2026-10-11): Drive'daki HER PDF'in kapsadığı konulardan biri 2026-27 checklist'inde tamam değilse
     ('islenmeli' ya da 'yenilenmeli') PDF kuyruğa alınır — yalnız eksik konularıyla. Hepsi tamamsa yalnız kaydedilir."""
-    from checklist import KAPSAM, olustur  # noqa: E402
+    from checklist import olustur  # noqa: E402
     kayit = oku(KAYIT, {})
     kuyruk = oku(KUYRUK, [])
-    kapsam_haritasi = oku(KAPSAM, {})
     liste = olustur()
-    durum_of = {(x["kurul"], x["konu"]): x["durum"] for x in liste["konular"]}
     bekleyen = {j["sha256"] for j in kuyruk if j["durum"] in ("bekliyor", "isleniyor", "taslak")}
     yeni = 0
     for p in pdfler():
@@ -103,11 +101,9 @@ def kuyruga_al(ilk_kurulum: bool) -> int:
             continue
         if p["sha256"] in bekleyen or kayit.get(p["sha256"], {}).get("durum") in ("taslak", "hata"):
             continue
-        konular = kapsam_haritasi.get(p["yol"]) or []
-        from checklist import benzer  # noqa: E402
-        eksik = [k for k in konular
-                 if next((d for (ku, ko), d in durum_of.items() if ku == k.get("kurul") and benzer(ko, k["konu"]) >= 0.9),
-                         "islenmeli") in ("islenmeli", "yenilenmeli")]
+        # Karar checklist'ten: bu PDF'in bağlı olduğu satırlardan 2026-27 için eksik olanlar (kaynak kimliği + kesin konu eşitliği)
+        konular = liste.get("pdf_konulari", {}).get(p["yol"]) or []
+        eksik = [{**k, "konu": k.get("satir_konu") or k["konu"]} for k in konular if k.get("durum") in ("islenmeli", "yenilenmeli")]
         if not konular or not eksik:
             kayit.setdefault(p["sha256"], {"durum": "kapsanmis", "yol": p["yol"], "zaman": time.time()})
             continue

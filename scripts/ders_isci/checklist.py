@@ -41,6 +41,34 @@ def slug(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", fold(s)).strip("-")[:50].strip("-")
 
 
+SINONIM = [(r"\bovaryum\b|\bovaryan\b", "over"), (r"\bpatofizyoloji", "fizyopatoloji"),
+           (r"\b(?:uro|nefro)litiyazis\b", "uriner sistem tas hastaliklari"),
+           (r"cinsel yolla bulasan hastalik", "cinsel yolla bulasan enfeksiyon"), (r"\bsifiliz\b", "sifilis"),
+           (r"\bglomeruler\b", "glomeruler")]
+DURAK = {"ve", "ile", "icin", "bir", "veya", "de", "da", "in", "nin"}
+
+
+def norm_konu(s: str) -> str:
+    f = fold(s)
+    for a, b in SINONIM:
+        f = re.sub(a, b, f)
+    return f
+
+
+def kokler(s: str) -> frozenset:
+    # Kısa kelimeler atılır AMA bölüm numaraları korunur (Nekroz - I ≠ Nekroz - II; Ders 1 ≠ Ders 2)
+    return frozenset(w[:5] for w in norm_konu(s).split()
+                     if (len(w) >= 3 and w not in DURAK) or w.isdigit() or re.fullmatch(r"[ivx]{1,4}", w))
+
+
+def ayni_konu(a: str, b: str) -> bool:
+    """Kesin konu eşitliği: normalize ad aynı ya da anlamlı kelime kökleri birebir aynı (Nefrotik ≠ Nefritik)."""
+    if norm_konu(a) == norm_konu(b):
+        return True
+    ka, kb = kokler(a), kokler(b)
+    return bool(ka) and ka == kb
+
+
 def benzer(a: str, b: str) -> float:
     return difflib.SequenceMatcher(None, fold(a), fold(b)).ratio()
 
@@ -73,75 +101,98 @@ def olustur() -> dict:
         bg["_durum"] = oku(b.parent / "durum.json", {}).get("durum") or "isleniyor"
         taslaklar.append(bg)
 
-    # Satırlar = ders programı konuları ∪ programda olmayan ama işlenmiş dersler (s14) ∪ PDF kapaklarından bulunan konular
-    hedefler = [(k.get("kurul"), t) for k in prog.get("kurullar") or [] for t in k.get("konular") or []
-                if t.get("tur", "ders") == "ders" and t.get("konu")]
+    # ---- kaynak kimliği → yerel PDF yolu (s14 dersleri hangi Drive PDF'inden üretildi: kesin bağ)
+    man_items = oku(DOWNLOADS / "_manifest.json", {}).get("items", [])
+    indir = oku(DOWNLOADS / "_downloads.json", {})
+    sid_yol = {}
+    for it in man_items:
+        if it.get("root") == IZLENEN_KOK and it.get("drive_id") in indir:
+            yp = str(indir[it["drive_id"]].get("path") or "")
+            if yp.startswith(IZLENEN_KOK + "/"):
+                sid_yol[it["source_id"]] = yp[len(IZLENEN_KOK) + 1:]
 
-    def programda_var(kurul, konu):
-        return any(kk == kurul and benzer(konu, t["konu"]) >= 0.85 for kk, t in hedefler)
+    satirlar: list[dict] = []
 
-    for d in dersler:
-        if not programda_var(d["kurul"], d["konu"]):
-            hedefler.append((d["kurul"], {"konu": d["konu"], "ders": d["ders"], "tarih": d["tarih"],
-                                          "ogretim_uyesi": d["hoca"], "programda_degil": True}))
-    for yol, xs in kapsam.items():
-        for x in xs:
-            if x.get("kurul") and not programda_var(x["kurul"], x["konu"]):
-                hedefler.append((x["kurul"], {"konu": x["konu"], "ders": x.get("ders"), "tarih": None,
-                                              "ogretim_uyesi": x.get("ogretim_uyesi"), "programda_degil": True}))
-    satirlar = []
-    gorulen = set()
-    for kurul, t in hedefler:
-        konu = t["konu"]
-        anahtar = (kurul, fold(konu))
-        if anahtar in gorulen:
+    def satir_bul(kurul, konu):
+        return next((r for r in satirlar if r["kurul"] == kurul and ayni_konu(r["konu"], konu)), None)
+
+    def satir_ekle(kurul, t, programda=True):
+        r = {"kurul": kurul, "tarih": t.get("tarih"), "ders": t.get("ders"), "konu": t["konu"], "programda": programda,
+             "hoca": t.get("ogretim_uyesi"), "_ders": None, "_pdf": []}
+        satirlar.append(r)
+        return r
+
+    for k in prog.get("kurullar") or []:                       # a) ders programı
+        for t in k.get("konular") or []:
+            if t.get("tur", "ders") == "ders" and t.get("konu") and not satir_bul(k.get("kurul"), t["konu"]):
+                satir_ekle(k.get("kurul"), t)
+    for d in dersler:                                           # b) işlenmiş dersler (programda yoksa ek satır)
+        r = satir_bul(d["kurul"], d["konu"]) or satir_ekle(d["kurul"], {"konu": d["konu"], "ders": d["ders"],
+                                                                         "tarih": d["tarih"], "ogretim_uyesi": d["hoca"]}, False)
+        r["_ders"] = d
+        for sid in d["kaynak_idleri"]:                          #    dersin kendi kaynak PDF'i (kesin)
+            if sid in sid_yol:
+                r["_pdf"].append({"pdf": sid_yol[sid], "sayfa": "tümü", "yontem": "ders_kaynagi"})
+    ders_kaynak_pdf = {x["pdf"] for r in satirlar for x in r["_pdf"]}
+    pdf_konulari: dict[str, list] = {}
+    for yol, xs in kapsam.items():                              # c) kapsam haritası (yeni / ders kaynağı olmayan PDF'ler)
+        if yol in ders_kaynak_pdf:
+            r = next(r for r in satirlar if any(x["pdf"] == yol for x in r["_pdf"]))
+            pdf_konulari[yol] = [{**(xs[0] if xs else {}), "konu": r["konu"], "kurul": r["kurul"], "_satir": r}]
             continue
-        gorulen.add(anahtar)
-        if True:
-            ders = max((d for d in dersler if d["kurul"] == kurul), key=lambda d: benzer(konu, d["konu"]), default=None)
-            if ders and benzer(konu, ders["konu"]) < 0.85:
-                ders = None
-            deste_id = f"k{kurul}p-{ders['id']}" if ders else None
-            # Bu yılın PDF'leri: kapsam haritasında bu konuyu içeren izlenen-kök PDF'leri
-            pdfler = [{"pdf": yol, "sayfa": f"{x.get('sayfa_bas', '?')}–{x.get('sayfa_bit', '?')}", "yontem": x.get("yontem")}
-                      for yol, xs in kapsam.items() for x in xs
-                      if x.get("kurul") == kurul and benzer(x.get("konu", ""), konu) >= 0.9]
-            # s14 kaynağı izlenen kökten mi (= 2026-27 PDF)?
-            ders_kaynak_2627 = bool(ders) and any((manifest.get(sid) or {}).get("root") == IZLENEN_KOK for sid in ders["kaynak_idleri"])
-            taslak = next((x for x in taslaklar if x.get("kurul") == kurul
-                           and benzer((x.get("program") or {}).get("konu") or "", konu) >= 0.9), None)
-            bekleyen = any(j["durum"] in ("bekliyor", "isleniyor") and any(benzer(p["pdf"], j["yol"]) > 0.95 for p in pdfler)
-                           for j in kuyruk)
-            bilesen = {
-                "deste": bool(deste_id and deste_id in deck_ids),
-                "not": bool(ders) and any((ROOT_STUDY / f"k{kurul}").glob(f"{ders['numara']:02d}_*.md")) if ders else False,
-                "ornek": bool(ders) and (APP / "src" / "data" / "ornek_sorular" / f"k{kurul}" / f"{ders['id']}.json").exists() if ders else False,
-            }
-            if taslak and taslak["_durum"] == "onay_bekliyor":
-                durum = "onay_bekliyor"
-            elif taslak:
-                durum = "isleniyor"
-            elif bekleyen:
-                durum = "kuyrukta"
-            elif ders and bilesen["deste"] and not ders["gecen_yil"] and (ders_kaynak_2627 or not pdfler):
-                durum = "tamam_2627"
-            elif ders and pdfler:
-                durum = "yenilenmeli" if (ders["gecen_yil"] or not ders_kaynak_2627) else "tamam_2627"
-            elif ders:
-                durum = "gecen_yil_kaynakli" if ders["gecen_yil"] else "tamam_2627"
-            elif pdfler:
-                durum = "islenmeli"
-            else:
-                durum = "pdf_bekleniyor"
-            satirlar.append({"kurul": kurul, "tarih": t.get("tarih"), "ders": t.get("ders"), "konu": konu,
-                             "programda": not t.get("programda_degil"),
-                             "hoca": t.get("ogretim_uyesi"), "durum": durum, "ders_id": ders["id"] if ders else None,
-                             "deste_id": deste_id, "gecen_yil_kaynagi": ders["gecen_yil"] if ders else None,
-                             "bilesenler": bilesen, "pdf_2627": pdfler,
-                             "taslak": {"is_id": taslak.get("is_id"), "durum": taslak["_durum"]} if taslak else None})
+        for x in xs:
+            kurul = x.get("kurul")
+            if not kurul:
+                continue
+            r = satir_bul(kurul, x["konu"]) or satir_ekle(kurul, {"konu": x["konu"], "ders": x.get("ders"),
+                                                                  "ogretim_uyesi": x.get("ogretim_uyesi")}, bool(x.get("programda")))
+            r["_pdf"].append({"pdf": yol, "sayfa": f"{x.get('sayfa_bas', '?')}–{x.get('sayfa_bit', '?')}", "yontem": x.get("yontem")})
+            pdf_konulari.setdefault(yol, []).append({**x, "_satir": r})
+
+    for r in satirlar:
+        kurul, konu, ders = r["kurul"], r["konu"], r["_ders"]
+        pdfler = r["_pdf"]
+        deste_id = f"k{kurul}p-{ders['id']}" if ders else None
+        ders_kaynak_2627 = bool(ders) and any(sid in sid_yol for sid in ders["kaynak_idleri"])
+        taslak = next((x for x in taslaklar if x.get("kurul") == kurul
+                       and ayni_konu((x.get("program") or {}).get("konu") or "", konu)), None)
+        bekleyen = any(j["durum"] in ("bekliyor", "isleniyor") and any(p["pdf"] == j["yol"] for p in pdfler) for j in kuyruk)
+        bilesen = {
+            "deste": bool(deste_id and deste_id in deck_ids),
+            "not": bool(ders) and any((ROOT_STUDY / f"k{kurul}").glob(f"{ders['numara']:02d}_*.md")),
+            "ornek": bool(ders) and (APP / "src" / "data" / "ornek_sorular" / f"k{kurul}" / f"{ders['id']}.json").exists(),
+        }
+        if taslak and taslak["_durum"] == "onay_bekliyor":
+            durum = "onay_bekliyor"
+        elif taslak:
+            durum = "isleniyor"
+        elif bekleyen:
+            durum = "kuyrukta"
+        elif ders and not ders["gecen_yil"] and bilesen["deste"]:
+            durum = "tamam_2627"
+        elif ders and pdfler:
+            durum = "yenilenmeli"          # ders geçen yıl kaynağıyla hazırlanmış; bu yılın PDF'i geldi
+        elif ders:
+            durum = "gecen_yil_kaynakli"
+        elif pdfler:
+            durum = "islenmeli"
+        else:
+            durum = "pdf_bekleniyor"
+        r.update({"durum": durum, "ders_id": ders["id"] if ders else None, "deste_id": deste_id,
+                  "gecen_yil_kaynagi": ders["gecen_yil"] if ders else None, "ders_kaynagi_2627": ders_kaynak_2627,
+                  "bilesenler": bilesen, "pdf_2627": pdfler,
+                  "taslak": {"is_id": taslak.get("is_id"), "durum": taslak["_durum"]} if taslak else None})
+    for r in satirlar:
+        r.pop("_ders", None)
+        r.pop("_pdf", None)
+    pdf_konu_ozet = {yol: [{k: v for k, v in x.items() if k != "_satir"} | {"durum": x["_satir"]["durum"],
+                            "satir_konu": x["_satir"]["konu"], "programda": x["_satir"]["programda"],
+                            "tarih": x["_satir"]["tarih"], "ogretim_uyesi": x["_satir"]["hoca"]} for x in xs]
+                     for yol, xs in pdf_konulari.items()}
     from collections import Counter
-    sayim = Counter(s["durum"] for s in satirlar)
-    veri = {"uretim": time.strftime("%Y-%m-%d %H:%M"), "akademik_yil": "2026-27", "sayim": dict(sayim), "konular": satirlar}
+    sayim = Counter(x["durum"] for x in satirlar)
+    veri = {"uretim": time.strftime("%Y-%m-%d %H:%M"), "akademik_yil": "2026-27", "sayim": dict(sayim), "konular": satirlar,
+            "pdf_konulari": pdf_konu_ozet}
     yaz(CHECKLIST, veri)
     rapor_yaz(veri)
     return veri
