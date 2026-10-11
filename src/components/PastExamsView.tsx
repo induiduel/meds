@@ -1946,15 +1946,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 ders={(q as any).committeeUncertain ? 'Kurul belirsiz' : disciplineLabel(q.discipline) || q.discipline || 'Tıp'}
                 numberLabel={q.questionNumber ? `#${q.questionNumber}` : 'işlemleri'}
                 flags={flagNodes}
-                stem={<div className="flex items-start gap-1.5">
-                  <StemText text={stem} terms={terms} className="flex-1 min-w-0" />
-                      {p14Fixed &&
-                        (norm(p14o?.stem) && norm(p14o.stem) !== norm(stem) ? (
-                          <ChangeInfo title="Soru kökü düzeltildi (Faz 14)" before={p14o.stem} after={stem} note={p14Note('soru_koku_duzeltmesi')} />
-                        ) : (
-                          <ChangeInfo title="Soru kökü (Faz 14)" note={p14Note('soru_koku_duzeltmesi') || 'Kök değiştirilmedi; soru Faz 14 incelemesinden geçti.'} />
-                        ))}
-                </div>}
+                stem={<StemText text={stem} terms={terms} />}
                 kazanim={kazanimData?.kazanim ? { baslik: ['Müfredat kazanımı', kazanimData.ders, kazanimData.konu].filter(Boolean).join(' · '), metin: String(kazanimData.kazanim) } : null}
                 special={specialView}
                 options={options as any[]}
@@ -1971,11 +1963,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   const opt: any = options.find((o: any) => String(o.key) === key);
                   const before = oldOpt(key);
                   if (!opt || !(opt.isAiGenerated || (before && norm(before) !== norm(opt.text)))) return null;
-                  return (
-                    <span className="cx-opt-info">
-                      <ChangeInfo title={`${key} şıkkı ${before ? 'düzeltildi' : 'eklendi'} (Faz 14)`} before={before} after={String(opt.text)} note={opt.isAiGenerated ? 'Kaynakta bu şık eksikti; yapay zekâ tamamladı (doğrulanmadı).' : undefined} />
-                    </span>
-                  );
+                  return {
+                    title: `${key} şıkkı ${before ? 'düzeltildi' : 'eklendi'} (Faz 14)`,
+                    before,
+                    after: String(opt.text),
+                    note: opt.isAiGenerated ? 'Kaynakta bu şık eksikti; yapay zekâ tamamladı (doğrulanmadı).' : undefined,
+                  };
                 }}
                 onObject={(key, text) => setObjection({ question: q, option: { key, text } })}
                 notes={<>

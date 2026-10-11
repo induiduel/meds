@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Sheet } from './ui/Sheet';
 import { useUiVersion } from '../utils/uiVersion';
-import { X, AlertCircle, CheckCircle2, Eye, EyeOff, ShieldCheck, ArrowLeft, Loader2 } from 'lucide-react';
+import { X, AlertCircle, CheckCircle2, Eye, EyeOff, ShieldCheck, ArrowLeft, Loader2, Mail, Lock, User, Hash, Activity } from 'lucide-react';
+import { Segmented } from './ui/kit';
 import { registerWithEmailPassword, loginWithEmailPassword, googleSignIn, ADMIN_EMAIL, AppUser } from '../services/auth';
 import { validateNamePolicy } from '../utils/namePolicy';
 
@@ -154,143 +155,121 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     }
   };
 
-  const input =
-    'w-full h-11 px-3 rounded-xl border border-line bg-white text-md sm:text-md text-ink placeholder:text-ink-3 outline-none focus:border-accent focus:ring-2 focus:ring-accent/15';
-  const label = 'block text-sm font-semibold text-ink-2 mb-1';
   const disabled = busy !== '' || Boolean(success);
-
   const inSheet = isV7 && !embedded;
+
+  /** Yüzen etiketli, ikonlu alan: boşken etiket yer tutucu gibi durur, odak/doluyken yukarı küçülür. */
+  const field = (o: {
+    id: string; label: string; icon: React.ElementType; value: string; set: (v: string) => void;
+    type?: string; auto?: string; mode?: 'numeric' | 'email'; end?: React.ReactNode; hint?: string;
+  }) => {
+    const Icon = o.icon;
+    return (
+      <label className={`au-field ${o.value ? 'has-val' : ''}`} htmlFor={o.id}>
+        <Icon className="au-ic" aria-hidden />
+        <input
+          id={o.id}
+          type={o.type || 'text'}
+          value={o.value}
+          onChange={(e) => o.set(e.target.value)}
+          autoComplete={o.auto}
+          inputMode={o.mode}
+          placeholder=" "
+          required
+          disabled={disabled}
+        />
+        <span className="au-lbl">{o.label}</span>
+        {o.end}
+        {o.hint && <small className="au-hint">{o.hint}</small>}
+      </label>
+    );
+  };
+
+  const passToggle = (
+    <button type="button" onClick={() => setShowPass((v) => !v)} className="au-eye" aria-label={showPass ? 'Şifreyi gizle' : 'Şifreyi göster'}>
+      {showPass ? <EyeOff aria-hidden /> : <Eye aria-hidden />}
+    </button>
+  );
+
   const card = (
-    <div className={inSheet ? 'flex flex-col gap-3.5 pb-1' : `w-full max-w-[380px] mx-auto bg-white rounded-2xl border border-line ${embedded ? '' : 'shadow-xl'} p-4 sm:p-5 flex flex-col gap-3.5`}>
-      {!embedded && !inSheet && (
-        <div className="flex items-center justify-between -mt-1">
-          <h2 className="m-0 text-md font-bold text-ink">{mode === 'admin' ? 'Yönetici girişi' : mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}</h2>
-          {!mandatory && (
-            <button type="button" onClick={onClose} className="w-9 h-9 -mr-2 inline-flex items-center justify-center rounded-lg text-ink-3 hover:bg-canvas cursor-pointer" aria-label="Kapat">
-              <X className="w-4 h-4" />
-            </button>
-          )}
+    <div className={`au ${embedded ? 'is-embedded' : ''}`}>
+      <header className="au-head">
+        <span className="au-mark" aria-hidden><Activity strokeWidth={2.4} /></span>
+        <div className="au-titles">
+          <h2>{mode === 'admin' ? 'Yönetici girişi' : mode === 'login' ? 'Tekrar hoş geldin' : 'Hesap oluştur'}</h2>
+          <p>{mode === 'admin' ? 'Yönetim konsoluna erişim' : 'Katkıların adınla görünsün; soru eklemek için giriş şart değil.'}</p>
         </div>
-      )}
+        {!embedded && !mandatory && (
+          <button type="button" onClick={onClose} className="au-close" aria-label="Kapat"><X aria-hidden /></button>
+        )}
+      </header>
 
       {mode !== 'admin' ? (
         <>
-          <div className="grid grid-cols-2 p-1 rounded-xl bg-canvas" role="tablist" aria-label="Giriş ya da kayıt">
-            {(['login', 'register'] as const).map((m) => (
-              <button
-                key={m}
-                type="button"
-                role="tab"
-                aria-selected={mode === m}
-                onClick={() => {
-                  setMode(m);
-                  setError(null);
-                }}
-                className={`h-9 rounded-lg text-base font-semibold cursor-pointer transition-colors ${mode === m ? 'bg-white text-ink shadow-xs' : 'text-ink-3 hover:text-ink'}`}
-              >
-                {m === 'login' ? 'Giriş' : 'Kayıt'}
-              </button>
-            ))}
-          </div>
+          <Segmented<'login' | 'register'>
+            className="au-seg"
+            label="Giriş ya da kayıt"
+            value={mode === 'register' ? 'register' : 'login'}
+            onChange={(m) => { setMode(m); setError(null); }}
+            options={[{ value: 'login', label: 'Giriş yap' }, { value: 'register', label: 'Kayıt ol' }]}
+          />
 
-          <button
-            type="button"
-            onClick={() => onGoogle(false)}
-            disabled={disabled}
-            className="h-11 rounded-xl border border-line bg-white hover:bg-canvas text-md font-semibold text-ink inline-flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-60"
-          >
-            {busy === 'google' ? <Loader2 className="w-[18px] h-[18px] animate-spin" /> : <GoogleMark />}
+          <button type="button" onClick={() => onGoogle(false)} disabled={disabled} className="au-google">
+            {busy === 'google' ? <Loader2 className="au-spin" aria-hidden /> : <GoogleMark />}
             Google ile devam et
           </button>
 
-          <div className="flex items-center gap-3 text-xs text-ink-3" aria-hidden="true">
-            <span className="h-px flex-1 bg-line" /> ya da e-posta ile <span className="h-px flex-1 bg-line" />
-          </div>
+          <div className="au-or" aria-hidden="true"><span>ya da e-posta ile</span></div>
 
-          <form onSubmit={mode === 'login' ? onLogin : onRegister} className="flex flex-col gap-2.5" noValidate>
+          <form key={mode} onSubmit={mode === 'login' ? onLogin : onRegister} className="au-form" noValidate>
             {mode === 'register' && (
-              <div className="grid grid-cols-1 xs:grid-cols-2 gap-2.5">
-                <div>
-                  <label className={label} htmlFor="au-name">Ad soyad</label>
-                  <input id="au-name" className={input} value={displayName} onChange={(e) => setDisplayName(e.target.value)} autoComplete="name" required />
-                </div>
-                <div>
-                  <label className={label} htmlFor="au-num">Öğrenci no</label>
-                  <input id="au-num" className={input} value={studentNumber} onChange={(e) => setStudentNumber(e.target.value.replace(/\D/g, ''))} inputMode="numeric" autoComplete="off" required />
-                </div>
+              <div className="au-row">
+                {field({ id: 'au-name', label: 'Ad soyad', icon: User, value: displayName, set: setDisplayName, auto: 'name' })}
+                {field({ id: 'au-num', label: 'Öğrenci no', icon: Hash, value: studentNumber, set: (v) => setStudentNumber(v.replace(/\D/g, '')), mode: 'numeric', auto: 'off' })}
               </div>
             )}
-            <div>
-              <label className={label} htmlFor="au-email">E-posta</label>
-              <input id="au-email" className={input} type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" placeholder="ad.soyad@ogr.karabuk.edu.tr" required />
-            </div>
-            <div>
-              <label className={label} htmlFor="au-pass">Şifre</label>
-              <div className="relative">
-                <input
-                  id="au-pass"
-                  className={`${input} pr-11`}
-                  type={showPass ? 'text' : 'password'}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
-                  placeholder={mode === 'register' ? 'En az 6 karakter' : ''}
-                  required
-                />
-                <button type="button" onClick={() => setShowPass((v) => !v)} className="absolute right-1 top-1 w-9 h-9 inline-flex items-center justify-center rounded-lg text-ink-3 hover:text-ink cursor-pointer" aria-label={showPass ? 'Şifreyi gizle' : 'Şifreyi göster'}>
-                  {showPass ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                </button>
-              </div>
-            </div>
-            <button type="submit" disabled={disabled} className="h-11 mt-0.5 rounded-xl bg-accent hover:bg-accent-hover text-white text-md font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60">
-              {busy === 'form' && <Loader2 className="w-4 h-4 animate-spin" />}
+            {field({ id: 'au-email', label: 'E-posta', icon: Mail, value: email, set: setEmail, type: 'email', auto: 'email', mode: 'email' })}
+            {field({
+              id: 'au-pass', label: 'Şifre', icon: Lock, value: password, set: setPassword, type: showPass ? 'text' : 'password',
+              auto: mode === 'login' ? 'current-password' : 'new-password', end: passToggle,
+              hint: mode === 'register' ? (password.length >= 6 ? '✓ Yeterli uzunlukta' : 'En az 6 karakter') : undefined,
+            })}
+            <button type="submit" disabled={disabled} className="au-submit">
+              {busy === 'form' ? <Loader2 className="au-spin" aria-hidden /> : null}
               {mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}
             </button>
           </form>
         </>
       ) : (
-        <div className="flex flex-col gap-2.5">
-          <p className="m-0 flex items-center gap-1.5 text-base font-semibold text-ink">
-            <ShieldCheck className="w-4 h-4 text-accent" /> Yönetici girişi
-          </p>
-          <button type="button" onClick={() => onGoogle(true)} disabled={disabled} className="h-11 rounded-xl border border-line bg-white hover:bg-canvas text-md font-semibold text-ink inline-flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-60">
-            {busy === 'google' ? <Loader2 className="w-[18px] h-[18px] animate-spin" /> : <GoogleMark />}
+        <div className="au-form">
+          <button type="button" onClick={() => onGoogle(true)} disabled={disabled} className="au-google">
+            {busy === 'google' ? <Loader2 className="au-spin" aria-hidden /> : <GoogleMark />}
             Google ile yönetici girişi
           </button>
-          <form onSubmit={onAdminPassword} className="flex gap-2">
-            <input className={input} type="password" value={adminPassword} onChange={(e) => setAdminPassword(e.target.value)} placeholder="ya da yönetici şifresi" autoComplete="current-password" aria-label="Yönetici şifresi" />
-            <button type="submit" disabled={disabled || !adminPassword} className="h-11 px-4 rounded-xl bg-accent text-white text-base font-semibold cursor-pointer disabled:opacity-60 shrink-0">Giriş</button>
+          <div className="au-or" aria-hidden="true"><span>ya da şifre ile</span></div>
+          <form onSubmit={onAdminPassword} className="au-form">
+            {field({ id: 'au-admin', label: 'Yönetici şifresi', icon: ShieldCheck, value: adminPassword, set: setAdminPassword, type: 'password', auto: 'current-password' })}
+            <button type="submit" disabled={disabled || !adminPassword} className="au-submit">Giriş</button>
           </form>
         </div>
       )}
 
       {error && (
-        <p role="alert" className="m-0 flex items-start gap-2 rounded-xl bg-bad-soft text-bad-text px-3 py-2 text-sm leading-snug">
-          <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" /> {error}
-        </p>
+        <p role="alert" className="au-msg is-bad"><AlertCircle aria-hidden /> {error}</p>
       )}
       {success && (
-        <p role="status" className="m-0 flex items-center gap-2 rounded-xl bg-ok-soft text-ok px-3 py-2 text-sm">
-          <CheckCircle2 className="w-4 h-4 shrink-0" /> {success}
-        </p>
+        <p role="status" className="au-msg is-ok"><CheckCircle2 aria-hidden /> {success}</p>
       )}
 
-      <div className="flex items-center justify-center gap-3 pt-1 border-t border-line text-xs text-ink-3">
-        <a href="/sartlar" target="_blank" rel="noopener noreferrer" className="hover:text-accent underline">Kullanım Şartları</a>
-        <span>·</span>
-        <a href="/policy" target="_blank" rel="noopener noreferrer" className="hover:text-accent underline">Gizlilik Politikası</a>
-      </div>
-
-      <button
-        type="button"
-        onClick={() => {
-          setMode(mode === 'admin' ? 'login' : 'admin');
-          setError(null);
-        }}
-        className="self-center min-h-8 px-2 text-xs text-ink-3 hover:text-ink inline-flex items-center gap-1 cursor-pointer"
-      >
-        {mode === 'admin' ? (<><ArrowLeft className="w-3.5 h-3.5" /> Öğrenci girişine dön</>) : 'Yönetici girişi'}
-      </button>
+      <footer className="au-foot">
+        <a href="/sartlar" target="_blank" rel="noopener noreferrer">Kullanım şartları</a>
+        <i aria-hidden>·</i>
+        <a href="/policy" target="_blank" rel="noopener noreferrer">Gizlilik</a>
+        <i aria-hidden>·</i>
+        <button type="button" onClick={() => { setMode(mode === 'admin' ? 'login' : 'admin'); setError(null); }}>
+          {mode === 'admin' ? (<><ArrowLeft aria-hidden /> Öğrenci girişi</>) : 'Yönetici'}
+        </button>
+      </footer>
     </div>
   );
 
@@ -300,9 +279,8 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
       <Sheet
         open
         onClose={() => !mandatory && onClose()}
-        hideClose={mandatory}
-        title={mode === 'admin' ? 'Yönetici girişi' : mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}
-        subtitle={mode === 'admin' ? undefined : 'Katkıların adınla görünsün; soru eklemek için giriş şart değil.'}
+        hideClose
+        bare
         width={420}
         label="Giriş ve kayıt"
       >

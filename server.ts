@@ -403,6 +403,12 @@ function hasValidWritePassword(req: express.Request): boolean {
 function requireWritePassword(req: express.Request, res: express.Response, next: express.NextFunction) {
   if (req.method === 'GET' || req.method === 'HEAD' || req.method === 'OPTIONS') return next();
 
+  // Salt-okunur retrieval uçları: yazma sayılmaz, parolasız herkese açık.
+  // (Soru ekleme ekranındaki "benzer çıkmışlar / bulunan kaynaklar" bu uçları kullanır.)
+  const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment'];
+  const reqPath = String(req.originalUrl || req.path || '').split('?')[0];
+  if (readOnlyPosts.some((p) => reqPath === p || reqPath.endsWith(p))) return next();
+
   // Yönetici (nofrostlife@gmail.com) veya yerel loopback admin istekleri şifre sorgusundan muaf tutulur
   const adminEmail = (req.headers['x-admin-email'] || req.body?.adminEmail || req.query?.adminEmail) as string;
   const ip = req.ip || req.socket?.remoteAddress || '';
@@ -5543,6 +5549,11 @@ app.get(['/api/decks/:id', '/api/ogren/:id', '/api/interactive-decks/:id'], (req
     if (req.query.format === 'markdown' || req.query.format === 'md') {
       res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
       return res.send(exportDecksToMarkdown({ deckId: deck.id }));
+    }
+
+    // ?format=json: tarayıcı UA'sına bakılmaksızın ham JSON (istemci çevrimdışı yedeği için)
+    if (req.query.format === 'json') {
+      return res.json({ deck });
     }
 
     if (shouldServeNotebookLMHtml(req) || req.query.format === 'html') {

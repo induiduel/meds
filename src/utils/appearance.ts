@@ -1,12 +1,14 @@
 import { useSyncExternalStore } from 'react';
+import { PALETTES, findPalette, installPaletteStyles, type ThemeMode } from './palettes';
 
 /**
  * Görünüm tercihleri: tema (açık / sarı / koyu), her temada iki palet (a / b) ve yerleşim yoğunluğu.
  * Kök öğeye `data-mode`, `data-palette`, `data-density` yazılır; koyu temada eski `theme-dark` sınıfı da kalır
  * (index.css ve health.css'teki koyu kurallar onu kullanır). Token değerleri styles/appearance.css'tedir.
  */
-export type ThemeMode = 'light' | 'sepia' | 'dark';
-export type Palette = 'a' | 'b';
+export type { ThemeMode } from './palettes';
+/** Palet kimliği: utils/palettes.ts kaydındaki `id` (a, b, c, …) — yeni palet eklemek için o listeye bakın. */
+export type Palette = string;
 export type Density = 'compact' | 'normal' | 'wide';
 
 export interface Appearance {
@@ -18,20 +20,12 @@ export interface Appearance {
 
 export const MODE_LABELS: Record<ThemeMode, string> = { light: 'Açık', sepia: 'Sarı', dark: 'Koyu' };
 export const DENSITY_LABELS: Record<Density, string> = { compact: 'Kompakt', normal: 'Normal', wide: 'Geniş' };
-export const PALETTE_INFO: Record<ThemeMode, Record<Palette, { name: string; hint: string; swatch: [string, string, string] }>> = {
-  light: {
-    a: { name: 'Klinik mavi', hint: 'Steril beyaz zemin, mavi-camgöbeği vurgu', swatch: ['#F7F9FB', '#FFFFFF', '#0A6E8A'] },
-    b: { name: 'Sıcak arduvaz', hint: 'Yumuşak gri zemin, arduvaz vurgu', swatch: ['#F3F3F1', '#FCFCFB', '#3E5468'] },
-  },
-  sepia: {
-    a: { name: 'Parşömen', hint: 'Kemik rengi zemin, kahve-siyah yazı', swatch: ['#F6F0E3', '#FBF7EE', '#8A5A2B'] },
-    b: { name: 'Kehribar', hint: 'Bej-amber zemin, düşük mavi ışık', swatch: ['#F1E4C8', '#F8EED9', '#9A5B12'] },
-  },
-  dark: {
-    a: { name: 'Gece arduvazı', hint: 'Lacivert-arduvaz zemin, yumuşak neon odak', swatch: ['#0F1624', '#172131', '#5CC8E6'] },
-    b: { name: 'OLED obsidyen', hint: 'Saf siyah zemin, net gri ayrım', swatch: ['#000000', '#0E0E10', '#7AB4FF'] },
-  },
-};
+/** Geriye dönük uyumluluk: tema → palet kimliği → bilgi (kayıttan üretilir). */
+export const PALETTE_INFO: Record<ThemeMode, Record<string, { name: string; hint: string; swatch: [string, string, string] }>> =
+  PALETTES.reduce((acc, p) => {
+    (acc[p.mode] ||= {})[p.id] = { name: p.name, hint: p.hint, swatch: p.swatch };
+    return acc;
+  }, {} as Record<ThemeMode, Record<string, { name: string; hint: string; swatch: [string, string, string] }>>);
 
 const KEY = 'medsoru_appearance';
 const LEGACY_THEME_KEY = 'medsoru_theme';
@@ -49,7 +43,11 @@ function read(): Appearance {
       const p = JSON.parse(raw) as Partial<Appearance>;
       return {
         mode: p.mode === 'light' || p.mode === 'sepia' || p.mode === 'dark' ? p.mode : fallback.mode,
-        palettes: { ...fallback.palettes, ...(p.palettes || {}) },
+        // Kayıtta olmayan (silinmiş) palet seçimi temanın ilk paletine döner
+        palettes: (['light', 'sepia', 'dark'] as ThemeMode[]).reduce((acc, m) => {
+          acc[m] = findPalette(m, (p.palettes || {})[m]).id;
+          return acc;
+        }, {} as Record<ThemeMode, Palette>),
         density: p.density === 'compact' || p.density === 'wide' || p.density === 'normal' ? p.density : 'normal',
       };
     }
@@ -67,6 +65,7 @@ let current: Appearance = typeof window === 'undefined'
   : read();
 
 export function applyAppearance(a: Appearance = current) {
+  installPaletteStyles();
   const el = document.documentElement;
   el.classList.add('theme-switching');
   el.dataset.mode = a.mode;

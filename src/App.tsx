@@ -41,7 +41,7 @@ import { ConfirmHost, confirmDialog } from './components/ui/ConfirmDialog';
 import { PageHeader } from './components/ui/PageHeader';
 import { LearnFab } from './components/learn/LearnFab';
 import { SplashScreen, Onboarding } from './components/onboarding/Onboarding';
-import { SectionLoader } from './components/ui/Animations';
+import { SectionLoader, PageLoader } from './components/ui/Animations';
 import { ToastHost, toast } from './components/ui/Toast';
 import { TooltipHost } from './components/ui/TooltipHost';
 import { OfflineDatabaseModal } from './components/pwa/OfflineDatabaseModal';
@@ -134,7 +134,7 @@ const InteractiveDeckView = React.lazy(() => wrapLazy(import('./components/learn
 const MedicalEncyclopediaView = React.lazy(() => wrapLazy(import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView }))));
 const ManageConsole = React.lazy(() => wrapLazy(import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole }))));
 
-const ViewFallback = () => <SectionLoader />;
+const ViewFallback = () => <PageLoader />;
 import { GlossaryProvider } from './components/learn/MedicalGlossaryPopover';
 import { systemHealthMonitor } from './services/systemHealthMonitor';
 import { ApiService } from './services/api';
@@ -280,8 +280,8 @@ export default function App() {
         el.classList.add('is-leaving');
         setTimeout(() => {
           try { el.remove(); } catch {}
-        }, 400);
-      }, reduce ? 150 : 850);
+        }, 500);
+      }, reduce ? 150 : Math.max(250, 1400 - performance.now())); // açılış animasyonu (~1.3 sn) tamamlansın; geç yüklenmede bekletme
       return () => clearTimeout(t);
     }
   }, []);

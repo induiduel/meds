@@ -31,6 +31,7 @@ import { AppUser } from '../services/auth';
 import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from '../services/firestoreDb';
 import { pathFor, linkClick } from '../router';
 import { OptionsEditor } from './ui/OptionsEditor';
+import { ComposerAssist } from './quickadd/ComposerAssist';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
 import { toast } from './ui/Toast';
 import { ApiService, SimilarPastQuestion, SourceRefLite } from '../services/api';
@@ -697,6 +698,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // Telefon sihirbazı: son adım dışında hiçbir gönderim (klavyenin "Git/Enter" tuşu, örtük form gönderimi)
+    // soruyu havuza göndermez — yarım soru gidiyor, alanlar sıfırlanıyor ve "devam edemiyorum" hatası oluşuyordu.
+    if (fullRef.current === 'open' && wizRef.current !== 'son') {
+      if (wizRef.current !== 'tur') wizNext();
+      return;
+    }
     setFormError(null);
 
     const targetCommittee = committee || (committees && committees.length > 0 ? committees[0] : undefined);
@@ -994,6 +1001,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                   placeholder="Tek kelime bile işe yarar…"
                   className="ms-bare-input w-full block resize-none px-4 pt-3.5 pb-2 text-md leading-[1.6] text-ink placeholder:text-ink-3 bg-transparent border-0 outline-0 min-h-[128px]"
                 />
+                {/* Telefon tam ekran: yazmayı bırakınca ipucu metni + klavyenin üstünde öneri çubuğu */}
+                <ComposerAssist active={full === 'open' && wiz === 'kok'} value={text} onChange={setText} textareaId="hatira" committeeId={committee?.id} />
                 {full && wiz !== 'kok' && (
                   <div key={wiz} className={`wz-panel ${wizDir > 0 ? 'is-fwd' : 'is-back'}`}>
                     {wiz === 'tur' && (

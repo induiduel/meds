@@ -135,3 +135,24 @@ export const AiThinking: React.FC<{ steps?: string[]; className?: string }> = ({
     </div>
   );
 };
+
+/**
+ * Sayfa yükleme katmanı (lazy ekranların Suspense yedeği): ekranı bulanık bir perdeyle örter, ortada
+ * marka işaretli halka ve etiket. 150 ms'den kısa yüklemelerde hiç görünmez (yanıp sönme olmaz).
+ */
+export const PageLoader: React.FC<{ label?: string }> = ({ label = 'Yükleniyor' }) => (
+  <div className="pl-veil" role="status" aria-live="polite">
+    <div className="pl-box">
+      <span className="pl-ring" aria-hidden>
+        <svg viewBox="0 0 64 64">
+          <circle className="pl-track" cx="32" cy="32" r="28" />
+          <circle className="pl-arc" cx="32" cy="32" r="28" />
+        </svg>
+        <svg className="pl-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 12h4l3-8 4 16 3-8h4" />
+        </svg>
+      </span>
+      <span className="pl-label">{label}<i aria-hidden>.</i><i aria-hidden>.</i><i aria-hidden>.</i></span>
+    </div>
+  </div>
+);

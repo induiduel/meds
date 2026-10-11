@@ -20,12 +20,21 @@ export function splitLearningDecks(root: string): Plugin {
   const run = () => {
     if (!fs.existsSync(src)) return;
     const srcTime = fs.statSync(src).mtimeMs;
+    const decks: any[] = JSON.parse(fs.readFileSync(src, 'utf8'));
+    const valid = decks.filter((d) => d && d.id && Array.isArray(d.slides) && d.slides.length > 0);
+    // Katalog kaynaktan yeniyse VE parça sayısı tutuyorsa bölmeyi atla; aksi halde yeniden üret
+    // (yalnız mtime'a bakmak, parçalar silinmiş/eksikken tüm destelerin açılmamasına yol açıyordu).
     if (fs.existsSync(catalogFile)) {
       try {
-        if (fs.statSync(catalogFile).mtimeMs >= srcTime) return;
+        if (fs.statSync(catalogFile).mtimeMs >= srcTime) {
+          let itemCount = 0;
+          try {
+            itemCount = fs.existsSync(itemsDir) ? fs.readdirSync(itemsDir).filter((f) => f.endsWith('.json')).length : 0;
+          } catch {}
+          if (itemCount === valid.length && valid.length > 0) return;
+        }
       } catch {}
     }
-    const decks: any[] = JSON.parse(fs.readFileSync(src, 'utf8'));
     fs.rmSync(itemsDir, { recursive: true, force: true });
     fs.mkdirSync(itemsDir, { recursive: true });
     const catalog = [];

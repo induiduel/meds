@@ -64,6 +64,39 @@ async function loadFromIndexedDb(id: string): Promise<any> {
   });
 }
 
+import { defaultApiBaseForThisHost } from '../config/deployment';
+
+/** Canlı API tabanı: Ayarlar'daki özel URL, yoksa bulunulan hostun varsayılanı (Oracle tüneli). */
+function apiBase(): string {
+  try {
+    if (typeof localStorage !== 'undefined') {
+      const custom = (localStorage.getItem('medsoru_custom_api_url') || '').trim().replace(/\/$/, '');
+      if (custom) return custom;
+    }
+  } catch {}
+  try {
+    return defaultApiBaseForThisHost().replace(/\/$/, '');
+  } catch {
+    return '';
+  }
+}
+
+/** Sunucudan tek deste (derlenmiş parça eksikse yedek yol; ?format=json ham JSON döndürür). */
+async function loadFromApi<T>(id: string): Promise<T | null> {
+  try {
+    const res = await fetch(`${apiBase()}/api/decks/${encodeURIComponent(id)}?format=json`, {
+      headers: { Accept: 'application/json' },
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const deck = data?.deck;
+    if (deck && Array.isArray(deck.slides) && deck.slides.length > 0) return deck as T;
+  } catch (err) {
+    console.warn(`[DeckStore] API yedeği başarısız (${id}):`, err);
+  }
+  return null;
+}
+
 /** Bir destenin tam içeriğini (slaytlarla) yükler; ağ hatasında IndexedDB çevrimdışı yedeğine düşer. */
 export function loadDeck<T = any>(id: string): Promise<T | null> {
   let p = cache.get(id);
@@ -76,8 +109,11 @@ export function loadDeck<T = any>(id: string): Promise<T | null> {
           if (res) return res;
         }
       } catch (err) {
-        console.warn(`[DeckStore] Modül yüklenemedi (${id}), çevrimdışı veritabanı deneniyor:`, err);
+        console.warn(`[DeckStore] Modül yüklenemedi (${id}), API yedeği deneniyor:`, err);
       }
+      // Derlenmiş parça yoksa (eski imaj / eksik bölme) canlı API'den çek
+      const viaApi = await loadFromApi<T>(id);
+      if (viaApi) return viaApi;
       return await loadFromIndexedDb(id);
     })();
     cache.set(id, p);

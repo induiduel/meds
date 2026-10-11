@@ -35,6 +35,7 @@ import {
   type ThemeMode,
   useAppearance,
 } from '../../utils/appearance';
+import { palettesFor } from '../../utils/palettes';
 import { useUiVersion } from '../../utils/uiVersion';
 import { AvatarCropper } from '../ui/AvatarCropper';
 import { Row, Section, Segmented, Switch } from '../ui/kit';
@@ -147,8 +148,8 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
                 />
               </Row>
               <Row stack title="Palet">
-                <div role="radiogroup" aria-label={`${MODE_LABELS[look.mode]} tema paleti`} className="grid grid-cols-2 gap-2.5">
-                  {(['a', 'b'] as Palette[]).map((p) => {
+                <div role="radiogroup" aria-label={`${MODE_LABELS[look.mode]} tema paleti`} className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))' }}>
+                  {palettesFor(look.mode).map(({ id: p }) => {
                     const info = PALETTE_INFO[look.mode][p];
                     const on = look.palette === p;
                     return (
