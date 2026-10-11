@@ -59,7 +59,7 @@ def is_id(yol: str, sha: str) -> str:
     return time.strftime("%Y%m%d") + "-" + sha[:10]
 
 
-KAPSAM_SURUM = ":v3"   # kapsam/eşleşme mantığı değişince artır → tüm PDF'ler yeniden haritalanır
+KAPSAM_SURUM = ":v4"   # kapsam/eşleşme mantığı değişince artır → tüm PDF'ler yeniden haritalanır
 
 
 def kapsam_guncelle() -> int:

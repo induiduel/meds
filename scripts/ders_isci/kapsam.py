@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import difflib
 import re
+import unicodedata
 
 UNVAN = re.compile(r"^\s*(prof|doç|doc|dr|uzm|öğr|ogr)\.?\s", re.I)   # isim satırı unvanla BAŞLAR
 
@@ -27,6 +28,7 @@ _FOLD = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuai
 
 def fold(s: str) -> str:
     s = str(s).replace("İ", "i").replace("I", "ı").lower().translate(_FOLD)
+    s = "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c))  # i̇ → i (nokta silinir, boşluk değil)
     return " ".join(re.sub(r"[^a-z0-9]+", " ", s).split())
 
 

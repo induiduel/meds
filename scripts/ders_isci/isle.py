@@ -9,6 +9,7 @@ import difflib
 import json
 import os
 import re
+import unicodedata
 import subprocess
 import sys
 import time
@@ -29,6 +30,7 @@ _FOLD = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuai
 
 def fold(s: str) -> str:
     s = str(s).replace("İ", "i").replace("I", "ı").lower().translate(_FOLD)
+    s = "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c))  # i̇ → i (nokta silinir, boşluk değil)
     return " ".join(re.sub(r"[^a-z0-9]+", " ", s).split())
 
 
@@ -67,8 +69,9 @@ def program_eslesmesi(yol: str, metin: str = "") -> dict:
     ders_klasoru = parts[-2] if len(parts) >= 2 else ""
     stem = re.sub(r"^\s*\d+\s*[\)\.\-]\s*", "", Path(yol).stem).strip()
     stem = re.sub(r"^[\s'\"“”‘’]+|[\s'\"“”‘’.]+$", "", stem).replace("_", " ").strip()   # 'BAŞLIK.' → BAŞLIK
-    if stem.isupper():
-        stem = stem.title()
+    if stem.isupper():  # Türkçe büyük→küçük (İ→i, I→ı) sonra kelime başları büyük; .title() 'İ'yi 'i̇' yapar
+        kucuk = stem.replace("İ", "i").replace("I", "ı").lower()
+        stem = " ".join((w[0].replace("i", "İ").replace("ı", "I").upper() + w[1:]) if w else w for w in kucuk.split(" "))
     prog = oku(DATABASE / "taxonomy" / "donem3_ders_programi.json", {})
     konular = [x for k in prog.get("kurullar") or [] if kurul is None or k.get("kurul") == kurul
                for x in k.get("konular") or [] if x.get("tur", "ders") == "ders" and x.get("konu")]
