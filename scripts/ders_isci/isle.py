@@ -21,7 +21,9 @@ from cikar import pdf_metni  # noqa: E402
 
 sys.path.insert(0, str(APP / "scripts" / "agents"))
 TALIMAT = Path(__file__).resolve().parent / "TALIMAT.md"
-KOTA_RE = re.compile(r"usage limit|rate.?limit|limit (?:reached|exceeded)|quota|\b429\b|overloaded|credit balance", re.I)
+# Kota ya da kimlik sorunu: iş "bekle" olur, deneme hakkı harcanmaz (anahtar yenilenince kaldığı yerden sürer)
+KOTA_RE = re.compile(r"usage limit|rate.?limit|limit (?:reached|exceeded)|quota|\b429\b|overloaded|credit balance|"
+                     r"\b401\b|authenticat|invalid.*token|oauth", re.I)
 _FOLD = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuaiu")
 
 
