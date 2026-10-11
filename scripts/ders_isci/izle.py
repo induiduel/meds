@@ -89,17 +89,27 @@ def bugun_islenen() -> int:
     return sum(1 for v in oku(KAYIT, {}).values() if v.get("durum") == "taslak" and v.get("zaman", 0) >= bas)
 
 
-def sira_isle():
+def sira_isle(zorla_is_id: str | None = None):
     kuyruk = oku(KUYRUK, [])
     simdi = time.time()
-    hazir = [j for j in kuyruk if j["durum"] == "bekliyor" and j.get("sonra", 0) <= simdi]
-    if not hazir:
-        return
-    if not saat_uygun():
-        return
-    if bugun_islenen() >= GUNLUK_SINIR:
-        return
+    if zorla_is_id:  # elle başlatma (test): saat penceresi ve günlük sınır atlanır
+        hazir = [j for j in kuyruk if j["is_id"] == zorla_is_id or zorla_is_id in j["yol"]]
+        if not hazir:
+            log(f"kuyrukta yok: {zorla_is_id}")
+            return
+    else:
+        hazir = [j for j in kuyruk if j["durum"] == "bekliyor" and j.get("sonra", 0) <= simdi]
+        if not hazir:
+            return
+        if not saat_uygun():
+            return
+        if bugun_islenen() >= GUNLUK_SINIR:
+            return
     j = hazir[0]
+    j_kayit = next(k for k in kuyruk if k["is_id"] == j["is_id"])
+    j_kayit["durum"] = "isleniyor"          # aynı iş iki kez başlamasın (döngü + elle)
+    j_kayit["basladi"] = time.time()
+    yaz(KUYRUK, kuyruk)
     log(f"işleniyor: {j['is_id']} {j['yol']}")
     from isle import isle  # noqa: E402  (ağır bağımlılıklar yalnız iş varken yüklensin)
     sonuc = isle(j)
@@ -108,6 +118,7 @@ def sira_isle():
         if k["is_id"] != j["is_id"]:
             continue
         k["deneme"] = k.get("deneme", 0) + 1
+        k["durum"] = "bekliyor"
         if sonuc["durum"] == "taslak":
             k["durum"] = "taslak"
         elif sonuc["durum"] == "kota":
@@ -152,9 +163,12 @@ def main():
     ap.add_argument("--bir-kez", action="store_true")
     ap.add_argument("--taramasiz", action="store_true", help="Drive taramadan yalnız kuyruk/işleme")
     ap.add_argument("--durum", action="store_true")
+    ap.add_argument("--simdi", metavar="IS_ID_VEYA_AD", help="bu işi şimdi işle (saat/günlük sınır atlanır)")
     a = ap.parse_args()
     if a.durum:
         return durum()
+    if a.simdi:
+        return sira_isle(a.simdi)
     if a.bir_kez:
         return tur(not a.taramasiz)
     log(f"ders işçisi başladı: kök={IZLENEN_KOK} aralık={ARALIK_SN}s günlük={GUNLUK_SINIR}")
