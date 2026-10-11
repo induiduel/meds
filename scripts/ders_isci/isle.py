@@ -314,6 +314,9 @@ def _isle_tek(j: dict) -> dict:
     onceki = oku(d / "oturum.json", {}).get("session_id")
     istem = (f"Talimat dosyası: {TALIMAT}. Önce onu ve çalışma dizinindeki baglam.json + kaynak.md'yi oku, sonra "
              "talimattaki iş sırasıyla tüm çıktıları üret ve denetle.py 0 HATA olana kadar düzelt.")
+    if j.get("duzeltme_notu"):
+        istem += (" ÖNEMLİ — yöneticinin önceki taslağa düzeltme notu (bunlara mutlaka uy, rapor.md'de nasıl uyduğunu yaz): "
+                  + j["duzeltme_notu"])
     if onceki:
         istem = "Kota/kesinti nedeniyle yarım kaldın. Klasördeki mevcut dosyalara bakıp kaldığın yerden devam et; " + istem
     r = claude(d, istem, onceki)

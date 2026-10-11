@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import os
+import re
 import subprocess
 import sys
 import time
@@ -89,10 +90,35 @@ def kapsam_guncelle() -> int:
     return yeni
 
 
+def duzeltmeleri_isle():
+    """Yönetici "Düzeltme iste" dediyse: eski taslak arşive, aynı iş yönetici notuyla yeniden kuyruğa (sıranın başına)."""
+    from ayarlar import TASLAK  # noqa: E402
+    kuyruk = oku(KUYRUK, [])
+    degisti = False
+    for d in list(TASLAK.glob("*")):
+        k = oku(d / "karar.json", None)
+        if not k or k.get("karar") != "duzelt":
+            continue
+        ana_id = re.sub(r"-\d+$", "", d.name)
+        j = next((x for x in kuyruk if x["is_id"] == ana_id), None)
+        arsiv = d.parent.parent / "arsiv" / f"{d.name}-duzelt-{int(time.time())}"
+        arsiv.parent.mkdir(parents=True, exist_ok=True)
+        d.rename(arsiv)
+        if j:
+            j.update(durum="bekliyor", deneme=0, sonra=0, son_mesaj="", oncelik=1,
+                     duzeltme_notu=((j.get("duzeltme_notu") or "") + "\n" + (k.get("not") or "")).strip())
+            degisti = True
+            log(f"düzeltme istendi → yeniden kuyrukta: {ana_id} ({(k.get('not') or '')[:80]})")
+    if degisti:
+        kuyruk.sort(key=lambda x: -x.get("oncelik", 0))
+        yaz(KUYRUK, kuyruk)
+
+
 def kuyruga_al(ilk_kurulum: bool) -> int:
     """Kural (kullanıcı, 2026-10-11): Drive'daki HER PDF'in kapsadığı konulardan biri 2026-27 checklist'inde tamam değilse
     ('islenmeli' ya da 'yenilenmeli') PDF kuyruğa alınır — yalnız eksik konularıyla. Hepsi tamamsa yalnız kaydedilir."""
     from checklist import olustur  # noqa: E402
+    duzeltmeleri_isle()
     kayit = oku(KAYIT, {})
     kuyruk = oku(KUYRUK, [])
     liste = olustur()
@@ -216,6 +242,11 @@ def main():
     if a.bir_kez:
         return tur(not a.taramasiz)
     log(f"ders işçisi başladı: kök={IZLENEN_KOK} aralık={ARALIK_SN}s günlük={GUNLUK_SINIR}")
+    try:
+        from api import baslat  # noqa: E402  (onay ekranı için iç API; yalnız compose iç ağı)
+        baslat(int(os.environ.get("MEDS_ISCI_API_PORT", "8095")))
+    except Exception as e:  # noqa: BLE001
+        log(f"iç API başlatılamadı: {e}")
     while True:
         try:
             tur()
