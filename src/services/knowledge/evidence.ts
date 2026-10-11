@@ -53,7 +53,14 @@ const SENT_SPLIT = /(?<=[.!?…])\s+|\n+|\s•\s|;\s+/;
 export function splitSentences(text: string): string[] {
   const out: string[] = [];
   for (const raw of cleanContent(text).split(SENT_SPLIT)) {
-    const s = raw.replace(/^[\s\-–•*>#\d.)]+/, '').replace(/\s+/g, ' ').trim();
+    const s = raw
+      .replace(/\*\*|__|==|`/g, '')
+      // Büyük harfli etiket önekleri: "DERS NOTU HOCA VURGUSU | Sınav İkazı:" , "TUS & Komite İncisi:"
+      .replace(/^(?:[\p{Lu}\d&\s/|-]{6,}[|:]\s*)+/u, '')
+      .replace(/^(?:[\p{Lu}][\p{L}&\s/-]{2,28}:\s*)+/u, '')
+      .replace(/^[\s\-–•*>#\d.)|]+/, '')
+      .replace(/\s+/g, ' ')
+      .trim();
     if (s.length >= 25 && s.length <= 420) out.push(s);
   }
   return out;
