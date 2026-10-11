@@ -36,12 +36,22 @@ for f in deploy/oracle/docker-compose.oracle.yml deploy/oracle/Dockerfile.oracle
 done
 
 if [[ "$DO_BUILD" == "1" ]]; then
-  echo "==> [3/4] Oracle'da derle + başlat"
-  $SSH "$ORACLE_USER@$ORACLE_HOST" "cd $ORACLE_DIR && flock /tmp/meds-deploy.lock docker compose --env-file $ORACLE_DIR/.env -f deploy/oracle/docker-compose.oracle.yml up -d --build meds-server 2>&1 | tail -2"
-  sleep 25
+  echo "==> [3/4] Oracle'da derle + başlat (kesintisiz: imaj önce derlenir, kapı yeniden başlatma süresince istekleri bekletir)"
+  # Kapı (meds-server, Caddy) yalnız yoksa/tanımı değiştiyse yeniden kurulur; Caddyfile değişirse: docker restart meds-server
+  $SSH "$ORACLE_USER@$ORACLE_HOST" "cd $ORACLE_DIR && flock /tmp/meds-deploy.lock sh -c '
+    C=\"docker compose --env-file $ORACLE_DIR/.env -f deploy/oracle/docker-compose.oracle.yml\"
+    \$C build -q meds-app &&
+    \$C up -d --no-deps meds-app &&
+    \$C up -d --no-deps meds-server
+  '"
 fi
 
-echo "==> [4/4] sağlık kontrolü"
-$SSH "$ORACLE_USER@$ORACLE_HOST" "curl -sf http://127.0.0.1:3000/api/health" | head -c 200
+echo "==> [4/4] sağlık kontrolü (kapı üzerinden, en çok 120 sn)"
+$SSH "$ORACLE_USER@$ORACLE_HOST" 'for i in $(seq 1 60); do curl -sf -m 5 http://127.0.0.1:3000/api/health && exit 0; sleep 2; done; echo "sağlık kontrolü geçmedi"; docker logs meds-app --tail 40; exit 1' | head -c 2000
 echo
+if [[ "$DO_BUILD" == "1" ]]; then
+  echo "==> [5/5] arama paketi + hastalık grafiği (AYRI konteynerde, arka planda; imza aynıysa ~1 sn)"
+  # meds-app 3 GB tavanında derlemez (bellek koruması); derleme 2 GB sınırlı tek seferlik konteynerde
+  $SSH "$ORACLE_USER@$ORACLE_HOST" "cd $ORACLE_DIR && mkdir -p deploy/oracle/logs && nohup ./deploy/oracle/build-search.sh > deploy/oracle/logs/build-search.log 2>&1 &"
+fi
 echo "BİTTİ."

@@ -1,7 +1,7 @@
 /**
- * db-audit.ts — Oracle local Supabase denetimi (meds-server konteyneri içinden çalışır).
- * Çalıştırma (Oracle): docker cp db-audit.ts meds-server:/tmp/ &&
- *   docker exec -w /app meds-server npx tsx /tmp/db-audit.ts
+ * db-audit.ts — Oracle local Supabase denetimi (meds-app konteyneri içinden çalışır).
+ * Çalıştırma (Oracle): docker cp db-audit.ts meds-app:/tmp/ &&
+ *   docker exec -w /app meds-app npx tsx /tmp/db-audit.ts
  * Her tablo: okuma + sayım. RPC'ler: gerçek vektörle self-test. questions: yaz-sil döngüsü.
  */
 import { createClient } from '@supabase/supabase-js';

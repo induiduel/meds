@@ -1,0 +1,21 @@
+# Caddyfile — meds-server kapısı (cloudflared → meds-server:3000 → meds-app:3000).
+# Amaç: dağıtımda meds-app yeniden başlarken ziyaretçi 502 görmesin; bağlantı kurulamayan
+# istekler 60 sn'ye kadar bekletilip yeni süreç dinlemeye başlayınca ona aktarılır
+# (Cloudflare kaynak zaman aşımı 100 sn). Yanıt akışı (SSE/WebSocket) olduğu gibi geçer.
+{
+	admin off
+	auto_https off
+	log default {
+		level WARN
+	}
+}
+
+:3000 {
+	reverse_proxy meds-app:3000 {
+		lb_try_duration 60s
+		lb_try_interval 250ms
+		transport http {
+			dial_timeout 2s
+		}
+	}
+}

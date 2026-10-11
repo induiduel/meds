@@ -1,6 +1,6 @@
 name: Deploy code to Oracle VM
 
-# main'e push -> kod Oracle'a rsync ile gider, meds-server imajı yeniden derlenir.
+# main'e push -> kod Oracle'a rsync ile gider, meds-app imajı yeniden derlenir.
 # Oracle'da git klonu yok (deploy-code.sh ile aynı rsync yolu).
 # VERİ HARİÇ: data/ ve src/data/*.json cihazdaki çalışma kopyasından gelir
 # (deploy/oracle/deploy-code.sh veya sync-data.sh). Git'teki eski sürüm Oracle'ı ezmesin.
@@ -51,7 +51,9 @@ jobs:
           ssh -i ~/.ssh/oracle "${{ secrets.ORACLE_USER }}@${{ secrets.ORACLE_HOST }}" '
             set -e
             cd /home/ubuntu/medsor/meds
-            flock /tmp/meds-deploy.lock docker compose --env-file /home/ubuntu/medsor/meds/.env -f deploy/oracle/docker-compose.oracle.yml up -d --build meds-server
+            C="docker compose --env-file /home/ubuntu/medsor/meds/.env -f deploy/oracle/docker-compose.oracle.yml"
+            # Kesintisiz: imaj önce derlenir; meds-app yeniden başlarken kapı (meds-server, Caddy) istekleri bekletir.
+            flock /tmp/meds-deploy.lock sh -c "$C build meds-app && $C up -d --no-deps meds-app && $C up -d --no-deps meds-server"
             for i in $(seq 1 30); do curl -sf http://127.0.0.1:3000/api/health && exit 0; sleep 3; done
-            echo "sağlık kontrolü geçmedi"; docker logs meds-server --tail 40; exit 1
+            echo "sağlık kontrolü geçmedi"; docker logs meds-app --tail 40; exit 1
           '

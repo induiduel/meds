@@ -1,11 +1,33 @@
 # docker-compose.oracle.yml — Oracle VM üzerinde canlı MedSoru.
 # Çalıştırma yeri: meds/ dizini →  docker compose -f deploy/oracle/docker-compose.oracle.yml up -d --build
-# .env (Oracle sürümü) meds/.env konumunda olmalı. Token gelmeden önce yalnız meds-server ayağa kaldırılır:
-#   docker compose -f deploy/oracle/docker-compose.oracle.yml up -d --build meds-server
+# .env (Oracle sürümü) meds/.env konumunda olmalı. Token gelmeden önce yalnız site (meds-app + kapı meds-server) ayağa kaldırılır:
+#   docker compose -f deploy/oracle/docker-compose.oracle.yml up -d --build meds-app meds-server
 name: medsoru-oracle
 
 services:
+  # Kapı: cloudflared (Cloudflare panelinde kaynak http://meds-server:3000) ve ders işçisi buraya bağlanır.
+  # Uygulama (meds-app) yeniden başlarken istekleri bekletir → dağıtımda 502 yok. Ayrıntı: Caddyfile.
   meds-server:
+    image: caddy:2-alpine
+    container_name: meds-server
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: 128M
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "2"
+
+  # Uygulama. Dağıtımda yalnız bu yeniden kurulur (deploy-code.sh); dışarıya kapı üzerinden açılır.
+  meds-app:
     build:
       context: ../..
       dockerfile: deploy/oracle/Dockerfile.oracle
@@ -15,16 +37,18 @@ services:
         SUPABASE_URL: ${SUPABASE_URL:-https://kgutsltgmqbnlxcnzrtl.supabase.co}
         SUPABASE_PUBLISHABLE_KEY: ${SUPABASE_PUBLISHABLE_KEY:-sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q}
     image: medsoru-server:oracle
-    container_name: meds-server
+    container_name: meds-app
     restart: unless-stopped
+    stop_grace_period: 15s
     # Always Free (2 OCPU / ~12GB): site + Supabase + embed aynı makinede; taşan bir süreç diğerlerini düşürmesin.
     deploy:
       resources:
         limits:
           cpus: "1.5"
           memory: 3G
+    # Doğrudan erişim (kapıyı atlayarak hata ayıklama): 127.0.0.1:3001
     ports:
-      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:3001:3000"
     # Oracle local Supabase (envoy :8000) host ağında; konteyner içinden
     # host.docker.internal ile erişilir. LOCAL_SUPABASE_URL bunu gösterir.
     extra_hosts:
@@ -109,6 +133,7 @@ services:
     user: "1001:1001"
     depends_on:
       - meds-server
+      - meds-app
       - meds-embed
     env_file:
       - path: ../../.env
