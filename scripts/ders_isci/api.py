@@ -39,6 +39,11 @@ def taslak_ozeti(d) -> dict:
 
 
 class H(BaseHTTPRequestHandler):
+    # HTTP/1.1 kalıcı bağlantı: varsayılan HTTP/1.0 her yanıttan sonra soketi kapatır; Node (undici) soketi havuzda canlı
+    # sanıp yeniden kullanmaya çalışınca istek zaman aşımına kadar asılı kalıyordu (bekleme sonrası ilk istek 10–27 sn).
+    protocol_version = "HTTP/1.1"
+    timeout = 60  # boşta kalan bağlantıyı tutan iş parçacığı sonsuza dek beklemesin
+
     def log_message(self, *a):
         pass
 
