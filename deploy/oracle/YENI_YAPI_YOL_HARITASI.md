@@ -268,3 +268,9 @@ Her faz sonunda `DEGISIKLIK_KAYDI.md`'ye kayıt; sayaç tutmazsa durulur.
 - T2 ✓ (paketler tek kaynağa bağlandı, kök `packages/` arşivde) · T3 ✓ · T5 kısmi ✓ (GPU servisleri kalktı; embed birimleri sınırlı; 3 vektör sunucusu birleştirme hâlâ açık) · T6 kısmi ✓ (kaynak tavanları; önbellek/parçalama açık) · T8 kısmi ✓ (kural belgeleri birleşti; kayıt arşivleme açık).
 - Yeni araçlar: `deploy/backup.sh`, `deploy/oracle/db-yonet.sh`, `scripts/db_analiz/analiz.py`, `scripts/build_deck_packages.py`, `scripts/prune-dist.mjs`.
 - Açık: T4 (veri klasörü birleştirme), T7 (`npm run check` kapısı + CSS sınıf çakışma denetimi), F1 (git'ten büyük veri çıkarma), F2 (env'leştirme), Oracle'da `--delete`li kod eşitleme, DB analizi → birleştirme/silme (kullanıcı en sona bıraktı).
+
+### 12.5 Ders işçisi (2026-10-12)
+
+- Drive izleme → taslak (Oracle, `meds-ders-isci`, Claude aboneliği, 01–08) → Yönetim "Yeni dersler" onayı → **B2 yayın ✓** (`scripts/ders_isci/yayinla.py`, cihazda; yayın kaydı `scripts/ders_isci/yayin_kaydi.json`). İlk yayın: k1-67 Gebelik Hastalıkları.
+- Site verisi yazarları toptan ezmeye karşı korundu: s16 site dışa aktarımı yalnız upsert, s15 kapalı (`MEDS_S15_ZORLA=1`), s13/learn_links/checklist yayın kaydına saygılı.
+- Açık: hastalık önerilerini şema 2'ye çevirip `diseases.json`'a ekleme; yayını Oracle'da otomatik çalıştırma (şimdilik cihazda, onaydan sonra elle); e5 RAG vektörlerinin yeniden üretimi.
