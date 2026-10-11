@@ -261,3 +261,10 @@ Her faz sonunda `DEGISIKLIK_KAYDI.md`'ye kayıt; sayaç tutmazsa durulur.
 - **deploy-code.sh rsync** artık `/.env.*`, `*.bak*`, `*.backup*`, `get-pip.py`, `.agents/.claude/.github`, `scripts/archive`, `scripts/semantic/data` göndermiyor.
 - **Oracle'da bekleyen (kullanıcı eli/izni):** önceki rsync artıkları uygulama ağacında duruyor: `.env.cloud.bak` (secret kopyası), `src/data/pastQuestions.json.bak_manual_import` 61MB, `scripts/semantic/data` 108MB, `.agents` + `.claude` 2×20MB → `~/meds-backup/`e taşınmalı.
 - Doğrulama: validator 114 deste 0 HATA · tsc 0 · yerel+canlı health 200.
+
+### 12.4 İlerleme (2026-10-11 gece, devam) — kullanıcı kararları uygulandı
+
+- K/kararlar: eğitim ortamı silindi · GH Pages kaldırıldı · yerel GPU yasak · kelime 60–250 · kalıcı CPU embed servisi.
+- T2 ✓ (paketler tek kaynağa bağlandı, kök `packages/` arşivde) · T3 ✓ · T5 kısmi ✓ (GPU servisleri kalktı; embed birimleri sınırlı; 3 vektör sunucusu birleştirme hâlâ açık) · T6 kısmi ✓ (kaynak tavanları; önbellek/parçalama açık) · T8 kısmi ✓ (kural belgeleri birleşti; kayıt arşivleme açık).
+- Yeni araçlar: `deploy/backup.sh`, `deploy/oracle/db-yonet.sh`, `scripts/db_analiz/analiz.py`, `scripts/build_deck_packages.py`, `scripts/prune-dist.mjs`.
+- Açık: T4 (veri klasörü birleştirme), T7 (`npm run check` kapısı + CSS sınıf çakışma denetimi), F1 (git'ten büyük veri çıkarma), F2 (env'leştirme), Oracle'da `--delete`li kod eşitleme, DB analizi → birleştirme/silme (kullanıcı en sona bıraktı).
