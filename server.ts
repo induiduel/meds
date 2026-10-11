@@ -134,6 +134,7 @@ import {
 import { censorProfanity } from './src/utils/profanityFilter.ts';
 import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts';
 import { registerUserNotesRoutes } from './src/services/userNotesService.ts';
+import { registerUserDataBackupRoutes } from './src/services/userDataBackupService.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -589,6 +590,16 @@ export interface ServerUser {
   welcomeEmailSentAt?: string;
   photoURL?: string | null;
   congratsSentCommittees?: string[];
+  lastBackupAt?: string;
+  backupStats?: {
+    selftestCount?: number;
+    notesCount?: number;
+    notificationsCount?: number;
+    favoritesCount?: number;
+    activityCount?: number;
+    studySecondsTotal?: number;
+  };
+  data?: Record<string, unknown>;
 }
 
 function loadUsers(): ServerUser[] {
@@ -5659,6 +5670,15 @@ function getDecksDb(): any[] {
 
 // Kullanıcı notları yedeği / cihazlar arası eşitleme (src/services/userNotesService.ts)
 registerUserNotesRoutes(app, DATA_DIR);
+
+// Kullanıcı veri, istatistik, bildirim ve yorum yedeği / Supabase senkronizasyonu
+registerUserDataBackupRoutes(app, {
+  dataDir: DATA_DIR,
+  loadUsers,
+  saveUsers,
+  mirrorUserToSupabase,
+  getPastQuestions: getPastQuestionsDb,
+});
 
 // Yönetim · veri kataloğu: tüm veri türleri tek arayüzde (liste/ara/süz, düzenle, değerlendir-sınıfla, ilişkiler)
 registerDataCatalogRoutes(app, requireAdmin, {

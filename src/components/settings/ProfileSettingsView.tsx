@@ -38,6 +38,7 @@ import { AvatarCropper } from '../ui/AvatarCropper';
 import { Row, Section, Segmented, Switch } from '../ui/kit';
 import { toast } from '../ui/Toast';
 import { NotesSyncRow } from './NotesSyncRow';
+import { UserDataSyncRow } from './UserDataSyncRow';
 
 interface Props {
   currentUser: AppUser | null;
@@ -202,6 +203,7 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
 
           <Section id="hesap" title="Hesap ve veri">
             <div className="ui-group">
+              <UserDataSyncRow />
               <Row icon={Database} iconBg="#30B0C7" title="Çevrimdışı veritabanı" sub="Soruları, sözlüğü ve kartları cihaza indir" onClick={onOpenOffline} />
               <NotesSyncRow />
               {isAdmin && <Row icon={ShieldCheck} iconBg="#FF9500" title="Yönetim konsolu" sub="Taslaklar, moderasyon, sistem" onClick={onOpenAdmin} />}

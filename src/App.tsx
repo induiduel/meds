@@ -34,6 +34,7 @@ import { PwaInstallWelcomeModal, PWA_WELCOME_STORAGE_KEY } from './components/pw
 import { offlineDatabaseService } from './services/offlineDatabaseService';
 import { pwaService } from './services/pwaService';
 import { userNotificationService } from './services/userNotificationService';
+import { backupUserDataToDatabase } from './services/userDataSyncService';
 import { buildDeepLinkUrl, executeDeepLinkFocus, initDeepLinkAutoScroll } from './services/universalRedirectService';
 import { QuestionClusterAutomationModal } from './components/admin/QuestionClusterAutomationModal';
 
@@ -515,6 +516,10 @@ export default function App() {
       (user, token) => {
         setCurrentUser(user);
         setAccessToken(token);
+        // Oturum açıldığında veya yenilendiğinde veritabanına otomatik arka plan yedekleme
+        setTimeout(() => {
+          backupUserDataToDatabase().catch(() => {});
+        }, 3000);
       },
       () => {
         const local = getLocalAdminSession();
